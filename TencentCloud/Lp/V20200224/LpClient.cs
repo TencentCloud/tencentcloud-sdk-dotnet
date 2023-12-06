@@ -57,19 +57,9 @@ namespace TencentCloud.Lp.V20200224
         /// </summary>
         /// <param name="req"><see cref="QueryLoginProtectionRequest"/></param>
         /// <returns><see cref="QueryLoginProtectionResponse"/></returns>
-        public async Task<QueryLoginProtectionResponse> QueryLoginProtection(QueryLoginProtectionRequest req)
+        public Task<QueryLoginProtectionResponse> QueryLoginProtection(QueryLoginProtectionRequest req)
         {
-             JsonResponseModel<QueryLoginProtectionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryLoginProtection");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryLoginProtectionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryLoginProtectionResponse>(req, "QueryLoginProtection");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Lp.V20200224
         /// <returns><see cref="QueryLoginProtectionResponse"/></returns>
         public QueryLoginProtectionResponse QueryLoginProtectionSync(QueryLoginProtectionRequest req)
         {
-             JsonResponseModel<QueryLoginProtectionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryLoginProtection");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryLoginProtectionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryLoginProtectionResponse>(req, "QueryLoginProtection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

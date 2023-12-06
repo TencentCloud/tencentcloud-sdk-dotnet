@@ -57,19 +57,9 @@ namespace TencentCloud.Market.V20191010
         /// </summary>
         /// <param name="req"><see cref="FlowProductRemindRequest"/></param>
         /// <returns><see cref="FlowProductRemindResponse"/></returns>
-        public async Task<FlowProductRemindResponse> FlowProductRemind(FlowProductRemindRequest req)
+        public Task<FlowProductRemindResponse> FlowProductRemind(FlowProductRemindRequest req)
         {
-             JsonResponseModel<FlowProductRemindResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "FlowProductRemind");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FlowProductRemindResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<FlowProductRemindResponse>(req, "FlowProductRemind");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Market.V20191010
         /// <returns><see cref="FlowProductRemindResponse"/></returns>
         public FlowProductRemindResponse FlowProductRemindSync(FlowProductRemindRequest req)
         {
-             JsonResponseModel<FlowProductRemindResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "FlowProductRemind");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FlowProductRemindResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<FlowProductRemindResponse>(req, "FlowProductRemind")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Market.V20191010
         /// </summary>
         /// <param name="req"><see cref="GetUsagePlanUsageAmountRequest"/></param>
         /// <returns><see cref="GetUsagePlanUsageAmountResponse"/></returns>
-        public async Task<GetUsagePlanUsageAmountResponse> GetUsagePlanUsageAmount(GetUsagePlanUsageAmountRequest req)
+        public Task<GetUsagePlanUsageAmountResponse> GetUsagePlanUsageAmount(GetUsagePlanUsageAmountRequest req)
         {
-             JsonResponseModel<GetUsagePlanUsageAmountResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetUsagePlanUsageAmount");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetUsagePlanUsageAmountResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetUsagePlanUsageAmountResponse>(req, "GetUsagePlanUsageAmount");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Market.V20191010
         /// <returns><see cref="GetUsagePlanUsageAmountResponse"/></returns>
         public GetUsagePlanUsageAmountResponse GetUsagePlanUsageAmountSync(GetUsagePlanUsageAmountRequest req)
         {
-             JsonResponseModel<GetUsagePlanUsageAmountResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetUsagePlanUsageAmount");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetUsagePlanUsageAmountResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetUsagePlanUsageAmountResponse>(req, "GetUsagePlanUsageAmount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

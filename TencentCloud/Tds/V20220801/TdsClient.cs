@@ -57,19 +57,9 @@ namespace TencentCloud.Tds.V20220801
         /// </summary>
         /// <param name="req"><see cref="DescribeFraudBaseRequest"/></param>
         /// <returns><see cref="DescribeFraudBaseResponse"/></returns>
-        public async Task<DescribeFraudBaseResponse> DescribeFraudBase(DescribeFraudBaseRequest req)
+        public Task<DescribeFraudBaseResponse> DescribeFraudBase(DescribeFraudBaseRequest req)
         {
-             JsonResponseModel<DescribeFraudBaseResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeFraudBase");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFraudBaseResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeFraudBaseResponse>(req, "DescribeFraudBase");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Tds.V20220801
         /// <returns><see cref="DescribeFraudBaseResponse"/></returns>
         public DescribeFraudBaseResponse DescribeFraudBaseSync(DescribeFraudBaseRequest req)
         {
-             JsonResponseModel<DescribeFraudBaseResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeFraudBase");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFraudBaseResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeFraudBaseResponse>(req, "DescribeFraudBase")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Tds.V20220801
         /// </summary>
         /// <param name="req"><see cref="DescribeFraudPremiumRequest"/></param>
         /// <returns><see cref="DescribeFraudPremiumResponse"/></returns>
-        public async Task<DescribeFraudPremiumResponse> DescribeFraudPremium(DescribeFraudPremiumRequest req)
+        public Task<DescribeFraudPremiumResponse> DescribeFraudPremium(DescribeFraudPremiumRequest req)
         {
-             JsonResponseModel<DescribeFraudPremiumResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeFraudPremium");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFraudPremiumResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeFraudPremiumResponse>(req, "DescribeFraudPremium");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Tds.V20220801
         /// <returns><see cref="DescribeFraudPremiumResponse"/></returns>
         public DescribeFraudPremiumResponse DescribeFraudPremiumSync(DescribeFraudPremiumRequest req)
         {
-             JsonResponseModel<DescribeFraudPremiumResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeFraudPremium");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFraudPremiumResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeFraudPremiumResponse>(req, "DescribeFraudPremium")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Tds.V20220801
         /// </summary>
         /// <param name="req"><see cref="DescribeFraudUltimateRequest"/></param>
         /// <returns><see cref="DescribeFraudUltimateResponse"/></returns>
-        public async Task<DescribeFraudUltimateResponse> DescribeFraudUltimate(DescribeFraudUltimateRequest req)
+        public Task<DescribeFraudUltimateResponse> DescribeFraudUltimate(DescribeFraudUltimateRequest req)
         {
-             JsonResponseModel<DescribeFraudUltimateResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeFraudUltimate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFraudUltimateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeFraudUltimateResponse>(req, "DescribeFraudUltimate");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Tds.V20220801
         /// <returns><see cref="DescribeFraudUltimateResponse"/></returns>
         public DescribeFraudUltimateResponse DescribeFraudUltimateSync(DescribeFraudUltimateRequest req)
         {
-             JsonResponseModel<DescribeFraudUltimateResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeFraudUltimate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFraudUltimateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeFraudUltimateResponse>(req, "DescribeFraudUltimate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Tds.V20220801
         /// </summary>
         /// <param name="req"><see cref="DescribeTrustedIDRequest"/></param>
         /// <returns><see cref="DescribeTrustedIDResponse"/></returns>
-        public async Task<DescribeTrustedIDResponse> DescribeTrustedID(DescribeTrustedIDRequest req)
+        public Task<DescribeTrustedIDResponse> DescribeTrustedID(DescribeTrustedIDRequest req)
         {
-             JsonResponseModel<DescribeTrustedIDResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeTrustedID");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrustedIDResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeTrustedIDResponse>(req, "DescribeTrustedID");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Tds.V20220801
         /// <returns><see cref="DescribeTrustedIDResponse"/></returns>
         public DescribeTrustedIDResponse DescribeTrustedIDSync(DescribeTrustedIDRequest req)
         {
-             JsonResponseModel<DescribeTrustedIDResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeTrustedID");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrustedIDResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeTrustedIDResponse>(req, "DescribeTrustedID")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

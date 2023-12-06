@@ -59,19 +59,9 @@ namespace TencentCloud.Tdid.V20210519
         /// </summary>
         /// <param name="req"><see cref="CheckChainRequest"/></param>
         /// <returns><see cref="CheckChainResponse"/></returns>
-        public async Task<CheckChainResponse> CheckChain(CheckChainRequest req)
+        public Task<CheckChainResponse> CheckChain(CheckChainRequest req)
         {
-             JsonResponseModel<CheckChainResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CheckChain");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckChainResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CheckChainResponse>(req, "CheckChain");
         }
 
         /// <summary>
@@ -83,17 +73,8 @@ namespace TencentCloud.Tdid.V20210519
         /// <returns><see cref="CheckChainResponse"/></returns>
         public CheckChainResponse CheckChainSync(CheckChainRequest req)
         {
-             JsonResponseModel<CheckChainResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CheckChain");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckChainResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CheckChainResponse>(req, "CheckChain")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -103,19 +84,9 @@ namespace TencentCloud.Tdid.V20210519
         /// </summary>
         /// <param name="req"><see cref="CreateCredentialRequest"/></param>
         /// <returns><see cref="CreateCredentialResponse"/></returns>
-        public async Task<CreateCredentialResponse> CreateCredential(CreateCredentialRequest req)
+        public Task<CreateCredentialResponse> CreateCredential(CreateCredentialRequest req)
         {
-             JsonResponseModel<CreateCredentialResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateCredential");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCredentialResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateCredentialResponse>(req, "CreateCredential");
         }
 
         /// <summary>
@@ -127,17 +98,8 @@ namespace TencentCloud.Tdid.V20210519
         /// <returns><see cref="CreateCredentialResponse"/></returns>
         public CreateCredentialResponse CreateCredentialSync(CreateCredentialRequest req)
         {
-             JsonResponseModel<CreateCredentialResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateCredential");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCredentialResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateCredentialResponse>(req, "CreateCredential")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -147,19 +109,9 @@ namespace TencentCloud.Tdid.V20210519
         /// </summary>
         /// <param name="req"><see cref="CreateSelectiveCredentialRequest"/></param>
         /// <returns><see cref="CreateSelectiveCredentialResponse"/></returns>
-        public async Task<CreateSelectiveCredentialResponse> CreateSelectiveCredential(CreateSelectiveCredentialRequest req)
+        public Task<CreateSelectiveCredentialResponse> CreateSelectiveCredential(CreateSelectiveCredentialRequest req)
         {
-             JsonResponseModel<CreateSelectiveCredentialResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateSelectiveCredential");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSelectiveCredentialResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateSelectiveCredentialResponse>(req, "CreateSelectiveCredential");
         }
 
         /// <summary>
@@ -171,17 +123,8 @@ namespace TencentCloud.Tdid.V20210519
         /// <returns><see cref="CreateSelectiveCredentialResponse"/></returns>
         public CreateSelectiveCredentialResponse CreateSelectiveCredentialSync(CreateSelectiveCredentialRequest req)
         {
-             JsonResponseModel<CreateSelectiveCredentialResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateSelectiveCredential");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSelectiveCredentialResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateSelectiveCredentialResponse>(req, "CreateSelectiveCredential")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -191,19 +134,9 @@ namespace TencentCloud.Tdid.V20210519
         /// </summary>
         /// <param name="req"><see cref="CreateTDidRequest"/></param>
         /// <returns><see cref="CreateTDidResponse"/></returns>
-        public async Task<CreateTDidResponse> CreateTDid(CreateTDidRequest req)
+        public Task<CreateTDidResponse> CreateTDid(CreateTDidRequest req)
         {
-             JsonResponseModel<CreateTDidResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateTDid");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTDidResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateTDidResponse>(req, "CreateTDid");
         }
 
         /// <summary>
@@ -215,17 +148,8 @@ namespace TencentCloud.Tdid.V20210519
         /// <returns><see cref="CreateTDidResponse"/></returns>
         public CreateTDidResponse CreateTDidSync(CreateTDidRequest req)
         {
-             JsonResponseModel<CreateTDidResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateTDid");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTDidResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateTDidResponse>(req, "CreateTDid")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -235,19 +159,9 @@ namespace TencentCloud.Tdid.V20210519
         /// </summary>
         /// <param name="req"><see cref="CreateTDidByPrivateKeyRequest"/></param>
         /// <returns><see cref="CreateTDidByPrivateKeyResponse"/></returns>
-        public async Task<CreateTDidByPrivateKeyResponse> CreateTDidByPrivateKey(CreateTDidByPrivateKeyRequest req)
+        public Task<CreateTDidByPrivateKeyResponse> CreateTDidByPrivateKey(CreateTDidByPrivateKeyRequest req)
         {
-             JsonResponseModel<CreateTDidByPrivateKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateTDidByPrivateKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTDidByPrivateKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateTDidByPrivateKeyResponse>(req, "CreateTDidByPrivateKey");
         }
 
         /// <summary>
@@ -259,17 +173,8 @@ namespace TencentCloud.Tdid.V20210519
         /// <returns><see cref="CreateTDidByPrivateKeyResponse"/></returns>
         public CreateTDidByPrivateKeyResponse CreateTDidByPrivateKeySync(CreateTDidByPrivateKeyRequest req)
         {
-             JsonResponseModel<CreateTDidByPrivateKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateTDidByPrivateKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTDidByPrivateKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateTDidByPrivateKeyResponse>(req, "CreateTDidByPrivateKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -279,19 +184,9 @@ namespace TencentCloud.Tdid.V20210519
         /// </summary>
         /// <param name="req"><see cref="CreateTDidByPublicKeyRequest"/></param>
         /// <returns><see cref="CreateTDidByPublicKeyResponse"/></returns>
-        public async Task<CreateTDidByPublicKeyResponse> CreateTDidByPublicKey(CreateTDidByPublicKeyRequest req)
+        public Task<CreateTDidByPublicKeyResponse> CreateTDidByPublicKey(CreateTDidByPublicKeyRequest req)
         {
-             JsonResponseModel<CreateTDidByPublicKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateTDidByPublicKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTDidByPublicKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateTDidByPublicKeyResponse>(req, "CreateTDidByPublicKey");
         }
 
         /// <summary>
@@ -303,17 +198,8 @@ namespace TencentCloud.Tdid.V20210519
         /// <returns><see cref="CreateTDidByPublicKeyResponse"/></returns>
         public CreateTDidByPublicKeyResponse CreateTDidByPublicKeySync(CreateTDidByPublicKeyRequest req)
         {
-             JsonResponseModel<CreateTDidByPublicKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateTDidByPublicKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTDidByPublicKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateTDidByPublicKeyResponse>(req, "CreateTDidByPublicKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -323,19 +209,9 @@ namespace TencentCloud.Tdid.V20210519
         /// </summary>
         /// <param name="req"><see cref="GetAuthorityIssuerRequest"/></param>
         /// <returns><see cref="GetAuthorityIssuerResponse"/></returns>
-        public async Task<GetAuthorityIssuerResponse> GetAuthorityIssuer(GetAuthorityIssuerRequest req)
+        public Task<GetAuthorityIssuerResponse> GetAuthorityIssuer(GetAuthorityIssuerRequest req)
         {
-             JsonResponseModel<GetAuthorityIssuerResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetAuthorityIssuer");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAuthorityIssuerResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetAuthorityIssuerResponse>(req, "GetAuthorityIssuer");
         }
 
         /// <summary>
@@ -347,17 +223,8 @@ namespace TencentCloud.Tdid.V20210519
         /// <returns><see cref="GetAuthorityIssuerResponse"/></returns>
         public GetAuthorityIssuerResponse GetAuthorityIssuerSync(GetAuthorityIssuerRequest req)
         {
-             JsonResponseModel<GetAuthorityIssuerResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetAuthorityIssuer");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAuthorityIssuerResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetAuthorityIssuerResponse>(req, "GetAuthorityIssuer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -367,19 +234,9 @@ namespace TencentCloud.Tdid.V20210519
         /// </summary>
         /// <param name="req"><see cref="GetCptInfoRequest"/></param>
         /// <returns><see cref="GetCptInfoResponse"/></returns>
-        public async Task<GetCptInfoResponse> GetCptInfo(GetCptInfoRequest req)
+        public Task<GetCptInfoResponse> GetCptInfo(GetCptInfoRequest req)
         {
-             JsonResponseModel<GetCptInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetCptInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCptInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetCptInfoResponse>(req, "GetCptInfo");
         }
 
         /// <summary>
@@ -391,17 +248,8 @@ namespace TencentCloud.Tdid.V20210519
         /// <returns><see cref="GetCptInfoResponse"/></returns>
         public GetCptInfoResponse GetCptInfoSync(GetCptInfoRequest req)
         {
-             JsonResponseModel<GetCptInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetCptInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCptInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetCptInfoResponse>(req, "GetCptInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -411,19 +259,9 @@ namespace TencentCloud.Tdid.V20210519
         /// </summary>
         /// <param name="req"><see cref="GetCredentialStatusRequest"/></param>
         /// <returns><see cref="GetCredentialStatusResponse"/></returns>
-        public async Task<GetCredentialStatusResponse> GetCredentialStatus(GetCredentialStatusRequest req)
+        public Task<GetCredentialStatusResponse> GetCredentialStatus(GetCredentialStatusRequest req)
         {
-             JsonResponseModel<GetCredentialStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetCredentialStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCredentialStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetCredentialStatusResponse>(req, "GetCredentialStatus");
         }
 
         /// <summary>
@@ -435,17 +273,8 @@ namespace TencentCloud.Tdid.V20210519
         /// <returns><see cref="GetCredentialStatusResponse"/></returns>
         public GetCredentialStatusResponse GetCredentialStatusSync(GetCredentialStatusRequest req)
         {
-             JsonResponseModel<GetCredentialStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetCredentialStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCredentialStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetCredentialStatusResponse>(req, "GetCredentialStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -455,19 +284,9 @@ namespace TencentCloud.Tdid.V20210519
         /// </summary>
         /// <param name="req"><see cref="GetDidDocumentRequest"/></param>
         /// <returns><see cref="GetDidDocumentResponse"/></returns>
-        public async Task<GetDidDocumentResponse> GetDidDocument(GetDidDocumentRequest req)
+        public Task<GetDidDocumentResponse> GetDidDocument(GetDidDocumentRequest req)
         {
-             JsonResponseModel<GetDidDocumentResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetDidDocument");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDidDocumentResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetDidDocumentResponse>(req, "GetDidDocument");
         }
 
         /// <summary>
@@ -479,17 +298,8 @@ namespace TencentCloud.Tdid.V20210519
         /// <returns><see cref="GetDidDocumentResponse"/></returns>
         public GetDidDocumentResponse GetDidDocumentSync(GetDidDocumentRequest req)
         {
-             JsonResponseModel<GetDidDocumentResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetDidDocument");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDidDocumentResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetDidDocumentResponse>(req, "GetDidDocument")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -499,19 +309,9 @@ namespace TencentCloud.Tdid.V20210519
         /// </summary>
         /// <param name="req"><see cref="RegisterCptRequest"/></param>
         /// <returns><see cref="RegisterCptResponse"/></returns>
-        public async Task<RegisterCptResponse> RegisterCpt(RegisterCptRequest req)
+        public Task<RegisterCptResponse> RegisterCpt(RegisterCptRequest req)
         {
-             JsonResponseModel<RegisterCptResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RegisterCpt");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RegisterCptResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RegisterCptResponse>(req, "RegisterCpt");
         }
 
         /// <summary>
@@ -523,17 +323,8 @@ namespace TencentCloud.Tdid.V20210519
         /// <returns><see cref="RegisterCptResponse"/></returns>
         public RegisterCptResponse RegisterCptSync(RegisterCptRequest req)
         {
-             JsonResponseModel<RegisterCptResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RegisterCpt");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RegisterCptResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RegisterCptResponse>(req, "RegisterCpt")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -543,19 +334,9 @@ namespace TencentCloud.Tdid.V20210519
         /// </summary>
         /// <param name="req"><see cref="SetCredentialStatusRequest"/></param>
         /// <returns><see cref="SetCredentialStatusResponse"/></returns>
-        public async Task<SetCredentialStatusResponse> SetCredentialStatus(SetCredentialStatusRequest req)
+        public Task<SetCredentialStatusResponse> SetCredentialStatus(SetCredentialStatusRequest req)
         {
-             JsonResponseModel<SetCredentialStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SetCredentialStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetCredentialStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SetCredentialStatusResponse>(req, "SetCredentialStatus");
         }
 
         /// <summary>
@@ -567,17 +348,8 @@ namespace TencentCloud.Tdid.V20210519
         /// <returns><see cref="SetCredentialStatusResponse"/></returns>
         public SetCredentialStatusResponse SetCredentialStatusSync(SetCredentialStatusRequest req)
         {
-             JsonResponseModel<SetCredentialStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SetCredentialStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetCredentialStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SetCredentialStatusResponse>(req, "SetCredentialStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -587,19 +359,9 @@ namespace TencentCloud.Tdid.V20210519
         /// </summary>
         /// <param name="req"><see cref="VerifyCredentialRequest"/></param>
         /// <returns><see cref="VerifyCredentialResponse"/></returns>
-        public async Task<VerifyCredentialResponse> VerifyCredential(VerifyCredentialRequest req)
+        public Task<VerifyCredentialResponse> VerifyCredential(VerifyCredentialRequest req)
         {
-             JsonResponseModel<VerifyCredentialResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "VerifyCredential");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyCredentialResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<VerifyCredentialResponse>(req, "VerifyCredential");
         }
 
         /// <summary>
@@ -611,17 +373,8 @@ namespace TencentCloud.Tdid.V20210519
         /// <returns><see cref="VerifyCredentialResponse"/></returns>
         public VerifyCredentialResponse VerifyCredentialSync(VerifyCredentialRequest req)
         {
-             JsonResponseModel<VerifyCredentialResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "VerifyCredential");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyCredentialResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<VerifyCredentialResponse>(req, "VerifyCredential")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

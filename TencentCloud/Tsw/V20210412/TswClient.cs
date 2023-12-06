@@ -57,19 +57,9 @@ namespace TencentCloud.Tsw.V20210412
         /// </summary>
         /// <param name="req"><see cref="DescribeComponentAlertObjectRequest"/></param>
         /// <returns><see cref="DescribeComponentAlertObjectResponse"/></returns>
-        public async Task<DescribeComponentAlertObjectResponse> DescribeComponentAlertObject(DescribeComponentAlertObjectRequest req)
+        public Task<DescribeComponentAlertObjectResponse> DescribeComponentAlertObject(DescribeComponentAlertObjectRequest req)
         {
-             JsonResponseModel<DescribeComponentAlertObjectResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeComponentAlertObject");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeComponentAlertObjectResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeComponentAlertObjectResponse>(req, "DescribeComponentAlertObject");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Tsw.V20210412
         /// <returns><see cref="DescribeComponentAlertObjectResponse"/></returns>
         public DescribeComponentAlertObjectResponse DescribeComponentAlertObjectSync(DescribeComponentAlertObjectRequest req)
         {
-             JsonResponseModel<DescribeComponentAlertObjectResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeComponentAlertObject");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeComponentAlertObjectResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeComponentAlertObjectResponse>(req, "DescribeComponentAlertObject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Tsw.V20210412
         /// </summary>
         /// <param name="req"><see cref="DescribeServiceAlertObjectRequest"/></param>
         /// <returns><see cref="DescribeServiceAlertObjectResponse"/></returns>
-        public async Task<DescribeServiceAlertObjectResponse> DescribeServiceAlertObject(DescribeServiceAlertObjectRequest req)
+        public Task<DescribeServiceAlertObjectResponse> DescribeServiceAlertObject(DescribeServiceAlertObjectRequest req)
         {
-             JsonResponseModel<DescribeServiceAlertObjectResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeServiceAlertObject");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServiceAlertObjectResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeServiceAlertObjectResponse>(req, "DescribeServiceAlertObject");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Tsw.V20210412
         /// <returns><see cref="DescribeServiceAlertObjectResponse"/></returns>
         public DescribeServiceAlertObjectResponse DescribeServiceAlertObjectSync(DescribeServiceAlertObjectRequest req)
         {
-             JsonResponseModel<DescribeServiceAlertObjectResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeServiceAlertObject");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServiceAlertObjectResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeServiceAlertObjectResponse>(req, "DescribeServiceAlertObject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Tsw.V20210412
         /// </summary>
         /// <param name="req"><see cref="DescribeTokenRequest"/></param>
         /// <returns><see cref="DescribeTokenResponse"/></returns>
-        public async Task<DescribeTokenResponse> DescribeToken(DescribeTokenRequest req)
+        public Task<DescribeTokenResponse> DescribeToken(DescribeTokenRequest req)
         {
-             JsonResponseModel<DescribeTokenResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeToken");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTokenResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeTokenResponse>(req, "DescribeToken");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Tsw.V20210412
         /// <returns><see cref="DescribeTokenResponse"/></returns>
         public DescribeTokenResponse DescribeTokenSync(DescribeTokenRequest req)
         {
-             JsonResponseModel<DescribeTokenResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeToken");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTokenResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeTokenResponse>(req, "DescribeToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

@@ -61,19 +61,9 @@ namespace TencentCloud.Iir.V20200417
         /// </summary>
         /// <param name="req"><see cref="RecognizeProductRequest"/></param>
         /// <returns><see cref="RecognizeProductResponse"/></returns>
-        public async Task<RecognizeProductResponse> RecognizeProduct(RecognizeProductRequest req)
+        public Task<RecognizeProductResponse> RecognizeProduct(RecognizeProductRequest req)
         {
-             JsonResponseModel<RecognizeProductResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RecognizeProduct");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeProductResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizeProductResponse>(req, "RecognizeProduct");
         }
 
         /// <summary>
@@ -87,17 +77,8 @@ namespace TencentCloud.Iir.V20200417
         /// <returns><see cref="RecognizeProductResponse"/></returns>
         public RecognizeProductResponse RecognizeProductSync(RecognizeProductRequest req)
         {
-             JsonResponseModel<RecognizeProductResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RecognizeProduct");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeProductResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizeProductResponse>(req, "RecognizeProduct")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

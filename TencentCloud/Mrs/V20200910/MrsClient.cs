@@ -57,19 +57,9 @@ namespace TencentCloud.Mrs.V20200910
         /// </summary>
         /// <param name="req"><see cref="ImageToClassRequest"/></param>
         /// <returns><see cref="ImageToClassResponse"/></returns>
-        public async Task<ImageToClassResponse> ImageToClass(ImageToClassRequest req)
+        public Task<ImageToClassResponse> ImageToClass(ImageToClassRequest req)
         {
-             JsonResponseModel<ImageToClassResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ImageToClass");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImageToClassResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ImageToClassResponse>(req, "ImageToClass");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Mrs.V20200910
         /// <returns><see cref="ImageToClassResponse"/></returns>
         public ImageToClassResponse ImageToClassSync(ImageToClassRequest req)
         {
-             JsonResponseModel<ImageToClassResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ImageToClass");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImageToClassResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ImageToClassResponse>(req, "ImageToClass")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Mrs.V20200910
         /// </summary>
         /// <param name="req"><see cref="ImageToObjectRequest"/></param>
         /// <returns><see cref="ImageToObjectResponse"/></returns>
-        public async Task<ImageToObjectResponse> ImageToObject(ImageToObjectRequest req)
+        public Task<ImageToObjectResponse> ImageToObject(ImageToObjectRequest req)
         {
-             JsonResponseModel<ImageToObjectResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ImageToObject");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImageToObjectResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ImageToObjectResponse>(req, "ImageToObject");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Mrs.V20200910
         /// <returns><see cref="ImageToObjectResponse"/></returns>
         public ImageToObjectResponse ImageToObjectSync(ImageToObjectRequest req)
         {
-             JsonResponseModel<ImageToObjectResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ImageToObject");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImageToObjectResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ImageToObjectResponse>(req, "ImageToObject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Mrs.V20200910
         /// </summary>
         /// <param name="req"><see cref="TextToClassRequest"/></param>
         /// <returns><see cref="TextToClassResponse"/></returns>
-        public async Task<TextToClassResponse> TextToClass(TextToClassRequest req)
+        public Task<TextToClassResponse> TextToClass(TextToClassRequest req)
         {
-             JsonResponseModel<TextToClassResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "TextToClass");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextToClassResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TextToClassResponse>(req, "TextToClass");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Mrs.V20200910
         /// <returns><see cref="TextToClassResponse"/></returns>
         public TextToClassResponse TextToClassSync(TextToClassRequest req)
         {
-             JsonResponseModel<TextToClassResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "TextToClass");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextToClassResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TextToClassResponse>(req, "TextToClass")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -179,19 +122,9 @@ namespace TencentCloud.Mrs.V20200910
         /// </summary>
         /// <param name="req"><see cref="TextToObjectRequest"/></param>
         /// <returns><see cref="TextToObjectResponse"/></returns>
-        public async Task<TextToObjectResponse> TextToObject(TextToObjectRequest req)
+        public Task<TextToObjectResponse> TextToObject(TextToObjectRequest req)
         {
-             JsonResponseModel<TextToObjectResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "TextToObject");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextToObjectResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TextToObjectResponse>(req, "TextToObject");
         }
 
         /// <summary>
@@ -203,17 +136,8 @@ namespace TencentCloud.Mrs.V20200910
         /// <returns><see cref="TextToObjectResponse"/></returns>
         public TextToObjectResponse TextToObjectSync(TextToObjectRequest req)
         {
-             JsonResponseModel<TextToObjectResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "TextToObject");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextToObjectResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TextToObjectResponse>(req, "TextToObject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -222,19 +146,9 @@ namespace TencentCloud.Mrs.V20200910
         /// </summary>
         /// <param name="req"><see cref="TurnPDFToObjectRequest"/></param>
         /// <returns><see cref="TurnPDFToObjectResponse"/></returns>
-        public async Task<TurnPDFToObjectResponse> TurnPDFToObject(TurnPDFToObjectRequest req)
+        public Task<TurnPDFToObjectResponse> TurnPDFToObject(TurnPDFToObjectRequest req)
         {
-             JsonResponseModel<TurnPDFToObjectResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "TurnPDFToObject");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TurnPDFToObjectResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TurnPDFToObjectResponse>(req, "TurnPDFToObject");
         }
 
         /// <summary>
@@ -245,17 +159,8 @@ namespace TencentCloud.Mrs.V20200910
         /// <returns><see cref="TurnPDFToObjectResponse"/></returns>
         public TurnPDFToObjectResponse TurnPDFToObjectSync(TurnPDFToObjectRequest req)
         {
-             JsonResponseModel<TurnPDFToObjectResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "TurnPDFToObject");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TurnPDFToObjectResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TurnPDFToObjectResponse>(req, "TurnPDFToObject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -263,19 +168,9 @@ namespace TencentCloud.Mrs.V20200910
         /// </summary>
         /// <param name="req"><see cref="TurnPDFToObjectAsyncRequest"/></param>
         /// <returns><see cref="TurnPDFToObjectAsyncResponse"/></returns>
-        public async Task<TurnPDFToObjectAsyncResponse> TurnPDFToObjectAsync(TurnPDFToObjectAsyncRequest req)
+        public Task<TurnPDFToObjectAsyncResponse> TurnPDFToObjectAsync(TurnPDFToObjectAsyncRequest req)
         {
-             JsonResponseModel<TurnPDFToObjectAsyncResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "TurnPDFToObjectAsync");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TurnPDFToObjectAsyncResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TurnPDFToObjectAsyncResponse>(req, "TurnPDFToObjectAsync");
         }
 
         /// <summary>
@@ -285,17 +180,8 @@ namespace TencentCloud.Mrs.V20200910
         /// <returns><see cref="TurnPDFToObjectAsyncResponse"/></returns>
         public TurnPDFToObjectAsyncResponse TurnPDFToObjectAsyncSync(TurnPDFToObjectAsyncRequest req)
         {
-             JsonResponseModel<TurnPDFToObjectAsyncResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "TurnPDFToObjectAsync");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TurnPDFToObjectAsyncResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TurnPDFToObjectAsyncResponse>(req, "TurnPDFToObjectAsync")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -303,19 +189,9 @@ namespace TencentCloud.Mrs.V20200910
         /// </summary>
         /// <param name="req"><see cref="TurnPDFToObjectAsyncGetResultRequest"/></param>
         /// <returns><see cref="TurnPDFToObjectAsyncGetResultResponse"/></returns>
-        public async Task<TurnPDFToObjectAsyncGetResultResponse> TurnPDFToObjectAsyncGetResult(TurnPDFToObjectAsyncGetResultRequest req)
+        public Task<TurnPDFToObjectAsyncGetResultResponse> TurnPDFToObjectAsyncGetResult(TurnPDFToObjectAsyncGetResultRequest req)
         {
-             JsonResponseModel<TurnPDFToObjectAsyncGetResultResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "TurnPDFToObjectAsyncGetResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TurnPDFToObjectAsyncGetResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TurnPDFToObjectAsyncGetResultResponse>(req, "TurnPDFToObjectAsyncGetResult");
         }
 
         /// <summary>
@@ -325,17 +201,8 @@ namespace TencentCloud.Mrs.V20200910
         /// <returns><see cref="TurnPDFToObjectAsyncGetResultResponse"/></returns>
         public TurnPDFToObjectAsyncGetResultResponse TurnPDFToObjectAsyncGetResultSync(TurnPDFToObjectAsyncGetResultRequest req)
         {
-             JsonResponseModel<TurnPDFToObjectAsyncGetResultResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "TurnPDFToObjectAsyncGetResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TurnPDFToObjectAsyncGetResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TurnPDFToObjectAsyncGetResultResponse>(req, "TurnPDFToObjectAsyncGetResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

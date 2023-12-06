@@ -57,19 +57,9 @@ namespace TencentCloud.Bma.V20221115
         /// </summary>
         /// <param name="req"><see cref="CreateBPBrandRequest"/></param>
         /// <returns><see cref="CreateBPBrandResponse"/></returns>
-        public async Task<CreateBPBrandResponse> CreateBPBrand(CreateBPBrandRequest req)
+        public Task<CreateBPBrandResponse> CreateBPBrand(CreateBPBrandRequest req)
         {
-             JsonResponseModel<CreateBPBrandResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateBPBrand");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBPBrandResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateBPBrandResponse>(req, "CreateBPBrand");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Bma.V20221115
         /// <returns><see cref="CreateBPBrandResponse"/></returns>
         public CreateBPBrandResponse CreateBPBrandSync(CreateBPBrandRequest req)
         {
-             JsonResponseModel<CreateBPBrandResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateBPBrand");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBPBrandResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateBPBrandResponse>(req, "CreateBPBrand")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Bma.V20221115
         /// </summary>
         /// <param name="req"><see cref="CreateBPFakeAPPRequest"/></param>
         /// <returns><see cref="CreateBPFakeAPPResponse"/></returns>
-        public async Task<CreateBPFakeAPPResponse> CreateBPFakeAPP(CreateBPFakeAPPRequest req)
+        public Task<CreateBPFakeAPPResponse> CreateBPFakeAPP(CreateBPFakeAPPRequest req)
         {
-             JsonResponseModel<CreateBPFakeAPPResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateBPFakeAPP");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBPFakeAPPResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateBPFakeAPPResponse>(req, "CreateBPFakeAPP");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Bma.V20221115
         /// <returns><see cref="CreateBPFakeAPPResponse"/></returns>
         public CreateBPFakeAPPResponse CreateBPFakeAPPSync(CreateBPFakeAPPRequest req)
         {
-             JsonResponseModel<CreateBPFakeAPPResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateBPFakeAPP");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBPFakeAPPResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateBPFakeAPPResponse>(req, "CreateBPFakeAPP")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Bma.V20221115
         /// </summary>
         /// <param name="req"><see cref="CreateBPFakeAPPListRequest"/></param>
         /// <returns><see cref="CreateBPFakeAPPListResponse"/></returns>
-        public async Task<CreateBPFakeAPPListResponse> CreateBPFakeAPPList(CreateBPFakeAPPListRequest req)
+        public Task<CreateBPFakeAPPListResponse> CreateBPFakeAPPList(CreateBPFakeAPPListRequest req)
         {
-             JsonResponseModel<CreateBPFakeAPPListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateBPFakeAPPList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBPFakeAPPListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateBPFakeAPPListResponse>(req, "CreateBPFakeAPPList");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Bma.V20221115
         /// <returns><see cref="CreateBPFakeAPPListResponse"/></returns>
         public CreateBPFakeAPPListResponse CreateBPFakeAPPListSync(CreateBPFakeAPPListRequest req)
         {
-             JsonResponseModel<CreateBPFakeAPPListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateBPFakeAPPList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBPFakeAPPListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateBPFakeAPPListResponse>(req, "CreateBPFakeAPPList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Bma.V20221115
         /// </summary>
         /// <param name="req"><see cref="CreateBPFakeURLRequest"/></param>
         /// <returns><see cref="CreateBPFakeURLResponse"/></returns>
-        public async Task<CreateBPFakeURLResponse> CreateBPFakeURL(CreateBPFakeURLRequest req)
+        public Task<CreateBPFakeURLResponse> CreateBPFakeURL(CreateBPFakeURLRequest req)
         {
-             JsonResponseModel<CreateBPFakeURLResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateBPFakeURL");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBPFakeURLResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateBPFakeURLResponse>(req, "CreateBPFakeURL");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Bma.V20221115
         /// <returns><see cref="CreateBPFakeURLResponse"/></returns>
         public CreateBPFakeURLResponse CreateBPFakeURLSync(CreateBPFakeURLRequest req)
         {
-             JsonResponseModel<CreateBPFakeURLResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateBPFakeURL");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBPFakeURLResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateBPFakeURLResponse>(req, "CreateBPFakeURL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -217,19 +141,9 @@ namespace TencentCloud.Bma.V20221115
         /// </summary>
         /// <param name="req"><see cref="CreateBPFakeURLsRequest"/></param>
         /// <returns><see cref="CreateBPFakeURLsResponse"/></returns>
-        public async Task<CreateBPFakeURLsResponse> CreateBPFakeURLs(CreateBPFakeURLsRequest req)
+        public Task<CreateBPFakeURLsResponse> CreateBPFakeURLs(CreateBPFakeURLsRequest req)
         {
-             JsonResponseModel<CreateBPFakeURLsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateBPFakeURLs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBPFakeURLsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateBPFakeURLsResponse>(req, "CreateBPFakeURLs");
         }
 
         /// <summary>
@@ -239,17 +153,8 @@ namespace TencentCloud.Bma.V20221115
         /// <returns><see cref="CreateBPFakeURLsResponse"/></returns>
         public CreateBPFakeURLsResponse CreateBPFakeURLsSync(CreateBPFakeURLsRequest req)
         {
-             JsonResponseModel<CreateBPFakeURLsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateBPFakeURLs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBPFakeURLsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateBPFakeURLsResponse>(req, "CreateBPFakeURLs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -257,19 +162,9 @@ namespace TencentCloud.Bma.V20221115
         /// </summary>
         /// <param name="req"><see cref="CreateBPWhiteListRequest"/></param>
         /// <returns><see cref="CreateBPWhiteListResponse"/></returns>
-        public async Task<CreateBPWhiteListResponse> CreateBPWhiteList(CreateBPWhiteListRequest req)
+        public Task<CreateBPWhiteListResponse> CreateBPWhiteList(CreateBPWhiteListRequest req)
         {
-             JsonResponseModel<CreateBPWhiteListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateBPWhiteList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBPWhiteListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateBPWhiteListResponse>(req, "CreateBPWhiteList");
         }
 
         /// <summary>
@@ -279,17 +174,8 @@ namespace TencentCloud.Bma.V20221115
         /// <returns><see cref="CreateBPWhiteListResponse"/></returns>
         public CreateBPWhiteListResponse CreateBPWhiteListSync(CreateBPWhiteListRequest req)
         {
-             JsonResponseModel<CreateBPWhiteListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateBPWhiteList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBPWhiteListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateBPWhiteListResponse>(req, "CreateBPWhiteList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -297,19 +183,9 @@ namespace TencentCloud.Bma.V20221115
         /// </summary>
         /// <param name="req"><see cref="DeleteBPWhiteListRequest"/></param>
         /// <returns><see cref="DeleteBPWhiteListResponse"/></returns>
-        public async Task<DeleteBPWhiteListResponse> DeleteBPWhiteList(DeleteBPWhiteListRequest req)
+        public Task<DeleteBPWhiteListResponse> DeleteBPWhiteList(DeleteBPWhiteListRequest req)
         {
-             JsonResponseModel<DeleteBPWhiteListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteBPWhiteList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBPWhiteListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteBPWhiteListResponse>(req, "DeleteBPWhiteList");
         }
 
         /// <summary>
@@ -319,17 +195,8 @@ namespace TencentCloud.Bma.V20221115
         /// <returns><see cref="DeleteBPWhiteListResponse"/></returns>
         public DeleteBPWhiteListResponse DeleteBPWhiteListSync(DeleteBPWhiteListRequest req)
         {
-             JsonResponseModel<DeleteBPWhiteListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteBPWhiteList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBPWhiteListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteBPWhiteListResponse>(req, "DeleteBPWhiteList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -337,19 +204,9 @@ namespace TencentCloud.Bma.V20221115
         /// </summary>
         /// <param name="req"><see cref="DescribeBPBrandsRequest"/></param>
         /// <returns><see cref="DescribeBPBrandsResponse"/></returns>
-        public async Task<DescribeBPBrandsResponse> DescribeBPBrands(DescribeBPBrandsRequest req)
+        public Task<DescribeBPBrandsResponse> DescribeBPBrands(DescribeBPBrandsRequest req)
         {
-             JsonResponseModel<DescribeBPBrandsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeBPBrands");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBPBrandsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeBPBrandsResponse>(req, "DescribeBPBrands");
         }
 
         /// <summary>
@@ -359,17 +216,8 @@ namespace TencentCloud.Bma.V20221115
         /// <returns><see cref="DescribeBPBrandsResponse"/></returns>
         public DescribeBPBrandsResponse DescribeBPBrandsSync(DescribeBPBrandsRequest req)
         {
-             JsonResponseModel<DescribeBPBrandsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBPBrands");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBPBrandsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeBPBrandsResponse>(req, "DescribeBPBrands")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -377,19 +225,9 @@ namespace TencentCloud.Bma.V20221115
         /// </summary>
         /// <param name="req"><see cref="DescribeBPFakeAPPListRequest"/></param>
         /// <returns><see cref="DescribeBPFakeAPPListResponse"/></returns>
-        public async Task<DescribeBPFakeAPPListResponse> DescribeBPFakeAPPList(DescribeBPFakeAPPListRequest req)
+        public Task<DescribeBPFakeAPPListResponse> DescribeBPFakeAPPList(DescribeBPFakeAPPListRequest req)
         {
-             JsonResponseModel<DescribeBPFakeAPPListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeBPFakeAPPList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBPFakeAPPListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeBPFakeAPPListResponse>(req, "DescribeBPFakeAPPList");
         }
 
         /// <summary>
@@ -399,17 +237,8 @@ namespace TencentCloud.Bma.V20221115
         /// <returns><see cref="DescribeBPFakeAPPListResponse"/></returns>
         public DescribeBPFakeAPPListResponse DescribeBPFakeAPPListSync(DescribeBPFakeAPPListRequest req)
         {
-             JsonResponseModel<DescribeBPFakeAPPListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBPFakeAPPList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBPFakeAPPListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeBPFakeAPPListResponse>(req, "DescribeBPFakeAPPList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -417,19 +246,9 @@ namespace TencentCloud.Bma.V20221115
         /// </summary>
         /// <param name="req"><see cref="DescribeBPFakeURLsRequest"/></param>
         /// <returns><see cref="DescribeBPFakeURLsResponse"/></returns>
-        public async Task<DescribeBPFakeURLsResponse> DescribeBPFakeURLs(DescribeBPFakeURLsRequest req)
+        public Task<DescribeBPFakeURLsResponse> DescribeBPFakeURLs(DescribeBPFakeURLsRequest req)
         {
-             JsonResponseModel<DescribeBPFakeURLsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeBPFakeURLs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBPFakeURLsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeBPFakeURLsResponse>(req, "DescribeBPFakeURLs");
         }
 
         /// <summary>
@@ -439,17 +258,8 @@ namespace TencentCloud.Bma.V20221115
         /// <returns><see cref="DescribeBPFakeURLsResponse"/></returns>
         public DescribeBPFakeURLsResponse DescribeBPFakeURLsSync(DescribeBPFakeURLsRequest req)
         {
-             JsonResponseModel<DescribeBPFakeURLsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBPFakeURLs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBPFakeURLsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeBPFakeURLsResponse>(req, "DescribeBPFakeURLs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -457,19 +267,9 @@ namespace TencentCloud.Bma.V20221115
         /// </summary>
         /// <param name="req"><see cref="DescribeBPWhiteListsRequest"/></param>
         /// <returns><see cref="DescribeBPWhiteListsResponse"/></returns>
-        public async Task<DescribeBPWhiteListsResponse> DescribeBPWhiteLists(DescribeBPWhiteListsRequest req)
+        public Task<DescribeBPWhiteListsResponse> DescribeBPWhiteLists(DescribeBPWhiteListsRequest req)
         {
-             JsonResponseModel<DescribeBPWhiteListsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeBPWhiteLists");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBPWhiteListsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeBPWhiteListsResponse>(req, "DescribeBPWhiteLists");
         }
 
         /// <summary>
@@ -479,17 +279,8 @@ namespace TencentCloud.Bma.V20221115
         /// <returns><see cref="DescribeBPWhiteListsResponse"/></returns>
         public DescribeBPWhiteListsResponse DescribeBPWhiteListsSync(DescribeBPWhiteListsRequest req)
         {
-             JsonResponseModel<DescribeBPWhiteListsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBPWhiteLists");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBPWhiteListsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeBPWhiteListsResponse>(req, "DescribeBPWhiteLists")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

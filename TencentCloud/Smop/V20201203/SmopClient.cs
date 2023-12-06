@@ -57,19 +57,9 @@ namespace TencentCloud.Smop.V20201203
         /// </summary>
         /// <param name="req"><see cref="SubmitTaskEventRequest"/></param>
         /// <returns><see cref="SubmitTaskEventResponse"/></returns>
-        public async Task<SubmitTaskEventResponse> SubmitTaskEvent(SubmitTaskEventRequest req)
+        public Task<SubmitTaskEventResponse> SubmitTaskEvent(SubmitTaskEventRequest req)
         {
-             JsonResponseModel<SubmitTaskEventResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SubmitTaskEvent");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitTaskEventResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitTaskEventResponse>(req, "SubmitTaskEvent");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Smop.V20201203
         /// <returns><see cref="SubmitTaskEventResponse"/></returns>
         public SubmitTaskEventResponse SubmitTaskEventSync(SubmitTaskEventRequest req)
         {
-             JsonResponseModel<SubmitTaskEventResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SubmitTaskEvent");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitTaskEventResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitTaskEventResponse>(req, "SubmitTaskEvent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

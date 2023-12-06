@@ -57,19 +57,9 @@ namespace TencentCloud.Mmps.V20200710
         /// </summary>
         /// <param name="req"><see cref="CreateAppScanTaskRequest"/></param>
         /// <returns><see cref="CreateAppScanTaskResponse"/></returns>
-        public async Task<CreateAppScanTaskResponse> CreateAppScanTask(CreateAppScanTaskRequest req)
+        public Task<CreateAppScanTaskResponse> CreateAppScanTask(CreateAppScanTaskRequest req)
         {
-             JsonResponseModel<CreateAppScanTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateAppScanTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAppScanTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateAppScanTaskResponse>(req, "CreateAppScanTask");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Mmps.V20200710
         /// <returns><see cref="CreateAppScanTaskResponse"/></returns>
         public CreateAppScanTaskResponse CreateAppScanTaskSync(CreateAppScanTaskRequest req)
         {
-             JsonResponseModel<CreateAppScanTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateAppScanTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAppScanTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateAppScanTaskResponse>(req, "CreateAppScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Mmps.V20200710
         /// </summary>
         /// <param name="req"><see cref="CreateAppScanTaskRepeatRequest"/></param>
         /// <returns><see cref="CreateAppScanTaskRepeatResponse"/></returns>
-        public async Task<CreateAppScanTaskRepeatResponse> CreateAppScanTaskRepeat(CreateAppScanTaskRepeatRequest req)
+        public Task<CreateAppScanTaskRepeatResponse> CreateAppScanTaskRepeat(CreateAppScanTaskRepeatRequest req)
         {
-             JsonResponseModel<CreateAppScanTaskRepeatResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateAppScanTaskRepeat");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAppScanTaskRepeatResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateAppScanTaskRepeatResponse>(req, "CreateAppScanTaskRepeat");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Mmps.V20200710
         /// <returns><see cref="CreateAppScanTaskRepeatResponse"/></returns>
         public CreateAppScanTaskRepeatResponse CreateAppScanTaskRepeatSync(CreateAppScanTaskRepeatRequest req)
         {
-             JsonResponseModel<CreateAppScanTaskRepeatResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateAppScanTaskRepeat");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAppScanTaskRepeatResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateAppScanTaskRepeatResponse>(req, "CreateAppScanTaskRepeat")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Mmps.V20200710
         /// </summary>
         /// <param name="req"><see cref="CreateFlySecMiniAppProfessionalScanTaskRequest"/></param>
         /// <returns><see cref="CreateFlySecMiniAppProfessionalScanTaskResponse"/></returns>
-        public async Task<CreateFlySecMiniAppProfessionalScanTaskResponse> CreateFlySecMiniAppProfessionalScanTask(CreateFlySecMiniAppProfessionalScanTaskRequest req)
+        public Task<CreateFlySecMiniAppProfessionalScanTaskResponse> CreateFlySecMiniAppProfessionalScanTask(CreateFlySecMiniAppProfessionalScanTaskRequest req)
         {
-             JsonResponseModel<CreateFlySecMiniAppProfessionalScanTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateFlySecMiniAppProfessionalScanTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFlySecMiniAppProfessionalScanTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateFlySecMiniAppProfessionalScanTaskResponse>(req, "CreateFlySecMiniAppProfessionalScanTask");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Mmps.V20200710
         /// <returns><see cref="CreateFlySecMiniAppProfessionalScanTaskResponse"/></returns>
         public CreateFlySecMiniAppProfessionalScanTaskResponse CreateFlySecMiniAppProfessionalScanTaskSync(CreateFlySecMiniAppProfessionalScanTaskRequest req)
         {
-             JsonResponseModel<CreateFlySecMiniAppProfessionalScanTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateFlySecMiniAppProfessionalScanTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFlySecMiniAppProfessionalScanTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateFlySecMiniAppProfessionalScanTaskResponse>(req, "CreateFlySecMiniAppProfessionalScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Mmps.V20200710
         /// </summary>
         /// <param name="req"><see cref="CreateFlySecMiniAppScanTaskRequest"/></param>
         /// <returns><see cref="CreateFlySecMiniAppScanTaskResponse"/></returns>
-        public async Task<CreateFlySecMiniAppScanTaskResponse> CreateFlySecMiniAppScanTask(CreateFlySecMiniAppScanTaskRequest req)
+        public Task<CreateFlySecMiniAppScanTaskResponse> CreateFlySecMiniAppScanTask(CreateFlySecMiniAppScanTaskRequest req)
         {
-             JsonResponseModel<CreateFlySecMiniAppScanTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateFlySecMiniAppScanTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFlySecMiniAppScanTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateFlySecMiniAppScanTaskResponse>(req, "CreateFlySecMiniAppScanTask");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Mmps.V20200710
         /// <returns><see cref="CreateFlySecMiniAppScanTaskResponse"/></returns>
         public CreateFlySecMiniAppScanTaskResponse CreateFlySecMiniAppScanTaskSync(CreateFlySecMiniAppScanTaskRequest req)
         {
-             JsonResponseModel<CreateFlySecMiniAppScanTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateFlySecMiniAppScanTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFlySecMiniAppScanTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateFlySecMiniAppScanTaskResponse>(req, "CreateFlySecMiniAppScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -217,19 +141,9 @@ namespace TencentCloud.Mmps.V20200710
         /// </summary>
         /// <param name="req"><see cref="CreateFlySecMiniAppScanTaskRepeatRequest"/></param>
         /// <returns><see cref="CreateFlySecMiniAppScanTaskRepeatResponse"/></returns>
-        public async Task<CreateFlySecMiniAppScanTaskRepeatResponse> CreateFlySecMiniAppScanTaskRepeat(CreateFlySecMiniAppScanTaskRepeatRequest req)
+        public Task<CreateFlySecMiniAppScanTaskRepeatResponse> CreateFlySecMiniAppScanTaskRepeat(CreateFlySecMiniAppScanTaskRepeatRequest req)
         {
-             JsonResponseModel<CreateFlySecMiniAppScanTaskRepeatResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateFlySecMiniAppScanTaskRepeat");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFlySecMiniAppScanTaskRepeatResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateFlySecMiniAppScanTaskRepeatResponse>(req, "CreateFlySecMiniAppScanTaskRepeat");
         }
 
         /// <summary>
@@ -239,17 +153,8 @@ namespace TencentCloud.Mmps.V20200710
         /// <returns><see cref="CreateFlySecMiniAppScanTaskRepeatResponse"/></returns>
         public CreateFlySecMiniAppScanTaskRepeatResponse CreateFlySecMiniAppScanTaskRepeatSync(CreateFlySecMiniAppScanTaskRepeatRequest req)
         {
-             JsonResponseModel<CreateFlySecMiniAppScanTaskRepeatResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateFlySecMiniAppScanTaskRepeat");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFlySecMiniAppScanTaskRepeatResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateFlySecMiniAppScanTaskRepeatResponse>(req, "CreateFlySecMiniAppScanTaskRepeat")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -257,19 +162,9 @@ namespace TencentCloud.Mmps.V20200710
         /// </summary>
         /// <param name="req"><see cref="DescribeBasicDiagnosisResourceUsageInfoRequest"/></param>
         /// <returns><see cref="DescribeBasicDiagnosisResourceUsageInfoResponse"/></returns>
-        public async Task<DescribeBasicDiagnosisResourceUsageInfoResponse> DescribeBasicDiagnosisResourceUsageInfo(DescribeBasicDiagnosisResourceUsageInfoRequest req)
+        public Task<DescribeBasicDiagnosisResourceUsageInfoResponse> DescribeBasicDiagnosisResourceUsageInfo(DescribeBasicDiagnosisResourceUsageInfoRequest req)
         {
-             JsonResponseModel<DescribeBasicDiagnosisResourceUsageInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeBasicDiagnosisResourceUsageInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBasicDiagnosisResourceUsageInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeBasicDiagnosisResourceUsageInfoResponse>(req, "DescribeBasicDiagnosisResourceUsageInfo");
         }
 
         /// <summary>
@@ -279,17 +174,8 @@ namespace TencentCloud.Mmps.V20200710
         /// <returns><see cref="DescribeBasicDiagnosisResourceUsageInfoResponse"/></returns>
         public DescribeBasicDiagnosisResourceUsageInfoResponse DescribeBasicDiagnosisResourceUsageInfoSync(DescribeBasicDiagnosisResourceUsageInfoRequest req)
         {
-             JsonResponseModel<DescribeBasicDiagnosisResourceUsageInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBasicDiagnosisResourceUsageInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBasicDiagnosisResourceUsageInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeBasicDiagnosisResourceUsageInfoResponse>(req, "DescribeBasicDiagnosisResourceUsageInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -297,19 +183,9 @@ namespace TencentCloud.Mmps.V20200710
         /// </summary>
         /// <param name="req"><see cref="DescribeFlySecMiniAppReportUrlRequest"/></param>
         /// <returns><see cref="DescribeFlySecMiniAppReportUrlResponse"/></returns>
-        public async Task<DescribeFlySecMiniAppReportUrlResponse> DescribeFlySecMiniAppReportUrl(DescribeFlySecMiniAppReportUrlRequest req)
+        public Task<DescribeFlySecMiniAppReportUrlResponse> DescribeFlySecMiniAppReportUrl(DescribeFlySecMiniAppReportUrlRequest req)
         {
-             JsonResponseModel<DescribeFlySecMiniAppReportUrlResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeFlySecMiniAppReportUrl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlySecMiniAppReportUrlResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeFlySecMiniAppReportUrlResponse>(req, "DescribeFlySecMiniAppReportUrl");
         }
 
         /// <summary>
@@ -319,17 +195,8 @@ namespace TencentCloud.Mmps.V20200710
         /// <returns><see cref="DescribeFlySecMiniAppReportUrlResponse"/></returns>
         public DescribeFlySecMiniAppReportUrlResponse DescribeFlySecMiniAppReportUrlSync(DescribeFlySecMiniAppReportUrlRequest req)
         {
-             JsonResponseModel<DescribeFlySecMiniAppReportUrlResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeFlySecMiniAppReportUrl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlySecMiniAppReportUrlResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeFlySecMiniAppReportUrlResponse>(req, "DescribeFlySecMiniAppReportUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -337,19 +204,9 @@ namespace TencentCloud.Mmps.V20200710
         /// </summary>
         /// <param name="req"><see cref="DescribeFlySecMiniAppScanReportListRequest"/></param>
         /// <returns><see cref="DescribeFlySecMiniAppScanReportListResponse"/></returns>
-        public async Task<DescribeFlySecMiniAppScanReportListResponse> DescribeFlySecMiniAppScanReportList(DescribeFlySecMiniAppScanReportListRequest req)
+        public Task<DescribeFlySecMiniAppScanReportListResponse> DescribeFlySecMiniAppScanReportList(DescribeFlySecMiniAppScanReportListRequest req)
         {
-             JsonResponseModel<DescribeFlySecMiniAppScanReportListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeFlySecMiniAppScanReportList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlySecMiniAppScanReportListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeFlySecMiniAppScanReportListResponse>(req, "DescribeFlySecMiniAppScanReportList");
         }
 
         /// <summary>
@@ -359,17 +216,8 @@ namespace TencentCloud.Mmps.V20200710
         /// <returns><see cref="DescribeFlySecMiniAppScanReportListResponse"/></returns>
         public DescribeFlySecMiniAppScanReportListResponse DescribeFlySecMiniAppScanReportListSync(DescribeFlySecMiniAppScanReportListRequest req)
         {
-             JsonResponseModel<DescribeFlySecMiniAppScanReportListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeFlySecMiniAppScanReportList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlySecMiniAppScanReportListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeFlySecMiniAppScanReportListResponse>(req, "DescribeFlySecMiniAppScanReportList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -377,19 +225,9 @@ namespace TencentCloud.Mmps.V20200710
         /// </summary>
         /// <param name="req"><see cref="DescribeFlySecMiniAppScanTaskListRequest"/></param>
         /// <returns><see cref="DescribeFlySecMiniAppScanTaskListResponse"/></returns>
-        public async Task<DescribeFlySecMiniAppScanTaskListResponse> DescribeFlySecMiniAppScanTaskList(DescribeFlySecMiniAppScanTaskListRequest req)
+        public Task<DescribeFlySecMiniAppScanTaskListResponse> DescribeFlySecMiniAppScanTaskList(DescribeFlySecMiniAppScanTaskListRequest req)
         {
-             JsonResponseModel<DescribeFlySecMiniAppScanTaskListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeFlySecMiniAppScanTaskList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlySecMiniAppScanTaskListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeFlySecMiniAppScanTaskListResponse>(req, "DescribeFlySecMiniAppScanTaskList");
         }
 
         /// <summary>
@@ -399,17 +237,8 @@ namespace TencentCloud.Mmps.V20200710
         /// <returns><see cref="DescribeFlySecMiniAppScanTaskListResponse"/></returns>
         public DescribeFlySecMiniAppScanTaskListResponse DescribeFlySecMiniAppScanTaskListSync(DescribeFlySecMiniAppScanTaskListRequest req)
         {
-             JsonResponseModel<DescribeFlySecMiniAppScanTaskListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeFlySecMiniAppScanTaskList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlySecMiniAppScanTaskListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeFlySecMiniAppScanTaskListResponse>(req, "DescribeFlySecMiniAppScanTaskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -417,19 +246,9 @@ namespace TencentCloud.Mmps.V20200710
         /// </summary>
         /// <param name="req"><see cref="DescribeFlySecMiniAppScanTaskParamRequest"/></param>
         /// <returns><see cref="DescribeFlySecMiniAppScanTaskParamResponse"/></returns>
-        public async Task<DescribeFlySecMiniAppScanTaskParamResponse> DescribeFlySecMiniAppScanTaskParam(DescribeFlySecMiniAppScanTaskParamRequest req)
+        public Task<DescribeFlySecMiniAppScanTaskParamResponse> DescribeFlySecMiniAppScanTaskParam(DescribeFlySecMiniAppScanTaskParamRequest req)
         {
-             JsonResponseModel<DescribeFlySecMiniAppScanTaskParamResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeFlySecMiniAppScanTaskParam");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlySecMiniAppScanTaskParamResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeFlySecMiniAppScanTaskParamResponse>(req, "DescribeFlySecMiniAppScanTaskParam");
         }
 
         /// <summary>
@@ -439,17 +258,8 @@ namespace TencentCloud.Mmps.V20200710
         /// <returns><see cref="DescribeFlySecMiniAppScanTaskParamResponse"/></returns>
         public DescribeFlySecMiniAppScanTaskParamResponse DescribeFlySecMiniAppScanTaskParamSync(DescribeFlySecMiniAppScanTaskParamRequest req)
         {
-             JsonResponseModel<DescribeFlySecMiniAppScanTaskParamResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeFlySecMiniAppScanTaskParam");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlySecMiniAppScanTaskParamResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeFlySecMiniAppScanTaskParamResponse>(req, "DescribeFlySecMiniAppScanTaskParam")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -457,19 +267,9 @@ namespace TencentCloud.Mmps.V20200710
         /// </summary>
         /// <param name="req"><see cref="DescribeFlySecMiniAppScanTaskStatusRequest"/></param>
         /// <returns><see cref="DescribeFlySecMiniAppScanTaskStatusResponse"/></returns>
-        public async Task<DescribeFlySecMiniAppScanTaskStatusResponse> DescribeFlySecMiniAppScanTaskStatus(DescribeFlySecMiniAppScanTaskStatusRequest req)
+        public Task<DescribeFlySecMiniAppScanTaskStatusResponse> DescribeFlySecMiniAppScanTaskStatus(DescribeFlySecMiniAppScanTaskStatusRequest req)
         {
-             JsonResponseModel<DescribeFlySecMiniAppScanTaskStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeFlySecMiniAppScanTaskStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlySecMiniAppScanTaskStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeFlySecMiniAppScanTaskStatusResponse>(req, "DescribeFlySecMiniAppScanTaskStatus");
         }
 
         /// <summary>
@@ -479,17 +279,8 @@ namespace TencentCloud.Mmps.V20200710
         /// <returns><see cref="DescribeFlySecMiniAppScanTaskStatusResponse"/></returns>
         public DescribeFlySecMiniAppScanTaskStatusResponse DescribeFlySecMiniAppScanTaskStatusSync(DescribeFlySecMiniAppScanTaskStatusRequest req)
         {
-             JsonResponseModel<DescribeFlySecMiniAppScanTaskStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeFlySecMiniAppScanTaskStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlySecMiniAppScanTaskStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeFlySecMiniAppScanTaskStatusResponse>(req, "DescribeFlySecMiniAppScanTaskStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -497,19 +288,9 @@ namespace TencentCloud.Mmps.V20200710
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceUsageInfoRequest"/></param>
         /// <returns><see cref="DescribeResourceUsageInfoResponse"/></returns>
-        public async Task<DescribeResourceUsageInfoResponse> DescribeResourceUsageInfo(DescribeResourceUsageInfoRequest req)
+        public Task<DescribeResourceUsageInfoResponse> DescribeResourceUsageInfo(DescribeResourceUsageInfoRequest req)
         {
-             JsonResponseModel<DescribeResourceUsageInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeResourceUsageInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceUsageInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeResourceUsageInfoResponse>(req, "DescribeResourceUsageInfo");
         }
 
         /// <summary>
@@ -519,17 +300,8 @@ namespace TencentCloud.Mmps.V20200710
         /// <returns><see cref="DescribeResourceUsageInfoResponse"/></returns>
         public DescribeResourceUsageInfoResponse DescribeResourceUsageInfoSync(DescribeResourceUsageInfoRequest req)
         {
-             JsonResponseModel<DescribeResourceUsageInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeResourceUsageInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceUsageInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeResourceUsageInfoResponse>(req, "DescribeResourceUsageInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -537,19 +309,9 @@ namespace TencentCloud.Mmps.V20200710
         /// </summary>
         /// <param name="req"><see cref="DescribeScanTaskListRequest"/></param>
         /// <returns><see cref="DescribeScanTaskListResponse"/></returns>
-        public async Task<DescribeScanTaskListResponse> DescribeScanTaskList(DescribeScanTaskListRequest req)
+        public Task<DescribeScanTaskListResponse> DescribeScanTaskList(DescribeScanTaskListRequest req)
         {
-             JsonResponseModel<DescribeScanTaskListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeScanTaskList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScanTaskListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeScanTaskListResponse>(req, "DescribeScanTaskList");
         }
 
         /// <summary>
@@ -559,17 +321,8 @@ namespace TencentCloud.Mmps.V20200710
         /// <returns><see cref="DescribeScanTaskListResponse"/></returns>
         public DescribeScanTaskListResponse DescribeScanTaskListSync(DescribeScanTaskListRequest req)
         {
-             JsonResponseModel<DescribeScanTaskListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeScanTaskList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScanTaskListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeScanTaskListResponse>(req, "DescribeScanTaskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -577,19 +330,9 @@ namespace TencentCloud.Mmps.V20200710
         /// </summary>
         /// <param name="req"><see cref="DescribeScanTaskReportUrlRequest"/></param>
         /// <returns><see cref="DescribeScanTaskReportUrlResponse"/></returns>
-        public async Task<DescribeScanTaskReportUrlResponse> DescribeScanTaskReportUrl(DescribeScanTaskReportUrlRequest req)
+        public Task<DescribeScanTaskReportUrlResponse> DescribeScanTaskReportUrl(DescribeScanTaskReportUrlRequest req)
         {
-             JsonResponseModel<DescribeScanTaskReportUrlResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeScanTaskReportUrl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScanTaskReportUrlResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeScanTaskReportUrlResponse>(req, "DescribeScanTaskReportUrl");
         }
 
         /// <summary>
@@ -599,17 +342,8 @@ namespace TencentCloud.Mmps.V20200710
         /// <returns><see cref="DescribeScanTaskReportUrlResponse"/></returns>
         public DescribeScanTaskReportUrlResponse DescribeScanTaskReportUrlSync(DescribeScanTaskReportUrlRequest req)
         {
-             JsonResponseModel<DescribeScanTaskReportUrlResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeScanTaskReportUrl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScanTaskReportUrlResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeScanTaskReportUrlResponse>(req, "DescribeScanTaskReportUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -617,19 +351,9 @@ namespace TencentCloud.Mmps.V20200710
         /// </summary>
         /// <param name="req"><see cref="DescribeScanTaskStatusRequest"/></param>
         /// <returns><see cref="DescribeScanTaskStatusResponse"/></returns>
-        public async Task<DescribeScanTaskStatusResponse> DescribeScanTaskStatus(DescribeScanTaskStatusRequest req)
+        public Task<DescribeScanTaskStatusResponse> DescribeScanTaskStatus(DescribeScanTaskStatusRequest req)
         {
-             JsonResponseModel<DescribeScanTaskStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeScanTaskStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScanTaskStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeScanTaskStatusResponse>(req, "DescribeScanTaskStatus");
         }
 
         /// <summary>
@@ -639,17 +363,8 @@ namespace TencentCloud.Mmps.V20200710
         /// <returns><see cref="DescribeScanTaskStatusResponse"/></returns>
         public DescribeScanTaskStatusResponse DescribeScanTaskStatusSync(DescribeScanTaskStatusRequest req)
         {
-             JsonResponseModel<DescribeScanTaskStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeScanTaskStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScanTaskStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeScanTaskStatusResponse>(req, "DescribeScanTaskStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

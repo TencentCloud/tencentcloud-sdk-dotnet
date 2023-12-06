@@ -57,19 +57,9 @@ namespace TencentCloud.Ft.V20200304
         /// </summary>
         /// <param name="req"><see cref="CancelFaceMorphJobRequest"/></param>
         /// <returns><see cref="CancelFaceMorphJobResponse"/></returns>
-        public async Task<CancelFaceMorphJobResponse> CancelFaceMorphJob(CancelFaceMorphJobRequest req)
+        public Task<CancelFaceMorphJobResponse> CancelFaceMorphJob(CancelFaceMorphJobRequest req)
         {
-             JsonResponseModel<CancelFaceMorphJobResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CancelFaceMorphJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelFaceMorphJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CancelFaceMorphJobResponse>(req, "CancelFaceMorphJob");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Ft.V20200304
         /// <returns><see cref="CancelFaceMorphJobResponse"/></returns>
         public CancelFaceMorphJobResponse CancelFaceMorphJobSync(CancelFaceMorphJobRequest req)
         {
-             JsonResponseModel<CancelFaceMorphJobResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CancelFaceMorphJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelFaceMorphJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CancelFaceMorphJobResponse>(req, "CancelFaceMorphJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Ft.V20200304
         /// </summary>
         /// <param name="req"><see cref="ChangeAgePicRequest"/></param>
         /// <returns><see cref="ChangeAgePicResponse"/></returns>
-        public async Task<ChangeAgePicResponse> ChangeAgePic(ChangeAgePicRequest req)
+        public Task<ChangeAgePicResponse> ChangeAgePic(ChangeAgePicRequest req)
         {
-             JsonResponseModel<ChangeAgePicResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ChangeAgePic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChangeAgePicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ChangeAgePicResponse>(req, "ChangeAgePic");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Ft.V20200304
         /// <returns><see cref="ChangeAgePicResponse"/></returns>
         public ChangeAgePicResponse ChangeAgePicSync(ChangeAgePicRequest req)
         {
-             JsonResponseModel<ChangeAgePicResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ChangeAgePic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChangeAgePicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ChangeAgePicResponse>(req, "ChangeAgePic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Ft.V20200304
         /// </summary>
         /// <param name="req"><see cref="FaceCartoonPicRequest"/></param>
         /// <returns><see cref="FaceCartoonPicResponse"/></returns>
-        public async Task<FaceCartoonPicResponse> FaceCartoonPic(FaceCartoonPicRequest req)
+        public Task<FaceCartoonPicResponse> FaceCartoonPic(FaceCartoonPicRequest req)
         {
-             JsonResponseModel<FaceCartoonPicResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "FaceCartoonPic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FaceCartoonPicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<FaceCartoonPicResponse>(req, "FaceCartoonPic");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Ft.V20200304
         /// <returns><see cref="FaceCartoonPicResponse"/></returns>
         public FaceCartoonPicResponse FaceCartoonPicSync(FaceCartoonPicRequest req)
         {
-             JsonResponseModel<FaceCartoonPicResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "FaceCartoonPic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FaceCartoonPicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<FaceCartoonPicResponse>(req, "FaceCartoonPic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Ft.V20200304
         /// </summary>
         /// <param name="req"><see cref="MorphFaceRequest"/></param>
         /// <returns><see cref="MorphFaceResponse"/></returns>
-        public async Task<MorphFaceResponse> MorphFace(MorphFaceRequest req)
+        public Task<MorphFaceResponse> MorphFace(MorphFaceRequest req)
         {
-             JsonResponseModel<MorphFaceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "MorphFace");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MorphFaceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<MorphFaceResponse>(req, "MorphFace");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Ft.V20200304
         /// <returns><see cref="MorphFaceResponse"/></returns>
         public MorphFaceResponse MorphFaceSync(MorphFaceRequest req)
         {
-             JsonResponseModel<MorphFaceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "MorphFace");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MorphFaceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<MorphFaceResponse>(req, "MorphFace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -217,19 +141,9 @@ namespace TencentCloud.Ft.V20200304
         /// </summary>
         /// <param name="req"><see cref="QueryFaceMorphJobRequest"/></param>
         /// <returns><see cref="QueryFaceMorphJobResponse"/></returns>
-        public async Task<QueryFaceMorphJobResponse> QueryFaceMorphJob(QueryFaceMorphJobRequest req)
+        public Task<QueryFaceMorphJobResponse> QueryFaceMorphJob(QueryFaceMorphJobRequest req)
         {
-             JsonResponseModel<QueryFaceMorphJobResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryFaceMorphJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFaceMorphJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryFaceMorphJobResponse>(req, "QueryFaceMorphJob");
         }
 
         /// <summary>
@@ -239,17 +153,8 @@ namespace TencentCloud.Ft.V20200304
         /// <returns><see cref="QueryFaceMorphJobResponse"/></returns>
         public QueryFaceMorphJobResponse QueryFaceMorphJobSync(QueryFaceMorphJobRequest req)
         {
-             JsonResponseModel<QueryFaceMorphJobResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryFaceMorphJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFaceMorphJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryFaceMorphJobResponse>(req, "QueryFaceMorphJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -257,19 +162,9 @@ namespace TencentCloud.Ft.V20200304
         /// </summary>
         /// <param name="req"><see cref="SwapGenderPicRequest"/></param>
         /// <returns><see cref="SwapGenderPicResponse"/></returns>
-        public async Task<SwapGenderPicResponse> SwapGenderPic(SwapGenderPicRequest req)
+        public Task<SwapGenderPicResponse> SwapGenderPic(SwapGenderPicRequest req)
         {
-             JsonResponseModel<SwapGenderPicResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SwapGenderPic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwapGenderPicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SwapGenderPicResponse>(req, "SwapGenderPic");
         }
 
         /// <summary>
@@ -279,17 +174,8 @@ namespace TencentCloud.Ft.V20200304
         /// <returns><see cref="SwapGenderPicResponse"/></returns>
         public SwapGenderPicResponse SwapGenderPicSync(SwapGenderPicRequest req)
         {
-             JsonResponseModel<SwapGenderPicResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SwapGenderPic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwapGenderPicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SwapGenderPicResponse>(req, "SwapGenderPic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

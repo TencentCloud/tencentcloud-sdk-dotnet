@@ -57,19 +57,9 @@ namespace TencentCloud.Advisor.V20200721
         /// </summary>
         /// <param name="req"><see cref="DescribeStrategiesRequest"/></param>
         /// <returns><see cref="DescribeStrategiesResponse"/></returns>
-        public async Task<DescribeStrategiesResponse> DescribeStrategies(DescribeStrategiesRequest req)
+        public Task<DescribeStrategiesResponse> DescribeStrategies(DescribeStrategiesRequest req)
         {
-             JsonResponseModel<DescribeStrategiesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeStrategies");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStrategiesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeStrategiesResponse>(req, "DescribeStrategies");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Advisor.V20200721
         /// <returns><see cref="DescribeStrategiesResponse"/></returns>
         public DescribeStrategiesResponse DescribeStrategiesSync(DescribeStrategiesRequest req)
         {
-             JsonResponseModel<DescribeStrategiesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeStrategies");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStrategiesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeStrategiesResponse>(req, "DescribeStrategies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Advisor.V20200721
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskStrategyRisksRequest"/></param>
         /// <returns><see cref="DescribeTaskStrategyRisksResponse"/></returns>
-        public async Task<DescribeTaskStrategyRisksResponse> DescribeTaskStrategyRisks(DescribeTaskStrategyRisksRequest req)
+        public Task<DescribeTaskStrategyRisksResponse> DescribeTaskStrategyRisks(DescribeTaskStrategyRisksRequest req)
         {
-             JsonResponseModel<DescribeTaskStrategyRisksResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeTaskStrategyRisks");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskStrategyRisksResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeTaskStrategyRisksResponse>(req, "DescribeTaskStrategyRisks");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Advisor.V20200721
         /// <returns><see cref="DescribeTaskStrategyRisksResponse"/></returns>
         public DescribeTaskStrategyRisksResponse DescribeTaskStrategyRisksSync(DescribeTaskStrategyRisksRequest req)
         {
-             JsonResponseModel<DescribeTaskStrategyRisksResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeTaskStrategyRisks");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskStrategyRisksResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeTaskStrategyRisksResponse>(req, "DescribeTaskStrategyRisks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

@@ -57,19 +57,9 @@ namespace TencentCloud.Anicloud.V20220923
         /// </summary>
         /// <param name="req"><see cref="CheckAppidExistRequest"/></param>
         /// <returns><see cref="CheckAppidExistResponse"/></returns>
-        public async Task<CheckAppidExistResponse> CheckAppidExist(CheckAppidExistRequest req)
+        public Task<CheckAppidExistResponse> CheckAppidExist(CheckAppidExistRequest req)
         {
-             JsonResponseModel<CheckAppidExistResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CheckAppidExist");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckAppidExistResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CheckAppidExistResponse>(req, "CheckAppidExist");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Anicloud.V20220923
         /// <returns><see cref="CheckAppidExistResponse"/></returns>
         public CheckAppidExistResponse CheckAppidExistSync(CheckAppidExistRequest req)
         {
-             JsonResponseModel<CheckAppidExistResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CheckAppidExist");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckAppidExistResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CheckAppidExistResponse>(req, "CheckAppidExist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Anicloud.V20220923
         /// </summary>
         /// <param name="req"><see cref="QueryResourceRequest"/></param>
         /// <returns><see cref="QueryResourceResponse"/></returns>
-        public async Task<QueryResourceResponse> QueryResource(QueryResourceRequest req)
+        public Task<QueryResourceResponse> QueryResource(QueryResourceRequest req)
         {
-             JsonResponseModel<QueryResourceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryResource");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryResourceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryResourceResponse>(req, "QueryResource");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Anicloud.V20220923
         /// <returns><see cref="QueryResourceResponse"/></returns>
         public QueryResourceResponse QueryResourceSync(QueryResourceRequest req)
         {
-             JsonResponseModel<QueryResourceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryResource");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryResourceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryResourceResponse>(req, "QueryResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Anicloud.V20220923
         /// </summary>
         /// <param name="req"><see cref="QueryResourceInfoRequest"/></param>
         /// <returns><see cref="QueryResourceInfoResponse"/></returns>
-        public async Task<QueryResourceInfoResponse> QueryResourceInfo(QueryResourceInfoRequest req)
+        public Task<QueryResourceInfoResponse> QueryResourceInfo(QueryResourceInfoRequest req)
         {
-             JsonResponseModel<QueryResourceInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryResourceInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryResourceInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryResourceInfoResponse>(req, "QueryResourceInfo");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Anicloud.V20220923
         /// <returns><see cref="QueryResourceInfoResponse"/></returns>
         public QueryResourceInfoResponse QueryResourceInfoSync(QueryResourceInfoRequest req)
         {
-             JsonResponseModel<QueryResourceInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryResourceInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryResourceInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryResourceInfoResponse>(req, "QueryResourceInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

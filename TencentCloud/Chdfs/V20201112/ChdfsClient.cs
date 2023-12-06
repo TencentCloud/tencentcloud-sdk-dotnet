@@ -57,19 +57,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="AssociateAccessGroupsRequest"/></param>
         /// <returns><see cref="AssociateAccessGroupsResponse"/></returns>
-        public async Task<AssociateAccessGroupsResponse> AssociateAccessGroups(AssociateAccessGroupsRequest req)
+        public Task<AssociateAccessGroupsResponse> AssociateAccessGroups(AssociateAccessGroupsRequest req)
         {
-             JsonResponseModel<AssociateAccessGroupsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "AssociateAccessGroups");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateAccessGroupsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<AssociateAccessGroupsResponse>(req, "AssociateAccessGroups");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="AssociateAccessGroupsResponse"/></returns>
         public AssociateAccessGroupsResponse AssociateAccessGroupsSync(AssociateAccessGroupsRequest req)
         {
-             JsonResponseModel<AssociateAccessGroupsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "AssociateAccessGroups");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateAccessGroupsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<AssociateAccessGroupsResponse>(req, "AssociateAccessGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="CreateAccessGroupRequest"/></param>
         /// <returns><see cref="CreateAccessGroupResponse"/></returns>
-        public async Task<CreateAccessGroupResponse> CreateAccessGroup(CreateAccessGroupRequest req)
+        public Task<CreateAccessGroupResponse> CreateAccessGroup(CreateAccessGroupRequest req)
         {
-             JsonResponseModel<CreateAccessGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateAccessGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAccessGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateAccessGroupResponse>(req, "CreateAccessGroup");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="CreateAccessGroupResponse"/></returns>
         public CreateAccessGroupResponse CreateAccessGroupSync(CreateAccessGroupRequest req)
         {
-             JsonResponseModel<CreateAccessGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateAccessGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAccessGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateAccessGroupResponse>(req, "CreateAccessGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="CreateAccessRulesRequest"/></param>
         /// <returns><see cref="CreateAccessRulesResponse"/></returns>
-        public async Task<CreateAccessRulesResponse> CreateAccessRules(CreateAccessRulesRequest req)
+        public Task<CreateAccessRulesResponse> CreateAccessRules(CreateAccessRulesRequest req)
         {
-             JsonResponseModel<CreateAccessRulesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateAccessRules");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAccessRulesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateAccessRulesResponse>(req, "CreateAccessRules");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="CreateAccessRulesResponse"/></returns>
         public CreateAccessRulesResponse CreateAccessRulesSync(CreateAccessRulesRequest req)
         {
-             JsonResponseModel<CreateAccessRulesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateAccessRules");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAccessRulesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateAccessRulesResponse>(req, "CreateAccessRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="CreateFileSystemRequest"/></param>
         /// <returns><see cref="CreateFileSystemResponse"/></returns>
-        public async Task<CreateFileSystemResponse> CreateFileSystem(CreateFileSystemRequest req)
+        public Task<CreateFileSystemResponse> CreateFileSystem(CreateFileSystemRequest req)
         {
-             JsonResponseModel<CreateFileSystemResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateFileSystem");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFileSystemResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateFileSystemResponse>(req, "CreateFileSystem");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="CreateFileSystemResponse"/></returns>
         public CreateFileSystemResponse CreateFileSystemSync(CreateFileSystemRequest req)
         {
-             JsonResponseModel<CreateFileSystemResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateFileSystem");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFileSystemResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateFileSystemResponse>(req, "CreateFileSystem")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -217,19 +141,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="CreateLifeCycleRulesRequest"/></param>
         /// <returns><see cref="CreateLifeCycleRulesResponse"/></returns>
-        public async Task<CreateLifeCycleRulesResponse> CreateLifeCycleRules(CreateLifeCycleRulesRequest req)
+        public Task<CreateLifeCycleRulesResponse> CreateLifeCycleRules(CreateLifeCycleRulesRequest req)
         {
-             JsonResponseModel<CreateLifeCycleRulesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateLifeCycleRules");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLifeCycleRulesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateLifeCycleRulesResponse>(req, "CreateLifeCycleRules");
         }
 
         /// <summary>
@@ -239,17 +153,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="CreateLifeCycleRulesResponse"/></returns>
         public CreateLifeCycleRulesResponse CreateLifeCycleRulesSync(CreateLifeCycleRulesRequest req)
         {
-             JsonResponseModel<CreateLifeCycleRulesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateLifeCycleRules");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLifeCycleRulesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateLifeCycleRulesResponse>(req, "CreateLifeCycleRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -257,19 +162,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="CreateMountPointRequest"/></param>
         /// <returns><see cref="CreateMountPointResponse"/></returns>
-        public async Task<CreateMountPointResponse> CreateMountPoint(CreateMountPointRequest req)
+        public Task<CreateMountPointResponse> CreateMountPoint(CreateMountPointRequest req)
         {
-             JsonResponseModel<CreateMountPointResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateMountPoint");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMountPointResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateMountPointResponse>(req, "CreateMountPoint");
         }
 
         /// <summary>
@@ -279,17 +174,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="CreateMountPointResponse"/></returns>
         public CreateMountPointResponse CreateMountPointSync(CreateMountPointRequest req)
         {
-             JsonResponseModel<CreateMountPointResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateMountPoint");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMountPointResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateMountPointResponse>(req, "CreateMountPoint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -297,19 +183,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="CreateRestoreTasksRequest"/></param>
         /// <returns><see cref="CreateRestoreTasksResponse"/></returns>
-        public async Task<CreateRestoreTasksResponse> CreateRestoreTasks(CreateRestoreTasksRequest req)
+        public Task<CreateRestoreTasksResponse> CreateRestoreTasks(CreateRestoreTasksRequest req)
         {
-             JsonResponseModel<CreateRestoreTasksResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateRestoreTasks");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRestoreTasksResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateRestoreTasksResponse>(req, "CreateRestoreTasks");
         }
 
         /// <summary>
@@ -319,17 +195,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="CreateRestoreTasksResponse"/></returns>
         public CreateRestoreTasksResponse CreateRestoreTasksSync(CreateRestoreTasksRequest req)
         {
-             JsonResponseModel<CreateRestoreTasksResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateRestoreTasks");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRestoreTasksResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateRestoreTasksResponse>(req, "CreateRestoreTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -337,19 +204,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="DeleteAccessGroupRequest"/></param>
         /// <returns><see cref="DeleteAccessGroupResponse"/></returns>
-        public async Task<DeleteAccessGroupResponse> DeleteAccessGroup(DeleteAccessGroupRequest req)
+        public Task<DeleteAccessGroupResponse> DeleteAccessGroup(DeleteAccessGroupRequest req)
         {
-             JsonResponseModel<DeleteAccessGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteAccessGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAccessGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteAccessGroupResponse>(req, "DeleteAccessGroup");
         }
 
         /// <summary>
@@ -359,17 +216,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="DeleteAccessGroupResponse"/></returns>
         public DeleteAccessGroupResponse DeleteAccessGroupSync(DeleteAccessGroupRequest req)
         {
-             JsonResponseModel<DeleteAccessGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteAccessGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAccessGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteAccessGroupResponse>(req, "DeleteAccessGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -377,19 +225,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="DeleteAccessRulesRequest"/></param>
         /// <returns><see cref="DeleteAccessRulesResponse"/></returns>
-        public async Task<DeleteAccessRulesResponse> DeleteAccessRules(DeleteAccessRulesRequest req)
+        public Task<DeleteAccessRulesResponse> DeleteAccessRules(DeleteAccessRulesRequest req)
         {
-             JsonResponseModel<DeleteAccessRulesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteAccessRules");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAccessRulesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteAccessRulesResponse>(req, "DeleteAccessRules");
         }
 
         /// <summary>
@@ -399,17 +237,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="DeleteAccessRulesResponse"/></returns>
         public DeleteAccessRulesResponse DeleteAccessRulesSync(DeleteAccessRulesRequest req)
         {
-             JsonResponseModel<DeleteAccessRulesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteAccessRules");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAccessRulesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteAccessRulesResponse>(req, "DeleteAccessRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -417,19 +246,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="DeleteFileSystemRequest"/></param>
         /// <returns><see cref="DeleteFileSystemResponse"/></returns>
-        public async Task<DeleteFileSystemResponse> DeleteFileSystem(DeleteFileSystemRequest req)
+        public Task<DeleteFileSystemResponse> DeleteFileSystem(DeleteFileSystemRequest req)
         {
-             JsonResponseModel<DeleteFileSystemResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteFileSystem");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFileSystemResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteFileSystemResponse>(req, "DeleteFileSystem");
         }
 
         /// <summary>
@@ -439,17 +258,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="DeleteFileSystemResponse"/></returns>
         public DeleteFileSystemResponse DeleteFileSystemSync(DeleteFileSystemRequest req)
         {
-             JsonResponseModel<DeleteFileSystemResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteFileSystem");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFileSystemResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteFileSystemResponse>(req, "DeleteFileSystem")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -457,19 +267,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="DeleteLifeCycleRulesRequest"/></param>
         /// <returns><see cref="DeleteLifeCycleRulesResponse"/></returns>
-        public async Task<DeleteLifeCycleRulesResponse> DeleteLifeCycleRules(DeleteLifeCycleRulesRequest req)
+        public Task<DeleteLifeCycleRulesResponse> DeleteLifeCycleRules(DeleteLifeCycleRulesRequest req)
         {
-             JsonResponseModel<DeleteLifeCycleRulesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteLifeCycleRules");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLifeCycleRulesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteLifeCycleRulesResponse>(req, "DeleteLifeCycleRules");
         }
 
         /// <summary>
@@ -479,17 +279,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="DeleteLifeCycleRulesResponse"/></returns>
         public DeleteLifeCycleRulesResponse DeleteLifeCycleRulesSync(DeleteLifeCycleRulesRequest req)
         {
-             JsonResponseModel<DeleteLifeCycleRulesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteLifeCycleRules");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLifeCycleRulesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteLifeCycleRulesResponse>(req, "DeleteLifeCycleRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -497,19 +288,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="DeleteMountPointRequest"/></param>
         /// <returns><see cref="DeleteMountPointResponse"/></returns>
-        public async Task<DeleteMountPointResponse> DeleteMountPoint(DeleteMountPointRequest req)
+        public Task<DeleteMountPointResponse> DeleteMountPoint(DeleteMountPointRequest req)
         {
-             JsonResponseModel<DeleteMountPointResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteMountPoint");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMountPointResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteMountPointResponse>(req, "DeleteMountPoint");
         }
 
         /// <summary>
@@ -519,17 +300,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="DeleteMountPointResponse"/></returns>
         public DeleteMountPointResponse DeleteMountPointSync(DeleteMountPointRequest req)
         {
-             JsonResponseModel<DeleteMountPointResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteMountPoint");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMountPointResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteMountPointResponse>(req, "DeleteMountPoint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -537,19 +309,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="DescribeAccessGroupRequest"/></param>
         /// <returns><see cref="DescribeAccessGroupResponse"/></returns>
-        public async Task<DescribeAccessGroupResponse> DescribeAccessGroup(DescribeAccessGroupRequest req)
+        public Task<DescribeAccessGroupResponse> DescribeAccessGroup(DescribeAccessGroupRequest req)
         {
-             JsonResponseModel<DescribeAccessGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeAccessGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccessGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeAccessGroupResponse>(req, "DescribeAccessGroup");
         }
 
         /// <summary>
@@ -559,17 +321,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="DescribeAccessGroupResponse"/></returns>
         public DescribeAccessGroupResponse DescribeAccessGroupSync(DescribeAccessGroupRequest req)
         {
-             JsonResponseModel<DescribeAccessGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeAccessGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccessGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeAccessGroupResponse>(req, "DescribeAccessGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -577,19 +330,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="DescribeAccessGroupsRequest"/></param>
         /// <returns><see cref="DescribeAccessGroupsResponse"/></returns>
-        public async Task<DescribeAccessGroupsResponse> DescribeAccessGroups(DescribeAccessGroupsRequest req)
+        public Task<DescribeAccessGroupsResponse> DescribeAccessGroups(DescribeAccessGroupsRequest req)
         {
-             JsonResponseModel<DescribeAccessGroupsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeAccessGroups");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccessGroupsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeAccessGroupsResponse>(req, "DescribeAccessGroups");
         }
 
         /// <summary>
@@ -599,17 +342,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="DescribeAccessGroupsResponse"/></returns>
         public DescribeAccessGroupsResponse DescribeAccessGroupsSync(DescribeAccessGroupsRequest req)
         {
-             JsonResponseModel<DescribeAccessGroupsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeAccessGroups");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccessGroupsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeAccessGroupsResponse>(req, "DescribeAccessGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -617,19 +351,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="DescribeAccessRulesRequest"/></param>
         /// <returns><see cref="DescribeAccessRulesResponse"/></returns>
-        public async Task<DescribeAccessRulesResponse> DescribeAccessRules(DescribeAccessRulesRequest req)
+        public Task<DescribeAccessRulesResponse> DescribeAccessRules(DescribeAccessRulesRequest req)
         {
-             JsonResponseModel<DescribeAccessRulesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeAccessRules");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccessRulesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeAccessRulesResponse>(req, "DescribeAccessRules");
         }
 
         /// <summary>
@@ -639,17 +363,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="DescribeAccessRulesResponse"/></returns>
         public DescribeAccessRulesResponse DescribeAccessRulesSync(DescribeAccessRulesRequest req)
         {
-             JsonResponseModel<DescribeAccessRulesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeAccessRules");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccessRulesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeAccessRulesResponse>(req, "DescribeAccessRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -657,19 +372,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="DescribeFileSystemRequest"/></param>
         /// <returns><see cref="DescribeFileSystemResponse"/></returns>
-        public async Task<DescribeFileSystemResponse> DescribeFileSystem(DescribeFileSystemRequest req)
+        public Task<DescribeFileSystemResponse> DescribeFileSystem(DescribeFileSystemRequest req)
         {
-             JsonResponseModel<DescribeFileSystemResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeFileSystem");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFileSystemResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeFileSystemResponse>(req, "DescribeFileSystem");
         }
 
         /// <summary>
@@ -679,17 +384,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="DescribeFileSystemResponse"/></returns>
         public DescribeFileSystemResponse DescribeFileSystemSync(DescribeFileSystemRequest req)
         {
-             JsonResponseModel<DescribeFileSystemResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeFileSystem");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFileSystemResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeFileSystemResponse>(req, "DescribeFileSystem")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -697,19 +393,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="DescribeFileSystemsRequest"/></param>
         /// <returns><see cref="DescribeFileSystemsResponse"/></returns>
-        public async Task<DescribeFileSystemsResponse> DescribeFileSystems(DescribeFileSystemsRequest req)
+        public Task<DescribeFileSystemsResponse> DescribeFileSystems(DescribeFileSystemsRequest req)
         {
-             JsonResponseModel<DescribeFileSystemsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeFileSystems");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFileSystemsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeFileSystemsResponse>(req, "DescribeFileSystems");
         }
 
         /// <summary>
@@ -719,17 +405,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="DescribeFileSystemsResponse"/></returns>
         public DescribeFileSystemsResponse DescribeFileSystemsSync(DescribeFileSystemsRequest req)
         {
-             JsonResponseModel<DescribeFileSystemsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeFileSystems");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFileSystemsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeFileSystemsResponse>(req, "DescribeFileSystems")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -737,19 +414,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="DescribeLifeCycleRulesRequest"/></param>
         /// <returns><see cref="DescribeLifeCycleRulesResponse"/></returns>
-        public async Task<DescribeLifeCycleRulesResponse> DescribeLifeCycleRules(DescribeLifeCycleRulesRequest req)
+        public Task<DescribeLifeCycleRulesResponse> DescribeLifeCycleRules(DescribeLifeCycleRulesRequest req)
         {
-             JsonResponseModel<DescribeLifeCycleRulesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeLifeCycleRules");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLifeCycleRulesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeLifeCycleRulesResponse>(req, "DescribeLifeCycleRules");
         }
 
         /// <summary>
@@ -759,17 +426,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="DescribeLifeCycleRulesResponse"/></returns>
         public DescribeLifeCycleRulesResponse DescribeLifeCycleRulesSync(DescribeLifeCycleRulesRequest req)
         {
-             JsonResponseModel<DescribeLifeCycleRulesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeLifeCycleRules");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLifeCycleRulesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeLifeCycleRulesResponse>(req, "DescribeLifeCycleRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -777,19 +435,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="DescribeMountPointRequest"/></param>
         /// <returns><see cref="DescribeMountPointResponse"/></returns>
-        public async Task<DescribeMountPointResponse> DescribeMountPoint(DescribeMountPointRequest req)
+        public Task<DescribeMountPointResponse> DescribeMountPoint(DescribeMountPointRequest req)
         {
-             JsonResponseModel<DescribeMountPointResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeMountPoint");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMountPointResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeMountPointResponse>(req, "DescribeMountPoint");
         }
 
         /// <summary>
@@ -799,17 +447,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="DescribeMountPointResponse"/></returns>
         public DescribeMountPointResponse DescribeMountPointSync(DescribeMountPointRequest req)
         {
-             JsonResponseModel<DescribeMountPointResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeMountPoint");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMountPointResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeMountPointResponse>(req, "DescribeMountPoint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -817,19 +456,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="DescribeMountPointsRequest"/></param>
         /// <returns><see cref="DescribeMountPointsResponse"/></returns>
-        public async Task<DescribeMountPointsResponse> DescribeMountPoints(DescribeMountPointsRequest req)
+        public Task<DescribeMountPointsResponse> DescribeMountPoints(DescribeMountPointsRequest req)
         {
-             JsonResponseModel<DescribeMountPointsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeMountPoints");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMountPointsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeMountPointsResponse>(req, "DescribeMountPoints");
         }
 
         /// <summary>
@@ -839,17 +468,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="DescribeMountPointsResponse"/></returns>
         public DescribeMountPointsResponse DescribeMountPointsSync(DescribeMountPointsRequest req)
         {
-             JsonResponseModel<DescribeMountPointsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeMountPoints");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMountPointsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeMountPointsResponse>(req, "DescribeMountPoints")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -857,19 +477,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceTagsRequest"/></param>
         /// <returns><see cref="DescribeResourceTagsResponse"/></returns>
-        public async Task<DescribeResourceTagsResponse> DescribeResourceTags(DescribeResourceTagsRequest req)
+        public Task<DescribeResourceTagsResponse> DescribeResourceTags(DescribeResourceTagsRequest req)
         {
-             JsonResponseModel<DescribeResourceTagsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeResourceTags");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceTagsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeResourceTagsResponse>(req, "DescribeResourceTags");
         }
 
         /// <summary>
@@ -879,17 +489,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="DescribeResourceTagsResponse"/></returns>
         public DescribeResourceTagsResponse DescribeResourceTagsSync(DescribeResourceTagsRequest req)
         {
-             JsonResponseModel<DescribeResourceTagsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeResourceTags");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceTagsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeResourceTagsResponse>(req, "DescribeResourceTags")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -897,19 +498,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="DescribeRestoreTasksRequest"/></param>
         /// <returns><see cref="DescribeRestoreTasksResponse"/></returns>
-        public async Task<DescribeRestoreTasksResponse> DescribeRestoreTasks(DescribeRestoreTasksRequest req)
+        public Task<DescribeRestoreTasksResponse> DescribeRestoreTasks(DescribeRestoreTasksRequest req)
         {
-             JsonResponseModel<DescribeRestoreTasksResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeRestoreTasks");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRestoreTasksResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeRestoreTasksResponse>(req, "DescribeRestoreTasks");
         }
 
         /// <summary>
@@ -919,17 +510,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="DescribeRestoreTasksResponse"/></returns>
         public DescribeRestoreTasksResponse DescribeRestoreTasksSync(DescribeRestoreTasksRequest req)
         {
-             JsonResponseModel<DescribeRestoreTasksResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeRestoreTasks");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRestoreTasksResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeRestoreTasksResponse>(req, "DescribeRestoreTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -937,19 +519,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="DisassociateAccessGroupsRequest"/></param>
         /// <returns><see cref="DisassociateAccessGroupsResponse"/></returns>
-        public async Task<DisassociateAccessGroupsResponse> DisassociateAccessGroups(DisassociateAccessGroupsRequest req)
+        public Task<DisassociateAccessGroupsResponse> DisassociateAccessGroups(DisassociateAccessGroupsRequest req)
         {
-             JsonResponseModel<DisassociateAccessGroupsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DisassociateAccessGroups");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateAccessGroupsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DisassociateAccessGroupsResponse>(req, "DisassociateAccessGroups");
         }
 
         /// <summary>
@@ -959,17 +531,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="DisassociateAccessGroupsResponse"/></returns>
         public DisassociateAccessGroupsResponse DisassociateAccessGroupsSync(DisassociateAccessGroupsRequest req)
         {
-             JsonResponseModel<DisassociateAccessGroupsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DisassociateAccessGroups");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateAccessGroupsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DisassociateAccessGroupsResponse>(req, "DisassociateAccessGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -977,19 +540,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="ModifyAccessGroupRequest"/></param>
         /// <returns><see cref="ModifyAccessGroupResponse"/></returns>
-        public async Task<ModifyAccessGroupResponse> ModifyAccessGroup(ModifyAccessGroupRequest req)
+        public Task<ModifyAccessGroupResponse> ModifyAccessGroup(ModifyAccessGroupRequest req)
         {
-             JsonResponseModel<ModifyAccessGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyAccessGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccessGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyAccessGroupResponse>(req, "ModifyAccessGroup");
         }
 
         /// <summary>
@@ -999,17 +552,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="ModifyAccessGroupResponse"/></returns>
         public ModifyAccessGroupResponse ModifyAccessGroupSync(ModifyAccessGroupRequest req)
         {
-             JsonResponseModel<ModifyAccessGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyAccessGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccessGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyAccessGroupResponse>(req, "ModifyAccessGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1017,19 +561,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="ModifyAccessRulesRequest"/></param>
         /// <returns><see cref="ModifyAccessRulesResponse"/></returns>
-        public async Task<ModifyAccessRulesResponse> ModifyAccessRules(ModifyAccessRulesRequest req)
+        public Task<ModifyAccessRulesResponse> ModifyAccessRules(ModifyAccessRulesRequest req)
         {
-             JsonResponseModel<ModifyAccessRulesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyAccessRules");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccessRulesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyAccessRulesResponse>(req, "ModifyAccessRules");
         }
 
         /// <summary>
@@ -1039,17 +573,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="ModifyAccessRulesResponse"/></returns>
         public ModifyAccessRulesResponse ModifyAccessRulesSync(ModifyAccessRulesRequest req)
         {
-             JsonResponseModel<ModifyAccessRulesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyAccessRules");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccessRulesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyAccessRulesResponse>(req, "ModifyAccessRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1057,19 +582,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="ModifyFileSystemRequest"/></param>
         /// <returns><see cref="ModifyFileSystemResponse"/></returns>
-        public async Task<ModifyFileSystemResponse> ModifyFileSystem(ModifyFileSystemRequest req)
+        public Task<ModifyFileSystemResponse> ModifyFileSystem(ModifyFileSystemRequest req)
         {
-             JsonResponseModel<ModifyFileSystemResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyFileSystem");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFileSystemResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyFileSystemResponse>(req, "ModifyFileSystem");
         }
 
         /// <summary>
@@ -1079,17 +594,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="ModifyFileSystemResponse"/></returns>
         public ModifyFileSystemResponse ModifyFileSystemSync(ModifyFileSystemRequest req)
         {
-             JsonResponseModel<ModifyFileSystemResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyFileSystem");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFileSystemResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyFileSystemResponse>(req, "ModifyFileSystem")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1097,19 +603,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="ModifyLifeCycleRulesRequest"/></param>
         /// <returns><see cref="ModifyLifeCycleRulesResponse"/></returns>
-        public async Task<ModifyLifeCycleRulesResponse> ModifyLifeCycleRules(ModifyLifeCycleRulesRequest req)
+        public Task<ModifyLifeCycleRulesResponse> ModifyLifeCycleRules(ModifyLifeCycleRulesRequest req)
         {
-             JsonResponseModel<ModifyLifeCycleRulesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyLifeCycleRules");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLifeCycleRulesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyLifeCycleRulesResponse>(req, "ModifyLifeCycleRules");
         }
 
         /// <summary>
@@ -1119,17 +615,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="ModifyLifeCycleRulesResponse"/></returns>
         public ModifyLifeCycleRulesResponse ModifyLifeCycleRulesSync(ModifyLifeCycleRulesRequest req)
         {
-             JsonResponseModel<ModifyLifeCycleRulesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyLifeCycleRules");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLifeCycleRulesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyLifeCycleRulesResponse>(req, "ModifyLifeCycleRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1137,19 +624,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="ModifyMountPointRequest"/></param>
         /// <returns><see cref="ModifyMountPointResponse"/></returns>
-        public async Task<ModifyMountPointResponse> ModifyMountPoint(ModifyMountPointRequest req)
+        public Task<ModifyMountPointResponse> ModifyMountPoint(ModifyMountPointRequest req)
         {
-             JsonResponseModel<ModifyMountPointResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyMountPoint");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMountPointResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyMountPointResponse>(req, "ModifyMountPoint");
         }
 
         /// <summary>
@@ -1159,17 +636,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="ModifyMountPointResponse"/></returns>
         public ModifyMountPointResponse ModifyMountPointSync(ModifyMountPointRequest req)
         {
-             JsonResponseModel<ModifyMountPointResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyMountPoint");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMountPointResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyMountPointResponse>(req, "ModifyMountPoint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1177,19 +645,9 @@ namespace TencentCloud.Chdfs.V20201112
         /// </summary>
         /// <param name="req"><see cref="ModifyResourceTagsRequest"/></param>
         /// <returns><see cref="ModifyResourceTagsResponse"/></returns>
-        public async Task<ModifyResourceTagsResponse> ModifyResourceTags(ModifyResourceTagsRequest req)
+        public Task<ModifyResourceTagsResponse> ModifyResourceTags(ModifyResourceTagsRequest req)
         {
-             JsonResponseModel<ModifyResourceTagsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyResourceTags");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourceTagsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyResourceTagsResponse>(req, "ModifyResourceTags");
         }
 
         /// <summary>
@@ -1199,17 +657,8 @@ namespace TencentCloud.Chdfs.V20201112
         /// <returns><see cref="ModifyResourceTagsResponse"/></returns>
         public ModifyResourceTagsResponse ModifyResourceTagsSync(ModifyResourceTagsRequest req)
         {
-             JsonResponseModel<ModifyResourceTagsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyResourceTags");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourceTagsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyResourceTagsResponse>(req, "ModifyResourceTags")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

@@ -57,19 +57,9 @@ namespace TencentCloud.Aai.V20180522
         /// </summary>
         /// <param name="req"><see cref="ChatRequest"/></param>
         /// <returns><see cref="ChatResponse"/></returns>
-        public async Task<ChatResponse> Chat(ChatRequest req)
+        public Task<ChatResponse> Chat(ChatRequest req)
         {
-             JsonResponseModel<ChatResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "Chat");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChatResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ChatResponse>(req, "Chat");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Aai.V20180522
         /// <returns><see cref="ChatResponse"/></returns>
         public ChatResponse ChatSync(ChatRequest req)
         {
-             JsonResponseModel<ChatResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "Chat");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChatResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ChatResponse>(req, "Chat")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Aai.V20180522
         /// </summary>
         /// <param name="req"><see cref="SentenceRecognitionRequest"/></param>
         /// <returns><see cref="SentenceRecognitionResponse"/></returns>
-        public async Task<SentenceRecognitionResponse> SentenceRecognition(SentenceRecognitionRequest req)
+        public Task<SentenceRecognitionResponse> SentenceRecognition(SentenceRecognitionRequest req)
         {
-             JsonResponseModel<SentenceRecognitionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SentenceRecognition");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SentenceRecognitionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SentenceRecognitionResponse>(req, "SentenceRecognition");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Aai.V20180522
         /// <returns><see cref="SentenceRecognitionResponse"/></returns>
         public SentenceRecognitionResponse SentenceRecognitionSync(SentenceRecognitionRequest req)
         {
-             JsonResponseModel<SentenceRecognitionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SentenceRecognition");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SentenceRecognitionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SentenceRecognitionResponse>(req, "SentenceRecognition")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Aai.V20180522
         /// </summary>
         /// <param name="req"><see cref="SimultaneousInterpretingRequest"/></param>
         /// <returns><see cref="SimultaneousInterpretingResponse"/></returns>
-        public async Task<SimultaneousInterpretingResponse> SimultaneousInterpreting(SimultaneousInterpretingRequest req)
+        public Task<SimultaneousInterpretingResponse> SimultaneousInterpreting(SimultaneousInterpretingRequest req)
         {
-             JsonResponseModel<SimultaneousInterpretingResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SimultaneousInterpreting");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SimultaneousInterpretingResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SimultaneousInterpretingResponse>(req, "SimultaneousInterpreting");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Aai.V20180522
         /// <returns><see cref="SimultaneousInterpretingResponse"/></returns>
         public SimultaneousInterpretingResponse SimultaneousInterpretingSync(SimultaneousInterpretingRequest req)
         {
-             JsonResponseModel<SimultaneousInterpretingResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SimultaneousInterpreting");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SimultaneousInterpretingResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SimultaneousInterpretingResponse>(req, "SimultaneousInterpreting")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -179,19 +122,9 @@ namespace TencentCloud.Aai.V20180522
         /// </summary>
         /// <param name="req"><see cref="TextToVoiceRequest"/></param>
         /// <returns><see cref="TextToVoiceResponse"/></returns>
-        public async Task<TextToVoiceResponse> TextToVoice(TextToVoiceRequest req)
+        public Task<TextToVoiceResponse> TextToVoice(TextToVoiceRequest req)
         {
-             JsonResponseModel<TextToVoiceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "TextToVoice");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextToVoiceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TextToVoiceResponse>(req, "TextToVoice");
         }
 
         /// <summary>
@@ -203,17 +136,8 @@ namespace TencentCloud.Aai.V20180522
         /// <returns><see cref="TextToVoiceResponse"/></returns>
         public TextToVoiceResponse TextToVoiceSync(TextToVoiceRequest req)
         {
-             JsonResponseModel<TextToVoiceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "TextToVoice");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextToVoiceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TextToVoiceResponse>(req, "TextToVoice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

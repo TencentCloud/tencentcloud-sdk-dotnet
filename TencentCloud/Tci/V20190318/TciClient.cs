@@ -57,19 +57,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="AIAssistantRequest"/></param>
         /// <returns><see cref="AIAssistantResponse"/></returns>
-        public async Task<AIAssistantResponse> AIAssistant(AIAssistantRequest req)
+        public Task<AIAssistantResponse> AIAssistant(AIAssistantRequest req)
         {
-             JsonResponseModel<AIAssistantResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "AIAssistant");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AIAssistantResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<AIAssistantResponse>(req, "AIAssistant");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="AIAssistantResponse"/></returns>
         public AIAssistantResponse AIAssistantSync(AIAssistantRequest req)
         {
-             JsonResponseModel<AIAssistantResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "AIAssistant");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AIAssistantResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<AIAssistantResponse>(req, "AIAssistant")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="CancelTaskRequest"/></param>
         /// <returns><see cref="CancelTaskResponse"/></returns>
-        public async Task<CancelTaskResponse> CancelTask(CancelTaskRequest req)
+        public Task<CancelTaskResponse> CancelTask(CancelTaskRequest req)
         {
-             JsonResponseModel<CancelTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CancelTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CancelTaskResponse>(req, "CancelTask");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="CancelTaskResponse"/></returns>
         public CancelTaskResponse CancelTaskSync(CancelTaskRequest req)
         {
-             JsonResponseModel<CancelTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CancelTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CancelTaskResponse>(req, "CancelTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="CheckFacePhotoRequest"/></param>
         /// <returns><see cref="CheckFacePhotoResponse"/></returns>
-        public async Task<CheckFacePhotoResponse> CheckFacePhoto(CheckFacePhotoRequest req)
+        public Task<CheckFacePhotoResponse> CheckFacePhoto(CheckFacePhotoRequest req)
         {
-             JsonResponseModel<CheckFacePhotoResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CheckFacePhoto");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckFacePhotoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CheckFacePhotoResponse>(req, "CheckFacePhoto");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="CheckFacePhotoResponse"/></returns>
         public CheckFacePhotoResponse CheckFacePhotoSync(CheckFacePhotoRequest req)
         {
-             JsonResponseModel<CheckFacePhotoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CheckFacePhoto");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckFacePhotoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CheckFacePhotoResponse>(req, "CheckFacePhoto")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="CreateFaceRequest"/></param>
         /// <returns><see cref="CreateFaceResponse"/></returns>
-        public async Task<CreateFaceResponse> CreateFace(CreateFaceRequest req)
+        public Task<CreateFaceResponse> CreateFace(CreateFaceRequest req)
         {
-             JsonResponseModel<CreateFaceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateFace");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFaceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateFaceResponse>(req, "CreateFace");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="CreateFaceResponse"/></returns>
         public CreateFaceResponse CreateFaceSync(CreateFaceRequest req)
         {
-             JsonResponseModel<CreateFaceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateFace");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFaceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateFaceResponse>(req, "CreateFace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -217,19 +141,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="CreateLibraryRequest"/></param>
         /// <returns><see cref="CreateLibraryResponse"/></returns>
-        public async Task<CreateLibraryResponse> CreateLibrary(CreateLibraryRequest req)
+        public Task<CreateLibraryResponse> CreateLibrary(CreateLibraryRequest req)
         {
-             JsonResponseModel<CreateLibraryResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateLibrary");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLibraryResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateLibraryResponse>(req, "CreateLibrary");
         }
 
         /// <summary>
@@ -239,17 +153,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="CreateLibraryResponse"/></returns>
         public CreateLibraryResponse CreateLibrarySync(CreateLibraryRequest req)
         {
-             JsonResponseModel<CreateLibraryResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateLibrary");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLibraryResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateLibraryResponse>(req, "CreateLibrary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -257,19 +162,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="CreatePersonRequest"/></param>
         /// <returns><see cref="CreatePersonResponse"/></returns>
-        public async Task<CreatePersonResponse> CreatePerson(CreatePersonRequest req)
+        public Task<CreatePersonResponse> CreatePerson(CreatePersonRequest req)
         {
-             JsonResponseModel<CreatePersonResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreatePerson");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePersonResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreatePersonResponse>(req, "CreatePerson");
         }
 
         /// <summary>
@@ -279,17 +174,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="CreatePersonResponse"/></returns>
         public CreatePersonResponse CreatePersonSync(CreatePersonRequest req)
         {
-             JsonResponseModel<CreatePersonResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreatePerson");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePersonResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreatePersonResponse>(req, "CreatePerson")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -297,19 +183,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="CreateVocabRequest"/></param>
         /// <returns><see cref="CreateVocabResponse"/></returns>
-        public async Task<CreateVocabResponse> CreateVocab(CreateVocabRequest req)
+        public Task<CreateVocabResponse> CreateVocab(CreateVocabRequest req)
         {
-             JsonResponseModel<CreateVocabResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateVocab");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVocabResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateVocabResponse>(req, "CreateVocab");
         }
 
         /// <summary>
@@ -319,17 +195,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="CreateVocabResponse"/></returns>
         public CreateVocabResponse CreateVocabSync(CreateVocabRequest req)
         {
-             JsonResponseModel<CreateVocabResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateVocab");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVocabResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateVocabResponse>(req, "CreateVocab")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -337,19 +204,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="CreateVocabLibRequest"/></param>
         /// <returns><see cref="CreateVocabLibResponse"/></returns>
-        public async Task<CreateVocabLibResponse> CreateVocabLib(CreateVocabLibRequest req)
+        public Task<CreateVocabLibResponse> CreateVocabLib(CreateVocabLibRequest req)
         {
-             JsonResponseModel<CreateVocabLibResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateVocabLib");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVocabLibResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateVocabLibResponse>(req, "CreateVocabLib");
         }
 
         /// <summary>
@@ -359,17 +216,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="CreateVocabLibResponse"/></returns>
         public CreateVocabLibResponse CreateVocabLibSync(CreateVocabLibRequest req)
         {
-             JsonResponseModel<CreateVocabLibResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateVocabLib");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVocabLibResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateVocabLibResponse>(req, "CreateVocabLib")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -377,19 +225,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="DeleteFaceRequest"/></param>
         /// <returns><see cref="DeleteFaceResponse"/></returns>
-        public async Task<DeleteFaceResponse> DeleteFace(DeleteFaceRequest req)
+        public Task<DeleteFaceResponse> DeleteFace(DeleteFaceRequest req)
         {
-             JsonResponseModel<DeleteFaceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteFace");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFaceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteFaceResponse>(req, "DeleteFace");
         }
 
         /// <summary>
@@ -399,17 +237,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="DeleteFaceResponse"/></returns>
         public DeleteFaceResponse DeleteFaceSync(DeleteFaceRequest req)
         {
-             JsonResponseModel<DeleteFaceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteFace");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFaceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteFaceResponse>(req, "DeleteFace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -417,19 +246,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="DeleteLibraryRequest"/></param>
         /// <returns><see cref="DeleteLibraryResponse"/></returns>
-        public async Task<DeleteLibraryResponse> DeleteLibrary(DeleteLibraryRequest req)
+        public Task<DeleteLibraryResponse> DeleteLibrary(DeleteLibraryRequest req)
         {
-             JsonResponseModel<DeleteLibraryResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteLibrary");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLibraryResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteLibraryResponse>(req, "DeleteLibrary");
         }
 
         /// <summary>
@@ -439,17 +258,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="DeleteLibraryResponse"/></returns>
         public DeleteLibraryResponse DeleteLibrarySync(DeleteLibraryRequest req)
         {
-             JsonResponseModel<DeleteLibraryResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteLibrary");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLibraryResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteLibraryResponse>(req, "DeleteLibrary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -457,19 +267,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="DeletePersonRequest"/></param>
         /// <returns><see cref="DeletePersonResponse"/></returns>
-        public async Task<DeletePersonResponse> DeletePerson(DeletePersonRequest req)
+        public Task<DeletePersonResponse> DeletePerson(DeletePersonRequest req)
         {
-             JsonResponseModel<DeletePersonResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeletePerson");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePersonResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeletePersonResponse>(req, "DeletePerson");
         }
 
         /// <summary>
@@ -479,17 +279,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="DeletePersonResponse"/></returns>
         public DeletePersonResponse DeletePersonSync(DeletePersonRequest req)
         {
-             JsonResponseModel<DeletePersonResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeletePerson");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePersonResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeletePersonResponse>(req, "DeletePerson")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -497,19 +288,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="DeleteVocabRequest"/></param>
         /// <returns><see cref="DeleteVocabResponse"/></returns>
-        public async Task<DeleteVocabResponse> DeleteVocab(DeleteVocabRequest req)
+        public Task<DeleteVocabResponse> DeleteVocab(DeleteVocabRequest req)
         {
-             JsonResponseModel<DeleteVocabResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteVocab");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVocabResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteVocabResponse>(req, "DeleteVocab");
         }
 
         /// <summary>
@@ -519,17 +300,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="DeleteVocabResponse"/></returns>
         public DeleteVocabResponse DeleteVocabSync(DeleteVocabRequest req)
         {
-             JsonResponseModel<DeleteVocabResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteVocab");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVocabResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteVocabResponse>(req, "DeleteVocab")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -537,19 +309,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="DeleteVocabLibRequest"/></param>
         /// <returns><see cref="DeleteVocabLibResponse"/></returns>
-        public async Task<DeleteVocabLibResponse> DeleteVocabLib(DeleteVocabLibRequest req)
+        public Task<DeleteVocabLibResponse> DeleteVocabLib(DeleteVocabLibRequest req)
         {
-             JsonResponseModel<DeleteVocabLibResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteVocabLib");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVocabLibResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteVocabLibResponse>(req, "DeleteVocabLib");
         }
 
         /// <summary>
@@ -559,17 +321,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="DeleteVocabLibResponse"/></returns>
         public DeleteVocabLibResponse DeleteVocabLibSync(DeleteVocabLibRequest req)
         {
-             JsonResponseModel<DeleteVocabLibResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteVocabLib");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVocabLibResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteVocabLibResponse>(req, "DeleteVocabLib")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -577,19 +330,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="DescribeAITaskResultRequest"/></param>
         /// <returns><see cref="DescribeAITaskResultResponse"/></returns>
-        public async Task<DescribeAITaskResultResponse> DescribeAITaskResult(DescribeAITaskResultRequest req)
+        public Task<DescribeAITaskResultResponse> DescribeAITaskResult(DescribeAITaskResultRequest req)
         {
-             JsonResponseModel<DescribeAITaskResultResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeAITaskResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAITaskResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeAITaskResultResponse>(req, "DescribeAITaskResult");
         }
 
         /// <summary>
@@ -599,17 +342,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="DescribeAITaskResultResponse"/></returns>
         public DescribeAITaskResultResponse DescribeAITaskResultSync(DescribeAITaskResultRequest req)
         {
-             JsonResponseModel<DescribeAITaskResultResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeAITaskResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAITaskResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeAITaskResultResponse>(req, "DescribeAITaskResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -617,19 +351,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="DescribeAttendanceResultRequest"/></param>
         /// <returns><see cref="DescribeAttendanceResultResponse"/></returns>
-        public async Task<DescribeAttendanceResultResponse> DescribeAttendanceResult(DescribeAttendanceResultRequest req)
+        public Task<DescribeAttendanceResultResponse> DescribeAttendanceResult(DescribeAttendanceResultRequest req)
         {
-             JsonResponseModel<DescribeAttendanceResultResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeAttendanceResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAttendanceResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeAttendanceResultResponse>(req, "DescribeAttendanceResult");
         }
 
         /// <summary>
@@ -639,17 +363,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="DescribeAttendanceResultResponse"/></returns>
         public DescribeAttendanceResultResponse DescribeAttendanceResultSync(DescribeAttendanceResultRequest req)
         {
-             JsonResponseModel<DescribeAttendanceResultResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeAttendanceResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAttendanceResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeAttendanceResultResponse>(req, "DescribeAttendanceResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -657,19 +372,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="DescribeAudioTaskRequest"/></param>
         /// <returns><see cref="DescribeAudioTaskResponse"/></returns>
-        public async Task<DescribeAudioTaskResponse> DescribeAudioTask(DescribeAudioTaskRequest req)
+        public Task<DescribeAudioTaskResponse> DescribeAudioTask(DescribeAudioTaskRequest req)
         {
-             JsonResponseModel<DescribeAudioTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeAudioTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAudioTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeAudioTaskResponse>(req, "DescribeAudioTask");
         }
 
         /// <summary>
@@ -679,17 +384,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="DescribeAudioTaskResponse"/></returns>
         public DescribeAudioTaskResponse DescribeAudioTaskSync(DescribeAudioTaskRequest req)
         {
-             JsonResponseModel<DescribeAudioTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeAudioTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAudioTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeAudioTaskResponse>(req, "DescribeAudioTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -697,19 +393,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="DescribeConversationTaskRequest"/></param>
         /// <returns><see cref="DescribeConversationTaskResponse"/></returns>
-        public async Task<DescribeConversationTaskResponse> DescribeConversationTask(DescribeConversationTaskRequest req)
+        public Task<DescribeConversationTaskResponse> DescribeConversationTask(DescribeConversationTaskRequest req)
         {
-             JsonResponseModel<DescribeConversationTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeConversationTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConversationTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeConversationTaskResponse>(req, "DescribeConversationTask");
         }
 
         /// <summary>
@@ -719,17 +405,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="DescribeConversationTaskResponse"/></returns>
         public DescribeConversationTaskResponse DescribeConversationTaskSync(DescribeConversationTaskRequest req)
         {
-             JsonResponseModel<DescribeConversationTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeConversationTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConversationTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeConversationTaskResponse>(req, "DescribeConversationTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -737,19 +414,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="DescribeHighlightResultRequest"/></param>
         /// <returns><see cref="DescribeHighlightResultResponse"/></returns>
-        public async Task<DescribeHighlightResultResponse> DescribeHighlightResult(DescribeHighlightResultRequest req)
+        public Task<DescribeHighlightResultResponse> DescribeHighlightResult(DescribeHighlightResultRequest req)
         {
-             JsonResponseModel<DescribeHighlightResultResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeHighlightResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHighlightResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeHighlightResultResponse>(req, "DescribeHighlightResult");
         }
 
         /// <summary>
@@ -759,17 +426,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="DescribeHighlightResultResponse"/></returns>
         public DescribeHighlightResultResponse DescribeHighlightResultSync(DescribeHighlightResultRequest req)
         {
-             JsonResponseModel<DescribeHighlightResultResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeHighlightResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHighlightResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeHighlightResultResponse>(req, "DescribeHighlightResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -777,19 +435,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="DescribeImageTaskRequest"/></param>
         /// <returns><see cref="DescribeImageTaskResponse"/></returns>
-        public async Task<DescribeImageTaskResponse> DescribeImageTask(DescribeImageTaskRequest req)
+        public Task<DescribeImageTaskResponse> DescribeImageTask(DescribeImageTaskRequest req)
         {
-             JsonResponseModel<DescribeImageTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeImageTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeImageTaskResponse>(req, "DescribeImageTask");
         }
 
         /// <summary>
@@ -799,17 +447,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="DescribeImageTaskResponse"/></returns>
         public DescribeImageTaskResponse DescribeImageTaskSync(DescribeImageTaskRequest req)
         {
-             JsonResponseModel<DescribeImageTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeImageTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeImageTaskResponse>(req, "DescribeImageTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -817,19 +456,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="DescribeImageTaskStatisticRequest"/></param>
         /// <returns><see cref="DescribeImageTaskStatisticResponse"/></returns>
-        public async Task<DescribeImageTaskStatisticResponse> DescribeImageTaskStatistic(DescribeImageTaskStatisticRequest req)
+        public Task<DescribeImageTaskStatisticResponse> DescribeImageTaskStatistic(DescribeImageTaskStatisticRequest req)
         {
-             JsonResponseModel<DescribeImageTaskStatisticResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeImageTaskStatistic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageTaskStatisticResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeImageTaskStatisticResponse>(req, "DescribeImageTaskStatistic");
         }
 
         /// <summary>
@@ -839,17 +468,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="DescribeImageTaskStatisticResponse"/></returns>
         public DescribeImageTaskStatisticResponse DescribeImageTaskStatisticSync(DescribeImageTaskStatisticRequest req)
         {
-             JsonResponseModel<DescribeImageTaskStatisticResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeImageTaskStatistic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageTaskStatisticResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeImageTaskStatisticResponse>(req, "DescribeImageTaskStatistic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -857,19 +477,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="DescribeLibrariesRequest"/></param>
         /// <returns><see cref="DescribeLibrariesResponse"/></returns>
-        public async Task<DescribeLibrariesResponse> DescribeLibraries(DescribeLibrariesRequest req)
+        public Task<DescribeLibrariesResponse> DescribeLibraries(DescribeLibrariesRequest req)
         {
-             JsonResponseModel<DescribeLibrariesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeLibraries");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLibrariesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeLibrariesResponse>(req, "DescribeLibraries");
         }
 
         /// <summary>
@@ -879,17 +489,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="DescribeLibrariesResponse"/></returns>
         public DescribeLibrariesResponse DescribeLibrariesSync(DescribeLibrariesRequest req)
         {
-             JsonResponseModel<DescribeLibrariesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeLibraries");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLibrariesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeLibrariesResponse>(req, "DescribeLibraries")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -897,19 +498,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="DescribePersonRequest"/></param>
         /// <returns><see cref="DescribePersonResponse"/></returns>
-        public async Task<DescribePersonResponse> DescribePerson(DescribePersonRequest req)
+        public Task<DescribePersonResponse> DescribePerson(DescribePersonRequest req)
         {
-             JsonResponseModel<DescribePersonResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribePerson");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePersonResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribePersonResponse>(req, "DescribePerson");
         }
 
         /// <summary>
@@ -919,17 +510,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="DescribePersonResponse"/></returns>
         public DescribePersonResponse DescribePersonSync(DescribePersonRequest req)
         {
-             JsonResponseModel<DescribePersonResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribePerson");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePersonResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribePersonResponse>(req, "DescribePerson")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -937,19 +519,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="DescribePersonsRequest"/></param>
         /// <returns><see cref="DescribePersonsResponse"/></returns>
-        public async Task<DescribePersonsResponse> DescribePersons(DescribePersonsRequest req)
+        public Task<DescribePersonsResponse> DescribePersons(DescribePersonsRequest req)
         {
-             JsonResponseModel<DescribePersonsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribePersons");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePersonsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribePersonsResponse>(req, "DescribePersons");
         }
 
         /// <summary>
@@ -959,17 +531,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="DescribePersonsResponse"/></returns>
         public DescribePersonsResponse DescribePersonsSync(DescribePersonsRequest req)
         {
-             JsonResponseModel<DescribePersonsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribePersons");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePersonsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribePersonsResponse>(req, "DescribePersons")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -977,19 +540,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="DescribeVocabRequest"/></param>
         /// <returns><see cref="DescribeVocabResponse"/></returns>
-        public async Task<DescribeVocabResponse> DescribeVocab(DescribeVocabRequest req)
+        public Task<DescribeVocabResponse> DescribeVocab(DescribeVocabRequest req)
         {
-             JsonResponseModel<DescribeVocabResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeVocab");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVocabResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeVocabResponse>(req, "DescribeVocab");
         }
 
         /// <summary>
@@ -999,17 +552,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="DescribeVocabResponse"/></returns>
         public DescribeVocabResponse DescribeVocabSync(DescribeVocabRequest req)
         {
-             JsonResponseModel<DescribeVocabResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeVocab");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVocabResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeVocabResponse>(req, "DescribeVocab")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1017,19 +561,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="DescribeVocabLibRequest"/></param>
         /// <returns><see cref="DescribeVocabLibResponse"/></returns>
-        public async Task<DescribeVocabLibResponse> DescribeVocabLib(DescribeVocabLibRequest req)
+        public Task<DescribeVocabLibResponse> DescribeVocabLib(DescribeVocabLibRequest req)
         {
-             JsonResponseModel<DescribeVocabLibResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeVocabLib");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVocabLibResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeVocabLibResponse>(req, "DescribeVocabLib");
         }
 
         /// <summary>
@@ -1039,17 +573,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="DescribeVocabLibResponse"/></returns>
         public DescribeVocabLibResponse DescribeVocabLibSync(DescribeVocabLibRequest req)
         {
-             JsonResponseModel<DescribeVocabLibResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeVocabLib");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVocabLibResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeVocabLibResponse>(req, "DescribeVocabLib")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1057,19 +582,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="ModifyLibraryRequest"/></param>
         /// <returns><see cref="ModifyLibraryResponse"/></returns>
-        public async Task<ModifyLibraryResponse> ModifyLibrary(ModifyLibraryRequest req)
+        public Task<ModifyLibraryResponse> ModifyLibrary(ModifyLibraryRequest req)
         {
-             JsonResponseModel<ModifyLibraryResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyLibrary");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLibraryResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyLibraryResponse>(req, "ModifyLibrary");
         }
 
         /// <summary>
@@ -1079,17 +594,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="ModifyLibraryResponse"/></returns>
         public ModifyLibraryResponse ModifyLibrarySync(ModifyLibraryRequest req)
         {
-             JsonResponseModel<ModifyLibraryResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyLibrary");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLibraryResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyLibraryResponse>(req, "ModifyLibrary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1097,19 +603,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="ModifyPersonRequest"/></param>
         /// <returns><see cref="ModifyPersonResponse"/></returns>
-        public async Task<ModifyPersonResponse> ModifyPerson(ModifyPersonRequest req)
+        public Task<ModifyPersonResponse> ModifyPerson(ModifyPersonRequest req)
         {
-             JsonResponseModel<ModifyPersonResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyPerson");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPersonResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyPersonResponse>(req, "ModifyPerson");
         }
 
         /// <summary>
@@ -1119,17 +615,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="ModifyPersonResponse"/></returns>
         public ModifyPersonResponse ModifyPersonSync(ModifyPersonRequest req)
         {
-             JsonResponseModel<ModifyPersonResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyPerson");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPersonResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyPersonResponse>(req, "ModifyPerson")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1137,19 +624,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="SubmitAudioTaskRequest"/></param>
         /// <returns><see cref="SubmitAudioTaskResponse"/></returns>
-        public async Task<SubmitAudioTaskResponse> SubmitAudioTask(SubmitAudioTaskRequest req)
+        public Task<SubmitAudioTaskResponse> SubmitAudioTask(SubmitAudioTaskRequest req)
         {
-             JsonResponseModel<SubmitAudioTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SubmitAudioTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitAudioTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitAudioTaskResponse>(req, "SubmitAudioTask");
         }
 
         /// <summary>
@@ -1159,17 +636,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="SubmitAudioTaskResponse"/></returns>
         public SubmitAudioTaskResponse SubmitAudioTaskSync(SubmitAudioTaskRequest req)
         {
-             JsonResponseModel<SubmitAudioTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SubmitAudioTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitAudioTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitAudioTaskResponse>(req, "SubmitAudioTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1190,19 +658,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="SubmitCheckAttendanceTaskRequest"/></param>
         /// <returns><see cref="SubmitCheckAttendanceTaskResponse"/></returns>
-        public async Task<SubmitCheckAttendanceTaskResponse> SubmitCheckAttendanceTask(SubmitCheckAttendanceTaskRequest req)
+        public Task<SubmitCheckAttendanceTaskResponse> SubmitCheckAttendanceTask(SubmitCheckAttendanceTaskRequest req)
         {
-             JsonResponseModel<SubmitCheckAttendanceTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SubmitCheckAttendanceTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitCheckAttendanceTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitCheckAttendanceTaskResponse>(req, "SubmitCheckAttendanceTask");
         }
 
         /// <summary>
@@ -1225,17 +683,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="SubmitCheckAttendanceTaskResponse"/></returns>
         public SubmitCheckAttendanceTaskResponse SubmitCheckAttendanceTaskSync(SubmitCheckAttendanceTaskRequest req)
         {
-             JsonResponseModel<SubmitCheckAttendanceTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SubmitCheckAttendanceTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitCheckAttendanceTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitCheckAttendanceTaskResponse>(req, "SubmitCheckAttendanceTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1243,19 +692,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="SubmitCheckAttendanceTaskPlusRequest"/></param>
         /// <returns><see cref="SubmitCheckAttendanceTaskPlusResponse"/></returns>
-        public async Task<SubmitCheckAttendanceTaskPlusResponse> SubmitCheckAttendanceTaskPlus(SubmitCheckAttendanceTaskPlusRequest req)
+        public Task<SubmitCheckAttendanceTaskPlusResponse> SubmitCheckAttendanceTaskPlus(SubmitCheckAttendanceTaskPlusRequest req)
         {
-             JsonResponseModel<SubmitCheckAttendanceTaskPlusResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SubmitCheckAttendanceTaskPlus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitCheckAttendanceTaskPlusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitCheckAttendanceTaskPlusResponse>(req, "SubmitCheckAttendanceTaskPlus");
         }
 
         /// <summary>
@@ -1265,17 +704,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="SubmitCheckAttendanceTaskPlusResponse"/></returns>
         public SubmitCheckAttendanceTaskPlusResponse SubmitCheckAttendanceTaskPlusSync(SubmitCheckAttendanceTaskPlusRequest req)
         {
-             JsonResponseModel<SubmitCheckAttendanceTaskPlusResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SubmitCheckAttendanceTaskPlus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitCheckAttendanceTaskPlusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitCheckAttendanceTaskPlusResponse>(req, "SubmitCheckAttendanceTaskPlus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1283,19 +713,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="SubmitConversationTaskRequest"/></param>
         /// <returns><see cref="SubmitConversationTaskResponse"/></returns>
-        public async Task<SubmitConversationTaskResponse> SubmitConversationTask(SubmitConversationTaskRequest req)
+        public Task<SubmitConversationTaskResponse> SubmitConversationTask(SubmitConversationTaskRequest req)
         {
-             JsonResponseModel<SubmitConversationTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SubmitConversationTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitConversationTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitConversationTaskResponse>(req, "SubmitConversationTask");
         }
 
         /// <summary>
@@ -1305,17 +725,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="SubmitConversationTaskResponse"/></returns>
         public SubmitConversationTaskResponse SubmitConversationTaskSync(SubmitConversationTaskRequest req)
         {
-             JsonResponseModel<SubmitConversationTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SubmitConversationTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitConversationTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitConversationTaskResponse>(req, "SubmitConversationTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1324,19 +735,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="SubmitDoubleVideoHighlightsRequest"/></param>
         /// <returns><see cref="SubmitDoubleVideoHighlightsResponse"/></returns>
-        public async Task<SubmitDoubleVideoHighlightsResponse> SubmitDoubleVideoHighlights(SubmitDoubleVideoHighlightsRequest req)
+        public Task<SubmitDoubleVideoHighlightsResponse> SubmitDoubleVideoHighlights(SubmitDoubleVideoHighlightsRequest req)
         {
-             JsonResponseModel<SubmitDoubleVideoHighlightsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SubmitDoubleVideoHighlights");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitDoubleVideoHighlightsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitDoubleVideoHighlightsResponse>(req, "SubmitDoubleVideoHighlights");
         }
 
         /// <summary>
@@ -1347,17 +748,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="SubmitDoubleVideoHighlightsResponse"/></returns>
         public SubmitDoubleVideoHighlightsResponse SubmitDoubleVideoHighlightsSync(SubmitDoubleVideoHighlightsRequest req)
         {
-             JsonResponseModel<SubmitDoubleVideoHighlightsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SubmitDoubleVideoHighlights");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitDoubleVideoHighlightsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitDoubleVideoHighlightsResponse>(req, "SubmitDoubleVideoHighlights")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1371,19 +763,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="SubmitFullBodyClassTaskRequest"/></param>
         /// <returns><see cref="SubmitFullBodyClassTaskResponse"/></returns>
-        public async Task<SubmitFullBodyClassTaskResponse> SubmitFullBodyClassTask(SubmitFullBodyClassTaskRequest req)
+        public Task<SubmitFullBodyClassTaskResponse> SubmitFullBodyClassTask(SubmitFullBodyClassTaskRequest req)
         {
-             JsonResponseModel<SubmitFullBodyClassTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SubmitFullBodyClassTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitFullBodyClassTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitFullBodyClassTaskResponse>(req, "SubmitFullBodyClassTask");
         }
 
         /// <summary>
@@ -1399,17 +781,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="SubmitFullBodyClassTaskResponse"/></returns>
         public SubmitFullBodyClassTaskResponse SubmitFullBodyClassTaskSync(SubmitFullBodyClassTaskRequest req)
         {
-             JsonResponseModel<SubmitFullBodyClassTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SubmitFullBodyClassTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitFullBodyClassTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitFullBodyClassTaskResponse>(req, "SubmitFullBodyClassTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1417,19 +790,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="SubmitHighlightsRequest"/></param>
         /// <returns><see cref="SubmitHighlightsResponse"/></returns>
-        public async Task<SubmitHighlightsResponse> SubmitHighlights(SubmitHighlightsRequest req)
+        public Task<SubmitHighlightsResponse> SubmitHighlights(SubmitHighlightsRequest req)
         {
-             JsonResponseModel<SubmitHighlightsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SubmitHighlights");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitHighlightsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitHighlightsResponse>(req, "SubmitHighlights");
         }
 
         /// <summary>
@@ -1439,17 +802,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="SubmitHighlightsResponse"/></returns>
         public SubmitHighlightsResponse SubmitHighlightsSync(SubmitHighlightsRequest req)
         {
-             JsonResponseModel<SubmitHighlightsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SubmitHighlights");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitHighlightsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitHighlightsResponse>(req, "SubmitHighlights")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1457,19 +811,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="SubmitImageTaskRequest"/></param>
         /// <returns><see cref="SubmitImageTaskResponse"/></returns>
-        public async Task<SubmitImageTaskResponse> SubmitImageTask(SubmitImageTaskRequest req)
+        public Task<SubmitImageTaskResponse> SubmitImageTask(SubmitImageTaskRequest req)
         {
-             JsonResponseModel<SubmitImageTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SubmitImageTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitImageTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitImageTaskResponse>(req, "SubmitImageTask");
         }
 
         /// <summary>
@@ -1479,17 +823,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="SubmitImageTaskResponse"/></returns>
         public SubmitImageTaskResponse SubmitImageTaskSync(SubmitImageTaskRequest req)
         {
-             JsonResponseModel<SubmitImageTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SubmitImageTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitImageTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitImageTaskResponse>(req, "SubmitImageTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1497,19 +832,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="SubmitImageTaskPlusRequest"/></param>
         /// <returns><see cref="SubmitImageTaskPlusResponse"/></returns>
-        public async Task<SubmitImageTaskPlusResponse> SubmitImageTaskPlus(SubmitImageTaskPlusRequest req)
+        public Task<SubmitImageTaskPlusResponse> SubmitImageTaskPlus(SubmitImageTaskPlusRequest req)
         {
-             JsonResponseModel<SubmitImageTaskPlusResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SubmitImageTaskPlus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitImageTaskPlusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitImageTaskPlusResponse>(req, "SubmitImageTaskPlus");
         }
 
         /// <summary>
@@ -1519,17 +844,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="SubmitImageTaskPlusResponse"/></returns>
         public SubmitImageTaskPlusResponse SubmitImageTaskPlusSync(SubmitImageTaskPlusRequest req)
         {
-             JsonResponseModel<SubmitImageTaskPlusResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SubmitImageTaskPlus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitImageTaskPlusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitImageTaskPlusResponse>(req, "SubmitImageTaskPlus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1544,19 +860,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="SubmitOneByOneClassTaskRequest"/></param>
         /// <returns><see cref="SubmitOneByOneClassTaskResponse"/></returns>
-        public async Task<SubmitOneByOneClassTaskResponse> SubmitOneByOneClassTask(SubmitOneByOneClassTaskRequest req)
+        public Task<SubmitOneByOneClassTaskResponse> SubmitOneByOneClassTask(SubmitOneByOneClassTaskRequest req)
         {
-             JsonResponseModel<SubmitOneByOneClassTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SubmitOneByOneClassTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitOneByOneClassTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitOneByOneClassTaskResponse>(req, "SubmitOneByOneClassTask");
         }
 
         /// <summary>
@@ -1573,17 +879,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="SubmitOneByOneClassTaskResponse"/></returns>
         public SubmitOneByOneClassTaskResponse SubmitOneByOneClassTaskSync(SubmitOneByOneClassTaskRequest req)
         {
-             JsonResponseModel<SubmitOneByOneClassTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SubmitOneByOneClassTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitOneByOneClassTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitOneByOneClassTaskResponse>(req, "SubmitOneByOneClassTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1598,19 +895,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="SubmitOpenClassTaskRequest"/></param>
         /// <returns><see cref="SubmitOpenClassTaskResponse"/></returns>
-        public async Task<SubmitOpenClassTaskResponse> SubmitOpenClassTask(SubmitOpenClassTaskRequest req)
+        public Task<SubmitOpenClassTaskResponse> SubmitOpenClassTask(SubmitOpenClassTaskRequest req)
         {
-             JsonResponseModel<SubmitOpenClassTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SubmitOpenClassTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitOpenClassTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitOpenClassTaskResponse>(req, "SubmitOpenClassTask");
         }
 
         /// <summary>
@@ -1627,17 +914,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="SubmitOpenClassTaskResponse"/></returns>
         public SubmitOpenClassTaskResponse SubmitOpenClassTaskSync(SubmitOpenClassTaskRequest req)
         {
-             JsonResponseModel<SubmitOpenClassTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SubmitOpenClassTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitOpenClassTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitOpenClassTaskResponse>(req, "SubmitOpenClassTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1651,19 +929,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="SubmitPartialBodyClassTaskRequest"/></param>
         /// <returns><see cref="SubmitPartialBodyClassTaskResponse"/></returns>
-        public async Task<SubmitPartialBodyClassTaskResponse> SubmitPartialBodyClassTask(SubmitPartialBodyClassTaskRequest req)
+        public Task<SubmitPartialBodyClassTaskResponse> SubmitPartialBodyClassTask(SubmitPartialBodyClassTaskRequest req)
         {
-             JsonResponseModel<SubmitPartialBodyClassTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SubmitPartialBodyClassTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitPartialBodyClassTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitPartialBodyClassTaskResponse>(req, "SubmitPartialBodyClassTask");
         }
 
         /// <summary>
@@ -1679,17 +947,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="SubmitPartialBodyClassTaskResponse"/></returns>
         public SubmitPartialBodyClassTaskResponse SubmitPartialBodyClassTaskSync(SubmitPartialBodyClassTaskRequest req)
         {
-             JsonResponseModel<SubmitPartialBodyClassTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SubmitPartialBodyClassTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitPartialBodyClassTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitPartialBodyClassTaskResponse>(req, "SubmitPartialBodyClassTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1705,19 +964,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="SubmitTraditionalClassTaskRequest"/></param>
         /// <returns><see cref="SubmitTraditionalClassTaskResponse"/></returns>
-        public async Task<SubmitTraditionalClassTaskResponse> SubmitTraditionalClassTask(SubmitTraditionalClassTaskRequest req)
+        public Task<SubmitTraditionalClassTaskResponse> SubmitTraditionalClassTask(SubmitTraditionalClassTaskRequest req)
         {
-             JsonResponseModel<SubmitTraditionalClassTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SubmitTraditionalClassTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitTraditionalClassTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitTraditionalClassTaskResponse>(req, "SubmitTraditionalClassTask");
         }
 
         /// <summary>
@@ -1735,17 +984,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="SubmitTraditionalClassTaskResponse"/></returns>
         public SubmitTraditionalClassTaskResponse SubmitTraditionalClassTaskSync(SubmitTraditionalClassTaskRequest req)
         {
-             JsonResponseModel<SubmitTraditionalClassTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SubmitTraditionalClassTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitTraditionalClassTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitTraditionalClassTaskResponse>(req, "SubmitTraditionalClassTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1753,19 +993,9 @@ namespace TencentCloud.Tci.V20190318
         /// </summary>
         /// <param name="req"><see cref="TransmitAudioStreamRequest"/></param>
         /// <returns><see cref="TransmitAudioStreamResponse"/></returns>
-        public async Task<TransmitAudioStreamResponse> TransmitAudioStream(TransmitAudioStreamRequest req)
+        public Task<TransmitAudioStreamResponse> TransmitAudioStream(TransmitAudioStreamRequest req)
         {
-             JsonResponseModel<TransmitAudioStreamResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "TransmitAudioStream");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TransmitAudioStreamResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TransmitAudioStreamResponse>(req, "TransmitAudioStream");
         }
 
         /// <summary>
@@ -1775,17 +1005,8 @@ namespace TencentCloud.Tci.V20190318
         /// <returns><see cref="TransmitAudioStreamResponse"/></returns>
         public TransmitAudioStreamResponse TransmitAudioStreamSync(TransmitAudioStreamRequest req)
         {
-             JsonResponseModel<TransmitAudioStreamResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "TransmitAudioStream");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TransmitAudioStreamResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TransmitAudioStreamResponse>(req, "TransmitAudioStream")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

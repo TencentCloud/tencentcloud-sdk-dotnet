@@ -57,19 +57,9 @@ namespace TencentCloud.Icr.V20211014
         /// </summary>
         /// <param name="req"><see cref="GetIndustryV1HomeMembersRequest"/></param>
         /// <returns><see cref="GetIndustryV1HomeMembersResponse"/></returns>
-        public async Task<GetIndustryV1HomeMembersResponse> GetIndustryV1HomeMembers(GetIndustryV1HomeMembersRequest req)
+        public Task<GetIndustryV1HomeMembersResponse> GetIndustryV1HomeMembers(GetIndustryV1HomeMembersRequest req)
         {
-             JsonResponseModel<GetIndustryV1HomeMembersResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetIndustryV1HomeMembers");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetIndustryV1HomeMembersResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetIndustryV1HomeMembersResponse>(req, "GetIndustryV1HomeMembers");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Icr.V20211014
         /// <returns><see cref="GetIndustryV1HomeMembersResponse"/></returns>
         public GetIndustryV1HomeMembersResponse GetIndustryV1HomeMembersSync(GetIndustryV1HomeMembersRequest req)
         {
-             JsonResponseModel<GetIndustryV1HomeMembersResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetIndustryV1HomeMembers");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetIndustryV1HomeMembersResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetIndustryV1HomeMembersResponse>(req, "GetIndustryV1HomeMembers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

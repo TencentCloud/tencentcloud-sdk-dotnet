@@ -57,19 +57,9 @@ namespace TencentCloud.Cloudstudio.V20230508
         /// </summary>
         /// <param name="req"><see cref="CreateWorkspaceRequest"/></param>
         /// <returns><see cref="CreateWorkspaceResponse"/></returns>
-        public async Task<CreateWorkspaceResponse> CreateWorkspace(CreateWorkspaceRequest req)
+        public Task<CreateWorkspaceResponse> CreateWorkspace(CreateWorkspaceRequest req)
         {
-             JsonResponseModel<CreateWorkspaceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateWorkspace");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWorkspaceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateWorkspaceResponse>(req, "CreateWorkspace");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Cloudstudio.V20230508
         /// <returns><see cref="CreateWorkspaceResponse"/></returns>
         public CreateWorkspaceResponse CreateWorkspaceSync(CreateWorkspaceRequest req)
         {
-             JsonResponseModel<CreateWorkspaceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateWorkspace");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWorkspaceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateWorkspaceResponse>(req, "CreateWorkspace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Cloudstudio.V20230508
         /// </summary>
         /// <param name="req"><see cref="CreateWorkspaceTokenRequest"/></param>
         /// <returns><see cref="CreateWorkspaceTokenResponse"/></returns>
-        public async Task<CreateWorkspaceTokenResponse> CreateWorkspaceToken(CreateWorkspaceTokenRequest req)
+        public Task<CreateWorkspaceTokenResponse> CreateWorkspaceToken(CreateWorkspaceTokenRequest req)
         {
-             JsonResponseModel<CreateWorkspaceTokenResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateWorkspaceToken");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWorkspaceTokenResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateWorkspaceTokenResponse>(req, "CreateWorkspaceToken");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Cloudstudio.V20230508
         /// <returns><see cref="CreateWorkspaceTokenResponse"/></returns>
         public CreateWorkspaceTokenResponse CreateWorkspaceTokenSync(CreateWorkspaceTokenRequest req)
         {
-             JsonResponseModel<CreateWorkspaceTokenResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateWorkspaceToken");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWorkspaceTokenResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateWorkspaceTokenResponse>(req, "CreateWorkspaceToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Cloudstudio.V20230508
         /// </summary>
         /// <param name="req"><see cref="DescribeConfigRequest"/></param>
         /// <returns><see cref="DescribeConfigResponse"/></returns>
-        public async Task<DescribeConfigResponse> DescribeConfig(DescribeConfigRequest req)
+        public Task<DescribeConfigResponse> DescribeConfig(DescribeConfigRequest req)
         {
-             JsonResponseModel<DescribeConfigResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeConfig");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConfigResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeConfigResponse>(req, "DescribeConfig");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Cloudstudio.V20230508
         /// <returns><see cref="DescribeConfigResponse"/></returns>
         public DescribeConfigResponse DescribeConfigSync(DescribeConfigRequest req)
         {
-             JsonResponseModel<DescribeConfigResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeConfig");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConfigResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeConfigResponse>(req, "DescribeConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Cloudstudio.V20230508
         /// </summary>
         /// <param name="req"><see cref="DescribeImagesRequest"/></param>
         /// <returns><see cref="DescribeImagesResponse"/></returns>
-        public async Task<DescribeImagesResponse> DescribeImages(DescribeImagesRequest req)
+        public Task<DescribeImagesResponse> DescribeImages(DescribeImagesRequest req)
         {
-             JsonResponseModel<DescribeImagesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeImages");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImagesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeImagesResponse>(req, "DescribeImages");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Cloudstudio.V20230508
         /// <returns><see cref="DescribeImagesResponse"/></returns>
         public DescribeImagesResponse DescribeImagesSync(DescribeImagesRequest req)
         {
-             JsonResponseModel<DescribeImagesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeImages");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImagesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeImagesResponse>(req, "DescribeImages")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -217,19 +141,9 @@ namespace TencentCloud.Cloudstudio.V20230508
         /// </summary>
         /// <param name="req"><see cref="DescribeWorkspacesRequest"/></param>
         /// <returns><see cref="DescribeWorkspacesResponse"/></returns>
-        public async Task<DescribeWorkspacesResponse> DescribeWorkspaces(DescribeWorkspacesRequest req)
+        public Task<DescribeWorkspacesResponse> DescribeWorkspaces(DescribeWorkspacesRequest req)
         {
-             JsonResponseModel<DescribeWorkspacesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeWorkspaces");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWorkspacesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeWorkspacesResponse>(req, "DescribeWorkspaces");
         }
 
         /// <summary>
@@ -239,17 +153,8 @@ namespace TencentCloud.Cloudstudio.V20230508
         /// <returns><see cref="DescribeWorkspacesResponse"/></returns>
         public DescribeWorkspacesResponse DescribeWorkspacesSync(DescribeWorkspacesRequest req)
         {
-             JsonResponseModel<DescribeWorkspacesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeWorkspaces");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWorkspacesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeWorkspacesResponse>(req, "DescribeWorkspaces")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -257,19 +162,9 @@ namespace TencentCloud.Cloudstudio.V20230508
         /// </summary>
         /// <param name="req"><see cref="ModifyWorkspaceRequest"/></param>
         /// <returns><see cref="ModifyWorkspaceResponse"/></returns>
-        public async Task<ModifyWorkspaceResponse> ModifyWorkspace(ModifyWorkspaceRequest req)
+        public Task<ModifyWorkspaceResponse> ModifyWorkspace(ModifyWorkspaceRequest req)
         {
-             JsonResponseModel<ModifyWorkspaceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyWorkspace");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyWorkspaceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyWorkspaceResponse>(req, "ModifyWorkspace");
         }
 
         /// <summary>
@@ -279,17 +174,8 @@ namespace TencentCloud.Cloudstudio.V20230508
         /// <returns><see cref="ModifyWorkspaceResponse"/></returns>
         public ModifyWorkspaceResponse ModifyWorkspaceSync(ModifyWorkspaceRequest req)
         {
-             JsonResponseModel<ModifyWorkspaceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyWorkspace");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyWorkspaceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyWorkspaceResponse>(req, "ModifyWorkspace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -297,19 +183,9 @@ namespace TencentCloud.Cloudstudio.V20230508
         /// </summary>
         /// <param name="req"><see cref="RemoveWorkspaceRequest"/></param>
         /// <returns><see cref="RemoveWorkspaceResponse"/></returns>
-        public async Task<RemoveWorkspaceResponse> RemoveWorkspace(RemoveWorkspaceRequest req)
+        public Task<RemoveWorkspaceResponse> RemoveWorkspace(RemoveWorkspaceRequest req)
         {
-             JsonResponseModel<RemoveWorkspaceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RemoveWorkspace");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveWorkspaceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RemoveWorkspaceResponse>(req, "RemoveWorkspace");
         }
 
         /// <summary>
@@ -319,17 +195,8 @@ namespace TencentCloud.Cloudstudio.V20230508
         /// <returns><see cref="RemoveWorkspaceResponse"/></returns>
         public RemoveWorkspaceResponse RemoveWorkspaceSync(RemoveWorkspaceRequest req)
         {
-             JsonResponseModel<RemoveWorkspaceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RemoveWorkspace");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveWorkspaceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RemoveWorkspaceResponse>(req, "RemoveWorkspace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -337,19 +204,9 @@ namespace TencentCloud.Cloudstudio.V20230508
         /// </summary>
         /// <param name="req"><see cref="RunWorkspaceRequest"/></param>
         /// <returns><see cref="RunWorkspaceResponse"/></returns>
-        public async Task<RunWorkspaceResponse> RunWorkspace(RunWorkspaceRequest req)
+        public Task<RunWorkspaceResponse> RunWorkspace(RunWorkspaceRequest req)
         {
-             JsonResponseModel<RunWorkspaceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RunWorkspace");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RunWorkspaceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RunWorkspaceResponse>(req, "RunWorkspace");
         }
 
         /// <summary>
@@ -359,17 +216,8 @@ namespace TencentCloud.Cloudstudio.V20230508
         /// <returns><see cref="RunWorkspaceResponse"/></returns>
         public RunWorkspaceResponse RunWorkspaceSync(RunWorkspaceRequest req)
         {
-             JsonResponseModel<RunWorkspaceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RunWorkspace");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RunWorkspaceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RunWorkspaceResponse>(req, "RunWorkspace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -377,19 +225,9 @@ namespace TencentCloud.Cloudstudio.V20230508
         /// </summary>
         /// <param name="req"><see cref="StopWorkspaceRequest"/></param>
         /// <returns><see cref="StopWorkspaceResponse"/></returns>
-        public async Task<StopWorkspaceResponse> StopWorkspace(StopWorkspaceRequest req)
+        public Task<StopWorkspaceResponse> StopWorkspace(StopWorkspaceRequest req)
         {
-             JsonResponseModel<StopWorkspaceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "StopWorkspace");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopWorkspaceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<StopWorkspaceResponse>(req, "StopWorkspace");
         }
 
         /// <summary>
@@ -399,17 +237,8 @@ namespace TencentCloud.Cloudstudio.V20230508
         /// <returns><see cref="StopWorkspaceResponse"/></returns>
         public StopWorkspaceResponse StopWorkspaceSync(StopWorkspaceRequest req)
         {
-             JsonResponseModel<StopWorkspaceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "StopWorkspace");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopWorkspaceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<StopWorkspaceResponse>(req, "StopWorkspace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

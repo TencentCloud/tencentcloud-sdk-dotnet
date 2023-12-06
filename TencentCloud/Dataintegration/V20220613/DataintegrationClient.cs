@@ -57,19 +57,9 @@ namespace TencentCloud.Dataintegration.V20220613
         /// </summary>
         /// <param name="req"><see cref="SendMessageRequest"/></param>
         /// <returns><see cref="SendMessageResponse"/></returns>
-        public async Task<SendMessageResponse> SendMessage(SendMessageRequest req)
+        public Task<SendMessageResponse> SendMessage(SendMessageRequest req)
         {
-             JsonResponseModel<SendMessageResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SendMessage");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendMessageResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SendMessageResponse>(req, "SendMessage");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Dataintegration.V20220613
         /// <returns><see cref="SendMessageResponse"/></returns>
         public SendMessageResponse SendMessageSync(SendMessageRequest req)
         {
-             JsonResponseModel<SendMessageResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SendMessage");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendMessageResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SendMessageResponse>(req, "SendMessage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

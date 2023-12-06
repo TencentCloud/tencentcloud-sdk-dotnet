@@ -62,19 +62,9 @@ namespace TencentCloud.Aiart.V20221229
         /// </summary>
         /// <param name="req"><see cref="ImageToImageRequest"/></param>
         /// <returns><see cref="ImageToImageResponse"/></returns>
-        public async Task<ImageToImageResponse> ImageToImage(ImageToImageRequest req)
+        public Task<ImageToImageResponse> ImageToImage(ImageToImageRequest req)
         {
-             JsonResponseModel<ImageToImageResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ImageToImage");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImageToImageResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ImageToImageResponse>(req, "ImageToImage");
         }
 
         /// <summary>
@@ -89,17 +79,8 @@ namespace TencentCloud.Aiart.V20221229
         /// <returns><see cref="ImageToImageResponse"/></returns>
         public ImageToImageResponse ImageToImageSync(ImageToImageRequest req)
         {
-             JsonResponseModel<ImageToImageResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ImageToImage");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImageToImageResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ImageToImageResponse>(req, "ImageToImage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -112,19 +93,9 @@ namespace TencentCloud.Aiart.V20221229
         /// </summary>
         /// <param name="req"><see cref="TextToImageRequest"/></param>
         /// <returns><see cref="TextToImageResponse"/></returns>
-        public async Task<TextToImageResponse> TextToImage(TextToImageRequest req)
+        public Task<TextToImageResponse> TextToImage(TextToImageRequest req)
         {
-             JsonResponseModel<TextToImageResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "TextToImage");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextToImageResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TextToImageResponse>(req, "TextToImage");
         }
 
         /// <summary>
@@ -139,17 +110,8 @@ namespace TencentCloud.Aiart.V20221229
         /// <returns><see cref="TextToImageResponse"/></returns>
         public TextToImageResponse TextToImageSync(TextToImageRequest req)
         {
-             JsonResponseModel<TextToImageResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "TextToImage");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextToImageResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TextToImageResponse>(req, "TextToImage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

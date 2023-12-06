@@ -57,19 +57,9 @@ namespace TencentCloud.Lowcode.V20210108
         /// </summary>
         /// <param name="req"><see cref="DescribeDataSourceListRequest"/></param>
         /// <returns><see cref="DescribeDataSourceListResponse"/></returns>
-        public async Task<DescribeDataSourceListResponse> DescribeDataSourceList(DescribeDataSourceListRequest req)
+        public Task<DescribeDataSourceListResponse> DescribeDataSourceList(DescribeDataSourceListRequest req)
         {
-             JsonResponseModel<DescribeDataSourceListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDataSourceList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataSourceListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDataSourceListResponse>(req, "DescribeDataSourceList");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Lowcode.V20210108
         /// <returns><see cref="DescribeDataSourceListResponse"/></returns>
         public DescribeDataSourceListResponse DescribeDataSourceListSync(DescribeDataSourceListRequest req)
         {
-             JsonResponseModel<DescribeDataSourceListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDataSourceList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataSourceListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDataSourceListResponse>(req, "DescribeDataSourceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

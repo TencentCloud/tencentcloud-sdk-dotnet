@@ -57,19 +57,9 @@ namespace TencentCloud.Api.V20201106
         /// </summary>
         /// <param name="req"><see cref="DescribeProductsRequest"/></param>
         /// <returns><see cref="DescribeProductsResponse"/></returns>
-        public async Task<DescribeProductsResponse> DescribeProducts(DescribeProductsRequest req)
+        public Task<DescribeProductsResponse> DescribeProducts(DescribeProductsRequest req)
         {
-             JsonResponseModel<DescribeProductsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeProducts");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProductsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeProductsResponse>(req, "DescribeProducts");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Api.V20201106
         /// <returns><see cref="DescribeProductsResponse"/></returns>
         public DescribeProductsResponse DescribeProductsSync(DescribeProductsRequest req)
         {
-             JsonResponseModel<DescribeProductsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeProducts");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProductsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeProductsResponse>(req, "DescribeProducts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Api.V20201106
         /// </summary>
         /// <param name="req"><see cref="DescribeRegionsRequest"/></param>
         /// <returns><see cref="DescribeRegionsResponse"/></returns>
-        public async Task<DescribeRegionsResponse> DescribeRegions(DescribeRegionsRequest req)
+        public Task<DescribeRegionsResponse> DescribeRegions(DescribeRegionsRequest req)
         {
-             JsonResponseModel<DescribeRegionsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeRegions");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegionsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeRegionsResponse>(req, "DescribeRegions");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Api.V20201106
         /// <returns><see cref="DescribeRegionsResponse"/></returns>
         public DescribeRegionsResponse DescribeRegionsSync(DescribeRegionsRequest req)
         {
-             JsonResponseModel<DescribeRegionsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeRegions");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegionsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeRegionsResponse>(req, "DescribeRegions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Api.V20201106
         /// </summary>
         /// <param name="req"><see cref="DescribeZonesRequest"/></param>
         /// <returns><see cref="DescribeZonesResponse"/></returns>
-        public async Task<DescribeZonesResponse> DescribeZones(DescribeZonesRequest req)
+        public Task<DescribeZonesResponse> DescribeZones(DescribeZonesRequest req)
         {
-             JsonResponseModel<DescribeZonesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeZones");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZonesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeZonesResponse>(req, "DescribeZones");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Api.V20201106
         /// <returns><see cref="DescribeZonesResponse"/></returns>
         public DescribeZonesResponse DescribeZonesSync(DescribeZonesRequest req)
         {
-             JsonResponseModel<DescribeZonesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeZones");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZonesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeZonesResponse>(req, "DescribeZones")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

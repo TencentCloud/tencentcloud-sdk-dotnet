@@ -57,19 +57,9 @@ namespace TencentCloud.Fmu.V20191213
         /// </summary>
         /// <param name="req"><see cref="BeautifyPicRequest"/></param>
         /// <returns><see cref="BeautifyPicResponse"/></returns>
-        public async Task<BeautifyPicResponse> BeautifyPic(BeautifyPicRequest req)
+        public Task<BeautifyPicResponse> BeautifyPic(BeautifyPicRequest req)
         {
-             JsonResponseModel<BeautifyPicResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "BeautifyPic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BeautifyPicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<BeautifyPicResponse>(req, "BeautifyPic");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Fmu.V20191213
         /// <returns><see cref="BeautifyPicResponse"/></returns>
         public BeautifyPicResponse BeautifyPicSync(BeautifyPicRequest req)
         {
-             JsonResponseModel<BeautifyPicResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "BeautifyPic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BeautifyPicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<BeautifyPicResponse>(req, "BeautifyPic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Fmu.V20191213
         /// </summary>
         /// <param name="req"><see cref="BeautifyVideoRequest"/></param>
         /// <returns><see cref="BeautifyVideoResponse"/></returns>
-        public async Task<BeautifyVideoResponse> BeautifyVideo(BeautifyVideoRequest req)
+        public Task<BeautifyVideoResponse> BeautifyVideo(BeautifyVideoRequest req)
         {
-             JsonResponseModel<BeautifyVideoResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "BeautifyVideo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BeautifyVideoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<BeautifyVideoResponse>(req, "BeautifyVideo");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Fmu.V20191213
         /// <returns><see cref="BeautifyVideoResponse"/></returns>
         public BeautifyVideoResponse BeautifyVideoSync(BeautifyVideoRequest req)
         {
-             JsonResponseModel<BeautifyVideoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "BeautifyVideo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BeautifyVideoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<BeautifyVideoResponse>(req, "BeautifyVideo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Fmu.V20191213
         /// </summary>
         /// <param name="req"><see cref="CancelBeautifyVideoJobRequest"/></param>
         /// <returns><see cref="CancelBeautifyVideoJobResponse"/></returns>
-        public async Task<CancelBeautifyVideoJobResponse> CancelBeautifyVideoJob(CancelBeautifyVideoJobRequest req)
+        public Task<CancelBeautifyVideoJobResponse> CancelBeautifyVideoJob(CancelBeautifyVideoJobRequest req)
         {
-             JsonResponseModel<CancelBeautifyVideoJobResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CancelBeautifyVideoJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelBeautifyVideoJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CancelBeautifyVideoJobResponse>(req, "CancelBeautifyVideoJob");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Fmu.V20191213
         /// <returns><see cref="CancelBeautifyVideoJobResponse"/></returns>
         public CancelBeautifyVideoJobResponse CancelBeautifyVideoJobSync(CancelBeautifyVideoJobRequest req)
         {
-             JsonResponseModel<CancelBeautifyVideoJobResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CancelBeautifyVideoJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelBeautifyVideoJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CancelBeautifyVideoJobResponse>(req, "CancelBeautifyVideoJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -179,19 +122,9 @@ namespace TencentCloud.Fmu.V20191213
         /// </summary>
         /// <param name="req"><see cref="CreateModelRequest"/></param>
         /// <returns><see cref="CreateModelResponse"/></returns>
-        public async Task<CreateModelResponse> CreateModel(CreateModelRequest req)
+        public Task<CreateModelResponse> CreateModel(CreateModelRequest req)
         {
-             JsonResponseModel<CreateModelResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateModel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateModelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateModelResponse>(req, "CreateModel");
         }
 
         /// <summary>
@@ -203,17 +136,8 @@ namespace TencentCloud.Fmu.V20191213
         /// <returns><see cref="CreateModelResponse"/></returns>
         public CreateModelResponse CreateModelSync(CreateModelRequest req)
         {
-             JsonResponseModel<CreateModelResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateModel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateModelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateModelResponse>(req, "CreateModel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -221,19 +145,9 @@ namespace TencentCloud.Fmu.V20191213
         /// </summary>
         /// <param name="req"><see cref="DeleteModelRequest"/></param>
         /// <returns><see cref="DeleteModelResponse"/></returns>
-        public async Task<DeleteModelResponse> DeleteModel(DeleteModelRequest req)
+        public Task<DeleteModelResponse> DeleteModel(DeleteModelRequest req)
         {
-             JsonResponseModel<DeleteModelResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteModel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteModelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteModelResponse>(req, "DeleteModel");
         }
 
         /// <summary>
@@ -243,17 +157,8 @@ namespace TencentCloud.Fmu.V20191213
         /// <returns><see cref="DeleteModelResponse"/></returns>
         public DeleteModelResponse DeleteModelSync(DeleteModelRequest req)
         {
-             JsonResponseModel<DeleteModelResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteModel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteModelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteModelResponse>(req, "DeleteModel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -261,19 +166,9 @@ namespace TencentCloud.Fmu.V20191213
         /// </summary>
         /// <param name="req"><see cref="GetModelListRequest"/></param>
         /// <returns><see cref="GetModelListResponse"/></returns>
-        public async Task<GetModelListResponse> GetModelList(GetModelListRequest req)
+        public Task<GetModelListResponse> GetModelList(GetModelListRequest req)
         {
-             JsonResponseModel<GetModelListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetModelList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetModelListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetModelListResponse>(req, "GetModelList");
         }
 
         /// <summary>
@@ -283,17 +178,8 @@ namespace TencentCloud.Fmu.V20191213
         /// <returns><see cref="GetModelListResponse"/></returns>
         public GetModelListResponse GetModelListSync(GetModelListRequest req)
         {
-             JsonResponseModel<GetModelListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetModelList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetModelListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetModelListResponse>(req, "GetModelList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -301,19 +187,9 @@ namespace TencentCloud.Fmu.V20191213
         /// </summary>
         /// <param name="req"><see cref="QueryBeautifyVideoJobRequest"/></param>
         /// <returns><see cref="QueryBeautifyVideoJobResponse"/></returns>
-        public async Task<QueryBeautifyVideoJobResponse> QueryBeautifyVideoJob(QueryBeautifyVideoJobRequest req)
+        public Task<QueryBeautifyVideoJobResponse> QueryBeautifyVideoJob(QueryBeautifyVideoJobRequest req)
         {
-             JsonResponseModel<QueryBeautifyVideoJobResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryBeautifyVideoJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryBeautifyVideoJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryBeautifyVideoJobResponse>(req, "QueryBeautifyVideoJob");
         }
 
         /// <summary>
@@ -323,17 +199,8 @@ namespace TencentCloud.Fmu.V20191213
         /// <returns><see cref="QueryBeautifyVideoJobResponse"/></returns>
         public QueryBeautifyVideoJobResponse QueryBeautifyVideoJobSync(QueryBeautifyVideoJobRequest req)
         {
-             JsonResponseModel<QueryBeautifyVideoJobResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryBeautifyVideoJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryBeautifyVideoJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryBeautifyVideoJobResponse>(req, "QueryBeautifyVideoJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -341,19 +208,9 @@ namespace TencentCloud.Fmu.V20191213
         /// </summary>
         /// <param name="req"><see cref="StyleImageRequest"/></param>
         /// <returns><see cref="StyleImageResponse"/></returns>
-        public async Task<StyleImageResponse> StyleImage(StyleImageRequest req)
+        public Task<StyleImageResponse> StyleImage(StyleImageRequest req)
         {
-             JsonResponseModel<StyleImageResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "StyleImage");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StyleImageResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<StyleImageResponse>(req, "StyleImage");
         }
 
         /// <summary>
@@ -363,17 +220,8 @@ namespace TencentCloud.Fmu.V20191213
         /// <returns><see cref="StyleImageResponse"/></returns>
         public StyleImageResponse StyleImageSync(StyleImageRequest req)
         {
-             JsonResponseModel<StyleImageResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "StyleImage");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StyleImageResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<StyleImageResponse>(req, "StyleImage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -381,19 +229,9 @@ namespace TencentCloud.Fmu.V20191213
         /// </summary>
         /// <param name="req"><see cref="StyleImageProRequest"/></param>
         /// <returns><see cref="StyleImageProResponse"/></returns>
-        public async Task<StyleImageProResponse> StyleImagePro(StyleImageProRequest req)
+        public Task<StyleImageProResponse> StyleImagePro(StyleImageProRequest req)
         {
-             JsonResponseModel<StyleImageProResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "StyleImagePro");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StyleImageProResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<StyleImageProResponse>(req, "StyleImagePro");
         }
 
         /// <summary>
@@ -403,17 +241,8 @@ namespace TencentCloud.Fmu.V20191213
         /// <returns><see cref="StyleImageProResponse"/></returns>
         public StyleImageProResponse StyleImageProSync(StyleImageProRequest req)
         {
-             JsonResponseModel<StyleImageProResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "StyleImagePro");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StyleImageProResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<StyleImageProResponse>(req, "StyleImagePro")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -428,19 +257,9 @@ namespace TencentCloud.Fmu.V20191213
         /// </summary>
         /// <param name="req"><see cref="TryLipstickPicRequest"/></param>
         /// <returns><see cref="TryLipstickPicResponse"/></returns>
-        public async Task<TryLipstickPicResponse> TryLipstickPic(TryLipstickPicRequest req)
+        public Task<TryLipstickPicResponse> TryLipstickPic(TryLipstickPicRequest req)
         {
-             JsonResponseModel<TryLipstickPicResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "TryLipstickPic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TryLipstickPicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TryLipstickPicResponse>(req, "TryLipstickPic");
         }
 
         /// <summary>
@@ -457,17 +276,8 @@ namespace TencentCloud.Fmu.V20191213
         /// <returns><see cref="TryLipstickPicResponse"/></returns>
         public TryLipstickPicResponse TryLipstickPicSync(TryLipstickPicRequest req)
         {
-             JsonResponseModel<TryLipstickPicResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "TryLipstickPic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TryLipstickPicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TryLipstickPicResponse>(req, "TryLipstickPic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

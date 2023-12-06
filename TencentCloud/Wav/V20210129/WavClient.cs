@@ -57,19 +57,9 @@ namespace TencentCloud.Wav.V20210129
         /// </summary>
         /// <param name="req"><see cref="CreateChannelCodeRequest"/></param>
         /// <returns><see cref="CreateChannelCodeResponse"/></returns>
-        public async Task<CreateChannelCodeResponse> CreateChannelCode(CreateChannelCodeRequest req)
+        public Task<CreateChannelCodeResponse> CreateChannelCode(CreateChannelCodeRequest req)
         {
-             JsonResponseModel<CreateChannelCodeResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateChannelCode");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateChannelCodeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateChannelCodeResponse>(req, "CreateChannelCode");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Wav.V20210129
         /// <returns><see cref="CreateChannelCodeResponse"/></returns>
         public CreateChannelCodeResponse CreateChannelCodeSync(CreateChannelCodeRequest req)
         {
-             JsonResponseModel<CreateChannelCodeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateChannelCode");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateChannelCodeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateChannelCodeResponse>(req, "CreateChannelCode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Wav.V20210129
         /// </summary>
         /// <param name="req"><see cref="CreateCorpTagRequest"/></param>
         /// <returns><see cref="CreateCorpTagResponse"/></returns>
-        public async Task<CreateCorpTagResponse> CreateCorpTag(CreateCorpTagRequest req)
+        public Task<CreateCorpTagResponse> CreateCorpTag(CreateCorpTagRequest req)
         {
-             JsonResponseModel<CreateCorpTagResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateCorpTag");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCorpTagResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateCorpTagResponse>(req, "CreateCorpTag");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Wav.V20210129
         /// <returns><see cref="CreateCorpTagResponse"/></returns>
         public CreateCorpTagResponse CreateCorpTagSync(CreateCorpTagRequest req)
         {
-             JsonResponseModel<CreateCorpTagResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateCorpTag");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCorpTagResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateCorpTagResponse>(req, "CreateCorpTag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Wav.V20210129
         /// </summary>
         /// <param name="req"><see cref="CreateLeadRequest"/></param>
         /// <returns><see cref="CreateLeadResponse"/></returns>
-        public async Task<CreateLeadResponse> CreateLead(CreateLeadRequest req)
+        public Task<CreateLeadResponse> CreateLead(CreateLeadRequest req)
         {
-             JsonResponseModel<CreateLeadResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateLead");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLeadResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateLeadResponse>(req, "CreateLead");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Wav.V20210129
         /// <returns><see cref="CreateLeadResponse"/></returns>
         public CreateLeadResponse CreateLeadSync(CreateLeadRequest req)
         {
-             JsonResponseModel<CreateLeadResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateLead");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLeadResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateLeadResponse>(req, "CreateLead")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Wav.V20210129
         /// </summary>
         /// <param name="req"><see cref="QueryActivityJoinListRequest"/></param>
         /// <returns><see cref="QueryActivityJoinListResponse"/></returns>
-        public async Task<QueryActivityJoinListResponse> QueryActivityJoinList(QueryActivityJoinListRequest req)
+        public Task<QueryActivityJoinListResponse> QueryActivityJoinList(QueryActivityJoinListRequest req)
         {
-             JsonResponseModel<QueryActivityJoinListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryActivityJoinList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryActivityJoinListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryActivityJoinListResponse>(req, "QueryActivityJoinList");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Wav.V20210129
         /// <returns><see cref="QueryActivityJoinListResponse"/></returns>
         public QueryActivityJoinListResponse QueryActivityJoinListSync(QueryActivityJoinListRequest req)
         {
-             JsonResponseModel<QueryActivityJoinListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryActivityJoinList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryActivityJoinListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryActivityJoinListResponse>(req, "QueryActivityJoinList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -217,19 +141,9 @@ namespace TencentCloud.Wav.V20210129
         /// </summary>
         /// <param name="req"><see cref="QueryActivityListRequest"/></param>
         /// <returns><see cref="QueryActivityListResponse"/></returns>
-        public async Task<QueryActivityListResponse> QueryActivityList(QueryActivityListRequest req)
+        public Task<QueryActivityListResponse> QueryActivityList(QueryActivityListRequest req)
         {
-             JsonResponseModel<QueryActivityListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryActivityList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryActivityListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryActivityListResponse>(req, "QueryActivityList");
         }
 
         /// <summary>
@@ -239,17 +153,8 @@ namespace TencentCloud.Wav.V20210129
         /// <returns><see cref="QueryActivityListResponse"/></returns>
         public QueryActivityListResponse QueryActivityListSync(QueryActivityListRequest req)
         {
-             JsonResponseModel<QueryActivityListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryActivityList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryActivityListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryActivityListResponse>(req, "QueryActivityList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -257,19 +162,9 @@ namespace TencentCloud.Wav.V20210129
         /// </summary>
         /// <param name="req"><see cref="QueryActivityLiveCodeListRequest"/></param>
         /// <returns><see cref="QueryActivityLiveCodeListResponse"/></returns>
-        public async Task<QueryActivityLiveCodeListResponse> QueryActivityLiveCodeList(QueryActivityLiveCodeListRequest req)
+        public Task<QueryActivityLiveCodeListResponse> QueryActivityLiveCodeList(QueryActivityLiveCodeListRequest req)
         {
-             JsonResponseModel<QueryActivityLiveCodeListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryActivityLiveCodeList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryActivityLiveCodeListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryActivityLiveCodeListResponse>(req, "QueryActivityLiveCodeList");
         }
 
         /// <summary>
@@ -279,17 +174,8 @@ namespace TencentCloud.Wav.V20210129
         /// <returns><see cref="QueryActivityLiveCodeListResponse"/></returns>
         public QueryActivityLiveCodeListResponse QueryActivityLiveCodeListSync(QueryActivityLiveCodeListRequest req)
         {
-             JsonResponseModel<QueryActivityLiveCodeListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryActivityLiveCodeList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryActivityLiveCodeListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryActivityLiveCodeListResponse>(req, "QueryActivityLiveCodeList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -297,19 +183,9 @@ namespace TencentCloud.Wav.V20210129
         /// </summary>
         /// <param name="req"><see cref="QueryArrivalListRequest"/></param>
         /// <returns><see cref="QueryArrivalListResponse"/></returns>
-        public async Task<QueryArrivalListResponse> QueryArrivalList(QueryArrivalListRequest req)
+        public Task<QueryArrivalListResponse> QueryArrivalList(QueryArrivalListRequest req)
         {
-             JsonResponseModel<QueryArrivalListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryArrivalList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryArrivalListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryArrivalListResponse>(req, "QueryArrivalList");
         }
 
         /// <summary>
@@ -319,17 +195,8 @@ namespace TencentCloud.Wav.V20210129
         /// <returns><see cref="QueryArrivalListResponse"/></returns>
         public QueryArrivalListResponse QueryArrivalListSync(QueryArrivalListRequest req)
         {
-             JsonResponseModel<QueryArrivalListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryArrivalList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryArrivalListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryArrivalListResponse>(req, "QueryArrivalList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -337,19 +204,9 @@ namespace TencentCloud.Wav.V20210129
         /// </summary>
         /// <param name="req"><see cref="QueryChannelCodeListRequest"/></param>
         /// <returns><see cref="QueryChannelCodeListResponse"/></returns>
-        public async Task<QueryChannelCodeListResponse> QueryChannelCodeList(QueryChannelCodeListRequest req)
+        public Task<QueryChannelCodeListResponse> QueryChannelCodeList(QueryChannelCodeListRequest req)
         {
-             JsonResponseModel<QueryChannelCodeListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryChannelCodeList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryChannelCodeListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryChannelCodeListResponse>(req, "QueryChannelCodeList");
         }
 
         /// <summary>
@@ -359,17 +216,8 @@ namespace TencentCloud.Wav.V20210129
         /// <returns><see cref="QueryChannelCodeListResponse"/></returns>
         public QueryChannelCodeListResponse QueryChannelCodeListSync(QueryChannelCodeListRequest req)
         {
-             JsonResponseModel<QueryChannelCodeListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryChannelCodeList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryChannelCodeListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryChannelCodeListResponse>(req, "QueryChannelCodeList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -377,19 +225,9 @@ namespace TencentCloud.Wav.V20210129
         /// </summary>
         /// <param name="req"><see cref="QueryChatArchivingListRequest"/></param>
         /// <returns><see cref="QueryChatArchivingListResponse"/></returns>
-        public async Task<QueryChatArchivingListResponse> QueryChatArchivingList(QueryChatArchivingListRequest req)
+        public Task<QueryChatArchivingListResponse> QueryChatArchivingList(QueryChatArchivingListRequest req)
         {
-             JsonResponseModel<QueryChatArchivingListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryChatArchivingList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryChatArchivingListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryChatArchivingListResponse>(req, "QueryChatArchivingList");
         }
 
         /// <summary>
@@ -399,17 +237,8 @@ namespace TencentCloud.Wav.V20210129
         /// <returns><see cref="QueryChatArchivingListResponse"/></returns>
         public QueryChatArchivingListResponse QueryChatArchivingListSync(QueryChatArchivingListRequest req)
         {
-             JsonResponseModel<QueryChatArchivingListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryChatArchivingList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryChatArchivingListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryChatArchivingListResponse>(req, "QueryChatArchivingList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -417,19 +246,9 @@ namespace TencentCloud.Wav.V20210129
         /// </summary>
         /// <param name="req"><see cref="QueryClueInfoListRequest"/></param>
         /// <returns><see cref="QueryClueInfoListResponse"/></returns>
-        public async Task<QueryClueInfoListResponse> QueryClueInfoList(QueryClueInfoListRequest req)
+        public Task<QueryClueInfoListResponse> QueryClueInfoList(QueryClueInfoListRequest req)
         {
-             JsonResponseModel<QueryClueInfoListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryClueInfoList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryClueInfoListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryClueInfoListResponse>(req, "QueryClueInfoList");
         }
 
         /// <summary>
@@ -439,17 +258,8 @@ namespace TencentCloud.Wav.V20210129
         /// <returns><see cref="QueryClueInfoListResponse"/></returns>
         public QueryClueInfoListResponse QueryClueInfoListSync(QueryClueInfoListRequest req)
         {
-             JsonResponseModel<QueryClueInfoListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryClueInfoList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryClueInfoListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryClueInfoListResponse>(req, "QueryClueInfoList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -457,19 +267,9 @@ namespace TencentCloud.Wav.V20210129
         /// </summary>
         /// <param name="req"><see cref="QueryCrmStatisticsRequest"/></param>
         /// <returns><see cref="QueryCrmStatisticsResponse"/></returns>
-        public async Task<QueryCrmStatisticsResponse> QueryCrmStatistics(QueryCrmStatisticsRequest req)
+        public Task<QueryCrmStatisticsResponse> QueryCrmStatistics(QueryCrmStatisticsRequest req)
         {
-             JsonResponseModel<QueryCrmStatisticsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryCrmStatistics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCrmStatisticsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryCrmStatisticsResponse>(req, "QueryCrmStatistics");
         }
 
         /// <summary>
@@ -479,17 +279,8 @@ namespace TencentCloud.Wav.V20210129
         /// <returns><see cref="QueryCrmStatisticsResponse"/></returns>
         public QueryCrmStatisticsResponse QueryCrmStatisticsSync(QueryCrmStatisticsRequest req)
         {
-             JsonResponseModel<QueryCrmStatisticsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryCrmStatistics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCrmStatisticsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryCrmStatisticsResponse>(req, "QueryCrmStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -497,19 +288,9 @@ namespace TencentCloud.Wav.V20210129
         /// </summary>
         /// <param name="req"><see cref="QueryCustomerEventDetailStatisticsRequest"/></param>
         /// <returns><see cref="QueryCustomerEventDetailStatisticsResponse"/></returns>
-        public async Task<QueryCustomerEventDetailStatisticsResponse> QueryCustomerEventDetailStatistics(QueryCustomerEventDetailStatisticsRequest req)
+        public Task<QueryCustomerEventDetailStatisticsResponse> QueryCustomerEventDetailStatistics(QueryCustomerEventDetailStatisticsRequest req)
         {
-             JsonResponseModel<QueryCustomerEventDetailStatisticsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryCustomerEventDetailStatistics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCustomerEventDetailStatisticsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryCustomerEventDetailStatisticsResponse>(req, "QueryCustomerEventDetailStatistics");
         }
 
         /// <summary>
@@ -519,17 +300,8 @@ namespace TencentCloud.Wav.V20210129
         /// <returns><see cref="QueryCustomerEventDetailStatisticsResponse"/></returns>
         public QueryCustomerEventDetailStatisticsResponse QueryCustomerEventDetailStatisticsSync(QueryCustomerEventDetailStatisticsRequest req)
         {
-             JsonResponseModel<QueryCustomerEventDetailStatisticsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryCustomerEventDetailStatistics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCustomerEventDetailStatisticsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryCustomerEventDetailStatisticsResponse>(req, "QueryCustomerEventDetailStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -537,19 +309,9 @@ namespace TencentCloud.Wav.V20210129
         /// </summary>
         /// <param name="req"><see cref="QueryCustomerProfileListRequest"/></param>
         /// <returns><see cref="QueryCustomerProfileListResponse"/></returns>
-        public async Task<QueryCustomerProfileListResponse> QueryCustomerProfileList(QueryCustomerProfileListRequest req)
+        public Task<QueryCustomerProfileListResponse> QueryCustomerProfileList(QueryCustomerProfileListRequest req)
         {
-             JsonResponseModel<QueryCustomerProfileListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryCustomerProfileList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCustomerProfileListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryCustomerProfileListResponse>(req, "QueryCustomerProfileList");
         }
 
         /// <summary>
@@ -559,17 +321,8 @@ namespace TencentCloud.Wav.V20210129
         /// <returns><see cref="QueryCustomerProfileListResponse"/></returns>
         public QueryCustomerProfileListResponse QueryCustomerProfileListSync(QueryCustomerProfileListRequest req)
         {
-             JsonResponseModel<QueryCustomerProfileListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryCustomerProfileList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCustomerProfileListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryCustomerProfileListResponse>(req, "QueryCustomerProfileList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -577,19 +330,9 @@ namespace TencentCloud.Wav.V20210129
         /// </summary>
         /// <param name="req"><see cref="QueryDealerInfoListRequest"/></param>
         /// <returns><see cref="QueryDealerInfoListResponse"/></returns>
-        public async Task<QueryDealerInfoListResponse> QueryDealerInfoList(QueryDealerInfoListRequest req)
+        public Task<QueryDealerInfoListResponse> QueryDealerInfoList(QueryDealerInfoListRequest req)
         {
-             JsonResponseModel<QueryDealerInfoListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryDealerInfoList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryDealerInfoListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryDealerInfoListResponse>(req, "QueryDealerInfoList");
         }
 
         /// <summary>
@@ -599,17 +342,8 @@ namespace TencentCloud.Wav.V20210129
         /// <returns><see cref="QueryDealerInfoListResponse"/></returns>
         public QueryDealerInfoListResponse QueryDealerInfoListSync(QueryDealerInfoListRequest req)
         {
-             JsonResponseModel<QueryDealerInfoListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryDealerInfoList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryDealerInfoListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryDealerInfoListResponse>(req, "QueryDealerInfoList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -617,19 +351,9 @@ namespace TencentCloud.Wav.V20210129
         /// </summary>
         /// <param name="req"><see cref="QueryExternalContactDetailRequest"/></param>
         /// <returns><see cref="QueryExternalContactDetailResponse"/></returns>
-        public async Task<QueryExternalContactDetailResponse> QueryExternalContactDetail(QueryExternalContactDetailRequest req)
+        public Task<QueryExternalContactDetailResponse> QueryExternalContactDetail(QueryExternalContactDetailRequest req)
         {
-             JsonResponseModel<QueryExternalContactDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryExternalContactDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryExternalContactDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryExternalContactDetailResponse>(req, "QueryExternalContactDetail");
         }
 
         /// <summary>
@@ -639,17 +363,8 @@ namespace TencentCloud.Wav.V20210129
         /// <returns><see cref="QueryExternalContactDetailResponse"/></returns>
         public QueryExternalContactDetailResponse QueryExternalContactDetailSync(QueryExternalContactDetailRequest req)
         {
-             JsonResponseModel<QueryExternalContactDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryExternalContactDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryExternalContactDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryExternalContactDetailResponse>(req, "QueryExternalContactDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -657,19 +372,9 @@ namespace TencentCloud.Wav.V20210129
         /// </summary>
         /// <param name="req"><see cref="QueryExternalContactDetailByDateRequest"/></param>
         /// <returns><see cref="QueryExternalContactDetailByDateResponse"/></returns>
-        public async Task<QueryExternalContactDetailByDateResponse> QueryExternalContactDetailByDate(QueryExternalContactDetailByDateRequest req)
+        public Task<QueryExternalContactDetailByDateResponse> QueryExternalContactDetailByDate(QueryExternalContactDetailByDateRequest req)
         {
-             JsonResponseModel<QueryExternalContactDetailByDateResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryExternalContactDetailByDate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryExternalContactDetailByDateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryExternalContactDetailByDateResponse>(req, "QueryExternalContactDetailByDate");
         }
 
         /// <summary>
@@ -679,17 +384,8 @@ namespace TencentCloud.Wav.V20210129
         /// <returns><see cref="QueryExternalContactDetailByDateResponse"/></returns>
         public QueryExternalContactDetailByDateResponse QueryExternalContactDetailByDateSync(QueryExternalContactDetailByDateRequest req)
         {
-             JsonResponseModel<QueryExternalContactDetailByDateResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryExternalContactDetailByDate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryExternalContactDetailByDateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryExternalContactDetailByDateResponse>(req, "QueryExternalContactDetailByDate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -697,19 +393,9 @@ namespace TencentCloud.Wav.V20210129
         /// </summary>
         /// <param name="req"><see cref="QueryExternalContactListRequest"/></param>
         /// <returns><see cref="QueryExternalContactListResponse"/></returns>
-        public async Task<QueryExternalContactListResponse> QueryExternalContactList(QueryExternalContactListRequest req)
+        public Task<QueryExternalContactListResponse> QueryExternalContactList(QueryExternalContactListRequest req)
         {
-             JsonResponseModel<QueryExternalContactListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryExternalContactList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryExternalContactListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryExternalContactListResponse>(req, "QueryExternalContactList");
         }
 
         /// <summary>
@@ -719,17 +405,8 @@ namespace TencentCloud.Wav.V20210129
         /// <returns><see cref="QueryExternalContactListResponse"/></returns>
         public QueryExternalContactListResponse QueryExternalContactListSync(QueryExternalContactListRequest req)
         {
-             JsonResponseModel<QueryExternalContactListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryExternalContactList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryExternalContactListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryExternalContactListResponse>(req, "QueryExternalContactList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -737,19 +414,9 @@ namespace TencentCloud.Wav.V20210129
         /// </summary>
         /// <param name="req"><see cref="QueryExternalUserEventListRequest"/></param>
         /// <returns><see cref="QueryExternalUserEventListResponse"/></returns>
-        public async Task<QueryExternalUserEventListResponse> QueryExternalUserEventList(QueryExternalUserEventListRequest req)
+        public Task<QueryExternalUserEventListResponse> QueryExternalUserEventList(QueryExternalUserEventListRequest req)
         {
-             JsonResponseModel<QueryExternalUserEventListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryExternalUserEventList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryExternalUserEventListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryExternalUserEventListResponse>(req, "QueryExternalUserEventList");
         }
 
         /// <summary>
@@ -759,17 +426,8 @@ namespace TencentCloud.Wav.V20210129
         /// <returns><see cref="QueryExternalUserEventListResponse"/></returns>
         public QueryExternalUserEventListResponse QueryExternalUserEventListSync(QueryExternalUserEventListRequest req)
         {
-             JsonResponseModel<QueryExternalUserEventListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryExternalUserEventList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryExternalUserEventListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryExternalUserEventListResponse>(req, "QueryExternalUserEventList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -777,19 +435,9 @@ namespace TencentCloud.Wav.V20210129
         /// </summary>
         /// <param name="req"><see cref="QueryExternalUserMappingInfoRequest"/></param>
         /// <returns><see cref="QueryExternalUserMappingInfoResponse"/></returns>
-        public async Task<QueryExternalUserMappingInfoResponse> QueryExternalUserMappingInfo(QueryExternalUserMappingInfoRequest req)
+        public Task<QueryExternalUserMappingInfoResponse> QueryExternalUserMappingInfo(QueryExternalUserMappingInfoRequest req)
         {
-             JsonResponseModel<QueryExternalUserMappingInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryExternalUserMappingInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryExternalUserMappingInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryExternalUserMappingInfoResponse>(req, "QueryExternalUserMappingInfo");
         }
 
         /// <summary>
@@ -799,17 +447,8 @@ namespace TencentCloud.Wav.V20210129
         /// <returns><see cref="QueryExternalUserMappingInfoResponse"/></returns>
         public QueryExternalUserMappingInfoResponse QueryExternalUserMappingInfoSync(QueryExternalUserMappingInfoRequest req)
         {
-             JsonResponseModel<QueryExternalUserMappingInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryExternalUserMappingInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryExternalUserMappingInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryExternalUserMappingInfoResponse>(req, "QueryExternalUserMappingInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -817,19 +456,9 @@ namespace TencentCloud.Wav.V20210129
         /// </summary>
         /// <param name="req"><see cref="QueryFollowListRequest"/></param>
         /// <returns><see cref="QueryFollowListResponse"/></returns>
-        public async Task<QueryFollowListResponse> QueryFollowList(QueryFollowListRequest req)
+        public Task<QueryFollowListResponse> QueryFollowList(QueryFollowListRequest req)
         {
-             JsonResponseModel<QueryFollowListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryFollowList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFollowListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryFollowListResponse>(req, "QueryFollowList");
         }
 
         /// <summary>
@@ -839,17 +468,8 @@ namespace TencentCloud.Wav.V20210129
         /// <returns><see cref="QueryFollowListResponse"/></returns>
         public QueryFollowListResponse QueryFollowListSync(QueryFollowListRequest req)
         {
-             JsonResponseModel<QueryFollowListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryFollowList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFollowListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryFollowListResponse>(req, "QueryFollowList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -857,19 +477,9 @@ namespace TencentCloud.Wav.V20210129
         /// </summary>
         /// <param name="req"><see cref="QueryLicenseInfoRequest"/></param>
         /// <returns><see cref="QueryLicenseInfoResponse"/></returns>
-        public async Task<QueryLicenseInfoResponse> QueryLicenseInfo(QueryLicenseInfoRequest req)
+        public Task<QueryLicenseInfoResponse> QueryLicenseInfo(QueryLicenseInfoRequest req)
         {
-             JsonResponseModel<QueryLicenseInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryLicenseInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryLicenseInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryLicenseInfoResponse>(req, "QueryLicenseInfo");
         }
 
         /// <summary>
@@ -879,17 +489,8 @@ namespace TencentCloud.Wav.V20210129
         /// <returns><see cref="QueryLicenseInfoResponse"/></returns>
         public QueryLicenseInfoResponse QueryLicenseInfoSync(QueryLicenseInfoRequest req)
         {
-             JsonResponseModel<QueryLicenseInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryLicenseInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryLicenseInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryLicenseInfoResponse>(req, "QueryLicenseInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -897,19 +498,9 @@ namespace TencentCloud.Wav.V20210129
         /// </summary>
         /// <param name="req"><see cref="QueryMaterialListRequest"/></param>
         /// <returns><see cref="QueryMaterialListResponse"/></returns>
-        public async Task<QueryMaterialListResponse> QueryMaterialList(QueryMaterialListRequest req)
+        public Task<QueryMaterialListResponse> QueryMaterialList(QueryMaterialListRequest req)
         {
-             JsonResponseModel<QueryMaterialListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryMaterialList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMaterialListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryMaterialListResponse>(req, "QueryMaterialList");
         }
 
         /// <summary>
@@ -919,17 +510,8 @@ namespace TencentCloud.Wav.V20210129
         /// <returns><see cref="QueryMaterialListResponse"/></returns>
         public QueryMaterialListResponse QueryMaterialListSync(QueryMaterialListRequest req)
         {
-             JsonResponseModel<QueryMaterialListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryMaterialList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMaterialListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryMaterialListResponse>(req, "QueryMaterialList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -937,19 +519,9 @@ namespace TencentCloud.Wav.V20210129
         /// </summary>
         /// <param name="req"><see cref="QueryMiniAppCodeListRequest"/></param>
         /// <returns><see cref="QueryMiniAppCodeListResponse"/></returns>
-        public async Task<QueryMiniAppCodeListResponse> QueryMiniAppCodeList(QueryMiniAppCodeListRequest req)
+        public Task<QueryMiniAppCodeListResponse> QueryMiniAppCodeList(QueryMiniAppCodeListRequest req)
         {
-             JsonResponseModel<QueryMiniAppCodeListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryMiniAppCodeList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMiniAppCodeListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryMiniAppCodeListResponse>(req, "QueryMiniAppCodeList");
         }
 
         /// <summary>
@@ -959,17 +531,8 @@ namespace TencentCloud.Wav.V20210129
         /// <returns><see cref="QueryMiniAppCodeListResponse"/></returns>
         public QueryMiniAppCodeListResponse QueryMiniAppCodeListSync(QueryMiniAppCodeListRequest req)
         {
-             JsonResponseModel<QueryMiniAppCodeListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryMiniAppCodeList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMiniAppCodeListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryMiniAppCodeListResponse>(req, "QueryMiniAppCodeList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -977,19 +540,9 @@ namespace TencentCloud.Wav.V20210129
         /// </summary>
         /// <param name="req"><see cref="QueryStaffEventDetailStatisticsRequest"/></param>
         /// <returns><see cref="QueryStaffEventDetailStatisticsResponse"/></returns>
-        public async Task<QueryStaffEventDetailStatisticsResponse> QueryStaffEventDetailStatistics(QueryStaffEventDetailStatisticsRequest req)
+        public Task<QueryStaffEventDetailStatisticsResponse> QueryStaffEventDetailStatistics(QueryStaffEventDetailStatisticsRequest req)
         {
-             JsonResponseModel<QueryStaffEventDetailStatisticsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryStaffEventDetailStatistics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryStaffEventDetailStatisticsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryStaffEventDetailStatisticsResponse>(req, "QueryStaffEventDetailStatistics");
         }
 
         /// <summary>
@@ -999,17 +552,8 @@ namespace TencentCloud.Wav.V20210129
         /// <returns><see cref="QueryStaffEventDetailStatisticsResponse"/></returns>
         public QueryStaffEventDetailStatisticsResponse QueryStaffEventDetailStatisticsSync(QueryStaffEventDetailStatisticsRequest req)
         {
-             JsonResponseModel<QueryStaffEventDetailStatisticsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryStaffEventDetailStatistics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryStaffEventDetailStatisticsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryStaffEventDetailStatisticsResponse>(req, "QueryStaffEventDetailStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1017,19 +561,9 @@ namespace TencentCloud.Wav.V20210129
         /// </summary>
         /// <param name="req"><see cref="QueryUserInfoListRequest"/></param>
         /// <returns><see cref="QueryUserInfoListResponse"/></returns>
-        public async Task<QueryUserInfoListResponse> QueryUserInfoList(QueryUserInfoListRequest req)
+        public Task<QueryUserInfoListResponse> QueryUserInfoList(QueryUserInfoListRequest req)
         {
-             JsonResponseModel<QueryUserInfoListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryUserInfoList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryUserInfoListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryUserInfoListResponse>(req, "QueryUserInfoList");
         }
 
         /// <summary>
@@ -1039,17 +573,8 @@ namespace TencentCloud.Wav.V20210129
         /// <returns><see cref="QueryUserInfoListResponse"/></returns>
         public QueryUserInfoListResponse QueryUserInfoListSync(QueryUserInfoListRequest req)
         {
-             JsonResponseModel<QueryUserInfoListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryUserInfoList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryUserInfoListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryUserInfoListResponse>(req, "QueryUserInfoList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1057,19 +582,9 @@ namespace TencentCloud.Wav.V20210129
         /// </summary>
         /// <param name="req"><see cref="QueryVehicleInfoListRequest"/></param>
         /// <returns><see cref="QueryVehicleInfoListResponse"/></returns>
-        public async Task<QueryVehicleInfoListResponse> QueryVehicleInfoList(QueryVehicleInfoListRequest req)
+        public Task<QueryVehicleInfoListResponse> QueryVehicleInfoList(QueryVehicleInfoListRequest req)
         {
-             JsonResponseModel<QueryVehicleInfoListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryVehicleInfoList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryVehicleInfoListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryVehicleInfoListResponse>(req, "QueryVehicleInfoList");
         }
 
         /// <summary>
@@ -1079,17 +594,8 @@ namespace TencentCloud.Wav.V20210129
         /// <returns><see cref="QueryVehicleInfoListResponse"/></returns>
         public QueryVehicleInfoListResponse QueryVehicleInfoListSync(QueryVehicleInfoListRequest req)
         {
-             JsonResponseModel<QueryVehicleInfoListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryVehicleInfoList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryVehicleInfoListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryVehicleInfoListResponse>(req, "QueryVehicleInfoList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

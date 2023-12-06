@@ -57,19 +57,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="ArchiveKeyRequest"/></param>
         /// <returns><see cref="ArchiveKeyResponse"/></returns>
-        public async Task<ArchiveKeyResponse> ArchiveKey(ArchiveKeyRequest req)
+        public Task<ArchiveKeyResponse> ArchiveKey(ArchiveKeyRequest req)
         {
-             JsonResponseModel<ArchiveKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ArchiveKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ArchiveKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ArchiveKeyResponse>(req, "ArchiveKey");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="ArchiveKeyResponse"/></returns>
         public ArchiveKeyResponse ArchiveKeySync(ArchiveKeyRequest req)
         {
-             JsonResponseModel<ArchiveKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ArchiveKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ArchiveKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ArchiveKeyResponse>(req, "ArchiveKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="AsymmetricRsaDecryptRequest"/></param>
         /// <returns><see cref="AsymmetricRsaDecryptResponse"/></returns>
-        public async Task<AsymmetricRsaDecryptResponse> AsymmetricRsaDecrypt(AsymmetricRsaDecryptRequest req)
+        public Task<AsymmetricRsaDecryptResponse> AsymmetricRsaDecrypt(AsymmetricRsaDecryptRequest req)
         {
-             JsonResponseModel<AsymmetricRsaDecryptResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "AsymmetricRsaDecrypt");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AsymmetricRsaDecryptResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<AsymmetricRsaDecryptResponse>(req, "AsymmetricRsaDecrypt");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="AsymmetricRsaDecryptResponse"/></returns>
         public AsymmetricRsaDecryptResponse AsymmetricRsaDecryptSync(AsymmetricRsaDecryptRequest req)
         {
-             JsonResponseModel<AsymmetricRsaDecryptResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "AsymmetricRsaDecrypt");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AsymmetricRsaDecryptResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<AsymmetricRsaDecryptResponse>(req, "AsymmetricRsaDecrypt")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="AsymmetricSm2DecryptRequest"/></param>
         /// <returns><see cref="AsymmetricSm2DecryptResponse"/></returns>
-        public async Task<AsymmetricSm2DecryptResponse> AsymmetricSm2Decrypt(AsymmetricSm2DecryptRequest req)
+        public Task<AsymmetricSm2DecryptResponse> AsymmetricSm2Decrypt(AsymmetricSm2DecryptRequest req)
         {
-             JsonResponseModel<AsymmetricSm2DecryptResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "AsymmetricSm2Decrypt");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AsymmetricSm2DecryptResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<AsymmetricSm2DecryptResponse>(req, "AsymmetricSm2Decrypt");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="AsymmetricSm2DecryptResponse"/></returns>
         public AsymmetricSm2DecryptResponse AsymmetricSm2DecryptSync(AsymmetricSm2DecryptRequest req)
         {
-             JsonResponseModel<AsymmetricSm2DecryptResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "AsymmetricSm2Decrypt");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AsymmetricSm2DecryptResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<AsymmetricSm2DecryptResponse>(req, "AsymmetricSm2Decrypt")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="BindCloudResourceRequest"/></param>
         /// <returns><see cref="BindCloudResourceResponse"/></returns>
-        public async Task<BindCloudResourceResponse> BindCloudResource(BindCloudResourceRequest req)
+        public Task<BindCloudResourceResponse> BindCloudResource(BindCloudResourceRequest req)
         {
-             JsonResponseModel<BindCloudResourceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "BindCloudResource");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindCloudResourceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<BindCloudResourceResponse>(req, "BindCloudResource");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="BindCloudResourceResponse"/></returns>
         public BindCloudResourceResponse BindCloudResourceSync(BindCloudResourceRequest req)
         {
-             JsonResponseModel<BindCloudResourceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "BindCloudResource");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindCloudResourceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<BindCloudResourceResponse>(req, "BindCloudResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -217,19 +141,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="CancelKeyArchiveRequest"/></param>
         /// <returns><see cref="CancelKeyArchiveResponse"/></returns>
-        public async Task<CancelKeyArchiveResponse> CancelKeyArchive(CancelKeyArchiveRequest req)
+        public Task<CancelKeyArchiveResponse> CancelKeyArchive(CancelKeyArchiveRequest req)
         {
-             JsonResponseModel<CancelKeyArchiveResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CancelKeyArchive");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelKeyArchiveResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CancelKeyArchiveResponse>(req, "CancelKeyArchive");
         }
 
         /// <summary>
@@ -239,17 +153,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="CancelKeyArchiveResponse"/></returns>
         public CancelKeyArchiveResponse CancelKeyArchiveSync(CancelKeyArchiveRequest req)
         {
-             JsonResponseModel<CancelKeyArchiveResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CancelKeyArchive");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelKeyArchiveResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CancelKeyArchiveResponse>(req, "CancelKeyArchive")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -257,19 +162,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="CancelKeyDeletionRequest"/></param>
         /// <returns><see cref="CancelKeyDeletionResponse"/></returns>
-        public async Task<CancelKeyDeletionResponse> CancelKeyDeletion(CancelKeyDeletionRequest req)
+        public Task<CancelKeyDeletionResponse> CancelKeyDeletion(CancelKeyDeletionRequest req)
         {
-             JsonResponseModel<CancelKeyDeletionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CancelKeyDeletion");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelKeyDeletionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CancelKeyDeletionResponse>(req, "CancelKeyDeletion");
         }
 
         /// <summary>
@@ -279,17 +174,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="CancelKeyDeletionResponse"/></returns>
         public CancelKeyDeletionResponse CancelKeyDeletionSync(CancelKeyDeletionRequest req)
         {
-             JsonResponseModel<CancelKeyDeletionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CancelKeyDeletion");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelKeyDeletionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CancelKeyDeletionResponse>(req, "CancelKeyDeletion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -297,19 +183,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="CreateKeyRequest"/></param>
         /// <returns><see cref="CreateKeyResponse"/></returns>
-        public async Task<CreateKeyResponse> CreateKey(CreateKeyRequest req)
+        public Task<CreateKeyResponse> CreateKey(CreateKeyRequest req)
         {
-             JsonResponseModel<CreateKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateKeyResponse>(req, "CreateKey");
         }
 
         /// <summary>
@@ -319,17 +195,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="CreateKeyResponse"/></returns>
         public CreateKeyResponse CreateKeySync(CreateKeyRequest req)
         {
-             JsonResponseModel<CreateKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateKeyResponse>(req, "CreateKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -337,19 +204,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="CreateWhiteBoxKeyRequest"/></param>
         /// <returns><see cref="CreateWhiteBoxKeyResponse"/></returns>
-        public async Task<CreateWhiteBoxKeyResponse> CreateWhiteBoxKey(CreateWhiteBoxKeyRequest req)
+        public Task<CreateWhiteBoxKeyResponse> CreateWhiteBoxKey(CreateWhiteBoxKeyRequest req)
         {
-             JsonResponseModel<CreateWhiteBoxKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateWhiteBoxKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWhiteBoxKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateWhiteBoxKeyResponse>(req, "CreateWhiteBoxKey");
         }
 
         /// <summary>
@@ -359,17 +216,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="CreateWhiteBoxKeyResponse"/></returns>
         public CreateWhiteBoxKeyResponse CreateWhiteBoxKeySync(CreateWhiteBoxKeyRequest req)
         {
-             JsonResponseModel<CreateWhiteBoxKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateWhiteBoxKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWhiteBoxKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateWhiteBoxKeyResponse>(req, "CreateWhiteBoxKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -377,19 +225,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="DecryptRequest"/></param>
         /// <returns><see cref="DecryptResponse"/></returns>
-        public async Task<DecryptResponse> Decrypt(DecryptRequest req)
+        public Task<DecryptResponse> Decrypt(DecryptRequest req)
         {
-             JsonResponseModel<DecryptResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "Decrypt");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DecryptResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DecryptResponse>(req, "Decrypt");
         }
 
         /// <summary>
@@ -399,17 +237,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="DecryptResponse"/></returns>
         public DecryptResponse DecryptSync(DecryptRequest req)
         {
-             JsonResponseModel<DecryptResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "Decrypt");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DecryptResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DecryptResponse>(req, "Decrypt")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -417,19 +246,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="DeleteImportedKeyMaterialRequest"/></param>
         /// <returns><see cref="DeleteImportedKeyMaterialResponse"/></returns>
-        public async Task<DeleteImportedKeyMaterialResponse> DeleteImportedKeyMaterial(DeleteImportedKeyMaterialRequest req)
+        public Task<DeleteImportedKeyMaterialResponse> DeleteImportedKeyMaterial(DeleteImportedKeyMaterialRequest req)
         {
-             JsonResponseModel<DeleteImportedKeyMaterialResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteImportedKeyMaterial");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImportedKeyMaterialResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteImportedKeyMaterialResponse>(req, "DeleteImportedKeyMaterial");
         }
 
         /// <summary>
@@ -439,17 +258,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="DeleteImportedKeyMaterialResponse"/></returns>
         public DeleteImportedKeyMaterialResponse DeleteImportedKeyMaterialSync(DeleteImportedKeyMaterialRequest req)
         {
-             JsonResponseModel<DeleteImportedKeyMaterialResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteImportedKeyMaterial");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImportedKeyMaterialResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteImportedKeyMaterialResponse>(req, "DeleteImportedKeyMaterial")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -457,19 +267,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="DeleteWhiteBoxKeyRequest"/></param>
         /// <returns><see cref="DeleteWhiteBoxKeyResponse"/></returns>
-        public async Task<DeleteWhiteBoxKeyResponse> DeleteWhiteBoxKey(DeleteWhiteBoxKeyRequest req)
+        public Task<DeleteWhiteBoxKeyResponse> DeleteWhiteBoxKey(DeleteWhiteBoxKeyRequest req)
         {
-             JsonResponseModel<DeleteWhiteBoxKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteWhiteBoxKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWhiteBoxKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteWhiteBoxKeyResponse>(req, "DeleteWhiteBoxKey");
         }
 
         /// <summary>
@@ -479,17 +279,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="DeleteWhiteBoxKeyResponse"/></returns>
         public DeleteWhiteBoxKeyResponse DeleteWhiteBoxKeySync(DeleteWhiteBoxKeyRequest req)
         {
-             JsonResponseModel<DeleteWhiteBoxKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteWhiteBoxKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWhiteBoxKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteWhiteBoxKeyResponse>(req, "DeleteWhiteBoxKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -497,19 +288,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="DescribeKeyRequest"/></param>
         /// <returns><see cref="DescribeKeyResponse"/></returns>
-        public async Task<DescribeKeyResponse> DescribeKey(DescribeKeyRequest req)
+        public Task<DescribeKeyResponse> DescribeKey(DescribeKeyRequest req)
         {
-             JsonResponseModel<DescribeKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeKeyResponse>(req, "DescribeKey");
         }
 
         /// <summary>
@@ -519,17 +300,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="DescribeKeyResponse"/></returns>
         public DescribeKeyResponse DescribeKeySync(DescribeKeyRequest req)
         {
-             JsonResponseModel<DescribeKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeKeyResponse>(req, "DescribeKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -537,19 +309,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="DescribeKeysRequest"/></param>
         /// <returns><see cref="DescribeKeysResponse"/></returns>
-        public async Task<DescribeKeysResponse> DescribeKeys(DescribeKeysRequest req)
+        public Task<DescribeKeysResponse> DescribeKeys(DescribeKeysRequest req)
         {
-             JsonResponseModel<DescribeKeysResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeKeys");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKeysResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeKeysResponse>(req, "DescribeKeys");
         }
 
         /// <summary>
@@ -559,17 +321,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="DescribeKeysResponse"/></returns>
         public DescribeKeysResponse DescribeKeysSync(DescribeKeysRequest req)
         {
-             JsonResponseModel<DescribeKeysResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeKeys");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKeysResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeKeysResponse>(req, "DescribeKeys")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -577,19 +330,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="DescribeWhiteBoxDecryptKeyRequest"/></param>
         /// <returns><see cref="DescribeWhiteBoxDecryptKeyResponse"/></returns>
-        public async Task<DescribeWhiteBoxDecryptKeyResponse> DescribeWhiteBoxDecryptKey(DescribeWhiteBoxDecryptKeyRequest req)
+        public Task<DescribeWhiteBoxDecryptKeyResponse> DescribeWhiteBoxDecryptKey(DescribeWhiteBoxDecryptKeyRequest req)
         {
-             JsonResponseModel<DescribeWhiteBoxDecryptKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeWhiteBoxDecryptKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxDecryptKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeWhiteBoxDecryptKeyResponse>(req, "DescribeWhiteBoxDecryptKey");
         }
 
         /// <summary>
@@ -599,17 +342,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="DescribeWhiteBoxDecryptKeyResponse"/></returns>
         public DescribeWhiteBoxDecryptKeyResponse DescribeWhiteBoxDecryptKeySync(DescribeWhiteBoxDecryptKeyRequest req)
         {
-             JsonResponseModel<DescribeWhiteBoxDecryptKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeWhiteBoxDecryptKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxDecryptKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeWhiteBoxDecryptKeyResponse>(req, "DescribeWhiteBoxDecryptKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -617,19 +351,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="DescribeWhiteBoxDeviceFingerprintsRequest"/></param>
         /// <returns><see cref="DescribeWhiteBoxDeviceFingerprintsResponse"/></returns>
-        public async Task<DescribeWhiteBoxDeviceFingerprintsResponse> DescribeWhiteBoxDeviceFingerprints(DescribeWhiteBoxDeviceFingerprintsRequest req)
+        public Task<DescribeWhiteBoxDeviceFingerprintsResponse> DescribeWhiteBoxDeviceFingerprints(DescribeWhiteBoxDeviceFingerprintsRequest req)
         {
-             JsonResponseModel<DescribeWhiteBoxDeviceFingerprintsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeWhiteBoxDeviceFingerprints");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxDeviceFingerprintsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeWhiteBoxDeviceFingerprintsResponse>(req, "DescribeWhiteBoxDeviceFingerprints");
         }
 
         /// <summary>
@@ -639,17 +363,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="DescribeWhiteBoxDeviceFingerprintsResponse"/></returns>
         public DescribeWhiteBoxDeviceFingerprintsResponse DescribeWhiteBoxDeviceFingerprintsSync(DescribeWhiteBoxDeviceFingerprintsRequest req)
         {
-             JsonResponseModel<DescribeWhiteBoxDeviceFingerprintsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeWhiteBoxDeviceFingerprints");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxDeviceFingerprintsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeWhiteBoxDeviceFingerprintsResponse>(req, "DescribeWhiteBoxDeviceFingerprints")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -657,19 +372,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="DescribeWhiteBoxKeyRequest"/></param>
         /// <returns><see cref="DescribeWhiteBoxKeyResponse"/></returns>
-        public async Task<DescribeWhiteBoxKeyResponse> DescribeWhiteBoxKey(DescribeWhiteBoxKeyRequest req)
+        public Task<DescribeWhiteBoxKeyResponse> DescribeWhiteBoxKey(DescribeWhiteBoxKeyRequest req)
         {
-             JsonResponseModel<DescribeWhiteBoxKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeWhiteBoxKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeWhiteBoxKeyResponse>(req, "DescribeWhiteBoxKey");
         }
 
         /// <summary>
@@ -679,17 +384,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="DescribeWhiteBoxKeyResponse"/></returns>
         public DescribeWhiteBoxKeyResponse DescribeWhiteBoxKeySync(DescribeWhiteBoxKeyRequest req)
         {
-             JsonResponseModel<DescribeWhiteBoxKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeWhiteBoxKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeWhiteBoxKeyResponse>(req, "DescribeWhiteBoxKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -697,19 +393,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="DescribeWhiteBoxKeyDetailsRequest"/></param>
         /// <returns><see cref="DescribeWhiteBoxKeyDetailsResponse"/></returns>
-        public async Task<DescribeWhiteBoxKeyDetailsResponse> DescribeWhiteBoxKeyDetails(DescribeWhiteBoxKeyDetailsRequest req)
+        public Task<DescribeWhiteBoxKeyDetailsResponse> DescribeWhiteBoxKeyDetails(DescribeWhiteBoxKeyDetailsRequest req)
         {
-             JsonResponseModel<DescribeWhiteBoxKeyDetailsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeWhiteBoxKeyDetails");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxKeyDetailsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeWhiteBoxKeyDetailsResponse>(req, "DescribeWhiteBoxKeyDetails");
         }
 
         /// <summary>
@@ -719,17 +405,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="DescribeWhiteBoxKeyDetailsResponse"/></returns>
         public DescribeWhiteBoxKeyDetailsResponse DescribeWhiteBoxKeyDetailsSync(DescribeWhiteBoxKeyDetailsRequest req)
         {
-             JsonResponseModel<DescribeWhiteBoxKeyDetailsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeWhiteBoxKeyDetails");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxKeyDetailsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeWhiteBoxKeyDetailsResponse>(req, "DescribeWhiteBoxKeyDetails")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -737,19 +414,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="DescribeWhiteBoxServiceStatusRequest"/></param>
         /// <returns><see cref="DescribeWhiteBoxServiceStatusResponse"/></returns>
-        public async Task<DescribeWhiteBoxServiceStatusResponse> DescribeWhiteBoxServiceStatus(DescribeWhiteBoxServiceStatusRequest req)
+        public Task<DescribeWhiteBoxServiceStatusResponse> DescribeWhiteBoxServiceStatus(DescribeWhiteBoxServiceStatusRequest req)
         {
-             JsonResponseModel<DescribeWhiteBoxServiceStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeWhiteBoxServiceStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxServiceStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeWhiteBoxServiceStatusResponse>(req, "DescribeWhiteBoxServiceStatus");
         }
 
         /// <summary>
@@ -759,17 +426,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="DescribeWhiteBoxServiceStatusResponse"/></returns>
         public DescribeWhiteBoxServiceStatusResponse DescribeWhiteBoxServiceStatusSync(DescribeWhiteBoxServiceStatusRequest req)
         {
-             JsonResponseModel<DescribeWhiteBoxServiceStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeWhiteBoxServiceStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxServiceStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeWhiteBoxServiceStatusResponse>(req, "DescribeWhiteBoxServiceStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -777,19 +435,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="DisableKeyRequest"/></param>
         /// <returns><see cref="DisableKeyResponse"/></returns>
-        public async Task<DisableKeyResponse> DisableKey(DisableKeyRequest req)
+        public Task<DisableKeyResponse> DisableKey(DisableKeyRequest req)
         {
-             JsonResponseModel<DisableKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DisableKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DisableKeyResponse>(req, "DisableKey");
         }
 
         /// <summary>
@@ -799,17 +447,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="DisableKeyResponse"/></returns>
         public DisableKeyResponse DisableKeySync(DisableKeyRequest req)
         {
-             JsonResponseModel<DisableKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DisableKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DisableKeyResponse>(req, "DisableKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -817,19 +456,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="DisableKeyRotationRequest"/></param>
         /// <returns><see cref="DisableKeyRotationResponse"/></returns>
-        public async Task<DisableKeyRotationResponse> DisableKeyRotation(DisableKeyRotationRequest req)
+        public Task<DisableKeyRotationResponse> DisableKeyRotation(DisableKeyRotationRequest req)
         {
-             JsonResponseModel<DisableKeyRotationResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DisableKeyRotation");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableKeyRotationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DisableKeyRotationResponse>(req, "DisableKeyRotation");
         }
 
         /// <summary>
@@ -839,17 +468,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="DisableKeyRotationResponse"/></returns>
         public DisableKeyRotationResponse DisableKeyRotationSync(DisableKeyRotationRequest req)
         {
-             JsonResponseModel<DisableKeyRotationResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DisableKeyRotation");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableKeyRotationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DisableKeyRotationResponse>(req, "DisableKeyRotation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -857,19 +477,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="DisableKeysRequest"/></param>
         /// <returns><see cref="DisableKeysResponse"/></returns>
-        public async Task<DisableKeysResponse> DisableKeys(DisableKeysRequest req)
+        public Task<DisableKeysResponse> DisableKeys(DisableKeysRequest req)
         {
-             JsonResponseModel<DisableKeysResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DisableKeys");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableKeysResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DisableKeysResponse>(req, "DisableKeys");
         }
 
         /// <summary>
@@ -879,17 +489,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="DisableKeysResponse"/></returns>
         public DisableKeysResponse DisableKeysSync(DisableKeysRequest req)
         {
-             JsonResponseModel<DisableKeysResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DisableKeys");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableKeysResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DisableKeysResponse>(req, "DisableKeys")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -897,19 +498,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="DisableWhiteBoxKeyRequest"/></param>
         /// <returns><see cref="DisableWhiteBoxKeyResponse"/></returns>
-        public async Task<DisableWhiteBoxKeyResponse> DisableWhiteBoxKey(DisableWhiteBoxKeyRequest req)
+        public Task<DisableWhiteBoxKeyResponse> DisableWhiteBoxKey(DisableWhiteBoxKeyRequest req)
         {
-             JsonResponseModel<DisableWhiteBoxKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DisableWhiteBoxKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableWhiteBoxKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DisableWhiteBoxKeyResponse>(req, "DisableWhiteBoxKey");
         }
 
         /// <summary>
@@ -919,17 +510,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="DisableWhiteBoxKeyResponse"/></returns>
         public DisableWhiteBoxKeyResponse DisableWhiteBoxKeySync(DisableWhiteBoxKeyRequest req)
         {
-             JsonResponseModel<DisableWhiteBoxKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DisableWhiteBoxKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableWhiteBoxKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DisableWhiteBoxKeyResponse>(req, "DisableWhiteBoxKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -937,19 +519,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="DisableWhiteBoxKeysRequest"/></param>
         /// <returns><see cref="DisableWhiteBoxKeysResponse"/></returns>
-        public async Task<DisableWhiteBoxKeysResponse> DisableWhiteBoxKeys(DisableWhiteBoxKeysRequest req)
+        public Task<DisableWhiteBoxKeysResponse> DisableWhiteBoxKeys(DisableWhiteBoxKeysRequest req)
         {
-             JsonResponseModel<DisableWhiteBoxKeysResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DisableWhiteBoxKeys");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableWhiteBoxKeysResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DisableWhiteBoxKeysResponse>(req, "DisableWhiteBoxKeys");
         }
 
         /// <summary>
@@ -959,17 +531,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="DisableWhiteBoxKeysResponse"/></returns>
         public DisableWhiteBoxKeysResponse DisableWhiteBoxKeysSync(DisableWhiteBoxKeysRequest req)
         {
-             JsonResponseModel<DisableWhiteBoxKeysResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DisableWhiteBoxKeys");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableWhiteBoxKeysResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DisableWhiteBoxKeysResponse>(req, "DisableWhiteBoxKeys")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -977,19 +540,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="EnableKeyRequest"/></param>
         /// <returns><see cref="EnableKeyResponse"/></returns>
-        public async Task<EnableKeyResponse> EnableKey(EnableKeyRequest req)
+        public Task<EnableKeyResponse> EnableKey(EnableKeyRequest req)
         {
-             JsonResponseModel<EnableKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "EnableKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<EnableKeyResponse>(req, "EnableKey");
         }
 
         /// <summary>
@@ -999,17 +552,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="EnableKeyResponse"/></returns>
         public EnableKeyResponse EnableKeySync(EnableKeyRequest req)
         {
-             JsonResponseModel<EnableKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "EnableKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<EnableKeyResponse>(req, "EnableKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1017,19 +561,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="EnableKeyRotationRequest"/></param>
         /// <returns><see cref="EnableKeyRotationResponse"/></returns>
-        public async Task<EnableKeyRotationResponse> EnableKeyRotation(EnableKeyRotationRequest req)
+        public Task<EnableKeyRotationResponse> EnableKeyRotation(EnableKeyRotationRequest req)
         {
-             JsonResponseModel<EnableKeyRotationResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "EnableKeyRotation");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableKeyRotationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<EnableKeyRotationResponse>(req, "EnableKeyRotation");
         }
 
         /// <summary>
@@ -1039,17 +573,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="EnableKeyRotationResponse"/></returns>
         public EnableKeyRotationResponse EnableKeyRotationSync(EnableKeyRotationRequest req)
         {
-             JsonResponseModel<EnableKeyRotationResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "EnableKeyRotation");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableKeyRotationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<EnableKeyRotationResponse>(req, "EnableKeyRotation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1057,19 +582,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="EnableKeysRequest"/></param>
         /// <returns><see cref="EnableKeysResponse"/></returns>
-        public async Task<EnableKeysResponse> EnableKeys(EnableKeysRequest req)
+        public Task<EnableKeysResponse> EnableKeys(EnableKeysRequest req)
         {
-             JsonResponseModel<EnableKeysResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "EnableKeys");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableKeysResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<EnableKeysResponse>(req, "EnableKeys");
         }
 
         /// <summary>
@@ -1079,17 +594,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="EnableKeysResponse"/></returns>
         public EnableKeysResponse EnableKeysSync(EnableKeysRequest req)
         {
-             JsonResponseModel<EnableKeysResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "EnableKeys");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableKeysResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<EnableKeysResponse>(req, "EnableKeys")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1097,19 +603,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="EnableWhiteBoxKeyRequest"/></param>
         /// <returns><see cref="EnableWhiteBoxKeyResponse"/></returns>
-        public async Task<EnableWhiteBoxKeyResponse> EnableWhiteBoxKey(EnableWhiteBoxKeyRequest req)
+        public Task<EnableWhiteBoxKeyResponse> EnableWhiteBoxKey(EnableWhiteBoxKeyRequest req)
         {
-             JsonResponseModel<EnableWhiteBoxKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "EnableWhiteBoxKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableWhiteBoxKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<EnableWhiteBoxKeyResponse>(req, "EnableWhiteBoxKey");
         }
 
         /// <summary>
@@ -1119,17 +615,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="EnableWhiteBoxKeyResponse"/></returns>
         public EnableWhiteBoxKeyResponse EnableWhiteBoxKeySync(EnableWhiteBoxKeyRequest req)
         {
-             JsonResponseModel<EnableWhiteBoxKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "EnableWhiteBoxKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableWhiteBoxKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<EnableWhiteBoxKeyResponse>(req, "EnableWhiteBoxKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1137,19 +624,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="EnableWhiteBoxKeysRequest"/></param>
         /// <returns><see cref="EnableWhiteBoxKeysResponse"/></returns>
-        public async Task<EnableWhiteBoxKeysResponse> EnableWhiteBoxKeys(EnableWhiteBoxKeysRequest req)
+        public Task<EnableWhiteBoxKeysResponse> EnableWhiteBoxKeys(EnableWhiteBoxKeysRequest req)
         {
-             JsonResponseModel<EnableWhiteBoxKeysResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "EnableWhiteBoxKeys");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableWhiteBoxKeysResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<EnableWhiteBoxKeysResponse>(req, "EnableWhiteBoxKeys");
         }
 
         /// <summary>
@@ -1159,17 +636,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="EnableWhiteBoxKeysResponse"/></returns>
         public EnableWhiteBoxKeysResponse EnableWhiteBoxKeysSync(EnableWhiteBoxKeysRequest req)
         {
-             JsonResponseModel<EnableWhiteBoxKeysResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "EnableWhiteBoxKeys");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableWhiteBoxKeysResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<EnableWhiteBoxKeysResponse>(req, "EnableWhiteBoxKeys")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1177,19 +645,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="EncryptRequest"/></param>
         /// <returns><see cref="EncryptResponse"/></returns>
-        public async Task<EncryptResponse> Encrypt(EncryptRequest req)
+        public Task<EncryptResponse> Encrypt(EncryptRequest req)
         {
-             JsonResponseModel<EncryptResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "Encrypt");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EncryptResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<EncryptResponse>(req, "Encrypt");
         }
 
         /// <summary>
@@ -1199,17 +657,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="EncryptResponse"/></returns>
         public EncryptResponse EncryptSync(EncryptRequest req)
         {
-             JsonResponseModel<EncryptResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "Encrypt");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EncryptResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<EncryptResponse>(req, "Encrypt")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1217,19 +666,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="EncryptByWhiteBoxRequest"/></param>
         /// <returns><see cref="EncryptByWhiteBoxResponse"/></returns>
-        public async Task<EncryptByWhiteBoxResponse> EncryptByWhiteBox(EncryptByWhiteBoxRequest req)
+        public Task<EncryptByWhiteBoxResponse> EncryptByWhiteBox(EncryptByWhiteBoxRequest req)
         {
-             JsonResponseModel<EncryptByWhiteBoxResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "EncryptByWhiteBox");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EncryptByWhiteBoxResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<EncryptByWhiteBoxResponse>(req, "EncryptByWhiteBox");
         }
 
         /// <summary>
@@ -1239,17 +678,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="EncryptByWhiteBoxResponse"/></returns>
         public EncryptByWhiteBoxResponse EncryptByWhiteBoxSync(EncryptByWhiteBoxRequest req)
         {
-             JsonResponseModel<EncryptByWhiteBoxResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "EncryptByWhiteBox");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EncryptByWhiteBoxResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<EncryptByWhiteBoxResponse>(req, "EncryptByWhiteBox")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1257,19 +687,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="GenerateDataKeyRequest"/></param>
         /// <returns><see cref="GenerateDataKeyResponse"/></returns>
-        public async Task<GenerateDataKeyResponse> GenerateDataKey(GenerateDataKeyRequest req)
+        public Task<GenerateDataKeyResponse> GenerateDataKey(GenerateDataKeyRequest req)
         {
-             JsonResponseModel<GenerateDataKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GenerateDataKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateDataKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GenerateDataKeyResponse>(req, "GenerateDataKey");
         }
 
         /// <summary>
@@ -1279,17 +699,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="GenerateDataKeyResponse"/></returns>
         public GenerateDataKeyResponse GenerateDataKeySync(GenerateDataKeyRequest req)
         {
-             JsonResponseModel<GenerateDataKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GenerateDataKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateDataKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GenerateDataKeyResponse>(req, "GenerateDataKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1297,19 +708,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="GenerateRandomRequest"/></param>
         /// <returns><see cref="GenerateRandomResponse"/></returns>
-        public async Task<GenerateRandomResponse> GenerateRandom(GenerateRandomRequest req)
+        public Task<GenerateRandomResponse> GenerateRandom(GenerateRandomRequest req)
         {
-             JsonResponseModel<GenerateRandomResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GenerateRandom");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateRandomResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GenerateRandomResponse>(req, "GenerateRandom");
         }
 
         /// <summary>
@@ -1319,17 +720,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="GenerateRandomResponse"/></returns>
         public GenerateRandomResponse GenerateRandomSync(GenerateRandomRequest req)
         {
-             JsonResponseModel<GenerateRandomResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GenerateRandom");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateRandomResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GenerateRandomResponse>(req, "GenerateRandom")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1337,19 +729,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="GetKeyRotationStatusRequest"/></param>
         /// <returns><see cref="GetKeyRotationStatusResponse"/></returns>
-        public async Task<GetKeyRotationStatusResponse> GetKeyRotationStatus(GetKeyRotationStatusRequest req)
+        public Task<GetKeyRotationStatusResponse> GetKeyRotationStatus(GetKeyRotationStatusRequest req)
         {
-             JsonResponseModel<GetKeyRotationStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetKeyRotationStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetKeyRotationStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetKeyRotationStatusResponse>(req, "GetKeyRotationStatus");
         }
 
         /// <summary>
@@ -1359,17 +741,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="GetKeyRotationStatusResponse"/></returns>
         public GetKeyRotationStatusResponse GetKeyRotationStatusSync(GetKeyRotationStatusRequest req)
         {
-             JsonResponseModel<GetKeyRotationStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetKeyRotationStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetKeyRotationStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetKeyRotationStatusResponse>(req, "GetKeyRotationStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1377,19 +750,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="GetParametersForImportRequest"/></param>
         /// <returns><see cref="GetParametersForImportResponse"/></returns>
-        public async Task<GetParametersForImportResponse> GetParametersForImport(GetParametersForImportRequest req)
+        public Task<GetParametersForImportResponse> GetParametersForImport(GetParametersForImportRequest req)
         {
-             JsonResponseModel<GetParametersForImportResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetParametersForImport");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetParametersForImportResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetParametersForImportResponse>(req, "GetParametersForImport");
         }
 
         /// <summary>
@@ -1399,17 +762,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="GetParametersForImportResponse"/></returns>
         public GetParametersForImportResponse GetParametersForImportSync(GetParametersForImportRequest req)
         {
-             JsonResponseModel<GetParametersForImportResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetParametersForImport");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetParametersForImportResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetParametersForImportResponse>(req, "GetParametersForImport")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1417,19 +771,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="GetPublicKeyRequest"/></param>
         /// <returns><see cref="GetPublicKeyResponse"/></returns>
-        public async Task<GetPublicKeyResponse> GetPublicKey(GetPublicKeyRequest req)
+        public Task<GetPublicKeyResponse> GetPublicKey(GetPublicKeyRequest req)
         {
-             JsonResponseModel<GetPublicKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetPublicKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPublicKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetPublicKeyResponse>(req, "GetPublicKey");
         }
 
         /// <summary>
@@ -1439,17 +783,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="GetPublicKeyResponse"/></returns>
         public GetPublicKeyResponse GetPublicKeySync(GetPublicKeyRequest req)
         {
-             JsonResponseModel<GetPublicKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetPublicKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPublicKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetPublicKeyResponse>(req, "GetPublicKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1457,19 +792,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="GetRegionsRequest"/></param>
         /// <returns><see cref="GetRegionsResponse"/></returns>
-        public async Task<GetRegionsResponse> GetRegions(GetRegionsRequest req)
+        public Task<GetRegionsResponse> GetRegions(GetRegionsRequest req)
         {
-             JsonResponseModel<GetRegionsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetRegions");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRegionsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetRegionsResponse>(req, "GetRegions");
         }
 
         /// <summary>
@@ -1479,17 +804,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="GetRegionsResponse"/></returns>
         public GetRegionsResponse GetRegionsSync(GetRegionsRequest req)
         {
-             JsonResponseModel<GetRegionsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetRegions");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRegionsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetRegionsResponse>(req, "GetRegions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1497,19 +813,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="GetServiceStatusRequest"/></param>
         /// <returns><see cref="GetServiceStatusResponse"/></returns>
-        public async Task<GetServiceStatusResponse> GetServiceStatus(GetServiceStatusRequest req)
+        public Task<GetServiceStatusResponse> GetServiceStatus(GetServiceStatusRequest req)
         {
-             JsonResponseModel<GetServiceStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetServiceStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetServiceStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetServiceStatusResponse>(req, "GetServiceStatus");
         }
 
         /// <summary>
@@ -1519,17 +825,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="GetServiceStatusResponse"/></returns>
         public GetServiceStatusResponse GetServiceStatusSync(GetServiceStatusRequest req)
         {
-             JsonResponseModel<GetServiceStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetServiceStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetServiceStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetServiceStatusResponse>(req, "GetServiceStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1538,19 +835,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="ImportKeyMaterialRequest"/></param>
         /// <returns><see cref="ImportKeyMaterialResponse"/></returns>
-        public async Task<ImportKeyMaterialResponse> ImportKeyMaterial(ImportKeyMaterialRequest req)
+        public Task<ImportKeyMaterialResponse> ImportKeyMaterial(ImportKeyMaterialRequest req)
         {
-             JsonResponseModel<ImportKeyMaterialResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ImportKeyMaterial");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportKeyMaterialResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ImportKeyMaterialResponse>(req, "ImportKeyMaterial");
         }
 
         /// <summary>
@@ -1561,17 +848,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="ImportKeyMaterialResponse"/></returns>
         public ImportKeyMaterialResponse ImportKeyMaterialSync(ImportKeyMaterialRequest req)
         {
-             JsonResponseModel<ImportKeyMaterialResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ImportKeyMaterial");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportKeyMaterialResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ImportKeyMaterialResponse>(req, "ImportKeyMaterial")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1579,19 +857,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="ListAlgorithmsRequest"/></param>
         /// <returns><see cref="ListAlgorithmsResponse"/></returns>
-        public async Task<ListAlgorithmsResponse> ListAlgorithms(ListAlgorithmsRequest req)
+        public Task<ListAlgorithmsResponse> ListAlgorithms(ListAlgorithmsRequest req)
         {
-             JsonResponseModel<ListAlgorithmsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ListAlgorithms");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAlgorithmsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ListAlgorithmsResponse>(req, "ListAlgorithms");
         }
 
         /// <summary>
@@ -1601,17 +869,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="ListAlgorithmsResponse"/></returns>
         public ListAlgorithmsResponse ListAlgorithmsSync(ListAlgorithmsRequest req)
         {
-             JsonResponseModel<ListAlgorithmsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ListAlgorithms");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAlgorithmsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ListAlgorithmsResponse>(req, "ListAlgorithms")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1619,19 +878,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="ListKeyDetailRequest"/></param>
         /// <returns><see cref="ListKeyDetailResponse"/></returns>
-        public async Task<ListKeyDetailResponse> ListKeyDetail(ListKeyDetailRequest req)
+        public Task<ListKeyDetailResponse> ListKeyDetail(ListKeyDetailRequest req)
         {
-             JsonResponseModel<ListKeyDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ListKeyDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListKeyDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ListKeyDetailResponse>(req, "ListKeyDetail");
         }
 
         /// <summary>
@@ -1641,17 +890,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="ListKeyDetailResponse"/></returns>
         public ListKeyDetailResponse ListKeyDetailSync(ListKeyDetailRequest req)
         {
-             JsonResponseModel<ListKeyDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ListKeyDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListKeyDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ListKeyDetailResponse>(req, "ListKeyDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1659,19 +899,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="ListKeysRequest"/></param>
         /// <returns><see cref="ListKeysResponse"/></returns>
-        public async Task<ListKeysResponse> ListKeys(ListKeysRequest req)
+        public Task<ListKeysResponse> ListKeys(ListKeysRequest req)
         {
-             JsonResponseModel<ListKeysResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ListKeys");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListKeysResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ListKeysResponse>(req, "ListKeys");
         }
 
         /// <summary>
@@ -1681,17 +911,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="ListKeysResponse"/></returns>
         public ListKeysResponse ListKeysSync(ListKeysRequest req)
         {
-             JsonResponseModel<ListKeysResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ListKeys");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListKeysResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ListKeysResponse>(req, "ListKeys")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1699,19 +920,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="OverwriteWhiteBoxDeviceFingerprintsRequest"/></param>
         /// <returns><see cref="OverwriteWhiteBoxDeviceFingerprintsResponse"/></returns>
-        public async Task<OverwriteWhiteBoxDeviceFingerprintsResponse> OverwriteWhiteBoxDeviceFingerprints(OverwriteWhiteBoxDeviceFingerprintsRequest req)
+        public Task<OverwriteWhiteBoxDeviceFingerprintsResponse> OverwriteWhiteBoxDeviceFingerprints(OverwriteWhiteBoxDeviceFingerprintsRequest req)
         {
-             JsonResponseModel<OverwriteWhiteBoxDeviceFingerprintsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "OverwriteWhiteBoxDeviceFingerprints");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OverwriteWhiteBoxDeviceFingerprintsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<OverwriteWhiteBoxDeviceFingerprintsResponse>(req, "OverwriteWhiteBoxDeviceFingerprints");
         }
 
         /// <summary>
@@ -1721,17 +932,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="OverwriteWhiteBoxDeviceFingerprintsResponse"/></returns>
         public OverwriteWhiteBoxDeviceFingerprintsResponse OverwriteWhiteBoxDeviceFingerprintsSync(OverwriteWhiteBoxDeviceFingerprintsRequest req)
         {
-             JsonResponseModel<OverwriteWhiteBoxDeviceFingerprintsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "OverwriteWhiteBoxDeviceFingerprints");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OverwriteWhiteBoxDeviceFingerprintsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<OverwriteWhiteBoxDeviceFingerprintsResponse>(req, "OverwriteWhiteBoxDeviceFingerprints")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1739,19 +941,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="PostQuantumCryptoDecryptRequest"/></param>
         /// <returns><see cref="PostQuantumCryptoDecryptResponse"/></returns>
-        public async Task<PostQuantumCryptoDecryptResponse> PostQuantumCryptoDecrypt(PostQuantumCryptoDecryptRequest req)
+        public Task<PostQuantumCryptoDecryptResponse> PostQuantumCryptoDecrypt(PostQuantumCryptoDecryptRequest req)
         {
-             JsonResponseModel<PostQuantumCryptoDecryptResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "PostQuantumCryptoDecrypt");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PostQuantumCryptoDecryptResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<PostQuantumCryptoDecryptResponse>(req, "PostQuantumCryptoDecrypt");
         }
 
         /// <summary>
@@ -1761,17 +953,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="PostQuantumCryptoDecryptResponse"/></returns>
         public PostQuantumCryptoDecryptResponse PostQuantumCryptoDecryptSync(PostQuantumCryptoDecryptRequest req)
         {
-             JsonResponseModel<PostQuantumCryptoDecryptResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "PostQuantumCryptoDecrypt");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PostQuantumCryptoDecryptResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<PostQuantumCryptoDecryptResponse>(req, "PostQuantumCryptoDecrypt")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1779,19 +962,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="PostQuantumCryptoEncryptRequest"/></param>
         /// <returns><see cref="PostQuantumCryptoEncryptResponse"/></returns>
-        public async Task<PostQuantumCryptoEncryptResponse> PostQuantumCryptoEncrypt(PostQuantumCryptoEncryptRequest req)
+        public Task<PostQuantumCryptoEncryptResponse> PostQuantumCryptoEncrypt(PostQuantumCryptoEncryptRequest req)
         {
-             JsonResponseModel<PostQuantumCryptoEncryptResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "PostQuantumCryptoEncrypt");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PostQuantumCryptoEncryptResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<PostQuantumCryptoEncryptResponse>(req, "PostQuantumCryptoEncrypt");
         }
 
         /// <summary>
@@ -1801,17 +974,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="PostQuantumCryptoEncryptResponse"/></returns>
         public PostQuantumCryptoEncryptResponse PostQuantumCryptoEncryptSync(PostQuantumCryptoEncryptRequest req)
         {
-             JsonResponseModel<PostQuantumCryptoEncryptResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "PostQuantumCryptoEncrypt");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PostQuantumCryptoEncryptResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<PostQuantumCryptoEncryptResponse>(req, "PostQuantumCryptoEncrypt")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1819,19 +983,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="PostQuantumCryptoSignRequest"/></param>
         /// <returns><see cref="PostQuantumCryptoSignResponse"/></returns>
-        public async Task<PostQuantumCryptoSignResponse> PostQuantumCryptoSign(PostQuantumCryptoSignRequest req)
+        public Task<PostQuantumCryptoSignResponse> PostQuantumCryptoSign(PostQuantumCryptoSignRequest req)
         {
-             JsonResponseModel<PostQuantumCryptoSignResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "PostQuantumCryptoSign");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PostQuantumCryptoSignResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<PostQuantumCryptoSignResponse>(req, "PostQuantumCryptoSign");
         }
 
         /// <summary>
@@ -1841,17 +995,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="PostQuantumCryptoSignResponse"/></returns>
         public PostQuantumCryptoSignResponse PostQuantumCryptoSignSync(PostQuantumCryptoSignRequest req)
         {
-             JsonResponseModel<PostQuantumCryptoSignResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "PostQuantumCryptoSign");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PostQuantumCryptoSignResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<PostQuantumCryptoSignResponse>(req, "PostQuantumCryptoSign")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1859,19 +1004,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="PostQuantumCryptoVerifyRequest"/></param>
         /// <returns><see cref="PostQuantumCryptoVerifyResponse"/></returns>
-        public async Task<PostQuantumCryptoVerifyResponse> PostQuantumCryptoVerify(PostQuantumCryptoVerifyRequest req)
+        public Task<PostQuantumCryptoVerifyResponse> PostQuantumCryptoVerify(PostQuantumCryptoVerifyRequest req)
         {
-             JsonResponseModel<PostQuantumCryptoVerifyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "PostQuantumCryptoVerify");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PostQuantumCryptoVerifyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<PostQuantumCryptoVerifyResponse>(req, "PostQuantumCryptoVerify");
         }
 
         /// <summary>
@@ -1881,17 +1016,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="PostQuantumCryptoVerifyResponse"/></returns>
         public PostQuantumCryptoVerifyResponse PostQuantumCryptoVerifySync(PostQuantumCryptoVerifyRequest req)
         {
-             JsonResponseModel<PostQuantumCryptoVerifyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "PostQuantumCryptoVerify");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PostQuantumCryptoVerifyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<PostQuantumCryptoVerifyResponse>(req, "PostQuantumCryptoVerify")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1899,19 +1025,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="ReEncryptRequest"/></param>
         /// <returns><see cref="ReEncryptResponse"/></returns>
-        public async Task<ReEncryptResponse> ReEncrypt(ReEncryptRequest req)
+        public Task<ReEncryptResponse> ReEncrypt(ReEncryptRequest req)
         {
-             JsonResponseModel<ReEncryptResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ReEncrypt");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReEncryptResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ReEncryptResponse>(req, "ReEncrypt");
         }
 
         /// <summary>
@@ -1921,17 +1037,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="ReEncryptResponse"/></returns>
         public ReEncryptResponse ReEncryptSync(ReEncryptRequest req)
         {
-             JsonResponseModel<ReEncryptResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ReEncrypt");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReEncryptResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ReEncryptResponse>(req, "ReEncrypt")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1939,19 +1046,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="ScheduleKeyDeletionRequest"/></param>
         /// <returns><see cref="ScheduleKeyDeletionResponse"/></returns>
-        public async Task<ScheduleKeyDeletionResponse> ScheduleKeyDeletion(ScheduleKeyDeletionRequest req)
+        public Task<ScheduleKeyDeletionResponse> ScheduleKeyDeletion(ScheduleKeyDeletionRequest req)
         {
-             JsonResponseModel<ScheduleKeyDeletionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ScheduleKeyDeletion");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScheduleKeyDeletionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ScheduleKeyDeletionResponse>(req, "ScheduleKeyDeletion");
         }
 
         /// <summary>
@@ -1961,17 +1058,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="ScheduleKeyDeletionResponse"/></returns>
         public ScheduleKeyDeletionResponse ScheduleKeyDeletionSync(ScheduleKeyDeletionRequest req)
         {
-             JsonResponseModel<ScheduleKeyDeletionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ScheduleKeyDeletion");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScheduleKeyDeletionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ScheduleKeyDeletionResponse>(req, "ScheduleKeyDeletion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1980,19 +1068,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="SignByAsymmetricKeyRequest"/></param>
         /// <returns><see cref="SignByAsymmetricKeyResponse"/></returns>
-        public async Task<SignByAsymmetricKeyResponse> SignByAsymmetricKey(SignByAsymmetricKeyRequest req)
+        public Task<SignByAsymmetricKeyResponse> SignByAsymmetricKey(SignByAsymmetricKeyRequest req)
         {
-             JsonResponseModel<SignByAsymmetricKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SignByAsymmetricKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SignByAsymmetricKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SignByAsymmetricKeyResponse>(req, "SignByAsymmetricKey");
         }
 
         /// <summary>
@@ -2003,17 +1081,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="SignByAsymmetricKeyResponse"/></returns>
         public SignByAsymmetricKeyResponse SignByAsymmetricKeySync(SignByAsymmetricKeyRequest req)
         {
-             JsonResponseModel<SignByAsymmetricKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SignByAsymmetricKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SignByAsymmetricKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SignByAsymmetricKeyResponse>(req, "SignByAsymmetricKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -2021,19 +1090,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="UnbindCloudResourceRequest"/></param>
         /// <returns><see cref="UnbindCloudResourceResponse"/></returns>
-        public async Task<UnbindCloudResourceResponse> UnbindCloudResource(UnbindCloudResourceRequest req)
+        public Task<UnbindCloudResourceResponse> UnbindCloudResource(UnbindCloudResourceRequest req)
         {
-             JsonResponseModel<UnbindCloudResourceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "UnbindCloudResource");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindCloudResourceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UnbindCloudResourceResponse>(req, "UnbindCloudResource");
         }
 
         /// <summary>
@@ -2043,17 +1102,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="UnbindCloudResourceResponse"/></returns>
         public UnbindCloudResourceResponse UnbindCloudResourceSync(UnbindCloudResourceRequest req)
         {
-             JsonResponseModel<UnbindCloudResourceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UnbindCloudResource");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindCloudResourceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UnbindCloudResourceResponse>(req, "UnbindCloudResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -2061,19 +1111,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="UpdateAliasRequest"/></param>
         /// <returns><see cref="UpdateAliasResponse"/></returns>
-        public async Task<UpdateAliasResponse> UpdateAlias(UpdateAliasRequest req)
+        public Task<UpdateAliasResponse> UpdateAlias(UpdateAliasRequest req)
         {
-             JsonResponseModel<UpdateAliasResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "UpdateAlias");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAliasResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateAliasResponse>(req, "UpdateAlias");
         }
 
         /// <summary>
@@ -2083,17 +1123,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="UpdateAliasResponse"/></returns>
         public UpdateAliasResponse UpdateAliasSync(UpdateAliasRequest req)
         {
-             JsonResponseModel<UpdateAliasResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UpdateAlias");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAliasResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateAliasResponse>(req, "UpdateAlias")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -2101,19 +1132,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="UpdateKeyDescriptionRequest"/></param>
         /// <returns><see cref="UpdateKeyDescriptionResponse"/></returns>
-        public async Task<UpdateKeyDescriptionResponse> UpdateKeyDescription(UpdateKeyDescriptionRequest req)
+        public Task<UpdateKeyDescriptionResponse> UpdateKeyDescription(UpdateKeyDescriptionRequest req)
         {
-             JsonResponseModel<UpdateKeyDescriptionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "UpdateKeyDescription");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateKeyDescriptionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateKeyDescriptionResponse>(req, "UpdateKeyDescription");
         }
 
         /// <summary>
@@ -2123,17 +1144,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="UpdateKeyDescriptionResponse"/></returns>
         public UpdateKeyDescriptionResponse UpdateKeyDescriptionSync(UpdateKeyDescriptionRequest req)
         {
-             JsonResponseModel<UpdateKeyDescriptionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UpdateKeyDescription");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateKeyDescriptionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateKeyDescriptionResponse>(req, "UpdateKeyDescription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -2141,19 +1153,9 @@ namespace TencentCloud.Kms.V20190118
         /// </summary>
         /// <param name="req"><see cref="VerifyByAsymmetricKeyRequest"/></param>
         /// <returns><see cref="VerifyByAsymmetricKeyResponse"/></returns>
-        public async Task<VerifyByAsymmetricKeyResponse> VerifyByAsymmetricKey(VerifyByAsymmetricKeyRequest req)
+        public Task<VerifyByAsymmetricKeyResponse> VerifyByAsymmetricKey(VerifyByAsymmetricKeyRequest req)
         {
-             JsonResponseModel<VerifyByAsymmetricKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "VerifyByAsymmetricKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyByAsymmetricKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<VerifyByAsymmetricKeyResponse>(req, "VerifyByAsymmetricKey");
         }
 
         /// <summary>
@@ -2163,17 +1165,8 @@ namespace TencentCloud.Kms.V20190118
         /// <returns><see cref="VerifyByAsymmetricKeyResponse"/></returns>
         public VerifyByAsymmetricKeyResponse VerifyByAsymmetricKeySync(VerifyByAsymmetricKeyRequest req)
         {
-             JsonResponseModel<VerifyByAsymmetricKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "VerifyByAsymmetricKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyByAsymmetricKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<VerifyByAsymmetricKeyResponse>(req, "VerifyByAsymmetricKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

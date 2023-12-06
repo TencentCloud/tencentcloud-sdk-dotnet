@@ -111,6 +111,13 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("ZoneNumber")]
         public long? ZoneNumber{ get; set; }
 
+        /// <summary>
+        /// 资源标记类型，取值有：
+        /// <li>vodeo：vodeo资源。</li>
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +136,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "Group", this.Group);
             this.SetParamSimple(map, prefix + "ZoneNumber", this.ZoneNumber);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

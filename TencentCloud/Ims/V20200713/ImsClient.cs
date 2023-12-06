@@ -73,19 +73,9 @@ namespace TencentCloud.Ims.V20200713
         /// </summary>
         /// <param name="req"><see cref="ImageModerationRequest"/></param>
         /// <returns><see cref="ImageModerationResponse"/></returns>
-        public async Task<ImageModerationResponse> ImageModeration(ImageModerationRequest req)
+        public Task<ImageModerationResponse> ImageModeration(ImageModerationRequest req)
         {
-             JsonResponseModel<ImageModerationResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ImageModeration");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImageModerationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ImageModerationResponse>(req, "ImageModeration");
         }
 
         /// <summary>
@@ -111,17 +101,8 @@ namespace TencentCloud.Ims.V20200713
         /// <returns><see cref="ImageModerationResponse"/></returns>
         public ImageModerationResponse ImageModerationSync(ImageModerationRequest req)
         {
-             JsonResponseModel<ImageModerationResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ImageModeration");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImageModerationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ImageModerationResponse>(req, "ImageModeration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

@@ -57,19 +57,9 @@ namespace TencentCloud.Cii.V20201210
         /// </summary>
         /// <param name="req"><see cref="CreateStructureTaskRequest"/></param>
         /// <returns><see cref="CreateStructureTaskResponse"/></returns>
-        public async Task<CreateStructureTaskResponse> CreateStructureTask(CreateStructureTaskRequest req)
+        public Task<CreateStructureTaskResponse> CreateStructureTask(CreateStructureTaskRequest req)
         {
-             JsonResponseModel<CreateStructureTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateStructureTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStructureTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateStructureTaskResponse>(req, "CreateStructureTask");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Cii.V20201210
         /// <returns><see cref="CreateStructureTaskResponse"/></returns>
         public CreateStructureTaskResponse CreateStructureTaskSync(CreateStructureTaskRequest req)
         {
-             JsonResponseModel<CreateStructureTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateStructureTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStructureTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateStructureTaskResponse>(req, "CreateStructureTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Cii.V20201210
         /// </summary>
         /// <param name="req"><see cref="DescribeStructCompareDataRequest"/></param>
         /// <returns><see cref="DescribeStructCompareDataResponse"/></returns>
-        public async Task<DescribeStructCompareDataResponse> DescribeStructCompareData(DescribeStructCompareDataRequest req)
+        public Task<DescribeStructCompareDataResponse> DescribeStructCompareData(DescribeStructCompareDataRequest req)
         {
-             JsonResponseModel<DescribeStructCompareDataResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeStructCompareData");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStructCompareDataResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeStructCompareDataResponse>(req, "DescribeStructCompareData");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Cii.V20201210
         /// <returns><see cref="DescribeStructCompareDataResponse"/></returns>
         public DescribeStructCompareDataResponse DescribeStructCompareDataSync(DescribeStructCompareDataRequest req)
         {
-             JsonResponseModel<DescribeStructCompareDataResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeStructCompareData");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStructCompareDataResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeStructCompareDataResponse>(req, "DescribeStructCompareData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Cii.V20201210
         /// </summary>
         /// <param name="req"><see cref="DescribeStructureTaskResultRequest"/></param>
         /// <returns><see cref="DescribeStructureTaskResultResponse"/></returns>
-        public async Task<DescribeStructureTaskResultResponse> DescribeStructureTaskResult(DescribeStructureTaskResultRequest req)
+        public Task<DescribeStructureTaskResultResponse> DescribeStructureTaskResult(DescribeStructureTaskResultRequest req)
         {
-             JsonResponseModel<DescribeStructureTaskResultResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeStructureTaskResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStructureTaskResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeStructureTaskResultResponse>(req, "DescribeStructureTaskResult");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Cii.V20201210
         /// <returns><see cref="DescribeStructureTaskResultResponse"/></returns>
         public DescribeStructureTaskResultResponse DescribeStructureTaskResultSync(DescribeStructureTaskResultRequest req)
         {
-             JsonResponseModel<DescribeStructureTaskResultResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeStructureTaskResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStructureTaskResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeStructureTaskResultResponse>(req, "DescribeStructureTaskResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

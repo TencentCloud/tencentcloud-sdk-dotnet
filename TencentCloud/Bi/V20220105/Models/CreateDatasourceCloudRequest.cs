@@ -138,6 +138,12 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("DataOriginDatasourceId")]
         public string DataOriginDatasourceId{ get; set; }
 
+        /// <summary>
+        /// 集群id
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +169,7 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "DataOrigin", this.DataOrigin);
             this.SetParamSimple(map, prefix + "DataOriginProjectId", this.DataOriginProjectId);
             this.SetParamSimple(map, prefix + "DataOriginDatasourceId", this.DataOriginDatasourceId);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
         }
     }
 }

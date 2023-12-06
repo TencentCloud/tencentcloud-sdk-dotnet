@@ -57,19 +57,9 @@ namespace TencentCloud.Taf.V20200210
         /// </summary>
         /// <param name="req"><see cref="RecognizeCustomizedAudienceRequest"/></param>
         /// <returns><see cref="RecognizeCustomizedAudienceResponse"/></returns>
-        public async Task<RecognizeCustomizedAudienceResponse> RecognizeCustomizedAudience(RecognizeCustomizedAudienceRequest req)
+        public Task<RecognizeCustomizedAudienceResponse> RecognizeCustomizedAudience(RecognizeCustomizedAudienceRequest req)
         {
-             JsonResponseModel<RecognizeCustomizedAudienceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RecognizeCustomizedAudience");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeCustomizedAudienceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizeCustomizedAudienceResponse>(req, "RecognizeCustomizedAudience");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Taf.V20200210
         /// <returns><see cref="RecognizeCustomizedAudienceResponse"/></returns>
         public RecognizeCustomizedAudienceResponse RecognizeCustomizedAudienceSync(RecognizeCustomizedAudienceRequest req)
         {
-             JsonResponseModel<RecognizeCustomizedAudienceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RecognizeCustomizedAudience");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeCustomizedAudienceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizeCustomizedAudienceResponse>(req, "RecognizeCustomizedAudience")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Taf.V20200210
         /// </summary>
         /// <param name="req"><see cref="RecognizePreciseTargetAudienceRequest"/></param>
         /// <returns><see cref="RecognizePreciseTargetAudienceResponse"/></returns>
-        public async Task<RecognizePreciseTargetAudienceResponse> RecognizePreciseTargetAudience(RecognizePreciseTargetAudienceRequest req)
+        public Task<RecognizePreciseTargetAudienceResponse> RecognizePreciseTargetAudience(RecognizePreciseTargetAudienceRequest req)
         {
-             JsonResponseModel<RecognizePreciseTargetAudienceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RecognizePreciseTargetAudience");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizePreciseTargetAudienceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizePreciseTargetAudienceResponse>(req, "RecognizePreciseTargetAudience");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Taf.V20200210
         /// <returns><see cref="RecognizePreciseTargetAudienceResponse"/></returns>
         public RecognizePreciseTargetAudienceResponse RecognizePreciseTargetAudienceSync(RecognizePreciseTargetAudienceRequest req)
         {
-             JsonResponseModel<RecognizePreciseTargetAudienceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RecognizePreciseTargetAudience");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizePreciseTargetAudienceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizePreciseTargetAudienceResponse>(req, "RecognizePreciseTargetAudience")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Taf.V20200210
         /// </summary>
         /// <param name="req"><see cref="RecognizeTargetAudienceRequest"/></param>
         /// <returns><see cref="RecognizeTargetAudienceResponse"/></returns>
-        public async Task<RecognizeTargetAudienceResponse> RecognizeTargetAudience(RecognizeTargetAudienceRequest req)
+        public Task<RecognizeTargetAudienceResponse> RecognizeTargetAudience(RecognizeTargetAudienceRequest req)
         {
-             JsonResponseModel<RecognizeTargetAudienceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RecognizeTargetAudience");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeTargetAudienceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizeTargetAudienceResponse>(req, "RecognizeTargetAudience");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Taf.V20200210
         /// <returns><see cref="RecognizeTargetAudienceResponse"/></returns>
         public RecognizeTargetAudienceResponse RecognizeTargetAudienceSync(RecognizeTargetAudienceRequest req)
         {
-             JsonResponseModel<RecognizeTargetAudienceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RecognizeTargetAudience");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeTargetAudienceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizeTargetAudienceResponse>(req, "RecognizeTargetAudience")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

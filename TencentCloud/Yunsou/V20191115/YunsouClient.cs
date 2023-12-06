@@ -57,19 +57,9 @@ namespace TencentCloud.Yunsou.V20191115
         /// </summary>
         /// <param name="req"><see cref="DataManipulationRequest"/></param>
         /// <returns><see cref="DataManipulationResponse"/></returns>
-        public async Task<DataManipulationResponse> DataManipulation(DataManipulationRequest req)
+        public Task<DataManipulationResponse> DataManipulation(DataManipulationRequest req)
         {
-             JsonResponseModel<DataManipulationResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DataManipulation");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DataManipulationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DataManipulationResponse>(req, "DataManipulation");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Yunsou.V20191115
         /// <returns><see cref="DataManipulationResponse"/></returns>
         public DataManipulationResponse DataManipulationSync(DataManipulationRequest req)
         {
-             JsonResponseModel<DataManipulationResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DataManipulation");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DataManipulationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DataManipulationResponse>(req, "DataManipulation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Yunsou.V20191115
         /// </summary>
         /// <param name="req"><see cref="DataSearchRequest"/></param>
         /// <returns><see cref="DataSearchResponse"/></returns>
-        public async Task<DataSearchResponse> DataSearch(DataSearchRequest req)
+        public Task<DataSearchResponse> DataSearch(DataSearchRequest req)
         {
-             JsonResponseModel<DataSearchResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DataSearch");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DataSearchResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DataSearchResponse>(req, "DataSearch");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Yunsou.V20191115
         /// <returns><see cref="DataSearchResponse"/></returns>
         public DataSearchResponse DataSearchSync(DataSearchRequest req)
         {
-             JsonResponseModel<DataSearchResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DataSearch");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DataSearchResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DataSearchResponse>(req, "DataSearch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

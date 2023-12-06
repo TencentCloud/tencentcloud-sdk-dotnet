@@ -57,19 +57,9 @@ namespace TencentCloud.Ticm.V20181127
         /// </summary>
         /// <param name="req"><see cref="DescribeVideoTaskRequest"/></param>
         /// <returns><see cref="DescribeVideoTaskResponse"/></returns>
-        public async Task<DescribeVideoTaskResponse> DescribeVideoTask(DescribeVideoTaskRequest req)
+        public Task<DescribeVideoTaskResponse> DescribeVideoTask(DescribeVideoTaskRequest req)
         {
-             JsonResponseModel<DescribeVideoTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeVideoTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVideoTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeVideoTaskResponse>(req, "DescribeVideoTask");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Ticm.V20181127
         /// <returns><see cref="DescribeVideoTaskResponse"/></returns>
         public DescribeVideoTaskResponse DescribeVideoTaskSync(DescribeVideoTaskRequest req)
         {
-             JsonResponseModel<DescribeVideoTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeVideoTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVideoTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeVideoTaskResponse>(req, "DescribeVideoTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Ticm.V20181127
         /// </summary>
         /// <param name="req"><see cref="ImageModerationRequest"/></param>
         /// <returns><see cref="ImageModerationResponse"/></returns>
-        public async Task<ImageModerationResponse> ImageModeration(ImageModerationRequest req)
+        public Task<ImageModerationResponse> ImageModeration(ImageModerationRequest req)
         {
-             JsonResponseModel<ImageModerationResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ImageModeration");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImageModerationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ImageModerationResponse>(req, "ImageModeration");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Ticm.V20181127
         /// <returns><see cref="ImageModerationResponse"/></returns>
         public ImageModerationResponse ImageModerationSync(ImageModerationRequest req)
         {
-             JsonResponseModel<ImageModerationResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ImageModeration");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImageModerationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ImageModerationResponse>(req, "ImageModeration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Ticm.V20181127
         /// </summary>
         /// <param name="req"><see cref="VideoModerationRequest"/></param>
         /// <returns><see cref="VideoModerationResponse"/></returns>
-        public async Task<VideoModerationResponse> VideoModeration(VideoModerationRequest req)
+        public Task<VideoModerationResponse> VideoModeration(VideoModerationRequest req)
         {
-             JsonResponseModel<VideoModerationResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "VideoModeration");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VideoModerationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<VideoModerationResponse>(req, "VideoModeration");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Ticm.V20181127
         /// <returns><see cref="VideoModerationResponse"/></returns>
         public VideoModerationResponse VideoModerationSync(VideoModerationRequest req)
         {
-             JsonResponseModel<VideoModerationResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "VideoModeration");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VideoModerationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<VideoModerationResponse>(req, "VideoModeration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

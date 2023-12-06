@@ -57,19 +57,9 @@ namespace TencentCloud.Rce.V20201103
         /// </summary>
         /// <param name="req"><see cref="DescribeRiskAssessmentRequest"/></param>
         /// <returns><see cref="DescribeRiskAssessmentResponse"/></returns>
-        public async Task<DescribeRiskAssessmentResponse> DescribeRiskAssessment(DescribeRiskAssessmentRequest req)
+        public Task<DescribeRiskAssessmentResponse> DescribeRiskAssessment(DescribeRiskAssessmentRequest req)
         {
-             JsonResponseModel<DescribeRiskAssessmentResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeRiskAssessment");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRiskAssessmentResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeRiskAssessmentResponse>(req, "DescribeRiskAssessment");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Rce.V20201103
         /// <returns><see cref="DescribeRiskAssessmentResponse"/></returns>
         public DescribeRiskAssessmentResponse DescribeRiskAssessmentSync(DescribeRiskAssessmentRequest req)
         {
-             JsonResponseModel<DescribeRiskAssessmentResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeRiskAssessment");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRiskAssessmentResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeRiskAssessmentResponse>(req, "DescribeRiskAssessment")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Rce.V20201103
         /// </summary>
         /// <param name="req"><see cref="DescribeRiskTrendsRequest"/></param>
         /// <returns><see cref="DescribeRiskTrendsResponse"/></returns>
-        public async Task<DescribeRiskTrendsResponse> DescribeRiskTrends(DescribeRiskTrendsRequest req)
+        public Task<DescribeRiskTrendsResponse> DescribeRiskTrends(DescribeRiskTrendsRequest req)
         {
-             JsonResponseModel<DescribeRiskTrendsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeRiskTrends");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRiskTrendsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeRiskTrendsResponse>(req, "DescribeRiskTrends");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Rce.V20201103
         /// <returns><see cref="DescribeRiskTrendsResponse"/></returns>
         public DescribeRiskTrendsResponse DescribeRiskTrendsSync(DescribeRiskTrendsRequest req)
         {
-             JsonResponseModel<DescribeRiskTrendsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeRiskTrends");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRiskTrendsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeRiskTrendsResponse>(req, "DescribeRiskTrends")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Rce.V20201103
         /// </summary>
         /// <param name="req"><see cref="ManageMarketingRiskRequest"/></param>
         /// <returns><see cref="ManageMarketingRiskResponse"/></returns>
-        public async Task<ManageMarketingRiskResponse> ManageMarketingRisk(ManageMarketingRiskRequest req)
+        public Task<ManageMarketingRiskResponse> ManageMarketingRisk(ManageMarketingRiskRequest req)
         {
-             JsonResponseModel<ManageMarketingRiskResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ManageMarketingRisk");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManageMarketingRiskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ManageMarketingRiskResponse>(req, "ManageMarketingRisk");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Rce.V20201103
         /// <returns><see cref="ManageMarketingRiskResponse"/></returns>
         public ManageMarketingRiskResponse ManageMarketingRiskSync(ManageMarketingRiskRequest req)
         {
-             JsonResponseModel<ManageMarketingRiskResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ManageMarketingRisk");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManageMarketingRiskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ManageMarketingRiskResponse>(req, "ManageMarketingRisk")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

@@ -57,19 +57,9 @@ namespace TencentCloud.Mgobe.V20190929
         /// </summary>
         /// <param name="req"><see cref="DismissRoomRequest"/></param>
         /// <returns><see cref="DismissRoomResponse"/></returns>
-        public async Task<DismissRoomResponse> DismissRoom(DismissRoomRequest req)
+        public Task<DismissRoomResponse> DismissRoom(DismissRoomRequest req)
         {
-             JsonResponseModel<DismissRoomResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DismissRoom");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DismissRoomResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DismissRoomResponse>(req, "DismissRoom");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Mgobe.V20190929
         /// <returns><see cref="DismissRoomResponse"/></returns>
         public DismissRoomResponse DismissRoomSync(DismissRoomRequest req)
         {
-             JsonResponseModel<DismissRoomResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DismissRoom");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DismissRoomResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DismissRoomResponse>(req, "DismissRoom")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

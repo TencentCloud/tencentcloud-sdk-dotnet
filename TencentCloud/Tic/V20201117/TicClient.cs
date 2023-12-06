@@ -60,19 +60,9 @@ namespace TencentCloud.Tic.V20201117
         /// </summary>
         /// <param name="req"><see cref="ApplyStackRequest"/></param>
         /// <returns><see cref="ApplyStackResponse"/></returns>
-        public async Task<ApplyStackResponse> ApplyStack(ApplyStackRequest req)
+        public Task<ApplyStackResponse> ApplyStack(ApplyStackRequest req)
         {
-             JsonResponseModel<ApplyStackResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ApplyStack");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyStackResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ApplyStackResponse>(req, "ApplyStack");
         }
 
         /// <summary>
@@ -85,17 +75,8 @@ namespace TencentCloud.Tic.V20201117
         /// <returns><see cref="ApplyStackResponse"/></returns>
         public ApplyStackResponse ApplyStackSync(ApplyStackRequest req)
         {
-             JsonResponseModel<ApplyStackResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ApplyStack");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyStackResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ApplyStackResponse>(req, "ApplyStack")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -103,19 +84,9 @@ namespace TencentCloud.Tic.V20201117
         /// </summary>
         /// <param name="req"><see cref="CreateStackRequest"/></param>
         /// <returns><see cref="CreateStackResponse"/></returns>
-        public async Task<CreateStackResponse> CreateStack(CreateStackRequest req)
+        public Task<CreateStackResponse> CreateStack(CreateStackRequest req)
         {
-             JsonResponseModel<CreateStackResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateStack");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStackResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateStackResponse>(req, "CreateStack");
         }
 
         /// <summary>
@@ -125,17 +96,8 @@ namespace TencentCloud.Tic.V20201117
         /// <returns><see cref="CreateStackResponse"/></returns>
         public CreateStackResponse CreateStackSync(CreateStackRequest req)
         {
-             JsonResponseModel<CreateStackResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateStack");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStackResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateStackResponse>(req, "CreateStack")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -143,19 +105,9 @@ namespace TencentCloud.Tic.V20201117
         /// </summary>
         /// <param name="req"><see cref="CreateStackVersionRequest"/></param>
         /// <returns><see cref="CreateStackVersionResponse"/></returns>
-        public async Task<CreateStackVersionResponse> CreateStackVersion(CreateStackVersionRequest req)
+        public Task<CreateStackVersionResponse> CreateStackVersion(CreateStackVersionRequest req)
         {
-             JsonResponseModel<CreateStackVersionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateStackVersion");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStackVersionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateStackVersionResponse>(req, "CreateStackVersion");
         }
 
         /// <summary>
@@ -165,17 +117,8 @@ namespace TencentCloud.Tic.V20201117
         /// <returns><see cref="CreateStackVersionResponse"/></returns>
         public CreateStackVersionResponse CreateStackVersionSync(CreateStackVersionRequest req)
         {
-             JsonResponseModel<CreateStackVersionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateStackVersion");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStackVersionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateStackVersionResponse>(req, "CreateStackVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -183,19 +126,9 @@ namespace TencentCloud.Tic.V20201117
         /// </summary>
         /// <param name="req"><see cref="DeleteStackRequest"/></param>
         /// <returns><see cref="DeleteStackResponse"/></returns>
-        public async Task<DeleteStackResponse> DeleteStack(DeleteStackRequest req)
+        public Task<DeleteStackResponse> DeleteStack(DeleteStackRequest req)
         {
-             JsonResponseModel<DeleteStackResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteStack");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStackResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteStackResponse>(req, "DeleteStack");
         }
 
         /// <summary>
@@ -205,17 +138,8 @@ namespace TencentCloud.Tic.V20201117
         /// <returns><see cref="DeleteStackResponse"/></returns>
         public DeleteStackResponse DeleteStackSync(DeleteStackRequest req)
         {
-             JsonResponseModel<DeleteStackResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteStack");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStackResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteStackResponse>(req, "DeleteStack")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -223,19 +147,9 @@ namespace TencentCloud.Tic.V20201117
         /// </summary>
         /// <param name="req"><see cref="DeleteStackVersionRequest"/></param>
         /// <returns><see cref="DeleteStackVersionResponse"/></returns>
-        public async Task<DeleteStackVersionResponse> DeleteStackVersion(DeleteStackVersionRequest req)
+        public Task<DeleteStackVersionResponse> DeleteStackVersion(DeleteStackVersionRequest req)
         {
-             JsonResponseModel<DeleteStackVersionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteStackVersion");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStackVersionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteStackVersionResponse>(req, "DeleteStackVersion");
         }
 
         /// <summary>
@@ -245,17 +159,8 @@ namespace TencentCloud.Tic.V20201117
         /// <returns><see cref="DeleteStackVersionResponse"/></returns>
         public DeleteStackVersionResponse DeleteStackVersionSync(DeleteStackVersionRequest req)
         {
-             JsonResponseModel<DeleteStackVersionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteStackVersion");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStackVersionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteStackVersionResponse>(req, "DeleteStackVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -263,19 +168,9 @@ namespace TencentCloud.Tic.V20201117
         /// </summary>
         /// <param name="req"><see cref="DescribeStackEventRequest"/></param>
         /// <returns><see cref="DescribeStackEventResponse"/></returns>
-        public async Task<DescribeStackEventResponse> DescribeStackEvent(DescribeStackEventRequest req)
+        public Task<DescribeStackEventResponse> DescribeStackEvent(DescribeStackEventRequest req)
         {
-             JsonResponseModel<DescribeStackEventResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeStackEvent");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStackEventResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeStackEventResponse>(req, "DescribeStackEvent");
         }
 
         /// <summary>
@@ -285,17 +180,8 @@ namespace TencentCloud.Tic.V20201117
         /// <returns><see cref="DescribeStackEventResponse"/></returns>
         public DescribeStackEventResponse DescribeStackEventSync(DescribeStackEventRequest req)
         {
-             JsonResponseModel<DescribeStackEventResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeStackEvent");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStackEventResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeStackEventResponse>(req, "DescribeStackEvent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -307,19 +193,9 @@ namespace TencentCloud.Tic.V20201117
         /// </summary>
         /// <param name="req"><see cref="DescribeStackEventsRequest"/></param>
         /// <returns><see cref="DescribeStackEventsResponse"/></returns>
-        public async Task<DescribeStackEventsResponse> DescribeStackEvents(DescribeStackEventsRequest req)
+        public Task<DescribeStackEventsResponse> DescribeStackEvents(DescribeStackEventsRequest req)
         {
-             JsonResponseModel<DescribeStackEventsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeStackEvents");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStackEventsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeStackEventsResponse>(req, "DescribeStackEvents");
         }
 
         /// <summary>
@@ -333,17 +209,8 @@ namespace TencentCloud.Tic.V20201117
         /// <returns><see cref="DescribeStackEventsResponse"/></returns>
         public DescribeStackEventsResponse DescribeStackEventsSync(DescribeStackEventsRequest req)
         {
-             JsonResponseModel<DescribeStackEventsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeStackEvents");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStackEventsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeStackEventsResponse>(req, "DescribeStackEvents")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -355,19 +222,9 @@ namespace TencentCloud.Tic.V20201117
         /// </summary>
         /// <param name="req"><see cref="DescribeStackVersionsRequest"/></param>
         /// <returns><see cref="DescribeStackVersionsResponse"/></returns>
-        public async Task<DescribeStackVersionsResponse> DescribeStackVersions(DescribeStackVersionsRequest req)
+        public Task<DescribeStackVersionsResponse> DescribeStackVersions(DescribeStackVersionsRequest req)
         {
-             JsonResponseModel<DescribeStackVersionsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeStackVersions");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStackVersionsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeStackVersionsResponse>(req, "DescribeStackVersions");
         }
 
         /// <summary>
@@ -381,17 +238,8 @@ namespace TencentCloud.Tic.V20201117
         /// <returns><see cref="DescribeStackVersionsResponse"/></returns>
         public DescribeStackVersionsResponse DescribeStackVersionsSync(DescribeStackVersionsRequest req)
         {
-             JsonResponseModel<DescribeStackVersionsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeStackVersions");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStackVersionsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeStackVersionsResponse>(req, "DescribeStackVersions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -402,19 +250,9 @@ namespace TencentCloud.Tic.V20201117
         /// </summary>
         /// <param name="req"><see cref="DescribeStacksRequest"/></param>
         /// <returns><see cref="DescribeStacksResponse"/></returns>
-        public async Task<DescribeStacksResponse> DescribeStacks(DescribeStacksRequest req)
+        public Task<DescribeStacksResponse> DescribeStacks(DescribeStacksRequest req)
         {
-             JsonResponseModel<DescribeStacksResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeStacks");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStacksResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeStacksResponse>(req, "DescribeStacks");
         }
 
         /// <summary>
@@ -427,17 +265,8 @@ namespace TencentCloud.Tic.V20201117
         /// <returns><see cref="DescribeStacksResponse"/></returns>
         public DescribeStacksResponse DescribeStacksSync(DescribeStacksRequest req)
         {
-             JsonResponseModel<DescribeStacksResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeStacks");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStacksResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeStacksResponse>(req, "DescribeStacks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -445,19 +274,9 @@ namespace TencentCloud.Tic.V20201117
         /// </summary>
         /// <param name="req"><see cref="DestroyStackRequest"/></param>
         /// <returns><see cref="DestroyStackResponse"/></returns>
-        public async Task<DestroyStackResponse> DestroyStack(DestroyStackRequest req)
+        public Task<DestroyStackResponse> DestroyStack(DestroyStackRequest req)
         {
-             JsonResponseModel<DestroyStackResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DestroyStack");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyStackResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DestroyStackResponse>(req, "DestroyStack");
         }
 
         /// <summary>
@@ -467,17 +286,8 @@ namespace TencentCloud.Tic.V20201117
         /// <returns><see cref="DestroyStackResponse"/></returns>
         public DestroyStackResponse DestroyStackSync(DestroyStackRequest req)
         {
-             JsonResponseModel<DestroyStackResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DestroyStack");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyStackResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DestroyStackResponse>(req, "DestroyStack")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -488,19 +298,9 @@ namespace TencentCloud.Tic.V20201117
         /// </summary>
         /// <param name="req"><see cref="PlanStackRequest"/></param>
         /// <returns><see cref="PlanStackResponse"/></returns>
-        public async Task<PlanStackResponse> PlanStack(PlanStackRequest req)
+        public Task<PlanStackResponse> PlanStack(PlanStackRequest req)
         {
-             JsonResponseModel<PlanStackResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "PlanStack");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PlanStackResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<PlanStackResponse>(req, "PlanStack");
         }
 
         /// <summary>
@@ -513,17 +313,8 @@ namespace TencentCloud.Tic.V20201117
         /// <returns><see cref="PlanStackResponse"/></returns>
         public PlanStackResponse PlanStackSync(PlanStackRequest req)
         {
-             JsonResponseModel<PlanStackResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "PlanStack");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PlanStackResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<PlanStackResponse>(req, "PlanStack")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -531,19 +322,9 @@ namespace TencentCloud.Tic.V20201117
         /// </summary>
         /// <param name="req"><see cref="UpdateStackRequest"/></param>
         /// <returns><see cref="UpdateStackResponse"/></returns>
-        public async Task<UpdateStackResponse> UpdateStack(UpdateStackRequest req)
+        public Task<UpdateStackResponse> UpdateStack(UpdateStackRequest req)
         {
-             JsonResponseModel<UpdateStackResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "UpdateStack");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateStackResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateStackResponse>(req, "UpdateStack");
         }
 
         /// <summary>
@@ -553,17 +334,8 @@ namespace TencentCloud.Tic.V20201117
         /// <returns><see cref="UpdateStackResponse"/></returns>
         public UpdateStackResponse UpdateStackSync(UpdateStackRequest req)
         {
-             JsonResponseModel<UpdateStackResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UpdateStack");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateStackResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateStackResponse>(req, "UpdateStack")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -571,19 +343,9 @@ namespace TencentCloud.Tic.V20201117
         /// </summary>
         /// <param name="req"><see cref="UpdateStackVersionRequest"/></param>
         /// <returns><see cref="UpdateStackVersionResponse"/></returns>
-        public async Task<UpdateStackVersionResponse> UpdateStackVersion(UpdateStackVersionRequest req)
+        public Task<UpdateStackVersionResponse> UpdateStackVersion(UpdateStackVersionRequest req)
         {
-             JsonResponseModel<UpdateStackVersionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "UpdateStackVersion");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateStackVersionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateStackVersionResponse>(req, "UpdateStackVersion");
         }
 
         /// <summary>
@@ -593,17 +355,8 @@ namespace TencentCloud.Tic.V20201117
         /// <returns><see cref="UpdateStackVersionResponse"/></returns>
         public UpdateStackVersionResponse UpdateStackVersionSync(UpdateStackVersionRequest req)
         {
-             JsonResponseModel<UpdateStackVersionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UpdateStackVersion");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateStackVersionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateStackVersionResponse>(req, "UpdateStackVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

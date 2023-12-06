@@ -57,19 +57,9 @@ namespace TencentCloud.Nlp.V20190408
         /// </summary>
         /// <param name="req"><see cref="AnalyzeSentimentRequest"/></param>
         /// <returns><see cref="AnalyzeSentimentResponse"/></returns>
-        public async Task<AnalyzeSentimentResponse> AnalyzeSentiment(AnalyzeSentimentRequest req)
+        public Task<AnalyzeSentimentResponse> AnalyzeSentiment(AnalyzeSentimentRequest req)
         {
-             JsonResponseModel<AnalyzeSentimentResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "AnalyzeSentiment");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AnalyzeSentimentResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<AnalyzeSentimentResponse>(req, "AnalyzeSentiment");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Nlp.V20190408
         /// <returns><see cref="AnalyzeSentimentResponse"/></returns>
         public AnalyzeSentimentResponse AnalyzeSentimentSync(AnalyzeSentimentRequest req)
         {
-             JsonResponseModel<AnalyzeSentimentResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "AnalyzeSentiment");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AnalyzeSentimentResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<AnalyzeSentimentResponse>(req, "AnalyzeSentiment")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Nlp.V20190408
         /// </summary>
         /// <param name="req"><see cref="ClassifyContentRequest"/></param>
         /// <returns><see cref="ClassifyContentResponse"/></returns>
-        public async Task<ClassifyContentResponse> ClassifyContent(ClassifyContentRequest req)
+        public Task<ClassifyContentResponse> ClassifyContent(ClassifyContentRequest req)
         {
-             JsonResponseModel<ClassifyContentResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ClassifyContent");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ClassifyContentResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ClassifyContentResponse>(req, "ClassifyContent");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Nlp.V20190408
         /// <returns><see cref="ClassifyContentResponse"/></returns>
         public ClassifyContentResponse ClassifyContentSync(ClassifyContentRequest req)
         {
-             JsonResponseModel<ClassifyContentResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ClassifyContent");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ClassifyContentResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ClassifyContentResponse>(req, "ClassifyContent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Nlp.V20190408
         /// </summary>
         /// <param name="req"><see cref="ComposeCoupletRequest"/></param>
         /// <returns><see cref="ComposeCoupletResponse"/></returns>
-        public async Task<ComposeCoupletResponse> ComposeCouplet(ComposeCoupletRequest req)
+        public Task<ComposeCoupletResponse> ComposeCouplet(ComposeCoupletRequest req)
         {
-             JsonResponseModel<ComposeCoupletResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ComposeCouplet");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ComposeCoupletResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ComposeCoupletResponse>(req, "ComposeCouplet");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Nlp.V20190408
         /// <returns><see cref="ComposeCoupletResponse"/></returns>
         public ComposeCoupletResponse ComposeCoupletSync(ComposeCoupletRequest req)
         {
-             JsonResponseModel<ComposeCoupletResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ComposeCouplet");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ComposeCoupletResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ComposeCoupletResponse>(req, "ComposeCouplet")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Nlp.V20190408
         /// </summary>
         /// <param name="req"><see cref="ComposePoetryRequest"/></param>
         /// <returns><see cref="ComposePoetryResponse"/></returns>
-        public async Task<ComposePoetryResponse> ComposePoetry(ComposePoetryRequest req)
+        public Task<ComposePoetryResponse> ComposePoetry(ComposePoetryRequest req)
         {
-             JsonResponseModel<ComposePoetryResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ComposePoetry");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ComposePoetryResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ComposePoetryResponse>(req, "ComposePoetry");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Nlp.V20190408
         /// <returns><see cref="ComposePoetryResponse"/></returns>
         public ComposePoetryResponse ComposePoetrySync(ComposePoetryRequest req)
         {
-             JsonResponseModel<ComposePoetryResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ComposePoetry");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ComposePoetryResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ComposePoetryResponse>(req, "ComposePoetry")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -217,19 +141,9 @@ namespace TencentCloud.Nlp.V20190408
         /// </summary>
         /// <param name="req"><see cref="EvaluateSentenceSimilarityRequest"/></param>
         /// <returns><see cref="EvaluateSentenceSimilarityResponse"/></returns>
-        public async Task<EvaluateSentenceSimilarityResponse> EvaluateSentenceSimilarity(EvaluateSentenceSimilarityRequest req)
+        public Task<EvaluateSentenceSimilarityResponse> EvaluateSentenceSimilarity(EvaluateSentenceSimilarityRequest req)
         {
-             JsonResponseModel<EvaluateSentenceSimilarityResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "EvaluateSentenceSimilarity");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EvaluateSentenceSimilarityResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<EvaluateSentenceSimilarityResponse>(req, "EvaluateSentenceSimilarity");
         }
 
         /// <summary>
@@ -239,17 +153,8 @@ namespace TencentCloud.Nlp.V20190408
         /// <returns><see cref="EvaluateSentenceSimilarityResponse"/></returns>
         public EvaluateSentenceSimilarityResponse EvaluateSentenceSimilaritySync(EvaluateSentenceSimilarityRequest req)
         {
-             JsonResponseModel<EvaluateSentenceSimilarityResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "EvaluateSentenceSimilarity");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EvaluateSentenceSimilarityResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<EvaluateSentenceSimilarityResponse>(req, "EvaluateSentenceSimilarity")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -257,19 +162,9 @@ namespace TencentCloud.Nlp.V20190408
         /// </summary>
         /// <param name="req"><see cref="EvaluateWordSimilarityRequest"/></param>
         /// <returns><see cref="EvaluateWordSimilarityResponse"/></returns>
-        public async Task<EvaluateWordSimilarityResponse> EvaluateWordSimilarity(EvaluateWordSimilarityRequest req)
+        public Task<EvaluateWordSimilarityResponse> EvaluateWordSimilarity(EvaluateWordSimilarityRequest req)
         {
-             JsonResponseModel<EvaluateWordSimilarityResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "EvaluateWordSimilarity");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EvaluateWordSimilarityResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<EvaluateWordSimilarityResponse>(req, "EvaluateWordSimilarity");
         }
 
         /// <summary>
@@ -279,17 +174,8 @@ namespace TencentCloud.Nlp.V20190408
         /// <returns><see cref="EvaluateWordSimilarityResponse"/></returns>
         public EvaluateWordSimilarityResponse EvaluateWordSimilaritySync(EvaluateWordSimilarityRequest req)
         {
-             JsonResponseModel<EvaluateWordSimilarityResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "EvaluateWordSimilarity");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EvaluateWordSimilarityResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<EvaluateWordSimilarityResponse>(req, "EvaluateWordSimilarity")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -297,19 +183,9 @@ namespace TencentCloud.Nlp.V20190408
         /// </summary>
         /// <param name="req"><see cref="GenerateKeywordSentenceRequest"/></param>
         /// <returns><see cref="GenerateKeywordSentenceResponse"/></returns>
-        public async Task<GenerateKeywordSentenceResponse> GenerateKeywordSentence(GenerateKeywordSentenceRequest req)
+        public Task<GenerateKeywordSentenceResponse> GenerateKeywordSentence(GenerateKeywordSentenceRequest req)
         {
-             JsonResponseModel<GenerateKeywordSentenceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GenerateKeywordSentence");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateKeywordSentenceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GenerateKeywordSentenceResponse>(req, "GenerateKeywordSentence");
         }
 
         /// <summary>
@@ -319,17 +195,8 @@ namespace TencentCloud.Nlp.V20190408
         /// <returns><see cref="GenerateKeywordSentenceResponse"/></returns>
         public GenerateKeywordSentenceResponse GenerateKeywordSentenceSync(GenerateKeywordSentenceRequest req)
         {
-             JsonResponseModel<GenerateKeywordSentenceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GenerateKeywordSentence");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateKeywordSentenceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GenerateKeywordSentenceResponse>(req, "GenerateKeywordSentence")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -337,19 +204,9 @@ namespace TencentCloud.Nlp.V20190408
         /// </summary>
         /// <param name="req"><see cref="ParseWordsRequest"/></param>
         /// <returns><see cref="ParseWordsResponse"/></returns>
-        public async Task<ParseWordsResponse> ParseWords(ParseWordsRequest req)
+        public Task<ParseWordsResponse> ParseWords(ParseWordsRequest req)
         {
-             JsonResponseModel<ParseWordsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ParseWords");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ParseWordsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ParseWordsResponse>(req, "ParseWords");
         }
 
         /// <summary>
@@ -359,17 +216,8 @@ namespace TencentCloud.Nlp.V20190408
         /// <returns><see cref="ParseWordsResponse"/></returns>
         public ParseWordsResponse ParseWordsSync(ParseWordsRequest req)
         {
-             JsonResponseModel<ParseWordsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ParseWords");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ParseWordsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ParseWordsResponse>(req, "ParseWords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -377,19 +225,9 @@ namespace TencentCloud.Nlp.V20190408
         /// </summary>
         /// <param name="req"><see cref="RetrieveSimilarWordsRequest"/></param>
         /// <returns><see cref="RetrieveSimilarWordsResponse"/></returns>
-        public async Task<RetrieveSimilarWordsResponse> RetrieveSimilarWords(RetrieveSimilarWordsRequest req)
+        public Task<RetrieveSimilarWordsResponse> RetrieveSimilarWords(RetrieveSimilarWordsRequest req)
         {
-             JsonResponseModel<RetrieveSimilarWordsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RetrieveSimilarWords");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RetrieveSimilarWordsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RetrieveSimilarWordsResponse>(req, "RetrieveSimilarWords");
         }
 
         /// <summary>
@@ -399,17 +237,8 @@ namespace TencentCloud.Nlp.V20190408
         /// <returns><see cref="RetrieveSimilarWordsResponse"/></returns>
         public RetrieveSimilarWordsResponse RetrieveSimilarWordsSync(RetrieveSimilarWordsRequest req)
         {
-             JsonResponseModel<RetrieveSimilarWordsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RetrieveSimilarWords");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RetrieveSimilarWordsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RetrieveSimilarWordsResponse>(req, "RetrieveSimilarWords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -417,19 +246,9 @@ namespace TencentCloud.Nlp.V20190408
         /// </summary>
         /// <param name="req"><see cref="SentenceCorrectionRequest"/></param>
         /// <returns><see cref="SentenceCorrectionResponse"/></returns>
-        public async Task<SentenceCorrectionResponse> SentenceCorrection(SentenceCorrectionRequest req)
+        public Task<SentenceCorrectionResponse> SentenceCorrection(SentenceCorrectionRequest req)
         {
-             JsonResponseModel<SentenceCorrectionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SentenceCorrection");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SentenceCorrectionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SentenceCorrectionResponse>(req, "SentenceCorrection");
         }
 
         /// <summary>
@@ -439,17 +258,8 @@ namespace TencentCloud.Nlp.V20190408
         /// <returns><see cref="SentenceCorrectionResponse"/></returns>
         public SentenceCorrectionResponse SentenceCorrectionSync(SentenceCorrectionRequest req)
         {
-             JsonResponseModel<SentenceCorrectionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SentenceCorrection");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SentenceCorrectionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SentenceCorrectionResponse>(req, "SentenceCorrection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -457,19 +267,9 @@ namespace TencentCloud.Nlp.V20190408
         /// </summary>
         /// <param name="req"><see cref="TextEmbellishRequest"/></param>
         /// <returns><see cref="TextEmbellishResponse"/></returns>
-        public async Task<TextEmbellishResponse> TextEmbellish(TextEmbellishRequest req)
+        public Task<TextEmbellishResponse> TextEmbellish(TextEmbellishRequest req)
         {
-             JsonResponseModel<TextEmbellishResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "TextEmbellish");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextEmbellishResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TextEmbellishResponse>(req, "TextEmbellish");
         }
 
         /// <summary>
@@ -479,17 +279,8 @@ namespace TencentCloud.Nlp.V20190408
         /// <returns><see cref="TextEmbellishResponse"/></returns>
         public TextEmbellishResponse TextEmbellishSync(TextEmbellishRequest req)
         {
-             JsonResponseModel<TextEmbellishResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "TextEmbellish");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextEmbellishResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TextEmbellishResponse>(req, "TextEmbellish")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -497,19 +288,9 @@ namespace TencentCloud.Nlp.V20190408
         /// </summary>
         /// <param name="req"><see cref="TextWritingRequest"/></param>
         /// <returns><see cref="TextWritingResponse"/></returns>
-        public async Task<TextWritingResponse> TextWriting(TextWritingRequest req)
+        public Task<TextWritingResponse> TextWriting(TextWritingRequest req)
         {
-             JsonResponseModel<TextWritingResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "TextWriting");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextWritingResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TextWritingResponse>(req, "TextWriting");
         }
 
         /// <summary>
@@ -519,17 +300,8 @@ namespace TencentCloud.Nlp.V20190408
         /// <returns><see cref="TextWritingResponse"/></returns>
         public TextWritingResponse TextWritingSync(TextWritingRequest req)
         {
-             JsonResponseModel<TextWritingResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "TextWriting");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextWritingResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TextWritingResponse>(req, "TextWriting")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

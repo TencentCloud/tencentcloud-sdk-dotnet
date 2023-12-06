@@ -57,19 +57,9 @@ namespace TencentCloud.Car.V20220110
         /// </summary>
         /// <param name="req"><see cref="ApplyConcurrentRequest"/></param>
         /// <returns><see cref="ApplyConcurrentResponse"/></returns>
-        public async Task<ApplyConcurrentResponse> ApplyConcurrent(ApplyConcurrentRequest req)
+        public Task<ApplyConcurrentResponse> ApplyConcurrent(ApplyConcurrentRequest req)
         {
-             JsonResponseModel<ApplyConcurrentResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ApplyConcurrent");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyConcurrentResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ApplyConcurrentResponse>(req, "ApplyConcurrent");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Car.V20220110
         /// <returns><see cref="ApplyConcurrentResponse"/></returns>
         public ApplyConcurrentResponse ApplyConcurrentSync(ApplyConcurrentRequest req)
         {
-             JsonResponseModel<ApplyConcurrentResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ApplyConcurrent");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyConcurrentResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ApplyConcurrentResponse>(req, "ApplyConcurrent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Car.V20220110
         /// </summary>
         /// <param name="req"><see cref="CreateSessionRequest"/></param>
         /// <returns><see cref="CreateSessionResponse"/></returns>
-        public async Task<CreateSessionResponse> CreateSession(CreateSessionRequest req)
+        public Task<CreateSessionResponse> CreateSession(CreateSessionRequest req)
         {
-             JsonResponseModel<CreateSessionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateSession");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSessionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateSessionResponse>(req, "CreateSession");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Car.V20220110
         /// <returns><see cref="CreateSessionResponse"/></returns>
         public CreateSessionResponse CreateSessionSync(CreateSessionRequest req)
         {
-             JsonResponseModel<CreateSessionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateSession");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSessionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateSessionResponse>(req, "CreateSession")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Car.V20220110
         /// </summary>
         /// <param name="req"><see cref="DestroySessionRequest"/></param>
         /// <returns><see cref="DestroySessionResponse"/></returns>
-        public async Task<DestroySessionResponse> DestroySession(DestroySessionRequest req)
+        public Task<DestroySessionResponse> DestroySession(DestroySessionRequest req)
         {
-             JsonResponseModel<DestroySessionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DestroySession");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroySessionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DestroySessionResponse>(req, "DestroySession");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Car.V20220110
         /// <returns><see cref="DestroySessionResponse"/></returns>
         public DestroySessionResponse DestroySessionSync(DestroySessionRequest req)
         {
-             JsonResponseModel<DestroySessionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DestroySession");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroySessionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DestroySessionResponse>(req, "DestroySession")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Car.V20220110
         /// </summary>
         /// <param name="req"><see cref="StartPublishStreamRequest"/></param>
         /// <returns><see cref="StartPublishStreamResponse"/></returns>
-        public async Task<StartPublishStreamResponse> StartPublishStream(StartPublishStreamRequest req)
+        public Task<StartPublishStreamResponse> StartPublishStream(StartPublishStreamRequest req)
         {
-             JsonResponseModel<StartPublishStreamResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "StartPublishStream");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartPublishStreamResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<StartPublishStreamResponse>(req, "StartPublishStream");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Car.V20220110
         /// <returns><see cref="StartPublishStreamResponse"/></returns>
         public StartPublishStreamResponse StartPublishStreamSync(StartPublishStreamRequest req)
         {
-             JsonResponseModel<StartPublishStreamResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "StartPublishStream");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartPublishStreamResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<StartPublishStreamResponse>(req, "StartPublishStream")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -217,19 +141,9 @@ namespace TencentCloud.Car.V20220110
         /// </summary>
         /// <param name="req"><see cref="StartPublishStreamWithURLRequest"/></param>
         /// <returns><see cref="StartPublishStreamWithURLResponse"/></returns>
-        public async Task<StartPublishStreamWithURLResponse> StartPublishStreamWithURL(StartPublishStreamWithURLRequest req)
+        public Task<StartPublishStreamWithURLResponse> StartPublishStreamWithURL(StartPublishStreamWithURLRequest req)
         {
-             JsonResponseModel<StartPublishStreamWithURLResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "StartPublishStreamWithURL");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartPublishStreamWithURLResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<StartPublishStreamWithURLResponse>(req, "StartPublishStreamWithURL");
         }
 
         /// <summary>
@@ -239,17 +153,8 @@ namespace TencentCloud.Car.V20220110
         /// <returns><see cref="StartPublishStreamWithURLResponse"/></returns>
         public StartPublishStreamWithURLResponse StartPublishStreamWithURLSync(StartPublishStreamWithURLRequest req)
         {
-             JsonResponseModel<StartPublishStreamWithURLResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "StartPublishStreamWithURL");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartPublishStreamWithURLResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<StartPublishStreamWithURLResponse>(req, "StartPublishStreamWithURL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -257,19 +162,9 @@ namespace TencentCloud.Car.V20220110
         /// </summary>
         /// <param name="req"><see cref="StopPublishStreamRequest"/></param>
         /// <returns><see cref="StopPublishStreamResponse"/></returns>
-        public async Task<StopPublishStreamResponse> StopPublishStream(StopPublishStreamRequest req)
+        public Task<StopPublishStreamResponse> StopPublishStream(StopPublishStreamRequest req)
         {
-             JsonResponseModel<StopPublishStreamResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "StopPublishStream");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopPublishStreamResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<StopPublishStreamResponse>(req, "StopPublishStream");
         }
 
         /// <summary>
@@ -279,17 +174,8 @@ namespace TencentCloud.Car.V20220110
         /// <returns><see cref="StopPublishStreamResponse"/></returns>
         public StopPublishStreamResponse StopPublishStreamSync(StopPublishStreamRequest req)
         {
-             JsonResponseModel<StopPublishStreamResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "StopPublishStream");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopPublishStreamResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<StopPublishStreamResponse>(req, "StopPublishStream")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

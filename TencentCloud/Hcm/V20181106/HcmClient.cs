@@ -57,19 +57,9 @@ namespace TencentCloud.Hcm.V20181106
         /// </summary>
         /// <param name="req"><see cref="EvaluationRequest"/></param>
         /// <returns><see cref="EvaluationResponse"/></returns>
-        public async Task<EvaluationResponse> Evaluation(EvaluationRequest req)
+        public Task<EvaluationResponse> Evaluation(EvaluationRequest req)
         {
-             JsonResponseModel<EvaluationResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "Evaluation");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EvaluationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<EvaluationResponse>(req, "Evaluation");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Hcm.V20181106
         /// <returns><see cref="EvaluationResponse"/></returns>
         public EvaluationResponse EvaluationSync(EvaluationRequest req)
         {
-             JsonResponseModel<EvaluationResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "Evaluation");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EvaluationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<EvaluationResponse>(req, "Evaluation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

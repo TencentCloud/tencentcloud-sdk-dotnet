@@ -57,19 +57,9 @@ namespace TencentCloud.Trdp.V20220726
         /// </summary>
         /// <param name="req"><see cref="EvaluateUserRiskRequest"/></param>
         /// <returns><see cref="EvaluateUserRiskResponse"/></returns>
-        public async Task<EvaluateUserRiskResponse> EvaluateUserRisk(EvaluateUserRiskRequest req)
+        public Task<EvaluateUserRiskResponse> EvaluateUserRisk(EvaluateUserRiskRequest req)
         {
-             JsonResponseModel<EvaluateUserRiskResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "EvaluateUserRisk");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EvaluateUserRiskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<EvaluateUserRiskResponse>(req, "EvaluateUserRisk");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Trdp.V20220726
         /// <returns><see cref="EvaluateUserRiskResponse"/></returns>
         public EvaluateUserRiskResponse EvaluateUserRiskSync(EvaluateUserRiskRequest req)
         {
-             JsonResponseModel<EvaluateUserRiskResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "EvaluateUserRisk");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EvaluateUserRiskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<EvaluateUserRiskResponse>(req, "EvaluateUserRisk")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

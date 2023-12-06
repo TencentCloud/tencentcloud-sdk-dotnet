@@ -57,19 +57,9 @@ namespace TencentCloud.Tbm.V20180129
         /// </summary>
         /// <param name="req"><see cref="DescribeBrandCommentCountRequest"/></param>
         /// <returns><see cref="DescribeBrandCommentCountResponse"/></returns>
-        public async Task<DescribeBrandCommentCountResponse> DescribeBrandCommentCount(DescribeBrandCommentCountRequest req)
+        public Task<DescribeBrandCommentCountResponse> DescribeBrandCommentCount(DescribeBrandCommentCountRequest req)
         {
-             JsonResponseModel<DescribeBrandCommentCountResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeBrandCommentCount");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBrandCommentCountResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeBrandCommentCountResponse>(req, "DescribeBrandCommentCount");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Tbm.V20180129
         /// <returns><see cref="DescribeBrandCommentCountResponse"/></returns>
         public DescribeBrandCommentCountResponse DescribeBrandCommentCountSync(DescribeBrandCommentCountRequest req)
         {
-             JsonResponseModel<DescribeBrandCommentCountResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBrandCommentCount");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBrandCommentCountResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeBrandCommentCountResponse>(req, "DescribeBrandCommentCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Tbm.V20180129
         /// </summary>
         /// <param name="req"><see cref="DescribeBrandExposureRequest"/></param>
         /// <returns><see cref="DescribeBrandExposureResponse"/></returns>
-        public async Task<DescribeBrandExposureResponse> DescribeBrandExposure(DescribeBrandExposureRequest req)
+        public Task<DescribeBrandExposureResponse> DescribeBrandExposure(DescribeBrandExposureRequest req)
         {
-             JsonResponseModel<DescribeBrandExposureResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeBrandExposure");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBrandExposureResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeBrandExposureResponse>(req, "DescribeBrandExposure");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Tbm.V20180129
         /// <returns><see cref="DescribeBrandExposureResponse"/></returns>
         public DescribeBrandExposureResponse DescribeBrandExposureSync(DescribeBrandExposureRequest req)
         {
-             JsonResponseModel<DescribeBrandExposureResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBrandExposure");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBrandExposureResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeBrandExposureResponse>(req, "DescribeBrandExposure")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Tbm.V20180129
         /// </summary>
         /// <param name="req"><see cref="DescribeBrandMediaReportRequest"/></param>
         /// <returns><see cref="DescribeBrandMediaReportResponse"/></returns>
-        public async Task<DescribeBrandMediaReportResponse> DescribeBrandMediaReport(DescribeBrandMediaReportRequest req)
+        public Task<DescribeBrandMediaReportResponse> DescribeBrandMediaReport(DescribeBrandMediaReportRequest req)
         {
-             JsonResponseModel<DescribeBrandMediaReportResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeBrandMediaReport");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBrandMediaReportResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeBrandMediaReportResponse>(req, "DescribeBrandMediaReport");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Tbm.V20180129
         /// <returns><see cref="DescribeBrandMediaReportResponse"/></returns>
         public DescribeBrandMediaReportResponse DescribeBrandMediaReportSync(DescribeBrandMediaReportRequest req)
         {
-             JsonResponseModel<DescribeBrandMediaReportResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBrandMediaReport");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBrandMediaReportResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeBrandMediaReportResponse>(req, "DescribeBrandMediaReport")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Tbm.V20180129
         /// </summary>
         /// <param name="req"><see cref="DescribeBrandNegCommentsRequest"/></param>
         /// <returns><see cref="DescribeBrandNegCommentsResponse"/></returns>
-        public async Task<DescribeBrandNegCommentsResponse> DescribeBrandNegComments(DescribeBrandNegCommentsRequest req)
+        public Task<DescribeBrandNegCommentsResponse> DescribeBrandNegComments(DescribeBrandNegCommentsRequest req)
         {
-             JsonResponseModel<DescribeBrandNegCommentsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeBrandNegComments");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBrandNegCommentsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeBrandNegCommentsResponse>(req, "DescribeBrandNegComments");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Tbm.V20180129
         /// <returns><see cref="DescribeBrandNegCommentsResponse"/></returns>
         public DescribeBrandNegCommentsResponse DescribeBrandNegCommentsSync(DescribeBrandNegCommentsRequest req)
         {
-             JsonResponseModel<DescribeBrandNegCommentsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBrandNegComments");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBrandNegCommentsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeBrandNegCommentsResponse>(req, "DescribeBrandNegComments")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -217,19 +141,9 @@ namespace TencentCloud.Tbm.V20180129
         /// </summary>
         /// <param name="req"><see cref="DescribeBrandPosCommentsRequest"/></param>
         /// <returns><see cref="DescribeBrandPosCommentsResponse"/></returns>
-        public async Task<DescribeBrandPosCommentsResponse> DescribeBrandPosComments(DescribeBrandPosCommentsRequest req)
+        public Task<DescribeBrandPosCommentsResponse> DescribeBrandPosComments(DescribeBrandPosCommentsRequest req)
         {
-             JsonResponseModel<DescribeBrandPosCommentsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeBrandPosComments");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBrandPosCommentsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeBrandPosCommentsResponse>(req, "DescribeBrandPosComments");
         }
 
         /// <summary>
@@ -239,17 +153,8 @@ namespace TencentCloud.Tbm.V20180129
         /// <returns><see cref="DescribeBrandPosCommentsResponse"/></returns>
         public DescribeBrandPosCommentsResponse DescribeBrandPosCommentsSync(DescribeBrandPosCommentsRequest req)
         {
-             JsonResponseModel<DescribeBrandPosCommentsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBrandPosComments");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBrandPosCommentsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeBrandPosCommentsResponse>(req, "DescribeBrandPosComments")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -257,19 +162,9 @@ namespace TencentCloud.Tbm.V20180129
         /// </summary>
         /// <param name="req"><see cref="DescribeBrandSocialOpinionRequest"/></param>
         /// <returns><see cref="DescribeBrandSocialOpinionResponse"/></returns>
-        public async Task<DescribeBrandSocialOpinionResponse> DescribeBrandSocialOpinion(DescribeBrandSocialOpinionRequest req)
+        public Task<DescribeBrandSocialOpinionResponse> DescribeBrandSocialOpinion(DescribeBrandSocialOpinionRequest req)
         {
-             JsonResponseModel<DescribeBrandSocialOpinionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeBrandSocialOpinion");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBrandSocialOpinionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeBrandSocialOpinionResponse>(req, "DescribeBrandSocialOpinion");
         }
 
         /// <summary>
@@ -279,17 +174,8 @@ namespace TencentCloud.Tbm.V20180129
         /// <returns><see cref="DescribeBrandSocialOpinionResponse"/></returns>
         public DescribeBrandSocialOpinionResponse DescribeBrandSocialOpinionSync(DescribeBrandSocialOpinionRequest req)
         {
-             JsonResponseModel<DescribeBrandSocialOpinionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBrandSocialOpinion");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBrandSocialOpinionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeBrandSocialOpinionResponse>(req, "DescribeBrandSocialOpinion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -297,19 +183,9 @@ namespace TencentCloud.Tbm.V20180129
         /// </summary>
         /// <param name="req"><see cref="DescribeBrandSocialReportRequest"/></param>
         /// <returns><see cref="DescribeBrandSocialReportResponse"/></returns>
-        public async Task<DescribeBrandSocialReportResponse> DescribeBrandSocialReport(DescribeBrandSocialReportRequest req)
+        public Task<DescribeBrandSocialReportResponse> DescribeBrandSocialReport(DescribeBrandSocialReportRequest req)
         {
-             JsonResponseModel<DescribeBrandSocialReportResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeBrandSocialReport");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBrandSocialReportResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeBrandSocialReportResponse>(req, "DescribeBrandSocialReport");
         }
 
         /// <summary>
@@ -319,17 +195,8 @@ namespace TencentCloud.Tbm.V20180129
         /// <returns><see cref="DescribeBrandSocialReportResponse"/></returns>
         public DescribeBrandSocialReportResponse DescribeBrandSocialReportSync(DescribeBrandSocialReportRequest req)
         {
-             JsonResponseModel<DescribeBrandSocialReportResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBrandSocialReport");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBrandSocialReportResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeBrandSocialReportResponse>(req, "DescribeBrandSocialReport")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -337,19 +204,9 @@ namespace TencentCloud.Tbm.V20180129
         /// </summary>
         /// <param name="req"><see cref="DescribeIndustryNewsRequest"/></param>
         /// <returns><see cref="DescribeIndustryNewsResponse"/></returns>
-        public async Task<DescribeIndustryNewsResponse> DescribeIndustryNews(DescribeIndustryNewsRequest req)
+        public Task<DescribeIndustryNewsResponse> DescribeIndustryNews(DescribeIndustryNewsRequest req)
         {
-             JsonResponseModel<DescribeIndustryNewsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeIndustryNews");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIndustryNewsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeIndustryNewsResponse>(req, "DescribeIndustryNews");
         }
 
         /// <summary>
@@ -359,17 +216,8 @@ namespace TencentCloud.Tbm.V20180129
         /// <returns><see cref="DescribeIndustryNewsResponse"/></returns>
         public DescribeIndustryNewsResponse DescribeIndustryNewsSync(DescribeIndustryNewsRequest req)
         {
-             JsonResponseModel<DescribeIndustryNewsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeIndustryNews");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIndustryNewsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeIndustryNewsResponse>(req, "DescribeIndustryNews")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -377,19 +225,9 @@ namespace TencentCloud.Tbm.V20180129
         /// </summary>
         /// <param name="req"><see cref="DescribeUserPortraitRequest"/></param>
         /// <returns><see cref="DescribeUserPortraitResponse"/></returns>
-        public async Task<DescribeUserPortraitResponse> DescribeUserPortrait(DescribeUserPortraitRequest req)
+        public Task<DescribeUserPortraitResponse> DescribeUserPortrait(DescribeUserPortraitRequest req)
         {
-             JsonResponseModel<DescribeUserPortraitResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeUserPortrait");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserPortraitResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeUserPortraitResponse>(req, "DescribeUserPortrait");
         }
 
         /// <summary>
@@ -399,17 +237,8 @@ namespace TencentCloud.Tbm.V20180129
         /// <returns><see cref="DescribeUserPortraitResponse"/></returns>
         public DescribeUserPortraitResponse DescribeUserPortraitSync(DescribeUserPortraitRequest req)
         {
-             JsonResponseModel<DescribeUserPortraitResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeUserPortrait");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserPortraitResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeUserPortraitResponse>(req, "DescribeUserPortrait")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

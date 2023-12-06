@@ -57,19 +57,9 @@ namespace TencentCloud.Bsca.V20210811
         /// </summary>
         /// <param name="req"><see cref="DescribeKBComponentRequest"/></param>
         /// <returns><see cref="DescribeKBComponentResponse"/></returns>
-        public async Task<DescribeKBComponentResponse> DescribeKBComponent(DescribeKBComponentRequest req)
+        public Task<DescribeKBComponentResponse> DescribeKBComponent(DescribeKBComponentRequest req)
         {
-             JsonResponseModel<DescribeKBComponentResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeKBComponent");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKBComponentResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeKBComponentResponse>(req, "DescribeKBComponent");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Bsca.V20210811
         /// <returns><see cref="DescribeKBComponentResponse"/></returns>
         public DescribeKBComponentResponse DescribeKBComponentSync(DescribeKBComponentRequest req)
         {
-             JsonResponseModel<DescribeKBComponentResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeKBComponent");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKBComponentResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeKBComponentResponse>(req, "DescribeKBComponent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Bsca.V20210811
         /// </summary>
         /// <param name="req"><see cref="DescribeKBComponentVersionListRequest"/></param>
         /// <returns><see cref="DescribeKBComponentVersionListResponse"/></returns>
-        public async Task<DescribeKBComponentVersionListResponse> DescribeKBComponentVersionList(DescribeKBComponentVersionListRequest req)
+        public Task<DescribeKBComponentVersionListResponse> DescribeKBComponentVersionList(DescribeKBComponentVersionListRequest req)
         {
-             JsonResponseModel<DescribeKBComponentVersionListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeKBComponentVersionList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKBComponentVersionListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeKBComponentVersionListResponse>(req, "DescribeKBComponentVersionList");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Bsca.V20210811
         /// <returns><see cref="DescribeKBComponentVersionListResponse"/></returns>
         public DescribeKBComponentVersionListResponse DescribeKBComponentVersionListSync(DescribeKBComponentVersionListRequest req)
         {
-             JsonResponseModel<DescribeKBComponentVersionListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeKBComponentVersionList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKBComponentVersionListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeKBComponentVersionListResponse>(req, "DescribeKBComponentVersionList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Bsca.V20210811
         /// </summary>
         /// <param name="req"><see cref="DescribeKBComponentVulnerabilityRequest"/></param>
         /// <returns><see cref="DescribeKBComponentVulnerabilityResponse"/></returns>
-        public async Task<DescribeKBComponentVulnerabilityResponse> DescribeKBComponentVulnerability(DescribeKBComponentVulnerabilityRequest req)
+        public Task<DescribeKBComponentVulnerabilityResponse> DescribeKBComponentVulnerability(DescribeKBComponentVulnerabilityRequest req)
         {
-             JsonResponseModel<DescribeKBComponentVulnerabilityResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeKBComponentVulnerability");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKBComponentVulnerabilityResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeKBComponentVulnerabilityResponse>(req, "DescribeKBComponentVulnerability");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Bsca.V20210811
         /// <returns><see cref="DescribeKBComponentVulnerabilityResponse"/></returns>
         public DescribeKBComponentVulnerabilityResponse DescribeKBComponentVulnerabilitySync(DescribeKBComponentVulnerabilityRequest req)
         {
-             JsonResponseModel<DescribeKBComponentVulnerabilityResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeKBComponentVulnerability");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKBComponentVulnerabilityResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeKBComponentVulnerabilityResponse>(req, "DescribeKBComponentVulnerability")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Bsca.V20210811
         /// </summary>
         /// <param name="req"><see cref="DescribeKBLicenseRequest"/></param>
         /// <returns><see cref="DescribeKBLicenseResponse"/></returns>
-        public async Task<DescribeKBLicenseResponse> DescribeKBLicense(DescribeKBLicenseRequest req)
+        public Task<DescribeKBLicenseResponse> DescribeKBLicense(DescribeKBLicenseRequest req)
         {
-             JsonResponseModel<DescribeKBLicenseResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeKBLicense");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKBLicenseResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeKBLicenseResponse>(req, "DescribeKBLicense");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Bsca.V20210811
         /// <returns><see cref="DescribeKBLicenseResponse"/></returns>
         public DescribeKBLicenseResponse DescribeKBLicenseSync(DescribeKBLicenseRequest req)
         {
-             JsonResponseModel<DescribeKBLicenseResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeKBLicense");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKBLicenseResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeKBLicenseResponse>(req, "DescribeKBLicense")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -217,19 +141,9 @@ namespace TencentCloud.Bsca.V20210811
         /// </summary>
         /// <param name="req"><see cref="DescribeKBVulnerabilityRequest"/></param>
         /// <returns><see cref="DescribeKBVulnerabilityResponse"/></returns>
-        public async Task<DescribeKBVulnerabilityResponse> DescribeKBVulnerability(DescribeKBVulnerabilityRequest req)
+        public Task<DescribeKBVulnerabilityResponse> DescribeKBVulnerability(DescribeKBVulnerabilityRequest req)
         {
-             JsonResponseModel<DescribeKBVulnerabilityResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeKBVulnerability");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKBVulnerabilityResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeKBVulnerabilityResponse>(req, "DescribeKBVulnerability");
         }
 
         /// <summary>
@@ -239,17 +153,8 @@ namespace TencentCloud.Bsca.V20210811
         /// <returns><see cref="DescribeKBVulnerabilityResponse"/></returns>
         public DescribeKBVulnerabilityResponse DescribeKBVulnerabilitySync(DescribeKBVulnerabilityRequest req)
         {
-             JsonResponseModel<DescribeKBVulnerabilityResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeKBVulnerability");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKBVulnerabilityResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeKBVulnerabilityResponse>(req, "DescribeKBVulnerability")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -257,19 +162,9 @@ namespace TencentCloud.Bsca.V20210811
         /// </summary>
         /// <param name="req"><see cref="MatchKBPURLListRequest"/></param>
         /// <returns><see cref="MatchKBPURLListResponse"/></returns>
-        public async Task<MatchKBPURLListResponse> MatchKBPURLList(MatchKBPURLListRequest req)
+        public Task<MatchKBPURLListResponse> MatchKBPURLList(MatchKBPURLListRequest req)
         {
-             JsonResponseModel<MatchKBPURLListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "MatchKBPURLList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MatchKBPURLListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<MatchKBPURLListResponse>(req, "MatchKBPURLList");
         }
 
         /// <summary>
@@ -279,17 +174,8 @@ namespace TencentCloud.Bsca.V20210811
         /// <returns><see cref="MatchKBPURLListResponse"/></returns>
         public MatchKBPURLListResponse MatchKBPURLListSync(MatchKBPURLListRequest req)
         {
-             JsonResponseModel<MatchKBPURLListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "MatchKBPURLList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MatchKBPURLListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<MatchKBPURLListResponse>(req, "MatchKBPURLList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -297,19 +183,9 @@ namespace TencentCloud.Bsca.V20210811
         /// </summary>
         /// <param name="req"><see cref="SearchKBComponentRequest"/></param>
         /// <returns><see cref="SearchKBComponentResponse"/></returns>
-        public async Task<SearchKBComponentResponse> SearchKBComponent(SearchKBComponentRequest req)
+        public Task<SearchKBComponentResponse> SearchKBComponent(SearchKBComponentRequest req)
         {
-             JsonResponseModel<SearchKBComponentResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SearchKBComponent");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchKBComponentResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SearchKBComponentResponse>(req, "SearchKBComponent");
         }
 
         /// <summary>
@@ -319,17 +195,8 @@ namespace TencentCloud.Bsca.V20210811
         /// <returns><see cref="SearchKBComponentResponse"/></returns>
         public SearchKBComponentResponse SearchKBComponentSync(SearchKBComponentRequest req)
         {
-             JsonResponseModel<SearchKBComponentResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SearchKBComponent");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchKBComponentResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SearchKBComponentResponse>(req, "SearchKBComponent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

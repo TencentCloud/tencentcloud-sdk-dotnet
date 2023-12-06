@@ -57,19 +57,9 @@ namespace TencentCloud.Pds.V20210701
         /// </summary>
         /// <param name="req"><see cref="DescribeNewUserAcquisitionRequest"/></param>
         /// <returns><see cref="DescribeNewUserAcquisitionResponse"/></returns>
-        public async Task<DescribeNewUserAcquisitionResponse> DescribeNewUserAcquisition(DescribeNewUserAcquisitionRequest req)
+        public Task<DescribeNewUserAcquisitionResponse> DescribeNewUserAcquisition(DescribeNewUserAcquisitionRequest req)
         {
-             JsonResponseModel<DescribeNewUserAcquisitionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeNewUserAcquisition");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNewUserAcquisitionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeNewUserAcquisitionResponse>(req, "DescribeNewUserAcquisition");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Pds.V20210701
         /// <returns><see cref="DescribeNewUserAcquisitionResponse"/></returns>
         public DescribeNewUserAcquisitionResponse DescribeNewUserAcquisitionSync(DescribeNewUserAcquisitionRequest req)
         {
-             JsonResponseModel<DescribeNewUserAcquisitionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeNewUserAcquisition");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNewUserAcquisitionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeNewUserAcquisitionResponse>(req, "DescribeNewUserAcquisition")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Pds.V20210701
         /// </summary>
         /// <param name="req"><see cref="DescribeStockEstimationRequest"/></param>
         /// <returns><see cref="DescribeStockEstimationResponse"/></returns>
-        public async Task<DescribeStockEstimationResponse> DescribeStockEstimation(DescribeStockEstimationRequest req)
+        public Task<DescribeStockEstimationResponse> DescribeStockEstimation(DescribeStockEstimationRequest req)
         {
-             JsonResponseModel<DescribeStockEstimationResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeStockEstimation");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStockEstimationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeStockEstimationResponse>(req, "DescribeStockEstimation");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Pds.V20210701
         /// <returns><see cref="DescribeStockEstimationResponse"/></returns>
         public DescribeStockEstimationResponse DescribeStockEstimationSync(DescribeStockEstimationRequest req)
         {
-             JsonResponseModel<DescribeStockEstimationResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeStockEstimation");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStockEstimationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeStockEstimationResponse>(req, "DescribeStockEstimation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

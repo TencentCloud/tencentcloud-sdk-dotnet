@@ -57,19 +57,9 @@ namespace TencentCloud.Cmq.V20190304
         /// </summary>
         /// <param name="req"><see cref="ClearQueueRequest"/></param>
         /// <returns><see cref="ClearQueueResponse"/></returns>
-        public async Task<ClearQueueResponse> ClearQueue(ClearQueueRequest req)
+        public Task<ClearQueueResponse> ClearQueue(ClearQueueRequest req)
         {
-             JsonResponseModel<ClearQueueResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ClearQueue");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ClearQueueResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ClearQueueResponse>(req, "ClearQueue");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Cmq.V20190304
         /// <returns><see cref="ClearQueueResponse"/></returns>
         public ClearQueueResponse ClearQueueSync(ClearQueueRequest req)
         {
-             JsonResponseModel<ClearQueueResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ClearQueue");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ClearQueueResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ClearQueueResponse>(req, "ClearQueue")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Cmq.V20190304
         /// </summary>
         /// <param name="req"><see cref="ClearSubscriptionFilterTagsRequest"/></param>
         /// <returns><see cref="ClearSubscriptionFilterTagsResponse"/></returns>
-        public async Task<ClearSubscriptionFilterTagsResponse> ClearSubscriptionFilterTags(ClearSubscriptionFilterTagsRequest req)
+        public Task<ClearSubscriptionFilterTagsResponse> ClearSubscriptionFilterTags(ClearSubscriptionFilterTagsRequest req)
         {
-             JsonResponseModel<ClearSubscriptionFilterTagsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ClearSubscriptionFilterTags");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ClearSubscriptionFilterTagsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ClearSubscriptionFilterTagsResponse>(req, "ClearSubscriptionFilterTags");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Cmq.V20190304
         /// <returns><see cref="ClearSubscriptionFilterTagsResponse"/></returns>
         public ClearSubscriptionFilterTagsResponse ClearSubscriptionFilterTagsSync(ClearSubscriptionFilterTagsRequest req)
         {
-             JsonResponseModel<ClearSubscriptionFilterTagsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ClearSubscriptionFilterTags");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ClearSubscriptionFilterTagsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ClearSubscriptionFilterTagsResponse>(req, "ClearSubscriptionFilterTags")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Cmq.V20190304
         /// </summary>
         /// <param name="req"><see cref="CreateQueueRequest"/></param>
         /// <returns><see cref="CreateQueueResponse"/></returns>
-        public async Task<CreateQueueResponse> CreateQueue(CreateQueueRequest req)
+        public Task<CreateQueueResponse> CreateQueue(CreateQueueRequest req)
         {
-             JsonResponseModel<CreateQueueResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateQueue");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateQueueResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateQueueResponse>(req, "CreateQueue");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Cmq.V20190304
         /// <returns><see cref="CreateQueueResponse"/></returns>
         public CreateQueueResponse CreateQueueSync(CreateQueueRequest req)
         {
-             JsonResponseModel<CreateQueueResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateQueue");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateQueueResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateQueueResponse>(req, "CreateQueue")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Cmq.V20190304
         /// </summary>
         /// <param name="req"><see cref="CreateSubscribeRequest"/></param>
         /// <returns><see cref="CreateSubscribeResponse"/></returns>
-        public async Task<CreateSubscribeResponse> CreateSubscribe(CreateSubscribeRequest req)
+        public Task<CreateSubscribeResponse> CreateSubscribe(CreateSubscribeRequest req)
         {
-             JsonResponseModel<CreateSubscribeResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateSubscribe");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSubscribeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateSubscribeResponse>(req, "CreateSubscribe");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Cmq.V20190304
         /// <returns><see cref="CreateSubscribeResponse"/></returns>
         public CreateSubscribeResponse CreateSubscribeSync(CreateSubscribeRequest req)
         {
-             JsonResponseModel<CreateSubscribeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateSubscribe");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSubscribeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateSubscribeResponse>(req, "CreateSubscribe")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -217,19 +141,9 @@ namespace TencentCloud.Cmq.V20190304
         /// </summary>
         /// <param name="req"><see cref="CreateTopicRequest"/></param>
         /// <returns><see cref="CreateTopicResponse"/></returns>
-        public async Task<CreateTopicResponse> CreateTopic(CreateTopicRequest req)
+        public Task<CreateTopicResponse> CreateTopic(CreateTopicRequest req)
         {
-             JsonResponseModel<CreateTopicResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateTopic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTopicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateTopicResponse>(req, "CreateTopic");
         }
 
         /// <summary>
@@ -239,17 +153,8 @@ namespace TencentCloud.Cmq.V20190304
         /// <returns><see cref="CreateTopicResponse"/></returns>
         public CreateTopicResponse CreateTopicSync(CreateTopicRequest req)
         {
-             JsonResponseModel<CreateTopicResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateTopic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTopicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateTopicResponse>(req, "CreateTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -257,19 +162,9 @@ namespace TencentCloud.Cmq.V20190304
         /// </summary>
         /// <param name="req"><see cref="DeleteQueueRequest"/></param>
         /// <returns><see cref="DeleteQueueResponse"/></returns>
-        public async Task<DeleteQueueResponse> DeleteQueue(DeleteQueueRequest req)
+        public Task<DeleteQueueResponse> DeleteQueue(DeleteQueueRequest req)
         {
-             JsonResponseModel<DeleteQueueResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteQueue");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteQueueResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteQueueResponse>(req, "DeleteQueue");
         }
 
         /// <summary>
@@ -279,17 +174,8 @@ namespace TencentCloud.Cmq.V20190304
         /// <returns><see cref="DeleteQueueResponse"/></returns>
         public DeleteQueueResponse DeleteQueueSync(DeleteQueueRequest req)
         {
-             JsonResponseModel<DeleteQueueResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteQueue");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteQueueResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteQueueResponse>(req, "DeleteQueue")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -297,19 +183,9 @@ namespace TencentCloud.Cmq.V20190304
         /// </summary>
         /// <param name="req"><see cref="DeleteSubscribeRequest"/></param>
         /// <returns><see cref="DeleteSubscribeResponse"/></returns>
-        public async Task<DeleteSubscribeResponse> DeleteSubscribe(DeleteSubscribeRequest req)
+        public Task<DeleteSubscribeResponse> DeleteSubscribe(DeleteSubscribeRequest req)
         {
-             JsonResponseModel<DeleteSubscribeResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteSubscribe");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSubscribeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteSubscribeResponse>(req, "DeleteSubscribe");
         }
 
         /// <summary>
@@ -319,17 +195,8 @@ namespace TencentCloud.Cmq.V20190304
         /// <returns><see cref="DeleteSubscribeResponse"/></returns>
         public DeleteSubscribeResponse DeleteSubscribeSync(DeleteSubscribeRequest req)
         {
-             JsonResponseModel<DeleteSubscribeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteSubscribe");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSubscribeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteSubscribeResponse>(req, "DeleteSubscribe")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -337,19 +204,9 @@ namespace TencentCloud.Cmq.V20190304
         /// </summary>
         /// <param name="req"><see cref="DeleteTopicRequest"/></param>
         /// <returns><see cref="DeleteTopicResponse"/></returns>
-        public async Task<DeleteTopicResponse> DeleteTopic(DeleteTopicRequest req)
+        public Task<DeleteTopicResponse> DeleteTopic(DeleteTopicRequest req)
         {
-             JsonResponseModel<DeleteTopicResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteTopic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTopicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteTopicResponse>(req, "DeleteTopic");
         }
 
         /// <summary>
@@ -359,17 +216,8 @@ namespace TencentCloud.Cmq.V20190304
         /// <returns><see cref="DeleteTopicResponse"/></returns>
         public DeleteTopicResponse DeleteTopicSync(DeleteTopicRequest req)
         {
-             JsonResponseModel<DeleteTopicResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteTopic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTopicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteTopicResponse>(req, "DeleteTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -377,19 +225,9 @@ namespace TencentCloud.Cmq.V20190304
         /// </summary>
         /// <param name="req"><see cref="DescribeDeadLetterSourceQueuesRequest"/></param>
         /// <returns><see cref="DescribeDeadLetterSourceQueuesResponse"/></returns>
-        public async Task<DescribeDeadLetterSourceQueuesResponse> DescribeDeadLetterSourceQueues(DescribeDeadLetterSourceQueuesRequest req)
+        public Task<DescribeDeadLetterSourceQueuesResponse> DescribeDeadLetterSourceQueues(DescribeDeadLetterSourceQueuesRequest req)
         {
-             JsonResponseModel<DescribeDeadLetterSourceQueuesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDeadLetterSourceQueues");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeadLetterSourceQueuesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDeadLetterSourceQueuesResponse>(req, "DescribeDeadLetterSourceQueues");
         }
 
         /// <summary>
@@ -399,17 +237,8 @@ namespace TencentCloud.Cmq.V20190304
         /// <returns><see cref="DescribeDeadLetterSourceQueuesResponse"/></returns>
         public DescribeDeadLetterSourceQueuesResponse DescribeDeadLetterSourceQueuesSync(DescribeDeadLetterSourceQueuesRequest req)
         {
-             JsonResponseModel<DescribeDeadLetterSourceQueuesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDeadLetterSourceQueues");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeadLetterSourceQueuesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDeadLetterSourceQueuesResponse>(req, "DescribeDeadLetterSourceQueues")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -417,19 +246,9 @@ namespace TencentCloud.Cmq.V20190304
         /// </summary>
         /// <param name="req"><see cref="DescribeQueueDetailRequest"/></param>
         /// <returns><see cref="DescribeQueueDetailResponse"/></returns>
-        public async Task<DescribeQueueDetailResponse> DescribeQueueDetail(DescribeQueueDetailRequest req)
+        public Task<DescribeQueueDetailResponse> DescribeQueueDetail(DescribeQueueDetailRequest req)
         {
-             JsonResponseModel<DescribeQueueDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeQueueDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQueueDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeQueueDetailResponse>(req, "DescribeQueueDetail");
         }
 
         /// <summary>
@@ -439,17 +258,8 @@ namespace TencentCloud.Cmq.V20190304
         /// <returns><see cref="DescribeQueueDetailResponse"/></returns>
         public DescribeQueueDetailResponse DescribeQueueDetailSync(DescribeQueueDetailRequest req)
         {
-             JsonResponseModel<DescribeQueueDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeQueueDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQueueDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeQueueDetailResponse>(req, "DescribeQueueDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -457,19 +267,9 @@ namespace TencentCloud.Cmq.V20190304
         /// </summary>
         /// <param name="req"><see cref="DescribeSubscriptionDetailRequest"/></param>
         /// <returns><see cref="DescribeSubscriptionDetailResponse"/></returns>
-        public async Task<DescribeSubscriptionDetailResponse> DescribeSubscriptionDetail(DescribeSubscriptionDetailRequest req)
+        public Task<DescribeSubscriptionDetailResponse> DescribeSubscriptionDetail(DescribeSubscriptionDetailRequest req)
         {
-             JsonResponseModel<DescribeSubscriptionDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeSubscriptionDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubscriptionDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeSubscriptionDetailResponse>(req, "DescribeSubscriptionDetail");
         }
 
         /// <summary>
@@ -479,17 +279,8 @@ namespace TencentCloud.Cmq.V20190304
         /// <returns><see cref="DescribeSubscriptionDetailResponse"/></returns>
         public DescribeSubscriptionDetailResponse DescribeSubscriptionDetailSync(DescribeSubscriptionDetailRequest req)
         {
-             JsonResponseModel<DescribeSubscriptionDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeSubscriptionDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubscriptionDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeSubscriptionDetailResponse>(req, "DescribeSubscriptionDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -497,19 +288,9 @@ namespace TencentCloud.Cmq.V20190304
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicDetailRequest"/></param>
         /// <returns><see cref="DescribeTopicDetailResponse"/></returns>
-        public async Task<DescribeTopicDetailResponse> DescribeTopicDetail(DescribeTopicDetailRequest req)
+        public Task<DescribeTopicDetailResponse> DescribeTopicDetail(DescribeTopicDetailRequest req)
         {
-             JsonResponseModel<DescribeTopicDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeTopicDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeTopicDetailResponse>(req, "DescribeTopicDetail");
         }
 
         /// <summary>
@@ -519,17 +300,8 @@ namespace TencentCloud.Cmq.V20190304
         /// <returns><see cref="DescribeTopicDetailResponse"/></returns>
         public DescribeTopicDetailResponse DescribeTopicDetailSync(DescribeTopicDetailRequest req)
         {
-             JsonResponseModel<DescribeTopicDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeTopicDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeTopicDetailResponse>(req, "DescribeTopicDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -537,19 +309,9 @@ namespace TencentCloud.Cmq.V20190304
         /// </summary>
         /// <param name="req"><see cref="ModifyQueueAttributeRequest"/></param>
         /// <returns><see cref="ModifyQueueAttributeResponse"/></returns>
-        public async Task<ModifyQueueAttributeResponse> ModifyQueueAttribute(ModifyQueueAttributeRequest req)
+        public Task<ModifyQueueAttributeResponse> ModifyQueueAttribute(ModifyQueueAttributeRequest req)
         {
-             JsonResponseModel<ModifyQueueAttributeResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyQueueAttribute");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyQueueAttributeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyQueueAttributeResponse>(req, "ModifyQueueAttribute");
         }
 
         /// <summary>
@@ -559,17 +321,8 @@ namespace TencentCloud.Cmq.V20190304
         /// <returns><see cref="ModifyQueueAttributeResponse"/></returns>
         public ModifyQueueAttributeResponse ModifyQueueAttributeSync(ModifyQueueAttributeRequest req)
         {
-             JsonResponseModel<ModifyQueueAttributeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyQueueAttribute");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyQueueAttributeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyQueueAttributeResponse>(req, "ModifyQueueAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -577,19 +330,9 @@ namespace TencentCloud.Cmq.V20190304
         /// </summary>
         /// <param name="req"><see cref="ModifySubscriptionAttributeRequest"/></param>
         /// <returns><see cref="ModifySubscriptionAttributeResponse"/></returns>
-        public async Task<ModifySubscriptionAttributeResponse> ModifySubscriptionAttribute(ModifySubscriptionAttributeRequest req)
+        public Task<ModifySubscriptionAttributeResponse> ModifySubscriptionAttribute(ModifySubscriptionAttributeRequest req)
         {
-             JsonResponseModel<ModifySubscriptionAttributeResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifySubscriptionAttribute");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySubscriptionAttributeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifySubscriptionAttributeResponse>(req, "ModifySubscriptionAttribute");
         }
 
         /// <summary>
@@ -599,17 +342,8 @@ namespace TencentCloud.Cmq.V20190304
         /// <returns><see cref="ModifySubscriptionAttributeResponse"/></returns>
         public ModifySubscriptionAttributeResponse ModifySubscriptionAttributeSync(ModifySubscriptionAttributeRequest req)
         {
-             JsonResponseModel<ModifySubscriptionAttributeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifySubscriptionAttribute");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySubscriptionAttributeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifySubscriptionAttributeResponse>(req, "ModifySubscriptionAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -617,19 +351,9 @@ namespace TencentCloud.Cmq.V20190304
         /// </summary>
         /// <param name="req"><see cref="ModifyTopicAttributeRequest"/></param>
         /// <returns><see cref="ModifyTopicAttributeResponse"/></returns>
-        public async Task<ModifyTopicAttributeResponse> ModifyTopicAttribute(ModifyTopicAttributeRequest req)
+        public Task<ModifyTopicAttributeResponse> ModifyTopicAttribute(ModifyTopicAttributeRequest req)
         {
-             JsonResponseModel<ModifyTopicAttributeResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyTopicAttribute");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTopicAttributeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyTopicAttributeResponse>(req, "ModifyTopicAttribute");
         }
 
         /// <summary>
@@ -639,17 +363,8 @@ namespace TencentCloud.Cmq.V20190304
         /// <returns><see cref="ModifyTopicAttributeResponse"/></returns>
         public ModifyTopicAttributeResponse ModifyTopicAttributeSync(ModifyTopicAttributeRequest req)
         {
-             JsonResponseModel<ModifyTopicAttributeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyTopicAttribute");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTopicAttributeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyTopicAttributeResponse>(req, "ModifyTopicAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -657,19 +372,9 @@ namespace TencentCloud.Cmq.V20190304
         /// </summary>
         /// <param name="req"><see cref="RewindQueueRequest"/></param>
         /// <returns><see cref="RewindQueueResponse"/></returns>
-        public async Task<RewindQueueResponse> RewindQueue(RewindQueueRequest req)
+        public Task<RewindQueueResponse> RewindQueue(RewindQueueRequest req)
         {
-             JsonResponseModel<RewindQueueResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RewindQueue");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RewindQueueResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RewindQueueResponse>(req, "RewindQueue");
         }
 
         /// <summary>
@@ -679,17 +384,8 @@ namespace TencentCloud.Cmq.V20190304
         /// <returns><see cref="RewindQueueResponse"/></returns>
         public RewindQueueResponse RewindQueueSync(RewindQueueRequest req)
         {
-             JsonResponseModel<RewindQueueResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RewindQueue");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RewindQueueResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RewindQueueResponse>(req, "RewindQueue")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -697,19 +393,9 @@ namespace TencentCloud.Cmq.V20190304
         /// </summary>
         /// <param name="req"><see cref="UnbindDeadLetterRequest"/></param>
         /// <returns><see cref="UnbindDeadLetterResponse"/></returns>
-        public async Task<UnbindDeadLetterResponse> UnbindDeadLetter(UnbindDeadLetterRequest req)
+        public Task<UnbindDeadLetterResponse> UnbindDeadLetter(UnbindDeadLetterRequest req)
         {
-             JsonResponseModel<UnbindDeadLetterResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "UnbindDeadLetter");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindDeadLetterResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UnbindDeadLetterResponse>(req, "UnbindDeadLetter");
         }
 
         /// <summary>
@@ -719,17 +405,8 @@ namespace TencentCloud.Cmq.V20190304
         /// <returns><see cref="UnbindDeadLetterResponse"/></returns>
         public UnbindDeadLetterResponse UnbindDeadLetterSync(UnbindDeadLetterRequest req)
         {
-             JsonResponseModel<UnbindDeadLetterResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UnbindDeadLetter");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindDeadLetterResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UnbindDeadLetterResponse>(req, "UnbindDeadLetter")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

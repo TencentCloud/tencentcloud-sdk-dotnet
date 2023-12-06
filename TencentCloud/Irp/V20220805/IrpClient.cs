@@ -57,19 +57,9 @@ namespace TencentCloud.Irp.V20220805
         /// </summary>
         /// <param name="req"><see cref="DescribeGoodsRecommendRequest"/></param>
         /// <returns><see cref="DescribeGoodsRecommendResponse"/></returns>
-        public async Task<DescribeGoodsRecommendResponse> DescribeGoodsRecommend(DescribeGoodsRecommendRequest req)
+        public Task<DescribeGoodsRecommendResponse> DescribeGoodsRecommend(DescribeGoodsRecommendRequest req)
         {
-             JsonResponseModel<DescribeGoodsRecommendResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeGoodsRecommend");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGoodsRecommendResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeGoodsRecommendResponse>(req, "DescribeGoodsRecommend");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Irp.V20220805
         /// <returns><see cref="DescribeGoodsRecommendResponse"/></returns>
         public DescribeGoodsRecommendResponse DescribeGoodsRecommendSync(DescribeGoodsRecommendRequest req)
         {
-             JsonResponseModel<DescribeGoodsRecommendResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeGoodsRecommend");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGoodsRecommendResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeGoodsRecommendResponse>(req, "DescribeGoodsRecommend")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Irp.V20220805
         /// </summary>
         /// <param name="req"><see cref="FeedRecommendRequest"/></param>
         /// <returns><see cref="FeedRecommendResponse"/></returns>
-        public async Task<FeedRecommendResponse> FeedRecommend(FeedRecommendRequest req)
+        public Task<FeedRecommendResponse> FeedRecommend(FeedRecommendRequest req)
         {
-             JsonResponseModel<FeedRecommendResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "FeedRecommend");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FeedRecommendResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<FeedRecommendResponse>(req, "FeedRecommend");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Irp.V20220805
         /// <returns><see cref="FeedRecommendResponse"/></returns>
         public FeedRecommendResponse FeedRecommendSync(FeedRecommendRequest req)
         {
-             JsonResponseModel<FeedRecommendResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "FeedRecommend");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FeedRecommendResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<FeedRecommendResponse>(req, "FeedRecommend")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Irp.V20220805
         /// </summary>
         /// <param name="req"><see cref="ReportFeedBehaviorRequest"/></param>
         /// <returns><see cref="ReportFeedBehaviorResponse"/></returns>
-        public async Task<ReportFeedBehaviorResponse> ReportFeedBehavior(ReportFeedBehaviorRequest req)
+        public Task<ReportFeedBehaviorResponse> ReportFeedBehavior(ReportFeedBehaviorRequest req)
         {
-             JsonResponseModel<ReportFeedBehaviorResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ReportFeedBehavior");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportFeedBehaviorResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ReportFeedBehaviorResponse>(req, "ReportFeedBehavior");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Irp.V20220805
         /// <returns><see cref="ReportFeedBehaviorResponse"/></returns>
         public ReportFeedBehaviorResponse ReportFeedBehaviorSync(ReportFeedBehaviorRequest req)
         {
-             JsonResponseModel<ReportFeedBehaviorResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ReportFeedBehavior");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportFeedBehaviorResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ReportFeedBehaviorResponse>(req, "ReportFeedBehavior")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Irp.V20220805
         /// </summary>
         /// <param name="req"><see cref="ReportFeedItemRequest"/></param>
         /// <returns><see cref="ReportFeedItemResponse"/></returns>
-        public async Task<ReportFeedItemResponse> ReportFeedItem(ReportFeedItemRequest req)
+        public Task<ReportFeedItemResponse> ReportFeedItem(ReportFeedItemRequest req)
         {
-             JsonResponseModel<ReportFeedItemResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ReportFeedItem");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportFeedItemResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ReportFeedItemResponse>(req, "ReportFeedItem");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Irp.V20220805
         /// <returns><see cref="ReportFeedItemResponse"/></returns>
         public ReportFeedItemResponse ReportFeedItemSync(ReportFeedItemRequest req)
         {
-             JsonResponseModel<ReportFeedItemResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ReportFeedItem");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportFeedItemResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ReportFeedItemResponse>(req, "ReportFeedItem")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -217,19 +141,9 @@ namespace TencentCloud.Irp.V20220805
         /// </summary>
         /// <param name="req"><see cref="ReportFeedUserRequest"/></param>
         /// <returns><see cref="ReportFeedUserResponse"/></returns>
-        public async Task<ReportFeedUserResponse> ReportFeedUser(ReportFeedUserRequest req)
+        public Task<ReportFeedUserResponse> ReportFeedUser(ReportFeedUserRequest req)
         {
-             JsonResponseModel<ReportFeedUserResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ReportFeedUser");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportFeedUserResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ReportFeedUserResponse>(req, "ReportFeedUser");
         }
 
         /// <summary>
@@ -239,17 +153,8 @@ namespace TencentCloud.Irp.V20220805
         /// <returns><see cref="ReportFeedUserResponse"/></returns>
         public ReportFeedUserResponse ReportFeedUserSync(ReportFeedUserRequest req)
         {
-             JsonResponseModel<ReportFeedUserResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ReportFeedUser");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportFeedUserResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ReportFeedUserResponse>(req, "ReportFeedUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -257,19 +162,9 @@ namespace TencentCloud.Irp.V20220805
         /// </summary>
         /// <param name="req"><see cref="ReportGoodsBehaviorRequest"/></param>
         /// <returns><see cref="ReportGoodsBehaviorResponse"/></returns>
-        public async Task<ReportGoodsBehaviorResponse> ReportGoodsBehavior(ReportGoodsBehaviorRequest req)
+        public Task<ReportGoodsBehaviorResponse> ReportGoodsBehavior(ReportGoodsBehaviorRequest req)
         {
-             JsonResponseModel<ReportGoodsBehaviorResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ReportGoodsBehavior");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportGoodsBehaviorResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ReportGoodsBehaviorResponse>(req, "ReportGoodsBehavior");
         }
 
         /// <summary>
@@ -279,17 +174,8 @@ namespace TencentCloud.Irp.V20220805
         /// <returns><see cref="ReportGoodsBehaviorResponse"/></returns>
         public ReportGoodsBehaviorResponse ReportGoodsBehaviorSync(ReportGoodsBehaviorRequest req)
         {
-             JsonResponseModel<ReportGoodsBehaviorResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ReportGoodsBehavior");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportGoodsBehaviorResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ReportGoodsBehaviorResponse>(req, "ReportGoodsBehavior")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -297,19 +183,9 @@ namespace TencentCloud.Irp.V20220805
         /// </summary>
         /// <param name="req"><see cref="ReportGoodsInfoRequest"/></param>
         /// <returns><see cref="ReportGoodsInfoResponse"/></returns>
-        public async Task<ReportGoodsInfoResponse> ReportGoodsInfo(ReportGoodsInfoRequest req)
+        public Task<ReportGoodsInfoResponse> ReportGoodsInfo(ReportGoodsInfoRequest req)
         {
-             JsonResponseModel<ReportGoodsInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ReportGoodsInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportGoodsInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ReportGoodsInfoResponse>(req, "ReportGoodsInfo");
         }
 
         /// <summary>
@@ -319,17 +195,8 @@ namespace TencentCloud.Irp.V20220805
         /// <returns><see cref="ReportGoodsInfoResponse"/></returns>
         public ReportGoodsInfoResponse ReportGoodsInfoSync(ReportGoodsInfoRequest req)
         {
-             JsonResponseModel<ReportGoodsInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ReportGoodsInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportGoodsInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ReportGoodsInfoResponse>(req, "ReportGoodsInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

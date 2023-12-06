@@ -66,6 +66,12 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
+        /// <summary>
+        /// 访问次数限制，限制范围1-99999，为空则不设置访问次数限制
+        /// </summary>
+        [JsonProperty("TicketNum")]
+        public long? TicketNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "ExtraParam", this.ExtraParam);
             this.SetParamSimple(map, prefix + "UserCorpId", this.UserCorpId);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "TicketNum", this.TicketNum);
         }
     }
 }

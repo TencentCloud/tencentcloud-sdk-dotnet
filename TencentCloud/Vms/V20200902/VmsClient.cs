@@ -57,19 +57,9 @@ namespace TencentCloud.Vms.V20200902
         /// </summary>
         /// <param name="req"><see cref="SendCodeVoiceRequest"/></param>
         /// <returns><see cref="SendCodeVoiceResponse"/></returns>
-        public async Task<SendCodeVoiceResponse> SendCodeVoice(SendCodeVoiceRequest req)
+        public Task<SendCodeVoiceResponse> SendCodeVoice(SendCodeVoiceRequest req)
         {
-             JsonResponseModel<SendCodeVoiceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SendCodeVoice");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendCodeVoiceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SendCodeVoiceResponse>(req, "SendCodeVoice");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Vms.V20200902
         /// <returns><see cref="SendCodeVoiceResponse"/></returns>
         public SendCodeVoiceResponse SendCodeVoiceSync(SendCodeVoiceRequest req)
         {
-             JsonResponseModel<SendCodeVoiceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SendCodeVoice");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendCodeVoiceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SendCodeVoiceResponse>(req, "SendCodeVoice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Vms.V20200902
         /// </summary>
         /// <param name="req"><see cref="SendTtsVoiceRequest"/></param>
         /// <returns><see cref="SendTtsVoiceResponse"/></returns>
-        public async Task<SendTtsVoiceResponse> SendTtsVoice(SendTtsVoiceRequest req)
+        public Task<SendTtsVoiceResponse> SendTtsVoice(SendTtsVoiceRequest req)
         {
-             JsonResponseModel<SendTtsVoiceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SendTtsVoice");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendTtsVoiceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SendTtsVoiceResponse>(req, "SendTtsVoice");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Vms.V20200902
         /// <returns><see cref="SendTtsVoiceResponse"/></returns>
         public SendTtsVoiceResponse SendTtsVoiceSync(SendTtsVoiceRequest req)
         {
-             JsonResponseModel<SendTtsVoiceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SendTtsVoice");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendTtsVoiceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SendTtsVoiceResponse>(req, "SendTtsVoice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

@@ -57,19 +57,9 @@ namespace TencentCloud.Bpaas.V20181217
         /// </summary>
         /// <param name="req"><see cref="GetBpaasApproveDetailRequest"/></param>
         /// <returns><see cref="GetBpaasApproveDetailResponse"/></returns>
-        public async Task<GetBpaasApproveDetailResponse> GetBpaasApproveDetail(GetBpaasApproveDetailRequest req)
+        public Task<GetBpaasApproveDetailResponse> GetBpaasApproveDetail(GetBpaasApproveDetailRequest req)
         {
-             JsonResponseModel<GetBpaasApproveDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetBpaasApproveDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetBpaasApproveDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetBpaasApproveDetailResponse>(req, "GetBpaasApproveDetail");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Bpaas.V20181217
         /// <returns><see cref="GetBpaasApproveDetailResponse"/></returns>
         public GetBpaasApproveDetailResponse GetBpaasApproveDetailSync(GetBpaasApproveDetailRequest req)
         {
-             JsonResponseModel<GetBpaasApproveDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetBpaasApproveDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetBpaasApproveDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetBpaasApproveDetailResponse>(req, "GetBpaasApproveDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Bpaas.V20181217
         /// </summary>
         /// <param name="req"><see cref="OutApproveBpaasApplicationRequest"/></param>
         /// <returns><see cref="OutApproveBpaasApplicationResponse"/></returns>
-        public async Task<OutApproveBpaasApplicationResponse> OutApproveBpaasApplication(OutApproveBpaasApplicationRequest req)
+        public Task<OutApproveBpaasApplicationResponse> OutApproveBpaasApplication(OutApproveBpaasApplicationRequest req)
         {
-             JsonResponseModel<OutApproveBpaasApplicationResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "OutApproveBpaasApplication");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OutApproveBpaasApplicationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<OutApproveBpaasApplicationResponse>(req, "OutApproveBpaasApplication");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Bpaas.V20181217
         /// <returns><see cref="OutApproveBpaasApplicationResponse"/></returns>
         public OutApproveBpaasApplicationResponse OutApproveBpaasApplicationSync(OutApproveBpaasApplicationRequest req)
         {
-             JsonResponseModel<OutApproveBpaasApplicationResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "OutApproveBpaasApplication");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OutApproveBpaasApplicationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<OutApproveBpaasApplicationResponse>(req, "OutApproveBpaasApplication")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

@@ -70,19 +70,9 @@ namespace TencentCloud.Sts.V20180813
         /// </summary>
         /// <param name="req"><see cref="AssumeRoleRequest"/></param>
         /// <returns><see cref="AssumeRoleResponse"/></returns>
-        public async Task<AssumeRoleResponse> AssumeRole(AssumeRoleRequest req)
+        public Task<AssumeRoleResponse> AssumeRole(AssumeRoleRequest req)
         {
-             JsonResponseModel<AssumeRoleResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "AssumeRole");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssumeRoleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<AssumeRoleResponse>(req, "AssumeRole");
         }
 
         /// <summary>
@@ -105,17 +95,8 @@ namespace TencentCloud.Sts.V20180813
         /// <returns><see cref="AssumeRoleResponse"/></returns>
         public AssumeRoleResponse AssumeRoleSync(AssumeRoleRequest req)
         {
-             JsonResponseModel<AssumeRoleResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "AssumeRole");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssumeRoleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<AssumeRoleResponse>(req, "AssumeRole")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -125,19 +106,9 @@ namespace TencentCloud.Sts.V20180813
         /// </summary>
         /// <param name="req"><see cref="AssumeRoleWithSAMLRequest"/></param>
         /// <returns><see cref="AssumeRoleWithSAMLResponse"/></returns>
-        public async Task<AssumeRoleWithSAMLResponse> AssumeRoleWithSAML(AssumeRoleWithSAMLRequest req)
+        public Task<AssumeRoleWithSAMLResponse> AssumeRoleWithSAML(AssumeRoleWithSAMLRequest req)
         {
-             JsonResponseModel<AssumeRoleWithSAMLResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "AssumeRoleWithSAML");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssumeRoleWithSAMLResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<AssumeRoleWithSAMLResponse>(req, "AssumeRoleWithSAML");
         }
 
         /// <summary>
@@ -149,17 +120,8 @@ namespace TencentCloud.Sts.V20180813
         /// <returns><see cref="AssumeRoleWithSAMLResponse"/></returns>
         public AssumeRoleWithSAMLResponse AssumeRoleWithSAMLSync(AssumeRoleWithSAMLRequest req)
         {
-             JsonResponseModel<AssumeRoleWithSAMLResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "AssumeRoleWithSAML");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssumeRoleWithSAMLResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<AssumeRoleWithSAMLResponse>(req, "AssumeRoleWithSAML")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -169,19 +131,9 @@ namespace TencentCloud.Sts.V20180813
         /// </summary>
         /// <param name="req"><see cref="AssumeRoleWithWebIdentityRequest"/></param>
         /// <returns><see cref="AssumeRoleWithWebIdentityResponse"/></returns>
-        public async Task<AssumeRoleWithWebIdentityResponse> AssumeRoleWithWebIdentity(AssumeRoleWithWebIdentityRequest req)
+        public Task<AssumeRoleWithWebIdentityResponse> AssumeRoleWithWebIdentity(AssumeRoleWithWebIdentityRequest req)
         {
-             JsonResponseModel<AssumeRoleWithWebIdentityResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "AssumeRoleWithWebIdentity");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssumeRoleWithWebIdentityResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<AssumeRoleWithWebIdentityResponse>(req, "AssumeRoleWithWebIdentity");
         }
 
         /// <summary>
@@ -193,17 +145,8 @@ namespace TencentCloud.Sts.V20180813
         /// <returns><see cref="AssumeRoleWithWebIdentityResponse"/></returns>
         public AssumeRoleWithWebIdentityResponse AssumeRoleWithWebIdentitySync(AssumeRoleWithWebIdentityRequest req)
         {
-             JsonResponseModel<AssumeRoleWithWebIdentityResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "AssumeRoleWithWebIdentity");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssumeRoleWithWebIdentityResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<AssumeRoleWithWebIdentityResponse>(req, "AssumeRoleWithWebIdentity")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -213,19 +156,9 @@ namespace TencentCloud.Sts.V20180813
         /// </summary>
         /// <param name="req"><see cref="GetCallerIdentityRequest"/></param>
         /// <returns><see cref="GetCallerIdentityResponse"/></returns>
-        public async Task<GetCallerIdentityResponse> GetCallerIdentity(GetCallerIdentityRequest req)
+        public Task<GetCallerIdentityResponse> GetCallerIdentity(GetCallerIdentityRequest req)
         {
-             JsonResponseModel<GetCallerIdentityResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetCallerIdentity");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCallerIdentityResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetCallerIdentityResponse>(req, "GetCallerIdentity");
         }
 
         /// <summary>
@@ -237,17 +170,8 @@ namespace TencentCloud.Sts.V20180813
         /// <returns><see cref="GetCallerIdentityResponse"/></returns>
         public GetCallerIdentityResponse GetCallerIdentitySync(GetCallerIdentityRequest req)
         {
-             JsonResponseModel<GetCallerIdentityResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetCallerIdentity");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCallerIdentityResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetCallerIdentityResponse>(req, "GetCallerIdentity")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -263,19 +187,9 @@ namespace TencentCloud.Sts.V20180813
         /// </summary>
         /// <param name="req"><see cref="GetFederationTokenRequest"/></param>
         /// <returns><see cref="GetFederationTokenResponse"/></returns>
-        public async Task<GetFederationTokenResponse> GetFederationToken(GetFederationTokenRequest req)
+        public Task<GetFederationTokenResponse> GetFederationToken(GetFederationTokenRequest req)
         {
-             JsonResponseModel<GetFederationTokenResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetFederationToken");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFederationTokenResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetFederationTokenResponse>(req, "GetFederationToken");
         }
 
         /// <summary>
@@ -293,17 +207,8 @@ namespace TencentCloud.Sts.V20180813
         /// <returns><see cref="GetFederationTokenResponse"/></returns>
         public GetFederationTokenResponse GetFederationTokenSync(GetFederationTokenRequest req)
         {
-             JsonResponseModel<GetFederationTokenResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetFederationToken");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFederationTokenResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetFederationTokenResponse>(req, "GetFederationToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -311,19 +216,9 @@ namespace TencentCloud.Sts.V20180813
         /// </summary>
         /// <param name="req"><see cref="QueryApiKeyRequest"/></param>
         /// <returns><see cref="QueryApiKeyResponse"/></returns>
-        public async Task<QueryApiKeyResponse> QueryApiKey(QueryApiKeyRequest req)
+        public Task<QueryApiKeyResponse> QueryApiKey(QueryApiKeyRequest req)
         {
-             JsonResponseModel<QueryApiKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryApiKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryApiKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryApiKeyResponse>(req, "QueryApiKey");
         }
 
         /// <summary>
@@ -333,17 +228,8 @@ namespace TencentCloud.Sts.V20180813
         /// <returns><see cref="QueryApiKeyResponse"/></returns>
         public QueryApiKeyResponse QueryApiKeySync(QueryApiKeyRequest req)
         {
-             JsonResponseModel<QueryApiKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryApiKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryApiKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryApiKeyResponse>(req, "QueryApiKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

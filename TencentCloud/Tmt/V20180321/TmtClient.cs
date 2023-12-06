@@ -57,19 +57,9 @@ namespace TencentCloud.Tmt.V20180321
         /// </summary>
         /// <param name="req"><see cref="FileTranslateRequest"/></param>
         /// <returns><see cref="FileTranslateResponse"/></returns>
-        public async Task<FileTranslateResponse> FileTranslate(FileTranslateRequest req)
+        public Task<FileTranslateResponse> FileTranslate(FileTranslateRequest req)
         {
-             JsonResponseModel<FileTranslateResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "FileTranslate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FileTranslateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<FileTranslateResponse>(req, "FileTranslate");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Tmt.V20180321
         /// <returns><see cref="FileTranslateResponse"/></returns>
         public FileTranslateResponse FileTranslateSync(FileTranslateRequest req)
         {
-             JsonResponseModel<FileTranslateResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "FileTranslate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FileTranslateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<FileTranslateResponse>(req, "FileTranslate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -99,19 +80,9 @@ namespace TencentCloud.Tmt.V20180321
         /// </summary>
         /// <param name="req"><see cref="GetFileTranslateRequest"/></param>
         /// <returns><see cref="GetFileTranslateResponse"/></returns>
-        public async Task<GetFileTranslateResponse> GetFileTranslate(GetFileTranslateRequest req)
+        public Task<GetFileTranslateResponse> GetFileTranslate(GetFileTranslateRequest req)
         {
-             JsonResponseModel<GetFileTranslateResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetFileTranslate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFileTranslateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetFileTranslateResponse>(req, "GetFileTranslate");
         }
 
         /// <summary>
@@ -123,17 +94,8 @@ namespace TencentCloud.Tmt.V20180321
         /// <returns><see cref="GetFileTranslateResponse"/></returns>
         public GetFileTranslateResponse GetFileTranslateSync(GetFileTranslateRequest req)
         {
-             JsonResponseModel<GetFileTranslateResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetFileTranslate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFileTranslateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetFileTranslateResponse>(req, "GetFileTranslate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -142,19 +104,9 @@ namespace TencentCloud.Tmt.V20180321
         /// </summary>
         /// <param name="req"><see cref="ImageTranslateRequest"/></param>
         /// <returns><see cref="ImageTranslateResponse"/></returns>
-        public async Task<ImageTranslateResponse> ImageTranslate(ImageTranslateRequest req)
+        public Task<ImageTranslateResponse> ImageTranslate(ImageTranslateRequest req)
         {
-             JsonResponseModel<ImageTranslateResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ImageTranslate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImageTranslateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ImageTranslateResponse>(req, "ImageTranslate");
         }
 
         /// <summary>
@@ -165,17 +117,8 @@ namespace TencentCloud.Tmt.V20180321
         /// <returns><see cref="ImageTranslateResponse"/></returns>
         public ImageTranslateResponse ImageTranslateSync(ImageTranslateRequest req)
         {
-             JsonResponseModel<ImageTranslateResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ImageTranslate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImageTranslateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ImageTranslateResponse>(req, "ImageTranslate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -184,19 +127,9 @@ namespace TencentCloud.Tmt.V20180321
         /// </summary>
         /// <param name="req"><see cref="LanguageDetectRequest"/></param>
         /// <returns><see cref="LanguageDetectResponse"/></returns>
-        public async Task<LanguageDetectResponse> LanguageDetect(LanguageDetectRequest req)
+        public Task<LanguageDetectResponse> LanguageDetect(LanguageDetectRequest req)
         {
-             JsonResponseModel<LanguageDetectResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "LanguageDetect");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LanguageDetectResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<LanguageDetectResponse>(req, "LanguageDetect");
         }
 
         /// <summary>
@@ -207,17 +140,8 @@ namespace TencentCloud.Tmt.V20180321
         /// <returns><see cref="LanguageDetectResponse"/></returns>
         public LanguageDetectResponse LanguageDetectSync(LanguageDetectRequest req)
         {
-             JsonResponseModel<LanguageDetectResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "LanguageDetect");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LanguageDetectResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<LanguageDetectResponse>(req, "LanguageDetect")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -228,19 +152,9 @@ namespace TencentCloud.Tmt.V20180321
         /// </summary>
         /// <param name="req"><see cref="SpeechTranslateRequest"/></param>
         /// <returns><see cref="SpeechTranslateResponse"/></returns>
-        public async Task<SpeechTranslateResponse> SpeechTranslate(SpeechTranslateRequest req)
+        public Task<SpeechTranslateResponse> SpeechTranslate(SpeechTranslateRequest req)
         {
-             JsonResponseModel<SpeechTranslateResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SpeechTranslate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SpeechTranslateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SpeechTranslateResponse>(req, "SpeechTranslate");
         }
 
         /// <summary>
@@ -253,17 +167,8 @@ namespace TencentCloud.Tmt.V20180321
         /// <returns><see cref="SpeechTranslateResponse"/></returns>
         public SpeechTranslateResponse SpeechTranslateSync(SpeechTranslateRequest req)
         {
-             JsonResponseModel<SpeechTranslateResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SpeechTranslate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SpeechTranslateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SpeechTranslateResponse>(req, "SpeechTranslate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -272,19 +177,9 @@ namespace TencentCloud.Tmt.V20180321
         /// </summary>
         /// <param name="req"><see cref="TextTranslateRequest"/></param>
         /// <returns><see cref="TextTranslateResponse"/></returns>
-        public async Task<TextTranslateResponse> TextTranslate(TextTranslateRequest req)
+        public Task<TextTranslateResponse> TextTranslate(TextTranslateRequest req)
         {
-             JsonResponseModel<TextTranslateResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "TextTranslate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextTranslateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TextTranslateResponse>(req, "TextTranslate");
         }
 
         /// <summary>
@@ -295,17 +190,8 @@ namespace TencentCloud.Tmt.V20180321
         /// <returns><see cref="TextTranslateResponse"/></returns>
         public TextTranslateResponse TextTranslateSync(TextTranslateRequest req)
         {
-             JsonResponseModel<TextTranslateResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "TextTranslate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextTranslateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TextTranslateResponse>(req, "TextTranslate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -313,19 +199,9 @@ namespace TencentCloud.Tmt.V20180321
         /// </summary>
         /// <param name="req"><see cref="TextTranslateBatchRequest"/></param>
         /// <returns><see cref="TextTranslateBatchResponse"/></returns>
-        public async Task<TextTranslateBatchResponse> TextTranslateBatch(TextTranslateBatchRequest req)
+        public Task<TextTranslateBatchResponse> TextTranslateBatch(TextTranslateBatchRequest req)
         {
-             JsonResponseModel<TextTranslateBatchResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "TextTranslateBatch");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextTranslateBatchResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TextTranslateBatchResponse>(req, "TextTranslateBatch");
         }
 
         /// <summary>
@@ -335,17 +211,8 @@ namespace TencentCloud.Tmt.V20180321
         /// <returns><see cref="TextTranslateBatchResponse"/></returns>
         public TextTranslateBatchResponse TextTranslateBatchSync(TextTranslateBatchRequest req)
         {
-             JsonResponseModel<TextTranslateBatchResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "TextTranslateBatch");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextTranslateBatchResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TextTranslateBatchResponse>(req, "TextTranslateBatch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

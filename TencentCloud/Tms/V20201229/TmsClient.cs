@@ -73,19 +73,9 @@ namespace TencentCloud.Tms.V20201229
         /// </summary>
         /// <param name="req"><see cref="TextModerationRequest"/></param>
         /// <returns><see cref="TextModerationResponse"/></returns>
-        public async Task<TextModerationResponse> TextModeration(TextModerationRequest req)
+        public Task<TextModerationResponse> TextModeration(TextModerationRequest req)
         {
-             JsonResponseModel<TextModerationResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "TextModeration");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextModerationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TextModerationResponse>(req, "TextModeration");
         }
 
         /// <summary>
@@ -111,17 +101,8 @@ namespace TencentCloud.Tms.V20201229
         /// <returns><see cref="TextModerationResponse"/></returns>
         public TextModerationResponse TextModerationSync(TextModerationRequest req)
         {
-             JsonResponseModel<TextModerationResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "TextModeration");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextModerationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TextModerationResponse>(req, "TextModeration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

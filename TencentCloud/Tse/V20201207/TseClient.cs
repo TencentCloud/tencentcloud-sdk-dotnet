@@ -57,19 +57,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="CloseWafProtectionRequest"/></param>
         /// <returns><see cref="CloseWafProtectionResponse"/></returns>
-        public async Task<CloseWafProtectionResponse> CloseWafProtection(CloseWafProtectionRequest req)
+        public Task<CloseWafProtectionResponse> CloseWafProtection(CloseWafProtectionRequest req)
         {
-             JsonResponseModel<CloseWafProtectionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CloseWafProtection");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseWafProtectionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CloseWafProtectionResponse>(req, "CloseWafProtection");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="CloseWafProtectionResponse"/></returns>
         public CloseWafProtectionResponse CloseWafProtectionSync(CloseWafProtectionRequest req)
         {
-             JsonResponseModel<CloseWafProtectionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CloseWafProtection");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseWafProtectionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CloseWafProtectionResponse>(req, "CloseWafProtection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="CreateCloudNativeAPIGatewayRequest"/></param>
         /// <returns><see cref="CreateCloudNativeAPIGatewayResponse"/></returns>
-        public async Task<CreateCloudNativeAPIGatewayResponse> CreateCloudNativeAPIGateway(CreateCloudNativeAPIGatewayRequest req)
+        public Task<CreateCloudNativeAPIGatewayResponse> CreateCloudNativeAPIGateway(CreateCloudNativeAPIGatewayRequest req)
         {
-             JsonResponseModel<CreateCloudNativeAPIGatewayResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateCloudNativeAPIGateway");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudNativeAPIGatewayResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayResponse>(req, "CreateCloudNativeAPIGateway");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="CreateCloudNativeAPIGatewayResponse"/></returns>
         public CreateCloudNativeAPIGatewayResponse CreateCloudNativeAPIGatewaySync(CreateCloudNativeAPIGatewayRequest req)
         {
-             JsonResponseModel<CreateCloudNativeAPIGatewayResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateCloudNativeAPIGateway");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudNativeAPIGatewayResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayResponse>(req, "CreateCloudNativeAPIGateway")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="CreateCloudNativeAPIGatewayCanaryRuleRequest"/></param>
         /// <returns><see cref="CreateCloudNativeAPIGatewayCanaryRuleResponse"/></returns>
-        public async Task<CreateCloudNativeAPIGatewayCanaryRuleResponse> CreateCloudNativeAPIGatewayCanaryRule(CreateCloudNativeAPIGatewayCanaryRuleRequest req)
+        public Task<CreateCloudNativeAPIGatewayCanaryRuleResponse> CreateCloudNativeAPIGatewayCanaryRule(CreateCloudNativeAPIGatewayCanaryRuleRequest req)
         {
-             JsonResponseModel<CreateCloudNativeAPIGatewayCanaryRuleResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateCloudNativeAPIGatewayCanaryRule");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudNativeAPIGatewayCanaryRuleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayCanaryRuleResponse>(req, "CreateCloudNativeAPIGatewayCanaryRule");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="CreateCloudNativeAPIGatewayCanaryRuleResponse"/></returns>
         public CreateCloudNativeAPIGatewayCanaryRuleResponse CreateCloudNativeAPIGatewayCanaryRuleSync(CreateCloudNativeAPIGatewayCanaryRuleRequest req)
         {
-             JsonResponseModel<CreateCloudNativeAPIGatewayCanaryRuleResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateCloudNativeAPIGatewayCanaryRule");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudNativeAPIGatewayCanaryRuleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayCanaryRuleResponse>(req, "CreateCloudNativeAPIGatewayCanaryRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="CreateCloudNativeAPIGatewayCertificateRequest"/></param>
         /// <returns><see cref="CreateCloudNativeAPIGatewayCertificateResponse"/></returns>
-        public async Task<CreateCloudNativeAPIGatewayCertificateResponse> CreateCloudNativeAPIGatewayCertificate(CreateCloudNativeAPIGatewayCertificateRequest req)
+        public Task<CreateCloudNativeAPIGatewayCertificateResponse> CreateCloudNativeAPIGatewayCertificate(CreateCloudNativeAPIGatewayCertificateRequest req)
         {
-             JsonResponseModel<CreateCloudNativeAPIGatewayCertificateResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateCloudNativeAPIGatewayCertificate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudNativeAPIGatewayCertificateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayCertificateResponse>(req, "CreateCloudNativeAPIGatewayCertificate");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="CreateCloudNativeAPIGatewayCertificateResponse"/></returns>
         public CreateCloudNativeAPIGatewayCertificateResponse CreateCloudNativeAPIGatewayCertificateSync(CreateCloudNativeAPIGatewayCertificateRequest req)
         {
-             JsonResponseModel<CreateCloudNativeAPIGatewayCertificateResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateCloudNativeAPIGatewayCertificate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudNativeAPIGatewayCertificateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayCertificateResponse>(req, "CreateCloudNativeAPIGatewayCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -217,19 +141,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="CreateCloudNativeAPIGatewayRouteRequest"/></param>
         /// <returns><see cref="CreateCloudNativeAPIGatewayRouteResponse"/></returns>
-        public async Task<CreateCloudNativeAPIGatewayRouteResponse> CreateCloudNativeAPIGatewayRoute(CreateCloudNativeAPIGatewayRouteRequest req)
+        public Task<CreateCloudNativeAPIGatewayRouteResponse> CreateCloudNativeAPIGatewayRoute(CreateCloudNativeAPIGatewayRouteRequest req)
         {
-             JsonResponseModel<CreateCloudNativeAPIGatewayRouteResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateCloudNativeAPIGatewayRoute");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudNativeAPIGatewayRouteResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayRouteResponse>(req, "CreateCloudNativeAPIGatewayRoute");
         }
 
         /// <summary>
@@ -239,17 +153,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="CreateCloudNativeAPIGatewayRouteResponse"/></returns>
         public CreateCloudNativeAPIGatewayRouteResponse CreateCloudNativeAPIGatewayRouteSync(CreateCloudNativeAPIGatewayRouteRequest req)
         {
-             JsonResponseModel<CreateCloudNativeAPIGatewayRouteResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateCloudNativeAPIGatewayRoute");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudNativeAPIGatewayRouteResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayRouteResponse>(req, "CreateCloudNativeAPIGatewayRoute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -257,19 +162,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="CreateCloudNativeAPIGatewayRouteRateLimitRequest"/></param>
         /// <returns><see cref="CreateCloudNativeAPIGatewayRouteRateLimitResponse"/></returns>
-        public async Task<CreateCloudNativeAPIGatewayRouteRateLimitResponse> CreateCloudNativeAPIGatewayRouteRateLimit(CreateCloudNativeAPIGatewayRouteRateLimitRequest req)
+        public Task<CreateCloudNativeAPIGatewayRouteRateLimitResponse> CreateCloudNativeAPIGatewayRouteRateLimit(CreateCloudNativeAPIGatewayRouteRateLimitRequest req)
         {
-             JsonResponseModel<CreateCloudNativeAPIGatewayRouteRateLimitResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateCloudNativeAPIGatewayRouteRateLimit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudNativeAPIGatewayRouteRateLimitResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayRouteRateLimitResponse>(req, "CreateCloudNativeAPIGatewayRouteRateLimit");
         }
 
         /// <summary>
@@ -279,17 +174,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="CreateCloudNativeAPIGatewayRouteRateLimitResponse"/></returns>
         public CreateCloudNativeAPIGatewayRouteRateLimitResponse CreateCloudNativeAPIGatewayRouteRateLimitSync(CreateCloudNativeAPIGatewayRouteRateLimitRequest req)
         {
-             JsonResponseModel<CreateCloudNativeAPIGatewayRouteRateLimitResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateCloudNativeAPIGatewayRouteRateLimit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudNativeAPIGatewayRouteRateLimitResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayRouteRateLimitResponse>(req, "CreateCloudNativeAPIGatewayRouteRateLimit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -297,19 +183,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="CreateCloudNativeAPIGatewayServiceRequest"/></param>
         /// <returns><see cref="CreateCloudNativeAPIGatewayServiceResponse"/></returns>
-        public async Task<CreateCloudNativeAPIGatewayServiceResponse> CreateCloudNativeAPIGatewayService(CreateCloudNativeAPIGatewayServiceRequest req)
+        public Task<CreateCloudNativeAPIGatewayServiceResponse> CreateCloudNativeAPIGatewayService(CreateCloudNativeAPIGatewayServiceRequest req)
         {
-             JsonResponseModel<CreateCloudNativeAPIGatewayServiceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateCloudNativeAPIGatewayService");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudNativeAPIGatewayServiceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayServiceResponse>(req, "CreateCloudNativeAPIGatewayService");
         }
 
         /// <summary>
@@ -319,17 +195,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="CreateCloudNativeAPIGatewayServiceResponse"/></returns>
         public CreateCloudNativeAPIGatewayServiceResponse CreateCloudNativeAPIGatewayServiceSync(CreateCloudNativeAPIGatewayServiceRequest req)
         {
-             JsonResponseModel<CreateCloudNativeAPIGatewayServiceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateCloudNativeAPIGatewayService");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudNativeAPIGatewayServiceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayServiceResponse>(req, "CreateCloudNativeAPIGatewayService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -337,19 +204,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="CreateCloudNativeAPIGatewayServiceRateLimitRequest"/></param>
         /// <returns><see cref="CreateCloudNativeAPIGatewayServiceRateLimitResponse"/></returns>
-        public async Task<CreateCloudNativeAPIGatewayServiceRateLimitResponse> CreateCloudNativeAPIGatewayServiceRateLimit(CreateCloudNativeAPIGatewayServiceRateLimitRequest req)
+        public Task<CreateCloudNativeAPIGatewayServiceRateLimitResponse> CreateCloudNativeAPIGatewayServiceRateLimit(CreateCloudNativeAPIGatewayServiceRateLimitRequest req)
         {
-             JsonResponseModel<CreateCloudNativeAPIGatewayServiceRateLimitResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateCloudNativeAPIGatewayServiceRateLimit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudNativeAPIGatewayServiceRateLimitResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayServiceRateLimitResponse>(req, "CreateCloudNativeAPIGatewayServiceRateLimit");
         }
 
         /// <summary>
@@ -359,17 +216,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="CreateCloudNativeAPIGatewayServiceRateLimitResponse"/></returns>
         public CreateCloudNativeAPIGatewayServiceRateLimitResponse CreateCloudNativeAPIGatewayServiceRateLimitSync(CreateCloudNativeAPIGatewayServiceRateLimitRequest req)
         {
-             JsonResponseModel<CreateCloudNativeAPIGatewayServiceRateLimitResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateCloudNativeAPIGatewayServiceRateLimit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudNativeAPIGatewayServiceRateLimitResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayServiceRateLimitResponse>(req, "CreateCloudNativeAPIGatewayServiceRateLimit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -377,19 +225,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="CreateEngineRequest"/></param>
         /// <returns><see cref="CreateEngineResponse"/></returns>
-        public async Task<CreateEngineResponse> CreateEngine(CreateEngineRequest req)
+        public Task<CreateEngineResponse> CreateEngine(CreateEngineRequest req)
         {
-             JsonResponseModel<CreateEngineResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateEngine");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEngineResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateEngineResponse>(req, "CreateEngine");
         }
 
         /// <summary>
@@ -399,17 +237,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="CreateEngineResponse"/></returns>
         public CreateEngineResponse CreateEngineSync(CreateEngineRequest req)
         {
-             JsonResponseModel<CreateEngineResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateEngine");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEngineResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateEngineResponse>(req, "CreateEngine")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -417,19 +246,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="CreateNativeGatewayServerGroupRequest"/></param>
         /// <returns><see cref="CreateNativeGatewayServerGroupResponse"/></returns>
-        public async Task<CreateNativeGatewayServerGroupResponse> CreateNativeGatewayServerGroup(CreateNativeGatewayServerGroupRequest req)
+        public Task<CreateNativeGatewayServerGroupResponse> CreateNativeGatewayServerGroup(CreateNativeGatewayServerGroupRequest req)
         {
-             JsonResponseModel<CreateNativeGatewayServerGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateNativeGatewayServerGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNativeGatewayServerGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateNativeGatewayServerGroupResponse>(req, "CreateNativeGatewayServerGroup");
         }
 
         /// <summary>
@@ -439,17 +258,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="CreateNativeGatewayServerGroupResponse"/></returns>
         public CreateNativeGatewayServerGroupResponse CreateNativeGatewayServerGroupSync(CreateNativeGatewayServerGroupRequest req)
         {
-             JsonResponseModel<CreateNativeGatewayServerGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateNativeGatewayServerGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNativeGatewayServerGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateNativeGatewayServerGroupResponse>(req, "CreateNativeGatewayServerGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -457,19 +267,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="CreateWafDomainsRequest"/></param>
         /// <returns><see cref="CreateWafDomainsResponse"/></returns>
-        public async Task<CreateWafDomainsResponse> CreateWafDomains(CreateWafDomainsRequest req)
+        public Task<CreateWafDomainsResponse> CreateWafDomains(CreateWafDomainsRequest req)
         {
-             JsonResponseModel<CreateWafDomainsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateWafDomains");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWafDomainsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateWafDomainsResponse>(req, "CreateWafDomains");
         }
 
         /// <summary>
@@ -479,17 +279,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="CreateWafDomainsResponse"/></returns>
         public CreateWafDomainsResponse CreateWafDomainsSync(CreateWafDomainsRequest req)
         {
-             JsonResponseModel<CreateWafDomainsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateWafDomains");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWafDomainsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateWafDomainsResponse>(req, "CreateWafDomains")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -497,19 +288,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayRequest"/></param>
         /// <returns><see cref="DeleteCloudNativeAPIGatewayResponse"/></returns>
-        public async Task<DeleteCloudNativeAPIGatewayResponse> DeleteCloudNativeAPIGateway(DeleteCloudNativeAPIGatewayRequest req)
+        public Task<DeleteCloudNativeAPIGatewayResponse> DeleteCloudNativeAPIGateway(DeleteCloudNativeAPIGatewayRequest req)
         {
-             JsonResponseModel<DeleteCloudNativeAPIGatewayResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteCloudNativeAPIGateway");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudNativeAPIGatewayResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayResponse>(req, "DeleteCloudNativeAPIGateway");
         }
 
         /// <summary>
@@ -519,17 +300,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DeleteCloudNativeAPIGatewayResponse"/></returns>
         public DeleteCloudNativeAPIGatewayResponse DeleteCloudNativeAPIGatewaySync(DeleteCloudNativeAPIGatewayRequest req)
         {
-             JsonResponseModel<DeleteCloudNativeAPIGatewayResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteCloudNativeAPIGateway");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudNativeAPIGatewayResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayResponse>(req, "DeleteCloudNativeAPIGateway")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -537,19 +309,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayCanaryRuleRequest"/></param>
         /// <returns><see cref="DeleteCloudNativeAPIGatewayCanaryRuleResponse"/></returns>
-        public async Task<DeleteCloudNativeAPIGatewayCanaryRuleResponse> DeleteCloudNativeAPIGatewayCanaryRule(DeleteCloudNativeAPIGatewayCanaryRuleRequest req)
+        public Task<DeleteCloudNativeAPIGatewayCanaryRuleResponse> DeleteCloudNativeAPIGatewayCanaryRule(DeleteCloudNativeAPIGatewayCanaryRuleRequest req)
         {
-             JsonResponseModel<DeleteCloudNativeAPIGatewayCanaryRuleResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteCloudNativeAPIGatewayCanaryRule");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudNativeAPIGatewayCanaryRuleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayCanaryRuleResponse>(req, "DeleteCloudNativeAPIGatewayCanaryRule");
         }
 
         /// <summary>
@@ -559,17 +321,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DeleteCloudNativeAPIGatewayCanaryRuleResponse"/></returns>
         public DeleteCloudNativeAPIGatewayCanaryRuleResponse DeleteCloudNativeAPIGatewayCanaryRuleSync(DeleteCloudNativeAPIGatewayCanaryRuleRequest req)
         {
-             JsonResponseModel<DeleteCloudNativeAPIGatewayCanaryRuleResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteCloudNativeAPIGatewayCanaryRule");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudNativeAPIGatewayCanaryRuleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayCanaryRuleResponse>(req, "DeleteCloudNativeAPIGatewayCanaryRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -577,19 +330,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayCertificateRequest"/></param>
         /// <returns><see cref="DeleteCloudNativeAPIGatewayCertificateResponse"/></returns>
-        public async Task<DeleteCloudNativeAPIGatewayCertificateResponse> DeleteCloudNativeAPIGatewayCertificate(DeleteCloudNativeAPIGatewayCertificateRequest req)
+        public Task<DeleteCloudNativeAPIGatewayCertificateResponse> DeleteCloudNativeAPIGatewayCertificate(DeleteCloudNativeAPIGatewayCertificateRequest req)
         {
-             JsonResponseModel<DeleteCloudNativeAPIGatewayCertificateResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteCloudNativeAPIGatewayCertificate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudNativeAPIGatewayCertificateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayCertificateResponse>(req, "DeleteCloudNativeAPIGatewayCertificate");
         }
 
         /// <summary>
@@ -599,17 +342,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DeleteCloudNativeAPIGatewayCertificateResponse"/></returns>
         public DeleteCloudNativeAPIGatewayCertificateResponse DeleteCloudNativeAPIGatewayCertificateSync(DeleteCloudNativeAPIGatewayCertificateRequest req)
         {
-             JsonResponseModel<DeleteCloudNativeAPIGatewayCertificateResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteCloudNativeAPIGatewayCertificate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudNativeAPIGatewayCertificateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayCertificateResponse>(req, "DeleteCloudNativeAPIGatewayCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -617,19 +351,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayRouteRequest"/></param>
         /// <returns><see cref="DeleteCloudNativeAPIGatewayRouteResponse"/></returns>
-        public async Task<DeleteCloudNativeAPIGatewayRouteResponse> DeleteCloudNativeAPIGatewayRoute(DeleteCloudNativeAPIGatewayRouteRequest req)
+        public Task<DeleteCloudNativeAPIGatewayRouteResponse> DeleteCloudNativeAPIGatewayRoute(DeleteCloudNativeAPIGatewayRouteRequest req)
         {
-             JsonResponseModel<DeleteCloudNativeAPIGatewayRouteResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteCloudNativeAPIGatewayRoute");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudNativeAPIGatewayRouteResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayRouteResponse>(req, "DeleteCloudNativeAPIGatewayRoute");
         }
 
         /// <summary>
@@ -639,17 +363,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DeleteCloudNativeAPIGatewayRouteResponse"/></returns>
         public DeleteCloudNativeAPIGatewayRouteResponse DeleteCloudNativeAPIGatewayRouteSync(DeleteCloudNativeAPIGatewayRouteRequest req)
         {
-             JsonResponseModel<DeleteCloudNativeAPIGatewayRouteResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteCloudNativeAPIGatewayRoute");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudNativeAPIGatewayRouteResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayRouteResponse>(req, "DeleteCloudNativeAPIGatewayRoute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -657,19 +372,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayRouteRateLimitRequest"/></param>
         /// <returns><see cref="DeleteCloudNativeAPIGatewayRouteRateLimitResponse"/></returns>
-        public async Task<DeleteCloudNativeAPIGatewayRouteRateLimitResponse> DeleteCloudNativeAPIGatewayRouteRateLimit(DeleteCloudNativeAPIGatewayRouteRateLimitRequest req)
+        public Task<DeleteCloudNativeAPIGatewayRouteRateLimitResponse> DeleteCloudNativeAPIGatewayRouteRateLimit(DeleteCloudNativeAPIGatewayRouteRateLimitRequest req)
         {
-             JsonResponseModel<DeleteCloudNativeAPIGatewayRouteRateLimitResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteCloudNativeAPIGatewayRouteRateLimit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudNativeAPIGatewayRouteRateLimitResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayRouteRateLimitResponse>(req, "DeleteCloudNativeAPIGatewayRouteRateLimit");
         }
 
         /// <summary>
@@ -679,17 +384,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DeleteCloudNativeAPIGatewayRouteRateLimitResponse"/></returns>
         public DeleteCloudNativeAPIGatewayRouteRateLimitResponse DeleteCloudNativeAPIGatewayRouteRateLimitSync(DeleteCloudNativeAPIGatewayRouteRateLimitRequest req)
         {
-             JsonResponseModel<DeleteCloudNativeAPIGatewayRouteRateLimitResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteCloudNativeAPIGatewayRouteRateLimit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudNativeAPIGatewayRouteRateLimitResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayRouteRateLimitResponse>(req, "DeleteCloudNativeAPIGatewayRouteRateLimit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -697,19 +393,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayServiceRequest"/></param>
         /// <returns><see cref="DeleteCloudNativeAPIGatewayServiceResponse"/></returns>
-        public async Task<DeleteCloudNativeAPIGatewayServiceResponse> DeleteCloudNativeAPIGatewayService(DeleteCloudNativeAPIGatewayServiceRequest req)
+        public Task<DeleteCloudNativeAPIGatewayServiceResponse> DeleteCloudNativeAPIGatewayService(DeleteCloudNativeAPIGatewayServiceRequest req)
         {
-             JsonResponseModel<DeleteCloudNativeAPIGatewayServiceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteCloudNativeAPIGatewayService");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudNativeAPIGatewayServiceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayServiceResponse>(req, "DeleteCloudNativeAPIGatewayService");
         }
 
         /// <summary>
@@ -719,17 +405,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DeleteCloudNativeAPIGatewayServiceResponse"/></returns>
         public DeleteCloudNativeAPIGatewayServiceResponse DeleteCloudNativeAPIGatewayServiceSync(DeleteCloudNativeAPIGatewayServiceRequest req)
         {
-             JsonResponseModel<DeleteCloudNativeAPIGatewayServiceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteCloudNativeAPIGatewayService");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudNativeAPIGatewayServiceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayServiceResponse>(req, "DeleteCloudNativeAPIGatewayService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -737,19 +414,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayServiceRateLimitRequest"/></param>
         /// <returns><see cref="DeleteCloudNativeAPIGatewayServiceRateLimitResponse"/></returns>
-        public async Task<DeleteCloudNativeAPIGatewayServiceRateLimitResponse> DeleteCloudNativeAPIGatewayServiceRateLimit(DeleteCloudNativeAPIGatewayServiceRateLimitRequest req)
+        public Task<DeleteCloudNativeAPIGatewayServiceRateLimitResponse> DeleteCloudNativeAPIGatewayServiceRateLimit(DeleteCloudNativeAPIGatewayServiceRateLimitRequest req)
         {
-             JsonResponseModel<DeleteCloudNativeAPIGatewayServiceRateLimitResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteCloudNativeAPIGatewayServiceRateLimit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudNativeAPIGatewayServiceRateLimitResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayServiceRateLimitResponse>(req, "DeleteCloudNativeAPIGatewayServiceRateLimit");
         }
 
         /// <summary>
@@ -759,17 +426,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DeleteCloudNativeAPIGatewayServiceRateLimitResponse"/></returns>
         public DeleteCloudNativeAPIGatewayServiceRateLimitResponse DeleteCloudNativeAPIGatewayServiceRateLimitSync(DeleteCloudNativeAPIGatewayServiceRateLimitRequest req)
         {
-             JsonResponseModel<DeleteCloudNativeAPIGatewayServiceRateLimitResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteCloudNativeAPIGatewayServiceRateLimit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudNativeAPIGatewayServiceRateLimitResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayServiceRateLimitResponse>(req, "DeleteCloudNativeAPIGatewayServiceRateLimit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -777,19 +435,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DeleteEngineRequest"/></param>
         /// <returns><see cref="DeleteEngineResponse"/></returns>
-        public async Task<DeleteEngineResponse> DeleteEngine(DeleteEngineRequest req)
+        public Task<DeleteEngineResponse> DeleteEngine(DeleteEngineRequest req)
         {
-             JsonResponseModel<DeleteEngineResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteEngine");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEngineResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteEngineResponse>(req, "DeleteEngine");
         }
 
         /// <summary>
@@ -799,17 +447,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DeleteEngineResponse"/></returns>
         public DeleteEngineResponse DeleteEngineSync(DeleteEngineRequest req)
         {
-             JsonResponseModel<DeleteEngineResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteEngine");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEngineResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteEngineResponse>(req, "DeleteEngine")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -817,19 +456,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DeleteNativeGatewayServerGroupRequest"/></param>
         /// <returns><see cref="DeleteNativeGatewayServerGroupResponse"/></returns>
-        public async Task<DeleteNativeGatewayServerGroupResponse> DeleteNativeGatewayServerGroup(DeleteNativeGatewayServerGroupRequest req)
+        public Task<DeleteNativeGatewayServerGroupResponse> DeleteNativeGatewayServerGroup(DeleteNativeGatewayServerGroupRequest req)
         {
-             JsonResponseModel<DeleteNativeGatewayServerGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteNativeGatewayServerGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNativeGatewayServerGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteNativeGatewayServerGroupResponse>(req, "DeleteNativeGatewayServerGroup");
         }
 
         /// <summary>
@@ -839,17 +468,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DeleteNativeGatewayServerGroupResponse"/></returns>
         public DeleteNativeGatewayServerGroupResponse DeleteNativeGatewayServerGroupSync(DeleteNativeGatewayServerGroupRequest req)
         {
-             JsonResponseModel<DeleteNativeGatewayServerGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteNativeGatewayServerGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNativeGatewayServerGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteNativeGatewayServerGroupResponse>(req, "DeleteNativeGatewayServerGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -857,19 +477,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DeleteWafDomainsRequest"/></param>
         /// <returns><see cref="DeleteWafDomainsResponse"/></returns>
-        public async Task<DeleteWafDomainsResponse> DeleteWafDomains(DeleteWafDomainsRequest req)
+        public Task<DeleteWafDomainsResponse> DeleteWafDomains(DeleteWafDomainsRequest req)
         {
-             JsonResponseModel<DeleteWafDomainsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteWafDomains");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWafDomainsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteWafDomainsResponse>(req, "DeleteWafDomains");
         }
 
         /// <summary>
@@ -879,17 +489,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DeleteWafDomainsResponse"/></returns>
         public DeleteWafDomainsResponse DeleteWafDomainsSync(DeleteWafDomainsRequest req)
         {
-             JsonResponseModel<DeleteWafDomainsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteWafDomains");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWafDomainsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteWafDomainsResponse>(req, "DeleteWafDomains")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -897,19 +498,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayResponse"/></returns>
-        public async Task<DescribeCloudNativeAPIGatewayResponse> DescribeCloudNativeAPIGateway(DescribeCloudNativeAPIGatewayRequest req)
+        public Task<DescribeCloudNativeAPIGatewayResponse> DescribeCloudNativeAPIGateway(DescribeCloudNativeAPIGatewayRequest req)
         {
-             JsonResponseModel<DescribeCloudNativeAPIGatewayResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCloudNativeAPIGateway");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayResponse>(req, "DescribeCloudNativeAPIGateway");
         }
 
         /// <summary>
@@ -919,17 +510,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DescribeCloudNativeAPIGatewayResponse"/></returns>
         public DescribeCloudNativeAPIGatewayResponse DescribeCloudNativeAPIGatewaySync(DescribeCloudNativeAPIGatewayRequest req)
         {
-             JsonResponseModel<DescribeCloudNativeAPIGatewayResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCloudNativeAPIGateway");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayResponse>(req, "DescribeCloudNativeAPIGateway")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -937,19 +519,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayCanaryRulesRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayCanaryRulesResponse"/></returns>
-        public async Task<DescribeCloudNativeAPIGatewayCanaryRulesResponse> DescribeCloudNativeAPIGatewayCanaryRules(DescribeCloudNativeAPIGatewayCanaryRulesRequest req)
+        public Task<DescribeCloudNativeAPIGatewayCanaryRulesResponse> DescribeCloudNativeAPIGatewayCanaryRules(DescribeCloudNativeAPIGatewayCanaryRulesRequest req)
         {
-             JsonResponseModel<DescribeCloudNativeAPIGatewayCanaryRulesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCloudNativeAPIGatewayCanaryRules");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayCanaryRulesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayCanaryRulesResponse>(req, "DescribeCloudNativeAPIGatewayCanaryRules");
         }
 
         /// <summary>
@@ -959,17 +531,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DescribeCloudNativeAPIGatewayCanaryRulesResponse"/></returns>
         public DescribeCloudNativeAPIGatewayCanaryRulesResponse DescribeCloudNativeAPIGatewayCanaryRulesSync(DescribeCloudNativeAPIGatewayCanaryRulesRequest req)
         {
-             JsonResponseModel<DescribeCloudNativeAPIGatewayCanaryRulesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCloudNativeAPIGatewayCanaryRules");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayCanaryRulesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayCanaryRulesResponse>(req, "DescribeCloudNativeAPIGatewayCanaryRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -977,19 +540,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayCertificateDetailsRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayCertificateDetailsResponse"/></returns>
-        public async Task<DescribeCloudNativeAPIGatewayCertificateDetailsResponse> DescribeCloudNativeAPIGatewayCertificateDetails(DescribeCloudNativeAPIGatewayCertificateDetailsRequest req)
+        public Task<DescribeCloudNativeAPIGatewayCertificateDetailsResponse> DescribeCloudNativeAPIGatewayCertificateDetails(DescribeCloudNativeAPIGatewayCertificateDetailsRequest req)
         {
-             JsonResponseModel<DescribeCloudNativeAPIGatewayCertificateDetailsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCloudNativeAPIGatewayCertificateDetails");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayCertificateDetailsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayCertificateDetailsResponse>(req, "DescribeCloudNativeAPIGatewayCertificateDetails");
         }
 
         /// <summary>
@@ -999,17 +552,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DescribeCloudNativeAPIGatewayCertificateDetailsResponse"/></returns>
         public DescribeCloudNativeAPIGatewayCertificateDetailsResponse DescribeCloudNativeAPIGatewayCertificateDetailsSync(DescribeCloudNativeAPIGatewayCertificateDetailsRequest req)
         {
-             JsonResponseModel<DescribeCloudNativeAPIGatewayCertificateDetailsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCloudNativeAPIGatewayCertificateDetails");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayCertificateDetailsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayCertificateDetailsResponse>(req, "DescribeCloudNativeAPIGatewayCertificateDetails")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1017,19 +561,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayCertificatesRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayCertificatesResponse"/></returns>
-        public async Task<DescribeCloudNativeAPIGatewayCertificatesResponse> DescribeCloudNativeAPIGatewayCertificates(DescribeCloudNativeAPIGatewayCertificatesRequest req)
+        public Task<DescribeCloudNativeAPIGatewayCertificatesResponse> DescribeCloudNativeAPIGatewayCertificates(DescribeCloudNativeAPIGatewayCertificatesRequest req)
         {
-             JsonResponseModel<DescribeCloudNativeAPIGatewayCertificatesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCloudNativeAPIGatewayCertificates");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayCertificatesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayCertificatesResponse>(req, "DescribeCloudNativeAPIGatewayCertificates");
         }
 
         /// <summary>
@@ -1039,17 +573,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DescribeCloudNativeAPIGatewayCertificatesResponse"/></returns>
         public DescribeCloudNativeAPIGatewayCertificatesResponse DescribeCloudNativeAPIGatewayCertificatesSync(DescribeCloudNativeAPIGatewayCertificatesRequest req)
         {
-             JsonResponseModel<DescribeCloudNativeAPIGatewayCertificatesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCloudNativeAPIGatewayCertificates");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayCertificatesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayCertificatesResponse>(req, "DescribeCloudNativeAPIGatewayCertificates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1057,19 +582,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayConfigRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayConfigResponse"/></returns>
-        public async Task<DescribeCloudNativeAPIGatewayConfigResponse> DescribeCloudNativeAPIGatewayConfig(DescribeCloudNativeAPIGatewayConfigRequest req)
+        public Task<DescribeCloudNativeAPIGatewayConfigResponse> DescribeCloudNativeAPIGatewayConfig(DescribeCloudNativeAPIGatewayConfigRequest req)
         {
-             JsonResponseModel<DescribeCloudNativeAPIGatewayConfigResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCloudNativeAPIGatewayConfig");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayConfigResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayConfigResponse>(req, "DescribeCloudNativeAPIGatewayConfig");
         }
 
         /// <summary>
@@ -1079,17 +594,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DescribeCloudNativeAPIGatewayConfigResponse"/></returns>
         public DescribeCloudNativeAPIGatewayConfigResponse DescribeCloudNativeAPIGatewayConfigSync(DescribeCloudNativeAPIGatewayConfigRequest req)
         {
-             JsonResponseModel<DescribeCloudNativeAPIGatewayConfigResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCloudNativeAPIGatewayConfig");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayConfigResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayConfigResponse>(req, "DescribeCloudNativeAPIGatewayConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1097,19 +603,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayNodesRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayNodesResponse"/></returns>
-        public async Task<DescribeCloudNativeAPIGatewayNodesResponse> DescribeCloudNativeAPIGatewayNodes(DescribeCloudNativeAPIGatewayNodesRequest req)
+        public Task<DescribeCloudNativeAPIGatewayNodesResponse> DescribeCloudNativeAPIGatewayNodes(DescribeCloudNativeAPIGatewayNodesRequest req)
         {
-             JsonResponseModel<DescribeCloudNativeAPIGatewayNodesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCloudNativeAPIGatewayNodes");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayNodesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayNodesResponse>(req, "DescribeCloudNativeAPIGatewayNodes");
         }
 
         /// <summary>
@@ -1119,17 +615,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DescribeCloudNativeAPIGatewayNodesResponse"/></returns>
         public DescribeCloudNativeAPIGatewayNodesResponse DescribeCloudNativeAPIGatewayNodesSync(DescribeCloudNativeAPIGatewayNodesRequest req)
         {
-             JsonResponseModel<DescribeCloudNativeAPIGatewayNodesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCloudNativeAPIGatewayNodes");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayNodesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayNodesResponse>(req, "DescribeCloudNativeAPIGatewayNodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1137,19 +624,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayPortsRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayPortsResponse"/></returns>
-        public async Task<DescribeCloudNativeAPIGatewayPortsResponse> DescribeCloudNativeAPIGatewayPorts(DescribeCloudNativeAPIGatewayPortsRequest req)
+        public Task<DescribeCloudNativeAPIGatewayPortsResponse> DescribeCloudNativeAPIGatewayPorts(DescribeCloudNativeAPIGatewayPortsRequest req)
         {
-             JsonResponseModel<DescribeCloudNativeAPIGatewayPortsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCloudNativeAPIGatewayPorts");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayPortsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayPortsResponse>(req, "DescribeCloudNativeAPIGatewayPorts");
         }
 
         /// <summary>
@@ -1159,17 +636,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DescribeCloudNativeAPIGatewayPortsResponse"/></returns>
         public DescribeCloudNativeAPIGatewayPortsResponse DescribeCloudNativeAPIGatewayPortsSync(DescribeCloudNativeAPIGatewayPortsRequest req)
         {
-             JsonResponseModel<DescribeCloudNativeAPIGatewayPortsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCloudNativeAPIGatewayPorts");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayPortsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayPortsResponse>(req, "DescribeCloudNativeAPIGatewayPorts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1177,19 +645,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayRouteRateLimitRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayRouteRateLimitResponse"/></returns>
-        public async Task<DescribeCloudNativeAPIGatewayRouteRateLimitResponse> DescribeCloudNativeAPIGatewayRouteRateLimit(DescribeCloudNativeAPIGatewayRouteRateLimitRequest req)
+        public Task<DescribeCloudNativeAPIGatewayRouteRateLimitResponse> DescribeCloudNativeAPIGatewayRouteRateLimit(DescribeCloudNativeAPIGatewayRouteRateLimitRequest req)
         {
-             JsonResponseModel<DescribeCloudNativeAPIGatewayRouteRateLimitResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCloudNativeAPIGatewayRouteRateLimit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayRouteRateLimitResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayRouteRateLimitResponse>(req, "DescribeCloudNativeAPIGatewayRouteRateLimit");
         }
 
         /// <summary>
@@ -1199,17 +657,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DescribeCloudNativeAPIGatewayRouteRateLimitResponse"/></returns>
         public DescribeCloudNativeAPIGatewayRouteRateLimitResponse DescribeCloudNativeAPIGatewayRouteRateLimitSync(DescribeCloudNativeAPIGatewayRouteRateLimitRequest req)
         {
-             JsonResponseModel<DescribeCloudNativeAPIGatewayRouteRateLimitResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCloudNativeAPIGatewayRouteRateLimit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayRouteRateLimitResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayRouteRateLimitResponse>(req, "DescribeCloudNativeAPIGatewayRouteRateLimit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1217,19 +666,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayRoutesRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayRoutesResponse"/></returns>
-        public async Task<DescribeCloudNativeAPIGatewayRoutesResponse> DescribeCloudNativeAPIGatewayRoutes(DescribeCloudNativeAPIGatewayRoutesRequest req)
+        public Task<DescribeCloudNativeAPIGatewayRoutesResponse> DescribeCloudNativeAPIGatewayRoutes(DescribeCloudNativeAPIGatewayRoutesRequest req)
         {
-             JsonResponseModel<DescribeCloudNativeAPIGatewayRoutesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCloudNativeAPIGatewayRoutes");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayRoutesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayRoutesResponse>(req, "DescribeCloudNativeAPIGatewayRoutes");
         }
 
         /// <summary>
@@ -1239,17 +678,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DescribeCloudNativeAPIGatewayRoutesResponse"/></returns>
         public DescribeCloudNativeAPIGatewayRoutesResponse DescribeCloudNativeAPIGatewayRoutesSync(DescribeCloudNativeAPIGatewayRoutesRequest req)
         {
-             JsonResponseModel<DescribeCloudNativeAPIGatewayRoutesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCloudNativeAPIGatewayRoutes");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayRoutesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayRoutesResponse>(req, "DescribeCloudNativeAPIGatewayRoutes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1257,19 +687,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayServiceRateLimitRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayServiceRateLimitResponse"/></returns>
-        public async Task<DescribeCloudNativeAPIGatewayServiceRateLimitResponse> DescribeCloudNativeAPIGatewayServiceRateLimit(DescribeCloudNativeAPIGatewayServiceRateLimitRequest req)
+        public Task<DescribeCloudNativeAPIGatewayServiceRateLimitResponse> DescribeCloudNativeAPIGatewayServiceRateLimit(DescribeCloudNativeAPIGatewayServiceRateLimitRequest req)
         {
-             JsonResponseModel<DescribeCloudNativeAPIGatewayServiceRateLimitResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCloudNativeAPIGatewayServiceRateLimit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayServiceRateLimitResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayServiceRateLimitResponse>(req, "DescribeCloudNativeAPIGatewayServiceRateLimit");
         }
 
         /// <summary>
@@ -1279,17 +699,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DescribeCloudNativeAPIGatewayServiceRateLimitResponse"/></returns>
         public DescribeCloudNativeAPIGatewayServiceRateLimitResponse DescribeCloudNativeAPIGatewayServiceRateLimitSync(DescribeCloudNativeAPIGatewayServiceRateLimitRequest req)
         {
-             JsonResponseModel<DescribeCloudNativeAPIGatewayServiceRateLimitResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCloudNativeAPIGatewayServiceRateLimit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayServiceRateLimitResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayServiceRateLimitResponse>(req, "DescribeCloudNativeAPIGatewayServiceRateLimit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1297,19 +708,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayServicesRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayServicesResponse"/></returns>
-        public async Task<DescribeCloudNativeAPIGatewayServicesResponse> DescribeCloudNativeAPIGatewayServices(DescribeCloudNativeAPIGatewayServicesRequest req)
+        public Task<DescribeCloudNativeAPIGatewayServicesResponse> DescribeCloudNativeAPIGatewayServices(DescribeCloudNativeAPIGatewayServicesRequest req)
         {
-             JsonResponseModel<DescribeCloudNativeAPIGatewayServicesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCloudNativeAPIGatewayServices");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayServicesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayServicesResponse>(req, "DescribeCloudNativeAPIGatewayServices");
         }
 
         /// <summary>
@@ -1319,17 +720,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DescribeCloudNativeAPIGatewayServicesResponse"/></returns>
         public DescribeCloudNativeAPIGatewayServicesResponse DescribeCloudNativeAPIGatewayServicesSync(DescribeCloudNativeAPIGatewayServicesRequest req)
         {
-             JsonResponseModel<DescribeCloudNativeAPIGatewayServicesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCloudNativeAPIGatewayServices");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayServicesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayServicesResponse>(req, "DescribeCloudNativeAPIGatewayServices")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1337,19 +729,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayUpstreamRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewayUpstreamResponse"/></returns>
-        public async Task<DescribeCloudNativeAPIGatewayUpstreamResponse> DescribeCloudNativeAPIGatewayUpstream(DescribeCloudNativeAPIGatewayUpstreamRequest req)
+        public Task<DescribeCloudNativeAPIGatewayUpstreamResponse> DescribeCloudNativeAPIGatewayUpstream(DescribeCloudNativeAPIGatewayUpstreamRequest req)
         {
-             JsonResponseModel<DescribeCloudNativeAPIGatewayUpstreamResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCloudNativeAPIGatewayUpstream");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayUpstreamResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayUpstreamResponse>(req, "DescribeCloudNativeAPIGatewayUpstream");
         }
 
         /// <summary>
@@ -1359,17 +741,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DescribeCloudNativeAPIGatewayUpstreamResponse"/></returns>
         public DescribeCloudNativeAPIGatewayUpstreamResponse DescribeCloudNativeAPIGatewayUpstreamSync(DescribeCloudNativeAPIGatewayUpstreamRequest req)
         {
-             JsonResponseModel<DescribeCloudNativeAPIGatewayUpstreamResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCloudNativeAPIGatewayUpstream");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayUpstreamResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayUpstreamResponse>(req, "DescribeCloudNativeAPIGatewayUpstream")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1377,19 +750,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewaysRequest"/></param>
         /// <returns><see cref="DescribeCloudNativeAPIGatewaysResponse"/></returns>
-        public async Task<DescribeCloudNativeAPIGatewaysResponse> DescribeCloudNativeAPIGateways(DescribeCloudNativeAPIGatewaysRequest req)
+        public Task<DescribeCloudNativeAPIGatewaysResponse> DescribeCloudNativeAPIGateways(DescribeCloudNativeAPIGatewaysRequest req)
         {
-             JsonResponseModel<DescribeCloudNativeAPIGatewaysResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCloudNativeAPIGateways");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewaysResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewaysResponse>(req, "DescribeCloudNativeAPIGateways");
         }
 
         /// <summary>
@@ -1399,17 +762,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DescribeCloudNativeAPIGatewaysResponse"/></returns>
         public DescribeCloudNativeAPIGatewaysResponse DescribeCloudNativeAPIGatewaysSync(DescribeCloudNativeAPIGatewaysRequest req)
         {
-             JsonResponseModel<DescribeCloudNativeAPIGatewaysResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCloudNativeAPIGateways");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewaysResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewaysResponse>(req, "DescribeCloudNativeAPIGateways")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1417,19 +771,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DescribeNacosReplicasRequest"/></param>
         /// <returns><see cref="DescribeNacosReplicasResponse"/></returns>
-        public async Task<DescribeNacosReplicasResponse> DescribeNacosReplicas(DescribeNacosReplicasRequest req)
+        public Task<DescribeNacosReplicasResponse> DescribeNacosReplicas(DescribeNacosReplicasRequest req)
         {
-             JsonResponseModel<DescribeNacosReplicasResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeNacosReplicas");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNacosReplicasResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeNacosReplicasResponse>(req, "DescribeNacosReplicas");
         }
 
         /// <summary>
@@ -1439,17 +783,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DescribeNacosReplicasResponse"/></returns>
         public DescribeNacosReplicasResponse DescribeNacosReplicasSync(DescribeNacosReplicasRequest req)
         {
-             JsonResponseModel<DescribeNacosReplicasResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeNacosReplicas");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNacosReplicasResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeNacosReplicasResponse>(req, "DescribeNacosReplicas")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1457,19 +792,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DescribeNacosServerInterfacesRequest"/></param>
         /// <returns><see cref="DescribeNacosServerInterfacesResponse"/></returns>
-        public async Task<DescribeNacosServerInterfacesResponse> DescribeNacosServerInterfaces(DescribeNacosServerInterfacesRequest req)
+        public Task<DescribeNacosServerInterfacesResponse> DescribeNacosServerInterfaces(DescribeNacosServerInterfacesRequest req)
         {
-             JsonResponseModel<DescribeNacosServerInterfacesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeNacosServerInterfaces");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNacosServerInterfacesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeNacosServerInterfacesResponse>(req, "DescribeNacosServerInterfaces");
         }
 
         /// <summary>
@@ -1479,17 +804,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DescribeNacosServerInterfacesResponse"/></returns>
         public DescribeNacosServerInterfacesResponse DescribeNacosServerInterfacesSync(DescribeNacosServerInterfacesRequest req)
         {
-             JsonResponseModel<DescribeNacosServerInterfacesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeNacosServerInterfaces");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNacosServerInterfacesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeNacosServerInterfacesResponse>(req, "DescribeNacosServerInterfaces")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1497,19 +813,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DescribeNativeGatewayServerGroupsRequest"/></param>
         /// <returns><see cref="DescribeNativeGatewayServerGroupsResponse"/></returns>
-        public async Task<DescribeNativeGatewayServerGroupsResponse> DescribeNativeGatewayServerGroups(DescribeNativeGatewayServerGroupsRequest req)
+        public Task<DescribeNativeGatewayServerGroupsResponse> DescribeNativeGatewayServerGroups(DescribeNativeGatewayServerGroupsRequest req)
         {
-             JsonResponseModel<DescribeNativeGatewayServerGroupsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeNativeGatewayServerGroups");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNativeGatewayServerGroupsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeNativeGatewayServerGroupsResponse>(req, "DescribeNativeGatewayServerGroups");
         }
 
         /// <summary>
@@ -1519,17 +825,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DescribeNativeGatewayServerGroupsResponse"/></returns>
         public DescribeNativeGatewayServerGroupsResponse DescribeNativeGatewayServerGroupsSync(DescribeNativeGatewayServerGroupsRequest req)
         {
-             JsonResponseModel<DescribeNativeGatewayServerGroupsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeNativeGatewayServerGroups");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNativeGatewayServerGroupsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeNativeGatewayServerGroupsResponse>(req, "DescribeNativeGatewayServerGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1537,19 +834,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DescribeOneCloudNativeAPIGatewayServiceRequest"/></param>
         /// <returns><see cref="DescribeOneCloudNativeAPIGatewayServiceResponse"/></returns>
-        public async Task<DescribeOneCloudNativeAPIGatewayServiceResponse> DescribeOneCloudNativeAPIGatewayService(DescribeOneCloudNativeAPIGatewayServiceRequest req)
+        public Task<DescribeOneCloudNativeAPIGatewayServiceResponse> DescribeOneCloudNativeAPIGatewayService(DescribeOneCloudNativeAPIGatewayServiceRequest req)
         {
-             JsonResponseModel<DescribeOneCloudNativeAPIGatewayServiceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeOneCloudNativeAPIGatewayService");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOneCloudNativeAPIGatewayServiceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeOneCloudNativeAPIGatewayServiceResponse>(req, "DescribeOneCloudNativeAPIGatewayService");
         }
 
         /// <summary>
@@ -1559,17 +846,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DescribeOneCloudNativeAPIGatewayServiceResponse"/></returns>
         public DescribeOneCloudNativeAPIGatewayServiceResponse DescribeOneCloudNativeAPIGatewayServiceSync(DescribeOneCloudNativeAPIGatewayServiceRequest req)
         {
-             JsonResponseModel<DescribeOneCloudNativeAPIGatewayServiceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeOneCloudNativeAPIGatewayService");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOneCloudNativeAPIGatewayServiceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeOneCloudNativeAPIGatewayServiceResponse>(req, "DescribeOneCloudNativeAPIGatewayService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1577,19 +855,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DescribeSREInstanceAccessAddressRequest"/></param>
         /// <returns><see cref="DescribeSREInstanceAccessAddressResponse"/></returns>
-        public async Task<DescribeSREInstanceAccessAddressResponse> DescribeSREInstanceAccessAddress(DescribeSREInstanceAccessAddressRequest req)
+        public Task<DescribeSREInstanceAccessAddressResponse> DescribeSREInstanceAccessAddress(DescribeSREInstanceAccessAddressRequest req)
         {
-             JsonResponseModel<DescribeSREInstanceAccessAddressResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeSREInstanceAccessAddress");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSREInstanceAccessAddressResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeSREInstanceAccessAddressResponse>(req, "DescribeSREInstanceAccessAddress");
         }
 
         /// <summary>
@@ -1599,17 +867,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DescribeSREInstanceAccessAddressResponse"/></returns>
         public DescribeSREInstanceAccessAddressResponse DescribeSREInstanceAccessAddressSync(DescribeSREInstanceAccessAddressRequest req)
         {
-             JsonResponseModel<DescribeSREInstanceAccessAddressResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeSREInstanceAccessAddress");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSREInstanceAccessAddressResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeSREInstanceAccessAddressResponse>(req, "DescribeSREInstanceAccessAddress")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1617,19 +876,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DescribeSREInstancesRequest"/></param>
         /// <returns><see cref="DescribeSREInstancesResponse"/></returns>
-        public async Task<DescribeSREInstancesResponse> DescribeSREInstances(DescribeSREInstancesRequest req)
+        public Task<DescribeSREInstancesResponse> DescribeSREInstances(DescribeSREInstancesRequest req)
         {
-             JsonResponseModel<DescribeSREInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeSREInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSREInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeSREInstancesResponse>(req, "DescribeSREInstances");
         }
 
         /// <summary>
@@ -1639,17 +888,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DescribeSREInstancesResponse"/></returns>
         public DescribeSREInstancesResponse DescribeSREInstancesSync(DescribeSREInstancesRequest req)
         {
-             JsonResponseModel<DescribeSREInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeSREInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSREInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeSREInstancesResponse>(req, "DescribeSREInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1657,19 +897,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DescribeUpstreamHealthCheckConfigRequest"/></param>
         /// <returns><see cref="DescribeUpstreamHealthCheckConfigResponse"/></returns>
-        public async Task<DescribeUpstreamHealthCheckConfigResponse> DescribeUpstreamHealthCheckConfig(DescribeUpstreamHealthCheckConfigRequest req)
+        public Task<DescribeUpstreamHealthCheckConfigResponse> DescribeUpstreamHealthCheckConfig(DescribeUpstreamHealthCheckConfigRequest req)
         {
-             JsonResponseModel<DescribeUpstreamHealthCheckConfigResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeUpstreamHealthCheckConfig");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUpstreamHealthCheckConfigResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeUpstreamHealthCheckConfigResponse>(req, "DescribeUpstreamHealthCheckConfig");
         }
 
         /// <summary>
@@ -1679,17 +909,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DescribeUpstreamHealthCheckConfigResponse"/></returns>
         public DescribeUpstreamHealthCheckConfigResponse DescribeUpstreamHealthCheckConfigSync(DescribeUpstreamHealthCheckConfigRequest req)
         {
-             JsonResponseModel<DescribeUpstreamHealthCheckConfigResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeUpstreamHealthCheckConfig");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUpstreamHealthCheckConfigResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeUpstreamHealthCheckConfigResponse>(req, "DescribeUpstreamHealthCheckConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1697,19 +918,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DescribeWafDomainsRequest"/></param>
         /// <returns><see cref="DescribeWafDomainsResponse"/></returns>
-        public async Task<DescribeWafDomainsResponse> DescribeWafDomains(DescribeWafDomainsRequest req)
+        public Task<DescribeWafDomainsResponse> DescribeWafDomains(DescribeWafDomainsRequest req)
         {
-             JsonResponseModel<DescribeWafDomainsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeWafDomains");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWafDomainsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeWafDomainsResponse>(req, "DescribeWafDomains");
         }
 
         /// <summary>
@@ -1719,17 +930,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DescribeWafDomainsResponse"/></returns>
         public DescribeWafDomainsResponse DescribeWafDomainsSync(DescribeWafDomainsRequest req)
         {
-             JsonResponseModel<DescribeWafDomainsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeWafDomains");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWafDomainsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeWafDomainsResponse>(req, "DescribeWafDomains")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1737,19 +939,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DescribeWafProtectionRequest"/></param>
         /// <returns><see cref="DescribeWafProtectionResponse"/></returns>
-        public async Task<DescribeWafProtectionResponse> DescribeWafProtection(DescribeWafProtectionRequest req)
+        public Task<DescribeWafProtectionResponse> DescribeWafProtection(DescribeWafProtectionRequest req)
         {
-             JsonResponseModel<DescribeWafProtectionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeWafProtection");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWafProtectionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeWafProtectionResponse>(req, "DescribeWafProtection");
         }
 
         /// <summary>
@@ -1759,17 +951,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DescribeWafProtectionResponse"/></returns>
         public DescribeWafProtectionResponse DescribeWafProtectionSync(DescribeWafProtectionRequest req)
         {
-             JsonResponseModel<DescribeWafProtectionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeWafProtection");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWafProtectionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeWafProtectionResponse>(req, "DescribeWafProtection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1777,19 +960,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DescribeZookeeperReplicasRequest"/></param>
         /// <returns><see cref="DescribeZookeeperReplicasResponse"/></returns>
-        public async Task<DescribeZookeeperReplicasResponse> DescribeZookeeperReplicas(DescribeZookeeperReplicasRequest req)
+        public Task<DescribeZookeeperReplicasResponse> DescribeZookeeperReplicas(DescribeZookeeperReplicasRequest req)
         {
-             JsonResponseModel<DescribeZookeeperReplicasResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeZookeeperReplicas");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZookeeperReplicasResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeZookeeperReplicasResponse>(req, "DescribeZookeeperReplicas");
         }
 
         /// <summary>
@@ -1799,17 +972,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DescribeZookeeperReplicasResponse"/></returns>
         public DescribeZookeeperReplicasResponse DescribeZookeeperReplicasSync(DescribeZookeeperReplicasRequest req)
         {
-             JsonResponseModel<DescribeZookeeperReplicasResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeZookeeperReplicas");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZookeeperReplicasResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeZookeeperReplicasResponse>(req, "DescribeZookeeperReplicas")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1817,19 +981,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="DescribeZookeeperServerInterfacesRequest"/></param>
         /// <returns><see cref="DescribeZookeeperServerInterfacesResponse"/></returns>
-        public async Task<DescribeZookeeperServerInterfacesResponse> DescribeZookeeperServerInterfaces(DescribeZookeeperServerInterfacesRequest req)
+        public Task<DescribeZookeeperServerInterfacesResponse> DescribeZookeeperServerInterfaces(DescribeZookeeperServerInterfacesRequest req)
         {
-             JsonResponseModel<DescribeZookeeperServerInterfacesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeZookeeperServerInterfaces");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZookeeperServerInterfacesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeZookeeperServerInterfacesResponse>(req, "DescribeZookeeperServerInterfaces");
         }
 
         /// <summary>
@@ -1839,17 +993,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="DescribeZookeeperServerInterfacesResponse"/></returns>
         public DescribeZookeeperServerInterfacesResponse DescribeZookeeperServerInterfacesSync(DescribeZookeeperServerInterfacesRequest req)
         {
-             JsonResponseModel<DescribeZookeeperServerInterfacesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeZookeeperServerInterfaces");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZookeeperServerInterfacesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeZookeeperServerInterfacesResponse>(req, "DescribeZookeeperServerInterfaces")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1857,19 +1002,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayRequest"/></param>
         /// <returns><see cref="ModifyCloudNativeAPIGatewayResponse"/></returns>
-        public async Task<ModifyCloudNativeAPIGatewayResponse> ModifyCloudNativeAPIGateway(ModifyCloudNativeAPIGatewayRequest req)
+        public Task<ModifyCloudNativeAPIGatewayResponse> ModifyCloudNativeAPIGateway(ModifyCloudNativeAPIGatewayRequest req)
         {
-             JsonResponseModel<ModifyCloudNativeAPIGatewayResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyCloudNativeAPIGateway");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudNativeAPIGatewayResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayResponse>(req, "ModifyCloudNativeAPIGateway");
         }
 
         /// <summary>
@@ -1879,17 +1014,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="ModifyCloudNativeAPIGatewayResponse"/></returns>
         public ModifyCloudNativeAPIGatewayResponse ModifyCloudNativeAPIGatewaySync(ModifyCloudNativeAPIGatewayRequest req)
         {
-             JsonResponseModel<ModifyCloudNativeAPIGatewayResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyCloudNativeAPIGateway");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudNativeAPIGatewayResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayResponse>(req, "ModifyCloudNativeAPIGateway")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1897,19 +1023,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayCanaryRuleRequest"/></param>
         /// <returns><see cref="ModifyCloudNativeAPIGatewayCanaryRuleResponse"/></returns>
-        public async Task<ModifyCloudNativeAPIGatewayCanaryRuleResponse> ModifyCloudNativeAPIGatewayCanaryRule(ModifyCloudNativeAPIGatewayCanaryRuleRequest req)
+        public Task<ModifyCloudNativeAPIGatewayCanaryRuleResponse> ModifyCloudNativeAPIGatewayCanaryRule(ModifyCloudNativeAPIGatewayCanaryRuleRequest req)
         {
-             JsonResponseModel<ModifyCloudNativeAPIGatewayCanaryRuleResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyCloudNativeAPIGatewayCanaryRule");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudNativeAPIGatewayCanaryRuleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayCanaryRuleResponse>(req, "ModifyCloudNativeAPIGatewayCanaryRule");
         }
 
         /// <summary>
@@ -1919,17 +1035,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="ModifyCloudNativeAPIGatewayCanaryRuleResponse"/></returns>
         public ModifyCloudNativeAPIGatewayCanaryRuleResponse ModifyCloudNativeAPIGatewayCanaryRuleSync(ModifyCloudNativeAPIGatewayCanaryRuleRequest req)
         {
-             JsonResponseModel<ModifyCloudNativeAPIGatewayCanaryRuleResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyCloudNativeAPIGatewayCanaryRule");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudNativeAPIGatewayCanaryRuleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayCanaryRuleResponse>(req, "ModifyCloudNativeAPIGatewayCanaryRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1937,19 +1044,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayCertificateRequest"/></param>
         /// <returns><see cref="ModifyCloudNativeAPIGatewayCertificateResponse"/></returns>
-        public async Task<ModifyCloudNativeAPIGatewayCertificateResponse> ModifyCloudNativeAPIGatewayCertificate(ModifyCloudNativeAPIGatewayCertificateRequest req)
+        public Task<ModifyCloudNativeAPIGatewayCertificateResponse> ModifyCloudNativeAPIGatewayCertificate(ModifyCloudNativeAPIGatewayCertificateRequest req)
         {
-             JsonResponseModel<ModifyCloudNativeAPIGatewayCertificateResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyCloudNativeAPIGatewayCertificate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudNativeAPIGatewayCertificateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayCertificateResponse>(req, "ModifyCloudNativeAPIGatewayCertificate");
         }
 
         /// <summary>
@@ -1959,17 +1056,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="ModifyCloudNativeAPIGatewayCertificateResponse"/></returns>
         public ModifyCloudNativeAPIGatewayCertificateResponse ModifyCloudNativeAPIGatewayCertificateSync(ModifyCloudNativeAPIGatewayCertificateRequest req)
         {
-             JsonResponseModel<ModifyCloudNativeAPIGatewayCertificateResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyCloudNativeAPIGatewayCertificate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudNativeAPIGatewayCertificateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayCertificateResponse>(req, "ModifyCloudNativeAPIGatewayCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1977,19 +1065,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayRouteRequest"/></param>
         /// <returns><see cref="ModifyCloudNativeAPIGatewayRouteResponse"/></returns>
-        public async Task<ModifyCloudNativeAPIGatewayRouteResponse> ModifyCloudNativeAPIGatewayRoute(ModifyCloudNativeAPIGatewayRouteRequest req)
+        public Task<ModifyCloudNativeAPIGatewayRouteResponse> ModifyCloudNativeAPIGatewayRoute(ModifyCloudNativeAPIGatewayRouteRequest req)
         {
-             JsonResponseModel<ModifyCloudNativeAPIGatewayRouteResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyCloudNativeAPIGatewayRoute");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudNativeAPIGatewayRouteResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayRouteResponse>(req, "ModifyCloudNativeAPIGatewayRoute");
         }
 
         /// <summary>
@@ -1999,17 +1077,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="ModifyCloudNativeAPIGatewayRouteResponse"/></returns>
         public ModifyCloudNativeAPIGatewayRouteResponse ModifyCloudNativeAPIGatewayRouteSync(ModifyCloudNativeAPIGatewayRouteRequest req)
         {
-             JsonResponseModel<ModifyCloudNativeAPIGatewayRouteResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyCloudNativeAPIGatewayRoute");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudNativeAPIGatewayRouteResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayRouteResponse>(req, "ModifyCloudNativeAPIGatewayRoute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -2017,19 +1086,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayRouteRateLimitRequest"/></param>
         /// <returns><see cref="ModifyCloudNativeAPIGatewayRouteRateLimitResponse"/></returns>
-        public async Task<ModifyCloudNativeAPIGatewayRouteRateLimitResponse> ModifyCloudNativeAPIGatewayRouteRateLimit(ModifyCloudNativeAPIGatewayRouteRateLimitRequest req)
+        public Task<ModifyCloudNativeAPIGatewayRouteRateLimitResponse> ModifyCloudNativeAPIGatewayRouteRateLimit(ModifyCloudNativeAPIGatewayRouteRateLimitRequest req)
         {
-             JsonResponseModel<ModifyCloudNativeAPIGatewayRouteRateLimitResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyCloudNativeAPIGatewayRouteRateLimit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudNativeAPIGatewayRouteRateLimitResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayRouteRateLimitResponse>(req, "ModifyCloudNativeAPIGatewayRouteRateLimit");
         }
 
         /// <summary>
@@ -2039,17 +1098,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="ModifyCloudNativeAPIGatewayRouteRateLimitResponse"/></returns>
         public ModifyCloudNativeAPIGatewayRouteRateLimitResponse ModifyCloudNativeAPIGatewayRouteRateLimitSync(ModifyCloudNativeAPIGatewayRouteRateLimitRequest req)
         {
-             JsonResponseModel<ModifyCloudNativeAPIGatewayRouteRateLimitResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyCloudNativeAPIGatewayRouteRateLimit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudNativeAPIGatewayRouteRateLimitResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayRouteRateLimitResponse>(req, "ModifyCloudNativeAPIGatewayRouteRateLimit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -2057,19 +1107,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayServiceRequest"/></param>
         /// <returns><see cref="ModifyCloudNativeAPIGatewayServiceResponse"/></returns>
-        public async Task<ModifyCloudNativeAPIGatewayServiceResponse> ModifyCloudNativeAPIGatewayService(ModifyCloudNativeAPIGatewayServiceRequest req)
+        public Task<ModifyCloudNativeAPIGatewayServiceResponse> ModifyCloudNativeAPIGatewayService(ModifyCloudNativeAPIGatewayServiceRequest req)
         {
-             JsonResponseModel<ModifyCloudNativeAPIGatewayServiceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyCloudNativeAPIGatewayService");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudNativeAPIGatewayServiceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayServiceResponse>(req, "ModifyCloudNativeAPIGatewayService");
         }
 
         /// <summary>
@@ -2079,17 +1119,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="ModifyCloudNativeAPIGatewayServiceResponse"/></returns>
         public ModifyCloudNativeAPIGatewayServiceResponse ModifyCloudNativeAPIGatewayServiceSync(ModifyCloudNativeAPIGatewayServiceRequest req)
         {
-             JsonResponseModel<ModifyCloudNativeAPIGatewayServiceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyCloudNativeAPIGatewayService");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudNativeAPIGatewayServiceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayServiceResponse>(req, "ModifyCloudNativeAPIGatewayService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -2097,19 +1128,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayServiceRateLimitRequest"/></param>
         /// <returns><see cref="ModifyCloudNativeAPIGatewayServiceRateLimitResponse"/></returns>
-        public async Task<ModifyCloudNativeAPIGatewayServiceRateLimitResponse> ModifyCloudNativeAPIGatewayServiceRateLimit(ModifyCloudNativeAPIGatewayServiceRateLimitRequest req)
+        public Task<ModifyCloudNativeAPIGatewayServiceRateLimitResponse> ModifyCloudNativeAPIGatewayServiceRateLimit(ModifyCloudNativeAPIGatewayServiceRateLimitRequest req)
         {
-             JsonResponseModel<ModifyCloudNativeAPIGatewayServiceRateLimitResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyCloudNativeAPIGatewayServiceRateLimit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudNativeAPIGatewayServiceRateLimitResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayServiceRateLimitResponse>(req, "ModifyCloudNativeAPIGatewayServiceRateLimit");
         }
 
         /// <summary>
@@ -2119,17 +1140,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="ModifyCloudNativeAPIGatewayServiceRateLimitResponse"/></returns>
         public ModifyCloudNativeAPIGatewayServiceRateLimitResponse ModifyCloudNativeAPIGatewayServiceRateLimitSync(ModifyCloudNativeAPIGatewayServiceRateLimitRequest req)
         {
-             JsonResponseModel<ModifyCloudNativeAPIGatewayServiceRateLimitResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyCloudNativeAPIGatewayServiceRateLimit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudNativeAPIGatewayServiceRateLimitResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayServiceRateLimitResponse>(req, "ModifyCloudNativeAPIGatewayServiceRateLimit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -2137,19 +1149,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="ModifyNativeGatewayServerGroupRequest"/></param>
         /// <returns><see cref="ModifyNativeGatewayServerGroupResponse"/></returns>
-        public async Task<ModifyNativeGatewayServerGroupResponse> ModifyNativeGatewayServerGroup(ModifyNativeGatewayServerGroupRequest req)
+        public Task<ModifyNativeGatewayServerGroupResponse> ModifyNativeGatewayServerGroup(ModifyNativeGatewayServerGroupRequest req)
         {
-             JsonResponseModel<ModifyNativeGatewayServerGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyNativeGatewayServerGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNativeGatewayServerGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyNativeGatewayServerGroupResponse>(req, "ModifyNativeGatewayServerGroup");
         }
 
         /// <summary>
@@ -2159,17 +1161,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="ModifyNativeGatewayServerGroupResponse"/></returns>
         public ModifyNativeGatewayServerGroupResponse ModifyNativeGatewayServerGroupSync(ModifyNativeGatewayServerGroupRequest req)
         {
-             JsonResponseModel<ModifyNativeGatewayServerGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyNativeGatewayServerGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNativeGatewayServerGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyNativeGatewayServerGroupResponse>(req, "ModifyNativeGatewayServerGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -2177,19 +1170,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="ModifyUpstreamNodeStatusRequest"/></param>
         /// <returns><see cref="ModifyUpstreamNodeStatusResponse"/></returns>
-        public async Task<ModifyUpstreamNodeStatusResponse> ModifyUpstreamNodeStatus(ModifyUpstreamNodeStatusRequest req)
+        public Task<ModifyUpstreamNodeStatusResponse> ModifyUpstreamNodeStatus(ModifyUpstreamNodeStatusRequest req)
         {
-             JsonResponseModel<ModifyUpstreamNodeStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyUpstreamNodeStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUpstreamNodeStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyUpstreamNodeStatusResponse>(req, "ModifyUpstreamNodeStatus");
         }
 
         /// <summary>
@@ -2199,17 +1182,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="ModifyUpstreamNodeStatusResponse"/></returns>
         public ModifyUpstreamNodeStatusResponse ModifyUpstreamNodeStatusSync(ModifyUpstreamNodeStatusRequest req)
         {
-             JsonResponseModel<ModifyUpstreamNodeStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyUpstreamNodeStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUpstreamNodeStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyUpstreamNodeStatusResponse>(req, "ModifyUpstreamNodeStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -2217,19 +1191,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="OpenWafProtectionRequest"/></param>
         /// <returns><see cref="OpenWafProtectionResponse"/></returns>
-        public async Task<OpenWafProtectionResponse> OpenWafProtection(OpenWafProtectionRequest req)
+        public Task<OpenWafProtectionResponse> OpenWafProtection(OpenWafProtectionRequest req)
         {
-             JsonResponseModel<OpenWafProtectionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "OpenWafProtection");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenWafProtectionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<OpenWafProtectionResponse>(req, "OpenWafProtection");
         }
 
         /// <summary>
@@ -2239,17 +1203,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="OpenWafProtectionResponse"/></returns>
         public OpenWafProtectionResponse OpenWafProtectionSync(OpenWafProtectionRequest req)
         {
-             JsonResponseModel<OpenWafProtectionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "OpenWafProtection");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenWafProtectionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<OpenWafProtectionResponse>(req, "OpenWafProtection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -2257,19 +1212,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="UpdateCloudNativeAPIGatewayCertificateInfoRequest"/></param>
         /// <returns><see cref="UpdateCloudNativeAPIGatewayCertificateInfoResponse"/></returns>
-        public async Task<UpdateCloudNativeAPIGatewayCertificateInfoResponse> UpdateCloudNativeAPIGatewayCertificateInfo(UpdateCloudNativeAPIGatewayCertificateInfoRequest req)
+        public Task<UpdateCloudNativeAPIGatewayCertificateInfoResponse> UpdateCloudNativeAPIGatewayCertificateInfo(UpdateCloudNativeAPIGatewayCertificateInfoRequest req)
         {
-             JsonResponseModel<UpdateCloudNativeAPIGatewayCertificateInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "UpdateCloudNativeAPIGatewayCertificateInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCloudNativeAPIGatewayCertificateInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateCloudNativeAPIGatewayCertificateInfoResponse>(req, "UpdateCloudNativeAPIGatewayCertificateInfo");
         }
 
         /// <summary>
@@ -2279,17 +1224,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="UpdateCloudNativeAPIGatewayCertificateInfoResponse"/></returns>
         public UpdateCloudNativeAPIGatewayCertificateInfoResponse UpdateCloudNativeAPIGatewayCertificateInfoSync(UpdateCloudNativeAPIGatewayCertificateInfoRequest req)
         {
-             JsonResponseModel<UpdateCloudNativeAPIGatewayCertificateInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UpdateCloudNativeAPIGatewayCertificateInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCloudNativeAPIGatewayCertificateInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateCloudNativeAPIGatewayCertificateInfoResponse>(req, "UpdateCloudNativeAPIGatewayCertificateInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -2297,19 +1233,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="UpdateCloudNativeAPIGatewaySpecRequest"/></param>
         /// <returns><see cref="UpdateCloudNativeAPIGatewaySpecResponse"/></returns>
-        public async Task<UpdateCloudNativeAPIGatewaySpecResponse> UpdateCloudNativeAPIGatewaySpec(UpdateCloudNativeAPIGatewaySpecRequest req)
+        public Task<UpdateCloudNativeAPIGatewaySpecResponse> UpdateCloudNativeAPIGatewaySpec(UpdateCloudNativeAPIGatewaySpecRequest req)
         {
-             JsonResponseModel<UpdateCloudNativeAPIGatewaySpecResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "UpdateCloudNativeAPIGatewaySpec");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCloudNativeAPIGatewaySpecResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateCloudNativeAPIGatewaySpecResponse>(req, "UpdateCloudNativeAPIGatewaySpec");
         }
 
         /// <summary>
@@ -2319,17 +1245,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="UpdateCloudNativeAPIGatewaySpecResponse"/></returns>
         public UpdateCloudNativeAPIGatewaySpecResponse UpdateCloudNativeAPIGatewaySpecSync(UpdateCloudNativeAPIGatewaySpecRequest req)
         {
-             JsonResponseModel<UpdateCloudNativeAPIGatewaySpecResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UpdateCloudNativeAPIGatewaySpec");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCloudNativeAPIGatewaySpecResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateCloudNativeAPIGatewaySpecResponse>(req, "UpdateCloudNativeAPIGatewaySpec")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -2337,19 +1254,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="UpdateEngineInternetAccessRequest"/></param>
         /// <returns><see cref="UpdateEngineInternetAccessResponse"/></returns>
-        public async Task<UpdateEngineInternetAccessResponse> UpdateEngineInternetAccess(UpdateEngineInternetAccessRequest req)
+        public Task<UpdateEngineInternetAccessResponse> UpdateEngineInternetAccess(UpdateEngineInternetAccessRequest req)
         {
-             JsonResponseModel<UpdateEngineInternetAccessResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "UpdateEngineInternetAccess");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateEngineInternetAccessResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateEngineInternetAccessResponse>(req, "UpdateEngineInternetAccess");
         }
 
         /// <summary>
@@ -2359,17 +1266,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="UpdateEngineInternetAccessResponse"/></returns>
         public UpdateEngineInternetAccessResponse UpdateEngineInternetAccessSync(UpdateEngineInternetAccessRequest req)
         {
-             JsonResponseModel<UpdateEngineInternetAccessResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UpdateEngineInternetAccess");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateEngineInternetAccessResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateEngineInternetAccessResponse>(req, "UpdateEngineInternetAccess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -2377,19 +1275,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="UpdateUpstreamHealthCheckConfigRequest"/></param>
         /// <returns><see cref="UpdateUpstreamHealthCheckConfigResponse"/></returns>
-        public async Task<UpdateUpstreamHealthCheckConfigResponse> UpdateUpstreamHealthCheckConfig(UpdateUpstreamHealthCheckConfigRequest req)
+        public Task<UpdateUpstreamHealthCheckConfigResponse> UpdateUpstreamHealthCheckConfig(UpdateUpstreamHealthCheckConfigRequest req)
         {
-             JsonResponseModel<UpdateUpstreamHealthCheckConfigResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "UpdateUpstreamHealthCheckConfig");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateUpstreamHealthCheckConfigResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateUpstreamHealthCheckConfigResponse>(req, "UpdateUpstreamHealthCheckConfig");
         }
 
         /// <summary>
@@ -2399,17 +1287,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="UpdateUpstreamHealthCheckConfigResponse"/></returns>
         public UpdateUpstreamHealthCheckConfigResponse UpdateUpstreamHealthCheckConfigSync(UpdateUpstreamHealthCheckConfigRequest req)
         {
-             JsonResponseModel<UpdateUpstreamHealthCheckConfigResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UpdateUpstreamHealthCheckConfig");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateUpstreamHealthCheckConfigResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateUpstreamHealthCheckConfigResponse>(req, "UpdateUpstreamHealthCheckConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -2417,19 +1296,9 @@ namespace TencentCloud.Tse.V20201207
         /// </summary>
         /// <param name="req"><see cref="UpdateUpstreamTargetsRequest"/></param>
         /// <returns><see cref="UpdateUpstreamTargetsResponse"/></returns>
-        public async Task<UpdateUpstreamTargetsResponse> UpdateUpstreamTargets(UpdateUpstreamTargetsRequest req)
+        public Task<UpdateUpstreamTargetsResponse> UpdateUpstreamTargets(UpdateUpstreamTargetsRequest req)
         {
-             JsonResponseModel<UpdateUpstreamTargetsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "UpdateUpstreamTargets");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateUpstreamTargetsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateUpstreamTargetsResponse>(req, "UpdateUpstreamTargets");
         }
 
         /// <summary>
@@ -2439,17 +1308,8 @@ namespace TencentCloud.Tse.V20201207
         /// <returns><see cref="UpdateUpstreamTargetsResponse"/></returns>
         public UpdateUpstreamTargetsResponse UpdateUpstreamTargetsSync(UpdateUpstreamTargetsRequest req)
         {
-             JsonResponseModel<UpdateUpstreamTargetsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UpdateUpstreamTargets");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateUpstreamTargetsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateUpstreamTargetsResponse>(req, "UpdateUpstreamTargets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

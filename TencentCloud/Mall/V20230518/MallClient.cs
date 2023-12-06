@@ -57,19 +57,9 @@ namespace TencentCloud.Mall.V20230518
         /// </summary>
         /// <param name="req"><see cref="DescribeDrawResourceListRequest"/></param>
         /// <returns><see cref="DescribeDrawResourceListResponse"/></returns>
-        public async Task<DescribeDrawResourceListResponse> DescribeDrawResourceList(DescribeDrawResourceListRequest req)
+        public Task<DescribeDrawResourceListResponse> DescribeDrawResourceList(DescribeDrawResourceListRequest req)
         {
-             JsonResponseModel<DescribeDrawResourceListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDrawResourceList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDrawResourceListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDrawResourceListResponse>(req, "DescribeDrawResourceList");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Mall.V20230518
         /// <returns><see cref="DescribeDrawResourceListResponse"/></returns>
         public DescribeDrawResourceListResponse DescribeDrawResourceListSync(DescribeDrawResourceListRequest req)
         {
-             JsonResponseModel<DescribeDrawResourceListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDrawResourceList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDrawResourceListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDrawResourceListResponse>(req, "DescribeDrawResourceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

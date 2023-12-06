@@ -57,19 +57,9 @@ namespace TencentCloud.Soe.V20180724
         /// </summary>
         /// <param name="req"><see cref="InitOralProcessRequest"/></param>
         /// <returns><see cref="InitOralProcessResponse"/></returns>
-        public async Task<InitOralProcessResponse> InitOralProcess(InitOralProcessRequest req)
+        public Task<InitOralProcessResponse> InitOralProcess(InitOralProcessRequest req)
         {
-             JsonResponseModel<InitOralProcessResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "InitOralProcess");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InitOralProcessResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<InitOralProcessResponse>(req, "InitOralProcess");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Soe.V20180724
         /// <returns><see cref="InitOralProcessResponse"/></returns>
         public InitOralProcessResponse InitOralProcessSync(InitOralProcessRequest req)
         {
-             JsonResponseModel<InitOralProcessResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "InitOralProcess");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InitOralProcessResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<InitOralProcessResponse>(req, "InitOralProcess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Soe.V20180724
         /// </summary>
         /// <param name="req"><see cref="KeywordEvaluateRequest"/></param>
         /// <returns><see cref="KeywordEvaluateResponse"/></returns>
-        public async Task<KeywordEvaluateResponse> KeywordEvaluate(KeywordEvaluateRequest req)
+        public Task<KeywordEvaluateResponse> KeywordEvaluate(KeywordEvaluateRequest req)
         {
-             JsonResponseModel<KeywordEvaluateResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "KeywordEvaluate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<KeywordEvaluateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<KeywordEvaluateResponse>(req, "KeywordEvaluate");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Soe.V20180724
         /// <returns><see cref="KeywordEvaluateResponse"/></returns>
         public KeywordEvaluateResponse KeywordEvaluateSync(KeywordEvaluateRequest req)
         {
-             JsonResponseModel<KeywordEvaluateResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "KeywordEvaluate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<KeywordEvaluateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<KeywordEvaluateResponse>(req, "KeywordEvaluate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Soe.V20180724
         /// </summary>
         /// <param name="req"><see cref="TransmitOralProcessRequest"/></param>
         /// <returns><see cref="TransmitOralProcessResponse"/></returns>
-        public async Task<TransmitOralProcessResponse> TransmitOralProcess(TransmitOralProcessRequest req)
+        public Task<TransmitOralProcessResponse> TransmitOralProcess(TransmitOralProcessRequest req)
         {
-             JsonResponseModel<TransmitOralProcessResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "TransmitOralProcess");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TransmitOralProcessResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TransmitOralProcessResponse>(req, "TransmitOralProcess");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Soe.V20180724
         /// <returns><see cref="TransmitOralProcessResponse"/></returns>
         public TransmitOralProcessResponse TransmitOralProcessSync(TransmitOralProcessRequest req)
         {
-             JsonResponseModel<TransmitOralProcessResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "TransmitOralProcess");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TransmitOralProcessResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TransmitOralProcessResponse>(req, "TransmitOralProcess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Soe.V20180724
         /// </summary>
         /// <param name="req"><see cref="TransmitOralProcessWithInitRequest"/></param>
         /// <returns><see cref="TransmitOralProcessWithInitResponse"/></returns>
-        public async Task<TransmitOralProcessWithInitResponse> TransmitOralProcessWithInit(TransmitOralProcessWithInitRequest req)
+        public Task<TransmitOralProcessWithInitResponse> TransmitOralProcessWithInit(TransmitOralProcessWithInitRequest req)
         {
-             JsonResponseModel<TransmitOralProcessWithInitResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "TransmitOralProcessWithInit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TransmitOralProcessWithInitResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TransmitOralProcessWithInitResponse>(req, "TransmitOralProcessWithInit");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Soe.V20180724
         /// <returns><see cref="TransmitOralProcessWithInitResponse"/></returns>
         public TransmitOralProcessWithInitResponse TransmitOralProcessWithInitSync(TransmitOralProcessWithInitRequest req)
         {
-             JsonResponseModel<TransmitOralProcessWithInitResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "TransmitOralProcessWithInit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TransmitOralProcessWithInitResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TransmitOralProcessWithInitResponse>(req, "TransmitOralProcessWithInit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

@@ -57,19 +57,9 @@ namespace TencentCloud.Eis.V20210601
         /// </summary>
         /// <param name="req"><see cref="GetRuntimeMCRequest"/></param>
         /// <returns><see cref="GetRuntimeMCResponse"/></returns>
-        public async Task<GetRuntimeMCResponse> GetRuntimeMC(GetRuntimeMCRequest req)
+        public Task<GetRuntimeMCResponse> GetRuntimeMC(GetRuntimeMCRequest req)
         {
-             JsonResponseModel<GetRuntimeMCResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetRuntimeMC");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRuntimeMCResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetRuntimeMCResponse>(req, "GetRuntimeMC");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Eis.V20210601
         /// <returns><see cref="GetRuntimeMCResponse"/></returns>
         public GetRuntimeMCResponse GetRuntimeMCSync(GetRuntimeMCRequest req)
         {
-             JsonResponseModel<GetRuntimeMCResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetRuntimeMC");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRuntimeMCResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetRuntimeMCResponse>(req, "GetRuntimeMC")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Eis.V20210601
         /// </summary>
         /// <param name="req"><see cref="GetRuntimeResourceMonitorMetricMCRequest"/></param>
         /// <returns><see cref="GetRuntimeResourceMonitorMetricMCResponse"/></returns>
-        public async Task<GetRuntimeResourceMonitorMetricMCResponse> GetRuntimeResourceMonitorMetricMC(GetRuntimeResourceMonitorMetricMCRequest req)
+        public Task<GetRuntimeResourceMonitorMetricMCResponse> GetRuntimeResourceMonitorMetricMC(GetRuntimeResourceMonitorMetricMCRequest req)
         {
-             JsonResponseModel<GetRuntimeResourceMonitorMetricMCResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetRuntimeResourceMonitorMetricMC");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRuntimeResourceMonitorMetricMCResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetRuntimeResourceMonitorMetricMCResponse>(req, "GetRuntimeResourceMonitorMetricMC");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Eis.V20210601
         /// <returns><see cref="GetRuntimeResourceMonitorMetricMCResponse"/></returns>
         public GetRuntimeResourceMonitorMetricMCResponse GetRuntimeResourceMonitorMetricMCSync(GetRuntimeResourceMonitorMetricMCRequest req)
         {
-             JsonResponseModel<GetRuntimeResourceMonitorMetricMCResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetRuntimeResourceMonitorMetricMC");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRuntimeResourceMonitorMetricMCResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetRuntimeResourceMonitorMetricMCResponse>(req, "GetRuntimeResourceMonitorMetricMC")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Eis.V20210601
         /// </summary>
         /// <param name="req"><see cref="ListDeployableRuntimesMCRequest"/></param>
         /// <returns><see cref="ListDeployableRuntimesMCResponse"/></returns>
-        public async Task<ListDeployableRuntimesMCResponse> ListDeployableRuntimesMC(ListDeployableRuntimesMCRequest req)
+        public Task<ListDeployableRuntimesMCResponse> ListDeployableRuntimesMC(ListDeployableRuntimesMCRequest req)
         {
-             JsonResponseModel<ListDeployableRuntimesMCResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ListDeployableRuntimesMC");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListDeployableRuntimesMCResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ListDeployableRuntimesMCResponse>(req, "ListDeployableRuntimesMC");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Eis.V20210601
         /// <returns><see cref="ListDeployableRuntimesMCResponse"/></returns>
         public ListDeployableRuntimesMCResponse ListDeployableRuntimesMCSync(ListDeployableRuntimesMCRequest req)
         {
-             JsonResponseModel<ListDeployableRuntimesMCResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ListDeployableRuntimesMC");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListDeployableRuntimesMCResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ListDeployableRuntimesMCResponse>(req, "ListDeployableRuntimesMC")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Eis.V20210601
         /// </summary>
         /// <param name="req"><see cref="ListRuntimeDeployedInstancesMCRequest"/></param>
         /// <returns><see cref="ListRuntimeDeployedInstancesMCResponse"/></returns>
-        public async Task<ListRuntimeDeployedInstancesMCResponse> ListRuntimeDeployedInstancesMC(ListRuntimeDeployedInstancesMCRequest req)
+        public Task<ListRuntimeDeployedInstancesMCResponse> ListRuntimeDeployedInstancesMC(ListRuntimeDeployedInstancesMCRequest req)
         {
-             JsonResponseModel<ListRuntimeDeployedInstancesMCResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ListRuntimeDeployedInstancesMC");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListRuntimeDeployedInstancesMCResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ListRuntimeDeployedInstancesMCResponse>(req, "ListRuntimeDeployedInstancesMC");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Eis.V20210601
         /// <returns><see cref="ListRuntimeDeployedInstancesMCResponse"/></returns>
         public ListRuntimeDeployedInstancesMCResponse ListRuntimeDeployedInstancesMCSync(ListRuntimeDeployedInstancesMCRequest req)
         {
-             JsonResponseModel<ListRuntimeDeployedInstancesMCResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ListRuntimeDeployedInstancesMC");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListRuntimeDeployedInstancesMCResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ListRuntimeDeployedInstancesMCResponse>(req, "ListRuntimeDeployedInstancesMC")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -217,19 +141,9 @@ namespace TencentCloud.Eis.V20210601
         /// </summary>
         /// <param name="req"><see cref="ListRuntimesMCRequest"/></param>
         /// <returns><see cref="ListRuntimesMCResponse"/></returns>
-        public async Task<ListRuntimesMCResponse> ListRuntimesMC(ListRuntimesMCRequest req)
+        public Task<ListRuntimesMCResponse> ListRuntimesMC(ListRuntimesMCRequest req)
         {
-             JsonResponseModel<ListRuntimesMCResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ListRuntimesMC");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListRuntimesMCResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ListRuntimesMCResponse>(req, "ListRuntimesMC");
         }
 
         /// <summary>
@@ -239,17 +153,8 @@ namespace TencentCloud.Eis.V20210601
         /// <returns><see cref="ListRuntimesMCResponse"/></returns>
         public ListRuntimesMCResponse ListRuntimesMCSync(ListRuntimesMCRequest req)
         {
-             JsonResponseModel<ListRuntimesMCResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ListRuntimesMC");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListRuntimesMCResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ListRuntimesMCResponse>(req, "ListRuntimesMC")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

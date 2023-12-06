@@ -57,19 +57,9 @@ namespace TencentCloud.Tsw.V20200924
         /// </summary>
         /// <param name="req"><see cref="DescribeAgentShellRequest"/></param>
         /// <returns><see cref="DescribeAgentShellResponse"/></returns>
-        public async Task<DescribeAgentShellResponse> DescribeAgentShell(DescribeAgentShellRequest req)
+        public Task<DescribeAgentShellResponse> DescribeAgentShell(DescribeAgentShellRequest req)
         {
-             JsonResponseModel<DescribeAgentShellResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeAgentShell");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAgentShellResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeAgentShellResponse>(req, "DescribeAgentShell");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Tsw.V20200924
         /// <returns><see cref="DescribeAgentShellResponse"/></returns>
         public DescribeAgentShellResponse DescribeAgentShellSync(DescribeAgentShellRequest req)
         {
-             JsonResponseModel<DescribeAgentShellResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeAgentShell");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAgentShellResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeAgentShellResponse>(req, "DescribeAgentShell")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

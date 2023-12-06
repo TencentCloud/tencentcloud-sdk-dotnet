@@ -57,19 +57,9 @@ namespace TencentCloud.Eis.V20200715
         /// </summary>
         /// <param name="req"><see cref="DescribeEisConnectorConfigRequest"/></param>
         /// <returns><see cref="DescribeEisConnectorConfigResponse"/></returns>
-        public async Task<DescribeEisConnectorConfigResponse> DescribeEisConnectorConfig(DescribeEisConnectorConfigRequest req)
+        public Task<DescribeEisConnectorConfigResponse> DescribeEisConnectorConfig(DescribeEisConnectorConfigRequest req)
         {
-             JsonResponseModel<DescribeEisConnectorConfigResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeEisConnectorConfig");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEisConnectorConfigResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeEisConnectorConfigResponse>(req, "DescribeEisConnectorConfig");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Eis.V20200715
         /// <returns><see cref="DescribeEisConnectorConfigResponse"/></returns>
         public DescribeEisConnectorConfigResponse DescribeEisConnectorConfigSync(DescribeEisConnectorConfigRequest req)
         {
-             JsonResponseModel<DescribeEisConnectorConfigResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeEisConnectorConfig");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEisConnectorConfigResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeEisConnectorConfigResponse>(req, "DescribeEisConnectorConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Eis.V20200715
         /// </summary>
         /// <param name="req"><see cref="ListEisConnectorOperationsRequest"/></param>
         /// <returns><see cref="ListEisConnectorOperationsResponse"/></returns>
-        public async Task<ListEisConnectorOperationsResponse> ListEisConnectorOperations(ListEisConnectorOperationsRequest req)
+        public Task<ListEisConnectorOperationsResponse> ListEisConnectorOperations(ListEisConnectorOperationsRequest req)
         {
-             JsonResponseModel<ListEisConnectorOperationsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ListEisConnectorOperations");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListEisConnectorOperationsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ListEisConnectorOperationsResponse>(req, "ListEisConnectorOperations");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Eis.V20200715
         /// <returns><see cref="ListEisConnectorOperationsResponse"/></returns>
         public ListEisConnectorOperationsResponse ListEisConnectorOperationsSync(ListEisConnectorOperationsRequest req)
         {
-             JsonResponseModel<ListEisConnectorOperationsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ListEisConnectorOperations");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListEisConnectorOperationsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ListEisConnectorOperationsResponse>(req, "ListEisConnectorOperations")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Eis.V20200715
         /// </summary>
         /// <param name="req"><see cref="ListEisConnectorsRequest"/></param>
         /// <returns><see cref="ListEisConnectorsResponse"/></returns>
-        public async Task<ListEisConnectorsResponse> ListEisConnectors(ListEisConnectorsRequest req)
+        public Task<ListEisConnectorsResponse> ListEisConnectors(ListEisConnectorsRequest req)
         {
-             JsonResponseModel<ListEisConnectorsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ListEisConnectors");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListEisConnectorsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ListEisConnectorsResponse>(req, "ListEisConnectors");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Eis.V20200715
         /// <returns><see cref="ListEisConnectorsResponse"/></returns>
         public ListEisConnectorsResponse ListEisConnectorsSync(ListEisConnectorsRequest req)
         {
-             JsonResponseModel<ListEisConnectorsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ListEisConnectors");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListEisConnectorsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ListEisConnectorsResponse>(req, "ListEisConnectors")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

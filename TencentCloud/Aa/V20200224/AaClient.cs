@@ -57,19 +57,9 @@ namespace TencentCloud.Aa.V20200224
         /// </summary>
         /// <param name="req"><see cref="QueryActivityAntiRushRequest"/></param>
         /// <returns><see cref="QueryActivityAntiRushResponse"/></returns>
-        public async Task<QueryActivityAntiRushResponse> QueryActivityAntiRush(QueryActivityAntiRushRequest req)
+        public Task<QueryActivityAntiRushResponse> QueryActivityAntiRush(QueryActivityAntiRushRequest req)
         {
-             JsonResponseModel<QueryActivityAntiRushResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryActivityAntiRush");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryActivityAntiRushResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryActivityAntiRushResponse>(req, "QueryActivityAntiRush");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Aa.V20200224
         /// <returns><see cref="QueryActivityAntiRushResponse"/></returns>
         public QueryActivityAntiRushResponse QueryActivityAntiRushSync(QueryActivityAntiRushRequest req)
         {
-             JsonResponseModel<QueryActivityAntiRushResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryActivityAntiRush");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryActivityAntiRushResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryActivityAntiRushResponse>(req, "QueryActivityAntiRush")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

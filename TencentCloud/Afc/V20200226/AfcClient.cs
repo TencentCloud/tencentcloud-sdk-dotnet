@@ -57,19 +57,9 @@ namespace TencentCloud.Afc.V20200226
         /// </summary>
         /// <param name="req"><see cref="GetAntiFraudVipRequest"/></param>
         /// <returns><see cref="GetAntiFraudVipResponse"/></returns>
-        public async Task<GetAntiFraudVipResponse> GetAntiFraudVip(GetAntiFraudVipRequest req)
+        public Task<GetAntiFraudVipResponse> GetAntiFraudVip(GetAntiFraudVipRequest req)
         {
-             JsonResponseModel<GetAntiFraudVipResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetAntiFraudVip");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAntiFraudVipResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetAntiFraudVipResponse>(req, "GetAntiFraudVip");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Afc.V20200226
         /// <returns><see cref="GetAntiFraudVipResponse"/></returns>
         public GetAntiFraudVipResponse GetAntiFraudVipSync(GetAntiFraudVipRequest req)
         {
-             JsonResponseModel<GetAntiFraudVipResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetAntiFraudVip");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAntiFraudVipResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetAntiFraudVipResponse>(req, "GetAntiFraudVip")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -99,19 +80,9 @@ namespace TencentCloud.Afc.V20200226
         /// </summary>
         /// <param name="req"><see cref="QueryAntiFraudVipRequest"/></param>
         /// <returns><see cref="QueryAntiFraudVipResponse"/></returns>
-        public async Task<QueryAntiFraudVipResponse> QueryAntiFraudVip(QueryAntiFraudVipRequest req)
+        public Task<QueryAntiFraudVipResponse> QueryAntiFraudVip(QueryAntiFraudVipRequest req)
         {
-             JsonResponseModel<QueryAntiFraudVipResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryAntiFraudVip");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryAntiFraudVipResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryAntiFraudVipResponse>(req, "QueryAntiFraudVip");
         }
 
         /// <summary>
@@ -123,17 +94,8 @@ namespace TencentCloud.Afc.V20200226
         /// <returns><see cref="QueryAntiFraudVipResponse"/></returns>
         public QueryAntiFraudVipResponse QueryAntiFraudVipSync(QueryAntiFraudVipRequest req)
         {
-             JsonResponseModel<QueryAntiFraudVipResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryAntiFraudVip");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryAntiFraudVipResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryAntiFraudVipResponse>(req, "QueryAntiFraudVip")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -141,19 +103,9 @@ namespace TencentCloud.Afc.V20200226
         /// </summary>
         /// <param name="req"><see cref="TransportGeneralInterfaceRequest"/></param>
         /// <returns><see cref="TransportGeneralInterfaceResponse"/></returns>
-        public async Task<TransportGeneralInterfaceResponse> TransportGeneralInterface(TransportGeneralInterfaceRequest req)
+        public Task<TransportGeneralInterfaceResponse> TransportGeneralInterface(TransportGeneralInterfaceRequest req)
         {
-             JsonResponseModel<TransportGeneralInterfaceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "TransportGeneralInterface");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TransportGeneralInterfaceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TransportGeneralInterfaceResponse>(req, "TransportGeneralInterface");
         }
 
         /// <summary>
@@ -163,17 +115,8 @@ namespace TencentCloud.Afc.V20200226
         /// <returns><see cref="TransportGeneralInterfaceResponse"/></returns>
         public TransportGeneralInterfaceResponse TransportGeneralInterfaceSync(TransportGeneralInterfaceRequest req)
         {
-             JsonResponseModel<TransportGeneralInterfaceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "TransportGeneralInterface");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TransportGeneralInterfaceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TransportGeneralInterfaceResponse>(req, "TransportGeneralInterface")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

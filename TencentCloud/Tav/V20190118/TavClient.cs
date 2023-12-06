@@ -57,19 +57,9 @@ namespace TencentCloud.Tav.V20190118
         /// </summary>
         /// <param name="req"><see cref="GetLocalEngineRequest"/></param>
         /// <returns><see cref="GetLocalEngineResponse"/></returns>
-        public async Task<GetLocalEngineResponse> GetLocalEngine(GetLocalEngineRequest req)
+        public Task<GetLocalEngineResponse> GetLocalEngine(GetLocalEngineRequest req)
         {
-             JsonResponseModel<GetLocalEngineResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetLocalEngine");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetLocalEngineResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetLocalEngineResponse>(req, "GetLocalEngine");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Tav.V20190118
         /// <returns><see cref="GetLocalEngineResponse"/></returns>
         public GetLocalEngineResponse GetLocalEngineSync(GetLocalEngineRequest req)
         {
-             JsonResponseModel<GetLocalEngineResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetLocalEngine");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetLocalEngineResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetLocalEngineResponse>(req, "GetLocalEngine")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Tav.V20190118
         /// </summary>
         /// <param name="req"><see cref="GetScanResultRequest"/></param>
         /// <returns><see cref="GetScanResultResponse"/></returns>
-        public async Task<GetScanResultResponse> GetScanResult(GetScanResultRequest req)
+        public Task<GetScanResultResponse> GetScanResult(GetScanResultRequest req)
         {
-             JsonResponseModel<GetScanResultResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetScanResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetScanResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetScanResultResponse>(req, "GetScanResult");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Tav.V20190118
         /// <returns><see cref="GetScanResultResponse"/></returns>
         public GetScanResultResponse GetScanResultSync(GetScanResultRequest req)
         {
-             JsonResponseModel<GetScanResultResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetScanResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetScanResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetScanResultResponse>(req, "GetScanResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Tav.V20190118
         /// </summary>
         /// <param name="req"><see cref="ScanFileRequest"/></param>
         /// <returns><see cref="ScanFileResponse"/></returns>
-        public async Task<ScanFileResponse> ScanFile(ScanFileRequest req)
+        public Task<ScanFileResponse> ScanFile(ScanFileRequest req)
         {
-             JsonResponseModel<ScanFileResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ScanFile");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScanFileResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ScanFileResponse>(req, "ScanFile");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Tav.V20190118
         /// <returns><see cref="ScanFileResponse"/></returns>
         public ScanFileResponse ScanFileSync(ScanFileRequest req)
         {
-             JsonResponseModel<ScanFileResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ScanFile");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScanFileResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ScanFileResponse>(req, "ScanFile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Tav.V20190118
         /// </summary>
         /// <param name="req"><see cref="ScanFileHashRequest"/></param>
         /// <returns><see cref="ScanFileHashResponse"/></returns>
-        public async Task<ScanFileHashResponse> ScanFileHash(ScanFileHashRequest req)
+        public Task<ScanFileHashResponse> ScanFileHash(ScanFileHashRequest req)
         {
-             JsonResponseModel<ScanFileHashResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ScanFileHash");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScanFileHashResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ScanFileHashResponse>(req, "ScanFileHash");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Tav.V20190118
         /// <returns><see cref="ScanFileHashResponse"/></returns>
         public ScanFileHashResponse ScanFileHashSync(ScanFileHashRequest req)
         {
-             JsonResponseModel<ScanFileHashResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ScanFileHash");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScanFileHashResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ScanFileHashResponse>(req, "ScanFileHash")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

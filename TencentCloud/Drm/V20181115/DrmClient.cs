@@ -58,19 +58,9 @@ namespace TencentCloud.Drm.V20181115
         /// </summary>
         /// <param name="req"><see cref="AddFairPlayPemRequest"/></param>
         /// <returns><see cref="AddFairPlayPemResponse"/></returns>
-        public async Task<AddFairPlayPemResponse> AddFairPlayPem(AddFairPlayPemRequest req)
+        public Task<AddFairPlayPemResponse> AddFairPlayPem(AddFairPlayPemRequest req)
         {
-             JsonResponseModel<AddFairPlayPemResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "AddFairPlayPem");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddFairPlayPemResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<AddFairPlayPemResponse>(req, "AddFairPlayPem");
         }
 
         /// <summary>
@@ -81,17 +71,8 @@ namespace TencentCloud.Drm.V20181115
         /// <returns><see cref="AddFairPlayPemResponse"/></returns>
         public AddFairPlayPemResponse AddFairPlayPemSync(AddFairPlayPemRequest req)
         {
-             JsonResponseModel<AddFairPlayPemResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "AddFairPlayPem");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddFairPlayPemResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<AddFairPlayPemResponse>(req, "AddFairPlayPem")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -99,19 +80,9 @@ namespace TencentCloud.Drm.V20181115
         /// </summary>
         /// <param name="req"><see cref="CreateEncryptKeysRequest"/></param>
         /// <returns><see cref="CreateEncryptKeysResponse"/></returns>
-        public async Task<CreateEncryptKeysResponse> CreateEncryptKeys(CreateEncryptKeysRequest req)
+        public Task<CreateEncryptKeysResponse> CreateEncryptKeys(CreateEncryptKeysRequest req)
         {
-             JsonResponseModel<CreateEncryptKeysResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateEncryptKeys");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEncryptKeysResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateEncryptKeysResponse>(req, "CreateEncryptKeys");
         }
 
         /// <summary>
@@ -121,17 +92,8 @@ namespace TencentCloud.Drm.V20181115
         /// <returns><see cref="CreateEncryptKeysResponse"/></returns>
         public CreateEncryptKeysResponse CreateEncryptKeysSync(CreateEncryptKeysRequest req)
         {
-             JsonResponseModel<CreateEncryptKeysResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateEncryptKeys");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEncryptKeysResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateEncryptKeysResponse>(req, "CreateEncryptKeys")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -140,19 +102,9 @@ namespace TencentCloud.Drm.V20181115
         /// </summary>
         /// <param name="req"><see cref="CreateLicenseRequest"/></param>
         /// <returns><see cref="CreateLicenseResponse"/></returns>
-        public async Task<CreateLicenseResponse> CreateLicense(CreateLicenseRequest req)
+        public Task<CreateLicenseResponse> CreateLicense(CreateLicenseRequest req)
         {
-             JsonResponseModel<CreateLicenseResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateLicense");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLicenseResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateLicenseResponse>(req, "CreateLicense");
         }
 
         /// <summary>
@@ -163,17 +115,8 @@ namespace TencentCloud.Drm.V20181115
         /// <returns><see cref="CreateLicenseResponse"/></returns>
         public CreateLicenseResponse CreateLicenseSync(CreateLicenseRequest req)
         {
-             JsonResponseModel<CreateLicenseResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateLicense");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLicenseResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateLicenseResponse>(req, "CreateLicense")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -183,19 +126,9 @@ namespace TencentCloud.Drm.V20181115
         /// </summary>
         /// <param name="req"><see cref="DeleteFairPlayPemRequest"/></param>
         /// <returns><see cref="DeleteFairPlayPemResponse"/></returns>
-        public async Task<DeleteFairPlayPemResponse> DeleteFairPlayPem(DeleteFairPlayPemRequest req)
+        public Task<DeleteFairPlayPemResponse> DeleteFairPlayPem(DeleteFairPlayPemRequest req)
         {
-             JsonResponseModel<DeleteFairPlayPemResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteFairPlayPem");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFairPlayPemResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteFairPlayPemResponse>(req, "DeleteFairPlayPem");
         }
 
         /// <summary>
@@ -207,17 +140,8 @@ namespace TencentCloud.Drm.V20181115
         /// <returns><see cref="DeleteFairPlayPemResponse"/></returns>
         public DeleteFairPlayPemResponse DeleteFairPlayPemSync(DeleteFairPlayPemRequest req)
         {
-             JsonResponseModel<DeleteFairPlayPemResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteFairPlayPem");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFairPlayPemResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteFairPlayPemResponse>(req, "DeleteFairPlayPem")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -225,19 +149,9 @@ namespace TencentCloud.Drm.V20181115
         /// </summary>
         /// <param name="req"><see cref="DescribeAllKeysRequest"/></param>
         /// <returns><see cref="DescribeAllKeysResponse"/></returns>
-        public async Task<DescribeAllKeysResponse> DescribeAllKeys(DescribeAllKeysRequest req)
+        public Task<DescribeAllKeysResponse> DescribeAllKeys(DescribeAllKeysRequest req)
         {
-             JsonResponseModel<DescribeAllKeysResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeAllKeys");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllKeysResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeAllKeysResponse>(req, "DescribeAllKeys");
         }
 
         /// <summary>
@@ -247,17 +161,8 @@ namespace TencentCloud.Drm.V20181115
         /// <returns><see cref="DescribeAllKeysResponse"/></returns>
         public DescribeAllKeysResponse DescribeAllKeysSync(DescribeAllKeysRequest req)
         {
-             JsonResponseModel<DescribeAllKeysResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeAllKeys");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllKeysResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeAllKeysResponse>(req, "DescribeAllKeys")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -265,19 +170,9 @@ namespace TencentCloud.Drm.V20181115
         /// </summary>
         /// <param name="req"><see cref="DescribeDRMLicenseRequest"/></param>
         /// <returns><see cref="DescribeDRMLicenseResponse"/></returns>
-        public async Task<DescribeDRMLicenseResponse> DescribeDRMLicense(DescribeDRMLicenseRequest req)
+        public Task<DescribeDRMLicenseResponse> DescribeDRMLicense(DescribeDRMLicenseRequest req)
         {
-             JsonResponseModel<DescribeDRMLicenseResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDRMLicense");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDRMLicenseResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDRMLicenseResponse>(req, "DescribeDRMLicense");
         }
 
         /// <summary>
@@ -287,17 +182,8 @@ namespace TencentCloud.Drm.V20181115
         /// <returns><see cref="DescribeDRMLicenseResponse"/></returns>
         public DescribeDRMLicenseResponse DescribeDRMLicenseSync(DescribeDRMLicenseRequest req)
         {
-             JsonResponseModel<DescribeDRMLicenseResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDRMLicense");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDRMLicenseResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDRMLicenseResponse>(req, "DescribeDRMLicense")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -305,19 +191,9 @@ namespace TencentCloud.Drm.V20181115
         /// </summary>
         /// <param name="req"><see cref="DescribeFairPlayPemRequest"/></param>
         /// <returns><see cref="DescribeFairPlayPemResponse"/></returns>
-        public async Task<DescribeFairPlayPemResponse> DescribeFairPlayPem(DescribeFairPlayPemRequest req)
+        public Task<DescribeFairPlayPemResponse> DescribeFairPlayPem(DescribeFairPlayPemRequest req)
         {
-             JsonResponseModel<DescribeFairPlayPemResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeFairPlayPem");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFairPlayPemResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeFairPlayPemResponse>(req, "DescribeFairPlayPem");
         }
 
         /// <summary>
@@ -327,17 +203,8 @@ namespace TencentCloud.Drm.V20181115
         /// <returns><see cref="DescribeFairPlayPemResponse"/></returns>
         public DescribeFairPlayPemResponse DescribeFairPlayPemSync(DescribeFairPlayPemRequest req)
         {
-             JsonResponseModel<DescribeFairPlayPemResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeFairPlayPem");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFairPlayPemResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeFairPlayPemResponse>(req, "DescribeFairPlayPem")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -346,19 +213,9 @@ namespace TencentCloud.Drm.V20181115
         /// </summary>
         /// <param name="req"><see cref="DescribeKeysRequest"/></param>
         /// <returns><see cref="DescribeKeysResponse"/></returns>
-        public async Task<DescribeKeysResponse> DescribeKeys(DescribeKeysRequest req)
+        public Task<DescribeKeysResponse> DescribeKeys(DescribeKeysRequest req)
         {
-             JsonResponseModel<DescribeKeysResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeKeys");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKeysResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeKeysResponse>(req, "DescribeKeys");
         }
 
         /// <summary>
@@ -369,17 +226,8 @@ namespace TencentCloud.Drm.V20181115
         /// <returns><see cref="DescribeKeysResponse"/></returns>
         public DescribeKeysResponse DescribeKeysSync(DescribeKeysRequest req)
         {
-             JsonResponseModel<DescribeKeysResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeKeys");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKeysResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeKeysResponse>(req, "DescribeKeys")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -387,19 +235,9 @@ namespace TencentCloud.Drm.V20181115
         /// </summary>
         /// <param name="req"><see cref="GenerateTDRMKeyRequest"/></param>
         /// <returns><see cref="GenerateTDRMKeyResponse"/></returns>
-        public async Task<GenerateTDRMKeyResponse> GenerateTDRMKey(GenerateTDRMKeyRequest req)
+        public Task<GenerateTDRMKeyResponse> GenerateTDRMKey(GenerateTDRMKeyRequest req)
         {
-             JsonResponseModel<GenerateTDRMKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GenerateTDRMKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateTDRMKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GenerateTDRMKeyResponse>(req, "GenerateTDRMKey");
         }
 
         /// <summary>
@@ -409,17 +247,8 @@ namespace TencentCloud.Drm.V20181115
         /// <returns><see cref="GenerateTDRMKeyResponse"/></returns>
         public GenerateTDRMKeyResponse GenerateTDRMKeySync(GenerateTDRMKeyRequest req)
         {
-             JsonResponseModel<GenerateTDRMKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GenerateTDRMKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateTDRMKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GenerateTDRMKeyResponse>(req, "GenerateTDRMKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -428,19 +257,9 @@ namespace TencentCloud.Drm.V20181115
         /// </summary>
         /// <param name="req"><see cref="ModifyFairPlayPemRequest"/></param>
         /// <returns><see cref="ModifyFairPlayPemResponse"/></returns>
-        public async Task<ModifyFairPlayPemResponse> ModifyFairPlayPem(ModifyFairPlayPemRequest req)
+        public Task<ModifyFairPlayPemResponse> ModifyFairPlayPem(ModifyFairPlayPemRequest req)
         {
-             JsonResponseModel<ModifyFairPlayPemResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyFairPlayPem");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFairPlayPemResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyFairPlayPemResponse>(req, "ModifyFairPlayPem");
         }
 
         /// <summary>
@@ -451,17 +270,8 @@ namespace TencentCloud.Drm.V20181115
         /// <returns><see cref="ModifyFairPlayPemResponse"/></returns>
         public ModifyFairPlayPemResponse ModifyFairPlayPemSync(ModifyFairPlayPemRequest req)
         {
-             JsonResponseModel<ModifyFairPlayPemResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyFairPlayPem");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFairPlayPemResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyFairPlayPemResponse>(req, "ModifyFairPlayPem")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -470,19 +280,9 @@ namespace TencentCloud.Drm.V20181115
         /// </summary>
         /// <param name="req"><see cref="StartEncryptionRequest"/></param>
         /// <returns><see cref="StartEncryptionResponse"/></returns>
-        public async Task<StartEncryptionResponse> StartEncryption(StartEncryptionRequest req)
+        public Task<StartEncryptionResponse> StartEncryption(StartEncryptionRequest req)
         {
-             JsonResponseModel<StartEncryptionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "StartEncryption");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartEncryptionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<StartEncryptionResponse>(req, "StartEncryption");
         }
 
         /// <summary>
@@ -493,17 +293,8 @@ namespace TencentCloud.Drm.V20181115
         /// <returns><see cref="StartEncryptionResponse"/></returns>
         public StartEncryptionResponse StartEncryptionSync(StartEncryptionRequest req)
         {
-             JsonResponseModel<StartEncryptionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "StartEncryption");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartEncryptionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<StartEncryptionResponse>(req, "StartEncryption")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

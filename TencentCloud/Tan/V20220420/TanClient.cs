@@ -57,19 +57,9 @@ namespace TencentCloud.Tan.V20220420
         /// </summary>
         /// <param name="req"><see cref="CreateBlockNodeRecordsRequest"/></param>
         /// <returns><see cref="CreateBlockNodeRecordsResponse"/></returns>
-        public async Task<CreateBlockNodeRecordsResponse> CreateBlockNodeRecords(CreateBlockNodeRecordsRequest req)
+        public Task<CreateBlockNodeRecordsResponse> CreateBlockNodeRecords(CreateBlockNodeRecordsRequest req)
         {
-             JsonResponseModel<CreateBlockNodeRecordsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateBlockNodeRecords");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBlockNodeRecordsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateBlockNodeRecordsResponse>(req, "CreateBlockNodeRecords");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Tan.V20220420
         /// <returns><see cref="CreateBlockNodeRecordsResponse"/></returns>
         public CreateBlockNodeRecordsResponse CreateBlockNodeRecordsSync(CreateBlockNodeRecordsRequest req)
         {
-             JsonResponseModel<CreateBlockNodeRecordsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateBlockNodeRecords");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBlockNodeRecordsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateBlockNodeRecordsResponse>(req, "CreateBlockNodeRecords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

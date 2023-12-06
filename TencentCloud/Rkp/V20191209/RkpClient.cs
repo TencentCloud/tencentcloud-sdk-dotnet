@@ -57,19 +57,9 @@ namespace TencentCloud.Rkp.V20191209
         /// </summary>
         /// <param name="req"><see cref="GetOpenIdRequest"/></param>
         /// <returns><see cref="GetOpenIdResponse"/></returns>
-        public async Task<GetOpenIdResponse> GetOpenId(GetOpenIdRequest req)
+        public Task<GetOpenIdResponse> GetOpenId(GetOpenIdRequest req)
         {
-             JsonResponseModel<GetOpenIdResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetOpenId");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetOpenIdResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetOpenIdResponse>(req, "GetOpenId");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Rkp.V20191209
         /// <returns><see cref="GetOpenIdResponse"/></returns>
         public GetOpenIdResponse GetOpenIdSync(GetOpenIdRequest req)
         {
-             JsonResponseModel<GetOpenIdResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetOpenId");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetOpenIdResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetOpenIdResponse>(req, "GetOpenId")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Rkp.V20191209
         /// </summary>
         /// <param name="req"><see cref="GetTokenRequest"/></param>
         /// <returns><see cref="GetTokenResponse"/></returns>
-        public async Task<GetTokenResponse> GetToken(GetTokenRequest req)
+        public Task<GetTokenResponse> GetToken(GetTokenRequest req)
         {
-             JsonResponseModel<GetTokenResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetToken");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTokenResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetTokenResponse>(req, "GetToken");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Rkp.V20191209
         /// <returns><see cref="GetTokenResponse"/></returns>
         public GetTokenResponse GetTokenSync(GetTokenRequest req)
         {
-             JsonResponseModel<GetTokenResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetToken");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTokenResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetTokenResponse>(req, "GetToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Rkp.V20191209
         /// </summary>
         /// <param name="req"><see cref="QueryDevAndRiskRequest"/></param>
         /// <returns><see cref="QueryDevAndRiskResponse"/></returns>
-        public async Task<QueryDevAndRiskResponse> QueryDevAndRisk(QueryDevAndRiskRequest req)
+        public Task<QueryDevAndRiskResponse> QueryDevAndRisk(QueryDevAndRiskRequest req)
         {
-             JsonResponseModel<QueryDevAndRiskResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryDevAndRisk");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryDevAndRiskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryDevAndRiskResponse>(req, "QueryDevAndRisk");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Rkp.V20191209
         /// <returns><see cref="QueryDevAndRiskResponse"/></returns>
         public QueryDevAndRiskResponse QueryDevAndRiskSync(QueryDevAndRiskRequest req)
         {
-             JsonResponseModel<QueryDevAndRiskResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryDevAndRisk");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryDevAndRiskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryDevAndRiskResponse>(req, "QueryDevAndRisk")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

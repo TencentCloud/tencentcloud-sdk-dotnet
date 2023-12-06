@@ -59,19 +59,9 @@ namespace TencentCloud.Mvj.V20190926
         /// </summary>
         /// <param name="req"><see cref="MarketingValueJudgementRequest"/></param>
         /// <returns><see cref="MarketingValueJudgementResponse"/></returns>
-        public async Task<MarketingValueJudgementResponse> MarketingValueJudgement(MarketingValueJudgementRequest req)
+        public Task<MarketingValueJudgementResponse> MarketingValueJudgement(MarketingValueJudgementRequest req)
         {
-             JsonResponseModel<MarketingValueJudgementResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "MarketingValueJudgement");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MarketingValueJudgementResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<MarketingValueJudgementResponse>(req, "MarketingValueJudgement");
         }
 
         /// <summary>
@@ -83,17 +73,8 @@ namespace TencentCloud.Mvj.V20190926
         /// <returns><see cref="MarketingValueJudgementResponse"/></returns>
         public MarketingValueJudgementResponse MarketingValueJudgementSync(MarketingValueJudgementRequest req)
         {
-             JsonResponseModel<MarketingValueJudgementResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "MarketingValueJudgement");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MarketingValueJudgementResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<MarketingValueJudgementResponse>(req, "MarketingValueJudgement")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

@@ -57,19 +57,9 @@ namespace TencentCloud.Tbp.V20190627
         /// </summary>
         /// <param name="req"><see cref="TextProcessRequest"/></param>
         /// <returns><see cref="TextProcessResponse"/></returns>
-        public async Task<TextProcessResponse> TextProcess(TextProcessRequest req)
+        public Task<TextProcessResponse> TextProcess(TextProcessRequest req)
         {
-             JsonResponseModel<TextProcessResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "TextProcess");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextProcessResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TextProcessResponse>(req, "TextProcess");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Tbp.V20190627
         /// <returns><see cref="TextProcessResponse"/></returns>
         public TextProcessResponse TextProcessSync(TextProcessRequest req)
         {
-             JsonResponseModel<TextProcessResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "TextProcess");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextProcessResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TextProcessResponse>(req, "TextProcess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Tbp.V20190627
         /// </summary>
         /// <param name="req"><see cref="TextResetRequest"/></param>
         /// <returns><see cref="TextResetResponse"/></returns>
-        public async Task<TextResetResponse> TextReset(TextResetRequest req)
+        public Task<TextResetResponse> TextReset(TextResetRequest req)
         {
-             JsonResponseModel<TextResetResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "TextReset");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextResetResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TextResetResponse>(req, "TextReset");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Tbp.V20190627
         /// <returns><see cref="TextResetResponse"/></returns>
         public TextResetResponse TextResetSync(TextResetRequest req)
         {
-             JsonResponseModel<TextResetResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "TextReset");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextResetResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TextResetResponse>(req, "TextReset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

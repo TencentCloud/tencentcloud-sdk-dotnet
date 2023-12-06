@@ -57,19 +57,9 @@ namespace TencentCloud.Facefusion.V20220927
         /// </summary>
         /// <param name="req"><see cref="DescribeMaterialListRequest"/></param>
         /// <returns><see cref="DescribeMaterialListResponse"/></returns>
-        public async Task<DescribeMaterialListResponse> DescribeMaterialList(DescribeMaterialListRequest req)
+        public Task<DescribeMaterialListResponse> DescribeMaterialList(DescribeMaterialListRequest req)
         {
-             JsonResponseModel<DescribeMaterialListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeMaterialList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMaterialListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeMaterialListResponse>(req, "DescribeMaterialList");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Facefusion.V20220927
         /// <returns><see cref="DescribeMaterialListResponse"/></returns>
         public DescribeMaterialListResponse DescribeMaterialListSync(DescribeMaterialListRequest req)
         {
-             JsonResponseModel<DescribeMaterialListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeMaterialList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMaterialListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeMaterialListResponse>(req, "DescribeMaterialList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -101,19 +82,9 @@ namespace TencentCloud.Facefusion.V20220927
         /// </summary>
         /// <param name="req"><see cref="FuseFaceRequest"/></param>
         /// <returns><see cref="FuseFaceResponse"/></returns>
-        public async Task<FuseFaceResponse> FuseFace(FuseFaceRequest req)
+        public Task<FuseFaceResponse> FuseFace(FuseFaceRequest req)
         {
-             JsonResponseModel<FuseFaceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "FuseFace");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FuseFaceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<FuseFaceResponse>(req, "FuseFace");
         }
 
         /// <summary>
@@ -127,17 +98,8 @@ namespace TencentCloud.Facefusion.V20220927
         /// <returns><see cref="FuseFaceResponse"/></returns>
         public FuseFaceResponse FuseFaceSync(FuseFaceRequest req)
         {
-             JsonResponseModel<FuseFaceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "FuseFace");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FuseFaceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<FuseFaceResponse>(req, "FuseFace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

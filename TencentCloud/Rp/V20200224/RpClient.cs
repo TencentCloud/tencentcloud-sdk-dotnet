@@ -57,19 +57,9 @@ namespace TencentCloud.Rp.V20200224
         /// </summary>
         /// <param name="req"><see cref="QueryRegisterProtectionRequest"/></param>
         /// <returns><see cref="QueryRegisterProtectionResponse"/></returns>
-        public async Task<QueryRegisterProtectionResponse> QueryRegisterProtection(QueryRegisterProtectionRequest req)
+        public Task<QueryRegisterProtectionResponse> QueryRegisterProtection(QueryRegisterProtectionRequest req)
         {
-             JsonResponseModel<QueryRegisterProtectionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryRegisterProtection");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryRegisterProtectionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryRegisterProtectionResponse>(req, "QueryRegisterProtection");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Rp.V20200224
         /// <returns><see cref="QueryRegisterProtectionResponse"/></returns>
         public QueryRegisterProtectionResponse QueryRegisterProtectionSync(QueryRegisterProtectionRequest req)
         {
-             JsonResponseModel<QueryRegisterProtectionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryRegisterProtection");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryRegisterProtectionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryRegisterProtectionResponse>(req, "QueryRegisterProtection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

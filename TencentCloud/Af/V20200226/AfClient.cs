@@ -59,19 +59,9 @@ namespace TencentCloud.Af.V20200226
         /// </summary>
         /// <param name="req"><see cref="DescribeAntiFraudRequest"/></param>
         /// <returns><see cref="DescribeAntiFraudResponse"/></returns>
-        public async Task<DescribeAntiFraudResponse> DescribeAntiFraud(DescribeAntiFraudRequest req)
+        public Task<DescribeAntiFraudResponse> DescribeAntiFraud(DescribeAntiFraudRequest req)
         {
-             JsonResponseModel<DescribeAntiFraudResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeAntiFraud");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAntiFraudResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeAntiFraudResponse>(req, "DescribeAntiFraud");
         }
 
         /// <summary>
@@ -83,17 +73,8 @@ namespace TencentCloud.Af.V20200226
         /// <returns><see cref="DescribeAntiFraudResponse"/></returns>
         public DescribeAntiFraudResponse DescribeAntiFraudSync(DescribeAntiFraudRequest req)
         {
-             JsonResponseModel<DescribeAntiFraudResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeAntiFraud");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAntiFraudResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeAntiFraudResponse>(req, "DescribeAntiFraud")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -101,19 +82,9 @@ namespace TencentCloud.Af.V20200226
         /// </summary>
         /// <param name="req"><see cref="GetAntiFraudRequest"/></param>
         /// <returns><see cref="GetAntiFraudResponse"/></returns>
-        public async Task<GetAntiFraudResponse> GetAntiFraud(GetAntiFraudRequest req)
+        public Task<GetAntiFraudResponse> GetAntiFraud(GetAntiFraudRequest req)
         {
-             JsonResponseModel<GetAntiFraudResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetAntiFraud");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAntiFraudResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetAntiFraudResponse>(req, "GetAntiFraud");
         }
 
         /// <summary>
@@ -123,17 +94,8 @@ namespace TencentCloud.Af.V20200226
         /// <returns><see cref="GetAntiFraudResponse"/></returns>
         public GetAntiFraudResponse GetAntiFraudSync(GetAntiFraudRequest req)
         {
-             JsonResponseModel<GetAntiFraudResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetAntiFraud");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAntiFraudResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetAntiFraudResponse>(req, "GetAntiFraud")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -143,19 +105,9 @@ namespace TencentCloud.Af.V20200226
         /// </summary>
         /// <param name="req"><see cref="QueryAntiFraudRequest"/></param>
         /// <returns><see cref="QueryAntiFraudResponse"/></returns>
-        public async Task<QueryAntiFraudResponse> QueryAntiFraud(QueryAntiFraudRequest req)
+        public Task<QueryAntiFraudResponse> QueryAntiFraud(QueryAntiFraudRequest req)
         {
-             JsonResponseModel<QueryAntiFraudResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryAntiFraud");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryAntiFraudResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryAntiFraudResponse>(req, "QueryAntiFraud");
         }
 
         /// <summary>
@@ -167,17 +119,8 @@ namespace TencentCloud.Af.V20200226
         /// <returns><see cref="QueryAntiFraudResponse"/></returns>
         public QueryAntiFraudResponse QueryAntiFraudSync(QueryAntiFraudRequest req)
         {
-             JsonResponseModel<QueryAntiFraudResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryAntiFraud");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryAntiFraudResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<QueryAntiFraudResponse>(req, "QueryAntiFraud")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

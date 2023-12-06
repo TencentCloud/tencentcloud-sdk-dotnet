@@ -61,19 +61,9 @@ namespace TencentCloud.Hunyuan.V20230901
         /// </summary>
         /// <param name="req"><see cref="ChatProRequest"/></param>
         /// <returns><see cref="ChatProResponse"/></returns>
-        public async Task<ChatProResponse> ChatPro(ChatProRequest req)
+        public Task<ChatProResponse> ChatPro(ChatProRequest req)
         {
-             JsonResponseModel<ChatProResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ChatPro");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChatProResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ChatProResponse>(req, "ChatPro");
         }
 
         /// <summary>
@@ -87,17 +77,8 @@ namespace TencentCloud.Hunyuan.V20230901
         /// <returns><see cref="ChatProResponse"/></returns>
         public ChatProResponse ChatProSync(ChatProRequest req)
         {
-             JsonResponseModel<ChatProResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ChatPro");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChatProResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ChatProResponse>(req, "ChatPro")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -109,19 +90,9 @@ namespace TencentCloud.Hunyuan.V20230901
         /// </summary>
         /// <param name="req"><see cref="ChatStdRequest"/></param>
         /// <returns><see cref="ChatStdResponse"/></returns>
-        public async Task<ChatStdResponse> ChatStd(ChatStdRequest req)
+        public Task<ChatStdResponse> ChatStd(ChatStdRequest req)
         {
-             JsonResponseModel<ChatStdResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ChatStd");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChatStdResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ChatStdResponse>(req, "ChatStd");
         }
 
         /// <summary>
@@ -135,17 +106,8 @@ namespace TencentCloud.Hunyuan.V20230901
         /// <returns><see cref="ChatStdResponse"/></returns>
         public ChatStdResponse ChatStdSync(ChatStdRequest req)
         {
-             JsonResponseModel<ChatStdResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ChatStd");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChatStdResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ChatStdResponse>(req, "ChatStd")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -153,19 +115,9 @@ namespace TencentCloud.Hunyuan.V20230901
         /// </summary>
         /// <param name="req"><see cref="GetTokenCountRequest"/></param>
         /// <returns><see cref="GetTokenCountResponse"/></returns>
-        public async Task<GetTokenCountResponse> GetTokenCount(GetTokenCountRequest req)
+        public Task<GetTokenCountResponse> GetTokenCount(GetTokenCountRequest req)
         {
-             JsonResponseModel<GetTokenCountResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetTokenCount");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTokenCountResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetTokenCountResponse>(req, "GetTokenCount");
         }
 
         /// <summary>
@@ -175,17 +127,8 @@ namespace TencentCloud.Hunyuan.V20230901
         /// <returns><see cref="GetTokenCountResponse"/></returns>
         public GetTokenCountResponse GetTokenCountSync(GetTokenCountRequest req)
         {
-             JsonResponseModel<GetTokenCountResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetTokenCount");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTokenCountResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetTokenCountResponse>(req, "GetTokenCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

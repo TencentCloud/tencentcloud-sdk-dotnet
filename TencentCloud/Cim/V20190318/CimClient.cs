@@ -57,19 +57,9 @@ namespace TencentCloud.Cim.V20190318
         /// </summary>
         /// <param name="req"><see cref="DescribeSdkAppidRequest"/></param>
         /// <returns><see cref="DescribeSdkAppidResponse"/></returns>
-        public async Task<DescribeSdkAppidResponse> DescribeSdkAppid(DescribeSdkAppidRequest req)
+        public Task<DescribeSdkAppidResponse> DescribeSdkAppid(DescribeSdkAppidRequest req)
         {
-             JsonResponseModel<DescribeSdkAppidResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeSdkAppid");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSdkAppidResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeSdkAppidResponse>(req, "DescribeSdkAppid");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Cim.V20190318
         /// <returns><see cref="DescribeSdkAppidResponse"/></returns>
         public DescribeSdkAppidResponse DescribeSdkAppidSync(DescribeSdkAppidRequest req)
         {
-             JsonResponseModel<DescribeSdkAppidResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeSdkAppid");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSdkAppidResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeSdkAppidResponse>(req, "DescribeSdkAppid")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

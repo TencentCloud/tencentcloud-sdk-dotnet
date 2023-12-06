@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{285E4D65-D854-3FAC-912D-5A63E6D8406B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.909</VersionPrefix>
+    <VersionPrefix>3.0.910</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -104,6 +104,8 @@
     <Compile Include="V20180301\Models\IdCardVerificationResponse.cs" />
     <Compile Include="V20180301\Models\ImageRecognitionRequest.cs" />
     <Compile Include="V20180301\Models\ImageRecognitionResponse.cs" />
+    <Compile Include="V20180301\Models\ImageRecognitionV2Request.cs" />
+    <Compile Include="V20180301\Models\ImageRecognitionV2Response.cs" />
     <Compile Include="V20180301\Models\IntentionActionConfig.cs" />
     <Compile Include="V20180301\Models\IntentionActionResult.cs" />
     <Compile Include="V20180301\Models\IntentionActionResultDetail.cs" />

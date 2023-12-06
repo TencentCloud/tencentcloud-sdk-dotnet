@@ -57,19 +57,9 @@ namespace TencentCloud.Irp.V20220324
         /// </summary>
         /// <param name="req"><see cref="RecommendContentRequest"/></param>
         /// <returns><see cref="RecommendContentResponse"/></returns>
-        public async Task<RecommendContentResponse> RecommendContent(RecommendContentRequest req)
+        public Task<RecommendContentResponse> RecommendContent(RecommendContentRequest req)
         {
-             JsonResponseModel<RecommendContentResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RecommendContent");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecommendContentResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecommendContentResponse>(req, "RecommendContent");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Irp.V20220324
         /// <returns><see cref="RecommendContentResponse"/></returns>
         public RecommendContentResponse RecommendContentSync(RecommendContentRequest req)
         {
-             JsonResponseModel<RecommendContentResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RecommendContent");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecommendContentResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecommendContentResponse>(req, "RecommendContent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Irp.V20220324
         /// </summary>
         /// <param name="req"><see cref="ReportActionRequest"/></param>
         /// <returns><see cref="ReportActionResponse"/></returns>
-        public async Task<ReportActionResponse> ReportAction(ReportActionRequest req)
+        public Task<ReportActionResponse> ReportAction(ReportActionRequest req)
         {
-             JsonResponseModel<ReportActionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ReportAction");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportActionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ReportActionResponse>(req, "ReportAction");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Irp.V20220324
         /// <returns><see cref="ReportActionResponse"/></returns>
         public ReportActionResponse ReportActionSync(ReportActionRequest req)
         {
-             JsonResponseModel<ReportActionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ReportAction");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportActionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ReportActionResponse>(req, "ReportAction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Irp.V20220324
         /// </summary>
         /// <param name="req"><see cref="ReportMaterialRequest"/></param>
         /// <returns><see cref="ReportMaterialResponse"/></returns>
-        public async Task<ReportMaterialResponse> ReportMaterial(ReportMaterialRequest req)
+        public Task<ReportMaterialResponse> ReportMaterial(ReportMaterialRequest req)
         {
-             JsonResponseModel<ReportMaterialResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ReportMaterial");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportMaterialResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ReportMaterialResponse>(req, "ReportMaterial");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Irp.V20220324
         /// <returns><see cref="ReportMaterialResponse"/></returns>
         public ReportMaterialResponse ReportMaterialSync(ReportMaterialRequest req)
         {
-             JsonResponseModel<ReportMaterialResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ReportMaterial");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportMaterialResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ReportMaterialResponse>(req, "ReportMaterial")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Irp.V20220324
         /// </summary>
         /// <param name="req"><see cref="ReportPortraitRequest"/></param>
         /// <returns><see cref="ReportPortraitResponse"/></returns>
-        public async Task<ReportPortraitResponse> ReportPortrait(ReportPortraitRequest req)
+        public Task<ReportPortraitResponse> ReportPortrait(ReportPortraitRequest req)
         {
-             JsonResponseModel<ReportPortraitResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ReportPortrait");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportPortraitResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ReportPortraitResponse>(req, "ReportPortrait");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Irp.V20220324
         /// <returns><see cref="ReportPortraitResponse"/></returns>
         public ReportPortraitResponse ReportPortraitSync(ReportPortraitRequest req)
         {
-             JsonResponseModel<ReportPortraitResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ReportPortrait");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportPortraitResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ReportPortraitResponse>(req, "ReportPortrait")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

@@ -57,19 +57,9 @@ namespace TencentCloud.Habo.V20181203
         /// </summary>
         /// <param name="req"><see cref="DescribeStatusRequest"/></param>
         /// <returns><see cref="DescribeStatusResponse"/></returns>
-        public async Task<DescribeStatusResponse> DescribeStatus(DescribeStatusRequest req)
+        public Task<DescribeStatusResponse> DescribeStatus(DescribeStatusRequest req)
         {
-             JsonResponseModel<DescribeStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeStatusResponse>(req, "DescribeStatus");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Habo.V20181203
         /// <returns><see cref="DescribeStatusResponse"/></returns>
         public DescribeStatusResponse DescribeStatusSync(DescribeStatusRequest req)
         {
-             JsonResponseModel<DescribeStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeStatusResponse>(req, "DescribeStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Habo.V20181203
         /// </summary>
         /// <param name="req"><see cref="StartAnalyseRequest"/></param>
         /// <returns><see cref="StartAnalyseResponse"/></returns>
-        public async Task<StartAnalyseResponse> StartAnalyse(StartAnalyseRequest req)
+        public Task<StartAnalyseResponse> StartAnalyse(StartAnalyseRequest req)
         {
-             JsonResponseModel<StartAnalyseResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "StartAnalyse");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartAnalyseResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<StartAnalyseResponse>(req, "StartAnalyse");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Habo.V20181203
         /// <returns><see cref="StartAnalyseResponse"/></returns>
         public StartAnalyseResponse StartAnalyseSync(StartAnalyseRequest req)
         {
-             JsonResponseModel<StartAnalyseResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "StartAnalyse");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartAnalyseResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<StartAnalyseResponse>(req, "StartAnalyse")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

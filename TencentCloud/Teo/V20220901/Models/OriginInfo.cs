@@ -62,6 +62,24 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("PrivateParameters")]
         public PrivateParameter[] PrivateParameters{ get; set; }
 
+        /// <summary>
+        /// MO 子应用 ID
+        /// </summary>
+        [JsonProperty("VodeoSubAppId")]
+        public long? VodeoSubAppId{ get; set; }
+
+        /// <summary>
+        /// MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>
+        /// </summary>
+        [JsonProperty("VodeoDistributionRange")]
+        public string VodeoDistributionRange{ get; set; }
+
+        /// <summary>
+        /// MO 存储桶 ID，分发范围(DistributionRange)为存储桶(Bucket)时必填	
+        /// </summary>
+        [JsonProperty("VodeoBucketId")]
+        public string VodeoBucketId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +91,9 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "BackupOrigin", this.BackupOrigin);
             this.SetParamSimple(map, prefix + "PrivateAccess", this.PrivateAccess);
             this.SetParamArrayObj(map, prefix + "PrivateParameters.", this.PrivateParameters);
+            this.SetParamSimple(map, prefix + "VodeoSubAppId", this.VodeoSubAppId);
+            this.SetParamSimple(map, prefix + "VodeoDistributionRange", this.VodeoDistributionRange);
+            this.SetParamSimple(map, prefix + "VodeoBucketId", this.VodeoBucketId);
         }
     }
 }

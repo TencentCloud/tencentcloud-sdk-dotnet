@@ -57,19 +57,9 @@ namespace TencentCloud.Csxg.V20230303
         /// </summary>
         /// <param name="req"><see cref="Create5GInstanceRequest"/></param>
         /// <returns><see cref="Create5GInstanceResponse"/></returns>
-        public async Task<Create5GInstanceResponse> Create5GInstance(Create5GInstanceRequest req)
+        public Task<Create5GInstanceResponse> Create5GInstance(Create5GInstanceRequest req)
         {
-             JsonResponseModel<Create5GInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "Create5GInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<Create5GInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<Create5GInstanceResponse>(req, "Create5GInstance");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Csxg.V20230303
         /// <returns><see cref="Create5GInstanceResponse"/></returns>
         public Create5GInstanceResponse Create5GInstanceSync(Create5GInstanceRequest req)
         {
-             JsonResponseModel<Create5GInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "Create5GInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<Create5GInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<Create5GInstanceResponse>(req, "Create5GInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Csxg.V20230303
         /// </summary>
         /// <param name="req"><see cref="Delete5GInstanceRequest"/></param>
         /// <returns><see cref="Delete5GInstanceResponse"/></returns>
-        public async Task<Delete5GInstanceResponse> Delete5GInstance(Delete5GInstanceRequest req)
+        public Task<Delete5GInstanceResponse> Delete5GInstance(Delete5GInstanceRequest req)
         {
-             JsonResponseModel<Delete5GInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "Delete5GInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<Delete5GInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<Delete5GInstanceResponse>(req, "Delete5GInstance");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Csxg.V20230303
         /// <returns><see cref="Delete5GInstanceResponse"/></returns>
         public Delete5GInstanceResponse Delete5GInstanceSync(Delete5GInstanceRequest req)
         {
-             JsonResponseModel<Delete5GInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "Delete5GInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<Delete5GInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<Delete5GInstanceResponse>(req, "Delete5GInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Csxg.V20230303
         /// </summary>
         /// <param name="req"><see cref="Describe5GAPNsRequest"/></param>
         /// <returns><see cref="Describe5GAPNsResponse"/></returns>
-        public async Task<Describe5GAPNsResponse> Describe5GAPNs(Describe5GAPNsRequest req)
+        public Task<Describe5GAPNsResponse> Describe5GAPNs(Describe5GAPNsRequest req)
         {
-             JsonResponseModel<Describe5GAPNsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "Describe5GAPNs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<Describe5GAPNsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<Describe5GAPNsResponse>(req, "Describe5GAPNs");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Csxg.V20230303
         /// <returns><see cref="Describe5GAPNsResponse"/></returns>
         public Describe5GAPNsResponse Describe5GAPNsSync(Describe5GAPNsRequest req)
         {
-             JsonResponseModel<Describe5GAPNsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "Describe5GAPNs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<Describe5GAPNsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<Describe5GAPNsResponse>(req, "Describe5GAPNs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Csxg.V20230303
         /// </summary>
         /// <param name="req"><see cref="Describe5GInstancesRequest"/></param>
         /// <returns><see cref="Describe5GInstancesResponse"/></returns>
-        public async Task<Describe5GInstancesResponse> Describe5GInstances(Describe5GInstancesRequest req)
+        public Task<Describe5GInstancesResponse> Describe5GInstances(Describe5GInstancesRequest req)
         {
-             JsonResponseModel<Describe5GInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "Describe5GInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<Describe5GInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<Describe5GInstancesResponse>(req, "Describe5GInstances");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Csxg.V20230303
         /// <returns><see cref="Describe5GInstancesResponse"/></returns>
         public Describe5GInstancesResponse Describe5GInstancesSync(Describe5GInstancesRequest req)
         {
-             JsonResponseModel<Describe5GInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "Describe5GInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<Describe5GInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<Describe5GInstancesResponse>(req, "Describe5GInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -217,19 +141,9 @@ namespace TencentCloud.Csxg.V20230303
         /// </summary>
         /// <param name="req"><see cref="Modify5GInstanceAttributeRequest"/></param>
         /// <returns><see cref="Modify5GInstanceAttributeResponse"/></returns>
-        public async Task<Modify5GInstanceAttributeResponse> Modify5GInstanceAttribute(Modify5GInstanceAttributeRequest req)
+        public Task<Modify5GInstanceAttributeResponse> Modify5GInstanceAttribute(Modify5GInstanceAttributeRequest req)
         {
-             JsonResponseModel<Modify5GInstanceAttributeResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "Modify5GInstanceAttribute");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<Modify5GInstanceAttributeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<Modify5GInstanceAttributeResponse>(req, "Modify5GInstanceAttribute");
         }
 
         /// <summary>
@@ -239,17 +153,8 @@ namespace TencentCloud.Csxg.V20230303
         /// <returns><see cref="Modify5GInstanceAttributeResponse"/></returns>
         public Modify5GInstanceAttributeResponse Modify5GInstanceAttributeSync(Modify5GInstanceAttributeRequest req)
         {
-             JsonResponseModel<Modify5GInstanceAttributeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "Modify5GInstanceAttribute");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<Modify5GInstanceAttributeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<Modify5GInstanceAttributeResponse>(req, "Modify5GInstanceAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

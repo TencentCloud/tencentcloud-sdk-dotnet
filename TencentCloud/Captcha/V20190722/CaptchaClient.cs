@@ -57,19 +57,9 @@ namespace TencentCloud.Captcha.V20190722
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaAppIdInfoRequest"/></param>
         /// <returns><see cref="DescribeCaptchaAppIdInfoResponse"/></returns>
-        public async Task<DescribeCaptchaAppIdInfoResponse> DescribeCaptchaAppIdInfo(DescribeCaptchaAppIdInfoRequest req)
+        public Task<DescribeCaptchaAppIdInfoResponse> DescribeCaptchaAppIdInfo(DescribeCaptchaAppIdInfoRequest req)
         {
-             JsonResponseModel<DescribeCaptchaAppIdInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCaptchaAppIdInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaAppIdInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaAppIdInfoResponse>(req, "DescribeCaptchaAppIdInfo");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Captcha.V20190722
         /// <returns><see cref="DescribeCaptchaAppIdInfoResponse"/></returns>
         public DescribeCaptchaAppIdInfoResponse DescribeCaptchaAppIdInfoSync(DescribeCaptchaAppIdInfoRequest req)
         {
-             JsonResponseModel<DescribeCaptchaAppIdInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCaptchaAppIdInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaAppIdInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaAppIdInfoResponse>(req, "DescribeCaptchaAppIdInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Captcha.V20190722
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaDataRequest"/></param>
         /// <returns><see cref="DescribeCaptchaDataResponse"/></returns>
-        public async Task<DescribeCaptchaDataResponse> DescribeCaptchaData(DescribeCaptchaDataRequest req)
+        public Task<DescribeCaptchaDataResponse> DescribeCaptchaData(DescribeCaptchaDataRequest req)
         {
-             JsonResponseModel<DescribeCaptchaDataResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCaptchaData");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaDataResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaDataResponse>(req, "DescribeCaptchaData");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Captcha.V20190722
         /// <returns><see cref="DescribeCaptchaDataResponse"/></returns>
         public DescribeCaptchaDataResponse DescribeCaptchaDataSync(DescribeCaptchaDataRequest req)
         {
-             JsonResponseModel<DescribeCaptchaDataResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCaptchaData");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaDataResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaDataResponse>(req, "DescribeCaptchaData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Captcha.V20190722
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaDataSumRequest"/></param>
         /// <returns><see cref="DescribeCaptchaDataSumResponse"/></returns>
-        public async Task<DescribeCaptchaDataSumResponse> DescribeCaptchaDataSum(DescribeCaptchaDataSumRequest req)
+        public Task<DescribeCaptchaDataSumResponse> DescribeCaptchaDataSum(DescribeCaptchaDataSumRequest req)
         {
-             JsonResponseModel<DescribeCaptchaDataSumResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCaptchaDataSum");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaDataSumResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaDataSumResponse>(req, "DescribeCaptchaDataSum");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Captcha.V20190722
         /// <returns><see cref="DescribeCaptchaDataSumResponse"/></returns>
         public DescribeCaptchaDataSumResponse DescribeCaptchaDataSumSync(DescribeCaptchaDataSumRequest req)
         {
-             JsonResponseModel<DescribeCaptchaDataSumResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCaptchaDataSum");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaDataSumResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaDataSumResponse>(req, "DescribeCaptchaDataSum")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Captcha.V20190722
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaMiniDataRequest"/></param>
         /// <returns><see cref="DescribeCaptchaMiniDataResponse"/></returns>
-        public async Task<DescribeCaptchaMiniDataResponse> DescribeCaptchaMiniData(DescribeCaptchaMiniDataRequest req)
+        public Task<DescribeCaptchaMiniDataResponse> DescribeCaptchaMiniData(DescribeCaptchaMiniDataRequest req)
         {
-             JsonResponseModel<DescribeCaptchaMiniDataResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCaptchaMiniData");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaMiniDataResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaMiniDataResponse>(req, "DescribeCaptchaMiniData");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Captcha.V20190722
         /// <returns><see cref="DescribeCaptchaMiniDataResponse"/></returns>
         public DescribeCaptchaMiniDataResponse DescribeCaptchaMiniDataSync(DescribeCaptchaMiniDataRequest req)
         {
-             JsonResponseModel<DescribeCaptchaMiniDataResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCaptchaMiniData");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaMiniDataResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaMiniDataResponse>(req, "DescribeCaptchaMiniData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -217,19 +141,9 @@ namespace TencentCloud.Captcha.V20190722
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaMiniDataSumRequest"/></param>
         /// <returns><see cref="DescribeCaptchaMiniDataSumResponse"/></returns>
-        public async Task<DescribeCaptchaMiniDataSumResponse> DescribeCaptchaMiniDataSum(DescribeCaptchaMiniDataSumRequest req)
+        public Task<DescribeCaptchaMiniDataSumResponse> DescribeCaptchaMiniDataSum(DescribeCaptchaMiniDataSumRequest req)
         {
-             JsonResponseModel<DescribeCaptchaMiniDataSumResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCaptchaMiniDataSum");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaMiniDataSumResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaMiniDataSumResponse>(req, "DescribeCaptchaMiniDataSum");
         }
 
         /// <summary>
@@ -239,17 +153,8 @@ namespace TencentCloud.Captcha.V20190722
         /// <returns><see cref="DescribeCaptchaMiniDataSumResponse"/></returns>
         public DescribeCaptchaMiniDataSumResponse DescribeCaptchaMiniDataSumSync(DescribeCaptchaMiniDataSumRequest req)
         {
-             JsonResponseModel<DescribeCaptchaMiniDataSumResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCaptchaMiniDataSum");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaMiniDataSumResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaMiniDataSumResponse>(req, "DescribeCaptchaMiniDataSum")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -257,19 +162,9 @@ namespace TencentCloud.Captcha.V20190722
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaMiniOperDataRequest"/></param>
         /// <returns><see cref="DescribeCaptchaMiniOperDataResponse"/></returns>
-        public async Task<DescribeCaptchaMiniOperDataResponse> DescribeCaptchaMiniOperData(DescribeCaptchaMiniOperDataRequest req)
+        public Task<DescribeCaptchaMiniOperDataResponse> DescribeCaptchaMiniOperData(DescribeCaptchaMiniOperDataRequest req)
         {
-             JsonResponseModel<DescribeCaptchaMiniOperDataResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCaptchaMiniOperData");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaMiniOperDataResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaMiniOperDataResponse>(req, "DescribeCaptchaMiniOperData");
         }
 
         /// <summary>
@@ -279,17 +174,8 @@ namespace TencentCloud.Captcha.V20190722
         /// <returns><see cref="DescribeCaptchaMiniOperDataResponse"/></returns>
         public DescribeCaptchaMiniOperDataResponse DescribeCaptchaMiniOperDataSync(DescribeCaptchaMiniOperDataRequest req)
         {
-             JsonResponseModel<DescribeCaptchaMiniOperDataResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCaptchaMiniOperData");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaMiniOperDataResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaMiniOperDataResponse>(req, "DescribeCaptchaMiniOperData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -297,19 +183,9 @@ namespace TencentCloud.Captcha.V20190722
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaMiniResultRequest"/></param>
         /// <returns><see cref="DescribeCaptchaMiniResultResponse"/></returns>
-        public async Task<DescribeCaptchaMiniResultResponse> DescribeCaptchaMiniResult(DescribeCaptchaMiniResultRequest req)
+        public Task<DescribeCaptchaMiniResultResponse> DescribeCaptchaMiniResult(DescribeCaptchaMiniResultRequest req)
         {
-             JsonResponseModel<DescribeCaptchaMiniResultResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCaptchaMiniResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaMiniResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaMiniResultResponse>(req, "DescribeCaptchaMiniResult");
         }
 
         /// <summary>
@@ -319,17 +195,8 @@ namespace TencentCloud.Captcha.V20190722
         /// <returns><see cref="DescribeCaptchaMiniResultResponse"/></returns>
         public DescribeCaptchaMiniResultResponse DescribeCaptchaMiniResultSync(DescribeCaptchaMiniResultRequest req)
         {
-             JsonResponseModel<DescribeCaptchaMiniResultResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCaptchaMiniResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaMiniResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaMiniResultResponse>(req, "DescribeCaptchaMiniResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -337,19 +204,9 @@ namespace TencentCloud.Captcha.V20190722
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaMiniRiskResultRequest"/></param>
         /// <returns><see cref="DescribeCaptchaMiniRiskResultResponse"/></returns>
-        public async Task<DescribeCaptchaMiniRiskResultResponse> DescribeCaptchaMiniRiskResult(DescribeCaptchaMiniRiskResultRequest req)
+        public Task<DescribeCaptchaMiniRiskResultResponse> DescribeCaptchaMiniRiskResult(DescribeCaptchaMiniRiskResultRequest req)
         {
-             JsonResponseModel<DescribeCaptchaMiniRiskResultResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCaptchaMiniRiskResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaMiniRiskResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaMiniRiskResultResponse>(req, "DescribeCaptchaMiniRiskResult");
         }
 
         /// <summary>
@@ -359,17 +216,8 @@ namespace TencentCloud.Captcha.V20190722
         /// <returns><see cref="DescribeCaptchaMiniRiskResultResponse"/></returns>
         public DescribeCaptchaMiniRiskResultResponse DescribeCaptchaMiniRiskResultSync(DescribeCaptchaMiniRiskResultRequest req)
         {
-             JsonResponseModel<DescribeCaptchaMiniRiskResultResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCaptchaMiniRiskResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaMiniRiskResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaMiniRiskResultResponse>(req, "DescribeCaptchaMiniRiskResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -377,19 +225,9 @@ namespace TencentCloud.Captcha.V20190722
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaOperDataRequest"/></param>
         /// <returns><see cref="DescribeCaptchaOperDataResponse"/></returns>
-        public async Task<DescribeCaptchaOperDataResponse> DescribeCaptchaOperData(DescribeCaptchaOperDataRequest req)
+        public Task<DescribeCaptchaOperDataResponse> DescribeCaptchaOperData(DescribeCaptchaOperDataRequest req)
         {
-             JsonResponseModel<DescribeCaptchaOperDataResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCaptchaOperData");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaOperDataResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaOperDataResponse>(req, "DescribeCaptchaOperData");
         }
 
         /// <summary>
@@ -399,17 +237,8 @@ namespace TencentCloud.Captcha.V20190722
         /// <returns><see cref="DescribeCaptchaOperDataResponse"/></returns>
         public DescribeCaptchaOperDataResponse DescribeCaptchaOperDataSync(DescribeCaptchaOperDataRequest req)
         {
-             JsonResponseModel<DescribeCaptchaOperDataResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCaptchaOperData");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaOperDataResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaOperDataResponse>(req, "DescribeCaptchaOperData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -417,19 +246,9 @@ namespace TencentCloud.Captcha.V20190722
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaRceResultRequest"/></param>
         /// <returns><see cref="DescribeCaptchaRceResultResponse"/></returns>
-        public async Task<DescribeCaptchaRceResultResponse> DescribeCaptchaRceResult(DescribeCaptchaRceResultRequest req)
+        public Task<DescribeCaptchaRceResultResponse> DescribeCaptchaRceResult(DescribeCaptchaRceResultRequest req)
         {
-             JsonResponseModel<DescribeCaptchaRceResultResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCaptchaRceResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaRceResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaRceResultResponse>(req, "DescribeCaptchaRceResult");
         }
 
         /// <summary>
@@ -439,17 +258,8 @@ namespace TencentCloud.Captcha.V20190722
         /// <returns><see cref="DescribeCaptchaRceResultResponse"/></returns>
         public DescribeCaptchaRceResultResponse DescribeCaptchaRceResultSync(DescribeCaptchaRceResultRequest req)
         {
-             JsonResponseModel<DescribeCaptchaRceResultResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCaptchaRceResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaRceResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaRceResultResponse>(req, "DescribeCaptchaRceResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -457,19 +267,9 @@ namespace TencentCloud.Captcha.V20190722
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaResultRequest"/></param>
         /// <returns><see cref="DescribeCaptchaResultResponse"/></returns>
-        public async Task<DescribeCaptchaResultResponse> DescribeCaptchaResult(DescribeCaptchaResultRequest req)
+        public Task<DescribeCaptchaResultResponse> DescribeCaptchaResult(DescribeCaptchaResultRequest req)
         {
-             JsonResponseModel<DescribeCaptchaResultResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCaptchaResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaResultResponse>(req, "DescribeCaptchaResult");
         }
 
         /// <summary>
@@ -479,17 +279,8 @@ namespace TencentCloud.Captcha.V20190722
         /// <returns><see cref="DescribeCaptchaResultResponse"/></returns>
         public DescribeCaptchaResultResponse DescribeCaptchaResultSync(DescribeCaptchaResultRequest req)
         {
-             JsonResponseModel<DescribeCaptchaResultResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCaptchaResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaResultResponse>(req, "DescribeCaptchaResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -497,19 +288,9 @@ namespace TencentCloud.Captcha.V20190722
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaTicketDataRequest"/></param>
         /// <returns><see cref="DescribeCaptchaTicketDataResponse"/></returns>
-        public async Task<DescribeCaptchaTicketDataResponse> DescribeCaptchaTicketData(DescribeCaptchaTicketDataRequest req)
+        public Task<DescribeCaptchaTicketDataResponse> DescribeCaptchaTicketData(DescribeCaptchaTicketDataRequest req)
         {
-             JsonResponseModel<DescribeCaptchaTicketDataResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCaptchaTicketData");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaTicketDataResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaTicketDataResponse>(req, "DescribeCaptchaTicketData");
         }
 
         /// <summary>
@@ -519,17 +300,8 @@ namespace TencentCloud.Captcha.V20190722
         /// <returns><see cref="DescribeCaptchaTicketDataResponse"/></returns>
         public DescribeCaptchaTicketDataResponse DescribeCaptchaTicketDataSync(DescribeCaptchaTicketDataRequest req)
         {
-             JsonResponseModel<DescribeCaptchaTicketDataResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCaptchaTicketData");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaTicketDataResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaTicketDataResponse>(req, "DescribeCaptchaTicketData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -537,19 +309,9 @@ namespace TencentCloud.Captcha.V20190722
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaUserAllAppIdRequest"/></param>
         /// <returns><see cref="DescribeCaptchaUserAllAppIdResponse"/></returns>
-        public async Task<DescribeCaptchaUserAllAppIdResponse> DescribeCaptchaUserAllAppId(DescribeCaptchaUserAllAppIdRequest req)
+        public Task<DescribeCaptchaUserAllAppIdResponse> DescribeCaptchaUserAllAppId(DescribeCaptchaUserAllAppIdRequest req)
         {
-             JsonResponseModel<DescribeCaptchaUserAllAppIdResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCaptchaUserAllAppId");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaUserAllAppIdResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaUserAllAppIdResponse>(req, "DescribeCaptchaUserAllAppId");
         }
 
         /// <summary>
@@ -559,17 +321,8 @@ namespace TencentCloud.Captcha.V20190722
         /// <returns><see cref="DescribeCaptchaUserAllAppIdResponse"/></returns>
         public DescribeCaptchaUserAllAppIdResponse DescribeCaptchaUserAllAppIdSync(DescribeCaptchaUserAllAppIdRequest req)
         {
-             JsonResponseModel<DescribeCaptchaUserAllAppIdResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCaptchaUserAllAppId");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaUserAllAppIdResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaUserAllAppIdResponse>(req, "DescribeCaptchaUserAllAppId")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -577,19 +330,9 @@ namespace TencentCloud.Captcha.V20190722
         /// </summary>
         /// <param name="req"><see cref="GetRequestStatisticsRequest"/></param>
         /// <returns><see cref="GetRequestStatisticsResponse"/></returns>
-        public async Task<GetRequestStatisticsResponse> GetRequestStatistics(GetRequestStatisticsRequest req)
+        public Task<GetRequestStatisticsResponse> GetRequestStatistics(GetRequestStatisticsRequest req)
         {
-             JsonResponseModel<GetRequestStatisticsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetRequestStatistics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRequestStatisticsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetRequestStatisticsResponse>(req, "GetRequestStatistics");
         }
 
         /// <summary>
@@ -599,17 +342,8 @@ namespace TencentCloud.Captcha.V20190722
         /// <returns><see cref="GetRequestStatisticsResponse"/></returns>
         public GetRequestStatisticsResponse GetRequestStatisticsSync(GetRequestStatisticsRequest req)
         {
-             JsonResponseModel<GetRequestStatisticsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetRequestStatistics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRequestStatisticsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetRequestStatisticsResponse>(req, "GetRequestStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -617,19 +351,9 @@ namespace TencentCloud.Captcha.V20190722
         /// </summary>
         /// <param name="req"><see cref="GetTicketStatisticsRequest"/></param>
         /// <returns><see cref="GetTicketStatisticsResponse"/></returns>
-        public async Task<GetTicketStatisticsResponse> GetTicketStatistics(GetTicketStatisticsRequest req)
+        public Task<GetTicketStatisticsResponse> GetTicketStatistics(GetTicketStatisticsRequest req)
         {
-             JsonResponseModel<GetTicketStatisticsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetTicketStatistics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTicketStatisticsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetTicketStatisticsResponse>(req, "GetTicketStatistics");
         }
 
         /// <summary>
@@ -639,17 +363,8 @@ namespace TencentCloud.Captcha.V20190722
         /// <returns><see cref="GetTicketStatisticsResponse"/></returns>
         public GetTicketStatisticsResponse GetTicketStatisticsSync(GetTicketStatisticsRequest req)
         {
-             JsonResponseModel<GetTicketStatisticsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetTicketStatistics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTicketStatisticsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetTicketStatisticsResponse>(req, "GetTicketStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -657,19 +372,9 @@ namespace TencentCloud.Captcha.V20190722
         /// </summary>
         /// <param name="req"><see cref="GetTotalRequestStatisticsRequest"/></param>
         /// <returns><see cref="GetTotalRequestStatisticsResponse"/></returns>
-        public async Task<GetTotalRequestStatisticsResponse> GetTotalRequestStatistics(GetTotalRequestStatisticsRequest req)
+        public Task<GetTotalRequestStatisticsResponse> GetTotalRequestStatistics(GetTotalRequestStatisticsRequest req)
         {
-             JsonResponseModel<GetTotalRequestStatisticsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetTotalRequestStatistics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTotalRequestStatisticsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetTotalRequestStatisticsResponse>(req, "GetTotalRequestStatistics");
         }
 
         /// <summary>
@@ -679,17 +384,8 @@ namespace TencentCloud.Captcha.V20190722
         /// <returns><see cref="GetTotalRequestStatisticsResponse"/></returns>
         public GetTotalRequestStatisticsResponse GetTotalRequestStatisticsSync(GetTotalRequestStatisticsRequest req)
         {
-             JsonResponseModel<GetTotalRequestStatisticsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetTotalRequestStatistics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTotalRequestStatisticsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetTotalRequestStatisticsResponse>(req, "GetTotalRequestStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -697,19 +393,9 @@ namespace TencentCloud.Captcha.V20190722
         /// </summary>
         /// <param name="req"><see cref="GetTotalTicketStatisticsRequest"/></param>
         /// <returns><see cref="GetTotalTicketStatisticsResponse"/></returns>
-        public async Task<GetTotalTicketStatisticsResponse> GetTotalTicketStatistics(GetTotalTicketStatisticsRequest req)
+        public Task<GetTotalTicketStatisticsResponse> GetTotalTicketStatistics(GetTotalTicketStatisticsRequest req)
         {
-             JsonResponseModel<GetTotalTicketStatisticsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetTotalTicketStatistics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTotalTicketStatisticsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetTotalTicketStatisticsResponse>(req, "GetTotalTicketStatistics");
         }
 
         /// <summary>
@@ -719,17 +405,8 @@ namespace TencentCloud.Captcha.V20190722
         /// <returns><see cref="GetTotalTicketStatisticsResponse"/></returns>
         public GetTotalTicketStatisticsResponse GetTotalTicketStatisticsSync(GetTotalTicketStatisticsRequest req)
         {
-             JsonResponseModel<GetTotalTicketStatisticsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetTotalTicketStatistics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTotalTicketStatisticsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetTotalTicketStatisticsResponse>(req, "GetTotalTicketStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -737,19 +414,9 @@ namespace TencentCloud.Captcha.V20190722
         /// </summary>
         /// <param name="req"><see cref="UpdateCaptchaAppIdInfoRequest"/></param>
         /// <returns><see cref="UpdateCaptchaAppIdInfoResponse"/></returns>
-        public async Task<UpdateCaptchaAppIdInfoResponse> UpdateCaptchaAppIdInfo(UpdateCaptchaAppIdInfoRequest req)
+        public Task<UpdateCaptchaAppIdInfoResponse> UpdateCaptchaAppIdInfo(UpdateCaptchaAppIdInfoRequest req)
         {
-             JsonResponseModel<UpdateCaptchaAppIdInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "UpdateCaptchaAppIdInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCaptchaAppIdInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateCaptchaAppIdInfoResponse>(req, "UpdateCaptchaAppIdInfo");
         }
 
         /// <summary>
@@ -759,17 +426,8 @@ namespace TencentCloud.Captcha.V20190722
         /// <returns><see cref="UpdateCaptchaAppIdInfoResponse"/></returns>
         public UpdateCaptchaAppIdInfoResponse UpdateCaptchaAppIdInfoSync(UpdateCaptchaAppIdInfoRequest req)
         {
-             JsonResponseModel<UpdateCaptchaAppIdInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UpdateCaptchaAppIdInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCaptchaAppIdInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateCaptchaAppIdInfoResponse>(req, "UpdateCaptchaAppIdInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

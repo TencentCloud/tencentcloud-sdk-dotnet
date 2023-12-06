@@ -57,19 +57,9 @@ namespace TencentCloud.Dc.V20180410
         /// </summary>
         /// <param name="req"><see cref="AcceptDirectConnectTunnelRequest"/></param>
         /// <returns><see cref="AcceptDirectConnectTunnelResponse"/></returns>
-        public async Task<AcceptDirectConnectTunnelResponse> AcceptDirectConnectTunnel(AcceptDirectConnectTunnelRequest req)
+        public Task<AcceptDirectConnectTunnelResponse> AcceptDirectConnectTunnel(AcceptDirectConnectTunnelRequest req)
         {
-             JsonResponseModel<AcceptDirectConnectTunnelResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "AcceptDirectConnectTunnel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AcceptDirectConnectTunnelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<AcceptDirectConnectTunnelResponse>(req, "AcceptDirectConnectTunnel");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Dc.V20180410
         /// <returns><see cref="AcceptDirectConnectTunnelResponse"/></returns>
         public AcceptDirectConnectTunnelResponse AcceptDirectConnectTunnelSync(AcceptDirectConnectTunnelRequest req)
         {
-             JsonResponseModel<AcceptDirectConnectTunnelResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "AcceptDirectConnectTunnel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AcceptDirectConnectTunnelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<AcceptDirectConnectTunnelResponse>(req, "AcceptDirectConnectTunnel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Dc.V20180410
         /// </summary>
         /// <param name="req"><see cref="ApplyInternetAddressRequest"/></param>
         /// <returns><see cref="ApplyInternetAddressResponse"/></returns>
-        public async Task<ApplyInternetAddressResponse> ApplyInternetAddress(ApplyInternetAddressRequest req)
+        public Task<ApplyInternetAddressResponse> ApplyInternetAddress(ApplyInternetAddressRequest req)
         {
-             JsonResponseModel<ApplyInternetAddressResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ApplyInternetAddress");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyInternetAddressResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ApplyInternetAddressResponse>(req, "ApplyInternetAddress");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Dc.V20180410
         /// <returns><see cref="ApplyInternetAddressResponse"/></returns>
         public ApplyInternetAddressResponse ApplyInternetAddressSync(ApplyInternetAddressRequest req)
         {
-             JsonResponseModel<ApplyInternetAddressResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ApplyInternetAddress");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyInternetAddressResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ApplyInternetAddressResponse>(req, "ApplyInternetAddress")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -140,19 +102,9 @@ namespace TencentCloud.Dc.V20180410
         /// </summary>
         /// <param name="req"><see cref="CreateDirectConnectRequest"/></param>
         /// <returns><see cref="CreateDirectConnectResponse"/></returns>
-        public async Task<CreateDirectConnectResponse> CreateDirectConnect(CreateDirectConnectRequest req)
+        public Task<CreateDirectConnectResponse> CreateDirectConnect(CreateDirectConnectRequest req)
         {
-             JsonResponseModel<CreateDirectConnectResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateDirectConnect");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDirectConnectResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateDirectConnectResponse>(req, "CreateDirectConnect");
         }
 
         /// <summary>
@@ -165,17 +117,8 @@ namespace TencentCloud.Dc.V20180410
         /// <returns><see cref="CreateDirectConnectResponse"/></returns>
         public CreateDirectConnectResponse CreateDirectConnectSync(CreateDirectConnectRequest req)
         {
-             JsonResponseModel<CreateDirectConnectResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateDirectConnect");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDirectConnectResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateDirectConnectResponse>(req, "CreateDirectConnect")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -183,19 +126,9 @@ namespace TencentCloud.Dc.V20180410
         /// </summary>
         /// <param name="req"><see cref="CreateDirectConnectTunnelRequest"/></param>
         /// <returns><see cref="CreateDirectConnectTunnelResponse"/></returns>
-        public async Task<CreateDirectConnectTunnelResponse> CreateDirectConnectTunnel(CreateDirectConnectTunnelRequest req)
+        public Task<CreateDirectConnectTunnelResponse> CreateDirectConnectTunnel(CreateDirectConnectTunnelRequest req)
         {
-             JsonResponseModel<CreateDirectConnectTunnelResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateDirectConnectTunnel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDirectConnectTunnelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateDirectConnectTunnelResponse>(req, "CreateDirectConnectTunnel");
         }
 
         /// <summary>
@@ -205,17 +138,8 @@ namespace TencentCloud.Dc.V20180410
         /// <returns><see cref="CreateDirectConnectTunnelResponse"/></returns>
         public CreateDirectConnectTunnelResponse CreateDirectConnectTunnelSync(CreateDirectConnectTunnelRequest req)
         {
-             JsonResponseModel<CreateDirectConnectTunnelResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateDirectConnectTunnel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDirectConnectTunnelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateDirectConnectTunnelResponse>(req, "CreateDirectConnectTunnel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -224,19 +148,9 @@ namespace TencentCloud.Dc.V20180410
         /// </summary>
         /// <param name="req"><see cref="DeleteDirectConnectRequest"/></param>
         /// <returns><see cref="DeleteDirectConnectResponse"/></returns>
-        public async Task<DeleteDirectConnectResponse> DeleteDirectConnect(DeleteDirectConnectRequest req)
+        public Task<DeleteDirectConnectResponse> DeleteDirectConnect(DeleteDirectConnectRequest req)
         {
-             JsonResponseModel<DeleteDirectConnectResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteDirectConnect");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDirectConnectResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteDirectConnectResponse>(req, "DeleteDirectConnect");
         }
 
         /// <summary>
@@ -247,17 +161,8 @@ namespace TencentCloud.Dc.V20180410
         /// <returns><see cref="DeleteDirectConnectResponse"/></returns>
         public DeleteDirectConnectResponse DeleteDirectConnectSync(DeleteDirectConnectRequest req)
         {
-             JsonResponseModel<DeleteDirectConnectResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteDirectConnect");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDirectConnectResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteDirectConnectResponse>(req, "DeleteDirectConnect")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -265,19 +170,9 @@ namespace TencentCloud.Dc.V20180410
         /// </summary>
         /// <param name="req"><see cref="DeleteDirectConnectTunnelRequest"/></param>
         /// <returns><see cref="DeleteDirectConnectTunnelResponse"/></returns>
-        public async Task<DeleteDirectConnectTunnelResponse> DeleteDirectConnectTunnel(DeleteDirectConnectTunnelRequest req)
+        public Task<DeleteDirectConnectTunnelResponse> DeleteDirectConnectTunnel(DeleteDirectConnectTunnelRequest req)
         {
-             JsonResponseModel<DeleteDirectConnectTunnelResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteDirectConnectTunnel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDirectConnectTunnelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteDirectConnectTunnelResponse>(req, "DeleteDirectConnectTunnel");
         }
 
         /// <summary>
@@ -287,17 +182,8 @@ namespace TencentCloud.Dc.V20180410
         /// <returns><see cref="DeleteDirectConnectTunnelResponse"/></returns>
         public DeleteDirectConnectTunnelResponse DeleteDirectConnectTunnelSync(DeleteDirectConnectTunnelRequest req)
         {
-             JsonResponseModel<DeleteDirectConnectTunnelResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteDirectConnectTunnel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDirectConnectTunnelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteDirectConnectTunnelResponse>(req, "DeleteDirectConnectTunnel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -305,19 +191,9 @@ namespace TencentCloud.Dc.V20180410
         /// </summary>
         /// <param name="req"><see cref="DescribeAccessPointsRequest"/></param>
         /// <returns><see cref="DescribeAccessPointsResponse"/></returns>
-        public async Task<DescribeAccessPointsResponse> DescribeAccessPoints(DescribeAccessPointsRequest req)
+        public Task<DescribeAccessPointsResponse> DescribeAccessPoints(DescribeAccessPointsRequest req)
         {
-             JsonResponseModel<DescribeAccessPointsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeAccessPoints");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccessPointsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeAccessPointsResponse>(req, "DescribeAccessPoints");
         }
 
         /// <summary>
@@ -327,17 +203,8 @@ namespace TencentCloud.Dc.V20180410
         /// <returns><see cref="DescribeAccessPointsResponse"/></returns>
         public DescribeAccessPointsResponse DescribeAccessPointsSync(DescribeAccessPointsRequest req)
         {
-             JsonResponseModel<DescribeAccessPointsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeAccessPoints");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccessPointsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeAccessPointsResponse>(req, "DescribeAccessPoints")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -345,19 +212,9 @@ namespace TencentCloud.Dc.V20180410
         /// </summary>
         /// <param name="req"><see cref="DescribeDirectConnectTunnelExtraRequest"/></param>
         /// <returns><see cref="DescribeDirectConnectTunnelExtraResponse"/></returns>
-        public async Task<DescribeDirectConnectTunnelExtraResponse> DescribeDirectConnectTunnelExtra(DescribeDirectConnectTunnelExtraRequest req)
+        public Task<DescribeDirectConnectTunnelExtraResponse> DescribeDirectConnectTunnelExtra(DescribeDirectConnectTunnelExtraRequest req)
         {
-             JsonResponseModel<DescribeDirectConnectTunnelExtraResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDirectConnectTunnelExtra");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDirectConnectTunnelExtraResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDirectConnectTunnelExtraResponse>(req, "DescribeDirectConnectTunnelExtra");
         }
 
         /// <summary>
@@ -367,17 +224,8 @@ namespace TencentCloud.Dc.V20180410
         /// <returns><see cref="DescribeDirectConnectTunnelExtraResponse"/></returns>
         public DescribeDirectConnectTunnelExtraResponse DescribeDirectConnectTunnelExtraSync(DescribeDirectConnectTunnelExtraRequest req)
         {
-             JsonResponseModel<DescribeDirectConnectTunnelExtraResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDirectConnectTunnelExtra");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDirectConnectTunnelExtraResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDirectConnectTunnelExtraResponse>(req, "DescribeDirectConnectTunnelExtra")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -385,19 +233,9 @@ namespace TencentCloud.Dc.V20180410
         /// </summary>
         /// <param name="req"><see cref="DescribeDirectConnectTunnelsRequest"/></param>
         /// <returns><see cref="DescribeDirectConnectTunnelsResponse"/></returns>
-        public async Task<DescribeDirectConnectTunnelsResponse> DescribeDirectConnectTunnels(DescribeDirectConnectTunnelsRequest req)
+        public Task<DescribeDirectConnectTunnelsResponse> DescribeDirectConnectTunnels(DescribeDirectConnectTunnelsRequest req)
         {
-             JsonResponseModel<DescribeDirectConnectTunnelsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDirectConnectTunnels");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDirectConnectTunnelsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDirectConnectTunnelsResponse>(req, "DescribeDirectConnectTunnels");
         }
 
         /// <summary>
@@ -407,17 +245,8 @@ namespace TencentCloud.Dc.V20180410
         /// <returns><see cref="DescribeDirectConnectTunnelsResponse"/></returns>
         public DescribeDirectConnectTunnelsResponse DescribeDirectConnectTunnelsSync(DescribeDirectConnectTunnelsRequest req)
         {
-             JsonResponseModel<DescribeDirectConnectTunnelsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDirectConnectTunnels");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDirectConnectTunnelsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDirectConnectTunnelsResponse>(req, "DescribeDirectConnectTunnels")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -425,19 +254,9 @@ namespace TencentCloud.Dc.V20180410
         /// </summary>
         /// <param name="req"><see cref="DescribeDirectConnectsRequest"/></param>
         /// <returns><see cref="DescribeDirectConnectsResponse"/></returns>
-        public async Task<DescribeDirectConnectsResponse> DescribeDirectConnects(DescribeDirectConnectsRequest req)
+        public Task<DescribeDirectConnectsResponse> DescribeDirectConnects(DescribeDirectConnectsRequest req)
         {
-             JsonResponseModel<DescribeDirectConnectsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDirectConnects");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDirectConnectsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDirectConnectsResponse>(req, "DescribeDirectConnects");
         }
 
         /// <summary>
@@ -447,17 +266,8 @@ namespace TencentCloud.Dc.V20180410
         /// <returns><see cref="DescribeDirectConnectsResponse"/></returns>
         public DescribeDirectConnectsResponse DescribeDirectConnectsSync(DescribeDirectConnectsRequest req)
         {
-             JsonResponseModel<DescribeDirectConnectsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDirectConnects");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDirectConnectsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDirectConnectsResponse>(req, "DescribeDirectConnects")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -465,19 +275,9 @@ namespace TencentCloud.Dc.V20180410
         /// </summary>
         /// <param name="req"><see cref="DescribeInternetAddressRequest"/></param>
         /// <returns><see cref="DescribeInternetAddressResponse"/></returns>
-        public async Task<DescribeInternetAddressResponse> DescribeInternetAddress(DescribeInternetAddressRequest req)
+        public Task<DescribeInternetAddressResponse> DescribeInternetAddress(DescribeInternetAddressRequest req)
         {
-             JsonResponseModel<DescribeInternetAddressResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeInternetAddress");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInternetAddressResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeInternetAddressResponse>(req, "DescribeInternetAddress");
         }
 
         /// <summary>
@@ -487,17 +287,8 @@ namespace TencentCloud.Dc.V20180410
         /// <returns><see cref="DescribeInternetAddressResponse"/></returns>
         public DescribeInternetAddressResponse DescribeInternetAddressSync(DescribeInternetAddressRequest req)
         {
-             JsonResponseModel<DescribeInternetAddressResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInternetAddress");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInternetAddressResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeInternetAddressResponse>(req, "DescribeInternetAddress")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -505,19 +296,9 @@ namespace TencentCloud.Dc.V20180410
         /// </summary>
         /// <param name="req"><see cref="DescribeInternetAddressQuotaRequest"/></param>
         /// <returns><see cref="DescribeInternetAddressQuotaResponse"/></returns>
-        public async Task<DescribeInternetAddressQuotaResponse> DescribeInternetAddressQuota(DescribeInternetAddressQuotaRequest req)
+        public Task<DescribeInternetAddressQuotaResponse> DescribeInternetAddressQuota(DescribeInternetAddressQuotaRequest req)
         {
-             JsonResponseModel<DescribeInternetAddressQuotaResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeInternetAddressQuota");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInternetAddressQuotaResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeInternetAddressQuotaResponse>(req, "DescribeInternetAddressQuota");
         }
 
         /// <summary>
@@ -527,17 +308,8 @@ namespace TencentCloud.Dc.V20180410
         /// <returns><see cref="DescribeInternetAddressQuotaResponse"/></returns>
         public DescribeInternetAddressQuotaResponse DescribeInternetAddressQuotaSync(DescribeInternetAddressQuotaRequest req)
         {
-             JsonResponseModel<DescribeInternetAddressQuotaResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInternetAddressQuota");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInternetAddressQuotaResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeInternetAddressQuotaResponse>(req, "DescribeInternetAddressQuota")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -545,19 +317,9 @@ namespace TencentCloud.Dc.V20180410
         /// </summary>
         /// <param name="req"><see cref="DescribeInternetAddressStatisticsRequest"/></param>
         /// <returns><see cref="DescribeInternetAddressStatisticsResponse"/></returns>
-        public async Task<DescribeInternetAddressStatisticsResponse> DescribeInternetAddressStatistics(DescribeInternetAddressStatisticsRequest req)
+        public Task<DescribeInternetAddressStatisticsResponse> DescribeInternetAddressStatistics(DescribeInternetAddressStatisticsRequest req)
         {
-             JsonResponseModel<DescribeInternetAddressStatisticsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeInternetAddressStatistics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInternetAddressStatisticsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeInternetAddressStatisticsResponse>(req, "DescribeInternetAddressStatistics");
         }
 
         /// <summary>
@@ -567,17 +329,8 @@ namespace TencentCloud.Dc.V20180410
         /// <returns><see cref="DescribeInternetAddressStatisticsResponse"/></returns>
         public DescribeInternetAddressStatisticsResponse DescribeInternetAddressStatisticsSync(DescribeInternetAddressStatisticsRequest req)
         {
-             JsonResponseModel<DescribeInternetAddressStatisticsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInternetAddressStatistics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInternetAddressStatisticsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeInternetAddressStatisticsResponse>(req, "DescribeInternetAddressStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -585,19 +338,9 @@ namespace TencentCloud.Dc.V20180410
         /// </summary>
         /// <param name="req"><see cref="DescribePublicDirectConnectTunnelRoutesRequest"/></param>
         /// <returns><see cref="DescribePublicDirectConnectTunnelRoutesResponse"/></returns>
-        public async Task<DescribePublicDirectConnectTunnelRoutesResponse> DescribePublicDirectConnectTunnelRoutes(DescribePublicDirectConnectTunnelRoutesRequest req)
+        public Task<DescribePublicDirectConnectTunnelRoutesResponse> DescribePublicDirectConnectTunnelRoutes(DescribePublicDirectConnectTunnelRoutesRequest req)
         {
-             JsonResponseModel<DescribePublicDirectConnectTunnelRoutesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribePublicDirectConnectTunnelRoutes");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePublicDirectConnectTunnelRoutesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribePublicDirectConnectTunnelRoutesResponse>(req, "DescribePublicDirectConnectTunnelRoutes");
         }
 
         /// <summary>
@@ -607,17 +350,8 @@ namespace TencentCloud.Dc.V20180410
         /// <returns><see cref="DescribePublicDirectConnectTunnelRoutesResponse"/></returns>
         public DescribePublicDirectConnectTunnelRoutesResponse DescribePublicDirectConnectTunnelRoutesSync(DescribePublicDirectConnectTunnelRoutesRequest req)
         {
-             JsonResponseModel<DescribePublicDirectConnectTunnelRoutesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribePublicDirectConnectTunnelRoutes");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePublicDirectConnectTunnelRoutesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribePublicDirectConnectTunnelRoutesResponse>(req, "DescribePublicDirectConnectTunnelRoutes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -625,19 +359,9 @@ namespace TencentCloud.Dc.V20180410
         /// </summary>
         /// <param name="req"><see cref="DisableInternetAddressRequest"/></param>
         /// <returns><see cref="DisableInternetAddressResponse"/></returns>
-        public async Task<DisableInternetAddressResponse> DisableInternetAddress(DisableInternetAddressRequest req)
+        public Task<DisableInternetAddressResponse> DisableInternetAddress(DisableInternetAddressRequest req)
         {
-             JsonResponseModel<DisableInternetAddressResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DisableInternetAddress");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableInternetAddressResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DisableInternetAddressResponse>(req, "DisableInternetAddress");
         }
 
         /// <summary>
@@ -647,17 +371,8 @@ namespace TencentCloud.Dc.V20180410
         /// <returns><see cref="DisableInternetAddressResponse"/></returns>
         public DisableInternetAddressResponse DisableInternetAddressSync(DisableInternetAddressRequest req)
         {
-             JsonResponseModel<DisableInternetAddressResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DisableInternetAddress");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableInternetAddressResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DisableInternetAddressResponse>(req, "DisableInternetAddress")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -665,19 +380,9 @@ namespace TencentCloud.Dc.V20180410
         /// </summary>
         /// <param name="req"><see cref="EnableInternetAddressRequest"/></param>
         /// <returns><see cref="EnableInternetAddressResponse"/></returns>
-        public async Task<EnableInternetAddressResponse> EnableInternetAddress(EnableInternetAddressRequest req)
+        public Task<EnableInternetAddressResponse> EnableInternetAddress(EnableInternetAddressRequest req)
         {
-             JsonResponseModel<EnableInternetAddressResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "EnableInternetAddress");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableInternetAddressResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<EnableInternetAddressResponse>(req, "EnableInternetAddress");
         }
 
         /// <summary>
@@ -687,17 +392,8 @@ namespace TencentCloud.Dc.V20180410
         /// <returns><see cref="EnableInternetAddressResponse"/></returns>
         public EnableInternetAddressResponse EnableInternetAddressSync(EnableInternetAddressRequest req)
         {
-             JsonResponseModel<EnableInternetAddressResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "EnableInternetAddress");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableInternetAddressResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<EnableInternetAddressResponse>(req, "EnableInternetAddress")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -705,19 +401,9 @@ namespace TencentCloud.Dc.V20180410
         /// </summary>
         /// <param name="req"><see cref="ModifyDirectConnectAttributeRequest"/></param>
         /// <returns><see cref="ModifyDirectConnectAttributeResponse"/></returns>
-        public async Task<ModifyDirectConnectAttributeResponse> ModifyDirectConnectAttribute(ModifyDirectConnectAttributeRequest req)
+        public Task<ModifyDirectConnectAttributeResponse> ModifyDirectConnectAttribute(ModifyDirectConnectAttributeRequest req)
         {
-             JsonResponseModel<ModifyDirectConnectAttributeResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyDirectConnectAttribute");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDirectConnectAttributeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyDirectConnectAttributeResponse>(req, "ModifyDirectConnectAttribute");
         }
 
         /// <summary>
@@ -727,17 +413,8 @@ namespace TencentCloud.Dc.V20180410
         /// <returns><see cref="ModifyDirectConnectAttributeResponse"/></returns>
         public ModifyDirectConnectAttributeResponse ModifyDirectConnectAttributeSync(ModifyDirectConnectAttributeRequest req)
         {
-             JsonResponseModel<ModifyDirectConnectAttributeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyDirectConnectAttribute");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDirectConnectAttributeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyDirectConnectAttributeResponse>(req, "ModifyDirectConnectAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -745,19 +422,9 @@ namespace TencentCloud.Dc.V20180410
         /// </summary>
         /// <param name="req"><see cref="ModifyDirectConnectTunnelAttributeRequest"/></param>
         /// <returns><see cref="ModifyDirectConnectTunnelAttributeResponse"/></returns>
-        public async Task<ModifyDirectConnectTunnelAttributeResponse> ModifyDirectConnectTunnelAttribute(ModifyDirectConnectTunnelAttributeRequest req)
+        public Task<ModifyDirectConnectTunnelAttributeResponse> ModifyDirectConnectTunnelAttribute(ModifyDirectConnectTunnelAttributeRequest req)
         {
-             JsonResponseModel<ModifyDirectConnectTunnelAttributeResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyDirectConnectTunnelAttribute");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDirectConnectTunnelAttributeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyDirectConnectTunnelAttributeResponse>(req, "ModifyDirectConnectTunnelAttribute");
         }
 
         /// <summary>
@@ -767,17 +434,8 @@ namespace TencentCloud.Dc.V20180410
         /// <returns><see cref="ModifyDirectConnectTunnelAttributeResponse"/></returns>
         public ModifyDirectConnectTunnelAttributeResponse ModifyDirectConnectTunnelAttributeSync(ModifyDirectConnectTunnelAttributeRequest req)
         {
-             JsonResponseModel<ModifyDirectConnectTunnelAttributeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyDirectConnectTunnelAttribute");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDirectConnectTunnelAttributeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyDirectConnectTunnelAttributeResponse>(req, "ModifyDirectConnectTunnelAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -785,19 +443,9 @@ namespace TencentCloud.Dc.V20180410
         /// </summary>
         /// <param name="req"><see cref="ModifyDirectConnectTunnelExtraRequest"/></param>
         /// <returns><see cref="ModifyDirectConnectTunnelExtraResponse"/></returns>
-        public async Task<ModifyDirectConnectTunnelExtraResponse> ModifyDirectConnectTunnelExtra(ModifyDirectConnectTunnelExtraRequest req)
+        public Task<ModifyDirectConnectTunnelExtraResponse> ModifyDirectConnectTunnelExtra(ModifyDirectConnectTunnelExtraRequest req)
         {
-             JsonResponseModel<ModifyDirectConnectTunnelExtraResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyDirectConnectTunnelExtra");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDirectConnectTunnelExtraResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyDirectConnectTunnelExtraResponse>(req, "ModifyDirectConnectTunnelExtra");
         }
 
         /// <summary>
@@ -807,17 +455,8 @@ namespace TencentCloud.Dc.V20180410
         /// <returns><see cref="ModifyDirectConnectTunnelExtraResponse"/></returns>
         public ModifyDirectConnectTunnelExtraResponse ModifyDirectConnectTunnelExtraSync(ModifyDirectConnectTunnelExtraRequest req)
         {
-             JsonResponseModel<ModifyDirectConnectTunnelExtraResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyDirectConnectTunnelExtra");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDirectConnectTunnelExtraResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyDirectConnectTunnelExtraResponse>(req, "ModifyDirectConnectTunnelExtra")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -825,19 +464,9 @@ namespace TencentCloud.Dc.V20180410
         /// </summary>
         /// <param name="req"><see cref="RejectDirectConnectTunnelRequest"/></param>
         /// <returns><see cref="RejectDirectConnectTunnelResponse"/></returns>
-        public async Task<RejectDirectConnectTunnelResponse> RejectDirectConnectTunnel(RejectDirectConnectTunnelRequest req)
+        public Task<RejectDirectConnectTunnelResponse> RejectDirectConnectTunnel(RejectDirectConnectTunnelRequest req)
         {
-             JsonResponseModel<RejectDirectConnectTunnelResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RejectDirectConnectTunnel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RejectDirectConnectTunnelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RejectDirectConnectTunnelResponse>(req, "RejectDirectConnectTunnel");
         }
 
         /// <summary>
@@ -847,17 +476,8 @@ namespace TencentCloud.Dc.V20180410
         /// <returns><see cref="RejectDirectConnectTunnelResponse"/></returns>
         public RejectDirectConnectTunnelResponse RejectDirectConnectTunnelSync(RejectDirectConnectTunnelRequest req)
         {
-             JsonResponseModel<RejectDirectConnectTunnelResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RejectDirectConnectTunnel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RejectDirectConnectTunnelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RejectDirectConnectTunnelResponse>(req, "RejectDirectConnectTunnel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -865,19 +485,9 @@ namespace TencentCloud.Dc.V20180410
         /// </summary>
         /// <param name="req"><see cref="ReleaseInternetAddressRequest"/></param>
         /// <returns><see cref="ReleaseInternetAddressResponse"/></returns>
-        public async Task<ReleaseInternetAddressResponse> ReleaseInternetAddress(ReleaseInternetAddressRequest req)
+        public Task<ReleaseInternetAddressResponse> ReleaseInternetAddress(ReleaseInternetAddressRequest req)
         {
-             JsonResponseModel<ReleaseInternetAddressResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ReleaseInternetAddress");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseInternetAddressResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ReleaseInternetAddressResponse>(req, "ReleaseInternetAddress");
         }
 
         /// <summary>
@@ -887,17 +497,8 @@ namespace TencentCloud.Dc.V20180410
         /// <returns><see cref="ReleaseInternetAddressResponse"/></returns>
         public ReleaseInternetAddressResponse ReleaseInternetAddressSync(ReleaseInternetAddressRequest req)
         {
-             JsonResponseModel<ReleaseInternetAddressResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ReleaseInternetAddress");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseInternetAddressResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ReleaseInternetAddressResponse>(req, "ReleaseInternetAddress")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

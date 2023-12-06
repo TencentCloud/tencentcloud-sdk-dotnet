@@ -69,19 +69,9 @@ namespace TencentCloud.Bri.V20190328
         /// </summary>
         /// <param name="req"><see cref="DescribeBRIRequest"/></param>
         /// <returns><see cref="DescribeBRIResponse"/></returns>
-        public async Task<DescribeBRIResponse> DescribeBRI(DescribeBRIRequest req)
+        public Task<DescribeBRIResponse> DescribeBRI(DescribeBRIRequest req)
         {
-             JsonResponseModel<DescribeBRIResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeBRI");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBRIResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeBRIResponse>(req, "DescribeBRI");
         }
 
         /// <summary>
@@ -103,17 +93,8 @@ namespace TencentCloud.Bri.V20190328
         /// <returns><see cref="DescribeBRIResponse"/></returns>
         public DescribeBRIResponse DescribeBRISync(DescribeBRIRequest req)
         {
-             JsonResponseModel<DescribeBRIResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBRI");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBRIResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeBRIResponse>(req, "DescribeBRI")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

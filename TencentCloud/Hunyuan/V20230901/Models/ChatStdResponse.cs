@@ -21,67 +21,15 @@ namespace TencentCloud.Hunyuan.V20230901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ChatStdResponse : AbstractModel
+    public class ChatStdResponse : AbstractSSEModel
     {
         
-        /// <summary>
-        /// unix 时间戳，单位为秒。
-        /// </summary>
-        [JsonProperty("Created")]
-        public long? Created{ get; set; }
-
-        /// <summary>
-        /// token统计信息。
-        /// 按照总token数量计费。
-        /// </summary>
-        [JsonProperty("Usage")]
-        public Usage Usage{ get; set; }
-
-        /// <summary>
-        /// 免责声明。
-        /// </summary>
-        [JsonProperty("Note")]
-        public string Note{ get; set; }
-
-        /// <summary>
-        /// 本轮对话的id。
-        /// </summary>
-        [JsonProperty("Id")]
-        public string Id{ get; set; }
-
-        /// <summary>
-        /// 回复内容。
-        /// </summary>
-        [JsonProperty("Choices")]
-        public Choice[] Choices{ get; set; }
-
-        /// <summary>
-        /// 错误信息。
-        /// 如果流式返回中服务处理异常，返回该错误信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("ErrorMsg")]
-        public ErrorMsg ErrorMsg{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Created", this.Created);
-            this.SetParamObj(map, prefix + "Usage.", this.Usage);
-            this.SetParamSimple(map, prefix + "Note", this.Note);
-            this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamArrayObj(map, prefix + "Choices.", this.Choices);
-            this.SetParamObj(map, prefix + "ErrorMsg.", this.ErrorMsg);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

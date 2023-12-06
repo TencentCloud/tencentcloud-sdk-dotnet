@@ -50,6 +50,9 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>backup-origin： 按照备用源站地址进行过滤；</li>
         /// <li>domain-cname：按照 CNAME 进行过滤；</li>
         /// <li>share-cname：按照共享 CNAME 进行过滤；</li>
+        /// <li>vodeo-sub-app-id：按照【 vodeo 子应用 ID】进行过滤；</li>
+        /// <li>vodeo-distribution-range：按照【 vodeo 分发范围】进行过滤；</li>
+        /// <li>vodeo-bucket-id：按照【vodeo 存储桶 ID】进行过滤；</li>
         /// </summary>
         [JsonProperty("Filters")]
         public AdvancedFilter[] Filters{ get; set; }
