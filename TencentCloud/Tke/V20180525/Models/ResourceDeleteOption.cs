@@ -25,16 +25,22 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 资源类型，例如CBS
+        /// 资源类型，例如CBS、CLB、CVM
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// 集群删除时资源的删除模式：terminate（销毁），retain （保留）
+        /// 集群删除时CBS资源的删除模式：terminate（销毁），retain （保留）。其他资源默认为销毁。
         /// </summary>
         [JsonProperty("DeleteMode")]
         public string DeleteMode{ get; set; }
+
+        /// <summary>
+        /// 是否跳过开启删除保护的资源，默认false，设置为true时不清理开启了删除保护的资源，clb有终端节点的情况也属于开了删除保护。
+        /// </summary>
+        [JsonProperty("SkipDeletionProtection")]
+        public bool? SkipDeletionProtection{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Tke.V20180525.Models
         {
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamSimple(map, prefix + "DeleteMode", this.DeleteMode);
+            this.SetParamSimple(map, prefix + "SkipDeletionProtection", this.SkipDeletionProtection);
         }
     }
 }

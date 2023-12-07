@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
+        /// 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。
         /// </summary>
         [JsonProperty("SessionExpireTime")]
         public long? SessionExpireTime{ get; set; }

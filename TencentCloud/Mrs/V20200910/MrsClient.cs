@@ -53,6 +53,27 @@ namespace TencentCloud.Mrs.V20200910
         }
 
         /// <summary>
+        /// 医疗报告图片脱敏接口
+        /// </summary>
+        /// <param name="req"><see cref="ImageMaskRequest"/></param>
+        /// <returns><see cref="ImageMaskResponse"/></returns>
+        public Task<ImageMaskResponse> ImageMask(ImageMaskRequest req)
+        {
+            return InternalRequestAsync<ImageMaskResponse>(req, "ImageMask");
+        }
+
+        /// <summary>
+        /// 医疗报告图片脱敏接口
+        /// </summary>
+        /// <param name="req"><see cref="ImageMaskRequest"/></param>
+        /// <returns><see cref="ImageMaskResponse"/></returns>
+        public ImageMaskResponse ImageMaskSync(ImageMaskRequest req)
+        {
+            return InternalRequestAsync<ImageMaskResponse>(req, "ImageMask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 图片分类
         /// </summary>
         /// <param name="req"><see cref="ImageToClassRequest"/></param>

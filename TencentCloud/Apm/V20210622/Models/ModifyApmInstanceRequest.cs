@@ -126,6 +126,14 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("CustomShowTags")]
         public string[] CustomShowTags{ get; set; }
 
+        /// <summary>
+        /// 修改计费模式
+        /// 1为预付费
+        /// 0为按量付费
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public long? PayMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +157,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "LogSet", this.LogSet);
             this.SetParamSimple(map, prefix + "LogSource", this.LogSource);
             this.SetParamArraySimple(map, prefix + "CustomShowTags.", this.CustomShowTags);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
         }
     }
 }

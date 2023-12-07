@@ -101,6 +101,14 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("SubPageCode")]
         public string SubPageCode{ get; set; }
 
+        /// <summary>
+        /// 燃料种类
+        /// 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FuelType")]
+        public string FuelType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +126,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Record", this.Record);
             this.SetParamSimple(map, prefix + "TotalQuasiMass", this.TotalQuasiMass);
             this.SetParamSimple(map, prefix + "SubPageCode", this.SubPageCode);
+            this.SetParamSimple(map, prefix + "FuelType", this.FuelType);
         }
     }
 }

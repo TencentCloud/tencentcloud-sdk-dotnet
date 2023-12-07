@@ -284,6 +284,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 获取网关列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatewayAssetsRequest"/></param>
+        /// <returns><see cref="DescribeGatewayAssetsResponse"/></returns>
+        public Task<DescribeGatewayAssetsResponse> DescribeGatewayAssets(DescribeGatewayAssetsRequest req)
+        {
+            return InternalRequestAsync<DescribeGatewayAssetsResponse>(req, "DescribeGatewayAssets");
+        }
+
+        /// <summary>
+        /// 获取网关列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatewayAssetsRequest"/></param>
+        /// <returns><see cref="DescribeGatewayAssetsResponse"/></returns>
+        public DescribeGatewayAssetsResponse DescribeGatewayAssetsSync(DescribeGatewayAssetsRequest req)
+        {
+            return InternalRequestAsync<DescribeGatewayAssetsResponse>(req, "DescribeGatewayAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询clb监听器列表
         /// </summary>
         /// <param name="req"><see cref="DescribeListenerListRequest"/></param>

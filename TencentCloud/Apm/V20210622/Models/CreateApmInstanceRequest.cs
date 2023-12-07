@@ -54,6 +54,12 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("SpanDailyCounters")]
         public ulong? SpanDailyCounters{ get; set; }
 
+        /// <summary>
+        /// 实例的计费模式
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public long? PayMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "TraceDuration", this.TraceDuration);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "SpanDailyCounters", this.SpanDailyCounters);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
         }
     }
 }

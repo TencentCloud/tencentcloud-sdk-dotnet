@@ -87,6 +87,24 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("IsPromoter")]
         public bool? IsPromoter{ get; set; }
 
+        /// <summary>
+        /// 签署人查看合同校验方式, 支持的类型如下:
+        /// <ul><li> 1 :实名认证查看</li>
+        /// <li> 2 :手机号校验查看</li></ul>
+        /// </summary>
+        [JsonProperty("ApproverVerifyTypes")]
+        public long?[] ApproverVerifyTypes{ get; set; }
+
+        /// <summary>
+        /// 签署人进行合同签署时的认证方式，支持的类型如下:
+        /// <ul><li> 1 :人脸认证</li>
+        /// <li> 2 :签署密码</li>
+        /// <li> 3 :运营商三要素认证</li>
+        /// <li> 4 :UKey认证</li></ul>
+        /// </summary>
+        [JsonProperty("ApproverSignTypes")]
+        public long?[] ApproverSignTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +120,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "SignType", this.SignType);
             this.SetParamSimple(map, prefix + "RoutingOrder", this.RoutingOrder);
             this.SetParamSimple(map, prefix + "IsPromoter", this.IsPromoter);
+            this.SetParamArraySimple(map, prefix + "ApproverVerifyTypes.", this.ApproverVerifyTypes);
+            this.SetParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
         }
     }
 }
