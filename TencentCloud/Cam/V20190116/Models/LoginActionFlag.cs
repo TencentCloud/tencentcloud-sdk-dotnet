@@ -54,6 +54,12 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("Custom")]
         public ulong? Custom{ get; set; }
 
+        /// <summary>
+        /// 邮箱
+        /// </summary>
+        [JsonProperty("Mail")]
+        public ulong? Mail{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "Stoken", this.Stoken);
             this.SetParamSimple(map, prefix + "Wechat", this.Wechat);
             this.SetParamSimple(map, prefix + "Custom", this.Custom);
+            this.SetParamSimple(map, prefix + "Mail", this.Mail);
         }
     }
 }

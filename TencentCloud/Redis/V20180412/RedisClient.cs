@@ -914,6 +914,27 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 本接口（DescribeInstanceSupportFeature）用于查询实例支持的功能特性。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceSupportFeatureRequest"/></param>
+        /// <returns><see cref="DescribeInstanceSupportFeatureResponse"/></returns>
+        public Task<DescribeInstanceSupportFeatureResponse> DescribeInstanceSupportFeature(DescribeInstanceSupportFeatureRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceSupportFeatureResponse>(req, "DescribeInstanceSupportFeature");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeInstanceSupportFeature）用于查询实例支持的功能特性。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceSupportFeatureRequest"/></param>
+        /// <returns><see cref="DescribeInstanceSupportFeatureResponse"/></returns>
+        public DescribeInstanceSupportFeatureResponse DescribeInstanceSupportFeatureSync(DescribeInstanceSupportFeatureRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceSupportFeatureResponse>(req, "DescribeInstanceSupportFeature")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeInstanceZoneInfo）用于查询 Redis 节点详细信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceZoneInfoRequest"/></param>
@@ -1586,6 +1607,27 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 本接口（ModifyInstanceAvailabilityZones）用于变更实例可用区
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceAvailabilityZonesRequest"/></param>
+        /// <returns><see cref="ModifyInstanceAvailabilityZonesResponse"/></returns>
+        public Task<ModifyInstanceAvailabilityZonesResponse> ModifyInstanceAvailabilityZones(ModifyInstanceAvailabilityZonesRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceAvailabilityZonesResponse>(req, "ModifyInstanceAvailabilityZones");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyInstanceAvailabilityZones）用于变更实例可用区
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceAvailabilityZonesRequest"/></param>
+        /// <returns><see cref="ModifyInstanceAvailabilityZonesResponse"/></returns>
+        public ModifyInstanceAvailabilityZonesResponse ModifyInstanceAvailabilityZonesSync(ModifyInstanceAvailabilityZonesRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceAvailabilityZonesResponse>(req, "ModifyInstanceAvailabilityZones")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口(ModifyInstanceParams)用于修改Redis实例的参数配置。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceParamsRequest"/></param>
@@ -1834,6 +1876,27 @@ namespace TencentCloud.Redis.V20180412
         public StartupInstanceResponse StartupInstanceSync(StartupInstanceRequest req)
         {
             return InternalRequestAsync<StartupInstanceResponse>(req, "StartupInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（SwitchAccessNewInstance）针对处于时间窗口中待切换操作的实例，用户可主动发起该操作。
+        /// </summary>
+        /// <param name="req"><see cref="SwitchAccessNewInstanceRequest"/></param>
+        /// <returns><see cref="SwitchAccessNewInstanceResponse"/></returns>
+        public Task<SwitchAccessNewInstanceResponse> SwitchAccessNewInstance(SwitchAccessNewInstanceRequest req)
+        {
+            return InternalRequestAsync<SwitchAccessNewInstanceResponse>(req, "SwitchAccessNewInstance");
+        }
+
+        /// <summary>
+        /// 本接口（SwitchAccessNewInstance）针对处于时间窗口中待切换操作的实例，用户可主动发起该操作。
+        /// </summary>
+        /// <param name="req"><see cref="SwitchAccessNewInstanceRequest"/></param>
+        /// <returns><see cref="SwitchAccessNewInstanceResponse"/></returns>
+        public SwitchAccessNewInstanceResponse SwitchAccessNewInstanceSync(SwitchAccessNewInstanceRequest req)
+        {
+            return InternalRequestAsync<SwitchAccessNewInstanceResponse>(req, "SwitchAccessNewInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

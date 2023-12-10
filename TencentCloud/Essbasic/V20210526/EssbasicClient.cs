@@ -2204,6 +2204,27 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 查询渠道子客企业信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChannelOrganizationsRequest"/></param>
+        /// <returns><see cref="DescribeChannelOrganizationsResponse"/></returns>
+        public Task<DescribeChannelOrganizationsResponse> DescribeChannelOrganizations(DescribeChannelOrganizationsRequest req)
+        {
+            return InternalRequestAsync<DescribeChannelOrganizationsResponse>(req, "DescribeChannelOrganizations");
+        }
+
+        /// <summary>
+        /// 查询渠道子客企业信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChannelOrganizationsRequest"/></param>
+        /// <returns><see cref="DescribeChannelOrganizationsResponse"/></returns>
+        public DescribeChannelOrganizationsResponse DescribeChannelOrganizationsSync(DescribeChannelOrganizationsRequest req)
+        {
+            return InternalRequestAsync<DescribeChannelOrganizationsResponse>(req, "DescribeChannelOrganizations")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 生成渠道子客用印申请审批小程序链接，链接类型（通过H5唤起小程序或通过APP跳转的方式查看）
         /// </summary>
         /// <param name="req"><see cref="DescribeChannelSealPolicyWorkflowUrlRequest"/></param>

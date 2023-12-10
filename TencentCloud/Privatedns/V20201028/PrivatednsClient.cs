@@ -536,6 +536,27 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
+        /// 查询异步绑定vpc操作状态
+        /// </summary>
+        /// <param name="req"><see cref="QueryAsyncBindVpcStatusRequest"/></param>
+        /// <returns><see cref="QueryAsyncBindVpcStatusResponse"/></returns>
+        public Task<QueryAsyncBindVpcStatusResponse> QueryAsyncBindVpcStatus(QueryAsyncBindVpcStatusRequest req)
+        {
+            return InternalRequestAsync<QueryAsyncBindVpcStatusResponse>(req, "QueryAsyncBindVpcStatus");
+        }
+
+        /// <summary>
+        /// 查询异步绑定vpc操作状态
+        /// </summary>
+        /// <param name="req"><see cref="QueryAsyncBindVpcStatusRequest"/></param>
+        /// <returns><see cref="QueryAsyncBindVpcStatusResponse"/></returns>
+        public QueryAsyncBindVpcStatusResponse QueryAsyncBindVpcStatusSync(QueryAsyncBindVpcStatusRequest req)
+        {
+            return InternalRequestAsync<QueryAsyncBindVpcStatusResponse>(req, "QueryAsyncBindVpcStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 开通私有域解析
         /// </summary>
         /// <param name="req"><see cref="SubscribePrivateZoneServiceRequest"/></param>
