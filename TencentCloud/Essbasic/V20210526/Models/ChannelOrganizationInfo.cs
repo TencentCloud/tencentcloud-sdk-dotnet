@@ -25,64 +25,56 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 电子签企业Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 电子签平台给企业分配的ID（在不同应用下同一个企业会分配通用的ID）
         /// </summary>
         [JsonProperty("OrganizationId")]
         public string OrganizationId{ get; set; }
 
         /// <summary>
-        /// 电子签企业OpenId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 第三方平台子客企业的唯一标识
         /// </summary>
         [JsonProperty("OrganizationOpenId")]
         public string OrganizationOpenId{ get; set; }
 
         /// <summary>
-        /// 企业名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 第三方平台子客企业名称
         /// </summary>
         [JsonProperty("OrganizationName")]
         public string OrganizationName{ get; set; }
 
         /// <summary>
-        /// 企业信用代码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 企业的统一社会信用代码
         /// </summary>
         [JsonProperty("UnifiedSocialCreditCode")]
         public string UnifiedSocialCreditCode{ get; set; }
 
         /// <summary>
-        /// 法人姓名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 企业法定代表人的姓名
         /// </summary>
         [JsonProperty("LegalName")]
         public string LegalName{ get; set; }
 
         /// <summary>
-        /// 法人OpenId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 企业法定代表人作为第三方平台子客企业员工的唯一标识
         /// </summary>
         [JsonProperty("LegalOpenId")]
         public string LegalOpenId{ get; set; }
 
         /// <summary>
-        /// 超管姓名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 企业超级管理员的姓名
         /// </summary>
         [JsonProperty("AdminName")]
         public string AdminName{ get; set; }
 
         /// <summary>
-        /// 超管OpenId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 企业超级管理员作为第三方平台子客企业员工的唯一标识
         /// </summary>
         [JsonProperty("AdminOpenId")]
         public string AdminOpenId{ get; set; }
 
         /// <summary>
-        /// 超管手机号，脱敏后返回
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 企业超级管理员的手机号码
+        /// **注**：`手机号码脱敏（隐藏部分用*替代）`
         /// </summary>
         [JsonProperty("AdminMobile")]
         public string AdminMobile{ get; set; }
@@ -97,7 +89,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         ///   <li>**"VERIFYING"**： 认证中的企业</li>
         ///   <li>**"VERIFIED"**： 已认证的企业</li>
         /// </ul>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthorizationStatus")]
         public string AuthorizationStatus{ get; set; }
@@ -110,7 +101,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         ///   <li>**"AuthorizationLegalPerson"**： 法人授权超管</li>
         ///   <li>**"AuthorizationLegalIdentity"**： 法人直接认证</li>
         /// </ul>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthorizationType")]
         public string AuthorizationType{ get; set; }

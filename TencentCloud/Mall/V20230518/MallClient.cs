@@ -28,6 +28,7 @@ namespace TencentCloud.Mall.V20230518
 
        private const string endpoint = "mall.tencentcloudapi.com";
        private const string version = "2023-05-18";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Mall.V20230518
         public MallClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

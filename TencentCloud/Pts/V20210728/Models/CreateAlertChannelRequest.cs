@@ -25,7 +25,7 @@ namespace TencentCloud.Pts.V20210728.Models
     {
         
         /// <summary>
-        /// Notice ID
+        /// monitor 服务的告警通知模板的 NoticeId，可从 monitor 服务的云 API 的 DescribeAlarmNotices 接口响应里的 Id 字段获取。（CreateAlertChannel 接口的入参里用于标识一个告警通知模板的 AMPConsumerId 与 NoticeId 二选一即可）
         /// </summary>
         [JsonProperty("NoticeId")]
         public string NoticeId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Pts.V20210728.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// AMP Consumer ID
+        /// monitor 服务的告警通知模板的 AMPConsumerId，可从 monitor 服务的云 API 的 DescribeAlarmNotices 接口响应里的 AMPConsumerId 字段获取。（CreateAlertChannel 接口的入参里用于标识一个告警通知模板的 AMPConsumerId 与 NoticeId 二选一即可）
         /// </summary>
         [JsonProperty("AMPConsumerId")]
         public string AMPConsumerId{ get; set; }

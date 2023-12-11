@@ -28,6 +28,7 @@ namespace TencentCloud.Solar.V20181011
 
        private const string endpoint = "solar.tencentcloudapi.com";
        private const string version = "2018-10-11";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Solar.V20181011
         public SolarClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

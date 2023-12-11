@@ -28,6 +28,7 @@ namespace TencentCloud.Btoe.V20210514
 
        private const string endpoint = "btoe.tencentcloudapi.com";
        private const string version = "2021-05-14";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Btoe.V20210514
         public BtoeClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

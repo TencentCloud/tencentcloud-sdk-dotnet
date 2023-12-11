@@ -28,6 +28,7 @@ namespace TencentCloud.Batch.V20170312
 
        private const string endpoint = "batch.tencentcloudapi.com";
        private const string version = "2017-03-12";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Batch.V20170312
         public BatchClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

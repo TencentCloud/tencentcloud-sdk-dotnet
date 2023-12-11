@@ -28,6 +28,7 @@ namespace TencentCloud.Omics.V20221128
 
        private const string endpoint = "omics.tencentcloudapi.com";
        private const string version = "2022-11-28";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Omics.V20221128
         public OmicsClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

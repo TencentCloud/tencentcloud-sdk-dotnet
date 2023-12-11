@@ -28,6 +28,7 @@ namespace TencentCloud.Cis.V20180408
 
        private const string endpoint = "cis.tencentcloudapi.com";
        private const string version = "2018-04-08";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Cis.V20180408
         public CisClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

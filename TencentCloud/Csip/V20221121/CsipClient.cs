@@ -28,6 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Csip.V20221121
         public CsipClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>
@@ -322,6 +323,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeListenerListResponse DescribeListenerListSync(DescribeListenerListRequest req)
         {
             return InternalRequestAsync<DescribeListenerListResponse>(req, "DescribeListenerList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取网卡列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNICAssetsRequest"/></param>
+        /// <returns><see cref="DescribeNICAssetsResponse"/></returns>
+        public Task<DescribeNICAssetsResponse> DescribeNICAssets(DescribeNICAssetsRequest req)
+        {
+            return InternalRequestAsync<DescribeNICAssetsResponse>(req, "DescribeNICAssets");
+        }
+
+        /// <summary>
+        /// 获取网卡列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNICAssetsRequest"/></param>
+        /// <returns><see cref="DescribeNICAssetsResponse"/></returns>
+        public DescribeNICAssetsResponse DescribeNICAssetsSync(DescribeNICAssetsRequest req)
+        {
+            return InternalRequestAsync<DescribeNICAssetsResponse>(req, "DescribeNICAssets")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

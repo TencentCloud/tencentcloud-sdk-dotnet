@@ -28,6 +28,7 @@ namespace TencentCloud.Tan.V20220420
 
        private const string endpoint = "tan.tencentcloudapi.com";
        private const string version = "2022-04-20";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Tan.V20220420
         public TanClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

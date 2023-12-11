@@ -15,33 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcr.V20190924.Models
+namespace TencentCloud.Cdwdoris.V20211228.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeCustomAccountsResponse : AbstractModel
+    public class DescribeInstanceRequest : AbstractModel
     {
         
         /// <summary>
-        /// 自定义账户列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 集群实例ID
         /// </summary>
-        [JsonProperty("CustomAccounts")]
-        public CustomAccount[] CustomAccounts{ get; set; }
-
-        /// <summary>
-        /// 自定义账户数量
-        /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
 
         /// <summary>
@@ -49,9 +36,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "CustomAccounts.", this.CustomAccounts);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

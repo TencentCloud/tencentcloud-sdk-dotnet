@@ -25,13 +25,13 @@ namespace TencentCloud.Pts.V20210728.Models
     {
         
         /// <summary>
-        /// job id
+        /// 压测任务的 ID
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 场景id
+        /// 场景的 ID
         /// </summary>
         [JsonProperty("ScenarioId")]
         public string ScenarioId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Pts.V20210728.Models
         public InternalMetricQuery[] Queries{ get; set; }
 
         /// <summary>
-        /// 项目ID
+        /// 项目的 ID
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }

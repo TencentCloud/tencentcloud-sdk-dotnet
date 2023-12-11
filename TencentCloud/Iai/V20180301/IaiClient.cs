@@ -28,6 +28,7 @@ namespace TencentCloud.Iai.V20180301
 
        private const string endpoint = "iai.tencentcloudapi.com";
        private const string version = "2018-03-01";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Iai.V20180301
         public IaiClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

@@ -25,13 +25,13 @@ namespace TencentCloud.Pts.V20210728.Models
     {
         
         /// <summary>
-        /// label名字
+        /// 标签名
         /// </summary>
         [JsonProperty("LabelName")]
         public string LabelName{ get; set; }
 
         /// <summary>
-        /// label值
+        /// 标签值
         /// </summary>
         [JsonProperty("LabelValue")]
         public string LabelValue{ get; set; }

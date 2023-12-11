@@ -28,6 +28,7 @@ namespace TencentCloud.Tcr.V20190924
 
        private const string endpoint = "tcr.tencentcloudapi.com";
        private const string version = "2019-09-24";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Tcr.V20190924
         public TcrClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>
@@ -1103,31 +1104,6 @@ namespace TencentCloud.Tcr.V20190924
         public DescribeChartDownloadInfoResponse DescribeChartDownloadInfoSync(DescribeChartDownloadInfoRequest req)
         {
             return InternalRequestAsync<DescribeChartDownloadInfoResponse>(req, "DescribeChartDownloadInfo")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 接口未使用
-        /// 
-        /// 查询自定义账号
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCustomAccountsRequest"/></param>
-        /// <returns><see cref="DescribeCustomAccountsResponse"/></returns>
-        public Task<DescribeCustomAccountsResponse> DescribeCustomAccounts(DescribeCustomAccountsRequest req)
-        {
-            return InternalRequestAsync<DescribeCustomAccountsResponse>(req, "DescribeCustomAccounts");
-        }
-
-        /// <summary>
-        /// 接口未使用
-        /// 
-        /// 查询自定义账号
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCustomAccountsRequest"/></param>
-        /// <returns><see cref="DescribeCustomAccountsResponse"/></returns>
-        public DescribeCustomAccountsResponse DescribeCustomAccountsSync(DescribeCustomAccountsRequest req)
-        {
-            return InternalRequestAsync<DescribeCustomAccountsResponse>(req, "DescribeCustomAccounts")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

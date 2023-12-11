@@ -31,7 +31,7 @@ namespace TencentCloud.Pts.V20210728.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 文件 ID 数组
+        /// 待删除的文件的 ID（所有文件 ID 可从接口 DescribeFiles 获取）
         /// </summary>
         [JsonProperty("FileIds")]
         public string[] FileIds{ get; set; }

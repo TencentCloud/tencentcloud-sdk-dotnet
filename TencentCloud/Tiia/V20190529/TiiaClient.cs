@@ -28,6 +28,7 @@ namespace TencentCloud.Tiia.V20190529
 
        private const string endpoint = "tiia.tencentcloudapi.com";
        private const string version = "2019-05-29";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Tiia.V20190529
         public TiiaClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

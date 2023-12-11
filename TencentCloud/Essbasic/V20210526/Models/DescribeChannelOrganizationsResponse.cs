@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 企业企业信息列表。
+        /// 满足查询条件的企业信息列表。
         /// </summary>
         [JsonProperty("ChannelOrganizationInfos")]
         public ChannelOrganizationInfo[] ChannelOrganizationInfos{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 符合条件的企业数量。
+        /// 满足查询条件的企业总数量。
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }

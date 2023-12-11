@@ -43,7 +43,7 @@ namespace TencentCloud.Pts.V20210728.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 压测引擎类型
+        /// 压测场景的模式类型。取值范围：pts-http 代表简单模式，pts-js 代表脚本模式，pts-jmeter 代表 JMeter 模式。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

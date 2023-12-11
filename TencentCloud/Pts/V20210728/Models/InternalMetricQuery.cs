@@ -31,7 +31,7 @@ namespace TencentCloud.Pts.V20210728.Models
         public string Metric{ get; set; }
 
         /// <summary>
-        /// 聚合函数
+        /// 聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
         /// </summary>
         [JsonProperty("Aggregation")]
         public string Aggregation{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Pts.V20210728.Models
         public Label[] Labels{ get; set; }
 
         /// <summary>
-        /// 指标过滤
+        /// 用标签过滤规则来过滤指标，规则中包含标签名 LabelName、标签值 LabelValue、操作符 Operator（0代表相等，1代表不等）
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

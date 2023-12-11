@@ -102,6 +102,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <li>请确认该名称与企业营业执照中注册的名称一致。</li>
         /// <li>如果名称中包含英文括号()，请使用中文括号（）代替。</li>
         /// <li>请确保此企业已完成腾讯电子签企业认证。</li>
+        /// <li>若为子客企业，请确保员工已经加入企业。</li>
         /// </ul>
         /// </summary>
         [JsonProperty("OrganizationName")]

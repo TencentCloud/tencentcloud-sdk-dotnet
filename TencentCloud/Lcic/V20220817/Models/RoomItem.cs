@@ -39,7 +39,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? RoomId{ get; set; }
 
         /// <summary>
-        /// 房间状态。0 未开始 ；1进行中  ；2 已结束
+        /// 房间状态。0 未开始 ；1进行中  ；2 已结束；3已过期
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
@@ -173,6 +173,13 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("EnableAutoStart")]
         public ulong? EnableAutoStart{ get; set; }
 
+        /// <summary>
+        /// 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RecordBackground")]
+        public string RecordBackground{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -200,6 +207,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "LiveType", this.LiveType);
             this.SetParamSimple(map, prefix + "RecordLiveUrl", this.RecordLiveUrl);
             this.SetParamSimple(map, prefix + "EnableAutoStart", this.EnableAutoStart);
+            this.SetParamSimple(map, prefix + "RecordBackground", this.RecordBackground);
         }
     }
 }

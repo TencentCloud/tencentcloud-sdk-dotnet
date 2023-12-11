@@ -15,50 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcr.V20190924.Models
+namespace TencentCloud.Cdwdoris.V20211228.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeCustomAccountsRequest : AbstractModel
+    public class DescribeInstanceNodesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 实例Id
+        /// 集群实例ID
         /// </summary>
-        [JsonProperty("RegistryId")]
-        public string RegistryId{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 列出所有自定义账户
+        /// 集群角色类型，默认为 "data"数据节点
         /// </summary>
-        [JsonProperty("All")]
-        public bool? All{ get; set; }
+        [JsonProperty("NodeRole")]
+        public string NodeRole{ get; set; }
 
         /// <summary>
-        /// 填充策略
-        /// </summary>
-        [JsonProperty("EmbedPermission")]
-        public bool? EmbedPermission{ get; set; }
-
-        /// <summary>
-        /// 过滤条件
-        /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
-
-        /// <summary>
-        /// 偏移量,默认0
+        /// 分页参数，第一页为0，第二页为10
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 最大输出条数，默认20，最大为100
+        /// 分页参数，分页步长，默认为10
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
+
+        /// <summary>
+        /// 展现策略，All时显示所有
+        /// </summary>
+        [JsonProperty("DisplayPolicy")]
+        public string DisplayPolicy{ get; set; }
 
 
         /// <summary>
@@ -66,12 +60,11 @@ namespace TencentCloud.Tcr.V20190924.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
-            this.SetParamSimple(map, prefix + "All", this.All);
-            this.SetParamSimple(map, prefix + "EmbedPermission", this.EmbedPermission);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "NodeRole", this.NodeRole);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "DisplayPolicy", this.DisplayPolicy);
         }
     }
 }

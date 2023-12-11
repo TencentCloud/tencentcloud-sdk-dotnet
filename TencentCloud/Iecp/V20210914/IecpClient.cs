@@ -28,6 +28,7 @@ namespace TencentCloud.Iecp.V20210914
 
        private const string endpoint = "iecp.tencentcloudapi.com";
        private const string version = "2021-09-14";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Iecp.V20210914
         public IecpClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

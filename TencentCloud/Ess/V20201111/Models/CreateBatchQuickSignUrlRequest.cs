@@ -25,13 +25,6 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 批量签署的合同流程ID数组。
-        /// 注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
-        /// </summary>
-        [JsonProperty("FlowIds")]
-        public string[] FlowIds{ get; set; }
-
-        /// <summary>
         /// 批量签署的流程签署人，其中姓名(ApproverName)、参与人类型(ApproverType)必传，手机号(ApproverMobile)和证件信息(ApproverIdCardType、ApproverIdCardNumber)可任选一种或全部传入。
         /// 注:
         /// `1. ApproverType目前只支持个人类型的签署人。`
@@ -54,6 +47,20 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
+
+        /// <summary>
+        /// 批量签署的合同流程ID数组。
+        /// 注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
+        /// </summary>
+        [JsonProperty("FlowIds")]
+        public string[] FlowIds{ get; set; }
+
+        /// <summary>
+        /// 合同组编号
+        /// 注：`该参数和合同流程ID数组必须二选一`
+        /// </summary>
+        [JsonProperty("FlowGroupId")]
+        public string FlowGroupId{ get; set; }
 
         /// <summary>
         /// 签署完之后的H5页面的跳转链接，此链接及支持http://和https://，最大长度1000个字符。(建议https协议)
@@ -90,10 +97,11 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
             this.SetParamObj(map, prefix + "FlowApproverInfo.", this.FlowApproverInfo);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
+            this.SetParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
             this.SetParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
             this.SetParamArraySimple(map, prefix + "SignatureTypes.", this.SignatureTypes);
             this.SetParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);

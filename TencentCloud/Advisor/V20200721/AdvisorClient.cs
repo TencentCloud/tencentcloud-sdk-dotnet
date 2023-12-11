@@ -28,6 +28,7 @@ namespace TencentCloud.Advisor.V20200721
 
        private const string endpoint = "advisor.tencentcloudapi.com";
        private const string version = "2020-07-21";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Advisor.V20200721
         public AdvisorClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

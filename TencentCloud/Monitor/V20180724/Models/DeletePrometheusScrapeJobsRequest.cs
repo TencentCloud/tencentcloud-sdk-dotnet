@@ -31,13 +31,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Agent ID
+        /// Agent ID(可通过 DescribePrometheusAgents 接口获取)
         /// </summary>
         [JsonProperty("AgentId")]
         public string AgentId{ get; set; }
 
         /// <summary>
-        /// 任务 ID 列表
+        /// 任务 ID 列表(可通过 DescribePrometheusScrapeJobs 接口获取)
         /// </summary>
         [JsonProperty("JobIds")]
         public string[] JobIds{ get; set; }

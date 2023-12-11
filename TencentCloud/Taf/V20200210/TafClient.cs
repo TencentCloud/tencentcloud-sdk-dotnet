@@ -28,6 +28,7 @@ namespace TencentCloud.Taf.V20200210
 
        private const string endpoint = "taf.tencentcloudapi.com";
        private const string version = "2020-02-10";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Taf.V20200210
         public TafClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

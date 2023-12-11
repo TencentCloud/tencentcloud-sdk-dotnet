@@ -28,6 +28,7 @@ namespace TencentCloud.Cloudstudio.V20230508
 
        private const string endpoint = "cloudstudio.tencentcloudapi.com";
        private const string version = "2023-05-08";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Cloudstudio.V20230508
         public CloudstudioClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

@@ -28,6 +28,7 @@ namespace TencentCloud.Mgobe.V20190929
 
        private const string endpoint = "mgobe.tencentcloudapi.com";
        private const string version = "2019-09-29";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Mgobe.V20190929
         public MgobeClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

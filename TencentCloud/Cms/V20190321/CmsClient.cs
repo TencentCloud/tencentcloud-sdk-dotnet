@@ -28,6 +28,7 @@ namespace TencentCloud.Cms.V20190321
 
        private const string endpoint = "cms.tencentcloudapi.com";
        private const string version = "2019-03-21";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Cms.V20190321
         public CmsClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

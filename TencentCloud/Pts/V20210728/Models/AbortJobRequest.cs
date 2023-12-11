@@ -25,7 +25,7 @@ namespace TencentCloud.Pts.V20210728.Models
     {
         
         /// <summary>
-        /// 任务ID
+        /// 待停止的压测任务的 ID（所有的压测任务 ID 可以从 DescribeJobs 接口获取）
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }

@@ -28,6 +28,7 @@ namespace TencentCloud.Tdid.V20210519
 
        private const string endpoint = "tdid.tencentcloudapi.com";
        private const string version = "2021-05-19";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Tdid.V20210519
         public TdidClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

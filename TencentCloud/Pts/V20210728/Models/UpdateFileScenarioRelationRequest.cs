@@ -25,7 +25,7 @@ namespace TencentCloud.Pts.V20210728.Models
     {
         
         /// <summary>
-        /// 文件 ID
+        /// 文件 ID。其值应为前序步骤上传该文件到 cos 桶后，文件在 cos 桶中的相应目录
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }

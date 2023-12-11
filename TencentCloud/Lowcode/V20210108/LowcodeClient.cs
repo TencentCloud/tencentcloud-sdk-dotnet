@@ -28,6 +28,7 @@ namespace TencentCloud.Lowcode.V20210108
 
        private const string endpoint = "lowcode.tencentcloudapi.com";
        private const string version = "2021-01-08";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Lowcode.V20210108
         public LowcodeClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

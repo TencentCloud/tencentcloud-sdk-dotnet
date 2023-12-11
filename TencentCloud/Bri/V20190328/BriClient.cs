@@ -28,6 +28,7 @@ namespace TencentCloud.Bri.V20190328
 
        private const string endpoint = "bri.tencentcloudapi.com";
        private const string version = "2019-03-28";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Bri.V20190328
         public BriClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

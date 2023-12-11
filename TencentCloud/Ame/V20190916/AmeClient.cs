@@ -28,6 +28,7 @@ namespace TencentCloud.Ame.V20190916
 
        private const string endpoint = "ame.tencentcloudapi.com";
        private const string version = "2019-09-16";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Ame.V20190916
         public AmeClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

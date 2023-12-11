@@ -31,7 +31,7 @@ namespace TencentCloud.Pts.V20210728.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// Notice ID
+        /// 待删除的通知渠道的 Notice ID（所有通知渠道的 Notice ID 可以从 DescribeAlertChannels 接口获取）
         /// </summary>
         [JsonProperty("NoticeId")]
         public string NoticeId{ get; set; }

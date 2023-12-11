@@ -28,6 +28,7 @@ namespace TencentCloud.Trro.V20220325
 
        private const string endpoint = "trro.tencentcloudapi.com";
        private const string version = "2022-03-25";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Trro.V20220325
         public TrroClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

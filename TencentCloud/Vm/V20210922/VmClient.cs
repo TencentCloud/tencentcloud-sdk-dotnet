@@ -28,6 +28,7 @@ namespace TencentCloud.Vm.V20210922
 
        private const string endpoint = "vm.tencentcloudapi.com";
        private const string version = "2021-09-22";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Vm.V20210922
         public VmClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

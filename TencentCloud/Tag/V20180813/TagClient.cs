@@ -28,6 +28,7 @@ namespace TencentCloud.Tag.V20180813
 
        private const string endpoint = "tag.tencentcloudapi.com";
        private const string version = "2018-08-13";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Tag.V20180813
         public TagClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

@@ -25,19 +25,19 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Prometheus 实例 ID，例如：prom-abcd1234
+        /// Prometheus 实例 ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Agent ID，例如：agent-abcd1234，可在控制台 Agent 管理中获取
+        /// Agent ID(可通过DescribePrometheusAgents 接口获取)
         /// </summary>
         [JsonProperty("AgentId")]
         public string AgentId{ get; set; }
 
         /// <summary>
-        /// 抓取任务配置，格式：job_name:xx
+        /// 抓取任务配置
         /// </summary>
         [JsonProperty("Config")]
         public string Config{ get; set; }

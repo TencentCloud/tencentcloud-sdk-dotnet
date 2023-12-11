@@ -37,13 +37,13 @@ namespace TencentCloud.Pts.V20210728.Models
         public string ScenarioId{ get; set; }
 
         /// <summary>
-        /// 指标名称
+        /// 指标名。取值范围参见 DescribeMetricLabelWithValues 接口返回的所有指标名
         /// </summary>
         [JsonProperty("Metric")]
         public string Metric{ get; set; }
 
         /// <summary>
-        /// 查询标签名称
+        /// 标签名。取值范围参见 DescribeMetricLabelWithValues 接口返回的指标及其支持的标签名
         /// </summary>
         [JsonProperty("LabelName")]
         public string LabelName{ get; set; }

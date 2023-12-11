@@ -28,6 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Tke.V20180525
         public TkeClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>
@@ -238,6 +239,27 @@ namespace TencentCloud.Tke.V20180525
         public CreateBackupStorageLocationResponse CreateBackupStorageLocationSync(CreateBackupStorageLocationRequest req)
         {
             return InternalRequestAsync<CreateBackupStorageLocationResponse>(req, "CreateBackupStorageLocation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建日志采集配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateCLSLogConfigRequest"/></param>
+        /// <returns><see cref="CreateCLSLogConfigResponse"/></returns>
+        public Task<CreateCLSLogConfigResponse> CreateCLSLogConfig(CreateCLSLogConfigRequest req)
+        {
+            return InternalRequestAsync<CreateCLSLogConfigResponse>(req, "CreateCLSLogConfig");
+        }
+
+        /// <summary>
+        /// 创建日志采集配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateCLSLogConfigRequest"/></param>
+        /// <returns><see cref="CreateCLSLogConfigResponse"/></returns>
+        public CreateCLSLogConfigResponse CreateCLSLogConfigSync(CreateCLSLogConfigRequest req)
+        {
+            return InternalRequestAsync<CreateCLSLogConfigResponse>(req, "CreateCLSLogConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -553,6 +575,27 @@ namespace TencentCloud.Tke.V20180525
         public CreateEdgeLogConfigResponse CreateEdgeLogConfigSync(CreateEdgeLogConfigRequest req)
         {
             return InternalRequestAsync<CreateEdgeLogConfigResponse>(req, "CreateEdgeLogConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 为弹性集群创建日志采集配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateEksLogConfigRequest"/></param>
+        /// <returns><see cref="CreateEksLogConfigResponse"/></returns>
+        public Task<CreateEksLogConfigResponse> CreateEksLogConfig(CreateEksLogConfigRequest req)
+        {
+            return InternalRequestAsync<CreateEksLogConfigResponse>(req, "CreateEksLogConfig");
+        }
+
+        /// <summary>
+        /// 为弹性集群创建日志采集配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateEksLogConfigRequest"/></param>
+        /// <returns><see cref="CreateEksLogConfigResponse"/></returns>
+        public CreateEksLogConfigResponse CreateEksLogConfigSync(CreateEksLogConfigRequest req)
+        {
+            return InternalRequestAsync<CreateEksLogConfigResponse>(req, "CreateEksLogConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,6 +28,7 @@ namespace TencentCloud.Youmall.V20180228
 
        private const string endpoint = "youmall.tencentcloudapi.com";
        private const string version = "2018-02-28";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Youmall.V20180228
         public YoumallClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

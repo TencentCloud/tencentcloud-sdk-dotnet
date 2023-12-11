@@ -28,6 +28,7 @@ namespace TencentCloud.Csxg.V20230303
 
        private const string endpoint = "csxg.tencentcloudapi.com";
        private const string version = "2023-03-03";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Csxg.V20230303
         public CsxgClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

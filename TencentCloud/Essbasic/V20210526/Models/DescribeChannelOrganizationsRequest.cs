@@ -32,6 +32,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 渠道应用标识: Agent.AppId
         /// 第三方平台子客企业标识: Agent.ProxyOrganizationOpenId
         /// 第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId
+        /// 
         /// 第三方平台子客企业和员工必须已经经过实名认证
         /// </summary>
         [JsonProperty("Agent")]
@@ -44,21 +45,21 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 子客OrganizationOpenId，定向查询某个子客的企业数据。
+        /// 该字段是指第三方平台子客企业的唯一标识，用于查询单独某个子客的企业数据。
+        /// 
+        /// **注**：`如果需要批量查询本应用下的所有企业的信息，则该字段不需要赋值`
         /// </summary>
         [JsonProperty("OrganizationOpenId")]
         public string OrganizationOpenId{ get; set; }
 
         /// <summary>
-        /// 企业认证状态过滤字段。可值如下：
-        /// <ul>
-        ///   <li>**"UNVERIFIED"**： 未认证的企业</li>
+        /// 可以按照当前企业的认证状态进行过滤。可值如下：
+        /// <ul><li>**"UNVERIFIED"**： 未认证的企业</li>
         ///   <li>**"VERIFYINGLEGALPENDINGAUTHORIZATION"**： 认证中待法人授权的企业</li>
         ///   <li>**"VERIFYINGAUTHORIZATIONFILEPENDING"**： 认证中授权书审核中的企业</li>
         ///   <li>**"VERIFYINGAUTHORIZATIONFILEREJECT"**： 认证中授权书已驳回的企业</li>
-        ///   <li>**"VERIFYING"**： 认证中的企业</li>
-        ///   <li>**"VERIFIED"**： 已认证的企业</li>
-        /// </ul>
+        ///   <li>**"VERIFYING"**： 认证进行中的企业</li>
+        ///   <li>**"VERIFIED"**： 已认证完成的企业</li></ul>
         /// </summary>
         [JsonProperty("AuthorizationStatusList")]
         public string[] AuthorizationStatusList{ get; set; }

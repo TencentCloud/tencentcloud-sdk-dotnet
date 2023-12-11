@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 聚合规则组内容，格式为 yaml
+        /// 聚合规则组内容，格式为 yaml，通过 base64 进行编码。
         /// </summary>
         [JsonProperty("Group")]
         public string Group{ get; set; }

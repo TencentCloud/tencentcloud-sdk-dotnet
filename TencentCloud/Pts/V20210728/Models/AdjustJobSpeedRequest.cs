@@ -31,7 +31,7 @@ namespace TencentCloud.Pts.V20210728.Models
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 目标RPS
+        /// 目标 RPS。其取值应大于起始 RPS，并且小于最大 RPS
         /// </summary>
         [JsonProperty("TargetRequestsPerSecond")]
         public long? TargetRequestsPerSecond{ get; set; }

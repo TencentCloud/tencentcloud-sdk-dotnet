@@ -28,6 +28,7 @@ namespace TencentCloud.Icr.V20211014
 
        private const string endpoint = "icr.tencentcloudapi.com";
        private const string version = "2021-10-14";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Icr.V20211014
         public IcrClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

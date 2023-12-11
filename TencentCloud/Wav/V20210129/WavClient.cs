@@ -28,6 +28,7 @@ namespace TencentCloud.Wav.V20210129
 
        private const string endpoint = "wav.tencentcloudapi.com";
        private const string version = "2021-01-29";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Wav.V20210129
         public WavClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

@@ -28,6 +28,7 @@ namespace TencentCloud.Tiw.V20190919
 
        private const string endpoint = "tiw.tencentcloudapi.com";
        private const string version = "2019-09-19";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Tiw.V20190919
         public TiwClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

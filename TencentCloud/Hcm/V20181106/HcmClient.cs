@@ -28,6 +28,7 @@ namespace TencentCloud.Hcm.V20181106
 
        private const string endpoint = "hcm.tencentcloudapi.com";
        private const string version = "2018-11-06";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Hcm.V20181106
         public HcmClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

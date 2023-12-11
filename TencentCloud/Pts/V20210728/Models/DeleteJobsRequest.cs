@@ -25,7 +25,7 @@ namespace TencentCloud.Pts.V20210728.Models
     {
         
         /// <summary>
-        /// 任务ID数组
+        /// 待删除的任务的 ID（所有任务的 ID 可以从 DescribeJobs 获取）
         /// </summary>
         [JsonProperty("JobIds")]
         public string[] JobIds{ get; set; }

@@ -25,7 +25,12 @@ namespace TencentCloud.Ssm.V20190923.Models
     {
         
         /// <summary>
-        /// 支持的产品列表。
+        /// 支持的所有云产品列表。
+        /// 每种云产品与凭据类型的对应关系如下：
+        /// 当SecretType为1时，支持的云产品列表包括：Mysql、Tdsql-mysql、Tdsql_C_Mysql；
+        /// 当SecretType为2时，支持的产品列表为：Cvm；
+        /// 当SecretType为3时，支持的产品列表为：Cam（此功能的使用需要联系云助手单独开始白名单）；
+        /// 当SecretType为4时，支持的产品列表为：Redis。
         /// </summary>
         [JsonProperty("Products")]
         public string[] Products{ get; set; }

@@ -31,13 +31,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// VPC ID
+        /// VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域)
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网 ID
+        /// 子网 ID(可通过 vpc:DescribeSubnets 接口获取)
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? DataRetentionTime{ get; set; }
 
         /// <summary>
-        /// 可用区
+        /// 可用区(与子网同可用区)
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

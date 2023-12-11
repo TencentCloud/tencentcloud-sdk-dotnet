@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.913</VersionPrefix>
+    <VersionPrefix>3.0.914</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -97,6 +97,8 @@
     <Compile Include="V20180525\Models\ControllerStatus.cs" />
     <Compile Include="V20180525\Models\CreateBackupStorageLocationRequest.cs" />
     <Compile Include="V20180525\Models\CreateBackupStorageLocationResponse.cs" />
+    <Compile Include="V20180525\Models\CreateCLSLogConfigRequest.cs" />
+    <Compile Include="V20180525\Models\CreateCLSLogConfigResponse.cs" />
     <Compile Include="V20180525\Models\CreateClusterEndpointRequest.cs" />
     <Compile Include="V20180525\Models\CreateClusterEndpointResponse.cs" />
     <Compile Include="V20180525\Models\CreateClusterEndpointVipRequest.cs" />
@@ -127,6 +129,8 @@
     <Compile Include="V20180525\Models\CreateEdgeCVMInstancesResponse.cs" />
     <Compile Include="V20180525\Models\CreateEdgeLogConfigRequest.cs" />
     <Compile Include="V20180525\Models\CreateEdgeLogConfigResponse.cs" />
+    <Compile Include="V20180525\Models\CreateEksLogConfigRequest.cs" />
+    <Compile Include="V20180525\Models\CreateEksLogConfigResponse.cs" />
     <Compile Include="V20180525\Models\CreateImageCacheRequest.cs" />
     <Compile Include="V20180525\Models\CreateImageCacheResponse.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusAlertPolicyRequest.cs" />

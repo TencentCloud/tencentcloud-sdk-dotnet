@@ -28,6 +28,7 @@ namespace TencentCloud.Dts.V20180330
 
        private const string endpoint = "dts.tencentcloudapi.com";
        private const string version = "2018-03-30";
+       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Dts.V20180330
         public DtsClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

@@ -37,13 +37,13 @@ namespace TencentCloud.Pts.V20210728.Models
         public string ScenarioId{ get; set; }
 
         /// <summary>
-        /// 指标名
+        /// 指标名。取值范围参见 DescribeMetricLabelWithValues 接口返回的所有指标名
         /// </summary>
         [JsonProperty("Metric")]
         public string Metric{ get; set; }
 
         /// <summary>
-        /// 聚合条件
+        /// 聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
         /// </summary>
         [JsonProperty("Aggregation")]
         public string Aggregation{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Pts.V20210728.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 过滤条件
+        /// 标签过滤条件。各指标支持的标签参见 DescribeMetricLabelWithValues 接口返回的所有指标及其支持的标签
         /// </summary>
         [JsonProperty("Labels")]
         public Label[] Labels{ get; set; }

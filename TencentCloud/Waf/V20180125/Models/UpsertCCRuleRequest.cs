@@ -43,7 +43,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 高级模式
+        /// 高级模式（是否使用Session检测），0表示不启用，1表示启用
         /// </summary>
         [JsonProperty("Advance")]
         public string Advance{ get; set; }
@@ -67,13 +67,13 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// 匹配方法
+        /// 匹配方法，0表示等于，1表示前缀匹配，2表示包含
         /// </summary>
         [JsonProperty("MatchFunc")]
         public long? MatchFunc{ get; set; }
 
         /// <summary>
-        /// 动作
+        /// 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string OptionsArr{ get; set; }
 
         /// <summary>
-        /// waf版本
+        /// waf版本，sparta-waf或者clb-waf
         /// </summary>
         [JsonProperty("Edition")]
         public string Edition{ get; set; }

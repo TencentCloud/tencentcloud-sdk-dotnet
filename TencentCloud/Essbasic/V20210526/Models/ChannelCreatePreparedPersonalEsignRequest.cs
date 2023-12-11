@@ -102,6 +102,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("LicenseType")]
         public long? LicenseType{ get; set; }
 
+        /// <summary>
+        /// <ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+        /// </summary>
+        [JsonProperty("SceneKey")]
+        public string SceneKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -119,6 +125,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
             this.SetParamSimple(map, prefix + "EnableAutoSign", this.EnableAutoSign);
             this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
+            this.SetParamSimple(map, prefix + "SceneKey", this.SceneKey);
         }
     }
 }
