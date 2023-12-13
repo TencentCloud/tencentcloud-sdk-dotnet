@@ -28,7 +28,6 @@ namespace TencentCloud.Tbm.V20180129
 
        private const string endpoint = "tbm.tencentcloudapi.com";
        private const string version = "2018-01-29";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Tbm.V20180129
         public TbmClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>

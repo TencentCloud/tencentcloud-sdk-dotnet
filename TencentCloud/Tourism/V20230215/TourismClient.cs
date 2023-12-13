@@ -28,7 +28,6 @@ namespace TencentCloud.Tourism.V20230215
 
        private const string endpoint = "tourism.tencentcloudapi.com";
        private const string version = "2023-02-15";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Tourism.V20230215
         public TourismClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>

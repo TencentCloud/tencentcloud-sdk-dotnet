@@ -28,7 +28,6 @@ namespace TencentCloud.Apm.V20210622
 
        private const string endpoint = "apm.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Apm.V20210622
         public ApmClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>

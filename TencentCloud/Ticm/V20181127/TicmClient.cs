@@ -28,7 +28,6 @@ namespace TencentCloud.Ticm.V20181127
 
        private const string endpoint = "ticm.tencentcloudapi.com";
        private const string version = "2018-11-27";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Ticm.V20181127
         public TicmClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>

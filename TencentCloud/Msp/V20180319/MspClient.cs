@@ -28,7 +28,6 @@ namespace TencentCloud.Msp.V20180319
 
        private const string endpoint = "msp.tencentcloudapi.com";
        private const string version = "2018-03-19";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Msp.V20180319
         public MspClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>

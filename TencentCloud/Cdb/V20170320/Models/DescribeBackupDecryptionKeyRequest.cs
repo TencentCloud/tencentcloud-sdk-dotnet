@@ -36,6 +36,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("BackupId")]
         public long? BackupId{ get; set; }
 
+        /// <summary>
+        /// 备份类型 data: 数据备份 binlog:日志备份，默认为data
+        /// </summary>
+        [JsonProperty("BackupType")]
+        public string BackupType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "BackupId", this.BackupId);
+            this.SetParamSimple(map, prefix + "BackupType", this.BackupType);
         }
     }
 }

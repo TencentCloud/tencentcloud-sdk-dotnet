@@ -28,7 +28,6 @@ namespace TencentCloud.Omics.V20221128
 
        private const string endpoint = "omics.tencentcloudapi.com";
        private const string version = "2022-11-28";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Omics.V20221128
         public OmicsClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>
@@ -222,7 +221,7 @@ namespace TencentCloud.Omics.V20221128
         }
 
         /// <summary>
-        /// 查询任务详情文件。
+        /// 获取任务详情文件。
         /// </summary>
         /// <param name="req"><see cref="GetRunMetadataFileRequest"/></param>
         /// <returns><see cref="GetRunMetadataFileResponse"/></returns>
@@ -232,7 +231,7 @@ namespace TencentCloud.Omics.V20221128
         }
 
         /// <summary>
-        /// 查询任务详情文件。
+        /// 获取任务详情文件。
         /// </summary>
         /// <param name="req"><see cref="GetRunMetadataFileRequest"/></param>
         /// <returns><see cref="GetRunMetadataFileResponse"/></returns>

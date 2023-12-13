@@ -28,7 +28,6 @@ namespace TencentCloud.Bsca.V20210811
 
        private const string endpoint = "bsca.tencentcloudapi.com";
        private const string version = "2021-08-11";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Bsca.V20210811
         public BscaClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>

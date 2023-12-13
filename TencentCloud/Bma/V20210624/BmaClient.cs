@@ -28,7 +28,6 @@ namespace TencentCloud.Bma.V20210624
 
        private const string endpoint = "bma.tencentcloudapi.com";
        private const string version = "2021-06-24";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Bma.V20210624
         public BmaClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>

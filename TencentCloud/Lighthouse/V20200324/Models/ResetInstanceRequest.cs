@@ -36,6 +36,18 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("BlueprintId")]
         public string BlueprintId{ get; set; }
 
+        /// <summary>
+        /// 要创建的容器配置列表。
+        /// </summary>
+        [JsonProperty("Containers")]
+        public DockerContainerConfiguration[] Containers{ get; set; }
+
+        /// <summary>
+        /// 实例登录信息配置。默认缺失情况下代表用户选择实例创建后设置登录密码或绑定密钥。
+        /// </summary>
+        [JsonProperty("LoginConfiguration")]
+        public LoginConfiguration LoginConfiguration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "BlueprintId", this.BlueprintId);
+            this.SetParamArrayObj(map, prefix + "Containers.", this.Containers);
+            this.SetParamObj(map, prefix + "LoginConfiguration.", this.LoginConfiguration);
         }
     }
 }

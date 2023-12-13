@@ -28,7 +28,6 @@ namespace TencentCloud.Tcex.V20200727
 
        private const string endpoint = "tcex.tencentcloudapi.com";
        private const string version = "2020-07-27";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Tcex.V20200727
         public TcexClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>

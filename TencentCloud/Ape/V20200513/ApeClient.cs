@@ -28,7 +28,6 @@ namespace TencentCloud.Ape.V20200513
 
        private const string endpoint = "ape.tencentcloudapi.com";
        private const string version = "2020-05-13";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Ape.V20200513
         public ApeClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>

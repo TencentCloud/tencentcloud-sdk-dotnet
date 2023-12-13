@@ -31,6 +31,13 @@ namespace TencentCloud.Omics.V20221128.Models
         public string CosSignedUrl{ get; set; }
 
         /// <summary>
+        /// 批量文件预签名链接，一分钟内有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CosSignedUrls")]
+        public string[] CosSignedUrls{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +50,7 @@ namespace TencentCloud.Omics.V20221128.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CosSignedUrl", this.CosSignedUrl);
+            this.SetParamArraySimple(map, prefix + "CosSignedUrls.", this.CosSignedUrls);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

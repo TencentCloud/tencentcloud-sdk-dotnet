@@ -28,7 +28,6 @@ namespace TencentCloud.Dasb.V20191018
 
        private const string endpoint = "dasb.tencentcloudapi.com";
        private const string version = "2019-10-18";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Dasb.V20191018
         public DasbClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>

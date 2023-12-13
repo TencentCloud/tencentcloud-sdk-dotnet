@@ -31,6 +31,13 @@ namespace TencentCloud.Omics.V20221128.Models
         public string RunUuid{ get; set; }
 
         /// <summary>
+        /// 项目ID。
+        /// （不填使用指定地域下的默认项目）
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
+
+        /// <summary>
         /// 需要获取的文件名。
         /// 
         /// 默认支持以下文件：
@@ -46,11 +53,19 @@ namespace TencentCloud.Omics.V20221128.Models
         public string Key{ get; set; }
 
         /// <summary>
-        /// 项目ID。
-        /// （不填使用指定地域下的默认项目）
+        /// 需要批量获取的文件名。
+        /// 
+        /// 默认支持以下文件：
+        /// - nextflow.log
+        /// 
+        /// 提交时NFOption中report指定为true时，额外支持以下文件：
+        /// - execution_report.html
+        /// - execution_timeline.html
+        /// - execution_trace.txt
+        /// - pipeline_dag.html
         /// </summary>
-        [JsonProperty("ProjectId")]
-        public string ProjectId{ get; set; }
+        [JsonProperty("Keys")]
+        public string[] Keys{ get; set; }
 
 
         /// <summary>
@@ -59,8 +74,9 @@ namespace TencentCloud.Omics.V20221128.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "RunUuid", this.RunUuid);
-            this.SetParamSimple(map, prefix + "Key", this.Key);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "Key", this.Key);
+            this.SetParamArraySimple(map, prefix + "Keys.", this.Keys);
         }
     }
 }

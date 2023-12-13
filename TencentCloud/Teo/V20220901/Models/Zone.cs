@@ -64,6 +64,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li> full：NS 接入；</li>
         /// <li> partial：CNAME 接入；</li>
         /// <li> noDomainAccess：无域名接入；</li>
+        /// <li> vodeo：开启 VODEO 后默认接入。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

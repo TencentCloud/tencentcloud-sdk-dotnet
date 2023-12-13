@@ -28,7 +28,6 @@ namespace TencentCloud.Iot.V20180123
 
        private const string endpoint = "iot.tencentcloudapi.com";
        private const string version = "2018-01-23";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Iot.V20180123
         public IotClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>

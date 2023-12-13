@@ -28,7 +28,6 @@ namespace TencentCloud.Organization.V20181225
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2018-12-25";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Organization.V20181225
         public OrganizationClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>

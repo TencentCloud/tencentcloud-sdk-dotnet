@@ -53,7 +53,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// 查询前多少个数据，最大值为1000，不填默认默认为10， 表示查询前top 10的数据。
+        /// 查询前多少个数据，最大值为1000，不填默认为10， 表示查询前top 10的数据。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

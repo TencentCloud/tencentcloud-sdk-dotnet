@@ -28,7 +28,6 @@ namespace TencentCloud.Tsw.V20210412
 
        private const string endpoint = "tsw.tencentcloudapi.com";
        private const string version = "2021-04-12";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Tsw.V20210412
         public TswClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>

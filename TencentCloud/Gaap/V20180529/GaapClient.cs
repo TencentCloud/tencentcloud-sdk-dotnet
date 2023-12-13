@@ -28,7 +28,6 @@ namespace TencentCloud.Gaap.V20180529
 
        private const string endpoint = "gaap.tencentcloudapi.com";
        private const string version = "2018-05-29";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Gaap.V20180529
         public GaapClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>

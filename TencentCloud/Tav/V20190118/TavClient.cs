@@ -28,7 +28,6 @@ namespace TencentCloud.Tav.V20190118
 
        private const string endpoint = "tav.tencentcloudapi.com";
        private const string version = "2019-01-18";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Tav.V20190118
         public TavClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>

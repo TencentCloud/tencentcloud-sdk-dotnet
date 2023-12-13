@@ -28,7 +28,6 @@ namespace TencentCloud.Cat.V20180409
 
        private const string endpoint = "cat.tencentcloudapi.com";
        private const string version = "2018-04-09";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Cat.V20180409
         public CatClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>

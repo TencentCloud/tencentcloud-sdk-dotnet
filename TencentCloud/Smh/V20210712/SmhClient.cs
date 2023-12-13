@@ -28,7 +28,6 @@ namespace TencentCloud.Smh.V20210712
 
        private const string endpoint = "smh.tencentcloudapi.com";
        private const string version = "2021-07-12";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Smh.V20210712
         public SmhClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>

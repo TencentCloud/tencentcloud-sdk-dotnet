@@ -28,7 +28,6 @@ namespace TencentCloud.Hai.V20230812
 
        private const string endpoint = "hai.tencentcloudapi.com";
        private const string version = "2023-08-12";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Hai.V20230812
         public HaiClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>
@@ -218,6 +217,48 @@ namespace TencentCloud.Hai.V20230812
         public RunInstancesResponse RunInstancesSync(RunInstancesRequest req)
         {
             return InternalRequestAsync<RunInstancesResponse>(req, "RunInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 (StartInstance) 用于主动启动实例。
+        /// </summary>
+        /// <param name="req"><see cref="StartInstanceRequest"/></param>
+        /// <returns><see cref="StartInstanceResponse"/></returns>
+        public Task<StartInstanceResponse> StartInstance(StartInstanceRequest req)
+        {
+            return InternalRequestAsync<StartInstanceResponse>(req, "StartInstance");
+        }
+
+        /// <summary>
+        /// 本接口 (StartInstance) 用于主动启动实例。
+        /// </summary>
+        /// <param name="req"><see cref="StartInstanceRequest"/></param>
+        /// <returns><see cref="StartInstanceResponse"/></returns>
+        public StartInstanceResponse StartInstanceSync(StartInstanceRequest req)
+        {
+            return InternalRequestAsync<StartInstanceResponse>(req, "StartInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 (StopInstance) 用于主动关闭实例。
+        /// </summary>
+        /// <param name="req"><see cref="StopInstanceRequest"/></param>
+        /// <returns><see cref="StopInstanceResponse"/></returns>
+        public Task<StopInstanceResponse> StopInstance(StopInstanceRequest req)
+        {
+            return InternalRequestAsync<StopInstanceResponse>(req, "StopInstance");
+        }
+
+        /// <summary>
+        /// 本接口 (StopInstance) 用于主动关闭实例。
+        /// </summary>
+        /// <param name="req"><see cref="StopInstanceRequest"/></param>
+        /// <returns><see cref="StopInstanceResponse"/></returns>
+        public StopInstanceResponse StopInstanceSync(StopInstanceRequest req)
+        {
+            return InternalRequestAsync<StopInstanceResponse>(req, "StopInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

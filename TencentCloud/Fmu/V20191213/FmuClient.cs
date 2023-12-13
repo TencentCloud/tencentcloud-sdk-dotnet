@@ -28,7 +28,6 @@ namespace TencentCloud.Fmu.V20191213
 
        private const string endpoint = "fmu.tencentcloudapi.com";
        private const string version = "2019-12-13";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Fmu.V20191213
         public FmuClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>

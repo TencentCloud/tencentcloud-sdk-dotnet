@@ -28,7 +28,6 @@ namespace TencentCloud.Pds.V20210701
 
        private const string endpoint = "pds.tencentcloudapi.com";
        private const string version = "2021-07-01";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Pds.V20210701
         public PdsClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>

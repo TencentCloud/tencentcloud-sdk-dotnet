@@ -28,7 +28,6 @@ namespace TencentCloud.Antiddos.V20200309
 
        private const string endpoint = "antiddos.tencentcloudapi.com";
        private const string version = "2020-03-09";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Antiddos.V20200309
         public AntiddosClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>
@@ -201,7 +200,7 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// 新建cc防护的地域封禁配置
+        /// 新建CC防护的地域封禁配置
         /// </summary>
         /// <param name="req"><see cref="CreateCcGeoIPBlockConfigRequest"/></param>
         /// <returns><see cref="CreateCcGeoIPBlockConfigResponse"/></returns>
@@ -211,7 +210,7 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// 新建cc防护的地域封禁配置
+        /// 新建CC防护的地域封禁配置
         /// </summary>
         /// <param name="req"><see cref="CreateCcGeoIPBlockConfigRequest"/></param>
         /// <returns><see cref="CreateCcGeoIPBlockConfigResponse"/></returns>
@@ -1209,6 +1208,27 @@ namespace TencentCloud.Antiddos.V20200309
         public DescribeDefaultAlarmThresholdResponse DescribeDefaultAlarmThresholdSync(DescribeDefaultAlarmThresholdRequest req)
         {
             return InternalRequestAsync<DescribeDefaultAlarmThresholdResponse>(req, "DescribeDefaultAlarmThreshold")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取IP封堵列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpBlockListRequest"/></param>
+        /// <returns><see cref="DescribeIpBlockListResponse"/></returns>
+        public Task<DescribeIpBlockListResponse> DescribeIpBlockList(DescribeIpBlockListRequest req)
+        {
+            return InternalRequestAsync<DescribeIpBlockListResponse>(req, "DescribeIpBlockList");
+        }
+
+        /// <summary>
+        /// 获取IP封堵列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpBlockListRequest"/></param>
+        /// <returns><see cref="DescribeIpBlockListResponse"/></returns>
+        public DescribeIpBlockListResponse DescribeIpBlockListSync(DescribeIpBlockListRequest req)
+        {
+            return InternalRequestAsync<DescribeIpBlockListResponse>(req, "DescribeIpBlockList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

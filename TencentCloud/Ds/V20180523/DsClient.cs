@@ -28,7 +28,6 @@ namespace TencentCloud.Ds.V20180523
 
        private const string endpoint = "ds.tencentcloudapi.com";
        private const string version = "2018-05-23";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Ds.V20180523
         public DsClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>

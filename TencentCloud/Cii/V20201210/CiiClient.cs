@@ -28,7 +28,6 @@ namespace TencentCloud.Cii.V20201210
 
        private const string endpoint = "cii.tencentcloudapi.com";
        private const string version = "2020-12-10";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Cii.V20201210
         public CiiClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E60BF861-5F39-3CA3-BBF9-F91D18A81B74}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.914</VersionPrefix>
+    <VersionPrefix>3.0.915</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -187,6 +187,8 @@
     <Compile Include="V20200309\Models\DescribeDDoSTrendResponse.cs" />
     <Compile Include="V20200309\Models\DescribeDefaultAlarmThresholdRequest.cs" />
     <Compile Include="V20200309\Models\DescribeDefaultAlarmThresholdResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeIpBlockListRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeIpBlockListResponse.cs" />
     <Compile Include="V20200309\Models\DescribeL7RulesBySSLCertIdRequest.cs" />
     <Compile Include="V20200309\Models\DescribeL7RulesBySSLCertIdResponse.cs" />
     <Compile Include="V20200309\Models\DescribeListBGPIPInstancesRequest.cs" />
@@ -244,6 +246,7 @@
     <Compile Include="V20200309\Models\IPLineInfo.cs" />
     <Compile Include="V20200309\Models\InsL7Rules.cs" />
     <Compile Include="V20200309\Models\InstanceRelation.cs" />
+    <Compile Include="V20200309\Models\IpBlockData.cs" />
     <Compile Include="V20200309\Models\IpSegment.cs" />
     <Compile Include="V20200309\Models\KeyValue.cs" />
     <Compile Include="V20200309\Models\L4RuleSource.cs" />

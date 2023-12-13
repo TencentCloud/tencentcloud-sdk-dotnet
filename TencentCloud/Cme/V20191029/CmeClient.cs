@@ -28,7 +28,6 @@ namespace TencentCloud.Cme.V20191029
 
        private const string endpoint = "cme.tencentcloudapi.com";
        private const string version = "2019-10-29";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Cme.V20191029
         public CmeClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>

@@ -28,7 +28,6 @@ namespace TencentCloud.Habo.V20181203
 
        private const string endpoint = "habo.tencentcloudapi.com";
        private const string version = "2018-12-03";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Habo.V20181203
         public HaboClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>

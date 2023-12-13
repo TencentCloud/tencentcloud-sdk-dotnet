@@ -28,7 +28,6 @@ namespace TencentCloud.Cim.V20190318
 
        private const string endpoint = "cim.tencentcloudapi.com";
        private const string version = "2019-03-18";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Cim.V20190318
         public CimClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>

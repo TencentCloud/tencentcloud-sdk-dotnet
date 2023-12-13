@@ -28,7 +28,6 @@ namespace TencentCloud.Nlp.V20190408
 
        private const string endpoint = "nlp.tencentcloudapi.com";
        private const string version = "2019-04-08";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Nlp.V20190408
         public NlpClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>

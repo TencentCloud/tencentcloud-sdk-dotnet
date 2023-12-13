@@ -28,7 +28,6 @@ namespace TencentCloud.Yunjing.V20180228
 
        private const string endpoint = "yunjing.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Yunjing.V20180228
         public YunjingClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>

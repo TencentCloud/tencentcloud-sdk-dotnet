@@ -28,7 +28,6 @@ namespace TencentCloud.Ump.V20200918
 
        private const string endpoint = "ump.tencentcloudapi.com";
        private const string version = "2020-09-18";
-       private const string sdkVersion = "3.0.914";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Ump.V20200918
         public UmpClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>
