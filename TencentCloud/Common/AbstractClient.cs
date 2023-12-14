@@ -98,23 +98,23 @@ namespace TencentCloud.Common
             if (ClientProfile.SIGN_SHA1.Equals(this.Profile.SignMethod)
                 || ClientProfile.SIGN_SHA256.Equals(this.Profile.SignMethod))
             {
-                response = await RequestV1(request, actionName);
+                response = await RequestV1(request, actionName).ConfigureAwait(false);
             }
             else
             {
-                response = await RequestV3(request, actionName);
+                response = await RequestV3(request, actionName).ConfigureAwait(false);
             }
 
             if (response.StatusCode != HttpStatusCode.OK)
             {
                 throw new TencentCloudSDKException(
-                    $"invalid http status: {response.StatusCode}, body: {await response.Content.ReadAsStringAsync()}");
+                    $"invalid http status: {response.StatusCode}, body: {await response.Content.ReadAsStringAsync().ConfigureAwait(false)}");
             }
 
             string strResp = null;
             try
             {
-                strResp = await response.Content.ReadAsStringAsync();
+                strResp = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
             }
             catch (Exception e)
             {
@@ -164,7 +164,7 @@ namespace TencentCloud.Common
             if (response.StatusCode != HttpStatusCode.OK)
             {
                 throw new TencentCloudSDKException(
-                    $"invalid http status: {response.StatusCode}, body: {await response.Content.ReadAsStringAsync()}");
+                    $"invalid http status: {response.StatusCode}, body: {await response.Content.ReadAsStringAsync().ConfigureAwait(false)}");
             }
 
             if (response.Content.Headers.TryGetValues("Content-Type", out var cts) &&
@@ -250,10 +250,10 @@ namespace TencentCloud.Common
             try
             {
                 if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_GET)
-                    return await conn.GetRequestAsync(this.Path, canonicalQueryString, headers);
+                    return await conn.GetRequestAsync(this.Path, canonicalQueryString, headers).ConfigureAwait(false);
 
                 if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_POST)
-                    return await conn.PostRequestAsync(this.Path, requestPayload, headers);
+                    return await conn.PostRequestAsync(this.Path, requestPayload, headers).ConfigureAwait(false);
             }
             catch (Exception e)
             {
@@ -430,10 +430,10 @@ namespace TencentCloud.Common
             try
             {
                 if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_GET)
-                    return await conn.GetRequestAsync(this.Path, param);
+                    return await conn.GetRequestAsync(this.Path, param).ConfigureAwait(false);
 
                 if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_POST)
-                    return await conn.PostRequestAsync(this.Path, param);
+                    return await conn.PostRequestAsync(this.Path, param).ConfigureAwait(false);
             }
             catch (Exception e)
             {

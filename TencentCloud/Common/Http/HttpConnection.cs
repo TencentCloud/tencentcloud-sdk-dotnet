@@ -117,7 +117,7 @@ namespace TencentCloud.Common.Http
             string fullurl = AppendQuery(urlBuilder, param);
             string payload = "";
             Dictionary<string, string> headers = new Dictionary<string, string>();
-            return await this.Send(HttpMethod.Get, fullurl, payload, headers);
+            return await this.Send(HttpMethod.Get, fullurl, payload, headers).ConfigureAwait(false);
         }
 
         public async Task<HttpResponseMessage> GetRequestAsync(string path, string queryString,
@@ -125,21 +125,21 @@ namespace TencentCloud.Common.Http
         {
             string fullurl = $"{this.baseUrl.TrimEnd('/')}{path}?{queryString}";
             string payload = "";
-            return await this.Send(HttpMethod.Get, fullurl, payload, headers);
+            return await this.Send(HttpMethod.Get, fullurl, payload, headers).ConfigureAwait(false);
         }
 
         public async Task<HttpResponseMessage> PostRequestAsync(string path, string payload,
             Dictionary<string, string> headers)
         {
             string fullurl = $"{baseUrl.TrimEnd('/')}{path}";
-            return await this.Send(HttpMethod.Post, fullurl, payload, headers);
+            return await this.Send(HttpMethod.Post, fullurl, payload, headers).ConfigureAwait(false);
         }
 
         public async Task<HttpResponseMessage> PostRequestAsync(string path, byte[] payload,
             Dictionary<string, string> headers)
         {
             string fullurl = $"{baseUrl.TrimEnd('/')}{path}";
-            return await this.Send(HttpMethod.Post, fullurl, payload, headers);
+            return await this.Send(HttpMethod.Post, fullurl, payload, headers).ConfigureAwait(false);
         }
 
         public async Task<HttpResponseMessage> PostRequestAsync(string url, Dictionary<string, string> param)
@@ -149,13 +149,13 @@ namespace TencentCloud.Common.Http
             string payload = AppendQuery(payloadBuilder, param);
             Dictionary<string, string> headers = new Dictionary<string, string>();
             headers["Content-Type"] = "application/x-www-form-urlencoded";
-            return await this.Send(HttpMethod.Post, fullurl, payload, headers);
+            return await this.Send(HttpMethod.Post, fullurl, payload, headers).ConfigureAwait(false);
         }
 
         private async Task<HttpResponseMessage> Send(HttpMethod method, string url, string payload,
             Dictionary<string, string> headers)
         {
-            return await Send(method, url, Encoding.UTF8.GetBytes(payload), headers);
+            return await Send(method, url, Encoding.UTF8.GetBytes(payload), headers).ConfigureAwait(false);
         }
 
         private async Task<HttpResponseMessage> Send(
@@ -189,7 +189,8 @@ namespace TencentCloud.Common.Http
                         }
                     }
 
-                    return await http.SendAsync(msg, HttpCompletionOption.ResponseHeadersRead, cts.Token);
+                    return await http.SendAsync(msg, HttpCompletionOption.ResponseHeadersRead, cts.Token)
+                        .ConfigureAwait(false);
                 }
             }
         }
