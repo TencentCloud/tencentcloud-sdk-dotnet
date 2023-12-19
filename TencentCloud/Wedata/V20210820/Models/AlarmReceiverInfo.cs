@@ -79,6 +79,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("WecomGroup")]
         public ulong? WecomGroup{ get; set; }
 
+        /// <summary>
+        /// 飞书群，0：未设置，1：成功，2：失败
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LarkGroup")]
+        public ulong? LarkGroup{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +101,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Wecom", this.Wecom);
             this.SetParamSimple(map, prefix + "Http", this.Http);
             this.SetParamSimple(map, prefix + "WecomGroup", this.WecomGroup);
+            this.SetParamSimple(map, prefix + "LarkGroup", this.LarkGroup);
         }
     }
 }

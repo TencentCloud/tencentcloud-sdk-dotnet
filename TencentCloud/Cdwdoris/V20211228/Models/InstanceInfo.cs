@@ -282,6 +282,13 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("Components")]
         public string Components{ get; set; }
 
+        /// <summary>
+        /// 判断审计日志表是否有catalog字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IfExistCatalog")]
+        public long? IfExistCatalog{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -324,6 +331,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "CanAttachCbs", this.CanAttachCbs);
             this.SetParamSimple(map, prefix + "BuildVersion", this.BuildVersion);
             this.SetParamSimple(map, prefix + "Components", this.Components);
+            this.SetParamSimple(map, prefix + "IfExistCatalog", this.IfExistCatalog);
         }
     }
 }

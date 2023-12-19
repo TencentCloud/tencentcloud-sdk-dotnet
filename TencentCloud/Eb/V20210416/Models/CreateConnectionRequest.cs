@@ -55,7 +55,7 @@ namespace TencentCloud.Eb.V20210416.Models
         public bool? Enable{ get; set; }
 
         /// <summary>
-        /// 类型
+        /// 连接器类型，目前支持以下类型:apigw/ckafka/dts/tdmq
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

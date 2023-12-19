@@ -255,6 +255,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// 请确保生成链接时候的身份信息和签署合同参与方的信息保持一致。
         /// 
         /// 注：
+        /// - 使用此接口生成链接，需要提前开通 `使用手机号验证签署方身份` 功能，在 `腾讯电子签网页端-企业设置-拓展服务` 中可以找到。
         /// - 参与人点击链接后需短信验证码才能查看合同内容。
         /// - 企业用户批量签署，需要传OrganizationName（参与方所在企业名称）参数生成签署链接，`请确保此企业已完成腾讯电子签企业认证`。若为子客企业，请确保员工已经加入企业。
         /// - 个人批量签署，签名区`仅支持手写签名`。
@@ -271,6 +272,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// 请确保生成链接时候的身份信息和签署合同参与方的信息保持一致。
         /// 
         /// 注：
+        /// - 使用此接口生成链接，需要提前开通 `使用手机号验证签署方身份` 功能，在 `腾讯电子签网页端-企业设置-拓展服务` 中可以找到。
         /// - 参与人点击链接后需短信验证码才能查看合同内容。
         /// - 企业用户批量签署，需要传OrganizationName（参与方所在企业名称）参数生成签署链接，`请确保此企业已完成腾讯电子签企业认证`。若为子客企业，请确保员工已经加入企业。
         /// - 个人批量签署，签名区`仅支持手写签名`。
@@ -1706,6 +1708,59 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 本接口（CreateBatchOrganizationRegistrationTasks）用于批量创建企业认证链接
+        /// 该接口为异步提交任务接口,需要跟查询企业批量认证链接(DescribeBatchOrganizationRegistrationUrls) 配合使用.
+        /// 
+        /// 批量创建链接有以下限制：
+        /// 1. 单次最多创建10个子客。
+        /// 2. 一天同一家企业最多创建8000个子客。
+        /// 3. 同一批创建的子客不能重复 其中包括 企业名称，企业统一信用代码，子客经办人openId。
+        /// 4. 跳转到小程序的实现，参考微信官方文档（分为全屏、半屏两种方式），如何配置也可以请参考: 跳转电子签小程序配置
+        /// 
+        /// 注： 1. 如果生成的链接是APP链接，跳转到小程序的实现，参考微信官方文档（分为<a href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html">全屏</a>、<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/openEmbeddedMiniProgram.html">半屏</a>两种方式），如何配置也可以请参考: <a href="https://qian.tencent.com/developers/company/openwxminiprogram">跳转电子签小程序配置</a>
+        /// 
+        /// **腾讯电子签小程序的AppID 和 原始Id如下:**
+        /// 
+        /// | 小程序 | AppID | 原始ID |
+        /// | ------------ | ------------ | ------------ |
+        /// | 腾讯电子签（正式版） | wxa023b292fd19d41d | gh_da88f6188665 |
+        /// | 腾讯电子签Demo | wx371151823f6f3edf | gh_39a5d3de69fa |
+        /// </summary>
+        /// <param name="req"><see cref="CreateBatchOrganizationRegistrationTasksRequest"/></param>
+        /// <returns><see cref="CreateBatchOrganizationRegistrationTasksResponse"/></returns>
+        public Task<CreateBatchOrganizationRegistrationTasksResponse> CreateBatchOrganizationRegistrationTasks(CreateBatchOrganizationRegistrationTasksRequest req)
+        {
+            return InternalRequestAsync<CreateBatchOrganizationRegistrationTasksResponse>(req, "CreateBatchOrganizationRegistrationTasks");
+        }
+
+        /// <summary>
+        /// 本接口（CreateBatchOrganizationRegistrationTasks）用于批量创建企业认证链接
+        /// 该接口为异步提交任务接口,需要跟查询企业批量认证链接(DescribeBatchOrganizationRegistrationUrls) 配合使用.
+        /// 
+        /// 批量创建链接有以下限制：
+        /// 1. 单次最多创建10个子客。
+        /// 2. 一天同一家企业最多创建8000个子客。
+        /// 3. 同一批创建的子客不能重复 其中包括 企业名称，企业统一信用代码，子客经办人openId。
+        /// 4. 跳转到小程序的实现，参考微信官方文档（分为全屏、半屏两种方式），如何配置也可以请参考: 跳转电子签小程序配置
+        /// 
+        /// 注： 1. 如果生成的链接是APP链接，跳转到小程序的实现，参考微信官方文档（分为<a href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html">全屏</a>、<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/openEmbeddedMiniProgram.html">半屏</a>两种方式），如何配置也可以请参考: <a href="https://qian.tencent.com/developers/company/openwxminiprogram">跳转电子签小程序配置</a>
+        /// 
+        /// **腾讯电子签小程序的AppID 和 原始Id如下:**
+        /// 
+        /// | 小程序 | AppID | 原始ID |
+        /// | ------------ | ------------ | ------------ |
+        /// | 腾讯电子签（正式版） | wxa023b292fd19d41d | gh_da88f6188665 |
+        /// | 腾讯电子签Demo | wx371151823f6f3edf | gh_39a5d3de69fa |
+        /// </summary>
+        /// <param name="req"><see cref="CreateBatchOrganizationRegistrationTasksRequest"/></param>
+        /// <returns><see cref="CreateBatchOrganizationRegistrationTasksResponse"/></returns>
+        public CreateBatchOrganizationRegistrationTasksResponse CreateBatchOrganizationRegistrationTasksSync(CreateBatchOrganizationRegistrationTasksRequest req)
+        {
+            return InternalRequestAsync<CreateBatchOrganizationRegistrationTasksResponse>(req, "CreateBatchOrganizationRegistrationTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 提交申请出证报告任务并返回报告ID。
         /// 
         /// 注意：
@@ -2060,6 +2115,41 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 创建他方自动签授权链接，通过该链接可进入小程序进行合作方企业的自动签授权，若当前企业未开通企业自动签，通过该链接会先引导开通本企业自动签。
+        /// 该接口效果同控制台： 企业设置-> 扩展服务 -> 企业自动签署 -> 合作企业方授权
+        /// 
+        /// 
+        /// 
+        /// 注: 
+        /// 1. <font color='red'>所在企业的超管、法人才有权限调用此接口</font>(Agent.ProxyOperator.OpenId 需要传递超管或者法人的OpenId)
+        /// 2. 已经在授权中或者授权成功的企业，无法重复授权
+        /// </summary>
+        /// <param name="req"><see cref="CreatePartnerAutoSignAuthUrlRequest"/></param>
+        /// <returns><see cref="CreatePartnerAutoSignAuthUrlResponse"/></returns>
+        public Task<CreatePartnerAutoSignAuthUrlResponse> CreatePartnerAutoSignAuthUrl(CreatePartnerAutoSignAuthUrlRequest req)
+        {
+            return InternalRequestAsync<CreatePartnerAutoSignAuthUrlResponse>(req, "CreatePartnerAutoSignAuthUrl");
+        }
+
+        /// <summary>
+        /// 创建他方自动签授权链接，通过该链接可进入小程序进行合作方企业的自动签授权，若当前企业未开通企业自动签，通过该链接会先引导开通本企业自动签。
+        /// 该接口效果同控制台： 企业设置-> 扩展服务 -> 企业自动签署 -> 合作企业方授权
+        /// 
+        /// 
+        /// 
+        /// 注: 
+        /// 1. <font color='red'>所在企业的超管、法人才有权限调用此接口</font>(Agent.ProxyOperator.OpenId 需要传递超管或者法人的OpenId)
+        /// 2. 已经在授权中或者授权成功的企业，无法重复授权
+        /// </summary>
+        /// <param name="req"><see cref="CreatePartnerAutoSignAuthUrlRequest"/></param>
+        /// <returns><see cref="CreatePartnerAutoSignAuthUrlResponse"/></returns>
+        public CreatePartnerAutoSignAuthUrlResponse CreatePartnerAutoSignAuthUrlSync(CreatePartnerAutoSignAuthUrlRequest req)
+        {
+            return InternalRequestAsync<CreatePartnerAutoSignAuthUrlResponse>(req, "CreatePartnerAutoSignAuthUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 1. 可以**通过图片**为子客企业代创建印章，图片最大5MB
         /// 
         /// 2. 可以**系统创建**子客企业代创建印章, 系统创建的印章样子下图(样式可以调整)
@@ -2140,6 +2230,35 @@ namespace TencentCloud.Essbasic.V20210526
         public CreateSignUrlsResponse CreateSignUrlsSync(CreateSignUrlsRequest req)
         {
             return InternalRequestAsync<CreateSignUrlsResponse>(req, "CreateSignUrls")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口用于获取企业批量认证异步任务的状态及结果。
+        /// 
+        /// 前提条件：已调用 CreateBatchOrganizationRegistrationTasks创建企业批量认证链接任务接口，并得到了任务Id。
+        /// 
+        /// 异步任务的处理完成时间视当前已提交的任务量、任务的复杂程度等因素决定，正常情况下 3~5 秒即可完成，但也可能需要更长的时间
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchOrganizationRegistrationUrlsRequest"/></param>
+        /// <returns><see cref="DescribeBatchOrganizationRegistrationUrlsResponse"/></returns>
+        public Task<DescribeBatchOrganizationRegistrationUrlsResponse> DescribeBatchOrganizationRegistrationUrls(DescribeBatchOrganizationRegistrationUrlsRequest req)
+        {
+            return InternalRequestAsync<DescribeBatchOrganizationRegistrationUrlsResponse>(req, "DescribeBatchOrganizationRegistrationUrls");
+        }
+
+        /// <summary>
+        /// 此接口用于获取企业批量认证异步任务的状态及结果。
+        /// 
+        /// 前提条件：已调用 CreateBatchOrganizationRegistrationTasks创建企业批量认证链接任务接口，并得到了任务Id。
+        /// 
+        /// 异步任务的处理完成时间视当前已提交的任务量、任务的复杂程度等因素决定，正常情况下 3~5 秒即可完成，但也可能需要更长的时间
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchOrganizationRegistrationUrlsRequest"/></param>
+        /// <returns><see cref="DescribeBatchOrganizationRegistrationUrlsResponse"/></returns>
+        public DescribeBatchOrganizationRegistrationUrlsResponse DescribeBatchOrganizationRegistrationUrlsSync(DescribeBatchOrganizationRegistrationUrlsRequest req)
+        {
+            return InternalRequestAsync<DescribeBatchOrganizationRegistrationUrlsResponse>(req, "DescribeBatchOrganizationRegistrationUrls")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2248,6 +2367,39 @@ namespace TencentCloud.Essbasic.V20210526
         public DescribeChannelSealPolicyWorkflowUrlResponse DescribeChannelSealPolicyWorkflowUrlSync(DescribeChannelSealPolicyWorkflowUrlRequest req)
         {
             return InternalRequestAsync<DescribeChannelSealPolicyWorkflowUrlResponse>(req, "DescribeChannelSealPolicyWorkflowUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询企业扩展服务的授权详情（列表），当前支持查询以下内容：
+        /// 
+        /// 1. **企业自动签**
+        /// 2. **批量签署**
+        /// 
+        /// 
+        /// 注: <font color='red'>所在企业的超管、法人才有权限调用此接口</font>(Agent.ProxyOperator.OpenId 需要传递超管或者法人的OpenId)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExtendedServiceAuthDetailRequest"/></param>
+        /// <returns><see cref="DescribeExtendedServiceAuthDetailResponse"/></returns>
+        public Task<DescribeExtendedServiceAuthDetailResponse> DescribeExtendedServiceAuthDetail(DescribeExtendedServiceAuthDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeExtendedServiceAuthDetailResponse>(req, "DescribeExtendedServiceAuthDetail");
+        }
+
+        /// <summary>
+        /// 查询企业扩展服务的授权详情（列表），当前支持查询以下内容：
+        /// 
+        /// 1. **企业自动签**
+        /// 2. **批量签署**
+        /// 
+        /// 
+        /// 注: <font color='red'>所在企业的超管、法人才有权限调用此接口</font>(Agent.ProxyOperator.OpenId 需要传递超管或者法人的OpenId)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExtendedServiceAuthDetailRequest"/></param>
+        /// <returns><see cref="DescribeExtendedServiceAuthDetailResponse"/></returns>
+        public DescribeExtendedServiceAuthDetailResponse DescribeExtendedServiceAuthDetailSync(DescribeExtendedServiceAuthDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeExtendedServiceAuthDetailResponse>(req, "DescribeExtendedServiceAuthDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

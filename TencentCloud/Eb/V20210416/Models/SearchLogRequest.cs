@@ -55,13 +55,13 @@ namespace TencentCloud.Eb.V20210416.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 筛选条件
+        /// 事件查询筛选条件；示例如下：[{"key":"host","operator":"eq","value":"106.53.106.243"},{"type":"AND","filters":[{"key":"region","operator":"like","value":"*guangzhou*"},{"key":"type","operator":"eq","value":"cvm:ErrorEvent:GuestReboot"}]},{"type":"OR","filters":[{"key":"field1","operator":"like","value":"*access*"},{"key":"field2","operator":"eq","value":"custorm"}]}]
         /// </summary>
         [JsonProperty("Filter")]
         public LogFilter[] Filter{ get; set; }
 
         /// <summary>
-        /// 排序数组
+        /// 事件查询结果排序，["timestamp","subject"]
         /// </summary>
         [JsonProperty("OrderFields")]
         public string[] OrderFields{ get; set; }

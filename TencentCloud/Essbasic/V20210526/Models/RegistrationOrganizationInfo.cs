@@ -1,0 +1,115 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Essbasic.V20210526.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class RegistrationOrganizationInfo : AbstractModel
+    {
+        
+        /// <summary>
+        /// 组织机构名称。
+        /// 请确认该名称与企业营业执照中注册的名称一致。
+        /// 如果名称中包含英文括号()，请使用中文括号（）代替。
+        /// </summary>
+        [JsonProperty("OrganizationName")]
+        public string OrganizationName{ get; set; }
+
+        /// <summary>
+        /// 机构在贵司业务系统中的唯一标识，用于与腾讯电子签企业账号进行映射，确保在同一应用内不会出现重复。
+        /// 该标识最大长度为64位字符串，仅支持包含26个英文字母和数字0-9的字符。
+        /// </summary>
+        [JsonProperty("OrganizationOpenId")]
+        public string OrganizationOpenId{ get; set; }
+
+        /// <summary>
+        /// 员工在贵司业务系统中的唯一身份标识，用于与腾讯电子签账号进行映射，确保在同一应用内不会出现重复。
+        /// 该标识最大长度为64位字符串，仅支持包含26个英文字母和数字0-9的字符。
+        /// </summary>
+        [JsonProperty("OpenId")]
+        public string OpenId{ get; set; }
+
+        /// <summary>
+        /// 组织机构企业统一社会信用代码。
+        /// 请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。
+        /// </summary>
+        [JsonProperty("UniformSocialCreditCode")]
+        public string UniformSocialCreditCode{ get; set; }
+
+        /// <summary>
+        /// 组织机构法人的姓名。
+        /// 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。
+        /// </summary>
+        [JsonProperty("LegalName")]
+        public string LegalName{ get; set; }
+
+        /// <summary>
+        /// 组织机构企业注册地址。
+        /// 请确认该企业注册地址与企业营业执照中注册的地址一致。
+        /// </summary>
+        [JsonProperty("Address")]
+        public string Address{ get; set; }
+
+        /// <summary>
+        /// 组织机构超管姓名。
+        /// 在注册流程中，必须是超管本人进行操作。
+        /// 如果法人作为超管管理组织机构,超管姓名就是法人姓名
+        /// </summary>
+        [JsonProperty("AdminName")]
+        public string AdminName{ get; set; }
+
+        /// <summary>
+        /// 组织机构超管姓名。
+        /// 在注册流程中，这个手机号必须跟操作人在电子签注册的个人手机号一致。
+        /// </summary>
+        [JsonProperty("AdminMobile")]
+        public string AdminMobile{ get; set; }
+
+        /// <summary>
+        /// 可选的此企业允许的授权方式, 可以设置的方式有:
+        /// 1：上传授权书+对公打款
+        /// 2：法人授权/认证  会根据当前操作人的身份判定,如果当前操作人是法人,则是法人认证, 如果当前操作人不是法人,则走法人授权
+        /// 
+        /// 注:
+        /// `1. 当前仅支持一种认证方式`
+        /// `2. 如果当前的企业类型是政府/事业单位, 则只支持上传授权书+对公打款`
+        /// </summary>
+        [JsonProperty("AuthorizationTypes")]
+        public ulong?[] AuthorizationTypes{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
+            this.SetParamSimple(map, prefix + "OrganizationOpenId", this.OrganizationOpenId);
+            this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
+            this.SetParamSimple(map, prefix + "UniformSocialCreditCode", this.UniformSocialCreditCode);
+            this.SetParamSimple(map, prefix + "LegalName", this.LegalName);
+            this.SetParamSimple(map, prefix + "Address", this.Address);
+            this.SetParamSimple(map, prefix + "AdminName", this.AdminName);
+            this.SetParamSimple(map, prefix + "AdminMobile", this.AdminMobile);
+            this.SetParamArraySimple(map, prefix + "AuthorizationTypes.", this.AuthorizationTypes);
+        }
+    }
+}
+

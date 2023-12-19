@@ -213,21 +213,21 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbMode{ get; set; }
 
         /// <summary>
-        /// 当DbMode为SEVERLESS时必填
+        /// 当DbMode为SERVERLESS时必填
         /// cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         /// </summary>
         [JsonProperty("MinCpu")]
         public float? MinCpu{ get; set; }
 
         /// <summary>
-        /// 当DbMode为SEVERLESS时必填：
+        /// 当DbMode为SERVERLESS时必填：
         /// cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         /// </summary>
         [JsonProperty("MaxCpu")]
         public float? MaxCpu{ get; set; }
 
         /// <summary>
-        /// 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
+        /// 当DbMode为SERVERLESS时，指定集群是否自动暂停，可选范围
         /// <li>yes</li>
         /// <li>no</li>
         /// 默认值:yes
@@ -236,7 +236,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string AutoPause{ get; set; }
 
         /// <summary>
-        /// 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
+        /// 当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
         /// 默认值:600
         /// </summary>
         [JsonProperty("AutoPauseDelay")]

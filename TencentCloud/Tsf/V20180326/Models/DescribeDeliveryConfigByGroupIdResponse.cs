@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 投递kafak配置项
+        /// 投递kafka配置项
         /// </summary>
         [JsonProperty("Result")]
         public SimpleKafkaDeliveryConfig Result{ get; set; }

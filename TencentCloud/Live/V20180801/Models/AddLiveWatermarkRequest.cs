@@ -34,7 +34,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 水印名称。
-        /// 最长16字节。
+        /// 最长30字节。
         /// </summary>
         [JsonProperty("WatermarkName")]
         public string WatermarkName{ get; set; }

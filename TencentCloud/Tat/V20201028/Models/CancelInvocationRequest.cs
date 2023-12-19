@@ -32,8 +32,8 @@ namespace TencentCloud.Tat.V20201028.Models
 
         /// <summary>
         /// 实例ID列表，上限100。支持实例类型：
-        /// <li> CVM
-        /// <li> LIGHTHOUSE
+        /// <li> CVM </li>
+        /// <li> LIGHTHOUSE </li>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

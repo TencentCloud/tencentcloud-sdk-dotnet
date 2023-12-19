@@ -25,21 +25,21 @@ namespace TencentCloud.Eb.V20210416.Models
     {
         
         /// <summary>
-        /// 描述如何提取数据
+        /// 描述如何提取数据，{"ExtractionInputPath":"$.data.payload","Format":"JSON"}
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Extraction")]
         public Extraction Extraction{ get; set; }
 
         /// <summary>
-        /// 描述如何过滤数据
+        /// 描述如何过滤数据;{"Filter":"{\"source\":\"ckafka.cloud.tencent\"}"}
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EtlFilter")]
         public EtlFilter EtlFilter{ get; set; }
 
         /// <summary>
-        /// 描述如何数据转换
+        /// 描述如何数据转换;"OutputStructs":[{"Key":"op","Value":"$.op","ValueType":"JSONPATH"}]
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Transform")]

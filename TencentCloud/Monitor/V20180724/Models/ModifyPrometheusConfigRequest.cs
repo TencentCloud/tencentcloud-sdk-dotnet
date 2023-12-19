@@ -60,6 +60,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("RawJobs")]
         public PrometheusConfigItem[] RawJobs{ get; set; }
 
+        /// <summary>
+        /// 0: 更新实例组件镜像版本；
+        /// 1: 不更新实例组件镜像版本
+        /// </summary>
+        [JsonProperty("UpdateImage")]
+        public long? UpdateImage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +79,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArrayObj(map, prefix + "ServiceMonitors.", this.ServiceMonitors);
             this.SetParamArrayObj(map, prefix + "PodMonitors.", this.PodMonitors);
             this.SetParamArrayObj(map, prefix + "RawJobs.", this.RawJobs);
+            this.SetParamSimple(map, prefix + "UpdateImage", this.UpdateImage);
         }
     }
 }

@@ -43,13 +43,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 查询指标维度
+        /// 查询指标维度, 不能为空。可选 NamespaceId, GroupId, InstanceId, OperationName, ServiceName, PeerServiceName, PeerOperationName
         /// </summary>
         [JsonProperty("MetricDimensions")]
         public MetricDimension[] MetricDimensions{ get; set; }
 
         /// <summary>
-        /// 查询指标名
+        /// 查询指标名， 不能为空。仅支持 range_count_duratioin 为 key 下的 sum 方法
         /// </summary>
         [JsonProperty("Metrics")]
         public Metric[] Metrics{ get; set; }

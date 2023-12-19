@@ -68,7 +68,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string LogType{ get; set; }
 
         /// <summary>
-        /// supported: "", "gzip", "lzop", "snappy”; 默认空
+        /// supported: "", "gzip", "lzop", "snappy"; 默认空
         /// </summary>
         [JsonProperty("Compress")]
         public string Compress{ get; set; }

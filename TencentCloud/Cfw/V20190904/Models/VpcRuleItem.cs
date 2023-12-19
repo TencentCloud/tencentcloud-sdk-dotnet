@@ -164,6 +164,20 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("BetaList")]
         public BetaInfoByACL[] BetaList{ get; set; }
 
+        /// <summary>
+        /// 端口协议组ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ParamTemplateId")]
+        public string ParamTemplateId{ get; set; }
+
+        /// <summary>
+        /// 端口协议组名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ParamTemplateName")]
+        public string ParamTemplateName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -189,6 +203,8 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "FwGroupId", this.FwGroupId);
             this.SetParamSimple(map, prefix + "FwGroupName", this.FwGroupName);
             this.SetParamArrayObj(map, prefix + "BetaList.", this.BetaList);
+            this.SetParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
+            this.SetParamSimple(map, prefix + "ParamTemplateName", this.ParamTemplateName);
         }
     }
 }

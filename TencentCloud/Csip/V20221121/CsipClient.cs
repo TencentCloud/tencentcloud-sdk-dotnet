@@ -347,6 +347,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询集团账号用户列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationUserInfoRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationUserInfoResponse"/></returns>
+        public Task<DescribeOrganizationUserInfoResponse> DescribeOrganizationUserInfo(DescribeOrganizationUserInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeOrganizationUserInfoResponse>(req, "DescribeOrganizationUserInfo");
+        }
+
+        /// <summary>
+        /// 查询集团账号用户列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationUserInfoRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationUserInfoResponse"/></returns>
+        public DescribeOrganizationUserInfoResponse DescribeOrganizationUserInfoSync(DescribeOrganizationUserInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeOrganizationUserInfoResponse>(req, "DescribeOrganizationUserInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// ip公网列表
         /// </summary>
         /// <param name="req"><see cref="DescribePublicIpAssetsRequest"/></param>

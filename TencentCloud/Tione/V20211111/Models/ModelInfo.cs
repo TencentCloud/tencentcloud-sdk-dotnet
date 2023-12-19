@@ -82,6 +82,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ModelFormat")]
         public string ModelFormat{ get; set; }
 
+        /// <summary>
+        /// 是否为私有化大模型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsPrivateModel")]
+        public bool? IsPrivateModel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -97,6 +104,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "AlgorithmFramework", this.AlgorithmFramework);
             this.SetParamSimple(map, prefix + "ModelType", this.ModelType);
             this.SetParamSimple(map, prefix + "ModelFormat", this.ModelFormat);
+            this.SetParamSimple(map, prefix + "IsPrivateModel", this.IsPrivateModel);
         }
     }
 }

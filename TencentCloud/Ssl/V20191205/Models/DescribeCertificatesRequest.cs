@@ -108,6 +108,18 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("Hostable")]
         public ulong? Hostable{ get; set; }
 
+        /// <summary>
+        /// 筛选指定标签的证书
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tags[] Tags{ get; set; }
+
+        /// <summary>
+        /// //是否筛选等待签发的证书，传1是筛选，0和null不筛选
+        /// </summary>
+        [JsonProperty("IsPendingIssue")]
+        public long? IsPendingIssue{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +140,8 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "IsSM", this.IsSM);
             this.SetParamSimple(map, prefix + "FilterExpiring", this.FilterExpiring);
             this.SetParamSimple(map, prefix + "Hostable", this.Hostable);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "IsPendingIssue", this.IsPendingIssue);
         }
     }
 }

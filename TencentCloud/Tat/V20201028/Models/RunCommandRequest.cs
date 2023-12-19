@@ -32,8 +32,8 @@ namespace TencentCloud.Tat.V20201028.Models
 
         /// <summary>
         /// 待执行命令的实例ID列表，上限200。支持实例类型：
-        /// <li> CVM
-        /// <li> LIGHTHOUSE
+        /// <li> CVM </li>
+        /// <li> LIGHTHOUSE </li>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
@@ -70,8 +70,8 @@ namespace TencentCloud.Tat.V20201028.Models
 
         /// <summary>
         /// 是否保存命令，取值范围：
-        /// <li> true：保存
-        /// <li> false：不保存
+        /// <li> true：保存</li>
+        /// <li> false：不保存</li>
         /// 默认为 false。
         /// </summary>
         [JsonProperty("SaveCommand")]
@@ -81,9 +81,9 @@ namespace TencentCloud.Tat.V20201028.Models
         /// 是否启用自定义参数功能。
         /// 一旦创建，此值不提供修改。
         /// 取值范围：
-        /// <li> true：启用
-        /// <li> false：不启用
-        /// 默认值：false。
+        /// <li> true：启用 </li>
+        /// <li> false：不启用 </li>
+        /// 默认值：false。 
         /// </summary>
         [JsonProperty("EnableParameter")]
         public bool? EnableParameter{ get; set; }

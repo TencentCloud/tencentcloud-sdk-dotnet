@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{1732CBF0-BE93-36A0-A593-39E6D6FF17BA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.916</VersionPrefix>
+    <VersionPrefix>3.0.918</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -211,6 +211,8 @@
     <Compile Include="V20200217\Models\DescribeRocketMQClustersResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQConsumeStatsRequest.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQConsumeStatsResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeRocketMQConsumerConnectionDetailRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeRocketMQConsumerConnectionDetailResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQConsumerConnectionsRequest.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQConsumerConnectionsResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQGroupsRequest.cs" />
@@ -339,6 +341,7 @@
     <Compile Include="V20200217\Models\RocketMQClusterInfo.cs" />
     <Compile Include="V20200217\Models\RocketMQClusterRecentStats.cs" />
     <Compile Include="V20200217\Models\RocketMQConsumerConnection.cs" />
+    <Compile Include="V20200217\Models\RocketMQConsumerTopic.cs" />
     <Compile Include="V20200217\Models\RocketMQGroup.cs" />
     <Compile Include="V20200217\Models\RocketMQGroupConfig.cs" />
     <Compile Include="V20200217\Models\RocketMQGroupConfigOutput.cs" />

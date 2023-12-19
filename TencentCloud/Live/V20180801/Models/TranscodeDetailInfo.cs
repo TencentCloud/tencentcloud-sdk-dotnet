@@ -52,6 +52,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 编码方式，带模块，
         /// 示例：
+        /// liveprocessor_ACC:  音频转码，
         /// liveprocessor_H264：直播转码-H264，
         /// liveprocessor_H265： 直播转码-H265，
         /// topspeed_H264：极速高清-H264，

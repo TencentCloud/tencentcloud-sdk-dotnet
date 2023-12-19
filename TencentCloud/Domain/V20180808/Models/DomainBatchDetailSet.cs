@@ -31,6 +31,12 @@ namespace TencentCloud.Domain.V20180808.Models
         public long? Id{ get; set; }
 
         /// <summary>
+        /// 类型  new: 注册域名 batch_transfer_prohibition_on:开启禁止转移  batch_transfer_prohibition_off:关闭禁止转移 batch_update_prohibition_on:开启禁止更新   batch_update_prohibition_off:关闭禁止更新
+        /// </summary>
+        [JsonProperty("Action")]
+        public string Action{ get; set; }
+
+        /// <summary>
         /// 域名
         /// </summary>
         [JsonProperty("Domain")]
@@ -64,6 +70,13 @@ namespace TencentCloud.Domain.V20180808.Models
         [JsonProperty("UpdatedOn")]
         public string UpdatedOn{ get; set; }
 
+        /// <summary>
+        /// 订单号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BigDealId")]
+        public string BigDealId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -71,11 +84,13 @@ namespace TencentCloud.Domain.V20180808.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Reason", this.Reason);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamSimple(map, prefix + "UpdatedOn", this.UpdatedOn);
+            this.SetParamSimple(map, prefix + "BigDealId", this.BigDealId);
         }
     }
 }

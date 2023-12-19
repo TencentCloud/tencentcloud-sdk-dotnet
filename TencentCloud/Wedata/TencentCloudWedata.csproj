@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.916</VersionPrefix>
+    <VersionPrefix>3.0.918</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -534,6 +534,8 @@
     <Compile Include="V20210820\Models\DescribeTableInfoListResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTableLineageRequest.cs" />
     <Compile Include="V20210820\Models\DescribeTableLineageResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeTableMetaRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeTableMetaResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTableMetasRequest.cs" />
     <Compile Include="V20210820\Models\DescribeTableMetasResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTableQualityDetailsRequest.cs" />

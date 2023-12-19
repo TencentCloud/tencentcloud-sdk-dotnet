@@ -60,6 +60,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("FilterName")]
         public string FilterName{ get; set; }
 
+        /// <summary>
+        /// 按订阅消费组名称过滤
+        /// </summary>
+        [JsonProperty("FilterGroup")]
+        public string FilterGroup{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
             this.SetParamArraySimple(map, prefix + "FilterType.", this.FilterType);
             this.SetParamSimple(map, prefix + "FilterName", this.FilterName);
+            this.SetParamSimple(map, prefix + "FilterGroup", this.FilterGroup);
         }
     }
 }

@@ -56,7 +56,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public BackupLimitVpcItem[] LimitVpc{ get; set; }
 
         /// <summary>
-        /// 自定义的可下载备份文件的 VPC ID。当参数**LimitType**为**Customize **时，显示该参数。
+        /// 自定义的可下载备份文件的 VPC IP 地址。当参数**LimitType**为**Customize **时，显示该参数。
         /// </summary>
         [JsonProperty("LimitIp")]
         public string[] LimitIp{ get; set; }

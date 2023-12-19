@@ -1590,6 +1590,27 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 获取在线消费端详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQConsumerConnectionDetailRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQConsumerConnectionDetailResponse"/></returns>
+        public Task<DescribeRocketMQConsumerConnectionDetailResponse> DescribeRocketMQConsumerConnectionDetail(DescribeRocketMQConsumerConnectionDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQConsumerConnectionDetailResponse>(req, "DescribeRocketMQConsumerConnectionDetail");
+        }
+
+        /// <summary>
+        /// 获取在线消费端详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQConsumerConnectionDetailRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQConsumerConnectionDetailResponse"/></returns>
+        public DescribeRocketMQConsumerConnectionDetailResponse DescribeRocketMQConsumerConnectionDetailSync(DescribeRocketMQConsumerConnectionDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQConsumerConnectionDetailResponse>(req, "DescribeRocketMQConsumerConnectionDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取指定消费组下当前客户端的连接情况
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQConsumerConnectionsRequest"/></param>

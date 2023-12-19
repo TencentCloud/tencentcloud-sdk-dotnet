@@ -25,77 +25,77 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 当前生效的全量导出线程数
+        /// 当前生效的全量导出线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentDumpThread")]
         public long? CurrentDumpThread{ get; set; }
 
         /// <summary>
-        /// 默认的全量导出线程数
+        /// 默认的全量导出线程数，该字段仅在出参有意义
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultDumpThread")]
         public long? DefaultDumpThread{ get; set; }
 
         /// <summary>
-        /// 当前生效的全量导出Rps	
+        /// 当前生效的全量导出Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentDumpRps")]
         public long? CurrentDumpRps{ get; set; }
 
         /// <summary>
-        /// 默认的全量导出Rps	
+        /// 默认的全量导出Rps，该字段仅在出参有意义
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultDumpRps")]
         public long? DefaultDumpRps{ get; set; }
 
         /// <summary>
-        /// 当前生效的全量导入线程数
+        /// 当前生效的全量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentLoadThread")]
         public long? CurrentLoadThread{ get; set; }
 
         /// <summary>
-        /// 默认的全量导入线程数
+        /// 默认的全量导入线程数，该字段仅在出参有意义
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultLoadThread")]
         public long? DefaultLoadThread{ get; set; }
 
         /// <summary>
-        /// 当前生效的全量导入Rps	
+        /// 当前生效的全量导入Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000	
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentLoadRps")]
         public long? CurrentLoadRps{ get; set; }
 
         /// <summary>
-        /// 默认的全量导入Rps	
+        /// 默认的全量导入Rps，该字段仅在出参有意义	
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultLoadRps")]
         public long? DefaultLoadRps{ get; set; }
 
         /// <summary>
-        /// 当前生效的增量导入线程数
+        /// 当前生效的增量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为128
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentSinkerThread")]
         public long? CurrentSinkerThread{ get; set; }
 
         /// <summary>
-        /// 默认的增量导入线程数
+        /// 默认的增量导入线程数，该字段仅在出参有意义
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultSinkerThread")]
         public long? DefaultSinkerThread{ get; set; }
 
         /// <summary>
-        /// enum:"no"/"yes"、no表示用户未设置过限速、yes表示设置过限速
+        /// enum:"no"/"yes"、no表示用户未设置过限速、yes表示设置过限速，该字段仅在出参有意义
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HasUserSetRateLimit")]

@@ -30,6 +30,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ScriptRequestInfo")]
         public ScriptRequestInfo ScriptRequestInfo{ get; set; }
 
+        /// <summary>
+        /// 请求来源，WEB 前端；CLIENT 客户端
+        /// </summary>
+        [JsonProperty("RequestFromSource")]
+        public string RequestFromSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "ScriptRequestInfo.", this.ScriptRequestInfo);
+            this.SetParamSimple(map, prefix + "RequestFromSource", this.RequestFromSource);
         }
     }
 }

@@ -60,7 +60,7 @@ namespace TencentCloud.Tat.V20201028.Models
         public string SystemName{ get; set; }
 
         /// <summary>
-        /// 主机IP。
+        /// 主机名。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostName")]

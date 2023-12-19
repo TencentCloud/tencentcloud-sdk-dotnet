@@ -24,12 +24,40 @@ namespace TencentCloud.Monitor.V20180724.Models
     public class PrometheusJobTargets : AbstractModel
     {
         
+        /// <summary>
+        /// 该Job的targets列表
+        /// </summary>
+        [JsonProperty("Targets")]
+        public PrometheusTarget[] Targets{ get; set; }
+
+        /// <summary>
+        /// job的名称
+        /// </summary>
+        [JsonProperty("JobName")]
+        public string JobName{ get; set; }
+
+        /// <summary>
+        /// targets总数
+        /// </summary>
+        [JsonProperty("Total")]
+        public ulong? Total{ get; set; }
+
+        /// <summary>
+        /// 健康的target总数
+        /// </summary>
+        [JsonProperty("Up")]
+        public ulong? Up{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Targets.", this.Targets);
+            this.SetParamSimple(map, prefix + "JobName", this.JobName);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamSimple(map, prefix + "Up", this.Up);
         }
     }
 }

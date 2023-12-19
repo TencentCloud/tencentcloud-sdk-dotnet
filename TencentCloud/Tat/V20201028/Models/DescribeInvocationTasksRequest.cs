@@ -31,7 +31,9 @@ namespace TencentCloud.Tat.V20201028.Models
         public string[] InvocationTaskIds{ get; set; }
 
         /// <summary>
-        /// 过滤条件。<br> <li> invocation-id - String - 是否必填：否 -（过滤条件）按照执行活动ID过滤。<br> <li> invocation-task-id - String - 是否必填：否 -（过滤条件）按照执行任务ID过滤。<br> <li> instance-id - String - 是否必填：否 -（过滤条件）按照实例ID过滤。 <br> <li> command-id - String - 是否必填：否 -（过滤条件）按照命令ID过滤。 <br>每次请求的 `Filters` 的上限为10， `Filter.Values` 的上限为5。参数不支持同时指定 `InvocationTaskIds` 和 `Filters` 。
+        /// 过滤条件。<br>
+        /// 
+        /// <li> invocation-id - String - 是否必填：否 -（过滤条件）按照执行活动ID过滤。</li> <li> invocation-task-id - String - 是否必填：否 -（过滤条件）按照执行任务ID过滤。</li> <li> instance-id - String - 是否必填：否 -（过滤条件）按照实例ID过滤。</li> <li> command-id - String - 是否必填：否 -（过滤条件）按照命令ID过滤。</li> <br>每次请求的 `Filters` 的上限为10， `Filter.Values` 的上限为5。参数不支持同时指定 `InvocationTaskIds` 和 `Filters` 。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -49,7 +51,9 @@ namespace TencentCloud.Tat.V20201028.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 是否隐藏输出，取值范围：<br><li>true：隐藏输出 <br><li>false：不隐藏 <br>默认为 true。
+        /// 是否隐藏输出，取值范围：
+        /// 
+        /// <ul> <li>true：隐藏输出</li> <li>false：不隐藏</li> </ul> 默认为 true。
         /// </summary>
         [JsonProperty("HideOutput")]
         public bool? HideOutput{ get; set; }

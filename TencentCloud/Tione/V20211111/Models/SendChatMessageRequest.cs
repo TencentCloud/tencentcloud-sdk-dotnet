@@ -38,17 +38,18 @@ namespace TencentCloud.Tione.V20211111.Models
 
         /// <summary>
         /// 会话模型版本。
-        /// 多行业客服大模型：填写demo_big_model_version_id。
-        /// 默认为demo_big_model_version_id，即多行业客服大模型。
+        /// 金融大模型：填写sn-finllm-13b-chat-v1。
+        /// 默认为sn-finllm-13b-chat-v1，即金融大模型。
         /// </summary>
         [JsonProperty("ModelVersion")]
         public string ModelVersion{ get; set; }
 
         /// <summary>
-        /// 使用模式(仅多场景客服大模型支持)。
+        /// 使用模式。
         /// 通用问答：填写General。
         /// 搜索增强问答：填写WithSearchPlugin。
         /// 默认为General，即通用问答。
+        /// 当前可体验模型仅支持General。
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }

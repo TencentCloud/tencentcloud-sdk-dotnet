@@ -53,7 +53,7 @@ namespace TencentCloud.Cdwdoris.V20211228
         }
 
         /// <summary>
-        /// 根据实例ID查询某个实例的具体信息
+        /// 根据集群ID查询某个集群的具体信息
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceRequest"/></param>
         /// <returns><see cref="DescribeInstanceResponse"/></returns>
@@ -63,7 +63,7 @@ namespace TencentCloud.Cdwdoris.V20211228
         }
 
         /// <summary>
-        /// 根据实例ID查询某个实例的具体信息
+        /// 根据集群ID查询某个集群的具体信息
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceRequest"/></param>
         /// <returns><see cref="DescribeInstanceResponse"/></returns>
@@ -74,7 +74,7 @@ namespace TencentCloud.Cdwdoris.V20211228
         }
 
         /// <summary>
-        /// 获取实例节点信息列表
+        /// 获取集群节点信息列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceNodesRequest"/></param>
         /// <returns><see cref="DescribeInstanceNodesResponse"/></returns>
@@ -84,7 +84,7 @@ namespace TencentCloud.Cdwdoris.V20211228
         }
 
         /// <summary>
-        /// 获取实例节点信息列表
+        /// 获取集群节点信息列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceNodesRequest"/></param>
         /// <returns><see cref="DescribeInstanceNodesResponse"/></returns>
@@ -95,7 +95,7 @@ namespace TencentCloud.Cdwdoris.V20211228
         }
 
         /// <summary>
-        /// 获取实例列表
+        /// 获取集群列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
         /// <returns><see cref="DescribeInstancesResponse"/></returns>
@@ -105,7 +105,7 @@ namespace TencentCloud.Cdwdoris.V20211228
         }
 
         /// <summary>
-        /// 获取实例列表
+        /// 获取集群列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
         /// <returns><see cref="DescribeInstancesResponse"/></returns>

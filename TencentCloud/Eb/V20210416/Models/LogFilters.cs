@@ -25,7 +25,7 @@ namespace TencentCloud.Eb.V20210416.Models
     {
         
         /// <summary>
-        /// 过滤字段名称
+        /// 过滤字段名称，取值范围如下:region(地域)，type(事件类型)，source(事件源)，status(事件状态)
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 实例id
+        /// 实例ID(可通过 DescribePrometheusInstances 接口获取)
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 告警策略id列表
+        /// 告警策略ID列表(可通过 DescribePrometheusAlertPolicy 接口获取)
         /// </summary>
         [JsonProperty("AlertIds")]
         public string[] AlertIds{ get; set; }
 
         /// <summary>
-        /// 告警策略名称
+        /// 告警策略名称(可通过 DescribePrometheusAlertPolicy 接口获取)，名称完全相同的告警策略才会删除
         /// </summary>
         [JsonProperty("Names")]
         public string[] Names{ get; set; }

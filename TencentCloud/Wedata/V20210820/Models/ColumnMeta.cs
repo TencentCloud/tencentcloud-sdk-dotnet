@@ -80,6 +80,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ColumnFamiliesFieldSet")]
         public Pair[] ColumnFamiliesFieldSet{ get; set; }
 
+        /// <summary>
+        /// 对应码表字典ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DictionaryId")]
+        public string DictionaryId{ get; set; }
+
+        /// <summary>
+        /// 对应码表字典名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DictionaryName")]
+        public string DictionaryName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +108,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "IsPartition", this.IsPartition);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamArrayObj(map, prefix + "ColumnFamiliesFieldSet.", this.ColumnFamiliesFieldSet);
+            this.SetParamSimple(map, prefix + "DictionaryId", this.DictionaryId);
+            this.SetParamSimple(map, prefix + "DictionaryName", this.DictionaryName);
         }
     }
 }

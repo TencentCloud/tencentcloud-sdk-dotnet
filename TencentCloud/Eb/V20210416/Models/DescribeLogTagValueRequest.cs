@@ -43,7 +43,7 @@ namespace TencentCloud.Eb.V20210416.Models
         public string EventBusId{ get; set; }
 
         /// <summary>
-        /// 聚合字段
+        /// 聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)
         /// </summary>
         [JsonProperty("GroupField")]
         public string GroupField{ get; set; }

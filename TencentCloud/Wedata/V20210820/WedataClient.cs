@@ -4486,6 +4486,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 查询表元数据详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTableMetaRequest"/></param>
+        /// <returns><see cref="DescribeTableMetaResponse"/></returns>
+        public Task<DescribeTableMetaResponse> DescribeTableMeta(DescribeTableMetaRequest req)
+        {
+            return InternalRequestAsync<DescribeTableMetaResponse>(req, "DescribeTableMeta");
+        }
+
+        /// <summary>
+        /// 查询表元数据详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTableMetaRequest"/></param>
+        /// <returns><see cref="DescribeTableMetaResponse"/></returns>
+        public DescribeTableMetaResponse DescribeTableMetaSync(DescribeTableMetaRequest req)
+        {
+            return InternalRequestAsync<DescribeTableMetaResponse>(req, "DescribeTableMeta")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取表元数据list
         /// </summary>
         /// <param name="req"><see cref="DescribeTableMetasRequest"/></param>

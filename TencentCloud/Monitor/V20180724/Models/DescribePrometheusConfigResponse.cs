@@ -55,6 +55,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         public PrometheusConfigItem[] Probes{ get; set; }
 
         /// <summary>
+        /// 实例组件是否需要升级
+        /// </summary>
+        [JsonProperty("ImageNeedUpdate")]
+        public bool? ImageNeedUpdate{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -71,6 +77,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArrayObj(map, prefix + "PodMonitors.", this.PodMonitors);
             this.SetParamArrayObj(map, prefix + "RawJobs.", this.RawJobs);
             this.SetParamArrayObj(map, prefix + "Probes.", this.Probes);
+            this.SetParamSimple(map, prefix + "ImageNeedUpdate", this.ImageNeedUpdate);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

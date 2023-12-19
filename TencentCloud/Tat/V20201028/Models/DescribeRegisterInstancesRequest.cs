@@ -50,6 +50,12 @@ namespace TencentCloud.Tat.V20201028.Models
         /// 按照【注册码ID】进行过滤。
         /// 类型：String
         /// 必选：否
+        /// 
+        /// - sys-name
+        /// 
+        /// 按照【操作系统类型】进行过滤，取值：Linux | Windows。
+        /// 类型：String
+        /// 必选：否
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

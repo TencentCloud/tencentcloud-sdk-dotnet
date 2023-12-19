@@ -31,7 +31,7 @@ namespace TencentCloud.Eb.V20210416.Models
         public string[] Values{ get; set; }
 
         /// <summary>
-        /// 过滤键的名称。
+        /// 过滤键的名称。EventBusName(事件集名称)/EventBusId(事件集Id)/Type(事件集类型:Cloud(云服务);Platform(平台型);Custom(自定义))/TagKey(标签键)
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

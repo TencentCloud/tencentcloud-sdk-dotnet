@@ -81,7 +81,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public KafkaOption KafkaOption{ get; set; }
 
         /// <summary>
-        /// 任务限速信息、该字段仅用作出参、入参该字段无效
+        /// 任务限速信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RateLimitOption")]

@@ -49,6 +49,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
+        /// 请求来源，WEB 前端；CLIENT 客户端
+        /// </summary>
+        [JsonProperty("RequestFromSource")]
+        public string RequestFromSource{ get; set; }
+
+        /// <summary>
         /// 告警方式:email-邮件;sms-短信;wecom-企业微信
         /// </summary>
         [JsonProperty("AlarmWays")]
@@ -70,6 +76,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "NeedCheckParentSubmitted", this.NeedCheckParentSubmitted);
             this.SetParamSimple(map, prefix + "AutoRun", this.AutoRun);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "RequestFromSource", this.RequestFromSource);
             this.SetParamSimple(map, prefix + "AlarmWays", this.AlarmWays);
             this.SetParamSimple(map, prefix + "AlarmRecipientTypes", this.AlarmRecipientTypes);
         }

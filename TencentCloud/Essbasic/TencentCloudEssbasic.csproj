@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B9887456-D090-35D3-9EFC-3D27B86D0C97}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.916</VersionPrefix>
+    <VersionPrefix>3.0.918</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -54,6 +54,7 @@
     <Compile Include="V20210526\Models\ApproverOption.cs" />
     <Compile Include="V20210526\Models\ApproverRestriction.cs" />
     <Compile Include="V20210526\Models\AuthFailMessage.cs" />
+    <Compile Include="V20210526\Models\AuthInfoDetail.cs" />
     <Compile Include="V20210526\Models\AuthorizedUser.cs" />
     <Compile Include="V20210526\Models\AutoSignConfig.cs" />
     <Compile Include="V20210526\Models\BaseFlowInfo.cs" />
@@ -152,6 +153,8 @@
     <Compile Include="V20210526\Models\CommonFlowApprover.cs" />
     <Compile Include="V20210526\Models\Component.cs" />
     <Compile Include="V20210526\Models\ComponentLimit.cs" />
+    <Compile Include="V20210526\Models\CreateBatchOrganizationRegistrationTasksRequest.cs" />
+    <Compile Include="V20210526\Models\CreateBatchOrganizationRegistrationTasksResponse.cs" />
     <Compile Include="V20210526\Models\CreateChannelFlowEvidenceReportRequest.cs" />
     <Compile Include="V20210526\Models\CreateChannelFlowEvidenceReportResponse.cs" />
     <Compile Include="V20210526\Models\CreateChannelOrganizationInfoChangeUrlRequest.cs" />
@@ -161,11 +164,15 @@
     <Compile Include="V20210526\Models\CreateFlowOption.cs" />
     <Compile Include="V20210526\Models\CreateFlowsByTemplatesRequest.cs" />
     <Compile Include="V20210526\Models\CreateFlowsByTemplatesResponse.cs" />
+    <Compile Include="V20210526\Models\CreatePartnerAutoSignAuthUrlRequest.cs" />
+    <Compile Include="V20210526\Models\CreatePartnerAutoSignAuthUrlResponse.cs" />
     <Compile Include="V20210526\Models\CreateSealByImageRequest.cs" />
     <Compile Include="V20210526\Models\CreateSealByImageResponse.cs" />
     <Compile Include="V20210526\Models\CreateSignUrlsRequest.cs" />
     <Compile Include="V20210526\Models\CreateSignUrlsResponse.cs" />
     <Compile Include="V20210526\Models\Department.cs" />
+    <Compile Include="V20210526\Models\DescribeBatchOrganizationRegistrationUrlsRequest.cs" />
+    <Compile Include="V20210526\Models\DescribeBatchOrganizationRegistrationUrlsResponse.cs" />
     <Compile Include="V20210526\Models\DescribeBillUsageDetailRequest.cs" />
     <Compile Include="V20210526\Models\DescribeBillUsageDetailResponse.cs" />
     <Compile Include="V20210526\Models\DescribeChannelFlowEvidenceReportRequest.cs" />
@@ -174,6 +181,8 @@
     <Compile Include="V20210526\Models\DescribeChannelOrganizationsResponse.cs" />
     <Compile Include="V20210526\Models\DescribeChannelSealPolicyWorkflowUrlRequest.cs" />
     <Compile Include="V20210526\Models\DescribeChannelSealPolicyWorkflowUrlResponse.cs" />
+    <Compile Include="V20210526\Models\DescribeExtendedServiceAuthDetailRequest.cs" />
+    <Compile Include="V20210526\Models\DescribeExtendedServiceAuthDetailResponse.cs" />
     <Compile Include="V20210526\Models\DescribeExtendedServiceAuthInfoRequest.cs" />
     <Compile Include="V20210526\Models\DescribeExtendedServiceAuthInfoResponse.cs" />
     <Compile Include="V20210526\Models\DescribeFlowDetailInfoRequest.cs" />
@@ -203,11 +212,14 @@
     <Compile Include="V20210526\Models\FormField.cs" />
     <Compile Include="V20210526\Models\GetDownloadFlowUrlRequest.cs" />
     <Compile Include="V20210526\Models\GetDownloadFlowUrlResponse.cs" />
+    <Compile Include="V20210526\Models\HasAuthOrganization.cs" />
+    <Compile Include="V20210526\Models\HasAuthUser.cs" />
     <Compile Include="V20210526\Models\ModifyExtendedServiceRequest.cs" />
     <Compile Include="V20210526\Models\ModifyExtendedServiceResponse.cs" />
     <Compile Include="V20210526\Models\OccupiedSeal.cs" />
     <Compile Include="V20210526\Models\OperateChannelTemplateRequest.cs" />
     <Compile Include="V20210526\Models\OperateChannelTemplateResponse.cs" />
+    <Compile Include="V20210526\Models\OrganizationAuthUrl.cs" />
     <Compile Include="V20210526\Models\OrganizationInfo.cs" />
     <Compile Include="V20210526\Models\PdfVerifyResult.cs" />
     <Compile Include="V20210526\Models\Permission.cs" />
@@ -217,6 +229,7 @@
     <Compile Include="V20210526\Models\ProxyOrganizationOperator.cs" />
     <Compile Include="V20210526\Models\Recipient.cs" />
     <Compile Include="V20210526\Models\RecipientComponentInfo.cs" />
+    <Compile Include="V20210526\Models\RegistrationOrganizationInfo.cs" />
     <Compile Include="V20210526\Models\ReleasedApprover.cs" />
     <Compile Include="V20210526\Models\RelieveInfo.cs" />
     <Compile Include="V20210526\Models\RemindFlowRecords.cs" />

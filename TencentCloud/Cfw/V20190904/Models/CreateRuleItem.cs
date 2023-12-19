@@ -114,6 +114,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("LogId")]
         public string LogId{ get; set; }
 
+        /// <summary>
+        /// 端都协议组ID
+        /// </summary>
+        [JsonProperty("ParamTemplateId")]
+        public string ParamTemplateId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "Scope", this.Scope);
             this.SetParamSimple(map, prefix + "RuleSource", this.RuleSource);
             this.SetParamSimple(map, prefix + "LogId", this.LogId);
+            this.SetParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
         }
     }
 }

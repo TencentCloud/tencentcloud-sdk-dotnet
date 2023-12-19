@@ -96,6 +96,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// 端口协议组ID
+        /// </summary>
+        [JsonProperty("ParamTemplateId")]
+        public string ParamTemplateId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
         }
     }
 }

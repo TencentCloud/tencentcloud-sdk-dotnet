@@ -37,10 +37,16 @@ namespace TencentCloud.Monitor.V20180724.Models
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// 是否为首次绑定，需要安装预聚合规则
+        /// 是否为首次绑定，如果是首次绑定则需要安装预聚合规则
         /// </summary>
         [JsonProperty("IsFirstBind")]
         public bool? IsFirstBind{ get; set; }
+
+        /// <summary>
+        /// 实例组件是否需要更新镜像版本
+        /// </summary>
+        [JsonProperty("ImageNeedUpdate")]
+        public bool? ImageNeedUpdate{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -57,6 +63,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArrayObj(map, prefix + "Agents.", this.Agents);
             this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamSimple(map, prefix + "IsFirstBind", this.IsFirstBind);
+            this.SetParamSimple(map, prefix + "ImageNeedUpdate", this.ImageNeedUpdate);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

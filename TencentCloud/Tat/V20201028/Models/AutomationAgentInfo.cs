@@ -44,16 +44,13 @@ namespace TencentCloud.Tat.V20201028.Models
 
         /// <summary>
         /// Agent状态，取值范围：
-        /// <li> Online：在线
-        /// <li> Offline：离线
+        /// Online：在线，Offline：离线
         /// </summary>
         [JsonProperty("AgentStatus")]
         public string AgentStatus{ get; set; }
 
         /// <summary>
-        /// Agent运行环境，取值范围：
-        /// <li> Linux：Linux实例
-        /// <li> Windows：Windows实例
+        /// Agent运行环境，取值范围：Linux：Linux实例Windows：Windows实例
         /// </summary>
         [JsonProperty("Environment")]
         public string Environment{ get; set; }

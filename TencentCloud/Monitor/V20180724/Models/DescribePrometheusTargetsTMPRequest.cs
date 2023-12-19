@@ -31,16 +31,17 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 集群类型
-        /// </summary>
-        [JsonProperty("ClusterType")]
-        public string ClusterType{ get; set; }
-
-        /// <summary>
-        /// 集群id
+        /// 集成容器服务填绑定的集群id；
+        /// 集成中心填 non-cluster
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// 集群类型(可不填)
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public string ClusterType{ get; set; }
 
         /// <summary>
         /// 过滤条件，当前支持
@@ -57,8 +58,8 @@ namespace TencentCloud.Monitor.V20180724.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }

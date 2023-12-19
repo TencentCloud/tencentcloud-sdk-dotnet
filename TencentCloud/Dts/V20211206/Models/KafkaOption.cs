@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 投递到kafka的数据类型，如Avro,Json
+        /// 投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json
         /// </summary>
         [JsonProperty("DataType")]
         public string DataType{ get; set; }

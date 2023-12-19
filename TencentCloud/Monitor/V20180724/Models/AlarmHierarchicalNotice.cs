@@ -38,6 +38,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("Classification")]
         public string[] Classification{ get; set; }
 
+        /// <summary>
+        /// 模板对应的策略id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PolicyId")]
+        public string PolicyId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         {
             this.SetParamSimple(map, prefix + "NoticeId", this.NoticeId);
             this.SetParamArraySimple(map, prefix + "Classification.", this.Classification);
+            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string DataEngineId{ get; set; }
 
         /// <summary>
-        /// 引擎配置项
+        /// 用户自定义引擎配置项集合。该参数需要传用户需要添加的全部配置项，例如，已有配置项k1:v1，添加k2:v2，需要传[k1:v1,k2:v2]。
         /// </summary>
         [JsonProperty("DataEngineConfigPairs")]
         public DataEngineConfigPair[] DataEngineConfigPairs{ get; set; }

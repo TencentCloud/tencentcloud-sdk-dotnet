@@ -199,6 +199,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? EnableAutoStart{ get; set; }
 
         /// <summary>
+        /// 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+        /// </summary>
+        [JsonProperty("RecordBackground")]
+        public string RecordBackground{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -236,6 +242,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "LiveType", this.LiveType);
             this.SetParamSimple(map, prefix + "RecordLiveUrl", this.RecordLiveUrl);
             this.SetParamSimple(map, prefix + "EnableAutoStart", this.EnableAutoStart);
+            this.SetParamSimple(map, prefix + "RecordBackground", this.RecordBackground);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

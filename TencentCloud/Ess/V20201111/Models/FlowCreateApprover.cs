@@ -261,6 +261,16 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ApproverSignTypes")]
         public ulong?[] ApproverSignTypes{ get; set; }
 
+        /// <summary>
+        /// 生成H5签署链接时，您可以指定签署方签署合同的认证校验方式的选择模式，可传递一下值：
+        /// <ul><li>**0**：签署方自行选择，签署方可以从预先指定的认证方式中自由选择；</li>
+        /// <li>**1**：自动按顺序首位推荐，签署方无需选择，系统会优先推荐使用第一种认证方式。</li></ul>
+        /// 注：
+        /// `不指定该值时，默认为签署方自行选择。`
+        /// </summary>
+        [JsonProperty("SignTypeSelector")]
+        public ulong? SignTypeSelector{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -292,6 +302,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamArraySimple(map, prefix + "ComponentLimitType.", this.ComponentLimitType);
             this.SetParamArraySimple(map, prefix + "ApproverVerifyTypes.", this.ApproverVerifyTypes);
             this.SetParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
+            this.SetParamSimple(map, prefix + "SignTypeSelector", this.SignTypeSelector);
         }
     }
 }

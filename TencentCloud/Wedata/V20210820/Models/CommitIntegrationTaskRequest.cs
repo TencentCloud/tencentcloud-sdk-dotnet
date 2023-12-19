@@ -66,6 +66,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("InstanceVersion")]
         public long? InstanceVersion{ get; set; }
 
+        /// <summary>
+        /// 前端操作类型描述
+        /// </summary>
+        [JsonProperty("EventDesc")]
+        public string EventDesc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArrayObj(map, prefix + "ExtConfig.", this.ExtConfig);
             this.SetParamSimple(map, prefix + "VersionDesc", this.VersionDesc);
             this.SetParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
+            this.SetParamSimple(map, prefix + "EventDesc", this.EventDesc);
         }
     }
 }

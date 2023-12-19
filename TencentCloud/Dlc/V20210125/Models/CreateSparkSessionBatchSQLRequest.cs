@@ -92,6 +92,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("IsInherit")]
         public long? IsInherit{ get; set; }
 
+        /// <summary>
+        /// 用户自定义主键，需唯一
+        /// </summary>
+        [JsonProperty("CustomKey")]
+        public string CustomKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +115,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "SessionName", this.SessionName);
             this.SetParamArrayObj(map, prefix + "Arguments.", this.Arguments);
             this.SetParamSimple(map, prefix + "IsInherit", this.IsInherit);
+            this.SetParamSimple(map, prefix + "CustomKey", this.CustomKey);
         }
     }
 }

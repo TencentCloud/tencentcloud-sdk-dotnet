@@ -50,6 +50,24 @@ namespace TencentCloud.Domain.V20180808.Models
         [JsonProperty("CreatedOn")]
         public string CreatedOn{ get; set; }
 
+        /// <summary>
+        /// 批量操作成功个数
+        /// </summary>
+        [JsonProperty("Success")]
+        public long? Success{ get; set; }
+
+        /// <summary>
+        /// 批量操作处理中个数
+        /// </summary>
+        [JsonProperty("Doing")]
+        public long? Doing{ get; set; }
+
+        /// <summary>
+        /// 批量操作失败个数
+        /// </summary>
+        [JsonProperty("Failed")]
+        public long? Failed{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +78,9 @@ namespace TencentCloud.Domain.V20180808.Models
             this.SetParamSimple(map, prefix + "Number", this.Number);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
+            this.SetParamSimple(map, prefix + "Success", this.Success);
+            this.SetParamSimple(map, prefix + "Doing", this.Doing);
+            this.SetParamSimple(map, prefix + "Failed", this.Failed);
         }
     }
 }

@@ -198,6 +198,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("EnableAutoStart")]
         public ulong? EnableAutoStart{ get; set; }
 
+        /// <summary>
+        /// 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+        /// </summary>
+        [JsonProperty("RecordBackground")]
+        public string RecordBackground{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -230,6 +236,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "LiveType", this.LiveType);
             this.SetParamSimple(map, prefix + "RecordLiveUrl", this.RecordLiveUrl);
             this.SetParamSimple(map, prefix + "EnableAutoStart", this.EnableAutoStart);
+            this.SetParamSimple(map, prefix + "RecordBackground", this.RecordBackground);
         }
     }
 }

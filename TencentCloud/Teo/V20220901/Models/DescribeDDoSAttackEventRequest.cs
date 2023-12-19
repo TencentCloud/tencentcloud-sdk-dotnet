@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 开始时间。
+        /// 开始时间，时间范围为 30 天。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间。
+        /// 结束时间，时间范围为 30 天。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public long?[] PolicyIds{ get; set; }
 
         /// <summary>
-        /// 站点集合，此参数必填，不填默认查询为空。
+        /// 站点集合，此参数必填。
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 是否展示详细信息。
+        /// 展示攻击详情的参数，若填false，默认只返回攻击次数，不返回攻击详情；若填true，返回攻击详情。
         /// </summary>
         [JsonProperty("ShowDetail")]
         public bool? ShowDetail{ get; set; }
