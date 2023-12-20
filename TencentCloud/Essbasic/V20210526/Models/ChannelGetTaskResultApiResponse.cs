@@ -55,7 +55,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string TaskMessage{ get; set; }
 
         /// <summary>
-        /// 资源Id，也是FileId，用于文件发起时使用
+        /// 资源Id（即FileId），用于[用PDF文件创建签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles)
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

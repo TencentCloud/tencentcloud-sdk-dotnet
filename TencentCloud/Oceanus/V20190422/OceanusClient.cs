@@ -431,6 +431,27 @@ namespace TencentCloud.Oceanus.V20190422
         }
 
         /// <summary>
+        /// 获取指定作业的事件，包括作业启动停止、运行失败、快照失败、作业异常等各种事件类型
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobEventsRequest"/></param>
+        /// <returns><see cref="DescribeJobEventsResponse"/></returns>
+        public Task<DescribeJobEventsResponse> DescribeJobEvents(DescribeJobEventsRequest req)
+        {
+            return InternalRequestAsync<DescribeJobEventsResponse>(req, "DescribeJobEvents");
+        }
+
+        /// <summary>
+        /// 获取指定作业的事件，包括作业启动停止、运行失败、快照失败、作业异常等各种事件类型
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobEventsRequest"/></param>
+        /// <returns><see cref="DescribeJobEventsResponse"/></returns>
+        public DescribeJobEventsResponse DescribeJobEventsSync(DescribeJobEventsRequest req)
+        {
+            return InternalRequestAsync<DescribeJobEventsResponse>(req, "DescribeJobEvents")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查找Savepoint列表
         /// </summary>
         /// <param name="req"><see cref="DescribeJobSavepointRequest"/></param>

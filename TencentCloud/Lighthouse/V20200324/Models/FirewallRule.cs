@@ -37,7 +37,10 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string Port{ get; set; }
 
         /// <summary>
-        /// 网段或 IP (互斥)。默认为 0.0.0.0/0，表示所有来源。
+        /// IPv4网段或 IPv4地址(互斥)。
+        /// 示例值：0.0.0.0/0。
+        /// 
+        /// 和Ipv6CidrBlock互斥，两者都不指定时，如果Protocol不是ICMPv6，则取默认值0.0.0.0/0。
         /// </summary>
         [JsonProperty("CidrBlock")]
         public string CidrBlock{ get; set; }

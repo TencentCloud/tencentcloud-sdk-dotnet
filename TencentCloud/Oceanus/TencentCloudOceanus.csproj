@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BD8B9947-C847-3AEB-AD67-726BC5EFD4EE}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.918</VersionPrefix>
+    <VersionPrefix>3.0.919</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -92,6 +92,8 @@
     <Compile Include="V20190422\Models\DescribeFolderResponse.cs" />
     <Compile Include="V20190422\Models\DescribeJobConfigsRequest.cs" />
     <Compile Include="V20190422\Models\DescribeJobConfigsResponse.cs" />
+    <Compile Include="V20190422\Models\DescribeJobEventsRequest.cs" />
+    <Compile Include="V20190422\Models\DescribeJobEventsResponse.cs" />
     <Compile Include="V20190422\Models\DescribeJobSavepointRequest.cs" />
     <Compile Include="V20190422\Models\DescribeJobSavepointResponse.cs" />
     <Compile Include="V20190422\Models\DescribeJobSubmissionLogRequest.cs" />
@@ -120,6 +122,7 @@
     <Compile Include="V20190422\Models\Filter.cs" />
     <Compile Include="V20190422\Models\GatewayRefItem.cs" />
     <Compile Include="V20190422\Models\JobConfig.cs" />
+    <Compile Include="V20190422\Models\JobEvent.cs" />
     <Compile Include="V20190422\Models\JobGraph.cs" />
     <Compile Include="V20190422\Models\JobGraphEdge.cs" />
     <Compile Include="V20190422\Models\JobGraphNode.cs" />

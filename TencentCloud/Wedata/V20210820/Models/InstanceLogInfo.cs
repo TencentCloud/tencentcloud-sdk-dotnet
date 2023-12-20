@@ -108,6 +108,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("InstanceStatus")]
         public string InstanceStatus{ get; set; }
 
+        /// <summary>
+        /// 实例代码文件，为空表示对应代码文件不存在，可能是因为执行机未升级/对应类型任务无代码。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CodeFileName")]
+        public string CodeFileName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +133,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskName", this.TaskName);
             this.SetParamSimple(map, prefix + "CostTime", this.CostTime);
             this.SetParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
+            this.SetParamSimple(map, prefix + "CodeFileName", this.CodeFileName);
         }
     }
 }

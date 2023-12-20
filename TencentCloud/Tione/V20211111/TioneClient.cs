@@ -872,6 +872,27 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
+        /// 模型加速之后的模型版本列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelAccelerateVersionsRequest"/></param>
+        /// <returns><see cref="DescribeModelAccelerateVersionsResponse"/></returns>
+        public Task<DescribeModelAccelerateVersionsResponse> DescribeModelAccelerateVersions(DescribeModelAccelerateVersionsRequest req)
+        {
+            return InternalRequestAsync<DescribeModelAccelerateVersionsResponse>(req, "DescribeModelAccelerateVersions");
+        }
+
+        /// <summary>
+        /// 模型加速之后的模型版本列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelAccelerateVersionsRequest"/></param>
+        /// <returns><see cref="DescribeModelAccelerateVersionsResponse"/></returns>
+        public DescribeModelAccelerateVersionsResponse DescribeModelAccelerateVersionsSync(DescribeModelAccelerateVersionsRequest req)
+        {
+            return InternalRequestAsync<DescribeModelAccelerateVersionsResponse>(req, "DescribeModelAccelerateVersions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询单个服务
         /// </summary>
         /// <param name="req"><see cref="DescribeModelServiceRequest"/></param>

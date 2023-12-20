@@ -43,13 +43,15 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 存储桶
+        /// 存储桶。
+        /// 存储桶命名规范：https://cloud.tencent.com/document/product/436/13312
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// 存储桶所在地域
+        /// 存储桶所在地域。
+        /// 地域和访问域名：https://cloud.tencent.com/document/product/436/6224
         /// </summary>
         [JsonProperty("BucketRegion")]
         public string BucketRegion{ get; set; }

@@ -146,6 +146,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public string UserData{ get; set; }
 
         /// <summary>
+        /// 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+        /// </summary>
+        [JsonProperty("CcInfos")]
+        public CcInfo CcInfos{ get; set; }
+
+        /// <summary>
         /// 合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
         /// 注: `该参数必须是一个待发起审核的合同id，并且还未审核通过`
         /// </summary>
@@ -186,6 +192,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
             this.SetParamSimple(map, prefix + "NeedCreateReview", this.NeedCreateReview);
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
+            this.SetParamObj(map, prefix + "CcInfos.", this.CcInfos);
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamArrayObj(map, prefix + "InitiatorComponents.", this.InitiatorComponents);

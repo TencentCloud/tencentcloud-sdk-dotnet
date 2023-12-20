@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.918</VersionPrefix>
+    <VersionPrefix>3.0.919</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -217,6 +217,8 @@
     <Compile Include="V20211111\Models\DescribeModelAccelerateTaskResponse.cs" />
     <Compile Include="V20211111\Models\DescribeModelAccelerateTasksRequest.cs" />
     <Compile Include="V20211111\Models\DescribeModelAccelerateTasksResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeModelAccelerateVersionsRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeModelAccelerateVersionsResponse.cs" />
     <Compile Include="V20211111\Models\DescribeModelServiceCallInfoRequest.cs" />
     <Compile Include="V20211111\Models\DescribeModelServiceCallInfoResponse.cs" />
     <Compile Include="V20211111\Models\DescribeModelServiceGroupRequest.cs" />
@@ -283,8 +285,10 @@
     <Compile Include="V20211111\Models\MetricData.cs" />
     <Compile Include="V20211111\Models\ModelAccEngineVersion.cs" />
     <Compile Include="V20211111\Models\ModelAccelerateTask.cs" />
+    <Compile Include="V20211111\Models\ModelAccelerateVersion.cs" />
     <Compile Include="V20211111\Models\ModelInfo.cs" />
     <Compile Include="V20211111\Models\ModelInputInfo.cs" />
+    <Compile Include="V20211111\Models\ModelSource.cs" />
     <Compile Include="V20211111\Models\ModifyModelServicePartialConfigRequest.cs" />
     <Compile Include="V20211111\Models\ModifyModelServicePartialConfigResponse.cs" />
     <Compile Include="V20211111\Models\ModifyModelServiceRequest.cs" />

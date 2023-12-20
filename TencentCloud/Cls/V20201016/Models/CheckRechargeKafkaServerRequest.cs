@@ -31,13 +31,15 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? KafkaType{ get; set; }
 
         /// <summary>
-        /// 腾讯云CKafka实例ID，KafkaType为0时必填
+        /// 腾讯云CKafka实例ID。
+        /// KafkaType为0时，KafkaInstance必填
         /// </summary>
         [JsonProperty("KafkaInstance")]
         public string KafkaInstance{ get; set; }
 
         /// <summary>
-        /// 服务地址
+        /// 服务地址。
+        /// KafkaType为1时，ServerAddr必填
         /// </summary>
         [JsonProperty("ServerAddr")]
         public string ServerAddr{ get; set; }
@@ -49,7 +51,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? IsEncryptionAddr{ get; set; }
 
         /// <summary>
-        /// 加密访问协议，IsEncryptionAddr参数为true时必填
+        /// 加密访问协议。IsEncryptionAddr参数为true时必填
         /// </summary>
         [JsonProperty("Protocol")]
         public KafkaProtocolInfo Protocol{ get; set; }

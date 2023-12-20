@@ -43,21 +43,26 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? Analysis{ get; set; }
 
         /// <summary>
-        /// 如果Analysis为True，则返回分析结果的列名，否则为空
+        /// 分析结果的列名，如果Query语句有SQL查询，则返回查询字段的列名；
+        /// 否则为空。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ColNames")]
         public string[] ColNames{ get; set; }
 
         /// <summary>
-        /// 执行详情查询结果；当Analysis为True时，可能返回为null
+        /// 执行详情查询结果。
+        /// 
+        /// 当Query字段无SQL语句时，返回查询结果。
+        /// 当Query字段有SQL语句时，可能返回null。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Results")]
         public LogInfo[] Results{ get; set; }
 
         /// <summary>
-        /// 执行详情统计分析结果；当Analysis为False时，可能返回为null
+        /// 执行详情统计分析结果。当Query字段有SQL语句时，返回sql统计结果，否则可能返回null。
+        /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AnalysisResults")]

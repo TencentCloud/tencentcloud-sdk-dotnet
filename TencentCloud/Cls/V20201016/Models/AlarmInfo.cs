@@ -43,7 +43,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public MonitorTime MonitorTime{ get; set; }
 
         /// <summary>
-        /// 触发条件。
+        /// 单触发条件。与MultiConditions参数互斥。
         /// </summary>
         [JsonProperty("Condition")]
         public string Condition{ get; set; }
@@ -140,8 +140,8 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? AlarmLevel{ get; set; }
 
         /// <summary>
-        /// 多触发条件。
-        /// 
+        /// 多触发条件。与
+        /// Condition互斥。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MultiConditions")]

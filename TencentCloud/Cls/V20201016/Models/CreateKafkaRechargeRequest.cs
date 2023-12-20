@@ -73,7 +73,8 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? IsEncryptionAddr{ get; set; }
 
         /// <summary>
-        /// 加密访问协议，IsEncryptionAddr参数为true时必填
+        /// 加密访问协议。
+        /// KafkaType为1并且IsEncryptionAddr为true时Protocol必填
         /// </summary>
         [JsonProperty("Protocol")]
         public KafkaProtocolInfo Protocol{ get; set; }
@@ -85,7 +86,8 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ConsumerGroupName{ get; set; }
 
         /// <summary>
-        /// 日志导入规则
+        /// 日志导入规则。
+        /// 必填字段。
         /// </summary>
         [JsonProperty("LogRechargeRule")]
         public LogRechargeRuleInfo LogRechargeRule{ get; set; }

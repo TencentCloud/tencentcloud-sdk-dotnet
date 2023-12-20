@@ -37,26 +37,26 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 任务名称
+        /// 任务名称。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 任务id
+        /// 任务id。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// <li>srcTopicName按照【源日志主题名称】进行过滤，模糊匹配，类型：String必选：否</li>
-        /// <li>dstTopicName按照【目标日志主题名称】进行过滤，模糊匹配，类型：String必选：否</li>
-        /// <li>srcTopicId按照【源日志主题ID】进行过滤。类型：String必选：否</li>
-        /// <li>dstTopicId按照【目标日志主题ID】进行过滤。类型：String必选：否</li>
-        /// <li>bizType按照【主题类型】进行过滤,0日志主题1指标主题,。类型：String必选：否</li>
-        /// <li>status按照【任务状态】进行过滤。类型：String必选：否</li>
-        /// <li>taskName按照【任务名称】进行过滤，模糊匹配，。类型：String必选：否</li>
-        /// <li>taskId按照【任务ID】进行过滤，模糊匹配，。类型：String必选：否</li>
+        /// <li>srcTopicName按照【源日志主题名称】进行过滤，模糊匹配。类型：String。必选：否</li>
+        /// <li>dstTopicName按照【目标日志主题名称】进行过滤，模糊匹配。类型：String。必选：否</li>
+        /// <li>srcTopicId按照【源日志主题ID】进行过滤。类型：String。必选：否</li>
+        /// <li>dstTopicId按照【目标日志主题ID】进行过滤。类型：String。必选：否</li>
+        /// <li>bizType按照【主题类型】进行过滤,0日志主题 1指标主题。类型：String。必选：否</li>
+        /// <li>status按照【任务状态】进行过滤，1:运行 2:停止。类型：String。必选：否</li>
+        /// <li>taskName按照【任务名称】进行过滤，模糊匹配。类型：String。必选：否</li>
+        /// <li>taskId按照【任务ID】进行过滤，模糊匹配。类型：String。必选：否</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

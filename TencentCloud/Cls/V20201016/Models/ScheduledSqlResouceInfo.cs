@@ -43,7 +43,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? BizType{ get; set; }
 
         /// <summary>
-        /// 指标名称
+        /// 指标名称。当BizType为1时，MetricName需要填写
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }

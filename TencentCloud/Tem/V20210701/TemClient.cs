@@ -137,7 +137,7 @@ namespace TencentCloud.Tem.V20210701
         }
 
         /// <summary>
-        /// 生成Cos临时秘钥
+        /// 生成Cos临时密钥
         /// </summary>
         /// <param name="req"><see cref="CreateCosTokenRequest"/></param>
         /// <returns><see cref="CreateCosTokenResponse"/></returns>
@@ -147,7 +147,7 @@ namespace TencentCloud.Tem.V20210701
         }
 
         /// <summary>
-        /// 生成Cos临时秘钥
+        /// 生成Cos临时密钥
         /// </summary>
         /// <param name="req"><see cref="CreateCosTokenRequest"/></param>
         /// <returns><see cref="CreateCosTokenResponse"/></returns>
