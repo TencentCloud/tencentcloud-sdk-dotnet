@@ -42,6 +42,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         public AttackRiskDetail[] AttackRiskDetailList{ get; set; }
 
         /// <summary>
+        /// 额外信息
+        /// </summary>
+        [JsonProperty("ExtraInfo")]
+        public ExtraInfo ExtraInfo{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -55,6 +61,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         {
             this.SetParamSimple(map, prefix + "AttackRiskLevel", this.AttackRiskLevel);
             this.SetParamArrayObj(map, prefix + "AttackRiskDetailList.", this.AttackRiskDetailList);
+            this.SetParamObj(map, prefix + "ExtraInfo.", this.ExtraInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

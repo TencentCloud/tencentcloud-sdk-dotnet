@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 数据库名称。
+        /// 数据库名称，长度不超过64。
         /// </summary>
         [JsonProperty("DBName")]
         public string DBName{ get; set; }

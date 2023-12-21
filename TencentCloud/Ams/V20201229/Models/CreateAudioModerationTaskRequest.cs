@@ -54,6 +54,12 @@ namespace TencentCloud.Ams.V20201229.Models
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }
 
+        /// <summary>
+        /// 该字段表示待检测对象对应的用户相关信息，若填入则可甄别相应违规风险用户
+        /// </summary>
+        [JsonProperty("User")]
+        public User User{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Ams.V20201229.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Seed", this.Seed);
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+            this.SetParamObj(map, prefix + "User.", this.User);
         }
     }
 }

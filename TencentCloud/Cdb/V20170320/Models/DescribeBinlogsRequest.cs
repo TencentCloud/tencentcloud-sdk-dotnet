@@ -54,6 +54,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("MaxStartTime")]
         public string MaxStartTime{ get; set; }
 
+        /// <summary>
+        /// 返回binlog列表是否包含MinStartTime起始节点，默认为否
+        /// </summary>
+        [JsonProperty("ContainsMinStartTime")]
+        public bool? ContainsMinStartTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "MinStartTime", this.MinStartTime);
             this.SetParamSimple(map, prefix + "MaxStartTime", this.MaxStartTime);
+            this.SetParamSimple(map, prefix + "ContainsMinStartTime", this.ContainsMinStartTime);
         }
     }
 }

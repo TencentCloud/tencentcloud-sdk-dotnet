@@ -687,6 +687,27 @@ namespace TencentCloud.Trp.V20210515
         }
 
         /// <summary>
+        /// 查询安心计划二维码扫码记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlanQRCodeScanRecordsRequest"/></param>
+        /// <returns><see cref="DescribePlanQRCodeScanRecordsResponse"/></returns>
+        public Task<DescribePlanQRCodeScanRecordsResponse> DescribePlanQRCodeScanRecords(DescribePlanQRCodeScanRecordsRequest req)
+        {
+            return InternalRequestAsync<DescribePlanQRCodeScanRecordsResponse>(req, "DescribePlanQRCodeScanRecords");
+        }
+
+        /// <summary>
+        /// 查询安心计划二维码扫码记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlanQRCodeScanRecordsRequest"/></param>
+        /// <returns><see cref="DescribePlanQRCodeScanRecordsResponse"/></returns>
+        public DescribePlanQRCodeScanRecordsResponse DescribePlanQRCodeScanRecordsSync(DescribePlanQRCodeScanRecordsRequest req)
+        {
+            return InternalRequestAsync<DescribePlanQRCodeScanRecordsResponse>(req, "DescribePlanQRCodeScanRecords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询安心计划二维码列表
         /// </summary>
         /// <param name="req"><see cref="DescribePlanQRCodesRequest"/></param>

@@ -227,6 +227,12 @@ namespace TencentCloud.Dnspod.V20210323.Models
         [JsonProperty("SearchEnginePush")]
         public string SearchEnginePush{ get; set; }
 
+        /// <summary>
+        /// 是否开启辅助 DNS
+        /// </summary>
+        [JsonProperty("SlaveDNS")]
+        public string SlaveDNS{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -265,6 +271,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamSimple(map, prefix + "IsSubDomain", this.IsSubDomain);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
             this.SetParamSimple(map, prefix + "SearchEnginePush", this.SearchEnginePush);
+            this.SetParamSimple(map, prefix + "SlaveDNS", this.SlaveDNS);
         }
     }
 }

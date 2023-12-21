@@ -1818,6 +1818,8 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// 本接口（DeleteAddressTemplate）用于删除IP地址模板。
+        /// >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+        /// >
         /// </summary>
         /// <param name="req"><see cref="DeleteAddressTemplateRequest"/></param>
         /// <returns><see cref="DeleteAddressTemplateResponse"/></returns>
@@ -1828,6 +1830,8 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// 本接口（DeleteAddressTemplate）用于删除IP地址模板。
+        /// >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+        /// >
         /// </summary>
         /// <param name="req"><see cref="DeleteAddressTemplateRequest"/></param>
         /// <returns><see cref="DeleteAddressTemplateResponse"/></returns>
@@ -1839,6 +1843,8 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// 本接口（DeleteAddressTemplateGroup）用于删除IP地址模板集合。
+        /// >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+        /// >
         /// </summary>
         /// <param name="req"><see cref="DeleteAddressTemplateGroupRequest"/></param>
         /// <returns><see cref="DeleteAddressTemplateGroupResponse"/></returns>
@@ -1849,6 +1855,8 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// 本接口（DeleteAddressTemplateGroup）用于删除IP地址模板集合。
+        /// >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+        /// >
         /// </summary>
         /// <param name="req"><see cref="DeleteAddressTemplateGroupRequest"/></param>
         /// <returns><see cref="DeleteAddressTemplateGroupResponse"/></returns>
@@ -2383,6 +2391,8 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// 本接口（DeleteServiceTemplate）用于删除协议端口模板。
+        /// >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+        /// >
         /// </summary>
         /// <param name="req"><see cref="DeleteServiceTemplateRequest"/></param>
         /// <returns><see cref="DeleteServiceTemplateResponse"/></returns>
@@ -2393,6 +2403,8 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// 本接口（DeleteServiceTemplate）用于删除协议端口模板。
+        /// >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+        /// >
         /// </summary>
         /// <param name="req"><see cref="DeleteServiceTemplateRequest"/></param>
         /// <returns><see cref="DeleteServiceTemplateResponse"/></returns>
@@ -2404,6 +2416,8 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// 本接口（DeleteServiceTemplateGroup）用于删除协议端口模板集合。
+        /// >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+        /// >
         /// </summary>
         /// <param name="req"><see cref="DeleteServiceTemplateGroupRequest"/></param>
         /// <returns><see cref="DeleteServiceTemplateGroupResponse"/></returns>
@@ -2414,6 +2428,8 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// 本接口（DeleteServiceTemplateGroup）用于删除协议端口模板集合。
+        /// >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+        /// >
         /// </summary>
         /// <param name="req"><see cref="DeleteServiceTemplateGroupRequest"/></param>
         /// <returns><see cref="DeleteServiceTemplateGroupResponse"/></returns>
@@ -5473,6 +5489,8 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// 本接口（ModifyAddressTemplateAttribute）用于修改IP地址模板。
+        /// >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+        /// >
         /// </summary>
         /// <param name="req"><see cref="ModifyAddressTemplateAttributeRequest"/></param>
         /// <returns><see cref="ModifyAddressTemplateAttributeResponse"/></returns>
@@ -5483,6 +5501,8 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// 本接口（ModifyAddressTemplateAttribute）用于修改IP地址模板。
+        /// >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+        /// >
         /// </summary>
         /// <param name="req"><see cref="ModifyAddressTemplateAttributeRequest"/></param>
         /// <returns><see cref="ModifyAddressTemplateAttributeResponse"/></returns>
@@ -5494,6 +5514,8 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// 本接口（ModifyAddressTemplateGroupAttribute）用于修改IP地址模板集合。
+        /// >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+        /// >
         /// </summary>
         /// <param name="req"><see cref="ModifyAddressTemplateGroupAttributeRequest"/></param>
         /// <returns><see cref="ModifyAddressTemplateGroupAttributeResponse"/></returns>
@@ -5504,6 +5526,8 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// 本接口（ModifyAddressTemplateGroupAttribute）用于修改IP地址模板集合。
+        /// >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+        /// >
         /// </summary>
         /// <param name="req"><see cref="ModifyAddressTemplateGroupAttributeRequest"/></param>
         /// <returns><see cref="ModifyAddressTemplateGroupAttributeResponse"/></returns>
@@ -6179,6 +6203,8 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// 本接口（ModifyServiceTemplateAttribute）用于修改协议端口模板。
+        /// >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+        /// >
         /// </summary>
         /// <param name="req"><see cref="ModifyServiceTemplateAttributeRequest"/></param>
         /// <returns><see cref="ModifyServiceTemplateAttributeResponse"/></returns>
@@ -6189,6 +6215,8 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// 本接口（ModifyServiceTemplateAttribute）用于修改协议端口模板。
+        /// >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+        /// >
         /// </summary>
         /// <param name="req"><see cref="ModifyServiceTemplateAttributeRequest"/></param>
         /// <returns><see cref="ModifyServiceTemplateAttributeResponse"/></returns>
@@ -6200,6 +6228,8 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// 本接口（ModifyServiceTemplateGroupAttribute）用于修改协议端口模板集合。
+        /// >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+        /// >
         /// </summary>
         /// <param name="req"><see cref="ModifyServiceTemplateGroupAttributeRequest"/></param>
         /// <returns><see cref="ModifyServiceTemplateGroupAttributeResponse"/></returns>
@@ -6210,6 +6240,8 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// 本接口（ModifyServiceTemplateGroupAttribute）用于修改协议端口模板集合。
+        /// >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+        /// >
         /// </summary>
         /// <param name="req"><see cref="ModifyServiceTemplateGroupAttributeRequest"/></param>
         /// <returns><see cref="ModifyServiceTemplateGroupAttributeResponse"/></returns>

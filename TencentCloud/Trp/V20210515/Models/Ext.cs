@@ -24,12 +24,21 @@ namespace TencentCloud.Trp.V20210515.Models
     public class Ext : AbstractModel
     {
         
+        /// <summary>
+        /// 字符串
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Value")]
+        [System.Obsolete]
+        public string Value{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

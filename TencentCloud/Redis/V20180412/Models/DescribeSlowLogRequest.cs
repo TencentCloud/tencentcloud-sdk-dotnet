@@ -61,7 +61,9 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 节点所属角色。<ul><li>master：主节点。</li><li>slave：从节点。</li></ul>
+        /// 节点所属角色。
+        /// - master：主节点。
+        /// - slave：从节点。
         /// </summary>
         [JsonProperty("Role")]
         public string Role{ get; set; }

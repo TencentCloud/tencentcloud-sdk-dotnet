@@ -100,6 +100,8 @@ namespace TencentCloud.Ccc.V20200210.Models
         ///                          
         /// 电话呼出             201            unknown	未知状态
         /// 
+        /// 电话呼出             202            notAnswer	未接听
+        /// 
         /// 电话呼出            203	    userReject	拒接挂断
         /// 
         /// 电话呼出	          204	    powerOff	关机
@@ -216,6 +218,8 @@ namespace TencentCloud.Ccc.V20200210.Models
         ///                          
         /// 电话呼出             201            unknown	未知状态
         /// 
+        /// 电话呼出             202            notAnswer	未接听
+        /// 
         /// 电话呼出            203	    userReject	拒接挂断
         /// 
         /// 电话呼出	          204	    powerOff	关机
@@ -233,7 +237,6 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// 电话呼出	        210	           notInService	不在服务区
         /// 
         /// 电话呼入&呼出	211    clientError    客户端错误
-        /// 
         /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>

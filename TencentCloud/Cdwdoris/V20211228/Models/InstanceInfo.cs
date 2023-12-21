@@ -297,6 +297,13 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("Characteristic")]
         public string[] Characteristic{ get; set; }
 
+        /// <summary>
+        /// 超时时间 单位s
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RestartTimeout")]
+        public string RestartTimeout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -341,6 +348,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "Components", this.Components);
             this.SetParamSimple(map, prefix + "IfExistCatalog", this.IfExistCatalog);
             this.SetParamArraySimple(map, prefix + "Characteristic.", this.Characteristic);
+            this.SetParamSimple(map, prefix + "RestartTimeout", this.RestartTimeout);
         }
     }
 }

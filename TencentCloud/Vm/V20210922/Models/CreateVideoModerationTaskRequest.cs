@@ -61,6 +61,12 @@ namespace TencentCloud.Vm.V20210922.Models
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
 
+        /// <summary>
+        /// 该字段表示待检测对象对应的用户相关信息，若填入则可甄别相应违规风险用户
+        /// </summary>
+        [JsonProperty("User")]
+        public User User{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +79,7 @@ namespace TencentCloud.Vm.V20210922.Models
             this.SetParamSimple(map, prefix + "Seed", this.Seed);
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
+            this.SetParamObj(map, prefix + "User.", this.User);
         }
     }
 }
