@@ -67,7 +67,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Bundle{ get; set; }
 
         /// <summary>
-        /// bundle 所属的 broker ip 地址，支持模糊查询
+        /// bundle 所属的 broker IP 地址，支持模糊查询
         /// </summary>
         [JsonProperty("OwnerBroker")]
         public string OwnerBroker{ get; set; }

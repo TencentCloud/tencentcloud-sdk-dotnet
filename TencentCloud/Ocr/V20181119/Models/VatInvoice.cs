@@ -44,24 +44,28 @@ namespace TencentCloud.Ocr.V20181119.Models
 
         /// <summary>
         /// 购方抬头
+        /// 通用机打发票类型时不返回
         /// </summary>
         [JsonProperty("BuyerName")]
         public string BuyerName{ get; set; }
 
         /// <summary>
         /// 购方税号
+        /// 通用机打发票类型时不返回
         /// </summary>
         [JsonProperty("BuyerTaxCode")]
         public string BuyerTaxCode{ get; set; }
 
         /// <summary>
         /// 购方地址电话
+        /// 通用机打发票类型做不返回
         /// </summary>
         [JsonProperty("BuyerAddressPhone")]
         public string BuyerAddressPhone{ get; set; }
 
         /// <summary>
         /// 购方银行账号
+        /// 通用机打发票类型时不返回
         /// </summary>
         [JsonProperty("BuyerBankAccount")]
         public string BuyerBankAccount{ get; set; }
@@ -115,9 +119,17 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// 15：二手车销售统一发票，
         /// 32：深圳区块链发票，
         /// 102：通用机打电子发票
+        /// 61：电子发票（航空运输电子客票行程单）
+        /// 83：电子发票（铁路电子发票）
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
+
+        /// <summary>
+        /// 具体的全电发票类型：01: 全电专用发票；02：全电普通发票；03：全电火车票；04：全电机票行程单
+        /// </summary>
+        [JsonProperty("ElectronicType")]
+        public string ElectronicType{ get; set; }
 
         /// <summary>
         /// 检验码
@@ -234,6 +246,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "MachineNo", this.MachineNo);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "ElectronicType", this.ElectronicType);
             this.SetParamSimple(map, prefix + "CheckCode", this.CheckCode);
             this.SetParamSimple(map, prefix + "IsAbandoned", this.IsAbandoned);
             this.SetParamSimple(map, prefix + "HasSellerList", this.HasSellerList);

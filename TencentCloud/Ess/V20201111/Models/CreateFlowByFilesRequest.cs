@@ -120,6 +120,22 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? Deadline{ get; set; }
 
         /// <summary>
+        /// 合同流程的签署顺序类型：
+        /// <ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
+        /// <li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
+        /// </summary>
+        [JsonProperty("Unordered")]
+        public bool? Unordered{ get; set; }
+
+        /// <summary>
+        /// 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
+        /// 
+        /// 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
+        /// </summary>
+        [JsonProperty("UserData")]
+        public string UserData{ get; set; }
+
+        /// <summary>
         /// 合同到期提醒时间，为Unix标准时间戳（秒）格式，支持的范围是从发起时间开始到后10年内。
         /// 
         /// 到达提醒时间后，腾讯电子签会短信通知发起方企业合同提醒，可用于处理合同到期事务，如合同续签等事宜。
@@ -128,12 +144,20 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? RemindedOn{ get; set; }
 
         /// <summary>
-        /// 合同流程的签署顺序类型：
-        /// <ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
-        /// <li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
+        /// 指定个人签署方查看合同的校验方式
+        /// <ul><li>   **VerifyCheck**  :（默认）人脸识别,人脸识别后才能合同内容 </li>
+        /// <li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号（ApproverMobile）相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）</li></ul>
         /// </summary>
-        [JsonProperty("Unordered")]
-        public bool? Unordered{ get; set; }
+        [JsonProperty("ApproverVerifyType")]
+        public string ApproverVerifyType{ get; set; }
+
+        /// <summary>
+        /// 签署方签署控件（印章/签名等）的生成方式：
+        /// <ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
+        /// <li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
+        /// </summary>
+        [JsonProperty("SignBeanTag")]
+        public long? SignBeanTag{ get; set; }
 
         /// <summary>
         /// 您可以自定义腾讯电子签小程序合同列表页展示的合同内容模板，模板中支持以下变量：
@@ -155,42 +179,6 @@ namespace TencentCloud.Ess.V20201111.Models
         public string CustomShowMap{ get; set; }
 
         /// <summary>
-        /// 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
-        /// <ul><li> **false**：（默认）不需要审批，直接签署。</li>
-        /// <li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
-        /// 企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
-        /// <ul><li> 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
-        /// <li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
-        /// 注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
-        /// </summary>
-        [JsonProperty("NeedSignReview")]
-        public bool? NeedSignReview{ get; set; }
-
-        /// <summary>
-        /// 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
-        /// 
-        /// 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
-        /// </summary>
-        [JsonProperty("UserData")]
-        public string UserData{ get; set; }
-
-        /// <summary>
-        /// 指定个人签署方查看合同的校验方式
-        /// <ul><li>   **VerifyCheck**  :（默认）人脸识别,人脸识别后才能合同内容 </li>
-        /// <li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号（ApproverMobile）相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）</li></ul>
-        /// </summary>
-        [JsonProperty("ApproverVerifyType")]
-        public string ApproverVerifyType{ get; set; }
-
-        /// <summary>
-        /// 签署方签署控件（印章/签名等）的生成方式：
-        /// <ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
-        /// <li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
-        /// </summary>
-        [JsonProperty("SignBeanTag")]
-        public long? SignBeanTag{ get; set; }
-
-        /// <summary>
         /// 代理企业和员工的信息。
         /// 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
         /// </summary>
@@ -204,6 +192,18 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         [JsonProperty("AutoSignScene")]
         public string AutoSignScene{ get; set; }
+
+        /// <summary>
+        /// 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+        /// <ul><li> **false**：（默认）不需要审批，直接签署。</li>
+        /// <li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
+        /// 企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+        /// <ul><li> 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
+        /// <li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
+        /// 注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
+        /// </summary>
+        [JsonProperty("NeedSignReview")]
+        public bool? NeedSignReview{ get; set; }
 
 
         /// <summary>
@@ -223,15 +223,15 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
             this.SetParamSimple(map, prefix + "PreviewType", this.PreviewType);
             this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
-            this.SetParamSimple(map, prefix + "RemindedOn", this.RemindedOn);
             this.SetParamSimple(map, prefix + "Unordered", this.Unordered);
-            this.SetParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
-            this.SetParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
+            this.SetParamSimple(map, prefix + "RemindedOn", this.RemindedOn);
             this.SetParamSimple(map, prefix + "ApproverVerifyType", this.ApproverVerifyType);
             this.SetParamSimple(map, prefix + "SignBeanTag", this.SignBeanTag);
+            this.SetParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "AutoSignScene", this.AutoSignScene);
+            this.SetParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
         }
     }
 }

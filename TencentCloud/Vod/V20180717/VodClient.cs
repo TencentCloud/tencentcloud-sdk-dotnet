@@ -2571,6 +2571,27 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 对点播中的音视频媒体发起音画质重生任务。
+        /// </summary>
+        /// <param name="req"><see cref="EnhanceMediaQualityRequest"/></param>
+        /// <returns><see cref="EnhanceMediaQualityResponse"/></returns>
+        public Task<EnhanceMediaQualityResponse> EnhanceMediaQuality(EnhanceMediaQualityRequest req)
+        {
+            return InternalRequestAsync<EnhanceMediaQualityResponse>(req, "EnhanceMediaQuality");
+        }
+
+        /// <summary>
+        /// 对点播中的音视频媒体发起音画质重生任务。
+        /// </summary>
+        /// <param name="req"><see cref="EnhanceMediaQualityRequest"/></param>
+        /// <returns><see cref="EnhanceMediaQualityResponse"/></returns>
+        public EnhanceMediaQualityResponse EnhanceMediaQualitySync(EnhanceMediaQualityRequest req)
+        {
+            return InternalRequestAsync<EnhanceMediaQualityResponse>(req, "EnhanceMediaQuality")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口仅用于定制开发的特殊场景，除非云点播客服人员主动告知您需要使用本接口，其它情况请勿调用。
         /// </summary>
         /// <param name="req"><see cref="ExecuteFunctionRequest"/></param>

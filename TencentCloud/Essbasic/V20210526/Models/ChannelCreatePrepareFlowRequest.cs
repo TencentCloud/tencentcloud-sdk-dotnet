@@ -25,16 +25,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 资源id，与ResourceType相对应，取值范围：
-        /// <ul>
-        /// <li>文件Id（通过UploadFiles获取文件资源Id）</li>
-        /// <li>模板Id</li>
-        /// </ul>
-        /// </summary>
-        [JsonProperty("ResourceId")]
-        public string ResourceId{ get; set; }
-
-        /// <summary>
         /// 资源类型，取值有：
         /// <ul><li> **1**：模板</li>
         /// <li> **2**：文件（默认值）</li></ul>
@@ -61,6 +51,16 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
+
+        /// <summary>
+        /// 资源id，与ResourceType相对应，取值范围：
+        /// <ul>
+        /// <li>文件Id（通过UploadFiles获取文件资源Id）</li>
+        /// <li>模板Id</li>
+        /// </ul>
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
 
         /// <summary>
         /// 合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
@@ -108,10 +108,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamObj(map, prefix + "FlowInfo.", this.FlowInfo);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamObj(map, prefix + "FlowOption.", this.FlowOption);
             this.SetParamArrayObj(map, prefix + "FlowApproverList.", this.FlowApproverList);
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);

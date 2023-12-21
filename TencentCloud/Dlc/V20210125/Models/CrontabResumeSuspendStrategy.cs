@@ -25,14 +25,14 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 定时拉起时间：如：周一8点
+        /// 定时拉起时间：如：周一&周三8点
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResumeTime")]
         public string ResumeTime{ get; set; }
 
         /// <summary>
-        /// 定时挂起时间：如：周一20点
+        /// 定时挂起时间：如：周一&周三20点
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SuspendTime")]

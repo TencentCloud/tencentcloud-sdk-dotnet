@@ -31,12 +31,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// bundle列表
-        /// </summary>
-        [JsonProperty("BundleSet")]
-        public BundleSetOpt[] BundleSet{ get; set; }
-
-        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -49,7 +43,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "BundleSet.", this.BundleSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -1,3 +1,149 @@
+# Release 3.0.920
+
+## 腾讯电子签（基础版）(essbasic) 版本：2021-05-26
+
+### 第 145 次发布
+
+发布时间：2023-12-21 01:38:43
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [ChannelCreatePrepareFlow](https://cloud.tencent.com/document/api/1420/87897)
+
+	* <font color="#dd0000">**修改入参**：</font>ResourceId
+
+
+
+
+## 腾讯电子签（基础版）(essbasic) 版本：2020-12-22
+
+
+
+## 实时互动-教育版(lcic) 版本：2022-08-17
+
+### 第 49 次发布
+
+发布时间：2023-12-21 01:48:52
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改数据结构：
+
+* [RoomInfo](https://cloud.tencent.com/document/api/1639/81423#RoomInfo)
+
+	* 新增成员：RecordBackground
+
+
+
+
+## 文字识别(ocr) 版本：2018-11-19
+
+### 第 125 次发布
+
+发布时间：2023-12-21 01:56:34
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [VatInvoiceVerifyNew](https://cloud.tencent.com/document/api/866/73674)
+
+	* 新增出参：ElectronicTrainTicket, ElectronicAirTransport
+
+
+新增数据结构：
+
+* [ElectronicAirTransport](https://cloud.tencent.com/document/api/866/33527#ElectronicAirTransport)
+* [ElectronicAirTransportDetail](https://cloud.tencent.com/document/api/866/33527#ElectronicAirTransportDetail)
+* [ElectronicTrainTicket](https://cloud.tencent.com/document/api/866/33527#ElectronicTrainTicket)
+
+修改数据结构：
+
+* [VatInvoice](https://cloud.tencent.com/document/api/866/33527#VatInvoice)
+
+	* 新增成员：ElectronicType
+
+
+
+
+## 消息队列 TDMQ(tdmq) 版本：2020-02-17
+
+### 第 100 次发布
+
+发布时间：2023-12-21 02:11:13
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeNamespaceBundlesOpt](https://cloud.tencent.com/document/api/1179/59039)
+
+	* <font color="#dd0000">**删除出参**：</font>BundleSet
+
+
+<font color="#dd0000">**删除数据结构**：</font>
+
+* BundleSetOpt
+
+
+
+## TI-ONE 训练平台(tione) 版本：2021-11-11
+
+### 第 48 次发布
+
+发布时间：2023-12-21 02:14:50
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeBillingResourceGroups](https://cloud.tencent.com/document/api/851/75065)
+
+	* <font color="#dd0000">**修改入参**：</font>Type
+
+* [DescribeBillingSpecs](https://cloud.tencent.com/document/api/851/80175)
+
+	* <font color="#dd0000">**修改入参**：</font>TaskType
+
+
+
+
+## TI-ONE 训练平台(tione) 版本：2019-10-22
+
+
+
+## 云点播(vod) 版本：2018-07-17
+
+### 第 176 次发布
+
+发布时间：2023-12-21 02:21:45
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [EnhanceMediaQuality](https://cloud.tencent.com/document/api/266/102571)
+
+新增数据结构：
+
+* [EnhanceMediaQualityOutputConfig](https://cloud.tencent.com/document/api/266/31773#EnhanceMediaQualityOutputConfig)
+
+
+
 # Release 3.0.919
 
 ## 腾讯云数据仓库 TCHouse-D(cdwdoris) 版本：2021-12-28

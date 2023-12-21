@@ -249,7 +249,7 @@ namespace TencentCloud.Asr.V20190614.Models
         public long? FilterModal{ get; set; }
 
         /// <summary>
-        /// 单标点最多字数
+        /// 单标点最多字数（目前仅支持8k_zh/16k_zh引擎）
         /// **可控制单行字幕最大字数，适用于字幕生成场景**，取值范围：[6，40]
         /// 0：不开启该功能；
         /// 默认值为0

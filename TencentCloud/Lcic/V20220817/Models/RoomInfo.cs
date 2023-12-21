@@ -157,7 +157,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public long? EndDelayTime{ get; set; }
 
         /// <summary>
-        /// 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
+        /// 直播类型：0 常规（默认）1 伪直播
         /// </summary>
         [JsonProperty("LiveType")]
         public ulong? LiveType{ get; set; }
@@ -173,6 +173,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         /// </summary>
         [JsonProperty("EnableAutoStart")]
         public ulong? EnableAutoStart{ get; set; }
+
+        /// <summary>
+        /// 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+        /// </summary>
+        [JsonProperty("RecordBackground")]
+        public string RecordBackground{ get; set; }
 
 
         /// <summary>
@@ -205,6 +211,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "LiveType", this.LiveType);
             this.SetParamSimple(map, prefix + "RecordLiveUrl", this.RecordLiveUrl);
             this.SetParamSimple(map, prefix + "EnableAutoStart", this.EnableAutoStart);
+            this.SetParamSimple(map, prefix + "RecordBackground", this.RecordBackground);
         }
     }
 }

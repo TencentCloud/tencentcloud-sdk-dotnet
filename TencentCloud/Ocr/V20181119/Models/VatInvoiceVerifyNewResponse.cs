@@ -25,28 +25,40 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 增值税发票信息，详情请点击左侧链接。
+        /// 增值税发票、购车发票、全电发票的基础要素字段信息。
         /// </summary>
         [JsonProperty("Invoice")]
         public VatInvoice Invoice{ get; set; }
 
         /// <summary>
-        /// 机动车销售统一发票信息
+        /// 机动车销售统一发票详细字段信息。
         /// </summary>
         [JsonProperty("VehicleInvoiceInfo")]
         public VehicleInvoiceInfo VehicleInvoiceInfo{ get; set; }
 
         /// <summary>
-        /// 二手车销售统一发票信息
+        /// 二手车销售统一发票详细字段信息。
         /// </summary>
         [JsonProperty("UsedVehicleInvoiceInfo")]
         public UsedVehicleInvoiceInfo UsedVehicleInvoiceInfo{ get; set; }
 
         /// <summary>
-        /// 通行费发票信息
+        /// 通行费发票详细字段信息。
         /// </summary>
         [JsonProperty("PassInvoiceInfoList")]
         public PassInvoiceInfo[] PassInvoiceInfoList{ get; set; }
+
+        /// <summary>
+        /// 全电发票（铁路电子客票）详细字段信息。
+        /// </summary>
+        [JsonProperty("ElectronicTrainTicket")]
+        public ElectronicTrainTicket ElectronicTrainTicket{ get; set; }
+
+        /// <summary>
+        /// 全电发票（航空运输电子客票行程单）详细字段信息。
+        /// </summary>
+        [JsonProperty("ElectronicAirTransport")]
+        public ElectronicAirTransport ElectronicAirTransport{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -64,6 +76,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamObj(map, prefix + "VehicleInvoiceInfo.", this.VehicleInvoiceInfo);
             this.SetParamObj(map, prefix + "UsedVehicleInvoiceInfo.", this.UsedVehicleInvoiceInfo);
             this.SetParamArrayObj(map, prefix + "PassInvoiceInfoList.", this.PassInvoiceInfoList);
+            this.SetParamObj(map, prefix + "ElectronicTrainTicket.", this.ElectronicTrainTicket);
+            this.SetParamObj(map, prefix + "ElectronicAirTransport.", this.ElectronicAirTransport);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
