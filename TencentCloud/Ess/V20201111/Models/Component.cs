@@ -52,12 +52,6 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ComponentType{ get; set; }
 
         /// <summary>
-        /// <font color="red">【暂未使用】</font>控件所属文件的序号（取值为：0-N）。 目前单文件的情况下，值一直为0
-        /// </summary>
-        [JsonProperty("FileIndex")]
-        public long? FileIndex{ get; set; }
-
-        /// <summary>
         /// **在绝对定位方式和关键字定位方式下**，指定控件的高度， 控件高度是指控件在PDF文件中的高度，单位为pt（点）。
         /// </summary>
         [JsonProperty("ComponentHeight")]
@@ -90,6 +84,21 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         [JsonProperty("ComponentPosY")]
         public float? ComponentPosY{ get; set; }
+
+        /// <summary>
+        /// <font color="red">【暂未使用】</font>控件所属文件的序号（取值为：0-N）。 目前单文件的情况下，值一直为0
+        /// </summary>
+        [JsonProperty("FileIndex")]
+        public long? FileIndex{ get; set; }
+
+        /// <summary>
+        /// 控件生成的方式：
+        /// <ul><li> <b>NORMAL</b> : 绝对定位控件</li>
+        /// <li> <b>FIELD</b> : 表单域</li>
+        /// <li> <b>KEYWORD</b> : 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）</li></ul>
+        /// </summary>
+        [JsonProperty("GenerateMode")]
+        public string GenerateMode{ get; set; }
 
         /// <summary>
         /// 控件唯一ID。
@@ -205,27 +214,6 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ComponentValue{ get; set; }
 
         /// <summary>
-        /// 控件生成的方式：
-        /// <ul><li> <b>NORMAL</b> : 绝对定位控件</li>
-        /// <li> <b>FIELD</b> : 表单域</li>
-        /// <li> <b>KEYWORD</b> : 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）</li></ul>
-        /// </summary>
-        [JsonProperty("GenerateMode")]
-        public string GenerateMode{ get; set; }
-
-        /// <summary>
-        /// <font color="red">【暂未使用】</font>日期签署控件的字号，默认为 12
-        /// </summary>
-        [JsonProperty("ComponentDateFontSize")]
-        public long? ComponentDateFontSize{ get; set; }
-
-        /// <summary>
-        /// <font color="red">【暂未使用】</font>第三方应用集成平台模板控件 ID 标识
-        /// </summary>
-        [JsonProperty("ChannelComponentId")]
-        public string ChannelComponentId{ get; set; }
-
-        /// <summary>
         /// **如果控件是关键字定位方式**，可以对关键字定位出来的区域进行横坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏左或偏右，可以通过调整横坐标方向的参数来使控件位置更加准确。
         /// 注意： `向左调整设置为负数， 向右调整设置成正数`
         /// 注意：此字段可能返回 null，表示取不到有效值。
@@ -240,14 +228,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         [JsonProperty("OffsetY")]
         public float? OffsetY{ get; set; }
-
-        /// <summary>
-        /// <font color="red">【暂未使用】</font>第三方应用集成中子客企业控件来源。
-        /// <ul><li> <b>0</b> :平台指定；</li>
-        /// <li> <b>1</b> :用户自定义</li></ul>
-        /// </summary>
-        [JsonProperty("ChannelComponentSource")]
-        public ulong? ChannelComponentSource{ get; set; }
 
         /// <summary>
         /// **如果控件是关键字定位方式**，指定关键字排序规则时，可以选择Positive或Reverse两种排序方式。
@@ -303,6 +283,26 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ForbidMoveAndDelete")]
         public bool? ForbidMoveAndDelete{ get; set; }
 
+        /// <summary>
+        /// <font color="red">【暂未使用】</font>日期签署控件的字号，默认为 12
+        /// </summary>
+        [JsonProperty("ComponentDateFontSize")]
+        public long? ComponentDateFontSize{ get; set; }
+
+        /// <summary>
+        /// <font color="red">【暂未使用】</font>第三方应用集成平台模板控件 ID 标识
+        /// </summary>
+        [JsonProperty("ChannelComponentId")]
+        public string ChannelComponentId{ get; set; }
+
+        /// <summary>
+        /// <font color="red">【暂未使用】</font>第三方应用集成中子客企业控件来源。
+        /// <ul><li> <b>0</b> :平台指定；</li>
+        /// <li> <b>1</b> :用户自定义</li></ul>
+        /// </summary>
+        [JsonProperty("ChannelComponentSource")]
+        public ulong? ChannelComponentSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -310,12 +310,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ComponentType", this.ComponentType);
-            this.SetParamSimple(map, prefix + "FileIndex", this.FileIndex);
             this.SetParamSimple(map, prefix + "ComponentHeight", this.ComponentHeight);
             this.SetParamSimple(map, prefix + "ComponentWidth", this.ComponentWidth);
             this.SetParamSimple(map, prefix + "ComponentPage", this.ComponentPage);
             this.SetParamSimple(map, prefix + "ComponentPosX", this.ComponentPosX);
             this.SetParamSimple(map, prefix + "ComponentPosY", this.ComponentPosY);
+            this.SetParamSimple(map, prefix + "FileIndex", this.FileIndex);
+            this.SetParamSimple(map, prefix + "GenerateMode", this.GenerateMode);
             this.SetParamSimple(map, prefix + "ComponentId", this.ComponentId);
             this.SetParamSimple(map, prefix + "ComponentName", this.ComponentName);
             this.SetParamSimple(map, prefix + "ComponentRequired", this.ComponentRequired);
@@ -323,18 +324,17 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "ComponentExtra", this.ComponentExtra);
             this.SetParamSimple(map, prefix + "IsFormType", this.IsFormType);
             this.SetParamSimple(map, prefix + "ComponentValue", this.ComponentValue);
-            this.SetParamSimple(map, prefix + "GenerateMode", this.GenerateMode);
-            this.SetParamSimple(map, prefix + "ComponentDateFontSize", this.ComponentDateFontSize);
-            this.SetParamSimple(map, prefix + "ChannelComponentId", this.ChannelComponentId);
             this.SetParamSimple(map, prefix + "OffsetX", this.OffsetX);
             this.SetParamSimple(map, prefix + "OffsetY", this.OffsetY);
-            this.SetParamSimple(map, prefix + "ChannelComponentSource", this.ChannelComponentSource);
             this.SetParamSimple(map, prefix + "KeywordOrder", this.KeywordOrder);
             this.SetParamSimple(map, prefix + "KeywordPage", this.KeywordPage);
             this.SetParamSimple(map, prefix + "RelativeLocation", this.RelativeLocation);
             this.SetParamArraySimple(map, prefix + "KeywordIndexes.", this.KeywordIndexes);
             this.SetParamSimple(map, prefix + "LockComponentValue", this.LockComponentValue);
             this.SetParamSimple(map, prefix + "ForbidMoveAndDelete", this.ForbidMoveAndDelete);
+            this.SetParamSimple(map, prefix + "ComponentDateFontSize", this.ComponentDateFontSize);
+            this.SetParamSimple(map, prefix + "ChannelComponentId", this.ChannelComponentId);
+            this.SetParamSimple(map, prefix + "ChannelComponentSource", this.ChannelComponentSource);
         }
     }
 }

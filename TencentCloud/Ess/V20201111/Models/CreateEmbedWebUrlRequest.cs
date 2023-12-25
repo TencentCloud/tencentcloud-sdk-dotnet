@@ -40,8 +40,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <li>PREVIEW_SEAL_LIST：生成预览印章列表的嵌入页面</li>
         /// <li>PREVIEW_SEAL_DETAIL：生成预览印章详情的嵌入页面</li>
         /// <li>EXTEND_SERVICE：生成拓展服务的嵌入页面</li>
-        /// <li>PREVIEW_FLOW：生成预览合同的嵌入页面</li>
-        /// <li>PREVIEW_FLOW_DETAIL：生成查看合同详情的嵌入页面</li></ul>
+        /// <li>PREVIEW_FLOW：生成预览合同的嵌入页面（支持移动端）</li>
+        /// <li>PREVIEW_FLOW_DETAIL：生成查看合同详情的嵌入页面（仅支持PC端）</li></ul>
         /// </summary>
         [JsonProperty("EmbedType")]
         public string EmbedType{ get; set; }

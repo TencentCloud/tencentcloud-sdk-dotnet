@@ -304,6 +304,20 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("RestartTimeout")]
         public string RestartTimeout{ get; set; }
 
+        /// <summary>
+        /// 内核优雅重启超时时间，如果为-1说明未设置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GraceShutdownWaitSeconds")]
+        public string GraceShutdownWaitSeconds{ get; set; }
+
+        /// <summary>
+        /// 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CaseSensitive")]
+        public long? CaseSensitive{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -349,6 +363,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "IfExistCatalog", this.IfExistCatalog);
             this.SetParamArraySimple(map, prefix + "Characteristic.", this.Characteristic);
             this.SetParamSimple(map, prefix + "RestartTimeout", this.RestartTimeout);
+            this.SetParamSimple(map, prefix + "GraceShutdownWaitSeconds", this.GraceShutdownWaitSeconds);
+            this.SetParamSimple(map, prefix + "CaseSensitive", this.CaseSensitive);
         }
     }
 }

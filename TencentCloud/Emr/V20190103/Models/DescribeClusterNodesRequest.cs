@@ -47,6 +47,12 @@ namespace TencentCloud.Emr.V20190103.Models
         public string NodeFlag{ get; set; }
 
         /// <summary>
+        /// 导出全部节点信息csv时是否携带cdb信息
+        /// </summary>
+        [JsonProperty("ExportDb")]
+        public bool? ExportDb{ get; set; }
+
+        /// <summary>
         /// 页编号，默认值为0，表示第一页。
         /// </summary>
         [JsonProperty("Offset")]
@@ -90,6 +96,7 @@ namespace TencentCloud.Emr.V20190103.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "NodeFlag", this.NodeFlag);
+            this.SetParamSimple(map, prefix + "ExportDb", this.ExportDb);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);

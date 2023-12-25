@@ -26,12 +26,14 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 支持搜索的类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SearchType")]
         public string SearchType{ get; set; }
 
         /// <summary>
         /// 支持搜索的值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SearchValue")]
         public string SearchValue{ get; set; }

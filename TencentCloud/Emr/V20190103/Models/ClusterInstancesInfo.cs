@@ -43,6 +43,7 @@ namespace TencentCloud.Emr.V20190103.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ftitle")]
+        [System.Obsolete]
         public string Ftitle{ get; set; }
 
         /// <summary>
@@ -154,6 +155,7 @@ namespace TencentCloud.Emr.V20190103.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Config")]
+        [System.Obsolete]
         public EmrProductConfigOutter Config{ get; set; }
 
         /// <summary>
@@ -345,6 +347,20 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("IsCvmReplace")]
         public bool? IsCvmReplace{ get; set; }
 
+        /// <summary>
+        /// 标题
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterTitle")]
+        public string ClusterTitle{ get; set; }
+
+        /// <summary>
+        /// 集群产品配置信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConfigDetail")]
+        public EmrProductConfigDetail ConfigDetail{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -393,6 +409,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArrayObj(map, prefix + "TopologyInfoList.", this.TopologyInfoList);
             this.SetParamSimple(map, prefix + "IsMultiZoneCluster", this.IsMultiZoneCluster);
             this.SetParamSimple(map, prefix + "IsCvmReplace", this.IsCvmReplace);
+            this.SetParamSimple(map, prefix + "ClusterTitle", this.ClusterTitle);
+            this.SetParamObj(map, prefix + "ConfigDetail.", this.ConfigDetail);
         }
     }
 }

@@ -92,6 +92,20 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("CompensateCount")]
         public long? CompensateCount{ get; set; }
 
+        /// <summary>
+        /// 重试次数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RetryCount")]
+        public ulong? RetryCount{ get; set; }
+
+        /// <summary>
+        /// 重试信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RetryInfo")]
+        public string RetryInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +123,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "SpecInfo", this.SpecInfo);
             this.SetParamSimple(map, prefix + "CompensateFlag", this.CompensateFlag);
             this.SetParamSimple(map, prefix + "CompensateCount", this.CompensateCount);
+            this.SetParamSimple(map, prefix + "RetryCount", this.RetryCount);
+            this.SetParamSimple(map, prefix + "RetryInfo", this.RetryInfo);
         }
     }
 }

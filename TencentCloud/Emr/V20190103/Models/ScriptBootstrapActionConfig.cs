@@ -51,6 +51,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("CosFileName")]
         public string CosFileName{ get; set; }
 
+        /// <summary>
+        /// 备注
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +67,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "ExecutionMoment", this.ExecutionMoment);
             this.SetParamArraySimple(map, prefix + "Args.", this.Args);
             this.SetParamSimple(map, prefix + "CosFileName", this.CosFileName);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
         }
     }
 }

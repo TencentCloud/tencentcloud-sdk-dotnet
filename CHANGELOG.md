@@ -1,3 +1,81 @@
+# Release 3.0.922
+
+## 腾讯云数据仓库 TCHouse-D(cdwdoris) 版本：2021-12-28
+
+### 第 5 次发布
+
+发布时间：2023-12-25 00:04:35
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改数据结构：
+
+* [InstanceInfo](https://cloud.tencent.com/document/api/1387/102385#InstanceInfo)
+
+	* 新增成员：GraceShutdownWaitSeconds, CaseSensitive
+
+
+
+
+## 弹性 MapReduce(emr) 版本：2019-01-03
+
+### 第 55 次发布
+
+发布时间：2023-12-25 00:10:01
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeClusterNodes](https://cloud.tencent.com/document/api/589/41707)
+
+	* 新增入参：ExportDb
+
+
+新增数据结构：
+
+* [EmrProductConfigDetail](https://cloud.tencent.com/document/api/589/33981#EmrProductConfigDetail)
+* [ResourceDetail](https://cloud.tencent.com/document/api/589/33981#ResourceDetail)
+
+修改数据结构：
+
+* [AutoScaleRecord](https://cloud.tencent.com/document/api/589/33981#AutoScaleRecord)
+
+	* 新增成员：RetryCount, RetryInfo
+
+* [ClusterInstancesInfo](https://cloud.tencent.com/document/api/589/33981#ClusterInstancesInfo)
+
+	* 新增成员：ClusterTitle, ConfigDetail
+
+* [ScriptBootstrapActionConfig](https://cloud.tencent.com/document/api/589/33981#ScriptBootstrapActionConfig)
+
+	* 新增成员：Remark
+
+
+
+
+## 风险探针(rkp) 版本：2019-12-09
+
+### 第 2 次发布
+
+发布时间：2023-12-25 00:16:39
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+<font color="#dd0000">**预下线接口**：</font>
+
+* GetOpenId
+* GetToken
+* QueryDevAndRisk
+
+
+
 # Release 3.0.921
 
 ## 音频内容安全(ams) 版本：2020-12-29
