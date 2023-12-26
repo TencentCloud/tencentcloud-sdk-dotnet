@@ -31,6 +31,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Domain{ get; set; }
 
         /// <summary>
+        /// <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
+
+        /// <summary>
         /// 需要开启 CDN 加速的区域：
         /// <li>Chinese Mainland：中国境内（不包含港澳台）。</li>
         /// <li>Outside Chinese Mainland: 中国境外。</li>
@@ -40,12 +46,6 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("AccelerateArea")]
         public string AccelerateArea{ get; set; }
 
-        /// <summary>
-        /// <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,8 +53,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
-            this.SetParamSimple(map, prefix + "AccelerateArea", this.AccelerateArea);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamSimple(map, prefix + "AccelerateArea", this.AccelerateArea);
         }
     }
 }

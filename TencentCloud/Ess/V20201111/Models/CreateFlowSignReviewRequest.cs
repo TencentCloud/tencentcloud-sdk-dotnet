@@ -33,27 +33,20 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 合同流程ID，为32位字符串。
-        /// 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-        /// 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+        /// <ul><li>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</li>
+        /// <li>可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。</li></ul>
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// 企业审核结果
-        /// <ul><li>PASS: 通过</li> 
-        /// <li>REJECT: 拒绝</li></ul>
+        /// 企业内部审核结果
+        /// <ul><li>PASS: 审核通过</li>
+        /// <li>REJECT: 审核拒绝</li>
+        /// <li>SIGN_REJECT:拒签(流程结束)</li></ul>
         /// </summary>
         [JsonProperty("ReviewType")]
         public string ReviewType{ get; set; }
-
-        /// <summary>
-        /// 审核结果原因，
-        /// 字符串长度不超过200
-        /// 当ReviewType 是拒绝（REJECT） 时此字段必填。
-        /// </summary>
-        [JsonProperty("ReviewMessage")]
-        public string ReviewMessage{ get; set; }
 
         /// <summary>
         /// 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
@@ -62,9 +55,8 @@ namespace TencentCloud.Ess.V20201111.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 审核签署节点人标识，
-        /// 用来标识审核的签署方。
-        /// 如果签署审核节点是个人， 此参数必填。
+        /// 审核节点的签署人标志，用于指定当前审核的签署方
+        /// <ul><li>**如果签署审核节点是个人， 此参数必填**。</li></ul>
         /// </summary>
         [JsonProperty("RecipientId")]
         public string RecipientId{ get; set; }
@@ -80,6 +72,16 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("OperateType")]
         public string OperateType{ get; set; }
 
+        /// <summary>
+        /// 审核结果原因
+        /// <ul><li>字符串长度不超过200</li>
+        /// <li>当ReviewType 是拒绝（REJECT） 时此字段必填。</li>
+        /// <li>当ReviewType 是拒绝（SIGN_REJECT） 时此字段必填。</li></ul>
+        /// 
+        /// </summary>
+        [JsonProperty("ReviewMessage")]
+        public string ReviewMessage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,10 +91,10 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamSimple(map, prefix + "ReviewType", this.ReviewType);
-            this.SetParamSimple(map, prefix + "ReviewMessage", this.ReviewMessage);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "RecipientId", this.RecipientId);
             this.SetParamSimple(map, prefix + "OperateType", this.OperateType);
+            this.SetParamSimple(map, prefix + "ReviewMessage", this.ReviewMessage);
         }
     }
 }

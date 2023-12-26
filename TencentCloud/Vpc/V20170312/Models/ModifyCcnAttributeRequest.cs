@@ -42,6 +42,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("CcnDescription")]
         public string CcnDescription{ get; set; }
 
+        /// <summary>
+        /// 是否开启等价路由功能。`False` 不开启，`True` 开启。
+        /// </summary>
+        [JsonProperty("RouteECMPFlag")]
+        public bool? RouteECMPFlag{ get; set; }
+
+        /// <summary>
+        /// 是否开启路由重叠功能。`False` 不开启，`True` 开启。
+        /// </summary>
+        [JsonProperty("RouteOverlapFlag")]
+        public bool? RouteOverlapFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "CcnId", this.CcnId);
             this.SetParamSimple(map, prefix + "CcnName", this.CcnName);
             this.SetParamSimple(map, prefix + "CcnDescription", this.CcnDescription);
+            this.SetParamSimple(map, prefix + "RouteECMPFlag", this.RouteECMPFlag);
+            this.SetParamSimple(map, prefix + "RouteOverlapFlag", this.RouteOverlapFlag);
         }
     }
 }

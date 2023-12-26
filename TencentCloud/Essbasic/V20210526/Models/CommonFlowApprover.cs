@@ -142,7 +142,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string NotifyType{ get; set; }
 
         /// <summary>
-        /// 签署人配置
+        /// 签署人配置，用于控制签署人相关属性
         /// </summary>
         [JsonProperty("ApproverOption")]
         public CommonApproverOption ApproverOption{ get; set; }

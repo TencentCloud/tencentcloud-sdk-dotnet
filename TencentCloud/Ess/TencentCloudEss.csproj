@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CAC02B9D-B0F0-3F2E-A9A4-BB0578DC157C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.923</VersionPrefix>
+    <VersionPrefix>3.0.924</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -96,6 +96,8 @@
     <Compile Include="V20201111\Models\CreateFlowGroupByFilesResponse.cs" />
     <Compile Include="V20201111\Models\CreateFlowGroupByTemplatesRequest.cs" />
     <Compile Include="V20201111\Models\CreateFlowGroupByTemplatesResponse.cs" />
+    <Compile Include="V20201111\Models\CreateFlowGroupSignReviewRequest.cs" />
+    <Compile Include="V20201111\Models\CreateFlowGroupSignReviewResponse.cs" />
     <Compile Include="V20201111\Models\CreateFlowOption.cs" />
     <Compile Include="V20201111\Models\CreateFlowRemindsRequest.cs" />
     <Compile Include="V20201111\Models\CreateFlowRemindsResponse.cs" />
@@ -221,6 +223,7 @@
     <Compile Include="V20201111\Models\ModifyIntegrationDepartmentResponse.cs" />
     <Compile Include="V20201111\Models\ModifyIntegrationRoleRequest.cs" />
     <Compile Include="V20201111\Models\ModifyIntegrationRoleResponse.cs" />
+    <Compile Include="V20201111\Models\NeedReviewApproverInfo.cs" />
     <Compile Include="V20201111\Models\OccupiedSeal.cs" />
     <Compile Include="V20201111\Models\OrganizationInfo.cs" />
     <Compile Include="V20201111\Models\PdfVerifyResult.cs" />

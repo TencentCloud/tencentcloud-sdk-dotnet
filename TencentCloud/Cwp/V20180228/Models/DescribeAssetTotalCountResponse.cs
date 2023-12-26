@@ -40,7 +40,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// initservice: 启动服务
         /// planTask:计划任务
         /// env:环境变量
-        /// coremoudle:内核模块
+        /// coremodule:内核模块
         /// </summary>
         [JsonProperty("Types")]
         public AssetKeyVal[] Types{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B9887456-D090-35D3-9EFC-3D27B86D0C97}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.923</VersionPrefix>
+    <VersionPrefix>3.0.924</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -161,6 +161,8 @@
     <Compile Include="V20210526\Models\CreateChannelOrganizationInfoChangeUrlResponse.cs" />
     <Compile Include="V20210526\Models\CreateConsoleLoginUrlRequest.cs" />
     <Compile Include="V20210526\Models\CreateConsoleLoginUrlResponse.cs" />
+    <Compile Include="V20210526\Models\CreateFlowGroupSignReviewRequest.cs" />
+    <Compile Include="V20210526\Models\CreateFlowGroupSignReviewResponse.cs" />
     <Compile Include="V20210526\Models\CreateFlowOption.cs" />
     <Compile Include="V20210526\Models\CreateFlowsByTemplatesRequest.cs" />
     <Compile Include="V20210526\Models\CreateFlowsByTemplatesResponse.cs" />
@@ -216,6 +218,7 @@
     <Compile Include="V20210526\Models\HasAuthUser.cs" />
     <Compile Include="V20210526\Models\ModifyExtendedServiceRequest.cs" />
     <Compile Include="V20210526\Models\ModifyExtendedServiceResponse.cs" />
+    <Compile Include="V20210526\Models\NeedReviewApproverInfo.cs" />
     <Compile Include="V20210526\Models\OccupiedSeal.cs" />
     <Compile Include="V20210526\Models\OperateChannelTemplateRequest.cs" />
     <Compile Include="V20210526\Models\OperateChannelTemplateResponse.cs" />

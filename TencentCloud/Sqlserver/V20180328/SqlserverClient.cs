@@ -242,7 +242,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口（CreateBasicDBInstances）用于创建SQL server基础版实例。
+        /// 本接口（CreateBasicDBInstances）用于创建基础版实例 (云盘)。
         /// </summary>
         /// <param name="req"><see cref="CreateBasicDBInstancesRequest"/></param>
         /// <returns><see cref="CreateBasicDBInstancesResponse"/></returns>
@@ -252,7 +252,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口（CreateBasicDBInstances）用于创建SQL server基础版实例。
+        /// 本接口（CreateBasicDBInstances）用于创建基础版实例 (云盘)。
         /// </summary>
         /// <param name="req"><see cref="CreateBasicDBInstancesRequest"/></param>
         /// <returns><see cref="CreateBasicDBInstancesResponse"/></returns>
@@ -263,7 +263,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口（CreateBusinessDBInstances）用于创建商业智能服务实例。
+        /// 本接口（CreateBusinessDBInstances）用于创建商业智能服务实例 (云盘)。
         /// </summary>
         /// <param name="req"><see cref="CreateBusinessDBInstancesRequest"/></param>
         /// <returns><see cref="CreateBusinessDBInstancesResponse"/></returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口（CreateBusinessDBInstances）用于创建商业智能服务实例。
+        /// 本接口（CreateBusinessDBInstances）用于创建商业智能服务实例 (云盘)。
         /// </summary>
         /// <param name="req"><see cref="CreateBusinessDBInstancesRequest"/></param>
         /// <returns><see cref="CreateBusinessDBInstancesResponse"/></returns>
@@ -305,7 +305,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口（CreateCloudDBInstances）用于创建高可用实例(虚拟机版本)。
+        /// 本接口（CreateCloudDBInstances）用于创建高可用实例 (云盘)。
         /// </summary>
         /// <param name="req"><see cref="CreateCloudDBInstancesRequest"/></param>
         /// <returns><see cref="CreateCloudDBInstancesResponse"/></returns>
@@ -315,7 +315,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口（CreateCloudDBInstances）用于创建高可用实例(虚拟机版本)。
+        /// 本接口（CreateCloudDBInstances）用于创建高可用实例 (云盘)。
         /// </summary>
         /// <param name="req"><see cref="CreateCloudDBInstancesRequest"/></param>
         /// <returns><see cref="CreateCloudDBInstancesResponse"/></returns>
@@ -326,7 +326,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口（CreateCloudReadOnlyDBInstances）用于添加只读副本实例(虚拟机版本)。
+        /// 本接口（CreateCloudReadOnlyDBInstances）用于创建只读实例 (云盘)。
         /// </summary>
         /// <param name="req"><see cref="CreateCloudReadOnlyDBInstancesRequest"/></param>
         /// <returns><see cref="CreateCloudReadOnlyDBInstancesResponse"/></returns>
@@ -336,7 +336,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口（CreateCloudReadOnlyDBInstances）用于添加只读副本实例(虚拟机版本)。
+        /// 本接口（CreateCloudReadOnlyDBInstances）用于创建只读实例 (云盘)。
         /// </summary>
         /// <param name="req"><see cref="CreateCloudReadOnlyDBInstancesRequest"/></param>
         /// <returns><see cref="CreateCloudReadOnlyDBInstancesResponse"/></returns>
@@ -368,7 +368,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口（CreateDBInstances）用于创建实例。
+        /// 本接口（CreateDBInstances）用于创建高可用实例 (本地盘)
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
         /// <returns><see cref="CreateDBInstancesResponse"/></returns>
@@ -378,7 +378,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口（CreateDBInstances）用于创建实例。
+        /// 本接口（CreateDBInstances）用于创建高可用实例 (本地盘)
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
         /// <returns><see cref="CreateDBInstancesResponse"/></returns>
@@ -452,7 +452,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口（CreateReadOnlyDBInstances）用于添加只读副本实例。
+        /// 本接口（CreateReadOnlyDBInstances）用于创建只读实例 (本地盘)。
         /// </summary>
         /// <param name="req"><see cref="CreateReadOnlyDBInstancesRequest"/></param>
         /// <returns><see cref="CreateReadOnlyDBInstancesResponse"/></returns>
@@ -462,7 +462,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口（CreateReadOnlyDBInstances）用于添加只读副本实例。
+        /// 本接口（CreateReadOnlyDBInstances）用于创建只读实例 (本地盘)。
         /// </summary>
         /// <param name="req"><see cref="CreateReadOnlyDBInstancesRequest"/></param>
         /// <returns><see cref="CreateReadOnlyDBInstancesResponse"/></returns>

@@ -37,7 +37,13 @@ namespace TencentCloud.Iss.V20230517.Models
         public bool? IsContainSubLevel{ get; set; }
 
         /// <summary>
-        /// 设备接入协议。1:RTMP，2:GB，3:GW
+        /// 是否包含当前用户已关联的设备，默认false
+        /// </summary>
+        [JsonProperty("IsContainUser")]
+        public bool? IsContainUser{ get; set; }
+
+        /// <summary>
+        /// 设备接入协议。1:RTMP，2:GB，3:GW，4:IVCP(私有协议)
         /// </summary>
         [JsonProperty("AccessProtocol")]
         public ulong? AccessProtocol{ get; set; }
@@ -61,7 +67,7 @@ namespace TencentCloud.Iss.V20230517.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 模糊搜索设备关键字
+        /// 模糊搜索设备的关键字
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }
@@ -92,6 +98,7 @@ namespace TencentCloud.Iss.V20230517.Models
         {
             this.SetParamSimple(map, prefix + "OrganizationId", this.OrganizationId);
             this.SetParamSimple(map, prefix + "IsContainSubLevel", this.IsContainSubLevel);
+            this.SetParamSimple(map, prefix + "IsContainUser", this.IsContainUser);
             this.SetParamSimple(map, prefix + "AccessProtocol", this.AccessProtocol);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Status", this.Status);

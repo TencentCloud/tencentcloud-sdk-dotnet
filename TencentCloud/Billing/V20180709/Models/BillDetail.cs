@@ -215,6 +215,13 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("BillMonth")]
         public string BillMonth{ get; set; }
 
+        /// <summary>
+        /// 账单记录ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -251,6 +258,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "FormulaUrl", this.FormulaUrl);
             this.SetParamSimple(map, prefix + "BillDay", this.BillDay);
             this.SetParamSimple(map, prefix + "BillMonth", this.BillMonth);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
         }
     }
 }

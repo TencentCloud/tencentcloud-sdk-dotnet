@@ -74,7 +74,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public bool? IsPromoter{ get; set; }
 
         /// <summary>
-        /// 模板的创建者信息，电子签系统用户ID
+        /// 模板的创建者名字
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }

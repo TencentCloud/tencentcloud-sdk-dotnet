@@ -43,7 +43,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public bool? DeleteWithInstance{ get; set; }
 
         /// <summary>
-        /// 可选参数，用于控制云盘挂载时使用的挂载模式，目前仅对黑石裸金属机型有效。取值范围：<br><li>PF<br><li>VF
+        /// 可选参数，用于控制云盘挂载时使用的挂载模式，目前仅对黑石裸金属机型有效。取值范围：<br><li>PF</li><br><li>VF</li>
         /// </summary>
         [JsonProperty("AttachMode")]
         public string AttachMode{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Iss.V20230517.Models
         public string DeviceId{ get; set; }
 
         /// <summary>
-        /// 设备国标编码
+        /// 设备编码
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }

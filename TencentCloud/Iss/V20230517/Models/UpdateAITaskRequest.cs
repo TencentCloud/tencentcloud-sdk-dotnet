@@ -49,7 +49,7 @@ namespace TencentCloud.Iss.V20230517.Models
         public string[] ChannelList{ get; set; }
 
         /// <summary>
-        /// AI 结果回调地址。类似 "http://ip:port/xxx或者https://domain/xxx
+        /// AI 结果回调地址。类似 "http://ip:port/***或者https://domain/***
         /// </summary>
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }

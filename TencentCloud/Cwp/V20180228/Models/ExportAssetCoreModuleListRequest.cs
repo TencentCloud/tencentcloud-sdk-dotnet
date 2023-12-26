@@ -39,7 +39,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// <summary>
         /// 过滤条件。
         /// <li>Name- string - 是否必填：否 - 包名</li>
-        /// <li>User- string - 是否必填：否 - 用户</li>
+        /// <li>User- string - 是否必填：否 - 用户名</li>
         /// </summary>
         [JsonProperty("Filters")]
         public AssetFilters[] Filters{ get; set; }

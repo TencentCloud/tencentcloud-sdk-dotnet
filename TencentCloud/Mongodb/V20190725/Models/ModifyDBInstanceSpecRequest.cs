@@ -74,6 +74,18 @@ namespace TencentCloud.Mongodb.V20190725.Models
         [JsonProperty("InMaintenance")]
         public ulong? InMaintenance{ get; set; }
 
+        /// <summary>
+        /// 新增节点属性列表。
+        /// </summary>
+        [JsonProperty("AddNodeList")]
+        public AddNodeList[] AddNodeList{ get; set; }
+
+        /// <summary>
+        /// 删除节点属性列表。
+        /// </summary>
+        [JsonProperty("RemoveNodeList")]
+        public RemoveNodeList[] RemoveNodeList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +99,8 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "NodeNum", this.NodeNum);
             this.SetParamSimple(map, prefix + "ReplicateSetNum", this.ReplicateSetNum);
             this.SetParamSimple(map, prefix + "InMaintenance", this.InMaintenance);
+            this.SetParamArrayObj(map, prefix + "AddNodeList.", this.AddNodeList);
+            this.SetParamArrayObj(map, prefix + "RemoveNodeList.", this.RemoveNodeList);
         }
     }
 }

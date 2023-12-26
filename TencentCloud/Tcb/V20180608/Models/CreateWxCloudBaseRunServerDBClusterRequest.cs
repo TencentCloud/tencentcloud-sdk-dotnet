@@ -49,9 +49,9 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string DbVersion{ get; set; }
 
         /// <summary>
-        /// 0: 非大小写敏感
-        /// 1: 大小写敏感
-        /// 默认 0
+        /// 0: 大小写敏感
+        /// 1: 非大小写敏感
+        /// 默认为0
         /// </summary>
         [JsonProperty("LowerCaseTableName")]
         public string LowerCaseTableName{ get; set; }
