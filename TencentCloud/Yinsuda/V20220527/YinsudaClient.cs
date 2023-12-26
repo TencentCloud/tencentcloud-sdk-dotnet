@@ -158,6 +158,27 @@ namespace TencentCloud.Yinsuda.V20220527
         }
 
         /// <summary>
+        /// 获取歌曲伴奏高潮的开始、结束时间，可用于抢唱
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKTVMusicAccompanySegmentUrlVipRequest"/></param>
+        /// <returns><see cref="DescribeKTVMusicAccompanySegmentUrlVipResponse"/></returns>
+        public Task<DescribeKTVMusicAccompanySegmentUrlVipResponse> DescribeKTVMusicAccompanySegmentUrlVip(DescribeKTVMusicAccompanySegmentUrlVipRequest req)
+        {
+            return InternalRequestAsync<DescribeKTVMusicAccompanySegmentUrlVipResponse>(req, "DescribeKTVMusicAccompanySegmentUrlVip");
+        }
+
+        /// <summary>
+        /// 获取歌曲伴奏高潮的开始、结束时间，可用于抢唱
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKTVMusicAccompanySegmentUrlVipRequest"/></param>
+        /// <returns><see cref="DescribeKTVMusicAccompanySegmentUrlVipResponse"/></returns>
+        public DescribeKTVMusicAccompanySegmentUrlVipResponse DescribeKTVMusicAccompanySegmentUrlVipSync(DescribeKTVMusicAccompanySegmentUrlVipRequest req)
+        {
+            return InternalRequestAsync<DescribeKTVMusicAccompanySegmentUrlVipResponse>(req, "DescribeKTVMusicAccompanySegmentUrlVip")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 通过标签过滤歌曲列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeKTVMusicsByTagRequest"/></param>
@@ -326,6 +347,27 @@ namespace TencentCloud.Yinsuda.V20220527
         }
 
         /// <summary>
+        /// 获取会员信息：获取用户是否开通会员
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVipUserInfoRequest"/></param>
+        /// <returns><see cref="DescribeVipUserInfoResponse"/></returns>
+        public Task<DescribeVipUserInfoResponse> DescribeVipUserInfo(DescribeVipUserInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeVipUserInfoResponse>(req, "DescribeVipUserInfo");
+        }
+
+        /// <summary>
+        /// 获取会员信息：获取用户是否开通会员
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVipUserInfoRequest"/></param>
+        /// <returns><see cref="DescribeVipUserInfoResponse"/></returns>
+        public DescribeVipUserInfoResponse DescribeVipUserInfoSync(DescribeVipUserInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeVipUserInfoResponse>(req, "DescribeVipUserInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 销毁机器人，机器人退出 RTC 房间。
         /// </summary>
         /// <param name="req"><see cref="DestroyKTVRobotRequest"/></param>
@@ -364,6 +406,27 @@ namespace TencentCloud.Yinsuda.V20220527
         public RechargeLiveVipResponse RechargeLiveVipSync(RechargeLiveVipRequest req)
         {
             return InternalRequestAsync<RechargeLiveVipResponse>(req, "RechargeLiveVip")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 充值会员
+        /// </summary>
+        /// <param name="req"><see cref="RechargeVipRequest"/></param>
+        /// <returns><see cref="RechargeVipResponse"/></returns>
+        public Task<RechargeVipResponse> RechargeVip(RechargeVipRequest req)
+        {
+            return InternalRequestAsync<RechargeVipResponse>(req, "RechargeVip");
+        }
+
+        /// <summary>
+        /// 充值会员
+        /// </summary>
+        /// <param name="req"><see cref="RechargeVipRequest"/></param>
+        /// <returns><see cref="RechargeVipResponse"/></returns>
+        public RechargeVipResponse RechargeVipSync(RechargeVipRequest req)
+        {
+            return InternalRequestAsync<RechargeVipResponse>(req, "RechargeVip")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -73,6 +73,12 @@ namespace TencentCloud.Tke.V20180525.Models
         public Taint[] Taints{ get; set; }
 
         /// <summary>
+        /// 节点 Annotation 列表
+        /// </summary>
+        [JsonProperty("Annotations")]
+        public AnnotationValue[] Annotations{ get; set; }
+
+        /// <summary>
         /// NodeCountSummary 节点列表
         /// </summary>
         [JsonProperty("NodeCountSummary")]
@@ -211,6 +217,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "AutoscalingGroupId", this.AutoscalingGroupId);
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
             this.SetParamArrayObj(map, prefix + "Taints.", this.Taints);
+            this.SetParamArrayObj(map, prefix + "Annotations.", this.Annotations);
             this.SetParamObj(map, prefix + "NodeCountSummary.", this.NodeCountSummary);
             this.SetParamSimple(map, prefix + "AutoscalingGroupStatus", this.AutoscalingGroupStatus);
             this.SetParamSimple(map, prefix + "MaxNodesNum", this.MaxNodesNum);

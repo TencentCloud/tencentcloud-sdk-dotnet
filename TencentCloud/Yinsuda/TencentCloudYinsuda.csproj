@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{213C2BE8-30A9-3154-A66B-F89DE0B01C6C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.922</VersionPrefix>
+    <VersionPrefix>3.0.923</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -60,6 +60,8 @@
     <Compile Include="V20220527\Models\DescribeKTVMatchMusicsResponse.cs" />
     <Compile Include="V20220527\Models\DescribeKTVMusicAccompanySegmentUrlRequest.cs" />
     <Compile Include="V20220527\Models\DescribeKTVMusicAccompanySegmentUrlResponse.cs" />
+    <Compile Include="V20220527\Models\DescribeKTVMusicAccompanySegmentUrlVipRequest.cs" />
+    <Compile Include="V20220527\Models\DescribeKTVMusicAccompanySegmentUrlVipResponse.cs" />
     <Compile Include="V20220527\Models\DescribeKTVMusicsByTagRequest.cs" />
     <Compile Include="V20220527\Models\DescribeKTVMusicsByTagResponse.cs" />
     <Compile Include="V20220527\Models\DescribeKTVPlaylistDetailRequest.cs" />
@@ -76,6 +78,8 @@
     <Compile Include="V20220527\Models\DescribeLiveVipTradeInfosResponse.cs" />
     <Compile Include="V20220527\Models\DescribeUserInfoRequest.cs" />
     <Compile Include="V20220527\Models\DescribeUserInfoResponse.cs" />
+    <Compile Include="V20220527\Models\DescribeVipUserInfoRequest.cs" />
+    <Compile Include="V20220527\Models\DescribeVipUserInfoResponse.cs" />
     <Compile Include="V20220527\Models\DestroyKTVRobotRequest.cs" />
     <Compile Include="V20220527\Models\DestroyKTVRobotResponse.cs" />
     <Compile Include="V20220527\Models\JoinRoomInput.cs" />
@@ -98,6 +102,8 @@
     <Compile Include="V20220527\Models\PlayCommandInput.cs" />
     <Compile Include="V20220527\Models\RechargeLiveVipRequest.cs" />
     <Compile Include="V20220527\Models\RechargeLiveVipResponse.cs" />
+    <Compile Include="V20220527\Models\RechargeVipRequest.cs" />
+    <Compile Include="V20220527\Models\RechargeVipResponse.cs" />
     <Compile Include="V20220527\Models\SearchKTVMusicsRequest.cs" />
     <Compile Include="V20220527\Models\SearchKTVMusicsResponse.cs" />
     <Compile Include="V20220527\Models\SeekCommandInput.cs" />

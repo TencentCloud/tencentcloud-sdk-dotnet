@@ -49,13 +49,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Component[] Components{ get; set; }
 
         /// <summary>
-        /// 模板中的签署参与方列表
+        /// 此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
         /// </summary>
         [JsonProperty("Recipients")]
         public Recipient[] Recipients{ get; set; }
 
         /// <summary>
-        /// 模板中的签署控件列表
+        /// 此模版中的签署控件列表
         /// </summary>
         [JsonProperty("SignComponents")]
         public Component[] SignComponents{ get; set; }
@@ -88,7 +88,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 模板的H5预览链接,有效期5分钟。
         /// 可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
-        /// （此功能开放需要联系客户经理）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PreviewUrl")]
@@ -125,17 +124,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? ChannelAutoSave{ get; set; }
 
         /// <summary>
-        /// 模板版本，全数字字符。
-        /// 默认为空，初始版本为yyyyMMdd001。
+        /// 模板版本，由全数字字符组成。
+        /// 默认为空，模板版本号由日期和序号组成，初始版本为yyyyMMdd001，yyyyMMdd002表示第二个版本，以此类推。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateVersion")]
         public string TemplateVersion{ get; set; }
 
         /// <summary>
-        /// 模板可用状态：
-        /// 1启用（默认）
-        /// 2停用
+        /// 模板可用状态的取值通常为以下两种：
+        /// 
+        /// <ul><li>1：启用（默认），表示模板处于启用状态，可以被用户正常使用。</li>
+        /// <li>2：停用，表示模板处于停用状态，禁止用户使用该模板。</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Available")]

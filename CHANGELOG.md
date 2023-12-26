@@ -1,3 +1,153 @@
+# Release 3.0.923
+
+## 云拨测(cat) 版本：2018-04-09
+
+### 第 16 次发布
+
+发布时间：2023-12-26 01:07:57
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeDetailedSingleProbeData](https://cloud.tencent.com/document/api/280/66205)
+
+	* 新增入参：QueryFlag
+
+
+
+
+## 腾讯云数据仓库 TCHouse-D(cdwdoris) 版本：2021-12-28
+
+### 第 6 次发布
+
+发布时间：2023-12-26 01:09:04
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [CreateInstanceNew](https://cloud.tencent.com/document/api/1387/102611)
+* [DescribeClusterConfigs](https://cloud.tencent.com/document/api/1387/102619)
+* [DescribeDatabaseAuditDownload](https://cloud.tencent.com/document/api/1387/102618)
+* [DescribeDatabaseAuditRecords](https://cloud.tencent.com/document/api/1387/102617)
+* [DescribeInstanceNodesInfo](https://cloud.tencent.com/document/api/1387/102616)
+* [DescribeInstanceState](https://cloud.tencent.com/document/api/1387/102615)
+* [DescribeSlowQueryRecords](https://cloud.tencent.com/document/api/1387/102614)
+* [DescribeSlowQueryRecordsDownload](https://cloud.tencent.com/document/api/1387/102613)
+* [DestroyInstance](https://cloud.tencent.com/document/api/1387/102610)
+* [ModifyInstance](https://cloud.tencent.com/document/api/1387/102612)
+* [ResizeDisk](https://cloud.tencent.com/document/api/1387/102609)
+* [RestartClusterForNode](https://cloud.tencent.com/document/api/1387/102608)
+* [ScaleOutInstance](https://cloud.tencent.com/document/api/1387/102607)
+* [ScaleUpInstance](https://cloud.tencent.com/document/api/1387/102606)
+
+新增数据结构：
+
+* [ChargeProperties](https://cloud.tencent.com/document/api/1387/102385#ChargeProperties)
+* [ClusterConfigsInfoFromEMR](https://cloud.tencent.com/document/api/1387/102385#ClusterConfigsInfoFromEMR)
+* [ConfigKeyValue](https://cloud.tencent.com/document/api/1387/102385#ConfigKeyValue)
+* [CreateInstanceSpec](https://cloud.tencent.com/document/api/1387/102385#CreateInstanceSpec)
+* [DataBaseAuditRecord](https://cloud.tencent.com/document/api/1387/102385#DataBaseAuditRecord)
+* [NodeInfo](https://cloud.tencent.com/document/api/1387/102385#NodeInfo)
+* [SlowQueryRecord](https://cloud.tencent.com/document/api/1387/102385#SlowQueryRecord)
+
+
+
+## 容器服务(tke) 版本：2018-05-25
+
+### 第 167 次发布
+
+发布时间：2023-12-26 01:27:04
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [CreateClusterNodePool](https://cloud.tencent.com/document/api/457/49436)
+
+	* 新增入参：Annotations
+
+* [ModifyClusterNodePool](https://cloud.tencent.com/document/api/457/49431)
+
+	* 新增入参：Annotations
+
+
+新增数据结构：
+
+* [AnnotationValue](https://cloud.tencent.com/document/api/457/31866#AnnotationValue)
+
+修改数据结构：
+
+* [NodePool](https://cloud.tencent.com/document/api/457/31866#NodePool)
+
+	* 新增成员：Annotations
+
+
+
+
+## 私有网络(vpc) 版本：2017-03-12
+
+### 第 184 次发布
+
+发布时间：2023-12-26 01:32:32
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [AssignIpv6SubnetCidrBlock](https://cloud.tencent.com/document/api/215/34471)
+
+	* 新增入参：ClientToken
+
+
+
+
+## Web 应用防火墙(waf) 版本：2018-01-25
+
+### 第 77 次发布
+
+发布时间：2023-12-26 02:05:35
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改数据结构：
+
+* [InstanceInfo](https://cloud.tencent.com/document/api/627/53609#InstanceInfo)
+
+	* 新增成员：LastQpsExceedTime
+
+
+
+
+## 音速达直播音乐版权引擎(yinsuda) 版本：2022-05-27
+
+### 第 18 次发布
+
+发布时间：2023-12-26 02:06:57
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [DescribeKTVMusicAccompanySegmentUrlVip](https://cloud.tencent.com/document/api/1592/102622)
+* [DescribeVipUserInfo](https://cloud.tencent.com/document/api/1592/102621)
+* [RechargeVip](https://cloud.tencent.com/document/api/1592/102620)
+
+
+
 # Release 3.0.922
 
 ## 腾讯云数据仓库 TCHouse-D(cdwdoris) 版本：2021-12-28

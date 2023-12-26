@@ -273,6 +273,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("MiniMaxQPS")]
         public ulong? MiniMaxQPS{ get; set; }
 
+        /// <summary>
+        /// 最近一次超量时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LastQpsExceedTime")]
+        public string LastQpsExceedTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -316,6 +323,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamObj(map, prefix + "MiniPkg.", this.MiniPkg);
             this.SetParamSimple(map, prefix + "MiniQpsStandard", this.MiniQpsStandard);
             this.SetParamSimple(map, prefix + "MiniMaxQPS", this.MiniMaxQPS);
+            this.SetParamSimple(map, prefix + "LastQpsExceedTime", this.LastQpsExceedTime);
         }
     }
 }

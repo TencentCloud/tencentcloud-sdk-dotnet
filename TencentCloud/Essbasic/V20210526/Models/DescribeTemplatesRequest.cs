@@ -111,8 +111,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <li>**true**：获取</li></ul>
         /// 
         /// 设置为true之后， 返回参数PreviewUrl，为模板的H5预览链接,  有效期5分钟。可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
-        /// 
-        /// 注: `此功能为白名单功能，使用前请联系对接的客户经理沟通。`
         /// </summary>
         [JsonProperty("WithPreviewUrl")]
         public bool? WithPreviewUrl{ get; set; }

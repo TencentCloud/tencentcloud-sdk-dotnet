@@ -81,6 +81,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成
         /// 
         /// 当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程
+        /// 
+        /// 注： 
+        /// 如果传进来的<font color="red">OpenId已经实名并且加入企业， 则忽略Name，IdCardType，IdCardNumber，Mobile这四个入参</font>（会用此OpenId实名的身份证和登录的手机号覆盖）
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }

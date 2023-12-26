@@ -662,7 +662,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(ModifyDBInstanceSpec)用于调整MongoDB云数据库实例配置。接口支持的售卖规格，可从查询云数据库的售卖规格（DescribeSpecInfo）获取。
+        /// 本接口（ModifyDBInstanceSpec）用于调整MongoDB云数据库实例配置。接口支持的售卖规格，可从查询云数据库的售卖规格（DescribeSpecInfo）获取。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSpecRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSpecResponse"/></returns>
@@ -672,7 +672,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(ModifyDBInstanceSpec)用于调整MongoDB云数据库实例配置。接口支持的售卖规格，可从查询云数据库的售卖规格（DescribeSpecInfo）获取。
+        /// 本接口（ModifyDBInstanceSpec）用于调整MongoDB云数据库实例配置。接口支持的售卖规格，可从查询云数据库的售卖规格（DescribeSpecInfo）获取。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSpecRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSpecResponse"/></returns>

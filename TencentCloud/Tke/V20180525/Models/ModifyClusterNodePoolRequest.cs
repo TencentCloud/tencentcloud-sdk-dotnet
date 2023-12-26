@@ -67,6 +67,12 @@ namespace TencentCloud.Tke.V20180525.Models
         public Taint[] Taints{ get; set; }
 
         /// <summary>
+        /// 节点 Annotation 列表
+        /// </summary>
+        [JsonProperty("Annotations")]
+        public AnnotationValue[] Annotations{ get; set; }
+
+        /// <summary>
         /// 是否开启伸缩
         /// </summary>
         [JsonProperty("EnableAutoscale")]
@@ -151,6 +157,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "MinNodesNum", this.MinNodesNum);
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
             this.SetParamArrayObj(map, prefix + "Taints.", this.Taints);
+            this.SetParamArrayObj(map, prefix + "Annotations.", this.Annotations);
             this.SetParamSimple(map, prefix + "EnableAutoscale", this.EnableAutoscale);
             this.SetParamSimple(map, prefix + "OsName", this.OsName);
             this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);

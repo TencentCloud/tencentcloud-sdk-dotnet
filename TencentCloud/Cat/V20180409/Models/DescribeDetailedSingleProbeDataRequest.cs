@@ -62,7 +62,7 @@ namespace TencentCloud.Cat.V20180409.Models
         public bool? Ascending{ get; set; }
 
         /// <summary>
-        /// 选中字段
+        /// 选中字段，如ProbeTime、TransferTime、TransferSize等。
         /// </summary>
         [JsonProperty("SelectedFields")]
         public string[] SelectedFields{ get; set; }
@@ -135,6 +135,12 @@ namespace TencentCloud.Cat.V20180409.Models
         [JsonProperty("ScrollID")]
         public string ScrollID{ get; set; }
 
+        /// <summary>
+        /// 详情数据下载
+        /// </summary>
+        [JsonProperty("QueryFlag")]
+        public string QueryFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -155,6 +161,7 @@ namespace TencentCloud.Cat.V20180409.Models
             this.SetParamArraySimple(map, prefix + "ErrorTypes.", this.ErrorTypes);
             this.SetParamArraySimple(map, prefix + "City.", this.City);
             this.SetParamSimple(map, prefix + "ScrollID", this.ScrollID);
+            this.SetParamSimple(map, prefix + "QueryFlag", this.QueryFlag);
         }
     }
 }

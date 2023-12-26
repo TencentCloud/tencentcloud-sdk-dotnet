@@ -69,7 +69,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <li>**4**：系统签名</li></ul>
         /// 注：
         /// <ul><li>默认情况下，签名类型为手写签名</li>
-        /// <li>您可以传递多种值，表示可用多种签名类型。</li></ul>
+        /// <li>您可以传递多种值，表示可用多种签名类型。</li>
+        /// <li>该参数会覆盖您合同中的签名类型，若您在发起合同时限定了签名类型(赋值签名类型给ComponentTypeLimit)，请将这些签名类型赋予此参数</li></ul>
         /// </summary>
         [JsonProperty("SignatureTypes")]
         public long?[] SignatureTypes{ get; set; }

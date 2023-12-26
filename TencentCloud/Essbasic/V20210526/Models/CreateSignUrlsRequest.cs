@@ -127,6 +127,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 第三方平台子客企业员工的标识OpenId，GenerateType为"CHANNEL"时可用，指定到具体参与人, 仅展示已经实名的经办人信息
+        /// 
+        /// 注： 
+        /// 如果传进来的<font color="red">OpenId已经实名并且加入企业， 则忽略Name，IdCardType，IdCardNumber，Mobile这四个入参</font>（会用此OpenId实名的身份证和登录的手机号覆盖）
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }

@@ -62,7 +62,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string[] MetricLabels{ get; set; }
 
         /// <summary>
-        /// 指标时间戳，默认值为SQL查询时间范围的左侧时间点，您也可以指定其他字段（类型为uinx时间，精度毫秒）为指标时间戳。
+        /// 指标时间戳，默认值为SQL查询时间范围的左侧时间点，您也可以指定其他字段（类型为uinx时间、TimeStamp，精度毫秒）为指标时间戳。
         /// </summary>
         [JsonProperty("CustomTime")]
         public string CustomTime{ get; set; }
