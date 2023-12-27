@@ -1,3 +1,52 @@
+# Release 3.0.925
+
+## 腾讯健康组学平台(omics) 版本：2022-11-28
+
+### 第 10 次发布
+
+发布时间：2023-12-28 01:21:09
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [RetryRuns](https://cloud.tencent.com/document/api/1643/90978)
+
+	* 新增入参：RunGroupId, WDLOption, NFOption
+
+	* <font color="#dd0000">**修改入参**：</font>ProjectId, RunUuids
+
+	* 新增出参：RunGroupId
+
+
+
+
+## 数据开发治理平台 WeData(wedata) 版本：2021-08-20
+
+### 第 66 次发布
+
+发布时间：2023-12-28 01:29:55
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [DescribeFieldBasicInfo](https://cloud.tencent.com/document/api/1267/102705)
+* [DescribeTableBasicInfo](https://cloud.tencent.com/document/api/1267/102704)
+* [DescribeTableLineageInfo](https://cloud.tencent.com/document/api/1267/102703)
+
+新增数据结构：
+
+* [ColumnBasicInfo](https://cloud.tencent.com/document/api/1267/76336#ColumnBasicInfo)
+* [TableBasicInfo](https://cloud.tencent.com/document/api/1267/76336#TableBasicInfo)
+* [TableLineageBaseInfo](https://cloud.tencent.com/document/api/1267/76336#TableLineageBaseInfo)
+
+
+
 # Release 3.0.924
 
 ## 费用中心(billing) 版本：2018-07-09

@@ -26,6 +26,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         
         /// <summary>
         /// 批量撤销合同的URL链接, 需要在手机端打开, 有效期24小时
+        /// 
+        /// 注：<font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
         /// </summary>
         [JsonProperty("BatchCancelFlowUrl")]
         public string BatchCancelFlowUrl{ get; set; }

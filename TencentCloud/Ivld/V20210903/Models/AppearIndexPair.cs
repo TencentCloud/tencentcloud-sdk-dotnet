@@ -31,7 +31,7 @@ namespace TencentCloud.Ivld.V20210903.Models
         public long? AppearIndex{ get; set; }
 
         /// <summary>
-        /// AppearInfo中AppearIndex对应元素的第Index元素，从0开始技术
+        /// AppearInfo中AppearIndex对应元素的第Index元素，从0开始计数
         /// </summary>
         [JsonProperty("Index")]
         public long? Index{ get; set; }

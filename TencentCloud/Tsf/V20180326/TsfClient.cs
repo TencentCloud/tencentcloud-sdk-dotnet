@@ -389,7 +389,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 创建参数模版，并返回模版详细信息
+        /// 创建参数模板，并返回模板详细信息
         /// </summary>
         /// <param name="req"><see cref="CreateConfigTemplateWithDetailRespRequest"/></param>
         /// <returns><see cref="CreateConfigTemplateWithDetailRespResponse"/></returns>
@@ -399,7 +399,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 创建参数模版，并返回模版详细信息
+        /// 创建参数模板，并返回模板详细信息
         /// </summary>
         /// <param name="req"><see cref="CreateConfigTemplateWithDetailRespRequest"/></param>
         /// <returns><see cref="CreateConfigTemplateWithDetailRespResponse"/></returns>

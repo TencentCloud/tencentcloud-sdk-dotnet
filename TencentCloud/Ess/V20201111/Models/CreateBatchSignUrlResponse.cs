@@ -27,7 +27,9 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 批量签署链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
         /// 
-        /// 注: `非小程序和APP集成使用`
+        /// 注: 
+        /// 1. 非小程序和APP集成使用
+        /// 2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
         /// </summary>
         [JsonProperty("SignUrl")]
         public string SignUrl{ get; set; }
@@ -41,7 +43,9 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径
         /// 
-        /// 注: `小程序和APP集成使用`
+        /// 注: 
+        /// 1. 小程序和APP集成使用
+        /// 2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
         /// </summary>
         [JsonProperty("MiniAppPath")]
         public string MiniAppPath{ get; set; }

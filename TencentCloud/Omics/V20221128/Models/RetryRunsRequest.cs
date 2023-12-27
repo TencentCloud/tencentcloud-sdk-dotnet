@@ -25,16 +25,34 @@ namespace TencentCloud.Omics.V20221128.Models
     {
         
         /// <summary>
-        /// 关联项目ID。
+        /// 项目ID。（不填使用指定地域下的默认项目）
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 任务UUID。
+        /// 需要重试的任务批次ID。
+        /// </summary>
+        [JsonProperty("RunGroupId")]
+        public string RunGroupId{ get; set; }
+
+        /// <summary>
+        /// 需要重试的任务UUID。
         /// </summary>
         [JsonProperty("RunUuids")]
         public string[] RunUuids{ get; set; }
+
+        /// <summary>
+        /// WDL运行选项，不填使用被重试的任务批次运行选项。
+        /// </summary>
+        [JsonProperty("WDLOption")]
+        public RunOption WDLOption{ get; set; }
+
+        /// <summary>
+        /// Nextflow运行选项，不填使用被重试的任务批次运行选项。
+        /// </summary>
+        [JsonProperty("NFOption")]
+        public NFOption NFOption{ get; set; }
 
 
         /// <summary>
@@ -43,7 +61,10 @@ namespace TencentCloud.Omics.V20221128.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "RunGroupId", this.RunGroupId);
             this.SetParamArraySimple(map, prefix + "RunUuids.", this.RunUuids);
+            this.SetParamObj(map, prefix + "WDLOption.", this.WDLOption);
+            this.SetParamObj(map, prefix + "NFOption.", this.NFOption);
         }
     }
 }

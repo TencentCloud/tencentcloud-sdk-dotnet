@@ -2643,6 +2643,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 元数据模型-字段基础信息查询接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFieldBasicInfoRequest"/></param>
+        /// <returns><see cref="DescribeFieldBasicInfoResponse"/></returns>
+        public Task<DescribeFieldBasicInfoResponse> DescribeFieldBasicInfo(DescribeFieldBasicInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeFieldBasicInfoResponse>(req, "DescribeFieldBasicInfo");
+        }
+
+        /// <summary>
+        /// 元数据模型-字段基础信息查询接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFieldBasicInfoRequest"/></param>
+        /// <returns><see cref="DescribeFieldBasicInfoResponse"/></returns>
+        public DescribeFieldBasicInfoResponse DescribeFieldBasicInfoSync(DescribeFieldBasicInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeFieldBasicInfoResponse>(req, "DescribeFieldBasicInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 拉取文件夹目录
         /// </summary>
@@ -4444,6 +4465,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 元数据模型-表基础信息查询接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTableBasicInfoRequest"/></param>
+        /// <returns><see cref="DescribeTableBasicInfoResponse"/></returns>
+        public Task<DescribeTableBasicInfoResponse> DescribeTableBasicInfo(DescribeTableBasicInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeTableBasicInfoResponse>(req, "DescribeTableBasicInfo");
+        }
+
+        /// <summary>
+        /// 元数据模型-表基础信息查询接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTableBasicInfoRequest"/></param>
+        /// <returns><see cref="DescribeTableBasicInfoResponse"/></returns>
+        public DescribeTableBasicInfoResponse DescribeTableBasicInfoSync(DescribeTableBasicInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeTableBasicInfoResponse>(req, "DescribeTableBasicInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取数据表信息
         /// </summary>
         /// <param name="req"><see cref="DescribeTableInfoListRequest"/></param>
@@ -4482,6 +4524,27 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeTableLineageResponse DescribeTableLineageSync(DescribeTableLineageRequest req)
         {
             return InternalRequestAsync<DescribeTableLineageResponse>(req, "DescribeTableLineage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列出表血缘信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTableLineageInfoRequest"/></param>
+        /// <returns><see cref="DescribeTableLineageInfoResponse"/></returns>
+        public Task<DescribeTableLineageInfoResponse> DescribeTableLineageInfo(DescribeTableLineageInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeTableLineageInfoResponse>(req, "DescribeTableLineageInfo");
+        }
+
+        /// <summary>
+        /// 列出表血缘信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTableLineageInfoRequest"/></param>
+        /// <returns><see cref="DescribeTableLineageInfoResponse"/></returns>
+        public DescribeTableLineageInfoResponse DescribeTableLineageInfoSync(DescribeTableLineageInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeTableLineageInfoResponse>(req, "DescribeTableLineageInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

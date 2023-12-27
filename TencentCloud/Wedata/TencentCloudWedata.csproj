@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.924</VersionPrefix>
+    <VersionPrefix>3.0.925</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -139,6 +139,7 @@
     <Compile Include="V20210820\Models\CollectionInstanceOpsDto.cs" />
     <Compile Include="V20210820\Models\CollectionTaskOpsDto.cs" />
     <Compile Include="V20210820\Models\ColumnAggregationLineage.cs" />
+    <Compile Include="V20210820\Models\ColumnBasicInfo.cs" />
     <Compile Include="V20210820\Models\ColumnLineageInfo.cs" />
     <Compile Include="V20210820\Models\ColumnMeta.cs" />
     <Compile Include="V20210820\Models\CommitExportTaskRequest.cs" />
@@ -358,6 +359,8 @@
     <Compile Include="V20210820\Models\DescribeExecStrategyResponse.cs" />
     <Compile Include="V20210820\Models\DescribeFathersRequest.cs" />
     <Compile Include="V20210820\Models\DescribeFathersResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeFieldBasicInfoRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeFieldBasicInfoResponse.cs" />
     <Compile Include="V20210820\Models\DescribeFolderListData.cs" />
     <Compile Include="V20210820\Models\DescribeFolderListRequest.cs" />
     <Compile Include="V20210820\Models\DescribeFolderListResponse.cs" />
@@ -530,8 +533,12 @@
     <Compile Include="V20210820\Models\DescribeStreamTaskLogListResponse.cs" />
     <Compile Include="V20210820\Models\DescribeSuccessorOpsTaskInfosRequest.cs" />
     <Compile Include="V20210820\Models\DescribeSuccessorOpsTaskInfosResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeTableBasicInfoRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeTableBasicInfoResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTableInfoListRequest.cs" />
     <Compile Include="V20210820\Models\DescribeTableInfoListResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeTableLineageInfoRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeTableLineageInfoResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTableLineageRequest.cs" />
     <Compile Include="V20210820\Models\DescribeTableLineageResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTableMetaRequest.cs" />
@@ -894,9 +901,11 @@
     <Compile Include="V20210820\Models\SuspendIntegrationTaskRequest.cs" />
     <Compile Include="V20210820\Models\SuspendIntegrationTaskResponse.cs" />
     <Compile Include="V20210820\Models\TableBaseInfo.cs" />
+    <Compile Include="V20210820\Models\TableBasicInfo.cs" />
     <Compile Include="V20210820\Models\TableConfig.cs" />
     <Compile Include="V20210820\Models\TableHeat.cs" />
     <Compile Include="V20210820\Models\TableInfo.cs" />
+    <Compile Include="V20210820\Models\TableLineageBaseInfo.cs" />
     <Compile Include="V20210820\Models\TableLineageInfo.cs" />
     <Compile Include="V20210820\Models\TableMeta.cs" />
     <Compile Include="V20210820\Models\TablePropertyScore.cs" />
