@@ -145,7 +145,15 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string TaskCreateTime{ get; set; }
 
         /// <summary>
-        /// 接入状态
+        /// 接入状态:
+        /// 未接入: AccessedNone
+        /// 已防护: AccessedDefended
+        /// 未防护: AccessedInstalled
+        /// 部分防护: AccessedPartialDefence
+        /// 接入异常: AccessedException
+        /// 卸载异常: AccessedUninstallException
+        /// 接入中: AccessedInstalling
+        /// 卸载中: AccessedUninstalling
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessedStatus")]
@@ -179,6 +187,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("UnInstallAgentNodeCount")]
         public ulong? UnInstallAgentNodeCount{ get; set; }
 
+        /// <summary>
+        /// 计费核数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ChargeCoresCnt")]
+        public ulong? ChargeCoresCnt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -210,6 +225,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
             this.SetParamSimple(map, prefix + "OffLineNodeCount", this.OffLineNodeCount);
             this.SetParamSimple(map, prefix + "UnInstallAgentNodeCount", this.UnInstallAgentNodeCount);
+            this.SetParamSimple(map, prefix + "ChargeCoresCnt", this.ChargeCoresCnt);
         }
     }
 }

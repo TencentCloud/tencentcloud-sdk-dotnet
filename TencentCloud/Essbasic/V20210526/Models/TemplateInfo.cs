@@ -55,7 +55,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Recipient[] Recipients{ get; set; }
 
         /// <summary>
-        /// 此模版中的签署控件列表
+        /// 此模板中的签署控件列表
         /// </summary>
         [JsonProperty("SignComponents")]
         public Component[] SignComponents{ get; set; }

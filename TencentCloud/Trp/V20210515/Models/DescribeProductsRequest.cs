@@ -54,6 +54,12 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("CorpId")]
         public ulong? CorpId{ get; set; }
 
+        /// <summary>
+        /// 认证状态
+        /// </summary>
+        [JsonProperty("CertState")]
+        public long? CertState{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "MerchantId", this.MerchantId);
             this.SetParamSimple(map, prefix + "CorpId", this.CorpId);
+            this.SetParamSimple(map, prefix + "CertState", this.CertState);
         }
     }
 }

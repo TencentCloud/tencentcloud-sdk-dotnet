@@ -25,8 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// <li>ItemId - int64 - 是否必填：否 - 项Id</i>
-        /// <li>PolicyId - int64 - 是否必填：否 - 项Id</i>
+        /// <li>ItemId - int64 - 是否必填：否 - 项Id</li>
         /// <li>Level - int - 是否必填：否 - 风险等级</li>
         /// <li>ItemName - string - 是否必填：否 - 检测项名字</li>
         /// <li>RuleId - int - 是否必填：否 - 规则Id</li>

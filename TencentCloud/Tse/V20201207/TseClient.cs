@@ -137,6 +137,27 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 创建公网网络配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudNativeAPIGatewayPublicNetworkRequest"/></param>
+        /// <returns><see cref="CreateCloudNativeAPIGatewayPublicNetworkResponse"/></returns>
+        public Task<CreateCloudNativeAPIGatewayPublicNetworkResponse> CreateCloudNativeAPIGatewayPublicNetwork(CreateCloudNativeAPIGatewayPublicNetworkRequest req)
+        {
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayPublicNetworkResponse>(req, "CreateCloudNativeAPIGatewayPublicNetwork");
+        }
+
+        /// <summary>
+        /// 创建公网网络配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudNativeAPIGatewayPublicNetworkRequest"/></param>
+        /// <returns><see cref="CreateCloudNativeAPIGatewayPublicNetworkResponse"/></returns>
+        public CreateCloudNativeAPIGatewayPublicNetworkResponse CreateCloudNativeAPIGatewayPublicNetworkSync(CreateCloudNativeAPIGatewayPublicNetworkRequest req)
+        {
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayPublicNetworkResponse>(req, "CreateCloudNativeAPIGatewayPublicNetwork")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建云原生网关路由
         /// </summary>
         /// <param name="req"><see cref="CreateCloudNativeAPIGatewayRouteRequest"/></param>
@@ -343,6 +364,27 @@ namespace TencentCloud.Tse.V20201207
         public DeleteCloudNativeAPIGatewayCertificateResponse DeleteCloudNativeAPIGatewayCertificateSync(DeleteCloudNativeAPIGatewayCertificateRequest req)
         {
             return InternalRequestAsync<DeleteCloudNativeAPIGatewayCertificateResponse>(req, "DeleteCloudNativeAPIGatewayCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除公网网络配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayPublicNetworkRequest"/></param>
+        /// <returns><see cref="DeleteCloudNativeAPIGatewayPublicNetworkResponse"/></returns>
+        public Task<DeleteCloudNativeAPIGatewayPublicNetworkResponse> DeleteCloudNativeAPIGatewayPublicNetwork(DeleteCloudNativeAPIGatewayPublicNetworkRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayPublicNetworkResponse>(req, "DeleteCloudNativeAPIGatewayPublicNetwork");
+        }
+
+        /// <summary>
+        /// 删除公网网络配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayPublicNetworkRequest"/></param>
+        /// <returns><see cref="DeleteCloudNativeAPIGatewayPublicNetworkResponse"/></returns>
+        public DeleteCloudNativeAPIGatewayPublicNetworkResponse DeleteCloudNativeAPIGatewayPublicNetworkSync(DeleteCloudNativeAPIGatewayPublicNetworkRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayPublicNetworkResponse>(req, "DeleteCloudNativeAPIGatewayPublicNetwork")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1145,6 +1187,27 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 修改网关实例Konga网络配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConsoleNetworkRequest"/></param>
+        /// <returns><see cref="ModifyConsoleNetworkResponse"/></returns>
+        public Task<ModifyConsoleNetworkResponse> ModifyConsoleNetwork(ModifyConsoleNetworkRequest req)
+        {
+            return InternalRequestAsync<ModifyConsoleNetworkResponse>(req, "ModifyConsoleNetwork");
+        }
+
+        /// <summary>
+        /// 修改网关实例Konga网络配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConsoleNetworkRequest"/></param>
+        /// <returns><see cref="ModifyConsoleNetworkResponse"/></returns>
+        public ModifyConsoleNetworkResponse ModifyConsoleNetworkSync(ModifyConsoleNetworkRequest req)
+        {
+            return InternalRequestAsync<ModifyConsoleNetworkResponse>(req, "ModifyConsoleNetwork")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改云原生API网关实例分组基础信息
         /// </summary>
         /// <param name="req"><see cref="ModifyNativeGatewayServerGroupRequest"/></param>
@@ -1162,6 +1225,48 @@ namespace TencentCloud.Tse.V20201207
         public ModifyNativeGatewayServerGroupResponse ModifyNativeGatewayServerGroupSync(ModifyNativeGatewayServerGroupRequest req)
         {
             return InternalRequestAsync<ModifyNativeGatewayServerGroupResponse>(req, "ModifyNativeGatewayServerGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改云原生API网关实例Kong访问策略，支持白名单或者黑名单。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNetworkAccessStrategyRequest"/></param>
+        /// <returns><see cref="ModifyNetworkAccessStrategyResponse"/></returns>
+        public Task<ModifyNetworkAccessStrategyResponse> ModifyNetworkAccessStrategy(ModifyNetworkAccessStrategyRequest req)
+        {
+            return InternalRequestAsync<ModifyNetworkAccessStrategyResponse>(req, "ModifyNetworkAccessStrategy");
+        }
+
+        /// <summary>
+        /// 修改云原生API网关实例Kong访问策略，支持白名单或者黑名单。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNetworkAccessStrategyRequest"/></param>
+        /// <returns><see cref="ModifyNetworkAccessStrategyResponse"/></returns>
+        public ModifyNetworkAccessStrategyResponse ModifyNetworkAccessStrategySync(ModifyNetworkAccessStrategyRequest req)
+        {
+            return InternalRequestAsync<ModifyNetworkAccessStrategyResponse>(req, "ModifyNetworkAccessStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改云原生API网关实例网络基本信息，比如带宽以及描述，只支持修改客户端公网/内网的信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNetworkBasicInfoRequest"/></param>
+        /// <returns><see cref="ModifyNetworkBasicInfoResponse"/></returns>
+        public Task<ModifyNetworkBasicInfoResponse> ModifyNetworkBasicInfo(ModifyNetworkBasicInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyNetworkBasicInfoResponse>(req, "ModifyNetworkBasicInfo");
+        }
+
+        /// <summary>
+        /// 修改云原生API网关实例网络基本信息，比如带宽以及描述，只支持修改客户端公网/内网的信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNetworkBasicInfoRequest"/></param>
+        /// <returns><see cref="ModifyNetworkBasicInfoResponse"/></returns>
+        public ModifyNetworkBasicInfoResponse ModifyNetworkBasicInfoSync(ModifyNetworkBasicInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyNetworkBasicInfoResponse>(req, "ModifyNetworkBasicInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

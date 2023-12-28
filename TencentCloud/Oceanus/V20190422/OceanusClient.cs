@@ -683,6 +683,27 @@ namespace TencentCloud.Oceanus.V20190422
         }
 
         /// <summary>
+        /// 查询元数据表
+        /// </summary>
+        /// <param name="req"><see cref="GetMetaTableRequest"/></param>
+        /// <returns><see cref="GetMetaTableResponse"/></returns>
+        public Task<GetMetaTableResponse> GetMetaTable(GetMetaTableRequest req)
+        {
+            return InternalRequestAsync<GetMetaTableResponse>(req, "GetMetaTable");
+        }
+
+        /// <summary>
+        /// 查询元数据表
+        /// </summary>
+        /// <param name="req"><see cref="GetMetaTableRequest"/></param>
+        /// <returns><see cref="GetMetaTableResponse"/></returns>
+        public GetMetaTableResponse GetMetaTableSync(GetMetaTableRequest req)
+        {
+            return InternalRequestAsync<GetMetaTableResponse>(req, "GetMetaTable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 自定义树状结构页面拖拽文件夹
         /// </summary>
         /// <param name="req"><see cref="ModifyFolderRequest"/></param>

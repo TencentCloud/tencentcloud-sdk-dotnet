@@ -49,7 +49,7 @@ namespace TencentCloud.Cat.V20180409.Models
         public long? Interval{ get; set; }
 
         /// <summary>
-        /// 拨测参数，如{}，详细可参考云拨测官方文档。
+        /// 拨测参数，详细可参考云拨测官方文档,链接:https://cloud.tencent.com/document/product/248/87308#createprobetasks。
         /// </summary>
         [JsonProperty("Parameters")]
         public string Parameters{ get; set; }

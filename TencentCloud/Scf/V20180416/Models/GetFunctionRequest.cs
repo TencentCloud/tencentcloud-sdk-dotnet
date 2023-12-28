@@ -25,7 +25,7 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// 需要获取详情的函数名称
+        /// 需要获取详情的函数名称，ResourceId和FunctionName只能传一个
         /// </summary>
         [JsonProperty("FunctionName")]
         public string FunctionName{ get; set; }

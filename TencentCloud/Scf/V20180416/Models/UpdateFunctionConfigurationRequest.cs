@@ -163,6 +163,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("IntranetConfig")]
         public IntranetConfigIn IntranetConfig{ get; set; }
 
+        /// <summary>
+        /// 忽略系统日志上报
+        /// </summary>
+        [JsonProperty("IgnoreSysLog")]
+        public bool? IgnoreSysLog{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -192,6 +198,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamObj(map, prefix + "InstanceConcurrencyConfig.", this.InstanceConcurrencyConfig);
             this.SetParamSimple(map, prefix + "DnsCache", this.DnsCache);
             this.SetParamObj(map, prefix + "IntranetConfig.", this.IntranetConfig);
+            this.SetParamSimple(map, prefix + "IgnoreSysLog", this.IgnoreSysLog);
         }
     }
 }

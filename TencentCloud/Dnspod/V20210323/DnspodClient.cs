@@ -222,6 +222,7 @@ namespace TencentCloud.Dnspod.V20210323
 
         /// <summary>
         /// 添加记录
+        /// 备注：新添加的解析记录存在短暂的索引延迟，如果查询不到新增记录，请在 30 秒后重试
         /// </summary>
         /// <param name="req"><see cref="CreateRecordRequest"/></param>
         /// <returns><see cref="CreateRecordResponse"/></returns>
@@ -232,6 +233,7 @@ namespace TencentCloud.Dnspod.V20210323
 
         /// <summary>
         /// 添加记录
+        /// 备注：新添加的解析记录存在短暂的索引延迟，如果查询不到新增记录，请在 30 秒后重试
         /// </summary>
         /// <param name="req"><see cref="CreateRecordRequest"/></param>
         /// <returns><see cref="CreateRecordResponse"/></returns>
@@ -600,6 +602,7 @@ namespace TencentCloud.Dnspod.V20210323
 
         /// <summary>
         /// 获取域名筛选列表
+        /// 备注：新添加的解析记录存在短暂的索引延迟，如果查询不到新增记录，请在 30 秒后重试
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainFilterListRequest"/></param>
         /// <returns><see cref="DescribeDomainFilterListResponse"/></returns>
@@ -610,6 +613,7 @@ namespace TencentCloud.Dnspod.V20210323
 
         /// <summary>
         /// 获取域名筛选列表
+        /// 备注：新添加的解析记录存在短暂的索引延迟，如果查询不到新增记录，请在 30 秒后重试
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainFilterListRequest"/></param>
         /// <returns><see cref="DescribeDomainFilterListResponse"/></returns>
@@ -894,6 +898,7 @@ namespace TencentCloud.Dnspod.V20210323
 
         /// <summary>
         /// 获取某个域名下的解析记录列表
+        /// 备注：新添加的解析记录存在短暂的索引延迟，如果查询不到新增记录，请在 30 秒后重试
         /// </summary>
         /// <param name="req"><see cref="DescribeRecordListRequest"/></param>
         /// <returns><see cref="DescribeRecordListResponse"/></returns>
@@ -904,6 +909,7 @@ namespace TencentCloud.Dnspod.V20210323
 
         /// <summary>
         /// 获取某个域名下的解析记录列表
+        /// 备注：新添加的解析记录存在短暂的索引延迟，如果查询不到新增记录，请在 30 秒后重试
         /// </summary>
         /// <param name="req"><see cref="DescribeRecordListRequest"/></param>
         /// <returns><see cref="DescribeRecordListResponse"/></returns>

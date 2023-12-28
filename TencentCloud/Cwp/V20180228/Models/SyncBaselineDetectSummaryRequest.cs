@@ -24,12 +24,19 @@ namespace TencentCloud.Cwp.V20180228.Models
     public class SyncBaselineDetectSummaryRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 用于计算检测中和进度的任务ID集合，一般不用传入
+        /// </summary>
+        [JsonProperty("TaskIds")]
+        public ulong?[] TaskIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "TaskIds.", this.TaskIds);
         }
     }
 }

@@ -68,6 +68,7 @@ namespace TencentCloud.Aiart.V20221229.Models
 
         /// <summary>
         /// 生成图结果的配置，包括输出图片分辨率和尺寸等。
+        /// 支持生成以下分辨率的图片：768:768（1:1）、768:1024（3:4）、1024:768（4:3）、不传默认与原图保持一致。
         /// </summary>
         [JsonProperty("ResultConfig")]
         public ResultConfig ResultConfig{ get; set; }

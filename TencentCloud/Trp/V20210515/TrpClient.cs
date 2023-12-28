@@ -454,7 +454,7 @@ namespace TencentCloud.Trp.V20210515
         /// <summary>
         /// 查询批次列表
         /// 
-        /// 旧版接口已经弃用，新业务请使用用新版的接口 DescribeCodeBatches
+        /// 旧版接口已经弃用，新业务请使用新版的接口 DescribeCodeBatches
         /// </summary>
         /// <param name="req"><see cref="DescribeCodeBatchsRequest"/></param>
         /// <returns><see cref="DescribeCodeBatchsResponse"/></returns>
@@ -466,7 +466,7 @@ namespace TencentCloud.Trp.V20210515
         /// <summary>
         /// 查询批次列表
         /// 
-        /// 旧版接口已经弃用，新业务请使用用新版的接口 DescribeCodeBatches
+        /// 旧版接口已经弃用，新业务请使用新版的接口 DescribeCodeBatches
         /// </summary>
         /// <param name="req"><see cref="DescribeCodeBatchsRequest"/></param>
         /// <returns><see cref="DescribeCodeBatchsResponse"/></returns>

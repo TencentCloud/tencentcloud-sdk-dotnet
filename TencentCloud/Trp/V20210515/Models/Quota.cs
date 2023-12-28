@@ -115,6 +115,13 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
+        /// <summary>
+        /// 是否开启企业认证
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductCertify")]
+        public ulong? ProductCertify{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +141,7 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "RiskQuota", this.RiskQuota);
             this.SetParamSimple(map, prefix + "TrackType", this.TrackType);
             this.SetParamSimple(map, prefix + "Version", this.Version);
+            this.SetParamSimple(map, prefix + "ProductCertify", this.ProductCertify);
         }
     }
 }

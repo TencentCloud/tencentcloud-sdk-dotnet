@@ -25,14 +25,14 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 模版ID
+        /// 模板ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
-        /// 模版名称
+        /// 模板名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
@@ -46,7 +46,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Detail{ get; set; }
 
         /// <summary>
-        /// IP模版
+        /// IP模板
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpString")]
@@ -67,7 +67,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 模版类型
+        /// 模板类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]

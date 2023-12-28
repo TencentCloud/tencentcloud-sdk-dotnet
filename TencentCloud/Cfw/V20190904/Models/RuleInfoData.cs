@@ -55,7 +55,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Strategy{ get; set; }
 
         /// <summary>
-        /// 访问源类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
+        /// 访问源类型，1是IP，3是域名，4是IP地址模板，5是域名地址模板
         /// </summary>
         [JsonProperty("SourceType")]
         public ulong? SourceType{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Detail{ get; set; }
 
         /// <summary>
-        /// 访问目的类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
+        /// 访问目的类型，1是IP，3是域名，4是IP地址模板，5是域名地址模板
         /// </summary>
         [JsonProperty("TargetType")]
         public ulong? TargetType{ get; set; }

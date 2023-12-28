@@ -100,6 +100,13 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("MerchantName")]
         public string MerchantName{ get; set; }
 
+        /// <summary>
+        /// 认证状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CertState")]
+        public long? CertState{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +125,7 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamObj(map, prefix + "Ext.", this.Ext);
             this.SetParamSimple(map, prefix + "MerchantName", this.MerchantName);
+            this.SetParamSimple(map, prefix + "CertState", this.CertState);
         }
     }
 }

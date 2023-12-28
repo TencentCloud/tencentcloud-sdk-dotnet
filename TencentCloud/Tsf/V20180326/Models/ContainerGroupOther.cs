@@ -37,6 +37,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         public long? CurrentNum{ get; set; }
 
         /// <summary>
+        /// 负载均衡DNS地址
+        /// </summary>
+        [JsonProperty("LbDns")]
+        public string LbDns{ get; set; }
+
+        /// <summary>
         /// 负载均衡ip
         /// </summary>
         [JsonProperty("LbIp")]
@@ -49,13 +55,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ClusterIp{ get; set; }
 
         /// <summary>
-        /// 服务状态，请参考后面的的状态定义
+        /// 服务状态，请参考后面的状态定义
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 服务状态，请参考后面的的状态定义
+        /// 服务状态，请参考后面的状态定义
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
@@ -102,6 +108,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         {
             this.SetParamSimple(map, prefix + "InstanceNum", this.InstanceNum);
             this.SetParamSimple(map, prefix + "CurrentNum", this.CurrentNum);
+            this.SetParamSimple(map, prefix + "LbDns", this.LbDns);
             this.SetParamSimple(map, prefix + "LbIp", this.LbIp);
             this.SetParamSimple(map, prefix + "ClusterIp", this.ClusterIp);
             this.SetParamSimple(map, prefix + "Status", this.Status);
