@@ -53,6 +53,27 @@ namespace TencentCloud.Tms.V20201229
         }
 
         /// <summary>
+        /// 天御文本内容安全审核接口，改接口会按照客户定制标签输出审核结果
+        /// </summary>
+        /// <param name="req"><see cref="ModerateTextRequest"/></param>
+        /// <returns><see cref="ModerateTextResponse"/></returns>
+        public Task<ModerateTextResponse> ModerateText(ModerateTextRequest req)
+        {
+            return InternalRequestAsync<ModerateTextResponse>(req, "ModerateText");
+        }
+
+        /// <summary>
+        /// 天御文本内容安全审核接口，改接口会按照客户定制标签输出审核结果
+        /// </summary>
+        /// <param name="req"><see cref="ModerateTextRequest"/></param>
+        /// <returns><see cref="ModerateTextResponse"/></returns>
+        public ModerateTextResponse ModerateTextSync(ModerateTextRequest req)
+        {
+            return InternalRequestAsync<ModerateTextResponse>(req, "ModerateText")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（Text Moderation）用于提交文本内容进行智能审核任务。使用前请您使用腾讯云主账号登录控制台 [开通文本内容安全服务](https://console.cloud.tencent.com/cms) 并调整好对应的业务配置。
         /// 
         /// ### 接口使用说明

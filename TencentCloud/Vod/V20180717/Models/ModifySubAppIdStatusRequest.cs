@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 子应用状态，取值范围：
+        /// 应用状态，取值范围：
         /// <li>On：启用。</li>
         /// <li>Off：停用。</li>
         /// <li>Destroyed：销毁。</li>

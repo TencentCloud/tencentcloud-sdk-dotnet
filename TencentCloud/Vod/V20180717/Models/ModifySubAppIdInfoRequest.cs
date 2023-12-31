@@ -31,13 +31,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 子应用名称，长度限制：40个字符。
+        /// 应用名称，长度限制：40个字符。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 子应用简介，长度限制： 300个字符。
+        /// 应用简介，长度限制： 300个字符。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

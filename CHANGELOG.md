@@ -1,3 +1,35 @@
+# Release 3.0.927
+
+## 流计算 Oceanus(oceanus) 版本：2019-04-22
+
+### 第 52 次发布
+
+发布时间：2024-01-01 00:15:04
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeJobs](https://cloud.tencent.com/document/api/849/52008)
+
+	* 新增入参：ExtraResult
+
+
+新增数据结构：
+
+* [JobEventInfo](https://cloud.tencent.com/document/api/849/52010#JobEventInfo)
+
+修改数据结构：
+
+* [JobV1](https://cloud.tencent.com/document/api/849/52010#JobV1)
+
+	* 新增成员：EventInfo
+
+
+
+
 # Release 3.0.926
 
 ## 主机安全(cwp) 版本：2018-02-28

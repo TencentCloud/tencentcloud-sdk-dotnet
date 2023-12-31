@@ -54,6 +54,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("WorkSpaceId")]
         public string WorkSpaceId{ get; set; }
 
+        /// <summary>
+        /// 查询额外的作业信息,例如 JobEventInfo	
+        /// </summary>
+        [JsonProperty("ExtraResult")]
+        public string[] ExtraResult{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
+            this.SetParamArraySimple(map, prefix + "ExtraResult.", this.ExtraResult);
         }
     }
 }

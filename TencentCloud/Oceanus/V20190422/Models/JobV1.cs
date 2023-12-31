@@ -248,6 +248,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 作业异常事件信息	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EventInfo")]
+        public JobEventInfo EventInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -286,6 +293,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
             this.SetParamSimple(map, prefix + "WorkSpaceName", this.WorkSpaceName);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamObj(map, prefix + "EventInfo.", this.EventInfo);
         }
     }
 }

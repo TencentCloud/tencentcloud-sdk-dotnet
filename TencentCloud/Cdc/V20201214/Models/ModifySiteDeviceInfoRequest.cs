@@ -84,7 +84,7 @@ namespace TencentCloud.Cdc.V20201214.Models
         /// 2、确定的机架位置包含:
         /// 温度范围为 41 到 104°F (5 到 40°C)。
         /// 湿度范围为 10°F (-12°C)和 8% RH (相对湿度)到 70°F(21°C)和 80% RH。
-        /// 机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)。CFM 必须是 CDC 配置的 kVA 功耗值的 145.8 倍。
+        /// 机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)，散热功率须达到CDC运行功率值的 145.8 倍以上。
         /// </summary>
         [JsonProperty("ConditionRequirement")]
         public bool? ConditionRequirement{ get; set; }
@@ -99,7 +99,7 @@ namespace TencentCloud.Cdc.V20201214.Models
         public bool? DimensionRequirement{ get; set; }
 
         /// <summary>
-        /// 是否提供冗余的上游设备(交换机或路由器)，以便两台  网络设备都能连接到网络设备。
+        /// 是否提供冗余的上游设备(交换机或路由器)，以便实现网络出口的高可用。
         /// </summary>
         [JsonProperty("RedundantNetworking")]
         public bool? RedundantNetworking{ get; set; }
