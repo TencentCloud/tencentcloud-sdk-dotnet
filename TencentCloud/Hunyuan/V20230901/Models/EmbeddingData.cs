@@ -15,33 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Cfw.V20190904.Models
+namespace TencentCloud.Hunyuan.V20230901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyPublicIPSwitchStatusResponse : AbstractModel
+    public class EmbeddingData : AbstractModel
     {
         
         /// <summary>
-        /// 接口返回信息
+        /// embedding 信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ReturnMsg")]
-        public string ReturnMsg{ get; set; }
+        [JsonProperty("Embedding")]
+        public float?[] Embedding{ get; set; }
 
         /// <summary>
-        /// 接口返回错误码，0请求成功  非0失败
+        /// 下标。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ReturnCode")]
-        public long? ReturnCode{ get; set; }
+        [JsonProperty("Index")]
+        public long? Index{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// embedding
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Object")]
+        public string Object{ get; set; }
 
 
         /// <summary>
@@ -49,9 +51,9 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ReturnMsg", this.ReturnMsg);
-            this.SetParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamArraySimple(map, prefix + "Embedding.", this.Embedding);
+            this.SetParamSimple(map, prefix + "Index", this.Index);
+            this.SetParamSimple(map, prefix + "Object", this.Object);
         }
     }
 }

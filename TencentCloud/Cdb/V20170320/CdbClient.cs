@@ -721,7 +721,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 删除审计规则模版
+        /// 删除审计规则模板
         /// </summary>
         /// <param name="req"><see cref="DeleteAuditRuleTemplatesRequest"/></param>
         /// <returns><see cref="DeleteAuditRuleTemplatesResponse"/></returns>
@@ -731,7 +731,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 删除审计规则模版
+        /// 删除审计规则模板
         /// </summary>
         /// <param name="req"><see cref="DeleteAuditRuleTemplatesRequest"/></param>
         /// <returns><see cref="DeleteAuditRuleTemplatesResponse"/></returns>

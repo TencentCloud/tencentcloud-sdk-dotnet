@@ -154,6 +154,13 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("DeviceDepartmentName")]
         public string DeviceDepartmentName{ get; set; }
 
+        /// <summary>
+        /// 会话大小
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Size")]
+        public ulong? Size{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -180,6 +187,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "UserDepartmentName", this.UserDepartmentName);
             this.SetParamSimple(map, prefix + "DeviceDepartmentId", this.DeviceDepartmentId);
             this.SetParamSimple(map, prefix + "DeviceDepartmentName", this.DeviceDepartmentName);
+            this.SetParamSimple(map, prefix + "Size", this.Size);
         }
     }
 }

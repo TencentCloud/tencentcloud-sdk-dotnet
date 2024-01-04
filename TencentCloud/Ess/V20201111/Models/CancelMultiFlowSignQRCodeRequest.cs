@@ -32,7 +32,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 二维码ID，为32位字符串。
+        /// 需要取消的签署码ID，为32位字符串。由[创建一码多签签署码](https://qian.tencent.com/developers/companyApis/startFlows/CreateMultiFlowSignQRCode/)返回
         /// </summary>
         [JsonProperty("QrCodeId")]
         public string QrCodeId{ get; set; }

@@ -31,12 +31,6 @@ namespace TencentCloud.Omics.V20221128.Models
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// 项目ID。
-        /// </summary>
-        [JsonProperty("ProjectId")]
-        public string ProjectId{ get; set; }
-
-        /// <summary>
         /// 任务批次名称。
         /// </summary>
         [JsonProperty("Name")]
@@ -61,10 +55,10 @@ namespace TencentCloud.Omics.V20221128.Models
         public ulong? CacheClearDelay{ get; set; }
 
         /// <summary>
-        /// 运行选项。
+        /// 项目ID。（不填使用指定地域下的默认项目）
         /// </summary>
-        [JsonProperty("Option")]
-        public RunOption Option{ get; set; }
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
 
         /// <summary>
         /// 任务批次描述。
@@ -90,6 +84,18 @@ namespace TencentCloud.Omics.V20221128.Models
         [JsonProperty("ApplicationVersionId")]
         public string ApplicationVersionId{ get; set; }
 
+        /// <summary>
+        /// WDL运行选项。
+        /// </summary>
+        [JsonProperty("Option")]
+        public RunOption Option{ get; set; }
+
+        /// <summary>
+        /// Nextflow运行选项。
+        /// </summary>
+        [JsonProperty("NFOption")]
+        public NFOption NFOption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -97,16 +103,17 @@ namespace TencentCloud.Omics.V20221128.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
             this.SetParamSimple(map, prefix + "InputBase64", this.InputBase64);
             this.SetParamSimple(map, prefix + "CacheClearDelay", this.CacheClearDelay);
-            this.SetParamObj(map, prefix + "Option.", this.Option);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "TableId", this.TableId);
             this.SetParamArraySimple(map, prefix + "TableRowUuids.", this.TableRowUuids);
             this.SetParamSimple(map, prefix + "ApplicationVersionId", this.ApplicationVersionId);
+            this.SetParamObj(map, prefix + "Option.", this.Option);
+            this.SetParamObj(map, prefix + "NFOption.", this.NFOption);
         }
     }
 }

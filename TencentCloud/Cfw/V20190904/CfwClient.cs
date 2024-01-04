@@ -1930,31 +1930,6 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 已上新接口，支持串行
-        /// 
-        /// 单个修改互联网边界防火墙开关
-        /// </summary>
-        /// <param name="req"><see cref="ModifyPublicIPSwitchStatusRequest"/></param>
-        /// <returns><see cref="ModifyPublicIPSwitchStatusResponse"/></returns>
-        public Task<ModifyPublicIPSwitchStatusResponse> ModifyPublicIPSwitchStatus(ModifyPublicIPSwitchStatusRequest req)
-        {
-            return InternalRequestAsync<ModifyPublicIPSwitchStatusResponse>(req, "ModifyPublicIPSwitchStatus");
-        }
-
-        /// <summary>
-        /// 已上新接口，支持串行
-        /// 
-        /// 单个修改互联网边界防火墙开关
-        /// </summary>
-        /// <param name="req"><see cref="ModifyPublicIPSwitchStatusRequest"/></param>
-        /// <returns><see cref="ModifyPublicIPSwitchStatusResponse"/></returns>
-        public ModifyPublicIPSwitchStatusResponse ModifyPublicIPSwitchStatusSync(ModifyPublicIPSwitchStatusRequest req)
-        {
-            return InternalRequestAsync<ModifyPublicIPSwitchStatusResponse>(req, "ModifyPublicIPSwitchStatus")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// ModifyResourceGroup-资产中心资产组信息修改
         /// 
         /// </summary>

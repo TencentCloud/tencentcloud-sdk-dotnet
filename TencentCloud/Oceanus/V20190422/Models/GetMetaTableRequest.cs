@@ -25,19 +25,19 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// Catalog名
+        /// 目录名
         /// </summary>
         [JsonProperty("Catalog")]
         public string Catalog{ get; set; }
 
         /// <summary>
-        /// Database名
+        /// 库名
         /// </summary>
         [JsonProperty("Database")]
         public string Database{ get; set; }
 
         /// <summary>
-        /// Table名
+        /// 表名
         /// </summary>
         [JsonProperty("Table")]
         public string Table{ get; set; }

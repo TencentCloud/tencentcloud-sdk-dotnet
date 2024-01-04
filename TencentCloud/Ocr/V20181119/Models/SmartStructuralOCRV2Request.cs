@@ -80,9 +80,17 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// WayBill -- 快递运单
         /// AccountOpeningPermit -- 银行开户许可证
         /// InvoiceEng -- 海外发票模版
+        /// Coin --钱币识别模板
+        /// OnboardingDocuments -- 入职材料识别
         /// </summary>
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }
+
+        /// <summary>
+        /// 是否打开印章识别
+        /// </summary>
+        [JsonProperty("EnableSealRecognize")]
+        public bool? EnableSealRecognize{ get; set; }
 
 
         /// <summary>
@@ -97,6 +105,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArraySimple(map, prefix + "ItemNames.", this.ItemNames);
             this.SetParamSimple(map, prefix + "ReturnFullText", this.ReturnFullText);
             this.SetParamSimple(map, prefix + "ConfigId", this.ConfigId);
+            this.SetParamSimple(map, prefix + "EnableSealRecognize", this.EnableSealRecognize);
         }
     }
 }

@@ -25,7 +25,10 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 阻断开关状态 0:关闭 1:开启
+        /// 阻断开关状态:
+        ///  0 -- 关闭 
+        ///  1 -- 高级阻断
+        ///  2 -- 基础阻断(只阻断情报库黑ip)
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

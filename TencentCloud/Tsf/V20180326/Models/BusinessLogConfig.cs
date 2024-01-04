@@ -90,7 +90,15 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigAssociatedGroups")]
+        [System.Obsolete]
         public BusinesLogConfigAssociatedGroup[] ConfigAssociatedGroups{ get; set; }
+
+        /// <summary>
+        /// 配置项关联部署组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConfigAssociatedGroupList")]
+        public BusinessLogConfigAssociatedGroup[] ConfigAssociatedGroupList{ get; set; }
 
 
         /// <summary>
@@ -108,6 +116,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ConfigUpdateTime", this.ConfigUpdateTime);
             this.SetParamObj(map, prefix + "ConfigSchema.", this.ConfigSchema);
             this.SetParamArrayObj(map, prefix + "ConfigAssociatedGroups.", this.ConfigAssociatedGroups);
+            this.SetParamArrayObj(map, prefix + "ConfigAssociatedGroupList.", this.ConfigAssociatedGroupList);
         }
     }
 }

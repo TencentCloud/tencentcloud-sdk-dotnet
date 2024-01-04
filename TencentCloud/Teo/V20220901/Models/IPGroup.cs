@@ -37,7 +37,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// IP 组内容，可以填入 IP 及 IP 掩码。
+        /// IP 组内容，仅支持 IP 及 IP 掩码。
         /// </summary>
         [JsonProperty("Content")]
         public string[] Content{ get; set; }

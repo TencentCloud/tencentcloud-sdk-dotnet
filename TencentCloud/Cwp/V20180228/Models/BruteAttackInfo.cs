@@ -191,6 +191,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("RiskLevel")]
         public ulong? RiskLevel{ get; set; }
 
+        /// <summary>
+        /// 事件来源：0--阻断规则，1--威胁情报
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DataFrom")]
+        public long? DataFrom{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -221,6 +228,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
             this.SetParamSimple(map, prefix + "Location", this.Location);
             this.SetParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
+            this.SetParamSimple(map, prefix + "DataFrom", this.DataFrom);
         }
     }
 }

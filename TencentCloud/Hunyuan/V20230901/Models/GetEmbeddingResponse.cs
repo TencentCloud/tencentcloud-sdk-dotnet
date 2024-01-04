@@ -15,21 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Sqlserver.V20180328.Models
+namespace TencentCloud.Hunyuan.V20230901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeCollationTimeZoneRequest : AbstractModel
+    public class GetEmbeddingResponse : AbstractModel
     {
         
         /// <summary>
-        /// 购买实例的宿主机类型，PM-物理机, CLOUD_PREMIUM-云服务器高性能云盘，
-        /// CLOUD_SSD-云服务器SSD云盘,CLOUD_HSSD-云服务器加强型SSD云盘，CLOUD_TSSD-云服务器极速型SSD云盘，CLOUD_BSSD-云服务器通用型SSD云盘,CLOUD_BASIC-云服务器云硬盘，默认取值PM
+        /// 返回的 embedding 信息。
         /// </summary>
-        [JsonProperty("MachineType")]
-        public string MachineType{ get; set; }
+        [JsonProperty("Data")]
+        public EmbeddingData[] Data{ get; set; }
+
+        /// <summary>
+        /// token 使用计数，按照总token数量收费。
+        /// </summary>
+        [JsonProperty("Usage")]
+        public EmbeddingUsage Usage{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -37,7 +48,9 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamObj(map, prefix + "Usage.", this.Usage);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

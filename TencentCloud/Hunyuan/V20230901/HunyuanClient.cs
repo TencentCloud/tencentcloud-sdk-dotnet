@@ -111,6 +111,27 @@ namespace TencentCloud.Hunyuan.V20230901
         }
 
         /// <summary>
+        /// 腾讯混元-Embedding接口，可以将文本转化为高质量的向量数据。
+        /// </summary>
+        /// <param name="req"><see cref="GetEmbeddingRequest"/></param>
+        /// <returns><see cref="GetEmbeddingResponse"/></returns>
+        public Task<GetEmbeddingResponse> GetEmbedding(GetEmbeddingRequest req)
+        {
+            return InternalRequestAsync<GetEmbeddingResponse>(req, "GetEmbedding");
+        }
+
+        /// <summary>
+        /// 腾讯混元-Embedding接口，可以将文本转化为高质量的向量数据。
+        /// </summary>
+        /// <param name="req"><see cref="GetEmbeddingRequest"/></param>
+        /// <returns><see cref="GetEmbeddingResponse"/></returns>
+        public GetEmbeddingResponse GetEmbeddingSync(GetEmbeddingRequest req)
+        {
+            return InternalRequestAsync<GetEmbeddingResponse>(req, "GetEmbedding")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口用于计算文本对应Token数、字符数。
         /// </summary>
         /// <param name="req"><see cref="GetTokenCountRequest"/></param>

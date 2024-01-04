@@ -55,7 +55,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public AuditRuleFilters[] AuditRuleFilters{ get; set; }
 
         /// <summary>
-        /// 规则模版ID。
+        /// 规则模板ID。
         /// </summary>
         [JsonProperty("RuleTemplateIds")]
         public string[] RuleTemplateIds{ get; set; }

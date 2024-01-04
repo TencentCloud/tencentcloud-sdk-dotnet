@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cfw.V20190904.Models
+namespace TencentCloud.Hunyuan.V20230901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyPublicIPSwitchStatusRequest : AbstractModel
+    public class EmbeddingUsage : AbstractModel
     {
         
         /// <summary>
-        /// 公网IP
+        /// 输入Token数。
         /// </summary>
-        [JsonProperty("FireWallPublicIP")]
-        public string FireWallPublicIP{ get; set; }
+        [JsonProperty("PromptTokens")]
+        public long? PromptTokens{ get; set; }
 
         /// <summary>
-        /// 状态值，0: 关闭 ,1:开启
+        /// 总Token数。
         /// </summary>
-        [JsonProperty("Status")]
-        public long? Status{ get; set; }
+        [JsonProperty("TotalTokens")]
+        public long? TotalTokens{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FireWallPublicIP", this.FireWallPublicIP);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "PromptTokens", this.PromptTokens);
+            this.SetParamSimple(map, prefix + "TotalTokens", this.TotalTokens);
         }
     }
 }

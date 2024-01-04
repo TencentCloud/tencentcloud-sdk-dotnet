@@ -15,21 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Sqlserver.V20180328.Models
+namespace TencentCloud.Hunyuan.V20230901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeCollationTimeZoneRequest : AbstractModel
+    public class GetEmbeddingRequest : AbstractModel
     {
         
         /// <summary>
-        /// 购买实例的宿主机类型，PM-物理机, CLOUD_PREMIUM-云服务器高性能云盘，
-        /// CLOUD_SSD-云服务器SSD云盘,CLOUD_HSSD-云服务器加强型SSD云盘，CLOUD_TSSD-云服务器极速型SSD云盘，CLOUD_BSSD-云服务器通用型SSD云盘,CLOUD_BASIC-云服务器云硬盘，默认取值PM
+        /// 输入文本。总长度不超过1024 个token, 超过则会截断最后面的内容。
         /// </summary>
-        [JsonProperty("MachineType")]
-        public string MachineType{ get; set; }
+        [JsonProperty("Input")]
+        public string Input{ get; set; }
 
 
         /// <summary>
@@ -37,7 +36,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
+            this.SetParamSimple(map, prefix + "Input", this.Input);
         }
     }
 }
