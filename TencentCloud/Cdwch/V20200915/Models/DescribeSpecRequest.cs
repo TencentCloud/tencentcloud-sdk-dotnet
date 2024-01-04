@@ -42,6 +42,12 @@ namespace TencentCloud.Cdwch.V20200915.Models
         [JsonProperty("IsElastic")]
         public bool? IsElastic{ get; set; }
 
+        /// <summary>
+        /// 是否是购买页面需要的spec
+        /// </summary>
+        [JsonProperty("CaseType")]
+        public long? CaseType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "IsElastic", this.IsElastic);
+            this.SetParamSimple(map, prefix + "CaseType", this.CaseType);
         }
     }
 }

@@ -65,6 +65,27 @@ namespace TencentCloud.Cdc.V20201214.Models
         public VpngwBandwidthData[] VpnConnectionBandwidthData{ get; set; }
 
         /// <summary>
+        /// 宿主机资源概览信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HostDetailInfo")]
+        public HostDetailInfo[] HostDetailInfo{ get; set; }
+
+        /// <summary>
+        /// 热备宿主机数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HostStandbyCount")]
+        public ulong? HostStandbyCount{ get; set; }
+
+        /// <summary>
+        /// 普通宿主机数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HostNormalCount")]
+        public ulong? HostNormalCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -82,6 +103,9 @@ namespace TencentCloud.Cdc.V20201214.Models
             this.SetParamObj(map, prefix + "VpngwBandwidthData.", this.VpngwBandwidthData);
             this.SetParamObj(map, prefix + "LocalNetInfo.", this.LocalNetInfo);
             this.SetParamArrayObj(map, prefix + "VpnConnectionBandwidthData.", this.VpnConnectionBandwidthData);
+            this.SetParamArrayObj(map, prefix + "HostDetailInfo.", this.HostDetailInfo);
+            this.SetParamSimple(map, prefix + "HostStandbyCount", this.HostStandbyCount);
+            this.SetParamSimple(map, prefix + "HostNormalCount", this.HostNormalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

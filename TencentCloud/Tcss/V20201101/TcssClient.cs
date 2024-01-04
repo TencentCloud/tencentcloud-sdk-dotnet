@@ -2873,6 +2873,27 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 查询超级节点列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetSuperNodeListRequest"/></param>
+        /// <returns><see cref="DescribeAssetSuperNodeListResponse"/></returns>
+        public Task<DescribeAssetSuperNodeListResponse> DescribeAssetSuperNodeList(DescribeAssetSuperNodeListRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetSuperNodeListResponse>(req, "DescribeAssetSuperNodeList");
+        }
+
+        /// <summary>
+        /// 查询超级节点列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetSuperNodeListRequest"/></param>
+        /// <returns><see cref="DescribeAssetSuperNodeListResponse"/></returns>
+        public DescribeAssetSuperNodeListResponse DescribeAssetSuperNodeListSync(DescribeAssetSuperNodeListRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetSuperNodeListResponse>(req, "DescribeAssetSuperNodeList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询资产同步最近时间
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetSyncLastTimeRequest"/></param>
@@ -2974,6 +2995,27 @@ namespace TencentCloud.Tcss.V20201101
         public DescribeClusterDetailResponse DescribeClusterDetailSync(DescribeClusterDetailRequest req)
         {
             return InternalRequestAsync<DescribeClusterDetailResponse>(req, "DescribeClusterDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询集群节点信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterNodesRequest"/></param>
+        /// <returns><see cref="DescribeClusterNodesResponse"/></returns>
+        public Task<DescribeClusterNodesResponse> DescribeClusterNodes(DescribeClusterNodesRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterNodesResponse>(req, "DescribeClusterNodes");
+        }
+
+        /// <summary>
+        /// 查询集群节点信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterNodesRequest"/></param>
+        /// <returns><see cref="DescribeClusterNodesResponse"/></returns>
+        public DescribeClusterNodesResponse DescribeClusterNodesSync(DescribeClusterNodesRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterNodesResponse>(req, "DescribeClusterNodes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4952,6 +4994,27 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 查询超级节点pod列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSuperNodePodListRequest"/></param>
+        /// <returns><see cref="DescribeSuperNodePodListResponse"/></returns>
+        public Task<DescribeSuperNodePodListResponse> DescribeSuperNodePodList(DescribeSuperNodePodListRequest req)
+        {
+            return InternalRequestAsync<DescribeSuperNodePodListResponse>(req, "DescribeSuperNodePodList");
+        }
+
+        /// <summary>
+        /// 查询超级节点pod列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSuperNodePodListRequest"/></param>
+        /// <returns><see cref="DescribeSuperNodePodListResponse"/></returns>
+        public DescribeSuperNodePodListResponse DescribeSuperNodePodListSync(DescribeSuperNodePodListRequest req)
+        {
+            return InternalRequestAsync<DescribeSuperNodePodListResponse>(req, "DescribeSuperNodePodList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询支持防御的漏洞列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSupportDefenceVulRequest"/></param>
@@ -5095,6 +5158,27 @@ namespace TencentCloud.Tcss.V20201101
         public DescribeUserClusterResponse DescribeUserClusterSync(DescribeUserClusterRequest req)
         {
             return InternalRequestAsync<DescribeUserClusterResponse>(req, "DescribeUserCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取用户的pod列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserPodListRequest"/></param>
+        /// <returns><see cref="DescribeUserPodListResponse"/></returns>
+        public Task<DescribeUserPodListResponse> DescribeUserPodList(DescribeUserPodListRequest req)
+        {
+            return InternalRequestAsync<DescribeUserPodListResponse>(req, "DescribeUserPodList");
+        }
+
+        /// <summary>
+        /// 获取用户的pod列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserPodListRequest"/></param>
+        /// <returns><see cref="DescribeUserPodListResponse"/></returns>
+        public DescribeUserPodListResponse DescribeUserPodListSync(DescribeUserPodListRequest req)
+        {
+            return InternalRequestAsync<DescribeUserPodListResponse>(req, "DescribeUserPodList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

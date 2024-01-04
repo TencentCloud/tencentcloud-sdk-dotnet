@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6227C841-08B9-39DD-91B5-C3CB4FE07CD6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.927</VersionPrefix>
+    <VersionPrefix>3.0.928</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -81,6 +81,8 @@
     <Compile Include="V20200915\Models\DescribeInstanceClustersResponse.cs" />
     <Compile Include="V20200915\Models\DescribeInstanceKeyValConfigsRequest.cs" />
     <Compile Include="V20200915\Models\DescribeInstanceKeyValConfigsResponse.cs" />
+    <Compile Include="V20200915\Models\DescribeInstanceNodesRequest.cs" />
+    <Compile Include="V20200915\Models\DescribeInstanceNodesResponse.cs" />
     <Compile Include="V20200915\Models\DescribeInstanceRequest.cs" />
     <Compile Include="V20200915\Models\DescribeInstanceResponse.cs" />
     <Compile Include="V20200915\Models\DescribeInstanceShardsRequest.cs" />
@@ -94,9 +96,11 @@
     <Compile Include="V20200915\Models\DestroyInstanceRequest.cs" />
     <Compile Include="V20200915\Models\DestroyInstanceResponse.cs" />
     <Compile Include="V20200915\Models\DiskSpec.cs" />
+    <Compile Include="V20200915\Models\GroupInfo.cs" />
     <Compile Include="V20200915\Models\InstanceConfigInfo.cs" />
     <Compile Include="V20200915\Models\InstanceConfigItem.cs" />
     <Compile Include="V20200915\Models\InstanceInfo.cs" />
+    <Compile Include="V20200915\Models\InstanceNode.cs" />
     <Compile Include="V20200915\Models\InstanceStateInfo.cs" />
     <Compile Include="V20200915\Models\MapConfigItem.cs" />
     <Compile Include="V20200915\Models\ModifyClusterConfigsRequest.cs" />

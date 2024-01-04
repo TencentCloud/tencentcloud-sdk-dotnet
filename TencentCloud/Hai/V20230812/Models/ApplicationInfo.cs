@@ -61,6 +61,35 @@ namespace TencentCloud.Hai.V20230812.Models
         [JsonProperty("MinSystemDiskSize")]
         public long? MinSystemDiskSize{ get; set; }
 
+        /// <summary>
+        /// 应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationType")]
+        public string ApplicationType{ get; set; }
+
+        /// <summary>
+        /// 应用状态：CREATING-创建中；ONLINE -正常在线；DELETING -删除中；ARREARS - 欠费隔离
+        /// 示例值：ONLINE
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationState")]
+        public string ApplicationState{ get; set; }
+
+        /// <summary>
+        /// 应用创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// 应用大小
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationSize")]
+        public long? ApplicationSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +101,10 @@ namespace TencentCloud.Hai.V20230812.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "ConfigEnvironment", this.ConfigEnvironment);
             this.SetParamSimple(map, prefix + "MinSystemDiskSize", this.MinSystemDiskSize);
+            this.SetParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
+            this.SetParamSimple(map, prefix + "ApplicationState", this.ApplicationState);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "ApplicationSize", this.ApplicationSize);
         }
     }
 }

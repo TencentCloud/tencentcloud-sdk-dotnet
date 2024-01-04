@@ -326,6 +326,27 @@ namespace TencentCloud.Cdwch.V20200915
         }
 
         /// <summary>
+        /// 获取实例节点信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceNodesRequest"/></param>
+        /// <returns><see cref="DescribeInstanceNodesResponse"/></returns>
+        public Task<DescribeInstanceNodesResponse> DescribeInstanceNodes(DescribeInstanceNodesRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceNodesResponse>(req, "DescribeInstanceNodes");
+        }
+
+        /// <summary>
+        /// 获取实例节点信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceNodesRequest"/></param>
+        /// <returns><see cref="DescribeInstanceNodesResponse"/></returns>
+        public DescribeInstanceNodesResponse DescribeInstanceNodesSync(DescribeInstanceNodesRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceNodesResponse>(req, "DescribeInstanceNodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取实例shard信息列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceShardsRequest"/></param>

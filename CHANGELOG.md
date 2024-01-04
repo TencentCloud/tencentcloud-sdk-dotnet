@@ -1,3 +1,43 @@
+# Release 3.0.928
+
+## 云数据仓库 ClickHouse(cdwch) 版本：2020-09-15
+
+### 第 19 次发布
+
+发布时间：2024-01-04 01:08:58
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [DescribeInstanceNodes](https://cloud.tencent.com/document/api/1299/102819)
+
+新增数据结构：
+
+* [GroupInfo](https://cloud.tencent.com/document/api/1299/83429#GroupInfo)
+* [InstanceNode](https://cloud.tencent.com/document/api/1299/83429#InstanceNode)
+
+
+
+## 医疗报告结构化(mrs) 版本：2020-09-10
+
+### 第 22 次发布
+
+发布时间：2024-01-04 01:19:26
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [ImageMaskAsync](https://cloud.tencent.com/document/api/1314/102821)
+* [ImageMaskAsyncGetResult](https://cloud.tencent.com/document/api/1314/102820)
+
+
+
 # Release 3.0.927
 
 ## 流计算 Oceanus(oceanus) 版本：2019-04-22

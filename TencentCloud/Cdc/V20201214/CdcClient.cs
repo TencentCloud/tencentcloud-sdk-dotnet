@@ -200,7 +200,7 @@ namespace TencentCloud.Cdc.V20201214
         }
 
         /// <summary>
-        /// 专用集群宿主机信息
+        /// 查询专用集群宿主机信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDedicatedClusterHostsRequest"/></param>
         /// <returns><see cref="DescribeDedicatedClusterHostsResponse"/></returns>
@@ -210,7 +210,7 @@ namespace TencentCloud.Cdc.V20201214
         }
 
         /// <summary>
-        /// 专用集群宿主机信息
+        /// 查询专用集群宿主机信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDedicatedClusterHostsRequest"/></param>
         /// <returns><see cref="DescribeDedicatedClusterHostsResponse"/></returns>
@@ -263,7 +263,7 @@ namespace TencentCloud.Cdc.V20201214
         }
 
         /// <summary>
-        /// 专用集群概览信息
+        /// 查询专用集群概览信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDedicatedClusterOverviewRequest"/></param>
         /// <returns><see cref="DescribeDedicatedClusterOverviewResponse"/></returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Cdc.V20201214
         }
 
         /// <summary>
-        /// 专用集群概览信息
+        /// 查询专用集群概览信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDedicatedClusterOverviewRequest"/></param>
         /// <returns><see cref="DescribeDedicatedClusterOverviewResponse"/></returns>

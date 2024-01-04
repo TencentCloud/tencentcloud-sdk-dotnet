@@ -80,7 +80,7 @@ namespace TencentCloud.Cdc.V20201214.Models
         public float? PowerDrawKva{ get; set; }
 
         /// <summary>
-        /// 显示计算资源规格详情，存储等资源不显示；对应规格
+        /// 显示计算资源规格详情，存储等资源不显示
         /// </summary>
         [JsonProperty("ComputeFormatDesc")]
         public string ComputeFormatDesc{ get; set; }

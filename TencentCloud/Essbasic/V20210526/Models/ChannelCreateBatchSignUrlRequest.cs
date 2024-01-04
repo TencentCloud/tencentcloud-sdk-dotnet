@@ -25,7 +25,15 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 关于渠道应用的相关信息，包括子客企业及应用编、号等详细内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+        /// 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+        /// 
+        /// 此接口下面信息必填。
+        /// <ul>
+        /// <li>渠道应用标识:  Agent.AppId</li>
+        /// <li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+        /// <li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId</li>
+        /// </ul>
+        /// 第三方平台子客企业和员工必须已经过实名认证
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
@@ -102,7 +110,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <li>请确认该名称与企业营业执照中注册的名称一致。</li>
         /// <li>如果名称中包含英文括号()，请使用中文括号（）代替。</li>
         /// <li>请确保此企业已完成腾讯电子签企业认证。</li>
-        /// <li>若为子客企业，请确保员工已经加入企业。</li>
+        /// <li>暂时仅支持给`自建应用集成企业` 生成员工批签链接，不支持子客企业。</li>
         /// </ul>
         /// </summary>
         [JsonProperty("OrganizationName")]

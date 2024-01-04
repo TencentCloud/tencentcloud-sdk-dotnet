@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{30C97587-9583-3962-A5DC-7C276E702CC1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.927</VersionPrefix>
+    <VersionPrefix>3.0.928</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,68 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="V20190718\ChdfsClient.cs" />
+    <Compile Include="V20190718\Models\AccessGroup.cs" />
+    <Compile Include="V20190718\Models\AccessRule.cs" />
+    <Compile Include="V20190718\Models\CreateAccessGroupRequest.cs" />
+    <Compile Include="V20190718\Models\CreateAccessGroupResponse.cs" />
+    <Compile Include="V20190718\Models\CreateAccessRulesRequest.cs" />
+    <Compile Include="V20190718\Models\CreateAccessRulesResponse.cs" />
+    <Compile Include="V20190718\Models\CreateFileSystemRequest.cs" />
+    <Compile Include="V20190718\Models\CreateFileSystemResponse.cs" />
+    <Compile Include="V20190718\Models\CreateLifeCycleRulesRequest.cs" />
+    <Compile Include="V20190718\Models\CreateLifeCycleRulesResponse.cs" />
+    <Compile Include="V20190718\Models\CreateMountPointRequest.cs" />
+    <Compile Include="V20190718\Models\CreateMountPointResponse.cs" />
+    <Compile Include="V20190718\Models\CreateRestoreTasksRequest.cs" />
+    <Compile Include="V20190718\Models\CreateRestoreTasksResponse.cs" />
+    <Compile Include="V20190718\Models\DeleteAccessGroupRequest.cs" />
+    <Compile Include="V20190718\Models\DeleteAccessGroupResponse.cs" />
+    <Compile Include="V20190718\Models\DeleteAccessRulesRequest.cs" />
+    <Compile Include="V20190718\Models\DeleteAccessRulesResponse.cs" />
+    <Compile Include="V20190718\Models\DeleteFileSystemRequest.cs" />
+    <Compile Include="V20190718\Models\DeleteFileSystemResponse.cs" />
+    <Compile Include="V20190718\Models\DeleteLifeCycleRulesRequest.cs" />
+    <Compile Include="V20190718\Models\DeleteLifeCycleRulesResponse.cs" />
+    <Compile Include="V20190718\Models\DeleteMountPointRequest.cs" />
+    <Compile Include="V20190718\Models\DeleteMountPointResponse.cs" />
+    <Compile Include="V20190718\Models\DescribeAccessGroupsRequest.cs" />
+    <Compile Include="V20190718\Models\DescribeAccessGroupsResponse.cs" />
+    <Compile Include="V20190718\Models\DescribeAccessRulesRequest.cs" />
+    <Compile Include="V20190718\Models\DescribeAccessRulesResponse.cs" />
+    <Compile Include="V20190718\Models\DescribeFileSystemRequest.cs" />
+    <Compile Include="V20190718\Models\DescribeFileSystemResponse.cs" />
+    <Compile Include="V20190718\Models\DescribeFileSystemsRequest.cs" />
+    <Compile Include="V20190718\Models\DescribeFileSystemsResponse.cs" />
+    <Compile Include="V20190718\Models\DescribeLifeCycleRulesRequest.cs" />
+    <Compile Include="V20190718\Models\DescribeLifeCycleRulesResponse.cs" />
+    <Compile Include="V20190718\Models\DescribeMountPointRequest.cs" />
+    <Compile Include="V20190718\Models\DescribeMountPointResponse.cs" />
+    <Compile Include="V20190718\Models\DescribeMountPointsRequest.cs" />
+    <Compile Include="V20190718\Models\DescribeMountPointsResponse.cs" />
+    <Compile Include="V20190718\Models\DescribeResourceTagsRequest.cs" />
+    <Compile Include="V20190718\Models\DescribeResourceTagsResponse.cs" />
+    <Compile Include="V20190718\Models\DescribeRestoreTasksRequest.cs" />
+    <Compile Include="V20190718\Models\DescribeRestoreTasksResponse.cs" />
+    <Compile Include="V20190718\Models\FileSystem.cs" />
+    <Compile Include="V20190718\Models\Filter.cs" />
+    <Compile Include="V20190718\Models\LifeCycleRule.cs" />
+    <Compile Include="V20190718\Models\ModifyAccessGroupRequest.cs" />
+    <Compile Include="V20190718\Models\ModifyAccessGroupResponse.cs" />
+    <Compile Include="V20190718\Models\ModifyAccessRulesRequest.cs" />
+    <Compile Include="V20190718\Models\ModifyAccessRulesResponse.cs" />
+    <Compile Include="V20190718\Models\ModifyFileSystemRequest.cs" />
+    <Compile Include="V20190718\Models\ModifyFileSystemResponse.cs" />
+    <Compile Include="V20190718\Models\ModifyLifeCycleRulesRequest.cs" />
+    <Compile Include="V20190718\Models\ModifyLifeCycleRulesResponse.cs" />
+    <Compile Include="V20190718\Models\ModifyMountPointRequest.cs" />
+    <Compile Include="V20190718\Models\ModifyMountPointResponse.cs" />
+    <Compile Include="V20190718\Models\ModifyResourceTagsRequest.cs" />
+    <Compile Include="V20190718\Models\ModifyResourceTagsResponse.cs" />
+    <Compile Include="V20190718\Models\MountPoint.cs" />
+    <Compile Include="V20190718\Models\RestoreTask.cs" />
+    <Compile Include="V20190718\Models\Tag.cs" />
+    <Compile Include="V20190718\Models\Transition.cs" />
     <Compile Include="V20201112\ChdfsClient.cs" />
     <Compile Include="V20201112\Models\AccessGroup.cs" />
     <Compile Include="V20201112\Models\AccessRule.cs" />
@@ -115,67 +177,5 @@
     <Compile Include="V20201112\Models\Summary.cs" />
     <Compile Include="V20201112\Models\Tag.cs" />
     <Compile Include="V20201112\Models\Transition.cs" />
-    <Compile Include="V20190718\ChdfsClient.cs" />
-    <Compile Include="V20190718\Models\AccessGroup.cs" />
-    <Compile Include="V20190718\Models\AccessRule.cs" />
-    <Compile Include="V20190718\Models\CreateAccessGroupRequest.cs" />
-    <Compile Include="V20190718\Models\CreateAccessGroupResponse.cs" />
-    <Compile Include="V20190718\Models\CreateAccessRulesRequest.cs" />
-    <Compile Include="V20190718\Models\CreateAccessRulesResponse.cs" />
-    <Compile Include="V20190718\Models\CreateFileSystemRequest.cs" />
-    <Compile Include="V20190718\Models\CreateFileSystemResponse.cs" />
-    <Compile Include="V20190718\Models\CreateLifeCycleRulesRequest.cs" />
-    <Compile Include="V20190718\Models\CreateLifeCycleRulesResponse.cs" />
-    <Compile Include="V20190718\Models\CreateMountPointRequest.cs" />
-    <Compile Include="V20190718\Models\CreateMountPointResponse.cs" />
-    <Compile Include="V20190718\Models\CreateRestoreTasksRequest.cs" />
-    <Compile Include="V20190718\Models\CreateRestoreTasksResponse.cs" />
-    <Compile Include="V20190718\Models\DeleteAccessGroupRequest.cs" />
-    <Compile Include="V20190718\Models\DeleteAccessGroupResponse.cs" />
-    <Compile Include="V20190718\Models\DeleteAccessRulesRequest.cs" />
-    <Compile Include="V20190718\Models\DeleteAccessRulesResponse.cs" />
-    <Compile Include="V20190718\Models\DeleteFileSystemRequest.cs" />
-    <Compile Include="V20190718\Models\DeleteFileSystemResponse.cs" />
-    <Compile Include="V20190718\Models\DeleteLifeCycleRulesRequest.cs" />
-    <Compile Include="V20190718\Models\DeleteLifeCycleRulesResponse.cs" />
-    <Compile Include="V20190718\Models\DeleteMountPointRequest.cs" />
-    <Compile Include="V20190718\Models\DeleteMountPointResponse.cs" />
-    <Compile Include="V20190718\Models\DescribeAccessGroupsRequest.cs" />
-    <Compile Include="V20190718\Models\DescribeAccessGroupsResponse.cs" />
-    <Compile Include="V20190718\Models\DescribeAccessRulesRequest.cs" />
-    <Compile Include="V20190718\Models\DescribeAccessRulesResponse.cs" />
-    <Compile Include="V20190718\Models\DescribeFileSystemRequest.cs" />
-    <Compile Include="V20190718\Models\DescribeFileSystemResponse.cs" />
-    <Compile Include="V20190718\Models\DescribeFileSystemsRequest.cs" />
-    <Compile Include="V20190718\Models\DescribeFileSystemsResponse.cs" />
-    <Compile Include="V20190718\Models\DescribeLifeCycleRulesRequest.cs" />
-    <Compile Include="V20190718\Models\DescribeLifeCycleRulesResponse.cs" />
-    <Compile Include="V20190718\Models\DescribeMountPointRequest.cs" />
-    <Compile Include="V20190718\Models\DescribeMountPointResponse.cs" />
-    <Compile Include="V20190718\Models\DescribeMountPointsRequest.cs" />
-    <Compile Include="V20190718\Models\DescribeMountPointsResponse.cs" />
-    <Compile Include="V20190718\Models\DescribeResourceTagsRequest.cs" />
-    <Compile Include="V20190718\Models\DescribeResourceTagsResponse.cs" />
-    <Compile Include="V20190718\Models\DescribeRestoreTasksRequest.cs" />
-    <Compile Include="V20190718\Models\DescribeRestoreTasksResponse.cs" />
-    <Compile Include="V20190718\Models\FileSystem.cs" />
-    <Compile Include="V20190718\Models\Filter.cs" />
-    <Compile Include="V20190718\Models\LifeCycleRule.cs" />
-    <Compile Include="V20190718\Models\ModifyAccessGroupRequest.cs" />
-    <Compile Include="V20190718\Models\ModifyAccessGroupResponse.cs" />
-    <Compile Include="V20190718\Models\ModifyAccessRulesRequest.cs" />
-    <Compile Include="V20190718\Models\ModifyAccessRulesResponse.cs" />
-    <Compile Include="V20190718\Models\ModifyFileSystemRequest.cs" />
-    <Compile Include="V20190718\Models\ModifyFileSystemResponse.cs" />
-    <Compile Include="V20190718\Models\ModifyLifeCycleRulesRequest.cs" />
-    <Compile Include="V20190718\Models\ModifyLifeCycleRulesResponse.cs" />
-    <Compile Include="V20190718\Models\ModifyMountPointRequest.cs" />
-    <Compile Include="V20190718\Models\ModifyMountPointResponse.cs" />
-    <Compile Include="V20190718\Models\ModifyResourceTagsRequest.cs" />
-    <Compile Include="V20190718\Models\ModifyResourceTagsResponse.cs" />
-    <Compile Include="V20190718\Models\MountPoint.cs" />
-    <Compile Include="V20190718\Models\RestoreTask.cs" />
-    <Compile Include="V20190718\Models\Tag.cs" />
-    <Compile Include="V20190718\Models\Transition.cs" />
   </ItemGroup>
 </Project>

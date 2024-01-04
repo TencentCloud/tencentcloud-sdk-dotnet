@@ -4847,7 +4847,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 查询主机相关核心文件监控规则列 表   
+        /// 查询主机相关核心文件监控规则列表
         /// </summary>
         /// <param name="req"><see cref="DescribeMachineFileTamperRulesRequest"/></param>
         /// <returns><see cref="DescribeMachineFileTamperRulesResponse"/></returns>
@@ -4857,7 +4857,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 查询主机相关核心文件监控规则列 表   
+        /// 查询主机相关核心文件监控规则列表
         /// </summary>
         /// <param name="req"><see cref="DescribeMachineFileTamperRulesRequest"/></param>
         /// <returns><see cref="DescribeMachineFileTamperRulesResponse"/></returns>

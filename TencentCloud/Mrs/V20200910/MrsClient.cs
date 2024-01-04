@@ -74,6 +74,48 @@ namespace TencentCloud.Mrs.V20200910
         }
 
         /// <summary>
+        /// 图片脱敏-异步接口
+        /// </summary>
+        /// <param name="req"><see cref="ImageMaskAsyncRequest"/></param>
+        /// <returns><see cref="ImageMaskAsyncResponse"/></returns>
+        public Task<ImageMaskAsyncResponse> ImageMaskAsync(ImageMaskAsyncRequest req)
+        {
+            return InternalRequestAsync<ImageMaskAsyncResponse>(req, "ImageMaskAsync");
+        }
+
+        /// <summary>
+        /// 图片脱敏-异步接口
+        /// </summary>
+        /// <param name="req"><see cref="ImageMaskAsyncRequest"/></param>
+        /// <returns><see cref="ImageMaskAsyncResponse"/></returns>
+        public ImageMaskAsyncResponse ImageMaskAsyncSync(ImageMaskAsyncRequest req)
+        {
+            return InternalRequestAsync<ImageMaskAsyncResponse>(req, "ImageMaskAsync")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 图片脱敏-异步获取结果接口
+        /// </summary>
+        /// <param name="req"><see cref="ImageMaskAsyncGetResultRequest"/></param>
+        /// <returns><see cref="ImageMaskAsyncGetResultResponse"/></returns>
+        public Task<ImageMaskAsyncGetResultResponse> ImageMaskAsyncGetResult(ImageMaskAsyncGetResultRequest req)
+        {
+            return InternalRequestAsync<ImageMaskAsyncGetResultResponse>(req, "ImageMaskAsyncGetResult");
+        }
+
+        /// <summary>
+        /// 图片脱敏-异步获取结果接口
+        /// </summary>
+        /// <param name="req"><see cref="ImageMaskAsyncGetResultRequest"/></param>
+        /// <returns><see cref="ImageMaskAsyncGetResultResponse"/></returns>
+        public ImageMaskAsyncGetResultResponse ImageMaskAsyncGetResultSync(ImageMaskAsyncGetResultRequest req)
+        {
+            return InternalRequestAsync<ImageMaskAsyncGetResultResponse>(req, "ImageMaskAsyncGetResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 图片分类
         /// </summary>
         /// <param name="req"><see cref="ImageToClassRequest"/></param>

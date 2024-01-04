@@ -68,7 +68,7 @@ namespace TencentCloud.Aiart.V20221229.Models
 
         /// <summary>
         /// 生成图结果的配置，包括输出图片分辨率和尺寸等。
-        /// 支持生成以下分辨率的图片：768:768（1:1）、768:1024（3:4）、1024:768（4:3）、不传默认与原图保持一致。
+        /// 支持生成以下分辨率的图片：origin（与输入图分辨率一致）、768:768（1:1）、768:1024（3:4）、1024:768（4:3），不传默认使用origin。
         /// </summary>
         [JsonProperty("ResultConfig")]
         public ResultConfig ResultConfig{ get; set; }
@@ -92,7 +92,8 @@ namespace TencentCloud.Aiart.V20221229.Models
 
         /// <summary>
         /// 生成自由度。
-        /// Strength 值越小，生成图和原图越接近。取值范围0~1，不传默认为0.75。
+        /// Strength 值越小，生成图和原图越接近，取值范围0 - 1，不传使用模型内置的默认值。
+        /// 推荐的取值范围为0.6 - 0.8。
         /// </summary>
         [JsonProperty("Strength")]
         public float? Strength{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2754E8E-D3F5-3C64-B47D-D71D9942EFB6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.927</VersionPrefix>
+    <VersionPrefix>3.0.928</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -113,6 +113,8 @@
     <Compile Include="V20201101\Models\ClusterCreateComponentItem.cs" />
     <Compile Include="V20201101\Models\ClusterCustomParameters.cs" />
     <Compile Include="V20201101\Models\ClusterInfoItem.cs" />
+    <Compile Include="V20201101\Models\ClusterNodeInfo.cs" />
+    <Compile Include="V20201101\Models\ClusterPodInfo.cs" />
     <Compile Include="V20201101\Models\ClusterRiskItem.cs" />
     <Compile Include="V20201101\Models\ComplianceAffectedAsset.cs" />
     <Compile Include="V20201101\Models\ComplianceAssetDetailInfo.cs" />
@@ -371,6 +373,8 @@
     <Compile Include="V20201101\Models\DescribeAssetProcessListResponse.cs" />
     <Compile Include="V20201101\Models\DescribeAssetSummaryRequest.cs" />
     <Compile Include="V20201101\Models\DescribeAssetSummaryResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetSuperNodeListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetSuperNodeListResponse.cs" />
     <Compile Include="V20201101\Models\DescribeAssetSyncLastTimeRequest.cs" />
     <Compile Include="V20201101\Models\DescribeAssetSyncLastTimeResponse.cs" />
     <Compile Include="V20201101\Models\DescribeAssetWebServiceListRequest.cs" />
@@ -381,6 +385,8 @@
     <Compile Include="V20201101\Models\DescribeCheckItemListResponse.cs" />
     <Compile Include="V20201101\Models\DescribeClusterDetailRequest.cs" />
     <Compile Include="V20201101\Models\DescribeClusterDetailResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeClusterNodesRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeClusterNodesResponse.cs" />
     <Compile Include="V20201101\Models\DescribeClusterSummaryRequest.cs" />
     <Compile Include="V20201101\Models\DescribeClusterSummaryResponse.cs" />
     <Compile Include="V20201101\Models\DescribeComplianceAssetDetailInfoRequest.cs" />
@@ -569,6 +575,8 @@
     <Compile Include="V20201101\Models\DescribeSecLogKafkaUINResponse.cs" />
     <Compile Include="V20201101\Models\DescribeSecLogVasInfoRequest.cs" />
     <Compile Include="V20201101\Models\DescribeSecLogVasInfoResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeSuperNodePodListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeSuperNodePodListResponse.cs" />
     <Compile Include="V20201101\Models\DescribeSupportDefenceVulRequest.cs" />
     <Compile Include="V20201101\Models\DescribeSupportDefenceVulResponse.cs" />
     <Compile Include="V20201101\Models\DescribeSystemVulListRequest.cs" />
@@ -583,6 +591,8 @@
     <Compile Include="V20201101\Models\DescribeUnfinishRefreshTaskResponse.cs" />
     <Compile Include="V20201101\Models\DescribeUserClusterRequest.cs" />
     <Compile Include="V20201101\Models\DescribeUserClusterResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeUserPodListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeUserPodListResponse.cs" />
     <Compile Include="V20201101\Models\DescribeValueAddedSrvInfoRequest.cs" />
     <Compile Include="V20201101\Models\DescribeValueAddedSrvInfoResponse.cs" />
     <Compile Include="V20201101\Models\DescribeVirusAutoIsolateSampleDetailRequest.cs" />
@@ -831,6 +841,8 @@
     <Compile Include="V20201101\Models\StopVirusScanTaskResponse.cs" />
     <Compile Include="V20201101\Models\StopVulScanTaskRequest.cs" />
     <Compile Include="V20201101\Models\StopVulScanTaskResponse.cs" />
+    <Compile Include="V20201101\Models\SuperNodeListItem.cs" />
+    <Compile Include="V20201101\Models\SuperNodePodListItem.cs" />
     <Compile Include="V20201101\Models\SupportDefenceVul.cs" />
     <Compile Include="V20201101\Models\SwitchImageAutoAuthorizedRuleRequest.cs" />
     <Compile Include="V20201101\Models\SwitchImageAutoAuthorizedRuleResponse.cs" />

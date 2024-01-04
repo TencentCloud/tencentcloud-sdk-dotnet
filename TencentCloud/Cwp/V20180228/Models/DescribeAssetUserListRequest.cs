@@ -75,8 +75,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Order{ get; set; }
 
         /// <summary>
-        /// 可选排序：[FirstTime|LoginTime|PasswordChangeTime|PasswordDuaTime]
-        /// PasswordLockDays
+        /// 可选排序：[FirstTime|LoginTime|PasswordChangeTime|PasswordDuaTime|PasswordLockDays]
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }

@@ -46,7 +46,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public ulong? BpsThreshold{ get; set; }
 
         /// <summary>
-        /// 关闭方式 返回404:RETURN_404, dns回源：RESOLVE_DNS_TO_ORIGIN
+        /// 关闭方式 返回404:RETURN_404
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CounterMeasure")]
