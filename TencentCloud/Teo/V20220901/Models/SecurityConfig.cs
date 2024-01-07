@@ -25,56 +25,56 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 托管规则。如果为null，默认使用历史配置。
+        /// 托管规则。如果入参为空或不填，默认使用历史配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WafConfig")]
         public WafConfig WafConfig{ get; set; }
 
         /// <summary>
-        /// 速率限制。如果为null，默认使用历史配置。
+        /// 速率限制。如果入参为空或不填，默认使用历史配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RateLimitConfig")]
         public RateLimitConfig RateLimitConfig{ get; set; }
 
         /// <summary>
-        /// 自定义规则。如果为null，默认使用历史配置。
+        /// 自定义规则。如果入参为空或不填，默认使用历史配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AclConfig")]
         public AclConfig AclConfig{ get; set; }
 
         /// <summary>
-        /// Bot配置。如果为null，默认使用历史配置。
+        /// Bot配置。如果入参为空或不填，默认使用历史配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BotConfig")]
         public BotConfig BotConfig{ get; set; }
 
         /// <summary>
-        /// 七层防护总开关。如果为null，默认使用历史配置。
+        /// 七层防护总开关。如果入参为空或不填，默认使用历史配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SwitchConfig")]
         public SwitchConfig SwitchConfig{ get; set; }
 
         /// <summary>
-        /// 基础访问管控。如果为null，默认使用历史配置。
+        /// 基础访问管控。如果入参为空或不填，默认使用历史配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpTableConfig")]
         public IpTableConfig IpTableConfig{ get; set; }
 
         /// <summary>
-        /// 例外规则配置。如果为null，默认使用历史配置。
+        /// 例外规则配置。如果入参为空或不填，默认使用历史配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExceptConfig")]
         public ExceptConfig ExceptConfig{ get; set; }
 
         /// <summary>
-        /// 自定义拦截页面配置。如果为null，默认使用历史配置。
+        /// 自定义拦截页面配置。如果入参为空或不填，默认使用历史配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DropPageConfig")]
@@ -88,7 +88,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public TemplateConfig TemplateConfig{ get; set; }
 
         /// <summary>
-        /// 慢速攻击配置。如果为null，默认使用历史配置。
+        /// 慢速攻击配置。如果入参为空或不填，默认使用历史配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SlowPostConfig")]

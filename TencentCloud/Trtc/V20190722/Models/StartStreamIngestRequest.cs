@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和录制的房间所对应的SdkAppId相同。
+        /// TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和TRTC的房间所对应的SdkAppId相同。
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
@@ -58,7 +58,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string UserSig{ get; set; }
 
         /// <summary>
-        /// 源流URL。示例值：https://a.b/test.mp4
+        /// 【本字段已废弃，请使用 StreamUrl 字段】源流URL，支持一个地址。
         /// </summary>
         [JsonProperty("SourceUrl")]
         public string[] SourceUrl{ get; set; }
@@ -81,6 +81,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("AudioEncodeParams")]
         public AudioEncodeParams AudioEncodeParams{ get; set; }
 
+        /// <summary>
+        /// 源流URL。历史原因本字段【必填】。
+        /// </summary>
+        [JsonProperty("StreamUrl")]
+        public string StreamUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +102,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "PrivateMapKey", this.PrivateMapKey);
             this.SetParamObj(map, prefix + "VideoEncodeParams.", this.VideoEncodeParams);
             this.SetParamObj(map, prefix + "AudioEncodeParams.", this.AudioEncodeParams);
+            this.SetParamSimple(map, prefix + "StreamUrl", this.StreamUrl);
         }
     }
 }

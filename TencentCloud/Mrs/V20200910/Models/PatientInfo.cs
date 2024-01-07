@@ -144,10 +144,11 @@ namespace TencentCloud.Mrs.V20200910.Models
         public string AgeNorm{ get; set; }
 
         /// <summary>
-        /// 民族
+        /// 民族。该字段已不再使用，请从Ethnicity取值
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Nation")]
+        [System.Obsolete]
         public string Nation{ get; set; }
 
         /// <summary>

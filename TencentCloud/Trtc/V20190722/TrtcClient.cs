@@ -1319,6 +1319,8 @@ namespace TencentCloud.Trtc.V20190722
 
         /// <summary>
         /// 将一个在线媒体流推到TRTC房间。
+        /// 使用此接口的前提条件：需要购买 [尊享版或旗舰版套餐包](https://cloud.tencent.com/document/product/647/85386
+        /// )
         /// </summary>
         /// <param name="req"><see cref="StartStreamIngestRequest"/></param>
         /// <returns><see cref="StartStreamIngestResponse"/></returns>
@@ -1329,6 +1331,8 @@ namespace TencentCloud.Trtc.V20190722
 
         /// <summary>
         /// 将一个在线媒体流推到TRTC房间。
+        /// 使用此接口的前提条件：需要购买 [尊享版或旗舰版套餐包](https://cloud.tencent.com/document/product/647/85386
+        /// )
         /// </summary>
         /// <param name="req"><see cref="StartStreamIngestRequest"/></param>
         /// <returns><see cref="StartStreamIngestResponse"/></returns>

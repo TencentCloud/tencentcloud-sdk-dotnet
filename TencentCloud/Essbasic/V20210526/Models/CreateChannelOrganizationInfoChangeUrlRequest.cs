@@ -46,6 +46,16 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("ChangeType")]
         public ulong? ChangeType{ get; set; }
 
+        /// <summary>
+        /// 变更链接类型：
+        /// <ul>
+        /// <li>**WEIXINAPP** : 创建变更短链。需要在移动端打开，会跳转到微信腾讯电子签小程序进行更换。（默认）</li>
+        /// <li>**APP** : 创建变更小程序链接，可从第三方APP跳转到微信腾讯电子签小程序进行更换。</li>
+        /// </ul>
+        /// </summary>
+        [JsonProperty("Endpoint")]
+        public string Endpoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +64,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         {
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "ChangeType", this.ChangeType);
+            this.SetParamSimple(map, prefix + "Endpoint", this.Endpoint);
         }
     }
 }

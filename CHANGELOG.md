@@ -1,3 +1,89 @@
+# Release 3.0.930
+
+## 腾讯电子签（基础版）(essbasic) 版本：2021-05-26
+
+### 第 147 次发布
+
+发布时间：2024-01-08 00:10:12
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [CreateChannelOrganizationInfoChangeUrl](https://cloud.tencent.com/document/api/1420/99179)
+
+	* 新增入参：Endpoint
+
+
+
+
+## 腾讯电子签（基础版）(essbasic) 版本：2020-12-22
+
+
+
+## 医疗报告结构化(mrs) 版本：2020-09-10
+
+### 第 23 次发布
+
+发布时间：2024-01-08 00:14:42
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改数据结构：
+
+* [PatientInfo](https://cloud.tencent.com/document/api/1314/56230#PatientInfo)
+
+
+
+
+## 边缘安全加速平台(teo) 版本：2022-09-01
+
+### 第 69 次发布
+
+发布时间：2024-01-08 00:19:23
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改数据结构：
+
+* [RateLimitTemplateDetail](https://cloud.tencent.com/document/api/1552/80721#RateLimitTemplateDetail)
+
+	* <font color="#dd0000">**修改成员**：</font>ID, Action, PunishTime, Threshold, Period
+
+
+
+
+## 边缘安全加速平台(teo) 版本：2022-01-06
+
+
+
+## 实时音视频(trtc) 版本：2019-07-22
+
+### 第 63 次发布
+
+发布时间：2024-01-08 00:21:01
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [StartStreamIngest](https://cloud.tencent.com/document/api/647/101872)
+
+	* 新增入参：StreamUrl
+
+	* <font color="#dd0000">**修改入参**：</font>SourceUrl
+
+
+
+
 # Release 3.0.929
 
 ## 云防火墙(cfw) 版本：2019-09-04
