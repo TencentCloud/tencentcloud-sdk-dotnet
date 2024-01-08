@@ -90,7 +90,8 @@ namespace TencentCloud.Tione.V20211111.Models
         public string TrainingMode{ get; set; }
 
         /// <summary>
-        /// 任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
+        /// 任务状态，eg：SUBMITTING提交中、PENDING排队中、
+        /// STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

@@ -39,7 +39,9 @@ namespace TencentCloud.Tione.V20211111.Models
         public long? MaxReplicas{ get; set; }
 
         /// <summary>
-        /// 扩缩容指标
+        /// 支持：
+        /// "gpu-util": GPU利用率。范围{10, 100}      "cpu-util": CPU利用率。范围{10, 100}	      "memory-util": 内存利用率。范围{10, 100}      "service-qps": 单个实例QPS值。范围{1, 5000}
+        /// "concurrency-util":单个实例请求数量值。范围{1,100000}
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HpaMetrics")]

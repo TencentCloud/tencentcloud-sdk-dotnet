@@ -31,6 +31,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         public ulong? Total{ get; set; }
 
         /// <summary>
+        /// 规则详情
+        /// </summary>
+        [JsonProperty("Data")]
+        public IdsWhiteInfo[] Data{ get; set; }
+
+        /// <summary>
         /// 返回状态码 0 成功 非0不成功
         /// </summary>
         [JsonProperty("ReturnCode")]
@@ -55,6 +61,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
             this.SetParamSimple(map, prefix + "ReturnMsg", this.ReturnMsg);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

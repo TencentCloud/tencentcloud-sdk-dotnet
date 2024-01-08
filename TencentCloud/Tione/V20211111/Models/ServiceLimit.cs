@@ -36,6 +36,18 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("InstanceRpsLimit")]
         public long? InstanceRpsLimit{ get; set; }
 
+        /// <summary>
+        /// 是否开启单实例最大并发数限制，true or false。true 则 InstanceReqLimit 必填， false 则 InstanceReqLimit 不生效
+        /// </summary>
+        [JsonProperty("EnableInstanceReqLimit")]
+        public bool? EnableInstanceReqLimit{ get; set; }
+
+        /// <summary>
+        /// 每个服务实例的最大并发
+        /// </summary>
+        [JsonProperty("InstanceReqLimit")]
+        public long? InstanceReqLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Tione.V20211111.Models
         {
             this.SetParamSimple(map, prefix + "EnableInstanceRpsLimit", this.EnableInstanceRpsLimit);
             this.SetParamSimple(map, prefix + "InstanceRpsLimit", this.InstanceRpsLimit);
+            this.SetParamSimple(map, prefix + "EnableInstanceReqLimit", this.EnableInstanceReqLimit);
+            this.SetParamSimple(map, prefix + "InstanceReqLimit", this.InstanceReqLimit);
         }
     }
 }

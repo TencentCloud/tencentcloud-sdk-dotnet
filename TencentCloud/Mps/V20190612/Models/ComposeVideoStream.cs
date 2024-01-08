@@ -38,6 +38,14 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }
 
+        /// <summary>
+        /// 参考码率，单位 kbps，范围：50~35000。
+        /// 如果设置，编码时会尽量按该码率进行编码。
+        /// 如果不设置，服务将通过画面复杂度自动采用合适的码率。
+        /// </summary>
+        [JsonProperty("Bitrate")]
+        public long? Bitrate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +54,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Codec", this.Codec);
             this.SetParamSimple(map, prefix + "Fps", this.Fps);
+            this.SetParamSimple(map, prefix + "Bitrate", this.Bitrate);
         }
     }
 }

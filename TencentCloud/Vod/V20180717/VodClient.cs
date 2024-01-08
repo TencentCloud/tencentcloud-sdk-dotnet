@@ -272,6 +272,48 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 由 VOD 创建新的日志集。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCLSLogsetRequest"/></param>
+        /// <returns><see cref="CreateCLSLogsetResponse"/></returns>
+        public Task<CreateCLSLogsetResponse> CreateCLSLogset(CreateCLSLogsetRequest req)
+        {
+            return InternalRequestAsync<CreateCLSLogsetResponse>(req, "CreateCLSLogset");
+        }
+
+        /// <summary>
+        /// 由 VOD 创建新的日志集。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCLSLogsetRequest"/></param>
+        /// <returns><see cref="CreateCLSLogsetResponse"/></returns>
+        public CreateCLSLogsetResponse CreateCLSLogsetSync(CreateCLSLogsetRequest req)
+        {
+            return InternalRequestAsync<CreateCLSLogsetResponse>(req, "CreateCLSLogset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建 VOD 下新的 CLS 日志主题
+        /// </summary>
+        /// <param name="req"><see cref="CreateCLSTopicRequest"/></param>
+        /// <returns><see cref="CreateCLSTopicResponse"/></returns>
+        public Task<CreateCLSTopicResponse> CreateCLSTopic(CreateCLSTopicRequest req)
+        {
+            return InternalRequestAsync<CreateCLSTopicResponse>(req, "CreateCLSTopic");
+        }
+
+        /// <summary>
+        /// 创建 VOD 下新的 CLS 日志主题
+        /// </summary>
+        /// <param name="req"><see cref="CreateCLSTopicRequest"/></param>
+        /// <returns><see cref="CreateCLSTopicResponse"/></returns>
+        public CreateCLSTopicResponse CreateCLSTopicSync(CreateCLSTopicRequest req)
+        {
+            return InternalRequestAsync<CreateCLSTopicResponse>(req, "CreateCLSTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// * 用于对媒体进行分类管理；
         /// * 该接口不影响既有媒体的分类，如需修改媒体分类，请调用[修改媒体文件属性](/document/product/266/31762)接口。
         /// * 分类层次不可超过 4 层。
@@ -867,6 +909,27 @@ namespace TencentCloud.Vod.V20180717
         public DeleteAnimatedGraphicsTemplateResponse DeleteAnimatedGraphicsTemplateSync(DeleteAnimatedGraphicsTemplateRequest req)
         {
             return InternalRequestAsync<DeleteAnimatedGraphicsTemplateResponse>(req, "DeleteAnimatedGraphicsTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除点播开通的日志主题。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCLSTopicRequest"/></param>
+        /// <returns><see cref="DeleteCLSTopicResponse"/></returns>
+        public Task<DeleteCLSTopicResponse> DeleteCLSTopic(DeleteCLSTopicRequest req)
+        {
+            return InternalRequestAsync<DeleteCLSTopicResponse>(req, "DeleteCLSTopic");
+        }
+
+        /// <summary>
+        /// 删除点播开通的日志主题。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCLSTopicRequest"/></param>
+        /// <returns><see cref="DeleteCLSTopicResponse"/></returns>
+        public DeleteCLSTopicResponse DeleteCLSTopicSync(DeleteCLSTopicRequest req)
+        {
+            return InternalRequestAsync<DeleteCLSTopicResponse>(req, "DeleteCLSTopic")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1489,6 +1552,69 @@ namespace TencentCloud.Vod.V20180717
         public DescribeCDNUsageDataResponse DescribeCDNUsageDataSync(DescribeCDNUsageDataRequest req)
         {
             return InternalRequestAsync<DescribeCDNUsageDataResponse>(req, "DescribeCDNUsageData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 VOD 创建的 CLS 日志集。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCLSLogsetsRequest"/></param>
+        /// <returns><see cref="DescribeCLSLogsetsResponse"/></returns>
+        public Task<DescribeCLSLogsetsResponse> DescribeCLSLogsets(DescribeCLSLogsetsRequest req)
+        {
+            return InternalRequestAsync<DescribeCLSLogsetsResponse>(req, "DescribeCLSLogsets");
+        }
+
+        /// <summary>
+        /// 查询 VOD 创建的 CLS 日志集。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCLSLogsetsRequest"/></param>
+        /// <returns><see cref="DescribeCLSLogsetsResponse"/></returns>
+        public DescribeCLSLogsetsResponse DescribeCLSLogsetsSync(DescribeCLSLogsetsRequest req)
+        {
+            return InternalRequestAsync<DescribeCLSLogsetsResponse>(req, "DescribeCLSLogsets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询点播域名下日志投递的目标主题。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCLSPushTargetsRequest"/></param>
+        /// <returns><see cref="DescribeCLSPushTargetsResponse"/></returns>
+        public Task<DescribeCLSPushTargetsResponse> DescribeCLSPushTargets(DescribeCLSPushTargetsRequest req)
+        {
+            return InternalRequestAsync<DescribeCLSPushTargetsResponse>(req, "DescribeCLSPushTargets");
+        }
+
+        /// <summary>
+        /// 查询点播域名下日志投递的目标主题。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCLSPushTargetsRequest"/></param>
+        /// <returns><see cref="DescribeCLSPushTargetsResponse"/></returns>
+        public DescribeCLSPushTargetsResponse DescribeCLSPushTargetsSync(DescribeCLSPushTargetsRequest req)
+        {
+            return InternalRequestAsync<DescribeCLSPushTargetsResponse>(req, "DescribeCLSPushTargets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 VOD 创建的 CLS 日志主题列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCLSTopicsRequest"/></param>
+        /// <returns><see cref="DescribeCLSTopicsResponse"/></returns>
+        public Task<DescribeCLSTopicsResponse> DescribeCLSTopics(DescribeCLSTopicsRequest req)
+        {
+            return InternalRequestAsync<DescribeCLSTopicsResponse>(req, "DescribeCLSTopics");
+        }
+
+        /// <summary>
+        /// 查询 VOD 创建的 CLS 日志主题列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCLSTopicsRequest"/></param>
+        /// <returns><see cref="DescribeCLSTopicsResponse"/></returns>
+        public DescribeCLSTopicsResponse DescribeCLSTopicsSync(DescribeCLSTopicsRequest req)
+        {
+            return InternalRequestAsync<DescribeCLSTopicsResponse>(req, "DescribeCLSTopics")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3987,6 +4113,27 @@ namespace TencentCloud.Vod.V20180717
         public SearchMediaResponse SearchMediaSync(SearchMediaRequest req)
         {
             return InternalRequestAsync<SearchMediaResponse>(req, "SearchMedia")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 为点播域名设置投递 CLS 的目标。
+        /// </summary>
+        /// <param name="req"><see cref="SetCLSPushTargetRequest"/></param>
+        /// <returns><see cref="SetCLSPushTargetResponse"/></returns>
+        public Task<SetCLSPushTargetResponse> SetCLSPushTarget(SetCLSPushTargetRequest req)
+        {
+            return InternalRequestAsync<SetCLSPushTargetResponse>(req, "SetCLSPushTarget");
+        }
+
+        /// <summary>
+        /// 为点播域名设置投递 CLS 的目标。
+        /// </summary>
+        /// <param name="req"><see cref="SetCLSPushTargetRequest"/></param>
+        /// <returns><see cref="SetCLSPushTargetResponse"/></returns>
+        public SetCLSPushTargetResponse SetCLSPushTargetSync(SetCLSPushTargetRequest req)
+        {
+            return InternalRequestAsync<SetCLSPushTargetResponse>(req, "SetCLSPushTarget")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

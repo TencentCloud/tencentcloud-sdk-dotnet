@@ -202,6 +202,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("SSHConfig")]
         public SSHConfig SSHConfig{ get; set; }
 
+        /// <summary>
+        /// GooseFS存储配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VolumeSourceGooseFS")]
+        public GooseFS VolumeSourceGooseFS{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -234,6 +241,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamArraySimple(map, prefix + "UserTypes.", this.UserTypes);
             this.SetParamObj(map, prefix + "SSHConfig.", this.SSHConfig);
+            this.SetParamObj(map, prefix + "VolumeSourceGooseFS.", this.VolumeSourceGooseFS);
         }
     }
 }

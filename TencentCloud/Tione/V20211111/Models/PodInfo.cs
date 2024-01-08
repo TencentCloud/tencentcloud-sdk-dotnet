@@ -39,7 +39,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string IP{ get; set; }
 
         /// <summary>
-        /// pod状态
+        /// pod状态。eg：SUBMITTING提交中、PENDING排队中、RUNNING运行中、SUCCEEDED已完成、FAILED异常、TERMINATING停止中、TERMINATED已停止
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]

@@ -31,13 +31,13 @@ namespace TencentCloud.Tione.V20211111.Models
         public string Id{ get; set; }
 
         /// <summary>
-        /// 名称
+        /// 名称。不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 计算资源付费模式 ，可选值为：
+        /// （不允许修改）计算资源付费模式 ，可选值为：
         /// PREPAID：预付费，即包年包月
         /// POSTPAID_BY_HOUR：按小时后付费
         /// </summary>
@@ -81,13 +81,13 @@ namespace TencentCloud.Tione.V20211111.Models
         public string ResourceGroupId{ get; set; }
 
         /// <summary>
-        /// Vpc-Id
+        /// （不允许修改）Vpc-Id
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网Id
+        /// （不允许修改）子网Id
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -99,7 +99,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public ulong? VolumeSizeInGB{ get; set; }
 
         /// <summary>
-        /// 存储的类型。取值包含： 
+        /// （不允许修改）存储的类型。取值包含： 
         ///     FREE:    预付费的免费存储
         ///     CLOUD_PREMIUM： 高性能云硬盘
         ///     CLOUD_SSD： SSD云硬盘
@@ -109,7 +109,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string VolumeSourceType{ get; set; }
 
         /// <summary>
-        /// CFS存储的配置
+        /// （不允许修改）CFS存储的配置
         /// </summary>
         [JsonProperty("VolumeSourceCFS")]
         public CFSConfig VolumeSourceCFS{ get; set; }
@@ -151,7 +151,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 数据配置
+        /// 数据配置，只支持WEDATA_HDFS
         /// </summary>
         [JsonProperty("DataConfigs")]
         public DataConfig[] DataConfigs{ get; set; }
@@ -163,7 +163,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public ImageInfo ImageInfo{ get; set; }
 
         /// <summary>
-        /// 镜像类型
+        /// 镜像类型，包括SYSTEM、TCR、CCR
         /// </summary>
         [JsonProperty("ImageType")]
         public string ImageType{ get; set; }

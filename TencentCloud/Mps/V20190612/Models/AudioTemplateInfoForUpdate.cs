@@ -26,6 +26,8 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// 音频流的编码格式。
+        /// 当不需要对音频进行转码时，可选值为：
+        /// <li>copy。</li>
         /// 当外层参数 Container 为 mp3 时，可选值为：
         /// <li>libmp3lame。</li>
         /// 当外层参数 Container 为 ogg 或 flac 时，可选值为：

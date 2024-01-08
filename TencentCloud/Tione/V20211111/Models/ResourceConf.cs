@@ -39,14 +39,14 @@ namespace TencentCloud.Tione.V20211111.Models
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// gpu Gpu卡资源，单位为1单位的GpuType，例如GpuType=T4时，1 Gpu = 1/100 T4卡，GpuType=vcuda时，1 Gpu = 1/100 vcuda-core (for预付费)
+        /// gpu Gpu卡资源，单位为1/100卡，例如GpuType=T4时，1 Gpu = 1/100 T4卡 (for预付费)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Gpu")]
         public ulong? Gpu{ get; set; }
 
         /// <summary>
-        /// GpuType 卡类型 vcuda, T4,P4,V100等 (for预付费)
+        /// GpuType 卡类型，参考资源组上对应的卡类型。eg: H800,A800,A100,T4,P4,V100等 (for预付费)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GpuType")]

@@ -50,6 +50,14 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("AudioChannel")]
         public long? AudioChannel{ get; set; }
 
+        /// <summary>
+        /// 参考码率，单位 kbps，范围：26~10000。
+        /// 如果设置，编码时会尽量按该码率进行编码。
+        /// 如果不设置，服务将根据音频参数自动采用合适的码率。
+        /// </summary>
+        [JsonProperty("Bitrate")]
+        public long? Bitrate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +67,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Codec", this.Codec);
             this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
             this.SetParamSimple(map, prefix + "AudioChannel", this.AudioChannel);
+            this.SetParamSimple(map, prefix + "Bitrate", this.Bitrate);
         }
     }
 }

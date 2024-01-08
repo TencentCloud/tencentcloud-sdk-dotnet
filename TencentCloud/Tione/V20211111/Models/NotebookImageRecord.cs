@@ -39,7 +39,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// 状态。eg：creating导出中/success已完成/stopped已停止/fail异常
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]

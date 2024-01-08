@@ -50,7 +50,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string BackGroundColor{ get; set; }
 
         /// <summary>
-        /// 整个画布的背景图url，优先级高于BackGroundColor。
+        /// 整个画布的背景图url，优先级高于BackGroundColor。支持png、jpg、jpeg格式。图片大小限制不超过5MB。
+        /// 注：您需要确保图片链接的可访问性，后台单次下载超时时间为10秒，最多重试3次，若最终图片下载失败，背景图将不会生效。
         /// </summary>
         [JsonProperty("BackgroundImageUrl")]
         public string BackgroundImageUrl{ get; set; }

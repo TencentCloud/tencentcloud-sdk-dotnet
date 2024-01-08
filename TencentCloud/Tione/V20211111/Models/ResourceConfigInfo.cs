@@ -31,25 +31,25 @@ namespace TencentCloud.Tione.V20211111.Models
         public string Role{ get; set; }
 
         /// <summary>
-        /// cpu核数，1000=1核
+        /// cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核
         /// </summary>
         [JsonProperty("Cpu")]
         public ulong? Cpu{ get; set; }
 
         /// <summary>
-        /// 内存，单位为MB
+        /// 内存，使用资源组时需配置。单位为MB
         /// </summary>
         [JsonProperty("Memory")]
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// gpu卡类型
+        /// gpu卡类型，使用资源组时需配置
         /// </summary>
         [JsonProperty("GpuType")]
         public string GpuType{ get; set; }
 
         /// <summary>
-        /// gpu数
+        /// gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡
         /// </summary>
         [JsonProperty("Gpu")]
         public ulong? Gpu{ get; set; }

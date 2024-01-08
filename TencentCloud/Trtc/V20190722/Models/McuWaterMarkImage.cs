@@ -26,6 +26,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         
         /// <summary>
         /// 水印图片URL地址，支持png、jpg、jpeg格式。图片大小限制不超过5MB。
+        /// 注：您需要确保图片链接的可访问性，后台单次下载超时时间为10秒，最多重试3次，若最终图片下载失败，水印图片将不会生效。
         /// </summary>
         [JsonProperty("WaterMarkUrl")]
         public string WaterMarkUrl{ get; set; }

@@ -24,12 +24,28 @@ namespace TencentCloud.Tione.V20211111.Models
     public class TrainingDataPoint : AbstractModel
     {
         
+        /// <summary>
+        /// 时间戳
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Timestamp")]
+        public ulong? Timestamp{ get; set; }
+
+        /// <summary>
+        /// 训练上报的值。可以为训练指标（双精度浮点数，也可以为Epoch/Step（两者皆保证是整数）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Value")]
+        public float? Value{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Timestamp", this.Timestamp);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

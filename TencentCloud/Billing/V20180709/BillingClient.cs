@@ -586,6 +586,27 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// 获取已接入标准用量明细模板产品的用量明细数据，目前已接入并支持查询的产品包括：云联络中心、实时音视频、实时音视频、智能媒资托管、CODING DevOps、全球IP应用加速
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDosageDetailListRequest"/></param>
+        /// <returns><see cref="DescribeDosageDetailListResponse"/></returns>
+        public Task<DescribeDosageDetailListResponse> DescribeDosageDetailList(DescribeDosageDetailListRequest req)
+        {
+            return InternalRequestAsync<DescribeDosageDetailListResponse>(req, "DescribeDosageDetailList");
+        }
+
+        /// <summary>
+        /// 获取已接入标准用量明细模板产品的用量明细数据，目前已接入并支持查询的产品包括：云联络中心、实时音视频、实时音视频、智能媒资托管、CODING DevOps、全球IP应用加速
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDosageDetailListRequest"/></param>
+        /// <returns><see cref="DescribeDosageDetailListResponse"/></returns>
+        public DescribeDosageDetailListResponse DescribeDosageDetailListSync(DescribeDosageDetailListRequest req)
+        {
+            return InternalRequestAsync<DescribeDosageDetailListResponse>(req, "DescribeDosageDetailList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询当前用户节省计划覆盖率明细数据，如无特别说明，金额单位均为元（国内站）或者美元（国际站）。
         /// </summary>
         /// <param name="req"><see cref="DescribeSavingPlanCoverageRequest"/></param>

@@ -98,7 +98,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string TrainingMode{ get; set; }
 
         /// <summary>
-        /// 数据配置，依赖DataSource字段
+        /// 数据配置，依赖DataSource字段，数量不超过10个
         /// </summary>
         [JsonProperty("DataConfigs")]
         public DataConfig[] DataConfigs{ get; set; }
@@ -128,7 +128,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public LogConfig LogConfig{ get; set; }
 
         /// <summary>
-        /// 调优参数
+        /// 调优参数，不超过2048个字符
         /// </summary>
         [JsonProperty("TuningParameters")]
         public string TuningParameters{ get; set; }
@@ -140,13 +140,13 @@ namespace TencentCloud.Tione.V20211111.Models
         public bool? LogEnable{ get; set; }
 
         /// <summary>
-        /// 备注，最多500个字
+        /// 备注，不超过1024个字符
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 数据来源，eg：DATASET、COS、CFS、HDFS
+        /// 数据来源，eg：DATASET、COS、CFS、CFSTurbo、HDFS、GooseFSx
         /// </summary>
         [JsonProperty("DataSource")]
         public string DataSource{ get; set; }

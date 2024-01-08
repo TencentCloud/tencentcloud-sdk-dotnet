@@ -88,16 +88,18 @@ namespace TencentCloud.Tione.V20211111.Models
 
         /// <summary>
         /// 存储的类型。取值包含： 
-        ///     FREE:    预付费的免费存储
-        ///     CLOUD_PREMIUM： 高性能云硬盘
-        ///     CLOUD_SSD： SSD云硬盘
-        ///     CFS:     CFS存储，包含NFS和turbo
+        /// FREE：预付费的免费存储
+        /// CLOUD_PREMIUM：高性能云硬盘
+        /// CLOUD_SSD：SSD云硬盘
+        /// CFS：CFS存储
+        /// CFS_TURBO：CFS Turbo存储
+        /// GooseFSx：GooseFSx存储
         /// </summary>
         [JsonProperty("VolumeSourceType")]
         public string VolumeSourceType{ get; set; }
 
         /// <summary>
-        /// 存储卷大小，单位GB
+        /// 云硬盘存储卷大小，单位GB
         /// </summary>
         [JsonProperty("VolumeSizeInGB")]
         public ulong? VolumeSizeInGB{ get; set; }
@@ -145,7 +147,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 数据配置
+        /// 数据配置，只支持WEDATA_HDFS存储类型
         /// </summary>
         [JsonProperty("DataConfigs")]
         public DataConfig[] DataConfigs{ get; set; }
@@ -157,7 +159,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public ImageInfo ImageInfo{ get; set; }
 
         /// <summary>
-        /// 镜像类型
+        /// 镜像类型，包括SYSTEM、TCR、CCR
         /// </summary>
         [JsonProperty("ImageType")]
         public string ImageType{ get; set; }
@@ -167,6 +169,12 @@ namespace TencentCloud.Tione.V20211111.Models
         /// </summary>
         [JsonProperty("SSHConfig")]
         public SSHConfig SSHConfig{ get; set; }
+
+        /// <summary>
+        /// GooseFS存储配置
+        /// </summary>
+        [JsonProperty("VolumeSourceGooseFS")]
+        public GooseFS VolumeSourceGooseFS{ get; set; }
 
 
         /// <summary>
@@ -197,6 +205,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
             this.SetParamSimple(map, prefix + "ImageType", this.ImageType);
             this.SetParamObj(map, prefix + "SSHConfig.", this.SSHConfig);
+            this.SetParamObj(map, prefix + "VolumeSourceGooseFS.", this.VolumeSourceGooseFS);
         }
     }
 }

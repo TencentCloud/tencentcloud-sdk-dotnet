@@ -31,7 +31,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string MappingPath{ get; set; }
 
         /// <summary>
-        /// DATASET、COS、CFS、HDFS、WEDATA_HDFS
+        /// DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataSourceType")]
