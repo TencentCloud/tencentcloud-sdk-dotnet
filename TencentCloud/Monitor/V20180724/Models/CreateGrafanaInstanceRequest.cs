@@ -60,6 +60,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("TagSpecification")]
         public PrometheusTag[] TagSpecification{ get; set; }
 
+        /// <summary>
+        /// 是否自动选择代金券，默认为 false
+        /// </summary>
+        [JsonProperty("AutoVoucher")]
+        public bool? AutoVoucher{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "EnableInternet", this.EnableInternet);
             this.SetParamSimple(map, prefix + "GrafanaInitPassword", this.GrafanaInitPassword);
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
+            this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         }
     }
 }

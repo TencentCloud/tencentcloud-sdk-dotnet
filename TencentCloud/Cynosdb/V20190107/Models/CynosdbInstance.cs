@@ -354,6 +354,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("InstanceIndexMode")]
         public string InstanceIndexMode{ get; set; }
 
+        /// <summary>
+        /// 当前实例支持的能力
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceAbility")]
+        public InstanceAbility InstanceAbility{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -413,6 +420,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArrayObj(map, prefix + "InstanceNetInfo.", this.InstanceNetInfo);
             this.SetParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
             this.SetParamSimple(map, prefix + "InstanceIndexMode", this.InstanceIndexMode);
+            this.SetParamObj(map, prefix + "InstanceAbility.", this.InstanceAbility);
         }
     }
 }

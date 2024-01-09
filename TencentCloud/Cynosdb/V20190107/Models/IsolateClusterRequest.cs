@@ -36,6 +36,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
 
+        /// <summary>
+        /// 实例退还原因类型
+        /// </summary>
+        [JsonProperty("IsolateReasonTypes")]
+        public long?[] IsolateReasonTypes{ get; set; }
+
+        /// <summary>
+        /// 实例退还原因补充
+        /// </summary>
+        [JsonProperty("IsolateReason")]
+        public string IsolateReason{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "DbType", this.DbType);
+            this.SetParamArraySimple(map, prefix + "IsolateReasonTypes.", this.IsolateReasonTypes);
+            this.SetParamSimple(map, prefix + "IsolateReason", this.IsolateReason);
         }
     }
 }

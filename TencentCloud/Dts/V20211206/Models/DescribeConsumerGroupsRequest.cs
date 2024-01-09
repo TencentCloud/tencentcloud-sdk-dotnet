@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Rum.V20210622.Models
+namespace TencentCloud.Dts.V20211206.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeOfflineLogsRequest : AbstractModel
+    public class DescribeConsumerGroupsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 项目唯一上报 key
+        /// 订阅实例id
         /// </summary>
-        [JsonProperty("ProjectKey")]
-        public string ProjectKey{ get; set; }
+        [JsonProperty("SubscribeId")]
+        public string SubscribeId{ get; set; }
 
         /// <summary>
-        /// 离线日志文件 id 列表
+        /// 返回记录的起始偏移量。默认0
         /// </summary>
-        [JsonProperty("FileIDs")]
-        public string[] FileIDs{ get; set; }
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// 单次返回的记录数量。默认10
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Rum.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProjectKey", this.ProjectKey);
-            this.SetParamArraySimple(map, prefix + "FileIDs.", this.FileIDs);
+            this.SetParamSimple(map, prefix + "SubscribeId", this.SubscribeId);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

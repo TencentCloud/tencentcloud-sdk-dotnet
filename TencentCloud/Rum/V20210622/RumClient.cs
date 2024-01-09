@@ -82,27 +82,6 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// 创建离线日志监听，对应用户的离线日志将上报
-        /// </summary>
-        /// <param name="req"><see cref="CreateOfflineLogConfigRequest"/></param>
-        /// <returns><see cref="CreateOfflineLogConfigResponse"/></returns>
-        public Task<CreateOfflineLogConfigResponse> CreateOfflineLogConfig(CreateOfflineLogConfigRequest req)
-        {
-            return InternalRequestAsync<CreateOfflineLogConfigResponse>(req, "CreateOfflineLogConfig");
-        }
-
-        /// <summary>
-        /// 创建离线日志监听，对应用户的离线日志将上报
-        /// </summary>
-        /// <param name="req"><see cref="CreateOfflineLogConfigRequest"/></param>
-        /// <returns><see cref="CreateOfflineLogConfigResponse"/></returns>
-        public CreateOfflineLogConfigResponse CreateOfflineLogConfigSync(CreateOfflineLogConfigRequest req)
-        {
-            return InternalRequestAsync<CreateOfflineLogConfigResponse>(req, "CreateOfflineLogConfig")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 创建 RUM 应用（归属于某个团队）
         /// </summary>
         /// <param name="req"><see cref="CreateProjectRequest"/></param>
@@ -936,48 +915,6 @@ namespace TencentCloud.Rum.V20210622
         public DescribeOfflineLogConfigsResponse DescribeOfflineLogConfigsSync(DescribeOfflineLogConfigsRequest req)
         {
             return InternalRequestAsync<DescribeOfflineLogConfigsResponse>(req, "DescribeOfflineLogConfigs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取所有离线日志记录(最多100条)
-        /// </summary>
-        /// <param name="req"><see cref="DescribeOfflineLogRecordsRequest"/></param>
-        /// <returns><see cref="DescribeOfflineLogRecordsResponse"/></returns>
-        public Task<DescribeOfflineLogRecordsResponse> DescribeOfflineLogRecords(DescribeOfflineLogRecordsRequest req)
-        {
-            return InternalRequestAsync<DescribeOfflineLogRecordsResponse>(req, "DescribeOfflineLogRecords");
-        }
-
-        /// <summary>
-        /// 获取所有离线日志记录(最多100条)
-        /// </summary>
-        /// <param name="req"><see cref="DescribeOfflineLogRecordsRequest"/></param>
-        /// <returns><see cref="DescribeOfflineLogRecordsResponse"/></returns>
-        public DescribeOfflineLogRecordsResponse DescribeOfflineLogRecordsSync(DescribeOfflineLogRecordsRequest req)
-        {
-            return InternalRequestAsync<DescribeOfflineLogRecordsResponse>(req, "DescribeOfflineLogRecords")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取对应离线日志
-        /// </summary>
-        /// <param name="req"><see cref="DescribeOfflineLogsRequest"/></param>
-        /// <returns><see cref="DescribeOfflineLogsResponse"/></returns>
-        public Task<DescribeOfflineLogsResponse> DescribeOfflineLogs(DescribeOfflineLogsRequest req)
-        {
-            return InternalRequestAsync<DescribeOfflineLogsResponse>(req, "DescribeOfflineLogs");
-        }
-
-        /// <summary>
-        /// 获取对应离线日志
-        /// </summary>
-        /// <param name="req"><see cref="DescribeOfflineLogsRequest"/></param>
-        /// <returns><see cref="DescribeOfflineLogsResponse"/></returns>
-        public DescribeOfflineLogsResponse DescribeOfflineLogsSync(DescribeOfflineLogsRequest req)
-        {
-            return InternalRequestAsync<DescribeOfflineLogsResponse>(req, "DescribeOfflineLogs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{27DE4D5F-4AFE-3F22-B8A9-6865D22FBF4A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.931</VersionPrefix>
+    <VersionPrefix>3.0.932</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -63,6 +63,8 @@
     <Compile Include="V20211206\Models\CompareViewItem.cs" />
     <Compile Include="V20211206\Models\CompleteMigrateJobRequest.cs" />
     <Compile Include="V20211206\Models\CompleteMigrateJobResponse.cs" />
+    <Compile Include="V20211206\Models\ConfigureSubscribeJobRequest.cs" />
+    <Compile Include="V20211206\Models\ConfigureSubscribeJobResponse.cs" />
     <Compile Include="V20211206\Models\ConfigureSyncJobRequest.cs" />
     <Compile Include="V20211206\Models\ConfigureSyncJobResponse.cs" />
     <Compile Include="V20211206\Models\ConflictHandleOption.cs" />
@@ -75,12 +77,18 @@
     <Compile Include="V20211206\Models\CreateCheckSyncJobResponse.cs" />
     <Compile Include="V20211206\Models\CreateCompareTaskRequest.cs" />
     <Compile Include="V20211206\Models\CreateCompareTaskResponse.cs" />
+    <Compile Include="V20211206\Models\CreateConsumerGroupRequest.cs" />
+    <Compile Include="V20211206\Models\CreateConsumerGroupResponse.cs" />
     <Compile Include="V20211206\Models\CreateMigrateCheckJobRequest.cs" />
     <Compile Include="V20211206\Models\CreateMigrateCheckJobResponse.cs" />
     <Compile Include="V20211206\Models\CreateMigrationServiceRequest.cs" />
     <Compile Include="V20211206\Models\CreateMigrationServiceResponse.cs" />
     <Compile Include="V20211206\Models\CreateModifyCheckSyncJobRequest.cs" />
     <Compile Include="V20211206\Models\CreateModifyCheckSyncJobResponse.cs" />
+    <Compile Include="V20211206\Models\CreateSubscribeCheckJobRequest.cs" />
+    <Compile Include="V20211206\Models\CreateSubscribeCheckJobResponse.cs" />
+    <Compile Include="V20211206\Models\CreateSubscribeRequest.cs" />
+    <Compile Include="V20211206\Models\CreateSubscribeResponse.cs" />
     <Compile Include="V20211206\Models\CreateSyncJobRequest.cs" />
     <Compile Include="V20211206\Models\CreateSyncJobResponse.cs" />
     <Compile Include="V20211206\Models\DBEndpointInfo.cs" />
@@ -91,12 +99,16 @@
     <Compile Include="V20211206\Models\DdlOption.cs" />
     <Compile Include="V20211206\Models\DeleteCompareTaskRequest.cs" />
     <Compile Include="V20211206\Models\DeleteCompareTaskResponse.cs" />
+    <Compile Include="V20211206\Models\DeleteConsumerGroupRequest.cs" />
+    <Compile Include="V20211206\Models\DeleteConsumerGroupResponse.cs" />
     <Compile Include="V20211206\Models\DescribeCheckSyncJobResultRequest.cs" />
     <Compile Include="V20211206\Models\DescribeCheckSyncJobResultResponse.cs" />
     <Compile Include="V20211206\Models\DescribeCompareReportRequest.cs" />
     <Compile Include="V20211206\Models\DescribeCompareReportResponse.cs" />
     <Compile Include="V20211206\Models\DescribeCompareTasksRequest.cs" />
     <Compile Include="V20211206\Models\DescribeCompareTasksResponse.cs" />
+    <Compile Include="V20211206\Models\DescribeConsumerGroupsRequest.cs" />
+    <Compile Include="V20211206\Models\DescribeConsumerGroupsResponse.cs" />
     <Compile Include="V20211206\Models\DescribeMigrateDBInstancesRequest.cs" />
     <Compile Include="V20211206\Models\DescribeMigrateDBInstancesResponse.cs" />
     <Compile Include="V20211206\Models\DescribeMigrationCheckJobRequest.cs" />
@@ -107,8 +119,20 @@
     <Compile Include="V20211206\Models\DescribeMigrationJobsResponse.cs" />
     <Compile Include="V20211206\Models\DescribeModifyCheckSyncJobResultRequest.cs" />
     <Compile Include="V20211206\Models\DescribeModifyCheckSyncJobResultResponse.cs" />
+    <Compile Include="V20211206\Models\DescribeOffsetByTimeRequest.cs" />
+    <Compile Include="V20211206\Models\DescribeOffsetByTimeResponse.cs" />
+    <Compile Include="V20211206\Models\DescribeSubscribeCheckJobRequest.cs" />
+    <Compile Include="V20211206\Models\DescribeSubscribeCheckJobResponse.cs" />
+    <Compile Include="V20211206\Models\DescribeSubscribeDetailRequest.cs" />
+    <Compile Include="V20211206\Models\DescribeSubscribeDetailResponse.cs" />
+    <Compile Include="V20211206\Models\DescribeSubscribeJobsRequest.cs" />
+    <Compile Include="V20211206\Models\DescribeSubscribeJobsResponse.cs" />
+    <Compile Include="V20211206\Models\DescribeSubscribeReturnableRequest.cs" />
+    <Compile Include="V20211206\Models\DescribeSubscribeReturnableResponse.cs" />
     <Compile Include="V20211206\Models\DescribeSyncJobsRequest.cs" />
     <Compile Include="V20211206\Models\DescribeSyncJobsResponse.cs" />
+    <Compile Include="V20211206\Models\DestroyIsolatedSubscribeRequest.cs" />
+    <Compile Include="V20211206\Models\DestroyIsolatedSubscribeResponse.cs" />
     <Compile Include="V20211206\Models\DestroyMigrateJobRequest.cs" />
     <Compile Include="V20211206\Models\DestroyMigrateJobResponse.cs" />
     <Compile Include="V20211206\Models\DestroySyncJobRequest.cs" />
@@ -116,12 +140,17 @@
     <Compile Include="V20211206\Models\DetailCheckItem.cs" />
     <Compile Include="V20211206\Models\DifferenceDetail.cs" />
     <Compile Include="V20211206\Models\DifferenceItem.cs" />
+    <Compile Include="V20211206\Models\DistributeRule.cs" />
     <Compile Include="V20211206\Models\DynamicOptions.cs" />
     <Compile Include="V20211206\Models\Endpoint.cs" />
+    <Compile Include="V20211206\Models\EndpointItem.cs" />
     <Compile Include="V20211206\Models\ErrInfo.cs" />
     <Compile Include="V20211206\Models\ErrorInfoItem.cs" />
+    <Compile Include="V20211206\Models\GroupInfo.cs" />
     <Compile Include="V20211206\Models\IsolateMigrateJobRequest.cs" />
     <Compile Include="V20211206\Models\IsolateMigrateJobResponse.cs" />
+    <Compile Include="V20211206\Models\IsolateSubscribeRequest.cs" />
+    <Compile Include="V20211206\Models\IsolateSubscribeResponse.cs" />
     <Compile Include="V20211206\Models\IsolateSyncJobRequest.cs" />
     <Compile Include="V20211206\Models\IsolateSyncJobResponse.cs" />
     <Compile Include="V20211206\Models\JobItem.cs" />
@@ -131,10 +160,15 @@
     <Compile Include="V20211206\Models\MigrateDBItem.cs" />
     <Compile Include="V20211206\Models\MigrateDetailInfo.cs" />
     <Compile Include="V20211206\Models\MigrateOption.cs" />
+    <Compile Include="V20211206\Models\ModifiedSubscribeObject.cs" />
     <Compile Include="V20211206\Models\ModifyCompareTaskNameRequest.cs" />
     <Compile Include="V20211206\Models\ModifyCompareTaskNameResponse.cs" />
     <Compile Include="V20211206\Models\ModifyCompareTaskRequest.cs" />
     <Compile Include="V20211206\Models\ModifyCompareTaskResponse.cs" />
+    <Compile Include="V20211206\Models\ModifyConsumerGroupDescriptionRequest.cs" />
+    <Compile Include="V20211206\Models\ModifyConsumerGroupDescriptionResponse.cs" />
+    <Compile Include="V20211206\Models\ModifyConsumerGroupPasswordRequest.cs" />
+    <Compile Include="V20211206\Models\ModifyConsumerGroupPasswordResponse.cs" />
     <Compile Include="V20211206\Models\ModifyMigrateJobSpecRequest.cs" />
     <Compile Include="V20211206\Models\ModifyMigrateJobSpecResponse.cs" />
     <Compile Include="V20211206\Models\ModifyMigrateNameRequest.cs" />
@@ -145,17 +179,27 @@
     <Compile Include="V20211206\Models\ModifyMigrateRuntimeAttributeResponse.cs" />
     <Compile Include="V20211206\Models\ModifyMigrationJobRequest.cs" />
     <Compile Include="V20211206\Models\ModifyMigrationJobResponse.cs" />
+    <Compile Include="V20211206\Models\ModifySubscribeAutoRenewFlagRequest.cs" />
+    <Compile Include="V20211206\Models\ModifySubscribeAutoRenewFlagResponse.cs" />
+    <Compile Include="V20211206\Models\ModifySubscribeNameRequest.cs" />
+    <Compile Include="V20211206\Models\ModifySubscribeNameResponse.cs" />
+    <Compile Include="V20211206\Models\ModifySubscribeObjectsRequest.cs" />
+    <Compile Include="V20211206\Models\ModifySubscribeObjectsResponse.cs" />
     <Compile Include="V20211206\Models\ModifySyncJobConfigRequest.cs" />
     <Compile Include="V20211206\Models\ModifySyncJobConfigResponse.cs" />
     <Compile Include="V20211206\Models\ModifySyncRateLimitRequest.cs" />
     <Compile Include="V20211206\Models\ModifySyncRateLimitResponse.cs" />
+    <Compile Include="V20211206\Models\MonitorInfo.cs" />
     <Compile Include="V20211206\Models\Objects.cs" />
+    <Compile Include="V20211206\Models\OffsetTimeMap.cs" />
     <Compile Include="V20211206\Models\OnlineDDL.cs" />
     <Compile Include="V20211206\Models\Options.cs" />
+    <Compile Include="V20211206\Models\PartitionAssignment.cs" />
     <Compile Include="V20211206\Models\PauseMigrateJobRequest.cs" />
     <Compile Include="V20211206\Models\PauseMigrateJobResponse.cs" />
     <Compile Include="V20211206\Models\PauseSyncJobRequest.cs" />
     <Compile Include="V20211206\Models\PauseSyncJobResponse.cs" />
+    <Compile Include="V20211206\Models\PipelineInfo.cs" />
     <Compile Include="V20211206\Models\ProcessProgress.cs" />
     <Compile Include="V20211206\Models\ProcessStepTip.cs" />
     <Compile Include="V20211206\Models\RateLimitOption.cs" />
@@ -163,10 +207,16 @@
     <Compile Include="V20211206\Models\RecoverMigrateJobResponse.cs" />
     <Compile Include="V20211206\Models\RecoverSyncJobRequest.cs" />
     <Compile Include="V20211206\Models\RecoverSyncJobResponse.cs" />
+    <Compile Include="V20211206\Models\ResetConsumerGroupOffsetRequest.cs" />
+    <Compile Include="V20211206\Models\ResetConsumerGroupOffsetResponse.cs" />
+    <Compile Include="V20211206\Models\ResetSubscribeRequest.cs" />
+    <Compile Include="V20211206\Models\ResetSubscribeResponse.cs" />
     <Compile Include="V20211206\Models\ResizeSyncJobRequest.cs" />
     <Compile Include="V20211206\Models\ResizeSyncJobResponse.cs" />
     <Compile Include="V20211206\Models\ResumeMigrateJobRequest.cs" />
     <Compile Include="V20211206\Models\ResumeMigrateJobResponse.cs" />
+    <Compile Include="V20211206\Models\ResumeSubscribeRequest.cs" />
+    <Compile Include="V20211206\Models\ResumeSubscribeResponse.cs" />
     <Compile Include="V20211206\Models\ResumeSyncJobRequest.cs" />
     <Compile Include="V20211206\Models\ResumeSyncJobResponse.cs" />
     <Compile Include="V20211206\Models\RoleItem.cs" />
@@ -182,6 +232,8 @@
     <Compile Include="V20211206\Models\StartMigrateJobResponse.cs" />
     <Compile Include="V20211206\Models\StartModifySyncJobRequest.cs" />
     <Compile Include="V20211206\Models\StartModifySyncJobResponse.cs" />
+    <Compile Include="V20211206\Models\StartSubscribeRequest.cs" />
+    <Compile Include="V20211206\Models\StartSubscribeResponse.cs" />
     <Compile Include="V20211206\Models\StartSyncJobRequest.cs" />
     <Compile Include="V20211206\Models\StartSyncJobResponse.cs" />
     <Compile Include="V20211206\Models\StepDetailInfo.cs" />
@@ -193,6 +245,12 @@
     <Compile Include="V20211206\Models\StopMigrateJobResponse.cs" />
     <Compile Include="V20211206\Models\StopSyncJobRequest.cs" />
     <Compile Include="V20211206\Models\StopSyncJobResponse.cs" />
+    <Compile Include="V20211206\Models\SubsErr.cs" />
+    <Compile Include="V20211206\Models\SubscribeCheckStepInfo.cs" />
+    <Compile Include="V20211206\Models\SubscribeCheckStepTip.cs" />
+    <Compile Include="V20211206\Models\SubscribeInfo.cs" />
+    <Compile Include="V20211206\Models\SubscribeKafkaConfig.cs" />
+    <Compile Include="V20211206\Models\SubscribeObject.cs" />
     <Compile Include="V20211206\Models\SyncDBEndpointInfos.cs" />
     <Compile Include="V20211206\Models\SyncDetailInfo.cs" />
     <Compile Include="V20211206\Models\SyncJobInfo.cs" />

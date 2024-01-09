@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Rum.V20210622.Models
+namespace TencentCloud.Dts.V20211206.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeOfflineLogRecordsResponse : AbstractModel
+    public class DescribeSubscribeReturnableRequest : AbstractModel
     {
         
         /// <summary>
-        /// 接口调用信息
+        /// 数据订阅实例的ID
         /// </summary>
-        [JsonProperty("Msg")]
-        public string Msg{ get; set; }
-
-        /// <summary>
-        /// 记录 ID 数组
-        /// </summary>
-        [JsonProperty("RecordSet")]
-        public string[] RecordSet{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("SubscribeId")]
+        public string SubscribeId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Rum.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Msg", this.Msg);
-            this.SetParamArraySimple(map, prefix + "RecordSet.", this.RecordSet);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "SubscribeId", this.SubscribeId);
         }
     }
 }

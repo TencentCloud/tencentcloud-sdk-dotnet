@@ -15,26 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Rum.V20210622.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateOfflineLogConfigRequest : AbstractModel
+    public class InstanceAbility : AbstractModel
     {
         
         /// <summary>
-        /// 项目唯一上报 key
+        /// 实例是否支持强制重启，可选值：yes：支持，no：不支持
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ProjectKey")]
-        public string ProjectKey{ get; set; }
+        [JsonProperty("IsSupportForceRestart")]
+        public string IsSupportForceRestart{ get; set; }
 
         /// <summary>
-        /// 需要监听的用户唯一标示(aid 或 uin)
+        /// 不支持强制重启的原因
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("UniqueID")]
-        public string UniqueID{ get; set; }
+        [JsonProperty("NonsupportForceRestartReason")]
+        public string NonsupportForceRestartReason{ get; set; }
 
 
         /// <summary>
@@ -42,8 +44,8 @@ namespace TencentCloud.Rum.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProjectKey", this.ProjectKey);
-            this.SetParamSimple(map, prefix + "UniqueID", this.UniqueID);
+            this.SetParamSimple(map, prefix + "IsSupportForceRestart", this.IsSupportForceRestart);
+            this.SetParamSimple(map, prefix + "NonsupportForceRestartReason", this.NonsupportForceRestartReason);
         }
     }
 }

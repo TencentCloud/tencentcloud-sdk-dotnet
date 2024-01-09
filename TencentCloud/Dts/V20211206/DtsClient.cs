@@ -78,6 +78,27 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// 本接口(ConfigureSubscribeJob)用于配置数据订阅实例。
+        /// </summary>
+        /// <param name="req"><see cref="ConfigureSubscribeJobRequest"/></param>
+        /// <returns><see cref="ConfigureSubscribeJobResponse"/></returns>
+        public Task<ConfigureSubscribeJobResponse> ConfigureSubscribeJob(ConfigureSubscribeJobRequest req)
+        {
+            return InternalRequestAsync<ConfigureSubscribeJobResponse>(req, "ConfigureSubscribeJob");
+        }
+
+        /// <summary>
+        /// 本接口(ConfigureSubscribeJob)用于配置数据订阅实例。
+        /// </summary>
+        /// <param name="req"><see cref="ConfigureSubscribeJobRequest"/></param>
+        /// <returns><see cref="ConfigureSubscribeJobResponse"/></returns>
+        public ConfigureSubscribeJobResponse ConfigureSubscribeJobSync(ConfigureSubscribeJobRequest req)
+        {
+            return InternalRequestAsync<ConfigureSubscribeJobResponse>(req, "ConfigureSubscribeJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 配置一个同步任务
         /// </summary>
         /// <param name="req"><see cref="ConfigureSyncJobRequest"/></param>
@@ -183,6 +204,27 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// 为订阅实例创建消费者组
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsumerGroupRequest"/></param>
+        /// <returns><see cref="CreateConsumerGroupResponse"/></returns>
+        public Task<CreateConsumerGroupResponse> CreateConsumerGroup(CreateConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<CreateConsumerGroupResponse>(req, "CreateConsumerGroup");
+        }
+
+        /// <summary>
+        /// 为订阅实例创建消费者组
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsumerGroupRequest"/></param>
+        /// <returns><see cref="CreateConsumerGroupResponse"/></returns>
+        public CreateConsumerGroupResponse CreateConsumerGroupSync(CreateConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<CreateConsumerGroupResponse>(req, "CreateConsumerGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 校验迁移任务，
         /// 在开始迁移前, 必须调用本接口创建校验迁移任务, 且校验成功后才能开始迁移. 校验的结果可以通过DescribeMigrationCheckJob查看，
         /// 校验成功后,迁移任务若有修改, 则必须重新校验并通过后, 才能开始迁移
@@ -250,6 +292,48 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// 本接口(CreateSubscribe)用于创建一个数据订阅任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSubscribeRequest"/></param>
+        /// <returns><see cref="CreateSubscribeResponse"/></returns>
+        public Task<CreateSubscribeResponse> CreateSubscribe(CreateSubscribeRequest req)
+        {
+            return InternalRequestAsync<CreateSubscribeResponse>(req, "CreateSubscribe");
+        }
+
+        /// <summary>
+        /// 本接口(CreateSubscribe)用于创建一个数据订阅任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSubscribeRequest"/></param>
+        /// <returns><see cref="CreateSubscribeResponse"/></returns>
+        public CreateSubscribeResponse CreateSubscribeSync(CreateSubscribeRequest req)
+        {
+            return InternalRequestAsync<CreateSubscribeResponse>(req, "CreateSubscribe")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(CreateSubscribeCheckJob)用于创建一个订阅校验任务。任务必须已经成功调用ConfigureSubscribeJob接口配置了所有的必要信息才能启动校验。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSubscribeCheckJobRequest"/></param>
+        /// <returns><see cref="CreateSubscribeCheckJobResponse"/></returns>
+        public Task<CreateSubscribeCheckJobResponse> CreateSubscribeCheckJob(CreateSubscribeCheckJobRequest req)
+        {
+            return InternalRequestAsync<CreateSubscribeCheckJobResponse>(req, "CreateSubscribeCheckJob");
+        }
+
+        /// <summary>
+        /// 本接口(CreateSubscribeCheckJob)用于创建一个订阅校验任务。任务必须已经成功调用ConfigureSubscribeJob接口配置了所有的必要信息才能启动校验。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSubscribeCheckJobRequest"/></param>
+        /// <returns><see cref="CreateSubscribeCheckJobResponse"/></returns>
+        public CreateSubscribeCheckJobResponse CreateSubscribeCheckJobSync(CreateSubscribeCheckJobRequest req)
+        {
+            return InternalRequestAsync<CreateSubscribeCheckJobResponse>(req, "CreateSubscribeCheckJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建一个同步任务
         /// </summary>
         /// <param name="req"><see cref="CreateSyncJobRequest"/></param>
@@ -288,6 +372,27 @@ namespace TencentCloud.Dts.V20211206
         public DeleteCompareTaskResponse DeleteCompareTaskSync(DeleteCompareTaskRequest req)
         {
             return InternalRequestAsync<DeleteCompareTaskResponse>(req, "DeleteCompareTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DeleteConsumerGroup)用于删除一个订阅任务的消费组。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConsumerGroupRequest"/></param>
+        /// <returns><see cref="DeleteConsumerGroupResponse"/></returns>
+        public Task<DeleteConsumerGroupResponse> DeleteConsumerGroup(DeleteConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteConsumerGroupResponse>(req, "DeleteConsumerGroup");
+        }
+
+        /// <summary>
+        /// 本接口(DeleteConsumerGroup)用于删除一个订阅任务的消费组。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConsumerGroupRequest"/></param>
+        /// <returns><see cref="DeleteConsumerGroupResponse"/></returns>
+        public DeleteConsumerGroupResponse DeleteConsumerGroupSync(DeleteConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteConsumerGroupResponse>(req, "DeleteConsumerGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -351,6 +456,27 @@ namespace TencentCloud.Dts.V20211206
         public DescribeCompareTasksResponse DescribeCompareTasksSync(DescribeCompareTasksRequest req)
         {
             return InternalRequestAsync<DescribeCompareTasksResponse>(req, "DescribeCompareTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeConsumerGroups)用于获取订阅实例配置的消费者组详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerGroupsRequest"/></param>
+        /// <returns><see cref="DescribeConsumerGroupsResponse"/></returns>
+        public Task<DescribeConsumerGroupsResponse> DescribeConsumerGroups(DescribeConsumerGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerGroupsResponse>(req, "DescribeConsumerGroups");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeConsumerGroups)用于获取订阅实例配置的消费者组详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerGroupsRequest"/></param>
+        /// <returns><see cref="DescribeConsumerGroupsResponse"/></returns>
+        public DescribeConsumerGroupsResponse DescribeConsumerGroupsSync(DescribeConsumerGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerGroupsResponse>(req, "DescribeConsumerGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -464,6 +590,119 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// 本接口(DescribeOffsetByTime)查询KafkaTopic中指定时间前最近的offset。
+        /// 接口输出的offset是离这个时间最近的offset。
+        /// 如果输入时间比当前时间晚的多，相当于输出的就是最新的offset；
+        /// 如果输入时间比当前时间早的多，相当于输出的就是最老的offset；
+        /// 如果输入空，默认0时间，也就是查询最老的offset。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOffsetByTimeRequest"/></param>
+        /// <returns><see cref="DescribeOffsetByTimeResponse"/></returns>
+        public Task<DescribeOffsetByTimeResponse> DescribeOffsetByTime(DescribeOffsetByTimeRequest req)
+        {
+            return InternalRequestAsync<DescribeOffsetByTimeResponse>(req, "DescribeOffsetByTime");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeOffsetByTime)查询KafkaTopic中指定时间前最近的offset。
+        /// 接口输出的offset是离这个时间最近的offset。
+        /// 如果输入时间比当前时间晚的多，相当于输出的就是最新的offset；
+        /// 如果输入时间比当前时间早的多，相当于输出的就是最老的offset；
+        /// 如果输入空，默认0时间，也就是查询最老的offset。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOffsetByTimeRequest"/></param>
+        /// <returns><see cref="DescribeOffsetByTimeResponse"/></returns>
+        public DescribeOffsetByTimeResponse DescribeOffsetByTimeSync(DescribeOffsetByTimeRequest req)
+        {
+            return InternalRequestAsync<DescribeOffsetByTimeResponse>(req, "DescribeOffsetByTime")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeSubscribeCheckJob)用于查询订阅校验任务结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubscribeCheckJobRequest"/></param>
+        /// <returns><see cref="DescribeSubscribeCheckJobResponse"/></returns>
+        public Task<DescribeSubscribeCheckJobResponse> DescribeSubscribeCheckJob(DescribeSubscribeCheckJobRequest req)
+        {
+            return InternalRequestAsync<DescribeSubscribeCheckJobResponse>(req, "DescribeSubscribeCheckJob");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeSubscribeCheckJob)用于查询订阅校验任务结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubscribeCheckJobRequest"/></param>
+        /// <returns><see cref="DescribeSubscribeCheckJobResponse"/></returns>
+        public DescribeSubscribeCheckJobResponse DescribeSubscribeCheckJobSync(DescribeSubscribeCheckJobRequest req)
+        {
+            return InternalRequestAsync<DescribeSubscribeCheckJobResponse>(req, "DescribeSubscribeCheckJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeSubscribeDetail)获取数据订阅实例的配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubscribeDetailRequest"/></param>
+        /// <returns><see cref="DescribeSubscribeDetailResponse"/></returns>
+        public Task<DescribeSubscribeDetailResponse> DescribeSubscribeDetail(DescribeSubscribeDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeSubscribeDetailResponse>(req, "DescribeSubscribeDetail");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeSubscribeDetail)获取数据订阅实例的配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubscribeDetailRequest"/></param>
+        /// <returns><see cref="DescribeSubscribeDetailResponse"/></returns>
+        public DescribeSubscribeDetailResponse DescribeSubscribeDetailSync(DescribeSubscribeDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeSubscribeDetailResponse>(req, "DescribeSubscribeDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeSubscribes)获取数据订阅实例信息列表，默认分页，每次返回20条
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubscribeJobsRequest"/></param>
+        /// <returns><see cref="DescribeSubscribeJobsResponse"/></returns>
+        public Task<DescribeSubscribeJobsResponse> DescribeSubscribeJobs(DescribeSubscribeJobsRequest req)
+        {
+            return InternalRequestAsync<DescribeSubscribeJobsResponse>(req, "DescribeSubscribeJobs");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeSubscribes)获取数据订阅实例信息列表，默认分页，每次返回20条
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubscribeJobsRequest"/></param>
+        /// <returns><see cref="DescribeSubscribeJobsResponse"/></returns>
+        public DescribeSubscribeJobsResponse DescribeSubscribeJobsSync(DescribeSubscribeJobsRequest req)
+        {
+            return InternalRequestAsync<DescribeSubscribeJobsResponse>(req, "DescribeSubscribeJobs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeSubscribeReturnable)用于查询订阅任务是否可以销毁和退货。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubscribeReturnableRequest"/></param>
+        /// <returns><see cref="DescribeSubscribeReturnableResponse"/></returns>
+        public Task<DescribeSubscribeReturnableResponse> DescribeSubscribeReturnable(DescribeSubscribeReturnableRequest req)
+        {
+            return InternalRequestAsync<DescribeSubscribeReturnableResponse>(req, "DescribeSubscribeReturnable");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeSubscribeReturnable)用于查询订阅任务是否可以销毁和退货。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubscribeReturnableRequest"/></param>
+        /// <returns><see cref="DescribeSubscribeReturnableResponse"/></returns>
+        public DescribeSubscribeReturnableResponse DescribeSubscribeReturnableSync(DescribeSubscribeReturnableRequest req)
+        {
+            return InternalRequestAsync<DescribeSubscribeReturnableResponse>(req, "DescribeSubscribeReturnable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询同步任务信息
         /// </summary>
         /// <param name="req"><see cref="DescribeSyncJobsRequest"/></param>
@@ -481,6 +720,27 @@ namespace TencentCloud.Dts.V20211206
         public DescribeSyncJobsResponse DescribeSyncJobsSync(DescribeSyncJobsRequest req)
         {
             return InternalRequestAsync<DescribeSyncJobsResponse>(req, "DescribeSyncJobs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DestroyIsolatedSubscribe）用于下线已隔离的数据订阅实例
+        /// </summary>
+        /// <param name="req"><see cref="DestroyIsolatedSubscribeRequest"/></param>
+        /// <returns><see cref="DestroyIsolatedSubscribeResponse"/></returns>
+        public Task<DestroyIsolatedSubscribeResponse> DestroyIsolatedSubscribe(DestroyIsolatedSubscribeRequest req)
+        {
+            return InternalRequestAsync<DestroyIsolatedSubscribeResponse>(req, "DestroyIsolatedSubscribe");
+        }
+
+        /// <summary>
+        /// 本接口（DestroyIsolatedSubscribe）用于下线已隔离的数据订阅实例
+        /// </summary>
+        /// <param name="req"><see cref="DestroyIsolatedSubscribeRequest"/></param>
+        /// <returns><see cref="DestroyIsolatedSubscribeResponse"/></returns>
+        public DestroyIsolatedSubscribeResponse DestroyIsolatedSubscribeSync(DestroyIsolatedSubscribeRequest req)
+        {
+            return InternalRequestAsync<DestroyIsolatedSubscribeResponse>(req, "DestroyIsolatedSubscribe")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -548,6 +808,27 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// 本接口（IsolateSubscribe）用于隔离订阅任务。调用后，订阅任务将不能使用。按量计费的任务会停止计费，包年包月的任务会自动退费
+        /// </summary>
+        /// <param name="req"><see cref="IsolateSubscribeRequest"/></param>
+        /// <returns><see cref="IsolateSubscribeResponse"/></returns>
+        public Task<IsolateSubscribeResponse> IsolateSubscribe(IsolateSubscribeRequest req)
+        {
+            return InternalRequestAsync<IsolateSubscribeResponse>(req, "IsolateSubscribe");
+        }
+
+        /// <summary>
+        /// 本接口（IsolateSubscribe）用于隔离订阅任务。调用后，订阅任务将不能使用。按量计费的任务会停止计费，包年包月的任务会自动退费
+        /// </summary>
+        /// <param name="req"><see cref="IsolateSubscribeRequest"/></param>
+        /// <returns><see cref="IsolateSubscribeResponse"/></returns>
+        public IsolateSubscribeResponse IsolateSubscribeSync(IsolateSubscribeRequest req)
+        {
+            return InternalRequestAsync<IsolateSubscribeResponse>(req, "IsolateSubscribe")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 隔离同步任务，隔离后可通过查询同步任务信息接口DescribeSyncJobs获取隔离后状态。在任务隔离后可进行解除隔离(RecoverSyncJob)操作或直接进行下线操作。对于不计费任务，调用此接口后会直接删除任务，无法进行恢复操作。
         /// </summary>
         /// <param name="req"><see cref="IsolateSyncJobRequest"/></param>
@@ -607,6 +888,48 @@ namespace TencentCloud.Dts.V20211206
         public ModifyCompareTaskNameResponse ModifyCompareTaskNameSync(ModifyCompareTaskNameRequest req)
         {
             return InternalRequestAsync<ModifyCompareTaskNameResponse>(req, "ModifyCompareTaskName")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(ModifyConsumerGroupDescription)用于修改指定订阅消费组备注。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConsumerGroupDescriptionRequest"/></param>
+        /// <returns><see cref="ModifyConsumerGroupDescriptionResponse"/></returns>
+        public Task<ModifyConsumerGroupDescriptionResponse> ModifyConsumerGroupDescription(ModifyConsumerGroupDescriptionRequest req)
+        {
+            return InternalRequestAsync<ModifyConsumerGroupDescriptionResponse>(req, "ModifyConsumerGroupDescription");
+        }
+
+        /// <summary>
+        /// 本接口(ModifyConsumerGroupDescription)用于修改指定订阅消费组备注。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConsumerGroupDescriptionRequest"/></param>
+        /// <returns><see cref="ModifyConsumerGroupDescriptionResponse"/></returns>
+        public ModifyConsumerGroupDescriptionResponse ModifyConsumerGroupDescriptionSync(ModifyConsumerGroupDescriptionRequest req)
+        {
+            return InternalRequestAsync<ModifyConsumerGroupDescriptionResponse>(req, "ModifyConsumerGroupDescription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(ModifyConsumerGroupPassword)用于修改指定订阅消费组密码。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConsumerGroupPasswordRequest"/></param>
+        /// <returns><see cref="ModifyConsumerGroupPasswordResponse"/></returns>
+        public Task<ModifyConsumerGroupPasswordResponse> ModifyConsumerGroupPassword(ModifyConsumerGroupPasswordRequest req)
+        {
+            return InternalRequestAsync<ModifyConsumerGroupPasswordResponse>(req, "ModifyConsumerGroupPassword");
+        }
+
+        /// <summary>
+        /// 本接口(ModifyConsumerGroupPassword)用于修改指定订阅消费组密码。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConsumerGroupPasswordRequest"/></param>
+        /// <returns><see cref="ModifyConsumerGroupPasswordResponse"/></returns>
+        public ModifyConsumerGroupPasswordResponse ModifyConsumerGroupPasswordSync(ModifyConsumerGroupPasswordRequest req)
+        {
+            return InternalRequestAsync<ModifyConsumerGroupPasswordResponse>(req, "ModifyConsumerGroupPassword")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -712,6 +1035,69 @@ namespace TencentCloud.Dts.V20211206
         public ModifyMigrationJobResponse ModifyMigrationJobSync(ModifyMigrationJobRequest req)
         {
             return InternalRequestAsync<ModifyMigrationJobResponse>(req, "ModifyMigrationJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改订阅实例自动续费标识。只有包年包月的任务修改才有意义，按量计费任务修改后无影响。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubscribeAutoRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifySubscribeAutoRenewFlagResponse"/></returns>
+        public Task<ModifySubscribeAutoRenewFlagResponse> ModifySubscribeAutoRenewFlag(ModifySubscribeAutoRenewFlagRequest req)
+        {
+            return InternalRequestAsync<ModifySubscribeAutoRenewFlagResponse>(req, "ModifySubscribeAutoRenewFlag");
+        }
+
+        /// <summary>
+        /// 修改订阅实例自动续费标识。只有包年包月的任务修改才有意义，按量计费任务修改后无影响。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubscribeAutoRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifySubscribeAutoRenewFlagResponse"/></returns>
+        public ModifySubscribeAutoRenewFlagResponse ModifySubscribeAutoRenewFlagSync(ModifySubscribeAutoRenewFlagRequest req)
+        {
+            return InternalRequestAsync<ModifySubscribeAutoRenewFlagResponse>(req, "ModifySubscribeAutoRenewFlag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(ModifySubscribeName)用于修改数据订阅实例的名称
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubscribeNameRequest"/></param>
+        /// <returns><see cref="ModifySubscribeNameResponse"/></returns>
+        public Task<ModifySubscribeNameResponse> ModifySubscribeName(ModifySubscribeNameRequest req)
+        {
+            return InternalRequestAsync<ModifySubscribeNameResponse>(req, "ModifySubscribeName");
+        }
+
+        /// <summary>
+        /// 本接口(ModifySubscribeName)用于修改数据订阅实例的名称
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubscribeNameRequest"/></param>
+        /// <returns><see cref="ModifySubscribeNameResponse"/></returns>
+        public ModifySubscribeNameResponse ModifySubscribeNameSync(ModifySubscribeNameRequest req)
+        {
+            return InternalRequestAsync<ModifySubscribeNameResponse>(req, "ModifySubscribeName")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(ModifySubscribeObjects)用于修改数据订阅对象和kafka分区规则，如果是mongo订阅，还可以修改输出聚合规则。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubscribeObjectsRequest"/></param>
+        /// <returns><see cref="ModifySubscribeObjectsResponse"/></returns>
+        public Task<ModifySubscribeObjectsResponse> ModifySubscribeObjects(ModifySubscribeObjectsRequest req)
+        {
+            return InternalRequestAsync<ModifySubscribeObjectsResponse>(req, "ModifySubscribeObjects");
+        }
+
+        /// <summary>
+        /// 本接口(ModifySubscribeObjects)用于修改数据订阅对象和kafka分区规则，如果是mongo订阅，还可以修改输出聚合规则。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubscribeObjectsRequest"/></param>
+        /// <returns><see cref="ModifySubscribeObjectsResponse"/></returns>
+        public ModifySubscribeObjectsResponse ModifySubscribeObjectsSync(ModifySubscribeObjectsRequest req)
+        {
+            return InternalRequestAsync<ModifySubscribeObjectsResponse>(req, "ModifySubscribeObjects")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -844,6 +1230,50 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// 本接口(ResetConsumerGroupOffset)用于重置订阅消费组的offset。掉用DescribeConsumerGroups接口查询消费组状态，只有消费组状态为 Dead 或 Empty 才可以执行重置该操作。否则重置不会生效，接口也不会报错。
+        /// </summary>
+        /// <param name="req"><see cref="ResetConsumerGroupOffsetRequest"/></param>
+        /// <returns><see cref="ResetConsumerGroupOffsetResponse"/></returns>
+        public Task<ResetConsumerGroupOffsetResponse> ResetConsumerGroupOffset(ResetConsumerGroupOffsetRequest req)
+        {
+            return InternalRequestAsync<ResetConsumerGroupOffsetResponse>(req, "ResetConsumerGroupOffset");
+        }
+
+        /// <summary>
+        /// 本接口(ResetConsumerGroupOffset)用于重置订阅消费组的offset。掉用DescribeConsumerGroups接口查询消费组状态，只有消费组状态为 Dead 或 Empty 才可以执行重置该操作。否则重置不会生效，接口也不会报错。
+        /// </summary>
+        /// <param name="req"><see cref="ResetConsumerGroupOffsetRequest"/></param>
+        /// <returns><see cref="ResetConsumerGroupOffsetResponse"/></returns>
+        public ResetConsumerGroupOffsetResponse ResetConsumerGroupOffsetSync(ResetConsumerGroupOffsetRequest req)
+        {
+            return InternalRequestAsync<ResetConsumerGroupOffsetResponse>(req, "ResetConsumerGroupOffset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(ResetSubscribe)用于重置订阅实例，重置后，可以重新配置订阅任务。
+        /// 可以调用 DescribeSubscribeDetail 查询订阅信息判断是否置成功。当SubsStatus变为notStarted时，表示重置成功。
+        /// </summary>
+        /// <param name="req"><see cref="ResetSubscribeRequest"/></param>
+        /// <returns><see cref="ResetSubscribeResponse"/></returns>
+        public Task<ResetSubscribeResponse> ResetSubscribe(ResetSubscribeRequest req)
+        {
+            return InternalRequestAsync<ResetSubscribeResponse>(req, "ResetSubscribe");
+        }
+
+        /// <summary>
+        /// 本接口(ResetSubscribe)用于重置订阅实例，重置后，可以重新配置订阅任务。
+        /// 可以调用 DescribeSubscribeDetail 查询订阅信息判断是否置成功。当SubsStatus变为notStarted时，表示重置成功。
+        /// </summary>
+        /// <param name="req"><see cref="ResetSubscribeRequest"/></param>
+        /// <returns><see cref="ResetSubscribeResponse"/></returns>
+        public ResetSubscribeResponse ResetSubscribeSync(ResetSubscribeRequest req)
+        {
+            return InternalRequestAsync<ResetSubscribeResponse>(req, "ResetSubscribe")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 调整同步任务规格，此接口只支持按量计费任务的调整，调用此接口后不会立即生效，后台调整时间大概为3~5分钟。调用此接口后可通过查询同步任务信息接口DescribeSyncJobs，获取变配后的状态。
         /// </summary>
         /// <param name="req"><see cref="ResizeSyncJobRequest"/></param>
@@ -882,6 +1312,27 @@ namespace TencentCloud.Dts.V20211206
         public ResumeMigrateJobResponse ResumeMigrateJobSync(ResumeMigrateJobRequest req)
         {
             return InternalRequestAsync<ResumeMigrateJobResponse>(req, "ResumeMigrateJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(ResumeSubscribe) 用于恢复报错的订阅任务。当订阅任务的状态为error时，可通过本接口尝试对任务进行恢复。
+        /// </summary>
+        /// <param name="req"><see cref="ResumeSubscribeRequest"/></param>
+        /// <returns><see cref="ResumeSubscribeResponse"/></returns>
+        public Task<ResumeSubscribeResponse> ResumeSubscribe(ResumeSubscribeRequest req)
+        {
+            return InternalRequestAsync<ResumeSubscribeResponse>(req, "ResumeSubscribe");
+        }
+
+        /// <summary>
+        /// 本接口(ResumeSubscribe) 用于恢复报错的订阅任务。当订阅任务的状态为error时，可通过本接口尝试对任务进行恢复。
+        /// </summary>
+        /// <param name="req"><see cref="ResumeSubscribeRequest"/></param>
+        /// <returns><see cref="ResumeSubscribeResponse"/></returns>
+        public ResumeSubscribeResponse ResumeSubscribeSync(ResumeSubscribeRequest req)
+        {
+            return InternalRequestAsync<ResumeSubscribeResponse>(req, "ResumeSubscribe")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1008,6 +1459,27 @@ namespace TencentCloud.Dts.V20211206
         public StartModifySyncJobResponse StartModifySyncJobSync(StartModifySyncJobRequest req)
         {
             return InternalRequestAsync<StartModifySyncJobResponse>(req, "StartModifySyncJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(StartSubscribe)用于启动一个kafka版本的数据订阅实例。只有当订阅任务的状态为checkPass时，才能调用本接口。
+        /// </summary>
+        /// <param name="req"><see cref="StartSubscribeRequest"/></param>
+        /// <returns><see cref="StartSubscribeResponse"/></returns>
+        public Task<StartSubscribeResponse> StartSubscribe(StartSubscribeRequest req)
+        {
+            return InternalRequestAsync<StartSubscribeResponse>(req, "StartSubscribe");
+        }
+
+        /// <summary>
+        /// 本接口(StartSubscribe)用于启动一个kafka版本的数据订阅实例。只有当订阅任务的状态为checkPass时，才能调用本接口。
+        /// </summary>
+        /// <param name="req"><see cref="StartSubscribeRequest"/></param>
+        /// <returns><see cref="StartSubscribeResponse"/></returns>
+        public StartSubscribeResponse StartSubscribeSync(StartSubscribeRequest req)
+        {
+            return InternalRequestAsync<StartSubscribeResponse>(req, "StartSubscribe")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

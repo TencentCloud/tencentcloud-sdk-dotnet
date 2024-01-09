@@ -56,8 +56,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 资源id，与ResourceType相对应，取值范围：
         /// <ul>
         /// <li>文件Id（通过UploadFiles获取文件资源Id）</li>
-        /// <li>模板Id</li>
+        /// <li>模板Id（通过控制台创建模板后获取模板Id）</li>
         /// </ul>
+        /// 注意：需要同时设置 ResourceType 参数指定资源类型
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

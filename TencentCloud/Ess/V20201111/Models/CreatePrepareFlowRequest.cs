@@ -37,8 +37,9 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 资源id，与ResourceType相对应，取值范围：
         /// <ul>
         /// <li>文件Id（通过UploadFiles获取文件资源Id）</li>
-        /// <li>模板Id</li>
+        /// <li>模板Id（通过控制台创建模板后获取模板Id）</li>
         /// </ul>
+        /// 注意：需要同时设置 ResourceType 参数指定资源类型
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
@@ -48,6 +49,14 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         [JsonProperty("FlowName")]
         public string FlowName{ get; set; }
+
+        /// <summary>
+        /// 资源类型，取值有：
+        /// <ul><li> **1**：模板</li>
+        /// <li> **2**：文件（默认值）</li></ul>
+        /// </summary>
+        [JsonProperty("ResourceType")]
+        public long? ResourceType{ get; set; }
 
         /// <summary>
         /// 合同流程的签署顺序类型：
@@ -93,14 +102,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         [JsonProperty("IntelligentStatus")]
         public string IntelligentStatus{ get; set; }
-
-        /// <summary>
-        /// 资源类型，取值有：
-        /// <ul><li> **1**：模板</li>
-        /// <li> **2**：文件（默认值）</li></ul>
-        /// </summary>
-        [JsonProperty("ResourceType")]
-        public long? ResourceType{ get; set; }
 
         /// <summary>
         /// 该字段已废弃，请使用InitiatorComponents
@@ -180,13 +181,13 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "FlowName", this.FlowName);
+            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamSimple(map, prefix + "Unordered", this.Unordered);
             this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
             this.SetParamSimple(map, prefix + "UserFlowTypeId", this.UserFlowTypeId);
             this.SetParamSimple(map, prefix + "FlowType", this.FlowType);
             this.SetParamArrayObj(map, prefix + "Approvers.", this.Approvers);
             this.SetParamSimple(map, prefix + "IntelligentStatus", this.IntelligentStatus);
-            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamObj(map, prefix + "Components.", this.Components);
             this.SetParamObj(map, prefix + "FlowOption.", this.FlowOption);
             this.SetParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
