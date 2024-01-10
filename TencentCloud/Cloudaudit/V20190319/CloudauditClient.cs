@@ -82,7 +82,7 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// 创建跟踪集
+        /// 创建操作审计跟踪集
         /// </summary>
         /// <param name="req"><see cref="CreateAuditTrackRequest"/></param>
         /// <returns><see cref="CreateAuditTrackResponse"/></returns>
@@ -92,7 +92,7 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// 创建跟踪集
+        /// 创建操作审计跟踪集
         /// </summary>
         /// <param name="req"><see cref="CreateAuditTrackRequest"/></param>
         /// <returns><see cref="CreateAuditTrackResponse"/></returns>
@@ -124,7 +124,7 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// 删除云审计跟踪集
+        /// 删除操作审计跟踪集
         /// </summary>
         /// <param name="req"><see cref="DeleteAuditTrackRequest"/></param>
         /// <returns><see cref="DeleteAuditTrackResponse"/></returns>
@@ -134,7 +134,7 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// 删除云审计跟踪集
+        /// 删除操作审计跟踪集
         /// </summary>
         /// <param name="req"><see cref="DeleteAuditTrackRequest"/></param>
         /// <returns><see cref="DeleteAuditTrackResponse"/></returns>
@@ -166,7 +166,7 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// 查询云审计跟踪集详情
+        /// 查询操作审计跟踪集详情
         /// </summary>
         /// <param name="req"><see cref="DescribeAuditTrackRequest"/></param>
         /// <returns><see cref="DescribeAuditTrackResponse"/></returns>
@@ -176,7 +176,7 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// 查询云审计跟踪集详情
+        /// 查询操作审计跟踪集详情
         /// </summary>
         /// <param name="req"><see cref="DescribeAuditTrackRequest"/></param>
         /// <returns><see cref="DescribeAuditTrackResponse"/></returns>
@@ -187,7 +187,7 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// 查询云审计跟踪集列表
+        /// 查询操作审计跟踪集列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAuditTracksRequest"/></param>
         /// <returns><see cref="DescribeAuditTracksResponse"/></returns>
@@ -197,7 +197,7 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// 查询云审计跟踪集列表
+        /// 查询操作审计跟踪集列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAuditTracksRequest"/></param>
         /// <returns><see cref="DescribeAuditTracksResponse"/></returns>
@@ -208,7 +208,7 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// 查询云审计日志
+        /// 查询操作审计日志
         /// </summary>
         /// <param name="req"><see cref="DescribeEventsRequest"/></param>
         /// <returns><see cref="DescribeEventsResponse"/></returns>
@@ -218,7 +218,7 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// 查询云审计日志
+        /// 查询操作审计日志
         /// </summary>
         /// <param name="req"><see cref="DescribeEventsRequest"/></param>
         /// <returns><see cref="DescribeEventsResponse"/></returns>
@@ -376,7 +376,7 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// 修改云审计跟踪
+        /// 修改操作审计跟踪集
         /// </summary>
         /// <param name="req"><see cref="ModifyAuditTrackRequest"/></param>
         /// <returns><see cref="ModifyAuditTrackResponse"/></returns>
@@ -386,7 +386,7 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// 修改云审计跟踪
+        /// 修改操作审计跟踪集
         /// </summary>
         /// <param name="req"><see cref="ModifyAuditTrackRequest"/></param>
         /// <returns><see cref="ModifyAuditTrackResponse"/></returns>

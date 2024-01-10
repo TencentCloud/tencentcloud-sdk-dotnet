@@ -48,6 +48,20 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         [JsonProperty("StoragePrefix")]
         public string StoragePrefix{ get; set; }
 
+        /// <summary>
+        /// 被指定存储用户ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StorageAccountId")]
+        public string StorageAccountId{ get; set; }
+
+        /// <summary>
+        /// 被指定存储用户appid
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StorageAppId")]
+        public string StorageAppId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +72,8 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
             this.SetParamSimple(map, prefix + "StorageRegion", this.StorageRegion);
             this.SetParamSimple(map, prefix + "StorageName", this.StorageName);
             this.SetParamSimple(map, prefix + "StoragePrefix", this.StoragePrefix);
+            this.SetParamSimple(map, prefix + "StorageAccountId", this.StorageAccountId);
+            this.SetParamSimple(map, prefix + "StorageAppId", this.StorageAppId);
         }
     }
 }
