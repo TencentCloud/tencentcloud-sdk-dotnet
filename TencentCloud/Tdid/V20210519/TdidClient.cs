@@ -53,327 +53,191 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
-        /// 该接口不再使用
-        /// 
-        /// 检查区块链信息
+        /// 检查用户套餐购买状态
         /// </summary>
-        /// <param name="req"><see cref="CheckChainRequest"/></param>
-        /// <returns><see cref="CheckChainResponse"/></returns>
-        public Task<CheckChainResponse> CheckChain(CheckChainRequest req)
+        /// <param name="req"><see cref="CheckNewPurchaseRequest"/></param>
+        /// <returns><see cref="CheckNewPurchaseResponse"/></returns>
+        public Task<CheckNewPurchaseResponse> CheckNewPurchase(CheckNewPurchaseRequest req)
         {
-            return InternalRequestAsync<CheckChainResponse>(req, "CheckChain");
+            return InternalRequestAsync<CheckNewPurchaseResponse>(req, "CheckNewPurchase");
         }
 
         /// <summary>
-        /// 该接口不再使用
-        /// 
-        /// 检查区块链信息
+        /// 检查用户套餐购买状态
         /// </summary>
-        /// <param name="req"><see cref="CheckChainRequest"/></param>
-        /// <returns><see cref="CheckChainResponse"/></returns>
-        public CheckChainResponse CheckChainSync(CheckChainRequest req)
+        /// <param name="req"><see cref="CheckNewPurchaseRequest"/></param>
+        /// <returns><see cref="CheckNewPurchaseResponse"/></returns>
+        public CheckNewPurchaseResponse CheckNewPurchaseSync(CheckNewPurchaseRequest req)
         {
-            return InternalRequestAsync<CheckChainResponse>(req, "CheckChain")
+            return InternalRequestAsync<CheckNewPurchaseResponse>(req, "CheckNewPurchase")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
-        /// 该接口不再使用
-        /// 
-        /// 创建凭证
+        /// 自动生成公私钥对托管在DID平台，并注册DID标识
         /// </summary>
-        /// <param name="req"><see cref="CreateCredentialRequest"/></param>
-        /// <returns><see cref="CreateCredentialResponse"/></returns>
-        public Task<CreateCredentialResponse> CreateCredential(CreateCredentialRequest req)
+        /// <param name="req"><see cref="CreateTDidByHostRequest"/></param>
+        /// <returns><see cref="CreateTDidByHostResponse"/></returns>
+        public Task<CreateTDidByHostResponse> CreateTDidByHost(CreateTDidByHostRequest req)
         {
-            return InternalRequestAsync<CreateCredentialResponse>(req, "CreateCredential");
+            return InternalRequestAsync<CreateTDidByHostResponse>(req, "CreateTDidByHost");
         }
 
         /// <summary>
-        /// 该接口不再使用
-        /// 
-        /// 创建凭证
+        /// 自动生成公私钥对托管在DID平台，并注册DID标识
         /// </summary>
-        /// <param name="req"><see cref="CreateCredentialRequest"/></param>
-        /// <returns><see cref="CreateCredentialResponse"/></returns>
-        public CreateCredentialResponse CreateCredentialSync(CreateCredentialRequest req)
+        /// <param name="req"><see cref="CreateTDidByHostRequest"/></param>
+        /// <returns><see cref="CreateTDidByHostResponse"/></returns>
+        public CreateTDidByHostResponse CreateTDidByHostSync(CreateTDidByHostRequest req)
         {
-            return InternalRequestAsync<CreateCredentialResponse>(req, "CreateCredential")
+            return InternalRequestAsync<CreateTDidByHostResponse>(req, "CreateTDidByHost")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
-        /// 该接口不再使用
-        /// 
-        /// 创建选择性批露凭证
+        /// 使用导入的公钥文件注册DID标识
         /// </summary>
-        /// <param name="req"><see cref="CreateSelectiveCredentialRequest"/></param>
-        /// <returns><see cref="CreateSelectiveCredentialResponse"/></returns>
-        public Task<CreateSelectiveCredentialResponse> CreateSelectiveCredential(CreateSelectiveCredentialRequest req)
+        /// <param name="req"><see cref="CreateTDidByPubKeyRequest"/></param>
+        /// <returns><see cref="CreateTDidByPubKeyResponse"/></returns>
+        public Task<CreateTDidByPubKeyResponse> CreateTDidByPubKey(CreateTDidByPubKeyRequest req)
         {
-            return InternalRequestAsync<CreateSelectiveCredentialResponse>(req, "CreateSelectiveCredential");
+            return InternalRequestAsync<CreateTDidByPubKeyResponse>(req, "CreateTDidByPubKey");
         }
 
         /// <summary>
-        /// 该接口不再使用
-        /// 
-        /// 创建选择性批露凭证
+        /// 使用导入的公钥文件注册DID标识
         /// </summary>
-        /// <param name="req"><see cref="CreateSelectiveCredentialRequest"/></param>
-        /// <returns><see cref="CreateSelectiveCredentialResponse"/></returns>
-        public CreateSelectiveCredentialResponse CreateSelectiveCredentialSync(CreateSelectiveCredentialRequest req)
+        /// <param name="req"><see cref="CreateTDidByPubKeyRequest"/></param>
+        /// <returns><see cref="CreateTDidByPubKeyResponse"/></returns>
+        public CreateTDidByPubKeyResponse CreateTDidByPubKeySync(CreateTDidByPubKeyRequest req)
         {
-            return InternalRequestAsync<CreateSelectiveCredentialResponse>(req, "CreateSelectiveCredential")
+            return InternalRequestAsync<CreateTDidByPubKeyResponse>(req, "CreateTDidByPubKey")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
-        /// 该接口不再使用
-        /// 
-        /// 创建机构DID
+        /// 更新DID标识的禁用状态
         /// </summary>
-        /// <param name="req"><see cref="CreateTDidRequest"/></param>
-        /// <returns><see cref="CreateTDidResponse"/></returns>
-        public Task<CreateTDidResponse> CreateTDid(CreateTDidRequest req)
+        /// <param name="req"><see cref="DeactivateTDidRequest"/></param>
+        /// <returns><see cref="DeactivateTDidResponse"/></returns>
+        public Task<DeactivateTDidResponse> DeactivateTDid(DeactivateTDidRequest req)
         {
-            return InternalRequestAsync<CreateTDidResponse>(req, "CreateTDid");
+            return InternalRequestAsync<DeactivateTDidResponse>(req, "DeactivateTDid");
         }
 
         /// <summary>
-        /// 该接口不再使用
-        /// 
-        /// 创建机构DID
+        /// 更新DID标识的禁用状态
         /// </summary>
-        /// <param name="req"><see cref="CreateTDidRequest"/></param>
-        /// <returns><see cref="CreateTDidResponse"/></returns>
-        public CreateTDidResponse CreateTDidSync(CreateTDidRequest req)
+        /// <param name="req"><see cref="DeactivateTDidRequest"/></param>
+        /// <returns><see cref="DeactivateTDidResponse"/></returns>
+        public DeactivateTDidResponse DeactivateTDidSync(DeactivateTDidRequest req)
         {
-            return InternalRequestAsync<CreateTDidResponse>(req, "CreateTDid")
+            return InternalRequestAsync<DeactivateTDidResponse>(req, "DeactivateTDid")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
-        /// 该接口不再使用
-        /// 
-        /// 新建DID根据私钥生成Tdid
-        /// </summary>
-        /// <param name="req"><see cref="CreateTDidByPrivateKeyRequest"/></param>
-        /// <returns><see cref="CreateTDidByPrivateKeyResponse"/></returns>
-        public Task<CreateTDidByPrivateKeyResponse> CreateTDidByPrivateKey(CreateTDidByPrivateKeyRequest req)
-        {
-            return InternalRequestAsync<CreateTDidByPrivateKeyResponse>(req, "CreateTDidByPrivateKey");
-        }
-
-        /// <summary>
-        /// 该接口不再使用
-        /// 
-        /// 新建DID根据私钥生成Tdid
-        /// </summary>
-        /// <param name="req"><see cref="CreateTDidByPrivateKeyRequest"/></param>
-        /// <returns><see cref="CreateTDidByPrivateKeyResponse"/></returns>
-        public CreateTDidByPrivateKeyResponse CreateTDidByPrivateKeySync(CreateTDidByPrivateKeyRequest req)
-        {
-            return InternalRequestAsync<CreateTDidByPrivateKeyResponse>(req, "CreateTDidByPrivateKey")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 该接口不再使用
-        /// 
-        ///  新建DID根据公钥生成Tdid
-        /// </summary>
-        /// <param name="req"><see cref="CreateTDidByPublicKeyRequest"/></param>
-        /// <returns><see cref="CreateTDidByPublicKeyResponse"/></returns>
-        public Task<CreateTDidByPublicKeyResponse> CreateTDidByPublicKey(CreateTDidByPublicKeyRequest req)
-        {
-            return InternalRequestAsync<CreateTDidByPublicKeyResponse>(req, "CreateTDidByPublicKey");
-        }
-
-        /// <summary>
-        /// 该接口不再使用
-        /// 
-        ///  新建DID根据公钥生成Tdid
-        /// </summary>
-        /// <param name="req"><see cref="CreateTDidByPublicKeyRequest"/></param>
-        /// <returns><see cref="CreateTDidByPublicKeyResponse"/></returns>
-        public CreateTDidByPublicKeyResponse CreateTDidByPublicKeySync(CreateTDidByPublicKeyRequest req)
-        {
-            return InternalRequestAsync<CreateTDidByPublicKeyResponse>(req, "CreateTDidByPublicKey")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 该接口不再使用
-        /// 
-        /// 获取权威机构信息
-        /// </summary>
-        /// <param name="req"><see cref="GetAuthorityIssuerRequest"/></param>
-        /// <returns><see cref="GetAuthorityIssuerResponse"/></returns>
-        public Task<GetAuthorityIssuerResponse> GetAuthorityIssuer(GetAuthorityIssuerRequest req)
-        {
-            return InternalRequestAsync<GetAuthorityIssuerResponse>(req, "GetAuthorityIssuer");
-        }
-
-        /// <summary>
-        /// 该接口不再使用
-        /// 
-        /// 获取权威机构信息
-        /// </summary>
-        /// <param name="req"><see cref="GetAuthorityIssuerRequest"/></param>
-        /// <returns><see cref="GetAuthorityIssuerResponse"/></returns>
-        public GetAuthorityIssuerResponse GetAuthorityIssuerSync(GetAuthorityIssuerRequest req)
-        {
-            return InternalRequestAsync<GetAuthorityIssuerResponse>(req, "GetAuthorityIssuer")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 该接口不再使用
-        /// 
-        /// 凭证模版详情
-        /// </summary>
-        /// <param name="req"><see cref="GetCptInfoRequest"/></param>
-        /// <returns><see cref="GetCptInfoResponse"/></returns>
-        public Task<GetCptInfoResponse> GetCptInfo(GetCptInfoRequest req)
-        {
-            return InternalRequestAsync<GetCptInfoResponse>(req, "GetCptInfo");
-        }
-
-        /// <summary>
-        /// 该接口不再使用
-        /// 
-        /// 凭证模版详情
-        /// </summary>
-        /// <param name="req"><see cref="GetCptInfoRequest"/></param>
-        /// <returns><see cref="GetCptInfoResponse"/></returns>
-        public GetCptInfoResponse GetCptInfoSync(GetCptInfoRequest req)
-        {
-            return InternalRequestAsync<GetCptInfoResponse>(req, "GetCptInfo")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 该接口不再使用
-        /// 
         /// 获取凭证链上状态信息
         /// </summary>
-        /// <param name="req"><see cref="GetCredentialStatusRequest"/></param>
-        /// <returns><see cref="GetCredentialStatusResponse"/></returns>
-        public Task<GetCredentialStatusResponse> GetCredentialStatus(GetCredentialStatusRequest req)
+        /// <param name="req"><see cref="GetCredentialStateRequest"/></param>
+        /// <returns><see cref="GetCredentialStateResponse"/></returns>
+        public Task<GetCredentialStateResponse> GetCredentialState(GetCredentialStateRequest req)
         {
-            return InternalRequestAsync<GetCredentialStatusResponse>(req, "GetCredentialStatus");
+            return InternalRequestAsync<GetCredentialStateResponse>(req, "GetCredentialState");
         }
 
         /// <summary>
-        /// 该接口不再使用
-        /// 
         /// 获取凭证链上状态信息
         /// </summary>
-        /// <param name="req"><see cref="GetCredentialStatusRequest"/></param>
-        /// <returns><see cref="GetCredentialStatusResponse"/></returns>
-        public GetCredentialStatusResponse GetCredentialStatusSync(GetCredentialStatusRequest req)
+        /// <param name="req"><see cref="GetCredentialStateRequest"/></param>
+        /// <returns><see cref="GetCredentialStateResponse"/></returns>
+        public GetCredentialStateResponse GetCredentialStateSync(GetCredentialStateRequest req)
         {
-            return InternalRequestAsync<GetCredentialStatusResponse>(req, "GetCredentialStatus")
+            return InternalRequestAsync<GetCredentialStateResponse>(req, "GetCredentialState")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
-        /// 该接口不再使用
-        /// 
-        /// 查看DID文档
+        /// 获取DID标识的文档
         /// </summary>
-        /// <param name="req"><see cref="GetDidDocumentRequest"/></param>
-        /// <returns><see cref="GetDidDocumentResponse"/></returns>
-        public Task<GetDidDocumentResponse> GetDidDocument(GetDidDocumentRequest req)
+        /// <param name="req"><see cref="GetTDidDocumentRequest"/></param>
+        /// <returns><see cref="GetTDidDocumentResponse"/></returns>
+        public Task<GetTDidDocumentResponse> GetTDidDocument(GetTDidDocumentRequest req)
         {
-            return InternalRequestAsync<GetDidDocumentResponse>(req, "GetDidDocument");
+            return InternalRequestAsync<GetTDidDocumentResponse>(req, "GetTDidDocument");
         }
 
         /// <summary>
-        /// 该接口不再使用
-        /// 
-        /// 查看DID文档
+        /// 获取DID标识的文档
         /// </summary>
-        /// <param name="req"><see cref="GetDidDocumentRequest"/></param>
-        /// <returns><see cref="GetDidDocumentResponse"/></returns>
-        public GetDidDocumentResponse GetDidDocumentSync(GetDidDocumentRequest req)
+        /// <param name="req"><see cref="GetTDidDocumentRequest"/></param>
+        /// <returns><see cref="GetTDidDocumentResponse"/></returns>
+        public GetTDidDocumentResponse GetTDidDocumentSync(GetTDidDocumentRequest req)
         {
-            return InternalRequestAsync<GetDidDocumentResponse>(req, "GetDidDocument")
+            return InternalRequestAsync<GetTDidDocumentResponse>(req, "GetTDidDocument")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
-        /// 该接口不再使用
-        /// 
-        /// 凭证模版新建
+        /// 颁发可验证凭证
         /// </summary>
-        /// <param name="req"><see cref="RegisterCptRequest"/></param>
-        /// <returns><see cref="RegisterCptResponse"/></returns>
-        public Task<RegisterCptResponse> RegisterCpt(RegisterCptRequest req)
+        /// <param name="req"><see cref="IssueCredentialRequest"/></param>
+        /// <returns><see cref="IssueCredentialResponse"/></returns>
+        public Task<IssueCredentialResponse> IssueCredential(IssueCredentialRequest req)
         {
-            return InternalRequestAsync<RegisterCptResponse>(req, "RegisterCpt");
+            return InternalRequestAsync<IssueCredentialResponse>(req, "IssueCredential");
         }
 
         /// <summary>
-        /// 该接口不再使用
-        /// 
-        /// 凭证模版新建
+        /// 颁发可验证凭证
         /// </summary>
-        /// <param name="req"><see cref="RegisterCptRequest"/></param>
-        /// <returns><see cref="RegisterCptResponse"/></returns>
-        public RegisterCptResponse RegisterCptSync(RegisterCptRequest req)
+        /// <param name="req"><see cref="IssueCredentialRequest"/></param>
+        /// <returns><see cref="IssueCredentialResponse"/></returns>
+        public IssueCredentialResponse IssueCredentialSync(IssueCredentialRequest req)
         {
-            return InternalRequestAsync<RegisterCptResponse>(req, "RegisterCpt")
+            return InternalRequestAsync<IssueCredentialResponse>(req, "IssueCredential")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
-        /// 该接口不再使用
-        /// 
-        /// 设置凭证链上状态
+        /// 更新凭证的链上状态
         /// </summary>
-        /// <param name="req"><see cref="SetCredentialStatusRequest"/></param>
-        /// <returns><see cref="SetCredentialStatusResponse"/></returns>
-        public Task<SetCredentialStatusResponse> SetCredentialStatus(SetCredentialStatusRequest req)
+        /// <param name="req"><see cref="UpdateCredentialStateRequest"/></param>
+        /// <returns><see cref="UpdateCredentialStateResponse"/></returns>
+        public Task<UpdateCredentialStateResponse> UpdateCredentialState(UpdateCredentialStateRequest req)
         {
-            return InternalRequestAsync<SetCredentialStatusResponse>(req, "SetCredentialStatus");
+            return InternalRequestAsync<UpdateCredentialStateResponse>(req, "UpdateCredentialState");
         }
 
         /// <summary>
-        /// 该接口不再使用
-        /// 
-        /// 设置凭证链上状态
+        /// 更新凭证的链上状态
         /// </summary>
-        /// <param name="req"><see cref="SetCredentialStatusRequest"/></param>
-        /// <returns><see cref="SetCredentialStatusResponse"/></returns>
-        public SetCredentialStatusResponse SetCredentialStatusSync(SetCredentialStatusRequest req)
+        /// <param name="req"><see cref="UpdateCredentialStateRequest"/></param>
+        /// <returns><see cref="UpdateCredentialStateResponse"/></returns>
+        public UpdateCredentialStateResponse UpdateCredentialStateSync(UpdateCredentialStateRequest req)
         {
-            return InternalRequestAsync<SetCredentialStatusResponse>(req, "SetCredentialStatus")
+            return InternalRequestAsync<UpdateCredentialStateResponse>(req, "UpdateCredentialState")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
-        /// 该接口不再使用
-        /// 
-        /// 验证凭证
+        /// 验证已签名的可验证凭证
         /// </summary>
-        /// <param name="req"><see cref="VerifyCredentialRequest"/></param>
-        /// <returns><see cref="VerifyCredentialResponse"/></returns>
-        public Task<VerifyCredentialResponse> VerifyCredential(VerifyCredentialRequest req)
+        /// <param name="req"><see cref="VerifyCredentialsRequest"/></param>
+        /// <returns><see cref="VerifyCredentialsResponse"/></returns>
+        public Task<VerifyCredentialsResponse> VerifyCredentials(VerifyCredentialsRequest req)
         {
-            return InternalRequestAsync<VerifyCredentialResponse>(req, "VerifyCredential");
+            return InternalRequestAsync<VerifyCredentialsResponse>(req, "VerifyCredentials");
         }
 
         /// <summary>
-        /// 该接口不再使用
-        /// 
-        /// 验证凭证
+        /// 验证已签名的可验证凭证
         /// </summary>
-        /// <param name="req"><see cref="VerifyCredentialRequest"/></param>
-        /// <returns><see cref="VerifyCredentialResponse"/></returns>
-        public VerifyCredentialResponse VerifyCredentialSync(VerifyCredentialRequest req)
+        /// <param name="req"><see cref="VerifyCredentialsRequest"/></param>
+        /// <returns><see cref="VerifyCredentialsResponse"/></returns>
+        public VerifyCredentialsResponse VerifyCredentialsSync(VerifyCredentialsRequest req)
         {
-            return InternalRequestAsync<VerifyCredentialResponse>(req, "VerifyCredential")
+            return InternalRequestAsync<VerifyCredentialsResponse>(req, "VerifyCredentials")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

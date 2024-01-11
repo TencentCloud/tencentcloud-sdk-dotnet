@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D6E217E7-C778-31C0-B3BE-9508ABB1A7BA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.933</VersionPrefix>
+    <VersionPrefix>3.0.934</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,36 +48,26 @@
 
   <ItemGroup>
     <Compile Include="V20210519\TdidClient.cs" />
-    <Compile Include="V20210519\Models\CheckChainRequest.cs" />
-    <Compile Include="V20210519\Models\CheckChainResponse.cs" />
-    <Compile Include="V20210519\Models\CreateCredentialRequest.cs" />
-    <Compile Include="V20210519\Models\CreateCredentialResponse.cs" />
-    <Compile Include="V20210519\Models\CreateSelectiveCredentialRequest.cs" />
-    <Compile Include="V20210519\Models\CreateSelectiveCredentialResponse.cs" />
-    <Compile Include="V20210519\Models\CreateTDidByPrivateKeyRequest.cs" />
-    <Compile Include="V20210519\Models\CreateTDidByPrivateKeyResponse.cs" />
-    <Compile Include="V20210519\Models\CreateTDidByPublicKeyRequest.cs" />
-    <Compile Include="V20210519\Models\CreateTDidByPublicKeyResponse.cs" />
-    <Compile Include="V20210519\Models\CreateTDidRequest.cs" />
-    <Compile Include="V20210519\Models\CreateTDidResponse.cs" />
-    <Compile Include="V20210519\Models\CredentialStatus.cs" />
-    <Compile Include="V20210519\Models\FunctionArg.cs" />
-    <Compile Include="V20210519\Models\GetAuthorityIssuerRequest.cs" />
-    <Compile Include="V20210519\Models\GetAuthorityIssuerResponse.cs" />
-    <Compile Include="V20210519\Models\GetCptInfoRequest.cs" />
-    <Compile Include="V20210519\Models\GetCptInfoResponse.cs" />
-    <Compile Include="V20210519\Models\GetCredentialStatusRequest.cs" />
-    <Compile Include="V20210519\Models\GetCredentialStatusResponse.cs" />
-    <Compile Include="V20210519\Models\GetDidDocumentRequest.cs" />
-    <Compile Include="V20210519\Models\GetDidDocumentResponse.cs" />
-    <Compile Include="V20210519\Models\Proof.cs" />
-    <Compile Include="V20210519\Models\RegisterCptRequest.cs" />
-    <Compile Include="V20210519\Models\RegisterCptResponse.cs" />
-    <Compile Include="V20210519\Models\SetCredentialStatusRequest.cs" />
-    <Compile Include="V20210519\Models\SetCredentialStatusResponse.cs" />
-    <Compile Include="V20210519\Models\TransactionArg.cs" />
-    <Compile Include="V20210519\Models\VerifyCredentialRequest.cs" />
-    <Compile Include="V20210519\Models\VerifyCredentialResponse.cs" />
-    <Compile Include="V20210519\Models\VerifyFunctionArg.cs" />
+    <Compile Include="V20210519\Models\CRDLArg.cs" />
+    <Compile Include="V20210519\Models\ChainTransaction.cs" />
+    <Compile Include="V20210519\Models\CheckNewPurchaseRequest.cs" />
+    <Compile Include="V20210519\Models\CheckNewPurchaseResponse.cs" />
+    <Compile Include="V20210519\Models\CreateTDidByHostRequest.cs" />
+    <Compile Include="V20210519\Models\CreateTDidByHostResponse.cs" />
+    <Compile Include="V20210519\Models\CreateTDidByPubKeyRequest.cs" />
+    <Compile Include="V20210519\Models\CreateTDidByPubKeyResponse.cs" />
+    <Compile Include="V20210519\Models\CredentialState.cs" />
+    <Compile Include="V20210519\Models\DeactivateTDidRequest.cs" />
+    <Compile Include="V20210519\Models\DeactivateTDidResponse.cs" />
+    <Compile Include="V20210519\Models\GetCredentialStateRequest.cs" />
+    <Compile Include="V20210519\Models\GetCredentialStateResponse.cs" />
+    <Compile Include="V20210519\Models\GetTDidDocumentRequest.cs" />
+    <Compile Include="V20210519\Models\GetTDidDocumentResponse.cs" />
+    <Compile Include="V20210519\Models\IssueCredentialRequest.cs" />
+    <Compile Include="V20210519\Models\IssueCredentialResponse.cs" />
+    <Compile Include="V20210519\Models\UpdateCredentialStateRequest.cs" />
+    <Compile Include="V20210519\Models\UpdateCredentialStateResponse.cs" />
+    <Compile Include="V20210519\Models\VerifyCredentialsRequest.cs" />
+    <Compile Include="V20210519\Models\VerifyCredentialsResponse.cs" />
   </ItemGroup>
 </Project>
