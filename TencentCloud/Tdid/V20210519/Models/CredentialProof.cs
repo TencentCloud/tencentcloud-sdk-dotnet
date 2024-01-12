@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Rum.V20210622.Models
+namespace TencentCloud.Tdid.V20210519.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteOfflineLogConfigResponse : AbstractModel
+    public class CredentialProof : AbstractModel
     {
         
         /// <summary>
-        /// 接口调用信息
+        /// 可验证凭证内容
         /// </summary>
-        [JsonProperty("Msg")]
-        public string Msg{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Credential")]
+        public string Credential{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Rum.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Msg", this.Msg);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Credential", this.Credential);
         }
     }
 }

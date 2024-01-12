@@ -2031,6 +2031,27 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 导出RocketMQ消息详情
+        /// </summary>
+        /// <param name="req"><see cref="ExportRocketMQMessageDetailRequest"/></param>
+        /// <returns><see cref="ExportRocketMQMessageDetailResponse"/></returns>
+        public Task<ExportRocketMQMessageDetailResponse> ExportRocketMQMessageDetail(ExportRocketMQMessageDetailRequest req)
+        {
+            return InternalRequestAsync<ExportRocketMQMessageDetailResponse>(req, "ExportRocketMQMessageDetail");
+        }
+
+        /// <summary>
+        /// 导出RocketMQ消息详情
+        /// </summary>
+        /// <param name="req"><see cref="ExportRocketMQMessageDetailRequest"/></param>
+        /// <returns><see cref="ExportRocketMQMessageDetailResponse"/></returns>
+        public ExportRocketMQMessageDetailResponse ExportRocketMQMessageDetailSync(ExportRocketMQMessageDetailRequest req)
+        {
+            return InternalRequestAsync<ExportRocketMQMessageDetailResponse>(req, "ExportRocketMQMessageDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 输入迁移任务id和要导入的Group，导入后台
         /// </summary>
         /// <param name="req"><see cref="ImportRocketMQConsumerGroupsRequest"/></param>

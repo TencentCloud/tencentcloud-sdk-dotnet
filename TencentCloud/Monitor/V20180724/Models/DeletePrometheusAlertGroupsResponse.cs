@@ -15,21 +15,15 @@
  * under the License.
  */
 
-namespace TencentCloud.Rum.V20210622.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteOfflineLogRecordResponse : AbstractModel
+    public class DeletePrometheusAlertGroupsResponse : AbstractModel
     {
         
-        /// <summary>
-        /// 接口调用信息
-        /// </summary>
-        [JsonProperty("Msg")]
-        public string Msg{ get; set; }
-
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -42,7 +36,6 @@ namespace TencentCloud.Rum.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Msg", this.Msg);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

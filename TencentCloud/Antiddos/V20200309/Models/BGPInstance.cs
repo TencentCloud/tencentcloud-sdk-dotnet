@@ -172,6 +172,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("BasicPlusFlag")]
         public ulong? BasicPlusFlag{ get; set; }
 
+        /// <summary>
+        /// 是否是商业模式优化-普惠版
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PlanCntFlag")]
+        public ulong? PlanCntFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -200,6 +207,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "GiftServiceBandWidth", this.GiftServiceBandWidth);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "BasicPlusFlag", this.BasicPlusFlag);
+            this.SetParamSimple(map, prefix + "PlanCntFlag", this.PlanCntFlag);
         }
     }
 }

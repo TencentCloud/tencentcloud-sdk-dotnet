@@ -38,6 +38,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
+        /// <summary>
+        /// 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。
+        /// </summary>
+        [JsonProperty("EnablePdf")]
+        public bool? EnablePdf{ get; set; }
+
+        /// <summary>
+        /// 需要识别的PDF页面的对应页码，传入时仅支持PDF单页识别，当上传文件为PDF且EnablePdf参数值为true时有效，默认值为1。
+        /// </summary>
+        [JsonProperty("PdfPageNumber")]
+        public long? PdfPageNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +58,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         {
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+            this.SetParamSimple(map, prefix + "EnablePdf", this.EnablePdf);
+            this.SetParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
         }
     }
 }

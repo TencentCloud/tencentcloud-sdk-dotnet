@@ -138,6 +138,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("FilterBasicPlusFlag")]
         public ulong? FilterBasicPlusFlag{ get; set; }
 
+        /// <summary>
+        /// 是否商业模式优化-普惠版 0: 包含商业模式优化-普惠版 1: 只查询商业模式优化-普惠版 
+        /// </summary>
+        [JsonProperty("FilterPlanCntFlag")]
+        public ulong? FilterPlanCntFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +169,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "ExcludeAdvancedInfo", this.ExcludeAdvancedInfo);
             this.SetParamArraySimple(map, prefix + "FilterAssetIpList.", this.FilterAssetIpList);
             this.SetParamSimple(map, prefix + "FilterBasicPlusFlag", this.FilterBasicPlusFlag);
+            this.SetParamSimple(map, prefix + "FilterPlanCntFlag", this.FilterPlanCntFlag);
         }
     }
 }

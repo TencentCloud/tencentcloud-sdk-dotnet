@@ -44,6 +44,18 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("BestFramesCount")]
         public ulong? BestFramesCount{ get; set; }
 
+        /// <summary>
+        /// 是否对身份证照片进行裁边。默认为false。（InfoType需要包含2）
+        /// </summary>
+        [JsonProperty("IsCutIdCardImage")]
+        public bool? IsCutIdCardImage{ get; set; }
+
+        /// <summary>
+        /// 是否需要从身份证中抠出头像。默认为false。（InfoType需要包含2）
+        /// </summary>
+        [JsonProperty("IsNeedIdCardAvatar")]
+        public bool? IsNeedIdCardAvatar{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +65,8 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "EidToken", this.EidToken);
             this.SetParamSimple(map, prefix + "InfoType", this.InfoType);
             this.SetParamSimple(map, prefix + "BestFramesCount", this.BestFramesCount);
+            this.SetParamSimple(map, prefix + "IsCutIdCardImage", this.IsCutIdCardImage);
+            this.SetParamSimple(map, prefix + "IsNeedIdCardAvatar", this.IsNeedIdCardAvatar);
         }
     }
 }

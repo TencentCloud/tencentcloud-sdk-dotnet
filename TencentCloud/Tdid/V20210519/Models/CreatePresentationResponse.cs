@@ -21,15 +21,29 @@ namespace TencentCloud.Tdid.V20210519.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CheckNewPurchaseRequest : AbstractModel
+    public class CreatePresentationResponse : AbstractModel
     {
         
+        /// <summary>
+        /// 可验证表达内容
+        /// </summary>
+        [JsonProperty("PresentationData")]
+        public string PresentationData{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "PresentationData", this.PresentationData);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

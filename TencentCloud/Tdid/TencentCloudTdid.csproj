@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D6E217E7-C778-31C0-B3BE-9508ABB1A7BA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.934</VersionPrefix>
+    <VersionPrefix>3.0.935</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,24 +50,45 @@
     <Compile Include="V20210519\TdidClient.cs" />
     <Compile Include="V20210519\Models\CRDLArg.cs" />
     <Compile Include="V20210519\Models\ChainTransaction.cs" />
-    <Compile Include="V20210519\Models\CheckNewPurchaseRequest.cs" />
-    <Compile Include="V20210519\Models\CheckNewPurchaseResponse.cs" />
+    <Compile Include="V20210519\Models\CreateDisclosedCredentialRequest.cs" />
+    <Compile Include="V20210519\Models\CreateDisclosedCredentialResponse.cs" />
+    <Compile Include="V20210519\Models\CreatePresentationRequest.cs" />
+    <Compile Include="V20210519\Models\CreatePresentationResponse.cs" />
     <Compile Include="V20210519\Models\CreateTDidByHostRequest.cs" />
     <Compile Include="V20210519\Models\CreateTDidByHostResponse.cs" />
     <Compile Include="V20210519\Models\CreateTDidByPubKeyRequest.cs" />
     <Compile Include="V20210519\Models\CreateTDidByPubKeyResponse.cs" />
+    <Compile Include="V20210519\Models\CredentialProof.cs" />
     <Compile Include="V20210519\Models\CredentialState.cs" />
     <Compile Include="V20210519\Models\DeactivateTDidRequest.cs" />
     <Compile Include="V20210519\Models\DeactivateTDidResponse.cs" />
+    <Compile Include="V20210519\Models\DidAttribute.cs" />
+    <Compile Include="V20210519\Models\GetAppSummaryRequest.cs" />
+    <Compile Include="V20210519\Models\GetAppSummaryResponse.cs" />
     <Compile Include="V20210519\Models\GetCredentialStateRequest.cs" />
     <Compile Include="V20210519\Models\GetCredentialStateResponse.cs" />
+    <Compile Include="V20210519\Models\GetOverSummaryRequest.cs" />
+    <Compile Include="V20210519\Models\GetOverSummaryResponse.cs" />
+    <Compile Include="V20210519\Models\GetTDidByObjectIdRequest.cs" />
+    <Compile Include="V20210519\Models\GetTDidByObjectIdResponse.cs" />
     <Compile Include="V20210519\Models\GetTDidDocumentRequest.cs" />
     <Compile Include="V20210519\Models\GetTDidDocumentResponse.cs" />
+    <Compile Include="V20210519\Models\GetTDidPubKeyRequest.cs" />
+    <Compile Include="V20210519\Models\GetTDidPubKeyResponse.cs" />
     <Compile Include="V20210519\Models\IssueCredentialRequest.cs" />
     <Compile Include="V20210519\Models\IssueCredentialResponse.cs" />
+    <Compile Include="V20210519\Models\QueryAuthorityInfoRequest.cs" />
+    <Compile Include="V20210519\Models\QueryAuthorityInfoResponse.cs" />
+    <Compile Include="V20210519\Models\QueryCPTRequest.cs" />
+    <Compile Include="V20210519\Models\QueryCPTResponse.cs" />
+    <Compile Include="V20210519\Models\ResourceCounterData.cs" />
+    <Compile Include="V20210519\Models\SetTDidAttributeRequest.cs" />
+    <Compile Include="V20210519\Models\SetTDidAttributeResponse.cs" />
     <Compile Include="V20210519\Models\UpdateCredentialStateRequest.cs" />
     <Compile Include="V20210519\Models\UpdateCredentialStateResponse.cs" />
     <Compile Include="V20210519\Models\VerifyCredentialsRequest.cs" />
     <Compile Include="V20210519\Models\VerifyCredentialsResponse.cs" />
+    <Compile Include="V20210519\Models\VerifyPresentationRequest.cs" />
+    <Compile Include="V20210519\Models\VerifyPresentationResponse.cs" />
   </ItemGroup>
 </Project>

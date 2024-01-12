@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Rum.V20210622.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteOfflineLogConfigRequest : AbstractModel
+    public class DeletePrometheusAlertGroupsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 项目唯一上报 key
+        /// prometheus实例id
         /// </summary>
-        [JsonProperty("ProjectKey")]
-        public string ProjectKey{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 用户唯一标示(uin or aid)
+        /// 需要删除的告警分组ID，形如alert-xxxxx
         /// </summary>
-        [JsonProperty("UniqueID")]
-        public string UniqueID{ get; set; }
+        [JsonProperty("GroupIds")]
+        public string[] GroupIds{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Rum.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProjectKey", this.ProjectKey);
-            this.SetParamSimple(map, prefix + "UniqueID", this.UniqueID);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
         }
     }
 }

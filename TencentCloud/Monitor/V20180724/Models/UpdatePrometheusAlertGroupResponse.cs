@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Rum.V20210622.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeOfflineLogConfigsRequest : AbstractModel
+    public class UpdatePrometheusAlertGroupResponse : AbstractModel
     {
         
         /// <summary>
-        /// 项目唯一上报 key
+        /// 更新的告警分组ID，满足正则表达式`alert-[a-z0-9]{8}`
         /// </summary>
-        [JsonProperty("ProjectKey")]
-        public string ProjectKey{ get; set; }
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Rum.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProjectKey", this.ProjectKey);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

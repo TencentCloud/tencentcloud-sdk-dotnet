@@ -237,48 +237,6 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// 删除 rum 离线日志监听 - 对应用户的离线日志将不会上报
-        /// </summary>
-        /// <param name="req"><see cref="DeleteOfflineLogConfigRequest"/></param>
-        /// <returns><see cref="DeleteOfflineLogConfigResponse"/></returns>
-        public Task<DeleteOfflineLogConfigResponse> DeleteOfflineLogConfig(DeleteOfflineLogConfigRequest req)
-        {
-            return InternalRequestAsync<DeleteOfflineLogConfigResponse>(req, "DeleteOfflineLogConfig");
-        }
-
-        /// <summary>
-        /// 删除 rum 离线日志监听 - 对应用户的离线日志将不会上报
-        /// </summary>
-        /// <param name="req"><see cref="DeleteOfflineLogConfigRequest"/></param>
-        /// <returns><see cref="DeleteOfflineLogConfigResponse"/></returns>
-        public DeleteOfflineLogConfigResponse DeleteOfflineLogConfigSync(DeleteOfflineLogConfigRequest req)
-        {
-            return InternalRequestAsync<DeleteOfflineLogConfigResponse>(req, "DeleteOfflineLogConfig")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 删除对应的离线日志记录
-        /// </summary>
-        /// <param name="req"><see cref="DeleteOfflineLogRecordRequest"/></param>
-        /// <returns><see cref="DeleteOfflineLogRecordResponse"/></returns>
-        public Task<DeleteOfflineLogRecordResponse> DeleteOfflineLogRecord(DeleteOfflineLogRecordRequest req)
-        {
-            return InternalRequestAsync<DeleteOfflineLogRecordResponse>(req, "DeleteOfflineLogRecord");
-        }
-
-        /// <summary>
-        /// 删除对应的离线日志记录
-        /// </summary>
-        /// <param name="req"><see cref="DeleteOfflineLogRecordRequest"/></param>
-        /// <returns><see cref="DeleteOfflineLogRecordResponse"/></returns>
-        public DeleteOfflineLogRecordResponse DeleteOfflineLogRecordSync(DeleteOfflineLogRecordRequest req)
-        {
-            return InternalRequestAsync<DeleteOfflineLogRecordResponse>(req, "DeleteOfflineLogRecord")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 删除给定的 rum 的项目
         /// </summary>
         /// <param name="req"><see cref="DeleteProjectRequest"/></param>
@@ -894,27 +852,6 @@ namespace TencentCloud.Rum.V20210622
         public DescribeLogListResponse DescribeLogListSync(DescribeLogListRequest req)
         {
             return InternalRequestAsync<DescribeLogListResponse>(req, "DescribeLogList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取设置的离线日志监听配置 - 返回设置的用户唯一标识
-        /// </summary>
-        /// <param name="req"><see cref="DescribeOfflineLogConfigsRequest"/></param>
-        /// <returns><see cref="DescribeOfflineLogConfigsResponse"/></returns>
-        public Task<DescribeOfflineLogConfigsResponse> DescribeOfflineLogConfigs(DescribeOfflineLogConfigsRequest req)
-        {
-            return InternalRequestAsync<DescribeOfflineLogConfigsResponse>(req, "DescribeOfflineLogConfigs");
-        }
-
-        /// <summary>
-        /// 获取设置的离线日志监听配置 - 返回设置的用户唯一标识
-        /// </summary>
-        /// <param name="req"><see cref="DescribeOfflineLogConfigsRequest"/></param>
-        /// <returns><see cref="DescribeOfflineLogConfigsResponse"/></returns>
-        public DescribeOfflineLogConfigsResponse DescribeOfflineLogConfigsSync(DescribeOfflineLogConfigsRequest req)
-        {
-            return InternalRequestAsync<DescribeOfflineLogConfigsResponse>(req, "DescribeOfflineLogConfigs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -351,6 +351,33 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 创建Prometheus告警规则分组
+        /// 
+        /// 告警分组中可包含多条告警规则，分组内告警消息通过告警分组的通知模板发送。
+        /// 支持单个告警分组下分别创建启用/禁用的告警规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrometheusAlertGroupRequest"/></param>
+        /// <returns><see cref="CreatePrometheusAlertGroupResponse"/></returns>
+        public Task<CreatePrometheusAlertGroupResponse> CreatePrometheusAlertGroup(CreatePrometheusAlertGroupRequest req)
+        {
+            return InternalRequestAsync<CreatePrometheusAlertGroupResponse>(req, "CreatePrometheusAlertGroup");
+        }
+
+        /// <summary>
+        /// 创建Prometheus告警规则分组
+        /// 
+        /// 告警分组中可包含多条告警规则，分组内告警消息通过告警分组的通知模板发送。
+        /// 支持单个告警分组下分别创建启用/禁用的告警规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrometheusAlertGroupRequest"/></param>
+        /// <returns><see cref="CreatePrometheusAlertGroupResponse"/></returns>
+        public CreatePrometheusAlertGroupResponse CreatePrometheusAlertGroupSync(CreatePrometheusAlertGroupRequest req)
+        {
+            return InternalRequestAsync<CreatePrometheusAlertGroupResponse>(req, "CreatePrometheusAlertGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建 Prometheus 告警策略(将逐步废弃，建议使用 CreatePrometheusAlertGroup 创建告警策略)
         /// </summary>
         /// <param name="req"><see cref="CreatePrometheusAlertPolicyRequest"/></param>
@@ -750,6 +777,27 @@ namespace TencentCloud.Monitor.V20180724
         public DeletePolicyGroupResponse DeletePolicyGroupSync(DeletePolicyGroupRequest req)
         {
             return InternalRequestAsync<DeletePolicyGroupResponse>(req, "DeletePolicyGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除Prometheus告警规则分组
+        /// </summary>
+        /// <param name="req"><see cref="DeletePrometheusAlertGroupsRequest"/></param>
+        /// <returns><see cref="DeletePrometheusAlertGroupsResponse"/></returns>
+        public Task<DeletePrometheusAlertGroupsResponse> DeletePrometheusAlertGroups(DeletePrometheusAlertGroupsRequest req)
+        {
+            return InternalRequestAsync<DeletePrometheusAlertGroupsResponse>(req, "DeletePrometheusAlertGroups");
+        }
+
+        /// <summary>
+        /// 删除Prometheus告警规则分组
+        /// </summary>
+        /// <param name="req"><see cref="DeletePrometheusAlertGroupsRequest"/></param>
+        /// <returns><see cref="DeletePrometheusAlertGroupsResponse"/></returns>
+        public DeletePrometheusAlertGroupsResponse DeletePrometheusAlertGroupsSync(DeletePrometheusAlertGroupsRequest req)
+        {
+            return InternalRequestAsync<DeletePrometheusAlertGroupsResponse>(req, "DeletePrometheusAlertGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1703,6 +1751,27 @@ namespace TencentCloud.Monitor.V20180724
         public DescribePrometheusAgentsResponse DescribePrometheusAgentsSync(DescribePrometheusAgentsRequest req)
         {
             return InternalRequestAsync<DescribePrometheusAgentsResponse>(req, "DescribePrometheusAgents")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询给定prometheus下的告警分组
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusAlertGroupsRequest"/></param>
+        /// <returns><see cref="DescribePrometheusAlertGroupsResponse"/></returns>
+        public Task<DescribePrometheusAlertGroupsResponse> DescribePrometheusAlertGroups(DescribePrometheusAlertGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribePrometheusAlertGroupsResponse>(req, "DescribePrometheusAlertGroups");
+        }
+
+        /// <summary>
+        /// 查询给定prometheus下的告警分组
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusAlertGroupsRequest"/></param>
+        /// <returns><see cref="DescribePrometheusAlertGroupsResponse"/></returns>
+        public DescribePrometheusAlertGroupsResponse DescribePrometheusAlertGroupsSync(DescribePrometheusAlertGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribePrometheusAlertGroupsResponse>(req, "DescribePrometheusAlertGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3119,6 +3188,48 @@ namespace TencentCloud.Monitor.V20180724
         public UpdatePrometheusAgentStatusResponse UpdatePrometheusAgentStatusSync(UpdatePrometheusAgentStatusRequest req)
         {
             return InternalRequestAsync<UpdatePrometheusAgentStatusResponse>(req, "UpdatePrometheusAgentStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新Prometheus告警规则分组
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePrometheusAlertGroupRequest"/></param>
+        /// <returns><see cref="UpdatePrometheusAlertGroupResponse"/></returns>
+        public Task<UpdatePrometheusAlertGroupResponse> UpdatePrometheusAlertGroup(UpdatePrometheusAlertGroupRequest req)
+        {
+            return InternalRequestAsync<UpdatePrometheusAlertGroupResponse>(req, "UpdatePrometheusAlertGroup");
+        }
+
+        /// <summary>
+        /// 更新Prometheus告警规则分组
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePrometheusAlertGroupRequest"/></param>
+        /// <returns><see cref="UpdatePrometheusAlertGroupResponse"/></returns>
+        public UpdatePrometheusAlertGroupResponse UpdatePrometheusAlertGroupSync(UpdatePrometheusAlertGroupRequest req)
+        {
+            return InternalRequestAsync<UpdatePrometheusAlertGroupResponse>(req, "UpdatePrometheusAlertGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量更新告警分组状态，将分组中全部告警规则更新为目标状态
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePrometheusAlertGroupStateRequest"/></param>
+        /// <returns><see cref="UpdatePrometheusAlertGroupStateResponse"/></returns>
+        public Task<UpdatePrometheusAlertGroupStateResponse> UpdatePrometheusAlertGroupState(UpdatePrometheusAlertGroupStateRequest req)
+        {
+            return InternalRequestAsync<UpdatePrometheusAlertGroupStateResponse>(req, "UpdatePrometheusAlertGroupState");
+        }
+
+        /// <summary>
+        /// 批量更新告警分组状态，将分组中全部告警规则更新为目标状态
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePrometheusAlertGroupStateRequest"/></param>
+        /// <returns><see cref="UpdatePrometheusAlertGroupStateResponse"/></returns>
+        public UpdatePrometheusAlertGroupStateResponse UpdatePrometheusAlertGroupStateSync(UpdatePrometheusAlertGroupStateRequest req)
+        {
+            return InternalRequestAsync<UpdatePrometheusAlertGroupStateResponse>(req, "UpdatePrometheusAlertGroupState")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

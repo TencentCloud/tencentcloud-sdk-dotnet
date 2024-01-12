@@ -53,23 +53,44 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
-        /// 检查用户套餐购买状态
+        /// 根据披露策略创建选择性披露凭证
         /// </summary>
-        /// <param name="req"><see cref="CheckNewPurchaseRequest"/></param>
-        /// <returns><see cref="CheckNewPurchaseResponse"/></returns>
-        public Task<CheckNewPurchaseResponse> CheckNewPurchase(CheckNewPurchaseRequest req)
+        /// <param name="req"><see cref="CreateDisclosedCredentialRequest"/></param>
+        /// <returns><see cref="CreateDisclosedCredentialResponse"/></returns>
+        public Task<CreateDisclosedCredentialResponse> CreateDisclosedCredential(CreateDisclosedCredentialRequest req)
         {
-            return InternalRequestAsync<CheckNewPurchaseResponse>(req, "CheckNewPurchase");
+            return InternalRequestAsync<CreateDisclosedCredentialResponse>(req, "CreateDisclosedCredential");
         }
 
         /// <summary>
-        /// 检查用户套餐购买状态
+        /// 根据披露策略创建选择性披露凭证
         /// </summary>
-        /// <param name="req"><see cref="CheckNewPurchaseRequest"/></param>
-        /// <returns><see cref="CheckNewPurchaseResponse"/></returns>
-        public CheckNewPurchaseResponse CheckNewPurchaseSync(CheckNewPurchaseRequest req)
+        /// <param name="req"><see cref="CreateDisclosedCredentialRequest"/></param>
+        /// <returns><see cref="CreateDisclosedCredentialResponse"/></returns>
+        public CreateDisclosedCredentialResponse CreateDisclosedCredentialSync(CreateDisclosedCredentialRequest req)
         {
-            return InternalRequestAsync<CheckNewPurchaseResponse>(req, "CheckNewPurchase")
+            return InternalRequestAsync<CreateDisclosedCredentialResponse>(req, "CreateDisclosedCredential")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建凭证持有人的可验证表达
+        /// </summary>
+        /// <param name="req"><see cref="CreatePresentationRequest"/></param>
+        /// <returns><see cref="CreatePresentationResponse"/></returns>
+        public Task<CreatePresentationResponse> CreatePresentation(CreatePresentationRequest req)
+        {
+            return InternalRequestAsync<CreatePresentationResponse>(req, "CreatePresentation");
+        }
+
+        /// <summary>
+        /// 创建凭证持有人的可验证表达
+        /// </summary>
+        /// <param name="req"><see cref="CreatePresentationRequest"/></param>
+        /// <returns><see cref="CreatePresentationResponse"/></returns>
+        public CreatePresentationResponse CreatePresentationSync(CreatePresentationRequest req)
+        {
+            return InternalRequestAsync<CreatePresentationResponse>(req, "CreatePresentation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -137,6 +158,27 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 获取某个应用关键指标统计数据
+        /// </summary>
+        /// <param name="req"><see cref="GetAppSummaryRequest"/></param>
+        /// <returns><see cref="GetAppSummaryResponse"/></returns>
+        public Task<GetAppSummaryResponse> GetAppSummary(GetAppSummaryRequest req)
+        {
+            return InternalRequestAsync<GetAppSummaryResponse>(req, "GetAppSummary");
+        }
+
+        /// <summary>
+        /// 获取某个应用关键指标统计数据
+        /// </summary>
+        /// <param name="req"><see cref="GetAppSummaryRequest"/></param>
+        /// <returns><see cref="GetAppSummaryResponse"/></returns>
+        public GetAppSummaryResponse GetAppSummarySync(GetAppSummaryRequest req)
+        {
+            return InternalRequestAsync<GetAppSummaryResponse>(req, "GetAppSummary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取凭证链上状态信息
         /// </summary>
         /// <param name="req"><see cref="GetCredentialStateRequest"/></param>
@@ -154,6 +196,48 @@ namespace TencentCloud.Tdid.V20210519
         public GetCredentialStateResponse GetCredentialStateSync(GetCredentialStateRequest req)
         {
             return InternalRequestAsync<GetCredentialStateResponse>(req, "GetCredentialState")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取某个应用关键指标统计数据
+        /// </summary>
+        /// <param name="req"><see cref="GetOverSummaryRequest"/></param>
+        /// <returns><see cref="GetOverSummaryResponse"/></returns>
+        public Task<GetOverSummaryResponse> GetOverSummary(GetOverSummaryRequest req)
+        {
+            return InternalRequestAsync<GetOverSummaryResponse>(req, "GetOverSummary");
+        }
+
+        /// <summary>
+        /// 获取某个应用关键指标统计数据
+        /// </summary>
+        /// <param name="req"><see cref="GetOverSummaryRequest"/></param>
+        /// <returns><see cref="GetOverSummaryResponse"/></returns>
+        public GetOverSummaryResponse GetOverSummarySync(GetOverSummaryRequest req)
+        {
+            return InternalRequestAsync<GetOverSummaryResponse>(req, "GetOverSummary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通过业务层绑定的对象ID获取DID标识
+        /// </summary>
+        /// <param name="req"><see cref="GetTDidByObjectIdRequest"/></param>
+        /// <returns><see cref="GetTDidByObjectIdResponse"/></returns>
+        public Task<GetTDidByObjectIdResponse> GetTDidByObjectId(GetTDidByObjectIdRequest req)
+        {
+            return InternalRequestAsync<GetTDidByObjectIdResponse>(req, "GetTDidByObjectId");
+        }
+
+        /// <summary>
+        /// 通过业务层绑定的对象ID获取DID标识
+        /// </summary>
+        /// <param name="req"><see cref="GetTDidByObjectIdRequest"/></param>
+        /// <returns><see cref="GetTDidByObjectIdResponse"/></returns>
+        public GetTDidByObjectIdResponse GetTDidByObjectIdSync(GetTDidByObjectIdRequest req)
+        {
+            return InternalRequestAsync<GetTDidByObjectIdResponse>(req, "GetTDidByObjectId")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -179,6 +263,27 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        /// 查询DID标识的认证公钥
+        /// </summary>
+        /// <param name="req"><see cref="GetTDidPubKeyRequest"/></param>
+        /// <returns><see cref="GetTDidPubKeyResponse"/></returns>
+        public Task<GetTDidPubKeyResponse> GetTDidPubKey(GetTDidPubKeyRequest req)
+        {
+            return InternalRequestAsync<GetTDidPubKeyResponse>(req, "GetTDidPubKey");
+        }
+
+        /// <summary>
+        /// 查询DID标识的认证公钥
+        /// </summary>
+        /// <param name="req"><see cref="GetTDidPubKeyRequest"/></param>
+        /// <returns><see cref="GetTDidPubKeyResponse"/></returns>
+        public GetTDidPubKeyResponse GetTDidPubKeySync(GetTDidPubKeyRequest req)
+        {
+            return InternalRequestAsync<GetTDidPubKeyResponse>(req, "GetTDidPubKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 颁发可验证凭证
         /// </summary>
         /// <param name="req"><see cref="IssueCredentialRequest"/></param>
@@ -196,6 +301,69 @@ namespace TencentCloud.Tdid.V20210519
         public IssueCredentialResponse IssueCredentialSync(IssueCredentialRequest req)
         {
             return InternalRequestAsync<IssueCredentialResponse>(req, "IssueCredential")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询权威机构信息
+        /// </summary>
+        /// <param name="req"><see cref="QueryAuthorityInfoRequest"/></param>
+        /// <returns><see cref="QueryAuthorityInfoResponse"/></returns>
+        public Task<QueryAuthorityInfoResponse> QueryAuthorityInfo(QueryAuthorityInfoRequest req)
+        {
+            return InternalRequestAsync<QueryAuthorityInfoResponse>(req, "QueryAuthorityInfo");
+        }
+
+        /// <summary>
+        /// 查询权威机构信息
+        /// </summary>
+        /// <param name="req"><see cref="QueryAuthorityInfoRequest"/></param>
+        /// <returns><see cref="QueryAuthorityInfoResponse"/></returns>
+        public QueryAuthorityInfoResponse QueryAuthorityInfoSync(QueryAuthorityInfoRequest req)
+        {
+            return InternalRequestAsync<QueryAuthorityInfoResponse>(req, "QueryAuthorityInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询凭证模版内容
+        /// </summary>
+        /// <param name="req"><see cref="QueryCPTRequest"/></param>
+        /// <returns><see cref="QueryCPTResponse"/></returns>
+        public Task<QueryCPTResponse> QueryCPT(QueryCPTRequest req)
+        {
+            return InternalRequestAsync<QueryCPTResponse>(req, "QueryCPT");
+        }
+
+        /// <summary>
+        /// 查询凭证模版内容
+        /// </summary>
+        /// <param name="req"><see cref="QueryCPTRequest"/></param>
+        /// <returns><see cref="QueryCPTResponse"/></returns>
+        public QueryCPTResponse QueryCPTSync(QueryCPTRequest req)
+        {
+            return InternalRequestAsync<QueryCPTResponse>(req, "QueryCPT")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设置DID文档的自定义属性
+        /// </summary>
+        /// <param name="req"><see cref="SetTDidAttributeRequest"/></param>
+        /// <returns><see cref="SetTDidAttributeResponse"/></returns>
+        public Task<SetTDidAttributeResponse> SetTDidAttribute(SetTDidAttributeRequest req)
+        {
+            return InternalRequestAsync<SetTDidAttributeResponse>(req, "SetTDidAttribute");
+        }
+
+        /// <summary>
+        /// 设置DID文档的自定义属性
+        /// </summary>
+        /// <param name="req"><see cref="SetTDidAttributeRequest"/></param>
+        /// <returns><see cref="SetTDidAttributeResponse"/></returns>
+        public SetTDidAttributeResponse SetTDidAttributeSync(SetTDidAttributeRequest req)
+        {
+            return InternalRequestAsync<SetTDidAttributeResponse>(req, "SetTDidAttribute")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -238,6 +406,27 @@ namespace TencentCloud.Tdid.V20210519
         public VerifyCredentialsResponse VerifyCredentialsSync(VerifyCredentialsRequest req)
         {
             return InternalRequestAsync<VerifyCredentialsResponse>(req, "VerifyCredentials")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 验证可验证表达的内容
+        /// </summary>
+        /// <param name="req"><see cref="VerifyPresentationRequest"/></param>
+        /// <returns><see cref="VerifyPresentationResponse"/></returns>
+        public Task<VerifyPresentationResponse> VerifyPresentation(VerifyPresentationRequest req)
+        {
+            return InternalRequestAsync<VerifyPresentationResponse>(req, "VerifyPresentation");
+        }
+
+        /// <summary>
+        /// 验证可验证表达的内容
+        /// </summary>
+        /// <param name="req"><see cref="VerifyPresentationRequest"/></param>
+        /// <returns><see cref="VerifyPresentationResponse"/></returns>
+        public VerifyPresentationResponse VerifyPresentationSync(VerifyPresentationRequest req)
+        {
+            return InternalRequestAsync<VerifyPresentationResponse>(req, "VerifyPresentation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

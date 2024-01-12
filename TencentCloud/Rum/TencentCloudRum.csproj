@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5858BBCC-C633-3051-97EE-41F59C93CB86}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.934</VersionPrefix>
+    <VersionPrefix>3.0.935</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -64,10 +64,6 @@
     <Compile Include="V20210622\Models\DeleteInstanceResponse.cs" />
     <Compile Include="V20210622\Models\DeleteLogExportRequest.cs" />
     <Compile Include="V20210622\Models\DeleteLogExportResponse.cs" />
-    <Compile Include="V20210622\Models\DeleteOfflineLogConfigRequest.cs" />
-    <Compile Include="V20210622\Models\DeleteOfflineLogConfigResponse.cs" />
-    <Compile Include="V20210622\Models\DeleteOfflineLogRecordRequest.cs" />
-    <Compile Include="V20210622\Models\DeleteOfflineLogRecordResponse.cs" />
     <Compile Include="V20210622\Models\DeleteProjectRequest.cs" />
     <Compile Include="V20210622\Models\DeleteProjectResponse.cs" />
     <Compile Include="V20210622\Models\DeleteReleaseFileRequest.cs" />
@@ -126,8 +122,6 @@
     <Compile Include="V20210622\Models\DescribeLogExportsResponse.cs" />
     <Compile Include="V20210622\Models\DescribeLogListRequest.cs" />
     <Compile Include="V20210622\Models\DescribeLogListResponse.cs" />
-    <Compile Include="V20210622\Models\DescribeOfflineLogConfigsRequest.cs" />
-    <Compile Include="V20210622\Models\DescribeOfflineLogConfigsResponse.cs" />
     <Compile Include="V20210622\Models\DescribeProjectLimitsRequest.cs" />
     <Compile Include="V20210622\Models\DescribeProjectLimitsResponse.cs" />
     <Compile Include="V20210622\Models\DescribeProjectsRequest.cs" />
