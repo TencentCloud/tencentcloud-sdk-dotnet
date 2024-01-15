@@ -80,6 +80,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("NamespaceIdList")]
         public string[] NamespaceIdList{ get; set; }
 
+        /// <summary>
+        /// 泳道部署组ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LaneGroupId")]
+        public string LaneGroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +101,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamArrayObj(map, prefix + "LaneGroupList.", this.LaneGroupList);
             this.SetParamSimple(map, prefix + "Entrance", this.Entrance);
             this.SetParamArraySimple(map, prefix + "NamespaceIdList.", this.NamespaceIdList);
+            this.SetParamSimple(map, prefix + "LaneGroupId", this.LaneGroupId);
         }
     }
 }
