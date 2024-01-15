@@ -3279,31 +3279,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 没用到
-        /// 
-        /// 获取kafka的topic信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeKafkaTopicInfoRequest"/></param>
-        /// <returns><see cref="DescribeKafkaTopicInfoResponse"/></returns>
-        public Task<DescribeKafkaTopicInfoResponse> DescribeKafkaTopicInfo(DescribeKafkaTopicInfoRequest req)
-        {
-            return InternalRequestAsync<DescribeKafkaTopicInfoResponse>(req, "DescribeKafkaTopicInfo");
-        }
-
-        /// <summary>
-        /// 没用到
-        /// 
-        /// 获取kafka的topic信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeKafkaTopicInfoRequest"/></param>
-        /// <returns><see cref="DescribeKafkaTopicInfoResponse"/></returns>
-        public DescribeKafkaTopicInfoResponse DescribeKafkaTopicInfoSync(DescribeKafkaTopicInfoRequest req)
-        {
-            return InternalRequestAsync<DescribeKafkaTopicInfoResponse>(req, "DescribeKafkaTopicInfo")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 分页查询质量监控组
         /// </summary>
         /// <param name="req"><see cref="DescribeMonitorsByPageRequest"/></param>

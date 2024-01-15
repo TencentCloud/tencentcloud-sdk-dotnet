@@ -33,16 +33,6 @@ namespace TencentCloud.Ess.V20201111.Models
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// 流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，其他可不传，
-        /// 
-        /// 注:
-        /// `1. ApproverType目前只支持个人类型的签署人。`
-        /// `2. 签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
-        /// </summary>
-        [JsonProperty("FlowApproverInfos")]
-        public FlowCreateApprover[] FlowApproverInfos{ get; set; }
-
-        /// <summary>
         /// 执行本接口操作的员工信息。
         /// 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
         /// </summary>
@@ -57,6 +47,16 @@ namespace TencentCloud.Ess.V20201111.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
+        /// 流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，企业签署人则需传OrganizationName，其他可不传。
+        /// 
+        /// 注:
+        /// `1. 签署人只能有手写签名、时间类型和印章类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
+        /// `2. 生成发起方预览链接时，该字段（FlowApproverInfos）传空或者不传`
+        /// </summary>
+        [JsonProperty("FlowApproverInfos")]
+        public FlowCreateApprover[] FlowApproverInfos{ get; set; }
+
+        /// <summary>
         /// 机构信息，暂未开放
         /// </summary>
         [JsonProperty("Organization")]
@@ -69,6 +69,17 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("JumpUrl")]
         public string JumpUrl{ get; set; }
 
+        /// <summary>
+        /// 链接类型，支持指定以下类型
+        /// <ul><li>0 : 签署链接 (默认值)</li>
+        /// <li>1 : 预览链接</li></ul>
+        /// 注:
+        /// `1. 当指定链接类型为1时，链接为预览链接，打开链接无法签署仅支持预览以及查看当前合同状态。`
+        /// `2. 如需生成发起方预览链接，则签署方信息传空，即FlowApproverInfos传空或者不传。`
+        /// </summary>
+        [JsonProperty("UrlType")]
+        public long? UrlType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,11 +87,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
-            this.SetParamArrayObj(map, prefix + "FlowApproverInfos.", this.FlowApproverInfos);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamArrayObj(map, prefix + "FlowApproverInfos.", this.FlowApproverInfos);
             this.SetParamObj(map, prefix + "Organization.", this.Organization);
             this.SetParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
+            this.SetParamSimple(map, prefix + "UrlType", this.UrlType);
         }
     }
 }

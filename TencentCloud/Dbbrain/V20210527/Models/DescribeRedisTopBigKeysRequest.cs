@@ -60,6 +60,18 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 异步任务ID。当为空时，选择最近任务的ID。
+        /// </summary>
+        [JsonProperty("AsyncRequestId")]
+        public long? AsyncRequestId{ get; set; }
+
+        /// <summary>
+        /// 分片节点序号列表。当列表为空时，选择所有分片节点。
+        /// </summary>
+        [JsonProperty("ShardIds")]
+        public long?[] ShardIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "SortBy", this.SortBy);
             this.SetParamSimple(map, prefix + "KeyType", this.KeyType);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+            this.SetParamArraySimple(map, prefix + "ShardIds.", this.ShardIds);
         }
     }
 }

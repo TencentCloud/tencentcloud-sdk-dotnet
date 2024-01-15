@@ -94,6 +94,21 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("AuthorizationTypes")]
         public ulong?[] AuthorizationTypes{ get; set; }
 
+        /// <summary>
+        /// 经办人的证件类型，支持以下类型
+        /// <ul><li>ID_CARD : 居民身份证  (默认值)</li>
+        /// <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+        /// <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+        /// </summary>
+        [JsonProperty("AdminIdCardType")]
+        public string AdminIdCardType{ get; set; }
+
+        /// <summary>
+        /// 经办人的证件号
+        /// </summary>
+        [JsonProperty("AdminIdCardNumber")]
+        public string AdminIdCardNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +124,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "AdminName", this.AdminName);
             this.SetParamSimple(map, prefix + "AdminMobile", this.AdminMobile);
             this.SetParamArraySimple(map, prefix + "AuthorizationTypes.", this.AuthorizationTypes);
+            this.SetParamSimple(map, prefix + "AdminIdCardType", this.AdminIdCardType);
+            this.SetParamSimple(map, prefix + "AdminIdCardNumber", this.AdminIdCardNumber);
         }
     }
 }

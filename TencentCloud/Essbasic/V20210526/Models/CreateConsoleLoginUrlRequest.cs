@@ -103,7 +103,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <ul><li>**PC**：(默认)<font color="red">web控制台</font>链接, 需要在PC浏览器中打开</li>
         /// <li>**CHANNEL**：H5跳转到电子签小程序链接, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</li>
         /// <li>**SHORT_URL**：<font color="red">H5</font>跳转到电子签小程序链接的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</li>
-        /// <li>**APP**：<font color="red">APP或小程序</font>跳转电子签小程序链接, 一般用于贵方小程序或者APP跳转过来,  打开后进入腾讯电子签小程序</li></ul>
+        /// <li>**APP**：<font color="red">APP或小程序</font>跳转电子签小程序链接, 一般用于贵方小程序或者APP跳转过来,  打开后进入腾讯电子签小程序</li>
+        /// <li>**H5**：<font color="red">H5长链接</font>跳转H5链接, 一般用于贵方H5跳转过来,  打开后进入腾讯电子签H5页面</li>
+        /// <li>**SHORT_H5**：<font color="red">H5短链</font>跳转H5的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签H5页面</li></ul>
         /// </summary>
         [JsonProperty("Endpoint")]
         public string Endpoint{ get; set; }
@@ -136,6 +138,20 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [System.Obsolete]
         public UserInfo Operator{ get; set; }
 
+        /// <summary>
+        /// 子客经办人身份证
+        /// 注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持居民身份证类型`。
+        /// </summary>
+        [JsonProperty("ProxyOperatorIdCardNumber")]
+        public string ProxyOperatorIdCardNumber{ get; set; }
+
+        /// <summary>
+        /// 认证完成跳转链接
+        /// 注意：`只在H5生效，域名需要联系我们开白`。
+        /// </summary>
+        [JsonProperty("AutoJumpUrl")]
+        public string AutoJumpUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -153,6 +169,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "AutoJumpBackEvent", this.AutoJumpBackEvent);
             this.SetParamArraySimple(map, prefix + "AuthorizationTypes.", this.AuthorizationTypes);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamSimple(map, prefix + "ProxyOperatorIdCardNumber", this.ProxyOperatorIdCardNumber);
+            this.SetParamSimple(map, prefix + "AutoJumpUrl", this.AutoJumpUrl);
         }
     }
 }

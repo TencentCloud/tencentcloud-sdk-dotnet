@@ -46,6 +46,22 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
+        /// <summary>
+        /// 员工邀请方式
+        /// 如果是来自H5的，参数需要传递H5
+        /// 短信或者企微 请传递SMS，或者不传递
+        /// </summary>
+        [JsonProperty("InvitationNotifyType")]
+        public string InvitationNotifyType{ get; set; }
+
+        /// <summary>
+        /// 回跳地址，
+        /// 在认证成功之后，进行回跳，请保证回跳地址的可用性。
+        /// 使用前请联系对接的客户经理沟通，提供回跳地址的域名，进行域名配置。
+        /// </summary>
+        [JsonProperty("JumpUrl")]
+        public string JumpUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -55,6 +71,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamArrayObj(map, prefix + "Employees.", this.Employees);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamSimple(map, prefix + "InvitationNotifyType", this.InvitationNotifyType);
+            this.SetParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
         }
     }
 }
