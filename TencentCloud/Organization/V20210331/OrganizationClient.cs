@@ -95,6 +95,69 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 创建共享单元，只有企业组织管理员可创建。
+        /// </summary>
+        /// <param name="req"><see cref="AddShareUnitRequest"/></param>
+        /// <returns><see cref="AddShareUnitResponse"/></returns>
+        public Task<AddShareUnitResponse> AddShareUnit(AddShareUnitRequest req)
+        {
+            return InternalRequestAsync<AddShareUnitResponse>(req, "AddShareUnit");
+        }
+
+        /// <summary>
+        /// 创建共享单元，只有企业组织管理员可创建。
+        /// </summary>
+        /// <param name="req"><see cref="AddShareUnitRequest"/></param>
+        /// <returns><see cref="AddShareUnitResponse"/></returns>
+        public AddShareUnitResponse AddShareUnitSync(AddShareUnitRequest req)
+        {
+            return InternalRequestAsync<AddShareUnitResponse>(req, "AddShareUnit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加共享单元成员
+        /// </summary>
+        /// <param name="req"><see cref="AddShareUnitMembersRequest"/></param>
+        /// <returns><see cref="AddShareUnitMembersResponse"/></returns>
+        public Task<AddShareUnitMembersResponse> AddShareUnitMembers(AddShareUnitMembersRequest req)
+        {
+            return InternalRequestAsync<AddShareUnitMembersResponse>(req, "AddShareUnitMembers");
+        }
+
+        /// <summary>
+        /// 添加共享单元成员
+        /// </summary>
+        /// <param name="req"><see cref="AddShareUnitMembersRequest"/></param>
+        /// <returns><see cref="AddShareUnitMembersResponse"/></returns>
+        public AddShareUnitMembersResponse AddShareUnitMembersSync(AddShareUnitMembersRequest req)
+        {
+            return InternalRequestAsync<AddShareUnitMembersResponse>(req, "AddShareUnitMembers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加共享单元资源
+        /// </summary>
+        /// <param name="req"><see cref="AddShareUnitResourcesRequest"/></param>
+        /// <returns><see cref="AddShareUnitResourcesResponse"/></returns>
+        public Task<AddShareUnitResourcesResponse> AddShareUnitResources(AddShareUnitResourcesRequest req)
+        {
+            return InternalRequestAsync<AddShareUnitResourcesResponse>(req, "AddShareUnitResources");
+        }
+
+        /// <summary>
+        /// 添加共享单元资源
+        /// </summary>
+        /// <param name="req"><see cref="AddShareUnitResourcesRequest"/></param>
+        /// <returns><see cref="AddShareUnitResourcesResponse"/></returns>
+        public AddShareUnitResourcesResponse AddShareUnitResourcesSync(AddShareUnitResourcesRequest req)
+        {
+            return InternalRequestAsync<AddShareUnitResourcesResponse>(req, "AddShareUnitResources")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 绑定组织成员和组织管理员子账号的授权关系
         /// </summary>
         /// <param name="req"><see cref="BindOrganizationMemberAuthAccountRequest"/></param>
@@ -410,6 +473,69 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 删除共享单元。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteShareUnitRequest"/></param>
+        /// <returns><see cref="DeleteShareUnitResponse"/></returns>
+        public Task<DeleteShareUnitResponse> DeleteShareUnit(DeleteShareUnitRequest req)
+        {
+            return InternalRequestAsync<DeleteShareUnitResponse>(req, "DeleteShareUnit");
+        }
+
+        /// <summary>
+        /// 删除共享单元。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteShareUnitRequest"/></param>
+        /// <returns><see cref="DeleteShareUnitResponse"/></returns>
+        public DeleteShareUnitResponse DeleteShareUnitSync(DeleteShareUnitRequest req)
+        {
+            return InternalRequestAsync<DeleteShareUnitResponse>(req, "DeleteShareUnit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除共享单元成员
+        /// </summary>
+        /// <param name="req"><see cref="DeleteShareUnitMembersRequest"/></param>
+        /// <returns><see cref="DeleteShareUnitMembersResponse"/></returns>
+        public Task<DeleteShareUnitMembersResponse> DeleteShareUnitMembers(DeleteShareUnitMembersRequest req)
+        {
+            return InternalRequestAsync<DeleteShareUnitMembersResponse>(req, "DeleteShareUnitMembers");
+        }
+
+        /// <summary>
+        /// 删除共享单元成员
+        /// </summary>
+        /// <param name="req"><see cref="DeleteShareUnitMembersRequest"/></param>
+        /// <returns><see cref="DeleteShareUnitMembersResponse"/></returns>
+        public DeleteShareUnitMembersResponse DeleteShareUnitMembersSync(DeleteShareUnitMembersRequest req)
+        {
+            return InternalRequestAsync<DeleteShareUnitMembersResponse>(req, "DeleteShareUnitMembers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除共享单元资源
+        /// </summary>
+        /// <param name="req"><see cref="DeleteShareUnitResourcesRequest"/></param>
+        /// <returns><see cref="DeleteShareUnitResourcesResponse"/></returns>
+        public Task<DeleteShareUnitResourcesResponse> DeleteShareUnitResources(DeleteShareUnitResourcesRequest req)
+        {
+            return InternalRequestAsync<DeleteShareUnitResourcesResponse>(req, "DeleteShareUnitResources");
+        }
+
+        /// <summary>
+        /// 删除共享单元资源
+        /// </summary>
+        /// <param name="req"><see cref="DeleteShareUnitResourcesRequest"/></param>
+        /// <returns><see cref="DeleteShareUnitResourcesResponse"/></returns>
+        public DeleteShareUnitResourcesResponse DeleteShareUnitResourcesSync(DeleteShareUnitResourcesRequest req)
+        {
+            return InternalRequestAsync<DeleteShareUnitResourcesResponse>(req, "DeleteShareUnitResources")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取企业组织信息
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationRequest"/></param>
@@ -641,6 +767,90 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 获取可共享地域列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShareAreasRequest"/></param>
+        /// <returns><see cref="DescribeShareAreasResponse"/></returns>
+        public Task<DescribeShareAreasResponse> DescribeShareAreas(DescribeShareAreasRequest req)
+        {
+            return InternalRequestAsync<DescribeShareAreasResponse>(req, "DescribeShareAreas");
+        }
+
+        /// <summary>
+        /// 获取可共享地域列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShareAreasRequest"/></param>
+        /// <returns><see cref="DescribeShareAreasResponse"/></returns>
+        public DescribeShareAreasResponse DescribeShareAreasSync(DescribeShareAreasRequest req)
+        {
+            return InternalRequestAsync<DescribeShareAreasResponse>(req, "DescribeShareAreas")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取共享单元成员列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShareUnitMembersRequest"/></param>
+        /// <returns><see cref="DescribeShareUnitMembersResponse"/></returns>
+        public Task<DescribeShareUnitMembersResponse> DescribeShareUnitMembers(DescribeShareUnitMembersRequest req)
+        {
+            return InternalRequestAsync<DescribeShareUnitMembersResponse>(req, "DescribeShareUnitMembers");
+        }
+
+        /// <summary>
+        /// 获取共享单元成员列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShareUnitMembersRequest"/></param>
+        /// <returns><see cref="DescribeShareUnitMembersResponse"/></returns>
+        public DescribeShareUnitMembersResponse DescribeShareUnitMembersSync(DescribeShareUnitMembersRequest req)
+        {
+            return InternalRequestAsync<DescribeShareUnitMembersResponse>(req, "DescribeShareUnitMembers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取共享单元资源列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShareUnitResourcesRequest"/></param>
+        /// <returns><see cref="DescribeShareUnitResourcesResponse"/></returns>
+        public Task<DescribeShareUnitResourcesResponse> DescribeShareUnitResources(DescribeShareUnitResourcesRequest req)
+        {
+            return InternalRequestAsync<DescribeShareUnitResourcesResponse>(req, "DescribeShareUnitResources");
+        }
+
+        /// <summary>
+        /// 获取共享单元资源列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShareUnitResourcesRequest"/></param>
+        /// <returns><see cref="DescribeShareUnitResourcesResponse"/></returns>
+        public DescribeShareUnitResourcesResponse DescribeShareUnitResourcesSync(DescribeShareUnitResourcesRequest req)
+        {
+            return InternalRequestAsync<DescribeShareUnitResourcesResponse>(req, "DescribeShareUnitResources")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取共享单元列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShareUnitsRequest"/></param>
+        /// <returns><see cref="DescribeShareUnitsResponse"/></returns>
+        public Task<DescribeShareUnitsResponse> DescribeShareUnits(DescribeShareUnitsRequest req)
+        {
+            return InternalRequestAsync<DescribeShareUnitsResponse>(req, "DescribeShareUnits");
+        }
+
+        /// <summary>
+        /// 获取共享单元列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShareUnitsRequest"/></param>
+        /// <returns><see cref="DescribeShareUnitsResponse"/></returns>
+        public DescribeShareUnitsResponse DescribeShareUnitsSync(DescribeShareUnitsRequest req)
+        {
+            return InternalRequestAsync<DescribeShareUnitsResponse>(req, "DescribeShareUnits")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取组织成员访问身份列表
         /// </summary>
         /// <param name="req"><see cref="ListOrganizationIdentityRequest"/></param>
@@ -784,6 +994,27 @@ namespace TencentCloud.Organization.V20210331
         public UpdateOrganizationNodeResponse UpdateOrganizationNodeSync(UpdateOrganizationNodeRequest req)
         {
             return InternalRequestAsync<UpdateOrganizationNodeResponse>(req, "UpdateOrganizationNode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新共享单元。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateShareUnitRequest"/></param>
+        /// <returns><see cref="UpdateShareUnitResponse"/></returns>
+        public Task<UpdateShareUnitResponse> UpdateShareUnit(UpdateShareUnitRequest req)
+        {
+            return InternalRequestAsync<UpdateShareUnitResponse>(req, "UpdateShareUnit");
+        }
+
+        /// <summary>
+        /// 更新共享单元。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateShareUnitRequest"/></param>
+        /// <returns><see cref="UpdateShareUnitResponse"/></returns>
+        public UpdateShareUnitResponse UpdateShareUnitSync(UpdateShareUnitRequest req)
+        {
+            return InternalRequestAsync<UpdateShareUnitResponse>(req, "UpdateShareUnit")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

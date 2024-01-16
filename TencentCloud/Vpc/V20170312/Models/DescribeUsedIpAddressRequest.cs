@@ -43,6 +43,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string[] IpAddresses{ get; set; }
 
         /// <summary>
+        /// 过滤条件，不支持同时指定IpAddresses和Filters参数。 支持的过滤条件如下： <li>ip-addresses：IP地址。</li> <li>resource-id：资源ID。</li>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
+        /// <summary>
         /// 偏移量，默认为0。
         /// </summary>
         [JsonProperty("Offset")]
@@ -63,6 +69,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamArraySimple(map, prefix + "IpAddresses.", this.IpAddresses);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }

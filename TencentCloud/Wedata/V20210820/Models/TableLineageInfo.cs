@@ -32,13 +32,6 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string MetastoreType{ get; set; }
 
         /// <summary>
-        /// 由中心节点到该节点的路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("PrefixPath")]
-        public string PrefixPath{ get; set; }
-
-        /// <summary>
         /// 空间id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -137,6 +130,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string Description{ get; set; }
 
         /// <summary>
+        /// 由中心节点到该节点的路径
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PrefixPath")]
+        public string PrefixPath{ get; set; }
+
+        /// <summary>
         /// 血缘创建时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -157,6 +157,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Tasks")]
         public string[] Tasks{ get; set; }
 
+        /// <summary>
+        /// 模块/应用类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ChannelType")]
+        public string ChannelType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -164,7 +171,6 @@ namespace TencentCloud.Wedata.V20210820.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "MetastoreType", this.MetastoreType);
-            this.SetParamSimple(map, prefix + "PrefixPath", this.PrefixPath);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
             this.SetParamSimple(map, prefix + "TableId", this.TableId);
@@ -179,9 +185,11 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DownStreamCount", this.DownStreamCount);
             this.SetParamSimple(map, prefix + "UpStreamCount", this.UpStreamCount);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "PrefixPath", this.PrefixPath);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamArraySimple(map, prefix + "Tasks.", this.Tasks);
+            this.SetParamSimple(map, prefix + "ChannelType", this.ChannelType);
         }
     }
 }

@@ -102,6 +102,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("AverageWindowSize")]
         public long? AverageWindowSize{ get; set; }
 
+        /// <summary>
+        /// 工作流ID
+        /// </summary>
+        [JsonProperty("WorkflowId")]
+        public string WorkflowId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArraySimple(map, prefix + "StateList.", this.StateList);
             this.SetParamSimple(map, prefix + "AggregationUnit", this.AggregationUnit);
             this.SetParamSimple(map, prefix + "AverageWindowSize", this.AverageWindowSize);
+            this.SetParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
         }
     }
 }

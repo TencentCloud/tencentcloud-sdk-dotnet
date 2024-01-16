@@ -48,6 +48,12 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         [JsonProperty("ApplicationToken")]
         public string ApplicationToken{ get; set; }
 
+        /// <summary>
+        /// 是否同步返回设备下控ack结果
+        /// </summary>
+        [JsonProperty("IsSynchronized")]
+        public bool? IsSynchronized{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Weilingwith.V20230427.Models
             this.SetParamArraySimple(map, prefix + "WIDSet.", this.WIDSet);
             this.SetParamSimple(map, prefix + "ControlData", this.ControlData);
             this.SetParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
+            this.SetParamSimple(map, prefix + "IsSynchronized", this.IsSynchronized);
         }
     }
 }

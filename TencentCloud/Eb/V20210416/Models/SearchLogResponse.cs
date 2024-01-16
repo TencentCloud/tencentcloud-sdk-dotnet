@@ -25,14 +25,14 @@ namespace TencentCloud.Eb.V20210416.Models
     {
         
         /// <summary>
-        /// 日志总数
+        /// 事件总数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
-        /// 每页日志条数
+        /// 每页事件条数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Limit")]
@@ -46,7 +46,7 @@ namespace TencentCloud.Eb.V20210416.Models
         public long? Page{ get; set; }
 
         /// <summary>
-        /// 日志检索结果
+        /// 事件查询结果
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Results")]

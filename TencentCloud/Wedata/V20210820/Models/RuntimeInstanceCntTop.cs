@@ -73,6 +73,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("CurRunTime")]
         public string CurRunTime{ get; set; }
 
+        /// <summary>
+        /// 等待调度耗时
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WaitScheduleTime")]
+        public ulong? WaitScheduleTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamSimple(map, prefix + "RunTime", this.RunTime);
             this.SetParamSimple(map, prefix + "CurRunTime", this.CurRunTime);
+            this.SetParamSimple(map, prefix + "WaitScheduleTime", this.WaitScheduleTime);
         }
     }
 }

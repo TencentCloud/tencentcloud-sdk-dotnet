@@ -214,6 +214,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
+        /// <summary>
+        /// 关键路径依赖
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CriticalDependency")]
+        public string CriticalDependency{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -247,6 +254,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "UserUin", this.UserUin);
             this.SetParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "CriticalDependency", this.CriticalDependency);
         }
     }
 }

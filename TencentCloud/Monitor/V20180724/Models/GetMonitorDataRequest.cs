@@ -60,6 +60,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
+        /// <summary>
+        /// 返回多种统计方式数据。avg, max, min (1,2,4)可以自由组合
+        /// </summary>
+        [JsonProperty("SpecifyStatistics")]
+        public long? SpecifyStatistics{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "SpecifyStatistics", this.SpecifyStatistics);
         }
     }
 }

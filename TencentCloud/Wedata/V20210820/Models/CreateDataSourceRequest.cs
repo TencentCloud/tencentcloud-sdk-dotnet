@@ -126,6 +126,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("COSRegion")]
         public string COSRegion{ get; set; }
 
+        /// <summary>
+        /// 连接测试结果
+        /// </summary>
+        [JsonProperty("ConnectResult")]
+        public string ConnectResult{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +155,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Collect", this.Collect);
             this.SetParamSimple(map, prefix + "COSBucket", this.COSBucket);
             this.SetParamSimple(map, prefix + "COSRegion", this.COSRegion);
+            this.SetParamSimple(map, prefix + "ConnectResult", this.ConnectResult);
         }
     }
 }

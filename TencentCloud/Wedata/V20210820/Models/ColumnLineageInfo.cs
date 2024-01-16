@@ -32,13 +32,6 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string Id{ get; set; }
 
         /// <summary>
-        /// 由中心节点出发的路径信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("PrefixPath")]
-        public string PrefixPath{ get; set; }
-
-        /// <summary>
         /// 数据源ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -144,6 +137,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string Description{ get; set; }
 
         /// <summary>
+        /// 由中心节点出发的路径信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PrefixPath")]
+        public string PrefixPath{ get; set; }
+
+        /// <summary>
         /// 创建时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -192,7 +192,6 @@ namespace TencentCloud.Wedata.V20210820.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "PrefixPath", this.PrefixPath);
             this.SetParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
             this.SetParamSimple(map, prefix + "TableId", this.TableId);
             this.SetParamSimple(map, prefix + "ColumnName", this.ColumnName);
@@ -208,6 +207,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DownStreamCount", this.DownStreamCount);
             this.SetParamSimple(map, prefix + "UpStreamCount", this.UpStreamCount);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "PrefixPath", this.PrefixPath);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamArraySimple(map, prefix + "Tasks.", this.Tasks);

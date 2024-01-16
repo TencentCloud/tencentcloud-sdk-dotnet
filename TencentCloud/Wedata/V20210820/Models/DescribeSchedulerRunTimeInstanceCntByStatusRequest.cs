@@ -66,6 +66,24 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("InCharge")]
         public string InCharge{ get; set; }
 
+        /// <summary>
+        /// 工作流ID
+        /// </summary>
+        [JsonProperty("WorkflowId")]
+        public string WorkflowId{ get; set; }
+
+        /// <summary>
+        /// 排序字段
+        /// </summary>
+        [JsonProperty("SortItem")]
+        public string SortItem{ get; set; }
+
+        /// <summary>
+        /// 升序降序
+        /// </summary>
+        [JsonProperty("SortType")]
+        public string SortType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +97,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamSimple(map, prefix + "InCharge", this.InCharge);
+            this.SetParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
+            this.SetParamSimple(map, prefix + "SortItem", this.SortItem);
+            this.SetParamSimple(map, prefix + "SortType", this.SortType);
         }
     }
 }

@@ -31,11 +31,10 @@ namespace TencentCloud.Sts.V20180813.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 授予该临时访问凭证权限的CAM策略
         /// 注意：
         /// 1、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
         /// 2、策略中不能包含 principal 元素。
-        /// 3、该参数需要做urlencode。
+        /// 3、该参数需要做urlencode，服务端会对该字段做urldecode， 并按处理后Policy授予临时访问凭证权限，请按规范传入参数。
         /// </summary>
         [JsonProperty("Policy")]
         public string Policy{ get; set; }

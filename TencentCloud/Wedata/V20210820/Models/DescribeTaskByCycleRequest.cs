@@ -36,6 +36,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("InCharge")]
         public string InCharge{ get; set; }
 
+        /// <summary>
+        /// 工作流ID
+        /// </summary>
+        [JsonProperty("WorkflowId")]
+        public string WorkflowId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "InCharge", this.InCharge);
+            this.SetParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
         }
     }
 }

@@ -42,6 +42,27 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("Values")]
         public float?[] Values{ get; set; }
 
+        /// <summary>
+        /// 监控值数组，该数组和Timestamps一一对应
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxValues")]
+        public float?[] MaxValues{ get; set; }
+
+        /// <summary>
+        /// 监控值数组，该数组和Timestamps一一对应
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MinValues")]
+        public float?[] MinValues{ get; set; }
+
+        /// <summary>
+        /// 监控值数组，该数组和Timestamps一一对应
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AvgValues")]
+        public float?[] AvgValues{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +72,9 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArrayObj(map, prefix + "Dimensions.", this.Dimensions);
             this.SetParamArraySimple(map, prefix + "Timestamps.", this.Timestamps);
             this.SetParamArraySimple(map, prefix + "Values.", this.Values);
+            this.SetParamArraySimple(map, prefix + "MaxValues.", this.MaxValues);
+            this.SetParamArraySimple(map, prefix + "MinValues.", this.MinValues);
+            this.SetParamArraySimple(map, prefix + "AvgValues.", this.AvgValues);
         }
     }
 }

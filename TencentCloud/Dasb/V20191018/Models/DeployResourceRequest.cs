@@ -78,6 +78,12 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("SubnetName")]
         public string SubnetName{ get; set; }
 
+        /// <summary>
+        /// 需要开通实例所属的CDC集群ID
+        /// </summary>
+        [JsonProperty("CdcClusterId")]
+        public string CdcClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "VpcName", this.VpcName);
             this.SetParamSimple(map, prefix + "VpcCidrBlock", this.VpcCidrBlock);
             this.SetParamSimple(map, prefix + "SubnetName", this.SubnetName);
+            this.SetParamSimple(map, prefix + "CdcClusterId", this.CdcClusterId);
         }
     }
 }

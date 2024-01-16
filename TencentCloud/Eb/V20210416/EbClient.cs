@@ -305,7 +305,7 @@ namespace TencentCloud.Eb.V20210416
         }
 
         /// <summary>
-        /// 查询日志索引维度值
+        /// 前置条件：需开启事件存储；事件查询维度值
         /// </summary>
         /// <param name="req"><see cref="DescribeLogTagValueRequest"/></param>
         /// <returns><see cref="DescribeLogTagValueResponse"/></returns>
@@ -315,7 +315,7 @@ namespace TencentCloud.Eb.V20210416
         }
 
         /// <summary>
-        /// 查询日志索引维度值
+        /// 前置条件：需开启事件存储；事件查询维度值
         /// </summary>
         /// <param name="req"><see cref="DescribeLogTagValueRequest"/></param>
         /// <returns><see cref="DescribeLogTagValueResponse"/></returns>
@@ -599,7 +599,7 @@ namespace TencentCloud.Eb.V20210416
         }
 
         /// <summary>
-        /// 日志检索
+        /// 前置条件：开启事件存储；查询历史推送事件
         /// </summary>
         /// <param name="req"><see cref="SearchLogRequest"/></param>
         /// <returns><see cref="SearchLogResponse"/></returns>
@@ -609,7 +609,7 @@ namespace TencentCloud.Eb.V20210416
         }
 
         /// <summary>
-        /// 日志检索
+        /// 前置条件：开启事件存储；查询历史推送事件
         /// </summary>
         /// <param name="req"><see cref="SearchLogRequest"/></param>
         /// <returns><see cref="SearchLogResponse"/></returns>
