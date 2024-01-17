@@ -32,9 +32,9 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 告警模板的类型。可选值：
-        /// <br><li> Trigger - 告警触发
-        /// <br><li> Recovery - 告警恢复
-        /// <br><li> All - 告警触发和告警恢复
+        /// <br><li> Trigger - 告警触发</li>
+        /// <br><li> Recovery - 告警恢复</li>
+        /// <br><li> All - 告警触发和告警恢复</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

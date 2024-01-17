@@ -269,6 +269,62 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("SourceEngineTypes")]
         public ulong?[] SourceEngineTypes{ get; set; }
 
+        /// <summary>
+        /// 表名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TableName")]
+        public string TableName{ get; set; }
+
+        /// <summary>
+        /// 表负责人名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TableOwnerName")]
+        public string TableOwnerName{ get; set; }
+
+        /// <summary>
+        /// 执行策略信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExecStrategy")]
+        public RuleGroupExecStrategy ExecStrategy{ get; set; }
+
+        /// <summary>
+        /// 订阅信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Subscription")]
+        public RuleGroupSubscribe Subscription{ get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// 数据源 id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatasourceId")]
+        public ulong? DatasourceId{ get; set; }
+
+        /// <summary>
+        /// 数据库 id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatabaseId")]
+        public string DatabaseId{ get; set; }
+
+        /// <summary>
+        /// 监控是否开启.0false,1true
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MonitorStatus")]
+        public long? MonitorStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -310,6 +366,14 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TargetObjectDataTypeName", this.TargetObjectDataTypeName);
             this.SetParamSimple(map, prefix + "TargetObjectValue", this.TargetObjectValue);
             this.SetParamArraySimple(map, prefix + "SourceEngineTypes.", this.SourceEngineTypes);
+            this.SetParamSimple(map, prefix + "TableName", this.TableName);
+            this.SetParamSimple(map, prefix + "TableOwnerName", this.TableOwnerName);
+            this.SetParamObj(map, prefix + "ExecStrategy.", this.ExecStrategy);
+            this.SetParamObj(map, prefix + "Subscription.", this.Subscription);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
+            this.SetParamSimple(map, prefix + "DatabaseId", this.DatabaseId);
+            this.SetParamSimple(map, prefix + "MonitorStatus", this.MonitorStatus);
         }
     }
 }

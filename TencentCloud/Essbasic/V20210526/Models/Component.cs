@@ -40,6 +40,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 
         /// 
         /// 注：`控件ID可以在一个PDF中不可重复`
+        /// <a href="https://qcloudimg.tencent-cloud.cn/raw/93178569d07b4d7dbbe0967ae679e35c.png" target="_blank">点击查看ComponentId在模板页面的位置</a>
         /// </summary>
         [JsonProperty("ComponentId")]
         public string ComponentId{ get; set; }
@@ -84,6 +85,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// **在表单域定位方式下**，ComponentName不仅为控件名，也是表单域名称。
         /// 
         /// 注：`控件名可以在一个PDF中可以重复`
+        /// 
+        /// <a href="https://qcloudimg.tencent-cloud.cn/raw/93178569d07b4d7dbbe0967ae679e35c.png" target="_blank">点击查看ComponentName在模板页面的位置</a>
         /// </summary>
         [JsonProperty("ComponentName")]
         public string ComponentName{ get; set; }

@@ -66,6 +66,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TotalErrorRecords")]
         public ulong? TotalErrorRecords{ get; set; }
 
+        /// <summary>
+        /// 等待上游数据发送过来的时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WaitReaderTime")]
+        public float? WaitReaderTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +86,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "RecordSpeed", this.RecordSpeed);
             this.SetParamSimple(map, prefix + "ByteSpeed", this.ByteSpeed);
             this.SetParamSimple(map, prefix + "TotalErrorRecords", this.TotalErrorRecords);
+            this.SetParamSimple(map, prefix + "WaitReaderTime", this.WaitReaderTime);
         }
     }
 }

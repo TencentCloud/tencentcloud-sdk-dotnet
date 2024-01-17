@@ -106,6 +106,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 发起方：腾讯公司(张三) 
         /// 签署方：李四
         /// 
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/628f0928cac15d2e3bfa6088f53f5998.png)
         /// </summary>
         [JsonProperty("CustomShowMap")]
         public string CustomShowMap{ get; set; }

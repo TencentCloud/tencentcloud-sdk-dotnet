@@ -55,6 +55,12 @@ namespace TencentCloud.Iotvideo.V20211125.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
+        /// 通道id
+        /// </summary>
+        [JsonProperty("ChannelId")]
+        public ulong? ChannelId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -70,6 +76,7 @@ namespace TencentCloud.Iotvideo.V20211125.Models
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "PackageId", this.PackageId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

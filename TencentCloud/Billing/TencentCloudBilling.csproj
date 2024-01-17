@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{07FCB225-F7A7-392A-A759-E2C6236ECC1C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.938</VersionPrefix>
+    <VersionPrefix>3.0.939</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -134,6 +134,8 @@
     <Compile Include="V20180709\Models\DescribeSavingPlanCoverageResponse.cs" />
     <Compile Include="V20180709\Models\DescribeSavingPlanOverviewRequest.cs" />
     <Compile Include="V20180709\Models\DescribeSavingPlanOverviewResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeSavingPlanResourceInfoRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeSavingPlanResourceInfoResponse.cs" />
     <Compile Include="V20180709\Models\DescribeSavingPlanUsageRequest.cs" />
     <Compile Include="V20180709\Models\DescribeSavingPlanUsageResponse.cs" />
     <Compile Include="V20180709\Models\DescribeTagListRequest.cs" />

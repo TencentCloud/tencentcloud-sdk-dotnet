@@ -144,6 +144,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("SubQualityDim")]
         public ulong? SubQualityDim{ get; set; }
 
+        /// <summary>
+        /// sql表达式解析对象
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResolvedSqlExpression")]
+        public SqlExpression ResolvedSqlExpression{ get; set; }
+
+        /// <summary>
+        /// 支持的数据源类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatasourceTypes")]
+        public long?[] DatasourceTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -168,6 +182,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "MultiSourceFlag", this.MultiSourceFlag);
             this.SetParamSimple(map, prefix + "SqlExpression", this.SqlExpression);
             this.SetParamSimple(map, prefix + "SubQualityDim", this.SubQualityDim);
+            this.SetParamObj(map, prefix + "ResolvedSqlExpression.", this.ResolvedSqlExpression);
+            this.SetParamArraySimple(map, prefix + "DatasourceTypes.", this.DatasourceTypes);
         }
     }
 }

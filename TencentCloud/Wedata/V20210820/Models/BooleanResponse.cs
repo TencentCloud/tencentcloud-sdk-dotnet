@@ -44,6 +44,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("BaselineId")]
         public long? BaselineId{ get; set; }
 
+        /// <summary>
+        /// 错误码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Code")]
+        public string Code{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +60,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Success", this.Success);
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamSimple(map, prefix + "BaselineId", this.BaselineId);
+            this.SetParamSimple(map, prefix + "Code", this.Code);
         }
     }
 }

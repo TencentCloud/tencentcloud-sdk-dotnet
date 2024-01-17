@@ -38,9 +38,9 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 通知类型。可选值：
-        /// <li> Trigger - 告警触发
-        /// <li> Recovery - 告警恢复
-        /// <li> All - 告警触发和告警恢复
+        /// <li> Trigger - 告警触发</li>
+        /// <li> Recovery - 告警恢复</li>
+        /// <li> All - 告警触发和告警恢复</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

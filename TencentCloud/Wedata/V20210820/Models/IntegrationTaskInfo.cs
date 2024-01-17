@@ -350,6 +350,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("InstanceVersion")]
         public long? InstanceVersion{ get; set; }
 
+        /// <summary>
+        /// 离线任务导入到编排空间的任务id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ArrangeSpaceTaskId")]
+        public string ArrangeSpaceTaskId{ get; set; }
+
+        /// <summary>
+        /// 离线任务状态区分1.未提交2.已提交3.已导出
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OfflineTaskStatus")]
+        public long? OfflineTaskStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -403,6 +417,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "SwitchResource", this.SwitchResource);
             this.SetParamSimple(map, prefix + "ReadPhase", this.ReadPhase);
             this.SetParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
+            this.SetParamSimple(map, prefix + "ArrangeSpaceTaskId", this.ArrangeSpaceTaskId);
+            this.SetParamSimple(map, prefix + "OfflineTaskStatus", this.OfflineTaskStatus);
         }
     }
 }

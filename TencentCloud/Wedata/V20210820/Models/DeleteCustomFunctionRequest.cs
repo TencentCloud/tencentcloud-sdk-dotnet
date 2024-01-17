@@ -42,6 +42,36 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
+        /// <summary>
+        /// 函数名称
+        /// </summary>
+        [JsonProperty("FunctionName")]
+        public string FunctionName{ get; set; }
+
+        /// <summary>
+        /// 函数类型，HIVE，SPARK，DLC，CDW_POSTGRESQL
+        /// </summary>
+        [JsonProperty("FunctionType")]
+        public string FunctionType{ get; set; }
+
+        /// <summary>
+        /// 数据库名
+        /// </summary>
+        [JsonProperty("DatabaseName")]
+        public string DatabaseName{ get; set; }
+
+        /// <summary>
+        /// 模式名
+        /// </summary>
+        [JsonProperty("SchemaName")]
+        public string SchemaName{ get; set; }
+
+        /// <summary>
+        /// 函数命令格式
+        /// </summary>
+        [JsonProperty("CommandFormat")]
+        public string CommandFormat{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +81,11 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ClusterIdentifier", this.ClusterIdentifier);
             this.SetParamSimple(map, prefix + "FunctionId", this.FunctionId);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "FunctionName", this.FunctionName);
+            this.SetParamSimple(map, prefix + "FunctionType", this.FunctionType);
+            this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
+            this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
+            this.SetParamSimple(map, prefix + "CommandFormat", this.CommandFormat);
         }
     }
 }

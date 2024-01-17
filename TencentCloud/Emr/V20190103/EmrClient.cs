@@ -265,6 +265,27 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 获取洞察结果信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInsightListRequest"/></param>
+        /// <returns><see cref="DescribeInsightListResponse"/></returns>
+        public Task<DescribeInsightListResponse> DescribeInsightList(DescribeInsightListRequest req)
+        {
+            return InternalRequestAsync<DescribeInsightListResponse>(req, "DescribeInsightList");
+        }
+
+        /// <summary>
+        /// 获取洞察结果信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInsightListRequest"/></param>
+        /// <returns><see cref="DescribeInsightListResponse"/></returns>
+        public DescribeInsightListResponse DescribeInsightListSync(DescribeInsightListRequest req)
+        {
+            return InternalRequestAsync<DescribeInsightListResponse>(req, "DescribeInsightList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询待续费节点信息
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceRenewNodesRequest"/></param>

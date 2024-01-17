@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.938</VersionPrefix>
+    <VersionPrefix>3.0.939</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -84,6 +84,8 @@
     <Compile Include="V20190103\Models\DescribeHiveQueriesResponse.cs" />
     <Compile Include="V20190103\Models\DescribeImpalaQueriesRequest.cs" />
     <Compile Include="V20190103\Models\DescribeImpalaQueriesResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeInsightListRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeInsightListResponse.cs" />
     <Compile Include="V20190103\Models\DescribeInstanceRenewNodesRequest.cs" />
     <Compile Include="V20190103\Models\DescribeInstanceRenewNodesResponse.cs" />
     <Compile Include="V20190103\Models\DescribeInstancesListRequest.cs" />
@@ -122,6 +124,7 @@
     <Compile Include="V20190103\Models\InquiryPriceScaleOutInstanceResponse.cs" />
     <Compile Include="V20190103\Models\InquiryPriceUpdateInstanceRequest.cs" />
     <Compile Include="V20190103\Models\InquiryPriceUpdateInstanceResponse.cs" />
+    <Compile Include="V20190103\Models\InsightResult.cs" />
     <Compile Include="V20190103\Models\InstanceChargePrepaid.cs" />
     <Compile Include="V20190103\Models\JobFlowResource.cs" />
     <Compile Include="V20190103\Models\JobFlowResourceSpec.cs" />

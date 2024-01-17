@@ -649,6 +649,27 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// 查询节省计划详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSavingPlanResourceInfoRequest"/></param>
+        /// <returns><see cref="DescribeSavingPlanResourceInfoResponse"/></returns>
+        public Task<DescribeSavingPlanResourceInfoResponse> DescribeSavingPlanResourceInfo(DescribeSavingPlanResourceInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSavingPlanResourceInfoResponse>(req, "DescribeSavingPlanResourceInfo");
+        }
+
+        /// <summary>
+        /// 查询节省计划详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSavingPlanResourceInfoRequest"/></param>
+        /// <returns><see cref="DescribeSavingPlanResourceInfoResponse"/></returns>
+        public DescribeSavingPlanResourceInfoResponse DescribeSavingPlanResourceInfoSync(DescribeSavingPlanResourceInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSavingPlanResourceInfoResponse>(req, "DescribeSavingPlanResourceInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查用当前用户明细节省计划查询时段内的使用情况
         /// </summary>
         /// <param name="req"><see cref="DescribeSavingPlanUsageRequest"/></param>

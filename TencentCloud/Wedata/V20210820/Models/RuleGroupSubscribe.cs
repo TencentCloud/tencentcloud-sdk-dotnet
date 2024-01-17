@@ -52,6 +52,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("WebHooks")]
         public SubscribeWebHook[] WebHooks{ get; set; }
 
+        /// <summary>
+        /// 规则Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleId")]
+        public ulong? RuleId{ get; set; }
+
+        /// <summary>
+        /// 规则名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleName")]
+        public string RuleName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +76,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArrayObj(map, prefix + "Receivers.", this.Receivers);
             this.SetParamArraySimple(map, prefix + "SubscribeType.", this.SubscribeType);
             this.SetParamArrayObj(map, prefix + "WebHooks.", this.WebHooks);
+            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
+            this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
         }
     }
 }

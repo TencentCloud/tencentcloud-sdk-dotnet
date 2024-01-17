@@ -122,6 +122,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ExecPlan")]
         public string ExecPlan{ get; set; }
 
+        /// <summary>
+        /// 规则id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleId")]
+        public ulong? RuleId{ get; set; }
+
+        /// <summary>
+        /// 规则名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleName")]
+        public string RuleName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +156,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskAction", this.TaskAction);
             this.SetParamSimple(map, prefix + "ExecEngineType", this.ExecEngineType);
             this.SetParamSimple(map, prefix + "ExecPlan", this.ExecPlan);
+            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
+            this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
         }
     }
 }
