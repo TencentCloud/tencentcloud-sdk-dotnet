@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{621A4001-F8F8-394B-BCE2-5A65FE5DDEA5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.939</VersionPrefix>
+    <VersionPrefix>3.0.940</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,6 +53,8 @@
     <Compile Include="V20230308\Models\CreateConsumerGroupResponse.cs" />
     <Compile Include="V20230308\Models\CreateInstanceRequest.cs" />
     <Compile Include="V20230308\Models\CreateInstanceResponse.cs" />
+    <Compile Include="V20230308\Models\CreateMQTTInstanceRequest.cs" />
+    <Compile Include="V20230308\Models\CreateMQTTInstanceResponse.cs" />
     <Compile Include="V20230308\Models\CreateRoleRequest.cs" />
     <Compile Include="V20230308\Models\CreateRoleResponse.cs" />
     <Compile Include="V20230308\Models\CreateTopicRequest.cs" />
@@ -73,6 +75,10 @@
     <Compile Include="V20230308\Models\DescribeInstanceListResponse.cs" />
     <Compile Include="V20230308\Models\DescribeInstanceRequest.cs" />
     <Compile Include="V20230308\Models\DescribeInstanceResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeMQTTInstanceListRequest.cs" />
+    <Compile Include="V20230308\Models\DescribeMQTTInstanceListResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeMQTTProductSKUListRequest.cs" />
+    <Compile Include="V20230308\Models\DescribeMQTTProductSKUListResponse.cs" />
     <Compile Include="V20230308\Models\DescribeRoleListRequest.cs" />
     <Compile Include="V20230308\Models\DescribeRoleListResponse.cs" />
     <Compile Include="V20230308\Models\DescribeTopicListRequest.cs" />
@@ -89,6 +95,8 @@
     <Compile Include="V20230308\Models\ImportSourceClusterTopicsResponse.cs" />
     <Compile Include="V20230308\Models\InstanceItem.cs" />
     <Compile Include="V20230308\Models\IpRule.cs" />
+    <Compile Include="V20230308\Models\MQTTInstanceItem.cs" />
+    <Compile Include="V20230308\Models\MQTTProductSkuItem.cs" />
     <Compile Include="V20230308\Models\ModifyConsumerGroupRequest.cs" />
     <Compile Include="V20230308\Models\ModifyConsumerGroupResponse.cs" />
     <Compile Include="V20230308\Models\ModifyInstanceRequest.cs" />

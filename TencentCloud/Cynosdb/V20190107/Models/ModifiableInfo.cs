@@ -24,12 +24,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     public class ModifiableInfo : AbstractModel
     {
         
+        /// <summary>
+        /// 参数是否可被修改, 1:可以 0:不可以
+        /// </summary>
+        [JsonProperty("IsModifiable")]
+        public long? IsModifiable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "IsModifiable", this.IsModifiable);
         }
     }
 }

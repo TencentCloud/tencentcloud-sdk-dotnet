@@ -95,6 +95,27 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 购买新的MQTT实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateMQTTInstanceRequest"/></param>
+        /// <returns><see cref="CreateMQTTInstanceResponse"/></returns>
+        public Task<CreateMQTTInstanceResponse> CreateMQTTInstance(CreateMQTTInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateMQTTInstanceResponse>(req, "CreateMQTTInstance");
+        }
+
+        /// <summary>
+        /// 购买新的MQTT实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateMQTTInstanceRequest"/></param>
+        /// <returns><see cref="CreateMQTTInstanceResponse"/></returns>
+        public CreateMQTTInstanceResponse CreateMQTTInstanceSync(CreateMQTTInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateMQTTInstanceResponse>(req, "CreateMQTTInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 添加角色
         /// </summary>
         /// <param name="req"><see cref="CreateRoleRequest"/></param>
@@ -319,6 +340,60 @@ namespace TencentCloud.Trocket.V20230308
         public DescribeInstanceListResponse DescribeInstanceListSync(DescribeInstanceListRequest req)
         {
             return InternalRequestAsync<DescribeInstanceListResponse>(req, "DescribeInstanceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取实例列表，Filters参数使用说明如下：
+        /// 1. InstanceName, 名称模糊查询
+        /// 2. InstanceId，实例ID查询
+        /// 3. InstanceType, 实例类型查询，支持多选
+        /// 3. InstanceStatus，实例状态查询，支持多选
+        /// 
+        /// 当使用TagFilters查询时，Filters参数失效。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMQTTInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeMQTTInstanceListResponse"/></returns>
+        public Task<DescribeMQTTInstanceListResponse> DescribeMQTTInstanceList(DescribeMQTTInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeMQTTInstanceListResponse>(req, "DescribeMQTTInstanceList");
+        }
+
+        /// <summary>
+        /// 获取实例列表，Filters参数使用说明如下：
+        /// 1. InstanceName, 名称模糊查询
+        /// 2. InstanceId，实例ID查询
+        /// 3. InstanceType, 实例类型查询，支持多选
+        /// 3. InstanceStatus，实例状态查询，支持多选
+        /// 
+        /// 当使用TagFilters查询时，Filters参数失效。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMQTTInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeMQTTInstanceListResponse"/></returns>
+        public DescribeMQTTInstanceListResponse DescribeMQTTInstanceListSync(DescribeMQTTInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeMQTTInstanceListResponse>(req, "DescribeMQTTInstanceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 非对外接口，获取产品售卖规格
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMQTTProductSKUListRequest"/></param>
+        /// <returns><see cref="DescribeMQTTProductSKUListResponse"/></returns>
+        public Task<DescribeMQTTProductSKUListResponse> DescribeMQTTProductSKUList(DescribeMQTTProductSKUListRequest req)
+        {
+            return InternalRequestAsync<DescribeMQTTProductSKUListResponse>(req, "DescribeMQTTProductSKUList");
+        }
+
+        /// <summary>
+        /// 非对外接口，获取产品售卖规格
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMQTTProductSKUListRequest"/></param>
+        /// <returns><see cref="DescribeMQTTProductSKUListResponse"/></returns>
+        public DescribeMQTTProductSKUListResponse DescribeMQTTProductSKUListSync(DescribeMQTTProductSKUListRequest req)
+        {
+            return InternalRequestAsync<DescribeMQTTProductSKUListResponse>(req, "DescribeMQTTProductSKUList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

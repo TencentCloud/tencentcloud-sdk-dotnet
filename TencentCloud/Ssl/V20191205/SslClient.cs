@@ -914,31 +914,6 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 证书托管接口已重构， 旧接口预下线， 近30天无请求
-        /// 
-        /// 云资源托管
-        /// </summary>
-        /// <param name="req"><see cref="HostCertificateRequest"/></param>
-        /// <returns><see cref="HostCertificateResponse"/></returns>
-        public Task<HostCertificateResponse> HostCertificate(HostCertificateRequest req)
-        {
-            return InternalRequestAsync<HostCertificateResponse>(req, "HostCertificate");
-        }
-
-        /// <summary>
-        /// 证书托管接口已重构， 旧接口预下线， 近30天无请求
-        /// 
-        /// 云资源托管
-        /// </summary>
-        /// <param name="req"><see cref="HostCertificateRequest"/></param>
-        /// <returns><see cref="HostCertificateResponse"/></returns>
-        public HostCertificateResponse HostCertificateSync(HostCertificateRequest req)
-        {
-            return InternalRequestAsync<HostCertificateResponse>(req, "HostCertificate")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 用户传入证书id和备注来修改证书备注。
         /// </summary>
         /// <param name="req"><see cref="ModifyCertificateAliasRequest"/></param>

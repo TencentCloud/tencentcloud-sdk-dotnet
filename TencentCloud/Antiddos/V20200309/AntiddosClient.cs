@@ -830,6 +830,27 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 高防IP获取7层规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBGPIPL7RulesRequest"/></param>
+        /// <returns><see cref="DescribeBGPIPL7RulesResponse"/></returns>
+        public Task<DescribeBGPIPL7RulesResponse> DescribeBGPIPL7Rules(DescribeBGPIPL7RulesRequest req)
+        {
+            return InternalRequestAsync<DescribeBGPIPL7RulesResponse>(req, "DescribeBGPIPL7Rules");
+        }
+
+        /// <summary>
+        /// 高防IP获取7层规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBGPIPL7RulesRequest"/></param>
+        /// <returns><see cref="DescribeBGPIPL7RulesResponse"/></returns>
+        public DescribeBGPIPL7RulesResponse DescribeBGPIPL7RulesSync(DescribeBGPIPL7RulesRequest req)
+        {
+            return InternalRequestAsync<DescribeBGPIPL7RulesResponse>(req, "DescribeBGPIPL7Rules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取基础防护攻击状态
         /// </summary>
         /// <param name="req"><see cref="DescribeBasicDeviceStatusRequest"/></param>

@@ -231,6 +231,20 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("EsServerlessSpace")]
         public string EsServerlessSpace{ get; set; }
 
+        /// <summary>
+        /// es索引中文
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IndexName")]
+        public string IndexName{ get; set; }
+
+        /// <summary>
+        /// es空间中文
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WorkspaceName")]
+        public string WorkspaceName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -267,6 +281,8 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamObj(map, prefix + "JobGraph.", this.JobGraph);
             this.SetParamSimple(map, prefix + "EsServerlessIndex", this.EsServerlessIndex);
             this.SetParamSimple(map, prefix + "EsServerlessSpace", this.EsServerlessSpace);
+            this.SetParamSimple(map, prefix + "IndexName", this.IndexName);
+            this.SetParamSimple(map, prefix + "WorkspaceName", this.WorkspaceName);
         }
     }
 }

@@ -42,6 +42,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ParamKeyword")]
         public string ParamKeyword{ get; set; }
 
+        /// <summary>
+        /// 是否为全局参数
+        /// </summary>
+        [JsonProperty("IsGlobal")]
+        public string IsGlobal{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "ParamKeyword", this.ParamKeyword);
+            this.SetParamSimple(map, prefix + "IsGlobal", this.IsGlobal);
         }
     }
 }

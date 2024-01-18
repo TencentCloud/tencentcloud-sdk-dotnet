@@ -36,6 +36,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("WorkSpaceId")]
         public string WorkSpaceId{ get; set; }
 
+        /// <summary>
+        /// 目标工作空间 SerialId
+        /// </summary>
+        [JsonProperty("TargetWorkspaceId")]
+        public string TargetWorkspaceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
         {
             this.SetParamArrayObj(map, prefix + "JobItems.", this.JobItems);
             this.SetParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
+            this.SetParamSimple(map, prefix + "TargetWorkspaceId", this.TargetWorkspaceId);
         }
     }
 }

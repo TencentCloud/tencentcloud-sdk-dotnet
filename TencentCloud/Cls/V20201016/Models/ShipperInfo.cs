@@ -152,6 +152,13 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("HistoryStatus")]
         public long? HistoryStatus{ get; set; }
 
+        /// <summary>
+        /// cos桶类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StorageType")]
+        public string StorageType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +184,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Progress", this.Progress);
             this.SetParamSimple(map, prefix + "RemainTime", this.RemainTime);
             this.SetParamSimple(map, prefix + "HistoryStatus", this.HistoryStatus);
+            this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
         }
     }
 }

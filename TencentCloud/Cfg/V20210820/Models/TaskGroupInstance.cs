@@ -44,13 +44,6 @@ namespace TencentCloud.Cfg.V20210820.Models
         public long? TaskGroupInstanceStatus{ get; set; }
 
         /// <summary>
-        /// 实例动作执行日志
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("TaskGroupInstanceExecuteLog")]
-        public string TaskGroupInstanceExecuteLog{ get; set; }
-
-        /// <summary>
         /// 实例创建时间
         /// </summary>
         [JsonProperty("TaskGroupInstanceCreateTime")]
@@ -83,6 +76,14 @@ namespace TencentCloud.Cfg.V20210820.Models
         public string TaskGroupInstanceEndTime{ get; set; }
 
         /// <summary>
+        /// 实例动作执行日志
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskGroupInstanceExecuteLog")]
+        [System.Obsolete]
+        public string TaskGroupInstanceExecuteLog{ get; set; }
+
+        /// <summary>
         /// 实例是否可重试
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -105,12 +106,12 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskGroupInstanceId", this.TaskGroupInstanceId);
             this.SetParamSimple(map, prefix + "TaskGroupInstanceObjectId", this.TaskGroupInstanceObjectId);
             this.SetParamSimple(map, prefix + "TaskGroupInstanceStatus", this.TaskGroupInstanceStatus);
-            this.SetParamSimple(map, prefix + "TaskGroupInstanceExecuteLog", this.TaskGroupInstanceExecuteLog);
             this.SetParamSimple(map, prefix + "TaskGroupInstanceCreateTime", this.TaskGroupInstanceCreateTime);
             this.SetParamSimple(map, prefix + "TaskGroupInstanceUpdateTime", this.TaskGroupInstanceUpdateTime);
             this.SetParamSimple(map, prefix + "TaskGroupInstanceStatusType", this.TaskGroupInstanceStatusType);
             this.SetParamSimple(map, prefix + "TaskGroupInstanceStartTime", this.TaskGroupInstanceStartTime);
             this.SetParamSimple(map, prefix + "TaskGroupInstanceEndTime", this.TaskGroupInstanceEndTime);
+            this.SetParamSimple(map, prefix + "TaskGroupInstanceExecuteLog", this.TaskGroupInstanceExecuteLog);
             this.SetParamSimple(map, prefix + "TaskGroupInstanceIsRedo", this.TaskGroupInstanceIsRedo);
             this.SetParamSimple(map, prefix + "TaskGroupInstanceExecuteTime", this.TaskGroupInstanceExecuteTime);
         }

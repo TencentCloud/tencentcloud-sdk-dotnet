@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Action{ get; set; }
 
         /// <summary>
-        /// 来源IP或IP段，例如192.168.0.0/16
+        /// 来源Ip或Ip段，例如192.168.0.0/16
         /// </summary>
         [JsonProperty("CidrIp")]
         public string CidrIp{ get; set; }

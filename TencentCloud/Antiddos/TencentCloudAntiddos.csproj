@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E60BF861-5F39-3CA3-BBF9-F91D18A81B74}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.939</VersionPrefix>
+    <VersionPrefix>3.0.940</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -58,6 +58,7 @@
     <Compile Include="V20200309\Models\BGPIPInstance.cs" />
     <Compile Include="V20200309\Models\BGPIPInstanceSpecification.cs" />
     <Compile Include="V20200309\Models\BGPIPInstanceUsages.cs" />
+    <Compile Include="V20200309\Models\BGPIPL7RuleEntry.cs" />
     <Compile Include="V20200309\Models\BGPInstance.cs" />
     <Compile Include="V20200309\Models\BGPInstanceSpecification.cs" />
     <Compile Include="V20200309\Models\BGPInstanceUsages.cs" />
@@ -151,6 +152,8 @@
     <Compile Include="V20200309\Models\DeleteWaterPrintConfigResponse.cs" />
     <Compile Include="V20200309\Models\DeleteWaterPrintKeyRequest.cs" />
     <Compile Include="V20200309\Models\DeleteWaterPrintKeyResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeBGPIPL7RulesRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeBGPIPL7RulesResponse.cs" />
     <Compile Include="V20200309\Models\DescribeBasicDeviceStatusRequest.cs" />
     <Compile Include="V20200309\Models\DescribeBasicDeviceStatusResponse.cs" />
     <Compile Include="V20200309\Models\DescribeBgpBizTrendRequest.cs" />

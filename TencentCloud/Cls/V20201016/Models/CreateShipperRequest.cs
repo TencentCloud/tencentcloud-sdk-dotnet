@@ -102,6 +102,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
+        /// <summary>
+        /// cos桶存储类型
+        /// </summary>
+        [JsonProperty("StorageType")]
+        public string StorageType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "FilenameMode", this.FilenameMode);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
         }
     }
 }

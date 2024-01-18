@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Ssl.V20191205.Models
+namespace TencentCloud.Csip.V20221121.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class HostCertificateRequest : AbstractModel
+    public class ModifyOrganizationAccountStatusRequest : AbstractModel
     {
         
         /// <summary>
-        /// 证书ID
+        /// 修改集团账号状态，1 开启， 2关闭
         /// </summary>
-        [JsonProperty("CertificateId")]
-        public string CertificateId{ get; set; }
-
-        /// <summary>
-        /// 资源类型：目前仅限于CLB,CDN
-        /// </summary>
-        [JsonProperty("ResourceType")]
-        public string[] ResourceType{ get; set; }
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
-            this.SetParamArraySimple(map, prefix + "ResourceType.", this.ResourceType);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

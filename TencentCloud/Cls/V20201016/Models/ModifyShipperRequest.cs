@@ -96,6 +96,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("FilenameMode")]
         public ulong? FilenameMode{ get; set; }
 
+        /// <summary>
+        /// cos桶类型
+        /// </summary>
+        [JsonProperty("StorageType")]
+        public string StorageType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamObj(map, prefix + "Compress.", this.Compress);
             this.SetParamObj(map, prefix + "Content.", this.Content);
             this.SetParamSimple(map, prefix + "FilenameMode", this.FilenameMode);
+            this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
         }
     }
 }

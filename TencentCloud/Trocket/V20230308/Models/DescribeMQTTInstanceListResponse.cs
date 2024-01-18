@@ -15,41 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Ssl.V20191205.Models
+namespace TencentCloud.Trocket.V20230308.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CertHostingInfo : AbstractModel
+    public class DescribeMQTTInstanceListResponse : AbstractModel
     {
         
         /// <summary>
-        /// 证书ID
-        /// </summary>
-        [JsonProperty("CertId")]
-        public string CertId{ get; set; }
-
-        /// <summary>
-        /// 已替换的新证书ID
+        /// 查询总数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RenewCertId")]
-        public string RenewCertId{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 云资源托管 ，CDN或CLB：部分开启，CDN,CLB：已开启，null：未开启托管
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 实例列表
         /// </summary>
-        [JsonProperty("ResourceType")]
-        public string ResourceType{ get; set; }
+        [JsonProperty("Data")]
+        public MQTTInstanceItem[] Data{ get; set; }
 
         /// <summary>
-        /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -57,10 +49,9 @@ namespace TencentCloud.Ssl.V20191205.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CertId", this.CertId);
-            this.SetParamSimple(map, prefix + "RenewCertId", this.RenewCertId);
-            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

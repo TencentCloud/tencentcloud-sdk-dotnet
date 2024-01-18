@@ -34,7 +34,14 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// 实例组列表
         /// </summary>
         [JsonProperty("InstanceGrpInfoList")]
+        [System.Obsolete]
         public CynosdbInstanceGrp[] InstanceGrpInfoList{ get; set; }
+
+        /// <summary>
+        /// 实例组列表
+        /// </summary>
+        [JsonProperty("InstanceGroupInfoList")]
+        public CynosdbInstanceGroup[] InstanceGroupInfoList{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +57,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "InstanceGrpInfoList.", this.InstanceGrpInfoList);
+            this.SetParamArrayObj(map, prefix + "InstanceGroupInfoList.", this.InstanceGroupInfoList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

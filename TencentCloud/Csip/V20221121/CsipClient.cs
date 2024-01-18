@@ -725,6 +725,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 修改集团账号状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOrganizationAccountStatusRequest"/></param>
+        /// <returns><see cref="ModifyOrganizationAccountStatusResponse"/></returns>
+        public Task<ModifyOrganizationAccountStatusResponse> ModifyOrganizationAccountStatus(ModifyOrganizationAccountStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyOrganizationAccountStatusResponse>(req, "ModifyOrganizationAccountStatus");
+        }
+
+        /// <summary>
+        /// 修改集团账号状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOrganizationAccountStatusRequest"/></param>
+        /// <returns><see cref="ModifyOrganizationAccountStatusResponse"/></returns>
+        public ModifyOrganizationAccountStatusResponse ModifyOrganizationAccountStatusSync(ModifyOrganizationAccountStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyOrganizationAccountStatusResponse>(req, "ModifyOrganizationAccountStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改风险中心风险状态
         /// </summary>
         /// <param name="req"><see cref="ModifyRiskCenterRiskStatusRequest"/></param>

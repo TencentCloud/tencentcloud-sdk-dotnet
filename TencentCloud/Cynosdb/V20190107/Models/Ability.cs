@@ -50,6 +50,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("NonsupportRoReason")]
         public string NonsupportRoReason{ get; set; }
 
+        /// <summary>
+        /// 是否支持手动发起快照备份
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsSupportManualSnapshot")]
+        public string IsSupportManualSnapshot{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +67,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "NonsupportSlaveZoneReason", this.NonsupportSlaveZoneReason);
             this.SetParamSimple(map, prefix + "IsSupportRo", this.IsSupportRo);
             this.SetParamSimple(map, prefix + "NonsupportRoReason", this.NonsupportRoReason);
+            this.SetParamSimple(map, prefix + "IsSupportManualSnapshot", this.IsSupportManualSnapshot);
         }
     }
 }

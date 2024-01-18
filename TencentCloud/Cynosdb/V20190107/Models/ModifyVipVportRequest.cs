@@ -34,7 +34,14 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// 实例组id
         /// </summary>
         [JsonProperty("InstanceGrpId")]
+        [System.Obsolete]
         public string InstanceGrpId{ get; set; }
+
+        /// <summary>
+        /// 实例组id
+        /// </summary>
+        [JsonProperty("InstanceGroupId")]
+        public string InstanceGroupId{ get; set; }
 
         /// <summary>
         /// 需要修改的目的ip
@@ -69,6 +76,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "InstanceGrpId", this.InstanceGrpId);
+            this.SetParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "Vport", this.Vport);
             this.SetParamSimple(map, prefix + "DbType", this.DbType);

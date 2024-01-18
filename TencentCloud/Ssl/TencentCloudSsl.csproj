@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6E5F67EE-DB08-3C18-905D-3312ECC2D894}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.939</VersionPrefix>
+    <VersionPrefix>3.0.940</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -60,7 +60,6 @@
     <Compile Include="V20191205\Models\CancelCertificateOrderResponse.cs" />
     <Compile Include="V20191205\Models\CdnInstanceDetail.cs" />
     <Compile Include="V20191205\Models\CdnInstanceList.cs" />
-    <Compile Include="V20191205\Models\CertHostingInfo.cs" />
     <Compile Include="V20191205\Models\CertTaskId.cs" />
     <Compile Include="V20191205\Models\Certificate.cs" />
     <Compile Include="V20191205\Models\CertificateExtra.cs" />
@@ -157,8 +156,6 @@
     <Compile Include="V20191205\Models\Error.cs" />
     <Compile Include="V20191205\Models\Filter.cs" />
     <Compile Include="V20191205\Models\GatewayCertificate.cs" />
-    <Compile Include="V20191205\Models\HostCertificateRequest.cs" />
-    <Compile Include="V20191205\Models\HostCertificateResponse.cs" />
     <Compile Include="V20191205\Models\LighthouseInstanceDetail.cs" />
     <Compile Include="V20191205\Models\LiveInstanceDetail.cs" />
     <Compile Include="V20191205\Models\LiveInstanceList.cs" />

@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Ssl.V20191205.Models
+namespace TencentCloud.Trocket.V20230308.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class HostCertificateResponse : AbstractModel
+    public class DescribeMQTTInstanceListRequest : AbstractModel
     {
         
         /// <summary>
-        /// 云资源配置详情
+        /// 查询条件列表
         /// </summary>
-        [JsonProperty("CertHostingInfo")]
-        public CertHostingInfo CertHostingInfo{ get; set; }
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 查询起始位置
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// 查询结果限制数量
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Ssl.V20191205.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "CertHostingInfo.", this.CertHostingInfo);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

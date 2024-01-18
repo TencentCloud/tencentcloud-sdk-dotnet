@@ -28,7 +28,20 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// 实例组id
         /// </summary>
         [JsonProperty("InstanceGrpId")]
+        [System.Obsolete]
         public string InstanceGrpId{ get; set; }
+
+        /// <summary>
+        /// 实例ID
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 实例组id
+        /// </summary>
+        [JsonProperty("InstanceGroupId")]
+        public string InstanceGroupId{ get; set; }
 
 
         /// <summary>
@@ -37,6 +50,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceGrpId", this.InstanceGrpId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
         }
     }
 }

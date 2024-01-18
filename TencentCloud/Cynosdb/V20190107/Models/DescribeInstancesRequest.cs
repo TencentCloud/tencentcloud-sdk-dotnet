@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 返回数量，默认为 20，最大值为 100
+        /// 返回数量，默认为 20，取值范围为(0,100]
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -59,7 +59,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public QueryFilter[] Filters{ get; set; }
 
         /// <summary>
-        /// 引擎类型：目前支持“MYSQL”， “POSTGRESQL”
+        /// 引擎类型：目前支持“MYSQL”
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }

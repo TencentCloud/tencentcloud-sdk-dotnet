@@ -74,7 +74,8 @@ namespace TencentCloud.Privatedns.V20201028.Models
         public VpcInfo[] VpcSet{ get; set; }
 
         /// <summary>
-        /// 私有域状态：正常解析：ENABLED, 暂停解析：SUSPEND, 锁定：FROZEN
+        /// 私有域绑定VPC状态，未关联vpc：SUSPEND，已关联VPC：ENABLED
+        /// ，关联VPC失败：FAILED
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -139,6 +140,13 @@ namespace TencentCloud.Privatedns.V20201028.Models
         [JsonProperty("EndPointName")]
         public string EndPointName{ get; set; }
 
+        /// <summary>
+        /// 已删除的vpc
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeletedVpcSet")]
+        public VpcInfo[] DeletedVpcSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +171,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
             this.SetParamSimple(map, prefix + "ForwardRuleType", this.ForwardRuleType);
             this.SetParamSimple(map, prefix + "ForwardAddress", this.ForwardAddress);
             this.SetParamSimple(map, prefix + "EndPointName", this.EndPointName);
+            this.SetParamArrayObj(map, prefix + "DeletedVpcSet.", this.DeletedVpcSet);
         }
     }
 }

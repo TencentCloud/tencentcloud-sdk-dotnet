@@ -49,9 +49,10 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? ReadOnlyCount{ get; set; }
 
         /// <summary>
-        /// 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。当前版本已废弃。
+        /// 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
         /// </summary>
         [JsonProperty("InstanceGrpId")]
+        [System.Obsolete]
         public string InstanceGrpId{ get; set; }
 
         /// <summary>
