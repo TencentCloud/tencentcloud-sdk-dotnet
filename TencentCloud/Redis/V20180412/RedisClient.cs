@@ -284,7 +284,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 创建实例子账号
+        /// 该接口（CreateInstanceAccount）用于自定义访问实例的账号。
         /// </summary>
         /// <param name="req"><see cref="CreateInstanceAccountRequest"/></param>
         /// <returns><see cref="CreateInstanceAccountResponse"/></returns>
@@ -294,7 +294,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 创建实例子账号
+        /// 该接口（CreateInstanceAccount）用于自定义访问实例的账号。
         /// </summary>
         /// <param name="req"><see cref="CreateInstanceAccountRequest"/></param>
         /// <returns><see cref="CreateInstanceAccountResponse"/></returns>

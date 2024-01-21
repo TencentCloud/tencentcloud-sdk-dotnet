@@ -74,7 +74,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 给GR集群增加可用的ClusterCIDR
+        /// 给GR集群增加可用的ClusterCIDR（开白才能使用此功能，如需要请联系我们）
         /// </summary>
         /// <param name="req"><see cref="AddClusterCIDRRequest"/></param>
         /// <returns><see cref="AddClusterCIDRResponse"/></returns>
@@ -84,7 +84,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 给GR集群增加可用的ClusterCIDR
+        /// 给GR集群增加可用的ClusterCIDR（开白才能使用此功能，如需要请联系我们）
         /// </summary>
         /// <param name="req"><see cref="AddClusterCIDRRequest"/></param>
         /// <returns><see cref="AddClusterCIDRResponse"/></returns>

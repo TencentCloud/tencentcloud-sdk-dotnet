@@ -57,7 +57,7 @@ namespace TencentCloud.Hunyuan.V20230901
         /// 
         ///  1.本接口暂不支持返回图片内容。
         ///  2.默认单账号限制并发数为5路，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
-        ///  3.请使用SDK调用本接口 ，SDK GitHub仓库examples/hunyuan/v20230901/目录有提供[参考示例](https://github.com/TencentCloud/tencentcloud-sdk-python/blob/master/examples/hunyuan/v20230901/chat_std.py)。
+        ///  3.请使用SDK调用本接口 ，每种开发语言的SDK GitHub仓库examples/hunyuan/v20230901/目录下有提供示例供参考。
         /// </summary>
         /// <param name="req"><see cref="ChatProRequest"/></param>
         /// <returns><see cref="ChatProResponse"/></returns>
@@ -71,7 +71,7 @@ namespace TencentCloud.Hunyuan.V20230901
         /// 
         ///  1.本接口暂不支持返回图片内容。
         ///  2.默认单账号限制并发数为5路，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
-        ///  3.请使用SDK调用本接口 ，SDK GitHub仓库examples/hunyuan/v20230901/目录有提供[参考示例](https://github.com/TencentCloud/tencentcloud-sdk-python/blob/master/examples/hunyuan/v20230901/chat_std.py)。
+        ///  3.请使用SDK调用本接口 ，每种开发语言的SDK GitHub仓库examples/hunyuan/v20230901/目录下有提供示例供参考。
         /// </summary>
         /// <param name="req"><see cref="ChatProRequest"/></param>
         /// <returns><see cref="ChatProResponse"/></returns>
@@ -86,7 +86,7 @@ namespace TencentCloud.Hunyuan.V20230901
         /// 
         ///  1.本接口暂不支持返回图片内容。
         ///  2.默认单账号限制并发数为5路，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
-        ///  3.请使用SDK调用本接口 ，SDK GitHub仓库examples/hunyuan/v20230901/目录有提供[参考示例](https://github.com/TencentCloud/tencentcloud-sdk-python/blob/master/examples/hunyuan/v20230901/chat_std.py)。
+        ///  3.请使用SDK调用本接口 ，每种开发语言的SDK GitHub仓库examples/hunyuan/v20230901/目录下有提供示例供参考。
         /// </summary>
         /// <param name="req"><see cref="ChatStdRequest"/></param>
         /// <returns><see cref="ChatStdResponse"/></returns>
@@ -100,7 +100,7 @@ namespace TencentCloud.Hunyuan.V20230901
         /// 
         ///  1.本接口暂不支持返回图片内容。
         ///  2.默认单账号限制并发数为5路，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
-        ///  3.请使用SDK调用本接口 ，SDK GitHub仓库examples/hunyuan/v20230901/目录有提供[参考示例](https://github.com/TencentCloud/tencentcloud-sdk-python/blob/master/examples/hunyuan/v20230901/chat_std.py)。
+        ///  3.请使用SDK调用本接口 ，每种开发语言的SDK GitHub仓库examples/hunyuan/v20230901/目录下有提供示例供参考。
         /// </summary>
         /// <param name="req"><see cref="ChatStdRequest"/></param>
         /// <returns><see cref="ChatStdResponse"/></returns>

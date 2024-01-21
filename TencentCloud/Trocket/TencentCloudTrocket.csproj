@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{621A4001-F8F8-394B-BCE2-5A65FE5DDEA5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.940</VersionPrefix>
+    <VersionPrefix>3.0.941</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,16 +53,31 @@
     <Compile Include="V20230308\Models\CreateConsumerGroupResponse.cs" />
     <Compile Include="V20230308\Models\CreateInstanceRequest.cs" />
     <Compile Include="V20230308\Models\CreateInstanceResponse.cs" />
+    <Compile Include="V20230308\Models\CreateMQTTInsPublicEndpointRequest.cs" />
+    <Compile Include="V20230308\Models\CreateMQTTInsPublicEndpointResponse.cs" />
     <Compile Include="V20230308\Models\CreateMQTTInstanceRequest.cs" />
     <Compile Include="V20230308\Models\CreateMQTTInstanceResponse.cs" />
+    <Compile Include="V20230308\Models\CreateMQTTTopicRequest.cs" />
+    <Compile Include="V20230308\Models\CreateMQTTTopicResponse.cs" />
+    <Compile Include="V20230308\Models\CreateMQTTUserRequest.cs" />
+    <Compile Include="V20230308\Models\CreateMQTTUserResponse.cs" />
     <Compile Include="V20230308\Models\CreateRoleRequest.cs" />
     <Compile Include="V20230308\Models\CreateRoleResponse.cs" />
     <Compile Include="V20230308\Models\CreateTopicRequest.cs" />
     <Compile Include="V20230308\Models\CreateTopicResponse.cs" />
+    <Compile Include="V20230308\Models\CustomMapEntry.cs" />
     <Compile Include="V20230308\Models\DeleteConsumerGroupRequest.cs" />
     <Compile Include="V20230308\Models\DeleteConsumerGroupResponse.cs" />
     <Compile Include="V20230308\Models\DeleteInstanceRequest.cs" />
     <Compile Include="V20230308\Models\DeleteInstanceResponse.cs" />
+    <Compile Include="V20230308\Models\DeleteMQTTInsPublicEndpointRequest.cs" />
+    <Compile Include="V20230308\Models\DeleteMQTTInsPublicEndpointResponse.cs" />
+    <Compile Include="V20230308\Models\DeleteMQTTInstanceRequest.cs" />
+    <Compile Include="V20230308\Models\DeleteMQTTInstanceResponse.cs" />
+    <Compile Include="V20230308\Models\DeleteMQTTTopicRequest.cs" />
+    <Compile Include="V20230308\Models\DeleteMQTTTopicResponse.cs" />
+    <Compile Include="V20230308\Models\DeleteMQTTUserRequest.cs" />
+    <Compile Include="V20230308\Models\DeleteMQTTUserResponse.cs" />
     <Compile Include="V20230308\Models\DeleteRoleRequest.cs" />
     <Compile Include="V20230308\Models\DeleteRoleResponse.cs" />
     <Compile Include="V20230308\Models\DeleteTopicRequest.cs" />
@@ -75,10 +90,30 @@
     <Compile Include="V20230308\Models\DescribeInstanceListResponse.cs" />
     <Compile Include="V20230308\Models\DescribeInstanceRequest.cs" />
     <Compile Include="V20230308\Models\DescribeInstanceResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeMQTTClientRequest.cs" />
+    <Compile Include="V20230308\Models\DescribeMQTTClientResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeMQTTInsPublicEndpointsRequest.cs" />
+    <Compile Include="V20230308\Models\DescribeMQTTInsPublicEndpointsResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeMQTTInsVPCEndpointsRequest.cs" />
+    <Compile Include="V20230308\Models\DescribeMQTTInsVPCEndpointsResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeMQTTInstanceCertRequest.cs" />
+    <Compile Include="V20230308\Models\DescribeMQTTInstanceCertResponse.cs" />
     <Compile Include="V20230308\Models\DescribeMQTTInstanceListRequest.cs" />
     <Compile Include="V20230308\Models\DescribeMQTTInstanceListResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeMQTTInstanceRequest.cs" />
+    <Compile Include="V20230308\Models\DescribeMQTTInstanceResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeMQTTMessageListRequest.cs" />
+    <Compile Include="V20230308\Models\DescribeMQTTMessageListResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeMQTTMessageRequest.cs" />
+    <Compile Include="V20230308\Models\DescribeMQTTMessageResponse.cs" />
     <Compile Include="V20230308\Models\DescribeMQTTProductSKUListRequest.cs" />
     <Compile Include="V20230308\Models\DescribeMQTTProductSKUListResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeMQTTTopicListRequest.cs" />
+    <Compile Include="V20230308\Models\DescribeMQTTTopicListResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeMQTTTopicRequest.cs" />
+    <Compile Include="V20230308\Models\DescribeMQTTTopicResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeMQTTUserListRequest.cs" />
+    <Compile Include="V20230308\Models\DescribeMQTTUserListResponse.cs" />
     <Compile Include="V20230308\Models\DescribeRoleListRequest.cs" />
     <Compile Include="V20230308\Models\DescribeRoleListResponse.cs" />
     <Compile Include="V20230308\Models\DescribeTopicListRequest.cs" />
@@ -95,16 +130,32 @@
     <Compile Include="V20230308\Models\ImportSourceClusterTopicsResponse.cs" />
     <Compile Include="V20230308\Models\InstanceItem.cs" />
     <Compile Include="V20230308\Models\IpRule.cs" />
+    <Compile Include="V20230308\Models\MQTTClientSubscription.cs" />
+    <Compile Include="V20230308\Models\MQTTEndpointItem.cs" />
     <Compile Include="V20230308\Models\MQTTInstanceItem.cs" />
+    <Compile Include="V20230308\Models\MQTTMessageItem.cs" />
     <Compile Include="V20230308\Models\MQTTProductSkuItem.cs" />
+    <Compile Include="V20230308\Models\MQTTTopicItem.cs" />
+    <Compile Include="V20230308\Models\MQTTUserItem.cs" />
     <Compile Include="V20230308\Models\ModifyConsumerGroupRequest.cs" />
     <Compile Include="V20230308\Models\ModifyConsumerGroupResponse.cs" />
     <Compile Include="V20230308\Models\ModifyInstanceRequest.cs" />
     <Compile Include="V20230308\Models\ModifyInstanceResponse.cs" />
+    <Compile Include="V20230308\Models\ModifyMQTTInsPublicEndpointRequest.cs" />
+    <Compile Include="V20230308\Models\ModifyMQTTInsPublicEndpointResponse.cs" />
+    <Compile Include="V20230308\Models\ModifyMQTTInstanceCertBindingRequest.cs" />
+    <Compile Include="V20230308\Models\ModifyMQTTInstanceCertBindingResponse.cs" />
+    <Compile Include="V20230308\Models\ModifyMQTTInstanceRequest.cs" />
+    <Compile Include="V20230308\Models\ModifyMQTTInstanceResponse.cs" />
+    <Compile Include="V20230308\Models\ModifyMQTTTopicRequest.cs" />
+    <Compile Include="V20230308\Models\ModifyMQTTTopicResponse.cs" />
+    <Compile Include="V20230308\Models\ModifyMQTTUserRequest.cs" />
+    <Compile Include="V20230308\Models\ModifyMQTTUserResponse.cs" />
     <Compile Include="V20230308\Models\ModifyRoleRequest.cs" />
     <Compile Include="V20230308\Models\ModifyRoleResponse.cs" />
     <Compile Include="V20230308\Models\ModifyTopicRequest.cs" />
     <Compile Include="V20230308\Models\ModifyTopicResponse.cs" />
+    <Compile Include="V20230308\Models\PublicAccessRule.cs" />
     <Compile Include="V20230308\Models\RoleItem.cs" />
     <Compile Include="V20230308\Models\SourceClusterGroupConfig.cs" />
     <Compile Include="V20230308\Models\SourceClusterTopicConfig.cs" />

@@ -97,6 +97,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品下线
+        /// 
         /// 场内抓拍上报接口
         /// </summary>
         /// <param name="req"><see cref="CreateCaptureRequest"/></param>
@@ -107,6 +109,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品下线
+        /// 
         /// 场内抓拍上报接口
         /// </summary>
         /// <param name="req"><see cref="CreateCaptureRequest"/></param>

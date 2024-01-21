@@ -767,6 +767,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 修改风险中心扫描任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRiskCenterScanTaskRequest"/></param>
+        /// <returns><see cref="ModifyRiskCenterScanTaskResponse"/></returns>
+        public Task<ModifyRiskCenterScanTaskResponse> ModifyRiskCenterScanTask(ModifyRiskCenterScanTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyRiskCenterScanTaskResponse>(req, "ModifyRiskCenterScanTask");
+        }
+
+        /// <summary>
+        /// 修改风险中心扫描任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRiskCenterScanTaskRequest"/></param>
+        /// <returns><see cref="ModifyRiskCenterScanTaskResponse"/></returns>
+        public ModifyRiskCenterScanTaskResponse ModifyRiskCenterScanTaskSync(ModifyRiskCenterScanTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyRiskCenterScanTaskResponse>(req, "ModifyRiskCenterScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 停止扫风险中心扫描任务
         /// </summary>
         /// <param name="req"><see cref="StopRiskCenterTaskRequest"/></param>

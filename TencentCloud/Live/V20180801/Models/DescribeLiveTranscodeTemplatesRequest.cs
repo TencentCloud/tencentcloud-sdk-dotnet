@@ -24,12 +24,21 @@ namespace TencentCloud.Live.V20180801.Models
     public class DescribeLiveTranscodeTemplatesRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 转码模板类型，默认0。
+        /// 0：普通转码模板。
+        /// 1：自适应码率转码模板。
+        /// </summary>
+        [JsonProperty("TemplateType")]
+        public long? TemplateType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TemplateType", this.TemplateType);
         }
     }
 }

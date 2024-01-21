@@ -1436,6 +1436,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 删除项目用户
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProjectUsersRequest"/></param>
+        /// <returns><see cref="DeleteProjectUsersResponse"/></returns>
+        public Task<DeleteProjectUsersResponse> DeleteProjectUsers(DeleteProjectUsersRequest req)
+        {
+            return InternalRequestAsync<DeleteProjectUsersResponse>(req, "DeleteProjectUsers");
+        }
+
+        /// <summary>
+        /// 删除项目用户
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProjectUsersRequest"/></param>
+        /// <returns><see cref="DeleteProjectUsersResponse"/></returns>
+        public DeleteProjectUsersResponse DeleteProjectUsersSync(DeleteProjectUsersRequest req)
+        {
+            return InternalRequestAsync<DeleteProjectUsersResponse>(req, "DeleteProjectUsers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 资源管理删除资源
         /// </summary>
         /// <param name="req"><see cref="DeleteResourceRequest"/></param>
