@@ -830,6 +830,27 @@ namespace TencentCloud.Iotvideo.V20211125
         }
 
         /// <summary>
+        /// 拉取多个云存事件缩略图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageMultiThumbnailRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageMultiThumbnailResponse"/></returns>
+        public Task<DescribeCloudStorageMultiThumbnailResponse> DescribeCloudStorageMultiThumbnail(DescribeCloudStorageMultiThumbnailRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageMultiThumbnailResponse>(req, "DescribeCloudStorageMultiThumbnail");
+        }
+
+        /// <summary>
+        /// 拉取多个云存事件缩略图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageMultiThumbnailRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageMultiThumbnailResponse"/></returns>
+        public DescribeCloudStorageMultiThumbnailResponse DescribeCloudStorageMultiThumbnailSync(DescribeCloudStorageMultiThumbnailRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageMultiThumbnailResponse>(req, "DescribeCloudStorageMultiThumbnail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询云存服务详情
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudStorageOrderRequest"/></param>

@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Rum.V20210622.Models
+namespace TencentCloud.Tke.V20220501.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeLogExportsResponse : AbstractModel
+    public class SortBy : AbstractModel
     {
         
         /// <summary>
-        /// 日志导出记录列表
+        /// 排序指标
         /// </summary>
-        [JsonProperty("LogExportSet")]
-        public LogExport[] LogExportSet{ get; set; }
+        [JsonProperty("FieldName")]
+        public string FieldName{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 排序方式
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("OrderType")]
+        public string OrderType{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Rum.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "LogExportSet.", this.LogExportSet);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "FieldName", this.FieldName);
+            this.SetParamSimple(map, prefix + "OrderType", this.OrderType);
         }
     }
 }

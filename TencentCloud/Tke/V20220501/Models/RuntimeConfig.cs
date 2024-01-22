@@ -15,26 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Rum.V20210622.Models
+namespace TencentCloud.Tke.V20220501.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeLogListResponse : AbstractModel
+    public class RuntimeConfig : AbstractModel
     {
         
         /// <summary>
-        /// 返回字符串
+        /// 运行时类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Result")]
-        public string Result{ get; set; }
+        [JsonProperty("RuntimeType")]
+        public string RuntimeType{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 运行时版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("RuntimeVersion")]
+        public string RuntimeVersion{ get; set; }
+
+        /// <summary>
+        /// 运行时根目录
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuntimeRootDir")]
+        public string RuntimeRootDir{ get; set; }
 
 
         /// <summary>
@@ -42,8 +51,9 @@ namespace TencentCloud.Rum.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Result", this.Result);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "RuntimeType", this.RuntimeType);
+            this.SetParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
+            this.SetParamSimple(map, prefix + "RuntimeRootDir", this.RuntimeRootDir);
         }
     }
 }

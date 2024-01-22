@@ -31,7 +31,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string UploadUrl{ get; set; }
 
         /// <summary>
-        /// 上传heder
+        /// 上传header
         /// </summary>
         [JsonProperty("UploadHeaders")]
         public KVPair[] UploadHeaders{ get; set; }

@@ -3179,6 +3179,7 @@ namespace TencentCloud.Vod.V20180717
 
         /// <summary>
         /// 修改即时转码模板。
+        /// - 注意：即时转码模板创建后，不推荐修改，如需修改参数，推荐使用新增模板。
         /// </summary>
         /// <param name="req"><see cref="ModifyJustInTimeTranscodeTemplateRequest"/></param>
         /// <returns><see cref="ModifyJustInTimeTranscodeTemplateResponse"/></returns>
@@ -3189,6 +3190,7 @@ namespace TencentCloud.Vod.V20180717
 
         /// <summary>
         /// 修改即时转码模板。
+        /// - 注意：即时转码模板创建后，不推荐修改，如需修改参数，推荐使用新增模板。
         /// </summary>
         /// <param name="req"><see cref="ModifyJustInTimeTranscodeTemplateRequest"/></param>
         /// <returns><see cref="ModifyJustInTimeTranscodeTemplateResponse"/></returns>

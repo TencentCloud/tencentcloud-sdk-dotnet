@@ -99,31 +99,6 @@ namespace TencentCloud.Facefusion.V20181201
         }
 
         /// <summary>
-        /// 接口不再使用
-        /// 
-        /// 人脸融合活动专用版，不推荐使用。人脸融合接口建议使用[人脸融合](https://cloud.tencent.com/document/product/670/31061)或[选脸融合](https://cloud.tencent.com/document/product/670/37736)接口
-        /// </summary>
-        /// <param name="req"><see cref="FaceFusionLiteRequest"/></param>
-        /// <returns><see cref="FaceFusionLiteResponse"/></returns>
-        public Task<FaceFusionLiteResponse> FaceFusionLite(FaceFusionLiteRequest req)
-        {
-            return InternalRequestAsync<FaceFusionLiteResponse>(req, "FaceFusionLite");
-        }
-
-        /// <summary>
-        /// 接口不再使用
-        /// 
-        /// 人脸融合活动专用版，不推荐使用。人脸融合接口建议使用[人脸融合](https://cloud.tencent.com/document/product/670/31061)或[选脸融合](https://cloud.tencent.com/document/product/670/37736)接口
-        /// </summary>
-        /// <param name="req"><see cref="FaceFusionLiteRequest"/></param>
-        /// <returns><see cref="FaceFusionLiteResponse"/></returns>
-        public FaceFusionLiteResponse FaceFusionLiteSync(FaceFusionLiteRequest req)
-        {
-            return InternalRequestAsync<FaceFusionLiteResponse>(req, "FaceFusionLite")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 本接口用于单脸、多脸融合，用户上传人脸图片，获取与模板融合后的人脸图片。查看 <a href="https://cloud.tencent.com/document/product/670/38247" target="_blank">选脸融合接入指引</a>。
         /// 
         /// 未发布的活动请求频率限制为1次/秒，已发布的活动请求频率限制50次/秒。如有需要提高活动的请求频率限制，请在控制台中申请。

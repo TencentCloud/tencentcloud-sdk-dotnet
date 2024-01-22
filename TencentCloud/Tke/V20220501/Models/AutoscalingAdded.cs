@@ -15,33 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Facefusion.V20181201.Models
+namespace TencentCloud.Tke.V20220501.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FaceFusionLiteResponse : AbstractModel
+    public class AutoscalingAdded : AbstractModel
     {
         
         /// <summary>
-        /// RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
+        /// 正在加入中的节点数量
         /// </summary>
-        [JsonProperty("Image")]
-        public string Image{ get; set; }
+        [JsonProperty("Joining")]
+        public long? Joining{ get; set; }
 
         /// <summary>
-        /// 鉴政结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 初始化中的节点数量
         /// </summary>
-        [JsonProperty("ReviewResultSet")]
-        public FuseFaceReviewResult[] ReviewResultSet{ get; set; }
+        [JsonProperty("Initializing")]
+        public long? Initializing{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 正常的节点数量
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Normal")]
+        public long? Normal{ get; set; }
+
+        /// <summary>
+        /// 节点总数
+        /// </summary>
+        [JsonProperty("Total")]
+        public long? Total{ get; set; }
 
 
         /// <summary>
@@ -49,9 +54,10 @@ namespace TencentCloud.Facefusion.V20181201.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Image", this.Image);
-            this.SetParamArrayObj(map, prefix + "ReviewResultSet.", this.ReviewResultSet);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Joining", this.Joining);
+            this.SetParamSimple(map, prefix + "Initializing", this.Initializing);
+            this.SetParamSimple(map, prefix + "Normal", this.Normal);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
         }
     }
 }

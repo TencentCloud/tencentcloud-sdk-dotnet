@@ -53,35 +53,6 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// 接口请求域名： rum.tencentcloudapi.com 。
-        /// 
-        /// 本接口用于创建日志下载任务
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="CreateLogExportRequest"/></param>
-        /// <returns><see cref="CreateLogExportResponse"/></returns>
-        public Task<CreateLogExportResponse> CreateLogExport(CreateLogExportRequest req)
-        {
-            return InternalRequestAsync<CreateLogExportResponse>(req, "CreateLogExport");
-        }
-
-        /// <summary>
-        /// 接口请求域名： rum.tencentcloudapi.com 。
-        /// 
-        /// 本接口用于创建日志下载任务
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="CreateLogExportRequest"/></param>
-        /// <returns><see cref="CreateLogExportResponse"/></returns>
-        public CreateLogExportResponse CreateLogExportSync(CreateLogExportRequest req)
-        {
-            return InternalRequestAsync<CreateLogExportResponse>(req, "CreateLogExport")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 创建 RUM 应用（归属于某个团队）
         /// </summary>
         /// <param name="req"><see cref="CreateProjectRequest"/></param>
@@ -204,35 +175,6 @@ namespace TencentCloud.Rum.V20210622
         public DeleteInstanceResponse DeleteInstanceSync(DeleteInstanceRequest req)
         {
             return InternalRequestAsync<DeleteInstanceResponse>(req, "DeleteInstance")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 接口请求域名： rum.tencentcloudapi.com 。
-        /// 
-        /// 本接口用于删除日志下载任务
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="DeleteLogExportRequest"/></param>
-        /// <returns><see cref="DeleteLogExportResponse"/></returns>
-        public Task<DeleteLogExportResponse> DeleteLogExport(DeleteLogExportRequest req)
-        {
-            return InternalRequestAsync<DeleteLogExportResponse>(req, "DeleteLogExport");
-        }
-
-        /// <summary>
-        /// 接口请求域名： rum.tencentcloudapi.com 。
-        /// 
-        /// 本接口用于删除日志下载任务
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="DeleteLogExportRequest"/></param>
-        /// <returns><see cref="DeleteLogExportResponse"/></returns>
-        public DeleteLogExportResponse DeleteLogExportSync(DeleteLogExportRequest req)
-        {
-            return InternalRequestAsync<DeleteLogExportResponse>(req, "DeleteLogExport")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -802,56 +744,6 @@ namespace TencentCloud.Rum.V20210622
         public DescribeErrorResponse DescribeErrorSync(DescribeErrorRequest req)
         {
             return InternalRequestAsync<DescribeErrorResponse>(req, "DescribeError")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 接口请求域名： rum.tencentcloudapi.com 。
-        /// 
-        /// 本接口用于获取日志下载任务列表
-        /// 
-        /// 默认接口请求频率限制：20次/秒
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLogExportsRequest"/></param>
-        /// <returns><see cref="DescribeLogExportsResponse"/></returns>
-        public Task<DescribeLogExportsResponse> DescribeLogExports(DescribeLogExportsRequest req)
-        {
-            return InternalRequestAsync<DescribeLogExportsResponse>(req, "DescribeLogExports");
-        }
-
-        /// <summary>
-        /// 接口请求域名： rum.tencentcloudapi.com 。
-        /// 
-        /// 本接口用于获取日志下载任务列表
-        /// 
-        /// 默认接口请求频率限制：20次/秒
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLogExportsRequest"/></param>
-        /// <returns><see cref="DescribeLogExportsResponse"/></returns>
-        public DescribeLogExportsResponse DescribeLogExportsSync(DescribeLogExportsRequest req)
-        {
-            return InternalRequestAsync<DescribeLogExportsResponse>(req, "DescribeLogExports")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// (已下线，请用DescribeRumLogList)
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLogListRequest"/></param>
-        /// <returns><see cref="DescribeLogListResponse"/></returns>
-        public Task<DescribeLogListResponse> DescribeLogList(DescribeLogListRequest req)
-        {
-            return InternalRequestAsync<DescribeLogListResponse>(req, "DescribeLogList");
-        }
-
-        /// <summary>
-        /// (已下线，请用DescribeRumLogList)
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLogListRequest"/></param>
-        /// <returns><see cref="DescribeLogListResponse"/></returns>
-        public DescribeLogListResponse DescribeLogListSync(DescribeLogListRequest req)
-        {
-            return InternalRequestAsync<DescribeLogListResponse>(req, "DescribeLogList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

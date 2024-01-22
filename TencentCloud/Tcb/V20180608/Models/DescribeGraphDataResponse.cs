@@ -49,7 +49,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到.
+        /// 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到。
         /// </summary>
         [JsonProperty("Values")]
         public float?[] Values{ get; set; }

@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Rum.V20210622.Models
+namespace TencentCloud.Tke.V20220501.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteLogExportRequest : AbstractModel
+    public class InternetAccessible : AbstractModel
     {
         
         /// <summary>
-        /// 项目ID
+        /// 带宽
         /// </summary>
-        [JsonProperty("ID")]
-        public long? ID{ get; set; }
+        [JsonProperty("MaxBandwidthOut")]
+        public long? MaxBandwidthOut{ get; set; }
 
         /// <summary>
-        /// 日志导出ID
+        /// 网络计费方式
         /// </summary>
-        [JsonProperty("ExportID")]
-        public string ExportID{ get; set; }
+        [JsonProperty("ChargeType")]
+        public string ChargeType{ get; set; }
+
+        /// <summary>
+        /// 带宽包 ID
+        /// </summary>
+        [JsonProperty("BandwidthPackageId")]
+        public string BandwidthPackageId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Rum.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ID", this.ID);
-            this.SetParamSimple(map, prefix + "ExportID", this.ExportID);
+            this.SetParamSimple(map, prefix + "MaxBandwidthOut", this.MaxBandwidthOut);
+            this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
+            this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
         }
     }
 }

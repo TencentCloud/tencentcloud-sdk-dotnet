@@ -53,6 +53,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 上报相机移动、遮挡等告警信息
         /// 
         /// </summary>
@@ -64,6 +66,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 上报相机移动、遮挡等告警信息
         /// 
         /// </summary>
@@ -76,6 +80,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 上报当前场内所有相机的当前状态
         /// </summary>
         /// <param name="req"><see cref="CreateCameraStateRequest"/></param>
@@ -86,6 +92,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 上报当前场内所有相机的当前状态
         /// </summary>
         /// <param name="req"><see cref="CreateCameraStateRequest"/></param>
@@ -122,6 +130,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 集团广场的多经点位告警
         /// </summary>
         /// <param name="req"><see cref="CreateMultiBizAlertRequest"/></param>
@@ -132,6 +142,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 集团广场的多经点位告警
         /// </summary>
         /// <param name="req"><see cref="CreateMultiBizAlertRequest"/></param>
@@ -143,6 +155,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 上报所有进程监控信息
         /// </summary>
         /// <param name="req"><see cref="CreateProgramStateRequest"/></param>
@@ -153,6 +167,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 上报所有进程监控信息
         /// </summary>
         /// <param name="req"><see cref="CreateProgramStateRequest"/></param>
@@ -164,6 +180,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 上报所有服务器硬件监控信息
         /// </summary>
         /// <param name="req"><see cref="CreateServerStateRequest"/></param>
@@ -174,6 +192,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 上报所有服务器硬件监控信息
         /// </summary>
         /// <param name="req"><see cref="CreateServerStateRequest"/></param>
@@ -185,6 +205,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 集团广场的多经点位消警
         /// </summary>
         /// <param name="req"><see cref="DeleteMultiBizAlertRequest"/></param>
@@ -195,6 +217,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 集团广场的多经点位消警
         /// </summary>
         /// <param name="req"><see cref="DeleteMultiBizAlertRequest"/></param>
@@ -206,6 +230,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 删除集团广场对应的任务
         /// </summary>
         /// <param name="req"><see cref="DeleteTaskRequest"/></param>
@@ -216,6 +242,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 删除集团广场对应的任务
         /// </summary>
         /// <param name="req"><see cref="DeleteTaskRequest"/></param>
@@ -227,6 +255,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 获取集团广场对应的摄像头列表
         /// </summary>
         /// <param name="req"><see cref="DescribeCamerasRequest"/></param>
@@ -237,6 +267,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 获取集团广场对应的摄像头列表
         /// </summary>
         /// <param name="req"><see cref="DescribeCamerasRequest"/></param>
@@ -248,6 +280,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 获取摄像头配置信息
         /// mac不为空返回指定相机配置
         /// mac为空返回对应GroupCode和MallId全量配置
@@ -260,6 +294,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 获取摄像头配置信息
         /// mac不为空返回指定相机配置
         /// mac为空返回对应GroupCode和MallId全量配置
@@ -273,6 +309,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 实时获取底图接口
         /// </summary>
         /// <param name="req"><see cref="DescribeImageRequest"/></param>
@@ -283,6 +321,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 实时获取底图接口
         /// </summary>
         /// <param name="req"><see cref="DescribeImageRequest"/></param>
@@ -294,6 +334,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 获取多经点位底图
         /// </summary>
         /// <param name="req"><see cref="DescribeMultiBizBaseImageRequest"/></param>
@@ -304,6 +346,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 获取多经点位底图
         /// </summary>
         /// <param name="req"><see cref="DescribeMultiBizBaseImageRequest"/></param>
@@ -315,6 +359,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 查询集团广场对应的任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeTasksRequest"/></param>
@@ -325,6 +371,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 查询集团广场对应的任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeTasksRequest"/></param>
@@ -336,6 +384,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 获取集团广场的点位列表
         /// </summary>
         /// <param name="req"><see cref="DescribeZonesRequest"/></param>
@@ -346,6 +396,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 获取集团广场的点位列表
         /// </summary>
         /// <param name="req"><see cref="DescribeZonesRequest"/></param>
@@ -357,6 +409,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 集团广场的多经点位配置更新
         /// </summary>
         /// <param name="req"><see cref="ModifyMultiBizConfigRequest"/></param>
@@ -367,6 +421,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 集团广场的多经点位配置更新
         /// </summary>
         /// <param name="req"><see cref="ModifyMultiBizConfigRequest"/></param>
@@ -378,6 +434,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 上报服务注册自身的服务地址作为回调地址, 用于信息回传。
         /// </summary>
         /// <param name="req"><see cref="ReportServiceRegisterRequest"/></param>
@@ -388,6 +446,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 上报服务注册自身的服务地址作为回调地址, 用于信息回传。
         /// </summary>
         /// <param name="req"><see cref="ReportServiceRegisterRequest"/></param>
@@ -399,6 +459,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 以图搜图
         /// </summary>
         /// <param name="req"><see cref="SearchImageRequest"/></param>
@@ -409,6 +471,8 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 优mall产品启动下线流程
+        /// 
         /// 以图搜图
         /// </summary>
         /// <param name="req"><see cref="SearchImageRequest"/></param>

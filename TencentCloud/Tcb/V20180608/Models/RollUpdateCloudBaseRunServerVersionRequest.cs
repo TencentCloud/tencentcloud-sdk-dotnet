@@ -92,6 +92,7 @@ namespace TencentCloud.Tcb.V20180608.Models
 
         /// <summary>
         /// 策略类型
+        /// cpu/mem
         /// </summary>
         [JsonProperty("PolicyType")]
         public string PolicyType{ get; set; }

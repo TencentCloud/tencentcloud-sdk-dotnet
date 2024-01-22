@@ -187,6 +187,55 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("BuildPercent")]
         public long? BuildPercent{ get; set; }
 
+        /// <summary>
+        /// Uin
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Uin")]
+        public string Uin{ get; set; }
+
+        /// <summary>
+        /// BuildFinishTime
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BuildFinishTime")]
+        public string BuildFinishTime{ get; set; }
+
+        /// <summary>
+        /// DeployFinishTime
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeployFinishTime")]
+        public string DeployFinishTime{ get; set; }
+
+        /// <summary>
+        /// BuildId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BuildId")]
+        public string BuildId{ get; set; }
+
+        /// <summary>
+        /// SourceUrl
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SourceUrl")]
+        public string SourceUrl{ get; set; }
+
+        /// <summary>
+        /// FailReasonShort
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FailReasonShort")]
+        public string FailReasonShort{ get; set; }
+
+        /// <summary>
+        /// FirstInitRepo
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FirstInitRepo")]
+        public string FirstInitRepo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -215,6 +264,13 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "RepoUrl", this.RepoUrl);
             this.SetParamSimple(map, prefix + "AutoDeployOnCodeChange", this.AutoDeployOnCodeChange);
             this.SetParamSimple(map, prefix + "BuildPercent", this.BuildPercent);
+            this.SetParamSimple(map, prefix + "Uin", this.Uin);
+            this.SetParamSimple(map, prefix + "BuildFinishTime", this.BuildFinishTime);
+            this.SetParamSimple(map, prefix + "DeployFinishTime", this.DeployFinishTime);
+            this.SetParamSimple(map, prefix + "BuildId", this.BuildId);
+            this.SetParamSimple(map, prefix + "SourceUrl", this.SourceUrl);
+            this.SetParamSimple(map, prefix + "FailReasonShort", this.FailReasonShort);
+            this.SetParamSimple(map, prefix + "FirstInitRepo", this.FirstInitRepo);
         }
     }
 }

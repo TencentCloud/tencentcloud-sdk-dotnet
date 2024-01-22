@@ -230,6 +230,13 @@ namespace TencentCloud.Partners.V20180321.Models
         [JsonProperty("RefundMap")]
         public RefundMap[] RefundMap{ get; set; }
 
+        /// <summary>
+        /// 子产品名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubGoodsName")]
+        public string SubGoodsName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -266,6 +273,7 @@ namespace TencentCloud.Partners.V20180321.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
             this.SetParamArrayObj(map, prefix + "RefundMap.", this.RefundMap);
+            this.SetParamSimple(map, prefix + "SubGoodsName", this.SubGoodsName);
         }
     }
 }
