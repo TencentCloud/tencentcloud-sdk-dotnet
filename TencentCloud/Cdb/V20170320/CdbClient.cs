@@ -1735,6 +1735,27 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 查询实例发生的事件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceAlarmEventsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceAlarmEventsResponse"/></returns>
+        public Task<DescribeInstanceAlarmEventsResponse> DescribeInstanceAlarmEvents(DescribeInstanceAlarmEventsRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceAlarmEventsResponse>(req, "DescribeInstanceAlarmEvents");
+        }
+
+        /// <summary>
+        /// 查询实例发生的事件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceAlarmEventsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceAlarmEventsResponse"/></returns>
+        public DescribeInstanceAlarmEventsResponse DescribeInstanceAlarmEventsSync(DescribeInstanceAlarmEventsRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceAlarmEventsResponse>(req, "DescribeInstanceAlarmEvents")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口（DescribeInstanceParamRecords）用于查询实例参数修改历史。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceParamRecordsRequest"/></param>

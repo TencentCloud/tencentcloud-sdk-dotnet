@@ -31,7 +31,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 每页数量，默认20。最大1000
+        /// 每页数量，默认10。最大1000
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

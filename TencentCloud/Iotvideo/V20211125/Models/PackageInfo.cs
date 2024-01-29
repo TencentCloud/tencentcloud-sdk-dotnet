@@ -77,6 +77,12 @@ namespace TencentCloud.Iotvideo.V20211125.Models
         [JsonProperty("OrderId")]
         public string OrderId{ get; set; }
 
+        /// <summary>
+        /// 通道id
+        /// </summary>
+        [JsonProperty("ChannelId")]
+        public ulong? ChannelId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -91,6 +97,7 @@ namespace TencentCloud.Iotvideo.V20211125.Models
             this.SetParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
             this.SetParamSimple(map, prefix + "PackageId", this.PackageId);
             this.SetParamSimple(map, prefix + "OrderId", this.OrderId);
+            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
         }
     }
 }

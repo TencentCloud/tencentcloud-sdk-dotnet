@@ -183,7 +183,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 创建应用代理
+        /// 本接口为旧版，如需调用请尽快迁移至新版 [创建四层代理实例](https://cloud.tencent.com/document/product/1552/103417) 。
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationProxyRequest"/></param>
         /// <returns><see cref="CreateApplicationProxyResponse"/></returns>
@@ -193,7 +193,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 创建应用代理
+        /// 本接口为旧版，如需调用请尽快迁移至新版 [创建四层代理实例](https://cloud.tencent.com/document/product/1552/103417) 。
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationProxyRequest"/></param>
         /// <returns><see cref="CreateApplicationProxyResponse"/></returns>
@@ -204,7 +204,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 创建应用代理规则
+        /// 本接口为旧版，如需调用请尽快迁移至新版，详情请参考 [创建四层代理转发规则
+        /// ](https://cloud.tencent.com/document/product/1552/103416) 。
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationProxyRuleRequest"/></param>
         /// <returns><see cref="CreateApplicationProxyRuleResponse"/></returns>
@@ -214,7 +215,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 创建应用代理规则
+        /// 本接口为旧版，如需调用请尽快迁移至新版，详情请参考 [创建四层代理转发规则
+        /// ](https://cloud.tencent.com/document/product/1552/103416) 。
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationProxyRuleRequest"/></param>
         /// <returns><see cref="CreateApplicationProxyRuleResponse"/></returns>
@@ -506,7 +508,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 删除应用代理
+        /// 本接口为旧版，如需调用请尽快迁移至新版，详情请参考 [删除四层代理实例
+        /// ](https://cloud.tencent.com/document/product/1552/103415) 。
         /// </summary>
         /// <param name="req"><see cref="DeleteApplicationProxyRequest"/></param>
         /// <returns><see cref="DeleteApplicationProxyResponse"/></returns>
@@ -516,7 +519,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 删除应用代理
+        /// 本接口为旧版，如需调用请尽快迁移至新版，详情请参考 [删除四层代理实例
+        /// ](https://cloud.tencent.com/document/product/1552/103415) 。
         /// </summary>
         /// <param name="req"><see cref="DeleteApplicationProxyRequest"/></param>
         /// <returns><see cref="DeleteApplicationProxyResponse"/></returns>
@@ -527,7 +531,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 删除应用代理规则
+        /// 本接口为旧版，如需调用请尽快迁移至新版，详情请参考 [删除四层代理转发规则](https://cloud.tencent.com/document/product/1552/103414) 。
         /// </summary>
         /// <param name="req"><see cref="DeleteApplicationProxyRuleRequest"/></param>
         /// <returns><see cref="DeleteApplicationProxyRuleResponse"/></returns>
@@ -537,7 +541,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 删除应用代理规则
+        /// 本接口为旧版，如需调用请尽快迁移至新版，详情请参考 [删除四层代理转发规则](https://cloud.tencent.com/document/product/1552/103414) 。
         /// </summary>
         /// <param name="req"><see cref="DeleteApplicationProxyRuleRequest"/></param>
         /// <returns><see cref="DeleteApplicationProxyRuleResponse"/></returns>
@@ -758,7 +762,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 查询应用代理列表。
+        /// 本接口为旧版，如需调用请尽快迁移至新版，新版接口中将四层代理实例列表的查询和四层转发规则的查询拆分成两个接口，详情请参考 [查询四层代理实例列表](https://cloud.tencent.com/document/product/1552/103413) 和 [查询四层代理转发规则列表](https://cloud.tencent.com/document/product/1552/103412)。
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationProxiesRequest"/></param>
         /// <returns><see cref="DescribeApplicationProxiesResponse"/></returns>
@@ -768,7 +772,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 查询应用代理列表。
+        /// 本接口为旧版，如需调用请尽快迁移至新版，新版接口中将四层代理实例列表的查询和四层转发规则的查询拆分成两个接口，详情请参考 [查询四层代理实例列表](https://cloud.tencent.com/document/product/1552/103413) 和 [查询四层代理转发规则列表](https://cloud.tencent.com/document/product/1552/103412)。
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationProxiesRequest"/></param>
         /// <returns><see cref="DescribeApplicationProxiesResponse"/></returns>
@@ -1094,7 +1098,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 查询四层代理实例下的规则列表。
+        /// 查询四层代理实例下的转发规则列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeL4ProxyRulesRequest"/></param>
         /// <returns><see cref="DescribeL4ProxyRulesResponse"/></returns>
@@ -1104,7 +1108,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 查询四层代理实例下的规则列表。
+        /// 查询四层代理实例下的转发规则列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeL4ProxyRulesRequest"/></param>
         /// <returns><see cref="DescribeL4ProxyRulesResponse"/></returns>
@@ -1577,7 +1581,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 修改应用代理
+        /// 本接口为旧版，如需调用请尽快迁移至新版，详情请参考 [修改四层代理实例
+        /// ](https://cloud.tencent.com/document/product/1552/103411) 。
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationProxyRequest"/></param>
         /// <returns><see cref="ModifyApplicationProxyResponse"/></returns>
@@ -1587,7 +1592,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 修改应用代理
+        /// 本接口为旧版，如需调用请尽快迁移至新版，详情请参考 [修改四层代理实例
+        /// ](https://cloud.tencent.com/document/product/1552/103411) 。
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationProxyRequest"/></param>
         /// <returns><see cref="ModifyApplicationProxyResponse"/></returns>
@@ -1598,7 +1604,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 修改应用代理规则
+        /// 本接口为旧版，如需调用请尽快迁移至新版，详情请参考 [修改四层代理转发规则
+        /// ](https://cloud.tencent.com/document/product/1552/103410) 。
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationProxyRuleRequest"/></param>
         /// <returns><see cref="ModifyApplicationProxyRuleResponse"/></returns>
@@ -1608,7 +1615,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 修改应用代理规则
+        /// 本接口为旧版，如需调用请尽快迁移至新版，详情请参考 [修改四层代理转发规则
+        /// ](https://cloud.tencent.com/document/product/1552/103410) 。
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationProxyRuleRequest"/></param>
         /// <returns><see cref="ModifyApplicationProxyRuleResponse"/></returns>
@@ -1619,7 +1627,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 修改应用代理规则的状态
+        /// 本接口为旧版，如需调用请尽快迁移至新版，详情请参考 [修改四层代理转发规则状态
+        /// ](https://cloud.tencent.com/document/product/1552/103409) 。
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationProxyRuleStatusRequest"/></param>
         /// <returns><see cref="ModifyApplicationProxyRuleStatusResponse"/></returns>
@@ -1629,7 +1638,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 修改应用代理规则的状态
+        /// 本接口为旧版，如需调用请尽快迁移至新版，详情请参考 [修改四层代理转发规则状态
+        /// ](https://cloud.tencent.com/document/product/1552/103409) 。
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationProxyRuleStatusRequest"/></param>
         /// <returns><see cref="ModifyApplicationProxyRuleStatusResponse"/></returns>
@@ -1640,7 +1650,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 修改应用代理的状态
+        /// 本接口为旧版，如需调用请尽快迁移至新版，详情请参考 [修改四层代理实例状态](https://cloud.tencent.com/document/product/1552/103408) 。
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationProxyStatusRequest"/></param>
         /// <returns><see cref="ModifyApplicationProxyStatusResponse"/></returns>
@@ -1650,7 +1660,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 修改应用代理的状态
+        /// 本接口为旧版，如需调用请尽快迁移至新版，详情请参考 [修改四层代理实例状态](https://cloud.tencent.com/document/product/1552/103408) 。
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationProxyStatusRequest"/></param>
         /// <returns><see cref="ModifyApplicationProxyStatusResponse"/></returns>

@@ -158,7 +158,8 @@ namespace TencentCloud.Rum.V20210622.Models
         public long? GroupByType{ get; set; }
 
         /// <summary>
-        /// 无需关注，是否查询zhiyan
+        /// 1: 查询智研
+        /// 0: 走旧逻辑，已下线，勿使用
         /// </summary>
         [JsonProperty("IsNewData")]
         public long? IsNewData{ get; set; }

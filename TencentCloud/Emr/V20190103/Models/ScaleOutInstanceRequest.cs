@@ -55,7 +55,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// 客户端Token。
+        /// 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-751a-41b6-aad6-fae36063280
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }

@@ -33,7 +33,7 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 需要执行撤回的流程(合同)的编号列表，最多100个.
-        /// <br>列表中的流程(合同)编号不要重复.
+        /// 列表中的流程(合同)编号不要重复.
         /// </summary>
         [JsonProperty("FlowIds")]
         public string[] FlowIds{ get; set; }

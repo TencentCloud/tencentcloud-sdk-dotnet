@@ -25,7 +25,7 @@ namespace TencentCloud.Mna.V20210119.Models
     {
         
         /// <summary>
-        /// 流量值（bit）
+        /// 流量值（byte）
         /// </summary>
         [JsonProperty("Current")]
         public float? Current{ get; set; }

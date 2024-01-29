@@ -53,48 +53,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 获取协同编辑资源锁
-        /// </summary>
-        /// <param name="req"><see cref="AcquireLockRequest"/></param>
-        /// <returns><see cref="AcquireLockResponse"/></returns>
-        public Task<AcquireLockResponse> AcquireLock(AcquireLockRequest req)
-        {
-            return InternalRequestAsync<AcquireLockResponse>(req, "AcquireLock");
-        }
-
-        /// <summary>
-        /// 获取协同编辑资源锁
-        /// </summary>
-        /// <param name="req"><see cref="AcquireLockRequest"/></param>
-        /// <returns><see cref="AcquireLockResponse"/></returns>
-        public AcquireLockResponse AcquireLockSync(AcquireLockRequest req)
-        {
-            return InternalRequestAsync<AcquireLockResponse>(req, "AcquireLock")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 上游依赖自动解析
-        /// </summary>
-        /// <param name="req"><see cref="AnalyzeDependentTasksRequest"/></param>
-        /// <returns><see cref="AnalyzeDependentTasksResponse"/></returns>
-        public Task<AnalyzeDependentTasksResponse> AnalyzeDependentTasks(AnalyzeDependentTasksRequest req)
-        {
-            return InternalRequestAsync<AnalyzeDependentTasksResponse>(req, "AnalyzeDependentTasks");
-        }
-
-        /// <summary>
-        /// 上游依赖自动解析
-        /// </summary>
-        /// <param name="req"><see cref="AnalyzeDependentTasksRequest"/></param>
-        /// <returns><see cref="AnalyzeDependentTasksResponse"/></returns>
-        public AnalyzeDependentTasksResponse AnalyzeDependentTasksSync(AnalyzeDependentTasksRequest req)
-        {
-            return InternalRequestAsync<AnalyzeDependentTasksResponse>(req, "AnalyzeDependentTasks")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 批量创建任务告警规则
         /// </summary>
         /// <param name="req"><see cref="BatchCreateIntegrationTaskAlarmsRequest"/></param>
@@ -116,27 +74,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 异步批量创建任务版本
-        /// </summary>
-        /// <param name="req"><see cref="BatchCreateTaskVersionAsyncRequest"/></param>
-        /// <returns><see cref="BatchCreateTaskVersionAsyncResponse"/></returns>
-        public Task<BatchCreateTaskVersionAsyncResponse> BatchCreateTaskVersionAsync(BatchCreateTaskVersionAsyncRequest req)
-        {
-            return InternalRequestAsync<BatchCreateTaskVersionAsyncResponse>(req, "BatchCreateTaskVersionAsync");
-        }
-
-        /// <summary>
-        /// 异步批量创建任务版本
-        /// </summary>
-        /// <param name="req"><see cref="BatchCreateTaskVersionAsyncRequest"/></param>
-        /// <returns><see cref="BatchCreateTaskVersionAsyncResponse"/></returns>
-        public BatchCreateTaskVersionAsyncResponse BatchCreateTaskVersionAsyncSync(BatchCreateTaskVersionAsyncRequest req)
-        {
-            return InternalRequestAsync<BatchCreateTaskVersionAsyncResponse>(req, "BatchCreateTaskVersionAsync")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 批量创建任务版本Ds
         /// </summary>
         /// <param name="req"><see cref="BatchCreateTaskVersionDsRequest"/></param>
@@ -154,27 +91,6 @@ namespace TencentCloud.Wedata.V20210820
         public BatchCreateTaskVersionDsResponse BatchCreateTaskVersionDsSync(BatchCreateTaskVersionDsRequest req)
         {
             return InternalRequestAsync<BatchCreateTaskVersionDsResponse>(req, "BatchCreateTaskVersionDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 批量创建虚拟任务, 用于新建跨工作流任务场景中新增跨工作流任务操作
-        /// </summary>
-        /// <param name="req"><see cref="BatchCreateVirtualTaskDsRequest"/></param>
-        /// <returns><see cref="BatchCreateVirtualTaskDsResponse"/></returns>
-        public Task<BatchCreateVirtualTaskDsResponse> BatchCreateVirtualTaskDs(BatchCreateVirtualTaskDsRequest req)
-        {
-            return InternalRequestAsync<BatchCreateVirtualTaskDsResponse>(req, "BatchCreateVirtualTaskDs");
-        }
-
-        /// <summary>
-        /// 批量创建虚拟任务, 用于新建跨工作流任务场景中新增跨工作流任务操作
-        /// </summary>
-        /// <param name="req"><see cref="BatchCreateVirtualTaskDsRequest"/></param>
-        /// <returns><see cref="BatchCreateVirtualTaskDsResponse"/></returns>
-        public BatchCreateVirtualTaskDsResponse BatchCreateVirtualTaskDsSync(BatchCreateVirtualTaskDsRequest req)
-        {
-            return InternalRequestAsync<BatchCreateVirtualTaskDsResponse>(req, "BatchCreateVirtualTaskDs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -238,27 +154,6 @@ namespace TencentCloud.Wedata.V20210820
         public BatchDeleteTasksDsResponse BatchDeleteTasksDsSync(BatchDeleteTasksDsRequest req)
         {
             return InternalRequestAsync<BatchDeleteTasksDsResponse>(req, "BatchDeleteTasksDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// Ds批量删除任务，仅对任务状态为”已停止“有效；
-        /// </summary>
-        /// <param name="req"><see cref="BatchDeleteTasksDsAsyncRequest"/></param>
-        /// <returns><see cref="BatchDeleteTasksDsAsyncResponse"/></returns>
-        public Task<BatchDeleteTasksDsAsyncResponse> BatchDeleteTasksDsAsync(BatchDeleteTasksDsAsyncRequest req)
-        {
-            return InternalRequestAsync<BatchDeleteTasksDsAsyncResponse>(req, "BatchDeleteTasksDsAsync");
-        }
-
-        /// <summary>
-        /// Ds批量删除任务，仅对任务状态为”已停止“有效；
-        /// </summary>
-        /// <param name="req"><see cref="BatchDeleteTasksDsAsyncRequest"/></param>
-        /// <returns><see cref="BatchDeleteTasksDsAsyncResponse"/></returns>
-        public BatchDeleteTasksDsAsyncResponse BatchDeleteTasksDsAsyncSync(BatchDeleteTasksDsAsyncRequest req)
-        {
-            return InternalRequestAsync<BatchDeleteTasksDsAsyncResponse>(req, "BatchDeleteTasksDsAsync")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -456,33 +351,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 批量运行任务, 用于工作流-任务配置-运行、工作流-任务右键-运行、任务运维-任务管理-更多操作-运行、任务运维-任务管理-选择任务-批量运行等场景。
-        /// 1. 任务运行预判断
-        /// 2. 更新db中任务状态
-        /// 3. 通知scheduler进行运行操作
-        /// </summary>
-        /// <param name="req"><see cref="BatchRunTasksDsRequest"/></param>
-        /// <returns><see cref="BatchRunTasksDsResponse"/></returns>
-        public Task<BatchRunTasksDsResponse> BatchRunTasksDs(BatchRunTasksDsRequest req)
-        {
-            return InternalRequestAsync<BatchRunTasksDsResponse>(req, "BatchRunTasksDs");
-        }
-
-        /// <summary>
-        /// 批量运行任务, 用于工作流-任务配置-运行、工作流-任务右键-运行、任务运维-任务管理-更多操作-运行、任务运维-任务管理-选择任务-批量运行等场景。
-        /// 1. 任务运行预判断
-        /// 2. 更新db中任务状态
-        /// 3. 通知scheduler进行运行操作
-        /// </summary>
-        /// <param name="req"><see cref="BatchRunTasksDsRequest"/></param>
-        /// <returns><see cref="BatchRunTasksDsResponse"/></returns>
-        public BatchRunTasksDsResponse BatchRunTasksDsSync(BatchRunTasksDsRequest req)
-        {
-            return InternalRequestAsync<BatchRunTasksDsResponse>(req, "BatchRunTasksDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 批量运行集成任务
         /// </summary>
         /// <param name="req"><see cref="BatchStartIntegrationTasksRequest"/></param>
@@ -632,27 +500,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 批量更新任务Ds
-        /// </summary>
-        /// <param name="req"><see cref="BatchUpdateTasksDsRequest"/></param>
-        /// <returns><see cref="BatchUpdateTasksDsResponse"/></returns>
-        public Task<BatchUpdateTasksDsResponse> BatchUpdateTasksDs(BatchUpdateTasksDsRequest req)
-        {
-            return InternalRequestAsync<BatchUpdateTasksDsResponse>(req, "BatchUpdateTasksDs");
-        }
-
-        /// <summary>
-        /// 批量更新任务Ds
-        /// </summary>
-        /// <param name="req"><see cref="BatchUpdateTasksDsRequest"/></param>
-        /// <returns><see cref="BatchUpdateTasksDsResponse"/></returns>
-        public BatchUpdateTasksDsResponse BatchUpdateTasksDsSync(BatchUpdateTasksDsRequest req)
-        {
-            return InternalRequestAsync<BatchUpdateTasksDsResponse>(req, "BatchUpdateTasksDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 判断告警规则重名
         /// </summary>
         /// <param name="req"><see cref="CheckAlarmRegularNameExistRequest"/></param>
@@ -670,27 +517,6 @@ namespace TencentCloud.Wedata.V20210820
         public CheckAlarmRegularNameExistResponse CheckAlarmRegularNameExistSync(CheckAlarmRegularNameExistRequest req)
         {
             return InternalRequestAsync<CheckAlarmRegularNameExistResponse>(req, "CheckAlarmRegularNameExist")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 新建用户自定义函数组件检查
-        /// </summary>
-        /// <param name="req"><see cref="CheckCustomFunctionPremiseRequest"/></param>
-        /// <returns><see cref="CheckCustomFunctionPremiseResponse"/></returns>
-        public Task<CheckCustomFunctionPremiseResponse> CheckCustomFunctionPremise(CheckCustomFunctionPremiseRequest req)
-        {
-            return InternalRequestAsync<CheckCustomFunctionPremiseResponse>(req, "CheckCustomFunctionPremise");
-        }
-
-        /// <summary>
-        /// 新建用户自定义函数组件检查
-        /// </summary>
-        /// <param name="req"><see cref="CheckCustomFunctionPremiseRequest"/></param>
-        /// <returns><see cref="CheckCustomFunctionPremiseResponse"/></returns>
-        public CheckCustomFunctionPremiseResponse CheckCustomFunctionPremiseSync(CheckCustomFunctionPremiseRequest req)
-        {
-            return InternalRequestAsync<CheckCustomFunctionPremiseResponse>(req, "CheckCustomFunctionPremise")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -800,69 +626,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 检查任务名称是否重复
-        /// </summary>
-        /// <param name="req"><see cref="CheckTaskNameExistDsRequest"/></param>
-        /// <returns><see cref="CheckTaskNameExistDsResponse"/></returns>
-        public Task<CheckTaskNameExistDsResponse> CheckTaskNameExistDs(CheckTaskNameExistDsRequest req)
-        {
-            return InternalRequestAsync<CheckTaskNameExistDsResponse>(req, "CheckTaskNameExistDs");
-        }
-
-        /// <summary>
-        /// 检查任务名称是否重复
-        /// </summary>
-        /// <param name="req"><see cref="CheckTaskNameExistDsRequest"/></param>
-        /// <returns><see cref="CheckTaskNameExistDsResponse"/></returns>
-        public CheckTaskNameExistDsResponse CheckTaskNameExistDsSync(CheckTaskNameExistDsRequest req)
-        {
-            return InternalRequestAsync<CheckTaskNameExistDsResponse>(req, "CheckTaskNameExistDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 检查操作用户对所选任务是否有操作权限, 用于新建跨工作流任务场景中展示审批提示操作
-        /// </summary>
-        /// <param name="req"><see cref="CheckTaskPriorityDsRequest"/></param>
-        /// <returns><see cref="CheckTaskPriorityDsResponse"/></returns>
-        public Task<CheckTaskPriorityDsResponse> CheckTaskPriorityDs(CheckTaskPriorityDsRequest req)
-        {
-            return InternalRequestAsync<CheckTaskPriorityDsResponse>(req, "CheckTaskPriorityDs");
-        }
-
-        /// <summary>
-        /// 检查操作用户对所选任务是否有操作权限, 用于新建跨工作流任务场景中展示审批提示操作
-        /// </summary>
-        /// <param name="req"><see cref="CheckTaskPriorityDsRequest"/></param>
-        /// <returns><see cref="CheckTaskPriorityDsResponse"/></returns>
-        public CheckTaskPriorityDsResponse CheckTaskPriorityDsSync(CheckTaskPriorityDsRequest req)
-        {
-            return InternalRequestAsync<CheckTaskPriorityDsResponse>(req, "CheckTaskPriorityDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 清空回收站任务
-        /// </summary>
-        /// <param name="req"><see cref="ClearRecycleTaskRequest"/></param>
-        /// <returns><see cref="ClearRecycleTaskResponse"/></returns>
-        public Task<ClearRecycleTaskResponse> ClearRecycleTask(ClearRecycleTaskRequest req)
-        {
-            return InternalRequestAsync<ClearRecycleTaskResponse>(req, "ClearRecycleTask");
-        }
-
-        /// <summary>
-        /// 清空回收站任务
-        /// </summary>
-        /// <param name="req"><see cref="ClearRecycleTaskRequest"/></param>
-        /// <returns><see cref="ClearRecycleTaskResponse"/></returns>
-        public ClearRecycleTaskResponse ClearRecycleTaskSync(ClearRecycleTaskRequest req)
-        {
-            return InternalRequestAsync<ClearRecycleTaskResponse>(req, "ClearRecycleTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 提交数据导出任务
         /// </summary>
         /// <param name="req"><see cref="CommitExportTaskRequest"/></param>
@@ -947,90 +710,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 工作流版本提交
-        /// </summary>
-        /// <param name="req"><see cref="CommitWorkflowRequest"/></param>
-        /// <returns><see cref="CommitWorkflowResponse"/></returns>
-        public Task<CommitWorkflowResponse> CommitWorkflow(CommitWorkflowRequest req)
-        {
-            return InternalRequestAsync<CommitWorkflowResponse>(req, "CommitWorkflow");
-        }
-
-        /// <summary>
-        /// 工作流版本提交
-        /// </summary>
-        /// <param name="req"><see cref="CommitWorkflowRequest"/></param>
-        /// <returns><see cref="CommitWorkflowResponse"/></returns>
-        public CommitWorkflowResponse CommitWorkflowSync(CommitWorkflowRequest req)
-        {
-            return InternalRequestAsync<CommitWorkflowResponse>(req, "CommitWorkflow")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 对比任务版本
-        /// </summary>
-        /// <param name="req"><see cref="CompareDsTaskVersionInfoRequest"/></param>
-        /// <returns><see cref="CompareDsTaskVersionInfoResponse"/></returns>
-        public Task<CompareDsTaskVersionInfoResponse> CompareDsTaskVersionInfo(CompareDsTaskVersionInfoRequest req)
-        {
-            return InternalRequestAsync<CompareDsTaskVersionInfoResponse>(req, "CompareDsTaskVersionInfo");
-        }
-
-        /// <summary>
-        /// 对比任务版本
-        /// </summary>
-        /// <param name="req"><see cref="CompareDsTaskVersionInfoRequest"/></param>
-        /// <returns><see cref="CompareDsTaskVersionInfoResponse"/></returns>
-        public CompareDsTaskVersionInfoResponse CompareDsTaskVersionInfoSync(CompareDsTaskVersionInfoRequest req)
-        {
-            return InternalRequestAsync<CompareDsTaskVersionInfoResponse>(req, "CompareDsTaskVersionInfo")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 复制任务Ds
-        /// </summary>
-        /// <param name="req"><see cref="CopyTaskDsRequest"/></param>
-        /// <returns><see cref="CopyTaskDsResponse"/></returns>
-        public Task<CopyTaskDsResponse> CopyTaskDs(CopyTaskDsRequest req)
-        {
-            return InternalRequestAsync<CopyTaskDsResponse>(req, "CopyTaskDs");
-        }
-
-        /// <summary>
-        /// 复制任务Ds
-        /// </summary>
-        /// <param name="req"><see cref="CopyTaskDsRequest"/></param>
-        /// <returns><see cref="CopyTaskDsResponse"/></returns>
-        public CopyTaskDsResponse CopyTaskDsSync(CopyTaskDsRequest req)
-        {
-            return InternalRequestAsync<CopyTaskDsResponse>(req, "CopyTaskDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 复制工作流
-        /// </summary>
-        /// <param name="req"><see cref="CopyWorkflowDsRequest"/></param>
-        /// <returns><see cref="CopyWorkflowDsResponse"/></returns>
-        public Task<CopyWorkflowDsResponse> CopyWorkflowDs(CopyWorkflowDsRequest req)
-        {
-            return InternalRequestAsync<CopyWorkflowDsResponse>(req, "CopyWorkflowDs");
-        }
-
-        /// <summary>
-        /// 复制工作流
-        /// </summary>
-        /// <param name="req"><see cref="CopyWorkflowDsRequest"/></param>
-        /// <returns><see cref="CopyWorkflowDsResponse"/></returns>
-        public CopyWorkflowDsResponse CopyWorkflowDsSync(CopyWorkflowDsRequest req)
-        {
-            return InternalRequestAsync<CopyWorkflowDsResponse>(req, "CopyWorkflowDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 统计任务实例状态
         /// </summary>
         /// <param name="req"><see cref="CountOpsInstanceStateRequest"/></param>
@@ -1069,27 +748,6 @@ namespace TencentCloud.Wedata.V20210820
         public CreateBaselineResponse CreateBaselineSync(CreateBaselineRequest req)
         {
             return InternalRequestAsync<CreateBaselineResponse>(req, "CreateBaseline")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 创建用户数据开发浏览历史
-        /// </summary>
-        /// <param name="req"><see cref="CreateBrowsingHistoryRequest"/></param>
-        /// <returns><see cref="CreateBrowsingHistoryResponse"/></returns>
-        public Task<CreateBrowsingHistoryResponse> CreateBrowsingHistory(CreateBrowsingHistoryRequest req)
-        {
-            return InternalRequestAsync<CreateBrowsingHistoryResponse>(req, "CreateBrowsingHistory");
-        }
-
-        /// <summary>
-        /// 创建用户数据开发浏览历史
-        /// </summary>
-        /// <param name="req"><see cref="CreateBrowsingHistoryRequest"/></param>
-        /// <returns><see cref="CreateBrowsingHistoryResponse"/></returns>
-        public CreateBrowsingHistoryResponse CreateBrowsingHistorySync(CreateBrowsingHistoryRequest req)
-        {
-            return InternalRequestAsync<CreateBrowsingHistoryResponse>(req, "CreateBrowsingHistory")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1155,27 +813,6 @@ namespace TencentCloud.Wedata.V20210820
         public CreateDsFolderResponse CreateDsFolderSync(CreateDsFolderRequest req)
         {
             return InternalRequestAsync<CreateDsFolderResponse>(req, "CreateDsFolder")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 创建开发空间版本
-        /// </summary>
-        /// <param name="req"><see cref="CreateFileVersionRequest"/></param>
-        /// <returns><see cref="CreateFileVersionResponse"/></returns>
-        public Task<CreateFileVersionResponse> CreateFileVersion(CreateFileVersionRequest req)
-        {
-            return InternalRequestAsync<CreateFileVersionResponse>(req, "CreateFileVersion");
-        }
-
-        /// <summary>
-        /// 创建开发空间版本
-        /// </summary>
-        /// <param name="req"><see cref="CreateFileVersionRequest"/></param>
-        /// <returns><see cref="CreateFileVersionResponse"/></returns>
-        public CreateFileVersionResponse CreateFileVersionSync(CreateFileVersionRequest req)
-        {
-            return InternalRequestAsync<CreateFileVersionResponse>(req, "CreateFileVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1308,27 +945,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 创建任务连接
-        /// </summary>
-        /// <param name="req"><see cref="CreateLinkRequest"/></param>
-        /// <returns><see cref="CreateLinkResponse"/></returns>
-        public Task<CreateLinkResponse> CreateLink(CreateLinkRequest req)
-        {
-            return InternalRequestAsync<CreateLinkResponse>(req, "CreateLink");
-        }
-
-        /// <summary>
-        /// 创建任务连接
-        /// </summary>
-        /// <param name="req"><see cref="CreateLinkRequest"/></param>
-        /// <returns><see cref="CreateLinkResponse"/></returns>
-        public CreateLinkResponse CreateLinkSync(CreateLinkRequest req)
-        {
-            return InternalRequestAsync<CreateLinkResponse>(req, "CreateLink")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 创建离线任务
         /// </summary>
         /// <param name="req"><see cref="CreateOfflineTaskRequest"/></param>
@@ -1388,69 +1004,6 @@ namespace TencentCloud.Wedata.V20210820
         public CreateOrUpdateResourceResponse CreateOrUpdateResourceSync(CreateOrUpdateResourceRequest req)
         {
             return InternalRequestAsync<CreateOrUpdateResourceResponse>(req, "CreateOrUpdateResource")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 新建文件夹
-        /// </summary>
-        /// <param name="req"><see cref="CreatePathRequest"/></param>
-        /// <returns><see cref="CreatePathResponse"/></returns>
-        public Task<CreatePathResponse> CreatePath(CreatePathRequest req)
-        {
-            return InternalRequestAsync<CreatePathResponse>(req, "CreatePath");
-        }
-
-        /// <summary>
-        /// 新建文件夹
-        /// </summary>
-        /// <param name="req"><see cref="CreatePathRequest"/></param>
-        /// <returns><see cref="CreatePathResponse"/></returns>
-        public CreatePathResponse CreatePathSync(CreatePathRequest req)
-        {
-            return InternalRequestAsync<CreatePathResponse>(req, "CreatePath")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 创建项目参数
-        /// </summary>
-        /// <param name="req"><see cref="CreateProjectParamDsRequest"/></param>
-        /// <returns><see cref="CreateProjectParamDsResponse"/></returns>
-        public Task<CreateProjectParamDsResponse> CreateProjectParamDs(CreateProjectParamDsRequest req)
-        {
-            return InternalRequestAsync<CreateProjectParamDsResponse>(req, "CreateProjectParamDs");
-        }
-
-        /// <summary>
-        /// 创建项目参数
-        /// </summary>
-        /// <param name="req"><see cref="CreateProjectParamDsRequest"/></param>
-        /// <returns><see cref="CreateProjectParamDsResponse"/></returns>
-        public CreateProjectParamDsResponse CreateProjectParamDsSync(CreateProjectParamDsRequest req)
-        {
-            return InternalRequestAsync<CreateProjectParamDsResponse>(req, "CreateProjectParamDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 资源管理-创建资源目录
-        /// </summary>
-        /// <param name="req"><see cref="CreateResourceDirectoryRequest"/></param>
-        /// <returns><see cref="CreateResourceDirectoryResponse"/></returns>
-        public Task<CreateResourceDirectoryResponse> CreateResourceDirectory(CreateResourceDirectoryRequest req)
-        {
-            return InternalRequestAsync<CreateResourceDirectoryResponse>(req, "CreateResourceDirectory");
-        }
-
-        /// <summary>
-        /// 资源管理-创建资源目录
-        /// </summary>
-        /// <param name="req"><see cref="CreateResourceDirectoryRequest"/></param>
-        /// <returns><see cref="CreateResourceDirectoryResponse"/></returns>
-        public CreateResourceDirectoryResponse CreateResourceDirectorySync(CreateResourceDirectoryRequest req)
-        {
-            return InternalRequestAsync<CreateResourceDirectoryResponse>(req, "CreateResourceDirectory")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1518,27 +1071,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 编排空间导入开发空间脚本。
-        /// </summary>
-        /// <param name="req"><see cref="CreateScriptsImportTasksDsRequest"/></param>
-        /// <returns><see cref="CreateScriptsImportTasksDsResponse"/></returns>
-        public Task<CreateScriptsImportTasksDsResponse> CreateScriptsImportTasksDs(CreateScriptsImportTasksDsRequest req)
-        {
-            return InternalRequestAsync<CreateScriptsImportTasksDsResponse>(req, "CreateScriptsImportTasksDs");
-        }
-
-        /// <summary>
-        /// 编排空间导入开发空间脚本。
-        /// </summary>
-        /// <param name="req"><see cref="CreateScriptsImportTasksDsRequest"/></param>
-        /// <returns><see cref="CreateScriptsImportTasksDsResponse"/></returns>
-        public CreateScriptsImportTasksDsResponse CreateScriptsImportTasksDsSync(CreateScriptsImportTasksDsRequest req)
-        {
-            return InternalRequestAsync<CreateScriptsImportTasksDsResponse>(req, "CreateScriptsImportTasksDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 创建任务
         /// </summary>
@@ -1579,153 +1111,6 @@ namespace TencentCloud.Wedata.V20210820
         public CreateTaskAlarmRegularResponse CreateTaskAlarmRegularSync(CreateTaskAlarmRegularRequest req)
         {
             return InternalRequestAsync<CreateTaskAlarmRegularResponse>(req, "CreateTaskAlarmRegular")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 创建任务Ds
-        /// </summary>
-        /// <param name="req"><see cref="CreateTaskDsRequest"/></param>
-        /// <returns><see cref="CreateTaskDsResponse"/></returns>
-        public Task<CreateTaskDsResponse> CreateTaskDs(CreateTaskDsRequest req)
-        {
-            return InternalRequestAsync<CreateTaskDsResponse>(req, "CreateTaskDs");
-        }
-
-        /// <summary>
-        /// 创建任务Ds
-        /// </summary>
-        /// <param name="req"><see cref="CreateTaskDsRequest"/></param>
-        /// <returns><see cref="CreateTaskDsResponse"/></returns>
-        public CreateTaskDsResponse CreateTaskDsSync(CreateTaskDsRequest req)
-        {
-            return InternalRequestAsync<CreateTaskDsResponse>(req, "CreateTaskDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 编排空间-工作流-创建任务文件夹
-        /// </summary>
-        /// <param name="req"><see cref="CreateTaskFolderRequest"/></param>
-        /// <returns><see cref="CreateTaskFolderResponse"/></returns>
-        public Task<CreateTaskFolderResponse> CreateTaskFolder(CreateTaskFolderRequest req)
-        {
-            return InternalRequestAsync<CreateTaskFolderResponse>(req, "CreateTaskFolder");
-        }
-
-        /// <summary>
-        /// 编排空间-工作流-创建任务文件夹
-        /// </summary>
-        /// <param name="req"><see cref="CreateTaskFolderRequest"/></param>
-        /// <returns><see cref="CreateTaskFolderResponse"/></returns>
-        public CreateTaskFolderResponse CreateTaskFolderSync(CreateTaskFolderRequest req)
-        {
-            return InternalRequestAsync<CreateTaskFolderResponse>(req, "CreateTaskFolder")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 设置任务输入参数
-        /// </summary>
-        /// <param name="req"><see cref="CreateTaskInParamDsRequest"/></param>
-        /// <returns><see cref="CreateTaskInParamDsResponse"/></returns>
-        public Task<CreateTaskInParamDsResponse> CreateTaskInParamDs(CreateTaskInParamDsRequest req)
-        {
-            return InternalRequestAsync<CreateTaskInParamDsResponse>(req, "CreateTaskInParamDs");
-        }
-
-        /// <summary>
-        /// 设置任务输入参数
-        /// </summary>
-        /// <param name="req"><see cref="CreateTaskInParamDsRequest"/></param>
-        /// <returns><see cref="CreateTaskInParamDsResponse"/></returns>
-        public CreateTaskInParamDsResponse CreateTaskInParamDsSync(CreateTaskInParamDsRequest req)
-        {
-            return InternalRequestAsync<CreateTaskInParamDsResponse>(req, "CreateTaskInParamDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 设置任务输出参数
-        /// </summary>
-        /// <param name="req"><see cref="CreateTaskOutParamDsRequest"/></param>
-        /// <returns><see cref="CreateTaskOutParamDsResponse"/></returns>
-        public Task<CreateTaskOutParamDsResponse> CreateTaskOutParamDs(CreateTaskOutParamDsRequest req)
-        {
-            return InternalRequestAsync<CreateTaskOutParamDsResponse>(req, "CreateTaskOutParamDs");
-        }
-
-        /// <summary>
-        /// 设置任务输出参数
-        /// </summary>
-        /// <param name="req"><see cref="CreateTaskOutParamDsRequest"/></param>
-        /// <returns><see cref="CreateTaskOutParamDsResponse"/></returns>
-        public CreateTaskOutParamDsResponse CreateTaskOutParamDsSync(CreateTaskOutParamDsRequest req)
-        {
-            return InternalRequestAsync<CreateTaskOutParamDsResponse>(req, "CreateTaskOutParamDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 批量创建登记项
-        /// </summary>
-        /// <param name="req"><see cref="CreateTaskOutputRegistriesRequest"/></param>
-        /// <returns><see cref="CreateTaskOutputRegistriesResponse"/></returns>
-        public Task<CreateTaskOutputRegistriesResponse> CreateTaskOutputRegistries(CreateTaskOutputRegistriesRequest req)
-        {
-            return InternalRequestAsync<CreateTaskOutputRegistriesResponse>(req, "CreateTaskOutputRegistries");
-        }
-
-        /// <summary>
-        /// 批量创建登记项
-        /// </summary>
-        /// <param name="req"><see cref="CreateTaskOutputRegistriesRequest"/></param>
-        /// <returns><see cref="CreateTaskOutputRegistriesResponse"/></returns>
-        public CreateTaskOutputRegistriesResponse CreateTaskOutputRegistriesSync(CreateTaskOutputRegistriesRequest req)
-        {
-            return InternalRequestAsync<CreateTaskOutputRegistriesResponse>(req, "CreateTaskOutputRegistries")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 新增或编辑产出登记项
-        /// </summary>
-        /// <param name="req"><see cref="CreateTaskOutputRegistryRequest"/></param>
-        /// <returns><see cref="CreateTaskOutputRegistryResponse"/></returns>
-        public Task<CreateTaskOutputRegistryResponse> CreateTaskOutputRegistry(CreateTaskOutputRegistryRequest req)
-        {
-            return InternalRequestAsync<CreateTaskOutputRegistryResponse>(req, "CreateTaskOutputRegistry");
-        }
-
-        /// <summary>
-        /// 新增或编辑产出登记项
-        /// </summary>
-        /// <param name="req"><see cref="CreateTaskOutputRegistryRequest"/></param>
-        /// <returns><see cref="CreateTaskOutputRegistryResponse"/></returns>
-        public CreateTaskOutputRegistryResponse CreateTaskOutputRegistrySync(CreateTaskOutputRegistryRequest req)
-        {
-            return InternalRequestAsync<CreateTaskOutputRegistryResponse>(req, "CreateTaskOutputRegistry")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 任务引用参数
-        /// </summary>
-        /// <param name="req"><see cref="CreateTaskParamDsRequest"/></param>
-        /// <returns><see cref="CreateTaskParamDsResponse"/></returns>
-        public Task<CreateTaskParamDsResponse> CreateTaskParamDs(CreateTaskParamDsRequest req)
-        {
-            return InternalRequestAsync<CreateTaskParamDsResponse>(req, "CreateTaskParamDs");
-        }
-
-        /// <summary>
-        /// 任务引用参数
-        /// </summary>
-        /// <param name="req"><see cref="CreateTaskParamDsRequest"/></param>
-        /// <returns><see cref="CreateTaskParamDsResponse"/></returns>
-        public CreateTaskParamDsResponse CreateTaskParamDsSync(CreateTaskParamDsRequest req)
-        {
-            return InternalRequestAsync<CreateTaskParamDsResponse>(req, "CreateTaskParamDs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1774,27 +1159,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 创建工作流
-        /// </summary>
-        /// <param name="req"><see cref="CreateWorkflowDsRequest"/></param>
-        /// <returns><see cref="CreateWorkflowDsResponse"/></returns>
-        public Task<CreateWorkflowDsResponse> CreateWorkflowDs(CreateWorkflowDsRequest req)
-        {
-            return InternalRequestAsync<CreateWorkflowDsResponse>(req, "CreateWorkflowDs");
-        }
-
-        /// <summary>
-        /// 创建工作流
-        /// </summary>
-        /// <param name="req"><see cref="CreateWorkflowDsRequest"/></param>
-        /// <returns><see cref="CreateWorkflowDsResponse"/></returns>
-        public CreateWorkflowDsResponse CreateWorkflowDsSync(CreateWorkflowDsRequest req)
-        {
-            return InternalRequestAsync<CreateWorkflowDsResponse>(req, "CreateWorkflowDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 拉取dag实例
         /// </summary>
         /// <param name="req"><see cref="DagInstancesRequest"/></param>
@@ -1833,27 +1197,6 @@ namespace TencentCloud.Wedata.V20210820
         public DeleteBaselineResponse DeleteBaselineSync(DeleteBaselineRequest req)
         {
             return InternalRequestAsync<DeleteBaselineResponse>(req, "DeleteBaseline")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 批量删除工作流
-        /// </summary>
-        /// <param name="req"><see cref="DeleteBatchWorkflowDsRequest"/></param>
-        /// <returns><see cref="DeleteBatchWorkflowDsResponse"/></returns>
-        public Task<DeleteBatchWorkflowDsResponse> DeleteBatchWorkflowDs(DeleteBatchWorkflowDsRequest req)
-        {
-            return InternalRequestAsync<DeleteBatchWorkflowDsResponse>(req, "DeleteBatchWorkflowDs");
-        }
-
-        /// <summary>
-        /// 批量删除工作流
-        /// </summary>
-        /// <param name="req"><see cref="DeleteBatchWorkflowDsRequest"/></param>
-        /// <returns><see cref="DeleteBatchWorkflowDsResponse"/></returns>
-        public DeleteBatchWorkflowDsResponse DeleteBatchWorkflowDsSync(DeleteBatchWorkflowDsRequest req)
-        {
-            return InternalRequestAsync<DeleteBatchWorkflowDsResponse>(req, "DeleteBatchWorkflowDs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1902,69 +1245,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 删除事件
-        /// </summary>
-        /// <param name="req"><see cref="DeleteDsEventRequest"/></param>
-        /// <returns><see cref="DeleteDsEventResponse"/></returns>
-        public Task<DeleteDsEventResponse> DeleteDsEvent(DeleteDsEventRequest req)
-        {
-            return InternalRequestAsync<DeleteDsEventResponse>(req, "DeleteDsEvent");
-        }
-
-        /// <summary>
-        /// 删除事件
-        /// </summary>
-        /// <param name="req"><see cref="DeleteDsEventRequest"/></param>
-        /// <returns><see cref="DeleteDsEventResponse"/></returns>
-        public DeleteDsEventResponse DeleteDsEventSync(DeleteDsEventRequest req)
-        {
-            return InternalRequestAsync<DeleteDsEventResponse>(req, "DeleteDsEvent")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 删除事件监听者
-        /// </summary>
-        /// <param name="req"><see cref="DeleteDsEventListenerRequest"/></param>
-        /// <returns><see cref="DeleteDsEventListenerResponse"/></returns>
-        public Task<DeleteDsEventListenerResponse> DeleteDsEventListener(DeleteDsEventListenerRequest req)
-        {
-            return InternalRequestAsync<DeleteDsEventListenerResponse>(req, "DeleteDsEventListener");
-        }
-
-        /// <summary>
-        /// 删除事件监听者
-        /// </summary>
-        /// <param name="req"><see cref="DeleteDsEventListenerRequest"/></param>
-        /// <returns><see cref="DeleteDsEventListenerResponse"/></returns>
-        public DeleteDsEventListenerResponse DeleteDsEventListenerSync(DeleteDsEventListenerRequest req)
-        {
-            return InternalRequestAsync<DeleteDsEventListenerResponse>(req, "DeleteDsEventListener")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 删除事件发布者
-        /// </summary>
-        /// <param name="req"><see cref="DeleteDsEventPublisherRequest"/></param>
-        /// <returns><see cref="DeleteDsEventPublisherResponse"/></returns>
-        public Task<DeleteDsEventPublisherResponse> DeleteDsEventPublisher(DeleteDsEventPublisherRequest req)
-        {
-            return InternalRequestAsync<DeleteDsEventPublisherResponse>(req, "DeleteDsEventPublisher");
-        }
-
-        /// <summary>
-        /// 删除事件发布者
-        /// </summary>
-        /// <param name="req"><see cref="DeleteDsEventPublisherRequest"/></param>
-        /// <returns><see cref="DeleteDsEventPublisherResponse"/></returns>
-        public DeleteDsEventPublisherResponse DeleteDsEventPublisherSync(DeleteDsEventPublisherRequest req)
-        {
-            return InternalRequestAsync<DeleteDsEventPublisherResponse>(req, "DeleteDsEventPublisher")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 编排空间-删除文件夹
         /// </summary>
         /// <param name="req"><see cref="DeleteDsFolderRequest"/></param>
@@ -1982,27 +1262,6 @@ namespace TencentCloud.Wedata.V20210820
         public DeleteDsFolderResponse DeleteDsFolderSync(DeleteDsFolderRequest req)
         {
             return InternalRequestAsync<DeleteDsFolderResponse>(req, "DeleteDsFolder")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 通过任务ID删除所有事件
-        /// </summary>
-        /// <param name="req"><see cref="DeleteEventListenerByTaskIdRequest"/></param>
-        /// <returns><see cref="DeleteEventListenerByTaskIdResponse"/></returns>
-        public Task<DeleteEventListenerByTaskIdResponse> DeleteEventListenerByTaskId(DeleteEventListenerByTaskIdRequest req)
-        {
-            return InternalRequestAsync<DeleteEventListenerByTaskIdResponse>(req, "DeleteEventListenerByTaskId");
-        }
-
-        /// <summary>
-        /// 通过任务ID删除所有事件
-        /// </summary>
-        /// <param name="req"><see cref="DeleteEventListenerByTaskIdRequest"/></param>
-        /// <returns><see cref="DeleteEventListenerByTaskIdResponse"/></returns>
-        public DeleteEventListenerByTaskIdResponse DeleteEventListenerByTaskIdSync(DeleteEventListenerByTaskIdRequest req)
-        {
-            return InternalRequestAsync<DeleteEventListenerByTaskIdResponse>(req, "DeleteEventListenerByTaskId")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2135,27 +1394,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 删除任务连接
-        /// </summary>
-        /// <param name="req"><see cref="DeleteLinkRequest"/></param>
-        /// <returns><see cref="DeleteLinkResponse"/></returns>
-        public Task<DeleteLinkResponse> DeleteLink(DeleteLinkRequest req)
-        {
-            return InternalRequestAsync<DeleteLinkResponse>(req, "DeleteLink");
-        }
-
-        /// <summary>
-        /// 删除任务连接
-        /// </summary>
-        /// <param name="req"><see cref="DeleteLinkRequest"/></param>
-        /// <returns><see cref="DeleteLinkResponse"/></returns>
-        public DeleteLinkResponse DeleteLinkSync(DeleteLinkRequest req)
-        {
-            return InternalRequestAsync<DeleteLinkResponse>(req, "DeleteLink")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 删除任务
         /// </summary>
         /// <param name="req"><see cref="DeleteOfflineTaskRequest"/></param>
@@ -2198,27 +1436,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 删除项目参数版本
-        /// </summary>
-        /// <param name="req"><see cref="DeleteProjectParamVersionDsRequest"/></param>
-        /// <returns><see cref="DeleteProjectParamVersionDsResponse"/></returns>
-        public Task<DeleteProjectParamVersionDsResponse> DeleteProjectParamVersionDs(DeleteProjectParamVersionDsRequest req)
-        {
-            return InternalRequestAsync<DeleteProjectParamVersionDsResponse>(req, "DeleteProjectParamVersionDs");
-        }
-
-        /// <summary>
-        /// 删除项目参数版本
-        /// </summary>
-        /// <param name="req"><see cref="DeleteProjectParamVersionDsRequest"/></param>
-        /// <returns><see cref="DeleteProjectParamVersionDsResponse"/></returns>
-        public DeleteProjectParamVersionDsResponse DeleteProjectParamVersionDsSync(DeleteProjectParamVersionDsRequest req)
-        {
-            return InternalRequestAsync<DeleteProjectParamVersionDsResponse>(req, "DeleteProjectParamVersionDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 删除项目用户
         /// </summary>
         /// <param name="req"><see cref="DeleteProjectUsersRequest"/></param>
@@ -2236,48 +1453,6 @@ namespace TencentCloud.Wedata.V20210820
         public DeleteProjectUsersResponse DeleteProjectUsersSync(DeleteProjectUsersRequest req)
         {
             return InternalRequestAsync<DeleteProjectUsersResponse>(req, "DeleteProjectUsers")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 批量删除任务提交记录列表
-        /// </summary>
-        /// <param name="req"><see cref="DeleteRecordListRequest"/></param>
-        /// <returns><see cref="DeleteRecordListResponse"/></returns>
-        public Task<DeleteRecordListResponse> DeleteRecordList(DeleteRecordListRequest req)
-        {
-            return InternalRequestAsync<DeleteRecordListResponse>(req, "DeleteRecordList");
-        }
-
-        /// <summary>
-        /// 批量删除任务提交记录列表
-        /// </summary>
-        /// <param name="req"><see cref="DeleteRecordListRequest"/></param>
-        /// <returns><see cref="DeleteRecordListResponse"/></returns>
-        public DeleteRecordListResponse DeleteRecordListSync(DeleteRecordListRequest req)
-        {
-            return InternalRequestAsync<DeleteRecordListResponse>(req, "DeleteRecordList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 删除回收站任务
-        /// </summary>
-        /// <param name="req"><see cref="DeleteRecycleTaskRequest"/></param>
-        /// <returns><see cref="DeleteRecycleTaskResponse"/></returns>
-        public Task<DeleteRecycleTaskResponse> DeleteRecycleTask(DeleteRecycleTaskRequest req)
-        {
-            return InternalRequestAsync<DeleteRecycleTaskResponse>(req, "DeleteRecycleTask");
-        }
-
-        /// <summary>
-        /// 删除回收站任务
-        /// </summary>
-        /// <param name="req"><see cref="DeleteRecycleTaskRequest"/></param>
-        /// <returns><see cref="DeleteRecycleTaskResponse"/></returns>
-        public DeleteRecycleTaskResponse DeleteRecycleTaskSync(DeleteRecycleTaskRequest req)
-        {
-            return InternalRequestAsync<DeleteRecycleTaskResponse>(req, "DeleteRecycleTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2341,27 +1516,6 @@ namespace TencentCloud.Wedata.V20210820
         public DeleteResourceFilesResponse DeleteResourceFilesSync(DeleteResourceFilesRequest req)
         {
             return InternalRequestAsync<DeleteResourceFilesResponse>(req, "DeleteResourceFiles")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 资源管理-删除资源目录
-        /// </summary>
-        /// <param name="req"><see cref="DeleteResourcePathRequest"/></param>
-        /// <returns><see cref="DeleteResourcePathResponse"/></returns>
-        public Task<DeleteResourcePathResponse> DeleteResourcePath(DeleteResourcePathRequest req)
-        {
-            return InternalRequestAsync<DeleteResourcePathResponse>(req, "DeleteResourcePath");
-        }
-
-        /// <summary>
-        /// 资源管理-删除资源目录
-        /// </summary>
-        /// <param name="req"><see cref="DeleteResourcePathRequest"/></param>
-        /// <returns><see cref="DeleteResourcePathResponse"/></returns>
-        public DeleteResourcePathResponse DeleteResourcePathSync(DeleteResourcePathRequest req)
-        {
-            return InternalRequestAsync<DeleteResourcePathResponse>(req, "DeleteResourcePath")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2446,90 +1600,6 @@ namespace TencentCloud.Wedata.V20210820
         public DeleteTaskDsResponse DeleteTaskDsSync(DeleteTaskDsRequest req)
         {
             return InternalRequestAsync<DeleteTaskDsResponse>(req, "DeleteTaskDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 编排空间-工作流-删除任务文件夹
-        /// </summary>
-        /// <param name="req"><see cref="DeleteTaskFolderRequest"/></param>
-        /// <returns><see cref="DeleteTaskFolderResponse"/></returns>
-        public Task<DeleteTaskFolderResponse> DeleteTaskFolder(DeleteTaskFolderRequest req)
-        {
-            return InternalRequestAsync<DeleteTaskFolderResponse>(req, "DeleteTaskFolder");
-        }
-
-        /// <summary>
-        /// 编排空间-工作流-删除任务文件夹
-        /// </summary>
-        /// <param name="req"><see cref="DeleteTaskFolderRequest"/></param>
-        /// <returns><see cref="DeleteTaskFolderResponse"/></returns>
-        public DeleteTaskFolderResponse DeleteTaskFolderSync(DeleteTaskFolderRequest req)
-        {
-            return InternalRequestAsync<DeleteTaskFolderResponse>(req, "DeleteTaskFolder")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 删除任务输入参数
-        /// </summary>
-        /// <param name="req"><see cref="DeleteTaskInParamDsRequest"/></param>
-        /// <returns><see cref="DeleteTaskInParamDsResponse"/></returns>
-        public Task<DeleteTaskInParamDsResponse> DeleteTaskInParamDs(DeleteTaskInParamDsRequest req)
-        {
-            return InternalRequestAsync<DeleteTaskInParamDsResponse>(req, "DeleteTaskInParamDs");
-        }
-
-        /// <summary>
-        /// 删除任务输入参数
-        /// </summary>
-        /// <param name="req"><see cref="DeleteTaskInParamDsRequest"/></param>
-        /// <returns><see cref="DeleteTaskInParamDsResponse"/></returns>
-        public DeleteTaskInParamDsResponse DeleteTaskInParamDsSync(DeleteTaskInParamDsRequest req)
-        {
-            return InternalRequestAsync<DeleteTaskInParamDsResponse>(req, "DeleteTaskInParamDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 删除任务输出参数
-        /// </summary>
-        /// <param name="req"><see cref="DeleteTaskOutParamDsRequest"/></param>
-        /// <returns><see cref="DeleteTaskOutParamDsResponse"/></returns>
-        public Task<DeleteTaskOutParamDsResponse> DeleteTaskOutParamDs(DeleteTaskOutParamDsRequest req)
-        {
-            return InternalRequestAsync<DeleteTaskOutParamDsResponse>(req, "DeleteTaskOutParamDs");
-        }
-
-        /// <summary>
-        /// 删除任务输出参数
-        /// </summary>
-        /// <param name="req"><see cref="DeleteTaskOutParamDsRequest"/></param>
-        /// <returns><see cref="DeleteTaskOutParamDsResponse"/></returns>
-        public DeleteTaskOutParamDsResponse DeleteTaskOutParamDsSync(DeleteTaskOutParamDsRequest req)
-        {
-            return InternalRequestAsync<DeleteTaskOutParamDsResponse>(req, "DeleteTaskOutParamDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 删除产出登记项
-        /// </summary>
-        /// <param name="req"><see cref="DeleteTaskOutputRegistryRequest"/></param>
-        /// <returns><see cref="DeleteTaskOutputRegistryResponse"/></returns>
-        public Task<DeleteTaskOutputRegistryResponse> DeleteTaskOutputRegistry(DeleteTaskOutputRegistryRequest req)
-        {
-            return InternalRequestAsync<DeleteTaskOutputRegistryResponse>(req, "DeleteTaskOutputRegistry");
-        }
-
-        /// <summary>
-        /// 删除产出登记项
-        /// </summary>
-        /// <param name="req"><see cref="DeleteTaskOutputRegistryRequest"/></param>
-        /// <returns><see cref="DeleteTaskOutputRegistryResponse"/></returns>
-        public DeleteTaskOutputRegistryResponse DeleteTaskOutputRegistrySync(DeleteTaskOutputRegistryRequest req)
-        {
-            return InternalRequestAsync<DeleteTaskOutputRegistryResponse>(req, "DeleteTaskOutputRegistry")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2637,27 +1707,6 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeAllByFolderNewResponse DescribeAllByFolderNewSync(DescribeAllByFolderNewRequest req)
         {
             return InternalRequestAsync<DescribeAllByFolderNewResponse>(req, "DescribeAllByFolderNew")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询所有参数
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAllParamDsRequest"/></param>
-        /// <returns><see cref="DescribeAllParamDsResponse"/></returns>
-        public Task<DescribeAllParamDsResponse> DescribeAllParamDs(DescribeAllParamDsRequest req)
-        {
-            return InternalRequestAsync<DescribeAllParamDsResponse>(req, "DescribeAllParamDs");
-        }
-
-        /// <summary>
-        /// 查询所有参数
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAllParamDsRequest"/></param>
-        /// <returns><see cref="DescribeAllParamDsResponse"/></returns>
-        public DescribeAllParamDsResponse DescribeAllParamDsSync(DescribeAllParamDsRequest req)
-        {
-            return InternalRequestAsync<DescribeAllParamDsResponse>(req, "DescribeAllParamDs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2893,27 +1942,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 批量获取etl测试运行任务执行状态和日志
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBatchTestRunRequest"/></param>
-        /// <returns><see cref="DescribeBatchTestRunResponse"/></returns>
-        public Task<DescribeBatchTestRunResponse> DescribeBatchTestRun(DescribeBatchTestRunRequest req)
-        {
-            return InternalRequestAsync<DescribeBatchTestRunResponse>(req, "DescribeBatchTestRun");
-        }
-
-        /// <summary>
-        /// 批量获取etl测试运行任务执行状态和日志
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBatchTestRunRequest"/></param>
-        /// <returns><see cref="DescribeBatchTestRunResponse"/></returns>
-        public DescribeBatchTestRunResponse DescribeBatchTestRunSync(DescribeBatchTestRunRequest req)
-        {
-            return InternalRequestAsync<DescribeBatchTestRunResponse>(req, "DescribeBatchTestRun")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 智能运维-事件列表-所属任务/基线过滤列表
         /// </summary>
         /// <param name="req"><see cref="DescribeBelongToRequest"/></param>
@@ -2935,69 +1963,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 查询用户数据开发浏览历史
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBrowsingHistoriesRequest"/></param>
-        /// <returns><see cref="DescribeBrowsingHistoriesResponse"/></returns>
-        public Task<DescribeBrowsingHistoriesResponse> DescribeBrowsingHistories(DescribeBrowsingHistoriesRequest req)
-        {
-            return InternalRequestAsync<DescribeBrowsingHistoriesResponse>(req, "DescribeBrowsingHistories");
-        }
-
-        /// <summary>
-        /// 查询用户数据开发浏览历史
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBrowsingHistoriesRequest"/></param>
-        /// <returns><see cref="DescribeBrowsingHistoriesResponse"/></returns>
-        public DescribeBrowsingHistoriesResponse DescribeBrowsingHistoriesSync(DescribeBrowsingHistoriesRequest req)
-        {
-            return InternalRequestAsync<DescribeBrowsingHistoriesResponse>(req, "DescribeBrowsingHistories")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询子任务信息Ds
-        /// </summary>
-        /// <param name="req"><see cref="DescribeChildrenDsRequest"/></param>
-        /// <returns><see cref="DescribeChildrenDsResponse"/></returns>
-        public Task<DescribeChildrenDsResponse> DescribeChildrenDs(DescribeChildrenDsRequest req)
-        {
-            return InternalRequestAsync<DescribeChildrenDsResponse>(req, "DescribeChildrenDs");
-        }
-
-        /// <summary>
-        /// 查询子任务信息Ds
-        /// </summary>
-        /// <param name="req"><see cref="DescribeChildrenDsRequest"/></param>
-        /// <returns><see cref="DescribeChildrenDsResponse"/></returns>
-        public DescribeChildrenDsResponse DescribeChildrenDsSync(DescribeChildrenDsRequest req)
-        {
-            return InternalRequestAsync<DescribeChildrenDsResponse>(req, "DescribeChildrenDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 开发空间-拉取指定路径目录树
-        /// </summary>
-        /// <param name="req"><see cref="DescribeChildrenPathTreesRequest"/></param>
-        /// <returns><see cref="DescribeChildrenPathTreesResponse"/></returns>
-        public Task<DescribeChildrenPathTreesResponse> DescribeChildrenPathTrees(DescribeChildrenPathTreesRequest req)
-        {
-            return InternalRequestAsync<DescribeChildrenPathTreesResponse>(req, "DescribeChildrenPathTrees");
-        }
-
-        /// <summary>
-        /// 开发空间-拉取指定路径目录树
-        /// </summary>
-        /// <param name="req"><see cref="DescribeChildrenPathTreesRequest"/></param>
-        /// <returns><see cref="DescribeChildrenPathTreesResponse"/></returns>
-        public DescribeChildrenPathTreesResponse DescribeChildrenPathTreesSync(DescribeChildrenPathTreesRequest req)
-        {
-            return InternalRequestAsync<DescribeChildrenPathTreesResponse>(req, "DescribeChildrenPathTrees")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 获取集群命名空间列表
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterNamespaceListRequest"/></param>
@@ -3015,153 +1980,6 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeClusterNamespaceListResponse DescribeClusterNamespaceListSync(DescribeClusterNamespaceListRequest req)
         {
             return InternalRequestAsync<DescribeClusterNamespaceListResponse>(req, "DescribeClusterNamespaceList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询文件或任务详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCodeDetailRequest"/></param>
-        /// <returns><see cref="DescribeCodeDetailResponse"/></returns>
-        public Task<DescribeCodeDetailResponse> DescribeCodeDetail(DescribeCodeDetailRequest req)
-        {
-            return InternalRequestAsync<DescribeCodeDetailResponse>(req, "DescribeCodeDetail");
-        }
-
-        /// <summary>
-        /// 查询文件或任务详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCodeDetailRequest"/></param>
-        /// <returns><see cref="DescribeCodeDetailResponse"/></returns>
-        public DescribeCodeDetailResponse DescribeCodeDetailSync(DescribeCodeDetailRequest req)
-        {
-            return InternalRequestAsync<DescribeCodeDetailResponse>(req, "DescribeCodeDetail")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 全局搜索查询文件或任务详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCodeDetailV2Request"/></param>
-        /// <returns><see cref="DescribeCodeDetailV2Response"/></returns>
-        public Task<DescribeCodeDetailV2Response> DescribeCodeDetailV2(DescribeCodeDetailV2Request req)
-        {
-            return InternalRequestAsync<DescribeCodeDetailV2Response>(req, "DescribeCodeDetailV2");
-        }
-
-        /// <summary>
-        /// 全局搜索查询文件或任务详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCodeDetailV2Request"/></param>
-        /// <returns><see cref="DescribeCodeDetailV2Response"/></returns>
-        public DescribeCodeDetailV2Response DescribeCodeDetailV2Sync(DescribeCodeDetailV2Request req)
-        {
-            return InternalRequestAsync<DescribeCodeDetailV2Response>(req, "DescribeCodeDetailV2")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询最近5条代码搜索审计日志
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCodeSearchAuditInfoRequest"/></param>
-        /// <returns><see cref="DescribeCodeSearchAuditInfoResponse"/></returns>
-        public Task<DescribeCodeSearchAuditInfoResponse> DescribeCodeSearchAuditInfo(DescribeCodeSearchAuditInfoRequest req)
-        {
-            return InternalRequestAsync<DescribeCodeSearchAuditInfoResponse>(req, "DescribeCodeSearchAuditInfo");
-        }
-
-        /// <summary>
-        /// 查询最近5条代码搜索审计日志
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCodeSearchAuditInfoRequest"/></param>
-        /// <returns><see cref="DescribeCodeSearchAuditInfoResponse"/></returns>
-        public DescribeCodeSearchAuditInfoResponse DescribeCodeSearchAuditInfoSync(DescribeCodeSearchAuditInfoRequest req)
-        {
-            return InternalRequestAsync<DescribeCodeSearchAuditInfoResponse>(req, "DescribeCodeSearchAuditInfo")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取代码搜索最近n条关键字搜索信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCodeSearchAuditInfoV2Request"/></param>
-        /// <returns><see cref="DescribeCodeSearchAuditInfoV2Response"/></returns>
-        public Task<DescribeCodeSearchAuditInfoV2Response> DescribeCodeSearchAuditInfoV2(DescribeCodeSearchAuditInfoV2Request req)
-        {
-            return InternalRequestAsync<DescribeCodeSearchAuditInfoV2Response>(req, "DescribeCodeSearchAuditInfoV2");
-        }
-
-        /// <summary>
-        /// 获取代码搜索最近n条关键字搜索信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCodeSearchAuditInfoV2Request"/></param>
-        /// <returns><see cref="DescribeCodeSearchAuditInfoV2Response"/></returns>
-        public DescribeCodeSearchAuditInfoV2Response DescribeCodeSearchAuditInfoV2Sync(DescribeCodeSearchAuditInfoV2Request req)
-        {
-            return InternalRequestAsync<DescribeCodeSearchAuditInfoV2Response>(req, "DescribeCodeSearchAuditInfoV2")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 代码搜索结果的统计信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCodeSearchCountRequest"/></param>
-        /// <returns><see cref="DescribeCodeSearchCountResponse"/></returns>
-        public Task<DescribeCodeSearchCountResponse> DescribeCodeSearchCount(DescribeCodeSearchCountRequest req)
-        {
-            return InternalRequestAsync<DescribeCodeSearchCountResponse>(req, "DescribeCodeSearchCount");
-        }
-
-        /// <summary>
-        /// 代码搜索结果的统计信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCodeSearchCountRequest"/></param>
-        /// <returns><see cref="DescribeCodeSearchCountResponse"/></returns>
-        public DescribeCodeSearchCountResponse DescribeCodeSearchCountSync(DescribeCodeSearchCountRequest req)
-        {
-            return InternalRequestAsync<DescribeCodeSearchCountResponse>(req, "DescribeCodeSearchCount")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 根据条件搜索代码
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCodeSearchInfoRequest"/></param>
-        /// <returns><see cref="DescribeCodeSearchInfoResponse"/></returns>
-        public Task<DescribeCodeSearchInfoResponse> DescribeCodeSearchInfo(DescribeCodeSearchInfoRequest req)
-        {
-            return InternalRequestAsync<DescribeCodeSearchInfoResponse>(req, "DescribeCodeSearchInfo");
-        }
-
-        /// <summary>
-        /// 根据条件搜索代码
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCodeSearchInfoRequest"/></param>
-        /// <returns><see cref="DescribeCodeSearchInfoResponse"/></returns>
-        public DescribeCodeSearchInfoResponse DescribeCodeSearchInfoSync(DescribeCodeSearchInfoRequest req)
-        {
-            return InternalRequestAsync<DescribeCodeSearchInfoResponse>(req, "DescribeCodeSearchInfo")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 全局搜索根据条件搜索代码
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCodeSearchInfoV2Request"/></param>
-        /// <returns><see cref="DescribeCodeSearchInfoV2Response"/></returns>
-        public Task<DescribeCodeSearchInfoV2Response> DescribeCodeSearchInfoV2(DescribeCodeSearchInfoV2Request req)
-        {
-            return InternalRequestAsync<DescribeCodeSearchInfoV2Response>(req, "DescribeCodeSearchInfoV2");
-        }
-
-        /// <summary>
-        /// 全局搜索根据条件搜索代码
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCodeSearchInfoV2Request"/></param>
-        /// <returns><see cref="DescribeCodeSearchInfoV2Response"/></returns>
-        public DescribeCodeSearchInfoV2Response DescribeCodeSearchInfoV2Sync(DescribeCodeSearchInfoV2Request req)
-        {
-            return InternalRequestAsync<DescribeCodeSearchInfoV2Response>(req, "DescribeCodeSearchInfoV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3208,48 +2026,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 获取 crontab topN 个数据时间周期
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCrontabTopNDsRequest"/></param>
-        /// <returns><see cref="DescribeCrontabTopNDsResponse"/></returns>
-        public Task<DescribeCrontabTopNDsResponse> DescribeCrontabTopNDs(DescribeCrontabTopNDsRequest req)
-        {
-            return InternalRequestAsync<DescribeCrontabTopNDsResponse>(req, "DescribeCrontabTopNDs");
-        }
-
-        /// <summary>
-        /// 获取 crontab topN 个数据时间周期
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCrontabTopNDsRequest"/></param>
-        /// <returns><see cref="DescribeCrontabTopNDsResponse"/></returns>
-        public DescribeCrontabTopNDsResponse DescribeCrontabTopNDsSync(DescribeCrontabTopNDsRequest req)
-        {
-            return InternalRequestAsync<DescribeCrontabTopNDsResponse>(req, "DescribeCrontabTopNDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询函数版本列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCustomFunctionVersionListRequest"/></param>
-        /// <returns><see cref="DescribeCustomFunctionVersionListResponse"/></returns>
-        public Task<DescribeCustomFunctionVersionListResponse> DescribeCustomFunctionVersionList(DescribeCustomFunctionVersionListRequest req)
-        {
-            return InternalRequestAsync<DescribeCustomFunctionVersionListResponse>(req, "DescribeCustomFunctionVersionList");
-        }
-
-        /// <summary>
-        /// 查询函数版本列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCustomFunctionVersionListRequest"/></param>
-        /// <returns><see cref="DescribeCustomFunctionVersionListResponse"/></returns>
-        public DescribeCustomFunctionVersionListResponse DescribeCustomFunctionVersionListSync(DescribeCustomFunctionVersionListRequest req)
-        {
-            return InternalRequestAsync<DescribeCustomFunctionVersionListResponse>(req, "DescribeCustomFunctionVersionList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查询数据来源列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDataBasesRequest"/></param>
@@ -3288,27 +2064,6 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeDataCheckStatResponse DescribeDataCheckStatSync(DescribeDataCheckStatRequest req)
         {
             return InternalRequestAsync<DescribeDataCheckStatResponse>(req, "DescribeDataCheckStat")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取数据开发任务类型
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDataDevelopTaskTypeRequest"/></param>
-        /// <returns><see cref="DescribeDataDevelopTaskTypeResponse"/></returns>
-        public Task<DescribeDataDevelopTaskTypeResponse> DescribeDataDevelopTaskType(DescribeDataDevelopTaskTypeRequest req)
-        {
-            return InternalRequestAsync<DescribeDataDevelopTaskTypeResponse>(req, "DescribeDataDevelopTaskType");
-        }
-
-        /// <summary>
-        /// 获取数据开发任务类型
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDataDevelopTaskTypeRequest"/></param>
-        /// <returns><see cref="DescribeDataDevelopTaskTypeResponse"/></returns>
-        public DescribeDataDevelopTaskTypeResponse DescribeDataDevelopTaskTypeSync(DescribeDataDevelopTaskTypeRequest req)
-        {
-            return InternalRequestAsync<DescribeDataDevelopTaskTypeResponse>(req, "DescribeDataDevelopTaskType")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3397,27 +2152,6 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeDataSourceWithoutInfoResponse DescribeDataSourceWithoutInfoSync(DescribeDataSourceWithoutInfoRequest req)
         {
             return InternalRequestAsync<DescribeDataSourceWithoutInfoResponse>(req, "DescribeDataSourceWithoutInfo")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取数据表导入状态
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDataTableImportProgressRequest"/></param>
-        /// <returns><see cref="DescribeDataTableImportProgressResponse"/></returns>
-        public Task<DescribeDataTableImportProgressResponse> DescribeDataTableImportProgress(DescribeDataTableImportProgressRequest req)
-        {
-            return InternalRequestAsync<DescribeDataTableImportProgressResponse>(req, "DescribeDataTableImportProgress");
-        }
-
-        /// <summary>
-        /// 获取数据表导入状态
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDataTableImportProgressRequest"/></param>
-        /// <returns><see cref="DescribeDataTableImportProgressResponse"/></returns>
-        public DescribeDataTableImportProgressResponse DescribeDataTableImportProgressSync(DescribeDataTableImportProgressRequest req)
-        {
-            return InternalRequestAsync<DescribeDataTableImportProgressResponse>(req, "DescribeDataTableImportProgress")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3571,27 +2305,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 根据层级查找开发态上下游任务节点
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDependTasksDevDsRequest"/></param>
-        /// <returns><see cref="DescribeDependTasksDevDsResponse"/></returns>
-        public Task<DescribeDependTasksDevDsResponse> DescribeDependTasksDevDs(DescribeDependTasksDevDsRequest req)
-        {
-            return InternalRequestAsync<DescribeDependTasksDevDsResponse>(req, "DescribeDependTasksDevDs");
-        }
-
-        /// <summary>
-        /// 根据层级查找开发态上下游任务节点
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDependTasksDevDsRequest"/></param>
-        /// <returns><see cref="DescribeDependTasksDevDsResponse"/></returns>
-        public DescribeDependTasksDevDsResponse DescribeDependTasksDevDsSync(DescribeDependTasksDevDsRequest req)
-        {
-            return InternalRequestAsync<DescribeDependTasksDevDsResponse>(req, "DescribeDependTasksDevDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 根据层级查找上/下游任务节点
         /// </summary>
@@ -3611,69 +2324,6 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeDependTasksNewResponse DescribeDependTasksNewSync(DescribeDependTasksNewRequest req)
         {
             return InternalRequestAsync<DescribeDependTasksNewResponse>(req, "DescribeDependTasksNew")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 【项目克隆任务模式】依赖任务信息查询
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDependencyTasksForProjectCloneRequest"/></param>
-        /// <returns><see cref="DescribeDependencyTasksForProjectCloneResponse"/></returns>
-        public Task<DescribeDependencyTasksForProjectCloneResponse> DescribeDependencyTasksForProjectClone(DescribeDependencyTasksForProjectCloneRequest req)
-        {
-            return InternalRequestAsync<DescribeDependencyTasksForProjectCloneResponse>(req, "DescribeDependencyTasksForProjectClone");
-        }
-
-        /// <summary>
-        /// 【项目克隆任务模式】依赖任务信息查询
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDependencyTasksForProjectCloneRequest"/></param>
-        /// <returns><see cref="DescribeDependencyTasksForProjectCloneResponse"/></returns>
-        public DescribeDependencyTasksForProjectCloneResponse DescribeDependencyTasksForProjectCloneSync(DescribeDependencyTasksForProjectCloneRequest req)
-        {
-            return InternalRequestAsync<DescribeDependencyTasksForProjectCloneResponse>(req, "DescribeDependencyTasksForProjectClone")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询依赖工作流信息查询-项目克隆使用
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDependencyWorkflowForProjectCloneRequest"/></param>
-        /// <returns><see cref="DescribeDependencyWorkflowForProjectCloneResponse"/></returns>
-        public Task<DescribeDependencyWorkflowForProjectCloneResponse> DescribeDependencyWorkflowForProjectClone(DescribeDependencyWorkflowForProjectCloneRequest req)
-        {
-            return InternalRequestAsync<DescribeDependencyWorkflowForProjectCloneResponse>(req, "DescribeDependencyWorkflowForProjectClone");
-        }
-
-        /// <summary>
-        /// 查询依赖工作流信息查询-项目克隆使用
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDependencyWorkflowForProjectCloneRequest"/></param>
-        /// <returns><see cref="DescribeDependencyWorkflowForProjectCloneResponse"/></returns>
-        public DescribeDependencyWorkflowForProjectCloneResponse DescribeDependencyWorkflowForProjectCloneSync(DescribeDependencyWorkflowForProjectCloneRequest req)
-        {
-            return InternalRequestAsync<DescribeDependencyWorkflowForProjectCloneResponse>(req, "DescribeDependencyWorkflowForProjectClone")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取开发空间支持的脚本类型
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDevelopmentSpaceSupportTypeRequest"/></param>
-        /// <returns><see cref="DescribeDevelopmentSpaceSupportTypeResponse"/></returns>
-        public Task<DescribeDevelopmentSpaceSupportTypeResponse> DescribeDevelopmentSpaceSupportType(DescribeDevelopmentSpaceSupportTypeRequest req)
-        {
-            return InternalRequestAsync<DescribeDevelopmentSpaceSupportTypeResponse>(req, "DescribeDevelopmentSpaceSupportType");
-        }
-
-        /// <summary>
-        /// 获取开发空间支持的脚本类型
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDevelopmentSpaceSupportTypeRequest"/></param>
-        /// <returns><see cref="DescribeDevelopmentSpaceSupportTypeResponse"/></returns>
-        public DescribeDevelopmentSpaceSupportTypeResponse DescribeDevelopmentSpaceSupportTypeSync(DescribeDevelopmentSpaceSupportTypeRequest req)
-        {
-            return InternalRequestAsync<DescribeDevelopmentSpaceSupportTypeResponse>(req, "DescribeDevelopmentSpaceSupportType")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3783,132 +2433,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 分页查询事件
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDsEventRequest"/></param>
-        /// <returns><see cref="DescribeDsEventResponse"/></returns>
-        public Task<DescribeDsEventResponse> DescribeDsEvent(DescribeDsEventRequest req)
-        {
-            return InternalRequestAsync<DescribeDsEventResponse>(req, "DescribeDsEvent");
-        }
-
-        /// <summary>
-        /// 分页查询事件
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDsEventRequest"/></param>
-        /// <returns><see cref="DescribeDsEventResponse"/></returns>
-        public DescribeDsEventResponse DescribeDsEventSync(DescribeDsEventRequest req)
-        {
-            return InternalRequestAsync<DescribeDsEventResponse>(req, "DescribeDsEvent")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 事件管理-查询事件详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDsEventDetailRequest"/></param>
-        /// <returns><see cref="DescribeDsEventDetailResponse"/></returns>
-        public Task<DescribeDsEventDetailResponse> DescribeDsEventDetail(DescribeDsEventDetailRequest req)
-        {
-            return InternalRequestAsync<DescribeDsEventDetailResponse>(req, "DescribeDsEventDetail");
-        }
-
-        /// <summary>
-        /// 事件管理-查询事件详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDsEventDetailRequest"/></param>
-        /// <returns><see cref="DescribeDsEventDetailResponse"/></returns>
-        public DescribeDsEventDetailResponse DescribeDsEventDetailSync(DescribeDsEventDetailRequest req)
-        {
-            return InternalRequestAsync<DescribeDsEventDetailResponse>(req, "DescribeDsEventDetail")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询事件监听者信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDsEventListenerRequest"/></param>
-        /// <returns><see cref="DescribeDsEventListenerResponse"/></returns>
-        public Task<DescribeDsEventListenerResponse> DescribeDsEventListener(DescribeDsEventListenerRequest req)
-        {
-            return InternalRequestAsync<DescribeDsEventListenerResponse>(req, "DescribeDsEventListener");
-        }
-
-        /// <summary>
-        /// 查询事件监听者信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDsEventListenerRequest"/></param>
-        /// <returns><see cref="DescribeDsEventListenerResponse"/></returns>
-        public DescribeDsEventListenerResponse DescribeDsEventListenerSync(DescribeDsEventListenerRequest req)
-        {
-            return InternalRequestAsync<DescribeDsEventListenerResponse>(req, "DescribeDsEventListener")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询事件监听者列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDsEventListenerListRequest"/></param>
-        /// <returns><see cref="DescribeDsEventListenerListResponse"/></returns>
-        public Task<DescribeDsEventListenerListResponse> DescribeDsEventListenerList(DescribeDsEventListenerListRequest req)
-        {
-            return InternalRequestAsync<DescribeDsEventListenerListResponse>(req, "DescribeDsEventListenerList");
-        }
-
-        /// <summary>
-        /// 查询事件监听者列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDsEventListenerListRequest"/></param>
-        /// <returns><see cref="DescribeDsEventListenerListResponse"/></returns>
-        public DescribeDsEventListenerListResponse DescribeDsEventListenerListSync(DescribeDsEventListenerListRequest req)
-        {
-            return InternalRequestAsync<DescribeDsEventListenerListResponse>(req, "DescribeDsEventListenerList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询事件发布者信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDsEventPublisherRequest"/></param>
-        /// <returns><see cref="DescribeDsEventPublisherResponse"/></returns>
-        public Task<DescribeDsEventPublisherResponse> DescribeDsEventPublisher(DescribeDsEventPublisherRequest req)
-        {
-            return InternalRequestAsync<DescribeDsEventPublisherResponse>(req, "DescribeDsEventPublisher");
-        }
-
-        /// <summary>
-        /// 查询事件发布者信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDsEventPublisherRequest"/></param>
-        /// <returns><see cref="DescribeDsEventPublisherResponse"/></returns>
-        public DescribeDsEventPublisherResponse DescribeDsEventPublisherSync(DescribeDsEventPublisherRequest req)
-        {
-            return InternalRequestAsync<DescribeDsEventPublisherResponse>(req, "DescribeDsEventPublisher")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询事件发布者列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDsEventPublisherListRequest"/></param>
-        /// <returns><see cref="DescribeDsEventPublisherListResponse"/></returns>
-        public Task<DescribeDsEventPublisherListResponse> DescribeDsEventPublisherList(DescribeDsEventPublisherListRequest req)
-        {
-            return InternalRequestAsync<DescribeDsEventPublisherListResponse>(req, "DescribeDsEventPublisherList");
-        }
-
-        /// <summary>
-        /// 查询事件发布者列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDsEventPublisherListRequest"/></param>
-        /// <returns><see cref="DescribeDsEventPublisherListResponse"/></returns>
-        public DescribeDsEventPublisherListResponse DescribeDsEventPublisherListSync(DescribeDsEventPublisherListRequest req)
-        {
-            return InternalRequestAsync<DescribeDsEventPublisherListResponse>(req, "DescribeDsEventPublisherList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查询目录树
         /// </summary>
         /// <param name="req"><see cref="DescribeDsFolderTreeRequest"/></param>
@@ -3930,69 +2454,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 查询 kettle 资源服务器目录树
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDsKettleServerFolderTreeRequest"/></param>
-        /// <returns><see cref="DescribeDsKettleServerFolderTreeResponse"/></returns>
-        public Task<DescribeDsKettleServerFolderTreeResponse> DescribeDsKettleServerFolderTree(DescribeDsKettleServerFolderTreeRequest req)
-        {
-            return InternalRequestAsync<DescribeDsKettleServerFolderTreeResponse>(req, "DescribeDsKettleServerFolderTree");
-        }
-
-        /// <summary>
-        /// 查询 kettle 资源服务器目录树
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDsKettleServerFolderTreeRequest"/></param>
-        /// <returns><see cref="DescribeDsKettleServerFolderTreeResponse"/></returns>
-        public DescribeDsKettleServerFolderTreeResponse DescribeDsKettleServerFolderTreeSync(DescribeDsKettleServerFolderTreeRequest req)
-        {
-            return InternalRequestAsync<DescribeDsKettleServerFolderTreeResponse>(req, "DescribeDsKettleServerFolderTree")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取任务最新版本
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDsLatestTaskVersionInfoRequest"/></param>
-        /// <returns><see cref="DescribeDsLatestTaskVersionInfoResponse"/></returns>
-        public Task<DescribeDsLatestTaskVersionInfoResponse> DescribeDsLatestTaskVersionInfo(DescribeDsLatestTaskVersionInfoRequest req)
-        {
-            return InternalRequestAsync<DescribeDsLatestTaskVersionInfoResponse>(req, "DescribeDsLatestTaskVersionInfo");
-        }
-
-        /// <summary>
-        /// 获取任务最新版本
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDsLatestTaskVersionInfoRequest"/></param>
-        /// <returns><see cref="DescribeDsLatestTaskVersionInfoResponse"/></returns>
-        public DescribeDsLatestTaskVersionInfoResponse DescribeDsLatestTaskVersionInfoSync(DescribeDsLatestTaskVersionInfoRequest req)
-        {
-            return InternalRequestAsync<DescribeDsLatestTaskVersionInfoResponse>(req, "DescribeDsLatestTaskVersionInfo")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 根据工作流id查询保存未提交任务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDsNotSubmitTasksAndCanRunByWorkflowRequest"/></param>
-        /// <returns><see cref="DescribeDsNotSubmitTasksAndCanRunByWorkflowResponse"/></returns>
-        public Task<DescribeDsNotSubmitTasksAndCanRunByWorkflowResponse> DescribeDsNotSubmitTasksAndCanRunByWorkflow(DescribeDsNotSubmitTasksAndCanRunByWorkflowRequest req)
-        {
-            return InternalRequestAsync<DescribeDsNotSubmitTasksAndCanRunByWorkflowResponse>(req, "DescribeDsNotSubmitTasksAndCanRunByWorkflow");
-        }
-
-        /// <summary>
-        /// 根据工作流id查询保存未提交任务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDsNotSubmitTasksAndCanRunByWorkflowRequest"/></param>
-        /// <returns><see cref="DescribeDsNotSubmitTasksAndCanRunByWorkflowResponse"/></returns>
-        public DescribeDsNotSubmitTasksAndCanRunByWorkflowResponse DescribeDsNotSubmitTasksAndCanRunByWorkflowSync(DescribeDsNotSubmitTasksAndCanRunByWorkflowRequest req)
-        {
-            return InternalRequestAsync<DescribeDsNotSubmitTasksAndCanRunByWorkflowResponse>(req, "DescribeDsNotSubmitTasksAndCanRunByWorkflow")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查询父目录树，用于工作流、任务定位
         /// </summary>
         /// <param name="req"><see cref="DescribeDsParentFolderTreeRequest"/></param>
@@ -4010,69 +2471,6 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeDsParentFolderTreeResponse DescribeDsParentFolderTreeSync(DescribeDsParentFolderTreeRequest req)
         {
             return InternalRequestAsync<DescribeDsParentFolderTreeResponse>(req, "DescribeDsParentFolderTree")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查看任务版本详细信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDsTaskVersionInfoRequest"/></param>
-        /// <returns><see cref="DescribeDsTaskVersionInfoResponse"/></returns>
-        public Task<DescribeDsTaskVersionInfoResponse> DescribeDsTaskVersionInfo(DescribeDsTaskVersionInfoRequest req)
-        {
-            return InternalRequestAsync<DescribeDsTaskVersionInfoResponse>(req, "DescribeDsTaskVersionInfo");
-        }
-
-        /// <summary>
-        /// 查看任务版本详细信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDsTaskVersionInfoRequest"/></param>
-        /// <returns><see cref="DescribeDsTaskVersionInfoResponse"/></returns>
-        public DescribeDsTaskVersionInfoResponse DescribeDsTaskVersionInfoSync(DescribeDsTaskVersionInfoRequest req)
-        {
-            return InternalRequestAsync<DescribeDsTaskVersionInfoResponse>(req, "DescribeDsTaskVersionInfo")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 拉取任务版本列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDsTaskVersionListRequest"/></param>
-        /// <returns><see cref="DescribeDsTaskVersionListResponse"/></returns>
-        public Task<DescribeDsTaskVersionListResponse> DescribeDsTaskVersionList(DescribeDsTaskVersionListRequest req)
-        {
-            return InternalRequestAsync<DescribeDsTaskVersionListResponse>(req, "DescribeDsTaskVersionList");
-        }
-
-        /// <summary>
-        /// 拉取任务版本列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDsTaskVersionListRequest"/></param>
-        /// <returns><see cref="DescribeDsTaskVersionListResponse"/></returns>
-        public DescribeDsTaskVersionListResponse DescribeDsTaskVersionListSync(DescribeDsTaskVersionListRequest req)
-        {
-            return InternalRequestAsync<DescribeDsTaskVersionListResponse>(req, "DescribeDsTaskVersionList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取数据同步任务类型
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEtlTaskTypeRequest"/></param>
-        /// <returns><see cref="DescribeEtlTaskTypeResponse"/></returns>
-        public Task<DescribeEtlTaskTypeResponse> DescribeEtlTaskType(DescribeEtlTaskTypeRequest req)
-        {
-            return InternalRequestAsync<DescribeEtlTaskTypeResponse>(req, "DescribeEtlTaskType");
-        }
-
-        /// <summary>
-        /// 获取数据同步任务类型
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEtlTaskTypeRequest"/></param>
-        /// <returns><see cref="DescribeEtlTaskTypeResponse"/></returns>
-        public DescribeEtlTaskTypeResponse DescribeEtlTaskTypeSync(DescribeEtlTaskTypeRequest req)
-        {
-            return InternalRequestAsync<DescribeEtlTaskTypeResponse>(req, "DescribeEtlTaskType")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4182,48 +2580,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 根据任务ID获取任务监听事件
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEventListenerByTaskIdRequest"/></param>
-        /// <returns><see cref="DescribeEventListenerByTaskIdResponse"/></returns>
-        public Task<DescribeEventListenerByTaskIdResponse> DescribeEventListenerByTaskId(DescribeEventListenerByTaskIdRequest req)
-        {
-            return InternalRequestAsync<DescribeEventListenerByTaskIdResponse>(req, "DescribeEventListenerByTaskId");
-        }
-
-        /// <summary>
-        /// 根据任务ID获取任务监听事件
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEventListenerByTaskIdRequest"/></param>
-        /// <returns><see cref="DescribeEventListenerByTaskIdResponse"/></returns>
-        public DescribeEventListenerByTaskIdResponse DescribeEventListenerByTaskIdSync(DescribeEventListenerByTaskIdRequest req)
-        {
-            return InternalRequestAsync<DescribeEventListenerByTaskIdResponse>(req, "DescribeEventListenerByTaskId")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 事件管理-查询事件关联任务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEventListenerTaskRequest"/></param>
-        /// <returns><see cref="DescribeEventListenerTaskResponse"/></returns>
-        public Task<DescribeEventListenerTaskResponse> DescribeEventListenerTask(DescribeEventListenerTaskRequest req)
-        {
-            return InternalRequestAsync<DescribeEventListenerTaskResponse>(req, "DescribeEventListenerTask");
-        }
-
-        /// <summary>
-        /// 事件管理-查询事件关联任务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEventListenerTaskRequest"/></param>
-        /// <returns><see cref="DescribeEventListenerTaskResponse"/></returns>
-        public DescribeEventListenerTaskResponse DescribeEventListenerTaskSync(DescribeEventListenerTaskRequest req)
-        {
-            return InternalRequestAsync<DescribeEventListenerTaskResponse>(req, "DescribeEventListenerTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查询事件类型列表
         /// </summary>
         /// <param name="req"><see cref="DescribeEventTypesRequest"/></param>
@@ -4287,48 +2643,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 获取执行日志
-        /// </summary>
-        /// <param name="req"><see cref="DescribeExecutionLogRequest"/></param>
-        /// <returns><see cref="DescribeExecutionLogResponse"/></returns>
-        public Task<DescribeExecutionLogResponse> DescribeExecutionLog(DescribeExecutionLogRequest req)
-        {
-            return InternalRequestAsync<DescribeExecutionLogResponse>(req, "DescribeExecutionLog");
-        }
-
-        /// <summary>
-        /// 获取执行日志
-        /// </summary>
-        /// <param name="req"><see cref="DescribeExecutionLogRequest"/></param>
-        /// <returns><see cref="DescribeExecutionLogResponse"/></returns>
-        public DescribeExecutionLogResponse DescribeExecutionLogSync(DescribeExecutionLogRequest req)
-        {
-            return InternalRequestAsync<DescribeExecutionLogResponse>(req, "DescribeExecutionLog")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询父任务数据源信息Ds
-        /// </summary>
-        /// <param name="req"><see cref="DescribeFatherDatasourceInfoDsRequest"/></param>
-        /// <returns><see cref="DescribeFatherDatasourceInfoDsResponse"/></returns>
-        public Task<DescribeFatherDatasourceInfoDsResponse> DescribeFatherDatasourceInfoDs(DescribeFatherDatasourceInfoDsRequest req)
-        {
-            return InternalRequestAsync<DescribeFatherDatasourceInfoDsResponse>(req, "DescribeFatherDatasourceInfoDs");
-        }
-
-        /// <summary>
-        /// 查询父任务数据源信息Ds
-        /// </summary>
-        /// <param name="req"><see cref="DescribeFatherDatasourceInfoDsRequest"/></param>
-        /// <returns><see cref="DescribeFatherDatasourceInfoDsResponse"/></returns>
-        public DescribeFatherDatasourceInfoDsResponse DescribeFatherDatasourceInfoDsSync(DescribeFatherDatasourceInfoDsRequest req)
-        {
-            return InternalRequestAsync<DescribeFatherDatasourceInfoDsResponse>(req, "DescribeFatherDatasourceInfoDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 获取关联父实例
         /// </summary>
         /// <param name="req"><see cref="DescribeFathersRequest"/></param>
@@ -4367,27 +2681,6 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeFieldBasicInfoResponse DescribeFieldBasicInfoSync(DescribeFieldBasicInfoRequest req)
         {
             return InternalRequestAsync<DescribeFieldBasicInfoResponse>(req, "DescribeFieldBasicInfo")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询开发空间版本列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeFileVersionsRequest"/></param>
-        /// <returns><see cref="DescribeFileVersionsResponse"/></returns>
-        public Task<DescribeFileVersionsResponse> DescribeFileVersions(DescribeFileVersionsRequest req)
-        {
-            return InternalRequestAsync<DescribeFileVersionsResponse>(req, "DescribeFileVersions");
-        }
-
-        /// <summary>
-        /// 查询开发空间版本列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeFileVersionsRequest"/></param>
-        /// <returns><see cref="DescribeFileVersionsResponse"/></returns>
-        public DescribeFileVersionsResponse DescribeFileVersionsSync(DescribeFileVersionsRequest req)
-        {
-            return InternalRequestAsync<DescribeFileVersionsResponse>(req, "DescribeFileVersions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4480,48 +2773,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 获取全局工作流信息，用于跨工作流节点拉取租户所有工作流列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeGlobalWorkflowDsRequest"/></param>
-        /// <returns><see cref="DescribeGlobalWorkflowDsResponse"/></returns>
-        public Task<DescribeGlobalWorkflowDsResponse> DescribeGlobalWorkflowDs(DescribeGlobalWorkflowDsRequest req)
-        {
-            return InternalRequestAsync<DescribeGlobalWorkflowDsResponse>(req, "DescribeGlobalWorkflowDs");
-        }
-
-        /// <summary>
-        /// 获取全局工作流信息，用于跨工作流节点拉取租户所有工作流列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeGlobalWorkflowDsRequest"/></param>
-        /// <returns><see cref="DescribeGlobalWorkflowDsResponse"/></returns>
-        public DescribeGlobalWorkflowDsResponse DescribeGlobalWorkflowDsSync(DescribeGlobalWorkflowDsRequest req)
-        {
-            return InternalRequestAsync<DescribeGlobalWorkflowDsResponse>(req, "DescribeGlobalWorkflowDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询可导入的集成任务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeImportableOfflineTaskRequest"/></param>
-        /// <returns><see cref="DescribeImportableOfflineTaskResponse"/></returns>
-        public Task<DescribeImportableOfflineTaskResponse> DescribeImportableOfflineTask(DescribeImportableOfflineTaskRequest req)
-        {
-            return InternalRequestAsync<DescribeImportableOfflineTaskResponse>(req, "DescribeImportableOfflineTask");
-        }
-
-        /// <summary>
-        /// 查询可导入的集成任务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeImportableOfflineTaskRequest"/></param>
-        /// <returns><see cref="DescribeImportableOfflineTaskResponse"/></returns>
-        public DescribeImportableOfflineTaskResponse DescribeImportableOfflineTaskSync(DescribeImportableOfflineTaskRequest req)
-        {
-            return InternalRequestAsync<DescribeImportableOfflineTaskResponse>(req, "DescribeImportableOfflineTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 获取采集器列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInLongAgentListRequest"/></param>
@@ -4602,27 +2853,6 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeInLongTkeClusterListResponse DescribeInLongTkeClusterListSync(DescribeInLongTkeClusterListRequest req)
         {
             return InternalRequestAsync<DescribeInLongTkeClusterListResponse>(req, "DescribeInLongTkeClusterList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 基于任务类型获取任务信息Ds
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInfoTransByTypeIdDsRequest"/></param>
-        /// <returns><see cref="DescribeInfoTransByTypeIdDsResponse"/></returns>
-        public Task<DescribeInfoTransByTypeIdDsResponse> DescribeInfoTransByTypeIdDs(DescribeInfoTransByTypeIdDsRequest req)
-        {
-            return InternalRequestAsync<DescribeInfoTransByTypeIdDsResponse>(req, "DescribeInfoTransByTypeIdDs");
-        }
-
-        /// <summary>
-        /// 基于任务类型获取任务信息Ds
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInfoTransByTypeIdDsRequest"/></param>
-        /// <returns><see cref="DescribeInfoTransByTypeIdDsResponse"/></returns>
-        public DescribeInfoTransByTypeIdDsResponse DescribeInfoTransByTypeIdDsSync(DescribeInfoTransByTypeIdDsRequest req)
-        {
-            return InternalRequestAsync<DescribeInfoTransByTypeIdDsResponse>(req, "DescribeInfoTransByTypeIdDs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5070,27 +3300,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 获取协同编辑资源锁
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLockRequest"/></param>
-        /// <returns><see cref="DescribeLockResponse"/></returns>
-        public Task<DescribeLockResponse> DescribeLock(DescribeLockRequest req)
-        {
-            return InternalRequestAsync<DescribeLockResponse>(req, "DescribeLock");
-        }
-
-        /// <summary>
-        /// 获取协同编辑资源锁
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLockRequest"/></param>
-        /// <returns><see cref="DescribeLockResponse"/></returns>
-        public DescribeLockResponse DescribeLockSync(DescribeLockRequest req)
-        {
-            return InternalRequestAsync<DescribeLockResponse>(req, "DescribeLock")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 分页查询质量监控组
         /// </summary>
         /// <param name="req"><see cref="DescribeMonitorsByPageRequest"/></param>
@@ -5108,27 +3317,6 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeMonitorsByPageResponse DescribeMonitorsByPageSync(DescribeMonitorsByPageRequest req)
         {
             return InternalRequestAsync<DescribeMonitorsByPageResponse>(req, "DescribeMonitorsByPage")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 新获取SQL执行结果
-        /// </summary>
-        /// <param name="req"><see cref="DescribeNewSqlTaskResultRequest"/></param>
-        /// <returns><see cref="DescribeNewSqlTaskResultResponse"/></returns>
-        public Task<DescribeNewSqlTaskResultResponse> DescribeNewSqlTaskResult(DescribeNewSqlTaskResultRequest req)
-        {
-            return InternalRequestAsync<DescribeNewSqlTaskResultResponse>(req, "DescribeNewSqlTaskResult");
-        }
-
-        /// <summary>
-        /// 新获取SQL执行结果
-        /// </summary>
-        /// <param name="req"><see cref="DescribeNewSqlTaskResultRequest"/></param>
-        /// <returns><see cref="DescribeNewSqlTaskResultResponse"/></returns>
-        public DescribeNewSqlTaskResultResponse DescribeNewSqlTaskResultSync(DescribeNewSqlTaskResultRequest req)
-        {
-            return InternalRequestAsync<DescribeNewSqlTaskResultResponse>(req, "DescribeNewSqlTaskResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5364,48 +3552,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 查询任务父依赖
-        /// </summary>
-        /// <param name="req"><see cref="DescribeParentTaskRequest"/></param>
-        /// <returns><see cref="DescribeParentTaskResponse"/></returns>
-        public Task<DescribeParentTaskResponse> DescribeParentTask(DescribeParentTaskRequest req)
-        {
-            return InternalRequestAsync<DescribeParentTaskResponse>(req, "DescribeParentTask");
-        }
-
-        /// <summary>
-        /// 查询任务父依赖
-        /// </summary>
-        /// <param name="req"><see cref="DescribeParentTaskRequest"/></param>
-        /// <returns><see cref="DescribeParentTaskResponse"/></returns>
-        public DescribeParentTaskResponse DescribeParentTaskSync(DescribeParentTaskRequest req)
-        {
-            return InternalRequestAsync<DescribeParentTaskResponse>(req, "DescribeParentTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 开发空间-拉取完整目录树
-        /// </summary>
-        /// <param name="req"><see cref="DescribePathTreesRequest"/></param>
-        /// <returns><see cref="DescribePathTreesResponse"/></returns>
-        public Task<DescribePathTreesResponse> DescribePathTrees(DescribePathTreesRequest req)
-        {
-            return InternalRequestAsync<DescribePathTreesResponse>(req, "DescribePathTrees");
-        }
-
-        /// <summary>
-        /// 开发空间-拉取完整目录树
-        /// </summary>
-        /// <param name="req"><see cref="DescribePathTreesRequest"/></param>
-        /// <returns><see cref="DescribePathTreesResponse"/></returns>
-        public DescribePathTreesResponse DescribePathTreesSync(DescribePathTreesRequest req)
-        {
-            return InternalRequestAsync<DescribePathTreesResponse>(req, "DescribePathTrees")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 数据质量获取生产调度任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeProdTasksRequest"/></param>
@@ -5427,27 +3573,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 获取工作流画布信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeProdWorkflowCanvasInfoDsRequest"/></param>
-        /// <returns><see cref="DescribeProdWorkflowCanvasInfoDsResponse"/></returns>
-        public Task<DescribeProdWorkflowCanvasInfoDsResponse> DescribeProdWorkflowCanvasInfoDs(DescribeProdWorkflowCanvasInfoDsRequest req)
-        {
-            return InternalRequestAsync<DescribeProdWorkflowCanvasInfoDsResponse>(req, "DescribeProdWorkflowCanvasInfoDs");
-        }
-
-        /// <summary>
-        /// 获取工作流画布信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeProdWorkflowCanvasInfoDsRequest"/></param>
-        /// <returns><see cref="DescribeProdWorkflowCanvasInfoDsResponse"/></returns>
-        public DescribeProdWorkflowCanvasInfoDsResponse DescribeProdWorkflowCanvasInfoDsSync(DescribeProdWorkflowCanvasInfoDsRequest req)
-        {
-            return InternalRequestAsync<DescribeProdWorkflowCanvasInfoDsResponse>(req, "DescribeProdWorkflowCanvasInfoDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 获取项目信息
         /// </summary>
         /// <param name="req"><see cref="DescribeProjectRequest"/></param>
@@ -5465,90 +3590,6 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeProjectResponse DescribeProjectSync(DescribeProjectRequest req)
         {
             return InternalRequestAsync<DescribeProjectResponse>(req, "DescribeProject")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询项目全局参数
-        /// </summary>
-        /// <param name="req"><see cref="DescribeProjectParamDsRequest"/></param>
-        /// <returns><see cref="DescribeProjectParamDsResponse"/></returns>
-        public Task<DescribeProjectParamDsResponse> DescribeProjectParamDs(DescribeProjectParamDsRequest req)
-        {
-            return InternalRequestAsync<DescribeProjectParamDsResponse>(req, "DescribeProjectParamDs");
-        }
-
-        /// <summary>
-        /// 查询项目全局参数
-        /// </summary>
-        /// <param name="req"><see cref="DescribeProjectParamDsRequest"/></param>
-        /// <returns><see cref="DescribeProjectParamDsResponse"/></returns>
-        public DescribeProjectParamDsResponse DescribeProjectParamDsSync(DescribeProjectParamDsRequest req)
-        {
-            return InternalRequestAsync<DescribeProjectParamDsResponse>(req, "DescribeProjectParamDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询项目全局参数
-        /// </summary>
-        /// <param name="req"><see cref="DescribeProjectParamDsPageRequest"/></param>
-        /// <returns><see cref="DescribeProjectParamDsPageResponse"/></returns>
-        public Task<DescribeProjectParamDsPageResponse> DescribeProjectParamDsPage(DescribeProjectParamDsPageRequest req)
-        {
-            return InternalRequestAsync<DescribeProjectParamDsPageResponse>(req, "DescribeProjectParamDsPage");
-        }
-
-        /// <summary>
-        /// 查询项目全局参数
-        /// </summary>
-        /// <param name="req"><see cref="DescribeProjectParamDsPageRequest"/></param>
-        /// <returns><see cref="DescribeProjectParamDsPageResponse"/></returns>
-        public DescribeProjectParamDsPageResponse DescribeProjectParamDsPageSync(DescribeProjectParamDsPageRequest req)
-        {
-            return InternalRequestAsync<DescribeProjectParamDsPageResponse>(req, "DescribeProjectParamDsPage")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询项目参数历史版本
-        /// </summary>
-        /// <param name="req"><see cref="DescribeProjectParamVersionDsRequest"/></param>
-        /// <returns><see cref="DescribeProjectParamVersionDsResponse"/></returns>
-        public Task<DescribeProjectParamVersionDsResponse> DescribeProjectParamVersionDs(DescribeProjectParamVersionDsRequest req)
-        {
-            return InternalRequestAsync<DescribeProjectParamVersionDsResponse>(req, "DescribeProjectParamVersionDs");
-        }
-
-        /// <summary>
-        /// 查询项目参数历史版本
-        /// </summary>
-        /// <param name="req"><see cref="DescribeProjectParamVersionDsRequest"/></param>
-        /// <returns><see cref="DescribeProjectParamVersionDsResponse"/></returns>
-        public DescribeProjectParamVersionDsResponse DescribeProjectParamVersionDsSync(DescribeProjectParamVersionDsRequest req)
-        {
-            return InternalRequestAsync<DescribeProjectParamVersionDsResponse>(req, "DescribeProjectParamVersionDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 拉取项目参数版本详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeProjectParamVersionInfoDsRequest"/></param>
-        /// <returns><see cref="DescribeProjectParamVersionInfoDsResponse"/></returns>
-        public Task<DescribeProjectParamVersionInfoDsResponse> DescribeProjectParamVersionInfoDs(DescribeProjectParamVersionInfoDsRequest req)
-        {
-            return InternalRequestAsync<DescribeProjectParamVersionInfoDsResponse>(req, "DescribeProjectParamVersionInfoDs");
-        }
-
-        /// <summary>
-        /// 拉取项目参数版本详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeProjectParamVersionInfoDsRequest"/></param>
-        /// <returns><see cref="DescribeProjectParamVersionInfoDsResponse"/></returns>
-        public DescribeProjectParamVersionInfoDsResponse DescribeProjectParamVersionInfoDsSync(DescribeProjectParamVersionInfoDsRequest req)
-        {
-            return InternalRequestAsync<DescribeProjectParamVersionInfoDsResponse>(req, "DescribeProjectParamVersionInfoDs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5654,69 +3695,6 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeRealTimeTaskSpeedResponse DescribeRealTimeTaskSpeedSync(DescribeRealTimeTaskSpeedRequest req)
         {
             return InternalRequestAsync<DescribeRealTimeTaskSpeedResponse>(req, "DescribeRealTimeTaskSpeed")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 即席分析-获取任务列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRecordListRequest"/></param>
-        /// <returns><see cref="DescribeRecordListResponse"/></returns>
-        public Task<DescribeRecordListResponse> DescribeRecordList(DescribeRecordListRequest req)
-        {
-            return InternalRequestAsync<DescribeRecordListResponse>(req, "DescribeRecordList");
-        }
-
-        /// <summary>
-        /// 即席分析-获取任务列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRecordListRequest"/></param>
-        /// <returns><see cref="DescribeRecordListResponse"/></returns>
-        public DescribeRecordListResponse DescribeRecordListSync(DescribeRecordListRequest req)
-        {
-            return InternalRequestAsync<DescribeRecordListResponse>(req, "DescribeRecordList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取回收站任务详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRecycleTaskDetailRequest"/></param>
-        /// <returns><see cref="DescribeRecycleTaskDetailResponse"/></returns>
-        public Task<DescribeRecycleTaskDetailResponse> DescribeRecycleTaskDetail(DescribeRecycleTaskDetailRequest req)
-        {
-            return InternalRequestAsync<DescribeRecycleTaskDetailResponse>(req, "DescribeRecycleTaskDetail");
-        }
-
-        /// <summary>
-        /// 获取回收站任务详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRecycleTaskDetailRequest"/></param>
-        /// <returns><see cref="DescribeRecycleTaskDetailResponse"/></returns>
-        public DescribeRecycleTaskDetailResponse DescribeRecycleTaskDetailSync(DescribeRecycleTaskDetailRequest req)
-        {
-            return InternalRequestAsync<DescribeRecycleTaskDetailResponse>(req, "DescribeRecycleTaskDetail")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询回收站任务列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRecycleTaskListRequest"/></param>
-        /// <returns><see cref="DescribeRecycleTaskListResponse"/></returns>
-        public Task<DescribeRecycleTaskListResponse> DescribeRecycleTaskList(DescribeRecycleTaskListRequest req)
-        {
-            return InternalRequestAsync<DescribeRecycleTaskListResponse>(req, "DescribeRecycleTaskList");
-        }
-
-        /// <summary>
-        /// 查询回收站任务列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRecycleTaskListRequest"/></param>
-        /// <returns><see cref="DescribeRecycleTaskListResponse"/></returns>
-        public DescribeRecycleTaskListResponse DescribeRecycleTaskListSync(DescribeRecycleTaskListRequest req)
-        {
-            return InternalRequestAsync<DescribeRecycleTaskListResponse>(req, "DescribeRecycleTaskList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -6378,27 +4356,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 获取脚本导出任务类型
-        /// </summary>
-        /// <param name="req"><see cref="DescribeScriptsImportTaskTypeRequest"/></param>
-        /// <returns><see cref="DescribeScriptsImportTaskTypeResponse"/></returns>
-        public Task<DescribeScriptsImportTaskTypeResponse> DescribeScriptsImportTaskType(DescribeScriptsImportTaskTypeRequest req)
-        {
-            return InternalRequestAsync<DescribeScriptsImportTaskTypeResponse>(req, "DescribeScriptsImportTaskType");
-        }
-
-        /// <summary>
-        /// 获取脚本导出任务类型
-        /// </summary>
-        /// <param name="req"><see cref="DescribeScriptsImportTaskTypeRequest"/></param>
-        /// <returns><see cref="DescribeScriptsImportTaskTypeResponse"/></returns>
-        public DescribeScriptsImportTaskTypeResponse DescribeScriptsImportTaskTypeSync(DescribeScriptsImportTaskTypeRequest req)
-        {
-            return InternalRequestAsync<DescribeScriptsImportTaskTypeResponse>(req, "DescribeScriptsImportTaskType")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 获取关联子实例
         /// </summary>
         /// <param name="req"><see cref="DescribeSonInstancesRequest"/></param>
@@ -6416,27 +4373,6 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeSonInstancesResponse DescribeSonInstancesSync(DescribeSonInstancesRequest req)
         {
             return InternalRequestAsync<DescribeSonInstancesResponse>(req, "DescribeSonInstances")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取SQL执行结果
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSqlTaskResultRequest"/></param>
-        /// <returns><see cref="DescribeSqlTaskResultResponse"/></returns>
-        public Task<DescribeSqlTaskResultResponse> DescribeSqlTaskResult(DescribeSqlTaskResultRequest req)
-        {
-            return InternalRequestAsync<DescribeSqlTaskResultResponse>(req, "DescribeSqlTaskResult");
-        }
-
-        /// <summary>
-        /// 获取SQL执行结果
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSqlTaskResultRequest"/></param>
-        /// <returns><see cref="DescribeSqlTaskResultResponse"/></returns>
-        public DescribeSqlTaskResultResponse DescribeSqlTaskResultSync(DescribeSqlTaskResultRequest req)
-        {
-            return InternalRequestAsync<DescribeSqlTaskResultResponse>(req, "DescribeSqlTaskResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -6735,27 +4671,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 获取任务绑定的虚拟任务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskBindVirtualTaskRequest"/></param>
-        /// <returns><see cref="DescribeTaskBindVirtualTaskResponse"/></returns>
-        public Task<DescribeTaskBindVirtualTaskResponse> DescribeTaskBindVirtualTask(DescribeTaskBindVirtualTaskRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskBindVirtualTaskResponse>(req, "DescribeTaskBindVirtualTask");
-        }
-
-        /// <summary>
-        /// 获取任务绑定的虚拟任务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskBindVirtualTaskRequest"/></param>
-        /// <returns><see cref="DescribeTaskBindVirtualTaskResponse"/></returns>
-        public DescribeTaskBindVirtualTaskResponse DescribeTaskBindVirtualTaskSync(DescribeTaskBindVirtualTaskRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskBindVirtualTaskResponse>(req, "DescribeTaskBindVirtualTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 根据周期类型 查询所有任务
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskByCycleRequest"/></param>
@@ -6842,48 +4757,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 查询任务具体详情Ds
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskDetailDsRequest"/></param>
-        /// <returns><see cref="DescribeTaskDetailDsResponse"/></returns>
-        public Task<DescribeTaskDetailDsResponse> DescribeTaskDetailDs(DescribeTaskDetailDsRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskDetailDsResponse>(req, "DescribeTaskDetailDs");
-        }
-
-        /// <summary>
-        /// 查询任务具体详情Ds
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskDetailDsRequest"/></param>
-        /// <returns><see cref="DescribeTaskDetailDsResponse"/></returns>
-        public DescribeTaskDetailDsResponse DescribeTaskDetailDsSync(DescribeTaskDetailDsRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskDetailDsResponse>(req, "DescribeTaskDetailDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询任务输入参数
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskInParamDsRequest"/></param>
-        /// <returns><see cref="DescribeTaskInParamDsResponse"/></returns>
-        public Task<DescribeTaskInParamDsResponse> DescribeTaskInParamDs(DescribeTaskInParamDsRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskInParamDsResponse>(req, "DescribeTaskInParamDs");
-        }
-
-        /// <summary>
-        /// 查询任务输入参数
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskInParamDsRequest"/></param>
-        /// <returns><see cref="DescribeTaskInParamDsResponse"/></returns>
-        public DescribeTaskInParamDsResponse DescribeTaskInParamDsSync(DescribeTaskInParamDsRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskInParamDsResponse>(req, "DescribeTaskInParamDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 离线任务实例详情
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskInstanceRequest"/></param>
@@ -6947,48 +4820,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 通过指定基准时间，计算出最近一次任务基于该基准时间的运行时间
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskLatestRunTimeRequest"/></param>
-        /// <returns><see cref="DescribeTaskLatestRunTimeResponse"/></returns>
-        public Task<DescribeTaskLatestRunTimeResponse> DescribeTaskLatestRunTime(DescribeTaskLatestRunTimeRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskLatestRunTimeResponse>(req, "DescribeTaskLatestRunTime");
-        }
-
-        /// <summary>
-        /// 通过指定基准时间，计算出最近一次任务基于该基准时间的运行时间
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskLatestRunTimeRequest"/></param>
-        /// <returns><see cref="DescribeTaskLatestRunTimeResponse"/></returns>
-        public DescribeTaskLatestRunTimeResponse DescribeTaskLatestRunTimeSync(DescribeTaskLatestRunTimeRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskLatestRunTimeResponse>(req, "DescribeTaskLatestRunTime")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 基于条件翻页获取任务列表, 用于新建跨工作流任务场景中展示工作流列表操作
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskListByConditionDsRequest"/></param>
-        /// <returns><see cref="DescribeTaskListByConditionDsResponse"/></returns>
-        public Task<DescribeTaskListByConditionDsResponse> DescribeTaskListByConditionDs(DescribeTaskListByConditionDsRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskListByConditionDsResponse>(req, "DescribeTaskListByConditionDs");
-        }
-
-        /// <summary>
-        /// 基于条件翻页获取任务列表, 用于新建跨工作流任务场景中展示工作流列表操作
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskListByConditionDsRequest"/></param>
-        /// <returns><see cref="DescribeTaskListByConditionDsResponse"/></returns>
-        public DescribeTaskListByConditionDsResponse DescribeTaskListByConditionDsSync(DescribeTaskListByConditionDsRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskListByConditionDsResponse>(req, "DescribeTaskListByConditionDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查看任务锁状态信息
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskLockStatusRequest"/></param>
@@ -7006,90 +4837,6 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeTaskLockStatusResponse DescribeTaskLockStatusSync(DescribeTaskLockStatusRequest req)
         {
             return InternalRequestAsync<DescribeTaskLockStatusResponse>(req, "DescribeTaskLockStatus")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询任务输出参数
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskOutParamDsRequest"/></param>
-        /// <returns><see cref="DescribeTaskOutParamDsResponse"/></returns>
-        public Task<DescribeTaskOutParamDsResponse> DescribeTaskOutParamDs(DescribeTaskOutParamDsRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskOutParamDsResponse>(req, "DescribeTaskOutParamDs");
-        }
-
-        /// <summary>
-        /// 查询任务输出参数
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskOutParamDsRequest"/></param>
-        /// <returns><see cref="DescribeTaskOutParamDsResponse"/></returns>
-        public DescribeTaskOutParamDsResponse DescribeTaskOutParamDsSync(DescribeTaskOutParamDsRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskOutParamDsResponse>(req, "DescribeTaskOutParamDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取指定任务产出登记列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskOutputRegistriesRequest"/></param>
-        /// <returns><see cref="DescribeTaskOutputRegistriesResponse"/></returns>
-        public Task<DescribeTaskOutputRegistriesResponse> DescribeTaskOutputRegistries(DescribeTaskOutputRegistriesRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskOutputRegistriesResponse>(req, "DescribeTaskOutputRegistries");
-        }
-
-        /// <summary>
-        /// 获取指定任务产出登记列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskOutputRegistriesRequest"/></param>
-        /// <returns><see cref="DescribeTaskOutputRegistriesResponse"/></returns>
-        public DescribeTaskOutputRegistriesResponse DescribeTaskOutputRegistriesSync(DescribeTaskOutputRegistriesRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskOutputRegistriesResponse>(req, "DescribeTaskOutputRegistries")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询任务引用参数
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskParamDsRequest"/></param>
-        /// <returns><see cref="DescribeTaskParamDsResponse"/></returns>
-        public Task<DescribeTaskParamDsResponse> DescribeTaskParamDs(DescribeTaskParamDsRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskParamDsResponse>(req, "DescribeTaskParamDs");
-        }
-
-        /// <summary>
-        /// 查询任务引用参数
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskParamDsRequest"/></param>
-        /// <returns><see cref="DescribeTaskParamDsResponse"/></returns>
-        public DescribeTaskParamDsResponse DescribeTaskParamDsSync(DescribeTaskParamDsRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskParamDsResponse>(req, "DescribeTaskParamDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 基于当前任务的数据时间计算依赖的上游任务数据时间
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskParentRunTimeRequest"/></param>
-        /// <returns><see cref="DescribeTaskParentRunTimeResponse"/></returns>
-        public Task<DescribeTaskParentRunTimeResponse> DescribeTaskParentRunTime(DescribeTaskParentRunTimeRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskParentRunTimeResponse>(req, "DescribeTaskParentRunTime");
-        }
-
-        /// <summary>
-        /// 基于当前任务的数据时间计算依赖的上游任务数据时间
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskParentRunTimeRequest"/></param>
-        /// <returns><see cref="DescribeTaskParentRunTimeResponse"/></returns>
-        public DescribeTaskParentRunTimeResponse DescribeTaskParentRunTimeSync(DescribeTaskParentRunTimeRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskParentRunTimeResponse>(req, "DescribeTaskParentRunTime")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -7180,27 +4927,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 根据脚本类型获取任务类型
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskTypeByScriptTypeRequest"/></param>
-        /// <returns><see cref="DescribeTaskTypeByScriptTypeResponse"/></returns>
-        public Task<DescribeTaskTypeByScriptTypeResponse> DescribeTaskTypeByScriptType(DescribeTaskTypeByScriptTypeRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskTypeByScriptTypeResponse>(req, "DescribeTaskTypeByScriptType");
-        }
-
-        /// <summary>
-        /// 根据脚本类型获取任务类型
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskTypeByScriptTypeRequest"/></param>
-        /// <returns><see cref="DescribeTaskTypeByScriptTypeResponse"/></returns>
-        public DescribeTaskTypeByScriptTypeResponse DescribeTaskTypeByScriptTypeSync(DescribeTaskTypeByScriptTypeRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskTypeByScriptTypeResponse>(req, "DescribeTaskTypeByScriptType")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 根据工作流分页查询任务
         /// </summary>
@@ -7220,27 +4946,6 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeTasksByPageResponse DescribeTasksByPageSync(DescribeTasksByPageRequest req)
         {
             return InternalRequestAsync<DescribeTasksByPageResponse>(req, "DescribeTasksByPage")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 任务信息查询-项目克隆使用
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTasksForProjectCloneRequest"/></param>
-        /// <returns><see cref="DescribeTasksForProjectCloneResponse"/></returns>
-        public Task<DescribeTasksForProjectCloneResponse> DescribeTasksForProjectClone(DescribeTasksForProjectCloneRequest req)
-        {
-            return InternalRequestAsync<DescribeTasksForProjectCloneResponse>(req, "DescribeTasksForProjectClone");
-        }
-
-        /// <summary>
-        /// 任务信息查询-项目克隆使用
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTasksForProjectCloneRequest"/></param>
-        /// <returns><see cref="DescribeTasksForProjectCloneResponse"/></returns>
-        public DescribeTasksForProjectCloneResponse DescribeTasksForProjectCloneSync(DescribeTasksForProjectCloneRequest req)
-        {
-            return InternalRequestAsync<DescribeTasksForProjectCloneResponse>(req, "DescribeTasksForProjectClone")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -7287,27 +4992,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 获取etl测试运行任务执行状态和日志
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTestRunRequest"/></param>
-        /// <returns><see cref="DescribeTestRunResponse"/></returns>
-        public Task<DescribeTestRunResponse> DescribeTestRun(DescribeTestRunRequest req)
-        {
-            return InternalRequestAsync<DescribeTestRunResponse>(req, "DescribeTestRun");
-        }
-
-        /// <summary>
-        /// 获取etl测试运行任务执行状态和日志
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTestRunRequest"/></param>
-        /// <returns><see cref="DescribeTestRunResponse"/></returns>
-        public DescribeTestRunResponse DescribeTestRunSync(DescribeTestRunRequest req)
-        {
-            return InternalRequestAsync<DescribeTestRunResponse>(req, "DescribeTestRun")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 获取第三方运行日志
         /// </summary>
         /// <param name="req"><see cref="DescribeThirdTaskRunLogRequest"/></param>
@@ -7325,27 +5009,6 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeThirdTaskRunLogResponse DescribeThirdTaskRunLogSync(DescribeThirdTaskRunLogRequest req)
         {
             return InternalRequestAsync<DescribeThirdTaskRunLogResponse>(req, "DescribeThirdTaskRunLog")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取长连接Token
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTokenRequest"/></param>
-        /// <returns><see cref="DescribeTokenResponse"/></returns>
-        public Task<DescribeTokenResponse> DescribeToken(DescribeTokenRequest req)
-        {
-            return InternalRequestAsync<DescribeTokenResponse>(req, "DescribeToken");
-        }
-
-        /// <summary>
-        /// 获取长连接Token
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTokenRequest"/></param>
-        /// <returns><see cref="DescribeTokenResponse"/></returns>
-        public DescribeTokenResponse DescribeTokenSync(DescribeTokenRequest req)
-        {
-            return InternalRequestAsync<DescribeTokenResponse>(req, "DescribeToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -7392,27 +5055,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 根据文件夹查询工作流
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWorkflowByFordIdsRequest"/></param>
-        /// <returns><see cref="DescribeWorkflowByFordIdsResponse"/></returns>
-        public Task<DescribeWorkflowByFordIdsResponse> DescribeWorkflowByFordIds(DescribeWorkflowByFordIdsRequest req)
-        {
-            return InternalRequestAsync<DescribeWorkflowByFordIdsResponse>(req, "DescribeWorkflowByFordIds");
-        }
-
-        /// <summary>
-        /// 根据文件夹查询工作流
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWorkflowByFordIdsRequest"/></param>
-        /// <returns><see cref="DescribeWorkflowByFordIdsResponse"/></returns>
-        public DescribeWorkflowByFordIdsResponse DescribeWorkflowByFordIdsSync(DescribeWorkflowByFordIdsRequest req)
-        {
-            return InternalRequestAsync<DescribeWorkflowByFordIdsResponse>(req, "DescribeWorkflowByFordIds")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查询工作流画布
         /// </summary>
         /// <param name="req"><see cref="DescribeWorkflowCanvasInfoRequest"/></param>
@@ -7434,69 +5076,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 数据开发-获取工作流画布信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWorkflowCanvasInfoDsRequest"/></param>
-        /// <returns><see cref="DescribeWorkflowCanvasInfoDsResponse"/></returns>
-        public Task<DescribeWorkflowCanvasInfoDsResponse> DescribeWorkflowCanvasInfoDs(DescribeWorkflowCanvasInfoDsRequest req)
-        {
-            return InternalRequestAsync<DescribeWorkflowCanvasInfoDsResponse>(req, "DescribeWorkflowCanvasInfoDs");
-        }
-
-        /// <summary>
-        /// 数据开发-获取工作流画布信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWorkflowCanvasInfoDsRequest"/></param>
-        /// <returns><see cref="DescribeWorkflowCanvasInfoDsResponse"/></returns>
-        public DescribeWorkflowCanvasInfoDsResponse DescribeWorkflowCanvasInfoDsSync(DescribeWorkflowCanvasInfoDsRequest req)
-        {
-            return InternalRequestAsync<DescribeWorkflowCanvasInfoDsResponse>(req, "DescribeWorkflowCanvasInfoDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取工作流操作日志
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWorkflowCanvasOpLogsRequest"/></param>
-        /// <returns><see cref="DescribeWorkflowCanvasOpLogsResponse"/></returns>
-        public Task<DescribeWorkflowCanvasOpLogsResponse> DescribeWorkflowCanvasOpLogs(DescribeWorkflowCanvasOpLogsRequest req)
-        {
-            return InternalRequestAsync<DescribeWorkflowCanvasOpLogsResponse>(req, "DescribeWorkflowCanvasOpLogs");
-        }
-
-        /// <summary>
-        /// 获取工作流操作日志
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWorkflowCanvasOpLogsRequest"/></param>
-        /// <returns><see cref="DescribeWorkflowCanvasOpLogsResponse"/></returns>
-        public DescribeWorkflowCanvasOpLogsResponse DescribeWorkflowCanvasOpLogsSync(DescribeWorkflowCanvasOpLogsRequest req)
-        {
-            return InternalRequestAsync<DescribeWorkflowCanvasOpLogsResponse>(req, "DescribeWorkflowCanvasOpLogs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取工作流画布操作人列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWorkflowCanvasOperatorsRequest"/></param>
-        /// <returns><see cref="DescribeWorkflowCanvasOperatorsResponse"/></returns>
-        public Task<DescribeWorkflowCanvasOperatorsResponse> DescribeWorkflowCanvasOperators(DescribeWorkflowCanvasOperatorsRequest req)
-        {
-            return InternalRequestAsync<DescribeWorkflowCanvasOperatorsResponse>(req, "DescribeWorkflowCanvasOperators");
-        }
-
-        /// <summary>
-        /// 获取工作流画布操作人列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWorkflowCanvasOperatorsRequest"/></param>
-        /// <returns><see cref="DescribeWorkflowCanvasOperatorsResponse"/></returns>
-        public DescribeWorkflowCanvasOperatorsResponse DescribeWorkflowCanvasOperatorsSync(DescribeWorkflowCanvasOperatorsRequest req)
-        {
-            return InternalRequestAsync<DescribeWorkflowCanvasOperatorsResponse>(req, "DescribeWorkflowCanvasOperators")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查询工作流画布运行起止时间
         /// </summary>
         /// <param name="req"><see cref="DescribeWorkflowExecuteByIdRequest"/></param>
@@ -7514,27 +5093,6 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeWorkflowExecuteByIdResponse DescribeWorkflowExecuteByIdSync(DescribeWorkflowExecuteByIdRequest req)
         {
             return InternalRequestAsync<DescribeWorkflowExecuteByIdResponse>(req, "DescribeWorkflowExecuteById")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 工作流信息查询-项目克隆使用
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWorkflowForProjectCloneRequest"/></param>
-        /// <returns><see cref="DescribeWorkflowForProjectCloneResponse"/></returns>
-        public Task<DescribeWorkflowForProjectCloneResponse> DescribeWorkflowForProjectClone(DescribeWorkflowForProjectCloneRequest req)
-        {
-            return InternalRequestAsync<DescribeWorkflowForProjectCloneResponse>(req, "DescribeWorkflowForProjectClone");
-        }
-
-        /// <summary>
-        /// 工作流信息查询-项目克隆使用
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWorkflowForProjectCloneRequest"/></param>
-        /// <returns><see cref="DescribeWorkflowForProjectCloneResponse"/></returns>
-        public DescribeWorkflowForProjectCloneResponse DescribeWorkflowForProjectCloneSync(DescribeWorkflowForProjectCloneRequest req)
-        {
-            return InternalRequestAsync<DescribeWorkflowForProjectCloneResponse>(req, "DescribeWorkflowForProjectClone")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -7602,48 +5160,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 查询工作流全局参数
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWorkflowParamDsRequest"/></param>
-        /// <returns><see cref="DescribeWorkflowParamDsResponse"/></returns>
-        public Task<DescribeWorkflowParamDsResponse> DescribeWorkflowParamDs(DescribeWorkflowParamDsRequest req)
-        {
-            return InternalRequestAsync<DescribeWorkflowParamDsResponse>(req, "DescribeWorkflowParamDs");
-        }
-
-        /// <summary>
-        /// 查询工作流全局参数
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWorkflowParamDsRequest"/></param>
-        /// <returns><see cref="DescribeWorkflowParamDsResponse"/></returns>
-        public DescribeWorkflowParamDsResponse DescribeWorkflowParamDsSync(DescribeWorkflowParamDsRequest req)
-        {
-            return InternalRequestAsync<DescribeWorkflowParamDsResponse>(req, "DescribeWorkflowParamDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取工作流调度信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWorkflowSchedulerInfoDsRequest"/></param>
-        /// <returns><see cref="DescribeWorkflowSchedulerInfoDsResponse"/></returns>
-        public Task<DescribeWorkflowSchedulerInfoDsResponse> DescribeWorkflowSchedulerInfoDs(DescribeWorkflowSchedulerInfoDsRequest req)
-        {
-            return InternalRequestAsync<DescribeWorkflowSchedulerInfoDsResponse>(req, "DescribeWorkflowSchedulerInfoDs");
-        }
-
-        /// <summary>
-        /// 获取工作流调度信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWorkflowSchedulerInfoDsRequest"/></param>
-        /// <returns><see cref="DescribeWorkflowSchedulerInfoDsResponse"/></returns>
-        public DescribeWorkflowSchedulerInfoDsResponse DescribeWorkflowSchedulerInfoDsSync(DescribeWorkflowSchedulerInfoDsRequest req)
-        {
-            return InternalRequestAsync<DescribeWorkflowSchedulerInfoDsResponse>(req, "DescribeWorkflowSchedulerInfoDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查询工作流任务数
         /// </summary>
         /// <param name="req"><see cref="DescribeWorkflowTaskCountRequest"/></param>
@@ -7665,27 +5181,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 工作流任务信息查询-项目克隆使用
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWorkflowTasksForProjectCloneRequest"/></param>
-        /// <returns><see cref="DescribeWorkflowTasksForProjectCloneResponse"/></returns>
-        public Task<DescribeWorkflowTasksForProjectCloneResponse> DescribeWorkflowTasksForProjectClone(DescribeWorkflowTasksForProjectCloneRequest req)
-        {
-            return InternalRequestAsync<DescribeWorkflowTasksForProjectCloneResponse>(req, "DescribeWorkflowTasksForProjectClone");
-        }
-
-        /// <summary>
-        /// 工作流任务信息查询-项目克隆使用
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWorkflowTasksForProjectCloneRequest"/></param>
-        /// <returns><see cref="DescribeWorkflowTasksForProjectCloneResponse"/></returns>
-        public DescribeWorkflowTasksForProjectCloneResponse DescribeWorkflowTasksForProjectCloneSync(DescribeWorkflowTasksForProjectCloneRequest req)
-        {
-            return InternalRequestAsync<DescribeWorkflowTasksForProjectCloneResponse>(req, "DescribeWorkflowTasksForProjectClone")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 实例诊断信息
         /// </summary>
         /// <param name="req"><see cref="DiagnosePlusRequest"/></param>
@@ -7703,48 +5198,6 @@ namespace TencentCloud.Wedata.V20210820
         public DiagnosePlusResponse DiagnosePlusSync(DiagnosePlusRequest req)
         {
             return InternalRequestAsync<DiagnosePlusResponse>(req, "DiagnosePlus")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 下载SQL执行结果
-        /// </summary>
-        /// <param name="req"><see cref="DownloadNewSqlResultRequest"/></param>
-        /// <returns><see cref="DownloadNewSqlResultResponse"/></returns>
-        public Task<DownloadNewSqlResultResponse> DownloadNewSqlResult(DownloadNewSqlResultRequest req)
-        {
-            return InternalRequestAsync<DownloadNewSqlResultResponse>(req, "DownloadNewSqlResult");
-        }
-
-        /// <summary>
-        /// 下载SQL执行结果
-        /// </summary>
-        /// <param name="req"><see cref="DownloadNewSqlResultRequest"/></param>
-        /// <returns><see cref="DownloadNewSqlResultResponse"/></returns>
-        public DownloadNewSqlResultResponse DownloadNewSqlResultSync(DownloadNewSqlResultRequest req)
-        {
-            return InternalRequestAsync<DownloadNewSqlResultResponse>(req, "DownloadNewSqlResult")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 下载SQL执行结果
-        /// </summary>
-        /// <param name="req"><see cref="DownloadSqlResultRequest"/></param>
-        /// <returns><see cref="DownloadSqlResultResponse"/></returns>
-        public Task<DownloadSqlResultResponse> DownloadSqlResult(DownloadSqlResultRequest req)
-        {
-            return InternalRequestAsync<DownloadSqlResultResponse>(req, "DownloadSqlResult");
-        }
-
-        /// <summary>
-        /// 下载SQL执行结果
-        /// </summary>
-        /// <param name="req"><see cref="DownloadSqlResultRequest"/></param>
-        /// <returns><see cref="DownloadSqlResultResponse"/></returns>
-        public DownloadSqlResultResponse DownloadSqlResultSync(DownloadSqlResultRequest req)
-        {
-            return InternalRequestAsync<DownloadSqlResultResponse>(req, "DownloadSqlResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -7791,111 +5244,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 事件管理-导出事件
-        /// </summary>
-        /// <param name="req"><see cref="ExportDsEventRequest"/></param>
-        /// <returns><see cref="ExportDsEventResponse"/></returns>
-        public Task<ExportDsEventResponse> ExportDsEvent(ExportDsEventRequest req)
-        {
-            return InternalRequestAsync<ExportDsEventResponse>(req, "ExportDsEvent");
-        }
-
-        /// <summary>
-        /// 事件管理-导出事件
-        /// </summary>
-        /// <param name="req"><see cref="ExportDsEventRequest"/></param>
-        /// <returns><see cref="ExportDsEventResponse"/></returns>
-        public ExportDsEventResponse ExportDsEventSync(ExportDsEventRequest req)
-        {
-            return InternalRequestAsync<ExportDsEventResponse>(req, "ExportDsEvent")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 批量导出文件
-        /// </summary>
-        /// <param name="req"><see cref="ExportFilesRequest"/></param>
-        /// <returns><see cref="ExportFilesResponse"/></returns>
-        public Task<ExportFilesResponse> ExportFiles(ExportFilesRequest req)
-        {
-            return InternalRequestAsync<ExportFilesResponse>(req, "ExportFiles");
-        }
-
-        /// <summary>
-        /// 批量导出文件
-        /// </summary>
-        /// <param name="req"><see cref="ExportFilesRequest"/></param>
-        /// <returns><see cref="ExportFilesResponse"/></returns>
-        public ExportFilesResponse ExportFilesSync(ExportFilesRequest req)
-        {
-            return InternalRequestAsync<ExportFilesResponse>(req, "ExportFiles")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 导出项目参数
-        /// </summary>
-        /// <param name="req"><see cref="ExportProjectParamDsRequest"/></param>
-        /// <returns><see cref="ExportProjectParamDsResponse"/></returns>
-        public Task<ExportProjectParamDsResponse> ExportProjectParamDs(ExportProjectParamDsRequest req)
-        {
-            return InternalRequestAsync<ExportProjectParamDsResponse>(req, "ExportProjectParamDs");
-        }
-
-        /// <summary>
-        /// 导出项目参数
-        /// </summary>
-        /// <param name="req"><see cref="ExportProjectParamDsRequest"/></param>
-        /// <returns><see cref="ExportProjectParamDsResponse"/></returns>
-        public ExportProjectParamDsResponse ExportProjectParamDsSync(ExportProjectParamDsRequest req)
-        {
-            return InternalRequestAsync<ExportProjectParamDsResponse>(req, "ExportProjectParamDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 导出工作流(XML格式)，导出的文件存储在 cos 中(私有化 csp)，请自行下载，相关的下载信息在返回值中可以获取到
-        /// </summary>
-        /// <param name="req"><see cref="ExportWorkflowXmlRequest"/></param>
-        /// <returns><see cref="ExportWorkflowXmlResponse"/></returns>
-        public Task<ExportWorkflowXmlResponse> ExportWorkflowXml(ExportWorkflowXmlRequest req)
-        {
-            return InternalRequestAsync<ExportWorkflowXmlResponse>(req, "ExportWorkflowXml");
-        }
-
-        /// <summary>
-        /// 导出工作流(XML格式)，导出的文件存储在 cos 中(私有化 csp)，请自行下载，相关的下载信息在返回值中可以获取到
-        /// </summary>
-        /// <param name="req"><see cref="ExportWorkflowXmlRequest"/></param>
-        /// <returns><see cref="ExportWorkflowXmlResponse"/></returns>
-        public ExportWorkflowXmlResponse ExportWorkflowXmlSync(ExportWorkflowXmlRequest req)
-        {
-            return InternalRequestAsync<ExportWorkflowXmlResponse>(req, "ExportWorkflowXml")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 导出工作流到 Zip 文件，导出的文件存储在 cos 中(私有化 csp)，请自行下载，相关的下载信息在返回值中可以获取到
-        /// </summary>
-        /// <param name="req"><see cref="ExportWorkflowZipRequest"/></param>
-        /// <returns><see cref="ExportWorkflowZipResponse"/></returns>
-        public Task<ExportWorkflowZipResponse> ExportWorkflowZip(ExportWorkflowZipRequest req)
-        {
-            return InternalRequestAsync<ExportWorkflowZipResponse>(req, "ExportWorkflowZip");
-        }
-
-        /// <summary>
-        /// 导出工作流到 Zip 文件，导出的文件存储在 cos 中(私有化 csp)，请自行下载，相关的下载信息在返回值中可以获取到
-        /// </summary>
-        /// <param name="req"><see cref="ExportWorkflowZipRequest"/></param>
-        /// <returns><see cref="ExportWorkflowZipResponse"/></returns>
-        public ExportWorkflowZipResponse ExportWorkflowZipSync(ExportWorkflowZipRequest req)
-        {
-            return InternalRequestAsync<ExportWorkflowZipResponse>(req, "ExportWorkflowZip")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查找全部的文件夹
         /// </summary>
         /// <param name="req"><see cref="FindAllFolderRequest"/></param>
@@ -7913,90 +5261,6 @@ namespace TencentCloud.Wedata.V20210820
         public FindAllFolderResponse FindAllFolderSync(FindAllFolderRequest req)
         {
             return InternalRequestAsync<FindAllFolderResponse>(req, "FindAllFolder")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 拉取下游依赖的任务列表Ds
-        /// </summary>
-        /// <param name="req"><see cref="FindDependTaskListDsRequest"/></param>
-        /// <returns><see cref="FindDependTaskListDsResponse"/></returns>
-        public Task<FindDependTaskListDsResponse> FindDependTaskListDs(FindDependTaskListDsRequest req)
-        {
-            return InternalRequestAsync<FindDependTaskListDsResponse>(req, "FindDependTaskListDs");
-        }
-
-        /// <summary>
-        /// 拉取下游依赖的任务列表Ds
-        /// </summary>
-        /// <param name="req"><see cref="FindDependTaskListDsRequest"/></param>
-        /// <returns><see cref="FindDependTaskListDsResponse"/></returns>
-        public FindDependTaskListDsResponse FindDependTaskListDsSync(FindDependTaskListDsRequest req)
-        {
-            return InternalRequestAsync<FindDependTaskListDsResponse>(req, "FindDependTaskListDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 批量拉取下游依赖的任务列表Ds
-        /// </summary>
-        /// <param name="req"><see cref="FindDependTaskListsDsRequest"/></param>
-        /// <returns><see cref="FindDependTaskListsDsResponse"/></returns>
-        public Task<FindDependTaskListsDsResponse> FindDependTaskListsDs(FindDependTaskListsDsRequest req)
-        {
-            return InternalRequestAsync<FindDependTaskListsDsResponse>(req, "FindDependTaskListsDs");
-        }
-
-        /// <summary>
-        /// 批量拉取下游依赖的任务列表Ds
-        /// </summary>
-        /// <param name="req"><see cref="FindDependTaskListsDsRequest"/></param>
-        /// <returns><see cref="FindDependTaskListsDsResponse"/></returns>
-        public FindDependTaskListsDsResponse FindDependTaskListsDsSync(FindDependTaskListsDsRequest req)
-        {
-            return InternalRequestAsync<FindDependTaskListsDsResponse>(req, "FindDependTaskListsDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 编排空间-根据项目名称和任务名称模糊查询所有任务
-        /// </summary>
-        /// <param name="req"><see cref="FindFuzzyTasksDsRequest"/></param>
-        /// <returns><see cref="FindFuzzyTasksDsResponse"/></returns>
-        public Task<FindFuzzyTasksDsResponse> FindFuzzyTasksDs(FindFuzzyTasksDsRequest req)
-        {
-            return InternalRequestAsync<FindFuzzyTasksDsResponse>(req, "FindFuzzyTasksDs");
-        }
-
-        /// <summary>
-        /// 编排空间-根据项目名称和任务名称模糊查询所有任务
-        /// </summary>
-        /// <param name="req"><see cref="FindFuzzyTasksDsRequest"/></param>
-        /// <returns><see cref="FindFuzzyTasksDsResponse"/></returns>
-        public FindFuzzyTasksDsResponse FindFuzzyTasksDsSync(FindFuzzyTasksDsRequest req)
-        {
-            return InternalRequestAsync<FindFuzzyTasksDsResponse>(req, "FindFuzzyTasksDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 远端路径寻找任务
-        /// </summary>
-        /// <param name="req"><see cref="FindTaskByRemotePathRequest"/></param>
-        /// <returns><see cref="FindTaskByRemotePathResponse"/></returns>
-        public Task<FindTaskByRemotePathResponse> FindTaskByRemotePath(FindTaskByRemotePathRequest req)
-        {
-            return InternalRequestAsync<FindTaskByRemotePathResponse>(req, "FindTaskByRemotePath");
-        }
-
-        /// <summary>
-        /// 远端路径寻找任务
-        /// </summary>
-        /// <param name="req"><see cref="FindTaskByRemotePathRequest"/></param>
-        /// <returns><see cref="FindTaskByRemotePathResponse"/></returns>
-        public FindTaskByRemotePathResponse FindTaskByRemotePathSync(FindTaskByRemotePathRequest req)
-        {
-            return InternalRequestAsync<FindTaskByRemotePathResponse>(req, "FindTaskByRemotePath")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -8154,69 +5418,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 获取高级运行参数
-        /// </summary>
-        /// <param name="req"><see cref="GetAdvanceRunParamsRequest"/></param>
-        /// <returns><see cref="GetAdvanceRunParamsResponse"/></returns>
-        public Task<GetAdvanceRunParamsResponse> GetAdvanceRunParams(GetAdvanceRunParamsRequest req)
-        {
-            return InternalRequestAsync<GetAdvanceRunParamsResponse>(req, "GetAdvanceRunParams");
-        }
-
-        /// <summary>
-        /// 获取高级运行参数
-        /// </summary>
-        /// <param name="req"><see cref="GetAdvanceRunParamsRequest"/></param>
-        /// <returns><see cref="GetAdvanceRunParamsResponse"/></returns>
-        public GetAdvanceRunParamsResponse GetAdvanceRunParamsSync(GetAdvanceRunParamsRequest req)
-        {
-            return InternalRequestAsync<GetAdvanceRunParamsResponse>(req, "GetAdvanceRunParams")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取批量操作错误日志
-        /// </summary>
-        /// <param name="req"><see cref="GetBatchDetailErrorLogRequest"/></param>
-        /// <returns><see cref="GetBatchDetailErrorLogResponse"/></returns>
-        public Task<GetBatchDetailErrorLogResponse> GetBatchDetailErrorLog(GetBatchDetailErrorLogRequest req)
-        {
-            return InternalRequestAsync<GetBatchDetailErrorLogResponse>(req, "GetBatchDetailErrorLog");
-        }
-
-        /// <summary>
-        /// 获取批量操作错误日志
-        /// </summary>
-        /// <param name="req"><see cref="GetBatchDetailErrorLogRequest"/></param>
-        /// <returns><see cref="GetBatchDetailErrorLogResponse"/></returns>
-        public GetBatchDetailErrorLogResponse GetBatchDetailErrorLogSync(GetBatchDetailErrorLogRequest req)
-        {
-            return InternalRequestAsync<GetBatchDetailErrorLogResponse>(req, "GetBatchDetailErrorLog")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取cos token
-        /// </summary>
-        /// <param name="req"><see cref="GetCosTokenRequest"/></param>
-        /// <returns><see cref="GetCosTokenResponse"/></returns>
-        public Task<GetCosTokenResponse> GetCosToken(GetCosTokenRequest req)
-        {
-            return InternalRequestAsync<GetCosTokenResponse>(req, "GetCosToken");
-        }
-
-        /// <summary>
-        /// 获取cos token
-        /// </summary>
-        /// <param name="req"><see cref="GetCosTokenRequest"/></param>
-        /// <returns><see cref="GetCosTokenResponse"/></returns>
-        public GetCosTokenResponse GetCosTokenSync(GetCosTokenRequest req)
-        {
-            return InternalRequestAsync<GetCosTokenResponse>(req, "GetCosToken")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 开发空间-获取数据开发脚本信息
         /// </summary>
         /// <param name="req"><see cref="GetFileInfoRequest"/></param>
@@ -8259,48 +5460,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 开发空间获取最近一次测试运行记录信息
-        /// </summary>
-        /// <param name="req"><see cref="GetLatestAnalyseInfoRequest"/></param>
-        /// <returns><see cref="GetLatestAnalyseInfoResponse"/></returns>
-        public Task<GetLatestAnalyseInfoResponse> GetLatestAnalyseInfo(GetLatestAnalyseInfoRequest req)
-        {
-            return InternalRequestAsync<GetLatestAnalyseInfoResponse>(req, "GetLatestAnalyseInfo");
-        }
-
-        /// <summary>
-        /// 开发空间获取最近一次测试运行记录信息
-        /// </summary>
-        /// <param name="req"><see cref="GetLatestAnalyseInfoRequest"/></param>
-        /// <returns><see cref="GetLatestAnalyseInfoResponse"/></returns>
-        public GetLatestAnalyseInfoResponse GetLatestAnalyseInfoSync(GetLatestAnalyseInfoRequest req)
-        {
-            return InternalRequestAsync<GetLatestAnalyseInfoResponse>(req, "GetLatestAnalyseInfo")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 编排空间获取最近一次测试运行记录信息
-        /// </summary>
-        /// <param name="req"><see cref="GetLatestTestRunInfoRequest"/></param>
-        /// <returns><see cref="GetLatestTestRunInfoResponse"/></returns>
-        public Task<GetLatestTestRunInfoResponse> GetLatestTestRunInfo(GetLatestTestRunInfoRequest req)
-        {
-            return InternalRequestAsync<GetLatestTestRunInfoResponse>(req, "GetLatestTestRunInfo");
-        }
-
-        /// <summary>
-        /// 编排空间获取最近一次测试运行记录信息
-        /// </summary>
-        /// <param name="req"><see cref="GetLatestTestRunInfoRequest"/></param>
-        /// <returns><see cref="GetLatestTestRunInfoResponse"/></returns>
-        public GetLatestTestRunInfoResponse GetLatestTestRunInfoSync(GetLatestTestRunInfoRequest req)
-        {
-            return InternalRequestAsync<GetLatestTestRunInfoResponse>(req, "GetLatestTestRunInfo")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 获取离线任务实例列表(新)
         /// </summary>
         /// <param name="req"><see cref="GetOfflineDIInstanceListRequest"/></param>
@@ -8339,321 +5498,6 @@ namespace TencentCloud.Wedata.V20210820
         public GetOfflineInstanceListResponse GetOfflineInstanceListSync(GetOfflineInstanceListRequest req)
         {
             return InternalRequestAsync<GetOfflineInstanceListResponse>(req, "GetOfflineInstanceList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 回收站脚本文件目录树
-        /// </summary>
-        /// <param name="req"><see cref="GetPathTreesRequest"/></param>
-        /// <returns><see cref="GetPathTreesResponse"/></returns>
-        public Task<GetPathTreesResponse> GetPathTrees(GetPathTreesRequest req)
-        {
-            return InternalRequestAsync<GetPathTreesResponse>(req, "GetPathTrees");
-        }
-
-        /// <summary>
-        /// 回收站脚本文件目录树
-        /// </summary>
-        /// <param name="req"><see cref="GetPathTreesRequest"/></param>
-        /// <returns><see cref="GetPathTreesResponse"/></returns>
-        public GetPathTreesResponse GetPathTreesSync(GetPathTreesRequest req)
-        {
-            return InternalRequestAsync<GetPathTreesResponse>(req, "GetPathTrees")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 资源管理-获取资源上传的可用 cos 路径
-        /// </summary>
-        /// <param name="req"><see cref="GetResourceCosPathRequest"/></param>
-        /// <returns><see cref="GetResourceCosPathResponse"/></returns>
-        public Task<GetResourceCosPathResponse> GetResourceCosPath(GetResourceCosPathRequest req)
-        {
-            return InternalRequestAsync<GetResourceCosPathResponse>(req, "GetResourceCosPath");
-        }
-
-        /// <summary>
-        /// 资源管理-获取资源上传的可用 cos 路径
-        /// </summary>
-        /// <param name="req"><see cref="GetResourceCosPathRequest"/></param>
-        /// <returns><see cref="GetResourceCosPathResponse"/></returns>
-        public GetResourceCosPathResponse GetResourceCosPathSync(GetResourceCosPathRequest req)
-        {
-            return InternalRequestAsync<GetResourceCosPathResponse>(req, "GetResourceCosPath")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 资源管理-拉取资源目录树
-        /// </summary>
-        /// <param name="req"><see cref="GetResourcePathTreeRequest"/></param>
-        /// <returns><see cref="GetResourcePathTreeResponse"/></returns>
-        public Task<GetResourcePathTreeResponse> GetResourcePathTree(GetResourcePathTreeRequest req)
-        {
-            return InternalRequestAsync<GetResourcePathTreeResponse>(req, "GetResourcePathTree");
-        }
-
-        /// <summary>
-        /// 资源管理-拉取资源目录树
-        /// </summary>
-        /// <param name="req"><see cref="GetResourcePathTreeRequest"/></param>
-        /// <returns><see cref="GetResourcePathTreeResponse"/></returns>
-        public GetResourcePathTreeResponse GetResourcePathTreeSync(GetResourcePathTreeRequest req)
-        {
-            return InternalRequestAsync<GetResourcePathTreeResponse>(req, "GetResourcePathTree")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取工作流运行任务下游Ds
-        /// </summary>
-        /// <param name="req"><see cref="GetRunSonListDsRequest"/></param>
-        /// <returns><see cref="GetRunSonListDsResponse"/></returns>
-        public Task<GetRunSonListDsResponse> GetRunSonListDs(GetRunSonListDsRequest req)
-        {
-            return InternalRequestAsync<GetRunSonListDsResponse>(req, "GetRunSonListDs");
-        }
-
-        /// <summary>
-        /// 获取工作流运行任务下游Ds
-        /// </summary>
-        /// <param name="req"><see cref="GetRunSonListDsRequest"/></param>
-        /// <returns><see cref="GetRunSonListDsResponse"/></returns>
-        public GetRunSonListDsResponse GetRunSonListDsSync(GetRunSonListDsRequest req)
-        {
-            return InternalRequestAsync<GetRunSonListDsResponse>(req, "GetRunSonListDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取调试任务实例状态信息
-        /// </summary>
-        /// <param name="req"><see cref="GetTestRunTaskInstancesStatusInfoRequest"/></param>
-        /// <returns><see cref="GetTestRunTaskInstancesStatusInfoResponse"/></returns>
-        public Task<GetTestRunTaskInstancesStatusInfoResponse> GetTestRunTaskInstancesStatusInfo(GetTestRunTaskInstancesStatusInfoRequest req)
-        {
-            return InternalRequestAsync<GetTestRunTaskInstancesStatusInfoResponse>(req, "GetTestRunTaskInstancesStatusInfo");
-        }
-
-        /// <summary>
-        /// 获取调试任务实例状态信息
-        /// </summary>
-        /// <param name="req"><see cref="GetTestRunTaskInstancesStatusInfoRequest"/></param>
-        /// <returns><see cref="GetTestRunTaskInstancesStatusInfoResponse"/></returns>
-        public GetTestRunTaskInstancesStatusInfoResponse GetTestRunTaskInstancesStatusInfoSync(GetTestRunTaskInstancesStatusInfoRequest req)
-        {
-            return InternalRequestAsync<GetTestRunTaskInstancesStatusInfoResponse>(req, "GetTestRunTaskInstancesStatusInfo")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 协同编辑资源锁心跳
-        /// </summary>
-        /// <param name="req"><see cref="HeartBeatRequest"/></param>
-        /// <returns><see cref="HeartBeatResponse"/></returns>
-        public Task<HeartBeatResponse> HeartBeat(HeartBeatRequest req)
-        {
-            return InternalRequestAsync<HeartBeatResponse>(req, "HeartBeat");
-        }
-
-        /// <summary>
-        /// 协同编辑资源锁心跳
-        /// </summary>
-        /// <param name="req"><see cref="HeartBeatRequest"/></param>
-        /// <returns><see cref="HeartBeatResponse"/></returns>
-        public HeartBeatResponse HeartBeatSync(HeartBeatRequest req)
-        {
-            return InternalRequestAsync<HeartBeatResponse>(req, "HeartBeat")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 事件管理-导入事件
-        /// </summary>
-        /// <param name="req"><see cref="ImportDsEventRequest"/></param>
-        /// <returns><see cref="ImportDsEventResponse"/></returns>
-        public Task<ImportDsEventResponse> ImportDsEvent(ImportDsEventRequest req)
-        {
-            return InternalRequestAsync<ImportDsEventResponse>(req, "ImportDsEvent");
-        }
-
-        /// <summary>
-        /// 事件管理-导入事件
-        /// </summary>
-        /// <param name="req"><see cref="ImportDsEventRequest"/></param>
-        /// <returns><see cref="ImportDsEventResponse"/></returns>
-        public ImportDsEventResponse ImportDsEventSync(ImportDsEventRequest req)
-        {
-            return InternalRequestAsync<ImportDsEventResponse>(req, "ImportDsEvent")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 批量导入文件
-        /// </summary>
-        /// <param name="req"><see cref="ImportFilesRequest"/></param>
-        /// <returns><see cref="ImportFilesResponse"/></returns>
-        public Task<ImportFilesResponse> ImportFiles(ImportFilesRequest req)
-        {
-            return InternalRequestAsync<ImportFilesResponse>(req, "ImportFiles");
-        }
-
-        /// <summary>
-        /// 批量导入文件
-        /// </summary>
-        /// <param name="req"><see cref="ImportFilesRequest"/></param>
-        /// <returns><see cref="ImportFilesResponse"/></returns>
-        public ImportFilesResponse ImportFilesSync(ImportFilesRequest req)
-        {
-            return InternalRequestAsync<ImportFilesResponse>(req, "ImportFiles")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 异步导入集成任务
-        /// </summary>
-        /// <param name="req"><see cref="ImportOfflineTaskRequest"/></param>
-        /// <returns><see cref="ImportOfflineTaskResponse"/></returns>
-        public Task<ImportOfflineTaskResponse> ImportOfflineTask(ImportOfflineTaskRequest req)
-        {
-            return InternalRequestAsync<ImportOfflineTaskResponse>(req, "ImportOfflineTask");
-        }
-
-        /// <summary>
-        /// 异步导入集成任务
-        /// </summary>
-        /// <param name="req"><see cref="ImportOfflineTaskRequest"/></param>
-        /// <returns><see cref="ImportOfflineTaskResponse"/></returns>
-        public ImportOfflineTaskResponse ImportOfflineTaskSync(ImportOfflineTaskRequest req)
-        {
-            return InternalRequestAsync<ImportOfflineTaskResponse>(req, "ImportOfflineTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 导入项目参数
-        /// </summary>
-        /// <param name="req"><see cref="ImportProjectParamDsRequest"/></param>
-        /// <returns><see cref="ImportProjectParamDsResponse"/></returns>
-        public Task<ImportProjectParamDsResponse> ImportProjectParamDs(ImportProjectParamDsRequest req)
-        {
-            return InternalRequestAsync<ImportProjectParamDsResponse>(req, "ImportProjectParamDs");
-        }
-
-        /// <summary>
-        /// 导入项目参数
-        /// </summary>
-        /// <param name="req"><see cref="ImportProjectParamDsRequest"/></param>
-        /// <returns><see cref="ImportProjectParamDsResponse"/></returns>
-        public ImportProjectParamDsResponse ImportProjectParamDsSync(ImportProjectParamDsRequest req)
-        {
-            return InternalRequestAsync<ImportProjectParamDsResponse>(req, "ImportProjectParamDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 创建数据表：HIVE
-        /// </summary>
-        /// <param name="req"><see cref="ImportTableDataRequest"/></param>
-        /// <returns><see cref="ImportTableDataResponse"/></returns>
-        public Task<ImportTableDataResponse> ImportTableData(ImportTableDataRequest req)
-        {
-            return InternalRequestAsync<ImportTableDataResponse>(req, "ImportTableData");
-        }
-
-        /// <summary>
-        /// 创建数据表：HIVE
-        /// </summary>
-        /// <param name="req"><see cref="ImportTableDataRequest"/></param>
-        /// <returns><see cref="ImportTableDataResponse"/></returns>
-        public ImportTableDataResponse ImportTableDataSync(ImportTableDataRequest req)
-        {
-            return InternalRequestAsync<ImportTableDataResponse>(req, "ImportTableData")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 工作流导入（XML）
-        /// </summary>
-        /// <param name="req"><see cref="ImportWorkflowXmlRequest"/></param>
-        /// <returns><see cref="ImportWorkflowXmlResponse"/></returns>
-        public Task<ImportWorkflowXmlResponse> ImportWorkflowXml(ImportWorkflowXmlRequest req)
-        {
-            return InternalRequestAsync<ImportWorkflowXmlResponse>(req, "ImportWorkflowXml");
-        }
-
-        /// <summary>
-        /// 工作流导入（XML）
-        /// </summary>
-        /// <param name="req"><see cref="ImportWorkflowXmlRequest"/></param>
-        /// <returns><see cref="ImportWorkflowXmlResponse"/></returns>
-        public ImportWorkflowXmlResponse ImportWorkflowXmlSync(ImportWorkflowXmlRequest req)
-        {
-            return InternalRequestAsync<ImportWorkflowXmlResponse>(req, "ImportWorkflowXml")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 工作流导入（ZIP）
-        /// </summary>
-        /// <param name="req"><see cref="ImportWorkflowZipRequest"/></param>
-        /// <returns><see cref="ImportWorkflowZipResponse"/></returns>
-        public Task<ImportWorkflowZipResponse> ImportWorkflowZip(ImportWorkflowZipRequest req)
-        {
-            return InternalRequestAsync<ImportWorkflowZipResponse>(req, "ImportWorkflowZip");
-        }
-
-        /// <summary>
-        /// 工作流导入（ZIP）
-        /// </summary>
-        /// <param name="req"><see cref="ImportWorkflowZipRequest"/></param>
-        /// <returns><see cref="ImportWorkflowZipResponse"/></returns>
-        public ImportWorkflowZipResponse ImportWorkflowZipSync(ImportWorkflowZipRequest req)
-        {
-            return InternalRequestAsync<ImportWorkflowZipResponse>(req, "ImportWorkflowZip")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 资源管理-判断资源文件是否存在
-        /// </summary>
-        /// <param name="req"><see cref="JudgeResourceFileRequest"/></param>
-        /// <returns><see cref="JudgeResourceFileResponse"/></returns>
-        public Task<JudgeResourceFileResponse> JudgeResourceFile(JudgeResourceFileRequest req)
-        {
-            return InternalRequestAsync<JudgeResourceFileResponse>(req, "JudgeResourceFile");
-        }
-
-        /// <summary>
-        /// 资源管理-判断资源文件是否存在
-        /// </summary>
-        /// <param name="req"><see cref="JudgeResourceFileRequest"/></param>
-        /// <returns><see cref="JudgeResourceFileResponse"/></returns>
-        public JudgeResourceFileResponse JudgeResourceFileSync(JudgeResourceFileRequest req)
-        {
-            return InternalRequestAsync<JudgeResourceFileResponse>(req, "JudgeResourceFile")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 任务是否存在监听事件
-        /// </summary>
-        /// <param name="req"><see cref="JudgeTaskListenEventRequest"/></param>
-        /// <returns><see cref="JudgeTaskListenEventResponse"/></returns>
-        public Task<JudgeTaskListenEventResponse> JudgeTaskListenEvent(JudgeTaskListenEventRequest req)
-        {
-            return InternalRequestAsync<JudgeTaskListenEventResponse>(req, "JudgeTaskListenEvent");
-        }
-
-        /// <summary>
-        /// 任务是否存在监听事件
-        /// </summary>
-        /// <param name="req"><see cref="JudgeTaskListenEventRequest"/></param>
-        /// <returns><see cref="JudgeTaskListenEventResponse"/></returns>
-        public JudgeTaskListenEventResponse JudgeTaskListenEventSync(JudgeTaskListenEventRequest req)
-        {
-            return InternalRequestAsync<JudgeTaskListenEventResponse>(req, "JudgeTaskListenEvent")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -8719,69 +5563,6 @@ namespace TencentCloud.Wedata.V20210820
         public KillScheduleInstancesResponse KillScheduleInstancesSync(KillScheduleInstancesRequest req)
         {
             return InternalRequestAsync<KillScheduleInstancesResponse>(req, "KillScheduleInstances")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 停止试运行任务（多个）
-        /// </summary>
-        /// <param name="req"><see cref="KillTasksTestRunRequest"/></param>
-        /// <returns><see cref="KillTasksTestRunResponse"/></returns>
-        public Task<KillTasksTestRunResponse> KillTasksTestRun(KillTasksTestRunRequest req)
-        {
-            return InternalRequestAsync<KillTasksTestRunResponse>(req, "KillTasksTestRun");
-        }
-
-        /// <summary>
-        /// 停止试运行任务（多个）
-        /// </summary>
-        /// <param name="req"><see cref="KillTasksTestRunRequest"/></param>
-        /// <returns><see cref="KillTasksTestRunResponse"/></returns>
-        public KillTasksTestRunResponse KillTasksTestRunSync(KillTasksTestRunRequest req)
-        {
-            return InternalRequestAsync<KillTasksTestRunResponse>(req, "KillTasksTestRun")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取操作详情列表
-        /// </summary>
-        /// <param name="req"><see cref="ListBatchDetailRequest"/></param>
-        /// <returns><see cref="ListBatchDetailResponse"/></returns>
-        public Task<ListBatchDetailResponse> ListBatchDetail(ListBatchDetailRequest req)
-        {
-            return InternalRequestAsync<ListBatchDetailResponse>(req, "ListBatchDetail");
-        }
-
-        /// <summary>
-        /// 获取操作详情列表
-        /// </summary>
-        /// <param name="req"><see cref="ListBatchDetailRequest"/></param>
-        /// <returns><see cref="ListBatchDetailResponse"/></returns>
-        public ListBatchDetailResponse ListBatchDetailSync(ListBatchDetailRequest req)
-        {
-            return InternalRequestAsync<ListBatchDetailResponse>(req, "ListBatchDetail")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取操作历史列表
-        /// </summary>
-        /// <param name="req"><see cref="ListBatchJobRequest"/></param>
-        /// <returns><see cref="ListBatchJobResponse"/></returns>
-        public Task<ListBatchJobResponse> ListBatchJob(ListBatchJobRequest req)
-        {
-            return InternalRequestAsync<ListBatchJobResponse>(req, "ListBatchJob");
-        }
-
-        /// <summary>
-        /// 获取操作历史列表
-        /// </summary>
-        /// <param name="req"><see cref="ListBatchJobRequest"/></param>
-        /// <returns><see cref="ListBatchJobResponse"/></returns>
-        public ListBatchJobResponse ListBatchJobSync(ListBatchJobRequest req)
-        {
-            return InternalRequestAsync<ListBatchJobResponse>(req, "ListBatchJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -9218,27 +5999,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 编排空间-工作流-创建任务文件夹
-        /// </summary>
-        /// <param name="req"><see cref="ModifyTaskFolderRequest"/></param>
-        /// <returns><see cref="ModifyTaskFolderResponse"/></returns>
-        public Task<ModifyTaskFolderResponse> ModifyTaskFolder(ModifyTaskFolderRequest req)
-        {
-            return InternalRequestAsync<ModifyTaskFolderResponse>(req, "ModifyTaskFolder");
-        }
-
-        /// <summary>
-        /// 编排空间-工作流-创建任务文件夹
-        /// </summary>
-        /// <param name="req"><see cref="ModifyTaskFolderRequest"/></param>
-        /// <returns><see cref="ModifyTaskFolderResponse"/></returns>
-        public ModifyTaskFolderResponse ModifyTaskFolderSync(ModifyTaskFolderRequest req)
-        {
-            return InternalRequestAsync<ModifyTaskFolderResponse>(req, "ModifyTaskFolder")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 更新任务
         /// </summary>
@@ -9262,27 +6022,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 更新任务Ds
-        /// </summary>
-        /// <param name="req"><see cref="ModifyTaskInfoDsRequest"/></param>
-        /// <returns><see cref="ModifyTaskInfoDsResponse"/></returns>
-        public Task<ModifyTaskInfoDsResponse> ModifyTaskInfoDs(ModifyTaskInfoDsRequest req)
-        {
-            return InternalRequestAsync<ModifyTaskInfoDsResponse>(req, "ModifyTaskInfoDs");
-        }
-
-        /// <summary>
-        /// 更新任务Ds
-        /// </summary>
-        /// <param name="req"><see cref="ModifyTaskInfoDsRequest"/></param>
-        /// <returns><see cref="ModifyTaskInfoDsResponse"/></returns>
-        public ModifyTaskInfoDsResponse ModifyTaskInfoDsSync(ModifyTaskInfoDsRequest req)
-        {
-            return InternalRequestAsync<ModifyTaskInfoDsResponse>(req, "ModifyTaskInfoDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 添加父任务依赖
         /// </summary>
@@ -9302,27 +6041,6 @@ namespace TencentCloud.Wedata.V20210820
         public ModifyTaskLinksResponse ModifyTaskLinksSync(ModifyTaskLinksRequest req)
         {
             return InternalRequestAsync<ModifyTaskLinksResponse>(req, "ModifyTaskLinks")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 添加父任务依赖
-        /// </summary>
-        /// <param name="req"><see cref="ModifyTaskLinksDsRequest"/></param>
-        /// <returns><see cref="ModifyTaskLinksDsResponse"/></returns>
-        public Task<ModifyTaskLinksDsResponse> ModifyTaskLinksDs(ModifyTaskLinksDsRequest req)
-        {
-            return InternalRequestAsync<ModifyTaskLinksDsResponse>(req, "ModifyTaskLinksDs");
-        }
-
-        /// <summary>
-        /// 添加父任务依赖
-        /// </summary>
-        /// <param name="req"><see cref="ModifyTaskLinksDsRequest"/></param>
-        /// <returns><see cref="ModifyTaskLinksDsResponse"/></returns>
-        public ModifyTaskLinksDsResponse ModifyTaskLinksDsSync(ModifyTaskLinksDsRequest req)
-        {
-            return InternalRequestAsync<ModifyTaskLinksDsResponse>(req, "ModifyTaskLinksDs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -9367,27 +6085,6 @@ namespace TencentCloud.Wedata.V20210820
         public ModifyTaskScriptResponse ModifyTaskScriptSync(ModifyTaskScriptRequest req)
         {
             return InternalRequestAsync<ModifyTaskScriptResponse>(req, "ModifyTaskScript")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 修改任务脚本Ds
-        /// </summary>
-        /// <param name="req"><see cref="ModifyTaskScriptDsRequest"/></param>
-        /// <returns><see cref="ModifyTaskScriptDsResponse"/></returns>
-        public Task<ModifyTaskScriptDsResponse> ModifyTaskScriptDs(ModifyTaskScriptDsRequest req)
-        {
-            return InternalRequestAsync<ModifyTaskScriptDsResponse>(req, "ModifyTaskScriptDs");
-        }
-
-        /// <summary>
-        /// 修改任务脚本Ds
-        /// </summary>
-        /// <param name="req"><see cref="ModifyTaskScriptDsRequest"/></param>
-        /// <returns><see cref="ModifyTaskScriptDsResponse"/></returns>
-        public ModifyTaskScriptDsResponse ModifyTaskScriptDsSync(ModifyTaskScriptDsRequest req)
-        {
-            return InternalRequestAsync<ModifyTaskScriptDsResponse>(req, "ModifyTaskScriptDs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -9438,153 +6135,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 移动文件
-        /// </summary>
-        /// <param name="req"><see cref="MoveFileRequest"/></param>
-        /// <returns><see cref="MoveFileResponse"/></returns>
-        public Task<MoveFileResponse> MoveFile(MoveFileRequest req)
-        {
-            return InternalRequestAsync<MoveFileResponse>(req, "MoveFile");
-        }
-
-        /// <summary>
-        /// 移动文件
-        /// </summary>
-        /// <param name="req"><see cref="MoveFileRequest"/></param>
-        /// <returns><see cref="MoveFileResponse"/></returns>
-        public MoveFileResponse MoveFileSync(MoveFileRequest req)
-        {
-            return InternalRequestAsync<MoveFileResponse>(req, "MoveFile")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 编排空间-工作流-移动任务到工作流文件夹
-        /// </summary>
-        /// <param name="req"><see cref="MoveTasksToFolderRequest"/></param>
-        /// <returns><see cref="MoveTasksToFolderResponse"/></returns>
-        public Task<MoveTasksToFolderResponse> MoveTasksToFolder(MoveTasksToFolderRequest req)
-        {
-            return InternalRequestAsync<MoveTasksToFolderResponse>(req, "MoveTasksToFolder");
-        }
-
-        /// <summary>
-        /// 编排空间-工作流-移动任务到工作流文件夹
-        /// </summary>
-        /// <param name="req"><see cref="MoveTasksToFolderRequest"/></param>
-        /// <returns><see cref="MoveTasksToFolderResponse"/></returns>
-        public MoveTasksToFolderResponse MoveTasksToFolderSync(MoveTasksToFolderRequest req)
-        {
-            return InternalRequestAsync<MoveTasksToFolderResponse>(req, "MoveTasksToFolder")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 库表管理-新建数据表-csv预览，最多支持500行预览
-        /// </summary>
-        /// <param name="req"><see cref="PreviewDataTableCsvRequest"/></param>
-        /// <returns><see cref="PreviewDataTableCsvResponse"/></returns>
-        public Task<PreviewDataTableCsvResponse> PreviewDataTableCsv(PreviewDataTableCsvRequest req)
-        {
-            return InternalRequestAsync<PreviewDataTableCsvResponse>(req, "PreviewDataTableCsv");
-        }
-
-        /// <summary>
-        /// 库表管理-新建数据表-csv预览，最多支持500行预览
-        /// </summary>
-        /// <param name="req"><see cref="PreviewDataTableCsvRequest"/></param>
-        /// <returns><see cref="PreviewDataTableCsvResponse"/></returns>
-        public PreviewDataTableCsvResponse PreviewDataTableCsvSync(PreviewDataTableCsvRequest req)
-        {
-            return InternalRequestAsync<PreviewDataTableCsvResponse>(req, "PreviewDataTableCsv")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询工作流版本信息
-        /// </summary>
-        /// <param name="req"><see cref="QueryWorkflowVersionRequest"/></param>
-        /// <returns><see cref="QueryWorkflowVersionResponse"/></returns>
-        public Task<QueryWorkflowVersionResponse> QueryWorkflowVersion(QueryWorkflowVersionRequest req)
-        {
-            return InternalRequestAsync<QueryWorkflowVersionResponse>(req, "QueryWorkflowVersion");
-        }
-
-        /// <summary>
-        /// 查询工作流版本信息
-        /// </summary>
-        /// <param name="req"><see cref="QueryWorkflowVersionRequest"/></param>
-        /// <returns><see cref="QueryWorkflowVersionResponse"/></returns>
-        public QueryWorkflowVersionResponse QueryWorkflowVersionSync(QueryWorkflowVersionRequest req)
-        {
-            return InternalRequestAsync<QueryWorkflowVersionResponse>(req, "QueryWorkflowVersion")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 注册事件
-        /// </summary>
-        /// <param name="req"><see cref="RegisterDsEventRequest"/></param>
-        /// <returns><see cref="RegisterDsEventResponse"/></returns>
-        public Task<RegisterDsEventResponse> RegisterDsEvent(RegisterDsEventRequest req)
-        {
-            return InternalRequestAsync<RegisterDsEventResponse>(req, "RegisterDsEvent");
-        }
-
-        /// <summary>
-        /// 注册事件
-        /// </summary>
-        /// <param name="req"><see cref="RegisterDsEventRequest"/></param>
-        /// <returns><see cref="RegisterDsEventResponse"/></returns>
-        public RegisterDsEventResponse RegisterDsEventSync(RegisterDsEventRequest req)
-        {
-            return InternalRequestAsync<RegisterDsEventResponse>(req, "RegisterDsEvent")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 注册事件监听者
-        /// </summary>
-        /// <param name="req"><see cref="RegisterDsEventListenerRequest"/></param>
-        /// <returns><see cref="RegisterDsEventListenerResponse"/></returns>
-        public Task<RegisterDsEventListenerResponse> RegisterDsEventListener(RegisterDsEventListenerRequest req)
-        {
-            return InternalRequestAsync<RegisterDsEventListenerResponse>(req, "RegisterDsEventListener");
-        }
-
-        /// <summary>
-        /// 注册事件监听者
-        /// </summary>
-        /// <param name="req"><see cref="RegisterDsEventListenerRequest"/></param>
-        /// <returns><see cref="RegisterDsEventListenerResponse"/></returns>
-        public RegisterDsEventListenerResponse RegisterDsEventListenerSync(RegisterDsEventListenerRequest req)
-        {
-            return InternalRequestAsync<RegisterDsEventListenerResponse>(req, "RegisterDsEventListener")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 注册事件发布者
-        /// </summary>
-        /// <param name="req"><see cref="RegisterDsEventPublisherRequest"/></param>
-        /// <returns><see cref="RegisterDsEventPublisherResponse"/></returns>
-        public Task<RegisterDsEventPublisherResponse> RegisterDsEventPublisher(RegisterDsEventPublisherRequest req)
-        {
-            return InternalRequestAsync<RegisterDsEventPublisherResponse>(req, "RegisterDsEventPublisher");
-        }
-
-        /// <summary>
-        /// 注册事件发布者
-        /// </summary>
-        /// <param name="req"><see cref="RegisterDsEventPublisherRequest"/></param>
-        /// <returns><see cref="RegisterDsEventPublisherResponse"/></returns>
-        public RegisterDsEventPublisherResponse RegisterDsEventPublisherSync(RegisterDsEventPublisherRequest req)
-        {
-            return InternalRequestAsync<RegisterDsEventPublisherResponse>(req, "RegisterDsEventPublisher")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 注册事件
         /// </summary>
@@ -9631,27 +6181,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 释放协同编辑资源锁
-        /// </summary>
-        /// <param name="req"><see cref="ReleaseLockRequest"/></param>
-        /// <returns><see cref="ReleaseLockResponse"/></returns>
-        public Task<ReleaseLockResponse> ReleaseLock(ReleaseLockRequest req)
-        {
-            return InternalRequestAsync<ReleaseLockResponse>(req, "ReleaseLock");
-        }
-
-        /// <summary>
-        /// 释放协同编辑资源锁
-        /// </summary>
-        /// <param name="req"><see cref="ReleaseLockRequest"/></param>
-        /// <returns><see cref="ReleaseLockResponse"/></returns>
-        public ReleaseLockResponse ReleaseLockSync(ReleaseLockRequest req)
-        {
-            return InternalRequestAsync<ReleaseLockResponse>(req, "ReleaseLock")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 删除编排空间工作流
         /// </summary>
         /// <param name="req"><see cref="RemoveWorkflowDsRequest"/></param>
@@ -9669,216 +6198,6 @@ namespace TencentCloud.Wedata.V20210820
         public RemoveWorkflowDsResponse RemoveWorkflowDsSync(RemoveWorkflowDsRequest req)
         {
             return InternalRequestAsync<RemoveWorkflowDsResponse>(req, "RemoveWorkflowDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 重命名文件
-        /// </summary>
-        /// <param name="req"><see cref="RenameFileRequest"/></param>
-        /// <returns><see cref="RenameFileResponse"/></returns>
-        public Task<RenameFileResponse> RenameFile(RenameFileRequest req)
-        {
-            return InternalRequestAsync<RenameFileResponse>(req, "RenameFile");
-        }
-
-        /// <summary>
-        /// 重命名文件
-        /// </summary>
-        /// <param name="req"><see cref="RenameFileRequest"/></param>
-        /// <returns><see cref="RenameFileResponse"/></returns>
-        public RenameFileResponse RenameFileSync(RenameFileRequest req)
-        {
-            return InternalRequestAsync<RenameFileResponse>(req, "RenameFile")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 资源管理-重命名资源
-        /// </summary>
-        /// <param name="req"><see cref="RenameResourceRequest"/></param>
-        /// <returns><see cref="RenameResourceResponse"/></returns>
-        public Task<RenameResourceResponse> RenameResource(RenameResourceRequest req)
-        {
-            return InternalRequestAsync<RenameResourceResponse>(req, "RenameResource");
-        }
-
-        /// <summary>
-        /// 资源管理-重命名资源
-        /// </summary>
-        /// <param name="req"><see cref="RenameResourceRequest"/></param>
-        /// <returns><see cref="RenameResourceResponse"/></returns>
-        public RenameResourceResponse RenameResourceSync(RenameResourceRequest req)
-        {
-            return InternalRequestAsync<RenameResourceResponse>(req, "RenameResource")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 资源管理-重命名资源文件
-        /// </summary>
-        /// <param name="req"><see cref="RenameResourceFileRequest"/></param>
-        /// <returns><see cref="RenameResourceFileResponse"/></returns>
-        public Task<RenameResourceFileResponse> RenameResourceFile(RenameResourceFileRequest req)
-        {
-            return InternalRequestAsync<RenameResourceFileResponse>(req, "RenameResourceFile");
-        }
-
-        /// <summary>
-        /// 资源管理-重命名资源文件
-        /// </summary>
-        /// <param name="req"><see cref="RenameResourceFileRequest"/></param>
-        /// <returns><see cref="RenameResourceFileResponse"/></returns>
-        public RenameResourceFileResponse RenameResourceFileSync(RenameResourceFileRequest req)
-        {
-            return InternalRequestAsync<RenameResourceFileResponse>(req, "RenameResourceFile")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 资源管理-重命名资源目录
-        /// </summary>
-        /// <param name="req"><see cref="RenameResourcePathRequest"/></param>
-        /// <returns><see cref="RenameResourcePathResponse"/></returns>
-        public Task<RenameResourcePathResponse> RenameResourcePath(RenameResourcePathRequest req)
-        {
-            return InternalRequestAsync<RenameResourcePathResponse>(req, "RenameResourcePath");
-        }
-
-        /// <summary>
-        /// 资源管理-重命名资源目录
-        /// </summary>
-        /// <param name="req"><see cref="RenameResourcePathRequest"/></param>
-        /// <returns><see cref="RenameResourcePathResponse"/></returns>
-        public RenameResourcePathResponse RenameResourcePathSync(RenameResourcePathRequest req)
-        {
-            return InternalRequestAsync<RenameResourcePathResponse>(req, "RenameResourcePath")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// RenameTaskDs
-        /// </summary>
-        /// <param name="req"><see cref="RenameTaskDsRequest"/></param>
-        /// <returns><see cref="RenameTaskDsResponse"/></returns>
-        public Task<RenameTaskDsResponse> RenameTaskDs(RenameTaskDsRequest req)
-        {
-            return InternalRequestAsync<RenameTaskDsResponse>(req, "RenameTaskDs");
-        }
-
-        /// <summary>
-        /// RenameTaskDs
-        /// </summary>
-        /// <param name="req"><see cref="RenameTaskDsRequest"/></param>
-        /// <returns><see cref="RenameTaskDsResponse"/></returns>
-        public RenameTaskDsResponse RenameTaskDsSync(RenameTaskDsRequest req)
-        {
-            return InternalRequestAsync<RenameTaskDsResponse>(req, "RenameTaskDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 更新工作流
-        /// </summary>
-        /// <param name="req"><see cref="RenewWorkflowDsRequest"/></param>
-        /// <returns><see cref="RenewWorkflowDsResponse"/></returns>
-        public Task<RenewWorkflowDsResponse> RenewWorkflowDs(RenewWorkflowDsRequest req)
-        {
-            return InternalRequestAsync<RenewWorkflowDsResponse>(req, "RenewWorkflowDs");
-        }
-
-        /// <summary>
-        /// 更新工作流
-        /// </summary>
-        /// <param name="req"><see cref="RenewWorkflowDsRequest"/></param>
-        /// <returns><see cref="RenewWorkflowDsResponse"/></returns>
-        public RenewWorkflowDsResponse RenewWorkflowDsSync(RenewWorkflowDsRequest req)
-        {
-            return InternalRequestAsync<RenewWorkflowDsResponse>(req, "RenewWorkflowDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 移动文件夹
-        /// </summary>
-        /// <param name="req"><see cref="RenewWorkflowFolderDsRequest"/></param>
-        /// <returns><see cref="RenewWorkflowFolderDsResponse"/></returns>
-        public Task<RenewWorkflowFolderDsResponse> RenewWorkflowFolderDs(RenewWorkflowFolderDsRequest req)
-        {
-            return InternalRequestAsync<RenewWorkflowFolderDsResponse>(req, "RenewWorkflowFolderDs");
-        }
-
-        /// <summary>
-        /// 移动文件夹
-        /// </summary>
-        /// <param name="req"><see cref="RenewWorkflowFolderDsRequest"/></param>
-        /// <returns><see cref="RenewWorkflowFolderDsResponse"/></returns>
-        public RenewWorkflowFolderDsResponse RenewWorkflowFolderDsSync(RenewWorkflowFolderDsRequest req)
-        {
-            return InternalRequestAsync<RenewWorkflowFolderDsResponse>(req, "RenewWorkflowFolderDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 批量更新工作流下任务责任人
-        /// </summary>
-        /// <param name="req"><see cref="RenewWorkflowOwnerDsRequest"/></param>
-        /// <returns><see cref="RenewWorkflowOwnerDsResponse"/></returns>
-        public Task<RenewWorkflowOwnerDsResponse> RenewWorkflowOwnerDs(RenewWorkflowOwnerDsRequest req)
-        {
-            return InternalRequestAsync<RenewWorkflowOwnerDsResponse>(req, "RenewWorkflowOwnerDs");
-        }
-
-        /// <summary>
-        /// 批量更新工作流下任务责任人
-        /// </summary>
-        /// <param name="req"><see cref="RenewWorkflowOwnerDsRequest"/></param>
-        /// <returns><see cref="RenewWorkflowOwnerDsResponse"/></returns>
-        public RenewWorkflowOwnerDsResponse RenewWorkflowOwnerDsSync(RenewWorkflowOwnerDsRequest req)
-        {
-            return InternalRequestAsync<RenewWorkflowOwnerDsResponse>(req, "RenewWorkflowOwnerDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 更新工作流下任务调度信息
-        /// </summary>
-        /// <param name="req"><see cref="RenewWorkflowSchedulerInfoDsRequest"/></param>
-        /// <returns><see cref="RenewWorkflowSchedulerInfoDsResponse"/></returns>
-        public Task<RenewWorkflowSchedulerInfoDsResponse> RenewWorkflowSchedulerInfoDs(RenewWorkflowSchedulerInfoDsRequest req)
-        {
-            return InternalRequestAsync<RenewWorkflowSchedulerInfoDsResponse>(req, "RenewWorkflowSchedulerInfoDs");
-        }
-
-        /// <summary>
-        /// 更新工作流下任务调度信息
-        /// </summary>
-        /// <param name="req"><see cref="RenewWorkflowSchedulerInfoDsRequest"/></param>
-        /// <returns><see cref="RenewWorkflowSchedulerInfoDsResponse"/></returns>
-        public RenewWorkflowSchedulerInfoDsResponse RenewWorkflowSchedulerInfoDsSync(RenewWorkflowSchedulerInfoDsRequest req)
-        {
-            return InternalRequestAsync<RenewWorkflowSchedulerInfoDsResponse>(req, "RenewWorkflowSchedulerInfoDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 替换项目参数历史版本
-        /// </summary>
-        /// <param name="req"><see cref="ReplaceProjectParamVersionDsRequest"/></param>
-        /// <returns><see cref="ReplaceProjectParamVersionDsResponse"/></returns>
-        public Task<ReplaceProjectParamVersionDsResponse> ReplaceProjectParamVersionDs(ReplaceProjectParamVersionDsRequest req)
-        {
-            return InternalRequestAsync<ReplaceProjectParamVersionDsResponse>(req, "ReplaceProjectParamVersionDs");
-        }
-
-        /// <summary>
-        /// 替换项目参数历史版本
-        /// </summary>
-        /// <param name="req"><see cref="ReplaceProjectParamVersionDsRequest"/></param>
-        /// <returns><see cref="ReplaceProjectParamVersionDsResponse"/></returns>
-        public ReplaceProjectParamVersionDsResponse ReplaceProjectParamVersionDsSync(ReplaceProjectParamVersionDsRequest req)
-        {
-            return InternalRequestAsync<ReplaceProjectParamVersionDsResponse>(req, "ReplaceProjectParamVersionDs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -9969,27 +6288,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 还原任务
-        /// </summary>
-        /// <param name="req"><see cref="RestoreRecycleTaskRequest"/></param>
-        /// <returns><see cref="RestoreRecycleTaskResponse"/></returns>
-        public Task<RestoreRecycleTaskResponse> RestoreRecycleTask(RestoreRecycleTaskRequest req)
-        {
-            return InternalRequestAsync<RestoreRecycleTaskResponse>(req, "RestoreRecycleTask");
-        }
-
-        /// <summary>
-        /// 还原任务
-        /// </summary>
-        /// <param name="req"><see cref="RestoreRecycleTaskRequest"/></param>
-        /// <returns><see cref="RestoreRecycleTaskResponse"/></returns>
-        public RestoreRecycleTaskResponse RestoreRecycleTaskSync(RestoreRecycleTaskRequest req)
-        {
-            return InternalRequestAsync<RestoreRecycleTaskResponse>(req, "RestoreRecycleTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 继续集成任务
         /// </summary>
         /// <param name="req"><see cref="ResumeIntegrationTaskRequest"/></param>
@@ -10028,27 +6326,6 @@ namespace TencentCloud.Wedata.V20210820
         public RobAndLockIntegrationTaskResponse RobAndLockIntegrationTaskSync(RobAndLockIntegrationTaskRequest req)
         {
             return InternalRequestAsync<RobAndLockIntegrationTaskResponse>(req, "RobAndLockIntegrationTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 回滚自定义函数版本
-        /// </summary>
-        /// <param name="req"><see cref="RollbackCustomFunctionVersionRequest"/></param>
-        /// <returns><see cref="RollbackCustomFunctionVersionResponse"/></returns>
-        public Task<RollbackCustomFunctionVersionResponse> RollbackCustomFunctionVersion(RollbackCustomFunctionVersionRequest req)
-        {
-            return InternalRequestAsync<RollbackCustomFunctionVersionResponse>(req, "RollbackCustomFunctionVersion");
-        }
-
-        /// <summary>
-        /// 回滚自定义函数版本
-        /// </summary>
-        /// <param name="req"><see cref="RollbackCustomFunctionVersionRequest"/></param>
-        /// <returns><see cref="RollbackCustomFunctionVersionResponse"/></returns>
-        public RollbackCustomFunctionVersionResponse RollbackCustomFunctionVersionSync(RollbackCustomFunctionVersionRequest req)
-        {
-            return InternalRequestAsync<RollbackCustomFunctionVersionResponse>(req, "RollbackCustomFunctionVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -10160,48 +6437,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 批量保存任务位置
-        /// </summary>
-        /// <param name="req"><see cref="SavePositionsDsRequest"/></param>
-        /// <returns><see cref="SavePositionsDsResponse"/></returns>
-        public Task<SavePositionsDsResponse> SavePositionsDs(SavePositionsDsRequest req)
-        {
-            return InternalRequestAsync<SavePositionsDsResponse>(req, "SavePositionsDs");
-        }
-
-        /// <summary>
-        /// 批量保存任务位置
-        /// </summary>
-        /// <param name="req"><see cref="SavePositionsDsRequest"/></param>
-        /// <returns><see cref="SavePositionsDsResponse"/></returns>
-        public SavePositionsDsResponse SavePositionsDsSync(SavePositionsDsRequest req)
-        {
-            return InternalRequestAsync<SavePositionsDsResponse>(req, "SavePositionsDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 判断脚本文件是否被任务列表所引用
-        /// </summary>
-        /// <param name="req"><see cref="ScriptUsedByOtherTaskDsRequest"/></param>
-        /// <returns><see cref="ScriptUsedByOtherTaskDsResponse"/></returns>
-        public Task<ScriptUsedByOtherTaskDsResponse> ScriptUsedByOtherTaskDs(ScriptUsedByOtherTaskDsRequest req)
-        {
-            return InternalRequestAsync<ScriptUsedByOtherTaskDsResponse>(req, "ScriptUsedByOtherTaskDs");
-        }
-
-        /// <summary>
-        /// 判断脚本文件是否被任务列表所引用
-        /// </summary>
-        /// <param name="req"><see cref="ScriptUsedByOtherTaskDsRequest"/></param>
-        /// <returns><see cref="ScriptUsedByOtherTaskDsResponse"/></returns>
-        public ScriptUsedByOtherTaskDsResponse ScriptUsedByOtherTaskDsSync(ScriptUsedByOtherTaskDsRequest req)
-        {
-            return InternalRequestAsync<ScriptUsedByOtherTaskDsResponse>(req, "ScriptUsedByOtherTaskDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 设置任务告警，新建/更新告警信息（最新）
         /// </summary>
@@ -10242,27 +6477,6 @@ namespace TencentCloud.Wedata.V20210820
         public StartIntegrationTaskResponse StartIntegrationTaskSync(StartIntegrationTaskRequest req)
         {
             return InternalRequestAsync<StartIntegrationTaskResponse>(req, "StartIntegrationTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 即席分析终止任务接口
-        /// </summary>
-        /// <param name="req"><see cref="StopAdhocTaskRequest"/></param>
-        /// <returns><see cref="StopAdhocTaskResponse"/></returns>
-        public Task<StopAdhocTaskResponse> StopAdhocTask(StopAdhocTaskRequest req)
-        {
-            return InternalRequestAsync<StopAdhocTaskResponse>(req, "StopAdhocTask");
-        }
-
-        /// <summary>
-        /// 即席分析终止任务接口
-        /// </summary>
-        /// <param name="req"><see cref="StopAdhocTaskRequest"/></param>
-        /// <returns><see cref="StopAdhocTaskResponse"/></returns>
-        public StopAdhocTaskResponse StopAdhocTaskSync(StopAdhocTaskRequest req)
-        {
-            return InternalRequestAsync<StopAdhocTaskResponse>(req, "StopAdhocTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -10309,27 +6523,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 终止etl测试运行任务
-        /// </summary>
-        /// <param name="req"><see cref="StopTestRunRequest"/></param>
-        /// <returns><see cref="StopTestRunResponse"/></returns>
-        public Task<StopTestRunResponse> StopTestRun(StopTestRunRequest req)
-        {
-            return InternalRequestAsync<StopTestRunResponse>(req, "StopTestRun");
-        }
-
-        /// <summary>
-        /// 终止etl测试运行任务
-        /// </summary>
-        /// <param name="req"><see cref="StopTestRunRequest"/></param>
-        /// <returns><see cref="StopTestRunResponse"/></returns>
-        public StopTestRunResponse StopTestRunSync(StopTestRunRequest req)
-        {
-            return InternalRequestAsync<StopTestRunResponse>(req, "StopTestRun")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 提交基线
         /// </summary>
         /// <param name="req"><see cref="SubmitBaselineRequest"/></param>
@@ -10351,27 +6544,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 批量提交etl测试运行任务
-        /// </summary>
-        /// <param name="req"><see cref="SubmitBatchTestRunRequest"/></param>
-        /// <returns><see cref="SubmitBatchTestRunResponse"/></returns>
-        public Task<SubmitBatchTestRunResponse> SubmitBatchTestRun(SubmitBatchTestRunRequest req)
-        {
-            return InternalRequestAsync<SubmitBatchTestRunResponse>(req, "SubmitBatchTestRun");
-        }
-
-        /// <summary>
-        /// 批量提交etl测试运行任务
-        /// </summary>
-        /// <param name="req"><see cref="SubmitBatchTestRunRequest"/></param>
-        /// <returns><see cref="SubmitBatchTestRunResponse"/></returns>
-        public SubmitBatchTestRunResponse SubmitBatchTestRunSync(SubmitBatchTestRunRequest req)
-        {
-            return InternalRequestAsync<SubmitBatchTestRunResponse>(req, "SubmitBatchTestRun")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 提交自定义函数
         /// </summary>
         /// <param name="req"><see cref="SubmitCustomFunctionRequest"/></param>
@@ -10389,90 +6561,6 @@ namespace TencentCloud.Wedata.V20210820
         public SubmitCustomFunctionResponse SubmitCustomFunctionSync(SubmitCustomFunctionRequest req)
         {
             return InternalRequestAsync<SubmitCustomFunctionResponse>(req, "SubmitCustomFunction")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 即席分析提交数据集成任务
-        /// </summary>
-        /// <param name="req"><see cref="SubmitIntegrationTaskRequest"/></param>
-        /// <returns><see cref="SubmitIntegrationTaskResponse"/></returns>
-        public Task<SubmitIntegrationTaskResponse> SubmitIntegrationTask(SubmitIntegrationTaskRequest req)
-        {
-            return InternalRequestAsync<SubmitIntegrationTaskResponse>(req, "SubmitIntegrationTask");
-        }
-
-        /// <summary>
-        /// 即席分析提交数据集成任务
-        /// </summary>
-        /// <param name="req"><see cref="SubmitIntegrationTaskRequest"/></param>
-        /// <returns><see cref="SubmitIntegrationTaskResponse"/></returns>
-        public SubmitIntegrationTaskResponse SubmitIntegrationTaskSync(SubmitIntegrationTaskRequest req)
-        {
-            return InternalRequestAsync<SubmitIntegrationTaskResponse>(req, "SubmitIntegrationTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 即席分析提交PySpark任务
-        /// </summary>
-        /// <param name="req"><see cref="SubmitPySparkTaskRequest"/></param>
-        /// <returns><see cref="SubmitPySparkTaskResponse"/></returns>
-        public Task<SubmitPySparkTaskResponse> SubmitPySparkTask(SubmitPySparkTaskRequest req)
-        {
-            return InternalRequestAsync<SubmitPySparkTaskResponse>(req, "SubmitPySparkTask");
-        }
-
-        /// <summary>
-        /// 即席分析提交PySpark任务
-        /// </summary>
-        /// <param name="req"><see cref="SubmitPySparkTaskRequest"/></param>
-        /// <returns><see cref="SubmitPySparkTaskResponse"/></returns>
-        public SubmitPySparkTaskResponse SubmitPySparkTaskSync(SubmitPySparkTaskRequest req)
-        {
-            return InternalRequestAsync<SubmitPySparkTaskResponse>(req, "SubmitPySparkTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 即席分析提交PYTHON任务
-        /// </summary>
-        /// <param name="req"><see cref="SubmitPythonTaskRequest"/></param>
-        /// <returns><see cref="SubmitPythonTaskResponse"/></returns>
-        public Task<SubmitPythonTaskResponse> SubmitPythonTask(SubmitPythonTaskRequest req)
-        {
-            return InternalRequestAsync<SubmitPythonTaskResponse>(req, "SubmitPythonTask");
-        }
-
-        /// <summary>
-        /// 即席分析提交PYTHON任务
-        /// </summary>
-        /// <param name="req"><see cref="SubmitPythonTaskRequest"/></param>
-        /// <returns><see cref="SubmitPythonTaskResponse"/></returns>
-        public SubmitPythonTaskResponse SubmitPythonTaskSync(SubmitPythonTaskRequest req)
-        {
-            return InternalRequestAsync<SubmitPythonTaskResponse>(req, "SubmitPythonTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 即席分析提交SHELL任务
-        /// </summary>
-        /// <param name="req"><see cref="SubmitShellTaskRequest"/></param>
-        /// <returns><see cref="SubmitShellTaskResponse"/></returns>
-        public Task<SubmitShellTaskResponse> SubmitShellTask(SubmitShellTaskRequest req)
-        {
-            return InternalRequestAsync<SubmitShellTaskResponse>(req, "SubmitShellTask");
-        }
-
-        /// <summary>
-        /// 即席分析提交SHELL任务
-        /// </summary>
-        /// <param name="req"><see cref="SubmitShellTaskRequest"/></param>
-        /// <returns><see cref="SubmitShellTaskResponse"/></returns>
-        public SubmitShellTaskResponse SubmitShellTaskSync(SubmitShellTaskRequest req)
-        {
-            return InternalRequestAsync<SubmitShellTaskResponse>(req, "SubmitShellTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -10538,27 +6626,6 @@ namespace TencentCloud.Wedata.V20210820
         public SubmitTaskTestRunResponse SubmitTaskTestRunSync(SubmitTaskTestRunRequest req)
         {
             return InternalRequestAsync<SubmitTaskTestRunResponse>(req, "SubmitTaskTestRun")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 提交etl测试运行任务
-        /// </summary>
-        /// <param name="req"><see cref="SubmitTestRunRequest"/></param>
-        /// <returns><see cref="SubmitTestRunResponse"/></returns>
-        public Task<SubmitTestRunResponse> SubmitTestRun(SubmitTestRunRequest req)
-        {
-            return InternalRequestAsync<SubmitTestRunResponse>(req, "SubmitTestRun");
-        }
-
-        /// <summary>
-        /// 提交etl测试运行任务
-        /// </summary>
-        /// <param name="req"><see cref="SubmitTestRunRequest"/></param>
-        /// <returns><see cref="SubmitTestRunResponse"/></returns>
-        public SubmitTestRunResponse SubmitTestRunSync(SubmitTestRunRequest req)
-        {
-            return InternalRequestAsync<SubmitTestRunResponse>(req, "SubmitTestRun")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -10693,195 +6760,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 批量更新高级设置
-        /// </summary>
-        /// <param name="req"><see cref="UpdateBatchTaskAdvancedSettingsRequest"/></param>
-        /// <returns><see cref="UpdateBatchTaskAdvancedSettingsResponse"/></returns>
-        public Task<UpdateBatchTaskAdvancedSettingsResponse> UpdateBatchTaskAdvancedSettings(UpdateBatchTaskAdvancedSettingsRequest req)
-        {
-            return InternalRequestAsync<UpdateBatchTaskAdvancedSettingsResponse>(req, "UpdateBatchTaskAdvancedSettings");
-        }
-
-        /// <summary>
-        /// 批量更新高级设置
-        /// </summary>
-        /// <param name="req"><see cref="UpdateBatchTaskAdvancedSettingsRequest"/></param>
-        /// <returns><see cref="UpdateBatchTaskAdvancedSettingsResponse"/></returns>
-        public UpdateBatchTaskAdvancedSettingsResponse UpdateBatchTaskAdvancedSettingsSync(UpdateBatchTaskAdvancedSettingsRequest req)
-        {
-            return InternalRequestAsync<UpdateBatchTaskAdvancedSettingsResponse>(req, "UpdateBatchTaskAdvancedSettings")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 批量更新数据源
-        /// </summary>
-        /// <param name="req"><see cref="UpdateBatchTaskDatasourceRequest"/></param>
-        /// <returns><see cref="UpdateBatchTaskDatasourceResponse"/></returns>
-        public Task<UpdateBatchTaskDatasourceResponse> UpdateBatchTaskDatasource(UpdateBatchTaskDatasourceRequest req)
-        {
-            return InternalRequestAsync<UpdateBatchTaskDatasourceResponse>(req, "UpdateBatchTaskDatasource");
-        }
-
-        /// <summary>
-        /// 批量更新数据源
-        /// </summary>
-        /// <param name="req"><see cref="UpdateBatchTaskDatasourceRequest"/></param>
-        /// <returns><see cref="UpdateBatchTaskDatasourceResponse"/></returns>
-        public UpdateBatchTaskDatasourceResponse UpdateBatchTaskDatasourceSync(UpdateBatchTaskDatasourceRequest req)
-        {
-            return InternalRequestAsync<UpdateBatchTaskDatasourceResponse>(req, "UpdateBatchTaskDatasource")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 批量修改责任人
-        /// </summary>
-        /// <param name="req"><see cref="UpdateBatchTaskInChargeRequest"/></param>
-        /// <returns><see cref="UpdateBatchTaskInChargeResponse"/></returns>
-        public Task<UpdateBatchTaskInChargeResponse> UpdateBatchTaskInCharge(UpdateBatchTaskInChargeRequest req)
-        {
-            return InternalRequestAsync<UpdateBatchTaskInChargeResponse>(req, "UpdateBatchTaskInCharge");
-        }
-
-        /// <summary>
-        /// 批量修改责任人
-        /// </summary>
-        /// <param name="req"><see cref="UpdateBatchTaskInChargeRequest"/></param>
-        /// <returns><see cref="UpdateBatchTaskInChargeResponse"/></returns>
-        public UpdateBatchTaskInChargeResponse UpdateBatchTaskInChargeSync(UpdateBatchTaskInChargeRequest req)
-        {
-            return InternalRequestAsync<UpdateBatchTaskInChargeResponse>(req, "UpdateBatchTaskInCharge")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 批量修改参数
-        /// </summary>
-        /// <param name="req"><see cref="UpdateBatchTaskParameterRequest"/></param>
-        /// <returns><see cref="UpdateBatchTaskParameterResponse"/></returns>
-        public Task<UpdateBatchTaskParameterResponse> UpdateBatchTaskParameter(UpdateBatchTaskParameterRequest req)
-        {
-            return InternalRequestAsync<UpdateBatchTaskParameterResponse>(req, "UpdateBatchTaskParameter");
-        }
-
-        /// <summary>
-        /// 批量修改参数
-        /// </summary>
-        /// <param name="req"><see cref="UpdateBatchTaskParameterRequest"/></param>
-        /// <returns><see cref="UpdateBatchTaskParameterResponse"/></returns>
-        public UpdateBatchTaskParameterResponse UpdateBatchTaskParameterSync(UpdateBatchTaskParameterRequest req)
-        {
-            return InternalRequestAsync<UpdateBatchTaskParameterResponse>(req, "UpdateBatchTaskParameter")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 批量更新调度参数
-        /// </summary>
-        /// <param name="req"><see cref="UpdateBatchTaskParamsRequest"/></param>
-        /// <returns><see cref="UpdateBatchTaskParamsResponse"/></returns>
-        public Task<UpdateBatchTaskParamsResponse> UpdateBatchTaskParams(UpdateBatchTaskParamsRequest req)
-        {
-            return InternalRequestAsync<UpdateBatchTaskParamsResponse>(req, "UpdateBatchTaskParams");
-        }
-
-        /// <summary>
-        /// 批量更新调度参数
-        /// </summary>
-        /// <param name="req"><see cref="UpdateBatchTaskParamsRequest"/></param>
-        /// <returns><see cref="UpdateBatchTaskParamsResponse"/></returns>
-        public UpdateBatchTaskParamsResponse UpdateBatchTaskParamsSync(UpdateBatchTaskParamsRequest req)
-        {
-            return InternalRequestAsync<UpdateBatchTaskParamsResponse>(req, "UpdateBatchTaskParams")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 批量修改资源组
-        /// </summary>
-        /// <param name="req"><see cref="UpdateBatchTaskResourceGroupRequest"/></param>
-        /// <returns><see cref="UpdateBatchTaskResourceGroupResponse"/></returns>
-        public Task<UpdateBatchTaskResourceGroupResponse> UpdateBatchTaskResourceGroup(UpdateBatchTaskResourceGroupRequest req)
-        {
-            return InternalRequestAsync<UpdateBatchTaskResourceGroupResponse>(req, "UpdateBatchTaskResourceGroup");
-        }
-
-        /// <summary>
-        /// 批量修改资源组
-        /// </summary>
-        /// <param name="req"><see cref="UpdateBatchTaskResourceGroupRequest"/></param>
-        /// <returns><see cref="UpdateBatchTaskResourceGroupResponse"/></returns>
-        public UpdateBatchTaskResourceGroupResponse UpdateBatchTaskResourceGroupSync(UpdateBatchTaskResourceGroupRequest req)
-        {
-            return InternalRequestAsync<UpdateBatchTaskResourceGroupResponse>(req, "UpdateBatchTaskResourceGroup")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 批量更新调度周期设置
-        /// </summary>
-        /// <param name="req"><see cref="UpdateBatchTaskScheduleRequest"/></param>
-        /// <returns><see cref="UpdateBatchTaskScheduleResponse"/></returns>
-        public Task<UpdateBatchTaskScheduleResponse> UpdateBatchTaskSchedule(UpdateBatchTaskScheduleRequest req)
-        {
-            return InternalRequestAsync<UpdateBatchTaskScheduleResponse>(req, "UpdateBatchTaskSchedule");
-        }
-
-        /// <summary>
-        /// 批量更新调度周期设置
-        /// </summary>
-        /// <param name="req"><see cref="UpdateBatchTaskScheduleRequest"/></param>
-        /// <returns><see cref="UpdateBatchTaskScheduleResponse"/></returns>
-        public UpdateBatchTaskScheduleResponse UpdateBatchTaskScheduleSync(UpdateBatchTaskScheduleRequest req)
-        {
-            return InternalRequestAsync<UpdateBatchTaskScheduleResponse>(req, "UpdateBatchTaskSchedule")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 更新事件
-        /// </summary>
-        /// <param name="req"><see cref="UpdateDsEventRequest"/></param>
-        /// <returns><see cref="UpdateDsEventResponse"/></returns>
-        public Task<UpdateDsEventResponse> UpdateDsEvent(UpdateDsEventRequest req)
-        {
-            return InternalRequestAsync<UpdateDsEventResponse>(req, "UpdateDsEvent");
-        }
-
-        /// <summary>
-        /// 更新事件
-        /// </summary>
-        /// <param name="req"><see cref="UpdateDsEventRequest"/></param>
-        /// <returns><see cref="UpdateDsEventResponse"/></returns>
-        public UpdateDsEventResponse UpdateDsEventSync(UpdateDsEventRequest req)
-        {
-            return InternalRequestAsync<UpdateDsEventResponse>(req, "UpdateDsEvent")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 更新事件监听
-        /// </summary>
-        /// <param name="req"><see cref="UpdateEventListenerRequest"/></param>
-        /// <returns><see cref="UpdateEventListenerResponse"/></returns>
-        public Task<UpdateEventListenerResponse> UpdateEventListener(UpdateEventListenerRequest req)
-        {
-            return InternalRequestAsync<UpdateEventListenerResponse>(req, "UpdateEventListener");
-        }
-
-        /// <summary>
-        /// 更新事件监听
-        /// </summary>
-        /// <param name="req"><see cref="UpdateEventListenerRequest"/></param>
-        /// <returns><see cref="UpdateEventListenerResponse"/></returns>
-        public UpdateEventListenerResponse UpdateEventListenerSync(UpdateEventListenerRequest req)
-        {
-            return InternalRequestAsync<UpdateEventListenerResponse>(req, "UpdateEventListener")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 更新采集器
         /// </summary>
         /// <param name="req"><see cref="UpdateInLongAgentRequest"/></param>
@@ -10899,50 +6777,6 @@ namespace TencentCloud.Wedata.V20210820
         public UpdateInLongAgentResponse UpdateInLongAgentSync(UpdateInLongAgentRequest req)
         {
             return InternalRequestAsync<UpdateInLongAgentResponse>(req, "UpdateInLongAgent")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 更新任务Ds
-        /// </summary>
-        /// <param name="req"><see cref="UpdateTaskDsRequest"/></param>
-        /// <returns><see cref="UpdateTaskDsResponse"/></returns>
-        public Task<UpdateTaskDsResponse> UpdateTaskDs(UpdateTaskDsRequest req)
-        {
-            return InternalRequestAsync<UpdateTaskDsResponse>(req, "UpdateTaskDs");
-        }
-
-        /// <summary>
-        /// 更新任务Ds
-        /// </summary>
-        /// <param name="req"><see cref="UpdateTaskDsRequest"/></param>
-        /// <returns><see cref="UpdateTaskDsResponse"/></returns>
-        public UpdateTaskDsResponse UpdateTaskDsSync(UpdateTaskDsRequest req)
-        {
-            return InternalRequestAsync<UpdateTaskDsResponse>(req, "UpdateTaskDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// <p style="color:red;">[该接口为 ds 中开发]</p>
-        /// 更新工作流（包括工作流基本信息与工作流参数）
-        /// </summary>
-        /// <param name="req"><see cref="UpdateWorkflowInfoRequest"/></param>
-        /// <returns><see cref="UpdateWorkflowInfoResponse"/></returns>
-        public Task<UpdateWorkflowInfoResponse> UpdateWorkflowInfo(UpdateWorkflowInfoRequest req)
-        {
-            return InternalRequestAsync<UpdateWorkflowInfoResponse>(req, "UpdateWorkflowInfo");
-        }
-
-        /// <summary>
-        /// <p style="color:red;">[该接口为 ds 中开发]</p>
-        /// 更新工作流（包括工作流基本信息与工作流参数）
-        /// </summary>
-        /// <param name="req"><see cref="UpdateWorkflowInfoRequest"/></param>
-        /// <returns><see cref="UpdateWorkflowInfoResponse"/></returns>
-        public UpdateWorkflowInfoResponse UpdateWorkflowInfoSync(UpdateWorkflowInfoRequest req)
-        {
-            return InternalRequestAsync<UpdateWorkflowInfoResponse>(req, "UpdateWorkflowInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -10968,27 +6802,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 保存高级运行用户自定义参数
-        /// </summary>
-        /// <param name="req"><see cref="UploadAdvanceRunParamsRequest"/></param>
-        /// <returns><see cref="UploadAdvanceRunParamsResponse"/></returns>
-        public Task<UploadAdvanceRunParamsResponse> UploadAdvanceRunParams(UploadAdvanceRunParamsRequest req)
-        {
-            return InternalRequestAsync<UploadAdvanceRunParamsResponse>(req, "UploadAdvanceRunParams");
-        }
-
-        /// <summary>
-        /// 保存高级运行用户自定义参数
-        /// </summary>
-        /// <param name="req"><see cref="UploadAdvanceRunParamsRequest"/></param>
-        /// <returns><see cref="UploadAdvanceRunParamsResponse"/></returns>
-        public UploadAdvanceRunParamsResponse UploadAdvanceRunParamsSync(UploadAdvanceRunParamsRequest req)
-        {
-            return InternalRequestAsync<UploadAdvanceRunParamsResponse>(req, "UploadAdvanceRunParams")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 保存任务信息
         /// </summary>
         /// <param name="req"><see cref="UploadContentRequest"/></param>
@@ -11006,48 +6819,6 @@ namespace TencentCloud.Wedata.V20210820
         public UploadContentResponse UploadContentSync(UploadContentRequest req)
         {
             return InternalRequestAsync<UploadContentResponse>(req, "UploadContent")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 文件上传需要先获取文件上传所需要的秘钥，文件位置等信息，因为文件名字可能会出现冲突，所以需要传入将要写入的文件，如果检测到文件名冲突，WeData 后端会在文件名上加入随机字符串。
-        /// </summary>
-        /// <param name="req"><see cref="UploadFilesDsRequest"/></param>
-        /// <returns><see cref="UploadFilesDsResponse"/></returns>
-        public Task<UploadFilesDsResponse> UploadFilesDs(UploadFilesDsRequest req)
-        {
-            return InternalRequestAsync<UploadFilesDsResponse>(req, "UploadFilesDs");
-        }
-
-        /// <summary>
-        /// 文件上传需要先获取文件上传所需要的秘钥，文件位置等信息，因为文件名字可能会出现冲突，所以需要传入将要写入的文件，如果检测到文件名冲突，WeData 后端会在文件名上加入随机字符串。
-        /// </summary>
-        /// <param name="req"><see cref="UploadFilesDsRequest"/></param>
-        /// <returns><see cref="UploadFilesDsResponse"/></returns>
-        public UploadFilesDsResponse UploadFilesDsSync(UploadFilesDsRequest req)
-        {
-            return InternalRequestAsync<UploadFilesDsResponse>(req, "UploadFilesDs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 资源管理-上传资源
-        /// </summary>
-        /// <param name="req"><see cref="UploadResourceRequest"/></param>
-        /// <returns><see cref="UploadResourceResponse"/></returns>
-        public Task<UploadResourceResponse> UploadResource(UploadResourceRequest req)
-        {
-            return InternalRequestAsync<UploadResourceResponse>(req, "UploadResource");
-        }
-
-        /// <summary>
-        /// 资源管理-上传资源
-        /// </summary>
-        /// <param name="req"><see cref="UploadResourceRequest"/></param>
-        /// <returns><see cref="UploadResourceResponse"/></returns>
-        public UploadResourceResponse UploadResourceSync(UploadResourceRequest req)
-        {
-            return InternalRequestAsync<UploadResourceResponse>(req, "UploadResource")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

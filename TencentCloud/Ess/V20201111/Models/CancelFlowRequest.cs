@@ -34,13 +34,15 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 合同流程ID, 为32位字符串。
         /// 
-        /// 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+        /// 可登录腾讯电子签控制台，[点击产看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// 撤销此合同流程的原因，最多支持200个字符长度。只能由中文、字母、数字、中文标点和英文标点组成（不支持表情）。
+        /// 撤销此合同流程的**撤销理由**，最多支持200个字符长度。只能由中文、字母、数字、中文标点和英文标点组成（不支持表情）。
+        /// 
+        /// ![image](https://dyn.ess.tencent.cn/guide/capi/channel_ChannelCancelFlow.png)
         /// </summary>
         [JsonProperty("CancelMessage")]
         public string CancelMessage{ get; set; }

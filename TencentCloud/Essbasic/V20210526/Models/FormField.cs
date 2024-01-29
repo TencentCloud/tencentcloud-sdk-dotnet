@@ -43,6 +43,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 表单域或控件的ID，跟ComponentName二选一，不能全为空；
         /// CreateFlowsByTemplates 接口不使用此字段。
+        /// 
+        /// <a href="https://dyn.ess.tencent.cn/guide/apivideo/channel_component_name.mp4" target="_blank">点击此处查看模板上控件ID的获取方式</a>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComponentId")]
@@ -50,6 +52,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 控件的名字，跟ComponentId二选一，不能全为空
+        /// 
+        /// <a href="https://dyn.ess.tencent.cn/guide/apivideo/channel_component_name.mp4" target="_blank">点击此处查看模板上控件名字的获取方式</a>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComponentName")]

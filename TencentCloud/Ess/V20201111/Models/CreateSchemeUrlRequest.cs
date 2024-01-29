@@ -105,7 +105,10 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 签署完成后是否自动回跳
         /// <ul><li>**false**：否, 签署完成不会自动跳转回来(默认)</li><li>**true**：是, 签署完成会自动跳转回来</li></ul>
-        /// 注:  ` 该参数只针对"APP" 类型的签署链接有效`
+        /// 
+        /// 注: 
+        /// 1. 该参数<font color="red">只针对APP</font> 类型的签署链接有效
+        /// 2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
         /// </summary>
         [JsonProperty("AutoJumpBack")]
         public bool? AutoJumpBack{ get; set; }
