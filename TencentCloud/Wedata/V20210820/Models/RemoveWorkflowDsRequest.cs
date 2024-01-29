@@ -36,6 +36,24 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("WorkflowId")]
         public string WorkflowId{ get; set; }
 
+        /// <summary>
+        /// 是否删除脚本
+        /// </summary>
+        [JsonProperty("DeleteScript")]
+        public string DeleteScript{ get; set; }
+
+        /// <summary>
+        /// 删除是否通知下游
+        /// </summary>
+        [JsonProperty("OperateIsInform")]
+        public string OperateIsInform{ get; set; }
+
+        /// <summary>
+        /// 是否终止进行中的任务
+        /// </summary>
+        [JsonProperty("DeleteMode")]
+        public string DeleteMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +62,9 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
+            this.SetParamSimple(map, prefix + "DeleteScript", this.DeleteScript);
+            this.SetParamSimple(map, prefix + "OperateIsInform", this.OperateIsInform);
+            this.SetParamSimple(map, prefix + "DeleteMode", this.DeleteMode);
         }
     }
 }

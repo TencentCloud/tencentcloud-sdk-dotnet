@@ -402,7 +402,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 您可以查询转推任务的状态。
+        /// 您可以查询输入在线媒体流任务的状态。
         /// </summary>
         /// <param name="req"><see cref="DescribeStreamIngestRequest"/></param>
         /// <returns><see cref="DescribeStreamIngestResponse"/></returns>
@@ -412,7 +412,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 您可以查询转推任务的状态。
+        /// 您可以查询输入在线媒体流任务的状态。
         /// </summary>
         /// <param name="req"><see cref="DescribeStreamIngestRequest"/></param>
         /// <returns><see cref="DescribeStreamIngestResponse"/></returns>
@@ -1406,7 +1406,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 停止一个拉流转推任务。
+        /// 停止一个输入在线媒体流任务。
         /// </summary>
         /// <param name="req"><see cref="StopStreamIngestRequest"/></param>
         /// <returns><see cref="StopStreamIngestResponse"/></returns>
@@ -1416,7 +1416,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 停止一个拉流转推任务。
+        /// 停止一个输入在线媒体流任务。
         /// </summary>
         /// <param name="req"><see cref="StopStreamIngestRequest"/></param>
         /// <returns><see cref="StopStreamIngestResponse"/></returns>

@@ -95,7 +95,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// <summary>
         /// 告警码说明：
         /// WARN_COPY_CARD 黑白复印件告警
-        /// WARN_RESHOOT_SCREENED_CARD 翻拍件告警
+        /// WARN_RESHOOT_CARD翻拍件告警
         /// </summary>
         [JsonProperty("RecognizeWarnMsg")]
         public string[] RecognizeWarnMsg{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CAC02B9D-B0F0-3F2E-A9A4-BB0578DC157C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.942</VersionPrefix>
+    <VersionPrefix>3.0.943</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -221,6 +221,8 @@
     <Compile Include="V20201111\Models\ModifyApplicationCallbackInfoResponse.cs" />
     <Compile Include="V20201111\Models\ModifyExtendedServiceRequest.cs" />
     <Compile Include="V20201111\Models\ModifyExtendedServiceResponse.cs" />
+    <Compile Include="V20201111\Models\ModifyFlowDeadlineRequest.cs" />
+    <Compile Include="V20201111\Models\ModifyFlowDeadlineResponse.cs" />
     <Compile Include="V20201111\Models\ModifyIntegrationDepartmentRequest.cs" />
     <Compile Include="V20201111\Models\ModifyIntegrationDepartmentResponse.cs" />
     <Compile Include="V20201111\Models\ModifyIntegrationRoleRequest.cs" />

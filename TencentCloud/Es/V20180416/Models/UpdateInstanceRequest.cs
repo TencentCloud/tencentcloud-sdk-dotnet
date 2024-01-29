@@ -246,6 +246,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("CerebroPrivateDomain")]
         public string CerebroPrivateDomain{ get; set; }
 
+        /// <summary>
+        /// 变更为https集群，默认是http
+        /// </summary>
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -286,6 +292,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "KibanaAlteringPublicAccess", this.KibanaAlteringPublicAccess);
             this.SetParamSimple(map, prefix + "KibanaPrivateDomain", this.KibanaPrivateDomain);
             this.SetParamSimple(map, prefix + "CerebroPrivateDomain", this.CerebroPrivateDomain);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
         }
     }
 }

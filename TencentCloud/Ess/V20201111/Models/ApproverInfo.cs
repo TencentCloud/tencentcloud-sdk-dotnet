@@ -218,6 +218,14 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("SignInstructionContent")]
         public string SignInstructionContent{ get; set; }
 
+        /// <summary>
+        /// 签署人的签署截止时间，格式为Unix标准时间戳（秒）
+        /// 
+        /// 注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
+        /// </summary>
+        [JsonProperty("Deadline")]
+        public long? Deadline{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -245,6 +253,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "ApproverNeedSignReview", this.ApproverNeedSignReview);
             this.SetParamArrayObj(map, prefix + "AddSignComponentsLimits.", this.AddSignComponentsLimits);
             this.SetParamSimple(map, prefix + "SignInstructionContent", this.SignInstructionContent);
+            this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
         }
     }
 }

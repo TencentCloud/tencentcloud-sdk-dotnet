@@ -44,7 +44,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// 是否返回黑白复印件告警码，默认为false
+        /// 是否返回告警码，默认为false
         /// </summary>
         [JsonProperty("EnableCopyWarn")]
         public bool? EnableCopyWarn{ get; set; }

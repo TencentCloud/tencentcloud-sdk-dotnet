@@ -25,6 +25,14 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
+        /// 通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。
+        /// 
+        /// <font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
+        /// </summary>
+        [JsonProperty("NotifyType")]
+        public string NotifyType{ get; set; }
+
+        /// <summary>
         /// CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
         /// </summary>
         [JsonProperty("CmqModel")]
@@ -49,14 +57,6 @@ namespace TencentCloud.Mps.V20190612.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。
-        /// 
-        /// <font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
-        /// </summary>
-        [JsonProperty("NotifyType")]
-        public string NotifyType{ get; set; }
-
-        /// <summary>
         /// HTTP回调地址，NotifyType为URL时必填。
         /// </summary>
         [JsonProperty("NotifyUrl")]
@@ -68,11 +68,11 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "NotifyType", this.NotifyType);
             this.SetParamSimple(map, prefix + "CmqModel", this.CmqModel);
             this.SetParamSimple(map, prefix + "CmqRegion", this.CmqRegion);
             this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
-            this.SetParamSimple(map, prefix + "NotifyType", this.NotifyType);
             this.SetParamSimple(map, prefix + "NotifyUrl", this.NotifyUrl);
         }
     }

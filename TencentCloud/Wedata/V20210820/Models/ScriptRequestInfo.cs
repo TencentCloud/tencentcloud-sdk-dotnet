@@ -26,6 +26,10 @@ namespace TencentCloud.Wedata.V20210820.Models
         
         /// <summary>
         /// 脚本路径
+        /// 项目区1470575647377821696项目，f1目录下：
+        /// /datastudio/project/1470575647377821696/f1/sql1234.sql
+        /// 个人区：
+        /// /datastudio/personal/sqlTTT.sql
         /// </summary>
         [JsonProperty("FilePath")]
         public string FilePath{ get; set; }

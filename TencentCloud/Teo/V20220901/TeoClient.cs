@@ -246,6 +246,48 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 用于创建四层代理实例。
+        /// </summary>
+        /// <param name="req"><see cref="CreateL4ProxyRequest"/></param>
+        /// <returns><see cref="CreateL4ProxyResponse"/></returns>
+        public Task<CreateL4ProxyResponse> CreateL4Proxy(CreateL4ProxyRequest req)
+        {
+            return InternalRequestAsync<CreateL4ProxyResponse>(req, "CreateL4Proxy");
+        }
+
+        /// <summary>
+        /// 用于创建四层代理实例。
+        /// </summary>
+        /// <param name="req"><see cref="CreateL4ProxyRequest"/></param>
+        /// <returns><see cref="CreateL4ProxyResponse"/></returns>
+        public CreateL4ProxyResponse CreateL4ProxySync(CreateL4ProxyRequest req)
+        {
+            return InternalRequestAsync<CreateL4ProxyResponse>(req, "CreateL4Proxy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于创建四层代理实例规则，支持单条或者批量创建。
+        /// </summary>
+        /// <param name="req"><see cref="CreateL4ProxyRulesRequest"/></param>
+        /// <returns><see cref="CreateL4ProxyRulesResponse"/></returns>
+        public Task<CreateL4ProxyRulesResponse> CreateL4ProxyRules(CreateL4ProxyRulesRequest req)
+        {
+            return InternalRequestAsync<CreateL4ProxyRulesResponse>(req, "CreateL4ProxyRules");
+        }
+
+        /// <summary>
+        /// 用于创建四层代理实例规则，支持单条或者批量创建。
+        /// </summary>
+        /// <param name="req"><see cref="CreateL4ProxyRulesRequest"/></param>
+        /// <returns><see cref="CreateL4ProxyRulesResponse"/></returns>
+        public CreateL4ProxyRulesResponse CreateL4ProxyRulesSync(CreateL4ProxyRulesRequest req)
+        {
+            return InternalRequestAsync<CreateL4ProxyRulesResponse>(req, "CreateL4ProxyRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建源站组，以源站组的方式管理业务源站。此处配置的源站组可于**添加加速域名**和**四层代理**等功能中引用。
         /// </summary>
         /// <param name="req"><see cref="CreateOriginGroupRequest"/></param>
@@ -506,6 +548,48 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 用于删除四层代理实例。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteL4ProxyRequest"/></param>
+        /// <returns><see cref="DeleteL4ProxyResponse"/></returns>
+        public Task<DeleteL4ProxyResponse> DeleteL4Proxy(DeleteL4ProxyRequest req)
+        {
+            return InternalRequestAsync<DeleteL4ProxyResponse>(req, "DeleteL4Proxy");
+        }
+
+        /// <summary>
+        /// 用于删除四层代理实例。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteL4ProxyRequest"/></param>
+        /// <returns><see cref="DeleteL4ProxyResponse"/></returns>
+        public DeleteL4ProxyResponse DeleteL4ProxySync(DeleteL4ProxyRequest req)
+        {
+            return InternalRequestAsync<DeleteL4ProxyResponse>(req, "DeleteL4Proxy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于删除四层代理转发规则，支持单条或者批量操作。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteL4ProxyRulesRequest"/></param>
+        /// <returns><see cref="DeleteL4ProxyRulesResponse"/></returns>
+        public Task<DeleteL4ProxyRulesResponse> DeleteL4ProxyRules(DeleteL4ProxyRulesRequest req)
+        {
+            return InternalRequestAsync<DeleteL4ProxyRulesResponse>(req, "DeleteL4ProxyRules");
+        }
+
+        /// <summary>
+        /// 用于删除四层代理转发规则，支持单条或者批量操作。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteL4ProxyRulesRequest"/></param>
+        /// <returns><see cref="DeleteL4ProxyRulesResponse"/></returns>
+        public DeleteL4ProxyRulesResponse DeleteL4ProxyRulesSync(DeleteL4ProxyRulesRequest req)
+        {
+            return InternalRequestAsync<DeleteL4ProxyRulesResponse>(req, "DeleteL4ProxyRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除源站组，若源站组仍然被服务（例如：四层代理，域名服务，负载均衡，规则引起）引用，将不允许删除。
         /// </summary>
         /// <param name="req"><see cref="DeleteOriginGroupRequest"/></param>
@@ -712,6 +796,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeAvailablePlansResponse DescribeAvailablePlansSync(DescribeAvailablePlansRequest req)
         {
             return InternalRequestAsync<DescribeAvailablePlansResponse>(req, "DescribeAvailablePlans")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通过本接口查询计费数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillingDataRequest"/></param>
+        /// <returns><see cref="DescribeBillingDataResponse"/></returns>
+        public Task<DescribeBillingDataResponse> DescribeBillingData(DescribeBillingDataRequest req)
+        {
+            return InternalRequestAsync<DescribeBillingDataResponse>(req, "DescribeBillingData");
+        }
+
+        /// <summary>
+        /// 通过本接口查询计费数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillingDataRequest"/></param>
+        /// <returns><see cref="DescribeBillingDataResponse"/></returns>
+        public DescribeBillingDataResponse DescribeBillingDataSync(DescribeBillingDataRequest req)
+        {
+            return InternalRequestAsync<DescribeBillingDataResponse>(req, "DescribeBillingData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -964,6 +1069,48 @@ namespace TencentCloud.Teo.V20220901
         public DescribeIdentificationsResponse DescribeIdentificationsSync(DescribeIdentificationsRequest req)
         {
             return InternalRequestAsync<DescribeIdentificationsResponse>(req, "DescribeIdentifications")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于查询四层代理实例列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeL4ProxyRequest"/></param>
+        /// <returns><see cref="DescribeL4ProxyResponse"/></returns>
+        public Task<DescribeL4ProxyResponse> DescribeL4Proxy(DescribeL4ProxyRequest req)
+        {
+            return InternalRequestAsync<DescribeL4ProxyResponse>(req, "DescribeL4Proxy");
+        }
+
+        /// <summary>
+        /// 用于查询四层代理实例列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeL4ProxyRequest"/></param>
+        /// <returns><see cref="DescribeL4ProxyResponse"/></returns>
+        public DescribeL4ProxyResponse DescribeL4ProxySync(DescribeL4ProxyRequest req)
+        {
+            return InternalRequestAsync<DescribeL4ProxyResponse>(req, "DescribeL4Proxy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询四层代理实例下的规则列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeL4ProxyRulesRequest"/></param>
+        /// <returns><see cref="DescribeL4ProxyRulesResponse"/></returns>
+        public Task<DescribeL4ProxyRulesResponse> DescribeL4ProxyRules(DescribeL4ProxyRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeL4ProxyRulesResponse>(req, "DescribeL4ProxyRules");
+        }
+
+        /// <summary>
+        /// 查询四层代理实例下的规则列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeL4ProxyRulesRequest"/></param>
+        /// <returns><see cref="DescribeL4ProxyRulesResponse"/></returns>
+        public DescribeL4ProxyRulesResponse DescribeL4ProxyRulesSync(DescribeL4ProxyRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeL4ProxyRulesResponse>(req, "DescribeL4ProxyRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1535,6 +1682,90 @@ namespace TencentCloud.Teo.V20220901
         public ModifyHostsCertificateResponse ModifyHostsCertificateSync(ModifyHostsCertificateRequest req)
         {
             return InternalRequestAsync<ModifyHostsCertificateResponse>(req, "ModifyHostsCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于修改四层代理实例的配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL4ProxyRequest"/></param>
+        /// <returns><see cref="ModifyL4ProxyResponse"/></returns>
+        public Task<ModifyL4ProxyResponse> ModifyL4Proxy(ModifyL4ProxyRequest req)
+        {
+            return InternalRequestAsync<ModifyL4ProxyResponse>(req, "ModifyL4Proxy");
+        }
+
+        /// <summary>
+        /// 用于修改四层代理实例的配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL4ProxyRequest"/></param>
+        /// <returns><see cref="ModifyL4ProxyResponse"/></returns>
+        public ModifyL4ProxyResponse ModifyL4ProxySync(ModifyL4ProxyRequest req)
+        {
+            return InternalRequestAsync<ModifyL4ProxyResponse>(req, "ModifyL4Proxy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于修改四层代理转发规则，支持单条或者批量修改。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL4ProxyRulesRequest"/></param>
+        /// <returns><see cref="ModifyL4ProxyRulesResponse"/></returns>
+        public Task<ModifyL4ProxyRulesResponse> ModifyL4ProxyRules(ModifyL4ProxyRulesRequest req)
+        {
+            return InternalRequestAsync<ModifyL4ProxyRulesResponse>(req, "ModifyL4ProxyRules");
+        }
+
+        /// <summary>
+        /// 用于修改四层代理转发规则，支持单条或者批量修改。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL4ProxyRulesRequest"/></param>
+        /// <returns><see cref="ModifyL4ProxyRulesResponse"/></returns>
+        public ModifyL4ProxyRulesResponse ModifyL4ProxyRulesSync(ModifyL4ProxyRulesRequest req)
+        {
+            return InternalRequestAsync<ModifyL4ProxyRulesResponse>(req, "ModifyL4ProxyRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于启用/停用四层代理转发规则状态，支持单条或者批量操作。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL4ProxyRulesStatusRequest"/></param>
+        /// <returns><see cref="ModifyL4ProxyRulesStatusResponse"/></returns>
+        public Task<ModifyL4ProxyRulesStatusResponse> ModifyL4ProxyRulesStatus(ModifyL4ProxyRulesStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyL4ProxyRulesStatusResponse>(req, "ModifyL4ProxyRulesStatus");
+        }
+
+        /// <summary>
+        /// 用于启用/停用四层代理转发规则状态，支持单条或者批量操作。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL4ProxyRulesStatusRequest"/></param>
+        /// <returns><see cref="ModifyL4ProxyRulesStatusResponse"/></returns>
+        public ModifyL4ProxyRulesStatusResponse ModifyL4ProxyRulesStatusSync(ModifyL4ProxyRulesStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyL4ProxyRulesStatusResponse>(req, "ModifyL4ProxyRulesStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于启用/停用四层代理实例。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL4ProxyStatusRequest"/></param>
+        /// <returns><see cref="ModifyL4ProxyStatusResponse"/></returns>
+        public Task<ModifyL4ProxyStatusResponse> ModifyL4ProxyStatus(ModifyL4ProxyStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyL4ProxyStatusResponse>(req, "ModifyL4ProxyStatus");
+        }
+
+        /// <summary>
+        /// 用于启用/停用四层代理实例。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL4ProxyStatusRequest"/></param>
+        /// <returns><see cref="ModifyL4ProxyStatusResponse"/></returns>
+        public ModifyL4ProxyStatusResponse ModifyL4ProxyStatusSync(ModifyL4ProxyStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyL4ProxyStatusResponse>(req, "ModifyL4ProxyStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -42,6 +42,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("BitRate")]
         public ulong? BitRate{ get; set; }
 
+        /// <summary>
+        /// 音量，取值范围[0,300]。默认100，表示原始音量；0表示静音。
+        /// </summary>
+        [JsonProperty("Volume")]
+        public ulong? Volume{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
             this.SetParamSimple(map, prefix + "Channel", this.Channel);
             this.SetParamSimple(map, prefix + "BitRate", this.BitRate);
+            this.SetParamSimple(map, prefix + "Volume", this.Volume);
         }
     }
 }

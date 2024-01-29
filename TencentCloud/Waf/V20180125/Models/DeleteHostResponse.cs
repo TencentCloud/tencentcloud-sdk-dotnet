@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 操作的状态码，如果所有的资源操作成功则返回的是成功的状态码，如果有资源操作失败则需要解析Message的内容来查看哪个资源失败
+        /// 域名删除结果。Code表示状态码，Message表示详细信息。
         /// </summary>
         [JsonProperty("Success")]
         public ResponseCode Success{ get; set; }

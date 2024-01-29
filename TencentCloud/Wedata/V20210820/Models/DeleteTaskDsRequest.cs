@@ -32,36 +32,49 @@ namespace TencentCloud.Wedata.V20210820.Models
 
         /// <summary>
         /// 是否删除脚本
+        /// true：删除
+        /// false：不删除
+        /// 不传默认false
         /// </summary>
         [JsonProperty("DeleteScript")]
         public bool? DeleteScript{ get; set; }
 
         /// <summary>
-        /// 任务操作是否消息通知下游任务责任人
+        /// 任务操作是否消息通知下游任务责任人true：通知
+        /// false：不通知
+        /// 不传默认false
         /// </summary>
         [JsonProperty("OperateInform")]
         public bool? OperateInform{ get; set; }
 
         /// <summary>
         /// 任务ID
+        /// 和VirtualTaskId选填一个
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
         /// 虚拟任务id
+        /// 和TaskId选填一个
         /// </summary>
         [JsonProperty("VirtualTaskId")]
         public string VirtualTaskId{ get; set; }
 
         /// <summary>
         /// 虚拟任务标记
+        /// true：是虚拟任务
+        /// false：不是虚拟任务
+        /// 不传默认false
         /// </summary>
         [JsonProperty("VirtualFlag")]
         public bool? VirtualFlag{ get; set; }
 
         /// <summary>
         /// 任务删除方式
+        /// true：不针对下游任务实例进行强制失败
+        /// false：针对下游任务实例进行强制失败
+        /// 不传默认false
         /// </summary>
         [JsonProperty("DeleteMode")]
         public bool? DeleteMode{ get; set; }

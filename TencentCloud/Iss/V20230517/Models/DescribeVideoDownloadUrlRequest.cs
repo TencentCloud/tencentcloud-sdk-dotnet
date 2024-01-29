@@ -31,13 +31,15 @@ namespace TencentCloud.Iss.V20230517.Models
         public string ChannelId{ get; set; }
 
         /// <summary>
-        /// 下载的开始时间，UTC 秒数，开始和结束时间段最长为30分钟，且不能跨天
+        /// 下载的开始时间，UTC 秒数，开始和结束时间段最长为60分钟，且不能跨天。
+        /// 注意：实际下载的文件时长可能会大于该时段时长，通过指定IsRespActualTime参数可以获取实际下载的开始时间和结束时间。 原因是下载是TS切片对齐的，其目的也是为了保证用户下载数据的完整性，完全包含其指定的时间段。
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// 下载的结束时间，UTC 秒数，开始和结束时间段最长为30分钟，且不能跨天
+        /// 下载的结束时间，UTC 秒数，开始和结束时间段最长为60分钟，且不能跨天。
+        /// 注意：实际下载的文件时长可能会大于该时段时长，通过指定IsRespActualTime参数可以获取实际下载的开始时间和结束时间。 原因是下载是TS切片对齐的，其目的也是为了保证用户下载数据的完整性，完全包含其指定的时间段。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 跑批任务id
+        /// 批量预测任务id
         /// </summary>
         [JsonProperty("BatchTaskId")]
         public string BatchTaskId{ get; set; }

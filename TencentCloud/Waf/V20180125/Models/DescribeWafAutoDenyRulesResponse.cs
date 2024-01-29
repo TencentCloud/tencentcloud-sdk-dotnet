@@ -49,6 +49,14 @@ namespace TencentCloud.Waf.V20180125.Models
         public long? DefenseStatus{ get; set; }
 
         /// <summary>
+        /// 数据来源Source字段 custom-自定义(默认)、batch-domain-批量域名
+        /// 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Source")]
+        public string Source{ get; set; }
+
+        /// <summary>
         /// 重保护网域名状态
         /// </summary>
         [JsonProperty("HWState")]
@@ -70,6 +78,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "TimeThreshold", this.TimeThreshold);
             this.SetParamSimple(map, prefix + "DenyTimeThreshold", this.DenyTimeThreshold);
             this.SetParamSimple(map, prefix + "DefenseStatus", this.DefenseStatus);
+            this.SetParamSimple(map, prefix + "Source", this.Source);
             this.SetParamSimple(map, prefix + "HWState", this.HWState);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

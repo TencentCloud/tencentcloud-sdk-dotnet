@@ -224,6 +224,13 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("IsSupportOutsideCluster")]
         public bool? IsSupportOutsideCluster{ get; set; }
 
+        /// <summary>
+        /// 是否专有集群场景集群
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsDedicatedCluster")]
+        public bool? IsDedicatedCluster{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -260,6 +267,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "IsHandsCluster", this.IsHandsCluster);
             this.SetParamArrayObj(map, prefix + "OutSideSoftInfo.", this.OutSideSoftInfo);
             this.SetParamSimple(map, prefix + "IsSupportOutsideCluster", this.IsSupportOutsideCluster);
+            this.SetParamSimple(map, prefix + "IsDedicatedCluster", this.IsDedicatedCluster);
         }
     }
 }

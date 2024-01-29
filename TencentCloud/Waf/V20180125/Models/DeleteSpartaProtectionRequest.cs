@@ -37,7 +37,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Edition{ get; set; }
 
         /// <summary>
-        /// 实例id
+        /// 必填项。域名所属实例ID
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }

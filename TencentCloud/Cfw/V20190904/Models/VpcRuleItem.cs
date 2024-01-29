@@ -178,6 +178,20 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("ParamTemplateName")]
         public string ParamTemplateName{ get; set; }
 
+        /// <summary>
+        /// 访问目的名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TargetName")]
+        public string TargetName{ get; set; }
+
+        /// <summary>
+        /// 访问源名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SourceName")]
+        public string SourceName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +219,8 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamArrayObj(map, prefix + "BetaList.", this.BetaList);
             this.SetParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
             this.SetParamSimple(map, prefix + "ParamTemplateName", this.ParamTemplateName);
+            this.SetParamSimple(map, prefix + "TargetName", this.TargetName);
+            this.SetParamSimple(map, prefix + "SourceName", this.SourceName);
         }
     }
 }

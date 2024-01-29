@@ -46,13 +46,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? RoomIdType{ get; set; }
 
         /// <summary>
-        /// 拉流转推机器人的UserId，用于进房发起拉流转推任务。
+        /// 输入在线媒体流机器人的UserId，用于进房发起拉流转推任务。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 拉流转推机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
+        /// 输入在线媒体流机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
         /// </summary>
         [JsonProperty("UserSig")]
         public string UserSig{ get; set; }

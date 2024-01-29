@@ -95,7 +95,7 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
-        /// 创建跑批任务
+        /// 创建批量预测任务
         /// </summary>
         /// <param name="req"><see cref="CreateBatchTaskRequest"/></param>
         /// <returns><see cref="CreateBatchTaskResponse"/></returns>
@@ -105,7 +105,7 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
-        /// 创建跑批任务
+        /// 创建批量预测任务
         /// </summary>
         /// <param name="req"><see cref="CreateBatchTaskRequest"/></param>
         /// <returns><see cref="CreateBatchTaskResponse"/></returns>
@@ -263,7 +263,7 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
-        /// 删除跑批任务
+        /// 删除批量预测任务
         /// </summary>
         /// <param name="req"><see cref="DeleteBatchTaskRequest"/></param>
         /// <returns><see cref="DeleteBatchTaskResponse"/></returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
-        /// 删除跑批任务
+        /// 删除批量预测任务
         /// </summary>
         /// <param name="req"><see cref="DeleteBatchTaskRequest"/></param>
         /// <returns><see cref="DeleteBatchTaskResponse"/></returns>
@@ -494,7 +494,7 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
-        /// 查询跑批任务
+        /// 查询批量预测任务
         /// </summary>
         /// <param name="req"><see cref="DescribeBatchTaskRequest"/></param>
         /// <returns><see cref="DescribeBatchTaskResponse"/></returns>
@@ -504,7 +504,7 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
-        /// 查询跑批任务
+        /// 查询批量预测任务
         /// </summary>
         /// <param name="req"><see cref="DescribeBatchTaskRequest"/></param>
         /// <returns><see cref="DescribeBatchTaskResponse"/></returns>
@@ -515,7 +515,7 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
-        /// 查询跑批实例列表
+        /// 查询批量预测任务实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribeBatchTaskInstancesRequest"/></param>
         /// <returns><see cref="DescribeBatchTaskInstancesResponse"/></returns>
@@ -525,7 +525,7 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
-        /// 查询跑批实例列表
+        /// 查询批量预测任务实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribeBatchTaskInstancesRequest"/></param>
         /// <returns><see cref="DescribeBatchTaskInstancesResponse"/></returns>
@@ -536,7 +536,7 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
-        /// 批量预测任务列表信息
+        /// 查询批量预测任务列表信息
         /// </summary>
         /// <param name="req"><see cref="DescribeBatchTasksRequest"/></param>
         /// <returns><see cref="DescribeBatchTasksResponse"/></returns>
@@ -546,7 +546,7 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
-        /// 批量预测任务列表信息
+        /// 查询批量预测任务列表信息
         /// </summary>
         /// <param name="req"><see cref="DescribeBatchTasksRequest"/></param>
         /// <returns><see cref="DescribeBatchTasksResponse"/></returns>
@@ -1502,7 +1502,7 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
-        /// 停止跑批任务
+        /// 停止批量预测任务
         /// </summary>
         /// <param name="req"><see cref="StopBatchTaskRequest"/></param>
         /// <returns><see cref="StopBatchTaskResponse"/></returns>
@@ -1512,7 +1512,7 @@ namespace TencentCloud.Tione.V20211111
         }
 
         /// <summary>
-        /// 停止跑批任务
+        /// 停止批量预测任务
         /// </summary>
         /// <param name="req"><see cref="StopBatchTaskRequest"/></param>
         /// <returns><see cref="StopBatchTaskResponse"/></returns>

@@ -31,25 +31,25 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 证书类型
+        /// 证书类型。 0：仅配置HTTP监听端口，没有证书 1：证书来源为自有证书 2：证书来源为托管证书
         /// </summary>
         [JsonProperty("CertType")]
         public long? CertType{ get; set; }
 
         /// <summary>
-        /// 证书公钥
+        /// CertType为1时，需要填充此参数，表示自有证书的证书链
         /// </summary>
         [JsonProperty("Certificate")]
         public string Certificate{ get; set; }
 
         /// <summary>
-        /// 证书ID
+        /// CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
         /// </summary>
         [JsonProperty("CertID")]
         public string CertID{ get; set; }
 
         /// <summary>
-        /// 私钥信息
+        /// CertType为1时，需要填充此参数，表示自有证书的私钥
         /// </summary>
         [JsonProperty("PrivateKey")]
         public string PrivateKey{ get; set; }

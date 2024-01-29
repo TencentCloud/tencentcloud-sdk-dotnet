@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 日志类型：error/slowLog
+        /// 日志类型：error/slowlog
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
@@ -78,6 +78,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("CreateIndex")]
         public bool? CreateIndex{ get; set; }
 
+        /// <summary>
+        /// CLS所在地域
+        /// </summary>
+        [JsonProperty("ClsRegion")]
+        public string ClsRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "LogTopic", this.LogTopic);
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "CreateIndex", this.CreateIndex);
+            this.SetParamSimple(map, prefix + "ClsRegion", this.ClsRegion);
         }
     }
 }

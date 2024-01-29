@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D6D394C6-F749-36E5-A127-4F612EC56898}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.942</VersionPrefix>
+    <VersionPrefix>3.0.943</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,36 +47,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="V20221115\BmaClient.cs" />
-    <Compile Include="V20221115\Models\BrandData.cs" />
-    <Compile Include="V20221115\Models\CreateBPBrandRequest.cs" />
-    <Compile Include="V20221115\Models\CreateBPBrandResponse.cs" />
-    <Compile Include="V20221115\Models\CreateBPFakeAPPListRequest.cs" />
-    <Compile Include="V20221115\Models\CreateBPFakeAPPListResponse.cs" />
-    <Compile Include="V20221115\Models\CreateBPFakeAPPRequest.cs" />
-    <Compile Include="V20221115\Models\CreateBPFakeAPPResponse.cs" />
-    <Compile Include="V20221115\Models\CreateBPFakeURLRequest.cs" />
-    <Compile Include="V20221115\Models\CreateBPFakeURLResponse.cs" />
-    <Compile Include="V20221115\Models\CreateBPFakeURLsRequest.cs" />
-    <Compile Include="V20221115\Models\CreateBPFakeURLsResponse.cs" />
-    <Compile Include="V20221115\Models\CreateBPWhiteListRequest.cs" />
-    <Compile Include="V20221115\Models\CreateBPWhiteListResponse.cs" />
-    <Compile Include="V20221115\Models\DeleteBPWhiteListRequest.cs" />
-    <Compile Include="V20221115\Models\DeleteBPWhiteListResponse.cs" />
-    <Compile Include="V20221115\Models\DescribeBPBrandsRequest.cs" />
-    <Compile Include="V20221115\Models\DescribeBPBrandsResponse.cs" />
-    <Compile Include="V20221115\Models\DescribeBPFakeAPPListRequest.cs" />
-    <Compile Include="V20221115\Models\DescribeBPFakeAPPListResponse.cs" />
-    <Compile Include="V20221115\Models\DescribeBPFakeURLsRequest.cs" />
-    <Compile Include="V20221115\Models\DescribeBPFakeURLsResponse.cs" />
-    <Compile Include="V20221115\Models\DescribeBPWhiteListsRequest.cs" />
-    <Compile Include="V20221115\Models\DescribeBPWhiteListsResponse.cs" />
-    <Compile Include="V20221115\Models\FakeAPPData.cs" />
-    <Compile Include="V20221115\Models\FakeURLData.cs" />
-    <Compile Include="V20221115\Models\Filter.cs" />
-    <Compile Include="V20221115\Models\ServiceData.cs" />
-    <Compile Include="V20221115\Models\TrademarkData.cs" />
-    <Compile Include="V20221115\Models\WhiteListData.cs" />
     <Compile Include="V20210624\BmaClient.cs" />
     <Compile Include="V20210624\Models\BrandData.cs" />
     <Compile Include="V20210624\Models\CreateBPFakeURLRequest.cs" />
@@ -142,5 +112,35 @@
     <Compile Include="V20210624\Models\ReportFakeURLInfo.cs" />
     <Compile Include="V20210624\Models\UpdateCRWorkRequest.cs" />
     <Compile Include="V20210624\Models\UpdateCRWorkResponse.cs" />
+    <Compile Include="V20221115\BmaClient.cs" />
+    <Compile Include="V20221115\Models\BrandData.cs" />
+    <Compile Include="V20221115\Models\CreateBPBrandRequest.cs" />
+    <Compile Include="V20221115\Models\CreateBPBrandResponse.cs" />
+    <Compile Include="V20221115\Models\CreateBPFakeAPPListRequest.cs" />
+    <Compile Include="V20221115\Models\CreateBPFakeAPPListResponse.cs" />
+    <Compile Include="V20221115\Models\CreateBPFakeAPPRequest.cs" />
+    <Compile Include="V20221115\Models\CreateBPFakeAPPResponse.cs" />
+    <Compile Include="V20221115\Models\CreateBPFakeURLRequest.cs" />
+    <Compile Include="V20221115\Models\CreateBPFakeURLResponse.cs" />
+    <Compile Include="V20221115\Models\CreateBPFakeURLsRequest.cs" />
+    <Compile Include="V20221115\Models\CreateBPFakeURLsResponse.cs" />
+    <Compile Include="V20221115\Models\CreateBPWhiteListRequest.cs" />
+    <Compile Include="V20221115\Models\CreateBPWhiteListResponse.cs" />
+    <Compile Include="V20221115\Models\DeleteBPWhiteListRequest.cs" />
+    <Compile Include="V20221115\Models\DeleteBPWhiteListResponse.cs" />
+    <Compile Include="V20221115\Models\DescribeBPBrandsRequest.cs" />
+    <Compile Include="V20221115\Models\DescribeBPBrandsResponse.cs" />
+    <Compile Include="V20221115\Models\DescribeBPFakeAPPListRequest.cs" />
+    <Compile Include="V20221115\Models\DescribeBPFakeAPPListResponse.cs" />
+    <Compile Include="V20221115\Models\DescribeBPFakeURLsRequest.cs" />
+    <Compile Include="V20221115\Models\DescribeBPFakeURLsResponse.cs" />
+    <Compile Include="V20221115\Models\DescribeBPWhiteListsRequest.cs" />
+    <Compile Include="V20221115\Models\DescribeBPWhiteListsResponse.cs" />
+    <Compile Include="V20221115\Models\FakeAPPData.cs" />
+    <Compile Include="V20221115\Models\FakeURLData.cs" />
+    <Compile Include="V20221115\Models\Filter.cs" />
+    <Compile Include="V20221115\Models\ServiceData.cs" />
+    <Compile Include="V20221115\Models\TrademarkData.cs" />
+    <Compile Include="V20221115\Models\WhiteListData.cs" />
   </ItemGroup>
 </Project>

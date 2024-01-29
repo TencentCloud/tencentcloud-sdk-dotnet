@@ -31,7 +31,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// 使用PublicKey加密的密文，Base64编码。密文长度不能超过256字节。
+        /// 使用PublicKey加密的密文，Base64编码，原始密文格式需要为C1C3C2_ASN1。原始密文长度不能超过256字节。
         /// </summary>
         [JsonProperty("Ciphertext")]
         public string Ciphertext{ get; set; }

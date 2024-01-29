@@ -25,13 +25,13 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 跑批任务ID
+        /// 批量预测任务ID
         /// </summary>
         [JsonProperty("BatchTaskId")]
         public string BatchTaskId{ get; set; }
 
         /// <summary>
-        /// 跑批任务名称
+        /// 批量预测任务名称
         /// </summary>
         [JsonProperty("BatchTaskName")]
         public string BatchTaskName{ get; set; }
@@ -195,7 +195,12 @@ namespace TencentCloud.Tione.V20211111.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+        /// 计费状态，取值范围:
+        /// BILLING: 计费中
+        /// NOT_BILLING: 未计费
+        /// WHITELIST_USING: 白名单使用中
+        /// WHITELIST_STOP: 白名单到期
+        /// ARREARS_STOP: 欠费停止
         /// </summary>
         [JsonProperty("ChargeStatus")]
         public string ChargeStatus{ get; set; }

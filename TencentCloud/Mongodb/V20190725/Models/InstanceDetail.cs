@@ -253,6 +253,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string RealInstanceId{ get; set; }
 
         /// <summary>
+        /// 实例当前可用区信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZoneList")]
+        public string[] ZoneList{ get; set; }
+
+        /// <summary>
         /// mongos节点个数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -352,6 +359,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "InstanceStatusDesc", this.InstanceStatusDesc);
             this.SetParamSimple(map, prefix + "RealInstanceId", this.RealInstanceId);
+            this.SetParamArraySimple(map, prefix + "ZoneList.", this.ZoneList);
             this.SetParamSimple(map, prefix + "MongosNodeNum", this.MongosNodeNum);
             this.SetParamSimple(map, prefix + "MongosMemory", this.MongosMemory);
             this.SetParamSimple(map, prefix + "MongosCpuNum", this.MongosCpuNum);

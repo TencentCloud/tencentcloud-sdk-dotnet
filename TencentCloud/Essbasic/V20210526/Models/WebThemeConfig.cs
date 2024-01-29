@@ -40,6 +40,28 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("WebEmbedThemeColor")]
         public string WebEmbedThemeColor{ get; set; }
 
+        /// <summary>
+        /// 企业认证页背景图（base64图片）
+        /// </summary>
+        [JsonProperty("AuthenticateBackground")]
+        public string AuthenticateBackground{ get; set; }
+
+        /// <summary>
+        /// 隐藏企业认证页面导航栏，取值如下：
+        /// <ul><li> **true**：隐藏企业认证页面导航栏</li>
+        /// <li> **false**：显示企业认证页面导航栏（默认）</li></ul>
+        /// </summary>
+        [JsonProperty("HideAuthenticateNavigationBar")]
+        public bool? HideAuthenticateNavigationBar{ get; set; }
+
+        /// <summary>
+        /// 隐藏企业认证顶部logo，取值如下：
+        /// <ul><li> **true**：隐藏企业认证顶部logo</li>
+        /// <li> **false**：显示企业认证顶部logo（默认）</li></ul>
+        /// </summary>
+        [JsonProperty("HideAuthenticateTopLogo")]
+        public bool? HideAuthenticateTopLogo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -48,6 +70,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         {
             this.SetParamSimple(map, prefix + "DisplaySignBrandLogo", this.DisplaySignBrandLogo);
             this.SetParamSimple(map, prefix + "WebEmbedThemeColor", this.WebEmbedThemeColor);
+            this.SetParamSimple(map, prefix + "AuthenticateBackground", this.AuthenticateBackground);
+            this.SetParamSimple(map, prefix + "HideAuthenticateNavigationBar", this.HideAuthenticateNavigationBar);
+            this.SetParamSimple(map, prefix + "HideAuthenticateTopLogo", this.HideAuthenticateTopLogo);
         }
     }
 }

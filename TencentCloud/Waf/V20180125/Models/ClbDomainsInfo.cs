@@ -31,49 +31,49 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 域名id
+        /// 域名唯一ID
         /// </summary>
         [JsonProperty("DomainId")]
         public string DomainId{ get; set; }
 
         /// <summary>
-        /// 实例id
+        /// 域名所属实例ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名
+        /// 域名所属实例名
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// waf类型
+        /// 域名所属实例类型
         /// </summary>
         [JsonProperty("Edition")]
         public string Edition{ get; set; }
 
         /// <summary>
-        /// 是否是cdn
+        /// waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
         /// </summary>
         [JsonProperty("IsCdn")]
         public ulong? IsCdn{ get; set; }
 
         /// <summary>
-        /// 负载均衡算法
+        /// 负载均衡类型为clb时，对应的负载均衡器信息
         /// </summary>
         [JsonProperty("LoadBalancerSet")]
         public LoadBalancerPackageNew[] LoadBalancerSet{ get; set; }
 
         /// <summary>
-        /// 镜像模式
+        /// 负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式
         /// </summary>
         [JsonProperty("FlowMode")]
         public ulong? FlowMode{ get; set; }
 
         /// <summary>
-        /// 绑定clb状态
+        /// 域名绑定负载均衡器状态
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("State")]
@@ -94,7 +94,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string[] IpHeaders{ get; set; }
 
         /// <summary>
-        /// cdc类型会增加集群信息
+        /// cdc-clb-waf类型WAF的CDC集群信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CdcClusters")]
@@ -106,6 +106,13 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         [JsonProperty("CloudType")]
         public string CloudType{ get; set; }
+
+        /// <summary>
+        /// 域名备注信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Note")]
+        public string Note{ get; set; }
 
 
         /// <summary>
@@ -126,6 +133,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
             this.SetParamSimple(map, prefix + "CdcClusters", this.CdcClusters);
             this.SetParamSimple(map, prefix + "CloudType", this.CloudType);
+            this.SetParamSimple(map, prefix + "Note", this.Note);
         }
     }
 }

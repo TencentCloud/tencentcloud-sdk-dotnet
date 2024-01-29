@@ -61,6 +61,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li> VideoClassification:  视频智能分类</li>
         /// <li> VideoCover: 视频智能封面</li>
         /// <li> VideoSegment: 视频智能拆条</li>
+        /// <li> VideoProduce: 视频制作</li>
+        /// <li> MediaCast: 媒体转推</li>
         /// <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
         /// </summary>
         [JsonProperty("Type")]

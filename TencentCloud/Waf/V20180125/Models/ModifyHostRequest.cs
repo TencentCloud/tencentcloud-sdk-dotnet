@@ -31,7 +31,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public HostRecord Host{ get; set; }
 
         /// <summary>
-        /// 实例id
+        /// 实例唯一ID
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }

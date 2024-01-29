@@ -178,6 +178,20 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("NumRowsFetchedFromCache")]
         public long? NumRowsFetchedFromCache{ get; set; }
 
+        /// <summary>
+        /// 会话ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SessionId")]
+        public string SessionId{ get; set; }
+
+        /// <summary>
+        /// 单节点内存峰值和(Bytes)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PerNodePeakMemoryBytesSum")]
+        public long? PerNodePeakMemoryBytesSum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -206,6 +220,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "TotalScanBytesSent", this.TotalScanBytesSent);
             this.SetParamSimple(map, prefix + "EstimatedPerHostMemBytes", this.EstimatedPerHostMemBytes);
             this.SetParamSimple(map, prefix + "NumRowsFetchedFromCache", this.NumRowsFetchedFromCache);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "PerNodePeakMemoryBytesSum", this.PerNodePeakMemoryBytesSum);
         }
     }
 }

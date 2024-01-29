@@ -25,55 +25,55 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 无
+        /// taskId列表
         /// </summary>
         [JsonProperty("TaskIds")]
         public string TaskIds{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 项目Id
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 工作流id
         /// </summary>
         [JsonProperty("WorkFlowId")]
         public string WorkFlowId{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 工作流名称
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 工作流任务列表
         /// </summary>
         [JsonProperty("Tasks")]
         public StageCloudApiRequest[] Tasks{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 备注
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 运行参数，map的Json形式
         /// </summary>
         [JsonProperty("RunParams")]
         public string RunParams{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 脚本内容
         /// </summary>
         [JsonProperty("ScriptContent")]
         public string ScriptContent{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 版本号
         /// </summary>
         [JsonProperty("VersionId")]
         public string VersionId{ get; set; }

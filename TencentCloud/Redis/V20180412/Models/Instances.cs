@@ -98,11 +98,18 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 内部参数，用户可忽略。
+        /// 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vip6")]
         public string Vip6{ get; set; }
+
+        /// <summary>
+        /// 内部参数，用户可忽略。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IPv6")]
+        public string IPv6{ get; set; }
 
         /// <summary>
         /// VPC 网络ID，如：75101。
@@ -175,6 +182,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "Role", this.Role);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "Vip6", this.Vip6);
+            this.SetParamSimple(map, prefix + "IPv6", this.IPv6);
             this.SetParamSimple(map, prefix + "VpcID", this.VpcID);
             this.SetParamSimple(map, prefix + "VPort", this.VPort);
             this.SetParamSimple(map, prefix + "Status", this.Status);

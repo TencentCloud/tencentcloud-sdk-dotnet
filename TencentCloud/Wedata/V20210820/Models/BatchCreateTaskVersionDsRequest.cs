@@ -54,6 +54,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("AlarmRecipientTypes")]
         public string AlarmRecipientTypes{ get; set; }
 
+        /// <summary>
+        /// 是否需要校验父任务已经提交到调度	
+        /// </summary>
+        [JsonProperty("NeedCheckParentSubmitted")]
+        public bool? NeedCheckParentSubmitted{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "AutoRun", this.AutoRun);
             this.SetParamSimple(map, prefix + "AlarmWays", this.AlarmWays);
             this.SetParamSimple(map, prefix + "AlarmRecipientTypes", this.AlarmRecipientTypes);
+            this.SetParamSimple(map, prefix + "NeedCheckParentSubmitted", this.NeedCheckParentSubmitted);
         }
     }
 }

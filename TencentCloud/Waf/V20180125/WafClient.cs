@@ -456,8 +456,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 删除CLB-WAF防护域名
-        /// 支持批量操作
+        /// 删除负载均衡型域名，支持批量操作。
         /// </summary>
         /// <param name="req"><see cref="DeleteHostRequest"/></param>
         /// <returns><see cref="DeleteHostResponse"/></returns>
@@ -467,8 +466,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 删除CLB-WAF防护域名
-        /// 支持批量操作
+        /// 删除负载均衡型域名，支持批量操作。
         /// </summary>
         /// <param name="req"><see cref="DeleteHostRequest"/></param>
         /// <returns><see cref="DeleteHostResponse"/></returns>
@@ -521,7 +519,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// Saas型WAF删除防护域名
+        /// SaaS型WAF删除防护域名
         /// </summary>
         /// <param name="req"><see cref="DeleteSpartaProtectionRequest"/></param>
         /// <returns><see cref="DeleteSpartaProtectionResponse"/></returns>
@@ -531,7 +529,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// Saas型WAF删除防护域名
+        /// SaaS型WAF删除防护域名
         /// </summary>
         /// <param name="req"><see cref="DeleteSpartaProtectionRequest"/></param>
         /// <returns><see cref="DeleteSpartaProtectionResponse"/></returns>
@@ -1495,7 +1493,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 查询用户TLS版本
+        /// 查询SaaS型WAF支持的TLS版本
         /// </summary>
         /// <param name="req"><see cref="DescribeTlsVersionRequest"/></param>
         /// <returns><see cref="DescribeTlsVersionResponse"/></returns>
@@ -1505,7 +1503,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 查询用户TLS版本
+        /// 查询SaaS型WAF支持的TLS版本
         /// </summary>
         /// <param name="req"><see cref="DescribeTlsVersionRequest"/></param>
         /// <returns><see cref="DescribeTlsVersionResponse"/></returns>
@@ -2192,6 +2190,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 修改域名投递状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainPostActionRequest"/></param>
+        /// <returns><see cref="ModifyDomainPostActionResponse"/></returns>
+        public Task<ModifyDomainPostActionResponse> ModifyDomainPostAction(ModifyDomainPostActionRequest req)
+        {
+            return InternalRequestAsync<ModifyDomainPostActionResponse>(req, "ModifyDomainPostAction");
+        }
+
+        /// <summary>
+        /// 修改域名投递状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainPostActionRequest"/></param>
+        /// <returns><see cref="ModifyDomainPostActionResponse"/></returns>
+        public ModifyDomainPostActionResponse ModifyDomainPostActionSync(ModifyDomainPostActionRequest req)
+        {
+            return InternalRequestAsync<ModifyDomainPostActionResponse>(req, "ModifyDomainPostAction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 更改某一条规则
         /// </summary>
         /// <param name="req"><see cref="ModifyDomainWhiteRuleRequest"/></param>
@@ -2255,7 +2274,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// clb-waf编辑防护域名配置
+        /// 编辑负载均衡型WAF防护域名配置
         /// </summary>
         /// <param name="req"><see cref="ModifyHostRequest"/></param>
         /// <returns><see cref="ModifyHostResponse"/></returns>
@@ -2265,7 +2284,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// clb-waf编辑防护域名配置
+        /// 编辑负载均衡型WAF防护域名配置
         /// </summary>
         /// <param name="req"><see cref="ModifyHostRequest"/></param>
         /// <returns><see cref="ModifyHostResponse"/></returns>
@@ -2276,7 +2295,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// clb-waf 设置防护域名的流量模式
+        /// 设置负载均衡型WAF防护域名的流量模式，切换镜像模式和清洗模式
         /// </summary>
         /// <param name="req"><see cref="ModifyHostFlowModeRequest"/></param>
         /// <returns><see cref="ModifyHostFlowModeResponse"/></returns>
@@ -2286,7 +2305,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// clb-waf 设置防护域名的流量模式
+        /// 设置负载均衡型WAF防护域名的流量模式，切换镜像模式和清洗模式
         /// </summary>
         /// <param name="req"><see cref="ModifyHostFlowModeRequest"/></param>
         /// <returns><see cref="ModifyHostFlowModeResponse"/></returns>
@@ -2488,7 +2507,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 修改域名配置
+        /// 编辑SaaS型WAF域名配置
         /// </summary>
         /// <param name="req"><see cref="ModifySpartaProtectionRequest"/></param>
         /// <returns><see cref="ModifySpartaProtectionResponse"/></returns>
@@ -2498,7 +2517,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 修改域名配置
+        /// 编辑SaaS型WAF域名配置
         /// </summary>
         /// <param name="req"><see cref="ModifySpartaProtectionRequest"/></param>
         /// <returns><see cref="ModifySpartaProtectionResponse"/></returns>

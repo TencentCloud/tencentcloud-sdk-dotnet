@@ -31,12 +31,6 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 规则Id
-        /// </summary>
-        [JsonProperty("SignatureId")]
-        public string SignatureId{ get; set; }
-
-        /// <summary>
         /// 规则状态
         /// </summary>
         [JsonProperty("Status")]
@@ -54,6 +48,18 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("RuleId")]
         public ulong? RuleId{ get; set; }
 
+        /// <summary>
+        /// 规则Id
+        /// </summary>
+        [JsonProperty("SignatureId")]
+        public string SignatureId{ get; set; }
+
+        /// <summary>
+        /// 加白的规则ID列表
+        /// </summary>
+        [JsonProperty("SignatureIds")]
+        public string[] SignatureIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,10 +67,11 @@ namespace TencentCloud.Waf.V20180125.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
-            this.SetParamSimple(map, prefix + "SignatureId", this.SignatureId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
+            this.SetParamSimple(map, prefix + "SignatureId", this.SignatureId);
+            this.SetParamArraySimple(map, prefix + "SignatureIds.", this.SignatureIds);
         }
     }
 }

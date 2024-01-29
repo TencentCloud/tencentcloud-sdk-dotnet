@@ -203,6 +203,13 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("ACTemplateSet")]
         public ACTemplate[] ACTemplateSet{ get; set; }
 
+        /// <summary>
+        /// 关联的白命令命令
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WhiteCmds")]
+        public string[] WhiteCmds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -238,6 +245,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamObj(map, prefix + "Department.", this.Department);
             this.SetParamSimple(map, prefix + "AllowAccessCredential", this.AllowAccessCredential);
             this.SetParamArrayObj(map, prefix + "ACTemplateSet.", this.ACTemplateSet);
+            this.SetParamArraySimple(map, prefix + "WhiteCmds.", this.WhiteCmds);
         }
     }
 }

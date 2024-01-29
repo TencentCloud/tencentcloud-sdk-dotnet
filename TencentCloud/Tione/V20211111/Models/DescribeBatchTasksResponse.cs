@@ -25,13 +25,13 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 数量
+        /// 批量预测任务总数
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 任务集
+        /// 批量预测任务列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BatchTaskSet")]

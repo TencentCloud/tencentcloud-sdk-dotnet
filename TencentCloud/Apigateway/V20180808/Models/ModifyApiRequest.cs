@@ -85,7 +85,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public long? ServiceTimeout{ get; set; }
 
         /// <summary>
-        /// API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。
+        /// API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。修改api时推荐必填
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

@@ -116,6 +116,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("Enable")]
         public string Enable{ get; set; }
 
+        /// <summary>
+        /// 规则对应的唯一内部id
+        /// </summary>
+        [JsonProperty("Uid")]
+        public string Uid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +140,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "ServiceTemplateId", this.ServiceTemplateId);
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
+            this.SetParamSimple(map, prefix + "Uid", this.Uid);
         }
     }
 }

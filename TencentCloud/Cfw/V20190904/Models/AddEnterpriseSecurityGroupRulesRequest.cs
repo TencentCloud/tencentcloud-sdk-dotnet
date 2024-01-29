@@ -43,10 +43,22 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// 是否延迟下发，1则延迟下发，否则立即下发
+        /// （IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发
         /// </summary>
         [JsonProperty("IsDelay")]
         public ulong? IsDelay{ get; set; }
+
+        /// <summary>
+        /// 来源 默认空 覆盖导入是 batch_import_cover
+        /// </summary>
+        [JsonProperty("From")]
+        public string From{ get; set; }
+
+        /// <summary>
+        /// 是否使用id 默认不需要
+        /// </summary>
+        [JsonProperty("IsUseId")]
+        public long? IsUseId{ get; set; }
 
 
         /// <summary>
@@ -58,6 +70,8 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamSimple(map, prefix + "IsDelay", this.IsDelay);
+            this.SetParamSimple(map, prefix + "From", this.From);
+            this.SetParamSimple(map, prefix + "IsUseId", this.IsUseId);
         }
     }
 }

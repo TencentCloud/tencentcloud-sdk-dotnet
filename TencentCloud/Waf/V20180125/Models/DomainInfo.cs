@@ -49,13 +49,44 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Cname{ get; set; }
 
         /// <summary>
-        /// 实例类型,sparta-waf表示saaswaf实例域名,clb-waf表示clbwaf实例域名,cdc-clb-waf表示CDC环境下clbwaf实例域名,cdn-waf表示cdnwaf实例域名
+        /// 域名所属实例类型。
+        /// sparta-waf：SaaS型WAF实例
+        /// clb-waf：负载均衡型WAF实例
+        /// cdc-clb-waf：CDC环境下负载均衡型WAF实例
         /// </summary>
         [JsonProperty("Edition")]
         public string Edition{ get; set; }
 
         /// <summary>
-        /// 地域
+        /// 地域。
+        /// "多伦多": "ca"
+        /// "广州": "gz"
+        /// "成都": "cd"
+        /// "福州": "fzec"
+        /// "深圳": "szx"
+        /// "印度": "in"
+        /// "济南": "jnec"
+        /// "重庆": "cq"
+        /// "天津": "tsn"
+        /// "欧洲东北": "ru"
+        /// "南京": "nj"
+        /// "美国硅谷": "usw"
+        /// "泰国": "th"
+        /// "广州Open": "gzopen"
+        /// "深圳金融": "szjr"
+        /// "法兰克福": "de"
+        /// "日本": "jp"
+        /// "弗吉尼亚": "use"
+        /// "北京": "bj"
+        /// "香港": "hk"
+        /// "杭州": "hzec"
+        /// "北京金融": "bjjr"
+        /// "上海金融": "shjr"
+        /// "台北": "tpe"
+        /// "首尔": "kr"
+        /// "上海": "sh"
+        /// "新加坡": "sg"
+        /// "清远": "qy"
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
@@ -67,43 +98,58 @@ namespace TencentCloud.Waf.V20180125.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 日志包
+        /// 访问日志开关状态。
+        /// 0：关闭
+        /// 1：开启
         /// </summary>
         [JsonProperty("ClsStatus")]
         public ulong? ClsStatus{ get; set; }
 
         /// <summary>
-        /// clbwaf使用模式,0镜像模式 1清洗模式
+        /// 负载均衡型WAF使用模式。
+        /// 0：镜像模式 
+        /// 1：清洗模式
         /// </summary>
         [JsonProperty("FlowMode")]
         public ulong? FlowMode{ get; set; }
 
         /// <summary>
-        /// waf开关,0关闭 1开启
+        /// waf开关状态。
+        /// 0：关闭 
+        /// 1：开启
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 规则引擎防护模式,0观察模式 1拦截模式
+        /// 规则引擎防护模式。
+        /// 0：观察模式 
+        /// 1：拦截模式
         /// </summary>
         [JsonProperty("Mode")]
         public ulong? Mode{ get; set; }
 
         /// <summary>
-        /// 规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
+        /// 规则引擎和AI引擎防护模式联合状态。
+        /// 1:初始状态,规则引擎拦截&&AI引擎未操作开关状态
+        /// 10：规则引擎观察&&AI引擎关闭模式 
+        /// 11：规则引擎观察&&AI引擎观察模式 
+        /// 12：规则引擎观察&&AI引擎拦截模式 
+        /// 20：规则引擎拦截&&AI引擎关闭模式 
+        /// 21：规则引擎拦截&&AI引擎观察模式 
+        /// 22：规则引擎拦截&&AI引擎拦截模式
         /// </summary>
         [JsonProperty("Engine")]
         public ulong? Engine{ get; set; }
 
         /// <summary>
-        /// CC列表
+        /// 沙箱集群回源出口IP列表
         /// </summary>
         [JsonProperty("CCList")]
         public string[] CCList{ get; set; }
 
         /// <summary>
-        /// 回源ip
+        /// 生产集群回源出口IP列表
         /// </summary>
         [JsonProperty("RsList")]
         public string[] RsList{ get; set; }
@@ -115,7 +161,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public PortInfo[] Ports{ get; set; }
 
         /// <summary>
-        /// 负载均衡器
+        /// 负载均衡器相关配置
         /// </summary>
         [JsonProperty("LoadBalancerSet")]
         public LoadBalancerPackageNew[] LoadBalancerSet{ get; set; }
@@ -127,7 +173,13 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// clbwaf域名监听器状态,0操作成功 4正在绑定LB 6正在解绑LB 7解绑LB失败 8绑定LB失败 10内部错误
+        /// 负载均衡型WAF域名LB监听器状态。
+        /// 0：操作成功 
+        /// 4：正在绑定LB 
+        /// 6：正在解绑LB 
+        /// 7：解绑LB失败 
+        /// 8：绑定LB失败 
+        /// 10：内部错误
         /// </summary>
         [JsonProperty("State")]
         public long? State{ get; set; }
@@ -139,58 +191,82 @@ namespace TencentCloud.Waf.V20180125.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Ipv6开关状态,0关闭 1开启
+        /// Ipv6开关状态。
+        /// 0：关闭 
+        /// 1：开启
         /// </summary>
         [JsonProperty("Ipv6Status")]
         public long? Ipv6Status{ get; set; }
 
         /// <summary>
-        /// BOT开关状态,0关闭 1开启
+        /// BOT开关状态。
+        /// 0：关闭 
+        /// 1：关闭
+        /// 2：开启
+        /// 3：开启
         /// </summary>
         [JsonProperty("BotStatus")]
         public long? BotStatus{ get; set; }
 
         /// <summary>
-        /// 版本信息
+        /// 实例版本信息。
+        /// 101：小微敏捷版 
+        /// 102：小微超轻版
+        /// 2：高级版
+        /// 3：企业版
+        /// 4：旗舰版
+        /// 6：独享版
         /// </summary>
         [JsonProperty("Level")]
         public long? Level{ get; set; }
 
         /// <summary>
-        /// 是否开启投递CLS功能,0关闭 1开启
+        /// 投递CLS状态。
+        /// 0：关闭 
+        /// 1：开启
         /// </summary>
         [JsonProperty("PostCLSStatus")]
         public long? PostCLSStatus{ get; set; }
 
         /// <summary>
-        /// 是否开启投递CKafka功能,0关闭 1开启
+        /// 投递CKafka状态。
+        /// 0：关闭 
+        /// 1：开启
         /// </summary>
         [JsonProperty("PostCKafkaStatus")]
         public long? PostCKafkaStatus{ get; set; }
 
         /// <summary>
-        /// cdc实例域名接入的集群信息,非cdc实例忽略
+        /// cdc实例域名接入的集群信息,非cdc实例忽略。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CdcClusters")]
         public string CdcClusters{ get; set; }
 
         /// <summary>
-        /// api安全开关状态,0关闭 1开启
+        /// api安全开关状态。
+        /// 0：关闭 
+        /// 1：开启
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApiStatus")]
         public long? ApiStatus{ get; set; }
 
         /// <summary>
-        /// 应用型负载均衡类型,clb或者apisix，默认clb
+        /// 应用型负载均衡类型，默认clb。
+        /// clb：七层负载均衡器类型
+        /// apisix：apisix网关型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlbType")]
         public string AlbType{ get; set; }
 
         /// <summary>
-        /// 安全组状态,0不展示 1非腾讯云源站 2安全组绑定失败 3安全组发生变更
+        /// 安全组状态。
+        /// 0：不展示
+        /// 1：非腾讯云源站
+        /// 2：安全组绑定失败
+        /// 3：安全组发生变更
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SgState")]
@@ -204,11 +280,40 @@ namespace TencentCloud.Waf.V20180125.Models
         public string SgDetail{ get; set; }
 
         /// <summary>
-        /// 域名类型:hybrid表示混合云域名，public表示公有云域名
+        /// 域名云环境。hybrid：混合云域名
+        /// public：公有云域名
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CloudType")]
         public string CloudType{ get; set; }
+
+        /// <summary>
+        /// 域名备注信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Note")]
+        public string Note{ get; set; }
+
+        /// <summary>
+        /// SAASWAF源站IP列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SrcList")]
+        public string[] SrcList{ get; set; }
+
+        /// <summary>
+        /// SAASWAF源站域名列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpstreamDomainList")]
+        public string[] UpstreamDomainList{ get; set; }
+
+        /// <summary>
+        /// 安全组ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SgID")]
+        public string SgID{ get; set; }
 
 
         /// <summary>
@@ -246,6 +351,10 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "SgState", this.SgState);
             this.SetParamSimple(map, prefix + "SgDetail", this.SgDetail);
             this.SetParamSimple(map, prefix + "CloudType", this.CloudType);
+            this.SetParamSimple(map, prefix + "Note", this.Note);
+            this.SetParamArraySimple(map, prefix + "SrcList.", this.SrcList);
+            this.SetParamArraySimple(map, prefix + "UpstreamDomainList.", this.UpstreamDomainList);
+            this.SetParamSimple(map, prefix + "SgID", this.SgID);
         }
     }
 }

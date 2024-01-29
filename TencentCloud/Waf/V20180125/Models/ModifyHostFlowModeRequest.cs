@@ -37,7 +37,9 @@ namespace TencentCloud.Waf.V20180125.Models
         public string DomainId{ get; set; }
 
         /// <summary>
-        /// WAF流量模式，1：清洗模式，0：镜像模式（默认）
+        /// WAF流量模式。
+        /// 0：镜像模式（默认）
+        /// 1：清洗模式
         /// </summary>
         [JsonProperty("FlowMode")]
         public ulong? FlowMode{ get; set; }

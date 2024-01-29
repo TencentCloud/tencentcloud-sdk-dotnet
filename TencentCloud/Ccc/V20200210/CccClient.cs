@@ -137,7 +137,7 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// 创建技能组
+        /// 新建技能组
         /// </summary>
         /// <param name="req"><see cref="CreateCCCSkillGroupRequest"/></param>
         /// <returns><see cref="CreateCCCSkillGroupResponse"/></returns>
@@ -147,7 +147,7 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// 创建技能组
+        /// 新建技能组
         /// </summary>
         /// <param name="req"><see cref="CreateCCCSkillGroupRequest"/></param>
         /// <returns><see cref="CreateCCCSkillGroupResponse"/></returns>

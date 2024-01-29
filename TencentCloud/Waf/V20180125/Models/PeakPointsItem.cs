@@ -150,6 +150,27 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("WxAccess")]
         public ulong? WxAccess{ get; set; }
 
+        /// <summary>
+        /// 小程序请求数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WxCount")]
+        public ulong? WxCount{ get; set; }
+
+        /// <summary>
+        /// 小程序上行带宽峰值，单位B
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WxUp")]
+        public ulong? WxUp{ get; set; }
+
+        /// <summary>
+        /// 小程序下行带宽峰值，单位B
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WxDown")]
+        public ulong? WxDown{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -175,6 +196,9 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Leak", this.Leak);
             this.SetParamSimple(map, prefix + "ACL", this.ACL);
             this.SetParamSimple(map, prefix + "WxAccess", this.WxAccess);
+            this.SetParamSimple(map, prefix + "WxCount", this.WxCount);
+            this.SetParamSimple(map, prefix + "WxUp", this.WxUp);
+            this.SetParamSimple(map, prefix + "WxDown", this.WxDown);
         }
     }
 }

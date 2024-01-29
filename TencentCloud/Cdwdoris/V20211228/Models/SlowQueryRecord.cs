@@ -98,6 +98,27 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("IsQuery")]
         public long? IsQuery{ get; set; }
 
+        /// <summary>
+        /// ResultBytes的MB格式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResultBytesMB")]
+        public float? ResultBytesMB{ get; set; }
+
+        /// <summary>
+        /// MemoryUsage的MB表示
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MemoryUsageMB")]
+        public float? MemoryUsageMB{ get; set; }
+
+        /// <summary>
+        /// DurationMs的秒表示
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DurationSec")]
+        public float? DurationSec{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,6 +137,9 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "InitialAddress", this.InitialAddress);
             this.SetParamSimple(map, prefix + "DbName", this.DbName);
             this.SetParamSimple(map, prefix + "IsQuery", this.IsQuery);
+            this.SetParamSimple(map, prefix + "ResultBytesMB", this.ResultBytesMB);
+            this.SetParamSimple(map, prefix + "MemoryUsageMB", this.MemoryUsageMB);
+            this.SetParamSimple(map, prefix + "DurationSec", this.DurationSec);
         }
     }
 }

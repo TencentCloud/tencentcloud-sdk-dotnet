@@ -1,0 +1,64 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Wedata.V20210820.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class CodeSearchResult : AbstractModel
+    {
+        
+        /// <summary>
+        /// 代码搜索结果列表
+        /// </summary>
+        [JsonProperty("CodeSearchInfoList")]
+        public CodeSearchInfoPage CodeSearchInfoList{ get; set; }
+
+        /// <summary>
+        /// 开发空间搜索结果数
+        /// </summary>
+        [JsonProperty("DevCount")]
+        public ulong? DevCount{ get; set; }
+
+        /// <summary>
+        /// 调度空间搜索结果数
+        /// </summary>
+        [JsonProperty("ScheduleCount")]
+        public ulong? ScheduleCount{ get; set; }
+
+        /// <summary>
+        /// 回收站搜索结果数
+        /// </summary>
+        [JsonProperty("RecycleCount")]
+        public ulong? RecycleCount{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamObj(map, prefix + "CodeSearchInfoList.", this.CodeSearchInfoList);
+            this.SetParamSimple(map, prefix + "DevCount", this.DevCount);
+            this.SetParamSimple(map, prefix + "ScheduleCount", this.ScheduleCount);
+            this.SetParamSimple(map, prefix + "RecycleCount", this.RecycleCount);
+        }
+    }
+}
+

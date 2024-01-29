@@ -271,6 +271,15 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("SignTypeSelector")]
         public ulong? SignTypeSelector{ get; set; }
 
+        /// <summary>
+        /// Deadline
+        /// 签署人的签署截止时间，格式为Unix标准时间戳（秒）
+        /// 
+        /// 注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
+        /// </summary>
+        [JsonProperty("Deadline")]
+        public long? Deadline{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -303,6 +312,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamArraySimple(map, prefix + "ApproverVerifyTypes.", this.ApproverVerifyTypes);
             this.SetParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
             this.SetParamSimple(map, prefix + "SignTypeSelector", this.SignTypeSelector);
+            this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
         }
     }
 }

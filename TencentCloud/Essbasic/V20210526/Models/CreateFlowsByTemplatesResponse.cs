@@ -27,6 +27,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 生成的合同流程ID数组，合同流程ID为32位字符串。
         /// 建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。
+        /// 
+        /// [点击产看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
         /// </summary>
         [JsonProperty("FlowIds")]
         public string[] FlowIds{ get; set; }

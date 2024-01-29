@@ -131,7 +131,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string[] GrayAreas{ get; set; }
 
         /// <summary>
-        /// 是否开启HTTP强制跳转到HTTPS。
+        /// 必填项，是否开启HTTP强制跳转到HTTPS。
         /// 0：不强制跳转
         /// 1：开启强制跳转
         /// </summary>
@@ -151,7 +151,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string[] SrcList{ get; set; }
 
         /// <summary>
-        /// 是否开启HTTP2，需要开启HTTPS协议支持。
+        /// 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
         /// 0：关闭
         /// 1：开启
         /// </summary>
@@ -179,7 +179,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Edition{ get; set; }
 
         /// <summary>
-        /// 是否开启长连接。
+        /// 必填项，是否开启长连接。
         /// 0： 短连接
         /// 1： 长连接
         /// </summary>
@@ -187,7 +187,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string IsKeepAlive{ get; set; }
 
         /// <summary>
-        /// 域名所属实例id
+        /// 必填项，域名所属实例id
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
@@ -205,7 +205,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public long?[] Weights{ get; set; }
 
         /// <summary>
-        /// 是否开启主动健康检测。
+        /// 必填项，是否开启主动健康检测。
         /// 0：不开启
         /// 1：开启
         /// </summary>
@@ -219,7 +219,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public long? TLSVersion{ get; set; }
 
         /// <summary>
-        /// 加密套件模板。
+        /// 必填项，加密套件模板。
         /// 0：不支持选择，使用默认模板  
         /// 1：通用型模板 
         /// 2：安全型模板
@@ -270,6 +270,18 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("XFFReset")]
         public long? XFFReset{ get; set; }
 
+        /// <summary>
+        /// 域名备注信息
+        /// </summary>
+        [JsonProperty("Note")]
+        public string Note{ get; set; }
+
+        /// <summary>
+        /// 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
+        /// </summary>
+        [JsonProperty("UpstreamHost")]
+        public string UpstreamHost{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -310,6 +322,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "SniType", this.SniType);
             this.SetParamSimple(map, prefix + "SniHost", this.SniHost);
             this.SetParamSimple(map, prefix + "XFFReset", this.XFFReset);
+            this.SetParamSimple(map, prefix + "Note", this.Note);
+            this.SetParamSimple(map, prefix + "UpstreamHost", this.UpstreamHost);
         }
     }
 }

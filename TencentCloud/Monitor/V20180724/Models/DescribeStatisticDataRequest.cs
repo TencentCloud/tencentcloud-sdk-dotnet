@@ -37,14 +37,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// 指标名列表
+        /// 指标名列表，相关指标信息可参考对应 [云产品指标文档](https://cloud.tencent.com/document/product/248/62458)
         /// </summary>
         [JsonProperty("MetricNames")]
         public string[] MetricNames{ get; set; }
 
         /// <summary>
-        /// 维度条件，操作符支持=、in
-        /// 配置文档参考：https://cloud.tencent.com/document/product/248/53821
+        /// 维度条件，操作符支持=、in，详情请参考对应 [指标维度信息](https://cloud.tencent.com/document/product/248/53821)
         /// </summary>
         [JsonProperty("Conditions")]
         public MidQueryCondition[] Conditions{ get; set; }

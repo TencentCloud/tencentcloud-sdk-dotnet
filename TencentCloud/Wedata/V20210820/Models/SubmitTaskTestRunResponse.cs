@@ -25,13 +25,13 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 无
+        /// 提交运行jobid
         /// </summary>
         [JsonProperty("JobId")]
         public long? JobId{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 运行记录id
         /// </summary>
         [JsonProperty("RecordId")]
         public long?[] RecordId{ get; set; }

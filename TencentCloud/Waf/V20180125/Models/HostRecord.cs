@@ -31,7 +31,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 域名ID
+        /// 域名唯一ID
         /// </summary>
         [JsonProperty("DomainId")]
         public string DomainId{ get; set; }
@@ -43,61 +43,82 @@ namespace TencentCloud.Waf.V20180125.Models
         public string MainDomain{ get; set; }
 
         /// <summary>
-        /// 规则引擎防护模式，0 观察模式，1拦截模式
+        /// 规则引擎防护模式。
+        /// 0：观察模式
+        /// 1：拦截模式
         /// </summary>
         [JsonProperty("Mode")]
         public ulong? Mode{ get; set; }
 
         /// <summary>
-        /// waf和LD的绑定，0：没有绑定，1：绑定
+        /// waf和负载均衡器的绑定关系。
+        /// 0：未绑定
+        /// 1：已绑定
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 域名状态，0：正常，1：未检测到流量，2：即将过期，3：过期
+        /// clbwaf域名监听器状态。
+        /// 0：操作成功
+        /// 4：正在绑定LB
+        /// 6：正在解绑LB 
+        /// 7：解绑LB失败 
+        /// 8：绑定LB失败 
+        /// 10：内部错误
         /// </summary>
         [JsonProperty("State")]
         public ulong? State{ get; set; }
 
         /// <summary>
-        /// 规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
+        /// 规则引擎和AI引擎防护模式联合状态。
+        /// 1:初始状态,规则引擎拦截&&AI引擎未操作开关状态
+        /// 10：规则引擎观察&&AI引擎关闭模式 
+        /// 11：规则引擎观察&&AI引擎观察模式 
+        /// 12：规则引擎观察&&AI引擎拦截模式 
+        /// 20：规则引擎拦截&&AI引擎关闭模式 
+        /// 21：规则引擎拦截&&AI引擎观察模式 
+        /// 22：规则引擎拦截&&AI引擎拦截模式
         /// </summary>
         [JsonProperty("Engine")]
         public ulong? Engine{ get; set; }
 
         /// <summary>
-        /// 是否开启代理，0：不开启，1：开启
+        /// waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
         /// </summary>
         [JsonProperty("IsCdn")]
         public ulong? IsCdn{ get; set; }
 
         /// <summary>
-        /// 绑定的LB列表
+        /// 绑定的负载均衡器信息列表
         /// </summary>
         [JsonProperty("LoadBalancerSet")]
         public LoadBalancer[] LoadBalancerSet{ get; set; }
 
         /// <summary>
-        /// 域名绑定的LB的地域，以,分割多个地域
+        /// 域名绑定的LB的地域，以逗号分割多个地域
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 产品分类，取值为：sparta-waf、clb-waf、cdn-waf
+        /// 域名所属实例类型。负载均衡型WAF为"clb-waf"
         /// </summary>
         [JsonProperty("Edition")]
         public string Edition{ get; set; }
 
         /// <summary>
-        /// WAF的流量模式，1：清洗模式，0：镜像模式
+        /// 负载均衡型WAF域名的流量模式。
+        /// 1：清洗模式
+        /// 0：镜像模式
         /// </summary>
         [JsonProperty("FlowMode")]
         public ulong? FlowMode{ get; set; }
 
         /// <summary>
-        /// 是否开启访问日志，1：开启，0：关闭
+        /// 是否开启访问日志。
+        /// 1：开启
+        /// 0：关闭
         /// </summary>
         [JsonProperty("ClsStatus")]
         public ulong? ClsStatus{ get; set; }
@@ -110,14 +131,16 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? Level{ get; set; }
 
         /// <summary>
-        /// 域名需要下发到的cdc集群列表
+        /// 域名需要下发到的cdc集群列表。仅CDC场景下填充
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CdcClusters")]
         public string[] CdcClusters{ get; set; }
 
         /// <summary>
-        /// 应用型负载均衡类型: clb或者apisix，默认clb
+        /// 应用型负载均衡类型，默认clb。 
+        /// clb：七层负载均衡器类型 
+        /// apisix：apisix网关型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlbType")]
@@ -131,18 +154,30 @@ namespace TencentCloud.Waf.V20180125.Models
         public string[] IpHeaders{ get; set; }
 
         /// <summary>
-        /// 规则引擎类型， 1: menshen,   2:tiga
+        /// 规则引擎类型。
+        /// 1: menshen
+        /// 2: tiga
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineType")]
         public long? EngineType{ get; set; }
 
         /// <summary>
-        /// 云类型:public:公有云；private:私有云;hybrid:混合云
+        /// 云类型。
+        /// public:公有云
+        /// private:私有云
+        /// hybrid:混合云
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CloudType")]
         public string CloudType{ get; set; }
+
+        /// <summary>
+        /// 域名备注信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Note")]
+        public string Note{ get; set; }
 
 
         /// <summary>
@@ -169,6 +204,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
             this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
             this.SetParamSimple(map, prefix + "CloudType", this.CloudType);
+            this.SetParamSimple(map, prefix + "Note", this.Note);
         }
     }
 }

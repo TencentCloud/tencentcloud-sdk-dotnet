@@ -25,7 +25,7 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 跑批任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
+        /// 批量预测任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
         /// </summary>
         [JsonProperty("BatchTaskName")]
         public string BatchTaskName{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public ResourceConfigInfo ResourceConfigInfo{ get; set; }
 
         /// <summary>
-        /// 结果输出
+        /// 结果输出存储信息
         /// </summary>
         [JsonProperty("Outputs")]
         public DataConfig[] Outputs{ get; set; }
@@ -58,12 +58,14 @@ namespace TencentCloud.Tione.V20211111.Models
         /// 工作类型 1:单次 2:周期
         /// </summary>
         [JsonProperty("JobType")]
+        [System.Obsolete]
         public ulong? JobType{ get; set; }
 
         /// <summary>
         /// 任务周期描述
         /// </summary>
         [JsonProperty("CronInfo")]
+        [System.Obsolete]
         public CronInfo CronInfo{ get; set; }
 
         /// <summary>

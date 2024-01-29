@@ -90,6 +90,30 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("DateOfExpiration")]
         public string DateOfExpiration{ get; set; }
 
+        /// <summary>
+        /// 持证人签名（护照信息页识别结果）
+        /// 
+        /// 仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+        /// </summary>
+        [JsonProperty("Signature")]
+        public string Signature{ get; set; }
+
+        /// <summary>
+        /// 签发地点（护照信息页识别结果）
+        /// 
+        /// 仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+        /// </summary>
+        [JsonProperty("IssuePlace")]
+        public string IssuePlace{ get; set; }
+
+        /// <summary>
+        /// 签发机关（护照信息页识别结果）
+        /// 
+        /// 仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+        /// </summary>
+        [JsonProperty("IssuingAuthority")]
+        public string IssuingAuthority{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +131,9 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Sex", this.Sex);
             this.SetParamSimple(map, prefix + "DateOfIssuance", this.DateOfIssuance);
             this.SetParamSimple(map, prefix + "DateOfExpiration", this.DateOfExpiration);
+            this.SetParamSimple(map, prefix + "Signature", this.Signature);
+            this.SetParamSimple(map, prefix + "IssuePlace", this.IssuePlace);
+            this.SetParamSimple(map, prefix + "IssuingAuthority", this.IssuingAuthority);
         }
     }
 }

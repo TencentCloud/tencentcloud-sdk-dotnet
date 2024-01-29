@@ -43,12 +43,6 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Direction{ get; set; }
 
         /// <summary>
-        /// 规则类型：1封禁，2放通
-        /// </summary>
-        [JsonProperty("RuleType")]
-        public ulong? RuleType{ get; set; }
-
-        /// <summary>
         /// 排序类型：desc降序，asc正序
         /// </summary>
         [JsonProperty("Order")]
@@ -66,6 +60,19 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("SearchValue")]
         public string SearchValue{ get; set; }
 
+        /// <summary>
+        /// 规则类型：1封禁，2放通
+        /// </summary>
+        [JsonProperty("RuleType")]
+        public ulong? RuleType{ get; set; }
+
+        /// <summary>
+        /// blocklist 封禁列表
+        /// whitelist 白名单列表
+        /// </summary>
+        [JsonProperty("ShowType")]
+        public string ShowType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,10 +82,11 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Direction", this.Direction);
-            this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
             this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "By", this.By);
             this.SetParamSimple(map, prefix + "SearchValue", this.SearchValue);
+            this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
+            this.SetParamSimple(map, prefix + "ShowType", this.ShowType);
         }
     }
 }

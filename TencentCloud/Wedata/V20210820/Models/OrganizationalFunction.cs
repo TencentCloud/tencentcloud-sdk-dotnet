@@ -167,6 +167,34 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("SubmitErrorMsg")]
         public string SubmitErrorMsg{ get; set; }
 
+        /// <summary>
+        /// 模式名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SchemaName")]
+        public string SchemaName{ get; set; }
+
+        /// <summary>
+        /// 函数命令格式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CommandFormat")]
+        public string CommandFormat{ get; set; }
+
+        /// <summary>
+        /// 名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OwnerName")]
+        public string OwnerName{ get; set; }
+
+        /// <summary>
+        /// 时间戳
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubmitTimestamp")]
+        public string SubmitTimestamp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -194,6 +222,10 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArraySimple(map, prefix + "OwnerUserIds.", this.OwnerUserIds);
             this.SetParamSimple(map, prefix + "DbName", this.DbName);
             this.SetParamSimple(map, prefix + "SubmitErrorMsg", this.SubmitErrorMsg);
+            this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
+            this.SetParamSimple(map, prefix + "CommandFormat", this.CommandFormat);
+            this.SetParamSimple(map, prefix + "OwnerName", this.OwnerName);
+            this.SetParamSimple(map, prefix + "SubmitTimestamp", this.SubmitTimestamp);
         }
     }
 }

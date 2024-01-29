@@ -31,7 +31,8 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 是否一级拉取
+        /// 是否一级拉取 true 是 
+        /// false 否
         /// </summary>
         [JsonProperty("FirstLevelPull")]
         public bool? FirstLevelPull{ get; set; }
@@ -55,13 +56,15 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string Keyword{ get; set; }
 
         /// <summary>
-        /// 是否包含工作流
+        /// 是否包含工作流 true 是 
+        /// false 否
         /// </summary>
         [JsonProperty("IncludeWorkflow")]
         public bool? IncludeWorkflow{ get; set; }
 
         /// <summary>
-        /// 是否包含任务
+        /// 是否包含任务 true 是 
+        /// false 否
         /// </summary>
         [JsonProperty("IncludeTask")]
         public bool? IncludeTask{ get; set; }
@@ -85,7 +88,8 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string DisplayType{ get; set; }
 
         /// <summary>
-        /// 是否包含任务目录
+        /// 是否包含任务目录 true 是 
+        /// false 否
         /// </summary>
         [JsonProperty("IncludeTaskFolder")]
         public bool? IncludeTaskFolder{ get; set; }

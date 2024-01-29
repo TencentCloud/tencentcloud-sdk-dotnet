@@ -118,8 +118,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string RecipientId{ get; set; }
 
         /// <summary>
-        /// 本签署人在此合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的365天时截止。
-        /// 如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
+        /// 签署人的签署截止时间，格式为Unix标准时间戳（秒）
+        /// 
+        /// 注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
         /// </summary>
         [JsonProperty("Deadline")]
         public long? Deadline{ get; set; }

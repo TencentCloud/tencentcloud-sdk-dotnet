@@ -69,10 +69,16 @@ namespace TencentCloud.Redis.V20180412.Models
         public float? StorageSlope{ get; set; }
 
         /// <summary>
-        /// 实例运行时节点 ID。
+        /// 该字段因拼写不规范问题，建议使用RunId取代。含义：实例运行时节点 ID。
         /// </summary>
         [JsonProperty("Runid")]
         public string Runid{ get; set; }
+
+        /// <summary>
+        /// 实例运行时节点 ID。
+        /// </summary>
+        [JsonProperty("RunId")]
+        public string RunId{ get; set; }
 
         /// <summary>
         /// 服务状态。
@@ -96,6 +102,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "Storage", this.Storage);
             this.SetParamSimple(map, prefix + "StorageSlope", this.StorageSlope);
             this.SetParamSimple(map, prefix + "Runid", this.Runid);
+            this.SetParamSimple(map, prefix + "RunId", this.RunId);
             this.SetParamSimple(map, prefix + "Connected", this.Connected);
         }
     }

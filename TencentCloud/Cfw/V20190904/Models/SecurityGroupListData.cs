@@ -205,6 +205,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("ParameterName")]
         public string ParameterName{ get; set; }
 
+        /// <summary>
+        /// 端口协议类型参数模板名称
+        /// </summary>
+        [JsonProperty("ProtocolPortName")]
+        public string ProtocolPortName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -239,6 +245,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "AssetGroupNameIn", this.AssetGroupNameIn);
             this.SetParamSimple(map, prefix + "AssetGroupNameOut", this.AssetGroupNameOut);
             this.SetParamSimple(map, prefix + "ParameterName", this.ParameterName);
+            this.SetParamSimple(map, prefix + "ProtocolPortName", this.ProtocolPortName);
         }
     }
 }

@@ -54,6 +54,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
 
+        /// <summary>
+        /// IP黑白名单类型，40为IP白名单，42为IP黑名单
+        /// </summary>
+        [JsonProperty("ActionType")]
+        public ulong? ActionType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "IsId", this.IsId);
             this.SetParamSimple(map, prefix + "DeleteAll", this.DeleteAll);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
+            this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
         }
     }
 }

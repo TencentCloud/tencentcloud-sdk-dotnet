@@ -25,7 +25,8 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 结果
+        /// 结果 true 删除成功
+        /// false 删除失败
         /// </summary>
         [JsonProperty("Data")]
         public bool? Data{ get; set; }

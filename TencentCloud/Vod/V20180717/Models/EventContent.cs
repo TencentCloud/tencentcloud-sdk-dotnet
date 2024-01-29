@@ -227,6 +227,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("QualityEnhanceCompleteEvent")]
         public QualityEnhanceTask QualityEnhanceCompleteEvent{ get; set; }
 
+        /// <summary>
+        /// 媒体转推状态变化事件，当事件类型为 MediaCastStatusChanged 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MediaCastStatusChangedEvent")]
+        public MediaCastEvent MediaCastStatusChangedEvent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -259,6 +266,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "DescribeFileAttributesCompleteEvent.", this.DescribeFileAttributesCompleteEvent);
             this.SetParamObj(map, prefix + "QualityInspectCompleteEvent.", this.QualityInspectCompleteEvent);
             this.SetParamObj(map, prefix + "QualityEnhanceCompleteEvent.", this.QualityEnhanceCompleteEvent);
+            this.SetParamObj(map, prefix + "MediaCastStatusChangedEvent.", this.MediaCastStatusChangedEvent);
         }
     }
 }

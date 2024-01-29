@@ -25,7 +25,7 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 工作流ID
+        /// 是否删除成功
         /// </summary>
         [JsonProperty("Data")]
         public bool? Data{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 跑批任务ID
+        /// 批量预测任务ID
         /// </summary>
         [JsonProperty("BatchTaskId")]
         public string BatchTaskId{ get; set; }
 
         /// <summary>
-        /// 跑批任务名称
+        /// 批量预测任务名称
         /// </summary>
         [JsonProperty("BatchTaskName")]
         public string BatchTaskName{ get; set; }
@@ -56,7 +56,12 @@ namespace TencentCloud.Tione.V20211111.Models
         public string ChargeType{ get; set; }
 
         /// <summary>
-        /// 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+        /// 计费状态，取值范围:
+        /// BILLING: 计费中
+        /// NOT_BILLING: 未计费
+        /// WHITELIST_USING: 白名单使用中
+        /// WHITELIST_STOP: 白名单到期
+        /// ARREARS_STOP: 欠费停止
         /// </summary>
         [JsonProperty("ChargeStatus")]
         public string ChargeStatus{ get; set; }
@@ -82,7 +87,8 @@ namespace TencentCloud.Tione.V20211111.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 任务状态
+        /// 任务状态, 取值范围:
+        /// INIT, STARTING, RUNNING, FAILED, STOPPING, STOPPED, SUCCEED
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -95,27 +101,27 @@ namespace TencentCloud.Tione.V20211111.Models
         public ulong? RuntimeInSeconds{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 任务创建时间
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// 任务开始运行时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 任务结束时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// 任务更新时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
@@ -141,7 +147,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string FailureReason{ get; set; }
 
         /// <summary>
-        /// 计费金额信息，eg：2.00元/小时 (for 按量计费)
+        /// 按量计费信息
         /// </summary>
         [JsonProperty("BillingInfo")]
         public string BillingInfo{ get; set; }

@@ -25,7 +25,11 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 状态码
+        /// 状态码。
+        /// 0：证书正常
+        /// 310：证书异常
+        /// 311：证书过期
+        /// 312：证书即将过期
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -43,7 +47,9 @@ namespace TencentCloud.Waf.V20180125.Models
         public string NotAfter{ get; set; }
 
         /// <summary>
-        /// 证书是否改变:1有改变，0没有改变
+        /// 证书是否改变。
+        /// 0：未变化
+        /// 1：有变化
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Changed")]

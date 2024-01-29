@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.942</VersionPrefix>
+    <VersionPrefix>3.0.943</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -95,6 +95,7 @@
     <Compile Include="V20181119\Models\ElectronicFlightTicketFull.cs" />
     <Compile Include="V20181119\Models\ElectronicTrainTicket.cs" />
     <Compile Include="V20181119\Models\ElectronicTrainTicketFull.cs" />
+    <Compile Include="V20181119\Models\Encryption.cs" />
     <Compile Include="V20181119\Models\EnglishOCRRequest.cs" />
     <Compile Include="V20181119\Models\EnglishOCRResponse.cs" />
     <Compile Include="V20181119\Models\EnterpriseLicenseInfo.cs" />
@@ -202,6 +203,8 @@
     <Compile Include="V20181119\Models\RailwayTicketInfo.cs" />
     <Compile Include="V20181119\Models\RecognizeContainerOCRRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeContainerOCRResponse.cs" />
+    <Compile Include="V20181119\Models\RecognizeEncryptedIDCardOCRRequest.cs" />
+    <Compile Include="V20181119\Models\RecognizeEncryptedIDCardOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeForeignPermanentResidentIdCardRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeForeignPermanentResidentIdCardResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeGeneralInvoiceRequest.cs" />

@@ -45,6 +45,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("LogTopicId")]
         public string LogTopicId{ get; set; }
 
+        /// <summary>
+        /// CLS服务所在地域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClsRegion")]
+        public string ClsRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "LogSetId", this.LogSetId);
             this.SetParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
+            this.SetParamSimple(map, prefix + "ClsRegion", this.ClsRegion);
         }
     }
 }

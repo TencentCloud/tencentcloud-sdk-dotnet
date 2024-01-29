@@ -25,12 +25,6 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 域名
-        /// </summary>
-        [JsonProperty("Domain")]
-        public string Domain{ get; set; }
-
-        /// <summary>
         /// 类别
         /// </summary>
         [JsonProperty("Category")]
@@ -41,6 +35,12 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
+
+        /// <summary>
+        /// 域名
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
 
         /// <summary>
         /// 实例id
@@ -60,18 +60,25 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("BotVersion")]
         public string BotVersion{ get; set; }
 
+        /// <summary>
+        /// 批量开启BOT开关的域名列表
+        /// </summary>
+        [JsonProperty("DomainList")]
+        public string[] DomainList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "Category", this.Category);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
             this.SetParamSimple(map, prefix + "IsVersionFour", this.IsVersionFour);
             this.SetParamSimple(map, prefix + "BotVersion", this.BotVersion);
+            this.SetParamArraySimple(map, prefix + "DomainList.", this.DomainList);
         }
     }
 }

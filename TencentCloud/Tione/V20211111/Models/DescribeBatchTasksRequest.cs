@@ -25,20 +25,19 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 过滤器，eg：[{ "Name": "Id", "Values": ["train-23091792777383936"] }]
+        /// 过滤器
         /// 
-        /// 取值范围：
-        /// Name（名称）：task1
-        /// Id（task ID）：train-23091792777383936
-        /// Status（状态）：STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
-        /// ChargeType（计费类型）：PREPAID 包年包月 / POSTPAID_BY_HOUR 按量计费
-        /// CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ ARREARS_STOP（欠费停止）
+        /// Name支持的取值范围：
+        /// BatchTaskId, BatchTaskName, Status, ModelVersionId
+        /// 
+        /// 其中Status 的有效取值范围:
+        /// INIT, STARTING, RUNNING, FAILED, STOPPING, STOPPED, SUCCEED
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 标签过滤器，eg：[{ "TagKey": "TagKeyA", "TagValue": ["TagValueA"] }]
+        /// 标签过滤器
         /// </summary>
         [JsonProperty("TagFilters")]
         public TagFilter[] TagFilters{ get; set; }
@@ -50,7 +49,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为10，最大为50
+        /// 限制数目，默认为20
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -62,7 +61,8 @@ namespace TencentCloud.Tione.V20211111.Models
         public string Order{ get; set; }
 
         /// <summary>
-        /// 排序的依据字段， 取值范围 "CreateTime" "UpdateTime"
+        /// 排序字段。当前仅支持 "CreateTime"。
+        /// 不传此字段则按照DB默认排序结果返回
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }

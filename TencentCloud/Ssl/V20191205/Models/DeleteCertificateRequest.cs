@@ -30,6 +30,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("CertificateId")]
         public string CertificateId{ get; set; }
 
+        /// <summary>
+        /// 删除时是否检查证书关联了云资源。默认不检查。如选择检查(需要授权服务角色SSL_QCSLinkedRoleInReplaceLoadCertificate)删除将变成异步,接口会返回异步任务ID。需使用DescribeDeleteCertificatesTaskResult接口查询删除是否成功。
+        /// </summary>
+        [JsonProperty("IsCheckResource")]
+        public bool? IsCheckResource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
+            this.SetParamSimple(map, prefix + "IsCheckResource", this.IsCheckResource);
         }
     }
 }

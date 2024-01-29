@@ -25,24 +25,30 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+        /// 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+        /// 
+        /// 此接口下面信息必填。
+        /// <ul>
+        /// <li>渠道应用标识:  Agent.AppId</li>
+        /// <li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+        /// <li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+        /// </ul>
+        /// 第三方平台子客企业和员工必须已经经过实名认证
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
         /// 合同流程ID，为32位字符串。
-        /// <ul><li>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</li>
-        /// <li>可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。</li></ul>
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
         /// 企业内部审核结果
-        /// <ul><li>PASS: 审核通过</li>
-        /// <li>REJECT: 审核拒绝</li>
-        /// <li>SIGN_REJECT:拒签(流程结束)</li></ul>
+        /// <ul><li>PASS: 审核通过（流程可以继续签署或者发起）</li>
+        /// <li>REJECT: 审核拒绝（流程状态不变，可以继续调用审核接口通过审核）</li>
+        /// <li>SIGN_REJECT:拒签(流程终止，流程状态变为拒签状态)</li></ul>
         /// </summary>
         [JsonProperty("ReviewType")]
         public string ReviewType{ get; set; }

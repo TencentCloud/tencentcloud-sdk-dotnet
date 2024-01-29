@@ -25,6 +25,34 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
+        /// 1 封禁 2外部IP 3域名 4情报 5assets 6udf  7入侵防御规则id （2-7属于白名单类型）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleType")]
+        public long? RuleType{ get; set; }
+
+        /// <summary>
+        /// 规则ip或白名单内容
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Ioc")]
+        public string Ioc{ get; set; }
+
+        /// <summary>
+        /// 资产实例名称、自定义策略名称等
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IocName")]
+        public string IocName{ get; set; }
+
+        /// <summary>
+        /// 白名单信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IocInfo")]
+        public string IocInfo{ get; set; }
+
+        /// <summary>
         /// 域名
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -37,13 +65,6 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         [JsonProperty("IP")]
         public string IP{ get; set; }
-
-        /// <summary>
-        /// 规则ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Ioc")]
-        public string Ioc{ get; set; }
 
         /// <summary>
         /// 危险等级
@@ -65,6 +86,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         [JsonProperty("Direction")]
         public long? Direction{ get; set; }
+
+        /// <summary>
+        /// 所有方向聚合成字符串
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DirectionList")]
+        public string DirectionList{ get; set; }
 
         /// <summary>
         /// 协议
@@ -143,18 +171,36 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
+        /// <summary>
+        /// 上次命中时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LastHitTime")]
+        public string LastHitTime{ get; set; }
+
+        /// <summary>
+        /// 自定义规则细节
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CustomRule")]
+        public CustomWhiteRule CustomRule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
+            this.SetParamSimple(map, prefix + "Ioc", this.Ioc);
+            this.SetParamSimple(map, prefix + "IocName", this.IocName);
+            this.SetParamSimple(map, prefix + "IocInfo", this.IocInfo);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "IP", this.IP);
-            this.SetParamSimple(map, prefix + "Ioc", this.Ioc);
             this.SetParamSimple(map, prefix + "Level", this.Level);
             this.SetParamSimple(map, prefix + "EventName", this.EventName);
             this.SetParamSimple(map, prefix + "Direction", this.Direction);
+            this.SetParamSimple(map, prefix + "DirectionList", this.DirectionList);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "Address", this.Address);
             this.SetParamSimple(map, prefix + "Action", this.Action);
@@ -166,6 +212,8 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "MatchTimes", this.MatchTimes);
             this.SetParamSimple(map, prefix + "Country", this.Country);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamSimple(map, prefix + "LastHitTime", this.LastHitTime);
+            this.SetParamObj(map, prefix + "CustomRule.", this.CustomRule);
         }
     }
 }

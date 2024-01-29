@@ -44,8 +44,8 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// 是否自动使用代金券：
-        /// <li>0：否
-        /// <li>1：是
+        /// <li>0：否</li>
+        /// <li>1：是</li>
         /// 默认值：0
         /// </summary>
         [JsonProperty("AutoVoucher")]
@@ -65,9 +65,9 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// 指定实例配置完成变更后的切换时间。
-        /// <li>0：立即切换 
-        /// <li>1：指定时间切换
-        /// <li>2：维护时间窗口内切换
+        /// <li>0：立即切换 </li>
+        /// <li>1：指定时间切换</li>
+        /// <li>2：维护时间窗口内</li>切换
         /// 默认值：0 
         /// </summary>
         [JsonProperty("SwitchTag")]

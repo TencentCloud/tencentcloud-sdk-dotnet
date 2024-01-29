@@ -50,6 +50,9 @@ namespace TencentCloud.Wedata.V20210820.Models
 
         /// <summary>
         /// 文件夹类型
+        /// personal 个人
+        /// project 项目
+        /// resource 资源
         /// </summary>
         [JsonProperty("DirType")]
         public string DirType{ get; set; }
