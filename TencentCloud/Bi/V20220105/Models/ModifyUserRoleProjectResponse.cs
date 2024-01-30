@@ -25,6 +25,13 @@ namespace TencentCloud.Bi.V20220105.Models
     {
         
         /// <summary>
+        /// 自定义错误信息对象
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ErrorInfo")]
+        public ErrorInfo ErrorInfo{ get; set; }
+
+        /// <summary>
         /// 扩展
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -57,6 +64,7 @@ namespace TencentCloud.Bi.V20220105.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "ErrorInfo.", this.ErrorInfo);
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamSimple(map, prefix + "Msg", this.Msg);
             this.SetParamSimple(map, prefix + "Data", this.Data);

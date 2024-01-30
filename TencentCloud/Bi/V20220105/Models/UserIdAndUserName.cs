@@ -127,6 +127,41 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }
 
+        /// <summary>
+        /// 1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AppId")]
+        public string AppId{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AppUserId")]
+        public string AppUserId{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AppUserAliasName")]
+        public string AppUserAliasName{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AppUserName")]
+        public string AppUserName{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InValidateAppRange")]
+        public bool? InValidateAppRange{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -148,6 +183,11 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
             this.SetParamSimple(map, prefix + "GlobalUserName", this.GlobalUserName);
             this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
+            this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "AppUserId", this.AppUserId);
+            this.SetParamSimple(map, prefix + "AppUserAliasName", this.AppUserAliasName);
+            this.SetParamSimple(map, prefix + "AppUserName", this.AppUserName);
+            this.SetParamSimple(map, prefix + "InValidateAppRange", this.InValidateAppRange);
         }
     }
 }

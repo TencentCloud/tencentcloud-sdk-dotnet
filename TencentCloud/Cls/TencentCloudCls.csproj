@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.944</VersionPrefix>
+    <VersionPrefix>3.0.945</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -54,6 +54,7 @@
     <Compile Include="V20201016\Models\AlarmClassification.cs" />
     <Compile Include="V20201016\Models\AlarmInfo.cs" />
     <Compile Include="V20201016\Models\AlarmNotice.cs" />
+    <Compile Include="V20201016\Models\AlarmShieldInfo.cs" />
     <Compile Include="V20201016\Models\AlarmTarget.cs" />
     <Compile Include="V20201016\Models\AlarmTargetInfo.cs" />
     <Compile Include="V20201016\Models\AlertHistoryNotice.cs" />
@@ -83,6 +84,8 @@
     <Compile Include="V20201016\Models\CreateAlarmNoticeResponse.cs" />
     <Compile Include="V20201016\Models\CreateAlarmRequest.cs" />
     <Compile Include="V20201016\Models\CreateAlarmResponse.cs" />
+    <Compile Include="V20201016\Models\CreateAlarmShieldRequest.cs" />
+    <Compile Include="V20201016\Models\CreateAlarmShieldResponse.cs" />
     <Compile Include="V20201016\Models\CreateConfigExtraRequest.cs" />
     <Compile Include="V20201016\Models\CreateConfigExtraResponse.cs" />
     <Compile Include="V20201016\Models\CreateConfigRequest.cs" />
@@ -120,6 +123,8 @@
     <Compile Include="V20201016\Models\DeleteAlarmNoticeResponse.cs" />
     <Compile Include="V20201016\Models\DeleteAlarmRequest.cs" />
     <Compile Include="V20201016\Models\DeleteAlarmResponse.cs" />
+    <Compile Include="V20201016\Models\DeleteAlarmShieldRequest.cs" />
+    <Compile Include="V20201016\Models\DeleteAlarmShieldResponse.cs" />
     <Compile Include="V20201016\Models\DeleteConfigExtraRequest.cs" />
     <Compile Include="V20201016\Models\DeleteConfigExtraResponse.cs" />
     <Compile Include="V20201016\Models\DeleteConfigFromMachineGroupRequest.cs" />
@@ -150,6 +155,8 @@
     <Compile Include="V20201016\Models\DeleteTopicResponse.cs" />
     <Compile Include="V20201016\Models\DescribeAlarmNoticesRequest.cs" />
     <Compile Include="V20201016\Models\DescribeAlarmNoticesResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeAlarmShieldsRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeAlarmShieldsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeAlarmsRequest.cs" />
     <Compile Include="V20201016\Models\DescribeAlarmsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeAlertRecordHistoryRequest.cs" />
@@ -237,6 +244,8 @@
     <Compile Include="V20201016\Models\ModifyAlarmNoticeResponse.cs" />
     <Compile Include="V20201016\Models\ModifyAlarmRequest.cs" />
     <Compile Include="V20201016\Models\ModifyAlarmResponse.cs" />
+    <Compile Include="V20201016\Models\ModifyAlarmShieldRequest.cs" />
+    <Compile Include="V20201016\Models\ModifyAlarmShieldResponse.cs" />
     <Compile Include="V20201016\Models\ModifyConfigExtraRequest.cs" />
     <Compile Include="V20201016\Models\ModifyConfigExtraResponse.cs" />
     <Compile Include="V20201016\Models\ModifyConfigRequest.cs" />

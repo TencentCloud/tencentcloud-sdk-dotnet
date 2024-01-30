@@ -73,6 +73,13 @@ namespace TencentCloud.Trro.V20220325.Models
         [JsonProperty("LicenseIds")]
         public string[] LicenseIds{ get; set; }
 
+        /// <summary>
+        /// 每月license的限定时长
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MonthlyRemainTime")]
+        public long? MonthlyRemainTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Trro.V20220325.Models
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamArraySimple(map, prefix + "LicenseIds.", this.LicenseIds);
+            this.SetParamSimple(map, prefix + "MonthlyRemainTime", this.MonthlyRemainTime);
         }
     }
 }

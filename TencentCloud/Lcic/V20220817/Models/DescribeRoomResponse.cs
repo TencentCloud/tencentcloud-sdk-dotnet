@@ -205,6 +205,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string RecordBackground{ get; set; }
 
         /// <summary>
+        /// RTMP推流链接
+        /// </summary>
+        [JsonProperty("RTMPStreamingURL")]
+        public string RTMPStreamingURL{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -243,6 +249,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "RecordLiveUrl", this.RecordLiveUrl);
             this.SetParamSimple(map, prefix + "EnableAutoStart", this.EnableAutoStart);
             this.SetParamSimple(map, prefix + "RecordBackground", this.RecordBackground);
+            this.SetParamSimple(map, prefix + "RTMPStreamingURL", this.RTMPStreamingURL);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

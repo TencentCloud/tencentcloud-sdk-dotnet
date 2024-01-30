@@ -26,20 +26,22 @@ namespace TencentCloud.Tse.V20201207.Models
         
         /// <summary>
         /// 指标类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// - Resource
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 指标资源名称
+        /// - cpu
+        /// - memory
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceName")]
         public string ResourceName{ get; set; }
 
         /// <summary>
-        /// 指标目标类型
+        /// 指标目标类型，目前只支持百分比Utilization
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetType")]

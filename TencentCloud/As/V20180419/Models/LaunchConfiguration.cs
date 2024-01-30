@@ -110,15 +110,13 @@ namespace TencentCloud.As.V20180419.Models
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// 启动配置当前状态。取值范围：<br><li>NORMAL：正常<br><li>IMAGE_ABNORMAL：启动配置镜像异常<br><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常<br><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常<br>
+        /// 启动配置当前状态。取值范围：<li>NORMAL：正常</li><li>IMAGE_ABNORMAL：启动配置镜像异常</li><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常</li><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常</li>
         /// </summary>
         [JsonProperty("LaunchConfigurationStatus")]
         public string LaunchConfigurationStatus{ get; set; }
 
         /// <summary>
-        /// 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
-        /// <br><li>POSTPAID_BY_HOUR：按小时后付费
-        /// <br><li>SPOTPAID：竞价付费
+        /// 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。<li>POSTPAID_BY_HOUR：按小时后付费</li><li>SPOTPAID：竞价付费</li>
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
@@ -192,9 +190,7 @@ namespace TencentCloud.As.V20180419.Models
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
         /// <summary>
-        /// 云盘类型选择策略。取值范围：
-        /// <br><li>ORIGINAL：使用设置的云盘类型
-        /// <br><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型
+        /// 云盘类型选择策略。取值范围：<li>ORIGINAL：使用设置的云盘类型</li><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型</li>
         /// </summary>
         [JsonProperty("DiskTypePolicy")]
         public string DiskTypePolicy{ get; set; }
@@ -211,6 +207,12 @@ namespace TencentCloud.As.V20180419.Models
         /// </summary>
         [JsonProperty("IPv6InternetAccessible")]
         public IPv6InternetAccessible IPv6InternetAccessible{ get; set; }
+
+        /// <summary>
+        /// 置放群组id，仅支持指定一个。
+        /// </summary>
+        [JsonProperty("DisasterRecoverGroupIds")]
+        public string[] DisasterRecoverGroupIds{ get; set; }
 
 
         /// <summary>
@@ -248,6 +250,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "DiskTypePolicy", this.DiskTypePolicy);
             this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
             this.SetParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
+            this.SetParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
         }
     }
 }

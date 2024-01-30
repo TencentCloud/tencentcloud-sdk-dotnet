@@ -53,7 +53,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（BatchUpdateFirmware）用于批量更新设备固件 
+        /// 本接口（BatchUpdateFirmware）用于批量更新设备固件
         /// </summary>
         /// <param name="req"><see cref="BatchUpdateFirmwareRequest"/></param>
         /// <returns><see cref="BatchUpdateFirmwareResponse"/></returns>
@@ -63,7 +63,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（BatchUpdateFirmware）用于批量更新设备固件 
+        /// 本接口（BatchUpdateFirmware）用于批量更新设备固件
         /// </summary>
         /// <param name="req"><see cref="BatchUpdateFirmwareRequest"/></param>
         /// <returns><see cref="BatchUpdateFirmwareResponse"/></returns>
@@ -1082,7 +1082,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（ListFirmwares）用于获取固件列表 
+        /// 本接口（ListFirmwares）用于获取固件列表
         /// </summary>
         /// <param name="req"><see cref="ListFirmwaresRequest"/></param>
         /// <returns><see cref="ListFirmwaresResponse"/></returns>
@@ -1092,7 +1092,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（ListFirmwares）用于获取固件列表 
+        /// 本接口（ListFirmwares）用于获取固件列表
         /// </summary>
         /// <param name="req"><see cref="ListFirmwaresRequest"/></param>
         /// <returns><see cref="ListFirmwaresResponse"/></returns>
@@ -1460,6 +1460,27 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
+        /// 本接口（UpdateOtaTask）当固件升级大任务处于没有在全部成功的状态时，可修改为取消状态，取消部分或全部设备的升级;或其它允许的可修改的状态
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOtaTaskStatusRequest"/></param>
+        /// <returns><see cref="UpdateOtaTaskStatusResponse"/></returns>
+        public Task<UpdateOtaTaskStatusResponse> UpdateOtaTaskStatus(UpdateOtaTaskStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateOtaTaskStatusResponse>(req, "UpdateOtaTaskStatus");
+        }
+
+        /// <summary>
+        /// 本接口（UpdateOtaTask）当固件升级大任务处于没有在全部成功的状态时，可修改为取消状态，取消部分或全部设备的升级;或其它允许的可修改的状态
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOtaTaskStatusRequest"/></param>
+        /// <returns><see cref="UpdateOtaTaskStatusResponse"/></returns>
+        public UpdateOtaTaskStatusResponse UpdateOtaTaskStatusSync(UpdateOtaTaskStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateOtaTaskStatusResponse>(req, "UpdateOtaTaskStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 更新私有CA证书
         /// </summary>
         /// <param name="req"><see cref="UpdatePrivateCARequest"/></param>
@@ -1544,7 +1565,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（UploadFirmware）用于上传设备固件信息 
+        /// 本接口（UploadFirmware）用于上传设备固件信息
         /// </summary>
         /// <param name="req"><see cref="UploadFirmwareRequest"/></param>
         /// <returns><see cref="UploadFirmwareResponse"/></returns>
@@ -1554,7 +1575,7 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
-        /// 本接口（UploadFirmware）用于上传设备固件信息 
+        /// 本接口（UploadFirmware）用于上传设备固件信息
         /// </summary>
         /// <param name="req"><see cref="UploadFirmwareRequest"/></param>
         /// <returns><see cref="UploadFirmwareResponse"/></returns>

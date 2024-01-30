@@ -39,14 +39,14 @@ namespace TencentCloud.Tse.V20201207.Models
         public string StartAt{ get; set; }
 
         /// <summary>
-        /// 定时伸缩目标节点数
+        /// 定时伸缩目标节点数，不超过指标伸缩中定义的最大节点数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetReplicas")]
         public long? TargetReplicas{ get; set; }
 
         /// <summary>
-        /// 定时伸缩cron表达式
+        /// 定时伸缩cron表达式，无需输入
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Crontab")]

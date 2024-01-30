@@ -139,6 +139,34 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("CorpAdmin")]
         public bool? CorpAdmin{ get; set; }
 
+        /// <summary>
+        /// 企微用户id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AppUserId")]
+        public string AppUserId{ get; set; }
+
+        /// <summary>
+        /// 昵称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AppUserAliasName")]
+        public string AppUserAliasName{ get; set; }
+
+        /// <summary>
+        /// 应用用户名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AppUserName")]
+        public string AppUserName{ get; set; }
+
+        /// <summary>
+        /// 是否在可见范围内
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InValidateAppRange")]
+        public bool? InValidateAppRange{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -162,6 +190,10 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "AreaCode", this.AreaCode);
             this.SetParamSimple(map, prefix + "RootAccount", this.RootAccount);
             this.SetParamSimple(map, prefix + "CorpAdmin", this.CorpAdmin);
+            this.SetParamSimple(map, prefix + "AppUserId", this.AppUserId);
+            this.SetParamSimple(map, prefix + "AppUserAliasName", this.AppUserAliasName);
+            this.SetParamSimple(map, prefix + "AppUserName", this.AppUserName);
+            this.SetParamSimple(map, prefix + "InValidateAppRange", this.InValidateAppRange);
         }
     }
 }

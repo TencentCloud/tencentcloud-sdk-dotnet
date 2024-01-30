@@ -42,6 +42,12 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
+        /// <summary>
+        /// 是否只获取绑定企微应用的
+        /// </summary>
+        [JsonProperty("IsOnlyBindAppUser")]
+        public bool? IsOnlyBindAppUser{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "PageNo", this.PageNo);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "IsOnlyBindAppUser", this.IsOnlyBindAppUser);
         }
     }
 }

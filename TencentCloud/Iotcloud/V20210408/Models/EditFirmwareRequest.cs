@@ -48,6 +48,12 @@ namespace TencentCloud.Iotcloud.V20210408.Models
         [JsonProperty("FirmwareDescription")]
         public string FirmwareDescription{ get; set; }
 
+        /// <summary>
+        /// 固件用户自定义配置信息
+        /// </summary>
+        [JsonProperty("FirmwareUserDefined")]
+        public string FirmwareUserDefined{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Iotcloud.V20210408.Models
             this.SetParamSimple(map, prefix + "FirmwareVersion", this.FirmwareVersion);
             this.SetParamSimple(map, prefix + "FirmwareName", this.FirmwareName);
             this.SetParamSimple(map, prefix + "FirmwareDescription", this.FirmwareDescription);
+            this.SetParamSimple(map, prefix + "FirmwareUserDefined", this.FirmwareUserDefined);
         }
     }
 }

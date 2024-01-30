@@ -67,7 +67,7 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// 产品能力:信令数据、音视频。第0位表示信令数据、第1表示音视频 ，默认为1（信令数据）
+        /// 产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductAbility")]
@@ -164,6 +164,20 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         [JsonProperty("GroupInfo")]
         public string GroupInfo{ get; set; }
 
+        /// <summary>
+        /// 通信在/离线状态（online=normal+fault，offline）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeviceStatus")]
+        public string DeviceStatus{ get; set; }
+
+        /// <summary>
+        /// 设备业务状态（normal、fault、offline）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -190,6 +204,8 @@ namespace TencentCloud.Weilingwith.V20230427.Models
             this.SetParamObj(map, prefix + "Location.", this.Location);
             this.SetParamArrayObj(map, prefix + "FieldList.", this.FieldList);
             this.SetParamSimple(map, prefix + "GroupInfo", this.GroupInfo);
+            this.SetParamSimple(map, prefix + "DeviceStatus", this.DeviceStatus);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

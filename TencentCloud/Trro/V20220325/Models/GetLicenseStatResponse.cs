@@ -49,6 +49,12 @@ namespace TencentCloud.Trro.V20220325.Models
         public long? Expire{ get; set; }
 
         /// <summary>
+        /// 当月用量超时授权个数
+        /// </summary>
+        [JsonProperty("MonthlyExpire")]
+        public long? MonthlyExpire{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Trro.V20220325.Models
             this.SetParamSimple(map, prefix + "Bound", this.Bound);
             this.SetParamSimple(map, prefix + "UnBound", this.UnBound);
             this.SetParamSimple(map, prefix + "Expire", this.Expire);
+            this.SetParamSimple(map, prefix + "MonthlyExpire", this.MonthlyExpire);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

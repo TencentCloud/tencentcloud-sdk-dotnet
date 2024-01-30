@@ -200,6 +200,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 该接口用于创建告警屏蔽规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAlarmShieldRequest"/></param>
+        /// <returns><see cref="CreateAlarmShieldResponse"/></returns>
+        public Task<CreateAlarmShieldResponse> CreateAlarmShield(CreateAlarmShieldRequest req)
+        {
+            return InternalRequestAsync<CreateAlarmShieldResponse>(req, "CreateAlarmShield");
+        }
+
+        /// <summary>
+        /// 该接口用于创建告警屏蔽规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAlarmShieldRequest"/></param>
+        /// <returns><see cref="CreateAlarmShieldResponse"/></returns>
+        public CreateAlarmShieldResponse CreateAlarmShieldSync(CreateAlarmShieldRequest req)
+        {
+            return InternalRequestAsync<CreateAlarmShieldResponse>(req, "CreateAlarmShield")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建采集规则配置
         /// </summary>
         /// <param name="req"><see cref="CreateConfigRequest"/></param>
@@ -536,6 +557,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 该接口用于删除告警屏蔽规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAlarmShieldRequest"/></param>
+        /// <returns><see cref="DeleteAlarmShieldResponse"/></returns>
+        public Task<DeleteAlarmShieldResponse> DeleteAlarmShield(DeleteAlarmShieldRequest req)
+        {
+            return InternalRequestAsync<DeleteAlarmShieldResponse>(req, "DeleteAlarmShield");
+        }
+
+        /// <summary>
+        /// 该接口用于删除告警屏蔽规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAlarmShieldRequest"/></param>
+        /// <returns><see cref="DeleteAlarmShieldResponse"/></returns>
+        public DeleteAlarmShieldResponse DeleteAlarmShieldSync(DeleteAlarmShieldRequest req)
+        {
+            return InternalRequestAsync<DeleteAlarmShieldResponse>(req, "DeleteAlarmShield")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除采集规则配置
         /// </summary>
         /// <param name="req"><see cref="DeleteConfigRequest"/></param>
@@ -847,6 +889,27 @@ namespace TencentCloud.Cls.V20201016
         public DescribeAlarmNoticesResponse DescribeAlarmNoticesSync(DescribeAlarmNoticesRequest req)
         {
             return InternalRequestAsync<DescribeAlarmNoticesResponse>(req, "DescribeAlarmNotices")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取告警屏蔽配置规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmShieldsRequest"/></param>
+        /// <returns><see cref="DescribeAlarmShieldsResponse"/></returns>
+        public Task<DescribeAlarmShieldsResponse> DescribeAlarmShields(DescribeAlarmShieldsRequest req)
+        {
+            return InternalRequestAsync<DescribeAlarmShieldsResponse>(req, "DescribeAlarmShields");
+        }
+
+        /// <summary>
+        /// 获取告警屏蔽配置规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmShieldsRequest"/></param>
+        /// <returns><see cref="DescribeAlarmShieldsResponse"/></returns>
+        public DescribeAlarmShieldsResponse DescribeAlarmShieldsSync(DescribeAlarmShieldsRequest req)
+        {
+            return InternalRequestAsync<DescribeAlarmShieldsResponse>(req, "DescribeAlarmShields")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1456,6 +1519,27 @@ namespace TencentCloud.Cls.V20201016
         public ModifyAlarmNoticeResponse ModifyAlarmNoticeSync(ModifyAlarmNoticeRequest req)
         {
             return InternalRequestAsync<ModifyAlarmNoticeResponse>(req, "ModifyAlarmNotice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于修改告警屏蔽规则。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAlarmShieldRequest"/></param>
+        /// <returns><see cref="ModifyAlarmShieldResponse"/></returns>
+        public Task<ModifyAlarmShieldResponse> ModifyAlarmShield(ModifyAlarmShieldRequest req)
+        {
+            return InternalRequestAsync<ModifyAlarmShieldResponse>(req, "ModifyAlarmShield");
+        }
+
+        /// <summary>
+        /// 该接口用于修改告警屏蔽规则。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAlarmShieldRequest"/></param>
+        /// <returns><see cref="ModifyAlarmShieldResponse"/></returns>
+        public ModifyAlarmShieldResponse ModifyAlarmShieldSync(ModifyAlarmShieldRequest req)
+        {
+            return InternalRequestAsync<ModifyAlarmShieldResponse>(req, "ModifyAlarmShield")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

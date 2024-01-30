@@ -48,6 +48,12 @@ namespace TencentCloud.Trro.V20220325.Models
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
 
+        /// <summary>
+        /// license状态：0:未绑定；1:已绑定；2:已停服；3:已退费
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Trro.V20220325.Models
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

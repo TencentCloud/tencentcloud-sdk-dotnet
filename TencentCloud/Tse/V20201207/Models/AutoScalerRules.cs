@@ -25,7 +25,7 @@ namespace TencentCloud.Tse.V20201207.Models
     {
         
         /// <summary>
-        /// 稳定窗口时间
+        /// 稳定窗口时间，扩容时默认0，缩容时默认300
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StabilizationWindowSeconds")]
@@ -39,7 +39,7 @@ namespace TencentCloud.Tse.V20201207.Models
         public string SelectPolicy{ get; set; }
 
         /// <summary>
-        /// 扩容策略
+        /// 扩缩容策略
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Policies")]

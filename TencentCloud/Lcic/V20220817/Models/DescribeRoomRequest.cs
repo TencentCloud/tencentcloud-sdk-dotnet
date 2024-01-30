@@ -30,6 +30,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("RoomId")]
         public ulong? RoomId{ get; set; }
 
+        /// <summary>
+        /// 请求RTMP推流链接，0：否，1：是，默认为0。
+        /// </summary>
+        [JsonProperty("RTMPStreamingURL")]
+        public ulong? RTMPStreamingURL{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
+            this.SetParamSimple(map, prefix + "RTMPStreamingURL", this.RTMPStreamingURL);
         }
     }
 }

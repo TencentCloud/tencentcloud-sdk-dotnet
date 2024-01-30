@@ -2621,6 +2621,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// DescribeAttackEventInfo 接口替代
+        /// 
         /// 网络攻击日志详情
         /// </summary>
         /// <param name="req"><see cref="DescribeAttackLogInfoRequest"/></param>
@@ -2631,6 +2633,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// DescribeAttackEventInfo 接口替代
+        /// 
         /// 网络攻击日志详情
         /// </summary>
         /// <param name="req"><see cref="DescribeAttackLogInfoRequest"/></param>

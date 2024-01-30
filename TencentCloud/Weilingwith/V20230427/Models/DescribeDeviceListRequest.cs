@@ -96,6 +96,18 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         [JsonProperty("GroupIdSet")]
         public long?[] GroupIdSet{ get; set; }
 
+        /// <summary>
+        /// 是否激活，默认全部，"1"激活，"0"未激活
+        /// </summary>
+        [JsonProperty("IsActive")]
+        public string IsActive{ get; set; }
+
+        /// <summary>
+        /// 是否为摄像头，默认全部，"true"摄像头，"false"非摄像头
+        /// </summary>
+        [JsonProperty("IsCamera")]
+        public string IsCamera{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +126,8 @@ namespace TencentCloud.Weilingwith.V20230427.Models
             this.SetParamArraySimple(map, prefix + "WIDSet.", this.WIDSet);
             this.SetParamObj(map, prefix + "Field.", this.Field);
             this.SetParamArraySimple(map, prefix + "GroupIdSet.", this.GroupIdSet);
+            this.SetParamSimple(map, prefix + "IsActive", this.IsActive);
+            this.SetParamSimple(map, prefix + "IsCamera", this.IsCamera);
         }
     }
 }

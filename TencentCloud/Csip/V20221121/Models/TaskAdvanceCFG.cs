@@ -25,6 +25,12 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
+        /// 端口风险高级配置
+        /// </summary>
+        [JsonProperty("PortRisk")]
+        public PortRiskAdvanceCFGParamItem[] PortRisk{ get; set; }
+
+        /// <summary>
         /// 漏洞风险高级配置
         /// </summary>
         [JsonProperty("VulRisk")]
@@ -48,6 +54,7 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "PortRisk.", this.PortRisk);
             this.SetParamArrayObj(map, prefix + "VulRisk.", this.VulRisk);
             this.SetParamArrayObj(map, prefix + "WeakPwdRisk.", this.WeakPwdRisk);
             this.SetParamArrayObj(map, prefix + "CFGRisk.", this.CFGRisk);

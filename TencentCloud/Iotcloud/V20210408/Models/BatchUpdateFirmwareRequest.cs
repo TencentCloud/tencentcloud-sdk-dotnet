@@ -78,6 +78,12 @@ namespace TencentCloud.Iotcloud.V20210408.Models
         [JsonProperty("TimeoutInterval")]
         public ulong? TimeoutInterval{ get; set; }
 
+        /// <summary>
+        /// 固件升级任务类型，默认静态升级值为空或1，动态升级值为7。
+        /// </summary>
+        [JsonProperty("Type")]
+        public long? Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Iotcloud.V20210408.Models
             this.SetParamSimple(map, prefix + "FileSize", this.FileSize);
             this.SetParamArraySimple(map, prefix + "DeviceNames.", this.DeviceNames);
             this.SetParamSimple(map, prefix + "TimeoutInterval", this.TimeoutInterval);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

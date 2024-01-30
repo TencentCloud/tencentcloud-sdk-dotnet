@@ -536,27 +536,6 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// 获取PerformanceProject信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDataPerformanceProjectRequest"/></param>
-        /// <returns><see cref="DescribeDataPerformanceProjectResponse"/></returns>
-        public Task<DescribeDataPerformanceProjectResponse> DescribeDataPerformanceProject(DescribeDataPerformanceProjectRequest req)
-        {
-            return InternalRequestAsync<DescribeDataPerformanceProjectResponse>(req, "DescribeDataPerformanceProject");
-        }
-
-        /// <summary>
-        /// 获取PerformanceProject信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDataPerformanceProjectRequest"/></param>
-        /// <returns><see cref="DescribeDataPerformanceProjectResponse"/></returns>
-        public DescribeDataPerformanceProjectResponse DescribeDataPerformanceProjectSync(DescribeDataPerformanceProjectRequest req)
-        {
-            return InternalRequestAsync<DescribeDataPerformanceProjectResponse>(req, "DescribeDataPerformanceProject")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 获取PvUrlInfo信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDataPvUrlInfoRequest"/></param>
