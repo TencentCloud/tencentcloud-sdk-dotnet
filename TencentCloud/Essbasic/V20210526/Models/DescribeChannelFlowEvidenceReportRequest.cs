@@ -51,6 +51,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [System.Obsolete]
         public UserInfo Operator{ get; set; }
 
+        /// <summary>
+        /// 指定申请的报告类型，可选类型如下：
+        /// <ul><li> **0** :合同签署报告（默认）</li>
+        /// <li> **1** :公证处核验报告</li></ul>
+        /// </summary>
+        [JsonProperty("ReportType")]
+        public long? ReportType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +68,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "ReportId", this.ReportId);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamSimple(map, prefix + "ReportType", this.ReportType);
         }
     }
 }
