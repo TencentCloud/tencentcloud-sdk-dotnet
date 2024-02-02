@@ -85,7 +85,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 页容量
+        /// 页容量，范围为[10,100]
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

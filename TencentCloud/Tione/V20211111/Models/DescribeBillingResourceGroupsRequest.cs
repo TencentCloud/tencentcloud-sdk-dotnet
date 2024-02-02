@@ -25,7 +25,9 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 资源组类型; 枚举值 TRAIN:训练 INFERENCE:推理
+        /// 资源组类型;
+        /// 枚举值:
+        /// 空: 通用, TRAIN: 训练, INFERENCE: 推理
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -52,8 +54,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为20，最大值为30;
-        /// 注意：小于0则默认为20；大于30则默认为30
+        /// 分页查询每页大小，默认20
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

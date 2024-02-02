@@ -60,6 +60,7 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 每页返回数量，默认值为100，最大值为100。
+        /// 如果offset和limit都不填，或者都填0，则返回全部数据
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

@@ -50,6 +50,26 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? FlagshipCount{ get; set; }
 
         /// <summary>
+        /// 影响主机id列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
+
+        /// <summary>
+        /// 新增旗舰版主机自动加入;1是，0否 
+        /// </summary>
+        [JsonProperty("AutoInclude")]
+        public ulong? AutoInclude{ get; set; }
+
+        /// <summary>
+        /// 排除的主机id列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExcludeInstanceIds")]
+        public string[] ExcludeInstanceIds{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -65,6 +85,9 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Scope", this.Scope);
             this.SetParamArraySimple(map, prefix + "Quuids.", this.Quuids);
             this.SetParamSimple(map, prefix + "FlagshipCount", this.FlagshipCount);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamSimple(map, prefix + "AutoInclude", this.AutoInclude);
+            this.SetParamArraySimple(map, prefix + "ExcludeInstanceIds.", this.ExcludeInstanceIds);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

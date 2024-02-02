@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.946</VersionPrefix>
+    <VersionPrefix>3.0.947</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -90,6 +90,7 @@
     <Compile Include="V20211111\Models\DataSetConfig.cs" />
     <Compile Include="V20211111\Models\DatasetGroup.cs" />
     <Compile Include="V20211111\Models\DatasetInfo.cs" />
+    <Compile Include="V20211111\Models\DefaultInnerCallInfo.cs" />
     <Compile Include="V20211111\Models\DefaultNginxGatewayCallInfo.cs" />
     <Compile Include="V20211111\Models\DeleteBatchTaskRequest.cs" />
     <Compile Include="V20211111\Models\DeleteBatchTaskResponse.cs" />
@@ -240,6 +241,7 @@
     <Compile Include="V20211111\Models\PodInfo.cs" />
     <Compile Include="V20211111\Models\PointInfo.cs" />
     <Compile Include="V20211111\Models\PreTrainModel.cs" />
+    <Compile Include="V20211111\Models\PrivateLinkInfo.cs" />
     <Compile Include="V20211111\Models\PushTrainingMetricsRequest.cs" />
     <Compile Include="V20211111\Models\PushTrainingMetricsResponse.cs" />
     <Compile Include="V20211111\Models\RDMAConfig.cs" />

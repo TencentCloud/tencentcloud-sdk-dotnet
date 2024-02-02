@@ -55,6 +55,36 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? NotScannedLocalImageCnt{ get; set; }
 
         /// <summary>
+        /// 试用镜像授权数
+        /// </summary>
+        [JsonProperty("TrialAuthorizedCnt")]
+        public ulong? TrialAuthorizedCnt{ get; set; }
+
+        /// <summary>
+        /// 已使用试用镜像授权数
+        /// </summary>
+        [JsonProperty("UsedTrialAuthorizedCnt")]
+        public ulong? UsedTrialAuthorizedCnt{ get; set; }
+
+        /// <summary>
+        /// 已购镜像授权数
+        /// </summary>
+        [JsonProperty("PurchasedAuthorizedCnt")]
+        public ulong? PurchasedAuthorizedCnt{ get; set; }
+
+        /// <summary>
+        /// 已使用已购镜像授权数
+        /// </summary>
+        [JsonProperty("UsedPurchasedAuthorizedCnt")]
+        public ulong? UsedPurchasedAuthorizedCnt{ get; set; }
+
+        /// <summary>
+        /// 是否可免费领取镜像授权数
+        /// </summary>
+        [JsonProperty("CanApplyFreeImageAuthorize")]
+        public bool? CanApplyFreeImageAuthorize{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -71,6 +101,11 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ScannedImageCnt", this.ScannedImageCnt);
             this.SetParamSimple(map, prefix + "NotScannedImageCnt", this.NotScannedImageCnt);
             this.SetParamSimple(map, prefix + "NotScannedLocalImageCnt", this.NotScannedLocalImageCnt);
+            this.SetParamSimple(map, prefix + "TrialAuthorizedCnt", this.TrialAuthorizedCnt);
+            this.SetParamSimple(map, prefix + "UsedTrialAuthorizedCnt", this.UsedTrialAuthorizedCnt);
+            this.SetParamSimple(map, prefix + "PurchasedAuthorizedCnt", this.PurchasedAuthorizedCnt);
+            this.SetParamSimple(map, prefix + "UsedPurchasedAuthorizedCnt", this.UsedPurchasedAuthorizedCnt);
+            this.SetParamSimple(map, prefix + "CanApplyFreeImageAuthorize", this.CanApplyFreeImageAuthorize);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

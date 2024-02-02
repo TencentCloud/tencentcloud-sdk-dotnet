@@ -49,7 +49,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 分页查询每页大小，最大30; 默认20
+        /// 分页查询每页大小，默认20
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

@@ -31,12 +31,6 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Id{ get; set; }
 
         /// <summary>
-        /// APP ID
-        /// </summary>
-        [JsonProperty("AppId")]
-        public string AppId{ get; set; }
-
-        /// <summary>
         /// 公网IP/域名
         /// </summary>
         [JsonProperty("PublicIPDomain")]
@@ -48,6 +42,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// APP ID
+        /// </summary>
+        [JsonProperty("AppId")]
+        public string AppId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -55,9 +55,9 @@ namespace TencentCloud.Csip.V20221121.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "PublicIPDomain", this.PublicIPDomain);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "AppId", this.AppId);
         }
     }
 }

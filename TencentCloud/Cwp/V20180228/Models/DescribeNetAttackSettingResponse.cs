@@ -37,6 +37,32 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? NetAttackAlarmStatus{ get; set; }
 
         /// <summary>
+        /// 1 全部旗舰版主机，0 InstanceIds列表主机
+        /// </summary>
+        [JsonProperty("Scope")]
+        public ulong? Scope{ get; set; }
+
+        /// <summary>
+        /// 自选主机
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
+
+        /// <summary>
+        /// 自选排除主机
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExcludeInstanceIds")]
+        public string[] ExcludeInstanceIds{ get; set; }
+
+        /// <summary>
+        /// 新增资产自动包含 0 不包含 1包含
+        /// </summary>
+        [JsonProperty("AutoInclude")]
+        public ulong? AutoInclude{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +76,10 @@ namespace TencentCloud.Cwp.V20180228.Models
         {
             this.SetParamSimple(map, prefix + "NetAttackEnable", this.NetAttackEnable);
             this.SetParamSimple(map, prefix + "NetAttackAlarmStatus", this.NetAttackAlarmStatus);
+            this.SetParamSimple(map, prefix + "Scope", this.Scope);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamArraySimple(map, prefix + "ExcludeInstanceIds.", this.ExcludeInstanceIds);
+            this.SetParamSimple(map, prefix + "AutoInclude", this.AutoInclude);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

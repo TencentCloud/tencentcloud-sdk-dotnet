@@ -147,6 +147,20 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("WeightUpdateStatus")]
         public string WeightUpdateStatus{ get; set; }
 
+        /// <summary>
+        /// 服务组下运行的pod数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReplicasCount")]
+        public ulong? ReplicasCount{ get; set; }
+
+        /// <summary>
+        /// 服务组下期望的pod数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AvailableReplicasCount")]
+        public ulong? AvailableReplicasCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -169,6 +183,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "BillingInfo", this.BillingInfo);
             this.SetParamSimple(map, prefix + "CreateSource", this.CreateSource);
             this.SetParamSimple(map, prefix + "WeightUpdateStatus", this.WeightUpdateStatus);
+            this.SetParamSimple(map, prefix + "ReplicasCount", this.ReplicasCount);
+            this.SetParamSimple(map, prefix + "AvailableReplicasCount", this.AvailableReplicasCount);
         }
     }
 }

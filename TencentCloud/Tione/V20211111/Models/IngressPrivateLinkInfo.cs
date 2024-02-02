@@ -52,6 +52,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("InnerHttpsAddr")]
         public string[] InnerHttpsAddr{ get; set; }
 
+        /// <summary>
+        /// 私有连接状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("State")]
+        public string State{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamArraySimple(map, prefix + "InnerHttpAddr.", this.InnerHttpAddr);
             this.SetParamArraySimple(map, prefix + "InnerHttpsAddr.", this.InnerHttpsAddr);
+            this.SetParamSimple(map, prefix + "State", this.State);
         }
     }
 }

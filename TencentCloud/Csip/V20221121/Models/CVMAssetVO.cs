@@ -381,6 +381,90 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("IsNewAsset")]
         public ulong? IsNewAsset{ get; set; }
 
+        /// <summary>
+        /// 0 未安装  1安装 2:安装中
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CVMAgentStatus")]
+        public long? CVMAgentStatus{ get; set; }
+
+        /// <summary>
+        /// 1:开启 0:未开启
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CVMStatus")]
+        public long? CVMStatus{ get; set; }
+
+        /// <summary>
+        /// 1:客户端已安装 0：未安装 2: Agentless
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DefenseModel")]
+        public long? DefenseModel{ get; set; }
+
+        /// <summary>
+        /// 1:已安装 0:未安装
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TatStatus")]
+        public long? TatStatus{ get; set; }
+
+        /// <summary>
+        /// cpu趋势图
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CpuTrend")]
+        public Element[] CpuTrend{ get; set; }
+
+        /// <summary>
+        /// 内存趋势图
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MemoryTrend")]
+        public Element[] MemoryTrend{ get; set; }
+
+        /// <summary>
+        /// 1:agent在线 0:agent离线 2:主机离线
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AgentStatus")]
+        public long? AgentStatus{ get; set; }
+
+        /// <summary>
+        /// 本月防护关闭次数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CloseDefenseCount")]
+        public long? CloseDefenseCount{ get; set; }
+
+        /// <summary>
+        /// 运行状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceState")]
+        public string InstanceState{ get; set; }
+
+        /// <summary>
+        /// 安全组数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
+
+        /// <summary>
+        /// 物理内存占用KB
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AgentMemRss")]
+        public long? AgentMemRss{ get; set; }
+
+        /// <summary>
+        /// CPU使用率百分比
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AgentCpuPer")]
+        public float? AgentCpuPer{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -438,6 +522,18 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "RiskExposure", this.RiskExposure);
             this.SetParamSimple(map, prefix + "BASAgentStatus", this.BASAgentStatus);
             this.SetParamSimple(map, prefix + "IsNewAsset", this.IsNewAsset);
+            this.SetParamSimple(map, prefix + "CVMAgentStatus", this.CVMAgentStatus);
+            this.SetParamSimple(map, prefix + "CVMStatus", this.CVMStatus);
+            this.SetParamSimple(map, prefix + "DefenseModel", this.DefenseModel);
+            this.SetParamSimple(map, prefix + "TatStatus", this.TatStatus);
+            this.SetParamArrayObj(map, prefix + "CpuTrend.", this.CpuTrend);
+            this.SetParamArrayObj(map, prefix + "MemoryTrend.", this.MemoryTrend);
+            this.SetParamSimple(map, prefix + "AgentStatus", this.AgentStatus);
+            this.SetParamSimple(map, prefix + "CloseDefenseCount", this.CloseDefenseCount);
+            this.SetParamSimple(map, prefix + "InstanceState", this.InstanceState);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamSimple(map, prefix + "AgentMemRss", this.AgentMemRss);
+            this.SetParamSimple(map, prefix + "AgentCpuPer", this.AgentCpuPer);
         }
     }
 }

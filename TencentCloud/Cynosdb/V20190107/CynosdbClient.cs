@@ -893,7 +893,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 获取database列表
+        /// 获取集群数据库列表
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterDatabasesRequest"/></param>
         /// <returns><see cref="DescribeClusterDatabasesResponse"/></returns>
@@ -903,7 +903,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 获取database列表
+        /// 获取集群数据库列表
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterDatabasesRequest"/></param>
         /// <returns><see cref="DescribeClusterDatabasesResponse"/></returns>
@@ -2573,7 +2573,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口(SearchClusterDatabases)搜索集群database列表
+        /// 本接口(SearchClusterDatabases)搜索集群数据库列表
         /// </summary>
         /// <param name="req"><see cref="SearchClusterDatabasesRequest"/></param>
         /// <returns><see cref="SearchClusterDatabasesResponse"/></returns>
@@ -2583,7 +2583,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口(SearchClusterDatabases)搜索集群database列表
+        /// 本接口(SearchClusterDatabases)搜索集群数据库列表
         /// </summary>
         /// <param name="req"><see cref="SearchClusterDatabasesRequest"/></param>
         /// <returns><see cref="SearchClusterDatabasesResponse"/></returns>

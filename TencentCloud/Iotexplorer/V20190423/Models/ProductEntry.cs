@@ -137,6 +137,13 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("BindStrategy")]
         public ulong? BindStrategy{ get; set; }
 
+        /// <summary>
+        /// 设备数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeviceCount")]
+        public long? DeviceCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -161,6 +168,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "CreateUserId", this.CreateUserId);
             this.SetParamSimple(map, prefix + "CreatorNickName", this.CreatorNickName);
             this.SetParamSimple(map, prefix + "BindStrategy", this.BindStrategy);
+            this.SetParamSimple(map, prefix + "DeviceCount", this.DeviceCount);
         }
     }
 }

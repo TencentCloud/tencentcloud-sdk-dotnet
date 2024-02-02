@@ -108,6 +108,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("DeleteDnsAutoRecord")]
         public bool? DeleteDnsAutoRecord{ get; set; }
 
+        /// <summary>
+        /// 域名数组（多域名证书可以上传）。	
+        /// </summary>
+        [JsonProperty("DnsNames")]
+        public string[] DnsNames{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "OldCertificateId", this.OldCertificateId);
             this.SetParamSimple(map, prefix + "PackageId", this.PackageId);
             this.SetParamSimple(map, prefix + "DeleteDnsAutoRecord", this.DeleteDnsAutoRecord);
+            this.SetParamArraySimple(map, prefix + "DnsNames.", this.DnsNames);
         }
     }
 }

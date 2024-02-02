@@ -38,6 +38,20 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ServiceEIPInfo")]
         public ServiceEIPInfo[] ServiceEIPInfo{ get; set; }
 
+        /// <summary>
+        /// 私有连接信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PrivateLinkInfos")]
+        public PrivateLinkInfo[] PrivateLinkInfos{ get; set; }
+
+        /// <summary>
+        /// 默认内网调用信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DefaultInnerCallInfos")]
+        public DefaultInnerCallInfo[] DefaultInnerCallInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +60,8 @@ namespace TencentCloud.Tione.V20211111.Models
         {
             this.SetParamObj(map, prefix + "IngressPrivateLinkInfo.", this.IngressPrivateLinkInfo);
             this.SetParamArrayObj(map, prefix + "ServiceEIPInfo.", this.ServiceEIPInfo);
+            this.SetParamArrayObj(map, prefix + "PrivateLinkInfos.", this.PrivateLinkInfos);
+            this.SetParamArrayObj(map, prefix + "DefaultInnerCallInfos.", this.DefaultInnerCallInfos);
         }
     }
 }

@@ -37,7 +37,8 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 每页返回数量，默认值为10，最大值为100。
+        /// 每页返回数量，默认值为100，最大值为100。
+        /// 如果limit和offset都为0，则查询全部记录；
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

@@ -31,13 +31,13 @@ namespace TencentCloud.Iss.V20230517.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 设备接入协议（1:RTMP,2:GB,3:GW）
+        /// 设备接入协议（1:RTMP,2:GB,3:GW,4:IVCP）
         /// </summary>
         [JsonProperty("AccessProtocol")]
         public long? AccessProtocol{ get; set; }
 
         /// <summary>
-        /// 设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP，则设备类型只能选择IPC）
+        /// 设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP,IVCP，则设备类型只能选择IPC）
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
@@ -102,6 +102,12 @@ namespace TencentCloud.Iss.V20230517.Models
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
+        /// <summary>
+        /// 设备 SN，仅IVCP 协议设备需要
+        /// </summary>
+        [JsonProperty("SNCode")]
+        public string SNCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "Username", this.Username);
+            this.SetParamSimple(map, prefix + "SNCode", this.SNCode);
         }
     }
 }

@@ -66,6 +66,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("FwType")]
         public string FwType{ get; set; }
 
+        /// <summary>
+        /// 固件用户自定义配置信息
+        /// </summary>
+        [JsonProperty("FirmwareUserDefined")]
+        public string FirmwareUserDefined{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "FirmwareName", this.FirmwareName);
             this.SetParamSimple(map, prefix + "FirmwareDescription", this.FirmwareDescription);
             this.SetParamSimple(map, prefix + "FwType", this.FwType);
+            this.SetParamSimple(map, prefix + "FirmwareUserDefined", this.FirmwareUserDefined);
         }
     }
 }

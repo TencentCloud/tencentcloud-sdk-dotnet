@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.946</VersionPrefix>
+    <VersionPrefix>3.0.947</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,6 +53,7 @@
     <Compile Include="V20221121\Models\AssetBaseInfoResponse.cs" />
     <Compile Include="V20221121\Models\AssetClusterPod.cs" />
     <Compile Include="V20221121\Models\AssetInfoDetail.cs" />
+    <Compile Include="V20221121\Models\AssetInstanceTypeMap.cs" />
     <Compile Include="V20221121\Models\AssetTag.cs" />
     <Compile Include="V20221121\Models\AssetViewCFGRisk.cs" />
     <Compile Include="V20221121\Models\AssetViewPortRisk.cs" />
@@ -127,6 +128,7 @@
     <Compile Include="V20221121\Models\DescribeVpcAssetsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeVpcAssetsResponse.cs" />
     <Compile Include="V20221121\Models\DomainAssetVO.cs" />
+    <Compile Include="V20221121\Models\Element.cs" />
     <Compile Include="V20221121\Models\Filter.cs" />
     <Compile Include="V20221121\Models\FilterDataObject.cs" />
     <Compile Include="V20221121\Models\GateWayAsset.cs" />
@@ -149,6 +151,7 @@
     <Compile Include="V20221121\Models\ScanTaskInfoList.cs" />
     <Compile Include="V20221121\Models\ServerRisk.cs" />
     <Compile Include="V20221121\Models\ServerRiskSuggestion.cs" />
+    <Compile Include="V20221121\Models\ServiceSupport.cs" />
     <Compile Include="V20221121\Models\StopRiskCenterTaskRequest.cs" />
     <Compile Include="V20221121\Models\StopRiskCenterTaskResponse.cs" />
     <Compile Include="V20221121\Models\SubnetAsset.cs" />

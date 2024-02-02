@@ -84,12 +84,15 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 可选的此企业允许的授权方式, 可以设置的方式有:
-        /// 1：上传授权书+对公打款
-        /// 2：法人授权/认证  会根据当前操作人的身份判定,如果当前操作人是法人,则是法人认证, 如果当前操作人不是法人,则走法人授权
+        /// 1：上传授权书
+        /// 2：法人授权超管
+        /// 5：授权书+对公打款
+        /// 
         /// 
         /// 注:
         /// `1. 当前仅支持一种认证方式`
         /// `2. 如果当前的企业类型是政府/事业单位, 则只支持上传授权书+对公打款`
+        /// `3. 如果当前操作人是法人,则是法人认证`
         /// </summary>
         [JsonProperty("AuthorizationTypes")]
         public ulong?[] AuthorizationTypes{ get; set; }
@@ -109,6 +112,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("AdminIdCardNumber")]
         public string AdminIdCardNumber{ get; set; }
 
+        /// <summary>
+        /// 营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
+        /// </summary>
+        [JsonProperty("BusinessLicense")]
+        public string BusinessLicense{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +135,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamArraySimple(map, prefix + "AuthorizationTypes.", this.AuthorizationTypes);
             this.SetParamSimple(map, prefix + "AdminIdCardType", this.AdminIdCardType);
             this.SetParamSimple(map, prefix + "AdminIdCardNumber", this.AdminIdCardNumber);
+            this.SetParamSimple(map, prefix + "BusinessLicense", this.BusinessLicense);
         }
     }
 }

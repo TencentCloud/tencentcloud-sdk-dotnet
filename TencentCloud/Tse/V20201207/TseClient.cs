@@ -53,6 +53,27 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 弹性伸缩策略批量绑定网关分组
+        /// </summary>
+        /// <param name="req"><see cref="BindAutoScalerResourceStrategyToGroupsRequest"/></param>
+        /// <returns><see cref="BindAutoScalerResourceStrategyToGroupsResponse"/></returns>
+        public Task<BindAutoScalerResourceStrategyToGroupsResponse> BindAutoScalerResourceStrategyToGroups(BindAutoScalerResourceStrategyToGroupsRequest req)
+        {
+            return InternalRequestAsync<BindAutoScalerResourceStrategyToGroupsResponse>(req, "BindAutoScalerResourceStrategyToGroups");
+        }
+
+        /// <summary>
+        /// 弹性伸缩策略批量绑定网关分组
+        /// </summary>
+        /// <param name="req"><see cref="BindAutoScalerResourceStrategyToGroupsRequest"/></param>
+        /// <returns><see cref="BindAutoScalerResourceStrategyToGroupsResponse"/></returns>
+        public BindAutoScalerResourceStrategyToGroupsResponse BindAutoScalerResourceStrategyToGroupsSync(BindAutoScalerResourceStrategyToGroupsRequest req)
+        {
+            return InternalRequestAsync<BindAutoScalerResourceStrategyToGroupsResponse>(req, "BindAutoScalerResourceStrategyToGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 关闭 WAF 防护
         /// </summary>
         /// <param name="req"><see cref="CloseWafProtectionRequest"/></param>
@@ -70,6 +91,27 @@ namespace TencentCloud.Tse.V20201207
         public CloseWafProtectionResponse CloseWafProtectionSync(CloseWafProtectionRequest req)
         {
             return InternalRequestAsync<CloseWafProtectionResponse>(req, "CloseWafProtection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建弹性伸缩策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateAutoScalerResourceStrategyRequest"/></param>
+        /// <returns><see cref="CreateAutoScalerResourceStrategyResponse"/></returns>
+        public Task<CreateAutoScalerResourceStrategyResponse> CreateAutoScalerResourceStrategy(CreateAutoScalerResourceStrategyRequest req)
+        {
+            return InternalRequestAsync<CreateAutoScalerResourceStrategyResponse>(req, "CreateAutoScalerResourceStrategy");
+        }
+
+        /// <summary>
+        /// 创建弹性伸缩策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateAutoScalerResourceStrategyRequest"/></param>
+        /// <returns><see cref="CreateAutoScalerResourceStrategyResponse"/></returns>
+        public CreateAutoScalerResourceStrategyResponse CreateAutoScalerResourceStrategySync(CreateAutoScalerResourceStrategyRequest req)
+        {
+            return InternalRequestAsync<CreateAutoScalerResourceStrategyResponse>(req, "CreateAutoScalerResourceStrategy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -305,6 +347,27 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 删除弹性伸缩策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAutoScalerResourceStrategyRequest"/></param>
+        /// <returns><see cref="DeleteAutoScalerResourceStrategyResponse"/></returns>
+        public Task<DeleteAutoScalerResourceStrategyResponse> DeleteAutoScalerResourceStrategy(DeleteAutoScalerResourceStrategyRequest req)
+        {
+            return InternalRequestAsync<DeleteAutoScalerResourceStrategyResponse>(req, "DeleteAutoScalerResourceStrategy");
+        }
+
+        /// <summary>
+        /// 删除弹性伸缩策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAutoScalerResourceStrategyRequest"/></param>
+        /// <returns><see cref="DeleteAutoScalerResourceStrategyResponse"/></returns>
+        public DeleteAutoScalerResourceStrategyResponse DeleteAutoScalerResourceStrategySync(DeleteAutoScalerResourceStrategyRequest req)
+        {
+            return InternalRequestAsync<DeleteAutoScalerResourceStrategyResponse>(req, "DeleteAutoScalerResourceStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除云原生API网关实例
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayRequest"/></param>
@@ -532,6 +595,48 @@ namespace TencentCloud.Tse.V20201207
         public DeleteWafDomainsResponse DeleteWafDomainsSync(DeleteWafDomainsRequest req)
         {
             return InternalRequestAsync<DeleteWafDomainsResponse>(req, "DeleteWafDomains")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看弹性伸缩策略列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoScalerResourceStrategiesRequest"/></param>
+        /// <returns><see cref="DescribeAutoScalerResourceStrategiesResponse"/></returns>
+        public Task<DescribeAutoScalerResourceStrategiesResponse> DescribeAutoScalerResourceStrategies(DescribeAutoScalerResourceStrategiesRequest req)
+        {
+            return InternalRequestAsync<DescribeAutoScalerResourceStrategiesResponse>(req, "DescribeAutoScalerResourceStrategies");
+        }
+
+        /// <summary>
+        /// 查看弹性伸缩策略列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoScalerResourceStrategiesRequest"/></param>
+        /// <returns><see cref="DescribeAutoScalerResourceStrategiesResponse"/></returns>
+        public DescribeAutoScalerResourceStrategiesResponse DescribeAutoScalerResourceStrategiesSync(DescribeAutoScalerResourceStrategiesRequest req)
+        {
+            return InternalRequestAsync<DescribeAutoScalerResourceStrategiesResponse>(req, "DescribeAutoScalerResourceStrategies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看弹性伸缩策略绑定的网关分组
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoScalerResourceStrategyBindingGroupsRequest"/></param>
+        /// <returns><see cref="DescribeAutoScalerResourceStrategyBindingGroupsResponse"/></returns>
+        public Task<DescribeAutoScalerResourceStrategyBindingGroupsResponse> DescribeAutoScalerResourceStrategyBindingGroups(DescribeAutoScalerResourceStrategyBindingGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeAutoScalerResourceStrategyBindingGroupsResponse>(req, "DescribeAutoScalerResourceStrategyBindingGroups");
+        }
+
+        /// <summary>
+        /// 查看弹性伸缩策略绑定的网关分组
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoScalerResourceStrategyBindingGroupsRequest"/></param>
+        /// <returns><see cref="DescribeAutoScalerResourceStrategyBindingGroupsResponse"/></returns>
+        public DescribeAutoScalerResourceStrategyBindingGroupsResponse DescribeAutoScalerResourceStrategyBindingGroupsSync(DescribeAutoScalerResourceStrategyBindingGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeAutoScalerResourceStrategyBindingGroupsResponse>(req, "DescribeAutoScalerResourceStrategyBindingGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -893,6 +998,27 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 查询云原生API网关实例公网详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribePublicNetworkRequest"/></param>
+        /// <returns><see cref="DescribePublicNetworkResponse"/></returns>
+        public Task<DescribePublicNetworkResponse> DescribePublicNetwork(DescribePublicNetworkRequest req)
+        {
+            return InternalRequestAsync<DescribePublicNetworkResponse>(req, "DescribePublicNetwork");
+        }
+
+        /// <summary>
+        /// 查询云原生API网关实例公网详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribePublicNetworkRequest"/></param>
+        /// <returns><see cref="DescribePublicNetworkResponse"/></returns>
+        public DescribePublicNetworkResponse DescribePublicNetworkSync(DescribePublicNetworkRequest req)
+        {
+            return InternalRequestAsync<DescribePublicNetworkResponse>(req, "DescribePublicNetwork")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询引擎实例访问地址
         /// </summary>
         /// <param name="req"><see cref="DescribeSREInstanceAccessAddressRequest"/></param>
@@ -1036,6 +1162,27 @@ namespace TencentCloud.Tse.V20201207
         public DescribeZookeeperServerInterfacesResponse DescribeZookeeperServerInterfacesSync(DescribeZookeeperServerInterfacesRequest req)
         {
             return InternalRequestAsync<DescribeZookeeperServerInterfacesResponse>(req, "DescribeZookeeperServerInterfaces")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新弹性伸缩策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAutoScalerResourceStrategyRequest"/></param>
+        /// <returns><see cref="ModifyAutoScalerResourceStrategyResponse"/></returns>
+        public Task<ModifyAutoScalerResourceStrategyResponse> ModifyAutoScalerResourceStrategy(ModifyAutoScalerResourceStrategyRequest req)
+        {
+            return InternalRequestAsync<ModifyAutoScalerResourceStrategyResponse>(req, "ModifyAutoScalerResourceStrategy");
+        }
+
+        /// <summary>
+        /// 更新弹性伸缩策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAutoScalerResourceStrategyRequest"/></param>
+        /// <returns><see cref="ModifyAutoScalerResourceStrategyResponse"/></returns>
+        public ModifyAutoScalerResourceStrategyResponse ModifyAutoScalerResourceStrategySync(ModifyAutoScalerResourceStrategyRequest req)
+        {
+            return InternalRequestAsync<ModifyAutoScalerResourceStrategyResponse>(req, "ModifyAutoScalerResourceStrategy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1309,6 +1456,27 @@ namespace TencentCloud.Tse.V20201207
         public OpenWafProtectionResponse OpenWafProtectionSync(OpenWafProtectionRequest req)
         {
             return InternalRequestAsync<OpenWafProtectionResponse>(req, "OpenWafProtection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 弹性伸缩策略批量解绑网关分组
+        /// </summary>
+        /// <param name="req"><see cref="UnbindAutoScalerResourceStrategyFromGroupsRequest"/></param>
+        /// <returns><see cref="UnbindAutoScalerResourceStrategyFromGroupsResponse"/></returns>
+        public Task<UnbindAutoScalerResourceStrategyFromGroupsResponse> UnbindAutoScalerResourceStrategyFromGroups(UnbindAutoScalerResourceStrategyFromGroupsRequest req)
+        {
+            return InternalRequestAsync<UnbindAutoScalerResourceStrategyFromGroupsResponse>(req, "UnbindAutoScalerResourceStrategyFromGroups");
+        }
+
+        /// <summary>
+        /// 弹性伸缩策略批量解绑网关分组
+        /// </summary>
+        /// <param name="req"><see cref="UnbindAutoScalerResourceStrategyFromGroupsRequest"/></param>
+        /// <returns><see cref="UnbindAutoScalerResourceStrategyFromGroupsResponse"/></returns>
+        public UnbindAutoScalerResourceStrategyFromGroupsResponse UnbindAutoScalerResourceStrategyFromGroupsSync(UnbindAutoScalerResourceStrategyFromGroupsRequest req)
+        {
+            return InternalRequestAsync<UnbindAutoScalerResourceStrategyFromGroupsResponse>(req, "UnbindAutoScalerResourceStrategyFromGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

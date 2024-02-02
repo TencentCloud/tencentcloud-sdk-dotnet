@@ -115,6 +115,48 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("ImpactComponent")]
         public string ImpactComponent{ get; set; }
 
+        /// <summary>
+        /// 漏洞Payload
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Payload")]
+        public string Payload{ get; set; }
+
+        /// <summary>
+        /// 技术参考
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("References")]
+        public string References{ get; set; }
+
+        /// <summary>
+        /// cvss评分
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CVSS")]
+        public string CVSS{ get; set; }
+
+        /// <summary>
+        /// 攻击热度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AttackHeat")]
+        public string AttackHeat{ get; set; }
+
+        /// <summary>
+        /// 安全产品支持情况
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServiceSupport")]
+        public ServiceSupport[] ServiceSupport{ get; set; }
+
+        /// <summary>
+        /// 最新检测时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RecentScanTime")]
+        public string RecentScanTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +177,12 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "EMGCVulType", this.EMGCVulType);
             this.SetParamSimple(map, prefix + "VULDescribe", this.VULDescribe);
             this.SetParamSimple(map, prefix + "ImpactComponent", this.ImpactComponent);
+            this.SetParamSimple(map, prefix + "Payload", this.Payload);
+            this.SetParamSimple(map, prefix + "References", this.References);
+            this.SetParamSimple(map, prefix + "CVSS", this.CVSS);
+            this.SetParamSimple(map, prefix + "AttackHeat", this.AttackHeat);
+            this.SetParamArrayObj(map, prefix + "ServiceSupport.", this.ServiceSupport);
+            this.SetParamSimple(map, prefix + "RecentScanTime", this.RecentScanTime);
         }
     }
 }

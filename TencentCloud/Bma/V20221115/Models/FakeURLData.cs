@@ -185,6 +185,13 @@ namespace TencentCloud.Bma.V20221115.Models
         [JsonProperty("AuditStatus")]
         public long? AuditStatus{ get; set; }
 
+        /// <summary>
+        /// 下线时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OfflineTime")]
+        public string OfflineTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -214,6 +221,7 @@ namespace TencentCloud.Bma.V20221115.Models
             this.SetParamSimple(map, prefix + "Snapshot", this.Snapshot);
             this.SetParamSimple(map, prefix + "AccountStatus", this.AccountStatus);
             this.SetParamSimple(map, prefix + "AuditStatus", this.AuditStatus);
+            this.SetParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
         }
     }
 }

@@ -73,6 +73,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("AppSecret")]
         public string AppSecret{ get; set; }
 
+        /// <summary>
+        /// 鉴权是否开启
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AuthorizationEnable")]
+        public bool? AuthorizationEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "OuterHttpsAddr", this.OuterHttpsAddr);
             this.SetParamSimple(map, prefix + "AppKey", this.AppKey);
             this.SetParamSimple(map, prefix + "AppSecret", this.AppSecret);
+            this.SetParamSimple(map, prefix + "AuthorizationEnable", this.AuthorizationEnable);
         }
     }
 }

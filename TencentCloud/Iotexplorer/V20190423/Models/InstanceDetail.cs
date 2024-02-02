@@ -31,7 +31,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例类型（0 公共实例 1 标准企业实例 2专享企业实例）
+        /// 实例类型（0 公共实例 1 标准企业实例 2新企业实例3新公共实例）
         /// </summary>
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public long? TotalDeviceNum{ get; set; }
 
         /// <summary>
-        /// 以注册设备数
+        /// 已注册设备数
         /// </summary>
         [JsonProperty("UsedDeviceNum")]
         public long? UsedDeviceNum{ get; set; }
@@ -104,6 +104,20 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("ActivateDevice")]
         public long? ActivateDevice{ get; set; }
 
+        /// <summary>
+        /// 备注
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// 实例状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -123,6 +137,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "TotalDevice", this.TotalDevice);
             this.SetParamSimple(map, prefix + "ActivateDevice", this.ActivateDevice);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

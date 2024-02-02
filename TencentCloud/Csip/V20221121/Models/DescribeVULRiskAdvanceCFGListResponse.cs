@@ -59,6 +59,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public FilterDataObject[] CheckFromLists{ get; set; }
 
         /// <summary>
+        /// 漏洞标签列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VulTagList")]
+        public FilterDataObject[] VulTagList{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -75,6 +82,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamArrayObj(map, prefix + "RiskLevelLists.", this.RiskLevelLists);
             this.SetParamArrayObj(map, prefix + "VULTypeLists.", this.VULTypeLists);
             this.SetParamArrayObj(map, prefix + "CheckFromLists.", this.CheckFromLists);
+            this.SetParamArrayObj(map, prefix + "VulTagList.", this.VulTagList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

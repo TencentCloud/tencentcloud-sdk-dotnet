@@ -116,13 +116,6 @@ namespace TencentCloud.Tione.V20211111.Models
         public ulong? Weight{ get; set; }
 
         /// <summary>
-        /// 实例列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("PodList")]
-        public string[] PodList{ get; set; }
-
-        /// <summary>
         /// 资源总量
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -187,10 +180,19 @@ namespace TencentCloud.Tione.V20211111.Models
         public string ScheduledAction{ get; set; }
 
         /// <summary>
+        /// 实例列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PodList")]
+        [System.Obsolete]
+        public string[] PodList{ get; set; }
+
+        /// <summary>
         /// Pod列表信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Pods")]
+        [System.Obsolete]
         public Pod Pods{ get; set; }
 
         /// <summary>
@@ -260,7 +262,6 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "HorizontalPodAutoscaler.", this.HorizontalPodAutoscaler);
             this.SetParamObj(map, prefix + "Status.", this.Status);
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
-            this.SetParamArraySimple(map, prefix + "PodList.", this.PodList);
             this.SetParamObj(map, prefix + "ResourceTotal.", this.ResourceTotal);
             this.SetParamSimple(map, prefix + "OldReplicas", this.OldReplicas);
             this.SetParamSimple(map, prefix + "HybridBillingPrepaidReplicas", this.HybridBillingPrepaidReplicas);
@@ -270,6 +271,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamArrayObj(map, prefix + "CronScaleJobs.", this.CronScaleJobs);
             this.SetParamSimple(map, prefix + "ScaleStrategy", this.ScaleStrategy);
             this.SetParamSimple(map, prefix + "ScheduledAction", this.ScheduledAction);
+            this.SetParamArraySimple(map, prefix + "PodList.", this.PodList);
             this.SetParamObj(map, prefix + "Pods.", this.Pods);
             this.SetParamArrayObj(map, prefix + "PodInfos.", this.PodInfos);
             this.SetParamObj(map, prefix + "ServiceLimit.", this.ServiceLimit);

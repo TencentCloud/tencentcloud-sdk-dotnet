@@ -91,7 +91,7 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// 多域名查询时，默认（false)返回多个域名的汇总数据
-        /// 可按需指定为 true，返回每一个 Domain 的明细数据（statusCode 指标暂不支持）
+        /// 可按需指定为 true，返回每一个 Domain 的明细数据（statusCode、2xx、3xx、4xx、5xx 指标暂不支持）
         /// </summary>
         [JsonProperty("Detail")]
         public bool? Detail{ get; set; }

@@ -37,7 +37,8 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? PageNo{ get; set; }
 
         /// <summary>
-        /// 分页的大小
+        /// 分页的大小。
+        /// 默认查询全部；PageNo和PageSize不合理的设置，都是查询全部
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }

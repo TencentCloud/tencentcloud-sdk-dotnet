@@ -162,17 +162,19 @@ namespace TencentCloud.Tione.V20211111.Models
         public string BusinessStatus{ get; set; }
 
         /// <summary>
-        /// 已废弃
+        /// 已废弃,以ServiceInfo中的对应为准
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceLimit")]
+        [System.Obsolete]
         public ServiceLimit ServiceLimit{ get; set; }
 
         /// <summary>
-        /// 已废弃
+        /// 已废弃,以ServiceInfo中的对应为准
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScheduledAction")]
+        [System.Obsolete]
         public ScheduledAction ScheduledAction{ get; set; }
 
         /// <summary>
@@ -234,6 +236,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("LatestVersion")]
         public string LatestVersion{ get; set; }
 
+        /// <summary>
+        /// 资源组类别 托管 NORMAL，纳管 SW
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceGroupSWType")]
+        public string ResourceGroupSWType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -269,6 +278,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "CreateSource", this.CreateSource);
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "LatestVersion", this.LatestVersion);
+            this.SetParamSimple(map, prefix + "ResourceGroupSWType", this.ResourceGroupSWType);
         }
     }
 }

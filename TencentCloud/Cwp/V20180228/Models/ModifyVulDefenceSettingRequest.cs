@@ -37,10 +37,28 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Scope{ get; set; }
 
         /// <summary>
-        /// 作用弄范围内旗舰版主机列表
+        /// 作用范围内旗舰版主机列表
         /// </summary>
         [JsonProperty("Quuids")]
         public string[] Quuids{ get; set; }
+
+        /// <summary>
+        /// 排除作用范围内旗舰版主机列表
+        /// </summary>
+        [JsonProperty("ExcludeInstanceIds")]
+        public string[] ExcludeInstanceIds{ get; set; }
+
+        /// <summary>
+        /// 新增资产自动包含 0 不包含 1包含
+        /// </summary>
+        [JsonProperty("AutoInclude")]
+        public ulong? AutoInclude{ get; set; }
+
+        /// <summary>
+        /// 作用范围内旗舰版主机列表
+        /// </summary>
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
 
 
         /// <summary>
@@ -51,6 +69,9 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamSimple(map, prefix + "Scope", this.Scope);
             this.SetParamArraySimple(map, prefix + "Quuids.", this.Quuids);
+            this.SetParamArraySimple(map, prefix + "ExcludeInstanceIds.", this.ExcludeInstanceIds);
+            this.SetParamSimple(map, prefix + "AutoInclude", this.AutoInclude);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         }
     }
 }
