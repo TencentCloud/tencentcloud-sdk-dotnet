@@ -25,53 +25,52 @@ namespace TencentCloud.Rce.V20201103.Models
     {
         
         /// <summary>
-        /// 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微
-        /// 信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信
-        /// 开放账号）： 
-        /// 1：QQ 开放账号。 
-        /// 2：微信开放账号。 
-        /// 4：手机号（暂仅支持国内手机号）。 
-        /// 8：设备号（imei/imeiMD5/idfa/idfaMd5）。 
-        /// 0： 其他。 
-        /// 10004：手机号 MD5。
+        /// 用户账号类型（默认开通 QQ 开放账号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）： 
+        /// 1：QQ 开放账号；
+        /// 2：微信开放账号；
+        /// 8：设备号（imei/imeiMD5/idfa/idfaMd5）；
+        /// 10004：手机号 MD5。
         /// </summary>
         [JsonProperty("Account")]
         public AccountInfo Account{ get; set; }
 
         /// <summary>
-        /// 场景类型：场景SceneCode, 控制台上新建对应的场景并获取对应的值；
-        /// 例如：e_register_protection_1521184361
-        /// 控制台链接：https://console.cloud.tencent.com/rce/risk/sceneroot；
+        /// 场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
+        /// 控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
+        /// 活动防刷默认场景码：e_activity_antirush 
+        /// 登陆保护默认场景码：e_login_protection
+        /// 注册保护默认场景码：e_register_protection
         /// </summary>
         [JsonProperty("SceneCode")]
         public string SceneCode{ get; set; }
 
         /// <summary>
-        /// 登录来源的外网IP
+        /// 用户外网ip（传入用户非外网ip会影响判断结果）。
         /// </summary>
         [JsonProperty("UserIp")]
         public string UserIp{ get; set; }
 
         /// <summary>
-        /// 时间戳
+        /// 用户操作时间戳，精确到秒。
         /// </summary>
         [JsonProperty("PostTime")]
         public ulong? PostTime{ get; set; }
 
         /// <summary>
-        /// 用户唯一标识。
+        /// 业务平台用户唯一标识。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 设备指纹token。
+        /// 设备指纹Devicetoken值，集成设备指纹后获取，
+        /// 如果集成了相应的设备指纹，该字段必填。
         /// </summary>
         [JsonProperty("DeviceToken")]
         public string DeviceToken{ get; set; }
 
         /// <summary>
-        /// 设备指纹BusinessId
+        /// 设备指纹 BusinessId。
         /// </summary>
         [JsonProperty("DeviceBusinessId")]
         public long? DeviceBusinessId{ get; set; }
@@ -139,39 +138,38 @@ namespace TencentCloud.Rce.V20201103.Models
         public string VendorId{ get; set; }
 
         /// <summary>
-        /// 设备类型，账号类型为8时必填： 
-        /// 0:未知 
-        /// 1:Imei;国际移动设备识别号（15-17位数字） 
-        /// 2:ImeiMd5；国际移动设备识别号，通过MD5加密后32位的小写字符串 
-        /// 3:Idfa; 
-        /// 4:IdfaMD5;
+        /// 设备类型，账号类型（AccountType）为8时填写。
+        /// 1:Imei；国际移动设备识别号（15-17位数字）；
+        /// 2:ImeiMd5；国际移动设备识别号，通过MD5加密后取32位小写值；
+        /// 3:Idfa；
+        /// 4:IdfaMD5； 国际移动设备识别号，通过MD5加密后取32位小写值。
         /// </summary>
         [JsonProperty("DeviceType")]
         public long? DeviceType{ get; set; }
 
         /// <summary>
-        /// 详细信息
+        /// 扩展字段。
         /// </summary>
         [JsonProperty("Details")]
         public InputDetails[] Details{ get; set; }
 
         /// <summary>
-        /// 可选填写。详情请跳转至SponsorInfo查看。
+        /// 邀请助力场景相关信息。
         /// </summary>
         [JsonProperty("Sponsor")]
         public SponsorInfo Sponsor{ get; set; }
 
         /// <summary>
-        /// 可选填写。详情请跳转至OnlineScamInfo查看。
+        /// 详情请跳转至OnlineScamInfo查看。
         /// </summary>
         [JsonProperty("OnlineScam")]
         public OnlineScamInfo OnlineScam{ get; set; }
 
         /// <summary>
-        /// 1：安卓
-        /// 2：iOS 
-        /// 3：H5 
-        /// 4：小程序 
+        /// 1：安卓；
+        /// 2：iOS ；
+        /// 3：H5 ；
+        /// 4：小程序 。
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }

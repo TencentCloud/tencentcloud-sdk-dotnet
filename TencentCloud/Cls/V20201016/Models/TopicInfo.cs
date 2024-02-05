@@ -31,13 +31,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// 日志主题ID
+        /// 主题ID
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 日志主题名称
+        /// 主题名称
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? PartitionCount{ get; set; }
 
         /// <summary>
-        /// 是否开启索引
+        /// 主题是否开启索引（主题类型需为日志主题）
         /// </summary>
         [JsonProperty("Index")]
         public bool? Index{ get; set; }
 
         /// <summary>
-        /// 云产品标识，日志主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+        /// 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssumerName")]
@@ -68,13 +68,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 日主主题是否开启采集
+        /// 主题是否开启采集
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }
 
         /// <summary>
-        /// 日志主题绑定的标签信息
+        /// 主题绑定的标签信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
@@ -95,7 +95,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? MaxSplitPartitions{ get; set; }
 
         /// <summary>
-        /// 日主题的存储类型
+        /// 主题的存储类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageType")]
@@ -116,15 +116,15 @@ namespace TencentCloud.Cls.V20201016.Models
         public string SubAssumerName{ get; set; }
 
         /// <summary>
-        /// 日志主题描述
+        /// 主题描述
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Describes")]
         public string Describes{ get; set; }
 
         /// <summary>
-        /// 开启日志沉降，热存储的生命周期， hotPeriod < Period。
-        /// 热存储为 hotPeriod, 冷存储则为 Period-hotPeriod。
+        /// 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
+        /// 标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HotPeriod")]

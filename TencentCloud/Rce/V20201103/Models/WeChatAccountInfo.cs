@@ -45,7 +45,8 @@ namespace TencentCloud.Rce.V20201103.Models
         public string RandStr{ get; set; }
 
         /// <summary>
-        /// token
+        /// 如果WeChatSubType 是1，填入授权的 access_token（注意：不是普通 access_token，详情请参阅官方说明文档。获取网页版本的 access_token 时，scope 字段必需填写snsapi_userinfo
+        /// 如果WeChatSubType是2，填入以session_key 为密钥签名随机数RandStr（hmac_sha256签名算法）得到的字符串。
         /// </summary>
         [JsonProperty("WeChatAccessToken")]
         public string WeChatAccessToken{ get; set; }
@@ -57,13 +58,15 @@ namespace TencentCloud.Rce.V20201103.Models
         public string AssociateAccount{ get; set; }
 
         /// <summary>
-        /// 账号绑定的手机号。
+        /// 账号绑定的MD5手机号，
+        /// 注释：只支持标准中国大陆11位手机号MD5加密后位的32位小写字符串。
         /// </summary>
         [JsonProperty("MobilePhone")]
         public string MobilePhone{ get; set; }
 
         /// <summary>
-        /// 用户设备号。
+        /// 用户设备号，支持imei/imeiMD5/Idfa/IdfaMd5
+        /// 注释：imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }

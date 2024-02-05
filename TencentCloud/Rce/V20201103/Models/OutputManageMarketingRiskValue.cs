@@ -28,9 +28,7 @@ namespace TencentCloud.Rce.V20201103.Models
         /// 账号ID。对应输入参数：
         /// AccountType是1时，对应QQ的OpenID。
         /// AccountType是2时，对应微信的OpenID/UnionID。
-        /// AccountType是4时，对应手机号。
         /// AccountType是8时，对应imei、idfa、imeiMD5或者idfaMD5。
-        /// AccountType是0时，对应账号信息。
         /// AccountType是10004时，对应手机号的MD5。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -45,7 +43,7 @@ namespace TencentCloud.Rce.V20201103.Models
         public ulong? PostTime{ get; set; }
 
         /// <summary>
-        /// 对应输入参数，AccountType 是 QQ 或微信开放账号时，用于标识 QQ 或微信用户登录后关联业务自身的账号ID。
+        /// 业务参数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssociateAccount")]
@@ -59,10 +57,10 @@ namespace TencentCloud.Rce.V20201103.Models
         public string UserIp{ get; set; }
 
         /// <summary>
-        /// 风险值
-        /// pass : 无恶意
-        /// review：需要人工审核
-        /// reject：拒绝，高风险恶意
+        /// 风险等级
+        /// pass：无恶意
+        /// review：低风险，需要人工审核
+        /// reject：高风险，建议拦截
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskLevel")]
@@ -101,14 +99,14 @@ namespace TencentCloud.Rce.V20201103.Models
         public long?[] RiskType{ get; set; }
 
         /// <summary>
-        /// 唯一ID
+        /// 设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConstId")]
         public string ConstId{ get; set; }
 
         /// <summary>
-        /// 扩展信息
+        /// 风险扩展数据。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskInformation")]

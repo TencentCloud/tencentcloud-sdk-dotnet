@@ -81,6 +81,13 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("IndexStatus")]
         public string IndexStatus{ get; set; }
 
+        /// <summary>
+        /// 日志内容的高亮描述信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HighLights")]
+        public HighLightItem[] HighLights{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +103,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "HostName", this.HostName);
             this.SetParamSimple(map, prefix + "RawLog", this.RawLog);
             this.SetParamSimple(map, prefix + "IndexStatus", this.IndexStatus);
+            this.SetParamArrayObj(map, prefix + "HighLights.", this.HighLights);
         }
     }
 }

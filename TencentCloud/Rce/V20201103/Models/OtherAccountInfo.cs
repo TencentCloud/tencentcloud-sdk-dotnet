@@ -25,28 +25,24 @@ namespace TencentCloud.Rce.V20201103.Models
     {
         
         /// <summary>
-        /// 其它账号信息：  
-        /// AccountType 是 4 时，填入真实的手机号（如 13123456789）。 
-        /// AccountType 是 8 时，支持 imei、idfa、imeiMD5、idfaMD5入参。  
-        /// AccountType 是 0 时，填入账号信息。  
-        /// AccountType 是 10004 时，填入手机号的 MD5 值。 
-        /// 注：imeiMd5 加密方式为：  
-        /// imei 明文小写后，进行 MD5 加密，加密后取小写值。  
-        /// IdfaMd5 加密方式为：idfa 明文大写后，进行 MD5 加密，加密后取小写值。
+        /// 其他账号信息；
+        /// AccountType是8时，填入设备号（imei/imeimd5/idfa/idfamd5）
+        /// AccountType是10004时，填入中国大陆标准11位手机号的MD5值
+        /// 注释：
+        /// MD5手机号加密方式，中国大陆11位手机号进行MD5加密，加密后取32位小写值
+        /// imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
         /// </summary>
         [JsonProperty("AccountId")]
         public string AccountId{ get; set; }
 
         /// <summary>
-        /// 手机号，若 AccountType 是 4（手机号）、或 10004（手机号 MD5），则无需重复填写 
-        /// 否则填入对应的手机号（如 13123456789）。
+        /// MD5手机号,AccountType是10004时，此处无需重复填写。
         /// </summary>
         [JsonProperty("MobilePhone")]
         public string MobilePhone{ get; set; }
 
         /// <summary>
-        /// 用户设备号。若 AccountType 是 8（设备号），则无需重复填写，否则填入对应的设备 
-        /// 号。 
+        /// 用户设备号，AccountType是8时，此处无需重复填写。
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }

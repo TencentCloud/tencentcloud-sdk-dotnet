@@ -53,6 +53,27 @@ namespace TencentCloud.Taf.V20200210
         }
 
         /// <summary>
+        /// 虚假流量识别
+        /// </summary>
+        /// <param name="req"><see cref="ManagePortraitRiskRequest"/></param>
+        /// <returns><see cref="ManagePortraitRiskResponse"/></returns>
+        public Task<ManagePortraitRiskResponse> ManagePortraitRisk(ManagePortraitRiskRequest req)
+        {
+            return InternalRequestAsync<ManagePortraitRiskResponse>(req, "ManagePortraitRisk");
+        }
+
+        /// <summary>
+        /// 虚假流量识别
+        /// </summary>
+        /// <param name="req"><see cref="ManagePortraitRiskRequest"/></param>
+        /// <returns><see cref="ManagePortraitRiskResponse"/></returns>
+        public ManagePortraitRiskResponse ManagePortraitRiskSync(ManagePortraitRiskRequest req)
+        {
+            return InternalRequestAsync<ManagePortraitRiskResponse>(req, "ManagePortraitRisk")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 流量反欺诈-流量验准定制版
         /// </summary>
         /// <param name="req"><see cref="RecognizeCustomizedAudienceRequest"/></param>
