@@ -2220,6 +2220,27 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 更新服务级账号密码
+        /// </summary>
+        /// <param name="req"><see cref="ModifyServiceAccountPasswordRequest"/></param>
+        /// <returns><see cref="ModifyServiceAccountPasswordResponse"/></returns>
+        public Task<ModifyServiceAccountPasswordResponse> ModifyServiceAccountPassword(ModifyServiceAccountPasswordRequest req)
+        {
+            return InternalRequestAsync<ModifyServiceAccountPasswordResponse>(req, "ModifyServiceAccountPassword");
+        }
+
+        /// <summary>
+        /// 更新服务级账号密码
+        /// </summary>
+        /// <param name="req"><see cref="ModifyServiceAccountPasswordRequest"/></param>
+        /// <returns><see cref="ModifyServiceAccountPasswordResponse"/></returns>
+        public ModifyServiceAccountPasswordResponse ModifyServiceAccountPasswordSync(ModifyServiceAccountPasswordRequest req)
+        {
+            return InternalRequestAsync<ModifyServiceAccountPasswordResponse>(req, "ModifyServiceAccountPassword")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 更新版本保留规则
         /// </summary>
         /// <param name="req"><see cref="ModifyTagRetentionRuleRequest"/></param>

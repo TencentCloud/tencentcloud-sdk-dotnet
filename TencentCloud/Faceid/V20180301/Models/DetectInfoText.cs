@@ -25,7 +25,7 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 本次流程最终验证结果。0为成功
+        /// 本次流程最终验证结果。0为成功（仅包含活体人脸核身结果，不包含意愿核身结果）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrCode")]
