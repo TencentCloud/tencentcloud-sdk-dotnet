@@ -114,6 +114,18 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("MaxModuleNum")]
         public long? MaxModuleNum{ get; set; }
 
+        /// <summary>
+        /// 是否支持cbs
+        /// </summary>
+        [JsonProperty("CBSSupported")]
+        public bool? CBSSupported{ get; set; }
+
+        /// <summary>
+        /// 磁盘数量限制
+        /// </summary>
+        [JsonProperty("DiskNumLimit")]
+        public long? DiskNumLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +147,8 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "PerBandwidth", this.PerBandwidth);
             this.SetParamSimple(map, prefix + "PerDataDisk", this.PerDataDisk);
             this.SetParamSimple(map, prefix + "MaxModuleNum", this.MaxModuleNum);
+            this.SetParamSimple(map, prefix + "CBSSupported", this.CBSSupported);
+            this.SetParamSimple(map, prefix + "DiskNumLimit", this.DiskNumLimit);
         }
     }
 }

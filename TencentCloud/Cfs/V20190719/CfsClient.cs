@@ -945,7 +945,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// 更新文件系统带宽
+        /// 更新文件系统吞吐
         /// 仅吞吐型支持此接口
         /// </summary>
         /// <param name="req"><see cref="UpdateFileSystemBandwidthLimitRequest"/></param>
@@ -956,7 +956,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// 更新文件系统带宽
+        /// 更新文件系统吞吐
         /// 仅吞吐型支持此接口
         /// </summary>
         /// <param name="req"><see cref="UpdateFileSystemBandwidthLimitRequest"/></param>

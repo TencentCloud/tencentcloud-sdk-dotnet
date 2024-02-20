@@ -60,6 +60,13 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("RegionInfo")]
         public RegionInfo RegionInfo{ get; set; }
 
+        /// <summary>
+        /// 实例是否支持ipv6
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Ipv6Supported")]
+        public bool? Ipv6Supported{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +79,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamObj(map, prefix + "Province.", this.Province);
             this.SetParamObj(map, prefix + "City.", this.City);
             this.SetParamObj(map, prefix + "RegionInfo.", this.RegionInfo);
+            this.SetParamSimple(map, prefix + "Ipv6Supported", this.Ipv6Supported);
         }
     }
 }

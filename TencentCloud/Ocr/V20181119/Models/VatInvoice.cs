@@ -121,6 +121,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// 102：通用机打电子发票
         /// 61：电子发票（航空运输电子客票行程单）
         /// 83：电子发票（铁路电子发票）
+        /// 0915：全电纸质（二手车统一销售发票）
+        /// 0903：全电纸质（机动车统一发票）
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

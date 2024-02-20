@@ -31,7 +31,7 @@ namespace TencentCloud.Thpc.V20230321.Models
         public QueueOverview[] QueueSet{ get; set; }
 
         /// <summary>
-        /// 符合条件的节点数量。
+        /// 符合条件的队列数量。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

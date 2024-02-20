@@ -1067,7 +1067,7 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
-        /// 获取帐户信息
+        /// 获取账户信息
         /// </summary>
         /// <param name="req"><see cref="DescribeUserDetailRequest"/></param>
         /// <returns><see cref="DescribeUserDetailResponse"/></returns>
@@ -1077,7 +1077,7 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
-        /// 获取帐户信息
+        /// 获取账户信息
         /// </summary>
         /// <param name="req"><see cref="DescribeUserDetailRequest"/></param>
         /// <returns><see cref="DescribeUserDetailResponse"/></returns>

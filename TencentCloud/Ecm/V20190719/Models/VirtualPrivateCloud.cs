@@ -58,6 +58,13 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("Ipv6AddressCount")]
         public long? Ipv6AddressCount{ get; set; }
 
+        /// <summary>
+        /// runInstances接口创建三网ipv6地址使用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Ipv6SubnetIds")]
+        public string[] Ipv6SubnetIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +76,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "AsVpcGateway", this.AsVpcGateway);
             this.SetParamArraySimple(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
             this.SetParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
+            this.SetParamArraySimple(map, prefix + "Ipv6SubnetIds.", this.Ipv6SubnetIds);
         }
     }
 }

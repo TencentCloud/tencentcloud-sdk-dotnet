@@ -67,6 +67,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string No{ get; set; }
 
         /// <summary>
+        /// 曾持证件号码。
+        /// </summary>
+        [JsonProperty("PreviousNumber")]
+        public string PreviousNumber{ get; set; }
+
+        /// <summary>
+        /// 签发机关。
+        /// </summary>
+        [JsonProperty("IssuedAuthority")]
+        public string IssuedAuthority{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -85,6 +97,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Nationality", this.Nationality);
             this.SetParamSimple(map, prefix + "PeriodOfValidity", this.PeriodOfValidity);
             this.SetParamSimple(map, prefix + "No", this.No);
+            this.SetParamSimple(map, prefix + "PreviousNumber", this.PreviousNumber);
+            this.SetParamSimple(map, prefix + "IssuedAuthority", this.IssuedAuthority);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

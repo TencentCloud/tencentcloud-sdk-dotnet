@@ -1523,6 +1523,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 查询任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTasksRequest"/></param>
+        /// <returns><see cref="DescribeTasksResponse"/></returns>
+        public Task<DescribeTasksResponse> DescribeTasks(DescribeTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeTasksResponse>(req, "DescribeTasks");
+        }
+
+        /// <summary>
+        /// 查询任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTasksRequest"/></param>
+        /// <returns><see cref="DescribeTasksResponse"/></returns>
+        public DescribeTasksResponse DescribeTasksSync(DescribeTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeTasksResponse>(req, "DescribeTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口(DescribeZones)用于查询可售卖地域可用区信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeZonesRequest"/></param>

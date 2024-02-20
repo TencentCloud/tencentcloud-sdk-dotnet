@@ -39,7 +39,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 控件id，和ComponentName选择一项传入即可
         /// 
-        /// <a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模版中找到控件ID的方式</a>
+        /// <a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模板中找到控件ID的方式</a>
         /// </summary>
         [JsonProperty("ComponentId")]
         public string ComponentId{ get; set; }
@@ -47,7 +47,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 控件名字，最大长度不超过30字符，和ComponentId选择一项传入即可
         /// 
-        /// <a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模版中找到控件名字的方式</a>
+        /// <a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模板中找到控件名字的方式</a>
         /// </summary>
         [JsonProperty("ComponentName")]
         public string ComponentName{ get; set; }

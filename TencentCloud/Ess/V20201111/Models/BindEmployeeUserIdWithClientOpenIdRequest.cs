@@ -33,7 +33,9 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
-        /// 可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)；或者通过<a href="https://qian.tencent.com/developers/companyApis/staffs/DescribeIntegrationEmployees" target="_blank">DescribeIntegrationEmployees</a>接口获取。
+        /// 
+        /// 通过<a href="https://qian.tencent.com/developers/companyApis/staffs/DescribeIntegrationEmployees" target="_blank">DescribeIntegrationEmployees</a>接口获取，也可登录腾讯电子签控制台查看
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/97cfffabb0caa61df16999cd395d7850.png)
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }

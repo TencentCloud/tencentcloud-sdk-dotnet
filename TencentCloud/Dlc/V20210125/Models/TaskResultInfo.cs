@@ -142,6 +142,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("TotalTime")]
         public long? TotalTime{ get; set; }
 
+        /// <summary>
+        /// 获取结果消耗的时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QueryResultTime")]
+        public float? QueryResultTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -167,6 +174,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "ProgressDetail", this.ProgressDetail);
             this.SetParamSimple(map, prefix + "DisplayFormat", this.DisplayFormat);
             this.SetParamSimple(map, prefix + "TotalTime", this.TotalTime);
+            this.SetParamSimple(map, prefix + "QueryResultTime", this.QueryResultTime);
         }
     }
 }
