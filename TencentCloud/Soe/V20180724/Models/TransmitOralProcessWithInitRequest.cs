@@ -174,7 +174,8 @@ namespace TencentCloud.Soe.V20180724.Models
         public string Keyword{ get; set; }
 
         /// <summary>
-        /// 音频存储路径，支持通过子路径指定文件夹名称
+        /// 音频存储模式，此参数已废弃，无需设置；
+        /// 注：有存储需求的用户建议自行存储至腾讯云COS[对象存储](https://cloud.tencent.com/product/cos)使用。
         /// </summary>
         [JsonProperty("COSBucketURL")]
         public string COSBucketURL{ get; set; }

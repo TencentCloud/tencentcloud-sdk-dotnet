@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B15FC666-859E-397F-91C6-A33130097096}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.950</VersionPrefix>
+    <VersionPrefix>3.0.951</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -72,6 +72,8 @@
     <Compile Include="V20180808\Models\DeleteCustomDnsHostResponse.cs" />
     <Compile Include="V20180808\Models\DeletePhoneEmailRequest.cs" />
     <Compile Include="V20180808\Models\DeletePhoneEmailResponse.cs" />
+    <Compile Include="V20180808\Models\DeleteReservedPreDomainInfoRequest.cs" />
+    <Compile Include="V20180808\Models\DeleteReservedPreDomainInfoResponse.cs" />
     <Compile Include="V20180808\Models\DeleteTemplateRequest.cs" />
     <Compile Include="V20180808\Models\DeleteTemplateResponse.cs" />
     <Compile Include="V20180808\Models\DescribeBatchOperationLogDetailsRequest.cs" />
@@ -90,6 +92,10 @@
     <Compile Include="V20180808\Models\DescribeDomainSimpleInfoResponse.cs" />
     <Compile Include="V20180808\Models\DescribePhoneEmailListRequest.cs" />
     <Compile Include="V20180808\Models\DescribePhoneEmailListResponse.cs" />
+    <Compile Include="V20180808\Models\DescribePreDomainListRequest.cs" />
+    <Compile Include="V20180808\Models\DescribePreDomainListResponse.cs" />
+    <Compile Include="V20180808\Models\DescribeReservedPreDomainInfoRequest.cs" />
+    <Compile Include="V20180808\Models\DescribeReservedPreDomainInfoResponse.cs" />
     <Compile Include="V20180808\Models\DescribeTemplateListRequest.cs" />
     <Compile Include="V20180808\Models\DescribeTemplateListResponse.cs" />
     <Compile Include="V20180808\Models\DescribeTemplateRequest.cs" />
@@ -99,6 +105,7 @@
     <Compile Include="V20180808\Models\DomainBatchLogSet.cs" />
     <Compile Include="V20180808\Models\DomainList.cs" />
     <Compile Include="V20180808\Models\DomainSimpleInfo.cs" />
+    <Compile Include="V20180808\Models\FailReservedDomainInfo.cs" />
     <Compile Include="V20180808\Models\ModifyCustomDnsHostRequest.cs" />
     <Compile Include="V20180808\Models\ModifyCustomDnsHostResponse.cs" />
     <Compile Include="V20180808\Models\ModifyDomainDNSBatchRequest.cs" />
@@ -111,6 +118,10 @@
     <Compile Include="V20180808\Models\PriceInfo.cs" />
     <Compile Include="V20180808\Models\RenewDomainBatchRequest.cs" />
     <Compile Include="V20180808\Models\RenewDomainBatchResponse.cs" />
+    <Compile Include="V20180808\Models\ReservedDomainInfo.cs" />
+    <Compile Include="V20180808\Models\ReservedPreDomainInfo.cs" />
+    <Compile Include="V20180808\Models\ReservedPreDomainsRequest.cs" />
+    <Compile Include="V20180808\Models\ReservedPreDomainsResponse.cs" />
     <Compile Include="V20180808\Models\SendPhoneEmailCodeRequest.cs" />
     <Compile Include="V20180808\Models\SendPhoneEmailCodeResponse.cs" />
     <Compile Include="V20180808\Models\SetDomainAutoRenewRequest.cs" />

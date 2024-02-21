@@ -31,10 +31,16 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 慢查询详情。
+        /// 该参数存在命名不规范问题，建议用参数InstanceSlowLogDetail取代。慢查询详情。
         /// </summary>
         [JsonProperty("InstanceSlowlogDetail")]
         public InstanceSlowlogDetail[] InstanceSlowlogDetail{ get; set; }
+
+        /// <summary>
+        /// 慢查询详情。
+        /// </summary>
+        [JsonProperty("InstanceSlowLogDetail")]
+        public InstanceSlowlogDetail[] InstanceSlowLogDetail{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +56,7 @@ namespace TencentCloud.Redis.V20180412.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "InstanceSlowlogDetail.", this.InstanceSlowlogDetail);
+            this.SetParamArrayObj(map, prefix + "InstanceSlowLogDetail.", this.InstanceSlowLogDetail);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

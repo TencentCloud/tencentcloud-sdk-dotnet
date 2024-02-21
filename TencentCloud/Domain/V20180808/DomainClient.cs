@@ -263,6 +263,27 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
+        /// 用于清除多余的预定域名信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteReservedPreDomainInfoRequest"/></param>
+        /// <returns><see cref="DeleteReservedPreDomainInfoResponse"/></returns>
+        public Task<DeleteReservedPreDomainInfoResponse> DeleteReservedPreDomainInfo(DeleteReservedPreDomainInfoRequest req)
+        {
+            return InternalRequestAsync<DeleteReservedPreDomainInfoResponse>(req, "DeleteReservedPreDomainInfo");
+        }
+
+        /// <summary>
+        /// 用于清除多余的预定域名信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteReservedPreDomainInfoRequest"/></param>
+        /// <returns><see cref="DeleteReservedPreDomainInfoResponse"/></returns>
+        public DeleteReservedPreDomainInfoResponse DeleteReservedPreDomainInfoSync(DeleteReservedPreDomainInfoRequest req)
+        {
+            return InternalRequestAsync<DeleteReservedPreDomainInfoResponse>(req, "DeleteReservedPreDomainInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口 ( DeleteTemplate ) 用于删除信息模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteTemplateRequest"/></param>
@@ -452,6 +473,48 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
+        /// 用户服务商提前获取预释放域名数据，查询数据根据结束时间进行倒序。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePreDomainListRequest"/></param>
+        /// <returns><see cref="DescribePreDomainListResponse"/></returns>
+        public Task<DescribePreDomainListResponse> DescribePreDomainList(DescribePreDomainListRequest req)
+        {
+            return InternalRequestAsync<DescribePreDomainListResponse>(req, "DescribePreDomainList");
+        }
+
+        /// <summary>
+        /// 用户服务商提前获取预释放域名数据，查询数据根据结束时间进行倒序。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePreDomainListRequest"/></param>
+        /// <returns><see cref="DescribePreDomainListResponse"/></returns>
+        public DescribePreDomainListResponse DescribePreDomainListSync(DescribePreDomainListRequest req)
+        {
+            return InternalRequestAsync<DescribePreDomainListResponse>(req, "DescribePreDomainList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 合作商用于查询预约预释放状态信息内容
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReservedPreDomainInfoRequest"/></param>
+        /// <returns><see cref="DescribeReservedPreDomainInfoResponse"/></returns>
+        public Task<DescribeReservedPreDomainInfoResponse> DescribeReservedPreDomainInfo(DescribeReservedPreDomainInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeReservedPreDomainInfoResponse>(req, "DescribeReservedPreDomainInfo");
+        }
+
+        /// <summary>
+        /// 合作商用于查询预约预释放状态信息内容
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReservedPreDomainInfoRequest"/></param>
+        /// <returns><see cref="DescribeReservedPreDomainInfoResponse"/></returns>
+        public DescribeReservedPreDomainInfoResponse DescribeReservedPreDomainInfoSync(DescribeReservedPreDomainInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeReservedPreDomainInfoResponse>(req, "DescribeReservedPreDomainInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口 (DescribeTemplate) 用于获取模板信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeTemplateRequest"/></param>
@@ -595,6 +658,27 @@ namespace TencentCloud.Domain.V20180808
         public RenewDomainBatchResponse RenewDomainBatchSync(RenewDomainBatchRequest req)
         {
             return InternalRequestAsync<RenewDomainBatchResponse>(req, "RenewDomainBatch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于合作商对预释放域名进行预留。
+        /// </summary>
+        /// <param name="req"><see cref="ReservedPreDomainsRequest"/></param>
+        /// <returns><see cref="ReservedPreDomainsResponse"/></returns>
+        public Task<ReservedPreDomainsResponse> ReservedPreDomains(ReservedPreDomainsRequest req)
+        {
+            return InternalRequestAsync<ReservedPreDomainsResponse>(req, "ReservedPreDomains");
+        }
+
+        /// <summary>
+        /// 用于合作商对预释放域名进行预留。
+        /// </summary>
+        /// <param name="req"><see cref="ReservedPreDomainsRequest"/></param>
+        /// <returns><see cref="ReservedPreDomainsResponse"/></returns>
+        public ReservedPreDomainsResponse ReservedPreDomainsSync(ReservedPreDomainsRequest req)
+        {
+            return InternalRequestAsync<ReservedPreDomainsResponse>(req, "ReservedPreDomains")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

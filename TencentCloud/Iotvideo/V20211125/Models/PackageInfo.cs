@@ -83,6 +83,13 @@ namespace TencentCloud.Iotvideo.V20211125.Models
         [JsonProperty("ChannelId")]
         public ulong? ChannelId{ get; set; }
 
+        /// <summary>
+        /// 用户id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CSUserId")]
+        public string CSUserId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -98,6 +105,7 @@ namespace TencentCloud.Iotvideo.V20211125.Models
             this.SetParamSimple(map, prefix + "PackageId", this.PackageId);
             this.SetParamSimple(map, prefix + "OrderId", this.OrderId);
             this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
+            this.SetParamSimple(map, prefix + "CSUserId", this.CSUserId);
         }
     }
 }

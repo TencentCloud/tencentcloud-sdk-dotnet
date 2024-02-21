@@ -49,6 +49,12 @@ namespace TencentCloud.Iotvideo.V20211125.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
+        /// 用户id
+        /// </summary>
+        [JsonProperty("CSUserId")]
+        public string CSUserId{ get; set; }
+
+        /// <summary>
         /// 通道id
         /// </summary>
         [JsonProperty("ChannelId")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Iotvideo.V20211125.Models
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "CSUserId", this.CSUserId);
             this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
         }
     }

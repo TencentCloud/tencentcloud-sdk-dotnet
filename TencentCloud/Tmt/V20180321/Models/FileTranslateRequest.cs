@@ -87,7 +87,7 @@ namespace TencentCloud.Tmt.V20180321.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// 原始文档类型
+        /// 原始文档类型。该参数为高级参数，请留空，如需使用，请与工作人员确认后再使用。
         /// </summary>
         [JsonProperty("BasicDocumentType")]
         public string BasicDocumentType{ get; set; }
