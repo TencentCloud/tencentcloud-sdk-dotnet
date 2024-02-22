@@ -42,6 +42,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("MaxResults")]
         public long? MaxResults{ get; set; }
 
+        /// <summary>
+        /// 是否转化数据类型
+        /// </summary>
+        [JsonProperty("IsTransformDataType")]
+        public bool? IsTransformDataType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
             this.SetParamSimple(map, prefix + "MaxResults", this.MaxResults);
+            this.SetParamSimple(map, prefix + "IsTransformDataType", this.IsTransformDataType);
         }
     }
 }

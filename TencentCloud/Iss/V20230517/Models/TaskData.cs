@@ -121,6 +121,34 @@ namespace TencentCloud.Iss.V20230517.Models
         [JsonProperty("Runtime")]
         public long? Runtime{ get; set; }
 
+        /// <summary>
+        /// 设备ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeviceId")]
+        public string DeviceId{ get; set; }
+
+        /// <summary>
+        /// 设备名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeviceName")]
+        public string DeviceName{ get; set; }
+
+        /// <summary>
+        /// 通道ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ChannelId")]
+        public string ChannelId{ get; set; }
+
+        /// <summary>
+        ///  通道名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ChannelName")]
+        public string ChannelName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -143,6 +171,10 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
             this.SetParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
             this.SetParamSimple(map, prefix + "Runtime", this.Runtime);
+            this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
+            this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
+            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
+            this.SetParamSimple(map, prefix + "ChannelName", this.ChannelName);
         }
     }
 }

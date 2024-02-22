@@ -115,6 +115,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("CodeFileName")]
         public string CodeFileName{ get; set; }
 
+        /// <summary>
+        /// 扩展属性
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExtensionInfo")]
+        public AttributeItemDTO[] ExtensionInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +141,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "CostTime", this.CostTime);
             this.SetParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
             this.SetParamSimple(map, prefix + "CodeFileName", this.CodeFileName);
+            this.SetParamArrayObj(map, prefix + "ExtensionInfo.", this.ExtensionInfo);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{27DE4D5F-4AFE-3F22-B8A9-6865D22FBF4A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.951</VersionPrefix>
+    <VersionPrefix>3.0.952</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -109,6 +109,7 @@
     <Compile Include="V20180330\Models\TagFilter.cs" />
     <Compile Include="V20180330\Models\TagItem.cs" />
     <Compile Include="V20211206\DtsClient.cs" />
+    <Compile Include="V20211206\Models\AdvancedObjectsItem.cs" />
     <Compile Include="V20211206\Models\CheckStep.cs" />
     <Compile Include="V20211206\Models\CheckStepInfo.cs" />
     <Compile Include="V20211206\Models\Column.cs" />
@@ -199,8 +200,12 @@
     <Compile Include="V20211206\Models\DestroySyncJobRequest.cs" />
     <Compile Include="V20211206\Models\DestroySyncJobResponse.cs" />
     <Compile Include="V20211206\Models\DetailCheckItem.cs" />
+    <Compile Include="V20211206\Models\DifferenceAdvancedObjectsDetail.cs" />
+    <Compile Include="V20211206\Models\DifferenceData.cs" />
+    <Compile Include="V20211206\Models\DifferenceDataDetail.cs" />
     <Compile Include="V20211206\Models\DifferenceDetail.cs" />
     <Compile Include="V20211206\Models\DifferenceItem.cs" />
+    <Compile Include="V20211206\Models\DifferenceRowDetail.cs" />
     <Compile Include="V20211206\Models\DistributeRule.cs" />
     <Compile Include="V20211206\Models\DynamicOptions.cs" />
     <Compile Include="V20211206\Models\Endpoint.cs" />
@@ -281,6 +286,7 @@
     <Compile Include="V20211206\Models\ResumeSyncJobRequest.cs" />
     <Compile Include="V20211206\Models\ResumeSyncJobResponse.cs" />
     <Compile Include="V20211206\Models\RoleItem.cs" />
+    <Compile Include="V20211206\Models\RowsCountDifference.cs" />
     <Compile Include="V20211206\Models\SkipCheckItemRequest.cs" />
     <Compile Include="V20211206\Models\SkipCheckItemResponse.cs" />
     <Compile Include="V20211206\Models\SkipSyncCheckItemRequest.cs" />

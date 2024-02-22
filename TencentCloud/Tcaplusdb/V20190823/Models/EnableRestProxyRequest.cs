@@ -25,7 +25,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     {
         
         /// <summary>
-        /// 对应于appid
+        /// 集群 ID。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }

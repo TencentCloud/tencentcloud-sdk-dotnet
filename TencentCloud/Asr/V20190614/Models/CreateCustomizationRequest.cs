@@ -46,6 +46,7 @@ namespace TencentCloud.Asr.V20190614.Models
         /// 标签信息
         /// </summary>
         [JsonProperty("TagInfos")]
+        [System.Obsolete]
         public string[] TagInfos{ get; set; }
 
 

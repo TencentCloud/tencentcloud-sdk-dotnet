@@ -38,6 +38,27 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("Skipped")]
         public SkippedDetail Skipped{ get; set; }
 
+        /// <summary>
+        /// 数据库不一致的详情，mongodb业务用到
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DifferenceAdvancedObjects")]
+        public DifferenceAdvancedObjectsDetail DifferenceAdvancedObjects{ get; set; }
+
+        /// <summary>
+        /// 数据不一致的详情，mongodb业务用到
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DifferenceData")]
+        public DifferenceDataDetail DifferenceData{ get; set; }
+
+        /// <summary>
+        /// 数据行不一致的详情，mongodb业务用到
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DifferenceRow")]
+        public DifferenceRowDetail DifferenceRow{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +67,9 @@ namespace TencentCloud.Dts.V20211206.Models
         {
             this.SetParamObj(map, prefix + "Difference.", this.Difference);
             this.SetParamObj(map, prefix + "Skipped.", this.Skipped);
+            this.SetParamObj(map, prefix + "DifferenceAdvancedObjects.", this.DifferenceAdvancedObjects);
+            this.SetParamObj(map, prefix + "DifferenceData.", this.DifferenceData);
+            this.SetParamObj(map, prefix + "DifferenceRow.", this.DifferenceRow);
         }
     }
 }

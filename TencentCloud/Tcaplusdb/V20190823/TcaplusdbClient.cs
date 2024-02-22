@@ -712,7 +712,7 @@ namespace TencentCloud.Tcaplusdb.V20190823
         }
 
         /// <summary>
-        /// 当restful api为关闭状态时，可以通过此接口开启restful apu
+        /// 当restful api为关闭状态时，可以通过此接口开启restful api。
         /// </summary>
         /// <param name="req"><see cref="EnableRestProxyRequest"/></param>
         /// <returns><see cref="EnableRestProxyResponse"/></returns>
@@ -722,7 +722,7 @@ namespace TencentCloud.Tcaplusdb.V20190823
         }
 
         /// <summary>
-        /// 当restful api为关闭状态时，可以通过此接口开启restful apu
+        /// 当restful api为关闭状态时，可以通过此接口开启restful api。
         /// </summary>
         /// <param name="req"><see cref="EnableRestProxyRequest"/></param>
         /// <returns><see cref="EnableRestProxyResponse"/></returns>

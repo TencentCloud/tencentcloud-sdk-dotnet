@@ -402,6 +402,48 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ExecutorGroupName")]
         public string ExecutorGroupName{ get; set; }
 
+        /// <summary>
+        /// 关联实例信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RelatedInstanceList")]
+        public InstanceOpsDto[] RelatedInstanceList{ get; set; }
+
+        /// <summary>
+        /// 关联实例信息数量，不和RelatedInstanceList强关联。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RelatedInstanceSize")]
+        public long? RelatedInstanceSize{ get; set; }
+
+        /// <summary>
+        /// ownerId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OwnerId")]
+        public string OwnerId{ get; set; }
+
+        /// <summary>
+        /// 用户id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
+
+        /// <summary>
+        /// 实例生命周期
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceLifeCycleOpsDto")]
+        public InstanceLifeCycleOpsDto InstanceLifeCycleOpsDto{ get; set; }
+
+        /// <summary>
+        /// 自动重试次数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RetryAttempts")]
+        public ulong? RetryAttempts{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -462,6 +504,12 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "InstanceKey", this.InstanceKey);
             this.SetParamSimple(map, prefix + "ExecutorGroupId", this.ExecutorGroupId);
             this.SetParamSimple(map, prefix + "ExecutorGroupName", this.ExecutorGroupName);
+            this.SetParamArrayObj(map, prefix + "RelatedInstanceList.", this.RelatedInstanceList);
+            this.SetParamSimple(map, prefix + "RelatedInstanceSize", this.RelatedInstanceSize);
+            this.SetParamSimple(map, prefix + "OwnerId", this.OwnerId);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamObj(map, prefix + "InstanceLifeCycleOpsDto.", this.InstanceLifeCycleOpsDto);
+            this.SetParamSimple(map, prefix + "RetryAttempts", this.RetryAttempts);
         }
     }
 }
