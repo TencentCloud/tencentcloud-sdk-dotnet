@@ -293,6 +293,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("IsSupportAlarmTag")]
         public long? IsSupportAlarmTag{ get; set; }
 
+        /// <summary>
+        /// 多标签交/并集关系
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagOperation")]
+        public string TagOperation{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -337,6 +344,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "IsBindAll", this.IsBindAll);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "IsSupportAlarmTag", this.IsSupportAlarmTag);
+            this.SetParamSimple(map, prefix + "TagOperation", this.TagOperation);
         }
     }
 }

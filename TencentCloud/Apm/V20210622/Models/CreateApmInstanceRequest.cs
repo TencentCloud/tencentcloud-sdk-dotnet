@@ -37,7 +37,7 @@ namespace TencentCloud.Apm.V20210622.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Trace数据保存时长
+        /// Trace数据保存时长，单位为天默认存储为3天
         /// </summary>
         [JsonProperty("TraceDuration")]
         public long? TraceDuration{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Apm.V20210622.Models
         public ApmTag[] Tags{ get; set; }
 
         /// <summary>
-        /// 实例上报额度值
+        /// 实例上报额度值，默认赋值为0表示不限制上报额度
         /// </summary>
         [JsonProperty("SpanDailyCounters")]
         public ulong? SpanDailyCounters{ get; set; }

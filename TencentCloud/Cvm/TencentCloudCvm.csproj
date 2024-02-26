@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B5D57B68-CB59-323E-9A06-B048D5C6D369}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.952</VersionPrefix>
+    <VersionPrefix>3.0.953</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -84,6 +84,8 @@
     <Compile Include="V20170312\Models\DeleteHpcClustersResponse.cs" />
     <Compile Include="V20170312\Models\DeleteImagesRequest.cs" />
     <Compile Include="V20170312\Models\DeleteImagesResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteInstancesActionTimerRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteInstancesActionTimerResponse.cs" />
     <Compile Include="V20170312\Models\DeleteKeyPairsRequest.cs" />
     <Compile Include="V20170312\Models\DeleteKeyPairsResponse.cs" />
     <Compile Include="V20170312\Models\DeleteLaunchTemplateRequest.cs" />
@@ -120,6 +122,8 @@
     <Compile Include="V20170312\Models\DescribeInstanceTypeConfigsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeInstanceVncUrlRequest.cs" />
     <Compile Include="V20170312\Models\DescribeInstanceVncUrlResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeInstancesActionTimerRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeInstancesActionTimerResponse.cs" />
     <Compile Include="V20170312\Models\DescribeInstancesModificationRequest.cs" />
     <Compile Include="V20170312\Models\DescribeInstancesModificationResponse.cs" />
     <Compile Include="V20170312\Models\DescribeInstancesOperationLimitRequest.cs" />
@@ -171,6 +175,8 @@
     <Compile Include="V20170312\Models\ImageQuota.cs" />
     <Compile Include="V20170312\Models\ImportImageRequest.cs" />
     <Compile Include="V20170312\Models\ImportImageResponse.cs" />
+    <Compile Include="V20170312\Models\ImportInstancesActionTimerRequest.cs" />
+    <Compile Include="V20170312\Models\ImportInstancesActionTimerResponse.cs" />
     <Compile Include="V20170312\Models\ImportKeyPairRequest.cs" />
     <Compile Include="V20170312\Models\ImportKeyPairResponse.cs" />
     <Compile Include="V20170312\Models\InquirePricePurchaseReservedInstancesOfferingRequest.cs" />

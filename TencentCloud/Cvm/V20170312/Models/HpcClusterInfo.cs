@@ -76,6 +76,20 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
+        /// <summary>
+        /// 高性能计算集群类型。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HpcClusterType")]
+        public string HpcClusterType{ get; set; }
+
+        /// <summary>
+        /// 高性能计算集群对应的业务场景标识，当前只支持CDC。	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HpcClusterBusinessId")]
+        public string HpcClusterBusinessId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -90,6 +104,8 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "CurrentNum", this.CurrentNum);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamSimple(map, prefix + "HpcClusterType", this.HpcClusterType);
+            this.SetParamSimple(map, prefix + "HpcClusterBusinessId", this.HpcClusterBusinessId);
         }
     }
 }

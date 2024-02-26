@@ -78,6 +78,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("EbSubject")]
         public string EbSubject{ get; set; }
 
+        /// <summary>
+        /// 标识标签取交/并集关系
+        /// </summary>
+        [JsonProperty("TagOperation")]
+        public string TagOperation{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArrayObj(map, prefix + "BatchTag.", this.BatchTag);
             this.SetParamSimple(map, prefix + "EbEventFlag", this.EbEventFlag);
             this.SetParamSimple(map, prefix + "EbSubject", this.EbSubject);
+            this.SetParamSimple(map, prefix + "TagOperation", this.TagOperation);
         }
     }
 }

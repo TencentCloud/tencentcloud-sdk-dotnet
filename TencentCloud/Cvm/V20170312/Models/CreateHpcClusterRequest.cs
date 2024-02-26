@@ -42,6 +42,18 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// 高性能计算集群类型。
+        /// </summary>
+        [JsonProperty("HpcClusterType")]
+        public string HpcClusterType{ get; set; }
+
+        /// <summary>
+        /// 高性能计算集群对应的业务场景标识，当前只支持CDC。
+        /// </summary>
+        [JsonProperty("HpcClusterBusinessId")]
+        public string HpcClusterBusinessId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "HpcClusterType", this.HpcClusterType);
+            this.SetParamSimple(map, prefix + "HpcClusterBusinessId", this.HpcClusterBusinessId);
         }
     }
 }

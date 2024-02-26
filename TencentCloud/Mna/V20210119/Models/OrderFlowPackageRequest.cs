@@ -60,6 +60,20 @@ namespace TencentCloud.Mna.V20210119.Models
         [JsonProperty("PackageRegion")]
         public long? PackageRegion{ get; set; }
 
+        /// <summary>
+        /// 是否自动选择代金券，默认false。
+        /// 有多张券时的选择策略：按照可支付订单全部金额的券，先到期的券，可抵扣金额最大的券，余额最小的券，现金券 这个优先级进行扣券，且最多只抵扣一张券。
+        /// </summary>
+        [JsonProperty("AutoVoucher")]
+        public bool? AutoVoucher{ get; set; }
+
+        /// <summary>
+        /// 指定代金券ID。自动选择代金券时此参数无效。目前只允许传入一张代金券。
+        /// 注：若指定的代金券不符合订单抵扣条件，则正常支付，不扣券
+        /// </summary>
+        [JsonProperty("VoucherIds")]
+        public string[] VoucherIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +84,8 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamArraySimple(map, prefix + "DeviceList.", this.DeviceList);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "PackageRegion", this.PackageRegion);
+            this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
+            this.SetParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
         }
     }
 }

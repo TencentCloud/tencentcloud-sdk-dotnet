@@ -205,7 +205,6 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// **在通过接口拉取控件信息场景下**，为出参参数，此控件是否通过表单域定位方式生成，默认false-不是，**发起合同时候不要填写此字段留空即可**
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsFormType")]
         public bool? IsFormType{ get; set; }

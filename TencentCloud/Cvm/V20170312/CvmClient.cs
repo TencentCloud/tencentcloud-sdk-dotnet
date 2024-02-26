@@ -393,6 +393,27 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// 本接口 (DeleteInstancesActionTimer) 用于删除定时任务。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInstancesActionTimerRequest"/></param>
+        /// <returns><see cref="DeleteInstancesActionTimerResponse"/></returns>
+        public Task<DeleteInstancesActionTimerResponse> DeleteInstancesActionTimer(DeleteInstancesActionTimerRequest req)
+        {
+            return InternalRequestAsync<DeleteInstancesActionTimerResponse>(req, "DeleteInstancesActionTimer");
+        }
+
+        /// <summary>
+        /// 本接口 (DeleteInstancesActionTimer) 用于删除定时任务。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInstancesActionTimerRequest"/></param>
+        /// <returns><see cref="DeleteInstancesActionTimerResponse"/></returns>
+        public DeleteInstancesActionTimerResponse DeleteInstancesActionTimerSync(DeleteInstancesActionTimerRequest req)
+        {
+            return InternalRequestAsync<DeleteInstancesActionTimerResponse>(req, "DeleteInstancesActionTimer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口 (DeleteKeyPairs) 用于删除已在腾讯云托管的密钥对。
         /// 
         /// * 可以同时删除多个密钥对。
@@ -858,6 +879,27 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// 本接口 (DescribeInstancesActionTimer) 用于查询定时任务信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesActionTimerRequest"/></param>
+        /// <returns><see cref="DescribeInstancesActionTimerResponse"/></returns>
+        public Task<DescribeInstancesActionTimerResponse> DescribeInstancesActionTimer(DescribeInstancesActionTimerRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancesActionTimerResponse>(req, "DescribeInstancesActionTimer");
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeInstancesActionTimer) 用于查询定时任务信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesActionTimerRequest"/></param>
+        /// <returns><see cref="DescribeInstancesActionTimerResponse"/></returns>
+        public DescribeInstancesActionTimerResponse DescribeInstancesActionTimerSync(DescribeInstancesActionTimerRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancesActionTimerResponse>(req, "DescribeInstancesActionTimer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口 (DescribeInstancesModification) 用于查询指定实例支持调整的机型配置。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesModificationRequest"/></param>
@@ -1264,6 +1306,27 @@ namespace TencentCloud.Cvm.V20170312
         public ImportImageResponse ImportImageSync(ImportImageRequest req)
         {
             return InternalRequestAsync<ImportImageResponse>(req, "ImportImage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 导入定时任务
+        /// </summary>
+        /// <param name="req"><see cref="ImportInstancesActionTimerRequest"/></param>
+        /// <returns><see cref="ImportInstancesActionTimerResponse"/></returns>
+        public Task<ImportInstancesActionTimerResponse> ImportInstancesActionTimer(ImportInstancesActionTimerRequest req)
+        {
+            return InternalRequestAsync<ImportInstancesActionTimerResponse>(req, "ImportInstancesActionTimer");
+        }
+
+        /// <summary>
+        /// 导入定时任务
+        /// </summary>
+        /// <param name="req"><see cref="ImportInstancesActionTimerRequest"/></param>
+        /// <returns><see cref="ImportInstancesActionTimerResponse"/></returns>
+        public ImportInstancesActionTimerResponse ImportInstancesActionTimerSync(ImportInstancesActionTimerRequest req)
+        {
+            return InternalRequestAsync<ImportInstancesActionTimerResponse>(req, "ImportInstancesActionTimer")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2275,11 +2338,12 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// 本接口 (ResizeInstanceDisks) 用于扩容实例的数据盘。
+        /// 本接口 (ResizeInstanceDisks) 用于扩容实例的磁盘。
         /// 
-        /// * 目前只支持扩容非弹性盘（[`DescribeDisks`](https://cloud.tencent.com/document/api/362/16315)接口返回值中的`Portable`为`false`表示非弹性）。
-        /// * 对于包年包月实例，使用该接口会涉及扣费，请确保账户余额充足。可通过[`DescribeAccountBalance`](https://cloud.tencent.com/document/product/555/20253)接口查询账户余额。
+        /// * 目前只支持扩容非弹性盘（[ DescribeDisks ](https://cloud.tencent.com/document/api/362/16315)接口返回值中的`Portable`为`false`表示非弹性）。
+        /// * 对于包年包月实例，使用该接口会涉及扣费，请确保账户余额充足。可通过[ DescribeAccountBalance ](https://cloud.tencent.com/document/product/555/20253)接口查询账户余额。
         /// * 目前只支持扩容一块数据盘。
+        /// * 默认扩容方式为关机后扩容。
         /// * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
         /// * 如果是系统盘，目前只支持扩容，不支持缩容。
         /// </summary>
@@ -2291,11 +2355,12 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// 本接口 (ResizeInstanceDisks) 用于扩容实例的数据盘。
+        /// 本接口 (ResizeInstanceDisks) 用于扩容实例的磁盘。
         /// 
-        /// * 目前只支持扩容非弹性盘（[`DescribeDisks`](https://cloud.tencent.com/document/api/362/16315)接口返回值中的`Portable`为`false`表示非弹性）。
-        /// * 对于包年包月实例，使用该接口会涉及扣费，请确保账户余额充足。可通过[`DescribeAccountBalance`](https://cloud.tencent.com/document/product/555/20253)接口查询账户余额。
+        /// * 目前只支持扩容非弹性盘（[ DescribeDisks ](https://cloud.tencent.com/document/api/362/16315)接口返回值中的`Portable`为`false`表示非弹性）。
+        /// * 对于包年包月实例，使用该接口会涉及扣费，请确保账户余额充足。可通过[ DescribeAccountBalance ](https://cloud.tencent.com/document/product/555/20253)接口查询账户余额。
         /// * 目前只支持扩容一块数据盘。
+        /// * 默认扩容方式为关机后扩容。
         /// * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
         /// * 如果是系统盘，目前只支持扩容，不支持缩容。
         /// </summary>

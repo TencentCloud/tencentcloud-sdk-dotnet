@@ -54,6 +54,18 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 高性能计算集群类型。
+        /// </summary>
+        [JsonProperty("HpcClusterType")]
+        public string HpcClusterType{ get; set; }
+
+        /// <summary>
+        /// 高性能计算集群对应的业务场景标识，当前只支持CDC。	
+        /// </summary>
+        [JsonProperty("HpcClusterBusinessId")]
+        public string HpcClusterBusinessId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "HpcClusterType", this.HpcClusterType);
+            this.SetParamSimple(map, prefix + "HpcClusterBusinessId", this.HpcClusterBusinessId);
         }
     }
 }

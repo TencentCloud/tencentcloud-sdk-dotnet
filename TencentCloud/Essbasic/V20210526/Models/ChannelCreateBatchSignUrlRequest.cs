@@ -96,8 +96,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string NotifyType{ get; set; }
 
         /// <summary>
-        /// 本次需要批量签署的合同流程ID列表。
-        /// 可以不传,  如不传则是发给对方的所有待签署合同流程。
+        /// 批量签署的合同流程ID数组。
+        /// 注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
         /// </summary>
         [JsonProperty("FlowIds")]
         public string[] FlowIds{ get; set; }

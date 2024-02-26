@@ -956,6 +956,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 本接口（DescribeClusterInstanceGrps）用于查询实例组信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterInstanceGroupsRequest"/></param>
+        /// <returns><see cref="DescribeClusterInstanceGroupsResponse"/></returns>
+        public Task<DescribeClusterInstanceGroupsResponse> DescribeClusterInstanceGroups(DescribeClusterInstanceGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterInstanceGroupsResponse>(req, "DescribeClusterInstanceGroups");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeClusterInstanceGrps）用于查询实例组信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterInstanceGroupsRequest"/></param>
+        /// <returns><see cref="DescribeClusterInstanceGroupsResponse"/></returns>
+        public DescribeClusterInstanceGroupsResponse DescribeClusterInstanceGroupsSync(DescribeClusterInstanceGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterInstanceGroupsResponse>(req, "DescribeClusterInstanceGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeClusterInstanceGrps）用于查询实例组信息。 该接口已废弃，推荐使用DescribeClusterInstanceGroups
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterInstanceGrpsRequest"/></param>

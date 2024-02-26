@@ -746,6 +746,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 获取设备固件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceFirmWareRequest"/></param>
+        /// <returns><see cref="DescribeDeviceFirmWareResponse"/></returns>
+        public Task<DescribeDeviceFirmWareResponse> DescribeDeviceFirmWare(DescribeDeviceFirmWareRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceFirmWareResponse>(req, "DescribeDeviceFirmWare");
+        }
+
+        /// <summary>
+        /// 获取设备固件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceFirmWareRequest"/></param>
+        /// <returns><see cref="DescribeDeviceFirmWareResponse"/></returns>
+        public DescribeDeviceFirmWareResponse DescribeDeviceFirmWareSync(DescribeDeviceFirmWareRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceFirmWareResponse>(req, "DescribeDeviceFirmWare")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取实时位置解析
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceLocationSolveRequest"/></param>
