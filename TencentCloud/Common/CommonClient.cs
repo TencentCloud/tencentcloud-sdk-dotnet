@@ -15,7 +15,6 @@
  * under the License.
  */
 
-using Newtonsoft.Json;
 using System.Threading.Tasks;
 using TencentCloud.Common.Profile;
 
@@ -36,10 +35,7 @@ namespace TencentCloud.Common
 
         public Task<TRep> CallAsync<TRep>(CommonRequest req, string action)
         {
-            return InternalRequest(req, action)
-                .ContinueWith(
-                    task => JsonConvert.DeserializeObject<JsonResponseModel<TRep>>(task.Result).Response
-                );
+            return InternalRequestAsync<TRep>(req, action);
         }
 
         public string Call(CommonRequest req, string action)

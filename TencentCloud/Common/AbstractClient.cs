@@ -146,7 +146,6 @@ namespace TencentCloud.Common
         }
 
         protected async Task<T> InternalRequestAsync<T>(AbstractModel request, string actionName)
-            where T : AbstractModel
         {
             if (Profile.HttpProfile.ReqMethod != HttpProfile.REQ_GET &&
                 Profile.HttpProfile.ReqMethod != HttpProfile.REQ_POST)
@@ -177,7 +176,6 @@ namespace TencentCloud.Common
         }
 
         private async Task<T> ReadJsonResponseAsync<T>(HttpResponseMessage response)
-            where T : AbstractModel
         {
             string strResp = null;
             try
@@ -209,7 +207,6 @@ namespace TencentCloud.Common
         }
 
         private Task<T> ReadSSEResponseAsync<T>(HttpResponseMessage response)
-            where T : AbstractModel
         {
             if (!typeof(AbstractSSEModel).IsAssignableFrom(typeof(T)))
             {
@@ -227,7 +224,7 @@ namespace TencentCloud.Common
             resp.RequestId = response.Headers.GetValues("X-TC-RequestId").FirstOrDefault();
             resp.Response = response;
 
-            return Task.FromResult(resp as T);
+            return Task.FromResult((T)(object)resp);
         }
 
         private async Task<HttpResponseMessage> RequestV3(AbstractModel request, string actionName)
