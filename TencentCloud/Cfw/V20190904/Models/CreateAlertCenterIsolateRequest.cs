@@ -55,7 +55,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public long?[] IsolateType{ get; set; }
 
         /// <summary>
-        /// 运维模式 1 IP白名单 2 身份认证
+        /// 运维模式 1 IP白名单 2 身份认证  0 非运维模式
         /// </summary>
         [JsonProperty("OmMode")]
         public long? OmMode{ get; set; }

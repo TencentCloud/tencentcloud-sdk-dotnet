@@ -97,7 +97,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 设置 root 帐号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
+        /// 设置 root 账号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

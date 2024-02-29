@@ -78,6 +78,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("DynamicPosType")]
         public ulong? DynamicPosType{ get; set; }
 
+        /// <summary>
+        /// 水印在输出时的层级，不填默认为0。
+        /// </summary>
+        [JsonProperty("ZOrder")]
+        public ulong? ZOrder{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "FontColor", this.FontColor);
             this.SetParamSimple(map, prefix + "BackGroundColor", this.BackGroundColor);
             this.SetParamSimple(map, prefix + "DynamicPosType", this.DynamicPosType);
+            this.SetParamSimple(map, prefix + "ZOrder", this.ZOrder);
         }
     }
 }

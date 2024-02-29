@@ -32,6 +32,16 @@ namespace TencentCloud.Mna.V20210119.Models
         public MonitorData[] MonitorData{ get; set; }
 
         /// <summary>
+        /// 接入区域。取值范围：['MC','AP','EU','AM']
+        /// MC=中国大陆
+        /// AP=亚太
+        /// EU=欧洲
+        /// AM=美洲
+        /// </summary>
+        [JsonProperty("AccessRegion")]
+        public string AccessRegion{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -44,6 +54,7 @@ namespace TencentCloud.Mna.V20210119.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "MonitorData.", this.MonitorData);
+            this.SetParamSimple(map, prefix + "AccessRegion", this.AccessRegion);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

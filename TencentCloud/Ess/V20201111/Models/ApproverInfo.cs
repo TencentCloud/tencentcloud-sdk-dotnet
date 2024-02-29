@@ -235,9 +235,9 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <li>图片控件</li>
         /// <li>数据表格等填写控件</li></ul>
         /// 
-        /// 具体使用说明可参考[为签署方指定填写控件](https%3A%2F%2Fqian.tencent.cn%2Fdevelopers%2Fcompany%2FcreateFlowByFiles%2F%23%E6%8C%87%E5%AE%9A%E7%AD%BE%E7%BD%B2%E6%96%B9%E5%A1%AB%E5%86%99%E6%8E%A7%E4%BB%B6)
+        /// 具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/company/createFlowByFiles/#指定签署方填写控件)
         /// 
-        /// 注1：`此参数仅在通过文件发起合同或者合同组时生效`
+        /// 注：`此参数仅在通过文件发起合同或者合同组时生效`
         /// </summary>
         [JsonProperty("Components")]
         public Component[] Components{ get; set; }

@@ -48,6 +48,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Event")]
         public string Event{ get; set; }
 
+        /// <summary>
+        /// 本次批量操作涉及任务，用于审计
+        /// </summary>
+        [JsonProperty("TaskNames")]
+        public string[] TaskNames{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "Event", this.Event);
+            this.SetParamArraySimple(map, prefix + "TaskNames.", this.TaskNames);
         }
     }
 }

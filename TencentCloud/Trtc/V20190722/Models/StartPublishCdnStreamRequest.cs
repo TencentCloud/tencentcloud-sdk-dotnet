@@ -85,7 +85,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public McuSeiParams SeiParams{ get; set; }
 
         /// <summary>
-        /// 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用特殊的SDK版本，如您有需求，请联系腾讯云技术支持。
+        /// 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。
         /// </summary>
         [JsonProperty("FeedBackRoomParams")]
         public McuFeedBackRoomParams[] FeedBackRoomParams{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.954";
+       private const string sdkVersion = "SDK_NET_3.0.955";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Ccc.V20200210
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 停止预测式外呼任务
+        /// </summary>
+        /// <param name="req"><see cref="AbortPredictiveDialingCampaignRequest"/></param>
+        /// <returns><see cref="AbortPredictiveDialingCampaignResponse"/></returns>
+        public Task<AbortPredictiveDialingCampaignResponse> AbortPredictiveDialingCampaign(AbortPredictiveDialingCampaignRequest req)
+        {
+            return InternalRequestAsync<AbortPredictiveDialingCampaignResponse>(req, "AbortPredictiveDialingCampaign");
+        }
+
+        /// <summary>
+        /// 停止预测式外呼任务
+        /// </summary>
+        /// <param name="req"><see cref="AbortPredictiveDialingCampaignRequest"/></param>
+        /// <returns><see cref="AbortPredictiveDialingCampaignResponse"/></returns>
+        public AbortPredictiveDialingCampaignResponse AbortPredictiveDialingCampaignSync(AbortPredictiveDialingCampaignRequest req)
+        {
+            return InternalRequestAsync<AbortPredictiveDialingCampaignResponse>(req, "AbortPredictiveDialingCampaign")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -222,6 +243,27 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 创建预测式外呼任务
+        /// </summary>
+        /// <param name="req"><see cref="CreatePredictiveDialingCampaignRequest"/></param>
+        /// <returns><see cref="CreatePredictiveDialingCampaignResponse"/></returns>
+        public Task<CreatePredictiveDialingCampaignResponse> CreatePredictiveDialingCampaign(CreatePredictiveDialingCampaignRequest req)
+        {
+            return InternalRequestAsync<CreatePredictiveDialingCampaignResponse>(req, "CreatePredictiveDialingCampaign");
+        }
+
+        /// <summary>
+        /// 创建预测式外呼任务
+        /// </summary>
+        /// <param name="req"><see cref="CreatePredictiveDialingCampaignRequest"/></param>
+        /// <returns><see cref="CreatePredictiveDialingCampaignResponse"/></returns>
+        public CreatePredictiveDialingCampaignResponse CreatePredictiveDialingCampaignSync(CreatePredictiveDialingCampaignRequest req)
+        {
+            return InternalRequestAsync<CreatePredictiveDialingCampaignResponse>(req, "CreatePredictiveDialingCampaign")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建 SDK 登录 Token。
         /// </summary>
         /// <param name="req"><see cref="CreateSDKLoginTokenRequest"/></param>
@@ -302,6 +344,27 @@ namespace TencentCloud.Ccc.V20200210
         public DeleteExtensionResponse DeleteExtensionSync(DeleteExtensionRequest req)
         {
             return InternalRequestAsync<DeleteExtensionResponse>(req, "DeleteExtension")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除预测式外呼任务
+        /// </summary>
+        /// <param name="req"><see cref="DeletePredictiveDialingCampaignRequest"/></param>
+        /// <returns><see cref="DeletePredictiveDialingCampaignResponse"/></returns>
+        public Task<DeletePredictiveDialingCampaignResponse> DeletePredictiveDialingCampaign(DeletePredictiveDialingCampaignRequest req)
+        {
+            return InternalRequestAsync<DeletePredictiveDialingCampaignResponse>(req, "DeletePredictiveDialingCampaign");
+        }
+
+        /// <summary>
+        /// 删除预测式外呼任务
+        /// </summary>
+        /// <param name="req"><see cref="DeletePredictiveDialingCampaignRequest"/></param>
+        /// <returns><see cref="DeletePredictiveDialingCampaignResponse"/></returns>
+        public DeletePredictiveDialingCampaignResponse DeletePredictiveDialingCampaignSync(DeletePredictiveDialingCampaignRequest req)
+        {
+            return InternalRequestAsync<DeletePredictiveDialingCampaignResponse>(req, "DeletePredictiveDialingCampaign")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -604,6 +667,69 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 查询预测式外呼任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribePredictiveDialingCampaignRequest"/></param>
+        /// <returns><see cref="DescribePredictiveDialingCampaignResponse"/></returns>
+        public Task<DescribePredictiveDialingCampaignResponse> DescribePredictiveDialingCampaign(DescribePredictiveDialingCampaignRequest req)
+        {
+            return InternalRequestAsync<DescribePredictiveDialingCampaignResponse>(req, "DescribePredictiveDialingCampaign");
+        }
+
+        /// <summary>
+        /// 查询预测式外呼任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribePredictiveDialingCampaignRequest"/></param>
+        /// <returns><see cref="DescribePredictiveDialingCampaignResponse"/></returns>
+        public DescribePredictiveDialingCampaignResponse DescribePredictiveDialingCampaignSync(DescribePredictiveDialingCampaignRequest req)
+        {
+            return InternalRequestAsync<DescribePredictiveDialingCampaignResponse>(req, "DescribePredictiveDialingCampaign")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询预测式外呼任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePredictiveDialingCampaignsRequest"/></param>
+        /// <returns><see cref="DescribePredictiveDialingCampaignsResponse"/></returns>
+        public Task<DescribePredictiveDialingCampaignsResponse> DescribePredictiveDialingCampaigns(DescribePredictiveDialingCampaignsRequest req)
+        {
+            return InternalRequestAsync<DescribePredictiveDialingCampaignsResponse>(req, "DescribePredictiveDialingCampaigns");
+        }
+
+        /// <summary>
+        /// 查询预测式外呼任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePredictiveDialingCampaignsRequest"/></param>
+        /// <returns><see cref="DescribePredictiveDialingCampaignsResponse"/></returns>
+        public DescribePredictiveDialingCampaignsResponse DescribePredictiveDialingCampaignsSync(DescribePredictiveDialingCampaignsRequest req)
+        {
+            return InternalRequestAsync<DescribePredictiveDialingCampaignsResponse>(req, "DescribePredictiveDialingCampaigns")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询预测式外呼呼叫列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePredictiveDialingSessionsRequest"/></param>
+        /// <returns><see cref="DescribePredictiveDialingSessionsResponse"/></returns>
+        public Task<DescribePredictiveDialingSessionsResponse> DescribePredictiveDialingSessions(DescribePredictiveDialingSessionsRequest req)
+        {
+            return InternalRequestAsync<DescribePredictiveDialingSessionsResponse>(req, "DescribePredictiveDialingSessions");
+        }
+
+        /// <summary>
+        /// 查询预测式外呼呼叫列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePredictiveDialingSessionsRequest"/></param>
+        /// <returns><see cref="DescribePredictiveDialingSessionsResponse"/></returns>
+        public DescribePredictiveDialingSessionsResponse DescribePredictiveDialingSessionsSync(DescribePredictiveDialingSessionsRequest req)
+        {
+            return InternalRequestAsync<DescribePredictiveDialingSessionsResponse>(req, "DescribePredictiveDialingSessions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取主被叫受保护的电话服务记录与录音
         /// </summary>
         /// <param name="req"><see cref="DescribeProtectedTelCdrRequest"/></param>
@@ -835,6 +961,27 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 暂停预测式外呼任务
+        /// </summary>
+        /// <param name="req"><see cref="PausePredictiveDialingCampaignRequest"/></param>
+        /// <returns><see cref="PausePredictiveDialingCampaignResponse"/></returns>
+        public Task<PausePredictiveDialingCampaignResponse> PausePredictiveDialingCampaign(PausePredictiveDialingCampaignRequest req)
+        {
+            return InternalRequestAsync<PausePredictiveDialingCampaignResponse>(req, "PausePredictiveDialingCampaign");
+        }
+
+        /// <summary>
+        /// 暂停预测式外呼任务
+        /// </summary>
+        /// <param name="req"><see cref="PausePredictiveDialingCampaignRequest"/></param>
+        /// <returns><see cref="PausePredictiveDialingCampaignResponse"/></returns>
+        public PausePredictiveDialingCampaignResponse PausePredictiveDialingCampaignSync(PausePredictiveDialingCampaignRequest req)
+        {
+            return InternalRequestAsync<PausePredictiveDialingCampaignResponse>(req, "PausePredictiveDialingCampaign")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 重置话机注册密码
         /// </summary>
         /// <param name="req"><see cref="ResetExtensionPasswordRequest"/></param>
@@ -852,6 +999,27 @@ namespace TencentCloud.Ccc.V20200210
         public ResetExtensionPasswordResponse ResetExtensionPasswordSync(ResetExtensionPasswordRequest req)
         {
             return InternalRequestAsync<ResetExtensionPasswordResponse>(req, "ResetExtensionPassword")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 恢复预测式外呼任务
+        /// </summary>
+        /// <param name="req"><see cref="ResumePredictiveDialingCampaignRequest"/></param>
+        /// <returns><see cref="ResumePredictiveDialingCampaignResponse"/></returns>
+        public Task<ResumePredictiveDialingCampaignResponse> ResumePredictiveDialingCampaign(ResumePredictiveDialingCampaignRequest req)
+        {
+            return InternalRequestAsync<ResumePredictiveDialingCampaignResponse>(req, "ResumePredictiveDialingCampaign");
+        }
+
+        /// <summary>
+        /// 恢复预测式外呼任务
+        /// </summary>
+        /// <param name="req"><see cref="ResumePredictiveDialingCampaignRequest"/></param>
+        /// <returns><see cref="ResumePredictiveDialingCampaignResponse"/></returns>
+        public ResumePredictiveDialingCampaignResponse ResumePredictiveDialingCampaignSync(ResumePredictiveDialingCampaignRequest req)
+        {
+            return InternalRequestAsync<ResumePredictiveDialingCampaignResponse>(req, "ResumePredictiveDialingCampaign")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -915,6 +1083,27 @@ namespace TencentCloud.Ccc.V20200210
         public UnbindStaffSkillGroupListResponse UnbindStaffSkillGroupListSync(UnbindStaffSkillGroupListRequest req)
         {
             return InternalRequestAsync<UnbindStaffSkillGroupListResponse>(req, "UnbindStaffSkillGroupList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 任务未启动前，更新预测式外呼任务。
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePredictiveDialingCampaignRequest"/></param>
+        /// <returns><see cref="UpdatePredictiveDialingCampaignResponse"/></returns>
+        public Task<UpdatePredictiveDialingCampaignResponse> UpdatePredictiveDialingCampaign(UpdatePredictiveDialingCampaignRequest req)
+        {
+            return InternalRequestAsync<UpdatePredictiveDialingCampaignResponse>(req, "UpdatePredictiveDialingCampaign");
+        }
+
+        /// <summary>
+        /// 任务未启动前，更新预测式外呼任务。
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePredictiveDialingCampaignRequest"/></param>
+        /// <returns><see cref="UpdatePredictiveDialingCampaignResponse"/></returns>
+        public UpdatePredictiveDialingCampaignResponse UpdatePredictiveDialingCampaignSync(UpdatePredictiveDialingCampaignRequest req)
+        {
+            return InternalRequestAsync<UpdatePredictiveDialingCampaignResponse>(req, "UpdatePredictiveDialingCampaign")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

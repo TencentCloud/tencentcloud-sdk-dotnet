@@ -267,7 +267,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <li>图片控件</li>
         /// <li>数据表格等填写控件</li></ul>
         /// 
-        /// 具体使用说明可参考[为签署方指定填写控件](https%3A%2F%2Fqian.tencent.cn%2Fdevelopers%2Fpartner%2FcreateFlowByFiles%23%E4%B8%BA%E7%AD%BE%E7%BD%B2%E6%96%B9%E6%8C%87%E5%AE%9A%E5%A1%AB%E5%86%99%E6%8E%A7%E4%BB%B6)
+        /// 具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/partner/createFlowByFiles#为签署方指定填写控件)
         /// 
         /// 
         /// 注：`此参数仅在通过文件发起合同或者合同组时生效`

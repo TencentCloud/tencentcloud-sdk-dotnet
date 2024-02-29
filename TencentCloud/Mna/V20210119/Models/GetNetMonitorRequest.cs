@@ -48,6 +48,12 @@ namespace TencentCloud.Mna.V20210119.Models
         [JsonProperty("Metrics")]
         public string Metrics{ get; set; }
 
+        /// <summary>
+        /// 网关类型。0：公有云网关；1：自有网关。不传默认为0。
+        /// </summary>
+        [JsonProperty("GatewayType")]
+        public long? GatewayType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Metrics", this.Metrics);
+            this.SetParamSimple(map, prefix + "GatewayType", this.GatewayType);
         }
     }
 }

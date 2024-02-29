@@ -25,12 +25,6 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 任务id
-        /// </summary>
-        [JsonProperty("TaskIds")]
-        public string[] TaskIds{ get; set; }
-
-        /// <summary>
         /// 任务类型
         /// </summary>
         [JsonProperty("TaskType")]
@@ -42,15 +36,28 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
+        /// <summary>
+        /// 任务id
+        /// </summary>
+        [JsonProperty("TaskIds")]
+        public string[] TaskIds{ get; set; }
+
+        /// <summary>
+        /// 批量运行集成任务，目前仅实时集成用到了这个参数
+        /// </summary>
+        [JsonProperty("StartTaskInfoSet")]
+        public StartTaskInfo[] StartTaskInfoSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "TaskIds.", this.TaskIds);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamArraySimple(map, prefix + "TaskIds.", this.TaskIds);
+            this.SetParamArrayObj(map, prefix + "StartTaskInfoSet.", this.StartTaskInfoSet);
         }
     }
 }

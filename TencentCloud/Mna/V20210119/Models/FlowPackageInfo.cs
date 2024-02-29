@@ -57,6 +57,13 @@ namespace TencentCloud.Mna.V20210119.Models
         public long? Status{ get; set; }
 
         /// <summary>
+        /// 购买时间，Unix时间戳格式，单位：秒
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public long? CreateTime{ get; set; }
+
+        /// <summary>
         /// 生效时间，Unix时间戳格式，单位：秒
         /// </summary>
         [JsonProperty("ActiveTime")]
@@ -92,6 +99,12 @@ namespace TencentCloud.Mna.V20210119.Models
         [JsonProperty("RenewFlag")]
         public bool? RenewFlag{ get; set; }
 
+        /// <summary>
+        /// 资源包变更状态，0：未发生变配；1：变配中；2：已变配或已续费
+        /// </summary>
+        [JsonProperty("ModifyStatus")]
+        public long? ModifyStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,12 +115,14 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ActiveTime", this.ActiveTime);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamArraySimple(map, prefix + "DeviceList.", this.DeviceList);
             this.SetParamSimple(map, prefix + "CapacitySize", this.CapacitySize);
             this.SetParamSimple(map, prefix + "CapacityRemain", this.CapacityRemain);
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+            this.SetParamSimple(map, prefix + "ModifyStatus", this.ModifyStatus);
         }
     }
 }

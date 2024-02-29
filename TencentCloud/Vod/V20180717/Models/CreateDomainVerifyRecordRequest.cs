@@ -24,12 +24,19 @@ namespace TencentCloud.Vod.V20180717.Models
     public class CreateDomainVerifyRecordRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 需要接入点播的加速域名。
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
         }
     }
 }

@@ -25,7 +25,8 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 字段名
+        /// 字段名； 过滤
+        /// 子订单号过滤通过name 为：DealName； value为子订单号
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

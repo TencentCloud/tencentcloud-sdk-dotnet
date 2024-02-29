@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.954";
+       private const string sdkVersion = "SDK_NET_3.0.955";
 
         /// <summary>
         /// Client constructor.
@@ -1788,6 +1788,31 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 该接口用于查询默认分发配置。
+        /// * 分发域名和分发协议，即媒体文件分发 URL 中的域名和协议。媒体文件按默认分发配置进行分发。
+        /// * 播放密钥，用于计算播放器签名。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDefaultDistributionConfigRequest"/></param>
+        /// <returns><see cref="DescribeDefaultDistributionConfigResponse"/></returns>
+        public Task<DescribeDefaultDistributionConfigResponse> DescribeDefaultDistributionConfig(DescribeDefaultDistributionConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeDefaultDistributionConfigResponse>(req, "DescribeDefaultDistributionConfig");
+        }
+
+        /// <summary>
+        /// 该接口用于查询默认分发配置。
+        /// * 分发域名和分发协议，即媒体文件分发 URL 中的域名和协议。媒体文件按默认分发配置进行分发。
+        /// * 播放密钥，用于计算播放器签名。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDefaultDistributionConfigRequest"/></param>
+        /// <returns><see cref="DescribeDefaultDistributionConfigResponse"/></returns>
+        public DescribeDefaultDistributionConfigResponse DescribeDefaultDistributionConfigSync(DescribeDefaultDistributionConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeDefaultDistributionConfigResponse>(req, "DescribeDefaultDistributionConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本 API 是 [旧版本加密](https://cloud.tencent.com/document/product/266/9638) 中 [DescribeDrmDataKey 的 API 2017 接口](https://cloud.tencent.com/document/product/266/9643) 的升级版本。
         /// 
         /// 如果您是新接入点播加密的用户，不要使用该 API，请参考 [视频加密综述](https://cloud.tencent.com/document/product/266/45552) 使用推荐的加密方式。
@@ -3058,6 +3083,31 @@ namespace TencentCloud.Vod.V20180717
         public ModifyContentReviewTemplateResponse ModifyContentReviewTemplateSync(ModifyContentReviewTemplateRequest req)
         {
             return InternalRequestAsync<ModifyContentReviewTemplateResponse>(req, "ModifyContentReviewTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于修改默认分发配置。
+        /// * 分发域名和分发协议，即媒体文件分发 URL 中的域名和协议。媒体文件按默认分发配置进行分发。
+        /// * 播放密钥，用于计算播放器签名。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDefaultDistributionConfigRequest"/></param>
+        /// <returns><see cref="ModifyDefaultDistributionConfigResponse"/></returns>
+        public Task<ModifyDefaultDistributionConfigResponse> ModifyDefaultDistributionConfig(ModifyDefaultDistributionConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyDefaultDistributionConfigResponse>(req, "ModifyDefaultDistributionConfig");
+        }
+
+        /// <summary>
+        /// 该接口用于修改默认分发配置。
+        /// * 分发域名和分发协议，即媒体文件分发 URL 中的域名和协议。媒体文件按默认分发配置进行分发。
+        /// * 播放密钥，用于计算播放器签名。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDefaultDistributionConfigRequest"/></param>
+        /// <returns><see cref="ModifyDefaultDistributionConfigResponse"/></returns>
+        public ModifyDefaultDistributionConfigResponse ModifyDefaultDistributionConfigSync(ModifyDefaultDistributionConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyDefaultDistributionConfigResponse>(req, "ModifyDefaultDistributionConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

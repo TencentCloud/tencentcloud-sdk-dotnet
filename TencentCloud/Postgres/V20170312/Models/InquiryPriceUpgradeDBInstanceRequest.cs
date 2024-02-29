@@ -48,6 +48,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
+        /// <summary>
+        /// 实例的Cpu大小，单位Core
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public long? Cpu{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
         }
     }
 }

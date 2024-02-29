@@ -43,6 +43,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
+        /// 本次批量操作涉及成功任务，用于审计
+        /// </summary>
+        [JsonProperty("TaskNames")]
+        public string[] TaskNames{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +63,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "SuccessCount", this.SuccessCount);
             this.SetParamSimple(map, prefix + "FailedCount", this.FailedCount);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArraySimple(map, prefix + "TaskNames.", this.TaskNames);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

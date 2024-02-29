@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.954</VersionPrefix>
+    <VersionPrefix>3.0.955</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -351,6 +351,8 @@
     <Compile Include="V20180717\Models\DescribeDailyMostPlayedStatResponse.cs" />
     <Compile Include="V20180717\Models\DescribeDailyPlayStatFileListRequest.cs" />
     <Compile Include="V20180717\Models\DescribeDailyPlayStatFileListResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeDefaultDistributionConfigRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeDefaultDistributionConfigResponse.cs" />
     <Compile Include="V20180717\Models\DescribeDrmDataKeyRequest.cs" />
     <Compile Include="V20180717\Models\DescribeDrmDataKeyResponse.cs" />
     <Compile Include="V20180717\Models\DescribeDrmKeyProviderInfoRequest.cs" />
@@ -574,6 +576,8 @@
     <Compile Include="V20180717\Models\ModifyClassResponse.cs" />
     <Compile Include="V20180717\Models\ModifyContentReviewTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ModifyContentReviewTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\ModifyDefaultDistributionConfigRequest.cs" />
+    <Compile Include="V20180717\Models\ModifyDefaultDistributionConfigResponse.cs" />
     <Compile Include="V20180717\Models\ModifyDefaultStorageRegionRequest.cs" />
     <Compile Include="V20180717\Models\ModifyDefaultStorageRegionResponse.cs" />
     <Compile Include="V20180717\Models\ModifyEnhanceMediaTemplateRequest.cs" />

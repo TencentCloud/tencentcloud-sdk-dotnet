@@ -85,6 +85,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("SwitchEndTime")]
         public string SwitchEndTime{ get; set; }
 
+        /// <summary>
+        /// 修改后的实例CPU大小，单位Core。
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public ulong? Cpu{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "SwitchTag", this.SwitchTag);
             this.SetParamSimple(map, prefix + "SwitchStartTime", this.SwitchStartTime);
             this.SetParamSimple(map, prefix + "SwitchEndTime", this.SwitchEndTime);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
         }
     }
 }

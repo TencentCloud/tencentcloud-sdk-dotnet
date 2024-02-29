@@ -25,29 +25,29 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 全文索引配置, 如果为空时代表未开启全文索引
+        /// 全文索引配置, 为空时代表未开启全文索引
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FullText")]
         public FullTextInfo FullText{ get; set; }
 
         /// <summary>
-        /// 键值索引配置，如果为空时代表未开启键值索引
+        /// 键值索引配置，为空时代表未开启键值索引
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeyValue")]
         public RuleKeyValueInfo KeyValue{ get; set; }
 
         /// <summary>
-        /// 元字段索引配置，如果为空时代表未开启元字段索引
+        /// 元字段索引配置，为空时代表未开启元字段索引
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tag")]
         public RuleTagInfo Tag{ get; set; }
 
         /// <summary>
-        /// 动态索引配置，为空时代表未开启动态索引。
-        /// 启用后将自动把日志内的字段添加到键值索引字段列表中，包括日志中新增的字段。
+        /// 键值索引自动配置，为空时代表未开启该功能。
+        /// 启用后自动将日志内的字段添加到键值索引中，包括日志中后续新增的字段。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DynamicIndex")]

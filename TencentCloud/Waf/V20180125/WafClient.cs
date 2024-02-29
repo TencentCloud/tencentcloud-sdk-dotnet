@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.954";
+       private const string sdkVersion = "SDK_NET_3.0.955";
 
         /// <summary>
         /// Client constructor.
@@ -218,6 +218,27 @@ namespace TencentCloud.Waf.V20180125
         public CreateAccessExportResponse CreateAccessExportSync(CreateAccessExportRequest req)
         {
             return InternalRequestAsync<CreateAccessExportResponse>(req, "CreateAccessExport")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 计费资源购买、续费下单接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateDealsRequest"/></param>
+        /// <returns><see cref="CreateDealsResponse"/></returns>
+        public Task<CreateDealsResponse> CreateDeals(CreateDealsRequest req)
+        {
+            return InternalRequestAsync<CreateDealsResponse>(req, "CreateDeals");
+        }
+
+        /// <summary>
+        /// 计费资源购买、续费下单接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateDealsRequest"/></param>
+        /// <returns><see cref="CreateDealsResponse"/></returns>
+        public CreateDealsResponse CreateDealsSync(CreateDealsRequest req)
+        {
+            return InternalRequestAsync<CreateDealsResponse>(req, "CreateDeals")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

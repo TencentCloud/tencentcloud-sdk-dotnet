@@ -54,6 +54,18 @@ namespace TencentCloud.Mna.V20210119.Models
         [JsonProperty("TimeGranularity")]
         public long? TimeGranularity{ get; set; }
 
+        /// <summary>
+        /// 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填默认中国大陆
+        /// </summary>
+        [JsonProperty("AccessRegion")]
+        public string AccessRegion{ get; set; }
+
+        /// <summary>
+        /// 网关类型。0：公有云网关；1：自有网关。不传默认为0。
+        /// </summary>
+        [JsonProperty("GatewayType")]
+        public long? GatewayType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "TimeGranularity", this.TimeGranularity);
+            this.SetParamSimple(map, prefix + "AccessRegion", this.AccessRegion);
+            this.SetParamSimple(map, prefix + "GatewayType", this.GatewayType);
         }
     }
 }

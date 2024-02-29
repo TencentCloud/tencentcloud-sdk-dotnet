@@ -31,13 +31,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 备份文件列表大小，取值范围(0,100]
+        /// 返回数量，取值范围(0,100]
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 备份文件列表偏移，取值范围[0,INF)
+        /// 记录偏移量，取值范围[0,INF)
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
@@ -62,7 +62,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string BackupType{ get; set; }
 
         /// <summary>
-        /// 备份方式，可选值：auto，自动备份；manual，手动备
+        /// 备份方式，可选值：auto，自动备份；manual，手动备份
         /// </summary>
         [JsonProperty("BackupMethod")]
         public string BackupMethod{ get; set; }

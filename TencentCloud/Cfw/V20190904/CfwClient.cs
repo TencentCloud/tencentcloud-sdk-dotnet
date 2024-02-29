@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.954";
+       private const string sdkVersion = "SDK_NET_3.0.955";
 
         /// <summary>
         /// Client constructor.
@@ -285,6 +285,27 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 批量添加入侵防御封禁列表、放通列表规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateBlockIgnoreRuleNewRequest"/></param>
+        /// <returns><see cref="CreateBlockIgnoreRuleNewResponse"/></returns>
+        public Task<CreateBlockIgnoreRuleNewResponse> CreateBlockIgnoreRuleNew(CreateBlockIgnoreRuleNewRequest req)
+        {
+            return InternalRequestAsync<CreateBlockIgnoreRuleNewResponse>(req, "CreateBlockIgnoreRuleNew");
+        }
+
+        /// <summary>
+        /// 批量添加入侵防御封禁列表、放通列表规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateBlockIgnoreRuleNewRequest"/></param>
+        /// <returns><see cref="CreateBlockIgnoreRuleNewResponse"/></returns>
+        public CreateBlockIgnoreRuleNewResponse CreateBlockIgnoreRuleNewSync(CreateBlockIgnoreRuleNewRequest req)
+        {
+            return InternalRequestAsync<CreateBlockIgnoreRuleNewResponse>(req, "CreateBlockIgnoreRuleNew")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建、选择vpc
         /// </summary>
         /// <param name="req"><see cref="CreateChooseVpcsRequest"/></param>
@@ -512,6 +533,27 @@ namespace TencentCloud.Cfw.V20190904
         public DeleteBlockIgnoreRuleListResponse DeleteBlockIgnoreRuleListSync(DeleteBlockIgnoreRuleListRequest req)
         {
             return InternalRequestAsync<DeleteBlockIgnoreRuleListResponse>(req, "DeleteBlockIgnoreRuleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量删除入侵防御封禁列表、放通列表规则（新）
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBlockIgnoreRuleNewRequest"/></param>
+        /// <returns><see cref="DeleteBlockIgnoreRuleNewResponse"/></returns>
+        public Task<DeleteBlockIgnoreRuleNewResponse> DeleteBlockIgnoreRuleNew(DeleteBlockIgnoreRuleNewRequest req)
+        {
+            return InternalRequestAsync<DeleteBlockIgnoreRuleNewResponse>(req, "DeleteBlockIgnoreRuleNew");
+        }
+
+        /// <summary>
+        /// 批量删除入侵防御封禁列表、放通列表规则（新）
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBlockIgnoreRuleNewRequest"/></param>
+        /// <returns><see cref="DeleteBlockIgnoreRuleNewResponse"/></returns>
+        public DeleteBlockIgnoreRuleNewResponse DeleteBlockIgnoreRuleNewSync(DeleteBlockIgnoreRuleNewRequest req)
+        {
+            return InternalRequestAsync<DeleteBlockIgnoreRuleNewResponse>(req, "DeleteBlockIgnoreRuleNew")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1673,6 +1715,27 @@ namespace TencentCloud.Cfw.V20190904
         public ModifyBlockIgnoreRuleResponse ModifyBlockIgnoreRuleSync(ModifyBlockIgnoreRuleRequest req)
         {
             return InternalRequestAsync<ModifyBlockIgnoreRuleResponse>(req, "ModifyBlockIgnoreRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 编辑单条入侵防御封禁列表、放通列表规则（新）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBlockIgnoreRuleNewRequest"/></param>
+        /// <returns><see cref="ModifyBlockIgnoreRuleNewResponse"/></returns>
+        public Task<ModifyBlockIgnoreRuleNewResponse> ModifyBlockIgnoreRuleNew(ModifyBlockIgnoreRuleNewRequest req)
+        {
+            return InternalRequestAsync<ModifyBlockIgnoreRuleNewResponse>(req, "ModifyBlockIgnoreRuleNew");
+        }
+
+        /// <summary>
+        /// 编辑单条入侵防御封禁列表、放通列表规则（新）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBlockIgnoreRuleNewRequest"/></param>
+        /// <returns><see cref="ModifyBlockIgnoreRuleNewResponse"/></returns>
+        public ModifyBlockIgnoreRuleNewResponse ModifyBlockIgnoreRuleNewSync(ModifyBlockIgnoreRuleNewRequest req)
+        {
+            return InternalRequestAsync<ModifyBlockIgnoreRuleNewResponse>(req, "ModifyBlockIgnoreRuleNew")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
