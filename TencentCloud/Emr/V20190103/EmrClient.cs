@@ -28,6 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
+       private const string sdkVersion = "SDK_NET_3.0.954";
 
         /// <summary>
         /// Client constructor.
@@ -35,7 +36,7 @@ namespace TencentCloud.Emr.V20190103
         /// <param name="credential">Credentials.</param>
         /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public EmrClient(Credential credential, string region)
-            : this(credential, region, new ClientProfile())
+            : this(credential, region, new ClientProfile { Language = Language.ZH_CN })
         {
 
         }
@@ -49,7 +50,28 @@ namespace TencentCloud.Emr.V20190103
         public EmrClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
+            SdkVersion = sdkVersion;
+        }
 
+        /// <summary>
+        /// 添加扩缩容规则，按负载和时间
+        /// </summary>
+        /// <param name="req"><see cref="AddMetricScaleStrategyRequest"/></param>
+        /// <returns><see cref="AddMetricScaleStrategyResponse"/></returns>
+        public Task<AddMetricScaleStrategyResponse> AddMetricScaleStrategy(AddMetricScaleStrategyRequest req)
+        {
+            return InternalRequestAsync<AddMetricScaleStrategyResponse>(req, "AddMetricScaleStrategy");
+        }
+
+        /// <summary>
+        /// 添加扩缩容规则，按负载和时间
+        /// </summary>
+        /// <param name="req"><see cref="AddMetricScaleStrategyRequest"/></param>
+        /// <returns><see cref="AddMetricScaleStrategyResponse"/></returns>
+        public AddMetricScaleStrategyResponse AddMetricScaleStrategySync(AddMetricScaleStrategyRequest req)
+        {
+            return InternalRequestAsync<AddMetricScaleStrategyResponse>(req, "AddMetricScaleStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -118,6 +140,27 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 删除自动扩缩容规则，后台销毁根据该规则扩缩容出来的节点
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAutoScaleStrategyRequest"/></param>
+        /// <returns><see cref="DeleteAutoScaleStrategyResponse"/></returns>
+        public Task<DeleteAutoScaleStrategyResponse> DeleteAutoScaleStrategy(DeleteAutoScaleStrategyRequest req)
+        {
+            return InternalRequestAsync<DeleteAutoScaleStrategyResponse>(req, "DeleteAutoScaleStrategy");
+        }
+
+        /// <summary>
+        /// 删除自动扩缩容规则，后台销毁根据该规则扩缩容出来的节点
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAutoScaleStrategyRequest"/></param>
+        /// <returns><see cref="DeleteAutoScaleStrategyResponse"/></returns>
+        public DeleteAutoScaleStrategyResponse DeleteAutoScaleStrategySync(DeleteAutoScaleStrategyRequest req)
+        {
+            return InternalRequestAsync<DeleteAutoScaleStrategyResponse>(req, "DeleteAutoScaleStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除用户列表（用户管理）
         /// </summary>
         /// <param name="req"><see cref="DeleteUserManagerUserListRequest"/></param>
@@ -139,6 +182,27 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 获取自动扩缩容全局配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoScaleGroupGlobalConfRequest"/></param>
+        /// <returns><see cref="DescribeAutoScaleGroupGlobalConfResponse"/></returns>
+        public Task<DescribeAutoScaleGroupGlobalConfResponse> DescribeAutoScaleGroupGlobalConf(DescribeAutoScaleGroupGlobalConfRequest req)
+        {
+            return InternalRequestAsync<DescribeAutoScaleGroupGlobalConfResponse>(req, "DescribeAutoScaleGroupGlobalConf");
+        }
+
+        /// <summary>
+        /// 获取自动扩缩容全局配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoScaleGroupGlobalConfRequest"/></param>
+        /// <returns><see cref="DescribeAutoScaleGroupGlobalConfResponse"/></returns>
+        public DescribeAutoScaleGroupGlobalConfResponse DescribeAutoScaleGroupGlobalConfSync(DescribeAutoScaleGroupGlobalConfRequest req)
+        {
+            return InternalRequestAsync<DescribeAutoScaleGroupGlobalConfResponse>(req, "DescribeAutoScaleGroupGlobalConf")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取集群的自动扩缩容的详细记录
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoScaleRecordsRequest"/></param>
@@ -156,6 +220,27 @@ namespace TencentCloud.Emr.V20190103
         public DescribeAutoScaleRecordsResponse DescribeAutoScaleRecordsSync(DescribeAutoScaleRecordsRequest req)
         {
             return InternalRequestAsync<DescribeAutoScaleRecordsResponse>(req, "DescribeAutoScaleRecords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取自动扩缩容规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoScaleStrategiesRequest"/></param>
+        /// <returns><see cref="DescribeAutoScaleStrategiesResponse"/></returns>
+        public Task<DescribeAutoScaleStrategiesResponse> DescribeAutoScaleStrategies(DescribeAutoScaleStrategiesRequest req)
+        {
+            return InternalRequestAsync<DescribeAutoScaleStrategiesResponse>(req, "DescribeAutoScaleStrategies");
+        }
+
+        /// <summary>
+        /// 获取自动扩缩容规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoScaleStrategiesRequest"/></param>
+        /// <returns><see cref="DescribeAutoScaleStrategiesResponse"/></returns>
+        public DescribeAutoScaleStrategiesResponse DescribeAutoScaleStrategiesSync(DescribeAutoScaleStrategiesRequest req)
+        {
+            return InternalRequestAsync<DescribeAutoScaleStrategiesResponse>(req, "DescribeAutoScaleStrategies")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -536,6 +621,27 @@ namespace TencentCloud.Emr.V20190103
         public InquiryPriceUpdateInstanceResponse InquiryPriceUpdateInstanceSync(InquiryPriceUpdateInstanceRequest req)
         {
             return InternalRequestAsync<InquiryPriceUpdateInstanceResponse>(req, "InquiryPriceUpdateInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改自动扩缩容规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAutoScaleStrategyRequest"/></param>
+        /// <returns><see cref="ModifyAutoScaleStrategyResponse"/></returns>
+        public Task<ModifyAutoScaleStrategyResponse> ModifyAutoScaleStrategy(ModifyAutoScaleStrategyRequest req)
+        {
+            return InternalRequestAsync<ModifyAutoScaleStrategyResponse>(req, "ModifyAutoScaleStrategy");
+        }
+
+        /// <summary>
+        /// 修改自动扩缩容规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAutoScaleStrategyRequest"/></param>
+        /// <returns><see cref="ModifyAutoScaleStrategyResponse"/></returns>
+        public ModifyAutoScaleStrategyResponse ModifyAutoScaleStrategySync(ModifyAutoScaleStrategyRequest req)
+        {
+            return InternalRequestAsync<ModifyAutoScaleStrategyResponse>(req, "ModifyAutoScaleStrategy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

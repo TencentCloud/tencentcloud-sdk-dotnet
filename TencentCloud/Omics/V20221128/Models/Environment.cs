@@ -75,6 +75,18 @@ namespace TencentCloud.Omics.V20221128.Models
         public bool? Available{ get; set; }
 
         /// <summary>
+        /// 环境是否为默认环境。
+        /// </summary>
+        [JsonProperty("IsDefault")]
+        public bool? IsDefault{ get; set; }
+
+        /// <summary>
+        /// 环境是否为托管环境。
+        /// </summary>
+        [JsonProperty("IsManaged")]
+        public bool? IsManaged{ get; set; }
+
+        /// <summary>
         /// 环境信息。
         /// </summary>
         [JsonProperty("Message")]
@@ -113,6 +125,8 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Available", this.Available);
+            this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
+            this.SetParamSimple(map, prefix + "IsManaged", this.IsManaged);
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamObj(map, prefix + "ResourceIds.", this.ResourceIds);
             this.SetParamSimple(map, prefix + "LastWorkflowUuid", this.LastWorkflowUuid);

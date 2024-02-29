@@ -28,6 +28,7 @@ namespace TencentCloud.Cws.V20180312
 
        private const string endpoint = "cws.tencentcloudapi.com";
        private const string version = "2018-03-12";
+       private const string sdkVersion = "SDK_NET_3.0.954";
 
         /// <summary>
         /// Client constructor.
@@ -35,7 +36,7 @@ namespace TencentCloud.Cws.V20180312
         /// <param name="credential">Credentials.</param>
         /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public CwsClient(Credential credential, string region)
-            : this(credential, region, new ClientProfile())
+            : this(credential, region, new ClientProfile { Language = Language.ZH_CN })
         {
 
         }
@@ -49,7 +50,7 @@ namespace TencentCloud.Cws.V20180312
         public CwsClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

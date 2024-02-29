@@ -28,6 +28,7 @@ namespace TencentCloud.Lighthouse.V20200324
 
        private const string endpoint = "lighthouse.tencentcloudapi.com";
        private const string version = "2020-03-24";
+       private const string sdkVersion = "SDK_NET_3.0.954";
 
         /// <summary>
         /// Client constructor.
@@ -35,7 +36,7 @@ namespace TencentCloud.Lighthouse.V20200324
         /// <param name="credential">Credentials.</param>
         /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public LighthouseClient(Credential credential, string region)
-            : this(credential, region, new ClientProfile())
+            : this(credential, region, new ClientProfile { Language = Language.ZH_CN })
         {
 
         }
@@ -49,7 +50,7 @@ namespace TencentCloud.Lighthouse.V20200324
         public LighthouseClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>
@@ -1808,6 +1809,27 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口(ModifyDisksBackupQuota)用于调整云硬盘备份点配额。该操作目前仅支持云硬盘类型为数据盘的云硬盘。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDisksBackupQuotaRequest"/></param>
+        /// <returns><see cref="ModifyDisksBackupQuotaResponse"/></returns>
+        public Task<ModifyDisksBackupQuotaResponse> ModifyDisksBackupQuota(ModifyDisksBackupQuotaRequest req)
+        {
+            return InternalRequestAsync<ModifyDisksBackupQuotaResponse>(req, "ModifyDisksBackupQuota");
+        }
+
+        /// <summary>
+        /// 本接口(ModifyDisksBackupQuota)用于调整云硬盘备份点配额。该操作目前仅支持云硬盘类型为数据盘的云硬盘。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDisksBackupQuotaRequest"/></param>
+        /// <returns><see cref="ModifyDisksBackupQuotaResponse"/></returns>
+        public ModifyDisksBackupQuotaResponse ModifyDisksBackupQuotaSync(ModifyDisksBackupQuotaRequest req)
+        {
+            return InternalRequestAsync<ModifyDisksBackupQuotaResponse>(req, "ModifyDisksBackupQuota")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ModifyDisksRenewFlag）用于修改云硬盘续费标识。
         /// </summary>
         /// <param name="req"><see cref="ModifyDisksRenewFlagRequest"/></param>
@@ -2351,6 +2373,27 @@ namespace TencentCloud.Lighthouse.V20200324
         public ResetInstancesPasswordResponse ResetInstancesPasswordSync(ResetInstancesPasswordRequest req)
         {
             return InternalRequestAsync<ResetInstancesPasswordResponse>(req, "ResetInstancesPassword")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(ResizeDisks)用于扩容云硬盘。该操作目前仅支持云硬盘类型为数据盘的云硬盘。
+        /// </summary>
+        /// <param name="req"><see cref="ResizeDisksRequest"/></param>
+        /// <returns><see cref="ResizeDisksResponse"/></returns>
+        public Task<ResizeDisksResponse> ResizeDisks(ResizeDisksRequest req)
+        {
+            return InternalRequestAsync<ResizeDisksResponse>(req, "ResizeDisks");
+        }
+
+        /// <summary>
+        /// 本接口(ResizeDisks)用于扩容云硬盘。该操作目前仅支持云硬盘类型为数据盘的云硬盘。
+        /// </summary>
+        /// <param name="req"><see cref="ResizeDisksRequest"/></param>
+        /// <returns><see cref="ResizeDisksResponse"/></returns>
+        public ResizeDisksResponse ResizeDisksSync(ResizeDisksRequest req)
+        {
+            return InternalRequestAsync<ResizeDisksResponse>(req, "ResizeDisks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

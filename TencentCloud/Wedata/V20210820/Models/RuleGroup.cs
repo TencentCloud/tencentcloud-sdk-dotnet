@@ -157,6 +157,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// 是否已配置执行策略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StrategyConfig")]
+        public bool? StrategyConfig{ get; set; }
+
+        /// <summary>
+        /// 是否已配置执行策略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubscribeConfig")]
+        public bool? SubscribeConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -182,6 +196,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TableOwnerUserId", this.TableOwnerUserId);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "StrategyConfig", this.StrategyConfig);
+            this.SetParamSimple(map, prefix + "SubscribeConfig", this.SubscribeConfig);
         }
     }
 }

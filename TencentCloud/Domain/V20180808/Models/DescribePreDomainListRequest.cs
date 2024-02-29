@@ -36,6 +36,12 @@ namespace TencentCloud.Domain.V20180808.Models
         [JsonProperty("Size")]
         public long? Size{ get; set; }
 
+        /// <summary>
+        /// 用于结束时间筛选
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Domain.V20180808.Models
         {
             this.SetParamSimple(map, prefix + "Page", this.Page);
             this.SetParamSimple(map, prefix + "Size", this.Size);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

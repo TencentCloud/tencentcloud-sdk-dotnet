@@ -28,6 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
+       private const string sdkVersion = "SDK_NET_3.0.954";
 
         /// <summary>
         /// Client constructor.
@@ -35,7 +36,7 @@ namespace TencentCloud.Organization.V20210331
         /// <param name="credential">Credentials.</param>
         /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public OrganizationClient(Credential credential, string region)
-            : this(credential, region, new ClientProfile())
+            : this(credential, region, new ClientProfile { Language = Language.ZH_CN })
         {
 
         }
@@ -49,7 +50,7 @@ namespace TencentCloud.Organization.V20210331
         public OrganizationClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>
@@ -196,6 +197,27 @@ namespace TencentCloud.Organization.V20210331
         public CancelOrganizationMemberAuthAccountResponse CancelOrganizationMemberAuthAccountSync(CancelOrganizationMemberAuthAccountRequest req)
         {
             return InternalRequestAsync<CancelOrganizationMemberAuthAccountResponse>(req, "CancelOrganizationMemberAuthAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 成员账号删除检查
+        /// </summary>
+        /// <param name="req"><see cref="CheckAccountDeleteRequest"/></param>
+        /// <returns><see cref="CheckAccountDeleteResponse"/></returns>
+        public Task<CheckAccountDeleteResponse> CheckAccountDelete(CheckAccountDeleteRequest req)
+        {
+            return InternalRequestAsync<CheckAccountDeleteResponse>(req, "CheckAccountDelete");
+        }
+
+        /// <summary>
+        /// 成员账号删除检查
+        /// </summary>
+        /// <param name="req"><see cref="CheckAccountDeleteRequest"/></param>
+        /// <returns><see cref="CheckAccountDeleteResponse"/></returns>
+        public CheckAccountDeleteResponse CheckAccountDeleteSync(CheckAccountDeleteRequest req)
+        {
+            return InternalRequestAsync<CheckAccountDeleteResponse>(req, "CheckAccountDelete")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

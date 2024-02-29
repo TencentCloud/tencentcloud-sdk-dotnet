@@ -164,6 +164,27 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ChannelType")]
         public string ChannelType{ get; set; }
 
+        /// <summary>
+        /// 展示类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DisplayType")]
+        public string DisplayType{ get; set; }
+
+        /// <summary>
+        /// 表类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EngineType")]
+        public string EngineType{ get; set; }
+
+        /// <summary>
+        /// 表类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TableType")]
+        public string TableType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -190,6 +211,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamArraySimple(map, prefix + "Tasks.", this.Tasks);
             this.SetParamSimple(map, prefix + "ChannelType", this.ChannelType);
+            this.SetParamSimple(map, prefix + "DisplayType", this.DisplayType);
+            this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
+            this.SetParamSimple(map, prefix + "TableType", this.TableType);
         }
     }
 }

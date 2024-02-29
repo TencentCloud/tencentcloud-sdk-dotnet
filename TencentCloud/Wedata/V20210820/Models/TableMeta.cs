@@ -353,6 +353,28 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Columns")]
         public SearchColumnDocVO[] Columns{ get; set; }
 
+        /// <summary>
+        /// 表采集类型
+        /// TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUAL_VIEW(虚拟视图), MATERIALIZED_VIEW(物化视图), LATERAL_VIEW, INDEX_TABLE(索引表), END_SELECT(查询结构), INSTANCE(中间临时表类型(数据血缘)), CDW(CDW表类型)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MetaCrawlType")]
+        public string MetaCrawlType{ get; set; }
+
+        /// <summary>
+        /// 是否视图
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsView")]
+        public bool? IsView{ get; set; }
+
+        /// <summary>
+        /// 存储位置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Location")]
+        public string Location{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -406,6 +428,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TableOwnerId", this.TableOwnerId);
             this.SetParamSimple(map, prefix + "DataSourceCategory", this.DataSourceCategory);
             this.SetParamArrayObj(map, prefix + "Columns.", this.Columns);
+            this.SetParamSimple(map, prefix + "MetaCrawlType", this.MetaCrawlType);
+            this.SetParamSimple(map, prefix + "IsView", this.IsView);
+            this.SetParamSimple(map, prefix + "Location", this.Location);
         }
     }
 }

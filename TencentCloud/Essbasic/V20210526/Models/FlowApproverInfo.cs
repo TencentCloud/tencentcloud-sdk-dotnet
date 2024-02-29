@@ -258,6 +258,23 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("SignTypeSelector")]
         public ulong? SignTypeSelector{ get; set; }
 
+        /// <summary>
+        /// 签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+        /// <ul><li>单行文本控件</li>
+        /// <li>多行文本控件</li>
+        /// <li>勾选框控件</li>
+        /// <li>数字控件</li>
+        /// <li>图片控件</li>
+        /// <li>数据表格等填写控件</li></ul>
+        /// 
+        /// 具体使用说明可参考[为签署方指定填写控件](https%3A%2F%2Fqian.tencent.cn%2Fdevelopers%2Fpartner%2FcreateFlowByFiles%23%E4%B8%BA%E7%AD%BE%E7%BD%B2%E6%96%B9%E6%8C%87%E5%AE%9A%E5%A1%AB%E5%86%99%E6%8E%A7%E4%BB%B6)
+        /// 
+        /// 
+        /// 注：`此参数仅在通过文件发起合同或者合同组时生效`
+        /// </summary>
+        [JsonProperty("Components")]
+        public Component[] Components{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -289,6 +306,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamArrayObj(map, prefix + "AddSignComponentsLimits.", this.AddSignComponentsLimits);
             this.SetParamSimple(map, prefix + "ApproverRoleName", this.ApproverRoleName);
             this.SetParamSimple(map, prefix + "SignTypeSelector", this.SignTypeSelector);
+            this.SetParamArrayObj(map, prefix + "Components.", this.Components);
         }
     }
 }

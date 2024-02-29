@@ -59,6 +59,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ThirdTaskLogUrlDesc")]
         public string ThirdTaskLogUrlDesc{ get; set; }
 
+        /// <summary>
+        /// 日志行数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LineCount")]
+        public long? LineCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DataLogInfo", this.DataLogInfo);
             this.SetParamSimple(map, prefix + "ThirdTaskRunLogInfo", this.ThirdTaskRunLogInfo);
             this.SetParamSimple(map, prefix + "ThirdTaskLogUrlDesc", this.ThirdTaskLogUrlDesc);
+            this.SetParamSimple(map, prefix + "LineCount", this.LineCount);
         }
     }
 }

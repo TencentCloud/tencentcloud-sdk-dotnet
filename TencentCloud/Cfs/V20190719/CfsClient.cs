@@ -28,6 +28,7 @@ namespace TencentCloud.Cfs.V20190719
 
        private const string endpoint = "cfs.tencentcloudapi.com";
        private const string version = "2019-07-19";
+       private const string sdkVersion = "SDK_NET_3.0.954";
 
         /// <summary>
         /// Client constructor.
@@ -35,7 +36,7 @@ namespace TencentCloud.Cfs.V20190719
         /// <param name="credential">Credentials.</param>
         /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public CfsClient(Credential credential, string region)
-            : this(credential, region, new ClientProfile())
+            : this(credential, region, new ClientProfile { Language = Language.ZH_CN })
         {
 
         }
@@ -49,7 +50,7 @@ namespace TencentCloud.Cfs.V20190719
         public CfsClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>
@@ -331,6 +332,7 @@ namespace TencentCloud.Cfs.V20190719
 
         /// <summary>
         /// 本接口（DeleteMountTarget）用于删除挂载点
+        /// 说明：2022年6月1日之后创建的CFS文件系统删除时无需单独调用删除挂载点操作，此API仅适用老版本的CFS实例。
         /// </summary>
         /// <param name="req"><see cref="DeleteMountTargetRequest"/></param>
         /// <returns><see cref="DeleteMountTargetResponse"/></returns>
@@ -341,6 +343,7 @@ namespace TencentCloud.Cfs.V20190719
 
         /// <summary>
         /// 本接口（DeleteMountTarget）用于删除挂载点
+        /// 说明：2022年6月1日之后创建的CFS文件系统删除时无需单独调用删除挂载点操作，此API仅适用老版本的CFS实例。
         /// </summary>
         /// <param name="req"><see cref="DeleteMountTargetRequest"/></param>
         /// <returns><see cref="DeleteMountTargetResponse"/></returns>

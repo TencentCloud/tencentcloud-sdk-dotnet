@@ -38,6 +38,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("CycleStep")]
         public ulong? CycleStep{ get; set; }
 
+        /// <summary>
+        /// o 表示 或，a 表示 且，数字表示items下标
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ComputeExpression")]
+        public string ComputeExpression{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamArrayObj(map, prefix + "Items.", this.Items);
             this.SetParamSimple(map, prefix + "CycleStep", this.CycleStep);
+            this.SetParamSimple(map, prefix + "ComputeExpression", this.ComputeExpression);
         }
     }
 }

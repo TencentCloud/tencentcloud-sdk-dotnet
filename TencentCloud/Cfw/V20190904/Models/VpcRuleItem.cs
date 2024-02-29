@@ -46,7 +46,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string DestContent{ get; set; }
 
         /// <summary>
-        /// 访问目的类型，类型可以为：net，domain
+        /// 访问目的类型，类型可以为：net，domain，dnsparse
         /// </summary>
         [JsonProperty("DestType")]
         public string DestType{ get; set; }

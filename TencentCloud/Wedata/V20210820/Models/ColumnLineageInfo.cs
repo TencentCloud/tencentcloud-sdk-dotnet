@@ -39,13 +39,6 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string DatasourceId{ get; set; }
 
         /// <summary>
-        /// 表ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("TableId")]
-        public string TableId{ get; set; }
-
-        /// <summary>
         /// 字段名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -185,6 +178,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ExtParams")]
         public LineageParamRecord[] ExtParams{ get; set; }
 
+        /// <summary>
+        /// 表ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TableId")]
+        public string TableId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -193,7 +193,6 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
-            this.SetParamSimple(map, prefix + "TableId", this.TableId);
             this.SetParamSimple(map, prefix + "ColumnName", this.ColumnName);
             this.SetParamSimple(map, prefix + "ColumnNameCn", this.ColumnNameCn);
             this.SetParamSimple(map, prefix + "ColumnType", this.ColumnType);
@@ -214,6 +213,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ParentSet", this.ParentSet);
             this.SetParamSimple(map, prefix + "ChildSet", this.ChildSet);
             this.SetParamArrayObj(map, prefix + "ExtParams.", this.ExtParams);
+            this.SetParamSimple(map, prefix + "TableId", this.TableId);
         }
     }
 }

@@ -94,6 +94,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("ProtocolType")]
         public string ProtocolType{ get; set; }
 
+        /// <summary>
+        /// 模板包含地址数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IPNum")]
+        public long? IPNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +117,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "RulesNum", this.RulesNum);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
+            this.SetParamSimple(map, prefix + "IPNum", this.IPNum);
         }
     }
 }

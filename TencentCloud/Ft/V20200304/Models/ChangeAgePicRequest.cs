@@ -49,7 +49,7 @@ namespace TencentCloud.Ft.V20200304.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
+        /// 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。默认值为base64。
         /// </summary>
         [JsonProperty("RspImgType")]
         public string RspImgType{ get; set; }

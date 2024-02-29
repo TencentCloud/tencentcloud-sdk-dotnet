@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{07FCB225-F7A7-392A-A759-E2C6236ECC1C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.953</VersionPrefix>
+    <VersionPrefix>3.0.954</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,6 +49,20 @@
   <ItemGroup>
     <Compile Include="V20180709\BillingClient.cs" />
     <Compile Include="V20180709\Models\ActionSummaryOverviewItem.cs" />
+    <Compile Include="V20180709\Models\AnalyseActionTypeDetail.cs" />
+    <Compile Include="V20180709\Models\AnalyseAmountDetail.cs" />
+    <Compile Include="V20180709\Models\AnalyseBusinessDetail.cs" />
+    <Compile Include="V20180709\Models\AnalyseConditionDetail.cs" />
+    <Compile Include="V20180709\Models\AnalyseConditions.cs" />
+    <Compile Include="V20180709\Models\AnalyseDetail.cs" />
+    <Compile Include="V20180709\Models\AnalyseHeaderDetail.cs" />
+    <Compile Include="V20180709\Models\AnalyseHeaderTimeDetail.cs" />
+    <Compile Include="V20180709\Models\AnalyseOwnerUinDetail.cs" />
+    <Compile Include="V20180709\Models\AnalysePayModeDetail.cs" />
+    <Compile Include="V20180709\Models\AnalyseProjectDetail.cs" />
+    <Compile Include="V20180709\Models\AnalyseRegionDetail.cs" />
+    <Compile Include="V20180709\Models\AnalyseTimeDetail.cs" />
+    <Compile Include="V20180709\Models\AnalyseZoneDetail.cs" />
     <Compile Include="V20180709\Models\ApplicableProducts.cs" />
     <Compile Include="V20180709\Models\BillDetail.cs" />
     <Compile Include="V20180709\Models\BillDetailAssociatedOrder.cs" />
@@ -113,6 +127,8 @@
     <Compile Include="V20180709\Models\DescribeBillSummaryResponse.cs" />
     <Compile Include="V20180709\Models\DescribeCostDetailRequest.cs" />
     <Compile Include="V20180709\Models\DescribeCostDetailResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeCostExplorerSummaryRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeCostExplorerSummaryResponse.cs" />
     <Compile Include="V20180709\Models\DescribeCostSummaryByProductRequest.cs" />
     <Compile Include="V20180709\Models\DescribeCostSummaryByProductResponse.cs" />
     <Compile Include="V20180709\Models\DescribeCostSummaryByProjectRequest.cs" />

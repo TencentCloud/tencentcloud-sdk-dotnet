@@ -97,7 +97,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string StartBackupPeriodSaveDate{ get; set; }
 
         /// <summary>
-        /// 是否开启数据备份归档策略，off-关闭，on-打开，默认为off
+        /// 是否开启数据备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
         /// </summary>
         [JsonProperty("EnableBackupArchive")]
         public string EnableBackupArchive{ get; set; }
@@ -115,13 +115,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? BinlogArchiveDays{ get; set; }
 
         /// <summary>
-        /// 是否开启日志备份归档策略，off-关闭，on-打开，默认为off
+        /// 是否开启日志备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
         /// </summary>
         [JsonProperty("EnableBinlogArchive")]
         public string EnableBinlogArchive{ get; set; }
 
         /// <summary>
-        /// 是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off
+        /// 是否开启数据备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
         /// </summary>
         [JsonProperty("EnableBackupStandby")]
         public string EnableBackupStandby{ get; set; }
@@ -133,7 +133,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? BackupStandbyDays{ get; set; }
 
         /// <summary>
-        /// 是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off
+        /// 是否开启日志备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
         /// </summary>
         [JsonProperty("EnableBinlogStandby")]
         public string EnableBinlogStandby{ get; set; }

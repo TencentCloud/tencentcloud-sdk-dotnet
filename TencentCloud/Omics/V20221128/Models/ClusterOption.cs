@@ -38,6 +38,12 @@ namespace TencentCloud.Omics.V20221128.Models
         public string Type{ get; set; }
 
         /// <summary>
+        /// 计算集群Service CIDR，不能与VPC网段重合。
+        /// </summary>
+        [JsonProperty("ServiceCidr")]
+        public string ServiceCidr{ get; set; }
+
+        /// <summary>
         /// 资源配额。
         /// </summary>
         [JsonProperty("ResourceQuota")]
@@ -57,6 +63,7 @@ namespace TencentCloud.Omics.V20221128.Models
         {
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "ServiceCidr", this.ServiceCidr);
             this.SetParamObj(map, prefix + "ResourceQuota.", this.ResourceQuota);
             this.SetParamObj(map, prefix + "LimitRange.", this.LimitRange);
         }

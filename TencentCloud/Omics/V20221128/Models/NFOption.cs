@@ -52,6 +52,16 @@ namespace TencentCloud.Omics.V20221128.Models
         [JsonProperty("Resume")]
         public bool? Resume{ get; set; }
 
+        /// <summary>
+        /// Nextflow引擎版本，取值范围：
+        /// - 22.10.4
+        /// - 22.10.8 
+        /// - 23.10.1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NFVersion")]
+        public string NFVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +72,7 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamSimple(map, prefix + "Profile", this.Profile);
             this.SetParamSimple(map, prefix + "Report", this.Report);
             this.SetParamSimple(map, prefix + "Resume", this.Resume);
+            this.SetParamSimple(map, prefix + "NFVersion", this.NFVersion);
         }
     }
 }

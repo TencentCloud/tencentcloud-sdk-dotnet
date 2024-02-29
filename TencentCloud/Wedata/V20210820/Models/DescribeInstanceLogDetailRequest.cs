@@ -54,6 +54,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("OriginFileName")]
         public string OriginFileName{ get; set; }
 
+        /// <summary>
+        /// 起始行
+        /// </summary>
+        [JsonProperty("StartCount")]
+        public long? StartCount{ get; set; }
+
+        /// <summary>
+        /// 每次查询行数
+        /// </summary>
+        [JsonProperty("LineCount")]
+        public long? LineCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "CurRunDate", this.CurRunDate);
             this.SetParamSimple(map, prefix + "BrokerIp", this.BrokerIp);
             this.SetParamSimple(map, prefix + "OriginFileName", this.OriginFileName);
+            this.SetParamSimple(map, prefix + "StartCount", this.StartCount);
+            this.SetParamSimple(map, prefix + "LineCount", this.LineCount);
         }
     }
 }

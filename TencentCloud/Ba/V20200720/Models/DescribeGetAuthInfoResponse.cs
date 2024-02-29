@@ -43,6 +43,15 @@ namespace TencentCloud.Ba.V20200720.Models
         public string Type{ get; set; }
 
         /// <summary>
+        /// 大客户标识：
+        /// 1004、1003、1002、1001
+        /// 
+        /// 其余为普通的用户
+        /// </summary>
+        [JsonProperty("Level")]
+        public string Level{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +66,7 @@ namespace TencentCloud.Ba.V20200720.Models
             this.SetParamSimple(map, prefix + "IsTenPayMasked", this.IsTenPayMasked);
             this.SetParamSimple(map, prefix + "IsAuthenticated", this.IsAuthenticated);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Level", this.Level);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

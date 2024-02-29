@@ -60,6 +60,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("IsPartitionQuery")]
         public bool? IsPartitionQuery{ get; set; }
 
+        /// <summary>
+        /// 合规组ID
+        /// </summary>
+        [JsonProperty("ComplianceId")]
+        public long? ComplianceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArrayObj(map, prefix + "FilterSet.", this.FilterSet);
             this.SetParamArrayObj(map, prefix + "OrderFieldSet.", this.OrderFieldSet);
             this.SetParamSimple(map, prefix + "IsPartitionQuery", this.IsPartitionQuery);
+            this.SetParamSimple(map, prefix + "ComplianceId", this.ComplianceId);
         }
     }
 }

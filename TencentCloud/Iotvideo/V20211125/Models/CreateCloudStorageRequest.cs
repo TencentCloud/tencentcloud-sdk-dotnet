@@ -86,6 +86,12 @@ namespace TencentCloud.Iotvideo.V20211125.Models
         [JsonProperty("ChannelId")]
         public ulong? ChannelId{ get; set; }
 
+        /// <summary>
+        /// 云存存储区域，国内默认为ap-guangzhou。海外默认为东南亚ap-singapore，可选美东na-ashburn、欧洲eu-frankfurt。
+        /// </summary>
+        [JsonProperty("StorageRegion")]
+        public string StorageRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -99,6 +105,7 @@ namespace TencentCloud.Iotvideo.V20211125.Models
             this.SetParamSimple(map, prefix + "PackageQueue", this.PackageQueue);
             this.SetParamSimple(map, prefix + "OrderId", this.OrderId);
             this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
+            this.SetParamSimple(map, prefix + "StorageRegion", this.StorageRegion);
         }
     }
 }

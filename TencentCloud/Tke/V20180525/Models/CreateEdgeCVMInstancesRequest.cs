@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群id
+        /// 集群id，边缘集群需要先开启公网访问才能添加cvm节点
         /// </summary>
         [JsonProperty("ClusterID")]
         public string ClusterID{ get; set; }

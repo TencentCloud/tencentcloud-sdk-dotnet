@@ -94,6 +94,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("DictionaryName")]
         public string DictionaryName{ get; set; }
 
+        /// <summary>
+        /// 安全等级：名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LevelName")]
+        public string LevelName{ get; set; }
+
+        /// <summary>
+        /// 安全等级：值范围1-10
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LevelRank")]
+        public long? LevelRank{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +124,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArrayObj(map, prefix + "ColumnFamiliesFieldSet.", this.ColumnFamiliesFieldSet);
             this.SetParamSimple(map, prefix + "DictionaryId", this.DictionaryId);
             this.SetParamSimple(map, prefix + "DictionaryName", this.DictionaryName);
+            this.SetParamSimple(map, prefix + "LevelName", this.LevelName);
+            this.SetParamSimple(map, prefix + "LevelRank", this.LevelRank);
         }
     }
 }

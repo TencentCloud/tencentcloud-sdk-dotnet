@@ -85,10 +85,16 @@ namespace TencentCloud.Omics.V20221128.Models
         public string InputCosUri{ get; set; }
 
         /// <summary>
-        /// 任务缓存清理时间（小时）。不填表示不清理。
+        /// 任务缓存清理时间（小时）。不填或0表示不清理。
         /// </summary>
         [JsonProperty("CacheClearDelay")]
         public ulong? CacheClearDelay{ get; set; }
+
+        /// <summary>
+        /// 工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow)
+        /// </summary>
+        [JsonProperty("WorkDir")]
+        public string WorkDir{ get; set; }
 
 
         /// <summary>
@@ -106,6 +112,7 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamSimple(map, prefix + "InputBase64", this.InputBase64);
             this.SetParamSimple(map, prefix + "InputCosUri", this.InputCosUri);
             this.SetParamSimple(map, prefix + "CacheClearDelay", this.CacheClearDelay);
+            this.SetParamSimple(map, prefix + "WorkDir", this.WorkDir);
         }
     }
 }

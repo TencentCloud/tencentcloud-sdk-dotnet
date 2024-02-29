@@ -67,7 +67,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 订单号
+        /// 子订单号
         /// </summary>
         [JsonProperty("OrderId")]
         public string OrderId{ get; set; }

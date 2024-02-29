@@ -28,6 +28,7 @@ namespace TencentCloud.Billing.V20180709
 
        private const string endpoint = "billing.tencentcloudapi.com";
        private const string version = "2018-07-09";
+       private const string sdkVersion = "SDK_NET_3.0.954";
 
         /// <summary>
         /// Client constructor.
@@ -35,7 +36,7 @@ namespace TencentCloud.Billing.V20180709
         /// <param name="credential">Credentials.</param>
         /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public BillingClient(Credential credential, string region)
-            : this(credential, region, new ClientProfile())
+            : this(credential, region, new ClientProfile { Language = Language.ZH_CN })
         {
 
         }
@@ -49,7 +50,7 @@ namespace TencentCloud.Billing.V20180709
         public BillingClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>
@@ -435,6 +436,27 @@ namespace TencentCloud.Billing.V20180709
         public DescribeCostDetailResponse DescribeCostDetailSync(DescribeCostDetailRequest req)
         {
             return InternalRequestAsync<DescribeCostDetailResponse>(req, "DescribeCostDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看成本分析明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCostExplorerSummaryRequest"/></param>
+        /// <returns><see cref="DescribeCostExplorerSummaryResponse"/></returns>
+        public Task<DescribeCostExplorerSummaryResponse> DescribeCostExplorerSummary(DescribeCostExplorerSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeCostExplorerSummaryResponse>(req, "DescribeCostExplorerSummary");
+        }
+
+        /// <summary>
+        /// 查看成本分析明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCostExplorerSummaryRequest"/></param>
+        /// <returns><see cref="DescribeCostExplorerSummaryResponse"/></returns>
+        public DescribeCostExplorerSummaryResponse DescribeCostExplorerSummarySync(DescribeCostExplorerSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeCostExplorerSummaryResponse>(req, "DescribeCostExplorerSummary")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

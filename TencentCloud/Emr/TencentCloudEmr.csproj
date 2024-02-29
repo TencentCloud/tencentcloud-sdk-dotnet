@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.953</VersionPrefix>
+    <VersionPrefix>3.0.954</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,11 +48,14 @@
 
   <ItemGroup>
     <Compile Include="V20190103\EmrClient.cs" />
+    <Compile Include="V20190103\Models\AddMetricScaleStrategyRequest.cs" />
+    <Compile Include="V20190103\Models\AddMetricScaleStrategyResponse.cs" />
     <Compile Include="V20190103\Models\AddUsersForUserManagerRequest.cs" />
     <Compile Include="V20190103\Models\AddUsersForUserManagerResponse.cs" />
     <Compile Include="V20190103\Models\AllNodeResourceSpec.cs" />
     <Compile Include="V20190103\Models\ApplicationStatics.cs" />
     <Compile Include="V20190103\Models\AutoScaleRecord.cs" />
+    <Compile Include="V20190103\Models\AutoScaleResourceConf.cs" />
     <Compile Include="V20190103\Models\BootstrapAction.cs" />
     <Compile Include="V20190103\Models\COSSettings.cs" />
     <Compile Include="V20190103\Models\CdbInfo.cs" />
@@ -69,11 +72,18 @@
     <Compile Include="V20190103\Models\CustomMetaDBInfo.cs" />
     <Compile Include="V20190103\Models\CustomMetaInfo.cs" />
     <Compile Include="V20190103\Models\CustomServiceDefine.cs" />
+    <Compile Include="V20190103\Models\DayRepeatStrategy.cs" />
+    <Compile Include="V20190103\Models\DeleteAutoScaleStrategyRequest.cs" />
+    <Compile Include="V20190103\Models\DeleteAutoScaleStrategyResponse.cs" />
     <Compile Include="V20190103\Models\DeleteUserManagerUserListRequest.cs" />
     <Compile Include="V20190103\Models\DeleteUserManagerUserListResponse.cs" />
     <Compile Include="V20190103\Models\DependService.cs" />
+    <Compile Include="V20190103\Models\DescribeAutoScaleGroupGlobalConfRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeAutoScaleGroupGlobalConfResponse.cs" />
     <Compile Include="V20190103\Models\DescribeAutoScaleRecordsRequest.cs" />
     <Compile Include="V20190103\Models\DescribeAutoScaleRecordsResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeAutoScaleStrategiesRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeAutoScaleStrategiesResponse.cs" />
     <Compile Include="V20190103\Models\DescribeClusterNodesRequest.cs" />
     <Compile Include="V20190103\Models\DescribeClusterNodesResponse.cs" />
     <Compile Include="V20190103\Models\DescribeCvmQuotaRequest.cs" />
@@ -111,6 +121,7 @@
     <Compile Include="V20190103\Models\Execution.cs" />
     <Compile Include="V20190103\Models\ExternalService.cs" />
     <Compile Include="V20190103\Models\Filters.cs" />
+    <Compile Include="V20190103\Models\GroupGlobalConfs.cs" />
     <Compile Include="V20190103\Models\HiveQuery.cs" />
     <Compile Include="V20190103\Models\HostVolumeContext.cs" />
     <Compile Include="V20190103\Models\ImpalaQuery.cs" />
@@ -132,6 +143,8 @@
     <Compile Include="V20190103\Models\KeyValue.cs" />
     <Compile Include="V20190103\Models\LoginSettings.cs" />
     <Compile Include="V20190103\Models\MetaDbInfo.cs" />
+    <Compile Include="V20190103\Models\ModifyAutoScaleStrategyRequest.cs" />
+    <Compile Include="V20190103\Models\ModifyAutoScaleStrategyResponse.cs" />
     <Compile Include="V20190103\Models\ModifyResourcePoolsRequest.cs" />
     <Compile Include="V20190103\Models\ModifyResourcePoolsResponse.cs" />
     <Compile Include="V20190103\Models\ModifyResourceScheduleConfigRequest.cs" />
@@ -143,6 +156,7 @@
     <Compile Include="V20190103\Models\ModifyResourcesTagsResponse.cs" />
     <Compile Include="V20190103\Models\ModifyUserManagerPwdRequest.cs" />
     <Compile Include="V20190103\Models\ModifyUserManagerPwdResponse.cs" />
+    <Compile Include="V20190103\Models\MonthRepeatStrategy.cs" />
     <Compile Include="V20190103\Models\MultiDisk.cs" />
     <Compile Include="V20190103\Models\MultiDiskMC.cs" />
     <Compile Include="V20190103\Models\MultiZoneSetting.cs" />
@@ -150,6 +164,7 @@
     <Compile Include="V20190103\Models\NodeDetailPriceResult.cs" />
     <Compile Include="V20190103\Models\NodeHardwareInfo.cs" />
     <Compile Include="V20190103\Models\NodeResourceSpec.cs" />
+    <Compile Include="V20190103\Models\NotRepeatStrategy.cs" />
     <Compile Include="V20190103\Models\OpScope.cs" />
     <Compile Include="V20190103\Models\OutterResource.cs" />
     <Compile Include="V20190103\Models\PartDetailPriceItem.cs" />
@@ -168,6 +183,7 @@
     <Compile Include="V20190103\Models\PriceResource.cs" />
     <Compile Include="V20190103\Models\QuotaEntity.cs" />
     <Compile Include="V20190103\Models\RenewInstancesInfo.cs" />
+    <Compile Include="V20190103\Models\RepeatStrategy.cs" />
     <Compile Include="V20190103\Models\Resource.cs" />
     <Compile Include="V20190103\Models\ResourceDetail.cs" />
     <Compile Include="V20190103\Models\RunJobFlowRequest.cs" />
@@ -198,6 +214,7 @@
     <Compile Include="V20190103\Models\TerminateInstanceResponse.cs" />
     <Compile Include="V20190103\Models\TerminateTasksRequest.cs" />
     <Compile Include="V20190103\Models\TerminateTasksResponse.cs" />
+    <Compile Include="V20190103\Models\TimeAutoScaleStrategy.cs" />
     <Compile Include="V20190103\Models\TopologyInfo.cs" />
     <Compile Include="V20190103\Models\UpdateInstanceSettings.cs" />
     <Compile Include="V20190103\Models\UserAndGroup.cs" />
@@ -206,6 +223,7 @@
     <Compile Include="V20190103\Models\UserManagerUserBriefInfo.cs" />
     <Compile Include="V20190103\Models\VPCSettings.cs" />
     <Compile Include="V20190103\Models\VirtualPrivateCloud.cs" />
+    <Compile Include="V20190103\Models\WeekRepeatStrategy.cs" />
     <Compile Include="V20190103\Models\YarnApplication.cs" />
     <Compile Include="V20190103\Models\ZoneDetailPriceResult.cs" />
     <Compile Include="V20190103\Models\ZoneResourceConfiguration.cs" />

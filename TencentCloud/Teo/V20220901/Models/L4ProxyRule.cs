@@ -125,6 +125,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// BuID。
+        /// </summary>
+        [JsonProperty("BuId")]
+        public string BuId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "SessionPersistTime", this.SessionPersistTime);
             this.SetParamSimple(map, prefix + "RuleTag", this.RuleTag);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "BuId", this.BuId);
         }
     }
 }

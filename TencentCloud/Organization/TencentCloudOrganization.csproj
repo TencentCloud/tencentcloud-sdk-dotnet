@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FF7DA1A4-A5D5-3EF1-A5B1-B43A74B2F34E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.953</VersionPrefix>
+    <VersionPrefix>3.0.954</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -107,6 +107,8 @@
     <Compile Include="V20210331\Models\BindOrganizationMemberAuthAccountResponse.cs" />
     <Compile Include="V20210331\Models\CancelOrganizationMemberAuthAccountRequest.cs" />
     <Compile Include="V20210331\Models\CancelOrganizationMemberAuthAccountResponse.cs" />
+    <Compile Include="V20210331\Models\CheckAccountDeleteRequest.cs" />
+    <Compile Include="V20210331\Models\CheckAccountDeleteResponse.cs" />
     <Compile Include="V20210331\Models\CreateOrganizationIdentityRequest.cs" />
     <Compile Include="V20210331\Models\CreateOrganizationIdentityResponse.cs" />
     <Compile Include="V20210331\Models\CreateOrganizationMemberAuthIdentityRequest.cs" />
@@ -177,6 +179,7 @@
     <Compile Include="V20210331\Models\MemberMainInfo.cs" />
     <Compile Include="V20210331\Models\MoveOrganizationNodeMembersRequest.cs" />
     <Compile Include="V20210331\Models\MoveOrganizationNodeMembersResponse.cs" />
+    <Compile Include="V20210331\Models\NotAllowReason.cs" />
     <Compile Include="V20210331\Models\OrgFinancialByMonth.cs" />
     <Compile Include="V20210331\Models\OrgIdentity.cs" />
     <Compile Include="V20210331\Models\OrgMember.cs" />

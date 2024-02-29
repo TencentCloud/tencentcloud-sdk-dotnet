@@ -146,8 +146,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ProxyOperatorIdCardNumber{ get; set; }
 
         /// <summary>
-        /// 认证完成跳转链接
-        /// 注意：`只在H5生效，域名需要联系我们开白`。
+        /// 认证完成跳转链接。
+        /// 注意：`目前仅支持 H5 和 PC， 如果使用的是 H5，域名需要联系我们开白`。
         /// </summary>
         [JsonProperty("AutoJumpUrl")]
         public string AutoJumpUrl{ get; set; }

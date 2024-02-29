@@ -49,12 +49,6 @@ namespace TencentCloud.Omics.V20221128.Models
         public string InputBase64{ get; set; }
 
         /// <summary>
-        /// 任务缓存清理时间（小时）。不填表示不清理。
-        /// </summary>
-        [JsonProperty("CacheClearDelay")]
-        public ulong? CacheClearDelay{ get; set; }
-
-        /// <summary>
         /// 项目ID。（不填使用指定地域下的默认项目）
         /// </summary>
         [JsonProperty("ProjectId")]
@@ -79,6 +73,12 @@ namespace TencentCloud.Omics.V20221128.Models
         public string[] TableRowUuids{ get; set; }
 
         /// <summary>
+        /// 任务缓存清理时间（小时）。不填或0表示不清理。
+        /// </summary>
+        [JsonProperty("CacheClearDelay")]
+        public ulong? CacheClearDelay{ get; set; }
+
+        /// <summary>
         /// 应用版本ID。不填表示使用当前最新版本。
         /// </summary>
         [JsonProperty("ApplicationVersionId")]
@@ -96,6 +96,12 @@ namespace TencentCloud.Omics.V20221128.Models
         [JsonProperty("NFOption")]
         public NFOption NFOption{ get; set; }
 
+        /// <summary>
+        /// 工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow)
+        /// </summary>
+        [JsonProperty("WorkDir")]
+        public string WorkDir{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -106,14 +112,15 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
             this.SetParamSimple(map, prefix + "InputBase64", this.InputBase64);
-            this.SetParamSimple(map, prefix + "CacheClearDelay", this.CacheClearDelay);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "TableId", this.TableId);
             this.SetParamArraySimple(map, prefix + "TableRowUuids.", this.TableRowUuids);
+            this.SetParamSimple(map, prefix + "CacheClearDelay", this.CacheClearDelay);
             this.SetParamSimple(map, prefix + "ApplicationVersionId", this.ApplicationVersionId);
             this.SetParamObj(map, prefix + "Option.", this.Option);
             this.SetParamObj(map, prefix + "NFOption.", this.NFOption);
+            this.SetParamSimple(map, prefix + "WorkDir", this.WorkDir);
         }
     }
 }

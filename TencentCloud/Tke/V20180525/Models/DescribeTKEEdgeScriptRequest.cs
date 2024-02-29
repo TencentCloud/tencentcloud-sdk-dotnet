@@ -31,7 +31,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 网卡名
+        /// 网卡名,指定边缘节点上kubelet向apiserver注册使用的网卡
         /// </summary>
         [JsonProperty("Interface")]
         public string Interface{ get; set; }
