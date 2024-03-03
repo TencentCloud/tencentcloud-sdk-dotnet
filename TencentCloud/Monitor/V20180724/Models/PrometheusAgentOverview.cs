@@ -93,6 +93,20 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("EnableExternal")]
         public bool? EnableExternal{ get; set; }
 
+        /// <summary>
+        /// 采集agent期望pod数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DesiredAgentNum")]
+        public long? DesiredAgentNum{ get; set; }
+
+        /// <summary>
+        /// 采集agent已正常启动pod数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReadyAgentNum")]
+        public long? ReadyAgentNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +123,8 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "FailedReason", this.FailedReason);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "EnableExternal", this.EnableExternal);
+            this.SetParamSimple(map, prefix + "DesiredAgentNum", this.DesiredAgentNum);
+            this.SetParamSimple(map, prefix + "ReadyAgentNum", this.ReadyAgentNum);
         }
     }
 }

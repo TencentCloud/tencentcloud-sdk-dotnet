@@ -28,7 +28,7 @@ namespace TencentCloud.Omics.V20221128
 
        private const string endpoint = "omics.tencentcloudapi.com";
        private const string version = "2022-11-28";
-       private const string sdkVersion = "SDK_NET_3.0.955";
+       private const string sdkVersion = "SDK_NET_3.0.956";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,27 @@ namespace TencentCloud.Omics.V20221128
         }
 
         /// <summary>
+        /// 创建缓存卷。
+        /// </summary>
+        /// <param name="req"><see cref="CreateVolumeRequest"/></param>
+        /// <returns><see cref="CreateVolumeResponse"/></returns>
+        public Task<CreateVolumeResponse> CreateVolume(CreateVolumeRequest req)
+        {
+            return InternalRequestAsync<CreateVolumeResponse>(req, "CreateVolume");
+        }
+
+        /// <summary>
+        /// 创建缓存卷。
+        /// </summary>
+        /// <param name="req"><see cref="CreateVolumeRequest"/></param>
+        /// <returns><see cref="CreateVolumeResponse"/></returns>
+        public CreateVolumeResponse CreateVolumeSync(CreateVolumeRequest req)
+        {
+            return InternalRequestAsync<CreateVolumeResponse>(req, "CreateVolume")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除环境。
         /// </summary>
         /// <param name="req"><see cref="DeleteEnvironmentRequest"/></param>
@@ -92,6 +113,48 @@ namespace TencentCloud.Omics.V20221128
         public DeleteEnvironmentResponse DeleteEnvironmentSync(DeleteEnvironmentRequest req)
         {
             return InternalRequestAsync<DeleteEnvironmentResponse>(req, "DeleteEnvironment")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除缓存卷。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVolumeRequest"/></param>
+        /// <returns><see cref="DeleteVolumeResponse"/></returns>
+        public Task<DeleteVolumeResponse> DeleteVolume(DeleteVolumeRequest req)
+        {
+            return InternalRequestAsync<DeleteVolumeResponse>(req, "DeleteVolume");
+        }
+
+        /// <summary>
+        /// 删除缓存卷。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVolumeRequest"/></param>
+        /// <returns><see cref="DeleteVolumeResponse"/></returns>
+        public DeleteVolumeResponse DeleteVolumeSync(DeleteVolumeRequest req)
+        {
+            return InternalRequestAsync<DeleteVolumeResponse>(req, "DeleteVolume")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除缓存卷数据。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVolumeDataRequest"/></param>
+        /// <returns><see cref="DeleteVolumeDataResponse"/></returns>
+        public Task<DeleteVolumeDataResponse> DeleteVolumeData(DeleteVolumeDataRequest req)
+        {
+            return InternalRequestAsync<DeleteVolumeDataResponse>(req, "DeleteVolumeData");
+        }
+
+        /// <summary>
+        /// 删除缓存卷数据。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVolumeDataRequest"/></param>
+        /// <returns><see cref="DeleteVolumeDataResponse"/></returns>
+        public DeleteVolumeDataResponse DeleteVolumeDataSync(DeleteVolumeDataRequest req)
+        {
+            return InternalRequestAsync<DeleteVolumeDataResponse>(req, "DeleteVolumeData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -201,6 +264,27 @@ namespace TencentCloud.Omics.V20221128
         }
 
         /// <summary>
+        /// 查询缓存卷列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVolumesRequest"/></param>
+        /// <returns><see cref="DescribeVolumesResponse"/></returns>
+        public Task<DescribeVolumesResponse> DescribeVolumes(DescribeVolumesRequest req)
+        {
+            return InternalRequestAsync<DescribeVolumesResponse>(req, "DescribeVolumes");
+        }
+
+        /// <summary>
+        /// 查询缓存卷列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVolumesRequest"/></param>
+        /// <returns><see cref="DescribeVolumesResponse"/></returns>
+        public DescribeVolumesResponse DescribeVolumesSync(DescribeVolumesRequest req)
+        {
+            return InternalRequestAsync<DescribeVolumesResponse>(req, "DescribeVolumes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询作业详情。
         /// </summary>
         /// <param name="req"><see cref="GetRunCallsRequest"/></param>
@@ -281,6 +365,27 @@ namespace TencentCloud.Omics.V20221128
         public ImportTableFileResponse ImportTableFileSync(ImportTableFileRequest req)
         {
             return InternalRequestAsync<ImportTableFileResponse>(req, "ImportTableFile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改缓存卷。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVolumeRequest"/></param>
+        /// <returns><see cref="ModifyVolumeResponse"/></returns>
+        public Task<ModifyVolumeResponse> ModifyVolume(ModifyVolumeRequest req)
+        {
+            return InternalRequestAsync<ModifyVolumeResponse>(req, "ModifyVolume");
+        }
+
+        /// <summary>
+        /// 修改缓存卷。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVolumeRequest"/></param>
+        /// <returns><see cref="ModifyVolumeResponse"/></returns>
+        public ModifyVolumeResponse ModifyVolumeSync(ModifyVolumeRequest req)
+        {
+            return InternalRequestAsync<ModifyVolumeResponse>(req, "ModifyVolume")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

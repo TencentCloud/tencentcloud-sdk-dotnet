@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 国内站标准版填写standards2, 国际站标准版填写standard，专业版填写profession
+        /// 国内站标准版填写standards2, 国际站标准版填写standard,专业版填写profession,高级版填写premium
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? InstanceNum{ get; set; }
 
         /// <summary>
-        /// 实例内网带宽大小, 单位MB/s (购买时必填，专业版询价时带宽信息必填)
+        /// 实例内网带宽大小, 单位MB/s (购买时必填，专业版/高级版询价时带宽信息必填)
         /// </summary>
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }
 
         /// <summary>
-        /// 实例的硬盘购买类型以及大小 (购买时必填，专业版询价时磁盘信息必填)
+        /// 实例的硬盘购买类型以及大小 (购买时必填，专业版/高级版询价时磁盘信息必填)
         /// </summary>
         [JsonProperty("InquiryDiskParam")]
         public InquiryDiskParam InquiryDiskParam{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? Topic{ get; set; }
 
         /// <summary>
-        /// 购买实例分区数, 单位个 (购买时必填，专业版询价时带宽信息必填)
+        /// 购买实例分区数, 单位个 (购买时必填，专业版/高级版询价时带宽信息必填)
         /// </summary>
         [JsonProperty("Partition")]
         public long? Partition{ get; set; }

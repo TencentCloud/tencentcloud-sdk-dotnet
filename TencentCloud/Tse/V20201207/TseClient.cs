@@ -28,7 +28,7 @@ namespace TencentCloud.Tse.V20201207
 
        private const string endpoint = "tse.tencentcloudapi.com";
        private const string version = "2020-12-07";
-       private const string sdkVersion = "SDK_NET_3.0.955";
+       private const string sdkVersion = "SDK_NET_3.0.956";
 
         /// <summary>
         /// Client constructor.
@@ -306,6 +306,27 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 创建治理中心服务实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateGovernanceInstancesRequest"/></param>
+        /// <returns><see cref="CreateGovernanceInstancesResponse"/></returns>
+        public Task<CreateGovernanceInstancesResponse> CreateGovernanceInstances(CreateGovernanceInstancesRequest req)
+        {
+            return InternalRequestAsync<CreateGovernanceInstancesResponse>(req, "CreateGovernanceInstances");
+        }
+
+        /// <summary>
+        /// 创建治理中心服务实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateGovernanceInstancesRequest"/></param>
+        /// <returns><see cref="CreateGovernanceInstancesResponse"/></returns>
+        public CreateGovernanceInstancesResponse CreateGovernanceInstancesSync(CreateGovernanceInstancesRequest req)
+        {
+            return InternalRequestAsync<CreateGovernanceInstancesResponse>(req, "CreateGovernanceInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建云原生网关引擎分组
         /// </summary>
         /// <param name="req"><see cref="CreateNativeGatewayServerGroupRequest"/></param>
@@ -554,6 +575,27 @@ namespace TencentCloud.Tse.V20201207
         public DeleteEngineResponse DeleteEngineSync(DeleteEngineRequest req)
         {
             return InternalRequestAsync<DeleteEngineResponse>(req, "DeleteEngine")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除治理中心服务实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGovernanceInstancesRequest"/></param>
+        /// <returns><see cref="DeleteGovernanceInstancesResponse"/></returns>
+        public Task<DeleteGovernanceInstancesResponse> DeleteGovernanceInstances(DeleteGovernanceInstancesRequest req)
+        {
+            return InternalRequestAsync<DeleteGovernanceInstancesResponse>(req, "DeleteGovernanceInstances");
+        }
+
+        /// <summary>
+        /// 删除治理中心服务实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGovernanceInstancesRequest"/></param>
+        /// <returns><see cref="DeleteGovernanceInstancesResponse"/></returns>
+        public DeleteGovernanceInstancesResponse DeleteGovernanceInstancesSync(DeleteGovernanceInstancesRequest req)
+        {
+            return InternalRequestAsync<DeleteGovernanceInstancesResponse>(req, "DeleteGovernanceInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -911,6 +953,27 @@ namespace TencentCloud.Tse.V20201207
         public DescribeCloudNativeAPIGatewaysResponse DescribeCloudNativeAPIGatewaysSync(DescribeCloudNativeAPIGatewaysRequest req)
         {
             return InternalRequestAsync<DescribeCloudNativeAPIGatewaysResponse>(req, "DescribeCloudNativeAPIGateways")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询治理中心服务实例
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGovernanceInstancesRequest"/></param>
+        /// <returns><see cref="DescribeGovernanceInstancesResponse"/></returns>
+        public Task<DescribeGovernanceInstancesResponse> DescribeGovernanceInstances(DescribeGovernanceInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeGovernanceInstancesResponse>(req, "DescribeGovernanceInstances");
+        }
+
+        /// <summary>
+        /// 查询治理中心服务实例
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGovernanceInstancesRequest"/></param>
+        /// <returns><see cref="DescribeGovernanceInstancesResponse"/></returns>
+        public DescribeGovernanceInstancesResponse DescribeGovernanceInstancesSync(DescribeGovernanceInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeGovernanceInstancesResponse>(req, "DescribeGovernanceInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1352,6 +1415,27 @@ namespace TencentCloud.Tse.V20201207
         public ModifyConsoleNetworkResponse ModifyConsoleNetworkSync(ModifyConsoleNetworkRequest req)
         {
             return InternalRequestAsync<ModifyConsoleNetworkResponse>(req, "ModifyConsoleNetwork")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改治理中心服务实例
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGovernanceInstancesRequest"/></param>
+        /// <returns><see cref="ModifyGovernanceInstancesResponse"/></returns>
+        public Task<ModifyGovernanceInstancesResponse> ModifyGovernanceInstances(ModifyGovernanceInstancesRequest req)
+        {
+            return InternalRequestAsync<ModifyGovernanceInstancesResponse>(req, "ModifyGovernanceInstances");
+        }
+
+        /// <summary>
+        /// 修改治理中心服务实例
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGovernanceInstancesRequest"/></param>
+        /// <returns><see cref="ModifyGovernanceInstancesResponse"/></returns>
+        public ModifyGovernanceInstancesResponse ModifyGovernanceInstancesSync(ModifyGovernanceInstancesRequest req)
+        {
+            return InternalRequestAsync<ModifyGovernanceInstancesResponse>(req, "ModifyGovernanceInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

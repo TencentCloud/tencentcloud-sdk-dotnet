@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.955</VersionPrefix>
+    <VersionPrefix>3.0.956</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -123,6 +123,8 @@
     <Compile Include="V20221121\Models\DescribeTaskLogListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeTaskLogURLRequest.cs" />
     <Compile Include="V20221121\Models\DescribeTaskLogURLResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeTopAttackInfoRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeTopAttackInfoResponse.cs" />
     <Compile Include="V20221121\Models\DescribeVULRiskAdvanceCFGListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeVULRiskAdvanceCFGListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeVpcAssetsRequest.cs" />
@@ -156,6 +158,7 @@
     <Compile Include="V20221121\Models\StopRiskCenterTaskResponse.cs" />
     <Compile Include="V20221121\Models\SubnetAsset.cs" />
     <Compile Include="V20221121\Models\Tag.cs" />
+    <Compile Include="V20221121\Models\TagCount.cs" />
     <Compile Include="V20221121\Models\Tags.cs" />
     <Compile Include="V20221121\Models\TaskAdvanceCFG.cs" />
     <Compile Include="V20221121\Models\TaskAssetObject.cs" />

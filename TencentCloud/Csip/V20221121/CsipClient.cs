@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.955";
+       private const string sdkVersion = "SDK_NET_3.0.956";
 
         /// <summary>
         /// Client constructor.
@@ -680,6 +680,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeTaskLogURLResponse DescribeTaskLogURLSync(DescribeTaskLogURLRequest req)
         {
             return InternalRequestAsync<DescribeTaskLogURLResponse>(req, "DescribeTaskLogURL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询TOP攻击信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopAttackInfoRequest"/></param>
+        /// <returns><see cref="DescribeTopAttackInfoResponse"/></returns>
+        public Task<DescribeTopAttackInfoResponse> DescribeTopAttackInfo(DescribeTopAttackInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeTopAttackInfoResponse>(req, "DescribeTopAttackInfo");
+        }
+
+        /// <summary>
+        /// 查询TOP攻击信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopAttackInfoRequest"/></param>
+        /// <returns><see cref="DescribeTopAttackInfoResponse"/></returns>
+        public DescribeTopAttackInfoResponse DescribeTopAttackInfoSync(DescribeTopAttackInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeTopAttackInfoResponse>(req, "DescribeTopAttackInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

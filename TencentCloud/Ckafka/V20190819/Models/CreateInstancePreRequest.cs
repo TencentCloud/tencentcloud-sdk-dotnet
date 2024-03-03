@@ -85,7 +85,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string KafkaVersion{ get; set; }
 
         /// <summary>
-        /// 实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession"
+        /// 实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession",[高级版实例]填写"premium"
         /// </summary>
         [JsonProperty("SpecificationsType")]
         public string SpecificationsType{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 专业版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
+        /// 专业版/高级版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
