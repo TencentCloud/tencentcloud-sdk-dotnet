@@ -25,14 +25,17 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 规格类型
+        /// 规格类型。
+        /// <li>clb.c2.medium（标准型）</li><li>clb.c3.small（高阶型1）</li><li>clb.c3.medium（高阶型2）</li>
+        /// <li>clb.c4.small（超强型1）</li><li>clb.c4.medium（超强型2）</li><li>clb.c4.large（超强型3）</li><li>clb.c4.xlarge（超强型4）</li><li>shared（共享型）</li>
+        /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpecType")]
         public string SpecType{ get; set; }
 
         /// <summary>
-        /// 规格可用性
+        /// 规格可用性。资源可用性，"Available"：可用，"Unavailable"：不可用
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Availability")]

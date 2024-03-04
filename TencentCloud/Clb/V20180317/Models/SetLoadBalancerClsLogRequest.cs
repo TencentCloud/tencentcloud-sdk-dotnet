@@ -32,7 +32,7 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 日志服务(CLS)的日志集 ID。
-        /// <li>增加和更新日志主题时可调用 [DescribeLogsets](https://cloud.tencent.com/document/product/614/56454) 接口获取日志集 ID。</li>
+        /// <li>增加和更新日志主题时可调用 [DescribeLogsets](https://cloud.tencent.com/document/product/614/58624) 接口获取日志集 ID。</li>
         /// <li>删除日志主题时，此参数填写为null即可。</li>
         /// </summary>
         [JsonProperty("LogSetId")]
@@ -40,7 +40,7 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 日志服务(CLS)的日志主题 ID。
-        /// <li>增加和更新日志主题时可调用 [DescribeTopics](https://cloud.tencent.com/document/product/614/58624) 接口获取日志主题 ID。</li>
+        /// <li>增加和更新日志主题时可调用 [DescribeTopics](https://cloud.tencent.com/document/product/614/56454) 接口获取日志主题 ID。</li>
         /// <li>删除日志主题时，此参数填写为null即可。</li>
         /// </summary>
         [JsonProperty("LogTopicId")]

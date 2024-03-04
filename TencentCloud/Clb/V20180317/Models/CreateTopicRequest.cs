@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string TopicType{ get; set; }
 
         /// <summary>
-        /// 日志集的保存周期，单位：天，默认30天。
+        /// 日志集的保存周期，单位：天，默认30天，范围[1, 3600]。
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }

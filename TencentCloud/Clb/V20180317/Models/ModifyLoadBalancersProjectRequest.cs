@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] LoadBalancerIds{ get; set; }
 
         /// <summary>
-        /// 项目ID。
+        /// 项目ID。可以通过 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 接口获取。
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }

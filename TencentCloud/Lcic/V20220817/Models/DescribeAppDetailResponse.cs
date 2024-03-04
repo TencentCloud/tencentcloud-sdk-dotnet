@@ -43,6 +43,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         public SceneItem[] SceneConfig{ get; set; }
 
         /// <summary>
+        /// 转存配置
+        /// </summary>
+        [JsonProperty("TransferConfig")]
+        public TransferItem TransferConfig{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +63,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamObj(map, prefix + "AppConfig.", this.AppConfig);
             this.SetParamArrayObj(map, prefix + "SceneConfig.", this.SceneConfig);
+            this.SetParamObj(map, prefix + "TransferConfig.", this.TransferConfig);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

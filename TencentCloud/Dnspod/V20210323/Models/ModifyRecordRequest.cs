@@ -85,7 +85,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public ulong? TTL{ get; set; }
 
         /// <summary>
-        /// 权重信息，0到100的整数。仅企业 VIP 域名可用，0 表示关闭，不传该参数，表示不设置权重信息。
+        /// 权重信息，0到100的整数。0 表示关闭，不传该参数，表示不设置权重信息。
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }

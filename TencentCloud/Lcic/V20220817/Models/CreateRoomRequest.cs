@@ -129,7 +129,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? AudienceType{ get; set; }
 
         /// <summary>
-        /// 录制模板。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+        /// 录制模板。房间子类型为视频+白板（SubType=videodoc）时默认为3，房间子类型为纯视频（SubType=video）时默认为0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
         /// </summary>
         [JsonProperty("RecordLayout")]
         public ulong? RecordLayout{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Dasb.V20191018
 
        private const string endpoint = "dasb.tencentcloudapi.com";
        private const string version = "2019-10-18";
-       private const string sdkVersion = "SDK_NET_3.0.956";
+       private const string sdkVersion = "SDK_NET_3.0.957";
 
         /// <summary>
         /// Client constructor.

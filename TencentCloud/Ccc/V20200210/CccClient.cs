@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.956";
+       private const string sdkVersion = "SDK_NET_3.0.957";
 
         /// <summary>
         /// Client constructor.
@@ -1083,6 +1083,27 @@ namespace TencentCloud.Ccc.V20200210
         public UnbindStaffSkillGroupListResponse UnbindStaffSkillGroupListSync(UnbindStaffSkillGroupListRequest req)
         {
             return InternalRequestAsync<UnbindStaffSkillGroupListResponse>(req, "UnbindStaffSkillGroupList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新技能组
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCCCSkillGroupRequest"/></param>
+        /// <returns><see cref="UpdateCCCSkillGroupResponse"/></returns>
+        public Task<UpdateCCCSkillGroupResponse> UpdateCCCSkillGroup(UpdateCCCSkillGroupRequest req)
+        {
+            return InternalRequestAsync<UpdateCCCSkillGroupResponse>(req, "UpdateCCCSkillGroup");
+        }
+
+        /// <summary>
+        /// 更新技能组
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCCCSkillGroupRequest"/></param>
+        /// <returns><see cref="UpdateCCCSkillGroupResponse"/></returns>
+        public UpdateCCCSkillGroupResponse UpdateCCCSkillGroupSync(UpdateCCCSkillGroupRequest req)
+        {
+            return InternalRequestAsync<UpdateCCCSkillGroupResponse>(req, "UpdateCCCSkillGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

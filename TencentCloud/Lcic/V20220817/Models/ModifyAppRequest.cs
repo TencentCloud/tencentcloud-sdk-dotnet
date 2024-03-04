@@ -42,6 +42,18 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("CallbackKey")]
         public string CallbackKey{ get; set; }
 
+        /// <summary>
+        /// 转存id
+        /// </summary>
+        [JsonProperty("TransferId")]
+        public string TransferId{ get; set; }
+
+        /// <summary>
+        /// 转存地址
+        /// </summary>
+        [JsonProperty("TransferUrl")]
+        public string TransferUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamSimple(map, prefix + "Callback", this.Callback);
             this.SetParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
+            this.SetParamSimple(map, prefix + "TransferId", this.TransferId);
+            this.SetParamSimple(map, prefix + "TransferUrl", this.TransferUrl);
         }
     }
 }
