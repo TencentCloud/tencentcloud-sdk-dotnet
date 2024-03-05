@@ -28,7 +28,7 @@ namespace TencentCloud.Iotvideo.V20211125
 
        private const string endpoint = "iotvideo.tencentcloudapi.com";
        private const string version = "2021-11-25";
-       private const string sdkVersion = "SDK_NET_3.0.957";
+       private const string sdkVersion = "SDK_NET_3.0.958";
 
         /// <summary>
         /// Client constructor.
@@ -1436,6 +1436,27 @@ namespace TencentCloud.Iotvideo.V20211125
         public DescribeModelDefinitionResponse DescribeModelDefinitionSync(DescribeModelDefinitionRequest req)
         {
             return InternalRequestAsync<DescribeModelDefinitionResponse>(req, "DescribeModelDefinition")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 拉取设备p2p信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeP2PInfoRequest"/></param>
+        /// <returns><see cref="DescribeP2PInfoResponse"/></returns>
+        public Task<DescribeP2PInfoResponse> DescribeP2PInfo(DescribeP2PInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeP2PInfoResponse>(req, "DescribeP2PInfo");
+        }
+
+        /// <summary>
+        /// 拉取设备p2p信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeP2PInfoRequest"/></param>
+        /// <returns><see cref="DescribeP2PInfoResponse"/></returns>
+        public DescribeP2PInfoResponse DescribeP2PInfoSync(DescribeP2PInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeP2PInfoResponse>(req, "DescribeP2PInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

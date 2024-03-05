@@ -30,7 +30,6 @@ namespace TencentCloud.Trocket.V20230308.Models
         /// BASIC 基础版
         /// PRO  专业版
         /// PLATINUM 铂金版
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -170,6 +169,51 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string PayMode{ get; set; }
 
         /// <summary>
+        /// 是否开启弹性TPS
+        /// </summary>
+        [JsonProperty("ScaledTpsEnabled")]
+        public bool? ScaledTpsEnabled{ get; set; }
+
+        /// <summary>
+        /// 是否自动续费
+        /// </summary>
+        [JsonProperty("RenewFlag")]
+        public long? RenewFlag{ get; set; }
+
+        /// <summary>
+        /// 到期时间
+        /// </summary>
+        [JsonProperty("ExpiryTime")]
+        public long? ExpiryTime{ get; set; }
+
+        /// <summary>
+        /// 角色数量限制
+        /// </summary>
+        [JsonProperty("RoleNumLimit")]
+        public long? RoleNumLimit{ get; set; }
+
+        /// <summary>
+        /// 是否开启 ACL
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AclEnabled")]
+        public bool? AclEnabled{ get; set; }
+
+        /// <summary>
+        /// topic个数免费额度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TopicNumLowerLimit")]
+        public long? TopicNumLowerLimit{ get; set; }
+
+        /// <summary>
+        /// 最大可设置的topic个数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TopicNumUpperLimit")]
+        public long? TopicNumUpperLimit{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -204,6 +248,13 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
             this.SetParamSimple(map, prefix + "SkuCode", this.SkuCode);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "ScaledTpsEnabled", this.ScaledTpsEnabled);
+            this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+            this.SetParamSimple(map, prefix + "ExpiryTime", this.ExpiryTime);
+            this.SetParamSimple(map, prefix + "RoleNumLimit", this.RoleNumLimit);
+            this.SetParamSimple(map, prefix + "AclEnabled", this.AclEnabled);
+            this.SetParamSimple(map, prefix + "TopicNumLowerLimit", this.TopicNumLowerLimit);
+            this.SetParamSimple(map, prefix + "TopicNumUpperLimit", this.TopicNumUpperLimit);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

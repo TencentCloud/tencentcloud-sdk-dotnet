@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 目标组的默认端口， 后续添加服务器时可使用该默认端口
+        /// 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }

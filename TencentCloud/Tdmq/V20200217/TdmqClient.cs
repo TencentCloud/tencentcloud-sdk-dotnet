@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.957";
+       private const string sdkVersion = "SDK_NET_3.0.958";
 
         /// <summary>
         /// Client constructor.
@@ -642,31 +642,6 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 接口支持删除多个集群，目前已废弃
-        /// 
-        /// 删除专业集群——预付费，仅通过API 调用，支持同时删除多个集群
-        /// </summary>
-        /// <param name="req"><see cref="DeleteProClustersRequest"/></param>
-        /// <returns><see cref="DeleteProClustersResponse"/></returns>
-        public Task<DeleteProClustersResponse> DeleteProClusters(DeleteProClustersRequest req)
-        {
-            return InternalRequestAsync<DeleteProClustersResponse>(req, "DeleteProClusters");
-        }
-
-        /// <summary>
-        /// 接口支持删除多个集群，目前已废弃
-        /// 
-        /// 删除专业集群——预付费，仅通过API 调用，支持同时删除多个集群
-        /// </summary>
-        /// <param name="req"><see cref="DeleteProClustersRequest"/></param>
-        /// <returns><see cref="DeleteProClustersResponse"/></returns>
-        public DeleteProClustersResponse DeleteProClustersSync(DeleteProClustersRequest req)
-        {
-            return InternalRequestAsync<DeleteProClustersResponse>(req, "DeleteProClusters")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 删除RabbitMQ的用户
         /// </summary>
         /// <param name="req"><see cref="DeleteRabbitMQUserRequest"/></param>
@@ -1209,6 +1184,48 @@ namespace TencentCloud.Tdmq.V20200217
         public DescribeEnvironmentsResponse DescribeEnvironmentsSync(DescribeEnvironmentsRequest req)
         {
             return InternalRequestAsync<DescribeEnvironmentsResponse>(req, "DescribeEnvironments")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询消息轨迹
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMqMsgTraceRequest"/></param>
+        /// <returns><see cref="DescribeMqMsgTraceResponse"/></returns>
+        public Task<DescribeMqMsgTraceResponse> DescribeMqMsgTrace(DescribeMqMsgTraceRequest req)
+        {
+            return InternalRequestAsync<DescribeMqMsgTraceResponse>(req, "DescribeMqMsgTrace");
+        }
+
+        /// <summary>
+        /// 查询消息轨迹
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMqMsgTraceRequest"/></param>
+        /// <returns><see cref="DescribeMqMsgTraceResponse"/></returns>
+        public DescribeMqMsgTraceResponse DescribeMqMsgTraceSync(DescribeMqMsgTraceRequest req)
+        {
+            return InternalRequestAsync<DescribeMqMsgTraceResponse>(req, "DescribeMqMsgTrace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 消息详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMsgRequest"/></param>
+        /// <returns><see cref="DescribeMsgResponse"/></returns>
+        public Task<DescribeMsgResponse> DescribeMsg(DescribeMsgRequest req)
+        {
+            return InternalRequestAsync<DescribeMsgResponse>(req, "DescribeMsg");
+        }
+
+        /// <summary>
+        /// 消息详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMsgRequest"/></param>
+        /// <returns><see cref="DescribeMsgResponse"/></returns>
+        public DescribeMsgResponse DescribeMsgSync(DescribeMsgRequest req)
+        {
+            return InternalRequestAsync<DescribeMsgResponse>(req, "DescribeMsg")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

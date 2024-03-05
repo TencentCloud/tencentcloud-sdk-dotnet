@@ -28,7 +28,7 @@ namespace TencentCloud.Hasim.V20210716
 
        private const string endpoint = "hasim.tencentcloudapi.com";
        private const string version = "2021-07-16";
-       private const string sdkVersion = "SDK_NET_3.0.957";
+       private const string sdkVersion = "SDK_NET_3.0.958";
 
         /// <summary>
         /// Client constructor.

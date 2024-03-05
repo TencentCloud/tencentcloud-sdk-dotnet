@@ -88,7 +88,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例IP地址所属的ISP。
+        /// 负载均衡实例IP地址所属的ISP。取值范围：BGP（多线）、CMCC（中国移动）、CUCC（中国联通）、CTCC（中国电信）、INTERNAL（内网）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddressIsp")]
@@ -116,7 +116,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例的计费类型。
+        /// 负载均衡实例的计费类型。取值范围：PREPAID预付费、POSTPAID_BY_HOUR按量付费。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChargeType")]
@@ -242,7 +242,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] SecurityGroup{ get; set; }
 
         /// <summary>
-        /// 负载均衡安全组上移特性是否开启标识。
+        /// 负载均衡安全组上移特性是否开启标识。取值范围：1表示开启、0表示未开启。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoadBalancerPassToTarget")]

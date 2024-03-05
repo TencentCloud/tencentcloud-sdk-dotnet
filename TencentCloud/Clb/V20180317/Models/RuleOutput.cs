@@ -65,7 +65,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public CertificateOutput Certificate{ get; set; }
 
         /// <summary>
-        /// 规则的请求转发方式
+        /// 规则的请求转发方式。
+        /// WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Hash。
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }
@@ -120,7 +121,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 后端服务器类型
+        /// 后端服务器类型。NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
         /// </summary>
         [JsonProperty("TargetType")]
         public string TargetType{ get; set; }
@@ -154,7 +155,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string TrpcFunc{ get; set; }
 
         /// <summary>
-        /// QUIC状态
+        /// QUIC状态。QUIC_ACTIVE表示开启，QUIC_INACTIVE表示未开启。注意，只有HTTPS域名才能开启QUIC。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QuicStatus")]

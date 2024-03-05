@@ -56,7 +56,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? Weight{ get; set; }
 
         /// <summary>
-        /// 七层规则 ID。
+        /// 七层规则 ID。7层负载均衡该参数必填
         /// </summary>
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }

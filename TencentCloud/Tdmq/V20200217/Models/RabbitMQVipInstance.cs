@@ -124,6 +124,20 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ClusterStatus")]
         public long? ClusterStatus{ get; set; }
 
+        /// <summary>
+        /// 公网接入点
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PublicAccessEndpoint")]
+        public string PublicAccessEndpoint{ get; set; }
+
+        /// <summary>
+        /// VPC 接入点列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Vpcs")]
+        public VpcEndpointInfo[] Vpcs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -146,6 +160,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "SpecName", this.SpecName);
             this.SetParamSimple(map, prefix + "ExceptionInformation", this.ExceptionInformation);
             this.SetParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
+            this.SetParamSimple(map, prefix + "PublicAccessEndpoint", this.PublicAccessEndpoint);
+            this.SetParamArrayObj(map, prefix + "Vpcs.", this.Vpcs);
         }
     }
 }

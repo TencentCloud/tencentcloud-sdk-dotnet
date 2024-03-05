@@ -46,12 +46,14 @@ namespace TencentCloud.Clb.V20180317.Models
         /// 目标规则的域名，提供LocationId参数时本参数不生效。
         /// </summary>
         [JsonProperty("Domain")]
+        [System.Obsolete]
         public string Domain{ get; set; }
 
         /// <summary>
         /// 目标规则的URL，提供LocationId参数时本参数不生效。
         /// </summary>
         [JsonProperty("Url")]
+        [System.Obsolete]
         public string Url{ get; set; }
 
         /// <summary>

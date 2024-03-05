@@ -62,6 +62,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 排序依据的字段：
+        /// ConsumerNumber - 在线消费者数量；
         /// MessageHeapCount - 消息堆积数；
         /// MessageRateInOut - 生产消费速率之和；
         /// MessageRateIn - 生产速率；

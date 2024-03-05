@@ -63,12 +63,13 @@ namespace TencentCloud.Clb.V20180317.Models
         /// <summary>
         /// 监听器转发的方式。可选值：WRR、LEAST_CONN
         /// 分别表示按权重轮询、最小连接数， 默认为 WRR。
+        /// 使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。七层监听器的均衡方式应在转发规则中修改。
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }
 
         /// <summary>
-        /// 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI。
+        /// 是否开启SNI特性，此参数仅适用于HTTPS监听器。默认0，表示不开启，1表示开启。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI。
         /// </summary>
         [JsonProperty("SniSwitch")]
         public long? SniSwitch{ get; set; }
@@ -81,6 +82,7 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
+        /// 默认值0表示不开启，1表示开启。
         /// </summary>
         [JsonProperty("KeepaliveEnable")]
         public long? KeepaliveEnable{ get; set; }
@@ -93,6 +95,7 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
+        /// 使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。
         /// </summary>
         [JsonProperty("SessionType")]
         public string SessionType{ get; set; }

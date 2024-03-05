@@ -34,6 +34,7 @@ namespace TencentCloud.Clb.V20180317.Models
         /// 日志集的保存周期，单位：天。
         /// </summary>
         [JsonProperty("Period")]
+        [System.Obsolete]
         public ulong? Period{ get; set; }
 
         /// <summary>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.957</VersionPrefix>
+    <VersionPrefix>3.0.958</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -81,6 +81,7 @@
     <Compile Include="V20220901\Models\BotPortraitRule.cs" />
     <Compile Include="V20220901\Models\BotUserRule.cs" />
     <Compile Include="V20220901\Models\CC.cs" />
+    <Compile Include="V20220901\Models\CLSTopic.cs" />
     <Compile Include="V20220901\Models\Cache.cs" />
     <Compile Include="V20220901\Models\CacheConfig.cs" />
     <Compile Include="V20220901\Models\CacheKey.cs" />
@@ -102,6 +103,8 @@
     <Compile Include="V20220901\Models\CreateApplicationProxyResponse.cs" />
     <Compile Include="V20220901\Models\CreateApplicationProxyRuleRequest.cs" />
     <Compile Include="V20220901\Models\CreateApplicationProxyRuleResponse.cs" />
+    <Compile Include="V20220901\Models\CreateCLSIndexRequest.cs" />
+    <Compile Include="V20220901\Models\CreateCLSIndexResponse.cs" />
     <Compile Include="V20220901\Models\CreateConfigGroupVersionRequest.cs" />
     <Compile Include="V20220901\Models\CreateConfigGroupVersionResponse.cs" />
     <Compile Include="V20220901\Models\CreateL4ProxyRequest.cs" />
@@ -116,6 +119,8 @@
     <Compile Include="V20220901\Models\CreatePrefetchTaskResponse.cs" />
     <Compile Include="V20220901\Models\CreatePurgeTaskRequest.cs" />
     <Compile Include="V20220901\Models\CreatePurgeTaskResponse.cs" />
+    <Compile Include="V20220901\Models\CreateRealtimeLogDeliveryTaskRequest.cs" />
+    <Compile Include="V20220901\Models\CreateRealtimeLogDeliveryTaskResponse.cs" />
     <Compile Include="V20220901\Models\CreateRuleRequest.cs" />
     <Compile Include="V20220901\Models\CreateRuleResponse.cs" />
     <Compile Include="V20220901\Models\CreateSecurityIPGroupRequest.cs" />
@@ -124,6 +129,8 @@
     <Compile Include="V20220901\Models\CreateSharedCNAMEResponse.cs" />
     <Compile Include="V20220901\Models\CreateZoneRequest.cs" />
     <Compile Include="V20220901\Models\CreateZoneResponse.cs" />
+    <Compile Include="V20220901\Models\CustomEndpoint.cs" />
+    <Compile Include="V20220901\Models\CustomField.cs" />
     <Compile Include="V20220901\Models\DDoS.cs" />
     <Compile Include="V20220901\Models\DDoSAttackEvent.cs" />
     <Compile Include="V20220901\Models\DDoSBlockData.cs" />
@@ -143,6 +150,8 @@
     <Compile Include="V20220901\Models\DeleteL4ProxyRulesResponse.cs" />
     <Compile Include="V20220901\Models\DeleteOriginGroupRequest.cs" />
     <Compile Include="V20220901\Models\DeleteOriginGroupResponse.cs" />
+    <Compile Include="V20220901\Models\DeleteRealtimeLogDeliveryTaskRequest.cs" />
+    <Compile Include="V20220901\Models\DeleteRealtimeLogDeliveryTaskResponse.cs" />
     <Compile Include="V20220901\Models\DeleteRulesRequest.cs" />
     <Compile Include="V20220901\Models\DeleteRulesResponse.cs" />
     <Compile Include="V20220901\Models\DeleteSecurityIPGroupRequest.cs" />
@@ -151,6 +160,7 @@
     <Compile Include="V20220901\Models\DeleteSharedCNAMEResponse.cs" />
     <Compile Include="V20220901\Models\DeleteZoneRequest.cs" />
     <Compile Include="V20220901\Models\DeleteZoneResponse.cs" />
+    <Compile Include="V20220901\Models\DeliveryCondition.cs" />
     <Compile Include="V20220901\Models\DeployConfigGroupVersionRequest.cs" />
     <Compile Include="V20220901\Models\DeployConfigGroupVersionResponse.cs" />
     <Compile Include="V20220901\Models\DeployRecord.cs" />
@@ -202,6 +212,8 @@
     <Compile Include="V20220901\Models\DescribePrefetchTasksResponse.cs" />
     <Compile Include="V20220901\Models\DescribePurgeTasksRequest.cs" />
     <Compile Include="V20220901\Models\DescribePurgeTasksResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeRealtimeLogDeliveryTasksRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeRealtimeLogDeliveryTasksResponse.cs" />
     <Compile Include="V20220901\Models\DescribeRulesRequest.cs" />
     <Compile Include="V20220901\Models\DescribeRulesResponse.cs" />
     <Compile Include="V20220901\Models\DescribeRulesSettingRequest.cs" />
@@ -293,6 +305,8 @@
     <Compile Include="V20220901\Models\ModifyL4ProxyStatusResponse.cs" />
     <Compile Include="V20220901\Models\ModifyOriginGroupRequest.cs" />
     <Compile Include="V20220901\Models\ModifyOriginGroupResponse.cs" />
+    <Compile Include="V20220901\Models\ModifyRealtimeLogDeliveryTaskRequest.cs" />
+    <Compile Include="V20220901\Models\ModifyRealtimeLogDeliveryTaskResponse.cs" />
     <Compile Include="V20220901\Models\ModifyRuleRequest.cs" />
     <Compile Include="V20220901\Models\ModifyRuleResponse.cs" />
     <Compile Include="V20220901\Models\ModifySecurityIPGroupRequest.cs" />
@@ -330,6 +344,7 @@
     <Compile Include="V20220901\Models\RateLimitTemplate.cs" />
     <Compile Include="V20220901\Models\RateLimitTemplateDetail.cs" />
     <Compile Include="V20220901\Models\RateLimitUserRule.cs" />
+    <Compile Include="V20220901\Models\RealtimeLogDeliveryTask.cs" />
     <Compile Include="V20220901\Models\Resource.cs" />
     <Compile Include="V20220901\Models\RewriteAction.cs" />
     <Compile Include="V20220901\Models\Rule.cs" />
@@ -343,6 +358,7 @@
     <Compile Include="V20220901\Models\RuleRewriteActionParams.cs" />
     <Compile Include="V20220901\Models\RulesProperties.cs" />
     <Compile Include="V20220901\Models\RulesSettingAction.cs" />
+    <Compile Include="V20220901\Models\S3.cs" />
     <Compile Include="V20220901\Models\SecEntry.cs" />
     <Compile Include="V20220901\Models\SecEntryValue.cs" />
     <Compile Include="V20220901\Models\SecurityConfig.cs" />

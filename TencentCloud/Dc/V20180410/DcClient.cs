@@ -28,7 +28,7 @@ namespace TencentCloud.Dc.V20180410
 
        private const string endpoint = "dc.tencentcloudapi.com";
        private const string version = "2018-04-10";
-       private const string sdkVersion = "SDK_NET_3.0.957";
+       private const string sdkVersion = "SDK_NET_3.0.958";
 
         /// <summary>
         /// Client constructor.
@@ -440,7 +440,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// 本接口（ModifyDirectConnectTunnelExtra）用于修改专用通道扩展信息
+        /// 修改专用通道扩展信息。
         /// </summary>
         /// <param name="req"><see cref="ModifyDirectConnectTunnelExtraRequest"/></param>
         /// <returns><see cref="ModifyDirectConnectTunnelExtraResponse"/></returns>
@@ -450,7 +450,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// 本接口（ModifyDirectConnectTunnelExtra）用于修改专用通道扩展信息
+        /// 修改专用通道扩展信息。
         /// </summary>
         /// <param name="req"><see cref="ModifyDirectConnectTunnelExtraRequest"/></param>
         /// <returns><see cref="ModifyDirectConnectTunnelExtraResponse"/></returns>

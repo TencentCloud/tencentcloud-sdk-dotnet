@@ -25,103 +25,118 @@ namespace TencentCloud.Dc.V20180410.Models
     {
         
         /// <summary>
-        /// 专用通道ID
+        /// 专用通道ID。
         /// </summary>
         [JsonProperty("DirectConnectTunnelId")]
         public string DirectConnectTunnelId{ get; set; }
 
         /// <summary>
-        /// 专用通道的Vlan
+        /// 专用通道的Vlan。
         /// </summary>
         [JsonProperty("Vlan")]
         public long? Vlan{ get; set; }
 
         /// <summary>
-        /// 用户侧BGP，Asn，AuthKey
+        /// Bgp参数，包括Asn，AuthKey
         /// </summary>
         [JsonProperty("BgpPeer")]
         public BgpPeer BgpPeer{ get; set; }
 
         /// <summary>
-        /// 用户侧过滤网段地址
+        /// 用户侧过滤网段地址。
         /// </summary>
         [JsonProperty("RouteFilterPrefixes")]
         public RouteFilterPrefix RouteFilterPrefixes{ get; set; }
 
         /// <summary>
-        /// 腾讯侧互联IP
+        /// 腾讯侧互联IP。
         /// </summary>
         [JsonProperty("TencentAddress")]
         public string TencentAddress{ get; set; }
 
         /// <summary>
-        /// 腾讯侧备用互联IP
+        /// 腾讯侧备用互联IP。
         /// </summary>
         [JsonProperty("TencentBackupAddress")]
         public string TencentBackupAddress{ get; set; }
 
         /// <summary>
-        /// 用户侧互联IP
+        /// 用户侧互联IP。
         /// </summary>
         [JsonProperty("CustomerAddress")]
         public string CustomerAddress{ get; set; }
 
         /// <summary>
-        /// 专用通道带宽值
+        /// 专用通道带宽值。
         /// </summary>
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }
 
         /// <summary>
-        /// BGP community开关
+        /// BGP community开关。
         /// </summary>
         [JsonProperty("EnableBGPCommunity")]
         public bool? EnableBGPCommunity{ get; set; }
 
         /// <summary>
-        /// 是否开启BFD
+        /// 是否开启BFD。
         /// </summary>
         [JsonProperty("BfdEnable")]
         public long? BfdEnable{ get; set; }
 
         /// <summary>
-        /// 是否开启NQA
+        /// 是否开启NQA。
         /// </summary>
         [JsonProperty("NqaEnable")]
         public long? NqaEnable{ get; set; }
 
         /// <summary>
-        /// BFD配置信息
+        /// BFD配置信息。
         /// </summary>
         [JsonProperty("BfdInfo")]
         public BFDInfo BfdInfo{ get; set; }
 
         /// <summary>
-        /// NQA配置信息
+        /// NQA配置信息。
         /// </summary>
         [JsonProperty("NqaInfo")]
         public NQAInfo NqaInfo{ get; set; }
 
         /// <summary>
-        /// 0：停用IPv6
-        /// 1: 启用IPv6
+        /// IPV6使能。0：停用IPv6；1: 启用IPv6。
         /// </summary>
         [JsonProperty("IPv6Enable")]
         public long? IPv6Enable{ get; set; }
 
         /// <summary>
-        /// 去往用户侧的路由信息
+        /// 去往用户侧的路由信息。
         /// </summary>
         [JsonProperty("CustomerIDCRoutes")]
         public RouteFilterPrefix[] CustomerIDCRoutes{ get; set; }
 
         /// <summary>
-        /// 是否开启巨帧
-        /// 1：开启
-        /// 0：不开启
+        /// 是否开启巨帧。1：开启；0：不开启。
         /// </summary>
         [JsonProperty("JumboEnable")]
         public long? JumboEnable{ get; set; }
+
+        /// <summary>
+        /// 腾讯侧互联IPv6。
+        /// </summary>
+        [JsonProperty("TencentIPv6Address")]
+        public string TencentIPv6Address{ get; set; }
+
+        /// <summary>
+        /// 腾讯侧备用互联IPv6。
+        /// </summary>
+        [JsonProperty("TencentBackupIPv6Address")]
+        public string TencentBackupIPv6Address{ get; set; }
+
+        /// <summary>
+        /// 用户侧互联IPv6。
+        /// </summary>
+        [JsonProperty("CustomerIPv6Address")]
+        public string CustomerIPv6Address{ get; set; }
 
 
         /// <summary>
@@ -145,6 +160,9 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "IPv6Enable", this.IPv6Enable);
             this.SetParamArrayObj(map, prefix + "CustomerIDCRoutes.", this.CustomerIDCRoutes);
             this.SetParamSimple(map, prefix + "JumboEnable", this.JumboEnable);
+            this.SetParamSimple(map, prefix + "TencentIPv6Address", this.TencentIPv6Address);
+            this.SetParamSimple(map, prefix + "TencentBackupIPv6Address", this.TencentBackupIPv6Address);
+            this.SetParamSimple(map, prefix + "CustomerIPv6Address", this.CustomerIPv6Address);
         }
     }
 }

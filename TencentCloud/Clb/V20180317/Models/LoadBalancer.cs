@@ -50,7 +50,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? Forward{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
+        /// 负载均衡实例的域名，仅公网传统型和域名型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domain")]
@@ -124,6 +124,7 @@ namespace TencentCloud.Clb.V20180317.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Log")]
+        [System.Obsolete]
         public string Log{ get; set; }
 
         /// <summary>
@@ -176,7 +177,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? NumericalVpcId{ get; set; }
 
         /// <summary>
-        /// 负载均衡IP地址所属的ISP
+        /// 负载均衡IP地址所属的运营商。取值范围（BGP、CMCC、CTCC、CUCC）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VipIsp")]

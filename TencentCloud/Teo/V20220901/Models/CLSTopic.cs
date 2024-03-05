@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmq.V20200217.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteProClustersResponse : AbstractModel
+    public class CLSTopic : AbstractModel
     {
         
         /// <summary>
-        /// 退还实例订单号
+        /// 腾讯云 CLS 日志集 ID。	
         /// </summary>
-        [JsonProperty("DealNames")]
-        public string[] DealNames{ get; set; }
+        [JsonProperty("LogSetId")]
+        public string LogSetId{ get; set; }
 
         /// <summary>
-        /// 集群ID
+        /// 腾讯云 CLS 日志主题 ID。
         /// </summary>
-        [JsonProperty("ClusterIds")]
-        public string[] ClusterIds{ get; set; }
+        [JsonProperty("TopicId")]
+        public string TopicId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 腾讯云 CLS 日志集所在的地域。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("LogSetRegion")]
+        public string LogSetRegion{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "DealNames.", this.DealNames);
-            this.SetParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "LogSetId", this.LogSetId);
+            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
+            this.SetParamSimple(map, prefix + "LogSetRegion", this.LogSetRegion);
         }
     }
 }

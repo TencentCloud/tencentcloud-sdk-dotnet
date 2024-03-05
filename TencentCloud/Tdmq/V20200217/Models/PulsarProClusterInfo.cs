@@ -80,6 +80,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("CanEditRoute")]
         public bool? CanEditRoute{ get; set; }
 
+        /// <summary>
+        /// 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BillingLabelVersion")]
+        public string BillingLabelVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -95,6 +102,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamArrayObj(map, prefix + "NodeDistribution.", this.NodeDistribution);
             this.SetParamSimple(map, prefix + "MaxStorage", this.MaxStorage);
             this.SetParamSimple(map, prefix + "CanEditRoute", this.CanEditRoute);
+            this.SetParamSimple(map, prefix + "BillingLabelVersion", this.BillingLabelVersion);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string TargetGroupId{ get; set; }
 
         /// <summary>
-        /// 监听器ID
+        /// 监听器ID。访问AssociateTargetGroups和DisassociateTargetGroups接口时必传此参数。
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }

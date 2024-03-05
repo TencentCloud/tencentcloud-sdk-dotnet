@@ -32,6 +32,12 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] FailListenerIdSet{ get; set; }
 
         /// <summary>
+        /// 绑定失败错误原因信息。
+        /// </summary>
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -44,6 +50,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "FailListenerIdSet.", this.FailListenerIdSet);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

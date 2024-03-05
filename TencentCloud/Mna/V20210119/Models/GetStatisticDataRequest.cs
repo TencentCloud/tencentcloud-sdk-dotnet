@@ -51,7 +51,7 @@ namespace TencentCloud.Mna.V20210119.Models
         public long? TimeGranularity{ get; set; }
 
         /// <summary>
-        /// 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填默认中国大陆
+        /// 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
         /// </summary>
         [JsonProperty("AccessRegion")]
         public string AccessRegion{ get; set; }

@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// 集群标签，只有STGW集群有标签
+        /// 集群标签，只有TGW/STGW集群有标签
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterTag")]
@@ -62,56 +62,56 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Network{ get; set; }
 
         /// <summary>
-        /// 最大连接数
+        /// 最大连接数（个/秒）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxConn")]
         public long? MaxConn{ get; set; }
 
         /// <summary>
-        /// 最大入带宽
+        /// 最大入带宽Mbps
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxInFlow")]
         public long? MaxInFlow{ get; set; }
 
         /// <summary>
-        /// 最大入包量
+        /// 最大入包量（个/秒）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxInPkg")]
         public long? MaxInPkg{ get; set; }
 
         /// <summary>
-        /// 最大出带宽
+        /// 最大出带宽Mbps
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxOutFlow")]
         public long? MaxOutFlow{ get; set; }
 
         /// <summary>
-        /// 最大出包量
+        /// 最大出包量（个/秒）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxOutPkg")]
         public long? MaxOutPkg{ get; set; }
 
         /// <summary>
-        /// 最大新建连接数
+        /// 最大新建连接数（个/秒）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxNewConn")]
         public long? MaxNewConn{ get; set; }
 
         /// <summary>
-        /// http最大新建连接数
+        /// http最大新建连接数（个/秒）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HTTPMaxNewConn")]
         public long? HTTPMaxNewConn{ get; set; }
 
         /// <summary>
-        /// https最大新建连接数
+        /// https最大新建连接数（个/秒）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HTTPSMaxNewConn")]
@@ -186,6 +186,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Egress")]
         public string Egress{ get; set; }
 
+        /// <summary>
+        /// IP版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IPVersion")]
+        public string IPVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -216,6 +223,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "ClustersVersion", this.ClustersVersion);
             this.SetParamSimple(map, prefix + "DisasterRecoveryType", this.DisasterRecoveryType);
             this.SetParamSimple(map, prefix + "Egress", this.Egress);
+            this.SetParamSimple(map, prefix + "IPVersion", this.IPVersion);
         }
     }
 }

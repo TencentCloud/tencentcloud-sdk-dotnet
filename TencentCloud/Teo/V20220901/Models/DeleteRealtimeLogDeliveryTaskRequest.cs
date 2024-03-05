@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmq.V20200217.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteProClustersRequest : AbstractModel
+    public class DeleteRealtimeLogDeliveryTaskRequest : AbstractModel
     {
         
         /// <summary>
-        /// 集群Id列表
+        /// 站点 ID。	
         /// </summary>
-        [JsonProperty("ClusterIds")]
-        public string[] ClusterIds{ get; set; }
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
+
+        /// <summary>
+        /// 实时日志投递任务 ID。
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
         }
     }
 }

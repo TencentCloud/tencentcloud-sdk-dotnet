@@ -62,7 +62,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string UpdatedTime{ get; set; }
 
         /// <summary>
-        /// 关联到的规则数组
+        /// 关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssociatedRule")]
