@@ -31,7 +31,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public MachineInfo[] Machines{ get; set; }
 
         /// <summary>
-        /// 机器组是否开启自动升级功能
+        /// 机器组是否开启自动升级功能。 0：未开启自动升级；1：开启了自动升级。
         /// </summary>
         [JsonProperty("AutoUpdate")]
         public long? AutoUpdate{ get; set; }

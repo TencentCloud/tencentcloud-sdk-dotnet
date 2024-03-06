@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.958";
+       private const string sdkVersion = "SDK_NET_3.0.959";
 
         /// <summary>
         /// Client constructor.
@@ -264,7 +264,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于创建投递任务
+        /// 本接口用于创建投递CKafka任务
         /// </summary>
         /// <param name="req"><see cref="CreateConsumerRequest"/></param>
         /// <returns><see cref="CreateConsumerResponse"/></returns>
@@ -274,7 +274,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于创建投递任务
+        /// 本接口用于创建投递CKafka任务
         /// </summary>
         /// <param name="req"><see cref="CreateConsumerRequest"/></param>
         /// <returns><see cref="CreateConsumerResponse"/></returns>
@@ -1209,7 +1209,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于搜索日志上下文附近的内容
+        /// 本接口用于搜索日志上下文附近的内容，详情参考[上下文检索](https://cloud.tencent.com/document/product/614/53248)。
         /// API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Accept-Encoding:gzip）。
         /// </summary>
         /// <param name="req"><see cref="DescribeLogContextRequest"/></param>
@@ -1220,7 +1220,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于搜索日志上下文附近的内容
+        /// 本接口用于搜索日志上下文附近的内容，详情参考[上下文检索](https://cloud.tencent.com/document/product/614/53248)。
         /// API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Accept-Encoding:gzip）。
         /// </summary>
         /// <param name="req"><see cref="DescribeLogContextRequest"/></param>
@@ -1589,7 +1589,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于修改投递任务
+        /// 本接口用于修改投递Ckafka任务
         /// </summary>
         /// <param name="req"><see cref="ModifyConsumerRequest"/></param>
         /// <returns><see cref="ModifyConsumerResponse"/></returns>
@@ -1599,7 +1599,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于修改投递任务
+        /// 本接口用于修改投递Ckafka任务
         /// </summary>
         /// <param name="req"><see cref="ModifyConsumerRequest"/></param>
         /// <returns><see cref="ModifyConsumerResponse"/></returns>

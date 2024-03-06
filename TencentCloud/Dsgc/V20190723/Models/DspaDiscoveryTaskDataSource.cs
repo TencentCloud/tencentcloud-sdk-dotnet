@@ -57,6 +57,13 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("ResourceRegion")]
         public string ResourceRegion{ get; set; }
 
+        /// <summary>
+        /// 无
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DataSourceType")]
+        public string DataSourceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +75,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamArraySimple(map, prefix + "ProxyAddress.", this.ProxyAddress);
             this.SetParamSimple(map, prefix + "DataSourceName", this.DataSourceName);
             this.SetParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
+            this.SetParamSimple(map, prefix + "DataSourceType", this.DataSourceType);
         }
     }
 }

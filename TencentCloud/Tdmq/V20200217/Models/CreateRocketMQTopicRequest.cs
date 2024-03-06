@@ -37,7 +37,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string[] Namespaces{ get; set; }
 
         /// <summary>
-        /// 主题类型，可选值为Normal, PartitionedOrder, Transaction, DelayScheduled。
+        /// 主题类型，可选值为Normal, GlobalOrder, PartitionedOrder, Transaction, DelayScheduled。Transaction仅在专享版支持。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

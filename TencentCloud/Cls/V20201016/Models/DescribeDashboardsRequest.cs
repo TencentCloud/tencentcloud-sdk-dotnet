@@ -68,7 +68,7 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 
         /// <br><li> tag:tagKey
         /// 
-        /// 按照【标签键值对】进行过滤。tag-key使用具体的标签键进行替换。使用请参考示例2。
+        /// 按照【标签键值对】进行过滤。tagKey使用具体的标签键进行替换。使用请参考示例二。
         /// 
         /// 类型：String
         /// 

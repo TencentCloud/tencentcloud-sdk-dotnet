@@ -1,0 +1,92 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Dasb.V20191018.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class ModifyOAuthSettingRequest : AbstractModel
+    {
+        
+        /// <summary>
+        /// 是否开启OAuth认证，false-不开启，true-开启。
+        /// </summary>
+        [JsonProperty("Enable")]
+        public bool? Enable{ get; set; }
+
+        /// <summary>
+        /// OAuth认证方式。
+        /// </summary>
+        [JsonProperty("AuthMethod")]
+        public string AuthMethod{ get; set; }
+
+        /// <summary>
+        /// OAuth认证客户端Id
+        /// </summary>
+        [JsonProperty("ClientId")]
+        public string ClientId{ get; set; }
+
+        /// <summary>
+        /// OAuth认证客户端密钥
+        /// </summary>
+        [JsonProperty("ClientSecret")]
+        public string ClientSecret{ get; set; }
+
+        /// <summary>
+        /// 获取OAuth认证授权码URL
+        /// </summary>
+        [JsonProperty("CodeUrl")]
+        public string CodeUrl{ get; set; }
+
+        /// <summary>
+        /// 获取OAuth令牌URL
+        /// </summary>
+        [JsonProperty("TokenUrl")]
+        public string TokenUrl{ get; set; }
+
+        /// <summary>
+        /// 获取OAuth用户信息URL
+        /// </summary>
+        [JsonProperty("UserInfoUrl")]
+        public string UserInfoUrl{ get; set; }
+
+        /// <summary>
+        /// 使用Okta认证时指定范围。为空时默认使用 openid、profile、email。
+        /// </summary>
+        [JsonProperty("Scopes")]
+        public string[] Scopes{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "Enable", this.Enable);
+            this.SetParamSimple(map, prefix + "AuthMethod", this.AuthMethod);
+            this.SetParamSimple(map, prefix + "ClientId", this.ClientId);
+            this.SetParamSimple(map, prefix + "ClientSecret", this.ClientSecret);
+            this.SetParamSimple(map, prefix + "CodeUrl", this.CodeUrl);
+            this.SetParamSimple(map, prefix + "TokenUrl", this.TokenUrl);
+            this.SetParamSimple(map, prefix + "UserInfoUrl", this.UserInfoUrl);
+            this.SetParamArraySimple(map, prefix + "Scopes.", this.Scopes);
+        }
+    }
+}
+

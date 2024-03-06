@@ -151,6 +151,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TopicName{ get; set; }
 
         /// <summary>
+        /// 采集相关配置信息。详情见 CollectInfo复杂类型配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CollectInfos")]
+        public CollectInfo[] CollectInfos{ get; set; }
+
+        /// <summary>
         /// 高级采集配置。 Json字符串， Key/Value定义为如下：
         /// - ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
         /// - ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
@@ -186,6 +193,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "LogsetId", this.LogsetId);
             this.SetParamSimple(map, prefix + "LogsetName", this.LogsetName);
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
+            this.SetParamArrayObj(map, prefix + "CollectInfos.", this.CollectInfos);
             this.SetParamSimple(map, prefix + "AdvancedConfig", this.AdvancedConfig);
         }
     }

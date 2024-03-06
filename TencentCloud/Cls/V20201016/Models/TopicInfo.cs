@@ -68,7 +68,9 @@ namespace TencentCloud.Cls.V20201016.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 主题是否开启采集
+        /// 主题是否开启采集，true：开启采集；false：关闭采集。
+        /// 创建日志主题时默认开启，可通过SDK调用ModifyTopic修改此字段。
+        /// 控制台目前不支持修改此参数。
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }
@@ -140,9 +142,8 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? BizType{ get; set; }
 
         /// <summary>
-        /// 免鉴权开关。
-        /// - false: 关闭
-        /// - true: 开启
+        /// 免鉴权开关。 false：关闭； true：开启。
+        /// 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsWebTracking")]

@@ -78,6 +78,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         public SubscriptionData[] SubscriptionData{ get; set; }
 
         /// <summary>
+        /// 消息保留时长
+        /// </summary>
+        [JsonProperty("MsgTTL")]
+        public long? MsgTTL{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -97,6 +103,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
             this.SetParamSimple(map, prefix + "SubscriptionCount", this.SubscriptionCount);
             this.SetParamArrayObj(map, prefix + "SubscriptionData.", this.SubscriptionData);
+            this.SetParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

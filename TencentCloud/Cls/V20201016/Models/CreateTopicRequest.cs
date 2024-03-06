@@ -67,7 +67,8 @@ namespace TencentCloud.Cls.V20201016.Models
         public string StorageType{ get; set; }
 
         /// <summary>
-        /// 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600天。取值为3640时代表永久保存
+        /// 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600天。取值为3640时代表永久保存。
+        /// 不传此值，默认获取该日志主题对应日志集的Period值（当获取失败时默认为30天）。
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
@@ -80,13 +81,15 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 0：关闭日志沉降。
-        /// 非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
+        /// 非0：开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
+        /// 仅在StorageType为 hot 时生效。
         /// </summary>
         [JsonProperty("HotPeriod")]
         public ulong? HotPeriod{ get; set; }
 
         /// <summary>
-        /// 免鉴权开关； false: 关闭 true： 开启
+        /// 免鉴权开关。 false：关闭； true：开启。
+        /// 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
         /// </summary>
         [JsonProperty("IsWebTracking")]
         public bool? IsWebTracking{ get; set; }

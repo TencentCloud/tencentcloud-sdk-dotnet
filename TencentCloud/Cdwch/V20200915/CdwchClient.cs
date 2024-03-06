@@ -28,7 +28,7 @@ namespace TencentCloud.Cdwch.V20200915
 
        private const string endpoint = "cdwch.tencentcloudapi.com";
        private const string version = "2020-09-15";
-       private const string sdkVersion = "SDK_NET_3.0.958";
+       private const string sdkVersion = "SDK_NET_3.0.959";
 
         /// <summary>
         /// Client constructor.

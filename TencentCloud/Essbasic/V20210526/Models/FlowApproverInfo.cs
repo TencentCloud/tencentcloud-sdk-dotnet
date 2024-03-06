@@ -275,6 +275,16 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("Components")]
         public Component[] Components{ get; set; }
 
+        /// <summary>
+        /// 视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+        /// 
+        /// 注:
+        ///  `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
+        /// `2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。`
+        /// </summary>
+        [JsonProperty("Intention")]
+        public Intention Intention{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -307,6 +317,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ApproverRoleName", this.ApproverRoleName);
             this.SetParamSimple(map, prefix + "SignTypeSelector", this.SignTypeSelector);
             this.SetParamArrayObj(map, prefix + "Components.", this.Components);
+            this.SetParamObj(map, prefix + "Intention.", this.Intention);
         }
     }
 }

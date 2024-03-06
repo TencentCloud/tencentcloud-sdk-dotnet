@@ -48,6 +48,24 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("IsSetNonSensitiveFile")]
         public bool? IsSetNonSensitiveFile{ get; set; }
 
+        /// <summary>
+        /// 文件名
+        /// </summary>
+        [JsonProperty("FileName")]
+        public string FileName{ get; set; }
+
+        /// <summary>
+        /// 桶名
+        /// </summary>
+        [JsonProperty("BucketName")]
+        public string BucketName{ get; set; }
+
+        /// <summary>
+        /// 数据源id
+        /// </summary>
+        [JsonProperty("DataSourceId")]
+        public string DataSourceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +76,9 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "ComplianceId", this.ComplianceId);
             this.SetParamSimple(map, prefix + "FileResultId", this.FileResultId);
             this.SetParamSimple(map, prefix + "IsSetNonSensitiveFile", this.IsSetNonSensitiveFile);
+            this.SetParamSimple(map, prefix + "FileName", this.FileName);
+            this.SetParamSimple(map, prefix + "BucketName", this.BucketName);
+            this.SetParamSimple(map, prefix + "DataSourceId", this.DataSourceId);
         }
     }
 }

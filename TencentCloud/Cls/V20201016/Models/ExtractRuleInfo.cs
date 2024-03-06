@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 时间字段的key名字，time_key和time_format必须成对出现
+        /// 时间字段的key名字，TikeKey和TimeFormat必须成对出现
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeKey")]
@@ -39,28 +39,28 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TimeFormat{ get; set; }
 
         /// <summary>
-        /// 分隔符类型日志的分隔符，只有log_type为delimiter_log时有效
+        /// 分隔符类型日志的分隔符，只有LogType为delimiter_log时有效
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Delimiter")]
         public string Delimiter{ get; set; }
 
         /// <summary>
-        /// 整条日志匹配规则，只有log_type为fullregex_log时有效
+        /// 整条日志匹配规则，只有LogType为fullregex_log时有效
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogRegex")]
         public string LogRegex{ get; set; }
 
         /// <summary>
-        /// 行首匹配规则，只有log_type为multiline_log或fullregex_log时有效
+        /// 行首匹配规则，只有LogType为multiline_log或fullregex_log时有效
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BeginRegex")]
         public string BeginRegex{ get; set; }
 
         /// <summary>
-        /// 取的每个字段的key名字，为空的key代表丢弃这个字段，只有log_type为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
+        /// 取的每个字段的key名字，为空的key代表丢弃这个字段，只有LogType为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Keys")]
@@ -88,7 +88,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string UnMatchLogKey{ get; set; }
 
         /// <summary>
-        /// 增量采集模式下的回溯数据量，默认-1（全量采集）
+        /// 增量采集模式下的回溯数据量，默认-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Backtracking")]

@@ -31,7 +31,9 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 是否投递日志的元数据信息，默认为 true
+        /// 是否投递日志的元数据信息，默认为 true。
+        /// 当NeedContent为true时：字段Content有效。
+        /// 当NeedContent为false时：字段Content无效。
         /// </summary>
         [JsonProperty("NeedContent")]
         public bool? NeedContent{ get; set; }
@@ -49,7 +51,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public Ckafka Ckafka{ get; set; }
 
         /// <summary>
-        /// 投递时压缩方式，取值0，2，3。[0:NONE；2:SNAPPY；3:LZ4]
+        /// 投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]
         /// </summary>
         [JsonProperty("Compression")]
         public long? Compression{ get; set; }

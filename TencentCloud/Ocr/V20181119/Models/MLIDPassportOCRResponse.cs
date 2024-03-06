@@ -76,7 +76,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long?[] Warn{ get; set; }
 
         /// <summary>
-        /// 证件图片
+        /// 证件中的人像图片base64
         /// </summary>
         [JsonProperty("Image")]
         public string Image{ get; set; }

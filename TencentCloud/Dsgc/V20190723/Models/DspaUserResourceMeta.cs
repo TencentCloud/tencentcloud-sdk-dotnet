@@ -138,6 +138,20 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("ResourceAuthAccount")]
         public string ResourceAuthAccount{ get; set; }
 
+        /// <summary>
+        /// x
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// x
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceValue")]
+        public string InstanceValue{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +177,8 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "ResourceVersion", this.ResourceVersion);
             this.SetParamSimple(map, prefix + "ResourceAuthType", this.ResourceAuthType);
             this.SetParamSimple(map, prefix + "ResourceAuthAccount", this.ResourceAuthAccount);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "InstanceValue", this.InstanceValue);
         }
     }
 }

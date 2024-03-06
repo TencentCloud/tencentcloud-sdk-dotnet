@@ -31,13 +31,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public LogContextInfo[] LogContextInfos{ get; set; }
 
         /// <summary>
-        /// 上文日志是否已经返回
+        /// 上文日志是否已经返回完成（当PrevOver为false，表示有上文日志还未全部返回）。
         /// </summary>
         [JsonProperty("PrevOver")]
         public bool? PrevOver{ get; set; }
 
         /// <summary>
-        /// 下文日志是否已经返回
+        /// 下文日志是否已经返回完成（当NextOver为false，表示有下文日志还未全部返回）。
         /// </summary>
         [JsonProperty("NextOver")]
         public bool? NextOver{ get; set; }

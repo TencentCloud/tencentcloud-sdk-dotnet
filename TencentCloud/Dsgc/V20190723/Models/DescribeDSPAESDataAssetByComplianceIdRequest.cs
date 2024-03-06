@@ -36,6 +36,18 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("ComplianceId")]
         public long? ComplianceId{ get; set; }
 
+        /// <summary>
+        /// 云上还是自建
+        /// </summary>
+        [JsonProperty("BuildType")]
+        public string BuildType{ get; set; }
+
+        /// <summary>
+        /// 数据源类型
+        /// </summary>
+        [JsonProperty("DataSourceType")]
+        public string DataSourceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Dsgc.V20190723.Models
         {
             this.SetParamSimple(map, prefix + "DspaId", this.DspaId);
             this.SetParamSimple(map, prefix + "ComplianceId", this.ComplianceId);
+            this.SetParamSimple(map, prefix + "BuildType", this.BuildType);
+            this.SetParamSimple(map, prefix + "DataSourceType", this.DataSourceType);
         }
     }
 }

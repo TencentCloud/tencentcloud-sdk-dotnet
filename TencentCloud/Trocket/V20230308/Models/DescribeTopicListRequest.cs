@@ -31,6 +31,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
+        /// 查询条件列表
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
+        /// <summary>
         /// 查询起始位置
         /// </summary>
         [JsonProperty("Offset")]
@@ -42,12 +48,6 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
-        /// <summary>
-        /// 查询条件列表
-        /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -55,9 +55,9 @@ namespace TencentCloud.Trocket.V20230308.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

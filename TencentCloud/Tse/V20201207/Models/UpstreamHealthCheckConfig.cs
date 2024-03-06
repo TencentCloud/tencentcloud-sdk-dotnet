@@ -87,6 +87,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("UnhealthyHttpStatuses")]
         public ulong?[] UnhealthyHttpStatuses{ get; set; }
 
+        /// <summary>
+        /// 健康检查屏蔽权重为0的节点
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IgnoreZeroWeightNodes")]
+        public bool? IgnoreZeroWeightNodes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +109,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "Timeouts", this.Timeouts);
             this.SetParamArraySimple(map, prefix + "HealthyHttpStatuses.", this.HealthyHttpStatuses);
             this.SetParamArraySimple(map, prefix + "UnhealthyHttpStatuses.", this.UnhealthyHttpStatuses);
+            this.SetParamSimple(map, prefix + "IgnoreZeroWeightNodes", this.IgnoreZeroWeightNodes);
         }
     }
 }

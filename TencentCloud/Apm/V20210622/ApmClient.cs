@@ -28,7 +28,7 @@ namespace TencentCloud.Apm.V20210622
 
        private const string endpoint = "apm.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.958";
+       private const string sdkVersion = "SDK_NET_3.0.959";
 
         /// <summary>
         /// Client constructor.
@@ -203,7 +203,7 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
-        /// 修改Apm实例接口
+        /// 修改APM实例接口
         /// </summary>
         /// <param name="req"><see cref="ModifyApmInstanceRequest"/></param>
         /// <returns><see cref="ModifyApmInstanceResponse"/></returns>
@@ -213,7 +213,7 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
-        /// 修改Apm实例接口
+        /// 修改APM实例接口
         /// </summary>
         /// <param name="req"><see cref="ModifyApmInstanceRequest"/></param>
         /// <returns><see cref="ModifyApmInstanceResponse"/></returns>

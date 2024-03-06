@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// kafka消费用户名
+        /// 如果返回不为空，代表用户名UserName已经创建成功。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }

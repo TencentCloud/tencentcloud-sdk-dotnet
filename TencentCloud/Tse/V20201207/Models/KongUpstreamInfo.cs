@@ -164,6 +164,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("HealthStatus")]
         public string HealthStatus{ get; set; }
 
+        /// <summary>
+        /// 云函数是否开启CAM鉴权，不填时默认为开启(true)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScfCamAuthEnable")]
+        public bool? ScfCamAuthEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -190,6 +197,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "SourceName", this.SourceName);
             this.SetParamSimple(map, prefix + "RealSourceType", this.RealSourceType);
             this.SetParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
+            this.SetParamSimple(map, prefix + "ScfCamAuthEnable", this.ScfCamAuthEnable);
         }
     }
 }

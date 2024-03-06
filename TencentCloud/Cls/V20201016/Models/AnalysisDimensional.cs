@@ -54,8 +54,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// "Value": "1"  //0：Lucene语法 ，1： CQL语法
         /// }
         /// 
-        /// 
-        /// 
         /// 当Analysis的Type字段为field（top5）时,  支持
         ///  {
         ///     "Key": "QueryIndex",

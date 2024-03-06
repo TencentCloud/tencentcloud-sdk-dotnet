@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 消费格式 0:全文；1:json
+        /// 消费数据格式。 0：原始内容；1：JSON。
         /// </summary>
         [JsonProperty("Format")]
         public long? Format{ get; set; }
@@ -46,9 +46,15 @@ namespace TencentCloud.Cls.V20201016.Models
         public string[] MetaFields{ get; set; }
 
         /// <summary>
-        /// tag数据处理方式：
-        /// 1:不平铺（默认值）
-        /// 2:平铺
+        /// tag数据处理方式：1:不平铺（默认值）；2:平铺。
+        /// 
+        /// 不平铺示例：
+        /// TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+        /// 不平铺：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+        /// 
+        /// 平铺示例：
+        /// TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+        /// 平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagTransaction")]
@@ -58,6 +64,15 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 消费数据Json格式：
         /// 1：不转义（默认格式）
         /// 2：转义
+        /// 
+        /// 投递Json格式。
+        /// JsonType为1：和原始日志一致，不转义。示例：
+        /// 日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+        /// 投递到Ckafka：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+        /// 
+        /// JsonType为2：转义。示例：
+        /// 日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+        /// 投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
         /// </summary>
         [JsonProperty("JsonType")]
         public long? JsonType{ get; set; }

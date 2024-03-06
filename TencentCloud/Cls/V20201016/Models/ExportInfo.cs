@@ -91,7 +91,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? To{ get; set; }
 
         /// <summary>
-        /// 日志导出路径
+        /// 日志导出路径,有效期一个小时，请尽快使用该路径下载。
         /// </summary>
         [JsonProperty("CosPath")]
         public string CosPath{ get; set; }

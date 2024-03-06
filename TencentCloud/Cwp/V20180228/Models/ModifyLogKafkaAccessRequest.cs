@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 实例名称 如 云镜测试环境
+        /// 实例名称 如 主机安全测试环境
         /// </summary>
         [JsonProperty("KafkaEnvName")]
         public string KafkaEnvName{ get; set; }

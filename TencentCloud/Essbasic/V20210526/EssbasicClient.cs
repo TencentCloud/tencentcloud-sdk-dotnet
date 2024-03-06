@@ -28,7 +28,7 @@ namespace TencentCloud.Essbasic.V20210526
 
        private const string endpoint = "essbasic.tencentcloudapi.com";
        private const string version = "2021-05-26";
-       private const string sdkVersion = "SDK_NET_3.0.958";
+       private const string sdkVersion = "SDK_NET_3.0.959";
 
         /// <summary>
         /// Client constructor.
@@ -1673,6 +1673,39 @@ namespace TencentCloud.Essbasic.V20210526
         public ChannelDescribeRolesResponse ChannelDescribeRolesSync(ChannelDescribeRolesRequest req)
         {
             return InternalRequestAsync<ChannelDescribeRolesResponse>(req, "ChannelDescribeRoles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于在使用视频认证方式签署合同后，获取用户的签署人脸认证视频。
+        /// 
+        /// 1. 该接口**仅适用于在H5端签署**的合同，**在通过视频认证后**获取人脸图片。
+        /// 2. 该接口**不支持小程序端**的签署人脸图片获取。
+        /// 3. 请在**签署完成后的三天内**获取人脸图片，**过期后将无法获取**。
+        /// 
+        /// **注意：该接口需要开通白名单，请联系客户经理开通后使用。**
+        /// </summary>
+        /// <param name="req"><see cref="ChannelDescribeSignFaceVideoRequest"/></param>
+        /// <returns><see cref="ChannelDescribeSignFaceVideoResponse"/></returns>
+        public Task<ChannelDescribeSignFaceVideoResponse> ChannelDescribeSignFaceVideo(ChannelDescribeSignFaceVideoRequest req)
+        {
+            return InternalRequestAsync<ChannelDescribeSignFaceVideoResponse>(req, "ChannelDescribeSignFaceVideo");
+        }
+
+        /// <summary>
+        /// 该接口用于在使用视频认证方式签署合同后，获取用户的签署人脸认证视频。
+        /// 
+        /// 1. 该接口**仅适用于在H5端签署**的合同，**在通过视频认证后**获取人脸图片。
+        /// 2. 该接口**不支持小程序端**的签署人脸图片获取。
+        /// 3. 请在**签署完成后的三天内**获取人脸图片，**过期后将无法获取**。
+        /// 
+        /// **注意：该接口需要开通白名单，请联系客户经理开通后使用。**
+        /// </summary>
+        /// <param name="req"><see cref="ChannelDescribeSignFaceVideoRequest"/></param>
+        /// <returns><see cref="ChannelDescribeSignFaceVideoResponse"/></returns>
+        public ChannelDescribeSignFaceVideoResponse ChannelDescribeSignFaceVideoSync(ChannelDescribeSignFaceVideoRequest req)
+        {
+            return InternalRequestAsync<ChannelDescribeSignFaceVideoResponse>(req, "ChannelDescribeSignFaceVideo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

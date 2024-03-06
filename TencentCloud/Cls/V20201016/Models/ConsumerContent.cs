@@ -25,7 +25,8 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 是否投递 TAG 信息
+        /// 是否投递 TAG 信息。
+        /// 当EnableTag为true时，表示投递TAG元信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableTag")]
@@ -39,18 +40,41 @@ namespace TencentCloud.Cls.V20201016.Models
         public string[] MetaFields{ get; set; }
 
         /// <summary>
-        /// 当EnableTag为true时，必须填写TagJsonNotTiled字段，TagJsonNotTiled用于标识tag信息是否json平铺，TagJsonNotTiled为true时不平铺，false时平铺
+        /// 当EnableTag为true时，必须填写TagJsonNotTiled字段。
+        /// TagJsonNotTiled用于标识tag信息是否json平铺。
+        /// 
+        /// TagJsonNotTiled为true时不平铺，示例：
+        /// TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+        /// 不平铺：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+        /// 
+        /// TagJsonNotTiled为false时平铺，示例：
+        /// TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+        /// 平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagJsonNotTiled")]
         public bool? TagJsonNotTiled{ get; set; }
 
         /// <summary>
-        /// 投递时间戳精度，可选项 [1:秒；2:毫秒] ，默认是秒
+        /// 投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimestampAccuracy")]
         public long? TimestampAccuracy{ get; set; }
+
+        /// <summary>
+        /// 投递Json格式。
+        /// JsonType为0：和原始日志一致，不转义。示例：
+        /// 日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+        /// 投递到Ckafka：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+        /// 
+        /// JsonType为1：转义。示例：
+        /// 日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+        /// 投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("JsonType")]
+        public long? JsonType{ get; set; }
 
 
         /// <summary>
@@ -62,6 +86,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArraySimple(map, prefix + "MetaFields.", this.MetaFields);
             this.SetParamSimple(map, prefix + "TagJsonNotTiled", this.TagJsonNotTiled);
             this.SetParamSimple(map, prefix + "TimestampAccuracy", this.TimestampAccuracy);
+            this.SetParamSimple(map, prefix + "JsonType", this.JsonType);
         }
     }
 }

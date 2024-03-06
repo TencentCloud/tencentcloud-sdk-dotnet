@@ -62,19 +62,21 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Version{ get; set; }
 
         /// <summary>
-        /// 机器升级功能状态。
+        /// 机器升级功能状态。 0：升级成功；1：升级中；-1：升级失败。
         /// </summary>
         [JsonProperty("UpdateStatus")]
         public long? UpdateStatus{ get; set; }
 
         /// <summary>
         /// 机器升级结果标识。
+        /// 0：成功；1200：升级成功；其他值表示异常。
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
         /// 机器升级结果信息。
+        /// “ok”：成功；“update success”：升级成功；其他值为失败原因。
         /// </summary>
         [JsonProperty("ErrMsg")]
         public string ErrMsg{ get; set; }

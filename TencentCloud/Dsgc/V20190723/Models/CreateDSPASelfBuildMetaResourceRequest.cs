@@ -101,6 +101,21 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("ResourceName")]
         public string ResourceName{ get; set; }
 
+        /// <summary>
+        /// 实例类型
+        /// databse
+        /// sid
+        /// serviceName
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// 实例值
+        /// </summary>
+        [JsonProperty("InstanceValue")]
+        public string InstanceValue{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -119,6 +134,8 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "ResourceName", this.ResourceName);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "InstanceValue", this.InstanceValue);
         }
     }
 }

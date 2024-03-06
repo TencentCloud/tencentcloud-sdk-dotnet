@@ -122,6 +122,15 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("ConsumeMessageOrderly")]
         public bool? ConsumeMessageOrderly{ get; set; }
 
+        /// <summary>
+        /// 消费模式: 
+        /// BROADCASTING 广播模式;
+        /// CLUSTERING 集群模式;
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MessageModel")]
+        public string MessageModel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +151,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
             this.SetParamSimple(map, prefix + "MaxRetryTimes", this.MaxRetryTimes);
             this.SetParamSimple(map, prefix + "ConsumeMessageOrderly", this.ConsumeMessageOrderly);
+            this.SetParamSimple(map, prefix + "MessageModel", this.MessageModel);
         }
     }
 }

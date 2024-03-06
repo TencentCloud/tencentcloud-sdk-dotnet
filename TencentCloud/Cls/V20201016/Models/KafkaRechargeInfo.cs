@@ -94,7 +94,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ConsumerGroupName{ get; set; }
 
         /// <summary>
-        /// 状态   status 1: 运行中, 2: 暂停 ...
+        /// 状态 ，1：运行中；2：暂停。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]

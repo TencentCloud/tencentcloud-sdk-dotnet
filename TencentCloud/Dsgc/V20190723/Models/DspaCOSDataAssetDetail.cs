@@ -138,6 +138,22 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("CategoryFullPath")]
         public string CategoryFullPath{ get; set; }
 
+        /// <summary>
+        /// 0-系统识别
+        /// 1-人工识别
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IdentifyType")]
+        public long? IdentifyType{ get; set; }
+
+        /// <summary>
+        /// 0-系统识别
+        /// 1-人工识别
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CheckStatus")]
+        public long? CheckStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -162,6 +178,8 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "FileResultId", this.FileResultId);
             this.SetParamSimple(map, prefix + "DataSourceName", this.DataSourceName);
             this.SetParamSimple(map, prefix + "CategoryFullPath", this.CategoryFullPath);
+            this.SetParamSimple(map, prefix + "IdentifyType", this.IdentifyType);
+            this.SetParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
         }
     }
 }

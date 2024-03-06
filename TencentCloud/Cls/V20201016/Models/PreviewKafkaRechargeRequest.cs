@@ -63,7 +63,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ServerAddr{ get; set; }
 
         /// <summary>
-        /// ServerAddr是否为加密连接。。
+        /// ServerAddr是否为加密连接。
         /// KafkaType为1时有效。
         /// </summary>
         [JsonProperty("IsEncryptionAddr")]

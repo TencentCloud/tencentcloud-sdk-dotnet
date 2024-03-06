@@ -66,6 +66,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("ScaledTpsEnabled")]
         public bool? ScaledTpsEnabled{ get; set; }
 
+        /// <summary>
+        /// 最大可创建主题数
+        /// </summary>
+        [JsonProperty("MaxTopicNum")]
+        public long? MaxTopicNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "SkuCode", this.SkuCode);
             this.SetParamSimple(map, prefix + "MessageRetention", this.MessageRetention);
             this.SetParamSimple(map, prefix + "ScaledTpsEnabled", this.ScaledTpsEnabled);
+            this.SetParamSimple(map, prefix + "MaxTopicNum", this.MaxTopicNum);
         }
     }
 }

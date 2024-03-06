@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// kafka消费用户名
+        /// kafka用户名。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }

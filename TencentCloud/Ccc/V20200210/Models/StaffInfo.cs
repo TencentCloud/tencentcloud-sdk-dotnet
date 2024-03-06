@@ -59,6 +59,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string StaffNumber{ get; set; }
 
         /// <summary>
+        /// 用户角色id
+        /// </summary>
+        [JsonProperty("RoleId")]
+        public ulong? RoleId{ get; set; }
+
+        /// <summary>
         /// 所属技能组列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -83,6 +89,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "Phone", this.Phone);
             this.SetParamSimple(map, prefix + "Nick", this.Nick);
             this.SetParamSimple(map, prefix + "StaffNumber", this.StaffNumber);
+            this.SetParamSimple(map, prefix + "RoleId", this.RoleId);
             this.SetParamArrayObj(map, prefix + "SkillGroupList.", this.SkillGroupList);
             this.SetParamSimple(map, prefix + "LastModifyTimestamp", this.LastModifyTimestamp);
         }

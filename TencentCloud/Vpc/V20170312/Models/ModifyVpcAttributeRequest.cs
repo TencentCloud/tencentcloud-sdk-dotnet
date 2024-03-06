@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
+        /// VPC实例ID。形如：vpc-f49l6u0z。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }

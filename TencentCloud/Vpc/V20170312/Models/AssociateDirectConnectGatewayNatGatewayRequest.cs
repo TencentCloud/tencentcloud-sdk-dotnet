@@ -25,19 +25,19 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+        /// VPC实例ID。形如：vpc-xxx。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// NAT网关ID。
+        /// NAT网关ID。形如：nat-xxx
         /// </summary>
         [JsonProperty("NatGatewayId")]
         public string NatGatewayId{ get; set; }
 
         /// <summary>
-        /// 专线网关ID。
+        /// 专线网关ID。形如：dcg-xxx
         /// </summary>
         [JsonProperty("DirectConnectGatewayId")]
         public string DirectConnectGatewayId{ get; set; }

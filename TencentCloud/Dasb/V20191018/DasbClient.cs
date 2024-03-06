@@ -28,7 +28,7 @@ namespace TencentCloud.Dasb.V20191018
 
        private const string endpoint = "dasb.tencentcloudapi.com";
        private const string version = "2019-10-18";
-       private const string sdkVersion = "SDK_NET_3.0.958";
+       private const string sdkVersion = "SDK_NET_3.0.959";
 
         /// <summary>
         /// Client constructor.
@@ -932,6 +932,27 @@ namespace TencentCloud.Dasb.V20191018
         public ModifyDeviceGroupResponse ModifyDeviceGroupSync(ModifyDeviceGroupRequest req)
         {
             return InternalRequestAsync<ModifyDeviceGroupResponse>(req, "ModifyDeviceGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设置OAuth认证参数
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOAuthSettingRequest"/></param>
+        /// <returns><see cref="ModifyOAuthSettingResponse"/></returns>
+        public Task<ModifyOAuthSettingResponse> ModifyOAuthSetting(ModifyOAuthSettingRequest req)
+        {
+            return InternalRequestAsync<ModifyOAuthSettingResponse>(req, "ModifyOAuthSetting");
+        }
+
+        /// <summary>
+        /// 设置OAuth认证参数
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOAuthSettingRequest"/></param>
+        /// <returns><see cref="ModifyOAuthSettingResponse"/></returns>
+        public ModifyOAuthSettingResponse ModifyOAuthSettingSync(ModifyOAuthSettingRequest req)
+        {
+            return InternalRequestAsync<ModifyOAuthSettingResponse>(req, "ModifyOAuthSetting")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

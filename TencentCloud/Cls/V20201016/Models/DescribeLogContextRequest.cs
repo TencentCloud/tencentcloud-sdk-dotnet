@@ -37,25 +37,26 @@ namespace TencentCloud.Cls.V20201016.Models
         public string BTime{ get; set; }
 
         /// <summary>
-        /// 日志包序号
+        /// 日志包序号。SearchLog接口返回信息中Results结构体中的PkgId。
         /// </summary>
         [JsonProperty("PkgId")]
         public string PkgId{ get; set; }
 
         /// <summary>
-        /// 日志包内一条日志的序号
+        /// 日志包内一条日志的序号。
+        /// SearchLog接口返回信息中Results结构中的PkgLogId。
         /// </summary>
         [JsonProperty("PkgLogId")]
         public long? PkgLogId{ get; set; }
 
         /// <summary>
-        /// 上文日志条数,  默认值10
+        /// 前${PrevLogs}条日志，默认值10。
         /// </summary>
         [JsonProperty("PrevLogs")]
         public long? PrevLogs{ get; set; }
 
         /// <summary>
-        /// 下文日志条数,  默认值10
+        /// 后${NextLogs}条日志，默认值10。
         /// </summary>
         [JsonProperty("NextLogs")]
         public long? NextLogs{ get; set; }

@@ -26,7 +26,7 @@ namespace TencentCloud.Teo.V20220901.Models
         
         /// <summary>
         /// 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-        /// <li>zone-name<br>   按照【<strong>站点名称</strong>】进行过滤。<br>   类型：String<br>   必选：是</li>
+        /// <li>zone-name：按照站点名称进行过滤。</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
