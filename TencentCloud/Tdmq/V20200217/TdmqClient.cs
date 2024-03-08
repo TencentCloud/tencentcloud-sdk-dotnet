@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.959";
+       private const string sdkVersion = "SDK_NET_3.0.960";
 
         /// <summary>
         /// Client constructor.
@@ -1751,6 +1751,27 @@ namespace TencentCloud.Tdmq.V20200217
         public DescribeRocketMQNamespacesResponse DescribeRocketMQNamespacesSync(DescribeRocketMQNamespacesRequest req)
         {
             return InternalRequestAsync<DescribeRocketMQNamespacesResponse>(req, "DescribeRocketMQNamespaces")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 从腾讯云可观测平台拉取公网指标监控数据，目前仅支持客户端到 LB 的入带宽和出宽带指标。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQPublicAccessMonitorDataRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQPublicAccessMonitorDataResponse"/></returns>
+        public Task<DescribeRocketMQPublicAccessMonitorDataResponse> DescribeRocketMQPublicAccessMonitorData(DescribeRocketMQPublicAccessMonitorDataRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQPublicAccessMonitorDataResponse>(req, "DescribeRocketMQPublicAccessMonitorData");
+        }
+
+        /// <summary>
+        /// 从腾讯云可观测平台拉取公网指标监控数据，目前仅支持客户端到 LB 的入带宽和出宽带指标。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQPublicAccessMonitorDataRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQPublicAccessMonitorDataResponse"/></returns>
+        public DescribeRocketMQPublicAccessMonitorDataResponse DescribeRocketMQPublicAccessMonitorDataSync(DescribeRocketMQPublicAccessMonitorDataRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQPublicAccessMonitorDataResponse>(req, "DescribeRocketMQPublicAccessMonitorData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

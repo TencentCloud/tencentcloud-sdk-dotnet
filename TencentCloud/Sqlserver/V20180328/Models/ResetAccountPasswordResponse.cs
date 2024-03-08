@@ -25,7 +25,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 修改帐号密码的异步任务流程ID
+        /// 修改账号密码的异步任务流程ID
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }

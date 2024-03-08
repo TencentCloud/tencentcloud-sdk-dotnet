@@ -121,7 +121,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string TsMin{ get; set; }
 
         /// <summary>
-        /// 帐号
+        /// 账号
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }

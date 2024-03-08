@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string AddressId{ get; set; }
 
         /// <summary>
-        /// 弹性公网IP调整目标计费模式，只支持"BANDWIDTH_PREPAID_BY_MONTH"和"TRAFFIC_POSTPAID_BY_HOUR"
+        /// 弹性公网IP调整目标计费模式，支持 "BANDWIDTH_PREPAID_BY_MONTH"、"TRAFFIC_POSTPAID_BY_HOUR"、"BANDWIDTH_POSTPAID_BY_HOUR"
         /// </summary>
         [JsonProperty("InternetChargeType")]
         public string InternetChargeType{ get; set; }

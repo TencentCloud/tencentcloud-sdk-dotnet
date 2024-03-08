@@ -43,25 +43,25 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? LogBackupSize{ get; set; }
 
         /// <summary>
-        /// 手动创建的实例基础备份数量。
+        /// 手动创建的实例数据备份数量。
         /// </summary>
         [JsonProperty("ManualBaseBackupCount")]
         public ulong? ManualBaseBackupCount{ get; set; }
 
         /// <summary>
-        /// 手动创建的实例基础备份大小。
+        /// 手动创建的实例数据备份大小。
         /// </summary>
         [JsonProperty("ManualBaseBackupSize")]
         public ulong? ManualBaseBackupSize{ get; set; }
 
         /// <summary>
-        /// 自动创建的实例基础备份数量。
+        /// 自动创建的实例数据备份数量。
         /// </summary>
         [JsonProperty("AutoBaseBackupCount")]
         public ulong? AutoBaseBackupCount{ get; set; }
 
         /// <summary>
-        /// 自动创建的实例基础备份大小。
+        /// 自动创建的实例数据备份大小。
         /// </summary>
         [JsonProperty("AutoBaseBackupSize")]
         public ulong? AutoBaseBackupSize{ get; set; }

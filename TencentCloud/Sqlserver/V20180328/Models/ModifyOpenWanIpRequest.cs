@@ -30,6 +30,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// RO只读组Id
+        /// </summary>
+        [JsonProperty("RoGroupId")]
+        public string RoGroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "RoGroupId", this.RoGroupId);
         }
     }
 }

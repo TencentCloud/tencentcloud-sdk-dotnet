@@ -25,13 +25,13 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 查询到的基础备份数量。
+        /// 查询到的数据备份数量。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 基础备份详细信息列表。
+        /// 数据备份详细信息列表。
         /// </summary>
         [JsonProperty("BaseBackupSet")]
         public BaseBackup[] BaseBackupSet{ get; set; }

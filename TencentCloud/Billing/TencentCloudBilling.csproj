@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{07FCB225-F7A7-392A-A759-E2C6236ECC1C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.959</VersionPrefix>
+    <VersionPrefix>3.0.960</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,6 +49,19 @@
   <ItemGroup>
     <Compile Include="V20180709\BillingClient.cs" />
     <Compile Include="V20180709\Models\ActionSummaryOverviewItem.cs" />
+    <Compile Include="V20180709\Models\AllocationAverageData.cs" />
+    <Compile Include="V20180709\Models\AllocationBillTrendDetail.cs" />
+    <Compile Include="V20180709\Models\AllocationDetail.cs" />
+    <Compile Include="V20180709\Models\AllocationMonthOverviewDetail.cs" />
+    <Compile Include="V20180709\Models\AllocationOverviewDetail.cs" />
+    <Compile Include="V20180709\Models\AllocationOverviewNode.cs" />
+    <Compile Include="V20180709\Models\AllocationOverviewTotal.cs" />
+    <Compile Include="V20180709\Models\AllocationRule.cs" />
+    <Compile Include="V20180709\Models\AllocationStat.cs" />
+    <Compile Include="V20180709\Models\AllocationSummaryByBusiness.cs" />
+    <Compile Include="V20180709\Models\AllocationSummaryByItem.cs" />
+    <Compile Include="V20180709\Models\AllocationSummaryByResource.cs" />
+    <Compile Include="V20180709\Models\AllocationTreeNode.cs" />
     <Compile Include="V20180709\Models\AnalyseActionTypeDetail.cs" />
     <Compile Include="V20180709\Models\AnalyseAmountDetail.cs" />
     <Compile Include="V20180709\Models\AnalyseBusinessDetail.cs" />
@@ -64,14 +77,30 @@
     <Compile Include="V20180709\Models\AnalyseTimeDetail.cs" />
     <Compile Include="V20180709\Models\AnalyseZoneDetail.cs" />
     <Compile Include="V20180709\Models\ApplicableProducts.cs" />
+    <Compile Include="V20180709\Models\BillActionType.cs" />
+    <Compile Include="V20180709\Models\BillBusiness.cs" />
+    <Compile Include="V20180709\Models\BillBusinessLink.cs" />
+    <Compile Include="V20180709\Models\BillComponent.cs" />
+    <Compile Include="V20180709\Models\BillDays.cs" />
     <Compile Include="V20180709\Models\BillDetail.cs" />
     <Compile Include="V20180709\Models\BillDetailAssociatedOrder.cs" />
     <Compile Include="V20180709\Models\BillDetailComponent.cs" />
     <Compile Include="V20180709\Models\BillDetailComponentConfig.cs" />
     <Compile Include="V20180709\Models\BillDistributionResourceSummary.cs" />
+    <Compile Include="V20180709\Models\BillInstanceType.cs" />
+    <Compile Include="V20180709\Models\BillItem.cs" />
+    <Compile Include="V20180709\Models\BillOperateUin.cs" />
+    <Compile Include="V20180709\Models\BillOwnerUin.cs" />
+    <Compile Include="V20180709\Models\BillPayMode.cs" />
+    <Compile Include="V20180709\Models\BillProduct.cs" />
+    <Compile Include="V20180709\Models\BillProductLink.cs" />
+    <Compile Include="V20180709\Models\BillProject.cs" />
+    <Compile Include="V20180709\Models\BillRegion.cs" />
     <Compile Include="V20180709\Models\BillResourceSummary.cs" />
+    <Compile Include="V20180709\Models\BillTag.cs" />
     <Compile Include="V20180709\Models\BillTagInfo.cs" />
     <Compile Include="V20180709\Models\BillTransactionInfo.cs" />
+    <Compile Include="V20180709\Models\BillZoneId.cs" />
     <Compile Include="V20180709\Models\BusinessSummaryInfo.cs" />
     <Compile Include="V20180709\Models\BusinessSummaryOverviewItem.cs" />
     <Compile Include="V20180709\Models\BusinessSummaryTotal.cs" />
@@ -99,6 +128,24 @@
     <Compile Include="V20180709\Models\DeleteAllocationTagResponse.cs" />
     <Compile Include="V20180709\Models\DescribeAccountBalanceRequest.cs" />
     <Compile Include="V20180709\Models\DescribeAccountBalanceResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeAllocateConditionsRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeAllocateConditionsResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeAllocationBillConditionsRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeAllocationBillConditionsResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeAllocationBillDetailRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeAllocationBillDetailResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeAllocationMonthOverviewRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeAllocationMonthOverviewResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeAllocationOverviewRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeAllocationOverviewResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeAllocationSummaryByBusinessRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeAllocationSummaryByBusinessResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeAllocationSummaryByItemRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeAllocationSummaryByItemResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeAllocationSummaryByResourceRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeAllocationSummaryByResourceResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeAllocationTrendByMonthRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeAllocationTrendByMonthResponse.cs" />
     <Compile Include="V20180709\Models\DescribeBillDetailForOrganizationRequest.cs" />
     <Compile Include="V20180709\Models\DescribeBillDetailForOrganizationResponse.cs" />
     <Compile Include="V20180709\Models\DescribeBillDetailRequest.cs" />
@@ -146,6 +193,8 @@
     <Compile Include="V20180709\Models\DescribeDosageDetailByDateResponse.cs" />
     <Compile Include="V20180709\Models\DescribeDosageDetailListRequest.cs" />
     <Compile Include="V20180709\Models\DescribeDosageDetailListResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeGatherResourceRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeGatherResourceResponse.cs" />
     <Compile Include="V20180709\Models\DescribeSavingPlanCoverageRequest.cs" />
     <Compile Include="V20180709\Models\DescribeSavingPlanCoverageResponse.cs" />
     <Compile Include="V20180709\Models\DescribeSavingPlanOverviewRequest.cs" />
@@ -164,6 +213,7 @@
     <Compile Include="V20180709\Models\DetailSet.cs" />
     <Compile Include="V20180709\Models\DistributionBillDetail.cs" />
     <Compile Include="V20180709\Models\ExcludedProducts.cs" />
+    <Compile Include="V20180709\Models\GatherResourceSummary.cs" />
     <Compile Include="V20180709\Models\JsonObject.cs" />
     <Compile Include="V20180709\Models\PayDealsRequest.cs" />
     <Compile Include="V20180709\Models\PayDealsResponse.cs" />

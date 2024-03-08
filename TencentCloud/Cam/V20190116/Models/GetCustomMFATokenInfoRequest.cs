@@ -25,7 +25,7 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 自定义多因子验证Token
+        /// 自定义多因子验证Token，针对用户自定义的安全校验方式而生成的，以供查询用户安全校验时使用。
         /// </summary>
         [JsonProperty("MFAToken")]
         public string MFAToken{ get; set; }

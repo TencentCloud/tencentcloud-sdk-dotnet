@@ -25,7 +25,7 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 子用户 UID
+        /// 子用户 UID，入参Uid和SubUin二选一
         /// </summary>
         [JsonProperty("Uid")]
         public ulong? Uid{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public ulong? Page{ get; set; }
 
         /// <summary>
-        /// 子账号UIN
+        /// 子账号UIN，入参Uid和SubUin二选一
         /// </summary>
         [JsonProperty("SubUin")]
         public ulong? SubUin{ get; set; }

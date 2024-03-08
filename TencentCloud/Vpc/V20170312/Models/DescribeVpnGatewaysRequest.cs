@@ -35,7 +35,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
         /// <li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
         /// <li>vpn-gateway-name - String - （过滤条件）VPN实例名称。</li>
-        /// <li>type - String - （过滤条件）VPN网关类型：'IPSEC', 'SSL'。</li>
+        /// <li>type - String - （过滤条件）VPN网关类型：'IPSEC', 'SSL', 'CCN', 'SSL_CCN'。</li>
         /// <li>public-ip-address- String - （过滤条件）公网IP。</li>
         /// <li>renew-flag - String - （过滤条件）网关续费类型，手动续费：'NOTIFY_AND_MANUAL_RENEW'、自动续费：'NOTIFY_AND_AUTO_RENEW'。</li>
         /// <li>zone - String - （过滤条件）VPN所在可用区，形如：ap-guangzhou-2。</li>
@@ -44,13 +44,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public FilterObject[] Filters{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 偏移量，默认值为0。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 请求对象个数
+        /// 请求对象个数，默认值为20。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

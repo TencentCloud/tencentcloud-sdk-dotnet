@@ -37,7 +37,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string BandwidthPackageId{ get; set; }
 
         /// <summary>
-        /// 带宽包类型，当前支持'BGP'类型，表示内部资源是BGP IP。
+        /// 带宽包类型，当前支持'BGP'、'HIGH_QUALITY_BGP'、'ANYCAST'、'SINGLEISP_CUCC'、'SINGLEISP_CMCC'、'SINGLEISP_CTCC'等类型。
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }

@@ -94,6 +94,20 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("AutoRetryTimeRangeMinutes")]
         public long? AutoRetryTimeRangeMinutes{ get; set; }
 
+        /// <summary>
+        /// 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FilterBeginCommit")]
+        public bool? FilterBeginCommit{ get; set; }
+
+        /// <summary>
+        /// 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FilterCheckpoint")]
+        public bool? FilterCheckpoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +124,8 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamObj(map, prefix + "KafkaOption.", this.KafkaOption);
             this.SetParamObj(map, prefix + "RateLimitOption.", this.RateLimitOption);
             this.SetParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
+            this.SetParamSimple(map, prefix + "FilterBeginCommit", this.FilterBeginCommit);
+            this.SetParamSimple(map, prefix + "FilterCheckpoint", this.FilterCheckpoint);
         }
     }
 }

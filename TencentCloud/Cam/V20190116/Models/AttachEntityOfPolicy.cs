@@ -45,7 +45,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public ulong? Uin{ get; set; }
 
         /// <summary>
-        /// 关联类型。1 用户关联 ； 2 用户组关联
+        /// 关联类型。1 用户关联 ； 2 用户组关联 3 角色关联
         /// </summary>
         [JsonProperty("RelatedType")]
         public ulong? RelatedType{ get; set; }

@@ -147,21 +147,21 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string LastModifyTime{ get; set; }
 
         /// <summary>
-        /// 参数存在主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
+        /// 参数主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StandbyRelated")]
         public long? StandbyRelated{ get; set; }
 
         /// <summary>
-        /// 参数版本关联信息，存储具体内核版本下的具体参数信息
+        /// 参数版本关联信息，内容为相应内核版本下的参数详细信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VersionRelationSet")]
         public ParamVersionRelation[] VersionRelationSet{ get; set; }
 
         /// <summary>
-        /// 参数规格关联信息，存储具体规格下具体的参数信息
+        /// 参数规格关联信息，内容为相应规格下的参数详细信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpecRelationSet")]

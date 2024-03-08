@@ -55,7 +55,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string ProducerAddr{ get; set; }
 
         /// <summary>
-        /// 消费组消费情况
+        /// 消费组消费情况列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MessageTracks")]
@@ -67,6 +67,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         [JsonProperty("ShowTopicName")]
         public string ShowTopicName{ get; set; }
+
+        /// <summary>
+        /// 消费组消费情况列表总数
+        /// </summary>
+        [JsonProperty("MessageTracksCount")]
+        public long? MessageTracksCount{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -87,6 +93,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "ProducerAddr", this.ProducerAddr);
             this.SetParamArrayObj(map, prefix + "MessageTracks.", this.MessageTracks);
             this.SetParamSimple(map, prefix + "ShowTopicName", this.ShowTopicName);
+            this.SetParamSimple(map, prefix + "MessageTracksCount", this.MessageTracksCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

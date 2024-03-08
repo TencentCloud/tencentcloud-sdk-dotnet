@@ -58,7 +58,32 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// 查询死信时该值为true，只对Rocketmq有效
         /// </summary>
         [JsonProperty("QueryDlqMsg")]
+        [System.Obsolete]
         public bool? QueryDlqMsg{ get; set; }
+
+        /// <summary>
+        /// 查询死信时该值为true，只对Rocketmq有效
+        /// </summary>
+        [JsonProperty("QueryDeadLetterMessage")]
+        public bool? QueryDeadLetterMessage{ get; set; }
+
+        /// <summary>
+        /// 分页Offset
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// 分页Limit
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// 根据消费组名称过滤消费详情
+        /// </summary>
+        [JsonProperty("FilterTrackGroup")]
+        public string FilterTrackGroup{ get; set; }
 
 
         /// <summary>
@@ -72,6 +97,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MsgId", this.MsgId);
             this.SetParamSimple(map, prefix + "PulsarMsgId", this.PulsarMsgId);
             this.SetParamSimple(map, prefix + "QueryDlqMsg", this.QueryDlqMsg);
+            this.SetParamSimple(map, prefix + "QueryDeadLetterMessage", this.QueryDeadLetterMessage);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "FilterTrackGroup", this.FilterTrackGroup);
         }
     }
 }

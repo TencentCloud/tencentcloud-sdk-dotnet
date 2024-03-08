@@ -31,7 +31,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Group{ get; set; }
 
         /// <summary>
-        /// 消费状态
+        /// 消费状态,
+        /// CONSUMED: 已消费
+        /// CONSUMED_BUT_FILTERED: 已过滤
+        /// NOT_CONSUME: 未消费
+        /// ENTER_RETRY: 进入重试队列
+        /// ENTER_DLQ: 进入死信队列
+        /// UNKNOWN: 查询不到消费状态
         /// </summary>
         [JsonProperty("ConsumeStatus")]
         public string ConsumeStatus{ get; set; }

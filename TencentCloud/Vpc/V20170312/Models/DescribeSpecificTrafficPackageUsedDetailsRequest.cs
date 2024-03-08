@@ -61,13 +61,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 分页参数
+        /// 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 中的相关小节
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页参数
+        /// 返回数量，默认为20。关于Limit的更进一步介绍请参考 API 中的相关小节。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

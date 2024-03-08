@@ -25,40 +25,47 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// topic名
+        /// topic名。单topic时，所有的TopicName必须相同
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// topic分区策略，如 自定义topic：Random（随机投递），集中投递到单Topic：AllInPartitionZero（全部投递至partition0）、PartitionByTable(按表名分区)、PartitionByTableAndKey(按表名加主键分区)
+        /// topic分区策略，自定义topic时支持：Random（随机投递），集中投递到单Topic时支持：AllInPartitionZero（全部投递至partition0）、PartitionByTable(按表名分区)、PartitionByTableAndKey(按表名加主键分区)、PartitionByCols(按列分区)
         /// </summary>
         [JsonProperty("PartitionType")]
         public string PartitionType{ get; set; }
 
         /// <summary>
-        /// 库名匹配规则，仅“自定义topic”生效，如Regular（正则匹配）, Default(不符合匹配规则的剩余库)，数组中必须有一项为‘Default’
+        /// 库名匹配规则，如Regular（正则匹配）, Default(不符合匹配规则的剩余库)，数组中最后一项必须为‘Default’
         /// </summary>
         [JsonProperty("DbMatchMode")]
         public string DbMatchMode{ get; set; }
 
         /// <summary>
-        /// 库名，仅“自定义topic”时，DbMatchMode=Regular生效
+        /// 库名，DbMatchMode=Regular时生效
         /// </summary>
         [JsonProperty("DbName")]
         public string DbName{ get; set; }
 
         /// <summary>
-        /// 表名匹配规则，仅“自定义topic”生效，如Regular（正则匹配）, Default(不符合匹配规则的剩余表)，数组中必须有一项为‘Default’
+        /// 表名匹配规则，如Regular（正则匹配）, Default(不符合匹配规则的剩余表)，数组中最后一项必须为‘Default’
         /// </summary>
         [JsonProperty("TableMatchMode")]
         public string TableMatchMode{ get; set; }
 
         /// <summary>
-        /// 表名，仅“自定义topic”时，TableMatchMode=Regular生效
+        /// 表名，仅TableMatchMode=Regular时生效
         /// </summary>
         [JsonProperty("TableName")]
         public string TableName{ get; set; }
+
+        /// <summary>
+        /// 按列分区时需要选择配置列名，可以选择多列
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Columns")]
+        public string[] Columns{ get; set; }
 
 
         /// <summary>
@@ -72,6 +79,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "DbName", this.DbName);
             this.SetParamSimple(map, prefix + "TableMatchMode", this.TableMatchMode);
             this.SetParamSimple(map, prefix + "TableName", this.TableName);
+            this.SetParamArraySimple(map, prefix + "Columns.", this.Columns);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public long? InternetMaxBandwidthOut{ get; set; }
 
         /// <summary>
-        /// 网络计费模式。IPV6当前对标准账户类型支持"TRAFFIC_POSTPAID_BY_HOUR"，对传统账户类型支持"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
+        /// 网络计费模式。IPV6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
         /// </summary>
         [JsonProperty("InternetChargeType")]
         public string InternetChargeType{ get; set; }

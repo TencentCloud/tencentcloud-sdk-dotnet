@@ -36,7 +36,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NetworkType{ get; set; }
 
         /// <summary>
-        /// 带宽包计费类型, 默认为: TOP5_POSTPAID_BY_MONTH, 可选值:
+        /// 带宽包计费类型, 默认为: ENHANCED95_POSTPAID_BY_MONTH, 可选值:
         /// <li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
         /// <li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
         /// <li>FIXED_PREPAID_BY_MONTH: 包月预付费计费</li>
@@ -59,7 +59,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? BandwidthPackageCount{ get; set; }
 
         /// <summary>
-        /// 带宽包限速大小。单位：Mbps，-1表示不限速。该功能当前内测中，暂不对外开放。
+        /// 带宽包限速大小。单位：Mbps，-1表示不限速。不同计费类型的带宽包对应不同的带宽上下限。
         /// </summary>
         [JsonProperty("InternetMaxBandwidth")]
         public long? InternetMaxBandwidth{ get; set; }

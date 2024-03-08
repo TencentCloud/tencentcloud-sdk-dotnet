@@ -84,6 +84,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 作业描述
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
             this.SetParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

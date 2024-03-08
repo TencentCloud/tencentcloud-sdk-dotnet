@@ -319,6 +319,20 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("CaseSensitive")]
         public long? CaseSensitive{ get; set; }
 
+        /// <summary>
+        /// 用户是否可以绑定安全组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsWhiteSGs")]
+        public bool? IsWhiteSGs{ get; set; }
+
+        /// <summary>
+        /// 已绑定的安全组信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BindSGs")]
+        public string[] BindSGs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -366,6 +380,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "RestartTimeout", this.RestartTimeout);
             this.SetParamSimple(map, prefix + "GraceShutdownWaitSeconds", this.GraceShutdownWaitSeconds);
             this.SetParamSimple(map, prefix + "CaseSensitive", this.CaseSensitive);
+            this.SetParamSimple(map, prefix + "IsWhiteSGs", this.IsWhiteSGs);
+            this.SetParamArraySimple(map, prefix + "BindSGs.", this.BindSGs);
         }
     }
 }

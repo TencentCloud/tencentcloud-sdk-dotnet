@@ -54,6 +54,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("WorkSpaceId")]
         public string WorkSpaceId{ get; set; }
 
+        /// <summary>
+        /// 作业描述
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "TargetFolderId", this.TargetFolderId);
             this.SetParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

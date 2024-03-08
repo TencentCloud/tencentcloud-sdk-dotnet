@@ -108,6 +108,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("ReadOnlyInstanceSet")]
         public ReadOnlyInstance[] ReadOnlyInstanceSet{ get; set; }
 
+        /// <summary>
+        /// RO组外网地址域名
+        /// </summary>
+        [JsonProperty("DnsPodDomain")]
+        public string DnsPodDomain{ get; set; }
+
+        /// <summary>
+        /// RO组外网地址端口
+        /// </summary>
+        [JsonProperty("TgwWanVPort")]
+        public ulong? TgwWanVPort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +140,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "MasterInstanceId", this.MasterInstanceId);
             this.SetParamArrayObj(map, prefix + "ReadOnlyInstanceSet.", this.ReadOnlyInstanceSet);
+            this.SetParamSimple(map, prefix + "DnsPodDomain", this.DnsPodDomain);
+            this.SetParamSimple(map, prefix + "TgwWanVPort", this.TgwWanVPort);
         }
     }
 }

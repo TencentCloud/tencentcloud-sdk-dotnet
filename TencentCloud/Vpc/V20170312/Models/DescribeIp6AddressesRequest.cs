@@ -31,8 +31,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string[] Ip6AddressIds{ get; set; }
 
         /// <summary>
-        /// 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。参数不支持同时指定`AddressIds`和`Filters`。详细的过滤条件如下：
-        /// <li> address-ip - String - 是否必填：否 - （过滤条件）按照 EIP 的 IP 地址过滤。</li>
+        /// 每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。参数不支持同时指定`AddressIds`和`Filters`。详细的过滤条件如下：
+        /// <li> address-ip - String - 是否必填：否 - （过滤条件）按照 IPV6 的 IP 地址过滤。</li>
         /// <li> network-interface-id - String - 是否必填：否 - （过滤条件）按照弹性网卡的唯一ID过滤。</li>
         /// </summary>
         [JsonProperty("Filters")]

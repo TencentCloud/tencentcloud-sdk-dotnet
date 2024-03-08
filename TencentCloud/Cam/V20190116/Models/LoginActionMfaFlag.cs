@@ -25,19 +25,19 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 手机
+        /// 是否设置手机号为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
         /// </summary>
         [JsonProperty("Phone")]
         public ulong? Phone{ get; set; }
 
         /// <summary>
-        /// 软token
+        /// 是否设置软token为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
         /// </summary>
         [JsonProperty("Stoken")]
         public ulong? Stoken{ get; set; }
 
         /// <summary>
-        /// 微信
+        /// 是否设置微信为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
         /// </summary>
         [JsonProperty("Wechat")]
         public ulong? Wechat{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// EIP 的 IP 地址,示例：101.35.139.183
+        /// 普通公网IP 的 IP 地址,示例：101.35.139.183
         /// </summary>
         [JsonProperty("AddressIps")]
         public string[] AddressIps{ get; set; }

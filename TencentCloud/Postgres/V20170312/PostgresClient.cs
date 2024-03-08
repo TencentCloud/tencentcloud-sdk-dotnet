@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.959";
+       private const string sdkVersion = "SDK_NET_3.0.960";
 
         /// <summary>
         /// Client constructor.
@@ -138,7 +138,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（CreateBaseBackup）用于创建实例的全量备份。
+        /// 本接口（CreateBaseBackup）用于创建实例的数据备份。
         /// </summary>
         /// <param name="req"><see cref="CreateBaseBackupRequest"/></param>
         /// <returns><see cref="CreateBaseBackupResponse"/></returns>
@@ -148,7 +148,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（CreateBaseBackup）用于创建实例的全量备份。
+        /// 本接口（CreateBaseBackup）用于创建实例的数据备份。
         /// </summary>
         /// <param name="req"><see cref="CreateBaseBackupRequest"/></param>
         /// <returns><see cref="CreateBaseBackupResponse"/></returns>
@@ -331,7 +331,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（DeleteBaseBackup）用于删除实例指定全量备份。
+        /// 本接口（DeleteBaseBackup）用于删除实例指定数据备份。
         /// </summary>
         /// <param name="req"><see cref="DeleteBaseBackupRequest"/></param>
         /// <returns><see cref="DeleteBaseBackupResponse"/></returns>
@@ -341,7 +341,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（DeleteBaseBackup）用于删除实例指定全量备份。
+        /// 本接口（DeleteBaseBackup）用于删除实例指定数据备份。
         /// </summary>
         /// <param name="req"><see cref="DeleteBaseBackupRequest"/></param>
         /// <returns><see cref="DeleteBaseBackupResponse"/></returns>
@@ -625,7 +625,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeBaseBackups）用于查询基础备份列表。
+        /// 本接口（DescribeBaseBackups）用于查询数据备份列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeBaseBackupsRequest"/></param>
         /// <returns><see cref="DescribeBaseBackupsResponse"/></returns>
@@ -635,7 +635,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeBaseBackups）用于查询基础备份列表。
+        /// 本接口（DescribeBaseBackups）用于查询数据备份列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeBaseBackupsRequest"/></param>
         /// <returns><see cref="DescribeBaseBackupsResponse"/></returns>
@@ -1364,7 +1364,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（ModifyAccountRemark）用于修改帐号备注。
+        /// 本接口（ModifyAccountRemark）用于修改账号备注。
         /// </summary>
         /// <param name="req"><see cref="ModifyAccountRemarkRequest"/></param>
         /// <returns><see cref="ModifyAccountRemarkResponse"/></returns>
@@ -1374,7 +1374,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（ModifyAccountRemark）用于修改帐号备注。
+        /// 本接口（ModifyAccountRemark）用于修改账号备注。
         /// </summary>
         /// <param name="req"><see cref="ModifyAccountRemarkRequest"/></param>
         /// <returns><see cref="ModifyAccountRemarkResponse"/></returns>
@@ -1427,7 +1427,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（ModifyBaseBackupExpireTime）用于修改实例指定全量备份的过期时间。
+        /// 本接口（ModifyBaseBackupExpireTime）用于修改实例指定数据备份的过期时间。
         /// </summary>
         /// <param name="req"><see cref="ModifyBaseBackupExpireTimeRequest"/></param>
         /// <returns><see cref="ModifyBaseBackupExpireTimeResponse"/></returns>
@@ -1437,7 +1437,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（ModifyBaseBackupExpireTime）用于修改实例指定全量备份的过期时间。
+        /// 本接口（ModifyBaseBackupExpireTime）用于修改实例指定数据备份的过期时间。
         /// </summary>
         /// <param name="req"><see cref="ModifyBaseBackupExpireTimeRequest"/></param>
         /// <returns><see cref="ModifyBaseBackupExpireTimeResponse"/></returns>

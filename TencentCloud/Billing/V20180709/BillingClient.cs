@@ -28,7 +28,7 @@ namespace TencentCloud.Billing.V20180709
 
        private const string endpoint = "billing.tencentcloudapi.com";
        private const string version = "2018-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.959";
+       private const string sdkVersion = "SDK_NET_3.0.960";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,195 @@ namespace TencentCloud.Billing.V20180709
         public DescribeAccountBalanceResponse DescribeAccountBalanceSync(DescribeAccountBalanceRequest req)
         {
             return InternalRequestAsync<DescribeAccountBalanceResponse>(req, "DescribeAccountBalance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询资源目录筛选条件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocateConditionsRequest"/></param>
+        /// <returns><see cref="DescribeAllocateConditionsResponse"/></returns>
+        public Task<DescribeAllocateConditionsResponse> DescribeAllocateConditions(DescribeAllocateConditionsRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocateConditionsResponse>(req, "DescribeAllocateConditions");
+        }
+
+        /// <summary>
+        /// 查询资源目录筛选条件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocateConditionsRequest"/></param>
+        /// <returns><see cref="DescribeAllocateConditionsResponse"/></returns>
+        public DescribeAllocateConditionsResponse DescribeAllocateConditionsSync(DescribeAllocateConditionsRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocateConditionsResponse>(req, "DescribeAllocateConditions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询分账账单筛选条件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationBillConditionsRequest"/></param>
+        /// <returns><see cref="DescribeAllocationBillConditionsResponse"/></returns>
+        public Task<DescribeAllocationBillConditionsResponse> DescribeAllocationBillConditions(DescribeAllocationBillConditionsRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationBillConditionsResponse>(req, "DescribeAllocationBillConditions");
+        }
+
+        /// <summary>
+        /// 查询分账账单筛选条件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationBillConditionsRequest"/></param>
+        /// <returns><see cref="DescribeAllocationBillConditionsResponse"/></returns>
+        public DescribeAllocationBillConditionsResponse DescribeAllocationBillConditionsSync(DescribeAllocationBillConditionsRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationBillConditionsResponse>(req, "DescribeAllocationBillConditions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询分账账单明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationBillDetailRequest"/></param>
+        /// <returns><see cref="DescribeAllocationBillDetailResponse"/></returns>
+        public Task<DescribeAllocationBillDetailResponse> DescribeAllocationBillDetail(DescribeAllocationBillDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationBillDetailResponse>(req, "DescribeAllocationBillDetail");
+        }
+
+        /// <summary>
+        /// 查询分账账单明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationBillDetailRequest"/></param>
+        /// <returns><see cref="DescribeAllocationBillDetailResponse"/></returns>
+        public DescribeAllocationBillDetailResponse DescribeAllocationBillDetailSync(DescribeAllocationBillDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationBillDetailResponse>(req, "DescribeAllocationBillDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询分账账单月概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationMonthOverviewRequest"/></param>
+        /// <returns><see cref="DescribeAllocationMonthOverviewResponse"/></returns>
+        public Task<DescribeAllocationMonthOverviewResponse> DescribeAllocationMonthOverview(DescribeAllocationMonthOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationMonthOverviewResponse>(req, "DescribeAllocationMonthOverview");
+        }
+
+        /// <summary>
+        /// 查询分账账单月概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationMonthOverviewRequest"/></param>
+        /// <returns><see cref="DescribeAllocationMonthOverviewResponse"/></returns>
+        public DescribeAllocationMonthOverviewResponse DescribeAllocationMonthOverviewSync(DescribeAllocationMonthOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationMonthOverviewResponse>(req, "DescribeAllocationMonthOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询分账账单日概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationOverviewRequest"/></param>
+        /// <returns><see cref="DescribeAllocationOverviewResponse"/></returns>
+        public Task<DescribeAllocationOverviewResponse> DescribeAllocationOverview(DescribeAllocationOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationOverviewResponse>(req, "DescribeAllocationOverview");
+        }
+
+        /// <summary>
+        /// 查询分账账单日概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationOverviewRequest"/></param>
+        /// <returns><see cref="DescribeAllocationOverviewResponse"/></returns>
+        public DescribeAllocationOverviewResponse DescribeAllocationOverviewSync(DescribeAllocationOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationOverviewResponse>(req, "DescribeAllocationOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询分账账单按产品汇总
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationSummaryByBusinessRequest"/></param>
+        /// <returns><see cref="DescribeAllocationSummaryByBusinessResponse"/></returns>
+        public Task<DescribeAllocationSummaryByBusinessResponse> DescribeAllocationSummaryByBusiness(DescribeAllocationSummaryByBusinessRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationSummaryByBusinessResponse>(req, "DescribeAllocationSummaryByBusiness");
+        }
+
+        /// <summary>
+        /// 查询分账账单按产品汇总
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationSummaryByBusinessRequest"/></param>
+        /// <returns><see cref="DescribeAllocationSummaryByBusinessResponse"/></returns>
+        public DescribeAllocationSummaryByBusinessResponse DescribeAllocationSummaryByBusinessSync(DescribeAllocationSummaryByBusinessRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationSummaryByBusinessResponse>(req, "DescribeAllocationSummaryByBusiness")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询分账账单按组件汇总
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationSummaryByItemRequest"/></param>
+        /// <returns><see cref="DescribeAllocationSummaryByItemResponse"/></returns>
+        public Task<DescribeAllocationSummaryByItemResponse> DescribeAllocationSummaryByItem(DescribeAllocationSummaryByItemRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationSummaryByItemResponse>(req, "DescribeAllocationSummaryByItem");
+        }
+
+        /// <summary>
+        /// 查询分账账单按组件汇总
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationSummaryByItemRequest"/></param>
+        /// <returns><see cref="DescribeAllocationSummaryByItemResponse"/></returns>
+        public DescribeAllocationSummaryByItemResponse DescribeAllocationSummaryByItemSync(DescribeAllocationSummaryByItemRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationSummaryByItemResponse>(req, "DescribeAllocationSummaryByItem")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询分账账单按资源汇总
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationSummaryByResourceRequest"/></param>
+        /// <returns><see cref="DescribeAllocationSummaryByResourceResponse"/></returns>
+        public Task<DescribeAllocationSummaryByResourceResponse> DescribeAllocationSummaryByResource(DescribeAllocationSummaryByResourceRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationSummaryByResourceResponse>(req, "DescribeAllocationSummaryByResource");
+        }
+
+        /// <summary>
+        /// 查询分账账单按资源汇总
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationSummaryByResourceRequest"/></param>
+        /// <returns><see cref="DescribeAllocationSummaryByResourceResponse"/></returns>
+        public DescribeAllocationSummaryByResourceResponse DescribeAllocationSummaryByResourceSync(DescribeAllocationSummaryByResourceRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationSummaryByResourceResponse>(req, "DescribeAllocationSummaryByResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询分账账单费用趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationTrendByMonthRequest"/></param>
+        /// <returns><see cref="DescribeAllocationTrendByMonthResponse"/></returns>
+        public Task<DescribeAllocationTrendByMonthResponse> DescribeAllocationTrendByMonth(DescribeAllocationTrendByMonthRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationTrendByMonthResponse>(req, "DescribeAllocationTrendByMonth");
+        }
+
+        /// <summary>
+        /// 查询分账账单费用趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationTrendByMonthRequest"/></param>
+        /// <returns><see cref="DescribeAllocationTrendByMonthResponse"/></returns>
+        public DescribeAllocationTrendByMonthResponse DescribeAllocationTrendByMonthSync(DescribeAllocationTrendByMonthRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationTrendByMonthResponse>(req, "DescribeAllocationTrendByMonth")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -625,6 +814,27 @@ namespace TencentCloud.Billing.V20180709
         public DescribeDosageDetailListResponse DescribeDosageDetailListSync(DescribeDosageDetailListRequest req)
         {
             return InternalRequestAsync<DescribeDosageDetailListResponse>(req, "DescribeDosageDetailList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询分账账单资源归集汇总
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatherResourceRequest"/></param>
+        /// <returns><see cref="DescribeGatherResourceResponse"/></returns>
+        public Task<DescribeGatherResourceResponse> DescribeGatherResource(DescribeGatherResourceRequest req)
+        {
+            return InternalRequestAsync<DescribeGatherResourceResponse>(req, "DescribeGatherResource");
+        }
+
+        /// <summary>
+        /// 查询分账账单资源归集汇总
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatherResourceRequest"/></param>
+        /// <returns><see cref="DescribeGatherResourceResponse"/></returns>
+        public DescribeGatherResourceResponse DescribeGatherResourceSync(DescribeGatherResourceRequest req)
+        {
+            return InternalRequestAsync<DescribeGatherResourceResponse>(req, "DescribeGatherResource")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

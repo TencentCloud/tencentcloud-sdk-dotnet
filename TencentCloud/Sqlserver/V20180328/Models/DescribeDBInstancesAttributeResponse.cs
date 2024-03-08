@@ -85,6 +85,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public SSLConfig SSLConfig{ get; set; }
 
         /// <summary>
+        /// 备机只读信息
+        /// </summary>
+        [JsonProperty("DrReadableInfo")]
+        public DrReadableInfo DrReadableInfo{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -106,6 +112,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "EventSaveDays", this.EventSaveDays);
             this.SetParamObj(map, prefix + "TDEConfig.", this.TDEConfig);
             this.SetParamObj(map, prefix + "SSLConfig.", this.SSLConfig);
+            this.SetParamObj(map, prefix + "DrReadableInfo.", this.DrReadableInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -31,7 +31,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string BackupPeriod{ get; set; }
 
         /// <summary>
-        /// 基础备份保留时长
+        /// 数据备份保留时长
         /// </summary>
         [JsonProperty("BaseBackupRetentionPeriod")]
         public ulong? BaseBackupRetentionPeriod{ get; set; }

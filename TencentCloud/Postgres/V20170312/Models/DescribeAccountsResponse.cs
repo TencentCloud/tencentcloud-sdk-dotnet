@@ -31,7 +31,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 帐号列表详细信息。
+        /// 账号列表详细信息。
         /// </summary>
         [JsonProperty("Details")]
         public AccountInfo[] Details{ get; set; }

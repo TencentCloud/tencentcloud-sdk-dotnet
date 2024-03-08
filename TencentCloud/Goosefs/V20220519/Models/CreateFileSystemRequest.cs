@@ -72,6 +72,12 @@ namespace TencentCloud.Goosefs.V20220519.Models
         [JsonProperty("GooseFSxBuildElements")]
         public GooseFSxBuildElement GooseFSxBuildElements{ get; set; }
 
+        /// <summary>
+        /// 客户端集群所属的安全组
+        /// </summary>
+        [JsonProperty("SecurityGroupId")]
+        public string SecurityGroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Goosefs.V20220519.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamArrayObj(map, prefix + "Tag.", this.Tag);
             this.SetParamObj(map, prefix + "GooseFSxBuildElements.", this.GooseFSxBuildElements);
+            this.SetParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
         }
     }
 }

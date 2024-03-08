@@ -25,19 +25,19 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 镜像ID，形如`img-gvbnzy6f`。镜像ID可以通过如下方式获取：<br><li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。<br><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。
+        /// 镜像ID，形如`img-gvbnzy6f`。镜像ID可以通过如下方式获取：<li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。</li><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。</li>
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// 设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过60个字符。<br> <li> 镜像名称不能与已有镜像重复。
+        /// 设置新的镜像名称；必须满足下列限制 <li> 不得超过60个字符。</li><li> 镜像名称不能与已有镜像重复。</li>
         /// </summary>
         [JsonProperty("ImageName")]
         public string ImageName{ get; set; }
 
         /// <summary>
-        /// 设置新的镜像描述；必须满足下列限制：<br> <li> 不得超过60个字符。
+        /// 设置新的镜像描述；必须满足下列限制： <li> 不得超过 256 个字符。</li>
         /// </summary>
         [JsonProperty("ImageDescription")]
         public string ImageDescription{ get; set; }

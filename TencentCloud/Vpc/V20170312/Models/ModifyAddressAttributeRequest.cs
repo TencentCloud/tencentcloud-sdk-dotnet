@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string AddressId{ get; set; }
 
         /// <summary>
-        /// 修改后的 EIP 名称。长度上限为20个字符。
+        /// 修改后的 EIP 名称。长度上限为128个字符。
         /// </summary>
         [JsonProperty("AddressName")]
         public string AddressName{ get; set; }

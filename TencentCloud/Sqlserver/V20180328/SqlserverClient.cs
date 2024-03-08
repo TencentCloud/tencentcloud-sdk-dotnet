@@ -28,7 +28,7 @@ namespace TencentCloud.Sqlserver.V20180328
 
        private const string endpoint = "sqlserver.tencentcloudapi.com";
        private const string version = "2018-03-28";
-       private const string sdkVersion = "SDK_NET_3.0.959";
+       private const string sdkVersion = "SDK_NET_3.0.960";
 
         /// <summary>
         /// Client constructor.
@@ -2811,7 +2811,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口（ResetAccountPassword）用于重置实例的账户密码。
+        /// 本接口（ResetAccountPassword）用于重置实例的账号密码。
         /// </summary>
         /// <param name="req"><see cref="ResetAccountPasswordRequest"/></param>
         /// <returns><see cref="ResetAccountPasswordResponse"/></returns>
@@ -2821,7 +2821,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口（ResetAccountPassword）用于重置实例的账户密码。
+        /// 本接口（ResetAccountPassword）用于重置实例的账号密码。
         /// </summary>
         /// <param name="req"><see cref="ResetAccountPasswordRequest"/></param>
         /// <returns><see cref="ResetAccountPasswordResponse"/></returns>

@@ -30,6 +30,14 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("PdfInfo")]
         public PdfInfo PdfInfo{ get; set; }
 
+        /// <summary>
+        /// PDF文件中的文字是否为文本内容.
+        /// 如果该字段为true,那么就会自动判断是电子版还是图片，自动选择直接读取文字还是 OCR 方式.
+        /// 如果该字段为false, 那么始终采用 OCR 方式
+        /// </summary>
+        [JsonProperty("TextBasedPdfFlag")]
+        public bool? TextBasedPdfFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +45,7 @@ namespace TencentCloud.Mrs.V20200910.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "PdfInfo.", this.PdfInfo);
+            this.SetParamSimple(map, prefix + "TextBasedPdfFlag", this.TextBasedPdfFlag);
         }
     }
 }

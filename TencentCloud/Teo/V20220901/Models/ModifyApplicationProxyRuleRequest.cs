@@ -45,7 +45,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// 源站类型，取值有：
         /// <li>custom：手动添加；</li>
-        /// <li>origins：源站组。</li>不填保持原有值。
+        /// <li>origins：源站组。</li>
         /// </summary>
         [JsonProperty("OriginType")]
         public string OriginType{ get; set; }

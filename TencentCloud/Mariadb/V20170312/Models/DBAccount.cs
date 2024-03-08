@@ -61,7 +61,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public long? ReadOnly{ get; set; }
 
         /// <summary>
-        /// 该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
+        /// 该字段对只读账号有意义，表示选择主备延迟小于该值的备机
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DelayThresh")]

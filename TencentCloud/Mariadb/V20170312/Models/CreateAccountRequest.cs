@@ -49,7 +49,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// 是否创建为只读账号，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
+        /// 是否创建为只读账号，0：否:； 1：只读账号，该账号的sql请求优先选择备机执行，备机延迟时选择主机执行；2：只读账号，优先选择备机执行，备机延迟时操作报错；3：只读账号，优先选择备机执行，忽略备机延迟只读备机；
         /// </summary>
         [JsonProperty("ReadOnly")]
         public long? ReadOnly{ get; set; }

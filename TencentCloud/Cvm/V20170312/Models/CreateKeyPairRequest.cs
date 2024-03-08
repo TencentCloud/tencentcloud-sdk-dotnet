@@ -33,8 +33,8 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <summary>
         /// 密钥对创建后所属的项目ID。
         /// 可以通过以下方式获取项目ID：
-        /// <li>通过项目列表查询项目ID。
-        /// <li>通过调用接口DescribeProject，取返回信息中的`projectId `获取项目ID。
+        /// <li>通过项目列表查询项目ID。</li>
+        /// <li>通过调用接口 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725)，取返回信息中的`projectId `获取项目ID。</li>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
