@@ -25,23 +25,23 @@ namespace TencentCloud.Rce.V20201103.Models
     {
         
         /// <summary>
-        /// 用户账号类型（默认开通QQopenid、手机号MD5；如需使用微信开放账号，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号）
+        /// 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
         /// 1：QQ开放账号
         /// 2：微信开放账号
-        /// 8：设备号（imei/imeiMD5/idfa/idfaMd5）
-        /// 10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
+        /// 8：设备号，仅支持IMEI、IMEIMD5、IDFA、IDFAMD5
+        /// 10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
         /// </summary>
         [JsonProperty("AccountType")]
         public ulong? AccountType{ get; set; }
 
         /// <summary>
-        /// QQ账号信息，AccountType是1时，该字段必填。
+        /// QQ账号信息，AccountType是"1"时，该字段必填。
         /// </summary>
         [JsonProperty("QQAccount")]
         public QQAccountInfo QQAccount{ get; set; }
 
         /// <summary>
-        /// 微信账号信息，AccountType是2时，该字段必填。
+        /// 微信账号信息，AccountType是"2"时，该字段必填。
         /// </summary>
         [JsonProperty("WeChatAccount")]
         public WeChatAccountInfo WeChatAccount{ get; set; }

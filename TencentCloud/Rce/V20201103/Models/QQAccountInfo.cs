@@ -25,7 +25,7 @@ namespace TencentCloud.Rce.V20201103.Models
     {
         
         /// <summary>
-        /// QQ的OpenID。
+        /// QQ的OpenId。
         /// </summary>
         [JsonProperty("QQOpenId")]
         public string QQOpenId{ get; set; }
@@ -50,8 +50,8 @@ namespace TencentCloud.Rce.V20201103.Models
         public string MobilePhone{ get; set; }
 
         /// <summary>
-        /// 用户设备号，支持imei/imeiMD5/Idfa/IdfaMd5
-        /// 注释：imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
+        /// 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5
+        /// 注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }

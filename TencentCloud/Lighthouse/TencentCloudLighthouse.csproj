@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{7652443B-815B-37FE-B0E4-42C34070E9BC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.960</VersionPrefix>
+    <VersionPrefix>3.0.961</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -69,6 +69,7 @@
     <Compile Include="V20200324\Models\CancelShareBlueprintAcrossAccountsRequest.cs" />
     <Compile Include="V20200324\Models\CancelShareBlueprintAcrossAccountsResponse.cs" />
     <Compile Include="V20200324\Models\CcnAttachedInstance.cs" />
+    <Compile Include="V20200324\Models\Command.cs" />
     <Compile Include="V20200324\Models\ContainerEnv.cs" />
     <Compile Include="V20200324\Models\CreateBlueprintRequest.cs" />
     <Compile Include="V20200324\Models\CreateBlueprintResponse.cs" />

@@ -25,11 +25,11 @@ namespace TencentCloud.Rce.V20201103.Models
     {
         
         /// <summary>
-        /// 用户账号类型（默认开通 QQ 开放账号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）： 
-        /// 1：QQ 开放账号；
-        /// 2：微信开放账号；
-        /// 8：设备号（imei/imeiMD5/idfa/idfaMd5）；
-        /// 10004：手机号 MD5。
+        /// 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
+        /// 1：QQ开放账号
+        /// 2：微信开放账号
+        /// 8：设备号，仅支持IMEI、IMEIMD5、IDFA、IDFAMD5
+        /// 10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
         /// </summary>
         [JsonProperty("Account")]
         public AccountInfo Account{ get; set; }
@@ -57,14 +57,13 @@ namespace TencentCloud.Rce.V20201103.Models
         public ulong? PostTime{ get; set; }
 
         /// <summary>
-        /// 业务平台用户唯一标识。
+        /// 业务平台用户唯一标识，支持自定义。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 设备指纹Devicetoken值，集成设备指纹后获取，
-        /// 如果集成了相应的设备指纹，该字段必填。
+        /// 设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。
         /// </summary>
         [JsonProperty("DeviceToken")]
         public string DeviceToken{ get; set; }
@@ -88,7 +87,7 @@ namespace TencentCloud.Rce.V20201103.Models
         public string Nickname{ get; set; }
 
         /// <summary>
-        /// 用户邮箱地址（非系统自动生成）。
+        /// 用户邮箱地址。
         /// </summary>
         [JsonProperty("EmailAddress")]
         public string EmailAddress{ get; set; }
@@ -139,10 +138,10 @@ namespace TencentCloud.Rce.V20201103.Models
 
         /// <summary>
         /// 设备类型，账号类型（AccountType）为8时填写。
-        /// 1:Imei；国际移动设备识别号（15-17位数字）；
-        /// 2:ImeiMd5；国际移动设备识别号，通过MD5加密后取32位小写值；
-        /// 3:Idfa；
-        /// 4:IdfaMD5； 国际移动设备识别号，通过MD5加密后取32位小写值。
+        /// 1:IMEI；国际移动设备识别号（15-17位数字）；
+        /// 2:IMEIMD5；国际移动设备识别号，通过MD5加密后取32位小写值；
+        /// 3:IDFA；
+        /// 4:IDFAMD5；国际移动设备识别号，通过MD5加密后取32位小写值。
         /// </summary>
         [JsonProperty("DeviceType")]
         public long? DeviceType{ get; set; }
@@ -166,10 +165,10 @@ namespace TencentCloud.Rce.V20201103.Models
         public OnlineScamInfo OnlineScam{ get; set; }
 
         /// <summary>
-        /// 1：安卓；
-        /// 2：iOS ；
-        /// 3：H5 ；
-        /// 4：小程序 。
+        /// 1：Android
+        /// 2：iOS
+        /// 3：H5
+        /// 4：小程序
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }

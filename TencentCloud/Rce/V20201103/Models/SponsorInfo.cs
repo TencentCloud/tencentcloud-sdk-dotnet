@@ -25,7 +25,7 @@ namespace TencentCloud.Rce.V20201103.Models
     {
         
         /// <summary>
-        /// 助力场景建议填写：活动发起人微信 OpenID
+        /// 助力场景建议填写：活动发起人微信OpenId。
         /// </summary>
         [JsonProperty("SponsorOpenId")]
         public string SponsorOpenId{ get; set; }

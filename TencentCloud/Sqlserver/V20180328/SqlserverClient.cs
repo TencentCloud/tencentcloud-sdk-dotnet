@@ -28,7 +28,7 @@ namespace TencentCloud.Sqlserver.V20180328
 
        private const string endpoint = "sqlserver.tencentcloudapi.com";
        private const string version = "2018-03-28";
-       private const string sdkVersion = "SDK_NET_3.0.960";
+       private const string sdkVersion = "SDK_NET_3.0.961";
 
         /// <summary>
         /// Client constructor.
@@ -2381,6 +2381,27 @@ namespace TencentCloud.Sqlserver.V20180328
         public ModifyDBRemarkResponse ModifyDBRemarkSync(ModifyDBRemarkRequest req)
         {
             return InternalRequestAsync<ModifyDBRemarkResponse>(req, "ModifyDBRemark")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDReadable）用于开通或者关闭备机只读
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDReadableRequest"/></param>
+        /// <returns><see cref="ModifyDReadableResponse"/></returns>
+        public Task<ModifyDReadableResponse> ModifyDReadable(ModifyDReadableRequest req)
+        {
+            return InternalRequestAsync<ModifyDReadableResponse>(req, "ModifyDReadable");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDReadable）用于开通或者关闭备机只读
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDReadableRequest"/></param>
+        /// <returns><see cref="ModifyDReadableResponse"/></returns>
+        public ModifyDReadableResponse ModifyDReadableSync(ModifyDReadableRequest req)
+        {
+            return InternalRequestAsync<ModifyDReadableResponse>(req, "ModifyDReadable")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

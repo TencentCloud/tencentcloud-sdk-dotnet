@@ -204,6 +204,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("InstanceRestrictState")]
         public string InstanceRestrictState{ get; set; }
 
+        /// <summary>
+        /// 创建实例后自动执行TAT命令的调用ID。
+        /// </summary>
+        [JsonProperty("InitInvocationId")]
+        public string InitInvocationId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -237,6 +243,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "InstanceRestrictState", this.InstanceRestrictState);
+            this.SetParamSimple(map, prefix + "InitInvocationId", this.InitInvocationId);
         }
     }
 }

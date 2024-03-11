@@ -28,7 +28,7 @@ namespace TencentCloud.Essbasic.V20210526
 
        private const string endpoint = "essbasic.tencentcloudapi.com";
        private const string version = "2021-05-26";
-       private const string sdkVersion = "SDK_NET_3.0.960";
+       private const string sdkVersion = "SDK_NET_3.0.961";
 
         /// <summary>
         /// Client constructor.
@@ -423,7 +423,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// 
         /// 限制条件：
         /// 1. 本企业（发起方企业）企业签署人仅支持通过企业名称+姓名+手机号进行补充。
-        /// 2. 个人签署人仅支持通过姓名+手机号进行补充。
+        /// 2. 个人签署人支持通过姓名+手机号进行补充，补充动态签署人时：若个人用户已完成实名，则可通过姓名+证件号码进行补充。
         /// </summary>
         /// <param name="req"><see cref="ChannelCreateFlowApproversRequest"/></param>
         /// <returns><see cref="ChannelCreateFlowApproversResponse"/></returns>
@@ -438,7 +438,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// 
         /// 限制条件：
         /// 1. 本企业（发起方企业）企业签署人仅支持通过企业名称+姓名+手机号进行补充。
-        /// 2. 个人签署人仅支持通过姓名+手机号进行补充。
+        /// 2. 个人签署人支持通过姓名+手机号进行补充，补充动态签署人时：若个人用户已完成实名，则可通过姓名+证件号码进行补充。
         /// </summary>
         /// <param name="req"><see cref="ChannelCreateFlowApproversRequest"/></param>
         /// <returns><see cref="ChannelCreateFlowApproversResponse"/></returns>

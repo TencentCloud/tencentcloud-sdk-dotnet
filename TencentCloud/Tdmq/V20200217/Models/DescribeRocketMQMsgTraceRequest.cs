@@ -58,7 +58,14 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// 查询死信时该值为true
         /// </summary>
         [JsonProperty("QueryDLQMsg")]
+        [System.Obsolete]
         public bool? QueryDLQMsg{ get; set; }
+
+        /// <summary>
+        /// 查询死信时该值为true
+        /// </summary>
+        [JsonProperty("QueryDeadLetterMessage")]
+        public string QueryDeadLetterMessage{ get; set; }
 
 
         /// <summary>
@@ -72,6 +79,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MsgId", this.MsgId);
             this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
             this.SetParamSimple(map, prefix + "QueryDLQMsg", this.QueryDLQMsg);
+            this.SetParamSimple(map, prefix + "QueryDeadLetterMessage", this.QueryDeadLetterMessage);
         }
     }
 }

@@ -111,6 +111,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 创建实例后自动执行的命令。
+        /// </summary>
+        [JsonProperty("InitCommand")]
+        public Command InitCommand{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -130,6 +136,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamSimple(map, prefix + "FirewallTemplateId", this.FirewallTemplateId);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamObj(map, prefix + "InitCommand.", this.InitCommand);
         }
     }
 }
