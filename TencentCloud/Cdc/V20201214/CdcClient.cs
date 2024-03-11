@@ -28,7 +28,7 @@ namespace TencentCloud.Cdc.V20201214
 
        private const string endpoint = "cdc.tencentcloudapi.com";
        private const string version = "2020-12-14";
-       private const string sdkVersion = "SDK_NET_3.0.961";
+       private const string sdkVersion = "SDK_NET_3.0.962";
 
         /// <summary>
         /// Client constructor.
@@ -155,6 +155,27 @@ namespace TencentCloud.Cdc.V20201214
         public DeleteSitesResponse DeleteSitesSync(DeleteSitesRequest req)
         {
             return InternalRequestAsync<DeleteSitesResponse>(req, "DeleteSites")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询本地专用集群云硬盘仓库信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDedicatedClusterCbsStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeDedicatedClusterCbsStatisticsResponse"/></returns>
+        public Task<DescribeDedicatedClusterCbsStatisticsResponse> DescribeDedicatedClusterCbsStatistics(DescribeDedicatedClusterCbsStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeDedicatedClusterCbsStatisticsResponse>(req, "DescribeDedicatedClusterCbsStatistics");
+        }
+
+        /// <summary>
+        /// 查询本地专用集群云硬盘仓库信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDedicatedClusterCbsStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeDedicatedClusterCbsStatisticsResponse"/></returns>
+        public DescribeDedicatedClusterCbsStatisticsResponse DescribeDedicatedClusterCbsStatisticsSync(DescribeDedicatedClusterCbsStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeDedicatedClusterCbsStatisticsResponse>(req, "DescribeDedicatedClusterCbsStatistics")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

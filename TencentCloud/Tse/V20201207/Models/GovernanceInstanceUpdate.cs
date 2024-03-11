@@ -37,12 +37,6 @@ namespace TencentCloud.Tse.V20201207.Models
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// 治理中心服务实例id。
-        /// </summary>
-        [JsonProperty("Id")]
-        public string Id{ get; set; }
-
-        /// <summary>
         /// 实例负载均衡权重信息。不填默认为100。
         /// </summary>
         [JsonProperty("Weight")]
@@ -97,6 +91,12 @@ namespace TencentCloud.Tse.V20201207.Models
         public ulong? Ttl{ get; set; }
 
         /// <summary>
+        /// 治理中心服务实例id。
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
         /// 元数据信息。
         /// </summary>
         [JsonProperty("Metadatas")]
@@ -110,7 +110,6 @@ namespace TencentCloud.Tse.V20201207.Models
         {
             this.SetParamSimple(map, prefix + "Service", this.Service);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
-            this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
             this.SetParamSimple(map, prefix + "Healthy", this.Healthy);
             this.SetParamSimple(map, prefix + "Isolate", this.Isolate);
@@ -120,6 +119,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
             this.SetParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
             this.SetParamSimple(map, prefix + "Ttl", this.Ttl);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamArrayObj(map, prefix + "Metadatas.", this.Metadatas);
         }
     }

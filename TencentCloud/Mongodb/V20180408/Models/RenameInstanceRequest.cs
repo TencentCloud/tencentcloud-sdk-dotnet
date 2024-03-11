@@ -31,7 +31,7 @@ namespace TencentCloud.Mongodb.V20180408.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// 实例自定义名称
         /// </summary>
         [JsonProperty("NewName")]
         public string NewName{ get; set; }

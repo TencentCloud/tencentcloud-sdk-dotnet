@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8AB887EC-F4EC-35B4-91D9-F555401998D9}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.961</VersionPrefix>
+    <VersionPrefix>3.0.962</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -67,6 +67,8 @@
     <Compile Include="V20201214\Models\DeleteDedicatedClustersResponse.cs" />
     <Compile Include="V20201214\Models\DeleteSitesRequest.cs" />
     <Compile Include="V20201214\Models\DeleteSitesResponse.cs" />
+    <Compile Include="V20201214\Models\DescribeDedicatedClusterCbsStatisticsRequest.cs" />
+    <Compile Include="V20201214\Models\DescribeDedicatedClusterCbsStatisticsResponse.cs" />
     <Compile Include="V20201214\Models\DescribeDedicatedClusterCosCapacityRequest.cs" />
     <Compile Include="V20201214\Models\DescribeDedicatedClusterCosCapacityResponse.cs" />
     <Compile Include="V20201214\Models\DescribeDedicatedClusterHostStatisticsRequest.cs" />
@@ -105,6 +107,7 @@
     <Compile Include="V20201214\Models\ModifySiteInfoResponse.cs" />
     <Compile Include="V20201214\Models\OutBandwidth.cs" />
     <Compile Include="V20201214\Models\RegionZoneInfo.cs" />
+    <Compile Include="V20201214\Models\SetInfo.cs" />
     <Compile Include="V20201214\Models\Site.cs" />
     <Compile Include="V20201214\Models\SiteDetail.cs" />
     <Compile Include="V20201214\Models\VpngwBandwidthData.cs" />

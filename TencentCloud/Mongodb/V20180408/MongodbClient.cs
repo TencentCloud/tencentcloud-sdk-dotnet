@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20180408
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2018-04-08";
-       private const string sdkVersion = "SDK_NET_3.0.961";
+       private const string sdkVersion = "SDK_NET_3.0.962";
 
         /// <summary>
         /// Client constructor.
@@ -54,8 +54,7 @@ namespace TencentCloud.Mongodb.V20180408
         }
 
         /// <summary>
-        /// 本接口(AssignProject)用于指定云数据库实例的所属项目。
-        /// 
+        /// 本接口（AssignProject）用于指定云数据库实例的所属项目。
         /// </summary>
         /// <param name="req"><see cref="AssignProjectRequest"/></param>
         /// <returns><see cref="AssignProjectResponse"/></returns>
@@ -65,8 +64,7 @@ namespace TencentCloud.Mongodb.V20180408
         }
 
         /// <summary>
-        /// 本接口(AssignProject)用于指定云数据库实例的所属项目。
-        /// 
+        /// 本接口（AssignProject）用于指定云数据库实例的所属项目。
         /// </summary>
         /// <param name="req"><see cref="AssignProjectRequest"/></param>
         /// <returns><see cref="AssignProjectResponse"/></returns>
@@ -245,7 +243,7 @@ namespace TencentCloud.Mongodb.V20180408
         }
 
         /// <summary>
-        /// 本接口(SetPassword)用于设置云数据库账户的密码。
+        /// 本接口(SetPassword)用于设置（初始化）MongoDB云数据库实例账户密码。
         /// 
         /// </summary>
         /// <param name="req"><see cref="SetPasswordRequest"/></param>
@@ -256,7 +254,7 @@ namespace TencentCloud.Mongodb.V20180408
         }
 
         /// <summary>
-        /// 本接口(SetPassword)用于设置云数据库账户的密码。
+        /// 本接口(SetPassword)用于设置（初始化）MongoDB云数据库实例账户密码。
         /// 
         /// </summary>
         /// <param name="req"><see cref="SetPasswordRequest"/></param>
@@ -268,7 +266,7 @@ namespace TencentCloud.Mongodb.V20180408
         }
 
         /// <summary>
-        /// 本接口(TerminateDBInstance)用于销毁按量计费的MongoDB云数据库实例
+        /// 本接口(TerminateDBInstance)用于销毁按量计费的MongoDB云数据库实例。
         /// </summary>
         /// <param name="req"><see cref="TerminateDBInstanceRequest"/></param>
         /// <returns><see cref="TerminateDBInstanceResponse"/></returns>
@@ -278,7 +276,7 @@ namespace TencentCloud.Mongodb.V20180408
         }
 
         /// <summary>
-        /// 本接口(TerminateDBInstance)用于销毁按量计费的MongoDB云数据库实例
+        /// 本接口(TerminateDBInstance)用于销毁按量计费的MongoDB云数据库实例。
         /// </summary>
         /// <param name="req"><see cref="TerminateDBInstanceRequest"/></param>
         /// <returns><see cref="TerminateDBInstanceResponse"/></returns>

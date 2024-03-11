@@ -25,67 +25,73 @@ namespace TencentCloud.Mongodb.V20180408.Models
     {
         
         /// <summary>
-        /// 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+        /// 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 实例类型，取值范围：0-所有实例,1-正式实例，2-临时实例, 3-只读实例，-1-正式实例+只读+灾备实例
+        /// 实例类型，取值范围：
+        /// <ul><li>0： 所有实例</li><li>1： 正式实例</li><li>2： 临时实例</li><li>3： 只读实例</li><li>-1： 正式实例+只读+灾备实例</li></ul>
         /// </summary>
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
 
         /// <summary>
-        /// 集群类型，取值范围：0-副本集实例，1-分片实例，-1-所有实例
+        /// 集群类型，取值范围： 
+        /// <ul><li>0： 副本集实例</li><li>1： 正式实例</li> <li>-1： 所有实例</li></ul>
         /// </summary>
         [JsonProperty("ClusterType")]
         public long? ClusterType{ get; set; }
 
         /// <summary>
-        /// 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-实例已过期
+        /// 实例状态，取值范围： 
+        /// <ul><li>0： 待初始化</li><li>1： 流程执行中</li> <li>2： 有效实例</li><li>-2： 已过期实例</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }
 
         /// <summary>
-        /// 私有网络的ID，基础网络则不传该参数
+        /// 私有网络的ID，基础网络则不传该参数。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId
+        /// 私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 付费类型，取值范围：0-按量计费，1-包年包月，-1-按量计费+包年包月
+        /// 付费类型，取值范围：
+        /// <ul><li>0： 按量计费</li><li>1：包年包月</li><li>-1： 按量计费+包年包月</li></ul>
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 单次请求返回的数量，最小值为1，最大值为100，默认值为20
+        /// 单次请求返回的数量，最小值为1，最大值为100，默认值为20。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认值为0
+        /// 偏移量，默认值为0。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回结果集排序的字段，目前支持："ProjectId", "InstanceName", "CreateTime"，默认为升序排序
+        /// 返回结果集排序的字段，目前支持： 
+        /// <ul><li>ProjectId： 按照项目ID排序</li><li>InstanceName：按照实例名称排序</li><li>CreateTime： 根据创建时间排序</li></ul>
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 返回结果集排序方式，目前支持："ASC"或者"DESC"
+        /// 返回结果集排序方式，目前支持："ASC"或者"DESC"。
+        /// <ul><li>ASC： 顺序取值</li><li>DESC：倒序取值</li></ul>
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }

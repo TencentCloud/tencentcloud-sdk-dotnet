@@ -31,7 +31,10 @@ namespace TencentCloud.Mongodb.V20180408.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 续费选项，取值范围：0-手动续费，1-自动续费，2-确认不续费
+        /// 配置自动续费标识。
+        /// - 0：手动续费。
+        /// - 1：自动续费。
+        /// - 2：确认不续费。
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public ulong? AutoRenewFlag{ get; set; }

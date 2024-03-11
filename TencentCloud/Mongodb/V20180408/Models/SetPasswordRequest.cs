@@ -31,7 +31,7 @@ namespace TencentCloud.Mongodb.V20180408.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例账户名称
+        /// 实例账户名。初始化实例密码，本参数传mongouser。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
