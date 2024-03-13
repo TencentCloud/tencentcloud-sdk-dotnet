@@ -28,7 +28,7 @@ namespace TencentCloud.Dts.V20211206
 
        private const string endpoint = "dts.tencentcloudapi.com";
        private const string version = "2021-12-06";
-       private const string sdkVersion = "SDK_NET_3.0.962";
+       private const string sdkVersion = "SDK_NET_3.0.963";
 
         /// <summary>
         /// Client constructor.
@@ -1231,7 +1231,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 本接口(ResetConsumerGroupOffset)用于重置订阅消费组的offset。掉用DescribeConsumerGroups接口查询消费组状态，只有消费组状态为 Dead 或 Empty 才可以执行重置该操作。否则重置不会生效，接口也不会报错。
+        /// 本接口(ResetConsumerGroupOffset)用于重置订阅消费组的offset。调用DescribeConsumerGroups接口查询消费组状态，只有消费组状态为 Dead 或 Empty 才可以执行重置该操作。否则重置不会生效，接口也不会报错。
         /// </summary>
         /// <param name="req"><see cref="ResetConsumerGroupOffsetRequest"/></param>
         /// <returns><see cref="ResetConsumerGroupOffsetResponse"/></returns>
@@ -1241,7 +1241,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// 本接口(ResetConsumerGroupOffset)用于重置订阅消费组的offset。掉用DescribeConsumerGroups接口查询消费组状态，只有消费组状态为 Dead 或 Empty 才可以执行重置该操作。否则重置不会生效，接口也不会报错。
+        /// 本接口(ResetConsumerGroupOffset)用于重置订阅消费组的offset。调用DescribeConsumerGroups接口查询消费组状态，只有消费组状态为 Dead 或 Empty 才可以执行重置该操作。否则重置不会生效，接口也不会报错。
         /// </summary>
         /// <param name="req"><see cref="ResetConsumerGroupOffsetRequest"/></param>
         /// <returns><see cref="ResetConsumerGroupOffsetResponse"/></returns>

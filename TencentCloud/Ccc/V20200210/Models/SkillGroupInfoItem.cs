@@ -50,7 +50,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string RoutePolicy{ get; set; }
 
         /// <summary>
-        /// 会话分配是否优先上次服务坐席
+        /// 会话分配是否优先上次服务座席
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UsingLastSeat")]

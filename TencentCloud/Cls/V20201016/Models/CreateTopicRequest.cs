@@ -88,7 +88,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? HotPeriod{ get; set; }
 
         /// <summary>
-        /// 免鉴权开关。 false：关闭； true：开启。
+        /// 免鉴权开关。 false：关闭； true：开启。默认为false。
         /// 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
         /// </summary>
         [JsonProperty("IsWebTracking")]

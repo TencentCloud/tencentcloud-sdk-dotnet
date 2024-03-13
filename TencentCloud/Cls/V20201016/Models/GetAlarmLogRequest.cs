@@ -25,13 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 要查询的执行详情的起始时间，Unix时间戳，单位ms
+        /// 要查询的执行详情的起始时间，Unix时间戳，单位ms。
         /// </summary>
         [JsonProperty("From")]
         public long? From{ get; set; }
 
         /// <summary>
-        /// 要查询的执行详情的结束时间，Unix时间戳，单位ms
+        /// 要查询的执行详情的结束时间，Unix时间戳，单位ms。
         /// </summary>
         [JsonProperty("To")]
         public long? To{ get; set; }
@@ -53,22 +53,27 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 加载更多详情时使用，透传上次返回的Context值，获取后续的执行详情
+        /// 透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时。
+        /// 注意：
+        /// * 透传该参数时，请勿修改除该参数外的其它参数
+        /// * 仅当检索分析语句(Query)不包含SQL时有效，SQL获取后续结果参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }
 
         /// <summary>
-        /// 执行详情是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+        /// 原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+        /// 注意：
+        /// * 仅当检索分析语句(Query)不包含SQL时有效
+        /// * SQL结果排序方式参考<a href="https://cloud.tencent.com/document/product/614/58978" target="_blank">SQL ORDER BY语法</a>
         /// </summary>
         [JsonProperty("Sort")]
         public string Sort{ get; set; }
 
         /// <summary>
-        /// 为true代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
-        /// 为false代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
+        /// true：代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
+        /// false：代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
         /// 两种返回方式在编码格式上有少量区别，建议使用true。
-        /// 示例值：false
         /// </summary>
         [JsonProperty("UseNewAnalysis")]
         public bool? UseNewAnalysis{ get; set; }

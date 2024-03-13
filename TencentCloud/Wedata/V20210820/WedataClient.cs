@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.962";
+       private const string sdkVersion = "SDK_NET_3.0.963";
 
         /// <summary>
         /// Client constructor.
@@ -1051,7 +1051,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 创建规则模版
+        /// 创建规则模板
         /// </summary>
         /// <param name="req"><see cref="CreateRuleTemplateRequest"/></param>
         /// <returns><see cref="CreateRuleTemplateResponse"/></returns>
@@ -1061,7 +1061,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 创建规则模版
+        /// 创建规则模板
         /// </summary>
         /// <param name="req"><see cref="CreateRuleTemplateRequest"/></param>
         /// <returns><see cref="CreateRuleTemplateResponse"/></returns>
@@ -1542,7 +1542,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 删除规则模版
+        /// 删除规则模板
         /// </summary>
         /// <param name="req"><see cref="DeleteRuleTemplateRequest"/></param>
         /// <returns><see cref="DeleteRuleTemplateResponse"/></returns>
@@ -1552,7 +1552,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 删除规则模版
+        /// 删除规则模板
         /// </summary>
         /// <param name="req"><see cref="DeleteRuleTemplateRequest"/></param>
         /// <returns><see cref="DeleteRuleTemplateResponse"/></returns>
@@ -4147,7 +4147,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 查询规则模版列表
+        /// 查询规则模板列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRuleTemplatesRequest"/></param>
         /// <returns><see cref="DescribeRuleTemplatesResponse"/></returns>
@@ -4157,7 +4157,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 查询规则模版列表
+        /// 查询规则模板列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRuleTemplatesRequest"/></param>
         /// <returns><see cref="DescribeRuleTemplatesResponse"/></returns>
@@ -4168,7 +4168,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 过滤条件】 {模版名称Name,支持模糊匹配} {模版类型type，1.系统模版 2.自定义模版} {质量检测维度QualityDims, 1.准确性 2.唯一性 3.完整性 4.一致性 5.及时性 6.有效性} 【排序字段】 { 引用数排序类型CitationOrderType，根据引用数量排序 ASC DESC}
+        /// 【过滤条件】 {模板名称Name,支持模糊匹配} {模板类型type，1.系统模板 2.自定义模板} {质量检测维度QualityDims, 1.准确性 2.唯一性 3.完整性 4.一致性 5.及时性 6.有效性} 【排序字段】 { 引用数排序类型CitationOrderType，根据引用数量排序 ASC DESC}
         /// </summary>
         /// <param name="req"><see cref="DescribeRuleTemplatesByPageRequest"/></param>
         /// <returns><see cref="DescribeRuleTemplatesByPageResponse"/></returns>
@@ -4178,7 +4178,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 过滤条件】 {模版名称Name,支持模糊匹配} {模版类型type，1.系统模版 2.自定义模版} {质量检测维度QualityDims, 1.准确性 2.唯一性 3.完整性 4.一致性 5.及时性 6.有效性} 【排序字段】 { 引用数排序类型CitationOrderType，根据引用数量排序 ASC DESC}
+        /// 【过滤条件】 {模板名称Name,支持模糊匹配} {模板类型type，1.系统模板 2.自定义模板} {质量检测维度QualityDims, 1.准确性 2.唯一性 3.完整性 4.一致性 5.及时性 6.有效性} 【排序字段】 { 引用数排序类型CitationOrderType，根据引用数量排序 ASC DESC}
         /// </summary>
         /// <param name="req"><see cref="DescribeRuleTemplatesByPageRequest"/></param>
         /// <returns><see cref="DescribeRuleTemplatesByPageResponse"/></returns>

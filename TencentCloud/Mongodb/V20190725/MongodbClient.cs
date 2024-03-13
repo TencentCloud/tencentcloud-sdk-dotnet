@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.962";
+       private const string sdkVersion = "SDK_NET_3.0.963";
 
         /// <summary>
         /// Client constructor.
@@ -785,6 +785,27 @@ namespace TencentCloud.Mongodb.V20190725
         public SetAccountUserPrivilegeResponse SetAccountUserPrivilegeSync(SetAccountUserPrivilegeRequest req)
         {
             return InternalRequestAsync<SetAccountUserPrivilegeResponse>(req, "SetAccountUserPrivilege")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（SetInstanceMaintenance ） 用于设置实例维护时间窗。
+        /// </summary>
+        /// <param name="req"><see cref="SetInstanceMaintenanceRequest"/></param>
+        /// <returns><see cref="SetInstanceMaintenanceResponse"/></returns>
+        public Task<SetInstanceMaintenanceResponse> SetInstanceMaintenance(SetInstanceMaintenanceRequest req)
+        {
+            return InternalRequestAsync<SetInstanceMaintenanceResponse>(req, "SetInstanceMaintenance");
+        }
+
+        /// <summary>
+        /// 本接口（SetInstanceMaintenance ） 用于设置实例维护时间窗。
+        /// </summary>
+        /// <param name="req"><see cref="SetInstanceMaintenanceRequest"/></param>
+        /// <returns><see cref="SetInstanceMaintenanceResponse"/></returns>
+        public SetInstanceMaintenanceResponse SetInstanceMaintenanceSync(SetInstanceMaintenanceRequest req)
+        {
+            return InternalRequestAsync<SetInstanceMaintenanceResponse>(req, "SetInstanceMaintenance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

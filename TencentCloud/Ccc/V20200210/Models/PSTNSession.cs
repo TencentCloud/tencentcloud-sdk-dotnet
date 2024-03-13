@@ -67,13 +67,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? AcceptTimestamp{ get; set; }
 
         /// <summary>
-        /// 坐席邮箱
+        /// 座席邮箱
         /// </summary>
         [JsonProperty("StaffEmail")]
         public string StaffEmail{ get; set; }
 
         /// <summary>
-        /// 坐席工号
+        /// 座席工号
         /// </summary>
         [JsonProperty("StaffNumber")]
         public string StaffNumber{ get; set; }
@@ -81,7 +81,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// <summary>
         /// 会话状态
         /// ringing 振铃中
-        /// seatJoining  等待坐席接听
+        /// seatJoining  等待座席接听
         /// inProgress 进行中
         /// finished 已完成
         /// </summary>

@@ -37,13 +37,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 坐席购买数（还在有效期内）
+        /// 座席购买数（还在有效期内）
         /// </summary>
         [JsonProperty("StaffBuyNum")]
         public long? StaffBuyNum{ get; set; }
 
         /// <summary>
-        /// 坐席购买列表 （还在有效期内）
+        /// 座席购买列表 （还在有效期内）
         /// </summary>
         [JsonProperty("StaffBuyList")]
         public StaffBuyInfo[] StaffBuyList{ get; set; }

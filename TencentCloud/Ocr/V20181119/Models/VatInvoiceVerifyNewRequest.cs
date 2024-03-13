@@ -80,6 +80,14 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("EnableCommonElectronic")]
         public bool? EnableCommonElectronic{ get; set; }
 
+        /// <summary>
+        /// 是否允许查验当日发票，默认值为false。
+        /// 
+        /// 请注意，发票从开具到录入税局需要一定的时间来更新和验证发票信息，打开后仅支持查验已成功录入到税局中的发票。
+        /// </summary>
+        [JsonProperty("EnableTodayInvoice")]
+        public bool? EnableTodayInvoice{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -95,6 +103,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "RegionCode", this.RegionCode);
             this.SetParamSimple(map, prefix + "SellerTaxCode", this.SellerTaxCode);
             this.SetParamSimple(map, prefix + "EnableCommonElectronic", this.EnableCommonElectronic);
+            this.SetParamSimple(map, prefix + "EnableTodayInvoice", this.EnableTodayInvoice);
         }
     }
 }

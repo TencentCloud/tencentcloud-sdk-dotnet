@@ -94,6 +94,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("InstanceLogListOpsDto")]
         public InstanceLogInfo InstanceLogListOpsDto{ get; set; }
 
+        /// <summary>
+        /// 实例状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceState")]
+        public string InstanceState{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +117,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ErrorDesc", this.ErrorDesc);
             this.SetParamSimple(map, prefix + "ErrorCodeLevel", this.ErrorCodeLevel);
             this.SetParamObj(map, prefix + "InstanceLogListOpsDto.", this.InstanceLogListOpsDto);
+            this.SetParamSimple(map, prefix + "InstanceState", this.InstanceState);
         }
     }
 }

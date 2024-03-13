@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.962";
+       private const string sdkVersion = "SDK_NET_3.0.963";
 
         /// <summary>
         /// Client constructor.
@@ -1349,6 +1349,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeRulesSettingResponse DescribeRulesSettingSync(DescribeRulesSettingRequest req)
         {
             return InternalRequestAsync<DescribeRulesSettingResponse>(req, "DescribeRulesSetting")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询 IP 组的配置信息，包括 IP 组名称、 IP 组内容、 IP 组归属站点。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityIPGroupInfoRequest"/></param>
+        /// <returns><see cref="DescribeSecurityIPGroupInfoResponse"/></returns>
+        public Task<DescribeSecurityIPGroupInfoResponse> DescribeSecurityIPGroupInfo(DescribeSecurityIPGroupInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityIPGroupInfoResponse>(req, "DescribeSecurityIPGroupInfo");
+        }
+
+        /// <summary>
+        /// 查询 IP 组的配置信息，包括 IP 组名称、 IP 组内容、 IP 组归属站点。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityIPGroupInfoRequest"/></param>
+        /// <returns><see cref="DescribeSecurityIPGroupInfoResponse"/></returns>
+        public DescribeSecurityIPGroupInfoResponse DescribeSecurityIPGroupInfoSync(DescribeSecurityIPGroupInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityIPGroupInfoResponse>(req, "DescribeSecurityIPGroupInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

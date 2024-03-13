@@ -25,14 +25,14 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 坐席邮箱
+        /// 座席邮箱
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mail")]
         public string Mail{ get; set; }
 
         /// <summary>
-        /// 坐席电话
+        /// 座席电话
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Phone")]
@@ -60,7 +60,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? EndedTimestamp{ get; set; }
 
         /// <summary>
-        /// 录音 ID，能够索引到坐席侧的录音
+        /// 录音 ID，能够索引到座席侧的录音
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordId")]
@@ -74,7 +74,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 转接来源坐席信息
+        /// 转接来源座席信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TransferFrom")]
@@ -88,7 +88,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string TransferFromType{ get; set; }
 
         /// <summary>
-        /// 转接去向坐席信息
+        /// 转接去向座席信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TransferTo")]

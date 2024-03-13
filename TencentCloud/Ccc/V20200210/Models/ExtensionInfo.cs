@@ -79,13 +79,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public bool? Register{ get; set; }
 
         /// <summary>
-        /// 绑定坐席邮箱
+        /// 绑定座席邮箱
         /// </summary>
         [JsonProperty("Relation")]
         public string Relation{ get; set; }
 
         /// <summary>
-        /// 绑定坐席名称
+        /// 绑定座席名称
         /// </summary>
         [JsonProperty("RelationName")]
         public string RelationName{ get; set; }

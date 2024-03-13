@@ -25,13 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 坐席名称
+        /// 座席名称
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 坐席邮箱
+        /// 座席邮箱
         /// </summary>
         [JsonProperty("Mail")]
         public string Mail{ get; set; }
@@ -44,13 +44,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string StaffNumber{ get; set; }
 
         /// <summary>
-        /// 坐席电话号码（带0086前缀）
+        /// 座席电话号码（带0086前缀）
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }
 
         /// <summary>
-        /// 坐席昵称
+        /// 座席昵称
         /// </summary>
         [JsonProperty("Nick")]
         public string Nick{ get; set; }
@@ -62,7 +62,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 坐席关联的技能组列表
+        /// 座席关联的技能组列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SkillGroupNameList")]

@@ -67,7 +67,9 @@ namespace TencentCloud.Cls.V20201016.Models
         public string[] Keys{ get; set; }
 
         /// <summary>
-        /// 需要过滤日志的key，及其对应的regex
+        /// 日志过滤规则列表（旧版），需要过滤日志的key，及其对应的regex。
+        ///  注意：2.9.3及以上版本LogListener ，建议使用AdvanceFilterRules配置日志过滤规则。
+        /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FilterKeyRegex")]

@@ -38,6 +38,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
+        /// <summary>
+        /// 实例生命周期阶段状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DetailState")]
+        public string DetailState{ get; set; }
+
+        /// <summary>
+        /// 该状态结束时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +60,8 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "DetailState", this.DetailState);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

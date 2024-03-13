@@ -25,7 +25,7 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 购买坐席数量
+        /// 购买座席数量
         /// </summary>
         [JsonProperty("Num")]
         public long? Num{ get; set; }

@@ -61,19 +61,19 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string AcceptTimestamp{ get; set; }
 
         /// <summary>
-        /// 坐席邮箱
+        /// 座席邮箱
         /// </summary>
         [JsonProperty("StaffEmail")]
         public string StaffEmail{ get; set; }
 
         /// <summary>
-        /// 坐席工号
+        /// 座席工号
         /// </summary>
         [JsonProperty("StaffNumber")]
         public string StaffNumber{ get; set; }
 
         /// <summary>
-        /// 坐席状态 inProgress 进行中
+        /// 座席状态 inProgress 进行中
         /// </summary>
         [JsonProperty("SessionStatus")]
         public string SessionStatus{ get; set; }

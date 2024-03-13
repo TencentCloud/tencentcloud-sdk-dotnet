@@ -127,6 +127,7 @@ namespace TencentCloud.Cls.V20201016.Models
         /// <summary>
         /// 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
         /// 标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
+        /// HotPeriod=0为没有开启日志沉降。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HotPeriod")]

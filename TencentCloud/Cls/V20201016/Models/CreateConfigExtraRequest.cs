@@ -127,6 +127,12 @@ namespace TencentCloud.Cls.V20201016.Models
         public string[] GroupIds{ get; set; }
 
         /// <summary>
+        /// 采集相关配置信息。详情见CollectInfo复杂类型配置。
+        /// </summary>
+        [JsonProperty("CollectInfos")]
+        public CollectInfo[] CollectInfos{ get; set; }
+
+        /// <summary>
         /// 高级采集配置。 Json字符串， Key/Value定义为如下：
         /// - ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
         /// - ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
@@ -159,6 +165,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "UserDefineRule", this.UserDefineRule);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
+            this.SetParamArrayObj(map, prefix + "CollectInfos.", this.CollectInfos);
             this.SetParamSimple(map, prefix + "AdvancedConfig", this.AdvancedConfig);
         }
     }

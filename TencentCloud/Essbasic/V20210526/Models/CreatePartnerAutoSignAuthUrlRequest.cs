@@ -52,6 +52,15 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("AuthorizedOrganizationName")]
         public string AuthorizedOrganizationName{ get; set; }
 
+        /// <summary>
+        /// 是否给平台应用授权:
+        /// - true: 是（无需设置AuthorizedOrganizationId和AuthorizedOrganizationName）
+        /// - false: 否（默认）
+        ///  注：该参数需要开通“基于子客授权第三方应用可文件发起子客自动签署”，请联系运营经理开通
+        /// </summary>
+        [JsonProperty("PlatformAppAuthorization")]
+        public bool? PlatformAppAuthorization{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +70,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "AuthorizedOrganizationId", this.AuthorizedOrganizationId);
             this.SetParamSimple(map, prefix + "AuthorizedOrganizationName", this.AuthorizedOrganizationName);
+            this.SetParamSimple(map, prefix + "PlatformAppAuthorization", this.PlatformAppAuthorization);
         }
     }
 }

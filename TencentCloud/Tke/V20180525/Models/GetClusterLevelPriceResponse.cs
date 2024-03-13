@@ -37,6 +37,12 @@ namespace TencentCloud.Tke.V20180525.Models
         public ulong? TotalCost{ get; set; }
 
         /// <summary>
+        /// 总的折扣，100表示100%不打折
+        /// </summary>
+        [JsonProperty("Policy")]
+        public float? Policy{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Tke.V20180525.Models
         {
             this.SetParamSimple(map, prefix + "Cost", this.Cost);
             this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
+            this.SetParamSimple(map, prefix + "Policy", this.Policy);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

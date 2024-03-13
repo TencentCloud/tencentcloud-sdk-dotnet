@@ -73,7 +73,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。
+        /// 偏移量，默认为0，最大为9999。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

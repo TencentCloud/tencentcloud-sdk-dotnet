@@ -28,7 +28,7 @@ namespace TencentCloud.Tione.V20211111
 
        private const string endpoint = "tione.tencentcloudapi.com";
        private const string version = "2021-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.962";
+       private const string sdkVersion = "SDK_NET_3.0.963";
 
         /// <summary>
         /// Client constructor.
@@ -218,6 +218,27 @@ namespace TencentCloud.Tione.V20211111
         public CreateOptimizedModelResponse CreateOptimizedModelSync(CreateOptimizedModelRequest req)
         {
             return InternalRequestAsync<CreateOptimizedModelResponse>(req, "CreateOptimizedModel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 生成Notebook访问链接
+        /// </summary>
+        /// <param name="req"><see cref="CreatePresignedNotebookUrlRequest"/></param>
+        /// <returns><see cref="CreatePresignedNotebookUrlResponse"/></returns>
+        public Task<CreatePresignedNotebookUrlResponse> CreatePresignedNotebookUrl(CreatePresignedNotebookUrlRequest req)
+        {
+            return InternalRequestAsync<CreatePresignedNotebookUrlResponse>(req, "CreatePresignedNotebookUrl");
+        }
+
+        /// <summary>
+        /// 生成Notebook访问链接
+        /// </summary>
+        /// <param name="req"><see cref="CreatePresignedNotebookUrlRequest"/></param>
+        /// <returns><see cref="CreatePresignedNotebookUrlResponse"/></returns>
+        public CreatePresignedNotebookUrlResponse CreatePresignedNotebookUrlSync(CreatePresignedNotebookUrlRequest req)
+        {
+            return InternalRequestAsync<CreatePresignedNotebookUrlResponse>(req, "CreatePresignedNotebookUrl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

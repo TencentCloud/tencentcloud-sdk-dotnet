@@ -55,7 +55,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 按照某字断排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
+        /// 按照某字段排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
         /// </summary>
         [JsonProperty("SortBy")]
         public string SortBy{ get; set; }

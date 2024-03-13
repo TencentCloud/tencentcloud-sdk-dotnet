@@ -31,7 +31,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 模版Id列表
+        /// 模板Id列表
         /// </summary>
         [JsonProperty("Ids")]
         public ulong?[] Ids{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 坐席邮箱地址
+        /// 座席邮箱地址
         /// </summary>
         [JsonProperty("StaffEmail")]
         public string StaffEmail{ get; set; }

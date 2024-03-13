@@ -68,7 +68,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string RecordId{ get; set; }
 
         /// <summary>
-        /// 坐席信息
+        /// 座席信息
         /// </summary>
         [JsonProperty("SeatUser")]
         public SeatUserInfo SeatUser{ get; set; }
@@ -88,7 +88,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// 
         /// 电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
         /// 
-        /// 电话呼入	             105	        noSeatOnline	       无坐席在线
+        /// 电话呼入	             105	        noSeatOnline	       无座席在线
         /// 
         /// 电话呼入              106	       notWorkTime	       非工作时间   
         /// 
@@ -171,7 +171,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string[] IVRKeyPressed{ get; set; }
 
         /// <summary>
-        /// 挂机方 seat 坐席 user 用户 system 系统
+        /// 挂机方 seat 座席 user 用户 system 系统
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HungUpSide")]
@@ -206,7 +206,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// 
         /// 电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
         /// 
-        /// 电话呼入	             105	        noSeatOnline	       无坐席在线
+        /// 电话呼入	             105	        noSeatOnline	       无座席在线
         /// 
         /// 电话呼入              106	       notWorkTime	       非工作时间   
         /// 
