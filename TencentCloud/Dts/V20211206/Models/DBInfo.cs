@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 表示节点角色，针对分布式数据库，如mongodb中的mongos节点
+        /// 表示节点角色，针对分布式数据库，如mongodb中的mongos节点。如数据库是tdsql，枚举值为：proxy、set
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Role")]
@@ -164,6 +164,13 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("TmpToken")]
         public string TmpToken{ get; set; }
 
+        /// <summary>
+        /// tdsql分片id。tdsql set节点必填
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SetId")]
+        public string SetId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -190,6 +197,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "TmpSecretId", this.TmpSecretId);
             this.SetParamSimple(map, prefix + "TmpSecretKey", this.TmpSecretKey);
             this.SetParamSimple(map, prefix + "TmpToken", this.TmpToken);
+            this.SetParamSimple(map, prefix + "SetId", this.SetId);
         }
     }
 }

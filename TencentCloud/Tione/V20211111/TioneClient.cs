@@ -28,7 +28,7 @@ namespace TencentCloud.Tione.V20211111
 
        private const string endpoint = "tione.tencentcloudapi.com";
        private const string version = "2021-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.963";
+       private const string sdkVersion = "SDK_NET_3.0.964";
 
         /// <summary>
         /// Client constructor.
@@ -680,6 +680,27 @@ namespace TencentCloud.Tione.V20211111
         public DescribeBillingSpecsPriceResponse DescribeBillingSpecsPriceSync(DescribeBillingSpecsPriceRequest req)
         {
             return InternalRequestAsync<DescribeBillingSpecsPriceResponse>(req, "DescribeBillingSpecsPrice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取内置镜像列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBuildInImagesRequest"/></param>
+        /// <returns><see cref="DescribeBuildInImagesResponse"/></returns>
+        public Task<DescribeBuildInImagesResponse> DescribeBuildInImages(DescribeBuildInImagesRequest req)
+        {
+            return InternalRequestAsync<DescribeBuildInImagesResponse>(req, "DescribeBuildInImages");
+        }
+
+        /// <summary>
+        /// 获取内置镜像列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBuildInImagesRequest"/></param>
+        /// <returns><see cref="DescribeBuildInImagesResponse"/></returns>
+        public DescribeBuildInImagesResponse DescribeBuildInImagesSync(DescribeBuildInImagesRequest req)
+        {
+            return InternalRequestAsync<DescribeBuildInImagesResponse>(req, "DescribeBuildInImages")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

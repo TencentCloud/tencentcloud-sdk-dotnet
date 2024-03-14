@@ -32,9 +32,10 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 员工信息，不超过100个。
-        /// 根据UserId或OpenId更新员工，必填一个，优先UserId。
-        /// 可更新Mobile、DisplayName、Email和Department.DepartmentId字段，其他字段暂不支持
+        /// 需要更新的员工信息，最多不超过100个。根据UserId或OpenId更新员工信息，必须填写其中一个，优先使用UserId。
+        /// 
+        /// 可更新以下字段，其他字段暂不支持
+        /// <table> <thead> <tr> <th>参数</th> <th>含义</th> </tr> </thead> <tbody> <tr> <td>DisplayName</td> <td>用户的真实名字</td> </tr> <tr> <td>Mobile</td> <td>用户手机号码</td> </tr> <tr> <td>Email</td> <td>用户的邮箱</td> </tr> <tr> <td>Department.DepartmentId</td> <td>用户进入后的部门ID</td> </tr> </tbody> </table>
         /// </summary>
         [JsonProperty("Employees")]
         public Staff[] Employees{ get; set; }
@@ -47,17 +48,18 @@ namespace TencentCloud.Ess.V20201111.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 员工邀请方式
-        /// 如果是来自H5的，参数需要传递H5
-        /// 短信或者企微 请传递SMS，或者不传递
+        /// 员工邀请方式可通过以下方式进行设置：
+        /// 
+        /// **H5**：会生成H5的链接，点击链接进入H5的认证加入企业的逻辑。
+        /// **SMS（默认）**：会通过短信或企业微信消息进行邀请。如果非企业微信场景，则是企业微信消息。其他场景则是短信通知，短信中包含链接，点击后进入微信小程序进行认证加入企业的逻辑。
         /// </summary>
         [JsonProperty("InvitationNotifyType")]
         public string InvitationNotifyType{ get; set; }
 
         /// <summary>
-        /// 回跳地址，
-        /// 在认证成功之后，进行回跳，请保证回跳地址的可用性。
-        /// 使用前请联系对接的客户经理沟通，提供回跳地址的域名，进行域名配置。
+        /// 回跳地址，为认证成功后页面进行回跳的URL，请确保回跳地址的可用性。
+        /// 
+        /// 注：`只有在员工邀请方式（InvitationNotifyType参数）为H5场景下才生效， 其他方式下设置无效。`
         /// </summary>
         [JsonProperty("JumpUrl")]
         public string JumpUrl{ get; set; }

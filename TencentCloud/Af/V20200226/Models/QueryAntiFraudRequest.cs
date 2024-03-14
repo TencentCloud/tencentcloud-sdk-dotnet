@@ -31,7 +31,7 @@ namespace TencentCloud.Af.V20200226.Models
         public string PhoneNumber{ get; set; }
 
         /// <summary>
-        /// Id(五选二)
+        /// Id(五选二) 
         /// </summary>
         [JsonProperty("IdNumber")]
         public string IdNumber{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Af.V20200226.Models
         public string UserIp{ get; set; }
 
         /// <summary>
-        /// 国际移动设备识别码(五选二)
+        /// 国际移动设备识别码，和Idfa同时传入时，只看作一个关键入参(五选二)
         /// </summary>
         [JsonProperty("Imei")]
         public string Imei{ get; set; }
 
         /// <summary>
-        /// ios 系统广告标示符(五选二)
+        /// ios 系统广告标示符，和Imei同时传入时，只看作一个关键入参(五选二)
         /// </summary>
         [JsonProperty("Idfa")]
         public string Idfa{ get; set; }
@@ -164,8 +164,6 @@ namespace TencentCloud.Af.V20200226.Models
         /// 姓名加密类型
         /// 0：不加密（默认值）
         /// 1：md5
-        /// 2：sha256
-        /// 3：SM3
         /// </summary>
         [JsonProperty("NameCryptoType")]
         public string NameCryptoType{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Af.V20200226.Models
         public long? IdFound{ get; set; }
 
         /// <summary>
-        /// 0~100;值越高 欺诈可能性越大
+        /// 0~100;值越高 欺诈可能性越大（注：该字段真实类型为有符号整型）
         /// </summary>
         [JsonProperty("RiskScore")]
         public ulong? RiskScore{ get; set; }

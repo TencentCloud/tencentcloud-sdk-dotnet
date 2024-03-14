@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.963";
+       private const string sdkVersion = "SDK_NET_3.0.964";
 
         /// <summary>
         /// Client constructor.
@@ -1184,27 +1184,6 @@ namespace TencentCloud.Cls.V20201016
         public DescribeKafkaRechargesResponse DescribeKafkaRechargesSync(DescribeKafkaRechargesRequest req)
         {
             return InternalRequestAsync<DescribeKafkaRechargesResponse>(req, "DescribeKafkaRecharges")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 本接口用于获取kafka用户信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeKafkaUserRequest"/></param>
-        /// <returns><see cref="DescribeKafkaUserResponse"/></returns>
-        public Task<DescribeKafkaUserResponse> DescribeKafkaUser(DescribeKafkaUserRequest req)
-        {
-            return InternalRequestAsync<DescribeKafkaUserResponse>(req, "DescribeKafkaUser");
-        }
-
-        /// <summary>
-        /// 本接口用于获取kafka用户信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeKafkaUserRequest"/></param>
-        /// <returns><see cref="DescribeKafkaUserResponse"/></returns>
-        public DescribeKafkaUserResponse DescribeKafkaUserSync(DescribeKafkaUserRequest req)
-        {
-            return InternalRequestAsync<DescribeKafkaUserResponse>(req, "DescribeKafkaUser")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

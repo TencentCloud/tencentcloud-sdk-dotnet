@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.963";
+       private const string sdkVersion = "SDK_NET_3.0.964";
 
         /// <summary>
         /// Client constructor.
@@ -2543,6 +2543,27 @@ namespace TencentCloud.Live.V20180801
         public DescribePullStreamConfigsResponse DescribePullStreamConfigsSync(DescribePullStreamConfigsRequest req)
         {
             return InternalRequestAsync<DescribePullStreamConfigsResponse>(req, "DescribePullStreamConfigs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询拉流转推任务的时长信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePullTransformPushInfoRequest"/></param>
+        /// <returns><see cref="DescribePullTransformPushInfoResponse"/></returns>
+        public Task<DescribePullTransformPushInfoResponse> DescribePullTransformPushInfo(DescribePullTransformPushInfoRequest req)
+        {
+            return InternalRequestAsync<DescribePullTransformPushInfoResponse>(req, "DescribePullTransformPushInfo");
+        }
+
+        /// <summary>
+        /// 查询拉流转推任务的时长信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePullTransformPushInfoRequest"/></param>
+        /// <returns><see cref="DescribePullTransformPushInfoResponse"/></returns>
+        public DescribePullTransformPushInfoResponse DescribePullTransformPushInfoSync(DescribePullTransformPushInfoRequest req)
+        {
+            return InternalRequestAsync<DescribePullTransformPushInfoResponse>(req, "DescribePullTransformPushInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -31,7 +31,7 @@ namespace TencentCloud.Mrs.V20200910.Models
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 图片url
+        /// 图片url(暂不支持传图片Url信息,请使用Base64字段传递图片的Base64编码)
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

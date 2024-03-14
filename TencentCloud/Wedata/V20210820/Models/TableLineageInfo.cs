@@ -185,6 +185,27 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TableType")]
         public string TableType{ get; set; }
 
+        /// <summary>
+        /// datasourceName
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatasourceName")]
+        public string DatasourceName{ get; set; }
+
+        /// <summary>
+        /// DatabaseName
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatabaseName")]
+        public string DatabaseName{ get; set; }
+
+        /// <summary>
+        /// DatabaseId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatabaseId")]
+        public string DatabaseId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -214,6 +235,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DisplayType", this.DisplayType);
             this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
             this.SetParamSimple(map, prefix + "TableType", this.TableType);
+            this.SetParamSimple(map, prefix + "DatasourceName", this.DatasourceName);
+            this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
+            this.SetParamSimple(map, prefix + "DatabaseId", this.DatabaseId);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Es.V20180416
 
        private const string endpoint = "es.tencentcloudapi.com";
        private const string version = "2018-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.963";
+       private const string sdkVersion = "SDK_NET_3.0.964";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,48 @@ namespace TencentCloud.Es.V20180416
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 检查cos迁移索引元数据
+        /// </summary>
+        /// <param name="req"><see cref="CheckMigrateIndexMetaDataRequest"/></param>
+        /// <returns><see cref="CheckMigrateIndexMetaDataResponse"/></returns>
+        public Task<CheckMigrateIndexMetaDataResponse> CheckMigrateIndexMetaData(CheckMigrateIndexMetaDataRequest req)
+        {
+            return InternalRequestAsync<CheckMigrateIndexMetaDataResponse>(req, "CheckMigrateIndexMetaData");
+        }
+
+        /// <summary>
+        /// 检查cos迁移索引元数据
+        /// </summary>
+        /// <param name="req"><see cref="CheckMigrateIndexMetaDataRequest"/></param>
+        /// <returns><see cref="CheckMigrateIndexMetaDataResponse"/></returns>
+        public CheckMigrateIndexMetaDataResponse CheckMigrateIndexMetaDataSync(CheckMigrateIndexMetaDataRequest req)
+        {
+            return InternalRequestAsync<CheckMigrateIndexMetaDataResponse>(req, "CheckMigrateIndexMetaData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// cos迁移流程
+        /// </summary>
+        /// <param name="req"><see cref="CreateCosMigrateToServerlessInstanceRequest"/></param>
+        /// <returns><see cref="CreateCosMigrateToServerlessInstanceResponse"/></returns>
+        public Task<CreateCosMigrateToServerlessInstanceResponse> CreateCosMigrateToServerlessInstance(CreateCosMigrateToServerlessInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateCosMigrateToServerlessInstanceResponse>(req, "CreateCosMigrateToServerlessInstance");
+        }
+
+        /// <summary>
+        /// cos迁移流程
+        /// </summary>
+        /// <param name="req"><see cref="CreateCosMigrateToServerlessInstanceRequest"/></param>
+        /// <returns><see cref="CreateCosMigrateToServerlessInstanceResponse"/></returns>
+        public CreateCosMigrateToServerlessInstanceResponse CreateCosMigrateToServerlessInstanceSync(CreateCosMigrateToServerlessInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateCosMigrateToServerlessInstanceResponse>(req, "CreateCosMigrateToServerlessInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -113,6 +155,48 @@ namespace TencentCloud.Es.V20180416
         public CreateLogstashInstanceResponse CreateLogstashInstanceSync(CreateLogstashInstanceRequest req)
         {
             return InternalRequestAsync<CreateLogstashInstanceResponse>(req, "CreateLogstashInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建Serverless索引
+        /// </summary>
+        /// <param name="req"><see cref="CreateServerlessInstanceRequest"/></param>
+        /// <returns><see cref="CreateServerlessInstanceResponse"/></returns>
+        public Task<CreateServerlessInstanceResponse> CreateServerlessInstance(CreateServerlessInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateServerlessInstanceResponse>(req, "CreateServerlessInstance");
+        }
+
+        /// <summary>
+        /// 创建Serverless索引
+        /// </summary>
+        /// <param name="req"><see cref="CreateServerlessInstanceRequest"/></param>
+        /// <returns><see cref="CreateServerlessInstanceResponse"/></returns>
+        public CreateServerlessInstanceResponse CreateServerlessInstanceSync(CreateServerlessInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateServerlessInstanceResponse>(req, "CreateServerlessInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建Serverless索引空间
+        /// </summary>
+        /// <param name="req"><see cref="CreateServerlessSpaceV2Request"/></param>
+        /// <returns><see cref="CreateServerlessSpaceV2Response"/></returns>
+        public Task<CreateServerlessSpaceV2Response> CreateServerlessSpaceV2(CreateServerlessSpaceV2Request req)
+        {
+            return InternalRequestAsync<CreateServerlessSpaceV2Response>(req, "CreateServerlessSpaceV2");
+        }
+
+        /// <summary>
+        /// 创建Serverless索引空间
+        /// </summary>
+        /// <param name="req"><see cref="CreateServerlessSpaceV2Request"/></param>
+        /// <returns><see cref="CreateServerlessSpaceV2Response"/></returns>
+        public CreateServerlessSpaceV2Response CreateServerlessSpaceV2Sync(CreateServerlessSpaceV2Request req)
+        {
+            return InternalRequestAsync<CreateServerlessSpaceV2Response>(req, "CreateServerlessSpaceV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -197,6 +281,48 @@ namespace TencentCloud.Es.V20180416
         public DeleteLogstashPipelinesResponse DeleteLogstashPipelinesSync(DeleteLogstashPipelinesRequest req)
         {
             return InternalRequestAsync<DeleteLogstashPipelinesResponse>(req, "DeleteLogstashPipelines")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除Serverless索引
+        /// </summary>
+        /// <param name="req"><see cref="DeleteServerlessInstanceRequest"/></param>
+        /// <returns><see cref="DeleteServerlessInstanceResponse"/></returns>
+        public Task<DeleteServerlessInstanceResponse> DeleteServerlessInstance(DeleteServerlessInstanceRequest req)
+        {
+            return InternalRequestAsync<DeleteServerlessInstanceResponse>(req, "DeleteServerlessInstance");
+        }
+
+        /// <summary>
+        /// 删除Serverless索引
+        /// </summary>
+        /// <param name="req"><see cref="DeleteServerlessInstanceRequest"/></param>
+        /// <returns><see cref="DeleteServerlessInstanceResponse"/></returns>
+        public DeleteServerlessInstanceResponse DeleteServerlessInstanceSync(DeleteServerlessInstanceRequest req)
+        {
+            return InternalRequestAsync<DeleteServerlessInstanceResponse>(req, "DeleteServerlessInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除Serverless空间子用户
+        /// </summary>
+        /// <param name="req"><see cref="DeleteServerlessSpaceUserRequest"/></param>
+        /// <returns><see cref="DeleteServerlessSpaceUserResponse"/></returns>
+        public Task<DeleteServerlessSpaceUserResponse> DeleteServerlessSpaceUser(DeleteServerlessSpaceUserRequest req)
+        {
+            return InternalRequestAsync<DeleteServerlessSpaceUserResponse>(req, "DeleteServerlessSpaceUser");
+        }
+
+        /// <summary>
+        /// 删除Serverless空间子用户
+        /// </summary>
+        /// <param name="req"><see cref="DeleteServerlessSpaceUserRequest"/></param>
+        /// <returns><see cref="DeleteServerlessSpaceUserResponse"/></returns>
+        public DeleteServerlessSpaceUserResponse DeleteServerlessSpaceUserSync(DeleteServerlessSpaceUserRequest req)
+        {
+            return InternalRequestAsync<DeleteServerlessSpaceUserResponse>(req, "DeleteServerlessSpaceUser")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -428,6 +554,69 @@ namespace TencentCloud.Es.V20180416
         public DescribeLogstashPipelinesResponse DescribeLogstashPipelinesSync(DescribeLogstashPipelinesRequest req)
         {
             return InternalRequestAsync<DescribeLogstashPipelinesResponse>(req, "DescribeLogstashPipelines")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看Serverless空间子用户
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServerlessSpaceUserRequest"/></param>
+        /// <returns><see cref="DescribeServerlessSpaceUserResponse"/></returns>
+        public Task<DescribeServerlessSpaceUserResponse> DescribeServerlessSpaceUser(DescribeServerlessSpaceUserRequest req)
+        {
+            return InternalRequestAsync<DescribeServerlessSpaceUserResponse>(req, "DescribeServerlessSpaceUser");
+        }
+
+        /// <summary>
+        /// 查看Serverless空间子用户
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServerlessSpaceUserRequest"/></param>
+        /// <returns><see cref="DescribeServerlessSpaceUserResponse"/></returns>
+        public DescribeServerlessSpaceUserResponse DescribeServerlessSpaceUserSync(DescribeServerlessSpaceUserRequest req)
+        {
+            return InternalRequestAsync<DescribeServerlessSpaceUserResponse>(req, "DescribeServerlessSpaceUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取Serverless索引空间列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServerlessSpacesRequest"/></param>
+        /// <returns><see cref="DescribeServerlessSpacesResponse"/></returns>
+        public Task<DescribeServerlessSpacesResponse> DescribeServerlessSpaces(DescribeServerlessSpacesRequest req)
+        {
+            return InternalRequestAsync<DescribeServerlessSpacesResponse>(req, "DescribeServerlessSpaces");
+        }
+
+        /// <summary>
+        /// 获取Serverless索引空间列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServerlessSpacesRequest"/></param>
+        /// <returns><see cref="DescribeServerlessSpacesResponse"/></returns>
+        public DescribeServerlessSpacesResponse DescribeServerlessSpacesSync(DescribeServerlessSpacesRequest req)
+        {
+            return InternalRequestAsync<DescribeServerlessSpacesResponse>(req, "DescribeServerlessSpaces")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询快照信息接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserCosSnapshotListRequest"/></param>
+        /// <returns><see cref="DescribeUserCosSnapshotListResponse"/></returns>
+        public Task<DescribeUserCosSnapshotListResponse> DescribeUserCosSnapshotList(DescribeUserCosSnapshotListRequest req)
+        {
+            return InternalRequestAsync<DescribeUserCosSnapshotListResponse>(req, "DescribeUserCosSnapshotList");
+        }
+
+        /// <summary>
+        /// 查询快照信息接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserCosSnapshotListRequest"/></param>
+        /// <returns><see cref="DescribeUserCosSnapshotListResponse"/></returns>
+        public DescribeUserCosSnapshotListResponse DescribeUserCosSnapshotListSync(DescribeUserCosSnapshotListRequest req)
+        {
+            return InternalRequestAsync<DescribeUserCosSnapshotListResponse>(req, "DescribeUserCosSnapshotList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -914,6 +1103,48 @@ namespace TencentCloud.Es.V20180416
         public UpdateRequestTargetNodeTypesResponse UpdateRequestTargetNodeTypesSync(UpdateRequestTargetNodeTypesRequest req)
         {
             return InternalRequestAsync<UpdateRequestTargetNodeTypesResponse>(req, "UpdateRequestTargetNodeTypes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新Serverless索引
+        /// </summary>
+        /// <param name="req"><see cref="UpdateServerlessInstanceRequest"/></param>
+        /// <returns><see cref="UpdateServerlessInstanceResponse"/></returns>
+        public Task<UpdateServerlessInstanceResponse> UpdateServerlessInstance(UpdateServerlessInstanceRequest req)
+        {
+            return InternalRequestAsync<UpdateServerlessInstanceResponse>(req, "UpdateServerlessInstance");
+        }
+
+        /// <summary>
+        /// 更新Serverless索引
+        /// </summary>
+        /// <param name="req"><see cref="UpdateServerlessInstanceRequest"/></param>
+        /// <returns><see cref="UpdateServerlessInstanceResponse"/></returns>
+        public UpdateServerlessInstanceResponse UpdateServerlessInstanceSync(UpdateServerlessInstanceRequest req)
+        {
+            return InternalRequestAsync<UpdateServerlessInstanceResponse>(req, "UpdateServerlessInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新Serverless索引空间
+        /// </summary>
+        /// <param name="req"><see cref="UpdateServerlessSpaceRequest"/></param>
+        /// <returns><see cref="UpdateServerlessSpaceResponse"/></returns>
+        public Task<UpdateServerlessSpaceResponse> UpdateServerlessSpace(UpdateServerlessSpaceRequest req)
+        {
+            return InternalRequestAsync<UpdateServerlessSpaceResponse>(req, "UpdateServerlessSpace");
+        }
+
+        /// <summary>
+        /// 更新Serverless索引空间
+        /// </summary>
+        /// <param name="req"><see cref="UpdateServerlessSpaceRequest"/></param>
+        /// <returns><see cref="UpdateServerlessSpaceResponse"/></returns>
+        public UpdateServerlessSpaceResponse UpdateServerlessSpaceSync(UpdateServerlessSpaceRequest req)
+        {
+            return InternalRequestAsync<UpdateServerlessSpaceResponse>(req, "UpdateServerlessSpace")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

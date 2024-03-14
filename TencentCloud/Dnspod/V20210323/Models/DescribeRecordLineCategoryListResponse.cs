@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.Dnspod.V20210323.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeKafkaUserRequest : AbstractModel
+    public class DescribeRecordLineCategoryListResponse : AbstractModel
     {
         
         /// <summary>
-        /// kafka用户名。
+        /// 按分类返回的线路列表。
         /// </summary>
-        [JsonProperty("UserName")]
-        public string UserName{ get; set; }
+        [JsonProperty("LineList")]
+        public LineItem[] LineList{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "UserName", this.UserName);
+            this.SetParamArrayObj(map, prefix + "LineList.", this.LineList);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

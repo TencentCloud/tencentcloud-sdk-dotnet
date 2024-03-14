@@ -375,6 +375,27 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Location")]
         public string Location{ get; set; }
 
+        /// <summary>
+        /// 判断是否是分区表1 是 0否
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsPartitionTable")]
+        public long? IsPartitionTable{ get; set; }
+
+        /// <summary>
+        /// 分区字段 key
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PartitionColumns")]
+        public string[] PartitionColumns{ get; set; }
+
+        /// <summary>
+        /// 生命周期-分区保留天数【分区保留策略时有效】
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PartitionExpireDays")]
+        public long? PartitionExpireDays{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -431,6 +452,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "MetaCrawlType", this.MetaCrawlType);
             this.SetParamSimple(map, prefix + "IsView", this.IsView);
             this.SetParamSimple(map, prefix + "Location", this.Location);
+            this.SetParamSimple(map, prefix + "IsPartitionTable", this.IsPartitionTable);
+            this.SetParamArraySimple(map, prefix + "PartitionColumns.", this.PartitionColumns);
+            this.SetParamSimple(map, prefix + "PartitionExpireDays", this.PartitionExpireDays);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6871BDC8-3FEA-34C4-9C01-55CCD07191D7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.963</VersionPrefix>
+    <VersionPrefix>3.0.964</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -135,6 +135,8 @@
     <Compile Include="V20210323\Models\DescribeRecordFilterListResponse.cs" />
     <Compile Include="V20210323\Models\DescribeRecordGroupListRequest.cs" />
     <Compile Include="V20210323\Models\DescribeRecordGroupListResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeRecordLineCategoryListRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeRecordLineCategoryListResponse.cs" />
     <Compile Include="V20210323\Models\DescribeRecordLineListRequest.cs" />
     <Compile Include="V20210323\Models\DescribeRecordLineListResponse.cs" />
     <Compile Include="V20210323\Models\DescribeRecordListRequest.cs" />
@@ -174,6 +176,7 @@
     <Compile Include="V20210323\Models\KeyValue.cs" />
     <Compile Include="V20210323\Models\LineGroupInfo.cs" />
     <Compile Include="V20210323\Models\LineInfo.cs" />
+    <Compile Include="V20210323\Models\LineItem.cs" />
     <Compile Include="V20210323\Models\LockInfo.cs" />
     <Compile Include="V20210323\Models\ModifyDomainCustomLineRequest.cs" />
     <Compile Include="V20210323\Models\ModifyDomainCustomLineResponse.cs" />

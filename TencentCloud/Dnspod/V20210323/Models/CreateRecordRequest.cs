@@ -96,6 +96,12 @@ namespace TencentCloud.Dnspod.V20210323.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// 开启DNSSEC时，强制添加CNAME/URL记录
+        /// </summary>
+        [JsonProperty("DnssecConflictMode")]
+        public string DnssecConflictMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "DnssecConflictMode", this.DnssecConflictMode);
         }
     }
 }

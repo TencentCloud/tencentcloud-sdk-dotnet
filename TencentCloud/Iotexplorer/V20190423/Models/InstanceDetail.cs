@@ -118,6 +118,62 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
+        /// <summary>
+        /// 消息上下行配置TPS
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpDownTPS")]
+        public long? UpDownTPS{ get; set; }
+
+        /// <summary>
+        /// 当前消息上下行TPS
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpDownCurrentTPS")]
+        public long? UpDownCurrentTPS{ get; set; }
+
+        /// <summary>
+        /// 消息转发配置TPS
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ForwardTPS")]
+        public long? ForwardTPS{ get; set; }
+
+        /// <summary>
+        /// 消息转发当前TPS
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ForwardCurrentTPS")]
+        public long? ForwardCurrentTPS{ get; set; }
+
+        /// <summary>
+        /// 实例单元数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CellNum")]
+        public long? CellNum{ get; set; }
+
+        /// <summary>
+        /// 实例Tag
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BillingTag")]
+        public string BillingTag{ get; set; }
+
+        /// <summary>
+        /// 每日消息数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EverydayFreeMessageCount")]
+        public long? EverydayFreeMessageCount{ get; set; }
+
+        /// <summary>
+        /// 最大在线设备数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxDeviceOnlineCount")]
+        public long? MaxDeviceOnlineCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -139,6 +195,14 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "ActivateDevice", this.ActivateDevice);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "UpDownTPS", this.UpDownTPS);
+            this.SetParamSimple(map, prefix + "UpDownCurrentTPS", this.UpDownCurrentTPS);
+            this.SetParamSimple(map, prefix + "ForwardTPS", this.ForwardTPS);
+            this.SetParamSimple(map, prefix + "ForwardCurrentTPS", this.ForwardCurrentTPS);
+            this.SetParamSimple(map, prefix + "CellNum", this.CellNum);
+            this.SetParamSimple(map, prefix + "BillingTag", this.BillingTag);
+            this.SetParamSimple(map, prefix + "EverydayFreeMessageCount", this.EverydayFreeMessageCount);
+            this.SetParamSimple(map, prefix + "MaxDeviceOnlineCount", this.MaxDeviceOnlineCount);
         }
     }
 }

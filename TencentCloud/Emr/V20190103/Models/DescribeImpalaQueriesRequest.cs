@@ -54,6 +54,24 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 执行状态，CREATED、INITIALIZED、COMPILED、RUNNING、FINISHED、EXCEPTION
+        /// </summary>
+        [JsonProperty("State")]
+        public string[] State{ get; set; }
+
+        /// <summary>
+        /// 结束时间大于的时间点
+        /// </summary>
+        [JsonProperty("EndTimeGte")]
+        public ulong? EndTimeGte{ get; set; }
+
+        /// <summary>
+        /// 结束时间小于的时间点
+        /// </summary>
+        [JsonProperty("EndTimeLte")]
+        public ulong? EndTimeLte{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +83,9 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArraySimple(map, prefix + "State.", this.State);
+            this.SetParamSimple(map, prefix + "EndTimeGte", this.EndTimeGte);
+            this.SetParamSimple(map, prefix + "EndTimeLte", this.EndTimeLte);
         }
     }
 }

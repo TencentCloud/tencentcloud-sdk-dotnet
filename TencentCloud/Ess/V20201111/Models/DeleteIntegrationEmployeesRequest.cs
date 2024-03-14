@@ -32,9 +32,11 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 待移除员工的信息。应符合以下规则：
-        /// <ul><li>UserId和OpenId不可同时为空。</li>
-        /// <li>若需要进行离职交接，交接人信息ReceiveUserId和ReceiveOpenId不可同时为空。否则视为不进行离职交接。</li></ul>
+        /// 待离职员工的信息最多不超过100个。应符合以下规则：
+        /// 
+        /// 1. UserId和OpenId不可同时为空，必须填写其中一个，优先使用UserId。
+        /// 
+        /// 2. **若需要进行离职交接**，交接人信息ReceiveUserId和ReceiveOpenId不可同时为空，必须填写其中一个，优先使用ReceiveUserId。
         /// </summary>
         [JsonProperty("Employees")]
         public Staff[] Employees{ get; set; }
