@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.964</VersionPrefix>
+    <VersionPrefix>3.0.965</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -54,6 +54,7 @@
     <Compile Include="V20190103\Models\AddUsersForUserManagerResponse.cs" />
     <Compile Include="V20190103\Models\AllNodeResourceSpec.cs" />
     <Compile Include="V20190103\Models\ApplicationStatics.cs" />
+    <Compile Include="V20190103\Models\Arg.cs" />
     <Compile Include="V20190103\Models\AutoScaleRecord.cs" />
     <Compile Include="V20190103\Models\AutoScaleResourceConf.cs" />
     <Compile Include="V20190103\Models\BootstrapAction.cs" />
@@ -203,6 +204,7 @@
     <Compile Include="V20190103\Models\StartStopServiceOrMonitorRequest.cs" />
     <Compile Include="V20190103\Models\StartStopServiceOrMonitorResponse.cs" />
     <Compile Include="V20190103\Models\Step.cs" />
+    <Compile Include="V20190103\Models\StopParams.cs" />
     <Compile Include="V20190103\Models\StrategyConfig.cs" />
     <Compile Include="V20190103\Models\SubnetInfo.cs" />
     <Compile Include="V20190103\Models\SyncPodStateRequest.cs" />

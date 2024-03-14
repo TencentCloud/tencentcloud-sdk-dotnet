@@ -28,7 +28,7 @@ namespace TencentCloud.Essbasic.V20210526
 
        private const string endpoint = "essbasic.tencentcloudapi.com";
        private const string version = "2021-05-26";
-       private const string sdkVersion = "SDK_NET_3.0.964";
+       private const string sdkVersion = "SDK_NET_3.0.965";
 
         /// <summary>
         /// Client constructor.
@@ -1508,7 +1508,11 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 通过此接口（ChannelDescribeBillUsageDetail）查询该第三方平台子客企业的套餐消耗详情。
+        /// 通过此接口（ChannelDescribeBillUsageDetail）查询该第三方平台子客企业的套餐消耗详情。可以支持单个子客和整个应用下所有子客的查询。
+        /// <ul>
+        /// <li>对于单个子客企业的查询，通过指定子客的唯一标识(Agent.ProxyOrganizationOpenId)来查询该子客消耗详情</li>
+        /// <li>对于整个应用下所有企业的查询，不需要指定子客的唯一标识，只需要传入渠道应用标识(Agent.AppId)直接查询整个应用下所有子客企业消耗详情</li>
+        /// </ul>
         /// </summary>
         /// <param name="req"><see cref="ChannelDescribeBillUsageDetailRequest"/></param>
         /// <returns><see cref="ChannelDescribeBillUsageDetailResponse"/></returns>
@@ -1518,7 +1522,11 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 通过此接口（ChannelDescribeBillUsageDetail）查询该第三方平台子客企业的套餐消耗详情。
+        /// 通过此接口（ChannelDescribeBillUsageDetail）查询该第三方平台子客企业的套餐消耗详情。可以支持单个子客和整个应用下所有子客的查询。
+        /// <ul>
+        /// <li>对于单个子客企业的查询，通过指定子客的唯一标识(Agent.ProxyOrganizationOpenId)来查询该子客消耗详情</li>
+        /// <li>对于整个应用下所有企业的查询，不需要指定子客的唯一标识，只需要传入渠道应用标识(Agent.AppId)直接查询整个应用下所有子客企业消耗详情</li>
+        /// </ul>
         /// </summary>
         /// <param name="req"><see cref="ChannelDescribeBillUsageDetailRequest"/></param>
         /// <returns><see cref="ChannelDescribeBillUsageDetailResponse"/></returns>
@@ -1824,6 +1832,31 @@ namespace TencentCloud.Essbasic.V20210526
         public ChannelModifyRoleResponse ChannelModifyRoleSync(ChannelModifyRoleRequest req)
         {
             return InternalRequestAsync<ChannelModifyRoleResponse>(req, "ChannelModifyRole")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 给医疗个人自动签许可续期。续期成功后，可对医疗自动签许可追加一年有效期，只可续期一次。
+        /// 
+        /// 注意: `处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。`
+        /// </summary>
+        /// <param name="req"><see cref="ChannelRenewAutoSignLicenseRequest"/></param>
+        /// <returns><see cref="ChannelRenewAutoSignLicenseResponse"/></returns>
+        public Task<ChannelRenewAutoSignLicenseResponse> ChannelRenewAutoSignLicense(ChannelRenewAutoSignLicenseRequest req)
+        {
+            return InternalRequestAsync<ChannelRenewAutoSignLicenseResponse>(req, "ChannelRenewAutoSignLicense");
+        }
+
+        /// <summary>
+        /// 给医疗个人自动签许可续期。续期成功后，可对医疗自动签许可追加一年有效期，只可续期一次。
+        /// 
+        /// 注意: `处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。`
+        /// </summary>
+        /// <param name="req"><see cref="ChannelRenewAutoSignLicenseRequest"/></param>
+        /// <returns><see cref="ChannelRenewAutoSignLicenseResponse"/></returns>
+        public ChannelRenewAutoSignLicenseResponse ChannelRenewAutoSignLicenseSync(ChannelRenewAutoSignLicenseRequest req)
+        {
+            return InternalRequestAsync<ChannelRenewAutoSignLicenseResponse>(req, "ChannelRenewAutoSignLicense")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

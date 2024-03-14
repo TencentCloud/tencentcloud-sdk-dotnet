@@ -102,6 +102,20 @@ namespace TencentCloud.Trp.V20210515.Models
         public long? RiskQuota{ get; set; }
 
         /// <summary>
+        /// AI文字数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AigcTextQuota")]
+        public long? AigcTextQuota{ get; set; }
+
+        /// <summary>
+        /// AI图片数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AigcImageQuota")]
+        public long? AigcImageQuota{ get; set; }
+
+        /// <summary>
         /// 溯源类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -139,6 +153,8 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "SaleQuota", this.SaleQuota);
             this.SetParamSimple(map, prefix + "ChainQuota", this.ChainQuota);
             this.SetParamSimple(map, prefix + "RiskQuota", this.RiskQuota);
+            this.SetParamSimple(map, prefix + "AigcTextQuota", this.AigcTextQuota);
+            this.SetParamSimple(map, prefix + "AigcImageQuota", this.AigcImageQuota);
             this.SetParamSimple(map, prefix + "TrackType", this.TrackType);
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "ProductCertify", this.ProductCertify);

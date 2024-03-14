@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FEBD4BA8-D71D-307D-97C6-CC6B06586449}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.964</VersionPrefix>
+    <VersionPrefix>3.0.965</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -404,6 +404,7 @@
     <Compile Include="V20190107\Models\UpgradeClusterVersionResponse.cs" />
     <Compile Include="V20190107\Models\UpgradeInstanceRequest.cs" />
     <Compile Include="V20190107\Models\UpgradeInstanceResponse.cs" />
+    <Compile Include="V20190107\Models\UpgradeProxy.cs" />
     <Compile Include="V20190107\Models\UpgradeProxyRequest.cs" />
     <Compile Include="V20190107\Models\UpgradeProxyResponse.cs" />
     <Compile Include="V20190107\Models\UpgradeProxyVersionRequest.cs" />

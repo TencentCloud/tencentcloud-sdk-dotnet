@@ -180,6 +180,20 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("RecordBackground")]
         public string RecordBackground{ get; set; }
 
+        /// <summary>
+        /// 录制自定义场景，仅recordlayout=9的时候此参数有效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RecordScene")]
+        public string RecordScene{ get; set; }
+
+        /// <summary>
+        /// 录制自定义语言，仅recordlayout=9的时候此参数有效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RecordLang")]
+        public string RecordLang{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -208,6 +222,8 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "RecordLiveUrl", this.RecordLiveUrl);
             this.SetParamSimple(map, prefix + "EnableAutoStart", this.EnableAutoStart);
             this.SetParamSimple(map, prefix + "RecordBackground", this.RecordBackground);
+            this.SetParamSimple(map, prefix + "RecordScene", this.RecordScene);
+            this.SetParamSimple(map, prefix + "RecordLang", this.RecordLang);
         }
     }
 }

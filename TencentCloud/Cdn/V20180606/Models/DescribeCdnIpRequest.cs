@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 需要查询的 IP 列表
+        /// 需要查询的 IP 列表，单次可支持1-20个IP查询。
         /// </summary>
         [JsonProperty("Ips")]
         public string[] Ips{ get; set; }

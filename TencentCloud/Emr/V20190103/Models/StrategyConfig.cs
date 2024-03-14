@@ -53,6 +53,13 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("DealOnFail")]
         public long? DealOnFail{ get; set; }
 
+        /// <summary>
+        /// 指令需要指定的参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Args")]
+        public Arg[] Args{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -63,6 +70,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "BatchSize", this.BatchSize);
             this.SetParamSimple(map, prefix + "TimeWait", this.TimeWait);
             this.SetParamSimple(map, prefix + "DealOnFail", this.DealOnFail);
+            this.SetParamArrayObj(map, prefix + "Args.", this.Args);
         }
     }
 }

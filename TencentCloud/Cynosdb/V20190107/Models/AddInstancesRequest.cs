@@ -122,6 +122,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
+        /// <summary>
+        /// proxy同步升级
+        /// </summary>
+        [JsonProperty("UpgradeProxy")]
+        public UpgradeProxy UpgradeProxy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -144,6 +150,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
             this.SetParamArrayObj(map, prefix + "InstanceParams.", this.InstanceParams);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamObj(map, prefix + "UpgradeProxy.", this.UpgradeProxy);
         }
     }
 }

@@ -55,6 +55,12 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? Offset{ get; set; }
 
         /// <summary>
+        /// 日志导入规则。
+        /// </summary>
+        [JsonProperty("LogRechargeRule")]
+        public LogRechargeRuleInfo LogRechargeRule{ get; set; }
+
+        /// <summary>
         /// 腾讯云CKafka实例ID，KafkaType为0时必填
         /// </summary>
         [JsonProperty("KafkaInstance")]
@@ -85,13 +91,6 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("ConsumerGroupName")]
         public string ConsumerGroupName{ get; set; }
 
-        /// <summary>
-        /// 日志导入规则。
-        /// 必填字段。
-        /// </summary>
-        [JsonProperty("LogRechargeRule")]
-        public LogRechargeRuleInfo LogRechargeRule{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,12 +102,12 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "KafkaType", this.KafkaType);
             this.SetParamSimple(map, prefix + "UserKafkaTopics", this.UserKafkaTopics);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamObj(map, prefix + "LogRechargeRule.", this.LogRechargeRule);
             this.SetParamSimple(map, prefix + "KafkaInstance", this.KafkaInstance);
             this.SetParamSimple(map, prefix + "ServerAddr", this.ServerAddr);
             this.SetParamSimple(map, prefix + "IsEncryptionAddr", this.IsEncryptionAddr);
             this.SetParamObj(map, prefix + "Protocol.", this.Protocol);
             this.SetParamSimple(map, prefix + "ConsumerGroupName", this.ConsumerGroupName);
-            this.SetParamObj(map, prefix + "LogRechargeRule.", this.LogRechargeRule);
         }
     }
 }

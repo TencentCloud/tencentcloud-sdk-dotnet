@@ -53,6 +53,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("StrategyConfig")]
         public StrategyConfig StrategyConfig{ get; set; }
 
+        /// <summary>
+        /// 暂停服务时用的参数
+        /// </summary>
+        [JsonProperty("StopParams")]
+        public StopParams StopParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -63,6 +69,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "OpType", this.OpType);
             this.SetParamObj(map, prefix + "OpScope.", this.OpScope);
             this.SetParamObj(map, prefix + "StrategyConfig.", this.StrategyConfig);
+            this.SetParamObj(map, prefix + "StopParams.", this.StopParams);
         }
     }
 }

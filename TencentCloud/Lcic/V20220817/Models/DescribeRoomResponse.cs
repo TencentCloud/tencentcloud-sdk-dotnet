@@ -211,6 +211,18 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string RTMPStreamingURL{ get; set; }
 
         /// <summary>
+        /// 录制自定义场景，仅recordlayout=9的时候此参数有效
+        /// </summary>
+        [JsonProperty("RecordScene")]
+        public string RecordScene{ get; set; }
+
+        /// <summary>
+        /// 录制自定义语言，仅recordlayout=9的时候此参数有效
+        /// </summary>
+        [JsonProperty("RecordLang")]
+        public string RecordLang{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -250,6 +262,8 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "EnableAutoStart", this.EnableAutoStart);
             this.SetParamSimple(map, prefix + "RecordBackground", this.RecordBackground);
             this.SetParamSimple(map, prefix + "RTMPStreamingURL", this.RTMPStreamingURL);
+            this.SetParamSimple(map, prefix + "RecordScene", this.RecordScene);
+            this.SetParamSimple(map, prefix + "RecordLang", this.RecordLang);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

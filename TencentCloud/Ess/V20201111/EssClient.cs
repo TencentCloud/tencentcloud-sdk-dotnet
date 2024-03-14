@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.964";
+       private const string sdkVersion = "SDK_NET_3.0.965";
 
         /// <summary>
         /// Client constructor.
@@ -2596,6 +2596,31 @@ namespace TencentCloud.Ess.V20201111
         public ModifyIntegrationRoleResponse ModifyIntegrationRoleSync(ModifyIntegrationRoleRequest req)
         {
             return InternalRequestAsync<ModifyIntegrationRoleResponse>(req, "ModifyIntegrationRole")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 给医疗个人自动签许可续期。续期成功后，可对医疗自动签许可追加一年有效期，只可续期一次。
+        /// 
+        /// 注意: `处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。`
+        /// </summary>
+        /// <param name="req"><see cref="RenewAutoSignLicenseRequest"/></param>
+        /// <returns><see cref="RenewAutoSignLicenseResponse"/></returns>
+        public Task<RenewAutoSignLicenseResponse> RenewAutoSignLicense(RenewAutoSignLicenseRequest req)
+        {
+            return InternalRequestAsync<RenewAutoSignLicenseResponse>(req, "RenewAutoSignLicense");
+        }
+
+        /// <summary>
+        /// 给医疗个人自动签许可续期。续期成功后，可对医疗自动签许可追加一年有效期，只可续期一次。
+        /// 
+        /// 注意: `处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。`
+        /// </summary>
+        /// <param name="req"><see cref="RenewAutoSignLicenseRequest"/></param>
+        /// <returns><see cref="RenewAutoSignLicenseResponse"/></returns>
+        public RenewAutoSignLicenseResponse RenewAutoSignLicenseSync(RenewAutoSignLicenseRequest req)
+        {
+            return InternalRequestAsync<RenewAutoSignLicenseResponse>(req, "RenewAutoSignLicense")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

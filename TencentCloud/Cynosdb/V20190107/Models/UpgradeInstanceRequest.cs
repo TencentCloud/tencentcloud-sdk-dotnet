@@ -78,6 +78,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("UpgradeMode")]
         public string UpgradeMode{ get; set; }
 
+        /// <summary>
+        /// proxy同步升级
+        /// </summary>
+        [JsonProperty("UpgradeProxy")]
+        public UpgradeProxy UpgradeProxy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "DbType", this.DbType);
             this.SetParamSimple(map, prefix + "DealMode", this.DealMode);
             this.SetParamSimple(map, prefix + "UpgradeMode", this.UpgradeMode);
+            this.SetParamObj(map, prefix + "UpgradeProxy.", this.UpgradeProxy);
         }
     }
 }
