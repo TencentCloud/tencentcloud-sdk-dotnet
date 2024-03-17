@@ -118,7 +118,7 @@ namespace TencentCloud.Asr.V20190614.Models
         public long? FilterDirty{ get; set; }
 
         /// <summary>
-        /// 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
+        /// 是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
         /// </summary>
         [JsonProperty("FilterModal")]
         public long? FilterModal{ get; set; }

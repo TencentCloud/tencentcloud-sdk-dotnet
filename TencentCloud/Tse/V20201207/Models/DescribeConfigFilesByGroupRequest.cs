@@ -15,44 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Waf.V20180125.Models
+namespace TencentCloud.Tse.V20201207.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ClbHostResult : AbstractModel
+    public class DescribeConfigFilesByGroupRequest : AbstractModel
     {
         
         /// <summary>
-        /// WAF绑定的监听器实例
+        /// TSE实例id
         /// </summary>
-        [JsonProperty("LoadBalancer")]
-        public LoadBalancer LoadBalancer{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// WAF绑定的域名
+        /// 命名空间名
         /// </summary>
-        [JsonProperty("Domain")]
-        public string Domain{ get; set; }
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
 
         /// <summary>
-        /// WAF绑定的实例ID
+        /// 组名
         /// </summary>
-        [JsonProperty("DomainId")]
-        public string DomainId{ get; set; }
+        [JsonProperty("Group")]
+        public string Group{ get; set; }
 
         /// <summary>
-        /// 是否有绑定WAF，1：绑定了WAF，0：没有绑定WAF
+        /// 返回数量，默认为20，最大值为100。	
         /// </summary>
-        [JsonProperty("Status")]
-        public ulong? Status{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 绑定了WAF的情况下，WAF流量模式，1：清洗模式，0：镜像模式（默认）
+        /// 偏移量，默认为0。	
         /// </summary>
-        [JsonProperty("FlowMode")]
-        public ulong? FlowMode{ get; set; }
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "LoadBalancer.", this.LoadBalancer);
-            this.SetParamSimple(map, prefix + "Domain", this.Domain);
-            this.SetParamSimple(map, prefix + "DomainId", this.DomainId);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "FlowMode", this.FlowMode);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "Group", this.Group);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

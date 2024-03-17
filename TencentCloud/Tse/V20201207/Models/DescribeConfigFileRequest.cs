@@ -15,20 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Waf.V20180125.Models
+namespace TencentCloud.Tse.V20201207.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeWafInfoRequest : AbstractModel
+    public class DescribeConfigFileRequest : AbstractModel
     {
         
         /// <summary>
-        /// CLB回调WAF接口（获取、删除）的参数
+        /// TSE实例id
         /// </summary>
-        [JsonProperty("Params")]
-        public ClbHostsParams[] Params{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 命名空间
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
+
+        /// <summary>
+        /// 组
+        /// </summary>
+        [JsonProperty("Group")]
+        public string Group{ get; set; }
+
+        /// <summary>
+        /// 名称
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
 
         /// <summary>
@@ -36,7 +54,10 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Params.", this.Params);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "Group", this.Group);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

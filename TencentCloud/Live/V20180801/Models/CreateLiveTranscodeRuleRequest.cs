@@ -37,12 +37,6 @@ namespace TencentCloud.Live.V20180801.Models
         public string AppName{ get; set; }
 
         /// <summary>
-        /// 流名称。如果只绑定域名或路径，则此处填空。
-        /// </summary>
-        [JsonProperty("StreamName")]
-        public string StreamName{ get; set; }
-
-        /// <summary>
         /// 指定已有的模板Id。
         /// </summary>
         [JsonProperty("TemplateId")]
@@ -56,7 +50,6 @@ namespace TencentCloud.Live.V20180801.Models
         {
             this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
             this.SetParamSimple(map, prefix + "AppName", this.AppName);
-            this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
         }
     }

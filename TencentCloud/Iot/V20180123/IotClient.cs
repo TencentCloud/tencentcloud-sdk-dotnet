@@ -28,7 +28,7 @@ namespace TencentCloud.Iot.V20180123
 
        private const string endpoint = "iot.tencentcloudapi.com";
        private const string version = "2018-01-23";
-       private const string sdkVersion = "SDK_NET_3.0.965";
+       private const string sdkVersion = "SDK_NET_3.0.966";
 
         /// <summary>
         /// Client constructor.

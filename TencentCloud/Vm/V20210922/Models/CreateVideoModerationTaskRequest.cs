@@ -44,13 +44,13 @@ namespace TencentCloud.Vm.V20210922.Models
         public TaskInput[] Tasks{ get; set; }
 
         /// <summary>
-        /// 回调签名key，具体可以查看签名文档。
+        /// 验证签名参数，具体可以参考[验签说明](https://cloud.tencent.com/document/product/1265/104001#42dd87d2-580f-46cf-a953-639a787d1eda)。
         /// </summary>
         [JsonProperty("Seed")]
         public string Seed{ get; set; }
 
         /// <summary>
-        /// 接收审核信息回调地址，如果设置，则审核过程中产生的违规音频片段和画面截帧发送此接口
+        /// 接收审核信息回调地址。如果设置了该字段，在审核过程中发现违规音频片段和画面截帧结果将发送至该接口。更多详情请参阅[回调配置说明](https://cloud.tencent.com/document/product/1265/104001)。
         /// </summary>
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }

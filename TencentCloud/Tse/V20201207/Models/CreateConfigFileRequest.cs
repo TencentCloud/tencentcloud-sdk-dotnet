@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Waf.V20180125.Models
+namespace TencentCloud.Tse.V20201207.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeWafInfoResponse : AbstractModel
+    public class CreateConfigFileRequest : AbstractModel
     {
         
         /// <summary>
-        /// 返回的WAF信息数组的长度，为0则表示没有查询到对应的信息
+        /// TSE 实例id
         /// </summary>
-        [JsonProperty("Total")]
-        public ulong? Total{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 对应的WAF信息的数组。
+        /// 配置文件列表详情
         /// </summary>
-        [JsonProperty("HostList")]
-        public ClbHostResult[] HostList{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("ConfigFile")]
+        public ConfigFile ConfigFile{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Total", this.Total);
-            this.SetParamArrayObj(map, prefix + "HostList.", this.HostList);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamObj(map, prefix + "ConfigFile.", this.ConfigFile);
         }
     }
 }

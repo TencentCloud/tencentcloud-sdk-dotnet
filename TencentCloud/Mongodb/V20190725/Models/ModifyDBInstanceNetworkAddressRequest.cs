@@ -25,31 +25,33 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 指定需修改网络的实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 原IP保留时长，单位为分钟；原IP会在约定时间后释放，在释放前原IP和新IP均可访问；0表示立即回收原IP
+        /// 原 IP 地址保留时长。
+        /// - 单位为分钟，0表示立即回收原 IP 地址。
+        /// - 原 IP 将在约定时间后释放，在释放前原 IP和新 IP均可访问。
         /// </summary>
         [JsonProperty("OldIpExpiredTime")]
         public ulong? OldIpExpiredTime{ get; set; }
 
         /// <summary>
-        /// 切换后IP地址的归属私有网络统一ID，若为基础网络，该字段为空
+        /// 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。
         /// </summary>
         [JsonProperty("NewUniqVpcId")]
         public string NewUniqVpcId{ get; set; }
 
         /// <summary>
-        /// 切换后IP地址的归属子网统一ID，若为基础网络，该字段为空
+        /// 切换私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。
         /// </summary>
         [JsonProperty("NewUniqSubnetId")]
         public string NewUniqSubnetId{ get; set; }
 
         /// <summary>
-        /// 待修改IP信息
+        /// IP 地址信息，包含新 IP 地址与 原 IP 地址。
         /// </summary>
         [JsonProperty("NetworkAddresses")]
         public ModifyNetworkAddress[] NetworkAddresses{ get; set; }

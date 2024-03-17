@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.965";
+       private const string sdkVersion = "SDK_NET_3.0.966";
 
         /// <summary>
         /// Client constructor.
@@ -1721,31 +1721,6 @@ namespace TencentCloud.Waf.V20180125
         public DescribeWafAutoDenyStatusResponse DescribeWafAutoDenyStatusSync(DescribeWafAutoDenyStatusRequest req)
         {
             return InternalRequestAsync<DescribeWafAutoDenyStatusResponse>(req, "DescribeWafAutoDenyStatus")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取负载均衡绑定的WAF信息，可以根据租户负载均衡实例ID、负载均衡监听器ID、负载均衡的域名信息来查询对应绑定的 Waf的状态信息。
-        /// 查询的范围：负载均衡实例ID、负载均衡实例ID+监听器ID、负载均衡实例ID+监听器ID+域名。
-        /// 可能的错误码：ResourceNotFound（没有找到对应的资源）、UnsupportedRegion（目前clb-waf只支持北京、广州、上海、成都、重庆、香港地域）。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWafInfoRequest"/></param>
-        /// <returns><see cref="DescribeWafInfoResponse"/></returns>
-        public Task<DescribeWafInfoResponse> DescribeWafInfo(DescribeWafInfoRequest req)
-        {
-            return InternalRequestAsync<DescribeWafInfoResponse>(req, "DescribeWafInfo");
-        }
-
-        /// <summary>
-        /// 获取负载均衡绑定的WAF信息，可以根据租户负载均衡实例ID、负载均衡监听器ID、负载均衡的域名信息来查询对应绑定的 Waf的状态信息。
-        /// 查询的范围：负载均衡实例ID、负载均衡实例ID+监听器ID、负载均衡实例ID+监听器ID+域名。
-        /// 可能的错误码：ResourceNotFound（没有找到对应的资源）、UnsupportedRegion（目前clb-waf只支持北京、广州、上海、成都、重庆、香港地域）。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeWafInfoRequest"/></param>
-        /// <returns><see cref="DescribeWafInfoResponse"/></returns>
-        public DescribeWafInfoResponse DescribeWafInfoSync(DescribeWafInfoRequest req)
-        {
-            return InternalRequestAsync<DescribeWafInfoResponse>(req, "DescribeWafInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

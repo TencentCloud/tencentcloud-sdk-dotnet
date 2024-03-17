@@ -126,6 +126,27 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("Ttl")]
         public ulong? Ttl{ get; set; }
 
+        /// <summary>
+        /// 版本信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceVersion")]
+        public string InstanceVersion{ get; set; }
+
+        /// <summary>
+        /// 状态信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HealthStatus")]
+        public string HealthStatus{ get; set; }
+
+        /// <summary>
+        /// 描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Comment")]
+        public string Comment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -147,6 +168,9 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamArrayObj(map, prefix + "Metadatas.", this.Metadatas);
             this.SetParamSimple(map, prefix + "Ttl", this.Ttl);
+            this.SetParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
+            this.SetParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
+            this.SetParamSimple(map, prefix + "Comment", this.Comment);
         }
     }
 }

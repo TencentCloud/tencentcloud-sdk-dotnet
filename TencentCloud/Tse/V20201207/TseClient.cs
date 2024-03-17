@@ -28,7 +28,7 @@ namespace TencentCloud.Tse.V20201207
 
        private const string endpoint = "tse.tencentcloudapi.com";
        private const string version = "2020-12-07";
-       private const string sdkVersion = "SDK_NET_3.0.965";
+       private const string sdkVersion = "SDK_NET_3.0.966";
 
         /// <summary>
         /// Client constructor.
@@ -285,6 +285,48 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 创建配置文件
+        /// </summary>
+        /// <param name="req"><see cref="CreateConfigFileRequest"/></param>
+        /// <returns><see cref="CreateConfigFileResponse"/></returns>
+        public Task<CreateConfigFileResponse> CreateConfigFile(CreateConfigFileRequest req)
+        {
+            return InternalRequestAsync<CreateConfigFileResponse>(req, "CreateConfigFile");
+        }
+
+        /// <summary>
+        /// 创建配置文件
+        /// </summary>
+        /// <param name="req"><see cref="CreateConfigFileRequest"/></param>
+        /// <returns><see cref="CreateConfigFileResponse"/></returns>
+        public CreateConfigFileResponse CreateConfigFileSync(CreateConfigFileRequest req)
+        {
+            return InternalRequestAsync<CreateConfigFileResponse>(req, "CreateConfigFile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建服务治理中心配置文件组
+        /// </summary>
+        /// <param name="req"><see cref="CreateConfigFileGroupRequest"/></param>
+        /// <returns><see cref="CreateConfigFileGroupResponse"/></returns>
+        public Task<CreateConfigFileGroupResponse> CreateConfigFileGroup(CreateConfigFileGroupRequest req)
+        {
+            return InternalRequestAsync<CreateConfigFileGroupResponse>(req, "CreateConfigFileGroup");
+        }
+
+        /// <summary>
+        /// 创建服务治理中心配置文件组
+        /// </summary>
+        /// <param name="req"><see cref="CreateConfigFileGroupRequest"/></param>
+        /// <returns><see cref="CreateConfigFileGroupResponse"/></returns>
+        public CreateConfigFileGroupResponse CreateConfigFileGroupSync(CreateConfigFileGroupRequest req)
+        {
+            return InternalRequestAsync<CreateConfigFileGroupResponse>(req, "CreateConfigFileGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建引擎实例
         /// </summary>
         /// <param name="req"><see cref="CreateEngineRequest"/></param>
@@ -306,7 +348,28 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 创建治理中心服务实例
+        /// 创建治理中心服务别名
+        /// </summary>
+        /// <param name="req"><see cref="CreateGovernanceAliasRequest"/></param>
+        /// <returns><see cref="CreateGovernanceAliasResponse"/></returns>
+        public Task<CreateGovernanceAliasResponse> CreateGovernanceAlias(CreateGovernanceAliasRequest req)
+        {
+            return InternalRequestAsync<CreateGovernanceAliasResponse>(req, "CreateGovernanceAlias");
+        }
+
+        /// <summary>
+        /// 创建治理中心服务别名
+        /// </summary>
+        /// <param name="req"><see cref="CreateGovernanceAliasRequest"/></param>
+        /// <returns><see cref="CreateGovernanceAliasResponse"/></returns>
+        public CreateGovernanceAliasResponse CreateGovernanceAliasSync(CreateGovernanceAliasRequest req)
+        {
+            return InternalRequestAsync<CreateGovernanceAliasResponse>(req, "CreateGovernanceAlias")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建服务实例
         /// </summary>
         /// <param name="req"><see cref="CreateGovernanceInstancesRequest"/></param>
         /// <returns><see cref="CreateGovernanceInstancesResponse"/></returns>
@@ -316,13 +379,55 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 创建治理中心服务实例
+        /// 创建服务实例
         /// </summary>
         /// <param name="req"><see cref="CreateGovernanceInstancesRequest"/></param>
         /// <returns><see cref="CreateGovernanceInstancesResponse"/></returns>
         public CreateGovernanceInstancesResponse CreateGovernanceInstancesSync(CreateGovernanceInstancesRequest req)
         {
             return InternalRequestAsync<CreateGovernanceInstancesResponse>(req, "CreateGovernanceInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建治理中心命名空间
+        /// </summary>
+        /// <param name="req"><see cref="CreateGovernanceNamespacesRequest"/></param>
+        /// <returns><see cref="CreateGovernanceNamespacesResponse"/></returns>
+        public Task<CreateGovernanceNamespacesResponse> CreateGovernanceNamespaces(CreateGovernanceNamespacesRequest req)
+        {
+            return InternalRequestAsync<CreateGovernanceNamespacesResponse>(req, "CreateGovernanceNamespaces");
+        }
+
+        /// <summary>
+        /// 创建治理中心命名空间
+        /// </summary>
+        /// <param name="req"><see cref="CreateGovernanceNamespacesRequest"/></param>
+        /// <returns><see cref="CreateGovernanceNamespacesResponse"/></returns>
+        public CreateGovernanceNamespacesResponse CreateGovernanceNamespacesSync(CreateGovernanceNamespacesRequest req)
+        {
+            return InternalRequestAsync<CreateGovernanceNamespacesResponse>(req, "CreateGovernanceNamespaces")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建治理中心服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateGovernanceServicesRequest"/></param>
+        /// <returns><see cref="CreateGovernanceServicesResponse"/></returns>
+        public Task<CreateGovernanceServicesResponse> CreateGovernanceServices(CreateGovernanceServicesRequest req)
+        {
+            return InternalRequestAsync<CreateGovernanceServicesResponse>(req, "CreateGovernanceServices");
+        }
+
+        /// <summary>
+        /// 创建治理中心服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateGovernanceServicesRequest"/></param>
+        /// <returns><see cref="CreateGovernanceServicesResponse"/></returns>
+        public CreateGovernanceServicesResponse CreateGovernanceServicesSync(CreateGovernanceServicesRequest req)
+        {
+            return InternalRequestAsync<CreateGovernanceServicesResponse>(req, "CreateGovernanceServices")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -344,6 +449,27 @@ namespace TencentCloud.Tse.V20201207
         public CreateNativeGatewayServerGroupResponse CreateNativeGatewayServerGroupSync(CreateNativeGatewayServerGroupRequest req)
         {
             return InternalRequestAsync<CreateNativeGatewayServerGroupResponse>(req, "CreateNativeGatewayServerGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建或更新配置文件并发布配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrUpdateConfigFileAndReleaseRequest"/></param>
+        /// <returns><see cref="CreateOrUpdateConfigFileAndReleaseResponse"/></returns>
+        public Task<CreateOrUpdateConfigFileAndReleaseResponse> CreateOrUpdateConfigFileAndRelease(CreateOrUpdateConfigFileAndReleaseRequest req)
+        {
+            return InternalRequestAsync<CreateOrUpdateConfigFileAndReleaseResponse>(req, "CreateOrUpdateConfigFileAndRelease");
+        }
+
+        /// <summary>
+        /// 创建或更新配置文件并发布配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrUpdateConfigFileAndReleaseRequest"/></param>
+        /// <returns><see cref="CreateOrUpdateConfigFileAndReleaseResponse"/></returns>
+        public CreateOrUpdateConfigFileAndReleaseResponse CreateOrUpdateConfigFileAndReleaseSync(CreateOrUpdateConfigFileAndReleaseRequest req)
+        {
+            return InternalRequestAsync<CreateOrUpdateConfigFileAndReleaseResponse>(req, "CreateOrUpdateConfigFileAndRelease")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -558,6 +684,69 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 删除配置文件分组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConfigFileGroupRequest"/></param>
+        /// <returns><see cref="DeleteConfigFileGroupResponse"/></returns>
+        public Task<DeleteConfigFileGroupResponse> DeleteConfigFileGroup(DeleteConfigFileGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteConfigFileGroupResponse>(req, "DeleteConfigFileGroup");
+        }
+
+        /// <summary>
+        /// 删除配置文件分组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConfigFileGroupRequest"/></param>
+        /// <returns><see cref="DeleteConfigFileGroupResponse"/></returns>
+        public DeleteConfigFileGroupResponse DeleteConfigFileGroupSync(DeleteConfigFileGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteConfigFileGroupResponse>(req, "DeleteConfigFileGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除配置发布
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConfigFileReleasesRequest"/></param>
+        /// <returns><see cref="DeleteConfigFileReleasesResponse"/></returns>
+        public Task<DeleteConfigFileReleasesResponse> DeleteConfigFileReleases(DeleteConfigFileReleasesRequest req)
+        {
+            return InternalRequestAsync<DeleteConfigFileReleasesResponse>(req, "DeleteConfigFileReleases");
+        }
+
+        /// <summary>
+        /// 删除配置发布
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConfigFileReleasesRequest"/></param>
+        /// <returns><see cref="DeleteConfigFileReleasesResponse"/></returns>
+        public DeleteConfigFileReleasesResponse DeleteConfigFileReleasesSync(DeleteConfigFileReleasesRequest req)
+        {
+            return InternalRequestAsync<DeleteConfigFileReleasesResponse>(req, "DeleteConfigFileReleases")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除配置文件
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConfigFilesRequest"/></param>
+        /// <returns><see cref="DeleteConfigFilesResponse"/></returns>
+        public Task<DeleteConfigFilesResponse> DeleteConfigFiles(DeleteConfigFilesRequest req)
+        {
+            return InternalRequestAsync<DeleteConfigFilesResponse>(req, "DeleteConfigFiles");
+        }
+
+        /// <summary>
+        /// 删除配置文件
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConfigFilesRequest"/></param>
+        /// <returns><see cref="DeleteConfigFilesResponse"/></returns>
+        public DeleteConfigFilesResponse DeleteConfigFilesSync(DeleteConfigFilesRequest req)
+        {
+            return InternalRequestAsync<DeleteConfigFilesResponse>(req, "DeleteConfigFiles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除引擎实例
         /// </summary>
         /// <param name="req"><see cref="DeleteEngineRequest"/></param>
@@ -579,7 +768,28 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 删除治理中心服务实例
+        /// 删除治理中心服务别名
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGovernanceAliasesRequest"/></param>
+        /// <returns><see cref="DeleteGovernanceAliasesResponse"/></returns>
+        public Task<DeleteGovernanceAliasesResponse> DeleteGovernanceAliases(DeleteGovernanceAliasesRequest req)
+        {
+            return InternalRequestAsync<DeleteGovernanceAliasesResponse>(req, "DeleteGovernanceAliases");
+        }
+
+        /// <summary>
+        /// 删除治理中心服务别名
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGovernanceAliasesRequest"/></param>
+        /// <returns><see cref="DeleteGovernanceAliasesResponse"/></returns>
+        public DeleteGovernanceAliasesResponse DeleteGovernanceAliasesSync(DeleteGovernanceAliasesRequest req)
+        {
+            return InternalRequestAsync<DeleteGovernanceAliasesResponse>(req, "DeleteGovernanceAliases")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除服务实例
         /// </summary>
         /// <param name="req"><see cref="DeleteGovernanceInstancesRequest"/></param>
         /// <returns><see cref="DeleteGovernanceInstancesResponse"/></returns>
@@ -589,13 +799,76 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 删除治理中心服务实例
+        /// 删除服务实例
         /// </summary>
         /// <param name="req"><see cref="DeleteGovernanceInstancesRequest"/></param>
         /// <returns><see cref="DeleteGovernanceInstancesResponse"/></returns>
         public DeleteGovernanceInstancesResponse DeleteGovernanceInstancesSync(DeleteGovernanceInstancesRequest req)
         {
             return InternalRequestAsync<DeleteGovernanceInstancesResponse>(req, "DeleteGovernanceInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除治理中心服务实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGovernanceInstancesByHostRequest"/></param>
+        /// <returns><see cref="DeleteGovernanceInstancesByHostResponse"/></returns>
+        public Task<DeleteGovernanceInstancesByHostResponse> DeleteGovernanceInstancesByHost(DeleteGovernanceInstancesByHostRequest req)
+        {
+            return InternalRequestAsync<DeleteGovernanceInstancesByHostResponse>(req, "DeleteGovernanceInstancesByHost");
+        }
+
+        /// <summary>
+        /// 删除治理中心服务实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGovernanceInstancesByHostRequest"/></param>
+        /// <returns><see cref="DeleteGovernanceInstancesByHostResponse"/></returns>
+        public DeleteGovernanceInstancesByHostResponse DeleteGovernanceInstancesByHostSync(DeleteGovernanceInstancesByHostRequest req)
+        {
+            return InternalRequestAsync<DeleteGovernanceInstancesByHostResponse>(req, "DeleteGovernanceInstancesByHost")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除治理中心命名空间
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGovernanceNamespacesRequest"/></param>
+        /// <returns><see cref="DeleteGovernanceNamespacesResponse"/></returns>
+        public Task<DeleteGovernanceNamespacesResponse> DeleteGovernanceNamespaces(DeleteGovernanceNamespacesRequest req)
+        {
+            return InternalRequestAsync<DeleteGovernanceNamespacesResponse>(req, "DeleteGovernanceNamespaces");
+        }
+
+        /// <summary>
+        /// 删除治理中心命名空间
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGovernanceNamespacesRequest"/></param>
+        /// <returns><see cref="DeleteGovernanceNamespacesResponse"/></returns>
+        public DeleteGovernanceNamespacesResponse DeleteGovernanceNamespacesSync(DeleteGovernanceNamespacesRequest req)
+        {
+            return InternalRequestAsync<DeleteGovernanceNamespacesResponse>(req, "DeleteGovernanceNamespaces")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除治理中心服务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGovernanceServicesRequest"/></param>
+        /// <returns><see cref="DeleteGovernanceServicesResponse"/></returns>
+        public Task<DeleteGovernanceServicesResponse> DeleteGovernanceServices(DeleteGovernanceServicesRequest req)
+        {
+            return InternalRequestAsync<DeleteGovernanceServicesResponse>(req, "DeleteGovernanceServices");
+        }
+
+        /// <summary>
+        /// 删除治理中心服务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGovernanceServicesRequest"/></param>
+        /// <returns><see cref="DeleteGovernanceServicesResponse"/></returns>
+        public DeleteGovernanceServicesResponse DeleteGovernanceServicesSync(DeleteGovernanceServicesRequest req)
+        {
+            return InternalRequestAsync<DeleteGovernanceServicesResponse>(req, "DeleteGovernanceServices")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -638,6 +911,27 @@ namespace TencentCloud.Tse.V20201207
         public DeleteWafDomainsResponse DeleteWafDomainsSync(DeleteWafDomainsRequest req)
         {
             return InternalRequestAsync<DeleteWafDomainsResponse>(req, "DeleteWafDomains")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取全量配置文件模板列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllConfigFileTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeAllConfigFileTemplatesResponse"/></returns>
+        public Task<DescribeAllConfigFileTemplatesResponse> DescribeAllConfigFileTemplates(DescribeAllConfigFileTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeAllConfigFileTemplatesResponse>(req, "DescribeAllConfigFileTemplates");
+        }
+
+        /// <summary>
+        /// 获取全量配置文件模板列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllConfigFileTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeAllConfigFileTemplatesResponse"/></returns>
+        public DescribeAllConfigFileTemplatesResponse DescribeAllConfigFileTemplatesSync(DescribeAllConfigFileTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeAllConfigFileTemplatesResponse>(req, "DescribeAllConfigFileTemplates")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -957,7 +1251,196 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 查询治理中心服务实例
+        /// 根据命名空间、组、名字查找配置文件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigFileRequest"/></param>
+        /// <returns><see cref="DescribeConfigFileResponse"/></returns>
+        public Task<DescribeConfigFileResponse> DescribeConfigFile(DescribeConfigFileRequest req)
+        {
+            return InternalRequestAsync<DescribeConfigFileResponse>(req, "DescribeConfigFile");
+        }
+
+        /// <summary>
+        /// 根据命名空间、组、名字查找配置文件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigFileRequest"/></param>
+        /// <returns><see cref="DescribeConfigFileResponse"/></returns>
+        public DescribeConfigFileResponse DescribeConfigFileSync(DescribeConfigFileRequest req)
+        {
+            return InternalRequestAsync<DescribeConfigFileResponse>(req, "DescribeConfigFile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据条件分页查询配置文件组
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigFileGroupsRequest"/></param>
+        /// <returns><see cref="DescribeConfigFileGroupsResponse"/></returns>
+        public Task<DescribeConfigFileGroupsResponse> DescribeConfigFileGroups(DescribeConfigFileGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeConfigFileGroupsResponse>(req, "DescribeConfigFileGroups");
+        }
+
+        /// <summary>
+        /// 根据条件分页查询配置文件组
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigFileGroupsRequest"/></param>
+        /// <returns><see cref="DescribeConfigFileGroupsResponse"/></returns>
+        public DescribeConfigFileGroupsResponse DescribeConfigFileGroupsSync(DescribeConfigFileGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeConfigFileGroupsResponse>(req, "DescribeConfigFileGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取配置文件发布
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigFileReleaseRequest"/></param>
+        /// <returns><see cref="DescribeConfigFileReleaseResponse"/></returns>
+        public Task<DescribeConfigFileReleaseResponse> DescribeConfigFileRelease(DescribeConfigFileReleaseRequest req)
+        {
+            return InternalRequestAsync<DescribeConfigFileReleaseResponse>(req, "DescribeConfigFileRelease");
+        }
+
+        /// <summary>
+        /// 获取配置文件发布
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigFileReleaseRequest"/></param>
+        /// <returns><see cref="DescribeConfigFileReleaseResponse"/></returns>
+        public DescribeConfigFileReleaseResponse DescribeConfigFileReleaseSync(DescribeConfigFileReleaseRequest req)
+        {
+            return InternalRequestAsync<DescribeConfigFileReleaseResponse>(req, "DescribeConfigFileRelease")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取配置文件发布历史列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigFileReleaseHistoriesRequest"/></param>
+        /// <returns><see cref="DescribeConfigFileReleaseHistoriesResponse"/></returns>
+        public Task<DescribeConfigFileReleaseHistoriesResponse> DescribeConfigFileReleaseHistories(DescribeConfigFileReleaseHistoriesRequest req)
+        {
+            return InternalRequestAsync<DescribeConfigFileReleaseHistoriesResponse>(req, "DescribeConfigFileReleaseHistories");
+        }
+
+        /// <summary>
+        /// 获取配置文件发布历史列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigFileReleaseHistoriesRequest"/></param>
+        /// <returns><see cref="DescribeConfigFileReleaseHistoriesResponse"/></returns>
+        public DescribeConfigFileReleaseHistoriesResponse DescribeConfigFileReleaseHistoriesSync(DescribeConfigFileReleaseHistoriesRequest req)
+        {
+            return InternalRequestAsync<DescribeConfigFileReleaseHistoriesResponse>(req, "DescribeConfigFileReleaseHistories")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询某个配置所有版本信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigFileReleaseVersionsRequest"/></param>
+        /// <returns><see cref="DescribeConfigFileReleaseVersionsResponse"/></returns>
+        public Task<DescribeConfigFileReleaseVersionsResponse> DescribeConfigFileReleaseVersions(DescribeConfigFileReleaseVersionsRequest req)
+        {
+            return InternalRequestAsync<DescribeConfigFileReleaseVersionsResponse>(req, "DescribeConfigFileReleaseVersions");
+        }
+
+        /// <summary>
+        /// 查询某个配置所有版本信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigFileReleaseVersionsRequest"/></param>
+        /// <returns><see cref="DescribeConfigFileReleaseVersionsResponse"/></returns>
+        public DescribeConfigFileReleaseVersionsResponse DescribeConfigFileReleaseVersionsSync(DescribeConfigFileReleaseVersionsRequest req)
+        {
+            return InternalRequestAsync<DescribeConfigFileReleaseVersionsResponse>(req, "DescribeConfigFileReleaseVersions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询配置版本列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigFileReleasesRequest"/></param>
+        /// <returns><see cref="DescribeConfigFileReleasesResponse"/></returns>
+        public Task<DescribeConfigFileReleasesResponse> DescribeConfigFileReleases(DescribeConfigFileReleasesRequest req)
+        {
+            return InternalRequestAsync<DescribeConfigFileReleasesResponse>(req, "DescribeConfigFileReleases");
+        }
+
+        /// <summary>
+        /// 查询配置版本列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigFileReleasesRequest"/></param>
+        /// <returns><see cref="DescribeConfigFileReleasesResponse"/></returns>
+        public DescribeConfigFileReleasesResponse DescribeConfigFileReleasesSync(DescribeConfigFileReleasesRequest req)
+        {
+            return InternalRequestAsync<DescribeConfigFileReleasesResponse>(req, "DescribeConfigFileReleases")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据命名空间、组名、名称、标签查询配置文件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigFilesRequest"/></param>
+        /// <returns><see cref="DescribeConfigFilesResponse"/></returns>
+        public Task<DescribeConfigFilesResponse> DescribeConfigFiles(DescribeConfigFilesRequest req)
+        {
+            return InternalRequestAsync<DescribeConfigFilesResponse>(req, "DescribeConfigFiles");
+        }
+
+        /// <summary>
+        /// 根据命名空间、组名、名称、标签查询配置文件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigFilesRequest"/></param>
+        /// <returns><see cref="DescribeConfigFilesResponse"/></returns>
+        public DescribeConfigFilesResponse DescribeConfigFilesSync(DescribeConfigFilesRequest req)
+        {
+            return InternalRequestAsync<DescribeConfigFilesResponse>(req, "DescribeConfigFiles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据group查询配置文件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigFilesByGroupRequest"/></param>
+        /// <returns><see cref="DescribeConfigFilesByGroupResponse"/></returns>
+        public Task<DescribeConfigFilesByGroupResponse> DescribeConfigFilesByGroup(DescribeConfigFilesByGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeConfigFilesByGroupResponse>(req, "DescribeConfigFilesByGroup");
+        }
+
+        /// <summary>
+        /// 根据group查询配置文件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigFilesByGroupRequest"/></param>
+        /// <returns><see cref="DescribeConfigFilesByGroupResponse"/></returns>
+        public DescribeConfigFilesByGroupResponse DescribeConfigFilesByGroupSync(DescribeConfigFilesByGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeConfigFilesByGroupResponse>(req, "DescribeConfigFilesByGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询治理中心服务别名列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGovernanceAliasesRequest"/></param>
+        /// <returns><see cref="DescribeGovernanceAliasesResponse"/></returns>
+        public Task<DescribeGovernanceAliasesResponse> DescribeGovernanceAliases(DescribeGovernanceAliasesRequest req)
+        {
+            return InternalRequestAsync<DescribeGovernanceAliasesResponse>(req, "DescribeGovernanceAliases");
+        }
+
+        /// <summary>
+        /// 查询治理中心服务别名列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGovernanceAliasesRequest"/></param>
+        /// <returns><see cref="DescribeGovernanceAliasesResponse"/></returns>
+        public DescribeGovernanceAliasesResponse DescribeGovernanceAliasesSync(DescribeGovernanceAliasesRequest req)
+        {
+            return InternalRequestAsync<DescribeGovernanceAliasesResponse>(req, "DescribeGovernanceAliases")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询服务实例
         /// </summary>
         /// <param name="req"><see cref="DescribeGovernanceInstancesRequest"/></param>
         /// <returns><see cref="DescribeGovernanceInstancesResponse"/></returns>
@@ -967,13 +1450,97 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 查询治理中心服务实例
+        /// 查询服务实例
         /// </summary>
         /// <param name="req"><see cref="DescribeGovernanceInstancesRequest"/></param>
         /// <returns><see cref="DescribeGovernanceInstancesResponse"/></returns>
         public DescribeGovernanceInstancesResponse DescribeGovernanceInstancesSync(DescribeGovernanceInstancesRequest req)
         {
             return InternalRequestAsync<DescribeGovernanceInstancesResponse>(req, "DescribeGovernanceInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询服务治理中心命名空间列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGovernanceNamespacesRequest"/></param>
+        /// <returns><see cref="DescribeGovernanceNamespacesResponse"/></returns>
+        public Task<DescribeGovernanceNamespacesResponse> DescribeGovernanceNamespaces(DescribeGovernanceNamespacesRequest req)
+        {
+            return InternalRequestAsync<DescribeGovernanceNamespacesResponse>(req, "DescribeGovernanceNamespaces");
+        }
+
+        /// <summary>
+        /// 查询服务治理中心命名空间列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGovernanceNamespacesRequest"/></param>
+        /// <returns><see cref="DescribeGovernanceNamespacesResponse"/></returns>
+        public DescribeGovernanceNamespacesResponse DescribeGovernanceNamespacesSync(DescribeGovernanceNamespacesRequest req)
+        {
+            return InternalRequestAsync<DescribeGovernanceNamespacesResponse>(req, "DescribeGovernanceNamespaces")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询服务下契约版本列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGovernanceServiceContractVersionsRequest"/></param>
+        /// <returns><see cref="DescribeGovernanceServiceContractVersionsResponse"/></returns>
+        public Task<DescribeGovernanceServiceContractVersionsResponse> DescribeGovernanceServiceContractVersions(DescribeGovernanceServiceContractVersionsRequest req)
+        {
+            return InternalRequestAsync<DescribeGovernanceServiceContractVersionsResponse>(req, "DescribeGovernanceServiceContractVersions");
+        }
+
+        /// <summary>
+        /// 查询服务下契约版本列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGovernanceServiceContractVersionsRequest"/></param>
+        /// <returns><see cref="DescribeGovernanceServiceContractVersionsResponse"/></returns>
+        public DescribeGovernanceServiceContractVersionsResponse DescribeGovernanceServiceContractVersionsSync(DescribeGovernanceServiceContractVersionsRequest req)
+        {
+            return InternalRequestAsync<DescribeGovernanceServiceContractVersionsResponse>(req, "DescribeGovernanceServiceContractVersions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询服务契约定义列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGovernanceServiceContractsRequest"/></param>
+        /// <returns><see cref="DescribeGovernanceServiceContractsResponse"/></returns>
+        public Task<DescribeGovernanceServiceContractsResponse> DescribeGovernanceServiceContracts(DescribeGovernanceServiceContractsRequest req)
+        {
+            return InternalRequestAsync<DescribeGovernanceServiceContractsResponse>(req, "DescribeGovernanceServiceContracts");
+        }
+
+        /// <summary>
+        /// 查询服务契约定义列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGovernanceServiceContractsRequest"/></param>
+        /// <returns><see cref="DescribeGovernanceServiceContractsResponse"/></returns>
+        public DescribeGovernanceServiceContractsResponse DescribeGovernanceServiceContractsSync(DescribeGovernanceServiceContractsRequest req)
+        {
+            return InternalRequestAsync<DescribeGovernanceServiceContractsResponse>(req, "DescribeGovernanceServiceContracts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询治理中心服务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGovernanceServicesRequest"/></param>
+        /// <returns><see cref="DescribeGovernanceServicesResponse"/></returns>
+        public Task<DescribeGovernanceServicesResponse> DescribeGovernanceServices(DescribeGovernanceServicesRequest req)
+        {
+            return InternalRequestAsync<DescribeGovernanceServicesResponse>(req, "DescribeGovernanceServices");
+        }
+
+        /// <summary>
+        /// 查询治理中心服务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGovernanceServicesRequest"/></param>
+        /// <returns><see cref="DescribeGovernanceServicesResponse"/></returns>
+        public DescribeGovernanceServicesResponse DescribeGovernanceServicesSync(DescribeGovernanceServicesRequest req)
+        {
+            return InternalRequestAsync<DescribeGovernanceServicesResponse>(req, "DescribeGovernanceServices")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1398,6 +1965,48 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 批量修改配置文件组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConfigFileGroupRequest"/></param>
+        /// <returns><see cref="ModifyConfigFileGroupResponse"/></returns>
+        public Task<ModifyConfigFileGroupResponse> ModifyConfigFileGroup(ModifyConfigFileGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyConfigFileGroupResponse>(req, "ModifyConfigFileGroup");
+        }
+
+        /// <summary>
+        /// 批量修改配置文件组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConfigFileGroupRequest"/></param>
+        /// <returns><see cref="ModifyConfigFileGroupResponse"/></returns>
+        public ModifyConfigFileGroupResponse ModifyConfigFileGroupSync(ModifyConfigFileGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyConfigFileGroupResponse>(req, "ModifyConfigFileGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改配置文件
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConfigFilesRequest"/></param>
+        /// <returns><see cref="ModifyConfigFilesResponse"/></returns>
+        public Task<ModifyConfigFilesResponse> ModifyConfigFiles(ModifyConfigFilesRequest req)
+        {
+            return InternalRequestAsync<ModifyConfigFilesResponse>(req, "ModifyConfigFiles");
+        }
+
+        /// <summary>
+        /// 修改配置文件
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConfigFilesRequest"/></param>
+        /// <returns><see cref="ModifyConfigFilesResponse"/></returns>
+        public ModifyConfigFilesResponse ModifyConfigFilesSync(ModifyConfigFilesRequest req)
+        {
+            return InternalRequestAsync<ModifyConfigFilesResponse>(req, "ModifyConfigFiles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改网关实例Konga网络配置
         /// </summary>
         /// <param name="req"><see cref="ModifyConsoleNetworkRequest"/></param>
@@ -1419,6 +2028,27 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 修改治理中心服务别名
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGovernanceAliasRequest"/></param>
+        /// <returns><see cref="ModifyGovernanceAliasResponse"/></returns>
+        public Task<ModifyGovernanceAliasResponse> ModifyGovernanceAlias(ModifyGovernanceAliasRequest req)
+        {
+            return InternalRequestAsync<ModifyGovernanceAliasResponse>(req, "ModifyGovernanceAlias");
+        }
+
+        /// <summary>
+        /// 修改治理中心服务别名
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGovernanceAliasRequest"/></param>
+        /// <returns><see cref="ModifyGovernanceAliasResponse"/></returns>
+        public ModifyGovernanceAliasResponse ModifyGovernanceAliasSync(ModifyGovernanceAliasRequest req)
+        {
+            return InternalRequestAsync<ModifyGovernanceAliasResponse>(req, "ModifyGovernanceAlias")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改治理中心服务实例
         /// </summary>
         /// <param name="req"><see cref="ModifyGovernanceInstancesRequest"/></param>
@@ -1436,6 +2066,48 @@ namespace TencentCloud.Tse.V20201207
         public ModifyGovernanceInstancesResponse ModifyGovernanceInstancesSync(ModifyGovernanceInstancesRequest req)
         {
             return InternalRequestAsync<ModifyGovernanceInstancesResponse>(req, "ModifyGovernanceInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改治理中心命名空间
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGovernanceNamespacesRequest"/></param>
+        /// <returns><see cref="ModifyGovernanceNamespacesResponse"/></returns>
+        public Task<ModifyGovernanceNamespacesResponse> ModifyGovernanceNamespaces(ModifyGovernanceNamespacesRequest req)
+        {
+            return InternalRequestAsync<ModifyGovernanceNamespacesResponse>(req, "ModifyGovernanceNamespaces");
+        }
+
+        /// <summary>
+        /// 修改治理中心命名空间
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGovernanceNamespacesRequest"/></param>
+        /// <returns><see cref="ModifyGovernanceNamespacesResponse"/></returns>
+        public ModifyGovernanceNamespacesResponse ModifyGovernanceNamespacesSync(ModifyGovernanceNamespacesRequest req)
+        {
+            return InternalRequestAsync<ModifyGovernanceNamespacesResponse>(req, "ModifyGovernanceNamespaces")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改治理中心服务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGovernanceServicesRequest"/></param>
+        /// <returns><see cref="ModifyGovernanceServicesResponse"/></returns>
+        public Task<ModifyGovernanceServicesResponse> ModifyGovernanceServices(ModifyGovernanceServicesRequest req)
+        {
+            return InternalRequestAsync<ModifyGovernanceServicesResponse>(req, "ModifyGovernanceServices");
+        }
+
+        /// <summary>
+        /// 修改治理中心服务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGovernanceServicesRequest"/></param>
+        /// <returns><see cref="ModifyGovernanceServicesResponse"/></returns>
+        public ModifyGovernanceServicesResponse ModifyGovernanceServicesSync(ModifyGovernanceServicesRequest req)
+        {
+            return InternalRequestAsync<ModifyGovernanceServicesResponse>(req, "ModifyGovernanceServices")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1541,6 +2213,48 @@ namespace TencentCloud.Tse.V20201207
         public OpenWafProtectionResponse OpenWafProtectionSync(OpenWafProtectionRequest req)
         {
             return InternalRequestAsync<OpenWafProtectionResponse>(req, "OpenWafProtection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 发布配置文件
+        /// </summary>
+        /// <param name="req"><see cref="PublishConfigFilesRequest"/></param>
+        /// <returns><see cref="PublishConfigFilesResponse"/></returns>
+        public Task<PublishConfigFilesResponse> PublishConfigFiles(PublishConfigFilesRequest req)
+        {
+            return InternalRequestAsync<PublishConfigFilesResponse>(req, "PublishConfigFiles");
+        }
+
+        /// <summary>
+        /// 发布配置文件
+        /// </summary>
+        /// <param name="req"><see cref="PublishConfigFilesRequest"/></param>
+        /// <returns><see cref="PublishConfigFilesResponse"/></returns>
+        public PublishConfigFilesResponse PublishConfigFilesSync(PublishConfigFilesRequest req)
+        {
+            return InternalRequestAsync<PublishConfigFilesResponse>(req, "PublishConfigFiles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 回滚配置发布
+        /// </summary>
+        /// <param name="req"><see cref="RollbackConfigFileReleasesRequest"/></param>
+        /// <returns><see cref="RollbackConfigFileReleasesResponse"/></returns>
+        public Task<RollbackConfigFileReleasesResponse> RollbackConfigFileReleases(RollbackConfigFileReleasesRequest req)
+        {
+            return InternalRequestAsync<RollbackConfigFileReleasesResponse>(req, "RollbackConfigFileReleases");
+        }
+
+        /// <summary>
+        /// 回滚配置发布
+        /// </summary>
+        /// <param name="req"><see cref="RollbackConfigFileReleasesRequest"/></param>
+        /// <returns><see cref="RollbackConfigFileReleasesResponse"/></returns>
+        public RollbackConfigFileReleasesResponse RollbackConfigFileReleasesSync(RollbackConfigFileReleasesRequest req)
+        {
+            return InternalRequestAsync<RollbackConfigFileReleasesResponse>(req, "RollbackConfigFileReleases")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
