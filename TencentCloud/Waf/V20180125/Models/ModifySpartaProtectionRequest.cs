@@ -37,6 +37,12 @@ namespace TencentCloud.Waf.V20180125.Models
         public string DomainId{ get; set; }
 
         /// <summary>
+        /// 必填项。域名所属实例id
+        /// </summary>
+        [JsonProperty("InstanceID")]
+        public string InstanceID{ get; set; }
+
+        /// <summary>
         /// 必填项。证书类型。
         /// 0：仅配置HTTP监听端口，没有证书
         /// 1：证书来源为自有证书
@@ -167,12 +173,6 @@ namespace TencentCloud.Waf.V20180125.Models
         public string IsKeepAlive{ get; set; }
 
         /// <summary>
-        /// 必填项。域名所属实例id
-        /// </summary>
-        [JsonProperty("InstanceID")]
-        public string InstanceID{ get; set; }
-
-        /// <summary>
         /// 必填项，待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
         /// </summary>
         [JsonProperty("Anycast")]
@@ -268,6 +268,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("UpstreamHost")]
         public string UpstreamHost{ get; set; }
 
+        /// <summary>
+        /// 是否开启缓存 0-关闭 1-开启
+        /// </summary>
+        [JsonProperty("ProxyBuffer")]
+        public long? ProxyBuffer{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -276,6 +282,7 @@ namespace TencentCloud.Waf.V20180125.Models
         {
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "DomainId", this.DomainId);
+            this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
             this.SetParamSimple(map, prefix + "CertType", this.CertType);
             this.SetParamSimple(map, prefix + "Cert", this.Cert);
             this.SetParamSimple(map, prefix + "PrivateKey", this.PrivateKey);
@@ -294,7 +301,6 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Edition", this.Edition);
             this.SetParamArrayObj(map, prefix + "Ports.", this.Ports);
             this.SetParamSimple(map, prefix + "IsKeepAlive", this.IsKeepAlive);
-            this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
             this.SetParamSimple(map, prefix + "Anycast", this.Anycast);
             this.SetParamArraySimple(map, prefix + "Weights.", this.Weights);
             this.SetParamSimple(map, prefix + "ActiveCheck", this.ActiveCheck);
@@ -309,6 +315,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "XFFReset", this.XFFReset);
             this.SetParamSimple(map, prefix + "Note", this.Note);
             this.SetParamSimple(map, prefix + "UpstreamHost", this.UpstreamHost);
+            this.SetParamSimple(map, prefix + "ProxyBuffer", this.ProxyBuffer);
         }
     }
 }

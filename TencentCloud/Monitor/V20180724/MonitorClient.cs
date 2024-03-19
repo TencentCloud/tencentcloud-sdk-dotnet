@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.967";
+       private const string sdkVersion = "SDK_NET_3.0.968";
 
         /// <summary>
         /// Client constructor.
@@ -1210,6 +1210,27 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 获取告警短信配额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmSmsQuotaRequest"/></param>
+        /// <returns><see cref="DescribeAlarmSmsQuotaResponse"/></returns>
+        public Task<DescribeAlarmSmsQuotaResponse> DescribeAlarmSmsQuota(DescribeAlarmSmsQuotaRequest req)
+        {
+            return InternalRequestAsync<DescribeAlarmSmsQuotaResponse>(req, "DescribeAlarmSmsQuota");
+        }
+
+        /// <summary>
+        /// 获取告警短信配额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmSmsQuotaRequest"/></param>
+        /// <returns><see cref="DescribeAlarmSmsQuotaResponse"/></returns>
+        public DescribeAlarmSmsQuotaResponse DescribeAlarmSmsQuotaSync(DescribeAlarmSmsQuotaRequest req)
+        {
+            return InternalRequestAsync<DescribeAlarmSmsQuotaResponse>(req, "DescribeAlarmSmsQuota")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Prometheus 报警规则查询接口
         /// </summary>
         /// <param name="req"><see cref="DescribeAlertRulesRequest"/></param>
@@ -1567,6 +1588,27 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 获取资源消耗页概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMonitorResourceInfoRequest"/></param>
+        /// <returns><see cref="DescribeMonitorResourceInfoResponse"/></returns>
+        public Task<DescribeMonitorResourceInfoResponse> DescribeMonitorResourceInfo(DescribeMonitorResourceInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeMonitorResourceInfoResponse>(req, "DescribeMonitorResourceInfo");
+        }
+
+        /// <summary>
+        /// 获取资源消耗页概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMonitorResourceInfoRequest"/></param>
+        /// <returns><see cref="DescribeMonitorResourceInfoResponse"/></returns>
+        public DescribeMonitorResourceInfoResponse DescribeMonitorResourceInfoSync(DescribeMonitorResourceInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeMonitorResourceInfoResponse>(req, "DescribeMonitorResourceInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 腾讯云可观测平台支持多种类型的监控，此接口列出支持的所有类型
         /// </summary>
         /// <param name="req"><see cref="DescribeMonitorTypesRequest"/></param>
@@ -1584,6 +1626,27 @@ namespace TencentCloud.Monitor.V20180724
         public DescribeMonitorTypesResponse DescribeMonitorTypesSync(DescribeMonitorTypesRequest req)
         {
             return InternalRequestAsync<DescribeMonitorTypesResponse>(req, "DescribeMonitorTypes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询周期内电话流水总数
+        /// </summary>
+        /// <param name="req"><see cref="DescribePhoneAlarmFlowTotalCountRequest"/></param>
+        /// <returns><see cref="DescribePhoneAlarmFlowTotalCountResponse"/></returns>
+        public Task<DescribePhoneAlarmFlowTotalCountResponse> DescribePhoneAlarmFlowTotalCount(DescribePhoneAlarmFlowTotalCountRequest req)
+        {
+            return InternalRequestAsync<DescribePhoneAlarmFlowTotalCountResponse>(req, "DescribePhoneAlarmFlowTotalCount");
+        }
+
+        /// <summary>
+        /// 查询周期内电话流水总数
+        /// </summary>
+        /// <param name="req"><see cref="DescribePhoneAlarmFlowTotalCountRequest"/></param>
+        /// <returns><see cref="DescribePhoneAlarmFlowTotalCountResponse"/></returns>
+        public DescribePhoneAlarmFlowTotalCountResponse DescribePhoneAlarmFlowTotalCountSync(DescribePhoneAlarmFlowTotalCountRequest req)
+        {
+            return InternalRequestAsync<DescribePhoneAlarmFlowTotalCountResponse>(req, "DescribePhoneAlarmFlowTotalCount")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

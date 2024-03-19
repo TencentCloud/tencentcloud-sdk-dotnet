@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.967";
+       private const string sdkVersion = "SDK_NET_3.0.968";
 
         /// <summary>
         /// Client constructor.
@@ -1848,6 +1848,27 @@ namespace TencentCloud.Ess.V20201111
         public DescribeBillUsageDetailResponse DescribeBillUsageDetailSync(DescribeBillUsageDetailRequest req)
         {
             return InternalRequestAsync<DescribeBillUsageDetailResponse>(req, "DescribeBillUsageDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通过[获取批量撤销签署流程腾讯电子签小程序链接](https://qian.tencent.com/developers/companyApis/operateFlows/CreateBatchCancelFlowUrl)发起批量撤销任务后，可通过此接口查询批量撤销任务的结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCancelFlowsTaskRequest"/></param>
+        /// <returns><see cref="DescribeCancelFlowsTaskResponse"/></returns>
+        public Task<DescribeCancelFlowsTaskResponse> DescribeCancelFlowsTask(DescribeCancelFlowsTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeCancelFlowsTaskResponse>(req, "DescribeCancelFlowsTask");
+        }
+
+        /// <summary>
+        /// 通过[获取批量撤销签署流程腾讯电子签小程序链接](https://qian.tencent.com/developers/companyApis/operateFlows/CreateBatchCancelFlowUrl)发起批量撤销任务后，可通过此接口查询批量撤销任务的结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCancelFlowsTaskRequest"/></param>
+        /// <returns><see cref="DescribeCancelFlowsTaskResponse"/></returns>
+        public DescribeCancelFlowsTaskResponse DescribeCancelFlowsTaskSync(DescribeCancelFlowsTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeCancelFlowsTaskResponse>(req, "DescribeCancelFlowsTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -75,6 +75,20 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("ValidStatus")]
         public long? ValidStatus{ get; set; }
 
+        /// <summary>
+        /// 55000001
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleId")]
+        public ulong? RuleId{ get; set; }
+
+        /// <summary>
+        /// IP列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IpList")]
+        public string[] IpList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +103,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "TsVersion", this.TsVersion);
             this.SetParamSimple(map, prefix + "ValidTs", this.ValidTs);
             this.SetParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
+            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
+            this.SetParamArraySimple(map, prefix + "IpList.", this.IpList);
         }
     }
 }

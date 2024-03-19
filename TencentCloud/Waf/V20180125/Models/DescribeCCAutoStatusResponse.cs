@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 配置状态
+        /// 配置状态，0表示关闭，1表示开启
         /// </summary>
         [JsonProperty("AutoCCSwitch")]
         public long? AutoCCSwitch{ get; set; }

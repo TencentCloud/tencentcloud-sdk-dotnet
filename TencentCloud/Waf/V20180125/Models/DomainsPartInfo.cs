@@ -329,6 +329,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
+        /// <summary>
+        /// 是否开启缓存 0-关闭 1-开启
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProxyBuffer")]
+        public long? ProxyBuffer{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -376,6 +383,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Note", this.Note);
             this.SetParamSimple(map, prefix + "UpstreamHost", this.UpstreamHost);
             this.SetParamSimple(map, prefix + "Level", this.Level);
+            this.SetParamSimple(map, prefix + "ProxyBuffer", this.ProxyBuffer);
         }
     }
 }

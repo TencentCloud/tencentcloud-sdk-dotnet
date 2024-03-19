@@ -93,7 +93,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Sort{ get; set; }
 
         /// <summary>
-        /// ip
+        /// IP
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
@@ -116,6 +116,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("ValidTimeStampMax")]
         public string ValidTimeStampMax{ get; set; }
 
+        /// <summary>
+        /// 规则ID
+        /// </summary>
+        [JsonProperty("RuleId")]
+        public ulong? RuleId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +143,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
             this.SetParamSimple(map, prefix + "ValidTimeStampMin", this.ValidTimeStampMin);
             this.SetParamSimple(map, prefix + "ValidTimeStampMax", this.ValidTimeStampMax);
+            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
         }
     }
 }

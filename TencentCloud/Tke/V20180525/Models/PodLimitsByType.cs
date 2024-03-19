@@ -45,6 +45,13 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("TKEDirectENI")]
         public long? TKEDirectENI{ get; set; }
 
+        /// <summary>
+        /// TKE中继网卡模式可支持的Pod数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TKESubENI")]
+        public long? TKESubENI{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "TKERouteENINonStaticIP", this.TKERouteENINonStaticIP);
             this.SetParamSimple(map, prefix + "TKERouteENIStaticIP", this.TKERouteENIStaticIP);
             this.SetParamSimple(map, prefix + "TKEDirectENI", this.TKEDirectENI);
+            this.SetParamSimple(map, prefix + "TKESubENI", this.TKESubENI);
         }
     }
 }

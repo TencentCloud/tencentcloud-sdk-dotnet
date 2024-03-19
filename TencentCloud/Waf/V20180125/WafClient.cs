@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.967";
+       private const string sdkVersion = "SDK_NET_3.0.968";
 
         /// <summary>
         /// Client constructor.
@@ -822,7 +822,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// Waf 多域名ip黑白名单查询
+        /// Waf 批量防护IP黑白名单查询
         /// </summary>
         /// <param name="req"><see cref="DescribeBatchIpAccessControlRequest"/></param>
         /// <returns><see cref="DescribeBatchIpAccessControlResponse"/></returns>
@@ -832,7 +832,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// Waf 多域名ip黑白名单查询
+        /// Waf 批量防护IP黑白名单查询
         /// </summary>
         /// <param name="req"><see cref="DescribeBatchIpAccessControlRequest"/></param>
         /// <returns><see cref="DescribeBatchIpAccessControlResponse"/></returns>
@@ -843,7 +843,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// Waf 斯巴达版本查询cc自动封堵状态
+        /// 获取SAAS型接入的紧急CC防护状态
         /// </summary>
         /// <param name="req"><see cref="DescribeCCAutoStatusRequest"/></param>
         /// <returns><see cref="DescribeCCAutoStatusResponse"/></returns>
@@ -853,7 +853,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// Waf 斯巴达版本查询cc自动封堵状态
+        /// 获取SAAS型接入的紧急CC防护状态
         /// </summary>
         /// <param name="req"><see cref="DescribeCCAutoStatusRequest"/></param>
         /// <returns><see cref="DescribeCCAutoStatusResponse"/></returns>
@@ -2483,7 +2483,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// waf斯巴达-waf开关
+        /// 获取基础安全防护（WAF开关）状态
         /// </summary>
         /// <param name="req"><see cref="ModifyProtectionStatusRequest"/></param>
         /// <returns><see cref="ModifyProtectionStatusResponse"/></returns>
@@ -2493,7 +2493,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// waf斯巴达-waf开关
+        /// 获取基础安全防护（WAF开关）状态
         /// </summary>
         /// <param name="req"><see cref="ModifyProtectionStatusRequest"/></param>
         /// <returns><see cref="ModifyProtectionStatusResponse"/></returns>
@@ -2777,7 +2777,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// Waf 斯巴达版本更新cc自动封堵状态
+        /// 编辑SAAS型接入的紧急CC防护状态
         /// </summary>
         /// <param name="req"><see cref="UpsertCCAutoStatusRequest"/></param>
         /// <returns><see cref="UpsertCCAutoStatusResponse"/></returns>
@@ -2787,7 +2787,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// Waf 斯巴达版本更新cc自动封堵状态
+        /// 编辑SAAS型接入的紧急CC防护状态
         /// </summary>
         /// <param name="req"><see cref="UpsertCCAutoStatusRequest"/></param>
         /// <returns><see cref="UpsertCCAutoStatusResponse"/></returns>

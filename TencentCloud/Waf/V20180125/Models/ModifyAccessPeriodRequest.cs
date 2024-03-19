@@ -34,6 +34,7 @@ namespace TencentCloud.Waf.V20180125.Models
         /// 日志主题，新版本不需要再传
         /// </summary>
         [JsonProperty("TopicId")]
+        [System.Obsolete]
         public string TopicId{ get; set; }
 
 

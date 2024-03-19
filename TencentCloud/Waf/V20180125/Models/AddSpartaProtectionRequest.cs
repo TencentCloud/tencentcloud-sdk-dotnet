@@ -75,6 +75,31 @@ namespace TencentCloud.Waf.V20180125.Models
         public string LoadBalance{ get; set; }
 
         /// <summary>
+        /// 服务端口列表配置。
+        /// NginxServerId：新增域名时填'0'
+        /// Port：监听端口号
+        /// Protocol：端口协议
+        /// UpstreamPort：与Port相同
+        /// UpstreamProtocol：与Protocol相同
+        /// </summary>
+        [JsonProperty("Ports")]
+        public PortItem[] Ports{ get; set; }
+
+        /// <summary>
+        /// 必填项，是否开启长连接。
+        /// 0： 短连接
+        /// 1： 长连接
+        /// </summary>
+        [JsonProperty("IsKeepAlive")]
+        public string IsKeepAlive{ get; set; }
+
+        /// <summary>
+        /// 必填项，域名所属实例id
+        /// </summary>
+        [JsonProperty("InstanceID")]
+        public string InstanceID{ get; set; }
+
+        /// <summary>
         /// CertType为1时，需要填充此参数，表示自有证书的证书链
         /// </summary>
         [JsonProperty("Cert")]
@@ -159,17 +184,6 @@ namespace TencentCloud.Waf.V20180125.Models
         public long? IsHttp2{ get; set; }
 
         /// <summary>
-        /// 服务端口列表配置。
-        /// NginxServerId：新增域名时填'0'
-        /// Port：监听端口号
-        /// Protocol：端口协议
-        /// UpstreamPort：与Port相同
-        /// UpstreamProtocol：与Protocol相同
-        /// </summary>
-        [JsonProperty("Ports")]
-        public PortItem[] Ports{ get; set; }
-
-        /// <summary>
         /// 待废弃，可不填。WAF实例类型。
         /// sparta-waf：SAAS型WAF
         /// clb-waf：负载均衡型WAF
@@ -177,20 +191,6 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         [JsonProperty("Edition")]
         public string Edition{ get; set; }
-
-        /// <summary>
-        /// 必填项，是否开启长连接。
-        /// 0： 短连接
-        /// 1： 长连接
-        /// </summary>
-        [JsonProperty("IsKeepAlive")]
-        public string IsKeepAlive{ get; set; }
-
-        /// <summary>
-        /// 必填项，域名所属实例id
-        /// </summary>
-        [JsonProperty("InstanceID")]
-        public string InstanceID{ get; set; }
 
         /// <summary>
         /// 待废弃，目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
@@ -282,6 +282,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("UpstreamHost")]
         public string UpstreamHost{ get; set; }
 
+        /// <summary>
+        /// 是否开启缓存 0-关闭 1-开启
+        /// </summary>
+        [JsonProperty("ProxyBuffer")]
+        public long? ProxyBuffer{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -294,6 +300,9 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "UpstreamType", this.UpstreamType);
             this.SetParamSimple(map, prefix + "IsWebsocket", this.IsWebsocket);
             this.SetParamSimple(map, prefix + "LoadBalance", this.LoadBalance);
+            this.SetParamArrayObj(map, prefix + "Ports.", this.Ports);
+            this.SetParamSimple(map, prefix + "IsKeepAlive", this.IsKeepAlive);
+            this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
             this.SetParamSimple(map, prefix + "Cert", this.Cert);
             this.SetParamSimple(map, prefix + "PrivateKey", this.PrivateKey);
             this.SetParamSimple(map, prefix + "SSLId", this.SSLId);
@@ -307,10 +316,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "UpstreamDomain", this.UpstreamDomain);
             this.SetParamArraySimple(map, prefix + "SrcList.", this.SrcList);
             this.SetParamSimple(map, prefix + "IsHttp2", this.IsHttp2);
-            this.SetParamArrayObj(map, prefix + "Ports.", this.Ports);
             this.SetParamSimple(map, prefix + "Edition", this.Edition);
-            this.SetParamSimple(map, prefix + "IsKeepAlive", this.IsKeepAlive);
-            this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
             this.SetParamSimple(map, prefix + "Anycast", this.Anycast);
             this.SetParamArraySimple(map, prefix + "Weights.", this.Weights);
             this.SetParamSimple(map, prefix + "ActiveCheck", this.ActiveCheck);
@@ -324,6 +330,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "XFFReset", this.XFFReset);
             this.SetParamSimple(map, prefix + "Note", this.Note);
             this.SetParamSimple(map, prefix + "UpstreamHost", this.UpstreamHost);
+            this.SetParamSimple(map, prefix + "ProxyBuffer", this.ProxyBuffer);
         }
     }
 }

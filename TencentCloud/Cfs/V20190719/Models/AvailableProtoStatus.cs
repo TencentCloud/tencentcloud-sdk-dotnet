@@ -31,7 +31,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string SaleStatus{ get; set; }
 
         /// <summary>
-        /// 协议类型。可选值有 NFS、CIFS
+        /// 协议类型。可选值有 NFS、CIFS、TURBO
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

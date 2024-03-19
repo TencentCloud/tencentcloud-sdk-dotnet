@@ -78,7 +78,7 @@ namespace TencentCloud.Waf.V20180125.Models
         /// "日本": "jp"
         /// "弗吉尼亚": "use"
         /// "北京": "bj"
-        /// "香港": "hk"
+        /// "中国香港": "hk"
         /// "杭州": "hzec"
         /// "北京金融": "bjjr"
         /// "上海金融": "shjr"
@@ -315,6 +315,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("SgID")]
         public string SgID{ get; set; }
 
+        /// <summary>
+        /// clbwaf接入状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AccessStatus")]
+        public long? AccessStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -355,6 +362,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamArraySimple(map, prefix + "SrcList.", this.SrcList);
             this.SetParamArraySimple(map, prefix + "UpstreamDomainList.", this.UpstreamDomainList);
             this.SetParamSimple(map, prefix + "SgID", this.SgID);
+            this.SetParamSimple(map, prefix + "AccessStatus", this.AccessStatus);
         }
     }
 }
