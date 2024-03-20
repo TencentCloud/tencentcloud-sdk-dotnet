@@ -28,7 +28,7 @@ namespace TencentCloud.Iottid.V20190411
 
        private const string endpoint = "iottid.tencentcloudapi.com";
        private const string version = "2019-04-11";
-       private const string sdkVersion = "SDK_NET_3.0.968";
+       private const string sdkVersion = "SDK_NET_3.0.969";
 
         /// <summary>
         /// Client constructor.

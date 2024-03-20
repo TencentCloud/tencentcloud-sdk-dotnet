@@ -51,6 +51,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li> HTTP/2 访问（Http2）；</li>
         /// <li> 回源跟随重定向(UpstreamFollowRedirect)；</li>
         /// <li> 修改源站(Origin)。</li>
+        /// <li> 七层回源超时(HTTPUpstreamTimeout)。</li>
+        /// <li> Http应答（HttpResponse）。</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NormalAction")]

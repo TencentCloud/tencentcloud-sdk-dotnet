@@ -188,7 +188,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? EnableAutoStart{ get; set; }
 
         /// <summary>
-        /// 录制自定义场景，仅recordlayout=9的时候此参数有效
+        /// 录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
         /// </summary>
         [JsonProperty("RecordScene")]
         public string RecordScene{ get; set; }
@@ -197,6 +197,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         /// 录制自定义语言，仅recordlayout=9的时候此参数有效
         /// </summary>
         [JsonProperty("RecordLang")]
+        [System.Obsolete]
         public string RecordLang{ get; set; }
 
 

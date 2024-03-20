@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.968";
+       private const string sdkVersion = "SDK_NET_3.0.969";
 
         /// <summary>
         /// Client constructor.
@@ -401,7 +401,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// 通过本接口创建实时日志投递任务。本接口有如下限制：
-        /// 同一个实体（七层域名或者四层代理实例）在同种数据投递类型（LogType）和数据投递区域（Area）的组合下，只能被添加到一个实时日志投递任务中。建议先通过 [DescribeRealtimeLogDeliveryTasks](https://tcloud4api.woa.com/document/product/1657/343539?!preview&!document=1)  接口根据实体查询实时日志投递任务列表，检查实体是否已经被添加到另一实时日志投递任务中。
+        /// 同一个实体（七层域名或者四层代理实例）在同种数据投递类型（LogType）和数据投递区域（Area）的组合下，只能被添加到一个实时日志投递任务中。建议先通过 [DescribeRealtimeLogDeliveryTasks](https://cloud.tencent.com/document/product/1552/104110)  接口根据实体查询实时日志投递任务列表，检查实体是否已经被添加到另一实时日志投递任务中。
         /// </summary>
         /// <param name="req"><see cref="CreateRealtimeLogDeliveryTaskRequest"/></param>
         /// <returns><see cref="CreateRealtimeLogDeliveryTaskResponse"/></returns>
@@ -412,7 +412,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// 通过本接口创建实时日志投递任务。本接口有如下限制：
-        /// 同一个实体（七层域名或者四层代理实例）在同种数据投递类型（LogType）和数据投递区域（Area）的组合下，只能被添加到一个实时日志投递任务中。建议先通过 [DescribeRealtimeLogDeliveryTasks](https://tcloud4api.woa.com/document/product/1657/343539?!preview&!document=1)  接口根据实体查询实时日志投递任务列表，检查实体是否已经被添加到另一实时日志投递任务中。
+        /// 同一个实体（七层域名或者四层代理实例）在同种数据投递类型（LogType）和数据投递区域（Area）的组合下，只能被添加到一个实时日志投递任务中。建议先通过 [DescribeRealtimeLogDeliveryTasks](https://cloud.tencent.com/document/product/1552/104110)  接口根据实体查询实时日志投递任务列表，检查实体是否已经被添加到另一实时日志投递任务中。
         /// </summary>
         /// <param name="req"><see cref="CreateRealtimeLogDeliveryTaskRequest"/></param>
         /// <returns><see cref="CreateRealtimeLogDeliveryTaskResponse"/></returns>

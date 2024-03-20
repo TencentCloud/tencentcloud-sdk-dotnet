@@ -24,12 +24,33 @@ namespace TencentCloud.Live.V20180801.Models
     public class DescribeLiveWatermarksRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 水印名称
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// 分页的索引参数，从1开始
+        /// </summary>
+        [JsonProperty("PageNo")]
+        public ulong? PageNo{ get; set; }
+
+        /// <summary>
+        /// 分页的大小参数，默认值500
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public ulong? PageSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "PageNo", this.PageNo);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
         }
     }
 }
