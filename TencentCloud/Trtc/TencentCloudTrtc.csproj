@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{307C2F67-1633-3F01-BEA7-F343C91B0D61}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.969</VersionPrefix>
+    <VersionPrefix>3.0.970</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -112,6 +112,8 @@
     <Compile Include="V20190722\Models\DescribeUserEventResponse.cs" />
     <Compile Include="V20190722\Models\DescribeUserInfoRequest.cs" />
     <Compile Include="V20190722\Models\DescribeUserInfoResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeWebRecordRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeWebRecordResponse.cs" />
     <Compile Include="V20190722\Models\DismissRoomByStrRoomIdRequest.cs" />
     <Compile Include="V20190722\Models\DismissRoomByStrRoomIdResponse.cs" />
     <Compile Include="V20190722\Models\DismissRoomRequest.cs" />
@@ -172,6 +174,8 @@
     <Compile Include="V20190722\Models\StartPublishCdnStreamResponse.cs" />
     <Compile Include="V20190722\Models\StartStreamIngestRequest.cs" />
     <Compile Include="V20190722\Models\StartStreamIngestResponse.cs" />
+    <Compile Include="V20190722\Models\StartWebRecordRequest.cs" />
+    <Compile Include="V20190722\Models\StartWebRecordResponse.cs" />
     <Compile Include="V20190722\Models\StopMCUMixTranscodeByStrRoomIdRequest.cs" />
     <Compile Include="V20190722\Models\StopMCUMixTranscodeByStrRoomIdResponse.cs" />
     <Compile Include="V20190722\Models\StopMCUMixTranscodeRequest.cs" />
@@ -180,6 +184,8 @@
     <Compile Include="V20190722\Models\StopPublishCdnStreamResponse.cs" />
     <Compile Include="V20190722\Models\StopStreamIngestRequest.cs" />
     <Compile Include="V20190722\Models\StopStreamIngestResponse.cs" />
+    <Compile Include="V20190722\Models\StopWebRecordRequest.cs" />
+    <Compile Include="V20190722\Models\StopWebRecordResponse.cs" />
     <Compile Include="V20190722\Models\StorageFile.cs" />
     <Compile Include="V20190722\Models\StorageParams.cs" />
     <Compile Include="V20190722\Models\SubscribeStreamUserIds.cs" />
@@ -200,5 +206,6 @@
     <Compile Include="V20190722\Models\WaterMarkImage.cs" />
     <Compile Include="V20190722\Models\WaterMarkParams.cs" />
     <Compile Include="V20190722\Models\WaterMarkTimestamp.cs" />
+    <Compile Include="V20190722\Models\WebRecordVideoParams.cs" />
   </ItemGroup>
 </Project>

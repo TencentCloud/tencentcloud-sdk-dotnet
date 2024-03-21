@@ -25,10 +25,16 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 阻断状态 0:关闭 1:开启
+        /// 阻断开关状态: 0 -- 关闭 1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
+
+        /// <summary>
+        /// 是否开启智能过白模式
+        /// </summary>
+        [JsonProperty("OpenSmartMode")]
+        public bool? OpenSmartMode{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "OpenSmartMode", this.OpenSmartMode);
         }
     }
 }

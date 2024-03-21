@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.969";
+       private const string sdkVersion = "SDK_NET_3.0.970";
 
         /// <summary>
         /// Client constructor.
@@ -858,6 +858,27 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 查询页面录制任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebRecordRequest"/></param>
+        /// <returns><see cref="DescribeWebRecordResponse"/></returns>
+        public Task<DescribeWebRecordResponse> DescribeWebRecord(DescribeWebRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeWebRecordResponse>(req, "DescribeWebRecord");
+        }
+
+        /// <summary>
+        /// 查询页面录制任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebRecordRequest"/></param>
+        /// <returns><see cref="DescribeWebRecordResponse"/></returns>
+        public DescribeWebRecordResponse DescribeWebRecordSync(DescribeWebRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeWebRecordResponse>(req, "DescribeWebRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 接口说明：把房间所有用户从房间移出，解散房间。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
         /// </summary>
         /// <param name="req"><see cref="DismissRoomRequest"/></param>
@@ -1342,6 +1363,29 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 通过此接口可以发起 WEB 页面录制任务，在接口参数中指定录制 URL，录制分辨率，录制结果存储等参数。
+        /// 因为参数或API逻辑问题会立即返回结果。而因为页面问题，如页面无法访问，会在回调中返回结果，请关注。
+        /// </summary>
+        /// <param name="req"><see cref="StartWebRecordRequest"/></param>
+        /// <returns><see cref="StartWebRecordResponse"/></returns>
+        public Task<StartWebRecordResponse> StartWebRecord(StartWebRecordRequest req)
+        {
+            return InternalRequestAsync<StartWebRecordResponse>(req, "StartWebRecord");
+        }
+
+        /// <summary>
+        /// 通过此接口可以发起 WEB 页面录制任务，在接口参数中指定录制 URL，录制分辨率，录制结果存储等参数。
+        /// 因为参数或API逻辑问题会立即返回结果。而因为页面问题，如页面无法访问，会在回调中返回结果，请关注。
+        /// </summary>
+        /// <param name="req"><see cref="StartWebRecordRequest"/></param>
+        /// <returns><see cref="StartWebRecordResponse"/></returns>
+        public StartWebRecordResponse StartWebRecordSync(StartWebRecordRequest req)
+        {
+            return InternalRequestAsync<StartWebRecordResponse>(req, "StartWebRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 接口说明：结束云端混流
         /// </summary>
         /// <param name="req"><see cref="StopMCUMixTranscodeRequest"/></param>
@@ -1422,6 +1466,27 @@ namespace TencentCloud.Trtc.V20190722
         public StopStreamIngestResponse StopStreamIngestSync(StopStreamIngestRequest req)
         {
             return InternalRequestAsync<StopStreamIngestResponse>(req, "StopStreamIngest")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 停止页面录制任务
+        /// </summary>
+        /// <param name="req"><see cref="StopWebRecordRequest"/></param>
+        /// <returns><see cref="StopWebRecordResponse"/></returns>
+        public Task<StopWebRecordResponse> StopWebRecord(StopWebRecordRequest req)
+        {
+            return InternalRequestAsync<StopWebRecordResponse>(req, "StopWebRecord");
+        }
+
+        /// <summary>
+        /// 停止页面录制任务
+        /// </summary>
+        /// <param name="req"><see cref="StopWebRecordRequest"/></param>
+        /// <returns><see cref="StopWebRecordResponse"/></returns>
+        public StopWebRecordResponse StopWebRecordSync(StopWebRecordRequest req)
+        {
+            return InternalRequestAsync<StopWebRecordResponse>(req, "StopWebRecord")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

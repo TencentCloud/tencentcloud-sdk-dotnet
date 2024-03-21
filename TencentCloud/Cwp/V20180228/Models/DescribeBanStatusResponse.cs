@@ -40,6 +40,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         public bool? ShowTips{ get; set; }
 
         /// <summary>
+        /// 是否开启智能过白模式
+        /// </summary>
+        [JsonProperty("OpenSmartMode")]
+        public bool? OpenSmartMode{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -53,6 +59,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         {
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "ShowTips", this.ShowTips);
+            this.SetParamSimple(map, prefix + "OpenSmartMode", this.OpenSmartMode);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

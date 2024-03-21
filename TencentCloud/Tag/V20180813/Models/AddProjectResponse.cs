@@ -31,7 +31,7 @@ namespace TencentCloud.Tag.V20180813.Models
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// 是否为新项目
+        /// 是否为新项目，1是新项目，0不是新项目
         /// </summary>
         [JsonProperty("IsNew")]
         public long? IsNew{ get; set; }

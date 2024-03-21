@@ -46,7 +46,11 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Operate{ get; set; }
 
         /// <summary>
-        /// 指定绑定或解绑的策略模板 ID 。
+        /// 指定绑定或解绑的策略模板 ID 或站点全局策略
+        /// - 如需绑定至策略模板，或从策略模板解绑，请指定策略模板 ID。
+        /// - 如需绑定至站点全局策略，或从站点全局策略解绑，请使用 @ZoneLevel@domain 参数值。
+        /// 
+        /// 注意：解绑后，域名将使用独立策略，并单独计算规则配额，请确保解绑前套餐规则配额充足。
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }

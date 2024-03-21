@@ -101,7 +101,17 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 阻断状态：1-阻断成功；非1-阻断失败
+        /// 0 -不阻断(客户端版本不支持)
+        /// 1 -已阻断
+        /// 2 -阻断失败(程序异常)
+        /// 3 -不阻断(内网不阻断)
+        /// 4 -可用区不支持阻断
+        /// 10-阻断中
+        /// 81-不阻断(未开启阻断)
+        /// 82-不阻断(非专业版)
+        /// 83-不阻断(已加白名单)
+        /// 86-不阻断(系统白名单)
+        /// 87-不阻断(客户端离线)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BanStatus")]
@@ -198,6 +208,20 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("DataFrom")]
         public long? DataFrom{ get; set; }
 
+        /// <summary>
+        /// 破解状态说明
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AttackStatusDesc")]
+        public string AttackStatusDesc{ get; set; }
+
+        /// <summary>
+        /// 阻断过期时间（仅阻断中事件有效）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BanExpiredTime")]
+        public string BanExpiredTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -229,6 +253,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Location", this.Location);
             this.SetParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
             this.SetParamSimple(map, prefix + "DataFrom", this.DataFrom);
+            this.SetParamSimple(map, prefix + "AttackStatusDesc", this.AttackStatusDesc);
+            this.SetParamSimple(map, prefix + "BanExpiredTime", this.BanExpiredTime);
         }
     }
 }

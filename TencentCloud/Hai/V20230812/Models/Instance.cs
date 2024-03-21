@@ -186,6 +186,13 @@ namespace TencentCloud.Hai.V20230812.Models
         [JsonProperty("LoginServices")]
         public LoginService[] LoginServices{ get; set; }
 
+        /// <summary>
+        /// 应用服务的操作系统类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OSType")]
+        public string OSType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -213,6 +220,7 @@ namespace TencentCloud.Hai.V20230812.Models
             this.SetParamSimple(map, prefix + "MaxFreeTraffic", this.MaxFreeTraffic);
             this.SetParamSimple(map, prefix + "ConfigurationEnvironment", this.ConfigurationEnvironment);
             this.SetParamArrayObj(map, prefix + "LoginServices.", this.LoginServices);
+            this.SetParamSimple(map, prefix + "OSType", this.OSType);
         }
     }
 }
