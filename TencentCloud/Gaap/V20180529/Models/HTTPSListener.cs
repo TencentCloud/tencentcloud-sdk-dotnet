@@ -138,6 +138,20 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
+        /// <summary>
+        /// 支持的TLS版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TLSSupportVersion")]
+        public string[] TLSSupportVersion{ get; set; }
+
+        /// <summary>
+        /// 支持的TLS密码套件
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TLSCiphers")]
+        public string TLSCiphers{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -160,6 +174,8 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
             this.SetParamSimple(map, prefix + "ProxyId", this.ProxyId);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamArraySimple(map, prefix + "TLSSupportVersion.", this.TLSSupportVersion);
+            this.SetParamSimple(map, prefix + "TLSCiphers", this.TLSCiphers);
         }
     }
 }

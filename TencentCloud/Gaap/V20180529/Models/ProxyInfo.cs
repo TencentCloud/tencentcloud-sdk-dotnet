@@ -288,6 +288,15 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("IsAutoScaleProxy")]
         public long? IsAutoScaleProxy{ get; set; }
 
+        /// <summary>
+        /// 是否允许设置TLS配置
+        /// 0表示不支持；
+        /// 1表示支持。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsSupportTLSChoice")]
+        public long? IsSupportTLSChoice{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -330,6 +339,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "InBanBlacklist", this.InBanBlacklist);
             this.SetParamSimple(map, prefix + "FeatureBitmap", this.FeatureBitmap);
             this.SetParamSimple(map, prefix + "IsAutoScaleProxy", this.IsAutoScaleProxy);
+            this.SetParamSimple(map, prefix + "IsSupportTLSChoice", this.IsSupportTLSChoice);
         }
     }
 }

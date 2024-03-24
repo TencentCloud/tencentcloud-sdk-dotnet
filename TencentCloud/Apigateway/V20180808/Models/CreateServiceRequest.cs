@@ -49,7 +49,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string[] NetTypes{ get; set; }
 
         /// <summary>
-        /// IP版本号，支持IPv4和IPv6，默认为IPv4。
+        /// IP版本号，仅支持IPv4。
         /// </summary>
         [JsonProperty("IpVersion")]
         public string IpVersion{ get; set; }

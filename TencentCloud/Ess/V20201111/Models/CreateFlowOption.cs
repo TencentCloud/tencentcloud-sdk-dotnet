@@ -100,6 +100,88 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("CustomCreateFlowDescription")]
         public string CustomCreateFlowDescription{ get; set; }
 
+        /// <summary>
+        ///   禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
+        /// </summary>
+        [JsonProperty("ForbidAddApprover")]
+        public string ForbidAddApprover{ get; set; }
+
+        /// <summary>
+        ///   禁止设置设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
+        /// </summary>
+        [JsonProperty("ForbidEditFlowProperties")]
+        public string ForbidEditFlowProperties{ get; set; }
+
+        /// <summary>
+        /// 在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用，具体的控件类型如下
+        /// <ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
+        /// <li>SIGN_SEAL : 企业印章</li>
+        /// <li>SIGN_PAGING_SEAL : 骑缝章</li>
+        /// <li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
+        /// <li>SIGN_APPROVE : 签批</li>
+        /// <li>SIGN_OPINION : 签署意见</li>
+        /// <li>BUSI-FULL-NAME  : 企业全称</li>
+        /// <li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
+        /// <li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
+        /// <li>PERSONAL-NAME : 签署人姓名</li>
+        /// <li>PERSONAL-MOBILE : 签署人手机号</li>
+        /// <li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li>
+        /// <li>PERSONAL-IDCARD : 签署人证件号</li>
+        /// <li>TEXT : 单行文本</li>
+        /// <li>MULTI_LINE_TEXT : 多行文本</li>
+        /// <li>CHECK_BOX : 勾选框</li>
+        /// <li>SELECTOR : 选择器</li>
+        /// <li>DIGIT : 数字</li>
+        /// <li>DATE : 日期</li>
+        /// <li>FILL_IMAGE : 图片</li>
+        /// <li>ATTACHMENT : 附件</li>
+        /// <li>EMAIL : 邮箱</li>
+        /// <li>LOCATION : 地址</li>
+        /// <li>EDUCATION : 学历</li>
+        /// <li>GENDER : 性别</li>
+        /// <li>DISTRICT : 省市区</li></ul>
+        /// </summary>
+        [JsonProperty("HideComponentTypes")]
+        public string[] HideComponentTypes{ get; set; }
+
+        /// <summary>
+        /// 在发起流程的可嵌入页面要显示的控件列表，和 HideComponentTypes 参数 只能二选一使用，具体的控件类型如下
+        /// <ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
+        /// <li>SIGN_SEAL : 企业印章</li>
+        /// <li>SIGN_PAGING_SEAL : 骑缝章</li>
+        /// <li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
+        /// <li>SIGN_APPROVE : 签批</li>
+        /// <li>SIGN_OPINION : 签署意见</li>
+        /// <li>BUSI-FULL-NAME  : 企业全称</li>
+        /// <li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
+        /// <li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
+        /// <li>PERSONAL-NAME : 签署人姓名</li>
+        /// <li>PERSONAL-MOBILE : 签署人手机号</li>
+        /// <li>PERSONAL-IDCARD-TYPE : 签署人证件类型</li>
+        /// <li>PERSONAL-IDCARD : 签署人证件号</li>
+        /// <li>TEXT : 单行文本</li>
+        /// <li>MULTI_LINE_TEXT : 多行文本</li>
+        /// <li>CHECK_BOX : 勾选框</li>
+        /// <li>SELECTOR : 选择器</li>
+        /// <li>DIGIT : 数字</li>
+        /// <li>DATE : 日期</li>
+        /// <li>FILL_IMAGE : 图片</li>
+        /// <li>ATTACHMENT : 附件</li>
+        /// <li>EMAIL : 邮箱</li>
+        /// <li>LOCATION : 地址</li>
+        /// <li>EDUCATION : 学历</li>
+        /// <li>GENDER : 性别</li>
+        /// <li>DISTRICT : 省市区</li></ul>
+        /// </summary>
+        [JsonProperty("ShowComponentTypes")]
+        public string[] ShowComponentTypes{ get; set; }
+
+        /// <summary>
+        /// 发起流程的可嵌入页面结果页配置
+        /// </summary>
+        [JsonProperty("ResultPageConfig")]
+        public CreateResultPageConfig[] ResultPageConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +197,11 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "SkipUploadFile", this.SkipUploadFile);
             this.SetParamSimple(map, prefix + "ForbidEditFillComponent", this.ForbidEditFillComponent);
             this.SetParamSimple(map, prefix + "CustomCreateFlowDescription", this.CustomCreateFlowDescription);
+            this.SetParamSimple(map, prefix + "ForbidAddApprover", this.ForbidAddApprover);
+            this.SetParamSimple(map, prefix + "ForbidEditFlowProperties", this.ForbidEditFlowProperties);
+            this.SetParamArraySimple(map, prefix + "HideComponentTypes.", this.HideComponentTypes);
+            this.SetParamArraySimple(map, prefix + "ShowComponentTypes.", this.ShowComponentTypes);
+            this.SetParamArrayObj(map, prefix + "ResultPageConfig.", this.ResultPageConfig);
         }
     }
 }

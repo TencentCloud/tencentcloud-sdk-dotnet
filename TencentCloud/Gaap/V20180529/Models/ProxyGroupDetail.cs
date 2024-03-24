@@ -171,6 +171,15 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("FeatureBitmap")]
         public long? FeatureBitmap{ get; set; }
 
+        /// <summary>
+        /// 是否支持设置TSL设置
+        /// 0表示不支持；
+        /// 1表示支持。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsSupportTLSChoice")]
+        public ulong? IsSupportTLSChoice{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -197,6 +206,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
             this.SetParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
             this.SetParamSimple(map, prefix + "FeatureBitmap", this.FeatureBitmap);
+            this.SetParamSimple(map, prefix + "IsSupportTLSChoice", this.IsSupportTLSChoice);
         }
     }
 }

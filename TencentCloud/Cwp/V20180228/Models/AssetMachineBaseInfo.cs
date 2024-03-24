@@ -147,6 +147,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
 
+        /// <summary>
+        /// cpu负载读数（仅linux系统有效）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CpuLoadNum")]
+        public string CpuLoadNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -173,6 +180,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "IsNew", this.IsNew);
             this.SetParamSimple(map, prefix + "FirstTime", this.FirstTime);
             this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
+            this.SetParamSimple(map, prefix + "CpuLoadNum", this.CpuLoadNum);
         }
     }
 }

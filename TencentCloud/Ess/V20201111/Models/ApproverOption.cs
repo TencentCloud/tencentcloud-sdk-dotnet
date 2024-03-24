@@ -43,6 +43,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public bool? NoTransfer{ get; set; }
 
         /// <summary>
+        /// 允许编辑签署人信息（嵌入式使用） 默认true-可以编辑 false-不可以编辑
+        /// </summary>
+        [JsonProperty("CanEditApprover")]
+        public bool? CanEditApprover{ get; set; }
+
+        /// <summary>
         /// 签署人信息补充类型，默认无需补充。
         /// 
         /// <ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li>
@@ -72,6 +78,7 @@ namespace TencentCloud.Ess.V20201111.Models
         {
             this.SetParamSimple(map, prefix + "NoRefuse", this.NoRefuse);
             this.SetParamSimple(map, prefix + "NoTransfer", this.NoTransfer);
+            this.SetParamSimple(map, prefix + "CanEditApprover", this.CanEditApprover);
             this.SetParamSimple(map, prefix + "FillType", this.FillType);
             this.SetParamSimple(map, prefix + "FlowReadLimit", this.FlowReadLimit);
         }
