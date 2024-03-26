@@ -141,6 +141,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("RecipientId")]
         public string RecipientId{ get; set; }
 
+        /// <summary>
+        /// 合同组相关信息，指定合同组子合同和签署方的信息，用于补充动态签署人。
+        /// </summary>
+        [JsonProperty("FlowGroupUrlInfo")]
+        public FlowGroupUrlInfo FlowGroupUrlInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -161,6 +167,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamArraySimple(map, prefix + "Hides.", this.Hides);
             this.SetParamSimple(map, prefix + "RecipientId", this.RecipientId);
+            this.SetParamObj(map, prefix + "FlowGroupUrlInfo.", this.FlowGroupUrlInfo);
         }
     }
 }

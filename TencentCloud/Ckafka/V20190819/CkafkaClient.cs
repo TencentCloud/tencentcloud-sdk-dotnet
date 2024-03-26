@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.971";
+       private const string sdkVersion = "SDK_NET_3.0.972";
 
         /// <summary>
         /// Client constructor.
@@ -1526,7 +1526,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 修改AC策略，目前只支持预设规则的是否应用到新增topic这一项的修改
+        /// 修改ACL策略，目前只支持预设规则的是否应用到新增topic这一项的修改
         /// </summary>
         /// <param name="req"><see cref="ModifyAclRuleRequest"/></param>
         /// <returns><see cref="ModifyAclRuleResponse"/></returns>
@@ -1536,7 +1536,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 修改AC策略，目前只支持预设规则的是否应用到新增topic这一项的修改
+        /// 修改ACL策略，目前只支持预设规则的是否应用到新增topic这一项的修改
         /// </summary>
         /// <param name="req"><see cref="ModifyAclRuleRequest"/></param>
         /// <returns><see cref="ModifyAclRuleResponse"/></returns>

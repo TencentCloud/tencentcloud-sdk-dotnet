@@ -43,6 +43,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string[] FlowIds{ get; set; }
 
         /// <summary>
+        /// 合同组签署方信息。
+        /// </summary>
+        [JsonProperty("Approvers")]
+        public FlowGroupApprovers[] Approvers{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -56,6 +62,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         {
             this.SetParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
             this.SetParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
+            this.SetParamArrayObj(map, prefix + "Approvers.", this.Approvers);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

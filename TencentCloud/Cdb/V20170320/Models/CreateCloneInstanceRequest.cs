@@ -150,6 +150,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
+        /// <summary>
+        /// 付费类型，PRE_PAID：包年包月，USED_PAID：按量计费。默认为按量计费
+        /// </summary>
+        [JsonProperty("PayType")]
+        public string PayType{ get; set; }
+
+        /// <summary>
+        /// 实例时长，PayType为PRE_PAID时必传，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+        /// </summary>
+        [JsonProperty("Period")]
+        public long? Period{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +189,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
             this.SetParamSimple(map, prefix + "CageId", this.CageId);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "PayType", this.PayType);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
         }
     }
 }

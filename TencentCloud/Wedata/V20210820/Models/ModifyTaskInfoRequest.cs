@@ -160,6 +160,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// 责任人
         /// </summary>
         [JsonProperty("InCharge")]
+        [System.Obsolete]
         public string InCharge{ get; set; }
 
         /// <summary>
@@ -198,6 +199,24 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("DependencyConfigDTOs")]
         public DependencyConfig[] DependencyConfigDTOs{ get; set; }
 
+        /// <summary>
+        /// 执行耗时
+        /// </summary>
+        [JsonProperty("ExecutionTTL")]
+        public long? ExecutionTTL{ get; set; }
+
+        /// <summary>
+        /// 脚本是否改变
+        /// </summary>
+        [JsonProperty("ScriptChange")]
+        public bool? ScriptChange{ get; set; }
+
+        /// <summary>
+        /// 责任人id
+        /// </summary>
+        [JsonProperty("InChargeIds")]
+        public string[] InChargeIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -233,6 +252,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TargetServer", this.TargetServer);
             this.SetParamSimple(map, prefix + "DependencyWorkflow", this.DependencyWorkflow);
             this.SetParamArrayObj(map, prefix + "DependencyConfigDTOs.", this.DependencyConfigDTOs);
+            this.SetParamSimple(map, prefix + "ExecutionTTL", this.ExecutionTTL);
+            this.SetParamSimple(map, prefix + "ScriptChange", this.ScriptChange);
+            this.SetParamArraySimple(map, prefix + "InChargeIds.", this.InChargeIds);
         }
     }
 }

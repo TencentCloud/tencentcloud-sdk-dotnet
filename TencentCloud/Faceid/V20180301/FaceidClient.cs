@@ -28,7 +28,7 @@ namespace TencentCloud.Faceid.V20180301
 
        private const string endpoint = "faceid.tencentcloudapi.com";
        private const string version = "2018-03-01";
-       private const string sdkVersion = "SDK_NET_3.0.971";
+       private const string sdkVersion = "SDK_NET_3.0.972";
 
         /// <summary>
         /// Client constructor.
@@ -411,6 +411,27 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
+        /// 完成验证后，用FaceIdToken调用本接口获取设备风险相关信息，FaceIdToken生成后三天内（3\*24\*3,600秒）可多次拉取。
+        /// </summary>
+        /// <param name="req"><see cref="GetFaceIdRiskInfoRequest"/></param>
+        /// <returns><see cref="GetFaceIdRiskInfoResponse"/></returns>
+        public Task<GetFaceIdRiskInfoResponse> GetFaceIdRiskInfo(GetFaceIdRiskInfoRequest req)
+        {
+            return InternalRequestAsync<GetFaceIdRiskInfoResponse>(req, "GetFaceIdRiskInfo");
+        }
+
+        /// <summary>
+        /// 完成验证后，用FaceIdToken调用本接口获取设备风险相关信息，FaceIdToken生成后三天内（3\*24\*3,600秒）可多次拉取。
+        /// </summary>
+        /// <param name="req"><see cref="GetFaceIdRiskInfoRequest"/></param>
+        /// <returns><see cref="GetFaceIdRiskInfoResponse"/></returns>
+        public GetFaceIdRiskInfoResponse GetFaceIdRiskInfoSync(GetFaceIdRiskInfoRequest req)
+        {
+            return InternalRequestAsync<GetFaceIdRiskInfoResponse>(req, "GetFaceIdRiskInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 每次调用人脸核身SDK服务前，需先调用本接口获取SDKToken，用来串联核身流程，在验证完成后，用于获取验证结果信息，该token仅能核身一次。
         /// </summary>
         /// <param name="req"><see cref="GetFaceIdTokenRequest"/></param>
@@ -428,6 +449,27 @@ namespace TencentCloud.Faceid.V20180301
         public GetFaceIdTokenResponse GetFaceIdTokenSync(GetFaceIdTokenRequest req)
         {
             return InternalRequestAsync<GetFaceIdTokenResponse>(req, "GetFaceIdToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 每次调用人脸核身SDK服务前，需先调用本接口获取SDKToken，用来串联核身流程，在验证完成后，用于获取风险结果信息，该Token仅能核身一次。
+        /// </summary>
+        /// <param name="req"><see cref="GetFaceidRiskInfoTokenRequest"/></param>
+        /// <returns><see cref="GetFaceidRiskInfoTokenResponse"/></returns>
+        public Task<GetFaceidRiskInfoTokenResponse> GetFaceidRiskInfoToken(GetFaceidRiskInfoTokenRequest req)
+        {
+            return InternalRequestAsync<GetFaceidRiskInfoTokenResponse>(req, "GetFaceidRiskInfoToken");
+        }
+
+        /// <summary>
+        /// 每次调用人脸核身SDK服务前，需先调用本接口获取SDKToken，用来串联核身流程，在验证完成后，用于获取风险结果信息，该Token仅能核身一次。
+        /// </summary>
+        /// <param name="req"><see cref="GetFaceidRiskInfoTokenRequest"/></param>
+        /// <returns><see cref="GetFaceidRiskInfoTokenResponse"/></returns>
+        public GetFaceidRiskInfoTokenResponse GetFaceidRiskInfoTokenSync(GetFaceidRiskInfoTokenRequest req)
+        {
+            return InternalRequestAsync<GetFaceidRiskInfoTokenResponse>(req, "GetFaceidRiskInfoToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

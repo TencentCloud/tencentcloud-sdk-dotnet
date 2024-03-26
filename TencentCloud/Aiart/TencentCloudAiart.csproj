@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60370B3E-5902-37C1-9E9B-E275E61C4105}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.971</VersionPrefix>
+    <VersionPrefix>3.0.972</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,7 +52,11 @@
     <Compile Include="V20221229\Models\ImageToImageResponse.cs" />
     <Compile Include="V20221229\Models\LogoParam.cs" />
     <Compile Include="V20221229\Models\LogoRect.cs" />
+    <Compile Include="V20221229\Models\QueryTextToImageProJobRequest.cs" />
+    <Compile Include="V20221229\Models\QueryTextToImageProJobResponse.cs" />
     <Compile Include="V20221229\Models\ResultConfig.cs" />
+    <Compile Include="V20221229\Models\SubmitTextToImageProJobRequest.cs" />
+    <Compile Include="V20221229\Models\SubmitTextToImageProJobResponse.cs" />
     <Compile Include="V20221229\Models\TextToImageRequest.cs" />
     <Compile Include="V20221229\Models\TextToImageResponse.cs" />
   </ItemGroup>

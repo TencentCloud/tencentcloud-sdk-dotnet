@@ -90,6 +90,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ApproverIdCardNumber")]
         public string ApproverIdCardNumber{ get; set; }
 
+        /// <summary>
+        /// 合同流程ID，补充合同组子合同动态签署人时必传。
+        /// </summary>
+        [JsonProperty("FlowId")]
+        public string FlowId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -104,6 +110,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
             this.SetParamSimple(map, prefix + "ApproverIdCardType", this.ApproverIdCardType);
             this.SetParamSimple(map, prefix + "ApproverIdCardNumber", this.ApproverIdCardNumber);
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
         }
     }
 }

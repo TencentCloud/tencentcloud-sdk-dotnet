@@ -31,7 +31,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public string FolderName{ get; set; }
 
         /// <summary>
-        /// 新建文件夹的父目录ID
+        /// 新建文件夹的父目录ID（根目录为"root"）
         /// </summary>
         [JsonProperty("ParentId")]
         public string ParentId{ get; set; }

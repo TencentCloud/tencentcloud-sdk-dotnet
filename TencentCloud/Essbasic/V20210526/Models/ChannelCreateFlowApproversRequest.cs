@@ -39,12 +39,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 合同流程ID，为32位字符串。 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
-        /// </summary>
-        [JsonProperty("FlowId")]
-        public string FlowId{ get; set; }
-
-        /// <summary>
         /// 补充企业签署人信息。
         /// 
         /// - 如果发起方指定的补充签署人是企业签署人，则需要提供企业名称或者企业OpenId；
@@ -53,6 +47,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// </summary>
         [JsonProperty("Approvers")]
         public FillApproverInfo[] Approvers{ get; set; }
+
+        /// <summary>
+        /// 合同流程ID，为32位字符串。 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+        /// </summary>
+        [JsonProperty("FlowId")]
+        public string FlowId{ get; set; }
 
         /// <summary>
         /// 签署人信息补充方式
@@ -68,6 +68,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
+        /// <summary>
+        /// 合同流程组的组ID, 在合同流程组场景下，生成合同流程组的签署链接时需要赋值
+        /// </summary>
+        [JsonProperty("FlowGroupId")]
+        public string FlowGroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,10 +81,11 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
-            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamArrayObj(map, prefix + "Approvers.", this.Approvers);
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamSimple(map, prefix + "FillApproverType", this.FillApproverType);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// 是否应用到新增的Topic
+        /// 修改预设规则时传入,是否应用到新增的Topic
         /// </summary>
         [JsonProperty("IsApplied")]
         public long? IsApplied{ get; set; }
