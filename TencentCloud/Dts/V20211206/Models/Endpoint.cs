@@ -32,7 +32,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// tdsql mysql版的节点类型，枚举值为proxy、set。tdsqlmysql必填
+        /// 节点类型，proxy表示节点类型为主机，set表示节点类型为节点。proxy类型必须填在数组第一项。tdsqlmysql类型的源/目标配置必填
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Role")]

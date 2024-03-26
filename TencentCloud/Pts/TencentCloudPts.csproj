@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A7034962-C435-3A45-87B2-3361AA3AA876}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.972</VersionPrefix>
+    <VersionPrefix>3.0.973</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -68,6 +68,8 @@
     <Compile Include="V20210728\Models\CreateAlertChannelResponse.cs" />
     <Compile Include="V20210728\Models\CreateCronJobRequest.cs" />
     <Compile Include="V20210728\Models\CreateCronJobResponse.cs" />
+    <Compile Include="V20210728\Models\CreateEnvironmentRequest.cs" />
+    <Compile Include="V20210728\Models\CreateEnvironmentResponse.cs" />
     <Compile Include="V20210728\Models\CreateFileRequest.cs" />
     <Compile Include="V20210728\Models\CreateFileResponse.cs" />
     <Compile Include="V20210728\Models\CreateProjectRequest.cs" />
@@ -83,6 +85,8 @@
     <Compile Include="V20210728\Models\DeleteAlertChannelResponse.cs" />
     <Compile Include="V20210728\Models\DeleteCronJobsRequest.cs" />
     <Compile Include="V20210728\Models\DeleteCronJobsResponse.cs" />
+    <Compile Include="V20210728\Models\DeleteEnvironmentsRequest.cs" />
+    <Compile Include="V20210728\Models\DeleteEnvironmentsResponse.cs" />
     <Compile Include="V20210728\Models\DeleteFilesRequest.cs" />
     <Compile Include="V20210728\Models\DeleteFilesResponse.cs" />
     <Compile Include="V20210728\Models\DeleteJobsRequest.cs" />
@@ -101,6 +105,8 @@
     <Compile Include="V20210728\Models\DescribeCheckSummaryResponse.cs" />
     <Compile Include="V20210728\Models\DescribeCronJobsRequest.cs" />
     <Compile Include="V20210728\Models\DescribeCronJobsResponse.cs" />
+    <Compile Include="V20210728\Models\DescribeEnvironmentsRequest.cs" />
+    <Compile Include="V20210728\Models\DescribeEnvironmentsResponse.cs" />
     <Compile Include="V20210728\Models\DescribeErrorSummaryRequest.cs" />
     <Compile Include="V20210728\Models\DescribeErrorSummaryResponse.cs" />
     <Compile Include="V20210728\Models\DescribeFilesRequest.cs" />
@@ -180,6 +186,8 @@
     <Compile Include="V20210728\Models\TestData.cs" />
     <Compile Include="V20210728\Models\UpdateCronJobRequest.cs" />
     <Compile Include="V20210728\Models\UpdateCronJobResponse.cs" />
+    <Compile Include="V20210728\Models\UpdateEnvironmentRequest.cs" />
+    <Compile Include="V20210728\Models\UpdateEnvironmentResponse.cs" />
     <Compile Include="V20210728\Models\UpdateFileScenarioRelationRequest.cs" />
     <Compile Include="V20210728\Models\UpdateFileScenarioRelationResponse.cs" />
     <Compile Include="V20210728\Models\UpdateJobRequest.cs" />

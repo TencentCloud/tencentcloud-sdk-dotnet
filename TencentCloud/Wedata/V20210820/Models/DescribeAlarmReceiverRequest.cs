@@ -49,12 +49,6 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 消息ID
-        /// </summary>
-        [JsonProperty("MessageId")]
-        public string MessageId{ get; set; }
-
-        /// <summary>
         /// 类型
         /// </summary>
         [JsonProperty("TaskType")]
@@ -79,6 +73,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string AlarmTime{ get; set; }
 
         /// <summary>
+        /// 消息ID
+        /// </summary>
+        [JsonProperty("MessageId")]
+        public string MessageId{ get; set; }
+
+        /// <summary>
+        /// 告警记录id
+        /// </summary>
+        [JsonProperty("RecordId")]
+        public ulong? RecordId{ get; set; }
+
+        /// <summary>
         /// 监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
         /// </summary>
         [JsonProperty("MonitorType")]
@@ -94,11 +100,12 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
-            this.SetParamSimple(map, prefix + "MessageId", this.MessageId);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamSimple(map, prefix + "AlarmRecipient", this.AlarmRecipient);
             this.SetParamSimple(map, prefix + "AlarmRecipientName", this.AlarmRecipientName);
             this.SetParamSimple(map, prefix + "AlarmTime", this.AlarmTime);
+            this.SetParamSimple(map, prefix + "MessageId", this.MessageId);
+            this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
             this.SetParamSimple(map, prefix + "MonitorType", this.MonitorType);
         }
     }

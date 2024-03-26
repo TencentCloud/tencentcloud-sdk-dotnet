@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.972</VersionPrefix>
+    <VersionPrefix>3.0.973</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -791,6 +791,7 @@
     <Compile Include="V20210820\Models\Property.cs" />
     <Compile Include="V20210820\Models\QualityScore.cs" />
     <Compile Include="V20210820\Models\QualityScoreTrend.cs" />
+    <Compile Include="V20210820\Models\QuietPeriod.cs" />
     <Compile Include="V20210820\Models\RealTimeTaskInstanceNodeInfo.cs" />
     <Compile Include="V20210820\Models\RealTimeTaskSpeed.cs" />
     <Compile Include="V20210820\Models\RecordField.cs" />

@@ -121,6 +121,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         public ulong? IsSendSuccess{ get; set; }
 
         /// <summary>
+        /// 是否在免打扰时间内，0:否, 1:是
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InQuitePeriods")]
+        public ulong? InQuitePeriods{ get; set; }
+
+        /// <summary>
+        /// 告警记录id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RecordId")]
+        public ulong? RecordId{ get; set; }
+
+        /// <summary>
         /// 消息ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -204,6 +218,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "TaskName", this.TaskName);
             this.SetParamSimple(map, prefix + "IsSendSuccess", this.IsSendSuccess);
+            this.SetParamSimple(map, prefix + "InQuitePeriods", this.InQuitePeriods);
+            this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
             this.SetParamSimple(map, prefix + "MessageId", this.MessageId);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
             this.SetParamSimple(map, prefix + "RegularId", this.RegularId);

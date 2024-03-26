@@ -32,7 +32,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public TaskOpsDto TaskBaseInfo{ get; set; }
 
         /// <summary>
-        /// 补录计划该任务实例数
+        /// 补录该任务当前已生成的实例数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceCount")]
@@ -52,6 +52,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("SuccessPercent")]
         public long? SuccessPercent{ get; set; }
 
+        /// <summary>
+        /// 预计生成的总实例个数，由于是异步生成，-1代表实例还未完完全生成
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceTotalCount")]
+        public long? InstanceTotalCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
             this.SetParamSimple(map, prefix + "CompletePercent", this.CompletePercent);
             this.SetParamSimple(map, prefix + "SuccessPercent", this.SuccessPercent);
+            this.SetParamSimple(map, prefix + "InstanceTotalCount", this.InstanceTotalCount);
         }
     }
 }

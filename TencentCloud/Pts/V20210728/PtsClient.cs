@@ -28,7 +28,7 @@ namespace TencentCloud.Pts.V20210728
 
        private const string endpoint = "pts.tencentcloudapi.com";
        private const string version = "2021-07-28";
-       private const string sdkVersion = "SDK_NET_3.0.972";
+       private const string sdkVersion = "SDK_NET_3.0.973";
 
         /// <summary>
         /// Client constructor.
@@ -180,6 +180,27 @@ namespace TencentCloud.Pts.V20210728
         }
 
         /// <summary>
+        /// 创建环境
+        /// </summary>
+        /// <param name="req"><see cref="CreateEnvironmentRequest"/></param>
+        /// <returns><see cref="CreateEnvironmentResponse"/></returns>
+        public Task<CreateEnvironmentResponse> CreateEnvironment(CreateEnvironmentRequest req)
+        {
+            return InternalRequestAsync<CreateEnvironmentResponse>(req, "CreateEnvironment");
+        }
+
+        /// <summary>
+        /// 创建环境
+        /// </summary>
+        /// <param name="req"><see cref="CreateEnvironmentRequest"/></param>
+        /// <returns><see cref="CreateEnvironmentResponse"/></returns>
+        public CreateEnvironmentResponse CreateEnvironmentSync(CreateEnvironmentRequest req)
+        {
+            return InternalRequestAsync<CreateEnvironmentResponse>(req, "CreateEnvironment")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建文件
         /// </summary>
         /// <param name="req"><see cref="CreateFileRequest"/></param>
@@ -281,6 +302,27 @@ namespace TencentCloud.Pts.V20210728
         public DeleteCronJobsResponse DeleteCronJobsSync(DeleteCronJobsRequest req)
         {
             return InternalRequestAsync<DeleteCronJobsResponse>(req, "DeleteCronJobs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除环境
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEnvironmentsRequest"/></param>
+        /// <returns><see cref="DeleteEnvironmentsResponse"/></returns>
+        public Task<DeleteEnvironmentsResponse> DeleteEnvironments(DeleteEnvironmentsRequest req)
+        {
+            return InternalRequestAsync<DeleteEnvironmentsResponse>(req, "DeleteEnvironments");
+        }
+
+        /// <summary>
+        /// 删除环境
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEnvironmentsRequest"/></param>
+        /// <returns><see cref="DeleteEnvironmentsResponse"/></returns>
+        public DeleteEnvironmentsResponse DeleteEnvironmentsSync(DeleteEnvironmentsRequest req)
+        {
+            return InternalRequestAsync<DeleteEnvironmentsResponse>(req, "DeleteEnvironments")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -470,6 +512,27 @@ namespace TencentCloud.Pts.V20210728
         public DescribeCronJobsResponse DescribeCronJobsSync(DescribeCronJobsRequest req)
         {
             return InternalRequestAsync<DescribeCronJobsResponse>(req, "DescribeCronJobs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看环境列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnvironmentsRequest"/></param>
+        /// <returns><see cref="DescribeEnvironmentsResponse"/></returns>
+        public Task<DescribeEnvironmentsResponse> DescribeEnvironments(DescribeEnvironmentsRequest req)
+        {
+            return InternalRequestAsync<DescribeEnvironmentsResponse>(req, "DescribeEnvironments");
+        }
+
+        /// <summary>
+        /// 查看环境列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnvironmentsRequest"/></param>
+        /// <returns><see cref="DescribeEnvironmentsResponse"/></returns>
+        public DescribeEnvironmentsResponse DescribeEnvironmentsSync(DescribeEnvironmentsRequest req)
+        {
+            return InternalRequestAsync<DescribeEnvironmentsResponse>(req, "DescribeEnvironments")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -890,6 +953,27 @@ namespace TencentCloud.Pts.V20210728
         public UpdateCronJobResponse UpdateCronJobSync(UpdateCronJobRequest req)
         {
             return InternalRequestAsync<UpdateCronJobResponse>(req, "UpdateCronJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新环境
+        /// </summary>
+        /// <param name="req"><see cref="UpdateEnvironmentRequest"/></param>
+        /// <returns><see cref="UpdateEnvironmentResponse"/></returns>
+        public Task<UpdateEnvironmentResponse> UpdateEnvironment(UpdateEnvironmentRequest req)
+        {
+            return InternalRequestAsync<UpdateEnvironmentResponse>(req, "UpdateEnvironment");
+        }
+
+        /// <summary>
+        /// 更新环境
+        /// </summary>
+        /// <param name="req"><see cref="UpdateEnvironmentRequest"/></param>
+        /// <returns><see cref="UpdateEnvironmentResponse"/></returns>
+        public UpdateEnvironmentResponse UpdateEnvironmentSync(UpdateEnvironmentRequest req)
+        {
+            return InternalRequestAsync<UpdateEnvironmentResponse>(req, "UpdateEnvironment")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

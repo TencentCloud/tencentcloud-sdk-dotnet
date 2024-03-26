@@ -241,6 +241,27 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ShowType")]
         public string ShowType{ get; set; }
 
+        /// <summary>
+        /// 当前数据源生产源Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductId")]
+        public ulong? ProductId{ get; set; }
+
+        /// <summary>
+        /// 当前数据源开发源Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DevelopmentId")]
+        public ulong? DevelopmentId{ get; set; }
+
+        /// <summary>
+        /// 同params 内容为开发数据源的数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DevelopmentParams")]
+        public string DevelopmentParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -278,6 +299,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "BizParamsString", this.BizParamsString);
             this.SetParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
             this.SetParamSimple(map, prefix + "ShowType", this.ShowType);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
+            this.SetParamSimple(map, prefix + "DevelopmentId", this.DevelopmentId);
+            this.SetParamSimple(map, prefix + "DevelopmentParams", this.DevelopmentParams);
         }
     }
 }

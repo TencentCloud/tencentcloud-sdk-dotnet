@@ -164,6 +164,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public ulong? AlarmRecipientType{ get; set; }
 
         /// <summary>
+        /// 免打扰时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QuietPeriods")]
+        public QuietPeriod[] QuietPeriods{ get; set; }
+
+        /// <summary>
         /// 企业微信群Hook地址，多个hook地址使用,隔开
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -260,6 +267,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "NodeName", this.NodeName);
             this.SetParamArrayObj(map, prefix + "AlarmIndicatorInfos.", this.AlarmIndicatorInfos);
             this.SetParamSimple(map, prefix + "AlarmRecipientType", this.AlarmRecipientType);
+            this.SetParamArrayObj(map, prefix + "QuietPeriods.", this.QuietPeriods);
             this.SetParamSimple(map, prefix + "WeComHook", this.WeComHook);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "OperatorUin", this.OperatorUin);

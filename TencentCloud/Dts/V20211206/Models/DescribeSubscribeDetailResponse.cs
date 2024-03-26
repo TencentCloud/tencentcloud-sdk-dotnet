@@ -164,6 +164,13 @@ namespace TencentCloud.Dts.V20211206.Models
         public SubscribeKafkaConfig KafkaConfig{ get; set; }
 
         /// <summary>
+        /// 订阅内置kafka的版本信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KafkaVersion")]
+        public string KafkaVersion{ get; set; }
+
+        /// <summary>
         /// 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -240,6 +247,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamArrayObj(map, prefix + "SubscribeObjects.", this.SubscribeObjects);
             this.SetParamObj(map, prefix + "KafkaConfig.", this.KafkaConfig);
+            this.SetParamSimple(map, prefix + "KafkaVersion", this.KafkaVersion);
             this.SetParamSimple(map, prefix + "AccessType", this.AccessType);
             this.SetParamArrayObj(map, prefix + "Endpoints.", this.Endpoints);
             this.SetParamArrayObj(map, prefix + "PipelineInfo.", this.PipelineInfo);

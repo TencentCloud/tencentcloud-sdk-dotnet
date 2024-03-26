@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.972";
+       private const string sdkVersion = "SDK_NET_3.0.973";
 
         /// <summary>
         /// Client constructor.
@@ -2339,6 +2339,27 @@ namespace TencentCloud.Dlc.V20210125
         public QueryResultResponse QueryResultSync(QueryResultRequest req)
         {
             return InternalRequestAsync<QueryResultResponse>(req, "QueryResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（QueryTaskCostDetail）用于查询任务消耗明细
+        /// </summary>
+        /// <param name="req"><see cref="QueryTaskCostDetailRequest"/></param>
+        /// <returns><see cref="QueryTaskCostDetailResponse"/></returns>
+        public Task<QueryTaskCostDetailResponse> QueryTaskCostDetail(QueryTaskCostDetailRequest req)
+        {
+            return InternalRequestAsync<QueryTaskCostDetailResponse>(req, "QueryTaskCostDetail");
+        }
+
+        /// <summary>
+        /// 该接口（QueryTaskCostDetail）用于查询任务消耗明细
+        /// </summary>
+        /// <param name="req"><see cref="QueryTaskCostDetailRequest"/></param>
+        /// <returns><see cref="QueryTaskCostDetailResponse"/></returns>
+        public QueryTaskCostDetailResponse QueryTaskCostDetailSync(QueryTaskCostDetailRequest req)
+        {
+            return InternalRequestAsync<QueryTaskCostDetailResponse>(req, "QueryTaskCostDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

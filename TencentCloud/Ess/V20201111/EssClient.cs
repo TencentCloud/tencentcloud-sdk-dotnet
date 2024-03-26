@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.972";
+       private const string sdkVersion = "SDK_NET_3.0.973";
 
         /// <summary>
         /// Client constructor.
@@ -1468,7 +1468,9 @@ namespace TencentCloud.Ess.V20201111
         /// <li>原合同个人类型参与人必须是解除协议的参与人，<code>不能更换其他第三方个人</code>参与解除协议。</li>
         /// <li>如果原合同企业参与人无法参与解除协议，可以指定同企业具有同等权限的<code>企业员工代为处理</code>。</li>
         /// <li>发起解除协议同发起其他企业合同一样，也会参与合同<code>扣费</code>，扣费标准同其他类型合同。</li>
-        /// <li>在解除协议发起之后，原合同的状态将转变为解除中。一旦解除协议签署完毕，原合同及解除协议均变为已解除状态。</li></ul>
+        /// <li>在解除协议发起之后，原合同的状态将转变为解除中。一旦解除协议签署完毕，原合同及解除协议均变为已解除状态。</li>
+        /// <li>非原合同企业参与人发起解除协议时，需要有<code>解除合同的权限</code>。</li>
+        /// </ul>
         /// </summary>
         /// <param name="req"><see cref="CreateReleaseFlowRequest"/></param>
         /// <returns><see cref="CreateReleaseFlowResponse"/></returns>
@@ -1487,7 +1489,9 @@ namespace TencentCloud.Ess.V20201111
         /// <li>原合同个人类型参与人必须是解除协议的参与人，<code>不能更换其他第三方个人</code>参与解除协议。</li>
         /// <li>如果原合同企业参与人无法参与解除协议，可以指定同企业具有同等权限的<code>企业员工代为处理</code>。</li>
         /// <li>发起解除协议同发起其他企业合同一样，也会参与合同<code>扣费</code>，扣费标准同其他类型合同。</li>
-        /// <li>在解除协议发起之后，原合同的状态将转变为解除中。一旦解除协议签署完毕，原合同及解除协议均变为已解除状态。</li></ul>
+        /// <li>在解除协议发起之后，原合同的状态将转变为解除中。一旦解除协议签署完毕，原合同及解除协议均变为已解除状态。</li>
+        /// <li>非原合同企业参与人发起解除协议时，需要有<code>解除合同的权限</code>。</li>
+        /// </ul>
         /// </summary>
         /// <param name="req"><see cref="CreateReleaseFlowRequest"/></param>
         /// <returns><see cref="CreateReleaseFlowResponse"/></returns>

@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.972";
+       private const string sdkVersion = "SDK_NET_3.0.973";
 
         /// <summary>
         /// Client constructor.
@@ -3061,7 +3061,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口（ReleaseIsolatedDBInstances）用于恢复已隔离云数据库实例。
+        /// 本接口（ReleaseIsolatedDBInstances）用于恢复已隔离云数据库实例。仅用于按量计费实例的解隔离，包年包月实例的解隔离请使用 RenewDBInstance 。
         /// </summary>
         /// <param name="req"><see cref="ReleaseIsolatedDBInstancesRequest"/></param>
         /// <returns><see cref="ReleaseIsolatedDBInstancesResponse"/></returns>
@@ -3071,7 +3071,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口（ReleaseIsolatedDBInstances）用于恢复已隔离云数据库实例。
+        /// 本接口（ReleaseIsolatedDBInstances）用于恢复已隔离云数据库实例。仅用于按量计费实例的解隔离，包年包月实例的解隔离请使用 RenewDBInstance 。
         /// </summary>
         /// <param name="req"><see cref="ReleaseIsolatedDBInstancesRequest"/></param>
         /// <returns><see cref="ReleaseIsolatedDBInstancesResponse"/></returns>

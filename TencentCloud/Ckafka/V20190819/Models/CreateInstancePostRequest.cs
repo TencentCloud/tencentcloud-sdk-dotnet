@@ -31,12 +31,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 实例内网峰值带宽。单位 MB/s。标准版需传入当前实例规格所对应的峰值带宽。注意如果创建的实例为专业版实例，峰值带宽，分区数等参数配置需要满足专业版的计费规格。
-        /// </summary>
-        [JsonProperty("BandWidth")]
-        public long? BandWidth{ get; set; }
-
-        /// <summary>
         /// 创建的实例默认接入点所在的 vpc 对应 vpcId。目前不支持创建基础网络实例，因此该参数必填
         /// </summary>
         [JsonProperty("VpcId")]
@@ -47,6 +41,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
+
+        /// <summary>
+        /// 实例内网峰值带宽。单位 MB/s。标准版需传入当前实例规格所对应的峰值带宽。注意如果创建的实例为专业版实例，峰值带宽，分区数等参数配置需要满足专业版的计费规格。
+        /// </summary>
+        [JsonProperty("BandWidth")]
+        public long? BandWidth{ get; set; }
 
         /// <summary>
         /// 国际站标准版实例规格。目前只有国际站标准版使用当前字段区分规格，国内站标准版使用峰值带宽区分规格。除了国际站标准版外的所有实例填写 1 即可。国际站标准版实例：入门型(general)]填写1；[标准型(standard)]填写2；[进阶型(advanced)]填写3；[容量型(capacity)]填写4；[高阶型1(specialized-1)]填写5；[高阶型2(specialized-2)]填写6；[高阶型3(specialized-3)]填写7；[高阶型4(specialized-4)]填写8。
@@ -139,9 +139,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
-            this.SetParamSimple(map, prefix + "BandWidth", this.BandWidth);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "BandWidth", this.BandWidth);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "MsgRetentionTime", this.MsgRetentionTime);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);

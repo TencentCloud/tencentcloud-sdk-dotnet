@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.972";
+       private const string sdkVersion = "SDK_NET_3.0.973";
 
         /// <summary>
         /// Client constructor.
@@ -1925,9 +1925,10 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于检索分析日志, 该接口除受默认接口请求频率限制外，针对单个日志主题，查询并发数不能超过15。
-        /// 
-        /// API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Accept-Encoding:gzip）。
+        /// 本接口用于检索分析日志，使用该接口时请注意如下事项：
+        /// 1. 该接口除受默认接口请求频率限制外，针对单个日志主题，查询并发数不能超过15。
+        /// 2. 检索语法建议使用CQL语法规则，请使用SyntaxRule参数，将值设置为1。
+        /// 3. API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Accept-Encoding:gzip）。
         /// </summary>
         /// <param name="req"><see cref="SearchLogRequest"/></param>
         /// <returns><see cref="SearchLogResponse"/></returns>
@@ -1937,9 +1938,10 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于检索分析日志, 该接口除受默认接口请求频率限制外，针对单个日志主题，查询并发数不能超过15。
-        /// 
-        /// API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Accept-Encoding:gzip）。
+        /// 本接口用于检索分析日志，使用该接口时请注意如下事项：
+        /// 1. 该接口除受默认接口请求频率限制外，针对单个日志主题，查询并发数不能超过15。
+        /// 2. 检索语法建议使用CQL语法规则，请使用SyntaxRule参数，将值设置为1。
+        /// 3. API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Accept-Encoding:gzip）。
         /// </summary>
         /// <param name="req"><see cref="SearchLogRequest"/></param>
         /// <returns><see cref="SearchLogResponse"/></returns>

@@ -45,11 +45,27 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Query{ get; set; }
 
         /// <summary>
+        /// 检索语法规则，默认值为0，推荐使用1 (CQL语法)。
+        /// 0：Lucene语法，1：CQL语法。
+        /// 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+        /// </summary>
+        [JsonProperty("SyntaxRule")]
+        public ulong? SyntaxRule{ get; set; }
+
+        /// <summary>
         /// - 要检索分析的日志主题ID，仅能指定一个日志主题。
         /// - 如需同时检索多个日志主题，请使用Topics参数。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
+
+        /// <summary>
+        /// - 要检索分析的日志主题列表，最大支持20个日志主题。
+        /// - 检索单个日志主题时请使用TopicId。
+        /// - 不能同时使用TopicId和Topics。
+        /// </summary>
+        [JsonProperty("Topics")]
+        public MultiTopicSearchInformation[] Topics{ get; set; }
 
         /// <summary>
         /// 表示单次查询返回的原始日志条数，默认为100，最大值为1000，获取后续日志需使用Context参数
@@ -59,6 +75,15 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
+
+        /// <summary>
+        /// 原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+        /// 注意：
+        /// * 仅当检索分析语句(Query)不包含SQL时有效
+        /// * SQL结果排序方式参考<a href="https://cloud.tencent.com/document/product/614/58978" target="_blank">SQL ORDER BY语法</a>
+        /// </summary>
+        [JsonProperty("Sort")]
+        public string Sort{ get; set; }
 
         /// <summary>
         /// 透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时。
@@ -71,23 +96,6 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Context{ get; set; }
 
         /// <summary>
-        /// 原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
-        /// 注意：
-        /// * 仅当检索分析语句(Query)不包含SQL时有效
-        /// * SQL结果排序方式参考<a href="https://cloud.tencent.com/document/product/614/58978" target="_blank">SQL ORDER BY语法</a>
-        /// </summary>
-        [JsonProperty("Sort")]
-        public string Sort{ get; set; }
-
-        /// <summary>
-        /// 为true代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效
-        /// 为false时代表使用老的检索结果返回方式, 输出AnalysisResults和ColNames有效
-        /// 两种返回方式在编码格式上有少量区别，建议使用true
-        /// </summary>
-        [JsonProperty("UseNewAnalysis")]
-        public bool? UseNewAnalysis{ get; set; }
-
-        /// <summary>
         /// 执行统计分析（Query中包含SQL）时，是否对原始日志先进行采样，再进行统计分析。
         /// 0：自动采样;
         /// 0～1：按指定采样率采样，例如0.02;
@@ -98,20 +106,12 @@ namespace TencentCloud.Cls.V20201016.Models
         public float? SamplingRate{ get; set; }
 
         /// <summary>
-        /// 检索语法规则，默认值为0。
-        /// 0：Lucene语法，1：CQL语法。
-        /// 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+        /// 为true代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效
+        /// 为false时代表使用老的检索结果返回方式, 输出AnalysisResults和ColNames有效
+        /// 两种返回方式在编码格式上有少量区别，建议使用true
         /// </summary>
-        [JsonProperty("SyntaxRule")]
-        public ulong? SyntaxRule{ get; set; }
-
-        /// <summary>
-        /// - 要检索分析的日志主题列表，最大支持20个日志主题。
-        /// - 检索单个日志主题时请使用TopicId。
-        /// - 不能同时使用TopicId和Topics。
-        /// </summary>
-        [JsonProperty("Topics")]
-        public MultiTopicSearchInformation[] Topics{ get; set; }
+        [JsonProperty("UseNewAnalysis")]
+        public bool? UseNewAnalysis{ get; set; }
 
 
         /// <summary>
@@ -122,14 +122,14 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "From", this.From);
             this.SetParamSimple(map, prefix + "To", this.To);
             this.SetParamSimple(map, prefix + "Query", this.Query);
-            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Context", this.Context);
-            this.SetParamSimple(map, prefix + "Sort", this.Sort);
-            this.SetParamSimple(map, prefix + "UseNewAnalysis", this.UseNewAnalysis);
-            this.SetParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
             this.SetParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
+            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamArrayObj(map, prefix + "Topics.", this.Topics);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Sort", this.Sort);
+            this.SetParamSimple(map, prefix + "Context", this.Context);
+            this.SetParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
+            this.SetParamSimple(map, prefix + "UseNewAnalysis", this.UseNewAnalysis);
         }
     }
 }
