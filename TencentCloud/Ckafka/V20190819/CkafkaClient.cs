@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.973";
+       private const string sdkVersion = "SDK_NET_3.0.974";
 
         /// <summary>
         /// Client constructor.
@@ -407,6 +407,27 @@ namespace TencentCloud.Ckafka.V20190819
         public CreatePostPaidInstanceResponse CreatePostPaidInstanceSync(CreatePostPaidInstanceRequest req)
         {
             return InternalRequestAsync<CreatePostPaidInstanceResponse>(req, "CreatePostPaidInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加普罗米修斯监控1
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrometheusRequest"/></param>
+        /// <returns><see cref="CreatePrometheusResponse"/></returns>
+        public Task<CreatePrometheusResponse> CreatePrometheus(CreatePrometheusRequest req)
+        {
+            return InternalRequestAsync<CreatePrometheusResponse>(req, "CreatePrometheus");
+        }
+
+        /// <summary>
+        /// 添加普罗米修斯监控1
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrometheusRequest"/></param>
+        /// <returns><see cref="CreatePrometheusResponse"/></returns>
+        public CreatePrometheusResponse CreatePrometheusSync(CreatePrometheusRequest req)
+        {
+            return InternalRequestAsync<CreatePrometheusResponse>(req, "CreatePrometheus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1163,6 +1184,27 @@ namespace TencentCloud.Ckafka.V20190819
         public DescribeInstancesDetailResponse DescribeInstancesDetailSync(DescribeInstancesDetailRequest req)
         {
             return InternalRequestAsync<DescribeInstancesDetailResponse>(req, "DescribeInstancesDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取实例Prometheus信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusRequest"/></param>
+        /// <returns><see cref="DescribePrometheusResponse"/></returns>
+        public Task<DescribePrometheusResponse> DescribePrometheus(DescribePrometheusRequest req)
+        {
+            return InternalRequestAsync<DescribePrometheusResponse>(req, "DescribePrometheus");
+        }
+
+        /// <summary>
+        /// 获取实例Prometheus信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusRequest"/></param>
+        /// <returns><see cref="DescribePrometheusResponse"/></returns>
+        public DescribePrometheusResponse DescribePrometheusSync(DescribePrometheusRequest req)
+        {
+            return InternalRequestAsync<DescribePrometheusResponse>(req, "DescribePrometheus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

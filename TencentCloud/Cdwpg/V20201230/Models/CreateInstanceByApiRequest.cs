@@ -72,6 +72,12 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         [JsonProperty("Tags")]
         public Tag Tags{ get; set; }
 
+        /// <summary>
+        /// 版本
+        /// </summary>
+        [JsonProperty("ProductVersion")]
+        public string ProductVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Cdwpg.V20201230.Models
             this.SetParamSimple(map, prefix + "AdminPassword", this.AdminPassword);
             this.SetParamArrayObj(map, prefix + "Resources.", this.Resources);
             this.SetParamObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "ProductVersion", this.ProductVersion);
         }
     }
 }

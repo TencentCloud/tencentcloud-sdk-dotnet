@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.973</VersionPrefix>
+    <VersionPrefix>3.0.974</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -117,6 +117,8 @@
     <Compile Include="V20190819\Models\CreatePartitionResponse.cs" />
     <Compile Include="V20190819\Models\CreatePostPaidInstanceRequest.cs" />
     <Compile Include="V20190819\Models\CreatePostPaidInstanceResponse.cs" />
+    <Compile Include="V20190819\Models\CreatePrometheusRequest.cs" />
+    <Compile Include="V20190819\Models\CreatePrometheusResponse.cs" />
     <Compile Include="V20190819\Models\CreateRouteRequest.cs" />
     <Compile Include="V20190819\Models\CreateRouteResponse.cs" />
     <Compile Include="V20190819\Models\CreateTokenRequest.cs" />
@@ -209,6 +211,8 @@
     <Compile Include="V20190819\Models\DescribeInstancesDetailResponse.cs" />
     <Compile Include="V20190819\Models\DescribeInstancesRequest.cs" />
     <Compile Include="V20190819\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20190819\Models\DescribePrometheusRequest.cs" />
+    <Compile Include="V20190819\Models\DescribePrometheusResponse.cs" />
     <Compile Include="V20190819\Models\DescribeRegionRequest.cs" />
     <Compile Include="V20190819\Models\DescribeRegionResponse.cs" />
     <Compile Include="V20190819\Models\DescribeRouteRequest.cs" />
@@ -327,6 +331,8 @@
     <Compile Include="V20190819\Models\PostgreSQLParam.cs" />
     <Compile Include="V20190819\Models\Price.cs" />
     <Compile Include="V20190819\Models\PrivateLinkParam.cs" />
+    <Compile Include="V20190819\Models\PrometheusDTO.cs" />
+    <Compile Include="V20190819\Models\PrometheusResult.cs" />
     <Compile Include="V20190819\Models\RecordMapping.cs" />
     <Compile Include="V20190819\Models\RegexReplaceParam.cs" />
     <Compile Include="V20190819\Models\Region.cs" />

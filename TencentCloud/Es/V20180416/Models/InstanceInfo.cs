@@ -73,7 +73,7 @@ namespace TencentCloud.Es.V20180416.Models
         public string SubnetUid{ get; set; }
 
         /// <summary>
-        /// 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁, 2:创建集群时初始化中
+        /// 实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -317,7 +317,7 @@ namespace TencentCloud.Es.V20180416.Models
         public ulong? DeployMode{ get; set; }
 
         /// <summary>
-        /// ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+        /// ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicAccess")]
@@ -337,14 +337,14 @@ namespace TencentCloud.Es.V20180416.Models
         public string KibanaPrivateUrl{ get; set; }
 
         /// <summary>
-        /// Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+        /// Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KibanaPublicAccess")]
         public string KibanaPublicAccess{ get; set; }
 
         /// <summary>
-        /// Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+        /// Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KibanaPrivateAccess")]
@@ -554,7 +554,7 @@ namespace TencentCloud.Es.V20180416.Models
         public float? ProcessPercent{ get; set; }
 
         /// <summary>
-        /// Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+        /// Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KibanaAlteringPublicAccess")]
@@ -587,6 +587,20 @@ namespace TencentCloud.Es.V20180416.Models
         /// </summary>
         [JsonProperty("CustomKibanaPrivateUrl")]
         public string CustomKibanaPrivateUrl{ get; set; }
+
+        /// <summary>
+        /// 节点出站访问详细信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OutboundPublicAcls")]
+        public OutboundPublicAcl[] OutboundPublicAcls{ get; set; }
+
+        /// <summary>
+        /// 网络连接方案
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NetConnectScheme")]
+        public string NetConnectScheme{ get; set; }
 
 
         /// <summary>
@@ -679,6 +693,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
             this.SetParamSimple(map, prefix + "KibanaPrivateVip", this.KibanaPrivateVip);
             this.SetParamSimple(map, prefix + "CustomKibanaPrivateUrl", this.CustomKibanaPrivateUrl);
+            this.SetParamArrayObj(map, prefix + "OutboundPublicAcls.", this.OutboundPublicAcls);
+            this.SetParamSimple(map, prefix + "NetConnectScheme", this.NetConnectScheme);
         }
     }
 }

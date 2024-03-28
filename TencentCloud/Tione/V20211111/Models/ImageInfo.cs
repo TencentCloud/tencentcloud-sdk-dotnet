@@ -64,6 +64,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ImageName")]
         public string ImageName{ get; set; }
 
+        /// <summary>
+        /// 是否支持数据构建
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SupportDataPipeline")]
+        public bool? SupportDataPipeline{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,6 +83,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
             this.SetParamSimple(map, prefix + "AllowSaveAllContent", this.AllowSaveAllContent);
             this.SetParamSimple(map, prefix + "ImageName", this.ImageName);
+            this.SetParamSimple(map, prefix + "SupportDataPipeline", this.SupportDataPipeline);
         }
     }
 }

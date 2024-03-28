@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.973";
+       private const string sdkVersion = "SDK_NET_3.0.974";
 
         /// <summary>
         /// Client constructor.
@@ -218,6 +218,27 @@ namespace TencentCloud.Ccc.V20200210
         public CreateCarrierPrivilegeNumberApplicantResponse CreateCarrierPrivilegeNumberApplicantSync(CreateCarrierPrivilegeNumberApplicantRequest req)
         {
             return InternalRequestAsync<CreateCarrierPrivilegeNumberApplicantResponse>(req, "CreateCarrierPrivilegeNumberApplicant")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建公司资质申请（1、首次使用接口，建议先在云联络中心控制台查看各个资料模版:https://console.cloud.tencent.com/ccc/enterprise/update。2、参数中图片Url建议使用腾讯云Cos存储的临时链接）
+        /// </summary>
+        /// <param name="req"><see cref="CreateCompanyApplyRequest"/></param>
+        /// <returns><see cref="CreateCompanyApplyResponse"/></returns>
+        public Task<CreateCompanyApplyResponse> CreateCompanyApply(CreateCompanyApplyRequest req)
+        {
+            return InternalRequestAsync<CreateCompanyApplyResponse>(req, "CreateCompanyApply");
+        }
+
+        /// <summary>
+        /// 创建公司资质申请（1、首次使用接口，建议先在云联络中心控制台查看各个资料模版:https://console.cloud.tencent.com/ccc/enterprise/update。2、参数中图片Url建议使用腾讯云Cos存储的临时链接）
+        /// </summary>
+        /// <param name="req"><see cref="CreateCompanyApplyRequest"/></param>
+        /// <returns><see cref="CreateCompanyApplyResponse"/></returns>
+        public CreateCompanyApplyResponse CreateCompanyApplySync(CreateCompanyApplyRequest req)
+        {
+            return InternalRequestAsync<CreateCompanyApplyResponse>(req, "CreateCompanyApply")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -537,6 +558,27 @@ namespace TencentCloud.Ccc.V20200210
         public DescribeChatMessagesResponse DescribeChatMessagesSync(DescribeChatMessagesRequest req)
         {
             return InternalRequestAsync<DescribeChatMessagesResponse>(req, "DescribeChatMessages")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询公司资质申请列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCompanyListRequest"/></param>
+        /// <returns><see cref="DescribeCompanyListResponse"/></returns>
+        public Task<DescribeCompanyListResponse> DescribeCompanyList(DescribeCompanyListRequest req)
+        {
+            return InternalRequestAsync<DescribeCompanyListResponse>(req, "DescribeCompanyList");
+        }
+
+        /// <summary>
+        /// 查询公司资质申请列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCompanyListRequest"/></param>
+        /// <returns><see cref="DescribeCompanyListResponse"/></returns>
+        public DescribeCompanyListResponse DescribeCompanyListSync(DescribeCompanyListRequest req)
+        {
+            return InternalRequestAsync<DescribeCompanyListResponse>(req, "DescribeCompanyList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -915,6 +957,27 @@ namespace TencentCloud.Ccc.V20200210
         public HangUpCallResponse HangUpCallSync(HangUpCallRequest req)
         {
             return InternalRequestAsync<HangUpCallResponse>(req, "HangUpCall")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改公司资质申请，只能修改状态为驳回或待审核的申请单。（1、首次使用接口，建议先在云联络中心控制台查看各个资料模版:https://console.cloud.tencent.com/ccc/enterprise/update。2、参数中图片Url建议使用腾讯云Cos存储的临时链接）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCompanyApplyRequest"/></param>
+        /// <returns><see cref="ModifyCompanyApplyResponse"/></returns>
+        public Task<ModifyCompanyApplyResponse> ModifyCompanyApply(ModifyCompanyApplyRequest req)
+        {
+            return InternalRequestAsync<ModifyCompanyApplyResponse>(req, "ModifyCompanyApply");
+        }
+
+        /// <summary>
+        /// 修改公司资质申请，只能修改状态为驳回或待审核的申请单。（1、首次使用接口，建议先在云联络中心控制台查看各个资料模版:https://console.cloud.tencent.com/ccc/enterprise/update。2、参数中图片Url建议使用腾讯云Cos存储的临时链接）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCompanyApplyRequest"/></param>
+        /// <returns><see cref="ModifyCompanyApplyResponse"/></returns>
+        public ModifyCompanyApplyResponse ModifyCompanyApplySync(ModifyCompanyApplyRequest req)
+        {
+            return InternalRequestAsync<ModifyCompanyApplyResponse>(req, "ModifyCompanyApply")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

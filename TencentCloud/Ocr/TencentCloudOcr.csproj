@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.973</VersionPrefix>
+    <VersionPrefix>3.0.974</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -83,6 +83,8 @@
     <Compile Include="V20181119\Models\DetailInformationOfAirTicketTupleList.cs" />
     <Compile Include="V20181119\Models\DetectedWordCoordPoint.cs" />
     <Compile Include="V20181119\Models\DetectedWords.cs" />
+    <Compile Include="V20181119\Models\DocumentElement.cs" />
+    <Compile Include="V20181119\Models\DocumentRecognizeInfo.cs" />
     <Compile Include="V20181119\Models\DriverLicenseOCRRequest.cs" />
     <Compile Include="V20181119\Models\DriverLicenseOCRResponse.cs" />
     <Compile Include="V20181119\Models\DutyPaidProofInfo.cs" />
@@ -235,6 +237,9 @@
     <Compile Include="V20181119\Models\RecognizeThaiIDCardOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeTravelCardOCRRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeTravelCardOCRResponse.cs" />
+    <Compile Include="V20181119\Models\ReconstructDocumentConfig.cs" />
+    <Compile Include="V20181119\Models\ReconstructDocumentRequest.cs" />
+    <Compile Include="V20181119\Models\ReconstructDocumentResponse.cs" />
     <Compile Include="V20181119\Models\Rect.cs" />
     <Compile Include="V20181119\Models\ReflectDetailInfo.cs" />
     <Compile Include="V20181119\Models\ResidenceBookletOCRRequest.cs" />

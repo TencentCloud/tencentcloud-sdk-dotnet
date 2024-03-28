@@ -83,6 +83,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GovernPolicy")]
+        [System.Obsolete]
         public DataGovernPolicy GovernPolicy{ get; set; }
 
         /// <summary>
@@ -90,6 +91,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DbGovernPolicyIsDisable")]
+        [System.Obsolete]
         public string DbGovernPolicyIsDisable{ get; set; }
 
         /// <summary>

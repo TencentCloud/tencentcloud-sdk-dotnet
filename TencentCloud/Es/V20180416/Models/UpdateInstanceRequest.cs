@@ -252,6 +252,26 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
+        /// <summary>
+        /// 节点出站访问详细信息
+        /// </summary>
+        [JsonProperty("OutboundPublicAcls")]
+        public OutboundPublicAcl[] OutboundPublicAcls{ get; set; }
+
+        /// <summary>
+        /// 节点出站访问操作
+        /// OPEN 开启
+        /// CLOSE 关闭
+        /// </summary>
+        [JsonProperty("OutboundPublicAccess")]
+        public string OutboundPublicAccess{ get; set; }
+
+        /// <summary>
+        /// cvm延迟上架参数
+        /// </summary>
+        [JsonProperty("CvmDelayOnlineTime")]
+        public ulong? CvmDelayOnlineTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -293,6 +313,9 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "KibanaPrivateDomain", this.KibanaPrivateDomain);
             this.SetParamSimple(map, prefix + "CerebroPrivateDomain", this.CerebroPrivateDomain);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamArrayObj(map, prefix + "OutboundPublicAcls.", this.OutboundPublicAcls);
+            this.SetParamSimple(map, prefix + "OutboundPublicAccess", this.OutboundPublicAccess);
+            this.SetParamSimple(map, prefix + "CvmDelayOnlineTime", this.CvmDelayOnlineTime);
         }
     }
 }

@@ -180,7 +180,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string Command{ get; set; }
 
         /// <summary>
-        /// 是否开启TIONE内网访问外部
+        /// 是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。
         /// </summary>
         [JsonProperty("ServiceEIP")]
         public ServiceEIP ServiceEIP{ get; set; }

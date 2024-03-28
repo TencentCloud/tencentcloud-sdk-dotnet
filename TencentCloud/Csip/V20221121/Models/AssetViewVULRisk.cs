@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AffectAsset{ get; set; }
 
         /// <summary>
-        /// 风险等级
+        /// 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }

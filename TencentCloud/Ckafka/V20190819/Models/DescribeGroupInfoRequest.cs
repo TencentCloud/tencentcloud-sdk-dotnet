@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Kafka 消费分组，Consumer-group，这里是数组形式，格式：GroupList.0=xxx&GroupList.1=yyy。
+        /// Kafka 消费分组，Consumer-group，这里是数组形式，示例：["xxx","yyy"]
         /// </summary>
         [JsonProperty("GroupList")]
         public string[] GroupList{ get; set; }

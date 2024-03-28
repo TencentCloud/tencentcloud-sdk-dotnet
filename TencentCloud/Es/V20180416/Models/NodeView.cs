@@ -132,6 +132,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("IsCoordinationNode")]
         public bool? IsCoordinationNode{ get; set; }
 
+        /// <summary>
+        /// CVM运行状态
+        /// </summary>
+        [JsonProperty("CVMStatus")]
+        public string CVMStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
             this.SetParamSimple(map, prefix + "Hidden", this.Hidden);
             this.SetParamSimple(map, prefix + "IsCoordinationNode", this.IsCoordinationNode);
+            this.SetParamSimple(map, prefix + "CVMStatus", this.CVMStatus);
         }
     }
 }

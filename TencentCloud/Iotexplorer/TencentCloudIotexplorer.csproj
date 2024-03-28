@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.973</VersionPrefix>
+    <VersionPrefix>3.0.974</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,8 @@
     <Compile Include="V20190423\IotexplorerClient.cs" />
     <Compile Include="V20190423\Models\AppDeviceInfo.cs" />
     <Compile Include="V20190423\Models\BatchProductionInfo.cs" />
+    <Compile Include="V20190423\Models\BindCloudStorageUserRequest.cs" />
+    <Compile Include="V20190423\Models\BindCloudStorageUserResponse.cs" />
     <Compile Include="V20190423\Models\BindDeviceInfo.cs" />
     <Compile Include="V20190423\Models\BindDevicesRequest.cs" />
     <Compile Include="V20190423\Models\BindDevicesResponse.cs" />
@@ -60,6 +62,10 @@
     <Compile Include="V20190423\Models\CallDeviceActionAsyncResponse.cs" />
     <Compile Include="V20190423\Models\CallDeviceActionSyncRequest.cs" />
     <Compile Include="V20190423\Models\CallDeviceActionSyncResponse.cs" />
+    <Compile Include="V20190423\Models\CloudStorageEvent.cs" />
+    <Compile Include="V20190423\Models\CloudStorageTimeData.cs" />
+    <Compile Include="V20190423\Models\CloudStorageTimeInfo.cs" />
+    <Compile Include="V20190423\Models\CloudStorageUserInfo.cs" />
     <Compile Include="V20190423\Models\ControlDeviceDataRequest.cs" />
     <Compile Include="V20190423\Models\ControlDeviceDataResponse.cs" />
     <Compile Include="V20190423\Models\CreateBatchProductionRequest.cs" />
@@ -68,6 +74,8 @@
     <Compile Include="V20190423\Models\CreateDeviceResponse.cs" />
     <Compile Include="V20190423\Models\CreateFenceBindRequest.cs" />
     <Compile Include="V20190423\Models\CreateFenceBindResponse.cs" />
+    <Compile Include="V20190423\Models\CreateIotVideoCloudStorageRequest.cs" />
+    <Compile Include="V20190423\Models\CreateIotVideoCloudStorageResponse.cs" />
     <Compile Include="V20190423\Models\CreateLoRaFrequencyRequest.cs" />
     <Compile Include="V20190423\Models\CreateLoRaFrequencyResponse.cs" />
     <Compile Include="V20190423\Models\CreateLoRaGatewayRequest.cs" />
@@ -84,6 +92,8 @@
     <Compile Include="V20190423\Models\CreateTopicPolicyResponse.cs" />
     <Compile Include="V20190423\Models\CreateTopicRuleRequest.cs" />
     <Compile Include="V20190423\Models\CreateTopicRuleResponse.cs" />
+    <Compile Include="V20190423\Models\DeleteCloudStorageEventRequest.cs" />
+    <Compile Include="V20190423\Models\DeleteCloudStorageEventResponse.cs" />
     <Compile Include="V20190423\Models\DeleteDeviceRequest.cs" />
     <Compile Include="V20190423\Models\DeleteDeviceResponse.cs" />
     <Compile Include="V20190423\Models\DeleteDevicesRequest.cs" />
@@ -110,6 +120,30 @@
     <Compile Include="V20190423\Models\DescribeBatchProductionResponse.cs" />
     <Compile Include="V20190423\Models\DescribeBindedProductsRequest.cs" />
     <Compile Include="V20190423\Models\DescribeBindedProductsResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStorageDateRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStorageDateResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStorageEventsRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStorageEventsResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStorageMultiThumbnailRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStorageMultiThumbnailResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStorageOrderRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStorageOrderResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStoragePackageConsumeDetailsRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStoragePackageConsumeDetailsResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStoragePackageConsumeStatsRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStoragePackageConsumeStatsResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStorageRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStorageResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStorageStreamDataRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStorageStreamDataResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStorageThumbnailListRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStorageThumbnailListResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStorageThumbnailRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStorageThumbnailResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStorageTimeRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStorageTimeResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStorageUsersRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStorageUsersResponse.cs" />
     <Compile Include="V20190423\Models\DescribeDeviceBindGatewayRequest.cs" />
     <Compile Include="V20190423\Models\DescribeDeviceBindGatewayResponse.cs" />
     <Compile Include="V20190423\Models\DescribeDeviceDataHistoryRequest.cs" />
@@ -120,6 +154,8 @@
     <Compile Include="V20190423\Models\DescribeDeviceFirmWareResponse.cs" />
     <Compile Include="V20190423\Models\DescribeDeviceLocationSolveRequest.cs" />
     <Compile Include="V20190423\Models\DescribeDeviceLocationSolveResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeDevicePackagesRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeDevicePackagesResponse.cs" />
     <Compile Include="V20190423\Models\DescribeDevicePositionListRequest.cs" />
     <Compile Include="V20190423\Models\DescribeDevicePositionListResponse.cs" />
     <Compile Include="V20190423\Models\DescribeDeviceRequest.cs" />
@@ -142,6 +178,10 @@
     <Compile Include="V20190423\Models\DescribeLoRaFrequencyResponse.cs" />
     <Compile Include="V20190423\Models\DescribeModelDefinitionRequest.cs" />
     <Compile Include="V20190423\Models\DescribeModelDefinitionResponse.cs" />
+    <Compile Include="V20190423\Models\DescribePackageConsumeTaskRequest.cs" />
+    <Compile Include="V20190423\Models\DescribePackageConsumeTaskResponse.cs" />
+    <Compile Include="V20190423\Models\DescribePackageConsumeTasksRequest.cs" />
+    <Compile Include="V20190423\Models\DescribePackageConsumeTasksResponse.cs" />
     <Compile Include="V20190423\Models\DescribePositionFenceListRequest.cs" />
     <Compile Include="V20190423\Models\DescribePositionFenceListResponse.cs" />
     <Compile Include="V20190423\Models\DescribeProjectRequest.cs" />
@@ -176,6 +216,8 @@
     <Compile Include="V20190423\Models\FirmwareInfo.cs" />
     <Compile Include="V20190423\Models\GenSingleDeviceSignatureOfPublicRequest.cs" />
     <Compile Include="V20190423\Models\GenSingleDeviceSignatureOfPublicResponse.cs" />
+    <Compile Include="V20190423\Models\GenerateSignedVideoURLRequest.cs" />
+    <Compile Include="V20190423\Models\GenerateSignedVideoURLResponse.cs" />
     <Compile Include="V20190423\Models\GetBatchProductionsListRequest.cs" />
     <Compile Include="V20190423\Models\GetBatchProductionsListResponse.cs" />
     <Compile Include="V20190423\Models\GetCOSURLRequest.cs" />
@@ -200,6 +242,8 @@
     <Compile Include="V20190423\Models\GetStudioProductListResponse.cs" />
     <Compile Include="V20190423\Models\GetTopicRuleListRequest.cs" />
     <Compile Include="V20190423\Models\GetTopicRuleListResponse.cs" />
+    <Compile Include="V20190423\Models\InheritCloudStorageUserRequest.cs" />
+    <Compile Include="V20190423\Models\InheritCloudStorageUserResponse.cs" />
     <Compile Include="V20190423\Models\InstanceDetail.cs" />
     <Compile Include="V20190423\Models\ListEventHistoryRequest.cs" />
     <Compile Include="V20190423\Models\ListEventHistoryResponse.cs" />
@@ -232,6 +276,9 @@
     <Compile Include="V20190423\Models\ModifyTopicPolicyResponse.cs" />
     <Compile Include="V20190423\Models\ModifyTopicRuleRequest.cs" />
     <Compile Include="V20190423\Models\ModifyTopicRuleResponse.cs" />
+    <Compile Include="V20190423\Models\PackageConsumeStat.cs" />
+    <Compile Include="V20190423\Models\PackageConsumeTask.cs" />
+    <Compile Include="V20190423\Models\PackageInfo.cs" />
     <Compile Include="V20190423\Models\PositionFenceInfo.cs" />
     <Compile Include="V20190423\Models\PositionFenceItem.cs" />
     <Compile Include="V20190423\Models\PositionItem.cs" />
@@ -249,6 +296,10 @@
     <Compile Include="V20190423\Models\PublishRRPCMessageResponse.cs" />
     <Compile Include="V20190423\Models\ReleaseStudioProductRequest.cs" />
     <Compile Include="V20190423\Models\ReleaseStudioProductResponse.cs" />
+    <Compile Include="V20190423\Models\ResetCloudStorageEventRequest.cs" />
+    <Compile Include="V20190423\Models\ResetCloudStorageEventResponse.cs" />
+    <Compile Include="V20190423\Models\ResetCloudStorageRequest.cs" />
+    <Compile Include="V20190423\Models\ResetCloudStorageResponse.cs" />
     <Compile Include="V20190423\Models\SearchKeyword.cs" />
     <Compile Include="V20190423\Models\SearchPositionSpaceRequest.cs" />
     <Compile Include="V20190423\Models\SearchPositionSpaceResponse.cs" />
@@ -256,10 +307,13 @@
     <Compile Include="V20190423\Models\SearchStudioProductResponse.cs" />
     <Compile Include="V20190423\Models\SearchTopicRuleRequest.cs" />
     <Compile Include="V20190423\Models\SearchTopicRuleResponse.cs" />
+    <Compile Include="V20190423\Models\ThumbnailURLInfoList.cs" />
     <Compile Include="V20190423\Models\TopicItem.cs" />
     <Compile Include="V20190423\Models\TopicRule.cs" />
     <Compile Include="V20190423\Models\TopicRuleInfo.cs" />
     <Compile Include="V20190423\Models\TopicRulePayload.cs" />
+    <Compile Include="V20190423\Models\TransferCloudStorageRequest.cs" />
+    <Compile Include="V20190423\Models\TransferCloudStorageResponse.cs" />
     <Compile Include="V20190423\Models\UnbindDevicesRequest.cs" />
     <Compile Include="V20190423\Models\UnbindDevicesResponse.cs" />
     <Compile Include="V20190423\Models\UnbindProductsRequest.cs" />

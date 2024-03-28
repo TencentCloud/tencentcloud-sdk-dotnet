@@ -104,13 +104,13 @@ namespace TencentCloud.Ess.V20201111.Models
         ///   禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
         /// </summary>
         [JsonProperty("ForbidAddApprover")]
-        public string ForbidAddApprover{ get; set; }
+        public bool? ForbidAddApprover{ get; set; }
 
         /// <summary>
         ///   禁止设置设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
         /// </summary>
         [JsonProperty("ForbidEditFlowProperties")]
-        public string ForbidEditFlowProperties{ get; set; }
+        public bool? ForbidEditFlowProperties{ get; set; }
 
         /// <summary>
         /// 在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用，具体的控件类型如下

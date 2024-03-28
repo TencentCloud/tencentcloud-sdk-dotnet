@@ -54,6 +54,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("IsOffline")]
         public bool? IsOffline{ get; set; }
 
+        /// <summary>
+        /// cvm延迟上架时间
+        /// </summary>
+        [JsonProperty("CvmDelayOnlineTime")]
+        public ulong? CvmDelayOnlineTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
             this.SetParamSimple(map, prefix + "RestartMode", this.RestartMode);
             this.SetParamSimple(map, prefix + "IsOffline", this.IsOffline);
+            this.SetParamSimple(map, prefix + "CvmDelayOnlineTime", this.CvmDelayOnlineTime);
         }
     }
 }

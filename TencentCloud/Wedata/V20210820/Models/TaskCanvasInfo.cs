@@ -313,6 +313,104 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TenantId")]
         public string TenantId{ get; set; }
 
+        /// <summary>
+        /// 自依赖类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SelfDepend")]
+        public long? SelfDepend{ get; set; }
+
+        /// <summary>
+        /// 资源组id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExecutorGroupId")]
+        public string ExecutorGroupId{ get; set; }
+
+        /// <summary>
+        /// 资源组名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExecutorGroupName")]
+        public string ExecutorGroupName{ get; set; }
+
+        /// <summary>
+        /// 优先级
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RunPriority")]
+        public string RunPriority{ get; set; }
+
+        /// <summary>
+        /// 可充实次数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TryLimit")]
+        public string TryLimit{ get; set; }
+
+        /// <summary>
+        /// 可充实
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RetryAble")]
+        public string RetryAble{ get; set; }
+
+        /// <summary>
+        /// 重试等待事件
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RetryWait")]
+        public string RetryWait{ get; set; }
+
+        /// <summary>
+        /// 最近提交时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LastSchedulerCommitTime")]
+        public string LastSchedulerCommitTime{ get; set; }
+
+        /// <summary>
+        /// 备注
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Notes")]
+        public string Notes{ get; set; }
+
+        /// <summary>
+        /// 创建人
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Creator")]
+        public string Creator{ get; set; }
+
+        /// <summary>
+        /// 创建人id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpdateUser")]
+        public string UpdateUser{ get; set; }
+
+        /// <summary>
+        /// 更新人id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpdateUserId")]
+        public string UpdateUserId{ get; set; }
+
+        /// <summary>
+        /// yarn队列
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("YarnQueue")]
+        public string YarnQueue{ get; set; }
+
+        /// <summary>
+        /// 可执行的timeToLive
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExecutionTTL")]
+        public long? ExecutionTTL{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -353,6 +451,20 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "OwnerId", this.OwnerId);
             this.SetParamSimple(map, prefix + "TenantId", this.TenantId);
+            this.SetParamSimple(map, prefix + "SelfDepend", this.SelfDepend);
+            this.SetParamSimple(map, prefix + "ExecutorGroupId", this.ExecutorGroupId);
+            this.SetParamSimple(map, prefix + "ExecutorGroupName", this.ExecutorGroupName);
+            this.SetParamSimple(map, prefix + "RunPriority", this.RunPriority);
+            this.SetParamSimple(map, prefix + "TryLimit", this.TryLimit);
+            this.SetParamSimple(map, prefix + "RetryAble", this.RetryAble);
+            this.SetParamSimple(map, prefix + "RetryWait", this.RetryWait);
+            this.SetParamSimple(map, prefix + "LastSchedulerCommitTime", this.LastSchedulerCommitTime);
+            this.SetParamSimple(map, prefix + "Notes", this.Notes);
+            this.SetParamSimple(map, prefix + "Creator", this.Creator);
+            this.SetParamSimple(map, prefix + "UpdateUser", this.UpdateUser);
+            this.SetParamSimple(map, prefix + "UpdateUserId", this.UpdateUserId);
+            this.SetParamSimple(map, prefix + "YarnQueue", this.YarnQueue);
+            this.SetParamSimple(map, prefix + "ExecutionTTL", this.ExecutionTTL);
         }
     }
 }

@@ -72,6 +72,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("SkipCheckForceRestart")]
         public bool? SkipCheckForceRestart{ get; set; }
 
+        /// <summary>
+        /// cvm延迟上架参数
+        /// </summary>
+        [JsonProperty("CvmDelayOnlineTime")]
+        public ulong? CvmDelayOnlineTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "UpgradeMode", this.UpgradeMode);
             this.SetParamSimple(map, prefix + "CosBackup", this.CosBackup);
             this.SetParamSimple(map, prefix + "SkipCheckForceRestart", this.SkipCheckForceRestart);
+            this.SetParamSimple(map, prefix + "CvmDelayOnlineTime", this.CvmDelayOnlineTime);
         }
     }
 }

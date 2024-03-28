@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.973";
+       private const string sdkVersion = "SDK_NET_3.0.974";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Iotexplorer.V20190423
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 绑定云存用户
+        /// </summary>
+        /// <param name="req"><see cref="BindCloudStorageUserRequest"/></param>
+        /// <returns><see cref="BindCloudStorageUserResponse"/></returns>
+        public Task<BindCloudStorageUserResponse> BindCloudStorageUser(BindCloudStorageUserRequest req)
+        {
+            return InternalRequestAsync<BindCloudStorageUserResponse>(req, "BindCloudStorageUser");
+        }
+
+        /// <summary>
+        /// 绑定云存用户
+        /// </summary>
+        /// <param name="req"><see cref="BindCloudStorageUserRequest"/></param>
+        /// <returns><see cref="BindCloudStorageUserResponse"/></returns>
+        public BindCloudStorageUserResponse BindCloudStorageUserSync(BindCloudStorageUserRequest req)
+        {
+            return InternalRequestAsync<BindCloudStorageUserResponse>(req, "BindCloudStorageUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -222,6 +243,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 开通云存服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateIotVideoCloudStorageRequest"/></param>
+        /// <returns><see cref="CreateIotVideoCloudStorageResponse"/></returns>
+        public Task<CreateIotVideoCloudStorageResponse> CreateIotVideoCloudStorage(CreateIotVideoCloudStorageRequest req)
+        {
+            return InternalRequestAsync<CreateIotVideoCloudStorageResponse>(req, "CreateIotVideoCloudStorage");
+        }
+
+        /// <summary>
+        /// 开通云存服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateIotVideoCloudStorageRequest"/></param>
+        /// <returns><see cref="CreateIotVideoCloudStorageResponse"/></returns>
+        public CreateIotVideoCloudStorageResponse CreateIotVideoCloudStorageSync(CreateIotVideoCloudStorageRequest req)
+        {
+            return InternalRequestAsync<CreateIotVideoCloudStorageResponse>(req, "CreateIotVideoCloudStorage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建 LoRa 自定义频点
         /// </summary>
         /// <param name="req"><see cref="CreateLoRaFrequencyRequest"/></param>
@@ -386,6 +428,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public CreateTopicRuleResponse CreateTopicRuleSync(CreateTopicRuleRequest req)
         {
             return InternalRequestAsync<CreateTopicRuleResponse>(req, "CreateTopicRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除云存事件
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudStorageEventRequest"/></param>
+        /// <returns><see cref="DeleteCloudStorageEventResponse"/></returns>
+        public Task<DeleteCloudStorageEventResponse> DeleteCloudStorageEvent(DeleteCloudStorageEventRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudStorageEventResponse>(req, "DeleteCloudStorageEvent");
+        }
+
+        /// <summary>
+        /// 删除云存事件
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudStorageEventRequest"/></param>
+        /// <returns><see cref="DeleteCloudStorageEventResponse"/></returns>
+        public DeleteCloudStorageEventResponse DeleteCloudStorageEventSync(DeleteCloudStorageEventRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudStorageEventResponse>(req, "DeleteCloudStorageEvent")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -663,6 +726,258 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 获取设备云存服务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageResponse"/></returns>
+        public Task<DescribeCloudStorageResponse> DescribeCloudStorage(DescribeCloudStorageRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageResponse>(req, "DescribeCloudStorage");
+        }
+
+        /// <summary>
+        /// 获取设备云存服务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageResponse"/></returns>
+        public DescribeCloudStorageResponse DescribeCloudStorageSync(DescribeCloudStorageRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageResponse>(req, "DescribeCloudStorage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取具有云存的日期
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageDateRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageDateResponse"/></returns>
+        public Task<DescribeCloudStorageDateResponse> DescribeCloudStorageDate(DescribeCloudStorageDateRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageDateResponse>(req, "DescribeCloudStorageDate");
+        }
+
+        /// <summary>
+        /// 获取具有云存的日期
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageDateRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageDateResponse"/></returns>
+        public DescribeCloudStorageDateResponse DescribeCloudStorageDateSync(DescribeCloudStorageDateRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageDateResponse>(req, "DescribeCloudStorageDate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 拉取云存事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageEventsRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageEventsResponse"/></returns>
+        public Task<DescribeCloudStorageEventsResponse> DescribeCloudStorageEvents(DescribeCloudStorageEventsRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageEventsResponse>(req, "DescribeCloudStorageEvents");
+        }
+
+        /// <summary>
+        /// 拉取云存事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageEventsRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageEventsResponse"/></returns>
+        public DescribeCloudStorageEventsResponse DescribeCloudStorageEventsSync(DescribeCloudStorageEventsRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageEventsResponse>(req, "DescribeCloudStorageEvents")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 拉取多个云存事件缩略图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageMultiThumbnailRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageMultiThumbnailResponse"/></returns>
+        public Task<DescribeCloudStorageMultiThumbnailResponse> DescribeCloudStorageMultiThumbnail(DescribeCloudStorageMultiThumbnailRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageMultiThumbnailResponse>(req, "DescribeCloudStorageMultiThumbnail");
+        }
+
+        /// <summary>
+        /// 拉取多个云存事件缩略图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageMultiThumbnailRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageMultiThumbnailResponse"/></returns>
+        public DescribeCloudStorageMultiThumbnailResponse DescribeCloudStorageMultiThumbnailSync(DescribeCloudStorageMultiThumbnailRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageMultiThumbnailResponse>(req, "DescribeCloudStorageMultiThumbnail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询云存服务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageOrderRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageOrderResponse"/></returns>
+        public Task<DescribeCloudStorageOrderResponse> DescribeCloudStorageOrder(DescribeCloudStorageOrderRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageOrderResponse>(req, "DescribeCloudStorageOrder");
+        }
+
+        /// <summary>
+        /// 查询云存服务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageOrderRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageOrderResponse"/></returns>
+        public DescribeCloudStorageOrderResponse DescribeCloudStorageOrderSync(DescribeCloudStorageOrderRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageOrderResponse>(req, "DescribeCloudStorageOrder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取云存套餐包消耗详细记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStoragePackageConsumeDetailsRequest"/></param>
+        /// <returns><see cref="DescribeCloudStoragePackageConsumeDetailsResponse"/></returns>
+        public Task<DescribeCloudStoragePackageConsumeDetailsResponse> DescribeCloudStoragePackageConsumeDetails(DescribeCloudStoragePackageConsumeDetailsRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStoragePackageConsumeDetailsResponse>(req, "DescribeCloudStoragePackageConsumeDetails");
+        }
+
+        /// <summary>
+        /// 获取云存套餐包消耗详细记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStoragePackageConsumeDetailsRequest"/></param>
+        /// <returns><see cref="DescribeCloudStoragePackageConsumeDetailsResponse"/></returns>
+        public DescribeCloudStoragePackageConsumeDetailsResponse DescribeCloudStoragePackageConsumeDetailsSync(DescribeCloudStoragePackageConsumeDetailsRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStoragePackageConsumeDetailsResponse>(req, "DescribeCloudStoragePackageConsumeDetails")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取云存套餐包消耗统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStoragePackageConsumeStatsRequest"/></param>
+        /// <returns><see cref="DescribeCloudStoragePackageConsumeStatsResponse"/></returns>
+        public Task<DescribeCloudStoragePackageConsumeStatsResponse> DescribeCloudStoragePackageConsumeStats(DescribeCloudStoragePackageConsumeStatsRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStoragePackageConsumeStatsResponse>(req, "DescribeCloudStoragePackageConsumeStats");
+        }
+
+        /// <summary>
+        /// 获取云存套餐包消耗统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStoragePackageConsumeStatsRequest"/></param>
+        /// <returns><see cref="DescribeCloudStoragePackageConsumeStatsResponse"/></returns>
+        public DescribeCloudStoragePackageConsumeStatsResponse DescribeCloudStoragePackageConsumeStatsSync(DescribeCloudStoragePackageConsumeStatsRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStoragePackageConsumeStatsResponse>(req, "DescribeCloudStoragePackageConsumeStats")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取设备图片流数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageStreamDataRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageStreamDataResponse"/></returns>
+        public Task<DescribeCloudStorageStreamDataResponse> DescribeCloudStorageStreamData(DescribeCloudStorageStreamDataRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageStreamDataResponse>(req, "DescribeCloudStorageStreamData");
+        }
+
+        /// <summary>
+        /// 获取设备图片流数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageStreamDataRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageStreamDataResponse"/></returns>
+        public DescribeCloudStorageStreamDataResponse DescribeCloudStorageStreamDataSync(DescribeCloudStorageStreamDataRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageStreamDataResponse>(req, "DescribeCloudStorageStreamData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 拉取云存事件缩略图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageThumbnailRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageThumbnailResponse"/></returns>
+        public Task<DescribeCloudStorageThumbnailResponse> DescribeCloudStorageThumbnail(DescribeCloudStorageThumbnailRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageThumbnailResponse>(req, "DescribeCloudStorageThumbnail");
+        }
+
+        /// <summary>
+        /// 拉取云存事件缩略图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageThumbnailRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageThumbnailResponse"/></returns>
+        public DescribeCloudStorageThumbnailResponse DescribeCloudStorageThumbnailSync(DescribeCloudStorageThumbnailRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageThumbnailResponse>(req, "DescribeCloudStorageThumbnail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量拉取云存事件缩略图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageThumbnailListRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageThumbnailListResponse"/></returns>
+        public Task<DescribeCloudStorageThumbnailListResponse> DescribeCloudStorageThumbnailList(DescribeCloudStorageThumbnailListRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageThumbnailListResponse>(req, "DescribeCloudStorageThumbnailList");
+        }
+
+        /// <summary>
+        /// 批量拉取云存事件缩略图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageThumbnailListRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageThumbnailListResponse"/></returns>
+        public DescribeCloudStorageThumbnailListResponse DescribeCloudStorageThumbnailListSync(DescribeCloudStorageThumbnailListRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageThumbnailListResponse>(req, "DescribeCloudStorageThumbnailList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取某一天云存时间轴
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageTimeRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageTimeResponse"/></returns>
+        public Task<DescribeCloudStorageTimeResponse> DescribeCloudStorageTime(DescribeCloudStorageTimeRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageTimeResponse>(req, "DescribeCloudStorageTime");
+        }
+
+        /// <summary>
+        /// 获取某一天云存时间轴
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageTimeRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageTimeResponse"/></returns>
+        public DescribeCloudStorageTimeResponse DescribeCloudStorageTimeSync(DescribeCloudStorageTimeRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageTimeResponse>(req, "DescribeCloudStorageTime")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 拉取云存用户列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageUsersRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageUsersResponse"/></returns>
+        public Task<DescribeCloudStorageUsersResponse> DescribeCloudStorageUsers(DescribeCloudStorageUsersRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageUsersResponse>(req, "DescribeCloudStorageUsers");
+        }
+
+        /// <summary>
+        /// 拉取云存用户列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageUsersRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageUsersResponse"/></returns>
+        public DescribeCloudStorageUsersResponse DescribeCloudStorageUsersSync(DescribeCloudStorageUsersRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageUsersResponse>(req, "DescribeCloudStorageUsers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于查看某个设备的详细信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceRequest"/></param>
@@ -785,6 +1100,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DescribeDeviceLocationSolveResponse DescribeDeviceLocationSolveSync(DescribeDeviceLocationSolveRequest req)
         {
             return InternalRequestAsync<DescribeDeviceLocationSolveResponse>(req, "DescribeDeviceLocationSolve")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据设备信息拉取有效套餐列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDevicePackagesRequest"/></param>
+        /// <returns><see cref="DescribeDevicePackagesResponse"/></returns>
+        public Task<DescribeDevicePackagesResponse> DescribeDevicePackages(DescribeDevicePackagesRequest req)
+        {
+            return InternalRequestAsync<DescribeDevicePackagesResponse>(req, "DescribeDevicePackages");
+        }
+
+        /// <summary>
+        /// 根据设备信息拉取有效套餐列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDevicePackagesRequest"/></param>
+        /// <returns><see cref="DescribeDevicePackagesResponse"/></returns>
+        public DescribeDevicePackagesResponse DescribeDevicePackagesSync(DescribeDevicePackagesRequest req)
+        {
+            return InternalRequestAsync<DescribeDevicePackagesResponse>(req, "DescribeDevicePackages")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -999,6 +1335,48 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 查询套餐消耗记录详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribePackageConsumeTaskRequest"/></param>
+        /// <returns><see cref="DescribePackageConsumeTaskResponse"/></returns>
+        public Task<DescribePackageConsumeTaskResponse> DescribePackageConsumeTask(DescribePackageConsumeTaskRequest req)
+        {
+            return InternalRequestAsync<DescribePackageConsumeTaskResponse>(req, "DescribePackageConsumeTask");
+        }
+
+        /// <summary>
+        /// 查询套餐消耗记录详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribePackageConsumeTaskRequest"/></param>
+        /// <returns><see cref="DescribePackageConsumeTaskResponse"/></returns>
+        public DescribePackageConsumeTaskResponse DescribePackageConsumeTaskSync(DescribePackageConsumeTaskRequest req)
+        {
+            return InternalRequestAsync<DescribePackageConsumeTaskResponse>(req, "DescribePackageConsumeTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询套餐消耗记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePackageConsumeTasksRequest"/></param>
+        /// <returns><see cref="DescribePackageConsumeTasksResponse"/></returns>
+        public Task<DescribePackageConsumeTasksResponse> DescribePackageConsumeTasks(DescribePackageConsumeTasksRequest req)
+        {
+            return InternalRequestAsync<DescribePackageConsumeTasksResponse>(req, "DescribePackageConsumeTasks");
+        }
+
+        /// <summary>
+        /// 查询套餐消耗记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePackageConsumeTasksRequest"/></param>
+        /// <returns><see cref="DescribePackageConsumeTasksResponse"/></returns>
+        public DescribePackageConsumeTasksResponse DescribePackageConsumeTasksSync(DescribePackageConsumeTasksRequest req)
+        {
+            return InternalRequestAsync<DescribePackageConsumeTasksResponse>(req, "DescribePackageConsumeTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取围栏列表
         /// </summary>
         /// <param name="req"><see cref="DescribePositionFenceListRequest"/></param>
@@ -1205,6 +1583,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public GenSingleDeviceSignatureOfPublicResponse GenSingleDeviceSignatureOfPublicSync(GenSingleDeviceSignatureOfPublicRequest req)
         {
             return InternalRequestAsync<GenSingleDeviceSignatureOfPublicResponse>(req, "GenSingleDeviceSignatureOfPublic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取视频防盗链播放URL
+        /// </summary>
+        /// <param name="req"><see cref="GenerateSignedVideoURLRequest"/></param>
+        /// <returns><see cref="GenerateSignedVideoURLResponse"/></returns>
+        public Task<GenerateSignedVideoURLResponse> GenerateSignedVideoURL(GenerateSignedVideoURLRequest req)
+        {
+            return InternalRequestAsync<GenerateSignedVideoURLResponse>(req, "GenerateSignedVideoURL");
+        }
+
+        /// <summary>
+        /// 获取视频防盗链播放URL
+        /// </summary>
+        /// <param name="req"><see cref="GenerateSignedVideoURLRequest"/></param>
+        /// <returns><see cref="GenerateSignedVideoURLResponse"/></returns>
+        public GenerateSignedVideoURLResponse GenerateSignedVideoURLSync(GenerateSignedVideoURLRequest req)
+        {
+            return InternalRequestAsync<GenerateSignedVideoURLResponse>(req, "GenerateSignedVideoURL")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1457,6 +1856,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public GetTopicRuleListResponse GetTopicRuleListSync(GetTopicRuleListRequest req)
         {
             return InternalRequestAsync<GetTopicRuleListResponse>(req, "GetTopicRuleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 继承云存用户
+        /// </summary>
+        /// <param name="req"><see cref="InheritCloudStorageUserRequest"/></param>
+        /// <returns><see cref="InheritCloudStorageUserResponse"/></returns>
+        public Task<InheritCloudStorageUserResponse> InheritCloudStorageUser(InheritCloudStorageUserRequest req)
+        {
+            return InternalRequestAsync<InheritCloudStorageUserResponse>(req, "InheritCloudStorageUser");
+        }
+
+        /// <summary>
+        /// 继承云存用户
+        /// </summary>
+        /// <param name="req"><see cref="InheritCloudStorageUserRequest"/></param>
+        /// <returns><see cref="InheritCloudStorageUserResponse"/></returns>
+        public InheritCloudStorageUserResponse InheritCloudStorageUserSync(InheritCloudStorageUserRequest req)
+        {
+            return InternalRequestAsync<InheritCloudStorageUserResponse>(req, "InheritCloudStorageUser")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1839,6 +2259,48 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 重置云存服务
+        /// </summary>
+        /// <param name="req"><see cref="ResetCloudStorageRequest"/></param>
+        /// <returns><see cref="ResetCloudStorageResponse"/></returns>
+        public Task<ResetCloudStorageResponse> ResetCloudStorage(ResetCloudStorageRequest req)
+        {
+            return InternalRequestAsync<ResetCloudStorageResponse>(req, "ResetCloudStorage");
+        }
+
+        /// <summary>
+        /// 重置云存服务
+        /// </summary>
+        /// <param name="req"><see cref="ResetCloudStorageRequest"/></param>
+        /// <returns><see cref="ResetCloudStorageResponse"/></returns>
+        public ResetCloudStorageResponse ResetCloudStorageSync(ResetCloudStorageRequest req)
+        {
+            return InternalRequestAsync<ResetCloudStorageResponse>(req, "ResetCloudStorage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 重置云存事件
+        /// </summary>
+        /// <param name="req"><see cref="ResetCloudStorageEventRequest"/></param>
+        /// <returns><see cref="ResetCloudStorageEventResponse"/></returns>
+        public Task<ResetCloudStorageEventResponse> ResetCloudStorageEvent(ResetCloudStorageEventRequest req)
+        {
+            return InternalRequestAsync<ResetCloudStorageEventResponse>(req, "ResetCloudStorageEvent");
+        }
+
+        /// <summary>
+        /// 重置云存事件
+        /// </summary>
+        /// <param name="req"><see cref="ResetCloudStorageEventRequest"/></param>
+        /// <returns><see cref="ResetCloudStorageEventResponse"/></returns>
+        public ResetCloudStorageEventResponse ResetCloudStorageEventSync(ResetCloudStorageEventRequest req)
+        {
+            return InternalRequestAsync<ResetCloudStorageEventResponse>(req, "ResetCloudStorageEvent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 搜索位置空间
         /// </summary>
         /// <param name="req"><see cref="SearchPositionSpaceRequest"/></param>
@@ -1898,6 +2360,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public SearchTopicRuleResponse SearchTopicRuleSync(SearchTopicRuleRequest req)
         {
             return InternalRequestAsync<SearchTopicRuleResponse>(req, "SearchTopicRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 转移云存服务
+        /// </summary>
+        /// <param name="req"><see cref="TransferCloudStorageRequest"/></param>
+        /// <returns><see cref="TransferCloudStorageResponse"/></returns>
+        public Task<TransferCloudStorageResponse> TransferCloudStorage(TransferCloudStorageRequest req)
+        {
+            return InternalRequestAsync<TransferCloudStorageResponse>(req, "TransferCloudStorage");
+        }
+
+        /// <summary>
+        /// 转移云存服务
+        /// </summary>
+        /// <param name="req"><see cref="TransferCloudStorageRequest"/></param>
+        /// <returns><see cref="TransferCloudStorageResponse"/></returns>
+        public TransferCloudStorageResponse TransferCloudStorageSync(TransferCloudStorageRequest req)
+        {
+            return InternalRequestAsync<TransferCloudStorageResponse>(req, "TransferCloudStorage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
