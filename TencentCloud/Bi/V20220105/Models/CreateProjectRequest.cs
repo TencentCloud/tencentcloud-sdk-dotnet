@@ -60,6 +60,12 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("DefaultPanelType")]
         public long? DefaultPanelType{ get; set; }
 
+        /// <summary>
+        /// 管理平台
+        /// </summary>
+        [JsonProperty("ManagePlatform")]
+        public string ManagePlatform{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "Mark", this.Mark);
             this.SetParamSimple(map, prefix + "IsApply", this.IsApply);
             this.SetParamSimple(map, prefix + "DefaultPanelType", this.DefaultPanelType);
+            this.SetParamSimple(map, prefix + "ManagePlatform", this.ManagePlatform);
         }
     }
 }

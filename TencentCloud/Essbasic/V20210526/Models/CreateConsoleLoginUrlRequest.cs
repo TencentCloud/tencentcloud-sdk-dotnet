@@ -65,6 +65,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ProxyOperatorName{ get; set; }
 
         /// <summary>
+        /// 子客企业员工的手机码,  支持国内手机号11位数字(无需加+86前缀或其他字符)。注：`该手机号需要和Agent.ProxyOperator.OpenId相匹配,  当员工完成认证后该手机号会和Agent.ProxyOperator.OpenId一一绑定, 若员工已认证加入企业，这里修改经办人手机号传入将不会生效`
+        /// </summary>
+        [JsonProperty("ProxyOperatorMobile")]
+        public string ProxyOperatorMobile{ get; set; }
+
+        /// <summary>
         /// Web控制台登录后进入的功能模块,  支持的模块包括：
         /// <ul>
         /// <li> **空值** :(默认)企业中心模块</li>
@@ -162,6 +168,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ProxyOrganizationName", this.ProxyOrganizationName);
             this.SetParamSimple(map, prefix + "UniformSocialCreditCode", this.UniformSocialCreditCode);
             this.SetParamSimple(map, prefix + "ProxyOperatorName", this.ProxyOperatorName);
+            this.SetParamSimple(map, prefix + "ProxyOperatorMobile", this.ProxyOperatorMobile);
             this.SetParamSimple(map, prefix + "Module", this.Module);
             this.SetParamSimple(map, prefix + "ModuleId", this.ModuleId);
             this.SetParamSimple(map, prefix + "MenuStatus", this.MenuStatus);

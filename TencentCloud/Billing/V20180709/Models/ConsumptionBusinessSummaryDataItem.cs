@@ -76,6 +76,13 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("TransferPayAmount")]
         public string TransferPayAmount{ get; set; }
 
+        /// <summary>
+        /// 地域名称（仅在地域汇总总展示）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RegionName")]
+        public string RegionName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -90,6 +97,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
             this.SetParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
             this.SetParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
+            this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
         }
     }
 }

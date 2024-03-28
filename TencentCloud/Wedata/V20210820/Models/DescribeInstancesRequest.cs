@@ -31,13 +31,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 页数
+        /// 页数:默认1
         /// </summary>
         [JsonProperty("PageNumber")]
         public ulong? PageNumber{ get; set; }
 
         /// <summary>
-        /// 分页大小
+        /// 分页大小,默认最小10
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }

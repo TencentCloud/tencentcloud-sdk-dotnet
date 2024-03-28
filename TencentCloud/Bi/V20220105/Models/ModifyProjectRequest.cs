@@ -78,6 +78,12 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("PanelScope")]
         public string PanelScope{ get; set; }
 
+        /// <summary>
+        /// 项目管理平台
+        /// </summary>
+        [JsonProperty("ManagePlatform")]
+        public string ManagePlatform{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "Seed", this.Seed);
             this.SetParamSimple(map, prefix + "DefaultPanelType", this.DefaultPanelType);
             this.SetParamSimple(map, prefix + "PanelScope", this.PanelScope);
+            this.SetParamSimple(map, prefix + "ManagePlatform", this.ManagePlatform);
         }
     }
 }

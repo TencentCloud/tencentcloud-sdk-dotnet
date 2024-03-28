@@ -31,6 +31,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
+        /// 失败原因
+        /// </summary>
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

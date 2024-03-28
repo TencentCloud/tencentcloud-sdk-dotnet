@@ -165,14 +165,14 @@ namespace TencentCloud.Billing.V20180709.Models
         public string InstanceTypeName{ get; set; }
 
         /// <summary>
-        /// 资源ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
+        /// 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 实例名称：用户在控制台为资源设置的名称，如未设置默认为空
+        /// 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceName")]
@@ -270,6 +270,7 @@ namespace TencentCloud.Billing.V20180709.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SplitItemId")]
+        [System.Obsolete]
         public string SplitItemId{ get; set; }
 
         /// <summary>
@@ -277,6 +278,7 @@ namespace TencentCloud.Billing.V20180709.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SplitItemName")]
+        [System.Obsolete]
         public string SplitItemName{ get; set; }
 
         /// <summary>

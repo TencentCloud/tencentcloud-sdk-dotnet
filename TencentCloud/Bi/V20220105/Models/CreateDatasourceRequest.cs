@@ -138,6 +138,12 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
+        /// <summary>
+        /// 操作权限限制
+        /// </summary>
+        [JsonProperty("OperationAuthLimit")]
+        public string[] OperationAuthLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +169,7 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "Vport", this.Vport);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamArraySimple(map, prefix + "OperationAuthLimit.", this.OperationAuthLimit);
         }
     }
 }

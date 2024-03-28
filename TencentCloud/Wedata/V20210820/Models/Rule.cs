@@ -325,6 +325,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("MonitorStatus")]
         public long? MonitorStatus{ get; set; }
 
+        /// <summary>
+        /// 触发条件
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TriggerCondition")]
+        public string TriggerCondition{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -374,6 +381,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
             this.SetParamSimple(map, prefix + "DatabaseId", this.DatabaseId);
             this.SetParamSimple(map, prefix + "MonitorStatus", this.MonitorStatus);
+            this.SetParamSimple(map, prefix + "TriggerCondition", this.TriggerCondition);
         }
     }
 }

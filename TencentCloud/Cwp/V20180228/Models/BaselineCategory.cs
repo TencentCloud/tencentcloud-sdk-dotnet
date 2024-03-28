@@ -42,6 +42,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("ParentCategoryId")]
         public long? ParentCategoryId{ get; set; }
 
+        /// <summary>
+        /// 子分类下检测项总数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ItemCount")]
+        public ulong? ItemCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +58,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "CategoryId", this.CategoryId);
             this.SetParamSimple(map, prefix + "CategoryName", this.CategoryName);
             this.SetParamSimple(map, prefix + "ParentCategoryId", this.ParentCategoryId);
+            this.SetParamSimple(map, prefix + "ItemCount", this.ItemCount);
         }
     }
 }

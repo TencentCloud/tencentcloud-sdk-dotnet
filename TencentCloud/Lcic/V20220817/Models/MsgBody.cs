@@ -29,6 +29,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         /// TIMTextElem（文本消息）
         /// TIMFaceElem（表情消息）
         /// TIMImageElem（图像消息）
+        /// TIMCustomElem（自定义消息）
         /// </summary>
         [JsonProperty("MsgType")]
         public string MsgType{ get; set; }
@@ -51,6 +52,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("ImageMsgContent")]
         public ImageMsgContent ImageMsgContent{ get; set; }
 
+        /// <summary>
+        /// 自定义消息，TIMCustomElem（自定义消息）必选。
+        /// </summary>
+        [JsonProperty("CustomMsgContent")]
+        public CustomMsgContent CustomMsgContent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +68,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamObj(map, prefix + "TextMsgContent.", this.TextMsgContent);
             this.SetParamObj(map, prefix + "FaceMsgContent.", this.FaceMsgContent);
             this.SetParamObj(map, prefix + "ImageMsgContent.", this.ImageMsgContent);
+            this.SetParamObj(map, prefix + "CustomMsgContent.", this.CustomMsgContent);
         }
     }
 }

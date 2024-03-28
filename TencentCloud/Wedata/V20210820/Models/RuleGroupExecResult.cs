@@ -129,6 +129,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("EngineType")]
         public string EngineType{ get; set; }
 
+        /// <summary>
+        /// 规则执行结果
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleExecResultVOList")]
+        public RuleExecResult[] RuleExecResultVOList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +157,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Permission", this.Permission);
             this.SetParamSimple(map, prefix + "ExecDetail", this.ExecDetail);
             this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
+            this.SetParamArrayObj(map, prefix + "RuleExecResultVOList.", this.RuleExecResultVOList);
         }
     }
 }

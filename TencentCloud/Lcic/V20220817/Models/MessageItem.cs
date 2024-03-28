@@ -45,6 +45,13 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("ImageMessage")]
         public string ImageMessage{ get; set; }
 
+        /// <summary>
+        /// 自定义消息内容。message type为2时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CustomMessage")]
+        public CustomMsgContent CustomMessage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "MessageType", this.MessageType);
             this.SetParamSimple(map, prefix + "TextMessage", this.TextMessage);
             this.SetParamSimple(map, prefix + "ImageMessage", this.ImageMessage);
+            this.SetParamObj(map, prefix + "CustomMessage.", this.CustomMessage);
         }
     }
 }

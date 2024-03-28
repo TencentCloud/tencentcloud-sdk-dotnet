@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.974";
+       private const string sdkVersion = "SDK_NET_3.0.975";
 
         /// <summary>
         /// Client constructor.
@@ -2612,6 +2612,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public RollBackClusterResponse RollBackClusterSync(RollBackClusterRequest req)
         {
             return InternalRequestAsync<RollBackClusterResponse>(req, "RollBackCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 回档到新集群
+        /// </summary>
+        /// <param name="req"><see cref="RollbackToNewClusterRequest"/></param>
+        /// <returns><see cref="RollbackToNewClusterResponse"/></returns>
+        public Task<RollbackToNewClusterResponse> RollbackToNewCluster(RollbackToNewClusterRequest req)
+        {
+            return InternalRequestAsync<RollbackToNewClusterResponse>(req, "RollbackToNewCluster");
+        }
+
+        /// <summary>
+        /// 回档到新集群
+        /// </summary>
+        /// <param name="req"><see cref="RollbackToNewClusterRequest"/></param>
+        /// <returns><see cref="RollbackToNewClusterResponse"/></returns>
+        public RollbackToNewClusterResponse RollbackToNewClusterSync(RollbackToNewClusterRequest req)
+        {
+            return InternalRequestAsync<RollbackToNewClusterResponse>(req, "RollbackToNewCluster")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

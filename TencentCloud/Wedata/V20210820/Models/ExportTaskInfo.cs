@@ -87,6 +87,41 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("FilePath")]
         public string FilePath{ get; set; }
 
+        /// <summary>
+        /// 是否过期(1.已过期 2.未过期) 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Expire")]
+        public long? Expire{ get; set; }
+
+        /// <summary>
+        /// 数据源名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatasourceName")]
+        public string DatasourceName{ get; set; }
+
+        /// <summary>
+        /// 库名+表名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DbTableName")]
+        public string DbTableName{ get; set; }
+
+        /// <summary>
+        /// 规则名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleName")]
+        public string RuleName{ get; set; }
+
+        /// <summary>
+        /// 规则执行id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleExecId")]
+        public ulong? RuleExecId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +137,11 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "SchedulerTaskId", this.SchedulerTaskId);
             this.SetParamSimple(map, prefix + "SchedulerCurRunDate", this.SchedulerCurRunDate);
             this.SetParamSimple(map, prefix + "FilePath", this.FilePath);
+            this.SetParamSimple(map, prefix + "Expire", this.Expire);
+            this.SetParamSimple(map, prefix + "DatasourceName", this.DatasourceName);
+            this.SetParamSimple(map, prefix + "DbTableName", this.DbTableName);
+            this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
+            this.SetParamSimple(map, prefix + "RuleExecId", this.RuleExecId);
         }
     }
 }

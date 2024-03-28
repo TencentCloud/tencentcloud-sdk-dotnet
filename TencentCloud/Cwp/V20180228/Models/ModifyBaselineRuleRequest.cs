@@ -42,6 +42,24 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
+        /// <summary>
+        /// 0:检测项，1:检测项分类
+        /// </summary>
+        [JsonProperty("IdType")]
+        public ulong? IdType{ get; set; }
+
+        /// <summary>
+        /// 需要排除的检测项id
+        /// </summary>
+        [JsonProperty("ExcludeIds")]
+        public ulong?[] ExcludeIds{ get; set; }
+
+        /// <summary>
+        /// 勾选的检测项分类
+        /// </summary>
+        [JsonProperty("CategoryIds")]
+        public ulong?[] CategoryIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +69,9 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamObj(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "SelectAll", this.SelectAll);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "IdType", this.IdType);
+            this.SetParamArraySimple(map, prefix + "ExcludeIds.", this.ExcludeIds);
+            this.SetParamArraySimple(map, prefix + "CategoryIds.", this.CategoryIds);
         }
     }
 }

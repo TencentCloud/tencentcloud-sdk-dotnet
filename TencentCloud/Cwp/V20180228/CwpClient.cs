@@ -28,7 +28,7 @@ namespace TencentCloud.Cwp.V20180228
 
        private const string endpoint = "cwp.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.974";
+       private const string sdkVersion = "SDK_NET_3.0.975";
 
         /// <summary>
         /// Client constructor.
@@ -669,6 +669,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// ModifyEventAttackStatus 接口替代
+        /// 
         /// 删除网络攻击日志
         /// </summary>
         /// <param name="req"><see cref="DeleteAttackLogsRequest"/></param>
@@ -679,6 +681,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// ModifyEventAttackStatus 接口替代
+        /// 
         /// 删除网络攻击日志
         /// </summary>
         /// <param name="req"><see cref="DeleteAttackLogsRequest"/></param>
@@ -8149,6 +8153,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// ExportAttackEvents接口替代
+        /// 
         /// 导出网络攻击日志
         /// </summary>
         /// <param name="req"><see cref="ExportAttackLogsRequest"/></param>
@@ -8159,6 +8165,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// ExportAttackEvents接口替代
+        /// 
         /// 导出网络攻击日志
         /// </summary>
         /// <param name="req"><see cref="ExportAttackLogsRequest"/></param>

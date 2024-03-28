@@ -25,7 +25,7 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// ProjectId 值
+        /// 项目id
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }

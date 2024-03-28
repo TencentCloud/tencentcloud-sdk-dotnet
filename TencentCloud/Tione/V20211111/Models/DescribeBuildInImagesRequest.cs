@@ -24,12 +24,19 @@ namespace TencentCloud.Tione.V20211111.Models
     public class DescribeBuildInImagesRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 镜像过滤器
+        /// </summary>
+        [JsonProperty("ImageFilters")]
+        public ImageFIlter[] ImageFilters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "ImageFilters.", this.ImageFilters);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Cloudstudio.V20230508.Models
     {
         
         /// <summary>
-        /// 工作空间名称
+        /// 工作空间名称, 长度限制 2~64
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 工作空间描述
+        /// 工作空间描述, 长度限制 0~255
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Cloudstudio.V20230508.Models
         public string Specs{ get; set; }
 
         /// <summary>
-        /// 工作空间基础镜像名称, 默认会使用 All In One 镜像
+        /// 工作空间基础镜像名称, 默认会使用 All In One 镜像, 长度限制 1~255
         /// </summary>
         [JsonProperty("Image")]
         public string Image{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Cloudstudio.V20230508.Models
         public Env[] Envs{ get; set; }
 
         /// <summary>
-        /// 预装插件. 工作空间启动时, 会自动安装这些插件 
+        /// 预装插件. 工作空间启动时, 会自动安装这些插件。长度限制: 0~10
         /// </summary>
         [JsonProperty("Extensions")]
         public string[] Extensions{ get; set; }
@@ -71,6 +71,30 @@ namespace TencentCloud.Cloudstudio.V20230508.Models
         /// </summary>
         [JsonProperty("Lifecycle")]
         public LifeCycle Lifecycle{ get; set; }
+
+        /// <summary>
+        /// 应用名称
+        /// </summary>
+        [JsonProperty("AppId")]
+        public long? AppId{ get; set; }
+
+        /// <summary>
+        /// 用户UIN
+        /// </summary>
+        [JsonProperty("Uin")]
+        public string Uin{ get; set; }
+
+        /// <summary>
+        /// VPCID
+        /// </summary>
+        [JsonProperty("UniqVpcId")]
+        public string UniqVpcId{ get; set; }
+
+        /// <summary>
+        /// 子网ID
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
 
 
         /// <summary>
@@ -86,6 +110,10 @@ namespace TencentCloud.Cloudstudio.V20230508.Models
             this.SetParamArrayObj(map, prefix + "Envs.", this.Envs);
             this.SetParamArraySimple(map, prefix + "Extensions.", this.Extensions);
             this.SetParamObj(map, prefix + "Lifecycle.", this.Lifecycle);
+            this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "Uin", this.Uin);
+            this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
         }
     }
 }

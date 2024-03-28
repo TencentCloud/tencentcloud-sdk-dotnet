@@ -118,6 +118,20 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("CvmInstanceId")]
         public string CvmInstanceId{ get; set; }
 
+        /// <summary>
+        /// 部署失败错误码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ErrCode")]
+        public string ErrCode{ get; set; }
+
+        /// <summary>
+        /// 部署失败错误信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ErrMsg")]
+        public string ErrMsg{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -136,6 +150,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "SpecAlias", this.SpecAlias);
             this.SetParamArraySimple(map, prefix + "SpecFeatures.", this.SpecFeatures);
             this.SetParamSimple(map, prefix + "CvmInstanceId", this.CvmInstanceId);
+            this.SetParamSimple(map, prefix + "ErrCode", this.ErrCode);
+            this.SetParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
         }
     }
 }

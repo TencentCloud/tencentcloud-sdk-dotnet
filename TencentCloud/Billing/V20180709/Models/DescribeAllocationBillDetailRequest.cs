@@ -31,7 +31,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
+        /// 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
@@ -143,7 +143,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string[] ItemCodes{ get; set; }
 
         /// <summary>
-        /// 模糊搜索：支持标签、资源id、资源别名、分拆项id和分拆项名称
+        /// 模糊搜索：支持标签、资源id、资源别名
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
