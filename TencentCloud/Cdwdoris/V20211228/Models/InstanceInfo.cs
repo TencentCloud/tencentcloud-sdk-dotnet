@@ -333,6 +333,20 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("BindSGs")]
         public string[] BindSGs{ get; set; }
 
+        /// <summary>
+        /// 是否为多可用区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableMultiZones")]
+        public bool? EnableMultiZones{ get; set; }
+
+        /// <summary>
+        /// 用户可用区和子网信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserNetworkInfos")]
+        public string UserNetworkInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -382,6 +396,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "CaseSensitive", this.CaseSensitive);
             this.SetParamSimple(map, prefix + "IsWhiteSGs", this.IsWhiteSGs);
             this.SetParamArraySimple(map, prefix + "BindSGs.", this.BindSGs);
+            this.SetParamSimple(map, prefix + "EnableMultiZones", this.EnableMultiZones);
+            this.SetParamSimple(map, prefix + "UserNetworkInfos", this.UserNetworkInfos);
         }
     }
 }

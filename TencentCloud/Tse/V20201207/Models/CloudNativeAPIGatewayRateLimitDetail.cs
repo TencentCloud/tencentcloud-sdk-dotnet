@@ -37,34 +37,6 @@ namespace TencentCloud.Tse.V20201207.Models
         public QpsThreshold[] QpsThresholds{ get; set; }
 
         /// <summary>
-        /// 限流依据
-        /// ip service consumer credential path header
-        /// </summary>
-        [JsonProperty("LimitBy")]
-        public string LimitBy{ get; set; }
-
-        /// <summary>
-        /// 响应策略
-        /// url请求转发
-        /// text 响应配置
-        /// default 直接返回
-        /// </summary>
-        [JsonProperty("ResponseType")]
-        public string ResponseType{ get; set; }
-
-        /// <summary>
-        /// 是否隐藏限流客户端响应头
-        /// </summary>
-        [JsonProperty("HideClientHeaders")]
-        public bool? HideClientHeaders{ get; set; }
-
-        /// <summary>
-        /// 是否开启请求排队
-        /// </summary>
-        [JsonProperty("IsDelay")]
-        public bool? IsDelay{ get; set; }
-
-        /// <summary>
         /// 需要进行流量控制的请求路径
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -77,6 +49,13 @@ namespace TencentCloud.Tse.V20201207.Models
         /// </summary>
         [JsonProperty("Header")]
         public string Header{ get; set; }
+
+        /// <summary>
+        /// 限流依据
+        /// ip service consumer credential path header
+        /// </summary>
+        [JsonProperty("LimitBy")]
+        public string LimitBy{ get; set; }
 
         /// <summary>
         /// 外部redis配置
@@ -112,10 +91,45 @@ namespace TencentCloud.Tse.V20201207.Models
         public string RateLimitResponseUrl{ get; set; }
 
         /// <summary>
+        /// 响应策略
+        /// url请求转发
+        /// text 响应配置
+        /// default 直接返回
+        /// </summary>
+        [JsonProperty("ResponseType")]
+        public string ResponseType{ get; set; }
+
+        /// <summary>
+        /// 是否隐藏限流客户端响应头
+        /// </summary>
+        [JsonProperty("HideClientHeaders")]
+        public bool? HideClientHeaders{ get; set; }
+
+        /// <summary>
         /// 排队时间
         /// </summary>
         [JsonProperty("LineUpTime")]
         public long? LineUpTime{ get; set; }
+
+        /// <summary>
+        /// 是否开启请求排队
+        /// </summary>
+        [JsonProperty("IsDelay")]
+        public bool? IsDelay{ get; set; }
+
+        /// <summary>
+        /// 基础限流
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BasicLimitQpsThresholds")]
+        public QpsThreshold[] BasicLimitQpsThresholds{ get; set; }
+
+        /// <summary>
+        /// 参数限流的规则
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LimitRules")]
+        public LimitRule[] LimitRules{ get; set; }
 
 
         /// <summary>
@@ -125,17 +139,19 @@ namespace TencentCloud.Tse.V20201207.Models
         {
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
             this.SetParamArrayObj(map, prefix + "QpsThresholds.", this.QpsThresholds);
-            this.SetParamSimple(map, prefix + "LimitBy", this.LimitBy);
-            this.SetParamSimple(map, prefix + "ResponseType", this.ResponseType);
-            this.SetParamSimple(map, prefix + "HideClientHeaders", this.HideClientHeaders);
-            this.SetParamSimple(map, prefix + "IsDelay", this.IsDelay);
             this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "Header", this.Header);
+            this.SetParamSimple(map, prefix + "LimitBy", this.LimitBy);
             this.SetParamObj(map, prefix + "ExternalRedis.", this.ExternalRedis);
             this.SetParamSimple(map, prefix + "Policy", this.Policy);
             this.SetParamObj(map, prefix + "RateLimitResponse.", this.RateLimitResponse);
             this.SetParamSimple(map, prefix + "RateLimitResponseUrl", this.RateLimitResponseUrl);
+            this.SetParamSimple(map, prefix + "ResponseType", this.ResponseType);
+            this.SetParamSimple(map, prefix + "HideClientHeaders", this.HideClientHeaders);
             this.SetParamSimple(map, prefix + "LineUpTime", this.LineUpTime);
+            this.SetParamSimple(map, prefix + "IsDelay", this.IsDelay);
+            this.SetParamArrayObj(map, prefix + "BasicLimitQpsThresholds.", this.BasicLimitQpsThresholds);
+            this.SetParamArrayObj(map, prefix + "LimitRules.", this.LimitRules);
         }
     }
 }

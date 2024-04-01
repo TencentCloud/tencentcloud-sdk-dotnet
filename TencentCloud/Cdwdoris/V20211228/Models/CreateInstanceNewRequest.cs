@@ -105,6 +105,18 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("CaseSensitive")]
         public long? CaseSensitive{ get; set; }
 
+        /// <summary>
+        /// 是否开启多可用区
+        /// </summary>
+        [JsonProperty("EnableMultiZones")]
+        public bool? EnableMultiZones{ get; set; }
+
+        /// <summary>
+        /// 开启多可用区后，用户的所有可用区和子网信息
+        /// </summary>
+        [JsonProperty("UserMultiZoneInfos")]
+        public NetworkInfo UserMultiZoneInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -124,6 +136,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "HaType", this.HaType);
             this.SetParamSimple(map, prefix + "CaseSensitive", this.CaseSensitive);
+            this.SetParamSimple(map, prefix + "EnableMultiZones", this.EnableMultiZones);
+            this.SetParamObj(map, prefix + "UserMultiZoneInfos.", this.UserMultiZoneInfos);
         }
     }
 }

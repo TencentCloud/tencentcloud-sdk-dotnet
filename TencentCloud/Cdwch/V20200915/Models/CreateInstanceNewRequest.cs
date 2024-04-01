@@ -68,14 +68,16 @@ namespace TencentCloud.Cdwch.V20200915.Models
 
         /// <summary>
         /// 数据节点
+        /// SpecName从DescribeSpec接口中返回的DataSpec.Name获取
         /// </summary>
         [JsonProperty("DataSpec")]
         public NodeSpec DataSpec{ get; set; }
 
         /// <summary>
-        /// 标签列表
+        /// 标签列表（废弃）
         /// </summary>
         [JsonProperty("Tags")]
+        [System.Obsolete]
         public Tag Tags{ get; set; }
 
         /// <summary>
@@ -104,9 +106,16 @@ namespace TencentCloud.Cdwch.V20200915.Models
 
         /// <summary>
         /// ZK节点
+        /// SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
         /// </summary>
         [JsonProperty("CommonSpec")]
         public NodeSpec CommonSpec{ get; set; }
+
+        /// <summary>
+        /// 标签列表
+        /// </summary>
+        [JsonProperty("TagItems")]
+        public Tag[] TagItems{ get; set; }
 
 
         /// <summary>
@@ -128,6 +137,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "MountDiskType", this.MountDiskType);
             this.SetParamSimple(map, prefix + "HAZk", this.HAZk);
             this.SetParamObj(map, prefix + "CommonSpec.", this.CommonSpec);
+            this.SetParamArrayObj(map, prefix + "TagItems.", this.TagItems);
         }
     }
 }

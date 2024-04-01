@@ -70,6 +70,36 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
 
+        /// <summary>
+        /// 是否用于迁移上云，默认为false
+        /// </summary>
+        [JsonProperty("SupportsMigrateToCloud")]
+        public bool? SupportsMigrateToCloud{ get; set; }
+
+        /// <summary>
+        /// 是否开启公网
+        /// </summary>
+        [JsonProperty("EnablePublic")]
+        public bool? EnablePublic{ get; set; }
+
+        /// <summary>
+        /// 公网带宽，在开启公网情况下为必传字段
+        /// </summary>
+        [JsonProperty("Bandwidth")]
+        public long? Bandwidth{ get; set; }
+
+        /// <summary>
+        /// 公网白名单
+        /// </summary>
+        [JsonProperty("IpRules")]
+        public PublicAccessRule[] IpRules{ get; set; }
+
+        /// <summary>
+        /// 标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -83,6 +113,11 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
             this.SetParamObj(map, prefix + "VpcInfo.", this.VpcInfo);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+            this.SetParamSimple(map, prefix + "SupportsMigrateToCloud", this.SupportsMigrateToCloud);
+            this.SetParamSimple(map, prefix + "EnablePublic", this.EnablePublic);
+            this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+            this.SetParamArrayObj(map, prefix + "IpRules.", this.IpRules);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

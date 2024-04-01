@@ -38,6 +38,41 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
+        /// <summary>
+        /// 节点角色名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NodeName")]
+        public string NodeName{ get; set; }
+
+        /// <summary>
+        /// 组件名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ComponentName")]
+        public string ComponentName{ get; set; }
+
+        /// <summary>
+        /// 节点角色
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NodeRole")]
+        public string NodeRole{ get; set; }
+
+        /// <summary>
+        /// 节点上次重启的时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LastRestartTime")]
+        public string LastRestartTime{ get; set; }
+
+        /// <summary>
+        /// 节点所在可用区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +81,11 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         {
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "NodeName", this.NodeName);
+            this.SetParamSimple(map, prefix + "ComponentName", this.ComponentName);
+            this.SetParamSimple(map, prefix + "NodeRole", this.NodeRole);
+            this.SetParamSimple(map, prefix + "LastRestartTime", this.LastRestartTime);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
         }
     }
 }

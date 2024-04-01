@@ -66,6 +66,63 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
+        /// <summary>
+        /// 灰度规则类别
+        /// Standard｜Lane
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleType")]
+        public string RuleType{ get; set; }
+
+        /// <summary>
+        /// 全链路灰度策略多个条件之间的匹配方式，与AND，或OR
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MatchType")]
+        public string MatchType{ get; set; }
+
+        /// <summary>
+        /// 泳道组ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
+        /// <summary>
+        /// 泳道组名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupName")]
+        public string GroupName{ get; set; }
+
+        /// <summary>
+        /// 泳道ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LaneId")]
+        public string LaneId{ get; set; }
+
+        /// <summary>
+        /// 泳道名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LaneName")]
+        public string LaneName{ get; set; }
+
+        /// <summary>
+        /// 泳道匹配规则：严格STRICT｜宽松PERMISSIVE
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MatchMode")]
+        public string MatchMode{ get; set; }
+
+        /// <summary>
+        /// 泳道标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LaneTag")]
+        public string LaneTag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +135,14 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamArrayObj(map, prefix + "BalancedServiceList.", this.BalancedServiceList);
             this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
             this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
+            this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
+            this.SetParamSimple(map, prefix + "MatchType", this.MatchType);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
+            this.SetParamSimple(map, prefix + "LaneId", this.LaneId);
+            this.SetParamSimple(map, prefix + "LaneName", this.LaneName);
+            this.SetParamSimple(map, prefix + "MatchMode", this.MatchMode);
+            this.SetParamSimple(map, prefix + "LaneTag", this.LaneTag);
         }
     }
 }

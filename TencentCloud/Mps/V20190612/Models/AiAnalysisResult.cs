@@ -80,6 +80,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiAnalysisTaskDelLogoResult DeLogoTask{ get; set; }
 
         /// <summary>
+        /// 视频内容分析片头片尾任务的查询结果，当任务类型为 HeadTailRecognition 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HeadTailTask")]
+        public AiAnalysisTaskHeadTailResult HeadTailTask{ get; set; }
+
+        /// <summary>
         /// 视频内容分析摘要任务的查询结果，当任务类型为 Description 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -99,6 +106,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "FrameTagTask.", this.FrameTagTask);
             this.SetParamObj(map, prefix + "HighlightTask.", this.HighlightTask);
             this.SetParamObj(map, prefix + "DeLogoTask.", this.DeLogoTask);
+            this.SetParamObj(map, prefix + "HeadTailTask.", this.HeadTailTask);
             this.SetParamObj(map, prefix + "DescriptionTask.", this.DescriptionTask);
         }
     }

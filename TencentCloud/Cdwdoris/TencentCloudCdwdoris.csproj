@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{30E1AC6A-DB82-3A63-BE17-56AB4B24E00E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.976</VersionPrefix>
+    <VersionPrefix>3.0.977</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -82,6 +82,7 @@
     <Compile Include="V20211228\Models\InstanceNode.cs" />
     <Compile Include="V20211228\Models\ModifyInstanceRequest.cs" />
     <Compile Include="V20211228\Models\ModifyInstanceResponse.cs" />
+    <Compile Include="V20211228\Models\NetworkInfo.cs" />
     <Compile Include="V20211228\Models\NodeInfo.cs" />
     <Compile Include="V20211228\Models\NodesSummary.cs" />
     <Compile Include="V20211228\Models\ResizeDiskRequest.cs" />

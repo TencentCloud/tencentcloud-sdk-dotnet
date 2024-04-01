@@ -93,6 +93,13 @@ namespace TencentCloud.Live.V20180801.Models
         public bool? RemoveWatermark{ get; set; }
 
         /// <summary>
+        /// 是否存储至cos
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CosStore")]
+        public long? CosStore{ get; set; }
+
+        /// <summary>
         /// FLV 录制定制参数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -116,6 +123,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamObj(map, prefix + "HlsSpecialParam.", this.HlsSpecialParam);
             this.SetParamObj(map, prefix + "Mp3Param.", this.Mp3Param);
             this.SetParamSimple(map, prefix + "RemoveWatermark", this.RemoveWatermark);
+            this.SetParamSimple(map, prefix + "CosStore", this.CosStore);
             this.SetParamObj(map, prefix + "FlvSpecialParam.", this.FlvSpecialParam);
         }
     }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C9840D4F-C22D-3561-A83C-36F13531DB7A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.976</VersionPrefix>
+    <VersionPrefix>3.0.977</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -282,6 +282,7 @@
     <Compile Include="V20201207\Models\InternetConfig.cs" />
     <Compile Include="V20201207\Models\KVMapping.cs" />
     <Compile Include="V20201207\Models\KVPair.cs" />
+    <Compile Include="V20201207\Models\KeyValue.cs" />
     <Compile Include="V20201207\Models\KongActiveHealthCheck.cs" />
     <Compile Include="V20201207\Models\KongCertificate.cs" />
     <Compile Include="V20201207\Models\KongCertificatesList.cs" />
@@ -296,6 +297,7 @@
     <Compile Include="V20201207\Models\KongUpstreamInfo.cs" />
     <Compile Include="V20201207\Models\KongUpstreamList.cs" />
     <Compile Include="V20201207\Models\KongUpstreamPreview.cs" />
+    <Compile Include="V20201207\Models\LimitRule.cs" />
     <Compile Include="V20201207\Models\ListCloudNativeAPIGatewayResult.cs" />
     <Compile Include="V20201207\Models\ListCloudNativeAPIGatewayStrategyBindingGroupInfoResult.cs" />
     <Compile Include="V20201207\Models\ListCloudNativeAPIGatewayStrategyResult.cs" />
@@ -356,6 +358,7 @@
     <Compile Include="V20201207\Models\RollbackConfigFileReleasesRequest.cs" />
     <Compile Include="V20201207\Models\RollbackConfigFileReleasesResponse.cs" />
     <Compile Include="V20201207\Models\RouteWafStatus.cs" />
+    <Compile Include="V20201207\Models\RuleFilter.cs" />
     <Compile Include="V20201207\Models\SREInstance.cs" />
     <Compile Include="V20201207\Models\ServiceGovernanceInfo.cs" />
     <Compile Include="V20201207\Models\ServiceWafStatus.cs" />

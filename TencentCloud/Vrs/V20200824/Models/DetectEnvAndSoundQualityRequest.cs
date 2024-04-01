@@ -37,16 +37,16 @@ namespace TencentCloud.Vrs.V20200824.Models
         public string AudioData{ get; set; }
 
         /// <summary>
-        /// 音频格式，音频类型(wav,mp3,aac,m4a)
-        /// </summary>
-        [JsonProperty("Codec")]
-        public string Codec{ get; set; }
-
-        /// <summary>
         /// 1:环境检测 2:音质检测
         /// </summary>
         [JsonProperty("TypeId")]
         public long? TypeId{ get; set; }
+
+        /// <summary>
+        /// 音频格式，音频类型(wav,mp3,aac,m4a)
+        /// </summary>
+        [JsonProperty("Codec")]
+        public string Codec{ get; set; }
 
         /// <summary>
         /// 音频采样率：
@@ -64,8 +64,8 @@ namespace TencentCloud.Vrs.V20200824.Models
         {
             this.SetParamSimple(map, prefix + "TextId", this.TextId);
             this.SetParamSimple(map, prefix + "AudioData", this.AudioData);
-            this.SetParamSimple(map, prefix + "Codec", this.Codec);
             this.SetParamSimple(map, prefix + "TypeId", this.TypeId);
+            this.SetParamSimple(map, prefix + "Codec", this.Codec);
             this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
         }
     }

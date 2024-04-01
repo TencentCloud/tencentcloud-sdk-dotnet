@@ -37,14 +37,6 @@ namespace TencentCloud.Vrs.V20200824.Models
         public string VoiceName{ get; set; }
 
         /// <summary>
-        /// 音频采样率：
-        /// 
-        /// 16000：16k
-        /// </summary>
-        [JsonProperty("SampleRate")]
-        public long? SampleRate{ get; set; }
-
-        /// <summary>
         /// 音色性别:
         /// 
         /// 1-male
@@ -63,16 +55,24 @@ namespace TencentCloud.Vrs.V20200824.Models
         public long? VoiceLanguage{ get; set; }
 
         /// <summary>
-        /// 音频格式，音频类型(wav,mp3,aac,m4a)
-        /// </summary>
-        [JsonProperty("Codec")]
-        public string Codec{ get; set; }
-
-        /// <summary>
         /// 音频ID集合
         /// </summary>
         [JsonProperty("AudioIdList")]
         public string[] AudioIdList{ get; set; }
+
+        /// <summary>
+        /// 音频采样率：
+        /// 
+        /// 16000：16k
+        /// </summary>
+        [JsonProperty("SampleRate")]
+        public long? SampleRate{ get; set; }
+
+        /// <summary>
+        /// 音频格式，音频类型(wav,mp3,aac,m4a)
+        /// </summary>
+        [JsonProperty("Codec")]
+        public string Codec{ get; set; }
 
         /// <summary>
         /// 回调 URL，用户自行搭建的用于接收结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。
@@ -88,14 +88,13 @@ namespace TencentCloud.Vrs.V20200824.Models
         public long? ModelType{ get; set; }
 
         /// <summary>
-        /// 任务类型 0:轻量版复刻
-        /// 默认为0
+        /// 复刻类型。 0 - 轻量版声音复刻（默认）。
         /// </summary>
         [JsonProperty("TaskType")]
         public long? TaskType{ get; set; }
 
         /// <summary>
-        /// 校验音频ID
+        /// 校验音频ID。
         /// </summary>
         [JsonProperty("VPRAudioId")]
         public string VPRAudioId{ get; set; }
@@ -108,11 +107,11 @@ namespace TencentCloud.Vrs.V20200824.Models
         {
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "VoiceName", this.VoiceName);
-            this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
             this.SetParamSimple(map, prefix + "VoiceGender", this.VoiceGender);
             this.SetParamSimple(map, prefix + "VoiceLanguage", this.VoiceLanguage);
-            this.SetParamSimple(map, prefix + "Codec", this.Codec);
             this.SetParamArraySimple(map, prefix + "AudioIdList.", this.AudioIdList);
+            this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
+            this.SetParamSimple(map, prefix + "Codec", this.Codec);
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamSimple(map, prefix + "ModelType", this.ModelType);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);

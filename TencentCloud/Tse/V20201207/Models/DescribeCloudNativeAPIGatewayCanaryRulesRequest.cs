@@ -37,6 +37,12 @@ namespace TencentCloud.Tse.V20201207.Models
         public string ServiceId{ get; set; }
 
         /// <summary>
+        /// 灰度规则类别 Standard｜Lane
+        /// </summary>
+        [JsonProperty("RuleType")]
+        public string RuleType{ get; set; }
+
+        /// <summary>
         /// 列表数量
         /// </summary>
         [JsonProperty("Limit")]
@@ -56,6 +62,7 @@ namespace TencentCloud.Tse.V20201207.Models
         {
             this.SetParamSimple(map, prefix + "GatewayId", this.GatewayId);
             this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
+            this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }

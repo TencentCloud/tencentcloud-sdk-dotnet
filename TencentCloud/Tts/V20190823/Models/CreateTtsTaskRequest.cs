@@ -31,12 +31,6 @@ namespace TencentCloud.Tts.V20190823.Models
         public string Text{ get; set; }
 
         /// <summary>
-        /// 模型类型，1-默认模型。
-        /// </summary>
-        [JsonProperty("ModelType")]
-        public long? ModelType{ get; set; }
-
-        /// <summary>
         /// 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
         /// </summary>
         [JsonProperty("Volume")]
@@ -53,6 +47,12 @@ namespace TencentCloud.Tts.V20190823.Models
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
+
+        /// <summary>
+        /// 模型类型，1-默认模型。
+        /// </summary>
+        [JsonProperty("ModelType")]
+        public long? ModelType{ get; set; }
 
         /// <summary>
         /// 音色 ID，包括标准音色与精品音色，精品音色拟真度更高，价格不同于标准音色，请参见[购买指南](https://cloud.tencent.com/document/product/1073/34112)。完整的音色 ID 列表请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)。
@@ -115,10 +115,10 @@ namespace TencentCloud.Tts.V20190823.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Text", this.Text);
-            this.SetParamSimple(map, prefix + "ModelType", this.ModelType);
             this.SetParamSimple(map, prefix + "Volume", this.Volume);
             this.SetParamSimple(map, prefix + "Speed", this.Speed);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "ModelType", this.ModelType);
             this.SetParamSimple(map, prefix + "VoiceType", this.VoiceType);
             this.SetParamSimple(map, prefix + "PrimaryLanguage", this.PrimaryLanguage);
             this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);

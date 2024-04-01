@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.976";
+       private const string sdkVersion = "SDK_NET_3.0.977";
 
         /// <summary>
         /// Client constructor.
@@ -638,6 +638,27 @@ namespace TencentCloud.Redis.V20180412
         public DescribeInstanceDealDetailResponse DescribeInstanceDealDetailSync(DescribeInstanceDealDetailRequest req)
         {
             return InternalRequestAsync<DescribeInstanceDealDetailResponse>(req, "DescribeInstanceDealDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeInstanceEvents）用于查询 Redis 实例事件信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceEventsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceEventsResponse"/></returns>
+        public Task<DescribeInstanceEventsResponse> DescribeInstanceEvents(DescribeInstanceEventsRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceEventsResponse>(req, "DescribeInstanceEvents");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeInstanceEvents）用于查询 Redis 实例事件信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceEventsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceEventsResponse"/></returns>
+        public DescribeInstanceEventsResponse DescribeInstanceEventsSync(DescribeInstanceEventsRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceEventsResponse>(req, "DescribeInstanceEvents")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1625,6 +1646,27 @@ namespace TencentCloud.Redis.V20180412
         public ModifyInstanceAvailabilityZonesResponse ModifyInstanceAvailabilityZonesSync(ModifyInstanceAvailabilityZonesRequest req)
         {
             return InternalRequestAsync<ModifyInstanceAvailabilityZonesResponse>(req, "ModifyInstanceAvailabilityZones")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyInstanceEvent）用于修改实例的运维事件的执行计划。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceEventRequest"/></param>
+        /// <returns><see cref="ModifyInstanceEventResponse"/></returns>
+        public Task<ModifyInstanceEventResponse> ModifyInstanceEvent(ModifyInstanceEventRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceEventResponse>(req, "ModifyInstanceEvent");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyInstanceEvent）用于修改实例的运维事件的执行计划。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceEventRequest"/></param>
+        /// <returns><see cref="ModifyInstanceEventResponse"/></returns>
+        public ModifyInstanceEventResponse ModifyInstanceEventSync(ModifyInstanceEventRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceEventResponse>(req, "ModifyInstanceEvent")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
