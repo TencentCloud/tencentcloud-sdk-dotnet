@@ -66,6 +66,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("FilesSize")]
         public string[] FilesSize{ get; set; }
 
+        /// <summary>
+        /// 必填项，资源的Md5值（COS中的ETag）
+        /// </summary>
+        [JsonProperty("FileMd5")]
+        public string FileMd5{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "CosRegion", this.CosRegion);
             this.SetParamSimple(map, prefix + "NewFile", this.NewFile);
             this.SetParamArraySimple(map, prefix + "FilesSize.", this.FilesSize);
+            this.SetParamSimple(map, prefix + "FileMd5", this.FileMd5);
         }
     }
 }
