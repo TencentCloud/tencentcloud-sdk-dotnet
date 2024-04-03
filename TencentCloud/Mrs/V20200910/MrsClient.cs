@@ -28,7 +28,7 @@ namespace TencentCloud.Mrs.V20200910
 
        private const string endpoint = "mrs.tencentcloudapi.com";
        private const string version = "2020-09-10";
-       private const string sdkVersion = "SDK_NET_3.0.977";
+       private const string sdkVersion = "SDK_NET_3.0.978";
 
         /// <summary>
         /// Client constructor.
@@ -160,6 +160,8 @@ namespace TencentCloud.Mrs.V20200910
 
         /// <summary>
         /// 文本分类
+        /// 
+        /// 适用场景：经过腾讯医疗专用 OCR 从图片识别之后的文本，并且需要加上每个字符的坐标信息，才可以调用此接口。通过其它 OCR 识别的文本可能不适配。医院的 XML 格式文本也不适配，XML 文件需要经过特殊转换才能直接调用此接口。单次调用传入的文本不宜超过 2000 字。如有需要调用此接口，建议先咨询产品团队。
         /// </summary>
         /// <param name="req"><see cref="TextToClassRequest"/></param>
         /// <returns><see cref="TextToClassResponse"/></returns>
@@ -170,6 +172,8 @@ namespace TencentCloud.Mrs.V20200910
 
         /// <summary>
         /// 文本分类
+        /// 
+        /// 适用场景：经过腾讯医疗专用 OCR 从图片识别之后的文本，并且需要加上每个字符的坐标信息，才可以调用此接口。通过其它 OCR 识别的文本可能不适配。医院的 XML 格式文本也不适配，XML 文件需要经过特殊转换才能直接调用此接口。单次调用传入的文本不宜超过 2000 字。如有需要调用此接口，建议先咨询产品团队。
         /// </summary>
         /// <param name="req"><see cref="TextToClassRequest"/></param>
         /// <returns><see cref="TextToClassResponse"/></returns>

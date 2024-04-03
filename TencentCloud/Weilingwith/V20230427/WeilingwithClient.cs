@@ -28,7 +28,7 @@ namespace TencentCloud.Weilingwith.V20230427
 
        private const string endpoint = "weilingwith.tencentcloudapi.com";
        private const string version = "2023-04-27";
-       private const string sdkVersion = "SDK_NET_3.0.977";
+       private const string sdkVersion = "SDK_NET_3.0.978";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Weilingwith.V20230427
         public BatchCreateDeviceResponse BatchCreateDeviceSync(BatchCreateDeviceRequest req)
         {
             return InternalRequestAsync<BatchCreateDeviceResponse>(req, "BatchCreateDevice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量删除设备
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeleteDeviceRequest"/></param>
+        /// <returns><see cref="BatchDeleteDeviceResponse"/></returns>
+        public Task<BatchDeleteDeviceResponse> BatchDeleteDevice(BatchDeleteDeviceRequest req)
+        {
+            return InternalRequestAsync<BatchDeleteDeviceResponse>(req, "BatchDeleteDevice");
+        }
+
+        /// <summary>
+        /// 批量删除设备
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeleteDeviceRequest"/></param>
+        /// <returns><see cref="BatchDeleteDeviceResponse"/></returns>
+        public BatchDeleteDeviceResponse BatchDeleteDeviceSync(BatchDeleteDeviceRequest req)
+        {
+            return InternalRequestAsync<BatchDeleteDeviceResponse>(req, "BatchDeleteDevice")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -218,6 +239,27 @@ namespace TencentCloud.Weilingwith.V20230427
         public CreateApplicationTokenResponse CreateApplicationTokenSync(CreateApplicationTokenRequest req)
         {
             return InternalRequestAsync<CreateApplicationTokenResponse>(req, "CreateApplicationToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除设备分组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeviceGroupRequest"/></param>
+        /// <returns><see cref="DeleteDeviceGroupResponse"/></returns>
+        public Task<DeleteDeviceGroupResponse> DeleteDeviceGroup(DeleteDeviceGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteDeviceGroupResponse>(req, "DeleteDeviceGroup");
+        }
+
+        /// <summary>
+        /// 删除设备分组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeviceGroupRequest"/></param>
+        /// <returns><see cref="DeleteDeviceGroupResponse"/></returns>
+        public DeleteDeviceGroupResponse DeleteDeviceGroupSync(DeleteDeviceGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteDeviceGroupResponse>(req, "DeleteDeviceGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -470,6 +512,27 @@ namespace TencentCloud.Weilingwith.V20230427
         public DescribeCityWorkspaceListResponse DescribeCityWorkspaceListSync(DescribeCityWorkspaceListRequest req)
         {
             return InternalRequestAsync<DescribeCityWorkspaceListResponse>(req, "DescribeCityWorkspaceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设备分组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceGroupListRequest"/></param>
+        /// <returns><see cref="DescribeDeviceGroupListResponse"/></returns>
+        public Task<DescribeDeviceGroupListResponse> DescribeDeviceGroupList(DescribeDeviceGroupListRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceGroupListResponse>(req, "DescribeDeviceGroupList");
+        }
+
+        /// <summary>
+        /// 设备分组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceGroupListRequest"/></param>
+        /// <returns><see cref="DescribeDeviceGroupListResponse"/></returns>
+        public DescribeDeviceGroupListResponse DescribeDeviceGroupListSync(DescribeDeviceGroupListRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceGroupListResponse>(req, "DescribeDeviceGroupList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1167,6 +1230,48 @@ namespace TencentCloud.Weilingwith.V20230427
         }
 
         /// <summary>
+        /// 批量修改设备自定义字段值
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeviceFieldRequest"/></param>
+        /// <returns><see cref="ModifyDeviceFieldResponse"/></returns>
+        public Task<ModifyDeviceFieldResponse> ModifyDeviceField(ModifyDeviceFieldRequest req)
+        {
+            return InternalRequestAsync<ModifyDeviceFieldResponse>(req, "ModifyDeviceField");
+        }
+
+        /// <summary>
+        /// 批量修改设备自定义字段值
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeviceFieldRequest"/></param>
+        /// <returns><see cref="ModifyDeviceFieldResponse"/></returns>
+        public ModifyDeviceFieldResponse ModifyDeviceFieldSync(ModifyDeviceFieldRequest req)
+        {
+            return InternalRequestAsync<ModifyDeviceFieldResponse>(req, "ModifyDeviceField")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量修改设备组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeviceGroupRequest"/></param>
+        /// <returns><see cref="ModifyDeviceGroupResponse"/></returns>
+        public Task<ModifyDeviceGroupResponse> ModifyDeviceGroup(ModifyDeviceGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyDeviceGroupResponse>(req, "ModifyDeviceGroup");
+        }
+
+        /// <summary>
+        /// 批量修改设备组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeviceGroupRequest"/></param>
+        /// <returns><see cref="ModifyDeviceGroupResponse"/></returns>
+        public ModifyDeviceGroupResponse ModifyDeviceGroupSync(ModifyDeviceGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyDeviceGroupResponse>(req, "ModifyDeviceGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 批量修改设备名字
         /// </summary>
         /// <param name="req"><see cref="ModifyDeviceNameRequest"/></param>
@@ -1188,6 +1293,27 @@ namespace TencentCloud.Weilingwith.V20230427
         }
 
         /// <summary>
+        /// 批量修改设备标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeviceTagRequest"/></param>
+        /// <returns><see cref="ModifyDeviceTagResponse"/></returns>
+        public Task<ModifyDeviceTagResponse> ModifyDeviceTag(ModifyDeviceTagRequest req)
+        {
+            return InternalRequestAsync<ModifyDeviceTagResponse>(req, "ModifyDeviceTag");
+        }
+
+        /// <summary>
+        /// 批量修改设备标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeviceTagRequest"/></param>
+        /// <returns><see cref="ModifyDeviceTagResponse"/></returns>
+        public ModifyDeviceTagResponse ModifyDeviceTagSync(ModifyDeviceTagRequest req)
+        {
+            return InternalRequestAsync<ModifyDeviceTagResponse>(req, "ModifyDeviceTag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 上报应用消息
         /// </summary>
         /// <param name="req"><see cref="ReportAppMessageRequest"/></param>
@@ -1205,6 +1331,27 @@ namespace TencentCloud.Weilingwith.V20230427
         public ReportAppMessageResponse ReportAppMessageSync(ReportAppMessageRequest req)
         {
             return InternalRequestAsync<ReportAppMessageResponse>(req, "ReportAppMessage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设备分组新增/修改
+        /// </summary>
+        /// <param name="req"><see cref="SaveDeviceGroupRequest"/></param>
+        /// <returns><see cref="SaveDeviceGroupResponse"/></returns>
+        public Task<SaveDeviceGroupResponse> SaveDeviceGroup(SaveDeviceGroupRequest req)
+        {
+            return InternalRequestAsync<SaveDeviceGroupResponse>(req, "SaveDeviceGroup");
+        }
+
+        /// <summary>
+        /// 设备分组新增/修改
+        /// </summary>
+        /// <param name="req"><see cref="SaveDeviceGroupRequest"/></param>
+        /// <returns><see cref="SaveDeviceGroupResponse"/></returns>
+        public SaveDeviceGroupResponse SaveDeviceGroupSync(SaveDeviceGroupRequest req)
+        {
+            return InternalRequestAsync<SaveDeviceGroupResponse>(req, "SaveDeviceGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

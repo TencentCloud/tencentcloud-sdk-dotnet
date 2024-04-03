@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DB419999-DC15-39F3-A20E-BEE2B31253E2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.977</VersionPrefix>
+    <VersionPrefix>3.0.978</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -71,6 +71,8 @@
     <Compile Include="V20230427\Models\BatchCreateDeviceRequest.cs" />
     <Compile Include="V20230427\Models\BatchCreateDeviceRes.cs" />
     <Compile Include="V20230427\Models\BatchCreateDeviceResponse.cs" />
+    <Compile Include="V20230427\Models\BatchDeleteDeviceRequest.cs" />
+    <Compile Include="V20230427\Models\BatchDeleteDeviceResponse.cs" />
     <Compile Include="V20230427\Models\BatchKillAlarmRequest.cs" />
     <Compile Include="V20230427\Models\BatchKillAlarmResponse.cs" />
     <Compile Include="V20230427\Models\BatchReportAppMessageRequest.cs" />
@@ -96,6 +98,8 @@
     <Compile Include="V20230427\Models\CreateDeviceSucceeded.cs" />
     <Compile Include="V20230427\Models\CustomField.cs" />
     <Compile Include="V20230427\Models\CustomFieldInfo.cs" />
+    <Compile Include="V20230427\Models\DeleteDeviceGroupRequest.cs" />
+    <Compile Include="V20230427\Models\DeleteDeviceGroupResponse.cs" />
     <Compile Include="V20230427\Models\DescribeActionListRequest.cs" />
     <Compile Include="V20230427\Models\DescribeActionListRes.cs" />
     <Compile Include="V20230427\Models\DescribeActionListResponse.cs" />
@@ -127,6 +131,9 @@
     <Compile Include="V20230427\Models\DescribeCityWorkspaceListRequest.cs" />
     <Compile Include="V20230427\Models\DescribeCityWorkspaceListRes.cs" />
     <Compile Include="V20230427\Models\DescribeCityWorkspaceListResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeDeviceGroupListRequest.cs" />
+    <Compile Include="V20230427\Models\DescribeDeviceGroupListRes.cs" />
+    <Compile Include="V20230427\Models\DescribeDeviceGroupListResponse.cs" />
     <Compile Include="V20230427\Models\DescribeDeviceListRequest.cs" />
     <Compile Include="V20230427\Models\DescribeDeviceListRes.cs" />
     <Compile Include="V20230427\Models\DescribeDeviceListResponse.cs" />
@@ -153,6 +160,7 @@
     <Compile Include="V20230427\Models\DescribeFileDownloadURLResponse.cs" />
     <Compile Include="V20230427\Models\DescribeFileUploadURLRequest.cs" />
     <Compile Include="V20230427\Models\DescribeFileUploadURLResponse.cs" />
+    <Compile Include="V20230427\Models\DescribeGroupInfo.cs" />
     <Compile Include="V20230427\Models\DescribeInterfaceListRequest.cs" />
     <Compile Include="V20230427\Models\DescribeInterfaceListResponse.cs" />
     <Compile Include="V20230427\Models\DescribeLinkRuleListRequest.cs" />
@@ -233,8 +241,17 @@
     <Compile Include="V20230427\Models\MessageProfile.cs" />
     <Compile Include="V20230427\Models\ModelInfo.cs" />
     <Compile Include="V20230427\Models\ModelSet.cs" />
+    <Compile Include="V20230427\Models\ModifyDeviceFieldInfo.cs" />
+    <Compile Include="V20230427\Models\ModifyDeviceFieldRequest.cs" />
+    <Compile Include="V20230427\Models\ModifyDeviceFieldResponse.cs" />
+    <Compile Include="V20230427\Models\ModifyDeviceGroupInfo.cs" />
+    <Compile Include="V20230427\Models\ModifyDeviceGroupRequest.cs" />
+    <Compile Include="V20230427\Models\ModifyDeviceGroupResponse.cs" />
     <Compile Include="V20230427\Models\ModifyDeviceNameRequest.cs" />
     <Compile Include="V20230427\Models\ModifyDeviceNameResponse.cs" />
+    <Compile Include="V20230427\Models\ModifyDeviceTagInfo.cs" />
+    <Compile Include="V20230427\Models\ModifyDeviceTagRequest.cs" />
+    <Compile Include="V20230427\Models\ModifyDeviceTagResponse.cs" />
     <Compile Include="V20230427\Models\ProcessRecordInfo.cs" />
     <Compile Include="V20230427\Models\ProductInfo.cs" />
     <Compile Include="V20230427\Models\ProductSet.cs" />
@@ -247,6 +264,9 @@
     <Compile Include="V20230427\Models\ReportImg.cs" />
     <Compile Include="V20230427\Models\ReportMsgRes.cs" />
     <Compile Include="V20230427\Models\RuleDetailRes.cs" />
+    <Compile Include="V20230427\Models\SaveDeviceGroupRequest.cs" />
+    <Compile Include="V20230427\Models\SaveDeviceGroupRes.cs" />
+    <Compile Include="V20230427\Models\SaveDeviceGroupResponse.cs" />
     <Compile Include="V20230427\Models\SceneInfo.cs" />
     <Compile Include="V20230427\Models\SceneListRes.cs" />
     <Compile Include="V20230427\Models\SpaceDataListStatsRes.cs" />

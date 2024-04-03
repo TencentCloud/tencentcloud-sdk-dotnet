@@ -28,7 +28,7 @@ namespace TencentCloud.Domain.V20180808
 
        private const string endpoint = "domain.tencentcloudapi.com";
        private const string version = "2018-08-08";
-       private const string sdkVersion = "SDK_NET_3.0.977";
+       private const string sdkVersion = "SDK_NET_3.0.978";
 
         /// <summary>
         /// Client constructor.
@@ -554,6 +554,27 @@ namespace TencentCloud.Domain.V20180808
         public DescribeTemplateListResponse DescribeTemplateListSync(DescribeTemplateListRequest req)
         {
             return InternalRequestAsync<DescribeTemplateListResponse>(req, "DescribeTemplateList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于获取域名注册当前支持注册的后缀
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTldListRequest"/></param>
+        /// <returns><see cref="DescribeTldListResponse"/></returns>
+        public Task<DescribeTldListResponse> DescribeTldList(DescribeTldListRequest req)
+        {
+            return InternalRequestAsync<DescribeTldListResponse>(req, "DescribeTldList");
+        }
+
+        /// <summary>
+        /// 用于获取域名注册当前支持注册的后缀
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTldListRequest"/></param>
+        /// <returns><see cref="DescribeTldListResponse"/></returns>
+        public DescribeTldListResponse DescribeTldListSync(DescribeTldListRequest req)
+        {
+            return InternalRequestAsync<DescribeTldListResponse>(req, "DescribeTldList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

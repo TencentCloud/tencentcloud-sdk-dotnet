@@ -81,6 +81,12 @@ namespace TencentCloud.Live.V20180801.Models
         public RecordParam Mp3Param{ get; set; }
 
         /// <summary>
+        /// 是否存储至 cos，值为 1 时表示存储至 cos。
+        /// </summary>
+        [JsonProperty("CosStore")]
+        public long? CosStore{ get; set; }
+
+        /// <summary>
         /// 是否去除水印，类型为慢直播时此参数无效。
         /// 如果为false，则录制水印流或转码流；如果为true，则录制原始流。
         /// </summary>
@@ -108,6 +114,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
             this.SetParamObj(map, prefix + "HlsSpecialParam.", this.HlsSpecialParam);
             this.SetParamObj(map, prefix + "Mp3Param.", this.Mp3Param);
+            this.SetParamSimple(map, prefix + "CosStore", this.CosStore);
             this.SetParamSimple(map, prefix + "RemoveWatermark", this.RemoveWatermark);
             this.SetParamObj(map, prefix + "FlvSpecialParam.", this.FlvSpecialParam);
         }

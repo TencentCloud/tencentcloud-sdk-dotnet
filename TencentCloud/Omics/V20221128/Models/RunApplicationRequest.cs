@@ -43,12 +43,6 @@ namespace TencentCloud.Omics.V20221128.Models
         public string EnvironmentId{ get; set; }
 
         /// <summary>
-        /// 任务输入JSON。需要进行base64编码。
-        /// </summary>
-        [JsonProperty("InputBase64")]
-        public string InputBase64{ get; set; }
-
-        /// <summary>
         /// 项目ID。（不填使用指定地域下的默认项目）
         /// </summary>
         [JsonProperty("ProjectId")]
@@ -59,6 +53,18 @@ namespace TencentCloud.Omics.V20221128.Models
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
+
+        /// <summary>
+        /// 任务输入COS地址。（InputBase64和InputCosUri必选其一）
+        /// </summary>
+        [JsonProperty("InputCosUri")]
+        public string InputCosUri{ get; set; }
+
+        /// <summary>
+        /// 任务输入JSON。需要进行base64编码。（InputBase64和InputCosUri必选其一）
+        /// </summary>
+        [JsonProperty("InputBase64")]
+        public string InputBase64{ get; set; }
 
         /// <summary>
         /// 批量投递表格ID，不填表示单例投递。
@@ -102,6 +108,14 @@ namespace TencentCloud.Omics.V20221128.Models
         [JsonProperty("WorkDir")]
         public string WorkDir{ get; set; }
 
+        /// <summary>
+        /// 访问模式，不填默认私有。取值范围
+        /// - PRIVATE：私有应用
+        /// - PUBLIC：公共应用
+        /// </summary>
+        [JsonProperty("AccessMode")]
+        public string AccessMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -111,9 +125,10 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
-            this.SetParamSimple(map, prefix + "InputBase64", this.InputBase64);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "InputCosUri", this.InputCosUri);
+            this.SetParamSimple(map, prefix + "InputBase64", this.InputBase64);
             this.SetParamSimple(map, prefix + "TableId", this.TableId);
             this.SetParamArraySimple(map, prefix + "TableRowUuids.", this.TableRowUuids);
             this.SetParamSimple(map, prefix + "CacheClearDelay", this.CacheClearDelay);
@@ -121,6 +136,7 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamObj(map, prefix + "Option.", this.Option);
             this.SetParamObj(map, prefix + "NFOption.", this.NFOption);
             this.SetParamSimple(map, prefix + "WorkDir", this.WorkDir);
+            this.SetParamSimple(map, prefix + "AccessMode", this.AccessMode);
         }
     }
 }

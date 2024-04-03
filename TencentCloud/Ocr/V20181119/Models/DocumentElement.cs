@@ -63,6 +63,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long? Level{ get; set; }
 
         /// <summary>
+        /// 入参开启EnableInsetImage后返回，表示在InsetImagePackage中的内嵌图片名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InsetImageName")]
+        public string InsetImageName{ get; set; }
+
+        /// <summary>
         /// 嵌套的文档元素信息，一般包含的是文档内嵌入图片的文字识别结果
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -80,6 +87,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamObj(map, prefix + "Polygon.", this.Polygon);
             this.SetParamSimple(map, prefix + "Level", this.Level);
+            this.SetParamSimple(map, prefix + "InsetImageName", this.InsetImageName);
             this.SetParamArrayObj(map, prefix + "Elements.", this.Elements);
         }
     }

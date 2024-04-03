@@ -137,7 +137,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string OpenId{ get; set; }
 
         /// <summary>
-        /// Endpoint为"APP" 类型的签署链接，可以设置此值；支持调用方小程序打开签署链接，在电子签小程序完成签署后自动回跳至调用方小程序
+        /// 签署完成后是否自动回跳
+        /// <ul><li>false：否, 签署完成不会自动跳转回来(默认)</li><li>true：是, 签署完成会自动跳转回来</li></ul>
+        /// 
+        /// 注: 
+        /// 1. 该参数<font color="red">只针对APP类型（电子签小程序跳转贵方小程序）场景</font> 的签署链接有效
+        /// 2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
+        /// 3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必需用户手动点击完成按钮（微信的限制）</font> 
         /// </summary>
         [JsonProperty("AutoJumpBack")]
         public bool? AutoJumpBack{ get; set; }

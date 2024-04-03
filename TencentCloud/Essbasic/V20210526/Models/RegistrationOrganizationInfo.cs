@@ -118,6 +118,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("BusinessLicense")]
         public string BusinessLicense{ get; set; }
 
+        /// <summary>
+        /// 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M
+        /// </summary>
+        [JsonProperty("PowerOfAttorneys")]
+        public string[] PowerOfAttorneys{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -136,6 +142,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "AdminIdCardType", this.AdminIdCardType);
             this.SetParamSimple(map, prefix + "AdminIdCardNumber", this.AdminIdCardNumber);
             this.SetParamSimple(map, prefix + "BusinessLicense", this.BusinessLicense);
+            this.SetParamArraySimple(map, prefix + "PowerOfAttorneys.", this.PowerOfAttorneys);
         }
     }
 }
