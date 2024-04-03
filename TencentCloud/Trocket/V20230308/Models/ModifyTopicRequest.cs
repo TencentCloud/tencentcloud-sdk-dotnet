@@ -48,6 +48,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// 消息保留时长
+        /// </summary>
+        [JsonProperty("MsgTTL")]
+        public long? MsgTTL{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "Topic", this.Topic);
             this.SetParamSimple(map, prefix + "QueueNum", this.QueueNum);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
         }
     }
 }
