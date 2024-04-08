@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.979";
+       private const string sdkVersion = "SDK_NET_3.0.980";
 
         /// <summary>
         /// Client constructor.
@@ -155,6 +155,27 @@ namespace TencentCloud.Csip.V20221121
         public DeleteRiskScanTaskResponse DeleteRiskScanTaskSync(DeleteRiskScanTaskRequest req)
         {
             return InternalRequestAsync<DeleteRiskScanTaskResponse>(req, "DeleteRiskScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取资产视角的漏洞风险列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetViewVulRiskListRequest"/></param>
+        /// <returns><see cref="DescribeAssetViewVulRiskListResponse"/></returns>
+        public Task<DescribeAssetViewVulRiskListResponse> DescribeAssetViewVulRiskList(DescribeAssetViewVulRiskListRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetViewVulRiskListResponse>(req, "DescribeAssetViewVulRiskList");
+        }
+
+        /// <summary>
+        /// 获取资产视角的漏洞风险列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetViewVulRiskListRequest"/></param>
+        /// <returns><see cref="DescribeAssetViewVulRiskListResponse"/></returns>
+        public DescribeAssetViewVulRiskListResponse DescribeAssetViewVulRiskListSync(DescribeAssetViewVulRiskListRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetViewVulRiskListResponse>(req, "DescribeAssetViewVulRiskList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

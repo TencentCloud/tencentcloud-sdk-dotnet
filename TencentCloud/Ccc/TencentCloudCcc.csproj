@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5C13E957-36F0-3A36-917C-9FBB15CAE883}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.979</VersionPrefix>
+    <VersionPrefix>3.0.980</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,6 +51,7 @@
     <Compile Include="V20200210\Models\AbortPredictiveDialingCampaignRequest.cs" />
     <Compile Include="V20200210\Models\AbortPredictiveDialingCampaignResponse.cs" />
     <Compile Include="V20200210\Models\ActiveCarrierPrivilegeNumber.cs" />
+    <Compile Include="V20200210\Models\AudioFileInfo.cs" />
     <Compile Include="V20200210\Models\AutoCalloutTaskCalleeInfo.cs" />
     <Compile Include="V20200210\Models\AutoCalloutTaskInfo.cs" />
     <Compile Include="V20200210\Models\BindNumberCallOutSkillGroupRequest.cs" />
@@ -116,6 +117,8 @@
     <Compile Include="V20200210\Models\DescribeIMCdrListResponse.cs" />
     <Compile Include="V20200210\Models\DescribeIMCdrsRequest.cs" />
     <Compile Include="V20200210\Models\DescribeIMCdrsResponse.cs" />
+    <Compile Include="V20200210\Models\DescribeIvrAudioListRequest.cs" />
+    <Compile Include="V20200210\Models\DescribeIvrAudioListResponse.cs" />
     <Compile Include="V20200210\Models\DescribeNumbersRequest.cs" />
     <Compile Include="V20200210\Models\DescribeNumbersResponse.cs" />
     <Compile Include="V20200210\Models\DescribePSTNActiveSessionListRequest.cs" />
@@ -191,6 +194,10 @@
     <Compile Include="V20200210\Models\UpdateCCCSkillGroupResponse.cs" />
     <Compile Include="V20200210\Models\UpdatePredictiveDialingCampaignRequest.cs" />
     <Compile Include="V20200210\Models\UpdatePredictiveDialingCampaignResponse.cs" />
+    <Compile Include="V20200210\Models\UploadAudioInfo.cs" />
+    <Compile Include="V20200210\Models\UploadIvrAudioFailedInfo.cs" />
+    <Compile Include="V20200210\Models\UploadIvrAudioRequest.cs" />
+    <Compile Include="V20200210\Models\UploadIvrAudioResponse.cs" />
     <Compile Include="V20200210\Models\Variable.cs" />
   </ItemGroup>
 </Project>

@@ -100,6 +100,27 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("ClassId")]
         public long? ClassId{ get; set; }
 
+        /// <summary>
+        /// 存储至 cos 的 bucket 桶名称。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CosBucketName")]
+        public string CosBucketName{ get; set; }
+
+        /// <summary>
+        /// 存储至 cos 的 bucket 区域。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CosBucketRegion")]
+        public string CosBucketRegion{ get; set; }
+
+        /// <summary>
+        /// 存储至 cos 的 bucket 路径。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CosBucketPath")]
+        public string CosBucketPath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +135,9 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "Procedure", this.Procedure);
             this.SetParamSimple(map, prefix + "StorageMode", this.StorageMode);
             this.SetParamSimple(map, prefix + "ClassId", this.ClassId);
+            this.SetParamSimple(map, prefix + "CosBucketName", this.CosBucketName);
+            this.SetParamSimple(map, prefix + "CosBucketRegion", this.CosBucketRegion);
+            this.SetParamSimple(map, prefix + "CosBucketPath", this.CosBucketPath);
         }
     }
 }

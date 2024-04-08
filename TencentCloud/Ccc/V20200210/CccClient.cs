@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.979";
+       private const string sdkVersion = "SDK_NET_3.0.980";
 
         /// <summary>
         /// Client constructor.
@@ -667,6 +667,27 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 查询IVR音频文件列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIvrAudioListRequest"/></param>
+        /// <returns><see cref="DescribeIvrAudioListResponse"/></returns>
+        public Task<DescribeIvrAudioListResponse> DescribeIvrAudioList(DescribeIvrAudioListRequest req)
+        {
+            return InternalRequestAsync<DescribeIvrAudioListResponse>(req, "DescribeIvrAudioList");
+        }
+
+        /// <summary>
+        /// 查询IVR音频文件列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIvrAudioListRequest"/></param>
+        /// <returns><see cref="DescribeIvrAudioListResponse"/></returns>
+        public DescribeIvrAudioListResponse DescribeIvrAudioListSync(DescribeIvrAudioListRequest req)
+        {
+            return InternalRequestAsync<DescribeIvrAudioListResponse>(req, "DescribeIvrAudioList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询号码列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNumbersRequest"/></param>
@@ -1188,6 +1209,27 @@ namespace TencentCloud.Ccc.V20200210
         public UpdatePredictiveDialingCampaignResponse UpdatePredictiveDialingCampaignSync(UpdatePredictiveDialingCampaignRequest req)
         {
             return InternalRequestAsync<UpdatePredictiveDialingCampaignResponse>(req, "UpdatePredictiveDialingCampaign")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 上传IVR中使用的音频文件，每日上传文件限制50个。（参数中音频文件Url建议使用腾讯云Cos存储的临时链接）
+        /// </summary>
+        /// <param name="req"><see cref="UploadIvrAudioRequest"/></param>
+        /// <returns><see cref="UploadIvrAudioResponse"/></returns>
+        public Task<UploadIvrAudioResponse> UploadIvrAudio(UploadIvrAudioRequest req)
+        {
+            return InternalRequestAsync<UploadIvrAudioResponse>(req, "UploadIvrAudio");
+        }
+
+        /// <summary>
+        /// 上传IVR中使用的音频文件，每日上传文件限制50个。（参数中音频文件Url建议使用腾讯云Cos存储的临时链接）
+        /// </summary>
+        /// <param name="req"><see cref="UploadIvrAudioRequest"/></param>
+        /// <returns><see cref="UploadIvrAudioResponse"/></returns>
+        public UploadIvrAudioResponse UploadIvrAudioSync(UploadIvrAudioRequest req)
+        {
+            return InternalRequestAsync<UploadIvrAudioResponse>(req, "UploadIvrAudio")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

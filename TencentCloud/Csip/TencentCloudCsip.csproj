@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.979</VersionPrefix>
+    <VersionPrefix>3.0.980</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -58,6 +58,7 @@
     <Compile Include="V20221121\Models\AssetViewCFGRisk.cs" />
     <Compile Include="V20221121\Models\AssetViewPortRisk.cs" />
     <Compile Include="V20221121\Models\AssetViewVULRisk.cs" />
+    <Compile Include="V20221121\Models\AssetViewVULRiskData.cs" />
     <Compile Include="V20221121\Models\AssetViewWeakPassRisk.cs" />
     <Compile Include="V20221121\Models\BugInfoDetail.cs" />
     <Compile Include="V20221121\Models\CVMAssetVO.cs" />
@@ -73,6 +74,8 @@
     <Compile Include="V20221121\Models\DeleteDomainAndIpResponse.cs" />
     <Compile Include="V20221121\Models\DeleteRiskScanTaskRequest.cs" />
     <Compile Include="V20221121\Models\DeleteRiskScanTaskResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeAssetViewVulRiskListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeAssetViewVulRiskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeCVMAssetInfoRequest.cs" />
     <Compile Include="V20221121\Models\DescribeCVMAssetInfoResponse.cs" />
     <Compile Include="V20221121\Models\DescribeCVMAssetsRequest.cs" />
