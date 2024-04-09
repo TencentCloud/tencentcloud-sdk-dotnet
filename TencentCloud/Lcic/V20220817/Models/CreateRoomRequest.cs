@@ -170,6 +170,7 @@ namespace TencentCloud.Lcic.V20220817.Models
 
         /// <summary>
         /// 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)
+        /// 注：大班课的布局(layout)只有三分屏
         /// </summary>
         [JsonProperty("RoomType")]
         public long? RoomType{ get; set; }

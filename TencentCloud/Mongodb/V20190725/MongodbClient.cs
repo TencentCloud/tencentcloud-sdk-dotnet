@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.980";
+       private const string sdkVersion = "SDK_NET_3.0.981";
 
         /// <summary>
         /// Client constructor.
@@ -491,6 +491,29 @@ namespace TencentCloud.Mongodb.V20190725
         public DescribeSpecInfoResponse DescribeSpecInfoSync(DescribeSpecInfoRequest req)
         {
             return InternalRequestAsync<DescribeSpecInfoResponse>(req, "DescribeSpecInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于发起按 Key 闪回任务，依据数据的闪回 Key（默认为 id）对数据进行极速回档，快速恢复业务。
+        /// **说明：按 Key 闪回于2023年09月11日正式进行公测，在此期间，该接口仅对公测用户开放。**
+        /// </summary>
+        /// <param name="req"><see cref="FlashBackDBInstanceRequest"/></param>
+        /// <returns><see cref="FlashBackDBInstanceResponse"/></returns>
+        public Task<FlashBackDBInstanceResponse> FlashBackDBInstance(FlashBackDBInstanceRequest req)
+        {
+            return InternalRequestAsync<FlashBackDBInstanceResponse>(req, "FlashBackDBInstance");
+        }
+
+        /// <summary>
+        /// 该接口用于发起按 Key 闪回任务，依据数据的闪回 Key（默认为 id）对数据进行极速回档，快速恢复业务。
+        /// **说明：按 Key 闪回于2023年09月11日正式进行公测，在此期间，该接口仅对公测用户开放。**
+        /// </summary>
+        /// <param name="req"><see cref="FlashBackDBInstanceRequest"/></param>
+        /// <returns><see cref="FlashBackDBInstanceResponse"/></returns>
+        public FlashBackDBInstanceResponse FlashBackDBInstanceSync(FlashBackDBInstanceRequest req)
+        {
+            return InternalRequestAsync<FlashBackDBInstanceResponse>(req, "FlashBackDBInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

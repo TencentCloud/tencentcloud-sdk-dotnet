@@ -52,6 +52,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
+        /// <summary>
+        /// 是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
+        /// </summary>
+        [JsonProperty("IsCache")]
+        public ulong? IsCache{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +68,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "IsCache", this.IsCache);
         }
     }
 }
