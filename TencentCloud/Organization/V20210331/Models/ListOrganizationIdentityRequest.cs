@@ -43,7 +43,7 @@ namespace TencentCloud.Organization.V20210331.Models
         public string SearchKey{ get; set; }
 
         /// <summary>
-        /// 身份ID搜索。
+        /// 身份ID。可以通过身份ID搜索
         /// </summary>
         [JsonProperty("IdentityId")]
         public ulong? IdentityId{ get; set; }

@@ -25,25 +25,25 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 成员Uin
+        /// 成员Uin。
         /// </summary>
         [JsonProperty("MemberUin")]
         public long? MemberUin{ get; set; }
 
         /// <summary>
-        /// 邮箱地址
+        /// 邮箱地址。
         /// </summary>
         [JsonProperty("Email")]
         public string Email{ get; set; }
 
         /// <summary>
-        /// 国际区号
+        /// 国际区号。
         /// </summary>
         [JsonProperty("CountryCode")]
         public string CountryCode{ get; set; }
 
         /// <summary>
-        /// 手机号
+        /// 手机号。
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }

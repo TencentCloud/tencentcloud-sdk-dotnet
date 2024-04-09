@@ -74,7 +74,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// 印章类型，OFFICIAL-企业公章，CONTRACT-合同专用章，LEGAL_PERSON_SEAL-法人章
+        /// 电子印章类型 , 可选类型如下: 
+        /// <ul><li>**OFFICIAL**: (默认)公章</li>
+        /// <li>**CONTRACT**: 合同专用章;</li>
+        /// <li>**FINANCE**: 财务专用章;</li>
+        /// <li>**PERSONNEL**: 人事专用章</li>
+        /// <li>**INVOICE**: 发票专用章</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("SealType")]
         public string SealType{ get; set; }

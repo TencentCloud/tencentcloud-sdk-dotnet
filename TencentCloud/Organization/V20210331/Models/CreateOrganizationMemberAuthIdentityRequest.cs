@@ -25,13 +25,13 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 成员uin列表。最多10个
+        /// 成员Uin列表。最多10个
         /// </summary>
         [JsonProperty("MemberUins")]
         public ulong?[] MemberUins{ get; set; }
 
         /// <summary>
-        /// 身份Id列表。最多5个
+        /// 身份Id列表。最多5个，可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
         /// </summary>
         [JsonProperty("IdentityIds")]
         public ulong?[] IdentityIds{ get; set; }

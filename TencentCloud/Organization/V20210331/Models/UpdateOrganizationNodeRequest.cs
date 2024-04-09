@@ -25,7 +25,7 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 节点ID。
+        /// 节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
         /// </summary>
         [JsonProperty("NodeId")]
         public ulong? NodeId{ get; set; }

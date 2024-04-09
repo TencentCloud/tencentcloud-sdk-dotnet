@@ -61,6 +61,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("RecordId")]
         public string RecordId{ get; set; }
 
+        /// <summary>
+        /// 若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1
+        /// </summary>
+        [JsonProperty("PublishCdnParams")]
+        public McuPublishCdnParam[] PublishCdnParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +79,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamObj(map, prefix + "WebRecordVideoParams.", this.WebRecordVideoParams);
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
+            this.SetParamArrayObj(map, prefix + "PublishCdnParams.", this.PublishCdnParams);
         }
     }
 }

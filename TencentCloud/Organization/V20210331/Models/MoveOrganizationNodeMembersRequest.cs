@@ -25,13 +25,13 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 组织节点ID。
+        /// 组织节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
         /// </summary>
         [JsonProperty("NodeId")]
         public long? NodeId{ get; set; }
 
         /// <summary>
-        /// 成员UIN列表。
+        /// 成员Uin列表。
         /// </summary>
         [JsonProperty("MemberUin")]
         public long?[] MemberUin{ get; set; }

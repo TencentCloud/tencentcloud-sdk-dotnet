@@ -28,7 +28,7 @@ namespace TencentCloud.Gs.V20191118
 
        private const string endpoint = "gs.tencentcloudapi.com";
        private const string version = "2019-11-18";
-       private const string sdkVersion = "SDK_NET_3.0.981";
+       private const string sdkVersion = "SDK_NET_3.0.982";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,27 @@ namespace TencentCloud.Gs.V20191118
         public StartPublishStreamResponse StartPublishStreamSync(StartPublishStreamRequest req)
         {
             return InternalRequestAsync<StartPublishStreamResponse>(req, "StartPublishStream")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开始云端推流
+        /// </summary>
+        /// <param name="req"><see cref="StartPublishStreamToCSSRequest"/></param>
+        /// <returns><see cref="StartPublishStreamToCSSResponse"/></returns>
+        public Task<StartPublishStreamToCSSResponse> StartPublishStreamToCSS(StartPublishStreamToCSSRequest req)
+        {
+            return InternalRequestAsync<StartPublishStreamToCSSResponse>(req, "StartPublishStreamToCSS");
+        }
+
+        /// <summary>
+        /// 开始云端推流
+        /// </summary>
+        /// <param name="req"><see cref="StartPublishStreamToCSSRequest"/></param>
+        /// <returns><see cref="StartPublishStreamToCSSResponse"/></returns>
+        public StartPublishStreamToCSSResponse StartPublishStreamToCSSSync(StartPublishStreamToCSSRequest req)
+        {
+            return InternalRequestAsync<StartPublishStreamToCSSResponse>(req, "StartPublishStreamToCSS")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

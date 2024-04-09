@@ -81,6 +81,13 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("DatabaseNetEnv")]
         public string DatabaseNetEnv{ get; set; }
 
+        /// <summary>
+        /// tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，Info中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，Info中需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConnectType")]
+        public string ConnectType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -95,6 +102,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "Supplier", this.Supplier);
             this.SetParamArrayObj(map, prefix + "ExtraAttr.", this.ExtraAttr);
             this.SetParamSimple(map, prefix + "DatabaseNetEnv", this.DatabaseNetEnv);
+            this.SetParamSimple(map, prefix + "ConnectType", this.ConnectType);
         }
     }
 }

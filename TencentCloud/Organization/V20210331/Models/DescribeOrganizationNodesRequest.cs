@@ -31,7 +31,7 @@ namespace TencentCloud.Organization.V20210331.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量。
+        /// 偏移量。取值是limit的整数倍。默认值 : 0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

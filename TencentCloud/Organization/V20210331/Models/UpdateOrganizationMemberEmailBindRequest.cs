@@ -25,31 +25,31 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 成员Uin
+        /// 成员Uin。
         /// </summary>
         [JsonProperty("MemberUin")]
         public long? MemberUin{ get; set; }
 
         /// <summary>
-        /// 绑定ID
+        /// 绑定ID。可以通过[DescribeOrganizationMemberEmailBind](https://cloud.tencent.com/document/product/850/93332)获取
         /// </summary>
         [JsonProperty("BindId")]
         public long? BindId{ get; set; }
 
         /// <summary>
-        /// 邮箱
+        /// 邮箱地址。
         /// </summary>
         [JsonProperty("Email")]
         public string Email{ get; set; }
 
         /// <summary>
-        /// 国际区号
+        /// 国际区号。
         /// </summary>
         [JsonProperty("CountryCode")]
         public string CountryCode{ get; set; }
 
         /// <summary>
-        /// 手机号
+        /// 手机号。
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }

@@ -43,7 +43,7 @@ namespace TencentCloud.Organization.V20210331.Models
         public ulong?[] PermissionIds{ get; set; }
 
         /// <summary>
-        /// 成员所属部门的节点ID。可以调用DescribeOrganizationNodes获取
+        /// 成员所属部门的节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
         /// </summary>
         [JsonProperty("NodeId")]
         public long? NodeId{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Organization.V20210331.Models
         public long? MemberUin{ get; set; }
 
         /// <summary>
-        /// 策略ID。可以调用DescribeOrganizationMemberPolicies获取
+        /// 策略ID。可以调用[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)获取
         /// </summary>
         [JsonProperty("PolicyId")]
         public long? PolicyId{ get; set; }

@@ -91,6 +91,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public DrReadableInfo DrReadableInfo{ get; set; }
 
         /// <summary>
+        /// 等待回收的IP列表
+        /// </summary>
+        [JsonProperty("OldVipList")]
+        public OldVip[] OldVipList{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -113,6 +119,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamObj(map, prefix + "TDEConfig.", this.TDEConfig);
             this.SetParamObj(map, prefix + "SSLConfig.", this.SSLConfig);
             this.SetParamObj(map, prefix + "DrReadableInfo.", this.DrReadableInfo);
+            this.SetParamArrayObj(map, prefix + "OldVipList.", this.OldVipList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

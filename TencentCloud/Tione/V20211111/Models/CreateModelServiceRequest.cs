@@ -222,7 +222,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string ServiceCategory{ get; set; }
 
         /// <summary>
-        /// 服务的启动命令
+        /// 服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数
         /// </summary>
         [JsonProperty("Command")]
         public string Command{ get; set; }
@@ -232,6 +232,12 @@ namespace TencentCloud.Tione.V20211111.Models
         /// </summary>
         [JsonProperty("ServiceEIP")]
         public ServiceEIP ServiceEIP{ get; set; }
+
+        /// <summary>
+        /// 服务的启动命令，以base64格式进行输入
+        /// </summary>
+        [JsonProperty("CommandBase64")]
+        public string CommandBase64{ get; set; }
 
 
         /// <summary>
@@ -270,6 +276,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "ServiceCategory", this.ServiceCategory);
             this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamObj(map, prefix + "ServiceEIP.", this.ServiceEIP);
+            this.SetParamSimple(map, prefix + "CommandBase64", this.CommandBase64);
         }
     }
 }

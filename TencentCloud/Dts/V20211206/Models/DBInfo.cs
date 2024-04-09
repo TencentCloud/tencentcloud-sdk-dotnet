@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 表示节点角色，针对分布式数据库，如mongodb中的mongos节点。如数据库是tdsql，枚举值为：proxy、set
+        /// 表示节点角色，针对分布式数据库，如mongodb中的mongos节点。tdsqlmysql的可选项：proxy表示节点类型为主机，set表示节点类型为节点。proxy类型必须填在数组第一项。tdsqlmysql类型的源/目标配置必填。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Role")]
@@ -165,7 +165,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string TmpToken{ get; set; }
 
         /// <summary>
-        /// tdsql分片id。tdsql set节点必填
+        /// tdsql的分片id。如节点类型为set必填。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SetId")]

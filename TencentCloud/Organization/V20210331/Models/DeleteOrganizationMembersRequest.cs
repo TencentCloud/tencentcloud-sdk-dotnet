@@ -25,7 +25,7 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 被删除成员的UIN列表。
+        /// 被删除成员的Uin列表。
         /// </summary>
         [JsonProperty("MemberUin")]
         public long?[] MemberUin{ get; set; }

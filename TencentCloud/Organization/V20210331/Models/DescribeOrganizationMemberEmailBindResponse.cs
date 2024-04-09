@@ -25,63 +25,63 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 绑定ID
+        /// 绑定ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BindId")]
         public ulong? BindId{ get; set; }
 
         /// <summary>
-        /// 申请时间
+        /// 申请时间。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplyTime")]
         public string ApplyTime{ get; set; }
 
         /// <summary>
-        /// 邮箱地址
+        /// 邮箱地址。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Email")]
         public string Email{ get; set; }
 
         /// <summary>
-        /// 手机号
+        /// 安全手机号。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }
 
         /// <summary>
-        /// 绑定状态    未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
+        /// 绑定状态。    未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BindStatus")]
         public string BindStatus{ get; set; }
 
         /// <summary>
-        /// 绑定时间
+        /// 绑定时间。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BindTime")]
         public string BindTime{ get; set; }
 
         /// <summary>
-        /// 失败说明
+        /// 失败说明。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 安全手机绑定状态  未绑定：0，已绑定：1
+        /// 安全手机绑定状态 。 未绑定：0，已绑定：1
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PhoneBind")]
         public ulong? PhoneBind{ get; set; }
 
         /// <summary>
-        /// 国际区号
+        /// 国际区号。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CountryCode")]

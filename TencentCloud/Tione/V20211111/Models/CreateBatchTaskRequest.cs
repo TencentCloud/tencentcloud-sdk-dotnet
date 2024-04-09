@@ -102,6 +102,7 @@ namespace TencentCloud.Tione.V20211111.Models
         /// 启动命令
         /// </summary>
         [JsonProperty("StartCmd")]
+        [System.Obsolete]
         public string StartCmd{ get; set; }
 
         /// <summary>
@@ -140,6 +141,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }
 
+        /// <summary>
+        /// 以Base64方式编码的启动命令。假设启动命令是/app/run.sh，则此处输入参数应该为L2FwcC9ydW4uc2g=。
+        /// </summary>
+        [JsonProperty("StartCmdBase64")]
+        public string StartCmdBase64{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -165,6 +172,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+            this.SetParamSimple(map, prefix + "StartCmdBase64", this.StartCmdBase64);
         }
     }
 }

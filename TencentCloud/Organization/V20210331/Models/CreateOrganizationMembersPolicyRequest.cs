@@ -37,7 +37,7 @@ namespace TencentCloud.Organization.V20210331.Models
         public string PolicyName{ get; set; }
 
         /// <summary>
-        /// 成员访问身份ID。
+        /// 成员访问身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
         /// </summary>
         [JsonProperty("IdentityId")]
         public long? IdentityId{ get; set; }

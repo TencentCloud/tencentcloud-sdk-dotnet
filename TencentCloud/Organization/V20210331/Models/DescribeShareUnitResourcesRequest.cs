@@ -55,7 +55,7 @@ namespace TencentCloud.Organization.V20210331.Models
         public string SearchKey{ get; set; }
 
         /// <summary>
-        /// 共享资源类型。
+        /// 共享资源类型。支持共享的资源类型,请参见[资源共享概述](https://cloud.tencent.com/document/product/850/59489)
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

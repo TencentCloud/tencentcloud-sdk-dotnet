@@ -73,6 +73,12 @@ namespace TencentCloud.Dts.V20211206.Models
         public string ExpectRunTime{ get; set; }
 
         /// <summary>
+        /// 源端tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，SrcInfos中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
+        /// </summary>
+        [JsonProperty("SrcConnectType")]
+        public string SrcConnectType{ get; set; }
+
+        /// <summary>
         /// 源端信息，单节点数据库使用，且SrcNodeType传single
         /// </summary>
         [JsonProperty("SrcInfo")]
@@ -134,6 +140,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "JobMode", this.JobMode);
             this.SetParamSimple(map, prefix + "RunMode", this.RunMode);
             this.SetParamSimple(map, prefix + "ExpectRunTime", this.ExpectRunTime);
+            this.SetParamSimple(map, prefix + "SrcConnectType", this.SrcConnectType);
             this.SetParamObj(map, prefix + "SrcInfo.", this.SrcInfo);
             this.SetParamObj(map, prefix + "SrcInfos.", this.SrcInfos);
             this.SetParamSimple(map, prefix + "SrcNodeType", this.SrcNodeType);

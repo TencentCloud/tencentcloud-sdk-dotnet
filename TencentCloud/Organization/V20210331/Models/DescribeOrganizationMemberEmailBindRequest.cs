@@ -25,7 +25,7 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 成员Uin
+        /// 成员Uin。
         /// </summary>
         [JsonProperty("MemberUin")]
         public long? MemberUin{ get; set; }

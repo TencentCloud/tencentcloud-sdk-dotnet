@@ -25,7 +25,7 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 访问策略ID。
+        /// 访问策略ID。可以通过[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)获取
         /// </summary>
         [JsonProperty("PolicyId")]
         public ulong? PolicyId{ get; set; }

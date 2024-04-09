@@ -25,7 +25,7 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 共享单元地域。可通过接口DescribeShareAreas获取支持共享的地域。
+        /// 共享单元地域。可通过接口[DescribeShareAreas](https://cloud.tencent.com/document/product/850/103050)获取支持共享的地域。
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

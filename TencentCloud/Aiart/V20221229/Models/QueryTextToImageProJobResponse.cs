@@ -26,7 +26,7 @@ namespace TencentCloud.Aiart.V20221229.Models
         
         /// <summary>
         /// 当前任务状态码：
-        /// 1：排队中、3：处理中、5：处理失败、7：处理完成。
+        /// 1：等待中、2：运行中、4：处理失败、5：处理完成。
         /// </summary>
         [JsonProperty("JobStatusCode")]
         public string JobStatusCode{ get; set; }
