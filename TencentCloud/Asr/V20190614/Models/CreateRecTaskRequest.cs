@@ -171,6 +171,7 @@ namespace TencentCloud.Asr.V20190614.Models
         /// 注意：热词增强功能开启后，将对传入的热词表id开启同音替换功能，可以在这里查看[热词表配置方法](https://cloud.tencent.com/document/product/1093/40996)。效果举例：在热词表中配置“蜜制”一词，并开启增强功能，与“蜜制”（mìzhì）同音同调的“秘制”（mìzhì）的识别结果会被强制替换成“蜜制”。**建议客户根据实际的业务需求开启该功能**
         /// </summary>
         [JsonProperty("ReinforceHotword")]
+        [System.Obsolete]
         public long? ReinforceHotword{ get; set; }
 
         /// <summary>

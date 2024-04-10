@@ -31,7 +31,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string RecordUrl{ get; set; }
 
         /// <summary>
-        /// 录制最大时长限制， 单位 s, 合法取值范围[0, 36000], 默认 36000s(10 小时)
+        /// 录制最大时长限制， 单位 s, 合法取值范围[1800, 36000], 默认 36000s(10 小时)
         /// </summary>
         [JsonProperty("MaxDurationLimit")]
         public ulong? MaxDurationLimit{ get; set; }

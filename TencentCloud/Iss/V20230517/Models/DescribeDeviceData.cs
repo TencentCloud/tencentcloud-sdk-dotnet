@@ -207,6 +207,20 @@ namespace TencentCloud.Iss.V20230517.Models
         [JsonProperty("Manufacturer")]
         public string Manufacturer{ get; set; }
 
+        /// <summary>
+        /// 音频关开（0：关闭；1：开启）关闭时丢弃音频	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AudioSwitch")]
+        public long? AudioSwitch{ get; set; }
+
+        /// <summary>
+        /// 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubscribeSwitch")]
+        public long? SubscribeSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -239,6 +253,8 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "Username", this.Username);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "Manufacturer", this.Manufacturer);
+            this.SetParamSimple(map, prefix + "AudioSwitch", this.AudioSwitch);
+            this.SetParamSimple(map, prefix + "SubscribeSwitch", this.SubscribeSwitch);
         }
     }
 }

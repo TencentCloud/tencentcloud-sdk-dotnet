@@ -78,6 +78,18 @@ namespace TencentCloud.Iss.V20230517.Models
         [JsonProperty("ProtocolType")]
         public long? ProtocolType{ get; set; }
 
+        /// <summary>
+        /// 音频关开（0：关闭；1：开启）默认开启，关闭时丢弃音频
+        /// </summary>
+        [JsonProperty("AudioSwitch")]
+        public long? AudioSwitch{ get; set; }
+
+        /// <summary>
+        /// 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效
+        /// </summary>
+        [JsonProperty("SubscribeSwitch")]
+        public long? SubscribeSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "Username", this.Username);
             this.SetParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
+            this.SetParamSimple(map, prefix + "AudioSwitch", this.AudioSwitch);
+            this.SetParamSimple(map, prefix + "SubscribeSwitch", this.SubscribeSwitch);
         }
     }
 }

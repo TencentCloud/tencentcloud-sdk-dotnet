@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.982";
+       private const string sdkVersion = "SDK_NET_3.0.983";
 
         /// <summary>
         /// Client constructor.
@@ -2853,27 +2853,6 @@ namespace TencentCloud.Monitor.V20180724
         public RunPrometheusInstanceResponse RunPrometheusInstanceSync(RunPrometheusInstanceRequest req)
         {
             return InternalRequestAsync<RunPrometheusInstanceResponse>(req, "RunPrometheusInstance")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 发送自定义消息告警
-        /// </summary>
-        /// <param name="req"><see cref="SendCustomAlarmMsgRequest"/></param>
-        /// <returns><see cref="SendCustomAlarmMsgResponse"/></returns>
-        public Task<SendCustomAlarmMsgResponse> SendCustomAlarmMsg(SendCustomAlarmMsgRequest req)
-        {
-            return InternalRequestAsync<SendCustomAlarmMsgResponse>(req, "SendCustomAlarmMsg");
-        }
-
-        /// <summary>
-        /// 发送自定义消息告警
-        /// </summary>
-        /// <param name="req"><see cref="SendCustomAlarmMsgRequest"/></param>
-        /// <returns><see cref="SendCustomAlarmMsgResponse"/></returns>
-        public SendCustomAlarmMsgResponse SendCustomAlarmMsgSync(SendCustomAlarmMsgRequest req)
-        {
-            return InternalRequestAsync<SendCustomAlarmMsgResponse>(req, "SendCustomAlarmMsg")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
