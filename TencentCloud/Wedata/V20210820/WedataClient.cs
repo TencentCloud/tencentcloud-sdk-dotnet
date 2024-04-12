@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.983";
+       private const string sdkVersion = "SDK_NET_3.0.984";
 
         /// <summary>
         /// Client constructor.
@@ -883,27 +883,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 注册采集器
-        /// </summary>
-        /// <param name="req"><see cref="CreateInLongAgentRequest"/></param>
-        /// <returns><see cref="CreateInLongAgentResponse"/></returns>
-        public Task<CreateInLongAgentResponse> CreateInLongAgent(CreateInLongAgentRequest req)
-        {
-            return InternalRequestAsync<CreateInLongAgentResponse>(req, "CreateInLongAgent");
-        }
-
-        /// <summary>
-        /// 注册采集器
-        /// </summary>
-        /// <param name="req"><see cref="CreateInLongAgentRequest"/></param>
-        /// <returns><see cref="CreateInLongAgentResponse"/></returns>
-        public CreateInLongAgentResponse CreateInLongAgentSync(CreateInLongAgentRequest req)
-        {
-            return InternalRequestAsync<CreateInLongAgentResponse>(req, "CreateInLongAgent")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 创建集成节点
         /// </summary>
         /// <param name="req"><see cref="CreateIntegrationNodeRequest"/></param>
@@ -1328,27 +1307,6 @@ namespace TencentCloud.Wedata.V20210820
         public DeleteFolderResponse DeleteFolderSync(DeleteFolderRequest req)
         {
             return InternalRequestAsync<DeleteFolderResponse>(req, "DeleteFolder")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 删除采集器
-        /// </summary>
-        /// <param name="req"><see cref="DeleteInLongAgentRequest"/></param>
-        /// <returns><see cref="DeleteInLongAgentResponse"/></returns>
-        public Task<DeleteInLongAgentResponse> DeleteInLongAgent(DeleteInLongAgentRequest req)
-        {
-            return InternalRequestAsync<DeleteInLongAgentResponse>(req, "DeleteInLongAgent");
-        }
-
-        /// <summary>
-        /// 删除采集器
-        /// </summary>
-        /// <param name="req"><see cref="DeleteInLongAgentRequest"/></param>
-        /// <returns><see cref="DeleteInLongAgentResponse"/></returns>
-        public DeleteInLongAgentResponse DeleteInLongAgentSync(DeleteInLongAgentRequest req)
-        {
-            return InternalRequestAsync<DeleteInLongAgentResponse>(req, "DeleteInLongAgent")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1960,27 +1918,6 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeBelongToResponse DescribeBelongToSync(DescribeBelongToRequest req)
         {
             return InternalRequestAsync<DescribeBelongToResponse>(req, "DescribeBelongTo")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取集群命名空间列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeClusterNamespaceListRequest"/></param>
-        /// <returns><see cref="DescribeClusterNamespaceListResponse"/></returns>
-        public Task<DescribeClusterNamespaceListResponse> DescribeClusterNamespaceList(DescribeClusterNamespaceListRequest req)
-        {
-            return InternalRequestAsync<DescribeClusterNamespaceListResponse>(req, "DescribeClusterNamespaceList");
-        }
-
-        /// <summary>
-        /// 获取集群命名空间列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeClusterNamespaceListRequest"/></param>
-        /// <returns><see cref="DescribeClusterNamespaceListResponse"/></returns>
-        public DescribeClusterNamespaceListResponse DescribeClusterNamespaceListSync(DescribeClusterNamespaceListRequest req)
-        {
-            return InternalRequestAsync<DescribeClusterNamespaceListResponse>(req, "DescribeClusterNamespaceList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2774,90 +2711,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 获取采集器列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInLongAgentListRequest"/></param>
-        /// <returns><see cref="DescribeInLongAgentListResponse"/></returns>
-        public Task<DescribeInLongAgentListResponse> DescribeInLongAgentList(DescribeInLongAgentListRequest req)
-        {
-            return InternalRequestAsync<DescribeInLongAgentListResponse>(req, "DescribeInLongAgentList");
-        }
-
-        /// <summary>
-        /// 获取采集器列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInLongAgentListRequest"/></param>
-        /// <returns><see cref="DescribeInLongAgentListResponse"/></returns>
-        public DescribeInLongAgentListResponse DescribeInLongAgentListSync(DescribeInLongAgentListRequest req)
-        {
-            return InternalRequestAsync<DescribeInLongAgentListResponse>(req, "DescribeInLongAgentList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询采集器关联的任务列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInLongAgentTaskListRequest"/></param>
-        /// <returns><see cref="DescribeInLongAgentTaskListResponse"/></returns>
-        public Task<DescribeInLongAgentTaskListResponse> DescribeInLongAgentTaskList(DescribeInLongAgentTaskListRequest req)
-        {
-            return InternalRequestAsync<DescribeInLongAgentTaskListResponse>(req, "DescribeInLongAgentTaskList");
-        }
-
-        /// <summary>
-        /// 查询采集器关联的任务列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInLongAgentTaskListRequest"/></param>
-        /// <returns><see cref="DescribeInLongAgentTaskListResponse"/></returns>
-        public DescribeInLongAgentTaskListResponse DescribeInLongAgentTaskListSync(DescribeInLongAgentTaskListRequest req)
-        {
-            return InternalRequestAsync<DescribeInLongAgentTaskListResponse>(req, "DescribeInLongAgentTaskList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取采集器所在集群的VPC列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInLongAgentVpcListRequest"/></param>
-        /// <returns><see cref="DescribeInLongAgentVpcListResponse"/></returns>
-        public Task<DescribeInLongAgentVpcListResponse> DescribeInLongAgentVpcList(DescribeInLongAgentVpcListRequest req)
-        {
-            return InternalRequestAsync<DescribeInLongAgentVpcListResponse>(req, "DescribeInLongAgentVpcList");
-        }
-
-        /// <summary>
-        /// 获取采集器所在集群的VPC列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInLongAgentVpcListRequest"/></param>
-        /// <returns><see cref="DescribeInLongAgentVpcListResponse"/></returns>
-        public DescribeInLongAgentVpcListResponse DescribeInLongAgentVpcListSync(DescribeInLongAgentVpcListRequest req)
-        {
-            return InternalRequestAsync<DescribeInLongAgentVpcListResponse>(req, "DescribeInLongAgentVpcList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取TKE集群列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInLongTkeClusterListRequest"/></param>
-        /// <returns><see cref="DescribeInLongTkeClusterListResponse"/></returns>
-        public Task<DescribeInLongTkeClusterListResponse> DescribeInLongTkeClusterList(DescribeInLongTkeClusterListRequest req)
-        {
-            return InternalRequestAsync<DescribeInLongTkeClusterListResponse>(req, "DescribeInLongTkeClusterList");
-        }
-
-        /// <summary>
-        /// 获取TKE集群列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInLongTkeClusterListRequest"/></param>
-        /// <returns><see cref="DescribeInLongTkeClusterListResponse"/></returns>
-        public DescribeInLongTkeClusterListResponse DescribeInLongTkeClusterListSync(DescribeInLongTkeClusterListRequest req)
-        {
-            return InternalRequestAsync<DescribeInLongTkeClusterListResponse>(req, "DescribeInLongTkeClusterList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 根据周期类型查询所有实例
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceByCycleRequest"/></param>
@@ -3129,27 +2982,6 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeIntegrationStatisticsResponse DescribeIntegrationStatisticsSync(DescribeIntegrationStatisticsRequest req)
         {
             return InternalRequestAsync<DescribeIntegrationStatisticsResponse>(req, "DescribeIntegrationStatistics")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 数据集成大屏采集器状态分布统计
-        /// </summary>
-        /// <param name="req"><see cref="DescribeIntegrationStatisticsAgentStatusRequest"/></param>
-        /// <returns><see cref="DescribeIntegrationStatisticsAgentStatusResponse"/></returns>
-        public Task<DescribeIntegrationStatisticsAgentStatusResponse> DescribeIntegrationStatisticsAgentStatus(DescribeIntegrationStatisticsAgentStatusRequest req)
-        {
-            return InternalRequestAsync<DescribeIntegrationStatisticsAgentStatusResponse>(req, "DescribeIntegrationStatisticsAgentStatus");
-        }
-
-        /// <summary>
-        /// 数据集成大屏采集器状态分布统计
-        /// </summary>
-        /// <param name="req"><see cref="DescribeIntegrationStatisticsAgentStatusRequest"/></param>
-        /// <returns><see cref="DescribeIntegrationStatisticsAgentStatusResponse"/></returns>
-        public DescribeIntegrationStatisticsAgentStatusResponse DescribeIntegrationStatisticsAgentStatusSync(DescribeIntegrationStatisticsAgentStatusRequest req)
-        {
-            return InternalRequestAsync<DescribeIntegrationStatisticsAgentStatusResponse>(req, "DescribeIntegrationStatisticsAgentStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4374,27 +4206,6 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeSonInstancesResponse DescribeSonInstancesSync(DescribeSonInstancesRequest req)
         {
             return InternalRequestAsync<DescribeSonInstancesResponse>(req, "DescribeSonInstances")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取数据标准规则详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeStandardRuleDetailInfoListRequest"/></param>
-        /// <returns><see cref="DescribeStandardRuleDetailInfoListResponse"/></returns>
-        public Task<DescribeStandardRuleDetailInfoListResponse> DescribeStandardRuleDetailInfoList(DescribeStandardRuleDetailInfoListRequest req)
-        {
-            return InternalRequestAsync<DescribeStandardRuleDetailInfoListResponse>(req, "DescribeStandardRuleDetailInfoList");
-        }
-
-        /// <summary>
-        /// 获取数据标准规则详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeStandardRuleDetailInfoListRequest"/></param>
-        /// <returns><see cref="DescribeStandardRuleDetailInfoListResponse"/></returns>
-        public DescribeStandardRuleDetailInfoListResponse DescribeStandardRuleDetailInfoListSync(DescribeStandardRuleDetailInfoListRequest req)
-        {
-            return InternalRequestAsync<DescribeStandardRuleDetailInfoListResponse>(req, "DescribeStandardRuleDetailInfoList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -6268,27 +6079,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 重启采集器
-        /// </summary>
-        /// <param name="req"><see cref="RestartInLongAgentRequest"/></param>
-        /// <returns><see cref="RestartInLongAgentResponse"/></returns>
-        public Task<RestartInLongAgentResponse> RestartInLongAgent(RestartInLongAgentRequest req)
-        {
-            return InternalRequestAsync<RestartInLongAgentResponse>(req, "RestartInLongAgent");
-        }
-
-        /// <summary>
-        /// 重启采集器
-        /// </summary>
-        /// <param name="req"><see cref="RestartInLongAgentRequest"/></param>
-        /// <returns><see cref="RestartInLongAgentResponse"/></returns>
-        public RestartInLongAgentResponse RestartInLongAgentSync(RestartInLongAgentRequest req)
-        {
-            return InternalRequestAsync<RestartInLongAgentResponse>(req, "RestartInLongAgent")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 继续集成任务
         /// </summary>
         /// <param name="req"><see cref="ResumeIntegrationTaskRequest"/></param>
@@ -6757,27 +6547,6 @@ namespace TencentCloud.Wedata.V20210820
         public UnlockIntegrationTaskResponse UnlockIntegrationTaskSync(UnlockIntegrationTaskRequest req)
         {
             return InternalRequestAsync<UnlockIntegrationTaskResponse>(req, "UnlockIntegrationTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 更新采集器
-        /// </summary>
-        /// <param name="req"><see cref="UpdateInLongAgentRequest"/></param>
-        /// <returns><see cref="UpdateInLongAgentResponse"/></returns>
-        public Task<UpdateInLongAgentResponse> UpdateInLongAgent(UpdateInLongAgentRequest req)
-        {
-            return InternalRequestAsync<UpdateInLongAgentResponse>(req, "UpdateInLongAgent");
-        }
-
-        /// <summary>
-        /// 更新采集器
-        /// </summary>
-        /// <param name="req"><see cref="UpdateInLongAgentRequest"/></param>
-        /// <returns><see cref="UpdateInLongAgentResponse"/></returns>
-        public UpdateInLongAgentResponse UpdateInLongAgentSync(UpdateInLongAgentRequest req)
-        {
-            return InternalRequestAsync<UpdateInLongAgentResponse>(req, "UpdateInLongAgent")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

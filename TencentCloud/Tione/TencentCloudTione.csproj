@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.983</VersionPrefix>
+    <VersionPrefix>3.0.984</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -263,6 +263,7 @@
     <Compile Include="V20211111\Models\DescribeTrainingTasksRequest.cs" />
     <Compile Include="V20211111\Models\DescribeTrainingTasksResponse.cs" />
     <Compile Include="V20211111\Models\DetectionLabelInfo.cs" />
+    <Compile Include="V20211111\Models\EncodedStartCmdInfo.cs" />
     <Compile Include="V20211111\Models\EngineVersion.cs" />
     <Compile Include="V20211111\Models\EnvVar.cs" />
     <Compile Include="V20211111\Models\Event.cs" />

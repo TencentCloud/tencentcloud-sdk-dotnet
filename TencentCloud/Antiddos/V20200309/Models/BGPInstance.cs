@@ -179,6 +179,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("PlanCntFlag")]
         public ulong? PlanCntFlag{ get; set; }
 
+        /// <summary>
+        /// 是否为超级高防包
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SuperPackFlag")]
+        public ulong? SuperPackFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -208,6 +215,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "BasicPlusFlag", this.BasicPlusFlag);
             this.SetParamSimple(map, prefix + "PlanCntFlag", this.PlanCntFlag);
+            this.SetParamSimple(map, prefix + "SuperPackFlag", this.SuperPackFlag);
         }
     }
 }

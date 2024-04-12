@@ -25,13 +25,13 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 字段名称
+        /// 字段名称，拓展字段名称
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 字段值
+        /// 字段值，拓展字段值
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

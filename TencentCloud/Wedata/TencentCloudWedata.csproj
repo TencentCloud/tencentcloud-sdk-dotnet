@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.983</VersionPrefix>
+    <VersionPrefix>3.0.984</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -175,8 +175,6 @@
     <Compile Include="V20210820\Models\CreateHiveTableByDDLResponse.cs" />
     <Compile Include="V20210820\Models\CreateHiveTableRequest.cs" />
     <Compile Include="V20210820\Models\CreateHiveTableResponse.cs" />
-    <Compile Include="V20210820\Models\CreateInLongAgentRequest.cs" />
-    <Compile Include="V20210820\Models\CreateInLongAgentResponse.cs" />
     <Compile Include="V20210820\Models\CreateIntegrationNodeRequest.cs" />
     <Compile Include="V20210820\Models\CreateIntegrationNodeResponse.cs" />
     <Compile Include="V20210820\Models\CreateIntegrationTaskRequest.cs" />
@@ -202,7 +200,6 @@
     <Compile Include="V20210820\Models\CreateTaskVersionDsResponse.cs" />
     <Compile Include="V20210820\Models\CreateWorkflowRequest.cs" />
     <Compile Include="V20210820\Models\CreateWorkflowResponse.cs" />
-    <Compile Include="V20210820\Models\CvmAgentStatus.cs" />
     <Compile Include="V20210820\Models\DagInstancesRequest.cs" />
     <Compile Include="V20210820\Models\DagInstancesResponse.cs" />
     <Compile Include="V20210820\Models\DailyScoreInfo.cs" />
@@ -227,8 +224,6 @@
     <Compile Include="V20210820\Models\DeleteFileResponse.cs" />
     <Compile Include="V20210820\Models\DeleteFolderRequest.cs" />
     <Compile Include="V20210820\Models\DeleteFolderResponse.cs" />
-    <Compile Include="V20210820\Models\DeleteInLongAgentRequest.cs" />
-    <Compile Include="V20210820\Models\DeleteInLongAgentResponse.cs" />
     <Compile Include="V20210820\Models\DeleteIntegrationNodeRequest.cs" />
     <Compile Include="V20210820\Models\DeleteIntegrationNodeResponse.cs" />
     <Compile Include="V20210820\Models\DeleteIntegrationTaskRequest.cs" />
@@ -295,8 +290,6 @@
     <Compile Include="V20210820\Models\DescribeBatchOperateTaskResponse.cs" />
     <Compile Include="V20210820\Models\DescribeBelongToRequest.cs" />
     <Compile Include="V20210820\Models\DescribeBelongToResponse.cs" />
-    <Compile Include="V20210820\Models\DescribeClusterNamespaceListRequest.cs" />
-    <Compile Include="V20210820\Models\DescribeClusterNamespaceListResponse.cs" />
     <Compile Include="V20210820\Models\DescribeColumnLineageRequest.cs" />
     <Compile Include="V20210820\Models\DescribeColumnLineageResponse.cs" />
     <Compile Include="V20210820\Models\DescribeColumnsMetaRequest.cs" />
@@ -374,14 +367,6 @@
     <Compile Include="V20210820\Models\DescribeFunctionKindsResponse.cs" />
     <Compile Include="V20210820\Models\DescribeFunctionTypesRequest.cs" />
     <Compile Include="V20210820\Models\DescribeFunctionTypesResponse.cs" />
-    <Compile Include="V20210820\Models\DescribeInLongAgentListRequest.cs" />
-    <Compile Include="V20210820\Models\DescribeInLongAgentListResponse.cs" />
-    <Compile Include="V20210820\Models\DescribeInLongAgentTaskListRequest.cs" />
-    <Compile Include="V20210820\Models\DescribeInLongAgentTaskListResponse.cs" />
-    <Compile Include="V20210820\Models\DescribeInLongAgentVpcListRequest.cs" />
-    <Compile Include="V20210820\Models\DescribeInLongAgentVpcListResponse.cs" />
-    <Compile Include="V20210820\Models\DescribeInLongTkeClusterListRequest.cs" />
-    <Compile Include="V20210820\Models\DescribeInLongTkeClusterListResponse.cs" />
     <Compile Include="V20210820\Models\DescribeInstanceByCycleReportRequest.cs" />
     <Compile Include="V20210820\Models\DescribeInstanceByCycleReportResponse.cs" />
     <Compile Include="V20210820\Models\DescribeInstanceByCycleRequest.cs" />
@@ -406,8 +391,6 @@
     <Compile Include="V20210820\Models\DescribeInstancesResponse.cs" />
     <Compile Include="V20210820\Models\DescribeIntegrationNodeRequest.cs" />
     <Compile Include="V20210820\Models\DescribeIntegrationNodeResponse.cs" />
-    <Compile Include="V20210820\Models\DescribeIntegrationStatisticsAgentStatusRequest.cs" />
-    <Compile Include="V20210820\Models\DescribeIntegrationStatisticsAgentStatusResponse.cs" />
     <Compile Include="V20210820\Models\DescribeIntegrationStatisticsInstanceTrendRequest.cs" />
     <Compile Include="V20210820\Models\DescribeIntegrationStatisticsInstanceTrendResponse.cs" />
     <Compile Include="V20210820\Models\DescribeIntegrationStatisticsRecordsTrendRequest.cs" />
@@ -526,8 +509,6 @@
     <Compile Include="V20210820\Models\DescribeSchedulerTaskTypeCntResponse.cs" />
     <Compile Include="V20210820\Models\DescribeSonInstancesRequest.cs" />
     <Compile Include="V20210820\Models\DescribeSonInstancesResponse.cs" />
-    <Compile Include="V20210820\Models\DescribeStandardRuleDetailInfoListRequest.cs" />
-    <Compile Include="V20210820\Models\DescribeStandardRuleDetailInfoListResponse.cs" />
     <Compile Include="V20210820\Models\DescribeStatisticInstanceStatusTrendOpsRequest.cs" />
     <Compile Include="V20210820\Models\DescribeStatisticInstanceStatusTrendOpsResponse.cs" />
     <Compile Include="V20210820\Models\DescribeStreamTaskLogListRequest.cs" />
@@ -666,9 +647,6 @@
     <Compile Include="V20210820\Models\GetOfflineDIInstanceListResponse.cs" />
     <Compile Include="V20210820\Models\GetOfflineInstanceListRequest.cs" />
     <Compile Include="V20210820\Models\GetOfflineInstanceListResponse.cs" />
-    <Compile Include="V20210820\Models\InLongAgentDetail.cs" />
-    <Compile Include="V20210820\Models\InLongAgentTask.cs" />
-    <Compile Include="V20210820\Models\InLongTkeDetail.cs" />
     <Compile Include="V20210820\Models\InstanceApiOpsRequest.cs" />
     <Compile Include="V20210820\Models\InstanceCondition.cs" />
     <Compile Include="V20210820\Models\InstanceDownloadLogInfo.cs" />
@@ -765,7 +743,6 @@
     <Compile Include="V20210820\Models\ModifyWorkflowInfoResponse.cs" />
     <Compile Include="V20210820\Models\ModifyWorkflowScheduleRequest.cs" />
     <Compile Include="V20210820\Models\ModifyWorkflowScheduleResponse.cs" />
-    <Compile Include="V20210820\Models\Namespace.cs" />
     <Compile Include="V20210820\Models\OfflineInstance.cs" />
     <Compile Include="V20210820\Models\OfflineTaskAddParam.cs" />
     <Compile Include="V20210820\Models\OperateResult.cs" />
@@ -809,8 +786,6 @@
     <Compile Include="V20210820\Models\RerunScheduleInstancesRequest.cs" />
     <Compile Include="V20210820\Models\RerunScheduleInstancesResponse.cs" />
     <Compile Include="V20210820\Models\ResourcePathTree.cs" />
-    <Compile Include="V20210820\Models\RestartInLongAgentRequest.cs" />
-    <Compile Include="V20210820\Models\RestartInLongAgentResponse.cs" />
     <Compile Include="V20210820\Models\ResumeIntegrationTaskRequest.cs" />
     <Compile Include="V20210820\Models\ResumeIntegrationTaskResponse.cs" />
     <Compile Include="V20210820\Models\RobAndLockIntegrationTaskRequest.cs" />
@@ -959,8 +934,6 @@
     <Compile Include="V20210820\Models\TriggerEventResponse.cs" />
     <Compile Include="V20210820\Models\UnlockIntegrationTaskRequest.cs" />
     <Compile Include="V20210820\Models\UnlockIntegrationTaskResponse.cs" />
-    <Compile Include="V20210820\Models\UpdateInLongAgentRequest.cs" />
-    <Compile Include="V20210820\Models\UpdateInLongAgentResponse.cs" />
     <Compile Include="V20210820\Models\UpdateWorkflowOwnerRequest.cs" />
     <Compile Include="V20210820\Models\UpdateWorkflowOwnerResponse.cs" />
     <Compile Include="V20210820\Models\UploadContentRequest.cs" />

@@ -105,6 +105,18 @@ namespace TencentCloud.Mna.V20210119.Models
         [JsonProperty("ModifyStatus")]
         public long? ModifyStatus{ get; set; }
 
+        /// <summary>
+        /// 流量截断标识。true代表开启流量截断，false代表不开启流量截断
+        /// </summary>
+        [JsonProperty("TruncFlag")]
+        public bool? TruncFlag{ get; set; }
+
+        /// <summary>
+        /// 流量包精确余量，单位：MB
+        /// </summary>
+        [JsonProperty("CapacityRemainPrecise")]
+        public ulong? CapacityRemainPrecise{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -123,6 +135,8 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamSimple(map, prefix + "CapacityRemain", this.CapacityRemain);
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "ModifyStatus", this.ModifyStatus);
+            this.SetParamSimple(map, prefix + "TruncFlag", this.TruncFlag);
+            this.SetParamSimple(map, prefix + "CapacityRemainPrecise", this.CapacityRemainPrecise);
         }
     }
 }

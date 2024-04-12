@@ -25,6 +25,12 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
+        /// 索引名，需以-AppId结尾
+        /// </summary>
+        [JsonProperty("IndexName")]
+        public string IndexName{ get; set; }
+
+        /// <summary>
         /// 可用区
         /// </summary>
         [JsonProperty("Zone")]
@@ -41,12 +47,6 @@ namespace TencentCloud.Es.V20180416.Models
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
-
-        /// <summary>
-        /// 索引名，需以-AppId结尾
-        /// </summary>
-        [JsonProperty("IndexName")]
-        public string IndexName{ get; set; }
 
         /// <summary>
         /// 创建的索引元数据JSON，如mappings、settings
@@ -102,10 +102,10 @@ namespace TencentCloud.Es.V20180416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "IndexName", this.IndexName);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
-            this.SetParamSimple(map, prefix + "IndexName", this.IndexName);
             this.SetParamSimple(map, prefix + "IndexMetaJson", this.IndexMetaJson);
             this.SetParamSimple(map, prefix + "SpaceId", this.SpaceId);
             this.SetParamSimple(map, prefix + "Username", this.Username);

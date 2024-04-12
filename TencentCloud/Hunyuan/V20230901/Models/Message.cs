@@ -31,7 +31,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public string Role{ get; set; }
 
         /// <summary>
-        /// 消息的内容
+        /// 消息内容
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

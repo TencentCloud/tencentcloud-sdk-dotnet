@@ -25,7 +25,7 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// schema id
+        /// schema id 随机唯一
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

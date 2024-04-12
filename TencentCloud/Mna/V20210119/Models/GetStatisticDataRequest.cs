@@ -62,6 +62,18 @@ namespace TencentCloud.Mna.V20210119.Models
         [JsonProperty("GatewayType")]
         public long? GatewayType{ get; set; }
 
+        /// <summary>
+        /// 设备ID列表，最多10个设备，下载多个设备流量和时使用，此时DeviceId可传"-1"
+        /// </summary>
+        [JsonProperty("DeviceList")]
+        public string[] DeviceList{ get; set; }
+
+        /// <summary>
+        /// 设备分组ID，若不指定分组则不传，按分组下载数据时使用
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +86,8 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamSimple(map, prefix + "TimeGranularity", this.TimeGranularity);
             this.SetParamSimple(map, prefix + "AccessRegion", this.AccessRegion);
             this.SetParamSimple(map, prefix + "GatewayType", this.GatewayType);
+            this.SetParamArraySimple(map, prefix + "DeviceList.", this.DeviceList);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }
 }

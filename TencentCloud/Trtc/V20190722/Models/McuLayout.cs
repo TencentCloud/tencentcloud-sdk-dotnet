@@ -93,7 +93,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public McuCustomCrop CustomCrop{ get; set; }
 
         /// <summary>
-        /// 子背景图在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底，3为变比例伸缩。不填默认为3。
+        /// 子背景图在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底，3为变比例伸缩，4为自定义渲染。不填默认为3。
         /// </summary>
         [JsonProperty("BackgroundRenderMode")]
         public ulong? BackgroundRenderMode{ get; set; }
@@ -104,6 +104,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         [JsonProperty("TransparentUrl")]
         public string TransparentUrl{ get; set; }
+
+        /// <summary>
+        /// 子背景图的自定义渲染参数，当BackgroundRenderMode为4时必须配置。
+        /// </summary>
+        [JsonProperty("BackgroundCustomRender")]
+        public McuBackgroundCustomRender BackgroundCustomRender{ get; set; }
 
 
         /// <summary>
@@ -123,6 +129,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamObj(map, prefix + "CustomCrop.", this.CustomCrop);
             this.SetParamSimple(map, prefix + "BackgroundRenderMode", this.BackgroundRenderMode);
             this.SetParamSimple(map, prefix + "TransparentUrl", this.TransparentUrl);
+            this.SetParamObj(map, prefix + "BackgroundCustomRender.", this.BackgroundCustomRender);
         }
     }
 }

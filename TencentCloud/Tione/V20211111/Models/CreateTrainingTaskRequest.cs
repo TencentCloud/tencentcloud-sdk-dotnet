@@ -86,7 +86,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public CosPathInfo CodePackagePath{ get; set; }
 
         /// <summary>
-        /// 启动命令信息，默认为sh start.sh
+        /// 任务的启动命令，按任务训练模式输入，如遇特殊字符导致配置失败，可使用EncodedStartCmdInfo参数
         /// </summary>
         [JsonProperty("StartCmdInfo")]
         public StartCmdInfo StartCmdInfo{ get; set; }
@@ -163,6 +163,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("PreTrainModel")]
         public PreTrainModel PreTrainModel{ get; set; }
 
+        /// <summary>
+        /// 编码后的任务启动命令，与StartCmdInfo同时配置时，仅当前参数生效
+        /// </summary>
+        [JsonProperty("EncodedStartCmdInfo")]
+        public EncodedStartCmdInfo EncodedStartCmdInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -192,6 +198,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "DataSource", this.DataSource);
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamObj(map, prefix + "PreTrainModel.", this.PreTrainModel);
+            this.SetParamObj(map, prefix + "EncodedStartCmdInfo.", this.EncodedStartCmdInfo);
         }
     }
 }

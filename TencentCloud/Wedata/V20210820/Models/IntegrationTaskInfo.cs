@@ -64,14 +64,14 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务调度id(oceanus or us等作业id)
+        /// 任务调度id(oceanus or us等作业id)，非填项
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScheduleTaskId")]
         public string ScheduleTaskId{ get; set; }
 
         /// <summary>
-        /// 任务组id
+        /// inlong任务id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskGroupId")]
@@ -113,7 +113,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string AppId{ get; set; }
 
         /// <summary>
-        /// 任务状态1.初始化,2.操作中,3.运行中,4.暂停,5.任务停止中,6.停止,7.执行失败,8.已删除,9.已锁定,10.配置过期,11.提交中,12.提交成功,13.提交失败
+        /// 1:未开始|2:操作中|3:运行中|4:暂停|5:任务停止中|6:停止|7:执行失败|20:异常|21:未知|
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
@@ -162,7 +162,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public IntegrationNodeMapping[] Mappings{ get; set; }
 
         /// <summary>
-        /// 任务模式：1.画布模式，2.flink jar
+        /// 任务配置模式，0:画布 1:表单 3:脚本
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskMode")]
@@ -190,7 +190,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ExecutorGroupName{ get; set; }
 
         /// <summary>
-        /// url
+        /// inlong manager url
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InLongManagerUrl")]
@@ -211,7 +211,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string InLongManagerVersion{ get; set; }
 
         /// <summary>
-        /// dataproxy url
+        /// inlong dataproxy url
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataProxyUrl")]
@@ -225,14 +225,14 @@ namespace TencentCloud.Wedata.V20210820.Models
         public bool? Submit{ get; set; }
 
         /// <summary>
-        /// MYSQL
+        /// 数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputDatasourceType")]
         public string InputDatasourceType{ get; set; }
 
         /// <summary>
-        /// DLC
+        /// 数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputDatasourceType")]
@@ -330,21 +330,21 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string[] TaskAlarmRegularList{ get; set; }
 
         /// <summary>
-        /// 资源分层情况： 0：进行中,1：成功 ,2：失败
+        /// 实时任务资源分层情况： 0：进行中,1：成功 ,2：失败
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SwitchResource")]
         public long? SwitchResource{ get; set; }
 
         /// <summary>
-        /// 读取阶段：0：全部全量,1：部分全量,2：全部增量
+        /// 实时任务读取阶段：0：全部全量,1：部分全量,2：全部增量
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReadPhase")]
         public long? ReadPhase{ get; set; }
 
         /// <summary>
-        /// 版本号
+        /// 实时任务版本号
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceVersion")]

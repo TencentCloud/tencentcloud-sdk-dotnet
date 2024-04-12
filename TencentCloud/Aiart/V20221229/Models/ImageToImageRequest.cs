@@ -28,7 +28,7 @@ namespace TencentCloud.Aiart.V20221229.Models
         /// 输入图 Base64 数据。
         /// 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
         /// Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-        /// 图片限制：单边分辨率小于2000，转成 Base64 字符串后小于 5MB。
+        /// 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB。
         /// </summary>
         [JsonProperty("InputImage")]
         public string InputImage{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Aiart.V20221229.Models
         /// 输入图 Url。
         /// 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
         /// Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-        /// 图片限制：单边分辨率小于2000，转成 Base64 字符串后小于 5MB。
+        /// 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于8MB。
         /// </summary>
         [JsonProperty("InputUrl")]
         public string InputUrl{ get; set; }
@@ -68,7 +68,8 @@ namespace TencentCloud.Aiart.V20221229.Models
 
         /// <summary>
         /// 生成图结果的配置，包括输出图片分辨率和尺寸等。
-        /// 支持生成以下分辨率的图片：origin（与输入图分辨率一致）、768:768（1:1）、768:1024（3:4）、1024:768（4:3），不传默认使用origin。
+        /// 支持生成以下分辨率的图片：origin（与输入图分辨率一致，长边最高为2000，超出将做等比例缩小）、768:768（1:1）、768:1024（3:4）、1024:768（4:3）。
+        /// 不传默认使用origin。
         /// </summary>
         [JsonProperty("ResultConfig")]
         public ResultConfig ResultConfig{ get; set; }

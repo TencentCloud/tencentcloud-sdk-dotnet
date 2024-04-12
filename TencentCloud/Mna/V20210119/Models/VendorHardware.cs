@@ -75,6 +75,7 @@ namespace TencentCloud.Mna.V20210119.Models
 
         /// <summary>
         /// license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
+        /// 注：设备为租户付费且未激活（未选择月付还是永久付费）时，此参数返回1，仅代表租户付费。后续将废弃此参数，新接入请使用LicensePayMode和Payer
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LicenseChargingMode")]
@@ -86,6 +87,25 @@ namespace TencentCloud.Mna.V20210119.Models
         /// </summary>
         [JsonProperty("LastOnlineTime")]
         public string LastOnlineTime{ get; set; }
+
+        /// <summary>
+        /// license授权有效期
+        /// 0：月度授权
+        /// 1：永久授权
+        /// -1：未知
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LicensePayMode")]
+        public long? LicensePayMode{ get; set; }
+
+        /// <summary>
+        /// 付费方
+        /// 0：客户付费
+        /// 1：厂商付费
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Payer")]
+        public long? Payer{ get; set; }
 
 
         /// <summary>
@@ -102,6 +122,8 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
             this.SetParamSimple(map, prefix + "LicenseChargingMode", this.LicenseChargingMode);
             this.SetParamSimple(map, prefix + "LastOnlineTime", this.LastOnlineTime);
+            this.SetParamSimple(map, prefix + "LicensePayMode", this.LicensePayMode);
+            this.SetParamSimple(map, prefix + "Payer", this.Payer);
         }
     }
 }

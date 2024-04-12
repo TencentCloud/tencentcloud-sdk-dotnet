@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.983";
+       private const string sdkVersion = "SDK_NET_3.0.984";
 
         /// <summary>
         /// Client constructor.
@@ -176,6 +176,27 @@ namespace TencentCloud.Cdb.V20170320
         public BalanceRoGroupLoadResponse BalanceRoGroupLoadSync(BalanceRoGroupLoadRequest req)
         {
             return InternalRequestAsync<BalanceRoGroupLoadResponse>(req, "BalanceRoGroupLoad")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 高可用实例一键迁移到集群版校验
+        /// </summary>
+        /// <param name="req"><see cref="CheckMigrateClusterRequest"/></param>
+        /// <returns><see cref="CheckMigrateClusterResponse"/></returns>
+        public Task<CheckMigrateClusterResponse> CheckMigrateCluster(CheckMigrateClusterRequest req)
+        {
+            return InternalRequestAsync<CheckMigrateClusterResponse>(req, "CheckMigrateCluster");
+        }
+
+        /// <summary>
+        /// 高可用实例一键迁移到集群版校验
+        /// </summary>
+        /// <param name="req"><see cref="CheckMigrateClusterRequest"/></param>
+        /// <returns><see cref="CheckMigrateClusterResponse"/></returns>
+        public CheckMigrateClusterResponse CheckMigrateClusterSync(CheckMigrateClusterRequest req)
+        {
+            return InternalRequestAsync<CheckMigrateClusterResponse>(req, "CheckMigrateCluster")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1327,6 +1348,27 @@ namespace TencentCloud.Cdb.V20170320
         public DescribeCloneListResponse DescribeCloneListSync(DescribeCloneListRequest req)
         {
             return InternalRequestAsync<DescribeCloneListResponse>(req, "DescribeCloneList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeClusterInfo)用于查询集群版实例信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterInfoRequest"/></param>
+        /// <returns><see cref="DescribeClusterInfoResponse"/></returns>
+        public Task<DescribeClusterInfoResponse> DescribeClusterInfo(DescribeClusterInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterInfoResponse>(req, "DescribeClusterInfo");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeClusterInfo)用于查询集群版实例信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterInfoRequest"/></param>
+        /// <returns><see cref="DescribeClusterInfoResponse"/></returns>
+        public DescribeClusterInfoResponse DescribeClusterInfoSync(DescribeClusterInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterInfoResponse>(req, "DescribeClusterInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

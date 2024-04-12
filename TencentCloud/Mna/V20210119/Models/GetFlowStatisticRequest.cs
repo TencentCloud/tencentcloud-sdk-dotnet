@@ -43,7 +43,7 @@ namespace TencentCloud.Mna.V20210119.Models
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 流量种类（1：上行流量，2：下行流量）
+        /// 流量种类（1：上行流量，2：下行流量，3：上下行总和）
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
@@ -66,6 +66,12 @@ namespace TencentCloud.Mna.V20210119.Models
         [JsonProperty("GatewayType")]
         public long? GatewayType{ get; set; }
 
+        /// <summary>
+        /// 设备ID列表，用于查询多设备流量，该字段启用时DeviceId可传"-1"
+        /// </summary>
+        [JsonProperty("DeviceList")]
+        public string[] DeviceList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamSimple(map, prefix + "TimeGranularity", this.TimeGranularity);
             this.SetParamSimple(map, prefix + "AccessRegion", this.AccessRegion);
             this.SetParamSimple(map, prefix + "GatewayType", this.GatewayType);
+            this.SetParamArraySimple(map, prefix + "DeviceList.", this.DeviceList);
         }
     }
 }

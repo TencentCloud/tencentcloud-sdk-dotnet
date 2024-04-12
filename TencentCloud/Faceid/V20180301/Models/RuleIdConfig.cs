@@ -38,6 +38,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("IntentionType")]
         public long? IntentionType{ get; set; }
 
+        /// <summary>
+        /// 用户语音回答过程中是否开启张嘴识别检测，默认不开启，仅在意愿核身问答模式中使用。
+        /// </summary>
+        [JsonProperty("MouthOpenRecognition")]
+        public bool? MouthOpenRecognition{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +52,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         {
             this.SetParamSimple(map, prefix + "IntentionRecognition", this.IntentionRecognition);
             this.SetParamSimple(map, prefix + "IntentionType", this.IntentionType);
+            this.SetParamSimple(map, prefix + "MouthOpenRecognition", this.MouthOpenRecognition);
         }
     }
 }

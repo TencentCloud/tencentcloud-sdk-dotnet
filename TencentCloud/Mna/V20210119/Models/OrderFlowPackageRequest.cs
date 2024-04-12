@@ -49,7 +49,7 @@ namespace TencentCloud.Mna.V20210119.Models
         public string[] DeviceList{ get; set; }
 
         /// <summary>
-        /// 是否自动续费
+        /// 是否自动续费，该选项和流量截断冲突，只能开启一个
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public bool? AutoRenewFlag{ get; set; }
@@ -59,6 +59,12 @@ namespace TencentCloud.Mna.V20210119.Models
         /// </summary>
         [JsonProperty("PackageRegion")]
         public long? PackageRegion{ get; set; }
+
+        /// <summary>
+        /// 是否开启流量截断功能，该选项和自动续费冲突
+        /// </summary>
+        [JsonProperty("FlowTruncFlag")]
+        public bool? FlowTruncFlag{ get; set; }
 
         /// <summary>
         /// 是否自动选择代金券，默认false。
@@ -84,6 +90,7 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamArraySimple(map, prefix + "DeviceList.", this.DeviceList);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "PackageRegion", this.PackageRegion);
+            this.SetParamSimple(map, prefix + "FlowTruncFlag", this.FlowTruncFlag);
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
         }

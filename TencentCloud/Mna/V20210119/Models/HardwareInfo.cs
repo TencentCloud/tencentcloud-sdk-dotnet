@@ -68,6 +68,7 @@ namespace TencentCloud.Mna.V20210119.Models
 
         /// <summary>
         /// license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
+        /// 注：后续将废弃此参数，新接入请使用LicensePayMode和Payer
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LicenseChargingMode")]
@@ -87,6 +88,38 @@ namespace TencentCloud.Mna.V20210119.Models
         [JsonProperty("SN")]
         public string SN{ get; set; }
 
+        /// <summary>
+        /// license授权有效期 
+        /// 0：月度授权 
+        /// 1：永久授权
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LicensePayMode")]
+        public long? LicensePayMode{ get; set; }
+
+        /// <summary>
+        /// 付费方 
+        /// 0：客户付费 
+        /// 1：厂商付费
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Payer")]
+        public long? Payer{ get; set; }
+
+        /// <summary>
+        /// 设备分组ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
+        /// <summary>
+        /// 设备分组名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupName")]
+        public string GroupName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +135,10 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamSimple(map, prefix + "LicenseChargingMode", this.LicenseChargingMode);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "SN", this.SN);
+            this.SetParamSimple(map, prefix + "LicensePayMode", this.LicensePayMode);
+            this.SetParamSimple(map, prefix + "Payer", this.Payer);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
         }
     }
 }

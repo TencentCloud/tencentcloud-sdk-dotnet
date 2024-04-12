@@ -25,14 +25,14 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 创建账号
+        /// 创建账号sub uin
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateUin")]
         public string CreateUin{ get; set; }
 
         /// <summary>
-        /// 操作账号
+        /// 操作账号sub uin
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperatorUin")]
@@ -78,7 +78,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string IssueId{ get; set; }
 
         /// <summary>
-        /// 资源组id
+        /// 下发资源组id，非传入项
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InlongTaskId")]
@@ -92,13 +92,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ResourceGroup{ get; set; }
 
         /// <summary>
-        /// 实例类型
+        /// 任务类型(1 调试运行,2 调度执行)
         /// </summary>
         [JsonProperty("TaskRunType")]
         public ulong? TaskRunType{ get; set; }
 
         /// <summary>
-        /// 实例状态
+        /// 实例状态 EVENT_LISTENING|DEPENDENCE|BEFORE_ASPECT|ALLOCATED|LAUNCHED|KILL|SNAP_STATE_SAVING|ISSUED|RUNNING|AFTER_ASPECT|PENDING|KILLING|FINAL_STATE_SAVING|FAILED|KILL_FAILED| COMPLETED|EXPIRED|KILL_EXPIRED|DELETED
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }

@@ -25,16 +25,24 @@ namespace TencentCloud.Hunyuan.V20230901.Models
     {
         
         /// <summary>
-        /// 流式结束标志位，为 stop 则表示尾包。
+        /// 结束标志位，为 stop 则表示尾包。
         /// </summary>
         [JsonProperty("FinishReason")]
         public string FinishReason{ get; set; }
 
         /// <summary>
-        /// 返回值。
+        /// 增量返回值，流式调用时使用该字段。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Delta")]
         public Delta Delta{ get; set; }
+
+        /// <summary>
+        /// 返回值，非流式调用时使用该字段。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Message")]
+        public Message Message{ get; set; }
 
 
         /// <summary>
@@ -44,6 +52,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         {
             this.SetParamSimple(map, prefix + "FinishReason", this.FinishReason);
             this.SetParamObj(map, prefix + "Delta.", this.Delta);
+            this.SetParamObj(map, prefix + "Message.", this.Message);
         }
     }
 }

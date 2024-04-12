@@ -33,9 +33,9 @@ namespace TencentCloud.Mna.V20210119.Models
 
         /// <summary>
         /// license计费模式：
-        /// 1，租户月付费
+        /// 1，租户付费
         /// 2，厂商月付费
-        /// 3，license永久授权
+        /// 3，厂商永久授权
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LicenseChargingMode")]

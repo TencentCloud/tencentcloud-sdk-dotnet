@@ -44,13 +44,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 集成节点类型
+        /// 集成节点类型,INPUT: 输入节点，OUTPUT:输出节点 
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
 
         /// <summary>
-        /// 节点数据源类型
+        /// 节点数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
         /// </summary>
         [JsonProperty("DataSourceType")]
         public string DataSourceType{ get; set; }
@@ -98,7 +98,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public IntegrationNodeMapping NodeMapping{ get; set; }
 
         /// <summary>
-        /// 应用id
+        /// 归属用户AppId,展示字段 非传入
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
@@ -110,21 +110,21 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 创建人uin
+        /// 创建人uin,展示字段 非传入
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatorUin")]
         public string CreatorUin{ get; set; }
 
         /// <summary>
-        /// 操作人uin
+        /// 操作人uin，展示字段 非传入
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperatorUin")]
         public string OperatorUin{ get; set; }
 
         /// <summary>
-        /// owner uin
+        /// owner uin 展示字段 非传入
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }

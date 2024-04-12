@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5E3993CA-3190-3343-8FD0-BC4234130564}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.983</VersionPrefix>
+    <VersionPrefix>3.0.984</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,7 @@
     <Compile Include="V20170320\Models\AccountInfo.cs" />
     <Compile Include="V20170320\Models\AddTimeWindowRequest.cs" />
     <Compile Include="V20170320\Models\AddTimeWindowResponse.cs" />
+    <Compile Include="V20170320\Models\AddressInfo.cs" />
     <Compile Include="V20170320\Models\AdjustCdbProxyAddressRequest.cs" />
     <Compile Include="V20170320\Models\AdjustCdbProxyAddressResponse.cs" />
     <Compile Include="V20170320\Models\AdjustCdbProxyRequest.cs" />
@@ -87,6 +88,8 @@
     <Compile Include="V20170320\Models\CdbSellType.cs" />
     <Compile Include="V20170320\Models\CdbZoneDataResult.cs" />
     <Compile Include="V20170320\Models\CdbZoneSellConf.cs" />
+    <Compile Include="V20170320\Models\CheckMigrateClusterRequest.cs" />
+    <Compile Include="V20170320\Models\CheckMigrateClusterResponse.cs" />
     <Compile Include="V20170320\Models\CloneItem.cs" />
     <Compile Include="V20170320\Models\CloseAuditServiceRequest.cs" />
     <Compile Include="V20170320\Models\CloseAuditServiceResponse.cs" />
@@ -96,6 +99,7 @@
     <Compile Include="V20170320\Models\CloseCdbProxyAddressResponse.cs" />
     <Compile Include="V20170320\Models\CloseWanServiceRequest.cs" />
     <Compile Include="V20170320\Models\CloseWanServiceResponse.cs" />
+    <Compile Include="V20170320\Models\ClusterNodeInfo.cs" />
     <Compile Include="V20170320\Models\ColumnPrivilege.cs" />
     <Compile Include="V20170320\Models\CommonTimeWindow.cs" />
     <Compile Include="V20170320\Models\CreateAccountsRequest.cs" />
@@ -201,6 +205,8 @@
     <Compile Include="V20170320\Models\DescribeCdbZoneConfigResponse.cs" />
     <Compile Include="V20170320\Models\DescribeCloneListRequest.cs" />
     <Compile Include="V20170320\Models\DescribeCloneListResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeClusterInfoRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeClusterInfoResponse.cs" />
     <Compile Include="V20170320\Models\DescribeCpuExpandStrategyRequest.cs" />
     <Compile Include="V20170320\Models\DescribeCpuExpandStrategyResponse.cs" />
     <Compile Include="V20170320\Models\DescribeDBFeaturesRequest.cs" />

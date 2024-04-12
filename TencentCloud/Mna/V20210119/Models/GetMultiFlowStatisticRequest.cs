@@ -43,7 +43,7 @@ namespace TencentCloud.Mna.V20210119.Models
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 统计流量类型（1：上行流量，2：下行流量）
+        /// 统计流量类型（1：上行流量，2：下行流量， 3: 上下行总和）
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }

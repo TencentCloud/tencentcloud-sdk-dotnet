@@ -58,6 +58,27 @@ namespace TencentCloud.Mna.V20210119.Models
         [JsonProperty("AccessScope")]
         public long? AccessScope{ get; set; }
 
+        /// <summary>
+        /// license付费方式： 
+        /// 0，月度授权 
+        /// 1，永久授权 
+        /// 若不传则默认为月度授权
+        /// </summary>
+        [JsonProperty("LicensePayMode")]
+        public long? LicensePayMode{ get; set; }
+
+        /// <summary>
+        /// 设备分组名称，非必选，预留参数，需要分组时传入GroupId
+        /// </summary>
+        [JsonProperty("GroupName")]
+        public string GroupName{ get; set; }
+
+        /// <summary>
+        /// 设备分组ID，非必选，如果不填写则默认设备无分组
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +90,9 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamSimple(map, prefix + "DataKey", this.DataKey);
             this.SetParamSimple(map, prefix + "Encrypted", this.Encrypted);
             this.SetParamSimple(map, prefix + "AccessScope", this.AccessScope);
+            this.SetParamSimple(map, prefix + "LicensePayMode", this.LicensePayMode);
+            this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }
 }

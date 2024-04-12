@@ -1,0 +1,245 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{350F9F65-0799-338B-90EA-9EBA008679C1}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.984</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Lke</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20231130\LkeClient.cs" />
+    <Compile Include="V20231130\Models\AppConfig.cs" />
+    <Compile Include="V20231130\Models\AppInfo.cs" />
+    <Compile Include="V20231130\Models\AppModel.cs" />
+    <Compile Include="V20231130\Models\AttrLabel.cs" />
+    <Compile Include="V20231130\Models\AttrLabelDetail.cs" />
+    <Compile Include="V20231130\Models\AttrLabelRefer.cs" />
+    <Compile Include="V20231130\Models\AttributeFilters.cs" />
+    <Compile Include="V20231130\Models\AttributeLabel.cs" />
+    <Compile Include="V20231130\Models\BaseConfig.cs" />
+    <Compile Include="V20231130\Models\CheckAttributeLabelExistRequest.cs" />
+    <Compile Include="V20231130\Models\CheckAttributeLabelExistResponse.cs" />
+    <Compile Include="V20231130\Models\CheckAttributeLabelReferRequest.cs" />
+    <Compile Include="V20231130\Models\CheckAttributeLabelReferResponse.cs" />
+    <Compile Include="V20231130\Models\ClassifyConfig.cs" />
+    <Compile Include="V20231130\Models\ClassifyLabel.cs" />
+    <Compile Include="V20231130\Models\Context.cs" />
+    <Compile Include="V20231130\Models\CreateAppRequest.cs" />
+    <Compile Include="V20231130\Models\CreateAppResponse.cs" />
+    <Compile Include="V20231130\Models\CreateAttributeLabelRequest.cs" />
+    <Compile Include="V20231130\Models\CreateAttributeLabelResponse.cs" />
+    <Compile Include="V20231130\Models\CreateCorpRequest.cs" />
+    <Compile Include="V20231130\Models\CreateCorpResponse.cs" />
+    <Compile Include="V20231130\Models\CreateQACateRequest.cs" />
+    <Compile Include="V20231130\Models\CreateQACateResponse.cs" />
+    <Compile Include="V20231130\Models\CreateQARequest.cs" />
+    <Compile Include="V20231130\Models\CreateQAResponse.cs" />
+    <Compile Include="V20231130\Models\CreateRejectedQuestionRequest.cs" />
+    <Compile Include="V20231130\Models\CreateRejectedQuestionResponse.cs" />
+    <Compile Include="V20231130\Models\CreateReleaseRequest.cs" />
+    <Compile Include="V20231130\Models\CreateReleaseResponse.cs" />
+    <Compile Include="V20231130\Models\Credentials.cs" />
+    <Compile Include="V20231130\Models\DeleteAppRequest.cs" />
+    <Compile Include="V20231130\Models\DeleteAppResponse.cs" />
+    <Compile Include="V20231130\Models\DeleteAttributeLabelRequest.cs" />
+    <Compile Include="V20231130\Models\DeleteAttributeLabelResponse.cs" />
+    <Compile Include="V20231130\Models\DeleteDocRequest.cs" />
+    <Compile Include="V20231130\Models\DeleteDocResponse.cs" />
+    <Compile Include="V20231130\Models\DeleteQACateRequest.cs" />
+    <Compile Include="V20231130\Models\DeleteQACateResponse.cs" />
+    <Compile Include="V20231130\Models\DeleteQARequest.cs" />
+    <Compile Include="V20231130\Models\DeleteQAResponse.cs" />
+    <Compile Include="V20231130\Models\DeleteRejectedQuestionRequest.cs" />
+    <Compile Include="V20231130\Models\DeleteRejectedQuestionResponse.cs" />
+    <Compile Include="V20231130\Models\DescribeAppRequest.cs" />
+    <Compile Include="V20231130\Models\DescribeAppResponse.cs" />
+    <Compile Include="V20231130\Models\DescribeAttributeLabelRequest.cs" />
+    <Compile Include="V20231130\Models\DescribeAttributeLabelResponse.cs" />
+    <Compile Include="V20231130\Models\DescribeCorpRequest.cs" />
+    <Compile Include="V20231130\Models\DescribeCorpResponse.cs" />
+    <Compile Include="V20231130\Models\DescribeDocRequest.cs" />
+    <Compile Include="V20231130\Models\DescribeDocResponse.cs" />
+    <Compile Include="V20231130\Models\DescribeQARequest.cs" />
+    <Compile Include="V20231130\Models\DescribeQAResponse.cs" />
+    <Compile Include="V20231130\Models\DescribeReferRequest.cs" />
+    <Compile Include="V20231130\Models\DescribeReferResponse.cs" />
+    <Compile Include="V20231130\Models\DescribeReleaseInfoRequest.cs" />
+    <Compile Include="V20231130\Models\DescribeReleaseInfoResponse.cs" />
+    <Compile Include="V20231130\Models\DescribeReleaseRequest.cs" />
+    <Compile Include="V20231130\Models\DescribeReleaseResponse.cs" />
+    <Compile Include="V20231130\Models\DescribeRobotBizIDByAppKeyRequest.cs" />
+    <Compile Include="V20231130\Models\DescribeRobotBizIDByAppKeyResponse.cs" />
+    <Compile Include="V20231130\Models\DescribeStorageCredentialRequest.cs" />
+    <Compile Include="V20231130\Models\DescribeStorageCredentialResponse.cs" />
+    <Compile Include="V20231130\Models\DescribeUnsatisfiedReplyContextRequest.cs" />
+    <Compile Include="V20231130\Models\DescribeUnsatisfiedReplyContextResponse.cs" />
+    <Compile Include="V20231130\Models\EmbeddingObject.cs" />
+    <Compile Include="V20231130\Models\ExportAttributeLabelRequest.cs" />
+    <Compile Include="V20231130\Models\ExportAttributeLabelResponse.cs" />
+    <Compile Include="V20231130\Models\ExportQAListRequest.cs" />
+    <Compile Include="V20231130\Models\ExportQAListResponse.cs" />
+    <Compile Include="V20231130\Models\ExportUnsatisfiedReplyRequest.cs" />
+    <Compile Include="V20231130\Models\ExportUnsatisfiedReplyResponse.cs" />
+    <Compile Include="V20231130\Models\Filters.cs" />
+    <Compile Include="V20231130\Models\GenerateQARequest.cs" />
+    <Compile Include="V20231130\Models\GenerateQAResponse.cs" />
+    <Compile Include="V20231130\Models\GetAppKnowledgeCountRequest.cs" />
+    <Compile Include="V20231130\Models\GetAppKnowledgeCountResponse.cs" />
+    <Compile Include="V20231130\Models\GetAppSecretRequest.cs" />
+    <Compile Include="V20231130\Models\GetAppSecretResponse.cs" />
+    <Compile Include="V20231130\Models\GetDocPreviewRequest.cs" />
+    <Compile Include="V20231130\Models\GetDocPreviewResponse.cs" />
+    <Compile Include="V20231130\Models\GetEmbeddingRequest.cs" />
+    <Compile Include="V20231130\Models\GetEmbeddingResponse.cs" />
+    <Compile Include="V20231130\Models\GetMsgRecordRequest.cs" />
+    <Compile Include="V20231130\Models\GetMsgRecordResponse.cs" />
+    <Compile Include="V20231130\Models\GetTaskStatusRequest.cs" />
+    <Compile Include="V20231130\Models\GetTaskStatusResponse.cs" />
+    <Compile Include="V20231130\Models\GetWsTokenReq_Label.cs" />
+    <Compile Include="V20231130\Models\GetWsTokenRequest.cs" />
+    <Compile Include="V20231130\Models\GetWsTokenResponse.cs" />
+    <Compile Include="V20231130\Models\GroupQARequest.cs" />
+    <Compile Include="V20231130\Models\GroupQAResponse.cs" />
+    <Compile Include="V20231130\Models\Highlight.cs" />
+    <Compile Include="V20231130\Models\IgnoreUnsatisfiedReplyRequest.cs" />
+    <Compile Include="V20231130\Models\IgnoreUnsatisfiedReplyResponse.cs" />
+    <Compile Include="V20231130\Models\IsTransferIntentRequest.cs" />
+    <Compile Include="V20231130\Models\IsTransferIntentResponse.cs" />
+    <Compile Include="V20231130\Models\KnowledgeQaConfig.cs" />
+    <Compile Include="V20231130\Models\KnowledgeQaOutput.cs" />
+    <Compile Include="V20231130\Models\KnowledgeQaSearch.cs" />
+    <Compile Include="V20231130\Models\Label.cs" />
+    <Compile Include="V20231130\Models\ListAppCategoryRequest.cs" />
+    <Compile Include="V20231130\Models\ListAppCategoryResponse.cs" />
+    <Compile Include="V20231130\Models\ListAppCategoryRspOption.cs" />
+    <Compile Include="V20231130\Models\ListAppRequest.cs" />
+    <Compile Include="V20231130\Models\ListAppResponse.cs" />
+    <Compile Include="V20231130\Models\ListAttributeLabelRequest.cs" />
+    <Compile Include="V20231130\Models\ListAttributeLabelResponse.cs" />
+    <Compile Include="V20231130\Models\ListDocItem.cs" />
+    <Compile Include="V20231130\Models\ListDocRequest.cs" />
+    <Compile Include="V20231130\Models\ListDocResponse.cs" />
+    <Compile Include="V20231130\Models\ListModelRequest.cs" />
+    <Compile Include="V20231130\Models\ListModelResponse.cs" />
+    <Compile Include="V20231130\Models\ListQACateRequest.cs" />
+    <Compile Include="V20231130\Models\ListQACateResponse.cs" />
+    <Compile Include="V20231130\Models\ListQARequest.cs" />
+    <Compile Include="V20231130\Models\ListQAResponse.cs" />
+    <Compile Include="V20231130\Models\ListQaItem.cs" />
+    <Compile Include="V20231130\Models\ListRejectedQuestionPreviewRequest.cs" />
+    <Compile Include="V20231130\Models\ListRejectedQuestionPreviewResponse.cs" />
+    <Compile Include="V20231130\Models\ListRejectedQuestionRequest.cs" />
+    <Compile Include="V20231130\Models\ListRejectedQuestionResponse.cs" />
+    <Compile Include="V20231130\Models\ListReleaseConfigPreviewRequest.cs" />
+    <Compile Include="V20231130\Models\ListReleaseConfigPreviewResponse.cs" />
+    <Compile Include="V20231130\Models\ListReleaseDocPreviewRequest.cs" />
+    <Compile Include="V20231130\Models\ListReleaseDocPreviewResponse.cs" />
+    <Compile Include="V20231130\Models\ListReleaseItem.cs" />
+    <Compile Include="V20231130\Models\ListReleaseQAPreviewRequest.cs" />
+    <Compile Include="V20231130\Models\ListReleaseQAPreviewResponse.cs" />
+    <Compile Include="V20231130\Models\ListReleaseRequest.cs" />
+    <Compile Include="V20231130\Models\ListReleaseResponse.cs" />
+    <Compile Include="V20231130\Models\ListSelectDocRequest.cs" />
+    <Compile Include="V20231130\Models\ListSelectDocResponse.cs" />
+    <Compile Include="V20231130\Models\ListUnsatisfiedReplyRequest.cs" />
+    <Compile Include="V20231130\Models\ListUnsatisfiedReplyResponse.cs" />
+    <Compile Include="V20231130\Models\Message.cs" />
+    <Compile Include="V20231130\Models\ModelInfo.cs" />
+    <Compile Include="V20231130\Models\ModifyAppRequest.cs" />
+    <Compile Include="V20231130\Models\ModifyAppResponse.cs" />
+    <Compile Include="V20231130\Models\ModifyAttributeLabelRequest.cs" />
+    <Compile Include="V20231130\Models\ModifyAttributeLabelResponse.cs" />
+    <Compile Include="V20231130\Models\ModifyDocAttrRangeRequest.cs" />
+    <Compile Include="V20231130\Models\ModifyDocAttrRangeResponse.cs" />
+    <Compile Include="V20231130\Models\ModifyDocRequest.cs" />
+    <Compile Include="V20231130\Models\ModifyDocResponse.cs" />
+    <Compile Include="V20231130\Models\ModifyQAAttrRangeRequest.cs" />
+    <Compile Include="V20231130\Models\ModifyQAAttrRangeResponse.cs" />
+    <Compile Include="V20231130\Models\ModifyQACateRequest.cs" />
+    <Compile Include="V20231130\Models\ModifyQACateResponse.cs" />
+    <Compile Include="V20231130\Models\ModifyQARequest.cs" />
+    <Compile Include="V20231130\Models\ModifyQAResponse.cs" />
+    <Compile Include="V20231130\Models\ModifyRejectedQuestionRequest.cs" />
+    <Compile Include="V20231130\Models\ModifyRejectedQuestionResponse.cs" />
+    <Compile Include="V20231130\Models\MsgRecord.cs" />
+    <Compile Include="V20231130\Models\MsgRecordReference.cs" />
+    <Compile Include="V20231130\Models\Option.cs" />
+    <Compile Include="V20231130\Models\ParseDocRequest.cs" />
+    <Compile Include="V20231130\Models\ParseDocResponse.cs" />
+    <Compile Include="V20231130\Models\QACate.cs" />
+    <Compile Include="V20231130\Models\QAList.cs" />
+    <Compile Include="V20231130\Models\QAQuery.cs" />
+    <Compile Include="V20231130\Models\QueryParseDocResultRequest.cs" />
+    <Compile Include="V20231130\Models\QueryParseDocResultResponse.cs" />
+    <Compile Include="V20231130\Models\QueryRewriteRequest.cs" />
+    <Compile Include="V20231130\Models\QueryRewriteResponse.cs" />
+    <Compile Include="V20231130\Models\RateMsgRecordRequest.cs" />
+    <Compile Include="V20231130\Models\RateMsgRecordResponse.cs" />
+    <Compile Include="V20231130\Models\ReferDetail.cs" />
+    <Compile Include="V20231130\Models\RejectedQuestion.cs" />
+    <Compile Include="V20231130\Models\ReleaseConfigs.cs" />
+    <Compile Include="V20231130\Models\ReleaseDoc.cs" />
+    <Compile Include="V20231130\Models\ReleaseQA.cs" />
+    <Compile Include="V20231130\Models\ReleaseRejectedQuestion.cs" />
+    <Compile Include="V20231130\Models\ResetSessionRequest.cs" />
+    <Compile Include="V20231130\Models\ResetSessionResponse.cs" />
+    <Compile Include="V20231130\Models\RetryDocAuditRequest.cs" />
+    <Compile Include="V20231130\Models\RetryDocAuditResponse.cs" />
+    <Compile Include="V20231130\Models\RetryDocParseRequest.cs" />
+    <Compile Include="V20231130\Models\RetryDocParseResponse.cs" />
+    <Compile Include="V20231130\Models\RetryReleaseRequest.cs" />
+    <Compile Include="V20231130\Models\RetryReleaseResponse.cs" />
+    <Compile Include="V20231130\Models\SaveDocRequest.cs" />
+    <Compile Include="V20231130\Models\SaveDocResponse.cs" />
+    <Compile Include="V20231130\Models\StopDocParseRequest.cs" />
+    <Compile Include="V20231130\Models\StopDocParseResponse.cs" />
+    <Compile Include="V20231130\Models\SummaryConfig.cs" />
+    <Compile Include="V20231130\Models\SummaryOutput.cs" />
+    <Compile Include="V20231130\Models\TaskParams.cs" />
+    <Compile Include="V20231130\Models\UnsatisfiedReply.cs" />
+    <Compile Include="V20231130\Models\UploadAttributeLabelRequest.cs" />
+    <Compile Include="V20231130\Models\UploadAttributeLabelResponse.cs" />
+    <Compile Include="V20231130\Models\VerifyQARequest.cs" />
+    <Compile Include="V20231130\Models\VerifyQAResponse.cs" />
+  </ItemGroup>
+</Project>

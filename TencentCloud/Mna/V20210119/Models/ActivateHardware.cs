@@ -63,6 +63,32 @@ namespace TencentCloud.Mna.V20210119.Models
         [JsonProperty("AccessScope")]
         public long? AccessScope{ get; set; }
 
+        /// <summary>
+        /// 当付费方为租户时，可选择租户license付费方式：
+        /// 0，月度授权
+        /// 1，永久授权
+        /// 若不传则默认为月度授权。
+        /// 当付费方为厂商时，此参数无效
+        /// 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LicensePayMode")]
+        public long? LicensePayMode{ get; set; }
+
+        /// <summary>
+        /// 设备分组ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
+        /// <summary>
+        /// 设备分组名称，预留参数，需要分组时传入GroupId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupName")]
+        public string GroupName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +101,9 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "DataKey", this.DataKey);
             this.SetParamSimple(map, prefix + "AccessScope", this.AccessScope);
+            this.SetParamSimple(map, prefix + "LicensePayMode", this.LicensePayMode);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
         }
     }
 }

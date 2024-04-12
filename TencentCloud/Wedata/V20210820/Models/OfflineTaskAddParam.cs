@@ -31,43 +31,43 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string WorkflowName{ get; set; }
 
         /// <summary>
-        /// 依赖
+        /// 依赖：yes、no
         /// </summary>
         [JsonProperty("DependencyWorkflow")]
         public string DependencyWorkflow{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// 任务开始数据时间。非空。默认当前时间
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 任务结束数据时间。非空。默认当前时间
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 周期
+        /// 周期类型。一次性任务:6、分钟任务：1、小时任务：2、天任务：3、周任务：4、月任务：5、crontab任务：0
         /// </summary>
         [JsonProperty("CycleType")]
         public ulong? CycleType{ get; set; }
 
         /// <summary>
-        /// 周期间隔
+        /// 间隔，可选，默认1。非空。默认 1
         /// </summary>
         [JsonProperty("CycleStep")]
         public ulong? CycleStep{ get; set; }
 
         /// <summary>
-        /// 延迟时间
+        /// 延时执行时间，单位分钟
         /// </summary>
         [JsonProperty("DelayTime")]
         public ulong? DelayTime{ get; set; }
 
         /// <summary>
-        /// crontab
+        /// 任务cron表达式，仅cron任务使用，其他时候默认为空
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CrontabExpression")]
@@ -112,7 +112,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public ulong? SelfDepend{ get; set; }
 
         /// <summary>
-        /// 周任务：1是周天，2是周1，7是周6 。
+        /// 时间指定，如月任务指定1，3号，则填入 1，3。非空。默认 ""
         /// 月任务：如具体1，3号则写 "1,3"，指定月末不可和具体号数一起输入，仅能为 "L"
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -141,7 +141,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public bool? TaskAutoSubmit{ get; set; }
 
         /// <summary>
-        /// 实例初始化策略
+        /// 实例生成方式，T_PLUS_0 当天任务当天调度 / T_PLUS_1 当天任务后一天调度
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceInitStrategy")]

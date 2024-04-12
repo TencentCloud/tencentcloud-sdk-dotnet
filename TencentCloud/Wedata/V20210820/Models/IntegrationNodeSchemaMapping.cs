@@ -25,13 +25,13 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 源schema id
+        /// 任务节点的源schema id
         /// </summary>
         [JsonProperty("SourceSchemaId")]
         public string SourceSchemaId{ get; set; }
 
         /// <summary>
-        /// 目标schema id
+        /// 任务节点目标schema id
         /// </summary>
         [JsonProperty("SinkSchemaId")]
         public string SinkSchemaId{ get; set; }
