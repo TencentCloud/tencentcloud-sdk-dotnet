@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 新创建的子应用 ID。
+        /// 新创建的应用 ID。
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 路由表名称
+        /// 路由表名称，一般为集群ID
         /// </summary>
         [JsonProperty("RouteTableName")]
         public string RouteTableName{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 是否忽略CIDR冲突
+        /// 是否忽略CIDR与 vpc 路由表的冲突， 0 表示不忽略，1表示忽略。默认不忽略
         /// </summary>
         [JsonProperty("IgnoreClusterCidrConflict")]
         public long? IgnoreClusterCidrConflict{ get; set; }

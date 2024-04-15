@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.985";
+       private const string sdkVersion = "SDK_NET_3.0.986";
 
         /// <summary>
         /// Client constructor.
@@ -3162,6 +3162,27 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 根据K8S版本获取可选运行时版本
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSupportedRuntimeRequest"/></param>
+        /// <returns><see cref="DescribeSupportedRuntimeResponse"/></returns>
+        public Task<DescribeSupportedRuntimeResponse> DescribeSupportedRuntime(DescribeSupportedRuntimeRequest req)
+        {
+            return InternalRequestAsync<DescribeSupportedRuntimeResponse>(req, "DescribeSupportedRuntime");
+        }
+
+        /// <summary>
+        /// 根据K8S版本获取可选运行时版本
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSupportedRuntimeRequest"/></param>
+        /// <returns><see cref="DescribeSupportedRuntimeResponse"/></returns>
+        public DescribeSupportedRuntimeResponse DescribeSupportedRuntimeSync(DescribeSupportedRuntimeRequest req)
+        {
+            return InternalRequestAsync<DescribeSupportedRuntimeResponse>(req, "DescribeSupportedRuntime")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取边缘计算集群的认证信息
         /// </summary>
         /// <param name="req"><see cref="DescribeTKEEdgeClusterCredentialRequest"/></param>
@@ -3893,6 +3914,27 @@ namespace TencentCloud.Tke.V20180525
         public ModifyClusterNodePoolResponse ModifyClusterNodePoolSync(ModifyClusterNodePoolRequest req)
         {
             return InternalRequestAsync<ModifyClusterNodePoolResponse>(req, "ModifyClusterNodePool")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改集群及节点池纬度运行时配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterRuntimeConfigRequest"/></param>
+        /// <returns><see cref="ModifyClusterRuntimeConfigResponse"/></returns>
+        public Task<ModifyClusterRuntimeConfigResponse> ModifyClusterRuntimeConfig(ModifyClusterRuntimeConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterRuntimeConfigResponse>(req, "ModifyClusterRuntimeConfig");
+        }
+
+        /// <summary>
+        /// 修改集群及节点池纬度运行时配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterRuntimeConfigRequest"/></param>
+        /// <returns><see cref="ModifyClusterRuntimeConfigResponse"/></returns>
+        public ModifyClusterRuntimeConfigResponse ModifyClusterRuntimeConfigSync(ModifyClusterRuntimeConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterRuntimeConfigResponse>(req, "ModifyClusterRuntimeConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

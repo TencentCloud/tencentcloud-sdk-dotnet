@@ -157,6 +157,20 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("Preview")]
         public string Preview{ get; set; }
 
+        /// <summary>
+        /// 文档的分辨率
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Resolution")]
+        public string Resolution{ get; set; }
+
+        /// <summary>
+        /// 转码后文档的最小分辨率，和创建文档时传入的参数一致。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MinScaleResolution")]
+        public string MinScaleResolution{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -182,6 +196,8 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "Cover", this.Cover);
             this.SetParamSimple(map, prefix + "Preview", this.Preview);
+            this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
+            this.SetParamSimple(map, prefix + "MinScaleResolution", this.MinScaleResolution);
         }
     }
 }

@@ -121,6 +121,18 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string Preview{ get; set; }
 
         /// <summary>
+        /// 文档的分辨率
+        /// </summary>
+        [JsonProperty("Resolution")]
+        public string Resolution{ get; set; }
+
+        /// <summary>
+        /// 转码后文档的最小分辨率，和创建文档时传入的参数一致。
+        /// </summary>
+        [JsonProperty("MinScaleResolution")]
+        public string MinScaleResolution{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -148,6 +160,8 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "Pages", this.Pages);
             this.SetParamSimple(map, prefix + "Preview", this.Preview);
+            this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
+            this.SetParamSimple(map, prefix + "MinScaleResolution", this.MinScaleResolution);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

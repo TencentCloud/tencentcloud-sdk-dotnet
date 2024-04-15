@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.985</VersionPrefix>
+    <VersionPrefix>3.0.986</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -407,6 +407,8 @@
     <Compile Include="V20180525\Models\DescribeResourceUsageResponse.cs" />
     <Compile Include="V20180525\Models\DescribeRouteTableConflictsRequest.cs" />
     <Compile Include="V20180525\Models\DescribeRouteTableConflictsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeSupportedRuntimeRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeSupportedRuntimeResponse.cs" />
     <Compile Include="V20180525\Models\DescribeTKEEdgeClusterCredentialRequest.cs" />
     <Compile Include="V20180525\Models\DescribeTKEEdgeClusterCredentialResponse.cs" />
     <Compile Include="V20180525\Models\DescribeTKEEdgeClusterStatusRequest.cs" />
@@ -534,6 +536,8 @@
     <Compile Include="V20180525\Models\ModifyClusterEndpointSPResponse.cs" />
     <Compile Include="V20180525\Models\ModifyClusterNodePoolRequest.cs" />
     <Compile Include="V20180525\Models\ModifyClusterNodePoolResponse.cs" />
+    <Compile Include="V20180525\Models\ModifyClusterRuntimeConfigRequest.cs" />
+    <Compile Include="V20180525\Models\ModifyClusterRuntimeConfigResponse.cs" />
     <Compile Include="V20180525\Models\ModifyClusterVirtualNodePoolRequest.cs" />
     <Compile Include="V20180525\Models\ModifyClusterVirtualNodePoolResponse.cs" />
     <Compile Include="V20180525\Models\ModifyNodePoolDesiredCapacityAboutAsgRequest.cs" />
@@ -562,7 +566,9 @@
     <Compile Include="V20180525\Models\NodeCountSummary.cs" />
     <Compile Include="V20180525\Models\NodePool.cs" />
     <Compile Include="V20180525\Models\NodePoolOption.cs" />
+    <Compile Include="V20180525\Models\NodePoolRuntime.cs" />
     <Compile Include="V20180525\Models\OIDCConfigAuthenticationOptions.cs" />
+    <Compile Include="V20180525\Models\OptionalRuntimes.cs" />
     <Compile Include="V20180525\Models\PendingRelease.cs" />
     <Compile Include="V20180525\Models\PodDeductionRate.cs" />
     <Compile Include="V20180525\Models\PodLimitsByType.cs" />
@@ -621,6 +627,7 @@
     <Compile Include="V20180525\Models\RunPrometheusInstanceRequest.cs" />
     <Compile Include="V20180525\Models\RunPrometheusInstanceResponse.cs" />
     <Compile Include="V20180525\Models\RunSecurityServiceEnabled.cs" />
+    <Compile Include="V20180525\Models\RuntimeConfig.cs" />
     <Compile Include="V20180525\Models\ScaleInClusterMasterRequest.cs" />
     <Compile Include="V20180525\Models\ScaleInClusterMasterResponse.cs" />
     <Compile Include="V20180525\Models\ScaleInMaster.cs" />

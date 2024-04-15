@@ -88,6 +88,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("AutoHandleUnsupportedElement")]
         public bool? AutoHandleUnsupportedElement{ get; set; }
 
+        /// <summary>
+        /// 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率。示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x"
+        /// </summary>
+        [JsonProperty("MinScaleResolution")]
+        public string MinScaleResolution{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +109,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "DocumentType", this.DocumentType);
             this.SetParamSimple(map, prefix + "DocumentSize", this.DocumentSize);
             this.SetParamSimple(map, prefix + "AutoHandleUnsupportedElement", this.AutoHandleUnsupportedElement);
+            this.SetParamSimple(map, prefix + "MinScaleResolution", this.MinScaleResolution);
         }
     }
 }

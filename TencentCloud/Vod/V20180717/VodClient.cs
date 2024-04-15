@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.985";
+       private const string sdkVersion = "SDK_NET_3.0.986";
 
         /// <summary>
         /// Client constructor.
@@ -696,7 +696,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 该接口用于创建点播子应用。
+        /// 该接口用于创建点播应用。
         /// </summary>
         /// <param name="req"><see cref="CreateSubAppIdRequest"/></param>
         /// <returns><see cref="CreateSubAppIdResponse"/></returns>
@@ -706,7 +706,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 该接口用于创建点播子应用。
+        /// 该接口用于创建点播应用。
         /// </summary>
         /// <param name="req"><see cref="CreateSubAppIdRequest"/></param>
         /// <returns><see cref="CreateSubAppIdResponse"/></returns>
@@ -2493,7 +2493,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 该接口用于获取当前账号的子应用列表，包含主应用。
+        /// 该接口用于获取当前账号的应用列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeSubAppIdsRequest"/></param>
         /// <returns><see cref="DescribeSubAppIdsResponse"/></returns>
@@ -2503,7 +2503,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 该接口用于获取当前账号的子应用列表，包含主应用。
+        /// 该接口用于获取当前账号的应用列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeSubAppIdsRequest"/></param>
         /// <returns><see cref="DescribeSubAppIdsResponse"/></returns>

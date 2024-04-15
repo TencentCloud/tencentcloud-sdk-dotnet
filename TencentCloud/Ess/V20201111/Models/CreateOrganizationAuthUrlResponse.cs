@@ -25,6 +25,22 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
+        /// “H5”-H5长连接
+        /// "SHORT_H5"- H5短链
+        /// "APP"-小程序
+        /// "PC"-PC浏览器
+        /// 链接有效期统一30天
+        /// </summary>
+        [JsonProperty("AuthUrl")]
+        public string AuthUrl{ get; set; }
+
+        /// <summary>
+        /// 链接过期时间戳
+        /// </summary>
+        [JsonProperty("ExpiredTime")]
+        public long? ExpiredTime{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +52,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "AuthUrl", this.AuthUrl);
+            this.SetParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

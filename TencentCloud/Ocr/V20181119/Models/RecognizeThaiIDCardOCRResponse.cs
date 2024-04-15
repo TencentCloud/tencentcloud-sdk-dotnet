@@ -43,34 +43,34 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string EnFirstName{ get; set; }
 
         /// <summary>
-        /// 地址
+        /// 英文姓名
         /// </summary>
-        [JsonProperty("Address")]
-        public string Address{ get; set; }
+        [JsonProperty("EnLastName")]
+        public string EnLastName{ get; set; }
 
         /// <summary>
-        /// 出生日期
-        /// </summary>
-        [JsonProperty("Birthday")]
-        public string Birthday{ get; set; }
-
-        /// <summary>
-        /// 签发日期
+        /// 泰文签发日期
         /// </summary>
         [JsonProperty("IssueDate")]
         public string IssueDate{ get; set; }
 
         /// <summary>
-        /// 到期日期
+        /// 泰文到期日期
         /// </summary>
         [JsonProperty("ExpirationDate")]
         public string ExpirationDate{ get; set; }
 
         /// <summary>
-        /// 英文姓名
+        /// 泰文出生日期
         /// </summary>
-        [JsonProperty("EnLastName")]
-        public string EnLastName{ get; set; }
+        [JsonProperty("Birthday")]
+        public string Birthday{ get; set; }
+
+        /// <summary>
+        /// 地址
+        /// </summary>
+        [JsonProperty("Address")]
+        public string Address{ get; set; }
 
         /// <summary>
         /// 证件人像照片抠取
@@ -93,11 +93,11 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ID", this.ID);
             this.SetParamSimple(map, prefix + "ThaiName", this.ThaiName);
             this.SetParamSimple(map, prefix + "EnFirstName", this.EnFirstName);
-            this.SetParamSimple(map, prefix + "Address", this.Address);
-            this.SetParamSimple(map, prefix + "Birthday", this.Birthday);
+            this.SetParamSimple(map, prefix + "EnLastName", this.EnLastName);
             this.SetParamSimple(map, prefix + "IssueDate", this.IssueDate);
             this.SetParamSimple(map, prefix + "ExpirationDate", this.ExpirationDate);
-            this.SetParamSimple(map, prefix + "EnLastName", this.EnLastName);
+            this.SetParamSimple(map, prefix + "Birthday", this.Birthday);
+            this.SetParamSimple(map, prefix + "Address", this.Address);
             this.SetParamSimple(map, prefix + "PortraitImage", this.PortraitImage);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

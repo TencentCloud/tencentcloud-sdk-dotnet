@@ -36,13 +36,15 @@ namespace TencentCloud.Rce.V20201103.Models
         public string AccountId{ get; set; }
 
         /// <summary>
-        /// MD5手机号,AccountType是10004时，此处无需重复填写。
+        /// 账号绑定的MD5手机号。
+        /// 注释：只支持标准中国大陆11位手机号MD5加密后位的32位小写字符串。
         /// </summary>
         [JsonProperty("MobilePhone")]
         public string MobilePhone{ get; set; }
 
         /// <summary>
-        /// 用户设备号，AccountType是8时，此处无需重复填写。
+        /// 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5。
+        /// 注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }

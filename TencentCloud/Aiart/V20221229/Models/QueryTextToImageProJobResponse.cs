@@ -62,6 +62,12 @@ namespace TencentCloud.Aiart.V20221229.Models
         public string[] ResultDetails{ get; set; }
 
         /// <summary>
+        /// 对应 SubmitTextToImageProJob 接口中 Revise 参数。开启扩写时，返回扩写后的 prompt 文本。 如果关闭扩写，将直接返回原始输入的 prompt。
+        /// </summary>
+        [JsonProperty("RevisedPrompt")]
+        public string[] RevisedPrompt{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -79,6 +85,7 @@ namespace TencentCloud.Aiart.V20221229.Models
             this.SetParamSimple(map, prefix + "JobErrorMsg", this.JobErrorMsg);
             this.SetParamArraySimple(map, prefix + "ResultImage.", this.ResultImage);
             this.SetParamArraySimple(map, prefix + "ResultDetails.", this.ResultDetails);
+            this.SetParamArraySimple(map, prefix + "RevisedPrompt.", this.RevisedPrompt);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

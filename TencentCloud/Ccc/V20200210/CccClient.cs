@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.985";
+       private const string sdkVersion = "SDK_NET_3.0.986";
 
         /// <summary>
         /// Client constructor.
@@ -222,7 +222,7 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// 创建公司资质申请（1、首次使用接口，建议先在云联络中心控制台查看各个资料模版:https://console.cloud.tencent.com/ccc/enterprise/update。2、参数中图片Url建议使用腾讯云Cos存储的临时链接）
+        /// 创建公司资质申请（1、首次使用接口，建议先在云联络中心控制台查看各个资料模板:https://console.cloud.tencent.com/ccc/enterprise/update。2、参数中图片Url建议使用腾讯云Cos存储的临时链接）
         /// </summary>
         /// <param name="req"><see cref="CreateCompanyApplyRequest"/></param>
         /// <returns><see cref="CreateCompanyApplyResponse"/></returns>
@@ -232,7 +232,7 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// 创建公司资质申请（1、首次使用接口，建议先在云联络中心控制台查看各个资料模版:https://console.cloud.tencent.com/ccc/enterprise/update。2、参数中图片Url建议使用腾讯云Cos存储的临时链接）
+        /// 创建公司资质申请（1、首次使用接口，建议先在云联络中心控制台查看各个资料模板:https://console.cloud.tencent.com/ccc/enterprise/update。2、参数中图片Url建议使用腾讯云Cos存储的临时链接）
         /// </summary>
         /// <param name="req"><see cref="CreateCompanyApplyRequest"/></param>
         /// <returns><see cref="CreateCompanyApplyResponse"/></returns>
@@ -982,7 +982,7 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// 修改公司资质申请，只能修改状态为驳回或待审核的申请单。（1、首次使用接口，建议先在云联络中心控制台查看各个资料模版:https://console.cloud.tencent.com/ccc/enterprise/update。2、参数中图片Url建议使用腾讯云Cos存储的临时链接）
+        /// 修改公司资质申请，只能修改状态为驳回或待审核的申请单。（1、首次使用接口，建议先在云联络中心控制台查看各个资料模板:https://console.cloud.tencent.com/ccc/enterprise/update。2、参数中图片Url建议使用腾讯云Cos存储的临时链接）
         /// </summary>
         /// <param name="req"><see cref="ModifyCompanyApplyRequest"/></param>
         /// <returns><see cref="ModifyCompanyApplyResponse"/></returns>
@@ -992,7 +992,7 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// 修改公司资质申请，只能修改状态为驳回或待审核的申请单。（1、首次使用接口，建议先在云联络中心控制台查看各个资料模版:https://console.cloud.tencent.com/ccc/enterprise/update。2、参数中图片Url建议使用腾讯云Cos存储的临时链接）
+        /// 修改公司资质申请，只能修改状态为驳回或待审核的申请单。（1、首次使用接口，建议先在云联络中心控制台查看各个资料模板:https://console.cloud.tencent.com/ccc/enterprise/update。2、参数中图片Url建议使用腾讯云Cos存储的临时链接）
         /// </summary>
         /// <param name="req"><see cref="ModifyCompanyApplyRequest"/></param>
         /// <returns><see cref="ModifyCompanyApplyResponse"/></returns>

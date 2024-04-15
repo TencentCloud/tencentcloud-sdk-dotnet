@@ -66,6 +66,15 @@ namespace TencentCloud.Aiart.V20221229.Models
         [JsonProperty("Engine")]
         public string Engine{ get; set; }
 
+        /// <summary>
+        /// prompt 扩写开关。1为开启，0为关闭，不传默认开启。
+        /// 开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
+        /// 如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
+        /// 建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。
+        /// </summary>
+        [JsonProperty("Revise")]
+        public long? Revise{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,6 +86,7 @@ namespace TencentCloud.Aiart.V20221229.Models
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
             this.SetParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
             this.SetParamSimple(map, prefix + "Engine", this.Engine);
+            this.SetParamSimple(map, prefix + "Revise", this.Revise);
         }
     }
 }

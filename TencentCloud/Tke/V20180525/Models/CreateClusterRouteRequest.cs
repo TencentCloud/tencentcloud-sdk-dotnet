@@ -31,13 +31,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public string RouteTableName{ get; set; }
 
         /// <summary>
-        /// 目的端CIDR。
+        /// 目的节点的 PodCIDR
         /// </summary>
         [JsonProperty("DestinationCidrBlock")]
         public string DestinationCidrBlock{ get; set; }
 
         /// <summary>
-        /// 下一跳地址。
+        /// 下一跳地址，即目的节点的内网 IP 地址
         /// </summary>
         [JsonProperty("GatewayIp")]
         public string GatewayIp{ get; set; }

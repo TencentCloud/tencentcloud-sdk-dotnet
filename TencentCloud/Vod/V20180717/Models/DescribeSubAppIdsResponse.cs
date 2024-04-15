@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 子应用信息集合。
+        /// 应用信息集合。
         /// </summary>
         [JsonProperty("SubAppIdInfoSet")]
         public SubAppIdInfo[] SubAppIdInfoSet{ get; set; }
 
         /// <summary>
-        /// 子应用总数量。
+        /// 应用总数量。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

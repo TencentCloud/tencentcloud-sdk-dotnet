@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 子应用名称。
+        /// 应用名称。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 标签信息，查询指定标签的子应用列表。
+        /// 标签信息，查询指定标签的应用列表。
         /// </summary>
         [JsonProperty("Tags")]
         public ResourceTag[] Tags{ get; set; }
