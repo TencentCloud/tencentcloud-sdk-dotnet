@@ -56,6 +56,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("RuleID")]
         public string RuleID{ get; set; }
 
+        /// <summary>
+        /// 指标名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MetricName")]
+        public string MetricName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +74,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "EventID", this.EventID);
             this.SetParamSimple(map, prefix + "EventDisplayName", this.EventDisplayName);
             this.SetParamSimple(map, prefix + "RuleID", this.RuleID);
+            this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
         }
     }
 }

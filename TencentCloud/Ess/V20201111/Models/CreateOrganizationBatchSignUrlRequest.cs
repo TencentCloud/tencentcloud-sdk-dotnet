@@ -72,6 +72,14 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }
 
+        /// <summary>
+        /// 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。
+        /// 您可以通过查询合同接口（DescribeFlowInfo）查询此参数。
+        /// 若传了此参数，则可以不传 UserId, Name, Mobile等参数
+        /// </summary>
+        [JsonProperty("RecipientIds")]
+        public string[] RecipientIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -84,6 +92,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
+            this.SetParamArraySimple(map, prefix + "RecipientIds.", this.RecipientIds);
         }
     }
 }

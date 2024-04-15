@@ -66,7 +66,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <li>**OrgEssAuth**: 签署企业实名</li>
         /// <li>**FlowNotify**: 短信通知</li>
         /// <li>**AuthService**: 企业工商信息查询</li>
-        /// <li>**NoAuthSign**: 形式签</li>
         /// </ul>
         /// </summary>
         [JsonProperty("QuotaType")]

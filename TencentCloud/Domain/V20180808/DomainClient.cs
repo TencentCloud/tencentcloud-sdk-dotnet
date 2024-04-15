@@ -28,7 +28,7 @@ namespace TencentCloud.Domain.V20180808
 
        private const string endpoint = "domain.tencentcloudapi.com";
        private const string version = "2018-08-08";
-       private const string sdkVersion = "SDK_NET_3.0.984";
+       private const string sdkVersion = "SDK_NET_3.0.985";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Domain.V20180808
         public BatchModifyDomainInfoResponse BatchModifyDomainInfoSync(BatchModifyDomainInfoRequest req)
         {
             return InternalRequestAsync<BatchModifyDomainInfoResponse>(req, "BatchModifyDomainInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用户合作商预释放出价
+        /// </summary>
+        /// <param name="req"><see cref="BidPreDomainsRequest"/></param>
+        /// <returns><see cref="BidPreDomainsResponse"/></returns>
+        public Task<BidPreDomainsResponse> BidPreDomains(BidPreDomainsRequest req)
+        {
+            return InternalRequestAsync<BidPreDomainsResponse>(req, "BidPreDomains");
+        }
+
+        /// <summary>
+        /// 用户合作商预释放出价
+        /// </summary>
+        /// <param name="req"><see cref="BidPreDomainsRequest"/></param>
+        /// <returns><see cref="BidPreDomainsResponse"/></returns>
+        public BidPreDomainsResponse BidPreDomainsSync(BidPreDomainsRequest req)
+        {
+            return InternalRequestAsync<BidPreDomainsResponse>(req, "BidPreDomains")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -491,6 +512,27 @@ namespace TencentCloud.Domain.V20180808
         public DescribePreDomainListResponse DescribePreDomainListSync(DescribePreDomainListRequest req)
         {
             return InternalRequestAsync<DescribePreDomainListResponse>(req, "DescribePreDomainList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 接口用于获取合作商竞价过程中竞价详情数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReservedBidInfoRequest"/></param>
+        /// <returns><see cref="DescribeReservedBidInfoResponse"/></returns>
+        public Task<DescribeReservedBidInfoResponse> DescribeReservedBidInfo(DescribeReservedBidInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeReservedBidInfoResponse>(req, "DescribeReservedBidInfo");
+        }
+
+        /// <summary>
+        /// 接口用于获取合作商竞价过程中竞价详情数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReservedBidInfoRequest"/></param>
+        /// <returns><see cref="DescribeReservedBidInfoResponse"/></returns>
+        public DescribeReservedBidInfoResponse DescribeReservedBidInfoSync(DescribeReservedBidInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeReservedBidInfoResponse>(req, "DescribeReservedBidInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

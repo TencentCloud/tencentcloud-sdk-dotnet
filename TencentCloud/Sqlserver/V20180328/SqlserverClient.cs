@@ -28,7 +28,7 @@ namespace TencentCloud.Sqlserver.V20180328
 
        private const string endpoint = "sqlserver.tencentcloudapi.com";
        private const string version = "2018-03-28";
-       private const string sdkVersion = "SDK_NET_3.0.984";
+       private const string sdkVersion = "SDK_NET_3.0.985";
 
         /// <summary>
         /// Client constructor.
@@ -1772,6 +1772,27 @@ namespace TencentCloud.Sqlserver.V20180328
         public DescribeRestoreTaskResponse DescribeRestoreTaskSync(DescribeRestoreTaskRequest req)
         {
             return InternalRequestAsync<DescribeRestoreTaskResponse>(req, "DescribeRestoreTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeRestoreTimeRange)用于查询按照时间点可回档的时间范围。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRestoreTimeRangeRequest"/></param>
+        /// <returns><see cref="DescribeRestoreTimeRangeResponse"/></returns>
+        public Task<DescribeRestoreTimeRangeResponse> DescribeRestoreTimeRange(DescribeRestoreTimeRangeRequest req)
+        {
+            return InternalRequestAsync<DescribeRestoreTimeRangeResponse>(req, "DescribeRestoreTimeRange");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeRestoreTimeRange)用于查询按照时间点可回档的时间范围。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRestoreTimeRangeRequest"/></param>
+        /// <returns><see cref="DescribeRestoreTimeRangeResponse"/></returns>
+        public DescribeRestoreTimeRangeResponse DescribeRestoreTimeRangeSync(DescribeRestoreTimeRangeRequest req)
+        {
+            return InternalRequestAsync<DescribeRestoreTimeRangeResponse>(req, "DescribeRestoreTimeRange")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -31,7 +31,7 @@ namespace TencentCloud.Domain.V20180808.Models
         public string[] DomainList{ get; set; }
 
         /// <summary>
-        /// 状态，用于筛选，可不填写(1. 预定成功 2. 预定失败（预定失败Reason字段将会被赋值）3. 域名交割中 4. 域名交割完成)
+        /// 状态，用于筛选，可不填写(1. 成功 2. 失败（失败Reason字段将会被赋值）3. 域名交割中 4. 域名交割完成 5. 预约 6. 竞价)
         /// </summary>
         [JsonProperty("ReservedStatus")]
         public long? ReservedStatus{ get; set; }

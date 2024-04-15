@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B15FC666-859E-397F-91C6-A33130097096}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.984</VersionPrefix>
+    <VersionPrefix>3.0.985</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,6 +51,8 @@
     <Compile Include="V20180808\Models\BatchModifyDomainInfoRequest.cs" />
     <Compile Include="V20180808\Models\BatchModifyDomainInfoResponse.cs" />
     <Compile Include="V20180808\Models\BatchStatus.cs" />
+    <Compile Include="V20180808\Models\BidPreDomainsRequest.cs" />
+    <Compile Include="V20180808\Models\BidPreDomainsResponse.cs" />
     <Compile Include="V20180808\Models\CertificateInfo.cs" />
     <Compile Include="V20180808\Models\CheckBatchStatusRequest.cs" />
     <Compile Include="V20180808\Models\CheckBatchStatusResponse.cs" />
@@ -94,6 +96,8 @@
     <Compile Include="V20180808\Models\DescribePhoneEmailListResponse.cs" />
     <Compile Include="V20180808\Models\DescribePreDomainListRequest.cs" />
     <Compile Include="V20180808\Models\DescribePreDomainListResponse.cs" />
+    <Compile Include="V20180808\Models\DescribeReservedBidInfoRequest.cs" />
+    <Compile Include="V20180808\Models\DescribeReservedBidInfoResponse.cs" />
     <Compile Include="V20180808\Models\DescribeReservedPreDomainInfoRequest.cs" />
     <Compile Include="V20180808\Models\DescribeReservedPreDomainInfoResponse.cs" />
     <Compile Include="V20180808\Models\DescribeTemplateListRequest.cs" />
@@ -120,6 +124,7 @@
     <Compile Include="V20180808\Models\PriceInfo.cs" />
     <Compile Include="V20180808\Models\RenewDomainBatchRequest.cs" />
     <Compile Include="V20180808\Models\RenewDomainBatchResponse.cs" />
+    <Compile Include="V20180808\Models\ReserveBidInfo.cs" />
     <Compile Include="V20180808\Models\ReservedDomainInfo.cs" />
     <Compile Include="V20180808\Models\ReservedPreDomainInfo.cs" />
     <Compile Include="V20180808\Models\ReservedPreDomainsRequest.cs" />
