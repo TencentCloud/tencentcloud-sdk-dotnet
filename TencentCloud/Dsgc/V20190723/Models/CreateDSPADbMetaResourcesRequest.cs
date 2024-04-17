@@ -40,25 +40,35 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// 资源所处地域。
         /// </summary>
         [JsonProperty("ResourceRegion")]
+        [System.Obsolete]
         public string ResourceRegion{ get; set; }
 
         /// <summary>
         /// 用来标记本次更新是否已经是最后一次，可选值：continue（后续还需要更新）、finished（本次是最后一次更新）。
         /// </summary>
         [JsonProperty("UpdateStatus")]
+        [System.Obsolete]
         public string UpdateStatus{ get; set; }
 
         /// <summary>
         /// 本次更新的ID号，用来标记一次完整的更新过程。
         /// </summary>
         [JsonProperty("UpdateId")]
+        [System.Obsolete]
         public string UpdateId{ get; set; }
 
         /// <summary>
         /// 云上资源列表。
         /// </summary>
         [JsonProperty("Items")]
+        [System.Obsolete]
         public DspaCloudResourceMeta[] Items{ get; set; }
+
+        /// <summary>
+        /// 必填，云数据库资源列表。
+        /// </summary>
+        [JsonProperty("CloudResourceItems")]
+        public CloudResourceItem[] CloudResourceItems{ get; set; }
 
 
         /// <summary>
@@ -72,6 +82,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "UpdateStatus", this.UpdateStatus);
             this.SetParamSimple(map, prefix + "UpdateId", this.UpdateId);
             this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamArrayObj(map, prefix + "CloudResourceItems.", this.CloudResourceItems);
         }
     }
 }

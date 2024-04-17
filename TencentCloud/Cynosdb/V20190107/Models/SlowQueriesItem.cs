@@ -90,6 +90,62 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("SqlMd5")]
         public string SqlMd5{ get; set; }
 
+        /// <summary>
+        /// 远程读取次数
+        /// 数据库内核版本大于3.1.12
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SyncReadCountRemote")]
+        public long? SyncReadCountRemote{ get; set; }
+
+        /// <summary>
+        /// 远程读取的字节数
+        /// 数据库内核版本大于3.1.12
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SyncReadBytesRemote")]
+        public long? SyncReadBytesRemote{ get; set; }
+
+        /// <summary>
+        /// 远程读取所花费的时间（微秒）
+        /// 数据库内核版本大于3.1.12
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SyncReadTimeRemote")]
+        public long? SyncReadTimeRemote{ get; set; }
+
+        /// <summary>
+        /// 远程写入次数
+        /// 数据库内核版本大于3.1.12
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SyncWriteCountRemote")]
+        public long? SyncWriteCountRemote{ get; set; }
+
+        /// <summary>
+        /// 远程写入的字节数。
+        /// 数据库内核版本大于3.1.12
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SyncWriteBytesRemote")]
+        public long? SyncWriteBytesRemote{ get; set; }
+
+        /// <summary>
+        /// 远程写入所花费的时间（微秒）。
+        /// 数据库内核版本大于3.1.12
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SyncWriteTimeRemote")]
+        public long? SyncWriteTimeRemote{ get; set; }
+
+        /// <summary>
+        /// 事务提交延迟（微秒）
+        /// 数据库内核版本大于3.1.12
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TrxCommitDelay")]
+        public long? TrxCommitDelay{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +163,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "RowsSent", this.RowsSent);
             this.SetParamSimple(map, prefix + "SqlTemplate", this.SqlTemplate);
             this.SetParamSimple(map, prefix + "SqlMd5", this.SqlMd5);
+            this.SetParamSimple(map, prefix + "SyncReadCountRemote", this.SyncReadCountRemote);
+            this.SetParamSimple(map, prefix + "SyncReadBytesRemote", this.SyncReadBytesRemote);
+            this.SetParamSimple(map, prefix + "SyncReadTimeRemote", this.SyncReadTimeRemote);
+            this.SetParamSimple(map, prefix + "SyncWriteCountRemote", this.SyncWriteCountRemote);
+            this.SetParamSimple(map, prefix + "SyncWriteBytesRemote", this.SyncWriteBytesRemote);
+            this.SetParamSimple(map, prefix + "SyncWriteTimeRemote", this.SyncWriteTimeRemote);
+            this.SetParamSimple(map, prefix + "TrxCommitDelay", this.TrxCommitDelay);
         }
     }
 }

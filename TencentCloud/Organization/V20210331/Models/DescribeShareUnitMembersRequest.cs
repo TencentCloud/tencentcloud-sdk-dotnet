@@ -49,7 +49,7 @@ namespace TencentCloud.Organization.V20210331.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 搜索关键字。支持成员uin搜索。
+        /// 搜索关键字。支持成员Uin搜索。
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }

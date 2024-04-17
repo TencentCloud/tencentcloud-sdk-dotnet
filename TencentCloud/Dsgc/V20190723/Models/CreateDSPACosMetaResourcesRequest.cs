@@ -25,22 +25,30 @@ namespace TencentCloud.Dsgc.V20190723.Models
     {
         
         /// <summary>
-        /// 资源所处地域。
-        /// </summary>
-        [JsonProperty("ResourceRegion")]
-        public string ResourceRegion{ get; set; }
-
-        /// <summary>
         /// DSPA实例ID。
         /// </summary>
         [JsonProperty("DspaId")]
         public string DspaId{ get; set; }
 
         /// <summary>
+        /// 资源所处地域。
+        /// </summary>
+        [JsonProperty("ResourceRegion")]
+        [System.Obsolete]
+        public string ResourceRegion{ get; set; }
+
+        /// <summary>
         /// COS桶列表
         /// </summary>
         [JsonProperty("Buckets")]
+        [System.Obsolete]
         public string[] Buckets{ get; set; }
+
+        /// <summary>
+        /// 必填，COS资源列表
+        /// </summary>
+        [JsonProperty("CosBucketItems")]
+        public CosBucketItem[] CosBucketItems{ get; set; }
 
 
         /// <summary>
@@ -48,9 +56,10 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
             this.SetParamSimple(map, prefix + "DspaId", this.DspaId);
+            this.SetParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
             this.SetParamArraySimple(map, prefix + "Buckets.", this.Buckets);
+            this.SetParamArrayObj(map, prefix + "CosBucketItems.", this.CosBucketItems);
         }
     }
 }

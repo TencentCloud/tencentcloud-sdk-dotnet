@@ -37,13 +37,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 任务类型
+        /// 任务类型 "201. stream, 202. offline"
         /// </summary>
         [JsonProperty("TaskType")]
         public ulong? TaskType{ get; set; }
 
         /// <summary>
-        /// 区分画布模式和表单模式
+        /// 区分画布模式和表单 "1. 画布, 2. 表单"模式
         /// </summary>
         [JsonProperty("TaskMode")]
         public ulong? TaskMode{ get; set; }

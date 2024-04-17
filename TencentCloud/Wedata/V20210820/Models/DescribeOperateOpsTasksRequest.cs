@@ -156,6 +156,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TaskTags")]
         public TaskTag[] TaskTags{ get; set; }
 
+        /// <summary>
+        /// 查询关键字
+        /// </summary>
+        [JsonProperty("KeyWord")]
+        public string KeyWord{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +190,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "AlarmType", this.AlarmType);
             this.SetParamSimple(map, prefix + "ExecutorGroupIdList", this.ExecutorGroupIdList);
             this.SetParamArrayObj(map, prefix + "TaskTags.", this.TaskTags);
+            this.SetParamSimple(map, prefix + "KeyWord", this.KeyWord);
         }
     }
 }

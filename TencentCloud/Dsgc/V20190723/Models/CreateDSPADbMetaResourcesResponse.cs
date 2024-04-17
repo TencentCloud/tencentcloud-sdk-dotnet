@@ -28,6 +28,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// 本次更新的ID号，用来标记一次完整的更新过程。
         /// </summary>
         [JsonProperty("UpdateId")]
+        [System.Obsolete]
         public string UpdateId{ get; set; }
 
         /// <summary>
@@ -46,6 +47,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// 资源所处地域。
         /// </summary>
         [JsonProperty("ResourceRegion")]
+        [System.Obsolete]
         public string ResourceRegion{ get; set; }
 
         /// <summary>

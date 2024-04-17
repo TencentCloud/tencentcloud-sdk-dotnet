@@ -31,7 +31,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ColumnContent{ get; set; }
 
         /// <summary>
-        /// 数据源类型
+        /// 数据源类型 MYSQL|HIVE|KAFKA|ES|MONGODB|REST_API|SYBASE|TIDB|DORIS|DM|
         /// </summary>
         [JsonProperty("DatasourceType")]
         public string DatasourceType{ get; set; }

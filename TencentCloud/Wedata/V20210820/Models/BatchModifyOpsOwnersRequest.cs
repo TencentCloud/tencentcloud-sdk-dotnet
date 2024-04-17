@@ -31,7 +31,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string[] TaskIdList{ get; set; }
 
         /// <summary>
-        /// 需要更新的责任人
+        /// 需要更新的责任人userId信息，多个责任人用;连接
         /// </summary>
         [JsonProperty("Owners")]
         public string Owners{ get; set; }

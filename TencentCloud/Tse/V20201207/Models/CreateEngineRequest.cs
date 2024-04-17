@@ -172,9 +172,17 @@ namespace TencentCloud.Tse.V20201207.Models
 
         /// <summary>
         /// 跨地域部署的引擎地域配置详情
+        /// zk标准版没有跨地域部署，请不要填写
         /// </summary>
         [JsonProperty("EngineRegionInfos")]
         public EngineRegionInfo[] EngineRegionInfos{ get; set; }
+
+        /// <summary>
+        /// zk专业版至多有两个盘，且磁盘的容量在50-3200之间
+        /// 如果只有一个磁盘，storageCapacity与storageOption里面的capacity应该一致
+        /// </summary>
+        [JsonProperty("StorageOption")]
+        public StorageOption[] StorageOption{ get; set; }
 
 
         /// <summary>
@@ -198,6 +206,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "PrepaidPeriod", this.PrepaidPeriod);
             this.SetParamSimple(map, prefix + "PrepaidRenewFlag", this.PrepaidRenewFlag);
             this.SetParamArrayObj(map, prefix + "EngineRegionInfos.", this.EngineRegionInfos);
+            this.SetParamArrayObj(map, prefix + "StorageOption.", this.StorageOption);
         }
     }
 }

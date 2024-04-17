@@ -65,6 +65,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("Http3Supported")]
         public long? Http3Supported{ get; set; }
 
+        /// <summary>
+        /// 是否作为默认域名，默认为“否”
+        /// </summary>
+        [JsonProperty("IsDefaultServer")]
+        public bool? IsDefaultServer{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,6 +83,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "ClientCertificateId", this.ClientCertificateId);
             this.SetParamArraySimple(map, prefix + "PolyClientCertificateIds.", this.PolyClientCertificateIds);
             this.SetParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
+            this.SetParamSimple(map, prefix + "IsDefaultServer", this.IsDefaultServer);
         }
     }
 }

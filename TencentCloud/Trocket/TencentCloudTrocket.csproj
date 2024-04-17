@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{621A4001-F8F8-394B-BCE2-5A65FE5DDEA5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.986</VersionPrefix>
+    <VersionPrefix>3.0.987</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -120,8 +120,6 @@
     <Compile Include="V20230308\Models\DescribeTopicListResponse.cs" />
     <Compile Include="V20230308\Models\DescribeTopicRequest.cs" />
     <Compile Include="V20230308\Models\DescribeTopicResponse.cs" />
-    <Compile Include="V20230308\Models\DescribeTopicStatsOpRequest.cs" />
-    <Compile Include="V20230308\Models\DescribeTopicStatsOpResponse.cs" />
     <Compile Include="V20230308\Models\Endpoint.cs" />
     <Compile Include="V20230308\Models\Filter.cs" />
     <Compile Include="V20230308\Models\ImportSourceClusterConsumerGroupsRequest.cs" />

@@ -67,7 +67,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 201. stream, 202. offline 默认实时
+        /// 201. 实时同步, 202. 离线同步 默认实时
         /// </summary>
         [JsonProperty("TaskType")]
         public ulong? TaskType{ get; set; }

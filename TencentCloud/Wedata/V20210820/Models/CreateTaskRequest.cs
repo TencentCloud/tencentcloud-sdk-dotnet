@@ -43,7 +43,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// 26离线同步，30Python，31PySpark，32DLC，33Impala，34Hive SQL，35Shell，36Spark SQL，39Spark，40CDW PG，92MapReduce
+        /// 26离线同步，30Python，31PySpark，32DLC，33Impala，34Hive SQL，35Shell，36Spark SQL，39Spark，40TCHouse-P，92MapReduce
         /// </summary>
         [JsonProperty("TaskType")]
         public long? TaskType{ get; set; }

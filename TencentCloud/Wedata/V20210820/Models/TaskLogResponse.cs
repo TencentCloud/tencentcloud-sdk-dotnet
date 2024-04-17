@@ -25,7 +25,7 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 详细日志
+        /// 任务详细日志
         /// </summary>
         [JsonProperty("LogContentList")]
         public LogContent[] LogContentList{ get; set; }

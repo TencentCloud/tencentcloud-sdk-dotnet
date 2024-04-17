@@ -80,6 +80,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("OriginSchemaName")]
         public string OriginSchemaName{ get; set; }
 
+        /// <summary>
+        /// 0或者未返回.未定义，1.生产 2.开发
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DsEnvType")]
+        public long? DsEnvType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +101,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DatasourceType", this.DatasourceType);
             this.SetParamSimple(map, prefix + "OriginDatabaseName", this.OriginDatabaseName);
             this.SetParamSimple(map, prefix + "OriginSchemaName", this.OriginSchemaName);
+            this.SetParamSimple(map, prefix + "DsEnvType", this.DsEnvType);
         }
     }
 }

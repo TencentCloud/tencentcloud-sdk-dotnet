@@ -31,16 +31,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] FileIds{ get; set; }
 
         /// <summary>
-        /// <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
-
-        /// <summary>
         /// 解冻出的临时媒体文件的可访问持续时长，必须大于0，单位为“天”。
         /// </summary>
         [JsonProperty("RestoreDay")]
         public ulong? RestoreDay{ get; set; }
+
+        /// <summary>
+        /// <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
 
         /// <summary>
         /// 解冻模式。当媒体文件当前的存储类型为归档存储时，有以下取值：
@@ -61,8 +61,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "FileIds.", this.FileIds);
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "RestoreDay", this.RestoreDay);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "RestoreTier", this.RestoreTier);
         }
     }

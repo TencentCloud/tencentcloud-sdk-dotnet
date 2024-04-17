@@ -25,19 +25,19 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 无
+        /// 名称
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 函数分类英文名
         /// </summary>
         [JsonProperty("ZhName")]
         public string ZhName{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 函数分类中文名
         /// </summary>
         [JsonProperty("EnName")]
         public string EnName{ get; set; }

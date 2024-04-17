@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// 查询框架，必选
         /// </summary>
         [JsonProperty("Instance")]
-        public SearchConditionInstance Instance{ get; set; }
+        public SearchConditionInstanceNew Instance{ get; set; }
 
         /// <summary>
         /// 查询关键字（任务Id精确匹配，任务名称模糊匹配），可选

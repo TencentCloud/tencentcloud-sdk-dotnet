@@ -131,6 +131,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ExecEngineType")]
         public string ExecEngineType{ get; set; }
 
+        /// <summary>
+        /// 触发场景
+        /// </summary>
+        [JsonProperty("TriggerTypes")]
+        public string[] TriggerTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -154,6 +160,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
             this.SetParamSimple(map, prefix + "TableId", this.TableId);
             this.SetParamSimple(map, prefix + "ExecEngineType", this.ExecEngineType);
+            this.SetParamArraySimple(map, prefix + "TriggerTypes.", this.TriggerTypes);
         }
     }
 }

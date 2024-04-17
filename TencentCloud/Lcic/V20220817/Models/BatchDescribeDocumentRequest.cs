@@ -37,7 +37,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public long? Page{ get; set; }
 
         /// <summary>
-        /// 每页数据量，最大1000
+        /// 每页数据量，最大200
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

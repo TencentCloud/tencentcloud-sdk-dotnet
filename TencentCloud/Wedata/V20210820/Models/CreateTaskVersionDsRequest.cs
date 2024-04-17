@@ -66,6 +66,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("AlarmRecipientTypes")]
         public string AlarmRecipientTypes{ get; set; }
 
+        /// <summary>
+        /// 是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验
+        /// </summary>
+        [JsonProperty("EnableCheckTaskCycleLink")]
+        public bool? EnableCheckTaskCycleLink{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "RequestFromSource", this.RequestFromSource);
             this.SetParamSimple(map, prefix + "AlarmWays", this.AlarmWays);
             this.SetParamSimple(map, prefix + "AlarmRecipientTypes", this.AlarmRecipientTypes);
+            this.SetParamSimple(map, prefix + "EnableCheckTaskCycleLink", this.EnableCheckTaskCycleLink);
         }
     }
 }

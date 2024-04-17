@@ -31,7 +31,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 投递的云函数名字
+        /// 投递的云函数名字。仅支持[事件函数](https://cloud.tencent.com/document/product/583/9694#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) （[函数类型选型](https://cloud.tencent.com/document/product/583/73483)）
         /// </summary>
         [JsonProperty("FunctionName")]
         public string FunctionName{ get; set; }

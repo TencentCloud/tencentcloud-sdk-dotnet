@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.986";
+       private const string sdkVersion = "SDK_NET_3.0.987";
 
         /// <summary>
         /// Client constructor.
@@ -1925,6 +1925,27 @@ namespace TencentCloud.Ess.V20201111
         public DeleteSealPoliciesResponse DeleteSealPoliciesSync(DeleteSealPoliciesRequest req)
         {
             return InternalRequestAsync<DeleteSealPoliciesResponse>(req, "DeleteSealPolicies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通过此接口（DescribeBillUsage）查询该企业的套餐套餐使用情况。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillUsageRequest"/></param>
+        /// <returns><see cref="DescribeBillUsageResponse"/></returns>
+        public Task<DescribeBillUsageResponse> DescribeBillUsage(DescribeBillUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeBillUsageResponse>(req, "DescribeBillUsage");
+        }
+
+        /// <summary>
+        /// 通过此接口（DescribeBillUsage）查询该企业的套餐套餐使用情况。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillUsageRequest"/></param>
+        /// <returns><see cref="DescribeBillUsageResponse"/></returns>
+        public DescribeBillUsageResponse DescribeBillUsageSync(DescribeBillUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeBillUsageResponse>(req, "DescribeBillUsage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

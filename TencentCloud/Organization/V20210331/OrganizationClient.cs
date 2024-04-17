@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.986";
+       private const string sdkVersion = "SDK_NET_3.0.987";
 
         /// <summary>
         /// Client constructor.
@@ -155,6 +155,27 @@ namespace TencentCloud.Organization.V20210331
         public AddShareUnitResourcesResponse AddShareUnitResourcesSync(AddShareUnitResourcesRequest req)
         {
             return InternalRequestAsync<AddShareUnitResourcesResponse>(req, "AddShareUnitResources")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 绑定策略
+        /// </summary>
+        /// <param name="req"><see cref="AttachPolicyRequest"/></param>
+        /// <returns><see cref="AttachPolicyResponse"/></returns>
+        public Task<AttachPolicyResponse> AttachPolicy(AttachPolicyRequest req)
+        {
+            return InternalRequestAsync<AttachPolicyResponse>(req, "AttachPolicy");
+        }
+
+        /// <summary>
+        /// 绑定策略
+        /// </summary>
+        /// <param name="req"><see cref="AttachPolicyRequest"/></param>
+        /// <returns><see cref="AttachPolicyResponse"/></returns>
+        public AttachPolicyResponse AttachPolicySync(AttachPolicyRequest req)
+        {
+            return InternalRequestAsync<AttachPolicyResponse>(req, "AttachPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -348,6 +369,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 创建一个特殊类型的策略，你可以关联到企业组织Root节点、企业单元或者企业的成员账号。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePolicyRequest"/></param>
+        /// <returns><see cref="CreatePolicyResponse"/></returns>
+        public Task<CreatePolicyResponse> CreatePolicy(CreatePolicyRequest req)
+        {
+            return InternalRequestAsync<CreatePolicyResponse>(req, "CreatePolicy");
+        }
+
+        /// <summary>
+        /// 创建一个特殊类型的策略，你可以关联到企业组织Root节点、企业单元或者企业的成员账号。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePolicyRequest"/></param>
+        /// <returns><see cref="CreatePolicyResponse"/></returns>
+        public CreatePolicyResponse CreatePolicySync(CreatePolicyRequest req)
+        {
+            return InternalRequestAsync<CreatePolicyResponse>(req, "CreatePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除成员账号
         /// </summary>
         /// <param name="req"><see cref="DeleteAccountRequest"/></param>
@@ -491,6 +533,27 @@ namespace TencentCloud.Organization.V20210331
         public DeleteOrganizationNodesResponse DeleteOrganizationNodesSync(DeleteOrganizationNodesRequest req)
         {
             return InternalRequestAsync<DeleteOrganizationNodesResponse>(req, "DeleteOrganizationNodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除策略
+        /// </summary>
+        /// <param name="req"><see cref="DeletePolicyRequest"/></param>
+        /// <returns><see cref="DeletePolicyResponse"/></returns>
+        public Task<DeletePolicyResponse> DeletePolicy(DeletePolicyRequest req)
+        {
+            return InternalRequestAsync<DeletePolicyResponse>(req, "DeletePolicy");
+        }
+
+        /// <summary>
+        /// 删除策略
+        /// </summary>
+        /// <param name="req"><see cref="DeletePolicyRequest"/></param>
+        /// <returns><see cref="DeletePolicyResponse"/></returns>
+        public DeletePolicyResponse DeletePolicySync(DeletePolicyRequest req)
+        {
+            return InternalRequestAsync<DeletePolicyResponse>(req, "DeletePolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -789,6 +852,48 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 本接口（DescribePolicy）可用于查询查看策略详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePolicyRequest"/></param>
+        /// <returns><see cref="DescribePolicyResponse"/></returns>
+        public Task<DescribePolicyResponse> DescribePolicy(DescribePolicyRequest req)
+        {
+            return InternalRequestAsync<DescribePolicyResponse>(req, "DescribePolicy");
+        }
+
+        /// <summary>
+        /// 本接口（DescribePolicy）可用于查询查看策略详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePolicyRequest"/></param>
+        /// <returns><see cref="DescribePolicyResponse"/></returns>
+        public DescribePolicyResponse DescribePolicySync(DescribePolicyRequest req)
+        {
+            return InternalRequestAsync<DescribePolicyResponse>(req, "DescribePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribePolicyConfig）可用于查询企业组织策略配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribePolicyConfigRequest"/></param>
+        /// <returns><see cref="DescribePolicyConfigResponse"/></returns>
+        public Task<DescribePolicyConfigResponse> DescribePolicyConfig(DescribePolicyConfigRequest req)
+        {
+            return InternalRequestAsync<DescribePolicyConfigResponse>(req, "DescribePolicyConfig");
+        }
+
+        /// <summary>
+        /// 本接口（DescribePolicyConfig）可用于查询企业组织策略配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribePolicyConfigRequest"/></param>
+        /// <returns><see cref="DescribePolicyConfigResponse"/></returns>
+        public DescribePolicyConfigResponse DescribePolicyConfigSync(DescribePolicyConfigRequest req)
+        {
+            return InternalRequestAsync<DescribePolicyConfigResponse>(req, "DescribePolicyConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取可共享地域列表
         /// </summary>
         /// <param name="req"><see cref="DescribeShareAreasRequest"/></param>
@@ -873,6 +978,69 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 解绑策略
+        /// </summary>
+        /// <param name="req"><see cref="DetachPolicyRequest"/></param>
+        /// <returns><see cref="DetachPolicyResponse"/></returns>
+        public Task<DetachPolicyResponse> DetachPolicy(DetachPolicyRequest req)
+        {
+            return InternalRequestAsync<DetachPolicyResponse>(req, "DetachPolicy");
+        }
+
+        /// <summary>
+        /// 解绑策略
+        /// </summary>
+        /// <param name="req"><see cref="DetachPolicyRequest"/></param>
+        /// <returns><see cref="DetachPolicyResponse"/></returns>
+        public DetachPolicyResponse DetachPolicySync(DetachPolicyRequest req)
+        {
+            return InternalRequestAsync<DetachPolicyResponse>(req, "DetachPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 禁用策略类型
+        /// </summary>
+        /// <param name="req"><see cref="DisablePolicyTypeRequest"/></param>
+        /// <returns><see cref="DisablePolicyTypeResponse"/></returns>
+        public Task<DisablePolicyTypeResponse> DisablePolicyType(DisablePolicyTypeRequest req)
+        {
+            return InternalRequestAsync<DisablePolicyTypeResponse>(req, "DisablePolicyType");
+        }
+
+        /// <summary>
+        /// 禁用策略类型
+        /// </summary>
+        /// <param name="req"><see cref="DisablePolicyTypeRequest"/></param>
+        /// <returns><see cref="DisablePolicyTypeResponse"/></returns>
+        public DisablePolicyTypeResponse DisablePolicyTypeSync(DisablePolicyTypeRequest req)
+        {
+            return InternalRequestAsync<DisablePolicyTypeResponse>(req, "DisablePolicyType")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 启用策略类型
+        /// </summary>
+        /// <param name="req"><see cref="EnablePolicyTypeRequest"/></param>
+        /// <returns><see cref="EnablePolicyTypeResponse"/></returns>
+        public Task<EnablePolicyTypeResponse> EnablePolicyType(EnablePolicyTypeRequest req)
+        {
+            return InternalRequestAsync<EnablePolicyTypeResponse>(req, "EnablePolicyType");
+        }
+
+        /// <summary>
+        /// 启用策略类型
+        /// </summary>
+        /// <param name="req"><see cref="EnablePolicyTypeRequest"/></param>
+        /// <returns><see cref="EnablePolicyTypeResponse"/></returns>
+        public EnablePolicyTypeResponse EnablePolicyTypeSync(EnablePolicyTypeRequest req)
+        {
+            return InternalRequestAsync<EnablePolicyTypeResponse>(req, "EnablePolicyType")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取组织成员访问身份列表
         /// </summary>
         /// <param name="req"><see cref="ListOrganizationIdentityRequest"/></param>
@@ -890,6 +1058,69 @@ namespace TencentCloud.Organization.V20210331
         public ListOrganizationIdentityResponse ListOrganizationIdentitySync(ListOrganizationIdentityRequest req)
         {
             return InternalRequestAsync<ListOrganizationIdentityResponse>(req, "ListOrganizationIdentity")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ListPolicies）可用于查询查看策略列表数据
+        /// </summary>
+        /// <param name="req"><see cref="ListPoliciesRequest"/></param>
+        /// <returns><see cref="ListPoliciesResponse"/></returns>
+        public Task<ListPoliciesResponse> ListPolicies(ListPoliciesRequest req)
+        {
+            return InternalRequestAsync<ListPoliciesResponse>(req, "ListPolicies");
+        }
+
+        /// <summary>
+        /// 本接口（ListPolicies）可用于查询查看策略列表数据
+        /// </summary>
+        /// <param name="req"><see cref="ListPoliciesRequest"/></param>
+        /// <returns><see cref="ListPoliciesResponse"/></returns>
+        public ListPoliciesResponse ListPoliciesSync(ListPoliciesRequest req)
+        {
+            return InternalRequestAsync<ListPoliciesResponse>(req, "ListPolicies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ListPoliciesForTarget）查询目标关联的策略列表
+        /// </summary>
+        /// <param name="req"><see cref="ListPoliciesForTargetRequest"/></param>
+        /// <returns><see cref="ListPoliciesForTargetResponse"/></returns>
+        public Task<ListPoliciesForTargetResponse> ListPoliciesForTarget(ListPoliciesForTargetRequest req)
+        {
+            return InternalRequestAsync<ListPoliciesForTargetResponse>(req, "ListPoliciesForTarget");
+        }
+
+        /// <summary>
+        /// 本接口（ListPoliciesForTarget）查询目标关联的策略列表
+        /// </summary>
+        /// <param name="req"><see cref="ListPoliciesForTargetRequest"/></param>
+        /// <returns><see cref="ListPoliciesForTargetResponse"/></returns>
+        public ListPoliciesForTargetResponse ListPoliciesForTargetSync(ListPoliciesForTargetRequest req)
+        {
+            return InternalRequestAsync<ListPoliciesForTargetResponse>(req, "ListPoliciesForTarget")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ListTargetsForPolicy）查询某个指定策略关联的目标列表
+        /// </summary>
+        /// <param name="req"><see cref="ListTargetsForPolicyRequest"/></param>
+        /// <returns><see cref="ListTargetsForPolicyResponse"/></returns>
+        public Task<ListTargetsForPolicyResponse> ListTargetsForPolicy(ListTargetsForPolicyRequest req)
+        {
+            return InternalRequestAsync<ListTargetsForPolicyResponse>(req, "ListTargetsForPolicy");
+        }
+
+        /// <summary>
+        /// 本接口（ListTargetsForPolicy）查询某个指定策略关联的目标列表
+        /// </summary>
+        /// <param name="req"><see cref="ListTargetsForPolicyRequest"/></param>
+        /// <returns><see cref="ListTargetsForPolicyResponse"/></returns>
+        public ListTargetsForPolicyResponse ListTargetsForPolicySync(ListTargetsForPolicyRequest req)
+        {
+            return InternalRequestAsync<ListTargetsForPolicyResponse>(req, "ListTargetsForPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1016,6 +1247,27 @@ namespace TencentCloud.Organization.V20210331
         public UpdateOrganizationNodeResponse UpdateOrganizationNodeSync(UpdateOrganizationNodeRequest req)
         {
             return InternalRequestAsync<UpdateOrganizationNodeResponse>(req, "UpdateOrganizationNode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 编辑策略
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePolicyRequest"/></param>
+        /// <returns><see cref="UpdatePolicyResponse"/></returns>
+        public Task<UpdatePolicyResponse> UpdatePolicy(UpdatePolicyRequest req)
+        {
+            return InternalRequestAsync<UpdatePolicyResponse>(req, "UpdatePolicy");
+        }
+
+        /// <summary>
+        /// 编辑策略
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePolicyRequest"/></param>
+        /// <returns><see cref="UpdatePolicyResponse"/></returns>
+        public UpdatePolicyResponse UpdatePolicySync(UpdatePolicyRequest req)
+        {
+            return InternalRequestAsync<UpdatePolicyResponse>(req, "UpdatePolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

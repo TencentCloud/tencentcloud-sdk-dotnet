@@ -38,6 +38,8 @@ namespace TencentCloud.Wedata.V20210820.Models
 
         /// <summary>
         /// 使用状态
+        /// - true
+        /// - false
         /// </summary>
         [JsonProperty("UseStatus")]
         public string UseStatus{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 主键ID
+        /// 规则ID
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.986";
+       private const string sdkVersion = "SDK_NET_3.0.987";
 
         /// <summary>
         /// Client constructor.
@@ -747,6 +747,69 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 查询指定设备的云存 AI 服务开通状态与参数配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageAIServiceRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageAIServiceResponse"/></returns>
+        public Task<DescribeCloudStorageAIServiceResponse> DescribeCloudStorageAIService(DescribeCloudStorageAIServiceRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageAIServiceResponse>(req, "DescribeCloudStorageAIService");
+        }
+
+        /// <summary>
+        /// 查询指定设备的云存 AI 服务开通状态与参数配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageAIServiceRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageAIServiceResponse"/></returns>
+        public DescribeCloudStorageAIServiceResponse DescribeCloudStorageAIServiceSync(DescribeCloudStorageAIServiceRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageAIServiceResponse>(req, "DescribeCloudStorageAIService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询云存AI分析回调配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageAIServiceCallbackRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageAIServiceCallbackResponse"/></returns>
+        public Task<DescribeCloudStorageAIServiceCallbackResponse> DescribeCloudStorageAIServiceCallback(DescribeCloudStorageAIServiceCallbackRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageAIServiceCallbackResponse>(req, "DescribeCloudStorageAIServiceCallback");
+        }
+
+        /// <summary>
+        /// 查询云存AI分析回调配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageAIServiceCallbackRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageAIServiceCallbackResponse"/></returns>
+        public DescribeCloudStorageAIServiceCallbackResponse DescribeCloudStorageAIServiceCallbackSync(DescribeCloudStorageAIServiceCallbackRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageAIServiceCallbackResponse>(req, "DescribeCloudStorageAIServiceCallback")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定设备的云存 AI 分析任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageAIServiceTasksRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageAIServiceTasksResponse"/></returns>
+        public Task<DescribeCloudStorageAIServiceTasksResponse> DescribeCloudStorageAIServiceTasks(DescribeCloudStorageAIServiceTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageAIServiceTasksResponse>(req, "DescribeCloudStorageAIServiceTasks");
+        }
+
+        /// <summary>
+        /// 查询指定设备的云存 AI 分析任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageAIServiceTasksRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageAIServiceTasksResponse"/></returns>
+        public DescribeCloudStorageAIServiceTasksResponse DescribeCloudStorageAIServiceTasksSync(DescribeCloudStorageAIServiceTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageAIServiceTasksResponse>(req, "DescribeCloudStorageAIServiceTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取具有云存的日期
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudStorageDateRequest"/></param>
@@ -1398,6 +1461,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 查询指定产品的云存 AI 服务开通状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProductCloudStorageAIServiceRequest"/></param>
+        /// <returns><see cref="DescribeProductCloudStorageAIServiceResponse"/></returns>
+        public Task<DescribeProductCloudStorageAIServiceResponse> DescribeProductCloudStorageAIService(DescribeProductCloudStorageAIServiceRequest req)
+        {
+            return InternalRequestAsync<DescribeProductCloudStorageAIServiceResponse>(req, "DescribeProductCloudStorageAIService");
+        }
+
+        /// <summary>
+        /// 查询指定产品的云存 AI 服务开通状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProductCloudStorageAIServiceRequest"/></param>
+        /// <returns><see cref="DescribeProductCloudStorageAIServiceResponse"/></returns>
+        public DescribeProductCloudStorageAIServiceResponse DescribeProductCloudStorageAIServiceSync(DescribeProductCloudStorageAIServiceRequest req)
+        {
+            return InternalRequestAsync<DescribeProductCloudStorageAIServiceResponse>(req, "DescribeProductCloudStorageAIService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询项目详情
         /// </summary>
         /// <param name="req"><see cref="DescribeProjectRequest"/></param>
@@ -1944,6 +2028,48 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 修改指定设备的云存 AI 服务开通状态与参数配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudStorageAIServiceRequest"/></param>
+        /// <returns><see cref="ModifyCloudStorageAIServiceResponse"/></returns>
+        public Task<ModifyCloudStorageAIServiceResponse> ModifyCloudStorageAIService(ModifyCloudStorageAIServiceRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudStorageAIServiceResponse>(req, "ModifyCloudStorageAIService");
+        }
+
+        /// <summary>
+        /// 修改指定设备的云存 AI 服务开通状态与参数配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudStorageAIServiceRequest"/></param>
+        /// <returns><see cref="ModifyCloudStorageAIServiceResponse"/></returns>
+        public ModifyCloudStorageAIServiceResponse ModifyCloudStorageAIServiceSync(ModifyCloudStorageAIServiceRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudStorageAIServiceResponse>(req, "ModifyCloudStorageAIService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改云存AI分析回调配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudStorageAIServiceCallbackRequest"/></param>
+        /// <returns><see cref="ModifyCloudStorageAIServiceCallbackResponse"/></returns>
+        public Task<ModifyCloudStorageAIServiceCallbackResponse> ModifyCloudStorageAIServiceCallback(ModifyCloudStorageAIServiceCallbackRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudStorageAIServiceCallbackResponse>(req, "ModifyCloudStorageAIServiceCallback");
+        }
+
+        /// <summary>
+        /// 修改云存AI分析回调配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudStorageAIServiceCallbackRequest"/></param>
+        /// <returns><see cref="ModifyCloudStorageAIServiceCallbackResponse"/></returns>
+        public ModifyCloudStorageAIServiceCallbackResponse ModifyCloudStorageAIServiceCallbackSync(ModifyCloudStorageAIServiceCallbackRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudStorageAIServiceCallbackResponse>(req, "ModifyCloudStorageAIServiceCallback")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 更新围栏绑定信息
         /// </summary>
         /// <param name="req"><see cref="ModifyFenceBindRequest"/></param>
@@ -2066,6 +2192,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public ModifyPositionSpaceResponse ModifyPositionSpaceSync(ModifyPositionSpaceRequest req)
         {
             return InternalRequestAsync<ModifyPositionSpaceResponse>(req, "ModifyPositionSpace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改指定产品的云存 AI 服务开通状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProductCloudStorageAIServiceRequest"/></param>
+        /// <returns><see cref="ModifyProductCloudStorageAIServiceResponse"/></returns>
+        public Task<ModifyProductCloudStorageAIServiceResponse> ModifyProductCloudStorageAIService(ModifyProductCloudStorageAIServiceRequest req)
+        {
+            return InternalRequestAsync<ModifyProductCloudStorageAIServiceResponse>(req, "ModifyProductCloudStorageAIService");
+        }
+
+        /// <summary>
+        /// 修改指定产品的云存 AI 服务开通状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProductCloudStorageAIServiceRequest"/></param>
+        /// <returns><see cref="ModifyProductCloudStorageAIServiceResponse"/></returns>
+        public ModifyProductCloudStorageAIServiceResponse ModifyProductCloudStorageAIServiceSync(ModifyProductCloudStorageAIServiceRequest req)
+        {
+            return InternalRequestAsync<ModifyProductCloudStorageAIServiceResponse>(req, "ModifyProductCloudStorageAIService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -171,6 +171,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("SubscribeConfig")]
         public bool? SubscribeConfig{ get; set; }
 
+        /// <summary>
+        /// 数据源环境：0或者未返回.未定义，1.生产 2.开发
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DsEnvType")]
+        public long? DsEnvType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +205,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "StrategyConfig", this.StrategyConfig);
             this.SetParamSimple(map, prefix + "SubscribeConfig", this.SubscribeConfig);
+            this.SetParamSimple(map, prefix + "DsEnvType", this.DsEnvType);
         }
     }
 }

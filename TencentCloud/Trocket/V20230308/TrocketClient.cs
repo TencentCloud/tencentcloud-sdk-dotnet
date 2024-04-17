@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.986";
+       private const string sdkVersion = "SDK_NET_3.0.987";
 
         /// <summary>
         /// Client constructor.
@@ -839,27 +839,6 @@ namespace TencentCloud.Trocket.V20230308
         public DescribeTopicListResponse DescribeTopicListSync(DescribeTopicListRequest req)
         {
             return InternalRequestAsync<DescribeTopicListResponse>(req, "DescribeTopicList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 运营端查询topicStata
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTopicStatsOpRequest"/></param>
-        /// <returns><see cref="DescribeTopicStatsOpResponse"/></returns>
-        public Task<DescribeTopicStatsOpResponse> DescribeTopicStatsOp(DescribeTopicStatsOpRequest req)
-        {
-            return InternalRequestAsync<DescribeTopicStatsOpResponse>(req, "DescribeTopicStatsOp");
-        }
-
-        /// <summary>
-        /// 运营端查询topicStata
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTopicStatsOpRequest"/></param>
-        /// <returns><see cref="DescribeTopicStatsOpResponse"/></returns>
-        public DescribeTopicStatsOpResponse DescribeTopicStatsOpSync(DescribeTopicStatsOpRequest req)
-        {
-            return InternalRequestAsync<DescribeTopicStatsOpResponse>(req, "DescribeTopicStatsOp")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

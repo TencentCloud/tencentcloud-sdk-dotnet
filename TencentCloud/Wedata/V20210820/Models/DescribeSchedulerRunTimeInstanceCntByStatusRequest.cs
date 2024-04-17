@@ -55,13 +55,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 任务类型
         /// </summary>
         [JsonProperty("TaskType")]
         public long? TaskType{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 责任人
         /// </summary>
         [JsonProperty("InCharge")]
         public string InCharge{ get; set; }

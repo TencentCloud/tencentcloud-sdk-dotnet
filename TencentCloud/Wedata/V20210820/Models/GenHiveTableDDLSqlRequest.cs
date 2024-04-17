@@ -55,13 +55,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string DatasourceId{ get; set; }
 
         /// <summary>
-        /// 来源库
+        /// 来源库名
         /// </summary>
         [JsonProperty("SourceDatabase")]
         public string SourceDatabase{ get; set; }
 
         /// <summary>
-        /// 来源表
+        /// 来源表名
         /// </summary>
         [JsonProperty("TableName")]
         public string TableName{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string SinkType{ get; set; }
 
         /// <summary>
-        /// schema名称
+        /// 源端schema名称
         /// </summary>
         [JsonProperty("SchemaName")]
         public string SchemaName{ get; set; }
@@ -162,6 +162,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TableBaseInfo")]
         public TableBaseInfo TableBaseInfo{ get; set; }
 
+        /// <summary>
+        /// 目标端schema名称
+        /// </summary>
+        [JsonProperty("SinkSchemaName")]
+        public string SinkSchemaName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +197,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TargetDatasourceId", this.TargetDatasourceId);
             this.SetParamArraySimple(map, prefix + "UpsertKeys.", this.UpsertKeys);
             this.SetParamObj(map, prefix + "TableBaseInfo.", this.TableBaseInfo);
+            this.SetParamSimple(map, prefix + "SinkSchemaName", this.SinkSchemaName);
         }
     }
 }

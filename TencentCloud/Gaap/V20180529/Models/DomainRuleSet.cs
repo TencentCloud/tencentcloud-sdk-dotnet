@@ -180,6 +180,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("Http3Supported")]
         public long? Http3Supported{ get; set; }
 
+        /// <summary>
+        /// 是否为默认域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsDefaultServer")]
+        public bool? IsDefaultServer{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -207,6 +214,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "DomainStatus", this.DomainStatus);
             this.SetParamSimple(map, prefix + "BanStatus", this.BanStatus);
             this.SetParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
+            this.SetParamSimple(map, prefix + "IsDefaultServer", this.IsDefaultServer);
         }
     }
 }

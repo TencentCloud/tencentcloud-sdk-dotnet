@@ -49,7 +49,9 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        ///  classification:分类展示  catalog:目录展示
+        /// 任务展示形式, 示例取值
+        /// -    classification:分类展示
+        /// -    catalog:目录展示
         /// </summary>
         [JsonProperty("DisplayType")]
         public string DisplayType{ get; set; }

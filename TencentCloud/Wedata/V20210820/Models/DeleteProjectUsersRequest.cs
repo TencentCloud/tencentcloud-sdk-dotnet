@@ -24,12 +24,26 @@ namespace TencentCloud.Wedata.V20210820.Models
     public class DeleteProjectUsersRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 项目ID
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
+
+        /// <summary>
+        /// 用户ID列表
+        /// </summary>
+        [JsonProperty("UserIds")]
+        public string[] UserIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamArraySimple(map, prefix + "UserIds.", this.UserIds);
         }
     }
 }

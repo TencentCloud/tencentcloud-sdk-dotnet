@@ -30,6 +30,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
+        /// <summary>
+        /// production：生产，development开发
+        /// </summary>
+        [JsonProperty("Env")]
+        public string Env{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Env", this.Env);
         }
     }
 }

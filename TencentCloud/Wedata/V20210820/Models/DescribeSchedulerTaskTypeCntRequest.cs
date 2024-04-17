@@ -31,7 +31,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 责任人
         /// </summary>
         [JsonProperty("InCharge")]
         public string InCharge{ get; set; }

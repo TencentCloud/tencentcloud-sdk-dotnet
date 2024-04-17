@@ -113,6 +113,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public long? DesiredNodesNum{ get; set; }
 
         /// <summary>
+        /// 运行时描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuntimeConfig")]
+        public RuntimeConfig RuntimeConfig{ get; set; }
+
+        /// <summary>
         /// 节点池osName
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -223,6 +230,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "MaxNodesNum", this.MaxNodesNum);
             this.SetParamSimple(map, prefix + "MinNodesNum", this.MinNodesNum);
             this.SetParamSimple(map, prefix + "DesiredNodesNum", this.DesiredNodesNum);
+            this.SetParamObj(map, prefix + "RuntimeConfig.", this.RuntimeConfig);
             this.SetParamSimple(map, prefix + "NodePoolOs", this.NodePoolOs);
             this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
             this.SetParamSimple(map, prefix + "ImageId", this.ImageId);

@@ -25,25 +25,25 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 项目/工作
+        /// 项目ID
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 间隔，可选，默认1。非空。默认 1
         /// </summary>
         [JsonProperty("CycleStep")]
         public long? CycleStep{ get; set; }
 
         /// <summary>
-        /// 0
+        /// 延时执行时间，单位分钟
         /// </summary>
         [JsonProperty("DelayTime")]
         public long? DelayTime{ get; set; }
 
         /// <summary>
-        /// 2099-12-31 00:00:00
+        /// 任务结束数据时间。非空。默认当前时间
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public long? TypeId{ get; set; }
 
         /// <summary>
-        /// 默认 ""
+        /// 时间指定，如月任务指定1，3号，则填入 1，3。非空。默认 "" 月任务：如具体1，3号则写 "1,3"，指定月末不可和具体号数一起输入，仅能为 "L"
         /// </summary>
         [JsonProperty("TaskAction")]
         public string TaskAction{ get; set; }

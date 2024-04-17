@@ -61,25 +61,25 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 聚合单元，H小时
         /// </summary>
         [JsonProperty("AggregationUnit")]
         public string AggregationUnit{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 周期
         /// </summary>
         [JsonProperty("CycleUnit")]
         public string CycleUnit{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 状态
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 责任人
         /// </summary>
         [JsonProperty("InCharge")]
         public string InCharge{ get; set; }

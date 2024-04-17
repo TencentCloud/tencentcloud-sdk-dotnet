@@ -55,7 +55,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// TBDS 事件所属人
+        /// 事件所属人
         /// </summary>
         [JsonProperty("Owner")]
         public string Owner{ get; set; }

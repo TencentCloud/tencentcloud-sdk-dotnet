@@ -84,6 +84,24 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Example")]
         public string Example{ get; set; }
 
+        /// <summary>
+        /// 项目id，不支持修改，dlc侧创建函数保存时用
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
+
+        /// <summary>
+        /// 数据库名称，不支持修改，dlc侧创建函数保存时用
+        /// </summary>
+        [JsonProperty("DbName")]
+        public string DbName{ get; set; }
+
+        /// <summary>
+        /// 函数名称，不支持修改，dlc侧创建函数保存时用
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +118,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ParamDesc", this.ParamDesc);
             this.SetParamSimple(map, prefix + "ReturnDesc", this.ReturnDesc);
             this.SetParamSimple(map, prefix + "Example", this.Example);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "DbName", this.DbName);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

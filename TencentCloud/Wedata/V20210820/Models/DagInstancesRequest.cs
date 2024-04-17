@@ -61,7 +61,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string SonInstanceType{ get; set; }
 
         /// <summary>
-        /// 查询条件
+        /// 查询条件,当前接口需要把要查询的示例信息放在该字段
         /// </summary>
         [JsonProperty("SearchCondition")]
         public InstanceApiOpsRequest SearchCondition{ get; set; }

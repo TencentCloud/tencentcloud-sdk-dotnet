@@ -45,6 +45,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
+        /// <summary>
+        /// 生产调度任务任务类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CycleType")]
+        public long? CycleType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "TaskName", this.TaskName);
+            this.SetParamSimple(map, prefix + "CycleType", this.CycleType);
         }
     }
 }

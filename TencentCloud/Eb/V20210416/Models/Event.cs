@@ -55,6 +55,30 @@ namespace TencentCloud.Eb.V20210416.Models
         [JsonProperty("Time")]
         public long? Time{ get; set; }
 
+        /// <summary>
+        /// 事件的地域信息，没有则默认是EB所在的地域信息
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
+        /// 用于描述事件状态，非必须，默认是""
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// 事件的唯一id，用户侧主动上传则需要保证风格一致
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
+        /// 标签列表
+        /// </summary>
+        [JsonProperty("TagList")]
+        public Tag[] TagList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +90,10 @@ namespace TencentCloud.Eb.V20210416.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Subject", this.Subject);
             this.SetParamSimple(map, prefix + "Time", this.Time);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
         }
     }
 }

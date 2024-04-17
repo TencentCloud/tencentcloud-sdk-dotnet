@@ -195,6 +195,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("SubmitTimestamp")]
         public string SubmitTimestamp{ get; set; }
 
+        /// <summary>
+        /// 函数tag
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tag")]
+        public string Tag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -226,6 +233,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "CommandFormat", this.CommandFormat);
             this.SetParamSimple(map, prefix + "OwnerName", this.OwnerName);
             this.SetParamSimple(map, prefix + "SubmitTimestamp", this.SubmitTimestamp);
+            this.SetParamSimple(map, prefix + "Tag", this.Tag);
         }
     }
 }

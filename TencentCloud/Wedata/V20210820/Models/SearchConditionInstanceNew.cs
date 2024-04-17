@@ -25,19 +25,20 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 执行空间 "DRY_RUN"
+        /// 执行空间，可选 
+        ///  "DRY_RUN"
         /// </summary>
         [JsonProperty("ExecutionSpace")]
         public string ExecutionSpace{ get; set; }
 
         /// <summary>
-        /// 产品名称，可选
+        /// 业务产品，可选: <DATA_DEV / DATA_QUALITY / DATA_INTEGRATION，默认DATA_DEV。非空。默认 自身项目
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// 资源组
+        /// 资源组信息，可选
         /// </summary>
         [JsonProperty("ResourceGroup")]
         public string ResourceGroup{ get; set; }

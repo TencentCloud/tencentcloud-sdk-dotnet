@@ -61,7 +61,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public ulong? SizeByte{ get; set; }
 
         /// <summary>
-        /// 文件系统最大空间限制。单位:GiB
+        /// 文件系统空间限制。单位:GiB
         /// </summary>
         [JsonProperty("SizeLimit")]
         public ulong? SizeLimit{ get; set; }
@@ -139,7 +139,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public float? BandwidthLimit{ get; set; }
 
         /// <summary>
-        /// 文件系统总容量
+        /// 文件系统容量规格上限
         /// 单位:GiB
         /// </summary>
         [JsonProperty("Capacity")]

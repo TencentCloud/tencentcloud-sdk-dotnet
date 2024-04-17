@@ -25,7 +25,7 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// 无
+        /// 任务id
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public ulong? Granularity{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 项目id
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }

@@ -48,6 +48,14 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("DisplayName")]
         public string DisplayName{ get; set; }
 
+        /// <summary>
+        /// 标准模式开发环境：DEV
+        /// 标准模式生产环境：PROD
+        /// 简单模式：ALL
+        /// </summary>
+        [JsonProperty("EnvType")]
+        public string EnvType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +66,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "DisplayName", this.DisplayName);
+            this.SetParamSimple(map, prefix + "EnvType", this.EnvType);
         }
     }
 }

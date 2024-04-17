@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.986</VersionPrefix>
+    <VersionPrefix>3.0.987</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -62,6 +62,7 @@
     <Compile Include="V20190423\Models\CallDeviceActionAsyncResponse.cs" />
     <Compile Include="V20190423\Models\CallDeviceActionSyncRequest.cs" />
     <Compile Include="V20190423\Models\CallDeviceActionSyncResponse.cs" />
+    <Compile Include="V20190423\Models\CloudStorageAIServiceTask.cs" />
     <Compile Include="V20190423\Models\CloudStorageEvent.cs" />
     <Compile Include="V20190423\Models\CloudStorageTimeData.cs" />
     <Compile Include="V20190423\Models\CloudStorageTimeInfo.cs" />
@@ -120,6 +121,12 @@
     <Compile Include="V20190423\Models\DescribeBatchProductionResponse.cs" />
     <Compile Include="V20190423\Models\DescribeBindedProductsRequest.cs" />
     <Compile Include="V20190423\Models\DescribeBindedProductsResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStorageAIServiceCallbackRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStorageAIServiceCallbackResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStorageAIServiceRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStorageAIServiceResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStorageAIServiceTasksRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeCloudStorageAIServiceTasksResponse.cs" />
     <Compile Include="V20190423\Models\DescribeCloudStorageDateRequest.cs" />
     <Compile Include="V20190423\Models\DescribeCloudStorageDateResponse.cs" />
     <Compile Include="V20190423\Models\DescribeCloudStorageEventsRequest.cs" />
@@ -184,6 +191,8 @@
     <Compile Include="V20190423\Models\DescribePackageConsumeTasksResponse.cs" />
     <Compile Include="V20190423\Models\DescribePositionFenceListRequest.cs" />
     <Compile Include="V20190423\Models\DescribePositionFenceListResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeProductCloudStorageAIServiceRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeProductCloudStorageAIServiceResponse.cs" />
     <Compile Include="V20190423\Models\DescribeProjectRequest.cs" />
     <Compile Include="V20190423\Models\DescribeProjectResponse.cs" />
     <Compile Include="V20190423\Models\DescribeSpaceFenceEventListRequest.cs" />
@@ -254,6 +263,10 @@
     <Compile Include="V20190423\Models\LoRaFrequencyEntry.cs" />
     <Compile Include="V20190423\Models\LoRaGatewayItem.cs" />
     <Compile Include="V20190423\Models\LoRaGatewayLocation.cs" />
+    <Compile Include="V20190423\Models\ModifyCloudStorageAIServiceCallbackRequest.cs" />
+    <Compile Include="V20190423\Models\ModifyCloudStorageAIServiceCallbackResponse.cs" />
+    <Compile Include="V20190423\Models\ModifyCloudStorageAIServiceRequest.cs" />
+    <Compile Include="V20190423\Models\ModifyCloudStorageAIServiceResponse.cs" />
     <Compile Include="V20190423\Models\ModifyFenceBindRequest.cs" />
     <Compile Include="V20190423\Models\ModifyFenceBindResponse.cs" />
     <Compile Include="V20190423\Models\ModifyLoRaFrequencyRequest.cs" />
@@ -266,6 +279,8 @@
     <Compile Include="V20190423\Models\ModifyPositionFenceResponse.cs" />
     <Compile Include="V20190423\Models\ModifyPositionSpaceRequest.cs" />
     <Compile Include="V20190423\Models\ModifyPositionSpaceResponse.cs" />
+    <Compile Include="V20190423\Models\ModifyProductCloudStorageAIServiceRequest.cs" />
+    <Compile Include="V20190423\Models\ModifyProductCloudStorageAIServiceResponse.cs" />
     <Compile Include="V20190423\Models\ModifyProjectRequest.cs" />
     <Compile Include="V20190423\Models\ModifyProjectResponse.cs" />
     <Compile Include="V20190423\Models\ModifySpacePropertyRequest.cs" />

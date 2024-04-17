@@ -142,25 +142,25 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string SourceTaskCycle{ get; set; }
 
         /// <summary>
-        /// 重新指定的调度资源组ID
+        /// 补录指定的调度资源组（ID） 为空则表示使用任务原有调度执行资源组
         /// </summary>
         [JsonProperty("SchedulerResourceGroup")]
         public string SchedulerResourceGroup{ get; set; }
 
         /// <summary>
-        /// 重新指定的集成资源组ID
+        /// 补录指定的集成资源组（ID） 为空则表示使用任务原有集成执行资源组
         /// </summary>
         [JsonProperty("IntegrationResourceGroup")]
         public string IntegrationResourceGroup{ get; set; }
 
         /// <summary>
-        /// 重新指定的调度资源组名称
+        /// 补录指定的调度资源组名称 为空则表示使用任务原有调度执行资源组
         /// </summary>
         [JsonProperty("SchedulerResourceGroupName")]
         public string SchedulerResourceGroupName{ get; set; }
 
         /// <summary>
-        /// 重新指定的集成资源组名称
+        /// 补录指定的集成资源组名称 为空则表示使用任务原有集成执行资源组
         /// </summary>
         [JsonProperty("IntegrationResourceGroupName")]
         public string IntegrationResourceGroupName{ get; set; }
