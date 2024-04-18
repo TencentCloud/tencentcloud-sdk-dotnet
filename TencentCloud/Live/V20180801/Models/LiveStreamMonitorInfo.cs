@@ -161,6 +161,13 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("AiFormatDiagnose")]
         public ulong? AiFormatDiagnose{ get; set; }
 
+        /// <summary>
+        /// 是否开启内容质检。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AiQualityControl")]
+        public ulong? AiQualityControl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -186,6 +193,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamArraySimple(map, prefix + "AiOcrInputIndexList.", this.AiOcrInputIndexList);
             this.SetParamSimple(map, prefix + "AllowMonitorReport", this.AllowMonitorReport);
             this.SetParamSimple(map, prefix + "AiFormatDiagnose", this.AiFormatDiagnose);
+            this.SetParamSimple(map, prefix + "AiQualityControl", this.AiQualityControl);
         }
     }
 }

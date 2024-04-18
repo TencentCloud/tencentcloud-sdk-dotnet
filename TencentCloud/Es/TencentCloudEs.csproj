@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BAB1D217-C279-3DCE-8001-02A83445B39E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.987</VersionPrefix>
+    <VersionPrefix>3.0.988</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -103,6 +103,8 @@
     <Compile Include="V20180416\Models\DescribeLogstashInstancesResponse.cs" />
     <Compile Include="V20180416\Models\DescribeLogstashPipelinesRequest.cs" />
     <Compile Include="V20180416\Models\DescribeLogstashPipelinesResponse.cs" />
+    <Compile Include="V20180416\Models\DescribeServerlessInstancesRequest.cs" />
+    <Compile Include="V20180416\Models\DescribeServerlessInstancesResponse.cs" />
     <Compile Include="V20180416\Models\DescribeServerlessSpaceUserRequest.cs" />
     <Compile Include="V20180416\Models\DescribeServerlessSpaceUserResponse.cs" />
     <Compile Include="V20180416\Models\DescribeServerlessSpacesRequest.cs" />
@@ -180,6 +182,10 @@
     <Compile Include="V20180416\Models\SaveAndDeployLogstashPipelineRequest.cs" />
     <Compile Include="V20180416\Models\SaveAndDeployLogstashPipelineResponse.cs" />
     <Compile Include="V20180416\Models\ServerlessDi.cs" />
+    <Compile Include="V20180416\Models\ServerlessIndexMetaField.cs" />
+    <Compile Include="V20180416\Models\ServerlessIndexNetworkField.cs" />
+    <Compile Include="V20180416\Models\ServerlessIndexOptionsField.cs" />
+    <Compile Include="V20180416\Models\ServerlessIndexSettingsField.cs" />
     <Compile Include="V20180416\Models\ServerlessSpace.cs" />
     <Compile Include="V20180416\Models\ServerlessSpaceUser.cs" />
     <Compile Include="V20180416\Models\SettingDetail.cs" />

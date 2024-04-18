@@ -42,6 +42,24 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("CfwInstance")]
         public string CfwInstance{ get; set; }
 
+        /// <summary>
+        /// 弹性开关 1打开 0 关闭
+        /// </summary>
+        [JsonProperty("ElasticSwitch")]
+        public long? ElasticSwitch{ get; set; }
+
+        /// <summary>
+        /// 弹性带宽上限，单位Mbps
+        /// </summary>
+        [JsonProperty("ElasticBandwidth")]
+        public long? ElasticBandwidth{ get; set; }
+
+        /// <summary>
+        /// 按量计费标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagInfo[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +69,9 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "FwType", this.FwType);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "CfwInstance", this.CfwInstance);
+            this.SetParamSimple(map, prefix + "ElasticSwitch", this.ElasticSwitch);
+            this.SetParamSimple(map, prefix + "ElasticBandwidth", this.ElasticBandwidth);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

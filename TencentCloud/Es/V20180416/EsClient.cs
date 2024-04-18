@@ -28,7 +28,7 @@ namespace TencentCloud.Es.V20180416
 
        private const string endpoint = "es.tencentcloudapi.com";
        private const string version = "2018-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.987";
+       private const string sdkVersion = "SDK_NET_3.0.988";
 
         /// <summary>
         /// Client constructor.
@@ -554,6 +554,27 @@ namespace TencentCloud.Es.V20180416
         public DescribeLogstashPipelinesResponse DescribeLogstashPipelinesSync(DescribeLogstashPipelinesRequest req)
         {
             return InternalRequestAsync<DescribeLogstashPipelinesResponse>(req, "DescribeLogstashPipelines")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Serverless获取索引列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServerlessInstancesRequest"/></param>
+        /// <returns><see cref="DescribeServerlessInstancesResponse"/></returns>
+        public Task<DescribeServerlessInstancesResponse> DescribeServerlessInstances(DescribeServerlessInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeServerlessInstancesResponse>(req, "DescribeServerlessInstances");
+        }
+
+        /// <summary>
+        /// Serverless获取索引列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServerlessInstancesRequest"/></param>
+        /// <returns><see cref="DescribeServerlessInstancesResponse"/></returns>
+        public DescribeServerlessInstancesResponse DescribeServerlessInstancesSync(DescribeServerlessInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeServerlessInstancesResponse>(req, "DescribeServerlessInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

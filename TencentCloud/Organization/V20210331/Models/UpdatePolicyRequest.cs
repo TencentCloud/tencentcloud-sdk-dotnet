@@ -25,7 +25,7 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 需要编辑的策略ID。可以调用[ListPolicies](https://tcloud4api.woa.com/document/product/1128/79356?!preview&!document=1)获取
+        /// 需要编辑的策略ID。可以调用[ListPolicies](https://cloud.tencent.com/document/product/850/105311)获取
         /// </summary>
         [JsonProperty("PolicyId")]
         public long? PolicyId{ get; set; }

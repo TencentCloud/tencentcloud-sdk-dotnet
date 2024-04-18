@@ -24,12 +24,19 @@ namespace TencentCloud.Pts.V20210728.Models
     public class DescribeRegionsRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 通过该参数指定不同压测网络环境，在不同网络环境下，PTS可用的地域不一样
+        /// </summary>
+        [JsonProperty("LoadType")]
+        public ulong? LoadType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "LoadType", this.LoadType);
         }
     }
 }

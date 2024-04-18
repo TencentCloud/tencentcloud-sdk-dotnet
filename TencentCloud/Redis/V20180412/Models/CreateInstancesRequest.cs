@@ -204,6 +204,15 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("RedisClusterId")]
         public string RedisClusterId{ get; set; }
 
+        /// <summary>
+        /// 告警策略 ID 数组。
+        /// 
+        /// - 请登录[腾讯云可观测平台-告警管理-策略管理](https://console.cloud.tencent.com/monitor/alarm/policy)获取告警策略 ID。
+        /// - 若不配置该参数，则绑定默认告警策略。默认告警策略具体信息，请登录[腾讯云可观测平台-告警管理-策略管理](https://console.cloud.tencent.com/monitor/alarm/policy)查看。
+        /// </summary>
+        [JsonProperty("AlarmPolicyList")]
+        public string[] AlarmPolicyList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -235,6 +244,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
             this.SetParamSimple(map, prefix + "ProductVersion", this.ProductVersion);
             this.SetParamSimple(map, prefix + "RedisClusterId", this.RedisClusterId);
+            this.SetParamArraySimple(map, prefix + "AlarmPolicyList.", this.AlarmPolicyList);
         }
     }
 }

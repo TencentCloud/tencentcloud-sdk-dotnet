@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.987";
+       private const string sdkVersion = "SDK_NET_3.0.988";
 
         /// <summary>
         /// Client constructor.
@@ -369,7 +369,7 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// 创建一个特殊类型的策略，你可以关联到企业组织Root节点、企业单元或者企业的成员账号。
+        /// 创建一个特殊类型的策略，您可以关联到企业组织Root节点、企业部门节点或者企业的成员账号。
         /// </summary>
         /// <param name="req"><see cref="CreatePolicyRequest"/></param>
         /// <returns><see cref="CreatePolicyResponse"/></returns>
@@ -379,7 +379,7 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// 创建一个特殊类型的策略，你可以关联到企业组织Root节点、企业单元或者企业的成员账号。
+        /// 创建一个特殊类型的策略，您可以关联到企业组织Root节点、企业部门节点或者企业的成员账号。
         /// </summary>
         /// <param name="req"><see cref="CreatePolicyRequest"/></param>
         /// <returns><see cref="CreatePolicyResponse"/></returns>

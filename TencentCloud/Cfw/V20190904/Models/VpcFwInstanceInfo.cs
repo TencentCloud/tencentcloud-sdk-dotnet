@@ -191,6 +191,50 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("TrafficMode")]
         public string TrafficMode{ get; set; }
 
+        /// <summary>
+        /// 引擎预约升级时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReserveTime")]
+        public string ReserveTime{ get; set; }
+
+        /// <summary>
+        /// 预约引擎升级版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReserveVersion")]
+        public string ReserveVersion{ get; set; }
+
+        /// <summary>
+        /// 引擎预约升级版本状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReserveVersionState")]
+        public string ReserveVersionState{ get; set; }
+
+        /// <summary>
+        /// 弹性开关 1打开 0关闭
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ElasticSwitch")]
+        public long? ElasticSwitch{ get; set; }
+
+        /// <summary>
+        /// 弹性带宽，单位Mbps
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ElasticBandwidth")]
+        public long? ElasticBandwidth{ get; set; }
+
+        /// <summary>
+        /// 是否首次开通按量付费
+        /// 1 是
+        /// 0 不是
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsFirstAfterPay")]
+        public long? IsFirstAfterPay{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -221,6 +265,12 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
             this.SetParamSimple(map, prefix + "UpdateEnable", this.UpdateEnable);
             this.SetParamSimple(map, prefix + "TrafficMode", this.TrafficMode);
+            this.SetParamSimple(map, prefix + "ReserveTime", this.ReserveTime);
+            this.SetParamSimple(map, prefix + "ReserveVersion", this.ReserveVersion);
+            this.SetParamSimple(map, prefix + "ReserveVersionState", this.ReserveVersionState);
+            this.SetParamSimple(map, prefix + "ElasticSwitch", this.ElasticSwitch);
+            this.SetParamSimple(map, prefix + "ElasticBandwidth", this.ElasticBandwidth);
+            this.SetParamSimple(map, prefix + "IsFirstAfterPay", this.IsFirstAfterPay);
         }
     }
 }

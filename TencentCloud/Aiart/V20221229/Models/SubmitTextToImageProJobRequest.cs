@@ -58,10 +58,9 @@ namespace TencentCloud.Aiart.V20221229.Models
         public long? LogoAdd{ get; set; }
 
         /// <summary>
-        /// 文生图引擎，默认使用engine1。 
-        /// 取值：  
-        /// engine1  
-        /// engine2
+        /// 文生图模型，默认使用engine1。
+        /// engine1：文生图（高级版）-混元
+        /// engine2：文生图（高级版）
         /// </summary>
         [JsonProperty("Engine")]
         public string Engine{ get; set; }

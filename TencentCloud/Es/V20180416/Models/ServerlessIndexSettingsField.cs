@@ -15,38 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Wedata.V20210820.Models
+namespace TencentCloud.Es.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeInstanceByCycleReportRequest : AbstractModel
+    public class ServerlessIndexSettingsField : AbstractModel
     {
         
         /// <summary>
-        /// 周期类型
+        /// 索引主分片数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
+        [JsonProperty("NumberOfShards")]
+        public string NumberOfShards{ get; set; }
 
         /// <summary>
-        /// 项目ID
+        /// 索引刷新频率
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ProjectId")]
-        public string ProjectId{ get; set; }
-
-        /// <summary>
-        /// 开始日期
-        /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
-
-        /// <summary>
-        /// 结束日期
-        /// </summary>
-        [JsonProperty("EndTime")]
-        public string EndTime{ get; set; }
+        [JsonProperty("RefreshInterval")]
+        public string RefreshInterval{ get; set; }
 
 
         /// <summary>
@@ -54,10 +44,8 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "NumberOfShards", this.NumberOfShards);
+            this.SetParamSimple(map, prefix + "RefreshInterval", this.RefreshInterval);
         }
     }
 }

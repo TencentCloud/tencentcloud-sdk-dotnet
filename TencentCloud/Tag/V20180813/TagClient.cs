@@ -28,7 +28,7 @@ namespace TencentCloud.Tag.V20180813
 
        private const string endpoint = "tag.tencentcloudapi.com";
        private const string version = "2018-08-13";
-       private const string sdkVersion = "SDK_NET_3.0.987";
+       private const string sdkVersion = "SDK_NET_3.0.988";
 
         /// <summary>
         /// Client constructor.

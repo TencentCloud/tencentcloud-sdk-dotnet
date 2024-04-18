@@ -180,6 +180,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public ulong? PlanCntFlag{ get; set; }
 
         /// <summary>
+        /// 是否跨区域产品 0: 不包含跨区域产品 1: 中国大陆跨区域产品 2: 非中国大陆跨区域产品
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TransRegionFlag")]
+        public ulong? TransRegionFlag{ get; set; }
+
+        /// <summary>
         /// 是否为超级高防包
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -215,6 +222,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "BasicPlusFlag", this.BasicPlusFlag);
             this.SetParamSimple(map, prefix + "PlanCntFlag", this.PlanCntFlag);
+            this.SetParamSimple(map, prefix + "TransRegionFlag", this.TransRegionFlag);
             this.SetParamSimple(map, prefix + "SuperPackFlag", this.SuperPackFlag);
         }
     }

@@ -15,32 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Wedata.V20210820.Models
+namespace TencentCloud.Es.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTaskDetailRequest : AbstractModel
+    public class DescribeServerlessInstancesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 项目Id
+        /// 索引元数据字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ProjectId")]
-        public string ProjectId{ get; set; }
+        [JsonProperty("IndexMetaFields")]
+        public ServerlessIndexMetaField[] IndexMetaFields{ get; set; }
 
         /// <summary>
-        /// 任务ID
+        /// 查询总数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 任务告警状态
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("TaskAlarmStatus")]
-        public long? TaskAlarmStatus{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +50,9 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "TaskAlarmStatus", this.TaskAlarmStatus);
+            this.SetParamArrayObj(map, prefix + "IndexMetaFields.", this.IndexMetaFields);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

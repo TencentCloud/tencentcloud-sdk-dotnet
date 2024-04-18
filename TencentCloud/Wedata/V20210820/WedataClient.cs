@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.987";
+       private const string sdkVersion = "SDK_NET_3.0.988";
 
         /// <summary>
         /// Client constructor.
@@ -1860,27 +1860,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 实例状态周期增长趋势
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInstanceByCycleReportRequest"/></param>
-        /// <returns><see cref="DescribeInstanceByCycleReportResponse"/></returns>
-        public Task<DescribeInstanceByCycleReportResponse> DescribeInstanceByCycleReport(DescribeInstanceByCycleReportRequest req)
-        {
-            return InternalRequestAsync<DescribeInstanceByCycleReportResponse>(req, "DescribeInstanceByCycleReport");
-        }
-
-        /// <summary>
-        /// 实例状态周期增长趋势
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInstanceByCycleReportRequest"/></param>
-        /// <returns><see cref="DescribeInstanceByCycleReportResponse"/></returns>
-        public DescribeInstanceByCycleReportResponse DescribeInstanceByCycleReportSync(DescribeInstanceByCycleReportRequest req)
-        {
-            return InternalRequestAsync<DescribeInstanceByCycleReportResponse>(req, "DescribeInstanceByCycleReport")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 日志获取详情页面
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceLastLogRequest"/></param>
@@ -3294,29 +3273,6 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
-        /// 查询任务具体详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskDetailRequest"/></param>
-        /// <returns><see cref="DescribeTaskDetailResponse"/></returns>
-        public Task<DescribeTaskDetailResponse> DescribeTaskDetail(DescribeTaskDetailRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskDetailResponse>(req, "DescribeTaskDetail");
-        }
-
-        /// <summary>
-        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
-        /// 查询任务具体详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTaskDetailRequest"/></param>
-        /// <returns><see cref="DescribeTaskDetailResponse"/></returns>
-        public DescribeTaskDetailResponse DescribeTaskDetailSync(DescribeTaskDetailRequest req)
-        {
-            return InternalRequestAsync<DescribeTaskDetailResponse>(req, "DescribeTaskDetail")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查看任务锁状态信息
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskLockStatusRequest"/></param>
@@ -3376,29 +3332,6 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeTaskScriptResponse DescribeTaskScriptSync(DescribeTaskScriptRequest req)
         {
             return InternalRequestAsync<DescribeTaskScriptResponse>(req, "DescribeTaskScript")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
-        /// 根据工作流分页查询任务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTasksByPageRequest"/></param>
-        /// <returns><see cref="DescribeTasksByPageResponse"/></returns>
-        public Task<DescribeTasksByPageResponse> DescribeTasksByPage(DescribeTasksByPageRequest req)
-        {
-            return InternalRequestAsync<DescribeTasksByPageResponse>(req, "DescribeTasksByPage");
-        }
-
-        /// <summary>
-        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
-        /// 根据工作流分页查询任务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTasksByPageRequest"/></param>
-        /// <returns><see cref="DescribeTasksByPageResponse"/></returns>
-        public DescribeTasksByPageResponse DescribeTasksByPageSync(DescribeTasksByPageRequest req)
-        {
-            return InternalRequestAsync<DescribeTasksByPageResponse>(req, "DescribeTasksByPage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

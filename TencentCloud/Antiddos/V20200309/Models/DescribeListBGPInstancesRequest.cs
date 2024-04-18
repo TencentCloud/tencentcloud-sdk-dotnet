@@ -144,6 +144,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("FilterPlanCntFlag")]
         public ulong? FilterPlanCntFlag{ get; set; }
 
+        /// <summary>
+        /// 是否跨区域产品 0: 不包含跨区域产品 1: 中国大陆跨区域产品 2: 非中国大陆跨区域产品 3: 包含全部
+        /// </summary>
+        [JsonProperty("FilterTransRegionFlag")]
+        public ulong? FilterTransRegionFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +176,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamArraySimple(map, prefix + "FilterAssetIpList.", this.FilterAssetIpList);
             this.SetParamSimple(map, prefix + "FilterBasicPlusFlag", this.FilterBasicPlusFlag);
             this.SetParamSimple(map, prefix + "FilterPlanCntFlag", this.FilterPlanCntFlag);
+            this.SetParamSimple(map, prefix + "FilterTransRegionFlag", this.FilterTransRegionFlag);
         }
     }
 }

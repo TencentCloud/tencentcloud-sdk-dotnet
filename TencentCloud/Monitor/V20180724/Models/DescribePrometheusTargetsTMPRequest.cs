@@ -44,12 +44,22 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// 过滤条件，当前支持
-        /// Name=state
-        /// Value=up, down, unknown
+        /// 过滤条件，支持Name=ServiceMonitor/PodMonitor/Probe/RawJob/Job, Value为采集配置名称；Name=Health, Value=up, down, unknown；Name=EndPoint, Value为EndPoint地址
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
+
+        /// <summary>
+        /// targets偏移量，默认为0
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// targets返回数量，默认为20，最大值200
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
 
         /// <summary>
@@ -61,6 +71,8 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

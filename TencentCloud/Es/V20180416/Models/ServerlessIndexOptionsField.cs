@@ -15,38 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Wedata.V20210820.Models
+namespace TencentCloud.Es.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TaskInfoDataPage : AbstractModel
+    public class ServerlessIndexOptionsField : AbstractModel
     {
         
         /// <summary>
-        /// 页号
+        /// 过期时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("PageNumber")]
-        public ulong? PageNumber{ get; set; }
+        [JsonProperty("ExpireMaxAge")]
+        public string ExpireMaxAge{ get; set; }
 
         /// <summary>
-        /// 页大小
+        /// 时间分区字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("PageSize")]
-        public ulong? PageSize{ get; set; }
-
-        /// <summary>
-        /// 任务集合信息
-        /// </summary>
-        [JsonProperty("Items")]
-        public TaskInfoData[] Items{ get; set; }
-
-        /// <summary>
-        /// 总页数1
-        /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
+        [JsonProperty("TimestampField")]
+        public string TimestampField{ get; set; }
 
 
         /// <summary>
@@ -54,10 +44,8 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
-            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
-            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "ExpireMaxAge", this.ExpireMaxAge);
+            this.SetParamSimple(map, prefix + "TimestampField", this.TimestampField);
         }
     }
 }
