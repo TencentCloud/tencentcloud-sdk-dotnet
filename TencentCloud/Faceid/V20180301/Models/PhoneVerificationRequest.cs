@@ -43,6 +43,14 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Phone{ get; set; }
 
         /// <summary>
+        /// 验证模式（详版/简版）。简版与详版价格不一致，详见[价格说明](https://cloud.tencent.com/document/product/1007/84321)。
+        /// 
+        /// 枚举值：0（简版），1（详版）。默认值为0。
+        /// </summary>
+        [JsonProperty("VerifyMode")]
+        public string VerifyMode{ get; set; }
+
+        /// <summary>
         /// 有加密需求的用户，传入kms的CiphertextBlob，关于数据加密可查阅 <a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
         /// </summary>
         [JsonProperty("CiphertextBlob")]
@@ -69,6 +77,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "IdCard", this.IdCard);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Phone", this.Phone);
+            this.SetParamSimple(map, prefix + "VerifyMode", this.VerifyMode);
             this.SetParamSimple(map, prefix + "CiphertextBlob", this.CiphertextBlob);
             this.SetParamArraySimple(map, prefix + "EncryptList.", this.EncryptList);
             this.SetParamSimple(map, prefix + "Iv", this.Iv);

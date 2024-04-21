@@ -57,6 +57,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>不填或填0，表示水印从画面开始就出现；</li>
         /// <li>当数值大于0时（假设为 n），表示水印从画面开始的第 n 秒出现；</li>
         /// <li>当数值小于0时（假设为 -n），表示水印从离画面结束 n 秒前开始出现。</li>
+        /// 注：只用于视频场景，截图不支持。
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
@@ -66,6 +67,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>不填或填0，表示水印持续到画面结束；</li>
         /// <li>当数值大于0时（假设为 n），表示水印持续到第 n 秒时消失；</li>
         /// <li>当数值小于0时（假设为 -n），表示水印持续到离画面结束 n 秒前消失。</li>
+        /// 注：只用于视频场景，截图不支持。
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }

@@ -31,19 +31,21 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ShipperId{ get; set; }
 
         /// <summary>
-        /// 投递规则投递的新的bucket
+        /// COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// 投递规则投递的新的目录前缀
+        /// 投递规则投递的新的目录前缀。
+        /// - 仅支持0-9A-Za-z-_/
+        /// - 最大支持256个字符
         /// </summary>
         [JsonProperty("Prefix")]
         public string Prefix{ get; set; }
 
         /// <summary>
-        /// 投递规则的开关状态
+        /// 投递规则的开关状态。true：开启投递任务；false：关闭投递任务。
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }
@@ -91,13 +93,21 @@ namespace TencentCloud.Cls.V20201016.Models
         public ContentInfo Content{ get; set; }
 
         /// <summary>
-        /// 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+        /// 投递文件命名配置，0：随机数命名，1：投递时间命名。
         /// </summary>
         [JsonProperty("FilenameMode")]
         public ulong? FilenameMode{ get; set; }
 
         /// <summary>
-        /// cos桶类型
+        /// cos桶存储类型。支持：STANDARD_IA、ARCHIVE、DEEP_ARCHIVE、STANDARD、MAZ_STANDARD、MAZ_STANDARD_IA、INTELLIGENT_TIERING。
+        /// 
+        /// 1. STANDARD_IA：低频存储；
+        /// 2. ARCHIVE：归档存储；
+        /// 3. DEEP_ARCHIVE：深度归档存储；
+        /// 4. STANDARD：标准存储；
+        /// 5. MAZ_STANDARD：标准存储（多 AZ）；
+        /// 6. MAZ_STANDARD_IA：低频存储（多 AZ）；
+        /// 7. INTELLIGENT_TIERING：智能分层存储。
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }

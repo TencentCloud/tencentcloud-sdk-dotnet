@@ -91,10 +91,16 @@ namespace TencentCloud.Omics.V20221128.Models
         public ulong? CacheClearDelay{ get; set; }
 
         /// <summary>
-        /// 工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow)
+        /// 工作目录，可填写指定缓存卷内的绝对路径，不填使用默认缓存卷内的默认路径，暂时仅支持Nextflow。
         /// </summary>
         [JsonProperty("WorkDir")]
         public string WorkDir{ get; set; }
+
+        /// <summary>
+        /// 缓存卷ID，不填使用默认缓存卷，暂时仅支持Nextflow。
+        /// </summary>
+        [JsonProperty("VolumeIds")]
+        public string[] VolumeIds{ get; set; }
 
 
         /// <summary>
@@ -113,6 +119,7 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamSimple(map, prefix + "InputCosUri", this.InputCosUri);
             this.SetParamSimple(map, prefix + "CacheClearDelay", this.CacheClearDelay);
             this.SetParamSimple(map, prefix + "WorkDir", this.WorkDir);
+            this.SetParamArraySimple(map, prefix + "VolumeIds.", this.VolumeIds);
         }
     }
 }

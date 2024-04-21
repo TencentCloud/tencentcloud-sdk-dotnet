@@ -25,39 +25,39 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 预览类型，1:源数据预览，2:导出结果预览
+        /// 预览类型，1：源数据预览；2：导出结果预览。
         /// </summary>
         [JsonProperty("PreviewType")]
         public ulong? PreviewType{ get; set; }
 
         /// <summary>
-        /// 导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka
+        /// 导入Kafka类型，0：腾讯云CKafka；1：用户自建Kafka。
         /// </summary>
         [JsonProperty("KafkaType")]
         public ulong? KafkaType{ get; set; }
 
         /// <summary>
-        /// 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。最多支持100个。
+        /// 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
+        /// 最多支持100个。
         /// </summary>
         [JsonProperty("UserKafkaTopics")]
         public string UserKafkaTopics{ get; set; }
 
         /// <summary>
-        /// 导入数据位置，-2:最早（默认），-1：最晚
+        /// 导入数据位置，-2：最早；-1：最晚。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 腾讯云CKafka实例ID。
-        /// KafkaType为0时KafkaInstance必填
+        /// 腾讯云CKafka实例ID，当KafkaType为0时参数KafkaInstance有效且必填。
         /// </summary>
         [JsonProperty("KafkaInstance")]
         public string KafkaInstance{ get; set; }
 
         /// <summary>
         /// 服务地址。
-        /// KafkaType为1时ServerAddr必填
+        /// KafkaType为1时ServerAddr必填。
         /// </summary>
         [JsonProperty("ServerAddr")]
         public string ServerAddr{ get; set; }
@@ -71,7 +71,7 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 加密访问协议。
-        /// KafkaType为1并且IsEncryptionAddr为true时Protocol必填
+        /// KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
         /// </summary>
         [JsonProperty("Protocol")]
         public KafkaProtocolInfo Protocol{ get; set; }

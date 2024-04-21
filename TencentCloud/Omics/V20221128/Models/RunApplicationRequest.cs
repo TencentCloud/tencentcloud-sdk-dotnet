@@ -103,7 +103,7 @@ namespace TencentCloud.Omics.V20221128.Models
         public NFOption NFOption{ get; set; }
 
         /// <summary>
-        /// 工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow)
+        /// 工作目录，可填写指定缓存卷内的绝对路径，不填使用默认缓存卷内的默认路径，暂时仅支持Nextflow。
         /// </summary>
         [JsonProperty("WorkDir")]
         public string WorkDir{ get; set; }
@@ -115,6 +115,12 @@ namespace TencentCloud.Omics.V20221128.Models
         /// </summary>
         [JsonProperty("AccessMode")]
         public string AccessMode{ get; set; }
+
+        /// <summary>
+        /// 缓存卷ID，不填使用默认缓存卷，暂时仅支持Nextflow。
+        /// </summary>
+        [JsonProperty("VolumeIds")]
+        public string[] VolumeIds{ get; set; }
 
 
         /// <summary>
@@ -137,6 +143,7 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamObj(map, prefix + "NFOption.", this.NFOption);
             this.SetParamSimple(map, prefix + "WorkDir", this.WorkDir);
             this.SetParamSimple(map, prefix + "AccessMode", this.AccessMode);
+            this.SetParamArraySimple(map, prefix + "VolumeIds.", this.VolumeIds);
         }
     }
 }

@@ -158,6 +158,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("AutoJumpUrl")]
         public string AutoJumpUrl{ get; set; }
 
+        /// <summary>
+        /// 是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。
+        /// </summary>
+        [JsonProperty("TopNavigationStatus")]
+        public string TopNavigationStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -178,6 +184,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "ProxyOperatorIdCardNumber", this.ProxyOperatorIdCardNumber);
             this.SetParamSimple(map, prefix + "AutoJumpUrl", this.AutoJumpUrl);
+            this.SetParamSimple(map, prefix + "TopNavigationStatus", this.TopNavigationStatus);
         }
     }
 }

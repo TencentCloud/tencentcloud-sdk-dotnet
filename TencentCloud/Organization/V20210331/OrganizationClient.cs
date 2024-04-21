@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.988";
+       private const string sdkVersion = "SDK_NET_3.0.989";
 
         /// <summary>
         /// Client constructor.
@@ -621,6 +621,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 查询目标关联的有效策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEffectivePolicyRequest"/></param>
+        /// <returns><see cref="DescribeEffectivePolicyResponse"/></returns>
+        public Task<DescribeEffectivePolicyResponse> DescribeEffectivePolicy(DescribeEffectivePolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeEffectivePolicyResponse>(req, "DescribeEffectivePolicy");
+        }
+
+        /// <summary>
+        /// 查询目标关联的有效策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEffectivePolicyRequest"/></param>
+        /// <returns><see cref="DescribeEffectivePolicyResponse"/></returns>
+        public DescribeEffectivePolicyResponse DescribeEffectivePolicySync(DescribeEffectivePolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeEffectivePolicyResponse>(req, "DescribeEffectivePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取企业组织信息
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationRequest"/></param>
@@ -1037,6 +1058,27 @@ namespace TencentCloud.Organization.V20210331
         public EnablePolicyTypeResponse EnablePolicyTypeSync(EnablePolicyTypeRequest req)
         {
             return InternalRequestAsync<EnablePolicyTypeResponse>(req, "EnablePolicyType")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取成员标签检测不合规资源列表
+        /// </summary>
+        /// <param name="req"><see cref="ListNonCompliantResourceRequest"/></param>
+        /// <returns><see cref="ListNonCompliantResourceResponse"/></returns>
+        public Task<ListNonCompliantResourceResponse> ListNonCompliantResource(ListNonCompliantResourceRequest req)
+        {
+            return InternalRequestAsync<ListNonCompliantResourceResponse>(req, "ListNonCompliantResource");
+        }
+
+        /// <summary>
+        /// 获取成员标签检测不合规资源列表
+        /// </summary>
+        /// <param name="req"><see cref="ListNonCompliantResourceRequest"/></param>
+        /// <returns><see cref="ListNonCompliantResourceResponse"/></returns>
+        public ListNonCompliantResourceResponse ListNonCompliantResourceSync(ListNonCompliantResourceRequest req)
+        {
+            return InternalRequestAsync<ListNonCompliantResourceResponse>(req, "ListNonCompliantResource")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

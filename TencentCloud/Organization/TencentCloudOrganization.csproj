@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FF7DA1A4-A5D5-3EF1-A5B1-B43A74B2F34E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.988</VersionPrefix>
+    <VersionPrefix>3.0.989</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -147,6 +147,8 @@
     <Compile Include="V20210331\Models\DeleteShareUnitResourcesRequest.cs" />
     <Compile Include="V20210331\Models\DeleteShareUnitResourcesResponse.cs" />
     <Compile Include="V20210331\Models\DeleteShareUnitResponse.cs" />
+    <Compile Include="V20210331\Models\DescribeEffectivePolicyRequest.cs" />
+    <Compile Include="V20210331\Models\DescribeEffectivePolicyResponse.cs" />
     <Compile Include="V20210331\Models\DescribeOrganizationAuthNodeRequest.cs" />
     <Compile Include="V20210331\Models\DescribeOrganizationAuthNodeResponse.cs" />
     <Compile Include="V20210331\Models\DescribeOrganizationFinancialByMemberRequest.cs" />
@@ -185,9 +187,12 @@
     <Compile Include="V20210331\Models\DetachPolicyResponse.cs" />
     <Compile Include="V20210331\Models\DisablePolicyTypeRequest.cs" />
     <Compile Include="V20210331\Models\DisablePolicyTypeResponse.cs" />
+    <Compile Include="V20210331\Models\EffectivePolicy.cs" />
     <Compile Include="V20210331\Models\EnablePolicyTypeRequest.cs" />
     <Compile Include="V20210331\Models\EnablePolicyTypeResponse.cs" />
     <Compile Include="V20210331\Models\IdentityPolicy.cs" />
+    <Compile Include="V20210331\Models\ListNonCompliantResourceRequest.cs" />
+    <Compile Include="V20210331\Models\ListNonCompliantResourceResponse.cs" />
     <Compile Include="V20210331\Models\ListOrganizationIdentityRequest.cs" />
     <Compile Include="V20210331\Models\ListOrganizationIdentityResponse.cs" />
     <Compile Include="V20210331\Models\ListPoliciesForTarget.cs" />
@@ -218,11 +223,14 @@
     <Compile Include="V20210331\Models\ProductResource.cs" />
     <Compile Include="V20210331\Models\QuitOrganizationRequest.cs" />
     <Compile Include="V20210331\Models\QuitOrganizationResponse.cs" />
+    <Compile Include="V20210331\Models\ResourceTagMapping.cs" />
     <Compile Include="V20210331\Models\ShareArea.cs" />
     <Compile Include="V20210331\Models\ShareMember.cs" />
     <Compile Include="V20210331\Models\ShareResource.cs" />
     <Compile Include="V20210331\Models\ShareUnitMember.cs" />
     <Compile Include="V20210331\Models\ShareUnitResource.cs" />
+    <Compile Include="V20210331\Models\TagComplianceDetails.cs" />
+    <Compile Include="V20210331\Models\Tags.cs" />
     <Compile Include="V20210331\Models\UpdateOrganizationIdentityRequest.cs" />
     <Compile Include="V20210331\Models\UpdateOrganizationIdentityResponse.cs" />
     <Compile Include="V20210331\Models\UpdateOrganizationMemberEmailBindRequest.cs" />

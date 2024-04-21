@@ -26,6 +26,7 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// 视频流的编码格式，可选值：
+        /// <li>copy：纯音频模版</li>
         /// <li>h264：H.264 编码</li>
         /// <li>h265：H.265 编码</li>
         /// <li>av1：AOMedia Video 1 编码</li>

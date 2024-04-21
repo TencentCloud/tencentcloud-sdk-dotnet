@@ -52,6 +52,20 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("NewSlaveZone")]
         public string[] NewSlaveZone{ get; set; }
 
+        /// <summary>
+        /// 新从可用区属性
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NewSlaveZoneAttr")]
+        public SlaveZoneAttrItem[] NewSlaveZoneAttr{ get; set; }
+
+        /// <summary>
+        /// 旧可用区属性
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OldSlaveZoneAttr")]
+        public SlaveZoneAttrItem[] OldSlaveZoneAttr{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +76,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArraySimple(map, prefix + "OldSlaveZone.", this.OldSlaveZone);
             this.SetParamSimple(map, prefix + "NewMasterZone", this.NewMasterZone);
             this.SetParamArraySimple(map, prefix + "NewSlaveZone.", this.NewSlaveZone);
+            this.SetParamArrayObj(map, prefix + "NewSlaveZoneAttr.", this.NewSlaveZoneAttr);
+            this.SetParamArrayObj(map, prefix + "OldSlaveZoneAttr.", this.OldSlaveZoneAttr);
         }
     }
 }

@@ -79,6 +79,24 @@ namespace TencentCloud.Trocket.V20230308.Models
         public MQTTClientSubscription[] MQTTClientSubscriptions{ get; set; }
 
         /// <summary>
+        /// 服务端到客户端的流量统计
+        /// </summary>
+        [JsonProperty("Inbound")]
+        public StatisticsReport Inbound{ get; set; }
+
+        /// <summary>
+        /// 客户端到服务端的流量统计
+        /// </summary>
+        [JsonProperty("OutBound")]
+        public StatisticsReport OutBound{ get; set; }
+
+        /// <summary>
+        /// cleansession标志
+        /// </summary>
+        [JsonProperty("CleanSession")]
+        public bool? CleanSession{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -99,6 +117,9 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "ConnectTime", this.ConnectTime);
             this.SetParamSimple(map, prefix + "DisconnectTime", this.DisconnectTime);
             this.SetParamArrayObj(map, prefix + "MQTTClientSubscriptions.", this.MQTTClientSubscriptions);
+            this.SetParamObj(map, prefix + "Inbound.", this.Inbound);
+            this.SetParamObj(map, prefix + "OutBound.", this.OutBound);
+            this.SetParamSimple(map, prefix + "CleanSession", this.CleanSession);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.988";
+       private const string sdkVersion = "SDK_NET_3.0.989";
 
         /// <summary>
         /// Client constructor.
@@ -285,7 +285,7 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 删除实例
+        /// 删除MQTT实例
         /// </summary>
         /// <param name="req"><see cref="DeleteMQTTInstanceRequest"/></param>
         /// <returns><see cref="DeleteMQTTInstanceResponse"/></returns>
@@ -295,7 +295,7 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 删除实例
+        /// 删除MQTT实例
         /// </summary>
         /// <param name="req"><see cref="DeleteMQTTInstanceRequest"/></param>
         /// <returns><see cref="DeleteMQTTInstanceResponse"/></returns>
@@ -306,7 +306,7 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 删除主题
+        /// 删除MQTT主题
         /// </summary>
         /// <param name="req"><see cref="DeleteMQTTTopicRequest"/></param>
         /// <returns><see cref="DeleteMQTTTopicResponse"/></returns>
@@ -316,7 +316,7 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 删除主题
+        /// 删除MQTT主题
         /// </summary>
         /// <param name="req"><see cref="DeleteMQTTTopicRequest"/></param>
         /// <returns><see cref="DeleteMQTTTopicResponse"/></returns>
@@ -672,7 +672,7 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 非对外接口，获取产品售卖规格
+        /// 获取产品售卖规格
         /// </summary>
         /// <param name="req"><see cref="DescribeMQTTProductSKUListRequest"/></param>
         /// <returns><see cref="DescribeMQTTProductSKUListResponse"/></returns>
@@ -682,7 +682,7 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 非对外接口，获取产品售卖规格
+        /// 获取产品售卖规格
         /// </summary>
         /// <param name="req"><see cref="DescribeMQTTProductSKUListRequest"/></param>
         /// <returns><see cref="DescribeMQTTProductSKUListResponse"/></returns>
@@ -927,7 +927,7 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 为MQTT实例创建公网接入点
+        /// 更新MQTT实例公网接入点
         /// </summary>
         /// <param name="req"><see cref="ModifyMQTTInsPublicEndpointRequest"/></param>
         /// <returns><see cref="ModifyMQTTInsPublicEndpointResponse"/></returns>
@@ -937,7 +937,7 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 为MQTT实例创建公网接入点
+        /// 更新MQTT实例公网接入点
         /// </summary>
         /// <param name="req"><see cref="ModifyMQTTInsPublicEndpointRequest"/></param>
         /// <returns><see cref="ModifyMQTTInsPublicEndpointResponse"/></returns>

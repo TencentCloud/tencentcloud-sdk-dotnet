@@ -36,6 +36,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("SlaveZone")]
         public string SlaveZone{ get; set; }
 
+        /// <summary>
+        /// binlog同步方式。默认值：async。可选值：sync、semisync、async
+        /// </summary>
+        [JsonProperty("BinlogSyncWay")]
+        public string BinlogSyncWay{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "SlaveZone", this.SlaveZone);
+            this.SetParamSimple(map, prefix + "BinlogSyncWay", this.BinlogSyncWay);
         }
     }
 }

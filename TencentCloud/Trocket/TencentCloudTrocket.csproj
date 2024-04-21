@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{621A4001-F8F8-394B-BCE2-5A65FE5DDEA5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.988</VersionPrefix>
+    <VersionPrefix>3.0.989</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -153,10 +153,12 @@
     <Compile Include="V20230308\Models\ModifyRoleResponse.cs" />
     <Compile Include="V20230308\Models\ModifyTopicRequest.cs" />
     <Compile Include="V20230308\Models\ModifyTopicResponse.cs" />
+    <Compile Include="V20230308\Models\PacketStatistics.cs" />
     <Compile Include="V20230308\Models\PublicAccessRule.cs" />
     <Compile Include="V20230308\Models\RoleItem.cs" />
     <Compile Include="V20230308\Models\SourceClusterGroupConfig.cs" />
     <Compile Include="V20230308\Models\SourceClusterTopicConfig.cs" />
+    <Compile Include="V20230308\Models\StatisticsReport.cs" />
     <Compile Include="V20230308\Models\SubscriptionData.cs" />
     <Compile Include="V20230308\Models\Tag.cs" />
     <Compile Include="V20230308\Models\TagFilter.cs" />

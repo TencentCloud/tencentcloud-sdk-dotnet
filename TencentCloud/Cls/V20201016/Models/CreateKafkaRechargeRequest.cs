@@ -61,26 +61,26 @@ namespace TencentCloud.Cls.V20201016.Models
         public LogRechargeRuleInfo LogRechargeRule{ get; set; }
 
         /// <summary>
-        /// 腾讯云CKafka实例ID，KafkaType为0时必填
+        /// 腾讯云CKafka实例ID，KafkaType为0时必填。
         /// </summary>
         [JsonProperty("KafkaInstance")]
         public string KafkaInstance{ get; set; }
 
         /// <summary>
-        /// 服务地址，KafkaType为1时必填
+        /// 服务地址，KafkaType为1时必填。
         /// </summary>
         [JsonProperty("ServerAddr")]
         public string ServerAddr{ get; set; }
 
         /// <summary>
-        /// ServerAddr是否为加密连接，KafkaType为1时必填
+        /// ServerAddr是否为加密连接，KafkaType为1时必填。
         /// </summary>
         [JsonProperty("IsEncryptionAddr")]
         public bool? IsEncryptionAddr{ get; set; }
 
         /// <summary>
         /// 加密访问协议。
-        /// KafkaType为1并且IsEncryptionAddr为true时Protocol必填
+        /// KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
         /// </summary>
         [JsonProperty("Protocol")]
         public KafkaProtocolInfo Protocol{ get; set; }

@@ -82,6 +82,15 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("DrmInfo")]
         public DrmInfo DrmInfo{ get; set; }
 
+        /// <summary>
+        /// 自适应转码模板类型：
+        /// Common：音视频类型
+        /// PureAudio：纯音频类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DefinitionType")]
+        public string DefinitionType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +105,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "SegmentObjectName", this.SegmentObjectName);
             this.SetParamArrayObj(map, prefix + "AddOnSubtitles.", this.AddOnSubtitles);
             this.SetParamObj(map, prefix + "DrmInfo.", this.DrmInfo);
+            this.SetParamSimple(map, prefix + "DefinitionType", this.DefinitionType);
         }
     }
 }

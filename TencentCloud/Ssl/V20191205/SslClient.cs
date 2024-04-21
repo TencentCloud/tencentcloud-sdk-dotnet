@@ -28,7 +28,7 @@ namespace TencentCloud.Ssl.V20191205
 
        private const string endpoint = "ssl.tencentcloudapi.com";
        private const string version = "2019-12-05";
-       private const string sdkVersion = "SDK_NET_3.0.988";
+       private const string sdkVersion = "SDK_NET_3.0.989";
 
         /// <summary>
         /// Client constructor.
@@ -491,6 +491,27 @@ namespace TencentCloud.Ssl.V20191205
         public DescribeCompaniesResponse DescribeCompaniesSync(DescribeCompaniesRequest req)
         {
             return InternalRequestAsync<DescribeCompaniesResponse>(req, "DescribeCompanies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询批量删除任务结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeleteCertificatesTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeDeleteCertificatesTaskResultResponse"/></returns>
+        public Task<DescribeDeleteCertificatesTaskResultResponse> DescribeDeleteCertificatesTaskResult(DescribeDeleteCertificatesTaskResultRequest req)
+        {
+            return InternalRequestAsync<DescribeDeleteCertificatesTaskResultResponse>(req, "DescribeDeleteCertificatesTaskResult");
+        }
+
+        /// <summary>
+        /// 查询批量删除任务结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeleteCertificatesTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeDeleteCertificatesTaskResultResponse"/></returns>
+        public DescribeDeleteCertificatesTaskResultResponse DescribeDeleteCertificatesTaskResultSync(DescribeDeleteCertificatesTaskResultRequest req)
+        {
+            return InternalRequestAsync<DescribeDeleteCertificatesTaskResultResponse>(req, "DescribeDeleteCertificatesTaskResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

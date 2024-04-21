@@ -66,6 +66,13 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
+        /// <summary>
+        /// 接入点ip
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Ip")]
+        public string Ip{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +85,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "Host", this.Host);
             this.SetParamSimple(map, prefix + "Port", this.Port);
+            this.SetParamSimple(map, prefix + "Ip", this.Ip);
         }
     }
 }

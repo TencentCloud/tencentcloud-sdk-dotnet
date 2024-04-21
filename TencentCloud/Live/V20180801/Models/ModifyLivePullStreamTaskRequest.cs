@@ -196,6 +196,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("BackupToUrl")]
         public string BackupToUrl{ get; set; }
 
+        /// <summary>
+        /// 点播垫片文件地址。注意：用于在主源拉不到时自动兜底到垫片文件，切到垫片文件后，每次播完垫片会尝试拉主源，如果主源恢复则自动切回主源。可根据需要的轮询检查时长来传入对应时长的垫片文件。
+        /// </summary>
+        [JsonProperty("BackupVodUrl")]
+        public string BackupVodUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -222,6 +228,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
             this.SetParamSimple(map, prefix + "VodLocalMode", this.VodLocalMode);
             this.SetParamSimple(map, prefix + "BackupToUrl", this.BackupToUrl);
+            this.SetParamSimple(map, prefix + "BackupVodUrl", this.BackupVodUrl);
         }
     }
 }

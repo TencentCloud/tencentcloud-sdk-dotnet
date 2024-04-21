@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka
+        /// 导入Kafka类型，0: 腾讯云CKafka；1: 用户自建Kafka。
         /// </summary>
         [JsonProperty("KafkaType")]
         public ulong? KafkaType{ get; set; }
@@ -45,13 +45,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ServerAddr{ get; set; }
 
         /// <summary>
-        /// ServerAddr是否为加密连接
+        /// ServerAddr是否为加密连接，默认值false。当KafkaType为1用户自建kafka时生效。
         /// </summary>
         [JsonProperty("IsEncryptionAddr")]
         public bool? IsEncryptionAddr{ get; set; }
 
         /// <summary>
-        /// 加密访问协议。IsEncryptionAddr参数为true时必填
+        /// 加密访问协议。KafkaType参数为1并且IsEncryptionAddr参数为true时必填。
         /// </summary>
         [JsonProperty("Protocol")]
         public KafkaProtocolInfo Protocol{ get; set; }

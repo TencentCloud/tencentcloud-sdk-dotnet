@@ -43,31 +43,31 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka
+        /// 导入Kafka类型，0：腾讯云CKafka：1：用户自建Kafka。
         /// </summary>
         [JsonProperty("KafkaType")]
         public ulong? KafkaType{ get; set; }
 
         /// <summary>
-        /// 腾讯云CKafka实例ID，KafkaType为0时必填
+        /// 腾讯云CKafka实例ID，KafkaType为0时必填。
         /// </summary>
         [JsonProperty("KafkaInstance")]
         public string KafkaInstance{ get; set; }
 
         /// <summary>
-        /// 服务地址
+        /// 服务地址，KafkaType为1时必填。
         /// </summary>
         [JsonProperty("ServerAddr")]
         public string ServerAddr{ get; set; }
 
         /// <summary>
-        /// ServerAddr是否为加密连接
+        /// ServerAddr是否为加密连接，KafkaType为1时必填。
         /// </summary>
         [JsonProperty("IsEncryptionAddr")]
         public bool? IsEncryptionAddr{ get; set; }
 
         /// <summary>
-        /// 加密访问协议，IsEncryptionAddr参数为true时必填
+        /// 加密访问协议，KafkaType参数为1并且IsEncryptionAddr参数为true时必填。
         /// </summary>
         [JsonProperty("Protocol")]
         public KafkaProtocolInfo Protocol{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public LogRechargeRuleInfo LogRechargeRule{ get; set; }
 
         /// <summary>
-        /// 导入控制，1：暂停，2：继续
+        /// 导入控制，1：暂停；2：继续。
         /// </summary>
         [JsonProperty("StatusControl")]
         public ulong? StatusControl{ get; set; }

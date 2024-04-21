@@ -53,6 +53,24 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Isp{ get; set; }
 
         /// <summary>
+        /// 业务结果详细信息。（当VerifyMode配置"详版"，且Result为"-4: 三要素信息不一致"时返回）
+        /// 
+        /// 枚举值：
+        /// 
+        /// 手机号码与姓名一致，与身份证号不一致；
+        /// 
+        /// 手机号码身份证号一致，与姓名不一致；
+        /// 
+        /// 手机号码与姓名和身份证号均不一致；
+        /// 
+        /// 姓名和身份证号不一致；
+        /// 
+        /// 其他不一致。
+        /// </summary>
+        [JsonProperty("ResultDetail")]
+        public string ResultDetail{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -67,6 +85,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Isp", this.Isp);
+            this.SetParamSimple(map, prefix + "ResultDetail", this.ResultDetail);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

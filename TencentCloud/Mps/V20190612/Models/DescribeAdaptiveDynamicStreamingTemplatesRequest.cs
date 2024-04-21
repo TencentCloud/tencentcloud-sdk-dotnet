@@ -50,6 +50,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
+        /// <summary>
+        /// 是否为纯音频，0表示视频，1表示纯音频
+        /// </summary>
+        [JsonProperty("PureAudio")]
+        public ulong? PureAudio{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +66,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "PureAudio", this.PureAudio);
         }
     }
 }
