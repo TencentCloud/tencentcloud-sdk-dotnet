@@ -32,10 +32,21 @@ namespace TencentCloudExamples
                 }
             };
 
+            // hunyuan ChatStd/ChatPro 同时支持 stream 和非 stream 的情况
+            req.Stream = true;
+
             var resp = client.ChatStdSync(req);
-            foreach (var e in resp)
+            if (req.Stream.HasValue && req.Stream.Value)
             {
-                Console.WriteLine(e.Data);
+                // stream 示例
+                foreach (var e in resp)
+                    Console.WriteLine(e.Data);
+            }
+            else
+            {
+                // 非 stream 示例
+                // 通过 Stream=false 参数来指定非 stream 协议, 一次性拿到结果
+                Console.WriteLine(JsonConvert.SerializeObject(resp));
             }
         }
     }
