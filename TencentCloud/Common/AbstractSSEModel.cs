@@ -20,9 +20,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace TencentCloud.Common
 {
+    [JsonObject]
     public abstract class AbstractSSEModel : AbstractModel, IEnumerable<AbstractSSEModel.SSE>
     {
         public class SSE
@@ -33,6 +35,7 @@ namespace TencentCloud.Common
             public int Retry;
         }
 
+        [JsonProperty("RequestId")]
         public string RequestId { get; set; }
 
         internal HttpResponseMessage Response;
