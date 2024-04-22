@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.990";
+       private const string sdkVersion = "SDK_NET_3.0.991";
 
         /// <summary>
         /// Client constructor.
@@ -2129,6 +2129,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public ModifyInstanceParamResponse ModifyInstanceParamSync(ModifyInstanceParamRequest req)
         {
             return InternalRequestAsync<ModifyInstanceParamResponse>(req, "ModifyInstanceParam")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改实例小版本升级限制时间
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceUpgradeLimitDaysRequest"/></param>
+        /// <returns><see cref="ModifyInstanceUpgradeLimitDaysResponse"/></returns>
+        public Task<ModifyInstanceUpgradeLimitDaysResponse> ModifyInstanceUpgradeLimitDays(ModifyInstanceUpgradeLimitDaysRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceUpgradeLimitDaysResponse>(req, "ModifyInstanceUpgradeLimitDays");
+        }
+
+        /// <summary>
+        /// 修改实例小版本升级限制时间
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceUpgradeLimitDaysRequest"/></param>
+        /// <returns><see cref="ModifyInstanceUpgradeLimitDaysResponse"/></returns>
+        public ModifyInstanceUpgradeLimitDaysResponse ModifyInstanceUpgradeLimitDaysSync(ModifyInstanceUpgradeLimitDaysRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceUpgradeLimitDaysResponse>(req, "ModifyInstanceUpgradeLimitDays")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

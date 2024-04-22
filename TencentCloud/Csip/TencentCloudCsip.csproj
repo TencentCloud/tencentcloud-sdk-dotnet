@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.990</VersionPrefix>
+    <VersionPrefix>3.0.991</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,8 @@
     <Compile Include="V20221121\CsipClient.cs" />
     <Compile Include="V20221121\Models\AddNewBindRoleUserRequest.cs" />
     <Compile Include="V20221121\Models\AddNewBindRoleUserResponse.cs" />
+    <Compile Include="V20221121\Models\AlertExtraInfo.cs" />
+    <Compile Include="V20221121\Models\AlertInfo.cs" />
     <Compile Include="V20221121\Models\AssetBaseInfoResponse.cs" />
     <Compile Include="V20221121\Models\AssetClusterPod.cs" />
     <Compile Include="V20221121\Models\AssetInfoDetail.cs" />
@@ -74,6 +76,8 @@
     <Compile Include="V20221121\Models\DeleteDomainAndIpResponse.cs" />
     <Compile Include="V20221121\Models\DeleteRiskScanTaskRequest.cs" />
     <Compile Include="V20221121\Models\DeleteRiskScanTaskResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeAlertListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeAlertListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeAssetViewVulRiskListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeAssetViewVulRiskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeCVMAssetInfoRequest.cs" />
@@ -138,6 +142,7 @@
     <Compile Include="V20221121\Models\FilterDataObject.cs" />
     <Compile Include="V20221121\Models\GateWayAsset.cs" />
     <Compile Include="V20221121\Models\IpAssetListVO.cs" />
+    <Compile Include="V20221121\Models\KeyValue.cs" />
     <Compile Include="V20221121\Models\ModifyOrganizationAccountStatusRequest.cs" />
     <Compile Include="V20221121\Models\ModifyOrganizationAccountStatusResponse.cs" />
     <Compile Include="V20221121\Models\ModifyRiskCenterRiskStatusRequest.cs" />
@@ -149,9 +154,11 @@
     <Compile Include="V20221121\Models\PortRiskAdvanceCFGParamItem.cs" />
     <Compile Include="V20221121\Models\PortViewPortRisk.cs" />
     <Compile Include="V20221121\Models\PublicIpDomainListKey.cs" />
+    <Compile Include="V20221121\Models\RelatedEvent.cs" />
     <Compile Include="V20221121\Models\ReportItemKey.cs" />
     <Compile Include="V20221121\Models\ReportTaskIdList.cs" />
     <Compile Include="V20221121\Models\RiskCenterStatusKey.cs" />
+    <Compile Include="V20221121\Models\RoleInfo.cs" />
     <Compile Include="V20221121\Models\ScanTaskInfo.cs" />
     <Compile Include="V20221121\Models\ScanTaskInfoList.cs" />
     <Compile Include="V20221121\Models\ServerRisk.cs" />

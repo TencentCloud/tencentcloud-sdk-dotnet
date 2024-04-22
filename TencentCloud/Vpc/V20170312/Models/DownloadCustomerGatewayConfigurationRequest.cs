@@ -37,7 +37,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string VpnConnectionId{ get; set; }
 
         /// <summary>
-        /// 对端网关厂商信息对象，可通过[DescribeCustomerGatewayVendors](https://cloud.tencent.com/document/api/215/17513)获取。
+        /// 对端网关厂商信息对象，可通过[DescribeCustomerGatewayVendors](https://cloud.tencent.com/document/api/215/17517)获取。
         /// </summary>
         [JsonProperty("CustomerGatewayVendor")]
         public CustomerGatewayVendor CustomerGatewayVendor{ get; set; }

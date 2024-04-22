@@ -49,9 +49,10 @@ namespace TencentCloud.Lke.V20231130.Models
         public string Policy{ get; set; }
 
         /// <summary>
-        /// 默认值: split
+        /// 默认值: parse
         /// </summary>
         [JsonProperty("Operate")]
+        [System.Obsolete]
         public string Operate{ get; set; }
 
 

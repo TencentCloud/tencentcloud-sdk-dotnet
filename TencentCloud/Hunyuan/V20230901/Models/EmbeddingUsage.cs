@@ -25,13 +25,13 @@ namespace TencentCloud.Hunyuan.V20230901.Models
     {
         
         /// <summary>
-        /// 输入Token数。
+        /// 输入 Token 数。
         /// </summary>
         [JsonProperty("PromptTokens")]
         public long? PromptTokens{ get; set; }
 
         /// <summary>
-        /// 总Token数。
+        /// 总 Token 数。
         /// </summary>
         [JsonProperty("TotalTokens")]
         public long? TotalTokens{ get; set; }

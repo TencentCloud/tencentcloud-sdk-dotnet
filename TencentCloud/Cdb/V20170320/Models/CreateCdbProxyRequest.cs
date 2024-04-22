@@ -66,6 +66,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("ConnectionPoolLimit")]
         public ulong? ConnectionPoolLimit{ get; set; }
 
+        /// <summary>
+        /// 指定要购买的 proxy 内核版本。不填则默认发货最新版本的 proxy。
+        /// </summary>
+        [JsonProperty("ProxyVersion")]
+        public string ProxyVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
             this.SetParamSimple(map, prefix + "ConnectionPoolLimit", this.ConnectionPoolLimit);
+            this.SetParamSimple(map, prefix + "ProxyVersion", this.ProxyVersion);
         }
     }
 }

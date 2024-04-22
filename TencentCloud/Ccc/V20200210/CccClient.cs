@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.990";
+       private const string sdkVersion = "SDK_NET_3.0.991";
 
         /// <summary>
         /// Client constructor.
@@ -453,7 +453,7 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// 批量查询自动任务外呼
+        /// 批量查询自动外呼任务
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoCalloutTasksRequest"/></param>
         /// <returns><see cref="DescribeAutoCalloutTasksResponse"/></returns>
@@ -463,7 +463,7 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// 批量查询自动任务外呼
+        /// 批量查询自动外呼任务
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoCalloutTasksRequest"/></param>
         /// <returns><see cref="DescribeAutoCalloutTasksResponse"/></returns>
@@ -1041,6 +1041,27 @@ namespace TencentCloud.Ccc.V20200210
         public ModifyStaffResponse ModifyStaffSync(ModifyStaffRequest req)
         {
             return InternalRequestAsync<ModifyStaffResponse>(req, "ModifyStaff")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改座席的密码
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStaffPasswordRequest"/></param>
+        /// <returns><see cref="ModifyStaffPasswordResponse"/></returns>
+        public Task<ModifyStaffPasswordResponse> ModifyStaffPassword(ModifyStaffPasswordRequest req)
+        {
+            return InternalRequestAsync<ModifyStaffPasswordResponse>(req, "ModifyStaffPassword");
+        }
+
+        /// <summary>
+        /// 修改座席的密码
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStaffPasswordRequest"/></param>
+        /// <returns><see cref="ModifyStaffPasswordResponse"/></returns>
+        public ModifyStaffPasswordResponse ModifyStaffPasswordSync(ModifyStaffPasswordRequest req)
+        {
+            return InternalRequestAsync<ModifyStaffPasswordResponse>(req, "ModifyStaffPassword")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

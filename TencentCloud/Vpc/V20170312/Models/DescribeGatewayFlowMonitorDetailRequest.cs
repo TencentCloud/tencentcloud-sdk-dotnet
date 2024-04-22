@@ -78,6 +78,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("OrderDirection")]
         public string OrderDirection{ get; set; }
 
+        /// <summary>
+        /// VPC内部IPv4地址，精确匹配
+        /// </summary>
+        [JsonProperty("PrivateIpAddress")]
+        public string PrivateIpAddress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
             this.SetParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
+            this.SetParamSimple(map, prefix + "PrivateIpAddress", this.PrivateIpAddress);
         }
     }
 }

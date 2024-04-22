@@ -44,8 +44,8 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// NAT网关的状态。
-        ///  'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中，'UPDATING'：升级中，
-        /// ‘FAILED’：失败。
+        ///  'PENDING'：生产中，'DELETING'：删除中/子实例关闭中，'AVAILABLE'：运行中，'UPDATING'：升级中，
+        /// ‘PENDFAILURE’：创建失败，‘DELETEFAILURE：删除失败，‘DENIED’：子实例关闭中
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }

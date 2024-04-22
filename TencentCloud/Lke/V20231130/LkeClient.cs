@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.990";
+       private const string sdkVersion = "SDK_NET_3.0.991";
 
         /// <summary>
         /// Client constructor.
@@ -748,6 +748,7 @@ namespace TencentCloud.Lke.V20231130
 
         /// <summary>
         /// 获取特征向量
+        /// 本接口有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
         /// </summary>
         /// <param name="req"><see cref="GetEmbeddingRequest"/></param>
         /// <returns><see cref="GetEmbeddingResponse"/></returns>
@@ -758,6 +759,7 @@ namespace TencentCloud.Lke.V20231130
 
         /// <summary>
         /// 获取特征向量
+        /// 本接口有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
         /// </summary>
         /// <param name="req"><see cref="GetEmbeddingRequest"/></param>
         /// <returns><see cref="GetEmbeddingResponse"/></returns>
@@ -1420,6 +1422,7 @@ namespace TencentCloud.Lke.V20231130
 
         /// <summary>
         /// 多轮改写
+        /// 本接口有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
         /// </summary>
         /// <param name="req"><see cref="QueryRewriteRequest"/></param>
         /// <returns><see cref="QueryRewriteResponse"/></returns>
@@ -1430,6 +1433,7 @@ namespace TencentCloud.Lke.V20231130
 
         /// <summary>
         /// 多轮改写
+        /// 本接口有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
         /// </summary>
         /// <param name="req"><see cref="QueryRewriteRequest"/></param>
         /// <returns><see cref="QueryRewriteResponse"/></returns>

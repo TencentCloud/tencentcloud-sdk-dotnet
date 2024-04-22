@@ -25,13 +25,13 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 第三方云存储的账号信息（特别说明：若您选择存储至对象存储COS将会收取录制文件投递至COS的费用，详见云端录制收费说明，存储至VOD将不收取此项费用。）。
+        /// 腾讯云对象存储COS以及第三方云存储的账号信息
         /// </summary>
         [JsonProperty("CloudStorage")]
         public CloudStorage CloudStorage{ get; set; }
 
         /// <summary>
-        /// 腾讯云云点播的账号信息。
+        /// 腾讯云云点播Vod的存储信息
         /// </summary>
         [JsonProperty("CloudVod")]
         public CloudVod CloudVod{ get; set; }

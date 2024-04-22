@@ -31,6 +31,12 @@ namespace TencentCloud.Lke.V20231130.Models
         public EmbeddingObject[] Data{ get; set; }
 
         /// <summary>
+        /// 消耗量，返回TotalToken
+        /// </summary>
+        [JsonProperty("Usage")]
+        public Usage Usage{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamObj(map, prefix + "Usage.", this.Usage);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
