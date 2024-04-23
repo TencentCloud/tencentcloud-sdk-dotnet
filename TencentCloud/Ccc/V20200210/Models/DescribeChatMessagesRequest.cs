@@ -41,6 +41,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// 服务记录ID（废弃）
         /// </summary>
         [JsonProperty("CdrId")]
+        [System.Obsolete]
         public string CdrId{ get; set; }
 
         /// <summary>
@@ -62,7 +63,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? Order{ get; set; }
 
         /// <summary>
-        /// 服务记录 SessionID（必填）
+        /// 服务记录 SessionID
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }

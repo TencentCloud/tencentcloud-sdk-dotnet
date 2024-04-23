@@ -222,6 +222,27 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
+        /// <summary>
+        /// 国内国际编码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RegionType")]
+        public string RegionType{ get; set; }
+
+        /// <summary>
+        /// 国内国际：资源所属区域类型（国内、国际）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RegionTypeName")]
+        public string RegionTypeName{ get; set; }
+
+        /// <summary>
+        /// 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReserveDetail")]
+        public string ReserveDetail{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -259,6 +280,9 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "BillDay", this.BillDay);
             this.SetParamSimple(map, prefix + "BillMonth", this.BillMonth);
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "RegionType", this.RegionType);
+            this.SetParamSimple(map, prefix + "RegionTypeName", this.RegionTypeName);
+            this.SetParamSimple(map, prefix + "ReserveDetail", this.ReserveDetail);
         }
     }
 }

@@ -43,13 +43,13 @@ namespace TencentCloud.Live.V20180801.Models
         public string AppName{ get; set; }
 
         /// <summary>
-        /// 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime及当前时间，且EndTime - StartTime不能超过24小时。
+        /// 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime及当前时间，且小于当前时间+7天。
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。StartTime不能超过当前时间+6天。
+        /// 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。EndTime - StartTime不能超过24小时。
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }

@@ -48,6 +48,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("TraceFlag")]
         public bool? TraceFlag{ get; set; }
 
+        /// <summary>
+        /// 是否创建镜像队列策略，默认值 true
+        /// </summary>
+        [JsonProperty("MirrorQueuePolicyFlag")]
+        public bool? MirrorQueuePolicyFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "VirtualHost", this.VirtualHost);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "TraceFlag", this.TraceFlag);
+            this.SetParamSimple(map, prefix + "MirrorQueuePolicyFlag", this.MirrorQueuePolicyFlag);
         }
     }
 }

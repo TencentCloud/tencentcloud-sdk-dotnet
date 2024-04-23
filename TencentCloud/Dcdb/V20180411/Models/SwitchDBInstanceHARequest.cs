@@ -36,6 +36,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
+        /// <summary>
+        /// 指定分片实例id进行切换
+        /// </summary>
+        [JsonProperty("ShardInstanceIds")]
+        public string[] ShardInstanceIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamArraySimple(map, prefix + "ShardInstanceIds.", this.ShardInstanceIds);
         }
     }
 }

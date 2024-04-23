@@ -28,7 +28,7 @@ namespace TencentCloud.Cdn.V20180606
 
        private const string endpoint = "cdn.tencentcloudapi.com";
        private const string version = "2018-06-06";
-       private const string sdkVersion = "SDK_NET_3.0.991";
+       private const string sdkVersion = "SDK_NET_3.0.992";
 
         /// <summary>
         /// Client constructor.
@@ -1560,7 +1560,7 @@ namespace TencentCloud.Cdn.V20180606
         /// 注意：
         /// Route 字段，使用点分隔，最后一段称为叶子节点，非叶子节点配置保持不变；
         /// Value 字段，使用 json 进行序列化，其中固定 update 作为 key，配置路径值参考 https://cloud.tencent.com/document/product/228/41116 接口各配置项复杂类型，为配置路径对应复杂类型下的节点。
-        /// 云审计相关：接口的入参可能包含密钥等敏感信息，所以此接口的入参不会上报到云审计。
+        /// 操作审计相关：接口的入参可能包含密钥等敏感信息，所以此接口的入参不会上报到操作审计。
         /// </summary>
         /// <param name="req"><see cref="ModifyDomainConfigRequest"/></param>
         /// <returns><see cref="ModifyDomainConfigResponse"/></returns>
@@ -1574,7 +1574,7 @@ namespace TencentCloud.Cdn.V20180606
         /// 注意：
         /// Route 字段，使用点分隔，最后一段称为叶子节点，非叶子节点配置保持不变；
         /// Value 字段，使用 json 进行序列化，其中固定 update 作为 key，配置路径值参考 https://cloud.tencent.com/document/product/228/41116 接口各配置项复杂类型，为配置路径对应复杂类型下的节点。
-        /// 云审计相关：接口的入参可能包含密钥等敏感信息，所以此接口的入参不会上报到云审计。
+        /// 操作审计相关：接口的入参可能包含密钥等敏感信息，所以此接口的入参不会上报到操作审计。
         /// </summary>
         /// <param name="req"><see cref="ModifyDomainConfigRequest"/></param>
         /// <returns><see cref="ModifyDomainConfigResponse"/></returns>

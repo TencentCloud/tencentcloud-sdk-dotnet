@@ -193,6 +193,27 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Node{ get; set; }
 
         /// <summary>
+        /// 仲裁队列死信一致性策略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeadLetterStrategy")]
+        public string DeadLetterStrategy{ get; set; }
+
+        /// <summary>
+        /// 仲裁队列的领导者选举策略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QueueLeaderLocator")]
+        public string QueueLeaderLocator{ get; set; }
+
+        /// <summary>
+        /// 仲裁队列的初始副本组大小
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QuorumInitialGroupSize")]
+        public long? QuorumInitialGroupSize{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -228,6 +249,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MaxInMemoryBytes", this.MaxInMemoryBytes);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Node", this.Node);
+            this.SetParamSimple(map, prefix + "DeadLetterStrategy", this.DeadLetterStrategy);
+            this.SetParamSimple(map, prefix + "QueueLeaderLocator", this.QueueLeaderLocator);
+            this.SetParamSimple(map, prefix + "QuorumInitialGroupSize", this.QuorumInitialGroupSize);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

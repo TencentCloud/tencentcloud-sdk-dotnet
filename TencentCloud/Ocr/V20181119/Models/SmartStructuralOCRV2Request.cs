@@ -85,6 +85,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// PropertyOwnershipCertificate -- 房产证识别
         /// RealEstateCertificate --不动产权证识别
         /// HouseEncumbranceCertificate -- 他权证识别
+        /// CarInsurance -- 车险保单
         /// </summary>
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }

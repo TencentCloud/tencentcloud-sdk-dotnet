@@ -121,6 +121,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string[] TagKeys{ get; set; }
 
         /// <summary>
+        /// 标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
         /// 实例类型过滤，1-独享实例，2-主实例，3-灾备实例，多个按逗号分隔
         /// </summary>
         [JsonProperty("FilterInstanceType")]
@@ -160,6 +166,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "ExclusterType", this.ExclusterType);
             this.SetParamArraySimple(map, prefix + "ExclusterIds.", this.ExclusterIds);
             this.SetParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "FilterInstanceType", this.FilterInstanceType);
             this.SetParamArraySimple(map, prefix + "Status.", this.Status);
             this.SetParamArraySimple(map, prefix + "ExcludeStatus.", this.ExcludeStatus);
