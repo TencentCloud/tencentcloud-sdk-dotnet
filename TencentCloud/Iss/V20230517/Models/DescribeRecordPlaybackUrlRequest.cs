@@ -42,6 +42,12 @@ namespace TencentCloud.Iss.V20230517.Models
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
+        /// <summary>
+        /// 是否获取内网地址
+        /// </summary>
+        [JsonProperty("IsInternal")]
+        public bool? IsInternal{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "IsInternal", this.IsInternal);
         }
     }
 }

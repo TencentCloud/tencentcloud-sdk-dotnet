@@ -65,6 +65,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string OriginProtocol{ get; set; }
 
         /// <summary>
+        /// 域名证书信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Certificate")]
+        public AccelerationDomainCertificate Certificate{ get; set; }
+
+        /// <summary>
         /// HTTP回源端口。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -120,13 +127,6 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("OwnershipVerification")]
         public OwnershipVerification OwnershipVerification{ get; set; }
 
-        /// <summary>
-        /// 域名证书信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Certificate")]
-        public AccelerationDomainCertificate Certificate{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,6 +138,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "DomainStatus", this.DomainStatus);
             this.SetParamObj(map, prefix + "OriginDetail.", this.OriginDetail);
             this.SetParamSimple(map, prefix + "OriginProtocol", this.OriginProtocol);
+            this.SetParamObj(map, prefix + "Certificate.", this.Certificate);
             this.SetParamSimple(map, prefix + "HttpOriginPort", this.HttpOriginPort);
             this.SetParamSimple(map, prefix + "HttpsOriginPort", this.HttpsOriginPort);
             this.SetParamSimple(map, prefix + "IPv6Status", this.IPv6Status);
@@ -146,7 +147,6 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
             this.SetParamObj(map, prefix + "OwnershipVerification.", this.OwnershipVerification);
-            this.SetParamObj(map, prefix + "Certificate.", this.Certificate);
         }
     }
 }

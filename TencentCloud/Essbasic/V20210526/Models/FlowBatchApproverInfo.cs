@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Lke.V20231130.Models
+namespace TencentCloud.Essbasic.V20210526.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryParseDocResultRequest : AbstractModel
+    public class FlowBatchApproverInfo : AbstractModel
     {
         
         /// <summary>
-        /// 任务ID
+        /// 合同流程ID。
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("FlowId")]
+        public string FlowId{ get; set; }
+
+        /// <summary>
+        /// 签署节点ID，用于生成动态签署人链接完成领取。注：`生成动态签署人补充链接时必传。`
+        /// </summary>
+        [JsonProperty("RecipientId")]
+        public string RecipientId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamSimple(map, prefix + "RecipientId", this.RecipientId);
         }
     }
 }

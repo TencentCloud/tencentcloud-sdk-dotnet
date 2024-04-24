@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.992";
+       private const string sdkVersion = "SDK_NET_3.0.993";
 
         /// <summary>
         /// Client constructor.
@@ -1375,48 +1375,6 @@ namespace TencentCloud.Lke.V20231130
         public ModifyRejectedQuestionResponse ModifyRejectedQuestionSync(ModifyRejectedQuestionRequest req)
         {
             return InternalRequestAsync<ModifyRejectedQuestionResponse>(req, "ModifyRejectedQuestion")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 解析拆分文件
-        /// </summary>
-        /// <param name="req"><see cref="ParseDocRequest"/></param>
-        /// <returns><see cref="ParseDocResponse"/></returns>
-        public Task<ParseDocResponse> ParseDoc(ParseDocRequest req)
-        {
-            return InternalRequestAsync<ParseDocResponse>(req, "ParseDoc");
-        }
-
-        /// <summary>
-        /// 解析拆分文件
-        /// </summary>
-        /// <param name="req"><see cref="ParseDocRequest"/></param>
-        /// <returns><see cref="ParseDocResponse"/></returns>
-        public ParseDocResponse ParseDocSync(ParseDocRequest req)
-        {
-            return InternalRequestAsync<ParseDocResponse>(req, "ParseDoc")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询文件解析结果
-        /// </summary>
-        /// <param name="req"><see cref="QueryParseDocResultRequest"/></param>
-        /// <returns><see cref="QueryParseDocResultResponse"/></returns>
-        public Task<QueryParseDocResultResponse> QueryParseDocResult(QueryParseDocResultRequest req)
-        {
-            return InternalRequestAsync<QueryParseDocResultResponse>(req, "QueryParseDocResult");
-        }
-
-        /// <summary>
-        /// 查询文件解析结果
-        /// </summary>
-        /// <param name="req"><see cref="QueryParseDocResultRequest"/></param>
-        /// <returns><see cref="QueryParseDocResultResponse"/></returns>
-        public QueryParseDocResultResponse QueryParseDocResultSync(QueryParseDocResultRequest req)
-        {
-            return InternalRequestAsync<QueryParseDocResultResponse>(req, "QueryParseDocResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

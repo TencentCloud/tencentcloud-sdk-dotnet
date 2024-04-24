@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{350F9F65-0799-338B-90EA-9EBA008679C1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.992</VersionPrefix>
+    <VersionPrefix>3.0.993</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -204,13 +204,9 @@
     <Compile Include="V20231130\Models\MsgRecord.cs" />
     <Compile Include="V20231130\Models\MsgRecordReference.cs" />
     <Compile Include="V20231130\Models\Option.cs" />
-    <Compile Include="V20231130\Models\ParseDocRequest.cs" />
-    <Compile Include="V20231130\Models\ParseDocResponse.cs" />
     <Compile Include="V20231130\Models\QACate.cs" />
     <Compile Include="V20231130\Models\QAList.cs" />
     <Compile Include="V20231130\Models\QAQuery.cs" />
-    <Compile Include="V20231130\Models\QueryParseDocResultRequest.cs" />
-    <Compile Include="V20231130\Models\QueryParseDocResultResponse.cs" />
     <Compile Include="V20231130\Models\QueryRewriteRequest.cs" />
     <Compile Include="V20231130\Models\QueryRewriteResponse.cs" />
     <Compile Include="V20231130\Models\RateMsgRecordRequest.cs" />

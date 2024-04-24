@@ -56,6 +56,12 @@ namespace TencentCloud.Iss.V20230517.Models
         [JsonProperty("IsRespActualTime")]
         public bool? IsRespActualTime{ get; set; }
 
+        /// <summary>
+        /// 是否返回内网下载URL，默认是false，返回公网下载URL，true则返回内网下载URL
+        /// </summary>
+        [JsonProperty("IsInternal")]
+        public bool? IsInternal{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +73,7 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "FileType", this.FileType);
             this.SetParamSimple(map, prefix + "IsRespActualTime", this.IsRespActualTime);
+            this.SetParamSimple(map, prefix + "IsInternal", this.IsInternal);
         }
     }
 }

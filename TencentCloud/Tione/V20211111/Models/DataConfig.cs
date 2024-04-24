@@ -79,6 +79,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("CFSTurboSource")]
         public CFSTurbo CFSTurboSource{ get; set; }
 
+        /// <summary>
+        /// 来自本地磁盘的信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LocalDiskSource")]
+        public LocalDisk LocalDiskSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +100,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "HDFSSource.", this.HDFSSource);
             this.SetParamObj(map, prefix + "GooseFSSource.", this.GooseFSSource);
             this.SetParamObj(map, prefix + "CFSTurboSource.", this.CFSTurboSource);
+            this.SetParamObj(map, prefix + "LocalDiskSource.", this.LocalDiskSource);
         }
     }
 }

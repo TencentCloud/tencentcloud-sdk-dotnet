@@ -28,7 +28,7 @@ namespace TencentCloud.Tdid.V20210519
 
        private const string endpoint = "tdid.tencentcloudapi.com";
        private const string version = "2021-05-19";
-       private const string sdkVersion = "SDK_NET_3.0.992";
+       private const string sdkVersion = "SDK_NET_3.0.993";
 
         /// <summary>
         /// Client constructor.
@@ -327,7 +327,7 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
-        /// 查询凭证模版内容
+        /// 查询凭证模板内容
         /// </summary>
         /// <param name="req"><see cref="QueryCPTRequest"/></param>
         /// <returns><see cref="QueryCPTResponse"/></returns>
@@ -337,7 +337,7 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
-        /// 查询凭证模版内容
+        /// 查询凭证模板内容
         /// </summary>
         /// <param name="req"><see cref="QueryCPTRequest"/></param>
         /// <returns><see cref="QueryCPTResponse"/></returns>

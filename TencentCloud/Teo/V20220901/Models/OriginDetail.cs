@@ -30,7 +30,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>COS：腾讯云 COS 对象存储源站；</li>
         /// <li>AWS_S3：AWS S3 对象存储源站；</li>
         /// <li>ORIGIN_GROUP：源站组类型源站；</li>
-        ///  <li>VODEO：云点播（混合云版）；</li>
+        /// <li>VODEO：云点播（混合云版）；</li>
         /// <li>SPACE：源站卸载，当前仅白名单开放；</li>
         /// <li>LB：负载均衡，当前仅白名单开放。</li>
         /// </summary>
@@ -67,10 +67,10 @@ namespace TencentCloud.Teo.V20220901.Models
         public string BackOriginGroupName{ get; set; }
 
         /// <summary>
-        /// 指定是否允许访问私有对象存储源站，该参数仅当源站类型 OriginType = COS 或 AWS_S3 时会生效，取值有：
+        /// 指定是否允许访问私有对象存储源站，该参数仅当源站类型OriginType = COS 或 AWS_S3 时会生效，取值有：
         /// <li>on：使用私有鉴权；</li>
         /// <li>off：不使用私有鉴权。</li>
-        /// 不填写，默认值为off。
+        /// 不填写，默认值为 off。
         /// </summary>
         [JsonProperty("PrivateAccess")]
         public string PrivateAccess{ get; set; }
@@ -89,7 +89,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? VodeoSubAppId{ get; set; }
 
         /// <summary>
-        /// MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>	
+        /// MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>
         /// </summary>
         [JsonProperty("VodeoDistributionRange")]
         public string VodeoDistributionRange{ get; set; }

@@ -15,44 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Lke.V20231130.Models
+namespace TencentCloud.Apm.V20210622.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryParseDocResultResponse : AbstractModel
+    public class DescribeTagValuesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 等待 / 执行中 / 成功 / 失败
+        /// 维度值列表
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
-
-        /// <summary>
-        /// 解析后的文件内容
-        /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// 文件下载地址
-        /// </summary>
-        [JsonProperty("Url")]
-        public string Url{ get; set; }
-
-        /// <summary>
-        /// 解析失败原因
-        /// </summary>
-        [JsonProperty("Reason")]
-        public string Reason{ get; set; }
-
-        /// <summary>
-        /// 消耗量，输出页数
-        /// </summary>
-        [JsonProperty("Usage")]
-        public Usage Usage{ get; set; }
+        [JsonProperty("Values")]
+        public string[] Values{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -66,11 +42,7 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Url", this.Url);
-            this.SetParamSimple(map, prefix + "Reason", this.Reason);
-            this.SetParamObj(map, prefix + "Usage.", this.Usage);
+            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

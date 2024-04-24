@@ -37,7 +37,7 @@ namespace TencentCloud.Cloudstudio.V20230508.Models
         public ulong? TokenExpiredLimitSec{ get; set; }
 
         /// <summary>
-        /// token 授权策略，可选值为 workspace-run-only, all。默认为 all
+        /// token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only
         /// </summary>
         [JsonProperty("Policies")]
         public string[] Policies{ get; set; }

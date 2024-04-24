@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.992";
+       private const string sdkVersion = "SDK_NET_3.0.993";
 
         /// <summary>
         /// Client constructor.
@@ -1142,6 +1142,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DescribeDeviceFirmWareResponse DescribeDeviceFirmWareSync(DescribeDeviceFirmWareRequest req)
         {
             return InternalRequestAsync<DescribeDeviceFirmWareResponse>(req, "DescribeDeviceFirmWare")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取设备当前固件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceFirmwaresRequest"/></param>
+        /// <returns><see cref="DescribeDeviceFirmwaresResponse"/></returns>
+        public Task<DescribeDeviceFirmwaresResponse> DescribeDeviceFirmwares(DescribeDeviceFirmwaresRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceFirmwaresResponse>(req, "DescribeDeviceFirmwares");
+        }
+
+        /// <summary>
+        /// 获取设备当前固件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceFirmwaresRequest"/></param>
+        /// <returns><see cref="DescribeDeviceFirmwaresResponse"/></returns>
+        public DescribeDeviceFirmwaresResponse DescribeDeviceFirmwaresSync(DescribeDeviceFirmwaresRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceFirmwaresResponse>(req, "DescribeDeviceFirmwares")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

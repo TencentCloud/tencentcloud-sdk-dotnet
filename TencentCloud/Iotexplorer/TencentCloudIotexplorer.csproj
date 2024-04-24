@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.992</VersionPrefix>
+    <VersionPrefix>3.0.993</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -159,6 +159,8 @@
     <Compile Include="V20190423\Models\DescribeDeviceDataResponse.cs" />
     <Compile Include="V20190423\Models\DescribeDeviceFirmWareRequest.cs" />
     <Compile Include="V20190423\Models\DescribeDeviceFirmWareResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeDeviceFirmwaresRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeDeviceFirmwaresResponse.cs" />
     <Compile Include="V20190423\Models\DescribeDeviceLocationSolveRequest.cs" />
     <Compile Include="V20190423\Models\DescribeDeviceLocationSolveResponse.cs" />
     <Compile Include="V20190423\Models\DescribeDevicePackagesRequest.cs" />
@@ -205,6 +207,7 @@
     <Compile Include="V20190423\Models\DescribeTopicRuleResponse.cs" />
     <Compile Include="V20190423\Models\DeviceData.cs" />
     <Compile Include="V20190423\Models\DeviceDataHistoryItem.cs" />
+    <Compile Include="V20190423\Models\DeviceFirmwareInfo.cs" />
     <Compile Include="V20190423\Models\DeviceInfo.cs" />
     <Compile Include="V20190423\Models\DevicePositionItem.cs" />
     <Compile Include="V20190423\Models\DeviceSignatureInfo.cs" />

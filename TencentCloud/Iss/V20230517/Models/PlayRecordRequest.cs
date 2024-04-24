@@ -54,6 +54,12 @@ namespace TencentCloud.Iss.V20230517.Models
         [JsonProperty("Resolution")]
         public string Resolution{ get; set; }
 
+        /// <summary>
+        /// 是否内网
+        /// </summary>
+        [JsonProperty("IsInternal")]
+        public bool? IsInternal{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "End", this.End);
             this.SetParamSimple(map, prefix + "StreamType", this.StreamType);
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
+            this.SetParamSimple(map, prefix + "IsInternal", this.IsInternal);
         }
     }
 }

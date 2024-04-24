@@ -37,7 +37,7 @@ namespace TencentCloud.Ims.V20201229.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
+        /// 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Apm.V20210622
 
        private const string endpoint = "apm.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.992";
+       private const string sdkVersion = "SDK_NET_3.0.993";
 
         /// <summary>
         /// Client constructor.
@@ -113,6 +113,27 @@ namespace TencentCloud.Apm.V20210622
         public DescribeApmInstancesResponse DescribeApmInstancesSync(DescribeApmInstancesRequest req)
         {
             return InternalRequestAsync<DescribeApmInstancesResponse>(req, "DescribeApmInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询应用配置信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGeneralApmApplicationConfigRequest"/></param>
+        /// <returns><see cref="DescribeGeneralApmApplicationConfigResponse"/></returns>
+        public Task<DescribeGeneralApmApplicationConfigResponse> DescribeGeneralApmApplicationConfig(DescribeGeneralApmApplicationConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeGeneralApmApplicationConfigResponse>(req, "DescribeGeneralApmApplicationConfig");
+        }
+
+        /// <summary>
+        /// 查询应用配置信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGeneralApmApplicationConfigRequest"/></param>
+        /// <returns><see cref="DescribeGeneralApmApplicationConfigResponse"/></returns>
+        public DescribeGeneralApmApplicationConfigResponse DescribeGeneralApmApplicationConfigSync(DescribeGeneralApmApplicationConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeGeneralApmApplicationConfigResponse>(req, "DescribeGeneralApmApplicationConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -203,6 +224,27 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
+        /// 根据维度名和过滤条件，查询维度数据.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTagValuesRequest"/></param>
+        /// <returns><see cref="DescribeTagValuesResponse"/></returns>
+        public Task<DescribeTagValuesResponse> DescribeTagValues(DescribeTagValuesRequest req)
+        {
+            return InternalRequestAsync<DescribeTagValuesResponse>(req, "DescribeTagValues");
+        }
+
+        /// <summary>
+        /// 根据维度名和过滤条件，查询维度数据.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTagValuesRequest"/></param>
+        /// <returns><see cref="DescribeTagValuesResponse"/></returns>
+        public DescribeTagValuesResponse DescribeTagValuesSync(DescribeTagValuesRequest req)
+        {
+            return InternalRequestAsync<DescribeTagValuesResponse>(req, "DescribeTagValues")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改APM实例接口
         /// </summary>
         /// <param name="req"><see cref="ModifyApmInstanceRequest"/></param>
@@ -220,6 +262,27 @@ namespace TencentCloud.Apm.V20210622
         public ModifyApmInstanceResponse ModifyApmInstanceSync(ModifyApmInstanceRequest req)
         {
             return InternalRequestAsync<ModifyApmInstanceResponse>(req, "ModifyApmInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 对外开放的openApi，客户可以灵活的指定需要修改的字段，再加入需要修改的服务列表.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGeneralApmApplicationConfigRequest"/></param>
+        /// <returns><see cref="ModifyGeneralApmApplicationConfigResponse"/></returns>
+        public Task<ModifyGeneralApmApplicationConfigResponse> ModifyGeneralApmApplicationConfig(ModifyGeneralApmApplicationConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyGeneralApmApplicationConfigResponse>(req, "ModifyGeneralApmApplicationConfig");
+        }
+
+        /// <summary>
+        /// 对外开放的openApi，客户可以灵活的指定需要修改的字段，再加入需要修改的服务列表.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGeneralApmApplicationConfigRequest"/></param>
+        /// <returns><see cref="ModifyGeneralApmApplicationConfigResponse"/></returns>
+        public ModifyGeneralApmApplicationConfigResponse ModifyGeneralApmApplicationConfigSync(ModifyGeneralApmApplicationConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyGeneralApmApplicationConfigResponse>(req, "ModifyGeneralApmApplicationConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

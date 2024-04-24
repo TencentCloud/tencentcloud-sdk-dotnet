@@ -15,45 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Lke.V20231130.Models
+namespace TencentCloud.Apm.V20210622.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ParseDocRequest : AbstractModel
+    public class Instrument : AbstractModel
     {
         
         /// <summary>
-        /// 文件名称(需要包括文件后缀, 最大长度1024字节)
+        /// 组件名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 文件下载链接 (支持的文件类型: docx, txt, markdown, pdf)
+        /// 组件开关
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Url")]
-        public string Url{ get; set; }
-
-        /// <summary>
-        /// 任务ID, 用于幂等去重, 业务自行定义(最大长度64字节)
-        /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
-
-        /// <summary>
-        /// 切分策略
-        /// </summary>
-        [JsonProperty("Policy")]
-        public string Policy{ get; set; }
-
-        /// <summary>
-        /// 默认值: parse
-        /// </summary>
-        [JsonProperty("Operate")]
-        [System.Obsolete]
-        public string Operate{ get; set; }
+        [JsonProperty("Enable")]
+        public bool? Enable{ get; set; }
 
 
         /// <summary>
@@ -62,10 +45,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Url", this.Url);
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "Policy", this.Policy);
-            this.SetParamSimple(map, prefix + "Operate", this.Operate);
+            this.SetParamSimple(map, prefix + "Enable", this.Enable);
         }
     }
 }

@@ -126,6 +126,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("JumpToDetail")]
         public bool? JumpToDetail{ get; set; }
 
+        /// <summary>
+        /// 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
+        /// </summary>
+        [JsonProperty("FlowBatchUrlInfo")]
+        public FlowBatchUrlInfo FlowBatchUrlInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
             this.SetParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
             this.SetParamSimple(map, prefix + "JumpToDetail", this.JumpToDetail);
+            this.SetParamObj(map, prefix + "FlowBatchUrlInfo.", this.FlowBatchUrlInfo);
         }
     }
 }
