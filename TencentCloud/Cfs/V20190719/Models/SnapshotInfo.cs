@@ -79,7 +79,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public ulong? Percent{ get; set; }
 
         /// <summary>
-        /// 帐号ID
+        /// 账号ID
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }

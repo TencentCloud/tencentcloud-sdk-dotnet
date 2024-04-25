@@ -91,6 +91,15 @@ namespace TencentCloud.Teo.V20220901.Models
         public ulong? Sample{ get; set; }
 
         /// <summary>
+        /// 日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：
+        /// <li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
+        /// <li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogFormat")]
+        public LogFormat LogFormat{ get; set; }
+
+        /// <summary>
         /// CLS 的配置信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -140,6 +149,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArrayObj(map, prefix + "CustomFields.", this.CustomFields);
             this.SetParamArrayObj(map, prefix + "DeliveryConditions.", this.DeliveryConditions);
             this.SetParamSimple(map, prefix + "Sample", this.Sample);
+            this.SetParamObj(map, prefix + "LogFormat.", this.LogFormat);
             this.SetParamObj(map, prefix + "CLS.", this.CLS);
             this.SetParamObj(map, prefix + "CustomEndpoint.", this.CustomEndpoint);
             this.SetParamObj(map, prefix + "S3.", this.S3);

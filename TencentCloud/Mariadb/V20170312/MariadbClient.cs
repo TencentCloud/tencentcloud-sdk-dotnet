@@ -28,7 +28,7 @@ namespace TencentCloud.Mariadb.V20170312
 
        private const string endpoint = "mariadb.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.993";
+       private const string sdkVersion = "SDK_NET_3.0.994";
 
         /// <summary>
         /// Client constructor.
@@ -96,7 +96,7 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// 取消DCN同步
+        /// 本接口（CancelDcnJob）用于取消DCN同步
         /// </summary>
         /// <param name="req"><see cref="CancelDcnJobRequest"/></param>
         /// <returns><see cref="CancelDcnJobResponse"/></returns>
@@ -106,7 +106,7 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// 取消DCN同步
+        /// 本接口（CancelDcnJob）用于取消DCN同步
         /// </summary>
         /// <param name="req"><see cref="CancelDcnJobRequest"/></param>
         /// <returns><see cref="CancelDcnJobResponse"/></returns>

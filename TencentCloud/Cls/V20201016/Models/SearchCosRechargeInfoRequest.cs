@@ -61,7 +61,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Prefix{ get; set; }
 
         /// <summary>
-        /// 压缩模式:   "", "gzip", "lzop", "snappy”;   默认""
+        /// 压缩模式:   "", "gzip", "lzop", "snappy";   默认""
         /// </summary>
         [JsonProperty("Compress")]
         public string Compress{ get; set; }

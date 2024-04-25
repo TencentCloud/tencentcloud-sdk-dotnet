@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.993";
+       private const string sdkVersion = "SDK_NET_3.0.994";
 
         /// <summary>
         /// Client constructor.
@@ -890,6 +890,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeBinlogsResponse DescribeBinlogsSync(DescribeBinlogsRequest req)
         {
             return InternalRequestAsync<DescribeBinlogsResponse>(req, "DescribeBinlogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeChangedParamsAfterUpgrade）用于查询升降配运行参数对比
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChangedParamsAfterUpgradeRequest"/></param>
+        /// <returns><see cref="DescribeChangedParamsAfterUpgradeResponse"/></returns>
+        public Task<DescribeChangedParamsAfterUpgradeResponse> DescribeChangedParamsAfterUpgrade(DescribeChangedParamsAfterUpgradeRequest req)
+        {
+            return InternalRequestAsync<DescribeChangedParamsAfterUpgradeResponse>(req, "DescribeChangedParamsAfterUpgrade");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeChangedParamsAfterUpgrade）用于查询升降配运行参数对比
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChangedParamsAfterUpgradeRequest"/></param>
+        /// <returns><see cref="DescribeChangedParamsAfterUpgradeResponse"/></returns>
+        public DescribeChangedParamsAfterUpgradeResponse DescribeChangedParamsAfterUpgradeSync(DescribeChangedParamsAfterUpgradeRequest req)
+        {
+            return InternalRequestAsync<DescribeChangedParamsAfterUpgradeResponse>(req, "DescribeChangedParamsAfterUpgrade")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

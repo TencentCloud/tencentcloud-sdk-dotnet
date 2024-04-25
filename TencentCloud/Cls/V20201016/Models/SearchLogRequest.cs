@@ -55,6 +55,7 @@ namespace TencentCloud.Cls.V20201016.Models
         /// <summary>
         /// - 要检索分析的日志主题ID，仅能指定一个日志主题。
         /// - 如需同时检索多个日志主题，请使用Topics参数。
+        /// - TopicId 和 Topics 不能同时使用，在一次请求中有且只能选择一个。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
@@ -62,7 +63,7 @@ namespace TencentCloud.Cls.V20201016.Models
         /// <summary>
         /// - 要检索分析的日志主题列表，最大支持20个日志主题。
         /// - 检索单个日志主题时请使用TopicId。
-        /// - 不能同时使用TopicId和Topics。
+        /// - TopicId 和 Topics 不能同时使用，在一次请求中有且只能选择一个。
         /// </summary>
         [JsonProperty("Topics")]
         public MultiTopicSearchInformation[] Topics{ get; set; }

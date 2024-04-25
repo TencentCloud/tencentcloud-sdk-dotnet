@@ -31,12 +31,6 @@ namespace TencentCloud.Teo.V20220901.Models
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 状态。
-        /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
-
-        /// <summary>
         /// 资源。
         /// </summary>
         [JsonProperty("Target")]
@@ -47,6 +41,16 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
+
+        /// <summary>
+        /// 状态。取值有：
+        /// <li>processing：处理中；</li>
+        /// <li>success：成功；</li>
+        /// <li> failed：失败；</li>
+        /// <li>timeout：超时。</li>
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
         /// <summary>
         /// 任务创建时间。
@@ -67,9 +71,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "JobId", this.JobId);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Target", this.Target);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }

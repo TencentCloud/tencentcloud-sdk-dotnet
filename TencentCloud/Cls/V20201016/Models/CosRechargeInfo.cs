@@ -130,6 +130,20 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("ExtractRuleInfo")]
         public ExtractRuleInfo ExtractRuleInfo{ get; set; }
 
+        /// <summary>
+        /// COS导入任务类型。1：一次性导入任务；2：持续性导入任务。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskType")]
+        public ulong? TaskType{ get; set; }
+
+        /// <summary>
+        /// 元数据。支持 bucket，object。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Metadata")]
+        public string[] Metadata{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -151,6 +165,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Progress", this.Progress);
             this.SetParamSimple(map, prefix + "Compress", this.Compress);
             this.SetParamObj(map, prefix + "ExtractRuleInfo.", this.ExtractRuleInfo);
+            this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
+            this.SetParamArraySimple(map, prefix + "Metadata.", this.Metadata);
         }
     }
 }

@@ -55,7 +55,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string UniqueSubnetId{ get; set; }
 
         /// <summary>
-        /// 数据库代理组节点个数
+        /// 数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)
         /// </summary>
         [JsonProperty("ProxyCount")]
         public long? ProxyCount{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 数据库节点信息
+        /// 数据库节点信息（该参数与ProxyCount需要任选一个输入）
         /// </summary>
         [JsonProperty("ProxyZones")]
         public ProxyZone[] ProxyZones{ get; set; }

@@ -75,26 +75,32 @@ namespace TencentCloud.Cloudstudio.V20230508.Models
         /// <summary>
         /// 应用名称
         /// </summary>
-        [JsonProperty("AppId")]
-        public long? AppId{ get; set; }
+        [JsonProperty("TenantAppId")]
+        public long? TenantAppId{ get; set; }
 
         /// <summary>
         /// 用户UIN
         /// </summary>
-        [JsonProperty("Uin")]
-        public string Uin{ get; set; }
+        [JsonProperty("TenantUin")]
+        public string TenantUin{ get; set; }
 
         /// <summary>
         /// VPCID
         /// </summary>
-        [JsonProperty("UniqVpcId")]
-        public string UniqVpcId{ get; set; }
+        [JsonProperty("TenantUniqVpcId")]
+        public string TenantUniqVpcId{ get; set; }
 
         /// <summary>
         /// 子网ID
         /// </summary>
-        [JsonProperty("SubnetId")]
-        public string SubnetId{ get; set; }
+        [JsonProperty("TenantSubnetId")]
+        public string TenantSubnetId{ get; set; }
+
+        /// <summary>
+        /// 地域
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
 
 
         /// <summary>
@@ -110,10 +116,11 @@ namespace TencentCloud.Cloudstudio.V20230508.Models
             this.SetParamArrayObj(map, prefix + "Envs.", this.Envs);
             this.SetParamArraySimple(map, prefix + "Extensions.", this.Extensions);
             this.SetParamObj(map, prefix + "Lifecycle.", this.Lifecycle);
-            this.SetParamSimple(map, prefix + "AppId", this.AppId);
-            this.SetParamSimple(map, prefix + "Uin", this.Uin);
-            this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
-            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "TenantAppId", this.TenantAppId);
+            this.SetParamSimple(map, prefix + "TenantUin", this.TenantUin);
+            this.SetParamSimple(map, prefix + "TenantUniqVpcId", this.TenantUniqVpcId);
+            this.SetParamSimple(map, prefix + "TenantSubnetId", this.TenantSubnetId);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
         }
     }
 }

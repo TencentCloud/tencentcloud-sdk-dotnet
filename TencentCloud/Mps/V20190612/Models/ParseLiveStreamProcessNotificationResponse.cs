@@ -28,6 +28,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 直播流处理结果类型，包含：
         /// <li>AiReviewResult：内容审核结果；</li>
         /// <li>AiRecognitionResult：内容识别结果；</li>
+        /// <li>LiveRecordResult：直播录制结果；</li>
         /// <li>ProcessEof：直播流处理结束。</li>
         /// </summary>
         [JsonProperty("NotificationType")]
@@ -75,6 +76,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public LiveStreamAiQualityControlResultInfo AiQualityControlResultInfo{ get; set; }
 
         /// <summary>
+        /// 直播录制结果，当 NotificationType 为 LiveRecordResult 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LiveRecordResultInfo")]
+        public LiveStreamRecordResultInfo LiveRecordResultInfo{ get; set; }
+
+        /// <summary>
         /// 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
         /// </summary>
         [JsonProperty("SessionId")]
@@ -105,6 +113,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "AiRecognitionResultInfo.", this.AiRecognitionResultInfo);
             this.SetParamObj(map, prefix + "AiAnalysisResultInfo.", this.AiAnalysisResultInfo);
             this.SetParamObj(map, prefix + "AiQualityControlResultInfo.", this.AiQualityControlResultInfo);
+            this.SetParamObj(map, prefix + "LiveRecordResultInfo.", this.LiveRecordResultInfo);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

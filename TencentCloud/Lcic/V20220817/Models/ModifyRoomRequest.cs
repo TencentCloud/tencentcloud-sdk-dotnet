@@ -170,7 +170,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public long? EndDelayTime{ get; set; }
 
         /// <summary>
-        /// 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
+        /// 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）。 目前支持从回放直播模式（伪直播）改为常规模式，不支持从常规模式改为回放直播模式（伪直播）
         /// </summary>
         [JsonProperty("LiveType")]
         public ulong? LiveType{ get; set; }

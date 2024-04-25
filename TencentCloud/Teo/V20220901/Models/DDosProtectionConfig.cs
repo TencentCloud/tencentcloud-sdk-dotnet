@@ -27,8 +27,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// 中国大陆地区独立 DDoS 防护的规格。详情请参考 [独立 DDoS 防护相关费用](https://cloud.tencent.com/document/product/1552/94162)
         /// <li>PLATFORM：平台默认防护，即不开启独立 DDoS 防护；</li>
-        /// <li>BASE30_MAX300：开启独立 DDoS 防护，提供 30 Gbps 保底防护带宽，可配置最高 300 Gpbs 弹性防护带宽；</li>
-        /// <li>BASE60_MAX600：开启独立 DDoS 防护，提供 60 Gbps 保底防护带宽，可配置最高 600 Gpbs 弹性防护带宽。</li>不填写参数时，取默认值 PLATFORM。
+        /// <li>BASE30_MAX300：开启独立 DDoS 防护，提供 30 Gbps 保底防护带宽以及 300 Gbps 弹性防护带宽；</li>
+        /// <li>BASE60_MAX600：开启独立 DDoS 防护，提供 60 Gbps 保底防护带宽以及 600 Gbps 弹性防护带宽。</li>不填写参数时，取默认值 PLATFORM。
         /// </summary>
         [JsonProperty("LevelMainland")]
         public string LevelMainland{ get; set; }
@@ -46,7 +46,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// 全球（除中国大陆以外）地区独立 DDoS 防护的规格。
         /// <li>PLATFORM：平台默认防护，即不开启独立 DDoS 防护；</li>
-        /// <li>ANYCAST300：开启独立 DDoS 防护，提供合计最大 300 Gbps 防护带宽；</li>
+        /// <li>ANYCAST300：开启独立 DDoS 防护，提供 300 Gbps 防护带宽；</li>
         /// <li>ANYCAST_ALLIN：开启独立 DDoS 防护，使用全部可用防护资源进行防护。</li>不填写参数时，取默认值 PLATFORM。
         /// </summary>
         [JsonProperty("LevelOverseas")]

@@ -31,7 +31,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// WEB 安全模块开关，0或1
+        /// Web 安全模块开关，0或1
         /// </summary>
         [JsonProperty("WebSecurity")]
         public ulong? WebSecurity{ get; set; }

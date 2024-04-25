@@ -83,6 +83,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public ulong? Sample{ get; set; }
 
         /// <summary>
+        /// 日志投递的输出格式。不填保持原有配置。
+        /// </summary>
+        [JsonProperty("LogFormat")]
+        public LogFormat LogFormat{ get; set; }
+
+        /// <summary>
         /// 自定义 HTTP 服务的配置信息，不填保持原有配置。 
         /// </summary>
         [JsonProperty("CustomEndpoint")]
@@ -109,6 +115,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArrayObj(map, prefix + "CustomFields.", this.CustomFields);
             this.SetParamArrayObj(map, prefix + "DeliveryConditions.", this.DeliveryConditions);
             this.SetParamSimple(map, prefix + "Sample", this.Sample);
+            this.SetParamObj(map, prefix + "LogFormat.", this.LogFormat);
             this.SetParamObj(map, prefix + "CustomEndpoint.", this.CustomEndpoint);
             this.SetParamObj(map, prefix + "S3.", this.S3);
         }

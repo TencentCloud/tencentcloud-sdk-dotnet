@@ -25,7 +25,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
     {
         
         /// <summary>
-        /// 输入文本。总长度不超过1024 个token, 超过则会截断最后面的内容。
+        /// 输入文本。总长度不超过 1024 个 Token，超过则会截断最后面的内容。
         /// </summary>
         [JsonProperty("Input")]
         public string Input{ get; set; }

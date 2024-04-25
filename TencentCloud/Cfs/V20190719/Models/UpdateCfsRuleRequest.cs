@@ -49,7 +49,11 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string RWPermission{ get; set; }
 
         /// <summary>
-        /// 用户权限，值为all_squash、no_all_squash、root_squash、no_root_squash。其中all_squash为所有访问用户都会被映射为匿名用户或用户组；no_all_squash为访问用户会先与本机用户匹配，匹配失败后再映射为匿名用户或用户组；root_squash为将来访的root用户映射为匿名用户或用户组；no_root_squash为来访的root用户保持root帐号权限。不填默认为root_squash。
+        /// 用户权限，值为all_squash、no_all_squash、root_squash、no_root_squash。
+        /// all_squash：所有访问用户（含 root 用户）都会被映射为匿名用户或用户组。
+        /// no_all_squash：所有访问用户（含 root 用户）均保持原有的 UID/GID 信息。
+        /// root_squash：将来访的 root 用户映射为匿名用户或用户组，非 root 用户保持原有的 UID/GID 信息。
+        /// no_root_squash：与 no_all_squash 效果一致，所有访问用户（含 root 用户）均保持原有的 UID/GID 信息
         /// </summary>
         [JsonProperty("UserPermission")]
         public string UserPermission{ get; set; }

@@ -97,7 +97,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public DataTransformResouceInfo[] DstResources{ get; set; }
 
         /// <summary>
-        /// 加工逻辑函数
+        /// 加工逻辑函数。
         /// </summary>
         [JsonProperty("EtlContent")]
         public string EtlContent{ get; set; }

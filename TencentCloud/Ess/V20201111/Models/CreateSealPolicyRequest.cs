@@ -46,7 +46,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string SealId{ get; set; }
 
         /// <summary>
-        /// 授权有效期。时间戳秒级
+        /// 授权有效期，时间戳秒级。可以传0，代表有效期到2099年12月12日23点59分59秒。
         /// </summary>
         [JsonProperty("Expired")]
         public long? Expired{ get; set; }

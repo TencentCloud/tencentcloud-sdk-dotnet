@@ -32,7 +32,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? InstanceId{ get; set; }
 
         /// <summary>
-        /// 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+        /// 应用 ID，可以查看 https://console.cloud.tencent.com/ccc
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
