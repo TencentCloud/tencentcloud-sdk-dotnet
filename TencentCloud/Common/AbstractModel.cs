@@ -89,6 +89,6 @@ namespace TencentCloud.Common
         }
 
         [JsonIgnore]
-        public virtual bool IsStream => true;
+        public virtual bool IsStream => false;
     }
 }
