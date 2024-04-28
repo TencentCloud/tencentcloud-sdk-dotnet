@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.994";
+       private const string sdkVersion = "SDK_NET_3.0.995";
 
         /// <summary>
         /// Client constructor.
@@ -1925,6 +1925,35 @@ namespace TencentCloud.Ess.V20201111
         public DeleteSealPoliciesResponse DeleteSealPoliciesSync(DeleteSealPoliciesRequest req)
         {
             return InternalRequestAsync<DeleteSealPoliciesResponse>(req, "DeleteSealPolicies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口用于获取企业批量认证异步任务的状态及结果。
+        /// 
+        /// 前提条件：已调用 CreateBatchOrganizationRegistrationTasks创建企业批量认证链接任务接口，并得到了任务Id。
+        /// 
+        /// 异步任务的处理完成时间视当前已提交的任务量、任务的复杂程度等因素决定，正常情况下 3~5 秒即可完成，但也可能需要更长的时间
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchOrganizationRegistrationUrlsRequest"/></param>
+        /// <returns><see cref="DescribeBatchOrganizationRegistrationUrlsResponse"/></returns>
+        public Task<DescribeBatchOrganizationRegistrationUrlsResponse> DescribeBatchOrganizationRegistrationUrls(DescribeBatchOrganizationRegistrationUrlsRequest req)
+        {
+            return InternalRequestAsync<DescribeBatchOrganizationRegistrationUrlsResponse>(req, "DescribeBatchOrganizationRegistrationUrls");
+        }
+
+        /// <summary>
+        /// 此接口用于获取企业批量认证异步任务的状态及结果。
+        /// 
+        /// 前提条件：已调用 CreateBatchOrganizationRegistrationTasks创建企业批量认证链接任务接口，并得到了任务Id。
+        /// 
+        /// 异步任务的处理完成时间视当前已提交的任务量、任务的复杂程度等因素决定，正常情况下 3~5 秒即可完成，但也可能需要更长的时间
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchOrganizationRegistrationUrlsRequest"/></param>
+        /// <returns><see cref="DescribeBatchOrganizationRegistrationUrlsResponse"/></returns>
+        public DescribeBatchOrganizationRegistrationUrlsResponse DescribeBatchOrganizationRegistrationUrlsSync(DescribeBatchOrganizationRegistrationUrlsRequest req)
+        {
+            return InternalRequestAsync<DescribeBatchOrganizationRegistrationUrlsResponse>(req, "DescribeBatchOrganizationRegistrationUrls")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

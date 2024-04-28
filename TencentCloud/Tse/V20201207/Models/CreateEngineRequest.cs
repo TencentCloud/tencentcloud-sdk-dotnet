@@ -184,6 +184,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("StorageOption")]
         public StorageOption[] StorageOption{ get; set; }
 
+        /// <summary>
+        /// ZK引擎实例，可用区分布约束，STRICT:强约束，PERMISSIVE: 弱约束
+        /// </summary>
+        [JsonProperty("AffinityConstraint")]
+        public string AffinityConstraint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -207,6 +213,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "PrepaidRenewFlag", this.PrepaidRenewFlag);
             this.SetParamArrayObj(map, prefix + "EngineRegionInfos.", this.EngineRegionInfos);
             this.SetParamArrayObj(map, prefix + "StorageOption.", this.StorageOption);
+            this.SetParamSimple(map, prefix + "AffinityConstraint", this.AffinityConstraint);
         }
     }
 }

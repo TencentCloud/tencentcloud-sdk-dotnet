@@ -108,6 +108,19 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("IsLlmGenerated")]
         public bool? IsLlmGenerated{ get; set; }
 
+        /// <summary>
+        /// 图片链接，可公有读
+        /// </summary>
+        [JsonProperty("ImageUrls")]
+        public string[] ImageUrls{ get; set; }
+
+        /// <summary>
+        /// 当次 token 统计信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TokenStat")]
+        public TokenStat TokenStat{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +141,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArrayObj(map, prefix + "References.", this.References);
             this.SetParamArraySimple(map, prefix + "Reasons.", this.Reasons);
             this.SetParamSimple(map, prefix + "IsLlmGenerated", this.IsLlmGenerated);
+            this.SetParamArraySimple(map, prefix + "ImageUrls.", this.ImageUrls);
+            this.SetParamObj(map, prefix + "TokenStat.", this.TokenStat);
         }
     }
 }

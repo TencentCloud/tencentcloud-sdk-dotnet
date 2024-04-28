@@ -45,6 +45,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("QpsThresholds")]
         public QpsThreshold[] QpsThresholds{ get; set; }
 
+        /// <summary>
+        /// 精确限流阈值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AccurateQpsThresholds")]
+        public AccurateQpsThreshold[] AccurateQpsThresholds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArrayObj(map, prefix + "LimitBy.", this.LimitBy);
             this.SetParamArrayObj(map, prefix + "QpsThresholds.", this.QpsThresholds);
+            this.SetParamArrayObj(map, prefix + "AccurateQpsThresholds.", this.AccurateQpsThresholds);
         }
     }
 }

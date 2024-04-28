@@ -54,6 +54,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("BotAppKey")]
         public string BotAppKey{ get; set; }
 
+        /// <summary>
+        /// 场景, 体验: 1; 正式: 2
+        /// </summary>
+        [JsonProperty("Scene")]
+        public ulong? Scene{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "LastRecordId", this.LastRecordId);
             this.SetParamSimple(map, prefix + "BotAppKey", this.BotAppKey);
+            this.SetParamSimple(map, prefix + "Scene", this.Scene);
         }
     }
 }

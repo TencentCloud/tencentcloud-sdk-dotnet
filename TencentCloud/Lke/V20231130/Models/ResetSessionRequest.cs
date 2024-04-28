@@ -30,6 +30,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
+        /// <summary>
+        /// 是否仅清空会话关联
+        /// </summary>
+        [JsonProperty("IsOnlyEmptyTheDialog")]
+        public bool? IsOnlyEmptyTheDialog{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "IsOnlyEmptyTheDialog", this.IsOnlyEmptyTheDialog);
         }
     }
 }

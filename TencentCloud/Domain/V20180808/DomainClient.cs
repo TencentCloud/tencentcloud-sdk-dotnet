@@ -28,7 +28,7 @@ namespace TencentCloud.Domain.V20180808
 
        private const string endpoint = "domain.tencentcloudapi.com";
        private const string version = "2018-08-08";
-       private const string sdkVersion = "SDK_NET_3.0.994";
+       private const string sdkVersion = "SDK_NET_3.0.995";
 
         /// <summary>
         /// Client constructor.
@@ -701,6 +701,27 @@ namespace TencentCloud.Domain.V20180808
         public ModifyIntlCustomDnsHostResponse ModifyIntlCustomDnsHostSync(ModifyIntlCustomDnsHostRequest req)
         {
             return InternalRequestAsync<ModifyIntlCustomDnsHostResponse>(req, "ModifyIntlCustomDnsHost")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改模板信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTemplateRequest"/></param>
+        /// <returns><see cref="ModifyTemplateResponse"/></returns>
+        public Task<ModifyTemplateResponse> ModifyTemplate(ModifyTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyTemplateResponse>(req, "ModifyTemplate");
+        }
+
+        /// <summary>
+        /// 修改模板信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTemplateRequest"/></param>
+        /// <returns><see cref="ModifyTemplateResponse"/></returns>
+        public ModifyTemplateResponse ModifyTemplateSync(ModifyTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyTemplateResponse>(req, "ModifyTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -163,7 +163,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string CurrentTaskId{ get; set; }
 
         /// <summary>
-        /// spark作业最近运行状态
+        /// spark作业最近运行状态，初始化：0，运行中：1，成功：2，数据写入中： 3， 排队中： 4， 失败： -1， 已删除： -3，已过期： -5
         /// </summary>
         [JsonProperty("JobStatus")]
         public long? JobStatus{ get; set; }
@@ -287,6 +287,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("IsSessionStarted")]
         public bool? IsSessionStarted{ get; set; }
 
+        /// <summary>
+        /// 引擎详细类型：SparkSQL、PrestoSQL、SparkBatch、StandardSpark、StandardPresto
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EngineTypeDetail")]
+        public string EngineTypeDetail{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -334,6 +341,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "DataEngineImageVersion", this.DataEngineImageVersion);
             this.SetParamSimple(map, prefix + "IsInherit", this.IsInherit);
             this.SetParamSimple(map, prefix + "IsSessionStarted", this.IsSessionStarted);
+            this.SetParamSimple(map, prefix + "EngineTypeDetail", this.EngineTypeDetail);
         }
     }
 }

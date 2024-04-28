@@ -49,7 +49,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string AppFile{ get; set; }
 
         /// <summary>
-        /// 数据访问策略，CAM Role arn
+        /// 数据访问策略，CAM Role arn，控制台通过数据作业—>作业配置获取，SDK通过DescribeUserRoles接口获取对应的值；
         /// </summary>
         [JsonProperty("RoleArn")]
         public long? RoleArn{ get; set; }

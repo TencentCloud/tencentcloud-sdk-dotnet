@@ -31,7 +31,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// 备注（暂未作字节数限制）
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

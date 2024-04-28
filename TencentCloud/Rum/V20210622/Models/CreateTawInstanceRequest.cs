@@ -61,7 +61,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string InstanceDesc{ get; set; }
 
         /// <summary>
-        /// 每天数据上报量
+        /// 每天数据上报量，（不作量级限制）
         /// </summary>
         [JsonProperty("CountNum")]
         public string CountNum{ get; set; }

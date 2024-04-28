@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CAC02B9D-B0F0-3F2E-A9A4-BB0578DC157C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.994</VersionPrefix>
+    <VersionPrefix>3.0.995</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -160,6 +160,8 @@
     <Compile Include="V20201111\Models\DeleteSealPoliciesResponse.cs" />
     <Compile Include="V20201111\Models\DeleteStaffsResult.cs" />
     <Compile Include="V20201111\Models\Department.cs" />
+    <Compile Include="V20201111\Models\DescribeBatchOrganizationRegistrationUrlsRequest.cs" />
+    <Compile Include="V20201111\Models\DescribeBatchOrganizationRegistrationUrlsResponse.cs" />
     <Compile Include="V20201111\Models\DescribeBillUsageDetailRequest.cs" />
     <Compile Include="V20201111\Models\DescribeBillUsageDetailResponse.cs" />
     <Compile Include="V20201111\Models\DescribeBillUsageRequest.cs" />
@@ -254,6 +256,7 @@
     <Compile Include="V20201111\Models\NeedReviewApproverInfo.cs" />
     <Compile Include="V20201111\Models\OccupiedSeal.cs" />
     <Compile Include="V20201111\Models\OrgBillSummary.cs" />
+    <Compile Include="V20201111\Models\OrganizationAuthUrl.cs" />
     <Compile Include="V20201111\Models\OrganizationInfo.cs" />
     <Compile Include="V20201111\Models\PdfVerifyResult.cs" />
     <Compile Include="V20201111\Models\Permission.cs" />

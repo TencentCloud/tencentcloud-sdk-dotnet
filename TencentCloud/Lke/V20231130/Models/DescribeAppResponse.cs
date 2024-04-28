@@ -91,6 +91,18 @@ namespace TencentCloud.Lke.V20231130.Models
         public string AppKey{ get; set; }
 
         /// <summary>
+        /// 应用状态，1：未上线，2：运行中，3：停用
+        /// </summary>
+        [JsonProperty("AppStatus")]
+        public ulong? AppStatus{ get; set; }
+
+        /// <summary>
+        /// 状态说明
+        /// </summary>
+        [JsonProperty("AppStatusDesc")]
+        public string AppStatusDesc{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -113,6 +125,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "GreetingInAppeal", this.GreetingInAppeal);
             this.SetParamSimple(map, prefix + "BareAnswerInAppeal", this.BareAnswerInAppeal);
             this.SetParamSimple(map, prefix + "AppKey", this.AppKey);
+            this.SetParamSimple(map, prefix + "AppStatus", this.AppStatus);
+            this.SetParamSimple(map, prefix + "AppStatusDesc", this.AppStatusDesc);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

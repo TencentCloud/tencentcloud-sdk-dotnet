@@ -43,7 +43,8 @@ namespace TencentCloud.Tse.V20201207.Models
         public VpcInfo[] VpcInfos{ get; set; }
 
         /// <summary>
-        /// 是否为主地域
+        /// Polaris: 是否为主地域
+        /// Zookeeper: 是否为Leader固定地域
         /// </summary>
         [JsonProperty("MainRegion")]
         public bool? MainRegion{ get; set; }

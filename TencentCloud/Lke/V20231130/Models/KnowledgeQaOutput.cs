@@ -45,6 +45,27 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("BareAnswer")]
         public string BareAnswer{ get; set; }
 
+        /// <summary>
+        /// 是否展示问题澄清开关
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ShowQuestionClarify")]
+        public bool? ShowQuestionClarify{ get; set; }
+
+        /// <summary>
+        /// 是否打开问题澄清
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UseQuestionClarify")]
+        public bool? UseQuestionClarify{ get; set; }
+
+        /// <summary>
+        /// 问题澄清关键词列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QuestionClarifyKeywords")]
+        public string[] QuestionClarifyKeywords{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +75,9 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Method", this.Method);
             this.SetParamSimple(map, prefix + "UseGeneralKnowledge", this.UseGeneralKnowledge);
             this.SetParamSimple(map, prefix + "BareAnswer", this.BareAnswer);
+            this.SetParamSimple(map, prefix + "ShowQuestionClarify", this.ShowQuestionClarify);
+            this.SetParamSimple(map, prefix + "UseQuestionClarify", this.UseQuestionClarify);
+            this.SetParamArraySimple(map, prefix + "QuestionClarifyKeywords.", this.QuestionClarifyKeywords);
         }
     }
 }

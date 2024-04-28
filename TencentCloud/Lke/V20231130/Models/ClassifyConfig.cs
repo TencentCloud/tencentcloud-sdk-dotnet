@@ -38,6 +38,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Labels")]
         public ClassifyLabel[] Labels{ get; set; }
 
+        /// <summary>
+        /// 欢迎语，200字符以内
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Greeting")]
+        public string Greeting{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Lke.V20231130.Models
         {
             this.SetParamObj(map, prefix + "Model.", this.Model);
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
+            this.SetParamSimple(map, prefix + "Greeting", this.Greeting);
         }
     }
 }

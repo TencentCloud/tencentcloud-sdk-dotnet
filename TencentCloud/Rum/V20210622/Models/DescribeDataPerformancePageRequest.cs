@@ -109,7 +109,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string ExtThird{ get; set; }
 
         /// <summary>
-        /// 是否海外
+        /// 显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。
         /// </summary>
         [JsonProperty("IsAbroad")]
         public string IsAbroad{ get; set; }

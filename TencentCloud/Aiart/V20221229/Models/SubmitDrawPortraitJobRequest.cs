@@ -33,7 +33,7 @@ namespace TencentCloud.Aiart.V20221229.Models
         /// <summary>
         /// 写真风格模板，支持以下风格：
         /// zhengjian_female：证件照-长发（女）
-        /// zhengjian_shouthair_female：证件照-短发（女）
+        /// zhengjian_shorthair_female：证件照-短发（女）
         /// zhengjian_male：证件照（男）
         /// grey_suit_male：灰色西装（男）
         /// beige_suit_male：米色西装（男）

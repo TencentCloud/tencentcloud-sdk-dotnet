@@ -30,6 +30,18 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("BotBizId")]
         public string BotBizId{ get; set; }
 
+        /// <summary>
+        /// 文件类型
+        /// </summary>
+        [JsonProperty("FileType")]
+        public string FileType{ get; set; }
+
+        /// <summary>
+        /// 权限场景，是否公有权限
+        /// </summary>
+        [JsonProperty("IsPublic")]
+        public bool? IsPublic{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Lke.V20231130.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "BotBizId", this.BotBizId);
+            this.SetParamSimple(map, prefix + "FileType", this.FileType);
+            this.SetParamSimple(map, prefix + "IsPublic", this.IsPublic);
         }
     }
 }
