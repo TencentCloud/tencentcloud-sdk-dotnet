@@ -127,5 +127,7 @@ namespace TencentCloud.Common
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
         }
+
+        public override bool IsStream => Response != null;
     }
 }

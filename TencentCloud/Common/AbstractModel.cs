@@ -87,5 +87,8 @@ namespace TencentCloud.Common
         {
             return JsonConvert.DeserializeObject<V>(json);
         }
+
+        [JsonIgnore]
+        public virtual bool IsStream => false;
     }
 }
