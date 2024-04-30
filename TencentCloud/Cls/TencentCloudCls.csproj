@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.995</VersionPrefix>
+    <VersionPrefix>3.0.996</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -96,6 +96,8 @@
     <Compile Include="V20201016\Models\CreateConsumerResponse.cs" />
     <Compile Include="V20201016\Models\CreateCosRechargeRequest.cs" />
     <Compile Include="V20201016\Models\CreateCosRechargeResponse.cs" />
+    <Compile Include="V20201016\Models\CreateDashboardSubscribeRequest.cs" />
+    <Compile Include="V20201016\Models\CreateDashboardSubscribeResponse.cs" />
     <Compile Include="V20201016\Models\CreateDataTransformRequest.cs" />
     <Compile Include="V20201016\Models\CreateDataTransformResponse.cs" />
     <Compile Include="V20201016\Models\CreateDeliverCloudFunctionRequest.cs" />
@@ -135,6 +137,8 @@
     <Compile Include="V20201016\Models\DeleteConfigResponse.cs" />
     <Compile Include="V20201016\Models\DeleteConsumerRequest.cs" />
     <Compile Include="V20201016\Models\DeleteConsumerResponse.cs" />
+    <Compile Include="V20201016\Models\DeleteDashboardSubscribeRequest.cs" />
+    <Compile Include="V20201016\Models\DeleteDashboardSubscribeResponse.cs" />
     <Compile Include="V20201016\Models\DeleteDataTransformRequest.cs" />
     <Compile Include="V20201016\Models\DeleteDataTransformResponse.cs" />
     <Compile Include="V20201016\Models\DeleteExportRequest.cs" />
@@ -173,6 +177,8 @@
     <Compile Include="V20201016\Models\DescribeConsumerResponse.cs" />
     <Compile Include="V20201016\Models\DescribeCosRechargesRequest.cs" />
     <Compile Include="V20201016\Models\DescribeCosRechargesResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeDashboardSubscribesRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeDashboardSubscribesResponse.cs" />
     <Compile Include="V20201016\Models\DescribeDashboardsRequest.cs" />
     <Compile Include="V20201016\Models\DescribeDashboardsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeDataTransformInfoRequest.cs" />
@@ -255,6 +261,8 @@
     <Compile Include="V20201016\Models\ModifyConsumerResponse.cs" />
     <Compile Include="V20201016\Models\ModifyCosRechargeRequest.cs" />
     <Compile Include="V20201016\Models\ModifyCosRechargeResponse.cs" />
+    <Compile Include="V20201016\Models\ModifyDashboardSubscribeRequest.cs" />
+    <Compile Include="V20201016\Models\ModifyDashboardSubscribeResponse.cs" />
     <Compile Include="V20201016\Models\ModifyDataTransformRequest.cs" />
     <Compile Include="V20201016\Models\ModifyDataTransformResponse.cs" />
     <Compile Include="V20201016\Models\ModifyIndexRequest.cs" />
@@ -299,6 +307,8 @@
     <Compile Include="V20201016\Models\ScheduledSqlTaskInfo.cs" />
     <Compile Include="V20201016\Models\SearchCosRechargeInfoRequest.cs" />
     <Compile Include="V20201016\Models\SearchCosRechargeInfoResponse.cs" />
+    <Compile Include="V20201016\Models\SearchDashboardSubscribeRequest.cs" />
+    <Compile Include="V20201016\Models\SearchDashboardSubscribeResponse.cs" />
     <Compile Include="V20201016\Models\SearchLogErrors.cs" />
     <Compile Include="V20201016\Models\SearchLogInfos.cs" />
     <Compile Include="V20201016\Models\SearchLogRequest.cs" />

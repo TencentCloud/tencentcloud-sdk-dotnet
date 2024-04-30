@@ -25,13 +25,15 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 机器组类型，ip表示该机器组Values中存的是采集机器的IP地址，label表示该机器组Values中存储的是机器的标签
+        /// 机器组类型。支持 ip 和 label。
+        /// - ip：表示该机器组Values中存的是采集机器的ip地址
+        /// - label：表示该机器组Values中存储的是机器的标签
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 机器描述列表
+        /// 机器描述列表。
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

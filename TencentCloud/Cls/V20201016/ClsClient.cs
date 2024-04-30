@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.995";
+       private const string sdkVersion = "SDK_NET_3.0.996";
 
         /// <summary>
         /// Client constructor.
@@ -302,6 +302,27 @@ namespace TencentCloud.Cls.V20201016
         public CreateCosRechargeResponse CreateCosRechargeSync(CreateCosRechargeRequest req)
         {
             return InternalRequestAsync<CreateCosRechargeResponse>(req, "CreateCosRecharge")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口用于创建仪表盘订阅
+        /// </summary>
+        /// <param name="req"><see cref="CreateDashboardSubscribeRequest"/></param>
+        /// <returns><see cref="CreateDashboardSubscribeResponse"/></returns>
+        public Task<CreateDashboardSubscribeResponse> CreateDashboardSubscribe(CreateDashboardSubscribeRequest req)
+        {
+            return InternalRequestAsync<CreateDashboardSubscribeResponse>(req, "CreateDashboardSubscribe");
+        }
+
+        /// <summary>
+        /// 此接口用于创建仪表盘订阅
+        /// </summary>
+        /// <param name="req"><see cref="CreateDashboardSubscribeRequest"/></param>
+        /// <returns><see cref="CreateDashboardSubscribeResponse"/></returns>
+        public CreateDashboardSubscribeResponse CreateDashboardSubscribeSync(CreateDashboardSubscribeRequest req)
+        {
+            return InternalRequestAsync<CreateDashboardSubscribeResponse>(req, "CreateDashboardSubscribe")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -659,6 +680,27 @@ namespace TencentCloud.Cls.V20201016
         public DeleteConsumerResponse DeleteConsumerSync(DeleteConsumerRequest req)
         {
             return InternalRequestAsync<DeleteConsumerResponse>(req, "DeleteConsumer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口用于删除仪表盘订阅
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDashboardSubscribeRequest"/></param>
+        /// <returns><see cref="DeleteDashboardSubscribeResponse"/></returns>
+        public Task<DeleteDashboardSubscribeResponse> DeleteDashboardSubscribe(DeleteDashboardSubscribeRequest req)
+        {
+            return InternalRequestAsync<DeleteDashboardSubscribeResponse>(req, "DeleteDashboardSubscribe");
+        }
+
+        /// <summary>
+        /// 此接口用于删除仪表盘订阅
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDashboardSubscribeRequest"/></param>
+        /// <returns><see cref="DeleteDashboardSubscribeResponse"/></returns>
+        public DeleteDashboardSubscribeResponse DeleteDashboardSubscribeSync(DeleteDashboardSubscribeRequest req)
+        {
+            return InternalRequestAsync<DeleteDashboardSubscribeResponse>(req, "DeleteDashboardSubscribe")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1058,6 +1100,27 @@ namespace TencentCloud.Cls.V20201016
         public DescribeCosRechargesResponse DescribeCosRechargesSync(DescribeCosRechargesRequest req)
         {
             return InternalRequestAsync<DescribeCosRechargesResponse>(req, "DescribeCosRecharges")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        ///  本接口用于获取仪表盘订阅列表，支持分页
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDashboardSubscribesRequest"/></param>
+        /// <returns><see cref="DescribeDashboardSubscribesResponse"/></returns>
+        public Task<DescribeDashboardSubscribesResponse> DescribeDashboardSubscribes(DescribeDashboardSubscribesRequest req)
+        {
+            return InternalRequestAsync<DescribeDashboardSubscribesResponse>(req, "DescribeDashboardSubscribes");
+        }
+
+        /// <summary>
+        ///  本接口用于获取仪表盘订阅列表，支持分页
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDashboardSubscribesRequest"/></param>
+        /// <returns><see cref="DescribeDashboardSubscribesResponse"/></returns>
+        public DescribeDashboardSubscribesResponse DescribeDashboardSubscribesSync(DescribeDashboardSubscribesRequest req)
+        {
+            return InternalRequestAsync<DescribeDashboardSubscribesResponse>(req, "DescribeDashboardSubscribes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1610,6 +1673,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 此接口用于修改仪表盘订阅
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDashboardSubscribeRequest"/></param>
+        /// <returns><see cref="ModifyDashboardSubscribeResponse"/></returns>
+        public Task<ModifyDashboardSubscribeResponse> ModifyDashboardSubscribe(ModifyDashboardSubscribeRequest req)
+        {
+            return InternalRequestAsync<ModifyDashboardSubscribeResponse>(req, "ModifyDashboardSubscribe");
+        }
+
+        /// <summary>
+        /// 此接口用于修改仪表盘订阅
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDashboardSubscribeRequest"/></param>
+        /// <returns><see cref="ModifyDashboardSubscribeResponse"/></returns>
+        public ModifyDashboardSubscribeResponse ModifyDashboardSubscribeSync(ModifyDashboardSubscribeRequest req)
+        {
+            return InternalRequestAsync<ModifyDashboardSubscribeResponse>(req, "ModifyDashboardSubscribe")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于修改数据加工任务
         /// </summary>
         /// <param name="req"><see cref="ModifyDataTransformRequest"/></param>
@@ -1921,6 +2005,27 @@ namespace TencentCloud.Cls.V20201016
         public SearchCosRechargeInfoResponse SearchCosRechargeInfoSync(SearchCosRechargeInfoRequest req)
         {
             return InternalRequestAsync<SearchCosRechargeInfoResponse>(req, "SearchCosRechargeInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口用于预览仪表盘订阅
+        /// </summary>
+        /// <param name="req"><see cref="SearchDashboardSubscribeRequest"/></param>
+        /// <returns><see cref="SearchDashboardSubscribeResponse"/></returns>
+        public Task<SearchDashboardSubscribeResponse> SearchDashboardSubscribe(SearchDashboardSubscribeRequest req)
+        {
+            return InternalRequestAsync<SearchDashboardSubscribeResponse>(req, "SearchDashboardSubscribe");
+        }
+
+        /// <summary>
+        /// 此接口用于预览仪表盘订阅
+        /// </summary>
+        /// <param name="req"><see cref="SearchDashboardSubscribeRequest"/></param>
+        /// <returns><see cref="SearchDashboardSubscribeResponse"/></returns>
+        public SearchDashboardSubscribeResponse SearchDashboardSubscribeSync(SearchDashboardSubscribeRequest req)
+        {
+            return InternalRequestAsync<SearchDashboardSubscribeResponse>(req, "SearchDashboardSubscribe")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

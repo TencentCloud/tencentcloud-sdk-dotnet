@@ -43,7 +43,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 加工语句
+        /// 加工语句。[创建加工任务](https://cloud.tencent.com/document/product/614/63940)  [函数总览](https://cloud.tencent.com/document/product/614/70395)
         /// </summary>
         [JsonProperty("EtlContent")]
         public string EtlContent{ get; set; }

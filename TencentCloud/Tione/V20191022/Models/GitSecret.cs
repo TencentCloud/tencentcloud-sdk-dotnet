@@ -25,7 +25,7 @@ namespace TencentCloud.Tione.V20191022.Models
     {
         
         /// <summary>
-        /// 无秘钥，默认选项
+        /// 无密钥，默认选项
         /// </summary>
         [JsonProperty("NoSecret")]
         public bool? NoSecret{ get; set; }

@@ -31,13 +31,15 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ShipperId{ get; set; }
 
         /// <summary>
-        /// 查询的开始时间戳，支持最近3天的查询， 毫秒
+        /// 查询的开始时间戳，支持最近3天的查询， 毫秒。
+        /// StartTime必须小于EndTime
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 查询的结束时间戳， 毫秒
+        /// 查询的结束时间戳， 毫秒。
+        /// StartTime必须小于EndTime
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }

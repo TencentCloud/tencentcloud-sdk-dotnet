@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.995</VersionPrefix>
+    <VersionPrefix>3.0.996</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -115,6 +115,8 @@
     <Compile Include="V20220901\Models\CreateOriginGroupResponse.cs" />
     <Compile Include="V20220901\Models\CreatePlanForZoneRequest.cs" />
     <Compile Include="V20220901\Models\CreatePlanForZoneResponse.cs" />
+    <Compile Include="V20220901\Models\CreatePlanRequest.cs" />
+    <Compile Include="V20220901\Models\CreatePlanResponse.cs" />
     <Compile Include="V20220901\Models\CreatePrefetchTaskRequest.cs" />
     <Compile Include="V20220901\Models\CreatePrefetchTaskResponse.cs" />
     <Compile Include="V20220901\Models\CreatePurgeTaskRequest.cs" />
@@ -236,6 +238,8 @@
     <Compile Include="V20220901\Models\DescribeZoneSettingResponse.cs" />
     <Compile Include="V20220901\Models\DescribeZonesRequest.cs" />
     <Compile Include="V20220901\Models\DescribeZonesResponse.cs" />
+    <Compile Include="V20220901\Models\DestroyPlanRequest.cs" />
+    <Compile Include="V20220901\Models\DestroyPlanResponse.cs" />
     <Compile Include="V20220901\Models\DetailHost.cs" />
     <Compile Include="V20220901\Models\DiffIPWhitelist.cs" />
     <Compile Include="V20220901\Models\DnsVerification.cs" />
@@ -269,6 +273,8 @@
     <Compile Include="V20220901\Models\IdentifyZoneRequest.cs" />
     <Compile Include="V20220901\Models\IdentifyZoneResponse.cs" />
     <Compile Include="V20220901\Models\ImageOptimize.cs" />
+    <Compile Include="V20220901\Models\IncreasePlanQuotaRequest.cs" />
+    <Compile Include="V20220901\Models\IncreasePlanQuotaResponse.cs" />
     <Compile Include="V20220901\Models\IntelligenceRule.cs" />
     <Compile Include="V20220901\Models\IntelligenceRuleItem.cs" />
     <Compile Include="V20220901\Models\IpTableConfig.cs" />
@@ -308,6 +314,8 @@
     <Compile Include="V20220901\Models\ModifyL4ProxyStatusResponse.cs" />
     <Compile Include="V20220901\Models\ModifyOriginGroupRequest.cs" />
     <Compile Include="V20220901\Models\ModifyOriginGroupResponse.cs" />
+    <Compile Include="V20220901\Models\ModifyPlanRequest.cs" />
+    <Compile Include="V20220901\Models\ModifyPlanResponse.cs" />
     <Compile Include="V20220901\Models\ModifyRealtimeLogDeliveryTaskRequest.cs" />
     <Compile Include="V20220901\Models\ModifyRealtimeLogDeliveryTaskResponse.cs" />
     <Compile Include="V20220901\Models\ModifyRuleRequest.cs" />
@@ -337,6 +345,7 @@
     <Compile Include="V20220901\Models\PartialModule.cs" />
     <Compile Include="V20220901\Models\PlanInfo.cs" />
     <Compile Include="V20220901\Models\PostMaxSize.cs" />
+    <Compile Include="V20220901\Models\PrepaidPlanParam.cs" />
     <Compile Include="V20220901\Models\PrivateParameter.cs" />
     <Compile Include="V20220901\Models\QueryCondition.cs" />
     <Compile Include="V20220901\Models\QueryString.cs" />
@@ -348,6 +357,9 @@
     <Compile Include="V20220901\Models\RateLimitTemplateDetail.cs" />
     <Compile Include="V20220901\Models\RateLimitUserRule.cs" />
     <Compile Include="V20220901\Models\RealtimeLogDeliveryTask.cs" />
+    <Compile Include="V20220901\Models\RenewFlag.cs" />
+    <Compile Include="V20220901\Models\RenewPlanRequest.cs" />
+    <Compile Include="V20220901\Models\RenewPlanResponse.cs" />
     <Compile Include="V20220901\Models\Resource.cs" />
     <Compile Include="V20220901\Models\RewriteAction.cs" />
     <Compile Include="V20220901\Models\Rule.cs" />
@@ -388,6 +400,8 @@
     <Compile Include="V20220901\Models\TopDetailData.cs" />
     <Compile Include="V20220901\Models\TopEntry.cs" />
     <Compile Include="V20220901\Models\TopEntryValue.cs" />
+    <Compile Include="V20220901\Models\UpgradePlanRequest.cs" />
+    <Compile Include="V20220901\Models\UpgradePlanResponse.cs" />
     <Compile Include="V20220901\Models\UpstreamHttp2.cs" />
     <Compile Include="V20220901\Models\VanityNameServers.cs" />
     <Compile Include="V20220901\Models\VanityNameServersIps.cs" />

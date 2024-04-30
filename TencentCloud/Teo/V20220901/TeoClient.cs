@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.995";
+       private const string sdkVersion = "SDK_NET_3.0.996";
 
         /// <summary>
         /// Client constructor.
@@ -329,6 +329,29 @@ namespace TencentCloud.Teo.V20220901
         public CreateOriginGroupResponse CreateOriginGroupSync(CreateOriginGroupRequest req)
         {
             return InternalRequestAsync<CreateOriginGroupResponse>(req, "CreateOriginGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 若您需要使用 Edgeone 产品，您需要通过此接口创建计费套餐。
+        /// > 创建套餐后，您需要通过 [CreateZone](https://cloud.tencent.com/document/product/1552/80719) 完成创建站点，绑定套餐的流程，Edgeone 才能正常提供服务。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePlanRequest"/></param>
+        /// <returns><see cref="CreatePlanResponse"/></returns>
+        public Task<CreatePlanResponse> CreatePlan(CreatePlanRequest req)
+        {
+            return InternalRequestAsync<CreatePlanResponse>(req, "CreatePlan");
+        }
+
+        /// <summary>
+        /// 若您需要使用 Edgeone 产品，您需要通过此接口创建计费套餐。
+        /// > 创建套餐后，您需要通过 [CreateZone](https://cloud.tencent.com/document/product/1552/80719) 完成创建站点，绑定套餐的流程，Edgeone 才能正常提供服务。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePlanRequest"/></param>
+        /// <returns><see cref="CreatePlanResponse"/></returns>
+        public CreatePlanResponse CreatePlanSync(CreatePlanRequest req)
+        {
+            return InternalRequestAsync<CreatePlanResponse>(req, "CreatePlan")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1542,6 +1565,41 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 当您需要停止 Edgeone 套餐的计费，可以通过该接口销毁计费套餐。
+        /// > 销毁计费套餐需要满足以下条件：
+        ///     1.套餐已过期（企业版套餐除外）；
+        ///     2.套餐下所有站点均已关闭或删除。
+        /// 
+        /// > 站点状态可以通过 [查询站点列表](https://cloud.tencent.com/document/product/1552/80713) 接口进行查询
+        /// 停用站点可以通过 [切换站点状态](https://cloud.tencent.com/document/product/1552/80707) 接口将站点切换至关闭状态
+        /// 删除站点可以通过 [删除站点](https://cloud.tencent.com/document/product/1552/80717) 接口将站点删除
+        /// </summary>
+        /// <param name="req"><see cref="DestroyPlanRequest"/></param>
+        /// <returns><see cref="DestroyPlanResponse"/></returns>
+        public Task<DestroyPlanResponse> DestroyPlan(DestroyPlanRequest req)
+        {
+            return InternalRequestAsync<DestroyPlanResponse>(req, "DestroyPlan");
+        }
+
+        /// <summary>
+        /// 当您需要停止 Edgeone 套餐的计费，可以通过该接口销毁计费套餐。
+        /// > 销毁计费套餐需要满足以下条件：
+        ///     1.套餐已过期（企业版套餐除外）；
+        ///     2.套餐下所有站点均已关闭或删除。
+        /// 
+        /// > 站点状态可以通过 [查询站点列表](https://cloud.tencent.com/document/product/1552/80713) 接口进行查询
+        /// 停用站点可以通过 [切换站点状态](https://cloud.tencent.com/document/product/1552/80707) 接口将站点切换至关闭状态
+        /// 删除站点可以通过 [删除站点](https://cloud.tencent.com/document/product/1552/80717) 接口将站点删除
+        /// </summary>
+        /// <param name="req"><see cref="DestroyPlanRequest"/></param>
+        /// <returns><see cref="DestroyPlanResponse"/></returns>
+        public DestroyPlanResponse DestroyPlanSync(DestroyPlanRequest req)
+        {
+            return InternalRequestAsync<DestroyPlanResponse>(req, "DestroyPlan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DownloadL4Logs）用于下载四层离线日志。
         /// </summary>
         /// <param name="req"><see cref="DownloadL4LogsRequest"/></param>
@@ -1601,6 +1659,29 @@ namespace TencentCloud.Teo.V20220901
         public IdentifyZoneResponse IdentifyZoneSync(IdentifyZoneRequest req)
         {
             return InternalRequestAsync<IdentifyZoneResponse>(req, "IdentifyZone")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 当您的套餐绑定的站点数，或配置的 Web 防护 - 自定义规则 - 精准匹配策略的规则数，或 Web 防护 - 速率限制 - 精准速率限制模块的规则数达到套餐允许的配额上限，可以通过该接口增购对应配额。
+        /// > 该接口该仅支持企业版套餐。
+        /// </summary>
+        /// <param name="req"><see cref="IncreasePlanQuotaRequest"/></param>
+        /// <returns><see cref="IncreasePlanQuotaResponse"/></returns>
+        public Task<IncreasePlanQuotaResponse> IncreasePlanQuota(IncreasePlanQuotaRequest req)
+        {
+            return InternalRequestAsync<IncreasePlanQuotaResponse>(req, "IncreasePlanQuota");
+        }
+
+        /// <summary>
+        /// 当您的套餐绑定的站点数，或配置的 Web 防护 - 自定义规则 - 精准匹配策略的规则数，或 Web 防护 - 速率限制 - 精准速率限制模块的规则数达到套餐允许的配额上限，可以通过该接口增购对应配额。
+        /// > 该接口该仅支持企业版套餐。
+        /// </summary>
+        /// <param name="req"><see cref="IncreasePlanQuotaRequest"/></param>
+        /// <returns><see cref="IncreasePlanQuotaResponse"/></returns>
+        public IncreasePlanQuotaResponse IncreasePlanQuotaSync(IncreasePlanQuotaRequest req)
+        {
+            return InternalRequestAsync<IncreasePlanQuotaResponse>(req, "IncreasePlanQuota")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1909,6 +1990,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 修改套餐配置。目前仅支持修改预付费套餐的自动续费开关。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPlanRequest"/></param>
+        /// <returns><see cref="ModifyPlanResponse"/></returns>
+        public Task<ModifyPlanResponse> ModifyPlan(ModifyPlanRequest req)
+        {
+            return InternalRequestAsync<ModifyPlanResponse>(req, "ModifyPlan");
+        }
+
+        /// <summary>
+        /// 修改套餐配置。目前仅支持修改预付费套餐的自动续费开关。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPlanRequest"/></param>
+        /// <returns><see cref="ModifyPlanResponse"/></returns>
+        public ModifyPlanResponse ModifyPlanSync(ModifyPlanRequest req)
+        {
+            return InternalRequestAsync<ModifyPlanResponse>(req, "ModifyPlan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 通过本接口修改实时日志投递任务配置。本接口有如下限制：<li>不支持修改实时日志投递任务目的地类型（TaskType）；</li><li>不支持修改数据投递类型（LogType）</li><li>不支持修改数据投递区域（Area）</li><li>当原实时日志投递任务的目的地为腾讯云 CLS 时，不支持修改目的地详细配置，如日志集、日志主题。</li>
         /// </summary>
         /// <param name="req"><see cref="ModifyRealtimeLogDeliveryTaskRequest"/></param>
@@ -2052,6 +2154,56 @@ namespace TencentCloud.Teo.V20220901
         public ModifyZoneStatusResponse ModifyZoneStatusSync(ModifyZoneStatusRequest req)
         {
             return InternalRequestAsync<ModifyZoneStatusResponse>(req, "ModifyZoneStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 当您的套餐需要延长有效期，可以通过该接口进行续费。套餐续费仅支持个人版，基础版，标准版套餐。
+        /// > 费用详情可参考 [套餐费用](https://cloud.tencent.com/document/product/1552/94158)
+        /// </summary>
+        /// <param name="req"><see cref="RenewPlanRequest"/></param>
+        /// <returns><see cref="RenewPlanResponse"/></returns>
+        public Task<RenewPlanResponse> RenewPlan(RenewPlanRequest req)
+        {
+            return InternalRequestAsync<RenewPlanResponse>(req, "RenewPlan");
+        }
+
+        /// <summary>
+        /// 当您的套餐需要延长有效期，可以通过该接口进行续费。套餐续费仅支持个人版，基础版，标准版套餐。
+        /// > 费用详情可参考 [套餐费用](https://cloud.tencent.com/document/product/1552/94158)
+        /// </summary>
+        /// <param name="req"><see cref="RenewPlanRequest"/></param>
+        /// <returns><see cref="RenewPlanResponse"/></returns>
+        public RenewPlanResponse RenewPlanSync(RenewPlanRequest req)
+        {
+            return InternalRequestAsync<RenewPlanResponse>(req, "RenewPlan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 当您需要使用高等级套餐才拥有的功能，可以通过本接口升级套餐，仅支持个人版，基础版套餐进行升级。
+        /// > 不同类型 Edgeone 计费套餐区别参考 [Edgeone计费套餐选型对比](https://cloud.tencent.com/document/product/1552/94165)
+        /// 计费套餐升级规则以及资费详情参考 [Edgeone计费套餐升配说明](https://cloud.tencent.com/document/product/1552/95291)
+        /// 如果需要将套餐升级至企业版，请 [联系我们](https://cloud.tencent.com/online-service)
+        /// </summary>
+        /// <param name="req"><see cref="UpgradePlanRequest"/></param>
+        /// <returns><see cref="UpgradePlanResponse"/></returns>
+        public Task<UpgradePlanResponse> UpgradePlan(UpgradePlanRequest req)
+        {
+            return InternalRequestAsync<UpgradePlanResponse>(req, "UpgradePlan");
+        }
+
+        /// <summary>
+        /// 当您需要使用高等级套餐才拥有的功能，可以通过本接口升级套餐，仅支持个人版，基础版套餐进行升级。
+        /// > 不同类型 Edgeone 计费套餐区别参考 [Edgeone计费套餐选型对比](https://cloud.tencent.com/document/product/1552/94165)
+        /// 计费套餐升级规则以及资费详情参考 [Edgeone计费套餐升配说明](https://cloud.tencent.com/document/product/1552/95291)
+        /// 如果需要将套餐升级至企业版，请 [联系我们](https://cloud.tencent.com/online-service)
+        /// </summary>
+        /// <param name="req"><see cref="UpgradePlanRequest"/></param>
+        /// <returns><see cref="UpgradePlanResponse"/></returns>
+        public UpgradePlanResponse UpgradePlanSync(UpgradePlanRequest req)
+        {
+            return InternalRequestAsync<UpgradePlanResponse>(req, "UpgradePlan")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

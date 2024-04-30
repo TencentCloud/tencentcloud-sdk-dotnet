@@ -31,7 +31,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 创建机器组类型，Type为ip，Values中为Ip字符串列表创建机器组，Type为label， Values中为标签字符串列表创建机器组
+        /// 创建机器组类型。Type：ip，Values中为ip字符串列表创建机器组；Type：label，Values中为标签字符串列表创建机器组。
         /// </summary>
         [JsonProperty("MachineGroupType")]
         public MachineGroupTypeInfo MachineGroupType{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 是否开启机器组自动更新
+        /// 是否开启机器组自动更新。默认false
         /// </summary>
         [JsonProperty("AutoUpdate")]
         public bool? AutoUpdate{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string UpdateEndTime{ get; set; }
 
         /// <summary>
-        /// 是否开启服务日志，用于记录因Loglistener 服务自身产生的log，开启后，会创建内部日志集cls_service_logging和日志主题loglistener_status,loglistener_alarm,loglistener_business，不产生计费
+        /// 是否开启服务日志，用于记录因Loglistener 服务自身产生的log，开启后，会创建内部日志集cls_service_logging和日志主题loglistener_status,loglistener_alarm,loglistener_business，不产生计费。默认false
         /// </summary>
         [JsonProperty("ServiceLogging")]
         public bool? ServiceLogging{ get; set; }
 
         /// <summary>
-        /// 机器组中机器离线清理时间
+        /// 机器组中机器离线清理时间。单位：天
         /// </summary>
         [JsonProperty("DelayCleanupTime")]
         public long? DelayCleanupTime{ get; set; }
