@@ -28,7 +28,7 @@ namespace TencentCloud.Aiart.V20221229.Models
         /// 输入图 Base64 数据。
         /// 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
         /// Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-        /// 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB。
+        /// 图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB。
         /// </summary>
         [JsonProperty("InputImage")]
         public string InputImage{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Aiart.V20221229.Models
         /// 输入图 Url。
         /// 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
         /// Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-        /// 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于8MB。
+        /// 图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于8MB。
         /// </summary>
         [JsonProperty("InputUrl")]
         public string InputUrl{ get; set; }
@@ -93,7 +93,7 @@ namespace TencentCloud.Aiart.V20221229.Models
 
         /// <summary>
         /// 生成自由度。
-        /// Strength 值越小，生成图和原图越接近，取值范围0 - 1，不传使用模型内置的默认值。
+        /// Strength 值越小，生成图和原图越接近，取值范围(0, 1]，不传使用模型内置的默认值。
         /// 推荐的取值范围为0.6 - 0.8。
         /// </summary>
         [JsonProperty("Strength")]

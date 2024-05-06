@@ -37,7 +37,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string NodeRole{ get; set; }
 
         /// <summary>
-        /// 实例的保留模式
+        /// 实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
         /// </summary>
         [JsonProperty("InstanceDeleteMode")]
         public string InstanceDeleteMode{ get; set; }

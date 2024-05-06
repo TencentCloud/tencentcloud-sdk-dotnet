@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.996";
+       private const string sdkVersion = "SDK_NET_3.0.997";
 
         /// <summary>
         /// Client constructor.
@@ -3498,7 +3498,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 开启加密数据保护
+        /// 开启加密数据保护，需要先开启KMS能力，完成KMS授权
         /// </summary>
         /// <param name="req"><see cref="EnableEncryptionProtectionRequest"/></param>
         /// <returns><see cref="EnableEncryptionProtectionResponse"/></returns>
@@ -3508,7 +3508,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 开启加密数据保护
+        /// 开启加密数据保护，需要先开启KMS能力，完成KMS授权
         /// </summary>
         /// <param name="req"><see cref="EnableEncryptionProtectionRequest"/></param>
         /// <returns><see cref="EnableEncryptionProtectionResponse"/></returns>
@@ -3666,7 +3666,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 获得节点升级当前的进度
+        /// 获得节点升级当前的进度，若集群未处于节点升级状态，则接口会报错：任务未找到。
         /// </summary>
         /// <param name="req"><see cref="GetUpgradeInstanceProgressRequest"/></param>
         /// <returns><see cref="GetUpgradeInstanceProgressResponse"/></returns>
@@ -3676,7 +3676,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 获得节点升级当前的进度
+        /// 获得节点升级当前的进度，若集群未处于节点升级状态，则接口会报错：任务未找到。
         /// </summary>
         /// <param name="req"><see cref="GetUpgradeInstanceProgressRequest"/></param>
         /// <returns><see cref="GetUpgradeInstanceProgressResponse"/></returns>
@@ -4296,7 +4296,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 缩容独立集群master节点
+        /// 缩容独立集群master节点，本功能为内测能力，使用之前请先提单联系我们。
         /// </summary>
         /// <param name="req"><see cref="ScaleInClusterMasterRequest"/></param>
         /// <returns><see cref="ScaleInClusterMasterResponse"/></returns>
@@ -4306,7 +4306,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 缩容独立集群master节点
+        /// 缩容独立集群master节点，本功能为内测能力，使用之前请先提单联系我们。
         /// </summary>
         /// <param name="req"><see cref="ScaleInClusterMasterRequest"/></param>
         /// <returns><see cref="ScaleInClusterMasterResponse"/></returns>

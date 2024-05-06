@@ -37,7 +37,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 升级类型
+        /// 升级类型，枚举值：reset(重装升级，支持大版本和小版本)，hot(原地滚动小版本升级)，major(原地滚动大版本升级)
         /// </summary>
         [JsonProperty("UpgradeType")]
         public string UpgradeType{ get; set; }

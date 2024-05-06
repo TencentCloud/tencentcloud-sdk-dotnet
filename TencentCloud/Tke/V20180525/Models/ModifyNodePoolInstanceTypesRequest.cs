@@ -37,7 +37,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string NodePoolId{ get; set; }
 
         /// <summary>
-        /// 机型列表
+        /// 机型列表，主实例机型不支持修改
         /// </summary>
         [JsonProperty("InstanceTypes")]
         public string[] InstanceTypes{ get; set; }

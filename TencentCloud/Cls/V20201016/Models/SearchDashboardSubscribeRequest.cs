@@ -24,12 +24,40 @@ namespace TencentCloud.Cls.V20201016.Models
     public class SearchDashboardSubscribeRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 仪表盘id。
+        /// </summary>
+        [JsonProperty("DashboardId")]
+        public string DashboardId{ get; set; }
+
+        /// <summary>
+        /// 仪表盘订阅数据。
+        /// </summary>
+        [JsonProperty("SubscribeData")]
+        public DashboardSubscribeData SubscribeData{ get; set; }
+
+        /// <summary>
+        /// 仪表盘订阅Id。
+        /// </summary>
+        [JsonProperty("Id")]
+        public ulong? Id{ get; set; }
+
+        /// <summary>
+        /// 仪表盘订阅名称。
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DashboardId", this.DashboardId);
+            this.SetParamObj(map, prefix + "SubscribeData.", this.SubscribeData);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

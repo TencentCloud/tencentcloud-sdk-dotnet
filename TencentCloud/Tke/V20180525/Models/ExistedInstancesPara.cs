@@ -31,7 +31,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 实例额外需要设置参数信息
+        /// 实例额外需要设置参数信息（目前后端暂不支持此字段，我们将在未来的版本中实现）
         /// </summary>
         [JsonProperty("InstanceAdvancedSettings")]
         public InstanceAdvancedSettings InstanceAdvancedSettings{ get; set; }
