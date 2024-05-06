@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 采集规则扩展配置ID
+        /// 特殊采集规则扩展配置ID
         /// </summary>
         [JsonProperty("ConfigExtraId")]
         public string ConfigExtraId{ get; set; }

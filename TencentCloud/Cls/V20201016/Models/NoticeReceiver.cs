@@ -26,8 +26,8 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// 接受者类型。可选值：
-        /// <br><li> Uin - 用户ID
-        /// <br><li> Group - 用户组ID
+        /// -  Uin - 用户ID
+        /// - Group - 用户组ID
         /// 暂不支持其余接收者类型。
         /// </summary>
         [JsonProperty("ReceiverType")]
@@ -35,16 +35,18 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 接收者。
+        /// 当ReceiverType为Uin时，ReceiverIds的值为用户id。[子用户信息查询](https://cloud.tencent.com/document/product/598/36258)
+        /// 当ReceiverType为Group时，ReceiverIds的值为用户组id。[CAM用户组](https://cloud.tencent.com/document/product/598/14985)
         /// </summary>
         [JsonProperty("ReceiverIds")]
         public long?[] ReceiverIds{ get; set; }
 
         /// <summary>
         /// 通知接收渠道。
-        /// <br><li> Email - 邮件
-        /// <br><li> Sms - 短信
-        /// <br><li> WeChat - 微信
-        /// <br><li> Phone - 电话
+        /// - Email - 邮件
+        /// - Sms - 短信
+        /// - WeChat - 微信
+        /// - Phone - 电话
         /// </summary>
         [JsonProperty("ReceiverChannels")]
         public string[] ReceiverChannels{ get; set; }
@@ -62,7 +64,10 @@ namespace TencentCloud.Cls.V20201016.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 位序
+        /// 位序。
+        /// 
+        /// - 入参无效。
+        /// - 出参时有效。
         /// </summary>
         [JsonProperty("Index")]
         public long? Index{ get; set; }

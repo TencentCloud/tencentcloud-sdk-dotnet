@@ -25,23 +25,25 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 回调地址。
+        /// 回调地址。最大支持1024个字节数。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
         /// 回调的类型。可选值：
-        /// <li> WeCom
-        /// <li> Http
+        /// - WeCom
+        /// - Http
+        /// - DingTalk
+        /// - Lark
         /// </summary>
         [JsonProperty("CallbackType")]
         public string CallbackType{ get; set; }
 
         /// <summary>
         /// 回调方法。可选值：
-        /// <li> POST
-        /// <li> PUT
+        /// - POST
+        /// - PUT
         /// 默认值为POST。CallbackType为Http时为必选。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -65,7 +67,9 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Body{ get; set; }
 
         /// <summary>
-        /// 序号
+        /// 序号。
+        /// - 入参无效。
+        /// - 出参有效。
         /// </summary>
         [JsonProperty("Index")]
         public long? Index{ get; set; }

@@ -48,6 +48,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ClusterRemarkName")]
         public string ClusterRemarkName{ get; set; }
 
+        /// <summary>
+        /// 是否开启cls日志功能
+        /// </summary>
+        [JsonProperty("EnableLogCollection")]
+        public bool? EnableLogCollection{ get; set; }
+
+        /// <summary>
+        /// 是否修复cls日志功能
+        /// </summary>
+        [JsonProperty("RepairLog")]
+        public bool? RepairLog{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "ClusterDesc", this.ClusterDesc);
             this.SetParamSimple(map, prefix + "ClusterRemarkName", this.ClusterRemarkName);
+            this.SetParamSimple(map, prefix + "EnableLogCollection", this.EnableLogCollection);
+            this.SetParamSimple(map, prefix + "RepairLog", this.RepairLog);
         }
     }
 }

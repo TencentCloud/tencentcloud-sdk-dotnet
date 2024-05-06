@@ -25,7 +25,27 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 支持的key： topicId,name, configExtraId, machineGroupId
+        /// name
+        /// - 按照【特殊采集配置名称】进行模糊匹配过滤。
+        /// - 类型：String
+        /// - 必选：否
+        /// 
+        /// configExtraId
+        /// - 按照【特殊采集配置ID】进行过滤。
+        /// - 类型：String
+        /// - 必选：否
+        /// 
+        /// topicId
+        /// - 按照【日志主题】进行过滤。
+        /// - 类型：String
+        /// - 必选：否
+        /// 
+        /// machineGroupId
+        /// - 按照【机器组ID】进行过滤。
+        /// - 类型：String
+        /// - 必选：否
+        /// 
+        /// 每次请求的Filters的上限为10，Filter.Values的上限为5。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

@@ -39,7 +39,12 @@ namespace TencentCloud.Cls.V20201016.Models
         public WebCallback[] WebCallbacks{ get; set; }
 
         /// <summary>
-        /// 匹配规则。
+        /// 匹配规则 JSON串。
+        /// `{\"Value\":\"AND\",\"Type\":\"Operation\",\"Children\":[{\"Type\":\"Condition\",\"Value\":\"NotifyType\",\"Children\":[{\"Value\":\"In\",\"Type\":\"Compare\"},{\"Value\":\"[1,2]\",\"Type\":\"Value\"}]}]}
+        /// `
+        /// 以上示例表示：
+        /// 规则：
+        /// 通知类型属于告警通知,恢复通知
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Rule")]

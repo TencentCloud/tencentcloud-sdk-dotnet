@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Cdb.V20170320.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAttackLogInfoRequest : AbstractModel
+    public class DescribeSSLStatusRequest : AbstractModel
     {
         
         /// <summary>
-        /// 日志ID
+        /// 实例 ID 。只读组 ID为空时必填。
         /// </summary>
-        [JsonProperty("Id")]
-        public ulong? Id{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 只读组 ID。实例 ID为空时必填。
+        /// </summary>
+        [JsonProperty("RoGroupId")]
+        public string RoGroupId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "RoGroupId", this.RoGroupId);
         }
     }
 }

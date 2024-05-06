@@ -30,6 +30,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("TaskIdList")]
         public TaskIdListKey[] TaskIdList{ get; set; }
 
+        /// <summary>
+        /// 集团账号的成员id
+        /// </summary>
+        [JsonProperty("MemberId")]
+        public string[] MemberId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "TaskIdList.", this.TaskIdList);
+            this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         }
     }
 }

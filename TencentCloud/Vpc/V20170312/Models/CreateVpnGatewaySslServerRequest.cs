@@ -73,13 +73,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string EncryptAlgorithm{ get; set; }
 
         /// <summary>
-        /// 是否支持压缩。当前仅支持不支持压缩，默认False。
+        /// 是否支持压缩。当前不支持压缩，默认False。
         /// </summary>
         [JsonProperty("Compress")]
         public bool? Compress{ get; set; }
 
         /// <summary>
-        /// 是否开启SSO认证。默认为False
+        /// 是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
         /// </summary>
         [JsonProperty("SsoEnabled")]
         public bool? SsoEnabled{ get; set; }

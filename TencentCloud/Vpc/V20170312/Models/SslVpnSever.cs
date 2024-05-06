@@ -147,6 +147,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("AccessPolicy")]
         public AccessPolicy[] AccessPolicy{ get; set; }
 
+        /// <summary>
+        /// CAM服务提供商Name
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SpName")]
+        public string SpName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -172,6 +179,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "EiamApplicationId", this.EiamApplicationId);
             this.SetParamSimple(map, prefix + "AccessPolicyEnabled", this.AccessPolicyEnabled);
             this.SetParamArrayObj(map, prefix + "AccessPolicy.", this.AccessPolicy);
+            this.SetParamSimple(map, prefix + "SpName", this.SpName);
         }
     }
 }

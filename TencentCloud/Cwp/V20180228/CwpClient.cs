@@ -28,7 +28,7 @@ namespace TencentCloud.Cwp.V20180228
 
        private const string endpoint = "cwp.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.997";
+       private const string sdkVersion = "SDK_NET_3.0.998";
 
         /// <summary>
         /// Client constructor.
@@ -2622,31 +2622,6 @@ namespace TencentCloud.Cwp.V20180228
         public DescribeAttackEventsResponse DescribeAttackEventsSync(DescribeAttackEventsRequest req)
         {
             return InternalRequestAsync<DescribeAttackEventsResponse>(req, "DescribeAttackEvents")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// DescribeAttackEventInfo 接口替代
-        /// 
-        /// 网络攻击日志详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAttackLogInfoRequest"/></param>
-        /// <returns><see cref="DescribeAttackLogInfoResponse"/></returns>
-        public Task<DescribeAttackLogInfoResponse> DescribeAttackLogInfo(DescribeAttackLogInfoRequest req)
-        {
-            return InternalRequestAsync<DescribeAttackLogInfoResponse>(req, "DescribeAttackLogInfo");
-        }
-
-        /// <summary>
-        /// DescribeAttackEventInfo 接口替代
-        /// 
-        /// 网络攻击日志详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAttackLogInfoRequest"/></param>
-        /// <returns><see cref="DescribeAttackLogInfoResponse"/></returns>
-        public DescribeAttackLogInfoResponse DescribeAttackLogInfoSync(DescribeAttackLogInfoRequest req)
-        {
-            return InternalRequestAsync<DescribeAttackLogInfoResponse>(req, "DescribeAttackLogInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

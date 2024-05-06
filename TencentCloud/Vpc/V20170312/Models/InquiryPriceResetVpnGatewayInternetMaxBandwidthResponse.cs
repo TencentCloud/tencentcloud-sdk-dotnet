@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 商品价格。
+        /// 商品价格。仅支持未过期的预付费网关。
         /// </summary>
         [JsonProperty("Price")]
         public Price Price{ get; set; }

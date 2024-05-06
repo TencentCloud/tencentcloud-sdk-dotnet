@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.997</VersionPrefix>
+    <VersionPrefix>3.0.998</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -59,6 +59,9 @@
     <Compile Include="V20210820\Models\ApproveModify.cs" />
     <Compile Include="V20210820\Models\ApproveType.cs" />
     <Compile Include="V20210820\Models\AttributeItemDTO.cs" />
+    <Compile Include="V20210820\Models\BaseClusterInfo.cs" />
+    <Compile Include="V20210820\Models\BaseTenant.cs" />
+    <Compile Include="V20210820\Models\BaseUser.cs" />
     <Compile Include="V20210820\Models\BatchCreateIntegrationTaskAlarmsRequest.cs" />
     <Compile Include="V20210820\Models\BatchCreateIntegrationTaskAlarmsResponse.cs" />
     <Compile Include="V20210820\Models\BatchCreateTaskVersionDTO.cs" />
@@ -565,6 +568,7 @@
     <Compile Include="V20210820\Models\Partition.cs" />
     <Compile Include="V20210820\Models\PathNodeDsVO.cs" />
     <Compile Include="V20210820\Models\ProdSchedulerTask.cs" />
+    <Compile Include="V20210820\Models\Project.cs" />
     <Compile Include="V20210820\Models\ProjectBaseInfoOpsRequest.cs" />
     <Compile Include="V20210820\Models\Property.cs" />
     <Compile Include="V20210820\Models\QualityScore.cs" />

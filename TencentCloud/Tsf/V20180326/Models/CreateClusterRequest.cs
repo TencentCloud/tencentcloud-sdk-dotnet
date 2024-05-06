@@ -120,6 +120,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ProgramIdList")]
         public string[] ProgramIdList{ get; set; }
 
+        /// <summary>
+        /// 是否开启cls日志功能
+        /// </summary>
+        [JsonProperty("EnableLogCollection")]
+        public bool? EnableLogCollection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "KuberneteNativeType", this.KuberneteNativeType);
             this.SetParamSimple(map, prefix + "KuberneteNativeSecret", this.KuberneteNativeSecret);
             this.SetParamArraySimple(map, prefix + "ProgramIdList.", this.ProgramIdList);
+            this.SetParamSimple(map, prefix + "EnableLogCollection", this.EnableLogCollection);
         }
     }
 }

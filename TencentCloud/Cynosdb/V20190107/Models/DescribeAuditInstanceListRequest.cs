@@ -43,7 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? AuditMode{ get; set; }
 
         /// <summary>
-        /// 单次请求返回的数量。默认值为30，最大值为 20000。
+        /// 单次请求返回的数量。默认值为30，最大值为 100。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

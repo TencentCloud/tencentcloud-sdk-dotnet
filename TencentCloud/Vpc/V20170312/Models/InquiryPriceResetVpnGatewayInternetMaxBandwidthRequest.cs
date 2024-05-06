@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string VpnGatewayId{ get; set; }
 
         /// <summary>
-        /// 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
+        /// 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100, 200, 500, 1000；单位：Mbps。
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public ulong? InternetMaxBandwidthOut{ get; set; }

@@ -43,7 +43,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// 证书类型，目前仅支持类型2。2 = TrustAsia TLS RSA CA。
+        /// 证书类型，目前仅支持类型83。83 = TrustAsia C1 DV Free。
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string ContactPhone{ get; set; }
 
         /// <summary>
-        /// 有效期，默认12个月，目前仅支持12个月。
+        /// 有效期，默认3个月，目前仅支持3个月。
         /// </summary>
         [JsonProperty("ValidityPeriod")]
         public string ValidityPeriod{ get; set; }

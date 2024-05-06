@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5E3993CA-3190-3343-8FD0-BC4234130564}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.997</VersionPrefix>
+    <VersionPrefix>3.0.998</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -97,6 +97,8 @@
     <Compile Include="V20170320\Models\CloseCDBProxyResponse.cs" />
     <Compile Include="V20170320\Models\CloseCdbProxyAddressRequest.cs" />
     <Compile Include="V20170320\Models\CloseCdbProxyAddressResponse.cs" />
+    <Compile Include="V20170320\Models\CloseSSLRequest.cs" />
+    <Compile Include="V20170320\Models\CloseSSLResponse.cs" />
     <Compile Include="V20170320\Models\CloseWanServiceRequest.cs" />
     <Compile Include="V20170320\Models\CloseWanServiceResponse.cs" />
     <Compile Include="V20170320\Models\ClusterNodeInfo.cs" />
@@ -273,6 +275,8 @@
     <Compile Include="V20170320\Models\DescribeRollbackRangeTimeResponse.cs" />
     <Compile Include="V20170320\Models\DescribeRollbackTaskDetailRequest.cs" />
     <Compile Include="V20170320\Models\DescribeRollbackTaskDetailResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeSSLStatusRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeSSLStatusResponse.cs" />
     <Compile Include="V20170320\Models\DescribeSlowLogDataRequest.cs" />
     <Compile Include="V20170320\Models\DescribeSlowLogDataResponse.cs" />
     <Compile Include="V20170320\Models\DescribeSlowLogsRequest.cs" />
@@ -384,6 +388,8 @@
     <Compile Include="V20170320\Models\OpenDBInstanceEncryptionResponse.cs" />
     <Compile Include="V20170320\Models\OpenDBInstanceGTIDRequest.cs" />
     <Compile Include="V20170320\Models\OpenDBInstanceGTIDResponse.cs" />
+    <Compile Include="V20170320\Models\OpenSSLRequest.cs" />
+    <Compile Include="V20170320\Models\OpenSSLResponse.cs" />
     <Compile Include="V20170320\Models\OpenWanServiceRequest.cs" />
     <Compile Include="V20170320\Models\OpenWanServiceResponse.cs" />
     <Compile Include="V20170320\Models\Outbound.cs" />

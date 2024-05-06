@@ -32,31 +32,41 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 通知类型。可选值：
-        /// <li> Trigger - 告警触发 </li>
-        /// <li> Recovery - 告警恢复</li>
-        /// <li> All - 告警触发和告警恢复</li>
+        /// - Trigger - 告警触发
+        /// - Recovery - 告警恢复
+        /// - All - 告警触发和告警恢复
+        /// 
+        /// 
+        ///  注意:  
+        /// - Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
+        /// - Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 通知接收对象。
+        ///  注意:  
+        /// - Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
+        /// - Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
         /// </summary>
         [JsonProperty("NoticeReceivers")]
         public NoticeReceiver[] NoticeReceivers{ get; set; }
 
         /// <summary>
         /// 接口回调信息（包括企业微信）。
+        ///  注意:  
+        /// - Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
+        /// - Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
         /// </summary>
         [JsonProperty("WebCallbacks")]
         public WebCallback[] WebCallbacks{ get; set; }
 
         /// <summary>
         /// 通知规则。
-        /// 
         ///  注意:  
-        /// 
-        /// - Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。
+        /// - Type、NoticeReceivers和WebCallbacks是一组配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空，NoticeRules是另一组配置，其中rule不许为空，2组配置互斥。
+        /// - Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，必须填写一组配置。
         /// 
         /// </summary>
         [JsonProperty("NoticeRules")]

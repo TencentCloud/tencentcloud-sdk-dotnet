@@ -31,6 +31,12 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? Type{ get; set; }
 
         /// <summary>
+        /// 集团账号的成员id
+        /// </summary>
+        [JsonProperty("MemberId")]
+        public string[] MemberId{ get; set; }
+
+        /// <summary>
         /// 任务报告Id 列表
         /// </summary>
         [JsonProperty("ReportItemKeyList")]
@@ -49,6 +55,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
             this.SetParamArrayObj(map, prefix + "ReportItemKeyList.", this.ReportItemKeyList);
             this.SetParamArrayObj(map, prefix + "ReportTaskIdList.", this.ReportTaskIdList);
         }

@@ -43,7 +43,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public long? ID{ get; set; }
 
         /// <summary>
-        /// 上报类型
+        /// 上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals）
         /// </summary>
         [JsonProperty("ReportType")]
         public string ReportType{ get; set; }

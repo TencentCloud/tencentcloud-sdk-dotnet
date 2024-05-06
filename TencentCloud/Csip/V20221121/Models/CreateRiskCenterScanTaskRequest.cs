@@ -49,6 +49,12 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? ScanPlanType{ get; set; }
 
         /// <summary>
+        /// 集团账号的成员id
+        /// </summary>
+        [JsonProperty("MemberId")]
+        public string[] MemberId{ get; set; }
+
+        /// <summary>
         /// 扫描资产信息列表
         /// </summary>
         [JsonProperty("Assets")]
@@ -100,6 +106,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "ScanAssetType", this.ScanAssetType);
             this.SetParamArraySimple(map, prefix + "ScanItem.", this.ScanItem);
             this.SetParamSimple(map, prefix + "ScanPlanType", this.ScanPlanType);
+            this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
             this.SetParamArrayObj(map, prefix + "Assets.", this.Assets);
             this.SetParamSimple(map, prefix + "ScanPlanContent", this.ScanPlanContent);
             this.SetParamArraySimple(map, prefix + "SelfDefiningAssets.", this.SelfDefiningAssets);

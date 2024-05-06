@@ -133,6 +133,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("IdleConnectTimeout")]
         public long? IdleConnectTimeout{ get; set; }
 
+        /// <summary>
+        /// 是否开启SNAT。
+        /// </summary>
+        [JsonProperty("SnatEnable")]
+        public bool? SnatEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -157,6 +163,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "MaxConn", this.MaxConn);
             this.SetParamSimple(map, prefix + "MaxCps", this.MaxCps);
             this.SetParamSimple(map, prefix + "IdleConnectTimeout", this.IdleConnectTimeout);
+            this.SetParamSimple(map, prefix + "SnatEnable", this.SnatEnable);
         }
     }
 }

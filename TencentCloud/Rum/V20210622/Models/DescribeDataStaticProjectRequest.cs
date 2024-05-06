@@ -73,7 +73,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string From{ get; set; }
 
         /// <summary>
-        /// 日志等级
+        /// 日志等级（1表示白名单日志，2表示一般日志，4表示错误日志，8表示Promise 错误，16表示Ajax 请求异常，32表示JS 加载异常，64表示图片加载异常，128表示css 加载异常，256表示console.error，512表示音视频资源异常，1024表示retcode 异常，2048表示aegis report，4096表示PV日志，8192表示自定义事件，16384表示小程序 页面不存在，32768表示websocket错误，65536表示js bridge错误）
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string ExtFirst{ get; set; }
 
         /// <summary>
-        /// 网络类型
+        /// 网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知。
         /// </summary>
         [JsonProperty("NetType")]
         public string NetType{ get; set; }

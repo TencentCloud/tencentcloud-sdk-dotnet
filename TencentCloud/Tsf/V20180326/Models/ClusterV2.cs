@@ -276,6 +276,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("KuberneteNativeSecret")]
         public string KuberneteNativeSecret{ get; set; }
 
+        /// <summary>
+        /// 是否开启cls日志功能
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableLogCollection")]
+        public bool? EnableLogCollection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -318,6 +325,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "KuberneteApiServer", this.KuberneteApiServer);
             this.SetParamSimple(map, prefix + "KuberneteNativeType", this.KuberneteNativeType);
             this.SetParamSimple(map, prefix + "KuberneteNativeSecret", this.KuberneteNativeSecret);
+            this.SetParamSimple(map, prefix + "EnableLogCollection", this.EnableLogCollection);
         }
     }
 }
