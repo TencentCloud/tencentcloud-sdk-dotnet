@@ -31,7 +31,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public ulong? ID{ get; set; }
 
         /// <summary>
-        /// 项目名(可选，不为空且最长为 200)
+        /// 应用名称(可选，不为空且最长为 200字符)
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 项目描述(可选，最长为 1000)
+        /// 应用描述(可选，最长为 1000字符)
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }

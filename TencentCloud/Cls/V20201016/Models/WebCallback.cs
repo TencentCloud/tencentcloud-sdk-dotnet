@@ -42,9 +42,11 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 回调方法。可选值：
-        /// - POST
+        /// - POST（默认值）
         /// - PUT
-        /// 默认值为POST。CallbackType为Http时为必选。
+        /// 
+        /// 注意：
+        /// - 参数CallbackType为Http时为必选。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Method")]

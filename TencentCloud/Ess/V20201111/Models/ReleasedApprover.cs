@@ -66,6 +66,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ApproverSignRole")]
         public string ApproverSignRole{ get; set; }
 
+        /// <summary>
+        /// 印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署
+        /// </summary>
+        [JsonProperty("ApproverSignSealId")]
+        public string ApproverSignSealId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +84,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "ApproverType", this.ApproverType);
             this.SetParamSimple(map, prefix + "ApproverSignComponentType", this.ApproverSignComponentType);
             this.SetParamSimple(map, prefix + "ApproverSignRole", this.ApproverSignRole);
+            this.SetParamSimple(map, prefix + "ApproverSignSealId", this.ApproverSignSealId);
         }
     }
 }

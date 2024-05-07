@@ -31,7 +31,9 @@ namespace TencentCloud.Cls.V20201016.Models
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 创建机器组类型。Type：ip，Values中为ip字符串列表创建机器组；Type：label，Values中为标签字符串列表创建机器组。
+        /// 创建机器组类型。取值如下：
+        /// - Type：ip，Values中为ip字符串列表创建机器组
+        /// - Type：label，Values中为标签字符串列表创建机器组
         /// </summary>
         [JsonProperty("MachineGroupType")]
         public MachineGroupTypeInfo MachineGroupType{ get; set; }
@@ -79,7 +81,9 @@ namespace TencentCloud.Cls.V20201016.Models
         public MetaTagInfo[] MetaTags{ get; set; }
 
         /// <summary>
-        /// 系统类型，默认0，0：Linux，1: Windows
+        /// 系统类型，取值如下：
+        /// - 0：Linux （默认值）
+        /// - 1：Windows
         /// </summary>
         [JsonProperty("OSType")]
         public ulong? OSType{ get; set; }

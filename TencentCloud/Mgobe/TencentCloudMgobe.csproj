@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF1448B5-7A18-3903-8A12-CA20F86F1FE6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.998</VersionPrefix>
+    <VersionPrefix>3.0.999</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="V20190929\MgobeClient.cs" />
+    <Compile Include="V20190929\Models\DismissRoomRequest.cs" />
+    <Compile Include="V20190929\Models\DismissRoomResponse.cs" />
     <Compile Include="V20201014\MgobeClient.cs" />
     <Compile Include="V20201014\Models\ChangeRoomPlayerProfileRequest.cs" />
     <Compile Include="V20201014\Models\ChangeRoomPlayerProfileResponse.cs" />
@@ -65,8 +68,5 @@
     <Compile Include="V20201014\Models\RemoveRoomPlayerResponse.cs" />
     <Compile Include="V20201014\Models\Room.cs" />
     <Compile Include="V20201014\Models\Team.cs" />
-    <Compile Include="V20190929\MgobeClient.cs" />
-    <Compile Include="V20190929\Models\DismissRoomRequest.cs" />
-    <Compile Include="V20190929\Models\DismissRoomResponse.cs" />
   </ItemGroup>
 </Project>

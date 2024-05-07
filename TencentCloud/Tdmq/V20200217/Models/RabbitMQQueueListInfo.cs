@@ -86,6 +86,62 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
+        /// <summary>
+        /// 队列是否持久化，true 为持久化，false 为非持久化
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Durable")]
+        public bool? Durable{ get; set; }
+
+        /// <summary>
+        /// 队列是否为自动删除队列，true 为自动删除，false 为非自动删除
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoDelete")]
+        public bool? AutoDelete{ get; set; }
+
+        /// <summary>
+        /// 队列所属实例 ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 队列所属虚拟主机名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VirtualHost")]
+        public string VirtualHost{ get; set; }
+
+        /// <summary>
+        /// 队列所在主节点名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Node")]
+        public string Node{ get; set; }
+
+        /// <summary>
+        /// 生效的策略名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Policy")]
+        public string Policy{ get; set; }
+
+        /// <summary>
+        /// 扩展参数 key-value 对象
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Arguments")]
+        public string Arguments{ get; set; }
+
+        /// <summary>
+        /// 是否独占队列
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Exclusive")]
+        public bool? Exclusive{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +157,14 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MessageRateOut", this.MessageRateOut);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamSimple(map, prefix + "Durable", this.Durable);
+            this.SetParamSimple(map, prefix + "AutoDelete", this.AutoDelete);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "VirtualHost", this.VirtualHost);
+            this.SetParamSimple(map, prefix + "Node", this.Node);
+            this.SetParamSimple(map, prefix + "Policy", this.Policy);
+            this.SetParamSimple(map, prefix + "Arguments", this.Arguments);
+            this.SetParamSimple(map, prefix + "Exclusive", this.Exclusive);
         }
     }
 }

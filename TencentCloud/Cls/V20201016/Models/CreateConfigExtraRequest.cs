@@ -37,19 +37,27 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 类型：container_stdout、container_file、host_file
+        /// 日志源类型。支持 container_stdout：容器标准输出；container_file：容器文件路径；host_file：节点文件路径。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表极简日志，multiline_log代表多行日志，fullregex_log代表完整正则，默认为minimalist_log
+        /// 采集的日志类型，默认为minimalist_log。支持以下类型：
+        /// - json_log代表：JSON-文件日志（详见[使用 JSON 提取模式采集日志](https://cloud.tencent.com/document/product/614/17419)）；
+        /// - delimiter_log代表：分隔符-文件日志（详见[使用分隔符提取模式采集日志](https://cloud.tencent.com/document/product/614/17420)）；
+        /// - minimalist_log代表：单行全文-文件日志（详见[使用单行全文提取模式采集日志](https://cloud.tencent.com/document/product/614/17421)）；
+        /// - fullregex_log代表：单行完全正则-文件日志（详见[使用单行-完全正则提取模式采集日志](https://cloud.tencent.com/document/product/614/52365)）；
+        /// - multiline_log代表：多行全文-文件日志（详见[使用多行全文提取模式采集日志](https://cloud.tencent.com/document/product/614/17422)）；
+        /// - multiline_fullregex_log代表：多行完全正则-文件日志（详见[使用多行-完全正则提取模式采集日志](https://cloud.tencent.com/document/product/614/52366)）；
+        /// - user_define_log代表：组合解析（适用于多格式嵌套的日志，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)）。
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
 
         /// <summary>
-        /// 采集配置标
+        /// 采集配置标记。
+        /// - 目前只支持label_k8s，用于标记自建k8s集群使用的采集配置
         /// </summary>
         [JsonProperty("ConfigFlag")]
         public string ConfigFlag{ get; set; }
@@ -73,25 +81,27 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 节点文件配置信息
+        /// 节点文件路径类型配置。
         /// </summary>
         [JsonProperty("HostFile")]
         public HostFileInfo HostFile{ get; set; }
 
         /// <summary>
-        /// 容器文件路径信息
+        /// 容器文件路径类型配置。
         /// </summary>
         [JsonProperty("ContainerFile")]
         public ContainerFileInfo ContainerFile{ get; set; }
 
         /// <summary>
-        /// 容器标准输出信息
+        /// 容器标准输出类型配置。
         /// </summary>
         [JsonProperty("ContainerStdout")]
         public ContainerStdoutInfo ContainerStdout{ get; set; }
 
         /// <summary>
-        /// 日志格式化方式
+        /// 日志格式化方式，用于容器采集场景。
+        /// - stdout-docker-json：用于docker容器采集场景
+        /// - stdout-containerd：用于containerd容器采集场景
         /// </summary>
         [JsonProperty("LogFormat")]
         public string LogFormat{ get; set; }
@@ -109,7 +119,9 @@ namespace TencentCloud.Cls.V20201016.Models
         public ExcludePathInfo[] ExcludePaths{ get; set; }
 
         /// <summary>
-        /// 用户自定义采集规则，Json格式序列化的字符串
+        /// 组合解析采集规则，用于复杂场景下的日志采集。
+        /// - 取值参考：[使用组合解析提取模式采集日志
+        /// ](https://cloud.tencent.com/document/product/614/61310)
         /// </summary>
         [JsonProperty("UserDefineRule")]
         public string UserDefineRule{ get; set; }
@@ -137,7 +149,7 @@ namespace TencentCloud.Cls.V20201016.Models
         /// - ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
         /// - ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
         /// - ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
-        /// 样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
+        /// - ClsAgentDefault(自定义默认值，无特殊含义，用于清空其他选项)，建议取值0
         /// </summary>
         [JsonProperty("AdvancedConfig")]
         public string AdvancedConfig{ get; set; }

@@ -162,7 +162,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// <li>0：不自动续费</li>
         /// <li>1：开启自动续费</li>
         /// <li>2：禁止自动续费</li>
-        /// <li>-1：无效</ii>
+        /// <li>-1：无效</li>
         /// </ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>

@@ -40,6 +40,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ApproverType{ get; set; }
 
         /// <summary>
+        /// 签署人在原合同中的RecipientId，可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人信息，可参考返回结构体<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#flowapproverdetail" target="_blank">FlowApproverDetail</a>中的RecipientId。
+        /// **注意**：当指定了此参数后，ApproverNumber即失效，会以本参数作为原合同参与人的选取。与ApproverNumber二选一。
+        /// </summary>
+        [JsonProperty("ReleasedApproverRecipientId")]
+        public string ReleasedApproverRecipientId{ get; set; }
+
+        /// <summary>
         /// 签署人姓名，最大长度50个字。
         /// </summary>
         [JsonProperty("Name")]
@@ -108,6 +115,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("ApproverSignRole")]
         public string ApproverSignRole{ get; set; }
 
+        /// <summary>
+        /// 印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署
+        /// </summary>
+        [JsonProperty("ApproverSignSealId")]
+        public string ApproverSignSealId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,6 +129,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         {
             this.SetParamSimple(map, prefix + "ApproverNumber", this.ApproverNumber);
             this.SetParamSimple(map, prefix + "ApproverType", this.ApproverType);
+            this.SetParamSimple(map, prefix + "ReleasedApproverRecipientId", this.ReleasedApproverRecipientId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "IdCardType", this.IdCardType);
             this.SetParamSimple(map, prefix + "IdCardNumber", this.IdCardNumber);
@@ -125,6 +139,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
             this.SetParamSimple(map, prefix + "ApproverSignComponentType", this.ApproverSignComponentType);
             this.SetParamSimple(map, prefix + "ApproverSignRole", this.ApproverSignRole);
+            this.SetParamSimple(map, prefix + "ApproverSignSealId", this.ApproverSignSealId);
         }
     }
 }

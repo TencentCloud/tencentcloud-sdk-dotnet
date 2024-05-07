@@ -135,6 +135,13 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("SyntaxRule")]
         public ulong? SyntaxRule{ get; set; }
 
+        /// <summary>
+        /// 是否开启投递服务日志。1：关闭，2：开启。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HasServicesLog")]
+        public ulong? HasServicesLog{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -159,6 +166,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "ProcessDelay", this.ProcessDelay);
             this.SetParamSimple(map, prefix + "SrcTopicRegion", this.SrcTopicRegion);
             this.SetParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
+            this.SetParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
         }
     }
 }

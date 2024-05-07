@@ -110,7 +110,6 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 是否为标准json。  0：否； 1：是。
-        /// 注
         /// - 标准json指采集器使用业界标准开源解析器进行json解析，非标json指采集器使用CLS自研json解析器进行解析，两种解析器没有本质区别，建议客户使用标准json进行解析。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>

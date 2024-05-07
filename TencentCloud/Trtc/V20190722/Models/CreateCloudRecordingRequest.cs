@@ -71,13 +71,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? RoomIdType{ get; set; }
 
         /// <summary>
-        /// 混流的转码参数，录制模式为混流的时候可以设置。
+        /// 合流的转码参数，录制模式为合流的时候可以设置。
         /// </summary>
         [JsonProperty("MixTranscodeParams")]
         public MixTranscodeParams MixTranscodeParams{ get; set; }
 
         /// <summary>
-        /// 混流的布局参数，录制模式为混流的时候可以设置。
+        /// 合流的布局参数，录制模式为合流的时候可以设置。
         /// </summary>
         [JsonProperty("MixLayoutParams")]
         public MixLayoutParams MixLayoutParams{ get; set; }

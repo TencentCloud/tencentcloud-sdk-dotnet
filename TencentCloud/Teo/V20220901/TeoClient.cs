@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.998";
+       private const string sdkVersion = "SDK_NET_3.0.999";
 
         /// <summary>
         /// Client constructor.
@@ -1376,6 +1376,30 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 查询安全 IP 组的配置信息，包括安全 IP 组的 ID、名称和内容。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityIPGroupRequest"/></param>
+        /// <returns><see cref="DescribeSecurityIPGroupResponse"/></returns>
+        public Task<DescribeSecurityIPGroupResponse> DescribeSecurityIPGroup(DescribeSecurityIPGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityIPGroupResponse>(req, "DescribeSecurityIPGroup");
+        }
+
+        /// <summary>
+        /// 查询安全 IP 组的配置信息，包括安全 IP 组的 ID、名称和内容。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityIPGroupRequest"/></param>
+        /// <returns><see cref="DescribeSecurityIPGroupResponse"/></returns>
+        public DescribeSecurityIPGroupResponse DescribeSecurityIPGroupSync(DescribeSecurityIPGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityIPGroupResponse>(req, "DescribeSecurityIPGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 接口已废弃，将于 2024 年 6 月 30 日停止服务。请使用 [查询安全 IP 组
+        /// ](https://cloud.tencent.com/document/product/1552/105866) 接口。
+        /// 
         /// 查询 IP 组的配置信息，包括 IP 组名称、 IP 组内容、 IP 组归属站点。
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityIPGroupInfoRequest"/></param>
@@ -1386,6 +1410,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 接口已废弃，将于 2024 年 6 月 30 日停止服务。请使用 [查询安全 IP 组
+        /// ](https://cloud.tencent.com/document/product/1552/105866) 接口。
+        /// 
         /// 查询 IP 组的配置信息，包括 IP 组名称、 IP 组内容、 IP 组归属站点。
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityIPGroupInfoRequest"/></param>

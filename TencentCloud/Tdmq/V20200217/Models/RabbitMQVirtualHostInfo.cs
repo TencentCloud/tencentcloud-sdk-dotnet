@@ -99,6 +99,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("MessageRateOut")]
         public float? MessageRateOut{ get; set; }
 
+        /// <summary>
+        /// 是否存在镜像队列策略，true 为存在，false 为不存
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MirrorQueuePolicyFlag")]
+        public bool? MirrorQueuePolicyFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,6 +123,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MessageHeapCount", this.MessageHeapCount);
             this.SetParamSimple(map, prefix + "MessageRateIn", this.MessageRateIn);
             this.SetParamSimple(map, prefix + "MessageRateOut", this.MessageRateOut);
+            this.SetParamSimple(map, prefix + "MirrorQueuePolicyFlag", this.MirrorQueuePolicyFlag);
         }
     }
 }

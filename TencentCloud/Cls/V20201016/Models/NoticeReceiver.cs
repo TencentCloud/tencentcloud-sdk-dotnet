@@ -52,13 +52,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string[] ReceiverChannels{ get; set; }
 
         /// <summary>
-        /// 允许接收信息的开始时间。
+        /// 允许接收信息的开始时间。格式：`15:04:05`，必填。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 允许接收信息的结束时间。
+        /// 允许接收信息的结束时间。格式：`15:04:05`，必填。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -66,7 +66,7 @@ namespace TencentCloud.Cls.V20201016.Models
         /// <summary>
         /// 位序。
         /// 
-        /// - 入参无效。
+        /// - 入参时无效。
         /// - 出参时有效。
         /// </summary>
         [JsonProperty("Index")]

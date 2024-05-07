@@ -25,7 +25,7 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 创建的项目名(不为空且最长为 200)
+        /// 应用名称(不为空且最长为 200)
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string URL{ get; set; }
 
         /// <summary>
-        /// 创建的项目描述(可选，最长为 1000)
+        /// 应用描述(可选，最长为 1000)
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }

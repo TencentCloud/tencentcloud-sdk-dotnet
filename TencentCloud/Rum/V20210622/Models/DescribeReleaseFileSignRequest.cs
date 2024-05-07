@@ -31,7 +31,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public long? Timeout{ get; set; }
 
         /// <summary>
-        /// bucket类型，不填默认web，2:app
+        /// bucket类型，不填默认1:web，2:app
         /// </summary>
         [JsonProperty("FileType")]
         public long? FileType{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// 集群类型
+        /// 集群类型。可填入tke、eks、tkeedge、tdcc，分别代表标准集群、弹性集群、边缘集群、注册集群
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string LogContent{ get; set; }
 
         /// <summary>
-        /// 行号
+        /// 行号。从0开始
         /// </summary>
         [JsonProperty("LineNum")]
         public long? LineNum{ get; set; }
@@ -43,13 +43,16 @@ namespace TencentCloud.Cls.V20201016.Models
         public string DstTopicId{ get; set; }
 
         /// <summary>
-        /// 失败错误码， 空字符串""表示正常
+        /// 失败错误信息， 空字符串""表示正常
         /// </summary>
         [JsonProperty("FailReason")]
         public string FailReason{ get; set; }
 
         /// <summary>
-        /// 日志时间戳
+        /// 日志时间，格式：`2024-05-07 17:13:17.105`
+        /// 
+        /// - 入参时无效
+        /// - 出参时有效，为日志中的时间格式
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }
@@ -59,6 +62,7 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DstTopicName")]
+        [System.Obsolete]
         public string DstTopicName{ get; set; }
 
 

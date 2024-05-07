@@ -27,7 +27,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// <summary>
         /// 录制模式：
         /// 1：单流录制，分别录制房间的订阅UserId的音频和视频，将录制文件上传至云存储；
-        /// 2：混流录制，将房间内订阅UserId的音视频混录成一个音视频文件，将录制文件上传至云存储；
+        /// 2：合流录制，将房间内订阅UserId的音视频混录成一个音视频文件，将录制文件上传至云存储；
         /// </summary>
         [JsonProperty("RecordMode")]
         public ulong? RecordMode{ get; set; }
@@ -62,7 +62,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? OutputFormat{ get; set; }
 
         /// <summary>
-        /// 单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。混流录制此参数无需设置，默认音视频合并。
+        /// 单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。合流录制此参数无需设置，默认音视频合并。
         /// </summary>
         [JsonProperty("AvMerge")]
         public ulong? AvMerge{ get; set; }
@@ -80,6 +80,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("MediaId")]
         public ulong? MediaId{ get; set; }
 
+        /// <summary>
+        /// 上行视频停止时，录制的补帧类型，0：补最后一帧 1：补黑帧
+        /// </summary>
+        [JsonProperty("FillType")]
+        public ulong? FillType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +100,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "AvMerge", this.AvMerge);
             this.SetParamSimple(map, prefix + "MaxMediaFileDuration", this.MaxMediaFileDuration);
             this.SetParamSimple(map, prefix + "MediaId", this.MediaId);
+            this.SetParamSimple(map, prefix + "FillType", this.FillType);
         }
     }
 }
