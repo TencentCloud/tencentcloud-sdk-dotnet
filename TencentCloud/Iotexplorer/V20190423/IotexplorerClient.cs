@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.999";
+       private const string sdkVersion = "SDK_NET_3.0.1000";
 
         /// <summary>
         /// Client constructor.
@@ -386,6 +386,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public CreateStudioProductResponse CreateStudioProductSync(CreateStudioProductRequest req)
         {
             return InternalRequestAsync<CreateStudioProductResponse>(req, "CreateStudioProduct")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建TRTC通话参数
+        /// </summary>
+        /// <param name="req"><see cref="CreateTRTCSignaturesWithRoomIdRequest"/></param>
+        /// <returns><see cref="CreateTRTCSignaturesWithRoomIdResponse"/></returns>
+        public Task<CreateTRTCSignaturesWithRoomIdResponse> CreateTRTCSignaturesWithRoomId(CreateTRTCSignaturesWithRoomIdRequest req)
+        {
+            return InternalRequestAsync<CreateTRTCSignaturesWithRoomIdResponse>(req, "CreateTRTCSignaturesWithRoomId");
+        }
+
+        /// <summary>
+        /// 创建TRTC通话参数
+        /// </summary>
+        /// <param name="req"><see cref="CreateTRTCSignaturesWithRoomIdRequest"/></param>
+        /// <returns><see cref="CreateTRTCSignaturesWithRoomIdResponse"/></returns>
+        public CreateTRTCSignaturesWithRoomIdResponse CreateTRTCSignaturesWithRoomIdSync(CreateTRTCSignaturesWithRoomIdRequest req)
+        {
+            return InternalRequestAsync<CreateTRTCSignaturesWithRoomIdResponse>(req, "CreateTRTCSignaturesWithRoomId")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -785,6 +806,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DescribeCloudStorageAIServiceCallbackResponse DescribeCloudStorageAIServiceCallbackSync(DescribeCloudStorageAIServiceCallbackRequest req)
         {
             return InternalRequestAsync<DescribeCloudStorageAIServiceCallbackResponse>(req, "DescribeCloudStorageAIServiceCallback")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定的云存 AI 分析任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageAIServiceTaskRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageAIServiceTaskResponse"/></returns>
+        public Task<DescribeCloudStorageAIServiceTaskResponse> DescribeCloudStorageAIServiceTask(DescribeCloudStorageAIServiceTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageAIServiceTaskResponse>(req, "DescribeCloudStorageAIServiceTask");
+        }
+
+        /// <summary>
+        /// 查询指定的云存 AI 分析任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageAIServiceTaskRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageAIServiceTaskResponse"/></returns>
+        public DescribeCloudStorageAIServiceTaskResponse DescribeCloudStorageAIServiceTaskSync(DescribeCloudStorageAIServiceTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageAIServiceTaskResponse>(req, "DescribeCloudStorageAIServiceTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1650,6 +1692,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 解散TRTC房间
+        /// </summary>
+        /// <param name="req"><see cref="DismissRoomByStrRoomIdFromTRTCRequest"/></param>
+        /// <returns><see cref="DismissRoomByStrRoomIdFromTRTCResponse"/></returns>
+        public Task<DismissRoomByStrRoomIdFromTRTCResponse> DismissRoomByStrRoomIdFromTRTC(DismissRoomByStrRoomIdFromTRTCRequest req)
+        {
+            return InternalRequestAsync<DismissRoomByStrRoomIdFromTRTCResponse>(req, "DismissRoomByStrRoomIdFromTRTC");
+        }
+
+        /// <summary>
+        /// 解散TRTC房间
+        /// </summary>
+        /// <param name="req"><see cref="DismissRoomByStrRoomIdFromTRTCRequest"/></param>
+        /// <returns><see cref="DismissRoomByStrRoomIdFromTRTCResponse"/></returns>
+        public DismissRoomByStrRoomIdFromTRTCResponse DismissRoomByStrRoomIdFromTRTCSync(DismissRoomByStrRoomIdFromTRTCRequest req)
+        {
+            return InternalRequestAsync<DismissRoomByStrRoomIdFromTRTCResponse>(req, "DismissRoomByStrRoomIdFromTRTC")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 启用规则
         /// </summary>
         /// <param name="req"><see cref="EnableTopicRuleRequest"/></param>
@@ -1688,6 +1751,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public GenSingleDeviceSignatureOfPublicResponse GenSingleDeviceSignatureOfPublicSync(GenSingleDeviceSignatureOfPublicRequest req)
         {
             return InternalRequestAsync<GenSingleDeviceSignatureOfPublicResponse>(req, "GenSingleDeviceSignatureOfPublic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取云存 AI 分析任务输出文件的下载地址
+        /// </summary>
+        /// <param name="req"><see cref="GenerateCloudStorageAIServiceTaskFileURLRequest"/></param>
+        /// <returns><see cref="GenerateCloudStorageAIServiceTaskFileURLResponse"/></returns>
+        public Task<GenerateCloudStorageAIServiceTaskFileURLResponse> GenerateCloudStorageAIServiceTaskFileURL(GenerateCloudStorageAIServiceTaskFileURLRequest req)
+        {
+            return InternalRequestAsync<GenerateCloudStorageAIServiceTaskFileURLResponse>(req, "GenerateCloudStorageAIServiceTaskFileURL");
+        }
+
+        /// <summary>
+        /// 获取云存 AI 分析任务输出文件的下载地址
+        /// </summary>
+        /// <param name="req"><see cref="GenerateCloudStorageAIServiceTaskFileURLRequest"/></param>
+        /// <returns><see cref="GenerateCloudStorageAIServiceTaskFileURLResponse"/></returns>
+        public GenerateCloudStorageAIServiceTaskFileURLResponse GenerateCloudStorageAIServiceTaskFileURLSync(GenerateCloudStorageAIServiceTaskFileURLRequest req)
+        {
+            return InternalRequestAsync<GenerateCloudStorageAIServiceTaskFileURLResponse>(req, "GenerateCloudStorageAIServiceTaskFileURL")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2423,6 +2507,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public ReleaseStudioProductResponse ReleaseStudioProductSync(ReleaseStudioProductRequest req)
         {
             return InternalRequestAsync<ReleaseStudioProductResponse>(req, "ReleaseStudioProduct")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// TRTC操作，将用户从房间移出
+        /// </summary>
+        /// <param name="req"><see cref="RemoveUserByRoomIdFromTRTCRequest"/></param>
+        /// <returns><see cref="RemoveUserByRoomIdFromTRTCResponse"/></returns>
+        public Task<RemoveUserByRoomIdFromTRTCResponse> RemoveUserByRoomIdFromTRTC(RemoveUserByRoomIdFromTRTCRequest req)
+        {
+            return InternalRequestAsync<RemoveUserByRoomIdFromTRTCResponse>(req, "RemoveUserByRoomIdFromTRTC");
+        }
+
+        /// <summary>
+        /// TRTC操作，将用户从房间移出
+        /// </summary>
+        /// <param name="req"><see cref="RemoveUserByRoomIdFromTRTCRequest"/></param>
+        /// <returns><see cref="RemoveUserByRoomIdFromTRTCResponse"/></returns>
+        public RemoveUserByRoomIdFromTRTCResponse RemoveUserByRoomIdFromTRTCSync(RemoveUserByRoomIdFromTRTCRequest req)
+        {
+            return InternalRequestAsync<RemoveUserByRoomIdFromTRTCResponse>(req, "RemoveUserByRoomIdFromTRTC")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

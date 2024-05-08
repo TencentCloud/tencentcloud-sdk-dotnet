@@ -49,6 +49,15 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public ulong? ChannelId{ get; set; }
 
         /// <summary>
+        /// 云存 AI 服务类型。可能取值：
+        /// 
+        /// - `PackageDetect`：包裹检测
+        /// - `Highlight`：视频浓缩
+        /// </summary>
+        [JsonProperty("ServiceType")]
+        public string ServiceType{ get; set; }
+
+        /// <summary>
         /// 对应云存视频的起始时间
         /// </summary>
         [JsonProperty("StartTime")]
@@ -61,7 +70,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空）
+        /// 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；4：执行中）
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -73,22 +82,19 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string Result{ get; set; }
 
         /// <summary>
-        /// 云存 AI 服务类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 任务输出文件列表
         /// </summary>
-        [JsonProperty("ServiceType")]
-        public string ServiceType{ get; set; }
+        [JsonProperty("Files")]
+        public string[] Files{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
         /// 最后更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }
@@ -103,11 +109,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
             this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
+            this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Result", this.Result);
-            this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
+            this.SetParamArraySimple(map, prefix + "Files.", this.Files);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }

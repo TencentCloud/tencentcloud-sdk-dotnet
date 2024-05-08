@@ -48,6 +48,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("DataEngineName")]
         public string DataEngineName{ get; set; }
 
+        /// <summary>
+        /// spark集群资源组名称
+        /// </summary>
+        [JsonProperty("ResourceGroupName")]
+        public string ResourceGroupName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamObj(map, prefix + "Tasks.", this.Tasks);
             this.SetParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
             this.SetParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
+            this.SetParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
         }
     }
 }

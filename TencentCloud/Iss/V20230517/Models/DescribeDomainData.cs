@@ -73,6 +73,13 @@ namespace TencentCloud.Iss.V20230517.Models
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
+        /// <summary>
+        /// 证书ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CertId")]
+        public string CertId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "CertId", this.CertId);
         }
     }
 }

@@ -296,6 +296,20 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("ResultFormat")]
         public string ResultFormat{ get; set; }
 
+        /// <summary>
+        /// 引擎类型，SparkSQL：SparkSQL 引擎；SparkBatch：Spark作业引擎；PrestoSQL：Presto引擎
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EngineTypeDetail")]
+        public string EngineTypeDetail{ get; set; }
+
+        /// <summary>
+        /// spark引擎资源组名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceGroupName")]
+        public string ResourceGroupName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -343,6 +357,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamObj(map, prefix + "SparkMonitorMetrics.", this.SparkMonitorMetrics);
             this.SetParamObj(map, prefix + "PrestoMonitorMetrics.", this.PrestoMonitorMetrics);
             this.SetParamSimple(map, prefix + "ResultFormat", this.ResultFormat);
+            this.SetParamSimple(map, prefix + "EngineTypeDetail", this.EngineTypeDetail);
+            this.SetParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
         }
     }
 }

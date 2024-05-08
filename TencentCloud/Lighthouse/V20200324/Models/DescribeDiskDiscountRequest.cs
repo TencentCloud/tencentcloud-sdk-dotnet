@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 云硬盘类型, 取值: "CLOUD_PREMIUM"。
+        /// 云硬盘类型, 取值范围: CLOUD_PREMIUM: 高性能云硬盘，CLOUD_SSD: SSD云硬盘
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }

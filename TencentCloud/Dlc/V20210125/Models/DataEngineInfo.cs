@@ -354,6 +354,20 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("EngineNetworkId")]
         public string EngineNetworkId{ get; set; }
 
+        /// <summary>
+        /// 标准引擎关联的资源组个数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EngineResourceGroupCount")]
+        public long? EngineResourceGroupCount{ get; set; }
+
+        /// <summary>
+        /// 引擎当前使用量（Cu）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EngineResourceUsedCU")]
+        public long? EngineResourceUsedCU{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -409,6 +423,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "EngineGeneration", this.EngineGeneration);
             this.SetParamSimple(map, prefix + "EngineTypeDetail", this.EngineTypeDetail);
             this.SetParamSimple(map, prefix + "EngineNetworkId", this.EngineNetworkId);
+            this.SetParamSimple(map, prefix + "EngineResourceGroupCount", this.EngineResourceGroupCount);
+            this.SetParamSimple(map, prefix + "EngineResourceUsedCU", this.EngineResourceUsedCU);
         }
     }
 }

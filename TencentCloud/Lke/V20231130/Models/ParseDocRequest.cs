@@ -31,7 +31,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 文件下载链接 (支持的文件类型: docx, txt, markdown, pdf)
+        /// 文件下载链接 (支持的文件类型: docx, txt, markdown, pdf), 该地址需要外网可以直接无状态访问
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

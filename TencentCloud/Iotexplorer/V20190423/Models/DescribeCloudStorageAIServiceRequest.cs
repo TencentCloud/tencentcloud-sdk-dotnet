@@ -37,7 +37,10 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 云存 AI 服务类型。可选值：PackageDetect
+        /// 云存 AI 服务类型。可选值：
+        /// 
+        /// - `PackageDetect`：包裹检测
+        /// - `Highlight`：视频浓缩
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }

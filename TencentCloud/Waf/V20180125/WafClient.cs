@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.999";
+       private const string sdkVersion = "SDK_NET_3.0.1000";
 
         /// <summary>
         /// Client constructor.
@@ -260,6 +260,27 @@ namespace TencentCloud.Waf.V20180125
         public CreateHostResponse CreateHostSync(CreateHostRequest req)
         {
             return InternalRequestAsync<CreateHostResponse>(req, "CreateHost")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Waf IP黑白名单新增接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateIpAccessControlRequest"/></param>
+        /// <returns><see cref="CreateIpAccessControlResponse"/></returns>
+        public Task<CreateIpAccessControlResponse> CreateIpAccessControl(CreateIpAccessControlRequest req)
+        {
+            return InternalRequestAsync<CreateIpAccessControlResponse>(req, "CreateIpAccessControl");
+        }
+
+        /// <summary>
+        /// Waf IP黑白名单新增接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateIpAccessControlRequest"/></param>
+        /// <returns><see cref="CreateIpAccessControlResponse"/></returns>
+        public CreateIpAccessControlResponse CreateIpAccessControlSync(CreateIpAccessControlRequest req)
+        {
+            return InternalRequestAsync<CreateIpAccessControlResponse>(req, "CreateIpAccessControl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -516,6 +537,27 @@ namespace TencentCloud.Waf.V20180125
         public DeleteIpAccessControlResponse DeleteIpAccessControlSync(DeleteIpAccessControlRequest req)
         {
             return InternalRequestAsync<DeleteIpAccessControlResponse>(req, "DeleteIpAccessControl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Waf IP黑白名单最新版本删除接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIpAccessControlV2Request"/></param>
+        /// <returns><see cref="DeleteIpAccessControlV2Response"/></returns>
+        public Task<DeleteIpAccessControlV2Response> DeleteIpAccessControlV2(DeleteIpAccessControlV2Request req)
+        {
+            return InternalRequestAsync<DeleteIpAccessControlV2Response>(req, "DeleteIpAccessControlV2");
+        }
+
+        /// <summary>
+        /// Waf IP黑白名单最新版本删除接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIpAccessControlV2Request"/></param>
+        /// <returns><see cref="DeleteIpAccessControlV2Response"/></returns>
+        public DeleteIpAccessControlV2Response DeleteIpAccessControlV2Sync(DeleteIpAccessControlV2Request req)
+        {
+            return InternalRequestAsync<DeleteIpAccessControlV2Response>(req, "DeleteIpAccessControlV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1893,6 +1935,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 导入IP黑白名单
+        /// </summary>
+        /// <param name="req"><see cref="ImportIpAccessControlRequest"/></param>
+        /// <returns><see cref="ImportIpAccessControlResponse"/></returns>
+        public Task<ImportIpAccessControlResponse> ImportIpAccessControl(ImportIpAccessControlRequest req)
+        {
+            return InternalRequestAsync<ImportIpAccessControlResponse>(req, "ImportIpAccessControl");
+        }
+
+        /// <summary>
+        /// 导入IP黑白名单
+        /// </summary>
+        /// <param name="req"><see cref="ImportIpAccessControlRequest"/></param>
+        /// <returns><see cref="ImportIpAccessControlResponse"/></returns>
+        public ImportIpAccessControlResponse ImportIpAccessControlSync(ImportIpAccessControlRequest req)
+        {
+            return InternalRequestAsync<ImportIpAccessControlResponse>(req, "ImportIpAccessControl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于修改访问日志保存期限等字段信息
         /// </summary>
         /// <param name="req"><see cref="ModifyAccessPeriodRequest"/></param>
@@ -2437,6 +2500,27 @@ namespace TencentCloud.Waf.V20180125
         public ModifyInstanceRenewFlagResponse ModifyInstanceRenewFlagSync(ModifyInstanceRenewFlagRequest req)
         {
             return InternalRequestAsync<ModifyInstanceRenewFlagResponse>(req, "ModifyInstanceRenewFlag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Waf IP黑白名单编辑接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIpAccessControlRequest"/></param>
+        /// <returns><see cref="ModifyIpAccessControlResponse"/></returns>
+        public Task<ModifyIpAccessControlResponse> ModifyIpAccessControl(ModifyIpAccessControlRequest req)
+        {
+            return InternalRequestAsync<ModifyIpAccessControlResponse>(req, "ModifyIpAccessControl");
+        }
+
+        /// <summary>
+        /// Waf IP黑白名单编辑接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIpAccessControlRequest"/></param>
+        /// <returns><see cref="ModifyIpAccessControlResponse"/></returns>
+        public ModifyIpAccessControlResponse ModifyIpAccessControlSync(ModifyIpAccessControlRequest req)
+        {
+            return InternalRequestAsync<ModifyIpAccessControlResponse>(req, "ModifyIpAccessControl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

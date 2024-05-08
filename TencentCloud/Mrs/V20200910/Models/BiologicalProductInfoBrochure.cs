@@ -15,35 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Rce.V20201103.Models
+namespace TencentCloud.Mrs.V20200910.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OutputFrontRiskData : AbstractModel
+    public class BiologicalProductInfoBrochure : AbstractModel
     {
         
         /// <summary>
-        /// 返回码[0：成功；非0：标识失败错误码]。
+        /// 文本内容
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Code")]
-        public long? Code{ get; set; }
-
-        /// <summary>
-        /// 出错消息[UTF-8编码]。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Message")]
-        public string Message{ get; set; }
-
-        /// <summary>
-        /// 返回结果。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Value")]
-        public OutputFrontRisk[] Value{ get; set; }
+        [JsonProperty("Text")]
+        public string Text{ get; set; }
 
 
         /// <summary>
@@ -51,9 +37,7 @@ namespace TencentCloud.Rce.V20201103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Code", this.Code);
-            this.SetParamSimple(map, prefix + "Message", this.Message);
-            this.SetParamArrayObj(map, prefix + "Value.", this.Value);
+            this.SetParamSimple(map, prefix + "Text", this.Text);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{32B04F9C-1523-3169-96D4-5FA22888E8B1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.999</VersionPrefix>
+    <VersionPrefix>3.0.1000</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -56,6 +56,22 @@
     <Compile Include="V20200910\Models\BaseItem.cs" />
     <Compile Include="V20200910\Models\BaseItem2.cs" />
     <Compile Include="V20200910\Models\BaseItem3.cs" />
+    <Compile Include="V20200910\Models\BiologicalProductInfo.cs" />
+    <Compile Include="V20200910\Models\BiologicalProductInfoAdverseReaction.cs" />
+    <Compile Include="V20200910\Models\BiologicalProductInfoApproval.cs" />
+    <Compile Include="V20200910\Models\BiologicalProductInfoBrochure.cs" />
+    <Compile Include="V20200910\Models\BiologicalProductInfoContraindications.cs" />
+    <Compile Include="V20200910\Models\BiologicalProductInfoDosage.cs" />
+    <Compile Include="V20200910\Models\BiologicalProductInfoExecutiveStandards.cs" />
+    <Compile Include="V20200910\Models\BiologicalProductInfoIndications.cs" />
+    <Compile Include="V20200910\Models\BiologicalProductInfoIngredientAndAppearance.cs" />
+    <Compile Include="V20200910\Models\BiologicalProductInfoManufacturer.cs" />
+    <Compile Include="V20200910\Models\BiologicalProductInfoName.cs" />
+    <Compile Include="V20200910\Models\BiologicalProductInfoPackaging.cs" />
+    <Compile Include="V20200910\Models\BiologicalProductInfoPrecautions.cs" />
+    <Compile Include="V20200910\Models\BiologicalProductInfoStorage.cs" />
+    <Compile Include="V20200910\Models\BiologicalProductInfoVaccinationTarget.cs" />
+    <Compile Include="V20200910\Models\BiologicalProductInfoValidityPeriod.cs" />
     <Compile Include="V20200910\Models\BiopsyPart.cs" />
     <Compile Include="V20200910\Models\BirthCert.cs" />
     <Compile Include="V20200910\Models\BirthPlaceBlock.cs" />
@@ -68,6 +84,30 @@
     <Compile Include="V20200910\Models\BodyExaminationBlock.cs" />
     <Compile Include="V20200910\Models\BodyTemperatureBlock.cs" />
     <Compile Include="V20200910\Models\Check.cs" />
+    <Compile Include="V20200910\Models\ChemicalProductInfo.cs" />
+    <Compile Include="V20200910\Models\ChemicalProductInfoActiveIngredient.cs" />
+    <Compile Include="V20200910\Models\ChemicalProductInfoAdverseReaction.cs" />
+    <Compile Include="V20200910\Models\ChemicalProductInfoAppearance.cs" />
+    <Compile Include="V20200910\Models\ChemicalProductInfoApproval.cs" />
+    <Compile Include="V20200910\Models\ChemicalProductInfoBrochure.cs" />
+    <Compile Include="V20200910\Models\ChemicalProductInfoClinicalTrial.cs" />
+    <Compile Include="V20200910\Models\ChemicalProductInfoContraindications.cs" />
+    <Compile Include="V20200910\Models\ChemicalProductInfoDosage.cs" />
+    <Compile Include="V20200910\Models\ChemicalProductInfoExecutiveStandards.cs" />
+    <Compile Include="V20200910\Models\ChemicalProductInfoGeriatricUse.cs" />
+    <Compile Include="V20200910\Models\ChemicalProductInfoIndications.cs" />
+    <Compile Include="V20200910\Models\ChemicalProductInfoInteractions.cs" />
+    <Compile Include="V20200910\Models\ChemicalProductInfoManufacturer.cs" />
+    <Compile Include="V20200910\Models\ChemicalProductInfoName.cs" />
+    <Compile Include="V20200910\Models\ChemicalProductInfoOverdose.cs" />
+    <Compile Include="V20200910\Models\ChemicalProductInfoPackaging.cs" />
+    <Compile Include="V20200910\Models\ChemicalProductInfoPediatricUse.cs" />
+    <Compile Include="V20200910\Models\ChemicalProductInfoPharmacokinetics.cs" />
+    <Compile Include="V20200910\Models\ChemicalProductInfoPharmacologyToxicology.cs" />
+    <Compile Include="V20200910\Models\ChemicalProductInfoPrecautions.cs" />
+    <Compile Include="V20200910\Models\ChemicalProductInfoPregnancyLactationUse.cs" />
+    <Compile Include="V20200910\Models\ChemicalProductInfoStorage.cs" />
+    <Compile Include="V20200910\Models\ChemicalProductInfoValidityPeriod.cs" />
     <Compile Include="V20200910\Models\ChestCircumferenceItem.cs" />
     <Compile Include="V20200910\Models\ChiefComplaintBlock.cs" />
     <Compile Include="V20200910\Models\ChiefComplaintDetailBlock.cs" />
@@ -91,6 +131,8 @@
     <Compile Include="V20200910\Models\DiseasePresentBlock.cs" />
     <Compile Include="V20200910\Models\DosageBlock.cs" />
     <Compile Include="V20200910\Models\DrugHistoryBlock.cs" />
+    <Compile Include="V20200910\Models\DrugInstructionObjectRequest.cs" />
+    <Compile Include="V20200910\Models\DrugInstructionObjectResponse.cs" />
     <Compile Include="V20200910\Models\DrugListBlock.cs" />
     <Compile Include="V20200910\Models\EcgDescription.cs" />
     <Compile Include="V20200910\Models\EcgDiagnosis.cs" />

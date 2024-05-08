@@ -15,28 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Rce.V20201103.Models
+namespace TencentCloud.Iotexplorer.V20190423.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OutputFrontRisk : AbstractModel
+    public class DescribeCloudStorageAIServiceTaskRequest : AbstractModel
     {
         
         /// <summary>
-        /// 名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 任务 ID
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// 参数值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Value")]
-        public OutputFrontRiskValue[] Value{ get; set; }
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
 
 
         /// <summary>
@@ -44,8 +36,7 @@ namespace TencentCloud.Rce.V20201103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamArrayObj(map, prefix + "Value.", this.Value);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
         }
     }
 }

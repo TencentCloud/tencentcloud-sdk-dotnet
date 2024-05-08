@@ -25,7 +25,7 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 引擎类型：SQL、SparkBatch
+        /// 引擎类型：SQL、SparkBatch、StandardSpark、StandardPresto
         /// </summary>
         [JsonProperty("EngineType")]
         public string EngineType{ get; set; }

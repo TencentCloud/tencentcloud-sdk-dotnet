@@ -45,6 +45,7 @@ namespace TencentCloud.Tse.V20201207.Models
         /// <summary>
         /// 引擎的产品版本。参考值：
         /// - STANDARD： 标准版
+        /// - PROFESSIONAL: 专业版（Zookeeper）/企业版（PolarisMesh）
         /// 
         /// 引擎各版本及可选择的规格、节点数说明：
         /// apollo - STANDARD版本
@@ -173,6 +174,9 @@ namespace TencentCloud.Tse.V20201207.Models
         /// <summary>
         /// 跨地域部署的引擎地域配置详情
         /// zk标准版没有跨地域部署，请不要填写
+        /// zk专业版跨地域部署开启了固定Leader所在地域，需要满足以下条件
+        /// - 固定Leader所在地域当前仅支持跨两个地域
+        /// - leader地域的副本数必须是3/2 + 1，5/2+1，7/2+1，也就是 2，3，4
         /// </summary>
         [JsonProperty("EngineRegionInfos")]
         public EngineRegionInfo[] EngineRegionInfos{ get; set; }

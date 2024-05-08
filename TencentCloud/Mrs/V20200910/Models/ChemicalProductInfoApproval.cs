@@ -15,28 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Rce.V20201103.Models
+namespace TencentCloud.Mrs.V20200910.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OutputFrontRiskValue : AbstractModel
+    public class ChemicalProductInfoApproval : AbstractModel
     {
         
         /// <summary>
-        /// 请求次数
+        /// 文本
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Requests")]
-        public long? Requests{ get; set; }
-
-        /// <summary>
-        /// 日期标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Index")]
-        public string Index{ get; set; }
+        [JsonProperty("Text")]
+        public string Text{ get; set; }
 
 
         /// <summary>
@@ -44,8 +37,7 @@ namespace TencentCloud.Rce.V20201103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Requests", this.Requests);
-            this.SetParamSimple(map, prefix + "Index", this.Index);
+            this.SetParamSimple(map, prefix + "Text", this.Text);
         }
     }
 }

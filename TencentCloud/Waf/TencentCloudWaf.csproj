@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.999</VersionPrefix>
+    <VersionPrefix>3.0.1000</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -99,6 +99,8 @@
     <Compile Include="V20180125\Models\CreateDealsResponse.cs" />
     <Compile Include="V20180125\Models\CreateHostRequest.cs" />
     <Compile Include="V20180125\Models\CreateHostResponse.cs" />
+    <Compile Include="V20180125\Models\CreateIpAccessControlRequest.cs" />
+    <Compile Include="V20180125\Models\CreateIpAccessControlResponse.cs" />
     <Compile Include="V20180125\Models\DealData.cs" />
     <Compile Include="V20180125\Models\DeleteAccessExportRequest.cs" />
     <Compile Include="V20180125\Models\DeleteAccessExportResponse.cs" />
@@ -124,6 +126,8 @@
     <Compile Include="V20180125\Models\DeleteHostResponse.cs" />
     <Compile Include="V20180125\Models\DeleteIpAccessControlRequest.cs" />
     <Compile Include="V20180125\Models\DeleteIpAccessControlResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteIpAccessControlV2Request.cs" />
+    <Compile Include="V20180125\Models\DeleteIpAccessControlV2Response.cs" />
     <Compile Include="V20180125\Models\DeleteSessionRequest.cs" />
     <Compile Include="V20180125\Models\DeleteSessionResponse.cs" />
     <Compile Include="V20180125\Models\DeleteSpartaProtectionRequest.cs" />
@@ -275,9 +279,12 @@
     <Compile Include="V20180125\Models\HostRecord.cs" />
     <Compile Include="V20180125\Models\HostStatus.cs" />
     <Compile Include="V20180125\Models\HybridPkg.cs" />
+    <Compile Include="V20180125\Models\ImportIpAccessControlRequest.cs" />
+    <Compile Include="V20180125\Models\ImportIpAccessControlResponse.cs" />
     <Compile Include="V20180125\Models\InstanceInfo.cs" />
     <Compile Include="V20180125\Models\IpAccessControlData.cs" />
     <Compile Include="V20180125\Models\IpAccessControlItem.cs" />
+    <Compile Include="V20180125\Models\IpAccessControlParam.cs" />
     <Compile Include="V20180125\Models\IpHitItem.cs" />
     <Compile Include="V20180125\Models\IpHitItemsData.cs" />
     <Compile Include="V20180125\Models\KVInt.cs" />
@@ -338,6 +345,8 @@
     <Compile Include="V20180125\Models\ModifyInstanceQpsLimitResponse.cs" />
     <Compile Include="V20180125\Models\ModifyInstanceRenewFlagRequest.cs" />
     <Compile Include="V20180125\Models\ModifyInstanceRenewFlagResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyIpAccessControlRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyIpAccessControlResponse.cs" />
     <Compile Include="V20180125\Models\ModifyModuleStatusRequest.cs" />
     <Compile Include="V20180125\Models\ModifyModuleStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifyObjectRequest.cs" />

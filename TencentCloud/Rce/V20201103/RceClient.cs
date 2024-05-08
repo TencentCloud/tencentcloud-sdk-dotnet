@@ -28,7 +28,7 @@ namespace TencentCloud.Rce.V20201103
 
        private const string endpoint = "rce.tencentcloudapi.com";
        private const string version = "2020-11-03";
-       private const string sdkVersion = "SDK_NET_3.0.999";
+       private const string sdkVersion = "SDK_NET_3.0.1000";
 
         /// <summary>
         /// Client constructor.
@@ -71,27 +71,6 @@ namespace TencentCloud.Rce.V20201103
         public DescribeRiskAssessmentResponse DescribeRiskAssessmentSync(DescribeRiskAssessmentRequest req)
         {
             return InternalRequestAsync<DescribeRiskAssessmentResponse>(req, "DescribeRiskAssessment")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 以图表形式展示三种请求状态的趋势变化
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRiskTrendsRequest"/></param>
-        /// <returns><see cref="DescribeRiskTrendsResponse"/></returns>
-        public Task<DescribeRiskTrendsResponse> DescribeRiskTrends(DescribeRiskTrendsRequest req)
-        {
-            return InternalRequestAsync<DescribeRiskTrendsResponse>(req, "DescribeRiskTrends");
-        }
-
-        /// <summary>
-        /// 以图表形式展示三种请求状态的趋势变化
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRiskTrendsRequest"/></param>
-        /// <returns><see cref="DescribeRiskTrendsResponse"/></returns>
-        public DescribeRiskTrendsResponse DescribeRiskTrendsSync(DescribeRiskTrendsRequest req)
-        {
-            return InternalRequestAsync<DescribeRiskTrendsResponse>(req, "DescribeRiskTrends")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

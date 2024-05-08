@@ -28,7 +28,7 @@ namespace TencentCloud.Mrs.V20200910
 
        private const string endpoint = "mrs.tencentcloudapi.com";
        private const string version = "2020-09-10";
-       private const string sdkVersion = "SDK_NET_3.0.999";
+       private const string sdkVersion = "SDK_NET_3.0.1000";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Mrs.V20200910
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 药品说明书PDF文件结构化
+        /// </summary>
+        /// <param name="req"><see cref="DrugInstructionObjectRequest"/></param>
+        /// <returns><see cref="DrugInstructionObjectResponse"/></returns>
+        public Task<DrugInstructionObjectResponse> DrugInstructionObject(DrugInstructionObjectRequest req)
+        {
+            return InternalRequestAsync<DrugInstructionObjectResponse>(req, "DrugInstructionObject");
+        }
+
+        /// <summary>
+        /// 药品说明书PDF文件结构化
+        /// </summary>
+        /// <param name="req"><see cref="DrugInstructionObjectRequest"/></param>
+        /// <returns><see cref="DrugInstructionObjectResponse"/></returns>
+        public DrugInstructionObjectResponse DrugInstructionObjectSync(DrugInstructionObjectRequest req)
+        {
+            return InternalRequestAsync<DrugInstructionObjectResponse>(req, "DrugInstructionObject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

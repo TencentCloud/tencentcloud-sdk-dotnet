@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 快照 ID 列表, 可通过 DescribeSnapshots 查询。
+        /// 快照 ID 列表, 可通过 <a href="https://cloud.tencent.com/document/product/1207/54388" target="_blank">DescribeSnapshots</a> 查询。
         /// </summary>
         [JsonProperty("SnapshotIds")]
         public string[] SnapshotIds{ get; set; }

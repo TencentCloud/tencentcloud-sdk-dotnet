@@ -46,6 +46,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// 101 座席手动转接
         /// 102 IVR阶段放弃
         /// 108 用户超时自动结束
+        /// 109 用户主动结束
         /// </summary>
         [JsonProperty("EndStatus")]
         public long? EndStatus{ get; set; }

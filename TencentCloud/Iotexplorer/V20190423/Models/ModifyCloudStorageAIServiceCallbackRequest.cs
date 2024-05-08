@@ -31,7 +31,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string ProductId{ get; set; }
 
         /// <summary>
-        /// 推送类型。http：HTTP 回调
+        /// 推送类型。可选值：
+        /// - `http`：HTTP 回调
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

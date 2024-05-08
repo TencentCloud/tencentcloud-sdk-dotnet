@@ -37,7 +37,9 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 云存 AI 服务类型。可选值：PackageDetect
+        /// 云存 AI 服务类型。可选值：
+        /// - `PackageDetect`：包裹检测
+        /// - `Highlight`：视频浓缩
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
@@ -55,10 +57,27 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；不传则查询全部状态的任务）
+        /// 任务状态。可选值：
+        /// - （不传）：查询全部状态的任务
+        /// - `1`：失败
+        /// - `2`：成功但结果为空
+        /// - `3`：成功且结果非空
+        /// - `4`：执行中
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
+
+        /// <summary>
+        /// 用户ID
+        /// </summary>
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
+
+        /// <summary>
+        /// 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+        /// </summary>
+        [JsonProperty("ChannelId")]
+        public ulong? ChannelId{ get; set; }
 
 
         /// <summary>
@@ -72,6 +91,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
         }
     }
 }
