@@ -39,6 +39,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
 
+        /// <summary>
+        /// 当前资源包绑定在当前实例下的抵扣优先级
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeductionPriority")]
+        public long? DeductionPriority{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -47,6 +54,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         {
             this.SetParamSimple(map, prefix + "PackageId", this.PackageId);
             this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
+            this.SetParamSimple(map, prefix + "DeductionPriority", this.DeductionPriority);
         }
     }
 }

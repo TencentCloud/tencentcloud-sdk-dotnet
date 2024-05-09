@@ -61,6 +61,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [System.Obsolete]
         public bool? EncodeUrl{ get; set; }
 
+        /// <summary>
+        /// 节点缓存清除类型取值为 purge_cache_tag 时附带的信息。
+        /// </summary>
+        [JsonProperty("CacheTag")]
+        public CacheTag CacheTag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Method", this.Method);
             this.SetParamArraySimple(map, prefix + "Targets.", this.Targets);
             this.SetParamSimple(map, prefix + "EncodeUrl", this.EncodeUrl);
+            this.SetParamObj(map, prefix + "CacheTag.", this.CacheTag);
         }
     }
 }

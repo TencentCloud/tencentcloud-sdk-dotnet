@@ -31,7 +31,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// 云硬盘大小。
+        /// 云硬盘大小, 单位: GB。
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }

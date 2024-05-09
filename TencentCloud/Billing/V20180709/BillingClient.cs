@@ -28,7 +28,7 @@ namespace TencentCloud.Billing.V20180709
 
        private const string endpoint = "billing.tencentcloudapi.com";
        private const string version = "2018-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1000";
+       private const string sdkVersion = "SDK_NET_3.0.1001";
 
         /// <summary>
         /// Client constructor.

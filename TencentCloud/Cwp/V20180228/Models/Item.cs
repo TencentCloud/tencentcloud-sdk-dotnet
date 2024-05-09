@@ -43,6 +43,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("CustomItemValues")]
         public ulong?[] CustomItemValues{ get; set; }
 
+        /// <summary>
+        /// 检测项所属分类
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CategoryId")]
+        public long? CategoryId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +59,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "ItemId", this.ItemId);
             this.SetParamSimple(map, prefix + "ItemName", this.ItemName);
             this.SetParamArraySimple(map, prefix + "CustomItemValues.", this.CustomItemValues);
+            this.SetParamSimple(map, prefix + "CategoryId", this.CategoryId);
         }
     }
 }

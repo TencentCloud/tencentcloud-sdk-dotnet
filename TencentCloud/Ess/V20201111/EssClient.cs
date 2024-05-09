@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1000";
+       private const string sdkVersion = "SDK_NET_3.0.1001";
 
         /// <summary>
         /// Client constructor.
@@ -1759,6 +1759,35 @@ namespace TencentCloud.Ess.V20201111
         public CreateUserAutoSignSealUrlResponse CreateUserAutoSignSealUrlSync(CreateUserAutoSignSealUrlRequest req)
         {
             return InternalRequestAsync<CreateUserAutoSignSealUrlResponse>(req, "CreateUserAutoSignSealUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 客户可以主动调用生成实名链接去做C端用户实名，会对实名的用户进行打标记为调用链接客户的用户
+        /// 使用场景：
+        /// 用户集成场景
+        /// 使用限制：
+        /// 此接口需要购买单独的实名套餐包方可调用，如有需求请联系对接人员评估
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserVerifyUrlRequest"/></param>
+        /// <returns><see cref="CreateUserVerifyUrlResponse"/></returns>
+        public Task<CreateUserVerifyUrlResponse> CreateUserVerifyUrl(CreateUserVerifyUrlRequest req)
+        {
+            return InternalRequestAsync<CreateUserVerifyUrlResponse>(req, "CreateUserVerifyUrl");
+        }
+
+        /// <summary>
+        /// 客户可以主动调用生成实名链接去做C端用户实名，会对实名的用户进行打标记为调用链接客户的用户
+        /// 使用场景：
+        /// 用户集成场景
+        /// 使用限制：
+        /// 此接口需要购买单独的实名套餐包方可调用，如有需求请联系对接人员评估
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserVerifyUrlRequest"/></param>
+        /// <returns><see cref="CreateUserVerifyUrlResponse"/></returns>
+        public CreateUserVerifyUrlResponse CreateUserVerifyUrlSync(CreateUserVerifyUrlRequest req)
+        {
+            return InternalRequestAsync<CreateUserVerifyUrlResponse>(req, "CreateUserVerifyUrl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

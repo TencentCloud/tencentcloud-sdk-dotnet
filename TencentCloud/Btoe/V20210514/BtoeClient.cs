@@ -28,7 +28,7 @@ namespace TencentCloud.Btoe.V20210514
 
        private const string endpoint = "btoe.tencentcloudapi.com";
        private const string version = "2021-05-14";
-       private const string sdkVersion = "SDK_NET_3.0.1000";
+       private const string sdkVersion = "SDK_NET_3.0.1001";
 
         /// <summary>
         /// Client constructor.

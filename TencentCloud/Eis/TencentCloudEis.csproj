@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{7FD28EDC-FC23-3F46-9C4F-16931C6FE68F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1000</VersionPrefix>
+    <VersionPrefix>3.0.1001</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="V20200715\EisClient.cs" />
+    <Compile Include="V20200715\Models\DescribeEisConnectorConfigRequest.cs" />
+    <Compile Include="V20200715\Models\DescribeEisConnectorConfigResponse.cs" />
+    <Compile Include="V20200715\Models\EisConnectionOperation.cs" />
+    <Compile Include="V20200715\Models\EisConnectorSummary.cs" />
+    <Compile Include="V20200715\Models\ListEisConnectorOperationsRequest.cs" />
+    <Compile Include="V20200715\Models\ListEisConnectorOperationsResponse.cs" />
+    <Compile Include="V20200715\Models\ListEisConnectorsRequest.cs" />
+    <Compile Include="V20200715\Models\ListEisConnectorsResponse.cs" />
     <Compile Include="V20210601\EisClient.cs" />
     <Compile Include="V20210601\Models\AbstractRuntimeMC.cs" />
     <Compile Include="V20210601\Models\GetRuntimeMCRequest.cs" />
@@ -63,14 +72,5 @@
     <Compile Include="V20210601\Models\RuntimeDeployedInstanceMC.cs" />
     <Compile Include="V20210601\Models\RuntimeExtensionMC.cs" />
     <Compile Include="V20210601\Models\RuntimeMC.cs" />
-    <Compile Include="V20200715\EisClient.cs" />
-    <Compile Include="V20200715\Models\DescribeEisConnectorConfigRequest.cs" />
-    <Compile Include="V20200715\Models\DescribeEisConnectorConfigResponse.cs" />
-    <Compile Include="V20200715\Models\EisConnectionOperation.cs" />
-    <Compile Include="V20200715\Models\EisConnectorSummary.cs" />
-    <Compile Include="V20200715\Models\ListEisConnectorOperationsRequest.cs" />
-    <Compile Include="V20200715\Models\ListEisConnectorOperationsResponse.cs" />
-    <Compile Include="V20200715\Models\ListEisConnectorsRequest.cs" />
-    <Compile Include="V20200715\Models\ListEisConnectorsResponse.cs" />
   </ItemGroup>
 </Project>

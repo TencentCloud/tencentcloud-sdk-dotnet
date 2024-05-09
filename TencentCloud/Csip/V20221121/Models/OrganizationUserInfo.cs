@@ -180,6 +180,20 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("TcMemberType")]
         public long? TcMemberType{ get; set; }
 
+        /// <summary>
+        /// 子账号数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubUserCount")]
+        public long? SubUserCount{ get; set; }
+
+        /// <summary>
+        /// 加入方式详细信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("JoinTypeInfo")]
+        public string JoinTypeInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -208,6 +222,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamArraySimple(map, prefix + "PermissionList.", this.PermissionList);
             this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
             this.SetParamSimple(map, prefix + "TcMemberType", this.TcMemberType);
+            this.SetParamSimple(map, prefix + "SubUserCount", this.SubUserCount);
+            this.SetParamSimple(map, prefix + "JoinTypeInfo", this.JoinTypeInfo);
         }
     }
 }

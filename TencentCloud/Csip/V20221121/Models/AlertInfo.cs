@@ -76,14 +76,14 @@ namespace TencentCloud.Csip.V20221121.Models
         public RoleInfo Victim{ get; set; }
 
         /// <summary>
-        /// 证据数据(比如攻击内容等)
+        /// 证据数据(例如攻击内容等)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EvidenceData")]
         public string EvidenceData{ get; set; }
 
         /// <summary>
-        /// 证据位置(比如协议端口)
+        /// 证据位置(例如协议端口)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EvidenceLocation")]

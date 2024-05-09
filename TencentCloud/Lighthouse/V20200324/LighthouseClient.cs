@@ -28,7 +28,7 @@ namespace TencentCloud.Lighthouse.V20200324
 
        private const string endpoint = "lighthouse.tencentcloudapi.com";
        private const string version = "2020-03-24";
-       private const string sdkVersion = "SDK_NET_3.0.1000";
+       private const string sdkVersion = "SDK_NET_3.0.1001";
 
         /// <summary>
         /// Client constructor.
@@ -589,7 +589,7 @@ namespace TencentCloud.Lighthouse.V20200324
 
         /// <summary>
         /// 本接口（DeleteSnapshots）用于删除快照。
-        /// 快照必须处于 NORMAL 状态，快照状态可以通过 DescribeSnapshots 接口查询，见输出参数中 SnapshotState 字段解释。
+        /// 快照必须处于 NORMAL 状态，快照状态可以通过 <a href="https://cloud.tencent.com/document/product/1207/54388" target="_blank">DescribeSnapshots</a> 接口查询，见输出参数中 SnapshotState 字段解释。
         /// </summary>
         /// <param name="req"><see cref="DeleteSnapshotsRequest"/></param>
         /// <returns><see cref="DeleteSnapshotsResponse"/></returns>
@@ -600,7 +600,7 @@ namespace TencentCloud.Lighthouse.V20200324
 
         /// <summary>
         /// 本接口（DeleteSnapshots）用于删除快照。
-        /// 快照必须处于 NORMAL 状态，快照状态可以通过 DescribeSnapshots 接口查询，见输出参数中 SnapshotState 字段解释。
+        /// 快照必须处于 NORMAL 状态，快照状态可以通过 <a href="https://cloud.tencent.com/document/product/1207/54388" target="_blank">DescribeSnapshots</a> 接口查询，见输出参数中 SnapshotState 字段解释。
         /// </summary>
         /// <param name="req"><see cref="DeleteSnapshotsRequest"/></param>
         /// <returns><see cref="DeleteSnapshotsResponse"/></returns>

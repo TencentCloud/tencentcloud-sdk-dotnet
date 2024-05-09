@@ -25,6 +25,12 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
+        /// 集团账号的成员id
+        /// </summary>
+        [JsonProperty("MemberId")]
+        public string[] MemberId{ get; set; }
+
+        /// <summary>
         /// 过滤内容
         /// </summary>
         [JsonProperty("Filter")]
@@ -42,6 +48,7 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
             this.SetParamObj(map, prefix + "Filter.", this.Filter);
             this.SetParamSimple(map, prefix + "NotSupportCloud", this.NotSupportCloud);
         }

@@ -27,7 +27,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// <summary>
         /// 过滤条件。
         /// <li>RuleCategory- string- 规则类别  0=系统规则，1=用户规则</li>
-        /// <li>Name- String - 规则名称/li>
+        /// <li>Name- String - 规则名称</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }

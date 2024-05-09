@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// nginx主机ip列表，逗号分隔
+        /// nginx主机IP列表，逗号分隔
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
