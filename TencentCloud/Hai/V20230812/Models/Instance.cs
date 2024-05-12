@@ -159,7 +159,7 @@ namespace TencentCloud.Hai.V20230812.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 公网出带宽上限，默认5Mbps
+        /// 公网出带宽上限，默认10Mbps
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxOutBandwidth")]

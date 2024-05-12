@@ -28,7 +28,7 @@ namespace TencentCloud.Ssl.V20191205
 
        private const string endpoint = "ssl.tencentcloudapi.com";
        private const string version = "2019-12-05";
-       private const string sdkVersion = "SDK_NET_3.0.1001";
+       private const string sdkVersion = "SDK_NET_3.0.1002";
 
         /// <summary>
         /// Client constructor.
@@ -533,6 +533,27 @@ namespace TencentCloud.Ssl.V20191205
         public DescribeDeployedResourcesResponse DescribeDeployedResourcesSync(DescribeDeployedResourcesRequest req)
         {
             return InternalRequestAsync<DescribeDeployedResourcesResponse>(req, "DescribeDeployedResources")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取下载证书链接
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDownloadCertificateUrlRequest"/></param>
+        /// <returns><see cref="DescribeDownloadCertificateUrlResponse"/></returns>
+        public Task<DescribeDownloadCertificateUrlResponse> DescribeDownloadCertificateUrl(DescribeDownloadCertificateUrlRequest req)
+        {
+            return InternalRequestAsync<DescribeDownloadCertificateUrlResponse>(req, "DescribeDownloadCertificateUrl");
+        }
+
+        /// <summary>
+        /// 获取下载证书链接
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDownloadCertificateUrlRequest"/></param>
+        /// <returns><see cref="DescribeDownloadCertificateUrlResponse"/></returns>
+        public DescribeDownloadCertificateUrlResponse DescribeDownloadCertificateUrlSync(DescribeDownloadCertificateUrlRequest req)
+        {
+            return InternalRequestAsync<DescribeDownloadCertificateUrlResponse>(req, "DescribeDownloadCertificateUrl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

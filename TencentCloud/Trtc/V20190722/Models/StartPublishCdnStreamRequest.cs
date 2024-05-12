@@ -37,7 +37,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// 主房间信息RoomType，必须和转推的房间所对应的RoomId类型相同，0为整形房间号，1为字符串房间号。
+        /// 主房间信息RoomType，必须和转推的房间所对应的RoomId类型相同，0为整型房间号，1为字符串房间号。
         /// </summary>
         [JsonProperty("RoomIdType")]
         public ulong? RoomIdType{ get; set; }

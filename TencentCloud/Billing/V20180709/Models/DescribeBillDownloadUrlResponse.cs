@@ -31,7 +31,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public long? Ready{ get; set; }
 
         /// <summary>
-        /// 账单文件下载链接，有效时长为一小时
+        /// 账单文件下载链接，有效时长为一天
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DownloadUrl")]

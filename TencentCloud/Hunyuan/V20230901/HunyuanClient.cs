@@ -28,7 +28,7 @@ namespace TencentCloud.Hunyuan.V20230901
 
        private const string endpoint = "hunyuan.tencentcloudapi.com";
        private const string version = "2023-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1001";
+       private const string sdkVersion = "SDK_NET_3.0.1002";
 
         /// <summary>
         /// Client constructor.
@@ -187,6 +187,60 @@ namespace TencentCloud.Hunyuan.V20230901
         public GetTokenCountResponse GetTokenCountSync(GetTokenCountRequest req)
         {
             return InternalRequestAsync<GetTokenCountResponse>(req, "GetTokenCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 混元生图接口基于混元大模型，将根据输入的文本描述，智能生成与之相关的结果图。分为提交任务和查询任务2个接口。
+        /// 提交任务：输入文本等，提交一个混元生图异步任务，获得任务 ID。
+        /// 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
+        /// 并发任务数（并发）说明：并发任务数指能同时处理的任务数量。混元生图默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="QueryHunyuanImageJobRequest"/></param>
+        /// <returns><see cref="QueryHunyuanImageJobResponse"/></returns>
+        public Task<QueryHunyuanImageJobResponse> QueryHunyuanImageJob(QueryHunyuanImageJobRequest req)
+        {
+            return InternalRequestAsync<QueryHunyuanImageJobResponse>(req, "QueryHunyuanImageJob");
+        }
+
+        /// <summary>
+        /// 混元生图接口基于混元大模型，将根据输入的文本描述，智能生成与之相关的结果图。分为提交任务和查询任务2个接口。
+        /// 提交任务：输入文本等，提交一个混元生图异步任务，获得任务 ID。
+        /// 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
+        /// 并发任务数（并发）说明：并发任务数指能同时处理的任务数量。混元生图默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="QueryHunyuanImageJobRequest"/></param>
+        /// <returns><see cref="QueryHunyuanImageJobResponse"/></returns>
+        public QueryHunyuanImageJobResponse QueryHunyuanImageJobSync(QueryHunyuanImageJobRequest req)
+        {
+            return InternalRequestAsync<QueryHunyuanImageJobResponse>(req, "QueryHunyuanImageJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 混元生图接口基于混元大模型，将根据输入的文本描述，智能生成与之相关的结果图。分为提交任务和查询任务2个接口。
+        /// 提交任务：输入文本等，提交一个混元生图异步任务，获得任务 ID。
+        /// 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
+        /// 并发任务数（并发）说明：并发任务数指能同时处理的任务数量。混元生图默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitHunyuanImageJobRequest"/></param>
+        /// <returns><see cref="SubmitHunyuanImageJobResponse"/></returns>
+        public Task<SubmitHunyuanImageJobResponse> SubmitHunyuanImageJob(SubmitHunyuanImageJobRequest req)
+        {
+            return InternalRequestAsync<SubmitHunyuanImageJobResponse>(req, "SubmitHunyuanImageJob");
+        }
+
+        /// <summary>
+        /// 混元生图接口基于混元大模型，将根据输入的文本描述，智能生成与之相关的结果图。分为提交任务和查询任务2个接口。
+        /// 提交任务：输入文本等，提交一个混元生图异步任务，获得任务 ID。
+        /// 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
+        /// 并发任务数（并发）说明：并发任务数指能同时处理的任务数量。混元生图默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitHunyuanImageJobRequest"/></param>
+        /// <returns><see cref="SubmitHunyuanImageJobResponse"/></returns>
+        public SubmitHunyuanImageJobResponse SubmitHunyuanImageJobSync(SubmitHunyuanImageJobRequest req)
+        {
+            return InternalRequestAsync<SubmitHunyuanImageJobResponse>(req, "SubmitHunyuanImageJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Region.V20220627
 
        private const string endpoint = "region.tencentcloudapi.com";
        private const string version = "2022-06-27";
-       private const string sdkVersion = "SDK_NET_3.0.1001";
+       private const string sdkVersion = "SDK_NET_3.0.1002";
 
         /// <summary>
         /// Client constructor.

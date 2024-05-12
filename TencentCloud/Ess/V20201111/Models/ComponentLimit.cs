@@ -41,7 +41,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 
         /// 2.当ComponentType 是 SIGN_SIGNATURE 时可传入以下类型（支持多个）
         /// 
-        /// <ul><li>HANDWRITE : 手写签名</li>
+        /// <ul><li>HANDWRITE : 需要实时手写的手写签名</li>
+        /// <li>HANDWRITTEN_ESIGN : 长效手写签名， 是使用保存到个人中心的印章列表的手写签名(并且包含HANDWRITE)</li>
         /// <li>OCR_ESIGN : OCR印章（智慧手写签名）</li>
         /// <li>ESIGN : 个人印章</li>
         /// <li>SYSTEM_ESIGN : 系统印章</li></ul>

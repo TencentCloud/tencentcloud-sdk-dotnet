@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20220501
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2022-05-01";
-       private const string sdkVersion = "SDK_NET_3.0.1001";
+       private const string sdkVersion = "SDK_NET_3.0.1002";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,48 @@ namespace TencentCloud.Tke.V20220501
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 创建 TKE 节点池
+        /// </summary>
+        /// <param name="req"><see cref="CreateNodePoolRequest"/></param>
+        /// <returns><see cref="CreateNodePoolResponse"/></returns>
+        public Task<CreateNodePoolResponse> CreateNodePool(CreateNodePoolRequest req)
+        {
+            return InternalRequestAsync<CreateNodePoolResponse>(req, "CreateNodePool");
+        }
+
+        /// <summary>
+        /// 创建 TKE 节点池
+        /// </summary>
+        /// <param name="req"><see cref="CreateNodePoolRequest"/></param>
+        /// <returns><see cref="CreateNodePoolResponse"/></returns>
+        public CreateNodePoolResponse CreateNodePoolSync(CreateNodePoolRequest req)
+        {
+            return InternalRequestAsync<CreateNodePoolResponse>(req, "CreateNodePool")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除 TKE 节点池
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNodePoolRequest"/></param>
+        /// <returns><see cref="DeleteNodePoolResponse"/></returns>
+        public Task<DeleteNodePoolResponse> DeleteNodePool(DeleteNodePoolRequest req)
+        {
+            return InternalRequestAsync<DeleteNodePoolResponse>(req, "DeleteNodePool");
+        }
+
+        /// <summary>
+        /// 删除 TKE 节点池
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNodePoolRequest"/></param>
+        /// <returns><see cref="DeleteNodePoolResponse"/></returns>
+        public DeleteNodePoolResponse DeleteNodePoolSync(DeleteNodePoolRequest req)
+        {
+            return InternalRequestAsync<DeleteNodePoolResponse>(req, "DeleteNodePool")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -92,6 +134,27 @@ namespace TencentCloud.Tke.V20220501
         public DescribeNodePoolsResponse DescribeNodePoolsSync(DescribeNodePoolsRequest req)
         {
             return InternalRequestAsync<DescribeNodePoolsResponse>(req, "DescribeNodePools")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新 TKE 节点池
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNodePoolRequest"/></param>
+        /// <returns><see cref="ModifyNodePoolResponse"/></returns>
+        public Task<ModifyNodePoolResponse> ModifyNodePool(ModifyNodePoolRequest req)
+        {
+            return InternalRequestAsync<ModifyNodePoolResponse>(req, "ModifyNodePool");
+        }
+
+        /// <summary>
+        /// 更新 TKE 节点池
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNodePoolRequest"/></param>
+        /// <returns><see cref="ModifyNodePoolResponse"/></returns>
+        public ModifyNodePoolResponse ModifyNodePoolSync(ModifyNodePoolRequest req)
+        {
+            return InternalRequestAsync<ModifyNodePoolResponse>(req, "ModifyNodePool")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

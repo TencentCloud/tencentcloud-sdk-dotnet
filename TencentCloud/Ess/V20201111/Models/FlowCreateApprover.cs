@@ -234,7 +234,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 当签署方控件类型为 <b>SIGN_SIGNATURE</b> 时，可以指定签署方签名方式。如果不指定，签署人可以使用所有的签名类型，可指定的签名类型包括：
         /// 
-        /// <ul><li> <b>HANDWRITE</b> :手写签名。</li>
+        /// <ul><li> <b>HANDWRITE</b> :需要实时手写的手写签名。</li>
+        /// <li> <b>HANDWRITTEN_ESIGN</b> :长效手写签名， 是使用保存到个人中心的印章列表的手写签名。(并且包含HANDWRITE)</li>
         /// <li> <b>OCR_ESIGN</b> :AI智能识别手写签名。</li>
         /// <li> <b>ESIGN</b> :个人印章类型。</li>
         /// <li> <b>IMG_ESIGN</b>  : 图片印章。该类型支持用户在签署将上传的PNG格式的图片作为签名。</li>

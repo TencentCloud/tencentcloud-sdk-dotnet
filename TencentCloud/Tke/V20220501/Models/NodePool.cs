@@ -37,6 +37,13 @@ namespace TencentCloud.Tke.V20220501.Models
         public string NodePoolId{ get; set; }
 
         /// <summary>
+        /// 节点标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagSpecification[] Tags{ get; set; }
+
+        /// <summary>
         /// 节点污点
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -49,6 +56,13 @@ namespace TencentCloud.Tke.V20220501.Models
         /// </summary>
         [JsonProperty("DeletionProtection")]
         public bool? DeletionProtection{ get; set; }
+
+        /// <summary>
+        /// 节点是否不可调度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Unschedulable")]
+        public bool? Unschedulable{ get; set; }
 
         /// <summary>
         /// 节点池类型
@@ -124,8 +138,10 @@ namespace TencentCloud.Tke.V20220501.Models
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "NodePoolId", this.NodePoolId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamArrayObj(map, prefix + "Taints.", this.Taints);
             this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+            this.SetParamSimple(map, prefix + "Unschedulable", this.Unschedulable);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
             this.SetParamSimple(map, prefix + "LifeState", this.LifeState);

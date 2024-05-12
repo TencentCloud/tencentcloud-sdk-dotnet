@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ExpandThreshold{ get; set; }
 
         /// <summary>
-        /// 自动扩容观测周期，单位s，可选值1、3、5、10、15、30。后台会按照配置的周期进行扩容判断。
+        /// 自动扩容观测周期，单位是分钟，可选值1、3、5、10、15、30。后台会按照配置的周期进行扩容判断。
         /// </summary>
         [JsonProperty("ExpandPeriod")]
         public long? ExpandPeriod{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ShrinkThreshold{ get; set; }
 
         /// <summary>
-        /// 自动缩容观测周期，单位s，可选值5、10、15、30。后台会按照配置的周期进行缩容判断。
+        /// 自动缩容观测周期，单位是分钟，可选值5、10、15、30。后台会按照配置的周期进行缩容判断。
         /// </summary>
         [JsonProperty("ShrinkPeriod")]
         public long? ShrinkPeriod{ get; set; }

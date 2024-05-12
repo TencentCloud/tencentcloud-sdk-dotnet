@@ -25,7 +25,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
     {
         
         /// <summary>
-        /// 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-pro。
+        /// 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro。
         /// 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
         /// 
         /// 注意：

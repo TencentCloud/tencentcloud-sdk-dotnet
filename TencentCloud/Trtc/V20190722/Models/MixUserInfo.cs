@@ -37,7 +37,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// 房间号类型，0为整形房间号，1为字符串房间号。
+        /// 房间号类型，0为整型房间号，1为字符串房间号。
         /// </summary>
         [JsonProperty("RoomIdType")]
         public ulong? RoomIdType{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1001";
+       private const string sdkVersion = "SDK_NET_3.0.1002";
 
         /// <summary>
         /// Client constructor.
@@ -348,6 +348,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 创建日志投递
+        /// </summary>
+        /// <param name="req"><see cref="CreateCLSDeliveryRequest"/></param>
+        /// <returns><see cref="CreateCLSDeliveryResponse"/></returns>
+        public Task<CreateCLSDeliveryResponse> CreateCLSDelivery(CreateCLSDeliveryRequest req)
+        {
+            return InternalRequestAsync<CreateCLSDeliveryResponse>(req, "CreateCLSDelivery");
+        }
+
+        /// <summary>
+        /// 创建日志投递
+        /// </summary>
+        /// <param name="req"><see cref="CreateCLSDeliveryRequest"/></param>
+        /// <returns><see cref="CreateCLSDeliveryResponse"/></returns>
+        public CreateCLSDeliveryResponse CreateCLSDeliverySync(CreateCLSDeliveryRequest req)
+        {
+            return InternalRequestAsync<CreateCLSDeliveryResponse>(req, "CreateCLSDelivery")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建数据库
         /// </summary>
         /// <param name="req"><see cref="CreateClusterDatabaseRequest"/></param>
@@ -554,6 +575,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DeleteBackupResponse DeleteBackupSync(DeleteBackupRequest req)
         {
             return InternalRequestAsync<DeleteBackupResponse>(req, "DeleteBackup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除日志投递
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCLSDeliveryRequest"/></param>
+        /// <returns><see cref="DeleteCLSDeliveryResponse"/></returns>
+        public Task<DeleteCLSDeliveryResponse> DeleteCLSDelivery(DeleteCLSDeliveryRequest req)
+        {
+            return InternalRequestAsync<DeleteCLSDeliveryResponse>(req, "DeleteCLSDelivery");
+        }
+
+        /// <summary>
+        /// 删除日志投递
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCLSDeliveryRequest"/></param>
+        /// <returns><see cref="DeleteCLSDeliveryResponse"/></returns>
+        public DeleteCLSDeliveryResponse DeleteCLSDeliverySync(DeleteCLSDeliveryRequest req)
+        {
+            return InternalRequestAsync<DeleteCLSDeliveryResponse>(req, "DeleteCLSDelivery")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1142,6 +1184,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeFlowResponse DescribeFlowSync(DescribeFlowRequest req)
         {
             return InternalRequestAsync<DescribeFlowResponse>(req, "DescribeFlow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询实例日志投递信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceCLSLogDeliveryRequest"/></param>
+        /// <returns><see cref="DescribeInstanceCLSLogDeliveryResponse"/></returns>
+        public Task<DescribeInstanceCLSLogDeliveryResponse> DescribeInstanceCLSLogDelivery(DescribeInstanceCLSLogDeliveryRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceCLSLogDeliveryResponse>(req, "DescribeInstanceCLSLogDelivery");
+        }
+
+        /// <summary>
+        /// 查询实例日志投递信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceCLSLogDeliveryRequest"/></param>
+        /// <returns><see cref="DescribeInstanceCLSLogDeliveryResponse"/></returns>
+        public DescribeInstanceCLSLogDeliveryResponse DescribeInstanceCLSLogDeliverySync(DescribeInstanceCLSLogDeliveryRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceCLSLogDeliveryResponse>(req, "DescribeInstanceCLSLogDelivery")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2738,6 +2801,48 @@ namespace TencentCloud.Cynosdb.V20190107
         public SetRenewFlagResponse SetRenewFlagSync(SetRenewFlagRequest req)
         {
             return InternalRequestAsync<SetRenewFlagResponse>(req, "SetRenewFlag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开启日志投递
+        /// </summary>
+        /// <param name="req"><see cref="StartCLSDeliveryRequest"/></param>
+        /// <returns><see cref="StartCLSDeliveryResponse"/></returns>
+        public Task<StartCLSDeliveryResponse> StartCLSDelivery(StartCLSDeliveryRequest req)
+        {
+            return InternalRequestAsync<StartCLSDeliveryResponse>(req, "StartCLSDelivery");
+        }
+
+        /// <summary>
+        /// 开启日志投递
+        /// </summary>
+        /// <param name="req"><see cref="StartCLSDeliveryRequest"/></param>
+        /// <returns><see cref="StartCLSDeliveryResponse"/></returns>
+        public StartCLSDeliveryResponse StartCLSDeliverySync(StartCLSDeliveryRequest req)
+        {
+            return InternalRequestAsync<StartCLSDeliveryResponse>(req, "StartCLSDelivery")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 停止日志投递
+        /// </summary>
+        /// <param name="req"><see cref="StopCLSDeliveryRequest"/></param>
+        /// <returns><see cref="StopCLSDeliveryResponse"/></returns>
+        public Task<StopCLSDeliveryResponse> StopCLSDelivery(StopCLSDeliveryRequest req)
+        {
+            return InternalRequestAsync<StopCLSDeliveryResponse>(req, "StopCLSDelivery");
+        }
+
+        /// <summary>
+        /// 停止日志投递
+        /// </summary>
+        /// <param name="req"><see cref="StopCLSDeliveryRequest"/></param>
+        /// <returns><see cref="StopCLSDeliveryResponse"/></returns>
+        public StopCLSDeliveryResponse StopCLSDeliverySync(StopCLSDeliveryRequest req)
+        {
+            return InternalRequestAsync<StopCLSDeliveryResponse>(req, "StopCLSDelivery")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

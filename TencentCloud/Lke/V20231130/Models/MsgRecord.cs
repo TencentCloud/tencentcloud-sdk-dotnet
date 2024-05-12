@@ -31,6 +31,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public string Content{ get; set; }
 
         /// <summary>
+        /// 当前记录所对应的 Session ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SessionId")]
+        public string SessionId{ get; set; }
+
+        /// <summary>
         /// 记录ID
         /// </summary>
         [JsonProperty("RecordId")]
@@ -85,6 +92,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public bool? CanRating{ get; set; }
 
         /// <summary>
+        /// 是否展示反馈按钮
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CanFeedback")]
+        public bool? CanFeedback{ get; set; }
+
+        /// <summary>
         /// 记录类型
         /// </summary>
         [JsonProperty("Type")]
@@ -121,6 +135,27 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("TokenStat")]
         public TokenStat TokenStat{ get; set; }
 
+        /// <summary>
+        /// 回复方式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReplyMethod")]
+        public ulong? ReplyMethod{ get; set; }
+
+        /// <summary>
+        /// 选项卡, 用于多轮对话
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OptionCards")]
+        public string[] OptionCards{ get; set; }
+
+        /// <summary>
+        /// 任务信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskFlow")]
+        public TaskFlowInfo TaskFlow{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +163,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
             this.SetParamSimple(map, prefix + "RelatedRecordId", this.RelatedRecordId);
             this.SetParamSimple(map, prefix + "IsFromSelf", this.IsFromSelf);
@@ -137,12 +173,16 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "HasRead", this.HasRead);
             this.SetParamSimple(map, prefix + "Score", this.Score);
             this.SetParamSimple(map, prefix + "CanRating", this.CanRating);
+            this.SetParamSimple(map, prefix + "CanFeedback", this.CanFeedback);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamArrayObj(map, prefix + "References.", this.References);
             this.SetParamArraySimple(map, prefix + "Reasons.", this.Reasons);
             this.SetParamSimple(map, prefix + "IsLlmGenerated", this.IsLlmGenerated);
             this.SetParamArraySimple(map, prefix + "ImageUrls.", this.ImageUrls);
             this.SetParamObj(map, prefix + "TokenStat.", this.TokenStat);
+            this.SetParamSimple(map, prefix + "ReplyMethod", this.ReplyMethod);
+            this.SetParamArraySimple(map, prefix + "OptionCards.", this.OptionCards);
+            this.SetParamObj(map, prefix + "TaskFlow.", this.TaskFlow);
         }
     }
 }

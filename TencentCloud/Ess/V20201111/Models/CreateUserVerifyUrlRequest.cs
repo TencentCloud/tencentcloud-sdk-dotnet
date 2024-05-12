@@ -66,6 +66,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 
         /// - APP：
         /// 第三方APP或小程序跳转电子签小程序的path, APP或者小程序跳转适合此类型
+        /// 
+        /// 如果不传递，默认值是 APP
         /// </summary>
         [JsonProperty("Endpoint")]
         public string Endpoint{ get; set; }

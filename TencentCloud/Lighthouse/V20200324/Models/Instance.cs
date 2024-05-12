@@ -144,6 +144,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string LatestOperationRequestId{ get; set; }
 
         /// <summary>
+        /// 实例最新操作的开始时间。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LatestOperationStartedTime")]
+        public string LatestOperationStartedTime{ get; set; }
+
+        /// <summary>
         /// 隔离时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
         /// 格式为： YYYY-MM-DDThh:mm:ssZ。
         /// 注意：此字段可能返回 null，表示取不到有效值。
@@ -234,6 +241,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "LatestOperation", this.LatestOperation);
             this.SetParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
             this.SetParamSimple(map, prefix + "LatestOperationRequestId", this.LatestOperationRequestId);
+            this.SetParamSimple(map, prefix + "LatestOperationStartedTime", this.LatestOperationStartedTime);
             this.SetParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
