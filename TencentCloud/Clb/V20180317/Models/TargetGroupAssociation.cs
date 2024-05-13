@@ -48,6 +48,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }
 
+        /// <summary>
+        /// 目标组权重，范围[0, 100]。仅绑定v2目标组时生效，如果不存在，则默认为10。
+        /// </summary>
+        [JsonProperty("Weight")]
+        public long? Weight{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
             this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
             this.SetParamSimple(map, prefix + "LocationId", this.LocationId);
+            this.SetParamSimple(map, prefix + "Weight", this.Weight);
         }
     }
 }

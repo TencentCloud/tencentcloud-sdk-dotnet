@@ -75,6 +75,7 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 备库 2 的可用区信息，默认为空，升级主实例时可指定该参数，升级只读实例或者灾备实例时指定该参数无意义。
+        /// 备注：如您要将三节点降级至双节点，将该参数设置为空值即可实现。
         /// </summary>
         [JsonProperty("BackupZone")]
         public string BackupZone{ get; set; }

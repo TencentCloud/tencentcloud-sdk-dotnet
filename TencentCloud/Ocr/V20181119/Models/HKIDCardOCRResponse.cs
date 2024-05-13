@@ -95,6 +95,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FakeDetectResult")]
+        [System.Obsolete]
         public long? FakeDetectResult{ get; set; }
 
         /// <summary>
@@ -110,7 +111,20 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// -9103：证照翻拍告警
         /// </summary>
         [JsonProperty("WarningCode")]
+        [System.Obsolete]
         public long?[] WarningCode{ get; set; }
+
+        /// <summary>
+        /// 告警码
+        /// -9101 证件边框不完整告警
+        /// -9102 证件复印件告警
+        /// -9103 证件翻拍告警
+        /// -9107 证件反光告警
+        /// -9108 证件模糊告警
+        /// -9109 告警能力未开通
+        /// </summary>
+        [JsonProperty("WarnCardInfos")]
+        public long?[] WarnCardInfos{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -137,6 +151,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "FakeDetectResult", this.FakeDetectResult);
             this.SetParamSimple(map, prefix + "HeadImage", this.HeadImage);
             this.SetParamArraySimple(map, prefix + "WarningCode.", this.WarningCode);
+            this.SetParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

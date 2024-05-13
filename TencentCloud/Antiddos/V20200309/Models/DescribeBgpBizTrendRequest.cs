@@ -31,13 +31,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string Business{ get; set; }
 
         /// <summary>
-        /// 统计开始时间。 例：“2020-09-22 00:00:00”
+        /// 统计开始时间。 例：“2020-09-22 00:00:00”，注意该时间必须为5分钟的倍数
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 统计结束时间。 例：“2020-09-22 00:00:00”
+        /// 统计结束时间。 例：“2020-09-22 00:00:00”，注意该时间必须为5分钟的倍数
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tione.V20191022
 
        private const string endpoint = "tione.tencentcloudapi.com";
        private const string version = "2019-10-22";
-       private const string sdkVersion = "SDK_NET_3.0.1002";
+       private const string sdkVersion = "SDK_NET_3.0.1003";
 
         /// <summary>
         /// Client constructor.
@@ -512,27 +512,6 @@ namespace TencentCloud.Tione.V20191022
         public UpdateNotebookInstanceResponse UpdateNotebookInstanceSync(UpdateNotebookInstanceRequest req)
         {
             return InternalRequestAsync<UpdateNotebookInstanceResponse>(req, "UpdateNotebookInstance")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 更新notebook生命周期脚本
-        /// </summary>
-        /// <param name="req"><see cref="UpdateNotebookLifecycleScriptRequest"/></param>
-        /// <returns><see cref="UpdateNotebookLifecycleScriptResponse"/></returns>
-        public Task<UpdateNotebookLifecycleScriptResponse> UpdateNotebookLifecycleScript(UpdateNotebookLifecycleScriptRequest req)
-        {
-            return InternalRequestAsync<UpdateNotebookLifecycleScriptResponse>(req, "UpdateNotebookLifecycleScript");
-        }
-
-        /// <summary>
-        /// 更新notebook生命周期脚本
-        /// </summary>
-        /// <param name="req"><see cref="UpdateNotebookLifecycleScriptRequest"/></param>
-        /// <returns><see cref="UpdateNotebookLifecycleScriptResponse"/></returns>
-        public UpdateNotebookLifecycleScriptResponse UpdateNotebookLifecycleScriptSync(UpdateNotebookLifecycleScriptRequest req)
-        {
-            return InternalRequestAsync<UpdateNotebookLifecycleScriptResponse>(req, "UpdateNotebookLifecycleScript")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

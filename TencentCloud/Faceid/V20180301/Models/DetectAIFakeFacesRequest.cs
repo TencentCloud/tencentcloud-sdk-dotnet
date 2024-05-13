@@ -34,6 +34,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// 视频的Base64值：
         /// Base64编码后的大小不超过8M，支持mp4、avi、flv格式。
         /// 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+        /// 视频时长最大支持20s，建议时长2～5s。
+        /// 建议视频分辨率为480x640，帧率在25fps~30fps之间。
         /// </summary>
         [JsonProperty("FaceInput")]
         public string FaceInput{ get; set; }

@@ -138,6 +138,13 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
+        /// <summary>
+        /// //默认en， 可选zh-CN
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KibanaLanguage")]
+        public string KibanaLanguage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -161,6 +168,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "EnableKibanaPublicAccess", this.EnableKibanaPublicAccess);
             this.SetParamSimple(map, prefix + "EnableKibanaPrivateAccess", this.EnableKibanaPrivateAccess);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "KibanaLanguage", this.KibanaLanguage);
         }
     }
 }

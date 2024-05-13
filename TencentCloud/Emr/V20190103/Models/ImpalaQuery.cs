@@ -192,6 +192,27 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("PerNodePeakMemoryBytesSum")]
         public long? PerNodePeakMemoryBytesSum{ get; set; }
 
+        /// <summary>
+        /// 后端个数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BackendsCount")]
+        public long? BackendsCount{ get; set; }
+
+        /// <summary>
+        /// fragment数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FragmentInstancesCount")]
+        public long? FragmentInstancesCount{ get; set; }
+
+        /// <summary>
+        /// 剩余未完成Fragment数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RemainingFragmentCount")]
+        public long? RemainingFragmentCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -222,6 +243,9 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "NumRowsFetchedFromCache", this.NumRowsFetchedFromCache);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "PerNodePeakMemoryBytesSum", this.PerNodePeakMemoryBytesSum);
+            this.SetParamSimple(map, prefix + "BackendsCount", this.BackendsCount);
+            this.SetParamSimple(map, prefix + "FragmentInstancesCount", this.FragmentInstancesCount);
+            this.SetParamSimple(map, prefix + "RemainingFragmentCount", this.RemainingFragmentCount);
         }
     }
 }

@@ -103,6 +103,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("SubnetIds")]
         public string SubnetIds{ get; set; }
 
+        /// <summary>
+        /// 分组默认权重
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DefaultWeight")]
+        public long? DefaultWeight{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +128,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "SubnetIds", this.SubnetIds);
+            this.SetParamSimple(map, prefix + "DefaultWeight", this.DefaultWeight);
         }
     }
 }

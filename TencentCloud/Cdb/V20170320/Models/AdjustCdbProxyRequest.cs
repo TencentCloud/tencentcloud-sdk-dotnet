@@ -38,6 +38,13 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 节点规格配置
+        /// 备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
+        /// 示例中参数说明：
+        /// NodeCount：节点个数
+        /// Region：节点地域
+        /// Zone：节点可用区
+        /// Cpu：单个代理节点核数（单位：核）
+        /// Mem：单个代理节点内存数（单位：MB）
         /// </summary>
         [JsonProperty("ProxyNodeCustom")]
         public ProxyNodeCustom[] ProxyNodeCustom{ get; set; }

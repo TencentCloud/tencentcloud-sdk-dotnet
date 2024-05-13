@@ -43,7 +43,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string ObjectMode{ get; set; }
 
         /// <summary>
-        /// 一致性对比对象配置
+        /// 数据对比对象，当ObjectMode为custom时，此项需要填写。
         /// </summary>
         [JsonProperty("Objects")]
         public CompareObject Objects{ get; set; }

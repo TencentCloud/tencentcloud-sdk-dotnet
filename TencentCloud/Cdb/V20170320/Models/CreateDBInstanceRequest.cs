@@ -187,7 +187,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// 参数模板id。
+        /// 参数模板 id。
+        /// 备注：如您使用自定义参数模板 id，可传入自定义参数模板 id；如您计划使用默认参数模板，该参数模板 id 传入 id 无效，需设置 ParamTemplateType。
         /// </summary>
         [JsonProperty("ParamTemplateId")]
         public long? ParamTemplateId{ get; set; }
@@ -224,6 +225,7 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
+        /// 备注：如您需使用云数据库 MySQL 默认参数模板，请设置 ParamTemplateType。
         /// </summary>
         [JsonProperty("ParamTemplateType")]
         public string ParamTemplateType{ get; set; }

@@ -24,12 +24,26 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     public class DeleteCLSDeliveryRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 实例id
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 日志主题id
+        /// </summary>
+        [JsonProperty("CLSTopicIds")]
+        public string[] CLSTopicIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArraySimple(map, prefix + "CLSTopicIds.", this.CLSTopicIds);
         }
     }
 }

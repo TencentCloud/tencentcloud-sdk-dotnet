@@ -84,6 +84,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("ZOrder")]
         public ulong? ZOrder{ get; set; }
 
+        /// <summary>
+        /// 水印字体，不填默认为Tencent。支持设置以下值： Tencent （默认） SourceHanSans
+        /// </summary>
+        [JsonProperty("Font")]
+        public string Font{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "BackGroundColor", this.BackGroundColor);
             this.SetParamSimple(map, prefix + "DynamicPosType", this.DynamicPosType);
             this.SetParamSimple(map, prefix + "ZOrder", this.ZOrder);
+            this.SetParamSimple(map, prefix + "Font", this.Font);
         }
     }
 }
