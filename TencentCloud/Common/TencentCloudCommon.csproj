@@ -5,7 +5,7 @@
     <ProjectGuid>{C0C5CE89-418D-399D-AED0-9B87D308C5C7}</ProjectGuid>
     <VersionPrefix>3.0.1003</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
-    <PackageLicenseUrl></PackageLicenseUrl>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
     <Company>Tencent Ltd.</Company>
     <Product />
