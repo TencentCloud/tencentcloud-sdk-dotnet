@@ -54,6 +54,30 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("DurationMs")]
         public string DurationMs{ get; set; }
 
+        /// <summary>
+        /// 查询sql
+        /// </summary>
+        [JsonProperty("Sql")]
+        public string Sql{ get; set; }
+
+        /// <summary>
+        /// 排序参数
+        /// </summary>
+        [JsonProperty("ReadRows")]
+        public string ReadRows{ get; set; }
+
+        /// <summary>
+        /// 排序参数
+        /// </summary>
+        [JsonProperty("ResultBytes")]
+        public string ResultBytes{ get; set; }
+
+        /// <summary>
+        /// 排序参数
+        /// </summary>
+        [JsonProperty("MemoryUsage")]
+        public string MemoryUsage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +89,10 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "DurationMs", this.DurationMs);
+            this.SetParamSimple(map, prefix + "Sql", this.Sql);
+            this.SetParamSimple(map, prefix + "ReadRows", this.ReadRows);
+            this.SetParamSimple(map, prefix + "ResultBytes", this.ResultBytes);
+            this.SetParamSimple(map, prefix + "MemoryUsage", this.MemoryUsage);
         }
     }
 }

@@ -84,6 +84,30 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("CatalogName")]
         public string[] CatalogName{ get; set; }
 
+        /// <summary>
+        /// sql名
+        /// </summary>
+        [JsonProperty("Sql")]
+        public string Sql{ get; set; }
+
+        /// <summary>
+        /// ReadRows排序字段
+        /// </summary>
+        [JsonProperty("ReadRows")]
+        public string ReadRows{ get; set; }
+
+        /// <summary>
+        /// ResultBytes排序字段
+        /// </summary>
+        [JsonProperty("ResultBytes")]
+        public string ResultBytes{ get; set; }
+
+        /// <summary>
+        /// MemoryUsage排序字段
+        /// </summary>
+        [JsonProperty("MemoryUsage")]
+        public string MemoryUsage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +124,10 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamArraySimple(map, prefix + "DbName.", this.DbName);
             this.SetParamSimple(map, prefix + "IsQuery", this.IsQuery);
             this.SetParamArraySimple(map, prefix + "CatalogName.", this.CatalogName);
+            this.SetParamSimple(map, prefix + "Sql", this.Sql);
+            this.SetParamSimple(map, prefix + "ReadRows", this.ReadRows);
+            this.SetParamSimple(map, prefix + "ResultBytes", this.ResultBytes);
+            this.SetParamSimple(map, prefix + "MemoryUsage", this.MemoryUsage);
         }
     }
 }

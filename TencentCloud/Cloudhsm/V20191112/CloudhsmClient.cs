@@ -28,7 +28,7 @@ namespace TencentCloud.Cloudhsm.V20191112
 
        private const string endpoint = "cloudhsm.tencentcloudapi.com";
        private const string version = "2019-11-12";
-       private const string sdkVersion = "SDK_NET_3.0.1003";
+       private const string sdkVersion = "SDK_NET_3.0.1004";
 
         /// <summary>
         /// Client constructor.

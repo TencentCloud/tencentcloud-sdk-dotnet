@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+        /// 任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）、ABORTED（已终止）。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

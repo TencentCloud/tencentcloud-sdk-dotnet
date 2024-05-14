@@ -182,6 +182,19 @@ namespace TencentCloud.Tse.V20201207.Models
         public EngineRegionInfo[] EngineRegionInfos{ get; set; }
 
         /// <summary>
+        /// zk标准版请填CLOUD_PREMIUM，zk标准版无法选择磁盘类型和磁盘容量，默认为CLOUD_PREMIUM
+        /// zk专业版可以为：CLOUD_SSD,CLOUD_SSD_PLUS,CLOUD_PREMIUM
+        /// </summary>
+        [JsonProperty("StorageType")]
+        public string StorageType{ get; set; }
+
+        /// <summary>
+        /// zk标准版请填50，zk标准版无法选择磁盘类型和磁盘容量，磁盘容量默认为50
+        /// </summary>
+        [JsonProperty("StorageCapacity")]
+        public long? StorageCapacity{ get; set; }
+
+        /// <summary>
         /// zk专业版至多有两个盘，且磁盘的容量在50-3200之间
         /// 如果只有一个磁盘，storageCapacity与storageOption里面的capacity应该一致
         /// </summary>
@@ -216,6 +229,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "PrepaidPeriod", this.PrepaidPeriod);
             this.SetParamSimple(map, prefix + "PrepaidRenewFlag", this.PrepaidRenewFlag);
             this.SetParamArrayObj(map, prefix + "EngineRegionInfos.", this.EngineRegionInfos);
+            this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
+            this.SetParamSimple(map, prefix + "StorageCapacity", this.StorageCapacity);
             this.SetParamArrayObj(map, prefix + "StorageOption.", this.StorageOption);
             this.SetParamSimple(map, prefix + "AffinityConstraint", this.AffinityConstraint);
         }

@@ -50,7 +50,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 任务状态，取值：
         /// <li>WAITING：等待中；</li>
         /// <li>PROCESSING：处理中；</li>
-        /// <li>FINISH：已完成。</li>
+        /// <li>FINISH：已完成；</li>
+        /// <li>ABORTED：已终止。</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
