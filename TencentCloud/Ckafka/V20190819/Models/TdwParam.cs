@@ -26,30 +26,35 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// Tdw的bid
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bid")]
         public string Bid{ get; set; }
 
         /// <summary>
         /// Tdw的tid
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tid")]
         public string Tid{ get; set; }
 
         /// <summary>
         /// 默认true
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsDomestic")]
         public bool? IsDomestic{ get; set; }
 
         /// <summary>
         /// TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TdwHost")]
         public string TdwHost{ get; set; }
 
         /// <summary>
         /// TDW端口，默认8099
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TdwPort")]
         public long? TdwPort{ get; set; }

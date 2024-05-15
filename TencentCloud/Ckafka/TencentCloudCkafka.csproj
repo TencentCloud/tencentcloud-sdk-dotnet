@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1004</VersionPrefix>
+    <VersionPrefix>3.0.1005</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -319,6 +319,8 @@
     <Compile Include="V20190819\Models\MongoDBConnectParam.cs" />
     <Compile Include="V20190819\Models\MongoDBModifyConnectParam.cs" />
     <Compile Include="V20190819\Models\MongoDBParam.cs" />
+    <Compile Include="V20190819\Models\MqttConnectParam.cs" />
+    <Compile Include="V20190819\Models\MqttParam.cs" />
     <Compile Include="V20190819\Models\MySQLConnectParam.cs" />
     <Compile Include="V20190819\Models\MySQLModifyConnectParam.cs" />
     <Compile Include="V20190819\Models\MySQLParam.cs" />

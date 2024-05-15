@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1004</VersionPrefix>
+    <VersionPrefix>3.0.1005</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -150,6 +150,7 @@
     <Compile Include="V20221121\Models\ModifyRiskCenterScanTaskRequest.cs" />
     <Compile Include="V20221121\Models\ModifyRiskCenterScanTaskResponse.cs" />
     <Compile Include="V20221121\Models\NICAsset.cs" />
+    <Compile Include="V20221121\Models\NewAlertKey.cs" />
     <Compile Include="V20221121\Models\OrganizationUserInfo.cs" />
     <Compile Include="V20221121\Models\PortRiskAdvanceCFGParamItem.cs" />
     <Compile Include="V20221121\Models\PortViewPortRisk.cs" />
@@ -178,6 +179,8 @@
     <Compile Include="V20221121\Models\TaskIdListKey.cs" />
     <Compile Include="V20221121\Models\TaskLogInfo.cs" />
     <Compile Include="V20221121\Models\TaskLogURL.cs" />
+    <Compile Include="V20221121\Models\UpdateAlertStatusListRequest.cs" />
+    <Compile Include="V20221121\Models\UpdateAlertStatusListResponse.cs" />
     <Compile Include="V20221121\Models\VULRiskAdvanceCFGList.cs" />
     <Compile Include="V20221121\Models\VULViewVULRisk.cs" />
     <Compile Include="V20221121\Models\Vpc.cs" />

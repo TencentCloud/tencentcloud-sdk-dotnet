@@ -142,6 +142,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("ScfParam")]
         public ScfParam ScfParam{ get; set; }
 
+        /// <summary>
+        /// MQTT配置，Type为 MQTT 时必填
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MqttParam")]
+        public MqttParam MqttParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -165,6 +172,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamObj(map, prefix + "SQLServerParam.", this.SQLServerParam);
             this.SetParamObj(map, prefix + "CtsdbParam.", this.CtsdbParam);
             this.SetParamObj(map, prefix + "ScfParam.", this.ScfParam);
+            this.SetParamObj(map, prefix + "MqttParam.", this.MqttParam);
         }
     }
 }

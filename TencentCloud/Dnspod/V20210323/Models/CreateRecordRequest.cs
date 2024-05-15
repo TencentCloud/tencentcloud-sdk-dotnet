@@ -73,7 +73,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public ulong? MX{ get; set; }
 
         /// <summary>
-        /// TTL，范围1-604800，不同等级域名最小值不同。
+        /// TTL，范围1-604800，不同套餐域名最小值不同。
         /// </summary>
         [JsonProperty("TTL")]
         public ulong? TTL{ get; set; }

@@ -26,60 +26,70 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// MariaDB的数据库名称，"*"为全数据库
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Database")]
         public string Database{ get; set; }
 
         /// <summary>
         /// MariaDB的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Table")]
         public string Table{ get; set; }
 
         /// <summary>
         /// 该MariaDB在连接管理内的Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resource")]
         public string Resource{ get; set; }
 
         /// <summary>
         /// 复制存量信息(schema_only不复制, initial全量)，默认位initial
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapshotMode")]
         public string SnapshotMode{ get; set; }
 
         /// <summary>
         /// 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeyColumns")]
         public string KeyColumns{ get; set; }
 
         /// <summary>
         /// 当Table输入的是前缀时，该项值为true，否则为false
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsTablePrefix")]
         public bool? IsTablePrefix{ get; set; }
 
         /// <summary>
         /// 输出格式，DEFAULT、CANAL_1、CANAL_2
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputFormat")]
         public string OutputFormat{ get; set; }
 
         /// <summary>
         /// 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IncludeContentChanges")]
         public string IncludeContentChanges{ get; set; }
 
         /// <summary>
         /// 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IncludeQuery")]
         public bool? IncludeQuery{ get; set; }
 
         /// <summary>
         /// 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordWithSchema")]
         public bool? RecordWithSchema{ get; set; }

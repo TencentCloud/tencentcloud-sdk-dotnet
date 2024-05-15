@@ -26,24 +26,28 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// 表的列名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ColumnName")]
         public string ColumnName{ get; set; }
 
         /// <summary>
         /// 该列对应的jsonKey名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JsonKey")]
         public string JsonKey{ get; set; }
 
         /// <summary>
         /// 表列项的类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 列项是否允许为空
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AllowNull")]
         public bool? AllowNull{ get; set; }

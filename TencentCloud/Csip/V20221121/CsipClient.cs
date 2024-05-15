@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1004";
+       private const string sdkVersion = "SDK_NET_3.0.1005";
 
         /// <summary>
         /// Client constructor.
@@ -869,6 +869,27 @@ namespace TencentCloud.Csip.V20221121
         public StopRiskCenterTaskResponse StopRiskCenterTaskSync(StopRiskCenterTaskRequest req)
         {
             return InternalRequestAsync<StopRiskCenterTaskResponse>(req, "StopRiskCenterTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量告警状态处理接口
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAlertStatusListRequest"/></param>
+        /// <returns><see cref="UpdateAlertStatusListResponse"/></returns>
+        public Task<UpdateAlertStatusListResponse> UpdateAlertStatusList(UpdateAlertStatusListRequest req)
+        {
+            return InternalRequestAsync<UpdateAlertStatusListResponse>(req, "UpdateAlertStatusList");
+        }
+
+        /// <summary>
+        /// 批量告警状态处理接口
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAlertStatusListRequest"/></param>
+        /// <returns><see cref="UpdateAlertStatusListResponse"/></returns>
+        public UpdateAlertStatusListResponse UpdateAlertStatusListSync(UpdateAlertStatusListRequest req)
+        {
+            return InternalRequestAsync<UpdateAlertStatusListResponse>(req, "UpdateAlertStatusList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -26,120 +26,140 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// 实例资源
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resource")]
         public string Resource{ get; set; }
 
         /// <summary>
         /// Es的连接port
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
         /// Es用户名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
         /// Es密码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
         /// 是否为自建集群
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SelfBuilt")]
         public bool? SelfBuilt{ get; set; }
 
         /// <summary>
         /// 实例vip
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceVip")]
         public string ServiceVip{ get; set; }
 
         /// <summary>
         /// 实例的vpcId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
         /// Es是否抛弃解析失败的消息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DropInvalidMessage")]
         public bool? DropInvalidMessage{ get; set; }
 
         /// <summary>
         /// Es自定义index名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Index")]
         public string Index{ get; set; }
 
         /// <summary>
         /// Es自定义日期后缀
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DateFormat")]
         public string DateFormat{ get; set; }
 
         /// <summary>
         /// 非json格式数据的自定义key
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContentKey")]
         public string ContentKey{ get; set; }
 
         /// <summary>
         /// Es是否抛弃非json格式的消息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DropInvalidJsonMessage")]
         public bool? DropInvalidJsonMessage{ get; set; }
 
         /// <summary>
         /// 转储到Es中的文档ID取值字段名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DocumentIdField")]
         public string DocumentIdField{ get; set; }
 
         /// <summary>
         /// Es自定义index名称的类型，STRING，JSONPATH，默认为STRING
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexType")]
         public string IndexType{ get; set; }
 
         /// <summary>
         /// 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DropCls")]
         public DropCls DropCls{ get; set; }
 
         /// <summary>
         /// 转储到ES的消息为Database的binlog时，如果需要同步数据库操作，即增删改的操作到ES时填写数据库表主键
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatabasePrimaryKey")]
         public string DatabasePrimaryKey{ get; set; }
 
         /// <summary>
         /// 死信队列
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DropDlq")]
         public FailureParam DropDlq{ get; set; }
 
         /// <summary>
         /// 使用数据订阅格式导入 es 时，消息与 es 索引字段映射关系。不填默认为默认字段匹配
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordMappingList")]
         public EsRecordMapping[] RecordMappingList{ get; set; }
 
         /// <summary>
         /// 消息要映射为 es 索引中 @timestamp 的字段，如果当前配置为空，则使用消息的时间戳进行映射
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DateField")]
         public string DateField{ get; set; }
 
         /// <summary>
         /// 用来区分当前索引映射，属于新建索引还是存量索引。"EXIST_MAPPING"：从存量索引中选择；"NEW_MAPPING"：新建索引
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordMappingMode")]
         public string RecordMappingMode{ get; set; }

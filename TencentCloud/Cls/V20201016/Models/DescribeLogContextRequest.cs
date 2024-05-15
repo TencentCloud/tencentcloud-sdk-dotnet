@@ -31,7 +31,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 日志时间,  格式: YYYY-mm-dd HH:MM:SS.FFF
+        /// 日志时间,  需按照 UTC+8 时区将日志中的Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
         /// </summary>
         [JsonProperty("BTime")]
         public string BTime{ get; set; }

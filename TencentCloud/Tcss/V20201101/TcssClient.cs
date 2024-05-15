@@ -28,7 +28,7 @@ namespace TencentCloud.Tcss.V20201101
 
        private const string endpoint = "tcss.tencentcloudapi.com";
        private const string version = "2020-11-01";
-       private const string sdkVersion = "SDK_NET_3.0.1004";
+       private const string sdkVersion = "SDK_NET_3.0.1005";
 
         /// <summary>
         /// Client constructor.
@@ -3521,6 +3521,27 @@ namespace TencentCloud.Tcss.V20201101
         public DescribeEscapeWhiteListResponse DescribeEscapeWhiteListSync(DescribeEscapeWhiteListRequest req)
         {
             return InternalRequestAsync<DescribeEscapeWhiteListResponse>(req, "DescribeEscapeWhiteList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// DescribeRiskContainerImageList查询风险容器镜像列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEventEscapeImageListRequest"/></param>
+        /// <returns><see cref="DescribeEventEscapeImageListResponse"/></returns>
+        public Task<DescribeEventEscapeImageListResponse> DescribeEventEscapeImageList(DescribeEventEscapeImageListRequest req)
+        {
+            return InternalRequestAsync<DescribeEventEscapeImageListResponse>(req, "DescribeEventEscapeImageList");
+        }
+
+        /// <summary>
+        /// DescribeRiskContainerImageList查询风险容器镜像列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEventEscapeImageListRequest"/></param>
+        /// <returns><see cref="DescribeEventEscapeImageListResponse"/></returns>
+        public DescribeEventEscapeImageListResponse DescribeEventEscapeImageListSync(DescribeEventEscapeImageListRequest req)
+        {
+            return InternalRequestAsync<DescribeEventEscapeImageListResponse>(req, "DescribeEventEscapeImageList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
