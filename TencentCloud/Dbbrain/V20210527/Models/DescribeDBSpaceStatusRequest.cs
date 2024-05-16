@@ -37,7 +37,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public long? RangeDays{ get; set; }
 
         /// <summary>
-        /// 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+        /// 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，"mongodb" - 云数据库 MongoDB，默认为"mysql"。
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }

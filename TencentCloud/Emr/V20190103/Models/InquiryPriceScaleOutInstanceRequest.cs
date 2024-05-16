@@ -91,6 +91,18 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("MasterCount")]
         public ulong? MasterCount{ get; set; }
 
+        /// <summary>
+        /// 类型为ComputeResource和EMR以及默认，默认为EMR
+        /// </summary>
+        [JsonProperty("ResourceBaseType")]
+        public string ResourceBaseType{ get; set; }
+
+        /// <summary>
+        /// 计算资源id
+        /// </summary>
+        [JsonProperty("ComputeResourceId")]
+        public string ComputeResourceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +119,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Currency", this.Currency);
             this.SetParamSimple(map, prefix + "RouterCount", this.RouterCount);
             this.SetParamSimple(map, prefix + "MasterCount", this.MasterCount);
+            this.SetParamSimple(map, prefix + "ResourceBaseType", this.ResourceBaseType);
+            this.SetParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
         }
     }
 }

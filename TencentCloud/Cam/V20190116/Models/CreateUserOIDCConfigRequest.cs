@@ -32,12 +32,6 @@ namespace TencentCloud.Cam.V20190116.Models
         public string IdentityUrl{ get; set; }
 
         /// <summary>
-        /// 签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的帐号安全，建议您定期轮换签名公钥。
-        /// </summary>
-        [JsonProperty("IdentityKey")]
-        public string IdentityKey{ get; set; }
-
-        /// <summary>
         /// 客户端ID，在OpenID Connect身份提供商注册的客户端ID。
         /// </summary>
         [JsonProperty("ClientId")]
@@ -68,6 +62,12 @@ namespace TencentCloud.Cam.V20190116.Models
         public string MappingFiled{ get; set; }
 
         /// <summary>
+        /// 签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
+        /// </summary>
+        [JsonProperty("IdentityKey")]
+        public string IdentityKey{ get; set; }
+
+        /// <summary>
         /// 授权请求Scope。openid; email;profile。授权请求信息范围。默认必选openid。
         /// </summary>
         [JsonProperty("Scope")]
@@ -86,12 +86,12 @@ namespace TencentCloud.Cam.V20190116.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "IdentityUrl", this.IdentityUrl);
-            this.SetParamSimple(map, prefix + "IdentityKey", this.IdentityKey);
             this.SetParamSimple(map, prefix + "ClientId", this.ClientId);
             this.SetParamSimple(map, prefix + "AuthorizationEndpoint", this.AuthorizationEndpoint);
             this.SetParamSimple(map, prefix + "ResponseType", this.ResponseType);
             this.SetParamSimple(map, prefix + "ResponseMode", this.ResponseMode);
             this.SetParamSimple(map, prefix + "MappingFiled", this.MappingFiled);
+            this.SetParamSimple(map, prefix + "IdentityKey", this.IdentityKey);
             this.SetParamArraySimple(map, prefix + "Scope.", this.Scope);
             this.SetParamSimple(map, prefix + "Description", this.Description);
         }

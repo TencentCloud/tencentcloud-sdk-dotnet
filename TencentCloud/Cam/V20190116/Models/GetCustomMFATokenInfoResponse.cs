@@ -25,7 +25,7 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 自定义多因子验证Token对应的帐号Id
+        /// 自定义多因子验证Token对应的账号Id
         /// </summary>
         [JsonProperty("Uin")]
         public ulong? Uin{ get; set; }

@@ -32,12 +32,6 @@ namespace TencentCloud.Cam.V20190116.Models
         public string IdentityUrl{ get; set; }
 
         /// <summary>
-        /// RSA签名公钥，JWKS格式，需要进行base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
-        /// </summary>
-        [JsonProperty("IdentityKey")]
-        public string IdentityKey{ get; set; }
-
-        /// <summary>
         /// 客户端ID，在OpenID Connect身份提供商注册的客户端ID，允许英文字母、数字、特殊字符.-_:/，不能以特殊字符.-_:/开头，单个客户端ID最大64个字符。
         /// </summary>
         [JsonProperty("ClientId")]
@@ -62,10 +56,16 @@ namespace TencentCloud.Cam.V20190116.Models
         public string ResponseMode{ get; set; }
 
         /// <summary>
-        /// 映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段,仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-255个中文或英文字符
+        /// 映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段,仅支持英文字母、数字、汉字、符号@、＆_[]-的组合，1-255个中文或英文字符
         /// </summary>
         [JsonProperty("MappingFiled")]
         public string MappingFiled{ get; set; }
+
+        /// <summary>
+        /// RSA签名公钥，JWKS格式，需要进行base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
+        /// </summary>
+        [JsonProperty("IdentityKey")]
+        public string IdentityKey{ get; set; }
 
         /// <summary>
         /// 授权请求Scope。有openid; email;profile三种。代表授权请求信息范围openid表示请求访问用户的身份信息，email表示请求访问用户的电子邮件地址，profile表示请求访问用户的基本信息。默认必选openid。
@@ -86,12 +86,12 @@ namespace TencentCloud.Cam.V20190116.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "IdentityUrl", this.IdentityUrl);
-            this.SetParamSimple(map, prefix + "IdentityKey", this.IdentityKey);
             this.SetParamSimple(map, prefix + "ClientId", this.ClientId);
             this.SetParamSimple(map, prefix + "AuthorizationEndpoint", this.AuthorizationEndpoint);
             this.SetParamSimple(map, prefix + "ResponseType", this.ResponseType);
             this.SetParamSimple(map, prefix + "ResponseMode", this.ResponseMode);
             this.SetParamSimple(map, prefix + "MappingFiled", this.MappingFiled);
+            this.SetParamSimple(map, prefix + "IdentityKey", this.IdentityKey);
             this.SetParamArraySimple(map, prefix + "Scope.", this.Scope);
             this.SetParamSimple(map, prefix + "Description", this.Description);
         }

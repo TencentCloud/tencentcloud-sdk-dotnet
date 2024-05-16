@@ -55,7 +55,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string BucketRegion{ get; set; }
 
         /// <summary>
-        /// cos文件所在文件夹的前缀
+        /// COS文件所在文件夹的前缀。默认为空，投递存储桶下所有的文件。
         /// </summary>
         [JsonProperty("Prefix")]
         public string Prefix{ get; set; }

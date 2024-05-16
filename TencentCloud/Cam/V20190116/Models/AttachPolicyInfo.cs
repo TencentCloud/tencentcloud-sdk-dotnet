@@ -66,21 +66,21 @@ namespace TencentCloud.Cam.V20190116.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 策略关联操作者主帐号
+        /// 策略关联操作者主账号
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperateOwnerUin")]
         public string OperateOwnerUin{ get; set; }
 
         /// <summary>
-        /// 策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
+        /// 策略关联操作者ID，如果UinType为0表示子账号Uin，如果UinType为1表示角色ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperateUin")]
         public string OperateUin{ get; set; }
 
         /// <summary>
-        /// UinType为0表示OperateUin字段是子帐号Uin，如果UinType为1表示OperateUin字段是角色ID
+        /// UinType为0表示OperateUin字段是子账号Uin，如果UinType为1表示OperateUin字段是角色ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperateUinType")]

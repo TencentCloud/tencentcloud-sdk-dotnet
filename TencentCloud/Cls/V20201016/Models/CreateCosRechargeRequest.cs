@@ -55,17 +55,17 @@ namespace TencentCloud.Cls.V20201016.Models
         public string BucketRegion{ get; set; }
 
         /// <summary>
-        /// COS文件所在文件夹的前缀
-        /// </summary>
-        [JsonProperty("Prefix")]
-        public string Prefix{ get; set; }
-
-        /// <summary>
         /// 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文；
         /// 默认为minimalist_log
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
+
+        /// <summary>
+        /// COS文件所在文件夹的前缀。默认为空，投递存储桶下所有的文件。
+        /// </summary>
+        [JsonProperty("Prefix")]
+        public string Prefix{ get; set; }
 
         /// <summary>
         /// supported: "", "gzip", "lzop", "snappy"; 默认空
@@ -102,8 +102,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Bucket", this.Bucket);
             this.SetParamSimple(map, prefix + "BucketRegion", this.BucketRegion);
-            this.SetParamSimple(map, prefix + "Prefix", this.Prefix);
             this.SetParamSimple(map, prefix + "LogType", this.LogType);
+            this.SetParamSimple(map, prefix + "Prefix", this.Prefix);
             this.SetParamSimple(map, prefix + "Compress", this.Compress);
             this.SetParamObj(map, prefix + "ExtractRuleInfo.", this.ExtractRuleInfo);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);

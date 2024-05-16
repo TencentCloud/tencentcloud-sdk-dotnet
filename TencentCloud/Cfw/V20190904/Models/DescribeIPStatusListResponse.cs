@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// ip状态信息
+        /// IP状态信息
         /// </summary>
         [JsonProperty("StatusList")]
         public IPDefendStatus[] StatusList{ get; set; }

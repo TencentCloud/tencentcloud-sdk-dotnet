@@ -31,12 +31,6 @@ namespace TencentCloud.Cam.V20190116.Models
         public string IdentityUrl{ get; set; }
 
         /// <summary>
-        /// 签名公钥，需要base64
-        /// </summary>
-        [JsonProperty("IdentityKey")]
-        public string IdentityKey{ get; set; }
-
-        /// <summary>
         /// 客户端ID
         /// </summary>
         [JsonProperty("ClientId")]
@@ -47,6 +41,12 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
+
+        /// <summary>
+        /// 签名公钥，需要base64
+        /// </summary>
+        [JsonProperty("IdentityKey")]
+        public string IdentityKey{ get; set; }
 
         /// <summary>
         /// 描述
@@ -61,9 +61,9 @@ namespace TencentCloud.Cam.V20190116.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "IdentityUrl", this.IdentityUrl);
-            this.SetParamSimple(map, prefix + "IdentityKey", this.IdentityKey);
             this.SetParamArraySimple(map, prefix + "ClientId.", this.ClientId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "IdentityKey", this.IdentityKey);
             this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }

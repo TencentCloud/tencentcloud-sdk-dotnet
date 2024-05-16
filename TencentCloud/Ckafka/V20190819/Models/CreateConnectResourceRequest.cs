@@ -102,6 +102,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("KafkaConnectParam")]
         public KafkaConnectParam KafkaConnectParam{ get; set; }
 
+        /// <summary>
+        /// MQTT配置，Type为 MQTT 时必填
+        /// </summary>
+        [JsonProperty("MqttConnectParam")]
+        public MqttConnectParam MqttConnectParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamObj(map, prefix + "SQLServerConnectParam.", this.SQLServerConnectParam);
             this.SetParamObj(map, prefix + "DorisConnectParam.", this.DorisConnectParam);
             this.SetParamObj(map, prefix + "KafkaConnectParam.", this.KafkaConnectParam);
+            this.SetParamObj(map, prefix + "MqttConnectParam.", this.MqttConnectParam);
         }
     }
 }

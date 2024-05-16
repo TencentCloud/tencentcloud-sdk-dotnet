@@ -58,10 +58,10 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string UserSig{ get; set; }
 
         /// <summary>
-        /// 【本字段已废弃，请使用 StreamUrl 字段】源流URL，支持一个地址。
+        /// 源流URL。历史原因本字段【必填】。如果是视频流，分辨率请保持不变。
         /// </summary>
-        [JsonProperty("SourceUrl")]
-        public string[] SourceUrl{ get; set; }
+        [JsonProperty("StreamUrl")]
+        public string StreamUrl{ get; set; }
 
         /// <summary>
         /// TRTC房间权限加密串，只有在TRTC控制台启用了高级权限控制的时候需要携带，在TRTC控制台如果开启高级权限控制后，TRTC 的后台服务系统会校验一个叫做 [PrivateMapKey] 的“权限票据”，权限票据中包含了一个加密后的 RoomId 和一个加密后的“权限位列表”。由于 PrivateMapKey 中包含 RoomId，所以只提供了 UserSig 没有提供 PrivateMapKey 时，并不能进入指定的房间。
@@ -82,10 +82,16 @@ namespace TencentCloud.Trtc.V20190722.Models
         public AudioEncodeParams AudioEncodeParams{ get; set; }
 
         /// <summary>
-        /// 源流URL。历史原因本字段【必填】。
+        /// 【本字段已废弃，请使用 StreamUrl 字段】源流URL，支持一个地址。
         /// </summary>
-        [JsonProperty("StreamUrl")]
-        public string StreamUrl{ get; set; }
+        [JsonProperty("SourceUrl")]
+        public string[] SourceUrl{ get; set; }
+
+        /// <summary>
+        /// 指定视频从某个秒时间戳播放
+        /// </summary>
+        [JsonProperty("SeekSecond")]
+        public long? SeekSecond{ get; set; }
 
 
         /// <summary>
@@ -98,11 +104,12 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "RoomIdType", this.RoomIdType);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "UserSig", this.UserSig);
-            this.SetParamArraySimple(map, prefix + "SourceUrl.", this.SourceUrl);
+            this.SetParamSimple(map, prefix + "StreamUrl", this.StreamUrl);
             this.SetParamSimple(map, prefix + "PrivateMapKey", this.PrivateMapKey);
             this.SetParamObj(map, prefix + "VideoEncodeParams.", this.VideoEncodeParams);
             this.SetParamObj(map, prefix + "AudioEncodeParams.", this.AudioEncodeParams);
-            this.SetParamSimple(map, prefix + "StreamUrl", this.StreamUrl);
+            this.SetParamArraySimple(map, prefix + "SourceUrl.", this.SourceUrl);
+            this.SetParamSimple(map, prefix + "SeekSecond", this.SeekSecond);
         }
     }
 }

@@ -72,6 +72,50 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("TicketNum")]
         public long? TicketNum{ get; set; }
 
+        /// <summary>
+        /// 全局筛选参数 报表过滤条件的全局参数。 格式为JSON格式的字符串
+        /// **目前仅支持字符类型页面参数绑定到全局参数
+        /// **
+        /// [
+        ///     {
+        ///         "ParamKey": "name",  //页面参数名称
+        ///         "JoinType": "AND",     // 连接方式,目前仅支持AND
+        ///         "WhereList": [
+        ///             {
+        ///                 "Operator": "-neq",   // 操作符，参考以下说明
+        ///                 "Value": [                   //操作值，单值数组只传一个值
+        ///                     "zZWJMD",
+        ///                     "ZzVGHX",
+        ///                     "湖南省",
+        ///                     "河北省"
+        ///                 ]
+        ///             }
+        ///         ]
+        ///     },
+        ///     {
+        ///         "ParamKey": "genderParam",
+        ///         "JoinType": "AND",
+        ///         "WhereList": [
+        ///             {
+        ///                 "Operator": "-neq",
+        ///                 "Value": [
+        ///                     "男"
+        ///                 ]
+        ///             }
+        ///         ]
+        ///     }
+        /// ]
+        /// 
+        /// 
+        /// 
+        /// Operator 目前支持
+        /// -neq  不等于!=操作符
+        /// -eq  等于=操作符
+        /// -is     in操作符
+        /// </summary>
+        [JsonProperty("GlobalParam")]
+        public string GlobalParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +130,7 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "UserCorpId", this.UserCorpId);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "TicketNum", this.TicketNum);
+            this.SetParamSimple(map, prefix + "GlobalParam", this.GlobalParam);
         }
     }
 }

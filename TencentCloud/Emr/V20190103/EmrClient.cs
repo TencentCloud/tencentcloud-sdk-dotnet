@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1006";
+       private const string sdkVersion = "SDK_NET_3.0.1007";
 
         /// <summary>
         /// Client constructor.
@@ -304,6 +304,48 @@ namespace TencentCloud.Emr.V20190103
         public DescribeEmrApplicationStaticsResponse DescribeEmrApplicationStaticsSync(DescribeEmrApplicationStaticsRequest req)
         {
             return InternalRequestAsync<DescribeEmrApplicationStaticsResponse>(req, "DescribeEmrApplicationStatics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询监控概览页指标数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEmrOverviewMetricsRequest"/></param>
+        /// <returns><see cref="DescribeEmrOverviewMetricsResponse"/></returns>
+        public Task<DescribeEmrOverviewMetricsResponse> DescribeEmrOverviewMetrics(DescribeEmrOverviewMetricsRequest req)
+        {
+            return InternalRequestAsync<DescribeEmrOverviewMetricsResponse>(req, "DescribeEmrOverviewMetrics");
+        }
+
+        /// <summary>
+        /// 查询监控概览页指标数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEmrOverviewMetricsRequest"/></param>
+        /// <returns><see cref="DescribeEmrOverviewMetricsResponse"/></returns>
+        public DescribeEmrOverviewMetricsResponse DescribeEmrOverviewMetricsSync(DescribeEmrOverviewMetricsRequest req)
+        {
+            return InternalRequestAsync<DescribeEmrOverviewMetricsResponse>(req, "DescribeEmrOverviewMetrics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取Hbase表级监控数据概览接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHBaseTableOverviewRequest"/></param>
+        /// <returns><see cref="DescribeHBaseTableOverviewResponse"/></returns>
+        public Task<DescribeHBaseTableOverviewResponse> DescribeHBaseTableOverview(DescribeHBaseTableOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeHBaseTableOverviewResponse>(req, "DescribeHBaseTableOverview");
+        }
+
+        /// <summary>
+        /// 获取Hbase表级监控数据概览接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHBaseTableOverviewRequest"/></param>
+        /// <returns><see cref="DescribeHBaseTableOverviewResponse"/></returns>
+        public DescribeHBaseTableOverviewResponse DescribeHBaseTableOverviewSync(DescribeHBaseTableOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeHBaseTableOverviewResponse>(req, "DescribeHBaseTableOverview")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

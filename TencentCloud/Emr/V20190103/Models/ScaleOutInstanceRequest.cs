@@ -191,6 +191,18 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("AutoRenew")]
         public long? AutoRenew{ get; set; }
 
+        /// <summary>
+        /// 类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
+        /// </summary>
+        [JsonProperty("ResourceBaseType")]
+        public string ResourceBaseType{ get; set; }
+
+        /// <summary>
+        /// 计算资源id
+        /// </summary>
+        [JsonProperty("ComputeResourceId")]
+        public string ComputeResourceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -223,6 +235,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "ScaleOutServiceConfAssign", this.ScaleOutServiceConfAssign);
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
+            this.SetParamSimple(map, prefix + "ResourceBaseType", this.ResourceBaseType);
+            this.SetParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
         }
     }
 }

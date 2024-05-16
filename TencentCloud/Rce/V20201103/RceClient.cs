@@ -28,7 +28,7 @@ namespace TencentCloud.Rce.V20201103
 
        private const string endpoint = "rce.tencentcloudapi.com";
        private const string version = "2020-11-03";
-       private const string sdkVersion = "SDK_NET_3.0.1006";
+       private const string sdkVersion = "SDK_NET_3.0.1007";
 
         /// <summary>
         /// Client constructor.
@@ -51,27 +51,6 @@ namespace TencentCloud.Rce.V20201103
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
-        }
-
-        /// <summary>
-        /// 此接口用于查询风险评估结果
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRiskAssessmentRequest"/></param>
-        /// <returns><see cref="DescribeRiskAssessmentResponse"/></returns>
-        public Task<DescribeRiskAssessmentResponse> DescribeRiskAssessment(DescribeRiskAssessmentRequest req)
-        {
-            return InternalRequestAsync<DescribeRiskAssessmentResponse>(req, "DescribeRiskAssessment");
-        }
-
-        /// <summary>
-        /// 此接口用于查询风险评估结果
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRiskAssessmentRequest"/></param>
-        /// <returns><see cref="DescribeRiskAssessmentResponse"/></returns>
-        public DescribeRiskAssessmentResponse DescribeRiskAssessmentSync(DescribeRiskAssessmentRequest req)
-        {
-            return InternalRequestAsync<DescribeRiskAssessmentResponse>(req, "DescribeRiskAssessment")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

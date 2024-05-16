@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1006</VersionPrefix>
+    <VersionPrefix>3.0.1007</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -91,6 +91,10 @@
     <Compile Include="V20190103\Models\DescribeCvmQuotaResponse.cs" />
     <Compile Include="V20190103\Models\DescribeEmrApplicationStaticsRequest.cs" />
     <Compile Include="V20190103\Models\DescribeEmrApplicationStaticsResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeEmrOverviewMetricsRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeEmrOverviewMetricsResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeHBaseTableOverviewRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeHBaseTableOverviewResponse.cs" />
     <Compile Include="V20190103\Models\DescribeHiveQueriesRequest.cs" />
     <Compile Include="V20190103\Models\DescribeHiveQueriesResponse.cs" />
     <Compile Include="V20190103\Models\DescribeImpalaQueriesRequest.cs" />
@@ -144,6 +148,7 @@
     <Compile Include="V20190103\Models\KeyValue.cs" />
     <Compile Include="V20190103\Models\LoginSettings.cs" />
     <Compile Include="V20190103\Models\MetaDbInfo.cs" />
+    <Compile Include="V20190103\Models\MetricTags.cs" />
     <Compile Include="V20190103\Models\ModifyAutoScaleStrategyRequest.cs" />
     <Compile Include="V20190103\Models\ModifyAutoScaleStrategyResponse.cs" />
     <Compile Include="V20190103\Models\ModifyResourcePoolsRequest.cs" />
@@ -168,6 +173,8 @@
     <Compile Include="V20190103\Models\NotRepeatStrategy.cs" />
     <Compile Include="V20190103\Models\OpScope.cs" />
     <Compile Include="V20190103\Models\OutterResource.cs" />
+    <Compile Include="V20190103\Models\OverviewMetricData.cs" />
+    <Compile Include="V20190103\Models\OverviewRow.cs" />
     <Compile Include="V20190103\Models\PartDetailPriceItem.cs" />
     <Compile Include="V20190103\Models\PersistentVolumeContext.cs" />
     <Compile Include="V20190103\Models\Placement.cs" />
@@ -209,6 +216,7 @@
     <Compile Include="V20190103\Models\SubnetInfo.cs" />
     <Compile Include="V20190103\Models\SyncPodStateRequest.cs" />
     <Compile Include="V20190103\Models\SyncPodStateResponse.cs" />
+    <Compile Include="V20190103\Models\TableSchemaItem.cs" />
     <Compile Include="V20190103\Models\Tag.cs" />
     <Compile Include="V20190103\Models\TerminateClusterNodesRequest.cs" />
     <Compile Include="V20190103\Models\TerminateClusterNodesResponse.cs" />

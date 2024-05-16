@@ -49,7 +49,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? VisibilityTimeout{ get; set; }
 
         /// <summary>
-        /// 消息最大长度。取值范围 1024-65536 Byte（即1-64K），默认值 65536。
+        /// 消息最大长度。取值范围 1024-1048576 Byte（即1-1024K），默认值 1048576。
         /// </summary>
         [JsonProperty("MaxMsgSize")]
         public ulong? MaxMsgSize{ get; set; }

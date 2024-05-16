@@ -31,8 +31,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
-        /// 注意：支持查询14天内的数据
+        /// 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）注意：最大支持查询14天内的数据
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }

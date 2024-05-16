@@ -164,6 +164,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         public bool? DryRun{ get; set; }
 
         /// <summary>
+        /// 描述了实例CPU拓扑结构的相关信息。若不指定该参数，则按系统资源情况决定。
+        /// </summary>
+        [JsonProperty("CpuTopology")]
+        public CpuTopology CpuTopology{ get; set; }
+
+        /// <summary>
         /// CAM角色名称。可通过[`DescribeRoleList`](https://cloud.tencent.com/document/product/598/13887)接口返回值中的`roleName`获取。
         /// </summary>
         [JsonProperty("CamRoleName")]
@@ -227,6 +233,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
+            this.SetParamObj(map, prefix + "CpuTopology.", this.CpuTopology);
             this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
             this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
             this.SetParamObj(map, prefix + "LaunchTemplate.", this.LaunchTemplate);

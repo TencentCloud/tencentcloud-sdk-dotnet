@@ -15,21 +15,37 @@
  * under the License.
  */
 
-namespace TencentCloud.Rce.V20201103.Models
+namespace TencentCloud.Vtc.V20240223.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRiskAssessmentRequest : AbstractModel
+    public class TranslateResult : AbstractModel
     {
         
+        /// <summary>
+        /// 翻译源文字。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SourceText")]
+        public string SourceText{ get; set; }
+
+        /// <summary>
+        /// 翻译后文字。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TargetText")]
+        public string TargetText{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "SourceText", this.SourceText);
+            this.SetParamSimple(map, prefix + "TargetText", this.TargetText);
         }
     }
 }

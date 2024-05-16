@@ -37,7 +37,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string MsgContent{ get; set; }
 
         /// <summary>
-        /// 延迟时间
+        /// 延迟时间。单位为秒，默认值为0秒，最大不能超过队列配置的消息最长未确认时间。
         /// </summary>
         [JsonProperty("DelaySeconds")]
         public long? DelaySeconds{ get; set; }

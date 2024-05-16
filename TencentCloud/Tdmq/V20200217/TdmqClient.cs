@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1006";
+       private const string sdkVersion = "SDK_NET_3.0.1007";
 
         /// <summary>
         /// Client constructor.
@@ -999,6 +999,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 接口很久之前已删除，需下线
+        /// 
         /// 枚举cmq死信队列源队列
         /// </summary>
         /// <param name="req"><see cref="DescribeCmqDeadLetterSourceQueuesRequest"/></param>
@@ -1009,6 +1011,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 接口很久之前已删除，需下线
+        /// 
         /// 枚举cmq死信队列源队列
         /// </summary>
         /// <param name="req"><see cref="DescribeCmqDeadLetterSourceQueuesRequest"/></param>

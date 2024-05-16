@@ -122,6 +122,13 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("TicketNum")]
         public long? TicketNum{ get; set; }
 
+        /// <summary>
+        /// 全局参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GlobalParam")]
+        public string GlobalParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +149,7 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "UserCorpId", this.UserCorpId);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "TicketNum", this.TicketNum);
+            this.SetParamSimple(map, prefix + "GlobalParam", this.GlobalParam);
         }
     }
 }
