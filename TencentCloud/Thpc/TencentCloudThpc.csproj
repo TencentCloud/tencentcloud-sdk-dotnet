@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B259DC45-AEEA-3779-9220-C0A0DBFA50EF}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1005</VersionPrefix>
+    <VersionPrefix>3.0.1006</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,78 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="V20230321\ThpcClient.cs" />
+    <Compile Include="V20230321\Models\AddClusterStorageOptionRequest.cs" />
+    <Compile Include="V20230321\Models\AddClusterStorageOptionResponse.cs" />
+    <Compile Include="V20230321\Models\AddNodesRequest.cs" />
+    <Compile Include="V20230321\Models\AddNodesResponse.cs" />
+    <Compile Include="V20230321\Models\AddQueueRequest.cs" />
+    <Compile Include="V20230321\Models\AddQueueResponse.cs" />
+    <Compile Include="V20230321\Models\CFSOption.cs" />
+    <Compile Include="V20230321\Models\CFSOptionOverview.cs" />
+    <Compile Include="V20230321\Models\ClusterActivity.cs" />
+    <Compile Include="V20230321\Models\ClusterOverview.cs" />
+    <Compile Include="V20230321\Models\ComputeNode.cs" />
+    <Compile Include="V20230321\Models\ComputeNodeOverview.cs" />
+    <Compile Include="V20230321\Models\CreateClusterRequest.cs" />
+    <Compile Include="V20230321\Models\CreateClusterResponse.cs" />
+    <Compile Include="V20230321\Models\DataDisk.cs" />
+    <Compile Include="V20230321\Models\DeleteClusterRequest.cs" />
+    <Compile Include="V20230321\Models\DeleteClusterResponse.cs" />
+    <Compile Include="V20230321\Models\DeleteClusterStorageOptionRequest.cs" />
+    <Compile Include="V20230321\Models\DeleteClusterStorageOptionResponse.cs" />
+    <Compile Include="V20230321\Models\DeleteNodesRequest.cs" />
+    <Compile Include="V20230321\Models\DeleteNodesResponse.cs" />
+    <Compile Include="V20230321\Models\DeleteQueueRequest.cs" />
+    <Compile Include="V20230321\Models\DeleteQueueResponse.cs" />
+    <Compile Include="V20230321\Models\DescribeAutoScalingConfigurationRequest.cs" />
+    <Compile Include="V20230321\Models\DescribeAutoScalingConfigurationResponse.cs" />
+    <Compile Include="V20230321\Models\DescribeClusterActivitiesRequest.cs" />
+    <Compile Include="V20230321\Models\DescribeClusterActivitiesResponse.cs" />
+    <Compile Include="V20230321\Models\DescribeClusterStorageOptionRequest.cs" />
+    <Compile Include="V20230321\Models\DescribeClusterStorageOptionResponse.cs" />
+    <Compile Include="V20230321\Models\DescribeClustersRequest.cs" />
+    <Compile Include="V20230321\Models\DescribeClustersResponse.cs" />
+    <Compile Include="V20230321\Models\DescribeInitNodeScriptsRequest.cs" />
+    <Compile Include="V20230321\Models\DescribeInitNodeScriptsResponse.cs" />
+    <Compile Include="V20230321\Models\DescribeNodesRequest.cs" />
+    <Compile Include="V20230321\Models\DescribeNodesResponse.cs" />
+    <Compile Include="V20230321\Models\DescribeQueuesRequest.cs" />
+    <Compile Include="V20230321\Models\DescribeQueuesResponse.cs" />
+    <Compile Include="V20230321\Models\EnhancedService.cs" />
+    <Compile Include="V20230321\Models\ExpansionNodeConfig.cs" />
+    <Compile Include="V20230321\Models\ExpansionNodeConfigOverview.cs" />
+    <Compile Include="V20230321\Models\Filter.cs" />
+    <Compile Include="V20230321\Models\GooseFSOption.cs" />
+    <Compile Include="V20230321\Models\GooseFSOptionOverview.cs" />
+    <Compile Include="V20230321\Models\GooseFSxOption.cs" />
+    <Compile Include="V20230321\Models\GooseFSxOptionOverview.cs" />
+    <Compile Include="V20230321\Models\InstanceChargePrepaid.cs" />
+    <Compile Include="V20230321\Models\InternetAccessible.cs" />
+    <Compile Include="V20230321\Models\LoginNode.cs" />
+    <Compile Include="V20230321\Models\LoginNodeOverview.cs" />
+    <Compile Include="V20230321\Models\LoginSettings.cs" />
+    <Compile Include="V20230321\Models\ManagerNode.cs" />
+    <Compile Include="V20230321\Models\ManagerNodeOverview.cs" />
+    <Compile Include="V20230321\Models\ModifyInitNodeScriptsRequest.cs" />
+    <Compile Include="V20230321\Models\ModifyInitNodeScriptsResponse.cs" />
+    <Compile Include="V20230321\Models\NodeActivity.cs" />
+    <Compile Include="V20230321\Models\NodeOverview.cs" />
+    <Compile Include="V20230321\Models\NodeScript.cs" />
+    <Compile Include="V20230321\Models\Placement.cs" />
+    <Compile Include="V20230321\Models\QueueConfig.cs" />
+    <Compile Include="V20230321\Models\QueueConfigOverview.cs" />
+    <Compile Include="V20230321\Models\QueueOverview.cs" />
+    <Compile Include="V20230321\Models\RunAutomationServiceEnabled.cs" />
+    <Compile Include="V20230321\Models\RunMonitorServiceEnabled.cs" />
+    <Compile Include="V20230321\Models\RunSecurityServiceEnabled.cs" />
+    <Compile Include="V20230321\Models\SetAutoScalingConfigurationRequest.cs" />
+    <Compile Include="V20230321\Models\SetAutoScalingConfigurationResponse.cs" />
+    <Compile Include="V20230321\Models\StorageOption.cs" />
+    <Compile Include="V20230321\Models\StorageOptionOverview.cs" />
+    <Compile Include="V20230321\Models\SystemDisk.cs" />
+    <Compile Include="V20230321\Models\Tag.cs" />
+    <Compile Include="V20230321\Models\VirtualPrivateCloud.cs" />
     <Compile Include="V20220401\ThpcClient.cs" />
     <Compile Include="V20220401\Models\AddClusterStorageOptionRequest.cs" />
     <Compile Include="V20220401\Models\AddClusterStorageOptionResponse.cs" />
@@ -137,77 +209,5 @@
     <Compile Include="V20211109\Models\SystemDisk.cs" />
     <Compile Include="V20211109\Models\Tag.cs" />
     <Compile Include="V20211109\Models\VirtualPrivateCloud.cs" />
-    <Compile Include="V20230321\ThpcClient.cs" />
-    <Compile Include="V20230321\Models\AddClusterStorageOptionRequest.cs" />
-    <Compile Include="V20230321\Models\AddClusterStorageOptionResponse.cs" />
-    <Compile Include="V20230321\Models\AddNodesRequest.cs" />
-    <Compile Include="V20230321\Models\AddNodesResponse.cs" />
-    <Compile Include="V20230321\Models\AddQueueRequest.cs" />
-    <Compile Include="V20230321\Models\AddQueueResponse.cs" />
-    <Compile Include="V20230321\Models\CFSOption.cs" />
-    <Compile Include="V20230321\Models\CFSOptionOverview.cs" />
-    <Compile Include="V20230321\Models\ClusterActivity.cs" />
-    <Compile Include="V20230321\Models\ClusterOverview.cs" />
-    <Compile Include="V20230321\Models\ComputeNode.cs" />
-    <Compile Include="V20230321\Models\ComputeNodeOverview.cs" />
-    <Compile Include="V20230321\Models\CreateClusterRequest.cs" />
-    <Compile Include="V20230321\Models\CreateClusterResponse.cs" />
-    <Compile Include="V20230321\Models\DataDisk.cs" />
-    <Compile Include="V20230321\Models\DeleteClusterRequest.cs" />
-    <Compile Include="V20230321\Models\DeleteClusterResponse.cs" />
-    <Compile Include="V20230321\Models\DeleteClusterStorageOptionRequest.cs" />
-    <Compile Include="V20230321\Models\DeleteClusterStorageOptionResponse.cs" />
-    <Compile Include="V20230321\Models\DeleteNodesRequest.cs" />
-    <Compile Include="V20230321\Models\DeleteNodesResponse.cs" />
-    <Compile Include="V20230321\Models\DeleteQueueRequest.cs" />
-    <Compile Include="V20230321\Models\DeleteQueueResponse.cs" />
-    <Compile Include="V20230321\Models\DescribeAutoScalingConfigurationRequest.cs" />
-    <Compile Include="V20230321\Models\DescribeAutoScalingConfigurationResponse.cs" />
-    <Compile Include="V20230321\Models\DescribeClusterActivitiesRequest.cs" />
-    <Compile Include="V20230321\Models\DescribeClusterActivitiesResponse.cs" />
-    <Compile Include="V20230321\Models\DescribeClusterStorageOptionRequest.cs" />
-    <Compile Include="V20230321\Models\DescribeClusterStorageOptionResponse.cs" />
-    <Compile Include="V20230321\Models\DescribeClustersRequest.cs" />
-    <Compile Include="V20230321\Models\DescribeClustersResponse.cs" />
-    <Compile Include="V20230321\Models\DescribeInitNodeScriptsRequest.cs" />
-    <Compile Include="V20230321\Models\DescribeInitNodeScriptsResponse.cs" />
-    <Compile Include="V20230321\Models\DescribeNodesRequest.cs" />
-    <Compile Include="V20230321\Models\DescribeNodesResponse.cs" />
-    <Compile Include="V20230321\Models\DescribeQueuesRequest.cs" />
-    <Compile Include="V20230321\Models\DescribeQueuesResponse.cs" />
-    <Compile Include="V20230321\Models\EnhancedService.cs" />
-    <Compile Include="V20230321\Models\ExpansionNodeConfig.cs" />
-    <Compile Include="V20230321\Models\ExpansionNodeConfigOverview.cs" />
-    <Compile Include="V20230321\Models\Filter.cs" />
-    <Compile Include="V20230321\Models\GooseFSOption.cs" />
-    <Compile Include="V20230321\Models\GooseFSOptionOverview.cs" />
-    <Compile Include="V20230321\Models\GooseFSxOption.cs" />
-    <Compile Include="V20230321\Models\GooseFSxOptionOverview.cs" />
-    <Compile Include="V20230321\Models\InstanceChargePrepaid.cs" />
-    <Compile Include="V20230321\Models\InternetAccessible.cs" />
-    <Compile Include="V20230321\Models\LoginNode.cs" />
-    <Compile Include="V20230321\Models\LoginNodeOverview.cs" />
-    <Compile Include="V20230321\Models\LoginSettings.cs" />
-    <Compile Include="V20230321\Models\ManagerNode.cs" />
-    <Compile Include="V20230321\Models\ManagerNodeOverview.cs" />
-    <Compile Include="V20230321\Models\ModifyInitNodeScriptsRequest.cs" />
-    <Compile Include="V20230321\Models\ModifyInitNodeScriptsResponse.cs" />
-    <Compile Include="V20230321\Models\NodeActivity.cs" />
-    <Compile Include="V20230321\Models\NodeOverview.cs" />
-    <Compile Include="V20230321\Models\NodeScript.cs" />
-    <Compile Include="V20230321\Models\Placement.cs" />
-    <Compile Include="V20230321\Models\QueueConfig.cs" />
-    <Compile Include="V20230321\Models\QueueConfigOverview.cs" />
-    <Compile Include="V20230321\Models\QueueOverview.cs" />
-    <Compile Include="V20230321\Models\RunAutomationServiceEnabled.cs" />
-    <Compile Include="V20230321\Models\RunMonitorServiceEnabled.cs" />
-    <Compile Include="V20230321\Models\RunSecurityServiceEnabled.cs" />
-    <Compile Include="V20230321\Models\SetAutoScalingConfigurationRequest.cs" />
-    <Compile Include="V20230321\Models\SetAutoScalingConfigurationResponse.cs" />
-    <Compile Include="V20230321\Models\StorageOption.cs" />
-    <Compile Include="V20230321\Models\StorageOptionOverview.cs" />
-    <Compile Include="V20230321\Models\SystemDisk.cs" />
-    <Compile Include="V20230321\Models\Tag.cs" />
-    <Compile Include="V20230321\Models\VirtualPrivateCloud.cs" />
   </ItemGroup>
 </Project>
