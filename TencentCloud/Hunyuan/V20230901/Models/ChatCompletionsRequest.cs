@@ -93,6 +93,17 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("Temperature")]
         public float? Temperature{ get; set; }
 
+        /// <summary>
+        /// 功能增强（如搜索）开关。
+        /// 说明：
+        /// 1. 仅 hunyuan-pro 模型可用，其它版本不生效。
+        /// 2. 未传值时默认打开开关。
+        /// 3. 关闭时将直接由主模型生成回复内容，可以降低响应时延（对于流式输出时的首字时延尤为明显）。但在少数场景里，回复效果可能会下降。
+        /// 4. 安全审核能力不属于功能增强范围，不受此字段影响。
+        /// </summary>
+        [JsonProperty("EnableEnhancement")]
+        public bool? EnableEnhancement{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -105,6 +116,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamSimple(map, prefix + "StreamModeration", this.StreamModeration);
             this.SetParamSimple(map, prefix + "TopP", this.TopP);
             this.SetParamSimple(map, prefix + "Temperature", this.Temperature);
+            this.SetParamSimple(map, prefix + "EnableEnhancement", this.EnableEnhancement);
         }
     }
 }

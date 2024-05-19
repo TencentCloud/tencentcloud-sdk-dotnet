@@ -28,7 +28,7 @@ namespace TencentCloud.Sqlserver.V20180328
 
        private const string endpoint = "sqlserver.tencentcloudapi.com";
        private const string version = "2018-03-28";
-       private const string sdkVersion = "SDK_NET_3.0.1007";
+       private const string sdkVersion = "SDK_NET_3.0.1008";
 
         /// <summary>
         /// Client constructor.

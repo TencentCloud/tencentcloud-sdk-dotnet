@@ -28,7 +28,6 @@ namespace TencentCloud.Rce.V20201103.Models
         /// 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
         /// 1：QQ开放账号
         /// 2：微信开放账号
-        /// 8：设备号，仅支持IMEI、IMEIMD5、IDFA、IDFAMD5
         /// 10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
         /// </summary>
         [JsonProperty("AccountType")]
@@ -47,7 +46,7 @@ namespace TencentCloud.Rce.V20201103.Models
         public WeChatAccountInfo WeChatAccount{ get; set; }
 
         /// <summary>
-        /// 其它账号信息，AccountType是8或10004时，该字段必填。
+        /// 其它账号信息，AccountType是10004时，该字段必填。
         /// </summary>
         [JsonProperty("OtherAccount")]
         public OtherAccountInfo OtherAccount{ get; set; }

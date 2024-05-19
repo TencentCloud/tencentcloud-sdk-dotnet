@@ -74,11 +74,46 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string CorporationIdPicUrl{ get; set; }
 
         /// <summary>
-        /// 业务经营范围
+        /// 安全合规使用承诺书。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("BusinessScope")]
-        public string BusinessScope{ get; set; }
+        [JsonProperty("NetworkCommitmentPicUrl")]
+        public string NetworkCommitmentPicUrl{ get; set; }
+
+        /// <summary>
+        /// 是否与腾讯云账号的资质一致,0-不一致,1-一致
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsEqualTencentCloud")]
+        public long? IsEqualTencentCloud{ get; set; }
+
+        /// <summary>
+        /// 法定代表人手机号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CorporationMobile")]
+        public string CorporationMobile{ get; set; }
+
+        /// <summary>
+        /// 法定代表人手机号码实名认证。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CorporationMobilePicUrl")]
+        public string CorporationMobilePicUrl{ get; set; }
+
+        /// <summary>
+        /// 通话话术。(支持doc、docx格式的文档不超过50MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UseDescribeFileUrl")]
+        public string UseDescribeFileUrl{ get; set; }
+
+        /// <summary>
+        /// 公司授权函。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CompanyAuthLetterPicUrl")]
+        public string CompanyAuthLetterPicUrl{ get; set; }
 
         /// <summary>
         /// 电话受理单。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
@@ -86,13 +121,6 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// </summary>
         [JsonProperty("AcceptPicUrl")]
         public string AcceptPicUrl{ get; set; }
-
-        /// <summary>
-        /// 电信入网承诺书。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("NetworkCommitmentPicUrl")]
-        public string NetworkCommitmentPicUrl{ get; set; }
 
         /// <summary>
         /// 法定代表人手持身份证照，申请人类型为法定代表人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
@@ -136,6 +164,27 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("CommissionPicUrl")]
         public string CommissionPicUrl{ get; set; }
 
+        /// <summary>
+        /// 经办人手机号，申请人类型为经办人时必填。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OperatorMobile")]
+        public string OperatorMobile{ get; set; }
+
+        /// <summary>
+        /// 经办人邮箱，申请人类型为经办人时必填。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OperatorEmail")]
+        public string OperatorEmail{ get; set; }
+
+        /// <summary>
+        /// 经办人手机号码实名认证，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OperatorMobilePicUrl")]
+        public string OperatorMobilePicUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,15 +198,22 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "CorporationName", this.CorporationName);
             this.SetParamSimple(map, prefix + "CorporationId", this.CorporationId);
             this.SetParamSimple(map, prefix + "CorporationIdPicUrl", this.CorporationIdPicUrl);
-            this.SetParamSimple(map, prefix + "BusinessScope", this.BusinessScope);
-            this.SetParamSimple(map, prefix + "AcceptPicUrl", this.AcceptPicUrl);
             this.SetParamSimple(map, prefix + "NetworkCommitmentPicUrl", this.NetworkCommitmentPicUrl);
+            this.SetParamSimple(map, prefix + "IsEqualTencentCloud", this.IsEqualTencentCloud);
+            this.SetParamSimple(map, prefix + "CorporationMobile", this.CorporationMobile);
+            this.SetParamSimple(map, prefix + "CorporationMobilePicUrl", this.CorporationMobilePicUrl);
+            this.SetParamSimple(map, prefix + "UseDescribeFileUrl", this.UseDescribeFileUrl);
+            this.SetParamSimple(map, prefix + "CompanyAuthLetterPicUrl", this.CompanyAuthLetterPicUrl);
+            this.SetParamSimple(map, prefix + "AcceptPicUrl", this.AcceptPicUrl);
             this.SetParamSimple(map, prefix + "CorporationHoldingOnIdPicUrl", this.CorporationHoldingOnIdPicUrl);
             this.SetParamSimple(map, prefix + "OperatorName", this.OperatorName);
             this.SetParamSimple(map, prefix + "OperatorId", this.OperatorId);
             this.SetParamSimple(map, prefix + "OperatorIdPicUrl", this.OperatorIdPicUrl);
             this.SetParamSimple(map, prefix + "OperatorHoldingOnIdPicUrl", this.OperatorHoldingOnIdPicUrl);
             this.SetParamSimple(map, prefix + "CommissionPicUrl", this.CommissionPicUrl);
+            this.SetParamSimple(map, prefix + "OperatorMobile", this.OperatorMobile);
+            this.SetParamSimple(map, prefix + "OperatorEmail", this.OperatorEmail);
+            this.SetParamSimple(map, prefix + "OperatorMobilePicUrl", this.OperatorMobilePicUrl);
         }
     }
 }

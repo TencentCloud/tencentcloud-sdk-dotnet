@@ -28,7 +28,7 @@ namespace TencentCloud.Habo.V20181203
 
        private const string endpoint = "habo.tencentcloudapi.com";
        private const string version = "2018-12-03";
-       private const string sdkVersion = "SDK_NET_3.0.1007";
+       private const string sdkVersion = "SDK_NET_3.0.1008";
 
         /// <summary>
         /// Client constructor.

@@ -28,7 +28,6 @@ namespace TencentCloud.Rce.V20201103.Models
         /// 账号ID：对应输入参数。
         /// 当AccountType为1时，对应QQ的OpenId。
         /// 当AccountType为2时，对应微信的OpenId/UnionId。
-        /// 当AccountType为8时，对应IMEI、IDFA、IMEIMD5或者IDFAMD5。
         /// 当AccountType为10004时，对应手机号的MD5值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -86,10 +85,6 @@ namespace TencentCloud.Rce.V20201103.Models
         /// 2011: 疑似非常用IP，请求当前请求 IP 非该账号常用 IP。
         /// 2012: 疑似 IP 异常，使用 IDC 机房 IP 或使用代理 IP 或使用恶意 IP 等。
         /// 205: 非公网有效 IP，传进来的 IP 地址为内网 IP 地址或者 IP 保留地址。
-        /// 206: 设备异常，该设备存在异常的使用行为。
-        /// 2061: 疑似非常用设备，当前请求的设备非该账号常用设备。
-        /// 2062: 疑似虚拟设备，请求设备为模拟器、脚本、云设备等虚拟设备。
-        /// 2063: 疑似群控设备，请求设备为猫池、手机墙等群控设备。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskType")]
