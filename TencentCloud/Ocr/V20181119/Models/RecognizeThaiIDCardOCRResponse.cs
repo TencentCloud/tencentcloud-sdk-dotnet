@@ -61,10 +61,40 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string ExpirationDate{ get; set; }
 
         /// <summary>
+        /// 英文签发日期
+        /// </summary>
+        [JsonProperty("EnIssueDate")]
+        public string EnIssueDate{ get; set; }
+
+        /// <summary>
+        /// 英文到期日期
+        /// </summary>
+        [JsonProperty("EnExpirationDate")]
+        public string EnExpirationDate{ get; set; }
+
+        /// <summary>
         /// 泰文出生日期
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }
+
+        /// <summary>
+        /// 英文出生日期
+        /// </summary>
+        [JsonProperty("EnBirthday")]
+        public string EnBirthday{ get; set; }
+
+        /// <summary>
+        /// 宗教信仰
+        /// </summary>
+        [JsonProperty("Religion")]
+        public string Religion{ get; set; }
+
+        /// <summary>
+        /// 序列号
+        /// </summary>
+        [JsonProperty("SerialNumber")]
+        public string SerialNumber{ get; set; }
 
         /// <summary>
         /// 地址
@@ -108,7 +138,12 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "EnLastName", this.EnLastName);
             this.SetParamSimple(map, prefix + "IssueDate", this.IssueDate);
             this.SetParamSimple(map, prefix + "ExpirationDate", this.ExpirationDate);
+            this.SetParamSimple(map, prefix + "EnIssueDate", this.EnIssueDate);
+            this.SetParamSimple(map, prefix + "EnExpirationDate", this.EnExpirationDate);
             this.SetParamSimple(map, prefix + "Birthday", this.Birthday);
+            this.SetParamSimple(map, prefix + "EnBirthday", this.EnBirthday);
+            this.SetParamSimple(map, prefix + "Religion", this.Religion);
+            this.SetParamSimple(map, prefix + "SerialNumber", this.SerialNumber);
             this.SetParamSimple(map, prefix + "Address", this.Address);
             this.SetParamSimple(map, prefix + "PortraitImage", this.PortraitImage);
             this.SetParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);

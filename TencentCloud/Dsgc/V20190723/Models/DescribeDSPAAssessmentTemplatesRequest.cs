@@ -43,12 +43,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 过滤项。
-        /// 支持模糊搜索：（TemplateId，TemplateName）
-        /// 支持过滤：
-        /// Source：模版来源，system / user
-        /// UseType：模版类型，auto，semi-auto，law等
-        /// Status：模版启用状态，draft / launched
+        /// 过滤项。支持模糊搜索：（TemplateId，TemplateName）支持过滤：Source：模板来源，system / userUseType：模板类型，auto，semi-auto，law等Status：模板启用状态，draft / launched
         /// </summary>
         [JsonProperty("Filters")]
         public DspaAssessmentFilter[] Filters{ get; set; }

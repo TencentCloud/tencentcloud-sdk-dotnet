@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{307C2F67-1633-3F01-BEA7-F343C91B0D61}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1008</VersionPrefix>
+    <VersionPrefix>3.0.1009</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -64,6 +64,8 @@
     <Compile Include="V20190722\Models\DeleteCloudRecordingResponse.cs" />
     <Compile Include="V20190722\Models\DeletePictureRequest.cs" />
     <Compile Include="V20190722\Models\DeletePictureResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeAITranscriptionRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeAITranscriptionResponse.cs" />
     <Compile Include="V20190722\Models\DescribeCallDetailInfoRequest.cs" />
     <Compile Include="V20190722\Models\DescribeCallDetailInfoResponse.cs" />
     <Compile Include="V20190722\Models\DescribeCloudRecordingRequest.cs" />
@@ -152,6 +154,7 @@
     <Compile Include="V20190722\Models\PresetLayoutConfig.cs" />
     <Compile Include="V20190722\Models\PublishCdnParams.cs" />
     <Compile Include="V20190722\Models\QualityData.cs" />
+    <Compile Include="V20190722\Models\RecognizeConfig.cs" />
     <Compile Include="V20190722\Models\RecordParams.cs" />
     <Compile Include="V20190722\Models\RecordUsage.cs" />
     <Compile Include="V20190722\Models\RemoveUserByStrRoomIdRequest.cs" />
@@ -167,6 +170,8 @@
     <Compile Include="V20190722\Models\SeriesInfos.cs" />
     <Compile Include="V20190722\Models\SingleSubscribeParams.cs" />
     <Compile Include="V20190722\Models\SmallVideoLayoutParams.cs" />
+    <Compile Include="V20190722\Models\StartAITranscriptionRequest.cs" />
+    <Compile Include="V20190722\Models\StartAITranscriptionResponse.cs" />
     <Compile Include="V20190722\Models\StartMCUMixTranscodeByStrRoomIdRequest.cs" />
     <Compile Include="V20190722\Models\StartMCUMixTranscodeByStrRoomIdResponse.cs" />
     <Compile Include="V20190722\Models\StartMCUMixTranscodeRequest.cs" />
@@ -177,6 +182,8 @@
     <Compile Include="V20190722\Models\StartStreamIngestResponse.cs" />
     <Compile Include="V20190722\Models\StartWebRecordRequest.cs" />
     <Compile Include="V20190722\Models\StartWebRecordResponse.cs" />
+    <Compile Include="V20190722\Models\StopAITranscriptionRequest.cs" />
+    <Compile Include="V20190722\Models\StopAITranscriptionResponse.cs" />
     <Compile Include="V20190722\Models\StopMCUMixTranscodeByStrRoomIdRequest.cs" />
     <Compile Include="V20190722\Models\StopMCUMixTranscodeByStrRoomIdResponse.cs" />
     <Compile Include="V20190722\Models\StopMCUMixTranscodeRequest.cs" />
@@ -190,10 +197,13 @@
     <Compile Include="V20190722\Models\StorageFile.cs" />
     <Compile Include="V20190722\Models\StorageParams.cs" />
     <Compile Include="V20190722\Models\SubscribeStreamUserIds.cs" />
+    <Compile Include="V20190722\Models\SummarizeTranscriptionRequest.cs" />
+    <Compile Include="V20190722\Models\SummarizeTranscriptionResponse.cs" />
     <Compile Include="V20190722\Models\TRTCDataResp.cs" />
     <Compile Include="V20190722\Models\TRTCDataResult.cs" />
     <Compile Include="V20190722\Models\TencentVod.cs" />
     <Compile Include="V20190722\Models\TimeValue.cs" />
+    <Compile Include="V20190722\Models\TranscriptionParams.cs" />
     <Compile Include="V20190722\Models\TrtcUsage.cs" />
     <Compile Include="V20190722\Models\UpdatePublishCdnStreamRequest.cs" />
     <Compile Include="V20190722\Models\UpdatePublishCdnStreamResponse.cs" />

@@ -31,7 +31,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string DspaId{ get; set; }
 
         /// <summary>
-        /// 模版名称
+        /// 模板名称
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public long?[] RiskIdList{ get; set; }
 
         /// <summary>
-        /// 模版描述
+        /// 模板描述
         /// </summary>
         [JsonProperty("TemplateDescription")]
         public string TemplateDescription{ get; set; }

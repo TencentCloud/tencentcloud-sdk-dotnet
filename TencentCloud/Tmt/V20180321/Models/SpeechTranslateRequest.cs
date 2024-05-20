@@ -76,12 +76,14 @@ namespace TencentCloud.Tmt.V20180321.Models
         /// 识别模式，该参数已废弃
         /// </summary>
         [JsonProperty("Mode")]
+        [System.Obsolete]
         public string Mode{ get; set; }
 
         /// <summary>
         /// 该参数已废弃
         /// </summary>
         [JsonProperty("TransType")]
+        [System.Obsolete]
         public long? TransType{ get; set; }
 
 

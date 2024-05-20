@@ -31,7 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>Tag：智能标签</li>
         /// <li>FrameTag：智能按帧标签</li>
         /// <li>Highlight：智能精彩集锦</li>
-        /// <li>DeLogo：智能去水印</li>
+        /// <li>DeLogo：智能擦除</li>
         /// <li>Description：大模型摘要</li>
         /// </summary>
         [JsonProperty("Type")]
@@ -73,7 +73,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiAnalysisTaskHighlightResult HighlightTask{ get; set; }
 
         /// <summary>
-        /// 视频内容分析去水印任务的查询结果，当任务类型为 DeLogo 时有效。
+        /// 视频内容分析智能擦除任务的查询结果，当任务类型为 DeLogo 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeLogoTask")]

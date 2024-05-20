@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1008";
+       private const string sdkVersion = "SDK_NET_3.0.1009";
 
         /// <summary>
         /// Client constructor.
@@ -156,6 +156,27 @@ namespace TencentCloud.Trtc.V20190722
         public DeletePictureResponse DeletePictureSync(DeletePictureRequest req)
         {
             return InternalRequestAsync<DeletePictureResponse>(req, "DeletePicture")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询AI转录状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAITranscriptionRequest"/></param>
+        /// <returns><see cref="DescribeAITranscriptionResponse"/></returns>
+        public Task<DescribeAITranscriptionResponse> DescribeAITranscription(DescribeAITranscriptionRequest req)
+        {
+            return InternalRequestAsync<DescribeAITranscriptionResponse>(req, "DescribeAITranscription");
+        }
+
+        /// <summary>
+        /// 查询AI转录状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAITranscriptionRequest"/></param>
+        /// <returns><see cref="DescribeAITranscriptionResponse"/></returns>
+        public DescribeAITranscriptionResponse DescribeAITranscriptionSync(DescribeAITranscriptionRequest req)
+        {
+            return InternalRequestAsync<DescribeAITranscriptionResponse>(req, "DescribeAITranscription")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1017,6 +1038,27 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 这个接口调用后，后台会启动机器人，实时进行语音识别并下发字幕和会议记录。
+        /// </summary>
+        /// <param name="req"><see cref="StartAITranscriptionRequest"/></param>
+        /// <returns><see cref="StartAITranscriptionResponse"/></returns>
+        public Task<StartAITranscriptionResponse> StartAITranscription(StartAITranscriptionRequest req)
+        {
+            return InternalRequestAsync<StartAITranscriptionResponse>(req, "StartAITranscription");
+        }
+
+        /// <summary>
+        /// 这个接口调用后，后台会启动机器人，实时进行语音识别并下发字幕和会议记录。
+        /// </summary>
+        /// <param name="req"><see cref="StartAITranscriptionRequest"/></param>
+        /// <returns><see cref="StartAITranscriptionResponse"/></returns>
+        public StartAITranscriptionResponse StartAITranscriptionSync(StartAITranscriptionRequest req)
+        {
+            return InternalRequestAsync<StartAITranscriptionResponse>(req, "StartAITranscription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 接口说明：启动云端混流，并指定混流画面中各路画面的布局位置。
         /// 
         /// TRTC 的一个房间中可能会同时存在多路音视频流，您可以通过此 API 接口，通知腾讯云服务端将多路视频画面合成一路，并指定每一路画面的位置，同时将多路声音进行混音，最终形成一路音视频流，以便用于录制和直播观看。房间销毁后混流自动结束。
@@ -1398,6 +1440,27 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 停止AI转录
+        /// </summary>
+        /// <param name="req"><see cref="StopAITranscriptionRequest"/></param>
+        /// <returns><see cref="StopAITranscriptionResponse"/></returns>
+        public Task<StopAITranscriptionResponse> StopAITranscription(StopAITranscriptionRequest req)
+        {
+            return InternalRequestAsync<StopAITranscriptionResponse>(req, "StopAITranscription");
+        }
+
+        /// <summary>
+        /// 停止AI转录
+        /// </summary>
+        /// <param name="req"><see cref="StopAITranscriptionRequest"/></param>
+        /// <returns><see cref="StopAITranscriptionResponse"/></returns>
+        public StopAITranscriptionResponse StopAITranscriptionSync(StopAITranscriptionRequest req)
+        {
+            return InternalRequestAsync<StopAITranscriptionResponse>(req, "StopAITranscription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 接口说明：结束云端混流
         /// </summary>
         /// <param name="req"><see cref="StopMCUMixTranscodeRequest"/></param>
@@ -1499,6 +1562,27 @@ namespace TencentCloud.Trtc.V20190722
         public StopWebRecordResponse StopWebRecordSync(StopWebRecordRequest req)
         {
             return InternalRequestAsync<StopWebRecordResponse>(req, "StopWebRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 对转录的文本进行总结
+        /// </summary>
+        /// <param name="req"><see cref="SummarizeTranscriptionRequest"/></param>
+        /// <returns><see cref="SummarizeTranscriptionResponse"/></returns>
+        public Task<SummarizeTranscriptionResponse> SummarizeTranscription(SummarizeTranscriptionRequest req)
+        {
+            return InternalRequestAsync<SummarizeTranscriptionResponse>(req, "SummarizeTranscription");
+        }
+
+        /// <summary>
+        /// 对转录的文本进行总结
+        /// </summary>
+        /// <param name="req"><see cref="SummarizeTranscriptionRequest"/></param>
+        /// <returns><see cref="SummarizeTranscriptionResponse"/></returns>
+        public SummarizeTranscriptionResponse SummarizeTranscriptionSync(SummarizeTranscriptionRequest req)
+        {
+            return InternalRequestAsync<SummarizeTranscriptionResponse>(req, "SummarizeTranscription")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

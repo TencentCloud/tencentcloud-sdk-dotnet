@@ -43,13 +43,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// 智能去水印任务输入。
+        /// 智能擦除任务输入。
         /// </summary>
         [JsonProperty("Input")]
         public AiAnalysisTaskDelLogoInput Input{ get; set; }
 
         /// <summary>
-        /// 智能去水印任务输出。
+        /// 智能擦除任务输出。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Output")]
