@@ -61,7 +61,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ChartFrom{ get; set; }
 
         /// <summary>
-        /// 制品版本( 从第三安装时，不传这个参数）
+        /// 制品版本( 从第三方安装时，不传这个参数）
         /// </summary>
         [JsonProperty("ChartVersion")]
         public string ChartVersion{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ChartNamespace{ get; set; }
 
         /// <summary>
-        /// 集群类型，支持传 tke, eks, tkeedge, exernal(注册集群）
+        /// 集群类型，支持传 tke, eks, tkeedge, external(注册集群）
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }

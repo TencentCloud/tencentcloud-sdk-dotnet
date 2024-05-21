@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1009";
+       private const string sdkVersion = "SDK_NET_3.0.1010";
 
         /// <summary>
         /// Client constructor.
@@ -1730,6 +1730,27 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeTablesNameResponse DescribeTablesNameSync(DescribeTablesNameRequest req)
         {
             return InternalRequestAsync<DescribeTablesNameResponse>(req, "DescribeTablesName")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeTaskLog）用于获取spark 作业任务日志详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskLogRequest"/></param>
+        /// <returns><see cref="DescribeTaskLogResponse"/></returns>
+        public Task<DescribeTaskLogResponse> DescribeTaskLog(DescribeTaskLogRequest req)
+        {
+            return InternalRequestAsync<DescribeTaskLogResponse>(req, "DescribeTaskLog");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeTaskLog）用于获取spark 作业任务日志详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskLogRequest"/></param>
+        /// <returns><see cref="DescribeTaskLogResponse"/></returns>
+        public DescribeTaskLogResponse DescribeTaskLogSync(DescribeTaskLogRequest req)
+        {
+            return InternalRequestAsync<DescribeTaskLogResponse>(req, "DescribeTaskLog")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

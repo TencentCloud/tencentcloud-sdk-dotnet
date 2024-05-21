@@ -28,7 +28,7 @@ namespace TencentCloud.Tsf.V20180326
 
        private const string endpoint = "tsf.tencentcloudapi.com";
        private const string version = "2018-03-26";
-       private const string sdkVersion = "SDK_NET_3.0.1009";
+       private const string sdkVersion = "SDK_NET_3.0.1010";
 
         /// <summary>
         /// Client constructor.
@@ -3336,6 +3336,27 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 禁用泳道规则
+        /// </summary>
+        /// <param name="req"><see cref="DisableLaneRuleRequest"/></param>
+        /// <returns><see cref="DisableLaneRuleResponse"/></returns>
+        public Task<DisableLaneRuleResponse> DisableLaneRule(DisableLaneRuleRequest req)
+        {
+            return InternalRequestAsync<DisableLaneRuleResponse>(req, "DisableLaneRule");
+        }
+
+        /// <summary>
+        /// 禁用泳道规则
+        /// </summary>
+        /// <param name="req"><see cref="DisableLaneRuleRequest"/></param>
+        /// <returns><see cref="DisableLaneRuleResponse"/></returns>
+        public DisableLaneRuleResponse DisableLaneRuleSync(DisableLaneRuleRequest req)
+        {
+            return InternalRequestAsync<DisableLaneRuleResponse>(req, "DisableLaneRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 停用任务
         /// </summary>
         /// <param name="req"><see cref="DisableTaskRequest"/></param>
@@ -3479,6 +3500,27 @@ namespace TencentCloud.Tsf.V20180326
         public DraftApiGroupResponse DraftApiGroupSync(DraftApiGroupRequest req)
         {
             return InternalRequestAsync<DraftApiGroupResponse>(req, "DraftApiGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 启用泳道规则
+        /// </summary>
+        /// <param name="req"><see cref="EnableLaneRuleRequest"/></param>
+        /// <returns><see cref="EnableLaneRuleResponse"/></returns>
+        public Task<EnableLaneRuleResponse> EnableLaneRule(EnableLaneRuleRequest req)
+        {
+            return InternalRequestAsync<EnableLaneRuleResponse>(req, "EnableLaneRule");
+        }
+
+        /// <summary>
+        /// 启用泳道规则
+        /// </summary>
+        /// <param name="req"><see cref="EnableLaneRuleRequest"/></param>
+        /// <returns><see cref="EnableLaneRuleResponse"/></returns>
+        public EnableLaneRuleResponse EnableLaneRuleSync(EnableLaneRuleRequest req)
+        {
+            return InternalRequestAsync<EnableLaneRuleResponse>(req, "EnableLaneRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

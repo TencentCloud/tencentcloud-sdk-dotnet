@@ -72,6 +72,18 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
+        /// <summary>
+        /// 平均传输速率
+        /// </summary>
+        [JsonProperty("Rate")]
+        public string Rate{ get; set; }
+
+        /// <summary>
+        /// 期限
+        /// </summary>
+        [JsonProperty("Period")]
+        public string Period{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +98,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "DataProtocol", this.DataProtocol);
             this.SetParamSimple(map, prefix + "ProductDesc", this.ProductDesc);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "Rate", this.Rate);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
         }
     }
 }

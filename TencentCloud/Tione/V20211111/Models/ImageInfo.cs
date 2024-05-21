@@ -25,7 +25,7 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像
+        /// 镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像
         /// </summary>
         [JsonProperty("ImageType")]
         public string ImageType{ get; set; }
@@ -71,6 +71,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("SupportDataPipeline")]
         public bool? SupportDataPipeline{ get; set; }
 
+        /// <summary>
+        /// 镜像仓库用户名密码信息(仅当ImageType为CUSTOM第三方镜像的时候需要)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImageSecret")]
+        public ImageSecret ImageSecret{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -84,6 +91,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "AllowSaveAllContent", this.AllowSaveAllContent);
             this.SetParamSimple(map, prefix + "ImageName", this.ImageName);
             this.SetParamSimple(map, prefix + "SupportDataPipeline", this.SupportDataPipeline);
+            this.SetParamObj(map, prefix + "ImageSecret.", this.ImageSecret);
         }
     }
 }

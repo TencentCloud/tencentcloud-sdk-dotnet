@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DA95AE5B-1DB3-3342-A5B5-EA1C4CB7B305}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1009</VersionPrefix>
+    <VersionPrefix>3.0.1010</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -400,6 +400,8 @@
     <Compile Include="V20180326\Models\DescribeUploadInfoResponse.cs" />
     <Compile Include="V20180326\Models\DescribeUsableUnitNamespacesRequest.cs" />
     <Compile Include="V20180326\Models\DescribeUsableUnitNamespacesResponse.cs" />
+    <Compile Include="V20180326\Models\DisableLaneRuleRequest.cs" />
+    <Compile Include="V20180326\Models\DisableLaneRuleResponse.cs" />
     <Compile Include="V20180326\Models\DisableTaskFlowRequest.cs" />
     <Compile Include="V20180326\Models\DisableTaskFlowResponse.cs" />
     <Compile Include="V20180326\Models\DisableTaskRequest.cs" />
@@ -414,6 +416,8 @@
     <Compile Include="V20180326\Models\DisassociateKafkaConfigResponse.cs" />
     <Compile Include="V20180326\Models\DraftApiGroupRequest.cs" />
     <Compile Include="V20180326\Models\DraftApiGroupResponse.cs" />
+    <Compile Include="V20180326\Models\EnableLaneRuleRequest.cs" />
+    <Compile Include="V20180326\Models\EnableLaneRuleResponse.cs" />
     <Compile Include="V20180326\Models\EnableTaskFlowRequest.cs" />
     <Compile Include="V20180326\Models\EnableTaskFlowResponse.cs" />
     <Compile Include="V20180326\Models\EnableTaskRequest.cs" />

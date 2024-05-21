@@ -244,6 +244,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ServiceEIP")]
         public ServiceEIP ServiceEIP{ get; set; }
 
+        /// <summary>
+        /// 服务端口，默认为8501
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServicePort")]
+        public long? ServicePort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -280,6 +287,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "InferCodeInfo.", this.InferCodeInfo);
             this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamObj(map, prefix + "ServiceEIP.", this.ServiceEIP);
+            this.SetParamSimple(map, prefix + "ServicePort", this.ServicePort);
         }
     }
 }

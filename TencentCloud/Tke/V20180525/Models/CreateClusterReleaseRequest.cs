@@ -91,7 +91,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ChartNamespace{ get; set; }
 
         /// <summary>
-        /// 集群类型，支持传 tke, eks, tkeedge, exernal(注册集群）
+        /// 集群类型，支持传 tke, eks, tkeedge, external(注册集群）
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }

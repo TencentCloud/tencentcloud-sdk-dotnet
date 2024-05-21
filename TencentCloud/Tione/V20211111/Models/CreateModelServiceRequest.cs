@@ -234,10 +234,16 @@ namespace TencentCloud.Tione.V20211111.Models
         public ServiceEIP ServiceEIP{ get; set; }
 
         /// <summary>
-        /// 服务的启动命令，以base64格式进行输入
+        /// 服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效
         /// </summary>
         [JsonProperty("CommandBase64")]
         public string CommandBase64{ get; set; }
+
+        /// <summary>
+        /// 服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
+        /// </summary>
+        [JsonProperty("ServicePort")]
+        public long? ServicePort{ get; set; }
 
 
         /// <summary>
@@ -277,6 +283,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamObj(map, prefix + "ServiceEIP.", this.ServiceEIP);
             this.SetParamSimple(map, prefix + "CommandBase64", this.CommandBase64);
+            this.SetParamSimple(map, prefix + "ServicePort", this.ServicePort);
         }
     }
 }

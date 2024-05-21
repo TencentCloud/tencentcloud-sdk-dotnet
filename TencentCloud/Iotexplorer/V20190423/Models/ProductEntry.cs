@@ -144,6 +144,20 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("DeviceCount")]
         public long? DeviceCount{ get; set; }
 
+        /// <summary>
+        /// 平均传输速率
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Rate")]
+        public string Rate{ get; set; }
+
+        /// <summary>
+        /// 有效期
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Period")]
+        public string Period{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -169,6 +183,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "CreatorNickName", this.CreatorNickName);
             this.SetParamSimple(map, prefix + "BindStrategy", this.BindStrategy);
             this.SetParamSimple(map, prefix + "DeviceCount", this.DeviceCount);
+            this.SetParamSimple(map, prefix + "Rate", this.Rate);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
         }
     }
 }
