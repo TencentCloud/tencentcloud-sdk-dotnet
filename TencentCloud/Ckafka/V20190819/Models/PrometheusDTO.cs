@@ -42,6 +42,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("SourcePort")]
         public long? SourcePort{ get; set; }
 
+        /// <summary>
+        /// broker地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BrokerIp")]
+        public string BrokerIp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +58,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "SourceIp", this.SourceIp);
             this.SetParamSimple(map, prefix + "SourcePort", this.SourcePort);
+            this.SetParamSimple(map, prefix + "BrokerIp", this.BrokerIp);
         }
     }
 }

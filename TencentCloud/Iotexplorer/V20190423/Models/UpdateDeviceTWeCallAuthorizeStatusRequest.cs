@@ -15,34 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Tione.V20211111.Models
+namespace TencentCloud.Iotexplorer.V20190423.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeModelServiceHistoryResponse : AbstractModel
+    public class UpdateDeviceTWeCallAuthorizeStatusRequest : AbstractModel
     {
         
         /// <summary>
-        /// 历史版本总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// TweCall授权状态：0未授权，1已授权
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("Status")]
+        public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 服务版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 产品ID
         /// </summary>
-        [JsonProperty("ServiceHistory")]
-        public ServiceHistory[] ServiceHistory{ get; set; }
+        [JsonProperty("ProductId")]
+        public string ProductId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 设备名
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("DeviceName")]
+        public string DeviceName{ get; set; }
+
+        /// <summary>
+        /// 微信用户的openId
+        /// </summary>
+        [JsonProperty("WechatOpenId")]
+        public string WechatOpenId{ get; set; }
 
 
         /// <summary>
@@ -50,9 +54,10 @@ namespace TencentCloud.Tione.V20211111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "ServiceHistory.", this.ServiceHistory);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
+            this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
+            this.SetParamSimple(map, prefix + "WechatOpenId", this.WechatOpenId);
         }
     }
 }

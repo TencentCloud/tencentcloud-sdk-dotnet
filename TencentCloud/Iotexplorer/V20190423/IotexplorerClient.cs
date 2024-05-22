@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1010";
+       private const string sdkVersion = "SDK_NET_3.0.1011";
 
         /// <summary>
         /// Client constructor.
@@ -2696,6 +2696,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public UnbindProductsResponse UnbindProductsSync(UnbindProductsRequest req)
         {
             return InternalRequestAsync<UnbindProductsResponse>(req, "UnbindProducts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新用户对设备的TweCall授权状态
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDeviceTWeCallAuthorizeStatusRequest"/></param>
+        /// <returns><see cref="UpdateDeviceTWeCallAuthorizeStatusResponse"/></returns>
+        public Task<UpdateDeviceTWeCallAuthorizeStatusResponse> UpdateDeviceTWeCallAuthorizeStatus(UpdateDeviceTWeCallAuthorizeStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateDeviceTWeCallAuthorizeStatusResponse>(req, "UpdateDeviceTWeCallAuthorizeStatus");
+        }
+
+        /// <summary>
+        /// 更新用户对设备的TweCall授权状态
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDeviceTWeCallAuthorizeStatusRequest"/></param>
+        /// <returns><see cref="UpdateDeviceTWeCallAuthorizeStatusResponse"/></returns>
+        public UpdateDeviceTWeCallAuthorizeStatusResponse UpdateDeviceTWeCallAuthorizeStatusSync(UpdateDeviceTWeCallAuthorizeStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateDeviceTWeCallAuthorizeStatusResponse>(req, "UpdateDeviceTWeCallAuthorizeStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
