@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1011";
+       private const string sdkVersion = "SDK_NET_3.0.1012";
 
         /// <summary>
         /// Client constructor.
@@ -1247,6 +1247,39 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 通过此接口，创建子企业激活记录，集团企业管理员可针对未激活的成员企业进行激活。
+        /// 激活子企业时请保证子企业 lisence 充足。
+        /// 这个操作与页面端激活成员企业操作类似
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/c4e76fbac92e4ce451a03601c964793b.png)
+        /// 
+        /// p.s.
+        /// 此接口只能用于激活，不能用于续期。
+        /// </summary>
+        /// <param name="req"><see cref="CreateIntegrationSubOrganizationActiveRecordRequest"/></param>
+        /// <returns><see cref="CreateIntegrationSubOrganizationActiveRecordResponse"/></returns>
+        public Task<CreateIntegrationSubOrganizationActiveRecordResponse> CreateIntegrationSubOrganizationActiveRecord(CreateIntegrationSubOrganizationActiveRecordRequest req)
+        {
+            return InternalRequestAsync<CreateIntegrationSubOrganizationActiveRecordResponse>(req, "CreateIntegrationSubOrganizationActiveRecord");
+        }
+
+        /// <summary>
+        /// 通过此接口，创建子企业激活记录，集团企业管理员可针对未激活的成员企业进行激活。
+        /// 激活子企业时请保证子企业 lisence 充足。
+        /// 这个操作与页面端激活成员企业操作类似
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/c4e76fbac92e4ce451a03601c964793b.png)
+        /// 
+        /// p.s.
+        /// 此接口只能用于激活，不能用于续期。
+        /// </summary>
+        /// <param name="req"><see cref="CreateIntegrationSubOrganizationActiveRecordRequest"/></param>
+        /// <returns><see cref="CreateIntegrationSubOrganizationActiveRecordResponse"/></returns>
+        public CreateIntegrationSubOrganizationActiveRecordResponse CreateIntegrationSubOrganizationActiveRecordSync(CreateIntegrationSubOrganizationActiveRecordRequest req)
+        {
+            return InternalRequestAsync<CreateIntegrationSubOrganizationActiveRecordResponse>(req, "CreateIntegrationSubOrganizationActiveRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 此接口用于赋予员工指定的角色权限，如需解绑请使用 DeleteIntegrationRoleUsers 接口。
         /// </summary>
         /// <param name="req"><see cref="CreateIntegrationUserRolesRequest"/></param>
@@ -1373,6 +1406,29 @@ namespace TencentCloud.Ess.V20201111
         public CreateOrganizationBatchSignUrlResponse CreateOrganizationBatchSignUrlSync(CreateOrganizationBatchSignUrlRequest req)
         {
             return InternalRequestAsync<CreateOrganizationBatchSignUrlResponse>(req, "CreateOrganizationBatchSignUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 生成集团加入链接，分享至子企业超管或者法人，子企业管理员可通过链接加入集团。
+        /// 注意:调用当前接口的企业 必须为集团企业。如何成为集团企业可以参考下面的文档[集团操作文档](https://qian.tencent.com/document/86707)
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrganizationGroupInvitationLinkRequest"/></param>
+        /// <returns><see cref="CreateOrganizationGroupInvitationLinkResponse"/></returns>
+        public Task<CreateOrganizationGroupInvitationLinkResponse> CreateOrganizationGroupInvitationLink(CreateOrganizationGroupInvitationLinkRequest req)
+        {
+            return InternalRequestAsync<CreateOrganizationGroupInvitationLinkResponse>(req, "CreateOrganizationGroupInvitationLink");
+        }
+
+        /// <summary>
+        /// 生成集团加入链接，分享至子企业超管或者法人，子企业管理员可通过链接加入集团。
+        /// 注意:调用当前接口的企业 必须为集团企业。如何成为集团企业可以参考下面的文档[集团操作文档](https://qian.tencent.com/document/86707)
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrganizationGroupInvitationLinkRequest"/></param>
+        /// <returns><see cref="CreateOrganizationGroupInvitationLinkResponse"/></returns>
+        public CreateOrganizationGroupInvitationLinkResponse CreateOrganizationGroupInvitationLinkSync(CreateOrganizationGroupInvitationLinkRequest req)
+        {
+            return InternalRequestAsync<CreateOrganizationGroupInvitationLinkResponse>(req, "CreateOrganizationGroupInvitationLink")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

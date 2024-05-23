@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5ECA3606-F9E8-3155-BF7D-DB9DA3830CFD}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1011</VersionPrefix>
+    <VersionPrefix>3.0.1012</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,5 +50,14 @@
     <Compile Include="V20240125\SvpClient.cs" />
     <Compile Include="V20240125\Models\CreateSavingPlanOrderRequest.cs" />
     <Compile Include="V20240125\Models\CreateSavingPlanOrderResponse.cs" />
+    <Compile Include="V20240125\Models\DescribeSavingPlanDeductRequest.cs" />
+    <Compile Include="V20240125\Models\DescribeSavingPlanDeductResponse.cs" />
+    <Compile Include="V20240125\Models\DescribeSavingPlanOverviewRequest.cs" />
+    <Compile Include="V20240125\Models\DescribeSavingPlanOverviewResponse.cs" />
+    <Compile Include="V20240125\Models\DescribeSavingPlanUsageRequest.cs" />
+    <Compile Include="V20240125\Models\DescribeSavingPlanUsageResponse.cs" />
+    <Compile Include="V20240125\Models\SavingPlanDeductDetail.cs" />
+    <Compile Include="V20240125\Models\SavingPlanOverviewDetail.cs" />
+    <Compile Include="V20240125\Models\SavingPlanUsageDetail.cs" />
   </ItemGroup>
 </Project>

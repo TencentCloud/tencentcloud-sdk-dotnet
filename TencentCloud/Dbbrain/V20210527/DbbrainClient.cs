@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20210527
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2021-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1011";
+       private const string sdkVersion = "SDK_NET_3.0.1012";
 
         /// <summary>
         /// Client constructor.
@@ -810,6 +810,27 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// 查询redis大key分析任务列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedisBigKeyAnalysisTasksRequest"/></param>
+        /// <returns><see cref="DescribeRedisBigKeyAnalysisTasksResponse"/></returns>
+        public Task<DescribeRedisBigKeyAnalysisTasksResponse> DescribeRedisBigKeyAnalysisTasks(DescribeRedisBigKeyAnalysisTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeRedisBigKeyAnalysisTasksResponse>(req, "DescribeRedisBigKeyAnalysisTasks");
+        }
+
+        /// <summary>
+        /// 查询redis大key分析任务列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedisBigKeyAnalysisTasksRequest"/></param>
+        /// <returns><see cref="DescribeRedisBigKeyAnalysisTasksResponse"/></returns>
+        public DescribeRedisBigKeyAnalysisTasksResponse DescribeRedisBigKeyAnalysisTasksSync(DescribeRedisBigKeyAnalysisTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeRedisBigKeyAnalysisTasksResponse>(req, "DescribeRedisBigKeyAnalysisTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取 Redis 实例所有 proxy 节点的实时会话详情列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeRedisProcessListRequest"/></param>
@@ -1209,7 +1230,7 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
-        /// 修改实例巡检开关。
+        /// 修改实例的配置信息。
         /// </summary>
         /// <param name="req"><see cref="ModifyDiagDBInstanceConfRequest"/></param>
         /// <returns><see cref="ModifyDiagDBInstanceConfResponse"/></returns>
@@ -1219,7 +1240,7 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
-        /// 修改实例巡检开关。
+        /// 修改实例的配置信息。
         /// </summary>
         /// <param name="req"><see cref="ModifyDiagDBInstanceConfRequest"/></param>
         /// <returns><see cref="ModifyDiagDBInstanceConfResponse"/></returns>

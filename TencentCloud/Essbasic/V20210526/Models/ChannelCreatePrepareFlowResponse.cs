@@ -37,6 +37,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string PreviewFlowUrl{ get; set; }
 
         /// <summary>
+        /// 发起的合同临时Id， 只有当点击进入链接，成功发起合同后， 此Id才有效
+        /// </summary>
+        [JsonProperty("FlowId")]
+        public string FlowId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         {
             this.SetParamSimple(map, prefix + "PrepareFlowUrl", this.PrepareFlowUrl);
             this.SetParamSimple(map, prefix + "PreviewFlowUrl", this.PreviewFlowUrl);
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

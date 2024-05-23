@@ -42,6 +42,24 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 用于通过集群id过滤被绑定集群
+        /// </summary>
+        [JsonProperty("ClusterIds")]
+        public string[] ClusterIds{ get; set; }
+
+        /// <summary>
+        /// 用于通过集群类型过滤被绑定集群
+        /// </summary>
+        [JsonProperty("ClusterTypes")]
+        public string[] ClusterTypes{ get; set; }
+
+        /// <summary>
+        /// 用于通过名称搜索被绑定集群
+        /// </summary>
+        [JsonProperty("ClusterName")]
+        public string ClusterName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +69,9 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
+            this.SetParamArraySimple(map, prefix + "ClusterTypes.", this.ClusterTypes);
+            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
         }
     }
 }

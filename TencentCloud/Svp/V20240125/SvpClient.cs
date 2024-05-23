@@ -28,7 +28,7 @@ namespace TencentCloud.Svp.V20240125
 
        private const string endpoint = "svp.tencentcloudapi.com";
        private const string version = "2024-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1011";
+       private const string sdkVersion = "SDK_NET_3.0.1012";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,69 @@ namespace TencentCloud.Svp.V20240125
         public CreateSavingPlanOrderResponse CreateSavingPlanOrderSync(CreateSavingPlanOrderRequest req)
         {
             return InternalRequestAsync<CreateSavingPlanOrderResponse>(req, "CreateSavingPlanOrder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询节省计划抵扣明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSavingPlanDeductRequest"/></param>
+        /// <returns><see cref="DescribeSavingPlanDeductResponse"/></returns>
+        public Task<DescribeSavingPlanDeductResponse> DescribeSavingPlanDeduct(DescribeSavingPlanDeductRequest req)
+        {
+            return InternalRequestAsync<DescribeSavingPlanDeductResponse>(req, "DescribeSavingPlanDeduct");
+        }
+
+        /// <summary>
+        /// 查询节省计划抵扣明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSavingPlanDeductRequest"/></param>
+        /// <returns><see cref="DescribeSavingPlanDeductResponse"/></returns>
+        public DescribeSavingPlanDeductResponse DescribeSavingPlanDeductSync(DescribeSavingPlanDeductRequest req)
+        {
+            return InternalRequestAsync<DescribeSavingPlanDeductResponse>(req, "DescribeSavingPlanDeduct")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查用当前用户明细节省计划总览查询时段内的使用情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSavingPlanOverviewRequest"/></param>
+        /// <returns><see cref="DescribeSavingPlanOverviewResponse"/></returns>
+        public Task<DescribeSavingPlanOverviewResponse> DescribeSavingPlanOverview(DescribeSavingPlanOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeSavingPlanOverviewResponse>(req, "DescribeSavingPlanOverview");
+        }
+
+        /// <summary>
+        /// 查用当前用户明细节省计划总览查询时段内的使用情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSavingPlanOverviewRequest"/></param>
+        /// <returns><see cref="DescribeSavingPlanOverviewResponse"/></returns>
+        public DescribeSavingPlanOverviewResponse DescribeSavingPlanOverviewSync(DescribeSavingPlanOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeSavingPlanOverviewResponse>(req, "DescribeSavingPlanOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查用当前用户明细节省计划查询时段内的使用情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSavingPlanUsageRequest"/></param>
+        /// <returns><see cref="DescribeSavingPlanUsageResponse"/></returns>
+        public Task<DescribeSavingPlanUsageResponse> DescribeSavingPlanUsage(DescribeSavingPlanUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeSavingPlanUsageResponse>(req, "DescribeSavingPlanUsage");
+        }
+
+        /// <summary>
+        /// 查用当前用户明细节省计划查询时段内的使用情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSavingPlanUsageRequest"/></param>
+        /// <returns><see cref="DescribeSavingPlanUsageResponse"/></returns>
+        public DescribeSavingPlanUsageResponse DescribeSavingPlanUsageSync(DescribeSavingPlanUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeSavingPlanUsageResponse>(req, "DescribeSavingPlanUsage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

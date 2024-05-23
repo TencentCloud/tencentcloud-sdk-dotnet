@@ -25,7 +25,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
     {
         
         /// <summary>
-        /// 角色
+        /// 角色，可选值包括 system、user、assistant。
         /// </summary>
         [JsonProperty("Role")]
         public string Role{ get; set; }

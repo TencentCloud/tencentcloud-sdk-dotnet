@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1011";
+       private const string sdkVersion = "SDK_NET_3.0.1012";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Dlc.V20210125
         public AddDMSPartitionsResponse AddDMSPartitionsSync(AddDMSPartitionsRequest req)
         {
             return InternalRequestAsync<AddDMSPartitionsResponse>(req, "AddDMSPartitions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加数据优化资源
+        /// </summary>
+        /// <param name="req"><see cref="AddOptimizerEnginesRequest"/></param>
+        /// <returns><see cref="AddOptimizerEnginesResponse"/></returns>
+        public Task<AddOptimizerEnginesResponse> AddOptimizerEngines(AddOptimizerEnginesRequest req)
+        {
+            return InternalRequestAsync<AddOptimizerEnginesResponse>(req, "AddOptimizerEngines");
+        }
+
+        /// <summary>
+        /// 添加数据优化资源
+        /// </summary>
+        /// <param name="req"><see cref="AddOptimizerEnginesRequest"/></param>
+        /// <returns><see cref="AddOptimizerEnginesResponse"/></returns>
+        public AddOptimizerEnginesResponse AddOptimizerEnginesSync(AddOptimizerEnginesRequest req)
+        {
+            return InternalRequestAsync<AddOptimizerEnginesResponse>(req, "AddOptimizerEngines")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1793,6 +1814,27 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeTasksResponse DescribeTasksSync(DescribeTasksRequest req)
         {
             return InternalRequestAsync<DescribeTasksResponse>(req, "DescribeTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（DescribeTasksCostInfo）用于查询任务消耗
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTasksCostInfoRequest"/></param>
+        /// <returns><see cref="DescribeTasksCostInfoResponse"/></returns>
+        public Task<DescribeTasksCostInfoResponse> DescribeTasksCostInfo(DescribeTasksCostInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeTasksCostInfoResponse>(req, "DescribeTasksCostInfo");
+        }
+
+        /// <summary>
+        /// 该接口（DescribeTasksCostInfo）用于查询任务消耗
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTasksCostInfoRequest"/></param>
+        /// <returns><see cref="DescribeTasksCostInfoResponse"/></returns>
+        public DescribeTasksCostInfoResponse DescribeTasksCostInfoSync(DescribeTasksCostInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeTasksCostInfoResponse>(req, "DescribeTasksCostInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
