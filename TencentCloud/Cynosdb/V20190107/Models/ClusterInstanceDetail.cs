@@ -106,6 +106,20 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ServerlessStatus")]
         public string ServerlessStatus{ get; set; }
 
+        /// <summary>
+        /// 实例任务信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceTasks")]
+        public ObjectTask[] InstanceTasks{ get; set; }
+
+        /// <summary>
+        /// 实例机器类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceDeviceType")]
+        public string InstanceDeviceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -125,6 +139,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "MaintainDuration", this.MaintainDuration);
             this.SetParamArraySimple(map, prefix + "MaintainWeekDays.", this.MaintainWeekDays);
             this.SetParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
+            this.SetParamArrayObj(map, prefix + "InstanceTasks.", this.InstanceTasks);
+            this.SetParamSimple(map, prefix + "InstanceDeviceType", this.InstanceDeviceType);
         }
     }
 }

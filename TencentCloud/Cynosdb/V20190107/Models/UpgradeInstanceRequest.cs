@@ -49,6 +49,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string UpgradeType{ get; set; }
 
         /// <summary>
+        /// 实例机器类型
+        /// </summary>
+        [JsonProperty("DeviceType")]
+        public string DeviceType{ get; set; }
+
+        /// <summary>
         /// 该参数已废弃
         /// </summary>
         [JsonProperty("StorageLimit")]
@@ -94,6 +100,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "UpgradeType", this.UpgradeType);
+            this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
             this.SetParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamSimple(map, prefix + "DbType", this.DbType);

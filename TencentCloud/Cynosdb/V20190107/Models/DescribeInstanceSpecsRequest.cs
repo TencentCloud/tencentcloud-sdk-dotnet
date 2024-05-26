@@ -37,6 +37,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("IncludeZoneStocks")]
         public bool? IncludeZoneStocks{ get; set; }
 
+        /// <summary>
+        /// 实例机器类型
+        /// </summary>
+        [JsonProperty("DeviceType")]
+        public string DeviceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +51,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         {
             this.SetParamSimple(map, prefix + "DbType", this.DbType);
             this.SetParamSimple(map, prefix + "IncludeZoneStocks", this.IncludeZoneStocks);
+            this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
         }
     }
 }

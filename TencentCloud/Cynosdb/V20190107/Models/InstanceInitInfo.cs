@@ -72,6 +72,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("MaxRoCpu")]
         public float? MaxRoCpu{ get; set; }
 
+        /// <summary>
+        /// 实例机器类型
+        /// </summary>
+        [JsonProperty("DeviceType")]
+        public string DeviceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "MaxRoCount", this.MaxRoCount);
             this.SetParamSimple(map, prefix + "MinRoCpu", this.MinRoCpu);
             this.SetParamSimple(map, prefix + "MaxRoCpu", this.MaxRoCpu);
+            this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
         }
     }
 }

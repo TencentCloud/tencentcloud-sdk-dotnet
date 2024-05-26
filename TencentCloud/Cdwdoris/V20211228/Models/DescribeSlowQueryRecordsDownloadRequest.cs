@@ -78,6 +78,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("MemoryUsage")]
         public string MemoryUsage{ get; set; }
 
+        /// <summary>
+        /// IsQuery条件
+        /// </summary>
+        [JsonProperty("IsQuery")]
+        public long? IsQuery{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "ReadRows", this.ReadRows);
             this.SetParamSimple(map, prefix + "ResultBytes", this.ResultBytes);
             this.SetParamSimple(map, prefix + "MemoryUsage", this.MemoryUsage);
+            this.SetParamSimple(map, prefix + "IsQuery", this.IsQuery);
         }
     }
 }

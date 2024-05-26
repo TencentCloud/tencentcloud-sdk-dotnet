@@ -45,6 +45,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
+        /// <summary>
+        /// GooseFS命名空间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NameSpace")]
+        public string NameSpace{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Path", this.Path);
+            this.SetParamSimple(map, prefix + "NameSpace", this.NameSpace);
         }
     }
 }

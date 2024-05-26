@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1012</VersionPrefix>
+    <VersionPrefix>3.0.1013</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,7 +48,12 @@
 
   <ItemGroup>
     <Compile Include="V20190423\IotexplorerClient.cs" />
+    <Compile Include="V20190423\Models\ActivateTWeCallLicenseRequest.cs" />
+    <Compile Include="V20190423\Models\ActivateTWeCallLicenseResponse.cs" />
     <Compile Include="V20190423\Models\AppDeviceInfo.cs" />
+    <Compile Include="V20190423\Models\AssignTWeCallLicenseRequest.cs" />
+    <Compile Include="V20190423\Models\AssignTWeCallLicenseResponse.cs" />
+    <Compile Include="V20190423\Models\AuthMiniProgramAppInfo.cs" />
     <Compile Include="V20190423\Models\BatchProductionInfo.cs" />
     <Compile Include="V20190423\Models\BindCloudStorageUserRequest.cs" />
     <Compile Include="V20190423\Models\BindCloudStorageUserResponse.cs" />
@@ -62,6 +67,8 @@
     <Compile Include="V20190423\Models\CallDeviceActionAsyncResponse.cs" />
     <Compile Include="V20190423\Models\CallDeviceActionSyncRequest.cs" />
     <Compile Include="V20190423\Models\CallDeviceActionSyncResponse.cs" />
+    <Compile Include="V20190423\Models\CancelAssignTWeCallLicenseRequest.cs" />
+    <Compile Include="V20190423\Models\CancelAssignTWeCallLicenseResponse.cs" />
     <Compile Include="V20190423\Models\CloudStorageAIServiceTask.cs" />
     <Compile Include="V20190423\Models\CloudStorageEvent.cs" />
     <Compile Include="V20190423\Models\CloudStorageTimeData.cs" />
@@ -238,6 +245,8 @@
     <Compile Include="V20190423\Models\GenerateCloudStorageAIServiceTaskFileURLResponse.cs" />
     <Compile Include="V20190423\Models\GenerateSignedVideoURLRequest.cs" />
     <Compile Include="V20190423\Models\GenerateSignedVideoURLResponse.cs" />
+    <Compile Include="V20190423\Models\GetAuthMiniProgramAppListRequest.cs" />
+    <Compile Include="V20190423\Models\GetAuthMiniProgramAppListResponse.cs" />
     <Compile Include="V20190423\Models\GetBatchProductionsListRequest.cs" />
     <Compile Include="V20190423\Models\GetBatchProductionsListResponse.cs" />
     <Compile Include="V20190423\Models\GetCOSURLRequest.cs" />
@@ -260,6 +269,10 @@
     <Compile Include="V20190423\Models\GetProjectListResponse.cs" />
     <Compile Include="V20190423\Models\GetStudioProductListRequest.cs" />
     <Compile Include="V20190423\Models\GetStudioProductListResponse.cs" />
+    <Compile Include="V20190423\Models\GetTWeCallActiveStatusRequest.cs" />
+    <Compile Include="V20190423\Models\GetTWeCallActiveStatusResponse.cs" />
+    <Compile Include="V20190423\Models\GetTWeCallPkgListRequest.cs" />
+    <Compile Include="V20190423\Models\GetTWeCallPkgListResponse.cs" />
     <Compile Include="V20190423\Models\GetTopicRuleListRequest.cs" />
     <Compile Include="V20190423\Models\GetTopicRuleListResponse.cs" />
     <Compile Include="V20190423\Models\InheritCloudStorageUserRequest.cs" />
@@ -336,6 +349,9 @@
     <Compile Include="V20190423\Models\SearchTopicRuleRequest.cs" />
     <Compile Include="V20190423\Models\SearchTopicRuleResponse.cs" />
     <Compile Include="V20190423\Models\TRTCParams.cs" />
+    <Compile Include="V20190423\Models\TWeCallActiveInfo.cs" />
+    <Compile Include="V20190423\Models\TWeCallInfo.cs" />
+    <Compile Include="V20190423\Models\TWeCallPkgInfo.cs" />
     <Compile Include="V20190423\Models\ThumbnailURLInfoList.cs" />
     <Compile Include="V20190423\Models\TopicItem.cs" />
     <Compile Include="V20190423\Models\TopicRule.cs" />

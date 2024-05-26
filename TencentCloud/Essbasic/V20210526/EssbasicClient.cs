@@ -28,7 +28,7 @@ namespace TencentCloud.Essbasic.V20210526
 
        private const string endpoint = "essbasic.tencentcloudapi.com";
        private const string version = "2021-05-26";
-       private const string sdkVersion = "SDK_NET_3.0.1012";
+       private const string sdkVersion = "SDK_NET_3.0.1013";
 
         /// <summary>
         /// Client constructor.
@@ -2552,8 +2552,9 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 制定渠道分支客户的印刷申请审批微型应用程序链接，链接模式（通过H5触发微型应用程序或通过APP跳转进行查看）。
-        /// 此刻，代理参数中的OpenId 必须为审批者的openId，生成的链接必须由该用户启动，其他用户则无审批权限。
+        /// 生成用印申请审批链接，审批人可以通过此链接进入小程序进行审批。
+        ///  p.s.
+        /// Agent参数中的OpenId 必须为审批者的openId，且链接必须由审批人打开。
         /// </summary>
         /// <param name="req"><see cref="DescribeChannelSealPolicyWorkflowUrlRequest"/></param>
         /// <returns><see cref="DescribeChannelSealPolicyWorkflowUrlResponse"/></returns>
@@ -2563,8 +2564,9 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 制定渠道分支客户的印刷申请审批微型应用程序链接，链接模式（通过H5触发微型应用程序或通过APP跳转进行查看）。
-        /// 此刻，代理参数中的OpenId 必须为审批者的openId，生成的链接必须由该用户启动，其他用户则无审批权限。
+        /// 生成用印申请审批链接，审批人可以通过此链接进入小程序进行审批。
+        ///  p.s.
+        /// Agent参数中的OpenId 必须为审批者的openId，且链接必须由审批人打开。
         /// </summary>
         /// <param name="req"><see cref="DescribeChannelSealPolicyWorkflowUrlRequest"/></param>
         /// <returns><see cref="DescribeChannelSealPolicyWorkflowUrlResponse"/></returns>

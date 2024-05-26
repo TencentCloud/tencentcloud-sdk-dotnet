@@ -49,6 +49,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string StoragePayMode{ get; set; }
 
         /// <summary>
+        /// 实例设备类型
+        /// </summary>
+        [JsonProperty("DeviceType")]
+        public string DeviceType{ get; set; }
+
+        /// <summary>
         /// CPU核数，PREPAID与POSTPAID实例类型必传
         /// </summary>
         [JsonProperty("Cpu")]
@@ -94,6 +100,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "GoodsNum", this.GoodsNum);
             this.SetParamSimple(map, prefix + "InstancePayMode", this.InstancePayMode);
             this.SetParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
+            this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "Ccu", this.Ccu);

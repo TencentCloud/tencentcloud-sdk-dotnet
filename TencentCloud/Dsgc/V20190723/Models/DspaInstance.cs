@@ -116,6 +116,13 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("RenewFlag")]
         public ulong? RenewFlag{ get; set; }
 
+        /// <summary>
+        /// 实例渠道
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Channel")]
+        public string Channel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +144,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "CosTotalQuota", this.CosTotalQuota);
             this.SetParamSimple(map, prefix + "CosQuotaUnit", this.CosQuotaUnit);
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+            this.SetParamSimple(map, prefix + "Channel", this.Channel);
         }
     }
 }

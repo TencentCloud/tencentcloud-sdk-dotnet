@@ -61,6 +61,20 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? OldStorageLimit{ get; set; }
 
         /// <summary>
+        /// 变配前实例机器类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OldDeviceType")]
+        public string OldDeviceType{ get; set; }
+
+        /// <summary>
+        /// 变配后实例机器类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeviceType")]
+        public string DeviceType{ get; set; }
+
+        /// <summary>
         /// 升级方式。升级完成后切换或维护时间内切换
         /// </summary>
         [JsonProperty("UpgradeType")]
@@ -78,6 +92,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "OldCpu", this.OldCpu);
             this.SetParamSimple(map, prefix + "OldMemory", this.OldMemory);
             this.SetParamSimple(map, prefix + "OldStorageLimit", this.OldStorageLimit);
+            this.SetParamSimple(map, prefix + "OldDeviceType", this.OldDeviceType);
+            this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
             this.SetParamSimple(map, prefix + "UpgradeType", this.UpgradeType);
         }
     }

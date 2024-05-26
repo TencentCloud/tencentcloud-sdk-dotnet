@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{4ACC8A01-FDA5-3C33-AEEA-E6EE529B3ACA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1012</VersionPrefix>
+    <VersionPrefix>3.0.1013</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -62,12 +62,16 @@
     <Compile Include="V20191018\Models\BindDeviceAccountPrivateKeyResponse.cs" />
     <Compile Include="V20191018\Models\BindDeviceResourceRequest.cs" />
     <Compile Include="V20191018\Models\BindDeviceResourceResponse.cs" />
+    <Compile Include="V20191018\Models\ChangePwdTaskDetail.cs" />
+    <Compile Include="V20191018\Models\ChangePwdTaskInfo.cs" />
     <Compile Include="V20191018\Models\CmdTemplate.cs" />
     <Compile Include="V20191018\Models\Command.cs" />
     <Compile Include="V20191018\Models\CreateAclRequest.cs" />
     <Compile Include="V20191018\Models\CreateAclResponse.cs" />
     <Compile Include="V20191018\Models\CreateAssetSyncJobRequest.cs" />
     <Compile Include="V20191018\Models\CreateAssetSyncJobResponse.cs" />
+    <Compile Include="V20191018\Models\CreateChangePwdTaskRequest.cs" />
+    <Compile Include="V20191018\Models\CreateChangePwdTaskResponse.cs" />
     <Compile Include="V20191018\Models\CreateCmdTemplateRequest.cs" />
     <Compile Include="V20191018\Models\CreateCmdTemplateResponse.cs" />
     <Compile Include="V20191018\Models\CreateDeviceAccountRequest.cs" />
@@ -82,6 +86,8 @@
     <Compile Include="V20191018\Models\CreateUserResponse.cs" />
     <Compile Include="V20191018\Models\DeleteAclsRequest.cs" />
     <Compile Include="V20191018\Models\DeleteAclsResponse.cs" />
+    <Compile Include="V20191018\Models\DeleteChangePwdTaskRequest.cs" />
+    <Compile Include="V20191018\Models\DeleteChangePwdTaskResponse.cs" />
     <Compile Include="V20191018\Models\DeleteCmdTemplatesRequest.cs" />
     <Compile Include="V20191018\Models\DeleteCmdTemplatesResponse.cs" />
     <Compile Include="V20191018\Models\DeleteDeviceAccountsRequest.cs" />
@@ -106,6 +112,10 @@
     <Compile Include="V20191018\Models\DescribeAclsResponse.cs" />
     <Compile Include="V20191018\Models\DescribeAssetSyncStatusRequest.cs" />
     <Compile Include="V20191018\Models\DescribeAssetSyncStatusResponse.cs" />
+    <Compile Include="V20191018\Models\DescribeChangePwdTaskDetailRequest.cs" />
+    <Compile Include="V20191018\Models\DescribeChangePwdTaskDetailResponse.cs" />
+    <Compile Include="V20191018\Models\DescribeChangePwdTaskRequest.cs" />
+    <Compile Include="V20191018\Models\DescribeChangePwdTaskResponse.cs" />
     <Compile Include="V20191018\Models\DescribeCmdTemplatesRequest.cs" />
     <Compile Include="V20191018\Models\DescribeCmdTemplatesResponse.cs" />
     <Compile Include="V20191018\Models\DescribeDasbImageIdsRequest.cs" />
@@ -140,6 +150,8 @@
     <Compile Include="V20191018\Models\LoginEvent.cs" />
     <Compile Include="V20191018\Models\ModifyAclRequest.cs" />
     <Compile Include="V20191018\Models\ModifyAclResponse.cs" />
+    <Compile Include="V20191018\Models\ModifyChangePwdTaskRequest.cs" />
+    <Compile Include="V20191018\Models\ModifyChangePwdTaskResponse.cs" />
     <Compile Include="V20191018\Models\ModifyCmdTemplateRequest.cs" />
     <Compile Include="V20191018\Models\ModifyCmdTemplateResponse.cs" />
     <Compile Include="V20191018\Models\ModifyDeviceGroupRequest.cs" />
@@ -162,6 +174,9 @@
     <Compile Include="V20191018\Models\ResetUserRequest.cs" />
     <Compile Include="V20191018\Models\ResetUserResponse.cs" />
     <Compile Include="V20191018\Models\Resource.cs" />
+    <Compile Include="V20191018\Models\RunChangePwdTaskDetail.cs" />
+    <Compile Include="V20191018\Models\RunChangePwdTaskRequest.cs" />
+    <Compile Include="V20191018\Models\RunChangePwdTaskResponse.cs" />
     <Compile Include="V20191018\Models\SearchAuditLogRequest.cs" />
     <Compile Include="V20191018\Models\SearchAuditLogResponse.cs" />
     <Compile Include="V20191018\Models\SearchCommandBySidRequest.cs" />

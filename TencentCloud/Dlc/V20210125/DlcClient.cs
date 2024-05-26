@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1012";
+       private const string sdkVersion = "SDK_NET_3.0.1013";
 
         /// <summary>
         /// Client constructor.
@@ -2192,6 +2192,27 @@ namespace TencentCloud.Dlc.V20210125
         public ListTaskJobLogDetailResponse ListTaskJobLogDetailSync(ListTaskJobLogDetailRequest req)
         {
             return InternalRequestAsync<ListTaskJobLogDetailResponse>(req, "ListTaskJobLogDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ListTaskJobLogName）用于获取spark-jar日志名称列表
+        /// </summary>
+        /// <param name="req"><see cref="ListTaskJobLogNameRequest"/></param>
+        /// <returns><see cref="ListTaskJobLogNameResponse"/></returns>
+        public Task<ListTaskJobLogNameResponse> ListTaskJobLogName(ListTaskJobLogNameRequest req)
+        {
+            return InternalRequestAsync<ListTaskJobLogNameResponse>(req, "ListTaskJobLogName");
+        }
+
+        /// <summary>
+        /// 本接口（ListTaskJobLogName）用于获取spark-jar日志名称列表
+        /// </summary>
+        /// <param name="req"><see cref="ListTaskJobLogNameRequest"/></param>
+        /// <returns><see cref="ListTaskJobLogNameResponse"/></returns>
+        public ListTaskJobLogNameResponse ListTaskJobLogNameSync(ListTaskJobLogNameRequest req)
+        {
+            return InternalRequestAsync<ListTaskJobLogNameResponse>(req, "ListTaskJobLogName")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

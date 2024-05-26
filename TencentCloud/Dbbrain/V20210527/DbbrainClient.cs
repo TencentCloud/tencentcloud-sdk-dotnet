@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20210527
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2021-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1012";
+       private const string sdkVersion = "SDK_NET_3.0.1013";
 
         /// <summary>
         /// Client constructor.
@@ -365,6 +365,27 @@ namespace TencentCloud.Dbbrain.V20210527
         public DeleteDBDiagReportTasksResponse DeleteDBDiagReportTasksSync(DeleteDBDiagReportTasksRequest req)
         {
             return InternalRequestAsync<DeleteDBDiagReportTasksResponse>(req, "DeleteDBDiagReportTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除Redis实例的大key分析任务。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRedisBigKeyAnalysisTasksRequest"/></param>
+        /// <returns><see cref="DeleteRedisBigKeyAnalysisTasksResponse"/></returns>
+        public Task<DeleteRedisBigKeyAnalysisTasksResponse> DeleteRedisBigKeyAnalysisTasks(DeleteRedisBigKeyAnalysisTasksRequest req)
+        {
+            return InternalRequestAsync<DeleteRedisBigKeyAnalysisTasksResponse>(req, "DeleteRedisBigKeyAnalysisTasks");
+        }
+
+        /// <summary>
+        /// 删除Redis实例的大key分析任务。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRedisBigKeyAnalysisTasksRequest"/></param>
+        /// <returns><see cref="DeleteRedisBigKeyAnalysisTasksResponse"/></returns>
+        public DeleteRedisBigKeyAnalysisTasksResponse DeleteRedisBigKeyAnalysisTasksSync(DeleteRedisBigKeyAnalysisTasksRequest req)
+        {
+            return InternalRequestAsync<DeleteRedisBigKeyAnalysisTasksResponse>(req, "DeleteRedisBigKeyAnalysisTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Dasb.V20191018
 
        private const string endpoint = "dasb.tencentcloudapi.com";
        private const string version = "2019-10-18";
-       private const string sdkVersion = "SDK_NET_3.0.1012";
+       private const string sdkVersion = "SDK_NET_3.0.1013";
 
         /// <summary>
         /// Client constructor.
@@ -201,6 +201,27 @@ namespace TencentCloud.Dasb.V20191018
         }
 
         /// <summary>
+        /// 创建修改密码任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateChangePwdTaskRequest"/></param>
+        /// <returns><see cref="CreateChangePwdTaskResponse"/></returns>
+        public Task<CreateChangePwdTaskResponse> CreateChangePwdTask(CreateChangePwdTaskRequest req)
+        {
+            return InternalRequestAsync<CreateChangePwdTaskResponse>(req, "CreateChangePwdTask");
+        }
+
+        /// <summary>
+        /// 创建修改密码任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateChangePwdTaskRequest"/></param>
+        /// <returns><see cref="CreateChangePwdTaskResponse"/></returns>
+        public CreateChangePwdTaskResponse CreateChangePwdTaskSync(CreateChangePwdTaskRequest req)
+        {
+            return InternalRequestAsync<CreateChangePwdTaskResponse>(req, "CreateChangePwdTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 新建高危命令模板
         /// </summary>
         /// <param name="req"><see cref="CreateCmdTemplateRequest"/></param>
@@ -344,6 +365,27 @@ namespace TencentCloud.Dasb.V20191018
         public DeleteAclsResponse DeleteAclsSync(DeleteAclsRequest req)
         {
             return InternalRequestAsync<DeleteAclsResponse>(req, "DeleteAcls")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除改密任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteChangePwdTaskRequest"/></param>
+        /// <returns><see cref="DeleteChangePwdTaskResponse"/></returns>
+        public Task<DeleteChangePwdTaskResponse> DeleteChangePwdTask(DeleteChangePwdTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteChangePwdTaskResponse>(req, "DeleteChangePwdTask");
+        }
+
+        /// <summary>
+        /// 删除改密任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteChangePwdTaskRequest"/></param>
+        /// <returns><see cref="DeleteChangePwdTaskResponse"/></returns>
+        public DeleteChangePwdTaskResponse DeleteChangePwdTaskSync(DeleteChangePwdTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteChangePwdTaskResponse>(req, "DeleteChangePwdTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -575,6 +617,48 @@ namespace TencentCloud.Dasb.V20191018
         public DescribeAssetSyncStatusResponse DescribeAssetSyncStatusSync(DescribeAssetSyncStatusRequest req)
         {
             return InternalRequestAsync<DescribeAssetSyncStatusResponse>(req, "DescribeAssetSyncStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询改密任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChangePwdTaskRequest"/></param>
+        /// <returns><see cref="DescribeChangePwdTaskResponse"/></returns>
+        public Task<DescribeChangePwdTaskResponse> DescribeChangePwdTask(DescribeChangePwdTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeChangePwdTaskResponse>(req, "DescribeChangePwdTask");
+        }
+
+        /// <summary>
+        /// 查询改密任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChangePwdTaskRequest"/></param>
+        /// <returns><see cref="DescribeChangePwdTaskResponse"/></returns>
+        public DescribeChangePwdTaskResponse DescribeChangePwdTaskSync(DescribeChangePwdTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeChangePwdTaskResponse>(req, "DescribeChangePwdTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询改密任务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChangePwdTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeChangePwdTaskDetailResponse"/></returns>
+        public Task<DescribeChangePwdTaskDetailResponse> DescribeChangePwdTaskDetail(DescribeChangePwdTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeChangePwdTaskDetailResponse>(req, "DescribeChangePwdTaskDetail");
+        }
+
+        /// <summary>
+        /// 查询改密任务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChangePwdTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeChangePwdTaskDetailResponse"/></returns>
+        public DescribeChangePwdTaskDetailResponse DescribeChangePwdTaskDetailSync(DescribeChangePwdTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeChangePwdTaskDetailResponse>(req, "DescribeChangePwdTaskDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -873,6 +957,27 @@ namespace TencentCloud.Dasb.V20191018
         }
 
         /// <summary>
+        /// 更新修改密码任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyChangePwdTaskRequest"/></param>
+        /// <returns><see cref="ModifyChangePwdTaskResponse"/></returns>
+        public Task<ModifyChangePwdTaskResponse> ModifyChangePwdTask(ModifyChangePwdTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyChangePwdTaskResponse>(req, "ModifyChangePwdTask");
+        }
+
+        /// <summary>
+        /// 更新修改密码任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyChangePwdTaskRequest"/></param>
+        /// <returns><see cref="ModifyChangePwdTaskResponse"/></returns>
+        public ModifyChangePwdTaskResponse ModifyChangePwdTaskSync(ModifyChangePwdTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyChangePwdTaskResponse>(req, "ModifyChangePwdTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改高危命令模板
         /// </summary>
         /// <param name="req"><see cref="ModifyCmdTemplateRequest"/></param>
@@ -1079,6 +1184,27 @@ namespace TencentCloud.Dasb.V20191018
         public ResetUserResponse ResetUserSync(ResetUserRequest req)
         {
             return InternalRequestAsync<ResetUserResponse>(req, "ResetUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 执行改密任务
+        /// </summary>
+        /// <param name="req"><see cref="RunChangePwdTaskRequest"/></param>
+        /// <returns><see cref="RunChangePwdTaskResponse"/></returns>
+        public Task<RunChangePwdTaskResponse> RunChangePwdTask(RunChangePwdTaskRequest req)
+        {
+            return InternalRequestAsync<RunChangePwdTaskResponse>(req, "RunChangePwdTask");
+        }
+
+        /// <summary>
+        /// 执行改密任务
+        /// </summary>
+        /// <param name="req"><see cref="RunChangePwdTaskRequest"/></param>
+        /// <returns><see cref="RunChangePwdTaskResponse"/></returns>
+        public RunChangePwdTaskResponse RunChangePwdTaskSync(RunChangePwdTaskRequest req)
+        {
+            return InternalRequestAsync<RunChangePwdTaskResponse>(req, "RunChangePwdTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

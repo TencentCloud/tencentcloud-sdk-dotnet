@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1012";
+       private const string sdkVersion = "SDK_NET_3.0.1013";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,48 @@ namespace TencentCloud.Iotexplorer.V20190423
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 激活
+        /// </summary>
+        /// <param name="req"><see cref="ActivateTWeCallLicenseRequest"/></param>
+        /// <returns><see cref="ActivateTWeCallLicenseResponse"/></returns>
+        public Task<ActivateTWeCallLicenseResponse> ActivateTWeCallLicense(ActivateTWeCallLicenseRequest req)
+        {
+            return InternalRequestAsync<ActivateTWeCallLicenseResponse>(req, "ActivateTWeCallLicense");
+        }
+
+        /// <summary>
+        /// 激活
+        /// </summary>
+        /// <param name="req"><see cref="ActivateTWeCallLicenseRequest"/></param>
+        /// <returns><see cref="ActivateTWeCallLicenseResponse"/></returns>
+        public ActivateTWeCallLicenseResponse ActivateTWeCallLicenseSync(ActivateTWeCallLicenseRequest req)
+        {
+            return InternalRequestAsync<ActivateTWeCallLicenseResponse>(req, "ActivateTWeCallLicense")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分配License
+        /// </summary>
+        /// <param name="req"><see cref="AssignTWeCallLicenseRequest"/></param>
+        /// <returns><see cref="AssignTWeCallLicenseResponse"/></returns>
+        public Task<AssignTWeCallLicenseResponse> AssignTWeCallLicense(AssignTWeCallLicenseRequest req)
+        {
+            return InternalRequestAsync<AssignTWeCallLicenseResponse>(req, "AssignTWeCallLicense");
+        }
+
+        /// <summary>
+        /// 分配License
+        /// </summary>
+        /// <param name="req"><see cref="AssignTWeCallLicenseRequest"/></param>
+        /// <returns><see cref="AssignTWeCallLicenseResponse"/></returns>
+        public AssignTWeCallLicenseResponse AssignTWeCallLicenseSync(AssignTWeCallLicenseRequest req)
+        {
+            return InternalRequestAsync<AssignTWeCallLicenseResponse>(req, "AssignTWeCallLicense")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -155,6 +197,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public CallDeviceActionSyncResponse CallDeviceActionSyncSync(CallDeviceActionSyncRequest req)
         {
             return InternalRequestAsync<CallDeviceActionSyncResponse>(req, "CallDeviceActionSync")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 取消分配
+        /// </summary>
+        /// <param name="req"><see cref="CancelAssignTWeCallLicenseRequest"/></param>
+        /// <returns><see cref="CancelAssignTWeCallLicenseResponse"/></returns>
+        public Task<CancelAssignTWeCallLicenseResponse> CancelAssignTWeCallLicense(CancelAssignTWeCallLicenseRequest req)
+        {
+            return InternalRequestAsync<CancelAssignTWeCallLicenseResponse>(req, "CancelAssignTWeCallLicense");
+        }
+
+        /// <summary>
+        /// 取消分配
+        /// </summary>
+        /// <param name="req"><see cref="CancelAssignTWeCallLicenseRequest"/></param>
+        /// <returns><see cref="CancelAssignTWeCallLicenseResponse"/></returns>
+        public CancelAssignTWeCallLicenseResponse CancelAssignTWeCallLicenseSync(CancelAssignTWeCallLicenseRequest req)
+        {
+            return InternalRequestAsync<CancelAssignTWeCallLicenseResponse>(req, "CancelAssignTWeCallLicense")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1797,6 +1860,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 查询小程序列表
+        /// </summary>
+        /// <param name="req"><see cref="GetAuthMiniProgramAppListRequest"/></param>
+        /// <returns><see cref="GetAuthMiniProgramAppListResponse"/></returns>
+        public Task<GetAuthMiniProgramAppListResponse> GetAuthMiniProgramAppList(GetAuthMiniProgramAppListRequest req)
+        {
+            return InternalRequestAsync<GetAuthMiniProgramAppListResponse>(req, "GetAuthMiniProgramAppList");
+        }
+
+        /// <summary>
+        /// 查询小程序列表
+        /// </summary>
+        /// <param name="req"><see cref="GetAuthMiniProgramAppListRequest"/></param>
+        /// <returns><see cref="GetAuthMiniProgramAppListResponse"/></returns>
+        public GetAuthMiniProgramAppListResponse GetAuthMiniProgramAppListSync(GetAuthMiniProgramAppListRequest req)
+        {
+            return InternalRequestAsync<GetAuthMiniProgramAppListResponse>(req, "GetAuthMiniProgramAppList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 列出量产数据列表信息。
         /// </summary>
         /// <param name="req"><see cref="GetBatchProductionsListRequest"/></param>
@@ -2024,6 +2108,48 @@ namespace TencentCloud.Iotexplorer.V20190423
         public GetStudioProductListResponse GetStudioProductListSync(GetStudioProductListRequest req)
         {
             return InternalRequestAsync<GetStudioProductListResponse>(req, "GetStudioProductList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询激活状态
+        /// </summary>
+        /// <param name="req"><see cref="GetTWeCallActiveStatusRequest"/></param>
+        /// <returns><see cref="GetTWeCallActiveStatusResponse"/></returns>
+        public Task<GetTWeCallActiveStatusResponse> GetTWeCallActiveStatus(GetTWeCallActiveStatusRequest req)
+        {
+            return InternalRequestAsync<GetTWeCallActiveStatusResponse>(req, "GetTWeCallActiveStatus");
+        }
+
+        /// <summary>
+        /// 查询激活状态
+        /// </summary>
+        /// <param name="req"><see cref="GetTWeCallActiveStatusRequest"/></param>
+        /// <returns><see cref="GetTWeCallActiveStatusResponse"/></returns>
+        public GetTWeCallActiveStatusResponse GetTWeCallActiveStatusSync(GetTWeCallActiveStatusRequest req)
+        {
+            return InternalRequestAsync<GetTWeCallActiveStatusResponse>(req, "GetTWeCallActiveStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询TWeCall包列表
+        /// </summary>
+        /// <param name="req"><see cref="GetTWeCallPkgListRequest"/></param>
+        /// <returns><see cref="GetTWeCallPkgListResponse"/></returns>
+        public Task<GetTWeCallPkgListResponse> GetTWeCallPkgList(GetTWeCallPkgListRequest req)
+        {
+            return InternalRequestAsync<GetTWeCallPkgListResponse>(req, "GetTWeCallPkgList");
+        }
+
+        /// <summary>
+        /// 查询TWeCall包列表
+        /// </summary>
+        /// <param name="req"><see cref="GetTWeCallPkgListRequest"/></param>
+        /// <returns><see cref="GetTWeCallPkgListResponse"/></returns>
+        public GetTWeCallPkgListResponse GetTWeCallPkgListSync(GetTWeCallPkgListRequest req)
+        {
+            return InternalRequestAsync<GetTWeCallPkgListResponse>(req, "GetTWeCallPkgList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

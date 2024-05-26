@@ -361,6 +361,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("InstanceAbility")]
         public InstanceAbility InstanceAbility{ get; set; }
 
+        /// <summary>
+        /// 实例机器类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeviceType")]
+        public string DeviceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -421,6 +428,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
             this.SetParamSimple(map, prefix + "InstanceIndexMode", this.InstanceIndexMode);
             this.SetParamObj(map, prefix + "InstanceAbility.", this.InstanceAbility);
+            this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
         }
     }
 }

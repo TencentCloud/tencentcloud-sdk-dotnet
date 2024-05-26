@@ -49,6 +49,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? ReadOnlyCount{ get; set; }
 
         /// <summary>
+        /// 实例机器类型
+        /// </summary>
+        [JsonProperty("DeviceType")]
+        public string DeviceType{ get; set; }
+
+        /// <summary>
         /// 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
         /// </summary>
         [JsonProperty("InstanceGrpId")]
@@ -138,6 +144,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "ReadOnlyCount", this.ReadOnlyCount);
+            this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
             this.SetParamSimple(map, prefix + "InstanceGrpId", this.InstanceGrpId);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
