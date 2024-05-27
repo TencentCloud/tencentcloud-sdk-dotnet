@@ -43,7 +43,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 获取day：d，   获取min则不填
+        /// 对PV指标的查询维度。获取day：d，   获取min则不填。
         /// </summary>
         [JsonProperty("Dimension")]
         public string Dimension{ get; set; }

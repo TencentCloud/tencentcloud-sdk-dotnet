@@ -31,7 +31,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// 源端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
+        /// 源端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql,tdstore等
         /// </summary>
         [JsonProperty("SrcDatabaseType")]
         public string SrcDatabaseType{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string SrcRegion{ get; set; }
 
         /// <summary>
-        /// 目标端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql,kafka等
+        /// 目标端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql,kafka,tdstore等
         /// </summary>
         [JsonProperty("DstDatabaseType")]
         public string DstDatabaseType{ get; set; }

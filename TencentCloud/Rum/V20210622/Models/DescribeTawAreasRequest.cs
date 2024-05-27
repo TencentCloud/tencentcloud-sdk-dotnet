@@ -37,7 +37,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string[] AreaKeys{ get; set; }
 
         /// <summary>
-        /// 分页Limit
+        /// 分页Limit，默认根据AreaKeys和AreaStatuses参数查询所有。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public long?[] AreaStatuses{ get; set; }
 
         /// <summary>
-        /// 分页Offset
+        /// 分页Offset，默认根据AreaKeys和AreaStatuses参数查询所有。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Mna.V20210119
 
        private const string endpoint = "mna.tencentcloudapi.com";
        private const string version = "2021-01-19";
-       private const string sdkVersion = "SDK_NET_3.0.1013";
+       private const string sdkVersion = "SDK_NET_3.0.1014";
 
         /// <summary>
         /// Client constructor.
@@ -285,6 +285,27 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 根据AppId查询用户设置的流量告警信息，包括阈值，回调url和key
+        /// </summary>
+        /// <param name="req"><see cref="GetFlowAlarmInfoRequest"/></param>
+        /// <returns><see cref="GetFlowAlarmInfoResponse"/></returns>
+        public Task<GetFlowAlarmInfoResponse> GetFlowAlarmInfo(GetFlowAlarmInfoRequest req)
+        {
+            return InternalRequestAsync<GetFlowAlarmInfoResponse>(req, "GetFlowAlarmInfo");
+        }
+
+        /// <summary>
+        /// 根据AppId查询用户设置的流量告警信息，包括阈值，回调url和key
+        /// </summary>
+        /// <param name="req"><see cref="GetFlowAlarmInfoRequest"/></param>
+        /// <returns><see cref="GetFlowAlarmInfoResponse"/></returns>
+        public GetFlowAlarmInfoResponse GetFlowAlarmInfoSync(GetFlowAlarmInfoRequest req)
+        {
+            return InternalRequestAsync<GetFlowAlarmInfoResponse>(req, "GetFlowAlarmInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取流量包列表
         /// </summary>
         /// <param name="req"><see cref="GetFlowPackagesRequest"/></param>
@@ -323,6 +344,27 @@ namespace TencentCloud.Mna.V20210119
         public GetFlowStatisticResponse GetFlowStatisticSync(GetFlowStatisticRequest req)
         {
             return InternalRequestAsync<GetFlowStatisticResponse>(req, "GetFlowStatistic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取指定分组，指定时间数据流量使用情况
+        /// </summary>
+        /// <param name="req"><see cref="GetFlowStatisticByGroupRequest"/></param>
+        /// <returns><see cref="GetFlowStatisticByGroupResponse"/></returns>
+        public Task<GetFlowStatisticByGroupResponse> GetFlowStatisticByGroup(GetFlowStatisticByGroupRequest req)
+        {
+            return InternalRequestAsync<GetFlowStatisticByGroupResponse>(req, "GetFlowStatisticByGroup");
+        }
+
+        /// <summary>
+        /// 获取指定分组，指定时间数据流量使用情况
+        /// </summary>
+        /// <param name="req"><see cref="GetFlowStatisticByGroupRequest"/></param>
+        /// <returns><see cref="GetFlowStatisticByGroupResponse"/></returns>
+        public GetFlowStatisticByGroupResponse GetFlowStatisticByGroupSync(GetFlowStatisticByGroupRequest req)
+        {
+            return InternalRequestAsync<GetFlowStatisticByGroupResponse>(req, "GetFlowStatisticByGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

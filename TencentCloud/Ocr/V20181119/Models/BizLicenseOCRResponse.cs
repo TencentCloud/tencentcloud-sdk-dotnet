@@ -120,6 +120,42 @@ namespace TencentCloud.Ocr.V20181119.Models
         public float? Angle{ get; set; }
 
         /// <summary>
+        /// 是否有国徽。0为没有，1为有。
+        /// </summary>
+        [JsonProperty("NationalEmblem")]
+        public bool? NationalEmblem{ get; set; }
+
+        /// <summary>
+        /// 是否有二维码。0为没有，1为有。
+        /// </summary>
+        [JsonProperty("QRCode")]
+        public bool? QRCode{ get; set; }
+
+        /// <summary>
+        /// 是否有印章。0为没有，1为有。
+        /// </summary>
+        [JsonProperty("Seal")]
+        public bool? Seal{ get; set; }
+
+        /// <summary>
+        /// 标题
+        /// </summary>
+        [JsonProperty("Title")]
+        public string Title{ get; set; }
+
+        /// <summary>
+        /// 编号
+        /// </summary>
+        [JsonProperty("SerialNumber")]
+        public string SerialNumber{ get; set; }
+
+        /// <summary>
+        /// 登记机关
+        /// </summary>
+        [JsonProperty("RegistrationAuthority")]
+        public string RegistrationAuthority{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -146,6 +182,12 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "IsDuplication", this.IsDuplication);
             this.SetParamSimple(map, prefix + "RegistrationDate", this.RegistrationDate);
             this.SetParamSimple(map, prefix + "Angle", this.Angle);
+            this.SetParamSimple(map, prefix + "NationalEmblem", this.NationalEmblem);
+            this.SetParamSimple(map, prefix + "QRCode", this.QRCode);
+            this.SetParamSimple(map, prefix + "Seal", this.Seal);
+            this.SetParamSimple(map, prefix + "Title", this.Title);
+            this.SetParamSimple(map, prefix + "SerialNumber", this.SerialNumber);
+            this.SetParamSimple(map, prefix + "RegistrationAuthority", this.RegistrationAuthority);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

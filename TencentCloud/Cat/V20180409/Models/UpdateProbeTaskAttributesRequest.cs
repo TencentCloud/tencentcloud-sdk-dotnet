@@ -31,7 +31,7 @@ namespace TencentCloud.Cat.V20180409.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务名
+        /// 任务名，该参数为空时不作任何修改。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

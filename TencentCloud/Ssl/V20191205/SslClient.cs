@@ -28,7 +28,7 @@ namespace TencentCloud.Ssl.V20191205
 
        private const string endpoint = "ssl.tencentcloudapi.com";
        private const string version = "2019-12-05";
-       private const string sdkVersion = "SDK_NET_3.0.1013";
+       private const string sdkVersion = "SDK_NET_3.0.1014";
 
         /// <summary>
         /// Client constructor.
@@ -1125,7 +1125,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 一键更新旧证书资源，本接口为异步接口， 调用之后DeployRecordId为0表示任务进行中， 当返回DeployRecordId大于0则表示任务创建成功。 未创建成功则会抛出异常
+        /// 一键更新旧证书资源，本接口为异步接口， 调用之后DeployRecordId为0表示任务进行中， 重复请求这个接口， 当返回DeployRecordId大于0则表示任务创建成功。 未创建成功则会抛出异常
         /// </summary>
         /// <param name="req"><see cref="UpdateCertificateInstanceRequest"/></param>
         /// <returns><see cref="UpdateCertificateInstanceResponse"/></returns>
@@ -1135,7 +1135,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 一键更新旧证书资源，本接口为异步接口， 调用之后DeployRecordId为0表示任务进行中， 当返回DeployRecordId大于0则表示任务创建成功。 未创建成功则会抛出异常
+        /// 一键更新旧证书资源，本接口为异步接口， 调用之后DeployRecordId为0表示任务进行中， 重复请求这个接口， 当返回DeployRecordId大于0则表示任务创建成功。 未创建成功则会抛出异常
         /// </summary>
         /// <param name="req"><see cref="UpdateCertificateInstanceRequest"/></param>
         /// <returns><see cref="UpdateCertificateInstanceResponse"/></returns>

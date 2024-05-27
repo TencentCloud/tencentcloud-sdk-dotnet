@@ -28,7 +28,7 @@ namespace TencentCloud.Domain.V20180808
 
        private const string endpoint = "domain.tencentcloudapi.com";
        private const string version = "2018-08-08";
-       private const string sdkVersion = "SDK_NET_3.0.1013";
+       private const string sdkVersion = "SDK_NET_3.0.1014";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,27 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
+        /// 该接口用于用户详情页出价请求
+        /// </summary>
+        /// <param name="req"><see cref="BidDetailPageRequest"/></param>
+        /// <returns><see cref="BidDetailPageResponse"/></returns>
+        public Task<BidDetailPageResponse> BidDetailPage(BidDetailPageRequest req)
+        {
+            return InternalRequestAsync<BidDetailPageResponse>(req, "BidDetailPage");
+        }
+
+        /// <summary>
+        /// 该接口用于用户详情页出价请求
+        /// </summary>
+        /// <param name="req"><see cref="BidDetailPageRequest"/></param>
+        /// <returns><see cref="BidDetailPageResponse"/></returns>
+        public BidDetailPageResponse BidDetailPageSync(BidDetailPageRequest req)
+        {
+            return InternalRequestAsync<BidDetailPageResponse>(req, "BidDetailPage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用户合作商预释放出价
         /// </summary>
         /// <param name="req"><see cref="BidPreDomainsRequest"/></param>
@@ -92,6 +113,27 @@ namespace TencentCloud.Domain.V20180808
         public BidPreDomainsResponse BidPreDomainsSync(BidPreDomainsRequest req)
         {
             return InternalRequestAsync<BidPreDomainsResponse>(req, "BidPreDomains")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于出价界面出价请求
+        /// </summary>
+        /// <param name="req"><see cref="BiddingPreReleaseRequest"/></param>
+        /// <returns><see cref="BiddingPreReleaseResponse"/></returns>
+        public Task<BiddingPreReleaseResponse> BiddingPreRelease(BiddingPreReleaseRequest req)
+        {
+            return InternalRequestAsync<BiddingPreReleaseResponse>(req, "BiddingPreRelease");
+        }
+
+        /// <summary>
+        /// 用于出价界面出价请求
+        /// </summary>
+        /// <param name="req"><see cref="BiddingPreReleaseRequest"/></param>
+        /// <returns><see cref="BiddingPreReleaseResponse"/></returns>
+        public BiddingPreReleaseResponse BiddingPreReleaseSync(BiddingPreReleaseRequest req)
+        {
+            return InternalRequestAsync<BiddingPreReleaseResponse>(req, "BiddingPreRelease")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -243,6 +285,27 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
+        /// 删除记录。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBiddingRequest"/></param>
+        /// <returns><see cref="DeleteBiddingResponse"/></returns>
+        public Task<DeleteBiddingResponse> DeleteBidding(DeleteBiddingRequest req)
+        {
+            return InternalRequestAsync<DeleteBiddingResponse>(req, "DeleteBidding");
+        }
+
+        /// <summary>
+        /// 删除记录。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBiddingRequest"/></param>
+        /// <returns><see cref="DeleteBiddingResponse"/></returns>
+        public DeleteBiddingResponse DeleteBiddingSync(DeleteBiddingRequest req)
+        {
+            return InternalRequestAsync<DeleteBiddingResponse>(req, "DeleteBidding")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除自定义DNS Host
         /// </summary>
         /// <param name="req"><see cref="DeleteCustomDnsHostRequest"/></param>
@@ -327,6 +390,27 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
+        /// 用户控制台获取竞价列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuctionListRequest"/></param>
+        /// <returns><see cref="DescribeAuctionListResponse"/></returns>
+        public Task<DescribeAuctionListResponse> DescribeAuctionList(DescribeAuctionListRequest req)
+        {
+            return InternalRequestAsync<DescribeAuctionListResponse>(req, "DescribeAuctionList");
+        }
+
+        /// <summary>
+        /// 用户控制台获取竞价列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuctionListRequest"/></param>
+        /// <returns><see cref="DescribeAuctionListResponse"/></returns>
+        public DescribeAuctionListResponse DescribeAuctionListSync(DescribeAuctionListRequest req)
+        {
+            return InternalRequestAsync<DescribeAuctionListResponse>(req, "DescribeAuctionList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口 ( DescribeBatchOperationLogDetails ) 用于获取批量操作日志详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeBatchOperationLogDetailsRequest"/></param>
@@ -365,6 +449,132 @@ namespace TencentCloud.Domain.V20180808
         public DescribeBatchOperationLogsResponse DescribeBatchOperationLogsSync(DescribeBatchOperationLogsRequest req)
         {
             return InternalRequestAsync<DescribeBatchOperationLogsResponse>(req, "DescribeBatchOperationLogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 我预约的域名-预约详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBiddingAppointDetailRequest"/></param>
+        /// <returns><see cref="DescribeBiddingAppointDetailResponse"/></returns>
+        public Task<DescribeBiddingAppointDetailResponse> DescribeBiddingAppointDetail(DescribeBiddingAppointDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeBiddingAppointDetailResponse>(req, "DescribeBiddingAppointDetail");
+        }
+
+        /// <summary>
+        /// 我预约的域名-预约详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBiddingAppointDetailRequest"/></param>
+        /// <returns><see cref="DescribeBiddingAppointDetailResponse"/></returns>
+        public DescribeBiddingAppointDetailResponse DescribeBiddingAppointDetailSync(DescribeBiddingAppointDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeBiddingAppointDetailResponse>(req, "DescribeBiddingAppointDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 我预定的域名。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBiddingAppointListRequest"/></param>
+        /// <returns><see cref="DescribeBiddingAppointListResponse"/></returns>
+        public Task<DescribeBiddingAppointListResponse> DescribeBiddingAppointList(DescribeBiddingAppointListRequest req)
+        {
+            return InternalRequestAsync<DescribeBiddingAppointListResponse>(req, "DescribeBiddingAppointList");
+        }
+
+        /// <summary>
+        /// 我预定的域名。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBiddingAppointListRequest"/></param>
+        /// <returns><see cref="DescribeBiddingAppointListResponse"/></returns>
+        public DescribeBiddingAppointListResponse DescribeBiddingAppointListSync(DescribeBiddingAppointListRequest req)
+        {
+            return InternalRequestAsync<DescribeBiddingAppointListResponse>(req, "DescribeBiddingAppointList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 我竞价的域名-竞价详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBiddingDetailRequest"/></param>
+        /// <returns><see cref="DescribeBiddingDetailResponse"/></returns>
+        public Task<DescribeBiddingDetailResponse> DescribeBiddingDetail(DescribeBiddingDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeBiddingDetailResponse>(req, "DescribeBiddingDetail");
+        }
+
+        /// <summary>
+        /// 我竞价的域名-竞价详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBiddingDetailRequest"/></param>
+        /// <returns><see cref="DescribeBiddingDetailResponse"/></returns>
+        public DescribeBiddingDetailResponse DescribeBiddingDetailSync(DescribeBiddingDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeBiddingDetailResponse>(req, "DescribeBiddingDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 我竞价的域名。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBiddingListRequest"/></param>
+        /// <returns><see cref="DescribeBiddingListResponse"/></returns>
+        public Task<DescribeBiddingListResponse> DescribeBiddingList(DescribeBiddingListRequest req)
+        {
+            return InternalRequestAsync<DescribeBiddingListResponse>(req, "DescribeBiddingList");
+        }
+
+        /// <summary>
+        /// 我竞价的域名。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBiddingListRequest"/></param>
+        /// <returns><see cref="DescribeBiddingListResponse"/></returns>
+        public DescribeBiddingListResponse DescribeBiddingListSync(DescribeBiddingListRequest req)
+        {
+            return InternalRequestAsync<DescribeBiddingListResponse>(req, "DescribeBiddingList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 我得标的域名-得标详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBiddingSuccessfulDetailRequest"/></param>
+        /// <returns><see cref="DescribeBiddingSuccessfulDetailResponse"/></returns>
+        public Task<DescribeBiddingSuccessfulDetailResponse> DescribeBiddingSuccessfulDetail(DescribeBiddingSuccessfulDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeBiddingSuccessfulDetailResponse>(req, "DescribeBiddingSuccessfulDetail");
+        }
+
+        /// <summary>
+        /// 我得标的域名-得标详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBiddingSuccessfulDetailRequest"/></param>
+        /// <returns><see cref="DescribeBiddingSuccessfulDetailResponse"/></returns>
+        public DescribeBiddingSuccessfulDetailResponse DescribeBiddingSuccessfulDetailSync(DescribeBiddingSuccessfulDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeBiddingSuccessfulDetailResponse>(req, "DescribeBiddingSuccessfulDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 我得标的域名。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBiddingSuccessfulListRequest"/></param>
+        /// <returns><see cref="DescribeBiddingSuccessfulListResponse"/></returns>
+        public Task<DescribeBiddingSuccessfulListResponse> DescribeBiddingSuccessfulList(DescribeBiddingSuccessfulListRequest req)
+        {
+            return InternalRequestAsync<DescribeBiddingSuccessfulListResponse>(req, "DescribeBiddingSuccessfulList");
+        }
+
+        /// <summary>
+        /// 我得标的域名。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBiddingSuccessfulListRequest"/></param>
+        /// <returns><see cref="DescribeBiddingSuccessfulListResponse"/></returns>
+        public DescribeBiddingSuccessfulListResponse DescribeBiddingSuccessfulListSync(DescribeBiddingSuccessfulListRequest req)
+        {
+            return InternalRequestAsync<DescribeBiddingSuccessfulListResponse>(req, "DescribeBiddingSuccessfulList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -474,6 +684,27 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
+        /// 等待支付详情接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribePayWaitDetailRequest"/></param>
+        /// <returns><see cref="DescribePayWaitDetailResponse"/></returns>
+        public Task<DescribePayWaitDetailResponse> DescribePayWaitDetail(DescribePayWaitDetailRequest req)
+        {
+            return InternalRequestAsync<DescribePayWaitDetailResponse>(req, "DescribePayWaitDetail");
+        }
+
+        /// <summary>
+        /// 等待支付详情接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribePayWaitDetailRequest"/></param>
+        /// <returns><see cref="DescribePayWaitDetailResponse"/></returns>
+        public DescribePayWaitDetailResponse DescribePayWaitDetailSync(DescribePayWaitDetailRequest req)
+        {
+            return InternalRequestAsync<DescribePayWaitDetailResponse>(req, "DescribePayWaitDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于获取已验证的手机邮箱列表
         /// </summary>
         /// <param name="req"><see cref="DescribePhoneEmailListRequest"/></param>
@@ -495,6 +726,27 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
+        /// 用于预释放竞价列表数据查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribePreAuctionListRequest"/></param>
+        /// <returns><see cref="DescribePreAuctionListResponse"/></returns>
+        public Task<DescribePreAuctionListResponse> DescribePreAuctionList(DescribePreAuctionListRequest req)
+        {
+            return InternalRequestAsync<DescribePreAuctionListResponse>(req, "DescribePreAuctionList");
+        }
+
+        /// <summary>
+        /// 用于预释放竞价列表数据查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribePreAuctionListRequest"/></param>
+        /// <returns><see cref="DescribePreAuctionListResponse"/></returns>
+        public DescribePreAuctionListResponse DescribePreAuctionListSync(DescribePreAuctionListRequest req)
+        {
+            return InternalRequestAsync<DescribePreAuctionListResponse>(req, "DescribePreAuctionList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用户服务商提前获取预释放域名数据，查询数据根据结束时间进行倒序。
         /// </summary>
         /// <param name="req"><see cref="DescribePreDomainListRequest"/></param>
@@ -512,6 +764,27 @@ namespace TencentCloud.Domain.V20180808
         public DescribePreDomainListResponse DescribePreDomainListSync(DescribePreDomainListRequest req)
         {
             return InternalRequestAsync<DescribePreDomainListResponse>(req, "DescribePreDomainList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 接口用于预释放页面查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribePreReleaseListRequest"/></param>
+        /// <returns><see cref="DescribePreReleaseListResponse"/></returns>
+        public Task<DescribePreReleaseListResponse> DescribePreReleaseList(DescribePreReleaseListRequest req)
+        {
+            return InternalRequestAsync<DescribePreReleaseListResponse>(req, "DescribePreReleaseList");
+        }
+
+        /// <summary>
+        /// 接口用于预释放页面查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribePreReleaseListRequest"/></param>
+        /// <returns><see cref="DescribePreReleaseListResponse"/></returns>
+        public DescribePreReleaseListResponse DescribePreReleaseListSync(DescribePreReleaseListRequest req)
+        {
+            return InternalRequestAsync<DescribePreReleaseListResponse>(req, "DescribePreReleaseList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -617,6 +890,27 @@ namespace TencentCloud.Domain.V20180808
         public DescribeTldListResponse DescribeTldListSync(DescribeTldListRequest req)
         {
             return InternalRequestAsync<DescribeTldListResponse>(req, "DescribeTldList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询预释放未预约域名详情接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUnPreDomainDetailRequest"/></param>
+        /// <returns><see cref="DescribeUnPreDomainDetailResponse"/></returns>
+        public Task<DescribeUnPreDomainDetailResponse> DescribeUnPreDomainDetail(DescribeUnPreDomainDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeUnPreDomainDetailResponse>(req, "DescribeUnPreDomainDetail");
+        }
+
+        /// <summary>
+        /// 查询预释放未预约域名详情接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUnPreDomainDetailRequest"/></param>
+        /// <returns><see cref="DescribeUnPreDomainDetailResponse"/></returns>
+        public DescribeUnPreDomainDetailResponse DescribeUnPreDomainDetailSync(DescribeUnPreDomainDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeUnPreDomainDetailResponse>(req, "DescribeUnPreDomainDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
