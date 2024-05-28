@@ -28,7 +28,7 @@ namespace TencentCloud.Tione.V20211111
 
        private const string endpoint = "tione.tencentcloudapi.com";
        private const string version = "2021-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1014";
+       private const string sdkVersion = "SDK_NET_3.0.1015";
 
         /// <summary>
         /// Client constructor.

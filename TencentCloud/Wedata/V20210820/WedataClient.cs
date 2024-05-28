@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1014";
+       private const string sdkVersion = "SDK_NET_3.0.1015";
 
         /// <summary>
         /// Client constructor.
@@ -3588,7 +3588,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 任务运维-批量冻结任务
+        /// 任务运维-批量暂停任务
         /// </summary>
         /// <param name="req"><see cref="FreezeOpsTasksRequest"/></param>
         /// <returns><see cref="FreezeOpsTasksResponse"/></returns>
@@ -3598,7 +3598,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 任务运维-批量冻结任务
+        /// 任务运维-批量暂停任务
         /// </summary>
         /// <param name="req"><see cref="FreezeOpsTasksRequest"/></param>
         /// <returns><see cref="FreezeOpsTasksResponse"/></returns>

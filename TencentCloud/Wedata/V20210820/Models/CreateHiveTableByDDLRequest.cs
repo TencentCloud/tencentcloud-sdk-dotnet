@@ -66,6 +66,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Incharge")]
         public string Incharge{ get; set; }
 
+        /// <summary>
+        /// schema名称
+        /// </summary>
+        [JsonProperty("SchemaName")]
+        public string SchemaName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Incharge", this.Incharge);
+            this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
         }
     }
 }

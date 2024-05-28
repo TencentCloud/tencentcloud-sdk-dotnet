@@ -46,7 +46,7 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 签署方经办人的证件类型，支持以下类型
-        /// <ul><li>ID_CARD 居民身份证  (默认值)</li>
+        /// <ul><li>ID_CARD 中国大陆居民身份证  (默认值)</li>
         /// <li>HONGKONG_AND_MACAO 港澳居民来往内地通行证</li>
         /// <li>HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)</li>
         /// <li>OTHER_CARD_TYPE 其他证件</li></ul>

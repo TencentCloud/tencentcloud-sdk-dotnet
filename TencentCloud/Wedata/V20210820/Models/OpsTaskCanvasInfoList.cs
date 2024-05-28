@@ -36,6 +36,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("LinksList")]
         public OpsTaskLinkInfoDto[] LinksList{ get; set; }
 
+        /// <summary>
+        /// 画布循环依赖任务信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CirculateTaskList")]
+        public OpsTaskCanvasDto CirculateTaskList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamArrayObj(map, prefix + "TasksList.", this.TasksList);
             this.SetParamArrayObj(map, prefix + "LinksList.", this.LinksList);
+            this.SetParamObj(map, prefix + "CirculateTaskList.", this.CirculateTaskList);
         }
     }
 }

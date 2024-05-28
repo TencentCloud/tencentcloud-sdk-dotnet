@@ -162,6 +162,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("KeyWord")]
         public string KeyWord{ get; set; }
 
+        /// <summary>
+        /// 实例生成方式
+        /// </summary>
+        [JsonProperty("InitStrategy")]
+        public string InitStrategy{ get; set; }
+
+        /// <summary>
+        /// 额外请求的资源类型
+        /// </summary>
+        [JsonProperty("RequestResourceTypes")]
+        public string[] RequestResourceTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +203,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ExecutorGroupIdList", this.ExecutorGroupIdList);
             this.SetParamArrayObj(map, prefix + "TaskTags.", this.TaskTags);
             this.SetParamSimple(map, prefix + "KeyWord", this.KeyWord);
+            this.SetParamSimple(map, prefix + "InitStrategy", this.InitStrategy);
+            this.SetParamArraySimple(map, prefix + "RequestResourceTypes.", this.RequestResourceTypes);
         }
     }
 }

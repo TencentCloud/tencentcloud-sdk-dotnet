@@ -48,6 +48,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("LinkId")]
         public string LinkId{ get; set; }
 
+        /// <summary>
+        /// 为了区分新增的循环依赖新增的类型。默认是normal，循环依赖则是circulate
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LinkStyle")]
+        public string LinkStyle{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +65,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskFrom", this.TaskFrom);
             this.SetParamSimple(map, prefix + "LinkType", this.LinkType);
             this.SetParamSimple(map, prefix + "LinkId", this.LinkId);
+            this.SetParamSimple(map, prefix + "LinkStyle", this.LinkStyle);
         }
     }
 }

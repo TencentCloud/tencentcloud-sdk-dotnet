@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1014";
+       private const string sdkVersion = "SDK_NET_3.0.1015";
 
         /// <summary>
         /// Client constructor.
@@ -75,7 +75,7 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 购买新实例
+        /// 创建 RocketMQ 5.x 集群
         /// </summary>
         /// <param name="req"><see cref="CreateInstanceRequest"/></param>
         /// <returns><see cref="CreateInstanceResponse"/></returns>
@@ -85,7 +85,7 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 购买新实例
+        /// 创建 RocketMQ 5.x 集群
         /// </summary>
         /// <param name="req"><see cref="CreateInstanceRequest"/></param>
         /// <returns><see cref="CreateInstanceResponse"/></returns>

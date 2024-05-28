@@ -92,6 +92,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ParamsString")]
         public string ParamsString{ get; set; }
 
+        /// <summary>
+        /// 区分数据源类型自定义源还是系统源
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Category")]
+        public string Category{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +115,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "ParamsString", this.ParamsString);
+            this.SetParamSimple(map, prefix + "Category", this.Category);
         }
     }
 }

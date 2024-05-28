@@ -42,6 +42,18 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }
 
+        /// <summary>
+        /// 每页条目数量
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// 分页偏移位置
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "ApCode", this.ApCode);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

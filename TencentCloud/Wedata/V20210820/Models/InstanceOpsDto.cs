@@ -444,6 +444,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("RetryAttempts")]
         public ulong? RetryAttempts{ get; set; }
 
+        /// <summary>
+        /// 紧急去除的依赖父实例列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeletedFatherList")]
+        public string[] DeletedFatherList{ get; set; }
+
+        /// <summary>
+        /// 循环依赖关联的实例
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CirculateInstanceList")]
+        public InstanceOpsDto[] CirculateInstanceList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -510,6 +524,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamObj(map, prefix + "InstanceLifeCycleOpsDto.", this.InstanceLifeCycleOpsDto);
             this.SetParamSimple(map, prefix + "RetryAttempts", this.RetryAttempts);
+            this.SetParamArraySimple(map, prefix + "DeletedFatherList.", this.DeletedFatherList);
+            this.SetParamArrayObj(map, prefix + "CirculateInstanceList.", this.CirculateInstanceList);
         }
     }
 }

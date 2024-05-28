@@ -70,6 +70,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("OperationType")]
         public ulong? OperationType{ get; set; }
 
+        /// <summary>
+        /// 接入点类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AccessPointsType")]
+        public string AccessPointsType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +89,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "RouteType", this.RouteType);
             this.SetParamSimple(map, prefix + "OperationType", this.OperationType);
+            this.SetParamSimple(map, prefix + "AccessPointsType", this.AccessPointsType);
         }
     }
 }

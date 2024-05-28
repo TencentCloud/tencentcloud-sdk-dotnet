@@ -70,13 +70,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string PrivateMapKey{ get; set; }
 
         /// <summary>
-        /// 视频编码参数。可选，如果不填，保持原始流的参数。
+        /// 【本字段已废弃】视频编码参数。可选，如果不填，保持原始流的参数。
         /// </summary>
         [JsonProperty("VideoEncodeParams")]
         public VideoEncodeParams VideoEncodeParams{ get; set; }
 
         /// <summary>
-        /// 音频编码参数。可选，如果不填，保持原始流的参数。
+        /// 【本字段已废弃】音频编码参数。可选，如果不填，保持原始流的参数。
         /// </summary>
         [JsonProperty("AudioEncodeParams")]
         public AudioEncodeParams AudioEncodeParams{ get; set; }

@@ -36,6 +36,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("OperateIsInform")]
         public bool? OperateIsInform{ get; set; }
 
+        /// <summary>
+        /// 是否终止已生成的实例
+        /// </summary>
+        [JsonProperty("KillInstance")]
+        public bool? KillInstance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamArrayObj(map, prefix + "Tasks.", this.Tasks);
             this.SetParamSimple(map, prefix + "OperateIsInform", this.OperateIsInform);
+            this.SetParamSimple(map, prefix + "KillInstance", this.KillInstance);
         }
     }
 }

@@ -263,6 +263,13 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("BackupToUrl")]
         public string BackupToUrl{ get; set; }
 
+        /// <summary>
+        /// 直播转码模板。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TranscodeTemplateName")]
+        public string TranscodeTemplateName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -298,6 +305,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "VodLocalMode", this.VodLocalMode);
             this.SetParamSimple(map, prefix + "RecordTemplateId", this.RecordTemplateId);
             this.SetParamSimple(map, prefix + "BackupToUrl", this.BackupToUrl);
+            this.SetParamSimple(map, prefix + "TranscodeTemplateName", this.TranscodeTemplateName);
         }
     }
 }
