@@ -26,6 +26,8 @@ namespace TencentCloud.Redis.V20180412.Models
         
         /// <summary>
         /// 标识出入数据库的IP与端口是否被允许。
+        /// - ACCEPT：允许。
+        /// - DROP：不允许。
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }

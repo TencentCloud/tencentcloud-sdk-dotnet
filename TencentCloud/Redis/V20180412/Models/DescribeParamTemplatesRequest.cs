@@ -25,7 +25,16 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 产品类型数组。产品类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
+        /// 产品类型数组。
+        /// - 2：Redis 2.8 内存版（标准架构）。
+        /// - 3：CKV 3.2 内存版（标准架构）。
+        /// - 4：CKV 3.2 内存版（集群架构）。
+        /// - 6：Redis 4.0 内存版（标准架构）。
+        /// - 7：Redis 4.0 内存版（集群架构）。
+        /// - 8：Redis 5.0 内存版（标准架构）。
+        /// - 9：Redis 5.0 内存版（集群架构）。
+        /// - 15：Redis 6.2 内存版（标准架构）。
+        /// - 16：Redis 6.2 内存版（集群架构）。
         /// </summary>
         [JsonProperty("ProductTypes")]
         public long?[] ProductTypes{ get; set; }

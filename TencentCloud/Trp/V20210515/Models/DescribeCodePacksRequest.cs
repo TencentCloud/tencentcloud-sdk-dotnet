@@ -66,6 +66,18 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("ResId")]
         public string ResId{ get; set; }
 
+        /// <summary>
+        /// 应用场景
+        /// </summary>
+        [JsonProperty("SceneCode")]
+        public long? SceneCode{ get; set; }
+
+        /// <summary>
+        /// 码包状态
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "SerialType", this.SerialType);
             this.SetParamSimple(map, prefix + "ResType", this.ResType);
             this.SetParamSimple(map, prefix + "ResId", this.ResId);
+            this.SetParamSimple(map, prefix + "SceneCode", this.SceneCode);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

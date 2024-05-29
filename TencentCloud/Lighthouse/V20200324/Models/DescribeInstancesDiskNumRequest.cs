@@ -25,7 +25,8 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 实例ID列表。
+        /// 实例ID列表。每次请求批量实例的上限为 100。
+        /// 可通过 <a href="https://cloud.tencent.com/document/product/1207/47573">DescribeInstances</a> 接口返回值中的 InstanceId 获取。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

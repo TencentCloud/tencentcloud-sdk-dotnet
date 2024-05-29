@@ -56,6 +56,20 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("CodeParts")]
         public CodePart[] CodeParts{ get; set; }
 
+        /// <summary>
+        /// 包装单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Unit")]
+        public string Unit{ get; set; }
+
+        /// <summary>
+        /// 场景值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SceneCode")]
+        public long? SceneCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +81,8 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "Amount", this.Amount);
             this.SetParamSimple(map, prefix + "CustomId", this.CustomId);
             this.SetParamArrayObj(map, prefix + "CodeParts.", this.CodeParts);
+            this.SetParamSimple(map, prefix + "Unit", this.Unit);
+            this.SetParamSimple(map, prefix + "SceneCode", this.SceneCode);
         }
     }
 }

@@ -393,6 +393,13 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("UpgradeRedisVersion")]
         public string UpgradeRedisVersion{ get; set; }
 
+        /// <summary>
+        /// 备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BackupMode")]
+        public string BackupMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -455,6 +462,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "CurrentRedisVersion", this.CurrentRedisVersion);
             this.SetParamSimple(map, prefix + "UpgradeProxyVersion", this.UpgradeProxyVersion);
             this.SetParamSimple(map, prefix + "UpgradeRedisVersion", this.UpgradeRedisVersion);
+            this.SetParamSimple(map, prefix + "BackupMode", this.BackupMode);
         }
     }
 }

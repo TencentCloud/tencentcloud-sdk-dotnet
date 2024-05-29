@@ -98,6 +98,12 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("RelateType")]
         public long? RelateType{ get; set; }
 
+        /// <summary>
+        /// 场景值
+        /// </summary>
+        [JsonProperty("SceneCode")]
+        public long? SceneCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,6 +122,7 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "SerialType", this.SerialType);
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "RelateType", this.RelateType);
+            this.SetParamSimple(map, prefix + "SceneCode", this.SceneCode);
         }
     }
 }

@@ -43,7 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 节点组类型，master为主节点，replica为副本节点
+        /// 节点组类型，master为主节点，replica为副本节点。
         /// </summary>
         [JsonProperty("Role")]
         public string Role{ get; set; }

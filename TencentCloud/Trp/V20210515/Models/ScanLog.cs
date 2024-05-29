@@ -155,6 +155,27 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
+        /// <summary>
+        /// 产品Logo
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductLogo")]
+        public string ProductLogo{ get; set; }
+
+        /// <summary>
+        /// 风险状态
+        /// 0: 未知, 1:通过, 2:失败/风险, 3:存疑
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
+        /// <summary>
+        /// 是否开启验证
+        /// 0:否, 1:是
+        /// </summary>
+        [JsonProperty("Verify")]
+        public long? Verify{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -180,6 +201,9 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "MerchantName", this.MerchantName);
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
+            this.SetParamSimple(map, prefix + "ProductLogo", this.ProductLogo);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Verify", this.Verify);
         }
     }
 }

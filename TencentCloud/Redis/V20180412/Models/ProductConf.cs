@@ -67,7 +67,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public bool? Saleout{ get; set; }
 
         /// <summary>
-        /// 产品引擎。包括：腾讯云 CKV与社区版 Redis。
+        /// 产品引擎。Redis 或者 CKV。
         /// </summary>
         [JsonProperty("Engine")]
         public string Engine{ get; set; }

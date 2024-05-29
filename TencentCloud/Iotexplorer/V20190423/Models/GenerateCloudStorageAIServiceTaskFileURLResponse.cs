@@ -31,7 +31,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string FileURL{ get; set; }
 
         /// <summary>
-        /// 过期时间 UNIX 时间戳
+        /// 过期时间 UNIX 时间戳（最大不超过文件所属任务的过期时间）
         /// </summary>
         [JsonProperty("ExpireTime")]
         public ulong? ExpireTime{ get; set; }

@@ -38,6 +38,13 @@ namespace TencentCloud.Tcb.V20180608.Models
         public ulong? AppId{ get; set; }
 
         /// <summary>
+        /// WxAppId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WxAppId")]
+        public string WxAppId{ get; set; }
+
+        /// <summary>
         /// 环境id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -122,6 +129,20 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string Region{ get; set; }
 
         /// <summary>
+        /// 是否可以续费
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CanRenew")]
+        public bool? CanRenew{ get; set; }
+
+        /// <summary>
+        /// 自动续费标志
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoRenewFlag")]
+        public ulong? AutoRenewFlag{ get; set; }
+
+        /// <summary>
         /// 隔离时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -150,6 +171,13 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string UpdateTime{ get; set; }
 
         /// <summary>
+        /// 是否可以降配
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CanDowngrade")]
+        public bool? CanDowngrade{ get; set; }
+
+        /// <summary>
         /// 允许未登录访问
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -163,6 +191,20 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("VersionNumLimit")]
         public long? VersionNumLimit{ get; set; }
 
+        /// <summary>
+        /// Donut接入ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LongAccessId")]
+        public string LongAccessId{ get; set; }
+
+        /// <summary>
+        /// Donut接入域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AccessDomain")]
+        public string AccessDomain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -171,6 +213,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         {
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "WxAppId", this.WxAppId);
             this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
             this.SetParamSimple(map, prefix + "GatewayId", this.GatewayId);
             this.SetParamSimple(map, prefix + "GatewayName", this.GatewayName);
@@ -183,12 +226,17 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "L5Addr", this.L5Addr);
             this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "CanRenew", this.CanRenew);
+            this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "CanDowngrade", this.CanDowngrade);
             this.SetParamSimple(map, prefix + "AllowUncertified", this.AllowUncertified);
             this.SetParamSimple(map, prefix + "VersionNumLimit", this.VersionNumLimit);
+            this.SetParamSimple(map, prefix + "LongAccessId", this.LongAccessId);
+            this.SetParamSimple(map, prefix + "AccessDomain", this.AccessDomain);
         }
     }
 }

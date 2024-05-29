@@ -25,12 +25,6 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 执行的功能。
-        /// </summary>
-        [JsonProperty("Actions")]
-        public Action[] Actions{ get; set; }
-
-        /// <summary>
         /// 执行功能判断条件。
         /// 注意：满足该数组内任意一项条件，功能即可执行。
         /// </summary>
@@ -38,7 +32,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public RuleAndConditions[] Conditions{ get; set; }
 
         /// <summary>
-        /// 嵌套规则。
+        /// 执行的功能。注意：Actions 和 SubRules 不可都为空
+        /// </summary>
+        [JsonProperty("Actions")]
+        public Action[] Actions{ get; set; }
+
+        /// <summary>
+        /// 嵌套规则。注意：SubRules 和 Actions 不可都为空
         /// </summary>
         [JsonProperty("SubRules")]
         public SubRuleItem[] SubRules{ get; set; }
@@ -49,8 +49,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Actions.", this.Actions);
             this.SetParamArrayObj(map, prefix + "Conditions.", this.Conditions);
+            this.SetParamArrayObj(map, prefix + "Actions.", this.Actions);
             this.SetParamArrayObj(map, prefix + "SubRules.", this.SubRules);
         }
     }

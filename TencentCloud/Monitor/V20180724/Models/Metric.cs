@@ -108,6 +108,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("Periods")]
         public long?[] Periods{ get; set; }
 
+        /// <summary>
+        /// 是否延迟指标
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsLatenessMetric")]
+        public long? IsLatenessMetric{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -127,6 +134,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamArrayObj(map, prefix + "Operators.", this.Operators);
             this.SetParamArraySimple(map, prefix + "Periods.", this.Periods);
+            this.SetParamSimple(map, prefix + "IsLatenessMetric", this.IsLatenessMetric);
         }
     }
 }

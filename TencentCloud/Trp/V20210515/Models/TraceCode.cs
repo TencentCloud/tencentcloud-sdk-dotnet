@@ -102,6 +102,27 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("Level")]
         public ulong? Level{ get; set; }
 
+        /// <summary>
+        /// 码层级详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PackSpec")]
+        public PackSpec[] PackSpec{ get; set; }
+
+        /// <summary>
+        /// 场景码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SceneCode")]
+        public ulong? SceneCode{ get; set; }
+
+        /// <summary>
+        /// 流水码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SerialCode")]
+        public ulong? SerialCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +142,9 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
             this.SetParamSimple(map, prefix + "AgentId", this.AgentId);
             this.SetParamSimple(map, prefix + "Level", this.Level);
+            this.SetParamArrayObj(map, prefix + "PackSpec.", this.PackSpec);
+            this.SetParamSimple(map, prefix + "SceneCode", this.SceneCode);
+            this.SetParamSimple(map, prefix + "SerialCode", this.SerialCode);
         }
     }
 }

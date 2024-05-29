@@ -31,6 +31,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string EnvId{ get; set; }
 
         /// <summary>
+        /// 网关ID
+        /// </summary>
+        [JsonProperty("GatewayId")]
+        public string GatewayId{ get; set; }
+
+        /// <summary>
         /// 服务名称，精确匹配
         /// </summary>
         [JsonProperty("GatewayName")]
@@ -55,6 +61,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
+            this.SetParamSimple(map, prefix + "GatewayId", this.GatewayId);
             this.SetParamSimple(map, prefix + "GatewayName", this.GatewayName);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);

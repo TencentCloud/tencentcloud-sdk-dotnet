@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 需要创建快照的实例 ID。
+        /// 需要创建快照的实例 ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/product/1207/47573) 接口返回值中的 InstanceId	获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

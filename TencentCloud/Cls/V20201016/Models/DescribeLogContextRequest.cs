@@ -31,20 +31,19 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 日志时间,  需按照 UTC+8 时区将日志中的Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
+        /// 日志时间,  即SearchLog接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
         /// </summary>
         [JsonProperty("BTime")]
         public string BTime{ get; set; }
 
         /// <summary>
-        /// 日志包序号。SearchLog接口返回信息中Results结构体中的PkgId。
+        /// 日志包序号，即SearchLog接口返回信息中Results结构体中的PkgId。
         /// </summary>
         [JsonProperty("PkgId")]
         public string PkgId{ get; set; }
 
         /// <summary>
-        /// 日志包内一条日志的序号。
-        /// SearchLog接口返回信息中Results结构中的PkgLogId。
+        /// 日志包内一条日志的序号，即SearchLog接口返回信息中Results结构中的PkgLogId。
         /// </summary>
         [JsonProperty("PkgLogId")]
         public long? PkgLogId{ get; set; }
@@ -61,6 +60,33 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("NextLogs")]
         public long? NextLogs{ get; set; }
 
+        /// <summary>
+        /// 检索语句，对日志上下文进行过滤，最大长度为12KB
+        /// 语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a>构成，不支持SQL语句
+        /// </summary>
+        [JsonProperty("Query")]
+        public string Query{ get; set; }
+
+        /// <summary>
+        /// 上下文检索的开始时间，单位：毫秒级时间戳
+        /// 注意：
+        /// - From为空时，表示上下文检索的开始时间不做限制
+        /// - From和To非空时，From < To
+        /// - 暂时仅支持上海 / 弗吉尼亚/ 新加坡地域
+        /// </summary>
+        [JsonProperty("From")]
+        public ulong? From{ get; set; }
+
+        /// <summary>
+        /// 上下文检索的结束时间，单位：毫秒级时间戳。
+        /// 注意：
+        /// - To为空时，表示上下文检索的结束时间不做限制
+        /// - From和To非空时，From < To
+        /// - 暂时仅支持上海 / 弗吉尼亚/ 新加坡地域
+        /// </summary>
+        [JsonProperty("To")]
+        public ulong? To{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +99,9 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "PkgLogId", this.PkgLogId);
             this.SetParamSimple(map, prefix + "PrevLogs", this.PrevLogs);
             this.SetParamSimple(map, prefix + "NextLogs", this.NextLogs);
+            this.SetParamSimple(map, prefix + "Query", this.Query);
+            this.SetParamSimple(map, prefix + "From", this.From);
+            this.SetParamSimple(map, prefix + "To", this.To);
         }
     }
 }

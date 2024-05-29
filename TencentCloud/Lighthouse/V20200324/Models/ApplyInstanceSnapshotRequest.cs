@@ -25,13 +25,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 实例 ID。
+        /// 实例 ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/product/1207/47573) 接口返回值中的 InstanceId	获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 快照 ID。
+        /// 快照 ID。可通过 [DescribeSnapshots](https://cloud.tencent.com/document/product/1207/54388) 接口返回值中的 SnapshotId		获取。
         /// </summary>
         [JsonProperty("SnapshotId")]
         public string SnapshotId{ get; set; }

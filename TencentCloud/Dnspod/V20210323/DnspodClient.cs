@@ -28,7 +28,7 @@ namespace TencentCloud.Dnspod.V20210323
 
        private const string endpoint = "dnspod.tencentcloudapi.com";
        private const string version = "2021-03-23";
-       private const string sdkVersion = "SDK_NET_3.0.1015";
+       private const string sdkVersion = "SDK_NET_3.0.1016";
 
         /// <summary>
         /// Client constructor.
@@ -1263,6 +1263,27 @@ namespace TencentCloud.Dnspod.V20210323
         public ModifyDomainStatusResponse ModifyDomainStatusSync(ModifyDomainStatusRequest req)
         {
             return InternalRequestAsync<ModifyDomainStatusResponse>(req, "ModifyDomainStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改域名所属分组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainToGroupRequest"/></param>
+        /// <returns><see cref="ModifyDomainToGroupResponse"/></returns>
+        public Task<ModifyDomainToGroupResponse> ModifyDomainToGroup(ModifyDomainToGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyDomainToGroupResponse>(req, "ModifyDomainToGroup");
+        }
+
+        /// <summary>
+        /// 修改域名所属分组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainToGroupRequest"/></param>
+        /// <returns><see cref="ModifyDomainToGroupResponse"/></returns>
+        public ModifyDomainToGroupResponse ModifyDomainToGroupSync(ModifyDomainToGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyDomainToGroupResponse>(req, "ModifyDomainToGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

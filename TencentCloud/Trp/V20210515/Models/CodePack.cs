@@ -192,6 +192,41 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("RelateType")]
         public long? RelateType{ get; set; }
 
+        /// <summary>
+        /// 场景码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SceneCode")]
+        public long? SceneCode{ get; set; }
+
+        /// <summary>
+        /// 码规则
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CodeRule")]
+        public string CodeRule{ get; set; }
+
+        /// <summary>
+        /// 已使用码数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UsedAmount")]
+        public long? UsedAmount{ get; set; }
+
+        /// <summary>
+        /// 开始流水号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SerialStart")]
+        public ulong? SerialStart{ get; set; }
+
+        /// <summary>
+        /// 结束流水号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SerialEnd")]
+        public ulong? SerialEnd{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -222,6 +257,11 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "ProductSpecification", this.ProductSpecification);
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "RelateType", this.RelateType);
+            this.SetParamSimple(map, prefix + "SceneCode", this.SceneCode);
+            this.SetParamSimple(map, prefix + "CodeRule", this.CodeRule);
+            this.SetParamSimple(map, prefix + "UsedAmount", this.UsedAmount);
+            this.SetParamSimple(map, prefix + "SerialStart", this.SerialStart);
+            this.SetParamSimple(map, prefix + "SerialEnd", this.SerialEnd);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 实例 ID。
+        /// 实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/1207/47573">DescribeInstances</a> 接口返回值中的 InstanceId 获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -35,6 +35,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// <li>bundle-id</li>按照【套餐 ID】进行过滤。
         /// 类型：String
         /// 必选：否
+        /// 可通过<a href="https://cloud.tencent.com/document/product/1207/47575"> DescribeBundles </a>接口返回值中的 BundleId 获取。
         /// <li>support-platform-type</li>按照【系统类型】进行过滤。
         /// 取值： LINUX_UNIX（Linux/Unix系统）；WINDOWS（Windows 系统）
         /// 类型：String

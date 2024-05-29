@@ -61,7 +61,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Privilege{ get; set; }
 
         /// <summary>
-        /// true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密
+        /// true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密。
         /// </summary>
         [JsonProperty("NoAuth")]
         public bool? NoAuth{ get; set; }

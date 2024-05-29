@@ -25,13 +25,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 模板ID。
+        /// 防火墙模板ID。可通过 [DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874) 接口返回值中的 TemplateId	获取。
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 重置后的防火墙模板规则列表。
+        /// 重置后的防火墙模板规则列表。每次请求批量防火墙规则的上限为 100。
         /// </summary>
         [JsonProperty("TemplateRules")]
         public FirewallRule[] TemplateRules{ get; set; }

@@ -63,7 +63,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Tips{ get; set; }
 
         /// <summary>
-        /// 参数说明。
+        /// 参数枚举值。
         /// </summary>
         [JsonProperty("EnumValue")]
         public string[] EnumValue{ get; set; }

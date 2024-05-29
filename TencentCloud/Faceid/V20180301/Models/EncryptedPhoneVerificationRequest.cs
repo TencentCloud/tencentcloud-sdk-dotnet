@@ -46,8 +46,9 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// 敏感信息的加密方式，目前支持明文、MD5和SHA256加密传输，参数取值：
         /// 
         /// 0：明文，不加密
-        /// 1:   使用MD5加密
-        /// 2:   使用SHA256
+        /// 1：使用MD5加密
+        /// 2：使用SHA256
+        /// 3：使用SM3加密
         /// </summary>
         [JsonProperty("EncryptionMode")]
         public string EncryptionMode{ get; set; }

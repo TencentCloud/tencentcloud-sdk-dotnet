@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20191016
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2019-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1015";
+       private const string sdkVersion = "SDK_NET_3.0.1016";
 
         /// <summary>
         /// Client constructor.

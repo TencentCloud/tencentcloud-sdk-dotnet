@@ -37,7 +37,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string FileName{ get; set; }
 
         /// <summary>
-        /// 过期时间 UNIX 时间戳（默认值为当前时间 1 小时后）
+        /// 过期时间 UNIX 时间戳（默认值为当前时间 1 小时后，最大不超过文件所属任务的过期时间）
         /// </summary>
         [JsonProperty("ExpireTime")]
         public ulong? ExpireTime{ get; set; }

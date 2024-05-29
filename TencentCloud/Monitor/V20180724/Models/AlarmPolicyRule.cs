@@ -161,6 +161,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("HierarchicalValue")]
         public AlarmHierarchicalValue HierarchicalValue{ get; set; }
 
+        /// <summary>
+        /// 是否延迟指标
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsLatenessMetric")]
+        public long? IsLatenessMetric{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +191,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "ValueMax", this.ValueMax);
             this.SetParamSimple(map, prefix + "ValueMin", this.ValueMin);
             this.SetParamObj(map, prefix + "HierarchicalValue.", this.HierarchicalValue);
+            this.SetParamSimple(map, prefix + "IsLatenessMetric", this.IsLatenessMetric);
         }
     }
 }
