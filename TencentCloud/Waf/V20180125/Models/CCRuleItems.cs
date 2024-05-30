@@ -116,6 +116,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("SessionApplied")]
         public long?[] SessionApplied{ get; set; }
 
+        /// <summary>
+        /// 创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public ulong? CreateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +144,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
             this.SetParamArraySimple(map, prefix + "SessionApplied.", this.SessionApplied);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

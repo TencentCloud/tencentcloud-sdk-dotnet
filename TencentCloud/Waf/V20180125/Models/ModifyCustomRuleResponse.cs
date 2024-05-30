@@ -25,6 +25,12 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
+        /// 操作的状态码，如果所有的资源操作成功则返回的是成功的状态码，如果有资源操作失败则需要解析Message的内容来查看哪个资源失败
+        /// </summary>
+        [JsonProperty("Success")]
+        public ResponseCode Success{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "Success.", this.Success);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

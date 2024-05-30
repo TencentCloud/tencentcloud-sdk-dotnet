@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1016";
+       private const string sdkVersion = "SDK_NET_3.0.1017";
 
         /// <summary>
         /// Client constructor.
@@ -3068,6 +3068,9 @@ namespace TencentCloud.Ess.V20201111
         /// HttpProfile httpProfile = new HttpProfile();
         /// httpProfile.setEndpoint("file.test.ess.tencent.cn");
         /// ```
+        /// 
+        /// <font color="red">相关视频指引</font> <br>
+        /// 1. <a href="https://dyn.ess.tencent.cn/guide/apivideo/ess_uploadfiles.mp4" target="_blank">上传用于合同发起的PDF文件代码编写示例</a><br>
         /// </summary>
         /// <param name="req"><see cref="UploadFilesRequest"/></param>
         /// <returns><see cref="UploadFilesResponse"/></returns>
@@ -3090,6 +3093,9 @@ namespace TencentCloud.Ess.V20201111
         /// HttpProfile httpProfile = new HttpProfile();
         /// httpProfile.setEndpoint("file.test.ess.tencent.cn");
         /// ```
+        /// 
+        /// <font color="red">相关视频指引</font> <br>
+        /// 1. <a href="https://dyn.ess.tencent.cn/guide/apivideo/ess_uploadfiles.mp4" target="_blank">上传用于合同发起的PDF文件代码编写示例</a><br>
         /// </summary>
         /// <param name="req"><see cref="UploadFilesRequest"/></param>
         /// <returns><see cref="UploadFilesResponse"/></returns>

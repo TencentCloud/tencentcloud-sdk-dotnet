@@ -62,7 +62,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Edition{ get; set; }
 
         /// <summary>
-        /// 是否为批量防护IP黑白名单，当为批量防护IP黑白名单时，取值为batch，否则为空
+        /// 可选值为：batch（批量添加）、bot、cc、custom（非批量添加时的默认值）
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }

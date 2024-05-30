@@ -48,6 +48,12 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("DepartmentId")]
         public string DepartmentId{ get; set; }
 
+        /// <summary>
+        /// 网络域Id
+        /// </summary>
+        [JsonProperty("DomainId")]
+        public string DomainId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamArraySimple(map, prefix + "GroupIdSet.", this.GroupIdSet);
             this.SetParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
+            this.SetParamSimple(map, prefix + "DomainId", this.DomainId);
         }
     }
 }

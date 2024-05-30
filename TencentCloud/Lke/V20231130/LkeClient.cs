@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1016";
+       private const string sdkVersion = "SDK_NET_3.0.1017";
 
         /// <summary>
         /// Client constructor.
@@ -96,7 +96,7 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// 创建只是引擎应用，包括：知识管理应用、知识摘要应用、标签提取应用。
+        /// 创建知识引擎应用。
         /// </summary>
         /// <param name="req"><see cref="CreateAppRequest"/></param>
         /// <returns><see cref="CreateAppResponse"/></returns>
@@ -106,7 +106,7 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// 创建只是引擎应用，包括：知识管理应用、知识摘要应用、标签提取应用。
+        /// 创建知识引擎应用。
         /// </summary>
         /// <param name="req"><see cref="CreateAppRequest"/></param>
         /// <returns><see cref="CreateAppResponse"/></returns>

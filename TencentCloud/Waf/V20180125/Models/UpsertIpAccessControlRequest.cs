@@ -32,7 +32,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// ip 参数列表，json数组由ip，source，note，action，valid_ts组成。ip对应配置的ip地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
+        /// IP 参数列表，json数组由IP，source，note，action，valid_ts组成。IP对应配置的IP地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
         /// </summary>
         [JsonProperty("Items")]
         public string[] Items{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Edition{ get; set; }
 
         /// <summary>
-        /// 是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，否则为空
+        /// 可选值为：batch（批量添加）、bot、cc、custom（非批量添加时的默认值）
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }

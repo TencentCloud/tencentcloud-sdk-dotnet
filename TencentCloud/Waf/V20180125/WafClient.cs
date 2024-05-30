@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1016";
+       private const string sdkVersion = "SDK_NET_3.0.1017";
 
         /// <summary>
         /// Client constructor.
@@ -520,7 +520,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// Waf IP黑白名单Delete接口
+        /// Waf IP黑白名单Delete接口（建议使用DeleteIpAccessControlV2来替换当前接口）
         /// </summary>
         /// <param name="req"><see cref="DeleteIpAccessControlRequest"/></param>
         /// <returns><see cref="DeleteIpAccessControlResponse"/></returns>
@@ -530,7 +530,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// Waf IP黑白名单Delete接口
+        /// Waf IP黑白名单Delete接口（建议使用DeleteIpAccessControlV2来替换当前接口）
         /// </summary>
         /// <param name="req"><see cref="DeleteIpAccessControlRequest"/></param>
         /// <returns><see cref="DeleteIpAccessControlResponse"/></returns>
@@ -2903,7 +2903,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// Waf IP黑白名单Upsert接口
+        /// Waf IP黑白名单Upsert接口（建议使用CreateIpAccessControl、ModifyIpAccessControl来替换当前接口）
         /// </summary>
         /// <param name="req"><see cref="UpsertIpAccessControlRequest"/></param>
         /// <returns><see cref="UpsertIpAccessControlResponse"/></returns>
@@ -2913,7 +2913,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// Waf IP黑白名单Upsert接口
+        /// Waf IP黑白名单Upsert接口（建议使用CreateIpAccessControl、ModifyIpAccessControl来替换当前接口）
         /// </summary>
         /// <param name="req"><see cref="UpsertIpAccessControlRequest"/></param>
         /// <returns><see cref="UpsertIpAccessControlResponse"/></returns>

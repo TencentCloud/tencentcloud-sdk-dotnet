@@ -60,6 +60,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("By")]
         public string By{ get; set; }
 
+        /// <summary>
+        /// 查询的域名列表,访问控制页面不用传
+        /// </summary>
+        [JsonProperty("DomainList")]
+        public string[] DomainList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "By", this.By);
+            this.SetParamArraySimple(map, prefix + "DomainList.", this.DomainList);
         }
     }
 }

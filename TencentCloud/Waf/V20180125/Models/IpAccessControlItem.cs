@@ -89,6 +89,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("IpList")]
         public string[] IpList{ get; set; }
 
+        /// <summary>
+        /// 规则创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public ulong? CreateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -105,6 +112,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamArraySimple(map, prefix + "IpList.", this.IpList);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

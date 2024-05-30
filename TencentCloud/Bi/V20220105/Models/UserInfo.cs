@@ -57,6 +57,20 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("AreaCode")]
         public string AreaCode{ get; set; }
 
+        /// <summary>
+        /// 企微账号id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AppUserId")]
+        public string AppUserId{ get; set; }
+
+        /// <summary>
+        /// 企微账号名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AppUserName")]
+        public string AppUserName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +82,8 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "Email", this.Email);
             this.SetParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
             this.SetParamSimple(map, prefix + "AreaCode", this.AreaCode);
+            this.SetParamSimple(map, prefix + "AppUserId", this.AppUserId);
+            this.SetParamSimple(map, prefix + "AppUserName", this.AppUserName);
         }
     }
 }

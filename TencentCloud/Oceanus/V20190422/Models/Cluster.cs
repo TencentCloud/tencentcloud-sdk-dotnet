@@ -294,6 +294,27 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("WebUIType")]
         public long? WebUIType{ get; set; }
 
+        /// <summary>
+        /// 2 独享集群
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Type")]
+        public long? Type{ get; set; }
+
+        /// <summary>
+        /// 子eks集群
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubEks")]
+        public SubEks SubEks{ get; set; }
+
+        /// <summary>
+        /// 上级集群
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AgentSerialId")]
+        public string AgentSerialId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -341,6 +362,9 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamArrayObj(map, prefix + "Orders.", this.Orders);
             this.SetParamArrayObj(map, prefix + "SqlGateways.", this.SqlGateways);
             this.SetParamSimple(map, prefix + "WebUIType", this.WebUIType);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamObj(map, prefix + "SubEks.", this.SubEks);
+            this.SetParamSimple(map, prefix + "AgentSerialId", this.AgentSerialId);
         }
     }
 }

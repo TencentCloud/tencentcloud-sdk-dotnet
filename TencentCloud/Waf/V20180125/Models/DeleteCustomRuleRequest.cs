@@ -42,6 +42,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Edition")]
         public string Edition{ get; set; }
 
+        /// <summary>
+        /// 批量删除的规则列表
+        /// </summary>
+        [JsonProperty("DomainRuleIdList")]
+        public DomainRuleId[] DomainRuleIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "Edition", this.Edition);
+            this.SetParamArrayObj(map, prefix + "DomainRuleIdList.", this.DomainRuleIdList);
         }
     }
 }

@@ -88,6 +88,27 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("CloudType")]
         public string CloudType{ get; set; }
 
+        /// <summary>
+        /// 标记clbwaf类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlbType")]
+        public string AlbType{ get; set; }
+
+        /// <summary>
+        /// BOT开关状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BotStatus")]
+        public long? BotStatus{ get; set; }
+
+        /// <summary>
+        /// API开关状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApiStatus")]
+        public long? ApiStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -104,6 +125,9 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "WriteConfig", this.WriteConfig);
             this.SetParamSimple(map, prefix + "Cls", this.Cls);
             this.SetParamSimple(map, prefix + "CloudType", this.CloudType);
+            this.SetParamSimple(map, prefix + "AlbType", this.AlbType);
+            this.SetParamSimple(map, prefix + "BotStatus", this.BotStatus);
+            this.SetParamSimple(map, prefix + "ApiStatus", this.ApiStatus);
         }
     }
 }

@@ -66,6 +66,18 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Strategies")]
         public Strategy[] Strategies{ get; set; }
 
+        /// <summary>
+        /// 定时任务类型
+        /// </summary>
+        [JsonProperty("JobType")]
+        public string JobType{ get; set; }
+
+        /// <summary>
+        /// 定时任务配置
+        /// </summary>
+        [JsonProperty("JobDateTime")]
+        public JobDateTime JobDateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "SortId", this.SortId);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamArrayObj(map, prefix + "Strategies.", this.Strategies);
+            this.SetParamSimple(map, prefix + "JobType", this.JobType);
+            this.SetParamObj(map, prefix + "JobDateTime.", this.JobDateTime);
         }
     }
 }

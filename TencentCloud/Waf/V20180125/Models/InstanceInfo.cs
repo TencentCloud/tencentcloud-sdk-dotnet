@@ -280,6 +280,20 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("LastQpsExceedTime")]
         public string LastQpsExceedTime{ get; set; }
 
+        /// <summary>
+        /// 小程序安全接入ID数量扩张包
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MiniExtendPkg")]
+        public MiniExtendPkg MiniExtendPkg{ get; set; }
+
+        /// <summary>
+        /// 计费项
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BillingItem")]
+        public string BillingItem{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -324,6 +338,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "MiniQpsStandard", this.MiniQpsStandard);
             this.SetParamSimple(map, prefix + "MiniMaxQPS", this.MiniMaxQPS);
             this.SetParamSimple(map, prefix + "LastQpsExceedTime", this.LastQpsExceedTime);
+            this.SetParamObj(map, prefix + "MiniExtendPkg.", this.MiniExtendPkg);
+            this.SetParamSimple(map, prefix + "BillingItem", this.BillingItem);
         }
     }
 }

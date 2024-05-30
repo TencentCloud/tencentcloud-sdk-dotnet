@@ -93,6 +93,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ScanEndTime")]
         public string ScanEndTime{ get; set; }
 
+        /// <summary>
+        /// 排除扫描的镜像
+        /// </summary>
+        [JsonProperty("ExcludeImages")]
+        public string[] ExcludeImages{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +116,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ContainerRunning", this.ContainerRunning);
             this.SetParamSimple(map, prefix + "ScanScope", this.ScanScope);
             this.SetParamSimple(map, prefix + "ScanEndTime", this.ScanEndTime);
+            this.SetParamArraySimple(map, prefix + "ExcludeImages.", this.ExcludeImages);
         }
     }
 }

@@ -31,13 +31,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 机器人头像
+        /// 应用头像
         /// </summary>
         [JsonProperty("Avatar")]
         public string Avatar{ get; set; }
 
         /// <summary>
-        /// 机器人描述
+        /// 应用描述
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }

@@ -123,6 +123,20 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("IpPortSet")]
         public string[] IpPortSet{ get; set; }
 
+        /// <summary>
+        /// 网络域Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DomainId")]
+        public string DomainId{ get; set; }
+
+        /// <summary>
+        /// 网络域名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DomainName")]
+        public string DomainName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,6 +159,8 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamObj(map, prefix + "Resource.", this.Resource);
             this.SetParamObj(map, prefix + "Department.", this.Department);
             this.SetParamArraySimple(map, prefix + "IpPortSet.", this.IpPortSet);
+            this.SetParamSimple(map, prefix + "DomainId", this.DomainId);
+            this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
         }
     }
 }

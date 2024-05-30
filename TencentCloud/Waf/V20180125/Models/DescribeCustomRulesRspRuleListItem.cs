@@ -112,6 +112,48 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
+        /// <summary>
+        /// 定时任务类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("JobType")]
+        public string JobType{ get; set; }
+
+        /// <summary>
+        /// 定时任务配置信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("JobDateTime")]
+        public JobDateTime JobDateTime{ get; set; }
+
+        /// <summary>
+        /// 周期任务粒度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CronType")]
+        public string CronType{ get; set; }
+
+        /// <summary>
+        /// 自定义标签，风控规则用，用来表示是内置规则还是用户自定义的
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Label")]
+        public string Label{ get; set; }
+
+        /// <summary>
+        /// 拦截页面id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PageId")]
+        public string PageId{ get; set; }
+
+        /// <summary>
+        /// 域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -132,6 +174,12 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
             this.SetParamSimple(map, prefix + "Source", this.Source);
+            this.SetParamSimple(map, prefix + "JobType", this.JobType);
+            this.SetParamObj(map, prefix + "JobDateTime.", this.JobDateTime);
+            this.SetParamSimple(map, prefix + "CronType", this.CronType);
+            this.SetParamSimple(map, prefix + "Label", this.Label);
+            this.SetParamSimple(map, prefix + "PageId", this.PageId);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
         }
     }
 }

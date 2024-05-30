@@ -167,6 +167,13 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("InValidateAppRange")]
         public bool? InValidateAppRange{ get; set; }
 
+        /// <summary>
+        /// 用户openid
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AppOpenUserId")]
+        public string AppOpenUserId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -194,6 +201,7 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "AppUserAliasName", this.AppUserAliasName);
             this.SetParamSimple(map, prefix + "AppUserName", this.AppUserName);
             this.SetParamSimple(map, prefix + "InValidateAppRange", this.InValidateAppRange);
+            this.SetParamSimple(map, prefix + "AppOpenUserId", this.AppOpenUserId);
         }
     }
 }

@@ -36,6 +36,12 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
+        /// <summary>
+        /// 网络域ID
+        /// </summary>
+        [JsonProperty("DomainId")]
+        public string DomainId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Dasb.V20191018.Models
         {
             this.SetParamArraySimple(map, prefix + "DeviceIdSet.", this.DeviceIdSet);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
+            this.SetParamSimple(map, prefix + "DomainId", this.DomainId);
         }
     }
 }

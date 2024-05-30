@@ -87,6 +87,36 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("ExpireTime")]
         public ulong? ExpireTime{ get; set; }
 
+        /// <summary>
+        /// 定时任务类型
+        /// </summary>
+        [JsonProperty("JobType")]
+        public string JobType{ get; set; }
+
+        /// <summary>
+        /// 定时任务配置
+        /// </summary>
+        [JsonProperty("JobDateTime")]
+        public JobDateTime JobDateTime{ get; set; }
+
+        /// <summary>
+        /// 规则来源，判断是不是小程序的
+        /// </summary>
+        [JsonProperty("Source")]
+        public string Source{ get; set; }
+
+        /// <summary>
+        /// 开关状态，小程序风控规则的时候传该值
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
+        /// <summary>
+        /// 拦截页面id
+        /// </summary>
+        [JsonProperty("PageId")]
+        public string PageId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +133,11 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Bypass", this.Bypass);
             this.SetParamSimple(map, prefix + "SortId", this.SortId);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "JobType", this.JobType);
+            this.SetParamObj(map, prefix + "JobDateTime.", this.JobDateTime);
+            this.SetParamSimple(map, prefix + "Source", this.Source);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "PageId", this.PageId);
         }
     }
 }

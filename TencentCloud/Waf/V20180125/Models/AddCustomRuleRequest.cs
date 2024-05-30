@@ -37,12 +37,6 @@ namespace TencentCloud.Waf.V20180125.Models
         public string SortId{ get; set; }
 
         /// <summary>
-        /// 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
-        /// </summary>
-        [JsonProperty("ExpireTime")]
-        public string ExpireTime{ get; set; }
-
-        /// <summary>
         /// 策略详情
         /// </summary>
         [JsonProperty("Strategies")]
@@ -67,6 +61,12 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Redirect{ get; set; }
 
         /// <summary>
+        /// 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public string ExpireTime{ get; set; }
+
+        /// <summary>
         /// WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
         /// </summary>
         [JsonProperty("Edition")]
@@ -84,6 +84,42 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("EventId")]
         public string EventId{ get; set; }
 
+        /// <summary>
+        /// 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
+        /// </summary>
+        [JsonProperty("JobType")]
+        public string JobType{ get; set; }
+
+        /// <summary>
+        /// 规则执行的时间
+        /// </summary>
+        [JsonProperty("JobDateTime")]
+        public JobDateTime JobDateTime{ get; set; }
+
+        /// <summary>
+        /// 规则来源，判断是不是小程序的
+        /// </summary>
+        [JsonProperty("Source")]
+        public string Source{ get; set; }
+
+        /// <summary>
+        /// 规则标签，小程序规则用，标识是内置规则还是自定义规则
+        /// </summary>
+        [JsonProperty("Label")]
+        public string Label{ get; set; }
+
+        /// <summary>
+        /// 开关状态，小程序风控规则的时候传该值
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
+        /// <summary>
+        /// 拦截页面id
+        /// </summary>
+        [JsonProperty("PageId")]
+        public string PageId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -92,14 +128,20 @@ namespace TencentCloud.Waf.V20180125.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "SortId", this.SortId);
-            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamArrayObj(map, prefix + "Strategies.", this.Strategies);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
             this.SetParamSimple(map, prefix + "Redirect", this.Redirect);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "Edition", this.Edition);
             this.SetParamSimple(map, prefix + "Bypass", this.Bypass);
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
+            this.SetParamSimple(map, prefix + "JobType", this.JobType);
+            this.SetParamObj(map, prefix + "JobDateTime.", this.JobDateTime);
+            this.SetParamSimple(map, prefix + "Source", this.Source);
+            this.SetParamSimple(map, prefix + "Label", this.Label);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "PageId", this.PageId);
         }
     }
 }

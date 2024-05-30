@@ -25,7 +25,7 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 机器人ID
+        /// 应用ID
         /// </summary>
         [JsonProperty("BotBizId")]
         public string BotBizId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string FileType{ get; set; }
 
         /// <summary>
-        /// cos路径
+        /// 平台cos路径，与DescribeStorageCredential接口查询UploadPath参数保持一致
         /// </summary>
         [JsonProperty("CosUrl")]
         public string CosUrl{ get; set; }

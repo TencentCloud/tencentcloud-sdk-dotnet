@@ -68,6 +68,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Uri")]
         public string Uri{ get; set; }
 
+        /// <summary>
+        /// 修改时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ModifyTime")]
+        public string ModifyTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +88,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamArrayObj(map, prefix + "Strategies.", this.Strategies);
             this.SetParamSimple(map, prefix + "Uri", this.Uri);
+            this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         }
     }
 }

@@ -206,6 +206,20 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("ClbSet")]
         public Clb[] ClbSet{ get; set; }
 
+        /// <summary>
+        /// 网络域个数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DomainCount")]
+        public long? DomainCount{ get; set; }
+
+        /// <summary>
+        /// 已使用网络域个数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UsedDomainCount")]
+        public ulong? UsedDomainCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -242,6 +256,8 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "PackageNode", this.PackageNode);
             this.SetParamSimple(map, prefix + "LogDeliveryArgs", this.LogDeliveryArgs);
             this.SetParamArrayObj(map, prefix + "ClbSet.", this.ClbSet);
+            this.SetParamSimple(map, prefix + "DomainCount", this.DomainCount);
+            this.SetParamSimple(map, prefix + "UsedDomainCount", this.UsedDomainCount);
         }
     }
 }

@@ -103,6 +103,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("Namespace")]
         public string[] Namespace{ get; set; }
 
+        /// <summary>
+        /// 排除的镜像资产id
+        /// </summary>
+        [JsonProperty("ExcludeImageAssetIds")]
+        public ulong?[] ExcludeImageAssetIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,6 +128,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ScanScope", this.ScanScope);
             this.SetParamArraySimple(map, prefix + "RegistryType.", this.RegistryType);
             this.SetParamArraySimple(map, prefix + "Namespace.", this.Namespace);
+            this.SetParamArraySimple(map, prefix + "ExcludeImageAssetIds.", this.ExcludeImageAssetIds);
         }
     }
 }

@@ -288,6 +288,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("ProxyBuffer")]
         public long? ProxyBuffer{ get; set; }
 
+        /// <summary>
+        /// 0: 禁用拨测, 1: 启用拨测。默认启用拨测
+        /// </summary>
+        [JsonProperty("ProbeStatus")]
+        public long? ProbeStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -331,6 +337,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Note", this.Note);
             this.SetParamSimple(map, prefix + "UpstreamHost", this.UpstreamHost);
             this.SetParamSimple(map, prefix + "ProxyBuffer", this.ProxyBuffer);
+            this.SetParamSimple(map, prefix + "ProbeStatus", this.ProbeStatus);
         }
     }
 }
