@@ -25,10 +25,25 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 唯一标识AI转录任务。
+        /// 查询任务状态，不使用时传入空字符串。
+        /// 有两种查询方式：
+        /// 1、只填写TaskId，这种方式使用TaskId来查询任务
+        /// 2、TaskId为空字符串，填写SdkAppId和SessionId，这种方式不需要使用TaskId查询任务
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
+
+        /// <summary>
+        /// TRTC的SdkAppId，和SessionId配合使用。
+        /// </summary>
+        [JsonProperty("SdkAppId")]
+        public long? SdkAppId{ get; set; }
+
+        /// <summary>
+        /// 开启转录任务时传入的SessionId，和SdkAppId配合使用。
+        /// </summary>
+        [JsonProperty("SessionId")]
+        public string SessionId{ get; set; }
 
 
         /// <summary>
@@ -37,6 +52,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
         }
     }
 }

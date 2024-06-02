@@ -28,7 +28,7 @@ namespace TencentCloud.Dsgc.V20190723
 
        private const string endpoint = "dsgc.tencentcloudapi.com";
        private const string version = "2019-07-23";
-       private const string sdkVersion = "SDK_NET_3.0.1017";
+       private const string sdkVersion = "SDK_NET_3.0.1018";
 
         /// <summary>
         /// Client constructor.

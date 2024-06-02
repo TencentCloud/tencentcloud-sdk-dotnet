@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1017";
+       private const string sdkVersion = "SDK_NET_3.0.1018";
 
         /// <summary>
         /// Client constructor.

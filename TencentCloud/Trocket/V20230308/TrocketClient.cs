@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1017";
+       private const string sdkVersion = "SDK_NET_3.0.1018";
 
         /// <summary>
         /// Client constructor.
@@ -434,6 +434,37 @@ namespace TencentCloud.Trocket.V20230308
         public DescribeConsumerGroupListResponse DescribeConsumerGroupListSync(DescribeConsumerGroupListRequest req)
         {
             return InternalRequestAsync<DescribeConsumerGroupListResponse>(req, "DescribeConsumerGroupList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取实例列表，Filters参数使用说明如下：
+        /// 1. InstanceName, 名称模糊查询
+        /// 2. InstanceId，实例ID查询
+        /// 3. InstanceType, 实例类型查询，支持多选
+        /// 4. Version，实例版本查询
+        /// 当使用TagFilters查询时，Filters参数失效。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFusionInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeFusionInstanceListResponse"/></returns>
+        public Task<DescribeFusionInstanceListResponse> DescribeFusionInstanceList(DescribeFusionInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeFusionInstanceListResponse>(req, "DescribeFusionInstanceList");
+        }
+
+        /// <summary>
+        /// 获取实例列表，Filters参数使用说明如下：
+        /// 1. InstanceName, 名称模糊查询
+        /// 2. InstanceId，实例ID查询
+        /// 3. InstanceType, 实例类型查询，支持多选
+        /// 4. Version，实例版本查询
+        /// 当使用TagFilters查询时，Filters参数失效。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFusionInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeFusionInstanceListResponse"/></returns>
+        public DescribeFusionInstanceListResponse DescribeFusionInstanceListSync(DescribeFusionInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeFusionInstanceListResponse>(req, "DescribeFusionInstanceList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

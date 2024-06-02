@@ -25,16 +25,33 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 起始时间。
+        /// 任务开始时间。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// 转录任务状态。
+        /// 有4个值：
+        /// 1、Idle表示任务未开始
+        /// 2、Preparing表示任务准备中
+        /// 3、InProgress表示任务正在运行
+        /// 4、Stopped表示任务已停止，正在清理资源中
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
+
+        /// <summary>
+        /// 唯一标识一次任务。
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
+
+        /// <summary>
+        /// 开启转录任务时填写的SessionId，如果没写则不返回。
+        /// </summary>
+        [JsonProperty("SessionId")]
+        public string SessionId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +67,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         {
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

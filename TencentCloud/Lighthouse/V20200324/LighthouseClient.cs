@@ -28,7 +28,7 @@ namespace TencentCloud.Lighthouse.V20200324
 
        private const string endpoint = "lighthouse.tencentcloudapi.com";
        private const string version = "2020-03-24";
-       private const string sdkVersion = "SDK_NET_3.0.1017";
+       private const string sdkVersion = "SDK_NET_3.0.1018";
 
         /// <summary>
         /// Client constructor.
