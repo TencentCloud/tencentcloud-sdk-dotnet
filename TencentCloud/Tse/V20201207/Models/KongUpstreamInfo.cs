@@ -171,6 +171,20 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("ScfCamAuthEnable")]
         public bool? ScfCamAuthEnable{ get; set; }
 
+        /// <summary>
+        /// 云函数是否开启Base64编码，默认为false
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScfIsBase64Encoded")]
+        public bool? ScfIsBase64Encoded{ get; set; }
+
+        /// <summary>
+        /// 云函数是否开启响应集成，默认为false
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScfIsIntegratedResponse")]
+        public bool? ScfIsIntegratedResponse{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +212,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "RealSourceType", this.RealSourceType);
             this.SetParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
             this.SetParamSimple(map, prefix + "ScfCamAuthEnable", this.ScfCamAuthEnable);
+            this.SetParamSimple(map, prefix + "ScfIsBase64Encoded", this.ScfIsBase64Encoded);
+            this.SetParamSimple(map, prefix + "ScfIsIntegratedResponse", this.ScfIsIntegratedResponse);
         }
     }
 }

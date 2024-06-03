@@ -73,6 +73,20 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
+        /// <summary>
+        /// 实例节点ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstNodeId")]
+        public string InstNodeId{ get; set; }
+
+        /// <summary>
+        /// 节点角色
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstNodeRole")]
+        public string InstNodeRole{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +100,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "InstNodeId", this.InstNodeId);
+            this.SetParamSimple(map, prefix + "InstNodeRole", this.InstNodeRole);
         }
     }
 }

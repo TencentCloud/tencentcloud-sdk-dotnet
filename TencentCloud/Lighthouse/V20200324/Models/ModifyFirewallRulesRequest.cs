@@ -25,13 +25,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 实例 ID。
+        /// 实例 ID。实例的ID可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 防火墙规则列表。
+        /// 防火墙规则列表。列表长度最大值是100。
         /// </summary>
         [JsonProperty("FirewallRules")]
         public FirewallRule[] FirewallRules{ get; set; }

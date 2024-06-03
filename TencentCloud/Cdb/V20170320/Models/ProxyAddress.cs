@@ -132,6 +132,20 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("ProxyAllocation")]
         public ProxyAllocation[] ProxyAllocation{ get; set; }
 
+        /// <summary>
+        /// 接入模式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AccessMode")]
+        public string AccessMode{ get; set; }
+
+        /// <summary>
+        /// 是否开启自动负载均衡
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoLoadBalance")]
+        public bool? AutoLoadBalance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -154,6 +168,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "ConnectionPool", this.ConnectionPool);
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
             this.SetParamArrayObj(map, prefix + "ProxyAllocation.", this.ProxyAllocation);
+            this.SetParamSimple(map, prefix + "AccessMode", this.AccessMode);
+            this.SetParamSimple(map, prefix + "AutoLoadBalance", this.AutoLoadBalance);
         }
     }
 }

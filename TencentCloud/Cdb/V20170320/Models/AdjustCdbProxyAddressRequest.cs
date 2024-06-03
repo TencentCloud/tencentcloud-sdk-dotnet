@@ -87,6 +87,7 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 是否开启连接池
+        /// 注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
         /// </summary>
         [JsonProperty("ConnectionPool")]
         public bool? ConnectionPool{ get; set; }
@@ -96,6 +97,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         [JsonProperty("ProxyAllocation")]
         public ProxyAllocation[] ProxyAllocation{ get; set; }
+
+        /// <summary>
+        /// 是否开启自适应负载均衡
+        /// </summary>
+        [JsonProperty("AutoLoadBalance")]
+        public bool? AutoLoadBalance{ get; set; }
+
+        /// <summary>
+        /// 访问模式：就近访问，均衡分配
+        /// </summary>
+        [JsonProperty("AccessMode")]
+        public string AccessMode{ get; set; }
 
 
         /// <summary>
@@ -115,6 +128,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "TransSplit", this.TransSplit);
             this.SetParamSimple(map, prefix + "ConnectionPool", this.ConnectionPool);
             this.SetParamArrayObj(map, prefix + "ProxyAllocation.", this.ProxyAllocation);
+            this.SetParamSimple(map, prefix + "AutoLoadBalance", this.AutoLoadBalance);
+            this.SetParamSimple(map, prefix + "AccessMode", this.AccessMode);
         }
     }
 }

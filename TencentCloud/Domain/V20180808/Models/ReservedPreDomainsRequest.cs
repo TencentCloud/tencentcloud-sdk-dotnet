@@ -36,6 +36,18 @@ namespace TencentCloud.Domain.V20180808.Models
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
+        /// <summary>
+        /// 结束后是否自动支付尾款，默认开启 传入1关闭
+        /// </summary>
+        [JsonProperty("IsAutoPay")]
+        public long? IsAutoPay{ get; set; }
+
+        /// <summary>
+        /// 结束后是否自动进行梯度保证金扣除，默认开启 传入1关闭
+        /// </summary>
+        [JsonProperty("IsBidAutoPay")]
+        public long? IsBidAutoPay{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Domain.V20180808.Models
         {
             this.SetParamArraySimple(map, prefix + "DomainList.", this.DomainList);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
+            this.SetParamSimple(map, prefix + "IsAutoPay", this.IsAutoPay);
+            this.SetParamSimple(map, prefix + "IsBidAutoPay", this.IsBidAutoPay);
         }
     }
 }

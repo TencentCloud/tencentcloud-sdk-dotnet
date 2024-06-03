@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 使用场景ID列表。
+        /// 使用场景ID列表。可通过[DescribeScenes](https://cloud.tencent.com/document/product/1207/83512)接口返回值中的SceneId获取。
         /// </summary>
         [JsonProperty("SceneIds")]
         public string[] SceneIds{ get; set; }

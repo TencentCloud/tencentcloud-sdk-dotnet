@@ -28,7 +28,7 @@ namespace TencentCloud.Lighthouse.V20200324
 
        private const string endpoint = "lighthouse.tencentcloudapi.com";
        private const string version = "2020-03-24";
-       private const string sdkVersion = "SDK_NET_3.0.1018";
+       private const string sdkVersion = "SDK_NET_3.0.1019";
 
         /// <summary>
         /// Client constructor.
@@ -2137,7 +2137,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 删除实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询删除情况。
+        /// 删除实例内的Docker容器，之后可以通过返回的ActivityId调用[DescribeDockerActivities](https://cloud.tencent.com/document/product/1207/95476)接口查询删除情况。
         /// </summary>
         /// <param name="req"><see cref="RemoveDockerContainersRequest"/></param>
         /// <returns><see cref="RemoveDockerContainersResponse"/></returns>
@@ -2147,7 +2147,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 删除实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询删除情况。
+        /// 删除实例内的Docker容器，之后可以通过返回的ActivityId调用[DescribeDockerActivities](https://cloud.tencent.com/document/product/1207/95476)接口查询删除情况。
         /// </summary>
         /// <param name="req"><see cref="RemoveDockerContainersRequest"/></param>
         /// <returns><see cref="RemoveDockerContainersResponse"/></returns>
@@ -2158,7 +2158,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 重命名实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询重命名情况。
+        /// 重命名实例内的Docker容器，之后可以通过返回的ActivityId调用[DescribeDockerActivities](https://cloud.tencent.com/document/product/1207/95476)接口查询重命名情况。
         /// </summary>
         /// <param name="req"><see cref="RenameDockerContainerRequest"/></param>
         /// <returns><see cref="RenameDockerContainerResponse"/></returns>
@@ -2168,7 +2168,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 重命名实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询重命名情况。
+        /// 重命名实例内的Docker容器，之后可以通过返回的ActivityId调用[DescribeDockerActivities](https://cloud.tencent.com/document/product/1207/95476)接口查询重命名情况。
         /// </summary>
         /// <param name="req"><see cref="RenameDockerContainerRequest"/></param>
         /// <returns><see cref="RenameDockerContainerResponse"/></returns>
@@ -2402,7 +2402,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 重启实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询重启情况。
+        /// 重启实例内的Docker容器，之后可以通过返回的ActivityId调用[DescribeDockerActivities](https://cloud.tencent.com/document/product/1207/95476)接口查询重启情况。
         /// </summary>
         /// <param name="req"><see cref="RestartDockerContainersRequest"/></param>
         /// <returns><see cref="RestartDockerContainersResponse"/></returns>
@@ -2412,7 +2412,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 重启实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询重启情况。
+        /// 重启实例内的Docker容器，之后可以通过返回的ActivityId调用[DescribeDockerActivities](https://cloud.tencent.com/document/product/1207/95476)接口查询重启情况。
         /// </summary>
         /// <param name="req"><see cref="RestartDockerContainersRequest"/></param>
         /// <returns><see cref="RestartDockerContainersResponse"/></returns>
@@ -2469,7 +2469,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 启动实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询启动情况。
+        /// 启动实例内的Docker容器，之后可以通过返回的ActivityId调用[DescribeDockerActivities](https://cloud.tencent.com/document/product/1207/95476)接口查询启动情况。
         /// </summary>
         /// <param name="req"><see cref="StartDockerContainersRequest"/></param>
         /// <returns><see cref="StartDockerContainersResponse"/></returns>
@@ -2479,7 +2479,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 启动实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询启动情况。
+        /// 启动实例内的Docker容器，之后可以通过返回的ActivityId调用[DescribeDockerActivities](https://cloud.tencent.com/document/product/1207/95476)接口查询启动情况。
         /// </summary>
         /// <param name="req"><see cref="StartDockerContainersRequest"/></param>
         /// <returns><see cref="StartDockerContainersResponse"/></returns>
@@ -2521,7 +2521,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 停止实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询停止情况。
+        /// 停止实例内的Docker容器，之后可以通过返回的ActivityId调用[DescribeDockerActivities](https://cloud.tencent.com/document/product/1207/95476)接口查询停止情况。
         /// </summary>
         /// <param name="req"><see cref="StopDockerContainersRequest"/></param>
         /// <returns><see cref="StopDockerContainersResponse"/></returns>
@@ -2531,7 +2531,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 停止实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询停止情况。
+        /// 停止实例内的Docker容器，之后可以通过返回的ActivityId调用[DescribeDockerActivities](https://cloud.tencent.com/document/product/1207/95476)接口查询停止情况。
         /// </summary>
         /// <param name="req"><see cref="StopDockerContainersRequest"/></param>
         /// <returns><see cref="StopDockerContainersResponse"/></returns>

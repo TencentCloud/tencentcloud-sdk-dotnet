@@ -150,6 +150,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("FilterTransRegionFlag")]
         public ulong? FilterTransRegionFlag{ get; set; }
 
+        /// <summary>
+        /// zoenid列表
+        /// </summary>
+        [JsonProperty("FilterZoneIdList")]
+        public long?[] FilterZoneIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +183,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "FilterBasicPlusFlag", this.FilterBasicPlusFlag);
             this.SetParamSimple(map, prefix + "FilterPlanCntFlag", this.FilterPlanCntFlag);
             this.SetParamSimple(map, prefix + "FilterTransRegionFlag", this.FilterTransRegionFlag);
+            this.SetParamArraySimple(map, prefix + "FilterZoneIdList.", this.FilterZoneIdList);
         }
     }
 }

@@ -81,6 +81,20 @@ namespace TencentCloud.Cdb.V20170320.Models
         public bool? SupportReadOnly{ get; set; }
 
         /// <summary>
+        /// 是否自动均衡负载
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SupportAutoLoadBalance")]
+        public bool? SupportAutoLoadBalance{ get; set; }
+
+        /// <summary>
+        /// 是否支持接入模式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SupportAccessMode")]
+        public bool? SupportAccessMode{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -100,6 +114,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "SupportPoolMinVersion", this.SupportPoolMinVersion);
             this.SetParamSimple(map, prefix + "SupportTransSplitMinVersion", this.SupportTransSplitMinVersion);
             this.SetParamSimple(map, prefix + "SupportReadOnly", this.SupportReadOnly);
+            this.SetParamSimple(map, prefix + "SupportAutoLoadBalance", this.SupportAutoLoadBalance);
+            this.SetParamSimple(map, prefix + "SupportAccessMode", this.SupportAccessMode);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

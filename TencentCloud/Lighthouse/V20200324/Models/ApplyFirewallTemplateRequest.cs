@@ -25,13 +25,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 模板ID。
+        /// 防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 应用防火墙模板的实例列表。
+        /// 应用防火墙模板的实例列表。列表长度最大值是100。
         /// </summary>
         [JsonProperty("ApplyInstances")]
         public InstanceIdentifier[] ApplyInstances{ get; set; }

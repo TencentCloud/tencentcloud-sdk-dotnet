@@ -193,6 +193,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("SuperPackFlag")]
         public ulong? SuperPackFlag{ get; set; }
 
+        /// <summary>
+        /// 所属ZoneId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public long? ZoneId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -224,6 +231,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "PlanCntFlag", this.PlanCntFlag);
             this.SetParamSimple(map, prefix + "TransRegionFlag", this.TransRegionFlag);
             this.SetParamSimple(map, prefix + "SuperPackFlag", this.SuperPackFlag);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
         }
     }
 }

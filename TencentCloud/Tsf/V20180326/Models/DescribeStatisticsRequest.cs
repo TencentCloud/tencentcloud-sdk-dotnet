@@ -49,7 +49,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 命名空间Id
+        /// 命名空间Id,此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
         /// </summary>
         [JsonProperty("NamespaceId")]
         public string NamespaceId{ get; set; }
@@ -67,13 +67,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public ulong? OrderType{ get; set; }
 
         /// <summary>
-        /// 开始时间：年月日 时分秒2020-05-12 14:43:12
+        /// 开始时间：年月日 时分秒2020-05-12 14:43:12， 不能为空
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 开始时间：年月日 时分秒2020-05-12 14:43:12
+        /// 开始时间：年月日 时分秒2020-05-12 14:43:12， 不能为空
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
@@ -114,6 +114,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("NamespaceIdList")]
         public string[] NamespaceIdList{ get; set; }
 
+        /// <summary>
+        /// 独占配置中心的ID
+        /// </summary>
+        [JsonProperty("ConfigCenterInstanceId")]
+        public string ConfigCenterInstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "BucketKey", this.BucketKey);
             this.SetParamSimple(map, prefix + "DbName", this.DbName);
             this.SetParamArraySimple(map, prefix + "NamespaceIdList.", this.NamespaceIdList);
+            this.SetParamSimple(map, prefix + "ConfigCenterInstanceId", this.ConfigCenterInstanceId);
         }
     }
 }

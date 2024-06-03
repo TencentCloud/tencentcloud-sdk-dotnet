@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1018</VersionPrefix>
+    <VersionPrefix>3.0.1019</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -275,6 +275,7 @@
     <Compile Include="Tts\**\*.cs" />
     <Compile Include="Ump\**\*.cs" />
     <Compile Include="Vcg\**\*.cs" />
+    <Compile Include="Vdb\**\*.cs" />
     <Compile Include="Vm\**\*.cs" />
     <Compile Include="Vms\**\*.cs" />
     <Compile Include="Vod\**\*.cs" />

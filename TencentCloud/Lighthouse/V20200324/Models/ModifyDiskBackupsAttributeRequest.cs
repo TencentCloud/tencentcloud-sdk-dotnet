@@ -25,13 +25,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 云硬盘备份点ID列表。
+        /// 云硬盘备份点ID，可通过 [DescribeDiskBackups](https://cloud.tencent.com/document/api/1207/84379) 接口返回值中的 DiskBackupId 获取。
         /// </summary>
         [JsonProperty("DiskBackupIds")]
         public string[] DiskBackupIds{ get; set; }
 
         /// <summary>
-        /// 云硬盘备份点名称，最大长度90。
+        /// 云硬盘备份点名称，最大长度 90 。
         /// </summary>
         [JsonProperty("DiskBackupName")]
         public string DiskBackupName{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 实例的套餐 ID。
+        /// 实例的套餐 ID。可以通过调用[DescribeBundles](https://cloud.tencent.com/document/api/1207/47575)接口获取。
         /// </summary>
         [JsonProperty("BundleId")]
         public string BundleId{ get; set; }

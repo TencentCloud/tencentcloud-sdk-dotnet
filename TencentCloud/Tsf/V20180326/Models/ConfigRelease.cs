@@ -122,6 +122,15 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ConfigCenters")]
         public TsfConfigCenter[] ConfigCenters{ get; set; }
 
+        /// <summary>
+        /// DUAL_STATUS_WRITE_REGISTRATION_ON 双写&&双注册开启
+        /// 
+        /// DUAL_STATUS_WRITE_REGISTRATION_OFF 双写&&双注册关闭
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DaulStatus")]
+        public string DaulStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +151,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ReleaseDesc", this.ReleaseDesc);
             this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
             this.SetParamArrayObj(map, prefix + "ConfigCenters.", this.ConfigCenters);
+            this.SetParamSimple(map, prefix + "DaulStatus", this.DaulStatus);
         }
     }
 }

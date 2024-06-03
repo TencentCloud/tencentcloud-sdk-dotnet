@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1018";
+       private const string sdkVersion = "SDK_NET_3.0.1019";
 
         /// <summary>
         /// Client constructor.
@@ -1823,6 +1823,29 @@ namespace TencentCloud.Ess.V20201111
         public CreateUserAutoSignSealUrlResponse CreateUserAutoSignSealUrlSync(CreateUserAutoSignSealUrlRequest req)
         {
             return InternalRequestAsync<CreateUserAutoSignSealUrlResponse>(req, "CreateUserAutoSignSealUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口会生成一个手机号变更的链接，用户可以通过该链接进入电子签系统进行手机号的变更。
+        /// 该接口支持员工和个人端手机号的变更。
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserMobileChangeUrlRequest"/></param>
+        /// <returns><see cref="CreateUserMobileChangeUrlResponse"/></returns>
+        public Task<CreateUserMobileChangeUrlResponse> CreateUserMobileChangeUrl(CreateUserMobileChangeUrlRequest req)
+        {
+            return InternalRequestAsync<CreateUserMobileChangeUrlResponse>(req, "CreateUserMobileChangeUrl");
+        }
+
+        /// <summary>
+        /// 该接口会生成一个手机号变更的链接，用户可以通过该链接进入电子签系统进行手机号的变更。
+        /// 该接口支持员工和个人端手机号的变更。
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserMobileChangeUrlRequest"/></param>
+        /// <returns><see cref="CreateUserMobileChangeUrlResponse"/></returns>
+        public CreateUserMobileChangeUrlResponse CreateUserMobileChangeUrlSync(CreateUserMobileChangeUrlRequest req)
+        {
+            return InternalRequestAsync<CreateUserMobileChangeUrlResponse>(req, "CreateUserMobileChangeUrl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

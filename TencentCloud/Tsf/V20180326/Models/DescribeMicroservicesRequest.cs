@@ -78,6 +78,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("MicroserviceNameList")]
         public string[] MicroserviceNameList{ get; set; }
 
+        /// <summary>
+        /// 注册中心实例id
+        /// </summary>
+        [JsonProperty("ConfigCenterInstanceId")]
+        public string ConfigCenterInstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamArraySimple(map, prefix + "Status.", this.Status);
             this.SetParamArraySimple(map, prefix + "MicroserviceIdList.", this.MicroserviceIdList);
             this.SetParamArraySimple(map, prefix + "MicroserviceNameList.", this.MicroserviceNameList);
+            this.SetParamSimple(map, prefix + "ConfigCenterInstanceId", this.ConfigCenterInstanceId);
         }
     }
 }

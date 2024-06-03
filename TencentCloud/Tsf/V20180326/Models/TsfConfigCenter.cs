@@ -59,6 +59,20 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("NamespaceId")]
         public string NamespaceId{ get; set; }
 
+        /// <summary>
+        /// 当前版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CurrentVersion")]
+        public string CurrentVersion{ get; set; }
+
+        /// <summary>
+        /// 需要升级的版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TargetVersion")]
+        public string TargetVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +84,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ConfigCenterInstanceName", this.ConfigCenterInstanceName);
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
             this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
+            this.SetParamSimple(map, prefix + "CurrentVersion", this.CurrentVersion);
+            this.SetParamSimple(map, prefix + "TargetVersion", this.TargetVersion);
         }
     }
 }

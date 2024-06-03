@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1018";
+       private const string sdkVersion = "SDK_NET_3.0.1019";
 
         /// <summary>
         /// Client constructor.
@@ -2078,6 +2078,27 @@ namespace TencentCloud.Waf.V20180125
         public ModifyApiAnalyzeStatusResponse ModifyApiAnalyzeStatusSync(ModifyApiAnalyzeStatusRequest req)
         {
             return InternalRequestAsync<ModifyApiAnalyzeStatusResponse>(req, "ModifyApiAnalyzeStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// api安全状态变更接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApiSecEventChangeRequest"/></param>
+        /// <returns><see cref="ModifyApiSecEventChangeResponse"/></returns>
+        public Task<ModifyApiSecEventChangeResponse> ModifyApiSecEventChange(ModifyApiSecEventChangeRequest req)
+        {
+            return InternalRequestAsync<ModifyApiSecEventChangeResponse>(req, "ModifyApiSecEventChange");
+        }
+
+        /// <summary>
+        /// api安全状态变更接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApiSecEventChangeRequest"/></param>
+        /// <returns><see cref="ModifyApiSecEventChangeResponse"/></returns>
+        public ModifyApiSecEventChangeResponse ModifyApiSecEventChangeSync(ModifyApiSecEventChangeRequest req)
+        {
+            return InternalRequestAsync<ModifyApiSecEventChangeResponse>(req, "ModifyApiSecEventChange")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
