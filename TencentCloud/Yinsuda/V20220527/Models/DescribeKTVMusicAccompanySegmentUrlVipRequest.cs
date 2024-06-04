@@ -42,6 +42,12 @@ namespace TencentCloud.Yinsuda.V20220527.Models
         [JsonProperty("MusicId")]
         public string MusicId{ get; set; }
 
+        /// <summary>
+        /// 房间Id
+        /// </summary>
+        [JsonProperty("RoomId")]
+        public string RoomId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Yinsuda.V20220527.Models
             this.SetParamSimple(map, prefix + "AppName", this.AppName);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "MusicId", this.MusicId);
+            this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
         }
     }
 }

@@ -79,7 +79,7 @@ namespace TencentCloud.Domain.V20180808.Models
         public long? PageNumber{ get; set; }
 
         /// <summary>
-        /// 没页显示数
+        /// 每页显示数
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }

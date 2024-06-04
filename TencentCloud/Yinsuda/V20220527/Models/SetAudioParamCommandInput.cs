@@ -28,6 +28,7 @@ namespace TencentCloud.Yinsuda.V20220527.Models
         /// 音频类型，取值有：
         /// <li>Original：原唱</li>
         /// <li>Accompaniment：伴奏</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

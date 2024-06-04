@@ -77,6 +77,13 @@ namespace TencentCloud.Iotcloud.V20210408.Models
         public string FwType{ get; set; }
 
         /// <summary>
+        /// 固件用户自定义配置信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserDefined")]
+        public string UserDefined{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -96,6 +103,7 @@ namespace TencentCloud.Iotcloud.V20210408.Models
             this.SetParamSimple(map, prefix + "Createtime", this.Createtime);
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
             this.SetParamSimple(map, prefix + "FwType", this.FwType);
+            this.SetParamSimple(map, prefix + "UserDefined", this.UserDefined);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

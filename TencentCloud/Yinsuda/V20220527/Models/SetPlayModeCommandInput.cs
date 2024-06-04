@@ -30,6 +30,7 @@ namespace TencentCloud.Yinsuda.V20220527.Models
         /// <li>Order：顺序播放</li>
         /// <li>RepeatSingle：单曲循环</li>
         /// <li>Shuffle：随机播放</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PlayMode")]
         public string PlayMode{ get; set; }
