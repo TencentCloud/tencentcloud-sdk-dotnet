@@ -49,7 +49,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 是否为管理员账户，当值为true 等价于基础版AccountType=L0，高可用AccountType=L1，当值为false，等价于AccountType=L3
+        /// 是否为管理员账户，当值为true 等价于单节点AccountType=L0，双节点AccountType=L1，当值为false，等价于AccountType=L3
         /// </summary>
         [JsonProperty("IsAdmin")]
         public bool? IsAdmin{ get; set; }
@@ -66,6 +66,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("AccountType")]
         public string AccountType{ get; set; }
 
+        /// <summary>
+        /// 是否开启CAM验证
+        /// </summary>
+        [JsonProperty("IsCam")]
+        public bool? IsCam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
             this.SetParamSimple(map, prefix + "Authentication", this.Authentication);
             this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
+            this.SetParamSimple(map, prefix + "IsCam", this.IsCam);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1020";
+       private const string sdkVersion = "SDK_NET_3.0.1021";
 
         /// <summary>
         /// Client constructor.
@@ -260,6 +260,27 @@ namespace TencentCloud.Ccc.V20200210
         public CreateExtensionResponse CreateExtensionSync(CreateExtensionRequest req)
         {
             return InternalRequestAsync<CreateExtensionResponse>(req, "CreateExtension")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建关联 IVR 的会话，仅高级版支持，目前支持呼入和自动外呼两种 IVR 类型。收到请求后 TCCC 会先尝试呼通被叫，然后进入 IVR 流程。
+        /// </summary>
+        /// <param name="req"><see cref="CreateIVRSessionRequest"/></param>
+        /// <returns><see cref="CreateIVRSessionResponse"/></returns>
+        public Task<CreateIVRSessionResponse> CreateIVRSession(CreateIVRSessionRequest req)
+        {
+            return InternalRequestAsync<CreateIVRSessionResponse>(req, "CreateIVRSession");
+        }
+
+        /// <summary>
+        /// 创建关联 IVR 的会话，仅高级版支持，目前支持呼入和自动外呼两种 IVR 类型。收到请求后 TCCC 会先尝试呼通被叫，然后进入 IVR 流程。
+        /// </summary>
+        /// <param name="req"><see cref="CreateIVRSessionRequest"/></param>
+        /// <returns><see cref="CreateIVRSessionResponse"/></returns>
+        public CreateIVRSessionResponse CreateIVRSessionSync(CreateIVRSessionRequest req)
+        {
+            return InternalRequestAsync<CreateIVRSessionResponse>(req, "CreateIVRSession")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -158,6 +158,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("DatasourceTypes")]
         public long?[] DatasourceTypes{ get; set; }
 
+        /// <summary>
+        /// 创建人IdStr
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserIdStr")]
+        public string UserIdStr{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +191,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "SubQualityDim", this.SubQualityDim);
             this.SetParamObj(map, prefix + "ResolvedSqlExpression.", this.ResolvedSqlExpression);
             this.SetParamArraySimple(map, prefix + "DatasourceTypes.", this.DatasourceTypes);
+            this.SetParamSimple(map, prefix + "UserIdStr", this.UserIdStr);
         }
     }
 }

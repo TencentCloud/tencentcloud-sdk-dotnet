@@ -31,7 +31,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public long? ProjectID{ get; set; }
 
         /// <summary>
-        /// 项目接口
+        /// 取值为[log speed performance webvitals pv event custom miniProgramData]其中之一
         /// </summary>
         [JsonProperty("ProjectInterface")]
         public string ProjectInterface{ get; set; }

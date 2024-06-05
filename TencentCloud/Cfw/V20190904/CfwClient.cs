@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1020";
+       private const string sdkVersion = "SDK_NET_3.0.1021";
 
         /// <summary>
         /// Client constructor.
@@ -663,6 +663,8 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 接口废弃
+        /// 
         /// 删除防火墙实例
         /// </summary>
         /// <param name="req"><see cref="DeleteVpcInstanceRequest"/></param>
@@ -673,6 +675,8 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 接口废弃
+        /// 
         /// 删除防火墙实例
         /// </summary>
         /// <param name="req"><see cref="DeleteVpcInstanceRequest"/></param>
@@ -1314,7 +1318,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// DescribeSourceAsset-查询资产组全部资产信息
+        /// DescribeSourceAsset-查询全部资产信息
         /// </summary>
         /// <param name="req"><see cref="DescribeSourceAssetRequest"/></param>
         /// <returns><see cref="DescribeSourceAssetResponse"/></returns>
@@ -1324,7 +1328,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// DescribeSourceAsset-查询资产组全部资产信息
+        /// DescribeSourceAsset-查询全部资产信息
         /// </summary>
         /// <param name="req"><see cref="DescribeSourceAssetRequest"/></param>
         /// <returns><see cref="DescribeSourceAssetResponse"/></returns>

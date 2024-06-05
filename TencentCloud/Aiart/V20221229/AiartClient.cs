@@ -28,7 +28,7 @@ namespace TencentCloud.Aiart.V20221229
 
        private const string endpoint = "aiart.tencentcloudapi.com";
        private const string version = "2022-12-29";
-       private const string sdkVersion = "SDK_NET_3.0.1020";
+       private const string sdkVersion = "SDK_NET_3.0.1021";
 
         /// <summary>
         /// Client constructor.
@@ -110,6 +110,7 @@ namespace TencentCloud.Aiart.V20221229
         }
 
         /// <summary>
+        /// 本接口已迁移至腾讯混元大模型-混元生图，即将停止此处维护，可切换至 [混元生图 API](https://cloud.tencent.com/document/product/1729/105970) 继续使用。
         /// 文生图（高级版）接口基于高级版文生图大模型，将根据输入的文本描述，智能生成与之相关的结果图。分为提交任务和查询任务2个接口。
         /// 提交任务：输入文本等，提交一个文生图（高级版）异步任务，获得任务 ID。
         /// 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
@@ -123,6 +124,7 @@ namespace TencentCloud.Aiart.V20221229
         }
 
         /// <summary>
+        /// 本接口已迁移至腾讯混元大模型-混元生图，即将停止此处维护，可切换至 [混元生图 API](https://cloud.tencent.com/document/product/1729/105970) 继续使用。
         /// 文生图（高级版）接口基于高级版文生图大模型，将根据输入的文本描述，智能生成与之相关的结果图。分为提交任务和查询任务2个接口。
         /// 提交任务：输入文本等，提交一个文生图（高级版）异步任务，获得任务 ID。
         /// 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
@@ -203,6 +205,7 @@ namespace TencentCloud.Aiart.V20221229
         }
 
         /// <summary>
+        /// 本接口已迁移至腾讯混元大模型-混元生图，即将停止此处维护，可切换至 [混元生图 API](https://cloud.tencent.com/document/product/1729/105969) 继续使用。
         /// 文生图（高级版）接口基于高级版文生图大模型，将根据输入的文本描述，智能生成与之相关的结果图。分为提交任务和查询任务2个接口。
         /// 提交任务：输入文本等，提交一个文生图（高级版）异步任务，获得任务 ID。
         /// 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
@@ -216,6 +219,7 @@ namespace TencentCloud.Aiart.V20221229
         }
 
         /// <summary>
+        /// 本接口已迁移至腾讯混元大模型-混元生图，即将停止此处维护，可切换至 [混元生图 API](https://cloud.tencent.com/document/product/1729/105969) 继续使用。
         /// 文生图（高级版）接口基于高级版文生图大模型，将根据输入的文本描述，智能生成与之相关的结果图。分为提交任务和查询任务2个接口。
         /// 提交任务：输入文本等，提交一个文生图（高级版）异步任务，获得任务 ID。
         /// 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。

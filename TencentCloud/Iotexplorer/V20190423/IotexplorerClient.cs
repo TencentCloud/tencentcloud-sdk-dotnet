@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1020";
+       private const string sdkVersion = "SDK_NET_3.0.1021";
 
         /// <summary>
         /// Client constructor.
@@ -2171,6 +2171,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public GetTopicRuleListResponse GetTopicRuleListSync(GetTopicRuleListRequest req)
         {
             return InternalRequestAsync<GetTopicRuleListResponse>(req, "GetTopicRuleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询微信设备授权票据
+        /// </summary>
+        /// <param name="req"><see cref="GetWechatDeviceTicketRequest"/></param>
+        /// <returns><see cref="GetWechatDeviceTicketResponse"/></returns>
+        public Task<GetWechatDeviceTicketResponse> GetWechatDeviceTicket(GetWechatDeviceTicketRequest req)
+        {
+            return InternalRequestAsync<GetWechatDeviceTicketResponse>(req, "GetWechatDeviceTicket");
+        }
+
+        /// <summary>
+        /// 查询微信设备授权票据
+        /// </summary>
+        /// <param name="req"><see cref="GetWechatDeviceTicketRequest"/></param>
+        /// <returns><see cref="GetWechatDeviceTicketResponse"/></returns>
+        public GetWechatDeviceTicketResponse GetWechatDeviceTicketSync(GetWechatDeviceTicketRequest req)
+        {
+            return InternalRequestAsync<GetWechatDeviceTicketResponse>(req, "GetWechatDeviceTicket")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

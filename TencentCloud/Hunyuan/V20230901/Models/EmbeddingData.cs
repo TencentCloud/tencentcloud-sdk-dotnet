@@ -25,21 +25,21 @@ namespace TencentCloud.Hunyuan.V20230901.Models
     {
         
         /// <summary>
-        /// embedding 信息。
+        /// Embedding 信息，目前为 1024 维浮点数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Embedding")]
         public float?[] Embedding{ get; set; }
 
         /// <summary>
-        /// 下标。
+        /// 下标，目前不支持批量，因此固定为 0。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Index")]
         public long? Index{ get; set; }
 
         /// <summary>
-        /// embedding
+        /// 目前固定为 "embedding"。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Object")]

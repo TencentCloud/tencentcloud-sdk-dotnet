@@ -28,7 +28,7 @@ namespace TencentCloud.Dtf.V20200506
 
        private const string endpoint = "dtf.tencentcloudapi.com";
        private const string version = "2020-05-06";
-       private const string sdkVersion = "SDK_NET_3.0.1020";
+       private const string sdkVersion = "SDK_NET_3.0.1021";
 
         /// <summary>
         /// Client constructor.

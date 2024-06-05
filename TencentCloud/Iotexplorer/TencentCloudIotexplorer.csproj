@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1020</VersionPrefix>
+    <VersionPrefix>3.0.1021</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -275,6 +275,8 @@
     <Compile Include="V20190423\Models\GetTWeCallPkgListResponse.cs" />
     <Compile Include="V20190423\Models\GetTopicRuleListRequest.cs" />
     <Compile Include="V20190423\Models\GetTopicRuleListResponse.cs" />
+    <Compile Include="V20190423\Models\GetWechatDeviceTicketRequest.cs" />
+    <Compile Include="V20190423\Models\GetWechatDeviceTicketResponse.cs" />
     <Compile Include="V20190423\Models\InheritCloudStorageUserRequest.cs" />
     <Compile Include="V20190423\Models\InheritCloudStorageUserResponse.cs" />
     <Compile Include="V20190423\Models\InstanceDetail.cs" />
@@ -371,6 +373,8 @@
     <Compile Include="V20190423\Models\UpdateFirmwareResponse.cs" />
     <Compile Include="V20190423\Models\UploadFirmwareRequest.cs" />
     <Compile Include="V20190423\Models\UploadFirmwareResponse.cs" />
+    <Compile Include="V20190423\Models\WXDeviceInfo.cs" />
+    <Compile Include="V20190423\Models\WXIoTDeviceInfo.cs" />
     <Compile Include="V20190423\Models\WifiInfo.cs" />
   </ItemGroup>
 </Project>

@@ -28,7 +28,7 @@ namespace TencentCloud.Trp.V20210515
 
        private const string endpoint = "trp.tencentcloudapi.com";
        private const string version = "2021-05-15";
-       private const string sdkVersion = "SDK_NET_3.0.1020";
+       private const string sdkVersion = "SDK_NET_3.0.1021";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Trp.V20210515
         public AuthorizedTransferResponse AuthorizedTransferSync(AuthorizedTransferRequest req)
         {
             return InternalRequestAsync<AuthorizedTransferResponse>(req, "AuthorizedTransfer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量上链接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateChainBatchRequest"/></param>
+        /// <returns><see cref="CreateChainBatchResponse"/></returns>
+        public Task<CreateChainBatchResponse> CreateChainBatch(CreateChainBatchRequest req)
+        {
+            return InternalRequestAsync<CreateChainBatchResponse>(req, "CreateChainBatch");
+        }
+
+        /// <summary>
+        /// 批量上链接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateChainBatchRequest"/></param>
+        /// <returns><see cref="CreateChainBatchResponse"/></returns>
+        public CreateChainBatchResponse CreateChainBatchSync(CreateChainBatchRequest req)
+        {
+            return InternalRequestAsync<CreateChainBatchResponse>(req, "CreateChainBatch")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

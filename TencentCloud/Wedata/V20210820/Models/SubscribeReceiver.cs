@@ -38,6 +38,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ReceiverName")]
         public string ReceiverName{ get; set; }
 
+        /// <summary>
+        /// 接收人Uin
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReceiverUserIdStr")]
+        public string ReceiverUserIdStr{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamSimple(map, prefix + "ReceiverUserId", this.ReceiverUserId);
             this.SetParamSimple(map, prefix + "ReceiverName", this.ReceiverName);
+            this.SetParamSimple(map, prefix + "ReceiverUserIdStr", this.ReceiverUserIdStr);
         }
     }
 }

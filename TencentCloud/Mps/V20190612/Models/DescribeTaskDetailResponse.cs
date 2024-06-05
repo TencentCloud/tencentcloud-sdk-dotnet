@@ -25,11 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 任务类型，目前取值有：
-        /// <li>WorkflowTask：视频工作流处理任务。</li>
-        /// <li>EditMediaTask：视频编辑任务。</li>
-        /// <li>LiveStreamProcessTask：直播流处理任务。</li>
-        /// <li>ScheduleTask：编排处理任务。</li>
+        /// 任务类型，目前取值有：<li>WorkflowTask：视频工作流处理任务。</li><li>EditMediaTask：视频编辑任务。</li><li>LiveStreamProcessTask：直播流处理任务。</li><li>ScheduleTask：编排处理任务。</li><li>EvaluationTask：评测任务。</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }

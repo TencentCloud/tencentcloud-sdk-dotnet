@@ -71,6 +71,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Score")]
         public float? Score{ get; set; }
 
+        /// <summary>
+        /// 设置人idStr
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserIdStr")]
+        public string UserIdStr{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -84,6 +91,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "JoinTableNumber", this.JoinTableNumber);
             this.SetParamSimple(map, prefix + "Score", this.Score);
+            this.SetParamSimple(map, prefix + "UserIdStr", this.UserIdStr);
         }
     }
 }

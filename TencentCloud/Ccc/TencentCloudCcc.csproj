@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5C13E957-36F0-3A36-917C-9FBB15CAE883}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1020</VersionPrefix>
+    <VersionPrefix>3.0.1021</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -79,6 +79,8 @@
     <Compile Include="V20200210\Models\CreateCompanyApplyResponse.cs" />
     <Compile Include="V20200210\Models\CreateExtensionRequest.cs" />
     <Compile Include="V20200210\Models\CreateExtensionResponse.cs" />
+    <Compile Include="V20200210\Models\CreateIVRSessionRequest.cs" />
+    <Compile Include="V20200210\Models\CreateIVRSessionResponse.cs" />
     <Compile Include="V20200210\Models\CreatePredictiveDialingCampaignRequest.cs" />
     <Compile Include="V20200210\Models\CreatePredictiveDialingCampaignResponse.cs" />
     <Compile Include="V20200210\Models\CreateSDKLoginTokenRequest.cs" />

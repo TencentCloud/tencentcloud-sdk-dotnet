@@ -43,6 +43,12 @@ namespace TencentCloud.Dts.V20211206.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
+        /// 订阅的topicName
+        /// </summary>
+        [JsonProperty("Topic")]
+        public string Topic{ get; set; }
+
+        /// <summary>
         /// 计费模式筛选，可能的值：0-包年包月，1-按量计费
         /// </summary>
         [JsonProperty("PayType")]
@@ -99,6 +105,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "SubscribeId", this.SubscribeId);
             this.SetParamSimple(map, prefix + "SubscribeName", this.SubscribeName);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Topic", this.Topic);
             this.SetParamSimple(map, prefix + "PayType", this.PayType);
             this.SetParamSimple(map, prefix + "Product", this.Product);
             this.SetParamArraySimple(map, prefix + "Status.", this.Status);

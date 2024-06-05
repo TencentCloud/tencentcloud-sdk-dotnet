@@ -79,6 +79,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public bool? IsAdmin{ get; set; }
 
         /// <summary>
+        /// 是否为cam托管账户
+        /// </summary>
+        [JsonProperty("IsCam")]
+        public bool? IsCam{ get; set; }
+
+        /// <summary>
         /// win-windows鉴权,sql-sqlserver鉴权
         /// </summary>
         [JsonProperty("Authentication")]
@@ -111,6 +117,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "InternalStatus", this.InternalStatus);
             this.SetParamArrayObj(map, prefix + "Dbs.", this.Dbs);
             this.SetParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
+            this.SetParamSimple(map, prefix + "IsCam", this.IsCam);
             this.SetParamSimple(map, prefix + "Authentication", this.Authentication);
             this.SetParamSimple(map, prefix + "Host", this.Host);
             this.SetParamSimple(map, prefix + "AccountType", this.AccountType);

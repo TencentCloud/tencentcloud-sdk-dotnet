@@ -28,7 +28,7 @@ namespace TencentCloud.Ump.V20200918
 
        private const string endpoint = "ump.tencentcloudapi.com";
        private const string version = "2020-09-18";
-       private const string sdkVersion = "SDK_NET_3.0.1020";
+       private const string sdkVersion = "SDK_NET_3.0.1021";
 
         /// <summary>
         /// Client constructor.

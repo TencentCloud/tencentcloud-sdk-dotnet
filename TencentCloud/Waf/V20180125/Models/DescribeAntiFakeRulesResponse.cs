@@ -25,6 +25,12 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
+        /// 总数
+        /// </summary>
+        [JsonProperty("Total")]
+        public ulong? Total{ get; set; }
+
+        /// <summary>
         /// 返回值
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -43,6 +49,7 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamArrayObj(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
