@@ -25,20 +25,20 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 选定时间范围内慢SQL总条数。
+        /// 查询到的慢日志数量，最大值为10000条。	
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 指定时间范围内，慢SQL耗时分段分析。
+        /// 查询到的慢日志耗时分段分析结果。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DurationAnalysis")]
         public DurationAnalysis[] DurationAnalysis{ get; set; }
 
         /// <summary>
-        /// 指定时间范围内 慢SQL流水。
+        /// 查询到的慢日志详细信息集合。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RawSlowQueryList")]

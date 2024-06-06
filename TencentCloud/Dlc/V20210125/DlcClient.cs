@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1021";
+       private const string sdkVersion = "SDK_NET_3.0.1022";
 
         /// <summary>
         /// Client constructor.
@@ -428,6 +428,27 @@ namespace TencentCloud.Dlc.V20210125
         public CheckLockMetaDataResponse CheckLockMetaDataSync(CheckLockMetaDataRequest req)
         {
             return InternalRequestAsync<CheckLockMetaDataResponse>(req, "CheckLockMetaData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口（CreateCHDFSBindingProduct）用于创建元数据加速桶和产品绑定关系
+        /// </summary>
+        /// <param name="req"><see cref="CreateCHDFSBindingProductRequest"/></param>
+        /// <returns><see cref="CreateCHDFSBindingProductResponse"/></returns>
+        public Task<CreateCHDFSBindingProductResponse> CreateCHDFSBindingProduct(CreateCHDFSBindingProductRequest req)
+        {
+            return InternalRequestAsync<CreateCHDFSBindingProductResponse>(req, "CreateCHDFSBindingProduct");
+        }
+
+        /// <summary>
+        /// 此接口（CreateCHDFSBindingProduct）用于创建元数据加速桶和产品绑定关系
+        /// </summary>
+        /// <param name="req"><see cref="CreateCHDFSBindingProductRequest"/></param>
+        /// <returns><see cref="CreateCHDFSBindingProductResponse"/></returns>
+        public CreateCHDFSBindingProductResponse CreateCHDFSBindingProductSync(CreateCHDFSBindingProductRequest req)
+        {
+            return InternalRequestAsync<CreateCHDFSBindingProductResponse>(req, "CreateCHDFSBindingProduct")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -894,6 +915,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 此接口（DeleteCHDFSBindingProduct）用于删除元数据加速桶和产品绑定关系
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCHDFSBindingProductRequest"/></param>
+        /// <returns><see cref="DeleteCHDFSBindingProductResponse"/></returns>
+        public Task<DeleteCHDFSBindingProductResponse> DeleteCHDFSBindingProduct(DeleteCHDFSBindingProductRequest req)
+        {
+            return InternalRequestAsync<DeleteCHDFSBindingProductResponse>(req, "DeleteCHDFSBindingProduct");
+        }
+
+        /// <summary>
+        /// 此接口（DeleteCHDFSBindingProduct）用于删除元数据加速桶和产品绑定关系
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCHDFSBindingProductRequest"/></param>
+        /// <returns><see cref="DeleteCHDFSBindingProductResponse"/></returns>
+        public DeleteCHDFSBindingProductResponse DeleteCHDFSBindingProductSync(DeleteCHDFSBindingProductRequest req)
+        {
+            return InternalRequestAsync<DeleteCHDFSBindingProductResponse>(req, "DeleteCHDFSBindingProduct")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除数据引擎
         /// </summary>
         /// <param name="req"><see cref="DeleteDataEngineRequest"/></param>
@@ -978,6 +1020,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 本接口（RegisterThirdPartyAccessUser）用于移除第三方平台访问
+        /// </summary>
+        /// <param name="req"><see cref="DeleteThirdPartyAccessUserRequest"/></param>
+        /// <returns><see cref="DeleteThirdPartyAccessUserResponse"/></returns>
+        public Task<DeleteThirdPartyAccessUserResponse> DeleteThirdPartyAccessUser(DeleteThirdPartyAccessUserRequest req)
+        {
+            return InternalRequestAsync<DeleteThirdPartyAccessUserResponse>(req, "DeleteThirdPartyAccessUser");
+        }
+
+        /// <summary>
+        /// 本接口（RegisterThirdPartyAccessUser）用于移除第三方平台访问
+        /// </summary>
+        /// <param name="req"><see cref="DeleteThirdPartyAccessUserRequest"/></param>
+        /// <returns><see cref="DeleteThirdPartyAccessUserResponse"/></returns>
+        public DeleteThirdPartyAccessUserResponse DeleteThirdPartyAccessUserSync(DeleteThirdPartyAccessUserRequest req)
+        {
+            return InternalRequestAsync<DeleteThirdPartyAccessUserResponse>(req, "DeleteThirdPartyAccessUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除用户
         /// </summary>
         /// <param name="req"><see cref="DeleteUserRequest"/></param>
@@ -1058,6 +1121,27 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeAdvancedStoreLocationResponse DescribeAdvancedStoreLocationSync(DescribeAdvancedStoreLocationRequest req)
         {
             return InternalRequestAsync<DescribeAdvancedStoreLocationResponse>(req, "DescribeAdvancedStoreLocation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询DLC Catalog授权列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDLCCatalogAccessRequest"/></param>
+        /// <returns><see cref="DescribeDLCCatalogAccessResponse"/></returns>
+        public Task<DescribeDLCCatalogAccessResponse> DescribeDLCCatalogAccess(DescribeDLCCatalogAccessRequest req)
+        {
+            return InternalRequestAsync<DescribeDLCCatalogAccessResponse>(req, "DescribeDLCCatalogAccess");
+        }
+
+        /// <summary>
+        /// 查询DLC Catalog授权列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDLCCatalogAccessRequest"/></param>
+        /// <returns><see cref="DescribeDLCCatalogAccessResponse"/></returns>
+        public DescribeDLCCatalogAccessResponse DescribeDLCCatalogAccessSync(DescribeDLCCatalogAccessRequest req)
+        {
+            return InternalRequestAsync<DescribeDLCCatalogAccessResponse>(req, "DescribeDLCCatalogAccess")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1524,6 +1608,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 此接口（DescribeOtherCHDFSBindingList）用于查询其他产品元数据加速桶绑定列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOtherCHDFSBindingListRequest"/></param>
+        /// <returns><see cref="DescribeOtherCHDFSBindingListResponse"/></returns>
+        public Task<DescribeOtherCHDFSBindingListResponse> DescribeOtherCHDFSBindingList(DescribeOtherCHDFSBindingListRequest req)
+        {
+            return InternalRequestAsync<DescribeOtherCHDFSBindingListResponse>(req, "DescribeOtherCHDFSBindingList");
+        }
+
+        /// <summary>
+        /// 此接口（DescribeOtherCHDFSBindingList）用于查询其他产品元数据加速桶绑定列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOtherCHDFSBindingListRequest"/></param>
+        /// <returns><see cref="DescribeOtherCHDFSBindingListResponse"/></returns>
+        public DescribeOtherCHDFSBindingListResponse DescribeOtherCHDFSBindingListSync(DescribeOtherCHDFSBindingListRequest req)
+        {
+            return InternalRequestAsync<DescribeOtherCHDFSBindingListResponse>(req, "DescribeOtherCHDFSBindingList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询结果下载任务
         /// </summary>
         /// <param name="req"><see cref="DescribeResultDownloadRequest"/></param>
@@ -1692,6 +1797,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 本接口（DescribeSubUserAccessPolicy）用于开通了第三方平台访问的用户，查询其子用户的访问策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubUserAccessPolicyRequest"/></param>
+        /// <returns><see cref="DescribeSubUserAccessPolicyResponse"/></returns>
+        public Task<DescribeSubUserAccessPolicyResponse> DescribeSubUserAccessPolicy(DescribeSubUserAccessPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeSubUserAccessPolicyResponse>(req, "DescribeSubUserAccessPolicy");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSubUserAccessPolicy）用于开通了第三方平台访问的用户，查询其子用户的访问策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubUserAccessPolicyRequest"/></param>
+        /// <returns><see cref="DescribeSubUserAccessPolicyResponse"/></returns>
+        public DescribeSubUserAccessPolicyResponse DescribeSubUserAccessPolicySync(DescribeSubUserAccessPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeSubUserAccessPolicyResponse>(req, "DescribeSubUserAccessPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeTable），用于查询单个表的详细信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeTableRequest"/></param>
@@ -1835,6 +1961,27 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeTasksCostInfoResponse DescribeTasksCostInfoSync(DescribeTasksCostInfoRequest req)
         {
             return InternalRequestAsync<DescribeTasksCostInfoResponse>(req, "DescribeTasksCostInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（RegisterThirdPartyAccessUser）查询开通第三方平台访问的用户信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeThirdPartyAccessUserRequest"/></param>
+        /// <returns><see cref="DescribeThirdPartyAccessUserResponse"/></returns>
+        public Task<DescribeThirdPartyAccessUserResponse> DescribeThirdPartyAccessUser(DescribeThirdPartyAccessUserRequest req)
+        {
+            return InternalRequestAsync<DescribeThirdPartyAccessUserResponse>(req, "DescribeThirdPartyAccessUser");
+        }
+
+        /// <summary>
+        /// 本接口（RegisterThirdPartyAccessUser）查询开通第三方平台访问的用户信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeThirdPartyAccessUserRequest"/></param>
+        /// <returns><see cref="DescribeThirdPartyAccessUserResponse"/></returns>
+        public DescribeThirdPartyAccessUserResponse DescribeThirdPartyAccessUserSync(DescribeThirdPartyAccessUserRequest req)
+        {
+            return InternalRequestAsync<DescribeThirdPartyAccessUserResponse>(req, "DescribeThirdPartyAccessUser")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2175,6 +2322,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 授权访问DLC Catalog
+        /// </summary>
+        /// <param name="req"><see cref="GrantDLCCatalogAccessRequest"/></param>
+        /// <returns><see cref="GrantDLCCatalogAccessResponse"/></returns>
+        public Task<GrantDLCCatalogAccessResponse> GrantDLCCatalogAccess(GrantDLCCatalogAccessRequest req)
+        {
+            return InternalRequestAsync<GrantDLCCatalogAccessResponse>(req, "GrantDLCCatalogAccess");
+        }
+
+        /// <summary>
+        /// 授权访问DLC Catalog
+        /// </summary>
+        /// <param name="req"><see cref="GrantDLCCatalogAccessRequest"/></param>
+        /// <returns><see cref="GrantDLCCatalogAccessResponse"/></returns>
+        public GrantDLCCatalogAccessResponse GrantDLCCatalogAccessSync(GrantDLCCatalogAccessRequest req)
+        {
+            return InternalRequestAsync<GrantDLCCatalogAccessResponse>(req, "GrantDLCCatalogAccess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ListTaskJobLogDetail）用于获取spark 作业任务日志详情
         /// </summary>
         /// <param name="req"><see cref="ListTaskJobLogDetailRequest"/></param>
@@ -2448,6 +2616,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 本接口（RegisterThirdPartyAccessUser）用于开通第三方平台访问
+        /// </summary>
+        /// <param name="req"><see cref="RegisterThirdPartyAccessUserRequest"/></param>
+        /// <returns><see cref="RegisterThirdPartyAccessUserResponse"/></returns>
+        public Task<RegisterThirdPartyAccessUserResponse> RegisterThirdPartyAccessUser(RegisterThirdPartyAccessUserRequest req)
+        {
+            return InternalRequestAsync<RegisterThirdPartyAccessUserResponse>(req, "RegisterThirdPartyAccessUser");
+        }
+
+        /// <summary>
+        /// 本接口（RegisterThirdPartyAccessUser）用于开通第三方平台访问
+        /// </summary>
+        /// <param name="req"><see cref="RegisterThirdPartyAccessUserRequest"/></param>
+        /// <returns><see cref="RegisterThirdPartyAccessUserResponse"/></returns>
+        public RegisterThirdPartyAccessUserResponse RegisterThirdPartyAccessUserSync(RegisterThirdPartyAccessUserRequest req)
+        {
+            return InternalRequestAsync<RegisterThirdPartyAccessUserResponse>(req, "RegisterThirdPartyAccessUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 续费数据引擎
         /// </summary>
         /// <param name="req"><see cref="RenewDataEngineRequest"/></param>
@@ -2507,6 +2696,27 @@ namespace TencentCloud.Dlc.V20210125
         public RestartDataEngineResponse RestartDataEngineSync(RestartDataEngineRequest req)
         {
             return InternalRequestAsync<RestartDataEngineResponse>(req, "RestartDataEngine")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 撤销DLC Catalog访问权限
+        /// </summary>
+        /// <param name="req"><see cref="RevokeDLCCatalogAccessRequest"/></param>
+        /// <returns><see cref="RevokeDLCCatalogAccessResponse"/></returns>
+        public Task<RevokeDLCCatalogAccessResponse> RevokeDLCCatalogAccess(RevokeDLCCatalogAccessRequest req)
+        {
+            return InternalRequestAsync<RevokeDLCCatalogAccessResponse>(req, "RevokeDLCCatalogAccess");
+        }
+
+        /// <summary>
+        /// 撤销DLC Catalog访问权限
+        /// </summary>
+        /// <param name="req"><see cref="RevokeDLCCatalogAccessRequest"/></param>
+        /// <returns><see cref="RevokeDLCCatalogAccessResponse"/></returns>
+        public RevokeDLCCatalogAccessResponse RevokeDLCCatalogAccessSync(RevokeDLCCatalogAccessRequest req)
+        {
+            return InternalRequestAsync<RevokeDLCCatalogAccessResponse>(req, "RevokeDLCCatalogAccess")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

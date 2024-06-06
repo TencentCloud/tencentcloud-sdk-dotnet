@@ -31,7 +31,7 @@ namespace TencentCloud.Eb.V20210416.Models
         public string EventBusId{ get; set; }
 
         /// <summary>
-        /// 根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）
+        /// 根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）,name（规则名称）
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }

@@ -103,6 +103,13 @@ namespace TencentCloud.Dts.V20180330.Models
         public string ConsumeStartTime{ get; set; }
 
         /// <summary>
+        /// 自动续费标识。0-不自动续费，1-自动续费
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoRenewFlag")]
+        public long? AutoRenewFlag{ get; set; }
+
+        /// <summary>
         /// 数据订阅实例所属地域
         /// </summary>
         [JsonProperty("Region")]
@@ -158,13 +165,6 @@ namespace TencentCloud.Dts.V20180330.Models
         public TagItem[] Tags{ get; set; }
 
         /// <summary>
-        /// 自动续费标识。0-不自动续费，1-自动续费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("AutoRenewFlag")]
-        public long? AutoRenewFlag{ get; set; }
-
-        /// <summary>
         /// 订阅实例版本；txdts-旧版数据订阅,kafka-kafka版本数据订阅
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -190,6 +190,7 @@ namespace TencentCloud.Dts.V20180330.Models
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
             this.SetParamSimple(map, prefix + "ConsumeStartTime", this.ConsumeStartTime);
+            this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "PayType", this.PayType);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
@@ -199,7 +200,6 @@ namespace TencentCloud.Dts.V20180330.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "SdkConsumedTime", this.SdkConsumedTime);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
-            this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "SubscribeVersion", this.SubscribeVersion);
         }
     }

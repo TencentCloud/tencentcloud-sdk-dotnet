@@ -26,18 +26,21 @@ namespace TencentCloud.Eb.V20210416.Models
         
         /// <summary>
         /// 批量投递最长等待时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BatchTimeout")]
         public long? BatchTimeout{ get; set; }
 
         /// <summary>
         /// 批量投递最大事件条数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BatchEventCount")]
         public long? BatchEventCount{ get; set; }
 
         /// <summary>
         /// 开启批量投递使能
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableBatchDelivery")]
         public bool? EnableBatchDelivery{ get; set; }

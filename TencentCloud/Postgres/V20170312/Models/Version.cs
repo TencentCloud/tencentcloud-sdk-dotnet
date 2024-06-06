@@ -66,7 +66,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 该数据库版本（DBKernelVersion）可以升级到的版本号列表。
+        /// 该数据库版本（DBKernelVersion）可以升级到的版本号列表。其中包含可升级的小版本号和可升级的大版本号（完整内核版本格式示例：v15.1_v1.6）。
         /// </summary>
         [JsonProperty("AvailableUpgradeTarget")]
         public string[] AvailableUpgradeTarget{ get; set; }

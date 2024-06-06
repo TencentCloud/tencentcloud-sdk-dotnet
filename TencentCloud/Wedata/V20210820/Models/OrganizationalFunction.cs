@@ -202,6 +202,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Tag")]
         public string Tag{ get; set; }
 
+        /// <summary>
+        /// 操作人 ID 列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OperatorUserIdsStr")]
+        public string[] OperatorUserIdsStr{ get; set; }
+
+        /// <summary>
+        /// 公有云 Owner ID 列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OwnerUserIdsStr")]
+        public string[] OwnerUserIdsStr{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -234,6 +248,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "OwnerName", this.OwnerName);
             this.SetParamSimple(map, prefix + "SubmitTimestamp", this.SubmitTimestamp);
             this.SetParamSimple(map, prefix + "Tag", this.Tag);
+            this.SetParamArraySimple(map, prefix + "OperatorUserIdsStr.", this.OperatorUserIdsStr);
+            this.SetParamArraySimple(map, prefix + "OwnerUserIdsStr.", this.OwnerUserIdsStr);
         }
     }
 }

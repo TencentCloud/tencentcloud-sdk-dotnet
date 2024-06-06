@@ -60,6 +60,13 @@ namespace TencentCloud.Tione.V20211111.Models
         public IntranetCallInfo IntranetCallInfo{ get; set; }
 
         /// <summary>
+        /// 基于新网关的服务调用信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServiceCallInfoV2")]
+        public ServiceCallInfoV2 ServiceCallInfoV2{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -76,6 +83,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "DefaultNginxGatewayCallInfo.", this.DefaultNginxGatewayCallInfo);
             this.SetParamObj(map, prefix + "TJCallInfo.", this.TJCallInfo);
             this.SetParamObj(map, prefix + "IntranetCallInfo.", this.IntranetCallInfo);
+            this.SetParamObj(map, prefix + "ServiceCallInfoV2.", this.ServiceCallInfoV2);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

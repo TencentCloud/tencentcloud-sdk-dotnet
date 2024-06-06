@@ -44,16 +44,19 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// 购买时长，单位：月。
-        /// <li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
-        /// <li>后付费：只支持1
+        /// 
+        /// - 预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+        /// - 后付费：只支持1
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
         /// 续费标记：
-        /// <li>0：手动续费
-        /// <li>1：自动续费
+        /// 
+        /// - 0：手动续费
+        /// - 1：自动续费
+        /// 
         /// 默认值：0
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
@@ -79,8 +82,10 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// 实例计费类型，目前支持：
-        /// <li>PREPAID：预付费，即包年包月
-        /// <li>POSTPAID_BY_HOUR：后付费，即按量计费
+        /// 
+        /// - PREPAID：预付费，即包年包月
+        /// - POSTPAID_BY_HOUR：后付费，即按量计费
+        /// 
         /// 默认值：PREPAID
         /// </summary>
         [JsonProperty("InstanceChargeType")]
@@ -113,8 +118,10 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// 是否自动使用代金券：
-        /// <li>0：否
-        /// <li>1：是
+        /// 
+        /// - 0：否
+        /// - 1：是
+        /// 
         /// 默认值：0
         /// </summary>
         [JsonProperty("AutoVoucher")]
@@ -146,8 +153,8 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// 主从同步方式，支持： 
-        /// <li>Semi-sync：半同步
-        /// <li>Async：异步
+        /// <li>Semi-sync：半同步</li>
+        /// <li>Async：异步</li>
         /// 主实例默认值：Semi-sync
         /// 只读实例默认值：Async
         /// </summary>

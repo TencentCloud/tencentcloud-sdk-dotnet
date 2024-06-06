@@ -31,43 +31,43 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// 查询起始时间戳，格式 “YYYY-MM-DD HH:mm:ss” ，日志保留时间默认为7天，起始时间不能超出保留时间范围。
+        /// 查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
+        /// 查询结束时间，形如2018-01-01 00:00:00。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 根据数据库名进行筛选，可以为空。
+        /// 数据库名字。	
         /// </summary>
         [JsonProperty("DatabaseName")]
         public string DatabaseName{ get; set; }
 
         /// <summary>
-        /// 排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。默认CallNum。
+        /// 排序字段，取值范围[CallNum,CostTime,AvgCostTime]。默认值为CallNum。
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 排序类型。升序asc、降序desc。默认desc。
+        /// 排序方式，包括升序：asc 降序：desc。默认值为desc。
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }
 
         /// <summary>
-        /// 分页大小。取值范围[1,100]。默认50。
+        /// 每页显示数量，取值范围为1-100。默认值为50。	
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 分页偏移。取值范围[0,INF)。默认0。
+        /// 数据偏移量，从0开始。默认值为0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

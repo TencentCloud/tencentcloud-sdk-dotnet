@@ -26,36 +26,42 @@ namespace TencentCloud.Eb.V20210416.Models
         
         /// <summary>
         /// 网络连接类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetMode")]
         public string NetMode{ get; set; }
 
         /// <summary>
         /// 索引前缀
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexPrefix")]
         public string IndexPrefix{ get; set; }
 
         /// <summary>
         /// es日志轮换粒度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RotationInterval")]
         public string RotationInterval{ get; set; }
 
         /// <summary>
         /// DTS事件配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputMode")]
         public string OutputMode{ get; set; }
 
         /// <summary>
         /// DTS索引配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexSuffixMode")]
         public string IndexSuffixMode{ get; set; }
 
         /// <summary>
         /// es模版类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexTemplateType")]
         public string IndexTemplateType{ get; set; }

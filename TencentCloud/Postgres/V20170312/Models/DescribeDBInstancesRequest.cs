@@ -29,8 +29,10 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// db-instance-id：按照实例ID过滤，类型为string
         /// db-instance-name：按照实例名过滤，类型为string
         /// db-project-id：按照项目ID过滤，类型为integer
-        /// db-pay-mode：按照付费模式过滤，类型为string
+        /// db-pay-mode：按照实例付费模式过滤，类型为string
         /// db-tag-key：按照标签键过滤，类型为string
+        /// db-private-ip： 按照实例私有网络IP过滤，类型为string
+        /// db-public-address： 按照实例外网地址过滤，类型为string
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

@@ -39,6 +39,13 @@ namespace TencentCloud.Tione.V20211111.Models
         public ServiceEIPInfo[] ServiceEIPInfo{ get; set; }
 
         /// <summary>
+        /// 默认内网调用信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DefaultInnerCallInfos")]
+        public DefaultInnerCallInfo[] DefaultInnerCallInfos{ get; set; }
+
+        /// <summary>
         /// 私有连接信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -46,11 +53,11 @@ namespace TencentCloud.Tione.V20211111.Models
         public PrivateLinkInfo[] PrivateLinkInfos{ get; set; }
 
         /// <summary>
-        /// 默认内网调用信息
+        /// 基于新网关的私有连接信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("DefaultInnerCallInfos")]
-        public DefaultInnerCallInfo[] DefaultInnerCallInfos{ get; set; }
+        [JsonProperty("PrivateLinkInfosV2")]
+        public PrivateLinkInfo[] PrivateLinkInfosV2{ get; set; }
 
 
         /// <summary>
@@ -60,8 +67,9 @@ namespace TencentCloud.Tione.V20211111.Models
         {
             this.SetParamObj(map, prefix + "IngressPrivateLinkInfo.", this.IngressPrivateLinkInfo);
             this.SetParamArrayObj(map, prefix + "ServiceEIPInfo.", this.ServiceEIPInfo);
-            this.SetParamArrayObj(map, prefix + "PrivateLinkInfos.", this.PrivateLinkInfos);
             this.SetParamArrayObj(map, prefix + "DefaultInnerCallInfos.", this.DefaultInnerCallInfos);
+            this.SetParamArrayObj(map, prefix + "PrivateLinkInfos.", this.PrivateLinkInfos);
+            this.SetParamArrayObj(map, prefix + "PrivateLinkInfosV2.", this.PrivateLinkInfosV2);
         }
     }
 }

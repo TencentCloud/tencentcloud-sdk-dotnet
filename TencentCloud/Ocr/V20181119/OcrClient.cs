@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1021";
+       private const string sdkVersion = "SDK_NET_3.0.1022";
 
         /// <summary>
         /// Client constructor.
@@ -576,9 +576,9 @@ namespace TencentCloud.Ocr.V20181119
         /// 
         /// 适用于文字较多、版式复杂、对识别准召率要求较高的场景，如试卷试题、网络图片、街景店招牌、法律卷宗等场景。
         /// 
-        /// 产品优势：与通用印刷体识别相比，提供更高精度的文字识别服务，在文字较多、长串数字、小字、模糊字、倾斜文本等困难场景下，高精度版的准确率和召回率更高。
+        /// 产品优势：与通用印刷体识别接口相比，本接口提供更高精度的通用文字识别服务，在手写体、文字较多、长串数字、小字、模糊字、倾斜文本等困难场景下，高精度版的准确率和召回率更高。
         /// 
-        /// 通用印刷体识别不同版本的差异如下：
+        /// 通用文字识别不同版本的差异如下：
         /// <table style="width:715px">
         ///       <thead>
         ///         <tr>
@@ -648,9 +648,9 @@ namespace TencentCloud.Ocr.V20181119
         /// 
         /// 适用于文字较多、版式复杂、对识别准召率要求较高的场景，如试卷试题、网络图片、街景店招牌、法律卷宗等场景。
         /// 
-        /// 产品优势：与通用印刷体识别相比，提供更高精度的文字识别服务，在文字较多、长串数字、小字、模糊字、倾斜文本等困难场景下，高精度版的准确率和召回率更高。
+        /// 产品优势：与通用印刷体识别接口相比，本接口提供更高精度的通用文字识别服务，在手写体、文字较多、长串数字、小字、模糊字、倾斜文本等困难场景下，高精度版的准确率和召回率更高。
         /// 
-        /// 通用印刷体识别不同版本的差异如下：
+        /// 通用文字识别不同版本的差异如下：
         /// <table style="width:715px">
         ///       <thead>
         ///         <tr>
@@ -2972,6 +2972,7 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持图片内车辆识别代号（VIN）的检测和识别。
+        /// 默认接口请求频率限制：10次/秒。
         /// </summary>
         /// <param name="req"><see cref="VinOCRRequest"/></param>
         /// <returns><see cref="VinOCRResponse"/></returns>
@@ -2982,6 +2983,7 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持图片内车辆识别代号（VIN）的检测和识别。
+        /// 默认接口请求频率限制：10次/秒。
         /// </summary>
         /// <param name="req"><see cref="VinOCRRequest"/></param>
         /// <returns><see cref="VinOCRResponse"/></returns>

@@ -25,13 +25,13 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 查询总条数。
+        /// 查询到的总条数，最大值为10000条。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 慢SQL统计分析接口返回详情。
+        /// 查询到的慢SQL统计分析详细信息集合。
         /// </summary>
         [JsonProperty("Detail")]
         public Detail Detail{ get; set; }
