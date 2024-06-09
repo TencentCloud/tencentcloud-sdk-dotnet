@@ -24,12 +24,19 @@ namespace TencentCloud.Domain.V20180808.Models
     public class DeleteBiddingRequest : AbstractModel
     {
         
+        /// <summary>
+        /// business_id
+        /// </summary>
+        [JsonProperty("BusinessID")]
+        public string BusinessID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "BusinessID", this.BusinessID);
         }
     }
 }

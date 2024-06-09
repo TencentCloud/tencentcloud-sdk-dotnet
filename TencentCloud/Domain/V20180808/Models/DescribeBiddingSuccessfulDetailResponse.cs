@@ -25,10 +25,58 @@ namespace TencentCloud.Domain.V20180808.Models
     {
         
         /// <summary>
+        /// 域名
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
+        /// <summary>
+        /// 得标时间
+        /// </summary>
+        [JsonProperty("SuccessfulTime")]
+        public string SuccessfulTime{ get; set; }
+
+        /// <summary>
+        /// 得标价格
+        /// </summary>
+        [JsonProperty("SuccessfulPrice")]
+        public float? SuccessfulPrice{ get; set; }
+
+        /// <summary>
+        ///  注册时间
+        /// </summary>
+        [JsonProperty("RegTime")]
+        public string RegTime{ get; set; }
+
+        /// <summary>
+        /// 过期时间
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public string ExpireTime{ get; set; }
+
+        /// <summary>
+        /// 删除时间
+        /// </summary>
+        [JsonProperty("DeleteTime")]
+        public string DeleteTime{ get; set; }
+
+        /// <summary>
+        /// 付款结束时间
+        /// </summary>
+        [JsonProperty("PayEndTime")]
+        public string PayEndTime{ get; set; }
+
+        /// <summary>
         /// 保证金，是否退款，yes表示退款，no表示不退款
         /// </summary>
         [JsonProperty("BiddingBondRefund")]
         public string BiddingBondRefund{ get; set; }
+
+        /// <summary>
+        /// 保证金
+        /// </summary>
+        [JsonProperty("BiddingBondPrice")]
+        public float? BiddingBondPrice{ get; set; }
 
         /// <summary>
         /// 状态：1 竞价中，2 待出价，3 竞价失败， 4 等待支付 5 等待转移， 6 转移中，7 交易成功，8 持有者索回，9 已违约
@@ -48,7 +96,15 @@ namespace TencentCloud.Domain.V20180808.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "SuccessfulTime", this.SuccessfulTime);
+            this.SetParamSimple(map, prefix + "SuccessfulPrice", this.SuccessfulPrice);
+            this.SetParamSimple(map, prefix + "RegTime", this.RegTime);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
+            this.SetParamSimple(map, prefix + "PayEndTime", this.PayEndTime);
             this.SetParamSimple(map, prefix + "BiddingBondRefund", this.BiddingBondRefund);
+            this.SetParamSimple(map, prefix + "BiddingBondPrice", this.BiddingBondPrice);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

@@ -25,6 +25,60 @@ namespace TencentCloud.Domain.V20180808.Models
     {
         
         /// <summary>
+        /// 域名
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
+        /// <summary>
+        /// 预约人数
+        /// </summary>
+        [JsonProperty("AppointNum")]
+        public ulong? AppointNum{ get; set; }
+
+        /// <summary>
+        /// 预约开始时间
+        /// </summary>
+        [JsonProperty("AppointStartTime")]
+        public string AppointStartTime{ get; set; }
+
+        /// <summary>
+        /// 预约结束时间
+        /// </summary>
+        [JsonProperty("AppointEndTime")]
+        public string AppointEndTime{ get; set; }
+
+        /// <summary>
+        ///  注册时间
+        /// </summary>
+        [JsonProperty("RegTime")]
+        public string RegTime{ get; set; }
+
+        /// <summary>
+        /// 过期时间
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public string ExpireTime{ get; set; }
+
+        /// <summary>
+        /// 删除时间
+        /// </summary>
+        [JsonProperty("DeleteTime")]
+        public string DeleteTime{ get; set; }
+
+        /// <summary>
+        /// 当前价格
+        /// </summary>
+        [JsonProperty("AppointPrice")]
+        public ulong? AppointPrice{ get; set; }
+
+        /// <summary>
+        /// 预约保证金
+        /// </summary>
+        [JsonProperty("AppointBondPrice")]
+        public ulong? AppointBondPrice{ get; set; }
+
+        /// <summary>
         ///  1 已预约，2 竞价中，3 等待出价 4 等待支付 5 失败 6 转移中，7 转移成功 8 持有者索回
         /// </summary>
         [JsonProperty("Status")]
@@ -49,6 +103,15 @@ namespace TencentCloud.Domain.V20180808.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "AppointNum", this.AppointNum);
+            this.SetParamSimple(map, prefix + "AppointStartTime", this.AppointStartTime);
+            this.SetParamSimple(map, prefix + "AppointEndTime", this.AppointEndTime);
+            this.SetParamSimple(map, prefix + "RegTime", this.RegTime);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
+            this.SetParamSimple(map, prefix + "AppointPrice", this.AppointPrice);
+            this.SetParamSimple(map, prefix + "AppointBondPrice", this.AppointBondPrice);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "BiddingBondRefund", this.BiddingBondRefund);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

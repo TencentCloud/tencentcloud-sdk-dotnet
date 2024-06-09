@@ -45,6 +45,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? FlowId{ get; set; }
 
         /// <summary>
+        /// 查询流程状态，流程额外信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TraceId")]
+        public string TraceId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -59,6 +66,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamSimple(map, prefix + "TraceId", this.TraceId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

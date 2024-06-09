@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1022";
+       private const string sdkVersion = "SDK_NET_3.0.1023";
 
         /// <summary>
         /// Client constructor.
@@ -449,6 +449,27 @@ namespace TencentCloud.Redis.V20180412
         public DescribeAutoBackupConfigResponse DescribeAutoBackupConfigSync(DescribeAutoBackupConfigRequest req)
         {
             return InternalRequestAsync<DescribeAutoBackupConfigResponse>(req, "DescribeAutoBackupConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBackupDetail）用于查询实例的备份信息详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDetailRequest"/></param>
+        /// <returns><see cref="DescribeBackupDetailResponse"/></returns>
+        public Task<DescribeBackupDetailResponse> DescribeBackupDetail(DescribeBackupDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupDetailResponse>(req, "DescribeBackupDetail");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBackupDetail）用于查询实例的备份信息详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDetailRequest"/></param>
+        /// <returns><see cref="DescribeBackupDetailResponse"/></returns>
+        public DescribeBackupDetailResponse DescribeBackupDetailSync(DescribeBackupDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupDetailResponse>(req, "DescribeBackupDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

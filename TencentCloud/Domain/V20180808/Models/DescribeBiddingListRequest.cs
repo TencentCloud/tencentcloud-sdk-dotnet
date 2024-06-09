@@ -25,10 +25,22 @@ namespace TencentCloud.Domain.V20180808.Models
     {
         
         /// <summary>
+        /// 页码
+        /// </summary>
+        [JsonProperty("PageNumber")]
+        public ulong? PageNumber{ get; set; }
+
+        /// <summary>
         /// 每页数量
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
+
+        /// <summary>
+        /// 域名
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
 
         /// <summary>
         /// 2 竞价中  3 等待出价  4 交易失败  10 竞价阶段持有者赎回
@@ -55,7 +67,9 @@ namespace TencentCloud.Domain.V20180808.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamArraySimple(map, prefix + "Status.", this.Status);
             this.SetParamSimple(map, prefix + "SortField", this.SortField);
             this.SetParamSimple(map, prefix + "SortOrder", this.SortOrder);

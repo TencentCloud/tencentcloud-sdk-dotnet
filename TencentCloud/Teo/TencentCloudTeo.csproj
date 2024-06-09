@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1022</VersionPrefix>
+    <VersionPrefix>3.0.1023</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -127,6 +127,8 @@
     <Compile Include="V20220901\Models\CreateCLSIndexResponse.cs" />
     <Compile Include="V20220901\Models\CreateConfigGroupVersionRequest.cs" />
     <Compile Include="V20220901\Models\CreateConfigGroupVersionResponse.cs" />
+    <Compile Include="V20220901\Models\CreateCustomizeErrorPageRequest.cs" />
+    <Compile Include="V20220901\Models\CreateCustomizeErrorPageResponse.cs" />
     <Compile Include="V20220901\Models\CreateL4ProxyRequest.cs" />
     <Compile Include="V20220901\Models\CreateL4ProxyResponse.cs" />
     <Compile Include="V20220901\Models\CreateL4ProxyRulesRequest.cs" />
@@ -152,6 +154,7 @@
     <Compile Include="V20220901\Models\CreateZoneRequest.cs" />
     <Compile Include="V20220901\Models\CreateZoneResponse.cs" />
     <Compile Include="V20220901\Models\CustomEndpoint.cs" />
+    <Compile Include="V20220901\Models\CustomErrorPage.cs" />
     <Compile Include="V20220901\Models\CustomField.cs" />
     <Compile Include="V20220901\Models\DDoS.cs" />
     <Compile Include="V20220901\Models\DDoSAttackEvent.cs" />
@@ -166,6 +169,8 @@
     <Compile Include="V20220901\Models\DeleteApplicationProxyResponse.cs" />
     <Compile Include="V20220901\Models\DeleteApplicationProxyRuleRequest.cs" />
     <Compile Include="V20220901\Models\DeleteApplicationProxyRuleResponse.cs" />
+    <Compile Include="V20220901\Models\DeleteCustomErrorPageRequest.cs" />
+    <Compile Include="V20220901\Models\DeleteCustomErrorPageResponse.cs" />
     <Compile Include="V20220901\Models\DeleteL4ProxyRequest.cs" />
     <Compile Include="V20220901\Models\DeleteL4ProxyResponse.cs" />
     <Compile Include="V20220901\Models\DeleteL4ProxyRulesRequest.cs" />
@@ -202,6 +207,8 @@
     <Compile Include="V20220901\Models\DescribeConfigGroupVersionsResponse.cs" />
     <Compile Include="V20220901\Models\DescribeContentQuotaRequest.cs" />
     <Compile Include="V20220901\Models\DescribeContentQuotaResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeCustomErrorPagesRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeCustomErrorPagesResponse.cs" />
     <Compile Include="V20220901\Models\DescribeDDoSAttackDataRequest.cs" />
     <Compile Include="V20220901\Models\DescribeDDoSAttackDataResponse.cs" />
     <Compile Include="V20220901\Models\DescribeDDoSAttackEventRequest.cs" />
@@ -273,6 +280,7 @@
     <Compile Include="V20220901\Models\DropPageDetail.cs" />
     <Compile Include="V20220901\Models\EntityStatus.cs" />
     <Compile Include="V20220901\Models\EnvInfo.cs" />
+    <Compile Include="V20220901\Models\ErrorPageReference.cs" />
     <Compile Include="V20220901\Models\ExceptConfig.cs" />
     <Compile Include="V20220901\Models\ExceptUserRule.cs" />
     <Compile Include="V20220901\Models\ExceptUserRuleCondition.cs" />
@@ -324,6 +332,8 @@
     <Compile Include="V20220901\Models\ModifyApplicationProxyRuleStatusResponse.cs" />
     <Compile Include="V20220901\Models\ModifyApplicationProxyStatusRequest.cs" />
     <Compile Include="V20220901\Models\ModifyApplicationProxyStatusResponse.cs" />
+    <Compile Include="V20220901\Models\ModifyCustomErrorPageRequest.cs" />
+    <Compile Include="V20220901\Models\ModifyCustomErrorPageResponse.cs" />
     <Compile Include="V20220901\Models\ModifyHostsCertificateRequest.cs" />
     <Compile Include="V20220901\Models\ModifyHostsCertificateResponse.cs" />
     <Compile Include="V20220901\Models\ModifyL4ProxyRequest.cs" />

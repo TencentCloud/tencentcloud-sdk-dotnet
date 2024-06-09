@@ -25,6 +25,18 @@ namespace TencentCloud.Domain.V20180808.Models
     {
         
         /// <summary>
+        /// 搜索结果条数
+        /// </summary>
+        [JsonProperty("Total")]
+        public long? Total{ get; set; }
+
+        /// <summary>
+        /// 预约列表
+        /// </summary>
+        [JsonProperty("AppointList")]
+        public BiddingAppointResult[] AppointList{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Domain.V20180808.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamArrayObj(map, prefix + "AppointList.", this.AppointList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

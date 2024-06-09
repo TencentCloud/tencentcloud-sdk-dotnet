@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1022";
+       private const string sdkVersion = "SDK_NET_3.0.1023";
 
         /// <summary>
         /// Client constructor.
@@ -266,6 +266,27 @@ namespace TencentCloud.Teo.V20220901
         public CreateConfigGroupVersionResponse CreateConfigGroupVersionSync(CreateConfigGroupVersionRequest req)
         {
             return InternalRequestAsync<CreateConfigGroupVersionResponse>(req, "CreateConfigGroupVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建自定义错误页面。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomizeErrorPageRequest"/></param>
+        /// <returns><see cref="CreateCustomizeErrorPageResponse"/></returns>
+        public Task<CreateCustomizeErrorPageResponse> CreateCustomizeErrorPage(CreateCustomizeErrorPageRequest req)
+        {
+            return InternalRequestAsync<CreateCustomizeErrorPageResponse>(req, "CreateCustomizeErrorPage");
+        }
+
+        /// <summary>
+        /// 创建自定义错误页面。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomizeErrorPageRequest"/></param>
+        /// <returns><see cref="CreateCustomizeErrorPageResponse"/></returns>
+        public CreateCustomizeErrorPageResponse CreateCustomizeErrorPageSync(CreateCustomizeErrorPageRequest req)
+        {
+            return InternalRequestAsync<CreateCustomizeErrorPageResponse>(req, "CreateCustomizeErrorPage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -616,6 +637,27 @@ namespace TencentCloud.Teo.V20220901
         public DeleteApplicationProxyRuleResponse DeleteApplicationProxyRuleSync(DeleteApplicationProxyRuleRequest req)
         {
             return InternalRequestAsync<DeleteApplicationProxyRuleResponse>(req, "DeleteApplicationProxyRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除自定义错误页面。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomErrorPageRequest"/></param>
+        /// <returns><see cref="DeleteCustomErrorPageResponse"/></returns>
+        public Task<DeleteCustomErrorPageResponse> DeleteCustomErrorPage(DeleteCustomErrorPageRequest req)
+        {
+            return InternalRequestAsync<DeleteCustomErrorPageResponse>(req, "DeleteCustomErrorPage");
+        }
+
+        /// <summary>
+        /// 删除自定义错误页面。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomErrorPageRequest"/></param>
+        /// <returns><see cref="DeleteCustomErrorPageResponse"/></returns>
+        public DeleteCustomErrorPageResponse DeleteCustomErrorPageSync(DeleteCustomErrorPageRequest req)
+        {
+            return InternalRequestAsync<DeleteCustomErrorPageResponse>(req, "DeleteCustomErrorPage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -973,6 +1015,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeContentQuotaResponse DescribeContentQuotaSync(DescribeContentQuotaRequest req)
         {
             return InternalRequestAsync<DescribeContentQuotaResponse>(req, "DescribeContentQuota")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询自定义错误页列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomErrorPagesRequest"/></param>
+        /// <returns><see cref="DescribeCustomErrorPagesResponse"/></returns>
+        public Task<DescribeCustomErrorPagesResponse> DescribeCustomErrorPages(DescribeCustomErrorPagesRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomErrorPagesResponse>(req, "DescribeCustomErrorPages");
+        }
+
+        /// <summary>
+        /// 查询自定义错误页列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomErrorPagesRequest"/></param>
+        /// <returns><see cref="DescribeCustomErrorPagesResponse"/></returns>
+        public DescribeCustomErrorPagesResponse DescribeCustomErrorPagesSync(DescribeCustomErrorPagesRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomErrorPagesResponse>(req, "DescribeCustomErrorPages")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1883,6 +1946,27 @@ namespace TencentCloud.Teo.V20220901
         public ModifyApplicationProxyStatusResponse ModifyApplicationProxyStatusSync(ModifyApplicationProxyStatusRequest req)
         {
             return InternalRequestAsync<ModifyApplicationProxyStatusResponse>(req, "ModifyApplicationProxyStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改自定义错误页面。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomErrorPageRequest"/></param>
+        /// <returns><see cref="ModifyCustomErrorPageResponse"/></returns>
+        public Task<ModifyCustomErrorPageResponse> ModifyCustomErrorPage(ModifyCustomErrorPageRequest req)
+        {
+            return InternalRequestAsync<ModifyCustomErrorPageResponse>(req, "ModifyCustomErrorPage");
+        }
+
+        /// <summary>
+        /// 修改自定义错误页面。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomErrorPageRequest"/></param>
+        /// <returns><see cref="ModifyCustomErrorPageResponse"/></returns>
+        public ModifyCustomErrorPageResponse ModifyCustomErrorPageSync(ModifyCustomErrorPageRequest req)
+        {
+            return InternalRequestAsync<ModifyCustomErrorPageResponse>(req, "ModifyCustomErrorPage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

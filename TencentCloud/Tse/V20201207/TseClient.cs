@@ -28,7 +28,7 @@ namespace TencentCloud.Tse.V20201207
 
        private const string endpoint = "tse.tencentcloudapi.com";
        private const string version = "2020-12-07";
-       private const string sdkVersion = "SDK_NET_3.0.1022";
+       private const string sdkVersion = "SDK_NET_3.0.1023";
 
         /// <summary>
         /// Client constructor.
@@ -1625,6 +1625,27 @@ namespace TencentCloud.Tse.V20201207
         public DescribeOneCloudNativeAPIGatewayServiceResponse DescribeOneCloudNativeAPIGatewayServiceSync(DescribeOneCloudNativeAPIGatewayServiceRequest req)
         {
             return InternalRequestAsync<DescribeOneCloudNativeAPIGatewayServiceResponse>(req, "DescribeOneCloudNativeAPIGatewayService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询公网地址信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePublicAddressConfigRequest"/></param>
+        /// <returns><see cref="DescribePublicAddressConfigResponse"/></returns>
+        public Task<DescribePublicAddressConfigResponse> DescribePublicAddressConfig(DescribePublicAddressConfigRequest req)
+        {
+            return InternalRequestAsync<DescribePublicAddressConfigResponse>(req, "DescribePublicAddressConfig");
+        }
+
+        /// <summary>
+        /// 查询公网地址信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePublicAddressConfigRequest"/></param>
+        /// <returns><see cref="DescribePublicAddressConfigResponse"/></returns>
+        public DescribePublicAddressConfigResponse DescribePublicAddressConfigSync(DescribePublicAddressConfigRequest req)
+        {
+            return InternalRequestAsync<DescribePublicAddressConfigResponse>(req, "DescribePublicAddressConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
