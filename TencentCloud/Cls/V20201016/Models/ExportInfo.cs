@@ -109,6 +109,13 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("SyntaxRule")]
         public ulong? SyntaxRule{ get; set; }
 
+        /// <summary>
+        /// 导出字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DerivedFields")]
+        public string[] DerivedFields{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +136,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "CosPath", this.CosPath);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
+            this.SetParamArraySimple(map, prefix + "DerivedFields.", this.DerivedFields);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Cds.V20180420
 
        private const string endpoint = "cds.tencentcloudapi.com";
        private const string version = "2018-04-20";
-       private const string sdkVersion = "SDK_NET_3.0.1023";
+       private const string sdkVersion = "SDK_NET_3.0.1024";
 
         /// <summary>
         /// Client constructor.
@@ -54,6 +54,8 @@ namespace TencentCloud.Cds.V20180420
         }
 
         /// <summary>
+        /// 这些接口是传统版堡垒机接口.数审未用到，堡垒机的已全部迁移到dasb下，cds这边预下线
+        /// 
         /// 获取镜像列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDasbImageIdsRequest"/></param>
@@ -64,6 +66,8 @@ namespace TencentCloud.Cds.V20180420
         }
 
         /// <summary>
+        /// 这些接口是传统版堡垒机接口.数审未用到，堡垒机的已全部迁移到dasb下，cds这边预下线
+        /// 
         /// 获取镜像列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDasbImageIdsRequest"/></param>

@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1023";
+       private const string sdkVersion = "SDK_NET_3.0.1024";
 
         /// <summary>
         /// Client constructor.
@@ -264,6 +264,27 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// 本接口（DescribeBackupRules）用于获取实例自动备份配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupRulesRequest"/></param>
+        /// <returns><see cref="DescribeBackupRulesResponse"/></returns>
+        public Task<DescribeBackupRulesResponse> DescribeBackupRules(DescribeBackupRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupRulesResponse>(req, "DescribeBackupRules");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBackupRules）用于获取实例自动备份配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupRulesRequest"/></param>
+        /// <returns><see cref="DescribeBackupRulesResponse"/></returns>
+        public DescribeBackupRulesResponse DescribeBackupRulesSync(DescribeBackupRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupRulesResponse>(req, "DescribeBackupRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeClientConnections）用于查询实例客户端连接信息，包括连接 IP 和连接数量。
         /// </summary>
         /// <param name="req"><see cref="DescribeClientConnectionsRequest"/></param>
@@ -491,6 +512,48 @@ namespace TencentCloud.Mongodb.V20190725
         public DescribeSpecInfoResponse DescribeSpecInfoSync(DescribeSpecInfoRequest req)
         {
             return InternalRequestAsync<DescribeSpecInfoResponse>(req, "DescribeSpecInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取实例透明加密的开启状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTransparentDataEncryptionStatusRequest"/></param>
+        /// <returns><see cref="DescribeTransparentDataEncryptionStatusResponse"/></returns>
+        public Task<DescribeTransparentDataEncryptionStatusResponse> DescribeTransparentDataEncryptionStatus(DescribeTransparentDataEncryptionStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeTransparentDataEncryptionStatusResponse>(req, "DescribeTransparentDataEncryptionStatus");
+        }
+
+        /// <summary>
+        /// 获取实例透明加密的开启状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTransparentDataEncryptionStatusRequest"/></param>
+        /// <returns><see cref="DescribeTransparentDataEncryptionStatusResponse"/></returns>
+        public DescribeTransparentDataEncryptionStatusResponse DescribeTransparentDataEncryptionStatusSync(DescribeTransparentDataEncryptionStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeTransparentDataEncryptionStatusResponse>(req, "DescribeTransparentDataEncryptionStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(EnableTransparentDataEncryption)用于开启云数据库 MongoDB 的透明加密能力。
+        /// </summary>
+        /// <param name="req"><see cref="EnableTransparentDataEncryptionRequest"/></param>
+        /// <returns><see cref="EnableTransparentDataEncryptionResponse"/></returns>
+        public Task<EnableTransparentDataEncryptionResponse> EnableTransparentDataEncryption(EnableTransparentDataEncryptionRequest req)
+        {
+            return InternalRequestAsync<EnableTransparentDataEncryptionResponse>(req, "EnableTransparentDataEncryption");
+        }
+
+        /// <summary>
+        /// 本接口(EnableTransparentDataEncryption)用于开启云数据库 MongoDB 的透明加密能力。
+        /// </summary>
+        /// <param name="req"><see cref="EnableTransparentDataEncryptionRequest"/></param>
+        /// <returns><see cref="EnableTransparentDataEncryptionResponse"/></returns>
+        public EnableTransparentDataEncryptionResponse EnableTransparentDataEncryptionSync(EnableTransparentDataEncryptionRequest req)
+        {
+            return InternalRequestAsync<EnableTransparentDataEncryptionResponse>(req, "EnableTransparentDataEncryption")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -808,6 +871,27 @@ namespace TencentCloud.Mongodb.V20190725
         public SetAccountUserPrivilegeResponse SetAccountUserPrivilegeSync(SetAccountUserPrivilegeRequest req)
         {
             return InternalRequestAsync<SetAccountUserPrivilegeResponse>(req, "SetAccountUserPrivilege")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(SetBackupRules)用于设置 MongoDB 云数据库的自动备份规则。
+        /// </summary>
+        /// <param name="req"><see cref="SetBackupRulesRequest"/></param>
+        /// <returns><see cref="SetBackupRulesResponse"/></returns>
+        public Task<SetBackupRulesResponse> SetBackupRules(SetBackupRulesRequest req)
+        {
+            return InternalRequestAsync<SetBackupRulesResponse>(req, "SetBackupRules");
+        }
+
+        /// <summary>
+        /// 本接口(SetBackupRules)用于设置 MongoDB 云数据库的自动备份规则。
+        /// </summary>
+        /// <param name="req"><see cref="SetBackupRulesRequest"/></param>
+        /// <returns><see cref="SetBackupRulesResponse"/></returns>
+        public SetBackupRulesResponse SetBackupRulesSync(SetBackupRulesRequest req)
+        {
+            return InternalRequestAsync<SetBackupRulesResponse>(req, "SetBackupRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

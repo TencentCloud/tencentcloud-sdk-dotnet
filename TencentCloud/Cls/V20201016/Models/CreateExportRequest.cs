@@ -73,6 +73,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("SyntaxRule")]
         public ulong? SyntaxRule{ get; set; }
 
+        /// <summary>
+        /// 导出字段
+        /// </summary>
+        [JsonProperty("DerivedFields")]
+        public string[] DerivedFields{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +93,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "Format", this.Format);
             this.SetParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
+            this.SetParamArraySimple(map, prefix + "DerivedFields.", this.DerivedFields);
         }
     }
 }

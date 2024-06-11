@@ -28,7 +28,7 @@ namespace TencentCloud.Cam.V20190116
 
        private const string endpoint = "cam.tencentcloudapi.com";
        private const string version = "2019-01-16";
-       private const string sdkVersion = "SDK_NET_3.0.1023";
+       private const string sdkVersion = "SDK_NET_3.0.1024";
 
         /// <summary>
         /// Client constructor.
@@ -155,6 +155,27 @@ namespace TencentCloud.Cam.V20190116
         public AttachUserPolicyResponse AttachUserPolicySync(AttachUserPolicyRequest req)
         {
             return InternalRequestAsync<AttachUserPolicyResponse>(req, "AttachUserPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取数据流认证Token
+        /// </summary>
+        /// <param name="req"><see cref="BuildDataFlowAuthTokenRequest"/></param>
+        /// <returns><see cref="BuildDataFlowAuthTokenResponse"/></returns>
+        public Task<BuildDataFlowAuthTokenResponse> BuildDataFlowAuthToken(BuildDataFlowAuthTokenRequest req)
+        {
+            return InternalRequestAsync<BuildDataFlowAuthTokenResponse>(req, "BuildDataFlowAuthToken");
+        }
+
+        /// <summary>
+        /// 获取数据流认证Token
+        /// </summary>
+        /// <param name="req"><see cref="BuildDataFlowAuthTokenRequest"/></param>
+        /// <returns><see cref="BuildDataFlowAuthTokenResponse"/></returns>
+        public BuildDataFlowAuthTokenResponse BuildDataFlowAuthTokenSync(BuildDataFlowAuthTokenRequest req)
+        {
+            return InternalRequestAsync<BuildDataFlowAuthTokenResponse>(req, "BuildDataFlowAuthToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

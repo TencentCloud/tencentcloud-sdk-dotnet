@@ -151,6 +151,13 @@ namespace TencentCloud.Cat.V20180409.Models
         [JsonProperty("TagInfoList")]
         public KeyValuePair[] TagInfoList{ get; set; }
 
+        /// <summary>
+        /// 是否为同步账号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubSyncFlag")]
+        public long? SubSyncFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -173,6 +180,7 @@ namespace TencentCloud.Cat.V20180409.Models
             this.SetParamSimple(map, prefix + "Cron", this.Cron);
             this.SetParamSimple(map, prefix + "CronState", this.CronState);
             this.SetParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
+            this.SetParamSimple(map, prefix + "SubSyncFlag", this.SubSyncFlag);
         }
     }
 }
