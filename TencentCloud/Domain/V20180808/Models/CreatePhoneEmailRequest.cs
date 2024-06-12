@@ -37,7 +37,7 @@ namespace TencentCloud.Domain.V20180808.Models
         public ulong? Type{ get; set; }
 
         /// <summary>
-        /// 验证码
+        /// 验证码(通过SendPhoneEmailCode发送到手机或邮箱的验证码)
         /// </summary>
         [JsonProperty("VerifyCode")]
         public string VerifyCode{ get; set; }

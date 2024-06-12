@@ -56,6 +56,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
+        /// <summary>
+        /// casbId
+        /// </summary>
+        [JsonProperty("CasbId")]
+        public string CasbId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +72,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "ComplianceId", this.ComplianceId);
             this.SetParamSimple(map, prefix + "MetaDataType", this.MetaDataType);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "CasbId", this.CasbId);
         }
     }
 }

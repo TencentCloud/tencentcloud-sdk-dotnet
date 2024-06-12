@@ -48,6 +48,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("ModelId")]
         public string ModelId{ get; set; }
 
+        /// <summary>
+        /// 小程序APPID
+        /// </summary>
+        [JsonProperty("MiniProgramAppId")]
+        public string MiniProgramAppId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
             this.SetParamSimple(map, prefix + "IsThirdApp", this.IsThirdApp);
             this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
+            this.SetParamSimple(map, prefix + "MiniProgramAppId", this.MiniProgramAppId);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1024";
+       private const string sdkVersion = "SDK_NET_3.0.1025";
 
         /// <summary>
         /// Client constructor.
@@ -776,6 +776,27 @@ namespace TencentCloud.Waf.V20180125
         public DescribeAntiInfoLeakageRulesResponse DescribeAntiInfoLeakageRulesSync(DescribeAntiInfoLeakageRulesRequest req)
         {
             return InternalRequestAsync<DescribeAntiInfoLeakageRulesResponse>(req, "DescribeAntiInfoLeakageRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取WAF地域封禁支持的地域列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAreaBanSupportAreasRequest"/></param>
+        /// <returns><see cref="DescribeAreaBanSupportAreasResponse"/></returns>
+        public Task<DescribeAreaBanSupportAreasResponse> DescribeAreaBanSupportAreas(DescribeAreaBanSupportAreasRequest req)
+        {
+            return InternalRequestAsync<DescribeAreaBanSupportAreasResponse>(req, "DescribeAreaBanSupportAreas");
+        }
+
+        /// <summary>
+        /// 获取WAF地域封禁支持的地域列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAreaBanSupportAreasRequest"/></param>
+        /// <returns><see cref="DescribeAreaBanSupportAreasResponse"/></returns>
+        public DescribeAreaBanSupportAreasResponse DescribeAreaBanSupportAreasSync(DescribeAreaBanSupportAreasRequest req)
+        {
+            return InternalRequestAsync<DescribeAreaBanSupportAreasResponse>(req, "DescribeAreaBanSupportAreas")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2099,6 +2120,27 @@ namespace TencentCloud.Waf.V20180125
         public ModifyApiSecEventChangeResponse ModifyApiSecEventChangeSync(ModifyApiSecEventChangeRequest req)
         {
             return InternalRequestAsync<ModifyApiSecEventChangeResponse>(req, "ModifyApiSecEventChange")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改地域封禁中的地域信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAreaBanAreasRequest"/></param>
+        /// <returns><see cref="ModifyAreaBanAreasResponse"/></returns>
+        public Task<ModifyAreaBanAreasResponse> ModifyAreaBanAreas(ModifyAreaBanAreasRequest req)
+        {
+            return InternalRequestAsync<ModifyAreaBanAreasResponse>(req, "ModifyAreaBanAreas");
+        }
+
+        /// <summary>
+        /// 修改地域封禁中的地域信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAreaBanAreasRequest"/></param>
+        /// <returns><see cref="ModifyAreaBanAreasResponse"/></returns>
+        public ModifyAreaBanAreasResponse ModifyAreaBanAreasSync(ModifyAreaBanAreasRequest req)
+        {
+            return InternalRequestAsync<ModifyAreaBanAreasResponse>(req, "ModifyAreaBanAreas")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

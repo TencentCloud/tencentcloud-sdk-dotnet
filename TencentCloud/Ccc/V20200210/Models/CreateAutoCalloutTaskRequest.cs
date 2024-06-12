@@ -73,7 +73,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? NotAfter{ get; set; }
 
         /// <summary>
-        /// 最大尝试次数
+        /// 最大尝试次数，1-3 次
         /// </summary>
         [JsonProperty("Tries")]
         public ulong? Tries{ get; set; }

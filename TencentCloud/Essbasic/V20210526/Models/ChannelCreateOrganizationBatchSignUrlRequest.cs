@@ -37,7 +37,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string[] FlowIds{ get; set; }
 
         /// <summary>
-        /// 第三方应用平台的用户openid。 您可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查阅某位员工的OpenId。 OpenId必须是传入合同（FlowId）中的签署人。 - 1. 若OpenId为空，Name和Mobile 必须提供。 - 2. 若OpenId 与 Name，Mobile均存在，将优先采用OpenId对应的员工。	
+        /// 第三方应用平台的用户openid。 您可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查阅某位员工的OpenId。 OpenId必须是传入合同（FlowId）中的签署人。
+        /// 
+        /// <ul>
+        /// <li>1. 若OpenId为空，Name和Mobile 必须提供。</li>
+        /// <li>2. 若OpenId 与 Name，Mobile均存在，将优先采用OpenId对应的员工。	</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }

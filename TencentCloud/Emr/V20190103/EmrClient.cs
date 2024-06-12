@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1024";
+       private const string sdkVersion = "SDK_NET_3.0.1025";
 
         /// <summary>
         /// Client constructor.
@@ -241,6 +241,27 @@ namespace TencentCloud.Emr.V20190103
         public DescribeAutoScaleStrategiesResponse DescribeAutoScaleStrategiesSync(DescribeAutoScaleStrategiesRequest req)
         {
             return InternalRequestAsync<DescribeAutoScaleStrategiesResponse>(req, "DescribeAutoScaleStrategies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询EMR任务运行详情状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterFlowStatusDetailRequest"/></param>
+        /// <returns><see cref="DescribeClusterFlowStatusDetailResponse"/></returns>
+        public Task<DescribeClusterFlowStatusDetailResponse> DescribeClusterFlowStatusDetail(DescribeClusterFlowStatusDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterFlowStatusDetailResponse>(req, "DescribeClusterFlowStatusDetail");
+        }
+
+        /// <summary>
+        /// 查询EMR任务运行详情状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterFlowStatusDetailRequest"/></param>
+        /// <returns><see cref="DescribeClusterFlowStatusDetailResponse"/></returns>
+        public DescribeClusterFlowStatusDetailResponse DescribeClusterFlowStatusDetailSync(DescribeClusterFlowStatusDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterFlowStatusDetailResponse>(req, "DescribeClusterFlowStatusDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

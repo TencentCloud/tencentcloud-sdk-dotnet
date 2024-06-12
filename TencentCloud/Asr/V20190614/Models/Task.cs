@@ -25,7 +25,8 @@ namespace TencentCloud.Asr.V20190614.Models
     {
         
         /// <summary>
-        /// 任务ID，可通过此ID在轮询接口获取识别状态与结果。注意：TaskId数据类型为uint64
+        /// 任务ID，可通过此ID在轮询接口获取识别状态与结果。TaskId数据类型为**uint64**。
+        /// **注意：TaskId有效期为24小时，不同日期可能出现重复TaskId，请不要依赖TaskId作为您业务系统里的唯一ID。**
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }

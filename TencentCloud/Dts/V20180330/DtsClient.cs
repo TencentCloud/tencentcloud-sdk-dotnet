@@ -28,7 +28,7 @@ namespace TencentCloud.Dts.V20180330
 
        private const string endpoint = "dts.tencentcloudapi.com";
        private const string version = "2018-03-30";
-       private const string sdkVersion = "SDK_NET_3.0.1024";
+       private const string sdkVersion = "SDK_NET_3.0.1025";
 
         /// <summary>
         /// Client constructor.
@@ -265,6 +265,8 @@ namespace TencentCloud.Dts.V20180330
         }
 
         /// <summary>
+        /// 接口不再使用
+        /// 
         /// 本接口（DescribeRegionConf）用于查询可售卖订阅实例的地域
         /// </summary>
         /// <param name="req"><see cref="DescribeRegionConfRequest"/></param>
@@ -275,6 +277,8 @@ namespace TencentCloud.Dts.V20180330
         }
 
         /// <summary>
+        /// 接口不再使用
+        /// 
         /// 本接口（DescribeRegionConf）用于查询可售卖订阅实例的地域
         /// </summary>
         /// <param name="req"><see cref="DescribeRegionConfRequest"/></param>

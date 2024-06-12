@@ -382,6 +382,13 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ServicesStatus")]
         public string ServicesStatus{ get; set; }
 
+        /// <summary>
+        /// 备注
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -439,6 +446,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
             this.SetParamSimple(map, prefix + "TradeVersion", this.TradeVersion);
             this.SetParamSimple(map, prefix + "ServicesStatus", this.ServicesStatus);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
         }
     }
 }

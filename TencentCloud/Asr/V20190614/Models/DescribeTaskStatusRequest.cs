@@ -26,6 +26,7 @@ namespace TencentCloud.Asr.V20190614.Models
         
         /// <summary>
         /// 从CreateRecTask接口获取的TaskId，用于获取任务状态与结果。
+        /// **注意：TaskId有效期为24小时，超过24小时的TaskId请不要再查询。**
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }

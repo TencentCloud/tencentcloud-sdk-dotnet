@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1024";
+       private const string sdkVersion = "SDK_NET_3.0.1025";
 
         /// <summary>
         /// Client constructor.
@@ -1651,7 +1651,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 列出可安装的所有 Grafana 插件
+        /// 列出可安装的所有 Grafana 插件。
         /// </summary>
         /// <param name="req"><see cref="DescribePluginOverviewsRequest"/></param>
         /// <returns><see cref="DescribePluginOverviewsResponse"/></returns>
@@ -1661,7 +1661,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 列出可安装的所有 Grafana 插件
+        /// 列出可安装的所有 Grafana 插件。
         /// </summary>
         /// <param name="req"><see cref="DescribePluginOverviewsRequest"/></param>
         /// <returns><see cref="DescribePluginOverviewsResponse"/></returns>
@@ -2058,6 +2058,8 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// DescribePrometheusRecordRules 接口可完全代替该接口。近30天仅有3次调用，且都是报错请求
+        /// 
         /// 拉取Prometheus聚合规则yaml列表
         /// </summary>
         /// <param name="req"><see cref="DescribePrometheusRecordRuleYamlRequest"/></param>
@@ -2068,6 +2070,8 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// DescribePrometheusRecordRules 接口可完全代替该接口。近30天仅有3次调用，且都是报错请求
+        /// 
         /// 拉取Prometheus聚合规则yaml列表
         /// </summary>
         /// <param name="req"><see cref="DescribePrometheusRecordRuleYamlRequest"/></param>
@@ -2205,7 +2209,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 列出 Prometheus 服务可用区
+        /// 列出 Prometheus 服务可用区。
         /// </summary>
         /// <param name="req"><see cref="DescribePrometheusZonesRequest"/></param>
         /// <returns><see cref="DescribePrometheusZonesResponse"/></returns>
@@ -2215,7 +2219,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 列出 Prometheus 服务可用区
+        /// 列出 Prometheus 服务可用区。
         /// </summary>
         /// <param name="req"><see cref="DescribePrometheusZonesRequest"/></param>
         /// <returns><see cref="DescribePrometheusZonesResponse"/></returns>
