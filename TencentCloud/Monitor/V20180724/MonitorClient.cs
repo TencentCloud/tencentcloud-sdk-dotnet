@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1025";
+       private const string sdkVersion = "SDK_NET_3.0.1026";
 
         /// <summary>
         /// Client constructor.
@@ -117,6 +117,8 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 接口功能是检查是否为prometheus新用户，已有其他功能更加全面的接口替代
+        /// 
         /// 判断用户是否为云原生监控新用户，即在任何地域下均未创建过监控实例的用户
         /// </summary>
         /// <param name="req"><see cref="CheckIsPrometheusNewUserRequest"/></param>
@@ -127,6 +129,8 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 接口功能是检查是否为prometheus新用户，已有其他功能更加全面的接口替代
+        /// 
         /// 判断用户是否为云原生监控新用户，即在任何地域下均未创建过监控实例的用户
         /// </summary>
         /// <param name="req"><see cref="CheckIsPrometheusNewUserRequest"/></param>

@@ -31,6 +31,13 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("Timeline")]
         public TimelineEvent[] Timeline{ get; set; }
 
+        /// <summary>
+        /// 数据在原PDF文件中的第几页
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Page")]
+        public long? Page{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +45,7 @@ namespace TencentCloud.Mrs.V20200910.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "Timeline.", this.Timeline);
+            this.SetParamSimple(map, prefix + "Page", this.Page);
         }
     }
 }

@@ -43,13 +43,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public string[] SecurityGroups{ get; set; }
 
         /// <summary>
-        /// 系统
+        /// 系统，默认linux
         /// </summary>
         [JsonProperty("Os")]
         public string Os{ get; set; }
 
         /// <summary>
-        /// 硬件架构
+        /// 硬件架构，默认amd64
         /// </summary>
         [JsonProperty("Arch")]
         public string Arch{ get; set; }

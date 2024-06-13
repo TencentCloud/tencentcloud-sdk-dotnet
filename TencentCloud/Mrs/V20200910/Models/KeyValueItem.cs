@@ -45,6 +45,13 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("Result")]
         public PhysicalBaseItem Result{ get; set; }
 
+        /// <summary>
+        /// 数据在原PDF文件中的第几页
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Page")]
+        public long? Page{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamObj(map, prefix + "Item.", this.Item);
             this.SetParamObj(map, prefix + "Result.", this.Result);
+            this.SetParamSimple(map, prefix + "Page", this.Page);
         }
     }
 }

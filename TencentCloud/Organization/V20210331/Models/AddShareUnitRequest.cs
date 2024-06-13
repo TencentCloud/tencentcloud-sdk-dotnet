@@ -42,6 +42,12 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号，默认值：1
+        /// </summary>
+        [JsonProperty("ShareScope")]
+        public ulong? ShareScope{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "ShareScope", this.ShareScope);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Dc.V20180410.Models
     {
         
         /// <summary>
-        /// 专用通道列表
+        /// 专用通道列表。
         /// </summary>
         [JsonProperty("DirectConnectTunnelSet")]
         public DirectConnectTunnel[] DirectConnectTunnelSet{ get; set; }
 
         /// <summary>
-        /// 符合专用通道数量。
+        /// 专用通道总数量。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

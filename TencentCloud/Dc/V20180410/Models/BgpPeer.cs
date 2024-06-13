@@ -26,12 +26,14 @@ namespace TencentCloud.Dc.V20180410.Models
         
         /// <summary>
         /// 用户侧BGP ASN
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Asn")]
         public long? Asn{ get; set; }
 
         /// <summary>
         /// 用户侧BGP密钥
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthKey")]
         public string AuthKey{ get; set; }

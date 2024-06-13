@@ -38,6 +38,13 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("BlockTitle")]
         public BlockTitle[] BlockTitle{ get; set; }
 
+        /// <summary>
+        /// 数据在原PDF文件中的第几页
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Page")]
+        public long? Page{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Mrs.V20200910.Models
         {
             this.SetParamArrayObj(map, prefix + "Indicators.", this.Indicators);
             this.SetParamArrayObj(map, prefix + "BlockTitle.", this.BlockTitle);
+            this.SetParamSimple(map, prefix + "Page", this.Page);
         }
     }
 }

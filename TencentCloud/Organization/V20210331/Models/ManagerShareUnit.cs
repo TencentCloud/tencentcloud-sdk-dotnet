@@ -82,6 +82,13 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("ShareMemberNum")]
         public long? ShareMemberNum{ get; set; }
 
+        /// <summary>
+        /// 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ShareScope")]
+        public ulong? ShareScope{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -97,6 +104,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ShareResourceNum", this.ShareResourceNum);
             this.SetParamSimple(map, prefix + "ShareMemberNum", this.ShareMemberNum);
+            this.SetParamSimple(map, prefix + "ShareScope", this.ShareScope);
         }
     }
 }

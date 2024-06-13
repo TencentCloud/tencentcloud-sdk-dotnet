@@ -28,7 +28,7 @@ namespace TencentCloud.Chdfs.V20190718
 
        private const string endpoint = "chdfs.tencentcloudapi.com";
        private const string version = "2019-07-18";
-       private const string sdkVersion = "SDK_NET_3.0.1025";
+       private const string sdkVersion = "SDK_NET_3.0.1026";
 
         /// <summary>
         /// Client constructor.

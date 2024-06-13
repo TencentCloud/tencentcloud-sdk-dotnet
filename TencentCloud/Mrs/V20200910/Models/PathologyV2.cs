@@ -122,6 +122,13 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("Molecular")]
         public Molecular[] Molecular{ get; set; }
 
+        /// <summary>
+        /// 数据在原PDF文件中的第几页
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Page")]
+        public long? Page{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +149,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamObj(map, prefix + "SampleType.", this.SampleType);
             this.SetParamArrayObj(map, prefix + "LymphSize.", this.LymphSize);
             this.SetParamArrayObj(map, prefix + "Molecular.", this.Molecular);
+            this.SetParamSimple(map, prefix + "Page", this.Page);
         }
     }
 }

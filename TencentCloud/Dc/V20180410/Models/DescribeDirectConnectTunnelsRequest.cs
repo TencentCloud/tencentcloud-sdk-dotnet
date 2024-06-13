@@ -27,27 +27,27 @@ namespace TencentCloud.Dc.V20180410.Models
         /// <summary>
         /// 过滤条件:
         /// 参数不支持同时指定DirectConnectTunnelIds和Filters。
-        /// <li> direct-connect-tunnel-name, 专用通道名称。</li>
-        /// <li> direct-connect-tunnel-id, 专用通道实例ID，如dcx-abcdefgh。</li>
-        /// <li>direct-connect-id, 物理专线实例ID，如，dc-abcdefgh。</li>
+        /// direct-connect-tunnel-name, 专用通道名称。
+        /// direct-connect-tunnel-id, 专用通道实例ID，如：dcx-abcdefgh。
+        /// direct-connect-id, 物理专线实例ID，如：dc-abcdefgh。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 专用通道 ID数组
+        /// 专用通道ID数组。
         /// </summary>
         [JsonProperty("DirectConnectTunnelIds")]
         public string[] DirectConnectTunnelIds{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0
+        /// 偏移量，默认为0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为20，最大值为100
+        /// 返回数量，默认为20，最大值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

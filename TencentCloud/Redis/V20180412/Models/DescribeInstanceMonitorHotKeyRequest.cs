@@ -25,13 +25,17 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例Id
+        /// 指定实例 ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
+        /// 查询时间范围。
+        /// - 1：实时。
+        /// - 2：近30分钟。
+        /// - 3：近6小时。
+        /// - 4：近24小时。
         /// </summary>
         [JsonProperty("SpanType")]
         public long? SpanType{ get; set; }

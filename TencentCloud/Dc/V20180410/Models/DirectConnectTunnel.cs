@@ -225,6 +225,13 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("CloudAttachId")]
         public string CloudAttachId{ get; set; }
 
+        /// <summary>
+        /// 是否共享通道
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ShareOrNot")]
+        public ulong? ShareOrNot{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -261,6 +268,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "TencentBackupAddress", this.TencentBackupAddress);
             this.SetParamSimple(map, prefix + "SignLaw", this.SignLaw);
             this.SetParamSimple(map, prefix + "CloudAttachId", this.CloudAttachId);
+            this.SetParamSimple(map, prefix + "ShareOrNot", this.ShareOrNot);
         }
     }
 }

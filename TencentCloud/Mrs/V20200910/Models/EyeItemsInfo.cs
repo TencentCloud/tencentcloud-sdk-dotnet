@@ -38,6 +38,13 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
+        /// <summary>
+        /// 数据在原PDF文件中的第几页
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Page")]
+        public long? Page{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Mrs.V20200910.Models
         {
             this.SetParamObj(map, prefix + "EyeItems.", this.EyeItems);
             this.SetParamSimple(map, prefix + "Version", this.Version);
+            this.SetParamSimple(map, prefix + "Page", this.Page);
         }
     }
 }

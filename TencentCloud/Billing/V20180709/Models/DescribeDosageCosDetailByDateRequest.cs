@@ -25,13 +25,13 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 查询用量开始时间，例如：2020-09-01
+        /// 查询用量开始时间，格式为yyyy-mm-dd，例如：2020-09-01
         /// </summary>
         [JsonProperty("StartDate")]
         public string StartDate{ get; set; }
 
         /// <summary>
-        /// 查询用量结束时间，例如：2020-09-30（与开始时间同月，不支持跨月查询）
+        /// 查询用量结束时间，格式为yyyy-mm-dd，例如：2020-09-30（与开始时间同月，不支持跨月查询）
         /// </summary>
         [JsonProperty("EndDate")]
         public string EndDate{ get; set; }

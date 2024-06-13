@@ -347,6 +347,20 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("UserNetworkInfos")]
         public string UserNetworkInfos{ get; set; }
 
+        /// <summary>
+        /// 是否启用冷热分层。0：未开启 1：已开启
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableCoolDown")]
+        public long? EnableCoolDown{ get; set; }
+
+        /// <summary>
+        /// 冷热分层使用COS桶
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CoolDownBucket")]
+        public string CoolDownBucket{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -398,6 +412,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamArraySimple(map, prefix + "BindSGs.", this.BindSGs);
             this.SetParamSimple(map, prefix + "EnableMultiZones", this.EnableMultiZones);
             this.SetParamSimple(map, prefix + "UserNetworkInfos", this.UserNetworkInfos);
+            this.SetParamSimple(map, prefix + "EnableCoolDown", this.EnableCoolDown);
+            this.SetParamSimple(map, prefix + "CoolDownBucket", this.CoolDownBucket);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Ciam.V20220331
 
        private const string endpoint = "ciam.tencentcloudapi.com";
        private const string version = "2022-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.1025";
+       private const string sdkVersion = "SDK_NET_3.0.1026";
 
         /// <summary>
         /// Client constructor.

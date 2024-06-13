@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1025";
+       private const string sdkVersion = "SDK_NET_3.0.1026";
 
         /// <summary>
         /// Client constructor.
@@ -4527,7 +4527,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 修改弹性集群名称等属性 
+        /// 修改弹性集群名称等属性
         /// </summary>
         /// <param name="req"><see cref="UpdateEKSClusterRequest"/></param>
         /// <returns><see cref="UpdateEKSClusterResponse"/></returns>
@@ -4537,7 +4537,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 修改弹性集群名称等属性 
+        /// 修改弹性集群名称等属性
         /// </summary>
         /// <param name="req"><see cref="UpdateEKSClusterRequest"/></param>
         /// <returns><see cref="UpdateEKSClusterResponse"/></returns>

@@ -28,7 +28,7 @@ namespace TencentCloud.Essbasic.V20210526
 
        private const string endpoint = "essbasic.tencentcloudapi.com";
        private const string version = "2021-05-26";
-       private const string sdkVersion = "SDK_NET_3.0.1025";
+       private const string sdkVersion = "SDK_NET_3.0.1026";
 
         /// <summary>
         /// Client constructor.
@@ -3157,6 +3157,9 @@ namespace TencentCloud.Essbasic.V20210526
         /// HttpProfile httpProfile = new HttpProfile();
         /// httpProfile.setEndpoint("file.test.ess.tencent.cn");
         /// ```
+        /// 
+        /// <font color="red">相关视频指引</font> <br>
+        /// 1. <a href="https://dyn.ess.tencent.cn/guide/apivideo/essbasic-UploadFiles.mp4" target="_blank">【上传文件代码】编写示例</a><br>
         /// </summary>
         /// <param name="req"><see cref="UploadFilesRequest"/></param>
         /// <returns><see cref="UploadFilesResponse"/></returns>
@@ -3179,6 +3182,9 @@ namespace TencentCloud.Essbasic.V20210526
         /// HttpProfile httpProfile = new HttpProfile();
         /// httpProfile.setEndpoint("file.test.ess.tencent.cn");
         /// ```
+        /// 
+        /// <font color="red">相关视频指引</font> <br>
+        /// 1. <a href="https://dyn.ess.tencent.cn/guide/apivideo/essbasic-UploadFiles.mp4" target="_blank">【上传文件代码】编写示例</a><br>
         /// </summary>
         /// <param name="req"><see cref="UploadFilesRequest"/></param>
         /// <returns><see cref="UploadFilesResponse"/></returns>

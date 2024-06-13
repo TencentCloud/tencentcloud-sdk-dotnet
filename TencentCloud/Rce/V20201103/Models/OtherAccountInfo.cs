@@ -27,21 +27,24 @@ namespace TencentCloud.Rce.V20201103.Models
         /// <summary>
         /// 其他账号信息；
         /// AccountType是10004时，填入中国大陆标准11位手机号的MD5值
+        /// AccountType是10005时，填入中国大陆标准11位手机号的SHA256值
         /// 注释：
         /// MD5手机号加密方式，使用中国大陆11位手机号进行MD5加密，加密后取32位小写值。
+        /// SHA256手机号加密方式，使用中国大陆11位手机号进行SHA256加密，加密后取64位小写值。
         /// </summary>
         [JsonProperty("AccountId")]
         public string AccountId{ get; set; }
 
         /// <summary>
-        /// 账号绑定的MD5手机号。
-        /// 注释：只支持标准中国大陆11位手机号MD5加密后位的32位小写字符串。
+        /// 账号绑定的MD5或SHA256加密的手机号（该字段已不推荐使用）。
+        /// 注释：支持标准中国大陆11位手机号MD5加密后位的32位小写字符串；
+        ///      支持标准中国大陆11位手机号SHA256加密后位的64位小写字符串。
         /// </summary>
         [JsonProperty("MobilePhone")]
         public string MobilePhone{ get; set; }
 
         /// <summary>
-        /// 用户设备号（已不推荐使用）。
+        /// 用户设备号（该字段已不推荐使用）。
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }

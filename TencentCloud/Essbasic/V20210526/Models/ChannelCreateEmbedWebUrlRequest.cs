@@ -97,6 +97,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("UserData")]
         public string UserData{ get; set; }
 
+        /// <summary>
+        /// 个性化参数，用于控制页面展示内容
+        /// </summary>
+        [JsonProperty("Option")]
+        public EmbedUrlOption Option{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +115,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "HiddenComponents", this.HiddenComponents);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
+            this.SetParamObj(map, prefix + "Option.", this.Option);
         }
     }
 }

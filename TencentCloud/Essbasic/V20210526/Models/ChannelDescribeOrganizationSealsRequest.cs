@@ -82,6 +82,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("SealTypes")]
         public string[] SealTypes{ get; set; }
 
+        /// <summary>
+        /// 查询的印章状态列表。 <ul> <li>空，只查询启用状态的印章；</li> <li>ALL，查询所有状态的印章；</li> <li>CHECKING，查询待审核的印章；</li> <li>SUCCESS，查询启用状态的印章；</li> <li>FAIL，查询印章审核拒绝的印章；</li> <li>DISABLE，查询已停用的印章；</li> <li>STOPPED，查询已终止的印章；</li> <li>VOID，查询已作废的印章；</li> <li>INVALID，查询已失效的印章；</li> </ul>
+        /// </summary>
+        [JsonProperty("SealStatuses")]
+        public string[] SealStatuses{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +100,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "InfoType", this.InfoType);
             this.SetParamSimple(map, prefix + "SealId", this.SealId);
             this.SetParamArraySimple(map, prefix + "SealTypes.", this.SealTypes);
+            this.SetParamArraySimple(map, prefix + "SealStatuses.", this.SealStatuses);
         }
     }
 }

@@ -58,8 +58,9 @@ namespace TencentCloud.Rce.V20201103.Models
         public string AssociateAccount{ get; set; }
 
         /// <summary>
-        /// 账号绑定的MD5手机号，
-        /// 注释：只支持标准中国大陆11位手机号MD5加密后位的32位小写字符串。
+        /// 账号绑定的MD5或SHA256加密的手机号。
+        /// 注释：支持标准中国大陆11位手机号MD5加密后位的32位小写字符串；
+        ///      支持标准中国大陆11位手机号SHA256加密后位的64位小写字符串。
         /// </summary>
         [JsonProperty("MobilePhone")]
         public string MobilePhone{ get; set; }

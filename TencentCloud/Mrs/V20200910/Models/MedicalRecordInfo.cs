@@ -80,6 +80,13 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("TreatmentOpinion")]
         public string TreatmentOpinion{ get; set; }
 
+        /// <summary>
+        /// 数据在原PDF文件中的第几页
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Page")]
+        public long? Page{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +101,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamSimple(map, prefix + "PhysicalExamination", this.PhysicalExamination);
             this.SetParamSimple(map, prefix + "InspectionFindings", this.InspectionFindings);
             this.SetParamSimple(map, prefix + "TreatmentOpinion", this.TreatmentOpinion);
+            this.SetParamSimple(map, prefix + "Page", this.Page);
         }
     }
 }

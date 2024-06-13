@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B9887456-D090-35D3-9EFC-3D27B86D0C97}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1025</VersionPrefix>
+    <VersionPrefix>3.0.1026</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -328,6 +328,7 @@
     <Compile Include="V20210526\Models\DescribeUsageResponse.cs" />
     <Compile Include="V20210526\Models\DetectInfoVideoData.cs" />
     <Compile Include="V20210526\Models\DownloadFlowInfo.cs" />
+    <Compile Include="V20210526\Models\EmbedUrlOption.cs" />
     <Compile Include="V20210526\Models\ExtentServiceAuthInfo.cs" />
     <Compile Include="V20210526\Models\FailedCreateRoleData.cs" />
     <Compile Include="V20210526\Models\FillApproverInfo.cs" />
