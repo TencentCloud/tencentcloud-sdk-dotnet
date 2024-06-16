@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1026";
+       private const string sdkVersion = "SDK_NET_3.0.1027";
 
         /// <summary>
         /// Client constructor.
@@ -806,6 +806,27 @@ namespace TencentCloud.Wedata.V20210820
         public CreateTaskAlarmRegularResponse CreateTaskAlarmRegularSync(CreateTaskAlarmRegularRequest req)
         {
             return InternalRequestAsync<CreateTaskAlarmRegularResponse>(req, "CreateTaskAlarmRegular")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 编排空间-工作流-创建任务文件夹
+        /// </summary>
+        /// <param name="req"><see cref="CreateTaskFolderRequest"/></param>
+        /// <returns><see cref="CreateTaskFolderResponse"/></returns>
+        public Task<CreateTaskFolderResponse> CreateTaskFolder(CreateTaskFolderRequest req)
+        {
+            return InternalRequestAsync<CreateTaskFolderResponse>(req, "CreateTaskFolder");
+        }
+
+        /// <summary>
+        /// 编排空间-工作流-创建任务文件夹
+        /// </summary>
+        /// <param name="req"><see cref="CreateTaskFolderRequest"/></param>
+        /// <returns><see cref="CreateTaskFolderResponse"/></returns>
+        public CreateTaskFolderResponse CreateTaskFolderSync(CreateTaskFolderRequest req)
+        {
+            return InternalRequestAsync<CreateTaskFolderResponse>(req, "CreateTaskFolder")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

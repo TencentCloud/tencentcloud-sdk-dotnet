@@ -254,6 +254,20 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("StorageOption")]
         public StorageOption[] StorageOption{ get; set; }
 
+        /// <summary>
+        /// Zookeeper的额外环境数据信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZookeeperRegionInfo")]
+        public ZookeeperRegionInfo ZookeeperRegionInfo{ get; set; }
+
+        /// <summary>
+        /// 部署架构
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeployMode")]
+        public string DeployMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -294,6 +308,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "FeatureVersion", this.FeatureVersion);
             this.SetParamSimple(map, prefix + "EnableClientIntranet", this.EnableClientIntranet);
             this.SetParamArrayObj(map, prefix + "StorageOption.", this.StorageOption);
+            this.SetParamObj(map, prefix + "ZookeeperRegionInfo.", this.ZookeeperRegionInfo);
+            this.SetParamSimple(map, prefix + "DeployMode", this.DeployMode);
         }
     }
 }

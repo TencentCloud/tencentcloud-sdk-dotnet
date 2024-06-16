@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{4D99E92F-0CD8-3F98-B58C-498F1C545766}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1026</VersionPrefix>
+    <VersionPrefix>3.0.1027</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -57,6 +57,7 @@
     <Compile Include="V20180412\Models\ApplyParamsTemplateResponse.cs" />
     <Compile Include="V20180412\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="V20180412\Models\AssociateSecurityGroupsResponse.cs" />
+    <Compile Include="V20180412\Models\AvailableRegion.cs" />
     <Compile Include="V20180412\Models\BackupDownloadInfo.cs" />
     <Compile Include="V20180412\Models\BackupLimitVpcItem.cs" />
     <Compile Include="V20180412\Models\BigKeyInfo.cs" />
@@ -105,6 +106,8 @@
     <Compile Include="V20180412\Models\DescribeCommonDBInstancesResponse.cs" />
     <Compile Include="V20180412\Models\DescribeDBSecurityGroupsRequest.cs" />
     <Compile Include="V20180412\Models\DescribeDBSecurityGroupsResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeGlobalReplicationAreaRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeGlobalReplicationAreaResponse.cs" />
     <Compile Include="V20180412\Models\DescribeInstanceAccountRequest.cs" />
     <Compile Include="V20180412\Models\DescribeInstanceAccountResponse.cs" />
     <Compile Include="V20180412\Models\DescribeInstanceBackupsRequest.cs" />
@@ -142,6 +145,8 @@
     <Compile Include="V20180412\Models\DescribeInstanceSecurityGroupResponse.cs" />
     <Compile Include="V20180412\Models\DescribeInstanceShardsRequest.cs" />
     <Compile Include="V20180412\Models\DescribeInstanceShardsResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceSpecBandwidthRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceSpecBandwidthResponse.cs" />
     <Compile Include="V20180412\Models\DescribeInstanceSupportFeatureRequest.cs" />
     <Compile Include="V20180412\Models\DescribeInstanceSupportFeatureResponse.cs" />
     <Compile Include="V20180412\Models\DescribeInstanceZoneInfoRequest.cs" />
@@ -162,6 +167,8 @@
     <Compile Include="V20180412\Models\DescribeProjectSecurityGroupsResponse.cs" />
     <Compile Include="V20180412\Models\DescribeProxySlowLogRequest.cs" />
     <Compile Include="V20180412\Models\DescribeProxySlowLogResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeReplicationGroupInstanceRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeReplicationGroupInstanceResponse.cs" />
     <Compile Include="V20180412\Models\DescribeReplicationGroupRequest.cs" />
     <Compile Include="V20180412\Models\DescribeReplicationGroupResponse.cs" />
     <Compile Include="V20180412\Models\DescribeSSLStatusRequest.cs" />
@@ -240,6 +247,8 @@
     <Compile Include="V20180412\Models\ModifyNetworkConfigResponse.cs" />
     <Compile Include="V20180412\Models\ModifyParamTemplateRequest.cs" />
     <Compile Include="V20180412\Models\ModifyParamTemplateResponse.cs" />
+    <Compile Include="V20180412\Models\ModifyReplicationGroupRequest.cs" />
+    <Compile Include="V20180412\Models\ModifyReplicationGroupResponse.cs" />
     <Compile Include="V20180412\Models\OpenSSLRequest.cs" />
     <Compile Include="V20180412\Models\OpenSSLResponse.cs" />
     <Compile Include="V20180412\Models\Outbound.cs" />

@@ -43,6 +43,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("IntranetAddress")]
         public string IntranetAddress{ get; set; }
 
+        /// <summary>
+        /// 负载均衡均衡接入点子网ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LbSubnetId")]
+        public string LbSubnetId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +59,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "IntranetAddress", this.IntranetAddress);
+            this.SetParamSimple(map, prefix + "LbSubnetId", this.LbSubnetId);
         }
     }
 }

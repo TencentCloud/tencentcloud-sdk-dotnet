@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1026";
+       private const string sdkVersion = "SDK_NET_3.0.1027";
 
         /// <summary>
         /// Client constructor.
@@ -776,6 +776,27 @@ namespace TencentCloud.Waf.V20180125
         public DescribeAntiInfoLeakageRulesResponse DescribeAntiInfoLeakageRulesSync(DescribeAntiInfoLeakageRulesRequest req)
         {
             return InternalRequestAsync<DescribeAntiInfoLeakageRulesResponse>(req, "DescribeAntiInfoLeakageRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取地域封禁配置包括地域封禁开关，设置封禁的地区信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAreaBanAreasRequest"/></param>
+        /// <returns><see cref="DescribeAreaBanAreasResponse"/></returns>
+        public Task<DescribeAreaBanAreasResponse> DescribeAreaBanAreas(DescribeAreaBanAreasRequest req)
+        {
+            return InternalRequestAsync<DescribeAreaBanAreasResponse>(req, "DescribeAreaBanAreas");
+        }
+
+        /// <summary>
+        /// 获取地域封禁配置包括地域封禁开关，设置封禁的地区信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAreaBanAreasRequest"/></param>
+        /// <returns><see cref="DescribeAreaBanAreasResponse"/></returns>
+        public DescribeAreaBanAreasResponse DescribeAreaBanAreasSync(DescribeAreaBanAreasRequest req)
+        {
+            return InternalRequestAsync<DescribeAreaBanAreasResponse>(req, "DescribeAreaBanAreas")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

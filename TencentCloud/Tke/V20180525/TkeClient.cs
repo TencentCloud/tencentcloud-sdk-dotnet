@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1026";
+       private const string sdkVersion = "SDK_NET_3.0.1027";
 
         /// <summary>
         /// Client constructor.
@@ -2469,6 +2469,8 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// tdcc接口已迁移至tdcc产品下，tke下的接口下线
+        /// 
         /// 获取导入第三方集群YAML定义
         /// </summary>
         /// <param name="req"><see cref="DescribeExternalClusterSpecRequest"/></param>
@@ -2479,6 +2481,8 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// tdcc接口已迁移至tdcc产品下，tke下的接口下线
+        /// 
         /// 获取导入第三方集群YAML定义
         /// </summary>
         /// <param name="req"><see cref="DescribeExternalClusterSpecRequest"/></param>

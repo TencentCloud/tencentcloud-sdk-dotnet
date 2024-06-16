@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1026";
+       private const string sdkVersion = "SDK_NET_3.0.1027";
 
         /// <summary>
         /// Client constructor.
@@ -579,6 +579,27 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 查询全球复制支持地域信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlobalReplicationAreaRequest"/></param>
+        /// <returns><see cref="DescribeGlobalReplicationAreaResponse"/></returns>
+        public Task<DescribeGlobalReplicationAreaResponse> DescribeGlobalReplicationArea(DescribeGlobalReplicationAreaRequest req)
+        {
+            return InternalRequestAsync<DescribeGlobalReplicationAreaResponse>(req, "DescribeGlobalReplicationArea");
+        }
+
+        /// <summary>
+        /// 查询全球复制支持地域信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlobalReplicationAreaRequest"/></param>
+        /// <returns><see cref="DescribeGlobalReplicationAreaResponse"/></returns>
+        public DescribeGlobalReplicationAreaResponse DescribeGlobalReplicationAreaSync(DescribeGlobalReplicationAreaRequest req)
+        {
+            return InternalRequestAsync<DescribeGlobalReplicationAreaResponse>(req, "DescribeGlobalReplicationArea")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeInstanceAccount）用于查看实例子账号信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAccountRequest"/></param>
@@ -957,6 +978,27 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 本接口（DescribeInstanceSpecBandwidth）用于查询或计算带宽规格。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceSpecBandwidthRequest"/></param>
+        /// <returns><see cref="DescribeInstanceSpecBandwidthResponse"/></returns>
+        public Task<DescribeInstanceSpecBandwidthResponse> DescribeInstanceSpecBandwidth(DescribeInstanceSpecBandwidthRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceSpecBandwidthResponse>(req, "DescribeInstanceSpecBandwidth");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeInstanceSpecBandwidth）用于查询或计算带宽规格。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceSpecBandwidthRequest"/></param>
+        /// <returns><see cref="DescribeInstanceSpecBandwidthResponse"/></returns>
+        public DescribeInstanceSpecBandwidthResponse DescribeInstanceSpecBandwidthSync(DescribeInstanceSpecBandwidthRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceSpecBandwidthResponse>(req, "DescribeInstanceSpecBandwidth")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeInstanceSupportFeature）用于查询实例支持的功能特性。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceSupportFeatureRequest"/></param>
@@ -1184,6 +1226,27 @@ namespace TencentCloud.Redis.V20180412
         public DescribeReplicationGroupResponse DescribeReplicationGroupSync(DescribeReplicationGroupRequest req)
         {
             return InternalRequestAsync<DescribeReplicationGroupResponse>(req, "DescribeReplicationGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询复制组信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReplicationGroupInstanceRequest"/></param>
+        /// <returns><see cref="DescribeReplicationGroupInstanceResponse"/></returns>
+        public Task<DescribeReplicationGroupInstanceResponse> DescribeReplicationGroupInstance(DescribeReplicationGroupInstanceRequest req)
+        {
+            return InternalRequestAsync<DescribeReplicationGroupInstanceResponse>(req, "DescribeReplicationGroupInstance");
+        }
+
+        /// <summary>
+        /// 查询复制组信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReplicationGroupInstanceRequest"/></param>
+        /// <returns><see cref="DescribeReplicationGroupInstanceResponse"/></returns>
+        public DescribeReplicationGroupInstanceResponse DescribeReplicationGroupInstanceSync(DescribeReplicationGroupInstanceRequest req)
+        {
+            return InternalRequestAsync<DescribeReplicationGroupInstanceResponse>(req, "DescribeReplicationGroupInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1793,6 +1856,27 @@ namespace TencentCloud.Redis.V20180412
         public ModifyParamTemplateResponse ModifyParamTemplateSync(ModifyParamTemplateRequest req)
         {
             return InternalRequestAsync<ModifyParamTemplateResponse>(req, "ModifyParamTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改复制组信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyReplicationGroupRequest"/></param>
+        /// <returns><see cref="ModifyReplicationGroupResponse"/></returns>
+        public Task<ModifyReplicationGroupResponse> ModifyReplicationGroup(ModifyReplicationGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyReplicationGroupResponse>(req, "ModifyReplicationGroup");
+        }
+
+        /// <summary>
+        /// 修改复制组信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyReplicationGroupRequest"/></param>
+        /// <returns><see cref="ModifyReplicationGroupResponse"/></returns>
+        public ModifyReplicationGroupResponse ModifyReplicationGroupSync(ModifyReplicationGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyReplicationGroupResponse>(req, "ModifyReplicationGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

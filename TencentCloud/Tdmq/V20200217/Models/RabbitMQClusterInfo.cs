@@ -163,6 +163,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ClusterVersion")]
         public string ClusterVersion{ get; set; }
 
+        /// <summary>
+        /// 计费模式，0-后付费，1-预付费
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public ulong? PayMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +198,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MirrorQueuePolicyFlag", this.MirrorQueuePolicyFlag);
             this.SetParamSimple(map, prefix + "MessageConsumeRate", this.MessageConsumeRate);
             this.SetParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
         }
     }
 }

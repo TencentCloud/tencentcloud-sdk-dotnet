@@ -99,6 +99,20 @@ namespace TencentCloud.Tcm.V20210413.Models
         [JsonProperty("CrossRegionConfig")]
         public CrossRegionConfig CrossRegionConfig{ get; set; }
 
+        /// <summary>
+        /// 设置跨可用区容灾时的主可用区ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MasterZoneID")]
+        public string MasterZoneID{ get; set; }
+
+        /// <summary>
+        /// 设置跨可用区容灾时的备可用区ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SlaveZoneID")]
+        public string SlaveZoneID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,6 +130,8 @@ namespace TencentCloud.Tcm.V20210413.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamObj(map, prefix + "ExtensiveClusters.", this.ExtensiveClusters);
             this.SetParamObj(map, prefix + "CrossRegionConfig.", this.CrossRegionConfig);
+            this.SetParamSimple(map, prefix + "MasterZoneID", this.MasterZoneID);
+            this.SetParamSimple(map, prefix + "SlaveZoneID", this.SlaveZoneID);
         }
     }
 }

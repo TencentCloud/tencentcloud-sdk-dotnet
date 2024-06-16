@@ -61,6 +61,17 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("PlatformAppAuthorization")]
         public bool? PlatformAppAuthorization{ get; set; }
 
+        /// <summary>
+        /// 指定印章类型，指定后只能选择该类型的印章进行授权
+        /// 支持以下印章类型：
+        /// - OFFICIAL : 企业公章
+        /// - CONTRACT : 合同专用章
+        /// - FINANCE : 财务专用章
+        /// - PERSONNEL : 人事专用章
+        /// </summary>
+        [JsonProperty("SealTypes")]
+        public string[] SealTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -71,6 +82,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "AuthorizedOrganizationId", this.AuthorizedOrganizationId);
             this.SetParamSimple(map, prefix + "AuthorizedOrganizationName", this.AuthorizedOrganizationName);
             this.SetParamSimple(map, prefix + "PlatformAppAuthorization", this.PlatformAppAuthorization);
+            this.SetParamArraySimple(map, prefix + "SealTypes.", this.SealTypes);
         }
     }
 }

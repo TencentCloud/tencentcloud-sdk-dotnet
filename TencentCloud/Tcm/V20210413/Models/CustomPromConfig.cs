@@ -26,36 +26,42 @@ namespace TencentCloud.Tcm.V20210413.Models
         
         /// <summary>
         /// Prometheus 访问地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
         /// 认证方式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthType")]
         public string AuthType{ get; set; }
 
         /// <summary>
         /// 是否公网地址，缺省为 false
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsPublicAddr")]
         public bool? IsPublicAddr{ get; set; }
 
         /// <summary>
         /// 虚拟网络id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// Prometheus 用户名（用于 basic 认证方式）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
         /// Prometheus 密码（用于 basic 认证方式）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

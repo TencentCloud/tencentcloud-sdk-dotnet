@@ -152,8 +152,11 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 企业税号
-        /// 注: `1.印章类型SealType是INVOICE类型时，此参数才会生效`
-        /// `2.印章类型SealType是INVOICE类型，且该字段没有传入值或传入空时，会取该企业对应的统一社会信用代码作为默认的企业税号`
+        /// 注:
+        /// <ul>
+        /// <li>1.印章类型SealType是INVOICE类型时，此参数才会生效</li>
+        /// <li>2.印章类型SealType是INVOICE类型，且该字段没有传入值或传入空时，会取该企业对应的统一社会信用代码作为默认的企业税号（<font color="red">如果是通过授权书授权方式认证的企业，此参数必传不能为空</font>）</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("TaxIdentifyCode")]
         public string TaxIdentifyCode{ get; set; }

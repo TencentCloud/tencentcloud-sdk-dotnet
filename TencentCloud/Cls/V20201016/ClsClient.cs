@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1026";
+       private const string sdkVersion = "SDK_NET_3.0.1027";
 
         /// <summary>
         /// Client constructor.
@@ -1379,7 +1379,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于获取主题分区列表。
+        /// 该接口已废弃，如需获取分区数量，请使用DescribeTopics接口。
         /// </summary>
         /// <param name="req"><see cref="DescribePartitionsRequest"/></param>
         /// <returns><see cref="DescribePartitionsResponse"/></returns>
@@ -1389,7 +1389,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于获取主题分区列表。
+        /// 该接口已废弃，如需获取分区数量，请使用DescribeTopics接口。
         /// </summary>
         /// <param name="req"><see cref="DescribePartitionsRequest"/></param>
         /// <returns><see cref="DescribePartitionsResponse"/></returns>
@@ -1505,7 +1505,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于合并一个读写态的主题分区，合并时指定一个主题分区 ID，日志服务会自动合并范围右相邻的分区。
+        /// 该接口已废弃，如需修改分区数量，请使用ModifyTopic接口。
         /// </summary>
         /// <param name="req"><see cref="MergePartitionRequest"/></param>
         /// <returns><see cref="MergePartitionResponse"/></returns>
@@ -1515,7 +1515,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于合并一个读写态的主题分区，合并时指定一个主题分区 ID，日志服务会自动合并范围右相邻的分区。
+        /// 该接口已废弃，如需修改分区数量，请使用ModifyTopic接口。
         /// </summary>
         /// <param name="req"><see cref="MergePartitionRequest"/></param>
         /// <returns><see cref="MergePartitionResponse"/></returns>
@@ -2057,7 +2057,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于分裂主题分区
+        /// 该接口已废弃，如需修改分区数量，请使用ModifyTopic接口。
         /// </summary>
         /// <param name="req"><see cref="SplitPartitionRequest"/></param>
         /// <returns><see cref="SplitPartitionResponse"/></returns>
@@ -2067,7 +2067,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于分裂主题分区
+        /// 该接口已废弃，如需修改分区数量，请使用ModifyTopic接口。
         /// </summary>
         /// <param name="req"><see cref="SplitPartitionRequest"/></param>
         /// <returns><see cref="SplitPartitionResponse"/></returns>
