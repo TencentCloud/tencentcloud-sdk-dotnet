@@ -108,6 +108,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
+        /// <summary>
+        /// 配置中心发布详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConfigCenters")]
+        public TsfConfigCenter[] ConfigCenters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +133,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamArrayObj(map, prefix + "ConfigCenters.", this.ConfigCenters);
         }
     }
 }

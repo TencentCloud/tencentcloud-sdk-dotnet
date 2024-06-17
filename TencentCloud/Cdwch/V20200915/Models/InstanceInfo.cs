@@ -349,6 +349,27 @@ namespace TencentCloud.Cdwch.V20200915.Models
         [JsonProperty("HasEsIndex")]
         public bool? HasEsIndex{ get; set; }
 
+        /// <summary>
+        /// true
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsSecondaryZone")]
+        public bool? IsSecondaryZone{ get; set; }
+
+        /// <summary>
+        /// desc
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SecondaryZoneInfo")]
+        public string SecondaryZoneInfo{ get; set; }
+
+        /// <summary>
+        /// 是否clickhouse-keeper
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClickHouseKeeper")]
+        public bool? ClickHouseKeeper{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -401,6 +422,9 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "EsIndexUsername", this.EsIndexUsername);
             this.SetParamSimple(map, prefix + "EsIndexPassword", this.EsIndexPassword);
             this.SetParamSimple(map, prefix + "HasEsIndex", this.HasEsIndex);
+            this.SetParamSimple(map, prefix + "IsSecondaryZone", this.IsSecondaryZone);
+            this.SetParamSimple(map, prefix + "SecondaryZoneInfo", this.SecondaryZoneInfo);
+            this.SetParamSimple(map, prefix + "ClickHouseKeeper", this.ClickHouseKeeper);
         }
     }
 }

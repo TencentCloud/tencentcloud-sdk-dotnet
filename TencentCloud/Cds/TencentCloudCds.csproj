@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{549F08D0-2104-3983-822F-84655B246376}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1027</VersionPrefix>
+    <VersionPrefix>3.0.1028</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,8 +50,6 @@
     <Compile Include="V20180420\CdsClient.cs" />
     <Compile Include="V20180420\Models\CdsAuditInstance.cs" />
     <Compile Include="V20180420\Models\DbauditTypesInfo.cs" />
-    <Compile Include="V20180420\Models\DescribeDasbImageIdsRequest.cs" />
-    <Compile Include="V20180420\Models\DescribeDasbImageIdsResponse.cs" />
     <Compile Include="V20180420\Models\DescribeDbauditInstanceTypeRequest.cs" />
     <Compile Include="V20180420\Models\DescribeDbauditInstanceTypeResponse.cs" />
     <Compile Include="V20180420\Models\DescribeDbauditInstancesRequest.cs" />

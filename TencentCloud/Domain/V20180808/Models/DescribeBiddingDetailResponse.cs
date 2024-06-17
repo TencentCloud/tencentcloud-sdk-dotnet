@@ -85,7 +85,7 @@ namespace TencentCloud.Domain.V20180808.Models
         public ulong? BiddingBondPrice{ get; set; }
 
         /// <summary>
-        /// 1 已预约，2 竞价中，3 支付尾款 4 交割 5 交易失败 6 交易成功，7 已过期
+        /// 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

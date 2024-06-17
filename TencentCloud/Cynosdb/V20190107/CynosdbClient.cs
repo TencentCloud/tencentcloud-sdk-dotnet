@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1027";
+       private const string sdkVersion = "SDK_NET_3.0.1028";
 
         /// <summary>
         /// Client constructor.
@@ -1587,6 +1587,8 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 历史废弃接口，从云API下线
+        /// 
         /// 指定时间和集群查询是否可回滚
         /// </summary>
         /// <param name="req"><see cref="DescribeRollbackTimeValidityRequest"/></param>
@@ -1597,6 +1599,8 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 历史废弃接口，从云API下线
+        /// 
         /// 指定时间和集群查询是否可回滚
         /// </summary>
         /// <param name="req"><see cref="DescribeRollbackTimeValidityRequest"/></param>

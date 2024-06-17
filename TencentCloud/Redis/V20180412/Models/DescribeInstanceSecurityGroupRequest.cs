@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例 ID 列表。例如;["crs-f2ho5rsz\n"]
+        /// 实例 ID 列表，数组长度限制[0,100]。例如：["crs-f2ho5rsz\n"]
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

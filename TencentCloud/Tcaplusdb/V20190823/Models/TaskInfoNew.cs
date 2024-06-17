@@ -84,6 +84,27 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
+        /// <summary>
+        /// 表格组ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TableGroupId")]
+        public string TableGroupId{ get; set; }
+
+        /// <summary>
+        /// 表格组名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TableGroupName")]
+        public string TableGroupName{ get; set; }
+
+        /// <summary>
+        /// 表名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TableName")]
+        public string TableName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +121,9 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
             this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamSimple(map, prefix + "TableGroupId", this.TableGroupId);
+            this.SetParamSimple(map, prefix + "TableGroupName", this.TableGroupName);
+            this.SetParamSimple(map, prefix + "TableName", this.TableName);
         }
     }
 }

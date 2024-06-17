@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 该参数存在命名不规范问题，建议用参数InstanceSlowLogDetail取代。慢查询详情。
+        /// 已废弃，该参数存在命名不规范问题，后续用参数InstanceSlowLogDetail取代。慢查询详情。
         /// </summary>
         [JsonProperty("InstanceSlowlogDetail")]
         public InstanceSlowlogDetail[] InstanceSlowlogDetail{ get; set; }

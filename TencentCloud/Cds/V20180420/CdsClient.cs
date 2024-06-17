@@ -28,7 +28,7 @@ namespace TencentCloud.Cds.V20180420
 
        private const string endpoint = "cds.tencentcloudapi.com";
        private const string version = "2018-04-20";
-       private const string sdkVersion = "SDK_NET_3.0.1027";
+       private const string sdkVersion = "SDK_NET_3.0.1028";
 
         /// <summary>
         /// Client constructor.
@@ -51,31 +51,6 @@ namespace TencentCloud.Cds.V20180420
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
-        }
-
-        /// <summary>
-        /// 这些接口是传统版堡垒机接口.数审未用到，堡垒机的已全部迁移到dasb下，cds这边预下线
-        /// 
-        /// 获取镜像列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDasbImageIdsRequest"/></param>
-        /// <returns><see cref="DescribeDasbImageIdsResponse"/></returns>
-        public Task<DescribeDasbImageIdsResponse> DescribeDasbImageIds(DescribeDasbImageIdsRequest req)
-        {
-            return InternalRequestAsync<DescribeDasbImageIdsResponse>(req, "DescribeDasbImageIds");
-        }
-
-        /// <summary>
-        /// 这些接口是传统版堡垒机接口.数审未用到，堡垒机的已全部迁移到dasb下，cds这边预下线
-        /// 
-        /// 获取镜像列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDasbImageIdsRequest"/></param>
-        /// <returns><see cref="DescribeDasbImageIdsResponse"/></returns>
-        public DescribeDasbImageIdsResponse DescribeDasbImageIdsSync(DescribeDasbImageIdsRequest req)
-        {
-            return InternalRequestAsync<DescribeDasbImageIdsResponse>(req, "DescribeDasbImageIds")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

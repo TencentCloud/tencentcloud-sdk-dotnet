@@ -94,6 +94,13 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("SnapshotStatus")]
         public ulong? SnapshotStatus{ get; set; }
 
+        /// <summary>
+        /// 申请单ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +117,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "SnapshotCreateTime", this.SnapshotCreateTime);
             this.SetParamSimple(map, prefix + "SnapshotSize", this.SnapshotSize);
             this.SetParamSimple(map, prefix + "SnapshotStatus", this.SnapshotStatus);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         }
     }
 }

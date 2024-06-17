@@ -159,6 +159,36 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
+        /// <summary>
+        /// 时间
+        /// </summary>
+        [JsonProperty("TimeSpan")]
+        public long? TimeSpan{ get; set; }
+
+        /// <summary>
+        /// 单位
+        /// </summary>
+        [JsonProperty("TimeUnit")]
+        public string TimeUnit{ get; set; }
+
+        /// <summary>
+        /// 回档库信息
+        /// </summary>
+        [JsonProperty("RollbackDatabases")]
+        public RollbackDatabase[] RollbackDatabases{ get; set; }
+
+        /// <summary>
+        /// 回档表信息
+        /// </summary>
+        [JsonProperty("RollbackTables")]
+        public RollbackTable[] RollbackTables{ get; set; }
+
+        /// <summary>
+        /// 原ro实例信息
+        /// </summary>
+        [JsonProperty("OriginalROInstanceList")]
+        public string[] OriginalROInstanceList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -186,6 +216,11 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArrayObj(map, prefix + "InstanceInitInfos.", this.InstanceInitInfos);
             this.SetParamSimple(map, prefix + "DealMode", this.DealMode);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+            this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
+            this.SetParamArrayObj(map, prefix + "RollbackDatabases.", this.RollbackDatabases);
+            this.SetParamArrayObj(map, prefix + "RollbackTables.", this.RollbackTables);
+            this.SetParamArraySimple(map, prefix + "OriginalROInstanceList.", this.OriginalROInstanceList);
         }
     }
 }

@@ -26,36 +26,42 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         
         /// <summary>
         /// Kafka address
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
         /// Kafka topic
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
 
         /// <summary>
         /// kafka username
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
         /// kafka password
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
         /// ckafka实例
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Instance")]
         public string Instance{ get; set; }
 
         /// <summary>
         /// 是否走VPC
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsVpc")]
         public long? IsVpc{ get; set; }

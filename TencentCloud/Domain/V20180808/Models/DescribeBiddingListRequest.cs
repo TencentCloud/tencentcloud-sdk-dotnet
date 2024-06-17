@@ -43,7 +43,7 @@ namespace TencentCloud.Domain.V20180808.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 2 竞价中  3 等待出价  4 交易失败  10 竞价阶段持有者赎回
+        /// 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
         /// </summary>
         [JsonProperty("Status")]
         public ulong?[] Status{ get; set; }

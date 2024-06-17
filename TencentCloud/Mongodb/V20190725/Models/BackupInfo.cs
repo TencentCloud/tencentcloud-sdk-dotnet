@@ -82,6 +82,25 @@ namespace TencentCloud.Mongodb.V20190725.Models
         [JsonProperty("BackupMethod")]
         public ulong? BackupMethod{ get; set; }
 
+        /// <summary>
+        /// 备份记录id
+        /// </summary>
+        [JsonProperty("BackId")]
+        public long? BackId{ get; set; }
+
+        /// <summary>
+        /// 备份删除时间
+        /// </summary>
+        [JsonProperty("DeleteTime")]
+        public string DeleteTime{ get; set; }
+
+        /// <summary>
+        /// 异地备份地域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BackupRegion")]
+        public string BackupRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -97,6 +116,9 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
+            this.SetParamSimple(map, prefix + "BackId", this.BackId);
+            this.SetParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
+            this.SetParamSimple(map, prefix + "BackupRegion", this.BackupRegion);
         }
     }
 }

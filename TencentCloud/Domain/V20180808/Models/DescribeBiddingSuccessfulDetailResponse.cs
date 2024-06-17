@@ -79,7 +79,7 @@ namespace TencentCloud.Domain.V20180808.Models
         public float? BiddingBondPrice{ get; set; }
 
         /// <summary>
-        /// 状态：1 竞价中，2 待出价，3 竞价失败， 4 等待支付 5 等待转移， 6 转移中，7 交易成功，8 持有者索回，9 已违约
+        /// 状态：5 等待支付 6 等待转移， 7 转移中，8 交易成功，11 尾款阶段持有者索回，12 已违约
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
