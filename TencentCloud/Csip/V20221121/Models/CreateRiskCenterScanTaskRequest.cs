@@ -96,6 +96,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("Tags")]
         public AssetTag Tags{ get; set; }
 
+        /// <summary>
+        /// 任务完成回调webhook地址
+        /// </summary>
+        [JsonProperty("FinishWebHook")]
+        public string FinishWebHook{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamObj(map, prefix + "TaskAdvanceCFG.", this.TaskAdvanceCFG);
             this.SetParamSimple(map, prefix + "TaskMode", this.TaskMode);
             this.SetParamObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "FinishWebHook", this.FinishWebHook);
         }
     }
 }

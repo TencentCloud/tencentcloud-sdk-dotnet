@@ -28,7 +28,7 @@ namespace TencentCloud.Dataintegration.V20220613
 
        private const string endpoint = "dataintegration.tencentcloudapi.com";
        private const string version = "2022-06-13";
-       private const string sdkVersion = "SDK_NET_3.0.1029";
+       private const string sdkVersion = "SDK_NET_3.0.1030";
 
         /// <summary>
         /// Client constructor.

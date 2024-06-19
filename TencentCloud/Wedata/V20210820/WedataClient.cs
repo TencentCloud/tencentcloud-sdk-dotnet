@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1029";
+       private const string sdkVersion = "SDK_NET_3.0.1030";
 
         /// <summary>
         /// Client constructor.
@@ -3546,7 +3546,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 实例诊断
+        /// 实例诊断，用于诊断 INITIAL、DEPENDENCE、ALLOCATED、LAUNCHED、EVENT_LISTENING、BEFORE_ASPECT、EXPIRED、FAILED状态的实例
         /// </summary>
         /// <param name="req"><see cref="DiagnoseProRequest"/></param>
         /// <returns><see cref="DiagnoseProResponse"/></returns>
@@ -3556,7 +3556,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 实例诊断
+        /// 实例诊断，用于诊断 INITIAL、DEPENDENCE、ALLOCATED、LAUNCHED、EVENT_LISTENING、BEFORE_ASPECT、EXPIRED、FAILED状态的实例
         /// </summary>
         /// <param name="req"><see cref="DiagnoseProRequest"/></param>
         /// <returns><see cref="DiagnoseProResponse"/></returns>

@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 镜像缓存Id
+        /// 镜像缓存ID
         /// </summary>
         [JsonProperty("ImageCacheId")]
         public string ImageCacheId{ get; set; }

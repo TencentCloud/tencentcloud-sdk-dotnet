@@ -90,6 +90,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("TaskMode")]
         public long? TaskMode{ get; set; }
 
+        /// <summary>
+        /// 任务完成回调webhook地址
+        /// </summary>
+        [JsonProperty("FinishWebHook")]
+        public string FinishWebHook{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamArraySimple(map, prefix + "SelfDefiningAssets.", this.SelfDefiningAssets);
             this.SetParamObj(map, prefix + "TaskAdvanceCFG.", this.TaskAdvanceCFG);
             this.SetParamSimple(map, prefix + "TaskMode", this.TaskMode);
+            this.SetParamSimple(map, prefix + "FinishWebHook", this.FinishWebHook);
         }
     }
 }

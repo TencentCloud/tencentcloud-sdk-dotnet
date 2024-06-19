@@ -28,7 +28,7 @@ namespace TencentCloud.Tsf.V20180326
 
        private const string endpoint = "tsf.tencentcloudapi.com";
        private const string version = "2018-03-26";
-       private const string sdkVersion = "SDK_NET_3.0.1029";
+       private const string sdkVersion = "SDK_NET_3.0.1030";
 
         /// <summary>
         /// Client constructor.
@@ -1547,6 +1547,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 接口未使用，废弃录用
+        /// 
         /// 查询应用关联日志配置项信息
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationBusinessLogConfigRequest"/></param>
@@ -1557,6 +1559,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 接口未使用，废弃录用
+        /// 
         /// 查询应用关联日志配置项信息
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationBusinessLogConfigRequest"/></param>

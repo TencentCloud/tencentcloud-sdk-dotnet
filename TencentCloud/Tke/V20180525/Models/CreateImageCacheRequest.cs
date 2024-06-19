@@ -31,13 +31,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public string[] Images{ get; set; }
 
         /// <summary>
-        /// 实例所属子网Id
+        /// 实例所属子网 ID
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 实例所属VPC Id
+        /// 实例所属 VPC ID
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ImageCacheName{ get; set; }
 
         /// <summary>
-        /// 安全组Id
+        /// 安全组 ID
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }

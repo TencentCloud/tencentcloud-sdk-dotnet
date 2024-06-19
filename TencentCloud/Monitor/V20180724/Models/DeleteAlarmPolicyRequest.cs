@@ -36,6 +36,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("PolicyIds")]
         public string[] PolicyIds{ get; set; }
 
+        /// <summary>
+        /// prom的实例id
+        /// </summary>
+        [JsonProperty("PromInsIds")]
+        public string[] PromInsIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         {
             this.SetParamSimple(map, prefix + "Module", this.Module);
             this.SetParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
+            this.SetParamArraySimple(map, prefix + "PromInsIds.", this.PromInsIds);
         }
     }
 }

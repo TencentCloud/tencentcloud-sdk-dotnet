@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1029";
+       private const string sdkVersion = "SDK_NET_3.0.1030";
 
         /// <summary>
         /// Client constructor.
@@ -197,6 +197,27 @@ namespace TencentCloud.Lke.V20231130
         public CreateQACateResponse CreateQACateSync(CreateQACateRequest req)
         {
             return InternalRequestAsync<CreateQACateResponse>(req, "CreateQACate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 文档解析，异步接口。
+        /// </summary>
+        /// <param name="req"><see cref="CreateReconstructDocumentFlowRequest"/></param>
+        /// <returns><see cref="CreateReconstructDocumentFlowResponse"/></returns>
+        public Task<CreateReconstructDocumentFlowResponse> CreateReconstructDocumentFlow(CreateReconstructDocumentFlowRequest req)
+        {
+            return InternalRequestAsync<CreateReconstructDocumentFlowResponse>(req, "CreateReconstructDocumentFlow");
+        }
+
+        /// <summary>
+        /// 文档解析，异步接口。
+        /// </summary>
+        /// <param name="req"><see cref="CreateReconstructDocumentFlowRequest"/></param>
+        /// <returns><see cref="CreateReconstructDocumentFlowResponse"/></returns>
+        public CreateReconstructDocumentFlowResponse CreateReconstructDocumentFlowSync(CreateReconstructDocumentFlowRequest req)
+        {
+            return InternalRequestAsync<CreateReconstructDocumentFlowResponse>(req, "CreateReconstructDocumentFlow")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -787,6 +808,27 @@ namespace TencentCloud.Lke.V20231130
         public GetMsgRecordResponse GetMsgRecordSync(GetMsgRecordRequest req)
         {
             return InternalRequestAsync<GetMsgRecordResponse>(req, "GetMsgRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取文档解析任务执行结果
+        /// </summary>
+        /// <param name="req"><see cref="GetReconstructDocumentResultRequest"/></param>
+        /// <returns><see cref="GetReconstructDocumentResultResponse"/></returns>
+        public Task<GetReconstructDocumentResultResponse> GetReconstructDocumentResult(GetReconstructDocumentResultRequest req)
+        {
+            return InternalRequestAsync<GetReconstructDocumentResultResponse>(req, "GetReconstructDocumentResult");
+        }
+
+        /// <summary>
+        /// 获取文档解析任务执行结果
+        /// </summary>
+        /// <param name="req"><see cref="GetReconstructDocumentResultRequest"/></param>
+        /// <returns><see cref="GetReconstructDocumentResultResponse"/></returns>
+        public GetReconstructDocumentResultResponse GetReconstructDocumentResultSync(GetReconstructDocumentResultRequest req)
+        {
+            return InternalRequestAsync<GetReconstructDocumentResultResponse>(req, "GetReconstructDocumentResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1461,6 +1503,27 @@ namespace TencentCloud.Lke.V20231130
         public RateMsgRecordResponse RateMsgRecordSync(RateMsgRecordRequest req)
         {
             return InternalRequestAsync<RateMsgRecordResponse>(req, "RateMsgRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
+        /// </summary>
+        /// <param name="req"><see cref="ReconstructDocumentRequest"/></param>
+        /// <returns><see cref="ReconstructDocumentResponse"/></returns>
+        public Task<ReconstructDocumentResponse> ReconstructDocument(ReconstructDocumentRequest req)
+        {
+            return InternalRequestAsync<ReconstructDocumentResponse>(req, "ReconstructDocument");
+        }
+
+        /// <summary>
+        /// 支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
+        /// </summary>
+        /// <param name="req"><see cref="ReconstructDocumentRequest"/></param>
+        /// <returns><see cref="ReconstructDocumentResponse"/></returns>
+        public ReconstructDocumentResponse ReconstructDocumentSync(ReconstructDocumentRequest req)
+        {
+            return InternalRequestAsync<ReconstructDocumentResponse>(req, "ReconstructDocument")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

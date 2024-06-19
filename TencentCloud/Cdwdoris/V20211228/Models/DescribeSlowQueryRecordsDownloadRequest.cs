@@ -84,6 +84,18 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("IsQuery")]
         public long? IsQuery{ get; set; }
 
+        /// <summary>
+        /// 数据库名称
+        /// </summary>
+        [JsonProperty("DbName")]
+        public string[] DbName{ get; set; }
+
+        /// <summary>
+        /// catalog名称
+        /// </summary>
+        [JsonProperty("CatalogName")]
+        public string[] CatalogName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "ResultBytes", this.ResultBytes);
             this.SetParamSimple(map, prefix + "MemoryUsage", this.MemoryUsage);
             this.SetParamSimple(map, prefix + "IsQuery", this.IsQuery);
+            this.SetParamArraySimple(map, prefix + "DbName.", this.DbName);
+            this.SetParamArraySimple(map, prefix + "CatalogName.", this.CatalogName);
         }
     }
 }

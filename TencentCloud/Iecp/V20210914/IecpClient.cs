@@ -28,7 +28,7 @@ namespace TencentCloud.Iecp.V20210914
 
        private const string endpoint = "iecp.tencentcloudapi.com";
        private const string version = "2021-09-14";
-       private const string sdkVersion = "SDK_NET_3.0.1029";
+       private const string sdkVersion = "SDK_NET_3.0.1030";
 
         /// <summary>
         /// Client constructor.
@@ -54,6 +54,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 从组件市场选中组件并添加到应用模板列表
         /// </summary>
         /// <param name="req"><see cref="ApplyMarketComponentRequest"/></param>
@@ -64,6 +66,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 从组件市场选中组件并添加到应用模板列表
         /// </summary>
         /// <param name="req"><see cref="ApplyMarketComponentRequest"/></param>
@@ -96,6 +100,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 创建可视化创建应用模板
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationVisualizationRequest"/></param>
@@ -106,6 +112,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 创建可视化创建应用模板
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationVisualizationRequest"/></param>
@@ -222,6 +230,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 可视化创建应用
         /// </summary>
         /// <param name="req"><see cref="CreateEdgeUnitApplicationVisualizationRequest"/></param>
@@ -232,6 +242,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 可视化创建应用
         /// </summary>
         /// <param name="req"><see cref="CreateEdgeUnitApplicationVisualizationRequest"/></param>
@@ -243,6 +255,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// yaml方式创建应用
         /// </summary>
         /// <param name="req"><see cref="CreateEdgeUnitApplicationYamlRequest"/></param>
@@ -253,6 +267,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// yaml方式创建应用
         /// </summary>
         /// <param name="req"><see cref="CreateEdgeUnitApplicationYamlRequest"/></param>
@@ -432,6 +448,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 删除应用模板
         /// </summary>
         /// <param name="req"><see cref="DeleteApplicationsRequest"/></param>
@@ -442,6 +460,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 删除应用模板
         /// </summary>
         /// <param name="req"><see cref="DeleteApplicationsRequest"/></param>
@@ -537,6 +557,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 删除应用列表
         /// </summary>
         /// <param name="req"><see cref="DeleteEdgeUnitApplicationsRequest"/></param>
@@ -547,6 +569,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 删除应用列表
         /// </summary>
         /// <param name="req"><see cref="DeleteEdgeUnitApplicationsRequest"/></param>
@@ -768,6 +792,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 获取应用模板可视化配置信息
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationVisualizationRequest"/></param>
@@ -778,6 +804,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 获取应用模板可视化配置信息
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationVisualizationRequest"/></param>
@@ -789,6 +817,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 查询应用模板Yaml
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationYamlRequest"/></param>
@@ -799,6 +829,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 查询应用模板Yaml
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationYamlRequest"/></param>
@@ -810,6 +842,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 检查应用模板的Yaml配置
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationYamlErrorRequest"/></param>
@@ -820,6 +854,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 检查应用模板的Yaml配置
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationYamlErrorRequest"/></param>
@@ -831,6 +867,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 获取应用模板列表
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationsRequest"/></param>
@@ -841,6 +879,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 获取应用模板列表
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationsRequest"/></param>
@@ -1146,6 +1186,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 获取应用事件列表
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeUnitApplicationEventsRequest"/></param>
@@ -1156,6 +1198,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 获取应用事件列表
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeUnitApplicationEventsRequest"/></param>
@@ -1167,6 +1211,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 获取应用日志
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeUnitApplicationLogsRequest"/></param>
@@ -1177,6 +1223,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 获取应用日志
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeUnitApplicationLogsRequest"/></param>
@@ -1188,6 +1236,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 获取应用容器状态
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeUnitApplicationPodContainersRequest"/></param>
@@ -1198,6 +1248,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 获取应用容器状态
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeUnitApplicationPodContainersRequest"/></param>
@@ -1209,6 +1261,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 获取应用下Pod状态
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeUnitApplicationPodsRequest"/></param>
@@ -1219,6 +1273,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 获取应用下Pod状态
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeUnitApplicationPodsRequest"/></param>
@@ -1230,6 +1286,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 获取单元可视化配置信息
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeUnitApplicationVisualizationRequest"/></param>
@@ -1240,6 +1298,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 获取单元可视化配置信息
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeUnitApplicationVisualizationRequest"/></param>
@@ -1251,6 +1311,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 获取应用的Yaml配置
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeUnitApplicationYamlRequest"/></param>
@@ -1261,6 +1323,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 获取应用的Yaml配置
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeUnitApplicationYamlRequest"/></param>
@@ -1272,6 +1336,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 检查单元应用的Yaml配置
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeUnitApplicationYamlErrorRequest"/></param>
@@ -1282,6 +1348,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 检查单元应用的Yaml配置
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeUnitApplicationYamlErrorRequest"/></param>
@@ -1314,6 +1382,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 查询边缘集群详情
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeUnitCloudRequest"/></param>
@@ -1324,6 +1394,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 查询边缘集群详情
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeUnitCloudRequest"/></param>
@@ -1860,6 +1932,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 修改应用模板基本信息
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationBasicInfoRequest"/></param>
@@ -1870,6 +1944,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 修改应用模板基本信息
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationBasicInfoRequest"/></param>
@@ -1881,6 +1957,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 修改应用模板配置
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationVisualizationRequest"/></param>
@@ -1891,6 +1969,8 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 产品停售，预下线
+        /// 
         /// 修改应用模板配置
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationVisualizationRequest"/></param>

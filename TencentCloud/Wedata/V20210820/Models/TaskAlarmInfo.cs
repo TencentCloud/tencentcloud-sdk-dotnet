@@ -240,6 +240,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("LarkWebHooks")]
         public string LarkWebHooks{ get; set; }
 
+        /// <summary>
+        /// 钉钉群Hook地址，多个hook地址使用,隔开
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DingDingWebHooks")]
+        public string DingDingWebHooks{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -278,6 +285,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "LatestAlarmTime", this.LatestAlarmTime);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "LarkWebHooks", this.LarkWebHooks);
+            this.SetParamSimple(map, prefix + "DingDingWebHooks", this.DingDingWebHooks);
         }
     }
 }

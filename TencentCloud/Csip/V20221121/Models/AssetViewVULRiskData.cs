@@ -267,6 +267,20 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("VulRiskId")]
         public string VulRiskId{ get; set; }
 
+        /// <summary>
+        /// 新版漏洞id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TvdID")]
+        public string TvdID{ get; set; }
+
+        /// <summary>
+        /// 是否可以一键体检，1-可以，0-不可以
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsOneClick")]
+        public ulong? IsOneClick{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -311,6 +325,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "HandleTaskId", this.HandleTaskId);
             this.SetParamSimple(map, prefix + "EngineSource", this.EngineSource);
             this.SetParamSimple(map, prefix + "VulRiskId", this.VulRiskId);
+            this.SetParamSimple(map, prefix + "TvdID", this.TvdID);
+            this.SetParamSimple(map, prefix + "IsOneClick", this.IsOneClick);
         }
     }
 }

@@ -465,6 +465,20 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("AgentCpuPer")]
         public float? AgentCpuPer{ get; set; }
 
+        /// <summary>
+        /// cvm真正所属的appid
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RealAppid")]
+        public long? RealAppid{ get; set; }
+
+        /// <summary>
+        /// 云资产类型：0：腾讯云，1：aws，2：azure
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CloudType")]
+        public long? CloudType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -534,6 +548,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamSimple(map, prefix + "AgentMemRss", this.AgentMemRss);
             this.SetParamSimple(map, prefix + "AgentCpuPer", this.AgentCpuPer);
+            this.SetParamSimple(map, prefix + "RealAppid", this.RealAppid);
+            this.SetParamSimple(map, prefix + "CloudType", this.CloudType);
         }
     }
 }

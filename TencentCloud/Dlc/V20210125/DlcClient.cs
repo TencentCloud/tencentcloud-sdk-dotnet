@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1029";
+       private const string sdkVersion = "SDK_NET_3.0.1030";
 
         /// <summary>
         /// Client constructor.
@@ -1961,6 +1961,27 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeTasksCostInfoResponse DescribeTasksCostInfoSync(DescribeTasksCostInfoRequest req)
         {
             return InternalRequestAsync<DescribeTasksCostInfoResponse>(req, "DescribeTasksCostInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看任务概览页
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTasksOverviewRequest"/></param>
+        /// <returns><see cref="DescribeTasksOverviewResponse"/></returns>
+        public Task<DescribeTasksOverviewResponse> DescribeTasksOverview(DescribeTasksOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeTasksOverviewResponse>(req, "DescribeTasksOverview");
+        }
+
+        /// <summary>
+        /// 查看任务概览页
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTasksOverviewRequest"/></param>
+        /// <returns><see cref="DescribeTasksOverviewResponse"/></returns>
+        public DescribeTasksOverviewResponse DescribeTasksOverviewSync(DescribeTasksOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeTasksOverviewResponse>(req, "DescribeTasksOverview")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

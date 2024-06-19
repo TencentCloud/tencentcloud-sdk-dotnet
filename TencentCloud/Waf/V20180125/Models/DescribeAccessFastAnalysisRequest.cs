@@ -25,12 +25,6 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 客户要查询的日志主题ID，每个客户都有对应的一个主题
-        /// </summary>
-        [JsonProperty("TopicId")]
-        public string TopicId{ get; set; }
-
-        /// <summary>
         /// 要查询的日志的起始时间，Unix时间戳，单位ms
         /// </summary>
         [JsonProperty("From")]
@@ -55,6 +49,13 @@ namespace TencentCloud.Waf.V20180125.Models
         public string FieldName{ get; set; }
 
         /// <summary>
+        /// 客户要查询的日志主题ID，每个客户都有对应的一个主题
+        /// </summary>
+        [JsonProperty("TopicId")]
+        [System.Obsolete]
+        public string TopicId{ get; set; }
+
+        /// <summary>
         /// 排序字段,升序asc,降序desc，默认降序desc 
         /// </summary>
         [JsonProperty("Sort")]
@@ -72,11 +73,11 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamSimple(map, prefix + "From", this.From);
             this.SetParamSimple(map, prefix + "To", this.To);
             this.SetParamSimple(map, prefix + "Query", this.Query);
             this.SetParamSimple(map, prefix + "FieldName", this.FieldName);
+            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamSimple(map, prefix + "Sort", this.Sort);
             this.SetParamSimple(map, prefix + "Count", this.Count);
         }

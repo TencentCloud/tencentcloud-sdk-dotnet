@@ -25,6 +25,18 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
+        /// 查询条件（当前接口TaskId和CurRunDate需要填充在该字段方可诊断）
+        /// </summary>
+        [JsonProperty("SearchCondition")]
+        public InstanceApiOpsRequest SearchCondition{ get; set; }
+
+        /// <summary>
+        /// 项目id
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
+
+        /// <summary>
         /// 实例列表
         /// </summary>
         [JsonProperty("Instances")]
@@ -61,12 +73,6 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string SonInstanceType{ get; set; }
 
         /// <summary>
-        /// 查询条件（当前接口TaskId和CurRunDate需要填充在该字段方可诊断）
-        /// </summary>
-        [JsonProperty("SearchCondition")]
-        public InstanceApiOpsRequest SearchCondition{ get; set; }
-
-        /// <summary>
         /// 访问类型
         /// </summary>
         [JsonProperty("OptType")]
@@ -83,12 +89,6 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         [JsonProperty("OperatorId")]
         public string OperatorId{ get; set; }
-
-        /// <summary>
-        /// 项目id
-        /// </summary>
-        [JsonProperty("ProjectId")]
-        public string ProjectId{ get; set; }
 
         /// <summary>
         /// 项目标志
@@ -138,17 +138,17 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "SearchCondition.", this.SearchCondition);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamArrayObj(map, prefix + "Instances.", this.Instances);
             this.SetParamSimple(map, prefix + "CheckFather", this.CheckFather);
             this.SetParamSimple(map, prefix + "RerunType", this.RerunType);
             this.SetParamSimple(map, prefix + "DependentWay", this.DependentWay);
             this.SetParamSimple(map, prefix + "SkipEventListening", this.SkipEventListening);
             this.SetParamSimple(map, prefix + "SonInstanceType", this.SonInstanceType);
-            this.SetParamObj(map, prefix + "SearchCondition.", this.SearchCondition);
             this.SetParamSimple(map, prefix + "OptType", this.OptType);
             this.SetParamSimple(map, prefix + "OperatorName", this.OperatorName);
             this.SetParamSimple(map, prefix + "OperatorId", this.OperatorId);
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "ProjectIdent", this.ProjectIdent);
             this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);
             this.SetParamSimple(map, prefix + "PageIndex", this.PageIndex);

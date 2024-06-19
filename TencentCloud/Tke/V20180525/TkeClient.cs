@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1029";
+       private const string sdkVersion = "SDK_NET_3.0.1030";
 
         /// <summary>
         /// Client constructor.
@@ -2595,6 +2595,27 @@ namespace TencentCloud.Tke.V20180525
         public DescribeLogSwitchesResponse DescribeLogSwitchesSync(DescribeLogSwitchesRequest req)
         {
             return InternalRequestAsync<DescribeLogSwitchesResponse>(req, "DescribeLogSwitches")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询正在运行中Pod的计费信息。可以通过 Namespace 和 Name 来查询某个 Pod 的信息，也可以通过 Pod 的 Uid 批量查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePodChargeInfoRequest"/></param>
+        /// <returns><see cref="DescribePodChargeInfoResponse"/></returns>
+        public Task<DescribePodChargeInfoResponse> DescribePodChargeInfo(DescribePodChargeInfoRequest req)
+        {
+            return InternalRequestAsync<DescribePodChargeInfoResponse>(req, "DescribePodChargeInfo");
+        }
+
+        /// <summary>
+        /// 查询正在运行中Pod的计费信息。可以通过 Namespace 和 Name 来查询某个 Pod 的信息，也可以通过 Pod 的 Uid 批量查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePodChargeInfoRequest"/></param>
+        /// <returns><see cref="DescribePodChargeInfoResponse"/></returns>
+        public DescribePodChargeInfoResponse DescribePodChargeInfoSync(DescribePodChargeInfoRequest req)
+        {
+            return InternalRequestAsync<DescribePodChargeInfoResponse>(req, "DescribePodChargeInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

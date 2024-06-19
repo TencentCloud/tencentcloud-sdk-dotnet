@@ -43,6 +43,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
+        /// 地域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
         /// 任务创建时间
         /// </summary>
         [JsonProperty("CreateTime")]
@@ -241,6 +248,14 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("TaskMaintainInfo")]
         public TaskMaintainInfo TaskMaintainInfo{ get; set; }
 
+        /// <summary>
+        /// 实例日志投递信息
+        /// 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceCLSDeliveryInfos")]
+        public InstanceCLSDeliveryInfo[] InstanceCLSDeliveryInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -250,6 +265,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ID", this.ID);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "DelayTime", this.DelayTime);
             this.SetParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
@@ -281,6 +297,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamObj(map, prefix + "SwitchClusterLogBin.", this.SwitchClusterLogBin);
             this.SetParamObj(map, prefix + "ModifyInstanceParamsData.", this.ModifyInstanceParamsData);
             this.SetParamObj(map, prefix + "TaskMaintainInfo.", this.TaskMaintainInfo);
+            this.SetParamArrayObj(map, prefix + "InstanceCLSDeliveryInfos.", this.InstanceCLSDeliveryInfos);
         }
     }
 }

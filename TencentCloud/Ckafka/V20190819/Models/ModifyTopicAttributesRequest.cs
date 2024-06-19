@@ -67,16 +67,16 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? RetentionMs{ get; set; }
 
         /// <summary>
-        /// Segment 分片滚动的时长，单位：ms，当前最小为86400000ms。
-        /// </summary>
-        [JsonProperty("SegmentMs")]
-        public long? SegmentMs{ get; set; }
-
-        /// <summary>
         /// 主题消息最大值，单位为 Byte，最大值为12582912Byte（即12MB）。
         /// </summary>
         [JsonProperty("MaxMessageBytes")]
         public long? MaxMessageBytes{ get; set; }
+
+        /// <summary>
+        /// Segment 分片滚动的时长，单位：ms，当前最小为300000ms。
+        /// </summary>
+        [JsonProperty("SegmentMs")]
+        public long? SegmentMs{ get; set; }
 
         /// <summary>
         /// 消息删除策略，可以选择delete 或者compact
@@ -145,8 +145,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "MinInsyncReplicas", this.MinInsyncReplicas);
             this.SetParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
             this.SetParamSimple(map, prefix + "RetentionMs", this.RetentionMs);
-            this.SetParamSimple(map, prefix + "SegmentMs", this.SegmentMs);
             this.SetParamSimple(map, prefix + "MaxMessageBytes", this.MaxMessageBytes);
+            this.SetParamSimple(map, prefix + "SegmentMs", this.SegmentMs);
             this.SetParamSimple(map, prefix + "CleanUpPolicy", this.CleanUpPolicy);
             this.SetParamArraySimple(map, prefix + "IpWhiteList.", this.IpWhiteList);
             this.SetParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);

@@ -108,6 +108,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("BackupFileName")]
         public string BackupFileName{ get; set; }
 
+        /// <summary>
+        /// 回档进程
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RollbackProcess")]
+        public RollbackProcessInfo RollbackProcess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -127,6 +134,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArrayObj(map, prefix + "RollbackDatabases.", this.RollbackDatabases);
             this.SetParamArrayObj(map, prefix + "RollbackTables.", this.RollbackTables);
             this.SetParamSimple(map, prefix + "BackupFileName", this.BackupFileName);
+            this.SetParamObj(map, prefix + "RollbackProcess.", this.RollbackProcess);
         }
     }
 }
