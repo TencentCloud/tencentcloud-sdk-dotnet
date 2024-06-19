@@ -187,6 +187,20 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("IsDefaultServer")]
         public bool? IsDefaultServer{ get; set; }
 
+        /// <summary>
+        /// TLS套件包
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TLSCiphers")]
+        public string TLSCiphers{ get; set; }
+
+        /// <summary>
+        /// TLS版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TLSSupportVersion")]
+        public string[] TLSSupportVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -215,6 +229,8 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "BanStatus", this.BanStatus);
             this.SetParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
             this.SetParamSimple(map, prefix + "IsDefaultServer", this.IsDefaultServer);
+            this.SetParamSimple(map, prefix + "TLSCiphers", this.TLSCiphers);
+            this.SetParamArraySimple(map, prefix + "TLSSupportVersion.", this.TLSSupportVersion);
         }
     }
 }

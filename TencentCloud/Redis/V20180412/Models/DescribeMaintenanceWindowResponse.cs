@@ -25,13 +25,16 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 维护时间窗起始时间，如：17:00
+        /// 维护时间窗开始时间。取值范围为"00:00-23:00"的任意时间点，如03:24。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 维护时间窗结束时间，如：19:00
+        /// 维护时间窗结束时间。
+        /// - 取值范围为"00:00-23:00"的任意时间点，如：04:24。
+        /// - 维护时间持续时长最小为30分钟，最大为3小时。
+        /// - 结束时间务必是基于开始时间向后的时间。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

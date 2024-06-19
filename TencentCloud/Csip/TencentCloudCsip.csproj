@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1028</VersionPrefix>
+    <VersionPrefix>3.0.1029</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -134,8 +134,12 @@
     <Compile Include="V20221121\Models\DescribeTopAttackInfoResponse.cs" />
     <Compile Include="V20221121\Models\DescribeVULRiskAdvanceCFGListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeVULRiskAdvanceCFGListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeVULRiskDetailRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeVULRiskDetailResponse.cs" />
     <Compile Include="V20221121\Models\DescribeVpcAssetsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeVpcAssetsResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeVulViewVulRiskListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeVulViewVulRiskListResponse.cs" />
     <Compile Include="V20221121\Models\DomainAssetVO.cs" />
     <Compile Include="V20221121\Models\Element.cs" />
     <Compile Include="V20221121\Models\Filter.cs" />
@@ -182,8 +186,12 @@
     <Compile Include="V20221121\Models\UpdateAlertStatusListRequest.cs" />
     <Compile Include="V20221121\Models\UpdateAlertStatusListResponse.cs" />
     <Compile Include="V20221121\Models\VULRiskAdvanceCFGList.cs" />
+    <Compile Include="V20221121\Models\VULRiskInfo.cs" />
     <Compile Include="V20221121\Models\VULViewVULRisk.cs" />
+    <Compile Include="V20221121\Models\VULViewVULRiskData.cs" />
     <Compile Include="V20221121\Models\Vpc.cs" />
+    <Compile Include="V20221121\Models\VulImpactComponentInfo.cs" />
+    <Compile Include="V20221121\Models\VulTrend.cs" />
     <Compile Include="V20221121\Models\WebsiteRisk.cs" />
     <Compile Include="V20221121\Models\WhereFilter.cs" />
   </ItemGroup>

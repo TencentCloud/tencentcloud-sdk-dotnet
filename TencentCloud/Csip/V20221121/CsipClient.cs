@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1028";
+       private const string sdkVersion = "SDK_NET_3.0.1029";
 
         /// <summary>
         /// Client constructor.
@@ -768,6 +768,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 获取漏洞展开详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVULRiskDetailRequest"/></param>
+        /// <returns><see cref="DescribeVULRiskDetailResponse"/></returns>
+        public Task<DescribeVULRiskDetailResponse> DescribeVULRiskDetail(DescribeVULRiskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeVULRiskDetailResponse>(req, "DescribeVULRiskDetail");
+        }
+
+        /// <summary>
+        /// 获取漏洞展开详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVULRiskDetailRequest"/></param>
+        /// <returns><see cref="DescribeVULRiskDetailResponse"/></returns>
+        public DescribeVULRiskDetailResponse DescribeVULRiskDetailSync(DescribeVULRiskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeVULRiskDetailResponse>(req, "DescribeVULRiskDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取vpc列表
         /// </summary>
         /// <param name="req"><see cref="DescribeVpcAssetsRequest"/></param>
@@ -785,6 +806,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeVpcAssetsResponse DescribeVpcAssetsSync(DescribeVpcAssetsRequest req)
         {
             return InternalRequestAsync<DescribeVpcAssetsResponse>(req, "DescribeVpcAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取漏洞视角的漏洞风险列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulViewVulRiskListRequest"/></param>
+        /// <returns><see cref="DescribeVulViewVulRiskListResponse"/></returns>
+        public Task<DescribeVulViewVulRiskListResponse> DescribeVulViewVulRiskList(DescribeVulViewVulRiskListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulViewVulRiskListResponse>(req, "DescribeVulViewVulRiskList");
+        }
+
+        /// <summary>
+        /// 获取漏洞视角的漏洞风险列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulViewVulRiskListRequest"/></param>
+        /// <returns><see cref="DescribeVulViewVulRiskListResponse"/></returns>
+        public DescribeVulViewVulRiskListResponse DescribeVulViewVulRiskListSync(DescribeVulViewVulRiskListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulViewVulRiskListResponse>(req, "DescribeVulViewVulRiskList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

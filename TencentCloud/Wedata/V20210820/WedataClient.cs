@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1028";
+       private const string sdkVersion = "SDK_NET_3.0.1029";
 
         /// <summary>
         /// Client constructor.
@@ -4199,6 +4199,27 @@ namespace TencentCloud.Wedata.V20210820
         public ModifyWorkflowScheduleResponse ModifyWorkflowScheduleSync(ModifyWorkflowScheduleRequest req)
         {
             return InternalRequestAsync<ModifyWorkflowScheduleResponse>(req, "ModifyWorkflowSchedule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 编排空间-工作流-移动任务到工作流文件夹
+        /// </summary>
+        /// <param name="req"><see cref="MoveTasksToFolderRequest"/></param>
+        /// <returns><see cref="MoveTasksToFolderResponse"/></returns>
+        public Task<MoveTasksToFolderResponse> MoveTasksToFolder(MoveTasksToFolderRequest req)
+        {
+            return InternalRequestAsync<MoveTasksToFolderResponse>(req, "MoveTasksToFolder");
+        }
+
+        /// <summary>
+        /// 编排空间-工作流-移动任务到工作流文件夹
+        /// </summary>
+        /// <param name="req"><see cref="MoveTasksToFolderRequest"/></param>
+        /// <returns><see cref="MoveTasksToFolderResponse"/></returns>
+        public MoveTasksToFolderResponse MoveTasksToFolderSync(MoveTasksToFolderRequest req)
+        {
+            return InternalRequestAsync<MoveTasksToFolderResponse>(req, "MoveTasksToFolder")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

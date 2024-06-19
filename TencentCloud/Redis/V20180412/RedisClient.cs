@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1028";
+       private const string sdkVersion = "SDK_NET_3.0.1029";
 
         /// <summary>
         /// Client constructor.
@@ -1062,7 +1062,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例维护时间窗，在实例需要进行版本升级或者架构升级的时候，会在维护时间窗时间内进行切换
+        /// 本接口（DescribeMaintenanceWindow）用于查询实例维护时间窗。在实例需要进行版本升级或者架构升级的时候，会在维护时间窗时间内进行切换
         /// </summary>
         /// <param name="req"><see cref="DescribeMaintenanceWindowRequest"/></param>
         /// <returns><see cref="DescribeMaintenanceWindowResponse"/></returns>
@@ -1072,7 +1072,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例维护时间窗，在实例需要进行版本升级或者架构升级的时候，会在维护时间窗时间内进行切换
+        /// 本接口（DescribeMaintenanceWindow）用于查询实例维护时间窗。在实例需要进行版本升级或者架构升级的时候，会在维护时间窗时间内进行切换
         /// </summary>
         /// <param name="req"><see cref="DescribeMaintenanceWindowRequest"/></param>
         /// <returns><see cref="DescribeMaintenanceWindowResponse"/></returns>
@@ -1482,7 +1482,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例续费价格（包年包月）
+        /// 本接口（InquiryPriceRenewInstance）用于查询包年包月计费实例的续费价格。
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceRenewInstanceRequest"/></param>
         /// <returns><see cref="InquiryPriceRenewInstanceResponse"/></returns>
@@ -1492,7 +1492,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例续费价格（包年包月）
+        /// 本接口（InquiryPriceRenewInstance）用于查询包年包月计费实例的续费价格。
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceRenewInstanceRequest"/></param>
         /// <returns><see cref="InquiryPriceRenewInstanceResponse"/></returns>

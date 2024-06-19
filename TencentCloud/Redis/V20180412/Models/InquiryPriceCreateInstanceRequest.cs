@@ -25,7 +25,16 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)。
+        /// 实例类型。
+        /// - 2：Redis 2.8 内存版（标准架构）。
+        /// - 6：Redis 4.0 内存版（标准架构）。
+        /// - 7：Redis 4.0 内存版（集群架构）。
+        /// - 8：Redis 5.0 内存版（标准架构）。
+        /// - 9：Redis 5.0 内存版（集群架构）。
+        /// - 15：Redis 6.2 内存版（标准架构）。
+        /// - 16：Redis 6.2 内存版（集群架构）。
+        /// - 17：Redis 7.0 内存版（标准架构）。
+        /// - 18：Redis 7.0 内存版（集群架构）。
         /// </summary>
         [JsonProperty("TypeId")]
         public ulong? TypeId{ get; set; }
@@ -50,7 +59,9 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// 付费方式:0-按量计费，1-包年包月。
+        /// 付费方式。
+        /// - 0：按量计费。
+        /// - 1：包年包月。
         /// </summary>
         [JsonProperty("BillingMode")]
         public long? BillingMode{ get; set; }
@@ -62,19 +73,23 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// 实例分片数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版、Redis4.0标准架构不需要填写。
+        /// 实例分片数量。
+        /// Redis2.8标准架构、CKV标准架构、Redis4.0标准架构无需填写。
         /// </summary>
         [JsonProperty("RedisShardNum")]
         public long? RedisShardNum{ get; set; }
 
         /// <summary>
-        /// 实例副本数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
+        /// 实例副本数量。
+        /// Redis2.8标准架构、CKV标准架构无需填写。
         /// </summary>
         [JsonProperty("RedisReplicasNum")]
         public long? RedisReplicasNum{ get; set; }
 
         /// <summary>
-        /// 是否支持副本只读，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
+        /// 是否支持副本只读。Redis2.8标准架构、CKV标准架构无需填写。
+        /// - true：无需支持副本只读。
+        /// - false：需支持。
         /// </summary>
         [JsonProperty("ReplicasReadonly")]
         public bool? ReplicasReadonly{ get; set; }
@@ -86,7 +101,10 @@ namespace TencentCloud.Redis.V20180412.Models
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// "local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传默认询价为本地盘版本
+        /// 部署方式。
+        /// - local：本地盘版，默认为 local。
+        /// - cloud：云盘版。
+        /// - cdc：独享集群版。
         /// </summary>
         [JsonProperty("ProductVersion")]
         public string ProductVersion{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 购买时长，单位：月
+        /// 包年包月实例的购买时长，单位：月。
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
