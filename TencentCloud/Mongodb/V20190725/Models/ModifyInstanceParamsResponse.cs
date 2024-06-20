@@ -15,26 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Dts.V20180330.Models
+namespace TencentCloud.Mongodb.V20190725.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRegionConfResponse : AbstractModel
+    public class ModifyInstanceParamsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 可售卖地域的数量
+        /// 修改参数配置是否生效。
+        /// - true：参数修改后的值已生效。
+        /// - false：执行失败。
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("Changed")]
+        public bool? Changed{ get; set; }
 
         /// <summary>
-        /// 可售卖地域详情
+        /// 该参数暂时无意义(兼容前端保留)。
         /// </summary>
-        [JsonProperty("Items")]
-        public SubscribeRegionConf[] Items{ get; set; }
+        [JsonProperty("TaskId")]
+        public ulong? TaskId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +50,8 @@ namespace TencentCloud.Dts.V20180330.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamSimple(map, prefix + "Changed", this.Changed);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

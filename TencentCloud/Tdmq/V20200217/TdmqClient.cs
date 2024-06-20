@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1030";
+       private const string sdkVersion = "SDK_NET_3.0.1031";
 
         /// <summary>
         /// Client constructor.
@@ -348,6 +348,27 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 创建环境角色授权
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQEnvironmentRoleRequest"/></param>
+        /// <returns><see cref="CreateRocketMQEnvironmentRoleResponse"/></returns>
+        public Task<CreateRocketMQEnvironmentRoleResponse> CreateRocketMQEnvironmentRole(CreateRocketMQEnvironmentRoleRequest req)
+        {
+            return InternalRequestAsync<CreateRocketMQEnvironmentRoleResponse>(req, "CreateRocketMQEnvironmentRole");
+        }
+
+        /// <summary>
+        /// 创建环境角色授权
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQEnvironmentRoleRequest"/></param>
+        /// <returns><see cref="CreateRocketMQEnvironmentRoleResponse"/></returns>
+        public CreateRocketMQEnvironmentRoleResponse CreateRocketMQEnvironmentRoleSync(CreateRocketMQEnvironmentRoleRequest req)
+        {
+            return InternalRequestAsync<CreateRocketMQEnvironmentRoleResponse>(req, "CreateRocketMQEnvironmentRole")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建RocketMQ消费组
         /// </summary>
         /// <param name="req"><see cref="CreateRocketMQGroupRequest"/></param>
@@ -386,6 +407,27 @@ namespace TencentCloud.Tdmq.V20200217
         public CreateRocketMQNamespaceResponse CreateRocketMQNamespaceSync(CreateRocketMQNamespaceRequest req)
         {
             return InternalRequestAsync<CreateRocketMQNamespaceResponse>(req, "CreateRocketMQNamespace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建角色
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQRoleRequest"/></param>
+        /// <returns><see cref="CreateRocketMQRoleResponse"/></returns>
+        public Task<CreateRocketMQRoleResponse> CreateRocketMQRole(CreateRocketMQRoleRequest req)
+        {
+            return InternalRequestAsync<CreateRocketMQRoleResponse>(req, "CreateRocketMQRole");
+        }
+
+        /// <summary>
+        /// 创建角色
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQRoleRequest"/></param>
+        /// <returns><see cref="CreateRocketMQRoleResponse"/></returns>
+        public CreateRocketMQRoleResponse CreateRocketMQRoleSync(CreateRocketMQRoleRequest req)
+        {
+            return InternalRequestAsync<CreateRocketMQRoleResponse>(req, "CreateRocketMQRole")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -726,6 +768,27 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 删除环境角色授权。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRocketMQEnvironmentRolesRequest"/></param>
+        /// <returns><see cref="DeleteRocketMQEnvironmentRolesResponse"/></returns>
+        public Task<DeleteRocketMQEnvironmentRolesResponse> DeleteRocketMQEnvironmentRoles(DeleteRocketMQEnvironmentRolesRequest req)
+        {
+            return InternalRequestAsync<DeleteRocketMQEnvironmentRolesResponse>(req, "DeleteRocketMQEnvironmentRoles");
+        }
+
+        /// <summary>
+        /// 删除环境角色授权。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRocketMQEnvironmentRolesRequest"/></param>
+        /// <returns><see cref="DeleteRocketMQEnvironmentRolesResponse"/></returns>
+        public DeleteRocketMQEnvironmentRolesResponse DeleteRocketMQEnvironmentRolesSync(DeleteRocketMQEnvironmentRolesRequest req)
+        {
+            return InternalRequestAsync<DeleteRocketMQEnvironmentRolesResponse>(req, "DeleteRocketMQEnvironmentRoles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除RocketMQ消费组
         /// </summary>
         /// <param name="req"><see cref="DeleteRocketMQGroupRequest"/></param>
@@ -764,6 +827,27 @@ namespace TencentCloud.Tdmq.V20200217
         public DeleteRocketMQNamespaceResponse DeleteRocketMQNamespaceSync(DeleteRocketMQNamespaceRequest req)
         {
             return InternalRequestAsync<DeleteRocketMQNamespaceResponse>(req, "DeleteRocketMQNamespace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除角色，支持批量。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRocketMQRolesRequest"/></param>
+        /// <returns><see cref="DeleteRocketMQRolesResponse"/></returns>
+        public Task<DeleteRocketMQRolesResponse> DeleteRocketMQRoles(DeleteRocketMQRolesRequest req)
+        {
+            return InternalRequestAsync<DeleteRocketMQRolesResponse>(req, "DeleteRocketMQRoles");
+        }
+
+        /// <summary>
+        /// 删除角色，支持批量。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRocketMQRolesRequest"/></param>
+        /// <returns><see cref="DeleteRocketMQRolesResponse"/></returns>
+        public DeleteRocketMQRolesResponse DeleteRocketMQRolesSync(DeleteRocketMQRolesRequest req)
+        {
+            return InternalRequestAsync<DeleteRocketMQRolesResponse>(req, "DeleteRocketMQRoles")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1654,6 +1738,27 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 获取命名空间角色列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQEnvironmentRolesRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQEnvironmentRolesResponse"/></returns>
+        public Task<DescribeRocketMQEnvironmentRolesResponse> DescribeRocketMQEnvironmentRoles(DescribeRocketMQEnvironmentRolesRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQEnvironmentRolesResponse>(req, "DescribeRocketMQEnvironmentRoles");
+        }
+
+        /// <summary>
+        /// 获取命名空间角色列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQEnvironmentRolesRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQEnvironmentRolesResponse"/></returns>
+        public DescribeRocketMQEnvironmentRolesResponse DescribeRocketMQEnvironmentRolesSync(DescribeRocketMQEnvironmentRolesRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQEnvironmentRolesResponse>(req, "DescribeRocketMQEnvironmentRoles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取RocketMQ消费组列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQGroupsRequest"/></param>
@@ -1797,6 +1902,27 @@ namespace TencentCloud.Tdmq.V20200217
         public DescribeRocketMQPublicAccessPointResponse DescribeRocketMQPublicAccessPointSync(DescribeRocketMQPublicAccessPointRequest req)
         {
             return InternalRequestAsync<DescribeRocketMQPublicAccessPointResponse>(req, "DescribeRocketMQPublicAccessPoint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取角色列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQRolesRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQRolesResponse"/></returns>
+        public Task<DescribeRocketMQRolesResponse> DescribeRocketMQRoles(DescribeRocketMQRolesRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQRolesResponse>(req, "DescribeRocketMQRoles");
+        }
+
+        /// <summary>
+        /// 获取角色列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQRolesRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQRolesResponse"/></returns>
+        public DescribeRocketMQRolesResponse DescribeRocketMQRolesSync(DescribeRocketMQRolesRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQRolesResponse>(req, "DescribeRocketMQRoles")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2389,6 +2515,27 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 修改环境角色授权。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRocketMQEnvironmentRoleRequest"/></param>
+        /// <returns><see cref="ModifyRocketMQEnvironmentRoleResponse"/></returns>
+        public Task<ModifyRocketMQEnvironmentRoleResponse> ModifyRocketMQEnvironmentRole(ModifyRocketMQEnvironmentRoleRequest req)
+        {
+            return InternalRequestAsync<ModifyRocketMQEnvironmentRoleResponse>(req, "ModifyRocketMQEnvironmentRole");
+        }
+
+        /// <summary>
+        /// 修改环境角色授权。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRocketMQEnvironmentRoleRequest"/></param>
+        /// <returns><see cref="ModifyRocketMQEnvironmentRoleResponse"/></returns>
+        public ModifyRocketMQEnvironmentRoleResponse ModifyRocketMQEnvironmentRoleSync(ModifyRocketMQEnvironmentRoleRequest req)
+        {
+            return InternalRequestAsync<ModifyRocketMQEnvironmentRoleResponse>(req, "ModifyRocketMQEnvironmentRole")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 更新RocketMQ消费组信息
         /// </summary>
         /// <param name="req"><see cref="ModifyRocketMQGroupRequest"/></param>
@@ -2448,6 +2595,27 @@ namespace TencentCloud.Tdmq.V20200217
         public ModifyRocketMQNamespaceResponse ModifyRocketMQNamespaceSync(ModifyRocketMQNamespaceRequest req)
         {
             return InternalRequestAsync<ModifyRocketMQNamespaceResponse>(req, "ModifyRocketMQNamespace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 角色修改
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRocketMQRoleRequest"/></param>
+        /// <returns><see cref="ModifyRocketMQRoleResponse"/></returns>
+        public Task<ModifyRocketMQRoleResponse> ModifyRocketMQRole(ModifyRocketMQRoleRequest req)
+        {
+            return InternalRequestAsync<ModifyRocketMQRoleResponse>(req, "ModifyRocketMQRole");
+        }
+
+        /// <summary>
+        /// 角色修改
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRocketMQRoleRequest"/></param>
+        /// <returns><see cref="ModifyRocketMQRoleResponse"/></returns>
+        public ModifyRocketMQRoleResponse ModifyRocketMQRoleSync(ModifyRocketMQRoleRequest req)
+        {
+            return InternalRequestAsync<ModifyRocketMQRoleResponse>(req, "ModifyRocketMQRole")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

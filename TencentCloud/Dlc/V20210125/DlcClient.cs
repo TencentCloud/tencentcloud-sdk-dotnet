@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1030";
+       private const string sdkVersion = "SDK_NET_3.0.1031";
 
         /// <summary>
         /// Client constructor.
@@ -1751,6 +1751,27 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeSparkSessionBatchSQLResponse DescribeSparkSessionBatchSQLSync(DescribeSparkSessionBatchSQLRequest req)
         {
             return InternalRequestAsync<DescribeSparkSessionBatchSQLResponse>(req, "DescribeSparkSessionBatchSQL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSparkSessionBatchSQLCost）用于查询Spark SQL批任务消耗
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSparkSessionBatchSQLCostRequest"/></param>
+        /// <returns><see cref="DescribeSparkSessionBatchSQLCostResponse"/></returns>
+        public Task<DescribeSparkSessionBatchSQLCostResponse> DescribeSparkSessionBatchSQLCost(DescribeSparkSessionBatchSQLCostRequest req)
+        {
+            return InternalRequestAsync<DescribeSparkSessionBatchSQLCostResponse>(req, "DescribeSparkSessionBatchSQLCost");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSparkSessionBatchSQLCost）用于查询Spark SQL批任务消耗
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSparkSessionBatchSQLCostRequest"/></param>
+        /// <returns><see cref="DescribeSparkSessionBatchSQLCostResponse"/></returns>
+        public DescribeSparkSessionBatchSQLCostResponse DescribeSparkSessionBatchSQLCostSync(DescribeSparkSessionBatchSQLCostRequest req)
+        {
+            return InternalRequestAsync<DescribeSparkSessionBatchSQLCostResponse>(req, "DescribeSparkSessionBatchSQLCost")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

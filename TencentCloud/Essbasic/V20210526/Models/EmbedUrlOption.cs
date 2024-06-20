@@ -25,19 +25,19 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 合同详情页面是否展示合同控件信息
-        /// <br/>true:允许在合同详情页展示控件
-        /// <br/>false:不允许在合同详情页展示控件
-        /// <br/>默认false,在合同详情页不展示控件
+        /// 合同详情预览，允许展示控件信息
+        /// <ul>
+        /// <li><b>true</b>：允许在合同详情页展示控件</li>
+        /// <li><b>false</b>：（默认）不允许在合同详情页展示控件</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("ShowFlowDetailComponent")]
         public bool? ShowFlowDetailComponent{ get; set; }
 
         /// <summary>
-        /// 模版预览页面是否展示空间信息
-        /// <br/>true:允许在模版预览页展示控件
-        /// <br/>false:不允许在模版预览页展示控件
-        /// <br/>默认false,在模版预览页不展示控件
+        /// 模板预览，允许展示模板控件信息
+        /// <ul><li> <b>true</b> :允许在模板预览页展示控件</li>
+        /// <li> <b>false</b> :（默认）不允许在模板预览页展示控件</li></ul>
         /// </summary>
         [JsonProperty("ShowTemplateComponent")]
         public bool? ShowTemplateComponent{ get; set; }

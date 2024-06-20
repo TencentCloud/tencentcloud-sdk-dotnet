@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1030";
+       private const string sdkVersion = "SDK_NET_3.0.1031";
 
         /// <summary>
         /// Client constructor.
@@ -2616,6 +2616,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public RemoveClusterSlaveZoneResponse RemoveClusterSlaveZoneSync(RemoveClusterSlaveZoneRequest req)
         {
             return InternalRequestAsync<RemoveClusterSlaveZoneResponse>(req, "RemoveClusterSlaveZone")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 续费集群
+        /// </summary>
+        /// <param name="req"><see cref="RenewClustersRequest"/></param>
+        /// <returns><see cref="RenewClustersResponse"/></returns>
+        public Task<RenewClustersResponse> RenewClusters(RenewClustersRequest req)
+        {
+            return InternalRequestAsync<RenewClustersResponse>(req, "RenewClusters");
+        }
+
+        /// <summary>
+        /// 续费集群
+        /// </summary>
+        /// <param name="req"><see cref="RenewClustersRequest"/></param>
+        /// <returns><see cref="RenewClustersResponse"/></returns>
+        public RenewClustersResponse RenewClustersSync(RenewClustersRequest req)
+        {
+            return InternalRequestAsync<RenewClustersResponse>(req, "RenewClusters")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

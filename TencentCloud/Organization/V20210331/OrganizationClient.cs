@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.1030";
+       private const string sdkVersion = "SDK_NET_3.0.1031";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Organization.V20210331
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 接受加入共享单元邀请。
+        /// </summary>
+        /// <param name="req"><see cref="AcceptJoinShareUnitInvitationRequest"/></param>
+        /// <returns><see cref="AcceptJoinShareUnitInvitationResponse"/></returns>
+        public Task<AcceptJoinShareUnitInvitationResponse> AcceptJoinShareUnitInvitation(AcceptJoinShareUnitInvitationRequest req)
+        {
+            return InternalRequestAsync<AcceptJoinShareUnitInvitationResponse>(req, "AcceptJoinShareUnitInvitation");
+        }
+
+        /// <summary>
+        /// 接受加入共享单元邀请。
+        /// </summary>
+        /// <param name="req"><see cref="AcceptJoinShareUnitInvitationRequest"/></param>
+        /// <returns><see cref="AcceptJoinShareUnitInvitationResponse"/></returns>
+        public AcceptJoinShareUnitInvitationResponse AcceptJoinShareUnitInvitationSync(AcceptJoinShareUnitInvitationRequest req)
+        {
+            return InternalRequestAsync<AcceptJoinShareUnitInvitationResponse>(req, "AcceptJoinShareUnitInvitation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1205,6 +1226,27 @@ namespace TencentCloud.Organization.V20210331
         public QuitOrganizationResponse QuitOrganizationSync(QuitOrganizationRequest req)
         {
             return InternalRequestAsync<QuitOrganizationResponse>(req, "QuitOrganization")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 拒绝加入共享单元邀请。
+        /// </summary>
+        /// <param name="req"><see cref="RejectJoinShareUnitInvitationRequest"/></param>
+        /// <returns><see cref="RejectJoinShareUnitInvitationResponse"/></returns>
+        public Task<RejectJoinShareUnitInvitationResponse> RejectJoinShareUnitInvitation(RejectJoinShareUnitInvitationRequest req)
+        {
+            return InternalRequestAsync<RejectJoinShareUnitInvitationResponse>(req, "RejectJoinShareUnitInvitation");
+        }
+
+        /// <summary>
+        /// 拒绝加入共享单元邀请。
+        /// </summary>
+        /// <param name="req"><see cref="RejectJoinShareUnitInvitationRequest"/></param>
+        /// <returns><see cref="RejectJoinShareUnitInvitationResponse"/></returns>
+        public RejectJoinShareUnitInvitationResponse RejectJoinShareUnitInvitationSync(RejectJoinShareUnitInvitationRequest req)
+        {
+            return InternalRequestAsync<RejectJoinShareUnitInvitationResponse>(req, "RejectJoinShareUnitInvitation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

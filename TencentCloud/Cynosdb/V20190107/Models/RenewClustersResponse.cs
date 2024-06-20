@@ -15,49 +15,55 @@
  * under the License.
  */
 
-namespace TencentCloud.Dts.V20180330.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SubscribeRegionConf : AbstractModel
+    public class RenewClustersResponse : AbstractModel
     {
         
         /// <summary>
-        /// 地域名称，如广州
+        /// 预付费总订单号
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RegionName")]
-        public string RegionName{ get; set; }
+        [JsonProperty("BigDealIds")]
+        public string[] BigDealIds{ get; set; }
 
         /// <summary>
-        /// 地区标识，如ap-guangzhou
+        /// 退款订单号
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Region")]
-        public string Region{ get; set; }
+        [JsonProperty("DealNames")]
+        public string[] DealNames{ get; set; }
 
         /// <summary>
-        /// 地域名称，如华南地区
+        /// 冻结流水，一次开通一个冻结流水
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Area")]
-        public string Area{ get; set; }
+        [JsonProperty("TranId")]
+        public string TranId{ get; set; }
 
         /// <summary>
-        /// 是否为默认地域，0 - 不是，1 - 是的
+        /// 每个订单号对应的发货资源id列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("IsDefaultRegion")]
-        public long? IsDefaultRegion{ get; set; }
+        [JsonProperty("ResourceIds")]
+        public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// 当前地域的售卖情况，1 - 正常， 2-灰度，3 - 停售
+        /// 集群id列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Status")]
-        public long? Status{ get; set; }
+        [JsonProperty("ClusterIds")]
+        public string[] ClusterIds{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -65,11 +71,12 @@ namespace TencentCloud.Dts.V20180330.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
-            this.SetParamSimple(map, prefix + "Region", this.Region);
-            this.SetParamSimple(map, prefix + "Area", this.Area);
-            this.SetParamSimple(map, prefix + "IsDefaultRegion", this.IsDefaultRegion);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArraySimple(map, prefix + "BigDealIds.", this.BigDealIds);
+            this.SetParamArraySimple(map, prefix + "DealNames.", this.DealNames);
+            this.SetParamSimple(map, prefix + "TranId", this.TranId);
+            this.SetParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
+            this.SetParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

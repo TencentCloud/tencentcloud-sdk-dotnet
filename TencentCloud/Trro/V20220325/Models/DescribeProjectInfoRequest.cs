@@ -25,7 +25,7 @@ namespace TencentCloud.Trro.V20220325.Models
     {
         
         /// <summary>
-        /// 目标项目ID
+        /// 目标项目ID，必填参数
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }

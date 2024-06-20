@@ -199,6 +199,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("HiddenStatus")]
         public string HiddenStatus{ get; set; }
 
+        /// <summary>
+        /// json格式的 meta 信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MetaJson")]
+        public string MetaJson{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -230,6 +237,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "LastHeartbeatTime", this.LastHeartbeatTime);
             this.SetParamSimple(map, prefix + "RegistrationId", this.RegistrationId);
             this.SetParamSimple(map, prefix + "HiddenStatus", this.HiddenStatus);
+            this.SetParamSimple(map, prefix + "MetaJson", this.MetaJson);
         }
     }
 }

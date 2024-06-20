@@ -30,6 +30,12 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("TargetUin")]
         public ulong? TargetUin{ get; set; }
 
+        /// <summary>
+        /// 密钥描述，长度在1到1024之间，可包含大小写字符，数字以及特殊字符：=,.@:/-。 正则为：[\w+=,.@:/-]*。
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TargetUin", this.TargetUin);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

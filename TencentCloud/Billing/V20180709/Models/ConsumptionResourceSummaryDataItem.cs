@@ -284,6 +284,13 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("ComponentConfig")]
         public string ComponentConfig{ get; set; }
 
+        /// <summary>
+        /// 标签信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public string Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -329,6 +336,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "PayTime", this.PayTime);
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
             this.SetParamSimple(map, prefix + "ComponentConfig", this.ComponentConfig);
+            this.SetParamSimple(map, prefix + "Tags", this.Tags);
         }
     }
 }

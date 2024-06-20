@@ -28,7 +28,7 @@ namespace TencentCloud.Cmq.V20190304
 
        private const string endpoint = "cmq.tencentcloudapi.com";
        private const string version = "2019-03-04";
-       private const string sdkVersion = "SDK_NET_3.0.1030";
+       private const string sdkVersion = "SDK_NET_3.0.1031";
 
         /// <summary>
         /// Client constructor.
@@ -243,7 +243,7 @@ namespace TencentCloud.Cmq.V20190304
         }
 
         /// <summary>
-        /// 枚举队列
+        /// 枚举队列列表
         /// </summary>
         /// <param name="req"><see cref="DescribeQueueDetailRequest"/></param>
         /// <returns><see cref="DescribeQueueDetailResponse"/></returns>
@@ -253,7 +253,7 @@ namespace TencentCloud.Cmq.V20190304
         }
 
         /// <summary>
-        /// 枚举队列
+        /// 枚举队列列表
         /// </summary>
         /// <param name="req"><see cref="DescribeQueueDetailRequest"/></param>
         /// <returns><see cref="DescribeQueueDetailResponse"/></returns>
@@ -285,7 +285,7 @@ namespace TencentCloud.Cmq.V20190304
         }
 
         /// <summary>
-        /// 查询主题详情 
+        /// 查询主题详情
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicDetailRequest"/></param>
         /// <returns><see cref="DescribeTopicDetailResponse"/></returns>
@@ -295,7 +295,7 @@ namespace TencentCloud.Cmq.V20190304
         }
 
         /// <summary>
-        /// 查询主题详情 
+        /// 查询主题详情
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicDetailRequest"/></param>
         /// <returns><see cref="DescribeTopicDetailResponse"/></returns>

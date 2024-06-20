@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1030";
+       private const string sdkVersion = "SDK_NET_3.0.1031";
 
         /// <summary>
         /// Client constructor.
@@ -766,6 +766,27 @@ namespace TencentCloud.Mongodb.V20190725
         public ModifyDBInstanceSpecResponse ModifyDBInstanceSpecSync(ModifyDBInstanceSpecRequest req)
         {
             return InternalRequestAsync<ModifyDBInstanceSpecResponse>(req, "ModifyDBInstanceSpec")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyInstanceParams）用于修改mongoDB实例的参数配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceParamsRequest"/></param>
+        /// <returns><see cref="ModifyInstanceParamsResponse"/></returns>
+        public Task<ModifyInstanceParamsResponse> ModifyInstanceParams(ModifyInstanceParamsRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceParamsResponse>(req, "ModifyInstanceParams");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyInstanceParams）用于修改mongoDB实例的参数配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceParamsRequest"/></param>
+        /// <returns><see cref="ModifyInstanceParamsResponse"/></returns>
+        public ModifyInstanceParamsResponse ModifyInstanceParamsSync(ModifyInstanceParamsRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceParamsResponse>(req, "ModifyInstanceParams")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

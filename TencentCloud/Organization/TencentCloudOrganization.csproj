@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FF7DA1A4-A5D5-3EF1-A5B1-B43A74B2F34E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1030</VersionPrefix>
+    <VersionPrefix>3.0.1031</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -92,6 +92,8 @@
     <Compile Include="V20181225\Models\UpdateOrganizationNodeRequest.cs" />
     <Compile Include="V20181225\Models\UpdateOrganizationNodeResponse.cs" />
     <Compile Include="V20210331\OrganizationClient.cs" />
+    <Compile Include="V20210331\Models\AcceptJoinShareUnitInvitationRequest.cs" />
+    <Compile Include="V20210331\Models\AcceptJoinShareUnitInvitationResponse.cs" />
     <Compile Include="V20210331\Models\AddOrganizationMemberEmailRequest.cs" />
     <Compile Include="V20210331\Models\AddOrganizationMemberEmailResponse.cs" />
     <Compile Include="V20210331\Models\AddOrganizationNodeRequest.cs" />
@@ -223,6 +225,8 @@
     <Compile Include="V20210331\Models\ProductResource.cs" />
     <Compile Include="V20210331\Models\QuitOrganizationRequest.cs" />
     <Compile Include="V20210331\Models\QuitOrganizationResponse.cs" />
+    <Compile Include="V20210331\Models\RejectJoinShareUnitInvitationRequest.cs" />
+    <Compile Include="V20210331\Models\RejectJoinShareUnitInvitationResponse.cs" />
     <Compile Include="V20210331\Models\ResourceTagMapping.cs" />
     <Compile Include="V20210331\Models\ShareArea.cs" />
     <Compile Include="V20210331\Models\ShareMember.cs" />

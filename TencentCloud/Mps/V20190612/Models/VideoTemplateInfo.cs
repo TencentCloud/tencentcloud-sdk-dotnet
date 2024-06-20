@@ -26,19 +26,26 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// 视频流的编码格式，可选值：
-        /// <li>copy：纯音频模版</li>
         /// <li>h264：H.264 编码</li>
         /// <li>h265：H.265 编码</li>
+        /// <li>h266：H.266 编码</li>
         /// <li>av1：AOMedia Video 1 编码</li>
+        /// <li>vp8：VP8 编码</li>
+        /// <li>vp9：VP9 编码</li>
+        /// <li>mpeg2：MPEG2 编码</li>
+        /// <li>dnxhd：DNxHD 编码</li>
         /// 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
-        /// 注意：av1 编码容器目前只支持 mp4 。
+        /// 
+        /// 注意：av1 编码容器目前只支持 mp4 ，webm，mkv，mov。
+        /// 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
+        /// 注意：VP8、VP9编码容器目前只支持webm，mkv。
+        /// 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }
 
         /// <summary>
-        /// 视频帧率，取值范围：[0, 120]，单位：Hz。 
-        /// 当取值为 0，表示帧率和原始视频保持一致。 
+        /// 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
         /// 注意：自适应码率时取值范围是 [0, 60]
         /// </summary>
         [JsonProperty("Fps")]
@@ -110,6 +117,18 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Vcrf")]
         public ulong? Vcrf{ get; set; }
 
+        /// <summary>
+        /// hls 分片类型，可选值 ：
+        /// <li>6：HLS+TS 切片</li>
+        /// <li>2：HLS+TS byte range</li>
+        /// <li>7：HLS+MP4 切片</li>
+        /// <li>5：HLS+MP4 byte range</li>
+        /// 默认值：6
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SegmentType")]
+        public long? SegmentType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -125,6 +144,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Gop", this.Gop);
             this.SetParamSimple(map, prefix + "FillType", this.FillType);
             this.SetParamSimple(map, prefix + "Vcrf", this.Vcrf);
+            this.SetParamSimple(map, prefix + "SegmentType", this.SegmentType);
         }
     }
 }
