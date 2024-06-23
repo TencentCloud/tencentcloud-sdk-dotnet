@@ -31,10 +31,16 @@ namespace TencentCloud.Lke.V20231130.Models
         public string DocBizId{ get; set; }
 
         /// <summary>
-        /// 机器人ID
+        /// 应用ID
         /// </summary>
         [JsonProperty("BotBizId")]
         public string BotBizId{ get; set; }
+
+        /// <summary>
+        /// 存储类型: offline:离线文件，realtime:实时文件；为空默认为offline
+        /// </summary>
+        [JsonProperty("TypeKey")]
+        public string TypeKey{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Lke.V20231130.Models
         {
             this.SetParamSimple(map, prefix + "DocBizId", this.DocBizId);
             this.SetParamSimple(map, prefix + "BotBizId", this.BotBizId);
+            this.SetParamSimple(map, prefix + "TypeKey", this.TypeKey);
         }
     }
 }

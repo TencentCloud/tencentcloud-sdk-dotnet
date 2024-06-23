@@ -28,7 +28,7 @@ namespace TencentCloud.Ses.V20201002
 
        private const string endpoint = "ses.tencentcloudapi.com";
        private const string version = "2020-10-02";
-       private const string sdkVersion = "SDK_NET_3.0.1031";
+       private const string sdkVersion = "SDK_NET_3.0.1032";
 
         /// <summary>
         /// Client constructor.
@@ -351,7 +351,6 @@ namespace TencentCloud.Ses.V20201002
 
         /// <summary>
         /// 获取邮件发送状态。仅支持查询30天之内的数据
-        /// 默认接口请求频率限制：1次/秒
         /// </summary>
         /// <param name="req"><see cref="GetSendEmailStatusRequest"/></param>
         /// <returns><see cref="GetSendEmailStatusResponse"/></returns>
@@ -362,7 +361,6 @@ namespace TencentCloud.Ses.V20201002
 
         /// <summary>
         /// 获取邮件发送状态。仅支持查询30天之内的数据
-        /// 默认接口请求频率限制：1次/秒
         /// </summary>
         /// <param name="req"><see cref="GetSendEmailStatusRequest"/></param>
         /// <returns><see cref="GetSendEmailStatusResponse"/></returns>

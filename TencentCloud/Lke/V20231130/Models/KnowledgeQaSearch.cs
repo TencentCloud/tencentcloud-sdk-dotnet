@@ -73,6 +73,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("DocTopN")]
         public ulong? DocTopN{ get; set; }
 
+        /// <summary>
+        /// 检索置信度，针对文档和问答有效，最小0.01，最大0.99
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Confidence")]
+        public float? Confidence{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "IsEnabled", this.IsEnabled);
             this.SetParamSimple(map, prefix + "QaTopN", this.QaTopN);
             this.SetParamSimple(map, prefix + "DocTopN", this.DocTopN);
+            this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
         }
     }
 }

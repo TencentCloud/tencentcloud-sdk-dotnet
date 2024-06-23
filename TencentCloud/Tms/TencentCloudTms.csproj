@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3DD25540-9793-3483-8CA4-E75E6F60CF29}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1031</VersionPrefix>
+    <VersionPrefix>3.0.1032</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,25 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="V20200713\TmsClient.cs" />
+    <Compile Include="V20200713\Models\AccountTipoffAccessRequest.cs" />
+    <Compile Include="V20200713\Models\AccountTipoffAccessResponse.cs" />
+    <Compile Include="V20200713\Models\DescribeTextLibRequest.cs" />
+    <Compile Include="V20200713\Models\DescribeTextLibResponse.cs" />
+    <Compile Include="V20200713\Models\DescribeTextStatRequest.cs" />
+    <Compile Include="V20200713\Models\DescribeTextStatResponse.cs" />
+    <Compile Include="V20200713\Models\DetailResults.cs" />
+    <Compile Include="V20200713\Models\Device.cs" />
+    <Compile Include="V20200713\Models\EvilCount.cs" />
+    <Compile Include="V20200713\Models\Filters.cs" />
+    <Compile Include="V20200713\Models\Overview.cs" />
+    <Compile Include="V20200713\Models\RiskDetails.cs" />
+    <Compile Include="V20200713\Models\TextLib.cs" />
+    <Compile Include="V20200713\Models\TextModerationRequest.cs" />
+    <Compile Include="V20200713\Models\TextModerationResponse.cs" />
+    <Compile Include="V20200713\Models\TipoffResponse.cs" />
+    <Compile Include="V20200713\Models\TrendCount.cs" />
+    <Compile Include="V20200713\Models\User.cs" />
     <Compile Include="V20201229\TmsClient.cs" />
     <Compile Include="V20201229\Models\AnswerQuestionRequest.cs" />
     <Compile Include="V20201229\Models\AnswerQuestionResponse.cs" />
@@ -67,24 +86,5 @@
     <Compile Include="V20201229\Models\TextModerationRequest.cs" />
     <Compile Include="V20201229\Models\TextModerationResponse.cs" />
     <Compile Include="V20201229\Models\User.cs" />
-    <Compile Include="V20200713\TmsClient.cs" />
-    <Compile Include="V20200713\Models\AccountTipoffAccessRequest.cs" />
-    <Compile Include="V20200713\Models\AccountTipoffAccessResponse.cs" />
-    <Compile Include="V20200713\Models\DescribeTextLibRequest.cs" />
-    <Compile Include="V20200713\Models\DescribeTextLibResponse.cs" />
-    <Compile Include="V20200713\Models\DescribeTextStatRequest.cs" />
-    <Compile Include="V20200713\Models\DescribeTextStatResponse.cs" />
-    <Compile Include="V20200713\Models\DetailResults.cs" />
-    <Compile Include="V20200713\Models\Device.cs" />
-    <Compile Include="V20200713\Models\EvilCount.cs" />
-    <Compile Include="V20200713\Models\Filters.cs" />
-    <Compile Include="V20200713\Models\Overview.cs" />
-    <Compile Include="V20200713\Models\RiskDetails.cs" />
-    <Compile Include="V20200713\Models\TextLib.cs" />
-    <Compile Include="V20200713\Models\TextModerationRequest.cs" />
-    <Compile Include="V20200713\Models\TextModerationResponse.cs" />
-    <Compile Include="V20200713\Models\TipoffResponse.cs" />
-    <Compile Include="V20200713\Models\TrendCount.cs" />
-    <Compile Include="V20200713\Models\User.cs" />
   </ItemGroup>
 </Project>

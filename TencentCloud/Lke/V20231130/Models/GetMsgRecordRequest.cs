@@ -49,7 +49,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string LastRecordId{ get; set; }
 
         /// <summary>
-        /// 机器人AppKey
+        /// 应用AppKey
         /// </summary>
         [JsonProperty("BotAppKey")]
         public string BotAppKey{ get; set; }

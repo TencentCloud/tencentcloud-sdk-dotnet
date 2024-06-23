@@ -73,18 +73,21 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// 【本字段已废弃】视频编码参数。可选，如果不填，保持原始流的参数。
         /// </summary>
         [JsonProperty("VideoEncodeParams")]
+        [System.Obsolete]
         public VideoEncodeParams VideoEncodeParams{ get; set; }
 
         /// <summary>
         /// 【本字段已废弃】音频编码参数。可选，如果不填，保持原始流的参数。
         /// </summary>
         [JsonProperty("AudioEncodeParams")]
+        [System.Obsolete]
         public AudioEncodeParams AudioEncodeParams{ get; set; }
 
         /// <summary>
         /// 【本字段已废弃，请使用 StreamUrl 字段】源流URL，支持一个地址。
         /// </summary>
         [JsonProperty("SourceUrl")]
+        [System.Obsolete]
         public string[] SourceUrl{ get; set; }
 
         /// <summary>

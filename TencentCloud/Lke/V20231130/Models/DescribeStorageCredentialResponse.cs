@@ -79,7 +79,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string ImagePath{ get; set; }
 
         /// <summary>
-        /// 上传存储目录
+        /// 上传存储路径，到具体文件
         /// </summary>
         [JsonProperty("UploadPath")]
         public string UploadPath{ get; set; }

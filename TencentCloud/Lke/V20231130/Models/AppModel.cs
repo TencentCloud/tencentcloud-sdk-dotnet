@@ -52,6 +52,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("AliasName")]
         public string AliasName{ get; set; }
 
+        /// <summary>
+        /// token余量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TokenBalance")]
+        public float? TokenBalance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
             this.SetParamSimple(map, prefix + "ContextLimit", this.ContextLimit);
             this.SetParamSimple(map, prefix + "AliasName", this.AliasName);
+            this.SetParamSimple(map, prefix + "TokenBalance", this.TokenBalance);
         }
     }
 }

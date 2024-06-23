@@ -28,7 +28,7 @@ namespace TencentCloud.Cis.V20180408
 
        private const string endpoint = "cis.tencentcloudapi.com";
        private const string version = "2018-04-08";
-       private const string sdkVersion = "SDK_NET_3.0.1031";
+       private const string sdkVersion = "SDK_NET_3.0.1032";
 
         /// <summary>
         /// Client constructor.

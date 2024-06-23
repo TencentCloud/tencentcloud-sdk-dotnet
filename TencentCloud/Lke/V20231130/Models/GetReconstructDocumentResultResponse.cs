@@ -37,7 +37,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string DocumentRecognizeResultUrl{ get; set; }
 
         /// <summary>
-        /// 还原失败的页
+        /// 文档解析失败的页码
         /// </summary>
         [JsonProperty("FailedPages")]
         public ReconstructDocumentFailedPage[] FailedPages{ get; set; }

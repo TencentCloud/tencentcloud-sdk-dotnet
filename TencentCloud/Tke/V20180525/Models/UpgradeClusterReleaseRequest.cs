@@ -55,7 +55,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public ReleaseValues Values{ get; set; }
 
         /// <summary>
-        /// 制品来源，范围：tke-market 或 other
+        /// 制品来源，范围：tke-market 或 other默认值：tke-market。
         /// </summary>
         [JsonProperty("ChartFrom")]
         public string ChartFrom{ get; set; }

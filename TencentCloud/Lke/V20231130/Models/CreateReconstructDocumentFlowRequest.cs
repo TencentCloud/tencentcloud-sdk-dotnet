@@ -25,31 +25,31 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 图片的 Base64 值。 支持的图片格式：PNG、JPG、JPEG、PDF，暂不支持 GIF 格式。 支持的图片大小：所下载图片经Base64编码后不超过 8M。图片下载时间不超过 3 秒。 支持的图片像素：单边介于20-10000px之间。 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+        /// 文件的 Base64 值。 支持的文件格式：PNG、JPG、JPEG、PDF。 支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。 支持的图片像素：单边介于20-10000px之间。 文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
         /// </summary>
         [JsonProperty("FileBase64")]
         public string FileBase64{ get; set; }
 
         /// <summary>
-        /// 图片的 Url 地址。 支持的图片格式：PNG、JPG、JPEG、PDF，暂不支持 GIF 格式。 支持的图片大小：所下载图片经 Base64 编码后不超过 8M。图片下载时间不超过 3 秒。 支持的图片像素：单边介于20-10000px之间。 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+        /// 文件的 Url 地址。 支持的文件格式：PNG、JPG、JPEG、PDF。 支持的文件大小：所下载文件经 Base64 编码后不超过 100M。文件下载时间不超过 15 秒。 支持的图片像素：单边介于20-10000px之间。 文件存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
         /// </summary>
         [JsonProperty("FileUrl")]
         public string FileUrl{ get; set; }
 
         /// <summary>
-        /// 当传入文件是PDF类型（IsPdf=true）时，用来指定pdf识别的起始页码，识别的页码包含当前值。
+        /// 当传入文件是PDF类型时，用来指定pdf识别的起始页码，识别的页码包含当前值。
         /// </summary>
         [JsonProperty("FileStartPageNumber")]
         public long? FileStartPageNumber{ get; set; }
 
         /// <summary>
-        /// 当传入文件是PDF类型（IsPdf=true）时，用来指定pdf识别的结束页码，识别的页码包含当前值。
+        /// 当传入文件是PDF类型时，用来指定pdf识别的结束页码，识别的页码包含当前值。
         /// </summary>
         [JsonProperty("FileEndPageNumber")]
         public long? FileEndPageNumber{ get; set; }
 
         /// <summary>
-        /// 创建智能文档识别任务配置信息
+        /// 创建文档解析任务配置信息
         /// </summary>
         [JsonProperty("Config")]
         public CreateReconstructDocumentFlowConfig Config{ get; set; }

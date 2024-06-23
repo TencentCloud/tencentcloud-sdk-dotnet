@@ -25,7 +25,7 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 机器人appkey
+        /// 应用appkey
         /// </summary>
         [JsonProperty("AppKey")]
         public string AppKey{ get; set; }

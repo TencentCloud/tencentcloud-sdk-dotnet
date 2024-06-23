@@ -31,6 +31,19 @@ namespace TencentCloud.Lke.V20231130.Models
         public string Token{ get; set; }
 
         /// <summary>
+        /// 余额; 余额大于 0 时表示有效.
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Balance")]
+        public float? Balance{ get; set; }
+
+        /// <summary>
+        /// 对话窗输入字符限制
+        /// </summary>
+        [JsonProperty("InputLenLimit")]
+        public long? InputLenLimit{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +56,8 @@ namespace TencentCloud.Lke.V20231130.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Token", this.Token);
+            this.SetParamSimple(map, prefix + "Balance", this.Balance);
+            this.SetParamSimple(map, prefix + "InputLenLimit", this.InputLenLimit);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

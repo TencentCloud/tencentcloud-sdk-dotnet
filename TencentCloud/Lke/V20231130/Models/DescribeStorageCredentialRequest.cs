@@ -25,22 +25,28 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 机器人ID
+        /// 应用ID
         /// </summary>
         [JsonProperty("BotBizId")]
         public string BotBizId{ get; set; }
 
         /// <summary>
-        /// 文件类型
+        /// 文件类型,正常的文件名类型后缀，例如 xlsx、pdf、 docx、png 等
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }
 
         /// <summary>
-        /// 权限场景，是否公有权限
+        /// IsPublic为空用于上传文件时选择场景，当上传为图片文件是IsPublic为true，上传文档文件时场景IsPublic为false
         /// </summary>
         [JsonProperty("IsPublic")]
         public bool? IsPublic{ get; set; }
+
+        /// <summary>
+        /// 存储类型: offline:离线文件，realtime:实时文件；为空默认为offline
+        /// </summary>
+        [JsonProperty("TypeKey")]
+        public string TypeKey{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "BotBizId", this.BotBizId);
             this.SetParamSimple(map, prefix + "FileType", this.FileType);
             this.SetParamSimple(map, prefix + "IsPublic", this.IsPublic);
+            this.SetParamSimple(map, prefix + "TypeKey", this.TypeKey);
         }
     }
 }

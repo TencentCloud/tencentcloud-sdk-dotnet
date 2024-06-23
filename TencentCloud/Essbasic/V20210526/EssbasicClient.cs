@@ -28,7 +28,7 @@ namespace TencentCloud.Essbasic.V20210526
 
        private const string endpoint = "essbasic.tencentcloudapi.com";
        private const string version = "2021-05-26";
-       private const string sdkVersion = "SDK_NET_3.0.1031";
+       private const string sdkVersion = "SDK_NET_3.0.1032";
 
         /// <summary>
         /// Client constructor.
@@ -2296,6 +2296,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// 
         /// <font color="red">相关视频指引</font> <br>
         /// 1. <a href="https://dyn.ess.tencent.cn/guide/apivideo/essbasic-CreateTemplates.mp4" target="_blank">创建模板&设置成本企业自动签署</a><br>
+        /// 2. <a href="https://dyn.ess.tencent.cn/guide/apivideo/essbasic-CreateFlowsByTemplates.mp4" target="_blank">【用模板创建签署流程】编写示例视频教程</a><br>
         /// </summary>
         /// <param name="req"><see cref="CreateFlowsByTemplatesRequest"/></param>
         /// <returns><see cref="CreateFlowsByTemplatesResponse"/></returns>
@@ -2368,6 +2369,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// 
         /// <font color="red">相关视频指引</font> <br>
         /// 1. <a href="https://dyn.ess.tencent.cn/guide/apivideo/essbasic-CreateTemplates.mp4" target="_blank">创建模板&设置成本企业自动签署</a><br>
+        /// 2. <a href="https://dyn.ess.tencent.cn/guide/apivideo/essbasic-CreateFlowsByTemplates.mp4" target="_blank">【用模板创建签署流程】编写示例视频教程</a><br>
         /// </summary>
         /// <param name="req"><see cref="CreateFlowsByTemplatesRequest"/></param>
         /// <returns><see cref="CreateFlowsByTemplatesResponse"/></returns>

@@ -179,6 +179,20 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("InstanceStatus")]
         public long? InstanceStatus{ get; set; }
 
+        /// <summary>
+        /// 集群所属可用区，表明集群归属的可用区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public long? ZoneId{ get; set; }
+
+        /// <summary>
+        /// 集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZoneIds")]
+        public long?[] ZoneIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -208,6 +222,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SupportMigration", this.SupportMigration);
             this.SetParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
         }
     }
 }

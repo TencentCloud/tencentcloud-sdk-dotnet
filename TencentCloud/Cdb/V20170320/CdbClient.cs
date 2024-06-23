@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1031";
+       private const string sdkVersion = "SDK_NET_3.0.1032";
 
         /// <summary>
         /// Client constructor.
@@ -1858,6 +1858,27 @@ namespace TencentCloud.Cdb.V20170320
         public DescribeInstanceParamsResponse DescribeInstanceParamsSync(DescribeInstanceParamsRequest req)
         {
             return InternalRequestAsync<DescribeInstanceParamsResponse>(req, "DescribeInstanceParams")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeInstanceUpgradeType)用于查询数据库实例升级类型。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceUpgradeTypeRequest"/></param>
+        /// <returns><see cref="DescribeInstanceUpgradeTypeResponse"/></returns>
+        public Task<DescribeInstanceUpgradeTypeResponse> DescribeInstanceUpgradeType(DescribeInstanceUpgradeTypeRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceUpgradeTypeResponse>(req, "DescribeInstanceUpgradeType");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeInstanceUpgradeType)用于查询数据库实例升级类型。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceUpgradeTypeRequest"/></param>
+        /// <returns><see cref="DescribeInstanceUpgradeTypeResponse"/></returns>
+        public DescribeInstanceUpgradeTypeResponse DescribeInstanceUpgradeTypeSync(DescribeInstanceUpgradeTypeRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceUpgradeTypeResponse>(req, "DescribeInstanceUpgradeType")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

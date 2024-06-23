@@ -25,7 +25,7 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 高亮启始位置
+        /// 高亮起始位置
         /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>

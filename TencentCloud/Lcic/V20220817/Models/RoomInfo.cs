@@ -158,7 +158,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public long? EndDelayTime{ get; set; }
 
         /// <summary>
-        /// 直播类型：0 常规（默认）1 伪直播
+        /// 直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播
         /// </summary>
         [JsonProperty("LiveType")]
         public ulong? LiveType{ get; set; }
@@ -170,7 +170,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string RecordLiveUrl{ get; set; }
 
         /// <summary>
-        /// 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
+        /// 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1或2的时候有效
         /// </summary>
         [JsonProperty("EnableAutoStart")]
         public ulong? EnableAutoStart{ get; set; }

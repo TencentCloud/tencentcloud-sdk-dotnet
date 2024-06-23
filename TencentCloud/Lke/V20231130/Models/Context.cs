@@ -59,6 +59,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
+        /// <summary>
+        /// 文档信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FileInfos")]
+        public MsgFileInfo[] FileInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "NickName", this.NickName);
             this.SetParamSimple(map, prefix + "Avatar", this.Avatar);
             this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
         }
     }
 }

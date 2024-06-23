@@ -93,6 +93,18 @@ namespace TencentCloud.Ses.V20201002.Models
         [JsonProperty("TriggerType")]
         public ulong? TriggerType{ get; set; }
 
+        /// <summary>
+        /// smtp头中的Message-Id字段
+        /// </summary>
+        [JsonProperty("SmtpMessageId")]
+        public string SmtpMessageId{ get; set; }
+
+        /// <summary>
+        /// smtp头中可以设置的其它字段
+        /// </summary>
+        [JsonProperty("SmtpHeaders")]
+        public string SmtpHeaders{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +122,8 @@ namespace TencentCloud.Ses.V20201002.Models
             this.SetParamArrayObj(map, prefix + "Attachments.", this.Attachments);
             this.SetParamSimple(map, prefix + "Unsubscribe", this.Unsubscribe);
             this.SetParamSimple(map, prefix + "TriggerType", this.TriggerType);
+            this.SetParamSimple(map, prefix + "SmtpMessageId", this.SmtpMessageId);
+            this.SetParamSimple(map, prefix + "SmtpHeaders", this.SmtpHeaders);
         }
     }
 }
