@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1032";
+       private const string sdkVersion = "SDK_NET_3.0.1033";
 
         /// <summary>
         /// Client constructor.
@@ -793,6 +793,27 @@ namespace TencentCloud.Trocket.V20230308
         public DescribeMQTTUserListResponse DescribeMQTTUserListSync(DescribeMQTTUserListRequest req)
         {
             return InternalRequestAsync<DescribeMQTTUserListResponse>(req, "DescribeMQTTUserList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询产品售卖规格，针对 RocketMQ 5.x 集群。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProductSKUsRequest"/></param>
+        /// <returns><see cref="DescribeProductSKUsResponse"/></returns>
+        public Task<DescribeProductSKUsResponse> DescribeProductSKUs(DescribeProductSKUsRequest req)
+        {
+            return InternalRequestAsync<DescribeProductSKUsResponse>(req, "DescribeProductSKUs");
+        }
+
+        /// <summary>
+        /// 查询产品售卖规格，针对 RocketMQ 5.x 集群。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProductSKUsRequest"/></param>
+        /// <returns><see cref="DescribeProductSKUsResponse"/></returns>
+        public DescribeProductSKUsResponse DescribeProductSKUsSync(DescribeProductSKUsRequest req)
+        {
+            return InternalRequestAsync<DescribeProductSKUsResponse>(req, "DescribeProductSKUs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -1,0 +1,71 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Waf.V20180125.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class AddAreaBanAreasRequest : AbstractModel
+    {
+        
+        /// <summary>
+        /// 需要修改的域名
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
+        /// <summary>
+        /// 需要新增的封禁地域
+        /// </summary>
+        [JsonProperty("Areas")]
+        public string[] Areas{ get; set; }
+
+        /// <summary>
+        /// waf版本信息，spart-waf或者clb-waf，其他无效，请一定填写
+        /// </summary>
+        [JsonProperty("Edition")]
+        public string Edition{ get; set; }
+
+        /// <summary>
+        /// 定时任务类型
+        /// </summary>
+        [JsonProperty("JobType")]
+        public string JobType{ get; set; }
+
+        /// <summary>
+        /// 定时任务配置
+        /// </summary>
+        [JsonProperty("JobDateTime")]
+        public JobDateTime JobDateTime{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamArraySimple(map, prefix + "Areas.", this.Areas);
+            this.SetParamSimple(map, prefix + "Edition", this.Edition);
+            this.SetParamSimple(map, prefix + "JobType", this.JobType);
+            this.SetParamObj(map, prefix + "JobDateTime.", this.JobDateTime);
+        }
+    }
+}
+

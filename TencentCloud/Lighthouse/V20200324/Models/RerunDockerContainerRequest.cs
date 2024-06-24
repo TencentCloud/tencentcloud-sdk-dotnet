@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 实例ID。
+        /// 实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public DockerContainerConfiguration ContainerConfiguration{ get; set; }
 
         /// <summary>
-        /// 容器ID。
+        /// 容器ID。可通过[DescribeDockerContainers](https://cloud.tencent.com/document/product/1207/95473)接口返回值中的ContainerId获取。
         /// </summary>
         [JsonProperty("ContainerId")]
         public string ContainerId{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1032";
+       private const string sdkVersion = "SDK_NET_3.0.1033";
 
         /// <summary>
         /// Client constructor.
@@ -2467,7 +2467,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
+        /// 服务已迁移至 [文档解析](https://cloud.tencent.com/document/product/1759/107504)，请跳转查看接口文档。该接口支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
         /// </summary>
         /// <param name="req"><see cref="ReconstructDocumentRequest"/></param>
         /// <returns><see cref="ReconstructDocumentResponse"/></returns>
@@ -2477,7 +2477,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
+        /// 服务已迁移至 [文档解析](https://cloud.tencent.com/document/product/1759/107504)，请跳转查看接口文档。该接口支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
         /// </summary>
         /// <param name="req"><see cref="ReconstructDocumentRequest"/></param>
         /// <returns><see cref="ReconstructDocumentResponse"/></returns>

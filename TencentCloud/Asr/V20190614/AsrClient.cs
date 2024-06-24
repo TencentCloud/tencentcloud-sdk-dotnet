@@ -28,7 +28,7 @@ namespace TencentCloud.Asr.V20190614
 
        private const string endpoint = "asr.tencentcloudapi.com";
        private const string version = "2019-06-14";
-       private const string sdkVersion = "SDK_NET_3.0.1032";
+       private const string sdkVersion = "SDK_NET_3.0.1033";
 
         /// <summary>
         /// Client constructor.
@@ -624,6 +624,27 @@ namespace TencentCloud.Asr.V20190614
         public VoicePrintEnrollResponse VoicePrintEnrollSync(VoicePrintEnrollRequest req)
         {
             return InternalRequestAsync<VoicePrintEnrollResponse>(req, "VoicePrintEnroll")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 说话人验证1:N接口，可以通过传入一段说话人音频，并且指定已存在的groupId, 和返回topN,  接口返回groupId内所有声纹和传入音频声纹比对打分TopN的结果。
+        /// </summary>
+        /// <param name="req"><see cref="VoicePrintGroupVerifyRequest"/></param>
+        /// <returns><see cref="VoicePrintGroupVerifyResponse"/></returns>
+        public Task<VoicePrintGroupVerifyResponse> VoicePrintGroupVerify(VoicePrintGroupVerifyRequest req)
+        {
+            return InternalRequestAsync<VoicePrintGroupVerifyResponse>(req, "VoicePrintGroupVerify");
+        }
+
+        /// <summary>
+        /// 说话人验证1:N接口，可以通过传入一段说话人音频，并且指定已存在的groupId, 和返回topN,  接口返回groupId内所有声纹和传入音频声纹比对打分TopN的结果。
+        /// </summary>
+        /// <param name="req"><see cref="VoicePrintGroupVerifyRequest"/></param>
+        /// <returns><see cref="VoicePrintGroupVerifyResponse"/></returns>
+        public VoicePrintGroupVerifyResponse VoicePrintGroupVerifySync(VoicePrintGroupVerifyRequest req)
+        {
+            return InternalRequestAsync<VoicePrintGroupVerifyResponse>(req, "VoicePrintGroupVerify")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

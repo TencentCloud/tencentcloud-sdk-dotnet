@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1032";
+       private const string sdkVersion = "SDK_NET_3.0.1033";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Lke.V20231130
         public CheckAttributeLabelReferResponse CheckAttributeLabelReferSync(CheckAttributeLabelReferRequest req)
         {
             return InternalRequestAsync<CheckAttributeLabelReferResponse>(req, "CheckAttributeLabelRefer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 接口支持图片和PDF转可编辑word格式文件，将文件中的图片、文本、表格等元素识别，并根据位置进行还原。
+        /// </summary>
+        /// <param name="req"><see cref="ConvertDocumentRequest"/></param>
+        /// <returns><see cref="ConvertDocumentResponse"/></returns>
+        public Task<ConvertDocumentResponse> ConvertDocument(ConvertDocumentRequest req)
+        {
+            return InternalRequestAsync<ConvertDocumentResponse>(req, "ConvertDocument");
+        }
+
+        /// <summary>
+        /// 接口支持图片和PDF转可编辑word格式文件，将文件中的图片、文本、表格等元素识别，并根据位置进行还原。
+        /// </summary>
+        /// <param name="req"><see cref="ConvertDocumentRequest"/></param>
+        /// <returns><see cref="ConvertDocumentResponse"/></returns>
+        public ConvertDocumentResponse ConvertDocumentSync(ConvertDocumentRequest req)
+        {
+            return InternalRequestAsync<ConvertDocumentResponse>(req, "ConvertDocument")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -711,6 +732,27 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// 回答类型数据统计
+        /// </summary>
+        /// <param name="req"><see cref="GetAnswerTypeDataCountRequest"/></param>
+        /// <returns><see cref="GetAnswerTypeDataCountResponse"/></returns>
+        public Task<GetAnswerTypeDataCountResponse> GetAnswerTypeDataCount(GetAnswerTypeDataCountRequest req)
+        {
+            return InternalRequestAsync<GetAnswerTypeDataCountResponse>(req, "GetAnswerTypeDataCount");
+        }
+
+        /// <summary>
+        /// 回答类型数据统计
+        /// </summary>
+        /// <param name="req"><see cref="GetAnswerTypeDataCountRequest"/></param>
+        /// <returns><see cref="GetAnswerTypeDataCountResponse"/></returns>
+        public GetAnswerTypeDataCountResponse GetAnswerTypeDataCountSync(GetAnswerTypeDataCountRequest req)
+        {
+            return InternalRequestAsync<GetAnswerTypeDataCountResponse>(req, "GetAnswerTypeDataCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取模型列表
         /// </summary>
         /// <param name="req"><see cref="GetAppKnowledgeCountRequest"/></param>
@@ -793,6 +835,27 @@ namespace TencentCloud.Lke.V20231130
         public GetEmbeddingResponse GetEmbeddingSync(GetEmbeddingRequest req)
         {
             return InternalRequestAsync<GetEmbeddingResponse>(req, "GetEmbedding")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 点赞点踩数据统计
+        /// </summary>
+        /// <param name="req"><see cref="GetLikeDataCountRequest"/></param>
+        /// <returns><see cref="GetLikeDataCountResponse"/></returns>
+        public Task<GetLikeDataCountResponse> GetLikeDataCount(GetLikeDataCountRequest req)
+        {
+            return InternalRequestAsync<GetLikeDataCountResponse>(req, "GetLikeDataCount");
+        }
+
+        /// <summary>
+        /// 点赞点踩数据统计
+        /// </summary>
+        /// <param name="req"><see cref="GetLikeDataCountRequest"/></param>
+        /// <returns><see cref="GetLikeDataCountResponse"/></returns>
+        public GetLikeDataCountResponse GetLikeDataCountSync(GetLikeDataCountRequest req)
+        {
+            return InternalRequestAsync<GetLikeDataCountResponse>(req, "GetLikeDataCount")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

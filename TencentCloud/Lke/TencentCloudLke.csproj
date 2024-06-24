@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{350F9F65-0799-338B-90EA-9EBA008679C1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1032</VersionPrefix>
+    <VersionPrefix>3.0.1033</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -64,6 +64,8 @@
     <Compile Include="V20231130\Models\ClassifyConfig.cs" />
     <Compile Include="V20231130\Models\ClassifyLabel.cs" />
     <Compile Include="V20231130\Models\Context.cs" />
+    <Compile Include="V20231130\Models\ConvertDocumentRequest.cs" />
+    <Compile Include="V20231130\Models\ConvertDocumentResponse.cs" />
     <Compile Include="V20231130\Models\Coord.cs" />
     <Compile Include="V20231130\Models\CreateAppRequest.cs" />
     <Compile Include="V20231130\Models\CreateAppResponse.cs" />
@@ -130,6 +132,8 @@
     <Compile Include="V20231130\Models\Filters.cs" />
     <Compile Include="V20231130\Models\GenerateQARequest.cs" />
     <Compile Include="V20231130\Models\GenerateQAResponse.cs" />
+    <Compile Include="V20231130\Models\GetAnswerTypeDataCountRequest.cs" />
+    <Compile Include="V20231130\Models\GetAnswerTypeDataCountResponse.cs" />
     <Compile Include="V20231130\Models\GetAppKnowledgeCountRequest.cs" />
     <Compile Include="V20231130\Models\GetAppKnowledgeCountResponse.cs" />
     <Compile Include="V20231130\Models\GetAppSecretRequest.cs" />
@@ -138,6 +142,8 @@
     <Compile Include="V20231130\Models\GetDocPreviewResponse.cs" />
     <Compile Include="V20231130\Models\GetEmbeddingRequest.cs" />
     <Compile Include="V20231130\Models\GetEmbeddingResponse.cs" />
+    <Compile Include="V20231130\Models\GetLikeDataCountRequest.cs" />
+    <Compile Include="V20231130\Models\GetLikeDataCountResponse.cs" />
     <Compile Include="V20231130\Models\GetMsgRecordRequest.cs" />
     <Compile Include="V20231130\Models\GetMsgRecordResponse.cs" />
     <Compile Include="V20231130\Models\GetReconstructDocumentResultRequest.cs" />
@@ -260,5 +266,6 @@
     <Compile Include="V20231130\Models\Usage.cs" />
     <Compile Include="V20231130\Models\VerifyQARequest.cs" />
     <Compile Include="V20231130\Models\VerifyQAResponse.cs" />
+    <Compile Include="V20231130\Models\WordRecognizeInfo.cs" />
   </ItemGroup>
 </Project>

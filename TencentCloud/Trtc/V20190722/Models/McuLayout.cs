@@ -111,6 +111,19 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("BackgroundCustomRender")]
         public McuBackgroundCustomRender BackgroundCustomRender{ get; set; }
 
+        /// <summary>
+        /// 子背景色生效模式，默认值为0表示均不生效。
+        /// bit0:占位图缩放是否生效。
+        /// bit1:上行流缩放是否生效。
+        /// 您可以将相应bit位置1启动生效，例如：
+        /// 0(00)表示子背景色不生效。
+        /// 1(01)表示子背景色只在占位图缩放时生效。
+        /// 2(10)表示子背景色只在上行流缩放时生效。
+        /// 3(11)表示子背景色在占位图缩放和上行流缩放时均生效。
+        /// </summary>
+        [JsonProperty("BackGroundColorMode")]
+        public ulong? BackGroundColorMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -130,6 +143,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "BackgroundRenderMode", this.BackgroundRenderMode);
             this.SetParamSimple(map, prefix + "TransparentUrl", this.TransparentUrl);
             this.SetParamObj(map, prefix + "BackgroundCustomRender.", this.BackgroundCustomRender);
+            this.SetParamSimple(map, prefix + "BackGroundColorMode", this.BackGroundColorMode);
         }
     }
 }

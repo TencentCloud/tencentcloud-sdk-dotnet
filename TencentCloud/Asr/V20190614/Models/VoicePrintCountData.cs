@@ -31,6 +31,13 @@ namespace TencentCloud.Asr.V20190614.Models
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
 
+        /// <summary>
+        /// 说话人id列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VoicePrintList")]
+        public VoicePrintBaseData[] VoicePrintList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +45,7 @@ namespace TencentCloud.Asr.V20190614.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamArrayObj(map, prefix + "VoicePrintList.", this.VoicePrintList);
         }
     }
 }

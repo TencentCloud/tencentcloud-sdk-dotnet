@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{621A4001-F8F8-394B-BCE2-5A65FE5DDEA5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1032</VersionPrefix>
+    <VersionPrefix>3.0.1033</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -116,6 +116,8 @@
     <Compile Include="V20230308\Models\DescribeMQTTTopicResponse.cs" />
     <Compile Include="V20230308\Models\DescribeMQTTUserListRequest.cs" />
     <Compile Include="V20230308\Models\DescribeMQTTUserListResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeProductSKUsRequest.cs" />
+    <Compile Include="V20230308\Models\DescribeProductSKUsResponse.cs" />
     <Compile Include="V20230308\Models\DescribeRoleListRequest.cs" />
     <Compile Include="V20230308\Models\DescribeRoleListResponse.cs" />
     <Compile Include="V20230308\Models\DescribeTopicListRequest.cs" />
@@ -158,6 +160,8 @@
     <Compile Include="V20230308\Models\ModifyTopicRequest.cs" />
     <Compile Include="V20230308\Models\ModifyTopicResponse.cs" />
     <Compile Include="V20230308\Models\PacketStatistics.cs" />
+    <Compile Include="V20230308\Models\PriceTag.cs" />
+    <Compile Include="V20230308\Models\ProductSKU.cs" />
     <Compile Include="V20230308\Models\PublicAccessRule.cs" />
     <Compile Include="V20230308\Models\RoleItem.cs" />
     <Compile Include="V20230308\Models\SourceClusterGroupConfig.cs" />

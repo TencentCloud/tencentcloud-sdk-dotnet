@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1032";
+       private const string sdkVersion = "SDK_NET_3.0.1033";
 
         /// <summary>
         /// Client constructor.
@@ -1331,6 +1331,27 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeDataEnginesResponse DescribeDataEnginesSync(DescribeDataEnginesRequest req)
         {
             return InternalRequestAsync<DescribeDataEnginesResponse>(req, "DescribeDataEngines")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询引擎规格详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataEnginesScaleDetailRequest"/></param>
+        /// <returns><see cref="DescribeDataEnginesScaleDetailResponse"/></returns>
+        public Task<DescribeDataEnginesScaleDetailResponse> DescribeDataEnginesScaleDetail(DescribeDataEnginesScaleDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDataEnginesScaleDetailResponse>(req, "DescribeDataEnginesScaleDetail");
+        }
+
+        /// <summary>
+        /// 查询引擎规格详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataEnginesScaleDetailRequest"/></param>
+        /// <returns><see cref="DescribeDataEnginesScaleDetailResponse"/></returns>
+        public DescribeDataEnginesScaleDetailResponse DescribeDataEnginesScaleDetailSync(DescribeDataEnginesScaleDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDataEnginesScaleDetailResponse>(req, "DescribeDataEnginesScaleDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

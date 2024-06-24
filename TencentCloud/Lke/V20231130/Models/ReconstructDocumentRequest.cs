@@ -37,13 +37,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public string FileUrl{ get; set; }
 
         /// <summary>
-        /// 当传入文件是PDF类型时，用来指定pdf识别的起始页码，识别的页码包含当前值。
+        /// 当传入文件是PDF类型时，用来指定pdf识别的起始页码，识别的页码包含当前值。默认为1，表示从pdf文件的第1页开始识别。
         /// </summary>
         [JsonProperty("FileStartPageNumber")]
         public long? FileStartPageNumber{ get; set; }
 
         /// <summary>
-        /// 当传入文件是PDF类型时，用来指定pdf识别的结束页码，识别的页码包含当前值。单次调用，最多支持10页pdf的文档解析。
+        /// 当传入文件是PDF类型时，用来指定pdf识别的结束页码，识别的页码包含当前值。默认为10，表示识别到pdf文件的第10页。单次调用最多支持识别10页内容，即FileEndPageNumber-FileStartPageNumber需要不大于10。
         /// </summary>
         [JsonProperty("FileEndPageNumber")]
         public long? FileEndPageNumber{ get; set; }

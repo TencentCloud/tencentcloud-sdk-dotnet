@@ -67,7 +67,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。默认值`OutTraffic`。
+        /// 排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`，标准型nat额外支持 并发连接数`ConcurrentConnectionCount` 、新建连接速率`NewConnectionRate`。默认值`OutTraffic`。
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }

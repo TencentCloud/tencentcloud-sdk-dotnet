@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1032";
+       private const string sdkVersion = "SDK_NET_3.0.1033";
 
         /// <summary>
         /// Client constructor.
@@ -142,7 +142,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 增加模板对象中的IP地址、协议端口、IP地址组、协议端口组。当前仅支持北京、泰国、北美地域请求。
+        /// 增加模板对象中的IP地址、协议端口、IP地址组、协议端口组。
         /// </summary>
         /// <param name="req"><see cref="AddTemplateMemberRequest"/></param>
         /// <returns><see cref="AddTemplateMemberResponse"/></returns>
@@ -152,7 +152,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 增加模板对象中的IP地址、协议端口、IP地址组、协议端口组。当前仅支持北京、泰国、北美地域请求。
+        /// 增加模板对象中的IP地址、协议端口、IP地址组、协议端口组。
         /// </summary>
         /// <param name="req"><see cref="AddTemplateMemberRequest"/></param>
         /// <returns><see cref="AddTemplateMemberResponse"/></returns>
@@ -2485,7 +2485,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 删除模板对象中的IP地址、协议端口、IP地址组、协议端口组。当前仅支持北京、泰国、北美地域请求。
+        /// 删除模板对象中的IP地址、协议端口、IP地址组、协议端口组。
         /// </summary>
         /// <param name="req"><see cref="DeleteTemplateMemberRequest"/></param>
         /// <returns><see cref="DeleteTemplateMemberResponse"/></returns>
@@ -2495,7 +2495,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 删除模板对象中的IP地址、协议端口、IP地址组、协议端口组。当前仅支持北京、泰国、北美地域请求。
+        /// 删除模板对象中的IP地址、协议端口、IP地址组、协议端口组。
         /// </summary>
         /// <param name="req"><see cref="DeleteTemplateMemberRequest"/></param>
         /// <returns><see cref="DeleteTemplateMemberResponse"/></returns>
@@ -4193,7 +4193,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 查询终端节点服务列表。
+        /// 本接口（DescribeVpcEndPointService）用于查询终端节点服务列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeVpcEndPointServiceRequest"/></param>
         /// <returns><see cref="DescribeVpcEndPointServiceResponse"/></returns>
@@ -4203,7 +4203,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 查询终端节点服务列表。
+        /// 本接口（DescribeVpcEndPointService）用于查询终端节点服务列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeVpcEndPointServiceRequest"/></param>
         /// <returns><see cref="DescribeVpcEndPointServiceResponse"/></returns>
@@ -6295,7 +6295,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 修改模板对象中的IP地址、协议端口、IP地址组、协议端口组。当前仅支持北京、泰国、北美地域请求。
+        /// 修改模板对象中的IP地址、协议端口、IP地址组、协议端口组。
         /// </summary>
         /// <param name="req"><see cref="ModifyTemplateMemberRequest"/></param>
         /// <returns><see cref="ModifyTemplateMemberResponse"/></returns>
@@ -6305,7 +6305,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 修改模板对象中的IP地址、协议端口、IP地址组、协议端口组。当前仅支持北京、泰国、北美地域请求。
+        /// 修改模板对象中的IP地址、协议端口、IP地址组、协议端口组。
         /// </summary>
         /// <param name="req"><see cref="ModifyTemplateMemberRequest"/></param>
         /// <returns><see cref="ModifyTemplateMemberResponse"/></returns>

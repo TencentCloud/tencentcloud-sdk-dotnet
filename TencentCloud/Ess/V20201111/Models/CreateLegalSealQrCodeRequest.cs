@@ -42,6 +42,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 机构信息，暂未开放
         /// </summary>
         [JsonProperty("Organization")]
+        [System.Obsolete]
         public OrganizationInfo Organization{ get; set; }
 
 

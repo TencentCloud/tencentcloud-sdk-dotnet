@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// 布局模式:
         /// 1：悬浮布局；
         /// 2：屏幕分享布局；
-        /// 3：九宫格布局（默认）；
+        /// 3：九宫格布局；
         /// 4：自定义布局；
         /// 
         /// 悬浮布局：默认第一个进入房间的主播（也可以指定一个主播）的视频画面会铺满整个屏幕。其他主播的视频画面从左下角开始依次按照进房顺序水平排列，显示为小画面，小画面悬浮于大画面之上。当画面数量小于等于17个时，每行4个（4 x 4排列）。当画面数量大于17个时，重新布局小画面为每行5个（5 x 5）排列。最多支持25个画面，如果用户只发送音频，仍然会占用画面位置。
@@ -70,7 +70,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? MediaId{ get; set; }
 
         /// <summary>
-        /// 图片的url地址， 只支持jpg， png，大小限制不超过5M，url不可包含中文。
+        /// 图片的url地址，只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
         /// </summary>
         [JsonProperty("BackgroundImageUrl")]
         public string BackgroundImageUrl{ get; set; }
@@ -88,7 +88,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? BackgroundImageRenderMode{ get; set; }
 
         /// <summary>
-        /// 子画面占位图url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
+        /// 子画面占位图url地址，只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
         /// </summary>
         [JsonProperty("DefaultSubBackgroundImage")]
         public string DefaultSubBackgroundImage{ get; set; }

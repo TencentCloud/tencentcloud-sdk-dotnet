@@ -54,6 +54,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("OutTraffic")]
         public ulong? OutTraffic{ get; set; }
 
+        /// <summary>
+        /// 并发连接数。仅标准型nat支持此参数。
+        /// </summary>
+        [JsonProperty("ConcurrentConnectionCount")]
+        public ulong? ConcurrentConnectionCount{ get; set; }
+
+        /// <summary>
+        /// 新建连接速率。仅标准型nat支持此参数。
+        /// </summary>
+        [JsonProperty("NewConnectionRate")]
+        public ulong? NewConnectionRate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "OutPkg", this.OutPkg);
             this.SetParamSimple(map, prefix + "InTraffic", this.InTraffic);
             this.SetParamSimple(map, prefix + "OutTraffic", this.OutTraffic);
+            this.SetParamSimple(map, prefix + "ConcurrentConnectionCount", this.ConcurrentConnectionCount);
+            this.SetParamSimple(map, prefix + "NewConnectionRate", this.NewConnectionRate);
         }
     }
 }

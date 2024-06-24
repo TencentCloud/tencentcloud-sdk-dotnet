@@ -30,6 +30,21 @@ namespace TencentCloud.Asr.V20190614.Models
         [JsonProperty("VoicePrintId")]
         public string VoicePrintId{ get; set; }
 
+        /// <summary>
+        /// 说话人分组ID,仅支持大小写字母和下划线的组合，不超过128个字符
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
+        /// <summary>
+        /// 删除模式: 
+        /// 0.默认值，删除该条声纹
+        /// 1.从分组中删除该条声纹，声纹本身不删除
+        /// 2.从声纹库中删除分组，仅删除分组信息，不会真正删除分组中的声纹
+        /// </summary>
+        [JsonProperty("DelMod")]
+        public long? DelMod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +52,8 @@ namespace TencentCloud.Asr.V20190614.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "VoicePrintId", this.VoicePrintId);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "DelMod", this.DelMod);
         }
     }
 }

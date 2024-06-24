@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BA913269-C9C8-3169-85ED-FED2E392A18E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1032</VersionPrefix>
+    <VersionPrefix>3.0.1033</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -97,6 +97,8 @@
     <Compile Include="V20190614\Models\TaskStatus.cs" />
     <Compile Include="V20190614\Models\UpdateAsrVocabRequest.cs" />
     <Compile Include="V20190614\Models\UpdateAsrVocabResponse.cs" />
+    <Compile Include="V20190614\Models\VerifyTop.cs" />
+    <Compile Include="V20190614\Models\VerifyTopResult.cs" />
     <Compile Include="V20190614\Models\Vocab.cs" />
     <Compile Include="V20190614\Models\VoicePrintBaseData.cs" />
     <Compile Include="V20190614\Models\VoicePrintCompareData.cs" />
@@ -109,6 +111,8 @@
     <Compile Include="V20190614\Models\VoicePrintDeleteResponse.cs" />
     <Compile Include="V20190614\Models\VoicePrintEnrollRequest.cs" />
     <Compile Include="V20190614\Models\VoicePrintEnrollResponse.cs" />
+    <Compile Include="V20190614\Models\VoicePrintGroupVerifyRequest.cs" />
+    <Compile Include="V20190614\Models\VoicePrintGroupVerifyResponse.cs" />
     <Compile Include="V20190614\Models\VoicePrintUpdateRequest.cs" />
     <Compile Include="V20190614\Models\VoicePrintUpdateResponse.cs" />
     <Compile Include="V20190614\Models\VoicePrintVerifyData.cs" />

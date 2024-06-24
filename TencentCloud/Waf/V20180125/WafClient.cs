@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1032";
+       private const string sdkVersion = "SDK_NET_3.0.1033";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Waf.V20180125
         public AddAntiInfoLeakRulesResponse AddAntiInfoLeakRulesSync(AddAntiInfoLeakRulesRequest req)
         {
             return InternalRequestAsync<AddAntiInfoLeakRulesResponse>(req, "AddAntiInfoLeakRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加地域封禁中的地域信息
+        /// </summary>
+        /// <param name="req"><see cref="AddAreaBanAreasRequest"/></param>
+        /// <returns><see cref="AddAreaBanAreasResponse"/></returns>
+        public Task<AddAreaBanAreasResponse> AddAreaBanAreas(AddAreaBanAreasRequest req)
+        {
+            return InternalRequestAsync<AddAreaBanAreasResponse>(req, "AddAreaBanAreas");
+        }
+
+        /// <summary>
+        /// 添加地域封禁中的地域信息
+        /// </summary>
+        /// <param name="req"><see cref="AddAreaBanAreasRequest"/></param>
+        /// <returns><see cref="AddAreaBanAreasResponse"/></returns>
+        public AddAreaBanAreasResponse AddAreaBanAreasSync(AddAreaBanAreasRequest req)
+        {
+            return InternalRequestAsync<AddAreaBanAreasResponse>(req, "AddAreaBanAreas")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
