@@ -45,6 +45,13 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("PassInputSei")]
         public long? PassInputSei{ get; set; }
 
+        /// <summary>
+        /// 取值范围[0,1]
+        /// 填1时，图片输入中的透明通道生效。
+        /// </summary>
+        [JsonProperty("UsePictureTransparent")]
+        public long? UsePictureTransparent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "UseMixCropCenter", this.UseMixCropCenter);
             this.SetParamSimple(map, prefix + "AllowCopy", this.AllowCopy);
             this.SetParamSimple(map, prefix + "PassInputSei", this.PassInputSei);
+            this.SetParamSimple(map, prefix + "UsePictureTransparent", this.UsePictureTransparent);
         }
     }
 }

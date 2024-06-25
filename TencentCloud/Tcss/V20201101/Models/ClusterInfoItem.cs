@@ -67,7 +67,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// 监控组件的状态，为Defender_Uninstall、Defender_Normal、Defender_Error、Defender_Installing
+        /// 防护状态: 已防护: Defended 未防护: UnDefended
         /// </summary>
         [JsonProperty("DefenderStatus")]
         public string DefenderStatus{ get; set; }
@@ -188,11 +188,23 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? UnInstallAgentNodeCount{ get; set; }
 
         /// <summary>
-        /// 计费核数
+        /// 计费核数(弹性计费核数+普通计费核数)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChargeCoresCnt")]
         public ulong? ChargeCoresCnt{ get; set; }
+
+        /// <summary>
+        /// master 地址列表
+        /// </summary>
+        [JsonProperty("MasterAddresses")]
+        public string[] MasterAddresses{ get; set; }
+
+        /// <summary>
+        /// 核数
+        /// </summary>
+        [JsonProperty("CoresCnt")]
+        public ulong? CoresCnt{ get; set; }
 
 
         /// <summary>
@@ -226,6 +238,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "OffLineNodeCount", this.OffLineNodeCount);
             this.SetParamSimple(map, prefix + "UnInstallAgentNodeCount", this.UnInstallAgentNodeCount);
             this.SetParamSimple(map, prefix + "ChargeCoresCnt", this.ChargeCoresCnt);
+            this.SetParamArraySimple(map, prefix + "MasterAddresses.", this.MasterAddresses);
+            this.SetParamSimple(map, prefix + "CoresCnt", this.CoresCnt);
         }
     }
 }

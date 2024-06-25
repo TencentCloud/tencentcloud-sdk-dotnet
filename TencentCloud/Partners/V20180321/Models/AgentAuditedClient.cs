@@ -123,6 +123,13 @@ namespace TencentCloud.Partners.V20180321.Models
         [JsonProperty("Mail")]
         public string Mail{ get; set; }
 
+        /// <summary>
+        /// 交易类型:交易类型 1-原类型 2-代理型  3-代采型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TransactionType")]
+        public string TransactionType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,6 +152,7 @@ namespace TencentCloud.Partners.V20180321.Models
             this.SetParamSimple(map, prefix + "SalesUin", this.SalesUin);
             this.SetParamSimple(map, prefix + "SalesName", this.SalesName);
             this.SetParamSimple(map, prefix + "Mail", this.Mail);
+            this.SetParamSimple(map, prefix + "TransactionType", this.TransactionType);
         }
     }
 }

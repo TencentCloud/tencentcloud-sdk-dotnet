@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1033";
+       private const string sdkVersion = "SDK_NET_3.0.1034";
 
         /// <summary>
         /// Client constructor.
@@ -4734,6 +4734,27 @@ namespace TencentCloud.Wedata.V20210820
         public UploadContentResponse UploadContentSync(UploadContentRequest req)
         {
             return InternalRequestAsync<UploadContentResponse>(req, "UploadContent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 资源管理-上传资源
+        /// </summary>
+        /// <param name="req"><see cref="UploadResourceRequest"/></param>
+        /// <returns><see cref="UploadResourceResponse"/></returns>
+        public Task<UploadResourceResponse> UploadResource(UploadResourceRequest req)
+        {
+            return InternalRequestAsync<UploadResourceResponse>(req, "UploadResource");
+        }
+
+        /// <summary>
+        /// 资源管理-上传资源
+        /// </summary>
+        /// <param name="req"><see cref="UploadResourceRequest"/></param>
+        /// <returns><see cref="UploadResourceResponse"/></returns>
+        public UploadResourceResponse UploadResourceSync(UploadResourceRequest req)
+        {
+            return InternalRequestAsync<UploadResourceResponse>(req, "UploadResource")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

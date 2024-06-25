@@ -39,7 +39,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string Role{ get; set; }
 
         /// <summary>
-        /// 数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql
+        /// 数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql。注意TDSQL-C MySQL、TDSQL PostgreSQL无需填写此项值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DbKernel")]

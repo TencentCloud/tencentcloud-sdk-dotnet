@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D9BE3E44-5D04-3386-82E0-CF29DE79C052}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1033</VersionPrefix>
+    <VersionPrefix>3.0.1034</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,12 +49,24 @@
   <ItemGroup>
     <Compile Include="V20220601\IoaClient.cs" />
     <Compile Include="V20220601\Models\Condition.cs" />
+    <Compile Include="V20220601\Models\DescribeAccountGroupsData.cs" />
+    <Compile Include="V20220601\Models\DescribeAccountGroupsPageResp.cs" />
+    <Compile Include="V20220601\Models\DescribeAccountGroupsRequest.cs" />
+    <Compile Include="V20220601\Models\DescribeAccountGroupsResponse.cs" />
     <Compile Include="V20220601\Models\DescribeDevicesPageRsp.cs" />
     <Compile Include="V20220601\Models\DescribeDevicesRequest.cs" />
     <Compile Include="V20220601\Models\DescribeDevicesResponse.cs" />
+    <Compile Include="V20220601\Models\DescribeLocalAccountAccountGroupsData.cs" />
+    <Compile Include="V20220601\Models\DescribeLocalAccountsData.cs" />
+    <Compile Include="V20220601\Models\DescribeLocalAccountsPage.cs" />
+    <Compile Include="V20220601\Models\DescribeLocalAccountsRequest.cs" />
+    <Compile Include="V20220601\Models\DescribeLocalAccountsResponse.cs" />
+    <Compile Include="V20220601\Models\DescribeRootAccountGroupRequest.cs" />
+    <Compile Include="V20220601\Models\DescribeRootAccountGroupResponse.cs" />
     <Compile Include="V20220601\Models\DeviceDetail.cs" />
     <Compile Include="V20220601\Models\Filter.cs" />
     <Compile Include="V20220601\Models\FilterGroup.cs" />
+    <Compile Include="V20220601\Models\GetAccountGroupData.cs" />
     <Compile Include="V20220601\Models\Paging.cs" />
     <Compile Include="V20220601\Models\Sort.cs" />
   </ItemGroup>

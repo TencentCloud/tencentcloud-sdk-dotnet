@@ -94,6 +94,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("IsWebTracking")]
         public bool? IsWebTracking{ get; set; }
 
+        /// <summary>
+        /// 日志主题扩展信息
+        /// </summary>
+        [JsonProperty("Extends")]
+        public TopicExtendInfo Extends{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -111,6 +117,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Describes", this.Describes);
             this.SetParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
             this.SetParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
+            this.SetParamObj(map, prefix + "Extends.", this.Extends);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public Asset Asset{ get; set; }
 
         /// <summary>
-        /// 表类型
+        /// 表类型：EXTERNAL_TABLE, VIRTUAL_VIEW, MATERIALIZED_VIEW
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

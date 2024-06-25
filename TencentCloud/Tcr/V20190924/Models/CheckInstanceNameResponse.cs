@@ -31,6 +31,13 @@ namespace TencentCloud.Tcr.V20190924.Models
         public bool? IsValidated{ get; set; }
 
         /// <summary>
+        /// 1: Illegal（名子非法）, 2:Reserved（名字保留）, 3:Existed（名字已存在）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DetailCode")]
+        public long? DetailCode{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +50,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "IsValidated", this.IsValidated);
+            this.SetParamSimple(map, prefix + "DetailCode", this.DetailCode);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

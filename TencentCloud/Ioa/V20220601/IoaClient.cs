@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1033";
+       private const string sdkVersion = "SDK_NET_3.0.1034";
 
         /// <summary>
         /// Client constructor.
@@ -54,6 +54,27 @@ namespace TencentCloud.Ioa.V20220601
         }
 
         /// <summary>
+        /// 以分页的方式查询账户目录列表,私有化调用path为：/capi/Assets/DescribeAccountGroups
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountGroupsRequest"/></param>
+        /// <returns><see cref="DescribeAccountGroupsResponse"/></returns>
+        public Task<DescribeAccountGroupsResponse> DescribeAccountGroups(DescribeAccountGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeAccountGroupsResponse>(req, "DescribeAccountGroups");
+        }
+
+        /// <summary>
+        /// 以分页的方式查询账户目录列表,私有化调用path为：/capi/Assets/DescribeAccountGroups
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountGroupsRequest"/></param>
+        /// <returns><see cref="DescribeAccountGroupsResponse"/></returns>
+        public DescribeAccountGroupsResponse DescribeAccountGroupsSync(DescribeAccountGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeAccountGroupsResponse>(req, "DescribeAccountGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询满足条件的终端数据详情，私有化调用path为：/capi/Assets/Device/DescribeDevices
         /// </summary>
         /// <param name="req"><see cref="DescribeDevicesRequest"/></param>
@@ -71,6 +92,48 @@ namespace TencentCloud.Ioa.V20220601
         public DescribeDevicesResponse DescribeDevicesSync(DescribeDevicesRequest req)
         {
             return InternalRequestAsync<DescribeDevicesResponse>(req, "DescribeDevices")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取账号列表，支持分页，模糊搜索，私有化调用path为：/capi/Assets/Account/DescribeLocalAccounts
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLocalAccountsRequest"/></param>
+        /// <returns><see cref="DescribeLocalAccountsResponse"/></returns>
+        public Task<DescribeLocalAccountsResponse> DescribeLocalAccounts(DescribeLocalAccountsRequest req)
+        {
+            return InternalRequestAsync<DescribeLocalAccountsResponse>(req, "DescribeLocalAccounts");
+        }
+
+        /// <summary>
+        /// 获取账号列表，支持分页，模糊搜索，私有化调用path为：/capi/Assets/Account/DescribeLocalAccounts
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLocalAccountsRequest"/></param>
+        /// <returns><see cref="DescribeLocalAccountsResponse"/></returns>
+        public DescribeLocalAccountsResponse DescribeLocalAccountsSync(DescribeLocalAccountsRequest req)
+        {
+            return InternalRequestAsync<DescribeLocalAccountsResponse>(req, "DescribeLocalAccounts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询账户根分组详情，私有化调用path为：capi/Assets/DescribeRootAccountGroup
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRootAccountGroupRequest"/></param>
+        /// <returns><see cref="DescribeRootAccountGroupResponse"/></returns>
+        public Task<DescribeRootAccountGroupResponse> DescribeRootAccountGroup(DescribeRootAccountGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeRootAccountGroupResponse>(req, "DescribeRootAccountGroup");
+        }
+
+        /// <summary>
+        /// 查询账户根分组详情，私有化调用path为：capi/Assets/DescribeRootAccountGroup
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRootAccountGroupRequest"/></param>
+        /// <returns><see cref="DescribeRootAccountGroupResponse"/></returns>
+        public DescribeRootAccountGroupResponse DescribeRootAccountGroupSync(DescribeRootAccountGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeRootAccountGroupResponse>(req, "DescribeRootAccountGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

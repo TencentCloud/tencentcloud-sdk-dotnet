@@ -42,6 +42,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("Describe")]
         public string Describe{ get; set; }
 
+        /// <summary>
+        /// 集群所在地域
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "Describe", this.Describe);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
         }
     }
 }

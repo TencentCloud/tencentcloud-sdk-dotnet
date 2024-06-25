@@ -160,6 +160,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("DefendStatus")]
         public string DefendStatus{ get; set; }
 
+        /// <summary>
+        /// 核数
+        /// </summary>
+        [JsonProperty("CoresCnt")]
+        public ulong? CoresCnt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -188,6 +194,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ClusterAccessedStatus", this.ClusterAccessedStatus);
             this.SetParamSimple(map, prefix + "ChargeCoresCnt", this.ChargeCoresCnt);
             this.SetParamSimple(map, prefix + "DefendStatus", this.DefendStatus);
+            this.SetParamSimple(map, prefix + "CoresCnt", this.CoresCnt);
         }
     }
 }

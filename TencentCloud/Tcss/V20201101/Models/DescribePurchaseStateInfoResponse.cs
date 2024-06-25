@@ -31,11 +31,23 @@ namespace TencentCloud.Tcss.V20201101.Models
         public long? State{ get; set; }
 
         /// <summary>
-        /// 总核数
+        /// 总资源核数 = 总防护核数 + 未防护核数
+        /// </summary>
+        [JsonProperty("AllCoresCnt")]
+        public ulong? AllCoresCnt{ get; set; }
+
+        /// <summary>
+        /// 总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CoresCnt")]
         public ulong? CoresCnt{ get; set; }
+
+        /// <summary>
+        /// 未防护核数(未开启防护资源核数)
+        /// </summary>
+        [JsonProperty("UndefendCoresCnt")]
+        public ulong? UndefendCoresCnt{ get; set; }
 
         /// <summary>
         /// 已购买核数
@@ -43,6 +55,19 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         [JsonProperty("AuthorizedCoresCnt")]
         public ulong? AuthorizedCoresCnt{ get; set; }
+
+        /// <summary>
+        /// 试用赠送专业版核心数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GivenAuthorizedCoresCnt")]
+        public long? GivenAuthorizedCoresCnt{ get; set; }
+
+        /// <summary>
+        /// 当前弹性计费核数数量
+        /// </summary>
+        [JsonProperty("CurrentFlexibleCoresCnt")]
+        public ulong? CurrentFlexibleCoresCnt{ get; set; }
 
         /// <summary>
         /// 镜像数
@@ -59,18 +84,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? AuthorizedImageCnt{ get; set; }
 
         /// <summary>
-        /// 已购买镜像授权数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("PurchasedAuthorizedCnt")]
-        public ulong? PurchasedAuthorizedCnt{ get; set; }
-
-        /// <summary>
         /// 过期时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpirationTime")]
         public string ExpirationTime{ get; set; }
+
+        /// <summary>
+        /// 已购买镜像授权数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PurchasedAuthorizedCnt")]
+        public ulong? PurchasedAuthorizedCnt{ get; set; }
 
         /// <summary>
         /// 0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
@@ -109,6 +134,30 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string InquireKey{ get; set; }
 
         /// <summary>
+        /// 防护策略
+        /// </summary>
+        [JsonProperty("DefendPolicy")]
+        public string DefendPolicy{ get; set; }
+
+        /// <summary>
+        /// 弹性计费核数上限
+        /// </summary>
+        [JsonProperty("FlexibleCoresLimit")]
+        public ulong? FlexibleCoresLimit{ get; set; }
+
+        /// <summary>
+        /// 已防护集群核数
+        /// </summary>
+        [JsonProperty("DefendClusterCoresCnt")]
+        public ulong? DefendClusterCoresCnt{ get; set; }
+
+        /// <summary>
+        /// 已防护主机核数
+        /// </summary>
+        [JsonProperty("DefendHostCoresCnt")]
+        public ulong? DefendHostCoresCnt{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -121,17 +170,25 @@ namespace TencentCloud.Tcss.V20201101.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "State", this.State);
+            this.SetParamSimple(map, prefix + "AllCoresCnt", this.AllCoresCnt);
             this.SetParamSimple(map, prefix + "CoresCnt", this.CoresCnt);
+            this.SetParamSimple(map, prefix + "UndefendCoresCnt", this.UndefendCoresCnt);
             this.SetParamSimple(map, prefix + "AuthorizedCoresCnt", this.AuthorizedCoresCnt);
+            this.SetParamSimple(map, prefix + "GivenAuthorizedCoresCnt", this.GivenAuthorizedCoresCnt);
+            this.SetParamSimple(map, prefix + "CurrentFlexibleCoresCnt", this.CurrentFlexibleCoresCnt);
             this.SetParamSimple(map, prefix + "ImageCnt", this.ImageCnt);
             this.SetParamSimple(map, prefix + "AuthorizedImageCnt", this.AuthorizedImageCnt);
-            this.SetParamSimple(map, prefix + "PurchasedAuthorizedCnt", this.PurchasedAuthorizedCnt);
             this.SetParamSimple(map, prefix + "ExpirationTime", this.ExpirationTime);
+            this.SetParamSimple(map, prefix + "PurchasedAuthorizedCnt", this.PurchasedAuthorizedCnt);
             this.SetParamSimple(map, prefix + "AutomaticRenewal", this.AutomaticRenewal);
             this.SetParamSimple(map, prefix + "GivenAuthorizedCnt", this.GivenAuthorizedCnt);
             this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
             this.SetParamSimple(map, prefix + "SubState", this.SubState);
             this.SetParamSimple(map, prefix + "InquireKey", this.InquireKey);
+            this.SetParamSimple(map, prefix + "DefendPolicy", this.DefendPolicy);
+            this.SetParamSimple(map, prefix + "FlexibleCoresLimit", this.FlexibleCoresLimit);
+            this.SetParamSimple(map, prefix + "DefendClusterCoresCnt", this.DefendClusterCoresCnt);
+            this.SetParamSimple(map, prefix + "DefendHostCoresCnt", this.DefendHostCoresCnt);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

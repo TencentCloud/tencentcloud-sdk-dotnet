@@ -28,7 +28,7 @@ namespace TencentCloud.Cwp.V20180228
 
        private const string endpoint = "cwp.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.1033";
+       private const string sdkVersion = "SDK_NET_3.0.1034";
 
         /// <summary>
         /// Client constructor.
@@ -665,31 +665,6 @@ namespace TencentCloud.Cwp.V20180228
         public DeleteAllJavaMemShellsResponse DeleteAllJavaMemShellsSync(DeleteAllJavaMemShellsRequest req)
         {
             return InternalRequestAsync<DeleteAllJavaMemShellsResponse>(req, "DeleteAllJavaMemShells")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// ModifyEventAttackStatus 接口替代
-        /// 
-        /// 删除网络攻击日志
-        /// </summary>
-        /// <param name="req"><see cref="DeleteAttackLogsRequest"/></param>
-        /// <returns><see cref="DeleteAttackLogsResponse"/></returns>
-        public Task<DeleteAttackLogsResponse> DeleteAttackLogs(DeleteAttackLogsRequest req)
-        {
-            return InternalRequestAsync<DeleteAttackLogsResponse>(req, "DeleteAttackLogs");
-        }
-
-        /// <summary>
-        /// ModifyEventAttackStatus 接口替代
-        /// 
-        /// 删除网络攻击日志
-        /// </summary>
-        /// <param name="req"><see cref="DeleteAttackLogsRequest"/></param>
-        /// <returns><see cref="DeleteAttackLogsResponse"/></returns>
-        public DeleteAttackLogsResponse DeleteAttackLogsSync(DeleteAttackLogsRequest req)
-        {
-            return InternalRequestAsync<DeleteAttackLogsResponse>(req, "DeleteAttackLogs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

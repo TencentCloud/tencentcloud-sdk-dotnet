@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1033</VersionPrefix>
+    <VersionPrefix>3.0.1034</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -69,6 +69,8 @@
     <Compile Include="V20190423\Models\CallDeviceActionSyncResponse.cs" />
     <Compile Include="V20190423\Models\CancelAssignTWeCallLicenseRequest.cs" />
     <Compile Include="V20190423\Models\CancelAssignTWeCallLicenseResponse.cs" />
+    <Compile Include="V20190423\Models\CheckFirmwareUpdateRequest.cs" />
+    <Compile Include="V20190423\Models\CheckFirmwareUpdateResponse.cs" />
     <Compile Include="V20190423\Models\CloudStorageAIServiceTask.cs" />
     <Compile Include="V20190423\Models\CloudStorageEvent.cs" />
     <Compile Include="V20190423\Models\CloudStorageTimeData.cs" />
@@ -188,6 +190,8 @@
     <Compile Include="V20190423\Models\DescribeFirmwareResponse.cs" />
     <Compile Include="V20190423\Models\DescribeFirmwareTaskRequest.cs" />
     <Compile Include="V20190423\Models\DescribeFirmwareTaskResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeFirmwareUpdateStatusRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeFirmwareUpdateStatusResponse.cs" />
     <Compile Include="V20190423\Models\DescribeGatewayBindDevicesRequest.cs" />
     <Compile Include="V20190423\Models\DescribeGatewayBindDevicesResponse.cs" />
     <Compile Include="V20190423\Models\DescribeGatewaySubDeviceListRequest.cs" />
@@ -333,6 +337,8 @@
     <Compile Include="V20190423\Models\ProjectEntryEx.cs" />
     <Compile Include="V20190423\Models\PublishBroadcastMessageRequest.cs" />
     <Compile Include="V20190423\Models\PublishBroadcastMessageResponse.cs" />
+    <Compile Include="V20190423\Models\PublishFirmwareUpdateMessageRequest.cs" />
+    <Compile Include="V20190423\Models\PublishFirmwareUpdateMessageResponse.cs" />
     <Compile Include="V20190423\Models\PublishMessageRequest.cs" />
     <Compile Include="V20190423\Models\PublishMessageResponse.cs" />
     <Compile Include="V20190423\Models\PublishRRPCMessageRequest.cs" />

@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1033";
+       private const string sdkVersion = "SDK_NET_3.0.1034";
 
         /// <summary>
         /// Client constructor.
@@ -218,6 +218,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public CancelAssignTWeCallLicenseResponse CancelAssignTWeCallLicenseSync(CancelAssignTWeCallLicenseRequest req)
         {
             return InternalRequestAsync<CancelAssignTWeCallLicenseResponse>(req, "CancelAssignTWeCallLicense")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（CheckFirmwareUpdate）用于查询设备可升级固件版本
+        /// </summary>
+        /// <param name="req"><see cref="CheckFirmwareUpdateRequest"/></param>
+        /// <returns><see cref="CheckFirmwareUpdateResponse"/></returns>
+        public Task<CheckFirmwareUpdateResponse> CheckFirmwareUpdate(CheckFirmwareUpdateRequest req)
+        {
+            return InternalRequestAsync<CheckFirmwareUpdateResponse>(req, "CheckFirmwareUpdate");
+        }
+
+        /// <summary>
+        /// 本接口（CheckFirmwareUpdate）用于查询设备可升级固件版本
+        /// </summary>
+        /// <param name="req"><see cref="CheckFirmwareUpdateRequest"/></param>
+        /// <returns><see cref="CheckFirmwareUpdateResponse"/></returns>
+        public CheckFirmwareUpdateResponse CheckFirmwareUpdateSync(CheckFirmwareUpdateRequest req)
+        {
+            return InternalRequestAsync<CheckFirmwareUpdateResponse>(req, "CheckFirmwareUpdate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1419,6 +1440,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 本接口（DescribeFirmwareUpdateStatus）用于查询设备固件升级状态及进度。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFirmwareUpdateStatusRequest"/></param>
+        /// <returns><see cref="DescribeFirmwareUpdateStatusResponse"/></returns>
+        public Task<DescribeFirmwareUpdateStatusResponse> DescribeFirmwareUpdateStatus(DescribeFirmwareUpdateStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeFirmwareUpdateStatusResponse>(req, "DescribeFirmwareUpdateStatus");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeFirmwareUpdateStatus）用于查询设备固件升级状态及进度。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFirmwareUpdateStatusRequest"/></param>
+        /// <returns><see cref="DescribeFirmwareUpdateStatusResponse"/></returns>
+        public DescribeFirmwareUpdateStatusResponse DescribeFirmwareUpdateStatusSync(DescribeFirmwareUpdateStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeFirmwareUpdateStatusResponse>(req, "DescribeFirmwareUpdateStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取网关绑定的子设备列表
         /// </summary>
         /// <param name="req"><see cref="DescribeGatewayBindDevicesRequest"/></param>
@@ -2612,6 +2654,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public PublishBroadcastMessageResponse PublishBroadcastMessageSync(PublishBroadcastMessageRequest req)
         {
             return InternalRequestAsync<PublishBroadcastMessageResponse>(req, "PublishBroadcastMessage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（PublishFirmwareUpdateMessage）用于用户确认升级后，云端向设备发起固件升级请求。
+        /// </summary>
+        /// <param name="req"><see cref="PublishFirmwareUpdateMessageRequest"/></param>
+        /// <returns><see cref="PublishFirmwareUpdateMessageResponse"/></returns>
+        public Task<PublishFirmwareUpdateMessageResponse> PublishFirmwareUpdateMessage(PublishFirmwareUpdateMessageRequest req)
+        {
+            return InternalRequestAsync<PublishFirmwareUpdateMessageResponse>(req, "PublishFirmwareUpdateMessage");
+        }
+
+        /// <summary>
+        /// 本接口（PublishFirmwareUpdateMessage）用于用户确认升级后，云端向设备发起固件升级请求。
+        /// </summary>
+        /// <param name="req"><see cref="PublishFirmwareUpdateMessageRequest"/></param>
+        /// <returns><see cref="PublishFirmwareUpdateMessageResponse"/></returns>
+        public PublishFirmwareUpdateMessageResponse PublishFirmwareUpdateMessageSync(PublishFirmwareUpdateMessageRequest req)
+        {
+            return InternalRequestAsync<PublishFirmwareUpdateMessageResponse>(req, "PublishFirmwareUpdateMessage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
