@@ -55,10 +55,19 @@ namespace TencentCloud.Thpc.V20230321.Models
         public long? ComputeNodeCount{ get; set; }
 
         /// <summary>
-        /// 调度器类型。默认取值：SLURM。<br><li>SGE：SGE调度器。<br><li>SLURM：SLURM调度器。
+        /// 调度器类型。默认取值：SLURM。<li>SGE：SGE调度器。</li><li>SLURM：SLURM调度器。</li>
         /// </summary>
         [JsonProperty("SchedulerType")]
         public string SchedulerType{ get; set; }
+
+        /// <summary>
+        /// 创建调度器的版本号，可填写版本号为“latest” 和 各调度器支持的版本号；如果是"latest", 则代表创建的是平台当前支持的该类型调度器最新版本。如果不填写，默认创建的是“latest”版本调度器
+        /// 各调度器支持的集群版本：
+        /// <li>SLURM：21.08.8、23.11.7</li>
+        /// <li>SGE：     8.1.9</li>
+        /// </summary>
+        [JsonProperty("SchedulerVersion")]
+        public string SchedulerVersion{ get; set; }
 
         /// <summary>
         /// 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。
@@ -102,7 +111,7 @@ namespace TencentCloud.Thpc.V20230321.Models
 
         /// <summary>
         /// 域名字服务类型。默认取值：NIS。
-        /// <li>NIS：NIS域名字服务。
+        /// <li>NIS：NIS域名字服务。</li>
         /// </summary>
         [JsonProperty("AccountType")]
         public string AccountType{ get; set; }
@@ -138,7 +147,7 @@ namespace TencentCloud.Thpc.V20230321.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 弹性伸缩类型。默认值：THPC_AS<br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。
+        /// 弹性伸缩类型。默认值：THPC_AS<li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li>
         /// </summary>
         [JsonProperty("AutoScalingType")]
         public string AutoScalingType{ get; set; }
@@ -167,6 +176,7 @@ namespace TencentCloud.Thpc.V20230321.Models
             this.SetParamObj(map, prefix + "ComputeNode.", this.ComputeNode);
             this.SetParamSimple(map, prefix + "ComputeNodeCount", this.ComputeNodeCount);
             this.SetParamSimple(map, prefix + "SchedulerType", this.SchedulerType);
+            this.SetParamSimple(map, prefix + "SchedulerVersion", this.SchedulerVersion);
             this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
             this.SetParamObj(map, prefix + "VirtualPrivateCloud.", this.VirtualPrivateCloud);
             this.SetParamObj(map, prefix + "LoginSettings.", this.LoginSettings);

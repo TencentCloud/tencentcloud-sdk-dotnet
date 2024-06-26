@@ -31,7 +31,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string QrCode{ get; set; }
 
         /// <summary>
-        /// 查看短链，可直接点击短链查看报告。
+        /// 查看短链，可直接点击短链查看证书。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

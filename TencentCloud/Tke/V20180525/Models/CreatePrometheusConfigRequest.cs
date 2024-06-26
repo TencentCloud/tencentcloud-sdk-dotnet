@@ -60,6 +60,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("RawJobs")]
         public PrometheusConfigItem[] RawJobs{ get; set; }
 
+        /// <summary>
+        /// Probe 配置
+        /// </summary>
+        [JsonProperty("Probes")]
+        public PrometheusConfigItem[] Probes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArrayObj(map, prefix + "ServiceMonitors.", this.ServiceMonitors);
             this.SetParamArrayObj(map, prefix + "PodMonitors.", this.PodMonitors);
             this.SetParamArrayObj(map, prefix + "RawJobs.", this.RawJobs);
+            this.SetParamArrayObj(map, prefix + "Probes.", this.Probes);
         }
     }
 }

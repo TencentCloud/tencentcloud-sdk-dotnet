@@ -72,7 +72,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public MultiCondition[] MultiConditions{ get; set; }
 
         /// <summary>
-        /// 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
+        /// 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。
         /// </summary>
         [JsonProperty("TriggerCount")]
         public long? TriggerCount{ get; set; }

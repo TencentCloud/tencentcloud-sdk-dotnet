@@ -37,6 +37,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("Environments")]
         public TCBEnvironments[] Environments{ get; set; }
 
+        /// <summary>
+        /// 是否查询异常
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Error")]
+        public string Error{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +52,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         {
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamArrayObj(map, prefix + "Environments.", this.Environments);
+            this.SetParamSimple(map, prefix + "Error", this.Error);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 路由网络类型(3:vpc路由;4:标准版支撑路由;7:专业版支撑路由)
+        /// 路由网络类型(3:vpc路由;7:内部支撑路由)
         /// </summary>
         [JsonProperty("VipType")]
         public long? VipType{ get; set; }

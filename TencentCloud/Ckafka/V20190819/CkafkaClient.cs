@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1034";
+       private const string sdkVersion = "SDK_NET_3.0.1035";
 
         /// <summary>
         /// Client constructor.
@@ -306,7 +306,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 创建Datahub主题
+        /// 创建DIP主题
         /// </summary>
         /// <param name="req"><see cref="CreateDatahubTopicRequest"/></param>
         /// <returns><see cref="CreateDatahubTopicResponse"/></returns>
@@ -316,7 +316,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 创建Datahub主题
+        /// 创建DIP主题
         /// </summary>
         /// <param name="req"><see cref="CreateDatahubTopicRequest"/></param>
         /// <returns><see cref="CreateDatahubTopicResponse"/></returns>
@@ -600,7 +600,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 删除Datahub任务
+        /// 删除Dip任务
         /// </summary>
         /// <param name="req"><see cref="DeleteDatahubTaskRequest"/></param>
         /// <returns><see cref="DeleteDatahubTaskResponse"/></returns>
@@ -610,7 +610,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 删除Datahub任务
+        /// 删除Dip任务
         /// </summary>
         /// <param name="req"><see cref="DeleteDatahubTaskRequest"/></param>
         /// <returns><see cref="DeleteDatahubTaskResponse"/></returns>
@@ -1020,7 +1020,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 获取Datahub主题属性
+        /// 获取DIP主题属性
         /// </summary>
         /// <param name="req"><see cref="DescribeDatahubTopicRequest"/></param>
         /// <returns><see cref="DescribeDatahubTopicResponse"/></returns>
@@ -1030,7 +1030,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 获取Datahub主题属性
+        /// 获取DIP主题属性
         /// </summary>
         /// <param name="req"><see cref="DescribeDatahubTopicRequest"/></param>
         /// <returns><see cref="DescribeDatahubTopicResponse"/></returns>
@@ -1631,7 +1631,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 修改Datahub主题属性
+        /// 修改DIP主题属性
         /// </summary>
         /// <param name="req"><see cref="ModifyDatahubTopicRequest"/></param>
         /// <returns><see cref="ModifyDatahubTopicResponse"/></returns>
@@ -1641,7 +1641,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 修改Datahub主题属性
+        /// 修改DIP主题属性
         /// </summary>
         /// <param name="req"><see cref="ModifyDatahubTopicRequest"/></param>
         /// <returns><see cref="ModifyDatahubTopicResponse"/></returns>

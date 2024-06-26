@@ -31,7 +31,7 @@ namespace TencentCloud.Thpc.V20230321.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 集群状态。取值范围：<br><li>PENDING：创建中<br><li>INITING：初始化中<br><li>INIT_FAILED：初始化失败<br><li>RUNNING：运行中<br><li>TERMINATING：销毁中
+        /// 集群状态。取值范围：<li>PENDING：创建中</li><li>INITING：初始化中</li><li>INIT_FAILED：初始化失败</li><li>RUNNING：运行中</li><li>TERMINATING：销毁中</li>
         /// </summary>
         [JsonProperty("ClusterStatus")]
         public string ClusterStatus{ get; set; }
@@ -59,6 +59,13 @@ namespace TencentCloud.Thpc.V20230321.Models
         /// </summary>
         [JsonProperty("SchedulerType")]
         public string SchedulerType{ get; set; }
+
+        /// <summary>
+        /// 集群调度器版本。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SchedulerVersion")]
+        public string SchedulerVersion{ get; set; }
 
         /// <summary>
         /// 计算节点数量。
@@ -97,7 +104,7 @@ namespace TencentCloud.Thpc.V20230321.Models
         public long? LoginNodeCount{ get; set; }
 
         /// <summary>
-        /// 弹性伸缩类型。<br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。
+        /// 弹性伸缩类型。取值范围：<li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li>
         /// </summary>
         [JsonProperty("AutoScalingType")]
         public string AutoScalingType{ get; set; }
@@ -120,6 +127,7 @@ namespace TencentCloud.Thpc.V20230321.Models
             this.SetParamObj(map, prefix + "Placement.", this.Placement);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "SchedulerType", this.SchedulerType);
+            this.SetParamSimple(map, prefix + "SchedulerVersion", this.SchedulerVersion);
             this.SetParamSimple(map, prefix + "ComputeNodeCount", this.ComputeNodeCount);
             this.SetParamArrayObj(map, prefix + "ComputeNodeSet.", this.ComputeNodeSet);
             this.SetParamSimple(map, prefix + "ManagerNodeCount", this.ManagerNodeCount);

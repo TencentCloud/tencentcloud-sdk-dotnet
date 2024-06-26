@@ -88,6 +88,12 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? IsWebTracking{ get; set; }
 
         /// <summary>
+        /// 日志主题扩展信息
+        /// </summary>
+        [JsonProperty("Extends")]
+        public TopicExtendInfo Extends{ get; set; }
+
+        /// <summary>
         /// 日志主题分区数量
         /// </summary>
         [JsonProperty("PartitionCount")]
@@ -109,6 +115,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Describes", this.Describes);
             this.SetParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
             this.SetParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
+            this.SetParamObj(map, prefix + "Extends.", this.Extends);
             this.SetParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
         }
     }

@@ -60,6 +60,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("RawJobs")]
         public string[] RawJobs{ get; set; }
 
+        /// <summary>
+        /// 要删除的Probe名字列表
+        /// </summary>
+        [JsonProperty("Probes")]
+        public string[] Probes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArraySimple(map, prefix + "ServiceMonitors.", this.ServiceMonitors);
             this.SetParamArraySimple(map, prefix + "PodMonitors.", this.PodMonitors);
             this.SetParamArraySimple(map, prefix + "RawJobs.", this.RawJobs);
+            this.SetParamArraySimple(map, prefix + "Probes.", this.Probes);
         }
     }
 }

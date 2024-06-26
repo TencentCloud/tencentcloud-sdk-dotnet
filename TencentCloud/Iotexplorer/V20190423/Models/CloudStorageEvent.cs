@@ -48,6 +48,13 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("EventId")]
         public string EventId{ get; set; }
 
+        /// <summary>
+        /// 事件录像上传状态，Finished: 全部上传成功 Partial: 部分上传成功 Failed: 上传失败	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UploadStatus")]
+        public string UploadStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +65,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Thumbnail", this.Thumbnail);
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
+            this.SetParamSimple(map, prefix + "UploadStatus", this.UploadStatus);
         }
     }
 }

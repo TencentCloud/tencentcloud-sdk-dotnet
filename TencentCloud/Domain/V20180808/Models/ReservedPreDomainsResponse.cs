@@ -37,6 +37,12 @@ namespace TencentCloud.Domain.V20180808.Models
         public FailReservedDomainInfo[] FailDomainList{ get; set; }
 
         /// <summary>
+        /// 域名预定成功详情
+        /// </summary>
+        [JsonProperty("SucDomains")]
+        public SucDomainInfo[] SucDomains{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Domain.V20180808.Models
         {
             this.SetParamArraySimple(map, prefix + "SucDomainList.", this.SucDomainList);
             this.SetParamArrayObj(map, prefix + "FailDomainList.", this.FailDomainList);
+            this.SetParamArrayObj(map, prefix + "SucDomains.", this.SucDomains);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

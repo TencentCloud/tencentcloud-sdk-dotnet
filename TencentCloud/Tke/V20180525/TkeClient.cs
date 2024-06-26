@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1034";
+       private const string sdkVersion = "SDK_NET_3.0.1035";
 
         /// <summary>
         /// Client constructor.
@@ -684,7 +684,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 创建prometheus配置
+        /// 创建集群采集配置
         /// </summary>
         /// <param name="req"><see cref="CreatePrometheusConfigRequest"/></param>
         /// <returns><see cref="CreatePrometheusConfigResponse"/></returns>
@@ -694,7 +694,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 创建prometheus配置
+        /// 创建集群采集配置
         /// </summary>
         /// <param name="req"><see cref="CreatePrometheusConfigRequest"/></param>
         /// <returns><see cref="CreatePrometheusConfigResponse"/></returns>
@@ -747,7 +747,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 以Yaml的方式创建聚合规则
+        /// 创建聚合规则yaml方式
         /// </summary>
         /// <param name="req"><see cref="CreatePrometheusRecordRuleYamlRequest"/></param>
         /// <returns><see cref="CreatePrometheusRecordRuleYamlResponse"/></returns>
@@ -757,7 +757,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 以Yaml的方式创建聚合规则
+        /// 创建聚合规则yaml方式
         /// </summary>
         /// <param name="req"><see cref="CreatePrometheusRecordRuleYamlRequest"/></param>
         /// <returns><see cref="CreatePrometheusRecordRuleYamlResponse"/></returns>
@@ -1293,7 +1293,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 删除Prometheus配置，如果目标不存在，将返回成功
+        /// 删除集群采集配置
         /// </summary>
         /// <param name="req"><see cref="DeletePrometheusConfigRequest"/></param>
         /// <returns><see cref="DeletePrometheusConfigResponse"/></returns>
@@ -1303,7 +1303,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 删除Prometheus配置，如果目标不存在，将返回成功
+        /// 删除集群采集配置
         /// </summary>
         /// <param name="req"><see cref="DeletePrometheusConfigRequest"/></param>
         /// <returns><see cref="DeletePrometheusConfigResponse"/></returns>
@@ -1314,7 +1314,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 删除聚合实例
+        /// 删除聚合规则
         /// </summary>
         /// <param name="req"><see cref="DeletePrometheusRecordRuleYamlRequest"/></param>
         /// <returns><see cref="DeletePrometheusRecordRuleYamlResponse"/></returns>
@@ -1324,7 +1324,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 删除聚合实例
+        /// 删除聚合规则
         /// </summary>
         /// <param name="req"><see cref="DeletePrometheusRecordRuleYamlRequest"/></param>
         /// <returns><see cref="DeletePrometheusRecordRuleYamlResponse"/></returns>
@@ -2809,7 +2809,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 拉取Prometheus配置
+        /// 获取集群采集配置
         /// </summary>
         /// <param name="req"><see cref="DescribePrometheusConfigRequest"/></param>
         /// <returns><see cref="DescribePrometheusConfigResponse"/></returns>
@@ -2819,7 +2819,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 拉取Prometheus配置
+        /// 获取集群采集配置
         /// </summary>
         /// <param name="req"><see cref="DescribePrometheusConfigRequest"/></param>
         /// <returns><see cref="DescribePrometheusConfigResponse"/></returns>
@@ -4090,7 +4090,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 修改prometheus配置，如果配置项不存在，则会新增
+        /// 修改集群采集配置
         /// </summary>
         /// <param name="req"><see cref="ModifyPrometheusConfigRequest"/></param>
         /// <returns><see cref="ModifyPrometheusConfigResponse"/></returns>
@@ -4100,7 +4100,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 修改prometheus配置，如果配置项不存在，则会新增
+        /// 修改集群采集配置
         /// </summary>
         /// <param name="req"><see cref="ModifyPrometheusConfigRequest"/></param>
         /// <returns><see cref="ModifyPrometheusConfigResponse"/></returns>
@@ -4132,7 +4132,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 通过yaml的方式修改Prometheus聚合实例
+        /// 修改聚合规则yaml方式
         /// </summary>
         /// <param name="req"><see cref="ModifyPrometheusRecordRuleYamlRequest"/></param>
         /// <returns><see cref="ModifyPrometheusRecordRuleYamlResponse"/></returns>
@@ -4142,7 +4142,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 通过yaml的方式修改Prometheus聚合实例
+        /// 修改聚合规则yaml方式
         /// </summary>
         /// <param name="req"><see cref="ModifyPrometheusRecordRuleYamlRequest"/></param>
         /// <returns><see cref="ModifyPrometheusRecordRuleYamlResponse"/></returns>

@@ -49,6 +49,12 @@ namespace TencentCloud.Tke.V20180525.Models
         public PrometheusConfigItem[] RawJobs{ get; set; }
 
         /// <summary>
+        /// Probe配置
+        /// </summary>
+        [JsonProperty("Probes")]
+        public PrometheusConfigItem[] Probes{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArrayObj(map, prefix + "ServiceMonitors.", this.ServiceMonitors);
             this.SetParamArrayObj(map, prefix + "PodMonitors.", this.PodMonitors);
             this.SetParamArrayObj(map, prefix + "RawJobs.", this.RawJobs);
+            this.SetParamArrayObj(map, prefix + "Probes.", this.Probes);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
