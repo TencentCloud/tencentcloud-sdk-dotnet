@@ -42,7 +42,6 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>militant：武装分子；</li>
         /// <li>explosion：爆炸火灾；</li>
         /// <li>terrorists：涉敏人物；</li>
-        /// <li>scenario：涉敏画面。</li>
         /// </summary>
         [JsonProperty("LabelSet")]
         public string[] LabelSet{ get; set; }

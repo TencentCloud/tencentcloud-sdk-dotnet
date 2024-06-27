@@ -174,6 +174,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("RefundMark")]
         public long? RefundMark{ get; set; }
 
+        /// <summary>
+        /// 是否有改签费标识（0：没有，1：有）
+        /// </summary>
+        [JsonProperty("TicketChangeMark")]
+        public long? TicketChangeMark{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +211,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "QRCodeMark", this.QRCodeMark);
             this.SetParamSimple(map, prefix + "ReimburseOnlyMark", this.ReimburseOnlyMark);
             this.SetParamSimple(map, prefix + "RefundMark", this.RefundMark);
+            this.SetParamSimple(map, prefix + "TicketChangeMark", this.TicketChangeMark);
         }
     }
 }

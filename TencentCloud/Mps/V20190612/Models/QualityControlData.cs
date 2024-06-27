@@ -46,7 +46,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? QualityEvaluationScore{ get; set; }
 
         /// <summary>
-        /// 质检检出异常项。
+        /// 内容质检检出异常项。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QualityControlResultSet")]

@@ -28,7 +28,7 @@ namespace TencentCloud.Cwp.V20180228
 
        private const string endpoint = "cwp.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.1035";
+       private const string sdkVersion = "SDK_NET_3.0.1036";
 
         /// <summary>
         /// Client constructor.
@@ -8099,31 +8099,6 @@ namespace TencentCloud.Cwp.V20180228
         public ExportAttackEventsResponse ExportAttackEventsSync(ExportAttackEventsRequest req)
         {
             return InternalRequestAsync<ExportAttackEventsResponse>(req, "ExportAttackEvents")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// ExportAttackEvents接口替代
-        /// 
-        /// 导出网络攻击日志
-        /// </summary>
-        /// <param name="req"><see cref="ExportAttackLogsRequest"/></param>
-        /// <returns><see cref="ExportAttackLogsResponse"/></returns>
-        public Task<ExportAttackLogsResponse> ExportAttackLogs(ExportAttackLogsRequest req)
-        {
-            return InternalRequestAsync<ExportAttackLogsResponse>(req, "ExportAttackLogs");
-        }
-
-        /// <summary>
-        /// ExportAttackEvents接口替代
-        /// 
-        /// 导出网络攻击日志
-        /// </summary>
-        /// <param name="req"><see cref="ExportAttackLogsRequest"/></param>
-        /// <returns><see cref="ExportAttackLogsResponse"/></returns>
-        public ExportAttackLogsResponse ExportAttackLogsSync(ExportAttackLogsRequest req)
-        {
-            return InternalRequestAsync<ExportAttackLogsResponse>(req, "ExportAttackLogs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

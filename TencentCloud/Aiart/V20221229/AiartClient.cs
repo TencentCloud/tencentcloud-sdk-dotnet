@@ -28,7 +28,7 @@ namespace TencentCloud.Aiart.V20221229
 
        private const string endpoint = "aiart.tencentcloudapi.com";
        private const string version = "2022-12-29";
-       private const string sdkVersion = "SDK_NET_3.0.1035";
+       private const string sdkVersion = "SDK_NET_3.0.1036";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,29 @@ namespace TencentCloud.Aiart.V20221229
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 百变头像接口将根据输入的人像照片，生成风格百变的头像。
+        /// 百变头像默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="GenerateAvatarRequest"/></param>
+        /// <returns><see cref="GenerateAvatarResponse"/></returns>
+        public Task<GenerateAvatarResponse> GenerateAvatar(GenerateAvatarRequest req)
+        {
+            return InternalRequestAsync<GenerateAvatarResponse>(req, "GenerateAvatar");
+        }
+
+        /// <summary>
+        /// 百变头像接口将根据输入的人像照片，生成风格百变的头像。
+        /// 百变头像默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="GenerateAvatarRequest"/></param>
+        /// <returns><see cref="GenerateAvatarResponse"/></returns>
+        public GenerateAvatarResponse GenerateAvatarSync(GenerateAvatarRequest req)
+        {
+            return InternalRequestAsync<GenerateAvatarResponse>(req, "GenerateAvatar")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

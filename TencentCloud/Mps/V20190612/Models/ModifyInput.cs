@@ -105,6 +105,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
+        /// <summary>
+        /// 可用区，非必填，最多支持输入两个可用区，对于需改接口，只要第二个可用区会参与到资源分配。如果input开启容灾或者涉及RTSP_PULL协议切换时有效(会重新分配地址)。	
+        /// </summary>
+        [JsonProperty("Zones")]
+        public string[] Zones{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -124,6 +130,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
             this.SetParamObj(map, prefix + "ResilientStream.", this.ResilientStream);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
         }
     }
 }

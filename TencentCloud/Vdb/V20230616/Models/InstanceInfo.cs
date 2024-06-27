@@ -199,6 +199,20 @@ namespace TencentCloud.Vdb.V20230616.Models
         [JsonProperty("WanAddress")]
         public string WanAddress{ get; set; }
 
+        /// <summary>
+        /// 隔离时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsolateAt")]
+        public string IsolateAt{ get; set; }
+
+        /// <summary>
+        /// 是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoRenew")]
+        public long? AutoRenew{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -230,6 +244,8 @@ namespace TencentCloud.Vdb.V20230616.Models
             this.SetParamSimple(map, prefix + "ExpiredAt", this.ExpiredAt);
             this.SetParamSimple(map, prefix + "IsNoExpired", this.IsNoExpired);
             this.SetParamSimple(map, prefix + "WanAddress", this.WanAddress);
+            this.SetParamSimple(map, prefix + "IsolateAt", this.IsolateAt);
+            this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         }
     }
 }

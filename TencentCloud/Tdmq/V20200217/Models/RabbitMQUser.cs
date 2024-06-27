@@ -74,6 +74,20 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
+        /// <summary>
+        /// 单个用户最大可用连接数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxConnections")]
+        public long? MaxConnections{ get; set; }
+
+        /// <summary>
+        /// 单个用户最大可用通道数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxChannels")]
+        public long? MaxChannels{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +102,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "MaxConnections", this.MaxConnections);
+            this.SetParamSimple(map, prefix + "MaxChannels", this.MaxChannels);
         }
     }
 }

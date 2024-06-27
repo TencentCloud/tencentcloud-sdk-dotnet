@@ -25,14 +25,14 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
-        /// 设备ID(只支持32位)
+        /// 设备ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 设备唯一标识符
+        /// 设备唯一标识码，在ioa中每个设备有唯一标识码
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mid")]
@@ -46,14 +46,14 @@ namespace TencentCloud.Ioa.V20220601.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 设备所在分组ID(只支持32位)
+        /// 设备所在分组ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// OS平台(只支持32位)
+        /// OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OsType")]
@@ -67,7 +67,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 在线状态 2 在线 0，1 离线(只支持32位)
+        /// 在线状态，2：在线、0或者1:离线
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OnlineStatus")]
@@ -102,7 +102,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         public string ConnActiveTime{ get; set; }
 
         /// <summary>
-        /// 设备是否加锁 1 锁定 0 2 非锁定(只支持32位)
+        /// 设备是否加锁 ，1：锁定 0或者2：未锁定。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Locked")]
@@ -144,7 +144,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         public long? CriticalVulListCount{ get; set; }
 
         /// <summary>
-        /// 设备名 和Name相同，保留参数
+        /// 设备名，和Name相同
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComputerName")]
@@ -165,14 +165,14 @@ namespace TencentCloud.Ioa.V20220601.Models
         public string MacAddr{ get; set; }
 
         /// <summary>
-        /// 漏洞数(只支持32位)
+        /// 漏洞数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulCount")]
         public long? VulCount{ get; set; }
 
         /// <summary>
-        /// 病毒风险数(只支持32位)
+        /// 病毒风险数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskCount")]
@@ -221,7 +221,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 防火墙状态(只支持32位)
+        /// 防火墙状态，不等于0表示开启
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FirewallStatus")]
@@ -249,7 +249,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         public string NGNStrategyVer{ get; set; }
 
         /// <summary>
-        /// 最近登录账号
+        /// 最近登录账户的账号
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IOAUserName")]
@@ -312,7 +312,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         public string AccountGroupName{ get; set; }
 
         /// <summary>
-        /// 登录账号姓名
+        /// 最近登录账户的姓名
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccountName")]

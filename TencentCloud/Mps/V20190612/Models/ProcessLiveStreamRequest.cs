@@ -67,7 +67,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiAnalysisTaskInput AiAnalysisTask{ get; set; }
 
         /// <summary>
-        /// 视频内容质检类型任务参数。
+        /// 媒体质检类型任务参数。
         /// </summary>
         [JsonProperty("AiQualityControlTask")]
         public AiQualityControlTaskInput AiQualityControlTask{ get; set; }

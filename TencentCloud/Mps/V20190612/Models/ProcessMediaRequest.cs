@@ -81,7 +81,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiRecognitionTaskInput AiRecognitionTask{ get; set; }
 
         /// <summary>
-        /// 视频质检类型任务参数。
+        /// 媒体质检类型任务参数。
         /// </summary>
         [JsonProperty("AiQualityControlTask")]
         public AiQualityControlTaskInput AiQualityControlTask{ get; set; }
@@ -99,7 +99,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? TasksPriority{ get; set; }
 
         /// <summary>
-        /// 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+        /// 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不传该参数或者参数为空字符串则本次请求不做去重操作。
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }

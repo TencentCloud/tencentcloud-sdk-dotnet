@@ -48,6 +48,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 表示是自动(0)还是托管伸缩(1)
+        /// </summary>
+        [JsonProperty("RecordSource")]
+        public long? RecordSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "RecordSource", this.RecordSource);
         }
     }
 }

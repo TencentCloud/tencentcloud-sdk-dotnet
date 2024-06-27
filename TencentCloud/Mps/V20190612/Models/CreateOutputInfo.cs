@@ -85,6 +85,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
+        /// <summary>
+        /// 可用区，output最多只支持输入一个可用区。	
+        /// </summary>
+        [JsonProperty("Zones")]
+        public string[] Zones{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +107,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArraySimple(map, prefix + "AllowIpList.", this.AllowIpList);
             this.SetParamSimple(map, prefix + "MaxConcurrent", this.MaxConcurrent);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
         }
     }
 }

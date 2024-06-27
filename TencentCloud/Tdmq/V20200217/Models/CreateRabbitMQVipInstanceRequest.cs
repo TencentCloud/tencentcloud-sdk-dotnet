@@ -73,7 +73,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public bool? EnableCreateDefaultHaMirrorQueue{ get; set; }
 
         /// <summary>
-        /// 自动续费,不传默认为true
+        /// 预付费使用。自动续费,不传默认为true
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public bool? AutoRenewFlag{ get; set; }
@@ -83,6 +83,36 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
+
+        /// <summary>
+        /// 付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public ulong? PayMode{ get; set; }
+
+        /// <summary>
+        /// 集群版本，不传默认为 3.8.30，可选值为 3.8.30 和 3.11.8
+        /// </summary>
+        [JsonProperty("ClusterVersion")]
+        public string ClusterVersion{ get; set; }
+
+        /// <summary>
+        /// 是否国际站请求，默认 false
+        /// </summary>
+        [JsonProperty("IsIntl")]
+        public bool? IsIntl{ get; set; }
+
+        /// <summary>
+        /// 资源标签列表
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public Tag[] ResourceTags{ get; set; }
+
+        /// <summary>
+        /// 公网带宽大小，单位 M
+        /// </summary>
+        [JsonProperty("Bandwidth")]
+        public ulong? Bandwidth{ get; set; }
 
 
         /// <summary>
@@ -100,6 +130,11 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "EnableCreateDefaultHaMirrorQueue", this.EnableCreateDefaultHaMirrorQueue);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
+            this.SetParamSimple(map, prefix + "IsIntl", this.IsIntl);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+            this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         }
     }
 }

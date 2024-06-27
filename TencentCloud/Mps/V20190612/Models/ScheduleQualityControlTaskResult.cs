@@ -49,13 +49,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// 质检任务的输入。
+        /// 媒体质检任务的输入。
         /// </summary>
         [JsonProperty("Input")]
         public AiQualityControlTaskInput Input{ get; set; }
 
         /// <summary>
-        /// 质检任务的输出。
+        /// 媒体质检任务的输出。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Output")]

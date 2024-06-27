@@ -106,6 +106,20 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("RetryInfo")]
         public string RetryInfo{ get; set; }
 
+        /// <summary>
+        /// 重试英文描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RetryEnReason")]
+        public string RetryEnReason{ get; set; }
+
+        /// <summary>
+        /// 重试描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RetryReason")]
+        public string RetryReason{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -125,6 +139,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "CompensateCount", this.CompensateCount);
             this.SetParamSimple(map, prefix + "RetryCount", this.RetryCount);
             this.SetParamSimple(map, prefix + "RetryInfo", this.RetryInfo);
+            this.SetParamSimple(map, prefix + "RetryEnReason", this.RetryEnReason);
+            this.SetParamSimple(map, prefix + "RetryReason", this.RetryReason);
         }
     }
 }

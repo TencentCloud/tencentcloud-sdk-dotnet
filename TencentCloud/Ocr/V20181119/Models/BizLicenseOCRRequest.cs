@@ -49,6 +49,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("EnableCopyWarn")]
         public bool? EnableCopyWarn{ get; set; }
 
+        /// <summary>
+        /// 是否返回自动拼接的有效期，默认为true
+        /// </summary>
+        [JsonProperty("EnablePeriodComplete")]
+        public bool? EnablePeriodComplete{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "EnableCopyWarn", this.EnableCopyWarn);
+            this.SetParamSimple(map, prefix + "EnablePeriodComplete", this.EnablePeriodComplete);
         }
     }
 }

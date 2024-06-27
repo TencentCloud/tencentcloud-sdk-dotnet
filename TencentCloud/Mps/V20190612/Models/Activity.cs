@@ -37,6 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>action-image-sprite：雪碧图</li>
         /// <li>action-snapshotByTimeOffset: 时间点截图</li>
         /// <li>action-adaptive-substream：自适应码流</li>
+        /// <li>action-AIQualityControl：媒体质检</li>
         /// 
         /// 
         /// 

@@ -37,6 +37,12 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? StrategyType{ get; set; }
 
         /// <summary>
+        /// 按负载扩缩容的指标。
+        /// </summary>
+        [JsonProperty("LoadAutoScaleStrategies")]
+        public LoadAutoScaleStrategy[] LoadAutoScaleStrategies{ get; set; }
+
+        /// <summary>
         /// 按时间扩缩容的规则。
         /// </summary>
         [JsonProperty("TimeAutoScaleStrategies")]
@@ -56,6 +62,7 @@ namespace TencentCloud.Emr.V20190103.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "StrategyType", this.StrategyType);
+            this.SetParamArrayObj(map, prefix + "LoadAutoScaleStrategies.", this.LoadAutoScaleStrategies);
             this.SetParamArrayObj(map, prefix + "TimeAutoScaleStrategies.", this.TimeAutoScaleStrategies);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }

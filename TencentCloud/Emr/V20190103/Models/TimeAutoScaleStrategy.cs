@@ -53,7 +53,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? ScaleNum{ get; set; }
 
         /// <summary>
-        /// 规则状态，1表示有效，2表示无效，3表示暂停。
+        /// 规则状态，1表示有效，2表示无效，3表示暂停。必须填写
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrategyStatus")]
@@ -141,7 +141,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? MaxUse{ get; set; }
 
         /// <summary>
-        /// 节点部署服务列表。
+        /// 节点部署服务列表。部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SoftDeployInfo")]

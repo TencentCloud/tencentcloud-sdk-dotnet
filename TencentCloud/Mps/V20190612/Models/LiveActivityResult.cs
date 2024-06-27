@@ -27,6 +27,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// 原子任务类型。
         /// <li>LiveRecord：直播录制。</li>
+        /// <li>AiQualityControl：媒体质检。</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActivityType")]

@@ -31,6 +31,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("LiveRecordTask")]
         public LiveScheduleLiveRecordTaskResult LiveRecordTask{ get; set; }
 
+        /// <summary>
+        /// 媒体质检任务输出
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LiveQualityControlTask")]
+        public ScheduleQualityControlTaskResult LiveQualityControlTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +45,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "LiveRecordTask.", this.LiveRecordTask);
+            this.SetParamObj(map, prefix + "LiveQualityControlTask.", this.LiveQualityControlTask);
         }
     }
 }

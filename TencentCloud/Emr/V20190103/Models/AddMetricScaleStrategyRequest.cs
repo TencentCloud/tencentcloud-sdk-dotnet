@@ -31,10 +31,16 @@ namespace TencentCloud.Emr.V20190103.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 1表示按负载规则扩容，2表示按时间规则扩容。
+        /// 1表示按负载规则扩容，2表示按时间规则扩容。必须填写，并且和下面的规则策略匹配
         /// </summary>
         [JsonProperty("StrategyType")]
         public long? StrategyType{ get; set; }
+
+        /// <summary>
+        /// 按负载扩容的规则。
+        /// </summary>
+        [JsonProperty("LoadAutoScaleStrategy")]
+        public LoadAutoScaleStrategy LoadAutoScaleStrategy{ get; set; }
 
         /// <summary>
         /// 按时间扩缩容的规则。
@@ -50,6 +56,7 @@ namespace TencentCloud.Emr.V20190103.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "StrategyType", this.StrategyType);
+            this.SetParamObj(map, prefix + "LoadAutoScaleStrategy.", this.LoadAutoScaleStrategy);
             this.SetParamObj(map, prefix + "TimeAutoScaleStrategy.", this.TimeAutoScaleStrategy);
         }
     }

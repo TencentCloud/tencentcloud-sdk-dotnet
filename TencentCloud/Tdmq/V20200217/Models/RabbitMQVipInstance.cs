@@ -138,6 +138,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Vpcs")]
         public VpcEndpointInfo[] Vpcs{ get; set; }
 
+        /// <summary>
+        /// 创建时间，毫秒为单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public ulong? CreateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -162,6 +169,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
             this.SetParamSimple(map, prefix + "PublicAccessEndpoint", this.PublicAccessEndpoint);
             this.SetParamArrayObj(map, prefix + "Vpcs.", this.Vpcs);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

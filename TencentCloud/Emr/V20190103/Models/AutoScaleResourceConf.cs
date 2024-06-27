@@ -69,6 +69,69 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("GraceDownFlag")]
         public bool? GraceDownFlag{ get; set; }
 
+        /// <summary>
+        /// "CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HardwareType")]
+        public string HardwareType{ get; set; }
+
+        /// <summary>
+        /// "POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public string PayMode{ get; set; }
+
+        /// <summary>
+        /// 竞价实例优先的场景下，按量计费资源数量的最低百分比，整数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PostPayPercentMin")]
+        public long? PostPayPercentMin{ get; set; }
+
+        /// <summary>
+        /// 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；默认不勾选（0），勾选（1)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ChangeToPod")]
+        public long? ChangeToPod{ get; set; }
+
+        /// <summary>
+        /// 伸缩组名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupName")]
+        public string GroupName{ get; set; }
+
+        /// <summary>
+        /// 标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("YarnNodeLabel")]
+        public string YarnNodeLabel{ get; set; }
+
+        /// <summary>
+        /// 伸缩组状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupStatus")]
+        public long? GroupStatus{ get; set; }
+
+        /// <summary>
+        /// 并行伸缩 0关闭；1开启
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Parallel")]
+        public long? Parallel{ get; set; }
+
+        /// <summary>
+        /// 是否支持MNode
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableMNode")]
+        public long? EnableMNode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +145,15 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "StrategyType", this.StrategyType);
             this.SetParamSimple(map, prefix + "NextTimeCanScale", this.NextTimeCanScale);
             this.SetParamSimple(map, prefix + "GraceDownFlag", this.GraceDownFlag);
+            this.SetParamSimple(map, prefix + "HardwareType", this.HardwareType);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "PostPayPercentMin", this.PostPayPercentMin);
+            this.SetParamSimple(map, prefix + "ChangeToPod", this.ChangeToPod);
+            this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
+            this.SetParamSimple(map, prefix + "YarnNodeLabel", this.YarnNodeLabel);
+            this.SetParamSimple(map, prefix + "GroupStatus", this.GroupStatus);
+            this.SetParamSimple(map, prefix + "Parallel", this.Parallel);
+            this.SetParamSimple(map, prefix + "EnableMNode", this.EnableMNode);
         }
     }
 }

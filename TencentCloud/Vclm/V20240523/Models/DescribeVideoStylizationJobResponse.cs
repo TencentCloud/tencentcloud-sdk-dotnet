@@ -15,26 +15,43 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Vclm.V20240523.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ExportAttackLogsResponse : AbstractModel
+    public class DescribeVideoStylizationJobResponse : AbstractModel
     {
         
         /// <summary>
-        /// 已废弃
+        /// 任务ID。
         /// </summary>
-        [JsonProperty("DownloadUrl")]
-        public string DownloadUrl{ get; set; }
+        [JsonProperty("JobId")]
+        public string JobId{ get; set; }
 
         /// <summary>
-        /// 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
+        /// 任务状态码：
+        /// JobInit:  "初始化中"
+        /// JobModerationFailed: "审核失败",
+        /// JobRunning: "处理中",
+        /// JobFailed: "处理失败",
+        /// JobSuccess: "处理完成"。
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("StatusCode")]
+        public string StatusCode{ get; set; }
+
+        /// <summary>
+        /// 任务状态描述。
+        /// </summary>
+        [JsonProperty("StatusMsg")]
+        public string StatusMsg{ get; set; }
+
+        /// <summary>
+        /// 处理结果视频Url。URL有效期为24小时。
+        /// </summary>
+        [JsonProperty("ResultVideoUrl")]
+        public string ResultVideoUrl{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +65,10 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "JobId", this.JobId);
+            this.SetParamSimple(map, prefix + "StatusCode", this.StatusCode);
+            this.SetParamSimple(map, prefix + "StatusMsg", this.StatusMsg);
+            this.SetParamSimple(map, prefix + "ResultVideoUrl", this.ResultVideoUrl);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

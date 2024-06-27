@@ -97,6 +97,41 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("MaxQueuesPerTopic")]
         public ulong? MaxQueuesPerTopic{ get; set; }
 
+        /// <summary>
+        /// 最大可设置消息保留时间，小时为单位	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxRetention")]
+        public long? MaxRetention{ get; set; }
+
+        /// <summary>
+        /// 最小可设置消息保留时间，小时为单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MinRetention")]
+        public long? MinRetention{ get; set; }
+
+        /// <summary>
+        /// 实例消息保留时间，小时为单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Retention")]
+        public long? Retention{ get; set; }
+
+        /// <summary>
+        /// Topic个数最小配额，即免费额度，默认为集群规格单节点最小配额*节点个数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TopicNumLowerLimit")]
+        public long? TopicNumLowerLimit{ get; set; }
+
+        /// <summary>
+        /// Topic个数最大配额，默认为集群规格单节点最大配额*节点个数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TopicNumUpperLimit")]
+        public long? TopicNumUpperLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +150,11 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamArrayObj(map, prefix + "NodeDistribution.", this.NodeDistribution);
             this.SetParamArrayObj(map, prefix + "TopicDistribution.", this.TopicDistribution);
             this.SetParamSimple(map, prefix + "MaxQueuesPerTopic", this.MaxQueuesPerTopic);
+            this.SetParamSimple(map, prefix + "MaxRetention", this.MaxRetention);
+            this.SetParamSimple(map, prefix + "MinRetention", this.MinRetention);
+            this.SetParamSimple(map, prefix + "Retention", this.Retention);
+            this.SetParamSimple(map, prefix + "TopicNumLowerLimit", this.TopicNumLowerLimit);
+            this.SetParamSimple(map, prefix + "TopicNumUpperLimit", this.TopicNumUpperLimit);
         }
     }
 }

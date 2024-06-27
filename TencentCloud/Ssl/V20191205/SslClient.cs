@@ -28,7 +28,7 @@ namespace TencentCloud.Ssl.V20191205
 
        private const string endpoint = "ssl.tencentcloudapi.com";
        private const string version = "2019-12-05";
-       private const string sdkVersion = "SDK_NET_3.0.1035";
+       private const string sdkVersion = "SDK_NET_3.0.1036";
 
         /// <summary>
         /// Client constructor.
@@ -260,6 +260,27 @@ namespace TencentCloud.Ssl.V20191205
         public DeleteCertificateResponse DeleteCertificateSync(DeleteCertificateRequest req)
         {
             return InternalRequestAsync<DeleteCertificateResponse>(req, "DeleteCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量删除证书，删除证书前支持查询证书是否关联了腾讯云云资源 （需自定义配置参数，参数名称：IsSync）
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCertificatesRequest"/></param>
+        /// <returns><see cref="DeleteCertificatesResponse"/></returns>
+        public Task<DeleteCertificatesResponse> DeleteCertificates(DeleteCertificatesRequest req)
+        {
+            return InternalRequestAsync<DeleteCertificatesResponse>(req, "DeleteCertificates");
+        }
+
+        /// <summary>
+        /// 批量删除证书，删除证书前支持查询证书是否关联了腾讯云云资源 （需自定义配置参数，参数名称：IsSync）
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCertificatesRequest"/></param>
+        /// <returns><see cref="DeleteCertificatesResponse"/></returns>
+        public DeleteCertificatesResponse DeleteCertificatesSync(DeleteCertificatesRequest req)
+        {
+            return InternalRequestAsync<DeleteCertificatesResponse>(req, "DeleteCertificates")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -30,6 +30,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// 是否国际站请求，默认 false
+        /// </summary>
+        [JsonProperty("IsIntl")]
+        public bool? IsIntl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "IsIntl", this.IsIntl);
         }
     }
 }

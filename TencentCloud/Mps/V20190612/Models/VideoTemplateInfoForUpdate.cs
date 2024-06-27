@@ -36,7 +36,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>dnxhd：DNxHD 编码</li>
         /// 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
         /// 
-        /// 注意：av1 编码容器目前只支持 mp4 ，webm，mkv，mov。
+        /// 注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
         /// 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
         /// 注意：VP8、VP9编码容器目前只支持webm，mkv。
         /// 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
@@ -46,7 +46,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Codec{ get; set; }
 
         /// <summary>
-        /// 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
+        /// 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Fps")]
@@ -126,11 +126,11 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// hls 分片类型，可选值：
-        /// <li>6：HLS+TS 切片</li>
+        /// <li>0：HLS+TS 切片</li>
         /// <li>2：HLS+TS byte range</li>
         /// <li>7：HLS+MP4 切片</li>
         /// <li>5：HLS+MP4 byte range</li>
-        /// 默认值：6
+        /// 默认值：0
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SegmentType")]

@@ -25,6 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
+        /// 按负载伸缩规则
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LoadAutoScaleStrategies")]
+        public LoadAutoScaleStrategy[] LoadAutoScaleStrategies{ get; set; }
+
+        /// <summary>
         /// 按时间伸缩规则
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -43,6 +50,7 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "LoadAutoScaleStrategies.", this.LoadAutoScaleStrategies);
             this.SetParamArrayObj(map, prefix + "TimeBasedAutoScaleStrategies.", this.TimeBasedAutoScaleStrategies);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
