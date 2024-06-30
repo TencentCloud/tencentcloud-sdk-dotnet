@@ -59,6 +59,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("StopParams")]
         public StopParams StopParams{ get; set; }
 
+        /// <summary>
+        /// 当OpType为<li>StopMonitor</li>才有用，true表示进入维护模式但是仍然监控进程但是不拉起进程
+        /// </summary>
+        [JsonProperty("KeepMonitorButNotRecoverProcess")]
+        public bool? KeepMonitorButNotRecoverProcess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +76,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamObj(map, prefix + "OpScope.", this.OpScope);
             this.SetParamObj(map, prefix + "StrategyConfig.", this.StrategyConfig);
             this.SetParamObj(map, prefix + "StopParams.", this.StopParams);
+            this.SetParamSimple(map, prefix + "KeepMonitorButNotRecoverProcess", this.KeepMonitorButNotRecoverProcess);
         }
     }
 }

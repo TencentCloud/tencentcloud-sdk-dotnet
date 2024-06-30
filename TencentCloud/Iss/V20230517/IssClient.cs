@@ -28,7 +28,7 @@ namespace TencentCloud.Iss.V20230517
 
        private const string endpoint = "iss.tencentcloudapi.com";
        private const string version = "2023-05-17";
-       private const string sdkVersion = "SDK_NET_3.0.1036";
+       private const string sdkVersion = "SDK_NET_3.0.1037";
 
         /// <summary>
         /// Client constructor.
@@ -1511,6 +1511,27 @@ namespace TencentCloud.Iss.V20230517
         }
 
         /// <summary>
+        /// 查询禁播通道列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryForbidPlayChannelListRequest"/></param>
+        /// <returns><see cref="QueryForbidPlayChannelListResponse"/></returns>
+        public Task<QueryForbidPlayChannelListResponse> QueryForbidPlayChannelList(QueryForbidPlayChannelListRequest req)
+        {
+            return InternalRequestAsync<QueryForbidPlayChannelListResponse>(req, "QueryForbidPlayChannelList");
+        }
+
+        /// <summary>
+        /// 查询禁播通道列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryForbidPlayChannelListRequest"/></param>
+        /// <returns><see cref="QueryForbidPlayChannelListResponse"/></returns>
+        public QueryForbidPlayChannelListResponse QueryForbidPlayChannelListSync(QueryForbidPlayChannelListRequest req)
+        {
+            return InternalRequestAsync<QueryForbidPlayChannelListResponse>(req, "QueryForbidPlayChannelList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于刷新国标设备的通道（接口调用后，触发向设备请求通道列表，新增的通道入库，设备上已删除的通道需自行删除、后台不自动删除）。
         /// </summary>
         /// <param name="req"><see cref="RefreshDeviceChannelRequest"/></param>
@@ -1528,6 +1549,27 @@ namespace TencentCloud.Iss.V20230517
         public RefreshDeviceChannelResponse RefreshDeviceChannelSync(RefreshDeviceChannelRequest req)
         {
             return InternalRequestAsync<RefreshDeviceChannelResponse>(req, "RefreshDeviceChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 禁止主、子账号对视频通道的实况预览
+        /// </summary>
+        /// <param name="req"><see cref="SetForbidPlayChannelsRequest"/></param>
+        /// <returns><see cref="SetForbidPlayChannelsResponse"/></returns>
+        public Task<SetForbidPlayChannelsResponse> SetForbidPlayChannels(SetForbidPlayChannelsRequest req)
+        {
+            return InternalRequestAsync<SetForbidPlayChannelsResponse>(req, "SetForbidPlayChannels");
+        }
+
+        /// <summary>
+        /// 禁止主、子账号对视频通道的实况预览
+        /// </summary>
+        /// <param name="req"><see cref="SetForbidPlayChannelsRequest"/></param>
+        /// <returns><see cref="SetForbidPlayChannelsResponse"/></returns>
+        public SetForbidPlayChannelsResponse SetForbidPlayChannelsSync(SetForbidPlayChannelsRequest req)
+        {
+            return InternalRequestAsync<SetForbidPlayChannelsResponse>(req, "SetForbidPlayChannels")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

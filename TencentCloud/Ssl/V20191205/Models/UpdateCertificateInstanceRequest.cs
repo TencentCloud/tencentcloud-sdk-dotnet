@@ -31,7 +31,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string OldCertificateId{ get; set; }
 
         /// <summary>
-        /// 需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse
+        /// 需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse、cos
         /// </summary>
         [JsonProperty("ResourceTypes")]
         public string[] ResourceTypes{ get; set; }

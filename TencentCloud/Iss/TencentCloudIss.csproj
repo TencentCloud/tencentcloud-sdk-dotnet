@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{57641715-DA21-3068-8276-85056D8B441F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1036</VersionPrefix>
+    <VersionPrefix>3.0.1037</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -84,6 +84,7 @@
     <Compile Include="V20230517\Models\BitRateInfo.cs" />
     <Compile Include="V20230517\Models\BodyAIResultInfo.cs" />
     <Compile Include="V20230517\Models\CarAIResultInfo.cs" />
+    <Compile Include="V20230517\Models\ChannelAttrInfo.cs" />
     <Compile Include="V20230517\Models\ChannelInfo.cs" />
     <Compile Include="V20230517\Models\CheckDomainRequest.cs" />
     <Compile Include="V20230517\Models\CheckDomainResponse.cs" />
@@ -202,6 +203,7 @@
     <Compile Include="V20230517\Models\ListDeviceInfo.cs" />
     <Compile Include="V20230517\Models\ListDevicesRequest.cs" />
     <Compile Include="V20230517\Models\ListDevicesResponse.cs" />
+    <Compile Include="V20230517\Models\ListForbidplayChannelsData.cs" />
     <Compile Include="V20230517\Models\ListGatewayDevicesData.cs" />
     <Compile Include="V20230517\Models\ListGatewayDevicesRequest.cs" />
     <Compile Include="V20230517\Models\ListGatewayDevicesResponse.cs" />
@@ -250,6 +252,8 @@
     <Compile Include="V20230517\Models\PlayRecordData.cs" />
     <Compile Include="V20230517\Models\PlayRecordRequest.cs" />
     <Compile Include="V20230517\Models\PlayRecordResponse.cs" />
+    <Compile Include="V20230517\Models\QueryForbidPlayChannelListRequest.cs" />
+    <Compile Include="V20230517\Models\QueryForbidPlayChannelListResponse.cs" />
     <Compile Include="V20230517\Models\RecordPlanBaseInfo.cs" />
     <Compile Include="V20230517\Models\RecordPlanChannelInfo.cs" />
     <Compile Include="V20230517\Models\RecordPlanOptData.cs" />
@@ -262,6 +266,9 @@
     <Compile Include="V20230517\Models\RecordTimeLine.cs" />
     <Compile Include="V20230517\Models\RefreshDeviceChannelRequest.cs" />
     <Compile Include="V20230517\Models\RefreshDeviceChannelResponse.cs" />
+    <Compile Include="V20230517\Models\SetForbidPlayChannelsRequest.cs" />
+    <Compile Include="V20230517\Models\SetForbidPlayChannelsResponse.cs" />
+    <Compile Include="V20230517\Models\SetForbidplayChannelParam.cs" />
     <Compile Include="V20230517\Models\SmokingAIResultInfo.cs" />
     <Compile Include="V20230517\Models\SnapshotConfig.cs" />
     <Compile Include="V20230517\Models\SubTaskData.cs" />

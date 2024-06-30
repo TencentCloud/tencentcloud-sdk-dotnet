@@ -37,6 +37,13 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public long? Total{ get; set; }
 
         /// <summary>
+        /// 分类统计
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TWeCallCategoryPkgList")]
+        public TWeCallCategoryPkgInfo[] TWeCallCategoryPkgList{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +57,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         {
             this.SetParamArrayObj(map, prefix + "TWeCallPkgList.", this.TWeCallPkgList);
             this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamArrayObj(map, prefix + "TWeCallCategoryPkgList.", this.TWeCallCategoryPkgList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

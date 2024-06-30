@@ -28,7 +28,7 @@ namespace TencentCloud.Ssl.V20191205
 
        private const string endpoint = "ssl.tencentcloudapi.com";
        private const string version = "2019-12-05";
-       private const string sdkVersion = "SDK_NET_3.0.1036";
+       private const string sdkVersion = "SDK_NET_3.0.1037";
 
         /// <summary>
         /// Client constructor.
@@ -201,7 +201,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 创建证书绑定关联云资源异步任务， 该接口用于查询证书关联云资源。 若证书ID已存在查询云资源任务，则结果返回该任务ID。关联云资源类型，支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）。查询关联云资源结果使用DescribeCertificateBindResourceTaskResult接口
+        /// 创建证书绑定关联云资源异步任务， 该接口用于查询证书关联云资源。 若证书ID已存在查询云资源任务，则结果返回该任务ID。关联云资源类型，支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）、cos。查询关联云资源结果使用DescribeCertificateBindResourceTaskResult接口
         /// </summary>
         /// <param name="req"><see cref="CreateCertificateBindResourceSyncTaskRequest"/></param>
         /// <returns><see cref="CreateCertificateBindResourceSyncTaskResponse"/></returns>
@@ -211,7 +211,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 创建证书绑定关联云资源异步任务， 该接口用于查询证书关联云资源。 若证书ID已存在查询云资源任务，则结果返回该任务ID。关联云资源类型，支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）。查询关联云资源结果使用DescribeCertificateBindResourceTaskResult接口
+        /// 创建证书绑定关联云资源异步任务， 该接口用于查询证书关联云资源。 若证书ID已存在查询云资源任务，则结果返回该任务ID。关联云资源类型，支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）、cos。查询关联云资源结果使用DescribeCertificateBindResourceTaskResult接口
         /// </summary>
         /// <param name="req"><see cref="CreateCertificateBindResourceSyncTaskRequest"/></param>
         /// <returns><see cref="CreateCertificateBindResourceSyncTaskResponse"/></returns>
@@ -411,7 +411,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 查询CreateCertificateBindResourceSyncTask任务结果， 返回证书关联云资源异步任务结果， 支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）
+        /// 查询CreateCertificateBindResourceSyncTask任务结果， 返回证书关联云资源异步任务结果， 支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）、cos
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificateBindResourceTaskResultRequest"/></param>
         /// <returns><see cref="DescribeCertificateBindResourceTaskResultResponse"/></returns>
@@ -421,7 +421,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 查询CreateCertificateBindResourceSyncTask任务结果， 返回证书关联云资源异步任务结果， 支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）
+        /// 查询CreateCertificateBindResourceSyncTask任务结果， 返回证书关联云资源异步任务结果， 支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）、cos
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificateBindResourceTaskResultRequest"/></param>
         /// <returns><see cref="DescribeCertificateBindResourceTaskResultResponse"/></returns>

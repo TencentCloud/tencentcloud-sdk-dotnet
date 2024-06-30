@@ -28,7 +28,7 @@ namespace TencentCloud.Tiems.V20190416
 
        private const string endpoint = "tiems.tencentcloudapi.com";
        private const string version = "2019-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.1036";
+       private const string sdkVersion = "SDK_NET_3.0.1037";
 
         /// <summary>
         /// Client constructor.

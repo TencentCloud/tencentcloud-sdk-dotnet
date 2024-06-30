@@ -56,6 +56,9 @@ namespace TencentCloud.Tcr.V20190924.Models
 
         /// <summary>
         /// 过滤条件
+        /// - 按照【标签】过滤
+        ///    Name: Tags
+        ///    Value:   tagKey:tagVal
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

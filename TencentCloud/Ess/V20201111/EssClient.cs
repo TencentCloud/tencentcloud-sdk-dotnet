@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1036";
+       private const string sdkVersion = "SDK_NET_3.0.1037";
 
         /// <summary>
         /// Client constructor.
@@ -1350,10 +1350,15 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 该接口用于获取创建法人章的二维码<br/>
+        /// 该接口用于获取创建法人章的二维码，需要通过微信扫描。扫描后将跳转到腾讯电子签署，进入到创建法人章的流程。
         /// 
         /// **注意**
         /// 1. 该二维码**有效期为7天**，过期后将失效，可重新创建 。
+        /// 2. 每个公司**只能有1个法人章**，无法重复创建或者创建多个
+        /// 
+        /// 法人章的样式可以参考下图索引（也可以自己上传法人印章图片）：
+        /// 
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/36a0a090750c45bb5cac5047ac461b2c.png)
         /// </summary>
         /// <param name="req"><see cref="CreateLegalSealQrCodeRequest"/></param>
         /// <returns><see cref="CreateLegalSealQrCodeResponse"/></returns>
@@ -1363,10 +1368,15 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 该接口用于获取创建法人章的二维码<br/>
+        /// 该接口用于获取创建法人章的二维码，需要通过微信扫描。扫描后将跳转到腾讯电子签署，进入到创建法人章的流程。
         /// 
         /// **注意**
         /// 1. 该二维码**有效期为7天**，过期后将失效，可重新创建 。
+        /// 2. 每个公司**只能有1个法人章**，无法重复创建或者创建多个
+        /// 
+        /// 法人章的样式可以参考下图索引（也可以自己上传法人印章图片）：
+        /// 
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/36a0a090750c45bb5cac5047ac461b2c.png)
         /// </summary>
         /// <param name="req"><see cref="CreateLegalSealQrCodeRequest"/></param>
         /// <returns><see cref="CreateLegalSealQrCodeResponse"/></returns>
@@ -2569,8 +2579,10 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 查询企业印章的列表，需要操作者具有查询印章权限
-        /// 客户指定需要获取的印章数量和偏移量，数量最多100，超过100按100处理；入参InfoType控制印章是否携带授权人信息，为1则携带，为0则返回的授权人信息为空数组。接口调用成功返回印章的信息列表还有企业印章的总数。
+        /// 查询企业印章列表。
+        /// 
+        /// 注：
+        /// 1. 此操作要求操作者具备<b>印章查询权限</b>（若调用者尚无此权限，请联系超级管理员前往Web控制台【组织管理】->【角色管理】添加相应权限）。
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationSealsRequest"/></param>
         /// <returns><see cref="DescribeOrganizationSealsResponse"/></returns>
@@ -2580,8 +2592,10 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 查询企业印章的列表，需要操作者具有查询印章权限
-        /// 客户指定需要获取的印章数量和偏移量，数量最多100，超过100按100处理；入参InfoType控制印章是否携带授权人信息，为1则携带，为0则返回的授权人信息为空数组。接口调用成功返回印章的信息列表还有企业印章的总数。
+        /// 查询企业印章列表。
+        /// 
+        /// 注：
+        /// 1. 此操作要求操作者具备<b>印章查询权限</b>（若调用者尚无此权限，请联系超级管理员前往Web控制台【组织管理】->【角色管理】添加相应权限）。
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationSealsRequest"/></param>
         /// <returns><see cref="DescribeOrganizationSealsResponse"/></returns>

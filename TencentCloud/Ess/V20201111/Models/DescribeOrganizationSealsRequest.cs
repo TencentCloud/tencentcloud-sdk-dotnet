@@ -44,31 +44,25 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 查询信息类型，取值如下：
-        /// <ul>
-        /// <li>0不返回授权用户</li>
-        /// <li>1返回授权用户信息</li>
-        /// </ul>
+        /// 查询授权用户信息类型，取值如下：
+        /// 
+        /// <ul> <li><b>0</b>：（默认）不返回授权用户信息</li> <li><b>1</b>：返回授权用户的信息</li> </ul>
         /// </summary>
         [JsonProperty("InfoType")]
         public long? InfoType{ get; set; }
 
         /// <summary>
-        /// 印章id（没有输入返回所有）
+        /// 印章id，是否查询特定的印章（没有输入返回所有）
         /// </summary>
         [JsonProperty("SealId")]
         public string SealId{ get; set; }
 
         /// <summary>
-        /// 印章类型列表（都是组织机构印章）。
-        /// 为空时查询所有类型的印章。
-        /// 目前支持以下类型：
-        /// <ul>
-        /// <li>OFFICIAL：企业公章；</li>
-        /// <li>CONTRACT：合同专用章；</li>
-        /// <li>ORGANIZATION_SEAL：企业印章(图片上传创建)；</li>
-        /// <li>LEGAL_PERSON_SEAL：法定代表人章</li>
-        /// </ul>
+        /// 印章种类列表（均为组织机构印章）。 若无特定需求，将展示所有类型的印章。 
+        /// 
+        /// 目前支持以下几种：
+        /// 
+        /// <ul> <li><strong>OFFICIAL</strong>：企业公章；</li> <li><strong>CONTRACT</strong>：合同专用章；</li> <li><strong>ORGANIZATION_SEAL</strong>：企业印章（通过图片上传创建）；</li> <li><strong>LEGAL_PERSON_SEAL</strong>：法定代表人章。</li> </ul>
         /// </summary>
         [JsonProperty("SealTypes")]
         public string[] SealTypes{ get; set; }
@@ -81,17 +75,17 @@ namespace TencentCloud.Ess.V20201111.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 查询的印章状态列表。
+        /// 需查询的印章状态列表。
         /// <ul>
-        /// <li>空，只查询启用状态的印章；</li>
-        /// <li>ALL，查询所有状态的印章；</li>
-        /// <li>CHECKING，查询待审核的印章；</li>
-        /// <li>SUCCESS，查询启用状态的印章；</li>
-        /// <li>FAIL，查询印章审核拒绝的印章；</li>
-        /// <li>DISABLE，查询已停用的印章；</li>
-        /// <li>STOPPED，查询已终止的印章；</li>
-        /// <li>VOID，查询已作废的印章；</li>
-        /// <li>INVALID，查询已失效的印章；</li>
+        /// <li>空：（默认）仅查询启用状态的印章；</li>
+        /// <li><strong>ALL</strong>：查询所有状态的印章；</li>
+        /// <li><strong>CHECKING</strong>：查询待审核的印章；</li>
+        /// <li><strong>SUCCESS</strong>：查询启用状态的印章；</li>
+        /// <li><strong>FAIL</strong>：查询印章审核拒绝的印章；</li>
+        /// <li><strong>DISABLE</strong>：查询已停用的印章；</li>
+        /// <li><strong>STOPPED</strong>：查询已终止的印章；</li>
+        /// <li><strong>VOID</strong>：查询已作废的印章；</li>
+        /// <li><strong>INVALID</strong>：查询已失效的印章。</li>
         /// </ul>
         /// </summary>
         [JsonProperty("SealStatuses")]

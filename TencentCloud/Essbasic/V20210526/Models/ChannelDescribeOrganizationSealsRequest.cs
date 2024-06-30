@@ -39,7 +39,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 返回最大数量，最大为100
+        /// 指定分页每页返回的数据条数，单页最大支持 100。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -51,17 +51,15 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 查询信息类型
-        /// 支持的值如下：
-        /// <ul><li>0-默认，不返回授权用户信息</li>
-        /// <li>1-返回授权用户信息</li>
-        /// </ul>
+        /// 查询授权用户信息类型，取值如下：
+        /// 
+        /// <ul> <li><b>0</b>：（默认）不返回授权用户信息</li> <li><b>1</b>：返回授权用户的信息</li> </ul>
         /// </summary>
         [JsonProperty("InfoType")]
         public long? InfoType{ get; set; }
 
         /// <summary>
-        /// 印章id（没有输入返回所有）
+        /// 印章id，是否查询特定的印章（没有输入返回所有）
         /// 
         /// 注:  `没有输入返回所有记录，最大返回100条。`
         /// </summary>
@@ -70,7 +68,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 电子印章类型 , 可选类型如下: 
-        /// <ul><li>**OFFICIAL**: (默认)公章</li>
+        /// <ul><li>**OFFICIAL**: 公章</li>
         /// <li>**CONTRACT**: 合同专用章;</li>
         /// <li>**FINANCE**: 财务专用章;</li>
         /// <li>**PERSONNEL**: 人事专用章</li>
@@ -83,7 +81,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string[] SealTypes{ get; set; }
 
         /// <summary>
-        /// 查询的印章状态列表。 <ul> <li>空，只查询启用状态的印章；</li> <li>ALL，查询所有状态的印章；</li> <li>CHECKING，查询待审核的印章；</li> <li>SUCCESS，查询启用状态的印章；</li> <li>FAIL，查询印章审核拒绝的印章；</li> <li>DISABLE，查询已停用的印章；</li> <li>STOPPED，查询已终止的印章；</li> <li>VOID，查询已作废的印章；</li> <li>INVALID，查询已失效的印章；</li> </ul>
+        /// 
+        /// 需查询的印章状态列表。
+        /// 
+        /// <ul> <li>空，()仅查询启用状态的印章；</li> <li><strong>ALL</strong>，查询所有状态的印章；</li> <li><strong>CHECKING</strong>，查询待审核的印章；</li> <li><strong>SUCCESS</strong>，查询启用状态的印章；</li> <li><strong>FAIL</strong>，查询印章审核拒绝的印章；</li> <li><strong>DISABLE</strong>，查询已停用的印章；</li> <li><strong>STOPPED</strong>，查询已终止的印章；</li> <li><strong>VOID</strong>，查询已作废的印章；</li> <li><strong>INVALID</strong>，查询已失效的印章。</li> </ul>
         /// </summary>
         [JsonProperty("SealStatuses")]
         public string[] SealStatuses{ get; set; }

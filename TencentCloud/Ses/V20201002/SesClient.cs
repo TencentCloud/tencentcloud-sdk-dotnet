@@ -28,7 +28,7 @@ namespace TencentCloud.Ses.V20201002
 
        private const string endpoint = "ses.tencentcloudapi.com";
        private const string version = "2020-10-02";
-       private const string sdkVersion = "SDK_NET_3.0.1036";
+       private const string sdkVersion = "SDK_NET_3.0.1037";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Ses.V20201002
         public BatchSendEmailResponse BatchSendEmailSync(BatchSendEmailRequest req)
         {
             return InternalRequestAsync<BatchSendEmailResponse>(req, "BatchSendEmail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加自定义黑名单
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomBlacklistRequest"/></param>
+        /// <returns><see cref="CreateCustomBlacklistResponse"/></returns>
+        public Task<CreateCustomBlacklistResponse> CreateCustomBlacklist(CreateCustomBlacklistRequest req)
+        {
+            return InternalRequestAsync<CreateCustomBlacklistResponse>(req, "CreateCustomBlacklist");
+        }
+
+        /// <summary>
+        /// 添加自定义黑名单
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomBlacklistRequest"/></param>
+        /// <returns><see cref="CreateCustomBlacklistResponse"/></returns>
+        public CreateCustomBlacklistResponse CreateCustomBlacklistSync(CreateCustomBlacklistRequest req)
+        {
+            return InternalRequestAsync<CreateCustomBlacklistResponse>(req, "CreateCustomBlacklist")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -220,6 +241,27 @@ namespace TencentCloud.Ses.V20201002
         public DeleteBlackListResponse DeleteBlackListSync(DeleteBlackListRequest req)
         {
             return InternalRequestAsync<DeleteBlackListResponse>(req, "DeleteBlackList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除自定义黑名单邮箱地址
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomBlackListRequest"/></param>
+        /// <returns><see cref="DeleteCustomBlackListResponse"/></returns>
+        public Task<DeleteCustomBlackListResponse> DeleteCustomBlackList(DeleteCustomBlackListRequest req)
+        {
+            return InternalRequestAsync<DeleteCustomBlackListResponse>(req, "DeleteCustomBlackList");
+        }
+
+        /// <summary>
+        /// 删除自定义黑名单邮箱地址
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomBlackListRequest"/></param>
+        /// <returns><see cref="DeleteCustomBlackListResponse"/></returns>
+        public DeleteCustomBlackListResponse DeleteCustomBlackListSync(DeleteCustomBlackListRequest req)
+        {
+            return InternalRequestAsync<DeleteCustomBlackListResponse>(req, "DeleteCustomBlackList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -413,6 +455,27 @@ namespace TencentCloud.Ses.V20201002
         }
 
         /// <summary>
+        /// 获取自定义黑名单列表
+        /// </summary>
+        /// <param name="req"><see cref="ListCustomBlacklistRequest"/></param>
+        /// <returns><see cref="ListCustomBlacklistResponse"/></returns>
+        public Task<ListCustomBlacklistResponse> ListCustomBlacklist(ListCustomBlacklistRequest req)
+        {
+            return InternalRequestAsync<ListCustomBlacklistResponse>(req, "ListCustomBlacklist");
+        }
+
+        /// <summary>
+        /// 获取自定义黑名单列表
+        /// </summary>
+        /// <param name="req"><see cref="ListCustomBlacklistRequest"/></param>
+        /// <returns><see cref="ListCustomBlacklistResponse"/></returns>
+        public ListCustomBlacklistResponse ListCustomBlacklistSync(ListCustomBlacklistRequest req)
+        {
+            return InternalRequestAsync<ListCustomBlacklistResponse>(req, "ListCustomBlacklist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取发信地址列表
         /// </summary>
         /// <param name="req"><see cref="ListEmailAddressRequest"/></param>
@@ -556,6 +619,27 @@ namespace TencentCloud.Ses.V20201002
         public SendEmailResponse SendEmailSync(SendEmailRequest req)
         {
             return InternalRequestAsync<SendEmailResponse>(req, "SendEmail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新自定义黑名单
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCustomBlackListRequest"/></param>
+        /// <returns><see cref="UpdateCustomBlackListResponse"/></returns>
+        public Task<UpdateCustomBlackListResponse> UpdateCustomBlackList(UpdateCustomBlackListRequest req)
+        {
+            return InternalRequestAsync<UpdateCustomBlackListResponse>(req, "UpdateCustomBlackList");
+        }
+
+        /// <summary>
+        /// 更新自定义黑名单
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCustomBlackListRequest"/></param>
+        /// <returns><see cref="UpdateCustomBlackListResponse"/></returns>
+        public UpdateCustomBlackListResponse UpdateCustomBlackListSync(UpdateCustomBlackListRequest req)
+        {
+            return InternalRequestAsync<UpdateCustomBlackListResponse>(req, "UpdateCustomBlackList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

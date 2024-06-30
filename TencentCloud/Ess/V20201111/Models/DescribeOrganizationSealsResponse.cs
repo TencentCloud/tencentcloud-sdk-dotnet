@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 在设置了SealId时返回0或1，没有设置时返回公司的总印章数量，可能比返回的印章数组数量多
+        /// 在设定了SealId时，返回值为0或1；若未设定SealId，则返回公司的总印章数量
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

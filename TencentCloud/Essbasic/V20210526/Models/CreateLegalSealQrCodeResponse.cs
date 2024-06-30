@@ -25,7 +25,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 二维码图片base64值
+        /// 二维码图片base64值，二维码有效期7天（604800秒）
+        /// 
+        /// 二维码图片的样式如下图：
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/7ec2478761158a35a9c623882839a5df.png)
         /// </summary>
         [JsonProperty("QrcodeBase64")]
         public string QrcodeBase64{ get; set; }
