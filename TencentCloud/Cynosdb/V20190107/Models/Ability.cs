@@ -57,6 +57,20 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("IsSupportManualSnapshot")]
         public string IsSupportManualSnapshot{ get; set; }
 
+        /// <summary>
+        /// 是否支持透明数据加密
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsSupportTransparentDataEncryption")]
+        public string IsSupportTransparentDataEncryption{ get; set; }
+
+        /// <summary>
+        /// 不支持透明数据加密原因
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NoSupportTransparentDataEncryptionReason")]
+        public string NoSupportTransparentDataEncryptionReason{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +82,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "IsSupportRo", this.IsSupportRo);
             this.SetParamSimple(map, prefix + "NonsupportRoReason", this.NonsupportRoReason);
             this.SetParamSimple(map, prefix + "IsSupportManualSnapshot", this.IsSupportManualSnapshot);
+            this.SetParamSimple(map, prefix + "IsSupportTransparentDataEncryption", this.IsSupportTransparentDataEncryption);
+            this.SetParamSimple(map, prefix + "NoSupportTransparentDataEncryptionReason", this.NoSupportTransparentDataEncryptionReason);
         }
     }
 }

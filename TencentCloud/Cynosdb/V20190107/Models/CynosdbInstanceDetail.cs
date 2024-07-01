@@ -91,6 +91,14 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string StatusDesc{ get; set; }
 
         /// <summary>
+        /// serverless实例状态, 可能值：
+        /// resume
+        /// pause
+        /// </summary>
+        [JsonProperty("ServerlessStatus")]
+        public string ServerlessStatus{ get; set; }
+
+        /// <summary>
         /// 数据库类型
         /// </summary>
         [JsonProperty("DbType")]
@@ -222,14 +230,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("MaxCpu")]
         public float? MaxCpu{ get; set; }
 
-        /// <summary>
-        /// serverless实例状态, 可能值：
-        /// resume
-        /// pause
-        /// </summary>
-        [JsonProperty("ServerlessStatus")]
-        public string ServerlessStatus{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -247,6 +247,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
+            this.SetParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
             this.SetParamSimple(map, prefix + "DbType", this.DbType);
             this.SetParamSimple(map, prefix + "DbVersion", this.DbVersion);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
@@ -269,7 +270,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "MinCpu", this.MinCpu);
             this.SetParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
-            this.SetParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
         }
     }
 }

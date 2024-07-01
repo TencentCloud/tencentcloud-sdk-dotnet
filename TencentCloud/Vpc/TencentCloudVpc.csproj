@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1037</VersionPrefix>
+    <VersionPrefix>3.0.1038</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -181,6 +181,14 @@
     <Compile Include="V20170312\Models\CreateNetworkAclResponse.cs" />
     <Compile Include="V20170312\Models\CreateNetworkInterfaceRequest.cs" />
     <Compile Include="V20170312\Models\CreateNetworkInterfaceResponse.cs" />
+    <Compile Include="V20170312\Models\CreatePrivateNatGatewayDestinationIpPortTranslationNatRuleRequest.cs" />
+    <Compile Include="V20170312\Models\CreatePrivateNatGatewayDestinationIpPortTranslationNatRuleResponse.cs" />
+    <Compile Include="V20170312\Models\CreatePrivateNatGatewayRequest.cs" />
+    <Compile Include="V20170312\Models\CreatePrivateNatGatewayResponse.cs" />
+    <Compile Include="V20170312\Models\CreatePrivateNatGatewayTranslationAclRuleRequest.cs" />
+    <Compile Include="V20170312\Models\CreatePrivateNatGatewayTranslationAclRuleResponse.cs" />
+    <Compile Include="V20170312\Models\CreatePrivateNatGatewayTranslationNatRuleRequest.cs" />
+    <Compile Include="V20170312\Models\CreatePrivateNatGatewayTranslationNatRuleResponse.cs" />
     <Compile Include="V20170312\Models\CreateRouteTableRequest.cs" />
     <Compile Include="V20170312\Models\CreateRouteTableResponse.cs" />
     <Compile Include="V20170312\Models\CreateRoutesRequest.cs" />
@@ -272,6 +280,14 @@
     <Compile Include="V20170312\Models\DeleteNetworkAclResponse.cs" />
     <Compile Include="V20170312\Models\DeleteNetworkInterfaceRequest.cs" />
     <Compile Include="V20170312\Models\DeleteNetworkInterfaceResponse.cs" />
+    <Compile Include="V20170312\Models\DeletePrivateNatGatewayDestinationIpPortTranslationNatRuleRequest.cs" />
+    <Compile Include="V20170312\Models\DeletePrivateNatGatewayDestinationIpPortTranslationNatRuleResponse.cs" />
+    <Compile Include="V20170312\Models\DeletePrivateNatGatewayRequest.cs" />
+    <Compile Include="V20170312\Models\DeletePrivateNatGatewayResponse.cs" />
+    <Compile Include="V20170312\Models\DeletePrivateNatGatewayTranslationAclRuleRequest.cs" />
+    <Compile Include="V20170312\Models\DeletePrivateNatGatewayTranslationAclRuleResponse.cs" />
+    <Compile Include="V20170312\Models\DeletePrivateNatGatewayTranslationNatRuleRequest.cs" />
+    <Compile Include="V20170312\Models\DeletePrivateNatGatewayTranslationNatRuleResponse.cs" />
     <Compile Include="V20170312\Models\DeleteRouteTableRequest.cs" />
     <Compile Include="V20170312\Models\DeleteRouteTableResponse.cs" />
     <Compile Include="V20170312\Models\DeleteRoutesRequest.cs" />
@@ -402,6 +418,18 @@
     <Compile Include="V20170312\Models\DescribeNetworkInterfaceLimitResponse.cs" />
     <Compile Include="V20170312\Models\DescribeNetworkInterfacesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeNetworkInterfacesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribePrivateNatGatewayDestinationIpPortTranslationNatRulesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribePrivateNatGatewayDestinationIpPortTranslationNatRulesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribePrivateNatGatewayLimitsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribePrivateNatGatewayLimitsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribePrivateNatGatewayRegionsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribePrivateNatGatewayRegionsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribePrivateNatGatewayTranslationAclRulesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribePrivateNatGatewayTranslationAclRulesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribePrivateNatGatewayTranslationNatRulesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribePrivateNatGatewayTranslationNatRulesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribePrivateNatGatewaysRequest.cs" />
+    <Compile Include="V20170312\Models\DescribePrivateNatGatewaysResponse.cs" />
     <Compile Include="V20170312\Models\DescribeProductQuotaRequest.cs" />
     <Compile Include="V20170312\Models\DescribeProductQuotaResponse.cs" />
     <Compile Include="V20170312\Models\DescribeRouteConflictsRequest.cs" />
@@ -481,6 +509,7 @@
     <Compile Include="V20170312\Models\DescribeVpnGatewaysRequest.cs" />
     <Compile Include="V20170312\Models\DescribeVpnGatewaysResponse.cs" />
     <Compile Include="V20170312\Models\DestinationIpPortTranslationNatRule.cs" />
+    <Compile Include="V20170312\Models\DestinationIpPortTranslationNatRuleDiff.cs" />
     <Compile Include="V20170312\Models\DetachCcnInstancesRequest.cs" />
     <Compile Include="V20170312\Models\DetachCcnInstancesResponse.cs" />
     <Compile Include="V20170312\Models\DetachClassicLinkVpcRequest.cs" />
@@ -575,6 +604,7 @@
     <Compile Include="V20170312\Models\Ipv6Address.cs" />
     <Compile Include="V20170312\Models\Ipv6SubnetCidrBlock.cs" />
     <Compile Include="V20170312\Models\ItemPrice.cs" />
+    <Compile Include="V20170312\Models\LocalDestinationIpPortTranslationNatRule.cs" />
     <Compile Include="V20170312\Models\LocalGateway.cs" />
     <Compile Include="V20170312\Models\LockCcnBandwidthsRequest.cs" />
     <Compile Include="V20170312\Models\LockCcnBandwidthsResponse.cs" />
@@ -647,6 +677,14 @@
     <Compile Include="V20170312\Models\ModifyNetworkInterfaceQosResponse.cs" />
     <Compile Include="V20170312\Models\ModifyPrivateIpAddressesAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyPrivateIpAddressesAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyPrivateNatGatewayAttributeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyPrivateNatGatewayAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyPrivateNatGatewayDestinationIpPortTranslationNatRuleRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyPrivateNatGatewayDestinationIpPortTranslationNatRuleResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyPrivateNatGatewayTranslationAclRuleRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyPrivateNatGatewayTranslationAclRuleResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyPrivateNatGatewayTranslationNatRuleRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyPrivateNatGatewayTranslationNatRuleResponse.cs" />
     <Compile Include="V20170312\Models\ModifyRouteTableAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyRouteTableAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifySecurityGroupAttributeRequest.cs" />
@@ -687,6 +725,7 @@
     <Compile Include="V20170312\Models\NatGateway.cs" />
     <Compile Include="V20170312\Models\NatGatewayAddress.cs" />
     <Compile Include="V20170312\Models\NatGatewayDestinationIpPortTranslationNatRule.cs" />
+    <Compile Include="V20170312\Models\NatRegionInfoWithArea.cs" />
     <Compile Include="V20170312\Models\NetDetect.cs" />
     <Compile Include="V20170312\Models\NetDetectIpState.cs" />
     <Compile Include="V20170312\Models\NetDetectState.cs" />
@@ -702,6 +741,9 @@
     <Compile Include="V20170312\Models\PeerConnection.cs" />
     <Compile Include="V20170312\Models\Price.cs" />
     <Compile Include="V20170312\Models\PrivateIpAddressSpecification.cs" />
+    <Compile Include="V20170312\Models\PrivateNatDestinationIpPortTranslationNatRule.cs" />
+    <Compile Include="V20170312\Models\PrivateNatGateway.cs" />
+    <Compile Include="V20170312\Models\PrivateNatGatewayLimit.cs" />
     <Compile Include="V20170312\Models\ProductQuota.cs" />
     <Compile Include="V20170312\Models\Quota.cs" />
     <Compile Include="V20170312\Models\ReferredSecurityGroup.cs" />
@@ -784,6 +826,10 @@
     <Compile Include="V20170312\Models\TrafficPackage.cs" />
     <Compile Include="V20170312\Models\TransformAddressRequest.cs" />
     <Compile Include="V20170312\Models\TransformAddressResponse.cs" />
+    <Compile Include="V20170312\Models\TranslationAclRule.cs" />
+    <Compile Include="V20170312\Models\TranslationNatRule.cs" />
+    <Compile Include="V20170312\Models\TranslationNatRuleDiff.cs" />
+    <Compile Include="V20170312\Models\TranslationNatRuleInput.cs" />
     <Compile Include="V20170312\Models\UnassignIpv6AddressesRequest.cs" />
     <Compile Include="V20170312\Models\UnassignIpv6AddressesResponse.cs" />
     <Compile Include="V20170312\Models\UnassignIpv6CidrBlockRequest.cs" />

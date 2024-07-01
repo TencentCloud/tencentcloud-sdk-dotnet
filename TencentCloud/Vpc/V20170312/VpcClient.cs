@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1037";
+       private const string sdkVersion = "SDK_NET_3.0.1038";
 
         /// <summary>
         /// Client constructor.
@@ -1275,6 +1275,90 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（CreatePrivateNatGateway）用于创建私网NAT网关。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrivateNatGatewayRequest"/></param>
+        /// <returns><see cref="CreatePrivateNatGatewayResponse"/></returns>
+        public Task<CreatePrivateNatGatewayResponse> CreatePrivateNatGateway(CreatePrivateNatGatewayRequest req)
+        {
+            return InternalRequestAsync<CreatePrivateNatGatewayResponse>(req, "CreatePrivateNatGateway");
+        }
+
+        /// <summary>
+        /// 本接口（CreatePrivateNatGateway）用于创建私网NAT网关。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrivateNatGatewayRequest"/></param>
+        /// <returns><see cref="CreatePrivateNatGatewayResponse"/></returns>
+        public CreatePrivateNatGatewayResponse CreatePrivateNatGatewaySync(CreatePrivateNatGatewayRequest req)
+        {
+            return InternalRequestAsync<CreatePrivateNatGatewayResponse>(req, "CreatePrivateNatGateway")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（CreatePrivateNatGatewayDestinationIpPortTranslationNatRule）用于创建私网NAT网关目的端口转换规则
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrivateNatGatewayDestinationIpPortTranslationNatRuleRequest"/></param>
+        /// <returns><see cref="CreatePrivateNatGatewayDestinationIpPortTranslationNatRuleResponse"/></returns>
+        public Task<CreatePrivateNatGatewayDestinationIpPortTranslationNatRuleResponse> CreatePrivateNatGatewayDestinationIpPortTranslationNatRule(CreatePrivateNatGatewayDestinationIpPortTranslationNatRuleRequest req)
+        {
+            return InternalRequestAsync<CreatePrivateNatGatewayDestinationIpPortTranslationNatRuleResponse>(req, "CreatePrivateNatGatewayDestinationIpPortTranslationNatRule");
+        }
+
+        /// <summary>
+        /// 本接口（CreatePrivateNatGatewayDestinationIpPortTranslationNatRule）用于创建私网NAT网关目的端口转换规则
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrivateNatGatewayDestinationIpPortTranslationNatRuleRequest"/></param>
+        /// <returns><see cref="CreatePrivateNatGatewayDestinationIpPortTranslationNatRuleResponse"/></returns>
+        public CreatePrivateNatGatewayDestinationIpPortTranslationNatRuleResponse CreatePrivateNatGatewayDestinationIpPortTranslationNatRuleSync(CreatePrivateNatGatewayDestinationIpPortTranslationNatRuleRequest req)
+        {
+            return InternalRequestAsync<CreatePrivateNatGatewayDestinationIpPortTranslationNatRuleResponse>(req, "CreatePrivateNatGatewayDestinationIpPortTranslationNatRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ CreatePrivateNatGatewayTranslationAclRule）用于创建私网NAT网关源端转换访问控制规则
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrivateNatGatewayTranslationAclRuleRequest"/></param>
+        /// <returns><see cref="CreatePrivateNatGatewayTranslationAclRuleResponse"/></returns>
+        public Task<CreatePrivateNatGatewayTranslationAclRuleResponse> CreatePrivateNatGatewayTranslationAclRule(CreatePrivateNatGatewayTranslationAclRuleRequest req)
+        {
+            return InternalRequestAsync<CreatePrivateNatGatewayTranslationAclRuleResponse>(req, "CreatePrivateNatGatewayTranslationAclRule");
+        }
+
+        /// <summary>
+        /// 本接口（ CreatePrivateNatGatewayTranslationAclRule）用于创建私网NAT网关源端转换访问控制规则
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrivateNatGatewayTranslationAclRuleRequest"/></param>
+        /// <returns><see cref="CreatePrivateNatGatewayTranslationAclRuleResponse"/></returns>
+        public CreatePrivateNatGatewayTranslationAclRuleResponse CreatePrivateNatGatewayTranslationAclRuleSync(CreatePrivateNatGatewayTranslationAclRuleRequest req)
+        {
+            return InternalRequestAsync<CreatePrivateNatGatewayTranslationAclRuleResponse>(req, "CreatePrivateNatGatewayTranslationAclRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（CreatePrivateNatGatewayTranslationNatRule）用于创建私网NAT网关源端转换规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrivateNatGatewayTranslationNatRuleRequest"/></param>
+        /// <returns><see cref="CreatePrivateNatGatewayTranslationNatRuleResponse"/></returns>
+        public Task<CreatePrivateNatGatewayTranslationNatRuleResponse> CreatePrivateNatGatewayTranslationNatRule(CreatePrivateNatGatewayTranslationNatRuleRequest req)
+        {
+            return InternalRequestAsync<CreatePrivateNatGatewayTranslationNatRuleResponse>(req, "CreatePrivateNatGatewayTranslationNatRule");
+        }
+
+        /// <summary>
+        /// 本接口（CreatePrivateNatGatewayTranslationNatRule）用于创建私网NAT网关源端转换规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrivateNatGatewayTranslationNatRuleRequest"/></param>
+        /// <returns><see cref="CreatePrivateNatGatewayTranslationNatRuleResponse"/></returns>
+        public CreatePrivateNatGatewayTranslationNatRuleResponse CreatePrivateNatGatewayTranslationNatRuleSync(CreatePrivateNatGatewayTranslationNatRuleRequest req)
+        {
+            return InternalRequestAsync<CreatePrivateNatGatewayTranslationNatRuleResponse>(req, "CreatePrivateNatGatewayTranslationNatRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口(CreateRouteTable)用于创建路由表。
         /// * 创建了VPC后，系统会创建一个默认路由表，所有新建的子网都会关联到默认路由表。默认情况下您可以直接使用默认路由表来管理您的路由策略。当您的路由策略较多时，您可以调用创建路由表接口创建更多路由表管理您的路由策略。
         /// * 创建路由表同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
@@ -2295,6 +2379,90 @@ namespace TencentCloud.Vpc.V20170312
         public DeleteNetworkInterfaceResponse DeleteNetworkInterfaceSync(DeleteNetworkInterfaceRequest req)
         {
             return InternalRequestAsync<DeleteNetworkInterfaceResponse>(req, "DeleteNetworkInterface")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DeletePrivateNatGateway）用于删除私网NAT网关。
+        /// </summary>
+        /// <param name="req"><see cref="DeletePrivateNatGatewayRequest"/></param>
+        /// <returns><see cref="DeletePrivateNatGatewayResponse"/></returns>
+        public Task<DeletePrivateNatGatewayResponse> DeletePrivateNatGateway(DeletePrivateNatGatewayRequest req)
+        {
+            return InternalRequestAsync<DeletePrivateNatGatewayResponse>(req, "DeletePrivateNatGateway");
+        }
+
+        /// <summary>
+        /// 本接口（DeletePrivateNatGateway）用于删除私网NAT网关。
+        /// </summary>
+        /// <param name="req"><see cref="DeletePrivateNatGatewayRequest"/></param>
+        /// <returns><see cref="DeletePrivateNatGatewayResponse"/></returns>
+        public DeletePrivateNatGatewayResponse DeletePrivateNatGatewaySync(DeletePrivateNatGatewayRequest req)
+        {
+            return InternalRequestAsync<DeletePrivateNatGatewayResponse>(req, "DeletePrivateNatGateway")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DeletePrivateNatGatewayDestinationIpPortTranslationNatRule）用于删除私网NAT网关目的端口转换规则
+        /// </summary>
+        /// <param name="req"><see cref="DeletePrivateNatGatewayDestinationIpPortTranslationNatRuleRequest"/></param>
+        /// <returns><see cref="DeletePrivateNatGatewayDestinationIpPortTranslationNatRuleResponse"/></returns>
+        public Task<DeletePrivateNatGatewayDestinationIpPortTranslationNatRuleResponse> DeletePrivateNatGatewayDestinationIpPortTranslationNatRule(DeletePrivateNatGatewayDestinationIpPortTranslationNatRuleRequest req)
+        {
+            return InternalRequestAsync<DeletePrivateNatGatewayDestinationIpPortTranslationNatRuleResponse>(req, "DeletePrivateNatGatewayDestinationIpPortTranslationNatRule");
+        }
+
+        /// <summary>
+        /// 本接口（DeletePrivateNatGatewayDestinationIpPortTranslationNatRule）用于删除私网NAT网关目的端口转换规则
+        /// </summary>
+        /// <param name="req"><see cref="DeletePrivateNatGatewayDestinationIpPortTranslationNatRuleRequest"/></param>
+        /// <returns><see cref="DeletePrivateNatGatewayDestinationIpPortTranslationNatRuleResponse"/></returns>
+        public DeletePrivateNatGatewayDestinationIpPortTranslationNatRuleResponse DeletePrivateNatGatewayDestinationIpPortTranslationNatRuleSync(DeletePrivateNatGatewayDestinationIpPortTranslationNatRuleRequest req)
+        {
+            return InternalRequestAsync<DeletePrivateNatGatewayDestinationIpPortTranslationNatRuleResponse>(req, "DeletePrivateNatGatewayDestinationIpPortTranslationNatRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DeletePrivateNatGatewayTranslationAclRule）用于删除私网NAT网关源端转换访问控制规则
+        /// </summary>
+        /// <param name="req"><see cref="DeletePrivateNatGatewayTranslationAclRuleRequest"/></param>
+        /// <returns><see cref="DeletePrivateNatGatewayTranslationAclRuleResponse"/></returns>
+        public Task<DeletePrivateNatGatewayTranslationAclRuleResponse> DeletePrivateNatGatewayTranslationAclRule(DeletePrivateNatGatewayTranslationAclRuleRequest req)
+        {
+            return InternalRequestAsync<DeletePrivateNatGatewayTranslationAclRuleResponse>(req, "DeletePrivateNatGatewayTranslationAclRule");
+        }
+
+        /// <summary>
+        /// 本接口（DeletePrivateNatGatewayTranslationAclRule）用于删除私网NAT网关源端转换访问控制规则
+        /// </summary>
+        /// <param name="req"><see cref="DeletePrivateNatGatewayTranslationAclRuleRequest"/></param>
+        /// <returns><see cref="DeletePrivateNatGatewayTranslationAclRuleResponse"/></returns>
+        public DeletePrivateNatGatewayTranslationAclRuleResponse DeletePrivateNatGatewayTranslationAclRuleSync(DeletePrivateNatGatewayTranslationAclRuleRequest req)
+        {
+            return InternalRequestAsync<DeletePrivateNatGatewayTranslationAclRuleResponse>(req, "DeletePrivateNatGatewayTranslationAclRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DeletePrivateNatGatewayTranslationNatRule）用于删除私网NAT网关源端转换规则
+        /// </summary>
+        /// <param name="req"><see cref="DeletePrivateNatGatewayTranslationNatRuleRequest"/></param>
+        /// <returns><see cref="DeletePrivateNatGatewayTranslationNatRuleResponse"/></returns>
+        public Task<DeletePrivateNatGatewayTranslationNatRuleResponse> DeletePrivateNatGatewayTranslationNatRule(DeletePrivateNatGatewayTranslationNatRuleRequest req)
+        {
+            return InternalRequestAsync<DeletePrivateNatGatewayTranslationNatRuleResponse>(req, "DeletePrivateNatGatewayTranslationNatRule");
+        }
+
+        /// <summary>
+        /// 本接口（DeletePrivateNatGatewayTranslationNatRule）用于删除私网NAT网关源端转换规则
+        /// </summary>
+        /// <param name="req"><see cref="DeletePrivateNatGatewayTranslationNatRuleRequest"/></param>
+        /// <returns><see cref="DeletePrivateNatGatewayTranslationNatRuleResponse"/></returns>
+        public DeletePrivateNatGatewayTranslationNatRuleResponse DeletePrivateNatGatewayTranslationNatRuleSync(DeletePrivateNatGatewayTranslationNatRuleRequest req)
+        {
+            return InternalRequestAsync<DeletePrivateNatGatewayTranslationNatRuleResponse>(req, "DeletePrivateNatGatewayTranslationNatRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3700,6 +3868,132 @@ namespace TencentCloud.Vpc.V20170312
         public DescribeNetworkInterfacesResponse DescribeNetworkInterfacesSync(DescribeNetworkInterfacesRequest req)
         {
             return InternalRequestAsync<DescribeNetworkInterfacesResponse>(req, "DescribeNetworkInterfaces")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribePrivateNatGatewayDestinationIpPortTranslationNatRules）用于查询私网NAT网关目的端口转换规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivateNatGatewayDestinationIpPortTranslationNatRulesRequest"/></param>
+        /// <returns><see cref="DescribePrivateNatGatewayDestinationIpPortTranslationNatRulesResponse"/></returns>
+        public Task<DescribePrivateNatGatewayDestinationIpPortTranslationNatRulesResponse> DescribePrivateNatGatewayDestinationIpPortTranslationNatRules(DescribePrivateNatGatewayDestinationIpPortTranslationNatRulesRequest req)
+        {
+            return InternalRequestAsync<DescribePrivateNatGatewayDestinationIpPortTranslationNatRulesResponse>(req, "DescribePrivateNatGatewayDestinationIpPortTranslationNatRules");
+        }
+
+        /// <summary>
+        /// 本接口（DescribePrivateNatGatewayDestinationIpPortTranslationNatRules）用于查询私网NAT网关目的端口转换规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivateNatGatewayDestinationIpPortTranslationNatRulesRequest"/></param>
+        /// <returns><see cref="DescribePrivateNatGatewayDestinationIpPortTranslationNatRulesResponse"/></returns>
+        public DescribePrivateNatGatewayDestinationIpPortTranslationNatRulesResponse DescribePrivateNatGatewayDestinationIpPortTranslationNatRulesSync(DescribePrivateNatGatewayDestinationIpPortTranslationNatRulesRequest req)
+        {
+            return InternalRequestAsync<DescribePrivateNatGatewayDestinationIpPortTranslationNatRulesResponse>(req, "DescribePrivateNatGatewayDestinationIpPortTranslationNatRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribePrivateNatGatewayLimits）用于查询可创建的私网NAT网关配额数量
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivateNatGatewayLimitsRequest"/></param>
+        /// <returns><see cref="DescribePrivateNatGatewayLimitsResponse"/></returns>
+        public Task<DescribePrivateNatGatewayLimitsResponse> DescribePrivateNatGatewayLimits(DescribePrivateNatGatewayLimitsRequest req)
+        {
+            return InternalRequestAsync<DescribePrivateNatGatewayLimitsResponse>(req, "DescribePrivateNatGatewayLimits");
+        }
+
+        /// <summary>
+        /// 本接口（DescribePrivateNatGatewayLimits）用于查询可创建的私网NAT网关配额数量
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivateNatGatewayLimitsRequest"/></param>
+        /// <returns><see cref="DescribePrivateNatGatewayLimitsResponse"/></returns>
+        public DescribePrivateNatGatewayLimitsResponse DescribePrivateNatGatewayLimitsSync(DescribePrivateNatGatewayLimitsRequest req)
+        {
+            return InternalRequestAsync<DescribePrivateNatGatewayLimitsResponse>(req, "DescribePrivateNatGatewayLimits")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribePrivateNatGatewayRegions）用于查询查询私网NAT网关可支持地域
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivateNatGatewayRegionsRequest"/></param>
+        /// <returns><see cref="DescribePrivateNatGatewayRegionsResponse"/></returns>
+        public Task<DescribePrivateNatGatewayRegionsResponse> DescribePrivateNatGatewayRegions(DescribePrivateNatGatewayRegionsRequest req)
+        {
+            return InternalRequestAsync<DescribePrivateNatGatewayRegionsResponse>(req, "DescribePrivateNatGatewayRegions");
+        }
+
+        /// <summary>
+        /// 本接口（DescribePrivateNatGatewayRegions）用于查询查询私网NAT网关可支持地域
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivateNatGatewayRegionsRequest"/></param>
+        /// <returns><see cref="DescribePrivateNatGatewayRegionsResponse"/></returns>
+        public DescribePrivateNatGatewayRegionsResponse DescribePrivateNatGatewayRegionsSync(DescribePrivateNatGatewayRegionsRequest req)
+        {
+            return InternalRequestAsync<DescribePrivateNatGatewayRegionsResponse>(req, "DescribePrivateNatGatewayRegions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribePrivateNatGatewayTranslationAclRules）用于查询私网NAT网关源端转换访问控制规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivateNatGatewayTranslationAclRulesRequest"/></param>
+        /// <returns><see cref="DescribePrivateNatGatewayTranslationAclRulesResponse"/></returns>
+        public Task<DescribePrivateNatGatewayTranslationAclRulesResponse> DescribePrivateNatGatewayTranslationAclRules(DescribePrivateNatGatewayTranslationAclRulesRequest req)
+        {
+            return InternalRequestAsync<DescribePrivateNatGatewayTranslationAclRulesResponse>(req, "DescribePrivateNatGatewayTranslationAclRules");
+        }
+
+        /// <summary>
+        /// 本接口（DescribePrivateNatGatewayTranslationAclRules）用于查询私网NAT网关源端转换访问控制规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivateNatGatewayTranslationAclRulesRequest"/></param>
+        /// <returns><see cref="DescribePrivateNatGatewayTranslationAclRulesResponse"/></returns>
+        public DescribePrivateNatGatewayTranslationAclRulesResponse DescribePrivateNatGatewayTranslationAclRulesSync(DescribePrivateNatGatewayTranslationAclRulesRequest req)
+        {
+            return InternalRequestAsync<DescribePrivateNatGatewayTranslationAclRulesResponse>(req, "DescribePrivateNatGatewayTranslationAclRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribePrivateNatGatewayTranslationNatRules）用于查询私网NAT网关源端转换规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivateNatGatewayTranslationNatRulesRequest"/></param>
+        /// <returns><see cref="DescribePrivateNatGatewayTranslationNatRulesResponse"/></returns>
+        public Task<DescribePrivateNatGatewayTranslationNatRulesResponse> DescribePrivateNatGatewayTranslationNatRules(DescribePrivateNatGatewayTranslationNatRulesRequest req)
+        {
+            return InternalRequestAsync<DescribePrivateNatGatewayTranslationNatRulesResponse>(req, "DescribePrivateNatGatewayTranslationNatRules");
+        }
+
+        /// <summary>
+        /// 本接口（DescribePrivateNatGatewayTranslationNatRules）用于查询私网NAT网关源端转换规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivateNatGatewayTranslationNatRulesRequest"/></param>
+        /// <returns><see cref="DescribePrivateNatGatewayTranslationNatRulesResponse"/></returns>
+        public DescribePrivateNatGatewayTranslationNatRulesResponse DescribePrivateNatGatewayTranslationNatRulesSync(DescribePrivateNatGatewayTranslationNatRulesRequest req)
+        {
+            return InternalRequestAsync<DescribePrivateNatGatewayTranslationNatRulesResponse>(req, "DescribePrivateNatGatewayTranslationNatRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribePrivateNatGateways）用于查询私网NAT网关
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivateNatGatewaysRequest"/></param>
+        /// <returns><see cref="DescribePrivateNatGatewaysResponse"/></returns>
+        public Task<DescribePrivateNatGatewaysResponse> DescribePrivateNatGateways(DescribePrivateNatGatewaysRequest req)
+        {
+            return InternalRequestAsync<DescribePrivateNatGatewaysResponse>(req, "DescribePrivateNatGateways");
+        }
+
+        /// <summary>
+        /// 本接口（DescribePrivateNatGateways）用于查询私网NAT网关
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivateNatGatewaysRequest"/></param>
+        /// <returns><see cref="DescribePrivateNatGatewaysResponse"/></returns>
+        public DescribePrivateNatGatewaysResponse DescribePrivateNatGatewaysSync(DescribePrivateNatGatewaysRequest req)
+        {
+            return InternalRequestAsync<DescribePrivateNatGatewaysResponse>(req, "DescribePrivateNatGateways")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -6106,6 +6400,90 @@ namespace TencentCloud.Vpc.V20170312
         public ModifyPrivateIpAddressesAttributeResponse ModifyPrivateIpAddressesAttributeSync(ModifyPrivateIpAddressesAttributeRequest req)
         {
             return InternalRequestAsync<ModifyPrivateIpAddressesAttributeResponse>(req, "ModifyPrivateIpAddressesAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyPrivateNatGatewayAttribute）用于修改私网NAT网关属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPrivateNatGatewayAttributeRequest"/></param>
+        /// <returns><see cref="ModifyPrivateNatGatewayAttributeResponse"/></returns>
+        public Task<ModifyPrivateNatGatewayAttributeResponse> ModifyPrivateNatGatewayAttribute(ModifyPrivateNatGatewayAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyPrivateNatGatewayAttributeResponse>(req, "ModifyPrivateNatGatewayAttribute");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyPrivateNatGatewayAttribute）用于修改私网NAT网关属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPrivateNatGatewayAttributeRequest"/></param>
+        /// <returns><see cref="ModifyPrivateNatGatewayAttributeResponse"/></returns>
+        public ModifyPrivateNatGatewayAttributeResponse ModifyPrivateNatGatewayAttributeSync(ModifyPrivateNatGatewayAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyPrivateNatGatewayAttributeResponse>(req, "ModifyPrivateNatGatewayAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyPrivateNatGatewayDestinationIpPortTranslationNatRule）用于修改私网NAT网关目的端口转换规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPrivateNatGatewayDestinationIpPortTranslationNatRuleRequest"/></param>
+        /// <returns><see cref="ModifyPrivateNatGatewayDestinationIpPortTranslationNatRuleResponse"/></returns>
+        public Task<ModifyPrivateNatGatewayDestinationIpPortTranslationNatRuleResponse> ModifyPrivateNatGatewayDestinationIpPortTranslationNatRule(ModifyPrivateNatGatewayDestinationIpPortTranslationNatRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyPrivateNatGatewayDestinationIpPortTranslationNatRuleResponse>(req, "ModifyPrivateNatGatewayDestinationIpPortTranslationNatRule");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyPrivateNatGatewayDestinationIpPortTranslationNatRule）用于修改私网NAT网关目的端口转换规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPrivateNatGatewayDestinationIpPortTranslationNatRuleRequest"/></param>
+        /// <returns><see cref="ModifyPrivateNatGatewayDestinationIpPortTranslationNatRuleResponse"/></returns>
+        public ModifyPrivateNatGatewayDestinationIpPortTranslationNatRuleResponse ModifyPrivateNatGatewayDestinationIpPortTranslationNatRuleSync(ModifyPrivateNatGatewayDestinationIpPortTranslationNatRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyPrivateNatGatewayDestinationIpPortTranslationNatRuleResponse>(req, "ModifyPrivateNatGatewayDestinationIpPortTranslationNatRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyPrivateNatGatewayTranslationAclRule）用于修改私网NAT网关源端转换访问控制规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPrivateNatGatewayTranslationAclRuleRequest"/></param>
+        /// <returns><see cref="ModifyPrivateNatGatewayTranslationAclRuleResponse"/></returns>
+        public Task<ModifyPrivateNatGatewayTranslationAclRuleResponse> ModifyPrivateNatGatewayTranslationAclRule(ModifyPrivateNatGatewayTranslationAclRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyPrivateNatGatewayTranslationAclRuleResponse>(req, "ModifyPrivateNatGatewayTranslationAclRule");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyPrivateNatGatewayTranslationAclRule）用于修改私网NAT网关源端转换访问控制规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPrivateNatGatewayTranslationAclRuleRequest"/></param>
+        /// <returns><see cref="ModifyPrivateNatGatewayTranslationAclRuleResponse"/></returns>
+        public ModifyPrivateNatGatewayTranslationAclRuleResponse ModifyPrivateNatGatewayTranslationAclRuleSync(ModifyPrivateNatGatewayTranslationAclRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyPrivateNatGatewayTranslationAclRuleResponse>(req, "ModifyPrivateNatGatewayTranslationAclRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyPrivateNatGatewayTranslationNatRule）用于修改私网NAT网关源端转换规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPrivateNatGatewayTranslationNatRuleRequest"/></param>
+        /// <returns><see cref="ModifyPrivateNatGatewayTranslationNatRuleResponse"/></returns>
+        public Task<ModifyPrivateNatGatewayTranslationNatRuleResponse> ModifyPrivateNatGatewayTranslationNatRule(ModifyPrivateNatGatewayTranslationNatRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyPrivateNatGatewayTranslationNatRuleResponse>(req, "ModifyPrivateNatGatewayTranslationNatRule");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyPrivateNatGatewayTranslationNatRule）用于修改私网NAT网关源端转换规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPrivateNatGatewayTranslationNatRuleRequest"/></param>
+        /// <returns><see cref="ModifyPrivateNatGatewayTranslationNatRuleResponse"/></returns>
+        public ModifyPrivateNatGatewayTranslationNatRuleResponse ModifyPrivateNatGatewayTranslationNatRuleSync(ModifyPrivateNatGatewayTranslationNatRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyPrivateNatGatewayTranslationNatRuleResponse>(req, "ModifyPrivateNatGatewayTranslationNatRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

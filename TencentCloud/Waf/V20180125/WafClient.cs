@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1037";
+       private const string sdkVersion = "SDK_NET_3.0.1038";
 
         /// <summary>
         /// Client constructor.
@@ -2015,27 +2015,6 @@ namespace TencentCloud.Waf.V20180125
         public ImportIpAccessControlResponse ImportIpAccessControlSync(ImportIpAccessControlRequest req)
         {
             return InternalRequestAsync<ImportIpAccessControlResponse>(req, "ImportIpAccessControl")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 本接口用于修改访问日志保存期限等字段信息
-        /// </summary>
-        /// <param name="req"><see cref="ModifyAccessPeriodRequest"/></param>
-        /// <returns><see cref="ModifyAccessPeriodResponse"/></returns>
-        public Task<ModifyAccessPeriodResponse> ModifyAccessPeriod(ModifyAccessPeriodRequest req)
-        {
-            return InternalRequestAsync<ModifyAccessPeriodResponse>(req, "ModifyAccessPeriod");
-        }
-
-        /// <summary>
-        /// 本接口用于修改访问日志保存期限等字段信息
-        /// </summary>
-        /// <param name="req"><see cref="ModifyAccessPeriodRequest"/></param>
-        /// <returns><see cref="ModifyAccessPeriodResponse"/></returns>
-        public ModifyAccessPeriodResponse ModifyAccessPeriodSync(ModifyAccessPeriodRequest req)
-        {
-            return InternalRequestAsync<ModifyAccessPeriodResponse>(req, "ModifyAccessPeriod")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

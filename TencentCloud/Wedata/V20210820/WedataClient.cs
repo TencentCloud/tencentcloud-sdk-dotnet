@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1037";
+       private const string sdkVersion = "SDK_NET_3.0.1038";
 
         /// <summary>
         /// Client constructor.
@@ -1688,6 +1688,48 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeDsParentFolderTreeResponse DescribeDsParentFolderTreeSync(DescribeDsParentFolderTreeRequest req)
         {
             return InternalRequestAsync<DescribeDsParentFolderTreeResponse>(req, "DescribeDsParentFolderTree")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取值班日历
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDutyScheduleDetailsRequest"/></param>
+        /// <returns><see cref="DescribeDutyScheduleDetailsResponse"/></returns>
+        public Task<DescribeDutyScheduleDetailsResponse> DescribeDutyScheduleDetails(DescribeDutyScheduleDetailsRequest req)
+        {
+            return InternalRequestAsync<DescribeDutyScheduleDetailsResponse>(req, "DescribeDutyScheduleDetails");
+        }
+
+        /// <summary>
+        /// 获取值班日历
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDutyScheduleDetailsRequest"/></param>
+        /// <returns><see cref="DescribeDutyScheduleDetailsResponse"/></returns>
+        public DescribeDutyScheduleDetailsResponse DescribeDutyScheduleDetailsSync(DescribeDutyScheduleDetailsRequest req)
+        {
+            return InternalRequestAsync<DescribeDutyScheduleDetailsResponse>(req, "DescribeDutyScheduleDetails")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取值班表列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDutyScheduleListRequest"/></param>
+        /// <returns><see cref="DescribeDutyScheduleListResponse"/></returns>
+        public Task<DescribeDutyScheduleListResponse> DescribeDutyScheduleList(DescribeDutyScheduleListRequest req)
+        {
+            return InternalRequestAsync<DescribeDutyScheduleListResponse>(req, "DescribeDutyScheduleList");
+        }
+
+        /// <summary>
+        /// 获取值班表列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDutyScheduleListRequest"/></param>
+        /// <returns><see cref="DescribeDutyScheduleListResponse"/></returns>
+        public DescribeDutyScheduleListResponse DescribeDutyScheduleListSync(DescribeDutyScheduleListRequest req)
+        {
+            return InternalRequestAsync<DescribeDutyScheduleListResponse>(req, "DescribeDutyScheduleList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

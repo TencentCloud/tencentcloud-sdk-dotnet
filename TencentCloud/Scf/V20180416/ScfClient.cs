@@ -28,7 +28,7 @@ namespace TencentCloud.Scf.V20180416
 
        private const string endpoint = "scf.tencentcloudapi.com";
        private const string version = "2018-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.1037";
+       private const string sdkVersion = "SDK_NET_3.0.1038";
 
         /// <summary>
         /// Client constructor.
@@ -572,7 +572,7 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
-        ///  SCF同步调用函数接口
+        /// SCF同步调用函数接口。
         /// </summary>
         /// <param name="req"><see cref="InvokeFunctionRequest"/></param>
         /// <returns><see cref="InvokeFunctionResponse"/></returns>
@@ -582,7 +582,7 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
-        ///  SCF同步调用函数接口
+        /// SCF同步调用函数接口。
         /// </summary>
         /// <param name="req"><see cref="InvokeFunctionRequest"/></param>
         /// <returns><see cref="InvokeFunctionResponse"/></returns>

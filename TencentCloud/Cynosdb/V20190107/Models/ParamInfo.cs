@@ -119,6 +119,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("Func")]
         public string Func{ get; set; }
 
+        /// <summary>
+        /// 支持公式的参数的默认公式样式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FuncPattern")]
+        public string FuncPattern{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -140,6 +147,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamObj(map, prefix + "ModifiableInfo.", this.ModifiableInfo);
             this.SetParamSimple(map, prefix + "IsFunc", this.IsFunc);
             this.SetParamSimple(map, prefix + "Func", this.Func);
+            this.SetParamSimple(map, prefix + "FuncPattern", this.FuncPattern);
         }
     }
 }

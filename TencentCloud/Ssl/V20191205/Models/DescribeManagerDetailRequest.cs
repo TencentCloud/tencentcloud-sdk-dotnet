@@ -34,12 +34,14 @@ namespace TencentCloud.Ssl.V20191205.Models
         /// 分页每页数量
         /// </summary>
         [JsonProperty("Limit")]
+        [System.Obsolete]
         public long? Limit{ get; set; }
 
         /// <summary>
         /// 分页偏移量
         /// </summary>
         [JsonProperty("Offset")]
+        [System.Obsolete]
         public long? Offset{ get; set; }
 
 
