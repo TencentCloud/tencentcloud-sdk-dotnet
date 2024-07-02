@@ -55,7 +55,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 资产唯一id
+        /// ID,处理风险使用
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

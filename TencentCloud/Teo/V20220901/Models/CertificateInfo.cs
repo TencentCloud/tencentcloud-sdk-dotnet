@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 服务器证书 ID。
+        /// 证书 ID。
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }

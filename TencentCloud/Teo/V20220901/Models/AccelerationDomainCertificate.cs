@@ -31,11 +31,17 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Mode{ get; set; }
 
         /// <summary>
-        /// 证书列表。
+        /// 服务端证书列表。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("List")]
         public CertificateInfo[] List{ get; set; }
+
+        /// <summary>
+        /// 边缘双向认证配置。
+        /// </summary>
+        [JsonProperty("ClientCertInfo")]
+        public MutualTLS ClientCertInfo{ get; set; }
 
 
         /// <summary>
@@ -45,6 +51,7 @@ namespace TencentCloud.Teo.V20220901.Models
         {
             this.SetParamSimple(map, prefix + "Mode", this.Mode);
             this.SetParamArrayObj(map, prefix + "List.", this.List);
+            this.SetParamObj(map, prefix + "ClientCertInfo.", this.ClientCertInfo);
         }
     }
 }

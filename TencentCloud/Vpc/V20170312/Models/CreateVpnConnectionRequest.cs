@@ -139,6 +139,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("BgpConfig")]
         public BgpConfig BgpConfig{ get; set; }
 
+        /// <summary>
+        /// 健康检查NQA配置。
+        /// </summary>
+        [JsonProperty("HealthCheckConfig")]
+        public HealthCheckConfig HealthCheckConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -164,6 +170,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "DpdAction", this.DpdAction);
             this.SetParamObj(map, prefix + "Route.", this.Route);
             this.SetParamObj(map, prefix + "BgpConfig.", this.BgpConfig);
+            this.SetParamObj(map, prefix + "HealthCheckConfig.", this.HealthCheckConfig);
         }
     }
 }

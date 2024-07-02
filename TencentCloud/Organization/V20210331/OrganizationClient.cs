@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.1038";
+       private const string sdkVersion = "SDK_NET_3.0.1039";
 
         /// <summary>
         /// Client constructor.
@@ -495,7 +495,7 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// 批量删除企业组织成员
+        /// 从组织中移除成员账号，不会删除账号。
         /// </summary>
         /// <param name="req"><see cref="DeleteOrganizationMembersRequest"/></param>
         /// <returns><see cref="DeleteOrganizationMembersResponse"/></returns>
@@ -505,7 +505,7 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// 批量删除企业组织成员
+        /// 从组织中移除成员账号，不会删除账号。
         /// </summary>
         /// <param name="req"><see cref="DeleteOrganizationMembersRequest"/></param>
         /// <returns><see cref="DeleteOrganizationMembersResponse"/></returns>

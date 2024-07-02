@@ -72,6 +72,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public RabbitMQVirtualHostStatistics VirtualHostStatistics{ get; set; }
 
         /// <summary>
+        /// 消息轨迹开关,true打开,false关闭
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TraceFlag")]
+        public bool? TraceFlag{ get; set; }
+
+        /// <summary>
         /// vhost状态，与原生控制台对应，有running、partial、stopped、unknown
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -119,6 +126,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamObj(map, prefix + "VirtualHostStatistics.", this.VirtualHostStatistics);
+            this.SetParamSimple(map, prefix + "TraceFlag", this.TraceFlag);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "MessageHeapCount", this.MessageHeapCount);
             this.SetParamSimple(map, prefix + "MessageRateIn", this.MessageRateIn);

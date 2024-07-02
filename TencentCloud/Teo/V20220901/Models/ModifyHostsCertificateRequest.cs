@@ -37,16 +37,17 @@ namespace TencentCloud.Teo.V20220901.Models
         public string[] Hosts{ get; set; }
 
         /// <summary>
-        /// 配置证书的模式，取值有：
-        /// <li>disable：不配置证书；</li>
-        /// <li>eofreecert：配置 EdgeOne 免费证书；</li>
-        /// <li>sslcert：配置 SSL 证书。</li>不填时默认取值为 disable。
+        /// 配置服务端证书的模式，取值有：
+        /// <li>disable：不配置服务端证书；</li>
+        /// <li>eofreecert：配置 EdgeOne 免费服务端证书；</li>
+        /// <li>sslcert：配置 SSL 托管服务端证书；</li>
+        /// 不填写表示服务端证书保持原有配置。
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// SSL 证书配置，本参数仅在 mode = sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
+        /// SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
         /// </summary>
         [JsonProperty("ServerCertInfo")]
         public ServerCertInfo[] ServerCertInfo{ get; set; }
@@ -61,6 +62,13 @@ namespace TencentCloud.Teo.V20220901.Models
         [System.Obsolete]
         public string ApplyType{ get; set; }
 
+        /// <summary>
+        /// 边缘双向认证配置。
+        /// 不填写表示边缘双向认证保持原有配置。
+        /// </summary>
+        [JsonProperty("ClientCertInfo")]
+        public MutualTLS ClientCertInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +80,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Mode", this.Mode);
             this.SetParamArrayObj(map, prefix + "ServerCertInfo.", this.ServerCertInfo);
             this.SetParamSimple(map, prefix + "ApplyType", this.ApplyType);
+            this.SetParamObj(map, prefix + "ClientCertInfo.", this.ClientCertInfo);
         }
     }
 }

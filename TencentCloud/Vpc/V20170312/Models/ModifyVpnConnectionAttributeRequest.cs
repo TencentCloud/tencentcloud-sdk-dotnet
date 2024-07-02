@@ -108,6 +108,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("CustomerGatewayId")]
         public string CustomerGatewayId{ get; set; }
 
+        /// <summary>
+        /// 健康检查配置
+        /// </summary>
+        [JsonProperty("HealthCheckConfig")]
+        public HealthCheckConfig HealthCheckConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "DpdTimeout", this.DpdTimeout);
             this.SetParamSimple(map, prefix + "DpdAction", this.DpdAction);
             this.SetParamSimple(map, prefix + "CustomerGatewayId", this.CustomerGatewayId);
+            this.SetParamObj(map, prefix + "HealthCheckConfig.", this.HealthCheckConfig);
         }
     }
 }

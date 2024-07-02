@@ -227,6 +227,13 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("ChildInstanceType")]
         public string ChildInstanceType{ get; set; }
 
+        /// <summary>
+        /// tdsql的分片id。如节点类型为set必填。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SetId")]
+        public string SetId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -262,6 +269,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "CcnOwnerUin", this.CcnOwnerUin);
             this.SetParamSimple(map, prefix + "ChildInstanceId", this.ChildInstanceId);
             this.SetParamSimple(map, prefix + "ChildInstanceType", this.ChildInstanceType);
+            this.SetParamSimple(map, prefix + "SetId", this.SetId);
         }
     }
 }

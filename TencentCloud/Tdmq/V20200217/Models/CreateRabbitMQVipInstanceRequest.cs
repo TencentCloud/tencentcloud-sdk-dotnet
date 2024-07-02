@@ -114,6 +114,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Bandwidth")]
         public ulong? Bandwidth{ get; set; }
 
+        /// <summary>
+        /// 是否打开公网接入，不传默认为false
+        /// </summary>
+        [JsonProperty("EnablePublicAccess")]
+        public bool? EnablePublicAccess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "IsIntl", this.IsIntl);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+            this.SetParamSimple(map, prefix + "EnablePublicAccess", this.EnablePublicAccess);
         }
     }
 }

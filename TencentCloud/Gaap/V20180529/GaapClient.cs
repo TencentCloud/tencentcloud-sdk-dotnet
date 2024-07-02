@@ -28,7 +28,7 @@ namespace TencentCloud.Gaap.V20180529
 
        private const string endpoint = "gaap.tencentcloudapi.com";
        private const string version = "2018-05-29";
-       private const string sdkVersion = "SDK_NET_3.0.1038";
+       private const string sdkVersion = "SDK_NET_3.0.1039";
 
         /// <summary>
         /// Client constructor.
@@ -2219,6 +2219,27 @@ namespace TencentCloud.Gaap.V20180529
         public SetAuthenticationResponse SetAuthenticationSync(SetAuthenticationRequest req)
         {
             return InternalRequestAsync<SetAuthenticationResponse>(req, "SetAuthentication")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设置监听器TLS配置
+        /// </summary>
+        /// <param name="req"><see cref="SetTlsVersionRequest"/></param>
+        /// <returns><see cref="SetTlsVersionResponse"/></returns>
+        public Task<SetTlsVersionResponse> SetTlsVersion(SetTlsVersionRequest req)
+        {
+            return InternalRequestAsync<SetTlsVersionResponse>(req, "SetTlsVersion");
+        }
+
+        /// <summary>
+        /// 设置监听器TLS配置
+        /// </summary>
+        /// <param name="req"><see cref="SetTlsVersionRequest"/></param>
+        /// <returns><see cref="SetTlsVersionResponse"/></returns>
+        public SetTlsVersionResponse SetTlsVersionSync(SetTlsVersionRequest req)
+        {
+            return InternalRequestAsync<SetTlsVersionResponse>(req, "SetTlsVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

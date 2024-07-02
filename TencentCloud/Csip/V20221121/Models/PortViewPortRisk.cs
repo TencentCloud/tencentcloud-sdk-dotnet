@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 影响资产
+        /// 未处理数量
         /// </summary>
         [JsonProperty("NoHandleCount")]
         public long? NoHandleCount{ get; set; }
@@ -73,19 +73,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? Suggestion{ get; set; }
 
         /// <summary>
-        /// 状态，0未处理、1已处置、2已忽略
+        /// 影响资产数量
         /// </summary>
         [JsonProperty("AffectAssetCount")]
         public string AffectAssetCount{ get; set; }
 
         /// <summary>
-        /// 资产唯一id
+        /// ID
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 资产子类型
+        /// 识别来源
         /// </summary>
         [JsonProperty("From")]
         public string From{ get; set; }

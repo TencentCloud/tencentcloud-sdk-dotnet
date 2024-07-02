@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// -
+        /// 资产
         /// </summary>
         [JsonProperty("Content")]
         public PublicIpDomainListKey[] Content{ get; set; }

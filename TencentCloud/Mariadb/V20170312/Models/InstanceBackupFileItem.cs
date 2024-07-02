@@ -91,6 +91,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
+        /// <summary>
+        /// 对象的存储类型，枚举值：STANDARD（标准存储）、ARCHIVE（归档存储）。
+        /// </summary>
+        [JsonProperty("StorageClass")]
+        public string StorageClass{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +114,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "ManualBackup", this.ManualBackup);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "StorageClass", this.StorageClass);
         }
     }
 }

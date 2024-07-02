@@ -97,7 +97,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// -
+        /// 相关规范
         /// </summary>
         [JsonProperty("CFGSTD")]
         public string CFGSTD{ get; set; }

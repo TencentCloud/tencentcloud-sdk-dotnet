@@ -73,7 +73,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 资产唯一id
+        /// ID，处理风险使用
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
@@ -147,7 +147,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Fix{ get; set; }
 
         /// <summary>
-        /// 负载
+        /// 证明
         /// </summary>
         [JsonProperty("Payload")]
         public string Payload{ get; set; }
