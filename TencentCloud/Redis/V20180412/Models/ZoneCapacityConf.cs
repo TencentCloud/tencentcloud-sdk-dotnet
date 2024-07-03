@@ -31,25 +31,27 @@ namespace TencentCloud.Redis.V20180412.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 可用区名称
+        /// 可用区名称。
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// 可用区是否售罄
+        /// 可用区是否售罄。
         /// </summary>
         [JsonProperty("IsSaleout")]
         public bool? IsSaleout{ get; set; }
 
         /// <summary>
-        /// 是否为默认可用区
+        /// 是否为默认可用区。
         /// </summary>
         [JsonProperty("IsDefault")]
         public bool? IsDefault{ get; set; }
 
         /// <summary>
-        /// 网络类型：basenet -- 基础网络；vpcnet -- VPC网络
+        /// 网络类型。
+        /// - basenet：基础网络。
+        /// - vpcnet -- VPC网络。
         /// </summary>
         [JsonProperty("NetWorkType")]
         public string[] NetWorkType{ get; set; }

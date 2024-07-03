@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 节点名称。
+        /// 节点组名称。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

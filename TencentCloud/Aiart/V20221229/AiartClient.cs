@@ -28,7 +28,7 @@ namespace TencentCloud.Aiart.V20221229
 
        private const string endpoint = "aiart.tencentcloudapi.com";
        private const string version = "2022-12-29";
-       private const string sdkVersion = "SDK_NET_3.0.1039";
+       private const string sdkVersion = "SDK_NET_3.0.1040";
 
         /// <summary>
         /// Client constructor.
@@ -191,6 +191,31 @@ namespace TencentCloud.Aiart.V20221229
         public QueryTrainPortraitModelJobResponse QueryTrainPortraitModelJobSync(QueryTrainPortraitModelJobRequest req)
         {
             return InternalRequestAsync<QueryTrainPortraitModelJobResponse>(req, "QueryTrainPortraitModelJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 商品背景生成接口根据指定的背景描述 Prompt，将商品图中的原背景替换为自定义的新背景并保留商品主体形象，实现商品背景的自由生成与更换。
+        /// 
+        /// 商品背景生成默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceBackgroundRequest"/></param>
+        /// <returns><see cref="ReplaceBackgroundResponse"/></returns>
+        public Task<ReplaceBackgroundResponse> ReplaceBackground(ReplaceBackgroundRequest req)
+        {
+            return InternalRequestAsync<ReplaceBackgroundResponse>(req, "ReplaceBackground");
+        }
+
+        /// <summary>
+        /// 商品背景生成接口根据指定的背景描述 Prompt，将商品图中的原背景替换为自定义的新背景并保留商品主体形象，实现商品背景的自由生成与更换。
+        /// 
+        /// 商品背景生成默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceBackgroundRequest"/></param>
+        /// <returns><see cref="ReplaceBackgroundResponse"/></returns>
+        public ReplaceBackgroundResponse ReplaceBackgroundSync(ReplaceBackgroundRequest req)
+        {
+            return InternalRequestAsync<ReplaceBackgroundResponse>(req, "ReplaceBackground")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

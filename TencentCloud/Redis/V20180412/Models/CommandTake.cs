@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Cmd{ get; set; }
 
         /// <summary>
-        /// 耗时时长。
+        /// 耗时时长。单位：ms。
         /// </summary>
         [JsonProperty("Took")]
         public long? Took{ get; set; }

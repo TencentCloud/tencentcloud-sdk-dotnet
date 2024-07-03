@@ -86,6 +86,18 @@ namespace TencentCloud.Tmt.V20180321.Models
         [JsonProperty("SourceTextList")]
         public string[] SourceTextList{ get; set; }
 
+        /// <summary>
+        /// 需要使用的术语库列表
+        /// </summary>
+        [JsonProperty("TermRepoIDList")]
+        public string[] TermRepoIDList{ get; set; }
+
+        /// <summary>
+        /// 需要使用的例句库列表
+        /// </summary>
+        [JsonProperty("SentRepoIDList")]
+        public string[] SentRepoIDList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +108,8 @@ namespace TencentCloud.Tmt.V20180321.Models
             this.SetParamSimple(map, prefix + "Target", this.Target);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamArraySimple(map, prefix + "SourceTextList.", this.SourceTextList);
+            this.SetParamArraySimple(map, prefix + "TermRepoIDList.", this.TermRepoIDList);
+            this.SetParamArraySimple(map, prefix + "SentRepoIDList.", this.SentRepoIDList);
         }
     }
 }

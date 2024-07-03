@@ -91,7 +91,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? UnhealthNum{ get; set; }
 
         /// <summary>
-        /// 传统型公网负载均衡的 HTTP、HTTPS 监听器的请求均衡方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
+        /// 传统型公网负载均衡 监听器的请求均衡方法。空字符串或wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发，least_conn表示按最小连接数。
         /// </summary>
         [JsonProperty("HttpHash")]
         public string HttpHash{ get; set; }
