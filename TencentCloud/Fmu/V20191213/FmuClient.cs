@@ -28,7 +28,7 @@ namespace TencentCloud.Fmu.V20191213
 
        private const string endpoint = "fmu.tencentcloudapi.com";
        private const string version = "2019-12-13";
-       private const string sdkVersion = "SDK_NET_3.0.1040";
+       private const string sdkVersion = "SDK_NET_3.0.1041";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,8 @@ namespace TencentCloud.Fmu.V20191213
         }
 
         /// <summary>
+        /// 产品不再维护，准备下线。
+        /// 
         /// 视频美颜(此接口目前已下线)
         /// </summary>
         /// <param name="req"><see cref="BeautifyVideoRequest"/></param>
@@ -85,6 +87,8 @@ namespace TencentCloud.Fmu.V20191213
         }
 
         /// <summary>
+        /// 产品不再维护，准备下线。
+        /// 
         /// 视频美颜(此接口目前已下线)
         /// </summary>
         /// <param name="req"><see cref="BeautifyVideoRequest"/></param>
@@ -96,6 +100,8 @@ namespace TencentCloud.Fmu.V20191213
         }
 
         /// <summary>
+        /// 产品不再维护，准备下线。
+        /// 
         /// 撤销视频美颜任务请求
         /// </summary>
         /// <param name="req"><see cref="CancelBeautifyVideoJobRequest"/></param>
@@ -106,6 +112,8 @@ namespace TencentCloud.Fmu.V20191213
         }
 
         /// <summary>
+        /// 产品不再维护，准备下线。
+        /// 
         /// 撤销视频美颜任务请求
         /// </summary>
         /// <param name="req"><see cref="CancelBeautifyVideoJobRequest"/></param>
@@ -184,6 +192,8 @@ namespace TencentCloud.Fmu.V20191213
         }
 
         /// <summary>
+        /// 产品不再维护，准备下线。
+        /// 
         /// 查询视频美颜处理进度
         /// </summary>
         /// <param name="req"><see cref="QueryBeautifyVideoJobRequest"/></param>
@@ -194,6 +204,8 @@ namespace TencentCloud.Fmu.V20191213
         }
 
         /// <summary>
+        /// 产品不再维护，准备下线。
+        /// 
         /// 查询视频美颜处理进度
         /// </summary>
         /// <param name="req"><see cref="QueryBeautifyVideoJobRequest"/></param>

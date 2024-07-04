@@ -36,6 +36,16 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
+        /// <summary>
+        /// 模型生成的工具调用，仅 hunyuan-functioncall 模型支持
+        /// 说明：
+        /// 对于每一次的输出值应该以Id为标识对Type、Name、Arguments字段进行合并。
+        /// 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ToolCalls")]
+        public ToolCall[] ToolCalls{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +54,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         {
             this.SetParamSimple(map, prefix + "Role", this.Role);
             this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamArrayObj(map, prefix + "ToolCalls.", this.ToolCalls);
         }
     }
 }

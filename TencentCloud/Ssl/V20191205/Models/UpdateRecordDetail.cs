@@ -171,6 +171,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("TCBType")]
         public string TCBType{ get; set; }
 
+        /// <summary>
+        /// 监听器Url(clb专属)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -199,6 +206,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
             this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
             this.SetParamSimple(map, prefix + "TCBType", this.TCBType);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
         }
     }
 }

@@ -56,6 +56,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("NoMatchDomains")]
         public string[] NoMatchDomains{ get; set; }
 
+        /// <summary>
+        /// 规则绑定的路径
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +74,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "IsMatch", this.IsMatch);
             this.SetParamObj(map, prefix + "Certificate.", this.Certificate);
             this.SetParamArraySimple(map, prefix + "NoMatchDomains.", this.NoMatchDomains);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
         }
     }
 }

@@ -25,11 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// <li>HostTag - string - 是否必填：否 - 主机标签</i>
-        /// <li>ItemId - int64 - 是否必填：否 - 项Id</i>
-        /// <li>RuleId - int64 - 是否必填：否 - 规则Id</li>
-        /// <li>IsPassed - int - 是否必填：否 - 是否通过</li>
-        /// <li>RiskTier - int - 是否必填：否 - 风险等级</li>
+        /// <li>HostTag - string - 是否必填：否 - 主机标签</li><li>ItemId - int64 - 是否必填：否 - 项Id</li><li>RuleId - int64 - 是否必填：否 - 规则Id</li><li>IsPassed - int - 是否必填：否 - 是否通过</li><li>RiskTier - int - 是否必填：否 - 风险等级</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -40,6 +36,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("ExportAll")]
         public long? ExportAll{ get; set; }
 
+        /// <summary>
+        /// 0:导出界面展示；1:导出全部结果事件
+        /// </summary>
+        [JsonProperty("IsExportDetail")]
+        public long? IsExportDetail{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -48,6 +50,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         {
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "ExportAll", this.ExportAll);
+            this.SetParamSimple(map, prefix + "IsExportDetail", this.IsExportDetail);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Rkp.V20191209
 
        private const string endpoint = "rkp.tencentcloudapi.com";
        private const string version = "2019-12-09";
-       private const string sdkVersion = "SDK_NET_3.0.1040";
+       private const string sdkVersion = "SDK_NET_3.0.1041";
 
         /// <summary>
         /// Client constructor.

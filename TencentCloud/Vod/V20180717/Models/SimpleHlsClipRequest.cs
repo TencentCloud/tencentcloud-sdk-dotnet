@@ -61,7 +61,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 时有效。
+        /// 剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 且 Precision 为 Rough 时有效。
         /// </summary>
         [JsonProperty("Procedure")]
         public string Procedure{ get; set; }
@@ -87,6 +87,18 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SessionContext{ get; set; }
 
         /// <summary>
+        /// 裁剪精度，取值有：<li>Rough: 粗略裁剪，最小剪辑精度是单个 ts 分片；</li><li>Precise: 精确裁剪，做到按照剪辑时间点的毫秒级精确剪辑。</li> 默认取值 Rough。
+        /// </summary>
+        [JsonProperty("Precision")]
+        public string Precision{ get; set; }
+
+        /// <summary>
+        /// 输出视频类型，取值有：<li>hls: 输出 hls 文件；</li><li>mp4：输出 mp4 文件，MP4 文件的大小不超过5G，时长小于2小时。仅当 Precision 选择 Precise 且 IsPersistence  选择0时有效，即只有非固化的精确剪辑时支持输出 MP4。</li>默认取值 hls。
+        /// </summary>
+        [JsonProperty("OutputMediaType")]
+        public string OutputMediaType{ get; set; }
+
+        /// <summary>
         /// 保留字段，特殊用途时使用。 示例值：""
         /// </summary>
         [JsonProperty("ExtInfo")]
@@ -108,6 +120,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "ClassId", this.ClassId);
             this.SetParamSimple(map, prefix + "SourceContext", this.SourceContext);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
+            this.SetParamSimple(map, prefix + "Precision", this.Precision);
+            this.SetParamSimple(map, prefix + "OutputMediaType", this.OutputMediaType);
             this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         }
     }

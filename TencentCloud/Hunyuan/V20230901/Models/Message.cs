@@ -25,7 +25,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
     {
         
         /// <summary>
-        /// 角色，可选值包括 system、user、assistant。
+        /// 角色，可选值包括 system、user、assistant、 tool。
         /// </summary>
         [JsonProperty("Role")]
         public string Role{ get; set; }
@@ -36,6 +36,27 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
+        /// <summary>
+        /// 多种类型内容（目前支持图片和文本），仅 hunyuan-vision 模型支持
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Contents")]
+        public Content[] Contents{ get; set; }
+
+        /// <summary>
+        /// 当role为tool时传入，标识具体的函数调用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ToolCallId")]
+        public string ToolCallId{ get; set; }
+
+        /// <summary>
+        /// 模型生成的工具调用，仅 hunyuan-functioncall 模型支持
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ToolCalls")]
+        public ToolCall[] ToolCalls{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +65,9 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         {
             this.SetParamSimple(map, prefix + "Role", this.Role);
             this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamArrayObj(map, prefix + "Contents.", this.Contents);
+            this.SetParamSimple(map, prefix + "ToolCallId", this.ToolCallId);
+            this.SetParamArrayObj(map, prefix + "ToolCalls.", this.ToolCalls);
         }
     }
 }

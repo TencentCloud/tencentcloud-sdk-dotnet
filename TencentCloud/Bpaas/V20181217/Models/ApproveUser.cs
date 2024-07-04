@@ -57,6 +57,34 @@ namespace TencentCloud.Bpaas.V20181217.Models
         [JsonProperty("Scf")]
         public Scf Scf{ get; set; }
 
+        /// <summary>
+        /// 审批状态 （取值范围 0:待审批  1:审批通过  2:拒绝  6:其他人已审批）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApproveStatus")]
+        public ulong? ApproveStatus{ get; set; }
+
+        /// <summary>
+        /// 审批意见
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApproveMsg")]
+        public string ApproveMsg{ get; set; }
+
+        /// <summary>
+        /// 审批时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApproveTime")]
+        public string ApproveTime{ get; set; }
+
+        /// <summary>
+        /// 审批组名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApproveGroup")]
+        public string ApproveGroup{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +96,10 @@ namespace TencentCloud.Bpaas.V20181217.Models
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
             this.SetParamSimple(map, prefix + "Nick", this.Nick);
             this.SetParamObj(map, prefix + "Scf.", this.Scf);
+            this.SetParamSimple(map, prefix + "ApproveStatus", this.ApproveStatus);
+            this.SetParamSimple(map, prefix + "ApproveMsg", this.ApproveMsg);
+            this.SetParamSimple(map, prefix + "ApproveTime", this.ApproveTime);
+            this.SetParamSimple(map, prefix + "ApproveGroup", this.ApproveGroup);
         }
     }
 }

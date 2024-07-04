@@ -25,25 +25,25 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 安全模块类型 1: 入侵检测 2: 漏洞管理 3: 基线管理 4: 高级防御 5:客户端相关 6: 资产指纹
+        /// 安全模块类型 1: 入侵检测 2: 漏洞管理 3: 基线管理 4: 高级防御 5:客户端相关 6: 资产指纹 7 主机列表 8 客户端上报
         /// </summary>
         [JsonProperty("SecurityType")]
         public ulong? SecurityType{ get; set; }
 
         /// <summary>
-        /// 安全模块下的日志类型，http://tapd.woa.com/Teneyes/markdown_wikis/show/#1210131751002328905
+        /// 安全模块下的日志类型
         /// </summary>
         [JsonProperty("LogType")]
         public long?[] LogType{ get; set; }
 
         /// <summary>
-        /// kafka topic id
+        /// 主题ID
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// kafka topic name
+        /// 主题名
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
@@ -67,10 +67,28 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string ErrInfo{ get; set; }
 
         /// <summary>
-        /// 最近一次状态上报时间戳，s
+        /// 最近一次状态上报时间戳
         /// </summary>
         [JsonProperty("StatusTime")]
         public long? StatusTime{ get; set; }
+
+        /// <summary>
+        /// 日志集名
+        /// </summary>
+        [JsonProperty("LogName")]
+        public string LogName{ get; set; }
+
+        /// <summary>
+        /// 日志集ID
+        /// </summary>
+        [JsonProperty("LogSetId")]
+        public string LogSetId{ get; set; }
+
+        /// <summary>
+        /// 日志集所在地域
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
 
 
         /// <summary>
@@ -86,6 +104,9 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "ErrInfo", this.ErrInfo);
             this.SetParamSimple(map, prefix + "StatusTime", this.StatusTime);
+            this.SetParamSimple(map, prefix + "LogName", this.LogName);
+            this.SetParamSimple(map, prefix + "LogSetId", this.LogSetId);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
         }
     }
 }

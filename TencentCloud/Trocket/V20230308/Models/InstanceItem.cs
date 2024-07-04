@@ -155,6 +155,13 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("MaxMessageDelay")]
         public long? MaxMessageDelay{ get; set; }
 
+        /// <summary>
+        /// 是否自动续费
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RenewFlag")]
+        public long? RenewFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -179,6 +186,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "ScaledTpsLimit", this.ScaledTpsLimit);
             this.SetParamSimple(map, prefix + "MessageRetention", this.MessageRetention);
             this.SetParamSimple(map, prefix + "MaxMessageDelay", this.MaxMessageDelay);
+            this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         }
     }
 }

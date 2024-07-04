@@ -31,7 +31,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 账号列表详细信息。
+        /// 账号列表详细信息。当CreateTime项为0000-00-00 00:00:00时，意味着对应账号是直连数据库创建的，并非通过CreateAccount接口创建。
         /// </summary>
         [JsonProperty("Details")]
         public AccountInfo[] Details{ get; set; }

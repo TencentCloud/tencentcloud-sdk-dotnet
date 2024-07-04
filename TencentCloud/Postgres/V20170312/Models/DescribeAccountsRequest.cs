@@ -31,7 +31,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// 分页返回，每页最大返回数目，默认10，取值范围为1-100
+        /// 分页返回，每页最大返回数目，默认20，取值范围为1-100
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数据按照创建时间或者用户名排序。取值只能为createTime或者name。createTime-按照创建时间排序；name-按照用户名排序
+        /// 返回数据按照创建时间或者用户名排序。取值支持createTime、name、updateTime。createTime-按照创建时间排序；name-按照用户名排序; updateTime-按照更新时间排序。
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
