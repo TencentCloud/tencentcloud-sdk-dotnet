@@ -52,6 +52,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("QualityControlResultSet")]
         public QualityControlResult[] QualityControlResultSet{ get; set; }
 
+        /// <summary>
+        /// 格式诊断检出异常项
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ContainerDiagnoseResultSet")]
+        public ContainerDiagnoseResultItem[] ContainerDiagnoseResultSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "NoVideo", this.NoVideo);
             this.SetParamSimple(map, prefix + "QualityEvaluationScore", this.QualityEvaluationScore);
             this.SetParamArrayObj(map, prefix + "QualityControlResultSet.", this.QualityControlResultSet);
+            this.SetParamArrayObj(map, prefix + "ContainerDiagnoseResultSet.", this.ContainerDiagnoseResultSet);
         }
     }
 }

@@ -67,7 +67,7 @@ namespace TencentCloud.Tsi.V20210325.Models
         public ulong? IsEnd{ get; set; }
 
         /// <summary>
-        /// 翻译时机，0 -不翻译 1 - 句子结束时翻译，2 - 句子实时翻译
+        /// 翻译时机，0-不翻译 2-句子实时翻译
         /// </summary>
         [JsonProperty("TranslateTime")]
         public ulong? TranslateTime{ get; set; }

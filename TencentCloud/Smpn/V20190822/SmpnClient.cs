@@ -28,7 +28,7 @@ namespace TencentCloud.Smpn.V20190822
 
        private const string endpoint = "smpn.tencentcloudapi.com";
        private const string version = "2019-08-22";
-       private const string sdkVersion = "SDK_NET_3.0.1041";
+       private const string sdkVersion = "SDK_NET_3.0.1042";
 
         /// <summary>
         /// Client constructor.
@@ -54,6 +54,8 @@ namespace TencentCloud.Smpn.V20190822
         }
 
         /// <summary>
+        /// 不在使用的API
+        /// 
         /// 企业号码认证
         /// </summary>
         /// <param name="req"><see cref="CreateSmpnEpaRequest"/></param>
@@ -64,6 +66,8 @@ namespace TencentCloud.Smpn.V20190822
         }
 
         /// <summary>
+        /// 不在使用的API
+        /// 
         /// 企业号码认证
         /// </summary>
         /// <param name="req"><see cref="CreateSmpnEpaRequest"/></param>
@@ -75,6 +79,8 @@ namespace TencentCloud.Smpn.V20190822
         }
 
         /// <summary>
+        /// 不在使用的API
+        /// 
         /// 查询号码的标记和标记次数
         /// </summary>
         /// <param name="req"><see cref="DescribeSmpnChpRequest"/></param>
@@ -85,6 +91,8 @@ namespace TencentCloud.Smpn.V20190822
         }
 
         /// <summary>
+        /// 不在使用的API
+        /// 
         /// 查询号码的标记和标记次数
         /// </summary>
         /// <param name="req"><see cref="DescribeSmpnChpRequest"/></param>
@@ -96,6 +104,8 @@ namespace TencentCloud.Smpn.V20190822
         }
 
         /// <summary>
+        /// 不在使用的API
+        /// 
         /// 虚假号码识别
         /// </summary>
         /// <param name="req"><see cref="DescribeSmpnFnrRequest"/></param>
@@ -106,6 +116,8 @@ namespace TencentCloud.Smpn.V20190822
         }
 
         /// <summary>
+        /// 不在使用的API
+        /// 
         /// 虚假号码识别
         /// </summary>
         /// <param name="req"><see cref="DescribeSmpnFnrRequest"/></param>
@@ -117,6 +129,8 @@ namespace TencentCloud.Smpn.V20190822
         }
 
         /// <summary>
+        /// 不在使用的API
+        /// 
         /// 号码营销监控
         /// </summary>
         /// <param name="req"><see cref="DescribeSmpnMhmRequest"/></param>
@@ -127,6 +141,8 @@ namespace TencentCloud.Smpn.V20190822
         }
 
         /// <summary>
+        /// 不在使用的API
+        /// 
         /// 号码营销监控
         /// </summary>
         /// <param name="req"><see cref="DescribeSmpnMhmRequest"/></param>
@@ -138,6 +154,8 @@ namespace TencentCloud.Smpn.V20190822
         }
 
         /// <summary>
+        /// 不在使用的API
+        /// 
         /// 查询号码恶意标记等级
         /// </summary>
         /// <param name="req"><see cref="DescribeSmpnMrlRequest"/></param>
@@ -148,6 +166,8 @@ namespace TencentCloud.Smpn.V20190822
         }
 
         /// <summary>
+        /// 不在使用的API
+        /// 
         /// 查询号码恶意标记等级
         /// </summary>
         /// <param name="req"><see cref="DescribeSmpnMrlRequest"/></param>

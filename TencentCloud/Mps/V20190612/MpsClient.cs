@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1041";
+       private const string sdkVersion = "SDK_NET_3.0.1042";
 
         /// <summary>
         /// Client constructor.
@@ -260,6 +260,27 @@ namespace TencentCloud.Mps.V20190612
         public CreatePersonSampleResponse CreatePersonSampleSync(CreatePersonSampleRequest req)
         {
             return InternalRequestAsync<CreatePersonSampleResponse>(req, "CreatePersonSample")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建媒体质检模板，数量上限：50。
+        /// </summary>
+        /// <param name="req"><see cref="CreateQualityControlTemplateRequest"/></param>
+        /// <returns><see cref="CreateQualityControlTemplateResponse"/></returns>
+        public Task<CreateQualityControlTemplateResponse> CreateQualityControlTemplate(CreateQualityControlTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateQualityControlTemplateResponse>(req, "CreateQualityControlTemplate");
+        }
+
+        /// <summary>
+        /// 创建媒体质检模板，数量上限：50。
+        /// </summary>
+        /// <param name="req"><see cref="CreateQualityControlTemplateRequest"/></param>
+        /// <returns><see cref="CreateQualityControlTemplateResponse"/></returns>
+        public CreateQualityControlTemplateResponse CreateQualityControlTemplateSync(CreateQualityControlTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateQualityControlTemplateResponse>(req, "CreateQualityControlTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -690,6 +711,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 删除媒体质检模板
+        /// </summary>
+        /// <param name="req"><see cref="DeleteQualityControlTemplateRequest"/></param>
+        /// <returns><see cref="DeleteQualityControlTemplateResponse"/></returns>
+        public Task<DeleteQualityControlTemplateResponse> DeleteQualityControlTemplate(DeleteQualityControlTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteQualityControlTemplateResponse>(req, "DeleteQualityControlTemplate");
+        }
+
+        /// <summary>
+        /// 删除媒体质检模板
+        /// </summary>
+        /// <param name="req"><see cref="DeleteQualityControlTemplateRequest"/></param>
+        /// <returns><see cref="DeleteQualityControlTemplateResponse"/></returns>
+        public DeleteQualityControlTemplateResponse DeleteQualityControlTemplateSync(DeleteQualityControlTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteQualityControlTemplateResponse>(req, "DeleteQualityControlTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除用户自定义采样截图模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteSampleSnapshotTemplateRequest"/></param>
@@ -1064,6 +1106,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribePersonSamplesResponse DescribePersonSamplesSync(DescribePersonSamplesRequest req)
         {
             return InternalRequestAsync<DescribePersonSamplesResponse>(req, "DescribePersonSamples")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询用户自定义媒体质检模板，支持根据条件，分页查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQualityControlTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeQualityControlTemplatesResponse"/></returns>
+        public Task<DescribeQualityControlTemplatesResponse> DescribeQualityControlTemplates(DescribeQualityControlTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeQualityControlTemplatesResponse>(req, "DescribeQualityControlTemplates");
+        }
+
+        /// <summary>
+        /// 查询用户自定义媒体质检模板，支持根据条件，分页查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQualityControlTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeQualityControlTemplatesResponse"/></returns>
+        public DescribeQualityControlTemplatesResponse DescribeQualityControlTemplatesSync(DescribeQualityControlTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeQualityControlTemplatesResponse>(req, "DescribeQualityControlTemplates")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1831,6 +1894,27 @@ namespace TencentCloud.Mps.V20190612
         public ModifyPersonSampleResponse ModifyPersonSampleSync(ModifyPersonSampleRequest req)
         {
             return InternalRequestAsync<ModifyPersonSampleResponse>(req, "ModifyPersonSample")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改媒体质检模板。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyQualityControlTemplateRequest"/></param>
+        /// <returns><see cref="ModifyQualityControlTemplateResponse"/></returns>
+        public Task<ModifyQualityControlTemplateResponse> ModifyQualityControlTemplate(ModifyQualityControlTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyQualityControlTemplateResponse>(req, "ModifyQualityControlTemplate");
+        }
+
+        /// <summary>
+        /// 修改媒体质检模板。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyQualityControlTemplateRequest"/></param>
+        /// <returns><see cref="ModifyQualityControlTemplateResponse"/></returns>
+        public ModifyQualityControlTemplateResponse ModifyQualityControlTemplateSync(ModifyQualityControlTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyQualityControlTemplateResponse>(req, "ModifyQualityControlTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

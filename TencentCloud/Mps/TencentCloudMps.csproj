@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1041</VersionPrefix>
+    <VersionPrefix>3.0.1042</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -209,6 +209,7 @@
     <Compile Include="V20190612\Models\ComposeTransitionOperation.cs" />
     <Compile Include="V20190612\Models\ComposeVideoItem.cs" />
     <Compile Include="V20190612\Models\ComposeVideoStream.cs" />
+    <Compile Include="V20190612\Models\ContainerDiagnoseResultItem.cs" />
     <Compile Include="V20190612\Models\ContentReviewTemplateItem.cs" />
     <Compile Include="V20190612\Models\CosFileUploadTrigger.cs" />
     <Compile Include="V20190612\Models\CosInputInfo.cs" />
@@ -242,6 +243,8 @@
     <Compile Include="V20190612\Models\CreateOutputSRTSettingsDestinations.cs" />
     <Compile Include="V20190612\Models\CreatePersonSampleRequest.cs" />
     <Compile Include="V20190612\Models\CreatePersonSampleResponse.cs" />
+    <Compile Include="V20190612\Models\CreateQualityControlTemplateRequest.cs" />
+    <Compile Include="V20190612\Models\CreateQualityControlTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateSampleSnapshotTemplateRequest.cs" />
     <Compile Include="V20190612\Models\CreateSampleSnapshotTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateScheduleRequest.cs" />
@@ -278,6 +281,8 @@
     <Compile Include="V20190612\Models\DeleteImageSpriteTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeletePersonSampleRequest.cs" />
     <Compile Include="V20190612\Models\DeletePersonSampleResponse.cs" />
+    <Compile Include="V20190612\Models\DeleteQualityControlTemplateRequest.cs" />
+    <Compile Include="V20190612\Models\DeleteQualityControlTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeleteSampleSnapshotTemplateRequest.cs" />
     <Compile Include="V20190612\Models\DeleteSampleSnapshotTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeleteScheduleRequest.cs" />
@@ -335,6 +340,8 @@
     <Compile Include="V20190612\Models\DescribeOutputSRTSettings.cs" />
     <Compile Include="V20190612\Models\DescribePersonSamplesRequest.cs" />
     <Compile Include="V20190612\Models\DescribePersonSamplesResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeQualityControlTemplatesRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeQualityControlTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeRTMPPullSourceAddress.cs" />
     <Compile Include="V20190612\Models\DescribeRTSPPullSourceAddress.cs" />
     <Compile Include="V20190612\Models\DescribeSampleSnapshotTemplatesRequest.cs" />
@@ -509,6 +516,8 @@
     <Compile Include="V20190612\Models\ModifyOutputInfo.cs" />
     <Compile Include="V20190612\Models\ModifyPersonSampleRequest.cs" />
     <Compile Include="V20190612\Models\ModifyPersonSampleResponse.cs" />
+    <Compile Include="V20190612\Models\ModifyQualityControlTemplateRequest.cs" />
+    <Compile Include="V20190612\Models\ModifyQualityControlTemplateResponse.cs" />
     <Compile Include="V20190612\Models\ModifySampleSnapshotTemplateRequest.cs" />
     <Compile Include="V20190612\Models\ModifySampleSnapshotTemplateResponse.cs" />
     <Compile Include="V20190612\Models\ModifyScheduleRequest.cs" />
@@ -570,7 +579,9 @@
     <Compile Include="V20190612\Models\ProhibitedOcrReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\QualityControlData.cs" />
     <Compile Include="V20190612\Models\QualityControlItem.cs" />
+    <Compile Include="V20190612\Models\QualityControlItemConfig.cs" />
     <Compile Include="V20190612\Models\QualityControlResult.cs" />
+    <Compile Include="V20190612\Models\QualityControlTemplate.cs" />
     <Compile Include="V20190612\Models\RTMPAddressDestination.cs" />
     <Compile Include="V20190612\Models\RTMPPullSourceAddress.cs" />
     <Compile Include="V20190612\Models\RTPAddressDestination.cs" />

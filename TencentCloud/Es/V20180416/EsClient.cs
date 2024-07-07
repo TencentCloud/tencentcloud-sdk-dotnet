@@ -28,7 +28,7 @@ namespace TencentCloud.Es.V20180416
 
        private const string endpoint = "es.tencentcloudapi.com";
        private const string version = "2018-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.1041";
+       private const string sdkVersion = "SDK_NET_3.0.1042";
 
         /// <summary>
         /// Client constructor.
@@ -575,6 +575,27 @@ namespace TencentCloud.Es.V20180416
         public DescribeServerlessInstancesResponse DescribeServerlessInstancesSync(DescribeServerlessInstancesRequest req)
         {
             return InternalRequestAsync<DescribeServerlessInstancesResponse>(req, "DescribeServerlessInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取serverless实例对应指标，获取space维度时不需要传入indexid，获取index时不需要传入spaceid
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServerlessMetricsRequest"/></param>
+        /// <returns><see cref="DescribeServerlessMetricsResponse"/></returns>
+        public Task<DescribeServerlessMetricsResponse> DescribeServerlessMetrics(DescribeServerlessMetricsRequest req)
+        {
+            return InternalRequestAsync<DescribeServerlessMetricsResponse>(req, "DescribeServerlessMetrics");
+        }
+
+        /// <summary>
+        /// 获取serverless实例对应指标，获取space维度时不需要传入indexid，获取index时不需要传入spaceid
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServerlessMetricsRequest"/></param>
+        /// <returns><see cref="DescribeServerlessMetricsResponse"/></returns>
+        public DescribeServerlessMetricsResponse DescribeServerlessMetricsSync(DescribeServerlessMetricsRequest req)
+        {
+            return InternalRequestAsync<DescribeServerlessMetricsResponse>(req, "DescribeServerlessMetrics")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1041";
+       private const string sdkVersion = "SDK_NET_3.0.1042";
 
         /// <summary>
         /// Client constructor.
@@ -680,6 +680,27 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 开启密码轮转
+        /// </summary>
+        /// <param name="req"><see cref="CreateRotationPasswordRequest"/></param>
+        /// <returns><see cref="CreateRotationPasswordResponse"/></returns>
+        public Task<CreateRotationPasswordResponse> CreateRotationPassword(CreateRotationPasswordRequest req)
+        {
+            return InternalRequestAsync<CreateRotationPasswordResponse>(req, "CreateRotationPassword");
+        }
+
+        /// <summary>
+        /// 开启密码轮转
+        /// </summary>
+        /// <param name="req"><see cref="CreateRotationPasswordRequest"/></param>
+        /// <returns><see cref="CreateRotationPasswordResponse"/></returns>
+        public CreateRotationPasswordResponse CreateRotationPasswordSync(CreateRotationPasswordRequest req)
+        {
+            return InternalRequestAsync<CreateRotationPasswordResponse>(req, "CreateRotationPassword")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口(DeleteAccounts)用于删除云数据库的账户。
         /// </summary>
         /// <param name="req"><see cref="DeleteAccountsRequest"/></param>
@@ -865,6 +886,27 @@ namespace TencentCloud.Cdb.V20170320
         public DeleteParamTemplateResponse DeleteParamTemplateSync(DeleteParamTemplateRequest req)
         {
             return InternalRequestAsync<DeleteParamTemplateResponse>(req, "DeleteParamTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 关闭实例账户密码轮转
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRotationPasswordRequest"/></param>
+        /// <returns><see cref="DeleteRotationPasswordResponse"/></returns>
+        public Task<DeleteRotationPasswordResponse> DeleteRotationPassword(DeleteRotationPasswordRequest req)
+        {
+            return InternalRequestAsync<DeleteRotationPasswordResponse>(req, "DeleteRotationPassword");
+        }
+
+        /// <summary>
+        /// 关闭实例账户密码轮转
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRotationPasswordRequest"/></param>
+        /// <returns><see cref="DeleteRotationPasswordResponse"/></returns>
+        public DeleteRotationPasswordResponse DeleteRotationPasswordSync(DeleteRotationPasswordRequest req)
+        {
+            return InternalRequestAsync<DeleteRotationPasswordResponse>(req, "DeleteRotationPassword")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3246,6 +3288,27 @@ namespace TencentCloud.Cdb.V20170320
         public RenewDBInstanceResponse RenewDBInstanceSync(RenewDBInstanceRequest req)
         {
             return InternalRequestAsync<RenewDBInstanceResponse>(req, "RenewDBInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 手动刷新轮转密码
+        /// </summary>
+        /// <param name="req"><see cref="ResetPasswordRequest"/></param>
+        /// <returns><see cref="ResetPasswordResponse"/></returns>
+        public Task<ResetPasswordResponse> ResetPassword(ResetPasswordRequest req)
+        {
+            return InternalRequestAsync<ResetPasswordResponse>(req, "ResetPassword");
+        }
+
+        /// <summary>
+        /// 手动刷新轮转密码
+        /// </summary>
+        /// <param name="req"><see cref="ResetPasswordRequest"/></param>
+        /// <returns><see cref="ResetPasswordResponse"/></returns>
+        public ResetPasswordResponse ResetPasswordSync(ResetPasswordRequest req)
+        {
+            return InternalRequestAsync<ResetPasswordResponse>(req, "ResetPassword")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

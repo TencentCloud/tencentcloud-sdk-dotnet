@@ -602,6 +602,13 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("NetConnectScheme")]
         public string NetConnectScheme{ get; set; }
 
+        /// <summary>
+        /// 置放群组相关参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DisasterRecoverGroupAffinity")]
+        public ulong? DisasterRecoverGroupAffinity{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -695,6 +702,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "CustomKibanaPrivateUrl", this.CustomKibanaPrivateUrl);
             this.SetParamArrayObj(map, prefix + "OutboundPublicAcls.", this.OutboundPublicAcls);
             this.SetParamSimple(map, prefix + "NetConnectScheme", this.NetConnectScheme);
+            this.SetParamSimple(map, prefix + "DisasterRecoverGroupAffinity", this.DisasterRecoverGroupAffinity);
         }
     }
 }

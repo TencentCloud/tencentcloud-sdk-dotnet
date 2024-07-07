@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5E3993CA-3190-3343-8FD0-BC4234130564}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1041</VersionPrefix>
+    <VersionPrefix>3.0.1042</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -137,6 +137,8 @@
     <Compile Include="V20170320\Models\CreateParamTemplateResponse.cs" />
     <Compile Include="V20170320\Models\CreateRoInstanceIpRequest.cs" />
     <Compile Include="V20170320\Models\CreateRoInstanceIpResponse.cs" />
+    <Compile Include="V20170320\Models\CreateRotationPasswordRequest.cs" />
+    <Compile Include="V20170320\Models\CreateRotationPasswordResponse.cs" />
     <Compile Include="V20170320\Models\CustomConfig.cs" />
     <Compile Include="V20170320\Models\DBSwitchInfo.cs" />
     <Compile Include="V20170320\Models\DatabasePrivilege.cs" />
@@ -159,6 +161,8 @@
     <Compile Include="V20170320\Models\DeleteDeployGroupsResponse.cs" />
     <Compile Include="V20170320\Models\DeleteParamTemplateRequest.cs" />
     <Compile Include="V20170320\Models\DeleteParamTemplateResponse.cs" />
+    <Compile Include="V20170320\Models\DeleteRotationPasswordRequest.cs" />
+    <Compile Include="V20170320\Models\DeleteRotationPasswordResponse.cs" />
     <Compile Include="V20170320\Models\DeleteTimeWindowRequest.cs" />
     <Compile Include="V20170320\Models\DeleteTimeWindowResponse.cs" />
     <Compile Include="V20170320\Models\DeployGroupInfo.cs" />
@@ -418,6 +422,8 @@
     <Compile Include="V20170320\Models\RemoteBackupInfo.cs" />
     <Compile Include="V20170320\Models\RenewDBInstanceRequest.cs" />
     <Compile Include="V20170320\Models\RenewDBInstanceResponse.cs" />
+    <Compile Include="V20170320\Models\ResetPasswordRequest.cs" />
+    <Compile Include="V20170320\Models\ResetPasswordResponse.cs" />
     <Compile Include="V20170320\Models\ResetRootAccountRequest.cs" />
     <Compile Include="V20170320\Models\ResetRootAccountResponse.cs" />
     <Compile Include="V20170320\Models\RestartDBInstancesRequest.cs" />

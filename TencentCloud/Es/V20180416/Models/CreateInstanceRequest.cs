@@ -242,6 +242,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
 
+        /// <summary>
+        /// 置放群组亲和度，范围[0,10]，0表示不开启
+        /// </summary>
+        [JsonProperty("DisasterRecoverGroupAffinity")]
+        public ulong? DisasterRecoverGroupAffinity{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -283,6 +289,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "DiskEnhance", this.DiskEnhance);
             this.SetParamSimple(map, prefix + "EnableDiagnose", this.EnableDiagnose);
             this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
+            this.SetParamSimple(map, prefix + "DisasterRecoverGroupAffinity", this.DisasterRecoverGroupAffinity);
         }
     }
 }

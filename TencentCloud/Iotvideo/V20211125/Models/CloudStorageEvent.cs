@@ -55,6 +55,13 @@ namespace TencentCloud.Iotvideo.V20211125.Models
         [JsonProperty("UploadStatus")]
         public string UploadStatus{ get; set; }
 
+        /// <summary>
+        /// 事件自定义数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Data")]
+        public string Data{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +73,7 @@ namespace TencentCloud.Iotvideo.V20211125.Models
             this.SetParamSimple(map, prefix + "Thumbnail", this.Thumbnail);
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
             this.SetParamSimple(map, prefix + "UploadStatus", this.UploadStatus);
+            this.SetParamSimple(map, prefix + "Data", this.Data);
         }
     }
 }

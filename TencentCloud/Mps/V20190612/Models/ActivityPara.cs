@@ -87,6 +87,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("AiRecognitionTask")]
         public AiRecognitionTaskInput AiRecognitionTask{ get; set; }
 
+        /// <summary>
+        /// 媒体质检任务
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QualityControlTask")]
+        public AiQualityControlTaskInput QualityControlTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +109,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
             this.SetParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
             this.SetParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
+            this.SetParamObj(map, prefix + "QualityControlTask.", this.QualityControlTask);
         }
     }
 }
