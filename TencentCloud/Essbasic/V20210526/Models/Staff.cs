@@ -32,12 +32,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 显示的员工名
+        /// 注意：2024-07-08 及之后创建的应用号，该字段返回的是打码信息
         /// </summary>
         [JsonProperty("DisplayName")]
         public string DisplayName{ get; set; }
 
         /// <summary>
         /// 员工手机号
+        /// 注意：2024-07-08 及之后创建的应用号，该字段返回的是打码信息
         /// </summary>
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }

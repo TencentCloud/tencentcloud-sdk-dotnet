@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{1E6FE58E-615B-3806-8123-352DAF515CBA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1042</VersionPrefix>
+    <VersionPrefix>3.0.1043</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,23 +50,11 @@
     <Compile Include="V20190822\SmpnClient.cs" />
     <Compile Include="V20190822\Models\CHPRequest.cs" />
     <Compile Include="V20190822\Models\CHPResponse.cs" />
-    <Compile Include="V20190822\Models\CreateSmpnEpaRequest.cs" />
-    <Compile Include="V20190822\Models\CreateSmpnEpaResponse.cs" />
     <Compile Include="V20190822\Models\DescribeSmpnChpRequest.cs" />
     <Compile Include="V20190822\Models\DescribeSmpnChpResponse.cs" />
     <Compile Include="V20190822\Models\DescribeSmpnFnrRequest.cs" />
     <Compile Include="V20190822\Models\DescribeSmpnFnrResponse.cs" />
-    <Compile Include="V20190822\Models\DescribeSmpnMhmRequest.cs" />
-    <Compile Include="V20190822\Models\DescribeSmpnMhmResponse.cs" />
-    <Compile Include="V20190822\Models\DescribeSmpnMrlRequest.cs" />
-    <Compile Include="V20190822\Models\DescribeSmpnMrlResponse.cs" />
-    <Compile Include="V20190822\Models\EPARequest.cs" />
-    <Compile Include="V20190822\Models\EPAResponse.cs" />
     <Compile Include="V20190822\Models\FNRRequest.cs" />
     <Compile Include="V20190822\Models\FNRResponse.cs" />
-    <Compile Include="V20190822\Models\MHMRequest.cs" />
-    <Compile Include="V20190822\Models\MHMResponse.cs" />
-    <Compile Include="V20190822\Models\MRLRequest.cs" />
-    <Compile Include="V20190822\Models\MRLResponse.cs" />
   </ItemGroup>
 </Project>

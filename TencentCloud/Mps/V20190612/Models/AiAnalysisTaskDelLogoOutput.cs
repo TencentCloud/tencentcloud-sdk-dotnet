@@ -36,6 +36,20 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
+        /// <summary>
+        /// 基于画面提取的字幕文件路径。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OriginSubtitlePath")]
+        public string OriginSubtitlePath{ get; set; }
+
+        /// <summary>
+        /// 基于画面提取的字幕翻译文件路径。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TranslateSubtitlePath")]
+        public string TranslateSubtitlePath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +58,8 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
+            this.SetParamSimple(map, prefix + "OriginSubtitlePath", this.OriginSubtitlePath);
+            this.SetParamSimple(map, prefix + "TranslateSubtitlePath", this.TranslateSubtitlePath);
         }
     }
 }

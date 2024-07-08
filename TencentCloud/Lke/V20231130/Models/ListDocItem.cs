@@ -214,6 +214,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("ExpireEnd")]
         public string ExpireEnd{ get; set; }
 
+        /// <summary>
+        /// 是否允许重试，0：否，1：是
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsAllowRetry")]
+        public bool? IsAllowRetry{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -247,6 +254,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "WebUrl", this.WebUrl);
             this.SetParamSimple(map, prefix + "ExpireStart", this.ExpireStart);
             this.SetParamSimple(map, prefix + "ExpireEnd", this.ExpireEnd);
+            this.SetParamSimple(map, prefix + "IsAllowRetry", this.IsAllowRetry);
         }
     }
 }

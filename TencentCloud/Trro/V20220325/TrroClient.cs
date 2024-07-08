@@ -28,7 +28,7 @@ namespace TencentCloud.Trro.V20220325
 
        private const string endpoint = "trro.tencentcloudapi.com";
        private const string version = "2022-03-25";
-       private const string sdkVersion = "SDK_NET_3.0.1042";
+       private const string sdkVersion = "SDK_NET_3.0.1043";
 
         /// <summary>
         /// Client constructor.

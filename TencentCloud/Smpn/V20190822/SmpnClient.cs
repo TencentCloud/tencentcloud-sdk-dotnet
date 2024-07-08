@@ -28,7 +28,7 @@ namespace TencentCloud.Smpn.V20190822
 
        private const string endpoint = "smpn.tencentcloudapi.com";
        private const string version = "2019-08-22";
-       private const string sdkVersion = "SDK_NET_3.0.1042";
+       private const string sdkVersion = "SDK_NET_3.0.1043";
 
         /// <summary>
         /// Client constructor.
@@ -51,31 +51,6 @@ namespace TencentCloud.Smpn.V20190822
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
-        }
-
-        /// <summary>
-        /// 不在使用的API
-        /// 
-        /// 企业号码认证
-        /// </summary>
-        /// <param name="req"><see cref="CreateSmpnEpaRequest"/></param>
-        /// <returns><see cref="CreateSmpnEpaResponse"/></returns>
-        public Task<CreateSmpnEpaResponse> CreateSmpnEpa(CreateSmpnEpaRequest req)
-        {
-            return InternalRequestAsync<CreateSmpnEpaResponse>(req, "CreateSmpnEpa");
-        }
-
-        /// <summary>
-        /// 不在使用的API
-        /// 
-        /// 企业号码认证
-        /// </summary>
-        /// <param name="req"><see cref="CreateSmpnEpaRequest"/></param>
-        /// <returns><see cref="CreateSmpnEpaResponse"/></returns>
-        public CreateSmpnEpaResponse CreateSmpnEpaSync(CreateSmpnEpaRequest req)
-        {
-            return InternalRequestAsync<CreateSmpnEpaResponse>(req, "CreateSmpnEpa")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -125,56 +100,6 @@ namespace TencentCloud.Smpn.V20190822
         public DescribeSmpnFnrResponse DescribeSmpnFnrSync(DescribeSmpnFnrRequest req)
         {
             return InternalRequestAsync<DescribeSmpnFnrResponse>(req, "DescribeSmpnFnr")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 不在使用的API
-        /// 
-        /// 号码营销监控
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSmpnMhmRequest"/></param>
-        /// <returns><see cref="DescribeSmpnMhmResponse"/></returns>
-        public Task<DescribeSmpnMhmResponse> DescribeSmpnMhm(DescribeSmpnMhmRequest req)
-        {
-            return InternalRequestAsync<DescribeSmpnMhmResponse>(req, "DescribeSmpnMhm");
-        }
-
-        /// <summary>
-        /// 不在使用的API
-        /// 
-        /// 号码营销监控
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSmpnMhmRequest"/></param>
-        /// <returns><see cref="DescribeSmpnMhmResponse"/></returns>
-        public DescribeSmpnMhmResponse DescribeSmpnMhmSync(DescribeSmpnMhmRequest req)
-        {
-            return InternalRequestAsync<DescribeSmpnMhmResponse>(req, "DescribeSmpnMhm")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 不在使用的API
-        /// 
-        /// 查询号码恶意标记等级
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSmpnMrlRequest"/></param>
-        /// <returns><see cref="DescribeSmpnMrlResponse"/></returns>
-        public Task<DescribeSmpnMrlResponse> DescribeSmpnMrl(DescribeSmpnMrlRequest req)
-        {
-            return InternalRequestAsync<DescribeSmpnMrlResponse>(req, "DescribeSmpnMrl");
-        }
-
-        /// <summary>
-        /// 不在使用的API
-        /// 
-        /// 查询号码恶意标记等级
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSmpnMrlRequest"/></param>
-        /// <returns><see cref="DescribeSmpnMrlResponse"/></returns>
-        public DescribeSmpnMrlResponse DescribeSmpnMrlSync(DescribeSmpnMrlRequest req)
-        {
-            return InternalRequestAsync<DescribeSmpnMrlResponse>(req, "DescribeSmpnMrl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

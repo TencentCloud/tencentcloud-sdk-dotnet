@@ -60,21 +60,21 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? ScaleNum{ get; set; }
 
         /// <summary>
-        /// 扩缩容负载指标。
+        /// 扩缩容负载指标。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoadMetrics")]
         public string LoadMetrics{ get; set; }
 
         /// <summary>
-        /// 规则元数据记录ID。
+        /// 规则元数据记录ID。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetricId")]
         public long? MetricId{ get; set; }
 
         /// <summary>
-        /// 规则统计周期，提供300s,600s,900s
+        /// 规则统计周期，提供300s,600s,900s。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatisticPeriod")]
@@ -88,13 +88,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? ProcessMethod{ get; set; }
 
         /// <summary>
-        /// 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。
+        /// 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
         /// </summary>
         [JsonProperty("TriggerThreshold")]
         public long? TriggerThreshold{ get; set; }
 
         /// <summary>
-        /// 条件触发数组。
+        /// 条件触发数组。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerConditions")]

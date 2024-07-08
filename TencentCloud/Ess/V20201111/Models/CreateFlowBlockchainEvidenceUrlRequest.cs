@@ -46,6 +46,13 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
+        /// <summary>
+        /// 链接/二维码的有效截止时间，格式为unix时间戳。最长不超过 2099年12月31日（4102415999）。
+        /// 默认值为有效期为当前时间后7天。
+        /// </summary>
+        [JsonProperty("ExpiredOn")]
+        public ulong? ExpiredOn{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -55,6 +62,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamSimple(map, prefix + "ExpiredOn", this.ExpiredOn);
         }
     }
 }

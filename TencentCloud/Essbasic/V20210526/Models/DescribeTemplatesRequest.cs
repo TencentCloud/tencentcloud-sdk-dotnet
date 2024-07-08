@@ -58,7 +58,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? ContentType{ get; set; }
 
         /// <summary>
-        /// 合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持200个模板的批量查询。
+        /// 合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持100个模板的批量查询。
         /// 
         /// 注意: 
         /// 1.` 此参数TemplateIds与TemplateId互为独立，若两者均传入，以TemplateId为准。`
@@ -74,7 +74,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 指定每页返回的数据条数，和Offset参数配合使用。
         /// 
-        /// 注：`1.默认值为20，单页做大值为200。`
+        /// 注：`1.默认值为20，单页做大值为100。`
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

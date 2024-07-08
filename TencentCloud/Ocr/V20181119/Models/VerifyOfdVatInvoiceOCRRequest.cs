@@ -37,6 +37,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("OfdFileBase64")]
         public string OfdFileBase64{ get; set; }
 
+        /// <summary>
+        /// 需要识别的OFD发票页面的对应页码，默认值为1。 示例值：1
+        /// </summary>
+        [JsonProperty("OfdPageNumber")]
+        public long? OfdPageNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +51,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         {
             this.SetParamSimple(map, prefix + "OfdFileUrl", this.OfdFileUrl);
             this.SetParamSimple(map, prefix + "OfdFileBase64", this.OfdFileBase64);
+            this.SetParamSimple(map, prefix + "OfdPageNumber", this.OfdPageNumber);
         }
     }
 }
