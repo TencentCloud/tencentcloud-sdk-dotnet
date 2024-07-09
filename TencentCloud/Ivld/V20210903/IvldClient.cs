@@ -28,7 +28,7 @@ namespace TencentCloud.Ivld.V20210903
 
        private const string endpoint = "ivld.tencentcloudapi.com";
        private const string version = "2021-09-03";
-       private const string sdkVersion = "SDK_NET_3.0.1043";
+       private const string sdkVersion = "SDK_NET_3.0.1044";
 
         /// <summary>
         /// Client constructor.
@@ -218,6 +218,75 @@ namespace TencentCloud.Ivld.V20210903
         public CreateTaskResponse CreateTaskSync(CreateTaskRequest req)
         {
             return InternalRequestAsync<CreateTaskResponse>(req, "CreateTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建一个视频缩编任务。
+        /// 
+        /// ### 回调事件消息通知协议
+        /// 
+        /// #### 网络协议
+        /// - 回调接口协议目前仅支持http/https协议；
+        /// - 请求：HTTP POST 请求，包体内容为 JSON，每一种消息的具体包体内容参见后文。
+        /// - 应答：HTTP STATUS CODE = 200，服务端忽略应答包具体内容，为了协议友好，建议客户应答内容携带 JSON： `{"code":0}`
+        /// 
+        /// #### 通知可靠性
+        /// 
+        /// 事件通知服务具备重试能力，事件通知失败后会总计重试3次；
+        /// 为了避免重试对您的服务器以及网络带宽造成冲击，请保持正常回包。触发重试条件如下：
+        /// - 长时间（5 秒）未回包应答。
+        /// - 应答 HTTP STATUS 不为200。
+        /// 
+        /// 
+        /// #### 回调接口协议
+        /// 
+        /// ##### 分析任务完成消息回调
+        /// | 参数名称 | 必选 | 类型 | 描述 |
+        /// |---------|---------|---------|---------|
+        /// | TaskId | 是 | String | 任务ID |
+        /// | TaskStatus | 是 | Integer | 任务执行状态 |
+        /// | FailedReason | 是 | String | 若任务失败，该字段为失败原因 |
+        /// </summary>
+        /// <param name="req"><see cref="CreateVideoSummaryTaskRequest"/></param>
+        /// <returns><see cref="CreateVideoSummaryTaskResponse"/></returns>
+        public Task<CreateVideoSummaryTaskResponse> CreateVideoSummaryTask(CreateVideoSummaryTaskRequest req)
+        {
+            return InternalRequestAsync<CreateVideoSummaryTaskResponse>(req, "CreateVideoSummaryTask");
+        }
+
+        /// <summary>
+        /// 创建一个视频缩编任务。
+        /// 
+        /// ### 回调事件消息通知协议
+        /// 
+        /// #### 网络协议
+        /// - 回调接口协议目前仅支持http/https协议；
+        /// - 请求：HTTP POST 请求，包体内容为 JSON，每一种消息的具体包体内容参见后文。
+        /// - 应答：HTTP STATUS CODE = 200，服务端忽略应答包具体内容，为了协议友好，建议客户应答内容携带 JSON： `{"code":0}`
+        /// 
+        /// #### 通知可靠性
+        /// 
+        /// 事件通知服务具备重试能力，事件通知失败后会总计重试3次；
+        /// 为了避免重试对您的服务器以及网络带宽造成冲击，请保持正常回包。触发重试条件如下：
+        /// - 长时间（5 秒）未回包应答。
+        /// - 应答 HTTP STATUS 不为200。
+        /// 
+        /// 
+        /// #### 回调接口协议
+        /// 
+        /// ##### 分析任务完成消息回调
+        /// | 参数名称 | 必选 | 类型 | 描述 |
+        /// |---------|---------|---------|---------|
+        /// | TaskId | 是 | String | 任务ID |
+        /// | TaskStatus | 是 | Integer | 任务执行状态 |
+        /// | FailedReason | 是 | String | 若任务失败，该字段为失败原因 |
+        /// </summary>
+        /// <param name="req"><see cref="CreateVideoSummaryTaskRequest"/></param>
+        /// <returns><see cref="CreateVideoSummaryTaskResponse"/></returns>
+        public CreateVideoSummaryTaskResponse CreateVideoSummaryTaskSync(CreateVideoSummaryTaskRequest req)
+        {
+            return InternalRequestAsync<CreateVideoSummaryTaskResponse>(req, "CreateVideoSummaryTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -548,6 +617,48 @@ namespace TencentCloud.Ivld.V20210903
         public DescribeTasksResponse DescribeTasksSync(DescribeTasksRequest req)
         {
             return InternalRequestAsync<DescribeTasksResponse>(req, "DescribeTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取用户资源使用量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsageAmountRequest"/></param>
+        /// <returns><see cref="DescribeUsageAmountResponse"/></returns>
+        public Task<DescribeUsageAmountResponse> DescribeUsageAmount(DescribeUsageAmountRequest req)
+        {
+            return InternalRequestAsync<DescribeUsageAmountResponse>(req, "DescribeUsageAmount");
+        }
+
+        /// <summary>
+        /// 获取用户资源使用量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsageAmountRequest"/></param>
+        /// <returns><see cref="DescribeUsageAmountResponse"/></returns>
+        public DescribeUsageAmountResponse DescribeUsageAmountSync(DescribeUsageAmountRequest req)
+        {
+            return InternalRequestAsync<DescribeUsageAmountResponse>(req, "DescribeUsageAmount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 描述任务信息，如果任务成功完成，还将返回任务结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoSummaryDetailRequest"/></param>
+        /// <returns><see cref="DescribeVideoSummaryDetailResponse"/></returns>
+        public Task<DescribeVideoSummaryDetailResponse> DescribeVideoSummaryDetail(DescribeVideoSummaryDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeVideoSummaryDetailResponse>(req, "DescribeVideoSummaryDetail");
+        }
+
+        /// <summary>
+        /// 描述任务信息，如果任务成功完成，还将返回任务结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoSummaryDetailRequest"/></param>
+        /// <returns><see cref="DescribeVideoSummaryDetailResponse"/></returns>
+        public DescribeVideoSummaryDetailResponse DescribeVideoSummaryDetailSync(DescribeVideoSummaryDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeVideoSummaryDetailResponse>(req, "DescribeVideoSummaryDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

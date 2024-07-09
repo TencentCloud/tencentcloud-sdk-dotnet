@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{307C2F67-1633-3F01-BEA7-F343C91B0D61}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1043</VersionPrefix>
+    <VersionPrefix>3.0.1044</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,7 @@
     <Compile Include="V20190722\TrtcClient.cs" />
     <Compile Include="V20190722\Models\AbnormalEvent.cs" />
     <Compile Include="V20190722\Models\AbnormalExperience.cs" />
+    <Compile Include="V20190722\Models\AgentConfig.cs" />
     <Compile Include="V20190722\Models\AgentParams.cs" />
     <Compile Include="V20190722\Models\AudioEncode.cs" />
     <Compile Include="V20190722\Models\AudioEncodeParams.cs" />
@@ -64,6 +65,8 @@
     <Compile Include="V20190722\Models\DeleteCloudRecordingResponse.cs" />
     <Compile Include="V20190722\Models\DeletePictureRequest.cs" />
     <Compile Include="V20190722\Models\DeletePictureResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeAIConversationRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeAIConversationResponse.cs" />
     <Compile Include="V20190722\Models\DescribeAITranscriptionRequest.cs" />
     <Compile Include="V20190722\Models\DescribeAITranscriptionResponse.cs" />
     <Compile Include="V20190722\Models\DescribeCallDetailInfoRequest.cs" />
@@ -163,6 +166,7 @@
     <Compile Include="V20190722\Models\RemoveUserResponse.cs" />
     <Compile Include="V20190722\Models\RoomState.cs" />
     <Compile Include="V20190722\Models\RowValues.cs" />
+    <Compile Include="V20190722\Models\STTConfig.cs" />
     <Compile Include="V20190722\Models\ScaleInfomation.cs" />
     <Compile Include="V20190722\Models\SdkAppIdRecordUsage.cs" />
     <Compile Include="V20190722\Models\SdkAppIdTrtcMcuTranscodeTimeUsage.cs" />
@@ -170,6 +174,8 @@
     <Compile Include="V20190722\Models\SeriesInfos.cs" />
     <Compile Include="V20190722\Models\SingleSubscribeParams.cs" />
     <Compile Include="V20190722\Models\SmallVideoLayoutParams.cs" />
+    <Compile Include="V20190722\Models\StartAIConversationRequest.cs" />
+    <Compile Include="V20190722\Models\StartAIConversationResponse.cs" />
     <Compile Include="V20190722\Models\StartAITranscriptionRequest.cs" />
     <Compile Include="V20190722\Models\StartAITranscriptionResponse.cs" />
     <Compile Include="V20190722\Models\StartMCUMixTranscodeByStrRoomIdRequest.cs" />
@@ -182,6 +188,8 @@
     <Compile Include="V20190722\Models\StartStreamIngestResponse.cs" />
     <Compile Include="V20190722\Models\StartWebRecordRequest.cs" />
     <Compile Include="V20190722\Models\StartWebRecordResponse.cs" />
+    <Compile Include="V20190722\Models\StopAIConversationRequest.cs" />
+    <Compile Include="V20190722\Models\StopAIConversationResponse.cs" />
     <Compile Include="V20190722\Models\StopAITranscriptionRequest.cs" />
     <Compile Include="V20190722\Models\StopAITranscriptionResponse.cs" />
     <Compile Include="V20190722\Models\StopMCUMixTranscodeByStrRoomIdRequest.cs" />

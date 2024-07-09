@@ -26,12 +26,14 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyIndex")]
         public long? PolicyIndex{ get; set; }
 
         /// <summary>
         /// 协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
@@ -39,54 +41,63 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// <summary>
         /// 端口(all, 离散port,  range)。
         /// 说明：如果Protocol设置为ALL，则Port也需要设置为all。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Port")]
         public string Port{ get; set; }
 
         /// <summary>
         /// 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceTemplate")]
         public ServiceTemplateSpecification ServiceTemplate{ get; set; }
 
         /// <summary>
         /// 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CidrBlock")]
         public string CidrBlock{ get; set; }
 
         /// <summary>
         /// 网段或IPv6(互斥)。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ipv6CidrBlock")]
         public string Ipv6CidrBlock{ get; set; }
 
         /// <summary>
         /// 安全组实例ID，例如：sg-ohuuioma。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecurityGroupId")]
         public string SecurityGroupId{ get; set; }
 
         /// <summary>
         /// IP地址ID或者IP地址组ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddressTemplate")]
         public AddressTemplateSpecification AddressTemplate{ get; set; }
 
         /// <summary>
         /// ACCEPT 或 DROP。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
         /// 安全组规则描述。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyDescription")]
         public string PolicyDescription{ get; set; }
 
         /// <summary>
         /// 安全组最近修改时间。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }

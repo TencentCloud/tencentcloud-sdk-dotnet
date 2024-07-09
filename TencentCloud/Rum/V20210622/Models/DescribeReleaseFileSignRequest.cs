@@ -36,6 +36,12 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("FileType")]
         public long? FileType{ get; set; }
 
+        /// <summary>
+        /// 获取临时签名的bucket是国内站还是国际站（1表示国际站，其它表示国内站）
+        /// </summary>
+        [JsonProperty("Site")]
+        public long? Site{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Rum.V20210622.Models
         {
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
             this.SetParamSimple(map, prefix + "FileType", this.FileType);
+            this.SetParamSimple(map, prefix + "Site", this.Site);
         }
     }
 }

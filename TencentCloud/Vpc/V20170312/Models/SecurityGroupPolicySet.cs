@@ -45,6 +45,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Ingress")]
         public SecurityGroupPolicy[] Ingress{ get; set; }
 
+        /// <summary>
+        /// 安全组策略条目统计。只用于出参。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PolicyStatistics")]
+        public PolicyStatistics PolicyStatistics{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamArrayObj(map, prefix + "Egress.", this.Egress);
             this.SetParamArrayObj(map, prefix + "Ingress.", this.Ingress);
+            this.SetParamObj(map, prefix + "PolicyStatistics.", this.PolicyStatistics);
         }
     }
 }

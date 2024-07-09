@@ -37,7 +37,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string ToTime{ get; set; }
 
         /// <summary>
-        /// 聚类字段，ip为ip聚合，art为响应耗时聚合，url为url聚合，local为ip转化的城市聚合
+        /// 聚类字段，ip为ip聚合，art为响应耗时聚合，url为url聚合，local为ip转化的城市聚合,qps为每秒请求数峰值的聚合，up为上行带宽峰值聚合，down为下行带峰值聚合
         /// </summary>
         [JsonProperty("QueryField")]
         public string QueryField{ get; set; }

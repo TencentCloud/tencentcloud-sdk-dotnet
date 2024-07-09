@@ -98,6 +98,13 @@ namespace TencentCloud.Goosefs.V20220519.Models
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
+        /// <summary>
+        /// 文件系统付费信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ChargeAttribute")]
+        public ChargeAttribute ChargeAttribute{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,6 +123,7 @@ namespace TencentCloud.Goosefs.V20220519.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamArrayObj(map, prefix + "Tag.", this.Tag);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamObj(map, prefix + "ChargeAttribute.", this.ChargeAttribute);
         }
     }
 }

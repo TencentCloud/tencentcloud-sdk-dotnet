@@ -84,6 +84,13 @@ namespace TencentCloud.Goosefs.V20220519.Models
         [JsonProperty("BucketRegion")]
         public string BucketRegion{ get; set; }
 
+        /// <summary>
+        /// 自定义Endpoint
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Endpoint")]
+        public string Endpoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -98,6 +105,7 @@ namespace TencentCloud.Goosefs.V20220519.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "AccelerateFlag", this.AccelerateFlag);
             this.SetParamSimple(map, prefix + "BucketRegion", this.BucketRegion);
+            this.SetParamSimple(map, prefix + "Endpoint", this.Endpoint);
         }
     }
 }

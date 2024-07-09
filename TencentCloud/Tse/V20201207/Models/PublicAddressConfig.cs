@@ -59,6 +59,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("NetworkId")]
         public string NetworkId{ get; set; }
 
+        /// <summary>
+        /// 公网负载均衡描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
             this.SetParamSimple(map, prefix + "NetworkId", this.NetworkId);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

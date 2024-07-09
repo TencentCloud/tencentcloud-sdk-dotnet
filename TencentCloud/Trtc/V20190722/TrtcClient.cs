@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1043";
+       private const string sdkVersion = "SDK_NET_3.0.1044";
 
         /// <summary>
         /// Client constructor.
@@ -156,6 +156,27 @@ namespace TencentCloud.Trtc.V20190722
         public DeletePictureResponse DeletePictureSync(DeletePictureRequest req)
         {
             return InternalRequestAsync<DeletePictureResponse>(req, "DeletePicture")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询AI对话任务状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIConversationRequest"/></param>
+        /// <returns><see cref="DescribeAIConversationResponse"/></returns>
+        public Task<DescribeAIConversationResponse> DescribeAIConversation(DescribeAIConversationRequest req)
+        {
+            return InternalRequestAsync<DescribeAIConversationResponse>(req, "DescribeAIConversation");
+        }
+
+        /// <summary>
+        /// 查询AI对话任务状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIConversationRequest"/></param>
+        /// <returns><see cref="DescribeAIConversationResponse"/></returns>
+        public DescribeAIConversationResponse DescribeAIConversationSync(DescribeAIConversationRequest req)
+        {
+            return InternalRequestAsync<DescribeAIConversationResponse>(req, "DescribeAIConversation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1038,6 +1059,27 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 启动一个任务，机器人将进入TRTC房间，与指定成员进行AI对话
+        /// </summary>
+        /// <param name="req"><see cref="StartAIConversationRequest"/></param>
+        /// <returns><see cref="StartAIConversationResponse"/></returns>
+        public Task<StartAIConversationResponse> StartAIConversation(StartAIConversationRequest req)
+        {
+            return InternalRequestAsync<StartAIConversationResponse>(req, "StartAIConversation");
+        }
+
+        /// <summary>
+        /// 启动一个任务，机器人将进入TRTC房间，与指定成员进行AI对话
+        /// </summary>
+        /// <param name="req"><see cref="StartAIConversationRequest"/></param>
+        /// <returns><see cref="StartAIConversationResponse"/></returns>
+        public StartAIConversationResponse StartAIConversationSync(StartAIConversationRequest req)
+        {
+            return InternalRequestAsync<StartAIConversationResponse>(req, "StartAIConversation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 这个接口调用后，后台会启动转录机器人，实时进行语音识别并下发字幕和转录消息。
         /// 转录机器人支持两种拉流方式，通过TranscriptionMode字段控制：
         /// - 拉取全房间的流。
@@ -1518,6 +1560,27 @@ namespace TencentCloud.Trtc.V20190722
         public StartWebRecordResponse StartWebRecordSync(StartWebRecordRequest req)
         {
             return InternalRequestAsync<StartWebRecordResponse>(req, "StartWebRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 停止AI对话任务
+        /// </summary>
+        /// <param name="req"><see cref="StopAIConversationRequest"/></param>
+        /// <returns><see cref="StopAIConversationResponse"/></returns>
+        public Task<StopAIConversationResponse> StopAIConversation(StopAIConversationRequest req)
+        {
+            return InternalRequestAsync<StopAIConversationResponse>(req, "StopAIConversation");
+        }
+
+        /// <summary>
+        /// 停止AI对话任务
+        /// </summary>
+        /// <param name="req"><see cref="StopAIConversationRequest"/></param>
+        /// <returns><see cref="StopAIConversationResponse"/></returns>
+        public StopAIConversationResponse StopAIConversationSync(StopAIConversationRequest req)
+        {
+            return InternalRequestAsync<StopAIConversationResponse>(req, "StopAIConversation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

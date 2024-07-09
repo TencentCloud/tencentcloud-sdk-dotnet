@@ -115,6 +115,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("InternetConfig")]
         public InternetConfig InternetConfig{ get; set; }
 
+        /// <summary>
+        /// 关联的prometheus ID
+        /// </summary>
+        [JsonProperty("PromId")]
+        public string PromId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "IngressClassName", this.IngressClassName);
             this.SetParamSimple(map, prefix + "TradeType", this.TradeType);
             this.SetParamObj(map, prefix + "InternetConfig.", this.InternetConfig);
+            this.SetParamSimple(map, prefix + "PromId", this.PromId);
         }
     }
 }

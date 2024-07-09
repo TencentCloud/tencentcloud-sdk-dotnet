@@ -36,6 +36,12 @@ namespace TencentCloud.Goosefs.V20220519.Models
         [JsonProperty("ExpandedCapacity")]
         public ulong? ExpandedCapacity{ get; set; }
 
+        /// <summary>
+        /// 容量修改类型：add/sub
+        /// </summary>
+        [JsonProperty("ModifyType")]
+        public string ModifyType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Goosefs.V20220519.Models
         {
             this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
             this.SetParamSimple(map, prefix + "ExpandedCapacity", this.ExpandedCapacity);
+            this.SetParamSimple(map, prefix + "ModifyType", this.ModifyType);
         }
     }
 }

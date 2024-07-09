@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1043";
+       private const string sdkVersion = "SDK_NET_3.0.1044";
 
         /// <summary>
         /// Client constructor.
@@ -6881,6 +6881,27 @@ namespace TencentCloud.Vpc.V20170312
         public ModifyVpnGatewayRoutesResponse ModifyVpnGatewayRoutesSync(ModifyVpnGatewayRoutesRequest req)
         {
             return InternalRequestAsync<ModifyVpnGatewayRoutesResponse>(req, "ModifyVpnGatewayRoutes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新SslVpnClient证书
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVpnGatewaySslClientCertRequest"/></param>
+        /// <returns><see cref="ModifyVpnGatewaySslClientCertResponse"/></returns>
+        public Task<ModifyVpnGatewaySslClientCertResponse> ModifyVpnGatewaySslClientCert(ModifyVpnGatewaySslClientCertRequest req)
+        {
+            return InternalRequestAsync<ModifyVpnGatewaySslClientCertResponse>(req, "ModifyVpnGatewaySslClientCert");
+        }
+
+        /// <summary>
+        /// 更新SslVpnClient证书
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVpnGatewaySslClientCertRequest"/></param>
+        /// <returns><see cref="ModifyVpnGatewaySslClientCertResponse"/></returns>
+        public ModifyVpnGatewaySslClientCertResponse ModifyVpnGatewaySslClientCertSync(ModifyVpnGatewaySslClientCertRequest req)
+        {
+            return InternalRequestAsync<ModifyVpnGatewaySslClientCertResponse>(req, "ModifyVpnGatewaySslClientCert")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
