@@ -32,7 +32,8 @@ namespace TencentCloudExamples
                 }
             };
 
-            // hunyuan ChatCompletions/ChatPro 同时支持 stream 和非 stream 的情况
+            req.Model = "hunyuan-standard"
+            // hunyuan ChatCompletions 同时支持 stream 和非 stream 的情况
             req.Stream = true;
 
             var resp = client.ChatCompletionsSync(req);
