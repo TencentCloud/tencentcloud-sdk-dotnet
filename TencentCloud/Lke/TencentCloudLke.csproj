@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{350F9F65-0799-338B-90EA-9EBA008679C1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1044</VersionPrefix>
+    <VersionPrefix>3.0.1045</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -115,10 +115,13 @@
     <Compile Include="V20231130\Models\DescribeReleaseResponse.cs" />
     <Compile Include="V20231130\Models\DescribeRobotBizIDByAppKeyRequest.cs" />
     <Compile Include="V20231130\Models\DescribeRobotBizIDByAppKeyResponse.cs" />
+    <Compile Include="V20231130\Models\DescribeSegmentsRequest.cs" />
+    <Compile Include="V20231130\Models\DescribeSegmentsResponse.cs" />
     <Compile Include="V20231130\Models\DescribeStorageCredentialRequest.cs" />
     <Compile Include="V20231130\Models\DescribeStorageCredentialResponse.cs" />
     <Compile Include="V20231130\Models\DescribeUnsatisfiedReplyContextRequest.cs" />
     <Compile Include="V20231130\Models\DescribeUnsatisfiedReplyContextResponse.cs" />
+    <Compile Include="V20231130\Models\DocSegment.cs" />
     <Compile Include="V20231130\Models\DocumentElement.cs" />
     <Compile Include="V20231130\Models\DocumentRecognizeInfo.cs" />
     <Compile Include="V20231130\Models\EmbeddingObject.cs" />

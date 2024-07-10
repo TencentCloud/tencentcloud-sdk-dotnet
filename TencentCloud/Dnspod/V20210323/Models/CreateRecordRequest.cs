@@ -102,6 +102,12 @@ namespace TencentCloud.Dnspod.V20210323.Models
         [JsonProperty("DnssecConflictMode")]
         public string DnssecConflictMode{ get; set; }
 
+        /// <summary>
+        /// 记录分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public ulong? GroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "DnssecConflictMode", this.DnssecConflictMode);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }
 }

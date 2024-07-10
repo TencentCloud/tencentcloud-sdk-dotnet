@@ -28,7 +28,7 @@ namespace TencentCloud.Aiart.V20221229
 
        private const string endpoint = "aiart.tencentcloudapi.com";
        private const string version = "2022-12-29";
-       private const string sdkVersion = "SDK_NET_3.0.1044";
+       private const string sdkVersion = "SDK_NET_3.0.1045";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,31 @@ namespace TencentCloud.Aiart.V20221229
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 上传正面全身模特照和服装平铺图，生成模特换装后的图片。
+        /// 生成的换装图片分辨率和模特照分辨率一致。
+        /// 模特换装默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="ChangeClothesRequest"/></param>
+        /// <returns><see cref="ChangeClothesResponse"/></returns>
+        public Task<ChangeClothesResponse> ChangeClothes(ChangeClothesRequest req)
+        {
+            return InternalRequestAsync<ChangeClothesResponse>(req, "ChangeClothes");
+        }
+
+        /// <summary>
+        /// 上传正面全身模特照和服装平铺图，生成模特换装后的图片。
+        /// 生成的换装图片分辨率和模特照分辨率一致。
+        /// 模特换装默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="ChangeClothesRequest"/></param>
+        /// <returns><see cref="ChangeClothesResponse"/></returns>
+        public ChangeClothesResponse ChangeClothesSync(ChangeClothesRequest req)
+        {
+            return InternalRequestAsync<ChangeClothesResponse>(req, "ChangeClothes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1044";
+       private const string sdkVersion = "SDK_NET_3.0.1045";
 
         /// <summary>
         /// Client constructor.
@@ -602,6 +602,27 @@ namespace TencentCloud.Lke.V20231130
         public DescribeRobotBizIDByAppKeyResponse DescribeRobotBizIDByAppKeySync(DescribeRobotBizIDByAppKeyRequest req)
         {
             return InternalRequestAsync<DescribeRobotBizIDByAppKeyResponse>(req, "DescribeRobotBizIDByAppKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取片段详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSegmentsRequest"/></param>
+        /// <returns><see cref="DescribeSegmentsResponse"/></returns>
+        public Task<DescribeSegmentsResponse> DescribeSegments(DescribeSegmentsRequest req)
+        {
+            return InternalRequestAsync<DescribeSegmentsResponse>(req, "DescribeSegments");
+        }
+
+        /// <summary>
+        /// 获取片段详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSegmentsRequest"/></param>
+        /// <returns><see cref="DescribeSegmentsResponse"/></returns>
+        public DescribeSegmentsResponse DescribeSegmentsSync(DescribeSegmentsRequest req)
+        {
+            return InternalRequestAsync<DescribeSegmentsResponse>(req, "DescribeSegments")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

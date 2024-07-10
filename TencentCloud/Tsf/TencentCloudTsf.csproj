@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DA95AE5B-1DB3-3342-A5B5-EA1C4CB7B305}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1044</VersionPrefix>
+    <VersionPrefix>3.0.1045</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -143,6 +143,8 @@
     <Compile Include="V20180326\Models\CreatePathRewritesResponse.cs" />
     <Compile Include="V20180326\Models\CreatePathRewritesWithDetailRespRequest.cs" />
     <Compile Include="V20180326\Models\CreatePathRewritesWithDetailRespResponse.cs" />
+    <Compile Include="V20180326\Models\CreateProgramRequest.cs" />
+    <Compile Include="V20180326\Models\CreateProgramResponse.cs" />
     <Compile Include="V20180326\Models\CreatePublicConfigRequest.cs" />
     <Compile Include="V20180326\Models\CreatePublicConfigResponse.cs" />
     <Compile Include="V20180326\Models\CreatePublicConfigWithDetailRespRequest.cs" />
@@ -506,6 +508,8 @@
     <Compile Include="V20180326\Models\ModifyNamespaceResponse.cs" />
     <Compile Include="V20180326\Models\ModifyPathRewriteRequest.cs" />
     <Compile Include="V20180326\Models\ModifyPathRewriteResponse.cs" />
+    <Compile Include="V20180326\Models\ModifyProgramRequest.cs" />
+    <Compile Include="V20180326\Models\ModifyProgramResponse.cs" />
     <Compile Include="V20180326\Models\ModifyTaskRequest.cs" />
     <Compile Include="V20180326\Models\ModifyTaskResponse.cs" />
     <Compile Include="V20180326\Models\ModifyUploadInfoRequest.cs" />

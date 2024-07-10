@@ -62,6 +62,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("NotifyUrl")]
         public string NotifyUrl{ get; set; }
 
+        /// <summary>
+        /// 用于生成回调签名的 Key。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NotifyKey")]
+        public string NotifyKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +81,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
             this.SetParamSimple(map, prefix + "NotifyUrl", this.NotifyUrl);
+            this.SetParamSimple(map, prefix + "NotifyKey", this.NotifyKey);
         }
     }
 }

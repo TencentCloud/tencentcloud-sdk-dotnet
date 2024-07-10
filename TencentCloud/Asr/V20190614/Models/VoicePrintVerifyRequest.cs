@@ -37,16 +37,16 @@ namespace TencentCloud.Asr.V20190614.Models
         public long? SampleRate{ get; set; }
 
         /// <summary>
-        /// 说话人id, 说话人唯一标识
-        /// </summary>
-        [JsonProperty("VoicePrintId")]
-        public string VoicePrintId{ get; set; }
-
-        /// <summary>
         /// 音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M	
         /// </summary>
         [JsonProperty("Data")]
         public string Data{ get; set; }
+
+        /// <summary>
+        /// 说话人id, 说话人唯一标识
+        /// </summary>
+        [JsonProperty("VoicePrintId")]
+        public string VoicePrintId{ get; set; }
 
 
         /// <summary>
@@ -56,8 +56,8 @@ namespace TencentCloud.Asr.V20190614.Models
         {
             this.SetParamSimple(map, prefix + "VoiceFormat", this.VoiceFormat);
             this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
-            this.SetParamSimple(map, prefix + "VoicePrintId", this.VoicePrintId);
             this.SetParamSimple(map, prefix + "Data", this.Data);
+            this.SetParamSimple(map, prefix + "VoicePrintId", this.VoicePrintId);
         }
     }
 }

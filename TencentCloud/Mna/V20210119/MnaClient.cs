@@ -28,7 +28,7 @@ namespace TencentCloud.Mna.V20210119
 
        private const string endpoint = "mna.tencentcloudapi.com";
        private const string version = "2021-01-19";
-       private const string sdkVersion = "SDK_NET_3.0.1044";
+       private const string sdkVersion = "SDK_NET_3.0.1045";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Mna.V20210119
         public AddDeviceResponse AddDeviceSync(AddDeviceRequest req)
         {
             return InternalRequestAsync<AddDeviceResponse>(req, "AddDevice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 新建分组
+        /// </summary>
+        /// <param name="req"><see cref="AddGroupRequest"/></param>
+        /// <returns><see cref="AddGroupResponse"/></returns>
+        public Task<AddGroupResponse> AddGroup(AddGroupRequest req)
+        {
+            return InternalRequestAsync<AddGroupResponse>(req, "AddGroup");
+        }
+
+        /// <summary>
+        /// 新建分组
+        /// </summary>
+        /// <param name="req"><see cref="AddGroupRequest"/></param>
+        /// <returns><see cref="AddGroupResponse"/></returns>
+        public AddGroupResponse AddGroupSync(AddGroupRequest req)
+        {
+            return InternalRequestAsync<AddGroupResponse>(req, "AddGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -176,6 +197,27 @@ namespace TencentCloud.Mna.V20210119
         public DeleteDeviceResponse DeleteDeviceSync(DeleteDeviceRequest req)
         {
             return InternalRequestAsync<DeleteDeviceResponse>(req, "DeleteDevice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除分组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGroupRequest"/></param>
+        /// <returns><see cref="DeleteGroupResponse"/></returns>
+        public Task<DeleteGroupResponse> DeleteGroup(DeleteGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteGroupResponse>(req, "DeleteGroup");
+        }
+
+        /// <summary>
+        /// 删除分组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGroupRequest"/></param>
+        /// <returns><see cref="DeleteGroupResponse"/></returns>
+        public DeleteGroupResponse DeleteGroupSync(DeleteGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteGroupResponse>(req, "DeleteGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -369,6 +411,69 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 获取指定区域，指定时间点数据流量使用情况
+        /// </summary>
+        /// <param name="req"><see cref="GetFlowStatisticByRegionRequest"/></param>
+        /// <returns><see cref="GetFlowStatisticByRegionResponse"/></returns>
+        public Task<GetFlowStatisticByRegionResponse> GetFlowStatisticByRegion(GetFlowStatisticByRegionRequest req)
+        {
+            return InternalRequestAsync<GetFlowStatisticByRegionResponse>(req, "GetFlowStatisticByRegion");
+        }
+
+        /// <summary>
+        /// 获取指定区域，指定时间点数据流量使用情况
+        /// </summary>
+        /// <param name="req"><see cref="GetFlowStatisticByRegionRequest"/></param>
+        /// <returns><see cref="GetFlowStatisticByRegionResponse"/></returns>
+        public GetFlowStatisticByRegionResponse GetFlowStatisticByRegionSync(GetFlowStatisticByRegionRequest req)
+        {
+            return InternalRequestAsync<GetFlowStatisticByRegionResponse>(req, "GetFlowStatisticByRegion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看分组详细信息
+        /// </summary>
+        /// <param name="req"><see cref="GetGroupDetailRequest"/></param>
+        /// <returns><see cref="GetGroupDetailResponse"/></returns>
+        public Task<GetGroupDetailResponse> GetGroupDetail(GetGroupDetailRequest req)
+        {
+            return InternalRequestAsync<GetGroupDetailResponse>(req, "GetGroupDetail");
+        }
+
+        /// <summary>
+        /// 查看分组详细信息
+        /// </summary>
+        /// <param name="req"><see cref="GetGroupDetailRequest"/></param>
+        /// <returns><see cref="GetGroupDetailResponse"/></returns>
+        public GetGroupDetailResponse GetGroupDetailSync(GetGroupDetailRequest req)
+        {
+            return InternalRequestAsync<GetGroupDetailResponse>(req, "GetGroupDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取分组列表
+        /// </summary>
+        /// <param name="req"><see cref="GetGroupListRequest"/></param>
+        /// <returns><see cref="GetGroupListResponse"/></returns>
+        public Task<GetGroupListResponse> GetGroupList(GetGroupListRequest req)
+        {
+            return InternalRequestAsync<GetGroupListResponse>(req, "GetGroupList");
+        }
+
+        /// <summary>
+        /// 获取分组列表
+        /// </summary>
+        /// <param name="req"><see cref="GetGroupListRequest"/></param>
+        /// <returns><see cref="GetGroupListResponse"/></returns>
+        public GetGroupListResponse GetGroupListSync(GetGroupListRequest req)
+        {
+            return InternalRequestAsync<GetGroupListResponse>(req, "GetGroupList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取厂商硬件列表
         /// </summary>
         /// <param name="req"><see cref="GetHardwareListRequest"/></param>
@@ -495,6 +600,48 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 向已存在分组中添加设备
+        /// </summary>
+        /// <param name="req"><see cref="GroupAddDeviceRequest"/></param>
+        /// <returns><see cref="GroupAddDeviceResponse"/></returns>
+        public Task<GroupAddDeviceResponse> GroupAddDevice(GroupAddDeviceRequest req)
+        {
+            return InternalRequestAsync<GroupAddDeviceResponse>(req, "GroupAddDevice");
+        }
+
+        /// <summary>
+        /// 向已存在分组中添加设备
+        /// </summary>
+        /// <param name="req"><see cref="GroupAddDeviceRequest"/></param>
+        /// <returns><see cref="GroupAddDeviceResponse"/></returns>
+        public GroupAddDeviceResponse GroupAddDeviceSync(GroupAddDeviceRequest req)
+        {
+            return InternalRequestAsync<GroupAddDeviceResponse>(req, "GroupAddDevice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除分组中的设备
+        /// </summary>
+        /// <param name="req"><see cref="GroupDeleteDeviceRequest"/></param>
+        /// <returns><see cref="GroupDeleteDeviceResponse"/></returns>
+        public Task<GroupDeleteDeviceResponse> GroupDeleteDevice(GroupDeleteDeviceRequest req)
+        {
+            return InternalRequestAsync<GroupDeleteDeviceResponse>(req, "GroupDeleteDevice");
+        }
+
+        /// <summary>
+        /// 删除分组中的设备
+        /// </summary>
+        /// <param name="req"><see cref="GroupDeleteDeviceRequest"/></param>
+        /// <returns><see cref="GroupDeleteDeviceResponse"/></returns>
+        public GroupDeleteDeviceResponse GroupDeleteDeviceSync(GroupDeleteDeviceRequest req)
+        {
+            return InternalRequestAsync<GroupDeleteDeviceResponse>(req, "GroupDeleteDevice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 可开启/关闭流量包自动续费，不影响当前周期正在生效的流量包。
         /// </summary>
         /// <param name="req"><see cref="ModifyPackageRenewFlagRequest"/></param>
@@ -537,6 +684,27 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 设置用户流量告警信息接口，通过该接口设置流量包告警阈值以及告警时回调的url和key
+        /// </summary>
+        /// <param name="req"><see cref="SetNotifyUrlRequest"/></param>
+        /// <returns><see cref="SetNotifyUrlResponse"/></returns>
+        public Task<SetNotifyUrlResponse> SetNotifyUrl(SetNotifyUrlRequest req)
+        {
+            return InternalRequestAsync<SetNotifyUrlResponse>(req, "SetNotifyUrl");
+        }
+
+        /// <summary>
+        /// 设置用户流量告警信息接口，通过该接口设置流量包告警阈值以及告警时回调的url和key
+        /// </summary>
+        /// <param name="req"><see cref="SetNotifyUrlRequest"/></param>
+        /// <returns><see cref="SetNotifyUrlResponse"/></returns>
+        public SetNotifyUrlResponse SetNotifyUrlSync(SetNotifyUrlRequest req)
+        {
+            return InternalRequestAsync<SetNotifyUrlResponse>(req, "SetNotifyUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 更新设备信息
         /// </summary>
         /// <param name="req"><see cref="UpdateDeviceRequest"/></param>
@@ -554,6 +722,27 @@ namespace TencentCloud.Mna.V20210119
         public UpdateDeviceResponse UpdateDeviceSync(UpdateDeviceRequest req)
         {
             return InternalRequestAsync<UpdateDeviceResponse>(req, "UpdateDevice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新分组备注
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGroupRequest"/></param>
+        /// <returns><see cref="UpdateGroupResponse"/></returns>
+        public Task<UpdateGroupResponse> UpdateGroup(UpdateGroupRequest req)
+        {
+            return InternalRequestAsync<UpdateGroupResponse>(req, "UpdateGroup");
+        }
+
+        /// <summary>
+        /// 更新分组备注
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGroupRequest"/></param>
+        /// <returns><see cref="UpdateGroupResponse"/></returns>
+        public UpdateGroupResponse UpdateGroupSync(UpdateGroupRequest req)
+        {
+            return InternalRequestAsync<UpdateGroupResponse>(req, "UpdateGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

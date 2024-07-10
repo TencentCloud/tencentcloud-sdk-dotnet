@@ -54,6 +54,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("AreaCoordSet")]
         public long?[] AreaCoordSet{ get; set; }
 
+        /// <summary>
+        /// 截图链接。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +72,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "EndPtsOffset", this.EndPtsOffset);
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
             this.SetParamArraySimple(map, prefix + "AreaCoordSet.", this.AreaCoordSet);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
         }
     }
 }

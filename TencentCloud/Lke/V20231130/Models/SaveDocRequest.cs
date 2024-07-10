@@ -116,7 +116,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public bool? IsRefer{ get; set; }
 
         /// <summary>
-        /// 文档操作类型：1：批量导入；2:文档导入
+        /// 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档）
         /// </summary>
         [JsonProperty("Opt")]
         public ulong? Opt{ get; set; }

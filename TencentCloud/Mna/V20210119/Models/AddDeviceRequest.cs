@@ -79,6 +79,12 @@ namespace TencentCloud.Mna.V20210119.Models
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
+        /// <summary>
+        /// 设备无流量包处理方式，0: 按量付费，1: 截断加速
+        /// </summary>
+        [JsonProperty("FlowTrunc")]
+        public long? FlowTrunc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamSimple(map, prefix + "LicensePayMode", this.LicensePayMode);
             this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "FlowTrunc", this.FlowTrunc);
         }
     }
 }

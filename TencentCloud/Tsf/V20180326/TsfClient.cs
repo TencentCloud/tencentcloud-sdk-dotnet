@@ -28,7 +28,7 @@ namespace TencentCloud.Tsf.V20180326
 
        private const string endpoint = "tsf.tencentcloudapi.com";
        private const string version = "2018-03-26";
-       private const string sdkVersion = "SDK_NET_3.0.1044";
+       private const string sdkVersion = "SDK_NET_3.0.1045";
 
         /// <summary>
         /// Client constructor.
@@ -680,6 +680,27 @@ namespace TencentCloud.Tsf.V20180326
         public CreatePathRewritesWithDetailRespResponse CreatePathRewritesWithDetailRespSync(CreatePathRewritesWithDetailRespRequest req)
         {
             return InternalRequestAsync<CreatePathRewritesWithDetailRespResponse>(req, "CreatePathRewritesWithDetailResp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建数据集
+        /// </summary>
+        /// <param name="req"><see cref="CreateProgramRequest"/></param>
+        /// <returns><see cref="CreateProgramResponse"/></returns>
+        public Task<CreateProgramResponse> CreateProgram(CreateProgramRequest req)
+        {
+            return InternalRequestAsync<CreateProgramResponse>(req, "CreateProgram");
+        }
+
+        /// <summary>
+        /// 创建数据集
+        /// </summary>
+        /// <param name="req"><see cref="CreateProgramRequest"/></param>
+        /// <returns><see cref="CreateProgramResponse"/></returns>
+        public CreateProgramResponse CreateProgramSync(CreateProgramRequest req)
+        {
+            return InternalRequestAsync<CreateProgramResponse>(req, "CreateProgram")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3882,6 +3903,27 @@ namespace TencentCloud.Tsf.V20180326
         public ModifyPathRewriteResponse ModifyPathRewriteSync(ModifyPathRewriteRequest req)
         {
             return InternalRequestAsync<ModifyPathRewriteResponse>(req, "ModifyPathRewrite")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新数据集
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProgramRequest"/></param>
+        /// <returns><see cref="ModifyProgramResponse"/></returns>
+        public Task<ModifyProgramResponse> ModifyProgram(ModifyProgramRequest req)
+        {
+            return InternalRequestAsync<ModifyProgramResponse>(req, "ModifyProgram");
+        }
+
+        /// <summary>
+        /// 更新数据集
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProgramRequest"/></param>
+        /// <returns><see cref="ModifyProgramResponse"/></returns>
+        public ModifyProgramResponse ModifyProgramSync(ModifyProgramRequest req)
+        {
+            return InternalRequestAsync<ModifyProgramResponse>(req, "ModifyProgram")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

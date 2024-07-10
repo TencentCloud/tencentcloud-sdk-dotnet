@@ -48,6 +48,12 @@ namespace TencentCloud.Mna.V20210119.Models
         [JsonProperty("UpdateNetInfo")]
         public UpdateNetInfo[] UpdateNetInfo{ get; set; }
 
+        /// <summary>
+        /// 设备无流量包处理方式，0: 按量付费，1: 截断加速
+        /// </summary>
+        [JsonProperty("FlowTrunc")]
+        public long? FlowTrunc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamArrayObj(map, prefix + "UpdateNetInfo.", this.UpdateNetInfo);
+            this.SetParamSimple(map, prefix + "FlowTrunc", this.FlowTrunc);
         }
     }
 }
