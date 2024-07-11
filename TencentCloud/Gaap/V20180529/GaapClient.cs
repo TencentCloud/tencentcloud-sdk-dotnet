@@ -28,7 +28,7 @@ namespace TencentCloud.Gaap.V20180529
 
        private const string endpoint = "gaap.tencentcloudapi.com";
        private const string version = "2018-05-29";
-       private const string sdkVersion = "SDK_NET_3.0.1045";
+       private const string sdkVersion = "SDK_NET_3.0.1046";
 
         /// <summary>
         /// Client constructor.
@@ -1650,6 +1650,27 @@ namespace TencentCloud.Gaap.V20180529
         public DescribeTCPListenersResponse DescribeTCPListenersSync(DescribeTCPListenersRequest req)
         {
             return InternalRequestAsync<DescribeTCPListenersResponse>(req, "DescribeTCPListeners")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询异步任务执行状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeTaskStatusResponse"/></returns>
+        public Task<DescribeTaskStatusResponse> DescribeTaskStatus(DescribeTaskStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeTaskStatusResponse>(req, "DescribeTaskStatus");
+        }
+
+        /// <summary>
+        /// 查询异步任务执行状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeTaskStatusResponse"/></returns>
+        public DescribeTaskStatusResponse DescribeTaskStatusSync(DescribeTaskStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeTaskStatusResponse>(req, "DescribeTaskStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

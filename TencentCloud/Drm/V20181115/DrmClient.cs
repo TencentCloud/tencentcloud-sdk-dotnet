@@ -28,7 +28,7 @@ namespace TencentCloud.Drm.V20181115
 
        private const string endpoint = "drm.tencentcloudapi.com";
        private const string version = "2018-11-15";
-       private const string sdkVersion = "SDK_NET_3.0.1045";
+       private const string sdkVersion = "SDK_NET_3.0.1046";
 
         /// <summary>
         /// Client constructor.

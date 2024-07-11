@@ -67,15 +67,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string SealId{ get; set; }
 
         /// <summary>
-        /// 电子印章类型 , 可选类型如下: 
-        /// <ul><li>**OFFICIAL**: 公章</li>
-        /// <li>**CONTRACT**: 合同专用章;</li>
-        /// <li>**FINANCE**: 财务专用章;</li>
-        /// <li>**PERSONNEL**: 人事专用章</li>
-        /// <li>**INVOICE**: 发票专用章</li>
-        /// </ul>
-        /// 
-        /// 注:  `为空时查询所有类型的印章。`
+        /// 电子印章类型 , 可选类型如下: <ul><li>**OFFICIAL**: 公章</li><li>**CONTRACT**: 合同专用章;</li><li>**FINANCE**: 财务专用章;</li><li>**PERSONNEL**: 人事专用章</li><li>**INVOICE**: 发票专用章</li><<li>**EMPLOYEE_QUALIFICATION_SEAL**: 员工执业章</li></ul>注:  `为空时查询所有类型的印章。`
         /// </summary>
         [JsonProperty("SealTypes")]
         public string[] SealTypes{ get; set; }

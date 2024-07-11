@@ -245,6 +245,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("WorkspaceName")]
         public string WorkspaceName{ get; set; }
 
+        /// <summary>
+        /// flink 版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FlinkVersion")]
+        public string FlinkVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -283,6 +290,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "EsServerlessSpace", this.EsServerlessSpace);
             this.SetParamSimple(map, prefix + "IndexName", this.IndexName);
             this.SetParamSimple(map, prefix + "WorkspaceName", this.WorkspaceName);
+            this.SetParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
         }
     }
 }

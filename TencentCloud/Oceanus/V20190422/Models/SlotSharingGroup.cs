@@ -45,6 +45,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// SlotSharingGroup的配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Configuration")]
+        public Property[] Configuration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamObj(map, prefix + "Spec.", this.Spec);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamArrayObj(map, prefix + "Configuration.", this.Configuration);
         }
     }
 }

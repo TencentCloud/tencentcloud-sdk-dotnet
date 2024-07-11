@@ -28,7 +28,7 @@ namespace TencentCloud.Mariadb.V20170312
 
        private const string endpoint = "mariadb.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1045";
+       private const string sdkVersion = "SDK_NET_3.0.1046";
 
         /// <summary>
         /// Client constructor.
@@ -1594,6 +1594,27 @@ namespace TencentCloud.Mariadb.V20170312
         public UpgradeDedicatedDBInstanceResponse UpgradeDedicatedDBInstanceSync(UpgradeDedicatedDBInstanceRequest req)
         {
             return InternalRequestAsync<UpgradeDedicatedDBInstanceResponse>(req, "UpgradeDedicatedDBInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 升级MariaDB按量计费实例
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeHourDBInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeHourDBInstanceResponse"/></returns>
+        public Task<UpgradeHourDBInstanceResponse> UpgradeHourDBInstance(UpgradeHourDBInstanceRequest req)
+        {
+            return InternalRequestAsync<UpgradeHourDBInstanceResponse>(req, "UpgradeHourDBInstance");
+        }
+
+        /// <summary>
+        /// 升级MariaDB按量计费实例
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeHourDBInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeHourDBInstanceResponse"/></returns>
+        public UpgradeHourDBInstanceResponse UpgradeHourDBInstanceSync(UpgradeHourDBInstanceRequest req)
+        {
+            return InternalRequestAsync<UpgradeHourDBInstanceResponse>(req, "UpgradeHourDBInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

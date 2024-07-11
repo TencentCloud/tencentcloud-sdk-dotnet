@@ -31,7 +31,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string TimeKey{ get; set; }
 
         /// <summary>
-        /// 用量数组。每个数值含义与UsageKey对应。单位：分钟。
+        /// 时间点时间戳
+        /// </summary>
+        [JsonProperty("TimeStampKey")]
+        public ulong? TimeStampKey{ get; set; }
+
+        /// <summary>
+        /// 用量数组。每个数值含义与UsageKey对应。单位:分钟。
         /// </summary>
         [JsonProperty("UsageValue")]
         public float?[] UsageValue{ get; set; }
@@ -43,6 +49,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TimeKey", this.TimeKey);
+            this.SetParamSimple(map, prefix + "TimeStampKey", this.TimeStampKey);
             this.SetParamArraySimple(map, prefix + "UsageValue.", this.UsageValue);
         }
     }

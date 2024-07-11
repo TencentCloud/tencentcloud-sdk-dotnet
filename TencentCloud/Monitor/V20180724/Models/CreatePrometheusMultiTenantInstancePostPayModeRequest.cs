@@ -43,7 +43,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 数据存储时间（单位天），限制值为15，30，45之一
+        /// 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
         /// </summary>
         [JsonProperty("DataRetentionTime")]
         public long? DataRetentionTime{ get; set; }

@@ -25,45 +25,47 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 实例内存大小，单位：GB。
+        /// 实例内存大小，单位：GB。具体售卖的内存规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
         /// </summary>
         [JsonProperty("Memory")]
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// 实例硬盘大小，单位：GB。
+        /// 实例硬盘大小，单位：GB。每一个 CPU 规格对应的最大磁盘与最小磁盘范围，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
         /// </summary>
         [JsonProperty("Volume")]
         public ulong? Volume{ get; set; }
 
         /// <summary>
-        /// 指副本集数量。
-        /// - 创建副本集实例，该参数只能为1。
-        /// - 创建分片实例，指分片的数量。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+        /// - 创建副本集实例，指副本集数量，该参数只能为1。
+        /// - 创建分片集群实例，指分片的数量。请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询分片数量的取值范围，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。
         /// </summary>
         [JsonProperty("ReplicateSetNum")]
         public ulong? ReplicateSetNum{ get; set; }
 
         /// <summary>
-        /// 指每个副本集内节点个数。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+        /// - 创建副本集实例，指每个副本集内主从节点数量。每个副本集所支持的的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+        /// - 创建分片集群实例，指每个分片的主从节点数量。每个分片所支持的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
         /// </summary>
         [JsonProperty("NodeNum")]
         public ulong? NodeNum{ get; set; }
 
         /// <summary>
-        /// 指版本信息。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+        /// 指版本信息。具体支持的版本信息 ，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
         /// - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
         /// - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
         /// - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
         /// - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+        /// - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+        /// - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
         /// </summary>
         [JsonProperty("MongoVersion")]
         public string MongoVersion{ get; set; }
 
         /// <summary>
-        /// 机器类型。
-        /// - HIO：高IO型。
-        /// - HIO10G：高IO万兆。
+        /// 产品规格类型。
+        /// - HIO10G：通用高HIO万兆型。
+        /// - HCD：云盘版类型。
         /// </summary>
         [JsonProperty("MachineCode")]
         public string MachineCode{ get; set; }
@@ -109,7 +111,9 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// 项目ID。若不设置该参数，则为默认项目。
+        /// 项目ID。
+        /// - 若不设置该参数，则为默认项目。
+        /// - 在 [MongoDB 控制台项目管理](https://console.cloud.tencent.com/project)页面，可获取项目ID。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
@@ -121,10 +125,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// 实例类型。
-        /// - 1：正式实例。
-        /// - 3：只读实例。
-        /// - 4：灾备实例。
+        /// 实例类型。- 1：正式实例。- 3：只读实例。- 4：灾备实例。-5：克隆实例，注意：克隆实例RestoreTime为必填项。
         /// </summary>
         [JsonProperty("Clone")]
         public long? Clone{ get; set; }
@@ -136,7 +137,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string Father{ get; set; }
 
         /// <summary>
-        /// 安全组。
+        /// 安全组 ID。
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string[] SecurityGroup{ get; set; }
@@ -156,23 +157,24 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 多可用区部署的节点列表。具体信息，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)获取。
+        /// 若多可用区部署云数据库实例，指定多可用区列表。
+        /// - 多可用区部署实例，参数 **Zone** 指定实例主可用区信息；**AvailabilityZoneList** 指定所有可用区信息，包含主可用区。输入格式如：[ap-guangzhou-2,ap-guangzhou-3,ap-guangzhou-4]。
+        /// - 通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 可获取云数据库不同地域规划的可用区信息，以便指定有效的可用区。
         /// - 多可用区部署节点只能部署在3个不同可用区。不支持将集群的大多数节点部署在同一个可用区。例如：3节点集群不支持2个节点部署在同一个区。
-        /// - 不支持4.2及以上版本。
-        /// - 不支持只读灾备实例。
-        /// - 不能选择基础网络。
         /// </summary>
         [JsonProperty("AvailabilityZoneList")]
         public string[] AvailabilityZoneList{ get; set; }
 
         /// <summary>
-        /// Mongos CPU 核数。购买分片集群时，必须填写。
+        /// Mongos CPU 核数，支持1、2、4、8、16。购买分片集群时，必须填写。
         /// </summary>
         [JsonProperty("MongosCpu")]
         public ulong? MongosCpu{ get; set; }
 
         /// <summary>
-        /// Mongos 内存大小。购买分片集群时，必须填写。
+        /// Mongos 内存大小。
+        /// -  购买分片集群时，必须填写。
+        /// - 单位：GB，支持1核2GB、2核4GB、4核8GB、8核16GB、16核32GB。
         /// 
         /// </summary>
         [JsonProperty("MongosMemory")]
@@ -180,19 +182,20 @@ namespace TencentCloud.Mongodb.V20190725.Models
 
         /// <summary>
         /// Mongos 数量。购买分片集群时，必须填写。
-        /// 
+        /// - 单可用区部署实例，其数量范围为[3,32]。
+        /// - 多可用区部署实例，其数量范围为[6,32]。
         /// </summary>
         [JsonProperty("MongosNodeNum")]
         public ulong? MongosNodeNum{ get; set; }
 
         /// <summary>
-        /// 只读节点数量，最大不超过7个。
+        /// 只读节点数量，取值范围[0,5]。
         /// </summary>
         [JsonProperty("ReadonlyNodeNum")]
         public ulong? ReadonlyNodeNum{ get; set; }
 
         /// <summary>
-        /// 指只读节点所属可用区。跨可用区部署实例，参数**ReadonlyNodeNum**不为**0**时，必须配置该参数。
+        /// 指只读节点所属可用区数组。跨可用区部署实例，参数**ReadonlyNodeNum**不为**0**时，必须配置该参数。
         /// </summary>
         [JsonProperty("ReadonlyNodeAvailabilityZoneList")]
         public string[] ReadonlyNodeAvailabilityZoneList{ get; set; }

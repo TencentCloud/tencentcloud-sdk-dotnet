@@ -36,6 +36,12 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("FileVersion")]
         public string FileVersion{ get; set; }
 
+        /// <summary>
+        /// 查询过滤条件（根据sourcemap的文件名模糊匹配）
+        /// </summary>
+        [JsonProperty("FileName")]
+        public string FileName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Rum.V20210622.Models
         {
             this.SetParamSimple(map, prefix + "ProjectID", this.ProjectID);
             this.SetParamSimple(map, prefix + "FileVersion", this.FileVersion);
+            this.SetParamSimple(map, prefix + "FileName", this.FileName);
         }
     }
 }

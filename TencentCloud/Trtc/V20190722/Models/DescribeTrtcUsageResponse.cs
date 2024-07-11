@@ -31,7 +31,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string[] UsageKey{ get; set; }
 
         /// <summary>
-        /// 各个时间点用量明细。
+        /// 各个时间点用量明细，单位:分钟
         /// </summary>
         [JsonProperty("UsageList")]
         public TrtcUsage[] UsageList{ get; set; }

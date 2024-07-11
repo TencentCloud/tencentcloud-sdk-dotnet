@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.1045";
+       private const string sdkVersion = "SDK_NET_3.0.1046";
 
         /// <summary>
         /// Client constructor.
@@ -117,7 +117,7 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// 创建共享单元，只有企业组织管理员可创建。
+        /// 创建共享单元。
         /// </summary>
         /// <param name="req"><see cref="AddShareUnitRequest"/></param>
         /// <returns><see cref="AddShareUnitResponse"/></returns>
@@ -127,7 +127,7 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// 创建共享单元，只有企业组织管理员可创建。
+        /// 创建共享单元。
         /// </summary>
         /// <param name="req"><see cref="AddShareUnitRequest"/></param>
         /// <returns><see cref="AddShareUnitResponse"/></returns>

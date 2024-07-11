@@ -28,7 +28,7 @@ namespace TencentCloud.Essbasic.V20210526
 
        private const string endpoint = "essbasic.tencentcloudapi.com";
        private const string version = "2021-05-26";
-       private const string sdkVersion = "SDK_NET_3.0.1045";
+       private const string sdkVersion = "SDK_NET_3.0.1046";
 
         /// <summary>
         /// Client constructor.
@@ -2155,6 +2155,33 @@ namespace TencentCloud.Essbasic.V20210526
         public CreateConsoleLoginUrlResponse CreateConsoleLoginUrlSync(CreateConsoleLoginUrlRequest req)
         {
             return InternalRequestAsync<CreateConsoleLoginUrlResponse>(req, "CreateConsoleLoginUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于获取个人授权执业章给企业的二维码，需要个人用户通过微信扫码。扫描后将跳转到腾讯电子签小程序，进入到授权执业章的流程。个人用户授权成功后，企业印章管理员需对印章进行审核，审核通过后，即可使用个人授权的执业章进行盖章操作。
+        /// 
+        /// **注意**
+        /// 1. 该二维码**有效期为7天**，过期后将失效，可重新创建。
+        /// </summary>
+        /// <param name="req"><see cref="CreateEmployeeQualificationSealQrCodeRequest"/></param>
+        /// <returns><see cref="CreateEmployeeQualificationSealQrCodeResponse"/></returns>
+        public Task<CreateEmployeeQualificationSealQrCodeResponse> CreateEmployeeQualificationSealQrCode(CreateEmployeeQualificationSealQrCodeRequest req)
+        {
+            return InternalRequestAsync<CreateEmployeeQualificationSealQrCodeResponse>(req, "CreateEmployeeQualificationSealQrCode");
+        }
+
+        /// <summary>
+        /// 该接口用于获取个人授权执业章给企业的二维码，需要个人用户通过微信扫码。扫描后将跳转到腾讯电子签小程序，进入到授权执业章的流程。个人用户授权成功后，企业印章管理员需对印章进行审核，审核通过后，即可使用个人授权的执业章进行盖章操作。
+        /// 
+        /// **注意**
+        /// 1. 该二维码**有效期为7天**，过期后将失效，可重新创建。
+        /// </summary>
+        /// <param name="req"><see cref="CreateEmployeeQualificationSealQrCodeRequest"/></param>
+        /// <returns><see cref="CreateEmployeeQualificationSealQrCodeResponse"/></returns>
+        public CreateEmployeeQualificationSealQrCodeResponse CreateEmployeeQualificationSealQrCodeSync(CreateEmployeeQualificationSealQrCodeRequest req)
+        {
+            return InternalRequestAsync<CreateEmployeeQualificationSealQrCodeResponse>(req, "CreateEmployeeQualificationSealQrCode")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

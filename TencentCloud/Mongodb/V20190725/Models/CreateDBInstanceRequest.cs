@@ -25,29 +25,32 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 指每个副本集内节点个数。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+        /// - 创建副本集实例，指每个副本集内主从节点数量。每个副本集所支持的的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+        /// - 创建分片集群实例，指每个分片的主从节点数量。每个分片所支持的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
         /// </summary>
         [JsonProperty("NodeNum")]
         public ulong? NodeNum{ get; set; }
 
         /// <summary>
-        /// 实例内存大小，单位：GB。
+        /// 实例内存大小，单位：GB。具体售卖的内存规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
         /// </summary>
         [JsonProperty("Memory")]
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// 实例硬盘大小，单位：GB。
+        /// 实例硬盘大小，单位：GB。每一个 CPU 规格对应的最大磁盘与最小磁盘范围，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
         /// </summary>
         [JsonProperty("Volume")]
         public ulong? Volume{ get; set; }
 
         /// <summary>
-        /// 指版本信息。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+        /// 指版本信息。具体支持的版本信息 ，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
         /// - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
         /// - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
         /// - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
         /// - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+        /// - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+        /// - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
         /// </summary>
         [JsonProperty("MongoVersion")]
         public string MongoVersion{ get; set; }
@@ -67,15 +70,15 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 实例时长，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+        /// 指定购买实例的购买时长。取值可选：[1,2,3,4,5,6,7,8,9,10,11,12,24,36]；单位：月。
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// 机器类型。
-        /// - HIO：高IO型。
-        /// - HIO10G：高IO万兆。
+        /// 产品规格类型。
+        /// - HIO10G：通用高HIO万兆型。
+        /// - HCD：云盘版类型。
         /// </summary>
         [JsonProperty("MachineCode")]
         public string MachineCode{ get; set; }
@@ -89,15 +92,16 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// 指副本集数量。
-        /// - 创建副本集实例，该参数只能为1。
-        /// - 创建分片实例，指分片的数量。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+        /// - 创建副本集实例，指副本集数量，该参数只能为1。
+        /// - 创建分片集群实例，指分片的数量。请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询分片数量的取值范围，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。
         /// </summary>
         [JsonProperty("ReplicateSetNum")]
         public ulong? ReplicateSetNum{ get; set; }
 
         /// <summary>
-        /// 项目ID。若不设置该参数，则为默认项目。
+        /// 项目ID。
+        /// - 若不设置该参数，则为默认项目。
+        /// - 在 [MongoDB 控制台项目管理](https://console.cloud.tencent.com/project)页面，可获取项目ID。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
@@ -128,7 +132,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
 
         /// <summary>
         /// 自动续费标记。
-        /// - 0：不自动续费。默认为不自动续费。
+        /// - 0：不自动续费。
         /// - 1：自动续费。
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
@@ -143,10 +147,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// 实例类型。
-        /// - 1：正式实例。
-        /// - 3：只读实例。
-        /// - 4：灾备实例。
+        /// 实例类型。- 1：正式实例。- 3：只读实例。- 4：灾备实例。-5：整实例克隆，注意：克隆实例时，RestoreTime为必填项。
         /// </summary>
         [JsonProperty("Clone")]
         public long? Clone{ get; set; }
@@ -158,15 +159,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string Father{ get; set; }
 
         /// <summary>
-        /// 安全组。
+        /// 安全组 ID。 
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string[] SecurityGroup{ get; set; }
 
         /// <summary>
-        /// 克隆实例回档时间。
-        /// - 若为克隆实例，则必须配置该参数。输入格式示例：2021-08-13 16:30:00。
-        /// - 回档时间范围：仅能回档7天内时间点的数据。
+        /// 克隆实例回档时间，当Clone取值为5或6时为必填。- 若为克隆实例，则必须配置该参数。输入格式示例：2021-08-13 16:30:00。- 回档时间范围：仅能回档7天内时间点的数据。
         /// </summary>
         [JsonProperty("RestoreTime")]
         public string RestoreTime{ get; set; }
@@ -188,19 +187,23 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string[] AvailabilityZoneList{ get; set; }
 
         /// <summary>
-        /// Mongos CPU 核数，购买MongoDB 4.2 及以上WiredTiger存储引擎版本的分片集群时，必须填写。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+        /// Mongos CPU 核数，支持1、2、4、8、16。购买分片集群时，必须填写。
         /// </summary>
         [JsonProperty("MongosCpu")]
         public ulong? MongosCpu{ get; set; }
 
         /// <summary>
-        /// Mongos 内存大小。购买MongoDB 4.2 及以上WiredTiger存储引擎版本的分片集群时，必须填写。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+        /// Mongos 内存大小。
+        /// -  购买分片集群时，必须填写。
+        /// - 单位：GB，支持1核2GB、2核4GB、4核8GB、8核16GB、16核32GB。
         /// </summary>
         [JsonProperty("MongosMemory")]
         public ulong? MongosMemory{ get; set; }
 
         /// <summary>
-        /// Mongos 数量。购买MongoDB 4.2 及以上WiredTiger存储引擎版本的分片集群时，必须填写。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。为了保障高可用，取值范围为[3,32]。
+        /// Mongos 数量。购买分片集群时，必须填写。
+        /// - 单可用区部署实例，其数量范围为[3,32]。
+        /// - 多可用区部署实例，其数量范围为[6,32]。
         /// </summary>
         [JsonProperty("MongosNodeNum")]
         public ulong? MongosNodeNum{ get; set; }
@@ -212,7 +215,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? ReadonlyNodeNum{ get; set; }
 
         /// <summary>
-        /// 指只读节点所属可用区。跨可用区部署实例，参数**ReadonlyNodeNum**不为**0**时，必须配置该参数。
+        /// 指只读节点所属可用区数组。跨可用区部署实例，参数**ReadonlyNodeNum**不为**0**时，必须配置该参数。
         /// </summary>
         [JsonProperty("ReadonlyNodeAvailabilityZoneList")]
         public string[] ReadonlyNodeAvailabilityZoneList{ get; set; }
