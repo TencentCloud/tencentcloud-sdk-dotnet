@@ -192,6 +192,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("EsServerlessSpace")]
         public string EsServerlessSpace{ get; set; }
 
+        /// <summary>
+        /// flink版本
+        /// </summary>
+        [JsonProperty("FlinkVersion")]
+        public string FlinkVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -226,6 +232,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamObj(map, prefix + "JobGraph.", this.JobGraph);
             this.SetParamSimple(map, prefix + "EsServerlessIndex", this.EsServerlessIndex);
             this.SetParamSimple(map, prefix + "EsServerlessSpace", this.EsServerlessSpace);
+            this.SetParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
         }
     }
 }

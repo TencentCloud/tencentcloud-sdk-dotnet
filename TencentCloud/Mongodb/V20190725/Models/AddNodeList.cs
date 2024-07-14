@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 需要删除的节点角色。
+        /// 需要新增的节点角色。
         /// - SECONDARY：Mongod 节点。
         /// - READONLY：只读节点。
         /// - MONGOS：Mongos 节点。

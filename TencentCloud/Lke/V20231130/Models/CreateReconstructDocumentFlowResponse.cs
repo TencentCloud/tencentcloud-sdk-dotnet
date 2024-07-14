@@ -25,7 +25,7 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 任务唯一id
+        /// 任务唯一id。30天内可以通过GetReconstructDocumentResult接口查询TaskId对应的处理结果。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

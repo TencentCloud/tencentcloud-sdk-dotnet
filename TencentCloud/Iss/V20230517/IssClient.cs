@@ -28,7 +28,7 @@ namespace TencentCloud.Iss.V20230517
 
        private const string endpoint = "iss.tencentcloudapi.com";
        private const string version = "2023-05-17";
-       private const string sdkVersion = "SDK_NET_3.0.1046";
+       private const string sdkVersion = "SDK_NET_3.0.1047";
 
         /// <summary>
         /// Client constructor.

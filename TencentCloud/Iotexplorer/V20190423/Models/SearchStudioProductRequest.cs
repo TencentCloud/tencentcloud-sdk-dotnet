@@ -60,6 +60,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
 
+        /// <summary>
+        /// 每次请求的Filters的上限为10，Filter.Values的上限为1。
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "DevStatus", this.DevStatus);
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

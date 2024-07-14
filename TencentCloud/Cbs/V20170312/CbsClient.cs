@@ -28,7 +28,7 @@ namespace TencentCloud.Cbs.V20170312
 
        private const string endpoint = "cbs.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1046";
+       private const string sdkVersion = "SDK_NET_3.0.1047";
 
         /// <summary>
         /// Client constructor.
@@ -622,6 +622,8 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
+        /// 为进一步规范化API命名，该接口决定预下线，新接口命名为：DescribeSnapshotOverview
+        /// 
         /// 获取快照概览信息
         /// </summary>
         /// <param name="req"><see cref="GetSnapOverviewRequest"/></param>
@@ -632,6 +634,8 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
+        /// 为进一步规范化API命名，该接口决定预下线，新接口命名为：DescribeSnapshotOverview
+        /// 
         /// 获取快照概览信息
         /// </summary>
         /// <param name="req"><see cref="GetSnapOverviewRequest"/></param>

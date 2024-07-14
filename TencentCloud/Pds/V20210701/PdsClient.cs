@@ -28,7 +28,7 @@ namespace TencentCloud.Pds.V20210701
 
        private const string endpoint = "pds.tencentcloudapi.com";
        private const string version = "2021-07-01";
-       private const string sdkVersion = "SDK_NET_3.0.1046";
+       private const string sdkVersion = "SDK_NET_3.0.1047";
 
         /// <summary>
         /// Client constructor.

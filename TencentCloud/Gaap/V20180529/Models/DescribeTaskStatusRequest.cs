@@ -24,12 +24,19 @@ namespace TencentCloud.Gaap.V20180529.Models
     public class DescribeTaskStatusRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 任务ID，值为异步接口返回的RequestId
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
         }
     }
 }
