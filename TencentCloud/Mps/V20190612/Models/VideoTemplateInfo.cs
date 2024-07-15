@@ -45,7 +45,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Codec{ get; set; }
 
         /// <summary>
-        /// 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。 注意：自适应码率时取值范围是 [0, 60]
+        /// 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
+        /// 注意：自适应码率时取值范围是 [0, 60]
         /// </summary>
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }

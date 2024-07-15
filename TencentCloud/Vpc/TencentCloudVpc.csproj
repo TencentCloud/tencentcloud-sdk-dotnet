@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1047</VersionPrefix>
+    <VersionPrefix>3.0.1048</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -89,6 +89,8 @@
     <Compile Include="V20170312\Models\AssociateDhcpIpWithAddressIpResponse.cs" />
     <Compile Include="V20170312\Models\AssociateDirectConnectGatewayNatGatewayRequest.cs" />
     <Compile Include="V20170312\Models\AssociateDirectConnectGatewayNatGatewayResponse.cs" />
+    <Compile Include="V20170312\Models\AssociateInstancesToCcnRouteTableRequest.cs" />
+    <Compile Include="V20170312\Models\AssociateInstancesToCcnRouteTableResponse.cs" />
     <Compile Include="V20170312\Models\AssociateNatGatewayAddressRequest.cs" />
     <Compile Include="V20170312\Models\AssociateNatGatewayAddressResponse.cs" />
     <Compile Include="V20170312\Models\AssociateNetworkAclSubnetsRequest.cs" />
@@ -115,12 +117,21 @@
     <Compile Include="V20170312\Models\CcnAttachedInstance.cs" />
     <Compile Include="V20170312\Models\CcnBandwidth.cs" />
     <Compile Include="V20170312\Models\CcnBandwidthInfo.cs" />
+    <Compile Include="V20170312\Models\CcnBatchRouteTable.cs" />
     <Compile Include="V20170312\Models\CcnFlowLock.cs" />
     <Compile Include="V20170312\Models\CcnInstance.cs" />
     <Compile Include="V20170312\Models\CcnInstanceInfo.cs" />
+    <Compile Include="V20170312\Models\CcnInstanceWithoutRegion.cs" />
     <Compile Include="V20170312\Models\CcnRegionBandwidthLimit.cs" />
     <Compile Include="V20170312\Models\CcnRegionBandwidthLimitInfo.cs" />
     <Compile Include="V20170312\Models\CcnRoute.cs" />
+    <Compile Include="V20170312\Models\CcnRouteBroadcastPolicyRouteCondition.cs" />
+    <Compile Include="V20170312\Models\CcnRouteTable.cs" />
+    <Compile Include="V20170312\Models\CcnRouteTableBroadcastPolicy.cs" />
+    <Compile Include="V20170312\Models\CcnRouteTableBroadcastPolicys.cs" />
+    <Compile Include="V20170312\Models\CcnRouteTableInputPolicy.cs" />
+    <Compile Include="V20170312\Models\CcnRouteTableInputPolicys.cs" />
+    <Compile Include="V20170312\Models\CcnRouteTableSelectPolicy.cs" />
     <Compile Include="V20170312\Models\CheckAssistantCidrRequest.cs" />
     <Compile Include="V20170312\Models\CheckAssistantCidrResponse.cs" />
     <Compile Include="V20170312\Models\CheckDefaultSubnetRequest.cs" />
@@ -129,6 +140,8 @@
     <Compile Include="V20170312\Models\CheckNetDetectStateResponse.cs" />
     <Compile Include="V20170312\Models\CidrForCcn.cs" />
     <Compile Include="V20170312\Models\ClassicLinkInstance.cs" />
+    <Compile Include="V20170312\Models\ClearRouteTableSelectionPoliciesRequest.cs" />
+    <Compile Include="V20170312\Models\ClearRouteTableSelectionPoliciesResponse.cs" />
     <Compile Include="V20170312\Models\CloneSecurityGroupRequest.cs" />
     <Compile Include="V20170312\Models\CloneSecurityGroupResponse.cs" />
     <Compile Include="V20170312\Models\ConflictItem.cs" />
@@ -145,6 +158,8 @@
     <Compile Include="V20170312\Models\CreateBandwidthPackageResponse.cs" />
     <Compile Include="V20170312\Models\CreateCcnRequest.cs" />
     <Compile Include="V20170312\Models\CreateCcnResponse.cs" />
+    <Compile Include="V20170312\Models\CreateCcnRouteTablesRequest.cs" />
+    <Compile Include="V20170312\Models\CreateCcnRouteTablesResponse.cs" />
     <Compile Include="V20170312\Models\CreateCustomerGatewayRequest.cs" />
     <Compile Include="V20170312\Models\CreateCustomerGatewayResponse.cs" />
     <Compile Include="V20170312\Models\CreateDefaultSecurityGroupRequest.cs" />
@@ -248,6 +263,8 @@
     <Compile Include="V20170312\Models\DeleteBandwidthPackageResponse.cs" />
     <Compile Include="V20170312\Models\DeleteCcnRequest.cs" />
     <Compile Include="V20170312\Models\DeleteCcnResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteCcnRouteTablesRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteCcnRouteTablesResponse.cs" />
     <Compile Include="V20170312\Models\DeleteCustomerGatewayRequest.cs" />
     <Compile Include="V20170312\Models\DeleteCustomerGatewayResponse.cs" />
     <Compile Include="V20170312\Models\DeleteDhcpIpRequest.cs" />
@@ -352,6 +369,12 @@
     <Compile Include="V20170312\Models\DescribeCcnAttachedInstancesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeCcnRegionBandwidthLimitsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeCcnRegionBandwidthLimitsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeCcnRouteTableBroadcastPolicysRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeCcnRouteTableBroadcastPolicysResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeCcnRouteTableInputPolicysRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeCcnRouteTableInputPolicysResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeCcnRouteTablesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeCcnRouteTablesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeCcnRoutesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeCcnRoutesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeCcnsRequest.cs" />
@@ -434,6 +457,10 @@
     <Compile Include="V20170312\Models\DescribeProductQuotaResponse.cs" />
     <Compile Include="V20170312\Models\DescribeRouteConflictsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeRouteConflictsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeRouteTableAssociatedInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeRouteTableAssociatedInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeRouteTableSelectionPoliciesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeRouteTableSelectionPoliciesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeRouteTablesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeRouteTablesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeSecurityGroupAssociationStatisticsRequest.cs" />
@@ -594,6 +621,7 @@
     <Compile Include="V20170312\Models\InquiryPriceRenewVpnGatewayResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest.cs" />
     <Compile Include="V20170312\Models\InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse.cs" />
+    <Compile Include="V20170312\Models\InstanceBind.cs" />
     <Compile Include="V20170312\Models\InstanceChargePrepaid.cs" />
     <Compile Include="V20170312\Models\InstanceStatistic.cs" />
     <Compile Include="V20170312\Models\Ip6Rule.cs" />
@@ -636,6 +664,8 @@
     <Compile Include="V20170312\Models\ModifyCcnAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyCcnRegionBandwidthLimitsTypeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyCcnRegionBandwidthLimitsTypeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyCcnRouteTablesRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyCcnRouteTablesResponse.cs" />
     <Compile Include="V20170312\Models\ModifyCustomerGatewayAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyCustomerGatewayAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDhcpIpAttributeRequest.cs" />
@@ -688,6 +718,9 @@
     <Compile Include="V20170312\Models\ModifyPrivateNatGatewayTranslationNatRuleResponse.cs" />
     <Compile Include="V20170312\Models\ModifyRouteTableAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyRouteTableAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyRouteTableInfo.cs" />
+    <Compile Include="V20170312\Models\ModifyRouteTableSelectionPoliciesRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyRouteTableSelectionPoliciesResponse.cs" />
     <Compile Include="V20170312\Models\ModifySecurityGroupAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifySecurityGroupAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifySecurityGroupPoliciesRequest.cs" />
@@ -769,6 +802,10 @@
     <Compile Include="V20170312\Models\RenewAddressesResponse.cs" />
     <Compile Include="V20170312\Models\RenewVpnGatewayRequest.cs" />
     <Compile Include="V20170312\Models\RenewVpnGatewayResponse.cs" />
+    <Compile Include="V20170312\Models\ReplaceCcnRouteTableBroadcastPolicysRequest.cs" />
+    <Compile Include="V20170312\Models\ReplaceCcnRouteTableBroadcastPolicysResponse.cs" />
+    <Compile Include="V20170312\Models\ReplaceCcnRouteTableInputPolicysRequest.cs" />
+    <Compile Include="V20170312\Models\ReplaceCcnRouteTableInputPolicysResponse.cs" />
     <Compile Include="V20170312\Models\ReplaceDirectConnectGatewayCcnRoutesRequest.cs" />
     <Compile Include="V20170312\Models\ReplaceDirectConnectGatewayCcnRoutesResponse.cs" />
     <Compile Include="V20170312\Models\ReplaceRouteTableAssociationRequest.cs" />
@@ -799,6 +836,7 @@
     <Compile Include="V20170312\Models\ReturnNormalAddressesResponse.cs" />
     <Compile Include="V20170312\Models\Route.cs" />
     <Compile Include="V20170312\Models\RouteConflict.cs" />
+    <Compile Include="V20170312\Models\RouteSelectionPolicy.cs" />
     <Compile Include="V20170312\Models\RouteTable.cs" />
     <Compile Include="V20170312\Models\RouteTableAssociation.cs" />
     <Compile Include="V20170312\Models\SecurityGroup.cs" />

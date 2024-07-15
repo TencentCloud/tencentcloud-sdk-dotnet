@@ -34,9 +34,9 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+        /// 自定义的合同流程的名称，长度不能超过200个字符，只能由中文汉字、中文标点、英文字母、阿拉伯数字、空格、小括号、中括号、中划线、下划线以及（,）、（;）、（.）、(&)、（+）组成。
         /// 
-        /// 该名称还将用于合同签署完成后的下载文件名。
+        /// 该名称还将用于合同签署完成后文件下载的默认文件名称。
         /// </summary>
         [JsonProperty("FlowName")]
         public string FlowName{ get; set; }

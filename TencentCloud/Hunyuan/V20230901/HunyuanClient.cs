@@ -28,7 +28,7 @@ namespace TencentCloud.Hunyuan.V20230901
 
        private const string endpoint = "hunyuan.tencentcloudapi.com";
        private const string version = "2023-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1047";
+       private const string sdkVersion = "SDK_NET_3.0.1048";
 
         /// <summary>
         /// Client constructor.
@@ -177,6 +177,29 @@ namespace TencentCloud.Hunyuan.V20230901
         public SubmitHunyuanImageJobResponse SubmitHunyuanImageJobSync(SubmitHunyuanImageJobRequest req)
         {
             return InternalRequestAsync<SubmitHunyuanImageJobResponse>(req, "SubmitHunyuanImageJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 文生图轻量版接口根据输入的文本描述，智能生成与之相关的结果图。
+        /// 文生图轻量版默认提供3个并发任务数，代表最多能同时处理3个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="TextToImageLiteRequest"/></param>
+        /// <returns><see cref="TextToImageLiteResponse"/></returns>
+        public Task<TextToImageLiteResponse> TextToImageLite(TextToImageLiteRequest req)
+        {
+            return InternalRequestAsync<TextToImageLiteResponse>(req, "TextToImageLite");
+        }
+
+        /// <summary>
+        /// 文生图轻量版接口根据输入的文本描述，智能生成与之相关的结果图。
+        /// 文生图轻量版默认提供3个并发任务数，代表最多能同时处理3个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="TextToImageLiteRequest"/></param>
+        /// <returns><see cref="TextToImageLiteResponse"/></returns>
+        public TextToImageLiteResponse TextToImageLiteSync(TextToImageLiteRequest req)
+        {
+            return InternalRequestAsync<TextToImageLiteResponse>(req, "TextToImageLite")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

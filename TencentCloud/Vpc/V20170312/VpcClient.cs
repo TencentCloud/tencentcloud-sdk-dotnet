@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1047";
+       private const string sdkVersion = "SDK_NET_3.0.1048";
 
         /// <summary>
         /// Client constructor.
@@ -425,6 +425,27 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（AssociateInstancesToCcnRouteTable）用于将指定的云联网实例关联到指定的云联网路由表。
+        /// </summary>
+        /// <param name="req"><see cref="AssociateInstancesToCcnRouteTableRequest"/></param>
+        /// <returns><see cref="AssociateInstancesToCcnRouteTableResponse"/></returns>
+        public Task<AssociateInstancesToCcnRouteTableResponse> AssociateInstancesToCcnRouteTable(AssociateInstancesToCcnRouteTableRequest req)
+        {
+            return InternalRequestAsync<AssociateInstancesToCcnRouteTableResponse>(req, "AssociateInstancesToCcnRouteTable");
+        }
+
+        /// <summary>
+        /// 本接口（AssociateInstancesToCcnRouteTable）用于将指定的云联网实例关联到指定的云联网路由表。
+        /// </summary>
+        /// <param name="req"><see cref="AssociateInstancesToCcnRouteTableRequest"/></param>
+        /// <returns><see cref="AssociateInstancesToCcnRouteTableResponse"/></returns>
+        public AssociateInstancesToCcnRouteTableResponse AssociateInstancesToCcnRouteTableSync(AssociateInstancesToCcnRouteTableRequest req)
+        {
+            return InternalRequestAsync<AssociateInstancesToCcnRouteTableResponse>(req, "AssociateInstancesToCcnRouteTable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口(AssociateNatGatewayAddress)用于NAT网关绑定弹性IP（EIP）。
         /// </summary>
         /// <param name="req"><see cref="AssociateNatGatewayAddressRequest"/></param>
@@ -690,6 +711,27 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（ClearRouteTableSelectionPolicies）用于清空指定云联网的路由表选择策略。
+        /// </summary>
+        /// <param name="req"><see cref="ClearRouteTableSelectionPoliciesRequest"/></param>
+        /// <returns><see cref="ClearRouteTableSelectionPoliciesResponse"/></returns>
+        public Task<ClearRouteTableSelectionPoliciesResponse> ClearRouteTableSelectionPolicies(ClearRouteTableSelectionPoliciesRequest req)
+        {
+            return InternalRequestAsync<ClearRouteTableSelectionPoliciesResponse>(req, "ClearRouteTableSelectionPolicies");
+        }
+
+        /// <summary>
+        /// 本接口（ClearRouteTableSelectionPolicies）用于清空指定云联网的路由表选择策略。
+        /// </summary>
+        /// <param name="req"><see cref="ClearRouteTableSelectionPoliciesRequest"/></param>
+        /// <returns><see cref="ClearRouteTableSelectionPoliciesResponse"/></returns>
+        public ClearRouteTableSelectionPoliciesResponse ClearRouteTableSelectionPoliciesSync(ClearRouteTableSelectionPoliciesRequest req)
+        {
+            return InternalRequestAsync<ClearRouteTableSelectionPoliciesResponse>(req, "ClearRouteTableSelectionPolicies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（CloneSecurityGroup）用于根据存量的安全组，克隆创建出同样规则配置的安全组。仅克隆安全组及其规则信息，不会克隆安全组标签信息。
         /// </summary>
         /// <param name="req"><see cref="CloneSecurityGroupRequest"/></param>
@@ -851,6 +893,27 @@ namespace TencentCloud.Vpc.V20170312
         public CreateCcnResponse CreateCcnSync(CreateCcnRequest req)
         {
             return InternalRequestAsync<CreateCcnResponse>(req, "CreateCcn")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（CreateCcnRouteTables）用于给指定的云联网实例新建路由表。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCcnRouteTablesRequest"/></param>
+        /// <returns><see cref="CreateCcnRouteTablesResponse"/></returns>
+        public Task<CreateCcnRouteTablesResponse> CreateCcnRouteTables(CreateCcnRouteTablesRequest req)
+        {
+            return InternalRequestAsync<CreateCcnRouteTablesResponse>(req, "CreateCcnRouteTables");
+        }
+
+        /// <summary>
+        /// 本接口（CreateCcnRouteTables）用于给指定的云联网实例新建路由表。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCcnRouteTablesRequest"/></param>
+        /// <returns><see cref="CreateCcnRouteTablesResponse"/></returns>
+        public CreateCcnRouteTablesResponse CreateCcnRouteTablesSync(CreateCcnRouteTablesRequest req)
+        {
+            return InternalRequestAsync<CreateCcnRouteTablesResponse>(req, "CreateCcnRouteTables")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2019,6 +2082,27 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（DeleteCcnRouteTables）用于删除云联网路由表。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCcnRouteTablesRequest"/></param>
+        /// <returns><see cref="DeleteCcnRouteTablesResponse"/></returns>
+        public Task<DeleteCcnRouteTablesResponse> DeleteCcnRouteTables(DeleteCcnRouteTablesRequest req)
+        {
+            return InternalRequestAsync<DeleteCcnRouteTablesResponse>(req, "DeleteCcnRouteTables");
+        }
+
+        /// <summary>
+        /// 本接口（DeleteCcnRouteTables）用于删除云联网路由表。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCcnRouteTablesRequest"/></param>
+        /// <returns><see cref="DeleteCcnRouteTablesResponse"/></returns>
+        public DeleteCcnRouteTablesResponse DeleteCcnRouteTablesSync(DeleteCcnRouteTablesRequest req)
+        {
+            return InternalRequestAsync<DeleteCcnRouteTablesResponse>(req, "DeleteCcnRouteTables")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DeleteCustomerGateway）用于删除对端网关。
         /// </summary>
         /// <param name="req"><see cref="DeleteCustomerGatewayRequest"/></param>
@@ -3163,6 +3247,69 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口(DescribeCcnRouteTableBroadcastPolicys)用于查询指定云联网路由表的路由传播策略。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcnRouteTableBroadcastPolicysRequest"/></param>
+        /// <returns><see cref="DescribeCcnRouteTableBroadcastPolicysResponse"/></returns>
+        public Task<DescribeCcnRouteTableBroadcastPolicysResponse> DescribeCcnRouteTableBroadcastPolicys(DescribeCcnRouteTableBroadcastPolicysRequest req)
+        {
+            return InternalRequestAsync<DescribeCcnRouteTableBroadcastPolicysResponse>(req, "DescribeCcnRouteTableBroadcastPolicys");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeCcnRouteTableBroadcastPolicys)用于查询指定云联网路由表的路由传播策略。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcnRouteTableBroadcastPolicysRequest"/></param>
+        /// <returns><see cref="DescribeCcnRouteTableBroadcastPolicysResponse"/></returns>
+        public DescribeCcnRouteTableBroadcastPolicysResponse DescribeCcnRouteTableBroadcastPolicysSync(DescribeCcnRouteTableBroadcastPolicysRequest req)
+        {
+            return InternalRequestAsync<DescribeCcnRouteTableBroadcastPolicysResponse>(req, "DescribeCcnRouteTableBroadcastPolicys")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeCcnRouteTableInputPolicys)用于查询指定云联网路由表的路由接收策略。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcnRouteTableInputPolicysRequest"/></param>
+        /// <returns><see cref="DescribeCcnRouteTableInputPolicysResponse"/></returns>
+        public Task<DescribeCcnRouteTableInputPolicysResponse> DescribeCcnRouteTableInputPolicys(DescribeCcnRouteTableInputPolicysRequest req)
+        {
+            return InternalRequestAsync<DescribeCcnRouteTableInputPolicysResponse>(req, "DescribeCcnRouteTableInputPolicys");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeCcnRouteTableInputPolicys)用于查询指定云联网路由表的路由接收策略。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcnRouteTableInputPolicysRequest"/></param>
+        /// <returns><see cref="DescribeCcnRouteTableInputPolicysResponse"/></returns>
+        public DescribeCcnRouteTableInputPolicysResponse DescribeCcnRouteTableInputPolicysSync(DescribeCcnRouteTableInputPolicysRequest req)
+        {
+            return InternalRequestAsync<DescribeCcnRouteTableInputPolicysResponse>(req, "DescribeCcnRouteTableInputPolicys")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于查询指定的云联网实例的路由表信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcnRouteTablesRequest"/></param>
+        /// <returns><see cref="DescribeCcnRouteTablesResponse"/></returns>
+        public Task<DescribeCcnRouteTablesResponse> DescribeCcnRouteTables(DescribeCcnRouteTablesRequest req)
+        {
+            return InternalRequestAsync<DescribeCcnRouteTablesResponse>(req, "DescribeCcnRouteTables");
+        }
+
+        /// <summary>
+        /// 该接口用于查询指定的云联网实例的路由表信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcnRouteTablesRequest"/></param>
+        /// <returns><see cref="DescribeCcnRouteTablesResponse"/></returns>
+        public DescribeCcnRouteTablesResponse DescribeCcnRouteTablesSync(DescribeCcnRouteTablesRequest req)
+        {
+            return InternalRequestAsync<DescribeCcnRouteTablesResponse>(req, "DescribeCcnRouteTables")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeCcnRoutes）用于查询已加入云联网（CCN）的路由。
         /// </summary>
         /// <param name="req"><see cref="DescribeCcnRoutesRequest"/></param>
@@ -4036,6 +4183,48 @@ namespace TencentCloud.Vpc.V20170312
         public DescribeRouteConflictsResponse DescribeRouteConflictsSync(DescribeRouteConflictsRequest req)
         {
             return InternalRequestAsync<DescribeRouteConflictsResponse>(req, "DescribeRouteConflicts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeRouteTableAssociatedInstances）用于查询指定的云联网关联的实例所绑定的路由表信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRouteTableAssociatedInstancesRequest"/></param>
+        /// <returns><see cref="DescribeRouteTableAssociatedInstancesResponse"/></returns>
+        public Task<DescribeRouteTableAssociatedInstancesResponse> DescribeRouteTableAssociatedInstances(DescribeRouteTableAssociatedInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeRouteTableAssociatedInstancesResponse>(req, "DescribeRouteTableAssociatedInstances");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeRouteTableAssociatedInstances）用于查询指定的云联网关联的实例所绑定的路由表信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRouteTableAssociatedInstancesRequest"/></param>
+        /// <returns><see cref="DescribeRouteTableAssociatedInstancesResponse"/></returns>
+        public DescribeRouteTableAssociatedInstancesResponse DescribeRouteTableAssociatedInstancesSync(DescribeRouteTableAssociatedInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeRouteTableAssociatedInstancesResponse>(req, "DescribeRouteTableAssociatedInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeRouteTableSelectionPolicies）用于查询云联网路由表选择策略。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRouteTableSelectionPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeRouteTableSelectionPoliciesResponse"/></returns>
+        public Task<DescribeRouteTableSelectionPoliciesResponse> DescribeRouteTableSelectionPolicies(DescribeRouteTableSelectionPoliciesRequest req)
+        {
+            return InternalRequestAsync<DescribeRouteTableSelectionPoliciesResponse>(req, "DescribeRouteTableSelectionPolicies");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeRouteTableSelectionPolicies）用于查询云联网路由表选择策略。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRouteTableSelectionPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeRouteTableSelectionPoliciesResponse"/></returns>
+        public DescribeRouteTableSelectionPoliciesResponse DescribeRouteTableSelectionPoliciesSync(DescribeRouteTableSelectionPoliciesRequest req)
+        {
+            return InternalRequestAsync<DescribeRouteTableSelectionPoliciesResponse>(req, "DescribeRouteTableSelectionPolicies")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5959,6 +6148,27 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 该接口用于修改云联网路由表名称和备注。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCcnRouteTablesRequest"/></param>
+        /// <returns><see cref="ModifyCcnRouteTablesResponse"/></returns>
+        public Task<ModifyCcnRouteTablesResponse> ModifyCcnRouteTables(ModifyCcnRouteTablesRequest req)
+        {
+            return InternalRequestAsync<ModifyCcnRouteTablesResponse>(req, "ModifyCcnRouteTables");
+        }
+
+        /// <summary>
+        /// 该接口用于修改云联网路由表名称和备注。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCcnRouteTablesRequest"/></param>
+        /// <returns><see cref="ModifyCcnRouteTablesResponse"/></returns>
+        public ModifyCcnRouteTablesResponse ModifyCcnRouteTablesSync(ModifyCcnRouteTablesRequest req)
+        {
+            return InternalRequestAsync<ModifyCcnRouteTablesResponse>(req, "ModifyCcnRouteTables")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ModifyCustomerGatewayAttribute）用于修改对端网关信息。
         /// </summary>
         /// <param name="req"><see cref="ModifyCustomerGatewayAttributeRequest"/></param>
@@ -6505,6 +6715,27 @@ namespace TencentCloud.Vpc.V20170312
         public ModifyRouteTableAttributeResponse ModifyRouteTableAttributeSync(ModifyRouteTableAttributeRequest req)
         {
             return InternalRequestAsync<ModifyRouteTableAttributeResponse>(req, "ModifyRouteTableAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于编辑云联网路由表选择策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRouteTableSelectionPoliciesRequest"/></param>
+        /// <returns><see cref="ModifyRouteTableSelectionPoliciesResponse"/></returns>
+        public Task<ModifyRouteTableSelectionPoliciesResponse> ModifyRouteTableSelectionPolicies(ModifyRouteTableSelectionPoliciesRequest req)
+        {
+            return InternalRequestAsync<ModifyRouteTableSelectionPoliciesResponse>(req, "ModifyRouteTableSelectionPolicies");
+        }
+
+        /// <summary>
+        /// 该接口用于编辑云联网路由表选择策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRouteTableSelectionPoliciesRequest"/></param>
+        /// <returns><see cref="ModifyRouteTableSelectionPoliciesResponse"/></returns>
+        public ModifyRouteTableSelectionPoliciesResponse ModifyRouteTableSelectionPoliciesSync(ModifyRouteTableSelectionPoliciesRequest req)
+        {
+            return InternalRequestAsync<ModifyRouteTableSelectionPoliciesResponse>(req, "ModifyRouteTableSelectionPolicies")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -7139,6 +7370,118 @@ namespace TencentCloud.Vpc.V20170312
         public RenewVpnGatewayResponse RenewVpnGatewaySync(RenewVpnGatewayRequest req)
         {
             return InternalRequestAsync<RenewVpnGatewayResponse>(req, "RenewVpnGateway")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(ReplaceCcnRouteTableBroadcastPolicys)用于替换云联网路由表路由传播策略。
+        /// > 特别注意：是全量覆盖，非增量添加
+        /// 
+        /// **路由条件支持以下四种：**
+        /// 
+        /// - 实例类型: `instance-type`，可选值：私有网络 `VPC`、专线网关 `DIRECTCONNECT`、专线网关 `VPNGW`
+        /// - 实例ID: `instance-id`，例如：`dcg-8zljkrft`、`vpc-jdevjrup`，暂不支持 `Edge` 实例
+        /// - 实例地域: `instance-region`，例如：`ap-guangzhou`<br />产品支持的所有地域列表可通过接口 [DescribeRegions](https://cloud.tencent.com/document/product/1596/77930) 查询，其中参数 `Product` 设置为 `ccn`
+        /// - 路由前缀: `cidr-block`，例如：`10.1.0.0/16`
+        /// 
+        /// 
+        /// **传播条件支持以下三种：**
+        /// 
+        /// - 实例类型: `instance-type`，格式同路由条件
+        /// - 实例ID: `instance-id`，格式同路由条件
+        /// - 实例地域: `instance-region`，格式同路由条件
+        /// 
+        /// 
+        /// **使用限制：**
+        /// - 一条策略内的单个条件类型，最大支持设置 `25` 个条件值
+        /// - 一张路由表，最大支持 `100` 条路由传播策略
+        /// - 路由条件类型中，只有 `cidr-block` 类型支持模糊匹配和精确匹配两种，其它类型只支持精确匹配一种模式
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceCcnRouteTableBroadcastPolicysRequest"/></param>
+        /// <returns><see cref="ReplaceCcnRouteTableBroadcastPolicysResponse"/></returns>
+        public Task<ReplaceCcnRouteTableBroadcastPolicysResponse> ReplaceCcnRouteTableBroadcastPolicys(ReplaceCcnRouteTableBroadcastPolicysRequest req)
+        {
+            return InternalRequestAsync<ReplaceCcnRouteTableBroadcastPolicysResponse>(req, "ReplaceCcnRouteTableBroadcastPolicys");
+        }
+
+        /// <summary>
+        /// 本接口(ReplaceCcnRouteTableBroadcastPolicys)用于替换云联网路由表路由传播策略。
+        /// > 特别注意：是全量覆盖，非增量添加
+        /// 
+        /// **路由条件支持以下四种：**
+        /// 
+        /// - 实例类型: `instance-type`，可选值：私有网络 `VPC`、专线网关 `DIRECTCONNECT`、专线网关 `VPNGW`
+        /// - 实例ID: `instance-id`，例如：`dcg-8zljkrft`、`vpc-jdevjrup`，暂不支持 `Edge` 实例
+        /// - 实例地域: `instance-region`，例如：`ap-guangzhou`<br />产品支持的所有地域列表可通过接口 [DescribeRegions](https://cloud.tencent.com/document/product/1596/77930) 查询，其中参数 `Product` 设置为 `ccn`
+        /// - 路由前缀: `cidr-block`，例如：`10.1.0.0/16`
+        /// 
+        /// 
+        /// **传播条件支持以下三种：**
+        /// 
+        /// - 实例类型: `instance-type`，格式同路由条件
+        /// - 实例ID: `instance-id`，格式同路由条件
+        /// - 实例地域: `instance-region`，格式同路由条件
+        /// 
+        /// 
+        /// **使用限制：**
+        /// - 一条策略内的单个条件类型，最大支持设置 `25` 个条件值
+        /// - 一张路由表，最大支持 `100` 条路由传播策略
+        /// - 路由条件类型中，只有 `cidr-block` 类型支持模糊匹配和精确匹配两种，其它类型只支持精确匹配一种模式
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceCcnRouteTableBroadcastPolicysRequest"/></param>
+        /// <returns><see cref="ReplaceCcnRouteTableBroadcastPolicysResponse"/></returns>
+        public ReplaceCcnRouteTableBroadcastPolicysResponse ReplaceCcnRouteTableBroadcastPolicysSync(ReplaceCcnRouteTableBroadcastPolicysRequest req)
+        {
+            return InternalRequestAsync<ReplaceCcnRouteTableBroadcastPolicysResponse>(req, "ReplaceCcnRouteTableBroadcastPolicys")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(ReplaceRouteTableInputPolicys)用于替换云联网路由表路由接收策略。
+        /// > 特别注意：是全量覆盖，非增量添加
+        /// 
+        /// **路由条件支持以下四种：**
+        /// 
+        /// - 实例类型: `instance-type`，可选值：私有网络 `VPC`、专线网关 `DIRECTCONNECT`、专线网关 `VPNGW`
+        /// - 实例ID: `instance-id`，例如：`dcg-8zljkrft`、`vpc-jdevjrup`，暂不支持 `Edge` 实例
+        /// - 实例地域: `instance-region`，例如：`ap-guangzhou`<br />产品支持的所有地域列表可通过接口 [DescribeRegions](https://cloud.tencent.com/document/product/1596/77930) 查询，其中参数 `Product` 设置为 `ccn`
+        /// - 路由前缀: `cidr-block`，例如：`10.1.0.0/16`
+        /// 
+        /// 
+        /// **使用限制：**
+        /// - 一条策略内的单个条件类型，最大支持设置 `25` 个条件值
+        /// - 一张路由表，最大支持 `100` 条路由接收策略
+        /// - 路由条件类型中，只有 `cidr-block` 类型支持模糊匹配和精确匹配两种，其它类型只支持精确匹配一种模式
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceCcnRouteTableInputPolicysRequest"/></param>
+        /// <returns><see cref="ReplaceCcnRouteTableInputPolicysResponse"/></returns>
+        public Task<ReplaceCcnRouteTableInputPolicysResponse> ReplaceCcnRouteTableInputPolicys(ReplaceCcnRouteTableInputPolicysRequest req)
+        {
+            return InternalRequestAsync<ReplaceCcnRouteTableInputPolicysResponse>(req, "ReplaceCcnRouteTableInputPolicys");
+        }
+
+        /// <summary>
+        /// 本接口(ReplaceRouteTableInputPolicys)用于替换云联网路由表路由接收策略。
+        /// > 特别注意：是全量覆盖，非增量添加
+        /// 
+        /// **路由条件支持以下四种：**
+        /// 
+        /// - 实例类型: `instance-type`，可选值：私有网络 `VPC`、专线网关 `DIRECTCONNECT`、专线网关 `VPNGW`
+        /// - 实例ID: `instance-id`，例如：`dcg-8zljkrft`、`vpc-jdevjrup`，暂不支持 `Edge` 实例
+        /// - 实例地域: `instance-region`，例如：`ap-guangzhou`<br />产品支持的所有地域列表可通过接口 [DescribeRegions](https://cloud.tencent.com/document/product/1596/77930) 查询，其中参数 `Product` 设置为 `ccn`
+        /// - 路由前缀: `cidr-block`，例如：`10.1.0.0/16`
+        /// 
+        /// 
+        /// **使用限制：**
+        /// - 一条策略内的单个条件类型，最大支持设置 `25` 个条件值
+        /// - 一张路由表，最大支持 `100` 条路由接收策略
+        /// - 路由条件类型中，只有 `cidr-block` 类型支持模糊匹配和精确匹配两种，其它类型只支持精确匹配一种模式
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceCcnRouteTableInputPolicysRequest"/></param>
+        /// <returns><see cref="ReplaceCcnRouteTableInputPolicysResponse"/></returns>
+        public ReplaceCcnRouteTableInputPolicysResponse ReplaceCcnRouteTableInputPolicysSync(ReplaceCcnRouteTableInputPolicysRequest req)
+        {
+            return InternalRequestAsync<ReplaceCcnRouteTableInputPolicysResponse>(req, "ReplaceCcnRouteTableInputPolicys")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

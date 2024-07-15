@@ -28,7 +28,7 @@ namespace TencentCloud.Essbasic.V20210526
 
        private const string endpoint = "essbasic.tencentcloudapi.com";
        private const string version = "2021-05-26";
-       private const string sdkVersion = "SDK_NET_3.0.1047";
+       private const string sdkVersion = "SDK_NET_3.0.1048";
 
         /// <summary>
         /// Client constructor.
@@ -2736,10 +2736,9 @@ namespace TencentCloud.Essbasic.V20210526
         /// 1. **企业自动签**
         /// 2. **企业与港澳台居民签署合同**
         /// 3. **使用手机号验证签署方身份**
-        /// 4. **骑缝章**
-        /// 5. **拓宽签署方年龄限制**
-        /// 6. **下载企业合同/文件**
-        /// 7. **隐藏合同经办人姓名**
+        /// 4. **拓宽签署方年龄限制**
+        /// 5. **下载企业合同/文件**
+        /// 6. **隐藏合同经办人姓名**
         /// 
         /// 对应能力开通页面在子客控制台-企业中心-拓展服务，如下图所示:
         /// 
@@ -2760,10 +2759,9 @@ namespace TencentCloud.Essbasic.V20210526
         /// 1. **企业自动签**
         /// 2. **企业与港澳台居民签署合同**
         /// 3. **使用手机号验证签署方身份**
-        /// 4. **骑缝章**
-        /// 5. **拓宽签署方年龄限制**
-        /// 6. **下载企业合同/文件**
-        /// 7. **隐藏合同经办人姓名**
+        /// 4. **拓宽签署方年龄限制**
+        /// 5. **下载企业合同/文件**
+        /// 6. **隐藏合同经办人姓名**
         /// 
         /// 对应能力开通页面在子客控制台-企业中心-拓展服务，如下图所示:
         /// 

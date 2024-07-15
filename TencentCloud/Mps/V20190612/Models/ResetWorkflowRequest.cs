@@ -49,7 +49,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// 视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致，即`{inputDir}`。
+        /// 视频处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
+        /// 如果不填，表示与触发文件所在的目录一致，即`{inputDir}`。
         /// </summary>
         [JsonProperty("OutputDir")]
         public string OutputDir{ get; set; }

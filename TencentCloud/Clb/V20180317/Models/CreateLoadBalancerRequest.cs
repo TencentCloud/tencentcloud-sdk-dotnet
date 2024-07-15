@@ -192,6 +192,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Egress")]
         public string Egress{ get; set; }
 
+        /// <summary>
+        /// 负载均衡实例的预付费相关属性
+        /// </summary>
+        [JsonProperty("LBChargePrepaid")]
+        public LBChargePrepaid LBChargePrepaid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -225,6 +231,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
             this.SetParamSimple(map, prefix + "DynamicVip", this.DynamicVip);
             this.SetParamSimple(map, prefix + "Egress", this.Egress);
+            this.SetParamObj(map, prefix + "LBChargePrepaid.", this.LBChargePrepaid);
         }
     }
 }

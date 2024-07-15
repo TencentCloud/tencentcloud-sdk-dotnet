@@ -28,7 +28,7 @@ namespace TencentCloud.Cbs.V20170312
 
        private const string endpoint = "cbs.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1047";
+       private const string sdkVersion = "SDK_NET_3.0.1048";
 
         /// <summary>
         /// Client constructor.
@@ -543,6 +543,27 @@ namespace TencentCloud.Cbs.V20170312
         public DescribeInstancesDiskNumResponse DescribeInstancesDiskNumSync(DescribeInstancesDiskNumRequest req)
         {
             return InternalRequestAsync<DescribeInstancesDiskNumResponse>(req, "DescribeInstancesDiskNum")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于查询用户快照使用概览，包括快照总容量、计费容量等信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSnapshotOverviewRequest"/></param>
+        /// <returns><see cref="DescribeSnapshotOverviewResponse"/></returns>
+        public Task<DescribeSnapshotOverviewResponse> DescribeSnapshotOverview(DescribeSnapshotOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeSnapshotOverviewResponse>(req, "DescribeSnapshotOverview");
+        }
+
+        /// <summary>
+        /// 该接口用于查询用户快照使用概览，包括快照总容量、计费容量等信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSnapshotOverviewRequest"/></param>
+        /// <returns><see cref="DescribeSnapshotOverviewResponse"/></returns>
+        public DescribeSnapshotOverviewResponse DescribeSnapshotOverviewSync(DescribeSnapshotOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeSnapshotOverviewResponse>(req, "DescribeSnapshotOverview")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
