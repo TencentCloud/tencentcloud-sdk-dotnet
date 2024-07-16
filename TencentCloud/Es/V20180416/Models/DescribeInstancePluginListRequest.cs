@@ -43,7 +43,7 @@ namespace TencentCloud.Es.V20180416.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 排序字段<li>1：插件名 pluginName
+        /// 排序字段<li>1：插件名 pluginName</li>
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }

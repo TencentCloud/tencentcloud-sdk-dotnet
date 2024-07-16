@@ -31,16 +31,16 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// `HAVIP`所在子网`ID`。
-        /// </summary>
-        [JsonProperty("SubnetId")]
-        public string SubnetId{ get; set; }
-
-        /// <summary>
         /// `HAVIP`名称。
         /// </summary>
         [JsonProperty("HaVipName")]
         public string HaVipName{ get; set; }
+
+        /// <summary>
+        /// `HAVIP`所在子网`ID`。
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
 
         /// <summary>
         /// 指定虚拟IP地址，必须在`VPC`网段内且未被占用。不指定则自动分配。
@@ -54,6 +54,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("NetworkInterfaceId")]
         public string NetworkInterfaceId{ get; set; }
 
+        /// <summary>
+        /// 是否开启`HAVIP`漂移时子机或网卡范围的校验。默认不开启。
+        /// </summary>
+        [JsonProperty("CheckAssociate")]
+        public bool? CheckAssociate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,10 +67,11 @@ namespace TencentCloud.Vpc.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
-            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "HaVipName", this.HaVipName);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
+            this.SetParamSimple(map, prefix + "CheckAssociate", this.CheckAssociate);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 按照一个或者多个实例ID查询。实例ID形如：prom-xxxxxxxx。请求的实例的上限为100。
+        /// 按照一个或者多个实例ID查询。实例ID形如：prom-xxxxxxxx。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

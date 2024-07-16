@@ -194,6 +194,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [System.Obsolete]
         public string RecordLang{ get; set; }
 
+        /// <summary>
+        /// 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
+        /// </summary>
+        [JsonProperty("RecordStream")]
+        public ulong? RecordStream{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -228,6 +234,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "RecordBackground", this.RecordBackground);
             this.SetParamSimple(map, prefix + "RecordScene", this.RecordScene);
             this.SetParamSimple(map, prefix + "RecordLang", this.RecordLang);
+            this.SetParamSimple(map, prefix + "RecordStream", this.RecordStream);
         }
     }
 }

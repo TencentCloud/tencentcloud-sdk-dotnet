@@ -31,13 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string[] HaVipIds{ get; set; }
 
         /// <summary>
-        /// 过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。
-        /// <li>havip-id - String - `HAVIP`唯一`ID`，形如：`havip-9o233uri`。</li>
-        /// <li>havip-name - String - `HAVIP`名称。</li>
-        /// <li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li>
-        /// <li>subnet-id - String - `HAVIP`所在子网`ID`。</li>
-        /// <li>vip - String - `HAVIP`的地址`VIP`。</li>
-        /// <li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li>
+        /// 过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。<li>havip-id - String - `HAVIP`唯一`ID`，形如：`havip-9o233uri`。</li><li>havip-name - String - `HAVIP`名称。</li><li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li><li>subnet-id - String - `HAVIP`所在子网`ID`。</li><li>vip - String - `HAVIP`的地址`VIP`。</li><li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li><li>havip-association.instance-id - String - `HAVIP`绑定的子机或网卡。</li><li>havip-association.instance-type - String - `HAVIP`绑定的类型，取值:CVM, ENI。</li><li>check-associate - Bool - 是否开启HaVip飘移时校验绑定的子机或网卡。</li><li>cdc-id - String - CDC实例ID。</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

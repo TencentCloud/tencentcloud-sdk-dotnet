@@ -60,6 +60,12 @@ namespace TencentCloud.Cdc.V20201214.Models
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
 
+        /// <summary>
+        /// 订单类型列表
+        /// </summary>
+        [JsonProperty("OrderTypes")]
+        public string[] OrderTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Cdc.V20201214.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
+            this.SetParamArraySimple(map, prefix + "OrderTypes.", this.OrderTypes);
         }
     }
 }

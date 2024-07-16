@@ -32,6 +32,8 @@ namespace TencentCloud.Monitor.V20180724.Models
 
         /// <summary>
         /// Agent ID 列表，例如：agent-abcd1234，可在控制台 Agent 管理中获取
+        /// 
+        /// 示例值：["agent-abcd1234"]
         /// </summary>
         [JsonProperty("AgentIds")]
         public string[] AgentIds{ get; set; }

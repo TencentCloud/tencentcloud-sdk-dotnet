@@ -156,6 +156,20 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
+        /// <summary>
+        /// 法定代表人身份证号。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LegalPersonId")]
+        public string LegalPersonId{ get; set; }
+
+        /// <summary>
+        /// 法定代表人身份证。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LegalPersonIdCard")]
+        public string LegalPersonIdCard{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +198,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "ServiceEndDate", this.ServiceEndDate);
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamSimple(map, prefix + "LegalPersonId", this.LegalPersonId);
+            this.SetParamSimple(map, prefix + "LegalPersonIdCard", this.LegalPersonIdCard);
         }
     }
 }

@@ -25,10 +25,22 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 引擎类型：SQL、SparkBatch、StandardSpark、StandardPresto
+        /// 引擎类型：SparkSQL、PrestoSQL、SparkBatch、StandardSpark、StandardPresto
         /// </summary>
         [JsonProperty("EngineType")]
         public string EngineType{ get; set; }
+
+        /// <summary>
+        /// 排序字段: InsertTime（插入时间，默认），UpdateTime（更新时间）
+        /// </summary>
+        [JsonProperty("Sort")]
+        public string Sort{ get; set; }
+
+        /// <summary>
+        /// 排序方式：false（降序，默认），true（升序）
+        /// </summary>
+        [JsonProperty("Asc")]
+        public bool? Asc{ get; set; }
 
 
         /// <summary>
@@ -37,6 +49,8 @@ namespace TencentCloud.Dlc.V20210125.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
+            this.SetParamSimple(map, prefix + "Sort", this.Sort);
+            this.SetParamSimple(map, prefix + "Asc", this.Asc);
         }
     }
 }

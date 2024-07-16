@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// 地域
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }

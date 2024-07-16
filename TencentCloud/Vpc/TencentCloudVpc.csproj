@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1048</VersionPrefix>
+    <VersionPrefix>3.0.1049</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -608,6 +608,7 @@
     <Compile Include="V20170312\Models\HaVip.cs" />
     <Compile Include="V20170312\Models\HaVipAssociateAddressIpRequest.cs" />
     <Compile Include="V20170312\Models\HaVipAssociateAddressIpResponse.cs" />
+    <Compile Include="V20170312\Models\HaVipAssociation.cs" />
     <Compile Include="V20170312\Models\HaVipDisassociateAddressIpRequest.cs" />
     <Compile Include="V20170312\Models\HaVipDisassociateAddressIpResponse.cs" />
     <Compile Include="V20170312\Models\HealthCheckConfig.cs" />

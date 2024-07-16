@@ -182,7 +182,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public long? EndDelayTime{ get; set; }
 
         /// <summary>
-        /// 直播类型：0 常规（默认）1 伪直播
+        /// 直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播
         /// </summary>
         [JsonProperty("LiveType")]
         public ulong? LiveType{ get; set; }

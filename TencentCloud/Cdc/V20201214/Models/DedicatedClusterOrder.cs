@@ -153,6 +153,55 @@ namespace TencentCloud.Cdc.V20201214.Models
         [JsonProperty("OrderType")]
         public string OrderType{ get; set; }
 
+        /// <summary>
+        /// 验收状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CheckStatus")]
+        public string CheckStatus{ get; set; }
+
+        /// <summary>
+        /// 交付预期时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeliverExpectTime")]
+        public string DeliverExpectTime{ get; set; }
+
+        /// <summary>
+        /// 交付实际完成时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeliverFinishTime")]
+        public string DeliverFinishTime{ get; set; }
+
+        /// <summary>
+        /// 验收预期时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CheckExpectTime")]
+        public string CheckExpectTime{ get; set; }
+
+        /// <summary>
+        /// 验收实际完成时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CheckFinishTime")]
+        public string CheckFinishTime{ get; set; }
+
+        /// <summary>
+        /// 订单SLA
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OrderSLA")]
+        public string OrderSLA{ get; set; }
+
+        /// <summary>
+        /// 订单支付计划
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OrderPayPlan")]
+        public string OrderPayPlan{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -179,6 +228,13 @@ namespace TencentCloud.Cdc.V20201214.Models
             this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamSimple(map, prefix + "OrderType", this.OrderType);
+            this.SetParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
+            this.SetParamSimple(map, prefix + "DeliverExpectTime", this.DeliverExpectTime);
+            this.SetParamSimple(map, prefix + "DeliverFinishTime", this.DeliverFinishTime);
+            this.SetParamSimple(map, prefix + "CheckExpectTime", this.CheckExpectTime);
+            this.SetParamSimple(map, prefix + "CheckFinishTime", this.CheckFinishTime);
+            this.SetParamSimple(map, prefix + "OrderSLA", this.OrderSLA);
+            this.SetParamSimple(map, prefix + "OrderPayPlan", this.OrderPayPlan);
         }
     }
 }

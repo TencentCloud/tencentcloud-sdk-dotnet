@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1048";
+       private const string sdkVersion = "SDK_NET_3.0.1049";
 
         /// <summary>
         /// Client constructor.
@@ -2074,6 +2074,27 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 获取Topic生产详情列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQTopicStatsRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQTopicStatsResponse"/></returns>
+        public Task<DescribeRocketMQTopicStatsResponse> DescribeRocketMQTopicStats(DescribeRocketMQTopicStatsRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQTopicStatsResponse>(req, "DescribeRocketMQTopicStats");
+        }
+
+        /// <summary>
+        /// 获取Topic生产详情列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQTopicStatsRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQTopicStatsResponse"/></returns>
+        public DescribeRocketMQTopicStatsResponse DescribeRocketMQTopicStatsSync(DescribeRocketMQTopicStatsRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQTopicStatsResponse>(req, "DescribeRocketMQTopicStats")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取RocketMQ主题列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQTopicsRequest"/></param>
@@ -2091,6 +2112,27 @@ namespace TencentCloud.Tdmq.V20200217
         public DescribeRocketMQTopicsResponse DescribeRocketMQTopicsSync(DescribeRocketMQTopicsRequest req)
         {
             return InternalRequestAsync<DescribeRocketMQTopicsResponse>(req, "DescribeRocketMQTopics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取指定消费组下订阅的主题列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQTopicsByGroupRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQTopicsByGroupResponse"/></returns>
+        public Task<DescribeRocketMQTopicsByGroupResponse> DescribeRocketMQTopicsByGroup(DescribeRocketMQTopicsByGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQTopicsByGroupResponse>(req, "DescribeRocketMQTopicsByGroup");
+        }
+
+        /// <summary>
+        /// 获取指定消费组下订阅的主题列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQTopicsByGroupRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQTopicsByGroupResponse"/></returns>
+        public DescribeRocketMQTopicsByGroupResponse DescribeRocketMQTopicsByGroupSync(DescribeRocketMQTopicsByGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQTopicsByGroupResponse>(req, "DescribeRocketMQTopicsByGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2574,6 +2616,27 @@ namespace TencentCloud.Tdmq.V20200217
         public ModifyRocketMQGroupResponse ModifyRocketMQGroupSync(ModifyRocketMQGroupRequest req)
         {
             return InternalRequestAsync<ModifyRocketMQGroupResponse>(req, "ModifyRocketMQGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改RocketMQ专享实例
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRocketMQInstanceRequest"/></param>
+        /// <returns><see cref="ModifyRocketMQInstanceResponse"/></returns>
+        public Task<ModifyRocketMQInstanceResponse> ModifyRocketMQInstance(ModifyRocketMQInstanceRequest req)
+        {
+            return InternalRequestAsync<ModifyRocketMQInstanceResponse>(req, "ModifyRocketMQInstance");
+        }
+
+        /// <summary>
+        /// 修改RocketMQ专享实例
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRocketMQInstanceRequest"/></param>
+        /// <returns><see cref="ModifyRocketMQInstanceResponse"/></returns>
+        public ModifyRocketMQInstanceResponse ModifyRocketMQInstanceSync(ModifyRocketMQInstanceRequest req)
+        {
+            return InternalRequestAsync<ModifyRocketMQInstanceResponse>(req, "ModifyRocketMQInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

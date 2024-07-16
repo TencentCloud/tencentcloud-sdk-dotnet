@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1048";
+       private const string sdkVersion = "SDK_NET_3.0.1049";
 
         /// <summary>
         /// Client constructor.
@@ -881,7 +881,7 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// 获取推荐问题
+        /// 获取聊天历史请求
         /// </summary>
         /// <param name="req"><see cref="GetMsgRecordRequest"/></param>
         /// <returns><see cref="GetMsgRecordResponse"/></returns>
@@ -891,7 +891,7 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// 获取推荐问题
+        /// 获取聊天历史请求
         /// </summary>
         /// <param name="req"><see cref="GetMsgRecordRequest"/></param>
         /// <returns><see cref="GetMsgRecordResponse"/></returns>

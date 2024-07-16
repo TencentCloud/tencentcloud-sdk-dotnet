@@ -37,7 +37,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 存储时长（取值为 15、30、45。此参数不适用于包年包月实例）
+        /// 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
         /// </summary>
         [JsonProperty("DataRetentionTime")]
         public long? DataRetentionTime{ get; set; }

@@ -92,6 +92,27 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Business")]
         public string Business{ get; set; }
 
+        /// <summary>
+        /// `HAVIP`的飘移范围。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HaVipAssociationSet")]
+        public HaVipAssociation[] HaVipAssociationSet{ get; set; }
+
+        /// <summary>
+        /// 是否开启`HAVIP`的飘移范围校验。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CheckAssociate")]
+        public bool? CheckAssociate{ get; set; }
+
+        /// <summary>
+        /// HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FlushedTime")]
+        public string FlushedTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +130,9 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "Business", this.Business);
+            this.SetParamArrayObj(map, prefix + "HaVipAssociationSet.", this.HaVipAssociationSet);
+            this.SetParamSimple(map, prefix + "CheckAssociate", this.CheckAssociate);
+            this.SetParamSimple(map, prefix + "FlushedTime", this.FlushedTime);
         }
     }
 }

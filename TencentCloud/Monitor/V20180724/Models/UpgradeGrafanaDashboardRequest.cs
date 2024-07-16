@@ -31,33 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Prometheus 集成项 Code，升级对应的 Dashboard，取值如下：
-        /// <li>qcloud</li>
-        /// <li>cvm_process_exporter</li>
-        /// <li>cvm_node_exporter</li>
-        /// <li>cvm</li>
-        /// <li>kubernetes</li>
-        /// <li>cdwch</li>
-        /// <li>rocketmq</li>
-        /// <li>spring_mvc</li>
-        /// <li>mysql</li>
-        /// <li>go</li>
-        /// <li>redis</li>
-        /// <li>jvm</li>
-        /// <li>pgsql</li>
-        /// <li>mongo</li>
-        /// <li>kafka</li>
-        /// <li>es</li>
-        /// <li>flink</li>
-        /// <li>blackbox</li>
-        /// <li>consule</li>
-        /// <li>memcached</li>
-        /// <li>zk</li>
-        /// <li>tps</li>
-        /// <li>istio</li>
-        /// <li>etcd</li>
-        /// <li>pts</li>
-        /// <li>kong</li>
+        /// Prometheus 集成项 Code，升级对应的 Dashboard，取值如下：<li>qcloud</li><li>cvm_process_exporter</li><li>cvm_node_exporter</li><li>cvm</li><li>tps</li><li>nginx-ingress</li><li>nvidia-gpu</li><li>cdwch</li><li>emr</li><li>apache</li><li>rocketmq</li><li>rabbitmq</li><li>spring_mvc</li><li>mysql</li><li>mssql</li><li>go</li><li>redis</li><li>jvm</li><li>pgsql</li><li>ceph</li><li>docker</li><li>nginx</li><li>oracledb</li><li>mongo</li><li>kafka</li><li>es</li><li>flink</li><li>blackbox</li><li>consule</li><li>memcached</li><li>zk</li><li>tps</li><li>istio</li><li>etcd</li><li>pts</li><li>kong</li>
         /// </summary>
         [JsonProperty("IntegrationCodes")]
         public string[] IntegrationCodes{ get; set; }
