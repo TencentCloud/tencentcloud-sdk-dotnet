@@ -42,7 +42,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 签署方经办人的姓名。
         /// 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
         /// 
-        /// 注：`请确保和合同中填入的一致`，`除动态签署人场景外，此参数必填`
+        /// 注：`请确保和合同中填入的一致`，`除动态签署人或子客员工经办人场景外，此参数必填`
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -51,7 +51,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
         /// 请确认手机号所有方为此业务通知方。
         /// 
-        /// 注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`，`除动态签署人场景外，此参数必填`
+        /// 注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`，`除动态签署人或子客员工经办人场景外，此参数必填`
         /// </summary>
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }
@@ -103,14 +103,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string[] FlowIds{ get; set; }
 
         /// <summary>
-        /// 目标签署人的企业名称，签署人如果是企业员工身份，需要传此参数。
+        /// SaaS平台企业员工签署方的企业名称。目标签署人如果为saas应用企业员工身份，此参数必填。
         /// 
         /// 注：
         /// <ul>
         /// <li>请确认该名称与企业营业执照中注册的名称一致。</li>
         /// <li>如果名称中包含英文括号()，请使用中文括号（）代替。</li>
         /// <li>请确保此企业已完成腾讯电子签企业认证。</li>
-        /// <li>暂时仅支持给`自建应用集成企业` 生成员工批签链接，不支持子客企业。</li>
+        /// <li>**若为子客企业员工，请使用OpenId，OrganizationOpenId参数，此参数留空即可**</li>
         /// </ul>
         /// </summary>
         [JsonProperty("OrganizationName")]
@@ -132,6 +132,24 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("FlowBatchUrlInfo")]
         public FlowBatchUrlInfo FlowBatchUrlInfo{ get; set; }
 
+        /// <summary>
+        /// 第三方平台子客企业员工的标识OpenId，批签合同经办人为子客员工的情况下为必填。
+        /// 
+        /// 注：
+        /// <ul>
+        /// <li>传入的OpenId对应员工在此子客企业下必须已经实名</li>
+        /// <li>传递了此参数可以无需传递Name，Mobile，IdCardNumber，IdCardType参数。系统会根据员工OpenId自动拉取实名信息。</li>
+        /// </ul>
+        /// </summary>
+        [JsonProperty("OpenId")]
+        public string OpenId{ get; set; }
+
+        /// <summary>
+        /// 第三方平台子客企业的企业的标识, 即OrganizationOpenId，批签合同经办人为子客企业员工是为必填。
+        /// </summary>
+        [JsonProperty("OrganizationOpenId")]
+        public string OrganizationOpenId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +167,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
             this.SetParamSimple(map, prefix + "JumpToDetail", this.JumpToDetail);
             this.SetParamObj(map, prefix + "FlowBatchUrlInfo.", this.FlowBatchUrlInfo);
+            this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
+            this.SetParamSimple(map, prefix + "OrganizationOpenId", this.OrganizationOpenId);
         }
     }
 }

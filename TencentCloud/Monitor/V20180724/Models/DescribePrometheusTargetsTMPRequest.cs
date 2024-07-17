@@ -50,7 +50,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// targets偏移量，默认为0
+        /// targets分页偏移量，默认为0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

@@ -31,13 +31,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 用于分页
+        /// 偏移量，默认为0。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 用于分页
+        /// 返回数量，默认为20，最大值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

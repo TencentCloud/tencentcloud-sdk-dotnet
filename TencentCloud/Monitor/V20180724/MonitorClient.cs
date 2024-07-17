@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1049";
+       private const string sdkVersion = "SDK_NET_3.0.1050";
 
         /// <summary>
         /// Client constructor.
@@ -2718,7 +2718,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 修改prometheus配置，如果配置项不存在，则会新增
+        /// 修改prometheus采集配置
         /// </summary>
         /// <param name="req"><see cref="ModifyPrometheusConfigRequest"/></param>
         /// <returns><see cref="ModifyPrometheusConfigResponse"/></returns>
@@ -2728,7 +2728,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 修改prometheus配置，如果配置项不存在，则会新增
+        /// 修改prometheus采集配置
         /// </summary>
         /// <param name="req"><see cref="ModifyPrometheusConfigRequest"/></param>
         /// <returns><see cref="ModifyPrometheusConfigResponse"/></returns>

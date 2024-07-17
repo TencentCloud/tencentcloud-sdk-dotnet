@@ -36,6 +36,18 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("FieldResultId")]
         public long? FieldResultId{ get; set; }
 
+        /// <summary>
+        /// 排序方式
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
+        /// <summary>
+        /// 排序字段
+        /// </summary>
+        [JsonProperty("OrderField")]
+        public string OrderField{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Dsgc.V20190723.Models
         {
             this.SetParamSimple(map, prefix + "DspaId", this.DspaId);
             this.SetParamSimple(map, prefix + "FieldResultId", this.FieldResultId);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
         }
     }
 }

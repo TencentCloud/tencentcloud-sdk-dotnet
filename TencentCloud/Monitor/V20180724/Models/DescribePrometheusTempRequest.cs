@@ -35,7 +35,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 分页偏移
+        /// 分页偏移量，默认为0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

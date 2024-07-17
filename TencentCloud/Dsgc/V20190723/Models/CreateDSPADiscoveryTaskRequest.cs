@@ -110,6 +110,24 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("TimingStartTime")]
         public string TimingStartTime{ get; set; }
 
+        /// <summary>
+        /// random-随机，asc生序，desc降序
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
+        /// <summary>
+        /// 抽样的条数，范围30-1000
+        /// </summary>
+        [JsonProperty("Rows")]
+        public long? Rows{ get; set; }
+
+        /// <summary>
+        /// 抽样的排序字段
+        /// </summary>
+        [JsonProperty("GlobalOrderField")]
+        public string GlobalOrderField{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +147,9 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "Condition", this.Condition);
             this.SetParamArraySimple(map, prefix + "ComplianceGroupIds.", this.ComplianceGroupIds);
             this.SetParamSimple(map, prefix + "TimingStartTime", this.TimingStartTime);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "Rows", this.Rows);
+            this.SetParamSimple(map, prefix + "GlobalOrderField", this.GlobalOrderField);
         }
     }
 }
