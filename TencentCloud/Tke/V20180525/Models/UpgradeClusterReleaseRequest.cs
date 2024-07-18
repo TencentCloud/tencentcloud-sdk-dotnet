@@ -55,7 +55,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public ReleaseValues Values{ get; set; }
 
         /// <summary>
-        /// 制品来源，范围：tke-market 或 other默认值：tke-market。
+        /// 制品来源，范围：tke-market 或 other 默认值：tke-market，示例值：tke-market
         /// </summary>
         [JsonProperty("ChartFrom")]
         public string ChartFrom{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// 制品命名空间
+        /// 制品命名空间，ChartFrom为tke-market时ChartNamespace不为空，值为DescribeProducts接口反馈的Namespace
         /// </summary>
         [JsonProperty("ChartNamespace")]
         public string ChartNamespace{ get; set; }

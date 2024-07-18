@@ -35,6 +35,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// -3:引擎服务异常
         /// -4:姓名校验不通过
         /// -5:手机号码不合法
+        /// -6: 认证次数超过当日限制，请次日重试
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Billing.V20180709
 
        private const string endpoint = "billing.tencentcloudapi.com";
        private const string version = "2018-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1050";
+       private const string sdkVersion = "SDK_NET_3.0.1051";
 
         /// <summary>
         /// Client constructor.
@@ -609,6 +609,9 @@ namespace TencentCloud.Billing.V20180709
 
         /// <summary>
         /// 查询消耗明细
+        /// 
+        /// 注意事项：
+        /// 1. 对于消耗明细数据量级很大（例如每月消耗明细量级超过100w）的客户，通过 API 调用明细数据会有超时风险，建议您开通消耗账单数据存储功能，通过存储桶中获取账单文件进行分析。[账单存储至COS桶](https://cloud.tencent.com/document/product/555/61275)
         /// </summary>
         /// <param name="req"><see cref="DescribeCostDetailRequest"/></param>
         /// <returns><see cref="DescribeCostDetailResponse"/></returns>
@@ -619,6 +622,9 @@ namespace TencentCloud.Billing.V20180709
 
         /// <summary>
         /// 查询消耗明细
+        /// 
+        /// 注意事项：
+        /// 1. 对于消耗明细数据量级很大（例如每月消耗明细量级超过100w）的客户，通过 API 调用明细数据会有超时风险，建议您开通消耗账单数据存储功能，通过存储桶中获取账单文件进行分析。[账单存储至COS桶](https://cloud.tencent.com/document/product/555/61275)
         /// </summary>
         /// <param name="req"><see cref="DescribeCostDetailRequest"/></param>
         /// <returns><see cref="DescribeCostDetailResponse"/></returns>

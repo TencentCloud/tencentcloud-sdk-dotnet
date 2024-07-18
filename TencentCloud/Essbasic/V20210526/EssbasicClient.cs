@@ -28,7 +28,7 @@ namespace TencentCloud.Essbasic.V20210526
 
        private const string endpoint = "essbasic.tencentcloudapi.com";
        private const string version = "2021-05-26";
-       private const string sdkVersion = "SDK_NET_3.0.1050";
+       private const string sdkVersion = "SDK_NET_3.0.1051";
 
         /// <summary>
         /// Client constructor.
@@ -2084,7 +2084,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// <tr>
         /// <td>企业已激活</td>
         /// <td>员工未认证</td>
-        /// <td>进入员认证并加入企业流程</td>
+        /// <td>进入员工认证并加入企业流程</td>
         /// </tr>
         /// <tr>
         /// <td>企业已激活</td>
@@ -2133,7 +2133,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// <tr>
         /// <td>企业已激活</td>
         /// <td>员工未认证</td>
-        /// <td>进入员认证并加入企业流程</td>
+        /// <td>进入员工认证并加入企业流程</td>
         /// </tr>
         /// <tr>
         /// <td>企业已激活</td>

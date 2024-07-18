@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1050";
+       private const string sdkVersion = "SDK_NET_3.0.1051";
 
         /// <summary>
         /// Client constructor.
@@ -1516,9 +1516,8 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 将一个在线媒体流推到TRTC房间。
-        /// 使用此接口的前提条件：需要购买 [尊享版或旗舰版套餐包](https://cloud.tencent.com/document/product/647/85386
-        /// )
+        /// 将一个在线媒体流推到TRTC房间，更多功能说明见[输入媒体流进房](https://cloud.tencent.com/document/product/647/102957#50940aad-d90f-4473-9f46-d5dd46917653)。
+        /// 使用输入在线媒体流功能需先订阅 [尊享版或旗舰版套餐包](https://cloud.tencent.com/document/product/647/85386) 解锁能力位。
         /// </summary>
         /// <param name="req"><see cref="StartStreamIngestRequest"/></param>
         /// <returns><see cref="StartStreamIngestResponse"/></returns>
@@ -1528,9 +1527,8 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 将一个在线媒体流推到TRTC房间。
-        /// 使用此接口的前提条件：需要购买 [尊享版或旗舰版套餐包](https://cloud.tencent.com/document/product/647/85386
-        /// )
+        /// 将一个在线媒体流推到TRTC房间，更多功能说明见[输入媒体流进房](https://cloud.tencent.com/document/product/647/102957#50940aad-d90f-4473-9f46-d5dd46917653)。
+        /// 使用输入在线媒体流功能需先订阅 [尊享版或旗舰版套餐包](https://cloud.tencent.com/document/product/647/85386) 解锁能力位。
         /// </summary>
         /// <param name="req"><see cref="StartStreamIngestRequest"/></param>
         /// <returns><see cref="StartStreamIngestResponse"/></returns>

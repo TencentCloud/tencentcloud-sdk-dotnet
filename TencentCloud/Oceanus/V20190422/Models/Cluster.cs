@@ -322,6 +322,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("ResourceType")]
         public long? ResourceType{ get; set; }
 
+        /// <summary>
+        /// 集群类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BillingResourceMode")]
+        public string BillingResourceMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -373,6 +380,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamObj(map, prefix + "SubEks.", this.SubEks);
             this.SetParamSimple(map, prefix + "AgentSerialId", this.AgentSerialId);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamSimple(map, prefix + "BillingResourceMode", this.BillingResourceMode);
         }
     }
 }

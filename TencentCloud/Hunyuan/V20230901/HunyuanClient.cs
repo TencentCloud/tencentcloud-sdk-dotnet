@@ -28,7 +28,7 @@ namespace TencentCloud.Hunyuan.V20230901
 
        private const string endpoint = "hunyuan.tencentcloudapi.com";
        private const string version = "2023-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1050";
+       private const string sdkVersion = "SDK_NET_3.0.1051";
 
         /// <summary>
         /// Client constructor.
@@ -85,7 +85,7 @@ namespace TencentCloud.Hunyuan.V20230901
         }
 
         /// <summary>
-        /// 腾讯混元 Embedding 接口，可以将文本转化为高质量的向量数据。
+        /// 腾讯混元 Embedding 接口，可以将文本转化为高质量的向量数据。向量维度为1024维。
         /// </summary>
         /// <param name="req"><see cref="GetEmbeddingRequest"/></param>
         /// <returns><see cref="GetEmbeddingResponse"/></returns>
@@ -95,7 +95,7 @@ namespace TencentCloud.Hunyuan.V20230901
         }
 
         /// <summary>
-        /// 腾讯混元 Embedding 接口，可以将文本转化为高质量的向量数据。
+        /// 腾讯混元 Embedding 接口，可以将文本转化为高质量的向量数据。向量维度为1024维。
         /// </summary>
         /// <param name="req"><see cref="GetEmbeddingRequest"/></param>
         /// <returns><see cref="GetEmbeddingResponse"/></returns>

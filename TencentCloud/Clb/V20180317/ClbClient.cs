@@ -28,7 +28,7 @@ namespace TencentCloud.Clb.V20180317
 
        private const string endpoint = "clb.tencentcloudapi.com";
        private const string version = "2018-03-17";
-       private const string sdkVersion = "SDK_NET_3.0.1050";
+       private const string sdkVersion = "SDK_NET_3.0.1051";
 
         /// <summary>
         /// Client constructor.
@@ -1549,6 +1549,7 @@ namespace TencentCloud.Clb.V20180317
 
         /// <summary>
         /// 修改负载均衡实例的属性。支持修改负载均衡实例的名称、设置负载均衡的跨域属性。
+        /// 注意：非带宽上移用户的 CLB 实例必须加入带宽包才可以设置跨域属性。
         /// 本接口为异步接口，接口返回成功后，需以得到的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
         /// </summary>
         /// <param name="req"><see cref="ModifyLoadBalancerAttributesRequest"/></param>
@@ -1560,6 +1561,7 @@ namespace TencentCloud.Clb.V20180317
 
         /// <summary>
         /// 修改负载均衡实例的属性。支持修改负载均衡实例的名称、设置负载均衡的跨域属性。
+        /// 注意：非带宽上移用户的 CLB 实例必须加入带宽包才可以设置跨域属性。
         /// 本接口为异步接口，接口返回成功后，需以得到的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
         /// </summary>
         /// <param name="req"><see cref="ModifyLoadBalancerAttributesRequest"/></param>

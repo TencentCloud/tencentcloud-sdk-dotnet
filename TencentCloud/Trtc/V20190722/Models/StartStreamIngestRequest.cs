@@ -58,7 +58,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string UserSig{ get; set; }
 
         /// <summary>
-        /// 源流URL。历史原因本字段【必填】。如果是视频流，分辨率请保持不变。
+        /// 源流URL【必填】。如果是视频流，分辨率请保持不变。
         /// </summary>
         [JsonProperty("StreamUrl")]
         public string StreamUrl{ get; set; }

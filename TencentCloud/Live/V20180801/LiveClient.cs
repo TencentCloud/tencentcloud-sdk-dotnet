@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1050";
+       private const string sdkVersion = "SDK_NET_3.0.1051";
 
         /// <summary>
         /// Client constructor.
@@ -623,7 +623,7 @@ namespace TencentCloud.Live.V20180801
         /// <summary>
         /// 创建一个在指定时间启动、结束的录制任务，并使用指定录制模板ID对应的配置进行录制。
         /// - 使用前提
-        /// 1. 录制文件存放于点播平台，所以用户如需使用录制功能，需首先自行开通点播服务。
+        /// 1. 录制文件存放于点播平台或对象存储内，所以用户如需使用录制功能，需首先自行开通点播服务或对象存储服务。
         /// 2. 录制文件存放后相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，具体请参考[对应文档](https://cloud.tencent.com/document/product/266/2837)。
         /// - 注意事项
         /// 1. 断流会结束当前录制并生成录制文件。在结束时间到达之前任务仍然有效，期间只要正常推流都会正常录制，与是否多次推、断流无关。
@@ -642,7 +642,7 @@ namespace TencentCloud.Live.V20180801
         /// <summary>
         /// 创建一个在指定时间启动、结束的录制任务，并使用指定录制模板ID对应的配置进行录制。
         /// - 使用前提
-        /// 1. 录制文件存放于点播平台，所以用户如需使用录制功能，需首先自行开通点播服务。
+        /// 1. 录制文件存放于点播平台或对象存储内，所以用户如需使用录制功能，需首先自行开通点播服务或对象存储服务。
         /// 2. 录制文件存放后相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，具体请参考[对应文档](https://cloud.tencent.com/document/product/266/2837)。
         /// - 注意事项
         /// 1. 断流会结束当前录制并生成录制文件。在结束时间到达之前任务仍然有效，期间只要正常推流都会正常录制，与是否多次推、断流无关。
