@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1051";
+       private const string sdkVersion = "SDK_NET_3.0.1052";
 
         /// <summary>
         /// Client constructor.
@@ -1732,6 +1732,27 @@ namespace TencentCloud.Ckafka.V20190819
         public ModifyPasswordResponse ModifyPasswordSync(ModifyPasswordRequest req)
         {
             return InternalRequestAsync<ModifyPasswordResponse>(req, "ModifyPassword")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设置自动化运维属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoutineMaintenanceTaskRequest"/></param>
+        /// <returns><see cref="ModifyRoutineMaintenanceTaskResponse"/></returns>
+        public Task<ModifyRoutineMaintenanceTaskResponse> ModifyRoutineMaintenanceTask(ModifyRoutineMaintenanceTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyRoutineMaintenanceTaskResponse>(req, "ModifyRoutineMaintenanceTask");
+        }
+
+        /// <summary>
+        /// 设置自动化运维属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoutineMaintenanceTaskRequest"/></param>
+        /// <returns><see cref="ModifyRoutineMaintenanceTaskResponse"/></returns>
+        public ModifyRoutineMaintenanceTaskResponse ModifyRoutineMaintenanceTaskSync(ModifyRoutineMaintenanceTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyRoutineMaintenanceTaskResponse>(req, "ModifyRoutineMaintenanceTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

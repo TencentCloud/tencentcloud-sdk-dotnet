@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FEBD4BA8-D71D-307D-97C6-CC6B06586449}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1051</VersionPrefix>
+    <VersionPrefix>3.0.1052</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -245,6 +245,8 @@
     <Compile Include="V20190107\Models\ExportInstanceErrorLogsResponse.cs" />
     <Compile Include="V20190107\Models\ExportInstanceSlowQueriesRequest.cs" />
     <Compile Include="V20190107\Models\ExportInstanceSlowQueriesResponse.cs" />
+    <Compile Include="V20190107\Models\ExportResourcePackageDeductDetailsRequest.cs" />
+    <Compile Include="V20190107\Models\ExportResourcePackageDeductDetailsResponse.cs" />
     <Compile Include="V20190107\Models\GrantAccountPrivilegesRequest.cs" />
     <Compile Include="V20190107\Models\GrantAccountPrivilegesResponse.cs" />
     <Compile Include="V20190107\Models\InputAccount.cs" />
@@ -323,6 +325,8 @@
     <Compile Include="V20190107\Models\ModifyResourcePackageClustersResponse.cs" />
     <Compile Include="V20190107\Models\ModifyResourcePackageNameRequest.cs" />
     <Compile Include="V20190107\Models\ModifyResourcePackageNameResponse.cs" />
+    <Compile Include="V20190107\Models\ModifyResourcePackagesDeductionPriorityRequest.cs" />
+    <Compile Include="V20190107\Models\ModifyResourcePackagesDeductionPriorityResponse.cs" />
     <Compile Include="V20190107\Models\ModifyVipVportRequest.cs" />
     <Compile Include="V20190107\Models\ModifyVipVportResponse.cs" />
     <Compile Include="V20190107\Models\Module.cs" />
@@ -346,6 +350,7 @@
     <Compile Include="V20190107\Models\OpenWanResponse.cs" />
     <Compile Include="V20190107\Models\Package.cs" />
     <Compile Include="V20190107\Models\PackageDetail.cs" />
+    <Compile Include="V20190107\Models\PackagePriority.cs" />
     <Compile Include="V20190107\Models\ParamDetail.cs" />
     <Compile Include="V20190107\Models\ParamInfo.cs" />
     <Compile Include="V20190107\Models\ParamItem.cs" />

@@ -28,7 +28,7 @@ namespace TencentCloud.Mna.V20210119
 
        private const string endpoint = "mna.tencentcloudapi.com";
        private const string version = "2021-01-19";
-       private const string sdkVersion = "SDK_NET_3.0.1051";
+       private const string sdkVersion = "SDK_NET_3.0.1052";
 
         /// <summary>
         /// Client constructor.
@@ -138,6 +138,27 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 新建互通规则
+        /// </summary>
+        /// <param name="req"><see cref="AddL3ConnRequest"/></param>
+        /// <returns><see cref="AddL3ConnResponse"/></returns>
+        public Task<AddL3ConnResponse> AddL3Conn(AddL3ConnRequest req)
+        {
+            return InternalRequestAsync<AddL3ConnResponse>(req, "AddL3Conn");
+        }
+
+        /// <summary>
+        /// 新建互通规则
+        /// </summary>
+        /// <param name="req"><see cref="AddL3ConnRequest"/></param>
+        /// <returns><see cref="AddL3ConnResponse"/></returns>
+        public AddL3ConnResponse AddL3ConnSync(AddL3ConnRequest req)
+        {
+            return InternalRequestAsync<AddL3ConnResponse>(req, "AddL3Conn")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 通过此接口设置和更新预置密钥
         /// </summary>
         /// <param name="req"><see cref="CreateEncryptedKeyRequest"/></param>
@@ -218,6 +239,27 @@ namespace TencentCloud.Mna.V20210119
         public DeleteGroupResponse DeleteGroupSync(DeleteGroupRequest req)
         {
             return InternalRequestAsync<DeleteGroupResponse>(req, "DeleteGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除互通规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteL3ConnRequest"/></param>
+        /// <returns><see cref="DeleteL3ConnResponse"/></returns>
+        public Task<DeleteL3ConnResponse> DeleteL3Conn(DeleteL3ConnRequest req)
+        {
+            return InternalRequestAsync<DeleteL3ConnResponse>(req, "DeleteL3Conn");
+        }
+
+        /// <summary>
+        /// 删除互通规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteL3ConnRequest"/></param>
+        /// <returns><see cref="DeleteL3ConnResponse"/></returns>
+        public DeleteL3ConnResponse DeleteL3ConnSync(DeleteL3ConnRequest req)
+        {
+            return InternalRequestAsync<DeleteL3ConnResponse>(req, "DeleteL3Conn")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -495,6 +537,27 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 获取互通规则列表
+        /// </summary>
+        /// <param name="req"><see cref="GetL3ConnListRequest"/></param>
+        /// <returns><see cref="GetL3ConnListResponse"/></returns>
+        public Task<GetL3ConnListResponse> GetL3ConnList(GetL3ConnListRequest req)
+        {
+            return InternalRequestAsync<GetL3ConnListResponse>(req, "GetL3ConnList");
+        }
+
+        /// <summary>
+        /// 获取互通规则列表
+        /// </summary>
+        /// <param name="req"><see cref="GetL3ConnListRequest"/></param>
+        /// <returns><see cref="GetL3ConnListResponse"/></returns>
+        public GetL3ConnListResponse GetL3ConnListSync(GetL3ConnListRequest req)
+        {
+            return InternalRequestAsync<GetL3ConnListResponse>(req, "GetL3ConnList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 批量获取设备流量统计曲线
         /// </summary>
         /// <param name="req"><see cref="GetMultiFlowStatisticRequest"/></param>
@@ -764,6 +827,69 @@ namespace TencentCloud.Mna.V20210119
         public UpdateHardwareResponse UpdateHardwareSync(UpdateHardwareRequest req)
         {
             return InternalRequestAsync<UpdateHardwareResponse>(req, "UpdateHardware")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新互通规则CIDR
+        /// </summary>
+        /// <param name="req"><see cref="UpdateL3CidrRequest"/></param>
+        /// <returns><see cref="UpdateL3CidrResponse"/></returns>
+        public Task<UpdateL3CidrResponse> UpdateL3Cidr(UpdateL3CidrRequest req)
+        {
+            return InternalRequestAsync<UpdateL3CidrResponse>(req, "UpdateL3Cidr");
+        }
+
+        /// <summary>
+        /// 更新互通规则CIDR
+        /// </summary>
+        /// <param name="req"><see cref="UpdateL3CidrRequest"/></param>
+        /// <returns><see cref="UpdateL3CidrResponse"/></returns>
+        public UpdateL3CidrResponse UpdateL3CidrSync(UpdateL3CidrRequest req)
+        {
+            return InternalRequestAsync<UpdateL3CidrResponse>(req, "UpdateL3Cidr")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新互通规则备注
+        /// </summary>
+        /// <param name="req"><see cref="UpdateL3ConnRequest"/></param>
+        /// <returns><see cref="UpdateL3ConnResponse"/></returns>
+        public Task<UpdateL3ConnResponse> UpdateL3Conn(UpdateL3ConnRequest req)
+        {
+            return InternalRequestAsync<UpdateL3ConnResponse>(req, "UpdateL3Conn");
+        }
+
+        /// <summary>
+        /// 更新互通规则备注
+        /// </summary>
+        /// <param name="req"><see cref="UpdateL3ConnRequest"/></param>
+        /// <returns><see cref="UpdateL3ConnResponse"/></returns>
+        public UpdateL3ConnResponse UpdateL3ConnSync(UpdateL3ConnRequest req)
+        {
+            return InternalRequestAsync<UpdateL3ConnResponse>(req, "UpdateL3Conn")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新互通规则开关
+        /// </summary>
+        /// <param name="req"><see cref="UpdateL3SwitchRequest"/></param>
+        /// <returns><see cref="UpdateL3SwitchResponse"/></returns>
+        public Task<UpdateL3SwitchResponse> UpdateL3Switch(UpdateL3SwitchRequest req)
+        {
+            return InternalRequestAsync<UpdateL3SwitchResponse>(req, "UpdateL3Switch");
+        }
+
+        /// <summary>
+        /// 更新互通规则开关
+        /// </summary>
+        /// <param name="req"><see cref="UpdateL3SwitchRequest"/></param>
+        /// <returns><see cref="UpdateL3SwitchResponse"/></returns>
+        public UpdateL3SwitchResponse UpdateL3SwitchSync(UpdateL3SwitchRequest req)
+        {
+            return InternalRequestAsync<UpdateL3SwitchResponse>(req, "UpdateL3Switch")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{03830C96-3E28-3E4E-924E-998E4E6827D1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1051</VersionPrefix>
+    <VersionPrefix>3.0.1052</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -57,6 +57,8 @@
     <Compile Include="V20210119\Models\AddGroupResponse.cs" />
     <Compile Include="V20210119\Models\AddHardwareRequest.cs" />
     <Compile Include="V20210119\Models\AddHardwareResponse.cs" />
+    <Compile Include="V20210119\Models\AddL3ConnRequest.cs" />
+    <Compile Include="V20210119\Models\AddL3ConnResponse.cs" />
     <Compile Include="V20210119\Models\Capacity.cs" />
     <Compile Include="V20210119\Models\Context.cs" />
     <Compile Include="V20210119\Models\CreateEncryptedKeyRequest.cs" />
@@ -67,6 +69,8 @@
     <Compile Include="V20210119\Models\DeleteDeviceResponse.cs" />
     <Compile Include="V20210119\Models\DeleteGroupRequest.cs" />
     <Compile Include="V20210119\Models\DeleteGroupResponse.cs" />
+    <Compile Include="V20210119\Models\DeleteL3ConnRequest.cs" />
+    <Compile Include="V20210119\Models\DeleteL3ConnResponse.cs" />
     <Compile Include="V20210119\Models\DeleteQosRequest.cs" />
     <Compile Include="V20210119\Models\DeleteQosResponse.cs" />
     <Compile Include="V20210119\Models\DescribeQosRequest.cs" />
@@ -102,6 +106,8 @@
     <Compile Include="V20210119\Models\GetGroupListResponse.cs" />
     <Compile Include="V20210119\Models\GetHardwareListRequest.cs" />
     <Compile Include="V20210119\Models\GetHardwareListResponse.cs" />
+    <Compile Include="V20210119\Models\GetL3ConnListRequest.cs" />
+    <Compile Include="V20210119\Models\GetL3ConnListResponse.cs" />
     <Compile Include="V20210119\Models\GetMultiFlowStatisticRequest.cs" />
     <Compile Include="V20210119\Models\GetMultiFlowStatisticResponse.cs" />
     <Compile Include="V20210119\Models\GetNetMonitorRequest.cs" />
@@ -119,6 +125,7 @@
     <Compile Include="V20210119\Models\GroupInfo.cs" />
     <Compile Include="V20210119\Models\Hardware.cs" />
     <Compile Include="V20210119\Models\HardwareInfo.cs" />
+    <Compile Include="V20210119\Models\L3ConnInfo.cs" />
     <Compile Include="V20210119\Models\ModifyPackageRenewFlagRequest.cs" />
     <Compile Include="V20210119\Models\ModifyPackageRenewFlagResponse.cs" />
     <Compile Include="V20210119\Models\MonitorData.cs" />
@@ -136,6 +143,12 @@
     <Compile Include="V20210119\Models\UpdateGroupResponse.cs" />
     <Compile Include="V20210119\Models\UpdateHardwareRequest.cs" />
     <Compile Include="V20210119\Models\UpdateHardwareResponse.cs" />
+    <Compile Include="V20210119\Models\UpdateL3CidrRequest.cs" />
+    <Compile Include="V20210119\Models\UpdateL3CidrResponse.cs" />
+    <Compile Include="V20210119\Models\UpdateL3ConnRequest.cs" />
+    <Compile Include="V20210119\Models\UpdateL3ConnResponse.cs" />
+    <Compile Include="V20210119\Models\UpdateL3SwitchRequest.cs" />
+    <Compile Include="V20210119\Models\UpdateL3SwitchResponse.cs" />
     <Compile Include="V20210119\Models\UpdateNetInfo.cs" />
     <Compile Include="V20210119\Models\VendorHardware.cs" />
   </ItemGroup>

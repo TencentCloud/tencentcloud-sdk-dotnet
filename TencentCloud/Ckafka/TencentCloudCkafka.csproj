@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1051</VersionPrefix>
+    <VersionPrefix>3.0.1052</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -314,6 +314,8 @@
     <Compile Include="V20190819\Models\ModifyInstancePreResponse.cs" />
     <Compile Include="V20190819\Models\ModifyPasswordRequest.cs" />
     <Compile Include="V20190819\Models\ModifyPasswordResponse.cs" />
+    <Compile Include="V20190819\Models\ModifyRoutineMaintenanceTaskRequest.cs" />
+    <Compile Include="V20190819\Models\ModifyRoutineMaintenanceTaskResponse.cs" />
     <Compile Include="V20190819\Models\ModifyTopicAttributesRequest.cs" />
     <Compile Include="V20190819\Models\ModifyTopicAttributesResponse.cs" />
     <Compile Include="V20190819\Models\MongoDBConnectParam.cs" />

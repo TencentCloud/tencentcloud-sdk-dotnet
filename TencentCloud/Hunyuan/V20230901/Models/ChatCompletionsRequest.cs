@@ -126,6 +126,12 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("CustomTool")]
         public Tool CustomTool{ get; set; }
 
+        /// <summary>
+        /// 默认是false，在值为true且命中搜索时，接口会返回SearchInfo
+        /// </summary>
+        [JsonProperty("SearchInfo")]
+        public bool? SearchInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamArrayObj(map, prefix + "Tools.", this.Tools);
             this.SetParamSimple(map, prefix + "ToolChoice", this.ToolChoice);
             this.SetParamObj(map, prefix + "CustomTool.", this.CustomTool);
+            this.SetParamSimple(map, prefix + "SearchInfo", this.SearchInfo);
         }
     }
 }

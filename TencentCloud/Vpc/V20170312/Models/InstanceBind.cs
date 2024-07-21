@@ -64,7 +64,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// 实例所在地域。
         /// </summary>
         [JsonProperty("InstanceRegion")]
-        public string[] InstanceRegion{ get; set; }
+        public string InstanceRegion{ get; set; }
 
         /// <summary>
         /// 实例所属的账户uin。
@@ -99,7 +99,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "InstanceBindTime", this.InstanceBindTime);
             this.SetParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
-            this.SetParamArraySimple(map, prefix + "InstanceRegion.", this.InstanceRegion);
+            this.SetParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
             this.SetParamSimple(map, prefix + "InstanceUin", this.InstanceUin);
             this.SetParamSimple(map, prefix + "State", this.State);
         }

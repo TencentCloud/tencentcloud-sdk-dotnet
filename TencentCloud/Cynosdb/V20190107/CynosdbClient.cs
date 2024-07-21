@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1051";
+       private const string sdkVersion = "SDK_NET_3.0.1052";
 
         /// <summary>
         /// Client constructor.
@@ -1738,6 +1738,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 资源包使用明细导出
+        /// </summary>
+        /// <param name="req"><see cref="ExportResourcePackageDeductDetailsRequest"/></param>
+        /// <returns><see cref="ExportResourcePackageDeductDetailsResponse"/></returns>
+        public Task<ExportResourcePackageDeductDetailsResponse> ExportResourcePackageDeductDetails(ExportResourcePackageDeductDetailsRequest req)
+        {
+            return InternalRequestAsync<ExportResourcePackageDeductDetailsResponse>(req, "ExportResourcePackageDeductDetails");
+        }
+
+        /// <summary>
+        /// 资源包使用明细导出
+        /// </summary>
+        /// <param name="req"><see cref="ExportResourcePackageDeductDetailsRequest"/></param>
+        /// <returns><see cref="ExportResourcePackageDeductDetailsResponse"/></returns>
+        public ExportResourcePackageDeductDetailsResponse ExportResourcePackageDeductDetailsSync(ExportResourcePackageDeductDetailsRequest req)
+        {
+            return InternalRequestAsync<ExportResourcePackageDeductDetailsResponse>(req, "ExportResourcePackageDeductDetails")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 批量授权账号权限
         /// </summary>
         /// <param name="req"><see cref="GrantAccountPrivilegesRequest"/></param>
@@ -2364,6 +2385,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public ModifyResourcePackageNameResponse ModifyResourcePackageNameSync(ModifyResourcePackageNameRequest req)
         {
             return InternalRequestAsync<ModifyResourcePackageNameResponse>(req, "ModifyResourcePackageName")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改已绑定资源包抵扣优先级
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourcePackagesDeductionPriorityRequest"/></param>
+        /// <returns><see cref="ModifyResourcePackagesDeductionPriorityResponse"/></returns>
+        public Task<ModifyResourcePackagesDeductionPriorityResponse> ModifyResourcePackagesDeductionPriority(ModifyResourcePackagesDeductionPriorityRequest req)
+        {
+            return InternalRequestAsync<ModifyResourcePackagesDeductionPriorityResponse>(req, "ModifyResourcePackagesDeductionPriority");
+        }
+
+        /// <summary>
+        /// 修改已绑定资源包抵扣优先级
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourcePackagesDeductionPriorityRequest"/></param>
+        /// <returns><see cref="ModifyResourcePackagesDeductionPriorityResponse"/></returns>
+        public ModifyResourcePackagesDeductionPriorityResponse ModifyResourcePackagesDeductionPrioritySync(ModifyResourcePackagesDeductionPriorityRequest req)
+        {
+            return InternalRequestAsync<ModifyResourcePackagesDeductionPriorityResponse>(req, "ModifyResourcePackagesDeductionPriority")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

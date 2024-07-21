@@ -52,8 +52,11 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 员工在腾讯电子签平台的独特身份标识，为32位字符串。
         /// 您可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查阅某位员工的UserId（在页面中显示为用户ID）。
         /// UserId必须是传入合同（FlowId）中的签署人。
-        /// - 1. 若UserId为空，Name和Mobile 必须提供。
-        /// - 2. 若UserId 与 Name，Mobile均存在，将优先采用UserId对应的员工。
+        /// 
+        /// <ul>
+        /// <li>1. 若UserId为空，Name和Mobile 必须提供。</li>
+        /// <li>2. 若UserId 与 Name，Mobile均存在，将优先采用UserId对应的员工。</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }

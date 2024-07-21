@@ -42,8 +42,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
 
         /// <summary>
         /// 绘画风格。
-        /// 请在 [智能文生图风格列表](https://cloud.tencent.com/document/product/1668/86249) 中选择期望的风格，传入风格编号。
-        /// 推荐使用且只使用一种风格。不传默认使用201（日系动漫风格）。
+        /// 请在 [文生图轻量版风格列表](https://cloud.tencent.com/document/product/1729/108992) 中选择期望的风格，传入风格编号。不传默认使用201（日系动漫风格）。
         /// </summary>
         [JsonProperty("Style")]
         public string Style{ get; set; }

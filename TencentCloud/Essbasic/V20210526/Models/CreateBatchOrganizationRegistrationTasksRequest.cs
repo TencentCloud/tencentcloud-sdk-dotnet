@@ -39,8 +39,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 当前应用下子客的组织机构注册信息。
-        /// 一次最多支持10条认证流
+        /// 当前应用下子企业的组织机构注册信息。最多支持查询10子企业。
         /// </summary>
         [JsonProperty("RegistrationOrganizations")]
         public RegistrationOrganizationInfo[] RegistrationOrganizations{ get; set; }
@@ -53,7 +52,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <li>**APP**：第三方APP或小程序跳转电子签小程序链接, 一般用于贵方小程序或者APP跳转过来,  打开后进入腾讯电子签小程序</li>
         /// <li>**H5**：第三方H5跳转到电子签H5长链接, 一般用于贵方H5跳转过来,  打开后进入腾讯电子签H5页面</li>
         /// <li>**SHORT_H5**：第三方H5跳转到电子签H5短链接, 一般用于贵方H5跳转过来,  打开后进入腾讯电子签H5页面</li></ul>
-        /// 示例值：PC
+        /// 
         /// </summary>
         [JsonProperty("Endpoint")]
         public string Endpoint{ get; set; }

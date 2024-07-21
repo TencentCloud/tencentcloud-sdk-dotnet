@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312
 
        private const string endpoint = "cvm.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1051";
+       private const string sdkVersion = "SDK_NET_3.0.1052";
 
         /// <summary>
         /// Client constructor.
@@ -1265,6 +1265,48 @@ namespace TencentCloud.Cvm.V20170312
         public DisassociateSecurityGroupsResponse DisassociateSecurityGroupsSync(DisassociateSecurityGroupsRequest req)
         {
             return InternalRequestAsync<DisassociateSecurityGroupsResponse>(req, "DisassociateSecurityGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 进入救援模式
+        /// </summary>
+        /// <param name="req"><see cref="EnterRescueModeRequest"/></param>
+        /// <returns><see cref="EnterRescueModeResponse"/></returns>
+        public Task<EnterRescueModeResponse> EnterRescueMode(EnterRescueModeRequest req)
+        {
+            return InternalRequestAsync<EnterRescueModeResponse>(req, "EnterRescueMode");
+        }
+
+        /// <summary>
+        /// 进入救援模式
+        /// </summary>
+        /// <param name="req"><see cref="EnterRescueModeRequest"/></param>
+        /// <returns><see cref="EnterRescueModeResponse"/></returns>
+        public EnterRescueModeResponse EnterRescueModeSync(EnterRescueModeRequest req)
+        {
+            return InternalRequestAsync<EnterRescueModeResponse>(req, "EnterRescueMode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 退出救援模式
+        /// </summary>
+        /// <param name="req"><see cref="ExitRescueModeRequest"/></param>
+        /// <returns><see cref="ExitRescueModeResponse"/></returns>
+        public Task<ExitRescueModeResponse> ExitRescueMode(ExitRescueModeRequest req)
+        {
+            return InternalRequestAsync<ExitRescueModeResponse>(req, "ExitRescueMode");
+        }
+
+        /// <summary>
+        /// 退出救援模式
+        /// </summary>
+        /// <param name="req"><see cref="ExitRescueModeRequest"/></param>
+        /// <returns><see cref="ExitRescueModeResponse"/></returns>
+        public ExitRescueModeResponse ExitRescueModeSync(ExitRescueModeRequest req)
+        {
+            return InternalRequestAsync<ExitRescueModeResponse>(req, "ExitRescueMode")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 企业批量注册链接信息
+        /// 子企业注册认证的的链接列表
         /// </summary>
         [JsonProperty("OrganizationAuthUrls")]
         public OrganizationAuthUrl[] OrganizationAuthUrls{ get; set; }

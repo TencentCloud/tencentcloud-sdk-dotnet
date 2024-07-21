@@ -60,6 +60,18 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("CvmDelayOnlineTime")]
         public ulong? CvmDelayOnlineTime{ get; set; }
 
+        /// <summary>
+        /// 分片迁移并发数
+        /// </summary>
+        [JsonProperty("ShardAllocationConcurrents")]
+        public ulong? ShardAllocationConcurrents{ get; set; }
+
+        /// <summary>
+        /// 分片迁移并发速度
+        /// </summary>
+        [JsonProperty("ShardAllocationBytes")]
+        public ulong? ShardAllocationBytes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "RestartMode", this.RestartMode);
             this.SetParamSimple(map, prefix + "IsOffline", this.IsOffline);
             this.SetParamSimple(map, prefix + "CvmDelayOnlineTime", this.CvmDelayOnlineTime);
+            this.SetParamSimple(map, prefix + "ShardAllocationConcurrents", this.ShardAllocationConcurrents);
+            this.SetParamSimple(map, prefix + "ShardAllocationBytes", this.ShardAllocationBytes);
         }
     }
 }
