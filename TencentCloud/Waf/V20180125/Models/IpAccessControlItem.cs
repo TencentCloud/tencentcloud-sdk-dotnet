@@ -96,6 +96,27 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
+        /// <summary>
+        /// 定时任务类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("JobType")]
+        public string JobType{ get; set; }
+
+        /// <summary>
+        /// 周期任务类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CronType")]
+        public string CronType{ get; set; }
+
+        /// <summary>
+        /// 定时任务配置详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("JobDateTime")]
+        public JobDateTime JobDateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -113,6 +134,9 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamArraySimple(map, prefix + "IpList.", this.IpList);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "JobType", this.JobType);
+            this.SetParamSimple(map, prefix + "CronType", this.CronType);
+            this.SetParamObj(map, prefix + "JobDateTime.", this.JobDateTime);
         }
     }
 }

@@ -31,6 +31,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string RegistryId{ get; set; }
 
         /// <summary>
+        /// 命名空间名称
+        /// </summary>
+        [JsonProperty("NamespaceName")]
+        public string NamespaceName{ get; set; }
+
+        /// <summary>
         /// 镜像仓库名称
         /// </summary>
         [JsonProperty("RepositoryName")]
@@ -42,12 +48,6 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("ImageVersion")]
         public string ImageVersion{ get; set; }
 
-        /// <summary>
-        /// 命名空间名称
-        /// </summary>
-        [JsonProperty("NamespaceName")]
-        public string NamespaceName{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -55,9 +55,9 @@ namespace TencentCloud.Tcr.V20190924.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
+            this.SetParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
             this.SetParamSimple(map, prefix + "RepositoryName", this.RepositoryName);
             this.SetParamSimple(map, prefix + "ImageVersion", this.ImageVersion);
-            this.SetParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
         }
     }
 }

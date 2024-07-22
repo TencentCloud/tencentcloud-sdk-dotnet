@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 实例id
+        /// Prometheus 实例 ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 告警配置
+        /// 告警配置，[具体参考](https://cloud.tencent.com/document/api/248/30354#PrometheusAlertPolicyItem)
         /// </summary>
         [JsonProperty("AlertRule")]
         public PrometheusAlertPolicyItem AlertRule{ get; set; }

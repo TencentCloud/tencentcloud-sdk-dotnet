@@ -74,6 +74,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("CustomTimestamp")]
         public long? CustomTimestamp{ get; set; }
 
+        /// <summary>
+        /// timestamp; latest-offset;  earliest-offset; 任选一种
+        /// </summary>
+        [JsonProperty("KafkaScanMode")]
+        public string KafkaScanMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +94,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "SavepointId", this.SavepointId);
             this.SetParamSimple(map, prefix + "UseOldSystemConnector", this.UseOldSystemConnector);
             this.SetParamSimple(map, prefix + "CustomTimestamp", this.CustomTimestamp);
+            this.SetParamSimple(map, prefix + "KafkaScanMode", this.KafkaScanMode);
         }
     }
 }

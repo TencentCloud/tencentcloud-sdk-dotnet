@@ -77,6 +77,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("SkillGroupType")]
         public long? SkillGroupType{ get; set; }
 
+        /// <summary>
+        /// 技能组内线号码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Alias")]
+        public string Alias{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -91,6 +98,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "MaxConcurrency", this.MaxConcurrency);
             this.SetParamSimple(map, prefix + "LastModifyTimestamp", this.LastModifyTimestamp);
             this.SetParamSimple(map, prefix + "SkillGroupType", this.SkillGroupType);
+            this.SetParamSimple(map, prefix + "Alias", this.Alias);
         }
     }
 }

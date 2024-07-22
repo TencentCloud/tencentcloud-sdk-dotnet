@@ -54,6 +54,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("MaxDelayTime")]
         public long? MaxDelayTime{ get; set; }
 
+        /// <summary>
+        /// 版本升级支持指定参数
+        /// </summary>
+        [JsonProperty("ParamList")]
+        public UpgradeEngineVersionParams[] ParamList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
             this.SetParamSimple(map, prefix + "UpgradeSubversion", this.UpgradeSubversion);
             this.SetParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
+            this.SetParamArrayObj(map, prefix + "ParamList.", this.ParamList);
         }
     }
 }

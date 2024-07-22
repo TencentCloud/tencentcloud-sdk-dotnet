@@ -169,6 +169,12 @@ namespace TencentCloud.Rce.V20201103.Models
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
 
+        /// <summary>
+        /// 数据授权信息。
+        /// </summary>
+        [JsonProperty("DataAuthorization")]
+        public DataAuthorizationInfo DataAuthorization{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -197,6 +203,7 @@ namespace TencentCloud.Rce.V20201103.Models
             this.SetParamObj(map, prefix + "Sponsor.", this.Sponsor);
             this.SetParamObj(map, prefix + "OnlineScam.", this.OnlineScam);
             this.SetParamSimple(map, prefix + "Platform", this.Platform);
+            this.SetParamObj(map, prefix + "DataAuthorization.", this.DataAuthorization);
         }
     }
 }

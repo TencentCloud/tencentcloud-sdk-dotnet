@@ -25,25 +25,30 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 实例id
+        /// 实例ID
+        /// 
+        /// 示例值：prom-343kafd34
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 分页
+        /// 偏移量，默认为0。 示例值：1
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 分页
+        /// 返回数量，默认为20，最大值为100。
+        /// 示例值：1
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 过滤
+        /// 仅支持按Name, Values字段过滤:
+        /// - Name = Name
+        ///   按照给定的预聚合名称列表匹配
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

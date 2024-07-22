@@ -75,7 +75,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? OffSet{ get; set; }
 
         /// <summary>
-        /// 每页返回的数量
+        /// 每页返回的数量，默认为20
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -122,6 +122,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("RuleId")]
         public ulong? RuleId{ get; set; }
 
+        /// <summary>
+        /// 定时任务类型筛选0 1 2 3 4
+        /// </summary>
+        [JsonProperty("TimerType")]
+        public long? TimerType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -144,6 +150,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "ValidTimeStampMin", this.ValidTimeStampMin);
             this.SetParamSimple(map, prefix + "ValidTimeStampMax", this.ValidTimeStampMax);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
+            this.SetParamSimple(map, prefix + "TimerType", this.TimerType);
         }
     }
 }

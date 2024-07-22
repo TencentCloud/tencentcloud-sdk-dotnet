@@ -97,6 +97,41 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("OptionsArr")]
         public string OptionsArr{ get; set; }
 
+        /// <summary>
+        /// url长度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Length")]
+        public ulong? Length{ get; set; }
+
+        /// <summary>
+        /// 规则ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleId")]
+        public long? RuleId{ get; set; }
+
+        /// <summary>
+        /// 事件id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EventId")]
+        public string EventId{ get; set; }
+
+        /// <summary>
+        /// 关联的Session规则
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SessionApplied")]
+        public long?[] SessionApplied{ get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public ulong? CreateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +150,11 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "ValidTime", this.ValidTime);
             this.SetParamSimple(map, prefix + "OptionsArr", this.OptionsArr);
+            this.SetParamSimple(map, prefix + "Length", this.Length);
+            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
+            this.SetParamSimple(map, prefix + "EventId", this.EventId);
+            this.SetParamArraySimple(map, prefix + "SessionApplied.", this.SessionApplied);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

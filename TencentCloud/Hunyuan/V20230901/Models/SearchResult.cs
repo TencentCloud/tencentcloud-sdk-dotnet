@@ -29,7 +29,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Index")]
-        public string Index{ get; set; }
+        public long? Index{ get; set; }
 
         /// <summary>
         /// 搜索引文标题

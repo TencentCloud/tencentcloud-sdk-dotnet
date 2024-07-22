@@ -85,7 +85,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期。
+        /// 实例状态，可能的返回值：0-创建中，1-流程处理中，2-运行中，-2-实例已过期。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

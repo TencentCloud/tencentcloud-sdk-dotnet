@@ -40,6 +40,15 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("InstanceNameStyle")]
         public string InstanceNameStyle{ get; set; }
 
+        /// <summary>
+        /// 云服务器实例名后缀。字符长度为[1,105]，且与 InstanceName 的长度和不能超过107。
+        /// 
+        /// 假设后缀名称为 suffix，原实例名为 test.0，最终实例名为 test.0.suffix。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceNameSuffix")]
+        public string InstanceNameSuffix{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -48,6 +57,7 @@ namespace TencentCloud.As.V20180419.Models
         {
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "InstanceNameStyle", this.InstanceNameStyle);
+            this.SetParamSimple(map, prefix + "InstanceNameSuffix", this.InstanceNameSuffix);
         }
     }
 }

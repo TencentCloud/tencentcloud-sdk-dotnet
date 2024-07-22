@@ -37,7 +37,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public long? Count{ get; set; }
 
         /// <summary>
-        /// 类别
+        /// 类别，ip封禁传值auto_deny
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }

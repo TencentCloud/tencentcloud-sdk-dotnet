@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1052";
+       private const string sdkVersion = "SDK_NET_3.0.1053";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,27 @@ namespace TencentCloud.Postgres.V20170312
         public CloseServerlessDBExtranetAccessResponse CloseServerlessDBExtranetAccessSync(CloseServerlessDBExtranetAccessRequest req)
         {
             return InternalRequestAsync<CloseServerlessDBExtranetAccessResponse>(req, "CloseServerlessDBExtranetAccess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口用于创建数据账号，返回的Oid为账号唯一标识。与数据库系统表pg_roles中记录的oid一致。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccountRequest"/></param>
+        /// <returns><see cref="CreateAccountResponse"/></returns>
+        public Task<CreateAccountResponse> CreateAccount(CreateAccountRequest req)
+        {
+            return InternalRequestAsync<CreateAccountResponse>(req, "CreateAccount");
+        }
+
+        /// <summary>
+        /// 此接口用于创建数据账号，返回的Oid为账号唯一标识。与数据库系统表pg_roles中记录的oid一致。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccountRequest"/></param>
+        /// <returns><see cref="CreateAccountResponse"/></returns>
+        public CreateAccountResponse CreateAccountSync(CreateAccountRequest req)
+        {
+            return InternalRequestAsync<CreateAccountResponse>(req, "CreateAccount")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -331,6 +352,27 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 此接口用于删除数据库账号，需要同时输入Oid与UserName，避免误删。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccountRequest"/></param>
+        /// <returns><see cref="DeleteAccountResponse"/></returns>
+        public Task<DeleteAccountResponse> DeleteAccount(DeleteAccountRequest req)
+        {
+            return InternalRequestAsync<DeleteAccountResponse>(req, "DeleteAccount");
+        }
+
+        /// <summary>
+        /// 此接口用于删除数据库账号，需要同时输入Oid与UserName，避免误删。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccountRequest"/></param>
+        /// <returns><see cref="DeleteAccountResponse"/></returns>
+        public DeleteAccountResponse DeleteAccountSync(DeleteAccountRequest req)
+        {
+            return InternalRequestAsync<DeleteAccountResponse>(req, "DeleteAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DeleteBaseBackup）用于删除实例指定数据备份。
         /// </summary>
         /// <param name="req"><see cref="DeleteBaseBackupRequest"/></param>
@@ -474,6 +516,27 @@ namespace TencentCloud.Postgres.V20170312
         public DeleteServerlessDBInstanceResponse DeleteServerlessDBInstanceSync(DeleteServerlessDBInstanceRequest req)
         {
             return InternalRequestAsync<DeleteServerlessDBInstanceResponse>(req, "DeleteServerlessDBInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询数据库账号对某数据库对象拥有的权限列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="DescribeAccountPrivilegesResponse"/></returns>
+        public Task<DescribeAccountPrivilegesResponse> DescribeAccountPrivileges(DescribeAccountPrivilegesRequest req)
+        {
+            return InternalRequestAsync<DescribeAccountPrivilegesResponse>(req, "DescribeAccountPrivileges");
+        }
+
+        /// <summary>
+        /// 查询数据库账号对某数据库对象拥有的权限列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="DescribeAccountPrivilegesResponse"/></returns>
+        public DescribeAccountPrivilegesResponse DescribeAccountPrivilegesSync(DescribeAccountPrivilegesRequest req)
+        {
+            return InternalRequestAsync<DescribeAccountPrivilegesResponse>(req, "DescribeAccountPrivileges")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -898,6 +961,27 @@ namespace TencentCloud.Postgres.V20170312
         public DescribeDBXlogsResponse DescribeDBXlogsSync(DescribeDBXlogsRequest req)
         {
             return InternalRequestAsync<DescribeDBXlogsResponse>(req, "DescribeDBXlogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于查询数据库对象列表。例如查询test数据库下的模式列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabaseObjectsRequest"/></param>
+        /// <returns><see cref="DescribeDatabaseObjectsResponse"/></returns>
+        public Task<DescribeDatabaseObjectsResponse> DescribeDatabaseObjects(DescribeDatabaseObjectsRequest req)
+        {
+            return InternalRequestAsync<DescribeDatabaseObjectsResponse>(req, "DescribeDatabaseObjects");
+        }
+
+        /// <summary>
+        /// 本接口用于查询数据库对象列表。例如查询test数据库下的模式列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabaseObjectsRequest"/></param>
+        /// <returns><see cref="DescribeDatabaseObjectsResponse"/></returns>
+        public DescribeDatabaseObjectsResponse DescribeDatabaseObjectsSync(DescribeDatabaseObjectsRequest req)
+        {
+            return InternalRequestAsync<DescribeDatabaseObjectsResponse>(req, "DescribeDatabaseObjects")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1360,6 +1444,48 @@ namespace TencentCloud.Postgres.V20170312
         public IsolateDBInstancesResponse IsolateDBInstancesSync(IsolateDBInstancesRequest req)
         {
             return InternalRequestAsync<IsolateDBInstancesResponse>(req, "IsolateDBInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口用于锁定数据库账号，锁定后账号当前连接会断开，并且无法建立新连接。
+        /// </summary>
+        /// <param name="req"><see cref="LockAccountRequest"/></param>
+        /// <returns><see cref="LockAccountResponse"/></returns>
+        public Task<LockAccountResponse> LockAccount(LockAccountRequest req)
+        {
+            return InternalRequestAsync<LockAccountResponse>(req, "LockAccount");
+        }
+
+        /// <summary>
+        /// 此接口用于锁定数据库账号，锁定后账号当前连接会断开，并且无法建立新连接。
+        /// </summary>
+        /// <param name="req"><see cref="LockAccountRequest"/></param>
+        /// <returns><see cref="LockAccountResponse"/></returns>
+        public LockAccountResponse LockAccountSync(LockAccountRequest req)
+        {
+            return InternalRequestAsync<LockAccountResponse>(req, "LockAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改某账号对某数据库对象的权限、修改账号类型。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="ModifyAccountPrivilegesResponse"/></returns>
+        public Task<ModifyAccountPrivilegesResponse> ModifyAccountPrivileges(ModifyAccountPrivilegesRequest req)
+        {
+            return InternalRequestAsync<ModifyAccountPrivilegesResponse>(req, "ModifyAccountPrivileges");
+        }
+
+        /// <summary>
+        /// 修改某账号对某数据库对象的权限、修改账号类型。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="ModifyAccountPrivilegesResponse"/></returns>
+        public ModifyAccountPrivilegesResponse ModifyAccountPrivilegesSync(ModifyAccountPrivilegesRequest req)
+        {
+            return InternalRequestAsync<ModifyAccountPrivilegesResponse>(req, "ModifyAccountPrivileges")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1916,6 +2042,27 @@ namespace TencentCloud.Postgres.V20170312
         public SwitchDBInstancePrimaryResponse SwitchDBInstancePrimarySync(SwitchDBInstancePrimaryRequest req)
         {
             return InternalRequestAsync<SwitchDBInstancePrimaryResponse>(req, "SwitchDBInstancePrimary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 解除数据库账号的锁定，解锁后账号可以登陆数据库。
+        /// </summary>
+        /// <param name="req"><see cref="UnlockAccountRequest"/></param>
+        /// <returns><see cref="UnlockAccountResponse"/></returns>
+        public Task<UnlockAccountResponse> UnlockAccount(UnlockAccountRequest req)
+        {
+            return InternalRequestAsync<UnlockAccountResponse>(req, "UnlockAccount");
+        }
+
+        /// <summary>
+        /// 解除数据库账号的锁定，解锁后账号可以登陆数据库。
+        /// </summary>
+        /// <param name="req"><see cref="UnlockAccountRequest"/></param>
+        /// <returns><see cref="UnlockAccountResponse"/></returns>
+        public UnlockAccountResponse UnlockAccountSync(UnlockAccountRequest req)
+        {
+            return InternalRequestAsync<UnlockAccountResponse>(req, "UnlockAccount")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

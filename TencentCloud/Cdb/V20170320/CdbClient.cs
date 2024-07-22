@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1052";
+       private const string sdkVersion = "SDK_NET_3.0.1053";
 
         /// <summary>
         /// Client constructor.
@@ -3636,7 +3636,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(UpgradeDBInstanceEngineVersion)用于升级云数据库实例版本，实例类型支持主实例、灾备实例和只读实例。
+        /// 本接口(UpgradeDBInstanceEngineVersion)用于升级云数据库实例版本，实例类型支持主实例、灾备实例和只读实例等。
         /// </summary>
         /// <param name="req"><see cref="UpgradeDBInstanceEngineVersionRequest"/></param>
         /// <returns><see cref="UpgradeDBInstanceEngineVersionResponse"/></returns>
@@ -3646,7 +3646,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(UpgradeDBInstanceEngineVersion)用于升级云数据库实例版本，实例类型支持主实例、灾备实例和只读实例。
+        /// 本接口(UpgradeDBInstanceEngineVersion)用于升级云数据库实例版本，实例类型支持主实例、灾备实例和只读实例等。
         /// </summary>
         /// <param name="req"><see cref="UpgradeDBInstanceEngineVersionRequest"/></param>
         /// <returns><see cref="UpgradeDBInstanceEngineVersionResponse"/></returns>

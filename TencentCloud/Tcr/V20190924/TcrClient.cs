@@ -28,7 +28,7 @@ namespace TencentCloud.Tcr.V20190924
 
        private const string endpoint = "tcr.tencentcloudapi.com";
        private const string version = "2019-09-24";
-       private const string sdkVersion = "SDK_NET_3.0.1052";
+       private const string sdkVersion = "SDK_NET_3.0.1053";
 
         /// <summary>
         /// Client constructor.
@@ -1339,7 +1339,7 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
-        /// 查询所有实例命名空间列表
+        /// 查询所有有实例命名空间列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAllNamespacesRequest"/></param>
         /// <returns><see cref="DescribeInstanceAllNamespacesResponse"/></returns>
@@ -1349,7 +1349,7 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
-        /// 查询所有实例命名空间列表
+        /// 查询所有有实例命名空间列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAllNamespacesRequest"/></param>
         /// <returns><see cref="DescribeInstanceAllNamespacesResponse"/></returns>
@@ -1780,7 +1780,7 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
-        /// 查询版本保留规则
+        /// 查询镜像版本保留规则
         /// </summary>
         /// <param name="req"><see cref="DescribeTagRetentionRulesRequest"/></param>
         /// <returns><see cref="DescribeTagRetentionRulesResponse"/></returns>
@@ -1790,7 +1790,7 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
-        /// 查询版本保留规则
+        /// 查询镜像版本保留规则
         /// </summary>
         /// <param name="req"><see cref="DescribeTagRetentionRulesRequest"/></param>
         /// <returns><see cref="DescribeTagRetentionRulesResponse"/></returns>

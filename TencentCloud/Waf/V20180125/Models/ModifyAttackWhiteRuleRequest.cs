@@ -60,6 +60,24 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("SignatureIds")]
         public string[] SignatureIds{ get; set; }
 
+        /// <summary>
+        /// 加白的大类规则ID
+        /// </summary>
+        [JsonProperty("TypeIds")]
+        public string[] TypeIds{ get; set; }
+
+        /// <summary>
+        /// 0表示按照特定规则ID加白, 1表示按照规则类型加白
+        /// </summary>
+        [JsonProperty("Mode")]
+        public long? Mode{ get; set; }
+
+        /// <summary>
+        /// 规则名
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +90,9 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
             this.SetParamSimple(map, prefix + "SignatureId", this.SignatureId);
             this.SetParamArraySimple(map, prefix + "SignatureIds.", this.SignatureIds);
+            this.SetParamArraySimple(map, prefix + "TypeIds.", this.TypeIds);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

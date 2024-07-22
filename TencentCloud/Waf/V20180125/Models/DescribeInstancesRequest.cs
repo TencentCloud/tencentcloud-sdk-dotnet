@@ -42,6 +42,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Filters")]
         public FiltersItemNew[] Filters{ get; set; }
 
+        /// <summary>
+        /// 释放延期标识
+        /// </summary>
+        [JsonProperty("FreeDelayFlag")]
+        public ulong? FreeDelayFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "FreeDelayFlag", this.FreeDelayFlag);
         }
     }
 }

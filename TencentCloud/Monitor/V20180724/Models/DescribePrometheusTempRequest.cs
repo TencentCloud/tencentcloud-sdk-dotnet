@@ -25,11 +25,15 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 模糊过滤条件，支持
-        /// Level 按模板级别过滤
-        /// Name 按名称过滤
-        /// Describe 按描述过滤
-        /// ID 按templateId过滤
+        /// 仅支持按Name, Values字段过滤:
+        /// * Name = Name
+        ///   按照给定的模板名称列表匹配
+        /// * Name = ID
+        ///   按照给定的模板ID列表匹配
+        /// * Name = Describe
+        ///   按照给定的模板描述列表匹配
+        /// * Name = Level
+        ///   按照给定的模板维度(instance, cluster)列表匹配
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -41,7 +45,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 总数限制
+        /// 分页返回数量，默认为20，最大值为100
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

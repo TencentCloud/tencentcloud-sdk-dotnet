@@ -62,7 +62,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Edition{ get; set; }
 
         /// <summary>
-        /// 可选值为：batch（批量添加）、bot、cc、custom（非批量添加时的默认值）
+        /// 可选值为：batch（批量添加）、bot（BOT流量分析中的BOT详情列表中添加时）、cc（在攻击日志列表中对攻击类型为CC的IP添加时）、custom（非批量添加时的默认值）
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
@@ -72,6 +72,18 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }
+
+        /// <summary>
+        /// 定时配置类型
+        /// </summary>
+        [JsonProperty("JobType")]
+        public string JobType{ get; set; }
+
+        /// <summary>
+        /// 定时配置详情
+        /// </summary>
+        [JsonProperty("JobDateTime")]
+        public JobDateTime JobDateTime{ get; set; }
 
 
         /// <summary>
@@ -87,6 +99,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Edition", this.Edition);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
             this.SetParamSimple(map, prefix + "Note", this.Note);
+            this.SetParamSimple(map, prefix + "JobType", this.JobType);
+            this.SetParamObj(map, prefix + "JobDateTime.", this.JobDateTime);
         }
     }
 }

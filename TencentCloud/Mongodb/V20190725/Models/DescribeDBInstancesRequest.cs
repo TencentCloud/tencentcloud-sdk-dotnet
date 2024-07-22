@@ -31,19 +31,19 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 实例类型。取值范围如下：<ul><li>0：所有实例。</li><li>1：正式实例。</li><li>2：临时实例。</li><li>3：只读实例。</li><li>-1：正式实例、只读、灾备实例。</li></ul>
+        /// 指定查询的实例类型。取值范围如下：<ul><li>0：所有实例。</li><li>1：正式实例。</li><li>3：只读实例。</li><li>4：灾备实例。</li></ul>
         /// </summary>
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
 
         /// <summary>
-        /// 集群类型，取值范围如下：<ul><li>0：副本集实例。</li><li>1：分片实例。</li><li>-1：所有实例。</li></ul>
+        /// 指定所查询实例的集群类型，取值范围如下：<ul><li>0：副本集实例。</li><li>1：分片实例。</li><li>-1：副本集与分片实例。</li></ul>
         /// </summary>
         [JsonProperty("ClusterType")]
         public long? ClusterType{ get; set; }
 
         /// <summary>
-        /// 实例状态，取值范围如下所示：<ul><li>0：待初始化。</li><li>1：流程执行中。</li><li>2：实例有效。</li><li>-2：已隔离（包年包月实例）。</li><li>-3：已隔离（按量计费实例）。</li></ul>
+        /// 指定所查询实例的当前状态，取值范围如下所示：<ul><li>0：待初始化。</li><li>1：流程处理中，例如：变更规格、参数修改等。</li><li>2：实例正常运行中。</li><li>-2：实例已过期。</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }
@@ -65,7 +65,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 付费类型，取值范围如下：<ul><li>0：查询按量计费实例。</li><li>1：查询包年包月实例。</li><li>-1：查询按量计费与包年包月实例。</li></ul>
+        /// 指定所查询实例的付费类型，取值范围如下：<ul><li>0：查询按量计费实例。</li><li>1：查询包年包月实例。</li><li>-1：查询按量计费与包年包月实例。</li></ul>
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong?[] ProjectIds{ get; set; }
 
         /// <summary>
-        /// 配置查询搜索的关键词。支持配置为实例ID、实例名称或者内网 IP 地址。
+        /// 指定查询搜索的关键词。支持设置为具体的实例ID、实例名称或者内网 IP 地址。
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }

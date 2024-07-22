@@ -42,6 +42,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("MatchContent")]
         public string MatchContent{ get; set; }
 
+        /// <summary>
+        /// 匹配参数名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MatchParams")]
+        public string MatchParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +58,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "MatchField", this.MatchField);
             this.SetParamSimple(map, prefix + "MatchMethod", this.MatchMethod);
             this.SetParamSimple(map, prefix + "MatchContent", this.MatchContent);
+            this.SetParamSimple(map, prefix + "MatchParams", this.MatchParams);
         }
     }
 }

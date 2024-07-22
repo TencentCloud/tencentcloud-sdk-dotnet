@@ -294,6 +294,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("BillingItem")]
         public string BillingItem{ get; set; }
 
+        /// <summary>
+        /// 实例延期释放标识
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FreeDelayFlag")]
+        public ulong? FreeDelayFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -340,6 +347,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "LastQpsExceedTime", this.LastQpsExceedTime);
             this.SetParamObj(map, prefix + "MiniExtendPkg.", this.MiniExtendPkg);
             this.SetParamSimple(map, prefix + "BillingItem", this.BillingItem);
+            this.SetParamSimple(map, prefix + "FreeDelayFlag", this.FreeDelayFlag);
         }
     }
 }

@@ -37,6 +37,20 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string Config{ get; set; }
 
         /// <summary>
+        /// 镜像的Labels信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Labels")]
+        public KeyValueString[] Labels{ get; set; }
+
+        /// <summary>
+        /// 镜像大小，单位：byte
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Size")]
+        public long? Size{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +64,8 @@ namespace TencentCloud.Tcr.V20190924.Models
         {
             this.SetParamSimple(map, prefix + "Manifest", this.Manifest);
             this.SetParamSimple(map, prefix + "Config", this.Config);
+            this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
+            this.SetParamSimple(map, prefix + "Size", this.Size);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
