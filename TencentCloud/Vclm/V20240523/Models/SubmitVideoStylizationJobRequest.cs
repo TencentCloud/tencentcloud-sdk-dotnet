@@ -41,6 +41,14 @@ namespace TencentCloud.Vclm.V20240523.Models
         [JsonProperty("VideoUrl")]
         public string VideoUrl{ get; set; }
 
+        /// <summary>
+        /// 风格化强度 可选参数["low","medium","high"] 
+        /// "low":风格化强度弱,"medium":"风格化强度中等","high":"风格化强度强" 
+        /// 默认为medium
+        /// </summary>
+        [JsonProperty("StyleStrength")]
+        public string StyleStrength{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -49,6 +57,7 @@ namespace TencentCloud.Vclm.V20240523.Models
         {
             this.SetParamSimple(map, prefix + "StyleId", this.StyleId);
             this.SetParamSimple(map, prefix + "VideoUrl", this.VideoUrl);
+            this.SetParamSimple(map, prefix + "StyleStrength", this.StyleStrength);
         }
     }
 }

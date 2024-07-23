@@ -361,6 +361,13 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("CoolDownBucket")]
         public string CoolDownBucket{ get; set; }
 
+        /// <summary>
+        /// 实例扩展信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Details")]
+        public InstanceDetail Details{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -414,6 +421,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "UserNetworkInfos", this.UserNetworkInfos);
             this.SetParamSimple(map, prefix + "EnableCoolDown", this.EnableCoolDown);
             this.SetParamSimple(map, prefix + "CoolDownBucket", this.CoolDownBucket);
+            this.SetParamObj(map, prefix + "Details.", this.Details);
         }
     }
 }

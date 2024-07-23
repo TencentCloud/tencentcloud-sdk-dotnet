@@ -147,6 +147,12 @@ namespace TencentCloud.Tke.V20220501.Models
         public long? Replicas{ get; set; }
 
         /// <summary>
+        /// 就绪 Machine 个数
+        /// </summary>
+        [JsonProperty("ReadyReplicas")]
+        public long? ReadyReplicas{ get; set; }
+
+        /// <summary>
         /// 公网带宽设置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -184,6 +190,7 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamSimple(map, prefix + "EnableAutoscaling", this.EnableAutoscaling);
             this.SetParamArraySimple(map, prefix + "InstanceTypes.", this.InstanceTypes);
             this.SetParamSimple(map, prefix + "Replicas", this.Replicas);
+            this.SetParamSimple(map, prefix + "ReadyReplicas", this.ReadyReplicas);
             this.SetParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
             this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         }

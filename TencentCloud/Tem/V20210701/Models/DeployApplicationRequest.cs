@@ -119,7 +119,11 @@ namespace TencentCloud.Tem.V20210701.Models
         public string DeployVersion{ get; set; }
 
         /// <summary>
-        /// 包名。使用 JAR 包或者 WAR 包部署的时候必填。
+        /// 传入内容为 /jar包名字 的形式。也就是在 jar包名字前增加一个/。
+        /// 
+        /// 如上传的 jar 包名字为 demo-1.0.0.jar，那么这里传入内容为：/demo-1.0.0.jar
+        /// 
+        /// 注：jar 包需要通过 tem 页面上传过，tem 后端才能拉到该 jar 包。
         /// </summary>
         [JsonProperty("PkgName")]
         public string PkgName{ get; set; }
@@ -310,6 +314,18 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("RepoType")]
         public long? RepoType{ get; set; }
 
+        /// <summary>
+        /// 启动后执行的脚本，base64 编码
+        /// </summary>
+        [JsonProperty("PostStartEncoded")]
+        public string PostStartEncoded{ get; set; }
+
+        /// <summary>
+        /// 停止前执行的脚本，base64 编码
+        /// </summary>
+        [JsonProperty("PreStopEncoded")]
+        public string PreStopEncoded{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -361,6 +377,8 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "TcrInstanceId", this.TcrInstanceId);
             this.SetParamSimple(map, prefix + "RepoServer", this.RepoServer);
             this.SetParamSimple(map, prefix + "RepoType", this.RepoType);
+            this.SetParamSimple(map, prefix + "PostStartEncoded", this.PostStartEncoded);
+            this.SetParamSimple(map, prefix + "PreStopEncoded", this.PreStopEncoded);
         }
     }
 }

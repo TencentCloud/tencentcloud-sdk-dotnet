@@ -31,7 +31,24 @@ namespace TencentCloud.Thpc.V20230321.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// <li><strong>queue-name</strong></li> <p style="padding-left: 30px;">按照【<strong>队列名称</strong>】进行过滤。队列名称形如：compute。</p><p style="padding-left: 30px;">类型：String</p><p style="padding-left: 30px;">必选：否</p><p style="padding-left: 30px;"><li><strong>node-role</strong></li> <p style="padding-left: 30px;">按照【<strong>节点角色</strong>】进行过滤。节点角色形如：Manager。（Manager：管控节点。Compute：计算节点。Login：登录节点。ManagerBackup：备用管控节点。）</p><p style="padding-left: 30px;">类型：String</p><p style="padding-left: 30px;">必选：否</p><p style="padding-left: 30px;"><li><strong>node-type</strong></li> <p style="padding-left: 30px;">按照【<strong>节点类型</strong>】进行过滤。节点类型形如：STATIC。(STATIC：静态节点。DYNAMIC：弹性节点。)</p><p style="padding-left: 30px;">类型：String</p><p style="padding-left: 30px;">必选：否</p><p style="padding-left: 30px;">每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。
+        /// <ul>
+        ///     <li><strong>queue-name</strong>
+        ///         <p style="padding-left: 30px;">按照【<strong>队列名称</strong>】进行过滤。队列名称形如：compute。</p>
+        ///         <p style="padding-left: 30px;">类型：String</p>
+        ///         <p style="padding-left: 30px;">必选：否</p>
+        ///     </li>
+        ///     <li><strong>node-role</strong>
+        ///         <p style="padding-left: 30px;">按照【<strong>节点角色</strong>】进行过滤。节点角色形如：Manager。（Manager：管控节点。Compute：计算节点。Login：登录节点。ManagerBackup：备用管控节点。）</p>
+        ///         <p style="padding-left: 30px;">类型：String</p>
+        ///         <p style="padding-left: 30px;">必选：否</p>
+        ///     </li>
+        ///     <li><strong>node-type</strong>
+        ///         <p style="padding-left: 30px;">按照【<strong>节点类型</strong>】进行过滤。节点类型形如：STATIC。(STATIC：静态节点。DYNAMIC：弹性节点。)</p>
+        ///         <p style="padding-left: 30px;">类型：String</p>
+        ///         <p style="padding-left: 30px;">必选：否</p>
+        ///     </li>
+        /// </ul>
+        /// <p style="padding-left: 30px;">每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

@@ -143,6 +143,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TriggerTypes")]
         public string[] TriggerTypes{ get; set; }
 
+        /// <summary>
+        /// DLC资源组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DlcGroupName")]
+        public string DlcGroupName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -166,6 +173,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
             this.SetParamArraySimple(map, prefix + "TriggerTypes.", this.TriggerTypes);
+            this.SetParamSimple(map, prefix + "DlcGroupName", this.DlcGroupName);
         }
     }
 }

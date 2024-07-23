@@ -60,6 +60,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("SchemaName")]
         public string SchemaName{ get; set; }
 
+        /// <summary>
+        /// 项目空间ID
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
             this.SetParamSimple(map, prefix + "ConnectionType", this.ConnectionType);
             this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
         }
     }
 }

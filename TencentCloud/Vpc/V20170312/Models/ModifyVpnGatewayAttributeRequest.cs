@@ -48,6 +48,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("BgpAsn")]
         public ulong? BgpAsn{ get; set; }
 
+        /// <summary>
+        /// 服务端最大连接数个数。
+        /// </summary>
+        [JsonProperty("MaxConnection")]
+        public ulong? MaxConnection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "VpnGatewayName", this.VpnGatewayName);
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
             this.SetParamSimple(map, prefix + "BgpAsn", this.BgpAsn);
+            this.SetParamSimple(map, prefix + "MaxConnection", this.MaxConnection);
         }
     }
 }

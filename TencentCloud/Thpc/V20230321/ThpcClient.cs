@@ -28,7 +28,7 @@ namespace TencentCloud.Thpc.V20230321
 
        private const string endpoint = "thpc.tencentcloudapi.com";
        private const string version = "2023-03-21";
-       private const string sdkVersion = "SDK_NET_3.0.1053";
+       private const string sdkVersion = "SDK_NET_3.0.1054";
 
         /// <summary>
         /// Client constructor.
@@ -117,6 +117,27 @@ namespace TencentCloud.Thpc.V20230321
         public AddQueueResponse AddQueueSync(AddQueueRequest req)
         {
             return InternalRequestAsync<AddQueueResponse>(req, "AddQueue")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 (AttachNodes) 用于绑定一个或者多个计算节点指定资源到指定集群中。
+        /// </summary>
+        /// <param name="req"><see cref="AttachNodesRequest"/></param>
+        /// <returns><see cref="AttachNodesResponse"/></returns>
+        public Task<AttachNodesResponse> AttachNodes(AttachNodesRequest req)
+        {
+            return InternalRequestAsync<AttachNodesResponse>(req, "AttachNodes");
+        }
+
+        /// <summary>
+        /// 本接口 (AttachNodes) 用于绑定一个或者多个计算节点指定资源到指定集群中。
+        /// </summary>
+        /// <param name="req"><see cref="AttachNodesRequest"/></param>
+        /// <returns><see cref="AttachNodesResponse"/></returns>
+        public AttachNodesResponse AttachNodesSync(AttachNodesRequest req)
+        {
+            return InternalRequestAsync<AttachNodesResponse>(req, "AttachNodes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -379,6 +400,27 @@ namespace TencentCloud.Thpc.V20230321
         public DescribeQueuesResponse DescribeQueuesSync(DescribeQueuesRequest req)
         {
             return InternalRequestAsync<DescribeQueuesResponse>(req, "DescribeQueues")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 (DetachNodes) 用于将一个或者多个计算节点从集群中移除，但是不销毁指定计算资源。
+        /// </summary>
+        /// <param name="req"><see cref="DetachNodesRequest"/></param>
+        /// <returns><see cref="DetachNodesResponse"/></returns>
+        public Task<DetachNodesResponse> DetachNodes(DetachNodesRequest req)
+        {
+            return InternalRequestAsync<DetachNodesResponse>(req, "DetachNodes");
+        }
+
+        /// <summary>
+        /// 本接口 (DetachNodes) 用于将一个或者多个计算节点从集群中移除，但是不销毁指定计算资源。
+        /// </summary>
+        /// <param name="req"><see cref="DetachNodesRequest"/></param>
+        /// <returns><see cref="DetachNodesResponse"/></returns>
+        public DetachNodesResponse DetachNodesSync(DetachNodesRequest req)
+        {
+            return InternalRequestAsync<DetachNodesResponse>(req, "DetachNodes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

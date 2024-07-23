@@ -120,6 +120,41 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("RouteBroadcastPolicyFlag")]
         public bool? RouteBroadcastPolicyFlag{ get; set; }
 
+        /// <summary>
+        /// 是否开启等价路由功能。`False` 未开启，`True` 开启。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RouteECMPFlag")]
+        public bool? RouteECMPFlag{ get; set; }
+
+        /// <summary>
+        /// 是否开启路由重叠功能。`False` 未开启，`True` 开启。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RouteOverlapFlag")]
+        public bool? RouteOverlapFlag{ get; set; }
+
+        /// <summary>
+        /// 是否开启QOS。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TrafficMarkingPolicyFlag")]
+        public bool? TrafficMarkingPolicyFlag{ get; set; }
+
+        /// <summary>
+        /// 是否开启路由表选择策略。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RouteSelectPolicyFlag")]
+        public bool? RouteSelectPolicyFlag{ get; set; }
+
+        /// <summary>
+        /// 是否开启二层云联网通道。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DirectConnectAccelerateChannelFlag")]
+        public bool? DirectConnectAccelerateChannelFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -141,6 +176,11 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "RouteTableFlag", this.RouteTableFlag);
             this.SetParamSimple(map, prefix + "IsSecurityLock", this.IsSecurityLock);
             this.SetParamSimple(map, prefix + "RouteBroadcastPolicyFlag", this.RouteBroadcastPolicyFlag);
+            this.SetParamSimple(map, prefix + "RouteECMPFlag", this.RouteECMPFlag);
+            this.SetParamSimple(map, prefix + "RouteOverlapFlag", this.RouteOverlapFlag);
+            this.SetParamSimple(map, prefix + "TrafficMarkingPolicyFlag", this.TrafficMarkingPolicyFlag);
+            this.SetParamSimple(map, prefix + "RouteSelectPolicyFlag", this.RouteSelectPolicyFlag);
+            this.SetParamSimple(map, prefix + "DirectConnectAccelerateChannelFlag", this.DirectConnectAccelerateChannelFlag);
         }
     }
 }

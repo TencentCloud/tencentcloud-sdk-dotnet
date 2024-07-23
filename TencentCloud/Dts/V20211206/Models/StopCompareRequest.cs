@@ -36,6 +36,12 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("CompareTaskId")]
         public string CompareTaskId{ get; set; }
 
+        /// <summary>
+        /// 是否强制停止。如果填true，同步任务增量阶段会跳过一致性校验产生的binlog，达到快速恢复任务的效果
+        /// </summary>
+        [JsonProperty("ForceStop")]
+        public bool? ForceStop{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Dts.V20211206.Models
         {
             this.SetParamSimple(map, prefix + "JobId", this.JobId);
             this.SetParamSimple(map, prefix + "CompareTaskId", this.CompareTaskId);
+            this.SetParamSimple(map, prefix + "ForceStop", this.ForceStop);
         }
     }
 }

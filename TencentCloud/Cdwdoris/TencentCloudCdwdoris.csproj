@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{30E1AC6A-DB82-3A63-BE17-56AB4B24E00E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1053</VersionPrefix>
+    <VersionPrefix>3.0.1054</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -78,6 +78,7 @@
     <Compile Include="V20211228\Models\DescribeSlowQueryRecordsResponse.cs" />
     <Compile Include="V20211228\Models\DestroyInstanceRequest.cs" />
     <Compile Include="V20211228\Models\DestroyInstanceResponse.cs" />
+    <Compile Include="V20211228\Models\InstanceDetail.cs" />
     <Compile Include="V20211228\Models\InstanceInfo.cs" />
     <Compile Include="V20211228\Models\InstanceNode.cs" />
     <Compile Include="V20211228\Models\ModifyInstanceRequest.cs" />

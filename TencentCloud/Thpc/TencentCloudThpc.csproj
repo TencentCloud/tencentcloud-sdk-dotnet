@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B259DC45-AEEA-3779-9220-C0A0DBFA50EF}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1053</VersionPrefix>
+    <VersionPrefix>3.0.1054</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -54,6 +54,8 @@
     <Compile Include="V20230321\Models\AddNodesResponse.cs" />
     <Compile Include="V20230321\Models\AddQueueRequest.cs" />
     <Compile Include="V20230321\Models\AddQueueResponse.cs" />
+    <Compile Include="V20230321\Models\AttachNodesRequest.cs" />
+    <Compile Include="V20230321\Models\AttachNodesResponse.cs" />
     <Compile Include="V20230321\Models\CFSOption.cs" />
     <Compile Include="V20230321\Models\CFSOptionOverview.cs" />
     <Compile Include="V20230321\Models\ClusterActivity.cs" />
@@ -85,6 +87,8 @@
     <Compile Include="V20230321\Models\DescribeNodesResponse.cs" />
     <Compile Include="V20230321\Models\DescribeQueuesRequest.cs" />
     <Compile Include="V20230321\Models\DescribeQueuesResponse.cs" />
+    <Compile Include="V20230321\Models\DetachNodesRequest.cs" />
+    <Compile Include="V20230321\Models\DetachNodesResponse.cs" />
     <Compile Include="V20230321\Models\EnhancedService.cs" />
     <Compile Include="V20230321\Models\ExpansionNodeConfig.cs" />
     <Compile Include="V20230321\Models\ExpansionNodeConfigOverview.cs" />

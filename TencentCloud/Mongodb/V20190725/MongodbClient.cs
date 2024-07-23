@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1053";
+       private const string sdkVersion = "SDK_NET_3.0.1054";
 
         /// <summary>
         /// Client constructor.
@@ -176,6 +176,29 @@ namespace TencentCloud.Mongodb.V20190725
         public CreateDBInstanceHourResponse CreateDBInstanceHourSync(CreateDBInstanceHourRequest req)
         {
             return InternalRequestAsync<CreateDBInstanceHourResponse>(req, "CreateDBInstanceHour")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(CreateDBInstanceParamTpl)用于创建云数据库MongoDB实例的参数模板
+        /// **说明：CreateDBInstanceParamTpl API正在公测中，在此期间，该接口仅对公测用户开放**
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBInstanceParamTplRequest"/></param>
+        /// <returns><see cref="CreateDBInstanceParamTplResponse"/></returns>
+        public Task<CreateDBInstanceParamTplResponse> CreateDBInstanceParamTpl(CreateDBInstanceParamTplRequest req)
+        {
+            return InternalRequestAsync<CreateDBInstanceParamTplResponse>(req, "CreateDBInstanceParamTpl");
+        }
+
+        /// <summary>
+        /// 本接口(CreateDBInstanceParamTpl)用于创建云数据库MongoDB实例的参数模板
+        /// **说明：CreateDBInstanceParamTpl API正在公测中，在此期间，该接口仅对公测用户开放**
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBInstanceParamTplRequest"/></param>
+        /// <returns><see cref="CreateDBInstanceParamTplResponse"/></returns>
+        public CreateDBInstanceParamTplResponse CreateDBInstanceParamTplSync(CreateDBInstanceParamTplRequest req)
+        {
+            return InternalRequestAsync<CreateDBInstanceParamTplResponse>(req, "CreateDBInstanceParamTpl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -390,6 +413,52 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// 本接口(DescribeDBInstanceParamTpl )用于查询当前账号下所有MongoDB数据库参数模板
+        /// **说明：DescribeDBInstanceParamTpl  API正在公测中，在此期间，该接口仅对公测用户开放**
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceParamTplRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceParamTplResponse"/></returns>
+        public Task<DescribeDBInstanceParamTplResponse> DescribeDBInstanceParamTpl(DescribeDBInstanceParamTplRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstanceParamTplResponse>(req, "DescribeDBInstanceParamTpl");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeDBInstanceParamTpl )用于查询当前账号下所有MongoDB数据库参数模板
+        /// **说明：DescribeDBInstanceParamTpl  API正在公测中，在此期间，该接口仅对公测用户开放**
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceParamTplRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceParamTplResponse"/></returns>
+        public DescribeDBInstanceParamTplResponse DescribeDBInstanceParamTplSync(DescribeDBInstanceParamTplRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstanceParamTplResponse>(req, "DescribeDBInstanceParamTpl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeDBInstanceParamTplDetail )用于查询MongoDB云数据库实例的参数模板详情。
+        /// **说明：DescribeDBInstanceParamTplDetail  API正在公测中，在此期间，该接口仅对公测用户开放**
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceParamTplDetailRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceParamTplDetailResponse"/></returns>
+        public Task<DescribeDBInstanceParamTplDetailResponse> DescribeDBInstanceParamTplDetail(DescribeDBInstanceParamTplDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstanceParamTplDetailResponse>(req, "DescribeDBInstanceParamTplDetail");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeDBInstanceParamTplDetail )用于查询MongoDB云数据库实例的参数模板详情。
+        /// **说明：DescribeDBInstanceParamTplDetail  API正在公测中，在此期间，该接口仅对公测用户开放**
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceParamTplDetailRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceParamTplDetailResponse"/></returns>
+        public DescribeDBInstanceParamTplDetailResponse DescribeDBInstanceParamTplDetailSync(DescribeDBInstanceParamTplDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstanceParamTplDetailResponse>(req, "DescribeDBInstanceParamTplDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeDBInstances）用于查询云数据库实例列表，支持通过项目ID、实例ID、实例状态等过滤条件来筛选主实例、灾备实例和只读实例信息列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
@@ -533,6 +602,29 @@ namespace TencentCloud.Mongodb.V20190725
         public DescribeTransparentDataEncryptionStatusResponse DescribeTransparentDataEncryptionStatusSync(DescribeTransparentDataEncryptionStatusRequest req)
         {
             return InternalRequestAsync<DescribeTransparentDataEncryptionStatusResponse>(req, "DescribeTransparentDataEncryptionStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DropDBInstanceParamTpl )用于删除云数据库MongoDB实例的参数模板
+        /// **说明：DropDBInstanceParamTpl  API正在公测中，在此期间，该接口仅对公测用户开放**
+        /// </summary>
+        /// <param name="req"><see cref="DropDBInstanceParamTplRequest"/></param>
+        /// <returns><see cref="DropDBInstanceParamTplResponse"/></returns>
+        public Task<DropDBInstanceParamTplResponse> DropDBInstanceParamTpl(DropDBInstanceParamTplRequest req)
+        {
+            return InternalRequestAsync<DropDBInstanceParamTplResponse>(req, "DropDBInstanceParamTpl");
+        }
+
+        /// <summary>
+        /// 本接口(DropDBInstanceParamTpl )用于删除云数据库MongoDB实例的参数模板
+        /// **说明：DropDBInstanceParamTpl  API正在公测中，在此期间，该接口仅对公测用户开放**
+        /// </summary>
+        /// <param name="req"><see cref="DropDBInstanceParamTplRequest"/></param>
+        /// <returns><see cref="DropDBInstanceParamTplResponse"/></returns>
+        public DropDBInstanceParamTplResponse DropDBInstanceParamTplSync(DropDBInstanceParamTplRequest req)
+        {
+            return InternalRequestAsync<DropDBInstanceParamTplResponse>(req, "DropDBInstanceParamTpl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -724,6 +816,29 @@ namespace TencentCloud.Mongodb.V20190725
         public ModifyDBInstanceNetworkAddressResponse ModifyDBInstanceNetworkAddressSync(ModifyDBInstanceNetworkAddressRequest req)
         {
             return InternalRequestAsync<ModifyDBInstanceNetworkAddressResponse>(req, "ModifyDBInstanceNetworkAddress")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(ModifyDBInstanceParamTpl )用于修改MongoDB云数据库实例的参数模板。
+        /// **说明：ModifyDBInstanceParamTpl  API正在公测中，在此期间，该接口仅对公测用户开放**
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceParamTplRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceParamTplResponse"/></returns>
+        public Task<ModifyDBInstanceParamTplResponse> ModifyDBInstanceParamTpl(ModifyDBInstanceParamTplRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceParamTplResponse>(req, "ModifyDBInstanceParamTpl");
+        }
+
+        /// <summary>
+        /// 本接口(ModifyDBInstanceParamTpl )用于修改MongoDB云数据库实例的参数模板。
+        /// **说明：ModifyDBInstanceParamTpl  API正在公测中，在此期间，该接口仅对公测用户开放**
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceParamTplRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceParamTplResponse"/></returns>
+        public ModifyDBInstanceParamTplResponse ModifyDBInstanceParamTplSync(ModifyDBInstanceParamTplRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceParamTplResponse>(req, "ModifyDBInstanceParamTpl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
