@@ -226,6 +226,12 @@ namespace TencentCloud.Mongodb.V20190725.Models
         [JsonProperty("HiddenZone")]
         public string HiddenZone{ get; set; }
 
+        /// <summary>
+        /// 参数模板 ID。参数模板是一组 MongoDB 的参数并为预设置了参数值的集合，将一组有相同诉求的参数及值 存为模板，在创建实例时，可直接引用参数值到新实例。合理使用参数模板，可以提高MongoDB数据库的效率。模板列表从 DescribeDBInstanceParamTpl 接口获取，注意模板支持的版本及实例类型。
+        /// </summary>
+        [JsonProperty("ParamTemplateId")]
+        public string ParamTemplateId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -261,6 +267,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "ReadonlyNodeNum", this.ReadonlyNodeNum);
             this.SetParamArraySimple(map, prefix + "ReadonlyNodeAvailabilityZoneList.", this.ReadonlyNodeAvailabilityZoneList);
             this.SetParamSimple(map, prefix + "HiddenZone", this.HiddenZone);
+            this.SetParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
         }
     }
 }

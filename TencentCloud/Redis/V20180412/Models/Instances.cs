@@ -43,7 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 地域ID。<ul><li>1：广州。</li><li>4：上海。</li><li> 5：香港。</li> <li> 6：多伦多。</li> <li> 7：上海金融。</li> <li> 8：北京。</li> <li> 9：新加坡。</li> <li> 11：深圳金融。</li> <li> 15：美西（硅谷）。</li> </ul>
+        /// 地域ID。<ul><li>1：广州。</li><li>4：上海。</li><li> 5：香港。</li>  <li> 7：上海金融。</li> <li> 8：北京。</li> <li> 9：新加坡。</li> <li> 11：深圳金融。</li> <li> 15：美西（硅谷）。</li> </ul>
         /// </summary>
         [JsonProperty("RegionId")]
         public ulong? RegionId{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Antiddos.V20200309
 
        private const string endpoint = "antiddos.tencentcloudapi.com";
        private const string version = "2020-03-09";
-       private const string sdkVersion = "SDK_NET_3.0.1054";
+       private const string sdkVersion = "SDK_NET_3.0.1055";
 
         /// <summary>
         /// Client constructor.

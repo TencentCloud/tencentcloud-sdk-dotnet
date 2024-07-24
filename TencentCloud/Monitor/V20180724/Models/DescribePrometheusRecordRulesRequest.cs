@@ -25,30 +25,25 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 实例ID
-        /// 
-        /// 示例值：prom-343kafd34
+        /// Prometheus 实例 ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。 示例值：1
+        /// 偏移量，默认为0。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
         /// 返回数量，默认为20，最大值为100。
-        /// 示例值：1
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 仅支持按Name, Values字段过滤:
-        /// - Name = Name
-        ///   按照给定的预聚合名称列表匹配
+        /// 仅支持按Name, Values字段过滤。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

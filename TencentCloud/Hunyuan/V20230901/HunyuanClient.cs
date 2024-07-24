@@ -28,7 +28,7 @@ namespace TencentCloud.Hunyuan.V20230901
 
        private const string endpoint = "hunyuan.tencentcloudapi.com";
        private const string version = "2023-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1054";
+       private const string sdkVersion = "SDK_NET_3.0.1055";
 
         /// <summary>
         /// Client constructor.

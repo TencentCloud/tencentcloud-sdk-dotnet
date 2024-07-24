@@ -31,9 +31,10 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 根据 hashkey 写入相应范围的主题分区
+        /// 该参数已废弃，请勿使用
         /// </summary>
         [JsonProperty("HashKey")]
+        [System.Obsolete]
         public string HashKey{ get; set; }
 
         /// <summary>

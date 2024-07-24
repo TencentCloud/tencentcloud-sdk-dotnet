@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1054";
+       private const string sdkVersion = "SDK_NET_3.0.1055";
 
         /// <summary>
         /// Client constructor.
@@ -986,6 +986,27 @@ namespace TencentCloud.Mongodb.V20190725
         public ResetDBInstancePasswordResponse ResetDBInstancePasswordSync(ResetDBInstancePasswordRequest req)
         {
             return InternalRequestAsync<ResetDBInstancePasswordResponse>(req, "ResetDBInstancePassword")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于重启数据库节点。
+        /// </summary>
+        /// <param name="req"><see cref="RestartNodesRequest"/></param>
+        /// <returns><see cref="RestartNodesResponse"/></returns>
+        public Task<RestartNodesResponse> RestartNodes(RestartNodesRequest req)
+        {
+            return InternalRequestAsync<RestartNodesResponse>(req, "RestartNodes");
+        }
+
+        /// <summary>
+        /// 本接口用于重启数据库节点。
+        /// </summary>
+        /// <param name="req"><see cref="RestartNodesRequest"/></param>
+        /// <returns><see cref="RestartNodesResponse"/></returns>
+        public RestartNodesResponse RestartNodesSync(RestartNodesRequest req)
+        {
+            return InternalRequestAsync<RestartNodesResponse>(req, "RestartNodes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

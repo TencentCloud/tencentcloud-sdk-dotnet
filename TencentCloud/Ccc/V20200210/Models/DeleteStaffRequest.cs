@@ -31,7 +31,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 待删除客服邮箱列表
+        /// 待删除客服邮箱列表，一次最大支持200个。
         /// </summary>
         [JsonProperty("StaffList")]
         public string[] StaffList{ get; set; }

@@ -25,18 +25,6 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 被授企业id
-        /// </summary>
-        [JsonProperty("AuthorizedOrganizationId")]
-        public string AuthorizedOrganizationId{ get; set; }
-
-        /// <summary>
-        /// 指定印章类型，指定后只能选择该类型的印章进行授权支持以下印章类型：- OFFICIAL : 企业公章- CONTRACT : 合同专用章- FINANCE : 财务专用章- PERSONNEL : 人事专用章
-        /// </summary>
-        [JsonProperty("SealTypes")]
-        public string[] SealTypes{ get; set; }
-
-        /// <summary>
         /// 代理企业和员工的信息。<br/>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
         /// </summary>
         [JsonProperty("Agent")]
@@ -48,16 +36,44 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
+        /// <summary>
+        /// 被授企业id/授权方企业id，和AuthorizedOrganizationName二选一传入
+        /// </summary>
+        [JsonProperty("AuthorizedOrganizationId")]
+        public string AuthorizedOrganizationId{ get; set; }
+
+        /// <summary>
+        /// 被授企业名称/授权方企业名称，和AuthorizedOrganizationId二选一传入
+        /// </summary>
+        [JsonProperty("AuthorizedOrganizationName")]
+        public string AuthorizedOrganizationName{ get; set; }
+
+        /// <summary>
+        /// 指定印章类型，指定后只能选择该类型的印章进行授权支持以下印章类型：- OFFICIAL : 企业公章- CONTRACT : 合同专用章- FINANCE : 财务专用章- PERSONNEL : 人事专用章
+        /// </summary>
+        [JsonProperty("SealTypes")]
+        public string[] SealTypes{ get; set; }
+
+        /// <summary>
+        /// 他方授权给我方：
+        /// - false：我方授权他方，AuthorizedOrganizationName代表【被授权方】企业名称
+        /// - true：他方授权我方，AuthorizedOrganizationName代表【授权方】企业名称
+        /// </summary>
+        [JsonProperty("AuthToMe")]
+        public bool? AuthToMe{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AuthorizedOrganizationId", this.AuthorizedOrganizationId);
-            this.SetParamArraySimple(map, prefix + "SealTypes.", this.SealTypes);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamSimple(map, prefix + "AuthorizedOrganizationId", this.AuthorizedOrganizationId);
+            this.SetParamSimple(map, prefix + "AuthorizedOrganizationName", this.AuthorizedOrganizationName);
+            this.SetParamArraySimple(map, prefix + "SealTypes.", this.SealTypes);
+            this.SetParamSimple(map, prefix + "AuthToMe", this.AuthToMe);
         }
     }
 }

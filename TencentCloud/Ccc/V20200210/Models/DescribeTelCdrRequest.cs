@@ -25,13 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 起始时间戳，Unix 秒级时间戳
+        /// 起始时间戳，Unix 秒级时间戳，最大支持近180天。
         /// </summary>
         [JsonProperty("StartTimeStamp")]
         public long? StartTimeStamp{ get; set; }
 
         /// <summary>
-        /// 结束时间戳，Unix 秒级时间戳
+        /// 结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。
         /// </summary>
         [JsonProperty("EndTimeStamp")]
         public long? EndTimeStamp{ get; set; }

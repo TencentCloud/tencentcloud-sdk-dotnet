@@ -61,6 +61,12 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string Info{ get; set; }
 
         /// <summary>
+        /// 任务过滤条件，支持多个关键字匹配，与Info参数互斥。
+        /// </summary>
+        [JsonProperty("Infos")]
+        public string[] Infos{ get; set; }
+
+        /// <summary>
         /// 任务过滤条件，用户类型。
         /// </summary>
         [JsonProperty("User")]
@@ -90,6 +96,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "DB", this.DB);
             this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamSimple(map, prefix + "Info", this.Info);
+            this.SetParamArraySimple(map, prefix + "Infos.", this.Infos);
             this.SetParamSimple(map, prefix + "User", this.User);
             this.SetParamSimple(map, prefix + "Time", this.Time);
             this.SetParamSimple(map, prefix + "Product", this.Product);
