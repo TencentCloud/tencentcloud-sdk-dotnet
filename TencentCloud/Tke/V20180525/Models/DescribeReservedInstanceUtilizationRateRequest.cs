@@ -15,21 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Emr.V20190103.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TriggerConditions : AbstractModel
+    public class DescribeReservedInstanceUtilizationRateRequest : AbstractModel
     {
         
         /// <summary>
-        /// 规则触发条件数组。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 可用区
         /// </summary>
-        [JsonProperty("Conditions")]
-        public TriggerCondition[] Conditions{ get; set; }
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
+        /// <summary>
+        /// 集群 ID
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        ///  节点名称
+        /// </summary>
+        [JsonProperty("NodeName")]
+        public string NodeName{ get; set; }
 
 
         /// <summary>
@@ -37,7 +48,9 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Conditions.", this.Conditions);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "NodeName", this.NodeName);
         }
     }
 }

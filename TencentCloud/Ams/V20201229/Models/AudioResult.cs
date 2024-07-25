@@ -61,7 +61,7 @@ namespace TencentCloud.Ams.V20201229.Models
         public string Text{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回音频片段存储的链接地址，该地址有效期为1天。
+        /// 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Url")]
@@ -111,6 +111,24 @@ namespace TencentCloud.Ams.V20201229.Models
         [JsonProperty("RecognitionResults")]
         public RecognitionResult[] RecognitionResults{ get; set; }
 
+        /// <summary>
+        /// 说话人结果
+        /// </summary>
+        [JsonProperty("SpeakerResults")]
+        public SpeakerResults[] SpeakerResults{ get; set; }
+
+        /// <summary>
+        /// 歌曲识别结果
+        /// </summary>
+        [JsonProperty("LabelResults")]
+        public LabelResults[] LabelResults{ get; set; }
+
+        /// <summary>
+        /// 出行结果
+        /// </summary>
+        [JsonProperty("TravelResults")]
+        public TravelResults[] TravelResults{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -130,6 +148,9 @@ namespace TencentCloud.Ams.V20201229.Models
             this.SetParamArrayObj(map, prefix + "LanguageResults.", this.LanguageResults);
             this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
             this.SetParamArrayObj(map, prefix + "RecognitionResults.", this.RecognitionResults);
+            this.SetParamArrayObj(map, prefix + "SpeakerResults.", this.SpeakerResults);
+            this.SetParamArrayObj(map, prefix + "LabelResults.", this.LabelResults);
+            this.SetParamArrayObj(map, prefix + "TravelResults.", this.TravelResults);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace TencentCloud.Bi.V20220105.Models
         public ulong? PageId{ get; set; }
 
         /// <summary>
-        /// page表示嵌出页面，panel表嵌出整个看板
+        /// page表示嵌出页面，panel表示嵌出整个看板
         /// </summary>
         [JsonProperty("Scope")]
         public string Scope{ get; set; }

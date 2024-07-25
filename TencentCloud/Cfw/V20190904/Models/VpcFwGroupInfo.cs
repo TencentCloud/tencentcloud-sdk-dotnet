@@ -108,6 +108,20 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("CrossUserMode")]
         public string CrossUserMode{ get; set; }
 
+        /// <summary>
+        /// 云联网模式下，当前实例是否需要开启重叠路由开关，1：需要开启，0：不需要开启
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NeedSwitchCcnOverlap")]
+        public long? NeedSwitchCcnOverlap{ get; set; }
+
+        /// <summary>
+        /// 云联网模式下，实例关联的云联网id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CcnId")]
+        public string CcnId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +140,8 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
             this.SetParamSimple(map, prefix + "CdcName", this.CdcName);
             this.SetParamSimple(map, prefix + "CrossUserMode", this.CrossUserMode);
+            this.SetParamSimple(map, prefix + "NeedSwitchCcnOverlap", this.NeedSwitchCcnOverlap);
+            this.SetParamSimple(map, prefix + "CcnId", this.CcnId);
         }
     }
 }

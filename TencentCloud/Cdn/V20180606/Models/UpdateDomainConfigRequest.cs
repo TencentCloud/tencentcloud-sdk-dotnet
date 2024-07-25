@@ -326,6 +326,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("HttpsBilling")]
         public HttpsBilling HttpsBilling{ get; set; }
 
+        /// <summary>
+        /// 参数黑名单
+        /// </summary>
+        [JsonProperty("ParamFilter")]
+        public ParamFilter ParamFilter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -381,6 +387,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "QnPrivateAccess.", this.QnPrivateAccess);
             this.SetParamObj(map, prefix + "OthersPrivateAccess.", this.OthersPrivateAccess);
             this.SetParamObj(map, prefix + "HttpsBilling.", this.HttpsBilling);
+            this.SetParamObj(map, prefix + "ParamFilter.", this.ParamFilter);
         }
     }
 }

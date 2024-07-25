@@ -61,7 +61,7 @@ namespace TencentCloud.Vm.V20210922.Models
         public string Text{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回音频片段存储的链接地址，该地址有效期为1天。
+        /// 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Url")]

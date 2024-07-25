@@ -54,6 +54,18 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// DNS地址，最多支持4个，第1个默认为主，其余为备。	
+        /// </summary>
+        [JsonProperty("DnsServers")]
+        public string[] DnsServers{ get; set; }
+
+        /// <summary>
+        /// 域名。
+        /// </summary>
+        [JsonProperty("DomainName")]
+        public string DomainName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "VpcName", this.VpcName);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamArraySimple(map, prefix + "DnsServers.", this.DnsServers);
+            this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
         }
     }
 }

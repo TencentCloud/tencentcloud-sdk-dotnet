@@ -30,6 +30,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// 日志类型
+        /// </summary>
+        [JsonProperty("LogType")]
+        public string LogType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "LogType", this.LogType);
         }
     }
 }

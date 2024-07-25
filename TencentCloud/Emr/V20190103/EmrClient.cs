@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1055";
+       private const string sdkVersion = "SDK_NET_3.0.1056";
 
         /// <summary>
         /// Client constructor.
@@ -535,6 +535,27 @@ namespace TencentCloud.Emr.V20190103
         public DescribeResourceScheduleResponse DescribeResourceScheduleSync(DescribeResourceScheduleRequest req)
         {
             return InternalRequestAsync<DescribeResourceScheduleResponse>(req, "DescribeResourceSchedule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取trino查询结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrinoQueryInfoRequest"/></param>
+        /// <returns><see cref="DescribeTrinoQueryInfoResponse"/></returns>
+        public Task<DescribeTrinoQueryInfoResponse> DescribeTrinoQueryInfo(DescribeTrinoQueryInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeTrinoQueryInfoResponse>(req, "DescribeTrinoQueryInfo");
+        }
+
+        /// <summary>
+        /// 获取trino查询结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrinoQueryInfoRequest"/></param>
+        /// <returns><see cref="DescribeTrinoQueryInfoResponse"/></returns>
+        public DescribeTrinoQueryInfoResponse DescribeTrinoQueryInfoSync(DescribeTrinoQueryInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeTrinoQueryInfoResponse>(req, "DescribeTrinoQueryInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

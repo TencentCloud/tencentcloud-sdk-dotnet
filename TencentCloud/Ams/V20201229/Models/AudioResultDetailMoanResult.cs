@@ -53,6 +53,7 @@ namespace TencentCloud.Ams.V20201229.Models
         /// *内测中，敬请期待*
         /// </summary>
         [JsonProperty("SubLabelCode")]
+        [System.Obsolete]
         public string SubLabelCode{ get; set; }
 
         /// <summary>

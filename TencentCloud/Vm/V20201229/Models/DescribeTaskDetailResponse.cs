@@ -110,14 +110,14 @@ namespace TencentCloud.Vm.V20201229.Models
         public string UpdatedAt{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
+        /// 该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageSegments")]
         public ImageSegments[] ImageSegments{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
+        /// 该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AudioSegments")]
@@ -145,6 +145,34 @@ namespace TencentCloud.Vm.V20201229.Models
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
+
+        /// <summary>
+        /// 该字段用于返回检测结果明细数据相关的cos url
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SegmentCosUrlList")]
+        public SegmentCosUrlList SegmentCosUrlList{ get; set; }
+
+        /// <summary>
+        /// 该字段用于返回音频审核的ASR识别结果
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AudioText")]
+        public string AudioText{ get; set; }
+
+        /// <summary>
+        /// 在秒后重试
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TryInSeconds")]
+        public long? TryInSeconds{ get; set; }
+
+        /// <summary>
+        /// 该字段用于返回音频文件识别出的对应文本内容。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Asrs")]
+        public RcbAsr[] Asrs{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -175,6 +203,10 @@ namespace TencentCloud.Vm.V20201229.Models
             this.SetParamSimple(map, prefix + "ErrorType", this.ErrorType);
             this.SetParamSimple(map, prefix + "ErrorDescription", this.ErrorDescription);
             this.SetParamSimple(map, prefix + "Label", this.Label);
+            this.SetParamObj(map, prefix + "SegmentCosUrlList.", this.SegmentCosUrlList);
+            this.SetParamSimple(map, prefix + "AudioText", this.AudioText);
+            this.SetParamSimple(map, prefix + "TryInSeconds", this.TryInSeconds);
+            this.SetParamArrayObj(map, prefix + "Asrs.", this.Asrs);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

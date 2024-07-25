@@ -38,6 +38,13 @@ namespace TencentCloud.Ams.V20201229.Models
         [JsonProperty("Result")]
         public AudioResult Result{ get; set; }
 
+        /// <summary>
+        /// 创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreatedAt")]
+        public string CreatedAt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Ams.V20201229.Models
         {
             this.SetParamSimple(map, prefix + "OffsetTime", this.OffsetTime);
             this.SetParamObj(map, prefix + "Result.", this.Result);
+            this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         }
     }
 }

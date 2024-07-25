@@ -65,6 +65,13 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public long? LogoAdd{ get; set; }
 
         /// <summary>
+        /// 标识内容设置。
+        /// 默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+        /// </summary>
+        [JsonProperty("LogoParam")]
+        public LogoParam LogoParam{ get; set; }
+
+        /// <summary>
         /// 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
         /// </summary>
         [JsonProperty("RspImgType")]
@@ -81,6 +88,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamSimple(map, prefix + "Style", this.Style);
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
             this.SetParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
+            this.SetParamObj(map, prefix + "LogoParam.", this.LogoParam);
             this.SetParamSimple(map, prefix + "RspImgType", this.RspImgType);
         }
     }

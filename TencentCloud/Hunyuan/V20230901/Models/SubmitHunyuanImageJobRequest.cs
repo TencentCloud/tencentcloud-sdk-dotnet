@@ -48,14 +48,19 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public string Resolution{ get; set; }
 
         /// <summary>
-        /// 为生成结果图添加显式水印标识的开关，默认为1。  
-        /// 1：添加。  
-        /// 0：不添加。  
-        /// 其他数值：默认按1处理。  
-        /// 建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。
+        /// 图片生成数量。
+        /// 支持1 ~ 4张，默认生成1张。
         /// </summary>
-        [JsonProperty("LogoAdd")]
-        public long? LogoAdd{ get; set; }
+        [JsonProperty("Num")]
+        public long? Num{ get; set; }
+
+        /// <summary>
+        /// 随机种子，默认随机。
+        /// 不传：随机种子生成。
+        /// 正数：固定种子生成。
+        /// </summary>
+        [JsonProperty("Seed")]
+        public long? Seed{ get; set; }
 
         /// <summary>
         /// prompt 扩写开关。1为开启，0为关闭，不传默认开启。
@@ -66,6 +71,23 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("Revise")]
         public long? Revise{ get; set; }
 
+        /// <summary>
+        /// 为生成结果图添加显式水印标识的开关，默认为1。  
+        /// 1：添加。  
+        /// 0：不添加。  
+        /// 其他数值：默认按1处理。  
+        /// 建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。
+        /// </summary>
+        [JsonProperty("LogoAdd")]
+        public long? LogoAdd{ get; set; }
+
+        /// <summary>
+        /// 标识内容设置。
+        /// 默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+        /// </summary>
+        [JsonProperty("LogoParam")]
+        public LogoParam LogoParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,8 +97,11 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
             this.SetParamSimple(map, prefix + "Style", this.Style);
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
-            this.SetParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
+            this.SetParamSimple(map, prefix + "Num", this.Num);
+            this.SetParamSimple(map, prefix + "Seed", this.Seed);
             this.SetParamSimple(map, prefix + "Revise", this.Revise);
+            this.SetParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
+            this.SetParamObj(map, prefix + "LogoParam.", this.LogoParam);
         }
     }
 }

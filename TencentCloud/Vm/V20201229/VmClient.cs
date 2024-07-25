@@ -28,7 +28,7 @@ namespace TencentCloud.Vm.V20201229
 
        private const string endpoint = "vm.tencentcloudapi.com";
        private const string version = "2020-12-29";
-       private const string sdkVersion = "SDK_NET_3.0.1055";
+       private const string sdkVersion = "SDK_NET_3.0.1056";
 
         /// <summary>
         /// Client constructor.
@@ -174,9 +174,7 @@ namespace TencentCloud.Vm.V20201229
         }
 
         /// <summary>
-        /// 通过查看任务详情 DescribeTaskDetail 接口，可主动轮询获取检测结果详情。<br>
-        /// 
-        /// 默认接口请求频率限制：**200次/秒**。
+        /// 通过查看任务详情 DescribeTaskDetail 接口，可主动轮询获取检测结果详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskDetailRequest"/></param>
         /// <returns><see cref="DescribeTaskDetailResponse"/></returns>
@@ -186,9 +184,7 @@ namespace TencentCloud.Vm.V20201229
         }
 
         /// <summary>
-        /// 通过查看任务详情 DescribeTaskDetail 接口，可主动轮询获取检测结果详情。<br>
-        /// 
-        /// 默认接口请求频率限制：**200次/秒**。
+        /// 通过查看任务详情 DescribeTaskDetail 接口，可主动轮询获取检测结果详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskDetailRequest"/></param>
         /// <returns><see cref="DescribeTaskDetailResponse"/></returns>

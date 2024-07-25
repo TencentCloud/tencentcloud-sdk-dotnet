@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1055";
+       private const string sdkVersion = "SDK_NET_3.0.1056";
 
         /// <summary>
         /// Client constructor.
@@ -1104,6 +1104,27 @@ namespace TencentCloud.Cfw.V20190904
         public DescribeNatAcRuleResponse DescribeNatAcRuleSync(DescribeNatAcRuleRequest req)
         {
             return InternalRequestAsync<DescribeNatAcRuleResponse>(req, "DescribeNatAcRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Nat防火墙Dnat规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatFwDnatRuleRequest"/></param>
+        /// <returns><see cref="DescribeNatFwDnatRuleResponse"/></returns>
+        public Task<DescribeNatFwDnatRuleResponse> DescribeNatFwDnatRule(DescribeNatFwDnatRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeNatFwDnatRuleResponse>(req, "DescribeNatFwDnatRule");
+        }
+
+        /// <summary>
+        /// 查询Nat防火墙Dnat规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatFwDnatRuleRequest"/></param>
+        /// <returns><see cref="DescribeNatFwDnatRuleResponse"/></returns>
+        public DescribeNatFwDnatRuleResponse DescribeNatFwDnatRuleSync(DescribeNatFwDnatRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeNatFwDnatRuleResponse>(req, "DescribeNatFwDnatRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

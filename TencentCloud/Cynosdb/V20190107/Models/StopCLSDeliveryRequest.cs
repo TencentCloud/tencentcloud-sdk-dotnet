@@ -36,6 +36,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("CLSTopicIds")]
         public string[] CLSTopicIds{ get; set; }
 
+        /// <summary>
+        /// 日志类型
+        /// </summary>
+        [JsonProperty("LogType")]
+        public string LogType{ get; set; }
+
+        /// <summary>
+        /// 是否维护时间运行
+        /// </summary>
+        [JsonProperty("IsInMaintainPeriod")]
+        public string IsInMaintainPeriod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamArraySimple(map, prefix + "CLSTopicIds.", this.CLSTopicIds);
+            this.SetParamSimple(map, prefix + "LogType", this.LogType);
+            this.SetParamSimple(map, prefix + "IsInMaintainPeriod", this.IsInMaintainPeriod);
         }
     }
 }

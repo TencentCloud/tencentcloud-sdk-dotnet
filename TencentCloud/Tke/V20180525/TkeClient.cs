@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1055";
+       private const string sdkVersion = "SDK_NET_3.0.1056";
 
         /// <summary>
         /// Client constructor.
@@ -3120,6 +3120,27 @@ namespace TencentCloud.Tke.V20180525
         public DescribeRegionsResponse DescribeRegionsSync(DescribeRegionsRequest req)
         {
             return InternalRequestAsync<DescribeRegionsResponse>(req, "DescribeRegions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询各种规格类型的预留券使用率
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReservedInstanceUtilizationRateRequest"/></param>
+        /// <returns><see cref="DescribeReservedInstanceUtilizationRateResponse"/></returns>
+        public Task<DescribeReservedInstanceUtilizationRateResponse> DescribeReservedInstanceUtilizationRate(DescribeReservedInstanceUtilizationRateRequest req)
+        {
+            return InternalRequestAsync<DescribeReservedInstanceUtilizationRateResponse>(req, "DescribeReservedInstanceUtilizationRate");
+        }
+
+        /// <summary>
+        /// 查询各种规格类型的预留券使用率
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReservedInstanceUtilizationRateRequest"/></param>
+        /// <returns><see cref="DescribeReservedInstanceUtilizationRateResponse"/></returns>
+        public DescribeReservedInstanceUtilizationRateResponse DescribeReservedInstanceUtilizationRateSync(DescribeReservedInstanceUtilizationRateRequest req)
+        {
+            return InternalRequestAsync<DescribeReservedInstanceUtilizationRateResponse>(req, "DescribeReservedInstanceUtilizationRate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

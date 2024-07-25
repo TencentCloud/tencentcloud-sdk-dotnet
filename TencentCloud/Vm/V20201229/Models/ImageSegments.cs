@@ -36,6 +36,20 @@ namespace TencentCloud.Vm.V20201229.Models
         [JsonProperty("Result")]
         public ImageResult Result{ get; set; }
 
+        /// <summary>
+        /// 该字段用于返回视频片段的具体截帧审核时间。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreatedAt")]
+        public string CreatedAt{ get; set; }
+
+        /// <summary>
+        /// 该字段用于返回视频片段的截帧时间，单位为豪秒。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OffsetusTime")]
+        public string OffsetusTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +58,8 @@ namespace TencentCloud.Vm.V20201229.Models
         {
             this.SetParamSimple(map, prefix + "OffsetTime", this.OffsetTime);
             this.SetParamObj(map, prefix + "Result.", this.Result);
+            this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
+            this.SetParamSimple(map, prefix + "OffsetusTime", this.OffsetusTime);
         }
     }
 }

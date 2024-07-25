@@ -115,7 +115,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string BackupZone{ get; set; }
 
         /// <summary>
-        /// 克隆实例类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为通用型。
+        /// 克隆实例类型。支持值包括："UNIVERSAL" - 通用型实例，"EXCLUSIVE" - 独享型实例，"CLOUD_NATIVE_CLUSTER" - 集群版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 集群版加强型。不指定则默认为通用型。
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
@@ -162,6 +162,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
+        /// <summary>
+        /// 集群版节点拓扑配置。
+        /// </summary>
+        [JsonProperty("ClusterTopology")]
+        public ClusterTopology ClusterTopology{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +197,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "PayType", this.PayType);
             this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamObj(map, prefix + "ClusterTopology.", this.ClusterTopology);
         }
     }
 }

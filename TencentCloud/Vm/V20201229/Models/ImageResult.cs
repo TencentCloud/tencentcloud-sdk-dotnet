@@ -61,7 +61,7 @@ namespace TencentCloud.Vm.V20201229.Models
         public ImageResultResult[] Results{ get; set; }
 
         /// <summary>
-        /// 该字段用于返回审核结果的访问链接（URL），图片支持PNG、JPG、JPEG、BMP、GIF、WEBP格式。<br>备注：数据**默认有效期为12小时**。如您需要更长时间的保存，请在数据储存的COS桶中配置对应的储存时长。
+        /// 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Url")]
@@ -81,6 +81,13 @@ namespace TencentCloud.Vm.V20201229.Models
         [JsonProperty("SubLabel")]
         public string SubLabel{ get; set; }
 
+        /// <summary>
+        /// 该字段用于返回仅识别图片元素的模型结果；包括：场景模型命中的标签、置信度和位置信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RecognitionResults")]
+        public RecognitionResult[] RecognitionResults{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -95,6 +102,7 @@ namespace TencentCloud.Vm.V20201229.Models
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
+            this.SetParamArrayObj(map, prefix + "RecognitionResults.", this.RecognitionResults);
         }
     }
 }

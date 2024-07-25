@@ -37,12 +37,6 @@ namespace TencentCloud.Emr.V20190103.Models
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
-        /// </summary>
-        [JsonProperty("Placement")]
-        public Placement Placement{ get; set; }
-
-        /// <summary>
         /// 实例计费模式。此处只支持取值为1，表示包年包月。
         /// </summary>
         [JsonProperty("PayMode")]
@@ -63,6 +57,12 @@ namespace TencentCloud.Emr.V20190103.Models
         public string Currency{ get; set; }
 
         /// <summary>
+        /// 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+        /// </summary>
+        [JsonProperty("Placement")]
+        public Placement Placement{ get; set; }
+
+        /// <summary>
         /// 是否按量转包年包月。0：否，1：是。
         /// </summary>
         [JsonProperty("ModifyPayMode")]
@@ -76,10 +76,10 @@ namespace TencentCloud.Emr.V20190103.Models
         {
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
-            this.SetParamObj(map, prefix + "Placement.", this.Placement);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
             this.SetParamSimple(map, prefix + "Currency", this.Currency);
+            this.SetParamObj(map, prefix + "Placement.", this.Placement);
             this.SetParamSimple(map, prefix + "ModifyPayMode", this.ModifyPayMode);
         }
     }

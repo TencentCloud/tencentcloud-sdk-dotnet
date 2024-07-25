@@ -504,6 +504,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("OthersPrivateAccess")]
         public OthersPrivateAccess OthersPrivateAccess{ get; set; }
 
+        /// <summary>
+        /// 参数黑名单
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ParamFilter")]
+        public ParamFilter ParamFilter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -576,6 +583,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "QnPrivateAccess.", this.QnPrivateAccess);
             this.SetParamObj(map, prefix + "HttpsBilling.", this.HttpsBilling);
             this.SetParamObj(map, prefix + "OthersPrivateAccess.", this.OthersPrivateAccess);
+            this.SetParamObj(map, prefix + "ParamFilter.", this.ParamFilter);
         }
     }
 }

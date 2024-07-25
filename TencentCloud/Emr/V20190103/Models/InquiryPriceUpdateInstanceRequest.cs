@@ -41,18 +41,18 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 节点变配的目标配置。
-        /// </summary>
-        [JsonProperty("UpdateSpec")]
-        public UpdateInstanceSettings UpdateSpec{ get; set; }
-
-        /// <summary>
         /// 实例计费模式。取值范围：
         /// <li>0：表示按量计费。</li>
         /// <li>1：表示包年包月。</li>
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
+
+        /// <summary>
+        /// 节点变配的目标配置。
+        /// </summary>
+        [JsonProperty("UpdateSpec")]
+        public UpdateInstanceSettings UpdateSpec{ get; set; }
 
         /// <summary>
         /// 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
@@ -81,8 +81,8 @@ namespace TencentCloud.Emr.V20190103.Models
         {
             this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
-            this.SetParamObj(map, prefix + "UpdateSpec.", this.UpdateSpec);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamObj(map, prefix + "UpdateSpec.", this.UpdateSpec);
             this.SetParamObj(map, prefix + "Placement.", this.Placement);
             this.SetParamSimple(map, prefix + "Currency", this.Currency);
             this.SetParamArraySimple(map, prefix + "ResourceIdList.", this.ResourceIdList);

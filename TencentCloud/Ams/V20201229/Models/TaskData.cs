@@ -99,6 +99,13 @@ namespace TencentCloud.Ams.V20201229.Models
         [JsonProperty("UpdatedAt")]
         public string UpdatedAt{ get; set; }
 
+        /// <summary>
+        /// 任务信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InputInfo")]
+        public InputInfo InputInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,6 +123,7 @@ namespace TencentCloud.Ams.V20201229.Models
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
             this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
             this.SetParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
+            this.SetParamObj(map, prefix + "InputInfo.", this.InputInfo);
         }
     }
 }
