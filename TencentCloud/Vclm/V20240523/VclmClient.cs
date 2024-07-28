@@ -28,7 +28,7 @@ namespace TencentCloud.Vclm.V20240523
 
        private const string endpoint = "vclm.tencentcloudapi.com";
        private const string version = "2024-05-23";
-       private const string sdkVersion = "SDK_NET_3.0.1056";
+       private const string sdkVersion = "SDK_NET_3.0.1057";
 
         /// <summary>
         /// Client constructor.
@@ -96,6 +96,29 @@ namespace TencentCloud.Vclm.V20240523
         }
 
         /// <summary>
+        /// 用于查询图片唱演任务。
+        /// 支持提交音频和图片生成唱演视频，满足社交娱乐、互动营销等场景的需求。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePortraitSingJobRequest"/></param>
+        /// <returns><see cref="DescribePortraitSingJobResponse"/></returns>
+        public Task<DescribePortraitSingJobResponse> DescribePortraitSingJob(DescribePortraitSingJobRequest req)
+        {
+            return InternalRequestAsync<DescribePortraitSingJobResponse>(req, "DescribePortraitSingJob");
+        }
+
+        /// <summary>
+        /// 用于查询图片唱演任务。
+        /// 支持提交音频和图片生成唱演视频，满足社交娱乐、互动营销等场景的需求。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePortraitSingJobRequest"/></param>
+        /// <returns><see cref="DescribePortraitSingJobResponse"/></returns>
+        public DescribePortraitSingJobResponse DescribePortraitSingJobSync(DescribePortraitSingJobRequest req)
+        {
+            return InternalRequestAsync<DescribePortraitSingJobResponse>(req, "DescribePortraitSingJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于查询视频风格化任务。视频风格化支持将输入视频生成特定风格的视频。生成后的视频画面风格多样、流畅自然，能够满足社交娱乐、互动营销、视频素材制作等场景的需求。
         /// </summary>
         /// <param name="req"><see cref="DescribeVideoStylizationJobRequest"/></param>
@@ -155,6 +178,29 @@ namespace TencentCloud.Vclm.V20240523
         public SubmitImageAnimateJobResponse SubmitImageAnimateJobSync(SubmitImageAnimateJobRequest req)
         {
             return InternalRequestAsync<SubmitImageAnimateJobResponse>(req, "SubmitImageAnimateJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于提交图片唱演任务。
+        /// 支持提交音频和图片生成唱演视频，满足社交娱乐、互动营销等场景的需求。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitPortraitSingJobRequest"/></param>
+        /// <returns><see cref="SubmitPortraitSingJobResponse"/></returns>
+        public Task<SubmitPortraitSingJobResponse> SubmitPortraitSingJob(SubmitPortraitSingJobRequest req)
+        {
+            return InternalRequestAsync<SubmitPortraitSingJobResponse>(req, "SubmitPortraitSingJob");
+        }
+
+        /// <summary>
+        /// 用于提交图片唱演任务。
+        /// 支持提交音频和图片生成唱演视频，满足社交娱乐、互动营销等场景的需求。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitPortraitSingJobRequest"/></param>
+        /// <returns><see cref="SubmitPortraitSingJobResponse"/></returns>
+        public SubmitPortraitSingJobResponse SubmitPortraitSingJobSync(SubmitPortraitSingJobRequest req)
+        {
+            return InternalRequestAsync<SubmitPortraitSingJobResponse>(req, "SubmitPortraitSingJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

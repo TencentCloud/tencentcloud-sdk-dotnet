@@ -145,6 +145,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public RailwayTicketInfo RailwayTicketInfo{ get; set; }
 
         /// <summary>
+        /// 发票标题
+        /// </summary>
+        [JsonProperty("InvoiceTitle")]
+        public string InvoiceTitle{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -175,6 +181,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArrayObj(map, prefix + "GoodsInfos.", this.GoodsInfos);
             this.SetParamObj(map, prefix + "AirTicketInfo.", this.AirTicketInfo);
             this.SetParamObj(map, prefix + "RailwayTicketInfo.", this.RailwayTicketInfo);
+            this.SetParamSimple(map, prefix + "InvoiceTitle", this.InvoiceTitle);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

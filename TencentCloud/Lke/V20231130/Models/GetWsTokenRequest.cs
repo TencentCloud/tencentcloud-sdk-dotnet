@@ -31,19 +31,19 @@ namespace TencentCloud.Lke.V20231130.Models
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 应用AppKey
+        /// 应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取）
         /// </summary>
         [JsonProperty("BotAppKey")]
         public string BotAppKey{ get; set; }
 
         /// <summary>
-        /// 坐席ID
+        /// 访客ID（外部输入，建议唯一，标识当前接入会话的用户）
         /// </summary>
         [JsonProperty("VisitorBizId")]
         public string VisitorBizId{ get; set; }
 
         /// <summary>
-        /// 坐席标签
+        /// 知识标签（用于知识库中知识的检索过滤）
         /// </summary>
         [JsonProperty("VisitorLabels")]
         public GetWsTokenReq_Label[] VisitorLabels{ get; set; }

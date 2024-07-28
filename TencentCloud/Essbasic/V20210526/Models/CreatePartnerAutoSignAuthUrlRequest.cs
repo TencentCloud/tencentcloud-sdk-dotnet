@@ -72,6 +72,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("SealTypes")]
         public string[] SealTypes{ get; set; }
 
+        /// <summary>
+        /// 他方授权给我方：- false：我方授权他方，AuthorizedOrganizationName代表【被授权方】企业名称- true：他方授权我方，AuthorizedOrganizationName代表【授权方】企业名称
+        /// </summary>
+        [JsonProperty("AuthToMe")]
+        public bool? AuthToMe{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -83,6 +89,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "AuthorizedOrganizationName", this.AuthorizedOrganizationName);
             this.SetParamSimple(map, prefix + "PlatformAppAuthorization", this.PlatformAppAuthorization);
             this.SetParamArraySimple(map, prefix + "SealTypes.", this.SealTypes);
+            this.SetParamSimple(map, prefix + "AuthToMe", this.AuthToMe);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// token值
+        /// token值（有效期60s）
         /// </summary>
         [JsonProperty("Token")]
         public string Token{ get; set; }
 
         /// <summary>
-        /// 余额; 余额大于 0 时表示有效.
+        /// 余额; 余额大于 0 时表示有效
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Balance")]

@@ -28,7 +28,7 @@ namespace TencentCloud.Lcic.V20220817
 
        private const string endpoint = "lcic.tencentcloudapi.com";
        private const string version = "2022-08-17";
-       private const string sdkVersion = "SDK_NET_3.0.1056";
+       private const string sdkVersion = "SDK_NET_3.0.1057";
 
         /// <summary>
         /// Client constructor.
@@ -1318,6 +1318,27 @@ namespace TencentCloud.Lcic.V20220817
         public UnbindDocumentFromRoomResponse UnbindDocumentFromRoomSync(UnbindDocumentFromRoomRequest req)
         {
             return InternalRequestAsync<UnbindDocumentFromRoomResponse>(req, "UnbindDocumentFromRoom")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 解禁从房间里面踢出的用户
+        /// </summary>
+        /// <param name="req"><see cref="UnblockKickedUserRequest"/></param>
+        /// <returns><see cref="UnblockKickedUserResponse"/></returns>
+        public Task<UnblockKickedUserResponse> UnblockKickedUser(UnblockKickedUserRequest req)
+        {
+            return InternalRequestAsync<UnblockKickedUserResponse>(req, "UnblockKickedUser");
+        }
+
+        /// <summary>
+        /// 解禁从房间里面踢出的用户
+        /// </summary>
+        /// <param name="req"><see cref="UnblockKickedUserRequest"/></param>
+        /// <returns><see cref="UnblockKickedUserResponse"/></returns>
+        public UnblockKickedUserResponse UnblockKickedUserSync(UnblockKickedUserRequest req)
+        {
+            return InternalRequestAsync<UnblockKickedUserResponse>(req, "UnblockKickedUser")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

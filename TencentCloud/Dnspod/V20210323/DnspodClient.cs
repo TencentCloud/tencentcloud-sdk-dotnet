@@ -28,7 +28,7 @@ namespace TencentCloud.Dnspod.V20210323
 
        private const string endpoint = "dnspod.tencentcloudapi.com";
        private const string version = "2021-03-23";
-       private const string sdkVersion = "SDK_NET_3.0.1056";
+       private const string sdkVersion = "SDK_NET_3.0.1057";
 
         /// <summary>
         /// Client constructor.
@@ -414,6 +414,7 @@ namespace TencentCloud.Dnspod.V20210323
 
         /// <summary>
         /// 批量删除解析记录
+        /// 备注：因存储限制， 建议一次批量删除最多2000条
         /// </summary>
         /// <param name="req"><see cref="DeleteRecordBatchRequest"/></param>
         /// <returns><see cref="DeleteRecordBatchResponse"/></returns>
@@ -424,6 +425,7 @@ namespace TencentCloud.Dnspod.V20210323
 
         /// <summary>
         /// 批量删除解析记录
+        /// 备注：因存储限制， 建议一次批量删除最多2000条
         /// </summary>
         /// <param name="req"><see cref="DeleteRecordBatchRequest"/></param>
         /// <returns><see cref="DeleteRecordBatchResponse"/></returns>

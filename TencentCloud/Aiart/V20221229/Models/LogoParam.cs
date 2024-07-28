@@ -25,19 +25,19 @@ namespace TencentCloud.Aiart.V20221229.Models
     {
         
         /// <summary>
-        /// 水印url
+        /// 水印 Url
         /// </summary>
         [JsonProperty("LogoUrl")]
         public string LogoUrl{ get; set; }
 
         /// <summary>
-        /// 水印base64，url和base64二选一传入
+        /// 水印 Base64，Url 和 Base64 二选一传入，如果都提供以 Url 为准
         /// </summary>
         [JsonProperty("LogoImage")]
         public string LogoImage{ get; set; }
 
         /// <summary>
-        /// 水印图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
+        /// 水印图片位于生成结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
         /// </summary>
         [JsonProperty("LogoRect")]
         public LogoRect LogoRect{ get; set; }

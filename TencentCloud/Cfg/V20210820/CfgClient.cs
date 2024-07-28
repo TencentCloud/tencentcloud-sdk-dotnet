@@ -28,7 +28,7 @@ namespace TencentCloud.Cfg.V20210820
 
        private const string endpoint = "cfg.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1056";
+       private const string sdkVersion = "SDK_NET_3.0.1057";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Cfg.V20210820
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 从动作创建演练
+        /// </summary>
+        /// <param name="req"><see cref="CreateTaskFromActionRequest"/></param>
+        /// <returns><see cref="CreateTaskFromActionResponse"/></returns>
+        public Task<CreateTaskFromActionResponse> CreateTaskFromAction(CreateTaskFromActionRequest req)
+        {
+            return InternalRequestAsync<CreateTaskFromActionResponse>(req, "CreateTaskFromAction");
+        }
+
+        /// <summary>
+        /// 从动作创建演练
+        /// </summary>
+        /// <param name="req"><see cref="CreateTaskFromActionRequest"/></param>
+        /// <returns><see cref="CreateTaskFromActionResponse"/></returns>
+        public CreateTaskFromActionResponse CreateTaskFromActionSync(CreateTaskFromActionRequest req)
+        {
+            return InternalRequestAsync<CreateTaskFromActionResponse>(req, "CreateTaskFromAction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -92,6 +113,69 @@ namespace TencentCloud.Cfg.V20210820
         public DeleteTaskResponse DeleteTaskSync(DeleteTaskRequest req)
         {
             return InternalRequestAsync<DeleteTaskResponse>(req, "DeleteTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据动作ID获取动作栏位动态配置参数信息，里面包含动作自有和通用两部分参数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeActionFieldConfigListRequest"/></param>
+        /// <returns><see cref="DescribeActionFieldConfigListResponse"/></returns>
+        public Task<DescribeActionFieldConfigListResponse> DescribeActionFieldConfigList(DescribeActionFieldConfigListRequest req)
+        {
+            return InternalRequestAsync<DescribeActionFieldConfigListResponse>(req, "DescribeActionFieldConfigList");
+        }
+
+        /// <summary>
+        /// 根据动作ID获取动作栏位动态配置参数信息，里面包含动作自有和通用两部分参数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeActionFieldConfigListRequest"/></param>
+        /// <returns><see cref="DescribeActionFieldConfigListResponse"/></returns>
+        public DescribeActionFieldConfigListResponse DescribeActionFieldConfigListSync(DescribeActionFieldConfigListRequest req)
+        {
+            return InternalRequestAsync<DescribeActionFieldConfigListResponse>(req, "DescribeActionFieldConfigList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取混沌演练平台的动作库列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeActionLibraryListRequest"/></param>
+        /// <returns><see cref="DescribeActionLibraryListResponse"/></returns>
+        public Task<DescribeActionLibraryListResponse> DescribeActionLibraryList(DescribeActionLibraryListRequest req)
+        {
+            return InternalRequestAsync<DescribeActionLibraryListResponse>(req, "DescribeActionLibraryList");
+        }
+
+        /// <summary>
+        /// 获取混沌演练平台的动作库列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeActionLibraryListRequest"/></param>
+        /// <returns><see cref="DescribeActionLibraryListResponse"/></returns>
+        public DescribeActionLibraryListResponse DescribeActionLibraryListSync(DescribeActionLibraryListRequest req)
+        {
+            return InternalRequestAsync<DescribeActionLibraryListResponse>(req, "DescribeActionLibraryList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询对象类型列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeObjectTypeListRequest"/></param>
+        /// <returns><see cref="DescribeObjectTypeListResponse"/></returns>
+        public Task<DescribeObjectTypeListResponse> DescribeObjectTypeList(DescribeObjectTypeListRequest req)
+        {
+            return InternalRequestAsync<DescribeObjectTypeListResponse>(req, "DescribeObjectTypeList");
+        }
+
+        /// <summary>
+        /// 查询对象类型列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeObjectTypeListRequest"/></param>
+        /// <returns><see cref="DescribeObjectTypeListResponse"/></returns>
+        public DescribeObjectTypeListResponse DescribeObjectTypeListSync(DescribeObjectTypeListRequest req)
+        {
+            return InternalRequestAsync<DescribeObjectTypeListResponse>(req, "DescribeObjectTypeList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
