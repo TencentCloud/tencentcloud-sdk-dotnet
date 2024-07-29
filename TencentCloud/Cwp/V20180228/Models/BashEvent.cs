@@ -144,6 +144,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("RegexBashCmd")]
         public string RegexBashCmd{ get; set; }
 
+        /// <summary>
+        /// 主机HostName
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HostName")]
+        public string HostName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -169,6 +176,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "RuleCategory", this.RuleCategory);
             this.SetParamSimple(map, prefix + "RegexBashCmd", this.RegexBashCmd);
+            this.SetParamSimple(map, prefix + "HostName", this.HostName);
         }
     }
 }

@@ -61,13 +61,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         public long? PortTemplateCount{ get; set; }
 
         /// <summary>
-        /// 已使用的地址模版数
+        /// 已使用的地址模板数
         /// </summary>
         [JsonProperty("UsedTemplateCount")]
         public long? UsedTemplateCount{ get; set; }
 
         /// <summary>
-        /// 地址模版配额数量
+        /// 地址模板配额数量
         /// </summary>
         [JsonProperty("TemplateQuotaCount")]
         public long? TemplateQuotaCount{ get; set; }

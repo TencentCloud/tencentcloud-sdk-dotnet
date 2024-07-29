@@ -38,7 +38,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
 
         /// <summary>
         /// 云存 AI 服务类型。可选值：
-        /// - `PackageDetect`：包裹检测
+        /// - `RealtimeObjectDetect`：目标检测
         /// - `Highlight`：视频浓缩
         /// </summary>
         [JsonProperty("ServiceType")]
@@ -68,13 +68,13 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 用户ID
+        /// 用户 ID
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+        /// 通道 ID
         /// </summary>
         [JsonProperty("ChannelId")]
         public ulong? ChannelId{ get; set; }

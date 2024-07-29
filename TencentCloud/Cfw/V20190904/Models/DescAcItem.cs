@@ -239,6 +239,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("TargetName")]
         public string TargetName{ get; set; }
 
+        /// <summary>
+        /// 规则最近命中时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LastHitTime")]
+        public string LastHitTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -276,6 +283,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
             this.SetParamSimple(map, prefix + "SourceName", this.SourceName);
             this.SetParamSimple(map, prefix + "TargetName", this.TargetName);
+            this.SetParamSimple(map, prefix + "LastHitTime", this.LastHitTime);
         }
     }
 }

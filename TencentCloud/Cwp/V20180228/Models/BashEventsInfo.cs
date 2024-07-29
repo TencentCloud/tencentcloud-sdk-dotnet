@@ -187,6 +187,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Pid")]
         public string Pid{ get; set; }
 
+        /// <summary>
+        /// 数据来源
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DetectBy")]
+        public string DetectBy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -218,6 +225,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
             this.SetParamSimple(map, prefix + "User", this.User);
             this.SetParamSimple(map, prefix + "Pid", this.Pid);
+            this.SetParamSimple(map, prefix + "DetectBy", this.DetectBy);
         }
     }
 }

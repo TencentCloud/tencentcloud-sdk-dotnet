@@ -25,7 +25,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 产品ID
+        /// 产品 ID
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
@@ -38,26 +38,26 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
 
         /// <summary>
         /// 云存 AI 服务类型。可选值：
-        /// - `PackageDetect`：包裹检测
+        /// - `RealtimeObjectDetect`：目标检测
         /// - `Highlight`：视频浓缩
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
 
         /// <summary>
-        /// 启用状态
+        /// 视频分析启用状态
         /// </summary>
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }
 
         /// <summary>
-        /// 视频分析区域
+        /// 视频分析识别区域
         /// </summary>
         [JsonProperty("ROI")]
         public string ROI{ get; set; }
 
         /// <summary>
-        /// 云存 AI 服务的配置参数
+        /// 视频分析配置参数
         /// </summary>
         [JsonProperty("Config")]
         public string Config{ get; set; }

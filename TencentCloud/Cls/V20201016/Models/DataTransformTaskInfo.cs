@@ -102,6 +102,13 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("EtlContent")]
         public string EtlContent{ get; set; }
 
+        /// <summary>
+        /// 数据加工类型。0：标准加工任务；1：前置加工任务。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DataTransformType")]
+        public ulong? DataTransformType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +128,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "LogsetId", this.LogsetId);
             this.SetParamArrayObj(map, prefix + "DstResources.", this.DstResources);
             this.SetParamSimple(map, prefix + "EtlContent", this.EtlContent);
+            this.SetParamSimple(map, prefix + "DataTransformType", this.DataTransformType);
         }
     }
 }

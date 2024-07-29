@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1057";
+       private const string sdkVersion = "SDK_NET_3.0.1058";
 
         /// <summary>
         /// Client constructor.
@@ -197,6 +197,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeAssetViewVulRiskListResponse DescribeAssetViewVulRiskListSync(DescribeAssetViewVulRiskListRequest req)
         {
             return InternalRequestAsync<DescribeAssetViewVulRiskListResponse>(req, "DescribeAssetViewVulRiskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 云防资产中心统计数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCFWAssetStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeCFWAssetStatisticsResponse"/></returns>
+        public Task<DescribeCFWAssetStatisticsResponse> DescribeCFWAssetStatistics(DescribeCFWAssetStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeCFWAssetStatisticsResponse>(req, "DescribeCFWAssetStatistics");
+        }
+
+        /// <summary>
+        /// 云防资产中心统计数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCFWAssetStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeCFWAssetStatisticsResponse"/></returns>
+        public DescribeCFWAssetStatisticsResponse DescribeCFWAssetStatisticsSync(DescribeCFWAssetStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeCFWAssetStatisticsResponse>(req, "DescribeCFWAssetStatistics")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

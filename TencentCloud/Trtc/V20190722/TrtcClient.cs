@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1057";
+       private const string sdkVersion = "SDK_NET_3.0.1058";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Trtc.V20190722
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 提供服务端控制机器人的功能
+        /// </summary>
+        /// <param name="req"><see cref="ControlAIConversationRequest"/></param>
+        /// <returns><see cref="ControlAIConversationResponse"/></returns>
+        public Task<ControlAIConversationResponse> ControlAIConversation(ControlAIConversationRequest req)
+        {
+            return InternalRequestAsync<ControlAIConversationResponse>(req, "ControlAIConversation");
+        }
+
+        /// <summary>
+        /// 提供服务端控制机器人的功能
+        /// </summary>
+        /// <param name="req"><see cref="ControlAIConversationRequest"/></param>
+        /// <returns><see cref="ControlAIConversationResponse"/></returns>
+        public ControlAIConversationResponse ControlAIConversationSync(ControlAIConversationRequest req)
+        {
+            return InternalRequestAsync<ControlAIConversationResponse>(req, "ControlAIConversation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

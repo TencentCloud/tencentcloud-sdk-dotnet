@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1057";
+       private const string sdkVersion = "SDK_NET_3.0.1058";
 
         /// <summary>
         /// Client constructor.
@@ -2343,7 +2343,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 修改指定设备的云存 AI 服务开通状态与参数配置
+        /// 修改指定设备的云存 AI 服务参数配置
         /// </summary>
         /// <param name="req"><see cref="ModifyCloudStorageAIServiceRequest"/></param>
         /// <returns><see cref="ModifyCloudStorageAIServiceResponse"/></returns>
@@ -2353,7 +2353,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 修改指定设备的云存 AI 服务开通状态与参数配置
+        /// 修改指定设备的云存 AI 服务参数配置
         /// </summary>
         /// <param name="req"><see cref="ModifyCloudStorageAIServiceRequest"/></param>
         /// <returns><see cref="ModifyCloudStorageAIServiceResponse"/></returns>
