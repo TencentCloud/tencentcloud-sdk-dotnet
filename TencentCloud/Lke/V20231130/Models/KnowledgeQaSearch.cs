@@ -80,6 +80,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
+        /// <summary>
+        /// 资源状态 1：资源可用；2：资源已用尽
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceStatus")]
+        public ulong? ResourceStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +101,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "QaTopN", this.QaTopN);
             this.SetParamSimple(map, prefix + "DocTopN", this.DocTopN);
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
+            this.SetParamSimple(map, prefix + "ResourceStatus", this.ResourceStatus);
         }
     }
 }

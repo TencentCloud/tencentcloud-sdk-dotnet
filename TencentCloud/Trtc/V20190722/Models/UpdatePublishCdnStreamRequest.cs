@@ -49,7 +49,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? WithTranscoding{ get; set; }
 
         /// <summary>
-        /// 更新相关参数，只支持更新参与混音的主播列表参数。不填表示不更新此参数。
+        /// 更新相关参数，只支持更新参与混音的主播列表参数，不支持更新Codec、采样率、码率和声道数。不填表示不更新此参数。
         /// </summary>
         [JsonProperty("AudioParams")]
         public McuAudioParams AudioParams{ get; set; }

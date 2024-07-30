@@ -130,10 +130,11 @@ namespace TencentCloud.Trro.V20220325.Models
         public long?[] DecodeCost{ get; set; }
 
         /// <summary>
-        /// 渲染耗时，单位：ms
+        /// 【已废弃，使用RenderCost】
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RenderConst")]
+        [System.Obsolete]
         public long?[] RenderConst{ get; set; }
 
         /// <summary>
@@ -192,6 +193,76 @@ namespace TencentCloud.Trro.V20220325.Models
         [JsonProperty("CaptureCost")]
         public long?[] CaptureCost{ get; set; }
 
+        /// <summary>
+        /// 渲染耗时，单位：ms
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RenderCost")]
+        public long?[] RenderCost{ get; set; }
+
+        /// <summary>
+        /// 配置宽度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConfigWidth")]
+        public long? ConfigWidth{ get; set; }
+
+        /// <summary>
+        /// 配置高度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConfigHeight")]
+        public long? ConfigHeight{ get; set; }
+
+        /// <summary>
+        /// 平均帧间隔
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FrameDelta")]
+        public long?[] FrameDelta{ get; set; }
+
+        /// <summary>
+        /// 最大帧间隔
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxFrameDelta")]
+        public long?[] MaxFrameDelta{ get; set; }
+
+        /// <summary>
+        /// 总码率评估,单位：kbps
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TotalBitrateEstimate")]
+        public long?[] TotalBitrateEstimate{ get; set; }
+
+        /// <summary>
+        /// 帧间隔大于100ms的卡顿时长
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Lag100Duration")]
+        public long?[] Lag100Duration{ get; set; }
+
+        /// <summary>
+        /// 帧间隔大于150ms的卡顿时长
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Lag150Duration")]
+        public long?[] Lag150Duration{ get; set; }
+
+        /// <summary>
+        /// 是否开启多网：0 单网，1 多网
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MultiMode")]
+        public long? MultiMode{ get; set; }
+
+        /// <summary>
+        /// 多网卡信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MultiNet")]
+        public MultiNet[] MultiNet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -224,6 +295,16 @@ namespace TencentCloud.Trro.V20220325.Models
             this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamArraySimple(map, prefix + "EncodeCost.", this.EncodeCost);
             this.SetParamArraySimple(map, prefix + "CaptureCost.", this.CaptureCost);
+            this.SetParamArraySimple(map, prefix + "RenderCost.", this.RenderCost);
+            this.SetParamSimple(map, prefix + "ConfigWidth", this.ConfigWidth);
+            this.SetParamSimple(map, prefix + "ConfigHeight", this.ConfigHeight);
+            this.SetParamArraySimple(map, prefix + "FrameDelta.", this.FrameDelta);
+            this.SetParamArraySimple(map, prefix + "MaxFrameDelta.", this.MaxFrameDelta);
+            this.SetParamArraySimple(map, prefix + "TotalBitrateEstimate.", this.TotalBitrateEstimate);
+            this.SetParamArraySimple(map, prefix + "Lag100Duration.", this.Lag100Duration);
+            this.SetParamArraySimple(map, prefix + "Lag150Duration.", this.Lag150Duration);
+            this.SetParamSimple(map, prefix + "MultiMode", this.MultiMode);
+            this.SetParamArrayObj(map, prefix + "MultiNet.", this.MultiNet);
         }
     }
 }

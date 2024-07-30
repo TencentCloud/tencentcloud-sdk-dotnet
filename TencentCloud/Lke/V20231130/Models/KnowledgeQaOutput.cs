@@ -66,6 +66,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("QuestionClarifyKeywords")]
         public string[] QuestionClarifyKeywords{ get; set; }
 
+        /// <summary>
+        /// 是否打开推荐问题开关
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UseRecommended")]
+        public bool? UseRecommended{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +85,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "ShowQuestionClarify", this.ShowQuestionClarify);
             this.SetParamSimple(map, prefix + "UseQuestionClarify", this.UseQuestionClarify);
             this.SetParamArraySimple(map, prefix + "QuestionClarifyKeywords.", this.QuestionClarifyKeywords);
+            this.SetParamSimple(map, prefix + "UseRecommended", this.UseRecommended);
         }
     }
 }

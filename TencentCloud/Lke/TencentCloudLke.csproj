@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{350F9F65-0799-338B-90EA-9EBA008679C1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1058</VersionPrefix>
+    <VersionPrefix>3.0.1059</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -159,13 +159,16 @@
     <Compile Include="V20231130\Models\GroupQARequest.cs" />
     <Compile Include="V20231130\Models\GroupQAResponse.cs" />
     <Compile Include="V20231130\Models\Highlight.cs" />
+    <Compile Include="V20231130\Models\HistorySummary.cs" />
     <Compile Include="V20231130\Models\IgnoreUnsatisfiedReplyRequest.cs" />
     <Compile Include="V20231130\Models\IgnoreUnsatisfiedReplyResponse.cs" />
+    <Compile Include="V20231130\Models\InvokeAPI.cs" />
     <Compile Include="V20231130\Models\IsTransferIntentRequest.cs" />
     <Compile Include="V20231130\Models\IsTransferIntentResponse.cs" />
     <Compile Include="V20231130\Models\KnowledgeQaConfig.cs" />
     <Compile Include="V20231130\Models\KnowledgeQaOutput.cs" />
     <Compile Include="V20231130\Models\KnowledgeQaSearch.cs" />
+    <Compile Include="V20231130\Models\KnowledgeSummary.cs" />
     <Compile Include="V20231130\Models\Label.cs" />
     <Compile Include="V20231130\Models\ListAppCategoryRequest.cs" />
     <Compile Include="V20231130\Models\ListAppCategoryResponse.cs" />
@@ -227,6 +230,7 @@
     <Compile Include="V20231130\Models\ParseDocResponse.cs" />
     <Compile Include="V20231130\Models\Polygon.cs" />
     <Compile Include="V20231130\Models\Procedure.cs" />
+    <Compile Include="V20231130\Models\ProcedureDebugging.cs" />
     <Compile Include="V20231130\Models\QACate.cs" />
     <Compile Include="V20231130\Models\QAList.cs" />
     <Compile Include="V20231130\Models\QAQuery.cs" />
@@ -254,19 +258,23 @@
     <Compile Include="V20231130\Models\RetryDocParseResponse.cs" />
     <Compile Include="V20231130\Models\RetryReleaseRequest.cs" />
     <Compile Include="V20231130\Models\RetryReleaseResponse.cs" />
+    <Compile Include="V20231130\Models\RunNodeInfo.cs" />
     <Compile Include="V20231130\Models\SaveDocRequest.cs" />
     <Compile Include="V20231130\Models\SaveDocResponse.cs" />
     <Compile Include="V20231130\Models\StopDocParseRequest.cs" />
     <Compile Include="V20231130\Models\StopDocParseResponse.cs" />
+    <Compile Include="V20231130\Models\StrValue.cs" />
     <Compile Include="V20231130\Models\SummaryConfig.cs" />
     <Compile Include="V20231130\Models\SummaryOutput.cs" />
     <Compile Include="V20231130\Models\TaskFlowInfo.cs" />
+    <Compile Include="V20231130\Models\TaskFlowSummary.cs" />
     <Compile Include="V20231130\Models\TaskParams.cs" />
     <Compile Include="V20231130\Models\TokenStat.cs" />
     <Compile Include="V20231130\Models\UnsatisfiedReply.cs" />
     <Compile Include="V20231130\Models\UploadAttributeLabelRequest.cs" />
     <Compile Include="V20231130\Models\UploadAttributeLabelResponse.cs" />
     <Compile Include="V20231130\Models\Usage.cs" />
+    <Compile Include="V20231130\Models\ValueInfo.cs" />
     <Compile Include="V20231130\Models\VerifyQARequest.cs" />
     <Compile Include="V20231130\Models\VerifyQAResponse.cs" />
     <Compile Include="V20231130\Models\WordRecognizeInfo.cs" />

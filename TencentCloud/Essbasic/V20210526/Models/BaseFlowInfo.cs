@@ -31,6 +31,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string FlowName{ get; set; }
 
         /// <summary>
+        /// 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
+        /// </summary>
+        [JsonProperty("Deadline")]
+        public long? Deadline{ get; set; }
+
+        /// <summary>
         /// 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
         /// </summary>
         [JsonProperty("FlowType")]
@@ -41,12 +47,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// </summary>
         [JsonProperty("FlowDescription")]
         public string FlowDescription{ get; set; }
-
-        /// <summary>
-        /// 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
-        /// </summary>
-        [JsonProperty("Deadline")]
-        public long? Deadline{ get; set; }
 
         /// <summary>
         /// 合同流程的签署顺序类型：
@@ -116,9 +116,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FlowName", this.FlowName);
+            this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
             this.SetParamSimple(map, prefix + "FlowType", this.FlowType);
             this.SetParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
-            this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
             this.SetParamSimple(map, prefix + "Unordered", this.Unordered);
             this.SetParamSimple(map, prefix + "IntelligentStatus", this.IntelligentStatus);
             this.SetParamArrayObj(map, prefix + "FormFields.", this.FormFields);

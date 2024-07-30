@@ -25,16 +25,16 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
+        /// 分组所属应用ID。
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
+
+        /// <summary>
         /// 搜索字段，模糊搜索groupName字段
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
-
-        /// <summary>
-        /// 分组所属应用ID。必填
-        /// </summary>
-        [JsonProperty("ApplicationId")]
-        public string ApplicationId{ get; set; }
 
         /// <summary>
         /// 排序字段，默认为 createTime字段，支持id， name， createTime
@@ -78,8 +78,8 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
             this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+            this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
             this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
             this.SetParamSimple(map, prefix + "OrderType", this.OrderType);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);

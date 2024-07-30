@@ -25,7 +25,7 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 任务唯一ID
+        /// 任务唯一ID，仅支持30天内的任务
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

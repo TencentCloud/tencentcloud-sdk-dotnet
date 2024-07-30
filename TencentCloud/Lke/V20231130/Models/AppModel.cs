@@ -59,6 +59,27 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("TokenBalance")]
         public float? TokenBalance{ get; set; }
 
+        /// <summary>
+        /// 是否使用上下文指代轮次
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsUseContext")]
+        public bool? IsUseContext{ get; set; }
+
+        /// <summary>
+        /// 上下文记忆轮数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HistoryLimit")]
+        public ulong? HistoryLimit{ get; set; }
+
+        /// <summary>
+        /// 使用类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UsageType")]
+        public string UsageType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +91,9 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "ContextLimit", this.ContextLimit);
             this.SetParamSimple(map, prefix + "AliasName", this.AliasName);
             this.SetParamSimple(map, prefix + "TokenBalance", this.TokenBalance);
+            this.SetParamSimple(map, prefix + "IsUseContext", this.IsUseContext);
+            this.SetParamSimple(map, prefix + "HistoryLimit", this.HistoryLimit);
+            this.SetParamSimple(map, prefix + "UsageType", this.UsageType);
         }
     }
 }

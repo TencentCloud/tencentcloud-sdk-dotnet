@@ -54,6 +54,12 @@ namespace TencentCloud.Trro.V20220325.Models
         [JsonProperty("PageNumber")]
         public long? PageNumber{ get; set; }
 
+        /// <summary>
+        /// 设备状态筛选，不填默认为不过滤。取值：["ready","connected","online"]，online代表ready或connected
+        /// </summary>
+        [JsonProperty("DeviceStatus")]
+        public string DeviceStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Trro.V20220325.Models
             this.SetParamSimple(map, prefix + "SearchWords", this.SearchWords);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
+            this.SetParamSimple(map, prefix + "DeviceStatus", this.DeviceStatus);
         }
     }
 }

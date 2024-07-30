@@ -30,6 +30,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("DataEngineConfigCommand")]
         public string DataEngineConfigCommand{ get; set; }
 
+        /// <summary>
+        /// 是否使用托管存储作为结果存储
+        /// </summary>
+        [JsonProperty("UseLakeFs")]
+        public bool? UseLakeFs{ get; set; }
+
+        /// <summary>
+        /// 用户自定义结果存储路径
+        /// </summary>
+        [JsonProperty("CustomResultPath")]
+        public string CustomResultPath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Dlc.V20210125.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DataEngineConfigCommand", this.DataEngineConfigCommand);
+            this.SetParamSimple(map, prefix + "UseLakeFs", this.UseLakeFs);
+            this.SetParamSimple(map, prefix + "CustomResultPath", this.CustomResultPath);
         }
     }
 }

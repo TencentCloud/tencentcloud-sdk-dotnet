@@ -52,6 +52,20 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
 
+        /// <summary>
+        /// 调试信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Debugging")]
+        public ProcedureDebugging Debugging{ get; set; }
+
+        /// <summary>
+        /// 计费资源状态，1：可用，2：不可用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceStatus")]
+        public ulong? ResourceStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +76,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Title", this.Title);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamObj(map, prefix + "Debugging.", this.Debugging);
+            this.SetParamSimple(map, prefix + "ResourceStatus", this.ResourceStatus);
         }
     }
 }

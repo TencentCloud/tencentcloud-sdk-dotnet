@@ -102,6 +102,12 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("OrFilters")]
         public Filter[] OrFilters{ get; set; }
 
+        /// <summary>
+        /// 数据来源
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "PageIndex", this.PageIndex);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamArrayObj(map, prefix + "OrFilters.", this.OrFilters);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

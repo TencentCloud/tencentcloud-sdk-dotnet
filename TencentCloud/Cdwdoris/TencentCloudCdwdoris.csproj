@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{30E1AC6A-DB82-3A63-BE17-56AB4B24E00E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1058</VersionPrefix>
+    <VersionPrefix>3.0.1059</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,19 +49,28 @@
   <ItemGroup>
     <Compile Include="V20211228\CdwdorisClient.cs" />
     <Compile Include="V20211228\Models\AttachCBSSpec.cs" />
+    <Compile Include="V20211228\Models\BindUser.cs" />
     <Compile Include="V20211228\Models\ChargeProperties.cs" />
     <Compile Include="V20211228\Models\ClusterConfigsInfoFromEMR.cs" />
     <Compile Include="V20211228\Models\ConfigKeyValue.cs" />
     <Compile Include="V20211228\Models\CreateInstanceNewRequest.cs" />
     <Compile Include="V20211228\Models\CreateInstanceNewResponse.cs" />
     <Compile Include="V20211228\Models\CreateInstanceSpec.cs" />
+    <Compile Include="V20211228\Models\CreateWorkloadGroupRequest.cs" />
+    <Compile Include="V20211228\Models\CreateWorkloadGroupResponse.cs" />
     <Compile Include="V20211228\Models\DataBaseAuditRecord.cs" />
+    <Compile Include="V20211228\Models\DeleteWorkloadGroupRequest.cs" />
+    <Compile Include="V20211228\Models\DeleteWorkloadGroupResponse.cs" />
     <Compile Include="V20211228\Models\DescribeClusterConfigsRequest.cs" />
     <Compile Include="V20211228\Models\DescribeClusterConfigsResponse.cs" />
     <Compile Include="V20211228\Models\DescribeDatabaseAuditDownloadRequest.cs" />
     <Compile Include="V20211228\Models\DescribeDatabaseAuditDownloadResponse.cs" />
     <Compile Include="V20211228\Models\DescribeDatabaseAuditRecordsRequest.cs" />
     <Compile Include="V20211228\Models\DescribeDatabaseAuditRecordsResponse.cs" />
+    <Compile Include="V20211228\Models\DescribeFederationTokenRequest.cs" />
+    <Compile Include="V20211228\Models\DescribeFederationTokenResponse.cs" />
+    <Compile Include="V20211228\Models\DescribeGoodsDetailRequest.cs" />
+    <Compile Include="V20211228\Models\DescribeGoodsDetailResponse.cs" />
     <Compile Include="V20211228\Models\DescribeInstanceNodesInfoRequest.cs" />
     <Compile Include="V20211228\Models\DescribeInstanceNodesInfoResponse.cs" />
     <Compile Include="V20211228\Models\DescribeInstanceNodesRequest.cs" />
@@ -70,32 +79,74 @@
     <Compile Include="V20211228\Models\DescribeInstanceResponse.cs" />
     <Compile Include="V20211228\Models\DescribeInstanceStateRequest.cs" />
     <Compile Include="V20211228\Models\DescribeInstanceStateResponse.cs" />
+    <Compile Include="V20211228\Models\DescribeInstanceUsedSubnetsRequest.cs" />
+    <Compile Include="V20211228\Models\DescribeInstanceUsedSubnetsResponse.cs" />
     <Compile Include="V20211228\Models\DescribeInstancesRequest.cs" />
     <Compile Include="V20211228\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20211228\Models\DescribeRegionZoneRequest.cs" />
+    <Compile Include="V20211228\Models\DescribeRegionZoneResponse.cs" />
+    <Compile Include="V20211228\Models\DescribeReplicaVersionRequest.cs" />
+    <Compile Include="V20211228\Models\DescribeReplicaVersionResponse.cs" />
+    <Compile Include="V20211228\Models\DescribeRestoreTaskDetailRequest.cs" />
+    <Compile Include="V20211228\Models\DescribeRestoreTaskDetailResponse.cs" />
     <Compile Include="V20211228\Models\DescribeSlowQueryRecordsDownloadRequest.cs" />
     <Compile Include="V20211228\Models\DescribeSlowQueryRecordsDownloadResponse.cs" />
     <Compile Include="V20211228\Models\DescribeSlowQueryRecordsRequest.cs" />
     <Compile Include="V20211228\Models\DescribeSlowQueryRecordsResponse.cs" />
+    <Compile Include="V20211228\Models\DescribeSqlApisRequest.cs" />
+    <Compile Include="V20211228\Models\DescribeSqlApisResponse.cs" />
+    <Compile Include="V20211228\Models\DescribeUserBindWorkloadGroupRequest.cs" />
+    <Compile Include="V20211228\Models\DescribeUserBindWorkloadGroupResponse.cs" />
+    <Compile Include="V20211228\Models\DescribeWorkloadGroupRequest.cs" />
+    <Compile Include="V20211228\Models\DescribeWorkloadGroupResponse.cs" />
     <Compile Include="V20211228\Models\DestroyInstanceRequest.cs" />
     <Compile Include="V20211228\Models\DestroyInstanceResponse.cs" />
+    <Compile Include="V20211228\Models\FitClsLogRequest.cs" />
+    <Compile Include="V20211228\Models\FitClsLogResponse.cs" />
+    <Compile Include="V20211228\Models\InstanceConfigItem.cs" />
     <Compile Include="V20211228\Models\InstanceDetail.cs" />
     <Compile Include="V20211228\Models\InstanceInfo.cs" />
     <Compile Include="V20211228\Models\InstanceNode.cs" />
+    <Compile Include="V20211228\Models\ModifyInstanceKeyValConfigsRequest.cs" />
+    <Compile Include="V20211228\Models\ModifyInstanceKeyValConfigsResponse.cs" />
     <Compile Include="V20211228\Models\ModifyInstanceRequest.cs" />
     <Compile Include="V20211228\Models\ModifyInstanceResponse.cs" />
+    <Compile Include="V20211228\Models\ModifySecurityGroupsRequest.cs" />
+    <Compile Include="V20211228\Models\ModifySecurityGroupsResponse.cs" />
+    <Compile Include="V20211228\Models\ModifyUserBindWorkloadGroupRequest.cs" />
+    <Compile Include="V20211228\Models\ModifyUserBindWorkloadGroupResponse.cs" />
+    <Compile Include="V20211228\Models\ModifyUserPrivilegesV3Request.cs" />
+    <Compile Include="V20211228\Models\ModifyUserPrivilegesV3Response.cs" />
+    <Compile Include="V20211228\Models\ModifyWorkloadGroupRequest.cs" />
+    <Compile Include="V20211228\Models\ModifyWorkloadGroupResponse.cs" />
+    <Compile Include="V20211228\Models\ModifyWorkloadGroupStatusRequest.cs" />
+    <Compile Include="V20211228\Models\ModifyWorkloadGroupStatusResponse.cs" />
     <Compile Include="V20211228\Models\NetworkInfo.cs" />
     <Compile Include="V20211228\Models\NodeInfo.cs" />
     <Compile Include="V20211228\Models\NodesSummary.cs" />
+    <Compile Include="V20211228\Models\ReduceInstanceRequest.cs" />
+    <Compile Include="V20211228\Models\ReduceInstanceResponse.cs" />
+    <Compile Include="V20211228\Models\RegionAreaInfo.cs" />
+    <Compile Include="V20211228\Models\RegionInfo.cs" />
     <Compile Include="V20211228\Models\ResizeDiskRequest.cs" />
     <Compile Include="V20211228\Models\ResizeDiskResponse.cs" />
+    <Compile Include="V20211228\Models\ResourceNodeDiskSpec.cs" />
+    <Compile Include="V20211228\Models\ResourceNodeSpec.cs" />
     <Compile Include="V20211228\Models\RestartClusterForNodeRequest.cs" />
     <Compile Include="V20211228\Models\RestartClusterForNodeResponse.cs" />
+    <Compile Include="V20211228\Models\RestoreStatus.cs" />
     <Compile Include="V20211228\Models\ScaleOutInstanceRequest.cs" />
     <Compile Include="V20211228\Models\ScaleOutInstanceResponse.cs" />
     <Compile Include="V20211228\Models\ScaleUpInstanceRequest.cs" />
     <Compile Include="V20211228\Models\ScaleUpInstanceResponse.cs" />
     <Compile Include="V20211228\Models\SearchTags.cs" />
     <Compile Include="V20211228\Models\SlowQueryRecord.cs" />
+    <Compile Include="V20211228\Models\SpecExtra.cs" />
     <Compile Include="V20211228\Models\Tag.cs" />
+    <Compile Include="V20211228\Models\UpdateUserPrivileges.cs" />
+    <Compile Include="V20211228\Models\UserWorkloadGroup.cs" />
+    <Compile Include="V20211228\Models\VersionReplicaItem.cs" />
+    <Compile Include="V20211228\Models\WorkloadGroupConfig.cs" />
+    <Compile Include="V20211228\Models\ZoneInfo.cs" />
   </ItemGroup>
 </Project>

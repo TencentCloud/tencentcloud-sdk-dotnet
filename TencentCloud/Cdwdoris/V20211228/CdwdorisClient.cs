@@ -28,7 +28,7 @@ namespace TencentCloud.Cdwdoris.V20211228
 
        private const string endpoint = "cdwdoris.tencentcloudapi.com";
        private const string version = "2021-12-28";
-       private const string sdkVersion = "SDK_NET_3.0.1058";
+       private const string sdkVersion = "SDK_NET_3.0.1059";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,48 @@ namespace TencentCloud.Cdwdoris.V20211228
         public CreateInstanceNewResponse CreateInstanceNewSync(CreateInstanceNewRequest req)
         {
             return InternalRequestAsync<CreateInstanceNewResponse>(req, "CreateInstanceNew")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建资源组
+        /// </summary>
+        /// <param name="req"><see cref="CreateWorkloadGroupRequest"/></param>
+        /// <returns><see cref="CreateWorkloadGroupResponse"/></returns>
+        public Task<CreateWorkloadGroupResponse> CreateWorkloadGroup(CreateWorkloadGroupRequest req)
+        {
+            return InternalRequestAsync<CreateWorkloadGroupResponse>(req, "CreateWorkloadGroup");
+        }
+
+        /// <summary>
+        /// 创建资源组
+        /// </summary>
+        /// <param name="req"><see cref="CreateWorkloadGroupRequest"/></param>
+        /// <returns><see cref="CreateWorkloadGroupResponse"/></returns>
+        public CreateWorkloadGroupResponse CreateWorkloadGroupSync(CreateWorkloadGroupRequest req)
+        {
+            return InternalRequestAsync<CreateWorkloadGroupResponse>(req, "CreateWorkloadGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除资源组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWorkloadGroupRequest"/></param>
+        /// <returns><see cref="DeleteWorkloadGroupResponse"/></returns>
+        public Task<DeleteWorkloadGroupResponse> DeleteWorkloadGroup(DeleteWorkloadGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteWorkloadGroupResponse>(req, "DeleteWorkloadGroup");
+        }
+
+        /// <summary>
+        /// 删除资源组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWorkloadGroupRequest"/></param>
+        /// <returns><see cref="DeleteWorkloadGroupResponse"/></returns>
+        public DeleteWorkloadGroupResponse DeleteWorkloadGroupSync(DeleteWorkloadGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteWorkloadGroupResponse>(req, "DeleteWorkloadGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -134,6 +176,48 @@ namespace TencentCloud.Cdwdoris.V20211228
         public DescribeDatabaseAuditRecordsResponse DescribeDatabaseAuditRecordsSync(DescribeDatabaseAuditRecordsRequest req)
         {
             return InternalRequestAsync<DescribeDatabaseAuditRecordsResponse>(req, "DescribeDatabaseAuditRecords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取联合身份临时访问凭证
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFederationTokenRequest"/></param>
+        /// <returns><see cref="DescribeFederationTokenResponse"/></returns>
+        public Task<DescribeFederationTokenResponse> DescribeFederationToken(DescribeFederationTokenRequest req)
+        {
+            return InternalRequestAsync<DescribeFederationTokenResponse>(req, "DescribeFederationToken");
+        }
+
+        /// <summary>
+        /// 获取联合身份临时访问凭证
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFederationTokenRequest"/></param>
+        /// <returns><see cref="DescribeFederationTokenResponse"/></returns>
+        public DescribeFederationTokenResponse DescribeFederationTokenSync(DescribeFederationTokenRequest req)
+        {
+            return InternalRequestAsync<DescribeFederationTokenResponse>(req, "DescribeFederationToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 生成计费相关接口的GoodsDetail结构
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGoodsDetailRequest"/></param>
+        /// <returns><see cref="DescribeGoodsDetailResponse"/></returns>
+        public Task<DescribeGoodsDetailResponse> DescribeGoodsDetail(DescribeGoodsDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeGoodsDetailResponse>(req, "DescribeGoodsDetail");
+        }
+
+        /// <summary>
+        /// 生成计费相关接口的GoodsDetail结构
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGoodsDetailRequest"/></param>
+        /// <returns><see cref="DescribeGoodsDetailResponse"/></returns>
+        public DescribeGoodsDetailResponse DescribeGoodsDetailSync(DescribeGoodsDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeGoodsDetailResponse>(req, "DescribeGoodsDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -222,6 +306,27 @@ namespace TencentCloud.Cdwdoris.V20211228
         }
 
         /// <summary>
+        /// 获取集群已使用子网信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceUsedSubnetsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceUsedSubnetsResponse"/></returns>
+        public Task<DescribeInstanceUsedSubnetsResponse> DescribeInstanceUsedSubnets(DescribeInstanceUsedSubnetsRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceUsedSubnetsResponse>(req, "DescribeInstanceUsedSubnets");
+        }
+
+        /// <summary>
+        /// 获取集群已使用子网信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceUsedSubnetsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceUsedSubnetsResponse"/></returns>
+        public DescribeInstanceUsedSubnetsResponse DescribeInstanceUsedSubnetsSync(DescribeInstanceUsedSubnetsRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceUsedSubnetsResponse>(req, "DescribeInstanceUsedSubnets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取集群列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
@@ -239,6 +344,69 @@ namespace TencentCloud.Cdwdoris.V20211228
         public DescribeInstancesResponse DescribeInstancesSync(DescribeInstancesRequest req)
         {
             return InternalRequestAsync<DescribeInstancesResponse>(req, "DescribeInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 购买页获取地域及可用区列表、内核版本、网络规则等
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegionZoneRequest"/></param>
+        /// <returns><see cref="DescribeRegionZoneResponse"/></returns>
+        public Task<DescribeRegionZoneResponse> DescribeRegionZone(DescribeRegionZoneRequest req)
+        {
+            return InternalRequestAsync<DescribeRegionZoneResponse>(req, "DescribeRegionZone");
+        }
+
+        /// <summary>
+        /// 购买页获取地域及可用区列表、内核版本、网络规则等
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegionZoneRequest"/></param>
+        /// <returns><see cref="DescribeRegionZoneResponse"/></returns>
+        public DescribeRegionZoneResponse DescribeRegionZoneSync(DescribeRegionZoneRequest req)
+        {
+            return InternalRequestAsync<DescribeRegionZoneResponse>(req, "DescribeRegionZone")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 检查内核版本是否支持新的备份恢复语法
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReplicaVersionRequest"/></param>
+        /// <returns><see cref="DescribeReplicaVersionResponse"/></returns>
+        public Task<DescribeReplicaVersionResponse> DescribeReplicaVersion(DescribeReplicaVersionRequest req)
+        {
+            return InternalRequestAsync<DescribeReplicaVersionResponse>(req, "DescribeReplicaVersion");
+        }
+
+        /// <summary>
+        /// 检查内核版本是否支持新的备份恢复语法
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReplicaVersionRequest"/></param>
+        /// <returns><see cref="DescribeReplicaVersionResponse"/></returns>
+        public DescribeReplicaVersionResponse DescribeReplicaVersionSync(DescribeReplicaVersionRequest req)
+        {
+            return InternalRequestAsync<DescribeReplicaVersionResponse>(req, "DescribeReplicaVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询恢复任务进度详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRestoreTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeRestoreTaskDetailResponse"/></returns>
+        public Task<DescribeRestoreTaskDetailResponse> DescribeRestoreTaskDetail(DescribeRestoreTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeRestoreTaskDetailResponse>(req, "DescribeRestoreTaskDetail");
+        }
+
+        /// <summary>
+        /// 查询恢复任务进度详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRestoreTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeRestoreTaskDetailResponse"/></returns>
+        public DescribeRestoreTaskDetailResponse DescribeRestoreTaskDetailSync(DescribeRestoreTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeRestoreTaskDetailResponse>(req, "DescribeRestoreTaskDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -285,6 +453,69 @@ namespace TencentCloud.Cdwdoris.V20211228
         }
 
         /// <summary>
+        /// 针对驱动sql命令查询ck集群接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSqlApisRequest"/></param>
+        /// <returns><see cref="DescribeSqlApisResponse"/></returns>
+        public Task<DescribeSqlApisResponse> DescribeSqlApis(DescribeSqlApisRequest req)
+        {
+            return InternalRequestAsync<DescribeSqlApisResponse>(req, "DescribeSqlApis");
+        }
+
+        /// <summary>
+        /// 针对驱动sql命令查询ck集群接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSqlApisRequest"/></param>
+        /// <returns><see cref="DescribeSqlApisResponse"/></returns>
+        public DescribeSqlApisResponse DescribeSqlApisSync(DescribeSqlApisRequest req)
+        {
+            return InternalRequestAsync<DescribeSqlApisResponse>(req, "DescribeSqlApis")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取当前集群各用户绑定的资源信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserBindWorkloadGroupRequest"/></param>
+        /// <returns><see cref="DescribeUserBindWorkloadGroupResponse"/></returns>
+        public Task<DescribeUserBindWorkloadGroupResponse> DescribeUserBindWorkloadGroup(DescribeUserBindWorkloadGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeUserBindWorkloadGroupResponse>(req, "DescribeUserBindWorkloadGroup");
+        }
+
+        /// <summary>
+        /// 获取当前集群各用户绑定的资源信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserBindWorkloadGroupRequest"/></param>
+        /// <returns><see cref="DescribeUserBindWorkloadGroupResponse"/></returns>
+        public DescribeUserBindWorkloadGroupResponse DescribeUserBindWorkloadGroupSync(DescribeUserBindWorkloadGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeUserBindWorkloadGroupResponse>(req, "DescribeUserBindWorkloadGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取资源组信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkloadGroupRequest"/></param>
+        /// <returns><see cref="DescribeWorkloadGroupResponse"/></returns>
+        public Task<DescribeWorkloadGroupResponse> DescribeWorkloadGroup(DescribeWorkloadGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkloadGroupResponse>(req, "DescribeWorkloadGroup");
+        }
+
+        /// <summary>
+        /// 获取资源组信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkloadGroupRequest"/></param>
+        /// <returns><see cref="DescribeWorkloadGroupResponse"/></returns>
+        public DescribeWorkloadGroupResponse DescribeWorkloadGroupSync(DescribeWorkloadGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkloadGroupResponse>(req, "DescribeWorkloadGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 销毁集群
         /// </summary>
         /// <param name="req"><see cref="DestroyInstanceRequest"/></param>
@@ -306,6 +537,27 @@ namespace TencentCloud.Cdwdoris.V20211228
         }
 
         /// <summary>
+        /// 给已存在集群，配置日志服务
+        /// </summary>
+        /// <param name="req"><see cref="FitClsLogRequest"/></param>
+        /// <returns><see cref="FitClsLogResponse"/></returns>
+        public Task<FitClsLogResponse> FitClsLog(FitClsLogRequest req)
+        {
+            return InternalRequestAsync<FitClsLogResponse>(req, "FitClsLog");
+        }
+
+        /// <summary>
+        /// 给已存在集群，配置日志服务
+        /// </summary>
+        /// <param name="req"><see cref="FitClsLogRequest"/></param>
+        /// <returns><see cref="FitClsLogResponse"/></returns>
+        public FitClsLogResponse FitClsLogSync(FitClsLogRequest req)
+        {
+            return InternalRequestAsync<FitClsLogResponse>(req, "FitClsLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改集群名称
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceRequest"/></param>
@@ -323,6 +575,153 @@ namespace TencentCloud.Cdwdoris.V20211228
         public ModifyInstanceResponse ModifyInstanceSync(ModifyInstanceRequest req)
         {
             return InternalRequestAsync<ModifyInstanceResponse>(req, "ModifyInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// KV模式修改配置接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceKeyValConfigsRequest"/></param>
+        /// <returns><see cref="ModifyInstanceKeyValConfigsResponse"/></returns>
+        public Task<ModifyInstanceKeyValConfigsResponse> ModifyInstanceKeyValConfigs(ModifyInstanceKeyValConfigsRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceKeyValConfigsResponse>(req, "ModifyInstanceKeyValConfigs");
+        }
+
+        /// <summary>
+        /// KV模式修改配置接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceKeyValConfigsRequest"/></param>
+        /// <returns><see cref="ModifyInstanceKeyValConfigsResponse"/></returns>
+        public ModifyInstanceKeyValConfigsResponse ModifyInstanceKeyValConfigsSync(ModifyInstanceKeyValConfigsRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceKeyValConfigsResponse>(req, "ModifyInstanceKeyValConfigs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更改安全组
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityGroupsRequest"/></param>
+        /// <returns><see cref="ModifySecurityGroupsResponse"/></returns>
+        public Task<ModifySecurityGroupsResponse> ModifySecurityGroups(ModifySecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<ModifySecurityGroupsResponse>(req, "ModifySecurityGroups");
+        }
+
+        /// <summary>
+        /// 更改安全组
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityGroupsRequest"/></param>
+        /// <returns><see cref="ModifySecurityGroupsResponse"/></returns>
+        public ModifySecurityGroupsResponse ModifySecurityGroupsSync(ModifySecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<ModifySecurityGroupsResponse>(req, "ModifySecurityGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改用户绑定的资源组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserBindWorkloadGroupRequest"/></param>
+        /// <returns><see cref="ModifyUserBindWorkloadGroupResponse"/></returns>
+        public Task<ModifyUserBindWorkloadGroupResponse> ModifyUserBindWorkloadGroup(ModifyUserBindWorkloadGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyUserBindWorkloadGroupResponse>(req, "ModifyUserBindWorkloadGroup");
+        }
+
+        /// <summary>
+        /// 修改用户绑定的资源组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserBindWorkloadGroupRequest"/></param>
+        /// <returns><see cref="ModifyUserBindWorkloadGroupResponse"/></returns>
+        public ModifyUserBindWorkloadGroupResponse ModifyUserBindWorkloadGroupSync(ModifyUserBindWorkloadGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyUserBindWorkloadGroupResponse>(req, "ModifyUserBindWorkloadGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改用户权限,支持catalog，全部db，部分db表三种权限设置类别
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserPrivilegesV3Request"/></param>
+        /// <returns><see cref="ModifyUserPrivilegesV3Response"/></returns>
+        public Task<ModifyUserPrivilegesV3Response> ModifyUserPrivilegesV3(ModifyUserPrivilegesV3Request req)
+        {
+            return InternalRequestAsync<ModifyUserPrivilegesV3Response>(req, "ModifyUserPrivilegesV3");
+        }
+
+        /// <summary>
+        /// 修改用户权限,支持catalog，全部db，部分db表三种权限设置类别
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserPrivilegesV3Request"/></param>
+        /// <returns><see cref="ModifyUserPrivilegesV3Response"/></returns>
+        public ModifyUserPrivilegesV3Response ModifyUserPrivilegesV3Sync(ModifyUserPrivilegesV3Request req)
+        {
+            return InternalRequestAsync<ModifyUserPrivilegesV3Response>(req, "ModifyUserPrivilegesV3")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改资源组信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWorkloadGroupRequest"/></param>
+        /// <returns><see cref="ModifyWorkloadGroupResponse"/></returns>
+        public Task<ModifyWorkloadGroupResponse> ModifyWorkloadGroup(ModifyWorkloadGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyWorkloadGroupResponse>(req, "ModifyWorkloadGroup");
+        }
+
+        /// <summary>
+        /// 修改资源组信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWorkloadGroupRequest"/></param>
+        /// <returns><see cref="ModifyWorkloadGroupResponse"/></returns>
+        public ModifyWorkloadGroupResponse ModifyWorkloadGroupSync(ModifyWorkloadGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyWorkloadGroupResponse>(req, "ModifyWorkloadGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开启或关闭资源组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWorkloadGroupStatusRequest"/></param>
+        /// <returns><see cref="ModifyWorkloadGroupStatusResponse"/></returns>
+        public Task<ModifyWorkloadGroupStatusResponse> ModifyWorkloadGroupStatus(ModifyWorkloadGroupStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyWorkloadGroupStatusResponse>(req, "ModifyWorkloadGroupStatus");
+        }
+
+        /// <summary>
+        /// 开启或关闭资源组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWorkloadGroupStatusRequest"/></param>
+        /// <returns><see cref="ModifyWorkloadGroupStatusResponse"/></returns>
+        public ModifyWorkloadGroupStatusResponse ModifyWorkloadGroupStatusSync(ModifyWorkloadGroupStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyWorkloadGroupStatusResponse>(req, "ModifyWorkloadGroupStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 集群缩容
+        /// </summary>
+        /// <param name="req"><see cref="ReduceInstanceRequest"/></param>
+        /// <returns><see cref="ReduceInstanceResponse"/></returns>
+        public Task<ReduceInstanceResponse> ReduceInstance(ReduceInstanceRequest req)
+        {
+            return InternalRequestAsync<ReduceInstanceResponse>(req, "ReduceInstance");
+        }
+
+        /// <summary>
+        /// 集群缩容
+        /// </summary>
+        /// <param name="req"><see cref="ReduceInstanceRequest"/></param>
+        /// <returns><see cref="ReduceInstanceResponse"/></returns>
+        public ReduceInstanceResponse ReduceInstanceSync(ReduceInstanceRequest req)
+        {
+            return InternalRequestAsync<ReduceInstanceResponse>(req, "ReduceInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

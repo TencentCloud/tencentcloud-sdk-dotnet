@@ -101,6 +101,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Procedures")]
         public Procedure[] Procedures{ get; set; }
 
+        /// <summary>
+        /// 执行过程信息TraceId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TraceId")]
+        public string TraceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +125,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Elapsed", this.Elapsed);
             this.SetParamSimple(map, prefix + "TokenCount", this.TokenCount);
             this.SetParamArrayObj(map, prefix + "Procedures.", this.Procedures);
+            this.SetParamSimple(map, prefix + "TraceId", this.TraceId);
         }
     }
 }
