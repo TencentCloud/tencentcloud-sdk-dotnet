@@ -31,7 +31,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// 指定配额类型，包括Uid、Gid
+        /// 指定配额类型，包括Uid、Gid，Dir，分别代表用户配额，用户组配额，目录配额
         /// </summary>
         [JsonProperty("UserType")]
         public string UserType{ get; set; }
@@ -43,16 +43,22 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 容量硬限制，单位GiB
+        /// 容量硬限制，单位GiB。设置范围10-10000000。
         /// </summary>
         [JsonProperty("CapacityHardLimit")]
         public ulong? CapacityHardLimit{ get; set; }
 
         /// <summary>
-        /// 文件硬限制，单位个
+        /// 文件硬限制，单位个。设置范围1000-100000000
         /// </summary>
         [JsonProperty("FileHardLimit")]
         public ulong? FileHardLimit{ get; set; }
+
+        /// <summary>
+        /// 需设置目录配额的目录绝对路径，不同目录不可存在包含关系
+        /// </summary>
+        [JsonProperty("DirectoryPath")]
+        public string DirectoryPath{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "CapacityHardLimit", this.CapacityHardLimit);
             this.SetParamSimple(map, prefix + "FileHardLimit", this.FileHardLimit);
+            this.SetParamSimple(map, prefix + "DirectoryPath", this.DirectoryPath);
         }
     }
 }

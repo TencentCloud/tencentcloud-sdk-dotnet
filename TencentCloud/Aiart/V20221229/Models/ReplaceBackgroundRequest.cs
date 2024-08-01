@@ -32,6 +32,13 @@ namespace TencentCloud.Aiart.V20221229.Models
         public string ProductUrl{ get; set; }
 
         /// <summary>
+        /// 对新背景的文本描述。
+        /// 最多支持256个 utf-8 字符，支持中、英文。
+        /// </summary>
+        [JsonProperty("Prompt")]
+        public string Prompt{ get; set; }
+
+        /// <summary>
         /// 商品 Mask 图 Url，要求背景透明，保留商品主体。
         /// 如果不传，将自动使用内置的商品分割算法得到 Mask。
         /// 支持自定义上传 Mask，如果该参数不为空，则以实际上传的数据为准。
@@ -39,13 +46,6 @@ namespace TencentCloud.Aiart.V20221229.Models
         /// </summary>
         [JsonProperty("MaskUrl")]
         public string MaskUrl{ get; set; }
-
-        /// <summary>
-        /// 对新背景的文本描述。
-        /// 最多支持256个 utf-8 字符，支持中、英文。
-        /// </summary>
-        [JsonProperty("Prompt")]
-        public string Prompt{ get; set; }
 
         /// <summary>
         /// 替换背景后生成的商品图分辨率。
@@ -86,8 +86,8 @@ namespace TencentCloud.Aiart.V20221229.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ProductUrl", this.ProductUrl);
-            this.SetParamSimple(map, prefix + "MaskUrl", this.MaskUrl);
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
+            this.SetParamSimple(map, prefix + "MaskUrl", this.MaskUrl);
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
             this.SetParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
             this.SetParamObj(map, prefix + "LogoParam.", this.LogoParam);

@@ -28,7 +28,7 @@ namespace TencentCloud.Rce.V20201103
 
        private const string endpoint = "rce.tencentcloudapi.com";
        private const string version = "2020-11-03";
-       private const string sdkVersion = "SDK_NET_3.0.1059";
+       private const string sdkVersion = "SDK_NET_3.0.1060";
 
         /// <summary>
         /// Client constructor.
@@ -54,6 +54,153 @@ namespace TencentCloud.Rce.V20201103
         }
 
         /// <summary>
+        /// 创建黑白名单列表的数据 包含列表名称 列表名单类型id 关联场景id 数据类型id 记录状态 备注 数据来源 手动输入数据或cos文件key
+        /// </summary>
+        /// <param name="req"><see cref="CreateNameListRequest"/></param>
+        /// <returns><see cref="CreateNameListResponse"/></returns>
+        public Task<CreateNameListResponse> CreateNameList(CreateNameListRequest req)
+        {
+            return InternalRequestAsync<CreateNameListResponse>(req, "CreateNameList");
+        }
+
+        /// <summary>
+        /// 创建黑白名单列表的数据 包含列表名称 列表名单类型id 关联场景id 数据类型id 记录状态 备注 数据来源 手动输入数据或cos文件key
+        /// </summary>
+        /// <param name="req"><see cref="CreateNameListRequest"/></param>
+        /// <returns><see cref="CreateNameListResponse"/></returns>
+        public CreateNameListResponse CreateNameListSync(CreateNameListRequest req)
+        {
+            return InternalRequestAsync<CreateNameListResponse>(req, "CreateNameList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改黑白名单状态 关闭 开启 删除
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNameListRequest"/></param>
+        /// <returns><see cref="DeleteNameListResponse"/></returns>
+        public Task<DeleteNameListResponse> DeleteNameList(DeleteNameListRequest req)
+        {
+            return InternalRequestAsync<DeleteNameListResponse>(req, "DeleteNameList");
+        }
+
+        /// <summary>
+        /// 修改黑白名单状态 关闭 开启 删除
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNameListRequest"/></param>
+        /// <returns><see cref="DeleteNameListResponse"/></returns>
+        public DeleteNameListResponse DeleteNameListSync(DeleteNameListRequest req)
+        {
+            return InternalRequestAsync<DeleteNameListResponse>(req, "DeleteNameList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除黑白名单数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNameListDataRequest"/></param>
+        /// <returns><see cref="DeleteNameListDataResponse"/></returns>
+        public Task<DeleteNameListDataResponse> DeleteNameListData(DeleteNameListDataRequest req)
+        {
+            return InternalRequestAsync<DeleteNameListDataResponse>(req, "DeleteNameListData");
+        }
+
+        /// <summary>
+        /// 删除黑白名单数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNameListDataRequest"/></param>
+        /// <returns><see cref="DeleteNameListDataResponse"/></returns>
+        public DeleteNameListDataResponse DeleteNameListDataSync(DeleteNameListDataRequest req)
+        {
+            return InternalRequestAsync<DeleteNameListDataResponse>(req, "DeleteNameListData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 列表展示黑白名单列表数据, 包含列表名称, 名单类型, 数据类型, 数据来源, 描述, 状态等
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNameListRequest"/></param>
+        /// <returns><see cref="DescribeNameListResponse"/></returns>
+        public Task<DescribeNameListResponse> DescribeNameList(DescribeNameListRequest req)
+        {
+            return InternalRequestAsync<DescribeNameListResponse>(req, "DescribeNameList");
+        }
+
+        /// <summary>
+        /// 列表展示黑白名单列表数据, 包含列表名称, 名单类型, 数据类型, 数据来源, 描述, 状态等
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNameListRequest"/></param>
+        /// <returns><see cref="DescribeNameListResponse"/></returns>
+        public DescribeNameListResponse DescribeNameListSync(DescribeNameListRequest req)
+        {
+            return InternalRequestAsync<DescribeNameListResponse>(req, "DescribeNameList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 黑白名单详情数据展示 名单id 客户appid uin 数据内容 开始时间和结束时间 状态 描述
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNameListDataListRequest"/></param>
+        /// <returns><see cref="DescribeNameListDataListResponse"/></returns>
+        public Task<DescribeNameListDataListResponse> DescribeNameListDataList(DescribeNameListDataListRequest req)
+        {
+            return InternalRequestAsync<DescribeNameListDataListResponse>(req, "DescribeNameListDataList");
+        }
+
+        /// <summary>
+        /// 黑白名单详情数据展示 名单id 客户appid uin 数据内容 开始时间和结束时间 状态 描述
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNameListDataListRequest"/></param>
+        /// <returns><see cref="DescribeNameListDataListResponse"/></returns>
+        public DescribeNameListDataListResponse DescribeNameListDataListSync(DescribeNameListDataListRequest req)
+        {
+            return InternalRequestAsync<DescribeNameListDataListResponse>(req, "DescribeNameListDataList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询黑白名单列表详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNameListDetailRequest"/></param>
+        /// <returns><see cref="DescribeNameListDetailResponse"/></returns>
+        public Task<DescribeNameListDetailResponse> DescribeNameListDetail(DescribeNameListDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeNameListDetailResponse>(req, "DescribeNameListDetail");
+        }
+
+        /// <summary>
+        /// 查询黑白名单列表详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNameListDetailRequest"/></param>
+        /// <returns><see cref="DescribeNameListDetailResponse"/></returns>
+        public DescribeNameListDetailResponse DescribeNameListDetailSync(DescribeNameListDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeNameListDetailResponse>(req, "DescribeNameListDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 新增黑白名单详情数据 手动导入或批量导入
+        /// </summary>
+        /// <param name="req"><see cref="ImportNameListDataRequest"/></param>
+        /// <returns><see cref="ImportNameListDataResponse"/></returns>
+        public Task<ImportNameListDataResponse> ImportNameListData(ImportNameListDataRequest req)
+        {
+            return InternalRequestAsync<ImportNameListDataResponse>(req, "ImportNameListData");
+        }
+
+        /// <summary>
+        /// 新增黑白名单详情数据 手动导入或批量导入
+        /// </summary>
+        /// <param name="req"><see cref="ImportNameListDataRequest"/></param>
+        /// <returns><see cref="ImportNameListDataResponse"/></returns>
+        public ImportNameListDataResponse ImportNameListDataSync(ImportNameListDataRequest req)
+        {
+            return InternalRequestAsync<ImportNameListDataResponse>(req, "ImportNameListData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 全栈式风控引擎（RiskControlEngine，RCE）是基于人工智能技术和腾讯20年风控实战沉淀，依托腾讯海量业务构建的风控引擎，以轻量级的 SaaS 服务方式接入，帮助您快速解决注册、登录、营销活动等关键场景遇到的欺诈问题，实时防御黑灰产作恶。
         /// </summary>
         /// <param name="req"><see cref="ManageMarketingRiskRequest"/></param>
@@ -71,6 +218,48 @@ namespace TencentCloud.Rce.V20201103
         public ManageMarketingRiskResponse ManageMarketingRiskSync(ManageMarketingRiskRequest req)
         {
             return InternalRequestAsync<ManageMarketingRiskResponse>(req, "ManageMarketingRisk")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改列表数据 列表名称 列表类型 数据类型 状态 备注
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNameListRequest"/></param>
+        /// <returns><see cref="ModifyNameListResponse"/></returns>
+        public Task<ModifyNameListResponse> ModifyNameList(ModifyNameListRequest req)
+        {
+            return InternalRequestAsync<ModifyNameListResponse>(req, "ModifyNameList");
+        }
+
+        /// <summary>
+        /// 修改列表数据 列表名称 列表类型 数据类型 状态 备注
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNameListRequest"/></param>
+        /// <returns><see cref="ModifyNameListResponse"/></returns>
+        public ModifyNameListResponse ModifyNameListSync(ModifyNameListRequest req)
+        {
+            return InternalRequestAsync<ModifyNameListResponse>(req, "ModifyNameList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改黑白名单列表详情 详情内容 开始和结束时间 状态 备注等
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNameListDataRequest"/></param>
+        /// <returns><see cref="ModifyNameListDataResponse"/></returns>
+        public Task<ModifyNameListDataResponse> ModifyNameListData(ModifyNameListDataRequest req)
+        {
+            return InternalRequestAsync<ModifyNameListDataResponse>(req, "ModifyNameListData");
+        }
+
+        /// <summary>
+        /// 修改黑白名单列表详情 详情内容 开始和结束时间 状态 备注等
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNameListDataRequest"/></param>
+        /// <returns><see cref="ModifyNameListDataResponse"/></returns>
+        public ModifyNameListDataResponse ModifyNameListDataSync(ModifyNameListDataRequest req)
+        {
+            return InternalRequestAsync<ModifyNameListDataResponse>(req, "ModifyNameListData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

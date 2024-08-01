@@ -55,7 +55,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
+        /// 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778)。
+        /// 说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
@@ -92,7 +93,7 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// MySQL 版本，值包括：5.5、5.6、5.7和8.0，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
-        /// 说明：若此参数不填，则默认值为5.6。
+        /// 说明：创建非集群版实例时，请根据需要指定实例版本（推荐5.7或8.0），若此参数不填，则默认值为5.6；若创建的是集群版实例，则此参数仅能指定为5.7或8.0。
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
@@ -183,6 +184,7 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 实例隔离类型。支持值包括："UNIVERSAL" - 通用型实例，"EXCLUSIVE" - 独享型实例，"BASIC_V2" - ONTKE 单节点实例，"CLOUD_NATIVE_CLUSTER" - 集群版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 集群版加强型。不指定则默认为通用型实例。
+        /// 说明：如果创建的是集群版实例，此参数为必填。
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
@@ -257,10 +259,23 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] Vips{ get; set; }
 
         /// <summary>
+        /// 集群版实例的数据保护空间大小，单位 GB，设置范围1 - 10。
+        /// </summary>
+        [JsonProperty("DataProtectVolume")]
+        public long? DataProtectVolume{ get; set; }
+
+        /// <summary>
         /// 集群版节点拓扑配置。
+        /// 说明：若购买的是集群版实例，此参数为必填，需设置集群版实例的 RW 和 RO 节点拓扑，RO 节点范围是1 - 5个，请至少设置1个 RO 节点。
         /// </summary>
         [JsonProperty("ClusterTopology")]
         public ClusterTopology ClusterTopology{ get; set; }
+
+        /// <summary>
+        /// 磁盘类型，基础版或者集群版实例可以指定此参数。CLOUD_SSD 表示 SSD 云硬盘，CLOUD_HSSD 表示增强型 SSD 云硬盘。
+        /// </summary>
+        [JsonProperty("DiskType")]
+        public string DiskType{ get; set; }
 
 
         /// <summary>
@@ -306,7 +321,9 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
             this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
             this.SetParamArraySimple(map, prefix + "Vips.", this.Vips);
+            this.SetParamSimple(map, prefix + "DataProtectVolume", this.DataProtectVolume);
             this.SetParamObj(map, prefix + "ClusterTopology.", this.ClusterTopology);
+            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
         }
     }
 }

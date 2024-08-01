@@ -28,7 +28,7 @@ namespace TencentCloud.Essbasic.V20210526
 
        private const string endpoint = "essbasic.tencentcloudapi.com";
        private const string version = "2021-05-26";
-       private const string sdkVersion = "SDK_NET_3.0.1059";
+       private const string sdkVersion = "SDK_NET_3.0.1060";
 
         /// <summary>
         /// Client constructor.
@@ -1849,6 +1849,9 @@ namespace TencentCloud.Essbasic.V20210526
 
         /// <summary>
         /// 对合同流程文件进行数字签名验证，判断数字签名是否有效，合同文件内容是否被篡改。
+        /// 
+        /// **补充**： 可以到控制台[合同验签](https://qian.tencent.com/verifySign)体验验签功能，界面如下
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/81c333ccb07f0c5fbaf840d9cee61333.png)
         /// </summary>
         /// <param name="req"><see cref="ChannelVerifyPdfRequest"/></param>
         /// <returns><see cref="ChannelVerifyPdfResponse"/></returns>
@@ -1859,6 +1862,9 @@ namespace TencentCloud.Essbasic.V20210526
 
         /// <summary>
         /// 对合同流程文件进行数字签名验证，判断数字签名是否有效，合同文件内容是否被篡改。
+        /// 
+        /// **补充**： 可以到控制台[合同验签](https://qian.tencent.com/verifySign)体验验签功能，界面如下
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/81c333ccb07f0c5fbaf840d9cee61333.png)
         /// </summary>
         /// <param name="req"><see cref="ChannelVerifyPdfRequest"/></param>
         /// <returns><see cref="ChannelVerifyPdfResponse"/></returns>
@@ -2185,10 +2191,19 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 该接口用于获取个人授权执业章给企业的二维码，需要个人用户通过微信扫码。扫描后将跳转到腾讯电子签小程序，进入到授权执业章的流程。个人用户授权成功后，企业印章管理员需对印章进行审核，审核通过后，即可使用个人授权的执业章进行盖章操作。
+        /// 该接口用于获取个人授权执业章给企业的二维码，需要个人用户通过微信扫码。
+        /// 
+        /// 扫描后将跳转到腾讯电子签小程序，进入到授权执业章的流程。
+        /// 
+        /// 个人用户授权成功后，企业印章管理员需对印章进行审核，审核通过后，即可使用个人授权的执业章进行盖章操作。
         /// 
         /// **注意**
         /// 1. 该二维码**有效期为7天**，过期后将失效，可重新创建。
+        ///  
+        /// 
+        /// 整体流程入下图
+        /// 
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/21b6b56dbc796c9d6f402d6ce6febb07.png)
         /// </summary>
         /// <param name="req"><see cref="CreateEmployeeQualificationSealQrCodeRequest"/></param>
         /// <returns><see cref="CreateEmployeeQualificationSealQrCodeResponse"/></returns>
@@ -2198,10 +2213,19 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 该接口用于获取个人授权执业章给企业的二维码，需要个人用户通过微信扫码。扫描后将跳转到腾讯电子签小程序，进入到授权执业章的流程。个人用户授权成功后，企业印章管理员需对印章进行审核，审核通过后，即可使用个人授权的执业章进行盖章操作。
+        /// 该接口用于获取个人授权执业章给企业的二维码，需要个人用户通过微信扫码。
+        /// 
+        /// 扫描后将跳转到腾讯电子签小程序，进入到授权执业章的流程。
+        /// 
+        /// 个人用户授权成功后，企业印章管理员需对印章进行审核，审核通过后，即可使用个人授权的执业章进行盖章操作。
         /// 
         /// **注意**
         /// 1. 该二维码**有效期为7天**，过期后将失效，可重新创建。
+        ///  
+        /// 
+        /// 整体流程入下图
+        /// 
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/21b6b56dbc796c9d6f402d6ce6febb07.png)
         /// </summary>
         /// <param name="req"><see cref="CreateEmployeeQualificationSealQrCodeRequest"/></param>
         /// <returns><see cref="CreateEmployeeQualificationSealQrCodeResponse"/></returns>

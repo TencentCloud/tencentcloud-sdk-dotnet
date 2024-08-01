@@ -163,6 +163,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ZoneResourceConfiguration")]
         public ZoneResourceConfiguration[] ZoneResourceConfiguration{ get; set; }
 
+        /// <summary>
+        /// cos桶路径，创建StarRocks存算分离集群时用到
+        /// </summary>
+        [JsonProperty("CosBucket")]
+        public string CosBucket{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -189,6 +195,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamObj(map, prefix + "MetaDBInfo.", this.MetaDBInfo);
             this.SetParamArrayObj(map, prefix + "DependService.", this.DependService);
             this.SetParamArrayObj(map, prefix + "ZoneResourceConfiguration.", this.ZoneResourceConfiguration);
+            this.SetParamSimple(map, prefix + "CosBucket", this.CosBucket);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FF7DA1A4-A5D5-3EF1-A5B1-B43A74B2F34E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1059</VersionPrefix>
+    <VersionPrefix>3.0.1060</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -197,6 +197,8 @@
     <Compile Include="V20210331\Models\ListNonCompliantResourceResponse.cs" />
     <Compile Include="V20210331\Models\ListOrganizationIdentityRequest.cs" />
     <Compile Include="V20210331\Models\ListOrganizationIdentityResponse.cs" />
+    <Compile Include="V20210331\Models\ListOrganizationServiceRequest.cs" />
+    <Compile Include="V20210331\Models\ListOrganizationServiceResponse.cs" />
     <Compile Include="V20210331\Models\ListPoliciesForTarget.cs" />
     <Compile Include="V20210331\Models\ListPoliciesForTargetRequest.cs" />
     <Compile Include="V20210331\Models\ListPoliciesForTargetResponse.cs" />
@@ -222,6 +224,7 @@
     <Compile Include="V20210331\Models\OrgNode.cs" />
     <Compile Include="V20210331\Models\OrgPermission.cs" />
     <Compile Include="V20210331\Models\OrgProductFinancial.cs" />
+    <Compile Include="V20210331\Models\OrganizationServiceAssign.cs" />
     <Compile Include="V20210331\Models\ProductResource.cs" />
     <Compile Include="V20210331\Models\QuitOrganizationRequest.cs" />
     <Compile Include="V20210331\Models\QuitOrganizationResponse.cs" />

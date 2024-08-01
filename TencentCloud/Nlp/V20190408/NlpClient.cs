@@ -28,7 +28,7 @@ namespace TencentCloud.Nlp.V20190408
 
        private const string endpoint = "nlp.tencentcloudapi.com";
        private const string version = "2019-04-08";
-       private const string sdkVersion = "SDK_NET_3.0.1059";
+       private const string sdkVersion = "SDK_NET_3.0.1060";
 
         /// <summary>
         /// Client constructor.

@@ -55,7 +55,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public UserNotice[] UserNotices{ get; set; }
 
         /// <summary>
-        /// 回调通知 最多3个
+        /// 回调通知 最多6个
         /// </summary>
         [JsonProperty("URLNotices")]
         public URLNotice[] URLNotices{ get; set; }

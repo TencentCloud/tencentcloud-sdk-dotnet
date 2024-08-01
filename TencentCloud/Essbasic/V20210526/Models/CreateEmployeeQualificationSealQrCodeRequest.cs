@@ -31,7 +31,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 提示信息，扫码后此信息会展示给扫描用户，用来提示用户授权操作的目的
+        /// 提示信息，扫码后此信息会展示给扫描用户，用来提示用户授权操作的目的，会在授权界面下面的位置展示。
+        /// 
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/8436ffd78c20605e6b133ff4bc4d2ac7.png)
         /// </summary>
         [JsonProperty("HintText")]
         public string HintText{ get; set; }

@@ -44,6 +44,14 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("DestinationLanguage")]
         public string DestinationLanguage{ get; set; }
 
+        /// <summary>
+        /// 生成的字幕文件格式，填空字符串表示不生成字幕文件，可选值：
+        /// <li>vtt：生成 WebVTT 字幕文件。</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubtitleFormat")]
+        public string SubtitleFormat{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +61,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamSimple(map, prefix + "SourceLanguage", this.SourceLanguage);
             this.SetParamSimple(map, prefix + "DestinationLanguage", this.DestinationLanguage);
+            this.SetParamSimple(map, prefix + "SubtitleFormat", this.SubtitleFormat);
         }
     }
 }

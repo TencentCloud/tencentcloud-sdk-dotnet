@@ -31,7 +31,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// 指定配额类型，包括Uid、Gid
+        /// 指定配额类型，包括Uid、Gid、Dir
         /// </summary>
         [JsonProperty("UserType")]
         public string UserType{ get; set; }
@@ -42,6 +42,12 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
+        /// <summary>
+        /// 设置目录配额的目录的绝对路径
+        /// </summary>
+        [JsonProperty("DirectoryPath")]
+        public string DirectoryPath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
             this.SetParamSimple(map, prefix + "UserType", this.UserType);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "DirectoryPath", this.DirectoryPath);
         }
     }
 }

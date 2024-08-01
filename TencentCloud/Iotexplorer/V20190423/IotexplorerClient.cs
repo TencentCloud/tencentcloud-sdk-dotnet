@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1059";
+       private const string sdkVersion = "SDK_NET_3.0.1060";
 
         /// <summary>
         /// Client constructor.
@@ -281,6 +281,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public CreateBatchProductionResponse CreateBatchProductionSync(CreateBatchProductionRequest req)
         {
             return InternalRequestAsync<CreateBatchProductionResponse>(req, "CreateBatchProduction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开通设备云存AI分析服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudStorageAIServiceRequest"/></param>
+        /// <returns><see cref="CreateCloudStorageAIServiceResponse"/></returns>
+        public Task<CreateCloudStorageAIServiceResponse> CreateCloudStorageAIService(CreateCloudStorageAIServiceRequest req)
+        {
+            return InternalRequestAsync<CreateCloudStorageAIServiceResponse>(req, "CreateCloudStorageAIService");
+        }
+
+        /// <summary>
+        /// 开通设备云存AI分析服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudStorageAIServiceRequest"/></param>
+        /// <returns><see cref="CreateCloudStorageAIServiceResponse"/></returns>
+        public CreateCloudStorageAIServiceResponse CreateCloudStorageAIServiceSync(CreateCloudStorageAIServiceRequest req)
+        {
+            return InternalRequestAsync<CreateCloudStorageAIServiceResponse>(req, "CreateCloudStorageAIService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2780,6 +2801,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public ResetCloudStorageResponse ResetCloudStorageSync(ResetCloudStorageRequest req)
         {
             return InternalRequestAsync<ResetCloudStorageResponse>(req, "ResetCloudStorage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 重置指定设备的云存 AI 服务
+        /// </summary>
+        /// <param name="req"><see cref="ResetCloudStorageAIServiceRequest"/></param>
+        /// <returns><see cref="ResetCloudStorageAIServiceResponse"/></returns>
+        public Task<ResetCloudStorageAIServiceResponse> ResetCloudStorageAIService(ResetCloudStorageAIServiceRequest req)
+        {
+            return InternalRequestAsync<ResetCloudStorageAIServiceResponse>(req, "ResetCloudStorageAIService");
+        }
+
+        /// <summary>
+        /// 重置指定设备的云存 AI 服务
+        /// </summary>
+        /// <param name="req"><see cref="ResetCloudStorageAIServiceRequest"/></param>
+        /// <returns><see cref="ResetCloudStorageAIServiceResponse"/></returns>
+        public ResetCloudStorageAIServiceResponse ResetCloudStorageAIServiceSync(ResetCloudStorageAIServiceRequest req)
+        {
+            return InternalRequestAsync<ResetCloudStorageAIServiceResponse>(req, "ResetCloudStorageAIService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

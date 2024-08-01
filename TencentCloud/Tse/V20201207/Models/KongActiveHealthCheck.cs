@@ -45,6 +45,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("HttpPath")]
         public string HttpPath{ get; set; }
 
+        /// <summary>
+        /// GET HTTP 请求的超时时间，单位：秒。默认 60。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Timeout")]
+        public float? Timeout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "HealthyInterval", this.HealthyInterval);
             this.SetParamSimple(map, prefix + "UnHealthyInterval", this.UnHealthyInterval);
             this.SetParamSimple(map, prefix + "HttpPath", this.HttpPath);
+            this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
         }
     }
 }

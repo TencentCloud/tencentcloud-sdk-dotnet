@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1059";
+       private const string sdkVersion = "SDK_NET_3.0.1060";
 
         /// <summary>
         /// Client constructor.
@@ -1205,6 +1205,48 @@ namespace TencentCloud.Redis.V20180412
         public DescribeProxySlowLogResponse DescribeProxySlowLogSync(DescribeProxySlowLogRequest req)
         {
             return InternalRequestAsync<DescribeProxySlowLogResponse>(req, "DescribeProxySlowLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Redis独享集群概览信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedisClusterOverviewRequest"/></param>
+        /// <returns><see cref="DescribeRedisClusterOverviewResponse"/></returns>
+        public Task<DescribeRedisClusterOverviewResponse> DescribeRedisClusterOverview(DescribeRedisClusterOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeRedisClusterOverviewResponse>(req, "DescribeRedisClusterOverview");
+        }
+
+        /// <summary>
+        /// 查询Redis独享集群概览信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedisClusterOverviewRequest"/></param>
+        /// <returns><see cref="DescribeRedisClusterOverviewResponse"/></returns>
+        public DescribeRedisClusterOverviewResponse DescribeRedisClusterOverviewSync(DescribeRedisClusterOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeRedisClusterOverviewResponse>(req, "DescribeRedisClusterOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Redis独享集群列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedisClustersRequest"/></param>
+        /// <returns><see cref="DescribeRedisClustersResponse"/></returns>
+        public Task<DescribeRedisClustersResponse> DescribeRedisClusters(DescribeRedisClustersRequest req)
+        {
+            return InternalRequestAsync<DescribeRedisClustersResponse>(req, "DescribeRedisClusters");
+        }
+
+        /// <summary>
+        /// 查询Redis独享集群列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedisClustersRequest"/></param>
+        /// <returns><see cref="DescribeRedisClustersResponse"/></returns>
+        public DescribeRedisClustersResponse DescribeRedisClustersSync(DescribeRedisClustersRequest req)
+        {
+            return InternalRequestAsync<DescribeRedisClustersResponse>(req, "DescribeRedisClusters")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

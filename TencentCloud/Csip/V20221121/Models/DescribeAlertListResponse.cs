@@ -43,6 +43,18 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
+        /// 0：succeed 1：timeout
+        /// </summary>
+        [JsonProperty("ReturnCode")]
+        public long? ReturnCode{ get; set; }
+
+        /// <summary>
+        /// 返回状态信息
+        /// </summary>
+        [JsonProperty("ReturnMsg")]
+        public string ReturnMsg{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +69,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamArrayObj(map, prefix + "AlertList.", this.AlertList);
             this.SetParamArrayObj(map, prefix + "AlertTypeCount.", this.AlertTypeCount);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
+            this.SetParamSimple(map, prefix + "ReturnMsg", this.ReturnMsg);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

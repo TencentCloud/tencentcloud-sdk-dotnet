@@ -31,13 +31,15 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 如果需要克隆实例回档到指定时间，则指定该值。时间格式为： yyyy-mm-dd hh:mm:ss 。
+        /// 如果需要克隆实例回档到指定时间，则指定该值。时间格式为：yyyy-mm-dd hh:mm:ss。
+        /// 说明：此参数和 SpecifiedBackupId 参数需要2选1进行设置。
         /// </summary>
         [JsonProperty("SpecifiedRollbackTime")]
         public string SpecifiedRollbackTime{ get; set; }
 
         /// <summary>
-        /// 如果需要克隆实例回档到指定备份的时间点，则指定该值为物理备份的Id。请使用 [查询数据备份文件列表](/document/api/236/15842) 。
+        /// 如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 [查询数据备份文件列表](/document/api/236/15842)。
+        /// 说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、集群版实例，备份文件为快照备份。
         /// </summary>
         [JsonProperty("SpecifiedBackupId")]
         public long? SpecifiedBackupId{ get; set; }

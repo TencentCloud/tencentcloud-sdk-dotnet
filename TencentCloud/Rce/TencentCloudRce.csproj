@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E523CF0C-FC92-3F06-9926-ECC75CD44DD0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1059</VersionPrefix>
+    <VersionPrefix>3.0.1060</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,16 +49,59 @@
   <ItemGroup>
     <Compile Include="V20201103\RceClient.cs" />
     <Compile Include="V20201103\Models\AccountInfo.cs" />
+    <Compile Include="V20201103\Models\CreateNameListRequest.cs" />
+    <Compile Include="V20201103\Models\CreateNameListResponse.cs" />
     <Compile Include="V20201103\Models\DataAuthorizationInfo.cs" />
+    <Compile Include="V20201103\Models\DataContentInfo.cs" />
+    <Compile Include="V20201103\Models\DeleteNameListDataRequest.cs" />
+    <Compile Include="V20201103\Models\DeleteNameListDataResponse.cs" />
+    <Compile Include="V20201103\Models\DeleteNameListRequest.cs" />
+    <Compile Include="V20201103\Models\DeleteNameListResponse.cs" />
+    <Compile Include="V20201103\Models\DescribeNameListDataListRequest.cs" />
+    <Compile Include="V20201103\Models\DescribeNameListDataListResponse.cs" />
+    <Compile Include="V20201103\Models\DescribeNameListDetailRequest.cs" />
+    <Compile Include="V20201103\Models\DescribeNameListDetailResponse.cs" />
+    <Compile Include="V20201103\Models\DescribeNameListRequest.cs" />
+    <Compile Include="V20201103\Models\DescribeNameListResponse.cs" />
+    <Compile Include="V20201103\Models\ImportNameListDataRequest.cs" />
+    <Compile Include="V20201103\Models\ImportNameListDataResponse.cs" />
+    <Compile Include="V20201103\Models\InputCreateNameListFront.cs" />
     <Compile Include="V20201103\Models\InputCryptoManageMarketingRisk.cs" />
+    <Compile Include="V20201103\Models\InputDeleteNameListData.cs" />
+    <Compile Include="V20201103\Models\InputDeleteNameListFront.cs" />
+    <Compile Include="V20201103\Models\InputDescribeDataListFront.cs" />
+    <Compile Include="V20201103\Models\InputDescribeNameListDetail.cs" />
+    <Compile Include="V20201103\Models\InputDescribeNameListFront.cs" />
     <Compile Include="V20201103\Models\InputDetails.cs" />
+    <Compile Include="V20201103\Models\InputImportNameListDataFront.cs" />
     <Compile Include="V20201103\Models\InputManageMarketingRisk.cs" />
+    <Compile Include="V20201103\Models\InputModifyNameFront.cs" />
+    <Compile Include="V20201103\Models\InputModifyNameListDataFront.cs" />
+    <Compile Include="V20201103\Models\InputModifyNameListDataFrontListData.cs" />
     <Compile Include="V20201103\Models\ManageMarketingRiskRequest.cs" />
     <Compile Include="V20201103\Models\ManageMarketingRiskResponse.cs" />
+    <Compile Include="V20201103\Models\ModifyNameListDataRequest.cs" />
+    <Compile Include="V20201103\Models\ModifyNameListDataResponse.cs" />
+    <Compile Include="V20201103\Models\ModifyNameListRequest.cs" />
+    <Compile Include="V20201103\Models\ModifyNameListResponse.cs" />
     <Compile Include="V20201103\Models\OnlineScamInfo.cs" />
     <Compile Include="V20201103\Models\OtherAccountInfo.cs" />
+    <Compile Include="V20201103\Models\OuntputDescribeDataListInfo.cs" />
+    <Compile Include="V20201103\Models\OutputCreateNameListFront.cs" />
+    <Compile Include="V20201103\Models\OutputDeleteNameListData.cs" />
+    <Compile Include="V20201103\Models\OutputDeleteNameListFront.cs" />
+    <Compile Include="V20201103\Models\OutputDescribeDataListFront.cs" />
+    <Compile Include="V20201103\Models\OutputDescribeDataListFrontData.cs" />
+    <Compile Include="V20201103\Models\OutputDescribeNameListDetail.cs" />
+    <Compile Include="V20201103\Models\OutputDescribeNameListDetailFront.cs" />
+    <Compile Include="V20201103\Models\OutputDescribeNameListFrontFix.cs" />
+    <Compile Include="V20201103\Models\OutputDescribeNameListFrontFixListData.cs" />
+    <Compile Include="V20201103\Models\OutputDescribeNameListInfo.cs" />
+    <Compile Include="V20201103\Models\OutputImportNameListDataFront.cs" />
     <Compile Include="V20201103\Models\OutputManageMarketingRisk.cs" />
     <Compile Include="V20201103\Models\OutputManageMarketingRiskValue.cs" />
+    <Compile Include="V20201103\Models\OutputModifyNameFront.cs" />
+    <Compile Include="V20201103\Models\OutputModifyNameListFront.cs" />
     <Compile Include="V20201103\Models\QQAccountInfo.cs" />
     <Compile Include="V20201103\Models\SponsorInfo.cs" />
     <Compile Include="V20201103\Models\WeChatAccountInfo.cs" />

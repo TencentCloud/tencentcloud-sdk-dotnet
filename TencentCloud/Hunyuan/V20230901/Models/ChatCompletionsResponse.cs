@@ -44,7 +44,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public string Note{ get; set; }
 
         /// <summary>
-        /// 本轮对话的 ID。
+        /// 本次请求的 RequestId。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

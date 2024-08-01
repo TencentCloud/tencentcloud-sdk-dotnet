@@ -31,13 +31,23 @@ namespace TencentCloud.Tsi.V20210325.Models
         public string SessionUuid{ get; set; }
 
         /// <summary>
-        /// 音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+        /// 源语言，支持：
+        /// zh：中文
+        /// en：英语
+        /// ja：日语
+        /// ko：韩语
+        /// yue：粤语
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
-        /// 翻译目标语言类型，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+        /// 目标语言，各源语言的目标语言支持列表如下
+        /// <li>zh（中文）：en（英语）、ja（日语）、ko（韩语）、yue（粤语）</li>
+        /// <li>en（英语）：zh（中文）</li>
+        /// <li>ja（日语）：zh（中文）</li>
+        /// <li>ko（韩语）：zh（中文）</li>
+        /// <li>yue（粤语）：zh（中文）</li>
         /// </summary>
         [JsonProperty("Target")]
         public string Target{ get; set; }

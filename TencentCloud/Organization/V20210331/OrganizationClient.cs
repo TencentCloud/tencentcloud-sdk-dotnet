@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.1059";
+       private const string sdkVersion = "SDK_NET_3.0.1060";
 
         /// <summary>
         /// Client constructor.
@@ -1121,6 +1121,27 @@ namespace TencentCloud.Organization.V20210331
         public ListOrganizationIdentityResponse ListOrganizationIdentitySync(ListOrganizationIdentityRequest req)
         {
             return InternalRequestAsync<ListOrganizationIdentityResponse>(req, "ListOrganizationIdentity")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取集团服务设置列表
+        /// </summary>
+        /// <param name="req"><see cref="ListOrganizationServiceRequest"/></param>
+        /// <returns><see cref="ListOrganizationServiceResponse"/></returns>
+        public Task<ListOrganizationServiceResponse> ListOrganizationService(ListOrganizationServiceRequest req)
+        {
+            return InternalRequestAsync<ListOrganizationServiceResponse>(req, "ListOrganizationService");
+        }
+
+        /// <summary>
+        /// 获取集团服务设置列表
+        /// </summary>
+        /// <param name="req"><see cref="ListOrganizationServiceRequest"/></param>
+        /// <returns><see cref="ListOrganizationServiceResponse"/></returns>
+        public ListOrganizationServiceResponse ListOrganizationServiceSync(ListOrganizationServiceRequest req)
+        {
+            return InternalRequestAsync<ListOrganizationServiceResponse>(req, "ListOrganizationService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

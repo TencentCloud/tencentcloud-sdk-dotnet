@@ -30,6 +30,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("UserInfo")]
         public MixUserInfo UserInfo{ get; set; }
 
+        /// <summary>
+        /// 混音的音量调整：取值范围是0到100，100为原始上行音量，不填默认为100，值越小则音量越低。
+        /// 注：该参数只在音量白名单下配置生效，其他场景配置无效。
+        /// </summary>
+        [JsonProperty("SoundLevel")]
+        public ulong? SoundLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +44,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "UserInfo.", this.UserInfo);
+            this.SetParamSimple(map, prefix + "SoundLevel", this.SoundLevel);
         }
     }
 }

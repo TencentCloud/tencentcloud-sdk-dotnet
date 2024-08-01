@@ -132,6 +132,16 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("SearchInfo")]
         public bool? SearchInfo{ get; set; }
 
+        /// <summary>
+        /// 搜索引文角标开关。
+        /// 说明：
+        /// 1. 配合EnableEnhancement和SearchInfo参数使用。打开后，回答中命中搜索的结果会在片段后增加角标标志，对应SearchInfo列表中的链接。
+        /// 2. false：开关关闭，true：开关打开。
+        /// 3. 未传值时默认开关关闭（false）。
+        /// </summary>
+        [JsonProperty("Citation")]
+        public bool? Citation{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +159,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamSimple(map, prefix + "ToolChoice", this.ToolChoice);
             this.SetParamObj(map, prefix + "CustomTool.", this.CustomTool);
             this.SetParamSimple(map, prefix + "SearchInfo", this.SearchInfo);
+            this.SetParamSimple(map, prefix + "Citation", this.Citation);
         }
     }
 }

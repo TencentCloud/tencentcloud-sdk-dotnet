@@ -368,6 +368,27 @@ namespace TencentCloud.Redis.V20180412.Models
         public string PolarisServer{ get; set; }
 
         /// <summary>
+        /// CDC Redis集群ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RedisClusterId")]
+        public string RedisClusterId{ get; set; }
+
+        /// <summary>
+        /// CDC 集群ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DedicatedClusterId")]
+        public string DedicatedClusterId{ get; set; }
+
+        /// <summary>
+        /// 产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductVersion")]
+        public string ProductVersion{ get; set; }
+
+        /// <summary>
         /// 实例当前Proxy版本。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -460,6 +481,9 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "WanAddress", this.WanAddress);
             this.SetParamSimple(map, prefix + "PolarisServer", this.PolarisServer);
+            this.SetParamSimple(map, prefix + "RedisClusterId", this.RedisClusterId);
+            this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
+            this.SetParamSimple(map, prefix + "ProductVersion", this.ProductVersion);
             this.SetParamSimple(map, prefix + "CurrentProxyVersion", this.CurrentProxyVersion);
             this.SetParamSimple(map, prefix + "CurrentRedisVersion", this.CurrentRedisVersion);
             this.SetParamSimple(map, prefix + "UpgradeProxyVersion", this.UpgradeProxyVersion);

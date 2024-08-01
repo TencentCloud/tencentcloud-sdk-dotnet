@@ -255,6 +255,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("MultiZoneSettings")]
         public MultiZoneSetting[] MultiZoneSettings{ get; set; }
 
+        /// <summary>
+        /// cos桶路径，创建StarRocks存算分离集群时用到
+        /// </summary>
+        [JsonProperty("CosBucket")]
+        public string CosBucket{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -293,6 +299,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "VersionID", this.VersionID);
             this.SetParamSimple(map, prefix + "MultiZone", this.MultiZone);
             this.SetParamArrayObj(map, prefix + "MultiZoneSettings.", this.MultiZoneSettings);
+            this.SetParamSimple(map, prefix + "CosBucket", this.CosBucket);
         }
     }
 }
