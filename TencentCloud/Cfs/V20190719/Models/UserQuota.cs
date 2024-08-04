@@ -25,7 +25,7 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 指定配额类型，包括Uid、Gid
+        /// 指定配额类型，包括Uid、Gid、Dir
         /// </summary>
         [JsonProperty("UserType")]
         public string UserType{ get; set; }
@@ -68,6 +68,20 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("FileUsed")]
         public ulong? FileUsed{ get; set; }
 
+        /// <summary>
+        /// 目录配额的目录绝对路径
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DirectoryPath")]
+        public string DirectoryPath{ get; set; }
+
+        /// <summary>
+        /// 配置规则状态，inavailable---配置中，available --已生效，deleting--删除中，deleted 已删除，failed--配置失败
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +95,8 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
             this.SetParamSimple(map, prefix + "CapacityUsed", this.CapacityUsed);
             this.SetParamSimple(map, prefix + "FileUsed", this.FileUsed);
+            this.SetParamSimple(map, prefix + "DirectoryPath", this.DirectoryPath);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Module{ get; set; }
 
         /// <summary>
-        /// 策略名称，不超过20字符
+        /// 策略名称，不超过60字符
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }

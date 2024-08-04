@@ -28,7 +28,7 @@ namespace TencentCloud.Sqlserver.V20180328
 
        private const string endpoint = "sqlserver.tencentcloudapi.com";
        private const string version = "2018-03-28";
-       private const string sdkVersion = "SDK_NET_3.0.1060";
+       private const string sdkVersion = "SDK_NET_3.0.1061";
 
         /// <summary>
         /// Client constructor.
@@ -470,6 +470,27 @@ namespace TencentCloud.Sqlserver.V20180328
         public CreateReadOnlyDBInstancesResponse CreateReadOnlyDBInstancesSync(CreateReadOnlyDBInstancesRequest req)
         {
             return InternalRequestAsync<CreateReadOnlyDBInstancesResponse>(req, "CreateReadOnlyDBInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(CutXEvents)用于手动切割阻塞日志和死锁日志。
+        /// </summary>
+        /// <param name="req"><see cref="CutXEventsRequest"/></param>
+        /// <returns><see cref="CutXEventsResponse"/></returns>
+        public Task<CutXEventsResponse> CutXEvents(CutXEventsRequest req)
+        {
+            return InternalRequestAsync<CutXEventsResponse>(req, "CutXEvents");
+        }
+
+        /// <summary>
+        /// 本接口(CutXEvents)用于手动切割阻塞日志和死锁日志。
+        /// </summary>
+        /// <param name="req"><see cref="CutXEventsRequest"/></param>
+        /// <returns><see cref="CutXEventsResponse"/></returns>
+        public CutXEventsResponse CutXEventsSync(CutXEventsRequest req)
+        {
+            return InternalRequestAsync<CutXEventsResponse>(req, "CutXEvents")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Tdcpg.V20211118
 
        private const string endpoint = "tdcpg.tencentcloudapi.com";
        private const string version = "2021-11-18";
-       private const string sdkVersion = "SDK_NET_3.0.1060";
+       private const string sdkVersion = "SDK_NET_3.0.1061";
 
         /// <summary>
         /// Client constructor.
