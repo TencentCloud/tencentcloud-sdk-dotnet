@@ -32,6 +32,7 @@ namespace TencentCloud.Trtc.V20190722.Models
 
         /// <summary>
         /// TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，录制的TRTC房间所对应的RoomId。
+        /// 注：房间号类型默认为整型，若房间号类型为字符串，请通过RoomIdType指定。
         /// </summary>
         [JsonProperty("RoomId")]
         public string RoomId{ get; set; }

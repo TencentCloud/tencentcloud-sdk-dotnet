@@ -68,6 +68,41 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }
 
+        /// <summary>
+        /// 专线网关唯一`ID`
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DirectConnectGatewayIds")]
+        public string[] DirectConnectGatewayIds{ get; set; }
+
+        /// <summary>
+        /// 私网网关类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NatType")]
+        public string NatType{ get; set; }
+
+        /// <summary>
+        /// 私网NAT跨域信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CrossDomainInfo")]
+        public PrivateNatCrossDomainInfo CrossDomainInfo{ get; set; }
+
+        /// <summary>
+        /// 是否VPC型私网网关
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VpcType")]
+        public bool? VpcType{ get; set; }
+
+        /// <summary>
+        /// 跨域私网NAT关联的云联网ID	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CcnId")]
+        public string CcnId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +116,11 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "CrossDomain", this.CrossDomain);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+            this.SetParamArraySimple(map, prefix + "DirectConnectGatewayIds.", this.DirectConnectGatewayIds);
+            this.SetParamSimple(map, prefix + "NatType", this.NatType);
+            this.SetParamObj(map, prefix + "CrossDomainInfo.", this.CrossDomainInfo);
+            this.SetParamSimple(map, prefix + "VpcType", this.VpcType);
+            this.SetParamSimple(map, prefix + "CcnId", this.CcnId);
         }
     }
 }

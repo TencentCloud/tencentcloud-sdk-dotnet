@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1061";
+       private const string sdkVersion = "SDK_NET_3.0.1062";
 
         /// <summary>
         /// Client constructor.
@@ -2889,6 +2889,8 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// 本接口（DeleteVpnConnection）用于删除VPN通道。
+        /// >?本接口为异步接口
+        /// >
         /// </summary>
         /// <param name="req"><see cref="DeleteVpnConnectionRequest"/></param>
         /// <returns><see cref="DeleteVpnConnectionResponse"/></returns>
@@ -2899,6 +2901,8 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// 本接口（DeleteVpnConnection）用于删除VPN通道。
+        /// >?本接口为异步接口
+        /// >
         /// </summary>
         /// <param name="req"><see cref="DeleteVpnConnectionRequest"/></param>
         /// <returns><see cref="DeleteVpnConnectionResponse"/></returns>

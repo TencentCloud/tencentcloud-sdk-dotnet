@@ -31,17 +31,17 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string DspaId{ get; set; }
 
         /// <summary>
+        /// 风险状态（waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略）
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
         /// 最新风险项Id
         /// </summary>
         [JsonProperty("RiskLatestTableId")]
         [System.Obsolete]
         public ulong? RiskLatestTableId{ get; set; }
-
-        /// <summary>
-        /// 风险状态（waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略）
-        /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
 
         /// <summary>
         /// 备注
@@ -68,8 +68,8 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DspaId", this.DspaId);
-            this.SetParamSimple(map, prefix + "RiskLatestTableId", this.RiskLatestTableId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "RiskLatestTableId", this.RiskLatestTableId);
             this.SetParamSimple(map, prefix + "Note", this.Note);
             this.SetParamSimple(map, prefix + "ProcessPeople", this.ProcessPeople);
             this.SetParamArraySimple(map, prefix + "BathRiskIdList.", this.BathRiskIdList);
