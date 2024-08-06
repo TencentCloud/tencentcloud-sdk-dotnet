@@ -49,7 +49,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? RedisReplicasNum{ get; set; }
 
         /// <summary>
-        /// 多AZ实例，增加副本时的附带信息，包括副本的可用区和副本的类型（NodeType为1）。非多AZ实例不需要配置该参数。
+        /// 多AZ实例，增加副本时的节点信息，包括副本的 ID 编号及可用区信息。非多AZ实例不需要配置该参数。
         /// </summary>
         [JsonProperty("NodeSet")]
         public RedisNodeInfo[] NodeSet{ get; set; }

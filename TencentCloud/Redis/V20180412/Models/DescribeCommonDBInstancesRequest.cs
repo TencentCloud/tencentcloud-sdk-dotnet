@@ -43,7 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 实例ID过滤信息列表
+        /// 实例ID过滤信息列表，数组最大长度限制为100
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

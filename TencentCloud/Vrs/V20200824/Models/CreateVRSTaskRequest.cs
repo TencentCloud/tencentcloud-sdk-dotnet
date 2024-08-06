@@ -55,7 +55,7 @@ namespace TencentCloud.Vrs.V20200824.Models
         public long? VoiceLanguage{ get; set; }
 
         /// <summary>
-        /// 音频ID集合
+        /// 音频ID集合。（一句话声音复刻仅需填写一个音质检测接口返回的AudioId）
         /// </summary>
         [JsonProperty("AudioIdList")]
         public string[] AudioIdList{ get; set; }
@@ -88,13 +88,15 @@ namespace TencentCloud.Vrs.V20200824.Models
         public long? ModelType{ get; set; }
 
         /// <summary>
-        /// 复刻类型。 0 - 轻量版声音复刻（默认）。
+        /// 复刻类型。
+        /// 0 - 轻量版声音复刻（默认）；
+        /// 5 - 一句话声音复刻。
         /// </summary>
         [JsonProperty("TaskType")]
         public long? TaskType{ get; set; }
 
         /// <summary>
-        /// 校验音频ID。
+        /// 校验音频ID。（仅基础版声音复刻使用）
         /// </summary>
         [JsonProperty("VPRAudioId")]
         public string VPRAudioId{ get; set; }

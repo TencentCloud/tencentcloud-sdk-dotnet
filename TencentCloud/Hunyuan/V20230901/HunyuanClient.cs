@@ -28,7 +28,7 @@ namespace TencentCloud.Hunyuan.V20230901
 
        private const string endpoint = "hunyuan.tencentcloudapi.com";
        private const string version = "2023-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1062";
+       private const string sdkVersion = "SDK_NET_3.0.1063";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Hunyuan.V20230901
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 开通服务
+        /// </summary>
+        /// <param name="req"><see cref="ActivateServiceRequest"/></param>
+        /// <returns><see cref="ActivateServiceResponse"/></returns>
+        public Task<ActivateServiceResponse> ActivateService(ActivateServiceRequest req)
+        {
+            return InternalRequestAsync<ActivateServiceResponse>(req, "ActivateService");
+        }
+
+        /// <summary>
+        /// 开通服务
+        /// </summary>
+        /// <param name="req"><see cref="ActivateServiceRequest"/></param>
+        /// <returns><see cref="ActivateServiceResponse"/></returns>
+        public ActivateServiceResponse ActivateServiceSync(ActivateServiceRequest req)
+        {
+            return InternalRequestAsync<ActivateServiceResponse>(req, "ActivateService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -150,6 +171,27 @@ namespace TencentCloud.Hunyuan.V20230901
         public QueryHunyuanImageJobResponse QueryHunyuanImageJobSync(QueryHunyuanImageJobRequest req)
         {
             return InternalRequestAsync<QueryHunyuanImageJobResponse>(req, "QueryHunyuanImageJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设置付费模式
+        /// </summary>
+        /// <param name="req"><see cref="SetPayModeRequest"/></param>
+        /// <returns><see cref="SetPayModeResponse"/></returns>
+        public Task<SetPayModeResponse> SetPayMode(SetPayModeRequest req)
+        {
+            return InternalRequestAsync<SetPayModeResponse>(req, "SetPayMode");
+        }
+
+        /// <summary>
+        /// 设置付费模式
+        /// </summary>
+        /// <param name="req"><see cref="SetPayModeRequest"/></param>
+        /// <returns><see cref="SetPayModeResponse"/></returns>
+        public SetPayModeResponse SetPayModeSync(SetPayModeRequest req)
+        {
+            return InternalRequestAsync<SetPayModeResponse>(req, "SetPayMode")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

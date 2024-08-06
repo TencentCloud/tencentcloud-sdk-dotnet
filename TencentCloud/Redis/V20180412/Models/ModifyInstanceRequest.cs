@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Operation{ get; set; }
 
         /// <summary>
-        /// 实例Id
+        /// 实例Id，每次请求的实例的上限为10。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

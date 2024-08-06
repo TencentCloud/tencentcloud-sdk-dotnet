@@ -49,12 +49,21 @@ namespace TencentCloud.Vrs.V20200824.Models
         public string Codec{ get; set; }
 
         /// <summary>
-        /// 音频采样率：
-        /// 
-        /// 16000：16k（默认）
+        /// 音频采样率。
+        /// 16000：16k（默认）；
+        /// 24000：24k（仅一句话声音复刻支持）；
+        /// 48000：48k（仅一句话声音复刻支持）。
         /// </summary>
         [JsonProperty("SampleRate")]
         public long? SampleRate{ get; set; }
+
+        /// <summary>
+        /// 复刻类型。
+        /// 0 - 轻量版声音复刻（默认）;
+        /// 5 - 一句话声音复刻。
+        /// </summary>
+        [JsonProperty("TaskType")]
+        public long? TaskType{ get; set; }
 
 
         /// <summary>
@@ -67,6 +76,7 @@ namespace TencentCloud.Vrs.V20200824.Models
             this.SetParamSimple(map, prefix + "TypeId", this.TypeId);
             this.SetParamSimple(map, prefix + "Codec", this.Codec);
             this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
+            this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1062";
+       private const string sdkVersion = "SDK_NET_3.0.1063";
 
         /// <summary>
         /// Client constructor.
@@ -3332,6 +3332,27 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeTaskByStatusReportResponse DescribeTaskByStatusReportSync(DescribeTaskByStatusReportRequest req)
         {
             return InternalRequestAsync<DescribeTaskByStatusReportResponse>(req, "DescribeTaskByStatusReport")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通过任务查询表的血缘关系
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskLineageRequest"/></param>
+        /// <returns><see cref="DescribeTaskLineageResponse"/></returns>
+        public Task<DescribeTaskLineageResponse> DescribeTaskLineage(DescribeTaskLineageRequest req)
+        {
+            return InternalRequestAsync<DescribeTaskLineageResponse>(req, "DescribeTaskLineage");
+        }
+
+        /// <summary>
+        /// 通过任务查询表的血缘关系
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskLineageRequest"/></param>
+        /// <returns><see cref="DescribeTaskLineageResponse"/></returns>
+        public DescribeTaskLineageResponse DescribeTaskLineageSync(DescribeTaskLineageRequest req)
+        {
+            return InternalRequestAsync<DescribeTaskLineageResponse>(req, "DescribeTaskLineage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

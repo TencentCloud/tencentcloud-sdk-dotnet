@@ -116,6 +116,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string DatabaseName{ get; set; }
 
         /// <summary>
+        /// 模式名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SchemaName")]
+        public string SchemaName{ get; set; }
+
+        /// <summary>
         /// 是否有权限
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -178,6 +185,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("DsEnvType")]
         public long? DsEnvType{ get; set; }
 
+        /// <summary>
+        /// EMR集群部署方式：CVM/TKE
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterDeployType")]
+        public string ClusterDeployType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -197,6 +211,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamObj(map, prefix + "Subscription.", this.Subscription);
             this.SetParamSimple(map, prefix + "DatabaseId", this.DatabaseId);
             this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
+            this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
             this.SetParamSimple(map, prefix + "Permission", this.Permission);
             this.SetParamSimple(map, prefix + "RuleCount", this.RuleCount);
             this.SetParamSimple(map, prefix + "MonitorStatus", this.MonitorStatus);
@@ -206,6 +221,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "StrategyConfig", this.StrategyConfig);
             this.SetParamSimple(map, prefix + "SubscribeConfig", this.SubscribeConfig);
             this.SetParamSimple(map, prefix + "DsEnvType", this.DsEnvType);
+            this.SetParamSimple(map, prefix + "ClusterDeployType", this.ClusterDeployType);
         }
     }
 }

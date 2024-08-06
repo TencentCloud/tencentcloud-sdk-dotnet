@@ -54,6 +54,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
+        /// <summary>
+        /// 实例状态列表
+        /// </summary>
+        [JsonProperty("StateList")]
+        public long?[] StateList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamArraySimple(map, prefix + "StateList.", this.StateList);
         }
     }
 }

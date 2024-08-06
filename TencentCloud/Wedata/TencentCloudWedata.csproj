@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1062</VersionPrefix>
+    <VersionPrefix>3.0.1063</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -411,6 +411,8 @@
     <Compile Include="V20210820\Models\DescribeTaskByCycleResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTaskByStatusReportRequest.cs" />
     <Compile Include="V20210820\Models\DescribeTaskByStatusReportResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeTaskLineageRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeTaskLineageResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTaskLockStatusRequest.cs" />
     <Compile Include="V20210820\Models\DescribeTaskLockStatusResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTaskRunHistoryRequest.cs" />
@@ -516,6 +518,7 @@
     <Compile Include="V20210820\Models\KillOpsMakePlanInstancesResponse.cs" />
     <Compile Include="V20210820\Models\KillScheduleInstancesRequest.cs" />
     <Compile Include="V20210820\Models\KillScheduleInstancesResponse.cs" />
+    <Compile Include="V20210820\Models\LifecycleInfo.cs" />
     <Compile Include="V20210820\Models\LineageParamRecord.cs" />
     <Compile Include="V20210820\Models\LinkOpsDto.cs" />
     <Compile Include="V20210820\Models\LockIntegrationTaskRequest.cs" />
@@ -691,12 +694,15 @@
     <Compile Include="V20210820\Models\TableQualityDetail.cs" />
     <Compile Include="V20210820\Models\TableQualityDetailPage.cs" />
     <Compile Include="V20210820\Models\TableScoreStatisticsInfo.cs" />
+    <Compile Include="V20210820\Models\TagVoteSum.cs" />
     <Compile Include="V20210820\Models\TaskAlarmInfo.cs" />
     <Compile Include="V20210820\Models\TaskByCycle.cs" />
     <Compile Include="V20210820\Models\TaskByStatus.cs" />
     <Compile Include="V20210820\Models\TaskExtInfo.cs" />
     <Compile Include="V20210820\Models\TaskInnerInfo.cs" />
     <Compile Include="V20210820\Models\TaskInstanceCountDto.cs" />
+    <Compile Include="V20210820\Models\TaskLineageInfo.cs" />
+    <Compile Include="V20210820\Models\TaskLineageInfoPair.cs" />
     <Compile Include="V20210820\Models\TaskLockStatus.cs" />
     <Compile Include="V20210820\Models\TaskLogRequest.cs" />
     <Compile Include="V20210820\Models\TaskLogResponse.cs" />

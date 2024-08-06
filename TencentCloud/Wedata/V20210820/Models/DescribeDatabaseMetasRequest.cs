@@ -36,6 +36,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("OrderFields")]
         public OrderField[] OrderFields{ get; set; }
 
+        /// <summary>
+        /// pagesize
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
+
+        /// <summary>
+        /// pageNumber
+        /// </summary>
+        [JsonProperty("PageNumber")]
+        public long? PageNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArrayObj(map, prefix + "OrderFields.", this.OrderFields);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
         }
     }
 }

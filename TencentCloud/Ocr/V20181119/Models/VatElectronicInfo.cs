@@ -120,6 +120,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("VatElectronicItems")]
         public VatElectronicItemInfo[] VatElectronicItems{ get; set; }
 
+        /// <summary>
+        /// 业务类型标志
+        /// </summary>
+        [JsonProperty("ServiceTypeLabel")]
+        public string ServiceTypeLabel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "SubTotal", this.SubTotal);
             this.SetParamSimple(map, prefix + "SubTax", this.SubTax);
             this.SetParamArrayObj(map, prefix + "VatElectronicItems.", this.VatElectronicItems);
+            this.SetParamSimple(map, prefix + "ServiceTypeLabel", this.ServiceTypeLabel);
         }
     }
 }

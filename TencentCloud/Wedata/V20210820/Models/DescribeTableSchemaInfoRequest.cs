@@ -66,6 +66,24 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
+        /// <summary>
+        /// 环境信息
+        /// </summary>
+        [JsonProperty("Env")]
+        public string Env{ get; set; }
+
+        /// <summary>
+        /// 空间模式
+        /// </summary>
+        [JsonProperty("Model")]
+        public string Model{ get; set; }
+
+        /// <summary>
+        /// 开发态的datasourceId
+        /// </summary>
+        [JsonProperty("DevDatasourceId")]
+        public string DevDatasourceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +97,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ConnectionType", this.ConnectionType);
             this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "Env", this.Env);
+            this.SetParamSimple(map, prefix + "Model", this.Model);
+            this.SetParamSimple(map, prefix + "DevDatasourceId", this.DevDatasourceId);
         }
     }
 }

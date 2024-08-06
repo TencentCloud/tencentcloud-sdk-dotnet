@@ -37,7 +37,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <li> ap-hongkong-3 </li>
         /// <li> ap-shenzhen-fsi-1 </li>
         /// <li> ap-shenzhen-fsi-2 </li>
-        /// <li> ap-shenzhen-fsi-3 </li>
+        /// <li> ap-shenzhen-fsi-3（售罄） </li>
         /// <li> ap-guangzhou-1（售罄）</li>
         /// <li> ap-guangzhou-2（售罄）</li>
         /// <li> ap-guangzhou-3 </li>

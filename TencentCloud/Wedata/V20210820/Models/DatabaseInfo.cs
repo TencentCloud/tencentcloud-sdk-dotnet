@@ -87,6 +87,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("DsEnvType")]
         public long? DsEnvType{ get; set; }
 
+        /// <summary>
+        /// EMR引擎部署方式：CVM/TKE
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterDeployType")]
+        public string ClusterDeployType{ get; set; }
+
+        /// <summary>
+        /// 模式名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SchemaName")]
+        public string SchemaName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +116,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "OriginDatabaseName", this.OriginDatabaseName);
             this.SetParamSimple(map, prefix + "OriginSchemaName", this.OriginSchemaName);
             this.SetParamSimple(map, prefix + "DsEnvType", this.DsEnvType);
+            this.SetParamSimple(map, prefix + "ClusterDeployType", this.ClusterDeployType);
+            this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
         }
     }
 }

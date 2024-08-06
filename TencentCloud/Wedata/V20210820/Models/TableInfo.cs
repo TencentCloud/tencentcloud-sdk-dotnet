@@ -39,6 +39,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string TableName{ get; set; }
 
         /// <summary>
+        /// 表类型，view/table
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TableType")]
+        public string TableType{ get; set; }
+
+        /// <summary>
         /// 表databaseName
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -60,6 +67,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamSimple(map, prefix + "TableId", this.TableId);
             this.SetParamSimple(map, prefix + "TableName", this.TableName);
+            this.SetParamSimple(map, prefix + "TableType", this.TableType);
             this.SetParamSimple(map, prefix + "OriginDatabaseName", this.OriginDatabaseName);
             this.SetParamSimple(map, prefix + "OriginSchemaName", this.OriginSchemaName);
         }

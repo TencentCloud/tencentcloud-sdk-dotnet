@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1062";
+       private const string sdkVersion = "SDK_NET_3.0.1063";
 
         /// <summary>
         /// Client constructor.
@@ -2133,7 +2133,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 变更实例配置
+        /// 本接口（UpgradeInstance）用于变更实例的配置规格。
         /// </summary>
         /// <param name="req"><see cref="UpgradeInstanceRequest"/></param>
         /// <returns><see cref="UpgradeInstanceResponse"/></returns>
@@ -2143,7 +2143,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 变更实例配置
+        /// 本接口（UpgradeInstance）用于变更实例的配置规格。
         /// </summary>
         /// <param name="req"><see cref="UpgradeInstanceRequest"/></param>
         /// <returns><see cref="UpgradeInstanceResponse"/></returns>

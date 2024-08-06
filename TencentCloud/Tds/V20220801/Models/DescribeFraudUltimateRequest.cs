@@ -78,6 +78,12 @@ namespace TencentCloud.Tds.V20220801.Models
         [JsonProperty("QQOpenId")]
         public string QQOpenId{ get; set; }
 
+        /// <summary>
+        /// 数据授权信息
+        /// </summary>
+        [JsonProperty("DataAuthorization")]
+        public DataAuthorizationInfo DataAuthorization{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Tds.V20220801.Models
             this.SetParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
             this.SetParamSimple(map, prefix + "ClientIP", this.ClientIP);
             this.SetParamSimple(map, prefix + "QQOpenId", this.QQOpenId);
+            this.SetParamObj(map, prefix + "DataAuthorization.", this.DataAuthorization);
         }
     }
 }

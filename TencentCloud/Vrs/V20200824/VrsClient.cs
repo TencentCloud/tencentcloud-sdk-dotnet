@@ -28,7 +28,7 @@ namespace TencentCloud.Vrs.V20200824
 
        private const string endpoint = "vrs.tencentcloudapi.com";
        private const string version = "2020-08-24";
-       private const string sdkVersion = "SDK_NET_3.0.1062";
+       private const string sdkVersion = "SDK_NET_3.0.1063";
 
         /// <summary>
         /// Client constructor.
@@ -130,6 +130,7 @@ namespace TencentCloud.Vrs.V20200824
 
         /// <summary>
         /// 本接口用于检测音频的环境和音频质量。
+        /// 对于一句话声音复刻，音频时长需大于3s，小于15s，文件大小不能超过2MB，音频需为单声道，位深为16bit。建议格式：wav、单声道、采样率48kHz或24kHz 
         /// • 请求方法为 HTTP POST , Content-Type为"application/json; charset=utf-8"
         /// • 签名方法参考 公共参数 中签名方法v3。
         /// </summary>
@@ -142,6 +143,7 @@ namespace TencentCloud.Vrs.V20200824
 
         /// <summary>
         /// 本接口用于检测音频的环境和音频质量。
+        /// 对于一句话声音复刻，音频时长需大于3s，小于15s，文件大小不能超过2MB，音频需为单声道，位深为16bit。建议格式：wav、单声道、采样率48kHz或24kHz 
         /// • 请求方法为 HTTP POST , Content-Type为"application/json; charset=utf-8"
         /// • 签名方法参考 公共参数 中签名方法v3。
         /// </summary>

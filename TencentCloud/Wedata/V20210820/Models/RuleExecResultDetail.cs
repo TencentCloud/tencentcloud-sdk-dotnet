@@ -94,6 +94,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("DatasourceType")]
         public ulong? DatasourceType{ get; set; }
 
+        /// <summary>
+        /// 集群部署类型，CVM/TKE
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterDeployType")]
+        public string ClusterDeployType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +117,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamObj(map, prefix + "RuleExecResult.", this.RuleExecResult);
             this.SetParamSimple(map, prefix + "TableOwnerUserId", this.TableOwnerUserId);
             this.SetParamSimple(map, prefix + "DatasourceType", this.DatasourceType);
+            this.SetParamSimple(map, prefix + "ClusterDeployType", this.ClusterDeployType);
         }
     }
 }

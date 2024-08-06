@@ -46,7 +46,7 @@ namespace TencentCloud.Vrs.V20200824.Models
         public string StatusStr{ get; set; }
 
         /// <summary>
-        /// 音色id。
+        /// 音色id。（若为一句话复刻时，该值为固定值“200000000”）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VoiceType")]
@@ -59,6 +59,20 @@ namespace TencentCloud.Vrs.V20200824.Models
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }
 
+        /// <summary>
+        /// 任务过期时间。（当复刻类型为一句话复刻时展示）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public string ExpireTime{ get; set; }
+
+        /// <summary>
+        /// 快速复刻音色ID。（当复刻类型为一句话复刻时展示）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FastVoiceType")]
+        public string FastVoiceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +84,8 @@ namespace TencentCloud.Vrs.V20200824.Models
             this.SetParamSimple(map, prefix + "StatusStr", this.StatusStr);
             this.SetParamSimple(map, prefix + "VoiceType", this.VoiceType);
             this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "FastVoiceType", this.FastVoiceType);
         }
     }
 }

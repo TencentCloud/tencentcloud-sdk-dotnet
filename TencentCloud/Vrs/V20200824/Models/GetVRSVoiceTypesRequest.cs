@@ -24,12 +24,21 @@ namespace TencentCloud.Vrs.V20200824.Models
     public class GetVRSVoiceTypesRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 复刻类型。
+        /// 0 - 除快速声音复刻外其他复刻类型（默认）；
+        /// 5 - 一句话声音复刻。
+        /// </summary>
+        [JsonProperty("TaskType")]
+        public long? TaskType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
         }
     }
 }

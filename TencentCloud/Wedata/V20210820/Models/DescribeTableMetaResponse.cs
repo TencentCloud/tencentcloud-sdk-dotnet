@@ -32,6 +32,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         public TableMeta TableMeta{ get; set; }
 
         /// <summary>
+        /// 生命周期信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LifecycleInfo")]
+        public LifecycleInfo LifecycleInfo{ get; set; }
+
+        /// <summary>
+        /// 标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagVoteSumList")]
+        public TagVoteSum TagVoteSumList{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -44,6 +58,8 @@ namespace TencentCloud.Wedata.V20210820.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "TableMeta.", this.TableMeta);
+            this.SetParamObj(map, prefix + "LifecycleInfo.", this.LifecycleInfo);
+            this.SetParamObj(map, prefix + "TagVoteSumList.", this.TagVoteSumList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -162,6 +162,24 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("SourceEngineTypes")]
         public ulong?[] SourceEngineTypes{ get; set; }
 
+        /// <summary>
+        /// 目标库名
+        /// </summary>
+        [JsonProperty("TargetDatabaseName")]
+        public string TargetDatabaseName{ get; set; }
+
+        /// <summary>
+        /// 目标模式名
+        /// </summary>
+        [JsonProperty("TargetSchemaName")]
+        public string TargetSchemaName{ get; set; }
+
+        /// <summary>
+        /// 目标表名
+        /// </summary>
+        [JsonProperty("TargetTableName")]
+        public string TargetTableName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +209,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamObj(map, prefix + "FieldConfig.", this.FieldConfig);
             this.SetParamSimple(map, prefix + "TargetObjectValue", this.TargetObjectValue);
             this.SetParamArraySimple(map, prefix + "SourceEngineTypes.", this.SourceEngineTypes);
+            this.SetParamSimple(map, prefix + "TargetDatabaseName", this.TargetDatabaseName);
+            this.SetParamSimple(map, prefix + "TargetSchemaName", this.TargetSchemaName);
+            this.SetParamSimple(map, prefix + "TargetTableName", this.TargetTableName);
         }
     }
 }

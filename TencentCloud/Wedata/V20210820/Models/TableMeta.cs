@@ -403,6 +403,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TableProperties")]
         public TableMetaProperty[] TableProperties{ get; set; }
 
+        /// <summary>
+        /// 环境，取值 prod或者 dev
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Environment")]
+        public string Environment{ get; set; }
+
+        /// <summary>
+        /// 数据库模式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Schema")]
+        public string Schema{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -463,6 +477,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArraySimple(map, prefix + "PartitionColumns.", this.PartitionColumns);
             this.SetParamSimple(map, prefix + "PartitionExpireDays", this.PartitionExpireDays);
             this.SetParamArrayObj(map, prefix + "TableProperties.", this.TableProperties);
+            this.SetParamSimple(map, prefix + "Environment", this.Environment);
+            this.SetParamSimple(map, prefix + "Schema", this.Schema);
         }
     }
 }

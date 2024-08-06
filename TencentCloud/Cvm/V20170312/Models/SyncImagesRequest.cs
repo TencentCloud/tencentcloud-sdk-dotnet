@@ -31,25 +31,27 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] ImageIds{ get; set; }
 
         /// <summary>
-        /// 目的同步地域列表，必须满足如下限制：<br><li>必须是一个合法的Region。</li><li>如果是自定义镜像，则目标同步地域不能为源地域。</li><li>如果是共享镜像，则目的同步地域仅支持源地域，表示将共享镜像复制为源地域的自定义镜像。</li><li>暂不支持部分地域同步。</li>具体地域参数请参考[Region](https://cloud.tencent.com/document/product/213/6091)。
+        /// 目的同步地域列表，必须满足如下限制：<br><li>必须是一个合法的Region。</li><li>如果是自定义镜像，则目标同步地域不能为源地域。</li><li>如果是共享镜像，则目的同步地域仅支持源地域，表示将共享镜像复制为源地域的自定义镜像。</li><li>暂不支持部分地域同步，请参考[复制镜像](https://cloud.tencent.com/document/product/213/4943#.E5.A4.8D.E5.88.B6.E8.AF.B4.E6.98.8E)。</li>具体地域参数请参考[Region](https://cloud.tencent.com/document/product/213/6091)。
         /// </summary>
         [JsonProperty("DestinationRegions")]
         public string[] DestinationRegions{ get; set; }
 
         /// <summary>
         /// 检测是否支持发起同步镜像。
+        /// 默认值: false
         /// </summary>
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }
 
         /// <summary>
-        /// 目标镜像名称。
+        /// 目标镜像名称。默认使用源镜像名称。
         /// </summary>
         [JsonProperty("ImageName")]
         public string ImageName{ get; set; }
 
         /// <summary>
         /// 是否需要返回目的地域的镜像ID。
+        /// 默认值: false
         /// </summary>
         [JsonProperty("ImageSetRequired")]
         public bool? ImageSetRequired{ get; set; }

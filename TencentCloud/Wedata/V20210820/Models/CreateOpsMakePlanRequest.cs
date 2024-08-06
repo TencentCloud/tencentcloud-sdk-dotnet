@@ -165,6 +165,24 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("IntegrationResourceGroupName")]
         public string IntegrationResourceGroupName{ get; set; }
 
+        /// <summary>
+        /// 补录扩展属性
+        /// </summary>
+        [JsonProperty("MakeExtList")]
+        public StrToStrMap[] MakeExtList{ get; set; }
+
+        /// <summary>
+        /// 补录扩展属性
+        /// </summary>
+        [JsonProperty("SameSelfWorkflowDependType")]
+        public bool? SameSelfWorkflowDependType{ get; set; }
+
+        /// <summary>
+        /// 补录扩展属性
+        /// </summary>
+        [JsonProperty("SelfWorkflowDependency")]
+        public string SelfWorkflowDependency{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -194,6 +212,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "IntegrationResourceGroup", this.IntegrationResourceGroup);
             this.SetParamSimple(map, prefix + "SchedulerResourceGroupName", this.SchedulerResourceGroupName);
             this.SetParamSimple(map, prefix + "IntegrationResourceGroupName", this.IntegrationResourceGroupName);
+            this.SetParamArrayObj(map, prefix + "MakeExtList.", this.MakeExtList);
+            this.SetParamSimple(map, prefix + "SameSelfWorkflowDependType", this.SameSelfWorkflowDependType);
+            this.SetParamSimple(map, prefix + "SelfWorkflowDependency", this.SelfWorkflowDependency);
         }
     }
 }

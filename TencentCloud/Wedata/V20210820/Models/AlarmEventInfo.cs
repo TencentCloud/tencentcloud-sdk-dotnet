@@ -197,6 +197,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Threshold")]
         public float? Threshold{ get; set; }
 
+        /// <summary>
+        /// 告警原因
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlarmReason")]
+        public string AlarmReason{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -229,6 +236,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "MonitorObjectId", this.MonitorObjectId);
             this.SetParamSimple(map, prefix + "MonitorObjectName", this.MonitorObjectName);
             this.SetParamSimple(map, prefix + "Threshold", this.Threshold);
+            this.SetParamSimple(map, prefix + "AlarmReason", this.AlarmReason);
         }
     }
 }

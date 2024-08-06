@@ -42,6 +42,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TableFilterType")]
         public ulong? TableFilterType{ get; set; }
 
+        /// <summary>
+        /// 查询字段列表
+        /// </summary>
+        [JsonProperty("SearchNames")]
+        public string[] SearchNames{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TableId", this.TableId);
             this.SetParamObj(map, prefix + "TableNameFilter.", this.TableNameFilter);
             this.SetParamSimple(map, prefix + "TableFilterType", this.TableFilterType);
+            this.SetParamArraySimple(map, prefix + "SearchNames.", this.SearchNames);
         }
     }
 }

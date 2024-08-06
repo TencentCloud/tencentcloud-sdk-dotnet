@@ -136,6 +136,41 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("RuleExecResultVOList")]
         public RuleExecResult[] RuleExecResultVOList{ get; set; }
 
+        /// <summary>
+        /// 数据库名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatabaseName")]
+        public string DatabaseName{ get; set; }
+
+        /// <summary>
+        /// 本地规则表id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleGroupTableId")]
+        public string RuleGroupTableId{ get; set; }
+
+        /// <summary>
+        /// 集群部署类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterDeployType")]
+        public string ClusterDeployType{ get; set; }
+
+        /// <summary>
+        /// 实例id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 数据库所属环境，0.未定义，1.生产 2.开发
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DsEnvType")]
+        public string DsEnvType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +193,11 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ExecDetail", this.ExecDetail);
             this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
             this.SetParamArrayObj(map, prefix + "RuleExecResultVOList.", this.RuleExecResultVOList);
+            this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
+            this.SetParamSimple(map, prefix + "RuleGroupTableId", this.RuleGroupTableId);
+            this.SetParamSimple(map, prefix + "ClusterDeployType", this.ClusterDeployType);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "DsEnvType", this.DsEnvType);
         }
     }
 }

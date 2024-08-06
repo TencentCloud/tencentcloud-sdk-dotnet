@@ -339,6 +339,27 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("DsEnvType")]
         public long? DsEnvType{ get; set; }
 
+        /// <summary>
+        /// 数据源类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatasourceType")]
+        public long? DatasourceType{ get; set; }
+
+        /// <summary>
+        /// 模式名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SchemaName")]
+        public string SchemaName{ get; set; }
+
+        /// <summary>
+        /// 目标模式名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TargetSchemaName")]
+        public string TargetSchemaName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -390,6 +411,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "MonitorStatus", this.MonitorStatus);
             this.SetParamSimple(map, prefix + "TriggerCondition", this.TriggerCondition);
             this.SetParamSimple(map, prefix + "DsEnvType", this.DsEnvType);
+            this.SetParamSimple(map, prefix + "DatasourceType", this.DatasourceType);
+            this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
+            this.SetParamSimple(map, prefix + "TargetSchemaName", this.TargetSchemaName);
         }
     }
 }

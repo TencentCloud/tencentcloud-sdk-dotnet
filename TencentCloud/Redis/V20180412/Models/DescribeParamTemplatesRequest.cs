@@ -35,18 +35,20 @@ namespace TencentCloud.Redis.V20180412.Models
         /// - 9：Redis 5.0 内存版（集群架构）。
         /// - 15：Redis 6.2 内存版（标准架构）。
         /// - 16：Redis 6.2 内存版（集群架构）。
+        /// - 17：Redis 7.0 内存版（标准架构）。
+        /// - 18：Redis 7.0 内存版（集群架构）。
         /// </summary>
         [JsonProperty("ProductTypes")]
         public long?[] ProductTypes{ get; set; }
 
         /// <summary>
-        /// 模板名称数组。
+        /// 模板名称数组。数组最大长度限制为50
         /// </summary>
         [JsonProperty("TemplateNames")]
         public string[] TemplateNames{ get; set; }
 
         /// <summary>
-        /// 模板ID数组。
+        /// 模板ID数组。数组最大长度限制为50
         /// </summary>
         [JsonProperty("TemplateIds")]
         public string[] TemplateIds{ get; set; }

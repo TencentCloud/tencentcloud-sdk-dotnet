@@ -32,6 +32,7 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 释放实例挂载的包年包月数据盘。true表示销毁实例同时释放包年包月数据盘，false表示只销毁实例。
+        /// 默认值：false
         /// </summary>
         [JsonProperty("ReleasePrepaidDataDisks")]
         public bool? ReleasePrepaidDataDisks{ get; set; }
