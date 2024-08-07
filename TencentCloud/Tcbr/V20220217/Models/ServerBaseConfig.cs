@@ -144,6 +144,13 @@ namespace TencentCloud.Tcbr.V20220217.Models
         [JsonProperty("LogParseType")]
         public string LogParseType{ get; set; }
 
+        /// <summary>
+        /// 服务标签, function: 函数托管
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tag")]
+        public string Tag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +177,7 @@ namespace TencentCloud.Tcbr.V20220217.Models
             this.SetParamSimple(map, prefix + "LogSetId", this.LogSetId);
             this.SetParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
             this.SetParamSimple(map, prefix + "LogParseType", this.LogParseType);
+            this.SetParamSimple(map, prefix + "Tag", this.Tag);
         }
     }
 }

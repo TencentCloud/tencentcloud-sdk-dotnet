@@ -609,6 +609,13 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("DisasterRecoverGroupAffinity")]
         public ulong? DisasterRecoverGroupAffinity{ get; set; }
 
+        /// <summary>
+        /// 子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubProductCode")]
+        public string SubProductCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -703,6 +710,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamArrayObj(map, prefix + "OutboundPublicAcls.", this.OutboundPublicAcls);
             this.SetParamSimple(map, prefix + "NetConnectScheme", this.NetConnectScheme);
             this.SetParamSimple(map, prefix + "DisasterRecoverGroupAffinity", this.DisasterRecoverGroupAffinity);
+            this.SetParamSimple(map, prefix + "SubProductCode", this.SubProductCode);
         }
     }
 }

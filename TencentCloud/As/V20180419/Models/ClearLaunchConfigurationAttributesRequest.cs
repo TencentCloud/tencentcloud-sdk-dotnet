@@ -58,6 +58,13 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("ClearDisasterRecoverGroupIds")]
         public bool? ClearDisasterRecoverGroupIds{ get; set; }
 
+        /// <summary>
+        /// 是否清空实例标签列表，非必填，默认为 false。
+        /// 填 true 代表清空实例标签列表，清空后基于此新创建的云主机将不会绑定列表中的标签。
+        /// </summary>
+        [JsonProperty("ClearInstanceTags")]
+        public bool? ClearInstanceTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +76,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "ClearHostNameSettings", this.ClearHostNameSettings);
             this.SetParamSimple(map, prefix + "ClearInstanceNameSettings", this.ClearInstanceNameSettings);
             this.SetParamSimple(map, prefix + "ClearDisasterRecoverGroupIds", this.ClearDisasterRecoverGroupIds);
+            this.SetParamSimple(map, prefix + "ClearInstanceTags", this.ClearInstanceTags);
         }
     }
 }

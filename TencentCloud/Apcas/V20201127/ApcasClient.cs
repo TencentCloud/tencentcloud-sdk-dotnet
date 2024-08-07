@@ -28,7 +28,7 @@ namespace TencentCloud.Apcas.V20201127
 
        private const string endpoint = "apcas.tencentcloudapi.com";
        private const string version = "2020-11-27";
-       private const string sdkVersion = "SDK_NET_3.0.1063";
+       private const string sdkVersion = "SDK_NET_3.0.1064";
 
         /// <summary>
         /// Client constructor.

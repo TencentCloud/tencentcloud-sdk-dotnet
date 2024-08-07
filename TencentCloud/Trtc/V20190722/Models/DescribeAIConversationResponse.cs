@@ -37,7 +37,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 唯一标识一次任务。
+        /// 任务的唯一标识，在启动任务时生成
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

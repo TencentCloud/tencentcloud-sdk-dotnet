@@ -94,9 +94,9 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
-        /// <br><li>POSTPAID_BY_HOUR：按小时后付费
-        /// <br><li>SPOTPAID：竞价付费
-        /// <br><li>PREPAID：预付费，即包年包月
+        /// <li>POSTPAID_BY_HOUR：按小时后付费</li>
+        /// <li>SPOTPAID：竞价付费</li>
+        /// <li>PREPAID：预付费，即包年包月</li>
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
@@ -122,8 +122,8 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// 实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
-        /// <br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。
-        /// <br><li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。
+        /// <li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。</li>
+        /// <li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</li>
         /// 
         /// 实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。
         /// 如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
@@ -164,8 +164,8 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// 云盘类型选择策略，默认取值 ORIGINAL，取值范围：
-        /// <br><li>ORIGINAL：使用设置的云盘类型
-        /// <br><li>AUTOMATIC：自动选择当前可用的云盘类型
+        /// <li>ORIGINAL：使用设置的云盘类型</li>
+        /// <li>AUTOMATIC：自动选择当前可用的云盘类型</li>
         /// </summary>
         [JsonProperty("DiskTypePolicy")]
         public string DiskTypePolicy{ get; set; }

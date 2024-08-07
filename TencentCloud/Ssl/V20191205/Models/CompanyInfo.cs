@@ -80,6 +80,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("IdNumber")]
         public string IdNumber{ get; set; }
 
+        /// <summary>
+        /// 标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tags[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -95,6 +102,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "CompanyPhone", this.CompanyPhone);
             this.SetParamSimple(map, prefix + "IdType", this.IdType);
             this.SetParamSimple(map, prefix + "IdNumber", this.IdNumber);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

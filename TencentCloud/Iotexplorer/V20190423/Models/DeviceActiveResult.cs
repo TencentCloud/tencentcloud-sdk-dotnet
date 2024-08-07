@@ -45,6 +45,13 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("ErrCode")]
         public ulong? ErrCode{ get; set; }
 
+        /// <summary>
+        /// 过期时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public long? ExpireTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
             this.SetParamSimple(map, prefix + "Sn", this.Sn);
             this.SetParamSimple(map, prefix + "ErrCode", this.ErrCode);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         }
     }
 }

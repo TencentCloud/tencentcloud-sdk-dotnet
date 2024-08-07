@@ -43,7 +43,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// 查询filter
+        /// 查询filter;默认查询任务的开发态，如需查询生产态任务需添加{"Values":["true"],"Name":"ProductionState"};如需查询查询任务状态需要查询生产态任务列表
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

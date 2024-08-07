@@ -96,6 +96,26 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("SeekSecond")]
         public long? SeekSecond{ get; set; }
 
+        /// <summary>
+        /// 开启自动旁路推流，请确认控制台已经开启该功能。
+        /// </summary>
+        [JsonProperty("AutoPush")]
+        public bool? AutoPush{ get; set; }
+
+        /// <summary>
+        /// 循环播放次数, 取值范围[-1, 1000],  默认1次。
+        ///  - 0 无效值
+        ///  - -1 循环播放, 需要主动调用停止接口或设置MaxDuration
+        /// </summary>
+        [JsonProperty("RepeatNum")]
+        public long? RepeatNum{ get; set; }
+
+        /// <summary>
+        /// 循环播放最大时长,仅支持RepeatNum设置-1时生效，取值范围[1, 10080]，单位分钟。
+        /// </summary>
+        [JsonProperty("MaxDuration")]
+        public long? MaxDuration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -113,6 +133,9 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamObj(map, prefix + "AudioEncodeParams.", this.AudioEncodeParams);
             this.SetParamArraySimple(map, prefix + "SourceUrl.", this.SourceUrl);
             this.SetParamSimple(map, prefix + "SeekSecond", this.SeekSecond);
+            this.SetParamSimple(map, prefix + "AutoPush", this.AutoPush);
+            this.SetParamSimple(map, prefix + "RepeatNum", this.RepeatNum);
+            this.SetParamSimple(map, prefix + "MaxDuration", this.MaxDuration);
         }
     }
 }

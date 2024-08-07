@@ -32,6 +32,20 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public DeviceActiveResult[] DeviceList{ get; set; }
 
         /// <summary>
+        /// 设备激活失败返回数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FailureList")]
+        public DeviceActiveResult[] FailureList{ get; set; }
+
+        /// <summary>
+        /// 设备激活成功返回数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SuccessList")]
+        public DeviceActiveResult[] SuccessList{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -44,6 +58,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "DeviceList.", this.DeviceList);
+            this.SetParamArrayObj(map, prefix + "FailureList.", this.FailureList);
+            this.SetParamArrayObj(map, prefix + "SuccessList.", this.SuccessList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

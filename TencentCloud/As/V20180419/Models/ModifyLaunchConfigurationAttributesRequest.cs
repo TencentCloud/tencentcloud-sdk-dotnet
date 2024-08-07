@@ -45,9 +45,8 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// 实例类型校验策略，在实际修改 InstanceTypes 时发挥作用，取值包括 ALL 和 ANY，默认取值为ANY。
-        /// <br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。
-        /// <br><li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。
-        /// 
+        /// <li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。</li> 
+        /// <li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</li> 
         /// 实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。
         /// 如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
         /// </summary>
@@ -82,9 +81,9 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// 实例计费类型。具体取值范围如下：
-        /// <br><li>POSTPAID_BY_HOUR：按小时后付费
-        /// <br><li>SPOTPAID：竞价付费
-        /// <br><li>PREPAID：预付费，即包年包月
+        /// <li>POSTPAID_BY_HOUR：按小时后付费</li>
+        /// <li>SPOTPAID：竞价付费</li>
+        /// <li>PREPAID：预付费，即包年包月</li>
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
@@ -109,8 +108,8 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// 云盘类型选择策略，取值范围：
-        /// <br><li>ORIGINAL：使用设置的云盘类型。
-        /// <br><li>AUTOMATIC：自动选择当前可用的云盘类型。
+        /// <li>ORIGINAL：使用设置的云盘类型。</li>
+        /// <li>AUTOMATIC：自动选择当前可用的云盘类型。</li>
         /// </summary>
         [JsonProperty("DiskTypePolicy")]
         public string DiskTypePolicy{ get; set; }
@@ -182,6 +181,13 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("LoginSettings")]
         public LoginSettings LoginSettings{ get; set; }
 
+        /// <summary>
+        /// 实例标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
+        /// 该参数会覆盖原有的实例标签列表，如需新增标签，需将新标签和原有标签一并传入。
+        /// </summary>
+        [JsonProperty("InstanceTags")]
+        public InstanceTag[] InstanceTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -210,6 +216,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
             this.SetParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
             this.SetParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
+            this.SetParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
         }
     }
 }

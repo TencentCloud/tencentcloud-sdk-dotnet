@@ -43,7 +43,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public AgentConfig AgentConfig{ get; set; }
 
         /// <summary>
-        /// 调用方传入的唯一Id，服务端用来去重。
+        /// 调用方传入的唯一Id，可用于客户侧防止重复发起任务以及可以通过该字段查询任务状态。
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }

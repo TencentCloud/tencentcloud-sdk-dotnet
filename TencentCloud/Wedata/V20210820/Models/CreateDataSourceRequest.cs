@@ -138,6 +138,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("DevelopmentParams")]
         public string DevelopmentParams{ get; set; }
 
+        /// <summary>
+        /// 新建数据源的项目ID
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +169,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "COSRegion", this.COSRegion);
             this.SetParamSimple(map, prefix + "ConnectResult", this.ConnectResult);
             this.SetParamSimple(map, prefix + "DevelopmentParams", this.DevelopmentParams);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
         }
     }
 }

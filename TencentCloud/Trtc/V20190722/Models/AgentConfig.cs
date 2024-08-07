@@ -46,11 +46,18 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string TargetUserId{ get; set; }
 
         /// <summary>
-        /// 房间内推流用户全部退出后超过MaxIdleTime秒，后台自动关闭任务，默认值是60s。
+        /// 房间内超过MaxIdleTime 没有推流，后台自动关闭任务，默认值是60s。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxIdleTime")]
         public ulong? MaxIdleTime{ get; set; }
+
+        /// <summary>
+        /// 机器人的欢迎语
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WelcomeMessage")]
+        public string WelcomeMessage{ get; set; }
 
 
         /// <summary>
@@ -62,6 +69,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "UserSig", this.UserSig);
             this.SetParamSimple(map, prefix + "TargetUserId", this.TargetUserId);
             this.SetParamSimple(map, prefix + "MaxIdleTime", this.MaxIdleTime);
+            this.SetParamSimple(map, prefix + "WelcomeMessage", this.WelcomeMessage);
         }
     }
 }

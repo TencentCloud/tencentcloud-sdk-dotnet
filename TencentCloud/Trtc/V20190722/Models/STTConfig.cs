@@ -56,7 +56,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string Language{ get; set; }
 
         /// <summary>
-        /// 额外识别可能替代语言,最多3个, 需高级版支持,Language指定方言时，不允许设置该字段
+        /// 发起模糊识别额外可能替代语言类型,最多填写3种语言类型, 
+        /// 注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
         /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>

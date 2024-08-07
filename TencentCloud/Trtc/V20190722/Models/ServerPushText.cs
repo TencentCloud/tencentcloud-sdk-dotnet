@@ -36,6 +36,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("Interrupt")]
         public bool? Interrupt{ get; set; }
 
+        /// <summary>
+        /// 播报完文本后，是否自动关闭对话任务
+        /// </summary>
+        [JsonProperty("StopAfterPlay")]
+        public bool? StopAfterPlay{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         {
             this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamSimple(map, prefix + "Interrupt", this.Interrupt);
+            this.SetParamSimple(map, prefix + "StopAfterPlay", this.StopAfterPlay);
         }
     }
 }
