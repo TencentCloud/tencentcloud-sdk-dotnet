@@ -44,10 +44,16 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 过滤器列表。Name字段支持
-        /// RiskLevel
+        /// RiskLevel， AppId
         /// </summary>
         [JsonProperty("Filters")]
         public ComplianceFilters[] Filters{ get; set; }
+
+        /// <summary>
+        /// 资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+        /// </summary>
+        [JsonProperty("AssetType")]
+        public string AssetType{ get; set; }
 
 
         /// <summary>
@@ -59,6 +65,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "AssetType", this.AssetType);
         }
     }
 }

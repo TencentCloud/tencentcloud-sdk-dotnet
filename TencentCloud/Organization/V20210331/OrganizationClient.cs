@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.1064";
+       private const string sdkVersion = "SDK_NET_3.0.1065";
 
         /// <summary>
         /// Client constructor.
@@ -264,6 +264,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 添加集团服务委派管理员
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrgServiceAssignRequest"/></param>
+        /// <returns><see cref="CreateOrgServiceAssignResponse"/></returns>
+        public Task<CreateOrgServiceAssignResponse> CreateOrgServiceAssign(CreateOrgServiceAssignRequest req)
+        {
+            return InternalRequestAsync<CreateOrgServiceAssignResponse>(req, "CreateOrgServiceAssign");
+        }
+
+        /// <summary>
+        /// 添加集团服务委派管理员
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrgServiceAssignRequest"/></param>
+        /// <returns><see cref="CreateOrgServiceAssignResponse"/></returns>
+        public CreateOrgServiceAssignResponse CreateOrgServiceAssignSync(CreateOrgServiceAssignRequest req)
+        {
+            return InternalRequestAsync<CreateOrgServiceAssignResponse>(req, "CreateOrgServiceAssign")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建企业组织
         /// </summary>
         /// <param name="req"><see cref="CreateOrganizationRequest"/></param>
@@ -428,6 +449,27 @@ namespace TencentCloud.Organization.V20210331
         public DeleteAccountResponse DeleteAccountSync(DeleteAccountRequest req)
         {
             return InternalRequestAsync<DeleteAccountResponse>(req, "DeleteAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除集团服务委派管理员
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOrgServiceAssignRequest"/></param>
+        /// <returns><see cref="DeleteOrgServiceAssignResponse"/></returns>
+        public Task<DeleteOrgServiceAssignResponse> DeleteOrgServiceAssign(DeleteOrgServiceAssignRequest req)
+        {
+            return InternalRequestAsync<DeleteOrgServiceAssignResponse>(req, "DeleteOrgServiceAssign");
+        }
+
+        /// <summary>
+        /// 删除集团服务委派管理员
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOrgServiceAssignRequest"/></param>
+        /// <returns><see cref="DeleteOrgServiceAssignResponse"/></returns>
+        public DeleteOrgServiceAssignResponse DeleteOrgServiceAssignSync(DeleteOrgServiceAssignRequest req)
+        {
+            return InternalRequestAsync<DeleteOrgServiceAssignResponse>(req, "DeleteOrgServiceAssign")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1100,6 +1142,27 @@ namespace TencentCloud.Organization.V20210331
         public ListNonCompliantResourceResponse ListNonCompliantResourceSync(ListNonCompliantResourceRequest req)
         {
             return InternalRequestAsync<ListNonCompliantResourceResponse>(req, "ListNonCompliantResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取集团服务委派管理员列表
+        /// </summary>
+        /// <param name="req"><see cref="ListOrgServiceAssignMemberRequest"/></param>
+        /// <returns><see cref="ListOrgServiceAssignMemberResponse"/></returns>
+        public Task<ListOrgServiceAssignMemberResponse> ListOrgServiceAssignMember(ListOrgServiceAssignMemberRequest req)
+        {
+            return InternalRequestAsync<ListOrgServiceAssignMemberResponse>(req, "ListOrgServiceAssignMember");
+        }
+
+        /// <summary>
+        /// 获取集团服务委派管理员列表
+        /// </summary>
+        /// <param name="req"><see cref="ListOrgServiceAssignMemberRequest"/></param>
+        /// <returns><see cref="ListOrgServiceAssignMemberResponse"/></returns>
+        public ListOrgServiceAssignMemberResponse ListOrgServiceAssignMemberSync(ListOrgServiceAssignMemberRequest req)
+        {
+            return InternalRequestAsync<ListOrgServiceAssignMemberResponse>(req, "ListOrgServiceAssignMember")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

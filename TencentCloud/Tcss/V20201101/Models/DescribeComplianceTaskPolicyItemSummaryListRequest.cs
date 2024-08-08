@@ -51,10 +51,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 过滤条件。
-        /// Name - String
-        /// Name 可取值：ItemType, StandardId,  RiskLevel。
-        /// 当为K8S资产时，还可取ClusterName。
+        /// 过滤条件 <li>Name      string 检测项名字</li> <li>ItemType  string 检测项类型</li> <li>RiskLevel string 威胁等级</li> <li>IsOpen    int    是否开启</li>
         /// </summary>
         [JsonProperty("Filters")]
         public ComplianceFilters[] Filters{ get; set; }

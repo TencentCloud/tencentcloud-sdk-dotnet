@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1064";
+       private const string sdkVersion = "SDK_NET_3.0.1065";
 
         /// <summary>
         /// Client constructor.
@@ -260,6 +260,27 @@ namespace TencentCloud.Cls.V20201016
         public CreateConfigExtraResponse CreateConfigExtraSync(CreateConfigExtraRequest req)
         {
             return InternalRequestAsync<CreateConfigExtraResponse>(req, "CreateConfigExtra")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建控制台分享
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsoleSharingRequest"/></param>
+        /// <returns><see cref="CreateConsoleSharingResponse"/></returns>
+        public Task<CreateConsoleSharingResponse> CreateConsoleSharing(CreateConsoleSharingRequest req)
+        {
+            return InternalRequestAsync<CreateConsoleSharingResponse>(req, "CreateConsoleSharing");
+        }
+
+        /// <summary>
+        /// 创建控制台分享
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsoleSharingRequest"/></param>
+        /// <returns><see cref="CreateConsoleSharingResponse"/></returns>
+        public CreateConsoleSharingResponse CreateConsoleSharingSync(CreateConsoleSharingRequest req)
+        {
+            return InternalRequestAsync<CreateConsoleSharingResponse>(req, "CreateConsoleSharing")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -663,6 +684,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 删除控制台分享
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConsoleSharingRequest"/></param>
+        /// <returns><see cref="DeleteConsoleSharingResponse"/></returns>
+        public Task<DeleteConsoleSharingResponse> DeleteConsoleSharing(DeleteConsoleSharingRequest req)
+        {
+            return InternalRequestAsync<DeleteConsoleSharingResponse>(req, "DeleteConsoleSharing");
+        }
+
+        /// <summary>
+        /// 删除控制台分享
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConsoleSharingRequest"/></param>
+        /// <returns><see cref="DeleteConsoleSharingResponse"/></returns>
+        public DeleteConsoleSharingResponse DeleteConsoleSharingSync(DeleteConsoleSharingRequest req)
+        {
+            return InternalRequestAsync<DeleteConsoleSharingResponse>(req, "DeleteConsoleSharing")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于删除投递配置
         /// </summary>
         /// <param name="req"><see cref="DeleteConsumerRequest"/></param>
@@ -1058,6 +1100,27 @@ namespace TencentCloud.Cls.V20201016
         public DescribeConfigsResponse DescribeConfigsSync(DescribeConfigsRequest req)
         {
             return InternalRequestAsync<DescribeConfigsResponse>(req, "DescribeConfigs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量查询控制台分享列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsoleSharingListRequest"/></param>
+        /// <returns><see cref="DescribeConsoleSharingListResponse"/></returns>
+        public Task<DescribeConsoleSharingListResponse> DescribeConsoleSharingList(DescribeConsoleSharingListRequest req)
+        {
+            return InternalRequestAsync<DescribeConsoleSharingListResponse>(req, "DescribeConsoleSharingList");
+        }
+
+        /// <summary>
+        /// 批量查询控制台分享列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsoleSharingListRequest"/></param>
+        /// <returns><see cref="DescribeConsoleSharingListResponse"/></returns>
+        public DescribeConsoleSharingListResponse DescribeConsoleSharingListSync(DescribeConsoleSharingListRequest req)
+        {
+            return InternalRequestAsync<DescribeConsoleSharingListResponse>(req, "DescribeConsoleSharingList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1627,6 +1690,27 @@ namespace TencentCloud.Cls.V20201016
         public ModifyConfigExtraResponse ModifyConfigExtraSync(ModifyConfigExtraRequest req)
         {
             return InternalRequestAsync<ModifyConfigExtraResponse>(req, "ModifyConfigExtra")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改控制台分享，目前仅允许修改有效期
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConsoleSharingRequest"/></param>
+        /// <returns><see cref="ModifyConsoleSharingResponse"/></returns>
+        public Task<ModifyConsoleSharingResponse> ModifyConsoleSharing(ModifyConsoleSharingRequest req)
+        {
+            return InternalRequestAsync<ModifyConsoleSharingResponse>(req, "ModifyConsoleSharing");
+        }
+
+        /// <summary>
+        /// 修改控制台分享，目前仅允许修改有效期
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConsoleSharingRequest"/></param>
+        /// <returns><see cref="ModifyConsoleSharingResponse"/></returns>
+        public ModifyConsoleSharingResponse ModifyConsoleSharingSync(ModifyConsoleSharingRequest req)
+        {
+            return InternalRequestAsync<ModifyConsoleSharingResponse>(req, "ModifyConsoleSharing")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

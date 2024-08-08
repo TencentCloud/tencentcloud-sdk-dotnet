@@ -150,6 +150,15 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("AuditProcedure")]
         public string AuditProcedure{ get; set; }
 
+        /// <summary>
+        /// 是否开启
+        /// <li>0 关闭</li>
+        /// <li>1 开启</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsEnable")]
+        public ulong? IsEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -174,6 +183,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ApplicableVersion", this.ApplicableVersion);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "AuditProcedure", this.AuditProcedure);
+            this.SetParamSimple(map, prefix + "IsEnable", this.IsEnable);
         }
     }
 }

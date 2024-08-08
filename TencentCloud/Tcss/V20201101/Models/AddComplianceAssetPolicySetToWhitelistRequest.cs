@@ -30,6 +30,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("AssetPolicySetList")]
         public ComplianceAssetPolicySetItem[] AssetPolicySetList{ get; set; }
 
+        /// <summary>
+        /// 扫描资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+        /// </summary>
+        [JsonProperty("AssetType")]
+        public string AssetType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "AssetPolicySetList.", this.AssetPolicySetList);
+            this.SetParamSimple(map, prefix + "AssetType", this.AssetType);
         }
     }
 }

@@ -159,6 +159,27 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("IgnoredPolicyItemCount")]
         public ulong? IgnoredPolicyItemCount{ get; set; }
 
+        /// <summary>
+        /// 总检测项数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TotalPolicyItemCount")]
+        public ulong? TotalPolicyItemCount{ get; set; }
+
+        /// <summary>
+        /// 检测主机数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DetectHostCount")]
+        public ulong? DetectHostCount{ get; set; }
+
+        /// <summary>
+        /// 当前任务剩余时间，单位秒
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LeftTime")]
+        public ulong? LeftTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -185,6 +206,9 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamObj(map, prefix + "PeriodRule.", this.PeriodRule);
             this.SetParamSimple(map, prefix + "OpenPolicyItemCount", this.OpenPolicyItemCount);
             this.SetParamSimple(map, prefix + "IgnoredPolicyItemCount", this.IgnoredPolicyItemCount);
+            this.SetParamSimple(map, prefix + "TotalPolicyItemCount", this.TotalPolicyItemCount);
+            this.SetParamSimple(map, prefix + "DetectHostCount", this.DetectHostCount);
+            this.SetParamSimple(map, prefix + "LeftTime", this.LeftTime);
         }
     }
 }

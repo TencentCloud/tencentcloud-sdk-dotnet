@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1064";
+       private const string sdkVersion = "SDK_NET_3.0.1065";
 
         /// <summary>
         /// Client constructor.
@@ -434,6 +434,27 @@ namespace TencentCloud.Trocket.V20230308
         public DescribeConsumerGroupListResponse DescribeConsumerGroupListSync(DescribeConsumerGroupListRequest req)
         {
             return InternalRequestAsync<DescribeConsumerGroupListResponse>(req, "DescribeConsumerGroupList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定消费组堆积数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerLagRequest"/></param>
+        /// <returns><see cref="DescribeConsumerLagResponse"/></returns>
+        public Task<DescribeConsumerLagResponse> DescribeConsumerLag(DescribeConsumerLagRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerLagResponse>(req, "DescribeConsumerLag");
+        }
+
+        /// <summary>
+        /// 查询指定消费组堆积数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerLagRequest"/></param>
+        /// <returns><see cref="DescribeConsumerLagResponse"/></returns>
+        public DescribeConsumerLagResponse DescribeConsumerLagSync(DescribeConsumerLagRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerLagResponse>(req, "DescribeConsumerLag")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
