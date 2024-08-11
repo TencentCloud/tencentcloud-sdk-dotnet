@@ -69,15 +69,6 @@ namespace TencentCloud.Cls.V20201016.Models
         public MultiTopicSearchInformation[] Topics{ get; set; }
 
         /// <summary>
-        /// 表示单次查询返回的原始日志条数，默认为100，最大值为1000，获取后续日志需使用Context参数
-        /// 注意：
-        /// * 仅当检索分析语句(Query)不包含SQL时有效
-        /// * SQL结果条数指定方式参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
-        /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
-
-        /// <summary>
         /// 原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
         /// 注意：
         /// * 仅当检索分析语句(Query)不包含SQL时有效
@@ -85,6 +76,29 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         [JsonProperty("Sort")]
         public string Sort{ get; set; }
+
+        /// <summary>
+        /// 表示单次查询返回的原始日志条数，默认为100，最大值为1000。
+        /// 注意：
+        /// * 仅当检索分析语句(Query)不包含SQL时有效
+        /// * SQL结果条数指定方式参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
+        /// 
+        /// 可通过两种方式获取后续更多日志：
+        /// * Context:透传上次接口返回的Context值，获取后续更多日志，总计最多可获取1万条原始日志
+        /// * Offset:偏移量，表示从第几行开始返回原始日志，无日志条数限制
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// 查询原始日志的偏移量，表示从第几行开始返回原始日志，默认为0。 
+        /// 注意：
+        /// * 仅当检索分析语句(Query)不包含SQL时有效
+        /// * 不能与Context参数同时使用
+        /// * 仅适用于单日志主题检索
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
         /// <summary>
         /// 透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时。
@@ -126,8 +140,9 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
             this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamArrayObj(map, prefix + "Topics.", this.Topics);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Sort", this.Sort);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Context", this.Context);
             this.SetParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
             this.SetParamSimple(map, prefix + "UseNewAnalysis", this.UseNewAnalysis);

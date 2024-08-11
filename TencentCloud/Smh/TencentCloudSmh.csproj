@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D0214E5B-694E-35FE-A23E-AAC8BB653013}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1065</VersionPrefix>
+    <VersionPrefix>3.0.1066</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,8 +50,14 @@
     <Compile Include="V20210712\SmhClient.cs" />
     <Compile Include="V20210712\Models\CreateLibraryRequest.cs" />
     <Compile Include="V20210712\Models\CreateLibraryResponse.cs" />
+    <Compile Include="V20210712\Models\CreateUserLifecycleRequest.cs" />
+    <Compile Include="V20210712\Models\CreateUserLifecycleResponse.cs" />
+    <Compile Include="V20210712\Models\CreateUserRequest.cs" />
+    <Compile Include="V20210712\Models\CreateUserResponse.cs" />
     <Compile Include="V20210712\Models\DeleteLibraryRequest.cs" />
     <Compile Include="V20210712\Models\DeleteLibraryResponse.cs" />
+    <Compile Include="V20210712\Models\DeleteUserRequest.cs" />
+    <Compile Include="V20210712\Models\DeleteUserResponse.cs" />
     <Compile Include="V20210712\Models\DescribeLibrariesRequest.cs" />
     <Compile Include="V20210712\Models\DescribeLibrariesResponse.cs" />
     <Compile Include="V20210712\Models\DescribeLibrarySecretRequest.cs" />
@@ -62,14 +68,19 @@
     <Compile Include="V20210712\Models\DescribeOfficialOverviewResponse.cs" />
     <Compile Include="V20210712\Models\DescribeTrafficPackagesRequest.cs" />
     <Compile Include="V20210712\Models\DescribeTrafficPackagesResponse.cs" />
+    <Compile Include="V20210712\Models\DescribeUserLifecycleRequest.cs" />
+    <Compile Include="V20210712\Models\DescribeUserLifecycleResponse.cs" />
     <Compile Include="V20210712\Models\Instance.cs" />
     <Compile Include="V20210712\Models\Library.cs" />
     <Compile Include="V20210712\Models\LibraryExtension.cs" />
     <Compile Include="V20210712\Models\ModifyLibraryRequest.cs" />
     <Compile Include="V20210712\Models\ModifyLibraryResponse.cs" />
+    <Compile Include="V20210712\Models\ModifyUserRequest.cs" />
+    <Compile Include="V20210712\Models\ModifyUserResponse.cs" />
     <Compile Include="V20210712\Models\SendSmsCodeRequest.cs" />
     <Compile Include="V20210712\Models\SendSmsCodeResponse.cs" />
     <Compile Include="V20210712\Models\TrafficPackage.cs" />
+    <Compile Include="V20210712\Models\UserFilter.cs" />
     <Compile Include="V20210712\Models\VerifySmsCodeRequest.cs" />
     <Compile Include="V20210712\Models\VerifySmsCodeResponse.cs" />
   </ItemGroup>

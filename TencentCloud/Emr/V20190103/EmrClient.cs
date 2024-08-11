@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1065";
+       private const string sdkVersion = "SDK_NET_3.0.1066";
 
         /// <summary>
         /// Client constructor.
@@ -539,6 +539,27 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 查询服务进程信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceNodeInfosRequest"/></param>
+        /// <returns><see cref="DescribeServiceNodeInfosResponse"/></returns>
+        public Task<DescribeServiceNodeInfosResponse> DescribeServiceNodeInfos(DescribeServiceNodeInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeServiceNodeInfosResponse>(req, "DescribeServiceNodeInfos");
+        }
+
+        /// <summary>
+        /// 查询服务进程信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceNodeInfosRequest"/></param>
+        /// <returns><see cref="DescribeServiceNodeInfosResponse"/></returns>
+        public DescribeServiceNodeInfosResponse DescribeServiceNodeInfosSync(DescribeServiceNodeInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeServiceNodeInfosResponse>(req, "DescribeServiceNodeInfos")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取trino查询结果
         /// </summary>
         /// <param name="req"><see cref="DescribeTrinoQueryInfoRequest"/></param>
@@ -600,6 +621,27 @@ namespace TencentCloud.Emr.V20190103
         public DescribeYarnApplicationsResponse DescribeYarnApplicationsSync(DescribeYarnApplicationsRequest req)
         {
             return InternalRequestAsync<DescribeYarnApplicationsResponse>(req, "DescribeYarnApplications")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看yarn资源调度的调度历史
+        /// </summary>
+        /// <param name="req"><see cref="DescribeYarnScheduleHistoryRequest"/></param>
+        /// <returns><see cref="DescribeYarnScheduleHistoryResponse"/></returns>
+        public Task<DescribeYarnScheduleHistoryResponse> DescribeYarnScheduleHistory(DescribeYarnScheduleHistoryRequest req)
+        {
+            return InternalRequestAsync<DescribeYarnScheduleHistoryResponse>(req, "DescribeYarnScheduleHistory");
+        }
+
+        /// <summary>
+        /// 查看yarn资源调度的调度历史
+        /// </summary>
+        /// <param name="req"><see cref="DescribeYarnScheduleHistoryRequest"/></param>
+        /// <returns><see cref="DescribeYarnScheduleHistoryResponse"/></returns>
+        public DescribeYarnScheduleHistoryResponse DescribeYarnScheduleHistorySync(DescribeYarnScheduleHistoryRequest req)
+        {
+            return InternalRequestAsync<DescribeYarnScheduleHistoryResponse>(req, "DescribeYarnScheduleHistory")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -831,6 +873,27 @@ namespace TencentCloud.Emr.V20190103
         public ModifyUserManagerPwdResponse ModifyUserManagerPwdSync(ModifyUserManagerPwdRequest req)
         {
             return InternalRequestAsync<ModifyUserManagerPwdResponse>(req, "ModifyUserManagerPwd")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 部署生效
+        /// </summary>
+        /// <param name="req"><see cref="ModifyYarnDeployRequest"/></param>
+        /// <returns><see cref="ModifyYarnDeployResponse"/></returns>
+        public Task<ModifyYarnDeployResponse> ModifyYarnDeploy(ModifyYarnDeployRequest req)
+        {
+            return InternalRequestAsync<ModifyYarnDeployResponse>(req, "ModifyYarnDeploy");
+        }
+
+        /// <summary>
+        /// 部署生效
+        /// </summary>
+        /// <param name="req"><see cref="ModifyYarnDeployRequest"/></param>
+        /// <returns><see cref="ModifyYarnDeployResponse"/></returns>
+        public ModifyYarnDeployResponse ModifyYarnDeploySync(ModifyYarnDeployRequest req)
+        {
+            return InternalRequestAsync<ModifyYarnDeployResponse>(req, "ModifyYarnDeploy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -30,6 +30,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
+        /// <summary>
+        /// 视频码率上限，当 Type 指定了极速高清类型时有效。
+        /// 不填或填0表示不设视频码率上限。
+        /// </summary>
+        [JsonProperty("MaxVideoBitrate")]
+        public ulong? MaxVideoBitrate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +44,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "MaxVideoBitrate", this.MaxVideoBitrate);
         }
     }
 }

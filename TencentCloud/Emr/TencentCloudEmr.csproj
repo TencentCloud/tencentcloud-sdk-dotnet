@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1065</VersionPrefix>
+    <VersionPrefix>3.0.1066</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -113,12 +113,16 @@
     <Compile Include="V20190103\Models\DescribeJobFlowResponse.cs" />
     <Compile Include="V20190103\Models\DescribeResourceScheduleRequest.cs" />
     <Compile Include="V20190103\Models\DescribeResourceScheduleResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeServiceNodeInfosRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeServiceNodeInfosResponse.cs" />
     <Compile Include="V20190103\Models\DescribeTrinoQueryInfoRequest.cs" />
     <Compile Include="V20190103\Models\DescribeTrinoQueryInfoResponse.cs" />
     <Compile Include="V20190103\Models\DescribeUsersForUserManagerRequest.cs" />
     <Compile Include="V20190103\Models\DescribeUsersForUserManagerResponse.cs" />
     <Compile Include="V20190103\Models\DescribeYarnApplicationsRequest.cs" />
     <Compile Include="V20190103\Models\DescribeYarnApplicationsResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeYarnScheduleHistoryRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeYarnScheduleHistoryResponse.cs" />
     <Compile Include="V20190103\Models\DiskGroup.cs" />
     <Compile Include="V20190103\Models\DiskSpec.cs" />
     <Compile Include="V20190103\Models\DiskSpecInfo.cs" />
@@ -134,6 +138,7 @@
     <Compile Include="V20190103\Models\FlowParam.cs" />
     <Compile Include="V20190103\Models\FlowParamsDesc.cs" />
     <Compile Include="V20190103\Models\GroupGlobalConfs.cs" />
+    <Compile Include="V20190103\Models\HealthStatus.cs" />
     <Compile Include="V20190103\Models\HiveQuery.cs" />
     <Compile Include="V20190103\Models\HostVolumeContext.cs" />
     <Compile Include="V20190103\Models\ImpalaQuery.cs" />
@@ -172,6 +177,8 @@
     <Compile Include="V20190103\Models\ModifyResourcesTagsResponse.cs" />
     <Compile Include="V20190103\Models\ModifyUserManagerPwdRequest.cs" />
     <Compile Include="V20190103\Models\ModifyUserManagerPwdResponse.cs" />
+    <Compile Include="V20190103\Models\ModifyYarnDeployRequest.cs" />
+    <Compile Include="V20190103\Models\ModifyYarnDeployResponse.cs" />
     <Compile Include="V20190103\Models\MonthRepeatStrategy.cs" />
     <Compile Include="V20190103\Models\MultiDisk.cs" />
     <Compile Include="V20190103\Models\MultiDiskMC.cs" />
@@ -205,6 +212,7 @@
     <Compile Include="V20190103\Models\RepeatStrategy.cs" />
     <Compile Include="V20190103\Models\Resource.cs" />
     <Compile Include="V20190103\Models\ResourceDetail.cs" />
+    <Compile Include="V20190103\Models\RestartPolicy.cs" />
     <Compile Include="V20190103\Models\RunJobFlowRequest.cs" />
     <Compile Include="V20190103\Models\RunJobFlowResponse.cs" />
     <Compile Include="V20190103\Models\ScaleOutClusterRequest.cs" />
@@ -214,9 +222,13 @@
     <Compile Include="V20190103\Models\ScaleOutNodeConfig.cs" />
     <Compile Include="V20190103\Models\ScaleOutServiceConfGroupsInfo.cs" />
     <Compile Include="V20190103\Models\SceneSoftwareConfig.cs" />
+    <Compile Include="V20190103\Models\SchedulerTaskDetail.cs" />
+    <Compile Include="V20190103\Models\SchedulerTaskInfo.cs" />
     <Compile Include="V20190103\Models\ScriptBootstrapActionConfig.cs" />
     <Compile Include="V20190103\Models\SearchItem.cs" />
     <Compile Include="V20190103\Models\ServiceBasicRestartInfo.cs" />
+    <Compile Include="V20190103\Models\ServiceNodeDetailInfo.cs" />
+    <Compile Include="V20190103\Models\ServiceProcessFunctionInfo.cs" />
     <Compile Include="V20190103\Models\ShortNodeInfo.cs" />
     <Compile Include="V20190103\Models\SoftDependInfo.cs" />
     <Compile Include="V20190103\Models\StageInfoDetail.cs" />

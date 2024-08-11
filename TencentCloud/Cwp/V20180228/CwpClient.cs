@@ -28,7 +28,7 @@ namespace TencentCloud.Cwp.V20180228
 
        private const string endpoint = "cwp.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.1065";
+       private const string sdkVersion = "SDK_NET_3.0.1066";
 
         /// <summary>
         /// Client constructor.
@@ -327,6 +327,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 云护航计费产品已下线
+        /// 
         /// 云护航服务使用完成后，该接口可以确认收货
         /// </summary>
         /// <param name="req"><see cref="CreateCloudProtectServiceOrderRecordRequest"/></param>
@@ -337,6 +339,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 云护航计费产品已下线
+        /// 
         /// 云护航服务使用完成后，该接口可以确认收货
         /// </summary>
         /// <param name="req"><see cref="CreateCloudProtectServiceOrderRecordRequest"/></param>
@@ -9905,6 +9909,27 @@ namespace TencentCloud.Cwp.V20180228
         public ModifyRansomDefenseStrategyStatusResponse ModifyRansomDefenseStrategyStatusSync(ModifyRansomDefenseStrategyStatusRequest req)
         {
             return InternalRequestAsync<ModifyRansomDefenseStrategyStatusResponse>(req, "ModifyRansomDefenseStrategyStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 编辑反弹Shell规则（支持多服务器选择）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyReverseShellRulesAggregationRequest"/></param>
+        /// <returns><see cref="ModifyReverseShellRulesAggregationResponse"/></returns>
+        public Task<ModifyReverseShellRulesAggregationResponse> ModifyReverseShellRulesAggregation(ModifyReverseShellRulesAggregationRequest req)
+        {
+            return InternalRequestAsync<ModifyReverseShellRulesAggregationResponse>(req, "ModifyReverseShellRulesAggregation");
+        }
+
+        /// <summary>
+        /// 编辑反弹Shell规则（支持多服务器选择）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyReverseShellRulesAggregationRequest"/></param>
+        /// <returns><see cref="ModifyReverseShellRulesAggregationResponse"/></returns>
+        public ModifyReverseShellRulesAggregationResponse ModifyReverseShellRulesAggregationSync(ModifyReverseShellRulesAggregationRequest req)
+        {
+            return InternalRequestAsync<ModifyReverseShellRulesAggregationResponse>(req, "ModifyReverseShellRulesAggregation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Smh.V20210712
 
        private const string endpoint = "smh.tencentcloudapi.com";
        private const string version = "2021-07-12";
-       private const string sdkVersion = "SDK_NET_3.0.1065";
+       private const string sdkVersion = "SDK_NET_3.0.1066";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,48 @@ namespace TencentCloud.Smh.V20210712
         }
 
         /// <summary>
+        /// 新建用户。
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserRequest"/></param>
+        /// <returns><see cref="CreateUserResponse"/></returns>
+        public Task<CreateUserResponse> CreateUser(CreateUserRequest req)
+        {
+            return InternalRequestAsync<CreateUserResponse>(req, "CreateUser");
+        }
+
+        /// <summary>
+        /// 新建用户。
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserRequest"/></param>
+        /// <returns><see cref="CreateUserResponse"/></returns>
+        public CreateUserResponse CreateUserSync(CreateUserRequest req)
+        {
+            return InternalRequestAsync<CreateUserResponse>(req, "CreateUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设置用户生命周期。如果指定的用户已经设置了生命周期，重复调用此接口将覆盖已有的设置。也可用于清除指定用户的生命周期。
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserLifecycleRequest"/></param>
+        /// <returns><see cref="CreateUserLifecycleResponse"/></returns>
+        public Task<CreateUserLifecycleResponse> CreateUserLifecycle(CreateUserLifecycleRequest req)
+        {
+            return InternalRequestAsync<CreateUserLifecycleResponse>(req, "CreateUserLifecycle");
+        }
+
+        /// <summary>
+        /// 设置用户生命周期。如果指定的用户已经设置了生命周期，重复调用此接口将覆盖已有的设置。也可用于清除指定用户的生命周期。
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserLifecycleRequest"/></param>
+        /// <returns><see cref="CreateUserLifecycleResponse"/></returns>
+        public CreateUserLifecycleResponse CreateUserLifecycleSync(CreateUserLifecycleRequest req)
+        {
+            return InternalRequestAsync<CreateUserLifecycleResponse>(req, "CreateUserLifecycle")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除 PaaS 服务媒体库
         /// </summary>
         /// <param name="req"><see cref="DeleteLibraryRequest"/></param>
@@ -92,6 +134,27 @@ namespace TencentCloud.Smh.V20210712
         public DeleteLibraryResponse DeleteLibrarySync(DeleteLibraryRequest req)
         {
             return InternalRequestAsync<DeleteLibraryResponse>(req, "DeleteLibrary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 一次删除多个用户。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserRequest"/></param>
+        /// <returns><see cref="DeleteUserResponse"/></returns>
+        public Task<DeleteUserResponse> DeleteUser(DeleteUserRequest req)
+        {
+            return InternalRequestAsync<DeleteUserResponse>(req, "DeleteUser");
+        }
+
+        /// <summary>
+        /// 一次删除多个用户。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserRequest"/></param>
+        /// <returns><see cref="DeleteUserResponse"/></returns>
+        public DeleteUserResponse DeleteUserSync(DeleteUserRequest req)
+        {
+            return InternalRequestAsync<DeleteUserResponse>(req, "DeleteUser")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -201,6 +264,27 @@ namespace TencentCloud.Smh.V20210712
         }
 
         /// <summary>
+        /// 查询用户生命周期。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserLifecycleRequest"/></param>
+        /// <returns><see cref="DescribeUserLifecycleResponse"/></returns>
+        public Task<DescribeUserLifecycleResponse> DescribeUserLifecycle(DescribeUserLifecycleRequest req)
+        {
+            return InternalRequestAsync<DescribeUserLifecycleResponse>(req, "DescribeUserLifecycle");
+        }
+
+        /// <summary>
+        /// 查询用户生命周期。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserLifecycleRequest"/></param>
+        /// <returns><see cref="DescribeUserLifecycleResponse"/></returns>
+        public DescribeUserLifecycleResponse DescribeUserLifecycleSync(DescribeUserLifecycleRequest req)
+        {
+            return InternalRequestAsync<DescribeUserLifecycleResponse>(req, "DescribeUserLifecycle")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改 PaaS 服务媒体库配置项
         /// </summary>
         /// <param name="req"><see cref="ModifyLibraryRequest"/></param>
@@ -218,6 +302,27 @@ namespace TencentCloud.Smh.V20210712
         public ModifyLibraryResponse ModifyLibrarySync(ModifyLibraryRequest req)
         {
             return InternalRequestAsync<ModifyLibraryResponse>(req, "ModifyLibrary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新用户信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserRequest"/></param>
+        /// <returns><see cref="ModifyUserResponse"/></returns>
+        public Task<ModifyUserResponse> ModifyUser(ModifyUserRequest req)
+        {
+            return InternalRequestAsync<ModifyUserResponse>(req, "ModifyUser");
+        }
+
+        /// <summary>
+        /// 更新用户信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserRequest"/></param>
+        /// <returns><see cref="ModifyUserResponse"/></returns>
+        public ModifyUserResponse ModifyUserSync(ModifyUserRequest req)
+        {
+            return InternalRequestAsync<ModifyUserResponse>(req, "ModifyUser")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

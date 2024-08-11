@@ -37,7 +37,8 @@ namespace TencentCloud.Ioa.V20220601.Models
         public Condition Condition{ get; set; }
 
         /// <summary>
-        /// 私有化默认分组id-名称-操作系统
+        /// 【和GroupIds必须有一个填写】设备分组id（需要和OsType匹配）
+        /// id-名称-操作系统
         /// 1	全网终端	Win
         /// 2	未分组终端	Win
         /// 30000000	服务器	Win
@@ -56,13 +57,13 @@ namespace TencentCloud.Ioa.V20220601.Models
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// 系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）
+        /// 【必填】操作系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配
         /// </summary>
         [JsonProperty("OsType")]
         public long? OsType{ get; set; }
 
         /// <summary>
-        /// 在线状态 2 在线 0，1 离线
+        /// 在线状态 （2表示在线，0或者1表示离线）
         /// </summary>
         [JsonProperty("OnlineStatus")]
         public long? OnlineStatus{ get; set; }
@@ -80,13 +81,13 @@ namespace TencentCloud.Ioa.V20220601.Models
         public Sort Sort{ get; set; }
 
         /// <summary>
-        /// 获取第几页--兼容旧接口,参数同Condition(只支持32位)
+        /// 获取第几页--兼容旧接口,参数同Condition
         /// </summary>
         [JsonProperty("PageNum")]
         public long? PageNum{ get; set; }
 
         /// <summary>
-        /// 每页获取数--兼容旧接口,参数同Condition(只支持32位)
+        /// 每页获取数--兼容旧接口,参数同Condition
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
