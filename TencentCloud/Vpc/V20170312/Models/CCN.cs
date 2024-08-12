@@ -155,6 +155,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("DirectConnectAccelerateChannelFlag")]
         public bool? DirectConnectAccelerateChannelFlag{ get; set; }
 
+        /// <summary>
+        /// 是否支持ipv6路由表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Ipv6Flag")]
+        public string Ipv6Flag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -181,6 +188,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "TrafficMarkingPolicyFlag", this.TrafficMarkingPolicyFlag);
             this.SetParamSimple(map, prefix + "RouteSelectPolicyFlag", this.RouteSelectPolicyFlag);
             this.SetParamSimple(map, prefix + "DirectConnectAccelerateChannelFlag", this.DirectConnectAccelerateChannelFlag);
+            this.SetParamSimple(map, prefix + "Ipv6Flag", this.Ipv6Flag);
         }
     }
 }

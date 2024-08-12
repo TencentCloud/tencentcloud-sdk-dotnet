@@ -102,6 +102,20 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("InstanceExtraName")]
         public string InstanceExtraName{ get; set; }
 
+        /// <summary>
+        /// 实例类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AliasType")]
+        public string AliasType{ get; set; }
+
+        /// <summary>
+        /// 实例id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AliasInstanceId")]
+        public string AliasInstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +135,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "IsBgp", this.IsBgp);
             this.SetParamSimple(map, prefix + "RoutePriority", this.RoutePriority);
             this.SetParamSimple(map, prefix + "InstanceExtraName", this.InstanceExtraName);
+            this.SetParamSimple(map, prefix + "AliasType", this.AliasType);
+            this.SetParamSimple(map, prefix + "AliasInstanceId", this.AliasInstanceId);
         }
     }
 }

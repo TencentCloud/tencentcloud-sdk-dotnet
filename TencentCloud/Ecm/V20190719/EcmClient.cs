@@ -28,7 +28,7 @@ namespace TencentCloud.Ecm.V20190719
 
        private const string endpoint = "ecm.tencentcloudapi.com";
        private const string version = "2019-07-19";
-       private const string sdkVersion = "SDK_NET_3.0.1066";
+       private const string sdkVersion = "SDK_NET_3.0.1067";
 
         /// <summary>
         /// Client constructor.

@@ -40,8 +40,11 @@ namespace TencentCloud.Ocr.V20181119.Models
 
         /// <summary>
         /// Code 告警码列表和释义：
-        /// -9102 复印件告警
-        /// -9103 翻拍件告警
+        /// -9102  复印件告警
+        /// -9103  翻拍件告警
+        /// -9104  反光告警
+        /// -9105  模糊告警
+        /// -9106  边框不完整告警
         /// 注：告警码可以同时存在多个
         /// </summary>
         [JsonProperty("RecognizeWarnCode")]
@@ -51,6 +54,9 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// 告警码说明：
         /// WARN_DRIVER_LICENSE_COPY_CARD 复印件告警
         /// WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
+        /// WARN_DRIVER_LICENSE_REFLECTION 反光告警
+        /// WARN_DRIVER_LICENSE_BLUR 模糊告警
+        /// WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
         /// 注：告警信息可以同时存在多个
         /// </summary>
         [JsonProperty("RecognizeWarnMsg")]
