@@ -28,7 +28,7 @@ namespace TencentCloud.Tat.V20201028
 
        private const string endpoint = "tat.tencentcloudapi.com";
        private const string version = "2020-10-28";
-       private const string sdkVersion = "SDK_NET_3.0.1067";
+       private const string sdkVersion = "SDK_NET_3.0.1068";
 
         /// <summary>
         /// Client constructor.
@@ -459,6 +459,27 @@ namespace TencentCloud.Tat.V20201028
         public DescribeRegisterInstancesResponse DescribeRegisterInstancesSync(DescribeRegisterInstancesRequest req)
         {
             return InternalRequestAsync<DescribeRegisterInstancesResponse>(req, "DescribeRegisterInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口用于查询场景详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScenesRequest"/></param>
+        /// <returns><see cref="DescribeScenesResponse"/></returns>
+        public Task<DescribeScenesResponse> DescribeScenes(DescribeScenesRequest req)
+        {
+            return InternalRequestAsync<DescribeScenesResponse>(req, "DescribeScenes");
+        }
+
+        /// <summary>
+        /// 此接口用于查询场景详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScenesRequest"/></param>
+        /// <returns><see cref="DescribeScenesResponse"/></returns>
+        public DescribeScenesResponse DescribeScenesSync(DescribeScenesRequest req)
+        {
+            return InternalRequestAsync<DescribeScenesResponse>(req, "DescribeScenes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

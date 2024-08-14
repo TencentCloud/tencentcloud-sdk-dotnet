@@ -142,6 +142,13 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("TagList")]
         public TagInfo[] TagList{ get; set; }
 
+        /// <summary>
+        /// 3782478.47
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IndexTraffic")]
+        public float? IndexTraffic{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -165,6 +172,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "SpaceName", this.SpaceName);
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
+            this.SetParamSimple(map, prefix + "IndexTraffic", this.IndexTraffic);
         }
     }
 }

@@ -66,6 +66,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 标签信息
+        /// </summary>
+        [JsonProperty("TagList")]
+        public TagInfo[] TagList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamArraySimple(map, prefix + "VpcIds.", this.VpcIds);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
         }
     }
 }

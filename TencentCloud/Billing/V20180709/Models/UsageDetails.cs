@@ -38,6 +38,62 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("SubProductName")]
         public string SubProductName{ get; set; }
 
+        /// <summary>
+        /// 产品码	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductCode")]
+        public string ProductCode{ get; set; }
+
+        /// <summary>
+        /// 子产品码	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubProductCode")]
+        public string SubProductCode{ get; set; }
+
+        /// <summary>
+        /// 计费项码	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BillingItemCode")]
+        public string BillingItemCode{ get; set; }
+
+        /// <summary>
+        /// 计费细项码	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubBillingItemCode")]
+        public string SubBillingItemCode{ get; set; }
+
+        /// <summary>
+        /// 产品英文名	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductEnName")]
+        public string ProductEnName{ get; set; }
+
+        /// <summary>
+        /// 子产品英文名	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubProductEnName")]
+        public string SubProductEnName{ get; set; }
+
+        /// <summary>
+        /// 结算周期	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CalcUnit")]
+        public string CalcUnit{ get; set; }
+
+        /// <summary>
+        /// payMode为prepay 且 payScene为common的情况下存在
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Action")]
+        public string Action{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +102,14 @@ namespace TencentCloud.Billing.V20180709.Models
         {
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
             this.SetParamSimple(map, prefix + "SubProductName", this.SubProductName);
+            this.SetParamSimple(map, prefix + "ProductCode", this.ProductCode);
+            this.SetParamSimple(map, prefix + "SubProductCode", this.SubProductCode);
+            this.SetParamSimple(map, prefix + "BillingItemCode", this.BillingItemCode);
+            this.SetParamSimple(map, prefix + "SubBillingItemCode", this.SubBillingItemCode);
+            this.SetParamSimple(map, prefix + "ProductEnName", this.ProductEnName);
+            this.SetParamSimple(map, prefix + "SubProductEnName", this.SubProductEnName);
+            this.SetParamSimple(map, prefix + "CalcUnit", this.CalcUnit);
+            this.SetParamSimple(map, prefix + "Action", this.Action);
         }
     }
 }

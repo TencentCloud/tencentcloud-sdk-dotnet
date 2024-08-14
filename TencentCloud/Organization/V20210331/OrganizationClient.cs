@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.1067";
+       private const string sdkVersion = "SDK_NET_3.0.1068";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 添加SAML签名证书
+        /// </summary>
+        /// <param name="req"><see cref="AddExternalSAMLIdPCertificateRequest"/></param>
+        /// <returns><see cref="AddExternalSAMLIdPCertificateResponse"/></returns>
+        public Task<AddExternalSAMLIdPCertificateResponse> AddExternalSAMLIdPCertificate(AddExternalSAMLIdPCertificateRequest req)
+        {
+            return InternalRequestAsync<AddExternalSAMLIdPCertificateResponse>(req, "AddExternalSAMLIdPCertificate");
+        }
+
+        /// <summary>
+        /// 添加SAML签名证书
+        /// </summary>
+        /// <param name="req"><see cref="AddExternalSAMLIdPCertificateRequest"/></param>
+        /// <returns><see cref="AddExternalSAMLIdPCertificateResponse"/></returns>
+        public AddExternalSAMLIdPCertificateResponse AddExternalSAMLIdPCertificateSync(AddExternalSAMLIdPCertificateRequest req)
+        {
+            return InternalRequestAsync<AddExternalSAMLIdPCertificateResponse>(req, "AddExternalSAMLIdPCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 添加组织成员邮箱
         /// </summary>
         /// <param name="req"><see cref="AddOrganizationMemberEmailRequest"/></param>
@@ -113,6 +134,27 @@ namespace TencentCloud.Organization.V20210331
         public AddOrganizationNodeResponse AddOrganizationNodeSync(AddOrganizationNodeRequest req)
         {
             return InternalRequestAsync<AddOrganizationNodeResponse>(req, "AddOrganizationNode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 为权限配置添加策略
+        /// </summary>
+        /// <param name="req"><see cref="AddPermissionPolicyToRoleConfigurationRequest"/></param>
+        /// <returns><see cref="AddPermissionPolicyToRoleConfigurationResponse"/></returns>
+        public Task<AddPermissionPolicyToRoleConfigurationResponse> AddPermissionPolicyToRoleConfiguration(AddPermissionPolicyToRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<AddPermissionPolicyToRoleConfigurationResponse>(req, "AddPermissionPolicyToRoleConfiguration");
+        }
+
+        /// <summary>
+        /// 为权限配置添加策略
+        /// </summary>
+        /// <param name="req"><see cref="AddPermissionPolicyToRoleConfigurationRequest"/></param>
+        /// <returns><see cref="AddPermissionPolicyToRoleConfigurationResponse"/></returns>
+        public AddPermissionPolicyToRoleConfigurationResponse AddPermissionPolicyToRoleConfigurationSync(AddPermissionPolicyToRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<AddPermissionPolicyToRoleConfigurationResponse>(req, "AddPermissionPolicyToRoleConfiguration")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -176,6 +218,27 @@ namespace TencentCloud.Organization.V20210331
         public AddShareUnitResourcesResponse AddShareUnitResourcesSync(AddShareUnitResourcesRequest req)
         {
             return InternalRequestAsync<AddShareUnitResourcesResponse>(req, "AddShareUnitResources")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 为用户组添加用户
+        /// </summary>
+        /// <param name="req"><see cref="AddUserToGroupRequest"/></param>
+        /// <returns><see cref="AddUserToGroupResponse"/></returns>
+        public Task<AddUserToGroupResponse> AddUserToGroup(AddUserToGroupRequest req)
+        {
+            return InternalRequestAsync<AddUserToGroupResponse>(req, "AddUserToGroup");
+        }
+
+        /// <summary>
+        /// 为用户组添加用户
+        /// </summary>
+        /// <param name="req"><see cref="AddUserToGroupRequest"/></param>
+        /// <returns><see cref="AddUserToGroupResponse"/></returns>
+        public AddUserToGroupResponse AddUserToGroupSync(AddUserToGroupRequest req)
+        {
+            return InternalRequestAsync<AddUserToGroupResponse>(req, "AddUserToGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -260,6 +323,48 @@ namespace TencentCloud.Organization.V20210331
         public CheckAccountDeleteResponse CheckAccountDeleteSync(CheckAccountDeleteRequest req)
         {
             return InternalRequestAsync<CheckAccountDeleteResponse>(req, "CheckAccountDelete")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 清空SAML身份提供商配置信息
+        /// </summary>
+        /// <param name="req"><see cref="ClearExternalSAMLIdentityProviderRequest"/></param>
+        /// <returns><see cref="ClearExternalSAMLIdentityProviderResponse"/></returns>
+        public Task<ClearExternalSAMLIdentityProviderResponse> ClearExternalSAMLIdentityProvider(ClearExternalSAMLIdentityProviderRequest req)
+        {
+            return InternalRequestAsync<ClearExternalSAMLIdentityProviderResponse>(req, "ClearExternalSAMLIdentityProvider");
+        }
+
+        /// <summary>
+        /// 清空SAML身份提供商配置信息
+        /// </summary>
+        /// <param name="req"><see cref="ClearExternalSAMLIdentityProviderRequest"/></param>
+        /// <returns><see cref="ClearExternalSAMLIdentityProviderResponse"/></returns>
+        public ClearExternalSAMLIdentityProviderResponse ClearExternalSAMLIdentityProviderSync(ClearExternalSAMLIdentityProviderRequest req)
+        {
+            return InternalRequestAsync<ClearExternalSAMLIdentityProviderResponse>(req, "ClearExternalSAMLIdentityProvider")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建用户组
+        /// </summary>
+        /// <param name="req"><see cref="CreateGroupRequest"/></param>
+        /// <returns><see cref="CreateGroupResponse"/></returns>
+        public Task<CreateGroupResponse> CreateGroup(CreateGroupRequest req)
+        {
+            return InternalRequestAsync<CreateGroupResponse>(req, "CreateGroup");
+        }
+
+        /// <summary>
+        /// 创建用户组
+        /// </summary>
+        /// <param name="req"><see cref="CreateGroupRequest"/></param>
+        /// <returns><see cref="CreateGroupResponse"/></returns>
+        public CreateGroupResponse CreateGroupSync(CreateGroupRequest req)
+        {
+            return InternalRequestAsync<CreateGroupResponse>(req, "CreateGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -432,6 +537,90 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 在成员账号上授权
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoleAssignmentRequest"/></param>
+        /// <returns><see cref="CreateRoleAssignmentResponse"/></returns>
+        public Task<CreateRoleAssignmentResponse> CreateRoleAssignment(CreateRoleAssignmentRequest req)
+        {
+            return InternalRequestAsync<CreateRoleAssignmentResponse>(req, "CreateRoleAssignment");
+        }
+
+        /// <summary>
+        /// 在成员账号上授权
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoleAssignmentRequest"/></param>
+        /// <returns><see cref="CreateRoleAssignmentResponse"/></returns>
+        public CreateRoleAssignmentResponse CreateRoleAssignmentSync(CreateRoleAssignmentRequest req)
+        {
+            return InternalRequestAsync<CreateRoleAssignmentResponse>(req, "CreateRoleAssignment")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建权限配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoleConfigurationRequest"/></param>
+        /// <returns><see cref="CreateRoleConfigurationResponse"/></returns>
+        public Task<CreateRoleConfigurationResponse> CreateRoleConfiguration(CreateRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<CreateRoleConfigurationResponse>(req, "CreateRoleConfiguration");
+        }
+
+        /// <summary>
+        /// 创建权限配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoleConfigurationRequest"/></param>
+        /// <returns><see cref="CreateRoleConfigurationResponse"/></returns>
+        public CreateRoleConfigurationResponse CreateRoleConfigurationSync(CreateRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<CreateRoleConfigurationResponse>(req, "CreateRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建用户
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserRequest"/></param>
+        /// <returns><see cref="CreateUserResponse"/></returns>
+        public Task<CreateUserResponse> CreateUser(CreateUserRequest req)
+        {
+            return InternalRequestAsync<CreateUserResponse>(req, "CreateUser");
+        }
+
+        /// <summary>
+        /// 创建用户
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserRequest"/></param>
+        /// <returns><see cref="CreateUserResponse"/></returns>
+        public CreateUserResponse CreateUserSync(CreateUserRequest req)
+        {
+            return InternalRequestAsync<CreateUserResponse>(req, "CreateUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建子用户同步任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserSyncProvisioningRequest"/></param>
+        /// <returns><see cref="CreateUserSyncProvisioningResponse"/></returns>
+        public Task<CreateUserSyncProvisioningResponse> CreateUserSyncProvisioning(CreateUserSyncProvisioningRequest req)
+        {
+            return InternalRequestAsync<CreateUserSyncProvisioningResponse>(req, "CreateUserSyncProvisioning");
+        }
+
+        /// <summary>
+        /// 创建子用户同步任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserSyncProvisioningRequest"/></param>
+        /// <returns><see cref="CreateUserSyncProvisioningResponse"/></returns>
+        public CreateUserSyncProvisioningResponse CreateUserSyncProvisioningSync(CreateUserSyncProvisioningRequest req)
+        {
+            return InternalRequestAsync<CreateUserSyncProvisioningResponse>(req, "CreateUserSyncProvisioning")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除成员账号
         /// </summary>
         /// <param name="req"><see cref="DeleteAccountRequest"/></param>
@@ -449,6 +638,27 @@ namespace TencentCloud.Organization.V20210331
         public DeleteAccountResponse DeleteAccountSync(DeleteAccountRequest req)
         {
             return InternalRequestAsync<DeleteAccountResponse>(req, "DeleteAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除用户组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGroupRequest"/></param>
+        /// <returns><see cref="DeleteGroupResponse"/></returns>
+        public Task<DeleteGroupResponse> DeleteGroup(DeleteGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteGroupResponse>(req, "DeleteGroup");
+        }
+
+        /// <summary>
+        /// 删除用户组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGroupRequest"/></param>
+        /// <returns><see cref="DeleteGroupResponse"/></returns>
+        public DeleteGroupResponse DeleteGroupSync(DeleteGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteGroupResponse>(req, "DeleteGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -621,6 +831,48 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 移除成员账号上的授权
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoleAssignmentRequest"/></param>
+        /// <returns><see cref="DeleteRoleAssignmentResponse"/></returns>
+        public Task<DeleteRoleAssignmentResponse> DeleteRoleAssignment(DeleteRoleAssignmentRequest req)
+        {
+            return InternalRequestAsync<DeleteRoleAssignmentResponse>(req, "DeleteRoleAssignment");
+        }
+
+        /// <summary>
+        /// 移除成员账号上的授权
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoleAssignmentRequest"/></param>
+        /// <returns><see cref="DeleteRoleAssignmentResponse"/></returns>
+        public DeleteRoleAssignmentResponse DeleteRoleAssignmentSync(DeleteRoleAssignmentRequest req)
+        {
+            return InternalRequestAsync<DeleteRoleAssignmentResponse>(req, "DeleteRoleAssignment")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除权限配置信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoleConfigurationRequest"/></param>
+        /// <returns><see cref="DeleteRoleConfigurationResponse"/></returns>
+        public Task<DeleteRoleConfigurationResponse> DeleteRoleConfiguration(DeleteRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<DeleteRoleConfigurationResponse>(req, "DeleteRoleConfiguration");
+        }
+
+        /// <summary>
+        /// 删除权限配置信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoleConfigurationRequest"/></param>
+        /// <returns><see cref="DeleteRoleConfigurationResponse"/></returns>
+        public DeleteRoleConfigurationResponse DeleteRoleConfigurationSync(DeleteRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<DeleteRoleConfigurationResponse>(req, "DeleteRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除共享单元。
         /// </summary>
         /// <param name="req"><see cref="DeleteShareUnitRequest"/></param>
@@ -684,6 +936,48 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 删除用户
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserRequest"/></param>
+        /// <returns><see cref="DeleteUserResponse"/></returns>
+        public Task<DeleteUserResponse> DeleteUser(DeleteUserRequest req)
+        {
+            return InternalRequestAsync<DeleteUserResponse>(req, "DeleteUser");
+        }
+
+        /// <summary>
+        /// 删除用户
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserRequest"/></param>
+        /// <returns><see cref="DeleteUserResponse"/></returns>
+        public DeleteUserResponse DeleteUserSync(DeleteUserRequest req)
+        {
+            return InternalRequestAsync<DeleteUserResponse>(req, "DeleteUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除子用户同步任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserSyncProvisioningRequest"/></param>
+        /// <returns><see cref="DeleteUserSyncProvisioningResponse"/></returns>
+        public Task<DeleteUserSyncProvisioningResponse> DeleteUserSyncProvisioning(DeleteUserSyncProvisioningRequest req)
+        {
+            return InternalRequestAsync<DeleteUserSyncProvisioningResponse>(req, "DeleteUserSyncProvisioning");
+        }
+
+        /// <summary>
+        /// 删除子用户同步任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserSyncProvisioningRequest"/></param>
+        /// <returns><see cref="DeleteUserSyncProvisioningResponse"/></returns>
+        public DeleteUserSyncProvisioningResponse DeleteUserSyncProvisioningSync(DeleteUserSyncProvisioningRequest req)
+        {
+            return InternalRequestAsync<DeleteUserSyncProvisioningResponse>(req, "DeleteUserSyncProvisioning")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询目标关联的有效策略
         /// </summary>
         /// <param name="req"><see cref="DescribeEffectivePolicyRequest"/></param>
@@ -701,6 +995,27 @@ namespace TencentCloud.Organization.V20210331
         public DescribeEffectivePolicyResponse DescribeEffectivePolicySync(DescribeEffectivePolicyRequest req)
         {
             return InternalRequestAsync<DescribeEffectivePolicyResponse>(req, "DescribeEffectivePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取cam身份中心服务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIdentityCenterRequest"/></param>
+        /// <returns><see cref="DescribeIdentityCenterResponse"/></returns>
+        public Task<DescribeIdentityCenterResponse> DescribeIdentityCenter(DescribeIdentityCenterRequest req)
+        {
+            return InternalRequestAsync<DescribeIdentityCenterResponse>(req, "DescribeIdentityCenter");
+        }
+
+        /// <summary>
+        /// 获取cam身份中心服务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIdentityCenterRequest"/></param>
+        /// <returns><see cref="DescribeIdentityCenterResponse"/></returns>
+        public DescribeIdentityCenterResponse DescribeIdentityCenterSync(DescribeIdentityCenterRequest req)
+        {
+            return InternalRequestAsync<DescribeIdentityCenterResponse>(req, "DescribeIdentityCenter")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1104,6 +1419,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 解除权限配置在成员账号上的部署
+        /// </summary>
+        /// <param name="req"><see cref="DismantleRoleConfigurationRequest"/></param>
+        /// <returns><see cref="DismantleRoleConfigurationResponse"/></returns>
+        public Task<DismantleRoleConfigurationResponse> DismantleRoleConfiguration(DismantleRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<DismantleRoleConfigurationResponse>(req, "DismantleRoleConfiguration");
+        }
+
+        /// <summary>
+        /// 解除权限配置在成员账号上的部署
+        /// </summary>
+        /// <param name="req"><see cref="DismantleRoleConfigurationRequest"/></param>
+        /// <returns><see cref="DismantleRoleConfigurationResponse"/></returns>
+        public DismantleRoleConfigurationResponse DismantleRoleConfigurationSync(DismantleRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<DismantleRoleConfigurationResponse>(req, "DismantleRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 启用策略类型
         /// </summary>
         /// <param name="req"><see cref="EnablePolicyTypeRequest"/></param>
@@ -1121,6 +1457,279 @@ namespace TencentCloud.Organization.V20210331
         public EnablePolicyTypeResponse EnablePolicyTypeSync(EnablePolicyTypeRequest req)
         {
             return InternalRequestAsync<EnablePolicyTypeResponse>(req, "EnablePolicyType")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询SAML身份提供商配置信息
+        /// </summary>
+        /// <param name="req"><see cref="GetExternalSAMLIdentityProviderRequest"/></param>
+        /// <returns><see cref="GetExternalSAMLIdentityProviderResponse"/></returns>
+        public Task<GetExternalSAMLIdentityProviderResponse> GetExternalSAMLIdentityProvider(GetExternalSAMLIdentityProviderRequest req)
+        {
+            return InternalRequestAsync<GetExternalSAMLIdentityProviderResponse>(req, "GetExternalSAMLIdentityProvider");
+        }
+
+        /// <summary>
+        /// 查询SAML身份提供商配置信息
+        /// </summary>
+        /// <param name="req"><see cref="GetExternalSAMLIdentityProviderRequest"/></param>
+        /// <returns><see cref="GetExternalSAMLIdentityProviderResponse"/></returns>
+        public GetExternalSAMLIdentityProviderResponse GetExternalSAMLIdentityProviderSync(GetExternalSAMLIdentityProviderRequest req)
+        {
+            return InternalRequestAsync<GetExternalSAMLIdentityProviderResponse>(req, "GetExternalSAMLIdentityProvider")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询用户组信息
+        /// </summary>
+        /// <param name="req"><see cref="GetGroupRequest"/></param>
+        /// <returns><see cref="GetGroupResponse"/></returns>
+        public Task<GetGroupResponse> GetGroup(GetGroupRequest req)
+        {
+            return InternalRequestAsync<GetGroupResponse>(req, "GetGroup");
+        }
+
+        /// <summary>
+        /// 查询用户组信息
+        /// </summary>
+        /// <param name="req"><see cref="GetGroupRequest"/></param>
+        /// <returns><see cref="GetGroupResponse"/></returns>
+        public GetGroupResponse GetGroupSync(GetGroupRequest req)
+        {
+            return InternalRequestAsync<GetGroupResponse>(req, "GetGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询用户同步异步任务的状态
+        /// </summary>
+        /// <param name="req"><see cref="GetProvisioningTaskStatusRequest"/></param>
+        /// <returns><see cref="GetProvisioningTaskStatusResponse"/></returns>
+        public Task<GetProvisioningTaskStatusResponse> GetProvisioningTaskStatus(GetProvisioningTaskStatusRequest req)
+        {
+            return InternalRequestAsync<GetProvisioningTaskStatusResponse>(req, "GetProvisioningTaskStatus");
+        }
+
+        /// <summary>
+        /// 查询用户同步异步任务的状态
+        /// </summary>
+        /// <param name="req"><see cref="GetProvisioningTaskStatusRequest"/></param>
+        /// <returns><see cref="GetProvisioningTaskStatusResponse"/></returns>
+        public GetProvisioningTaskStatusResponse GetProvisioningTaskStatusSync(GetProvisioningTaskStatusRequest req)
+        {
+            return InternalRequestAsync<GetProvisioningTaskStatusResponse>(req, "GetProvisioningTaskStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询权限配置信息
+        /// </summary>
+        /// <param name="req"><see cref="GetRoleConfigurationRequest"/></param>
+        /// <returns><see cref="GetRoleConfigurationResponse"/></returns>
+        public Task<GetRoleConfigurationResponse> GetRoleConfiguration(GetRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<GetRoleConfigurationResponse>(req, "GetRoleConfiguration");
+        }
+
+        /// <summary>
+        /// 查询权限配置信息
+        /// </summary>
+        /// <param name="req"><see cref="GetRoleConfigurationRequest"/></param>
+        /// <returns><see cref="GetRoleConfigurationResponse"/></returns>
+        public GetRoleConfigurationResponse GetRoleConfigurationSync(GetRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<GetRoleConfigurationResponse>(req, "GetRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询异步任务的状态
+        /// </summary>
+        /// <param name="req"><see cref="GetTaskStatusRequest"/></param>
+        /// <returns><see cref="GetTaskStatusResponse"/></returns>
+        public Task<GetTaskStatusResponse> GetTaskStatus(GetTaskStatusRequest req)
+        {
+            return InternalRequestAsync<GetTaskStatusResponse>(req, "GetTaskStatus");
+        }
+
+        /// <summary>
+        /// 查询异步任务的状态
+        /// </summary>
+        /// <param name="req"><see cref="GetTaskStatusRequest"/></param>
+        /// <returns><see cref="GetTaskStatusResponse"/></returns>
+        public GetTaskStatusResponse GetTaskStatusSync(GetTaskStatusRequest req)
+        {
+            return InternalRequestAsync<GetTaskStatusResponse>(req, "GetTaskStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询用户信息
+        /// </summary>
+        /// <param name="req"><see cref="GetUserRequest"/></param>
+        /// <returns><see cref="GetUserResponse"/></returns>
+        public Task<GetUserResponse> GetUser(GetUserRequest req)
+        {
+            return InternalRequestAsync<GetUserResponse>(req, "GetUser");
+        }
+
+        /// <summary>
+        /// 查询用户信息
+        /// </summary>
+        /// <param name="req"><see cref="GetUserRequest"/></param>
+        /// <returns><see cref="GetUserResponse"/></returns>
+        public GetUserResponse GetUserSync(GetUserRequest req)
+        {
+            return InternalRequestAsync<GetUserResponse>(req, "GetUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询CAM用户同步
+        /// </summary>
+        /// <param name="req"><see cref="GetUserSyncProvisioningRequest"/></param>
+        /// <returns><see cref="GetUserSyncProvisioningResponse"/></returns>
+        public Task<GetUserSyncProvisioningResponse> GetUserSyncProvisioning(GetUserSyncProvisioningRequest req)
+        {
+            return InternalRequestAsync<GetUserSyncProvisioningResponse>(req, "GetUserSyncProvisioning");
+        }
+
+        /// <summary>
+        /// 查询CAM用户同步
+        /// </summary>
+        /// <param name="req"><see cref="GetUserSyncProvisioningRequest"/></param>
+        /// <returns><see cref="GetUserSyncProvisioningResponse"/></returns>
+        public GetUserSyncProvisioningResponse GetUserSyncProvisioningSync(GetUserSyncProvisioningRequest req)
+        {
+            return InternalRequestAsync<GetUserSyncProvisioningResponse>(req, "GetUserSyncProvisioning")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询SAML服务提供商配置信息
+        /// </summary>
+        /// <param name="req"><see cref="GetZoneSAMLServiceProviderInfoRequest"/></param>
+        /// <returns><see cref="GetZoneSAMLServiceProviderInfoResponse"/></returns>
+        public Task<GetZoneSAMLServiceProviderInfoResponse> GetZoneSAMLServiceProviderInfo(GetZoneSAMLServiceProviderInfoRequest req)
+        {
+            return InternalRequestAsync<GetZoneSAMLServiceProviderInfoResponse>(req, "GetZoneSAMLServiceProviderInfo");
+        }
+
+        /// <summary>
+        /// 查询SAML服务提供商配置信息
+        /// </summary>
+        /// <param name="req"><see cref="GetZoneSAMLServiceProviderInfoRequest"/></param>
+        /// <returns><see cref="GetZoneSAMLServiceProviderInfoResponse"/></returns>
+        public GetZoneSAMLServiceProviderInfoResponse GetZoneSAMLServiceProviderInfoSync(GetZoneSAMLServiceProviderInfoRequest req)
+        {
+            return InternalRequestAsync<GetZoneSAMLServiceProviderInfoResponse>(req, "GetZoneSAMLServiceProviderInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询空间的统计信息
+        /// </summary>
+        /// <param name="req"><see cref="GetZoneStatisticsRequest"/></param>
+        /// <returns><see cref="GetZoneStatisticsResponse"/></returns>
+        public Task<GetZoneStatisticsResponse> GetZoneStatistics(GetZoneStatisticsRequest req)
+        {
+            return InternalRequestAsync<GetZoneStatisticsResponse>(req, "GetZoneStatistics");
+        }
+
+        /// <summary>
+        /// 查询空间的统计信息
+        /// </summary>
+        /// <param name="req"><see cref="GetZoneStatisticsRequest"/></param>
+        /// <returns><see cref="GetZoneStatisticsResponse"/></returns>
+        public GetZoneStatisticsResponse GetZoneStatisticsSync(GetZoneStatisticsRequest req)
+        {
+            return InternalRequestAsync<GetZoneStatisticsResponse>(req, "GetZoneStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询SAML签名证书列表
+        /// </summary>
+        /// <param name="req"><see cref="ListExternalSAMLIdPCertificatesRequest"/></param>
+        /// <returns><see cref="ListExternalSAMLIdPCertificatesResponse"/></returns>
+        public Task<ListExternalSAMLIdPCertificatesResponse> ListExternalSAMLIdPCertificates(ListExternalSAMLIdPCertificatesRequest req)
+        {
+            return InternalRequestAsync<ListExternalSAMLIdPCertificatesResponse>(req, "ListExternalSAMLIdPCertificates");
+        }
+
+        /// <summary>
+        /// 查询SAML签名证书列表
+        /// </summary>
+        /// <param name="req"><see cref="ListExternalSAMLIdPCertificatesRequest"/></param>
+        /// <returns><see cref="ListExternalSAMLIdPCertificatesResponse"/></returns>
+        public ListExternalSAMLIdPCertificatesResponse ListExternalSAMLIdPCertificatesSync(ListExternalSAMLIdPCertificatesRequest req)
+        {
+            return InternalRequestAsync<ListExternalSAMLIdPCertificatesResponse>(req, "ListExternalSAMLIdPCertificates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询用户组中的用户列表
+        /// </summary>
+        /// <param name="req"><see cref="ListGroupMembersRequest"/></param>
+        /// <returns><see cref="ListGroupMembersResponse"/></returns>
+        public Task<ListGroupMembersResponse> ListGroupMembers(ListGroupMembersRequest req)
+        {
+            return InternalRequestAsync<ListGroupMembersResponse>(req, "ListGroupMembers");
+        }
+
+        /// <summary>
+        /// 查询用户组中的用户列表
+        /// </summary>
+        /// <param name="req"><see cref="ListGroupMembersRequest"/></param>
+        /// <returns><see cref="ListGroupMembersResponse"/></returns>
+        public ListGroupMembersResponse ListGroupMembersSync(ListGroupMembersRequest req)
+        {
+            return InternalRequestAsync<ListGroupMembersResponse>(req, "ListGroupMembers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询用户组列表
+        /// </summary>
+        /// <param name="req"><see cref="ListGroupsRequest"/></param>
+        /// <returns><see cref="ListGroupsResponse"/></returns>
+        public Task<ListGroupsResponse> ListGroups(ListGroupsRequest req)
+        {
+            return InternalRequestAsync<ListGroupsResponse>(req, "ListGroups");
+        }
+
+        /// <summary>
+        /// 查询用户组列表
+        /// </summary>
+        /// <param name="req"><see cref="ListGroupsRequest"/></param>
+        /// <returns><see cref="ListGroupsResponse"/></returns>
+        public ListGroupsResponse ListGroupsSync(ListGroupsRequest req)
+        {
+            return InternalRequestAsync<ListGroupsResponse>(req, "ListGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询用户加入的用户组
+        /// </summary>
+        /// <param name="req"><see cref="ListJoinedGroupsForUserRequest"/></param>
+        /// <returns><see cref="ListJoinedGroupsForUserResponse"/></returns>
+        public Task<ListJoinedGroupsForUserResponse> ListJoinedGroupsForUser(ListJoinedGroupsForUserRequest req)
+        {
+            return InternalRequestAsync<ListJoinedGroupsForUserResponse>(req, "ListJoinedGroupsForUser");
+        }
+
+        /// <summary>
+        /// 查询用户加入的用户组
+        /// </summary>
+        /// <param name="req"><see cref="ListJoinedGroupsForUserRequest"/></param>
+        /// <returns><see cref="ListJoinedGroupsForUserResponse"/></returns>
+        public ListJoinedGroupsForUserResponse ListJoinedGroupsForUserSync(ListJoinedGroupsForUserRequest req)
+        {
+            return InternalRequestAsync<ListJoinedGroupsForUserResponse>(req, "ListJoinedGroupsForUser")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1209,6 +1818,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 获取权限配置中的策略列表
+        /// </summary>
+        /// <param name="req"><see cref="ListPermissionPoliciesInRoleConfigurationRequest"/></param>
+        /// <returns><see cref="ListPermissionPoliciesInRoleConfigurationResponse"/></returns>
+        public Task<ListPermissionPoliciesInRoleConfigurationResponse> ListPermissionPoliciesInRoleConfiguration(ListPermissionPoliciesInRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<ListPermissionPoliciesInRoleConfigurationResponse>(req, "ListPermissionPoliciesInRoleConfiguration");
+        }
+
+        /// <summary>
+        /// 获取权限配置中的策略列表
+        /// </summary>
+        /// <param name="req"><see cref="ListPermissionPoliciesInRoleConfigurationRequest"/></param>
+        /// <returns><see cref="ListPermissionPoliciesInRoleConfigurationResponse"/></returns>
+        public ListPermissionPoliciesInRoleConfigurationResponse ListPermissionPoliciesInRoleConfigurationSync(ListPermissionPoliciesInRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<ListPermissionPoliciesInRoleConfigurationResponse>(req, "ListPermissionPoliciesInRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ListPolicies）可用于查询查看策略列表数据
         /// </summary>
         /// <param name="req"><see cref="ListPoliciesRequest"/></param>
@@ -1251,6 +1881,69 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 查询授权列表
+        /// </summary>
+        /// <param name="req"><see cref="ListRoleAssignmentsRequest"/></param>
+        /// <returns><see cref="ListRoleAssignmentsResponse"/></returns>
+        public Task<ListRoleAssignmentsResponse> ListRoleAssignments(ListRoleAssignmentsRequest req)
+        {
+            return InternalRequestAsync<ListRoleAssignmentsResponse>(req, "ListRoleAssignments");
+        }
+
+        /// <summary>
+        /// 查询授权列表
+        /// </summary>
+        /// <param name="req"><see cref="ListRoleAssignmentsRequest"/></param>
+        /// <returns><see cref="ListRoleAssignmentsResponse"/></returns>
+        public ListRoleAssignmentsResponse ListRoleAssignmentsSync(ListRoleAssignmentsRequest req)
+        {
+            return InternalRequestAsync<ListRoleAssignmentsResponse>(req, "ListRoleAssignments")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询权限配置部署列表
+        /// </summary>
+        /// <param name="req"><see cref="ListRoleConfigurationProvisioningsRequest"/></param>
+        /// <returns><see cref="ListRoleConfigurationProvisioningsResponse"/></returns>
+        public Task<ListRoleConfigurationProvisioningsResponse> ListRoleConfigurationProvisionings(ListRoleConfigurationProvisioningsRequest req)
+        {
+            return InternalRequestAsync<ListRoleConfigurationProvisioningsResponse>(req, "ListRoleConfigurationProvisionings");
+        }
+
+        /// <summary>
+        /// 查询权限配置部署列表
+        /// </summary>
+        /// <param name="req"><see cref="ListRoleConfigurationProvisioningsRequest"/></param>
+        /// <returns><see cref="ListRoleConfigurationProvisioningsResponse"/></returns>
+        public ListRoleConfigurationProvisioningsResponse ListRoleConfigurationProvisioningsSync(ListRoleConfigurationProvisioningsRequest req)
+        {
+            return InternalRequestAsync<ListRoleConfigurationProvisioningsResponse>(req, "ListRoleConfigurationProvisionings")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询权限配置列表
+        /// </summary>
+        /// <param name="req"><see cref="ListRoleConfigurationsRequest"/></param>
+        /// <returns><see cref="ListRoleConfigurationsResponse"/></returns>
+        public Task<ListRoleConfigurationsResponse> ListRoleConfigurations(ListRoleConfigurationsRequest req)
+        {
+            return InternalRequestAsync<ListRoleConfigurationsResponse>(req, "ListRoleConfigurations");
+        }
+
+        /// <summary>
+        /// 查询权限配置列表
+        /// </summary>
+        /// <param name="req"><see cref="ListRoleConfigurationsRequest"/></param>
+        /// <returns><see cref="ListRoleConfigurationsResponse"/></returns>
+        public ListRoleConfigurationsResponse ListRoleConfigurationsSync(ListRoleConfigurationsRequest req)
+        {
+            return InternalRequestAsync<ListRoleConfigurationsResponse>(req, "ListRoleConfigurations")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ListTargetsForPolicy）查询某个指定策略关联的目标列表
         /// </summary>
         /// <param name="req"><see cref="ListTargetsForPolicyRequest"/></param>
@@ -1272,6 +1965,69 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 查询异步任务列表
+        /// </summary>
+        /// <param name="req"><see cref="ListTasksRequest"/></param>
+        /// <returns><see cref="ListTasksResponse"/></returns>
+        public Task<ListTasksResponse> ListTasks(ListTasksRequest req)
+        {
+            return InternalRequestAsync<ListTasksResponse>(req, "ListTasks");
+        }
+
+        /// <summary>
+        /// 查询异步任务列表
+        /// </summary>
+        /// <param name="req"><see cref="ListTasksRequest"/></param>
+        /// <returns><see cref="ListTasksResponse"/></returns>
+        public ListTasksResponse ListTasksSync(ListTasksRequest req)
+        {
+            return InternalRequestAsync<ListTasksResponse>(req, "ListTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询CAM用户同步列表
+        /// </summary>
+        /// <param name="req"><see cref="ListUserSyncProvisioningsRequest"/></param>
+        /// <returns><see cref="ListUserSyncProvisioningsResponse"/></returns>
+        public Task<ListUserSyncProvisioningsResponse> ListUserSyncProvisionings(ListUserSyncProvisioningsRequest req)
+        {
+            return InternalRequestAsync<ListUserSyncProvisioningsResponse>(req, "ListUserSyncProvisionings");
+        }
+
+        /// <summary>
+        /// 查询CAM用户同步列表
+        /// </summary>
+        /// <param name="req"><see cref="ListUserSyncProvisioningsRequest"/></param>
+        /// <returns><see cref="ListUserSyncProvisioningsResponse"/></returns>
+        public ListUserSyncProvisioningsResponse ListUserSyncProvisioningsSync(ListUserSyncProvisioningsRequest req)
+        {
+            return InternalRequestAsync<ListUserSyncProvisioningsResponse>(req, "ListUserSyncProvisionings")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询用户列表
+        /// </summary>
+        /// <param name="req"><see cref="ListUsersRequest"/></param>
+        /// <returns><see cref="ListUsersResponse"/></returns>
+        public Task<ListUsersResponse> ListUsers(ListUsersRequest req)
+        {
+            return InternalRequestAsync<ListUsersResponse>(req, "ListUsers");
+        }
+
+        /// <summary>
+        /// 查询用户列表
+        /// </summary>
+        /// <param name="req"><see cref="ListUsersRequest"/></param>
+        /// <returns><see cref="ListUsersResponse"/></returns>
+        public ListUsersResponse ListUsersSync(ListUsersRequest req)
+        {
+            return InternalRequestAsync<ListUsersResponse>(req, "ListUsers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 移动成员到指定企业组织节点
         /// </summary>
         /// <param name="req"><see cref="MoveOrganizationNodeMembersRequest"/></param>
@@ -1289,6 +2045,48 @@ namespace TencentCloud.Organization.V20210331
         public MoveOrganizationNodeMembersResponse MoveOrganizationNodeMembersSync(MoveOrganizationNodeMembersRequest req)
         {
             return InternalRequestAsync<MoveOrganizationNodeMembersResponse>(req, "MoveOrganizationNodeMembers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开通CIC服务
+        /// </summary>
+        /// <param name="req"><see cref="OpenIdentityCenterRequest"/></param>
+        /// <returns><see cref="OpenIdentityCenterResponse"/></returns>
+        public Task<OpenIdentityCenterResponse> OpenIdentityCenter(OpenIdentityCenterRequest req)
+        {
+            return InternalRequestAsync<OpenIdentityCenterResponse>(req, "OpenIdentityCenter");
+        }
+
+        /// <summary>
+        /// 开通CIC服务
+        /// </summary>
+        /// <param name="req"><see cref="OpenIdentityCenterRequest"/></param>
+        /// <returns><see cref="OpenIdentityCenterResponse"/></returns>
+        public OpenIdentityCenterResponse OpenIdentityCenterSync(OpenIdentityCenterRequest req)
+        {
+            return InternalRequestAsync<OpenIdentityCenterResponse>(req, "OpenIdentityCenter")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 将权限配置部署到成员账号上
+        /// </summary>
+        /// <param name="req"><see cref="ProvisionRoleConfigurationRequest"/></param>
+        /// <returns><see cref="ProvisionRoleConfigurationResponse"/></returns>
+        public Task<ProvisionRoleConfigurationResponse> ProvisionRoleConfiguration(ProvisionRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<ProvisionRoleConfigurationResponse>(req, "ProvisionRoleConfiguration");
+        }
+
+        /// <summary>
+        /// 将权限配置部署到成员账号上
+        /// </summary>
+        /// <param name="req"><see cref="ProvisionRoleConfigurationRequest"/></param>
+        /// <returns><see cref="ProvisionRoleConfigurationResponse"/></returns>
+        public ProvisionRoleConfigurationResponse ProvisionRoleConfigurationSync(ProvisionRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<ProvisionRoleConfigurationResponse>(req, "ProvisionRoleConfiguration")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1331,6 +2129,111 @@ namespace TencentCloud.Organization.V20210331
         public RejectJoinShareUnitInvitationResponse RejectJoinShareUnitInvitationSync(RejectJoinShareUnitInvitationRequest req)
         {
             return InternalRequestAsync<RejectJoinShareUnitInvitationResponse>(req, "RejectJoinShareUnitInvitation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 移除SAML签名证书
+        /// </summary>
+        /// <param name="req"><see cref="RemoveExternalSAMLIdPCertificateRequest"/></param>
+        /// <returns><see cref="RemoveExternalSAMLIdPCertificateResponse"/></returns>
+        public Task<RemoveExternalSAMLIdPCertificateResponse> RemoveExternalSAMLIdPCertificate(RemoveExternalSAMLIdPCertificateRequest req)
+        {
+            return InternalRequestAsync<RemoveExternalSAMLIdPCertificateResponse>(req, "RemoveExternalSAMLIdPCertificate");
+        }
+
+        /// <summary>
+        /// 移除SAML签名证书
+        /// </summary>
+        /// <param name="req"><see cref="RemoveExternalSAMLIdPCertificateRequest"/></param>
+        /// <returns><see cref="RemoveExternalSAMLIdPCertificateResponse"/></returns>
+        public RemoveExternalSAMLIdPCertificateResponse RemoveExternalSAMLIdPCertificateSync(RemoveExternalSAMLIdPCertificateRequest req)
+        {
+            return InternalRequestAsync<RemoveExternalSAMLIdPCertificateResponse>(req, "RemoveExternalSAMLIdPCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 为权限配置移除策略
+        /// </summary>
+        /// <param name="req"><see cref="RemovePermissionPolicyFromRoleConfigurationRequest"/></param>
+        /// <returns><see cref="RemovePermissionPolicyFromRoleConfigurationResponse"/></returns>
+        public Task<RemovePermissionPolicyFromRoleConfigurationResponse> RemovePermissionPolicyFromRoleConfiguration(RemovePermissionPolicyFromRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<RemovePermissionPolicyFromRoleConfigurationResponse>(req, "RemovePermissionPolicyFromRoleConfiguration");
+        }
+
+        /// <summary>
+        /// 为权限配置移除策略
+        /// </summary>
+        /// <param name="req"><see cref="RemovePermissionPolicyFromRoleConfigurationRequest"/></param>
+        /// <returns><see cref="RemovePermissionPolicyFromRoleConfigurationResponse"/></returns>
+        public RemovePermissionPolicyFromRoleConfigurationResponse RemovePermissionPolicyFromRoleConfigurationSync(RemovePermissionPolicyFromRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<RemovePermissionPolicyFromRoleConfigurationResponse>(req, "RemovePermissionPolicyFromRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 从用户组中移除用户
+        /// </summary>
+        /// <param name="req"><see cref="RemoveUserFromGroupRequest"/></param>
+        /// <returns><see cref="RemoveUserFromGroupResponse"/></returns>
+        public Task<RemoveUserFromGroupResponse> RemoveUserFromGroup(RemoveUserFromGroupRequest req)
+        {
+            return InternalRequestAsync<RemoveUserFromGroupResponse>(req, "RemoveUserFromGroup");
+        }
+
+        /// <summary>
+        /// 从用户组中移除用户
+        /// </summary>
+        /// <param name="req"><see cref="RemoveUserFromGroupRequest"/></param>
+        /// <returns><see cref="RemoveUserFromGroupResponse"/></returns>
+        public RemoveUserFromGroupResponse RemoveUserFromGroupSync(RemoveUserFromGroupRequest req)
+        {
+            return InternalRequestAsync<RemoveUserFromGroupResponse>(req, "RemoveUserFromGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 配置SAML身份提供商信息
+        /// </summary>
+        /// <param name="req"><see cref="SetExternalSAMLIdentityProviderRequest"/></param>
+        /// <returns><see cref="SetExternalSAMLIdentityProviderResponse"/></returns>
+        public Task<SetExternalSAMLIdentityProviderResponse> SetExternalSAMLIdentityProvider(SetExternalSAMLIdentityProviderRequest req)
+        {
+            return InternalRequestAsync<SetExternalSAMLIdentityProviderResponse>(req, "SetExternalSAMLIdentityProvider");
+        }
+
+        /// <summary>
+        /// 配置SAML身份提供商信息
+        /// </summary>
+        /// <param name="req"><see cref="SetExternalSAMLIdentityProviderRequest"/></param>
+        /// <returns><see cref="SetExternalSAMLIdentityProviderResponse"/></returns>
+        public SetExternalSAMLIdentityProviderResponse SetExternalSAMLIdentityProviderSync(SetExternalSAMLIdentityProviderRequest req)
+        {
+            return InternalRequestAsync<SetExternalSAMLIdentityProviderResponse>(req, "SetExternalSAMLIdentityProvider")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改用户组信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGroupRequest"/></param>
+        /// <returns><see cref="UpdateGroupResponse"/></returns>
+        public Task<UpdateGroupResponse> UpdateGroup(UpdateGroupRequest req)
+        {
+            return InternalRequestAsync<UpdateGroupResponse>(req, "UpdateGroup");
+        }
+
+        /// <summary>
+        /// 修改用户组信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGroupRequest"/></param>
+        /// <returns><see cref="UpdateGroupResponse"/></returns>
+        public UpdateGroupResponse UpdateGroupSync(UpdateGroupRequest req)
+        {
+            return InternalRequestAsync<UpdateGroupResponse>(req, "UpdateGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1440,6 +2343,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 修改权限配置信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRoleConfigurationRequest"/></param>
+        /// <returns><see cref="UpdateRoleConfigurationResponse"/></returns>
+        public Task<UpdateRoleConfigurationResponse> UpdateRoleConfiguration(UpdateRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<UpdateRoleConfigurationResponse>(req, "UpdateRoleConfiguration");
+        }
+
+        /// <summary>
+        /// 修改权限配置信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRoleConfigurationRequest"/></param>
+        /// <returns><see cref="UpdateRoleConfigurationResponse"/></returns>
+        public UpdateRoleConfigurationResponse UpdateRoleConfigurationSync(UpdateRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<UpdateRoleConfigurationResponse>(req, "UpdateRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 更新共享单元。
         /// </summary>
         /// <param name="req"><see cref="UpdateShareUnitRequest"/></param>
@@ -1457,6 +2381,90 @@ namespace TencentCloud.Organization.V20210331
         public UpdateShareUnitResponse UpdateShareUnitSync(UpdateShareUnitRequest req)
         {
             return InternalRequestAsync<UpdateShareUnitResponse>(req, "UpdateShareUnit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改用户信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUserRequest"/></param>
+        /// <returns><see cref="UpdateUserResponse"/></returns>
+        public Task<UpdateUserResponse> UpdateUser(UpdateUserRequest req)
+        {
+            return InternalRequestAsync<UpdateUserResponse>(req, "UpdateUser");
+        }
+
+        /// <summary>
+        /// 修改用户信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUserRequest"/></param>
+        /// <returns><see cref="UpdateUserResponse"/></returns>
+        public UpdateUserResponse UpdateUserSync(UpdateUserRequest req)
+        {
+            return InternalRequestAsync<UpdateUserResponse>(req, "UpdateUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改用户状态
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUserStatusRequest"/></param>
+        /// <returns><see cref="UpdateUserStatusResponse"/></returns>
+        public Task<UpdateUserStatusResponse> UpdateUserStatus(UpdateUserStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateUserStatusResponse>(req, "UpdateUserStatus");
+        }
+
+        /// <summary>
+        /// 修改用户状态
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUserStatusRequest"/></param>
+        /// <returns><see cref="UpdateUserStatusResponse"/></returns>
+        public UpdateUserStatusResponse UpdateUserStatusSync(UpdateUserStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateUserStatusResponse>(req, "UpdateUserStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建子用户同步任务
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUserSyncProvisioningRequest"/></param>
+        /// <returns><see cref="UpdateUserSyncProvisioningResponse"/></returns>
+        public Task<UpdateUserSyncProvisioningResponse> UpdateUserSyncProvisioning(UpdateUserSyncProvisioningRequest req)
+        {
+            return InternalRequestAsync<UpdateUserSyncProvisioningResponse>(req, "UpdateUserSyncProvisioning");
+        }
+
+        /// <summary>
+        /// 创建子用户同步任务
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUserSyncProvisioningRequest"/></param>
+        /// <returns><see cref="UpdateUserSyncProvisioningResponse"/></returns>
+        public UpdateUserSyncProvisioningResponse UpdateUserSyncProvisioningSync(UpdateUserSyncProvisioningRequest req)
+        {
+            return InternalRequestAsync<UpdateUserSyncProvisioningResponse>(req, "UpdateUserSyncProvisioning")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新用户空间名
+        /// </summary>
+        /// <param name="req"><see cref="UpdateZoneRequest"/></param>
+        /// <returns><see cref="UpdateZoneResponse"/></returns>
+        public Task<UpdateZoneResponse> UpdateZone(UpdateZoneRequest req)
+        {
+            return InternalRequestAsync<UpdateZoneResponse>(req, "UpdateZone");
+        }
+
+        /// <summary>
+        /// 更新用户空间名
+        /// </summary>
+        /// <param name="req"><see cref="UpdateZoneRequest"/></param>
+        /// <returns><see cref="UpdateZoneResponse"/></returns>
+        public UpdateZoneResponse UpdateZoneSync(UpdateZoneRequest req)
+        {
+            return InternalRequestAsync<UpdateZoneResponse>(req, "UpdateZone")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

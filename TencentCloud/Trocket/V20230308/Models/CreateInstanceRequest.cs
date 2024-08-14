@@ -35,7 +35,7 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// 集群名称
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -59,19 +59,25 @@ namespace TencentCloud.Trocket.V20230308.Models
         public Tag[] TagList{ get; set; }
 
         /// <summary>
-        /// 实例绑定的VPC信息
+        /// 集群绑定的VPC信息，必填
         /// </summary>
         [JsonProperty("VpcList")]
         public VpcInfo[] VpcList{ get; set; }
 
         /// <summary>
-        /// 是否开启公网
+        /// 是否开启公网，默认值为false表示不开启
         /// </summary>
         [JsonProperty("EnablePublic")]
         public bool? EnablePublic{ get; set; }
 
         /// <summary>
-        /// 公网带宽（单位：兆）
+        /// 公网是否按流量计费，默认值为false表示不按流量计费
+        /// </summary>
+        [JsonProperty("BillingFlow")]
+        public bool? BillingFlow{ get; set; }
+
+        /// <summary>
+        /// 公网带宽（单位：兆），默认值为0。如果开启公网，该字段必须为大于0的正整数
         /// </summary>
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }
@@ -89,19 +95,19 @@ namespace TencentCloud.Trocket.V20230308.Models
         public long? MessageRetention{ get; set; }
 
         /// <summary>
-        /// 付费模式（0: 后付费；1: 预付费）
+        /// 付费模式（0: 后付费；1: 预付费），默认值为0
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 是否自动续费（0: 不自动续费；1: 自动续费）
+        /// 是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// 购买时长（单位：月）
+        /// 购买时长（单位：月），默认值为1
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
@@ -125,6 +131,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
             this.SetParamArrayObj(map, prefix + "VpcList.", this.VpcList);
             this.SetParamSimple(map, prefix + "EnablePublic", this.EnablePublic);
+            this.SetParamSimple(map, prefix + "BillingFlow", this.BillingFlow);
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
             this.SetParamArrayObj(map, prefix + "IpRules.", this.IpRules);
             this.SetParamSimple(map, prefix + "MessageRetention", this.MessageRetention);

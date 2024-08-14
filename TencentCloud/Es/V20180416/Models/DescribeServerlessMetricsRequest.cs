@@ -37,10 +37,16 @@ namespace TencentCloud.Es.V20180416.Models
         public string IndexId{ get; set; }
 
         /// <summary>
-        /// 指标类型，暂时只支持Storage
+        /// 指标类型，暂时只支持Storage(存储大小),AllMetric(所有存储指标：索引流量、存储大小、文档数量、读请求和写请求)
         /// </summary>
         [JsonProperty("MetricType")]
         public string[] MetricType{ get; set; }
+
+        /// <summary>
+        /// 时间长度类型DurationType(1: 3小时, 2: 昨天1天,3: 今日0点到现在)
+        /// </summary>
+        [JsonProperty("DurationType")]
+        public long? DurationType{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "SpaceId", this.SpaceId);
             this.SetParamSimple(map, prefix + "IndexId", this.IndexId);
             this.SetParamArraySimple(map, prefix + "MetricType.", this.MetricType);
+            this.SetParamSimple(map, prefix + "DurationType", this.DurationType);
         }
     }
 }

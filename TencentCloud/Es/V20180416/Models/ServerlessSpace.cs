@@ -152,6 +152,13 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("ClusterType")]
         public long? ClusterType{ get; set; }
 
+        /// <summary>
+        /// key:value
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagList")]
+        public TagInfo[] TagList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +184,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "KibanaLanguage", this.KibanaLanguage);
             this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
         }
     }
 }

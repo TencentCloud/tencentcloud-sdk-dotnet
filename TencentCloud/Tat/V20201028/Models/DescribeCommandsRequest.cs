@@ -35,6 +35,7 @@ namespace TencentCloud.Tat.V20201028.Models
         /// <li> command-id - String - 是否必填：否 -（过滤条件）按照命令ID过滤。</li>
         /// <li> command-name - String - 是否必填：否 -（过滤条件）按照命令名称过滤。</li>
         /// <li> command-type - String - 是否必填：否 -（过滤条件）按照命令类型过滤，取值为 SHELL 或 POWERSHELL。</li>
+        /// <li> scene-id - String - 是否必填：否 -（过滤条件）按照场景ID过滤。</li>
         /// <li> created-by - String - 是否必填：否 -（过滤条件）按照命令创建者过滤，取值为 TAT 或 USER，TAT 代表公共命令，USER 代表由用户创建的命令。</li>
         /// <li> tag-key - String - 是否必填：否 -（过滤条件）按照标签键进行过滤。</li>
         /// <li> tag-value - String - 是否必填：否 -（过滤条件）按照标签值进行过滤。</li>

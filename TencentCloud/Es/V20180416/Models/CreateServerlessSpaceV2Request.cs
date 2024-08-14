@@ -54,6 +54,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
 
+        /// <summary>
+        /// 标签信息
+        /// </summary>
+        [JsonProperty("TagList")]
+        public TagInfo[] TagList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamArraySimple(map, prefix + "KibanaWhiteIpList.", this.KibanaWhiteIpList);
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
         }
     }
 }

@@ -43,6 +43,33 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("UsageDetails")]
         public UsageDetails[] UsageDetails{ get; set; }
 
+        /// <summary>
+        /// 付费模式
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public string PayMode{ get; set; }
+
+        /// <summary>
+        /// 查询的券id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VoucherId")]
+        public string VoucherId{ get; set; }
+
+        /// <summary>
+        /// 交易场景：（adjust：调账、common：正常交易场景）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PayScene")]
+        public string PayScene{ get; set; }
+
+        /// <summary>
+        /// 唯一id,对应交易:预付费的dealName,调账/后付费的outTradeNo
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SeqId")]
+        public string SeqId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +79,10 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "UsedAmount", this.UsedAmount);
             this.SetParamSimple(map, prefix + "UsedTime", this.UsedTime);
             this.SetParamArrayObj(map, prefix + "UsageDetails.", this.UsageDetails);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "VoucherId", this.VoucherId);
+            this.SetParamSimple(map, prefix + "PayScene", this.PayScene);
+            this.SetParamSimple(map, prefix + "SeqId", this.SeqId);
         }
     }
 }

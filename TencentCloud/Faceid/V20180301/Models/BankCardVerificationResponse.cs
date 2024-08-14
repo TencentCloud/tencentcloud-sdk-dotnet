@@ -47,6 +47,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// '-4': '银行卡号码有误'
         /// '-17': '验证中心服务繁忙'
         /// '-18': '验证次数超限，请次日重试'
+        /// '-19': '该证件号暂不支持核验，当前仅支持二代身份证'	
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

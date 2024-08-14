@@ -31,6 +31,30 @@ namespace TencentCloud.Es.V20180416.Models
         public float? Storage{ get; set; }
 
         /// <summary>
+        /// IndexTraffic指标值，单位byte
+        /// </summary>
+        [JsonProperty("IndexTraffic")]
+        public float? IndexTraffic{ get; set; }
+
+        /// <summary>
+        /// 读请求数，单位次数
+        /// </summary>
+        [JsonProperty("ReadReqTimes")]
+        public long? ReadReqTimes{ get; set; }
+
+        /// <summary>
+        /// 写请求数，单位次数
+        /// </summary>
+        [JsonProperty("WriteReqTimes")]
+        public long? WriteReqTimes{ get; set; }
+
+        /// <summary>
+        /// 文档数量，单位个数
+        /// </summary>
+        [JsonProperty("DocCount")]
+        public long? DocCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +67,10 @@ namespace TencentCloud.Es.V20180416.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Storage", this.Storage);
+            this.SetParamSimple(map, prefix + "IndexTraffic", this.IndexTraffic);
+            this.SetParamSimple(map, prefix + "ReadReqTimes", this.ReadReqTimes);
+            this.SetParamSimple(map, prefix + "WriteReqTimes", this.WriteReqTimes);
+            this.SetParamSimple(map, prefix + "DocCount", this.DocCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

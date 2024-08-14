@@ -31,7 +31,7 @@ namespace TencentCloud.Tat.V20201028.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名。
+        /// 实例名称。有效长度为 1～60 字符。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }

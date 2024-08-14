@@ -31,8 +31,8 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 每个分片的主从节点数量。
-        /// 取值范围：请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MinNodeNum与MaxNodeNum分别对应其最小值与最大值。
+        /// - 创建副本集实例，指每个副本集内主从节点数量。每个副本集所支持的的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+        /// - 创建分片集群实例，指每个分片的主从节点数量。每个分片所支持的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
         /// </summary>
         [JsonProperty("NodeNum")]
         public long? NodeNum{ get; set; }
@@ -55,21 +55,20 @@ namespace TencentCloud.Mongodb.V20190725.Models
 
         /// <summary>
         /// 实例版本信息。具体支持的版本，请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MongoVersionCode为实例所支持的版本信息。版本信息与版本号对应关系如下：
-        /// - MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本。
-        /// - MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本。
         /// - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
         /// - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
         /// - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
         /// - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
         /// - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+        /// - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
         /// </summary>
         [JsonProperty("MongoVersion")]
         public string MongoVersion{ get; set; }
 
         /// <summary>
-        /// 机器类型。
-        /// - HIO：高IO型。
-        /// - HIO10G：高IO万兆型。
+        /// 产品规格类型。
+        /// - HIO10G：通用高HIO万兆型。
+        /// - HCD：云盘版。
         /// </summary>
         [JsonProperty("MachineCode")]
         public string MachineCode{ get; set; }
@@ -84,22 +83,19 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// 实例类型。
         /// - REPLSET：副本集。
         /// - SHARD：分片集群。
-        /// - STANDALONE：单节点。
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// 副本集个数。
-        /// - 创建副本集实例时，该参数固定设置为1。
-        /// - 创建分片集群时，指分片数量，请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。
-        /// - 若为单节点实例，该参数固定设置为0。
+        /// - 创建副本集实例，指副本集数量，该参数只能为1。
+        /// - 创建分片集群实例，指分片的数量。请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询分片数量的取值范围，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。
         /// </summary>
         [JsonProperty("ReplicateSetNum")]
         public long? ReplicateSetNum{ get; set; }
 
         /// <summary>
-        /// - 选择包年包月计费模式，即 <b>InstanceChargeType </b>设定为<b>PREPAID</b>时，需设定购买实例的时长。该参数取值可选：[1,2,3,4,5,6,7,8,9,10,11,12,24,36]；单位：月。
+        /// - 选择包年包月计费模式，即 <b>InstanceChargeType </b>设定为<b>PREPAID</b>时，必须设置该参数，指定购买实例的购买时长。取值可选：[1,2,3,4,5,6,7,8,9,10,11,12,24,36]；单位：月。
         /// -选择按量计费，即 <b>InstanceChargeType</b> 设定为 **POSTPAID_BY_HOUR** 时，该参数仅可配置为 1。
         /// </summary>
         [JsonProperty("Period")]
@@ -114,37 +110,37 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// 分片实例询价必填参数，指 Mongos CPU核数，取值范围为[1,16]。
+        /// Mongos CPU 核数，支持1、2、4、8、16。购买分片集群时，必须填写。注意为空时取默认取值为2C。
         /// </summary>
         [JsonProperty("MongosCpu")]
         public ulong? MongosCpu{ get; set; }
 
         /// <summary>
-        /// 分片实例询价必填参数，指 Mongos 内存，取值范围为[2,32]，单位：GB。
+        /// Mongos 内存大小。-  购买分片集群时，必须填写。- 单位：GB，支持1核2GB、2核4GB、4核8GB、8核16GB、16核32GB。注意为空时取默认取值为4G。
         /// </summary>
         [JsonProperty("MongosMemory")]
         public ulong? MongosMemory{ get; set; }
 
         /// <summary>
-        /// 分片实例询价必填参数，指 Mongos 个数，取值范围为[3,32]。
+        /// 指 Mongos 个数，取值范围为[3,32]。若为分片集群实例询价，则该参数必须设置。注意为空时取默认取值为3个节点。
         /// </summary>
         [JsonProperty("MongosNum")]
         public ulong? MongosNum{ get; set; }
 
         /// <summary>
-        /// 分片实例询价必填参数，指 ConfigServer CPU核数，取值为1，单位：GB。
+        /// 指 ConfigServer CPU核数，取值为1，单位：GB。若为分片集群实例询价，该参数必须设置。
         /// </summary>
         [JsonProperty("ConfigServerCpu")]
         public ulong? ConfigServerCpu{ get; set; }
 
         /// <summary>
-        /// 分片实例询价必填参数，指 ConfigServer 内存大小，取值为2，单位：GB。
+        /// 指 ConfigServer 内存大小，取值为2，单位：GB。若为分片集群实例询价，则该参数必须设置。
         /// </summary>
         [JsonProperty("ConfigServerMemory")]
         public ulong? ConfigServerMemory{ get; set; }
 
         /// <summary>
-        /// 分片实例询价必填参数，指 ConfigServer 磁盘大小，取值为 20，单位：GB。
+        /// 指 ConfigServer 磁盘大小，取值为 20，单位：GB。若为分片集群实例询价，则该参数必须设置。
         /// </summary>
         [JsonProperty("ConfigServerVolume")]
         public ulong? ConfigServerVolume{ get; set; }

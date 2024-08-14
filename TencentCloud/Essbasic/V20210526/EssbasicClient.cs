@@ -28,7 +28,7 @@ namespace TencentCloud.Essbasic.V20210526
 
        private const string endpoint = "essbasic.tencentcloudapi.com";
        private const string version = "2021-05-26";
-       private const string sdkVersion = "SDK_NET_3.0.1067";
+       private const string sdkVersion = "SDK_NET_3.0.1068";
 
         /// <summary>
         /// Client constructor.
@@ -1871,6 +1871,39 @@ namespace TencentCloud.Essbasic.V20210526
         public ChannelVerifyPdfResponse ChannelVerifyPdfSync(ChannelVerifyPdfRequest req)
         {
             return InternalRequestAsync<ChannelVerifyPdfResponse>(req, "ChannelVerifyPdf")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 支持企业进行批量初始化操作：
+        /// 
+        /// 此接口存在以下限制：
+        /// 1. 批量操作的企业需要已经完成电子签的认证流程。
+        /// 2. 通过此接口生成的链接在小程序端进行操作时，操作人需要是<font  color="red">所有企业的超管或法人</font>。
+        /// 3. 批量操作的企业，需要是本方第三方应用下的企业。
+        /// 4. <font  color="red">操作链接过期时间默认为生成链接后7天。</font>
+        /// </summary>
+        /// <param name="req"><see cref="CreateBatchInitOrganizationUrlRequest"/></param>
+        /// <returns><see cref="CreateBatchInitOrganizationUrlResponse"/></returns>
+        public Task<CreateBatchInitOrganizationUrlResponse> CreateBatchInitOrganizationUrl(CreateBatchInitOrganizationUrlRequest req)
+        {
+            return InternalRequestAsync<CreateBatchInitOrganizationUrlResponse>(req, "CreateBatchInitOrganizationUrl");
+        }
+
+        /// <summary>
+        /// 支持企业进行批量初始化操作：
+        /// 
+        /// 此接口存在以下限制：
+        /// 1. 批量操作的企业需要已经完成电子签的认证流程。
+        /// 2. 通过此接口生成的链接在小程序端进行操作时，操作人需要是<font  color="red">所有企业的超管或法人</font>。
+        /// 3. 批量操作的企业，需要是本方第三方应用下的企业。
+        /// 4. <font  color="red">操作链接过期时间默认为生成链接后7天。</font>
+        /// </summary>
+        /// <param name="req"><see cref="CreateBatchInitOrganizationUrlRequest"/></param>
+        /// <returns><see cref="CreateBatchInitOrganizationUrlResponse"/></returns>
+        public CreateBatchInitOrganizationUrlResponse CreateBatchInitOrganizationUrlSync(CreateBatchInitOrganizationUrlRequest req)
+        {
+            return InternalRequestAsync<CreateBatchInitOrganizationUrlResponse>(req, "CreateBatchInitOrganizationUrl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

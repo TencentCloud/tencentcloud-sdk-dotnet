@@ -28,7 +28,7 @@ namespace TencentCloud.Es.V20180416
 
        private const string endpoint = "es.tencentcloudapi.com";
        private const string version = "2018-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.1067";
+       private const string sdkVersion = "SDK_NET_3.0.1068";
 
         /// <summary>
         /// Client constructor.
@@ -580,6 +580,7 @@ namespace TencentCloud.Es.V20180416
 
         /// <summary>
         /// 获取serverless实例对应指标，获取space维度时不需要传入indexid，获取index时不需要传入spaceid
+        /// 获取一段时间时间范围内的指标数据
         /// </summary>
         /// <param name="req"><see cref="DescribeServerlessMetricsRequest"/></param>
         /// <returns><see cref="DescribeServerlessMetricsResponse"/></returns>
@@ -590,6 +591,7 @@ namespace TencentCloud.Es.V20180416
 
         /// <summary>
         /// 获取serverless实例对应指标，获取space维度时不需要传入indexid，获取index时不需要传入spaceid
+        /// 获取一段时间时间范围内的指标数据
         /// </summary>
         /// <param name="req"><see cref="DescribeServerlessMetricsRequest"/></param>
         /// <returns><see cref="DescribeServerlessMetricsResponse"/></returns>
