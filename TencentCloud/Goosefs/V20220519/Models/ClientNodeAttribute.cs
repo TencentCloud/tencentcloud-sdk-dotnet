@@ -42,6 +42,31 @@ namespace TencentCloud.Goosefs.V20220519.Models
         [JsonProperty("ClientType")]
         public string ClientType{ get; set; }
 
+        /// <summary>
+        /// 节点所属vpcid	
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
+
+        /// <summary>
+        /// 节点所属子网id
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
+        /// <summary>
+        /// cvmId
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 自定义挂载点
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MountPoint")]
+        public string MountPoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +76,10 @@ namespace TencentCloud.Goosefs.V20220519.Models
             this.SetParamSimple(map, prefix + "ClientNodeIp", this.ClientNodeIp);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "ClientType", this.ClientType);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "MountPoint", this.MountPoint);
         }
     }
 }

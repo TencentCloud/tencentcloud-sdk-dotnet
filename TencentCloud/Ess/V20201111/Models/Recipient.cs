@@ -132,6 +132,15 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ApproverSignTypes")]
         public long?[] ApproverSignTypes{ get; set; }
 
+        /// <summary>
+        /// 签署方是否可以转他人处理
+        /// 
+        /// <ul><li> **false** : ( 默认)可以转他人处理</li>
+        /// <li> **true** :不可以转他人处理</li></ul>
+        /// </summary>
+        [JsonProperty("NoTransfer")]
+        public bool? NoTransfer{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -153,6 +162,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "RecipientExtra", this.RecipientExtra);
             this.SetParamArraySimple(map, prefix + "ApproverVerifyTypes.", this.ApproverVerifyTypes);
             this.SetParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
+            this.SetParamSimple(map, prefix + "NoTransfer", this.NoTransfer);
         }
     }
 }

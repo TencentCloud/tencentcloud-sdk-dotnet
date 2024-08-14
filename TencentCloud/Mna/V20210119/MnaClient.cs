@@ -28,7 +28,7 @@ namespace TencentCloud.Mna.V20210119
 
        private const string endpoint = "mna.tencentcloudapi.com";
        private const string version = "2021-01-19";
-       private const string sdkVersion = "SDK_NET_3.0.1068";
+       private const string sdkVersion = "SDK_NET_3.0.1069";
 
         /// <summary>
         /// Client constructor.
@@ -743,6 +743,27 @@ namespace TencentCloud.Mna.V20210119
         public OrderFlowPackageResponse OrderFlowPackageSync(OrderFlowPackageRequest req)
         {
             return InternalRequestAsync<OrderFlowPackageResponse>(req, "OrderFlowPackage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 购买一次性授权License
+        /// </summary>
+        /// <param name="req"><see cref="OrderPerLicenseRequest"/></param>
+        /// <returns><see cref="OrderPerLicenseResponse"/></returns>
+        public Task<OrderPerLicenseResponse> OrderPerLicense(OrderPerLicenseRequest req)
+        {
+            return InternalRequestAsync<OrderPerLicenseResponse>(req, "OrderPerLicense");
+        }
+
+        /// <summary>
+        /// 购买一次性授权License
+        /// </summary>
+        /// <param name="req"><see cref="OrderPerLicenseRequest"/></param>
+        /// <returns><see cref="OrderPerLicenseResponse"/></returns>
+        public OrderPerLicenseResponse OrderPerLicenseSync(OrderPerLicenseRequest req)
+        {
+            return InternalRequestAsync<OrderPerLicenseResponse>(req, "OrderPerLicense")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

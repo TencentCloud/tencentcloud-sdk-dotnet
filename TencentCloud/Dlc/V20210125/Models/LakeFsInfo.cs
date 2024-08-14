@@ -48,6 +48,34 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("CreateTimeStamp")]
         public long? CreateTimeStamp{ get; set; }
 
+        /// <summary>
+        /// 是否是用户默认桶，0：默认桶，1：非默认桶
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DefaultBucket")]
+        public long? DefaultBucket{ get; set; }
+
+        /// <summary>
+        /// 托管存储short name
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ShortName")]
+        public string ShortName{ get; set; }
+
+        /// <summary>
+        /// 桶描述信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// 托管桶状态，当前取值为：creating、bind、readOnly、isolate
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +86,10 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "SpaceUsedSize", this.SpaceUsedSize);
             this.SetParamSimple(map, prefix + "CreateTimeStamp", this.CreateTimeStamp);
+            this.SetParamSimple(map, prefix + "DefaultBucket", this.DefaultBucket);
+            this.SetParamSimple(map, prefix + "ShortName", this.ShortName);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

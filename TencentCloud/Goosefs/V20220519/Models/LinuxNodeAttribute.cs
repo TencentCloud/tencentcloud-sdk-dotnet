@@ -48,6 +48,12 @@ namespace TencentCloud.Goosefs.V20220519.Models
         [JsonProperty("LinuxClientNodeIp")]
         public string LinuxClientNodeIp{ get; set; }
 
+        /// <summary>
+        /// 自定义挂载点
+        /// </summary>
+        [JsonProperty("MountPoint")]
+        public string MountPoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Goosefs.V20220519.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "LinuxClientNodeIp", this.LinuxClientNodeIp);
+            this.SetParamSimple(map, prefix + "MountPoint", this.MountPoint);
         }
     }
 }

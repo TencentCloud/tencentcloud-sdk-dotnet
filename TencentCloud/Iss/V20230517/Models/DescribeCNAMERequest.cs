@@ -30,6 +30,12 @@ namespace TencentCloud.Iss.V20230517.Models
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
+        /// <summary>
+        /// 域名类型，0:拉流域名 1:推流域名
+        /// </summary>
+        [JsonProperty("DomainType")]
+        public long? DomainType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Iss.V20230517.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "DomainType", this.DomainType);
         }
     }
 }

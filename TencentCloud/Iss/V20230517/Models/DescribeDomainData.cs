@@ -80,6 +80,13 @@ namespace TencentCloud.Iss.V20230517.Models
         [JsonProperty("CertId")]
         public string CertId{ get; set; }
 
+        /// <summary>
+        /// 域名类型 0:拉流域名 1:推流域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DomainType")]
+        public long? DomainType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +101,7 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "CertId", this.CertId);
+            this.SetParamSimple(map, prefix + "DomainType", this.DomainType);
         }
     }
 }

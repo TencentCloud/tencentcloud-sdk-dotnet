@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1068";
+       private const string sdkVersion = "SDK_NET_3.0.1069";
 
         /// <summary>
         /// Client constructor.

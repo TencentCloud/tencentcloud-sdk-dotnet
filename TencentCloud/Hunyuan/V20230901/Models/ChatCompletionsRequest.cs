@@ -140,6 +140,12 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("Citation")]
         public bool? Citation{ get; set; }
 
+        /// <summary>
+        /// 是否开启极速版搜索，默认false，不开启；在开启且命中搜索时，会启用极速版搜索，流式输出首字返回更快。
+        /// </summary>
+        [JsonProperty("EnableSpeedSearch")]
+        public bool? EnableSpeedSearch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +164,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamObj(map, prefix + "CustomTool.", this.CustomTool);
             this.SetParamSimple(map, prefix + "SearchInfo", this.SearchInfo);
             this.SetParamSimple(map, prefix + "Citation", this.Citation);
+            this.SetParamSimple(map, prefix + "EnableSpeedSearch", this.EnableSpeedSearch);
         }
     }
 }

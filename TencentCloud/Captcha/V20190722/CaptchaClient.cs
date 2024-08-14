@@ -28,7 +28,7 @@ namespace TencentCloud.Captcha.V20190722
 
        private const string endpoint = "captcha.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1068";
+       private const string sdkVersion = "SDK_NET_3.0.1069";
 
         /// <summary>
         /// Client constructor.

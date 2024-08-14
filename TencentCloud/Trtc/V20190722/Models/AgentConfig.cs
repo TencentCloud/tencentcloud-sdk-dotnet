@@ -59,6 +59,20 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("WelcomeMessage")]
         public string WelcomeMessage{ get; set; }
 
+        /// <summary>
+        /// 智能打断模式，默认为0，0表示服务端自动打断，1表示服务端不打断，由端上发送打断信令进行打断
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InterruptMode")]
+        public ulong? InterruptMode{ get; set; }
+
+        /// <summary>
+        /// InterruptMode为0时使用，单位为毫秒，默认为500ms。表示服务端检测到持续InterruptSpeechDuration毫秒的人声则进行打断。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InterruptSpeechDuration")]
+        public ulong? InterruptSpeechDuration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +84,8 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "TargetUserId", this.TargetUserId);
             this.SetParamSimple(map, prefix + "MaxIdleTime", this.MaxIdleTime);
             this.SetParamSimple(map, prefix + "WelcomeMessage", this.WelcomeMessage);
+            this.SetParamSimple(map, prefix + "InterruptMode", this.InterruptMode);
+            this.SetParamSimple(map, prefix + "InterruptSpeechDuration", this.InterruptSpeechDuration);
         }
     }
 }

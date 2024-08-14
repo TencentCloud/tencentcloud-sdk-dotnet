@@ -108,6 +108,18 @@ namespace TencentCloud.Iss.V20230517.Models
         [JsonProperty("SNCode")]
         public string SNCode{ get; set; }
 
+        /// <summary>
+        /// RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字组合限制32个字符内）
+        /// </summary>
+        [JsonProperty("AppName")]
+        public string AppName{ get; set; }
+
+        /// <summary>
+        /// RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字组合限制32个字符内）
+        /// </summary>
+        [JsonProperty("StreamName")]
+        public string StreamName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +140,8 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "Username", this.Username);
             this.SetParamSimple(map, prefix + "SNCode", this.SNCode);
+            this.SetParamSimple(map, prefix + "AppName", this.AppName);
+            this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
         }
     }
 }
