@@ -54,6 +54,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Rules")]
         public PublicAccessRule[] Rules{ get; set; }
 
+        /// <summary>
+        /// 公网是否按流量计费
+        /// </summary>
+        [JsonProperty("BillingFlow")]
+        public bool? BillingFlow{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
+            this.SetParamSimple(map, prefix + "BillingFlow", this.BillingFlow);
         }
     }
 }

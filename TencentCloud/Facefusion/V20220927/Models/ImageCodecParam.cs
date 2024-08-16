@@ -25,7 +25,7 @@ namespace TencentCloud.Facefusion.V20220927.Models
     {
         
         /// <summary>
-        /// 元数据
+        /// 元数据，个数不能大于1。
         /// </summary>
         [JsonProperty("MetaData")]
         public MetaData[] MetaData{ get; set; }

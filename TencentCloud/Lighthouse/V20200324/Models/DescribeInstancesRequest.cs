@@ -73,6 +73,22 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 指定排序字段 。取值范围： "EXPIRED_TIME"：依据实例的到期时间排序。 
+        ///  不传入此字段时, 优先返回实例状态为“待回收”的实例, 其余实例以“创建时间”倒序返回。
+        /// </summary>
+        [JsonProperty("OrderField")]
+        public string OrderField{ get; set; }
+
+        /// <summary>
+        /// 输出实例列表的排列顺序。取值范围：
+        /// "ASC"：升序排列。
+        /// "DESC"：降序排列。
+        /// 默认按升序排序。当传入该字段时，必须指定OrderField。
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -83,6 +99,8 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
         }
     }
 }

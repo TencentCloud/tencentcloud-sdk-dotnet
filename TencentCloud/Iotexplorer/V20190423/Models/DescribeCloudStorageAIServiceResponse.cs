@@ -30,7 +30,6 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// - `1`：全时套餐
         /// - `2`：事件套餐
         /// - `3`：低功耗套餐
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
@@ -40,21 +39,18 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// 
         /// - `0`：未开通或已过期
         /// - `1`：生效中
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// 云存 AI 套餐过期时间 UNIX 时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public ulong? ExpireTime{ get; set; }
 
         /// <summary>
         /// 用户 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }

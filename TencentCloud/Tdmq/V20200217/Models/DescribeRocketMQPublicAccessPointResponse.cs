@@ -73,6 +73,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public long? PayMode{ get; set; }
 
         /// <summary>
+        /// 公网是否按流量计费
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BillingFlow")]
+        public bool? BillingFlow{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -90,6 +97,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "BillingFlow", this.BillingFlow);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

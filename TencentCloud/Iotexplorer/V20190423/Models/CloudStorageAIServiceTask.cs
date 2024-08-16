@@ -51,7 +51,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// <summary>
         /// 云存 AI 服务类型。可能取值：
         /// 
-        /// - `PackageDetect`：包裹检测
+        /// - `RealtimeObjectDetect`：目标检测
         /// - `Highlight`：视频浓缩
         /// </summary>
         [JsonProperty("ServiceType")]
@@ -99,6 +99,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 自定义任务 ID
+        /// </summary>
+        [JsonProperty("CustomId")]
+        public string CustomId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -117,6 +123,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamArraySimple(map, prefix + "Files.", this.Files);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "CustomId", this.CustomId);
         }
     }
 }

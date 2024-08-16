@@ -26,19 +26,25 @@ namespace TencentCloud.Facefusion.V20181201.Models
         
         /// <summary>
         /// 输入图片base64。
+        /// ●base64 和 url 必须提供一个，如果都提供以 url 为准。
+        /// ●素材图片限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64。（图片编码之后可能会大30%左右，建议合理控制图片大小）。
+        /// ●支持图片格式：支持jpg或png。
         /// </summary>
         [JsonProperty("Image")]
         public string Image{ get; set; }
 
         /// <summary>
         /// 输入图片url。
-        /// Url、Image必须提供一个，如果都提供，只使用 Url。
+        /// ●base64 和 url 必须提供一个，如果都提供以 url 为准。
+        /// ●素材图片限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64。（图片编码之后可能会大30%左右，建议合理控制图片大小）。
+        /// ●支持图片格式：支持jpg或png。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
         /// 输入图片人脸位置信息（人脸框）。不填默认取输入图中最大人脸。
+        /// Width、Height >= 30。
         /// </summary>
         [JsonProperty("InputImageFaceRect")]
         public FaceRect InputImageFaceRect{ get; set; }

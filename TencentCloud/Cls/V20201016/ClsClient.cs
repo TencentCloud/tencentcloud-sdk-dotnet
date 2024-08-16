@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1069";
+       private const string sdkVersion = "SDK_NET_3.0.1070";
 
         /// <summary>
         /// Client constructor.
@@ -1167,7 +1167,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        ///  本接口用于获取仪表盘订阅列表，支持分页
+        /// 本接口用于获取仪表盘订阅列表，支持分页
         /// </summary>
         /// <param name="req"><see cref="DescribeDashboardSubscribesRequest"/></param>
         /// <returns><see cref="DescribeDashboardSubscribesResponse"/></returns>
@@ -1177,7 +1177,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        ///  本接口用于获取仪表盘订阅列表，支持分页
+        /// 本接口用于获取仪表盘订阅列表，支持分页
         /// </summary>
         /// <param name="req"><see cref="DescribeDashboardSubscribesRequest"/></param>
         /// <returns><see cref="DescribeDashboardSubscribesResponse"/></returns>

@@ -55,6 +55,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Nick{ get; set; }
 
         /// <summary>
+        /// 座席工号
+        /// </summary>
+        [JsonProperty("StaffNo")]
+        public string StaffNo{ get; set; }
+
+        /// <summary>
         /// 绑定技能组ID列表
         /// </summary>
         [JsonProperty("SkillGroupIds")]
@@ -83,6 +89,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Phone", this.Phone);
             this.SetParamSimple(map, prefix + "Nick", this.Nick);
+            this.SetParamSimple(map, prefix + "StaffNo", this.StaffNo);
             this.SetParamArraySimple(map, prefix + "SkillGroupIds.", this.SkillGroupIds);
             this.SetParamSimple(map, prefix + "UseMobileCallOut", this.UseMobileCallOut);
             this.SetParamSimple(map, prefix + "UseMobileAccept", this.UseMobileAccept);

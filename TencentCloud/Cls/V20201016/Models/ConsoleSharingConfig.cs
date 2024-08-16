@@ -65,42 +65,49 @@ namespace TencentCloud.Cls.V20201016.Models
         public string VerifyCode{ get; set; }
 
         /// <summary>
-        /// 开始时间，支持绝对时间(13位时间戳字符串)/相对时间字符串
+        /// 默认查询范围的开始时间点，支持绝对时间(13位Unix时间戳)或相对时间表达式
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间，支持绝对时间(13位时间戳字符串)/相对时间字符串
+        /// 默认查询范围的结束时间点，支持绝对时间(13位Unix时间戳)或相对时间表达式。注意，结束时间点要大于开始时间点
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 当StartTime/EndTime为相对时间时，基于NowTime计算绝对时间，默认为创建时间
+        /// 仅当StartTime/EndTime为相对时间时使用，基于NowTime计算绝对时间，默认为创建时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NowTime")]
         public ulong? NowTime{ get; set; }
 
         /// <summary>
-        /// params参数列表，当Type为2时支持
+        /// 默认的检索分析语句，仅当Type为2时使用
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Params")]
         public ConsoleSharingParam[] Params{ get; set; }
 
         /// <summary>
-        /// 是否允许访问者自行修改检索分析时间范围，默认不锁定
+        /// 是否允许访问者自行修改检索分析时间范围。默认不锁定（false）
         /// </summary>
         [JsonProperty("IsLockTimeRange")]
         public bool? IsLockTimeRange{ get; set; }
 
         /// <summary>
-        /// 是否允许访问者自行修改日志检索语句。在检索页分享中表示检索语句锁定状态；在仪表盘中表示过滤变量锁定状态
+        /// 是否允许访问者自行修改日志检索语句。在检索页分享中表示检索语句锁定状态；在仪表盘中表示过滤变量锁定状态。默认不锁定（false）
         /// </summary>
         [JsonProperty("IsLockQuery")]
         public bool? IsLockQuery{ get; set; }
+
+        /// <summary>
+        /// 检索页分享是否允许访问者下载日志，默认不允许（false）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsSupportLogExport")]
+        public bool? IsSupportLogExport{ get; set; }
 
 
         /// <summary>
@@ -120,6 +127,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArrayObj(map, prefix + "Params.", this.Params);
             this.SetParamSimple(map, prefix + "IsLockTimeRange", this.IsLockTimeRange);
             this.SetParamSimple(map, prefix + "IsLockQuery", this.IsLockQuery);
+            this.SetParamSimple(map, prefix + "IsSupportLogExport", this.IsSupportLogExport);
         }
     }
 }

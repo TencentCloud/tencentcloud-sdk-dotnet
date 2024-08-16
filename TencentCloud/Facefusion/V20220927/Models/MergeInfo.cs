@@ -25,19 +25,26 @@ namespace TencentCloud.Facefusion.V20220927.Models
     {
         
         /// <summary>
-        /// 输入图片base64
+        /// 输入图片base64。
+        /// ●base64 和 url 必须提供一个，如果都提供以 url 为准。
+        /// ●素材图片限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64。（图片编码之后可能会大30%左右，建议合理控制图片大小）。
+        /// ●支持图片格式：支持jpg或png
         /// </summary>
         [JsonProperty("Image")]
         public string Image{ get; set; }
 
         /// <summary>
-        /// 输入图片url
+        /// 输入图片url。
+        /// ●base64 和 url 必须提供一个，如果都提供以 url 为准。
+        /// ●素材图片限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64。（图片编码之后可能会大30%左右，建议合理控制图片大小）。
+        /// ●支持图片格式：支持jpg或png
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
         /// 上传的图片人脸位置信息（人脸框）
+        /// Width、Height >= 30。
         /// </summary>
         [JsonProperty("InputImageFaceRect")]
         public FaceRect InputImageFaceRect{ get; set; }
@@ -50,6 +57,7 @@ namespace TencentCloud.Facefusion.V20220927.Models
 
         /// <summary>
         /// 模板中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模板素材场景。
+        /// Width、Height >= 30。
         /// </summary>
         [JsonProperty("TemplateFaceRect")]
         public FaceRect TemplateFaceRect{ get; set; }

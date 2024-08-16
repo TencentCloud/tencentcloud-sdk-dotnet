@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1069";
+       private const string sdkVersion = "SDK_NET_3.0.1070";
 
         /// <summary>
         /// Client constructor.
@@ -279,6 +279,27 @@ namespace TencentCloud.Ocr.V20181119
         public ClassifyDetectOCRResponse ClassifyDetectOCRSync(ClassifyDetectOCRRequest req)
         {
             return InternalRequestAsync<ClassifyDetectOCRResponse>(req, "ClassifyDetectOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于识别门头照分类标签信息
+        /// </summary>
+        /// <param name="req"><see cref="ClassifyStoreNameRequest"/></param>
+        /// <returns><see cref="ClassifyStoreNameResponse"/></returns>
+        public Task<ClassifyStoreNameResponse> ClassifyStoreName(ClassifyStoreNameRequest req)
+        {
+            return InternalRequestAsync<ClassifyStoreNameResponse>(req, "ClassifyStoreName");
+        }
+
+        /// <summary>
+        /// 本接口用于识别门头照分类标签信息
+        /// </summary>
+        /// <param name="req"><see cref="ClassifyStoreNameRequest"/></param>
+        /// <returns><see cref="ClassifyStoreNameResponse"/></returns>
+        public ClassifyStoreNameResponse ClassifyStoreNameSync(ClassifyStoreNameRequest req)
+        {
+            return InternalRequestAsync<ClassifyStoreNameResponse>(req, "ClassifyStoreName")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2365,6 +2386,27 @@ namespace TencentCloud.Ocr.V20181119
         public RecognizePhilippinesVoteIDOCRResponse RecognizePhilippinesVoteIDOCRSync(RecognizePhilippinesVoteIDOCRRequest req)
         {
             return InternalRequestAsync<RecognizePhilippinesVoteIDOCRResponse>(req, "RecognizePhilippinesVoteIDOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于识别门头照文字识别结果以及对应分类标签信息
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeStoreNameRequest"/></param>
+        /// <returns><see cref="RecognizeStoreNameResponse"/></returns>
+        public Task<RecognizeStoreNameResponse> RecognizeStoreName(RecognizeStoreNameRequest req)
+        {
+            return InternalRequestAsync<RecognizeStoreNameResponse>(req, "RecognizeStoreName");
+        }
+
+        /// <summary>
+        /// 本接口用于识别门头照文字识别结果以及对应分类标签信息
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeStoreNameRequest"/></param>
+        /// <returns><see cref="RecognizeStoreNameResponse"/></returns>
+        public RecognizeStoreNameResponse RecognizeStoreNameSync(RecognizeStoreNameRequest req)
+        {
+            return InternalRequestAsync<RecognizeStoreNameResponse>(req, "RecognizeStoreName")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

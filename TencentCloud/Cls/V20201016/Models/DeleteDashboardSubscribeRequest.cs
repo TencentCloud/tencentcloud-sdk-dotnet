@@ -24,12 +24,19 @@ namespace TencentCloud.Cls.V20201016.Models
     public class DeleteDashboardSubscribeRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 仪表盘订阅记录id。
+        /// </summary>
+        [JsonProperty("Id")]
+        public ulong? Id{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Id", this.Id);
         }
     }
 }

@@ -65,6 +65,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("FixSuccessCnt")]
         public ulong? FixSuccessCnt{ get; set; }
 
+        /// <summary>
+        /// 修复方式 0组件更新或者安装补丁,1禁用服务
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FixMethod")]
+        public ulong? FixMethod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,6 +84,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamArrayObj(map, prefix + "HostList.", this.HostList);
             this.SetParamSimple(map, prefix + "FailCnt", this.FailCnt);
             this.SetParamSimple(map, prefix + "FixSuccessCnt", this.FixSuccessCnt);
+            this.SetParamSimple(map, prefix + "FixMethod", this.FixMethod);
         }
     }
 }

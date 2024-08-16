@@ -43,7 +43,7 @@ namespace TencentCloud.Facefusion.V20220927.Models
         public string RspImgType{ get; set; }
 
         /// <summary>
-        /// 用户人脸图片、素材模板图的人脸位置信息。
+        /// 用户人脸图片、素材模板图的人脸位置信息。不能超过6个。
         /// </summary>
         [JsonProperty("MergeInfos")]
         public MergeInfo[] MergeInfos{ get; set; }

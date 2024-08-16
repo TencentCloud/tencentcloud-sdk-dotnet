@@ -25,19 +25,23 @@ namespace TencentCloud.Facefusion.V20220927.Models
     {
         
         /// <summary>
-        /// 标识图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
+        /// 标识图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配。
         /// </summary>
         [JsonProperty("LogoRect")]
         public FaceRect LogoRect{ get; set; }
 
         /// <summary>
-        /// 标识图片Url地址
+        /// 标识图片Url地址。
+        /// ●base64 和 url 必须提供一个，如果都提供以 url 为准。
+        /// ●支持图片格式：支持jpg或png。
         /// </summary>
         [JsonProperty("LogoUrl")]
         public string LogoUrl{ get; set; }
 
         /// <summary>
         /// 标识图片base64
+        /// ●base64 和 url 必须提供一个，如果都提供以 url 为准。
+        /// ●支持图片格式：支持jpg或png。
         /// </summary>
         [JsonProperty("LogoImage")]
         public string LogoImage{ get; set; }

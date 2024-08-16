@@ -25,7 +25,12 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 类型（二维码、条形码）
+        /// 类型包括
+        /// 二维码：QR_CODE
+        /// 一维码：EAN-13、EAN-8、EAN-2、UPC-A、UPC-E、CODE-39、CODE-93、CODE-128 
+        /// PDF：PDF_417
+        /// DataMatrix：DATA_MATRIX
+        /// 小程序码：WX_CODE
         /// </summary>
         [JsonProperty("TypeName")]
         public string TypeName{ get; set; }

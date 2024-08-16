@@ -162,6 +162,20 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Ipv6Flag")]
         public string Ipv6Flag{ get; set; }
 
+        /// <summary>
+        /// 是否支持路由表聚合策略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MrtbAggregatePolicyFlag")]
+        public bool? MrtbAggregatePolicyFlag{ get; set; }
+
+        /// <summary>
+        /// 是否支持策略值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MrtbPolicyValueFlag")]
+        public bool? MrtbPolicyValueFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -189,6 +203,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "RouteSelectPolicyFlag", this.RouteSelectPolicyFlag);
             this.SetParamSimple(map, prefix + "DirectConnectAccelerateChannelFlag", this.DirectConnectAccelerateChannelFlag);
             this.SetParamSimple(map, prefix + "Ipv6Flag", this.Ipv6Flag);
+            this.SetParamSimple(map, prefix + "MrtbAggregatePolicyFlag", this.MrtbAggregatePolicyFlag);
+            this.SetParamSimple(map, prefix + "MrtbPolicyValueFlag", this.MrtbPolicyValueFlag);
         }
     }
 }

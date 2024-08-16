@@ -42,6 +42,20 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// as-path操作
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OperateAsPath")]
+        public string OperateAsPath{ get; set; }
+
+        /// <summary>
+        /// as-path操作模式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AsPathOperateMode")]
+        public string AsPathOperateMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +65,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArrayObj(map, prefix + "RouteConditions.", this.RouteConditions);
             this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "OperateAsPath", this.OperateAsPath);
+            this.SetParamSimple(map, prefix + "AsPathOperateMode", this.AsPathOperateMode);
         }
     }
 }

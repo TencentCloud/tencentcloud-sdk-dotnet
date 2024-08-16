@@ -36,6 +36,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Quuids")]
         public string[] Quuids{ get; set; }
 
+        /// <summary>
+        /// 修复方式 0组件更新或者安装补丁,1禁用服务
+        /// </summary>
+        [JsonProperty("FixMethod")]
+        public ulong? FixMethod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         {
             this.SetParamSimple(map, prefix + "VulId", this.VulId);
             this.SetParamArraySimple(map, prefix + "Quuids.", this.Quuids);
+            this.SetParamSimple(map, prefix + "FixMethod", this.FixMethod);
         }
     }
 }

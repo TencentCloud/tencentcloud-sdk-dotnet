@@ -46,14 +46,17 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Codec{ get; set; }
 
         /// <summary>
-        /// 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
+        /// 视频帧率，取值范围：
+        /// 当FpsDenominator的值为空时，范围：[0, 120]，单位：Hz；
+        /// 当FpsDenominator的值不为空时，Fps/FpsDenominator的范围：[0,120]
+        /// 当取值为 0，表示帧率和原始视频保持一致。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }
 
         /// <summary>
-        /// 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+        /// 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
         /// 当取值为 0，表示视频码率和原始视频保持一致。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -136,6 +139,14 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SegmentType")]
         public long? SegmentType{ get; set; }
 
+        /// <summary>
+        /// 帧率分母部分
+        /// 注意：值必须大于0
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FpsDenominator")]
+        public long? FpsDenominator{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -153,6 +164,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Vcrf", this.Vcrf);
             this.SetParamSimple(map, prefix + "ContentAdaptStream", this.ContentAdaptStream);
             this.SetParamSimple(map, prefix + "SegmentType", this.SegmentType);
+            this.SetParamSimple(map, prefix + "FpsDenominator", this.FpsDenominator);
         }
     }
 }

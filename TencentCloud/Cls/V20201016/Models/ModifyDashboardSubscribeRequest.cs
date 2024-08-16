@@ -24,12 +24,47 @@ namespace TencentCloud.Cls.V20201016.Models
     public class ModifyDashboardSubscribeRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 仪表盘订阅id。
+        /// </summary>
+        [JsonProperty("Id")]
+        public ulong? Id{ get; set; }
+
+        /// <summary>
+        /// 仪表盘id。
+        /// </summary>
+        [JsonProperty("DashboardId")]
+        public string DashboardId{ get; set; }
+
+        /// <summary>
+        /// 仪表盘订阅名称。
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// 订阅时间cron表达式，格式为：{秒数} {分钟} {小时} {日期} {月份} {星期}；（有效数据为：{分钟} {小时} {日期} {月份} {星期}）。
+        /// </summary>
+        [JsonProperty("Cron")]
+        public string Cron{ get; set; }
+
+        /// <summary>
+        /// 仪表盘订阅数据。
+        /// </summary>
+        [JsonProperty("SubscribeData")]
+        public DashboardSubscribeData SubscribeData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "DashboardId", this.DashboardId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Cron", this.Cron);
+            this.SetParamObj(map, prefix + "SubscribeData.", this.SubscribeData);
         }
     }
 }

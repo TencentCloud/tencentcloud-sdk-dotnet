@@ -25,13 +25,13 @@ namespace TencentCloud.Facefusion.V20181201.Models
     {
         
         /// <summary>
-        /// MetaData的Key
+        /// MetaData的Key，长度不能超过32。
         /// </summary>
         [JsonProperty("MetaKey")]
         public string MetaKey{ get; set; }
 
         /// <summary>
-        /// MetaData的Value
+        /// MetaData的Value，长度不能超过256。
         /// </summary>
         [JsonProperty("MetaValue")]
         public string MetaValue{ get; set; }

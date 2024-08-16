@@ -89,6 +89,20 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Codecs")]
         public string Codecs{ get; set; }
 
+        /// <summary>
+        /// 帧率分子部分
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FpsNumerator")]
+        public long? FpsNumerator{ get; set; }
+
+        /// <summary>
+        /// 帧率分母部分
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FpsDenominator")]
+        public long? FpsDenominator{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -105,6 +119,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "ColorTransfer", this.ColorTransfer);
             this.SetParamSimple(map, prefix + "HdrType", this.HdrType);
             this.SetParamSimple(map, prefix + "Codecs", this.Codecs);
+            this.SetParamSimple(map, prefix + "FpsNumerator", this.FpsNumerator);
+            this.SetParamSimple(map, prefix + "FpsDenominator", this.FpsDenominator);
         }
     }
 }

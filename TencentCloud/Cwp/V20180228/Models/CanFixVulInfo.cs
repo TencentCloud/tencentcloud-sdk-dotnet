@@ -52,6 +52,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("FixTag")]
         public string[] FixTag{ get; set; }
 
+        /// <summary>
+        /// 漏洞分类1 web cms漏洞,2应用漏洞,4linux软件漏洞,5windows系统漏洞
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VulCategory")]
+        public ulong? VulCategory{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "VulName", this.VulName);
             this.SetParamArrayObj(map, prefix + "HostList.", this.HostList);
             this.SetParamArraySimple(map, prefix + "FixTag.", this.FixTag);
+            this.SetParamSimple(map, prefix + "VulCategory", this.VulCategory);
         }
     }
 }
