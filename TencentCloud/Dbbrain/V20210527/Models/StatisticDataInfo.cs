@@ -15,35 +15,42 @@
  * under the License.
  */
 
-namespace TencentCloud.Tiia.V20190529.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class LemmaInfo : AbstractModel
+    public class StatisticDataInfo : AbstractModel
     {
         
         /// <summary>
-        /// 词条
+        /// 统计维度的值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("LemmaTitle")]
-        public string LemmaTitle{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// 词条描述
+        /// 平均时间。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("LemmaAbstract")]
-        public string LemmaAbstract{ get; set; }
+        [JsonProperty("TimeAvg")]
+        public float? TimeAvg{ get; set; }
 
         /// <summary>
-        /// 标签
+        /// 总时间。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Tag")]
-        public string Tag{ get; set; }
+        [JsonProperty("TimeSum")]
+        public float? TimeSum{ get; set; }
+
+        /// <summary>
+        /// 数量。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Count")]
+        public long? Count{ get; set; }
 
 
         /// <summary>
@@ -51,9 +58,10 @@ namespace TencentCloud.Tiia.V20190529.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "LemmaTitle", this.LemmaTitle);
-            this.SetParamSimple(map, prefix + "LemmaAbstract", this.LemmaAbstract);
-            this.SetParamSimple(map, prefix + "Tag", this.Tag);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "TimeAvg", this.TimeAvg);
+            this.SetParamSimple(map, prefix + "TimeSum", this.TimeSum);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
         }
     }
 }

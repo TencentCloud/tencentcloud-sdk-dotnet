@@ -31,6 +31,13 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public MySqlProcess[] ProcessList{ get; set; }
 
         /// <summary>
+        /// sql会话统计信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Statistics")]
+        public StatisticInfo[] Statistics{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +50,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "ProcessList.", this.ProcessList);
+            this.SetParamArrayObj(map, prefix + "Statistics.", this.Statistics);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

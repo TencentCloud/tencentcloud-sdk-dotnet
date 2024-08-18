@@ -28,7 +28,7 @@ namespace TencentCloud.Cdwdoris.V20211228
 
        private const string endpoint = "cdwdoris.tencentcloudapi.com";
        private const string version = "2021-12-28";
-       private const string sdkVersion = "SDK_NET_3.0.1070";
+       private const string sdkVersion = "SDK_NET_3.0.1071";
 
         /// <summary>
         /// Client constructor.
@@ -848,6 +848,27 @@ namespace TencentCloud.Cdwdoris.V20211228
         public DescribeSqlApisResponse DescribeSqlApisSync(DescribeSqlApisRequest req)
         {
             return InternalRequestAsync<DescribeSqlApisResponse>(req, "DescribeSqlApis")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取指定数据源和库下的表列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTableListRequest"/></param>
+        /// <returns><see cref="DescribeTableListResponse"/></returns>
+        public Task<DescribeTableListResponse> DescribeTableList(DescribeTableListRequest req)
+        {
+            return InternalRequestAsync<DescribeTableListResponse>(req, "DescribeTableList");
+        }
+
+        /// <summary>
+        /// 获取指定数据源和库下的表列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTableListRequest"/></param>
+        /// <returns><see cref="DescribeTableListResponse"/></returns>
+        public DescribeTableListResponse DescribeTableListSync(DescribeTableListRequest req)
+        {
+            return InternalRequestAsync<DescribeTableListResponse>(req, "DescribeTableList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

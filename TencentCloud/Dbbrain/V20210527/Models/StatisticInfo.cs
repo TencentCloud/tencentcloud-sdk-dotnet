@@ -15,33 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Tiia.V20190529.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RegionDetected : AbstractModel
+    public class StatisticInfo : AbstractModel
     {
         
         /// <summary>
-        /// 商品的品类预测结果。 
-        /// 包含：鞋、图书音像、箱包、美妆个护、服饰、家电数码、玩具乐器、食品饮料、珠宝、家居家装、药品、酒水、绿植园艺、其他商品、非商品等。
+        /// 统计分析的维度。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Category")]
-        public string Category{ get; set; }
+        [JsonProperty("Dimension")]
+        public string Dimension{ get; set; }
 
         /// <summary>
-        /// 商品品类预测的置信度
+        /// 统计分析的维度下的统计数据详情。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("CategoryScore")]
-        public float? CategoryScore{ get; set; }
-
-        /// <summary>
-        /// 检测到的主体在图片中的坐标，表示为矩形框的四个顶点坐标
-        /// </summary>
-        [JsonProperty("Location")]
-        public Location Location{ get; set; }
+        [JsonProperty("Data")]
+        public StatisticDataInfo[] Data{ get; set; }
 
 
         /// <summary>
@@ -49,9 +44,8 @@ namespace TencentCloud.Tiia.V20190529.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Category", this.Category);
-            this.SetParamSimple(map, prefix + "CategoryScore", this.CategoryScore);
-            this.SetParamObj(map, prefix + "Location.", this.Location);
+            this.SetParamSimple(map, prefix + "Dimension", this.Dimension);
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
         }
     }
 }

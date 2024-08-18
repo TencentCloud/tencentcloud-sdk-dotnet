@@ -43,6 +43,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ErrorMessage")]
         public string ErrorMessage{ get; set; }
 
+        /// <summary>
+        /// 企业批量注册的唯一 Id， 此 Id 可以用在[创建企业批量认证链接-单链接](https://qian.tencent.com/developers/companyApis/organizations/CreateBatchOrganizationAuthorizationUrl)。
+        /// </summary>
+        [JsonProperty("SubTaskId")]
+        public string SubTaskId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Ess.V20201111.Models
         {
             this.SetParamSimple(map, prefix + "AuthUrl", this.AuthUrl);
             this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
+            this.SetParamSimple(map, prefix + "SubTaskId", this.SubTaskId);
         }
     }
 }

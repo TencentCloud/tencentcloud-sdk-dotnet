@@ -90,6 +90,12 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
+        /// <summary>
+        /// 会话统计的维度信息,可以多个维度。
+        /// </summary>
+        [JsonProperty("StatDimensions")]
+        public StatDimension[] StatDimensions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "Info", this.Info);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamArrayObj(map, prefix + "StatDimensions.", this.StatDimensions);
         }
     }
 }

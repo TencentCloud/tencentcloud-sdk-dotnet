@@ -31,7 +31,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 账号权限变更信息
+        /// 账号权限变更信息。参数DBPrivileges和AccAllDB只能二选一
         /// </summary>
         [JsonProperty("DBPrivileges")]
         public DBPrivilegeModifyInfo[] DBPrivileges{ get; set; }
@@ -48,6 +48,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("AccountType")]
         public string AccountType{ get; set; }
 
+        /// <summary>
+        /// 全量修改指定账号下的所有DB权限，只支持特殊权限账号和普通权限账号。参数DBPrivileges和AccAllDB只能二选一
+        /// </summary>
+        [JsonProperty("AccAllDB")]
+        public SelectAllDB AccAllDB{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamArrayObj(map, prefix + "DBPrivileges.", this.DBPrivileges);
             this.SetParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
             this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
+            this.SetParamObj(map, prefix + "AccAllDB.", this.AccAllDB);
         }
     }
 }

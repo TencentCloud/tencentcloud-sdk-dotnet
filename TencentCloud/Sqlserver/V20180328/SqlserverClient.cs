@@ -28,7 +28,7 @@ namespace TencentCloud.Sqlserver.V20180328
 
        private const string endpoint = "sqlserver.tencentcloudapi.com";
        private const string version = "2018-03-28";
-       private const string sdkVersion = "SDK_NET_3.0.1070";
+       private const string sdkVersion = "SDK_NET_3.0.1071";
 
         /// <summary>
         /// Client constructor.
@@ -2507,6 +2507,27 @@ namespace TencentCloud.Sqlserver.V20180328
         public ModifyDatabaseMdfResponse ModifyDatabaseMdfSync(ModifyDatabaseMdfRequest req)
         {
             return InternalRequestAsync<ModifyDatabaseMdfResponse>(req, "ModifyDatabaseMdf")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDatabasePrivilege）用于修改实例数据库权限。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDatabasePrivilegeRequest"/></param>
+        /// <returns><see cref="ModifyDatabasePrivilegeResponse"/></returns>
+        public Task<ModifyDatabasePrivilegeResponse> ModifyDatabasePrivilege(ModifyDatabasePrivilegeRequest req)
+        {
+            return InternalRequestAsync<ModifyDatabasePrivilegeResponse>(req, "ModifyDatabasePrivilege");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDatabasePrivilege）用于修改实例数据库权限。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDatabasePrivilegeRequest"/></param>
+        /// <returns><see cref="ModifyDatabasePrivilegeResponse"/></returns>
+        public ModifyDatabasePrivilegeResponse ModifyDatabasePrivilegeSync(ModifyDatabasePrivilegeRequest req)
+        {
+            return InternalRequestAsync<ModifyDatabasePrivilegeResponse>(req, "ModifyDatabasePrivilege")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

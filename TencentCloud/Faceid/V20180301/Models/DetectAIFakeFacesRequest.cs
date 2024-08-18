@@ -49,6 +49,18 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("FaceInputType")]
         public long? FaceInputType{ get; set; }
 
+        /// <summary>
+        /// 是否需要对请求信息进行全包体加密； 支持的加密算法:AES-256-CBC、SM4-GCM； 有加密需求的用户可使用此参数，详情请点击左侧链接。
+        /// </summary>
+        [JsonProperty("Encryption")]
+        public Encryption Encryption{ get; set; }
+
+        /// <summary>
+        /// 加密后的密文； 加密前的数据格式如下:{"FaceInput":"AAAAA","FaceInputType":1}
+        /// </summary>
+        [JsonProperty("EncryptedBody")]
+        public string EncryptedBody{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -57,6 +69,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         {
             this.SetParamSimple(map, prefix + "FaceInput", this.FaceInput);
             this.SetParamSimple(map, prefix + "FaceInputType", this.FaceInputType);
+            this.SetParamObj(map, prefix + "Encryption.", this.Encryption);
+            this.SetParamSimple(map, prefix + "EncryptedBody", this.EncryptedBody);
         }
     }
 }

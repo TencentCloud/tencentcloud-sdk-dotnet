@@ -15,34 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tiia.V20190529.Models
+namespace TencentCloud.Sqlserver.V20180328.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DetectProductBetaRequest : AbstractModel
+    public class DataBasePrivilegeModifyInfo : AbstractModel
     {
         
         /// <summary>
-        /// 图片限制：内测版仅支持jpg、jpeg，图片大小不超过1M，分辨率在25万到100万之间。 
-        /// 建议先对图片进行压缩，以便提升处理速度。
+        /// 数据库名称
         /// </summary>
-        [JsonProperty("ImageUrl")]
-        public string ImageUrl{ get; set; }
+        [JsonProperty("DataBaseName")]
+        public string DataBaseName{ get; set; }
 
         /// <summary>
-        /// 图片经过base64编码的内容。最大不超过1M，分辨率在25万到100万之间。 
-        /// 与ImageUrl同时存在时优先使用ImageUrl字段。
+        /// 数据库权限变更信息
         /// </summary>
-        [JsonProperty("ImageBase64")]
-        public string ImageBase64{ get; set; }
-
-        /// <summary>
-        /// 是否需要百科信息 1：是，0: 否，默认是0
-        /// </summary>
-        [JsonProperty("NeedLemma")]
-        public long? NeedLemma{ get; set; }
+        [JsonProperty("AccountPrivileges")]
+        public AccountPrivilege[] AccountPrivileges{ get; set; }
 
 
         /// <summary>
@@ -50,9 +42,8 @@ namespace TencentCloud.Tiia.V20190529.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
-            this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
-            this.SetParamSimple(map, prefix + "NeedLemma", this.NeedLemma);
+            this.SetParamSimple(map, prefix + "DataBaseName", this.DataBaseName);
+            this.SetParamArrayObj(map, prefix + "AccountPrivileges.", this.AccountPrivileges);
         }
     }
 }

@@ -33,6 +33,19 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("TableResultType")]
         public string TableResultType{ get; set; }
 
+        /// <summary>
+        /// 智能文档解析返回结果的格式
+        /// 0：只返回全文MD；
+        /// 1：只返回每一页的OCR原始Json；
+        /// 2：只返回每一页的MD，
+        /// 3：返回全文MD + 每一页的OCR原始Json；
+        /// 4：返回全文MD + 每一页的MD，
+        /// 默认值为3（返回全文MD + 每一页的OCR原始Json）
+        /// 
+        /// </summary>
+        [JsonProperty("ResultType")]
+        public string ResultType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -40,6 +53,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TableResultType", this.TableResultType);
+            this.SetParamSimple(map, prefix + "ResultType", this.ResultType);
         }
     }
 }

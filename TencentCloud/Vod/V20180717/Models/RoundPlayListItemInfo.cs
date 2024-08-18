@@ -40,6 +40,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string AudioVideoType{ get; set; }
 
         /// <summary>
+        /// 播放节目的 ID，由系统分配。
+        /// </summary>
+        [JsonProperty("ItemId")]
+        public string ItemId{ get; set; }
+
+        /// <summary>
         /// 指定播放的转码模版，当 AudioVideoType 为 Transcode 时必须指定。
         /// </summary>
         [JsonProperty("Definition")]
@@ -53,6 +59,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "AudioVideoType", this.AudioVideoType);
+            this.SetParamSimple(map, prefix + "ItemId", this.ItemId);
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
         }
     }

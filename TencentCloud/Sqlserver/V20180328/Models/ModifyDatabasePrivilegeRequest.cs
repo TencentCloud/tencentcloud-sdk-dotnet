@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tiia.V20190529.Models
+namespace TencentCloud.Sqlserver.V20180328.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Location : AbstractModel
+    public class ModifyDatabasePrivilegeRequest : AbstractModel
     {
         
         /// <summary>
-        /// 位置矩形框的左上角横坐标
+        /// 数据库实例ID，形如mssql-njj2mtpl
         /// </summary>
-        [JsonProperty("XMin")]
-        public long? XMin{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 位置矩形框的左上角纵坐标
+        /// 数据库权限变更信息
         /// </summary>
-        [JsonProperty("YMin")]
-        public long? YMin{ get; set; }
-
-        /// <summary>
-        /// 位置矩形框的右下角横坐标
-        /// </summary>
-        [JsonProperty("XMax")]
-        public long? XMax{ get; set; }
-
-        /// <summary>
-        /// 位置矩形框的右下角纵坐标
-        /// </summary>
-        [JsonProperty("YMax")]
-        public long? YMax{ get; set; }
+        [JsonProperty("DataBaseSet")]
+        public DataBasePrivilegeModifyInfo[] DataBaseSet{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Tiia.V20190529.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "XMin", this.XMin);
-            this.SetParamSimple(map, prefix + "YMin", this.YMin);
-            this.SetParamSimple(map, prefix + "XMax", this.XMax);
-            this.SetParamSimple(map, prefix + "YMax", this.YMax);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArrayObj(map, prefix + "DataBaseSet.", this.DataBaseSet);
         }
     }
 }
