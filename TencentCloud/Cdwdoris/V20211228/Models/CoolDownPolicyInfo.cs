@@ -21,26 +21,29 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ResourceNodeDiskSpec : AbstractModel
+    public class CoolDownPolicyInfo : AbstractModel
     {
         
         /// <summary>
-        /// 节点磁盘类型，例如“CLOUD_SSD”\"CLOUD_PREMIUM"
+        /// 策略名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("DiskType")]
-        public string DiskType{ get; set; }
+        [JsonProperty("PolicyName")]
+        public string PolicyName{ get; set; }
 
         /// <summary>
-        /// 磁盘容量，单位G
+        /// cooldown_ttl
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("DiskSize")]
-        public long? DiskSize{ get; set; }
+        [JsonProperty("CooldownDatetime")]
+        public string CooldownDatetime{ get; set; }
 
         /// <summary>
-        /// 磁盘总数
+        /// cooldown_datetime
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("DiskCount")]
-        public long? DiskCount{ get; set; }
+        [JsonProperty("CooldownTtl")]
+        public string CooldownTtl{ get; set; }
 
 
         /// <summary>
@@ -48,9 +51,9 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
-            this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
-            this.SetParamSimple(map, prefix + "DiskCount", this.DiskCount);
+            this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
+            this.SetParamSimple(map, prefix + "CooldownDatetime", this.CooldownDatetime);
+            this.SetParamSimple(map, prefix + "CooldownTtl", this.CooldownTtl);
         }
     }
 }

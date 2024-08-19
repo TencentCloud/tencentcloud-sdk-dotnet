@@ -15,45 +15,46 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdwdoris.V20211228.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDatabaseAuditResourceResponse : AbstractModel
+    public class RoundPlayFilePlayInfo : AbstractModel
     {
         
         /// <summary>
-        /// 数据库列表
+        /// 播单节目的 ID，由系统分配。
         /// </summary>
-        [JsonProperty("Databases")]
-        public string[] Databases{ get; set; }
+        [JsonProperty("ItemId")]
+        public string ItemId{ get; set; }
 
         /// <summary>
-        /// 用户列表
+        /// 媒体文件标识。
         /// </summary>
-        [JsonProperty("Users")]
-        public string[] Users{ get; set; }
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
 
         /// <summary>
-        /// sql类型列表
+        /// 启播时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
         /// </summary>
-        [JsonProperty("SqlTypes")]
-        public string[] SqlTypes{ get; set; }
+        [JsonProperty("StartPlayTime")]
+        public string StartPlayTime{ get; set; }
 
         /// <summary>
-        /// catalog字段
+        /// 播放时长，单位为秒。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Catalogs")]
-        public string[] Catalogs{ get; set; }
+        [JsonProperty("Duration")]
+        public float? Duration{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 播放进度，单位为妙。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Progress")]
+        public float? Progress{ get; set; }
 
 
         /// <summary>
@@ -61,11 +62,11 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Databases.", this.Databases);
-            this.SetParamArraySimple(map, prefix + "Users.", this.Users);
-            this.SetParamArraySimple(map, prefix + "SqlTypes.", this.SqlTypes);
-            this.SetParamArraySimple(map, prefix + "Catalogs.", this.Catalogs);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ItemId", this.ItemId);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamSimple(map, prefix + "StartPlayTime", this.StartPlayTime);
+            this.SetParamSimple(map, prefix + "Duration", this.Duration);
+            this.SetParamSimple(map, prefix + "Progress", this.Progress);
         }
     }
 }

@@ -25,8 +25,10 @@ namespace TencentCloud.Hunyuan.V20230901.Models
     {
         
         /// <summary>
-        /// 结束标志位，可能为 stop 或 sensitive。
-        /// stop 表示输出正常结束，sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。
+        /// 结束标志位，可能为 stop、 sensitive或者tool_calls。
+        /// stop 表示输出正常结束。
+        /// sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。
+        /// tool_calls 标识函数调用。
         /// </summary>
         [JsonProperty("FinishReason")]
         public string FinishReason{ get; set; }

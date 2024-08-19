@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1071";
+       private const string sdkVersion = "SDK_NET_3.0.1072";
 
         /// <summary>
         /// Client constructor.
@@ -1600,6 +1600,27 @@ namespace TencentCloud.Trtc.V20190722
         public UpdatePublishCdnStreamResponse UpdatePublishCdnStreamSync(UpdatePublishCdnStreamRequest req)
         {
             return InternalRequestAsync<UpdatePublishCdnStreamResponse>(req, "UpdatePublishCdnStream")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新输入在线媒体流任务的StreamUrl
+        /// </summary>
+        /// <param name="req"><see cref="UpdateStreamIngestRequest"/></param>
+        /// <returns><see cref="UpdateStreamIngestResponse"/></returns>
+        public Task<UpdateStreamIngestResponse> UpdateStreamIngest(UpdateStreamIngestRequest req)
+        {
+            return InternalRequestAsync<UpdateStreamIngestResponse>(req, "UpdateStreamIngest");
+        }
+
+        /// <summary>
+        /// 更新输入在线媒体流任务的StreamUrl
+        /// </summary>
+        /// <param name="req"><see cref="UpdateStreamIngestRequest"/></param>
+        /// <returns><see cref="UpdateStreamIngestResponse"/></returns>
+        public UpdateStreamIngestResponse UpdateStreamIngestSync(UpdateStreamIngestRequest req)
+        {
+            return InternalRequestAsync<UpdateStreamIngestResponse>(req, "UpdateStreamIngest")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -103,6 +103,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ComputeResourceId")]
         public string ComputeResourceId{ get; set; }
 
+        /// <summary>
+        /// 扩容资源类型
+        /// </summary>
+        [JsonProperty("HardwareResourceType")]
+        public string HardwareResourceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "MasterCount", this.MasterCount);
             this.SetParamSimple(map, prefix + "ResourceBaseType", this.ResourceBaseType);
             this.SetParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
+            this.SetParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
         }
     }
 }

@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdwdoris.V20211228.Models
+namespace TencentCloud.Trtc.V20190722.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDmsSqlHistoryResponse : AbstractModel
+    public class UpdateStreamIngestRequest : AbstractModel
     {
         
         /// <summary>
-        /// 集群所有的查询节点
+        /// TRTC的SDKAppId，和任务的房间所对应的SDKAppId相同
         /// </summary>
-        [JsonProperty("QueryNodeList")]
-        public string[] QueryNodeList{ get; set; }
+        [JsonProperty("SdkAppId")]
+        public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 集群所有的查询状态
+        /// 任务的唯一Id，在启动任务成功后会返回。
         /// </summary>
-        [JsonProperty("QueryStatusList")]
-        public string[] QueryStatusList{ get; set; }
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 源流URL【必填】。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("StreamUrl")]
+        public string StreamUrl{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "QueryNodeList.", this.QueryNodeList);
-            this.SetParamArraySimple(map, prefix + "QueryStatusList.", this.QueryStatusList);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "StreamUrl", this.StreamUrl);
         }
     }
 }

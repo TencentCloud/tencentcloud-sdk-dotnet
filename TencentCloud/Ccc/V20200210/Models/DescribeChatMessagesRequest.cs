@@ -25,17 +25,17 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
+        /// 应用 ID，可以查看 https://console.cloud.tencent.com/ccc
+        /// </summary>
+        [JsonProperty("SdkAppId")]
+        public long? SdkAppId{ get; set; }
+
+        /// <summary>
         /// 实例 ID（废弃）
         /// </summary>
         [JsonProperty("InstanceId")]
         [System.Obsolete]
         public long? InstanceId{ get; set; }
-
-        /// <summary>
-        /// 应用 ID，可以查看 https://console.cloud.tencent.com/ccc
-        /// </summary>
-        [JsonProperty("SdkAppId")]
-        public long? SdkAppId{ get; set; }
 
         /// <summary>
         /// 服务记录ID（废弃）
@@ -74,8 +74,8 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "CdrId", this.CdrId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);

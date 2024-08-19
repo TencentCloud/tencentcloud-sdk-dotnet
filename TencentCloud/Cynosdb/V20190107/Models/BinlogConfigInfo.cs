@@ -15,39 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdwdoris.V20211228.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyMetricFileStructNew : AbstractModel
+    public class BinlogConfigInfo : AbstractModel
     {
         
         /// <summary>
-        /// 集群类型
+        /// binlog保留时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("InstanceType")]
-        public string InstanceType{ get; set; }
+        [JsonProperty("BinlogSaveDays")]
+        public long? BinlogSaveDays{ get; set; }
 
         /// <summary>
-        /// 指标类型
+        /// binlog异地地域备份是否开启
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("MetricType")]
-        public string MetricType{ get; set; }
+        [JsonProperty("BinlogCrossRegionsEnable")]
+        public string BinlogCrossRegionsEnable{ get; set; }
 
         /// <summary>
-        /// 指标英文名
+        /// binlog异地地域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// 1：关注
-        /// 0：取消关注
-        /// </summary>
-        [JsonProperty("IfAttention")]
-        public long? IfAttention{ get; set; }
+        [JsonProperty("BinlogCrossRegions")]
+        public string[] BinlogCrossRegions{ get; set; }
 
 
         /// <summary>
@@ -55,10 +51,9 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
-            this.SetParamSimple(map, prefix + "MetricType", this.MetricType);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "IfAttention", this.IfAttention);
+            this.SetParamSimple(map, prefix + "BinlogSaveDays", this.BinlogSaveDays);
+            this.SetParamSimple(map, prefix + "BinlogCrossRegionsEnable", this.BinlogCrossRegionsEnable);
+            this.SetParamArraySimple(map, prefix + "BinlogCrossRegions.", this.BinlogCrossRegions);
         }
     }
 }

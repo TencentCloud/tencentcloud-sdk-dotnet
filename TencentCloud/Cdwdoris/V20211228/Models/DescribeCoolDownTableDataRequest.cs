@@ -21,15 +21,9 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDorisMetricFilesRequest : AbstractModel
+    public class DescribeCoolDownTableDataRequest : AbstractModel
     {
         
-        /// <summary>
-        /// 接口类型
-        /// </summary>
-        [JsonProperty("ApiType")]
-        public string ApiType{ get; set; }
-
         /// <summary>
         /// 集群id
         /// </summary>
@@ -37,22 +31,10 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 展示监控指标入参
+        /// 数据库名称
         /// </summary>
-        [JsonProperty("DescribeMetricsFileReq")]
-        public DescribeMetricsFileReq DescribeMetricsFileReq{ get; set; }
-
-        /// <summary>
-        /// 点关注功能入参
-        /// </summary>
-        [JsonProperty("ModifyMetricFileReq")]
-        public ModifyMetricFileStruct ModifyMetricFileReq{ get; set; }
-
-        /// <summary>
-        /// 监控指标关注功能入参
-        /// </summary>
-        [JsonProperty("ModifyAttentionMetricFileReq")]
-        public ModifyMetricFileStructNew ModifyAttentionMetricFileReq{ get; set; }
+        [JsonProperty("DatabaseName")]
+        public string DatabaseName{ get; set; }
 
 
         /// <summary>
@@ -60,11 +42,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ApiType", this.ApiType);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamObj(map, prefix + "DescribeMetricsFileReq.", this.DescribeMetricsFileReq);
-            this.SetParamObj(map, prefix + "ModifyMetricFileReq.", this.ModifyMetricFileReq);
-            this.SetParamObj(map, prefix + "ModifyAttentionMetricFileReq.", this.ModifyAttentionMetricFileReq);
+            this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
         }
     }
 }

@@ -21,29 +21,50 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OpenBackUpRequest : AbstractModel
+    public class OpenCoolDownPolicyRequest : AbstractModel
     {
         
         /// <summary>
-        /// 集群id
+        /// 实例id
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 取值：
-        /// open:打开
-        /// close:关闭
-        /// updateBucket:变更桶名
+        /// db名称
+        /// </summary>
+        [JsonProperty("DatabaseName")]
+        public string DatabaseName{ get; set; }
+
+        /// <summary>
+        /// table名称
+        /// </summary>
+        [JsonProperty("TableName")]
+        public string TableName{ get; set; }
+
+        /// <summary>
+        /// 操作类型
         /// </summary>
         [JsonProperty("OperationType")]
         public string OperationType{ get; set; }
 
         /// <summary>
-        /// 桶名字
+        /// 逗号分隔 需要带上db的名字 db1.tb1,db1.tb2,db2.tb1
         /// </summary>
-        [JsonProperty("CosBucketName")]
-        public string CosBucketName{ get; set; }
+        [JsonProperty("BatchOpenCoolDownTables")]
+        public string BatchOpenCoolDownTables{ get; set; }
+
+        /// <summary>
+        /// 绑定的时候用 策略名称
+        /// </summary>
+        [JsonProperty("PolicyName")]
+        public string PolicyName{ get; set; }
+
+        /// <summary>
+        /// 逗号分隔 p1,p2,p3
+        /// </summary>
+        [JsonProperty("BatchOpenCoolDownPartitions")]
+        public string BatchOpenCoolDownPartitions{ get; set; }
 
 
         /// <summary>
@@ -52,8 +73,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
+            this.SetParamSimple(map, prefix + "TableName", this.TableName);
             this.SetParamSimple(map, prefix + "OperationType", this.OperationType);
-            this.SetParamSimple(map, prefix + "CosBucketName", this.CosBucketName);
+            this.SetParamSimple(map, prefix + "BatchOpenCoolDownTables", this.BatchOpenCoolDownTables);
+            this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
+            this.SetParamSimple(map, prefix + "BatchOpenCoolDownPartitions", this.BatchOpenCoolDownPartitions);
         }
     }
 }

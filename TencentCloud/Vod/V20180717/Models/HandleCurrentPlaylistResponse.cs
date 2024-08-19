@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdwdoris.V20211228.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDatabaseAuditResourceRequest : AbstractModel
+    public class HandleCurrentPlaylistResponse : AbstractModel
     {
         
         /// <summary>
-        /// 实例ID
+        /// 操作成功的节目列表。
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("RoundPlaylist")]
+        public RoundPlayListItemInfo[] RoundPlaylist{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArrayObj(map, prefix + "RoundPlaylist.", this.RoundPlaylist);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

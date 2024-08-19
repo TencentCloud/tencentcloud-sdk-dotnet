@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1071";
+       private const string sdkVersion = "SDK_NET_3.0.1072";
 
         /// <summary>
         /// Client constructor.
@@ -869,6 +869,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeBackupListResponse DescribeBackupListSync(DescribeBackupListRequest req)
         {
             return InternalRequestAsync<DescribeBackupListResponse>(req, "DescribeBackupList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（DescribeBinlogConfig）用于查询binlog配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBinlogConfigRequest"/></param>
+        /// <returns><see cref="DescribeBinlogConfigResponse"/></returns>
+        public Task<DescribeBinlogConfigResponse> DescribeBinlogConfig(DescribeBinlogConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeBinlogConfigResponse>(req, "DescribeBinlogConfig");
+        }
+
+        /// <summary>
+        /// 该接口（DescribeBinlogConfig）用于查询binlog配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBinlogConfigRequest"/></param>
+        /// <returns><see cref="DescribeBinlogConfigResponse"/></returns>
+        public DescribeBinlogConfigResponse DescribeBinlogConfigSync(DescribeBinlogConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeBinlogConfigResponse>(req, "DescribeBinlogConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2028,6 +2049,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public ModifyBackupNameResponse ModifyBackupNameSync(ModifyBackupNameRequest req)
         {
             return InternalRequestAsync<ModifyBackupNameResponse>(req, "ModifyBackupName")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（ModifyBinlogConfig）用于修改Binlog配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBinlogConfigRequest"/></param>
+        /// <returns><see cref="ModifyBinlogConfigResponse"/></returns>
+        public Task<ModifyBinlogConfigResponse> ModifyBinlogConfig(ModifyBinlogConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyBinlogConfigResponse>(req, "ModifyBinlogConfig");
+        }
+
+        /// <summary>
+        /// 该接口（ModifyBinlogConfig）用于修改Binlog配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBinlogConfigRequest"/></param>
+        /// <returns><see cref="ModifyBinlogConfigResponse"/></returns>
+        public ModifyBinlogConfigResponse ModifyBinlogConfigSync(ModifyBinlogConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyBinlogConfigResponse>(req, "ModifyBinlogConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

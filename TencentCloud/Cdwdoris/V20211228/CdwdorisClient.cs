@@ -28,7 +28,7 @@ namespace TencentCloud.Cdwdoris.V20211228
 
        private const string endpoint = "cdwdoris.tencentcloudapi.com";
        private const string version = "2021-12-28";
-       private const string sdkVersion = "SDK_NET_3.0.1071";
+       private const string sdkVersion = "SDK_NET_3.0.1072";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,27 @@ namespace TencentCloud.Cdwdoris.V20211228
         }
 
         /// <summary>
+        /// 查询冷热分层生效变量和配置是否正确
+        /// </summary>
+        /// <param name="req"><see cref="CheckCoolDownWorkingVariableConfigCorrectRequest"/></param>
+        /// <returns><see cref="CheckCoolDownWorkingVariableConfigCorrectResponse"/></returns>
+        public Task<CheckCoolDownWorkingVariableConfigCorrectResponse> CheckCoolDownWorkingVariableConfigCorrect(CheckCoolDownWorkingVariableConfigCorrectRequest req)
+        {
+            return InternalRequestAsync<CheckCoolDownWorkingVariableConfigCorrectResponse>(req, "CheckCoolDownWorkingVariableConfigCorrect");
+        }
+
+        /// <summary>
+        /// 查询冷热分层生效变量和配置是否正确
+        /// </summary>
+        /// <param name="req"><see cref="CheckCoolDownWorkingVariableConfigCorrectRequest"/></param>
+        /// <returns><see cref="CheckCoolDownWorkingVariableConfigCorrectResponse"/></returns>
+        public CheckCoolDownWorkingVariableConfigCorrectResponse CheckCoolDownWorkingVariableConfigCorrectSync(CheckCoolDownWorkingVariableConfigCorrectRequest req)
+        {
+            return InternalRequestAsync<CheckCoolDownWorkingVariableConfigCorrectResponse>(req, "CheckCoolDownWorkingVariableConfigCorrect")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建或者修改备份策略
         /// </summary>
         /// <param name="req"><see cref="CreateBackUpScheduleRequest"/></param>
@@ -92,6 +113,27 @@ namespace TencentCloud.Cdwdoris.V20211228
         public CreateBackUpScheduleResponse CreateBackUpScheduleSync(CreateBackUpScheduleRequest req)
         {
             return InternalRequestAsync<CreateBackUpScheduleResponse>(req, "CreateBackUpSchedule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建冷热分层策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateCoolDownPolicyRequest"/></param>
+        /// <returns><see cref="CreateCoolDownPolicyResponse"/></returns>
+        public Task<CreateCoolDownPolicyResponse> CreateCoolDownPolicy(CreateCoolDownPolicyRequest req)
+        {
+            return InternalRequestAsync<CreateCoolDownPolicyResponse>(req, "CreateCoolDownPolicy");
+        }
+
+        /// <summary>
+        /// 创建冷热分层策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateCoolDownPolicyRequest"/></param>
+        /// <returns><see cref="CreateCoolDownPolicyResponse"/></returns>
+        public CreateCoolDownPolicyResponse CreateCoolDownPolicySync(CreateCoolDownPolicyRequest req)
+        {
+            return InternalRequestAsync<CreateCoolDownPolicyResponse>(req, "CreateCoolDownPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -348,6 +390,69 @@ namespace TencentCloud.Cdwdoris.V20211228
         }
 
         /// <summary>
+        /// 查询冷热分层backend节点信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCoolDownBackendsRequest"/></param>
+        /// <returns><see cref="DescribeCoolDownBackendsResponse"/></returns>
+        public Task<DescribeCoolDownBackendsResponse> DescribeCoolDownBackends(DescribeCoolDownBackendsRequest req)
+        {
+            return InternalRequestAsync<DescribeCoolDownBackendsResponse>(req, "DescribeCoolDownBackends");
+        }
+
+        /// <summary>
+        /// 查询冷热分层backend节点信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCoolDownBackendsRequest"/></param>
+        /// <returns><see cref="DescribeCoolDownBackendsResponse"/></returns>
+        public DescribeCoolDownBackendsResponse DescribeCoolDownBackendsSync(DescribeCoolDownBackendsRequest req)
+        {
+            return InternalRequestAsync<DescribeCoolDownBackendsResponse>(req, "DescribeCoolDownBackends")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询冷热分层策略列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCoolDownPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeCoolDownPoliciesResponse"/></returns>
+        public Task<DescribeCoolDownPoliciesResponse> DescribeCoolDownPolicies(DescribeCoolDownPoliciesRequest req)
+        {
+            return InternalRequestAsync<DescribeCoolDownPoliciesResponse>(req, "DescribeCoolDownPolicies");
+        }
+
+        /// <summary>
+        /// 查询冷热分层策略列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCoolDownPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeCoolDownPoliciesResponse"/></returns>
+        public DescribeCoolDownPoliciesResponse DescribeCoolDownPoliciesSync(DescribeCoolDownPoliciesRequest req)
+        {
+            return InternalRequestAsync<DescribeCoolDownPoliciesResponse>(req, "DescribeCoolDownPolicies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询冷热分层Table数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCoolDownTableDataRequest"/></param>
+        /// <returns><see cref="DescribeCoolDownTableDataResponse"/></returns>
+        public Task<DescribeCoolDownTableDataResponse> DescribeCoolDownTableData(DescribeCoolDownTableDataRequest req)
+        {
+            return InternalRequestAsync<DescribeCoolDownTableDataResponse>(req, "DescribeCoolDownTableData");
+        }
+
+        /// <summary>
+        /// 查询冷热分层Table数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCoolDownTableDataRequest"/></param>
+        /// <returns><see cref="DescribeCoolDownTableDataResponse"/></returns>
+        public DescribeCoolDownTableDataResponse DescribeCoolDownTableDataSync(DescribeCoolDownTableDataRequest req)
+        {
+            return InternalRequestAsync<DescribeCoolDownTableDataResponse>(req, "DescribeCoolDownTableData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 下载数据库审计日志
         /// </summary>
         /// <param name="req"><see cref="DescribeDatabaseAuditDownloadRequest"/></param>
@@ -386,132 +491,6 @@ namespace TencentCloud.Cdwdoris.V20211228
         public DescribeDatabaseAuditRecordsResponse DescribeDatabaseAuditRecordsSync(DescribeDatabaseAuditRecordsRequest req)
         {
             return InternalRequestAsync<DescribeDatabaseAuditRecordsResponse>(req, "DescribeDatabaseAuditRecords")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 数据库审计数据库、用户等
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDatabaseAuditResourceRequest"/></param>
-        /// <returns><see cref="DescribeDatabaseAuditResourceResponse"/></returns>
-        public Task<DescribeDatabaseAuditResourceResponse> DescribeDatabaseAuditResource(DescribeDatabaseAuditResourceRequest req)
-        {
-            return InternalRequestAsync<DescribeDatabaseAuditResourceResponse>(req, "DescribeDatabaseAuditResource");
-        }
-
-        /// <summary>
-        /// 数据库审计数据库、用户等
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDatabaseAuditResourceRequest"/></param>
-        /// <returns><see cref="DescribeDatabaseAuditResourceResponse"/></returns>
-        public DescribeDatabaseAuditResourceResponse DescribeDatabaseAuditResourceSync(DescribeDatabaseAuditResourceRequest req)
-        {
-            return InternalRequestAsync<DescribeDatabaseAuditResourceResponse>(req, "DescribeDatabaseAuditResource")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询sql工作区历史运行记录
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDmsSqlHistoryRequest"/></param>
-        /// <returns><see cref="DescribeDmsSqlHistoryResponse"/></returns>
-        public Task<DescribeDmsSqlHistoryResponse> DescribeDmsSqlHistory(DescribeDmsSqlHistoryRequest req)
-        {
-            return InternalRequestAsync<DescribeDmsSqlHistoryResponse>(req, "DescribeDmsSqlHistory");
-        }
-
-        /// <summary>
-        /// 查询sql工作区历史运行记录
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDmsSqlHistoryRequest"/></param>
-        /// <returns><see cref="DescribeDmsSqlHistoryResponse"/></returns>
-        public DescribeDmsSqlHistoryResponse DescribeDmsSqlHistorySync(DescribeDmsSqlHistoryRequest req)
-        {
-            return InternalRequestAsync<DescribeDmsSqlHistoryResponse>(req, "DescribeDmsSqlHistory")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 展示监控指标文件
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDorisMetricFilesRequest"/></param>
-        /// <returns><see cref="DescribeDorisMetricFilesResponse"/></returns>
-        public Task<DescribeDorisMetricFilesResponse> DescribeDorisMetricFiles(DescribeDorisMetricFilesRequest req)
-        {
-            return InternalRequestAsync<DescribeDorisMetricFilesResponse>(req, "DescribeDorisMetricFiles");
-        }
-
-        /// <summary>
-        /// 展示监控指标文件
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDorisMetricFilesRequest"/></param>
-        /// <returns><see cref="DescribeDorisMetricFilesResponse"/></returns>
-        public DescribeDorisMetricFilesResponse DescribeDorisMetricFilesSync(DescribeDorisMetricFilesRequest req)
-        {
-            return InternalRequestAsync<DescribeDorisMetricFilesResponse>(req, "DescribeDorisMetricFiles")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取联合身份临时访问凭证
-        /// </summary>
-        /// <param name="req"><see cref="DescribeFederationTokenRequest"/></param>
-        /// <returns><see cref="DescribeFederationTokenResponse"/></returns>
-        public Task<DescribeFederationTokenResponse> DescribeFederationToken(DescribeFederationTokenRequest req)
-        {
-            return InternalRequestAsync<DescribeFederationTokenResponse>(req, "DescribeFederationToken");
-        }
-
-        /// <summary>
-        /// 获取联合身份临时访问凭证
-        /// </summary>
-        /// <param name="req"><see cref="DescribeFederationTokenRequest"/></param>
-        /// <returns><see cref="DescribeFederationTokenResponse"/></returns>
-        public DescribeFederationTokenResponse DescribeFederationTokenSync(DescribeFederationTokenRequest req)
-        {
-            return InternalRequestAsync<DescribeFederationTokenResponse>(req, "DescribeFederationToken")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询前端内容
-        /// </summary>
-        /// <param name="req"><see cref="DescribeFrontEndRequest"/></param>
-        /// <returns><see cref="DescribeFrontEndResponse"/></returns>
-        public Task<DescribeFrontEndResponse> DescribeFrontEnd(DescribeFrontEndRequest req)
-        {
-            return InternalRequestAsync<DescribeFrontEndResponse>(req, "DescribeFrontEnd");
-        }
-
-        /// <summary>
-        /// 查询前端内容
-        /// </summary>
-        /// <param name="req"><see cref="DescribeFrontEndRequest"/></param>
-        /// <returns><see cref="DescribeFrontEndResponse"/></returns>
-        public DescribeFrontEndResponse DescribeFrontEndSync(DescribeFrontEndRequest req)
-        {
-            return InternalRequestAsync<DescribeFrontEndResponse>(req, "DescribeFrontEnd")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 生成计费相关接口的GoodsDetail结构
-        /// </summary>
-        /// <param name="req"><see cref="DescribeGoodsDetailRequest"/></param>
-        /// <returns><see cref="DescribeGoodsDetailResponse"/></returns>
-        public Task<DescribeGoodsDetailResponse> DescribeGoodsDetail(DescribeGoodsDetailRequest req)
-        {
-            return InternalRequestAsync<DescribeGoodsDetailResponse>(req, "DescribeGoodsDetail");
-        }
-
-        /// <summary>
-        /// 生成计费相关接口的GoodsDetail结构
-        /// </summary>
-        /// <param name="req"><see cref="DescribeGoodsDetailRequest"/></param>
-        /// <returns><see cref="DescribeGoodsDetailResponse"/></returns>
-        public DescribeGoodsDetailResponse DescribeGoodsDetailSync(DescribeGoodsDetailRequest req)
-        {
-            return InternalRequestAsync<DescribeGoodsDetailResponse>(req, "DescribeGoodsDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -705,48 +684,6 @@ namespace TencentCloud.Cdwdoris.V20211228
         }
 
         /// <summary>
-        /// 购买页获取地域及可用区列表、内核版本、网络规则等
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRegionZoneRequest"/></param>
-        /// <returns><see cref="DescribeRegionZoneResponse"/></returns>
-        public Task<DescribeRegionZoneResponse> DescribeRegionZone(DescribeRegionZoneRequest req)
-        {
-            return InternalRequestAsync<DescribeRegionZoneResponse>(req, "DescribeRegionZone");
-        }
-
-        /// <summary>
-        /// 购买页获取地域及可用区列表、内核版本、网络规则等
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRegionZoneRequest"/></param>
-        /// <returns><see cref="DescribeRegionZoneResponse"/></returns>
-        public DescribeRegionZoneResponse DescribeRegionZoneSync(DescribeRegionZoneRequest req)
-        {
-            return InternalRequestAsync<DescribeRegionZoneResponse>(req, "DescribeRegionZone")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 检查内核版本是否支持新的备份恢复语法
-        /// </summary>
-        /// <param name="req"><see cref="DescribeReplicaVersionRequest"/></param>
-        /// <returns><see cref="DescribeReplicaVersionResponse"/></returns>
-        public Task<DescribeReplicaVersionResponse> DescribeReplicaVersion(DescribeReplicaVersionRequest req)
-        {
-            return InternalRequestAsync<DescribeReplicaVersionResponse>(req, "DescribeReplicaVersion");
-        }
-
-        /// <summary>
-        /// 检查内核版本是否支持新的备份恢复语法
-        /// </summary>
-        /// <param name="req"><see cref="DescribeReplicaVersionRequest"/></param>
-        /// <returns><see cref="DescribeReplicaVersionResponse"/></returns>
-        public DescribeReplicaVersionResponse DescribeReplicaVersionSync(DescribeReplicaVersionRequest req)
-        {
-            return InternalRequestAsync<DescribeReplicaVersionResponse>(req, "DescribeReplicaVersion")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查询恢复任务进度详情
         /// </summary>
         /// <param name="req"><see cref="DescribeRestoreTaskDetailRequest"/></param>
@@ -936,23 +873,23 @@ namespace TencentCloud.Cdwdoris.V20211228
         }
 
         /// <summary>
-        /// 给已存在集群，配置日志服务
+        /// 修改冷热分层策略
         /// </summary>
-        /// <param name="req"><see cref="FitClsLogRequest"/></param>
-        /// <returns><see cref="FitClsLogResponse"/></returns>
-        public Task<FitClsLogResponse> FitClsLog(FitClsLogRequest req)
+        /// <param name="req"><see cref="ModifyCoolDownPolicyRequest"/></param>
+        /// <returns><see cref="ModifyCoolDownPolicyResponse"/></returns>
+        public Task<ModifyCoolDownPolicyResponse> ModifyCoolDownPolicy(ModifyCoolDownPolicyRequest req)
         {
-            return InternalRequestAsync<FitClsLogResponse>(req, "FitClsLog");
+            return InternalRequestAsync<ModifyCoolDownPolicyResponse>(req, "ModifyCoolDownPolicy");
         }
 
         /// <summary>
-        /// 给已存在集群，配置日志服务
+        /// 修改冷热分层策略
         /// </summary>
-        /// <param name="req"><see cref="FitClsLogRequest"/></param>
-        /// <returns><see cref="FitClsLogResponse"/></returns>
-        public FitClsLogResponse FitClsLogSync(FitClsLogRequest req)
+        /// <param name="req"><see cref="ModifyCoolDownPolicyRequest"/></param>
+        /// <returns><see cref="ModifyCoolDownPolicyResponse"/></returns>
+        public ModifyCoolDownPolicyResponse ModifyCoolDownPolicySync(ModifyCoolDownPolicyRequest req)
         {
-            return InternalRequestAsync<FitClsLogResponse>(req, "FitClsLog")
+            return InternalRequestAsync<ModifyCoolDownPolicyResponse>(req, "ModifyCoolDownPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1125,23 +1062,44 @@ namespace TencentCloud.Cdwdoris.V20211228
         }
 
         /// <summary>
-        /// 开启或者关闭策略
+        /// 开始启用冷热分层
         /// </summary>
-        /// <param name="req"><see cref="OpenBackUpRequest"/></param>
-        /// <returns><see cref="OpenBackUpResponse"/></returns>
-        public Task<OpenBackUpResponse> OpenBackUp(OpenBackUpRequest req)
+        /// <param name="req"><see cref="OpenCoolDownRequest"/></param>
+        /// <returns><see cref="OpenCoolDownResponse"/></returns>
+        public Task<OpenCoolDownResponse> OpenCoolDown(OpenCoolDownRequest req)
         {
-            return InternalRequestAsync<OpenBackUpResponse>(req, "OpenBackUp");
+            return InternalRequestAsync<OpenCoolDownResponse>(req, "OpenCoolDown");
         }
 
         /// <summary>
-        /// 开启或者关闭策略
+        /// 开始启用冷热分层
         /// </summary>
-        /// <param name="req"><see cref="OpenBackUpRequest"/></param>
-        /// <returns><see cref="OpenBackUpResponse"/></returns>
-        public OpenBackUpResponse OpenBackUpSync(OpenBackUpRequest req)
+        /// <param name="req"><see cref="OpenCoolDownRequest"/></param>
+        /// <returns><see cref="OpenCoolDownResponse"/></returns>
+        public OpenCoolDownResponse OpenCoolDownSync(OpenCoolDownRequest req)
         {
-            return InternalRequestAsync<OpenBackUpResponse>(req, "OpenBackUp")
+            return InternalRequestAsync<OpenCoolDownResponse>(req, "OpenCoolDown")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开通、描述降冷策略接口
+        /// </summary>
+        /// <param name="req"><see cref="OpenCoolDownPolicyRequest"/></param>
+        /// <returns><see cref="OpenCoolDownPolicyResponse"/></returns>
+        public Task<OpenCoolDownPolicyResponse> OpenCoolDownPolicy(OpenCoolDownPolicyRequest req)
+        {
+            return InternalRequestAsync<OpenCoolDownPolicyResponse>(req, "OpenCoolDownPolicy");
+        }
+
+        /// <summary>
+        /// 开通、描述降冷策略接口
+        /// </summary>
+        /// <param name="req"><see cref="OpenCoolDownPolicyRequest"/></param>
+        /// <returns><see cref="OpenCoolDownPolicyResponse"/></returns>
+        public OpenCoolDownPolicyResponse OpenCoolDownPolicySync(OpenCoolDownPolicyRequest req)
+        {
+            return InternalRequestAsync<OpenCoolDownPolicyResponse>(req, "OpenCoolDownPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1289,6 +1247,27 @@ namespace TencentCloud.Cdwdoris.V20211228
         public ScaleUpInstanceResponse ScaleUpInstanceSync(ScaleUpInstanceRequest req)
         {
             return InternalRequestAsync<ScaleUpInstanceResponse>(req, "ScaleUpInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新集群冷热分层信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCoolDownRequest"/></param>
+        /// <returns><see cref="UpdateCoolDownResponse"/></returns>
+        public Task<UpdateCoolDownResponse> UpdateCoolDown(UpdateCoolDownRequest req)
+        {
+            return InternalRequestAsync<UpdateCoolDownResponse>(req, "UpdateCoolDown");
+        }
+
+        /// <summary>
+        /// 更新集群冷热分层信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCoolDownRequest"/></param>
+        /// <returns><see cref="UpdateCoolDownResponse"/></returns>
+        public UpdateCoolDownResponse UpdateCoolDownSync(UpdateCoolDownRequest req)
+        {
+            return InternalRequestAsync<UpdateCoolDownResponse>(req, "UpdateCoolDown")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

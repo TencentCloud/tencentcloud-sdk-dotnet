@@ -25,10 +25,11 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 质检结果列表。
+        /// 内容质检结果列表。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QualityControlResults")]
+        [System.Obsolete]
         public QualityControlResult[] QualityControlResults{ get; set; }
 
         /// <summary>
@@ -36,7 +37,22 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiagnoseResults")]
+        [System.Obsolete]
         public DiagnoseResult[] DiagnoseResults{ get; set; }
+
+        /// <summary>
+        /// 内容质检结果列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QualityControlResultSet")]
+        public QualityControlResult[] QualityControlResultSet{ get; set; }
+
+        /// <summary>
+        /// 格式诊断结果列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DiagnoseResultSet")]
+        public DiagnoseResult[] DiagnoseResultSet{ get; set; }
 
 
         /// <summary>
@@ -46,6 +62,8 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamArrayObj(map, prefix + "QualityControlResults.", this.QualityControlResults);
             this.SetParamArrayObj(map, prefix + "DiagnoseResults.", this.DiagnoseResults);
+            this.SetParamArrayObj(map, prefix + "QualityControlResultSet.", this.QualityControlResultSet);
+            this.SetParamArrayObj(map, prefix + "DiagnoseResultSet.", this.DiagnoseResultSet);
         }
     }
 }

@@ -21,14 +21,32 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeFederationTokenResponse : AbstractModel
+    public class CreateCoolDownPolicyRequest : AbstractModel
     {
         
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 集群id
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 策略名称
+        /// </summary>
+        [JsonProperty("PolicyName")]
+        public string PolicyName{ get; set; }
+
+        /// <summary>
+        /// cooldown_ttl
+        /// </summary>
+        [JsonProperty("CoolDownTtl")]
+        public string CoolDownTtl{ get; set; }
+
+        /// <summary>
+        /// cooldown_datetime
+        /// </summary>
+        [JsonProperty("CoolDownDatetime")]
+        public string CoolDownDatetime{ get; set; }
 
 
         /// <summary>
@@ -36,7 +54,10 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
+            this.SetParamSimple(map, prefix + "CoolDownTtl", this.CoolDownTtl);
+            this.SetParamSimple(map, prefix + "CoolDownDatetime", this.CoolDownDatetime);
         }
     }
 }

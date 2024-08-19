@@ -21,26 +21,26 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeMetricsFileReq : AbstractModel
+    public class OpenCoolDownPolicyResponse : AbstractModel
     {
         
         /// <summary>
-        /// 集群类型
+        /// 错误信息
         /// </summary>
-        [JsonProperty("InstanceType")]
-        public string InstanceType{ get; set; }
+        [JsonProperty("ErrorMsg")]
+        public string ErrorMsg{ get; set; }
 
         /// <summary>
-        /// 指标类型
+        /// 返回信息
         /// </summary>
-        [JsonProperty("MetricType")]
-        public string MetricType{ get; set; }
+        [JsonProperty("QueryDocument")]
+        public string QueryDocument{ get; set; }
 
         /// <summary>
-        /// 是否关注
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("IfAttention")]
-        public long? IfAttention{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
-            this.SetParamSimple(map, prefix + "MetricType", this.MetricType);
-            this.SetParamSimple(map, prefix + "IfAttention", this.IfAttention);
+            this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
+            this.SetParamSimple(map, prefix + "QueryDocument", this.QueryDocument);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

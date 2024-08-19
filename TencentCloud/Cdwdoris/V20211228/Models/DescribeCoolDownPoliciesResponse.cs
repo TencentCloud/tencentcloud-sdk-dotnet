@@ -21,20 +21,28 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyMetricFileStruct : AbstractModel
+    public class DescribeCoolDownPoliciesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 唯一id
+        /// 错误信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Id")]
-        public long? Id{ get; set; }
+        [JsonProperty("ErrorMsg")]
+        public string ErrorMsg{ get; set; }
 
         /// <summary>
-        /// 是否关注
+        /// 冷热分层策略列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("IfAttention")]
-        public string IfAttention{ get; set; }
+        [JsonProperty("List")]
+        public CoolDownPolicyInfo[] List{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +50,9 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "IfAttention", this.IfAttention);
+            this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
+            this.SetParamArrayObj(map, prefix + "List.", this.List);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

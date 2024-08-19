@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1071</VersionPrefix>
+    <VersionPrefix>3.0.1072</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -345,6 +345,8 @@
     <Compile Include="V20180717\Models\DescribeClientUploadAccelerationUsageDataResponse.cs" />
     <Compile Include="V20180717\Models\DescribeContentReviewTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeContentReviewTemplatesResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeCurrentPlaylistRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeCurrentPlaylistResponse.cs" />
     <Compile Include="V20180717\Models\DescribeDailyMediaPlayStatRequest.cs" />
     <Compile Include="V20180717\Models\DescribeDailyMediaPlayStatResponse.cs" />
     <Compile Include="V20180717\Models\DescribeDailyMostPlayedStatRequest.cs" />
@@ -466,6 +468,9 @@
     <Compile Include="V20180717\Models\FaceConfigureInfo.cs" />
     <Compile Include="V20180717\Models\FaceConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\FaceEnhanceInfo.cs" />
+    <Compile Include="V20180717\Models\FastEditMediaFileInfo.cs" />
+    <Compile Include="V20180717\Models\FastEditMediaRequest.cs" />
+    <Compile Include="V20180717\Models\FastEditMediaResponse.cs" />
     <Compile Include="V20180717\Models\FileDeleteResultItem.cs" />
     <Compile Include="V20180717\Models\FileDeleteTask.cs" />
     <Compile Include="V20180717\Models\FileReviewInfo.cs" />
@@ -476,6 +481,8 @@
     <Compile Include="V20180717\Models\FrameTagConfigureInfo.cs" />
     <Compile Include="V20180717\Models\FrameTagConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\HDRInfo.cs" />
+    <Compile Include="V20180717\Models\HandleCurrentPlaylistRequest.cs" />
+    <Compile Include="V20180717\Models\HandleCurrentPlaylistResponse.cs" />
     <Compile Include="V20180717\Models\HeadTailConfigureInfo.cs" />
     <Compile Include="V20180717\Models\HeadTailConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\HeadTailTaskInput.cs" />
@@ -746,6 +753,7 @@
     <Compile Include="V20180717\Models\ReviewImageSegmentItem.cs" />
     <Compile Include="V20180717\Models\ReviewInfo.cs" />
     <Compile Include="V20180717\Models\ReviewTemplate.cs" />
+    <Compile Include="V20180717\Models\RoundPlayFilePlayInfo.cs" />
     <Compile Include="V20180717\Models\RoundPlayInfo.cs" />
     <Compile Include="V20180717\Models\RoundPlayListItemInfo.cs" />
     <Compile Include="V20180717\Models\SDMCDrmKeyProviderInfo.cs" />

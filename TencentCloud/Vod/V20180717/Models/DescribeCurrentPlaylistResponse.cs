@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdwdoris.V20211228.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDmsSqlHistoryRequest : AbstractModel
+    public class DescribeCurrentPlaylistResponse : AbstractModel
     {
         
         /// <summary>
-        /// 查询节点ip
+        /// 当前播放列表信息。
         /// </summary>
-        [JsonProperty("QueryNode")]
-        public string[] QueryNode{ get; set; }
+        [JsonProperty("CurrentPlaylist")]
+        public RoundPlayFilePlayInfo[] CurrentPlaylist{ get; set; }
 
         /// <summary>
-        /// 运行状态
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("QueryStatus")]
-        public string[] QueryStatus{ get; set; }
-
-        /// <summary>
-        /// 模糊搜索sql
-        /// </summary>
-        [JsonProperty("QuerySql")]
-        public string QuerySql{ get; set; }
-
-        /// <summary>
-        /// 根据报错原因搜索
-        /// </summary>
-        [JsonProperty("QueryErrMsg")]
-        public string QueryErrMsg{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "QueryNode.", this.QueryNode);
-            this.SetParamArraySimple(map, prefix + "QueryStatus.", this.QueryStatus);
-            this.SetParamSimple(map, prefix + "QuerySql", this.QuerySql);
-            this.SetParamSimple(map, prefix + "QueryErrMsg", this.QueryErrMsg);
+            this.SetParamArrayObj(map, prefix + "CurrentPlaylist.", this.CurrentPlaylist);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

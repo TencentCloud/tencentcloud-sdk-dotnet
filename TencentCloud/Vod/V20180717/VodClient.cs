@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1071";
+       private const string sdkVersion = "SDK_NET_3.0.1072";
 
         /// <summary>
         /// Client constructor.
@@ -1697,6 +1697,27 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 查询轮播当前播放列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCurrentPlaylistRequest"/></param>
+        /// <returns><see cref="DescribeCurrentPlaylistResponse"/></returns>
+        public Task<DescribeCurrentPlaylistResponse> DescribeCurrentPlaylist(DescribeCurrentPlaylistRequest req)
+        {
+            return InternalRequestAsync<DescribeCurrentPlaylistResponse>(req, "DescribeCurrentPlaylist");
+        }
+
+        /// <summary>
+        /// 查询轮播当前播放列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCurrentPlaylistRequest"/></param>
+        /// <returns><see cref="DescribeCurrentPlaylistResponse"/></returns>
+        public DescribeCurrentPlaylistResponse DescribeCurrentPlaylistSync(DescribeCurrentPlaylistRequest req)
+        {
+            return InternalRequestAsync<DescribeCurrentPlaylistResponse>(req, "DescribeCurrentPlaylist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口用于查询指定日期范围内每天的播放统计数据。
         /// * 可以查询最近一年的播放统计数据。
         /// * 结束日期和起始日期的时间跨度最大为90天。
@@ -2823,6 +2844,27 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 对 HLS 视频实现快速拼接和快速剪辑，生成新的 HLS 格式的媒体。
+        /// </summary>
+        /// <param name="req"><see cref="FastEditMediaRequest"/></param>
+        /// <returns><see cref="FastEditMediaResponse"/></returns>
+        public Task<FastEditMediaResponse> FastEditMedia(FastEditMediaRequest req)
+        {
+            return InternalRequestAsync<FastEditMediaResponse>(req, "FastEditMedia");
+        }
+
+        /// <summary>
+        /// 对 HLS 视频实现快速拼接和快速剪辑，生成新的 HLS 格式的媒体。
+        /// </summary>
+        /// <param name="req"><see cref="FastEditMediaRequest"/></param>
+        /// <returns><see cref="FastEditMediaResponse"/></returns>
+        public FastEditMediaResponse FastEditMediaSync(FastEditMediaRequest req)
+        {
+            return InternalRequestAsync<FastEditMediaResponse>(req, "FastEditMedia")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// * 对媒体禁播后，除了点播控制台预览，其他场景访问视频各种资源的 URL（原始文件、转码输出文件、截图等）均会返回 403。
         ///   禁播/解禁操作全网生效时间约 5~10 分钟。
         /// </summary>
@@ -2842,6 +2884,27 @@ namespace TencentCloud.Vod.V20180717
         public ForbidMediaDistributionResponse ForbidMediaDistributionSync(ForbidMediaDistributionRequest req)
         {
             return InternalRequestAsync<ForbidMediaDistributionResponse>(req, "ForbidMediaDistribution")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 操作轮播当前播放列表。支持的操作有：<li> Insert：向当前播列表插入播放节目。</li><li> Delete：删除播列表中的播放节目。</li>
+        /// </summary>
+        /// <param name="req"><see cref="HandleCurrentPlaylistRequest"/></param>
+        /// <returns><see cref="HandleCurrentPlaylistResponse"/></returns>
+        public Task<HandleCurrentPlaylistResponse> HandleCurrentPlaylist(HandleCurrentPlaylistRequest req)
+        {
+            return InternalRequestAsync<HandleCurrentPlaylistResponse>(req, "HandleCurrentPlaylist");
+        }
+
+        /// <summary>
+        /// 操作轮播当前播放列表。支持的操作有：<li> Insert：向当前播列表插入播放节目。</li><li> Delete：删除播列表中的播放节目。</li>
+        /// </summary>
+        /// <param name="req"><see cref="HandleCurrentPlaylistRequest"/></param>
+        /// <returns><see cref="HandleCurrentPlaylistResponse"/></returns>
+        public HandleCurrentPlaylistResponse HandleCurrentPlaylistSync(HandleCurrentPlaylistRequest req)
+        {
+            return InternalRequestAsync<HandleCurrentPlaylistResponse>(req, "HandleCurrentPlaylist")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

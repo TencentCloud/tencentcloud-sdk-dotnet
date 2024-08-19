@@ -21,50 +21,32 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeFrontEndRequest : AbstractModel
+    public class ModifyCoolDownPolicyRequest : AbstractModel
     {
         
         /// <summary>
-        /// 实例id
+        /// 集群id
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 文件类型
+        /// 策略名称
         /// </summary>
-        [JsonProperty("ConfigType")]
-        public string ConfigType{ get; set; }
+        [JsonProperty("PolicyName")]
+        public string PolicyName{ get; set; }
 
         /// <summary>
-        /// 参数1
+        /// cooldown_ttl
         /// </summary>
-        [JsonProperty("Param1")]
-        public string Param1{ get; set; }
+        [JsonProperty("CoolDownTtl")]
+        public string CoolDownTtl{ get; set; }
 
         /// <summary>
-        /// 参数2
+        /// cooldown_datetime
         /// </summary>
-        [JsonProperty("Param2")]
-        public string Param2{ get; set; }
-
-        /// <summary>
-        /// 参数3
-        /// </summary>
-        [JsonProperty("Param3")]
-        public string Param3{ get; set; }
-
-        /// <summary>
-        /// 参数4
-        /// </summary>
-        [JsonProperty("Param4")]
-        public string Param4{ get; set; }
-
-        /// <summary>
-        /// 参数5
-        /// </summary>
-        [JsonProperty("Param5")]
-        public string Param5{ get; set; }
+        [JsonProperty("CoolDownDatetime")]
+        public string CoolDownDatetime{ get; set; }
 
 
         /// <summary>
@@ -73,12 +55,9 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "ConfigType", this.ConfigType);
-            this.SetParamSimple(map, prefix + "Param1", this.Param1);
-            this.SetParamSimple(map, prefix + "Param2", this.Param2);
-            this.SetParamSimple(map, prefix + "Param3", this.Param3);
-            this.SetParamSimple(map, prefix + "Param4", this.Param4);
-            this.SetParamSimple(map, prefix + "Param5", this.Param5);
+            this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
+            this.SetParamSimple(map, prefix + "CoolDownTtl", this.CoolDownTtl);
+            this.SetParamSimple(map, prefix + "CoolDownDatetime", this.CoolDownDatetime);
         }
     }
 }

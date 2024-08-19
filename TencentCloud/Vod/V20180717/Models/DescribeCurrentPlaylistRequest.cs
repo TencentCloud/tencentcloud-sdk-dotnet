@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdwdoris.V20211228.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FitClsLogResponse : AbstractModel
+    public class DescribeCurrentPlaylistRequest : AbstractModel
     {
         
         /// <summary>
-        /// 流程相关信息
+        /// <b>点播[应用](/document/product/266/14574) ID。</b>
         /// </summary>
-        [JsonProperty("FlowId")]
-        public long? FlowId{ get; set; }
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 错误信息
+        /// 轮播播单唯一标识。
         /// </summary>
-        [JsonProperty("ErrorMsg")]
-        public string ErrorMsg{ get; set; }
+        [JsonProperty("RoundPlayId")]
+        public string RoundPlayId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 返回的播放列表的长度。最大10，默认值为5。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
-            this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamSimple(map, prefix + "RoundPlayId", this.RoundPlayId);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

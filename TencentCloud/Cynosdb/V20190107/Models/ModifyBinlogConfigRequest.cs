@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdwdoris.V20211228.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeReplicaVersionRequest : AbstractModel
+    public class ModifyBinlogConfigRequest : AbstractModel
     {
         
         /// <summary>
-        /// 实例id
+        /// 集群ID
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// Binlog配置信息
+        /// </summary>
+        [JsonProperty("BinlogConfig")]
+        public BinlogConfigInfo BinlogConfig{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamObj(map, prefix + "BinlogConfig.", this.BinlogConfig);
         }
     }
 }
