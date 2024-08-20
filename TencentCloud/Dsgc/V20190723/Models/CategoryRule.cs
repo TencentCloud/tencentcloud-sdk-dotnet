@@ -74,6 +74,20 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("AliasRuleName")]
         public string AliasRuleName{ get; set; }
 
+        /// <summary>
+        /// 各类分类分级规则数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleEffectItems")]
+        public RuleEffectItem[] RuleEffectItems{ get; set; }
+
+        /// <summary>
+        /// 规则状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleStatus")]
+        public long? RuleStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +102,8 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "AliasRuleId", this.AliasRuleId);
             this.SetParamSimple(map, prefix + "AliasRuleName", this.AliasRuleName);
+            this.SetParamArrayObj(map, prefix + "RuleEffectItems.", this.RuleEffectItems);
+            this.SetParamSimple(map, prefix + "RuleStatus", this.RuleStatus);
         }
     }
 }

@@ -51,6 +51,12 @@ namespace TencentCloud.Vclm.V20240523.Models
         [JsonProperty("EnableAudio")]
         public bool? EnableAudio{ get; set; }
 
+        /// <summary>
+        /// 是否检测输入图人体12个身体部位（头部、颈部、右肩、右肘、右腕、左肩、左肘、左腕、右髋、左髋,、左膝、右膝）。默认不检测。
+        /// </summary>
+        [JsonProperty("EnableBodyJoins")]
+        public bool? EnableBodyJoins{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +67,7 @@ namespace TencentCloud.Vclm.V20240523.Models
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamSimple(map, prefix + "EnableAudio", this.EnableAudio);
+            this.SetParamSimple(map, prefix + "EnableBodyJoins", this.EnableBodyJoins);
         }
     }
 }

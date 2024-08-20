@@ -113,6 +113,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         public Encryption Encryption{ get; set; }
 
         /// <summary>
+        /// 加密后的数据
+        /// </summary>
+        [JsonProperty("EncryptedBody")]
+        public string EncryptedBody{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -137,6 +143,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "Warnings", this.Warnings);
             this.SetParamSimple(map, prefix + "Quality", this.Quality);
             this.SetParamObj(map, prefix + "Encryption.", this.Encryption);
+            this.SetParamSimple(map, prefix + "EncryptedBody", this.EncryptedBody);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

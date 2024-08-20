@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C9840D4F-C22D-3561-A83C-36F13531DB7A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1072</VersionPrefix>
+    <VersionPrefix>3.0.1073</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -306,6 +306,7 @@
     <Compile Include="V20201207\Models\ListCloudNativeAPIGatewayStrategyBindingGroupInfoResult.cs" />
     <Compile Include="V20201207\Models\ListCloudNativeAPIGatewayStrategyResult.cs" />
     <Compile Include="V20201207\Models\ListFilter.cs" />
+    <Compile Include="V20201207\Models\Location.cs" />
     <Compile Include="V20201207\Models\Metadata.cs" />
     <Compile Include="V20201207\Models\ModifyAutoScalerResourceStrategyRequest.cs" />
     <Compile Include="V20201207\Models\ModifyAutoScalerResourceStrategyResponse.cs" />

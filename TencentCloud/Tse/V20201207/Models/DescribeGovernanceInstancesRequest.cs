@@ -90,6 +90,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 地域
+        /// </summary>
+        [JsonProperty("Location")]
+        public Location Location{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamArrayObj(map, prefix + "Metadatas.", this.Metadatas);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamObj(map, prefix + "Location.", this.Location);
         }
     }
 }

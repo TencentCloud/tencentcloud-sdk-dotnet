@@ -50,7 +50,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? Duration{ get; set; }
 
         /// <summary>
-        /// 播放进度，单位为妙。
+        /// 播放进度，单位为秒。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Progress")]

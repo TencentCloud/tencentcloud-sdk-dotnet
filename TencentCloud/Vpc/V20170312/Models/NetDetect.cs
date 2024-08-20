@@ -119,6 +119,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// 标签键值对。	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagSet")]
+        public Tag[] TagSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,6 +145,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "NextHopName", this.NextHopName);
             this.SetParamSimple(map, prefix + "NetDetectDescription", this.NetDetectDescription);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         }
     }
 }

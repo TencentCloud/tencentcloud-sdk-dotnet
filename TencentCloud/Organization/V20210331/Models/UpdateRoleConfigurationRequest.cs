@@ -37,19 +37,19 @@ namespace TencentCloud.Organization.V20210331.Models
         public string RoleConfigurationId{ get; set; }
 
         /// <summary>
-        /// 新的访问配置描述。  长度：最大 1024 个字符。
+        /// 新的权限配置描述。  长度：最大 1024 个字符。
         /// </summary>
         [JsonProperty("NewDescription")]
         public string NewDescription{ get; set; }
 
         /// <summary>
-        /// 新的会话持续时间。  CIC 用户使用访问配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
+        /// 新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
         /// </summary>
         [JsonProperty("NewSessionDuration")]
         public long? NewSessionDuration{ get; set; }
 
         /// <summary>
-        /// 新的初始访问页面。  CIC 用户使用访问配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
+        /// 新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
         /// </summary>
         [JsonProperty("NewRelayState")]
         public string NewRelayState{ get; set; }

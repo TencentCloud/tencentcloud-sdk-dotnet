@@ -61,13 +61,13 @@ namespace TencentCloud.Organization.V20210331.Models
         public long? TargetUin{ get; set; }
 
         /// <summary>
-        /// CAM 用户同步的身份类型。取值： User：表示该 CAM 用户同步的身份是CIC用户。 Group：表示该 CAM 用户同步的身份是CIC用户组。
+        /// CAM 用户同步的身份类型。取值： User：表示同步的身份是用户。 Group：表示同步的身份是用户组。
         /// </summary>
         [JsonProperty("PrincipalType")]
         public string PrincipalType{ get; set; }
 
         /// <summary>
-        /// CAM 用户同步的身份 ID。取值： 当PrincipalType取值为Group时，该值为CIC 用户组 ID（g-********）。 当PrincipalType取值为User时，该值为CIC 用户 ID（u-********）。
+        /// 用户同步 ID。取值： 当PrincipalType取值为Group时，该值为用户组 ID（g-****)，当PrincipalType取值为User时，该值为用户 ID （u-****）。
         /// </summary>
         [JsonProperty("PrincipalId")]
         public string PrincipalId{ get; set; }

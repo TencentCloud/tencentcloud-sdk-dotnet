@@ -28,7 +28,7 @@ namespace TencentCloud.Cdwdoris.V20211228
 
        private const string endpoint = "cdwdoris.tencentcloudapi.com";
        private const string version = "2021-12-28";
-       private const string sdkVersion = "SDK_NET_3.0.1072";
+       private const string sdkVersion = "SDK_NET_3.0.1073";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Cdwdoris.V20211228
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 新增和修改用户接口
+        /// </summary>
+        /// <param name="req"><see cref="ActionAlterUserRequest"/></param>
+        /// <returns><see cref="ActionAlterUserResponse"/></returns>
+        public Task<ActionAlterUserResponse> ActionAlterUser(ActionAlterUserRequest req)
+        {
+            return InternalRequestAsync<ActionAlterUserResponse>(req, "ActionAlterUser");
+        }
+
+        /// <summary>
+        /// 新增和修改用户接口
+        /// </summary>
+        /// <param name="req"><see cref="ActionAlterUserRequest"/></param>
+        /// <returns><see cref="ActionAlterUserResponse"/></returns>
+        public ActionAlterUserResponse ActionAlterUserSync(ActionAlterUserRequest req)
+        {
+            return InternalRequestAsync<ActionAlterUserResponse>(req, "ActionAlterUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

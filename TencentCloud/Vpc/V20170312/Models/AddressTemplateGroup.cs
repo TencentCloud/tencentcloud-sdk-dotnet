@@ -54,6 +54,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("AddressTemplateSet")]
         public AddressTemplateItem[] AddressTemplateSet{ get; set; }
 
+        /// <summary>
+        /// 标签键值对。	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagSet")]
+        public Tag[] TagSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +72,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArraySimple(map, prefix + "AddressTemplateIdSet.", this.AddressTemplateIdSet);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamArrayObj(map, prefix + "AddressTemplateSet.", this.AddressTemplateSet);
+            this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         }
     }
 }

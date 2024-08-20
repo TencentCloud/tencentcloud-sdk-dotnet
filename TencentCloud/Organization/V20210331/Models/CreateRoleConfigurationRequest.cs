@@ -31,25 +31,25 @@ namespace TencentCloud.Organization.V20210331.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 访问配置名称。格式：包含英文字母、数字或短划线（-）。 长度：最大 128 个字符。
+        /// 权限配置名称。格式：包含英文字母、数字或短划线（-）。 长度：最大 128 个字符。
         /// </summary>
         [JsonProperty("RoleConfigurationName")]
         public string RoleConfigurationName{ get; set; }
 
         /// <summary>
-        /// 访问配置的描述。 长度：最大 1024 个字符。
+        /// 权限配置的描述。 长度：最大 1024 个字符。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 会话持续时间。 CIC用户使用访问配置访问集团账号目标账号时，会话最多保持的时间。 单位：秒。 取值范围：900~43200（15 分钟~12 小时）。 默认值：3600（1 小时）。
+        /// 会话持续时间。 CIC用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。 单位：秒。 取值范围：900 ~ 43200（15 分钟~12 小时）。 默认值：3600（1 小时）。
         /// </summary>
         [JsonProperty("SessionDuration")]
         public long? SessionDuration{ get; set; }
 
         /// <summary>
-        /// 初始访问页面。 CIC用户使用访问配置访问集团账号目标账号时，初始访问的页面地址。 该页面必须是腾讯云控制台页面。默认为空，表示跳转到腾讯云控制台首页。
+        /// 初始访问页面。 CIC用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。 该页面必须是腾讯云控制台页面。默认为空，表示跳转到腾讯云控制台首页。
         /// </summary>
         [JsonProperty("RelayState")]
         public string RelayState{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 本地网关实例ID
+        /// 本地网关实例ID（计划弃用）
         /// </summary>
         [JsonProperty("UniqLocalGwId")]
         public string UniqLocalGwId{ get; set; }
@@ -60,6 +60,19 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// 标签键值对。	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagSet")]
+        public Tag[] TagSet{ get; set; }
+
+        /// <summary>
+        /// 本地网关实例ID（计划起用）
+        /// </summary>
+        [JsonProperty("LocalGatewayId")]
+        public string LocalGatewayId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +85,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "LocalGatewayName", this.LocalGatewayName);
             this.SetParamSimple(map, prefix + "LocalGwIp", this.LocalGwIp);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+            this.SetParamSimple(map, prefix + "LocalGatewayId", this.LocalGatewayId);
         }
     }
 }

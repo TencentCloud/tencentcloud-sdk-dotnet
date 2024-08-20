@@ -54,6 +54,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("COSRules")]
         public DspaDiscoveryCOSRules COSRules{ get; set; }
 
+        /// <summary>
+        /// 规则状态；0 不启用, 1 启用
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamObj(map, prefix + "RDBRules.", this.RDBRules);
             this.SetParamObj(map, prefix + "COSRules.", this.COSRules);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

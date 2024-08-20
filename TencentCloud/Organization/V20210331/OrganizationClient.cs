@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.1072";
+       private const string sdkVersion = "SDK_NET_3.0.1073";
 
         /// <summary>
         /// Client constructor.
@@ -999,7 +999,7 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// 获取cam身份中心服务信息
+        /// 获取集团账号身份中心服务信息
         /// </summary>
         /// <param name="req"><see cref="DescribeIdentityCenterRequest"/></param>
         /// <returns><see cref="DescribeIdentityCenterResponse"/></returns>
@@ -1009,7 +1009,7 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// 获取cam身份中心服务信息
+        /// 获取集团账号身份中心服务信息
         /// </summary>
         /// <param name="req"><see cref="DescribeIdentityCenterRequest"/></param>
         /// <returns><see cref="DescribeIdentityCenterResponse"/></returns>
@@ -2049,7 +2049,7 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// 开通CIC服务
+        /// 开通身份中心服务（CIC）
         /// </summary>
         /// <param name="req"><see cref="OpenIdentityCenterRequest"/></param>
         /// <returns><see cref="OpenIdentityCenterResponse"/></returns>
@@ -2059,7 +2059,7 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// 开通CIC服务
+        /// 开通身份中心服务（CIC）
         /// </summary>
         /// <param name="req"><see cref="OpenIdentityCenterRequest"/></param>
         /// <returns><see cref="OpenIdentityCenterResponse"/></returns>

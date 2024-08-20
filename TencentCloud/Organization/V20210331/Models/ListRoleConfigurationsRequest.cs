@@ -43,7 +43,7 @@ namespace TencentCloud.Organization.V20210331.Models
         public long? MaxResults{ get; set; }
 
         /// <summary>
-        /// 过滤条件。不区分大小写。目前，只支持 RoleConfigurationName，只支持 eq（Equals）和 sw（Start With）。 示例：Filter = "RoleConfigurationName，只支持 sw test"，表示查询名称以 test 开头的全部访问配置。Filter = "RoleConfigurationName，只支持 eq TestRoleConfiguration"，表示查询名称为 TestRoleConfiguration 的访问配置。
+        /// 过滤条件。不区分大小写。目前，只支持 RoleConfigurationName，只支持 eq（Equals）和 sw（Start With）。 示例：Filter = "RoleConfigurationName，只支持 sw test"，表示查询名称以 test 开头的全部权限配置。Filter = "RoleConfigurationName，只支持 eq TestRoleConfiguration"，表示查询名称为 TestRoleConfiguration 的权限配置。
         /// </summary>
         [JsonProperty("Filter")]
         public string Filter{ get; set; }
