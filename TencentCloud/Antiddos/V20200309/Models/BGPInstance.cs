@@ -173,7 +173,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public ulong? BasicPlusFlag{ get; set; }
 
         /// <summary>
-        /// 是否是商业模式优化-普惠版
+        /// 是否标准版2.0 0: 包含标准版2.0 1: 只查询标准版2.0 2: 不查标准版2.0
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PlanCntFlag")]

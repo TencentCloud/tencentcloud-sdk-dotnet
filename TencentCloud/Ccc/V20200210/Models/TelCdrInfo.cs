@@ -338,6 +338,18 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string AsrUrl{ get; set; }
 
         /// <summary>
+        /// AsrUrl的状态：Complete
+        /// 已完成;
+        /// Processing
+        /// 正在生成中;
+        /// NotExists
+        /// 无记录(未开启生成离线asr或者无套餐包)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AsrStatus")]
+        public string AsrStatus{ get; set; }
+
+        /// <summary>
         /// 录音转存第三方COS地址
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -409,6 +421,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "UUI", this.UUI);
             this.SetParamArrayObj(map, prefix + "IVRKeyPressedEx.", this.IVRKeyPressedEx);
             this.SetParamSimple(map, prefix + "AsrUrl", this.AsrUrl);
+            this.SetParamSimple(map, prefix + "AsrStatus", this.AsrStatus);
             this.SetParamSimple(map, prefix + "CustomRecordURL", this.CustomRecordURL);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "QueuedSkillGroupName", this.QueuedSkillGroupName);

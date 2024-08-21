@@ -78,6 +78,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("PreviewLogStatistics")]
         public PreviewLogStatistic[] PreviewLogStatistics{ get; set; }
 
+        /// <summary>
+        /// 数据加工类型。0：标准加工任务； 1：前置加工任务。前置加工任务将采集的日志处理完成后，再写入日志主题。
+        /// </summary>
+        [JsonProperty("DataTransformType")]
+        public ulong? DataTransformType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -92,6 +98,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArrayObj(map, prefix + "DstResources.", this.DstResources);
             this.SetParamSimple(map, prefix + "EnableFlag", this.EnableFlag);
             this.SetParamArrayObj(map, prefix + "PreviewLogStatistics.", this.PreviewLogStatistics);
+            this.SetParamSimple(map, prefix + "DataTransformType", this.DataTransformType);
         }
     }
 }

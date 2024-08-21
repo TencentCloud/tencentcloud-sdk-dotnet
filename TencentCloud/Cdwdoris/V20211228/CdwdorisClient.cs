@@ -28,7 +28,7 @@ namespace TencentCloud.Cdwdoris.V20211228
 
        private const string endpoint = "cdwdoris.tencentcloudapi.com";
        private const string version = "2021-12-28";
-       private const string sdkVersion = "SDK_NET_3.0.1073";
+       private const string sdkVersion = "SDK_NET_3.0.1074";
 
         /// <summary>
         /// Client constructor.
@@ -890,6 +890,27 @@ namespace TencentCloud.Cdwdoris.V20211228
         public DestroyInstanceResponse DestroyInstanceSync(DestroyInstanceRequest req)
         {
             return InternalRequestAsync<DestroyInstanceResponse>(req, "DestroyInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 在集群配置页面修改集群配置文件接口，xml模式
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterConfigsRequest"/></param>
+        /// <returns><see cref="ModifyClusterConfigsResponse"/></returns>
+        public Task<ModifyClusterConfigsResponse> ModifyClusterConfigs(ModifyClusterConfigsRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterConfigsResponse>(req, "ModifyClusterConfigs");
+        }
+
+        /// <summary>
+        /// 在集群配置页面修改集群配置文件接口，xml模式
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterConfigsRequest"/></param>
+        /// <returns><see cref="ModifyClusterConfigsResponse"/></returns>
+        public ModifyClusterConfigsResponse ModifyClusterConfigsSync(ModifyClusterConfigsRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterConfigsResponse>(req, "ModifyClusterConfigs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

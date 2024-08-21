@@ -78,6 +78,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("Export")]
         public bool? Export{ get; set; }
 
+        /// <summary>
+        /// 源站，模糊查询
+        /// </summary>
+        [JsonProperty("Source")]
+        public string Source{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamArraySimple(map, prefix + "ProtocolList.", this.ProtocolList);
             this.SetParamSimple(map, prefix + "Cname", this.Cname);
             this.SetParamSimple(map, prefix + "Export", this.Export);
+            this.SetParamSimple(map, prefix + "Source", this.Source);
         }
     }
 }

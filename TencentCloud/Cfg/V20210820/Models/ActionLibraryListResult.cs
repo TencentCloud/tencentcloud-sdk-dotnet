@@ -91,7 +91,7 @@ namespace TencentCloud.Cfg.V20210820.Models
         public string ActionCommand{ get; set; }
 
         /// <summary>
-        /// 动作类型( 0 -- tat   1 -- 云API）
+        /// 动作类型（0 -- tat   1 -- 云API）
         /// </summary>
         [JsonProperty("ActionCommandType")]
         public ulong? ActionCommandType{ get; set; }
