@@ -25,13 +25,13 @@ namespace TencentCloud.Tag.V20180813.Models
     {
         
         /// <summary>
-        /// 业务类型
+        /// 业务类型，示例 cvm 。资源所属业务名称（资源六段式中的第三段）
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
 
         /// <summary>
-        /// 资源前缀
+        /// 资源前缀，示例 instance
         /// </summary>
         [JsonProperty("ResourcePrefix")]
         public string ResourcePrefix{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Tag.V20180813.Models
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// 资源所在地域
+        /// 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
         /// </summary>
         [JsonProperty("ResourceRegion")]
         public string ResourceRegion{ get; set; }

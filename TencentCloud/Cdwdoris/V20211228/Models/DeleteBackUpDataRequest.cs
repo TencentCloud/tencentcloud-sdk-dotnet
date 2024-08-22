@@ -37,7 +37,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public long? BackUpJobId{ get; set; }
 
         /// <summary>
-        /// 是否删除所有数据
+        /// 是否删除所有实例
         /// </summary>
         [JsonProperty("IsDeleteAll")]
         public bool? IsDeleteAll{ get; set; }

@@ -95,6 +95,20 @@ namespace TencentCloud.Mna.V20210119.Models
         [JsonProperty("FlowTrunc")]
         public long? FlowTrunc{ get; set; }
 
+        /// <summary>
+        /// 设备sn
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Sn")]
+        public string Sn{ get; set; }
+
+        /// <summary>
+        /// 厂商
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Vendor")]
+        public string Vendor{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -112,6 +126,8 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
             this.SetParamSimple(map, prefix + "FlowTrunc", this.FlowTrunc);
+            this.SetParamSimple(map, prefix + "Sn", this.Sn);
+            this.SetParamSimple(map, prefix + "Vendor", this.Vendor);
         }
     }
 }

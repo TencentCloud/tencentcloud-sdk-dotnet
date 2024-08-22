@@ -122,6 +122,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("OnCallFormIDs")]
         public string[] OnCallFormIDs{ get; set; }
 
+        /// <summary>
+        /// 电话按键确认
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VoiceConfirmKey")]
+        public string VoiceConfirmKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +149,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "PhoneCallType", this.PhoneCallType);
             this.SetParamArraySimple(map, prefix + "Weekday.", this.Weekday);
             this.SetParamArraySimple(map, prefix + "OnCallFormIDs.", this.OnCallFormIDs);
+            this.SetParamSimple(map, prefix + "VoiceConfirmKey", this.VoiceConfirmKey);
         }
     }
 }

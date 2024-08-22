@@ -150,6 +150,12 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("Env")]
         public string Env{ get; set; }
 
+        /// <summary>
+        /// js异常信息
+        /// </summary>
+        [JsonProperty("ErrorMsg")]
+        public string ErrorMsg{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +183,7 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "Os", this.Os);
             this.SetParamSimple(map, prefix + "Browser", this.Browser);
             this.SetParamSimple(map, prefix + "Env", this.Env);
+            this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         }
     }
 }

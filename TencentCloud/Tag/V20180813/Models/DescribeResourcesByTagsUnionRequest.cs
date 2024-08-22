@@ -49,7 +49,7 @@ namespace TencentCloud.Tag.V20180813.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 资源前缀
+        /// 该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId。cos存储桶为非必填，其他云资源为必填
         /// </summary>
         [JsonProperty("ResourcePrefix")]
         public string ResourcePrefix{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Tag.V20180813.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 资源所在地域
+        /// 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
         /// </summary>
         [JsonProperty("ResourceRegion")]
         public string ResourceRegion{ get; set; }
 
         /// <summary>
-        /// 业务类型
+        /// 业务类型，示例 cvm 。指资源所属业务类型，也是资源六段式中的第三段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中业务类型为ckafka
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }

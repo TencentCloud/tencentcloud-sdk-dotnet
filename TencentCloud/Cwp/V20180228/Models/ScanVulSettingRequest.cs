@@ -78,6 +78,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Uuids")]
         public string[] Uuids{ get; set; }
 
+        /// <summary>
+        /// 0版本比对，2版本比对+poc
+        /// </summary>
+        [JsonProperty("ScanMethod")]
+        public ulong? ScanMethod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "EnableScan", this.EnableScan);
             this.SetParamArraySimple(map, prefix + "Uuids.", this.Uuids);
+            this.SetParamSimple(map, prefix + "ScanMethod", this.ScanMethod);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     {
         
         /// <summary>
-        /// 节点在doris中明朝n
+        /// 节点名称
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }

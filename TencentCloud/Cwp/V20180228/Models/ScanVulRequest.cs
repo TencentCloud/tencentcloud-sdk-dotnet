@@ -66,6 +66,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("VulIds")]
         public ulong?[] VulIds{ get; set; }
 
+        /// <summary>
+        /// 0版本比对，2版本比对+poc
+        /// </summary>
+        [JsonProperty("ScanMethod")]
+        public ulong? ScanMethod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "VulEmergency", this.VulEmergency);
             this.SetParamSimple(map, prefix + "TimeoutPeriod", this.TimeoutPeriod);
             this.SetParamArraySimple(map, prefix + "VulIds.", this.VulIds);
+            this.SetParamSimple(map, prefix + "ScanMethod", this.ScanMethod);
         }
     }
 }

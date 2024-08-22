@@ -25,10 +25,11 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 执行周期， 可选值：`Period`、`Fixed`。
+        /// 执行周期， 可选值：`Period`、`Fixed`、`Cron`。
         /// 
         /// - Period：固定频率
         /// - Fixed：固定时间
+        /// - Cron：Cron表达式
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

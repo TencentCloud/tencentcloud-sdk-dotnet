@@ -43,7 +43,7 @@ namespace TencentCloud.Tag.V20180813.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 是否展现项目
+        /// 是否展现项目。1:展示  0:不展示
         /// </summary>
         [JsonProperty("ShowProject")]
         public ulong? ShowProject{ get; set; }

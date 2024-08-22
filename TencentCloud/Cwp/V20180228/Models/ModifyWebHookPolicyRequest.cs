@@ -78,6 +78,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Quuids")]
         public string[] Quuids{ get; set; }
 
+        /// <summary>
+        /// 需排除的机器列表	
+        /// </summary>
+        [JsonProperty("ExcludedQuuids")]
+        public string[] ExcludedQuuids{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamArrayObj(map, prefix + "CustomFields.", this.CustomFields);
             this.SetParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
             this.SetParamArraySimple(map, prefix + "Quuids.", this.Quuids);
+            this.SetParamArraySimple(map, prefix + "ExcludedQuuids.", this.ExcludedQuuids);
         }
     }
 }
