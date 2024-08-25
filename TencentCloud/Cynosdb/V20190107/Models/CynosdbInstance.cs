@@ -368,6 +368,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
 
+        /// <summary>
+        /// 实例存储类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceStorageType")]
+        public string InstanceStorageType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -429,6 +436,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "InstanceIndexMode", this.InstanceIndexMode);
             this.SetParamObj(map, prefix + "InstanceAbility.", this.InstanceAbility);
             this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
+            this.SetParamSimple(map, prefix + "InstanceStorageType", this.InstanceStorageType);
         }
     }
 }

@@ -66,6 +66,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("OldPwd")]
         public string OldPwd{ get; set; }
 
+        /// <summary>
+        /// 绑定的子用户uin
+        /// </summary>
+        [JsonProperty("CamUin")]
+        public string CamUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "OldWhiteHost", this.OldWhiteHost);
             this.SetParamSimple(map, prefix + "Describe", this.Describe);
             this.SetParamSimple(map, prefix + "OldPwd", this.OldPwd);
+            this.SetParamSimple(map, prefix + "CamUin", this.CamUin);
         }
     }
 }

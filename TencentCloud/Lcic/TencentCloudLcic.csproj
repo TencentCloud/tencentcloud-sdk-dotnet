@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{06F3F01F-1C8E-3B3F-9C08-A37C195B200B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1075</VersionPrefix>
+    <VersionPrefix>3.0.1076</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -123,6 +123,8 @@
     <Compile Include="V20220817\Models\DescribeGroupResponse.cs" />
     <Compile Include="V20220817\Models\DescribeQuestionListRequest.cs" />
     <Compile Include="V20220817\Models\DescribeQuestionListResponse.cs" />
+    <Compile Include="V20220817\Models\DescribeRecordStreamRequest.cs" />
+    <Compile Include="V20220817\Models\DescribeRecordStreamResponse.cs" />
     <Compile Include="V20220817\Models\DescribeRoomForbiddenUserRequest.cs" />
     <Compile Include="V20220817\Models\DescribeRoomForbiddenUserResponse.cs" />
     <Compile Include="V20220817\Models\DescribeRoomRequest.cs" />
@@ -190,6 +192,7 @@
     <Compile Include="V20220817\Models\SetAppCustomContentResponse.cs" />
     <Compile Include="V20220817\Models\SetWatermarkRequest.cs" />
     <Compile Include="V20220817\Models\SetWatermarkResponse.cs" />
+    <Compile Include="V20220817\Models\SingleStreamInfo.cs" />
     <Compile Include="V20220817\Models\StartRoomRequest.cs" />
     <Compile Include="V20220817\Models\StartRoomResponse.cs" />
     <Compile Include="V20220817\Models\TextMarkConfig.cs" />

@@ -32,7 +32,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// "" 或者  某个集群Id
+        /// 为空：代表当前appId下所有集群 或者  某个集群Id
         /// </summary>
         [JsonProperty("Input")]
         public string Input{ get; set; }

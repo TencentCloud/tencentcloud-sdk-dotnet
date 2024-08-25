@@ -1,0 +1,108 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Lcic.V20220817.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class SingleStreamInfo : AbstractModel
+    {
+        
+        /// <summary>
+        /// 用户ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
+
+        /// <summary>
+        /// 开始时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public ulong? StartTime{ get; set; }
+
+        /// <summary>
+        /// 结束时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StopTime")]
+        public ulong? StopTime{ get; set; }
+
+        /// <summary>
+        /// 总时长
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Duration")]
+        public ulong? Duration{ get; set; }
+
+        /// <summary>
+        /// 文件格式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FileFormat")]
+        public string FileFormat{ get; set; }
+
+        /// <summary>
+        /// 流url
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RecordUrl")]
+        public string RecordUrl{ get; set; }
+
+        /// <summary>
+        /// 流大小
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RecordSize")]
+        public ulong? RecordSize{ get; set; }
+
+        /// <summary>
+        /// 流ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VideoId")]
+        public string VideoId{ get; set; }
+
+        /// <summary>
+        /// 流类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Role")]
+        public string Role{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "StopTime", this.StopTime);
+            this.SetParamSimple(map, prefix + "Duration", this.Duration);
+            this.SetParamSimple(map, prefix + "FileFormat", this.FileFormat);
+            this.SetParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
+            this.SetParamSimple(map, prefix + "RecordSize", this.RecordSize);
+            this.SetParamSimple(map, prefix + "VideoId", this.VideoId);
+            this.SetParamSimple(map, prefix + "Role", this.Role);
+        }
+    }
+}
+
