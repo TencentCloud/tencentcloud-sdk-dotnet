@@ -28,7 +28,7 @@ namespace TencentCloud.Mmps.V20200710
 
        private const string endpoint = "mmps.tencentcloudapi.com";
        private const string version = "2020-07-10";
-       private const string sdkVersion = "SDK_NET_3.0.1076";
+       private const string sdkVersion = "SDK_NET_3.0.1077";
 
         /// <summary>
         /// Client constructor.

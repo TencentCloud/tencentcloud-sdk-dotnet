@@ -616,6 +616,20 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("SubProductCode")]
         public string SubProductCode{ get; set; }
 
+        /// <summary>
+        /// 存算分离cos用量，单位M
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CosBucketStorageSize")]
+        public ulong? CosBucketStorageSize{ get; set; }
+
+        /// <summary>
+        /// 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReadWriteMode")]
+        public long? ReadWriteMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -711,6 +725,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "NetConnectScheme", this.NetConnectScheme);
             this.SetParamSimple(map, prefix + "DisasterRecoverGroupAffinity", this.DisasterRecoverGroupAffinity);
             this.SetParamSimple(map, prefix + "SubProductCode", this.SubProductCode);
+            this.SetParamSimple(map, prefix + "CosBucketStorageSize", this.CosBucketStorageSize);
+            this.SetParamSimple(map, prefix + "ReadWriteMode", this.ReadWriteMode);
         }
     }
 }

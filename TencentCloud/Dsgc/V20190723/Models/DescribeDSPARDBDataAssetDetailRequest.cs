@@ -37,6 +37,18 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public long? ComplianceId{ get; set; }
 
         /// <summary>
+        /// 偏移量，默认为0。
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// 返回数量，默认为20，最大值为100。
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
         /// 可信分排序，ASC-升序
         /// DESC降序
         /// </summary>
@@ -51,6 +63,8 @@ namespace TencentCloud.Dsgc.V20190723.Models
         {
             this.SetParamSimple(map, prefix + "DspaId", this.DspaId);
             this.SetParamSimple(map, prefix + "ComplianceId", this.ComplianceId);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "CreditScore", this.CreditScore);
         }
     }

@@ -133,6 +133,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ApproveProjectName")]
         public string ApproveProjectName{ get; set; }
 
+        /// <summary>
+        /// 审批id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplyId")]
+        public string ApplyId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +163,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ApproverId", this.ApproverId);
             this.SetParamSimple(map, prefix + "ApproverName", this.ApproverName);
             this.SetParamSimple(map, prefix + "ApproveProjectName", this.ApproveProjectName);
+            this.SetParamSimple(map, prefix + "ApplyId", this.ApplyId);
         }
     }
 }

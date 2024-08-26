@@ -28,7 +28,7 @@ namespace TencentCloud.Iotvideo.V20191126
 
        private const string endpoint = "iotvideo.tencentcloudapi.com";
        private const string version = "2019-11-26";
-       private const string sdkVersion = "SDK_NET_3.0.1076";
+       private const string sdkVersion = "SDK_NET_3.0.1077";
 
         /// <summary>
         /// Client constructor.

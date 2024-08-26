@@ -396,6 +396,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("SupportDownloadType")]
         public SupportDownloadType SupportDownloadType{ get; set; }
 
+        /// <summary>
+        /// 证书吊销完成时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CertRevokedTime")]
+        public string CertRevokedTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -455,6 +462,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "IsPackage", this.IsPackage);
             this.SetParamSimple(map, prefix + "KeyPasswordCustomFlag", this.KeyPasswordCustomFlag);
             this.SetParamObj(map, prefix + "SupportDownloadType.", this.SupportDownloadType);
+            this.SetParamSimple(map, prefix + "CertRevokedTime", this.CertRevokedTime);
         }
     }
 }

@@ -284,6 +284,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("ShardAllocationBytes")]
         public ulong? ShardAllocationBytes{ get; set; }
 
+        /// <summary>
+        /// 读写分离模式：-1-不开启，1-本地读写分离，2-远端读写分离
+        /// </summary>
+        [JsonProperty("ReadWriteMode")]
+        public long? ReadWriteMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -330,6 +336,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "CvmDelayOnlineTime", this.CvmDelayOnlineTime);
             this.SetParamSimple(map, prefix + "ShardAllocationConcurrents", this.ShardAllocationConcurrents);
             this.SetParamSimple(map, prefix + "ShardAllocationBytes", this.ShardAllocationBytes);
+            this.SetParamSimple(map, prefix + "ReadWriteMode", this.ReadWriteMode);
         }
     }
 }

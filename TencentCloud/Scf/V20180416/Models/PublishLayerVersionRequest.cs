@@ -54,6 +54,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("LicenseInfo")]
         public string LicenseInfo{ get; set; }
 
+        /// <summary>
+        /// 层Tag 参数，以键值对数组形式传入
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamObj(map, prefix + "Content.", this.Content);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "LicenseInfo", this.LicenseInfo);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

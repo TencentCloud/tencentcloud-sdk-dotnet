@@ -72,6 +72,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("CamUin")]
         public string CamUin{ get; set; }
 
+        /// <summary>
+        /// ranger group id列表
+        /// </summary>
+        [JsonProperty("CamRangerGroupIds")]
+        public long?[] CamRangerGroupIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "Describe", this.Describe);
             this.SetParamSimple(map, prefix + "OldPwd", this.OldPwd);
             this.SetParamSimple(map, prefix + "CamUin", this.CamUin);
+            this.SetParamArraySimple(map, prefix + "CamRangerGroupIds.", this.CamRangerGroupIds);
         }
     }
 }

@@ -47,12 +47,16 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? LicenseTo{ get; set; }
 
         /// <summary>
-        /// 设置用户开通自动签时是否绑定个人自动签账号许可。
-        /// 
-        /// <ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li></ul>
+        /// 设置用户开通自动签时是否绑定个人自动签账号许可。<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li><li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
         /// </summary>
         [JsonProperty("LicenseType")]
         public long? LicenseType{ get; set; }
+
+        /// <summary>
+        /// 用户开通自动签指定使用的印章，为空则未设置印章，需重新进入开通链接设置印章。
+        /// </summary>
+        [JsonProperty("SealId")]
+        public string SealId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -70,6 +74,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "LicenseFrom", this.LicenseFrom);
             this.SetParamSimple(map, prefix + "LicenseTo", this.LicenseTo);
             this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
+            this.SetParamSimple(map, prefix + "SealId", this.SealId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
