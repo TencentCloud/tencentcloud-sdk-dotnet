@@ -28,7 +28,7 @@ namespace TencentCloud.Hai.V20230812
 
        private const string endpoint = "hai.tencentcloudapi.com";
        private const string version = "2023-08-12";
-       private const string sdkVersion = "SDK_NET_3.0.1077";
+       private const string sdkVersion = "SDK_NET_3.0.1078";
 
         /// <summary>
         /// Client constructor.

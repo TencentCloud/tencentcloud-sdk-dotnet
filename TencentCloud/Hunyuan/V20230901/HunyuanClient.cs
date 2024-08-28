@@ -28,7 +28,7 @@ namespace TencentCloud.Hunyuan.V20230901
 
        private const string endpoint = "hunyuan.tencentcloudapi.com";
        private const string version = "2023-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1077";
+       private const string sdkVersion = "SDK_NET_3.0.1078";
 
         /// <summary>
         /// Client constructor.
@@ -148,6 +148,33 @@ namespace TencentCloud.Hunyuan.V20230901
         }
 
         /// <summary>
+        /// 混元生图（多轮对话）接口基于混元大模型，将根据输入的文本描述生成图像，支持通过多轮对话的方式不断调整图像内容。分为提交任务和查询任务2个接口。
+        /// 提交任务：输入文本和前置对话 ID 等，提交一个混元生图多轮对话异步任务，获得任务 ID。
+        /// 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得在上一轮对话基础上继续生成的图像结果。
+        /// 混元生图（多轮对话）默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="QueryHunyuanImageChatJobRequest"/></param>
+        /// <returns><see cref="QueryHunyuanImageChatJobResponse"/></returns>
+        public Task<QueryHunyuanImageChatJobResponse> QueryHunyuanImageChatJob(QueryHunyuanImageChatJobRequest req)
+        {
+            return InternalRequestAsync<QueryHunyuanImageChatJobResponse>(req, "QueryHunyuanImageChatJob");
+        }
+
+        /// <summary>
+        /// 混元生图（多轮对话）接口基于混元大模型，将根据输入的文本描述生成图像，支持通过多轮对话的方式不断调整图像内容。分为提交任务和查询任务2个接口。
+        /// 提交任务：输入文本和前置对话 ID 等，提交一个混元生图多轮对话异步任务，获得任务 ID。
+        /// 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得在上一轮对话基础上继续生成的图像结果。
+        /// 混元生图（多轮对话）默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="QueryHunyuanImageChatJobRequest"/></param>
+        /// <returns><see cref="QueryHunyuanImageChatJobResponse"/></returns>
+        public QueryHunyuanImageChatJobResponse QueryHunyuanImageChatJobSync(QueryHunyuanImageChatJobRequest req)
+        {
+            return InternalRequestAsync<QueryHunyuanImageChatJobResponse>(req, "QueryHunyuanImageChatJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 混元生图接口基于混元大模型，将根据输入的文本描述，智能生成与之相关的结果图。分为提交任务和查询任务2个接口。
         /// 提交任务：输入文本等，提交一个混元生图异步任务，获得任务 ID。
         /// 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
@@ -192,6 +219,33 @@ namespace TencentCloud.Hunyuan.V20230901
         public SetPayModeResponse SetPayModeSync(SetPayModeRequest req)
         {
             return InternalRequestAsync<SetPayModeResponse>(req, "SetPayMode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 混元生图（多轮对话）接口基于混元大模型，将根据输入的文本描述生成图像，支持通过多轮对话的方式不断调整图像内容。分为提交任务和查询任务2个接口。
+        /// 提交任务：输入文本和前置对话 ID 等，提交一个混元生图多轮对话异步任务，获得任务 ID。
+        /// 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得在上一轮对话基础上继续生成的图像结果。
+        /// 混元生图（多轮对话）默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitHunyuanImageChatJobRequest"/></param>
+        /// <returns><see cref="SubmitHunyuanImageChatJobResponse"/></returns>
+        public Task<SubmitHunyuanImageChatJobResponse> SubmitHunyuanImageChatJob(SubmitHunyuanImageChatJobRequest req)
+        {
+            return InternalRequestAsync<SubmitHunyuanImageChatJobResponse>(req, "SubmitHunyuanImageChatJob");
+        }
+
+        /// <summary>
+        /// 混元生图（多轮对话）接口基于混元大模型，将根据输入的文本描述生成图像，支持通过多轮对话的方式不断调整图像内容。分为提交任务和查询任务2个接口。
+        /// 提交任务：输入文本和前置对话 ID 等，提交一个混元生图多轮对话异步任务，获得任务 ID。
+        /// 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得在上一轮对话基础上继续生成的图像结果。
+        /// 混元生图（多轮对话）默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitHunyuanImageChatJobRequest"/></param>
+        /// <returns><see cref="SubmitHunyuanImageChatJobResponse"/></returns>
+        public SubmitHunyuanImageChatJobResponse SubmitHunyuanImageChatJobSync(SubmitHunyuanImageChatJobRequest req)
+        {
+            return InternalRequestAsync<SubmitHunyuanImageChatJobResponse>(req, "SubmitHunyuanImageChatJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

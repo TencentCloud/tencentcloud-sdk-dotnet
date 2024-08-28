@@ -42,6 +42,18 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("Catalogs")]
         public string[] Catalogs{ get; set; }
 
+        /// <summary>
+        /// 数据库名
+        /// </summary>
+        [JsonProperty("DatabaseName")]
+        public string DatabaseName{ get; set; }
+
+        /// <summary>
+        /// 表名
+        /// </summary>
+        [JsonProperty("TableName")]
+        public string TableName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "WhiteHost", this.WhiteHost);
             this.SetParamSimple(map, prefix + "Catalog", this.Catalog);
             this.SetParamArraySimple(map, prefix + "Catalogs.", this.Catalogs);
+            this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
+            this.SetParamSimple(map, prefix + "TableName", this.TableName);
         }
     }
 }

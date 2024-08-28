@@ -28,7 +28,7 @@ namespace TencentCloud.Tourism.V20230215
 
        private const string endpoint = "tourism.tencentcloudapi.com";
        private const string version = "2023-02-15";
-       private const string sdkVersion = "SDK_NET_3.0.1077";
+       private const string sdkVersion = "SDK_NET_3.0.1078";
 
         /// <summary>
         /// Client constructor.

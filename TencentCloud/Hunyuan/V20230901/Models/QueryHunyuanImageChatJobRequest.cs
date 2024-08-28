@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tms.V20201229.Models
+namespace TencentCloud.Hunyuan.V20230901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AnswerQuestionResponse : AbstractModel
+    public class QueryHunyuanImageChatJobRequest : AbstractModel
     {
         
         /// <summary>
-        /// 匹配到的答案
+        /// 任务 ID。
         /// </summary>
-        [JsonProperty("Answer")]
-        public string Answer{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("JobId")]
+        public string JobId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Tms.V20201229.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Answer", this.Answer);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "JobId", this.JobId);
         }
     }
 }

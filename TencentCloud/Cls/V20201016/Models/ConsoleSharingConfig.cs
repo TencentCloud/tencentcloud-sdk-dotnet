@@ -43,7 +43,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? DurationMilliseconds{ get; set; }
 
         /// <summary>
-        /// 允许访问的资源列表
+        /// 允许访问的资源列表，目前仅支持一个Resource
         /// </summary>
         [JsonProperty("Resources")]
         public string[] Resources{ get; set; }

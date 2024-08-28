@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1077";
+       private const string sdkVersion = "SDK_NET_3.0.1078";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Wedata.V20210820
         public BatchCreateIntegrationTaskAlarmsResponse BatchCreateIntegrationTaskAlarmsSync(BatchCreateIntegrationTaskAlarmsRequest req)
         {
             return InternalRequestAsync<BatchCreateIntegrationTaskAlarmsResponse>(req, "BatchCreateIntegrationTaskAlarms")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 异步批量创建任务版本
+        /// </summary>
+        /// <param name="req"><see cref="BatchCreateTaskVersionAsyncRequest"/></param>
+        /// <returns><see cref="BatchCreateTaskVersionAsyncResponse"/></returns>
+        public Task<BatchCreateTaskVersionAsyncResponse> BatchCreateTaskVersionAsync(BatchCreateTaskVersionAsyncRequest req)
+        {
+            return InternalRequestAsync<BatchCreateTaskVersionAsyncResponse>(req, "BatchCreateTaskVersionAsync");
+        }
+
+        /// <summary>
+        /// 异步批量创建任务版本
+        /// </summary>
+        /// <param name="req"><see cref="BatchCreateTaskVersionAsyncRequest"/></param>
+        /// <returns><see cref="BatchCreateTaskVersionAsyncResponse"/></returns>
+        public BatchCreateTaskVersionAsyncResponse BatchCreateTaskVersionAsyncSync(BatchCreateTaskVersionAsyncRequest req)
+        {
+            return InternalRequestAsync<BatchCreateTaskVersionAsyncResponse>(req, "BatchCreateTaskVersionAsync")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2406,6 +2427,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 获取待提交任务预提交校验信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePendingSubmitTaskListRequest"/></param>
+        /// <returns><see cref="DescribePendingSubmitTaskListResponse"/></returns>
+        public Task<DescribePendingSubmitTaskListResponse> DescribePendingSubmitTaskList(DescribePendingSubmitTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribePendingSubmitTaskListResponse>(req, "DescribePendingSubmitTaskList");
+        }
+
+        /// <summary>
+        /// 获取待提交任务预提交校验信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePendingSubmitTaskListRequest"/></param>
+        /// <returns><see cref="DescribePendingSubmitTaskListResponse"/></returns>
+        public DescribePendingSubmitTaskListResponse DescribePendingSubmitTaskListSync(DescribePendingSubmitTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribePendingSubmitTaskListResponse>(req, "DescribePendingSubmitTaskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取项目信息
         /// </summary>
         /// <param name="req"><see cref="DescribeProjectRequest"/></param>
@@ -3588,6 +3630,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 获取工作流调度信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkflowSchedulerInfoDsRequest"/></param>
+        /// <returns><see cref="DescribeWorkflowSchedulerInfoDsResponse"/></returns>
+        public Task<DescribeWorkflowSchedulerInfoDsResponse> DescribeWorkflowSchedulerInfoDs(DescribeWorkflowSchedulerInfoDsRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkflowSchedulerInfoDsResponse>(req, "DescribeWorkflowSchedulerInfoDs");
+        }
+
+        /// <summary>
+        /// 获取工作流调度信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkflowSchedulerInfoDsRequest"/></param>
+        /// <returns><see cref="DescribeWorkflowSchedulerInfoDsResponse"/></returns>
+        public DescribeWorkflowSchedulerInfoDsResponse DescribeWorkflowSchedulerInfoDsSync(DescribeWorkflowSchedulerInfoDsRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkflowSchedulerInfoDsResponse>(req, "DescribeWorkflowSchedulerInfoDs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询工作流任务数
         /// </summary>
         /// <param name="req"><see cref="DescribeWorkflowTaskCountRequest"/></param>
@@ -3735,6 +3798,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 获取cos token
+        /// </summary>
+        /// <param name="req"><see cref="GetCosTokenRequest"/></param>
+        /// <returns><see cref="GetCosTokenResponse"/></returns>
+        public Task<GetCosTokenResponse> GetCosToken(GetCosTokenRequest req)
+        {
+            return InternalRequestAsync<GetCosTokenResponse>(req, "GetCosToken");
+        }
+
+        /// <summary>
+        /// 获取cos token
+        /// </summary>
+        /// <param name="req"><see cref="GetCosTokenRequest"/></param>
+        /// <returns><see cref="GetCosTokenResponse"/></returns>
+        public GetCosTokenResponse GetCosTokenSync(GetCosTokenRequest req)
+        {
+            return InternalRequestAsync<GetCosTokenResponse>(req, "GetCosToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 开发空间-获取数据开发脚本信息
         /// </summary>
         /// <param name="req"><see cref="GetFileInfoRequest"/></param>
@@ -3815,6 +3899,27 @@ namespace TencentCloud.Wedata.V20210820
         public GetOfflineInstanceListResponse GetOfflineInstanceListSync(GetOfflineInstanceListRequest req)
         {
             return InternalRequestAsync<GetOfflineInstanceListResponse>(req, "GetOfflineInstanceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 资源管理-判断资源文件是否存在
+        /// </summary>
+        /// <param name="req"><see cref="JudgeResourceFileRequest"/></param>
+        /// <returns><see cref="JudgeResourceFileResponse"/></returns>
+        public Task<JudgeResourceFileResponse> JudgeResourceFile(JudgeResourceFileRequest req)
+        {
+            return InternalRequestAsync<JudgeResourceFileResponse>(req, "JudgeResourceFile");
+        }
+
+        /// <summary>
+        /// 资源管理-判断资源文件是否存在
+        /// </summary>
+        /// <param name="req"><see cref="JudgeResourceFileRequest"/></param>
+        /// <returns><see cref="JudgeResourceFileResponse"/></returns>
+        public JudgeResourceFileResponse JudgeResourceFileSync(JudgeResourceFileRequest req)
+        {
+            return InternalRequestAsync<JudgeResourceFileResponse>(req, "JudgeResourceFile")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4350,6 +4455,27 @@ namespace TencentCloud.Wedata.V20210820
         public RemoveWorkflowDsResponse RemoveWorkflowDsSync(RemoveWorkflowDsRequest req)
         {
             return InternalRequestAsync<RemoveWorkflowDsResponse>(req, "RemoveWorkflowDs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新工作流下任务调度信息
+        /// </summary>
+        /// <param name="req"><see cref="RenewWorkflowSchedulerInfoDsRequest"/></param>
+        /// <returns><see cref="RenewWorkflowSchedulerInfoDsResponse"/></returns>
+        public Task<RenewWorkflowSchedulerInfoDsResponse> RenewWorkflowSchedulerInfoDs(RenewWorkflowSchedulerInfoDsRequest req)
+        {
+            return InternalRequestAsync<RenewWorkflowSchedulerInfoDsResponse>(req, "RenewWorkflowSchedulerInfoDs");
+        }
+
+        /// <summary>
+        /// 更新工作流下任务调度信息
+        /// </summary>
+        /// <param name="req"><see cref="RenewWorkflowSchedulerInfoDsRequest"/></param>
+        /// <returns><see cref="RenewWorkflowSchedulerInfoDsResponse"/></returns>
+        public RenewWorkflowSchedulerInfoDsResponse RenewWorkflowSchedulerInfoDsSync(RenewWorkflowSchedulerInfoDsRequest req)
+        {
+            return InternalRequestAsync<RenewWorkflowSchedulerInfoDsResponse>(req, "RenewWorkflowSchedulerInfoDs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

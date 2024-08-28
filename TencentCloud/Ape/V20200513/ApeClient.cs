@@ -28,7 +28,7 @@ namespace TencentCloud.Ape.V20200513
 
        private const string endpoint = "ape.tencentcloudapi.com";
        private const string version = "2020-05-13";
-       private const string sdkVersion = "SDK_NET_3.0.1077";
+       private const string sdkVersion = "SDK_NET_3.0.1078";
 
         /// <summary>
         /// Client constructor.

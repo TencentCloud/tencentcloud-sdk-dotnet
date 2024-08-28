@@ -223,6 +223,20 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("RiskTreatment")]
         public string RiskTreatment{ get; set; }
 
+        /// <summary>
+        /// 日志类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogType")]
+        public string LogType{ get; set; }
+
+        /// <summary>
+        /// 语句检索
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogSearch")]
+        public string LogSearch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -256,6 +270,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "RiskInvestigation", this.RiskInvestigation);
             this.SetParamSimple(map, prefix + "RiskTreatment", this.RiskTreatment);
+            this.SetParamSimple(map, prefix + "LogType", this.LogType);
+            this.SetParamSimple(map, prefix + "LogSearch", this.LogSearch);
         }
     }
 }

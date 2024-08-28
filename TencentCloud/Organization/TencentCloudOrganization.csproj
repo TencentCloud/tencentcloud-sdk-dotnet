@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FF7DA1A4-A5D5-3EF1-A5B1-B43A74B2F34E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1077</VersionPrefix>
+    <VersionPrefix>3.0.1078</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -334,6 +334,8 @@
     <Compile Include="V20210331\Models\SAMLIdPCertificate.cs" />
     <Compile Include="V20210331\Models\SAMLIdentityProviderConfiguration.cs" />
     <Compile Include="V20210331\Models\SAMLServiceProvider.cs" />
+    <Compile Include="V20210331\Models\SendOrgMemberAccountBindEmailRequest.cs" />
+    <Compile Include="V20210331\Models\SendOrgMemberAccountBindEmailResponse.cs" />
     <Compile Include="V20210331\Models\SetExternalSAMLIdentityProviderRequest.cs" />
     <Compile Include="V20210331\Models\SetExternalSAMLIdentityProviderResponse.cs" />
     <Compile Include="V20210331\Models\ShareArea.cs" />

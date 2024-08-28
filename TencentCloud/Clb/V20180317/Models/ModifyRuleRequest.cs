@@ -85,6 +85,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("TrpcFunc")]
         public string TrpcFunc{ get; set; }
 
+        /// <summary>
+        /// OAuth配置信息。
+        /// </summary>
+        [JsonProperty("OAuth")]
+        public OAuth OAuth{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +107,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "ForwardType", this.ForwardType);
             this.SetParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
             this.SetParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
+            this.SetParamObj(map, prefix + "OAuth.", this.OAuth);
         }
     }
 }

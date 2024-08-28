@@ -318,6 +318,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("ExpandCpu")]
         public long? ExpandCpu{ get; set; }
 
+        /// <summary>
+        /// 实例集群版节点信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterInfo")]
+        public ClusterInfo[] ClusterInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -371,6 +378,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "ExpandCpu", this.ExpandCpu);
+            this.SetParamArrayObj(map, prefix + "ClusterInfo.", this.ClusterInfo);
         }
     }
 }

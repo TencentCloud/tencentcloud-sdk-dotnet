@@ -76,6 +76,13 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Stamp")]
         public string Stamp{ get; set; }
 
+        /// <summary>
+        /// 返回层绑定的标签信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -90,6 +97,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "LayerName", this.LayerName);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Stamp", this.Stamp);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

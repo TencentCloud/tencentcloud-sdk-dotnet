@@ -28,7 +28,7 @@ namespace TencentCloud.Tms.V20201229
 
        private const string endpoint = "tms.tencentcloudapi.com";
        private const string version = "2020-12-29";
-       private const string sdkVersion = "SDK_NET_3.0.1077";
+       private const string sdkVersion = "SDK_NET_3.0.1078";
 
         /// <summary>
         /// Client constructor.
@@ -51,27 +51,6 @@ namespace TencentCloud.Tms.V20201229
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
-        }
-
-        /// <summary>
-        /// "AIGC代答"产品帮助客户在其AIGC场景下，对于敏感类的问题，不是由客户的大模型机器人来回答，而是我们来进行代答，尽最大可能帮助客户规避风险。
-        /// </summary>
-        /// <param name="req"><see cref="AnswerQuestionRequest"/></param>
-        /// <returns><see cref="AnswerQuestionResponse"/></returns>
-        public Task<AnswerQuestionResponse> AnswerQuestion(AnswerQuestionRequest req)
-        {
-            return InternalRequestAsync<AnswerQuestionResponse>(req, "AnswerQuestion");
-        }
-
-        /// <summary>
-        /// "AIGC代答"产品帮助客户在其AIGC场景下，对于敏感类的问题，不是由客户的大模型机器人来回答，而是我们来进行代答，尽最大可能帮助客户规避风险。
-        /// </summary>
-        /// <param name="req"><see cref="AnswerQuestionRequest"/></param>
-        /// <returns><see cref="AnswerQuestionResponse"/></returns>
-        public AnswerQuestionResponse AnswerQuestionSync(AnswerQuestionRequest req)
-        {
-            return InternalRequestAsync<AnswerQuestionResponse>(req, "AnswerQuestion")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

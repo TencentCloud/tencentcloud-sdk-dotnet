@@ -598,6 +598,48 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ExecutorGroupName")]
         public string ExecutorGroupName{ get; set; }
 
+        /// <summary>
+        /// 任务扩展信息(目前返沪离线同步的任务详情)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskExtInfo")]
+        public string TaskExtInfo{ get; set; }
+
+        /// <summary>
+        /// 任务绑定的事件信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EventListenerInfos")]
+        public AiOpsEventListenerDTO[] EventListenerInfos{ get; set; }
+
+        /// <summary>
+        /// 脚本信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScriptInfo")]
+        public AiopsScriptInfo ScriptInfo{ get; set; }
+
+        /// <summary>
+        /// DLC资源配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DLCResourceConfig")]
+        public AiopsDLCResourceConfigDto DLCResourceConfig{ get; set; }
+
+        /// <summary>
+        /// 父任务simple信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ParentTaskInfos")]
+        public AiopsSimpleTaskDto ParentTaskInfos{ get; set; }
+
+        /// <summary>
+        /// 资源获取标识
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExtResourceFlag")]
+        public ExtResourceFlagDto ExtResourceFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -686,6 +728,12 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Submit", this.Submit);
             this.SetParamSimple(map, prefix + "ExecutorGroupId", this.ExecutorGroupId);
             this.SetParamSimple(map, prefix + "ExecutorGroupName", this.ExecutorGroupName);
+            this.SetParamSimple(map, prefix + "TaskExtInfo", this.TaskExtInfo);
+            this.SetParamArrayObj(map, prefix + "EventListenerInfos.", this.EventListenerInfos);
+            this.SetParamObj(map, prefix + "ScriptInfo.", this.ScriptInfo);
+            this.SetParamObj(map, prefix + "DLCResourceConfig.", this.DLCResourceConfig);
+            this.SetParamObj(map, prefix + "ParentTaskInfos.", this.ParentTaskInfos);
+            this.SetParamObj(map, prefix + "ExtResourceFlag.", this.ExtResourceFlag);
         }
     }
 }

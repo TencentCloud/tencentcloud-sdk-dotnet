@@ -234,6 +234,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("EngineTypes")]
         public string[] EngineTypes{ get; set; }
 
+        /// <summary>
+        /// 是否获取集群版实例节点信息，可填：true或false
+        /// </summary>
+        [JsonProperty("QueryClusterInfo")]
+        public bool? QueryClusterInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -275,6 +281,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArraySimple(map, prefix + "ProxyVips.", this.ProxyVips);
             this.SetParamArraySimple(map, prefix + "ProxyIds.", this.ProxyIds);
             this.SetParamArraySimple(map, prefix + "EngineTypes.", this.EngineTypes);
+            this.SetParamSimple(map, prefix + "QueryClusterInfo", this.QueryClusterInfo);
         }
     }
 }

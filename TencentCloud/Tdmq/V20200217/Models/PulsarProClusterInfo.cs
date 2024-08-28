@@ -87,6 +87,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("BillingLabelVersion")]
         public string BillingLabelVersion{ get; set; }
 
+        /// <summary>
+        /// 实例到期时间戳，毫秒级精度。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public long? ExpireTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +110,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MaxStorage", this.MaxStorage);
             this.SetParamSimple(map, prefix + "CanEditRoute", this.CanEditRoute);
             this.SetParamSimple(map, prefix + "BillingLabelVersion", this.BillingLabelVersion);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         }
     }
 }

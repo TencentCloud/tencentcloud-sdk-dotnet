@@ -116,6 +116,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public FilterDataObject[] PublicPrivateAttr{ get; set; }
 
         /// <summary>
+        /// 主机防护状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProtectStatusList")]
+        public FilterDataObject[] ProtectStatusList{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -140,6 +147,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamArrayObj(map, prefix + "OsList.", this.OsList);
             this.SetParamArrayObj(map, prefix + "AssetMapInstanceTypeList.", this.AssetMapInstanceTypeList);
             this.SetParamArrayObj(map, prefix + "PublicPrivateAttr.", this.PublicPrivateAttr);
+            this.SetParamArrayObj(map, prefix + "ProtectStatusList.", this.ProtectStatusList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

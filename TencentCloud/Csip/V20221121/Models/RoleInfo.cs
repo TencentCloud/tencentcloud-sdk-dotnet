@@ -171,6 +171,20 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("FromLogAnalysisData")]
         public KeyValue[] FromLogAnalysisData{ get; set; }
 
+        /// <summary>
+        /// 容器名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ContainerName")]
+        public string ContainerName{ get; set; }
+
+        /// <summary>
+        /// 容器ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ContainerID")]
+        public string ContainerID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +212,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
             this.SetParamSimple(map, prefix + "AssetType", this.AssetType);
             this.SetParamArrayObj(map, prefix + "FromLogAnalysisData.", this.FromLogAnalysisData);
+            this.SetParamSimple(map, prefix + "ContainerName", this.ContainerName);
+            this.SetParamSimple(map, prefix + "ContainerID", this.ContainerID);
         }
     }
 }

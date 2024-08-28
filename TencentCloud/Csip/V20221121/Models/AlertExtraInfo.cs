@@ -509,6 +509,153 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("HitStrategy")]
         public string HitStrategy{ get; set; }
 
+        /// <summary>
+        /// 进程名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProcessName")]
+        public string ProcessName{ get; set; }
+
+        /// <summary>
+        /// PID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PID")]
+        public string PID{ get; set; }
+
+        /// <summary>
+        /// 容器Pod名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PodName")]
+        public string PodName{ get; set; }
+
+        /// <summary>
+        /// 容器PodID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PodID")]
+        public string PodID{ get; set; }
+
+        /// <summary>
+        /// Http响应
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Response")]
+        public string Response{ get; set; }
+
+        /// <summary>
+        /// 系统调用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SystemCall")]
+        public string SystemCall{ get; set; }
+
+        /// <summary>
+        /// 操作类型verb
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Verb")]
+        public string Verb{ get; set; }
+
+        /// <summary>
+        /// 日志ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogID")]
+        public string LogID{ get; set; }
+
+        /// <summary>
+        /// 变更内容
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Different")]
+        public string Different{ get; set; }
+
+        /// <summary>
+        /// 事件类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EventType")]
+        public string EventType{ get; set; }
+
+        /// <summary>
+        /// 事件描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// 目标地址(容器反弹shell)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TargetAddress")]
+        public string TargetAddress{ get; set; }
+
+        /// <summary>
+        /// 恶意请求域名(容器恶意外联)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaliciousRequestDomain")]
+        public string MaliciousRequestDomain{ get; set; }
+
+        /// <summary>
+        /// 规则类型(容器K8sAPI异常请求)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleType")]
+        public string RuleType{ get; set; }
+
+        /// <summary>
+        /// 请求资源(容器K8sAPI异常请求)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RequestURI")]
+        public string RequestURI{ get; set; }
+
+        /// <summary>
+        /// 发起请求用户(容器K8sAPI异常请求)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RequestUser")]
+        public string RequestUser{ get; set; }
+
+        /// <summary>
+        /// 请求对象(容器K8sAPI异常请求)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RequestObject")]
+        public string RequestObject{ get; set; }
+
+        /// <summary>
+        /// 响应对象(容器K8sAPI异常请求)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResponseObject")]
+        public string ResponseObject{ get; set; }
+
+        /// <summary>
+        /// 文件类型(容器文件篡改)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FileType")]
+        public string FileType{ get; set; }
+
+        /// <summary>
+        /// 标签特征(容器恶意外联)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TIType")]
+        public string TIType{ get; set; }
+
+        /// <summary>
+        /// 来源IP(容器K8sAPI异常请求)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SourceIP")]
+        public string SourceIP{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -584,6 +731,27 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "StrategyID", this.StrategyID);
             this.SetParamSimple(map, prefix + "StrategyName", this.StrategyName);
             this.SetParamSimple(map, prefix + "HitStrategy", this.HitStrategy);
+            this.SetParamSimple(map, prefix + "ProcessName", this.ProcessName);
+            this.SetParamSimple(map, prefix + "PID", this.PID);
+            this.SetParamSimple(map, prefix + "PodName", this.PodName);
+            this.SetParamSimple(map, prefix + "PodID", this.PodID);
+            this.SetParamSimple(map, prefix + "Response", this.Response);
+            this.SetParamSimple(map, prefix + "SystemCall", this.SystemCall);
+            this.SetParamSimple(map, prefix + "Verb", this.Verb);
+            this.SetParamSimple(map, prefix + "LogID", this.LogID);
+            this.SetParamSimple(map, prefix + "Different", this.Different);
+            this.SetParamSimple(map, prefix + "EventType", this.EventType);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "TargetAddress", this.TargetAddress);
+            this.SetParamSimple(map, prefix + "MaliciousRequestDomain", this.MaliciousRequestDomain);
+            this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
+            this.SetParamSimple(map, prefix + "RequestURI", this.RequestURI);
+            this.SetParamSimple(map, prefix + "RequestUser", this.RequestUser);
+            this.SetParamSimple(map, prefix + "RequestObject", this.RequestObject);
+            this.SetParamSimple(map, prefix + "ResponseObject", this.ResponseObject);
+            this.SetParamSimple(map, prefix + "FileType", this.FileType);
+            this.SetParamSimple(map, prefix + "TIType", this.TIType);
+            this.SetParamSimple(map, prefix + "SourceIP", this.SourceIP);
         }
     }
 }

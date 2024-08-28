@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C64F3428-9CE7-3A08-8DE2-D7FBE42B7F75}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1077</VersionPrefix>
+    <VersionPrefix>3.0.1078</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -62,16 +62,21 @@
     <Compile Include="V20230901\Models\GetEmbeddingResponse.cs" />
     <Compile Include="V20230901\Models\GetTokenCountRequest.cs" />
     <Compile Include="V20230901\Models\GetTokenCountResponse.cs" />
+    <Compile Include="V20230901\Models\History.cs" />
     <Compile Include="V20230901\Models\ImageUrl.cs" />
     <Compile Include="V20230901\Models\LogoParam.cs" />
     <Compile Include="V20230901\Models\LogoRect.cs" />
     <Compile Include="V20230901\Models\Message.cs" />
+    <Compile Include="V20230901\Models\QueryHunyuanImageChatJobRequest.cs" />
+    <Compile Include="V20230901\Models\QueryHunyuanImageChatJobResponse.cs" />
     <Compile Include="V20230901\Models\QueryHunyuanImageJobRequest.cs" />
     <Compile Include="V20230901\Models\QueryHunyuanImageJobResponse.cs" />
     <Compile Include="V20230901\Models\SearchInfo.cs" />
     <Compile Include="V20230901\Models\SearchResult.cs" />
     <Compile Include="V20230901\Models\SetPayModeRequest.cs" />
     <Compile Include="V20230901\Models\SetPayModeResponse.cs" />
+    <Compile Include="V20230901\Models\SubmitHunyuanImageChatJobRequest.cs" />
+    <Compile Include="V20230901\Models\SubmitHunyuanImageChatJobResponse.cs" />
     <Compile Include="V20230901\Models\SubmitHunyuanImageJobRequest.cs" />
     <Compile Include="V20230901\Models\SubmitHunyuanImageJobResponse.cs" />
     <Compile Include="V20230901\Models\TextToImageLiteRequest.cs" />

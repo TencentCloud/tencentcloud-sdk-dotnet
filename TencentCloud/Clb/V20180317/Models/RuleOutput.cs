@@ -175,6 +175,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("TargetGroupList")]
         public BasicTargetGroupInfo[] TargetGroupList{ get; set; }
 
+        /// <summary>
+        /// OAuth配置状态信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OAuth")]
+        public OAuth OAuth{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -204,6 +211,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "QuicStatus", this.QuicStatus);
             this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
             this.SetParamArrayObj(map, prefix + "TargetGroupList.", this.TargetGroupList);
+            this.SetParamObj(map, prefix + "OAuth.", this.OAuth);
         }
     }
 }

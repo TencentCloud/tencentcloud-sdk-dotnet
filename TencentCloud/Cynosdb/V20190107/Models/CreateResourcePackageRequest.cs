@@ -25,14 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 实例类型
+        /// 实例类型，目前固定传cynosdb-serverless
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 资源包使用地域
-        /// china-中国内地通用，overseas-港澳台及海外通用
+        /// 资源包使用地域chineseMainland-中国内地通用，overseas-港澳台及海外通用
         /// </summary>
         [JsonProperty("PackageRegion")]
         public string PackageRegion{ get; set; }

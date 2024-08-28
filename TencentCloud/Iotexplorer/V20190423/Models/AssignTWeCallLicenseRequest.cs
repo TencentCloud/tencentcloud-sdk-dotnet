@@ -37,7 +37,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string MiniProgramAppId{ get; set; }
 
         /// <summary>
-        /// License数
+        /// License数，只支持50,500,1000,5000,10000,20000,50000
         /// </summary>
         [JsonProperty("DeductNum")]
         public long? DeductNum{ get; set; }

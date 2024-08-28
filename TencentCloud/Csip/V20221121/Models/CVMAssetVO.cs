@@ -479,6 +479,27 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("CloudType")]
         public long? CloudType{ get; set; }
 
+        /// <summary>
+        /// 主机防护状态枚举
+        /// 0：未安装
+        /// 1：基础版防护中
+        /// 2：普惠版防护中
+        /// 3：专业版防护中
+        /// 4：旗舰版防护中
+        /// 5：已离线
+        /// 6：已关机
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProtectStatus")]
+        public long? ProtectStatus{ get; set; }
+
+        /// <summary>
+        /// 最后离线时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OfflineTime")]
+        public string OfflineTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -550,6 +571,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "AgentCpuPer", this.AgentCpuPer);
             this.SetParamSimple(map, prefix + "RealAppid", this.RealAppid);
             this.SetParamSimple(map, prefix + "CloudType", this.CloudType);
+            this.SetParamSimple(map, prefix + "ProtectStatus", this.ProtectStatus);
+            this.SetParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
         }
     }
 }

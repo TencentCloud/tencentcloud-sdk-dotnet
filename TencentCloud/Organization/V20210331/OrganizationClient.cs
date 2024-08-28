@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.1077";
+       private const string sdkVersion = "SDK_NET_3.0.1078";
 
         /// <summary>
         /// Client constructor.
@@ -2192,6 +2192,27 @@ namespace TencentCloud.Organization.V20210331
         public RemoveUserFromGroupResponse RemoveUserFromGroupSync(RemoveUserFromGroupRequest req)
         {
             return InternalRequestAsync<RemoveUserFromGroupResponse>(req, "RemoveUserFromGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 重新发送成员绑定邮箱激活邮件
+        /// </summary>
+        /// <param name="req"><see cref="SendOrgMemberAccountBindEmailRequest"/></param>
+        /// <returns><see cref="SendOrgMemberAccountBindEmailResponse"/></returns>
+        public Task<SendOrgMemberAccountBindEmailResponse> SendOrgMemberAccountBindEmail(SendOrgMemberAccountBindEmailRequest req)
+        {
+            return InternalRequestAsync<SendOrgMemberAccountBindEmailResponse>(req, "SendOrgMemberAccountBindEmail");
+        }
+
+        /// <summary>
+        /// 重新发送成员绑定邮箱激活邮件
+        /// </summary>
+        /// <param name="req"><see cref="SendOrgMemberAccountBindEmailRequest"/></param>
+        /// <returns><see cref="SendOrgMemberAccountBindEmailResponse"/></returns>
+        public SendOrgMemberAccountBindEmailResponse SendOrgMemberAccountBindEmailSync(SendOrgMemberAccountBindEmailRequest req)
+        {
+            return InternalRequestAsync<SendOrgMemberAccountBindEmailResponse>(req, "SendOrgMemberAccountBindEmail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

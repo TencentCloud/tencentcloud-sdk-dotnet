@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1077</VersionPrefix>
+    <VersionPrefix>3.0.1078</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,6 +51,10 @@
     <Compile Include="V20210820\Models\AdhocDetail.cs" />
     <Compile Include="V20210820\Models\AdhocRecord.cs" />
     <Compile Include="V20210820\Models\AgentStatus.cs" />
+    <Compile Include="V20210820\Models\AiOpsEventListenerDTO.cs" />
+    <Compile Include="V20210820\Models\AiopsDLCResourceConfigDto.cs" />
+    <Compile Include="V20210820\Models\AiopsScriptInfo.cs" />
+    <Compile Include="V20210820\Models\AiopsSimpleTaskDto.cs" />
     <Compile Include="V20210820\Models\AlarmEventInfo.cs" />
     <Compile Include="V20210820\Models\AlarmIndicatorInfo.cs" />
     <Compile Include="V20210820\Models\AlarmInfo.cs" />
@@ -64,6 +68,8 @@
     <Compile Include="V20210820\Models\BaseUser.cs" />
     <Compile Include="V20210820\Models\BatchCreateIntegrationTaskAlarmsRequest.cs" />
     <Compile Include="V20210820\Models\BatchCreateIntegrationTaskAlarmsResponse.cs" />
+    <Compile Include="V20210820\Models\BatchCreateTaskVersionAsyncRequest.cs" />
+    <Compile Include="V20210820\Models\BatchCreateTaskVersionAsyncResponse.cs" />
     <Compile Include="V20210820\Models\BatchCreateTaskVersionDTO.cs" />
     <Compile Include="V20210820\Models\BatchDeleteIntegrationTasksRequest.cs" />
     <Compile Include="V20210820\Models\BatchDeleteIntegrationTasksResponse.cs" />
@@ -84,6 +90,7 @@
     <Compile Include="V20210820\Models\BatchRerunIntegrationTaskInstancesRequest.cs" />
     <Compile Include="V20210820\Models\BatchRerunIntegrationTaskInstancesResponse.cs" />
     <Compile Include="V20210820\Models\BatchResult.cs" />
+    <Compile Include="V20210820\Models\BatchResultDs.cs" />
     <Compile Include="V20210820\Models\BatchResumeIntegrationTasksRequest.cs" />
     <Compile Include="V20210820\Models\BatchResumeIntegrationTasksResponse.cs" />
     <Compile Include="V20210820\Models\BatchReturn.cs" />
@@ -99,6 +106,7 @@
     <Compile Include="V20210820\Models\BatchStopWorkflowsByIdsResponse.cs" />
     <Compile Include="V20210820\Models\BatchSuspendIntegrationTasksRequest.cs" />
     <Compile Include="V20210820\Models\BatchSuspendIntegrationTasksResponse.cs" />
+    <Compile Include="V20210820\Models\BatchTaskOperateNew.cs" />
     <Compile Include="V20210820\Models\BatchUpdateIntegrationTasksRequest.cs" />
     <Compile Include="V20210820\Models\BatchUpdateIntegrationTasksResponse.cs" />
     <Compile Include="V20210820\Models\BytesSpeed.cs" />
@@ -130,6 +138,7 @@
     <Compile Include="V20210820\Models\CompareRule.cs" />
     <Compile Include="V20210820\Models\CompareRuleItem.cs" />
     <Compile Include="V20210820\Models\Content.cs" />
+    <Compile Include="V20210820\Models\CosTokenResponse.cs" />
     <Compile Include="V20210820\Models\CountOpsInstanceStateRequest.cs" />
     <Compile Include="V20210820\Models\CountOpsInstanceStateResponse.cs" />
     <Compile Include="V20210820\Models\CreateCustomFunctionRequest.cs" />
@@ -323,6 +332,9 @@
     <Compile Include="V20210820\Models\DescribeOpsWorkflowsResponse.cs" />
     <Compile Include="V20210820\Models\DescribeOrganizationalFunctionsRequest.cs" />
     <Compile Include="V20210820\Models\DescribeOrganizationalFunctionsResponse.cs" />
+    <Compile Include="V20210820\Models\DescribePendingSubmitTaskInfo.cs" />
+    <Compile Include="V20210820\Models\DescribePendingSubmitTaskListRequest.cs" />
+    <Compile Include="V20210820\Models\DescribePendingSubmitTaskListResponse.cs" />
     <Compile Include="V20210820\Models\DescribeProjectRequest.cs" />
     <Compile Include="V20210820\Models\DescribeProjectResponse.cs" />
     <Compile Include="V20210820\Models\DescribeQualityScoreRequest.cs" />
@@ -435,6 +447,8 @@
     <Compile Include="V20210820\Models\DescribeWorkflowInfoByIdResponse.cs" />
     <Compile Include="V20210820\Models\DescribeWorkflowListByProjectIdRequest.cs" />
     <Compile Include="V20210820\Models\DescribeWorkflowListByProjectIdResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeWorkflowSchedulerInfoDsRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeWorkflowSchedulerInfoDsResponse.cs" />
     <Compile Include="V20210820\Models\DescribeWorkflowTaskCountRequest.cs" />
     <Compile Include="V20210820\Models\DescribeWorkflowTaskCountResponse.cs" />
     <Compile Include="V20210820\Models\DiagnoseProRequest.cs" />
@@ -466,6 +480,7 @@
     <Compile Include="V20210820\Models\EventCaseOpsDto.cs" />
     <Compile Include="V20210820\Models\EventListenerOpsDto.cs" />
     <Compile Include="V20210820\Models\EventOpsDto.cs" />
+    <Compile Include="V20210820\Models\ExtResourceFlagDto.cs" />
     <Compile Include="V20210820\Models\FailMessage.cs" />
     <Compile Include="V20210820\Models\FieldConfig.cs" />
     <Compile Include="V20210820\Models\Filter.cs" />
@@ -484,6 +499,8 @@
     <Compile Include="V20210820\Models\GenHiveTableDDLSqlRequest.cs" />
     <Compile Include="V20210820\Models\GenHiveTableDDLSqlResponse.cs" />
     <Compile Include="V20210820\Models\GeneralTaskParam.cs" />
+    <Compile Include="V20210820\Models\GetCosTokenRequest.cs" />
+    <Compile Include="V20210820\Models\GetCosTokenResponse.cs" />
     <Compile Include="V20210820\Models\GetFileInfoRequest.cs" />
     <Compile Include="V20210820\Models\GetFileInfoResponse.cs" />
     <Compile Include="V20210820\Models\GetIntegrationNodeColumnSchemaRequest.cs" />
@@ -514,6 +531,8 @@
     <Compile Include="V20210820\Models\IntegrationNodeSchemaMapping.cs" />
     <Compile Include="V20210820\Models\IntegrationStatisticsTrendResult.cs" />
     <Compile Include="V20210820\Models\IntegrationTaskInfo.cs" />
+    <Compile Include="V20210820\Models\JudgeResourceFileRequest.cs" />
+    <Compile Include="V20210820\Models\JudgeResourceFileResponse.cs" />
     <Compile Include="V20210820\Models\KillOpsMakePlanInstancesRequest.cs" />
     <Compile Include="V20210820\Models\KillOpsMakePlanInstancesResponse.cs" />
     <Compile Include="V20210820\Models\KillScheduleInstancesRequest.cs" />
@@ -581,6 +600,7 @@
     <Compile Include="V20210820\Models\Pair.cs" />
     <Compile Include="V20210820\Models\PairDto.cs" />
     <Compile Include="V20210820\Models\ParamInfo.cs" />
+    <Compile Include="V20210820\Models\ParamInfoDs.cs" />
     <Compile Include="V20210820\Models\Partition.cs" />
     <Compile Include="V20210820\Models\PathNodeDsVO.cs" />
     <Compile Include="V20210820\Models\ProdSchedulerTask.cs" />
@@ -600,6 +620,8 @@
     <Compile Include="V20210820\Models\RegisterEventResponse.cs" />
     <Compile Include="V20210820\Models\RemoveWorkflowDsRequest.cs" />
     <Compile Include="V20210820\Models\RemoveWorkflowDsResponse.cs" />
+    <Compile Include="V20210820\Models\RenewWorkflowSchedulerInfoDsRequest.cs" />
+    <Compile Include="V20210820\Models\RenewWorkflowSchedulerInfoDsResponse.cs" />
     <Compile Include="V20210820\Models\ResourcePathTree.cs" />
     <Compile Include="V20210820\Models\ResumeIntegrationTaskRequest.cs" />
     <Compile Include="V20210820\Models\ResumeIntegrationTaskResponse.cs" />
@@ -708,6 +730,7 @@
     <Compile Include="V20210820\Models\TaskLogResponse.cs" />
     <Compile Include="V20210820\Models\TaskOpsDto.cs" />
     <Compile Include="V20210820\Models\TaskScriptContent.cs" />
+    <Compile Include="V20210820\Models\TaskSubmitPreCheckDetailInfo.cs" />
     <Compile Include="V20210820\Models\TaskTag.cs" />
     <Compile Include="V20210820\Models\TaskTypeCnt.cs" />
     <Compile Include="V20210820\Models\TaskTypeMap.cs" />
@@ -738,6 +761,7 @@
     <Compile Include="V20210820\Models\WorkflowCanvasOpsDto.cs" />
     <Compile Include="V20210820\Models\WorkflowExtOpsDto.cs" />
     <Compile Include="V20210820\Models\WorkflowExtOpsDtoPage.cs" />
+    <Compile Include="V20210820\Models\WorkflowScheduleDtoDs.cs" />
     <Compile Include="V20210820\Models\WorkflowSchedulerOpsDto.cs" />
     <Compile Include="V20210820\Models\WorkflowTaskCountOpsDto.cs" />
   </ItemGroup>
