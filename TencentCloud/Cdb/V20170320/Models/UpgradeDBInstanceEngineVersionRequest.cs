@@ -55,6 +55,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? MaxDelayTime{ get; set; }
 
         /// <summary>
+        /// 5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略
+        /// </summary>
+        [JsonProperty("IgnoreErrKeyword")]
+        public long? IgnoreErrKeyword{ get; set; }
+
+        /// <summary>
         /// 版本升级支持指定参数
         /// </summary>
         [JsonProperty("ParamList")]
@@ -71,6 +77,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
             this.SetParamSimple(map, prefix + "UpgradeSubversion", this.UpgradeSubversion);
             this.SetParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
+            this.SetParamSimple(map, prefix + "IgnoreErrKeyword", this.IgnoreErrKeyword);
             this.SetParamArrayObj(map, prefix + "ParamList.", this.ParamList);
         }
     }

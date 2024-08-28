@@ -62,6 +62,13 @@ namespace TencentCloud.Ses.V20201002.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// 无效收件人数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InvalidCount")]
+        public ulong? InvalidCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +81,7 @@ namespace TencentCloud.Ses.V20201002.Models
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
             this.SetParamSimple(map, prefix + "ReceiversStatus", this.ReceiversStatus);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "InvalidCount", this.InvalidCount);
         }
     }
 }

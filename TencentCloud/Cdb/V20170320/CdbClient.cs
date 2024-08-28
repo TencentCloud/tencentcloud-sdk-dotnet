@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1078";
+       private const string sdkVersion = "SDK_NET_3.0.1079";
 
         /// <summary>
         /// Client constructor.
@@ -1904,6 +1904,27 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 该接口（DescribeInstanceUpgradeCheckJob）查询实例版本升级校验任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceUpgradeCheckJobRequest"/></param>
+        /// <returns><see cref="DescribeInstanceUpgradeCheckJobResponse"/></returns>
+        public Task<DescribeInstanceUpgradeCheckJobResponse> DescribeInstanceUpgradeCheckJob(DescribeInstanceUpgradeCheckJobRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceUpgradeCheckJobResponse>(req, "DescribeInstanceUpgradeCheckJob");
+        }
+
+        /// <summary>
+        /// 该接口（DescribeInstanceUpgradeCheckJob）查询实例版本升级校验任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceUpgradeCheckJobRequest"/></param>
+        /// <returns><see cref="DescribeInstanceUpgradeCheckJobResponse"/></returns>
+        public DescribeInstanceUpgradeCheckJobResponse DescribeInstanceUpgradeCheckJobSync(DescribeInstanceUpgradeCheckJobRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceUpgradeCheckJobResponse>(req, "DescribeInstanceUpgradeCheckJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口(DescribeInstanceUpgradeType)用于查询数据库实例升级类型。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceUpgradeTypeRequest"/></param>
@@ -3506,6 +3527,27 @@ namespace TencentCloud.Cdb.V20170320
         public StopRollbackResponse StopRollbackSync(StopRollbackRequest req)
         {
             return InternalRequestAsync<StopRollbackResponse>(req, "StopRollback")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（SubmitInstanceUpgradeCheckJob）提交实例版本升级校验任务。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitInstanceUpgradeCheckJobRequest"/></param>
+        /// <returns><see cref="SubmitInstanceUpgradeCheckJobResponse"/></returns>
+        public Task<SubmitInstanceUpgradeCheckJobResponse> SubmitInstanceUpgradeCheckJob(SubmitInstanceUpgradeCheckJobRequest req)
+        {
+            return InternalRequestAsync<SubmitInstanceUpgradeCheckJobResponse>(req, "SubmitInstanceUpgradeCheckJob");
+        }
+
+        /// <summary>
+        /// 该接口（SubmitInstanceUpgradeCheckJob）提交实例版本升级校验任务。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitInstanceUpgradeCheckJobRequest"/></param>
+        /// <returns><see cref="SubmitInstanceUpgradeCheckJobResponse"/></returns>
+        public SubmitInstanceUpgradeCheckJobResponse SubmitInstanceUpgradeCheckJobSync(SubmitInstanceUpgradeCheckJobRequest req)
+        {
+            return InternalRequestAsync<SubmitInstanceUpgradeCheckJobResponse>(req, "SubmitInstanceUpgradeCheckJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -37,6 +37,18 @@ namespace TencentCloud.Ses.V20201002.Models
         public ReceiverDetail[] Data{ get; set; }
 
         /// <summary>
+        /// 有效邮件地址数
+        /// </summary>
+        [JsonProperty("ValidCount")]
+        public ulong? ValidCount{ get; set; }
+
+        /// <summary>
+        /// 无效邮件地址数
+        /// </summary>
+        [JsonProperty("InvalidCount")]
+        public ulong? InvalidCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +62,8 @@ namespace TencentCloud.Ses.V20201002.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "ValidCount", this.ValidCount);
+            this.SetParamSimple(map, prefix + "InvalidCount", this.InvalidCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

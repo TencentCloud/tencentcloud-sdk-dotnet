@@ -25,37 +25,37 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 请使用 集群信息描述（https://cloud.tencent.com/document/api/1003/48086） 获取 clusterId。
+        /// 请使用 [集群信息描述](https://cloud.tencent.com/document/api/1003/48086) 获取 clusterId。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 请使用 集群信息描述（https://cloud.tencent.com/document/api/1003/48086） 获取 instanceId。
+        /// 请使用 [集群信息描述](https://cloud.tencent.com/document/api/1003/48086) 获取 instanceId。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 指定的vpc ID，请使用 查询私有网络列表（https://cloud.tencent.com/document/api/215/15778） 获取 vpc ID。
+        /// 指定的 vpc ID，请使用 [查询私有网络列表](https://cloud.tencent.com/document/api/215/15778) 获取 vpc ID。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 指定的子网 ID，如果设置了 vpc ID，则 SubnetId 必填，请使用 查询子网列表（https://cloud.tencent.com/document/api/215/15784）获取 SubnetId。
+        /// 指定的子网 ID，如果设置了 vpc ID，则 SubnetId 必填，请使用 [查询子网列表](https://cloud.tencent.com/document/api/215/15784) 获取 SubnetId。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 用户自定义的端口
+        /// 用户自定义的端口。
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 安全组ID，请使用 查看安全组（https://cloud.tencent.com/document/api/215/15808）获取 SecurityGroupId。
+        /// 安全组 ID，请使用 [查看安全组](https://cloud.tencent.com/document/api/215/15808) 获取 SecurityGroupId。
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string DisasterRecoverGroupId{ get; set; }
 
         /// <summary>
-        /// 分散置放群组类型，取值范围：<br><li>HOST：物理机<br><li>SW：交换机<br><li>RACK：机架
+        /// 分散置放群组类型，取值范围：<br><li>HOST：物理机</li><li>SW：交换机</li><li>RACK：机架</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

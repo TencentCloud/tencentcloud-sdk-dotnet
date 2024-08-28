@@ -310,7 +310,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public SnatIp[] SnatIps{ get; set; }
 
         /// <summary>
-        /// 性能容量型规格。<ul><li> clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>null：共享型实例</li></ul>
+        /// 性能容量型规格。<ul><li> clb.c1.small：简约型规格 </li><li> clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>""：非性能容量型实例</li></ul>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SlaType")]
@@ -407,6 +407,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Egress")]
         public string Egress{ get; set; }
 
+        /// <summary>
+        /// 实例类型是否为独占型。1：独占型实例。0：非独占型实例。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Exclusive")]
+        public ulong? Exclusive{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -468,6 +475,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
             this.SetParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
             this.SetParamSimple(map, prefix + "Egress", this.Egress);
+            this.SetParamSimple(map, prefix + "Exclusive", this.Exclusive);
         }
     }
 }

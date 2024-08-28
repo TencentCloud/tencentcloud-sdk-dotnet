@@ -220,6 +220,13 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("UsedDomainCount")]
         public ulong? UsedDomainCount{ get; set; }
 
+        /// <summary>
+        /// 0 非试用版，1 试用版
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Trial")]
+        public ulong? Trial{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -258,6 +265,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamArrayObj(map, prefix + "ClbSet.", this.ClbSet);
             this.SetParamSimple(map, prefix + "DomainCount", this.DomainCount);
             this.SetParamSimple(map, prefix + "UsedDomainCount", this.UsedDomainCount);
+            this.SetParamSimple(map, prefix + "Trial", this.Trial);
         }
     }
 }

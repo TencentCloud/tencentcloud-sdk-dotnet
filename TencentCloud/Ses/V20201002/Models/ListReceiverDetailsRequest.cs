@@ -48,6 +48,24 @@ namespace TencentCloud.Ses.V20201002.Models
         [JsonProperty("Email")]
         public string Email{ get; set; }
 
+        /// <summary>
+        /// 搜索开始时间
+        /// </summary>
+        [JsonProperty("CreateTimeBegin")]
+        public string CreateTimeBegin{ get; set; }
+
+        /// <summary>
+        /// 搜索结束时间
+        /// </summary>
+        [JsonProperty("CreateTimeEnd")]
+        public string CreateTimeEnd{ get; set; }
+
+        /// <summary>
+        /// 1:有效，2:无效
+        /// </summary>
+        [JsonProperty("Status")]
+        public ulong? Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +76,9 @@ namespace TencentCloud.Ses.V20201002.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Email", this.Email);
+            this.SetParamSimple(map, prefix + "CreateTimeBegin", this.CreateTimeBegin);
+            this.SetParamSimple(map, prefix + "CreateTimeEnd", this.CreateTimeEnd);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

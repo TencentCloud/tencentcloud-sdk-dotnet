@@ -75,7 +75,6 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <li> na-siliconvalley-2 </li>
         /// <li> eu-frankfurt-1 </li>
         /// <li> eu-frankfurt-2 </li>
-        /// <li> na-toronto-1 </li>
         /// <li> na-ashburn-1 </li>
         /// <li> na-ashburn-2 </li>
         /// <li> ap-nanjing-1 </li>
