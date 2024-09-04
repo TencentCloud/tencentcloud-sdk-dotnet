@@ -127,7 +127,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public RemoteBackupInfo[] RemoteInfo{ get; set; }
 
         /// <summary>
-        /// 存储方式，0-常规存储，1-归档存储，默认为0
+        /// 存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
         /// </summary>
         [JsonProperty("CosStorageType")]
         public long? CosStorageType{ get; set; }

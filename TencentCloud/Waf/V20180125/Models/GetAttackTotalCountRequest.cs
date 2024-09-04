@@ -37,7 +37,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 查询的域名，全部域名不指定
+        /// 查询的域名，全部域名填all
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }

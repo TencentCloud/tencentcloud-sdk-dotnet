@@ -31,7 +31,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限
+        /// 必传字段，查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限 RowFilter：行级别权限
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

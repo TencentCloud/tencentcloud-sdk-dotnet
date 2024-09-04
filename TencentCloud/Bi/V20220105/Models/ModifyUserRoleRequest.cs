@@ -66,6 +66,12 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("AppUserId")]
         public string AppUserId{ get; set; }
 
+        /// <summary>
+        /// 是否开启手机验证码登录（0 关闭，1 开启）
+        /// </summary>
+        [JsonProperty("LoginSecurityStatus")]
+        public long? LoginSecurityStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
             this.SetParamSimple(map, prefix + "AreaCode", this.AreaCode);
             this.SetParamSimple(map, prefix + "AppUserId", this.AppUserId);
+            this.SetParamSimple(map, prefix + "LoginSecurityStatus", this.LoginSecurityStatus);
         }
     }
 }

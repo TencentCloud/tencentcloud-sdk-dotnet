@@ -28,7 +28,7 @@ namespace TencentCloud.Thpc.V20230321
 
        private const string endpoint = "thpc.tencentcloudapi.com";
        private const string version = "2023-03-21";
-       private const string sdkVersion = "SDK_NET_3.0.1080";
+       private const string sdkVersion = "SDK_NET_3.0.1081";
 
         /// <summary>
         /// Client constructor.
@@ -425,6 +425,27 @@ namespace TencentCloud.Thpc.V20230321
         }
 
         /// <summary>
+        /// 本接口（DescribeWorkspaces）用于查询工作空间列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkspacesRequest"/></param>
+        /// <returns><see cref="DescribeWorkspacesResponse"/></returns>
+        public Task<DescribeWorkspacesResponse> DescribeWorkspaces(DescribeWorkspacesRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkspacesResponse>(req, "DescribeWorkspaces");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeWorkspaces）用于查询工作空间列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkspacesRequest"/></param>
+        /// <returns><see cref="DescribeWorkspacesResponse"/></returns>
+        public DescribeWorkspacesResponse DescribeWorkspacesSync(DescribeWorkspacesRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkspacesResponse>(req, "DescribeWorkspaces")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口 (DetachNodes) 用于将一个或者多个计算节点从集群中移除，但是不销毁指定计算资源。
         /// </summary>
         /// <param name="req"><see cref="DetachNodesRequest"/></param>
@@ -467,6 +488,27 @@ namespace TencentCloud.Thpc.V20230321
         }
 
         /// <summary>
+        /// 本接口 (ModifyWorkspacesAttribute) 用于修改工作空间的属性（目前只支持修改工作空间的名称）。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWorkspacesAttributeRequest"/></param>
+        /// <returns><see cref="ModifyWorkspacesAttributeResponse"/></returns>
+        public Task<ModifyWorkspacesAttributeResponse> ModifyWorkspacesAttribute(ModifyWorkspacesAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyWorkspacesAttributeResponse>(req, "ModifyWorkspacesAttribute");
+        }
+
+        /// <summary>
+        /// 本接口 (ModifyWorkspacesAttribute) 用于修改工作空间的属性（目前只支持修改工作空间的名称）。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWorkspacesAttributeRequest"/></param>
+        /// <returns><see cref="ModifyWorkspacesAttributeResponse"/></returns>
+        public ModifyWorkspacesAttributeResponse ModifyWorkspacesAttributeSync(ModifyWorkspacesAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyWorkspacesAttributeResponse>(req, "ModifyWorkspacesAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口(SetAutoScalingConfiguration)用于为集群设置集群弹性伸缩配置信息。
         /// </summary>
         /// <param name="req"><see cref="SetAutoScalingConfigurationRequest"/></param>
@@ -484,6 +526,27 @@ namespace TencentCloud.Thpc.V20230321
         public SetAutoScalingConfigurationResponse SetAutoScalingConfigurationSync(SetAutoScalingConfigurationRequest req)
         {
             return InternalRequestAsync<SetAutoScalingConfigurationResponse>(req, "SetAutoScalingConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 (TerminateWorkspaces) 用于主动退还工作空间。
+        /// </summary>
+        /// <param name="req"><see cref="TerminateWorkspacesRequest"/></param>
+        /// <returns><see cref="TerminateWorkspacesResponse"/></returns>
+        public Task<TerminateWorkspacesResponse> TerminateWorkspaces(TerminateWorkspacesRequest req)
+        {
+            return InternalRequestAsync<TerminateWorkspacesResponse>(req, "TerminateWorkspaces");
+        }
+
+        /// <summary>
+        /// 本接口 (TerminateWorkspaces) 用于主动退还工作空间。
+        /// </summary>
+        /// <param name="req"><see cref="TerminateWorkspacesRequest"/></param>
+        /// <returns><see cref="TerminateWorkspacesResponse"/></returns>
+        public TerminateWorkspacesResponse TerminateWorkspacesSync(TerminateWorkspacesRequest req)
+        {
+            return InternalRequestAsync<TerminateWorkspacesResponse>(req, "TerminateWorkspaces")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

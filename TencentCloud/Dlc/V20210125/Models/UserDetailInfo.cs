@@ -87,6 +87,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("RowFilterInfo")]
         public Policys RowFilterInfo{ get; set; }
 
+        /// <summary>
+        /// 账号类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AccountType")]
+        public string AccountType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +109,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamObj(map, prefix + "WorkGroupInfo.", this.WorkGroupInfo);
             this.SetParamSimple(map, prefix + "UserAlias", this.UserAlias);
             this.SetParamObj(map, prefix + "RowFilterInfo.", this.RowFilterInfo);
+            this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
         }
     }
 }

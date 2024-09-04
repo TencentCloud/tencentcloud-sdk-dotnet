@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1080";
+       private const string sdkVersion = "SDK_NET_3.0.1081";
 
         /// <summary>
         /// Client constructor.
@@ -1352,6 +1352,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeInstancesResponse DescribeInstancesSync(DescribeInstancesRequest req)
         {
             return InternalRequestAsync<DescribeInstancesResponse>(req, "DescribeInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeIsolatedInstances)用于查询回收站实例列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIsolatedInstancesRequest"/></param>
+        /// <returns><see cref="DescribeIsolatedInstancesResponse"/></returns>
+        public Task<DescribeIsolatedInstancesResponse> DescribeIsolatedInstances(DescribeIsolatedInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeIsolatedInstancesResponse>(req, "DescribeIsolatedInstances");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeIsolatedInstances)用于查询回收站实例列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIsolatedInstancesRequest"/></param>
+        /// <returns><see cref="DescribeIsolatedInstancesResponse"/></returns>
+        public DescribeIsolatedInstancesResponse DescribeIsolatedInstancesSync(DescribeIsolatedInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeIsolatedInstancesResponse>(req, "DescribeIsolatedInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

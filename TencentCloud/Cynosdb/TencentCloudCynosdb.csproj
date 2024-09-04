@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FEBD4BA8-D71D-307D-97C6-CC6B06586449}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1080</VersionPrefix>
+    <VersionPrefix>3.0.1081</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -207,6 +207,8 @@
     <Compile Include="V20190107\Models\DescribeInstanceSpecsResponse.cs" />
     <Compile Include="V20190107\Models\DescribeInstancesRequest.cs" />
     <Compile Include="V20190107\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeIsolatedInstancesRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeIsolatedInstancesResponse.cs" />
     <Compile Include="V20190107\Models\DescribeMaintainPeriodRequest.cs" />
     <Compile Include="V20190107\Models\DescribeMaintainPeriodResponse.cs" />
     <Compile Include="V20190107\Models\DescribeParamTemplateDetailRequest.cs" />

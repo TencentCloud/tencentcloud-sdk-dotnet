@@ -51,7 +51,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public string ToolCallId{ get; set; }
 
         /// <summary>
-        /// 模型生成的工具调用，仅 hunyuan-functioncall 模型支持
+        /// 模型生成的工具调用，仅 hunyuan-pro 或者 hunyuan-functioncall 模型支持
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ToolCalls")]

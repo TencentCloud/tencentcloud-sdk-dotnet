@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 任务id
+        /// 该字段已废弃，请通过查询实例接口获取到的状态来判断实例是否已解隔离
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }

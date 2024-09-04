@@ -28,7 +28,7 @@ namespace TencentCloud.Ecc.V20181213
 
        private const string endpoint = "ecc.tencentcloudapi.com";
        private const string version = "2018-12-13";
-       private const string sdkVersion = "SDK_NET_3.0.1080";
+       private const string sdkVersion = "SDK_NET_3.0.1081";
 
         /// <summary>
         /// Client constructor.
@@ -98,7 +98,6 @@ namespace TencentCloud.Ecc.V20181213
         }
 
         /// <summary>
-        /// 接口请求域名： ecc.tencentcloudapi.com 
         /// 纯文本英语作文批改
         /// </summary>
         /// <param name="req"><see cref="ECCRequest"/></param>
@@ -109,7 +108,6 @@ namespace TencentCloud.Ecc.V20181213
         }
 
         /// <summary>
-        /// 接口请求域名： ecc.tencentcloudapi.com 
         /// 纯文本英语作文批改
         /// </summary>
         /// <param name="req"><see cref="ECCRequest"/></param>
