@@ -37,7 +37,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string TriggerName{ get; set; }
 
         /// <summary>
-        /// 触发器类型
+        /// 触发器类型，目前只支持timer、ckafka、http三种类型
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Enable{ get; set; }
 
         /// <summary>
-        /// 函数的版本，默认为 $LATEST，建议填写 [$DEFAULT](https://cloud.tencent.com/document/product/583/36149#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)方便后续进行版本的灰度发布。
+        /// 触发器创建时所指向的函数版本或别名，默认为 $LATEST
         /// </summary>
         [JsonProperty("Qualifier")]
         public string Qualifier{ get; set; }
 
         /// <summary>
-        /// 函数的命名空间
+        /// 函数的命名空间，默认值为default
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }

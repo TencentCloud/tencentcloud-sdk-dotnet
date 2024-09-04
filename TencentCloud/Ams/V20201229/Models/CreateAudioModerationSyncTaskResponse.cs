@@ -119,6 +119,18 @@ namespace TencentCloud.Ams.V20201229.Models
         public string Duration{ get; set; }
 
         /// <summary>
+        /// 是否命中(0:否, 1: 是)
+        /// </summary>
+        [JsonProperty("HitFlag")]
+        public long? HitFlag{ get; set; }
+
+        /// <summary>
+        /// 得分
+        /// </summary>
+        [JsonProperty("Score")]
+        public long? Score{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -143,6 +155,8 @@ namespace TencentCloud.Ams.V20201229.Models
             this.SetParamArrayObj(map, prefix + "SpeakerResults.", this.SpeakerResults);
             this.SetParamArrayObj(map, prefix + "RecognitionResults.", this.RecognitionResults);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
+            this.SetParamSimple(map, prefix + "HitFlag", this.HitFlag);
+            this.SetParamSimple(map, prefix + "Score", this.Score);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

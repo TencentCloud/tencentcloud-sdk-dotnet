@@ -84,6 +84,12 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("DeployZone")]
         public string DeployZone{ get; set; }
 
+        /// <summary>
+        /// 0非试用版，1试用版
+        /// </summary>
+        [JsonProperty("Trial")]
+        public ulong? Trial{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "DeployZone", this.DeployZone);
+            this.SetParamSimple(map, prefix + "Trial", this.Trial);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1079</VersionPrefix>
+    <VersionPrefix>3.0.1080</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -164,6 +164,8 @@
     <Compile Include="V20190103\Models\LoginSettings.cs" />
     <Compile Include="V20190103\Models\MetaDbInfo.cs" />
     <Compile Include="V20190103\Models\MetricTags.cs" />
+    <Compile Include="V20190103\Models\ModifyAutoRenewFlagRequest.cs" />
+    <Compile Include="V20190103\Models\ModifyAutoRenewFlagResponse.cs" />
     <Compile Include="V20190103\Models\ModifyAutoScaleStrategyRequest.cs" />
     <Compile Include="V20190103\Models\ModifyAutoScaleStrategyResponse.cs" />
     <Compile Include="V20190103\Models\ModifyResourcePoolsRequest.cs" />

@@ -329,6 +329,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("BillingResourceMode")]
         public string BillingResourceMode{ get; set; }
 
+        /// <summary>
+        /// Cu比例
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MemRatio")]
+        public long? MemRatio{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -381,6 +388,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "AgentSerialId", this.AgentSerialId);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamSimple(map, prefix + "BillingResourceMode", this.BillingResourceMode);
+            this.SetParamSimple(map, prefix + "MemRatio", this.MemRatio);
         }
     }
 }

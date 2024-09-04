@@ -216,6 +216,34 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("PolicyDealType")]
         public long? PolicyDealType{ get; set; }
 
+        /// <summary>
+        /// 计划开始时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskPlanStartTime")]
+        public string TaskPlanStartTime{ get; set; }
+
+        /// <summary>
+        /// 计划结束时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskPlanEndTime")]
+        public string TaskPlanEndTime{ get; set; }
+
+        /// <summary>
+        /// 人员组织
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskOrg")]
+        public TaskOrg[] TaskOrg{ get; set; }
+
+        /// <summary>
+        /// 问题和改进
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskIssue")]
+        public string TaskIssue{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -251,6 +279,10 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamArrayObj(map, prefix + "ApmServiceList.", this.ApmServiceList);
             this.SetParamSimple(map, prefix + "VerifyId", this.VerifyId);
             this.SetParamSimple(map, prefix + "PolicyDealType", this.PolicyDealType);
+            this.SetParamSimple(map, prefix + "TaskPlanStartTime", this.TaskPlanStartTime);
+            this.SetParamSimple(map, prefix + "TaskPlanEndTime", this.TaskPlanEndTime);
+            this.SetParamArrayObj(map, prefix + "TaskOrg.", this.TaskOrg);
+            this.SetParamSimple(map, prefix + "TaskIssue", this.TaskIssue);
         }
     }
 }

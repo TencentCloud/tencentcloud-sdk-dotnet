@@ -132,6 +132,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("PublicNetworkMonthly")]
         public long? PublicNetworkMonthly{ get; set; }
 
+        /// <summary>
+        /// 标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
             this.SetParamSimple(map, prefix + "InstanceNum", this.InstanceNum);
             this.SetParamSimple(map, prefix + "PublicNetworkMonthly", this.PublicNetworkMonthly);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

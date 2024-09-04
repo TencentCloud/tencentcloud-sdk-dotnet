@@ -90,6 +90,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("ExpireEnd")]
         public string ExpireEnd{ get; set; }
 
+        /// <summary>
+        /// 相似问修改信息(相似问没有修改则不传)
+        /// </summary>
+        [JsonProperty("SimilarQuestionModify")]
+        public SimilarQuestionModify SimilarQuestionModify{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "CateBizId", this.CateBizId);
             this.SetParamSimple(map, prefix + "ExpireStart", this.ExpireStart);
             this.SetParamSimple(map, prefix + "ExpireEnd", this.ExpireEnd);
+            this.SetParamObj(map, prefix + "SimilarQuestionModify.", this.SimilarQuestionModify);
         }
     }
 }

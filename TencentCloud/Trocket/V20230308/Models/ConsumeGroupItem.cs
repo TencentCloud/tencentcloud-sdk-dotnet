@@ -61,6 +61,34 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// 4.x的集群ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterIdV4")]
+        public string ClusterIdV4{ get; set; }
+
+        /// <summary>
+        /// 4.x的命名空间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NamespaceV4")]
+        public string NamespaceV4{ get; set; }
+
+        /// <summary>
+        /// 4.x的消费组名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConsumerGroupV4")]
+        public string ConsumerGroupV4{ get; set; }
+
+        /// <summary>
+        /// 4.x的完整命名空间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FullNamespaceV4")]
+        public string FullNamespaceV4{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +101,10 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "ConsumeMessageOrderly", this.ConsumeMessageOrderly);
             this.SetParamSimple(map, prefix + "MaxRetryTimes", this.MaxRetryTimes);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "ClusterIdV4", this.ClusterIdV4);
+            this.SetParamSimple(map, prefix + "NamespaceV4", this.NamespaceV4);
+            this.SetParamSimple(map, prefix + "ConsumerGroupV4", this.ConsumerGroupV4);
+            this.SetParamSimple(map, prefix + "FullNamespaceV4", this.FullNamespaceV4);
         }
     }
 }

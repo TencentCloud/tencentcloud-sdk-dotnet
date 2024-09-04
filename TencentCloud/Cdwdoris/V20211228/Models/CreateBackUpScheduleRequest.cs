@@ -25,6 +25,18 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     {
         
         /// <summary>
+        /// 集群id
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 操作类型 create(创建) update(编辑修改)
+        /// </summary>
+        [JsonProperty("OperationType")]
+        public string OperationType{ get; set; }
+
+        /// <summary>
         /// 编辑时需要传
         /// </summary>
         [JsonProperty("ScheduleId")]
@@ -86,12 +98,41 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("CosSourceInfo")]
         public CosSourceInfo CosSourceInfo{ get; set; }
 
+        /// <summary>
+        /// 调度任务名
+        /// </summary>
+        [JsonProperty("ScheduleName")]
+        public string ScheduleName{ get; set; }
+
+        /// <summary>
+        /// 调度信息
+        /// </summary>
+        [JsonProperty("ScheduleInfo")]
+        public ScheduleInfo ScheduleInfo{ get; set; }
+
+        /// <summary>
+        /// 更新任务状态：
+        /// 3-暂停,
+        /// 2-删除,
+        /// 1-启动
+        /// </summary>
+        [JsonProperty("UpdateStatus")]
+        public long? UpdateStatus{ get; set; }
+
+        /// <summary>
+        /// 当前任务的cos桶信息
+        /// </summary>
+        [JsonProperty("CosBucket")]
+        public string CosBucket{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "OperationType", this.OperationType);
             this.SetParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
             this.SetParamSimple(map, prefix + "WeekDays", this.WeekDays);
             this.SetParamSimple(map, prefix + "ExecuteHour", this.ExecuteHour);
@@ -102,6 +143,10 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "RestoreType", this.RestoreType);
             this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
             this.SetParamObj(map, prefix + "CosSourceInfo.", this.CosSourceInfo);
+            this.SetParamSimple(map, prefix + "ScheduleName", this.ScheduleName);
+            this.SetParamObj(map, prefix + "ScheduleInfo.", this.ScheduleInfo);
+            this.SetParamSimple(map, prefix + "UpdateStatus", this.UpdateStatus);
+            this.SetParamSimple(map, prefix + "CosBucket", this.CosBucket);
         }
     }
 }

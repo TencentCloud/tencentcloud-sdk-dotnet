@@ -139,6 +139,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("SnatEnable")]
         public bool? SnatEnable{ get; set; }
 
+        /// <summary>
+        /// 全端口段监听器的结束端口
+        /// </summary>
+        [JsonProperty("FullEndPorts")]
+        public long?[] FullEndPorts{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -164,6 +170,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "MaxCps", this.MaxCps);
             this.SetParamSimple(map, prefix + "IdleConnectTimeout", this.IdleConnectTimeout);
             this.SetParamSimple(map, prefix + "SnatEnable", this.SnatEnable);
+            this.SetParamArraySimple(map, prefix + "FullEndPorts.", this.FullEndPorts);
         }
     }
 }

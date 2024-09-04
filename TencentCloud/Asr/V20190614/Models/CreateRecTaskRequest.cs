@@ -295,6 +295,12 @@ namespace TencentCloud.Asr.V20190614.Models
         [JsonProperty("HotwordList")]
         public string HotwordList{ get; set; }
 
+        /// <summary>
+        /// 关键词识别ID列表，默认空为不进行识别，最多10个
+        /// </summary>
+        [JsonProperty("KeyWordLibIdList")]
+        public string[] KeyWordLibIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -323,6 +329,7 @@ namespace TencentCloud.Asr.V20190614.Models
             this.SetParamSimple(map, prefix + "SentenceMaxLength", this.SentenceMaxLength);
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamSimple(map, prefix + "HotwordList", this.HotwordList);
+            this.SetParamArraySimple(map, prefix + "KeyWordLibIdList.", this.KeyWordLibIdList);
         }
     }
 }

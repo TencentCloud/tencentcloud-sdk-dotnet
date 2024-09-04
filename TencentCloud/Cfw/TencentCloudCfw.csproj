@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F39A11E-57B5-3115-8397-BD397C84B698}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1079</VersionPrefix>
+    <VersionPrefix>3.0.1080</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -113,6 +113,8 @@
     <Compile Include="V20190904\Models\DeleteIdsWhiteRuleResponse.cs" />
     <Compile Include="V20190904\Models\DeleteNatFwInstanceRequest.cs" />
     <Compile Include="V20190904\Models\DeleteNatFwInstanceResponse.cs" />
+    <Compile Include="V20190904\Models\DeleteRemoteAccessDomainRequest.cs" />
+    <Compile Include="V20190904\Models\DeleteRemoteAccessDomainResponse.cs" />
     <Compile Include="V20190904\Models\DeleteResourceGroupRequest.cs" />
     <Compile Include="V20190904\Models\DeleteResourceGroupResponse.cs" />
     <Compile Include="V20190904\Models\DeleteSecurityGroupRuleRequest.cs" />

@@ -138,6 +138,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ClientProtocol")]
         public string ClientProtocol{ get; set; }
 
+        /// <summary>
+        /// 客户端订阅详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClientSubscriptionInfos")]
+        public ClientSubscriptionInfo[] ClientSubscriptionInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -159,6 +166,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
             this.SetParamSimple(map, prefix + "MaxRetryTimes", this.MaxRetryTimes);
             this.SetParamSimple(map, prefix + "ClientProtocol", this.ClientProtocol);
+            this.SetParamArrayObj(map, prefix + "ClientSubscriptionInfos.", this.ClientSubscriptionInfos);
         }
     }
 }

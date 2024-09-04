@@ -28,7 +28,7 @@ namespace TencentCloud.Dcdb.V20180411
 
        private const string endpoint = "dcdb.tencentcloudapi.com";
        private const string version = "2018-04-11";
-       private const string sdkVersion = "SDK_NET_3.0.1079";
+       private const string sdkVersion = "SDK_NET_3.0.1080";
 
         /// <summary>
         /// Client constructor.
@@ -516,6 +516,27 @@ namespace TencentCloud.Dcdb.V20180411
         public DescribeDBTmpInstancesResponse DescribeDBTmpInstancesSync(DescribeDBTmpInstancesRequest req)
         {
             return InternalRequestAsync<DescribeDBTmpInstancesResponse>(req, "DescribeDBTmpInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取实例回档时可选的时间范围
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDCDBBinlogTimeRequest"/></param>
+        /// <returns><see cref="DescribeDCDBBinlogTimeResponse"/></returns>
+        public Task<DescribeDCDBBinlogTimeResponse> DescribeDCDBBinlogTime(DescribeDCDBBinlogTimeRequest req)
+        {
+            return InternalRequestAsync<DescribeDCDBBinlogTimeResponse>(req, "DescribeDCDBBinlogTime");
+        }
+
+        /// <summary>
+        /// 获取实例回档时可选的时间范围
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDCDBBinlogTimeRequest"/></param>
+        /// <returns><see cref="DescribeDCDBBinlogTimeResponse"/></returns>
+        public DescribeDCDBBinlogTimeResponse DescribeDCDBBinlogTimeSync(DescribeDCDBBinlogTimeRequest req)
+        {
+            return InternalRequestAsync<DescribeDCDBBinlogTimeResponse>(req, "DescribeDCDBBinlogTime")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

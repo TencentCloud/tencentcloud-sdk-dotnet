@@ -48,6 +48,12 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("Summary")]
         public string Summary{ get; set; }
 
+        /// <summary>
+        /// 问题以及改进
+        /// </summary>
+        [JsonProperty("Issue")]
+        public string Issue{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "IsExpect", this.IsExpect);
             this.SetParamSimple(map, prefix + "Summary", this.Summary);
+            this.SetParamSimple(map, prefix + "Issue", this.Issue);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Ssl.V20191205
 
        private const string endpoint = "ssl.tencentcloudapi.com";
        private const string version = "2019-12-05";
-       private const string sdkVersion = "SDK_NET_3.0.1079";
+       private const string sdkVersion = "SDK_NET_3.0.1080";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,27 @@ namespace TencentCloud.Ssl.V20191205
         public CheckCertificateChainResponse CheckCertificateChainSync(CheckCertificateChainRequest req)
         {
             return InternalRequestAsync<CheckCertificateChainResponse>(req, "CheckCertificateChain")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 检查证书域名验证
+        /// </summary>
+        /// <param name="req"><see cref="CheckCertificateDomainVerificationRequest"/></param>
+        /// <returns><see cref="CheckCertificateDomainVerificationResponse"/></returns>
+        public Task<CheckCertificateDomainVerificationResponse> CheckCertificateDomainVerification(CheckCertificateDomainVerificationRequest req)
+        {
+            return InternalRequestAsync<CheckCertificateDomainVerificationResponse>(req, "CheckCertificateDomainVerification");
+        }
+
+        /// <summary>
+        /// 检查证书域名验证
+        /// </summary>
+        /// <param name="req"><see cref="CheckCertificateDomainVerificationRequest"/></param>
+        /// <returns><see cref="CheckCertificateDomainVerificationResponse"/></returns>
+        public CheckCertificateDomainVerificationResponse CheckCertificateDomainVerificationSync(CheckCertificateDomainVerificationRequest req)
+        {
+            return InternalRequestAsync<CheckCertificateDomainVerificationResponse>(req, "CheckCertificateDomainVerification")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

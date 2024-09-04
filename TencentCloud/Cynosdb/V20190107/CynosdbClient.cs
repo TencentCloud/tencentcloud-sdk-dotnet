@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1079";
+       private const string sdkVersion = "SDK_NET_3.0.1080";
 
         /// <summary>
         /// Client constructor.
@@ -1633,6 +1633,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 查询serverless策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServerlessStrategyRequest"/></param>
+        /// <returns><see cref="DescribeServerlessStrategyResponse"/></returns>
+        public Task<DescribeServerlessStrategyResponse> DescribeServerlessStrategy(DescribeServerlessStrategyRequest req)
+        {
+            return InternalRequestAsync<DescribeServerlessStrategyResponse>(req, "DescribeServerlessStrategy");
+        }
+
+        /// <summary>
+        /// 查询serverless策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServerlessStrategyRequest"/></param>
+        /// <returns><see cref="DescribeServerlessStrategyResponse"/></returns>
+        public DescribeServerlessStrategyResponse DescribeServerlessStrategySync(DescribeServerlessStrategyRequest req)
+        {
+            return InternalRequestAsync<DescribeServerlessStrategyResponse>(req, "DescribeServerlessStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询支持的数据库代理版本
         /// </summary>
         /// <param name="req"><see cref="DescribeSupportProxyVersionRequest"/></param>
@@ -2448,6 +2469,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public ModifyResourcePackagesDeductionPriorityResponse ModifyResourcePackagesDeductionPrioritySync(ModifyResourcePackagesDeductionPriorityRequest req)
         {
             return InternalRequestAsync<ModifyResourcePackagesDeductionPriorityResponse>(req, "ModifyResourcePackagesDeductionPriority")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改serverless策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyServerlessStrategyRequest"/></param>
+        /// <returns><see cref="ModifyServerlessStrategyResponse"/></returns>
+        public Task<ModifyServerlessStrategyResponse> ModifyServerlessStrategy(ModifyServerlessStrategyRequest req)
+        {
+            return InternalRequestAsync<ModifyServerlessStrategyResponse>(req, "ModifyServerlessStrategy");
+        }
+
+        /// <summary>
+        /// 修改serverless策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyServerlessStrategyRequest"/></param>
+        /// <returns><see cref="ModifyServerlessStrategyResponse"/></returns>
+        public ModifyServerlessStrategyResponse ModifyServerlessStrategySync(ModifyServerlessStrategyRequest req)
+        {
+            return InternalRequestAsync<ModifyServerlessStrategyResponse>(req, "ModifyServerlessStrategy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

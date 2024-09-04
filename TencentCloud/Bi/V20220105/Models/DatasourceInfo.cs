@@ -259,6 +259,13 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
+        /// <summary>
+        /// 数据源名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DbTypeName")]
+        public string DbTypeName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -300,6 +307,7 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "DataOriginProjectId", this.DataOriginProjectId);
             this.SetParamSimple(map, prefix + "DataOriginDatasourceId", this.DataOriginDatasourceId);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "DbTypeName", this.DbTypeName);
         }
     }
 }

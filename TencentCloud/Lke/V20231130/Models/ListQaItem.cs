@@ -120,6 +120,36 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("QaCharSize")]
         public string QaCharSize{ get; set; }
 
+        /// <summary>
+        /// 有效开始时间，unix时间戳
+        /// </summary>
+        [JsonProperty("ExpireStart")]
+        public string ExpireStart{ get; set; }
+
+        /// <summary>
+        /// 有效结束时间，unix时间戳，0代表永久有效
+        /// </summary>
+        [JsonProperty("ExpireEnd")]
+        public string ExpireEnd{ get; set; }
+
+        /// <summary>
+        /// 属性标签适用范围 1：全部，2：按条件
+        /// </summary>
+        [JsonProperty("AttrRange")]
+        public long? AttrRange{ get; set; }
+
+        /// <summary>
+        /// 属性标签
+        /// </summary>
+        [JsonProperty("AttrLabels")]
+        public AttrLabel[] AttrLabels{ get; set; }
+
+        /// <summary>
+        /// 相似问个数
+        /// </summary>
+        [JsonProperty("SimilarQuestionNum")]
+        public ulong? SimilarQuestionNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +172,11 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
             this.SetParamSimple(map, prefix + "FileType", this.FileType);
             this.SetParamSimple(map, prefix + "QaCharSize", this.QaCharSize);
+            this.SetParamSimple(map, prefix + "ExpireStart", this.ExpireStart);
+            this.SetParamSimple(map, prefix + "ExpireEnd", this.ExpireEnd);
+            this.SetParamSimple(map, prefix + "AttrRange", this.AttrRange);
+            this.SetParamArrayObj(map, prefix + "AttrLabels.", this.AttrLabels);
+            this.SetParamSimple(map, prefix + "SimilarQuestionNum", this.SimilarQuestionNum);
         }
     }
 }

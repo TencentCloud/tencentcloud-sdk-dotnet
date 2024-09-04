@@ -25,8 +25,7 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 识别出的字段名称(关键字)，支持以下字段：
-        /// 付款开户行、收款开户行、付款账号、收款账号、回单类型、回单编号、币种、流水号、凭证号码、交易机构、交易金额、手续费、日期等字段信息。
+        /// 识别出的字段名称(关键字)，如商店名称
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

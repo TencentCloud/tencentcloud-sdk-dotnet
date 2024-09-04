@@ -25,7 +25,7 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 机器人ID
+        /// 应用ID
         /// </summary>
         [JsonProperty("BotBizId")]
         public string BotBizId{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public long?[] AcceptStatus{ get; set; }
 
         /// <summary>
-        /// 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败)
+        /// 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
         /// </summary>
         [JsonProperty("ReleaseStatus")]
         public long?[] ReleaseStatus{ get; set; }

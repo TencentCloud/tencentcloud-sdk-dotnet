@@ -49,7 +49,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 搜索标签列表
+        /// 搜索标签列表，没匹配到则不过滤集群列表
         /// </summary>
         [JsonProperty("SearchTags")]
         public SearchTags[] SearchTags{ get; set; }

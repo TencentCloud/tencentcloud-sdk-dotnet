@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1079";
+       private const string sdkVersion = "SDK_NET_3.0.1080";
 
         /// <summary>
         /// Client constructor.
@@ -596,6 +596,27 @@ namespace TencentCloud.Cfw.V20190904
         public DeleteNatFwInstanceResponse DeleteNatFwInstanceSync(DeleteNatFwInstanceRequest req)
         {
             return InternalRequestAsync<DeleteNatFwInstanceResponse>(req, "DeleteNatFwInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除远程运维域名
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRemoteAccessDomainRequest"/></param>
+        /// <returns><see cref="DeleteRemoteAccessDomainResponse"/></returns>
+        public Task<DeleteRemoteAccessDomainResponse> DeleteRemoteAccessDomain(DeleteRemoteAccessDomainRequest req)
+        {
+            return InternalRequestAsync<DeleteRemoteAccessDomainResponse>(req, "DeleteRemoteAccessDomain");
+        }
+
+        /// <summary>
+        /// 删除远程运维域名
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRemoteAccessDomainRequest"/></param>
+        /// <returns><see cref="DeleteRemoteAccessDomainResponse"/></returns>
+        public DeleteRemoteAccessDomainResponse DeleteRemoteAccessDomainSync(DeleteRemoteAccessDomainRequest req)
+        {
+            return InternalRequestAsync<DeleteRemoteAccessDomainResponse>(req, "DeleteRemoteAccessDomain")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

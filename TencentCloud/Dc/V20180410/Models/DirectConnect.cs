@@ -244,6 +244,20 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("MinBandwidth")]
         public ulong? MinBandwidth{ get; set; }
 
+        /// <summary>
+        /// 建设模式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Construct")]
+        public ulong? Construct{ get; set; }
+
+        /// <summary>
+        /// 物理专线的接入点名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AccessPointName")]
+        public string AccessPointName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -282,6 +296,8 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "VlanZeroDirectConnectTunnelCount", this.VlanZeroDirectConnectTunnelCount);
             this.SetParamSimple(map, prefix + "OtherVlanDirectConnectTunnelCount", this.OtherVlanDirectConnectTunnelCount);
             this.SetParamSimple(map, prefix + "MinBandwidth", this.MinBandwidth);
+            this.SetParamSimple(map, prefix + "Construct", this.Construct);
+            this.SetParamSimple(map, prefix + "AccessPointName", this.AccessPointName);
         }
     }
 }

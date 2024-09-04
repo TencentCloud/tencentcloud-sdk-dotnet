@@ -61,6 +61,14 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ScalableTps")]
         public ulong? ScalableTps{ get; set; }
 
+        /// <summary>
+        /// 32或者128
+        /// 当前集群topic的最大分区数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxPartitions")]
+        public ulong? MaxPartitions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +81,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MaxNamespaces", this.MaxNamespaces);
             this.SetParamSimple(map, prefix + "MaxTopics", this.MaxTopics);
             this.SetParamSimple(map, prefix + "ScalableTps", this.ScalableTps);
+            this.SetParamSimple(map, prefix + "MaxPartitions", this.MaxPartitions);
         }
     }
 }

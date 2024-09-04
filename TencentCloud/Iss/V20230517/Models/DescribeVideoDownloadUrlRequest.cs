@@ -62,6 +62,22 @@ namespace TencentCloud.Iss.V20230517.Models
         [JsonProperty("IsInternal")]
         public bool? IsInternal{ get; set; }
 
+        /// <summary>
+        /// 设置URL的有效期, 最小值是1秒, 最大值是86400秒, 不设置的话, 默认是600秒
+        /// </summary>
+        [JsonProperty("Expires")]
+        public long? Expires{ get; set; }
+
+        /// <summary>
+        /// 下载的MP4文件是否支持G711音频编码. 
+        /// 注意: 如果云端录像中的音频编码为AAC, 那么下载的MP4默认是支持AAC编码的
+        /// 如果云端录像中的音频编码为G711且 IsSupportG711设置为true时, 下载的MP4是支持G711音频编码
+        /// 如果云端录像中的音频编码为G711且 IsSupportG711设置为false时, 下载的MP4是不支持G711音频编码
+        /// 该参数只对FileType为mp4才有效, 不设置的话, 默认是false
+        /// </summary>
+        [JsonProperty("IsSupportG711")]
+        public bool? IsSupportG711{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +90,8 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "FileType", this.FileType);
             this.SetParamSimple(map, prefix + "IsRespActualTime", this.IsRespActualTime);
             this.SetParamSimple(map, prefix + "IsInternal", this.IsInternal);
+            this.SetParamSimple(map, prefix + "Expires", this.Expires);
+            this.SetParamSimple(map, prefix + "IsSupportG711", this.IsSupportG711);
         }
     }
 }

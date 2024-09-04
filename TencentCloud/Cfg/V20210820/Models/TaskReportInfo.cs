@@ -62,6 +62,18 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("Log")]
         public string Log{ get; set; }
 
+        /// <summary>
+        /// 0--未开始，1--正在归档，2--归档成功，3--归档失败
+        /// </summary>
+        [JsonProperty("ArchiveStage")]
+        public long? ArchiveStage{ get; set; }
+
+        /// <summary>
+        /// 归档时间
+        /// </summary>
+        [JsonProperty("ArchiveTime")]
+        public string ArchiveTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +86,8 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "Expired", this.Expired);
             this.SetParamSimple(map, prefix + "CosUrl", this.CosUrl);
             this.SetParamSimple(map, prefix + "Log", this.Log);
+            this.SetParamSimple(map, prefix + "ArchiveStage", this.ArchiveStage);
+            this.SetParamSimple(map, prefix + "ArchiveTime", this.ArchiveTime);
         }
     }
 }

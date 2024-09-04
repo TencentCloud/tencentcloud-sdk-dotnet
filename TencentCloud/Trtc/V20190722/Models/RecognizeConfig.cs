@@ -38,7 +38,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// - English = "en" # 英语
         /// - Vietnamese = "vi" # 越南语
         /// - Japanese = "ja" # 日语
-        /// - Korean = "ko" # 汉语
+        /// - Korean = "ko" # 韩语
         /// - Indonesia = "id" # 印度尼西亚语
         /// - Thai = "th" # 泰语
         /// - Portuguese = "pt" # 葡萄牙语

@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1079";
+       private const string sdkVersion = "SDK_NET_3.0.1080";
 
         /// <summary>
         /// Client constructor.
@@ -747,6 +747,29 @@ namespace TencentCloud.Emr.V20190103
         public InquiryPriceUpdateInstanceResponse InquiryPriceUpdateInstanceSync(InquiryPriceUpdateInstanceRequest req)
         {
             return InternalRequestAsync<InquiryPriceUpdateInstanceResponse>(req, "InquiryPriceUpdateInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 前提：预付费集群
+        /// 资源级别开启或关闭自动续费
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAutoRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyAutoRenewFlagResponse"/></returns>
+        public Task<ModifyAutoRenewFlagResponse> ModifyAutoRenewFlag(ModifyAutoRenewFlagRequest req)
+        {
+            return InternalRequestAsync<ModifyAutoRenewFlagResponse>(req, "ModifyAutoRenewFlag");
+        }
+
+        /// <summary>
+        /// 前提：预付费集群
+        /// 资源级别开启或关闭自动续费
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAutoRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyAutoRenewFlagResponse"/></returns>
+        public ModifyAutoRenewFlagResponse ModifyAutoRenewFlagSync(ModifyAutoRenewFlagRequest req)
+        {
+            return InternalRequestAsync<ModifyAutoRenewFlagResponse>(req, "ModifyAutoRenewFlag")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

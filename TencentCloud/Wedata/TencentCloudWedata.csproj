@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1079</VersionPrefix>
+    <VersionPrefix>3.0.1080</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -409,6 +409,8 @@
     <Compile Include="V20210820\Models\DescribeTableMetaResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTableMetasRequest.cs" />
     <Compile Include="V20210820\Models\DescribeTableMetasResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeTablePartitionsRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeTablePartitionsResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTableQualityDetailsRequest.cs" />
     <Compile Include="V20210820\Models\DescribeTableQualityDetailsResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTableSchemaInfoRequest.cs" />
@@ -712,6 +714,7 @@
     <Compile Include="V20210820\Models\TableMeta.cs" />
     <Compile Include="V20210820\Models\TableMetaProperty.cs" />
     <Compile Include="V20210820\Models\TableNameFilter.cs" />
+    <Compile Include="V20210820\Models\TablePartition.cs" />
     <Compile Include="V20210820\Models\TablePropertyScore.cs" />
     <Compile Include="V20210820\Models\TableQualityDetail.cs" />
     <Compile Include="V20210820\Models\TableQualityDetailPage.cs" />

@@ -62,6 +62,20 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("ObjectHasNewAction")]
         public bool? ObjectHasNewAction{ get; set; }
 
+        /// <summary>
+        /// 对应在平台架构图中的资源类型名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ObjectPlatformName")]
+        public string ObjectPlatformName{ get; set; }
+
+        /// <summary>
+        /// 1：平台支持的对象 2：应用支持的部分对象
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ObjectSupportType")]
+        public long? ObjectSupportType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +88,8 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamObj(map, prefix + "ObjectTypeParams.", this.ObjectTypeParams);
             this.SetParamObj(map, prefix + "ObjectTypeJsonParse.", this.ObjectTypeJsonParse);
             this.SetParamSimple(map, prefix + "ObjectHasNewAction", this.ObjectHasNewAction);
+            this.SetParamSimple(map, prefix + "ObjectPlatformName", this.ObjectPlatformName);
+            this.SetParamSimple(map, prefix + "ObjectSupportType", this.ObjectSupportType);
         }
     }
 }

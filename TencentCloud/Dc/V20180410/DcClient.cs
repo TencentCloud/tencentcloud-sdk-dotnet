@@ -28,7 +28,7 @@ namespace TencentCloud.Dc.V20180410
 
        private const string endpoint = "dc.tencentcloudapi.com";
        private const string version = "2018-04-10";
-       private const string sdkVersion = "SDK_NET_3.0.1079";
+       private const string sdkVersion = "SDK_NET_3.0.1080";
 
         /// <summary>
         /// Client constructor.
@@ -144,8 +144,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// 删除物理专线。
-        /// 只能删除处于已连接状态的物理专线。
+        /// 删除物理专线。只能删除处于已连接状态的物理专线。
         /// </summary>
         /// <param name="req"><see cref="DeleteDirectConnectRequest"/></param>
         /// <returns><see cref="DeleteDirectConnectResponse"/></returns>
@@ -155,8 +154,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// 删除物理专线。
-        /// 只能删除处于已连接状态的物理专线。
+        /// 删除物理专线。只能删除处于已连接状态的物理专线。
         /// </summary>
         /// <param name="req"><see cref="DeleteDirectConnectRequest"/></param>
         /// <returns><see cref="DeleteDirectConnectResponse"/></returns>
@@ -167,7 +165,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// 删除专用通道
+        /// 删除专用通道。
         /// </summary>
         /// <param name="req"><see cref="DeleteDirectConnectTunnelRequest"/></param>
         /// <returns><see cref="DeleteDirectConnectTunnelResponse"/></returns>
@@ -177,7 +175,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// 删除专用通道
+        /// 删除专用通道。
         /// </summary>
         /// <param name="req"><see cref="DeleteDirectConnectTunnelRequest"/></param>
         /// <returns><see cref="DeleteDirectConnectTunnelResponse"/></returns>
@@ -419,7 +417,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// 修改专用通道属性
+        /// 修改专用通道属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyDirectConnectTunnelAttributeRequest"/></param>
         /// <returns><see cref="ModifyDirectConnectTunnelAttributeResponse"/></returns>
@@ -429,7 +427,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// 修改专用通道属性
+        /// 修改专用通道属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyDirectConnectTunnelAttributeRequest"/></param>
         /// <returns><see cref="ModifyDirectConnectTunnelAttributeResponse"/></returns>

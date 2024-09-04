@@ -38,7 +38,7 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 负载均衡实例的网络类型：
-        /// Public：公网属性， Private：内网属性。
+        /// OPEN：公网属性，INTERNAL：内网属性。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoadBalancerType")]
@@ -297,6 +297,28 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Egress")]
         public string Egress{ get; set; }
 
+        /// <summary>
+        /// 负载均衡的属性
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AttributeFlags")]
+        public string[] AttributeFlags{ get; set; }
+
+        /// <summary>
+        /// 负载均衡实例的规格类型信息<ul><li> clb.c1.small：简约型规格 </li><li>clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>""：非性能容量型实例</li></ul>
+        /// 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SlaType")]
+        public string SlaType{ get; set; }
+
+        /// <summary>
+        /// 0：表示非独占型实例，1：表示独占型态实例。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Exclusive")]
+        public ulong? Exclusive{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -342,6 +364,9 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
             this.SetParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
             this.SetParamSimple(map, prefix + "Egress", this.Egress);
+            this.SetParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
+            this.SetParamSimple(map, prefix + "SlaType", this.SlaType);
+            this.SetParamSimple(map, prefix + "Exclusive", this.Exclusive);
         }
     }
 }

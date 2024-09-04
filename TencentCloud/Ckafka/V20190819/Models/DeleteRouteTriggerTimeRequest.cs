@@ -25,6 +25,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
+        /// 实例id
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
         /// 修改时间
         /// </summary>
         [JsonProperty("DelayTime")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "DelayTime", this.DelayTime);
         }
     }

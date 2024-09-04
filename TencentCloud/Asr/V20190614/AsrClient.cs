@@ -28,7 +28,7 @@ namespace TencentCloud.Asr.V20190614
 
        private const string endpoint = "asr.tencentcloudapi.com";
        private const string version = "2019-06-14";
-       private const string sdkVersion = "SDK_NET_3.0.1079";
+       private const string sdkVersion = "SDK_NET_3.0.1080";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,35 @@ namespace TencentCloud.Asr.V20190614
         public CloseAsyncRecognitionTaskResponse CloseAsyncRecognitionTaskSync(CloseAsyncRecognitionTaskRequest req)
         {
             return InternalRequestAsync<CloseAsyncRecognitionTaskResponse>(req, "CloseAsyncRecognitionTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用户通过本接口进行关键字词表的创建。
+        /// <br>•   默认每个用户最多可创建30个关键字词表。
+        /// <br>•   每个关键词词表最多可添加100个词，每个词最多5个汉字或15个字符。
+        /// <br>•   词表通过本地文件形式上传。
+        /// <br>•   本地文件必须为UTF-8编码格式，每行仅添加一个词且不能包含标点和特殊字符。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAsrKeyWordLibRequest"/></param>
+        /// <returns><see cref="CreateAsrKeyWordLibResponse"/></returns>
+        public Task<CreateAsrKeyWordLibResponse> CreateAsrKeyWordLib(CreateAsrKeyWordLibRequest req)
+        {
+            return InternalRequestAsync<CreateAsrKeyWordLibResponse>(req, "CreateAsrKeyWordLib");
+        }
+
+        /// <summary>
+        /// 用户通过本接口进行关键字词表的创建。
+        /// <br>•   默认每个用户最多可创建30个关键字词表。
+        /// <br>•   每个关键词词表最多可添加100个词，每个词最多5个汉字或15个字符。
+        /// <br>•   词表通过本地文件形式上传。
+        /// <br>•   本地文件必须为UTF-8编码格式，每行仅添加一个词且不能包含标点和特殊字符。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAsrKeyWordLibRequest"/></param>
+        /// <returns><see cref="CreateAsrKeyWordLibResponse"/></returns>
+        public CreateAsrKeyWordLibResponse CreateAsrKeyWordLibSync(CreateAsrKeyWordLibRequest req)
+        {
+            return InternalRequestAsync<CreateAsrKeyWordLibResponse>(req, "CreateAsrKeyWordLib")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -199,6 +228,27 @@ namespace TencentCloud.Asr.V20190614
         public CreateRecTaskResponse CreateRecTaskSync(CreateRecTaskRequest req)
         {
             return InternalRequestAsync<CreateRecTaskResponse>(req, "CreateRecTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用户通过本接口进行关键词表的删除。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAsrKeyWordLibRequest"/></param>
+        /// <returns><see cref="DeleteAsrKeyWordLibResponse"/></returns>
+        public Task<DeleteAsrKeyWordLibResponse> DeleteAsrKeyWordLib(DeleteAsrKeyWordLibRequest req)
+        {
+            return InternalRequestAsync<DeleteAsrKeyWordLibResponse>(req, "DeleteAsrKeyWordLib");
+        }
+
+        /// <summary>
+        /// 用户通过本接口进行关键词表的删除。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAsrKeyWordLibRequest"/></param>
+        /// <returns><see cref="DeleteAsrKeyWordLibResponse"/></returns>
+        public DeleteAsrKeyWordLibResponse DeleteAsrKeyWordLibSync(DeleteAsrKeyWordLibRequest req)
+        {
+            return InternalRequestAsync<DeleteAsrKeyWordLibResponse>(req, "DeleteAsrKeyWordLib")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -339,6 +389,27 @@ namespace TencentCloud.Asr.V20190614
         public DownloadCustomizationResponse DownloadCustomizationSync(DownloadCustomizationRequest req)
         {
             return InternalRequestAsync<DownloadCustomizationResponse>(req, "DownloadCustomization")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用户通过该接口，可获得所有的关键词表及其信息。
+        /// </summary>
+        /// <param name="req"><see cref="GetAsrKeyWordLibListRequest"/></param>
+        /// <returns><see cref="GetAsrKeyWordLibListResponse"/></returns>
+        public Task<GetAsrKeyWordLibListResponse> GetAsrKeyWordLibList(GetAsrKeyWordLibListRequest req)
+        {
+            return InternalRequestAsync<GetAsrKeyWordLibListResponse>(req, "GetAsrKeyWordLibList");
+        }
+
+        /// <summary>
+        /// 用户通过该接口，可获得所有的关键词表及其信息。
+        /// </summary>
+        /// <param name="req"><see cref="GetAsrKeyWordLibListRequest"/></param>
+        /// <returns><see cref="GetAsrKeyWordLibListResponse"/></returns>
+        public GetAsrKeyWordLibListResponse GetAsrKeyWordLibListSync(GetAsrKeyWordLibListRequest req)
+        {
+            return InternalRequestAsync<GetAsrKeyWordLibListResponse>(req, "GetAsrKeyWordLibList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -519,6 +590,27 @@ namespace TencentCloud.Asr.V20190614
         public SetVocabStateResponse SetVocabStateSync(SetVocabStateRequest req)
         {
             return InternalRequestAsync<SetVocabStateResponse>(req, "SetVocabState")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用户通过本接口进行对应的关键词表信息更新。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAsrKeyWordLibRequest"/></param>
+        /// <returns><see cref="UpdateAsrKeyWordLibResponse"/></returns>
+        public Task<UpdateAsrKeyWordLibResponse> UpdateAsrKeyWordLib(UpdateAsrKeyWordLibRequest req)
+        {
+            return InternalRequestAsync<UpdateAsrKeyWordLibResponse>(req, "UpdateAsrKeyWordLib");
+        }
+
+        /// <summary>
+        /// 用户通过本接口进行对应的关键词表信息更新。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAsrKeyWordLibRequest"/></param>
+        /// <returns><see cref="UpdateAsrKeyWordLibResponse"/></returns>
+        public UpdateAsrKeyWordLibResponse UpdateAsrKeyWordLibSync(UpdateAsrKeyWordLibRequest req)
+        {
+            return InternalRequestAsync<UpdateAsrKeyWordLibResponse>(req, "UpdateAsrKeyWordLib")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

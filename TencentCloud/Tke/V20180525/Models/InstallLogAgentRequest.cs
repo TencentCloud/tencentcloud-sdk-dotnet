@@ -36,6 +36,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("KubeletRootDir")]
         public string KubeletRootDir{ get; set; }
 
+        /// <summary>
+        /// 集群类型 tke/eks，默认tke
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public string ClusterType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tke.V20180525.Models
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "KubeletRootDir", this.KubeletRootDir);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
         }
     }
 }

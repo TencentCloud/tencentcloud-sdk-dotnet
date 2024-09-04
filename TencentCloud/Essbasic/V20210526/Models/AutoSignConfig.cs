@@ -55,9 +55,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public bool? SealImgCallback{ get; set; }
 
         /// <summary>
-        /// 回调链接，如果渠道已经配置了，可以不传
+        /// 该字段已废弃，请使用【应用号配置】中的回调地址统一接口消息
         /// </summary>
         [JsonProperty("CallbackUrl")]
+        [System.Obsolete]
         public string CallbackUrl{ get; set; }
 
         /// <summary>

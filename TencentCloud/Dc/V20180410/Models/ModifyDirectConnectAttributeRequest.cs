@@ -25,7 +25,7 @@ namespace TencentCloud.Dc.V20180410.Models
     {
         
         /// <summary>
-        /// 物理专线的ID。
+        /// 物理专线ID。
         /// </summary>
         [JsonProperty("DirectConnectId")]
         public string DirectConnectId{ get; set; }
@@ -91,13 +91,13 @@ namespace TencentCloud.Dc.V20180410.Models
         public string FaultReportContactNumber{ get; set; }
 
         /// <summary>
-        /// 物理专线申请者补签用户使用协议
+        /// 物理专线申请者补签用户使用协议。
         /// </summary>
         [JsonProperty("SignLaw")]
         public bool? SignLaw{ get; set; }
 
         /// <summary>
-        /// 物理专线带宽
+        /// 物理专线带宽。
         /// </summary>
         [JsonProperty("Bandwidth")]
         public ulong? Bandwidth{ get; set; }

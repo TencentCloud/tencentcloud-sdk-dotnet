@@ -37,7 +37,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string TagValue{ get; set; }
 
         /// <summary>
-        /// 1表示只输入标签的键，没有输入值；0表示输入键时且输入值
+        /// 1表示只输入标签的键，没有输入值；非1则表示输入键时且输入值
         /// </summary>
         [JsonProperty("AllValue")]
         public long? AllValue{ get; set; }

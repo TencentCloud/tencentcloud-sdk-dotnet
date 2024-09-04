@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1079";
+       private const string sdkVersion = "SDK_NET_3.0.1080";
 
         /// <summary>
         /// Client constructor.
@@ -3227,6 +3227,27 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeTableMetasResponse DescribeTableMetasSync(DescribeTableMetasRequest req)
         {
             return InternalRequestAsync<DescribeTableMetasResponse>(req, "DescribeTableMetas")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询表的分区详情信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTablePartitionsRequest"/></param>
+        /// <returns><see cref="DescribeTablePartitionsResponse"/></returns>
+        public Task<DescribeTablePartitionsResponse> DescribeTablePartitions(DescribeTablePartitionsRequest req)
+        {
+            return InternalRequestAsync<DescribeTablePartitionsResponse>(req, "DescribeTablePartitions");
+        }
+
+        /// <summary>
+        /// 查询表的分区详情信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTablePartitionsRequest"/></param>
+        /// <returns><see cref="DescribeTablePartitionsResponse"/></returns>
+        public DescribeTablePartitionsResponse DescribeTablePartitionsSync(DescribeTablePartitionsRequest req)
+        {
+            return InternalRequestAsync<DescribeTablePartitionsResponse>(req, "DescribeTablePartitions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

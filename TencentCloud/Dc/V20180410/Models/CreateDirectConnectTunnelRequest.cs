@@ -44,7 +44,7 @@ namespace TencentCloud.Dc.V20180410.Models
         public string DirectConnectOwnerAccount{ get; set; }
 
         /// <summary>
-        /// 网络类型，枚举：VPC、BMVPC、CCN；默认为VPC。VPC：私有网络；BMVPC：黑石网络；CCN：云联网）。
+        /// 网络类型，枚举：VPC、CCN、NAT；默认为VPC。VPC：私有网络；CCN：云联网；NAT：NAT网络）。
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
@@ -56,7 +56,7 @@ namespace TencentCloud.Dc.V20180410.Models
         public string NetworkRegion{ get; set; }
 
         /// <summary>
-        /// 私有网络统一ID或黑石网络统一ID。
+        /// 私有网络统一ID，在NetworkType为VPC时必填，且与专线网关所属的VPCID一致；NetworkType为其它组网类型时可不填，内部会统一处理。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -146,6 +146,12 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("NqaInfo")]
         public NQAInfo NqaInfo{ get; set; }
 
+        /// <summary>
+        /// 标签键值对
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -172,6 +178,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "NqaEnable", this.NqaEnable);
             this.SetParamObj(map, prefix + "BfdInfo.", this.BfdInfo);
             this.SetParamObj(map, prefix + "NqaInfo.", this.NqaInfo);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

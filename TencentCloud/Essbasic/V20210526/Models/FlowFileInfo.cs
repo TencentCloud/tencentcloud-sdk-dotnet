@@ -61,9 +61,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string FlowType{ get; set; }
 
         /// <summary>
-        /// 签署流程回调地址，长度不超过255个字符
+        /// 已废弃，请使用【应用号配置】中的回调地址统一接收消息
         /// </summary>
         [JsonProperty("CallbackUrl")]
+        [System.Obsolete]
         public string CallbackUrl{ get; set; }
 
         /// <summary>

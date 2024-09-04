@@ -28,7 +28,7 @@ namespace TencentCloud.Es.V20180416
 
        private const string endpoint = "es.tencentcloudapi.com";
        private const string version = "2018-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.1079";
+       private const string sdkVersion = "SDK_NET_3.0.1080";
 
         /// <summary>
         /// Client constructor.
@@ -766,6 +766,27 @@ namespace TencentCloud.Es.V20180416
         public InquirePriceRenewInstanceResponse InquirePriceRenewInstanceSync(InquirePriceRenewInstanceRequest req)
         {
             return InternalRequestAsync<InquirePriceRenewInstanceResponse>(req, "InquirePriceRenewInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// ES集群安装模型接口
+        /// </summary>
+        /// <param name="req"><see cref="InstallInstanceModelRequest"/></param>
+        /// <returns><see cref="InstallInstanceModelResponse"/></returns>
+        public Task<InstallInstanceModelResponse> InstallInstanceModel(InstallInstanceModelRequest req)
+        {
+            return InternalRequestAsync<InstallInstanceModelResponse>(req, "InstallInstanceModel");
+        }
+
+        /// <summary>
+        /// ES集群安装模型接口
+        /// </summary>
+        /// <param name="req"><see cref="InstallInstanceModelRequest"/></param>
+        /// <returns><see cref="InstallInstanceModelResponse"/></returns>
+        public InstallInstanceModelResponse InstallInstanceModelSync(InstallInstanceModelRequest req)
+        {
+            return InternalRequestAsync<InstallInstanceModelResponse>(req, "InstallInstanceModel")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

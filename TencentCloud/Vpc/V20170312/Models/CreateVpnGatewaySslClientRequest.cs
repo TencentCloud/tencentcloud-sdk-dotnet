@@ -42,6 +42,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("SslVpnClientNames")]
         public string[] SslVpnClientNames{ get; set; }
 
+        /// <summary>
+        /// 指定绑定的标签列表
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "SslVpnServerId", this.SslVpnServerId);
             this.SetParamSimple(map, prefix + "SslVpnClientName", this.SslVpnClientName);
             this.SetParamArraySimple(map, prefix + "SslVpnClientNames.", this.SslVpnClientNames);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

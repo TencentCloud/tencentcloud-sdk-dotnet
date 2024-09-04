@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{30E1AC6A-DB82-3A63-BE17-56AB4B24E00E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1079</VersionPrefix>
+    <VersionPrefix>3.0.1080</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -199,6 +199,7 @@
     <Compile Include="V20211228\Models\ScaleOutInstanceResponse.cs" />
     <Compile Include="V20211228\Models\ScaleUpInstanceRequest.cs" />
     <Compile Include="V20211228\Models\ScaleUpInstanceResponse.cs" />
+    <Compile Include="V20211228\Models\ScheduleInfo.cs" />
     <Compile Include="V20211228\Models\SearchTags.cs" />
     <Compile Include="V20211228\Models\SlowQueryRecord.cs" />
     <Compile Include="V20211228\Models\Tag.cs" />

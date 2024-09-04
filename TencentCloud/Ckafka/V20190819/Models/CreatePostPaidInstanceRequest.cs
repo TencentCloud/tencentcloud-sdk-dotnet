@@ -67,7 +67,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string KafkaVersion{ get; set; }
 
         /// <summary>
-        /// 实例类型。"standard"：标准版，"profession"：专业版
+        /// 实例类型。"standard"：标准版，"profession"：专业版。  (标准版仅国际站支持，国内站目前支持专业版)
         /// </summary>
         [JsonProperty("SpecificationsType")]
         public string SpecificationsType{ get; set; }
@@ -132,6 +132,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("PublicNetworkMonthly")]
         public long? PublicNetworkMonthly{ get; set; }
 
+        /// <summary>
+        /// 标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
             this.SetParamSimple(map, prefix + "InstanceNum", this.InstanceNum);
             this.SetParamSimple(map, prefix + "PublicNetworkMonthly", this.PublicNetworkMonthly);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

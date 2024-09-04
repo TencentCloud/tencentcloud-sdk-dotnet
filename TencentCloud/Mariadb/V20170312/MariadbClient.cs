@@ -28,7 +28,7 @@ namespace TencentCloud.Mariadb.V20170312
 
        private const string endpoint = "mariadb.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1079";
+       private const string sdkVersion = "SDK_NET_3.0.1080";
 
         /// <summary>
         /// Client constructor.
@@ -390,6 +390,27 @@ namespace TencentCloud.Mariadb.V20170312
         public DescribeBackupTimeResponse DescribeBackupTimeSync(DescribeBackupTimeRequest req)
         {
             return InternalRequestAsync<DescribeBackupTimeResponse>(req, "DescribeBackupTime")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBinlogTime）用于查询可回档时间范围。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBinlogTimeRequest"/></param>
+        /// <returns><see cref="DescribeBinlogTimeResponse"/></returns>
+        public Task<DescribeBinlogTimeResponse> DescribeBinlogTime(DescribeBinlogTimeRequest req)
+        {
+            return InternalRequestAsync<DescribeBinlogTimeResponse>(req, "DescribeBinlogTime");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBinlogTime）用于查询可回档时间范围。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBinlogTimeRequest"/></param>
+        /// <returns><see cref="DescribeBinlogTimeResponse"/></returns>
+        public DescribeBinlogTimeResponse DescribeBinlogTimeSync(DescribeBinlogTimeRequest req)
+        {
+            return InternalRequestAsync<DescribeBinlogTimeResponse>(req, "DescribeBinlogTime")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

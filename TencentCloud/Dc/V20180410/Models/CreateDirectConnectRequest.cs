@@ -138,6 +138,12 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("SignLaw")]
         public bool? SignLaw{ get; set; }
 
+        /// <summary>
+        /// 标签键值对
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -161,6 +167,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "FaultReportContactPerson", this.FaultReportContactPerson);
             this.SetParamSimple(map, prefix + "FaultReportContactNumber", this.FaultReportContactNumber);
             this.SetParamSimple(map, prefix + "SignLaw", this.SignLaw);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

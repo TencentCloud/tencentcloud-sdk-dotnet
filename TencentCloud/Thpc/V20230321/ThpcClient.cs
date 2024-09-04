@@ -28,7 +28,7 @@ namespace TencentCloud.Thpc.V20230321
 
        private const string endpoint = "thpc.tencentcloudapi.com";
        private const string version = "2023-03-21";
-       private const string sdkVersion = "SDK_NET_3.0.1079";
+       private const string sdkVersion = "SDK_NET_3.0.1080";
 
         /// <summary>
         /// Client constructor.
@@ -163,6 +163,27 @@ namespace TencentCloud.Thpc.V20230321
         public CreateClusterResponse CreateClusterSync(CreateClusterRequest req)
         {
             return InternalRequestAsync<CreateClusterResponse>(req, "CreateCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 (CreateWorkspaces) 用于创建工作空间。
+        /// </summary>
+        /// <param name="req"><see cref="CreateWorkspacesRequest"/></param>
+        /// <returns><see cref="CreateWorkspacesResponse"/></returns>
+        public Task<CreateWorkspacesResponse> CreateWorkspaces(CreateWorkspacesRequest req)
+        {
+            return InternalRequestAsync<CreateWorkspacesResponse>(req, "CreateWorkspaces");
+        }
+
+        /// <summary>
+        /// 本接口 (CreateWorkspaces) 用于创建工作空间。
+        /// </summary>
+        /// <param name="req"><see cref="CreateWorkspacesRequest"/></param>
+        /// <returns><see cref="CreateWorkspacesResponse"/></returns>
+        public CreateWorkspacesResponse CreateWorkspacesSync(CreateWorkspacesRequest req)
+        {
+            return InternalRequestAsync<CreateWorkspacesResponse>(req, "CreateWorkspaces")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

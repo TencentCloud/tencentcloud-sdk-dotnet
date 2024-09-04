@@ -25,6 +25,29 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     {
         
         /// <summary>
+        /// 实例id
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// GetUsers：获取用户列表；
+        /// GetDatabases：获取数据库列表；
+        /// GetTables：获取数据库表列表；
+        /// GetUserPrivilegesV2：获取用户下的权限，粒度到表级别；
+        /// DeleteUser：删除用户；
+        /// GetCatalog：获取Catalog列表；
+        /// </summary>
+        [JsonProperty("ApiType")]
+        public string ApiType{ get; set; }
+
+        /// <summary>
+        /// 用户名称
+        /// </summary>
+        [JsonProperty("UserName")]
+        public string UserName{ get; set; }
+
+        /// <summary>
         /// 用户链接来自的 IP
         /// </summary>
         [JsonProperty("WhiteHost")]
@@ -60,6 +83,9 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ApiType", this.ApiType);
+            this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "WhiteHost", this.WhiteHost);
             this.SetParamSimple(map, prefix + "Catalog", this.Catalog);
             this.SetParamArraySimple(map, prefix + "Catalogs.", this.Catalogs);

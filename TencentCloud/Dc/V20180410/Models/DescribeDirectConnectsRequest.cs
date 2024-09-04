@@ -25,25 +25,25 @@ namespace TencentCloud.Dc.V20180410.Models
     {
         
         /// <summary>
-        /// 过滤条件:
+        /// 过滤条件。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 物理专线 ID数组
+        /// 物理专线 ID数组。
         /// </summary>
         [JsonProperty("DirectConnectIds")]
         public string[] DirectConnectIds{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0
+        /// 偏移量，默认为0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为20，最大值为100
+        /// 返回数量，默认为20，最大值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

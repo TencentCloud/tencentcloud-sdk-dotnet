@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1079";
+       private const string sdkVersion = "SDK_NET_3.0.1080";
 
         /// <summary>
         /// Client constructor.
@@ -684,7 +684,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 删除预付费实例
+        /// 删除预付费实例，该接口会对实例执行隔离并删除的动作，执行成功后实例会被直接删除销毁
         /// </summary>
         /// <param name="req"><see cref="DeleteInstancePreRequest"/></param>
         /// <returns><see cref="DeleteInstancePreResponse"/></returns>
@@ -694,7 +694,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 删除预付费实例
+        /// 删除预付费实例，该接口会对实例执行隔离并删除的动作，执行成功后实例会被直接删除销毁
         /// </summary>
         /// <param name="req"><see cref="DeleteInstancePreRequest"/></param>
         /// <returns><see cref="DeleteInstancePreResponse"/></returns>

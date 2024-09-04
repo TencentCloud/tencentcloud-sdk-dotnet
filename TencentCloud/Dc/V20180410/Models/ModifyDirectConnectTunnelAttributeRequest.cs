@@ -25,37 +25,37 @@ namespace TencentCloud.Dc.V20180410.Models
     {
         
         /// <summary>
-        /// 专用通道ID
+        /// 专用通道ID。
         /// </summary>
         [JsonProperty("DirectConnectTunnelId")]
         public string DirectConnectTunnelId{ get; set; }
 
         /// <summary>
-        /// 专用通道名称
+        /// 专用通道名称。
         /// </summary>
         [JsonProperty("DirectConnectTunnelName")]
         public string DirectConnectTunnelName{ get; set; }
 
         /// <summary>
-        /// 用户侧BGP，包括Asn，AuthKey
+        /// 用户侧BGP，包括Asn，AuthKey。
         /// </summary>
         [JsonProperty("BgpPeer")]
         public BgpPeer BgpPeer{ get; set; }
 
         /// <summary>
-        /// 用户侧网段地址
+        /// 用户侧网段地址。
         /// </summary>
         [JsonProperty("RouteFilterPrefixes")]
         public RouteFilterPrefix[] RouteFilterPrefixes{ get; set; }
 
         /// <summary>
-        /// 腾讯侧互联IP
+        /// 腾讯侧互联IP。
         /// </summary>
         [JsonProperty("TencentAddress")]
         public string TencentAddress{ get; set; }
 
         /// <summary>
-        /// 用户侧互联IP
+        /// 用户侧互联IP。
         /// </summary>
         [JsonProperty("CustomerAddress")]
         public string CustomerAddress{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Dc.V20180410.Models
         public long? Bandwidth{ get; set; }
 
         /// <summary>
-        /// 腾讯侧备用互联IP
+        /// 腾讯侧备用互联IP。
         /// </summary>
         [JsonProperty("TencentBackupAddress")]
         public string TencentBackupAddress{ get; set; }

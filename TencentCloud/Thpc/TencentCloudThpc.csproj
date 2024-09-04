@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B259DC45-AEEA-3779-9220-C0A0DBFA50EF}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1079</VersionPrefix>
+    <VersionPrefix>3.0.1080</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -154,6 +154,8 @@
     <Compile Include="V20230321\Models\ComputeNodeOverview.cs" />
     <Compile Include="V20230321\Models\CreateClusterRequest.cs" />
     <Compile Include="V20230321\Models\CreateClusterResponse.cs" />
+    <Compile Include="V20230321\Models\CreateWorkspacesRequest.cs" />
+    <Compile Include="V20230321\Models\CreateWorkspacesResponse.cs" />
     <Compile Include="V20230321\Models\DataDisk.cs" />
     <Compile Include="V20230321\Models\DeleteClusterRequest.cs" />
     <Compile Include="V20230321\Models\DeleteClusterResponse.cs" />
@@ -208,10 +210,17 @@
     <Compile Include="V20230321\Models\RunSecurityServiceEnabled.cs" />
     <Compile Include="V20230321\Models\SetAutoScalingConfigurationRequest.cs" />
     <Compile Include="V20230321\Models\SetAutoScalingConfigurationResponse.cs" />
+    <Compile Include="V20230321\Models\SpaceChargePrepaid.cs" />
+    <Compile Include="V20230321\Models\SpaceDataDisk.cs" />
+    <Compile Include="V20230321\Models\SpaceInternetAccessible.cs" />
+    <Compile Include="V20230321\Models\SpacePlacement.cs" />
+    <Compile Include="V20230321\Models\SpaceSystemDisk.cs" />
+    <Compile Include="V20230321\Models\SpaceVirtualPrivateCloud.cs" />
     <Compile Include="V20230321\Models\StorageOption.cs" />
     <Compile Include="V20230321\Models\StorageOptionOverview.cs" />
     <Compile Include="V20230321\Models\SystemDisk.cs" />
     <Compile Include="V20230321\Models\Tag.cs" />
+    <Compile Include="V20230321\Models\TagSpecification.cs" />
     <Compile Include="V20230321\Models\VirtualPrivateCloud.cs" />
   </ItemGroup>
 </Project>
