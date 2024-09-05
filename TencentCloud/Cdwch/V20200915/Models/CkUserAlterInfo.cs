@@ -37,7 +37,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 密码
+        /// base64加密后的密码
         /// </summary>
         [JsonProperty("PassWord")]
         public string PassWord{ get; set; }

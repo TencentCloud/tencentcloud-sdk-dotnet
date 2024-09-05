@@ -28,7 +28,7 @@ namespace TencentCloud.Aiart.V20221229
 
        private const string endpoint = "aiart.tencentcloudapi.com";
        private const string version = "2022-12-29";
-       private const string sdkVersion = "SDK_NET_3.0.1081";
+       private const string sdkVersion = "SDK_NET_3.0.1082";
 
         /// <summary>
         /// Client constructor.

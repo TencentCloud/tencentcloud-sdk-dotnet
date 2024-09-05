@@ -60,6 +60,12 @@ namespace TencentCloud.Vclm.V20240523.Models
         [JsonProperty("LipSync")]
         public long? LipSync{ get; set; }
 
+        /// <summary>
+        /// 音色 Id
+        /// </summary>
+        [JsonProperty("VoiceType")]
+        public string VoiceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Vclm.V20240523.Models
             this.SetParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
             this.SetParamSimple(map, prefix + "Confirm", this.Confirm);
             this.SetParamSimple(map, prefix + "LipSync", this.LipSync);
+            this.SetParamSimple(map, prefix + "VoiceType", this.VoiceType);
         }
     }
 }

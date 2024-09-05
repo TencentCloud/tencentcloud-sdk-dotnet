@@ -28,7 +28,7 @@ namespace TencentCloud.Vrs.V20200824
 
        private const string endpoint = "vrs.tencentcloudapi.com";
        private const string version = "2020-08-24";
-       private const string sdkVersion = "SDK_NET_3.0.1081";
+       private const string sdkVersion = "SDK_NET_3.0.1082";
 
         /// <summary>
         /// Client constructor.
@@ -180,6 +180,7 @@ namespace TencentCloud.Vrs.V20200824
         /// 本接口用于获取声音复刻训练文本信息。
         ///  请求方法为 HTTP POST , Content-Type为"application/json; charset=utf-8"
         /// • 签名方法参考 公共参数 中签名方法v3。
+        /// • 当复刻类型为一句话声音复刻时，生成的TextId有效期为7天，且在成功创建一次复刻任务后失效。
         /// </summary>
         /// <param name="req"><see cref="GetTrainingTextRequest"/></param>
         /// <returns><see cref="GetTrainingTextResponse"/></returns>
@@ -192,6 +193,7 @@ namespace TencentCloud.Vrs.V20200824
         /// 本接口用于获取声音复刻训练文本信息。
         ///  请求方法为 HTTP POST , Content-Type为"application/json; charset=utf-8"
         /// • 签名方法参考 公共参数 中签名方法v3。
+        /// • 当复刻类型为一句话声音复刻时，生成的TextId有效期为7天，且在成功创建一次复刻任务后失效。
         /// </summary>
         /// <param name="req"><see cref="GetTrainingTextRequest"/></param>
         /// <returns><see cref="GetTrainingTextResponse"/></returns>
