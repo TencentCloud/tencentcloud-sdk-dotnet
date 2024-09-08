@@ -42,6 +42,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 是否包含新控制台集群
+        /// </summary>
+        [JsonProperty("IncludeNew")]
+        public bool? IncludeNew{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "IncludeNew", this.IncludeNew);
         }
     }
 }

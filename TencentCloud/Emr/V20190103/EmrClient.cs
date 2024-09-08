@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1082";
+       private const string sdkVersion = "SDK_NET_3.0.1083";
 
         /// <summary>
         /// Client constructor.
@@ -178,6 +178,27 @@ namespace TencentCloud.Emr.V20190103
         public DeleteUserManagerUserListResponse DeleteUserManagerUserListSync(DeleteUserManagerUserListRequest req)
         {
             return InternalRequestAsync<DeleteUserManagerUserListResponse>(req, "DeleteUserManagerUserList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// yarn资源调度-部署生效
+        /// </summary>
+        /// <param name="req"><see cref="DeployYarnConfRequest"/></param>
+        /// <returns><see cref="DeployYarnConfResponse"/></returns>
+        public Task<DeployYarnConfResponse> DeployYarnConf(DeployYarnConfRequest req)
+        {
+            return InternalRequestAsync<DeployYarnConfResponse>(req, "DeployYarnConf");
+        }
+
+        /// <summary>
+        /// yarn资源调度-部署生效
+        /// </summary>
+        /// <param name="req"><see cref="DeployYarnConfRequest"/></param>
+        /// <returns><see cref="DeployYarnConfResponse"/></returns>
+        public DeployYarnConfResponse DeployYarnConfSync(DeployYarnConfRequest req)
+        {
+            return InternalRequestAsync<DeployYarnConfResponse>(req, "DeployYarnConf")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -518,7 +539,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 查询YARN资源调度数据信息
+        /// 查询YARN资源调度数据信息。已废弃，请使用`DescribeYarnQueue`去查询队列信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceScheduleRequest"/></param>
         /// <returns><see cref="DescribeResourceScheduleResponse"/></returns>
@@ -528,7 +549,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 查询YARN资源调度数据信息
+        /// 查询YARN资源调度数据信息。已废弃，请使用`DescribeYarnQueue`去查询队列信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceScheduleRequest"/></param>
         /// <returns><see cref="DescribeResourceScheduleResponse"/></returns>
@@ -625,7 +646,28 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 查看yarn资源调度的调度历史
+        /// 获取资源调度中的队列信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeYarnQueueRequest"/></param>
+        /// <returns><see cref="DescribeYarnQueueResponse"/></returns>
+        public Task<DescribeYarnQueueResponse> DescribeYarnQueue(DescribeYarnQueueRequest req)
+        {
+            return InternalRequestAsync<DescribeYarnQueueResponse>(req, "DescribeYarnQueue");
+        }
+
+        /// <summary>
+        /// 获取资源调度中的队列信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeYarnQueueRequest"/></param>
+        /// <returns><see cref="DescribeYarnQueueResponse"/></returns>
+        public DescribeYarnQueueResponse DescribeYarnQueueSync(DescribeYarnQueueRequest req)
+        {
+            return InternalRequestAsync<DescribeYarnQueueResponse>(req, "DescribeYarnQueue")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看yarn资源调度的调度历史。废弃，请使用流程中心查看历史记录。
         /// </summary>
         /// <param name="req"><see cref="DescribeYarnScheduleHistoryRequest"/></param>
         /// <returns><see cref="DescribeYarnScheduleHistoryResponse"/></returns>
@@ -635,7 +677,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 查看yarn资源调度的调度历史
+        /// 查看yarn资源调度的调度历史。废弃，请使用流程中心查看历史记录。
         /// </summary>
         /// <param name="req"><see cref="DescribeYarnScheduleHistoryRequest"/></param>
         /// <returns><see cref="DescribeYarnScheduleHistoryResponse"/></returns>
@@ -795,7 +837,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 刷新YARN的动态资源池
+        /// 刷新YARN的动态资源池。已废弃，请使用`DeployYarnConf`
         /// </summary>
         /// <param name="req"><see cref="ModifyResourcePoolsRequest"/></param>
         /// <returns><see cref="ModifyResourcePoolsResponse"/></returns>
@@ -805,7 +847,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 刷新YARN的动态资源池
+        /// 刷新YARN的动态资源池。已废弃，请使用`DeployYarnConf`
         /// </summary>
         /// <param name="req"><see cref="ModifyResourcePoolsRequest"/></param>
         /// <returns><see cref="ModifyResourcePoolsResponse"/></returns>
@@ -816,7 +858,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 修改YARN资源调度的资源配置
+        /// 修改YARN资源调度的资源配置。已废弃，请使用`ModifyYarnQueueV2`来修改队列配置
         /// </summary>
         /// <param name="req"><see cref="ModifyResourceScheduleConfigRequest"/></param>
         /// <returns><see cref="ModifyResourceScheduleConfigResponse"/></returns>
@@ -826,7 +868,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 修改YARN资源调度的资源配置
+        /// 修改YARN资源调度的资源配置。已废弃，请使用`ModifyYarnQueueV2`来修改队列配置
         /// </summary>
         /// <param name="req"><see cref="ModifyResourceScheduleConfigRequest"/></param>
         /// <returns><see cref="ModifyResourceScheduleConfigResponse"/></returns>
@@ -837,7 +879,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 修改了yarn的资源调度器，点击部署生效
+        /// 修改了yarn的资源调度器，点击部署生效。
         /// </summary>
         /// <param name="req"><see cref="ModifyResourceSchedulerRequest"/></param>
         /// <returns><see cref="ModifyResourceSchedulerResponse"/></returns>
@@ -847,7 +889,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 修改了yarn的资源调度器，点击部署生效
+        /// 修改了yarn的资源调度器，点击部署生效。
         /// </summary>
         /// <param name="req"><see cref="ModifyResourceSchedulerRequest"/></param>
         /// <returns><see cref="ModifyResourceSchedulerResponse"/></returns>
@@ -900,7 +942,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 部署生效
+        /// 部署生效。已废弃，请使用`DeployYarnConf`接口进行部署生效
         /// </summary>
         /// <param name="req"><see cref="ModifyYarnDeployRequest"/></param>
         /// <returns><see cref="ModifyYarnDeployResponse"/></returns>
@@ -910,13 +952,55 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 部署生效
+        /// 部署生效。已废弃，请使用`DeployYarnConf`接口进行部署生效
         /// </summary>
         /// <param name="req"><see cref="ModifyYarnDeployRequest"/></param>
         /// <returns><see cref="ModifyYarnDeployResponse"/></returns>
         public ModifyYarnDeployResponse ModifyYarnDeploySync(ModifyYarnDeployRequest req)
         {
             return InternalRequestAsync<ModifyYarnDeployResponse>(req, "ModifyYarnDeploy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改资源调度中队列信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyYarnQueueV2Request"/></param>
+        /// <returns><see cref="ModifyYarnQueueV2Response"/></returns>
+        public Task<ModifyYarnQueueV2Response> ModifyYarnQueueV2(ModifyYarnQueueV2Request req)
+        {
+            return InternalRequestAsync<ModifyYarnQueueV2Response>(req, "ModifyYarnQueueV2");
+        }
+
+        /// <summary>
+        /// 修改资源调度中队列信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyYarnQueueV2Request"/></param>
+        /// <returns><see cref="ModifyYarnQueueV2Response"/></returns>
+        public ModifyYarnQueueV2Response ModifyYarnQueueV2Sync(ModifyYarnQueueV2Request req)
+        {
+            return InternalRequestAsync<ModifyYarnQueueV2Response>(req, "ModifyYarnQueueV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改YARN资源调度的资源配置
+        /// </summary>
+        /// <param name="req"><see cref="ResetYarnConfigRequest"/></param>
+        /// <returns><see cref="ResetYarnConfigResponse"/></returns>
+        public Task<ResetYarnConfigResponse> ResetYarnConfig(ResetYarnConfigRequest req)
+        {
+            return InternalRequestAsync<ResetYarnConfigResponse>(req, "ResetYarnConfig");
+        }
+
+        /// <summary>
+        /// 修改YARN资源调度的资源配置
+        /// </summary>
+        /// <param name="req"><see cref="ResetYarnConfigRequest"/></param>
+        /// <returns><see cref="ResetYarnConfigResponse"/></returns>
+        public ResetYarnConfigResponse ResetYarnConfigSync(ResetYarnConfigRequest req)
+        {
+            return InternalRequestAsync<ResetYarnConfigResponse>(req, "ResetYarnConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

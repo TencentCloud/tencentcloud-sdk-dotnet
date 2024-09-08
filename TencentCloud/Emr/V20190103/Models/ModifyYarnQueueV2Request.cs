@@ -15,20 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Cfw.V20190904.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteVpcInstanceResponse : AbstractModel
+    public class ModifyYarnQueueV2Request : AbstractModel
     {
         
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 集群Id
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 调度器类型。可选值：
+        /// 
+        /// 1. capacity
+        /// 2. fair
+        /// </summary>
+        [JsonProperty("Scheduler")]
+        public string Scheduler{ get; set; }
+
+        /// <summary>
+        /// 资源池数据
+        /// </summary>
+        [JsonProperty("ConfigModifyInfoList")]
+        public ConfigModifyInfoV2[] ConfigModifyInfoList{ get; set; }
 
 
         /// <summary>
@@ -36,7 +51,9 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Scheduler", this.Scheduler);
+            this.SetParamArrayObj(map, prefix + "ConfigModifyInfoList.", this.ConfigModifyInfoList);
         }
     }
 }

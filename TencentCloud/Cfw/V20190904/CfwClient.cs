@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1082";
+       private const string sdkVersion = "SDK_NET_3.0.1083";
 
         /// <summary>
         /// Client constructor.
@@ -680,31 +680,6 @@ namespace TencentCloud.Cfw.V20190904
         public DeleteVpcFwGroupResponse DeleteVpcFwGroupSync(DeleteVpcFwGroupRequest req)
         {
             return InternalRequestAsync<DeleteVpcFwGroupResponse>(req, "DeleteVpcFwGroup")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 接口废弃
-        /// 
-        /// 删除防火墙实例
-        /// </summary>
-        /// <param name="req"><see cref="DeleteVpcInstanceRequest"/></param>
-        /// <returns><see cref="DeleteVpcInstanceResponse"/></returns>
-        public Task<DeleteVpcInstanceResponse> DeleteVpcInstance(DeleteVpcInstanceRequest req)
-        {
-            return InternalRequestAsync<DeleteVpcInstanceResponse>(req, "DeleteVpcInstance");
-        }
-
-        /// <summary>
-        /// 接口废弃
-        /// 
-        /// 删除防火墙实例
-        /// </summary>
-        /// <param name="req"><see cref="DeleteVpcInstanceRequest"/></param>
-        /// <returns><see cref="DeleteVpcInstanceResponse"/></returns>
-        public DeleteVpcInstanceResponse DeleteVpcInstanceSync(DeleteVpcInstanceRequest req)
-        {
-            return InternalRequestAsync<DeleteVpcInstanceResponse>(req, "DeleteVpcInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

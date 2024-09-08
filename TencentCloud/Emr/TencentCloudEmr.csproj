@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1082</VersionPrefix>
+    <VersionPrefix>3.0.1083</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -65,6 +65,8 @@
     <Compile Include="V20190103\Models\ClusterInstancesInfo.cs" />
     <Compile Include="V20190103\Models\ClusterSetting.cs" />
     <Compile Include="V20190103\Models\ComponentBasicRestartInfo.cs" />
+    <Compile Include="V20190103\Models\ConfigModifyInfoV2.cs" />
+    <Compile Include="V20190103\Models\ConfigSetInfo.cs" />
     <Compile Include="V20190103\Models\Configuration.cs" />
     <Compile Include="V20190103\Models\CreateClusterRequest.cs" />
     <Compile Include="V20190103\Models\CreateClusterResponse.cs" />
@@ -79,6 +81,8 @@
     <Compile Include="V20190103\Models\DeleteUserManagerUserListRequest.cs" />
     <Compile Include="V20190103\Models\DeleteUserManagerUserListResponse.cs" />
     <Compile Include="V20190103\Models\DependService.cs" />
+    <Compile Include="V20190103\Models\DeployYarnConfRequest.cs" />
+    <Compile Include="V20190103\Models\DeployYarnConfResponse.cs" />
     <Compile Include="V20190103\Models\DescribeAutoScaleGroupGlobalConfRequest.cs" />
     <Compile Include="V20190103\Models\DescribeAutoScaleGroupGlobalConfResponse.cs" />
     <Compile Include="V20190103\Models\DescribeAutoScaleRecordsRequest.cs" />
@@ -121,6 +125,8 @@
     <Compile Include="V20190103\Models\DescribeUsersForUserManagerResponse.cs" />
     <Compile Include="V20190103\Models\DescribeYarnApplicationsRequest.cs" />
     <Compile Include="V20190103\Models\DescribeYarnApplicationsResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeYarnQueueRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeYarnQueueResponse.cs" />
     <Compile Include="V20190103\Models\DescribeYarnScheduleHistoryRequest.cs" />
     <Compile Include="V20190103\Models\DescribeYarnScheduleHistoryResponse.cs" />
     <Compile Include="V20190103\Models\DiskGroup.cs" />
@@ -154,6 +160,8 @@
     <Compile Include="V20190103\Models\InquiryPriceUpdateInstanceResponse.cs" />
     <Compile Include="V20190103\Models\InsightResult.cs" />
     <Compile Include="V20190103\Models\InstanceChargePrepaid.cs" />
+    <Compile Include="V20190103\Models\Item.cs" />
+    <Compile Include="V20190103\Models\ItemSeq.cs" />
     <Compile Include="V20190103\Models\JobFlowResource.cs" />
     <Compile Include="V20190103\Models\JobFlowResourceSpec.cs" />
     <Compile Include="V20190103\Models\JobResult.cs" />
@@ -181,6 +189,8 @@
     <Compile Include="V20190103\Models\ModifyUserManagerPwdResponse.cs" />
     <Compile Include="V20190103\Models\ModifyYarnDeployRequest.cs" />
     <Compile Include="V20190103\Models\ModifyYarnDeployResponse.cs" />
+    <Compile Include="V20190103\Models\ModifyYarnQueueV2Request.cs" />
+    <Compile Include="V20190103\Models\ModifyYarnQueueV2Response.cs" />
     <Compile Include="V20190103\Models\MonthRepeatStrategy.cs" />
     <Compile Include="V20190103\Models\MultiDisk.cs" />
     <Compile Include="V20190103\Models\MultiDiskMC.cs" />
@@ -212,6 +222,8 @@
     <Compile Include="V20190103\Models\QuotaEntity.cs" />
     <Compile Include="V20190103\Models\RenewInstancesInfo.cs" />
     <Compile Include="V20190103\Models\RepeatStrategy.cs" />
+    <Compile Include="V20190103\Models\ResetYarnConfigRequest.cs" />
+    <Compile Include="V20190103\Models\ResetYarnConfigResponse.cs" />
     <Compile Include="V20190103\Models\Resource.cs" />
     <Compile Include="V20190103\Models\ResourceDetail.cs" />
     <Compile Include="V20190103\Models\RestartPolicy.cs" />

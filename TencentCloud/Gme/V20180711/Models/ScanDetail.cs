@@ -43,13 +43,13 @@ namespace TencentCloud.Gme.V20180711.Models
         public string KeyWord{ get; set; }
 
         /// <summary>
-        /// 关键字在音频的开始时间，从0开始的偏移量，单位为毫秒
+        /// 关键字在音频的开始时间，从0开始的偏移量，单位为毫秒，Label=moan时有效
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// 关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒
+        /// 关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒，Label=moan时有效
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }

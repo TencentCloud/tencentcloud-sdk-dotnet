@@ -25,17 +25,15 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// “H5”-H5长连接
-        /// "SHORT_H5"- H5短链
-        /// "APP"-小程序
-        /// "PC"-PC浏览器
-        /// 链接有效期统一30天
+        /// 生成的认证链接。
+        /// 
+        /// 注： `链接有效期统一30天`
         /// </summary>
         [JsonProperty("AuthUrl")]
         public string AuthUrl{ get; set; }
 
         /// <summary>
-        /// 链接过期时间戳
+        /// 链接过期时间，格式为Unix标准时间戳（秒）
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public long? ExpiredTime{ get; set; }

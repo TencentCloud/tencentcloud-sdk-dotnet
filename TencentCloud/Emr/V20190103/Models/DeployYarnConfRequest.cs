@@ -15,21 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Cfw.V20190904.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteVpcInstanceRequest : AbstractModel
+    public class DeployYarnConfRequest : AbstractModel
     {
         
+        /// <summary>
+        /// emr集群的英文id
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }
