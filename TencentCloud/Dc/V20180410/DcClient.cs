@@ -28,7 +28,7 @@ namespace TencentCloud.Dc.V20180410
 
        private const string endpoint = "dc.tencentcloudapi.com";
        private const string version = "2018-04-10";
-       private const string sdkVersion = "SDK_NET_3.0.1083";
+       private const string sdkVersion = "SDK_NET_3.0.1084";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// 接受专用通道申请
+        /// 接受专用通道申请。
         /// </summary>
         /// <param name="req"><see cref="AcceptDirectConnectTunnelRequest"/></param>
         /// <returns><see cref="AcceptDirectConnectTunnelResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// 接受专用通道申请
+        /// 接受专用通道申请。
         /// </summary>
         /// <param name="req"><see cref="AcceptDirectConnectTunnelRequest"/></param>
         /// <returns><see cref="AcceptDirectConnectTunnelResponse"/></returns>
@@ -186,7 +186,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// 查询物理专线接入点
+        /// 查询物理专线接入点。
         /// </summary>
         /// <param name="req"><see cref="DescribeAccessPointsRequest"/></param>
         /// <returns><see cref="DescribeAccessPointsResponse"/></returns>
@@ -196,7 +196,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// 查询物理专线接入点
+        /// 查询物理专线接入点。
         /// </summary>
         /// <param name="req"><see cref="DescribeAccessPointsRequest"/></param>
         /// <returns><see cref="DescribeAccessPointsResponse"/></returns>
@@ -207,7 +207,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// 本接口（DescribeDirectConnectTunnelExtra）用于查询专用通道扩展信息
+        /// 查询专用通道扩展信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeDirectConnectTunnelExtraRequest"/></param>
         /// <returns><see cref="DescribeDirectConnectTunnelExtraResponse"/></returns>
@@ -217,7 +217,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// 本接口（DescribeDirectConnectTunnelExtra）用于查询专用通道扩展信息
+        /// 查询专用通道扩展信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeDirectConnectTunnelExtraRequest"/></param>
         /// <returns><see cref="DescribeDirectConnectTunnelExtraResponse"/></returns>
@@ -459,7 +459,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// 拒绝专用通道申请
+        /// 拒绝专用通道申请。
         /// </summary>
         /// <param name="req"><see cref="RejectDirectConnectTunnelRequest"/></param>
         /// <returns><see cref="RejectDirectConnectTunnelResponse"/></returns>
@@ -469,7 +469,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// 拒绝专用通道申请
+        /// 拒绝专用通道申请。
         /// </summary>
         /// <param name="req"><see cref="RejectDirectConnectTunnelRequest"/></param>
         /// <returns><see cref="RejectDirectConnectTunnelResponse"/></returns>

@@ -79,6 +79,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("MaxUserConnections")]
         public ulong? MaxUserConnections{ get; set; }
 
+        /// <summary>
+        /// 使用GetPublicKey返回的RSA2048公钥加密后的密码
+        /// </summary>
+        [JsonProperty("EncryptedPassword")]
+        public string EncryptedPassword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +100,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "DelayThresh", this.DelayThresh);
             this.SetParamSimple(map, prefix + "SlaveConst", this.SlaveConst);
             this.SetParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
+            this.SetParamSimple(map, prefix + "EncryptedPassword", this.EncryptedPassword);
         }
     }
 }

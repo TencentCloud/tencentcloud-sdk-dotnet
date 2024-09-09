@@ -28,7 +28,7 @@ namespace TencentCloud.Rce.V20201103
 
        private const string endpoint = "rce.tencentcloudapi.com";
        private const string version = "2020-11-03";
-       private const string sdkVersion = "SDK_NET_3.0.1083";
+       private const string sdkVersion = "SDK_NET_3.0.1084";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Rce.V20201103
         }
 
         /// <summary>
-        /// 创建黑白名单列表的数据 包含列表名称 列表名单类型id 关联场景id 数据类型id 记录状态 备注 数据来源 手动输入数据或cos文件key
+        /// 创建黑白名单，黑白名单数量上限为100
         /// </summary>
         /// <param name="req"><see cref="CreateNameListRequest"/></param>
         /// <returns><see cref="CreateNameListResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Rce.V20201103
         }
 
         /// <summary>
-        /// 创建黑白名单列表的数据 包含列表名称 列表名单类型id 关联场景id 数据类型id 记录状态 备注 数据来源 手动输入数据或cos文件key
+        /// 创建黑白名单，黑白名单数量上限为100
         /// </summary>
         /// <param name="req"><see cref="CreateNameListRequest"/></param>
         /// <returns><see cref="CreateNameListResponse"/></returns>
@@ -180,7 +180,7 @@ namespace TencentCloud.Rce.V20201103
         }
 
         /// <summary>
-        /// 新增黑白名单详情数据 手动导入或批量导入
+        /// 新增黑白名单数据，所有黑白名单数据总量上限为10000
         /// </summary>
         /// <param name="req"><see cref="ImportNameListDataRequest"/></param>
         /// <returns><see cref="ImportNameListDataResponse"/></returns>
@@ -190,7 +190,7 @@ namespace TencentCloud.Rce.V20201103
         }
 
         /// <summary>
-        /// 新增黑白名单详情数据 手动导入或批量导入
+        /// 新增黑白名单数据，所有黑白名单数据总量上限为10000
         /// </summary>
         /// <param name="req"><see cref="ImportNameListDataRequest"/></param>
         /// <returns><see cref="ImportNameListDataResponse"/></returns>

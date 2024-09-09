@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1083";
+       private const string sdkVersion = "SDK_NET_3.0.1084";
 
         /// <summary>
         /// Client constructor.
@@ -1016,6 +1016,27 @@ namespace TencentCloud.Dlc.V20210125
         public DeleteSparkAppResponse DeleteSparkAppSync(DeleteSparkAppRequest req)
         {
             return InternalRequestAsync<DeleteSparkAppResponse>(req, "DeleteSparkApp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除表
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTableRequest"/></param>
+        /// <returns><see cref="DeleteTableResponse"/></returns>
+        public Task<DeleteTableResponse> DeleteTable(DeleteTableRequest req)
+        {
+            return InternalRequestAsync<DeleteTableResponse>(req, "DeleteTable");
+        }
+
+        /// <summary>
+        /// 删除表
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTableRequest"/></param>
+        /// <returns><see cref="DeleteTableResponse"/></returns>
+        public DeleteTableResponse DeleteTableSync(DeleteTableRequest req)
+        {
+            return InternalRequestAsync<DeleteTableResponse>(req, "DeleteTable")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2633,6 +2654,27 @@ namespace TencentCloud.Dlc.V20210125
         public ModifyWorkGroupResponse ModifyWorkGroupSync(ModifyWorkGroupRequest req)
         {
             return InternalRequestAsync<ModifyWorkGroupResponse>(req, "ModifyWorkGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（QueryInternalTableWarehouse）用于获取原生表warehouse路径
+        /// </summary>
+        /// <param name="req"><see cref="QueryInternalTableWarehouseRequest"/></param>
+        /// <returns><see cref="QueryInternalTableWarehouseResponse"/></returns>
+        public Task<QueryInternalTableWarehouseResponse> QueryInternalTableWarehouse(QueryInternalTableWarehouseRequest req)
+        {
+            return InternalRequestAsync<QueryInternalTableWarehouseResponse>(req, "QueryInternalTableWarehouse");
+        }
+
+        /// <summary>
+        /// 本接口（QueryInternalTableWarehouse）用于获取原生表warehouse路径
+        /// </summary>
+        /// <param name="req"><see cref="QueryInternalTableWarehouseRequest"/></param>
+        /// <returns><see cref="QueryInternalTableWarehouseResponse"/></returns>
+        public QueryInternalTableWarehouseResponse QueryInternalTableWarehouseSync(QueryInternalTableWarehouseRequest req)
+        {
+            return InternalRequestAsync<QueryInternalTableWarehouseResponse>(req, "QueryInternalTableWarehouse")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

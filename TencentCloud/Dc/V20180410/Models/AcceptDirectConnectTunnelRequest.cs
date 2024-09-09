@@ -25,7 +25,7 @@ namespace TencentCloud.Dc.V20180410.Models
     {
         
         /// <summary>
-        /// 物理专线拥有者接受共享专用通道申请
+        /// 专用通道ID。
         /// </summary>
         [JsonProperty("DirectConnectTunnelId")]
         public string DirectConnectTunnelId{ get; set; }

@@ -48,6 +48,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("DurationType")]
         public long? DurationType{ get; set; }
 
+        /// <summary>
+        /// 索引数据
+        /// </summary>
+        [JsonProperty("BatchIndexList")]
+        public string[] BatchIndexList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "IndexId", this.IndexId);
             this.SetParamArraySimple(map, prefix + "MetricType.", this.MetricType);
             this.SetParamSimple(map, prefix + "DurationType", this.DurationType);
+            this.SetParamArraySimple(map, prefix + "BatchIndexList.", this.BatchIndexList);
         }
     }
 }

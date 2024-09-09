@@ -47,12 +47,6 @@ namespace TencentCloud.Tse.V20201207.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 请求路径
-        /// </summary>
-        [JsonProperty("Path")]
-        public string Path{ get; set; }
-
-        /// <summary>
         /// 超时时间，单位ms
         /// </summary>
         [JsonProperty("Timeout")]
@@ -87,6 +81,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
+        /// <summary>
+        /// 请求路径
+        /// </summary>
+        [JsonProperty("Path")]
+        public string Path{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,12 +96,12 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "GatewayId", this.GatewayId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
-            this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
             this.SetParamSimple(map, prefix + "Retries", this.Retries);
             this.SetParamSimple(map, prefix + "UpstreamType", this.UpstreamType);
             this.SetParamObj(map, prefix + "UpstreamInfo.", this.UpstreamInfo);
             this.SetParamSimple(map, prefix + "ID", this.ID);
+            this.SetParamSimple(map, prefix + "Path", this.Path);
         }
     }
 }

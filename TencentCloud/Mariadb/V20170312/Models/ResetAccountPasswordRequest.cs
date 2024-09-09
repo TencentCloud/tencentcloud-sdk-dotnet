@@ -48,6 +48,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
+        /// <summary>
+        /// 使用GetPublicKey返回的RSA2048公钥加密后的密码
+        /// </summary>
+        [JsonProperty("EncryptedPassword")]
+        public string EncryptedPassword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "Host", this.Host);
             this.SetParamSimple(map, prefix + "Password", this.Password);
+            this.SetParamSimple(map, prefix + "EncryptedPassword", this.EncryptedPassword);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312
 
        private const string endpoint = "cvm.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1083";
+       private const string sdkVersion = "SDK_NET_3.0.1084";
 
         /// <summary>
         /// Client constructor.
@@ -175,6 +175,27 @@ namespace TencentCloud.Cvm.V20170312
         public ConfigureChcDeployVpcResponse ConfigureChcDeployVpcSync(ConfigureChcDeployVpcRequest req)
         {
             return InternalRequestAsync<ConfigureChcDeployVpcResponse>(req, "ConfigureChcDeployVpc")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(ConvertOperatingSystem)用于转换实例的操作系统，仅支持源操作系统为 CentOS 7、CentOS 8 的实例。
+        /// </summary>
+        /// <param name="req"><see cref="ConvertOperatingSystemsRequest"/></param>
+        /// <returns><see cref="ConvertOperatingSystemsResponse"/></returns>
+        public Task<ConvertOperatingSystemsResponse> ConvertOperatingSystems(ConvertOperatingSystemsRequest req)
+        {
+            return InternalRequestAsync<ConvertOperatingSystemsResponse>(req, "ConvertOperatingSystems");
+        }
+
+        /// <summary>
+        /// 本接口(ConvertOperatingSystem)用于转换实例的操作系统，仅支持源操作系统为 CentOS 7、CentOS 8 的实例。
+        /// </summary>
+        /// <param name="req"><see cref="ConvertOperatingSystemsRequest"/></param>
+        /// <returns><see cref="ConvertOperatingSystemsResponse"/></returns>
+        public ConvertOperatingSystemsResponse ConvertOperatingSystemsSync(ConvertOperatingSystemsRequest req)
+        {
+            return InternalRequestAsync<ConvertOperatingSystemsResponse>(req, "ConvertOperatingSystems")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

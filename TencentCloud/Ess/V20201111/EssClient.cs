@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1083";
+       private const string sdkVersion = "SDK_NET_3.0.1084";
 
         /// <summary>
         /// Client constructor.
@@ -2814,6 +2814,27 @@ namespace TencentCloud.Ess.V20201111
         public DescribeIntegrationRolesResponse DescribeIntegrationRolesSync(DescribeIntegrationRolesRequest req)
         {
             return InternalRequestAsync<DescribeIntegrationRolesResponse>(req, "DescribeIntegrationRoles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询企业认证状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationAuthStatusRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationAuthStatusResponse"/></returns>
+        public Task<DescribeOrganizationAuthStatusResponse> DescribeOrganizationAuthStatus(DescribeOrganizationAuthStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeOrganizationAuthStatusResponse>(req, "DescribeOrganizationAuthStatus");
+        }
+
+        /// <summary>
+        /// 查询企业认证状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationAuthStatusRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationAuthStatusResponse"/></returns>
+        public DescribeOrganizationAuthStatusResponse DescribeOrganizationAuthStatusSync(DescribeOrganizationAuthStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeOrganizationAuthStatusResponse>(req, "DescribeOrganizationAuthStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

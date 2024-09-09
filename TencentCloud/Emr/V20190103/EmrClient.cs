@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1083";
+       private const string sdkVersion = "SDK_NET_3.0.1084";
 
         /// <summary>
         /// Client constructor.
@@ -556,6 +556,27 @@ namespace TencentCloud.Emr.V20190103
         public DescribeResourceScheduleResponse DescribeResourceScheduleSync(DescribeResourceScheduleRequest req)
         {
             return InternalRequestAsync<DescribeResourceScheduleResponse>(req, "DescribeResourceSchedule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// YARN资源调度-变更详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceScheduleDiffDetailRequest"/></param>
+        /// <returns><see cref="DescribeResourceScheduleDiffDetailResponse"/></returns>
+        public Task<DescribeResourceScheduleDiffDetailResponse> DescribeResourceScheduleDiffDetail(DescribeResourceScheduleDiffDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceScheduleDiffDetailResponse>(req, "DescribeResourceScheduleDiffDetail");
+        }
+
+        /// <summary>
+        /// YARN资源调度-变更详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceScheduleDiffDetailRequest"/></param>
+        /// <returns><see cref="DescribeResourceScheduleDiffDetailResponse"/></returns>
+        public DescribeResourceScheduleDiffDetailResponse DescribeResourceScheduleDiffDetailSync(DescribeResourceScheduleDiffDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceScheduleDiffDetailResponse>(req, "DescribeResourceScheduleDiffDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

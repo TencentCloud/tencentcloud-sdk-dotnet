@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1083</VersionPrefix>
+    <VersionPrefix>3.0.1084</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -115,6 +115,8 @@
     <Compile Include="V20190103\Models\DescribeInstancesResponse.cs" />
     <Compile Include="V20190103\Models\DescribeJobFlowRequest.cs" />
     <Compile Include="V20190103\Models\DescribeJobFlowResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeResourceScheduleDiffDetailRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeResourceScheduleDiffDetailResponse.cs" />
     <Compile Include="V20190103\Models\DescribeResourceScheduleRequest.cs" />
     <Compile Include="V20190103\Models\DescribeResourceScheduleResponse.cs" />
     <Compile Include="V20190103\Models\DescribeServiceNodeInfosRequest.cs" />
@@ -129,6 +131,9 @@
     <Compile Include="V20190103\Models\DescribeYarnQueueResponse.cs" />
     <Compile Include="V20190103\Models\DescribeYarnScheduleHistoryRequest.cs" />
     <Compile Include="V20190103\Models\DescribeYarnScheduleHistoryResponse.cs" />
+    <Compile Include="V20190103\Models\DiffDetail.cs" />
+    <Compile Include="V20190103\Models\DiffDetailItem.cs" />
+    <Compile Include="V20190103\Models\DiffHeader.cs" />
     <Compile Include="V20190103\Models\DiskGroup.cs" />
     <Compile Include="V20190103\Models\DiskSpec.cs" />
     <Compile Include="V20190103\Models\DiskSpecInfo.cs" />

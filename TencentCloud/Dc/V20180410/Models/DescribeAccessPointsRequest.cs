@@ -25,8 +25,7 @@ namespace TencentCloud.Dc.V20180410.Models
     {
         
         /// <summary>
-        /// 接入点所在的地域。使用DescribeRegions查询
-        /// 
+        /// 接入点所在的地域。使用DescribeRegions查询。
         /// 您可以通过调用 DescribeRegions接口获取地域ID。
         /// </summary>
         [JsonProperty("RegionId")]

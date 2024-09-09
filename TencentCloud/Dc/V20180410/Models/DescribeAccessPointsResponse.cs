@@ -31,7 +31,7 @@ namespace TencentCloud.Dc.V20180410.Models
         public AccessPoint[] AccessPointSet{ get; set; }
 
         /// <summary>
-        /// 符合接入点数量。
+        /// 接入点总数量。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

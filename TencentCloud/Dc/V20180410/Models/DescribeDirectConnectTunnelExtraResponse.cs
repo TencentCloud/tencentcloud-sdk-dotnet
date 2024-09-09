@@ -25,7 +25,7 @@ namespace TencentCloud.Dc.V20180410.Models
     {
         
         /// <summary>
-        /// 专用通道扩展信息
+        /// 专用通道扩展信息。
         /// </summary>
         [JsonProperty("DirectConnectTunnelExtra")]
         public DirectConnectTunnelExtra DirectConnectTunnelExtra{ get; set; }

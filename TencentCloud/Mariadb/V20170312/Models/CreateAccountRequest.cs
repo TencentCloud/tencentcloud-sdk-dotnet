@@ -49,7 +49,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// 是否创建为只读账号，0：否:； 1：只读账号，该账号的sql请求优先选择备机执行，备机延迟时选择主机执行；2：只读账号，优先选择备机执行，备机延迟时操作报错；3：只读账号，优先选择备机执行，忽略备机延迟只读备机；
+        /// 是否创建为只读账号，0：否； 1：只读账号，该账号的sql请求优先选择备机执行，备机延迟时选择主机执行；2：只读账号，优先选择备机执行，备机延迟时操作报错；3：只读账号，优先选择备机执行，忽略备机延迟只读备机；
         /// </summary>
         [JsonProperty("ReadOnly")]
         public long? ReadOnly{ get; set; }
@@ -78,6 +78,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("MaxUserConnections")]
         public ulong? MaxUserConnections{ get; set; }
 
+        /// <summary>
+        /// 使用GetPublicKey返回的RSA2048公钥加密后的密码
+        /// </summary>
+        [JsonProperty("EncryptedPassword")]
+        public string EncryptedPassword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "DelayThresh", this.DelayThresh);
             this.SetParamSimple(map, prefix + "SlaveConst", this.SlaveConst);
             this.SetParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
+            this.SetParamSimple(map, prefix + "EncryptedPassword", this.EncryptedPassword);
         }
     }
 }
