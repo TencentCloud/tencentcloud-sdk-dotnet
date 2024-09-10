@@ -244,6 +244,13 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("TaskIssue")]
         public string TaskIssue{ get; set; }
 
+        /// <summary>
+        /// region信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskRegionName")]
+        public string TaskRegionName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -283,6 +290,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskPlanEndTime", this.TaskPlanEndTime);
             this.SetParamArrayObj(map, prefix + "TaskOrg.", this.TaskOrg);
             this.SetParamSimple(map, prefix + "TaskIssue", this.TaskIssue);
+            this.SetParamSimple(map, prefix + "TaskRegionName", this.TaskRegionName);
         }
     }
 }

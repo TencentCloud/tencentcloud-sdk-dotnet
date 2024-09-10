@@ -105,6 +105,22 @@ namespace TencentCloud.Aiart.V20221229.Models
         [JsonProperty("RspImgType")]
         public string RspImgType{ get; set; }
 
+        /// <summary>
+        /// 画质增强开关，默认关闭。
+        /// 1：开启
+        /// 0：关闭
+        /// 开启后将增强图像的画质清晰度，生成耗时有所增加。
+        /// </summary>
+        [JsonProperty("EnhanceImage")]
+        public long? EnhanceImage{ get; set; }
+
+        /// <summary>
+        /// 细节优化的面部数量上限，支持0 ~ 6，默认为0。
+        /// 若上传大于0的值，将以此为上限对每张图片中面积占比较小的面部进行细节修复，生成耗时根据实际优化的面部个数有所增加。
+        /// </summary>
+        [JsonProperty("RestoreFace")]
+        public long? RestoreFace{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +137,8 @@ namespace TencentCloud.Aiart.V20221229.Models
             this.SetParamObj(map, prefix + "LogoParam.", this.LogoParam);
             this.SetParamSimple(map, prefix + "Strength", this.Strength);
             this.SetParamSimple(map, prefix + "RspImgType", this.RspImgType);
+            this.SetParamSimple(map, prefix + "EnhanceImage", this.EnhanceImage);
+            this.SetParamSimple(map, prefix + "RestoreFace", this.RestoreFace);
         }
     }
 }

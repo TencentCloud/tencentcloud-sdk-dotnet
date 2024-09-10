@@ -28,7 +28,7 @@ namespace TencentCloud.Es.V20180416
 
        private const string endpoint = "es.tencentcloudapi.com";
        private const string version = "2018-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.1084";
+       private const string sdkVersion = "SDK_NET_3.0.1085";
 
         /// <summary>
         /// Client constructor.
@@ -640,6 +640,27 @@ namespace TencentCloud.Es.V20180416
         public DescribeServerlessSpacesResponse DescribeServerlessSpacesSync(DescribeServerlessSpacesRequest req)
         {
             return InternalRequestAsync<DescribeServerlessSpacesResponse>(req, "DescribeServerlessSpaces")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// space维度的kibana获取登录token
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSpaceKibanaToolsRequest"/></param>
+        /// <returns><see cref="DescribeSpaceKibanaToolsResponse"/></returns>
+        public Task<DescribeSpaceKibanaToolsResponse> DescribeSpaceKibanaTools(DescribeSpaceKibanaToolsRequest req)
+        {
+            return InternalRequestAsync<DescribeSpaceKibanaToolsResponse>(req, "DescribeSpaceKibanaTools");
+        }
+
+        /// <summary>
+        /// space维度的kibana获取登录token
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSpaceKibanaToolsRequest"/></param>
+        /// <returns><see cref="DescribeSpaceKibanaToolsResponse"/></returns>
+        public DescribeSpaceKibanaToolsResponse DescribeSpaceKibanaToolsSync(DescribeSpaceKibanaToolsRequest req)
+        {
+            return InternalRequestAsync<DescribeSpaceKibanaToolsResponse>(req, "DescribeSpaceKibanaTools")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

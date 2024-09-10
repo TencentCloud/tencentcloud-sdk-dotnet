@@ -36,6 +36,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("MicroserviceId")]
         public string MicroserviceId{ get; set; }
 
+        /// <summary>
+        /// 命名空间ID
+        /// </summary>
+        [JsonProperty("NamespaceId")]
+        public string NamespaceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         {
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "MicroserviceId", this.MicroserviceId);
+            this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
         }
     }
 }

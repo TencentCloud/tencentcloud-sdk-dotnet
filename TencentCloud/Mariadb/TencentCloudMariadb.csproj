@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0D2899B4-58E8-3E59-BC9E-E832FA5AC4D6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1084</VersionPrefix>
+    <VersionPrefix>3.0.1085</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,6 +53,7 @@
     <Compile Include="V20170312\Models\ActivateHourDBInstanceResponse.cs" />
     <Compile Include="V20170312\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="V20170312\Models\AssociateSecurityGroupsResponse.cs" />
+    <Compile Include="V20170312\Models\BackupConfig.cs" />
     <Compile Include="V20170312\Models\CancelDcnJobRequest.cs" />
     <Compile Include="V20170312\Models\CancelDcnJobResponse.cs" />
     <Compile Include="V20170312\Models\CloneAccountRequest.cs" />
@@ -93,6 +94,8 @@
     <Compile Include="V20170312\Models\DescribeAccountPrivilegesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeAccountsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeAccountsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeBackupConfigsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeBackupConfigsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeBackupFilesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeBackupFilesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeBackupTimeRequest.cs" />
@@ -173,6 +176,8 @@
     <Compile Include="V20170312\Models\ModifyAccountDescriptionResponse.cs" />
     <Compile Include="V20170312\Models\ModifyAccountPrivilegesRequest.cs" />
     <Compile Include="V20170312\Models\ModifyAccountPrivilegesResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyBackupConfigsRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyBackupConfigsResponse.cs" />
     <Compile Include="V20170312\Models\ModifyBackupTimeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyBackupTimeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBEncryptAttributesRequest.cs" />
@@ -199,6 +204,7 @@
     <Compile Include="V20170312\Models\ModifyRealServerAccessStrategyResponse.cs" />
     <Compile Include="V20170312\Models\ModifySyncTaskAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifySyncTaskAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\NewBackupConfig.cs" />
     <Compile Include="V20170312\Models\NodeInfo.cs" />
     <Compile Include="V20170312\Models\OpenDBExtranetAccessRequest.cs" />
     <Compile Include="V20170312\Models\OpenDBExtranetAccessResponse.cs" />

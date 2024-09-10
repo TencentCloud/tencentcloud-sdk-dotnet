@@ -28,7 +28,7 @@ namespace TencentCloud.Vdb.V20230616
 
        private const string endpoint = "vdb.tencentcloudapi.com";
        private const string version = "2023-06-16";
-       private const string sdkVersion = "SDK_NET_3.0.1084";
+       private const string sdkVersion = "SDK_NET_3.0.1085";
 
         /// <summary>
         /// Client constructor.
@@ -54,6 +54,69 @@ namespace TencentCloud.Vdb.V20230616
         }
 
         /// <summary>
+        /// 本接口 (AssociateSecurityGroups) 用于安全组批量绑定多个指定实例。
+        /// </summary>
+        /// <param name="req"><see cref="AssociateSecurityGroupsRequest"/></param>
+        /// <returns><see cref="AssociateSecurityGroupsResponse"/></returns>
+        public Task<AssociateSecurityGroupsResponse> AssociateSecurityGroups(AssociateSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<AssociateSecurityGroupsResponse>(req, "AssociateSecurityGroups");
+        }
+
+        /// <summary>
+        /// 本接口 (AssociateSecurityGroups) 用于安全组批量绑定多个指定实例。
+        /// </summary>
+        /// <param name="req"><see cref="AssociateSecurityGroupsRequest"/></param>
+        /// <returns><see cref="AssociateSecurityGroupsResponse"/></returns>
+        public AssociateSecurityGroupsResponse AssociateSecurityGroupsSync(AssociateSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<AssociateSecurityGroupsResponse>(req, "AssociateSecurityGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeDBSecurityGroups)用于查询实例的安全组详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DescribeDBSecurityGroupsResponse"/></returns>
+        public Task<DescribeDBSecurityGroupsResponse> DescribeDBSecurityGroups(DescribeDBSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBSecurityGroupsResponse>(req, "DescribeDBSecurityGroups");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeDBSecurityGroups)用于查询实例的安全组详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DescribeDBSecurityGroupsResponse"/></returns>
+        public DescribeDBSecurityGroupsResponse DescribeDBSecurityGroupsSync(DescribeDBSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBSecurityGroupsResponse>(req, "DescribeDBSecurityGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 实例节点列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceNodesRequest"/></param>
+        /// <returns><see cref="DescribeInstanceNodesResponse"/></returns>
+        public Task<DescribeInstanceNodesResponse> DescribeInstanceNodes(DescribeInstanceNodesRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceNodesResponse>(req, "DescribeInstanceNodes");
+        }
+
+        /// <summary>
+        /// 实例节点列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceNodesRequest"/></param>
+        /// <returns><see cref="DescribeInstanceNodesResponse"/></returns>
+        public DescribeInstanceNodesResponse DescribeInstanceNodesSync(DescribeInstanceNodesRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceNodesResponse>(req, "DescribeInstanceNodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
@@ -71,6 +134,48 @@ namespace TencentCloud.Vdb.V20230616
         public DescribeInstancesResponse DescribeInstancesSync(DescribeInstancesRequest req)
         {
             return InternalRequestAsync<DescribeInstancesResponse>(req, "DescribeInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DisassociateSecurityGroups)用于安全组批量解绑实例。
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DisassociateSecurityGroupsResponse"/></returns>
+        public Task<DisassociateSecurityGroupsResponse> DisassociateSecurityGroups(DisassociateSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<DisassociateSecurityGroupsResponse>(req, "DisassociateSecurityGroups");
+        }
+
+        /// <summary>
+        /// 本接口(DisassociateSecurityGroups)用于安全组批量解绑实例。
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DisassociateSecurityGroupsResponse"/></returns>
+        public DisassociateSecurityGroupsResponse DisassociateSecurityGroupsSync(DisassociateSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<DisassociateSecurityGroupsResponse>(req, "DisassociateSecurityGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceSecurityGroupsResponse"/></returns>
+        public Task<ModifyDBInstanceSecurityGroupsResponse> ModifyDBInstanceSecurityGroups(ModifyDBInstanceSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceSecurityGroupsResponse>(req, "ModifyDBInstanceSecurityGroups");
+        }
+
+        /// <summary>
+        /// 本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceSecurityGroupsResponse"/></returns>
+        public ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroupsSync(ModifyDBInstanceSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceSecurityGroupsResponse>(req, "ModifyDBInstanceSecurityGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

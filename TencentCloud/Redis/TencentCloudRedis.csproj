@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{4D99E92F-0CD8-3F98-B58C-498F1C545766}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1084</VersionPrefix>
+    <VersionPrefix>3.0.1085</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -120,6 +120,8 @@
     <Compile Include="V20180412\Models\DescribeInstanceDealDetailResponse.cs" />
     <Compile Include="V20180412\Models\DescribeInstanceEventsRequest.cs" />
     <Compile Include="V20180412\Models\DescribeInstanceEventsResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceLogDeliveryRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceLogDeliveryResponse.cs" />
     <Compile Include="V20180412\Models\DescribeInstanceMonitorBigKeyRequest.cs" />
     <Compile Include="V20180412\Models\DescribeInstanceMonitorBigKeyResponse.cs" />
     <Compile Include="V20180412\Models\DescribeInstanceMonitorBigKeySizeDistRequest.cs" />
@@ -222,6 +224,7 @@
     <Compile Include="V20180412\Models\Instances.cs" />
     <Compile Include="V20180412\Models\KillMasterGroupRequest.cs" />
     <Compile Include="V20180412\Models\KillMasterGroupResponse.cs" />
+    <Compile Include="V20180412\Models\LogDeliveryInfo.cs" />
     <Compile Include="V20180412\Models\ManualBackupInstanceRequest.cs" />
     <Compile Include="V20180412\Models\ManualBackupInstanceResponse.cs" />
     <Compile Include="V20180412\Models\ModfiyInstancePasswordRequest.cs" />
@@ -240,6 +243,8 @@
     <Compile Include="V20180412\Models\ModifyInstanceAvailabilityZonesResponse.cs" />
     <Compile Include="V20180412\Models\ModifyInstanceEventRequest.cs" />
     <Compile Include="V20180412\Models\ModifyInstanceEventResponse.cs" />
+    <Compile Include="V20180412\Models\ModifyInstanceLogDeliveryRequest.cs" />
+    <Compile Include="V20180412\Models\ModifyInstanceLogDeliveryResponse.cs" />
     <Compile Include="V20180412\Models\ModifyInstanceParamsRequest.cs" />
     <Compile Include="V20180412\Models\ModifyInstanceParamsResponse.cs" />
     <Compile Include="V20180412\Models\ModifyInstanceReadOnlyRequest.cs" />

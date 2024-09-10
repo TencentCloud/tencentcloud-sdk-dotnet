@@ -70,6 +70,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// 动态硬盘扩容策略配置
         /// </summary>
         [JsonProperty("DynamicDiskConfig")]
+        [System.Obsolete]
         public DynamicDiskConfig DynamicDiskConfig{ get; set; }
 
         /// <summary>

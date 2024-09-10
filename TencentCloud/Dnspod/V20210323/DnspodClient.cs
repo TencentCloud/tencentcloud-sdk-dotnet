@@ -28,7 +28,7 @@ namespace TencentCloud.Dnspod.V20210323
 
        private const string endpoint = "dnspod.tencentcloudapi.com";
        private const string version = "2021-03-23";
-       private const string sdkVersion = "SDK_NET_3.0.1084";
+       private const string sdkVersion = "SDK_NET_3.0.1085";
 
         /// <summary>
         /// Client constructor.
@@ -749,6 +749,27 @@ namespace TencentCloud.Dnspod.V20210323
         public DescribeDomainShareInfoResponse DescribeDomainShareInfoSync(DescribeDomainShareInfoRequest req)
         {
             return InternalRequestAsync<DescribeDomainShareInfoResponse>(req, "DescribeDomainShareInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取指定域名的已共享列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainShareUserListRequest"/></param>
+        /// <returns><see cref="DescribeDomainShareUserListResponse"/></returns>
+        public Task<DescribeDomainShareUserListResponse> DescribeDomainShareUserList(DescribeDomainShareUserListRequest req)
+        {
+            return InternalRequestAsync<DescribeDomainShareUserListResponse>(req, "DescribeDomainShareUserList");
+        }
+
+        /// <summary>
+        /// 获取指定域名的已共享列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainShareUserListRequest"/></param>
+        /// <returns><see cref="DescribeDomainShareUserListResponse"/></returns>
+        public DescribeDomainShareUserListResponse DescribeDomainShareUserListSync(DescribeDomainShareUserListRequest req)
+        {
+            return InternalRequestAsync<DescribeDomainShareUserListResponse>(req, "DescribeDomainShareUserList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

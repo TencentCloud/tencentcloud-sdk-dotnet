@@ -30,7 +30,6 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>COS：腾讯云 COS 对象存储源站；</li>
         /// <li>AWS_S3：AWS S3 对象存储源站；</li>
         /// <li>ORIGIN_GROUP：源站组类型源站；</li>
-        /// <li>VODEO：云点播-混合云版；</li>
         /// <li>VOD：云点播；</li>
         /// <li>SPACE：源站卸载，当前仅白名单开放；</li>
         /// <li>LB：负载均衡，当前仅白名单开放。</li>
@@ -45,7 +44,6 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>当 OriginType = AWS_S3，该参数为 S3 桶的访问域名；</li>
         /// <li>当 OriginType = ORIGIN_GROUP 时，该参数为源站组 ID；</li>
         /// <li>当 OriginType = VOD 时，该参数请填写云点播应用 ID ；</li>
-        /// <li>当 OriginType = VODEO 时，如果 VodeoDistributionRange = ALL，则该参数为 "all-buckets-in-vodeo-application"；如果 VodeoDistributionRange = Bucket，则该参数为对应存储桶域名。</li>
         /// </summary>
         [JsonProperty("Origin")]
         public string Origin{ get; set; }
@@ -88,18 +86,21 @@ namespace TencentCloud.Teo.V20220901.Models
         /// MO 子应用 ID
         /// </summary>
         [JsonProperty("VodeoSubAppId")]
+        [System.Obsolete]
         public long? VodeoSubAppId{ get; set; }
 
         /// <summary>
         /// MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>
         /// </summary>
         [JsonProperty("VodeoDistributionRange")]
+        [System.Obsolete]
         public string VodeoDistributionRange{ get; set; }
 
         /// <summary>
         /// MO 存储桶 ID，分发范围(DistributionRange)为存储桶(Bucket)时必填
         /// </summary>
         [JsonProperty("VodeoBucketId")]
+        [System.Obsolete]
         public string VodeoBucketId{ get; set; }
 
 

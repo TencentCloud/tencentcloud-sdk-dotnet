@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60370B3E-5902-37C1-9E9B-E275E61C4105}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1084</VersionPrefix>
+    <VersionPrefix>3.0.1085</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -66,6 +66,8 @@
     <Compile Include="V20221229\Models\ReplaceBackgroundRequest.cs" />
     <Compile Include="V20221229\Models\ReplaceBackgroundResponse.cs" />
     <Compile Include="V20221229\Models\ResultConfig.cs" />
+    <Compile Include="V20221229\Models\SketchToImageRequest.cs" />
+    <Compile Include="V20221229\Models\SketchToImageResponse.cs" />
     <Compile Include="V20221229\Models\SubmitDrawPortraitJobRequest.cs" />
     <Compile Include="V20221229\Models\SubmitDrawPortraitJobResponse.cs" />
     <Compile Include="V20221229\Models\SubmitTextToImageProJobRequest.cs" />

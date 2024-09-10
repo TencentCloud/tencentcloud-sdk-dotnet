@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{48CC0457-A284-30BF-8FD5-DE09BD65486D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1084</VersionPrefix>
+    <VersionPrefix>3.0.1085</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,10 +48,24 @@
 
   <ItemGroup>
     <Compile Include="V20230616\VdbClient.cs" />
+    <Compile Include="V20230616\Models\AssociateSecurityGroupsRequest.cs" />
+    <Compile Include="V20230616\Models\AssociateSecurityGroupsResponse.cs" />
+    <Compile Include="V20230616\Models\DescribeDBSecurityGroupsRequest.cs" />
+    <Compile Include="V20230616\Models\DescribeDBSecurityGroupsResponse.cs" />
+    <Compile Include="V20230616\Models\DescribeInstanceNodesRequest.cs" />
+    <Compile Include="V20230616\Models\DescribeInstanceNodesResponse.cs" />
     <Compile Include="V20230616\Models\DescribeInstancesRequest.cs" />
     <Compile Include="V20230616\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20230616\Models\DisassociateSecurityGroupsRequest.cs" />
+    <Compile Include="V20230616\Models\DisassociateSecurityGroupsResponse.cs" />
+    <Compile Include="V20230616\Models\Inbound.cs" />
     <Compile Include="V20230616\Models\InstanceInfo.cs" />
+    <Compile Include="V20230616\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
+    <Compile Include="V20230616\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
     <Compile Include="V20230616\Models\Network.cs" />
+    <Compile Include="V20230616\Models\NodeInfo.cs" />
+    <Compile Include="V20230616\Models\Outbound.cs" />
+    <Compile Include="V20230616\Models\SecurityGroup.cs" />
     <Compile Include="V20230616\Models\Tag.cs" />
   </ItemGroup>
 </Project>

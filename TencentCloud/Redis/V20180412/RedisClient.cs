@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1084";
+       private const string sdkVersion = "SDK_NET_3.0.1085";
 
         /// <summary>
         /// Client constructor.
@@ -701,6 +701,27 @@ namespace TencentCloud.Redis.V20180412
         public DescribeInstanceEventsResponse DescribeInstanceEventsSync(DescribeInstanceEventsRequest req)
         {
             return InternalRequestAsync<DescribeInstanceEventsResponse>(req, "DescribeInstanceEvents")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeInstanceLogDelivery）用于查询实例的日志投递配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceLogDeliveryRequest"/></param>
+        /// <returns><see cref="DescribeInstanceLogDeliveryResponse"/></returns>
+        public Task<DescribeInstanceLogDeliveryResponse> DescribeInstanceLogDelivery(DescribeInstanceLogDeliveryRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceLogDeliveryResponse>(req, "DescribeInstanceLogDelivery");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeInstanceLogDelivery）用于查询实例的日志投递配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceLogDeliveryRequest"/></param>
+        /// <returns><see cref="DescribeInstanceLogDeliveryResponse"/></returns>
+        public DescribeInstanceLogDeliveryResponse DescribeInstanceLogDeliverySync(DescribeInstanceLogDeliveryRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceLogDeliveryResponse>(req, "DescribeInstanceLogDelivery")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1793,6 +1814,27 @@ namespace TencentCloud.Redis.V20180412
         public ModifyInstanceEventResponse ModifyInstanceEventSync(ModifyInstanceEventRequest req)
         {
             return InternalRequestAsync<ModifyInstanceEventResponse>(req, "ModifyInstanceEvent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyInstanceLogDelivery）用于开启或关闭投递实例日志到CLS。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceLogDeliveryRequest"/></param>
+        /// <returns><see cref="ModifyInstanceLogDeliveryResponse"/></returns>
+        public Task<ModifyInstanceLogDeliveryResponse> ModifyInstanceLogDelivery(ModifyInstanceLogDeliveryRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceLogDeliveryResponse>(req, "ModifyInstanceLogDelivery");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyInstanceLogDelivery）用于开启或关闭投递实例日志到CLS。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceLogDeliveryRequest"/></param>
+        /// <returns><see cref="ModifyInstanceLogDeliveryResponse"/></returns>
+        public ModifyInstanceLogDeliveryResponse ModifyInstanceLogDeliverySync(ModifyInstanceLogDeliveryRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceLogDeliveryResponse>(req, "ModifyInstanceLogDelivery")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

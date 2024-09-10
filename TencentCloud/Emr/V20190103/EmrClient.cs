@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1084";
+       private const string sdkVersion = "SDK_NET_3.0.1085";
 
         /// <summary>
         /// Client constructor.
@@ -136,6 +136,31 @@ namespace TencentCloud.Emr.V20190103
         public CreateInstanceResponse CreateInstanceSync(CreateInstanceRequest req)
         {
             return InternalRequestAsync<CreateInstanceResponse>(req, "CreateInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（CreateSLInstance）用于创建 Lite HBase 实例
+        /// - 接口调用成功，会创建Lite HBase实例，创建实例请求成功会返回创建实例的 InstaceId 和请求的 RequestID。
+        /// - 接口为异步接口，接口返回时操作并未立即完成，实例操作结果可以通过调用 DescribeInstancesList 查看当前实例的 StatusDesc 状态。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSLInstanceRequest"/></param>
+        /// <returns><see cref="CreateSLInstanceResponse"/></returns>
+        public Task<CreateSLInstanceResponse> CreateSLInstance(CreateSLInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateSLInstanceResponse>(req, "CreateSLInstance");
+        }
+
+        /// <summary>
+        /// 本接口（CreateSLInstance）用于创建 Lite HBase 实例
+        /// - 接口调用成功，会创建Lite HBase实例，创建实例请求成功会返回创建实例的 InstaceId 和请求的 RequestID。
+        /// - 接口为异步接口，接口返回时操作并未立即完成，实例操作结果可以通过调用 DescribeInstancesList 查看当前实例的 StatusDesc 状态。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSLInstanceRequest"/></param>
+        /// <returns><see cref="CreateSLInstanceResponse"/></returns>
+        public CreateSLInstanceResponse CreateSLInstanceSync(CreateSLInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateSLInstanceResponse>(req, "CreateSLInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -581,6 +606,48 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 本接口（DescribeSLInstance）用于查询 Lite HBase 实例基本信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSLInstanceRequest"/></param>
+        /// <returns><see cref="DescribeSLInstanceResponse"/></returns>
+        public Task<DescribeSLInstanceResponse> DescribeSLInstance(DescribeSLInstanceRequest req)
+        {
+            return InternalRequestAsync<DescribeSLInstanceResponse>(req, "DescribeSLInstance");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSLInstance）用于查询 Lite HBase 实例基本信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSLInstanceRequest"/></param>
+        /// <returns><see cref="DescribeSLInstanceResponse"/></returns>
+        public DescribeSLInstanceResponse DescribeSLInstanceSync(DescribeSLInstanceRequest req)
+        {
+            return InternalRequestAsync<DescribeSLInstanceResponse>(req, "DescribeSLInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSLInstanceList）用于查询 Lite HBase 实例列表详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSLInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeSLInstanceListResponse"/></returns>
+        public Task<DescribeSLInstanceListResponse> DescribeSLInstanceList(DescribeSLInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeSLInstanceListResponse>(req, "DescribeSLInstanceList");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSLInstanceList）用于查询 Lite HBase 实例列表详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSLInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeSLInstanceListResponse"/></returns>
+        public DescribeSLInstanceListResponse DescribeSLInstanceListSync(DescribeSLInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeSLInstanceListResponse>(req, "DescribeSLInstanceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询服务进程信息
         /// </summary>
         /// <param name="req"><see cref="DescribeServiceNodeInfosRequest"/></param>
@@ -942,6 +1009,31 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 本接口（ModifySLInstance）用于修改Lite HBase 实例节点数。
+        /// - 接口调用成功，会创建Lite HBase实例，创建实例请求成功会返回请求的 RequestID。
+        /// - 接口为异步接口，接口返回时操作并未立即完成，实例操作结果可以通过调用 DescribeInstancesList 查看当前实例的 StatusDesc 状态。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySLInstanceRequest"/></param>
+        /// <returns><see cref="ModifySLInstanceResponse"/></returns>
+        public Task<ModifySLInstanceResponse> ModifySLInstance(ModifySLInstanceRequest req)
+        {
+            return InternalRequestAsync<ModifySLInstanceResponse>(req, "ModifySLInstance");
+        }
+
+        /// <summary>
+        /// 本接口（ModifySLInstance）用于修改Lite HBase 实例节点数。
+        /// - 接口调用成功，会创建Lite HBase实例，创建实例请求成功会返回请求的 RequestID。
+        /// - 接口为异步接口，接口返回时操作并未立即完成，实例操作结果可以通过调用 DescribeInstancesList 查看当前实例的 StatusDesc 状态。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySLInstanceRequest"/></param>
+        /// <returns><see cref="ModifySLInstanceResponse"/></returns>
+        public ModifySLInstanceResponse ModifySLInstanceSync(ModifySLInstanceRequest req)
+        {
+            return InternalRequestAsync<ModifySLInstanceResponse>(req, "ModifySLInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改用户密码（用户管理）
         /// </summary>
         /// <param name="req"><see cref="ModifyUserManagerPwdRequest"/></param>
@@ -1169,6 +1261,27 @@ namespace TencentCloud.Emr.V20190103
         public TerminateInstanceResponse TerminateInstanceSync(TerminateInstanceRequest req)
         {
             return InternalRequestAsync<TerminateInstanceResponse>(req, "TerminateInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（TerminateSLInstance）用于销毁 Lite HBase 实例
+        /// </summary>
+        /// <param name="req"><see cref="TerminateSLInstanceRequest"/></param>
+        /// <returns><see cref="TerminateSLInstanceResponse"/></returns>
+        public Task<TerminateSLInstanceResponse> TerminateSLInstance(TerminateSLInstanceRequest req)
+        {
+            return InternalRequestAsync<TerminateSLInstanceResponse>(req, "TerminateSLInstance");
+        }
+
+        /// <summary>
+        /// 本接口（TerminateSLInstance）用于销毁 Lite HBase 实例
+        /// </summary>
+        /// <param name="req"><see cref="TerminateSLInstanceRequest"/></param>
+        /// <returns><see cref="TerminateSLInstanceResponse"/></returns>
+        public TerminateSLInstanceResponse TerminateSLInstanceSync(TerminateSLInstanceRequest req)
+        {
+            return InternalRequestAsync<TerminateSLInstanceResponse>(req, "TerminateSLInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

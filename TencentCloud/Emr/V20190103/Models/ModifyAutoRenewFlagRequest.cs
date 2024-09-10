@@ -42,6 +42,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }
 
+        /// <summary>
+        /// 计算资源id
+        /// </summary>
+        [JsonProperty("ComputeResourceId")]
+        public string ComputeResourceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+            this.SetParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
         }
     }
 }

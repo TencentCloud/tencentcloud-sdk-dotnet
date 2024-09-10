@@ -28,7 +28,7 @@ namespace TencentCloud.Essbasic.V20210526
 
        private const string endpoint = "essbasic.tencentcloudapi.com";
        private const string version = "2021-05-26";
-       private const string sdkVersion = "SDK_NET_3.0.1084";
+       private const string sdkVersion = "SDK_NET_3.0.1085";
 
         /// <summary>
         /// Client constructor.
@@ -2556,6 +2556,47 @@ namespace TencentCloud.Essbasic.V20210526
         public CreatePartnerAutoSignAuthUrlResponse CreatePartnerAutoSignAuthUrlSync(CreatePartnerAutoSignAuthUrlRequest req)
         {
             return InternalRequestAsync<CreatePartnerAutoSignAuthUrlResponse>(req, "CreatePartnerAutoSignAuthUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取个人用户认证证书图片下载URL
+        /// 
+        /// 个人用户认证证书图片样式如下图
+        /// 
+        /// ![image](https://dyn.ess.tencent.cn/guide/capi/CreatePersonAuthCertificateImage.png)
+        /// 
+        /// 注:  
+        /// <ul>
+        /// <li>只能获取个人用户证明图片, 企业员工的暂不支持</li>
+        /// <li>处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。  </li>
+        /// </ul>
+        /// </summary>
+        /// <param name="req"><see cref="CreatePersonAuthCertificateImageRequest"/></param>
+        /// <returns><see cref="CreatePersonAuthCertificateImageResponse"/></returns>
+        public Task<CreatePersonAuthCertificateImageResponse> CreatePersonAuthCertificateImage(CreatePersonAuthCertificateImageRequest req)
+        {
+            return InternalRequestAsync<CreatePersonAuthCertificateImageResponse>(req, "CreatePersonAuthCertificateImage");
+        }
+
+        /// <summary>
+        /// 获取个人用户认证证书图片下载URL
+        /// 
+        /// 个人用户认证证书图片样式如下图
+        /// 
+        /// ![image](https://dyn.ess.tencent.cn/guide/capi/CreatePersonAuthCertificateImage.png)
+        /// 
+        /// 注:  
+        /// <ul>
+        /// <li>只能获取个人用户证明图片, 企业员工的暂不支持</li>
+        /// <li>处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。  </li>
+        /// </ul>
+        /// </summary>
+        /// <param name="req"><see cref="CreatePersonAuthCertificateImageRequest"/></param>
+        /// <returns><see cref="CreatePersonAuthCertificateImageResponse"/></returns>
+        public CreatePersonAuthCertificateImageResponse CreatePersonAuthCertificateImageSync(CreatePersonAuthCertificateImageRequest req)
+        {
+            return InternalRequestAsync<CreatePersonAuthCertificateImageResponse>(req, "CreatePersonAuthCertificateImage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

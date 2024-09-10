@@ -28,7 +28,7 @@ namespace TencentCloud.Aiart.V20221229
 
        private const string endpoint = "aiart.tencentcloudapi.com";
        private const string version = "2022-12-29";
-       private const string sdkVersion = "SDK_NET_3.0.1084";
+       private const string sdkVersion = "SDK_NET_3.0.1085";
 
         /// <summary>
         /// Client constructor.
@@ -233,6 +233,29 @@ namespace TencentCloud.Aiart.V20221229
         public ReplaceBackgroundResponse ReplaceBackgroundSync(ReplaceBackgroundRequest req)
         {
             return InternalRequestAsync<ReplaceBackgroundResponse>(req, "ReplaceBackground")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 线稿生图接口支持上传一张黑白线稿图，按照指定的主体对象以及样式、颜色、材质、风格等的文本描述prompt ，对线稿图进行色彩填充与细节描绘，得到一张完整绘制的图像。生成图分辨率默认为1024:1024。
+        /// 线稿生图默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="SketchToImageRequest"/></param>
+        /// <returns><see cref="SketchToImageResponse"/></returns>
+        public Task<SketchToImageResponse> SketchToImage(SketchToImageRequest req)
+        {
+            return InternalRequestAsync<SketchToImageResponse>(req, "SketchToImage");
+        }
+
+        /// <summary>
+        /// 线稿生图接口支持上传一张黑白线稿图，按照指定的主体对象以及样式、颜色、材质、风格等的文本描述prompt ，对线稿图进行色彩填充与细节描绘，得到一张完整绘制的图像。生成图分辨率默认为1024:1024。
+        /// 线稿生图默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="SketchToImageRequest"/></param>
+        /// <returns><see cref="SketchToImageResponse"/></returns>
+        public SketchToImageResponse SketchToImageSync(SketchToImageRequest req)
+        {
+            return InternalRequestAsync<SketchToImageResponse>(req, "SketchToImage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

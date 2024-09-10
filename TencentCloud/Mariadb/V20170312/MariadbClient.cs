@@ -28,7 +28,7 @@ namespace TencentCloud.Mariadb.V20170312
 
        private const string endpoint = "mariadb.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1084";
+       private const string sdkVersion = "SDK_NET_3.0.1085";
 
         /// <summary>
         /// Client constructor.
@@ -348,6 +348,27 @@ namespace TencentCloud.Mariadb.V20170312
         public DescribeAccountsResponse DescribeAccountsSync(DescribeAccountsRequest req)
         {
             return InternalRequestAsync<DescribeAccountsResponse>(req, "DescribeAccounts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeBackupConfigs)用于查询数据库备份配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupConfigsRequest"/></param>
+        /// <returns><see cref="DescribeBackupConfigsResponse"/></returns>
+        public Task<DescribeBackupConfigsResponse> DescribeBackupConfigs(DescribeBackupConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupConfigsResponse>(req, "DescribeBackupConfigs");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeBackupConfigs)用于查询数据库备份配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupConfigsRequest"/></param>
+        /// <returns><see cref="DescribeBackupConfigsResponse"/></returns>
+        public DescribeBackupConfigsResponse DescribeBackupConfigsSync(DescribeBackupConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupConfigsResponse>(req, "DescribeBackupConfigs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1162,6 +1183,31 @@ namespace TencentCloud.Mariadb.V20170312
         public ModifyAccountPrivilegesResponse ModifyAccountPrivilegesSync(ModifyAccountPrivilegesRequest req)
         {
             return InternalRequestAsync<ModifyAccountPrivilegesResponse>(req, "ModifyAccountPrivileges")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(ModifyBackupConfigs)用于修改数据库备份配置信息。
+        /// 
+        /// 1. 修改数据库超期备份配置，目前按年、按月、按日只支持一种，存在互斥关系，如当前策略按年备份，如果传入按月备份策略将会覆盖当前的按年备份策略，务必注意。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupConfigsRequest"/></param>
+        /// <returns><see cref="ModifyBackupConfigsResponse"/></returns>
+        public Task<ModifyBackupConfigsResponse> ModifyBackupConfigs(ModifyBackupConfigsRequest req)
+        {
+            return InternalRequestAsync<ModifyBackupConfigsResponse>(req, "ModifyBackupConfigs");
+        }
+
+        /// <summary>
+        /// 本接口(ModifyBackupConfigs)用于修改数据库备份配置信息。
+        /// 
+        /// 1. 修改数据库超期备份配置，目前按年、按月、按日只支持一种，存在互斥关系，如当前策略按年备份，如果传入按月备份策略将会覆盖当前的按年备份策略，务必注意。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupConfigsRequest"/></param>
+        /// <returns><see cref="ModifyBackupConfigsResponse"/></returns>
+        public ModifyBackupConfigsResponse ModifyBackupConfigsSync(ModifyBackupConfigsRequest req)
+        {
+            return InternalRequestAsync<ModifyBackupConfigsResponse>(req, "ModifyBackupConfigs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

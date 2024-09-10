@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 返回数据对应时间点，采用unix秒级时间戳。
+        /// 返回数据对应时间点，采用 unix 秒级时间戳。
         /// </summary>
         [JsonProperty("Timestamp")]
         public long? Timestamp{ get; set; }
