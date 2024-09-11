@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1085</VersionPrefix>
+    <VersionPrefix>3.0.1086</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -855,5 +855,9 @@
     <Compile Include="V20180717\Models\WechatMiniProgramPublishTask.cs" />
     <Compile Include="V20180717\Models\WechatMiniProgramPublishTaskInput.cs" />
     <Compile Include="V20180717\Models\WechatPublishTask.cs" />
+    <Compile Include="V20240718\VodClient.cs" />
+    <Compile Include="V20240718\Models\CreateStorageCredentialsRequest.cs" />
+    <Compile Include="V20240718\Models\CreateStorageCredentialsResponse.cs" />
+    <Compile Include="V20240718\Models\Credentials.cs" />
   </ItemGroup>
 </Project>

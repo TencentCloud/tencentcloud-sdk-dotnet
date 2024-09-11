@@ -100,6 +100,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("DescriptionTask")]
         public AiAnalysisTaskDescriptionResult DescriptionTask{ get; set; }
 
+        /// <summary>
+        /// 视频内容分析横转竖任务的查询结果，当任务类型为 HorizontalToVertical 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HorizontalToVerticalTask")]
+        public AiAnalysisTaskHorizontalToVerticalResult HorizontalToVerticalTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,6 +123,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "SegmentTask.", this.SegmentTask);
             this.SetParamObj(map, prefix + "HeadTailTask.", this.HeadTailTask);
             this.SetParamObj(map, prefix + "DescriptionTask.", this.DescriptionTask);
+            this.SetParamObj(map, prefix + "HorizontalToVerticalTask.", this.HorizontalToVerticalTask);
         }
     }
 }

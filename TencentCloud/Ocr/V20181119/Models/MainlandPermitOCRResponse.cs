@@ -91,6 +91,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Profile{ get; set; }
 
         /// <summary>
+        /// 国籍
+        /// </summary>
+        [JsonProperty("Nationality")]
+        public string Nationality{ get; set; }
+
+        /// <summary>
         /// 背面字段信息
         /// </summary>
         [JsonProperty("MainlandTravelPermitBackInfos")]
@@ -119,6 +125,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "IssueNumber", this.IssueNumber);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Profile", this.Profile);
+            this.SetParamSimple(map, prefix + "Nationality", this.Nationality);
             this.SetParamObj(map, prefix + "MainlandTravelPermitBackInfos.", this.MainlandTravelPermitBackInfos);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

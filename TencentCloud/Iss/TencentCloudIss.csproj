@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{57641715-DA21-3068-8276-85056D8B441F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1085</VersionPrefix>
+    <VersionPrefix>3.0.1086</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -83,6 +83,8 @@
     <Compile Include="V20230517\Models\BatchOperateDeviceResponse.cs" />
     <Compile Include="V20230517\Models\BitRateInfo.cs" />
     <Compile Include="V20230517\Models\BodyAIResultInfo.cs" />
+    <Compile Include="V20230517\Models\CallISAPIRequest.cs" />
+    <Compile Include="V20230517\Models\CallISAPIResponse.cs" />
     <Compile Include="V20230517\Models\CarAIResultInfo.cs" />
     <Compile Include="V20230517\Models\ChannelAttrInfo.cs" />
     <Compile Include="V20230517\Models\ChannelInfo.cs" />
@@ -196,6 +198,7 @@
     <Compile Include="V20230517\Models\GatewayDevice.cs" />
     <Compile Include="V20230517\Models\GatewayVersion.cs" />
     <Compile Include="V20230517\Models\GatewaysData.cs" />
+    <Compile Include="V20230517\Models\ISAPIOutputData.cs" />
     <Compile Include="V20230517\Models\LifeCycleData.cs" />
     <Compile Include="V20230517\Models\ListAITaskData.cs" />
     <Compile Include="V20230517\Models\ListAITasksRequest.cs" />

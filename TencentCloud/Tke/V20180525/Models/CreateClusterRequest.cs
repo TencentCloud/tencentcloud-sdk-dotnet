@@ -78,6 +78,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ExtensionAddons")]
         public ExtensionAddon[] ExtensionAddons{ get; set; }
 
+        /// <summary>
+        /// 本地专用集群Id
+        /// </summary>
+        [JsonProperty("CdcId")]
+        public string CdcId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArrayObj(map, prefix + "ExistedInstancesForNode.", this.ExistedInstancesForNode);
             this.SetParamArrayObj(map, prefix + "InstanceDataDiskMountSettings.", this.InstanceDataDiskMountSettings);
             this.SetParamArrayObj(map, prefix + "ExtensionAddons.", this.ExtensionAddons);
+            this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
         }
     }
 }

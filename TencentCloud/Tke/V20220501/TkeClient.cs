@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20220501
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2022-05-01";
-       private const string sdkVersion = "SDK_NET_3.0.1085";
+       private const string sdkVersion = "SDK_NET_3.0.1086";
 
         /// <summary>
         /// Client constructor.
@@ -54,6 +54,27 @@ namespace TencentCloud.Tke.V20220501
         }
 
         /// <summary>
+        /// 创建健康检测策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateHealthCheckPolicyRequest"/></param>
+        /// <returns><see cref="CreateHealthCheckPolicyResponse"/></returns>
+        public Task<CreateHealthCheckPolicyResponse> CreateHealthCheckPolicy(CreateHealthCheckPolicyRequest req)
+        {
+            return InternalRequestAsync<CreateHealthCheckPolicyResponse>(req, "CreateHealthCheckPolicy");
+        }
+
+        /// <summary>
+        /// 创建健康检测策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateHealthCheckPolicyRequest"/></param>
+        /// <returns><see cref="CreateHealthCheckPolicyResponse"/></returns>
+        public CreateHealthCheckPolicyResponse CreateHealthCheckPolicySync(CreateHealthCheckPolicyRequest req)
+        {
+            return InternalRequestAsync<CreateHealthCheckPolicyResponse>(req, "CreateHealthCheckPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建 TKE 节点池
         /// </summary>
         /// <param name="req"><see cref="CreateNodePoolRequest"/></param>
@@ -71,6 +92,27 @@ namespace TencentCloud.Tke.V20220501
         public CreateNodePoolResponse CreateNodePoolSync(CreateNodePoolRequest req)
         {
             return InternalRequestAsync<CreateNodePoolResponse>(req, "CreateNodePool")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除健康检测策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteHealthCheckPolicyRequest"/></param>
+        /// <returns><see cref="DeleteHealthCheckPolicyResponse"/></returns>
+        public Task<DeleteHealthCheckPolicyResponse> DeleteHealthCheckPolicy(DeleteHealthCheckPolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteHealthCheckPolicyResponse>(req, "DeleteHealthCheckPolicy");
+        }
+
+        /// <summary>
+        /// 删除健康检测策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteHealthCheckPolicyRequest"/></param>
+        /// <returns><see cref="DeleteHealthCheckPolicyResponse"/></returns>
+        public DeleteHealthCheckPolicyResponse DeleteHealthCheckPolicySync(DeleteHealthCheckPolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteHealthCheckPolicyResponse>(req, "DeleteHealthCheckPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -117,6 +159,69 @@ namespace TencentCloud.Tke.V20220501
         }
 
         /// <summary>
+        /// 查询健康检测策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHealthCheckPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeHealthCheckPoliciesResponse"/></returns>
+        public Task<DescribeHealthCheckPoliciesResponse> DescribeHealthCheckPolicies(DescribeHealthCheckPoliciesRequest req)
+        {
+            return InternalRequestAsync<DescribeHealthCheckPoliciesResponse>(req, "DescribeHealthCheckPolicies");
+        }
+
+        /// <summary>
+        /// 查询健康检测策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHealthCheckPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeHealthCheckPoliciesResponse"/></returns>
+        public DescribeHealthCheckPoliciesResponse DescribeHealthCheckPoliciesSync(DescribeHealthCheckPoliciesRequest req)
+        {
+            return InternalRequestAsync<DescribeHealthCheckPoliciesResponse>(req, "DescribeHealthCheckPolicies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询健康检测策略绑定关系
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHealthCheckPolicyBindingsRequest"/></param>
+        /// <returns><see cref="DescribeHealthCheckPolicyBindingsResponse"/></returns>
+        public Task<DescribeHealthCheckPolicyBindingsResponse> DescribeHealthCheckPolicyBindings(DescribeHealthCheckPolicyBindingsRequest req)
+        {
+            return InternalRequestAsync<DescribeHealthCheckPolicyBindingsResponse>(req, "DescribeHealthCheckPolicyBindings");
+        }
+
+        /// <summary>
+        /// 查询健康检测策略绑定关系
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHealthCheckPolicyBindingsRequest"/></param>
+        /// <returns><see cref="DescribeHealthCheckPolicyBindingsResponse"/></returns>
+        public DescribeHealthCheckPolicyBindingsResponse DescribeHealthCheckPolicyBindingsSync(DescribeHealthCheckPolicyBindingsRequest req)
+        {
+            return InternalRequestAsync<DescribeHealthCheckPolicyBindingsResponse>(req, "DescribeHealthCheckPolicyBindings")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询健康检测策略模板
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHealthCheckTemplateRequest"/></param>
+        /// <returns><see cref="DescribeHealthCheckTemplateResponse"/></returns>
+        public Task<DescribeHealthCheckTemplateResponse> DescribeHealthCheckTemplate(DescribeHealthCheckTemplateRequest req)
+        {
+            return InternalRequestAsync<DescribeHealthCheckTemplateResponse>(req, "DescribeHealthCheckTemplate");
+        }
+
+        /// <summary>
+        /// 查询健康检测策略模板
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHealthCheckTemplateRequest"/></param>
+        /// <returns><see cref="DescribeHealthCheckTemplateResponse"/></returns>
+        public DescribeHealthCheckTemplateResponse DescribeHealthCheckTemplateSync(DescribeHealthCheckTemplateRequest req)
+        {
+            return InternalRequestAsync<DescribeHealthCheckTemplateResponse>(req, "DescribeHealthCheckTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询 TKE 节点池列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNodePoolsRequest"/></param>
@@ -134,6 +239,27 @@ namespace TencentCloud.Tke.V20220501
         public DescribeNodePoolsResponse DescribeNodePoolsSync(DescribeNodePoolsRequest req)
         {
             return InternalRequestAsync<DescribeNodePoolsResponse>(req, "DescribeNodePools")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改健康检测策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHealthCheckPolicyRequest"/></param>
+        /// <returns><see cref="ModifyHealthCheckPolicyResponse"/></returns>
+        public Task<ModifyHealthCheckPolicyResponse> ModifyHealthCheckPolicy(ModifyHealthCheckPolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyHealthCheckPolicyResponse>(req, "ModifyHealthCheckPolicy");
+        }
+
+        /// <summary>
+        /// 修改健康检测策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHealthCheckPolicyRequest"/></param>
+        /// <returns><see cref="ModifyHealthCheckPolicyResponse"/></returns>
+        public ModifyHealthCheckPolicyResponse ModifyHealthCheckPolicySync(ModifyHealthCheckPolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyHealthCheckPolicyResponse>(req, "ModifyHealthCheckPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

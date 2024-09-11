@@ -108,6 +108,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("InternalUuid")]
         public long? InternalUuid{ get; set; }
 
+        /// <summary>
+        /// 规则生效的范围：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
+        /// </summary>
+        [JsonProperty("Scope")]
+        public string Scope{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
             this.SetParamSimple(map, prefix + "InternalUuid", this.InternalUuid);
+            this.SetParamSimple(map, prefix + "Scope", this.Scope);
         }
     }
 }

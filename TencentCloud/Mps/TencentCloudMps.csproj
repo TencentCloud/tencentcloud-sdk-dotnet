@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1085</VersionPrefix>
+    <VersionPrefix>3.0.1086</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -82,6 +82,9 @@
     <Compile Include="V20190612\Models\AiAnalysisTaskHighlightInput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskHighlightOutput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskHighlightResult.cs" />
+    <Compile Include="V20190612\Models\AiAnalysisTaskHorizontalToVerticalInput.cs" />
+    <Compile Include="V20190612\Models\AiAnalysisTaskHorizontalToVerticalOutput.cs" />
+    <Compile Include="V20190612\Models\AiAnalysisTaskHorizontalToVerticalResult.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskInput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskSegmentInput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskSegmentOutput.cs" />

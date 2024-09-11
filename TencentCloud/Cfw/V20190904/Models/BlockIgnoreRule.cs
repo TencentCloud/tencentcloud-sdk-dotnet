@@ -185,6 +185,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("CustomRule")]
         public CustomWhiteRule CustomRule{ get; set; }
 
+        /// <summary>
+        /// 1 border 2 nat 4 vpc 8 border-serial
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FwType")]
+        public long? FwType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -214,6 +221,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamSimple(map, prefix + "LastHitTime", this.LastHitTime);
             this.SetParamObj(map, prefix + "CustomRule.", this.CustomRule);
+            this.SetParamSimple(map, prefix + "FwType", this.FwType);
         }
     }
 }

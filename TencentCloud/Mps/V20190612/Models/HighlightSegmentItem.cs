@@ -42,6 +42,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
+        /// <summary>
+        /// 片段标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SegmentTags")]
+        public string[] SegmentTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +58,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
             this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
+            this.SetParamArraySimple(map, prefix + "SegmentTags.", this.SegmentTags);
         }
     }
 }

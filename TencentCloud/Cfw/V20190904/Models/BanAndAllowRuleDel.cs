@@ -32,7 +32,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Ioc{ get; set; }
 
         /// <summary>
-        /// 0互联网出站 1互联网入站 5内网访问源 6内网访问目的
+        /// 0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DirectionList")]

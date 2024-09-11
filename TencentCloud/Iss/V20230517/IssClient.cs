@@ -28,7 +28,7 @@ namespace TencentCloud.Iss.V20230517
 
        private const string endpoint = "iss.tencentcloudapi.com";
        private const string version = "2023-05-17";
-       private const string sdkVersion = "SDK_NET_3.0.1085";
+       private const string sdkVersion = "SDK_NET_3.0.1086";
 
         /// <summary>
         /// Client constructor.
@@ -266,6 +266,27 @@ namespace TencentCloud.Iss.V20230517
         public BatchOperateDeviceResponse BatchOperateDeviceSync(BatchOperateDeviceRequest req)
         {
             return InternalRequestAsync<BatchOperateDeviceResponse>(req, "BatchOperateDevice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口可基于海康ISUP 5.0协议实现透传ISAPI的请求数据，调用接口前需确保设备采用ISUP协议成功注册至本平台
+        /// </summary>
+        /// <param name="req"><see cref="CallISAPIRequest"/></param>
+        /// <returns><see cref="CallISAPIResponse"/></returns>
+        public Task<CallISAPIResponse> CallISAPI(CallISAPIRequest req)
+        {
+            return InternalRequestAsync<CallISAPIResponse>(req, "CallISAPI");
+        }
+
+        /// <summary>
+        /// 本接口可基于海康ISUP 5.0协议实现透传ISAPI的请求数据，调用接口前需确保设备采用ISUP协议成功注册至本平台
+        /// </summary>
+        /// <param name="req"><see cref="CallISAPIRequest"/></param>
+        /// <returns><see cref="CallISAPIResponse"/></returns>
+        public CallISAPIResponse CallISAPISync(CallISAPIRequest req)
+        {
+            return InternalRequestAsync<CallISAPIResponse>(req, "CallISAPI")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

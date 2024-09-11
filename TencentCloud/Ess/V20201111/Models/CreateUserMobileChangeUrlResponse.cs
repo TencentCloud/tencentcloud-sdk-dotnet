@@ -25,27 +25,24 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 腾讯电子签小程序的实名认证链接。
-        /// 如果没有传递，默认值是 HTTP。 链接的有效期均是 7 天。
+        /// 腾讯电子签小程序的实名认证链接。 如果没有传递，默认值是 HTTP。 链接的有效期均是 7 天。
         /// 
-        /// - 如果EndPoint是APP，
-        /// 得到的链接类似于pages/guide/index?to=MOBILE_CHANGE_INTENTION&shortKey=yDCZHUyOcExAlcOvNod0, 用法可以参考描述中的"跳转到小程序的实现"
+        /// <b>1.如果EndPoint是APP</b>，
+        /// 得到的链接类似于<a href="">pages/guide/index?to=MOBILE_CHANGE_INTENTION&shortKey=yDCZHUyOcExAlcOvNod0</a>, 用法可以参考描述中的"跳转到小程序的实现"
         /// 
-        /// - 如果EndPoint是HTTP，
-        /// 得到的链接类似于https://res.ess.tencent.cn/cdn/h5-activity/jump-mp.html?to=MOBILE_CHANGE_INTENTION&shortKey=yDCZHUyOcChrfpaswT0d，点击后会跳转到腾讯电子签小程序进行签署
+        /// <b>2.如果EndPoint是HTTP</b>，
+        /// 得到的链接类似于<a href="">https://res.ess.tencent.cn/cdn/h5-activity/jump-mp.html?to=MOBILE_CHANGE_INTENTION&shortKey=yDCZHUyOcChrfpaswT0d</a>，点击后会跳转到腾讯电子签小程序进行签署
         /// 
-        /// - 如果EndPoint是HTTP_SHORT_URL，
-        /// 得到的链接类似于https://essurl.cn/2n**42Nd，点击后会跳转到腾讯电子签小程序进行签署
+        /// <b>3.如果EndPoint是HTTP_SHORT_URL</b>，
+        /// 得到的链接类似于<a href="">https://essurl.cn/2n**42Nd</a>，点击后会跳转到腾讯电子签小程序进行签署
         /// 
-        /// 
-        /// 注： 生成的链路后面不能再增加参数
-        /// 示例值：https://essurl.cn/2n**42Nd
+        /// 注： <font color="red">生成的链路后面不能再增加参数</font>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 链接失效期限如下：
+        /// 链接失效期限，为Unix时间戳（单位秒），有如下规则：
         /// 
         /// <ul>
         /// <li>如果指定更换绑定手机号的用户(指定用户ID或姓名等信息)，则设定的链接失效期限为7天后。</li>

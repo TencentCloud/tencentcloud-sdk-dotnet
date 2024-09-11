@@ -191,6 +191,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
+        /// <summary>
+        /// IP超量状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OverUsedStatus")]
+        public long? OverUsedStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -219,6 +226,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "SwitchMode", this.SwitchMode);
             this.SetParamSimple(map, prefix + "SwitchWeight", this.SwitchWeight);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "OverUsedStatus", this.OverUsedStatus);
         }
     }
 }

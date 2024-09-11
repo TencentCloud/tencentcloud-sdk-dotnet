@@ -142,6 +142,27 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("Abnormal")]
         public long? Abnormal{ get; set; }
 
+        /// <summary>
+        /// nat防火墙出口路由表id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ORTableId")]
+        public string ORTableId{ get; set; }
+
+        /// <summary>
+        /// nat防火墙出口路由表名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ORTableName")]
+        public string ORTableName{ get; set; }
+
+        /// <summary>
+        /// 出口Snat Ip列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Ohavips")]
+        public string[] Ohavips{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -165,6 +186,9 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "NatInsName", this.NatInsName);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "Abnormal", this.Abnormal);
+            this.SetParamSimple(map, prefix + "ORTableId", this.ORTableId);
+            this.SetParamSimple(map, prefix + "ORTableName", this.ORTableName);
+            this.SetParamArraySimple(map, prefix + "Ohavips.", this.Ohavips);
         }
     }
 }

@@ -67,20 +67,13 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 要跳转的链接类型
         /// 
-        /// - HTTP：
-        /// 跳转电子签小程序的http_url,短信通知或者H5跳转适合此类型 ，此时返回长链 (默认类型)
-        /// 
-        /// - HTTP_SHORT_URL：
-        /// 跳转电子签小程序的http_url,短信通知或者H5跳转适合此类型，此时返回短链
-        /// 
-        /// - APP：
-        /// 第三方APP或小程序跳转电子签小程序的path, APP或者小程序跳转适合此类型
-        /// 
-        /// - H5：
-        /// 跳转电子签H5实名页面的长链
-        /// 
-        /// - H5_SHORT_URL：
-        /// 跳转电子签H5实名页面的短链
+        /// <ul>
+        /// <li><strong>HTTP</strong>：适用于短信通知或H5跳转的电子签小程序HTTP长链接</li>
+        /// <li><strong>HTTP_SHORT_URL</strong>：适用于短信通知或H5跳转的电子签小程序HTTP短链接</li>
+        /// <li><strong>APP</strong>：（默认类型）适用于第三方APP或小程序跳转的电子签小程序路径</li>
+        /// <li><strong>H5</strong>：适用于跳转至电子签H5实名页面的长链接</li>
+        /// <li><strong>H5_SHORT_URL</strong>：适用于跳转至电子签H5实名页面的短链接</li>
+        /// </ul>
         /// 
         /// 注：如果不传递，默认值是 <font color="red"> APP </font>
         /// </summary>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1085</VersionPrefix>
+    <VersionPrefix>3.0.1086</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,20 +51,35 @@
     <Compile Include="V20220501\Models\Annotation.cs" />
     <Compile Include="V20220501\Models\AutoUpgradeOptions.cs" />
     <Compile Include="V20220501\Models\AutoscalingAdded.cs" />
+    <Compile Include="V20220501\Models\CreateHealthCheckPolicyRequest.cs" />
+    <Compile Include="V20220501\Models\CreateHealthCheckPolicyResponse.cs" />
     <Compile Include="V20220501\Models\CreateNativeNodePoolParam.cs" />
     <Compile Include="V20220501\Models\CreateNodePoolRequest.cs" />
     <Compile Include="V20220501\Models\CreateNodePoolResponse.cs" />
     <Compile Include="V20220501\Models\DataDisk.cs" />
+    <Compile Include="V20220501\Models\DeleteHealthCheckPolicyRequest.cs" />
+    <Compile Include="V20220501\Models\DeleteHealthCheckPolicyResponse.cs" />
     <Compile Include="V20220501\Models\DeleteNodePoolRequest.cs" />
     <Compile Include="V20220501\Models\DeleteNodePoolResponse.cs" />
     <Compile Include="V20220501\Models\DescribeClusterInstancesRequest.cs" />
     <Compile Include="V20220501\Models\DescribeClusterInstancesResponse.cs" />
+    <Compile Include="V20220501\Models\DescribeHealthCheckPoliciesRequest.cs" />
+    <Compile Include="V20220501\Models\DescribeHealthCheckPoliciesResponse.cs" />
+    <Compile Include="V20220501\Models\DescribeHealthCheckPolicyBindingsRequest.cs" />
+    <Compile Include="V20220501\Models\DescribeHealthCheckPolicyBindingsResponse.cs" />
+    <Compile Include="V20220501\Models\DescribeHealthCheckTemplateRequest.cs" />
+    <Compile Include="V20220501\Models\DescribeHealthCheckTemplateResponse.cs" />
     <Compile Include="V20220501\Models\DescribeNodePoolsRequest.cs" />
     <Compile Include="V20220501\Models\DescribeNodePoolsResponse.cs" />
     <Compile Include="V20220501\Models\Disk.cs" />
     <Compile Include="V20220501\Models\ExternalNodeInfo.cs" />
     <Compile Include="V20220501\Models\ExternalNodePoolInfo.cs" />
     <Compile Include="V20220501\Models\Filter.cs" />
+    <Compile Include="V20220501\Models\HealthCheckPolicy.cs" />
+    <Compile Include="V20220501\Models\HealthCheckPolicyBinding.cs" />
+    <Compile Include="V20220501\Models\HealthCheckPolicyRule.cs" />
+    <Compile Include="V20220501\Models\HealthCheckTemplate.cs" />
+    <Compile Include="V20220501\Models\HealthCheckTemplateRule.cs" />
     <Compile Include="V20220501\Models\Instance.cs" />
     <Compile Include="V20220501\Models\InstanceAdvancedSettings.cs" />
     <Compile Include="V20220501\Models\InstanceChargePrepaid.cs" />
@@ -77,6 +92,8 @@
     <Compile Include="V20220501\Models\MachineUpgradeSettings.cs" />
     <Compile Include="V20220501\Models\ManagementConfig.cs" />
     <Compile Include="V20220501\Models\ManuallyAdded.cs" />
+    <Compile Include="V20220501\Models\ModifyHealthCheckPolicyRequest.cs" />
+    <Compile Include="V20220501\Models\ModifyHealthCheckPolicyResponse.cs" />
     <Compile Include="V20220501\Models\ModifyNodePoolRequest.cs" />
     <Compile Include="V20220501\Models\ModifyNodePoolResponse.cs" />
     <Compile Include="V20220501\Models\NativeNodeInfo.cs" />
