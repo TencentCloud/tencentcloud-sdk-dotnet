@@ -87,6 +87,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("TDSQLPostgreSql")]
         public DataSourceInfo TDSQLPostgreSql{ get; set; }
 
+        /// <summary>
+        /// Doris数据源连接的属性
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TCHouseD")]
+        public TCHouseD TCHouseD{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +109,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamObj(map, prefix + "ClickHouse.", this.ClickHouse);
             this.SetParamObj(map, prefix + "Elasticsearch.", this.Elasticsearch);
             this.SetParamObj(map, prefix + "TDSQLPostgreSql.", this.TDSQLPostgreSql);
+            this.SetParamObj(map, prefix + "TCHouseD.", this.TCHouseD);
         }
     }
 }

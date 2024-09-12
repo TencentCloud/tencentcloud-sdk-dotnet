@@ -37,7 +37,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Format{ get; set; }
 
         /// <summary>
-        /// 是否重新生成下载文件，仅当之前任务为 Timout | Error 时有效
+        /// 是否重新生成下载文件，仅当之前任务状态为 timeout | error 时有效
         /// </summary>
         [JsonProperty("Force")]
         public bool? Force{ get; set; }

@@ -80,6 +80,18 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("CopyRightWatermarkText")]
         public string CopyRightWatermarkText{ get; set; }
 
+        /// <summary>
+        /// 字幕信息列表。
+        /// </summary>
+        [JsonProperty("SubtitleSet")]
+        public MediaSubtitleItem[] SubtitleSet{ get; set; }
+
+        /// <summary>
+        /// 默认字幕的唯一标识。
+        /// </summary>
+        [JsonProperty("DefaultSubtitleId")]
+        public string DefaultSubtitleId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +106,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "DigitalWatermarkType", this.DigitalWatermarkType);
             this.SetParamArrayObj(map, prefix + "SubStreamSet.", this.SubStreamSet);
             this.SetParamSimple(map, prefix + "CopyRightWatermarkText", this.CopyRightWatermarkText);
+            this.SetParamArrayObj(map, prefix + "SubtitleSet.", this.SubtitleSet);
+            this.SetParamSimple(map, prefix + "DefaultSubtitleId", this.DefaultSubtitleId);
         }
     }
 }

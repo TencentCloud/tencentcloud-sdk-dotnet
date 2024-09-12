@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1086";
+       private const string sdkVersion = "SDK_NET_3.0.1087";
 
         /// <summary>
         /// Client constructor.
@@ -2613,7 +2613,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 查询流程填写控件内容，可以根据合同流程ID查询该合同流程相关联的填写控件信息和填写内容。
+        /// 可以根据合同流程ID查询该合同流程相关联的填写控件信息和填写内容，包括填写控件的归属方、填写控件是否已经填写以及填写的内容等信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowComponentsRequest"/></param>
         /// <returns><see cref="DescribeFlowComponentsResponse"/></returns>
@@ -2623,7 +2623,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 查询流程填写控件内容，可以根据合同流程ID查询该合同流程相关联的填写控件信息和填写内容。
+        /// 可以根据合同流程ID查询该合同流程相关联的填写控件信息和填写内容，包括填写控件的归属方、填写控件是否已经填写以及填写的内容等信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowComponentsRequest"/></param>
         /// <returns><see cref="DescribeFlowComponentsResponse"/></returns>

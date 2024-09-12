@@ -134,6 +134,12 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
+        /// <summary>
+        /// 响应时间满意阈值
+        /// </summary>
+        [JsonProperty("ResponseDurationWarningThreshold")]
+        public long? ResponseDurationWarningThreshold{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +164,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "LogSource", this.LogSource);
             this.SetParamArraySimple(map, prefix + "CustomShowTags.", this.CustomShowTags);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
         }
     }
 }

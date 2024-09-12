@@ -24,12 +24,33 @@ namespace TencentCloud.Vdb.V20230616.Models
     public class DescribeInstanceNodesRequest : AbstractModel
     {
         
+        /// <summary>
+        /// limit
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// offset
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// component
+        /// </summary>
+        [JsonProperty("Component")]
+        public string Component{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Component", this.Component);
         }
     }
 }

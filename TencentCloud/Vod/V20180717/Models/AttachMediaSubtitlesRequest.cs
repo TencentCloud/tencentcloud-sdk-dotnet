@@ -51,6 +51,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] SubtitleIds{ get; set; }
 
         /// <summary>
+        /// 默认字幕的唯一标识。不填则不设置默认字幕。
+        /// </summary>
+        [JsonProperty("DefaultSubtitleId")]
+        public string DefaultSubtitleId{ get; set; }
+
+        /// <summary>
         /// <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
         /// </summary>
         [JsonProperty("SubAppId")]
@@ -66,6 +72,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Operation", this.Operation);
             this.SetParamSimple(map, prefix + "AdaptiveDynamicStreamingDefinition", this.AdaptiveDynamicStreamingDefinition);
             this.SetParamArraySimple(map, prefix + "SubtitleIds.", this.SubtitleIds);
+            this.SetParamSimple(map, prefix + "DefaultSubtitleId", this.DefaultSubtitleId);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }

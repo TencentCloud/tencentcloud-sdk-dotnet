@@ -45,14 +45,14 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Reason{ get; set; }
 
         /// <summary>
-        /// 临时AK
+        /// 临时SecretId
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecretId")]
         public string SecretId{ get; set; }
 
         /// <summary>
-        /// 临时SK
+        /// 临时SecretKey
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecretKey")]

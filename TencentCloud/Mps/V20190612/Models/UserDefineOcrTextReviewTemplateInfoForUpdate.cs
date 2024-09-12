@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 标签个数最多 10 个，每个标签长度最多 16 个字符。
         /// </summary>
         [JsonProperty("LabelSet")]
-        public string LabelSet{ get; set; }
+        public string[] LabelSet{ get; set; }
 
         /// <summary>
         /// 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规。取值范围：0~100。
@@ -58,7 +58,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamSimple(map, prefix + "LabelSet", this.LabelSet);
+            this.SetParamArraySimple(map, prefix + "LabelSet.", this.LabelSet);
             this.SetParamSimple(map, prefix + "BlockConfidence", this.BlockConfidence);
             this.SetParamSimple(map, prefix + "ReviewConfidence", this.ReviewConfidence);
         }

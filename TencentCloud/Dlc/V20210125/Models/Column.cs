@@ -31,8 +31,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 列类型，支持如下类型定义:
-        /// string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array<data_type>|map<primitive_type, data_type>|struct<col_name : data_type [COMMENT col_comment], ...>|uniontype<data_type, data_type, ...>。
+        /// string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array|map|struct|uniontype
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -93,6 +92,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("IsPartition")]
         public bool? IsPartition{ get; set; }
 
+        /// <summary>
+        /// 数据脱敏策略信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DataMaskStrategyInfo")]
+        public DataMaskStrategyInfo DataMaskStrategyInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +115,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
             this.SetParamSimple(map, prefix + "IsPartition", this.IsPartition);
+            this.SetParamObj(map, prefix + "DataMaskStrategyInfo.", this.DataMaskStrategyInfo);
         }
     }
 }

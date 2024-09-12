@@ -38,6 +38,13 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("ValidStatus")]
         public string ValidStatus{ get; set; }
 
+        /// <summary>
+        /// 绑定的类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BindType")]
+        public string BindType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         {
             this.SetParamSimple(map, prefix + "DbName", this.DbName);
             this.SetParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
+            this.SetParamSimple(map, prefix + "BindType", this.BindType);
         }
     }
 }

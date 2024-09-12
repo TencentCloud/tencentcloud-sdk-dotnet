@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{35B03DD2-7919-36B9-9AF9-8C160C55C632}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1086</VersionPrefix>
+    <VersionPrefix>3.0.1087</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -96,6 +96,8 @@
     <Compile Include="V20190116\Models\DeleteAccessKeyResponse.cs" />
     <Compile Include="V20190116\Models\DeleteGroupRequest.cs" />
     <Compile Include="V20190116\Models\DeleteGroupResponse.cs" />
+    <Compile Include="V20190116\Models\DeleteMessageReceiverRequest.cs" />
+    <Compile Include="V20190116\Models\DeleteMessageReceiverResponse.cs" />
     <Compile Include="V20190116\Models\DeleteOIDCConfigRequest.cs" />
     <Compile Include="V20190116\Models\DeleteOIDCConfigResponse.cs" />
     <Compile Include="V20190116\Models\DeletePolicyRequest.cs" />
@@ -195,6 +197,8 @@
     <Compile Include="V20190116\Models\ListPoliciesResponse.cs" />
     <Compile Include="V20190116\Models\ListPolicyVersionsRequest.cs" />
     <Compile Include="V20190116\Models\ListPolicyVersionsResponse.cs" />
+    <Compile Include="V20190116\Models\ListReceiverRequest.cs" />
+    <Compile Include="V20190116\Models\ListReceiverResponse.cs" />
     <Compile Include="V20190116\Models\ListSAMLProvidersRequest.cs" />
     <Compile Include="V20190116\Models\ListSAMLProvidersResponse.cs" />
     <Compile Include="V20190116\Models\ListUsersForGroupRequest.cs" />
@@ -213,6 +217,7 @@
     <Compile Include="V20190116\Models\PutRolePermissionsBoundaryResponse.cs" />
     <Compile Include="V20190116\Models\PutUserPermissionsBoundaryRequest.cs" />
     <Compile Include="V20190116\Models\PutUserPermissionsBoundaryResponse.cs" />
+    <Compile Include="V20190116\Models\Receiver.cs" />
     <Compile Include="V20190116\Models\RemoveUserFromGroupRequest.cs" />
     <Compile Include="V20190116\Models\RemoveUserFromGroupResponse.cs" />
     <Compile Include="V20190116\Models\RoleInfo.cs" />

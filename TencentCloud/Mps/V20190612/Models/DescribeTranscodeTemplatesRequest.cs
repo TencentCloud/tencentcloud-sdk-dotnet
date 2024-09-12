@@ -78,6 +78,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("TranscodeType")]
         public string TranscodeType{ get; set; }
 
+        /// <summary>
+        /// 转码模板标识过滤条件，长度限制：64 个字符。	
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -91,6 +97,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "TranscodeType", this.TranscodeType);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

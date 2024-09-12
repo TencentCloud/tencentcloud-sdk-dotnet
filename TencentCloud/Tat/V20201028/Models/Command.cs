@@ -98,6 +98,13 @@ namespace TencentCloud.Tat.V20201028.Models
         public DefaultParameterConf[] DefaultParameterConfs{ get; set; }
 
         /// <summary>
+        /// 命令关联的场景
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Scenes")]
+        public string[] Scenes{ get; set; }
+
+        /// <summary>
         /// 命令的结构化描述。公共命令有值，用户命令为空字符串。
         /// </summary>
         [JsonProperty("FormattedDescription")]
@@ -151,6 +158,7 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "EnableParameter", this.EnableParameter);
             this.SetParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
             this.SetParamArrayObj(map, prefix + "DefaultParameterConfs.", this.DefaultParameterConfs);
+            this.SetParamArraySimple(map, prefix + "Scenes.", this.Scenes);
             this.SetParamSimple(map, prefix + "FormattedDescription", this.FormattedDescription);
             this.SetParamSimple(map, prefix + "CreatedBy", this.CreatedBy);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);

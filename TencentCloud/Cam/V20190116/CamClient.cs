@@ -28,7 +28,7 @@ namespace TencentCloud.Cam.V20190116
 
        private const string endpoint = "cam.tencentcloudapi.com";
        private const string version = "2019-01-16";
-       private const string sdkVersion = "SDK_NET_3.0.1086";
+       private const string sdkVersion = "SDK_NET_3.0.1087";
 
         /// <summary>
         /// Client constructor.
@@ -472,6 +472,27 @@ namespace TencentCloud.Cam.V20190116
         public DeleteGroupResponse DeleteGroupSync(DeleteGroupRequest req)
         {
             return InternalRequestAsync<DeleteGroupResponse>(req, "DeleteGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除消息接收人
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMessageReceiverRequest"/></param>
+        /// <returns><see cref="DeleteMessageReceiverResponse"/></returns>
+        public Task<DeleteMessageReceiverResponse> DeleteMessageReceiver(DeleteMessageReceiverRequest req)
+        {
+            return InternalRequestAsync<DeleteMessageReceiverResponse>(req, "DeleteMessageReceiver");
+        }
+
+        /// <summary>
+        /// 删除消息接收人
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMessageReceiverRequest"/></param>
+        /// <returns><see cref="DeleteMessageReceiverResponse"/></returns>
+        public DeleteMessageReceiverResponse DeleteMessageReceiverSync(DeleteMessageReceiverRequest req)
+        {
+            return InternalRequestAsync<DeleteMessageReceiverResponse>(req, "DeleteMessageReceiver")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1438,6 +1459,27 @@ namespace TencentCloud.Cam.V20190116
         public ListPolicyVersionsResponse ListPolicyVersionsSync(ListPolicyVersionsRequest req)
         {
             return InternalRequestAsync<ListPolicyVersionsResponse>(req, "ListPolicyVersions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取消息接收人列表
+        /// </summary>
+        /// <param name="req"><see cref="ListReceiverRequest"/></param>
+        /// <returns><see cref="ListReceiverResponse"/></returns>
+        public Task<ListReceiverResponse> ListReceiver(ListReceiverRequest req)
+        {
+            return InternalRequestAsync<ListReceiverResponse>(req, "ListReceiver");
+        }
+
+        /// <summary>
+        /// 获取消息接收人列表
+        /// </summary>
+        /// <param name="req"><see cref="ListReceiverRequest"/></param>
+        /// <returns><see cref="ListReceiverResponse"/></returns>
+        public ListReceiverResponse ListReceiverSync(ListReceiverRequest req)
+        {
+            return InternalRequestAsync<ListReceiverResponse>(req, "ListReceiver")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

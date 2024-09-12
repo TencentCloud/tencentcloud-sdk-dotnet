@@ -28,7 +28,7 @@ namespace TencentCloud.Dasb.V20191018
 
        private const string endpoint = "dasb.tencentcloudapi.com";
        private const string version = "2019-10-18";
-       private const string sdkVersion = "SDK_NET_3.0.1086";
+       private const string sdkVersion = "SDK_NET_3.0.1087";
 
         /// <summary>
         /// Client constructor.
@@ -785,6 +785,27 @@ namespace TencentCloud.Dasb.V20191018
         public DescribeDevicesResponse DescribeDevicesSync(DescribeDevicesRequest req)
         {
             return InternalRequestAsync<DescribeDevicesResponse>(req, "DescribeDevices")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询网络域
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainsRequest"/></param>
+        /// <returns><see cref="DescribeDomainsResponse"/></returns>
+        public Task<DescribeDomainsResponse> DescribeDomains(DescribeDomainsRequest req)
+        {
+            return InternalRequestAsync<DescribeDomainsResponse>(req, "DescribeDomains");
+        }
+
+        /// <summary>
+        /// 查询网络域
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainsRequest"/></param>
+        /// <returns><see cref="DescribeDomainsResponse"/></returns>
+        public DescribeDomainsResponse DescribeDomainsSync(DescribeDomainsRequest req)
+        {
+            return InternalRequestAsync<DescribeDomainsResponse>(req, "DescribeDomains")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

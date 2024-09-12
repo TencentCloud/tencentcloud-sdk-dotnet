@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1086";
+       private const string sdkVersion = "SDK_NET_3.0.1087";
 
         /// <summary>
         /// Client constructor.
@@ -2427,7 +2427,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 获取待提交任务预提交校验信息
+        /// 获取待提交任务预提交校验信息（注意：工作流编号或者任务编号列表，必须填一项）
         /// </summary>
         /// <param name="req"><see cref="DescribePendingSubmitTaskListRequest"/></param>
         /// <returns><see cref="DescribePendingSubmitTaskListResponse"/></returns>
@@ -2437,7 +2437,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 获取待提交任务预提交校验信息
+        /// 获取待提交任务预提交校验信息（注意：工作流编号或者任务编号列表，必须填一项）
         /// </summary>
         /// <param name="req"><see cref="DescribePendingSubmitTaskListRequest"/></param>
         /// <returns><see cref="DescribePendingSubmitTaskListResponse"/></returns>

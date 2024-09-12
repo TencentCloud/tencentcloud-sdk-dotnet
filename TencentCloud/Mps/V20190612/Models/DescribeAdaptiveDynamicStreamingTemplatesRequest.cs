@@ -56,6 +56,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("PureAudio")]
         public ulong? PureAudio{ get; set; }
 
+        /// <summary>
+        /// 自适应转码模板标识过滤条件，长度限制：64 个字符
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +73,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "PureAudio", this.PureAudio);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

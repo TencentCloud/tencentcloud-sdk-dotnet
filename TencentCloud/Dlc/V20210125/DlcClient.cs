@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1086";
+       private const string sdkVersion = "SDK_NET_3.0.1087";
 
         /// <summary>
         /// Client constructor.
@@ -1335,7 +1335,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（DescribeDataEngines）用于查询DataEngines信息列表
+        /// 本接口（DescribeDataEngines）用于查询DataEngines信息列表.
         /// </summary>
         /// <param name="req"><see cref="DescribeDataEnginesRequest"/></param>
         /// <returns><see cref="DescribeDataEnginesResponse"/></returns>
@@ -1345,7 +1345,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（DescribeDataEngines）用于查询DataEngines信息列表
+        /// 本接口（DescribeDataEngines）用于查询DataEngines信息列表.
         /// </summary>
         /// <param name="req"><see cref="DescribeDataEnginesRequest"/></param>
         /// <returns><see cref="DescribeDataEnginesResponse"/></returns>
