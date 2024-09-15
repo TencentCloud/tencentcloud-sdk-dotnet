@@ -66,6 +66,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("FileInfos")]
         public MsgFileInfo[] FileInfos{ get; set; }
 
+        /// <summary>
+        /// 回复方式，15：澄清确认回复
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReplyMethod")]
+        public ulong? ReplyMethod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +85,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Avatar", this.Avatar);
             this.SetParamSimple(map, prefix + "Content", this.Content);
             this.SetParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
+            this.SetParamSimple(map, prefix + "ReplyMethod", this.ReplyMethod);
         }
     }
 }

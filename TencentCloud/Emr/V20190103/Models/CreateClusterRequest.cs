@@ -87,7 +87,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public ScriptBootstrapActionConfig[] ScriptBootstrapActionConfig{ get; set; }
 
         /// <summary>
-        /// 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-751a-41b6-aad6-fae360632808
+        /// 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }

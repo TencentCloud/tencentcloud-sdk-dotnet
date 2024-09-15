@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1087";
+       private const string sdkVersion = "SDK_NET_3.0.1088";
 
         /// <summary>
         /// Client constructor.
@@ -1522,6 +1522,27 @@ namespace TencentCloud.Ckafka.V20190819
         public FetchMessageListByOffsetResponse FetchMessageListByOffsetSync(FetchMessageListByOffsetRequest req)
         {
             return InternalRequestAsync<FetchMessageListByOffsetResponse>(req, "FetchMessageListByOffset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据时间戳查询消息列表
+        /// </summary>
+        /// <param name="req"><see cref="FetchMessageListByTimestampRequest"/></param>
+        /// <returns><see cref="FetchMessageListByTimestampResponse"/></returns>
+        public Task<FetchMessageListByTimestampResponse> FetchMessageListByTimestamp(FetchMessageListByTimestampRequest req)
+        {
+            return InternalRequestAsync<FetchMessageListByTimestampResponse>(req, "FetchMessageListByTimestamp");
+        }
+
+        /// <summary>
+        /// 根据时间戳查询消息列表
+        /// </summary>
+        /// <param name="req"><see cref="FetchMessageListByTimestampRequest"/></param>
+        /// <returns><see cref="FetchMessageListByTimestampResponse"/></returns>
+        public FetchMessageListByTimestampResponse FetchMessageListByTimestampSync(FetchMessageListByTimestampRequest req)
+        {
+            return InternalRequestAsync<FetchMessageListByTimestampResponse>(req, "FetchMessageListByTimestamp")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -60,6 +60,12 @@ namespace TencentCloud.Irp.V20220805.Models
         [JsonProperty("CurrentItemId")]
         public string CurrentItemId{ get; set; }
 
+        /// <summary>
+        /// 扩展字段，json字符串，需要base64加密
+        /// </summary>
+        [JsonProperty("Extension")]
+        public string Extension{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Irp.V20220805.Models
             this.SetParamArrayObj(map, prefix + "UserIdList.", this.UserIdList);
             this.SetParamSimple(map, prefix + "ItemCnt", this.ItemCnt);
             this.SetParamSimple(map, prefix + "CurrentItemId", this.CurrentItemId);
+            this.SetParamSimple(map, prefix + "Extension", this.Extension);
         }
     }
 }

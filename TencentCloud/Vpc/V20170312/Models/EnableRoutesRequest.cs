@@ -31,13 +31,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string RouteTableId{ get; set; }
 
         /// <summary>
-        /// 路由策略ID。不能和RouteItemIds同时使用，但至少输入一个。该参数取值可通过查询路由列表（[DescribeRouteTables](https://cloud.tencent.com/document/product/215/15763)）获取。
+        /// 路由策略ID。不能和RouteItemIds同时使用，但至少输入一个。单次处理上限100个。该参数取值可通过查询路由列表（[DescribeRouteTables](https://cloud.tencent.com/document/product/215/15763)）获取。
         /// </summary>
         [JsonProperty("RouteIds")]
         public ulong?[] RouteIds{ get; set; }
 
         /// <summary>
-        /// 路由策略唯一ID。不能和RouteIds同时使用，但至少输入一个。该参数取值可通过查询路由列表（[DescribeRouteTables](https://cloud.tencent.com/document/product/215/15763)）获取。
+        /// 路由策略唯一ID。不能和RouteIds同时使用，但至少输入一个。单次处理上限100个。该参数取值可通过查询路由列表（[DescribeRouteTables](https://cloud.tencent.com/document/product/215/15763)）获取。
         /// </summary>
         [JsonProperty("RouteItemIds")]
         public string[] RouteItemIds{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1087";
+       private const string sdkVersion = "SDK_NET_3.0.1088";
 
         /// <summary>
         /// Client constructor.
@@ -932,6 +932,27 @@ namespace TencentCloud.Cfw.V20190904
         public DescribeEnterpriseSecurityGroupRuleResponse DescribeEnterpriseSecurityGroupRuleSync(DescribeEnterpriseSecurityGroupRuleRequest req)
         {
             return InternalRequestAsync<DescribeEnterpriseSecurityGroupRuleResponse>(req, "DescribeEnterpriseSecurityGroupRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询新企业安全组规则  从node接口迁移   原接口DescribeSecurityGroupNewList
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnterpriseSecurityGroupRuleListRequest"/></param>
+        /// <returns><see cref="DescribeEnterpriseSecurityGroupRuleListResponse"/></returns>
+        public Task<DescribeEnterpriseSecurityGroupRuleListResponse> DescribeEnterpriseSecurityGroupRuleList(DescribeEnterpriseSecurityGroupRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeEnterpriseSecurityGroupRuleListResponse>(req, "DescribeEnterpriseSecurityGroupRuleList");
+        }
+
+        /// <summary>
+        /// 查询新企业安全组规则  从node接口迁移   原接口DescribeSecurityGroupNewList
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnterpriseSecurityGroupRuleListRequest"/></param>
+        /// <returns><see cref="DescribeEnterpriseSecurityGroupRuleListResponse"/></returns>
+        public DescribeEnterpriseSecurityGroupRuleListResponse DescribeEnterpriseSecurityGroupRuleListSync(DescribeEnterpriseSecurityGroupRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeEnterpriseSecurityGroupRuleListResponse>(req, "DescribeEnterpriseSecurityGroupRuleList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -34,7 +34,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 合同流程ID，为32位字符串。
         /// 
-        /// [点击产看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
+        /// [点击查看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }

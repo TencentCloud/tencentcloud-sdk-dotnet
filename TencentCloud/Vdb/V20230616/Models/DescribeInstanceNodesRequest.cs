@@ -25,6 +25,12 @@ namespace TencentCloud.Vdb.V20230616.Models
     {
         
         /// <summary>
+        /// 实例ID。
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
         /// limit
         /// </summary>
         [JsonProperty("Limit")]
@@ -48,6 +54,7 @@ namespace TencentCloud.Vdb.V20230616.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Component", this.Component);

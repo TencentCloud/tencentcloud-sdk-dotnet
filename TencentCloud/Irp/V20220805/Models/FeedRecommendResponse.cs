@@ -25,7 +25,7 @@ namespace TencentCloud.Irp.V20220805.Models
     {
         
         /// <summary>
-        /// 推荐返回的内容信息列表
+        /// 推荐返回的内容信息列表，返回结果已按策略规则做好了排序
         /// </summary>
         [JsonProperty("DataList")]
         public RecItemData[] DataList{ get; set; }

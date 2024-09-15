@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。
+        /// 弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。本接口不支持主网卡绑定安全组。
         /// </summary>
         [JsonProperty("NetworkInterfaceIds")]
         public string[] NetworkInterfaceIds{ get; set; }

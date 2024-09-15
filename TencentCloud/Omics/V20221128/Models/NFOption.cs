@@ -54,13 +54,19 @@ namespace TencentCloud.Omics.V20221128.Models
 
         /// <summary>
         /// Nextflow引擎版本，取值范围：
-        /// - 22.10.4
-        /// - 22.10.8 
+        /// - 22.10.7
         /// - 23.10.1
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NFVersion")]
         public string NFVersion{ get; set; }
+
+        /// <summary>
+        /// 启动路径。可填写指定缓存卷内的绝对路径，nextflow run 命令将在此路径执行。当WorkDir为COS路径时必填；当WorkDir为缓存卷路径时选填，不填默认使用WorkDir作为LaunchDir。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LaunchDir")]
+        public string LaunchDir{ get; set; }
 
 
         /// <summary>
@@ -73,6 +79,7 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamSimple(map, prefix + "Report", this.Report);
             this.SetParamSimple(map, prefix + "Resume", this.Resume);
             this.SetParamSimple(map, prefix + "NFVersion", this.NFVersion);
+            this.SetParamSimple(map, prefix + "LaunchDir", this.LaunchDir);
         }
     }
 }

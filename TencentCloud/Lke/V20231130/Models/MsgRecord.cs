@@ -124,6 +124,7 @@ namespace TencentCloud.Lke.V20231130.Models
 
         /// <summary>
         /// 图片链接，可公有读
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageUrls")]
         public string[] ImageUrls{ get; set; }
@@ -177,6 +178,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("FileInfos")]
         public FileInfo[] FileInfos{ get; set; }
 
+        /// <summary>
+        /// 参考来源引用位置信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QuoteInfos")]
+        public QuoteInfo[] QuoteInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +213,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArraySimple(map, prefix + "OptionCards.", this.OptionCards);
             this.SetParamObj(map, prefix + "TaskFlow.", this.TaskFlow);
             this.SetParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
+            this.SetParamArrayObj(map, prefix + "QuoteInfos.", this.QuoteInfos);
         }
     }
 }

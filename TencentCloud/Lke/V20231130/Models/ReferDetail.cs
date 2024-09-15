@@ -94,6 +94,27 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("OrgData")]
         public string OrgData{ get; set; }
 
+        /// <summary>
+        /// 页码信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PageInfos")]
+        public ulong?[] PageInfos{ get; set; }
+
+        /// <summary>
+        /// sheet信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SheetInfos")]
+        public string[] SheetInfos{ get; set; }
+
+        /// <summary>
+        /// 文档ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DocBizId")]
+        public string DocBizId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +131,9 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Mark", this.Mark);
             this.SetParamArrayObj(map, prefix + "Highlights.", this.Highlights);
             this.SetParamSimple(map, prefix + "OrgData", this.OrgData);
+            this.SetParamArraySimple(map, prefix + "PageInfos.", this.PageInfos);
+            this.SetParamArraySimple(map, prefix + "SheetInfos.", this.SheetInfos);
+            this.SetParamSimple(map, prefix + "DocBizId", this.DocBizId);
         }
     }
 }
