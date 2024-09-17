@@ -76,6 +76,15 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public SearchInfo SearchInfo{ get; set; }
 
         /// <summary>
+        /// 多媒体信息。
+        /// 说明：
+        /// 1. 可以用多媒体信息替换回复内容里的占位符，得到完整的图文信息。
+        /// 2. 可能会出现回复内容里存在占位符，但是因为审核等原因没有返回多媒体信息。
+        /// </summary>
+        [JsonProperty("Replaces")]
+        public Replace[] Replaces{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -95,6 +104,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamObj(map, prefix + "ErrorMsg.", this.ErrorMsg);
             this.SetParamSimple(map, prefix + "ModerationLevel", this.ModerationLevel);
             this.SetParamObj(map, prefix + "SearchInfo.", this.SearchInfo);
+            this.SetParamArrayObj(map, prefix + "Replaces.", this.Replaces);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

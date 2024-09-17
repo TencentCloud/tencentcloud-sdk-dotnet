@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C64F3428-9CE7-3A08-8DE2-D7FBE42B7F75}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1088</VersionPrefix>
+    <VersionPrefix>3.0.1089</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -67,10 +67,12 @@
     <Compile Include="V20230901\Models\LogoParam.cs" />
     <Compile Include="V20230901\Models\LogoRect.cs" />
     <Compile Include="V20230901\Models\Message.cs" />
+    <Compile Include="V20230901\Models\Multimedia.cs" />
     <Compile Include="V20230901\Models\QueryHunyuanImageChatJobRequest.cs" />
     <Compile Include="V20230901\Models\QueryHunyuanImageChatJobResponse.cs" />
     <Compile Include="V20230901\Models\QueryHunyuanImageJobRequest.cs" />
     <Compile Include="V20230901\Models\QueryHunyuanImageJobResponse.cs" />
+    <Compile Include="V20230901\Models\Replace.cs" />
     <Compile Include="V20230901\Models\SearchInfo.cs" />
     <Compile Include="V20230901\Models\SearchResult.cs" />
     <Compile Include="V20230901\Models\SetPayModeRequest.cs" />

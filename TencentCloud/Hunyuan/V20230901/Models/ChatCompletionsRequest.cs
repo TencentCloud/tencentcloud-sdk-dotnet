@@ -103,7 +103,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public bool? EnableEnhancement{ get; set; }
 
         /// <summary>
-        /// 可调用的工具列表，仅对 hunyuan-functioncall 模型生效。
+        /// 可调用的工具列表，仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
         /// </summary>
         [JsonProperty("Tools")]
         public Tool[] Tools{ get; set; }
@@ -111,7 +111,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         /// <summary>
         /// 工具使用选项，可选值包括 none、auto、custom。
         /// 说明：
-        /// 1. 仅对 hunyuan-functioncall 模型生效。
+        /// 1. 仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
         /// 2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。
         /// 3. 未设置时，默认值为auto
         /// </summary>
@@ -146,6 +146,17 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("EnableSpeedSearch")]
         public bool? EnableSpeedSearch{ get; set; }
 
+        /// <summary>
+        /// 图文并茂开关。
+        /// 说明：
+        /// 1. 该参数仅在功能增强（如搜索）开关开启（EnableEnhancement=true）时生效。
+        /// 2. hunyuan-lite 无图文并茂能力，该参数对 hunyuan-lite 版本不生效。
+        /// 3. 未传值时默认关闭。
+        /// 4. 开启并搜索到对应的多媒体信息时，会输出对应的多媒体地址，可以定制个性化的图文消息。
+        /// </summary>
+        [JsonProperty("EnableMultimedia")]
+        public bool? EnableMultimedia{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -165,6 +176,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamSimple(map, prefix + "SearchInfo", this.SearchInfo);
             this.SetParamSimple(map, prefix + "Citation", this.Citation);
             this.SetParamSimple(map, prefix + "EnableSpeedSearch", this.EnableSpeedSearch);
+            this.SetParamSimple(map, prefix + "EnableMultimedia", this.EnableMultimedia);
         }
     }
 }
