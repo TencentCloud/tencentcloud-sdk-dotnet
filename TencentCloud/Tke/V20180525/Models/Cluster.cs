@@ -181,6 +181,13 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ClusterEtcdNodeNum")]
         public ulong? ClusterEtcdNodeNum{ get; set; }
 
+        /// <summary>
+        /// 本地专用集群Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CdcId")]
+        public string CdcId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -211,6 +218,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
             this.SetParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
             this.SetParamSimple(map, prefix + "ClusterEtcdNodeNum", this.ClusterEtcdNodeNum);
+            this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
         }
     }
 }

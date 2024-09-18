@@ -137,7 +137,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public long? IsDelay{ get; set; }
 
         /// <summary>
-        /// 服务模版id
+        /// 服务模板id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceTemplateId")]
@@ -172,7 +172,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string SouCidr{ get; set; }
 
         /// <summary>
-        /// 源模版名称
+        /// 源模板名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SouParameterName")]
@@ -207,14 +207,14 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Cidr{ get; set; }
 
         /// <summary>
-        /// 目的模版名称
+        /// 目的模板名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParameterName")]
         public string ParameterName{ get; set; }
 
         /// <summary>
-        /// 端口模版名称
+        /// 端口模板名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProtocolPortName")]

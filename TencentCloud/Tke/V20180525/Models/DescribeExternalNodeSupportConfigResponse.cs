@@ -107,10 +107,17 @@ namespace TencentCloud.Tke.V20180525.Models
         public bool? EnabledPublicConnect{ get; set; }
 
         /// <summary>
-        /// 公网连接地址
+        /// 注册节点公网版公网连接地址
         /// </summary>
         [JsonProperty("PublicConnectUrl")]
         public string PublicConnectUrl{ get; set; }
+
+        /// <summary>
+        /// 注册节点公网版自定义域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PublicCustomDomain")]
+        public string PublicCustomDomain{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -137,6 +144,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArrayObj(map, prefix + "Progress.", this.Progress);
             this.SetParamSimple(map, prefix + "EnabledPublicConnect", this.EnabledPublicConnect);
             this.SetParamSimple(map, prefix + "PublicConnectUrl", this.PublicConnectUrl);
+            this.SetParamSimple(map, prefix + "PublicCustomDomain", this.PublicCustomDomain);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

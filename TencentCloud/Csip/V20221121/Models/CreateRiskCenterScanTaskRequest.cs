@@ -73,7 +73,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] SelfDefiningAssets{ get; set; }
 
         /// <summary>
-        /// 请求发起源，默认为vss表示漏洞扫描服务，云安全中心的用户请填充csip
+        /// 请求发起源，vss表示漏洞扫描服务，云安全中心的用户请填充csip，默认csip
         /// </summary>
         [JsonProperty("ScanFrom")]
         public string ScanFrom{ get; set; }

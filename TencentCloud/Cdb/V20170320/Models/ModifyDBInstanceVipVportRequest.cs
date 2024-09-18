@@ -60,6 +60,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("ReleaseDuration")]
         public long? ReleaseDuration{ get; set; }
 
+        /// <summary>
+        /// 变更集群版实例只读组时，InstanceId传实例id，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。
+        /// </summary>
+        [JsonProperty("OpResourceId")]
+        public string OpResourceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
             this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
             this.SetParamSimple(map, prefix + "ReleaseDuration", this.ReleaseDuration);
+            this.SetParamSimple(map, prefix + "OpResourceId", this.OpResourceId);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1089";
+       private const string sdkVersion = "SDK_NET_3.0.1090";
 
         /// <summary>
         /// Client constructor.
@@ -2599,6 +2599,27 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 查询opa策略列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOpenPolicyListRequest"/></param>
+        /// <returns><see cref="DescribeOpenPolicyListResponse"/></returns>
+        public Task<DescribeOpenPolicyListResponse> DescribeOpenPolicyList(DescribeOpenPolicyListRequest req)
+        {
+            return InternalRequestAsync<DescribeOpenPolicyListResponse>(req, "DescribeOpenPolicyList");
+        }
+
+        /// <summary>
+        /// 查询opa策略列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOpenPolicyListRequest"/></param>
+        /// <returns><see cref="DescribeOpenPolicyListResponse"/></returns>
+        public DescribeOpenPolicyListResponse DescribeOpenPolicyListSync(DescribeOpenPolicyListRequest req)
+        {
+            return InternalRequestAsync<DescribeOpenPolicyListResponse>(req, "DescribeOpenPolicyList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询正在运行中Pod的计费信息。可以通过 Namespace 和 Name 来查询某个 Pod 的信息，也可以通过 Pod 的 Uid 批量查询。
         /// </summary>
         /// <param name="req"><see cref="DescribePodChargeInfoRequest"/></param>
@@ -4044,6 +4065,27 @@ namespace TencentCloud.Tke.V20180525
         public ModifyNodePoolInstanceTypesResponse ModifyNodePoolInstanceTypesSync(ModifyNodePoolInstanceTypesRequest req)
         {
             return InternalRequestAsync<ModifyNodePoolInstanceTypesResponse>(req, "ModifyNodePoolInstanceTypes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量修改opa策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOpenPolicyListRequest"/></param>
+        /// <returns><see cref="ModifyOpenPolicyListResponse"/></returns>
+        public Task<ModifyOpenPolicyListResponse> ModifyOpenPolicyList(ModifyOpenPolicyListRequest req)
+        {
+            return InternalRequestAsync<ModifyOpenPolicyListResponse>(req, "ModifyOpenPolicyList");
+        }
+
+        /// <summary>
+        /// 批量修改opa策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOpenPolicyListRequest"/></param>
+        /// <returns><see cref="ModifyOpenPolicyListResponse"/></returns>
+        public ModifyOpenPolicyListResponse ModifyOpenPolicyListSync(ModifyOpenPolicyListRequest req)
+        {
+            return InternalRequestAsync<ModifyOpenPolicyListResponse>(req, "ModifyOpenPolicyList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -48,6 +48,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("WaitSwitch")]
         public bool? WaitSwitch{ get; set; }
 
+        /// <summary>
+        /// 集群版实例指定节点id发起主从切换。
+        /// </summary>
+        [JsonProperty("DstNodeId")]
+        public string DstNodeId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "DstSlave", this.DstSlave);
             this.SetParamSimple(map, prefix + "ForceSwitch", this.ForceSwitch);
             this.SetParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
+            this.SetParamSimple(map, prefix + "DstNodeId", this.DstNodeId);
         }
     }
 }
