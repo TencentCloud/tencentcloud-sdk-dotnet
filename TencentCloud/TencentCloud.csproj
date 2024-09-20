@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1090</VersionPrefix>
+    <VersionPrefix>3.0.1091</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -194,6 +194,7 @@
     <Compile Include="Mongodb\**\*.cs" />
     <Compile Include="Monitor\**\*.cs" />
     <Compile Include="Mps\**\*.cs" />
+    <Compile Include="Mqtt\**\*.cs" />
     <Compile Include="Mrs\**\*.cs" />
     <Compile Include="Ms\**\*.cs" />
     <Compile Include="Msp\**\*.cs" />
