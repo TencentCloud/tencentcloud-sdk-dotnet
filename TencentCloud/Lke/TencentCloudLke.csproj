@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{350F9F65-0799-338B-90EA-9EBA008679C1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1091</VersionPrefix>
+    <VersionPrefix>3.0.1092</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -101,10 +101,20 @@
     <Compile Include="V20231130\Models\DescribeAppResponse.cs" />
     <Compile Include="V20231130\Models\DescribeAttributeLabelRequest.cs" />
     <Compile Include="V20231130\Models\DescribeAttributeLabelResponse.cs" />
+    <Compile Include="V20231130\Models\DescribeCallStatsGraphRequest.cs" />
+    <Compile Include="V20231130\Models\DescribeCallStatsGraphResponse.cs" />
+    <Compile Include="V20231130\Models\DescribeConcurrencyUsageGraphRequest.cs" />
+    <Compile Include="V20231130\Models\DescribeConcurrencyUsageGraphResponse.cs" />
+    <Compile Include="V20231130\Models\DescribeConcurrencyUsageRequest.cs" />
+    <Compile Include="V20231130\Models\DescribeConcurrencyUsageResponse.cs" />
     <Compile Include="V20231130\Models\DescribeCorpRequest.cs" />
     <Compile Include="V20231130\Models\DescribeCorpResponse.cs" />
     <Compile Include="V20231130\Models\DescribeDocRequest.cs" />
     <Compile Include="V20231130\Models\DescribeDocResponse.cs" />
+    <Compile Include="V20231130\Models\DescribeKnowledgeUsagePieGraphRequest.cs" />
+    <Compile Include="V20231130\Models\DescribeKnowledgeUsagePieGraphResponse.cs" />
+    <Compile Include="V20231130\Models\DescribeKnowledgeUsageRequest.cs" />
+    <Compile Include="V20231130\Models\DescribeKnowledgeUsageResponse.cs" />
     <Compile Include="V20231130\Models\DescribeQARequest.cs" />
     <Compile Include="V20231130\Models\DescribeQAResponse.cs" />
     <Compile Include="V20231130\Models\DescribeReferRequest.cs" />
@@ -115,10 +125,16 @@
     <Compile Include="V20231130\Models\DescribeReleaseResponse.cs" />
     <Compile Include="V20231130\Models\DescribeRobotBizIDByAppKeyRequest.cs" />
     <Compile Include="V20231130\Models\DescribeRobotBizIDByAppKeyResponse.cs" />
+    <Compile Include="V20231130\Models\DescribeSearchStatsGraphRequest.cs" />
+    <Compile Include="V20231130\Models\DescribeSearchStatsGraphResponse.cs" />
     <Compile Include="V20231130\Models\DescribeSegmentsRequest.cs" />
     <Compile Include="V20231130\Models\DescribeSegmentsResponse.cs" />
     <Compile Include="V20231130\Models\DescribeStorageCredentialRequest.cs" />
     <Compile Include="V20231130\Models\DescribeStorageCredentialResponse.cs" />
+    <Compile Include="V20231130\Models\DescribeTokenUsageGraphRequest.cs" />
+    <Compile Include="V20231130\Models\DescribeTokenUsageGraphResponse.cs" />
+    <Compile Include="V20231130\Models\DescribeTokenUsageRequest.cs" />
+    <Compile Include="V20231130\Models\DescribeTokenUsageResponse.cs" />
     <Compile Include="V20231130\Models\DescribeUnsatisfiedReplyContextRequest.cs" />
     <Compile Include="V20231130\Models\DescribeUnsatisfiedReplyContextResponse.cs" />
     <Compile Include="V20231130\Models\DocSegment.cs" />
@@ -165,6 +181,7 @@
     <Compile Include="V20231130\Models\InvokeAPI.cs" />
     <Compile Include="V20231130\Models\IsTransferIntentRequest.cs" />
     <Compile Include="V20231130\Models\IsTransferIntentResponse.cs" />
+    <Compile Include="V20231130\Models\KnowledgeCapacityPieGraphDetail.cs" />
     <Compile Include="V20231130\Models\KnowledgeQaConfig.cs" />
     <Compile Include="V20231130\Models\KnowledgeQaOutput.cs" />
     <Compile Include="V20231130\Models\KnowledgeQaSearch.cs" />
@@ -264,6 +281,7 @@
     <Compile Include="V20231130\Models\SaveDocResponse.cs" />
     <Compile Include="V20231130\Models\SimilarQuestion.cs" />
     <Compile Include="V20231130\Models\SimilarQuestionModify.cs" />
+    <Compile Include="V20231130\Models\Stat.cs" />
     <Compile Include="V20231130\Models\StopDocParseRequest.cs" />
     <Compile Include="V20231130\Models\StopDocParseResponse.cs" />
     <Compile Include="V20231130\Models\StrValue.cs" />

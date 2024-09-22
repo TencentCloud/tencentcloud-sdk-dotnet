@@ -25,16 +25,22 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
+        /// 目标处理状态： 0 - 待处理 1 - 已加白 2 - 已删除 3 - 已忽略 4 - 已手动处理
+        /// </summary>
+        [JsonProperty("Status")]
+        public ulong? Status{ get; set; }
+
+        /// <summary>
         /// 事件Id数组
         /// </summary>
         [JsonProperty("Ids")]
         public ulong?[] Ids{ get; set; }
 
         /// <summary>
-        /// 目标处理状态： 0 - 待处理 1 - 已加白 2 - 已删除 3 - 已忽略 4 - 已手动处理
+        /// 是否更新全部，只支持忽略、已处理、删除
         /// </summary>
-        [JsonProperty("Status")]
-        public ulong? Status{ get; set; }
+        [JsonProperty("UpdateAll")]
+        public bool? UpdateAll{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Ids.", this.Ids);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArraySimple(map, prefix + "Ids.", this.Ids);
+            this.SetParamSimple(map, prefix + "UpdateAll", this.UpdateAll);
         }
     }
 }

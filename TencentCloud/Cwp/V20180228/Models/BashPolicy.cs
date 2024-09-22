@@ -49,7 +49,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public long? BashAction{ get; set; }
 
         /// <summary>
-        /// 正则表达式
+        /// 正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine
         /// </summary>
         [JsonProperty("Rule")]
         public string Rule{ get; set; }
@@ -124,6 +124,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Uuids")]
         public string[] Uuids{ get; set; }
 
+        /// <summary>
+        /// 规则表达式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Rules")]
+        public PolicyRules Rules{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -146,6 +153,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamArraySimple(map, prefix + "Uuids.", this.Uuids);
+            this.SetParamObj(map, prefix + "Rules.", this.Rules);
         }
     }
 }

@@ -45,7 +45,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// "Preset"：预设，Custom":客户魔板
+        /// "Preset"：预设，Custom":自定义模板
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

@@ -52,6 +52,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string DeleteMediaCompleteEventSwitch{ get; set; }
 
         /// <summary>
+        /// 是否接收剪辑固化完成事件通知，  默认 "OFF" 为忽略该事件通知，"ON" 为接收事件通知。
+        /// </summary>
+        [JsonProperty("PersistenceCompleteEventSwitch")]
+        public string PersistenceCompleteEventSwitch{ get; set; }
+
+        /// <summary>
         /// <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
         /// </summary>
         [JsonProperty("SubAppId")]
@@ -67,6 +73,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "NotificationUrl", this.NotificationUrl);
             this.SetParamSimple(map, prefix + "UploadMediaCompleteEventSwitch", this.UploadMediaCompleteEventSwitch);
             this.SetParamSimple(map, prefix + "DeleteMediaCompleteEventSwitch", this.DeleteMediaCompleteEventSwitch);
+            this.SetParamSimple(map, prefix + "PersistenceCompleteEventSwitch", this.PersistenceCompleteEventSwitch);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }

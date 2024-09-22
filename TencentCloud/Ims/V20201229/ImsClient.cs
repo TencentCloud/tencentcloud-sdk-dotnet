@@ -28,7 +28,7 @@ namespace TencentCloud.Ims.V20201229
 
        private const string endpoint = "ims.tencentcloudapi.com";
        private const string version = "2020-12-29";
-       private const string sdkVersion = "SDK_NET_3.0.1091";
+       private const string sdkVersion = "SDK_NET_3.0.1092";
 
         /// <summary>
         /// Client constructor.
@@ -126,7 +126,7 @@ namespace TencentCloud.Ims.V20201229
         /// 
         /// ### 接口功能说明：
         /// - 支持对图片文件或链接进行检测，通过深度学习技术，识别可能令人反感、不安全或不适宜的违规图片内容；
-        /// - 支持对长图进行拆分检测；
+        /// - 支持对GIF图/长图进行截帧或拆分检测；
         /// - 支持识别多种违规场景，包括：低俗、违法违规、色情、广告等场景；
         /// - 支持多种物体检测（实体、广告台标、二维码等）及图片中文本的OCR文本识别；
         /// - 支持根据不同的业务场景配置自定义的审核策略；
@@ -173,7 +173,7 @@ namespace TencentCloud.Ims.V20201229
         /// 
         /// ### 接口功能说明：
         /// - 支持对图片文件或链接进行检测，通过深度学习技术，识别可能令人反感、不安全或不适宜的违规图片内容；
-        /// - 支持对长图进行拆分检测；
+        /// - 支持对GIF图/长图进行截帧或拆分检测；
         /// - 支持识别多种违规场景，包括：低俗、违法违规、色情、广告等场景；
         /// - 支持多种物体检测（实体、广告台标、二维码等）及图片中文本的OCR文本识别；
         /// - 支持根据不同的业务场景配置自定义的审核策略；

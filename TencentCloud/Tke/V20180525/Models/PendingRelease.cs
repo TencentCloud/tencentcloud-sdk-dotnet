@@ -60,7 +60,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// 应用状态
+        /// 应用状态(参考helm的发布状态： unknown, deployed, uninstalled, superseded, failed, uninstalling, pending-install, pending-upgrade 或 pending-rollback)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]

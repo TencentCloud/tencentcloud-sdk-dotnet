@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BA913269-C9C8-3169-85ED-FED2E392A18E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1091</VersionPrefix>
+    <VersionPrefix>3.0.1092</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -86,6 +86,8 @@
     <Compile Include="V20190614\Models\GetCustomizationListResponse.cs" />
     <Compile Include="V20190614\Models\GetModelInfoRequest.cs" />
     <Compile Include="V20190614\Models\GetModelInfoResponse.cs" />
+    <Compile Include="V20190614\Models\GetUsageByDateRequest.cs" />
+    <Compile Include="V20190614\Models\GetUsageByDateResponse.cs" />
     <Compile Include="V20190614\Models\HotWord.cs" />
     <Compile Include="V20190614\Models\KeyWordLib.cs" />
     <Compile Include="V20190614\Models\KeyWordLibIdData.cs" />
@@ -109,6 +111,8 @@
     <Compile Include="V20190614\Models\UpdateAsrKeyWordLibResponse.cs" />
     <Compile Include="V20190614\Models\UpdateAsrVocabRequest.cs" />
     <Compile Include="V20190614\Models\UpdateAsrVocabResponse.cs" />
+    <Compile Include="V20190614\Models\UsageByDateInfo.cs" />
+    <Compile Include="V20190614\Models\UsageByDateInfoData.cs" />
     <Compile Include="V20190614\Models\VerifyTop.cs" />
     <Compile Include="V20190614\Models\VerifyTopResult.cs" />
     <Compile Include="V20190614\Models\Vocab.cs" />

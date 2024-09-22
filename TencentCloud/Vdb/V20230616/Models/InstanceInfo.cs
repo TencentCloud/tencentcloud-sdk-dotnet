@@ -165,6 +165,13 @@ namespace TencentCloud.Vdb.V20230616.Models
         public string EngineVersion{ get; set; }
 
         /// <summary>
+        /// api版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApiVersion")]
+        public string ApiVersion{ get; set; }
+
+        /// <summary>
         /// 计费模式。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -239,6 +246,7 @@ namespace TencentCloud.Vdb.V20230616.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "EngineName", this.EngineName);
             this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
+            this.SetParamSimple(map, prefix + "ApiVersion", this.ApiVersion);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "Extend", this.Extend);
             this.SetParamSimple(map, prefix + "ExpiredAt", this.ExpiredAt);

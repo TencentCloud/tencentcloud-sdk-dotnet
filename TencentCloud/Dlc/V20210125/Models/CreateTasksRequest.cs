@@ -54,6 +54,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("ResourceGroupName")]
         public string ResourceGroupName{ get; set; }
 
+        /// <summary>
+        /// 是否使用multi- statement方式运行一批次任务，true: 是，false: 否
+        /// </summary>
+        [JsonProperty("IsMultiStatement")]
+        public bool? IsMultiStatement{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
             this.SetParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
             this.SetParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
+            this.SetParamSimple(map, prefix + "IsMultiStatement", this.IsMultiStatement);
         }
     }
 }

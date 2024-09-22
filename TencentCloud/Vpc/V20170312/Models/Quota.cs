@@ -25,7 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 配额名称，取值范围：<br><li>`TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；<br><li>`DAILY_EIP_APPLY`：用户当前地域下今日申购次数；<br><li>`DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数。
+        /// 配额名称，取值范围：
+        /// - `TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；
+        /// - `DAILY_EIP_APPLY`：用户当前地域下今日申购次数；
+        /// - `DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数；
+        /// - `TOTAL_EIP6_QUOTA`：用户当前地域下，传统弹性公网IPv6的配额数；
+        /// - `BGP_EIPv6_QUOTA`：用户当前地域下，可申请的 BGP 弹性公网IPv6 的配额数；
+        /// - `SINGLEISP_EIPv6_QUOTA`：用户当前地域下，可申请的静态单线弹性公网IPv6 的配额数；
         /// </summary>
         [JsonProperty("QuotaId")]
         public string QuotaId{ get; set; }
@@ -42,6 +48,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("QuotaLimit")]
         public long? QuotaLimit{ get; set; }
 
+        /// <summary>
+        /// 配额所属的网络组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QuotaGroup")]
+        public string QuotaGroup{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +64,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "QuotaId", this.QuotaId);
             this.SetParamSimple(map, prefix + "QuotaCurrent", this.QuotaCurrent);
             this.SetParamSimple(map, prefix + "QuotaLimit", this.QuotaLimit);
+            this.SetParamSimple(map, prefix + "QuotaGroup", this.QuotaGroup);
         }
     }
 }

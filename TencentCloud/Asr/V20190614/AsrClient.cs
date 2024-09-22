@@ -28,7 +28,7 @@ namespace TencentCloud.Asr.V20190614
 
        private const string endpoint = "asr.tencentcloudapi.com";
        private const string version = "2019-06-14";
-       private const string sdkVersion = "SDK_NET_3.0.1091";
+       private const string sdkVersion = "SDK_NET_3.0.1092";
 
         /// <summary>
         /// Client constructor.
@@ -494,6 +494,27 @@ namespace TencentCloud.Asr.V20190614
         public GetModelInfoResponse GetModelInfoSync(GetModelInfoRequest req)
         {
             return InternalRequestAsync<GetModelInfoResponse>(req, "GetModelInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询用户用量
+        /// </summary>
+        /// <param name="req"><see cref="GetUsageByDateRequest"/></param>
+        /// <returns><see cref="GetUsageByDateResponse"/></returns>
+        public Task<GetUsageByDateResponse> GetUsageByDate(GetUsageByDateRequest req)
+        {
+            return InternalRequestAsync<GetUsageByDateResponse>(req, "GetUsageByDate");
+        }
+
+        /// <summary>
+        /// 查询用户用量
+        /// </summary>
+        /// <param name="req"><see cref="GetUsageByDateRequest"/></param>
+        /// <returns><see cref="GetUsageByDateResponse"/></returns>
+        public GetUsageByDateResponse GetUsageByDateSync(GetUsageByDateRequest req)
+        {
+            return InternalRequestAsync<GetUsageByDateResponse>(req, "GetUsageByDate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

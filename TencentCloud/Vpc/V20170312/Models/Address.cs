@@ -192,6 +192,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("BandwidthPackageId")]
         public string BandwidthPackageId{ get; set; }
 
+        /// <summary>
+        /// 传统弹性公网IPv6所属vpc唯一ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UnVpcId")]
+        public string UnVpcId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -223,6 +230,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
+            this.SetParamSimple(map, prefix + "UnVpcId", this.UnVpcId);
         }
     }
 }

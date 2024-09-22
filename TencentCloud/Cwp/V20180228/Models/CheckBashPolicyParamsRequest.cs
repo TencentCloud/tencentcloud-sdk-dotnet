@@ -25,7 +25,11 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 校验内容 Name或Rule ，两个都要校验时逗号分割
+        /// 校验内容字段,如果需要检测多个字段时,用逗号分割
+        /// <li>Name 策略名称</li>
+        /// <li>Process 进程</li>
+        /// <li>Name PProcess 父进程</li>
+        /// <li>Name AProcess 祖先进程</li>
         /// </summary>
         [JsonProperty("CheckField")]
         public string CheckField{ get; set; }
@@ -43,7 +47,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 用户填入的正则表达式："正则表达式" 需与 "提交EventId对应的命令内容" 相匹配
+        /// 该字段不在维护,如果填入该参数,自动替换到Rules.Process
         /// </summary>
         [JsonProperty("Rule")]
         public string Rule{ get; set; }
@@ -53,6 +57,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
+
+        /// <summary>
+        /// 规则表达式
+        /// </summary>
+        [JsonProperty("Rules")]
+        public PolicyRules Rules{ get; set; }
 
 
         /// <summary>
@@ -65,6 +75,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Rule", this.Rule);
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamObj(map, prefix + "Rules.", this.Rules);
         }
     }
 }

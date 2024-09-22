@@ -49,6 +49,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string DeleteMediaCompleteEventSwitch{ get; set; }
 
         /// <summary>
+        /// 是否接收剪辑固化完成事件通知，"OFF" 为忽略该事件通知，"ON" 为接收事件通知。
+        /// </summary>
+        [JsonProperty("PersistenceCompleteEventSwitch")]
+        public string PersistenceCompleteEventSwitch{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "NotificationUrl", this.NotificationUrl);
             this.SetParamSimple(map, prefix + "UploadMediaCompleteEventSwitch", this.UploadMediaCompleteEventSwitch);
             this.SetParamSimple(map, prefix + "DeleteMediaCompleteEventSwitch", this.DeleteMediaCompleteEventSwitch);
+            this.SetParamSimple(map, prefix + "PersistenceCompleteEventSwitch", this.PersistenceCompleteEventSwitch);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -25,7 +25,9 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 过滤条件：Keywords: ip或者主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
+        /// 过滤条件：InstanceID、IP、
+        /// 
+        /// MachineName主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
         /// </summary>
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }

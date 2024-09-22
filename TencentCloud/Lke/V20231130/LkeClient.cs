@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1091";
+       private const string sdkVersion = "SDK_NET_3.0.1092";
 
         /// <summary>
         /// Client constructor.
@@ -459,6 +459,69 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// 接口调用折线图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCallStatsGraphRequest"/></param>
+        /// <returns><see cref="DescribeCallStatsGraphResponse"/></returns>
+        public Task<DescribeCallStatsGraphResponse> DescribeCallStatsGraph(DescribeCallStatsGraphRequest req)
+        {
+            return InternalRequestAsync<DescribeCallStatsGraphResponse>(req, "DescribeCallStatsGraph");
+        }
+
+        /// <summary>
+        /// 接口调用折线图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCallStatsGraphRequest"/></param>
+        /// <returns><see cref="DescribeCallStatsGraphResponse"/></returns>
+        public DescribeCallStatsGraphResponse DescribeCallStatsGraphSync(DescribeCallStatsGraphRequest req)
+        {
+            return InternalRequestAsync<DescribeCallStatsGraphResponse>(req, "DescribeCallStatsGraph")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 并发调用响应
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConcurrencyUsageRequest"/></param>
+        /// <returns><see cref="DescribeConcurrencyUsageResponse"/></returns>
+        public Task<DescribeConcurrencyUsageResponse> DescribeConcurrencyUsage(DescribeConcurrencyUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeConcurrencyUsageResponse>(req, "DescribeConcurrencyUsage");
+        }
+
+        /// <summary>
+        /// 并发调用响应
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConcurrencyUsageRequest"/></param>
+        /// <returns><see cref="DescribeConcurrencyUsageResponse"/></returns>
+        public DescribeConcurrencyUsageResponse DescribeConcurrencyUsageSync(DescribeConcurrencyUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeConcurrencyUsageResponse>(req, "DescribeConcurrencyUsage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 并发调用折线图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConcurrencyUsageGraphRequest"/></param>
+        /// <returns><see cref="DescribeConcurrencyUsageGraphResponse"/></returns>
+        public Task<DescribeConcurrencyUsageGraphResponse> DescribeConcurrencyUsageGraph(DescribeConcurrencyUsageGraphRequest req)
+        {
+            return InternalRequestAsync<DescribeConcurrencyUsageGraphResponse>(req, "DescribeConcurrencyUsageGraph");
+        }
+
+        /// <summary>
+        /// 并发调用折线图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConcurrencyUsageGraphRequest"/></param>
+        /// <returns><see cref="DescribeConcurrencyUsageGraphResponse"/></returns>
+        public DescribeConcurrencyUsageGraphResponse DescribeConcurrencyUsageGraphSync(DescribeConcurrencyUsageGraphRequest req)
+        {
+            return InternalRequestAsync<DescribeConcurrencyUsageGraphResponse>(req, "DescribeConcurrencyUsageGraph")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 企业详情
         /// </summary>
         /// <param name="req"><see cref="DescribeCorpRequest"/></param>
@@ -497,6 +560,48 @@ namespace TencentCloud.Lke.V20231130
         public DescribeDocResponse DescribeDocSync(DescribeDocRequest req)
         {
             return InternalRequestAsync<DescribeDocResponse>(req, "DescribeDoc")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询知识库用量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKnowledgeUsageRequest"/></param>
+        /// <returns><see cref="DescribeKnowledgeUsageResponse"/></returns>
+        public Task<DescribeKnowledgeUsageResponse> DescribeKnowledgeUsage(DescribeKnowledgeUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeKnowledgeUsageResponse>(req, "DescribeKnowledgeUsage");
+        }
+
+        /// <summary>
+        /// 查询知识库用量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKnowledgeUsageRequest"/></param>
+        /// <returns><see cref="DescribeKnowledgeUsageResponse"/></returns>
+        public DescribeKnowledgeUsageResponse DescribeKnowledgeUsageSync(DescribeKnowledgeUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeKnowledgeUsageResponse>(req, "DescribeKnowledgeUsage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询企业知识库容量饼图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKnowledgeUsagePieGraphRequest"/></param>
+        /// <returns><see cref="DescribeKnowledgeUsagePieGraphResponse"/></returns>
+        public Task<DescribeKnowledgeUsagePieGraphResponse> DescribeKnowledgeUsagePieGraph(DescribeKnowledgeUsagePieGraphRequest req)
+        {
+            return InternalRequestAsync<DescribeKnowledgeUsagePieGraphResponse>(req, "DescribeKnowledgeUsagePieGraph");
+        }
+
+        /// <summary>
+        /// 查询企业知识库容量饼图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKnowledgeUsagePieGraphRequest"/></param>
+        /// <returns><see cref="DescribeKnowledgeUsagePieGraphResponse"/></returns>
+        public DescribeKnowledgeUsagePieGraphResponse DescribeKnowledgeUsagePieGraphSync(DescribeKnowledgeUsagePieGraphRequest req)
+        {
+            return InternalRequestAsync<DescribeKnowledgeUsagePieGraphResponse>(req, "DescribeKnowledgeUsagePieGraph")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -606,6 +711,27 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// 查询搜索服务调用折线图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSearchStatsGraphRequest"/></param>
+        /// <returns><see cref="DescribeSearchStatsGraphResponse"/></returns>
+        public Task<DescribeSearchStatsGraphResponse> DescribeSearchStatsGraph(DescribeSearchStatsGraphRequest req)
+        {
+            return InternalRequestAsync<DescribeSearchStatsGraphResponse>(req, "DescribeSearchStatsGraph");
+        }
+
+        /// <summary>
+        /// 查询搜索服务调用折线图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSearchStatsGraphRequest"/></param>
+        /// <returns><see cref="DescribeSearchStatsGraphResponse"/></returns>
+        public DescribeSearchStatsGraphResponse DescribeSearchStatsGraphSync(DescribeSearchStatsGraphRequest req)
+        {
+            return InternalRequestAsync<DescribeSearchStatsGraphResponse>(req, "DescribeSearchStatsGraph")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取片段详情
         /// </summary>
         /// <param name="req"><see cref="DescribeSegmentsRequest"/></param>
@@ -644,6 +770,48 @@ namespace TencentCloud.Lke.V20231130
         public DescribeStorageCredentialResponse DescribeStorageCredentialSync(DescribeStorageCredentialRequest req)
         {
             return InternalRequestAsync<DescribeStorageCredentialResponse>(req, "DescribeStorageCredential")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 接口调用token详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTokenUsageRequest"/></param>
+        /// <returns><see cref="DescribeTokenUsageResponse"/></returns>
+        public Task<DescribeTokenUsageResponse> DescribeTokenUsage(DescribeTokenUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeTokenUsageResponse>(req, "DescribeTokenUsage");
+        }
+
+        /// <summary>
+        /// 接口调用token详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTokenUsageRequest"/></param>
+        /// <returns><see cref="DescribeTokenUsageResponse"/></returns>
+        public DescribeTokenUsageResponse DescribeTokenUsageSync(DescribeTokenUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeTokenUsageResponse>(req, "DescribeTokenUsage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 接口调用token折线图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTokenUsageGraphRequest"/></param>
+        /// <returns><see cref="DescribeTokenUsageGraphResponse"/></returns>
+        public Task<DescribeTokenUsageGraphResponse> DescribeTokenUsageGraph(DescribeTokenUsageGraphRequest req)
+        {
+            return InternalRequestAsync<DescribeTokenUsageGraphResponse>(req, "DescribeTokenUsageGraph");
+        }
+
+        /// <summary>
+        /// 接口调用token折线图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTokenUsageGraphRequest"/></param>
+        /// <returns><see cref="DescribeTokenUsageGraphResponse"/></returns>
+        public DescribeTokenUsageGraphResponse DescribeTokenUsageGraphSync(DescribeTokenUsageGraphRequest req)
+        {
+            return InternalRequestAsync<DescribeTokenUsageGraphResponse>(req, "DescribeTokenUsageGraph")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

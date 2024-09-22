@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1091";
+       private const string sdkVersion = "SDK_NET_3.0.1092";
 
         /// <summary>
         /// Client constructor.
@@ -1226,6 +1226,27 @@ namespace TencentCloud.Tke.V20180525
         public DeleteImageCachesResponse DeleteImageCachesSync(DeleteImageCachesRequest req)
         {
             return InternalRequestAsync<DeleteImageCachesResponse>(req, "DeleteImageCaches")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除集群内采集规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLogConfigsRequest"/></param>
+        /// <returns><see cref="DeleteLogConfigsResponse"/></returns>
+        public Task<DeleteLogConfigsResponse> DeleteLogConfigs(DeleteLogConfigsRequest req)
+        {
+            return InternalRequestAsync<DeleteLogConfigsResponse>(req, "DeleteLogConfigs");
+        }
+
+        /// <summary>
+        /// 删除集群内采集规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLogConfigsRequest"/></param>
+        /// <returns><see cref="DeleteLogConfigsResponse"/></returns>
+        public DeleteLogConfigsResponse DeleteLogConfigsSync(DeleteLogConfigsRequest req)
+        {
+            return InternalRequestAsync<DeleteLogConfigsResponse>(req, "DeleteLogConfigs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2574,6 +2595,27 @@ namespace TencentCloud.Tke.V20180525
         public DescribeImagesResponse DescribeImagesSync(DescribeImagesRequest req)
         {
             return InternalRequestAsync<DescribeImagesResponse>(req, "DescribeImages")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询日志采集规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogConfigsRequest"/></param>
+        /// <returns><see cref="DescribeLogConfigsResponse"/></returns>
+        public Task<DescribeLogConfigsResponse> DescribeLogConfigs(DescribeLogConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeLogConfigsResponse>(req, "DescribeLogConfigs");
+        }
+
+        /// <summary>
+        /// 查询日志采集规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogConfigsRequest"/></param>
+        /// <returns><see cref="DescribeLogConfigsResponse"/></returns>
+        public DescribeLogConfigsResponse DescribeLogConfigsSync(DescribeLogConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeLogConfigsResponse>(req, "DescribeLogConfigs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

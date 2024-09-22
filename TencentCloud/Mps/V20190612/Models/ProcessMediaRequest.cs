@@ -32,6 +32,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
+        /// 注意：当InputInfo.Type为URL时，该参数是必填项
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }

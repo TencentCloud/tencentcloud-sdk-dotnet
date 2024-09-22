@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1091</VersionPrefix>
+    <VersionPrefix>3.0.1092</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -259,6 +259,8 @@
     <Compile Include="V20180525\Models\DeleteEdgeClusterInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DeleteImageCachesRequest.cs" />
     <Compile Include="V20180525\Models\DeleteImageCachesResponse.cs" />
+    <Compile Include="V20180525\Models\DeleteLogConfigsRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteLogConfigsResponse.cs" />
     <Compile Include="V20180525\Models\DeletePrometheusAlertPolicyRequest.cs" />
     <Compile Include="V20180525\Models\DeletePrometheusAlertPolicyResponse.cs" />
     <Compile Include="V20180525\Models\DeletePrometheusAlertRuleRequest.cs" />
@@ -387,6 +389,8 @@
     <Compile Include="V20180525\Models\DescribeImageCachesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeImagesRequest.cs" />
     <Compile Include="V20180525\Models\DescribeImagesResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeLogConfigsRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeLogConfigsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeLogSwitchesRequest.cs" />
     <Compile Include="V20180525\Models\DescribeLogSwitchesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeOpenPolicyListRequest.cs" />

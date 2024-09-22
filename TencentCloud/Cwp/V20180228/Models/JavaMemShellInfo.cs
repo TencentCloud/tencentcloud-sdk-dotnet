@@ -94,6 +94,41 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
+        /// <summary>
+        /// 类名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClassName")]
+        public string ClassName{ get; set; }
+
+        /// <summary>
+        /// 父类名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SuperClassName")]
+        public string SuperClassName{ get; set; }
+
+        /// <summary>
+        /// 继承的接口
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Interfaces")]
+        public string Interfaces{ get; set; }
+
+        /// <summary>
+        /// 注释
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Annotations")]
+        public string Annotations{ get; set; }
+
+        /// <summary>
+        /// 所属的类加载器
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LoaderClassName")]
+        public string LoaderClassName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -111,6 +146,11 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
             this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
             this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
+            this.SetParamSimple(map, prefix + "ClassName", this.ClassName);
+            this.SetParamSimple(map, prefix + "SuperClassName", this.SuperClassName);
+            this.SetParamSimple(map, prefix + "Interfaces", this.Interfaces);
+            this.SetParamSimple(map, prefix + "Annotations", this.Annotations);
+            this.SetParamSimple(map, prefix + "LoaderClassName", this.LoaderClassName);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1091</VersionPrefix>
+    <VersionPrefix>3.0.1092</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -153,6 +153,7 @@
     <Compile Include="V20180228\Models\ClearLocalStorageRequest.cs" />
     <Compile Include="V20180228\Models\ClearLocalStorageResponse.cs" />
     <Compile Include="V20180228\Models\CloudProtectService.cs" />
+    <Compile Include="V20180228\Models\CommandLine.cs" />
     <Compile Include="V20180228\Models\ComponentStatistics.cs" />
     <Compile Include="V20180228\Models\CreateBanWhiteListRequest.cs" />
     <Compile Include="V20180228\Models\CreateBanWhiteListResponse.cs" />
@@ -1179,6 +1180,7 @@
     <Compile Include="V20180228\Models\OrderResource.cs" />
     <Compile Include="V20180228\Models\OsName.cs" />
     <Compile Include="V20180228\Models\Place.cs" />
+    <Compile Include="V20180228\Models\PolicyRules.cs" />
     <Compile Include="V20180228\Models\PrivilegeEscalationProcess.cs" />
     <Compile Include="V20180228\Models\PrivilegeEventInfo.cs" />
     <Compile Include="V20180228\Models\PrivilegeRule.cs" />
