@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1093";
+       private const string sdkVersion = "SDK_NET_3.0.1094";
 
         /// <summary>
         /// Client constructor.
@@ -392,6 +392,27 @@ namespace TencentCloud.Emr.V20190103
         public DescribeEmrOverviewMetricsResponse DescribeEmrOverviewMetricsSync(DescribeEmrOverviewMetricsRequest req)
         {
             return InternalRequestAsync<DescribeEmrOverviewMetricsResponse>(req, "DescribeEmrOverviewMetrics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询YARN资源调度的全局配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlobalConfigRequest"/></param>
+        /// <returns><see cref="DescribeGlobalConfigResponse"/></returns>
+        public Task<DescribeGlobalConfigResponse> DescribeGlobalConfig(DescribeGlobalConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeGlobalConfigResponse>(req, "DescribeGlobalConfig");
+        }
+
+        /// <summary>
+        /// 查询YARN资源调度的全局配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlobalConfigRequest"/></param>
+        /// <returns><see cref="DescribeGlobalConfigResponse"/></returns>
+        public DescribeGlobalConfigResponse DescribeGlobalConfigSync(DescribeGlobalConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeGlobalConfigResponse>(req, "DescribeGlobalConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -921,6 +942,27 @@ namespace TencentCloud.Emr.V20190103
         public ModifyAutoScaleStrategyResponse ModifyAutoScaleStrategySync(ModifyAutoScaleStrategyRequest req)
         {
             return InternalRequestAsync<ModifyAutoScaleStrategyResponse>(req, "ModifyAutoScaleStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改YARN资源调度的全局配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGlobalConfigRequest"/></param>
+        /// <returns><see cref="ModifyGlobalConfigResponse"/></returns>
+        public Task<ModifyGlobalConfigResponse> ModifyGlobalConfig(ModifyGlobalConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyGlobalConfigResponse>(req, "ModifyGlobalConfig");
+        }
+
+        /// <summary>
+        /// 修改YARN资源调度的全局配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGlobalConfigRequest"/></param>
+        /// <returns><see cref="ModifyGlobalConfigResponse"/></returns>
+        public ModifyGlobalConfigResponse ModifyGlobalConfigSync(ModifyGlobalConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyGlobalConfigResponse>(req, "ModifyGlobalConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

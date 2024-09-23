@@ -44,6 +44,16 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("MouthOpenRecognition")]
         public bool? MouthOpenRecognition{ get; set; }
 
+        /// <summary>
+        /// 意愿核身语音播报速度，配置后问答模式和点头模式的语音播报环节都会生效，默认值为0：
+        /// 0：智能语速（根据播报文案的长度自动调整语音播报速度）
+        /// 1：固定1倍速
+        /// 2：固定1.2倍速
+        /// 3：固定1.5倍速
+        /// </summary>
+        [JsonProperty("Speed")]
+        public ulong? Speed{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +63,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "IntentionRecognition", this.IntentionRecognition);
             this.SetParamSimple(map, prefix + "IntentionType", this.IntentionType);
             this.SetParamSimple(map, prefix + "MouthOpenRecognition", this.MouthOpenRecognition);
+            this.SetParamSimple(map, prefix + "Speed", this.Speed);
         }
     }
 }

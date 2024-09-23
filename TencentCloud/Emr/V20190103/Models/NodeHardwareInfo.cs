@@ -389,6 +389,20 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// 共享集群id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SharedClusterId")]
+        public string SharedClusterId{ get; set; }
+
+        /// <summary>
+        /// 共享集群id描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SharedClusterIdDesc")]
+        public string SharedClusterIdDesc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -447,6 +461,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "TradeVersion", this.TradeVersion);
             this.SetParamSimple(map, prefix + "ServicesStatus", this.ServicesStatus);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "SharedClusterId", this.SharedClusterId);
+            this.SetParamSimple(map, prefix + "SharedClusterIdDesc", this.SharedClusterIdDesc);
         }
     }
 }

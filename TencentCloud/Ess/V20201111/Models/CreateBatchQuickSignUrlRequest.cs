@@ -106,6 +106,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("SignTypeSelector")]
         public ulong? SignTypeSelector{ get; set; }
 
+        /// <summary>
+        /// 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
+        /// </summary>
+        [JsonProperty("FlowBatchUrlInfo")]
+        public FlowBatchUrlInfo FlowBatchUrlInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamArraySimple(map, prefix + "SignatureTypes.", this.SignatureTypes);
             this.SetParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
             this.SetParamSimple(map, prefix + "SignTypeSelector", this.SignTypeSelector);
+            this.SetParamObj(map, prefix + "FlowBatchUrlInfo.", this.FlowBatchUrlInfo);
         }
     }
 }

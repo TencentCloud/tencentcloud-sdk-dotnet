@@ -32,13 +32,13 @@ namespace TencentCloud.Sms.V20190711.Models
 
         /// <summary>
         /// 最大上限(需要拉取的套餐包个数)。
+        /// 注：Limit默认最大值为500，可结合Offset实现分页查询。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
         /// 偏移量。
-        /// 注：目前固定设置为0。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

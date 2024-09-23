@@ -32,7 +32,7 @@ namespace TencentCloud.Sms.V20190711.Models
 
         /// <summary>
         /// 结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时
-        /// 注：EndDataTime 必须大于 StartDateTime。
+        /// 注：EndDataTime 必须大于等于 StartDateTime。
         /// </summary>
         [JsonProperty("EndDataTime")]
         public ulong? EndDataTime{ get; set; }

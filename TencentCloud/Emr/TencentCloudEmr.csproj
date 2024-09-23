@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1093</VersionPrefix>
+    <VersionPrefix>3.0.1094</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -59,6 +59,7 @@
     <Compile Include="V20190103\Models\AutoScaleResourceConf.cs" />
     <Compile Include="V20190103\Models\BootstrapAction.cs" />
     <Compile Include="V20190103\Models\COSSettings.cs" />
+    <Compile Include="V20190103\Models\CapacityGlobalConfig.cs" />
     <Compile Include="V20190103\Models\CdbInfo.cs" />
     <Compile Include="V20190103\Models\ClusterExternalServiceInfo.cs" />
     <Compile Include="V20190103\Models\ClusterIDToFlowID.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="V20190103\Models\CustomMetaInfo.cs" />
     <Compile Include="V20190103\Models\CustomServiceDefine.cs" />
     <Compile Include="V20190103\Models\DayRepeatStrategy.cs" />
+    <Compile Include="V20190103\Models\DefaultSetting.cs" />
     <Compile Include="V20190103\Models\DeleteAutoScaleStrategyRequest.cs" />
     <Compile Include="V20190103\Models\DeleteAutoScaleStrategyResponse.cs" />
     <Compile Include="V20190103\Models\DeleteUserManagerUserListRequest.cs" />
@@ -101,6 +103,8 @@
     <Compile Include="V20190103\Models\DescribeEmrApplicationStaticsResponse.cs" />
     <Compile Include="V20190103\Models\DescribeEmrOverviewMetricsRequest.cs" />
     <Compile Include="V20190103\Models\DescribeEmrOverviewMetricsResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeGlobalConfigRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeGlobalConfigResponse.cs" />
     <Compile Include="V20190103\Models\DescribeHBaseTableOverviewRequest.cs" />
     <Compile Include="V20190103\Models\DescribeHBaseTableOverviewResponse.cs" />
     <Compile Include="V20190103\Models\DescribeHiveQueriesRequest.cs" />
@@ -150,6 +154,7 @@
     <Compile Include="V20190103\Models\EmrProductConfigOutter.cs" />
     <Compile Include="V20190103\Models\Execution.cs" />
     <Compile Include="V20190103\Models\ExternalService.cs" />
+    <Compile Include="V20190103\Models\FairGlobalConfig.cs" />
     <Compile Include="V20190103\Models\Filters.cs" />
     <Compile Include="V20190103\Models\FlowExtraDetail.cs" />
     <Compile Include="V20190103\Models\FlowParam.cs" />
@@ -187,6 +192,8 @@
     <Compile Include="V20190103\Models\ModifyAutoRenewFlagResponse.cs" />
     <Compile Include="V20190103\Models\ModifyAutoScaleStrategyRequest.cs" />
     <Compile Include="V20190103\Models\ModifyAutoScaleStrategyResponse.cs" />
+    <Compile Include="V20190103\Models\ModifyGlobalConfigRequest.cs" />
+    <Compile Include="V20190103\Models\ModifyGlobalConfigResponse.cs" />
     <Compile Include="V20190103\Models\ModifyResourcePoolsRequest.cs" />
     <Compile Include="V20190103\Models\ModifyResourcePoolsResponse.cs" />
     <Compile Include="V20190103\Models\ModifyResourceScheduleConfigRequest.cs" />

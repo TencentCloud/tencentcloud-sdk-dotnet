@@ -25,14 +25,14 @@ namespace TencentCloud.Sms.V20210111.Models
     {
         
         /// <summary>
-        /// 起始时间，格式为yyyymmddhh，精确到小时，例如2021050113，表示2021年5月1号13时。
+        /// 起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// 结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
-        /// 注：EndTime 必须大于 BeginTime，且相差不超过32天。
+        /// 结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。
+        /// 注：EndTime 必须大于等于 BeginTime，且相差不超过32天。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

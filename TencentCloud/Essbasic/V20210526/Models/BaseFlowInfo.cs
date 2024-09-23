@@ -109,6 +109,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("Components")]
         public Component[] Components{ get; set; }
 
+        /// <summary>
+        /// 在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
+        /// </summary>
+        [JsonProperty("FlowDisplayType")]
+        public long? FlowDisplayType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -127,6 +133,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
             this.SetParamSimple(map, prefix + "NeedCreateReview", this.NeedCreateReview);
             this.SetParamArrayObj(map, prefix + "Components.", this.Components);
+            this.SetParamSimple(map, prefix + "FlowDisplayType", this.FlowDisplayType);
         }
     }
 }

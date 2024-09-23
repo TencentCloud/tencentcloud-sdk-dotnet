@@ -28,7 +28,7 @@ namespace TencentCloud.Apigateway.V20180808
 
        private const string endpoint = "apigateway.tencentcloudapi.com";
        private const string version = "2018-08-08";
-       private const string sdkVersion = "SDK_NET_3.0.1093";
+       private const string sdkVersion = "SDK_NET_3.0.1094";
 
         /// <summary>
         /// Client constructor.
@@ -956,6 +956,27 @@ namespace TencentCloud.Apigateway.V20180808
         public DescribeExclusiveInstanceDetailResponse DescribeExclusiveInstanceDetailSync(DescribeExclusiveInstanceDetailRequest req)
         {
             return InternalRequestAsync<DescribeExclusiveInstanceDetailResponse>(req, "DescribeExclusiveInstanceDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Get the list of supported regions for dedicated instances
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExclusiveInstanceRegionsRequest"/></param>
+        /// <returns><see cref="DescribeExclusiveInstanceRegionsResponse"/></returns>
+        public Task<DescribeExclusiveInstanceRegionsResponse> DescribeExclusiveInstanceRegions(DescribeExclusiveInstanceRegionsRequest req)
+        {
+            return InternalRequestAsync<DescribeExclusiveInstanceRegionsResponse>(req, "DescribeExclusiveInstanceRegions");
+        }
+
+        /// <summary>
+        /// Get the list of supported regions for dedicated instances
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExclusiveInstanceRegionsRequest"/></param>
+        /// <returns><see cref="DescribeExclusiveInstanceRegionsResponse"/></returns>
+        public DescribeExclusiveInstanceRegionsResponse DescribeExclusiveInstanceRegionsSync(DescribeExclusiveInstanceRegionsRequest req)
+        {
+            return InternalRequestAsync<DescribeExclusiveInstanceRegionsResponse>(req, "DescribeExclusiveInstanceRegions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -39,6 +39,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? Type{ get; set; }
 
         /// <summary>
+        /// 磁盘大小
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Size")]
+        public string Size{ get; set; }
+
+        /// <summary>
         /// 云盘大小
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -53,6 +60,7 @@ namespace TencentCloud.Emr.V20190103.Models
         {
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Size", this.Size);
             this.SetParamSimple(map, prefix + "Volume", this.Volume);
         }
     }

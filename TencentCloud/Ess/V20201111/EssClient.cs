@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1093";
+       private const string sdkVersion = "SDK_NET_3.0.1094";
 
         /// <summary>
         /// Client constructor.
@@ -364,7 +364,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 该接口用于发起合同后，生成个人用户的批量签署链接, 暂时不支持企业端签署。
+        /// 该接口用于发起合同后，生成个人用户的批量待办链接, 暂时不支持企业端签署。
         /// **注意：**
         /// 1. 该接口目前仅支持签署人类型是**个人签署方的批量签署场景**(ApproverType=1)。
         /// 2. 该接口可生成批量签署链接的C端签署人**必须仅有手写签名(控件类型为SIGN_SIGNATURE)和时间类型的签署控件**，**不支持填写控件** 。
@@ -382,7 +382,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 该接口用于发起合同后，生成个人用户的批量签署链接, 暂时不支持企业端签署。
+        /// 该接口用于发起合同后，生成个人用户的批量待办链接, 暂时不支持企业端签署。
         /// **注意：**
         /// 1. 该接口目前仅支持签署人类型是**个人签署方的批量签署场景**(ApproverType=1)。
         /// 2. 该接口可生成批量签署链接的C端签署人**必须仅有手写签名(控件类型为SIGN_SIGNATURE)和时间类型的签署控件**，**不支持填写控件** 。

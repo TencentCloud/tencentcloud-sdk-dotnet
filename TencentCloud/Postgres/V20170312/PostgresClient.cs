@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1093";
+       private const string sdkVersion = "SDK_NET_3.0.1094";
 
         /// <summary>
         /// Client constructor.
@@ -218,6 +218,27 @@ namespace TencentCloud.Postgres.V20170312
         public CreateDBInstancesResponse CreateDBInstancesSync(CreateDBInstancesRequest req)
         {
             return InternalRequestAsync<CreateDBInstancesResponse>(req, "CreateDBInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口用于创建数据库，需指定数据库名及所有者。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDatabaseRequest"/></param>
+        /// <returns><see cref="CreateDatabaseResponse"/></returns>
+        public Task<CreateDatabaseResponse> CreateDatabase(CreateDatabaseRequest req)
+        {
+            return InternalRequestAsync<CreateDatabaseResponse>(req, "CreateDatabase");
+        }
+
+        /// <summary>
+        /// 此接口用于创建数据库，需指定数据库名及所有者。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDatabaseRequest"/></param>
+        /// <returns><see cref="CreateDatabaseResponse"/></returns>
+        public CreateDatabaseResponse CreateDatabaseSync(CreateDatabaseRequest req)
+        {
+            return InternalRequestAsync<CreateDatabaseResponse>(req, "CreateDatabase")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1763,6 +1784,27 @@ namespace TencentCloud.Postgres.V20170312
         public ModifyDBInstancesProjectResponse ModifyDBInstancesProjectSync(ModifyDBInstancesProjectRequest req)
         {
             return InternalRequestAsync<ModifyDBInstancesProjectResponse>(req, "ModifyDBInstancesProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改数据库所有者
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDatabaseOwnerRequest"/></param>
+        /// <returns><see cref="ModifyDatabaseOwnerResponse"/></returns>
+        public Task<ModifyDatabaseOwnerResponse> ModifyDatabaseOwner(ModifyDatabaseOwnerRequest req)
+        {
+            return InternalRequestAsync<ModifyDatabaseOwnerResponse>(req, "ModifyDatabaseOwner");
+        }
+
+        /// <summary>
+        /// 修改数据库所有者
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDatabaseOwnerRequest"/></param>
+        /// <returns><see cref="ModifyDatabaseOwnerResponse"/></returns>
+        public ModifyDatabaseOwnerResponse ModifyDatabaseOwnerSync(ModifyDatabaseOwnerRequest req)
+        {
+            return InternalRequestAsync<ModifyDatabaseOwnerResponse>(req, "ModifyDatabaseOwner")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
