@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FF7DA1A4-A5D5-3EF1-A5B1-B43A74B2F34E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1092</VersionPrefix>
+    <VersionPrefix>3.0.1093</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -113,6 +113,7 @@
     <Compile Include="V20210331\Models\AttachPolicyRequest.cs" />
     <Compile Include="V20210331\Models\AttachPolicyResponse.cs" />
     <Compile Include="V20210331\Models\AuthNode.cs" />
+    <Compile Include="V20210331\Models\AuthRelationFile.cs" />
     <Compile Include="V20210331\Models\BindOrganizationMemberAuthAccountRequest.cs" />
     <Compile Include="V20210331\Models\BindOrganizationMemberAuthAccountResponse.cs" />
     <Compile Include="V20210331\Models\CancelOrganizationMemberAuthAccountRequest.cs" />
@@ -249,6 +250,8 @@
     <Compile Include="V20210331\Models\GroupInfo.cs" />
     <Compile Include="V20210331\Models\GroupMembers.cs" />
     <Compile Include="V20210331\Models\IdentityPolicy.cs" />
+    <Compile Include="V20210331\Models\InviteOrganizationMemberRequest.cs" />
+    <Compile Include="V20210331\Models\InviteOrganizationMemberResponse.cs" />
     <Compile Include="V20210331\Models\JoinedGroups.cs" />
     <Compile Include="V20210331\Models\ListExternalSAMLIdPCertificatesRequest.cs" />
     <Compile Include="V20210331\Models\ListExternalSAMLIdPCertificatesResponse.cs" />
@@ -343,10 +346,13 @@
     <Compile Include="V20210331\Models\ShareResource.cs" />
     <Compile Include="V20210331\Models\ShareUnitMember.cs" />
     <Compile Include="V20210331\Models\ShareUnitResource.cs" />
+    <Compile Include="V20210331\Models\Tag.cs" />
     <Compile Include="V20210331\Models\TagComplianceDetails.cs" />
     <Compile Include="V20210331\Models\Tags.cs" />
     <Compile Include="V20210331\Models\TaskInfo.cs" />
     <Compile Include="V20210331\Models\TaskStatus.cs" />
+    <Compile Include="V20210331\Models\UpdateCustomPolicyForRoleConfigurationRequest.cs" />
+    <Compile Include="V20210331\Models\UpdateCustomPolicyForRoleConfigurationResponse.cs" />
     <Compile Include="V20210331\Models\UpdateGroupRequest.cs" />
     <Compile Include="V20210331\Models\UpdateGroupResponse.cs" />
     <Compile Include="V20210331\Models\UpdateOrganizationIdentityRequest.cs" />

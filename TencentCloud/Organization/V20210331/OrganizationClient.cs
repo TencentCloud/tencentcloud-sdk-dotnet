@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.1092";
+       private const string sdkVersion = "SDK_NET_3.0.1093";
 
         /// <summary>
         /// Client constructor.
@@ -1650,6 +1650,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 邀请组织成员
+        /// </summary>
+        /// <param name="req"><see cref="InviteOrganizationMemberRequest"/></param>
+        /// <returns><see cref="InviteOrganizationMemberResponse"/></returns>
+        public Task<InviteOrganizationMemberResponse> InviteOrganizationMember(InviteOrganizationMemberRequest req)
+        {
+            return InternalRequestAsync<InviteOrganizationMemberResponse>(req, "InviteOrganizationMember");
+        }
+
+        /// <summary>
+        /// 邀请组织成员
+        /// </summary>
+        /// <param name="req"><see cref="InviteOrganizationMemberRequest"/></param>
+        /// <returns><see cref="InviteOrganizationMemberResponse"/></returns>
+        public InviteOrganizationMemberResponse InviteOrganizationMemberSync(InviteOrganizationMemberRequest req)
+        {
+            return InternalRequestAsync<InviteOrganizationMemberResponse>(req, "InviteOrganizationMember")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询SAML签名证书列表
         /// </summary>
         /// <param name="req"><see cref="ListExternalSAMLIdPCertificatesRequest"/></param>
@@ -2234,6 +2255,27 @@ namespace TencentCloud.Organization.V20210331
         public SetExternalSAMLIdentityProviderResponse SetExternalSAMLIdentityProviderSync(SetExternalSAMLIdentityProviderRequest req)
         {
             return InternalRequestAsync<SetExternalSAMLIdentityProviderResponse>(req, "SetExternalSAMLIdentityProvider")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 为权限配置修改自定义策略
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCustomPolicyForRoleConfigurationRequest"/></param>
+        /// <returns><see cref="UpdateCustomPolicyForRoleConfigurationResponse"/></returns>
+        public Task<UpdateCustomPolicyForRoleConfigurationResponse> UpdateCustomPolicyForRoleConfiguration(UpdateCustomPolicyForRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<UpdateCustomPolicyForRoleConfigurationResponse>(req, "UpdateCustomPolicyForRoleConfiguration");
+        }
+
+        /// <summary>
+        /// 为权限配置修改自定义策略
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCustomPolicyForRoleConfigurationRequest"/></param>
+        /// <returns><see cref="UpdateCustomPolicyForRoleConfigurationResponse"/></returns>
+        public UpdateCustomPolicyForRoleConfigurationResponse UpdateCustomPolicyForRoleConfigurationSync(UpdateCustomPolicyForRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<UpdateCustomPolicyForRoleConfigurationResponse>(req, "UpdateCustomPolicyForRoleConfiguration")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

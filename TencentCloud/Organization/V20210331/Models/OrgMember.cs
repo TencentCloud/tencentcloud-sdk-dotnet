@@ -143,6 +143,13 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("PermissionStatus")]
         public string PermissionStatus{ get; set; }
 
+        /// <summary>
+        /// 成员标签列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -166,6 +173,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamArrayObj(map, prefix + "OrgIdentity.", this.OrgIdentity);
             this.SetParamSimple(map, prefix + "BindStatus", this.BindStatus);
             this.SetParamSimple(map, prefix + "PermissionStatus", this.PermissionStatus);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

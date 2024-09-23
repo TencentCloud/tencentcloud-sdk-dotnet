@@ -84,6 +84,12 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("AuthRelationId")]
         public long? AuthRelationId{ get; set; }
 
+        /// <summary>
+        /// 成员标签列表。最大10个
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "PayUin", this.PayUin);
             this.SetParamArraySimple(map, prefix + "IdentityRoleID.", this.IdentityRoleID);
             this.SetParamSimple(map, prefix + "AuthRelationId", this.AuthRelationId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

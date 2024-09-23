@@ -37,19 +37,19 @@ namespace TencentCloud.Organization.V20210331.Models
         public string RoleConfigurationId{ get; set; }
 
         /// <summary>
-        /// 权限策略类型。取值：  System：系统策略。复用 CAM 的系统策略。 Custom: 自定义策略。按照 CAM 权限策略语法和结构编写的自定义策略。 前期只支持系统策略，自定义策略后期在支持
+        /// 权限策略类型。取值：  System：系统策略。复用 CAM 的系统策略。 Custom: 自定义策略。按照 CAM 权限策略语法和结构编写的自定义策略。 
         /// </summary>
         [JsonProperty("RolePolicyType")]
         public string RolePolicyType{ get; set; }
 
         /// <summary>
-        /// 权限策略名称，长度最大为 20策略，每个策略长度最大32个字符。
+        /// 权限策略名称，长度最大为 20策略，每个策略长度最大32个字符。如果要添加系统策略，建议使用RolePolicies参数。自定义策略时，数组长度最大为1。
         /// </summary>
         [JsonProperty("RolePolicyNames")]
         public string[] RolePolicyNames{ get; set; }
 
         /// <summary>
-        /// 策略详情。
+        /// 添加的系统策略详情。
         /// </summary>
         [JsonProperty("RolePolicies")]
         public PolicyDetail[] RolePolicies{ get; set; }

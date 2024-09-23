@@ -60,6 +60,12 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
+        /// <summary>
+        /// 成员标签搜索列表，最大10个
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);
             this.SetParamSimple(map, prefix + "AuthName", this.AuthName);
             this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }
