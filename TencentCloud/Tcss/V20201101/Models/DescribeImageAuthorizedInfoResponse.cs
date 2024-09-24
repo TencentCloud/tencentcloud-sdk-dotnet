@@ -85,6 +85,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         public bool? CanApplyFreeImageAuthorize{ get; set; }
 
         /// <summary>
+        /// 镜像扫描计费信息
+        /// </summary>
+        [JsonProperty("ImageScanInquireInfo")]
+        public ImageScanInquireInfo ImageScanInquireInfo{ get; set; }
+
+        /// <summary>
+        /// 重复镜像数(本地镜像和仓库镜像)
+        /// </summary>
+        [JsonProperty("RepeatImageIdCnt")]
+        public ulong? RepeatImageIdCnt{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -106,6 +118,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "PurchasedAuthorizedCnt", this.PurchasedAuthorizedCnt);
             this.SetParamSimple(map, prefix + "UsedPurchasedAuthorizedCnt", this.UsedPurchasedAuthorizedCnt);
             this.SetParamSimple(map, prefix + "CanApplyFreeImageAuthorize", this.CanApplyFreeImageAuthorize);
+            this.SetParamObj(map, prefix + "ImageScanInquireInfo.", this.ImageScanInquireInfo);
+            this.SetParamSimple(map, prefix + "RepeatImageIdCnt", this.RepeatImageIdCnt);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

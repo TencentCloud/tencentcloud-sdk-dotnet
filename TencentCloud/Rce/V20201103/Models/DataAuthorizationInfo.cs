@@ -25,7 +25,7 @@ namespace TencentCloud.Rce.V20201103.Models
     {
         
         /// <summary>
-        /// 客户主体名称。
+        /// 数据委托方、需求方：客户主体名称。
         /// 
         /// 示例值：某某有限公司。
         /// </summary>
@@ -33,7 +33,7 @@ namespace TencentCloud.Rce.V20201103.Models
         public string DataProviderName{ get; set; }
 
         /// <summary>
-        /// 接收方主体名称。
+        /// 数据受托方、提供方：腾讯云主体名称。
         /// 
         /// 固定填：腾讯云计算（北京）有限责任公司
         /// 
@@ -43,7 +43,7 @@ namespace TencentCloud.Rce.V20201103.Models
         public string DataRecipientName{ get; set; }
 
         /// <summary>
-        /// 客户请求RCE所涉及的用户敏感数据类型，支持多选。实际以接口请求传参为准。
+        /// 客户请求RCE所提供的用户数据类型，支持多选。实际以接口请求传参为准。
         /// 
         /// 1-手机号；
         /// 
@@ -53,8 +53,6 @@ namespace TencentCloud.Rce.V20201103.Models
         /// 
         /// 4-IP地址；
         /// 
-        /// 5-设备指纹；
-        /// 
         /// 999-其它；
         /// 
         /// 示例值：[1, 4]
@@ -63,24 +61,20 @@ namespace TencentCloud.Rce.V20201103.Models
         public ulong?[] UserDataType{ get; set; }
 
         /// <summary>
-        /// 客户是否已经获取用户授权。
-        /// 
+        /// 客户是否已按[合规指南](https://rule.tencent.com/rule/202409130001)要求获取用户授权，同意客户委托腾讯云处理入参信息
         /// 1-已授权；其它值为未授权。
-        /// 
         /// 示例值：1
         /// </summary>
         [JsonProperty("IsAuthorize")]
         public ulong? IsAuthorize{ get; set; }
 
         /// <summary>
-        /// 是否是用户个人敏感数据。
-        /// 
-        /// 固定填：1。
-        /// 
+        /// 客户是否已按[合规指南](https://rule.tencent.com/rule/202409130001)要求获取用户授权，同意腾讯云结合客户提供的信息，对已合法收集的用户数据进行必要处理得出服务结果，并返回给客户。
+        /// 1-已授权；其它值为未授权。
         /// 示例值：1
         /// </summary>
-        [JsonProperty("IsPersonalData")]
-        public ulong? IsPersonalData{ get; set; }
+        [JsonProperty("IsOrderHandling")]
+        public ulong? IsOrderHandling{ get; set; }
 
         /// <summary>
         /// 客户获得的用户授权期限时间戳（单位秒）。
@@ -93,12 +87,23 @@ namespace TencentCloud.Rce.V20201103.Models
         public ulong? AuthorizationTerm{ get; set; }
 
         /// <summary>
+        /// 	
         /// 客户获得用户授权所依赖的协议地址。
         /// 
-        /// 示例值：https://www.*****.com/*****
+        /// 示例值：https://www.*****.com/*
         /// </summary>
         [JsonProperty("PrivacyPolicyLink")]
         public string PrivacyPolicyLink{ get; set; }
+
+        /// <summary>
+        /// 是否是用户个人敏感数据。
+        /// 
+        /// 固定填：1。
+        /// 
+        /// 示例值：1
+        /// </summary>
+        [JsonProperty("IsPersonalData")]
+        public ulong? IsPersonalData{ get; set; }
 
 
         /// <summary>
@@ -110,9 +115,10 @@ namespace TencentCloud.Rce.V20201103.Models
             this.SetParamSimple(map, prefix + "DataRecipientName", this.DataRecipientName);
             this.SetParamArraySimple(map, prefix + "UserDataType.", this.UserDataType);
             this.SetParamSimple(map, prefix + "IsAuthorize", this.IsAuthorize);
-            this.SetParamSimple(map, prefix + "IsPersonalData", this.IsPersonalData);
+            this.SetParamSimple(map, prefix + "IsOrderHandling", this.IsOrderHandling);
             this.SetParamSimple(map, prefix + "AuthorizationTerm", this.AuthorizationTerm);
             this.SetParamSimple(map, prefix + "PrivacyPolicyLink", this.PrivacyPolicyLink);
+            this.SetParamSimple(map, prefix + "IsPersonalData", this.IsPersonalData);
         }
     }
 }

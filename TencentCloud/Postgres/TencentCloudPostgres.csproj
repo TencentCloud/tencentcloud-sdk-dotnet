@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A06AC0CF-076C-38E8-83FE-C7FFA375814C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1094</VersionPrefix>
+    <VersionPrefix>3.0.1095</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -92,6 +92,7 @@
     <Compile Include="V20170312\Models\Database.cs" />
     <Compile Include="V20170312\Models\DatabaseObject.cs" />
     <Compile Include="V20170312\Models\DatabasePrivilege.cs" />
+    <Compile Include="V20170312\Models\DedicatedCluster.cs" />
     <Compile Include="V20170312\Models\DeleteAccountRequest.cs" />
     <Compile Include="V20170312\Models\DeleteAccountResponse.cs" />
     <Compile Include="V20170312\Models\DeleteBaseBackupRequest.cs" />
@@ -154,6 +155,8 @@
     <Compile Include="V20170312\Models\DescribeDatabaseObjectsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDatabasesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDatabasesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDedicatedClustersRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDedicatedClustersResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDefaultParametersRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDefaultParametersResponse.cs" />
     <Compile Include="V20170312\Models\DescribeEncryptionKeysRequest.cs" />

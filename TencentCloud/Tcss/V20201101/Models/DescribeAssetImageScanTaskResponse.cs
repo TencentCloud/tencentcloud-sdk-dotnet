@@ -31,6 +31,24 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string TaskID{ get; set; }
 
         /// <summary>
+        /// 最近扫描时间
+        /// </summary>
+        [JsonProperty("LastScanTime")]
+        public string LastScanTime{ get; set; }
+
+        /// <summary>
+        /// 扫描状态(READY:准备 SCANNING:扫描中 END:完成)
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// 扫描子状态(Success:成功 Timeout:超时 Cancel:取消 Error:错误)
+        /// </summary>
+        [JsonProperty("SubStatus")]
+        public string SubStatus{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +61,9 @@ namespace TencentCloud.Tcss.V20201101.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TaskID", this.TaskID);
+            this.SetParamSimple(map, prefix + "LastScanTime", this.LastScanTime);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "SubStatus", this.SubStatus);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

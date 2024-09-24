@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.
@@ -113,6 +113,27 @@ namespace TencentCloud.Ccc.V20200210
         public BindStaffSkillGroupListResponse BindStaffSkillGroupListSync(BindStaffSkillGroupListRequest req)
         {
             return InternalRequestAsync<BindStaffSkillGroupListResponse>(req, "BindStaffSkillGroupList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建ai外呼会话(仅支持高级版座席)
+        /// </summary>
+        /// <param name="req"><see cref="CreateAICallRequest"/></param>
+        /// <returns><see cref="CreateAICallResponse"/></returns>
+        public Task<CreateAICallResponse> CreateAICall(CreateAICallRequest req)
+        {
+            return InternalRequestAsync<CreateAICallResponse>(req, "CreateAICall");
+        }
+
+        /// <summary>
+        /// 创建ai外呼会话(仅支持高级版座席)
+        /// </summary>
+        /// <param name="req"><see cref="CreateAICallRequest"/></param>
+        /// <returns><see cref="CreateAICallResponse"/></returns>
+        public CreateAICallResponse CreateAICallSync(CreateAICallRequest req)
+        {
+            return InternalRequestAsync<CreateAICallResponse>(req, "CreateAICall")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

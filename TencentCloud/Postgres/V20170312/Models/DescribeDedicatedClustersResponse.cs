@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Iecp.V20210914.Models
+namespace TencentCloud.Postgres.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyApplicationBasicInfoRequest : AbstractModel
+    public class DescribeDedicatedClustersResponse : AbstractModel
     {
         
         /// <summary>
-        /// 应用模板ID
+        /// 专属集群信息
         /// </summary>
-        [JsonProperty("ApplicationId")]
-        public ulong? ApplicationId{ get; set; }
+        [JsonProperty("DedicatedClusterSet")]
+        public DedicatedCluster[] DedicatedClusterSet{ get; set; }
 
         /// <summary>
-        /// 应用模板基本信息
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("BasicInfo")]
-        public ApplicationBasicInfo BasicInfo{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Iecp.V20210914.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
-            this.SetParamObj(map, prefix + "BasicInfo.", this.BasicInfo);
+            this.SetParamArrayObj(map, prefix + "DedicatedClusterSet.", this.DedicatedClusterSet);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -63,6 +63,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// HmtResidentPermitBack: 港澳台居住证背面
         /// EstateCert: 不动产证
         /// BizLicense: 营业执照
+        /// ForeignPermanentResidentFront: 外国人永居证正面识别
+        /// ForeignPermanentResidentBack: 外国人永居证背面识别
         /// </summary>
         [JsonProperty("DiscernType")]
         public string[] DiscernType{ get; set; }

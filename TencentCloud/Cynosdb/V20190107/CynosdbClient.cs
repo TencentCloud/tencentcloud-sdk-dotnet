@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.
@@ -1625,31 +1625,6 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeRollbackTimeRangeResponse DescribeRollbackTimeRangeSync(DescribeRollbackTimeRangeRequest req)
         {
             return InternalRequestAsync<DescribeRollbackTimeRangeResponse>(req, "DescribeRollbackTimeRange")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 历史废弃接口，从云API下线
-        /// 
-        /// 指定时间和集群查询是否可回滚
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRollbackTimeValidityRequest"/></param>
-        /// <returns><see cref="DescribeRollbackTimeValidityResponse"/></returns>
-        public Task<DescribeRollbackTimeValidityResponse> DescribeRollbackTimeValidity(DescribeRollbackTimeValidityRequest req)
-        {
-            return InternalRequestAsync<DescribeRollbackTimeValidityResponse>(req, "DescribeRollbackTimeValidity");
-        }
-
-        /// <summary>
-        /// 历史废弃接口，从云API下线
-        /// 
-        /// 指定时间和集群查询是否可回滚
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRollbackTimeValidityRequest"/></param>
-        /// <returns><see cref="DescribeRollbackTimeValidityResponse"/></returns>
-        public DescribeRollbackTimeValidityResponse DescribeRollbackTimeValiditySync(DescribeRollbackTimeValidityRequest req)
-        {
-            return InternalRequestAsync<DescribeRollbackTimeValidityResponse>(req, "DescribeRollbackTimeValidity")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

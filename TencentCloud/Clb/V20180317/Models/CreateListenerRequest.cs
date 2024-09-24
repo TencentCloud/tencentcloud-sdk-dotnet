@@ -74,7 +74,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Scheduler{ get; set; }
 
         /// <summary>
-        /// 是否开启SNI特性，此参数仅适用于HTTPS监听器。0表示开启，1表示未开启。
+        /// 是否开启SNI特性，此参数仅适用于HTTPS监听器。0表示未开启，1表示开启。
         /// </summary>
         [JsonProperty("SniSwitch")]
         public long? SniSwitch{ get; set; }
@@ -145,6 +145,18 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("FullEndPorts")]
         public long?[] FullEndPorts{ get; set; }
 
+        /// <summary>
+        /// 内网http监听器开启h2c开关
+        /// </summary>
+        [JsonProperty("H2cSwitch")]
+        public bool? H2cSwitch{ get; set; }
+
+        /// <summary>
+        /// TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关
+        /// </summary>
+        [JsonProperty("SslCloseSwitch")]
+        public bool? SslCloseSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -171,6 +183,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "IdleConnectTimeout", this.IdleConnectTimeout);
             this.SetParamSimple(map, prefix + "SnatEnable", this.SnatEnable);
             this.SetParamArraySimple(map, prefix + "FullEndPorts.", this.FullEndPorts);
+            this.SetParamSimple(map, prefix + "H2cSwitch", this.H2cSwitch);
+            this.SetParamSimple(map, prefix + "SslCloseSwitch", this.SslCloseSwitch);
         }
     }
 }

@@ -640,6 +640,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ExtResourceFlag")]
         public ExtResourceFlagDto ExtResourceFlag{ get; set; }
 
+        /// <summary>
+        /// 父任务simple信息(新)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NewParentTaskInfos")]
+        public AiopsSimpleTaskDto[] NewParentTaskInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -734,6 +741,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamObj(map, prefix + "DLCResourceConfig.", this.DLCResourceConfig);
             this.SetParamObj(map, prefix + "ParentTaskInfos.", this.ParentTaskInfos);
             this.SetParamObj(map, prefix + "ExtResourceFlag.", this.ExtResourceFlag);
+            this.SetParamArrayObj(map, prefix + "NewParentTaskInfos.", this.NewParentTaskInfos);
         }
     }
 }

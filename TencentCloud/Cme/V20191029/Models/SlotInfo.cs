@@ -59,6 +59,12 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
 
+        /// <summary>
+        /// 卡槽起始时间，单位秒。
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public float? StartTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +76,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "DefaultMaterialId", this.DefaultMaterialId);
             this.SetParamObj(map, prefix + "DefaultTextSlotInfo.", this.DefaultTextSlotInfo);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Iecp.V20210914
 
        private const string endpoint = "iecp.tencentcloudapi.com";
        private const string version = "2021-09-14";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.
@@ -54,31 +54,6 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 从组件市场选中组件并添加到应用模板列表
-        /// </summary>
-        /// <param name="req"><see cref="ApplyMarketComponentRequest"/></param>
-        /// <returns><see cref="ApplyMarketComponentResponse"/></returns>
-        public Task<ApplyMarketComponentResponse> ApplyMarketComponent(ApplyMarketComponentRequest req)
-        {
-            return InternalRequestAsync<ApplyMarketComponentResponse>(req, "ApplyMarketComponent");
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 从组件市场选中组件并添加到应用模板列表
-        /// </summary>
-        /// <param name="req"><see cref="ApplyMarketComponentRequest"/></param>
-        /// <returns><see cref="ApplyMarketComponentResponse"/></returns>
-        public ApplyMarketComponentResponse ApplyMarketComponentSync(ApplyMarketComponentRequest req)
-        {
-            return InternalRequestAsync<ApplyMarketComponentResponse>(req, "ApplyMarketComponent")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 建立消息路由
         /// </summary>
         /// <param name="req"><see cref="BuildMessageRouteRequest"/></param>
@@ -96,31 +71,6 @@ namespace TencentCloud.Iecp.V20210914
         public BuildMessageRouteResponse BuildMessageRouteSync(BuildMessageRouteRequest req)
         {
             return InternalRequestAsync<BuildMessageRouteResponse>(req, "BuildMessageRoute")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 创建可视化创建应用模板
-        /// </summary>
-        /// <param name="req"><see cref="CreateApplicationVisualizationRequest"/></param>
-        /// <returns><see cref="CreateApplicationVisualizationResponse"/></returns>
-        public Task<CreateApplicationVisualizationResponse> CreateApplicationVisualization(CreateApplicationVisualizationRequest req)
-        {
-            return InternalRequestAsync<CreateApplicationVisualizationResponse>(req, "CreateApplicationVisualization");
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 创建可视化创建应用模板
-        /// </summary>
-        /// <param name="req"><see cref="CreateApplicationVisualizationRequest"/></param>
-        /// <returns><see cref="CreateApplicationVisualizationResponse"/></returns>
-        public CreateApplicationVisualizationResponse CreateApplicationVisualizationSync(CreateApplicationVisualizationRequest req)
-        {
-            return InternalRequestAsync<CreateApplicationVisualizationResponse>(req, "CreateApplicationVisualization")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -226,56 +176,6 @@ namespace TencentCloud.Iecp.V20210914
         public CreateEdgeNodeUnitTemplateResponse CreateEdgeNodeUnitTemplateSync(CreateEdgeNodeUnitTemplateRequest req)
         {
             return InternalRequestAsync<CreateEdgeNodeUnitTemplateResponse>(req, "CreateEdgeNodeUnitTemplate")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 可视化创建应用
-        /// </summary>
-        /// <param name="req"><see cref="CreateEdgeUnitApplicationVisualizationRequest"/></param>
-        /// <returns><see cref="CreateEdgeUnitApplicationVisualizationResponse"/></returns>
-        public Task<CreateEdgeUnitApplicationVisualizationResponse> CreateEdgeUnitApplicationVisualization(CreateEdgeUnitApplicationVisualizationRequest req)
-        {
-            return InternalRequestAsync<CreateEdgeUnitApplicationVisualizationResponse>(req, "CreateEdgeUnitApplicationVisualization");
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 可视化创建应用
-        /// </summary>
-        /// <param name="req"><see cref="CreateEdgeUnitApplicationVisualizationRequest"/></param>
-        /// <returns><see cref="CreateEdgeUnitApplicationVisualizationResponse"/></returns>
-        public CreateEdgeUnitApplicationVisualizationResponse CreateEdgeUnitApplicationVisualizationSync(CreateEdgeUnitApplicationVisualizationRequest req)
-        {
-            return InternalRequestAsync<CreateEdgeUnitApplicationVisualizationResponse>(req, "CreateEdgeUnitApplicationVisualization")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// yaml方式创建应用
-        /// </summary>
-        /// <param name="req"><see cref="CreateEdgeUnitApplicationYamlRequest"/></param>
-        /// <returns><see cref="CreateEdgeUnitApplicationYamlResponse"/></returns>
-        public Task<CreateEdgeUnitApplicationYamlResponse> CreateEdgeUnitApplicationYaml(CreateEdgeUnitApplicationYamlRequest req)
-        {
-            return InternalRequestAsync<CreateEdgeUnitApplicationYamlResponse>(req, "CreateEdgeUnitApplicationYaml");
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// yaml方式创建应用
-        /// </summary>
-        /// <param name="req"><see cref="CreateEdgeUnitApplicationYamlRequest"/></param>
-        /// <returns><see cref="CreateEdgeUnitApplicationYamlResponse"/></returns>
-        public CreateEdgeUnitApplicationYamlResponse CreateEdgeUnitApplicationYamlSync(CreateEdgeUnitApplicationYamlRequest req)
-        {
-            return InternalRequestAsync<CreateEdgeUnitApplicationYamlResponse>(req, "CreateEdgeUnitApplicationYaml")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -448,31 +348,6 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 删除应用模板
-        /// </summary>
-        /// <param name="req"><see cref="DeleteApplicationsRequest"/></param>
-        /// <returns><see cref="DeleteApplicationsResponse"/></returns>
-        public Task<DeleteApplicationsResponse> DeleteApplications(DeleteApplicationsRequest req)
-        {
-            return InternalRequestAsync<DeleteApplicationsResponse>(req, "DeleteApplications");
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 删除应用模板
-        /// </summary>
-        /// <param name="req"><see cref="DeleteApplicationsRequest"/></param>
-        /// <returns><see cref="DeleteApplicationsResponse"/></returns>
-        public DeleteApplicationsResponse DeleteApplicationsSync(DeleteApplicationsRequest req)
-        {
-            return InternalRequestAsync<DeleteApplicationsResponse>(req, "DeleteApplications")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 删除ConfigMap
         /// </summary>
         /// <param name="req"><see cref="DeleteConfigMapRequest"/></param>
@@ -553,31 +428,6 @@ namespace TencentCloud.Iecp.V20210914
         public DeleteEdgeNodesResponse DeleteEdgeNodesSync(DeleteEdgeNodesRequest req)
         {
             return InternalRequestAsync<DeleteEdgeNodesResponse>(req, "DeleteEdgeNodes")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 删除应用列表
-        /// </summary>
-        /// <param name="req"><see cref="DeleteEdgeUnitApplicationsRequest"/></param>
-        /// <returns><see cref="DeleteEdgeUnitApplicationsResponse"/></returns>
-        public Task<DeleteEdgeUnitApplicationsResponse> DeleteEdgeUnitApplications(DeleteEdgeUnitApplicationsRequest req)
-        {
-            return InternalRequestAsync<DeleteEdgeUnitApplicationsResponse>(req, "DeleteEdgeUnitApplications");
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 删除应用列表
-        /// </summary>
-        /// <param name="req"><see cref="DeleteEdgeUnitApplicationsRequest"/></param>
-        /// <returns><see cref="DeleteEdgeUnitApplicationsResponse"/></returns>
-        public DeleteEdgeUnitApplicationsResponse DeleteEdgeUnitApplicationsSync(DeleteEdgeUnitApplicationsRequest req)
-        {
-            return InternalRequestAsync<DeleteEdgeUnitApplicationsResponse>(req, "DeleteEdgeUnitApplications")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -788,106 +638,6 @@ namespace TencentCloud.Iecp.V20210914
         public DeleteSecretResponse DeleteSecretSync(DeleteSecretRequest req)
         {
             return InternalRequestAsync<DeleteSecretResponse>(req, "DeleteSecret")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 获取应用模板可视化配置信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeApplicationVisualizationRequest"/></param>
-        /// <returns><see cref="DescribeApplicationVisualizationResponse"/></returns>
-        public Task<DescribeApplicationVisualizationResponse> DescribeApplicationVisualization(DescribeApplicationVisualizationRequest req)
-        {
-            return InternalRequestAsync<DescribeApplicationVisualizationResponse>(req, "DescribeApplicationVisualization");
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 获取应用模板可视化配置信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeApplicationVisualizationRequest"/></param>
-        /// <returns><see cref="DescribeApplicationVisualizationResponse"/></returns>
-        public DescribeApplicationVisualizationResponse DescribeApplicationVisualizationSync(DescribeApplicationVisualizationRequest req)
-        {
-            return InternalRequestAsync<DescribeApplicationVisualizationResponse>(req, "DescribeApplicationVisualization")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 查询应用模板Yaml
-        /// </summary>
-        /// <param name="req"><see cref="DescribeApplicationYamlRequest"/></param>
-        /// <returns><see cref="DescribeApplicationYamlResponse"/></returns>
-        public Task<DescribeApplicationYamlResponse> DescribeApplicationYaml(DescribeApplicationYamlRequest req)
-        {
-            return InternalRequestAsync<DescribeApplicationYamlResponse>(req, "DescribeApplicationYaml");
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 查询应用模板Yaml
-        /// </summary>
-        /// <param name="req"><see cref="DescribeApplicationYamlRequest"/></param>
-        /// <returns><see cref="DescribeApplicationYamlResponse"/></returns>
-        public DescribeApplicationYamlResponse DescribeApplicationYamlSync(DescribeApplicationYamlRequest req)
-        {
-            return InternalRequestAsync<DescribeApplicationYamlResponse>(req, "DescribeApplicationYaml")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 检查应用模板的Yaml配置
-        /// </summary>
-        /// <param name="req"><see cref="DescribeApplicationYamlErrorRequest"/></param>
-        /// <returns><see cref="DescribeApplicationYamlErrorResponse"/></returns>
-        public Task<DescribeApplicationYamlErrorResponse> DescribeApplicationYamlError(DescribeApplicationYamlErrorRequest req)
-        {
-            return InternalRequestAsync<DescribeApplicationYamlErrorResponse>(req, "DescribeApplicationYamlError");
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 检查应用模板的Yaml配置
-        /// </summary>
-        /// <param name="req"><see cref="DescribeApplicationYamlErrorRequest"/></param>
-        /// <returns><see cref="DescribeApplicationYamlErrorResponse"/></returns>
-        public DescribeApplicationYamlErrorResponse DescribeApplicationYamlErrorSync(DescribeApplicationYamlErrorRequest req)
-        {
-            return InternalRequestAsync<DescribeApplicationYamlErrorResponse>(req, "DescribeApplicationYamlError")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 获取应用模板列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeApplicationsRequest"/></param>
-        /// <returns><see cref="DescribeApplicationsResponse"/></returns>
-        public Task<DescribeApplicationsResponse> DescribeApplications(DescribeApplicationsRequest req)
-        {
-            return InternalRequestAsync<DescribeApplicationsResponse>(req, "DescribeApplications");
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 获取应用模板列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeApplicationsRequest"/></param>
-        /// <returns><see cref="DescribeApplicationsResponse"/></returns>
-        public DescribeApplicationsResponse DescribeApplicationsSync(DescribeApplicationsRequest req)
-        {
-            return InternalRequestAsync<DescribeApplicationsResponse>(req, "DescribeApplications")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1186,181 +936,6 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 获取应用事件列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEdgeUnitApplicationEventsRequest"/></param>
-        /// <returns><see cref="DescribeEdgeUnitApplicationEventsResponse"/></returns>
-        public Task<DescribeEdgeUnitApplicationEventsResponse> DescribeEdgeUnitApplicationEvents(DescribeEdgeUnitApplicationEventsRequest req)
-        {
-            return InternalRequestAsync<DescribeEdgeUnitApplicationEventsResponse>(req, "DescribeEdgeUnitApplicationEvents");
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 获取应用事件列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEdgeUnitApplicationEventsRequest"/></param>
-        /// <returns><see cref="DescribeEdgeUnitApplicationEventsResponse"/></returns>
-        public DescribeEdgeUnitApplicationEventsResponse DescribeEdgeUnitApplicationEventsSync(DescribeEdgeUnitApplicationEventsRequest req)
-        {
-            return InternalRequestAsync<DescribeEdgeUnitApplicationEventsResponse>(req, "DescribeEdgeUnitApplicationEvents")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 获取应用日志
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEdgeUnitApplicationLogsRequest"/></param>
-        /// <returns><see cref="DescribeEdgeUnitApplicationLogsResponse"/></returns>
-        public Task<DescribeEdgeUnitApplicationLogsResponse> DescribeEdgeUnitApplicationLogs(DescribeEdgeUnitApplicationLogsRequest req)
-        {
-            return InternalRequestAsync<DescribeEdgeUnitApplicationLogsResponse>(req, "DescribeEdgeUnitApplicationLogs");
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 获取应用日志
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEdgeUnitApplicationLogsRequest"/></param>
-        /// <returns><see cref="DescribeEdgeUnitApplicationLogsResponse"/></returns>
-        public DescribeEdgeUnitApplicationLogsResponse DescribeEdgeUnitApplicationLogsSync(DescribeEdgeUnitApplicationLogsRequest req)
-        {
-            return InternalRequestAsync<DescribeEdgeUnitApplicationLogsResponse>(req, "DescribeEdgeUnitApplicationLogs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 获取应用容器状态
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEdgeUnitApplicationPodContainersRequest"/></param>
-        /// <returns><see cref="DescribeEdgeUnitApplicationPodContainersResponse"/></returns>
-        public Task<DescribeEdgeUnitApplicationPodContainersResponse> DescribeEdgeUnitApplicationPodContainers(DescribeEdgeUnitApplicationPodContainersRequest req)
-        {
-            return InternalRequestAsync<DescribeEdgeUnitApplicationPodContainersResponse>(req, "DescribeEdgeUnitApplicationPodContainers");
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 获取应用容器状态
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEdgeUnitApplicationPodContainersRequest"/></param>
-        /// <returns><see cref="DescribeEdgeUnitApplicationPodContainersResponse"/></returns>
-        public DescribeEdgeUnitApplicationPodContainersResponse DescribeEdgeUnitApplicationPodContainersSync(DescribeEdgeUnitApplicationPodContainersRequest req)
-        {
-            return InternalRequestAsync<DescribeEdgeUnitApplicationPodContainersResponse>(req, "DescribeEdgeUnitApplicationPodContainers")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 获取应用下Pod状态
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEdgeUnitApplicationPodsRequest"/></param>
-        /// <returns><see cref="DescribeEdgeUnitApplicationPodsResponse"/></returns>
-        public Task<DescribeEdgeUnitApplicationPodsResponse> DescribeEdgeUnitApplicationPods(DescribeEdgeUnitApplicationPodsRequest req)
-        {
-            return InternalRequestAsync<DescribeEdgeUnitApplicationPodsResponse>(req, "DescribeEdgeUnitApplicationPods");
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 获取应用下Pod状态
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEdgeUnitApplicationPodsRequest"/></param>
-        /// <returns><see cref="DescribeEdgeUnitApplicationPodsResponse"/></returns>
-        public DescribeEdgeUnitApplicationPodsResponse DescribeEdgeUnitApplicationPodsSync(DescribeEdgeUnitApplicationPodsRequest req)
-        {
-            return InternalRequestAsync<DescribeEdgeUnitApplicationPodsResponse>(req, "DescribeEdgeUnitApplicationPods")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 获取单元可视化配置信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEdgeUnitApplicationVisualizationRequest"/></param>
-        /// <returns><see cref="DescribeEdgeUnitApplicationVisualizationResponse"/></returns>
-        public Task<DescribeEdgeUnitApplicationVisualizationResponse> DescribeEdgeUnitApplicationVisualization(DescribeEdgeUnitApplicationVisualizationRequest req)
-        {
-            return InternalRequestAsync<DescribeEdgeUnitApplicationVisualizationResponse>(req, "DescribeEdgeUnitApplicationVisualization");
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 获取单元可视化配置信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEdgeUnitApplicationVisualizationRequest"/></param>
-        /// <returns><see cref="DescribeEdgeUnitApplicationVisualizationResponse"/></returns>
-        public DescribeEdgeUnitApplicationVisualizationResponse DescribeEdgeUnitApplicationVisualizationSync(DescribeEdgeUnitApplicationVisualizationRequest req)
-        {
-            return InternalRequestAsync<DescribeEdgeUnitApplicationVisualizationResponse>(req, "DescribeEdgeUnitApplicationVisualization")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 获取应用的Yaml配置
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEdgeUnitApplicationYamlRequest"/></param>
-        /// <returns><see cref="DescribeEdgeUnitApplicationYamlResponse"/></returns>
-        public Task<DescribeEdgeUnitApplicationYamlResponse> DescribeEdgeUnitApplicationYaml(DescribeEdgeUnitApplicationYamlRequest req)
-        {
-            return InternalRequestAsync<DescribeEdgeUnitApplicationYamlResponse>(req, "DescribeEdgeUnitApplicationYaml");
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 获取应用的Yaml配置
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEdgeUnitApplicationYamlRequest"/></param>
-        /// <returns><see cref="DescribeEdgeUnitApplicationYamlResponse"/></returns>
-        public DescribeEdgeUnitApplicationYamlResponse DescribeEdgeUnitApplicationYamlSync(DescribeEdgeUnitApplicationYamlRequest req)
-        {
-            return InternalRequestAsync<DescribeEdgeUnitApplicationYamlResponse>(req, "DescribeEdgeUnitApplicationYaml")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 检查单元应用的Yaml配置
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEdgeUnitApplicationYamlErrorRequest"/></param>
-        /// <returns><see cref="DescribeEdgeUnitApplicationYamlErrorResponse"/></returns>
-        public Task<DescribeEdgeUnitApplicationYamlErrorResponse> DescribeEdgeUnitApplicationYamlError(DescribeEdgeUnitApplicationYamlErrorRequest req)
-        {
-            return InternalRequestAsync<DescribeEdgeUnitApplicationYamlErrorResponse>(req, "DescribeEdgeUnitApplicationYamlError");
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 检查单元应用的Yaml配置
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEdgeUnitApplicationYamlErrorRequest"/></param>
-        /// <returns><see cref="DescribeEdgeUnitApplicationYamlErrorResponse"/></returns>
-        public DescribeEdgeUnitApplicationYamlErrorResponse DescribeEdgeUnitApplicationYamlErrorSync(DescribeEdgeUnitApplicationYamlErrorRequest req)
-        {
-            return InternalRequestAsync<DescribeEdgeUnitApplicationYamlErrorResponse>(req, "DescribeEdgeUnitApplicationYamlError")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 获取单元下应用列表
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeUnitApplicationsRequest"/></param>
@@ -1378,31 +953,6 @@ namespace TencentCloud.Iecp.V20210914
         public DescribeEdgeUnitApplicationsResponse DescribeEdgeUnitApplicationsSync(DescribeEdgeUnitApplicationsRequest req)
         {
             return InternalRequestAsync<DescribeEdgeUnitApplicationsResponse>(req, "DescribeEdgeUnitApplications")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 查询边缘集群详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEdgeUnitCloudRequest"/></param>
-        /// <returns><see cref="DescribeEdgeUnitCloudResponse"/></returns>
-        public Task<DescribeEdgeUnitCloudResponse> DescribeEdgeUnitCloud(DescribeEdgeUnitCloudRequest req)
-        {
-            return InternalRequestAsync<DescribeEdgeUnitCloudResponse>(req, "DescribeEdgeUnitCloud");
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 查询边缘集群详情
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEdgeUnitCloudRequest"/></param>
-        /// <returns><see cref="DescribeEdgeUnitCloudResponse"/></returns>
-        public DescribeEdgeUnitCloudResponse DescribeEdgeUnitCloudSync(DescribeEdgeUnitCloudRequest req)
-        {
-            return InternalRequestAsync<DescribeEdgeUnitCloudResponse>(req, "DescribeEdgeUnitCloud")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1928,56 +1478,6 @@ namespace TencentCloud.Iecp.V20210914
         public GetMarketComponentListResponse GetMarketComponentListSync(GetMarketComponentListRequest req)
         {
             return InternalRequestAsync<GetMarketComponentListResponse>(req, "GetMarketComponentList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 修改应用模板基本信息
-        /// </summary>
-        /// <param name="req"><see cref="ModifyApplicationBasicInfoRequest"/></param>
-        /// <returns><see cref="ModifyApplicationBasicInfoResponse"/></returns>
-        public Task<ModifyApplicationBasicInfoResponse> ModifyApplicationBasicInfo(ModifyApplicationBasicInfoRequest req)
-        {
-            return InternalRequestAsync<ModifyApplicationBasicInfoResponse>(req, "ModifyApplicationBasicInfo");
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 修改应用模板基本信息
-        /// </summary>
-        /// <param name="req"><see cref="ModifyApplicationBasicInfoRequest"/></param>
-        /// <returns><see cref="ModifyApplicationBasicInfoResponse"/></returns>
-        public ModifyApplicationBasicInfoResponse ModifyApplicationBasicInfoSync(ModifyApplicationBasicInfoRequest req)
-        {
-            return InternalRequestAsync<ModifyApplicationBasicInfoResponse>(req, "ModifyApplicationBasicInfo")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 修改应用模板配置
-        /// </summary>
-        /// <param name="req"><see cref="ModifyApplicationVisualizationRequest"/></param>
-        /// <returns><see cref="ModifyApplicationVisualizationResponse"/></returns>
-        public Task<ModifyApplicationVisualizationResponse> ModifyApplicationVisualization(ModifyApplicationVisualizationRequest req)
-        {
-            return InternalRequestAsync<ModifyApplicationVisualizationResponse>(req, "ModifyApplicationVisualization");
-        }
-
-        /// <summary>
-        /// 产品停售，预下线
-        /// 
-        /// 修改应用模板配置
-        /// </summary>
-        /// <param name="req"><see cref="ModifyApplicationVisualizationRequest"/></param>
-        /// <returns><see cref="ModifyApplicationVisualizationResponse"/></returns>
-        public ModifyApplicationVisualizationResponse ModifyApplicationVisualizationSync(ModifyApplicationVisualizationRequest req)
-        {
-            return InternalRequestAsync<ModifyApplicationVisualizationResponse>(req, "ModifyApplicationVisualization")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

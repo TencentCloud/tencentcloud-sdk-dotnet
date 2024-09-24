@@ -49,13 +49,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// 按照OrderField升序或者降序进行排序。取值范围：<li>0：表示降序。</li><li>1：表示升序。</li>默认值为0。
+        /// 按照OrderField升序或者降序进行排序。取值范围：<li>0：表示升序。</li><li>1：表示降序。</li>默认值为0。
         /// </summary>
         [JsonProperty("Asc")]
         public long? Asc{ get; set; }
 
         /// <summary>
-        /// 自定义查询过滤器。
+        /// 自定义查询过滤器。示例：<li>根据ClusterId过滤实例：[{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>根据clusterName过滤实例：[{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>根据ClusterStatus过滤实例：[{"Name": "ClusterStatus","Values": ["2"]}]</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }

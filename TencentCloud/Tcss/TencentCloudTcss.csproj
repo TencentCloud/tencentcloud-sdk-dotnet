@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2754E8E-D3F5-3C64-B47D-D71D9942EFB6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1094</VersionPrefix>
+    <VersionPrefix>3.0.1095</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -695,6 +695,7 @@
     <Compile Include="V20201101\Models\ImageRisk.cs" />
     <Compile Include="V20201101\Models\ImageRiskInfo.cs" />
     <Compile Include="V20201101\Models\ImageRiskTendencyInfo.cs" />
+    <Compile Include="V20201101\Models\ImageScanInquireInfo.cs" />
     <Compile Include="V20201101\Models\ImageSimpleInfo.cs" />
     <Compile Include="V20201101\Models\ImageVirus.cs" />
     <Compile Include="V20201101\Models\ImageVirusInfo.cs" />

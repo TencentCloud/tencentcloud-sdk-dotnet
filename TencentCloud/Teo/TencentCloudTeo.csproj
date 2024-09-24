@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1094</VersionPrefix>
+    <VersionPrefix>3.0.1095</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -293,6 +293,7 @@
     <Compile Include="V20220901\Models\Ipv6.cs" />
     <Compile Include="V20220901\Models\L4OfflineLog.cs" />
     <Compile Include="V20220901\Models\L4Proxy.cs" />
+    <Compile Include="V20220901\Models\L4ProxyRemoteAuth.cs" />
     <Compile Include="V20220901\Models\L4ProxyRule.cs" />
     <Compile Include="V20220901\Models\L7OfflineLog.cs" />
     <Compile Include="V20220901\Models\LogFormat.cs" />

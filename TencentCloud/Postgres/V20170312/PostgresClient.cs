@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.
@@ -1024,6 +1024,27 @@ namespace TencentCloud.Postgres.V20170312
         public DescribeDatabasesResponse DescribeDatabasesSync(DescribeDatabasesRequest req)
         {
             return InternalRequestAsync<DescribeDatabasesResponse>(req, "DescribeDatabases")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询专属集群
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDedicatedClustersRequest"/></param>
+        /// <returns><see cref="DescribeDedicatedClustersResponse"/></returns>
+        public Task<DescribeDedicatedClustersResponse> DescribeDedicatedClusters(DescribeDedicatedClustersRequest req)
+        {
+            return InternalRequestAsync<DescribeDedicatedClustersResponse>(req, "DescribeDedicatedClusters");
+        }
+
+        /// <summary>
+        /// 查询专属集群
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDedicatedClustersRequest"/></param>
+        /// <returns><see cref="DescribeDedicatedClustersResponse"/></returns>
+        public DescribeDedicatedClustersResponse DescribeDedicatedClustersSync(DescribeDedicatedClustersRequest req)
+        {
+            return InternalRequestAsync<DescribeDedicatedClustersResponse>(req, "DescribeDedicatedClusters")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

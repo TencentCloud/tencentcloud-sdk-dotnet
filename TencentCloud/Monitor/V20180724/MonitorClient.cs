@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.
@@ -113,31 +113,6 @@ namespace TencentCloud.Monitor.V20180724
         public BindingPolicyTagResponse BindingPolicyTagSync(BindingPolicyTagRequest req)
         {
             return InternalRequestAsync<BindingPolicyTagResponse>(req, "BindingPolicyTag")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 接口功能是检查是否为prometheus新用户，已有其他功能更加全面的接口替代
-        /// 
-        /// 判断用户是否为云原生监控新用户，即在任何地域下均未创建过监控实例的用户
-        /// </summary>
-        /// <param name="req"><see cref="CheckIsPrometheusNewUserRequest"/></param>
-        /// <returns><see cref="CheckIsPrometheusNewUserResponse"/></returns>
-        public Task<CheckIsPrometheusNewUserResponse> CheckIsPrometheusNewUser(CheckIsPrometheusNewUserRequest req)
-        {
-            return InternalRequestAsync<CheckIsPrometheusNewUserResponse>(req, "CheckIsPrometheusNewUser");
-        }
-
-        /// <summary>
-        /// 接口功能是检查是否为prometheus新用户，已有其他功能更加全面的接口替代
-        /// 
-        /// 判断用户是否为云原生监控新用户，即在任何地域下均未创建过监控实例的用户
-        /// </summary>
-        /// <param name="req"><see cref="CheckIsPrometheusNewUserRequest"/></param>
-        /// <returns><see cref="CheckIsPrometheusNewUserResponse"/></returns>
-        public CheckIsPrometheusNewUserResponse CheckIsPrometheusNewUserSync(CheckIsPrometheusNewUserRequest req)
-        {
-            return InternalRequestAsync<CheckIsPrometheusNewUserResponse>(req, "CheckIsPrometheusNewUser")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2058,31 +2033,6 @@ namespace TencentCloud.Monitor.V20180724
         public DescribePrometheusInstancesOverviewResponse DescribePrometheusInstancesOverviewSync(DescribePrometheusInstancesOverviewRequest req)
         {
             return InternalRequestAsync<DescribePrometheusInstancesOverviewResponse>(req, "DescribePrometheusInstancesOverview")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// DescribePrometheusRecordRules 接口可完全代替该接口。近30天仅有3次调用，且都是报错请求
-        /// 
-        /// 拉取Prometheus聚合规则yaml列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribePrometheusRecordRuleYamlRequest"/></param>
-        /// <returns><see cref="DescribePrometheusRecordRuleYamlResponse"/></returns>
-        public Task<DescribePrometheusRecordRuleYamlResponse> DescribePrometheusRecordRuleYaml(DescribePrometheusRecordRuleYamlRequest req)
-        {
-            return InternalRequestAsync<DescribePrometheusRecordRuleYamlResponse>(req, "DescribePrometheusRecordRuleYaml");
-        }
-
-        /// <summary>
-        /// DescribePrometheusRecordRules 接口可完全代替该接口。近30天仅有3次调用，且都是报错请求
-        /// 
-        /// 拉取Prometheus聚合规则yaml列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribePrometheusRecordRuleYamlRequest"/></param>
-        /// <returns><see cref="DescribePrometheusRecordRuleYamlResponse"/></returns>
-        public DescribePrometheusRecordRuleYamlResponse DescribePrometheusRecordRuleYamlSync(DescribePrometheusRecordRuleYamlRequest req)
-        {
-            return InternalRequestAsync<DescribePrometheusRecordRuleYamlResponse>(req, "DescribePrometheusRecordRuleYaml")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

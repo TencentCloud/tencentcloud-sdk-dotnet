@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.
@@ -2218,7 +2218,7 @@ namespace TencentCloud.Ocr.V20181119
         /// <summary>
         /// 印尼身份证识别
         /// 
-        /// 默认接口请求频率限制：20次/秒。
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="RecognizeIndonesiaIDCardOCRRequest"/></param>
         /// <returns><see cref="RecognizeIndonesiaIDCardOCRResponse"/></returns>
@@ -2230,7 +2230,7 @@ namespace TencentCloud.Ocr.V20181119
         /// <summary>
         /// 印尼身份证识别
         /// 
-        /// 默认接口请求频率限制：20次/秒。
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="RecognizeIndonesiaIDCardOCRRequest"/></param>
         /// <returns><see cref="RecognizeIndonesiaIDCardOCRResponse"/></returns>

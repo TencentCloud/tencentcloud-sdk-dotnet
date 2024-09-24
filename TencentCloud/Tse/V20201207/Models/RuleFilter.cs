@@ -38,6 +38,20 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("Values")]
         public string[] Values{ get; set; }
 
+        /// <summary>
+        /// 操作符
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Operator")]
+        public string Operator{ get; set; }
+
+        /// <summary>
+        /// header或query对应的name
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +60,8 @@ namespace TencentCloud.Tse.V20201207.Models
         {
             this.SetParamSimple(map, prefix + "Key", this.Key);
             this.SetParamArraySimple(map, prefix + "Values.", this.Values);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

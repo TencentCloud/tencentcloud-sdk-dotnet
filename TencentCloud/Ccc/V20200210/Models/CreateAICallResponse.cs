@@ -15,21 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Iecp.V20210914.Models
+namespace TencentCloud.Ccc.V20200210.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeApplicationYamlResponse : AbstractModel
+    public class CreateAICallResponse : AbstractModel
     {
         
         /// <summary>
-        /// base64 后的yaml
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 新创建的会话 ID
         /// </summary>
-        [JsonProperty("Yaml")]
-        public string Yaml{ get; set; }
+        [JsonProperty("SessionId")]
+        public string SessionId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -43,7 +42,7 @@ namespace TencentCloud.Iecp.V20210914.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Yaml", this.Yaml);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

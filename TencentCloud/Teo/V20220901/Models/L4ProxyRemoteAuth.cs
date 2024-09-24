@@ -15,32 +15,36 @@
  * under the License.
  */
 
-namespace TencentCloud.Iecp.V20210914.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateEdgeUnitApplicationYamlRequest : AbstractModel
+    public class L4ProxyRemoteAuth : AbstractModel
     {
         
         /// <summary>
-        /// 单元ID
+        /// 四层远程鉴权开关，取值有：
+        /// <li>on：表示开启;</li>
+        /// <li>off：表示关闭。</li>
         /// </summary>
-        [JsonProperty("EdgeUnitId")]
-        public long? EdgeUnitId{ get; set; }
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
 
         /// <summary>
-        /// base64后的Yaml配置
+        /// 远程鉴权服务地址，格式为: domain/ip:port。例：example.auth.com:8888
         /// </summary>
-        [JsonProperty("Yaml")]
-        public string Yaml{ get; set; }
+        [JsonProperty("Address")]
+        public string Address{ get; set; }
 
         /// <summary>
-        /// 基本信息
+        /// 远程鉴权服务不可访问后，经过四层转发规则默认回源行为，取值有：
+        /// <li>reject：表示进行拦截，拒绝访问;</li>
+        /// <li>allow：表示允许通过。</li>
         /// </summary>
-        [JsonProperty("BasicInfo")]
-        public ApplicationBasicInfo BasicInfo{ get; set; }
+        [JsonProperty("ServerFaultyBehavior")]
+        public string ServerFaultyBehavior{ get; set; }
 
 
         /// <summary>
@@ -48,9 +52,9 @@ namespace TencentCloud.Iecp.V20210914.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EdgeUnitId", this.EdgeUnitId);
-            this.SetParamSimple(map, prefix + "Yaml", this.Yaml);
-            this.SetParamObj(map, prefix + "BasicInfo.", this.BasicInfo);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamSimple(map, prefix + "Address", this.Address);
+            this.SetParamSimple(map, prefix + "ServerFaultyBehavior", this.ServerFaultyBehavior);
         }
     }
 }

@@ -159,6 +159,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("DBVersion")]
         public string DBVersion{ get; set; }
 
+        /// <summary>
+        /// 专属集群ID
+        /// </summary>
+        [JsonProperty("DedicatedClusterId")]
+        public string DedicatedClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -185,6 +191,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "NeedSupportIpv6", this.NeedSupportIpv6);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "DBVersion", this.DBVersion);
+            this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
         }
     }
 }

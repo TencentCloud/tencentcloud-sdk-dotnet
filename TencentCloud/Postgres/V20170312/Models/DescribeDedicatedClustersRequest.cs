@@ -15,21 +15,29 @@
  * under the License.
  */
 
-namespace TencentCloud.Monitor.V20180724.Models
+namespace TencentCloud.Postgres.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CheckIsPrometheusNewUserRequest : AbstractModel
+    public class DescribeDedicatedClustersRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
+        /// dedicated-cluster-id: 按照专属集群ID筛选，类型为string
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

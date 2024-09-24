@@ -117,6 +117,19 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong?[] ExcludeImageAssetIds{ get; set; }
 
         /// <summary>
+        /// 最近扫描时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LastScanTime")]
+        public string LastScanTime{ get; set; }
+
+        /// <summary>
+        /// 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
+        /// </summary>
+        [JsonProperty("ScanResult")]
+        public string ScanResult{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -142,6 +155,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ScanScope", this.ScanScope);
             this.SetParamArraySimple(map, prefix + "Namespace.", this.Namespace);
             this.SetParamArraySimple(map, prefix + "ExcludeImageAssetIds.", this.ExcludeImageAssetIds);
+            this.SetParamSimple(map, prefix + "LastScanTime", this.LastScanTime);
+            this.SetParamSimple(map, prefix + "ScanResult", this.ScanResult);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

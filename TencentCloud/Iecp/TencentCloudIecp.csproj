@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B5F9D0ED-59E6-3723-BDEC-F640E2ADDE86}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1094</VersionPrefix>
+    <VersionPrefix>3.0.1095</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,16 +52,10 @@
     <Compile Include="V20210914\Models\ApplicationBasicInfo.cs" />
     <Compile Include="V20210914\Models\ApplicationDeployMode.cs" />
     <Compile Include="V20210914\Models\ApplicationStatusInfo.cs" />
-    <Compile Include="V20210914\Models\ApplicationTemplate.cs" />
-    <Compile Include="V20210914\Models\ApplyMarketComponentRequest.cs" />
-    <Compile Include="V20210914\Models\ApplyMarketComponentResponse.cs" />
     <Compile Include="V20210914\Models\BuildMessageRouteRequest.cs" />
     <Compile Include="V20210914\Models\BuildMessageRouteResponse.cs" />
     <Compile Include="V20210914\Models\ConfigMapBasicInfo.cs" />
     <Compile Include="V20210914\Models\Container.cs" />
-    <Compile Include="V20210914\Models\ContainerStatus.cs" />
-    <Compile Include="V20210914\Models\CreateApplicationVisualizationRequest.cs" />
-    <Compile Include="V20210914\Models\CreateApplicationVisualizationResponse.cs" />
     <Compile Include="V20210914\Models\CreateConfigMapRequest.cs" />
     <Compile Include="V20210914\Models\CreateConfigMapResponse.cs" />
     <Compile Include="V20210914\Models\CreateEdgeNodeBatchRequest.cs" />
@@ -72,10 +66,6 @@
     <Compile Include="V20210914\Models\CreateEdgeNodeResponse.cs" />
     <Compile Include="V20210914\Models\CreateEdgeNodeUnitTemplateRequest.cs" />
     <Compile Include="V20210914\Models\CreateEdgeNodeUnitTemplateResponse.cs" />
-    <Compile Include="V20210914\Models\CreateEdgeUnitApplicationVisualizationRequest.cs" />
-    <Compile Include="V20210914\Models\CreateEdgeUnitApplicationVisualizationResponse.cs" />
-    <Compile Include="V20210914\Models\CreateEdgeUnitApplicationYamlRequest.cs" />
-    <Compile Include="V20210914\Models\CreateEdgeUnitApplicationYamlResponse.cs" />
     <Compile Include="V20210914\Models\CreateEdgeUnitCloudRequest.cs" />
     <Compile Include="V20210914\Models\CreateEdgeUnitCloudResponse.cs" />
     <Compile Include="V20210914\Models\CreateEdgeUnitDevicesRequest.cs" />
@@ -93,8 +83,6 @@
     <Compile Include="V20210914\Models\CreateUserTokenRequest.cs" />
     <Compile Include="V20210914\Models\CreateUserTokenResponse.cs" />
     <Compile Include="V20210914\Models\CronJob.cs" />
-    <Compile Include="V20210914\Models\DeleteApplicationsRequest.cs" />
-    <Compile Include="V20210914\Models\DeleteApplicationsResponse.cs" />
     <Compile Include="V20210914\Models\DeleteConfigMapRequest.cs" />
     <Compile Include="V20210914\Models\DeleteConfigMapResponse.cs" />
     <Compile Include="V20210914\Models\DeleteEdgeNodeGroupRequest.cs" />
@@ -103,8 +91,6 @@
     <Compile Include="V20210914\Models\DeleteEdgeNodeUnitTemplatesResponse.cs" />
     <Compile Include="V20210914\Models\DeleteEdgeNodesRequest.cs" />
     <Compile Include="V20210914\Models\DeleteEdgeNodesResponse.cs" />
-    <Compile Include="V20210914\Models\DeleteEdgeUnitApplicationsRequest.cs" />
-    <Compile Include="V20210914\Models\DeleteEdgeUnitApplicationsResponse.cs" />
     <Compile Include="V20210914\Models\DeleteEdgeUnitCloudRequest.cs" />
     <Compile Include="V20210914\Models\DeleteEdgeUnitCloudResponse.cs" />
     <Compile Include="V20210914\Models\DeleteEdgeUnitDeployGridItemRequest.cs" />
@@ -126,14 +112,6 @@
     <Compile Include="V20210914\Models\DeleteNodeUnitResponse.cs" />
     <Compile Include="V20210914\Models\DeleteSecretRequest.cs" />
     <Compile Include="V20210914\Models\DeleteSecretResponse.cs" />
-    <Compile Include="V20210914\Models\DescribeApplicationVisualizationRequest.cs" />
-    <Compile Include="V20210914\Models\DescribeApplicationVisualizationResponse.cs" />
-    <Compile Include="V20210914\Models\DescribeApplicationYamlErrorRequest.cs" />
-    <Compile Include="V20210914\Models\DescribeApplicationYamlErrorResponse.cs" />
-    <Compile Include="V20210914\Models\DescribeApplicationYamlRequest.cs" />
-    <Compile Include="V20210914\Models\DescribeApplicationYamlResponse.cs" />
-    <Compile Include="V20210914\Models\DescribeApplicationsRequest.cs" />
-    <Compile Include="V20210914\Models\DescribeApplicationsResponse.cs" />
     <Compile Include="V20210914\Models\DescribeConfigMapRequest.cs" />
     <Compile Include="V20210914\Models\DescribeConfigMapResponse.cs" />
     <Compile Include="V20210914\Models\DescribeConfigMapYamlErrorRequest.cs" />
@@ -162,24 +140,8 @@
     <Compile Include="V20210914\Models\DescribeEdgePodResponse.cs" />
     <Compile Include="V20210914\Models\DescribeEdgeSnNodesRequest.cs" />
     <Compile Include="V20210914\Models\DescribeEdgeSnNodesResponse.cs" />
-    <Compile Include="V20210914\Models\DescribeEdgeUnitApplicationEventsRequest.cs" />
-    <Compile Include="V20210914\Models\DescribeEdgeUnitApplicationEventsResponse.cs" />
-    <Compile Include="V20210914\Models\DescribeEdgeUnitApplicationLogsRequest.cs" />
-    <Compile Include="V20210914\Models\DescribeEdgeUnitApplicationLogsResponse.cs" />
-    <Compile Include="V20210914\Models\DescribeEdgeUnitApplicationPodContainersRequest.cs" />
-    <Compile Include="V20210914\Models\DescribeEdgeUnitApplicationPodContainersResponse.cs" />
-    <Compile Include="V20210914\Models\DescribeEdgeUnitApplicationPodsRequest.cs" />
-    <Compile Include="V20210914\Models\DescribeEdgeUnitApplicationPodsResponse.cs" />
-    <Compile Include="V20210914\Models\DescribeEdgeUnitApplicationVisualizationRequest.cs" />
-    <Compile Include="V20210914\Models\DescribeEdgeUnitApplicationVisualizationResponse.cs" />
-    <Compile Include="V20210914\Models\DescribeEdgeUnitApplicationYamlErrorRequest.cs" />
-    <Compile Include="V20210914\Models\DescribeEdgeUnitApplicationYamlErrorResponse.cs" />
-    <Compile Include="V20210914\Models\DescribeEdgeUnitApplicationYamlRequest.cs" />
-    <Compile Include="V20210914\Models\DescribeEdgeUnitApplicationYamlResponse.cs" />
     <Compile Include="V20210914\Models\DescribeEdgeUnitApplicationsRequest.cs" />
     <Compile Include="V20210914\Models\DescribeEdgeUnitApplicationsResponse.cs" />
-    <Compile Include="V20210914\Models\DescribeEdgeUnitCloudRequest.cs" />
-    <Compile Include="V20210914\Models\DescribeEdgeUnitCloudResponse.cs" />
     <Compile Include="V20210914\Models\DescribeEdgeUnitDeployGridItemRequest.cs" />
     <Compile Include="V20210914\Models\DescribeEdgeUnitDeployGridItemResponse.cs" />
     <Compile Include="V20210914\Models\DescribeEdgeUnitDeployGridItemYamlRequest.cs" />
@@ -236,10 +198,8 @@
     <Compile Include="V20210914\Models\EdgeNodePodContainerInfo.cs" />
     <Compile Include="V20210914\Models\EdgeNodePodInfo.cs" />
     <Compile Include="V20210914\Models\EdgeNodeResourceInfo.cs" />
-    <Compile Include="V20210914\Models\EdgeUnitStatisticItem.cs" />
     <Compile Include="V20210914\Models\Env.cs" />
     <Compile Include="V20210914\Models\EnvValueSelector.cs" />
-    <Compile Include="V20210914\Models\Event.cs" />
     <Compile Include="V20210914\Models\FieldSort.cs" />
     <Compile Include="V20210914\Models\GetMarketComponentListRequest.cs" />
     <Compile Include="V20210914\Models\GetMarketComponentListResponse.cs" />
@@ -258,10 +218,6 @@
     <Compile Include="V20210914\Models\KeyValueObj.cs" />
     <Compile Include="V20210914\Models\Label.cs" />
     <Compile Include="V20210914\Models\MarketComponentInfo.cs" />
-    <Compile Include="V20210914\Models\ModifyApplicationBasicInfoRequest.cs" />
-    <Compile Include="V20210914\Models\ModifyApplicationBasicInfoResponse.cs" />
-    <Compile Include="V20210914\Models\ModifyApplicationVisualizationRequest.cs" />
-    <Compile Include="V20210914\Models\ModifyApplicationVisualizationResponse.cs" />
     <Compile Include="V20210914\Models\ModifyConfigMapRequest.cs" />
     <Compile Include="V20210914\Models\ModifyConfigMapResponse.cs" />
     <Compile Include="V20210914\Models\ModifyEdgeDracoNodeRequest.cs" />
@@ -297,7 +253,6 @@
     <Compile Include="V20210914\Models\NodeUnitTemplate.cs" />
     <Compile Include="V20210914\Models\OperationLog.cs" />
     <Compile Include="V20210914\Models\OperationLogsCondition.cs" />
-    <Compile Include="V20210914\Models\PodStatus.cs" />
     <Compile Include="V20210914\Models\PortConfig.cs" />
     <Compile Include="V20210914\Models\Probe.cs" />
     <Compile Include="V20210914\Models\RedeployEdgeUnitApplicationRequest.cs" />
