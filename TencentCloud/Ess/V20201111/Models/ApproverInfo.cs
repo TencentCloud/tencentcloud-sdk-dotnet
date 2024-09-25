@@ -69,11 +69,14 @@ namespace TencentCloud.Ess.V20201111.Models
         public Component[] SignComponents{ get; set; }
 
         /// <summary>
-        /// 签署方经办人的证件类型，支持以下类型
+        /// 签署方经办人的证件类型，支持以下类型，样式可以参考<a href="https://qian.tencent.com/developers/partner/id_card_support/" target="_blank">常见个人证件类型介绍</a>
         /// <ul><li>ID_CARD 中国大陆居民身份证  (默认值)</li>
         /// <li>HONGKONG_AND_MACAO 港澳居民来往内地通行证</li>
         /// <li>HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)</li>
         /// <li>OTHER_CARD_TYPE 其他证件</li></ul>
+        /// 
+        /// 
+        /// 
         /// 
         /// 注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
         /// </summary>
@@ -101,7 +104,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string NotifyType{ get; set; }
 
         /// <summary>
-        /// 收据场景设置签署人角色类型, 可以设置如下****类型****:
+        /// 收据场景设置签署人角色类型, 可以设置如下<b>类型</b>:
         /// <ul><li> **1**  :收款人</li>
         /// <li>   **2**   :开具人</li>
         /// <li>   **3** :见证人</li></ul>

@@ -52,6 +52,13 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("NfsVolumes")]
         public CloudBaseRunNfsVolumeSource[] NfsVolumes{ get; set; }
 
+        /// <summary>
+        /// 挂载配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MountPropagation")]
+        public string MountPropagation{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "MountPath", this.MountPath);
             this.SetParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
             this.SetParamArrayObj(map, prefix + "NfsVolumes.", this.NfsVolumes);
+            this.SetParamSimple(map, prefix + "MountPropagation", this.MountPropagation);
         }
     }
 }

@@ -85,7 +85,15 @@ namespace TencentCloud.Omics.V20221128.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GitInfo")]
+        [System.Obsolete]
         public string GitInfo{ get; set; }
+
+        /// <summary>
+        /// Git信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GitSource")]
+        public GitInfo GitSource{ get; set; }
 
 
         /// <summary>
@@ -102,6 +110,7 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamSimple(map, prefix + "CreatorName", this.CreatorName);
             this.SetParamSimple(map, prefix + "CreatorId", this.CreatorId);
             this.SetParamSimple(map, prefix + "GitInfo", this.GitInfo);
+            this.SetParamObj(map, prefix + "GitSource.", this.GitSource);
         }
     }
 }

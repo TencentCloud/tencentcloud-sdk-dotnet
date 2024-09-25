@@ -168,6 +168,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("TopNavigationStatus")]
         public string TopNavigationStatus{ get; set; }
 
+        /// <summary>
+        /// 是否自动激活子客
+        /// </summary>
+        [JsonProperty("AutoActive")]
+        public bool? AutoActive{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -189,6 +195,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ProxyOperatorIdCardNumber", this.ProxyOperatorIdCardNumber);
             this.SetParamSimple(map, prefix + "AutoJumpUrl", this.AutoJumpUrl);
             this.SetParamSimple(map, prefix + "TopNavigationStatus", this.TopNavigationStatus);
+            this.SetParamSimple(map, prefix + "AutoActive", this.AutoActive);
         }
     }
 }

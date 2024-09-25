@@ -60,6 +60,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("OperatorRemark")]
         public string OperatorRemark{ get; set; }
 
+        /// <summary>
+        /// 延迟删除版本时间
+        /// </summary>
+        [JsonProperty("DelayedDeletionTime")]
+        public long? DelayedDeletionTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "IsDeleteServer", this.IsDeleteServer);
             this.SetParamSimple(map, prefix + "IsDeleteImage", this.IsDeleteImage);
             this.SetParamSimple(map, prefix + "OperatorRemark", this.OperatorRemark);
+            this.SetParamSimple(map, prefix + "DelayedDeletionTime", this.DelayedDeletionTime);
         }
     }
 }

@@ -151,6 +151,13 @@ namespace TencentCloud.Omics.V20221128.Models
         public bool? CallCached{ get; set; }
 
         /// <summary>
+        /// 工作目录。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WorkDir")]
+        public string WorkDir{ get; set; }
+
+        /// <summary>
         /// 标准输出。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -195,6 +202,7 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamSimple(map, prefix + "Preprocess", this.Preprocess);
             this.SetParamSimple(map, prefix + "PostProcess", this.PostProcess);
             this.SetParamSimple(map, prefix + "CallCached", this.CallCached);
+            this.SetParamSimple(map, prefix + "WorkDir", this.WorkDir);
             this.SetParamSimple(map, prefix + "Stdout", this.Stdout);
             this.SetParamSimple(map, prefix + "Stderr", this.Stderr);
             this.SetParamSimple(map, prefix + "Meta", this.Meta);

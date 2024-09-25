@@ -79,13 +79,13 @@ namespace TencentCloud.Dts.V20211206.Models
         public string SrcConnectType{ get; set; }
 
         /// <summary>
-        /// 源端信息，单节点数据库使用，且SrcNodeType传single
+        /// 源端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。
         /// </summary>
         [JsonProperty("SrcInfo")]
         public Endpoint SrcInfo{ get; set; }
 
         /// <summary>
-        /// 源端信息，多节点数据库使用，且SrcNodeType传cluster
+        /// 源端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等。
         /// </summary>
         [JsonProperty("SrcInfos")]
         public SyncDBEndpointInfos SrcInfos{ get; set; }
@@ -97,13 +97,13 @@ namespace TencentCloud.Dts.V20211206.Models
         public string SrcNodeType{ get; set; }
 
         /// <summary>
-        /// 目标端信息，单节点数据库使用
+        /// 目标端信息，单机版类型数据库配置使用，且SrcNodeType传single。例如mysql、percona、mariadb等。
         /// </summary>
         [JsonProperty("DstInfo")]
         public Endpoint DstInfo{ get; set; }
 
         /// <summary>
-        /// 目标端信息，多节点数据库使用，且DstNodeType传cluster
+        /// 目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等。
         /// </summary>
         [JsonProperty("DstInfos")]
         public SyncDBEndpointInfos DstInfos{ get; set; }

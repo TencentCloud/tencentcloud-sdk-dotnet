@@ -188,6 +188,12 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("AllowAccessCredential")]
         public bool? AllowAccessCredential{ get; set; }
 
+        /// <summary>
+        /// 是否允许记录键盘
+        /// </summary>
+        [JsonProperty("AllowKeyboardLogger")]
+        public bool? AllowKeyboardLogger{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -221,6 +227,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "ValidateTo", this.ValidateTo);
             this.SetParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
             this.SetParamSimple(map, prefix + "AllowAccessCredential", this.AllowAccessCredential);
+            this.SetParamSimple(map, prefix + "AllowKeyboardLogger", this.AllowKeyboardLogger);
         }
     }
 }

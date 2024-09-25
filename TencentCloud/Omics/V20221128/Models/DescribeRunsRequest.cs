@@ -48,7 +48,8 @@ namespace TencentCloud.Omics.V20221128.Models
         /// - RunGroupId：任务批次ID
         /// - Status：任务状态
         /// - RunUuid：任务UUID
-        /// - UserDefinedId：用户定义ID
+        /// - ApplicationId：应用ID
+        /// - UserDefinedId：用户定义ID（批量运行表格第一列）
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

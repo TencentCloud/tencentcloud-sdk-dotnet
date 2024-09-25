@@ -403,6 +403,20 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("CertRevokedTime")]
         public string CertRevokedTime{ get; set; }
 
+        /// <summary>
+        /// 托管资源类型列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HostingResourceTypes")]
+        public string[] HostingResourceTypes{ get; set; }
+
+        /// <summary>
+        /// 托管配置信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HostingConfig")]
+        public HostingConfig HostingConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -463,6 +477,8 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "KeyPasswordCustomFlag", this.KeyPasswordCustomFlag);
             this.SetParamObj(map, prefix + "SupportDownloadType.", this.SupportDownloadType);
             this.SetParamSimple(map, prefix + "CertRevokedTime", this.CertRevokedTime);
+            this.SetParamArraySimple(map, prefix + "HostingResourceTypes.", this.HostingResourceTypes);
+            this.SetParamObj(map, prefix + "HostingConfig.", this.HostingConfig);
         }
     }
 }

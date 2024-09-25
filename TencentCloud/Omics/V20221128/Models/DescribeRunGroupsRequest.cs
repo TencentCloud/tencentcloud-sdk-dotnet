@@ -48,6 +48,8 @@ namespace TencentCloud.Omics.V20221128.Models
         /// - Name：任务批次名称
         /// - RunGroupId：任务批次ID
         /// - Status：任务批次状态
+        /// - ApplicationId：应用ID
+        /// - Type：类型（支持WDL，NEXTFLOW）
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

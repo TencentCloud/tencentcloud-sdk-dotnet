@@ -26,30 +26,35 @@ namespace TencentCloud.Omics.V20221128.Models
         
         /// <summary>
         /// Git地址。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GitHttpPath")]
         public string GitHttpPath{ get; set; }
 
         /// <summary>
         /// Git用户名。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GitUserName")]
         public string GitUserName{ get; set; }
 
         /// <summary>
         /// Git密码或者Token。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GitTokenOrPassword")]
         public string GitTokenOrPassword{ get; set; }
 
         /// <summary>
         /// 分支。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Branch")]
         public string Branch{ get; set; }
 
         /// <summary>
         /// 标签。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tag")]
         public string Tag{ get; set; }

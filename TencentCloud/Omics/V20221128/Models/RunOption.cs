@@ -58,6 +58,13 @@ namespace TencentCloud.Omics.V20221128.Models
         [JsonProperty("UseRelativeOutputPaths")]
         public bool? UseRelativeOutputPaths{ get; set; }
 
+        /// <summary>
+        /// 是否添加运行信息到输出目录中
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AddRunInfoToOutputDir")]
+        public bool? AddRunInfoToOutputDir{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +76,7 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamSimple(map, prefix + "UseErrorOnHold", this.UseErrorOnHold);
             this.SetParamSimple(map, prefix + "FinalWorkflowOutputsDir", this.FinalWorkflowOutputsDir);
             this.SetParamSimple(map, prefix + "UseRelativeOutputPaths", this.UseRelativeOutputPaths);
+            this.SetParamSimple(map, prefix + "AddRunInfoToOutputDir", this.AddRunInfoToOutputDir);
         }
     }
 }

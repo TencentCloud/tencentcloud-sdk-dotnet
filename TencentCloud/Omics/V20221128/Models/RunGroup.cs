@@ -61,6 +61,22 @@ namespace TencentCloud.Omics.V20221128.Models
         public string ApplicationType{ get; set; }
 
         /// <summary>
+        /// 应用版本。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationVersion")]
+        public ApplicationVersion ApplicationVersion{ get; set; }
+
+        /// <summary>
+        /// 应用访问类型：
+        /// - PRIVATE 私有应用
+        /// - PUBLIC 公共应用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AccessMode")]
+        public string AccessMode{ get; set; }
+
+        /// <summary>
         /// 环境ID。
         /// </summary>
         [JsonProperty("EnvironmentId")]
@@ -98,10 +114,50 @@ namespace TencentCloud.Omics.V20221128.Models
         public string Status{ get; set; }
 
         /// <summary>
+        /// 任务批次类型 ：
+        /// - WDL
+        /// - NEXTFLOW
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// 工作目录。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WorkDir")]
+        public string WorkDir{ get; set; }
+
+        /// <summary>
         /// 任务输入。
         /// </summary>
         [JsonProperty("Input")]
         public string Input{ get; set; }
+
+        /// <summary>
+        /// 任务输入类型：
+        /// - JSON: 导入JSON
+        /// - MANUAL: 手动输入
+        /// - COS: COS文件
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InputType")]
+        public string InputType{ get; set; }
+
+        /// <summary>
+        /// 输入COS地址。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InputCosUri")]
+        public string InputCosUri{ get; set; }
+
+        /// <summary>
+        /// 输入模版ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InputTemplateId")]
+        public string InputTemplateId{ get; set; }
 
         /// <summary>
         /// WDL运行选项。
@@ -115,6 +171,13 @@ namespace TencentCloud.Omics.V20221128.Models
         /// </summary>
         [JsonProperty("NFOption")]
         public NFOption NFOption{ get; set; }
+
+        /// <summary>
+        /// 使用的缓存卷。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Volumes")]
+        public VolumeInfo[] Volumes{ get; set; }
 
         /// <summary>
         /// 任务总数量。
@@ -139,6 +202,13 @@ namespace TencentCloud.Omics.V20221128.Models
         /// </summary>
         [JsonProperty("ErrorMessage")]
         public string ErrorMessage{ get; set; }
+
+        /// <summary>
+        /// 运行结果通知方式。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResultNotify")]
+        public string ResultNotify{ get; set; }
 
         /// <summary>
         /// 创建时间。
@@ -166,20 +236,6 @@ namespace TencentCloud.Omics.V20221128.Models
         [JsonProperty("CreatorId")]
         public string CreatorId{ get; set; }
 
-        /// <summary>
-        /// 运行结果通知方式。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("ResultNotify")]
-        public string ResultNotify{ get; set; }
-
-        /// <summary>
-        /// 应用版本。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("ApplicationVersion")]
-        public ApplicationVersion ApplicationVersion{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -192,25 +248,32 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
             this.SetParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
             this.SetParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
+            this.SetParamObj(map, prefix + "ApplicationVersion.", this.ApplicationVersion);
+            this.SetParamSimple(map, prefix + "AccessMode", this.AccessMode);
             this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
             this.SetParamSimple(map, prefix + "EnvironmentName", this.EnvironmentName);
             this.SetParamSimple(map, prefix + "TableId", this.TableId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "WorkDir", this.WorkDir);
             this.SetParamSimple(map, prefix + "Input", this.Input);
+            this.SetParamSimple(map, prefix + "InputType", this.InputType);
+            this.SetParamSimple(map, prefix + "InputCosUri", this.InputCosUri);
+            this.SetParamSimple(map, prefix + "InputTemplateId", this.InputTemplateId);
             this.SetParamObj(map, prefix + "Option.", this.Option);
             this.SetParamObj(map, prefix + "NFOption.", this.NFOption);
+            this.SetParamArrayObj(map, prefix + "Volumes.", this.Volumes);
             this.SetParamSimple(map, prefix + "TotalRun", this.TotalRun);
             this.SetParamArrayObj(map, prefix + "RunStatusCounts.", this.RunStatusCounts);
             this.SetParamObj(map, prefix + "ExecutionTime.", this.ExecutionTime);
             this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
+            this.SetParamSimple(map, prefix + "ResultNotify", this.ResultNotify);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "Creator", this.Creator);
             this.SetParamSimple(map, prefix + "CreatorId", this.CreatorId);
-            this.SetParamSimple(map, prefix + "ResultNotify", this.ResultNotify);
-            this.SetParamObj(map, prefix + "ApplicationVersion.", this.ApplicationVersion);
         }
     }
 }

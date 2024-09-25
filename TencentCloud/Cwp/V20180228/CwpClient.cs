@@ -28,7 +28,7 @@ namespace TencentCloud.Cwp.V20180228
 
        private const string endpoint = "cwp.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.1095";
+       private const string sdkVersion = "SDK_NET_3.0.1096";
 
         /// <summary>
         /// Client constructor.
@@ -4289,6 +4289,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 接口已废弃
+        /// 
         /// 获取索引列表
         /// </summary>
         /// <param name="req"><see cref="DescribeIndexListRequest"/></param>
@@ -4299,6 +4301,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 接口已废弃
+        /// 
         /// 获取索引列表
         /// </summary>
         /// <param name="req"><see cref="DescribeIndexListRequest"/></param>
