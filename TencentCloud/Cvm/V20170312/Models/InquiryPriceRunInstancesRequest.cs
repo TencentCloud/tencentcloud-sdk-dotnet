@@ -141,6 +141,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string HpcClusterId{ get; set; }
 
         /// <summary>
+        /// 描述了实例CPU拓扑结构的相关信息。若不指定该参数，则按系统资源情况决定。
+        /// </summary>
+        [JsonProperty("CpuTopology")]
+        public CpuTopology CpuTopology{ get; set; }
+
+        /// <summary>
         /// 实例启动模板。
         /// </summary>
         [JsonProperty("LaunchTemplate")]
@@ -171,6 +177,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
             this.SetParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
             this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
+            this.SetParamObj(map, prefix + "CpuTopology.", this.CpuTopology);
             this.SetParamObj(map, prefix + "LaunchTemplate.", this.LaunchTemplate);
         }
     }

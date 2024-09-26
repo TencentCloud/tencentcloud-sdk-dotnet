@@ -54,6 +54,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Page")]
         public long? Page{ get; set; }
 
+        /// <summary>
+        /// 查询类型,支持HIVE,SPARK,MAPREDUCE,TRINO等类型,默认查询全部
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "Page", this.Page);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

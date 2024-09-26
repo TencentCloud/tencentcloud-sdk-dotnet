@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1096";
+       private const string sdkVersion = "SDK_NET_3.0.1097";
 
         /// <summary>
         /// Client constructor.
@@ -2301,7 +2301,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 修改实例小版本升级限制时间
+        /// 本接口（ModifyInstanceUpgradeLimitDays）用于修改实例内核小版本的升级限制时间。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceUpgradeLimitDaysRequest"/></param>
         /// <returns><see cref="ModifyInstanceUpgradeLimitDaysResponse"/></returns>
@@ -2311,7 +2311,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 修改实例小版本升级限制时间
+        /// 本接口（ModifyInstanceUpgradeLimitDays）用于修改实例内核小版本的升级限制时间。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceUpgradeLimitDaysRequest"/></param>
         /// <returns><see cref="ModifyInstanceUpgradeLimitDaysResponse"/></returns>
@@ -2511,7 +2511,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 销毁集群
+        /// 本接口（OfflineCluster）用于销毁集群。
         /// </summary>
         /// <param name="req"><see cref="OfflineClusterRequest"/></param>
         /// <returns><see cref="OfflineClusterResponse"/></returns>
@@ -2521,7 +2521,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 销毁集群
+        /// 本接口（OfflineCluster）用于销毁集群。
         /// </summary>
         /// <param name="req"><see cref="OfflineClusterRequest"/></param>
         /// <returns><see cref="OfflineClusterResponse"/></returns>
@@ -2952,7 +2952,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 开启日志投递
+        /// 本接口（StartCLSDelivery）用于开启日志投递功能。
         /// </summary>
         /// <param name="req"><see cref="StartCLSDeliveryRequest"/></param>
         /// <returns><see cref="StartCLSDeliveryResponse"/></returns>
@@ -2962,7 +2962,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 开启日志投递
+        /// 本接口（StartCLSDelivery）用于开启日志投递功能。
         /// </summary>
         /// <param name="req"><see cref="StartCLSDeliveryRequest"/></param>
         /// <returns><see cref="StartCLSDeliveryResponse"/></returns>
@@ -2973,7 +2973,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 停止日志投递
+        /// 本接口（StopCLSDelivery）用于停止日志投递功能。
         /// </summary>
         /// <param name="req"><see cref="StopCLSDeliveryRequest"/></param>
         /// <returns><see cref="StopCLSDeliveryResponse"/></returns>
@@ -2983,7 +2983,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 停止日志投递
+        /// 本接口（StopCLSDelivery）用于停止日志投递功能。
         /// </summary>
         /// <param name="req"><see cref="StopCLSDeliveryRequest"/></param>
         /// <returns><see cref="StopCLSDeliveryResponse"/></returns>
@@ -3078,7 +3078,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 更新内核小版本
+        /// 本接口（UpgradeClusterVersion）用于更新内核小版本。
         /// </summary>
         /// <param name="req"><see cref="UpgradeClusterVersionRequest"/></param>
         /// <returns><see cref="UpgradeClusterVersionResponse"/></returns>
@@ -3088,7 +3088,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 更新内核小版本
+        /// 本接口（UpgradeClusterVersion）用于更新内核小版本。
         /// </summary>
         /// <param name="req"><see cref="UpgradeClusterVersionRequest"/></param>
         /// <returns><see cref="UpgradeClusterVersionResponse"/></returns>
@@ -3099,7 +3099,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 实例变配
+        /// 本接口（UpgradeInstance）用于实例变配。
         /// </summary>
         /// <param name="req"><see cref="UpgradeInstanceRequest"/></param>
         /// <returns><see cref="UpgradeInstanceResponse"/></returns>
@@ -3109,7 +3109,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 实例变配
+        /// 本接口（UpgradeInstance）用于实例变配。
         /// </summary>
         /// <param name="req"><see cref="UpgradeInstanceRequest"/></param>
         /// <returns><see cref="UpgradeInstanceResponse"/></returns>

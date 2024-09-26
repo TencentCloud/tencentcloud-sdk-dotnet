@@ -103,6 +103,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("Satisfaction")]
         public IMSatisfaction Satisfaction{ get; set; }
 
+        /// <summary>
+        /// 用户ID
+        /// </summary>
+        [JsonProperty("ClientUserId")]
+        public string ClientUserId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +126,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "SkillGroupId", this.SkillGroupId);
             this.SetParamSimple(map, prefix + "SkillGroupName", this.SkillGroupName);
             this.SetParamObj(map, prefix + "Satisfaction.", this.Satisfaction);
+            this.SetParamSimple(map, prefix + "ClientUserId", this.ClientUserId);
         }
     }
 }

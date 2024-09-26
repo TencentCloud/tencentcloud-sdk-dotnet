@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1096</VersionPrefix>
+    <VersionPrefix>3.0.1097</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -160,6 +160,10 @@
     <Compile Include="V20170312\Models\CreateCcnResponse.cs" />
     <Compile Include="V20170312\Models\CreateCcnRouteTablesRequest.cs" />
     <Compile Include="V20170312\Models\CreateCcnRouteTablesResponse.cs" />
+    <Compile Include="V20170312\Models\CreateCdcLDCXListRequest.cs" />
+    <Compile Include="V20170312\Models\CreateCdcLDCXListResponse.cs" />
+    <Compile Include="V20170312\Models\CreateCdcNetPlanesRequest.cs" />
+    <Compile Include="V20170312\Models\CreateCdcNetPlanesResponse.cs" />
     <Compile Include="V20170312\Models\CreateCustomerGatewayRequest.cs" />
     <Compile Include="V20170312\Models\CreateCustomerGatewayResponse.cs" />
     <Compile Include="V20170312\Models\CreateDefaultSecurityGroupRequest.cs" />
@@ -176,6 +180,10 @@
     <Compile Include="V20170312\Models\CreateFlowLogResponse.cs" />
     <Compile Include="V20170312\Models\CreateHaVipRequest.cs" />
     <Compile Include="V20170312\Models\CreateHaVipResponse.cs" />
+    <Compile Include="V20170312\Models\CreateHighPriorityRouteTableRequest.cs" />
+    <Compile Include="V20170312\Models\CreateHighPriorityRouteTableResponse.cs" />
+    <Compile Include="V20170312\Models\CreateHighPriorityRoutesRequest.cs" />
+    <Compile Include="V20170312\Models\CreateHighPriorityRoutesResponse.cs" />
     <Compile Include="V20170312\Models\CreateIp6TranslatorsRequest.cs" />
     <Compile Include="V20170312\Models\CreateIp6TranslatorsResponse.cs" />
     <Compile Include="V20170312\Models\CreateLocalGatewayRequest.cs" />
@@ -265,6 +273,10 @@
     <Compile Include="V20170312\Models\DeleteCcnResponse.cs" />
     <Compile Include="V20170312\Models\DeleteCcnRouteTablesRequest.cs" />
     <Compile Include="V20170312\Models\DeleteCcnRouteTablesResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteCdcLDCXListRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteCdcLDCXListResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteCdcNetPlanesRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteCdcNetPlanesResponse.cs" />
     <Compile Include="V20170312\Models\DeleteCustomerGatewayRequest.cs" />
     <Compile Include="V20170312\Models\DeleteCustomerGatewayResponse.cs" />
     <Compile Include="V20170312\Models\DeleteDhcpIpRequest.cs" />
@@ -277,6 +289,10 @@
     <Compile Include="V20170312\Models\DeleteFlowLogResponse.cs" />
     <Compile Include="V20170312\Models\DeleteHaVipRequest.cs" />
     <Compile Include="V20170312\Models\DeleteHaVipResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteHighPriorityRouteTablesRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteHighPriorityRouteTablesResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteHighPriorityRoutesRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteHighPriorityRoutesResponse.cs" />
     <Compile Include="V20170312\Models\DeleteIp6TranslatorsRequest.cs" />
     <Compile Include="V20170312\Models\DeleteIp6TranslatorsResponse.cs" />
     <Compile Include="V20170312\Models\DeleteLocalGatewayRequest.cs" />
@@ -379,6 +395,12 @@
     <Compile Include="V20170312\Models\DescribeCcnRoutesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeCcnsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeCcnsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeCdcLDCXListRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeCdcLDCXListResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeCdcNetPlanesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeCdcNetPlanesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeCdcUsedIdcVlanRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeCdcUsedIdcVlanResponse.cs" />
     <Compile Include="V20170312\Models\DescribeClassicLinkInstancesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeClassicLinkInstancesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeCrossBorderCcnRegionBandwidthLimitsRequest.cs" />
@@ -407,6 +429,10 @@
     <Compile Include="V20170312\Models\DescribeGatewayFlowQosResponse.cs" />
     <Compile Include="V20170312\Models\DescribeHaVipsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeHaVipsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeHighPriorityRouteTablesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeHighPriorityRouteTablesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeHighPriorityRoutesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeHighPriorityRoutesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeIp6AddressesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeIp6AddressesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeIp6TranslatorQuotaRequest.cs" />
@@ -463,6 +489,8 @@
     <Compile Include="V20170312\Models\DescribeRouteTableSelectionPoliciesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeRouteTablesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeRouteTablesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeRoutesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeRoutesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeSecurityGroupAssociationStatisticsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeSecurityGroupAssociationStatisticsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeSecurityGroupLimitsRequest.cs" />
@@ -612,6 +640,9 @@
     <Compile Include="V20170312\Models\HaVipDisassociateAddressIpRequest.cs" />
     <Compile Include="V20170312\Models\HaVipDisassociateAddressIpResponse.cs" />
     <Compile Include="V20170312\Models\HealthCheckConfig.cs" />
+    <Compile Include="V20170312\Models\HighPriorityModifyItem.cs" />
+    <Compile Include="V20170312\Models\HighPriorityRoute.cs" />
+    <Compile Include="V20170312\Models\HighPriorityRouteTable.cs" />
     <Compile Include="V20170312\Models\IKEOptionsSpecification.cs" />
     <Compile Include="V20170312\Models\IPSECOptionsSpecification.cs" />
     <Compile Include="V20170312\Models\InquirePriceCreateDirectConnectGatewayRequest.cs" />
@@ -667,6 +698,10 @@
     <Compile Include="V20170312\Models\ModifyCcnRegionBandwidthLimitsTypeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyCcnRouteTablesRequest.cs" />
     <Compile Include="V20170312\Models\ModifyCcnRouteTablesResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyCdcLDCXAttributeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyCdcLDCXAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyCdcNetPlaneAttributeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyCdcNetPlaneAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyCustomerGatewayAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyCustomerGatewayAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDhcpIpAttributeRequest.cs" />
@@ -679,6 +714,12 @@
     <Compile Include="V20170312\Models\ModifyGatewayFlowQosResponse.cs" />
     <Compile Include="V20170312\Models\ModifyHaVipAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyHaVipAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyHighPriorityRouteAttributeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyHighPriorityRouteAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyHighPriorityRouteECMPAlgorithmRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyHighPriorityRouteECMPAlgorithmResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyHighPriorityRouteTableAttributeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyHighPriorityRouteTableAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyIp6AddressesBandwidthRequest.cs" />
     <Compile Include="V20170312\Models\ModifyIp6AddressesBandwidthResponse.cs" />
     <Compile Include="V20170312\Models\ModifyIp6RuleRequest.cs" />
@@ -810,6 +851,10 @@
     <Compile Include="V20170312\Models\ReplaceCcnRouteTableInputPolicysResponse.cs" />
     <Compile Include="V20170312\Models\ReplaceDirectConnectGatewayCcnRoutesRequest.cs" />
     <Compile Include="V20170312\Models\ReplaceDirectConnectGatewayCcnRoutesResponse.cs" />
+    <Compile Include="V20170312\Models\ReplaceHighPriorityRouteTableAssociationRequest.cs" />
+    <Compile Include="V20170312\Models\ReplaceHighPriorityRouteTableAssociationResponse.cs" />
+    <Compile Include="V20170312\Models\ReplaceHighPriorityRoutesRequest.cs" />
+    <Compile Include="V20170312\Models\ReplaceHighPriorityRoutesResponse.cs" />
     <Compile Include="V20170312\Models\ReplaceRouteTableAssociationRequest.cs" />
     <Compile Include="V20170312\Models\ReplaceRouteTableAssociationResponse.cs" />
     <Compile Include="V20170312\Models\ReplaceRoutesRequest.cs" />
@@ -820,6 +865,8 @@
     <Compile Include="V20170312\Models\ReplaceSecurityGroupPolicyResponse.cs" />
     <Compile Include="V20170312\Models\ResetAttachCcnInstancesRequest.cs" />
     <Compile Include="V20170312\Models\ResetAttachCcnInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\ResetHighPriorityRoutesRequest.cs" />
+    <Compile Include="V20170312\Models\ResetHighPriorityRoutesResponse.cs" />
     <Compile Include="V20170312\Models\ResetNatGatewayConnectionRequest.cs" />
     <Compile Include="V20170312\Models\ResetNatGatewayConnectionResponse.cs" />
     <Compile Include="V20170312\Models\ResetRoutesRequest.cs" />
@@ -838,6 +885,7 @@
     <Compile Include="V20170312\Models\ReturnNormalAddressesResponse.cs" />
     <Compile Include="V20170312\Models\Route.cs" />
     <Compile Include="V20170312\Models\RouteConflict.cs" />
+    <Compile Include="V20170312\Models\RouteECMPAlgorithm.cs" />
     <Compile Include="V20170312\Models\RouteSelectionPolicy.cs" />
     <Compile Include="V20170312\Models\RouteTable.cs" />
     <Compile Include="V20170312\Models\RouteTableAssociation.cs" />

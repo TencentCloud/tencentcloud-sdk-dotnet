@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1096";
+       private const string sdkVersion = "SDK_NET_3.0.1097";
 
         /// <summary>
         /// Client constructor.
@@ -918,6 +918,48 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 创建 IDC 通道
+        /// </summary>
+        /// <param name="req"><see cref="CreateCdcLDCXListRequest"/></param>
+        /// <returns><see cref="CreateCdcLDCXListResponse"/></returns>
+        public Task<CreateCdcLDCXListResponse> CreateCdcLDCXList(CreateCdcLDCXListRequest req)
+        {
+            return InternalRequestAsync<CreateCdcLDCXListResponse>(req, "CreateCdcLDCXList");
+        }
+
+        /// <summary>
+        /// 创建 IDC 通道
+        /// </summary>
+        /// <param name="req"><see cref="CreateCdcLDCXListRequest"/></param>
+        /// <returns><see cref="CreateCdcLDCXListResponse"/></returns>
+        public CreateCdcLDCXListResponse CreateCdcLDCXListSync(CreateCdcLDCXListRequest req)
+        {
+            return InternalRequestAsync<CreateCdcLDCXListResponse>(req, "CreateCdcLDCXList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建虚拟连接，用于支持 CDC 多租户模式
+        /// </summary>
+        /// <param name="req"><see cref="CreateCdcNetPlanesRequest"/></param>
+        /// <returns><see cref="CreateCdcNetPlanesResponse"/></returns>
+        public Task<CreateCdcNetPlanesResponse> CreateCdcNetPlanes(CreateCdcNetPlanesRequest req)
+        {
+            return InternalRequestAsync<CreateCdcNetPlanesResponse>(req, "CreateCdcNetPlanes");
+        }
+
+        /// <summary>
+        /// 创建虚拟连接，用于支持 CDC 多租户模式
+        /// </summary>
+        /// <param name="req"><see cref="CreateCdcNetPlanesRequest"/></param>
+        /// <returns><see cref="CreateCdcNetPlanesResponse"/></returns>
+        public CreateCdcNetPlanesResponse CreateCdcNetPlanesSync(CreateCdcNetPlanesRequest req)
+        {
+            return InternalRequestAsync<CreateCdcNetPlanesResponse>(req, "CreateCdcNetPlanes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（CreateCustomerGateway）用于创建对端网关。
         /// </summary>
         /// <param name="req"><see cref="CreateCustomerGatewayRequest"/></param>
@@ -1104,6 +1146,48 @@ namespace TencentCloud.Vpc.V20170312
         public CreateHaVipResponse CreateHaVipSync(CreateHaVipRequest req)
         {
             return InternalRequestAsync<CreateHaVipResponse>(req, "CreateHaVip")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 高优路由表创建
+        /// </summary>
+        /// <param name="req"><see cref="CreateHighPriorityRouteTableRequest"/></param>
+        /// <returns><see cref="CreateHighPriorityRouteTableResponse"/></returns>
+        public Task<CreateHighPriorityRouteTableResponse> CreateHighPriorityRouteTable(CreateHighPriorityRouteTableRequest req)
+        {
+            return InternalRequestAsync<CreateHighPriorityRouteTableResponse>(req, "CreateHighPriorityRouteTable");
+        }
+
+        /// <summary>
+        /// 高优路由表创建
+        /// </summary>
+        /// <param name="req"><see cref="CreateHighPriorityRouteTableRequest"/></param>
+        /// <returns><see cref="CreateHighPriorityRouteTableResponse"/></returns>
+        public CreateHighPriorityRouteTableResponse CreateHighPriorityRouteTableSync(CreateHighPriorityRouteTableRequest req)
+        {
+            return InternalRequestAsync<CreateHighPriorityRouteTableResponse>(req, "CreateHighPriorityRouteTable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建高优路由表条目。
+        /// </summary>
+        /// <param name="req"><see cref="CreateHighPriorityRoutesRequest"/></param>
+        /// <returns><see cref="CreateHighPriorityRoutesResponse"/></returns>
+        public Task<CreateHighPriorityRoutesResponse> CreateHighPriorityRoutes(CreateHighPriorityRoutesRequest req)
+        {
+            return InternalRequestAsync<CreateHighPriorityRoutesResponse>(req, "CreateHighPriorityRoutes");
+        }
+
+        /// <summary>
+        /// 创建高优路由表条目。
+        /// </summary>
+        /// <param name="req"><see cref="CreateHighPriorityRoutesRequest"/></param>
+        /// <returns><see cref="CreateHighPriorityRoutesResponse"/></returns>
+        public CreateHighPriorityRoutesResponse CreateHighPriorityRoutesSync(CreateHighPriorityRoutesRequest req)
+        {
+            return InternalRequestAsync<CreateHighPriorityRoutesResponse>(req, "CreateHighPriorityRoutes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2103,6 +2187,48 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 删除 IDC通道
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCdcLDCXListRequest"/></param>
+        /// <returns><see cref="DeleteCdcLDCXListResponse"/></returns>
+        public Task<DeleteCdcLDCXListResponse> DeleteCdcLDCXList(DeleteCdcLDCXListRequest req)
+        {
+            return InternalRequestAsync<DeleteCdcLDCXListResponse>(req, "DeleteCdcLDCXList");
+        }
+
+        /// <summary>
+        /// 删除 IDC通道
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCdcLDCXListRequest"/></param>
+        /// <returns><see cref="DeleteCdcLDCXListResponse"/></returns>
+        public DeleteCdcLDCXListResponse DeleteCdcLDCXListSync(DeleteCdcLDCXListRequest req)
+        {
+            return InternalRequestAsync<DeleteCdcLDCXListResponse>(req, "DeleteCdcLDCXList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除虚拟连接
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCdcNetPlanesRequest"/></param>
+        /// <returns><see cref="DeleteCdcNetPlanesResponse"/></returns>
+        public Task<DeleteCdcNetPlanesResponse> DeleteCdcNetPlanes(DeleteCdcNetPlanesRequest req)
+        {
+            return InternalRequestAsync<DeleteCdcNetPlanesResponse>(req, "DeleteCdcNetPlanes");
+        }
+
+        /// <summary>
+        /// 删除虚拟连接
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCdcNetPlanesRequest"/></param>
+        /// <returns><see cref="DeleteCdcNetPlanesResponse"/></returns>
+        public DeleteCdcNetPlanesResponse DeleteCdcNetPlanesSync(DeleteCdcNetPlanesRequest req)
+        {
+            return InternalRequestAsync<DeleteCdcNetPlanesResponse>(req, "DeleteCdcNetPlanes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DeleteCustomerGateway）用于删除对端网关。
         /// </summary>
         /// <param name="req"><see cref="DeleteCustomerGatewayRequest"/></param>
@@ -2237,6 +2363,48 @@ namespace TencentCloud.Vpc.V20170312
         public DeleteHaVipResponse DeleteHaVipSync(DeleteHaVipRequest req)
         {
             return InternalRequestAsync<DeleteHaVipResponse>(req, "DeleteHaVip")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除高优路由表
+        /// </summary>
+        /// <param name="req"><see cref="DeleteHighPriorityRouteTablesRequest"/></param>
+        /// <returns><see cref="DeleteHighPriorityRouteTablesResponse"/></returns>
+        public Task<DeleteHighPriorityRouteTablesResponse> DeleteHighPriorityRouteTables(DeleteHighPriorityRouteTablesRequest req)
+        {
+            return InternalRequestAsync<DeleteHighPriorityRouteTablesResponse>(req, "DeleteHighPriorityRouteTables");
+        }
+
+        /// <summary>
+        /// 删除高优路由表
+        /// </summary>
+        /// <param name="req"><see cref="DeleteHighPriorityRouteTablesRequest"/></param>
+        /// <returns><see cref="DeleteHighPriorityRouteTablesResponse"/></returns>
+        public DeleteHighPriorityRouteTablesResponse DeleteHighPriorityRouteTablesSync(DeleteHighPriorityRouteTablesRequest req)
+        {
+            return InternalRequestAsync<DeleteHighPriorityRouteTablesResponse>(req, "DeleteHighPriorityRouteTables")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除高优路由表的路由条目。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteHighPriorityRoutesRequest"/></param>
+        /// <returns><see cref="DeleteHighPriorityRoutesResponse"/></returns>
+        public Task<DeleteHighPriorityRoutesResponse> DeleteHighPriorityRoutes(DeleteHighPriorityRoutesRequest req)
+        {
+            return InternalRequestAsync<DeleteHighPriorityRoutesResponse>(req, "DeleteHighPriorityRoutes");
+        }
+
+        /// <summary>
+        /// 删除高优路由表的路由条目。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteHighPriorityRoutesRequest"/></param>
+        /// <returns><see cref="DeleteHighPriorityRoutesResponse"/></returns>
+        public DeleteHighPriorityRoutesResponse DeleteHighPriorityRoutesSync(DeleteHighPriorityRoutesRequest req)
+        {
+            return InternalRequestAsync<DeleteHighPriorityRoutesResponse>(req, "DeleteHighPriorityRoutes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3356,6 +3524,69 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 查询 IDC通道信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCdcLDCXListRequest"/></param>
+        /// <returns><see cref="DescribeCdcLDCXListResponse"/></returns>
+        public Task<DescribeCdcLDCXListResponse> DescribeCdcLDCXList(DescribeCdcLDCXListRequest req)
+        {
+            return InternalRequestAsync<DescribeCdcLDCXListResponse>(req, "DescribeCdcLDCXList");
+        }
+
+        /// <summary>
+        /// 查询 IDC通道信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCdcLDCXListRequest"/></param>
+        /// <returns><see cref="DescribeCdcLDCXListResponse"/></returns>
+        public DescribeCdcLDCXListResponse DescribeCdcLDCXListSync(DescribeCdcLDCXListRequest req)
+        {
+            return InternalRequestAsync<DescribeCdcLDCXListResponse>(req, "DescribeCdcLDCXList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询虚拟连接
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCdcNetPlanesRequest"/></param>
+        /// <returns><see cref="DescribeCdcNetPlanesResponse"/></returns>
+        public Task<DescribeCdcNetPlanesResponse> DescribeCdcNetPlanes(DescribeCdcNetPlanesRequest req)
+        {
+            return InternalRequestAsync<DescribeCdcNetPlanesResponse>(req, "DescribeCdcNetPlanes");
+        }
+
+        /// <summary>
+        /// 查询虚拟连接
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCdcNetPlanesRequest"/></param>
+        /// <returns><see cref="DescribeCdcNetPlanesResponse"/></returns>
+        public DescribeCdcNetPlanesResponse DescribeCdcNetPlanesSync(DescribeCdcNetPlanesRequest req)
+        {
+            return InternalRequestAsync<DescribeCdcNetPlanesResponse>(req, "DescribeCdcNetPlanes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询IDC使用的 VLAN
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCdcUsedIdcVlanRequest"/></param>
+        /// <returns><see cref="DescribeCdcUsedIdcVlanResponse"/></returns>
+        public Task<DescribeCdcUsedIdcVlanResponse> DescribeCdcUsedIdcVlan(DescribeCdcUsedIdcVlanRequest req)
+        {
+            return InternalRequestAsync<DescribeCdcUsedIdcVlanResponse>(req, "DescribeCdcUsedIdcVlan");
+        }
+
+        /// <summary>
+        /// 查询IDC使用的 VLAN
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCdcUsedIdcVlanRequest"/></param>
+        /// <returns><see cref="DescribeCdcUsedIdcVlanResponse"/></returns>
+        public DescribeCdcUsedIdcVlanResponse DescribeCdcUsedIdcVlanSync(DescribeCdcUsedIdcVlanRequest req)
+        {
+            return InternalRequestAsync<DescribeCdcUsedIdcVlanResponse>(req, "DescribeCdcUsedIdcVlan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeClassicLinkInstances）用于查询私有网络和基础网络设备互通列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeClassicLinkInstancesRequest"/></param>
@@ -3656,6 +3887,48 @@ namespace TencentCloud.Vpc.V20170312
         public DescribeHaVipsResponse DescribeHaVipsSync(DescribeHaVipsRequest req)
         {
             return InternalRequestAsync<DescribeHaVipsResponse>(req, "DescribeHaVips")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询高优路由表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHighPriorityRouteTablesRequest"/></param>
+        /// <returns><see cref="DescribeHighPriorityRouteTablesResponse"/></returns>
+        public Task<DescribeHighPriorityRouteTablesResponse> DescribeHighPriorityRouteTables(DescribeHighPriorityRouteTablesRequest req)
+        {
+            return InternalRequestAsync<DescribeHighPriorityRouteTablesResponse>(req, "DescribeHighPriorityRouteTables");
+        }
+
+        /// <summary>
+        /// 查询高优路由表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHighPriorityRouteTablesRequest"/></param>
+        /// <returns><see cref="DescribeHighPriorityRouteTablesResponse"/></returns>
+        public DescribeHighPriorityRouteTablesResponse DescribeHighPriorityRouteTablesSync(DescribeHighPriorityRouteTablesRequest req)
+        {
+            return InternalRequestAsync<DescribeHighPriorityRouteTablesResponse>(req, "DescribeHighPriorityRouteTables")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询高优路由表条目信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHighPriorityRoutesRequest"/></param>
+        /// <returns><see cref="DescribeHighPriorityRoutesResponse"/></returns>
+        public Task<DescribeHighPriorityRoutesResponse> DescribeHighPriorityRoutes(DescribeHighPriorityRoutesRequest req)
+        {
+            return InternalRequestAsync<DescribeHighPriorityRoutesResponse>(req, "DescribeHighPriorityRoutes");
+        }
+
+        /// <summary>
+        /// 查询高优路由表条目信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHighPriorityRoutesRequest"/></param>
+        /// <returns><see cref="DescribeHighPriorityRoutesResponse"/></returns>
+        public DescribeHighPriorityRoutesResponse DescribeHighPriorityRoutesSync(DescribeHighPriorityRoutesRequest req)
+        {
+            return InternalRequestAsync<DescribeHighPriorityRoutesResponse>(req, "DescribeHighPriorityRoutes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4250,6 +4523,27 @@ namespace TencentCloud.Vpc.V20170312
         public DescribeRouteTablesResponse DescribeRouteTablesSync(DescribeRouteTablesRequest req)
         {
             return InternalRequestAsync<DescribeRouteTablesResponse>(req, "DescribeRouteTables")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeRoutes）用于查询路由列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoutesRequest"/></param>
+        /// <returns><see cref="DescribeRoutesResponse"/></returns>
+        public Task<DescribeRoutesResponse> DescribeRoutes(DescribeRoutesRequest req)
+        {
+            return InternalRequestAsync<DescribeRoutesResponse>(req, "DescribeRoutes");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeRoutes）用于查询路由列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoutesRequest"/></param>
+        /// <returns><see cref="DescribeRoutesResponse"/></returns>
+        public DescribeRoutesResponse DescribeRoutesSync(DescribeRoutesRequest req)
+        {
+            return InternalRequestAsync<DescribeRoutesResponse>(req, "DescribeRoutes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -6173,6 +6467,48 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 修改 IDC通道信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCdcLDCXAttributeRequest"/></param>
+        /// <returns><see cref="ModifyCdcLDCXAttributeResponse"/></returns>
+        public Task<ModifyCdcLDCXAttributeResponse> ModifyCdcLDCXAttribute(ModifyCdcLDCXAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyCdcLDCXAttributeResponse>(req, "ModifyCdcLDCXAttribute");
+        }
+
+        /// <summary>
+        /// 修改 IDC通道信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCdcLDCXAttributeRequest"/></param>
+        /// <returns><see cref="ModifyCdcLDCXAttributeResponse"/></returns>
+        public ModifyCdcLDCXAttributeResponse ModifyCdcLDCXAttributeSync(ModifyCdcLDCXAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyCdcLDCXAttributeResponse>(req, "ModifyCdcLDCXAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改虚拟连接
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCdcNetPlaneAttributeRequest"/></param>
+        /// <returns><see cref="ModifyCdcNetPlaneAttributeResponse"/></returns>
+        public Task<ModifyCdcNetPlaneAttributeResponse> ModifyCdcNetPlaneAttribute(ModifyCdcNetPlaneAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyCdcNetPlaneAttributeResponse>(req, "ModifyCdcNetPlaneAttribute");
+        }
+
+        /// <summary>
+        /// 修改虚拟连接
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCdcNetPlaneAttributeRequest"/></param>
+        /// <returns><see cref="ModifyCdcNetPlaneAttributeResponse"/></returns>
+        public ModifyCdcNetPlaneAttributeResponse ModifyCdcNetPlaneAttributeSync(ModifyCdcNetPlaneAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyCdcNetPlaneAttributeResponse>(req, "ModifyCdcNetPlaneAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ModifyCustomerGatewayAttribute）用于修改对端网关信息。
         /// </summary>
         /// <param name="req"><see cref="ModifyCustomerGatewayAttributeRequest"/></param>
@@ -6295,6 +6631,69 @@ namespace TencentCloud.Vpc.V20170312
         public ModifyHaVipAttributeResponse ModifyHaVipAttributeSync(ModifyHaVipAttributeRequest req)
         {
             return InternalRequestAsync<ModifyHaVipAttributeResponse>(req, "ModifyHaVipAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改高优路由表条目属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHighPriorityRouteAttributeRequest"/></param>
+        /// <returns><see cref="ModifyHighPriorityRouteAttributeResponse"/></returns>
+        public Task<ModifyHighPriorityRouteAttributeResponse> ModifyHighPriorityRouteAttribute(ModifyHighPriorityRouteAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyHighPriorityRouteAttributeResponse>(req, "ModifyHighPriorityRouteAttribute");
+        }
+
+        /// <summary>
+        /// 修改高优路由表条目属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHighPriorityRouteAttributeRequest"/></param>
+        /// <returns><see cref="ModifyHighPriorityRouteAttributeResponse"/></returns>
+        public ModifyHighPriorityRouteAttributeResponse ModifyHighPriorityRouteAttributeSync(ModifyHighPriorityRouteAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyHighPriorityRouteAttributeResponse>(req, "ModifyHighPriorityRouteAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改高优路由表 HASH 策略。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHighPriorityRouteECMPAlgorithmRequest"/></param>
+        /// <returns><see cref="ModifyHighPriorityRouteECMPAlgorithmResponse"/></returns>
+        public Task<ModifyHighPriorityRouteECMPAlgorithmResponse> ModifyHighPriorityRouteECMPAlgorithm(ModifyHighPriorityRouteECMPAlgorithmRequest req)
+        {
+            return InternalRequestAsync<ModifyHighPriorityRouteECMPAlgorithmResponse>(req, "ModifyHighPriorityRouteECMPAlgorithm");
+        }
+
+        /// <summary>
+        /// 修改高优路由表 HASH 策略。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHighPriorityRouteECMPAlgorithmRequest"/></param>
+        /// <returns><see cref="ModifyHighPriorityRouteECMPAlgorithmResponse"/></returns>
+        public ModifyHighPriorityRouteECMPAlgorithmResponse ModifyHighPriorityRouteECMPAlgorithmSync(ModifyHighPriorityRouteECMPAlgorithmRequest req)
+        {
+            return InternalRequestAsync<ModifyHighPriorityRouteECMPAlgorithmResponse>(req, "ModifyHighPriorityRouteECMPAlgorithm")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改高优路由表属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHighPriorityRouteTableAttributeRequest"/></param>
+        /// <returns><see cref="ModifyHighPriorityRouteTableAttributeResponse"/></returns>
+        public Task<ModifyHighPriorityRouteTableAttributeResponse> ModifyHighPriorityRouteTableAttribute(ModifyHighPriorityRouteTableAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyHighPriorityRouteTableAttributeResponse>(req, "ModifyHighPriorityRouteTableAttribute");
+        }
+
+        /// <summary>
+        /// 修改高优路由表属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHighPriorityRouteTableAttributeRequest"/></param>
+        /// <returns><see cref="ModifyHighPriorityRouteTableAttributeResponse"/></returns>
+        public ModifyHighPriorityRouteTableAttributeResponse ModifyHighPriorityRouteTableAttributeSync(ModifyHighPriorityRouteTableAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyHighPriorityRouteTableAttributeResponse>(req, "ModifyHighPriorityRouteTableAttribute")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -7511,6 +7910,48 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 替换高优路由表和子网绑定关系。
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceHighPriorityRouteTableAssociationRequest"/></param>
+        /// <returns><see cref="ReplaceHighPriorityRouteTableAssociationResponse"/></returns>
+        public Task<ReplaceHighPriorityRouteTableAssociationResponse> ReplaceHighPriorityRouteTableAssociation(ReplaceHighPriorityRouteTableAssociationRequest req)
+        {
+            return InternalRequestAsync<ReplaceHighPriorityRouteTableAssociationResponse>(req, "ReplaceHighPriorityRouteTableAssociation");
+        }
+
+        /// <summary>
+        /// 替换高优路由表和子网绑定关系。
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceHighPriorityRouteTableAssociationRequest"/></param>
+        /// <returns><see cref="ReplaceHighPriorityRouteTableAssociationResponse"/></returns>
+        public ReplaceHighPriorityRouteTableAssociationResponse ReplaceHighPriorityRouteTableAssociationSync(ReplaceHighPriorityRouteTableAssociationRequest req)
+        {
+            return InternalRequestAsync<ReplaceHighPriorityRouteTableAssociationResponse>(req, "ReplaceHighPriorityRouteTableAssociation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 替换高优路由表条目信息。
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceHighPriorityRoutesRequest"/></param>
+        /// <returns><see cref="ReplaceHighPriorityRoutesResponse"/></returns>
+        public Task<ReplaceHighPriorityRoutesResponse> ReplaceHighPriorityRoutes(ReplaceHighPriorityRoutesRequest req)
+        {
+            return InternalRequestAsync<ReplaceHighPriorityRoutesResponse>(req, "ReplaceHighPriorityRoutes");
+        }
+
+        /// <summary>
+        /// 替换高优路由表条目信息。
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceHighPriorityRoutesRequest"/></param>
+        /// <returns><see cref="ReplaceHighPriorityRoutesResponse"/></returns>
+        public ReplaceHighPriorityRoutesResponse ReplaceHighPriorityRoutesSync(ReplaceHighPriorityRoutesRequest req)
+        {
+            return InternalRequestAsync<ReplaceHighPriorityRoutesResponse>(req, "ReplaceHighPriorityRoutes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ReplaceRouteTableAssociation）用于修改子网（Subnet）关联的路由表（RouteTable）。
         /// * 一个子网只能关联一个路由表。
         /// </summary>
@@ -7618,6 +8059,27 @@ namespace TencentCloud.Vpc.V20170312
         public ResetAttachCcnInstancesResponse ResetAttachCcnInstancesSync(ResetAttachCcnInstancesRequest req)
         {
             return InternalRequestAsync<ResetAttachCcnInstancesResponse>(req, "ResetAttachCcnInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 重置高优路由表。
+        /// </summary>
+        /// <param name="req"><see cref="ResetHighPriorityRoutesRequest"/></param>
+        /// <returns><see cref="ResetHighPriorityRoutesResponse"/></returns>
+        public Task<ResetHighPriorityRoutesResponse> ResetHighPriorityRoutes(ResetHighPriorityRoutesRequest req)
+        {
+            return InternalRequestAsync<ResetHighPriorityRoutesResponse>(req, "ResetHighPriorityRoutes");
+        }
+
+        /// <summary>
+        /// 重置高优路由表。
+        /// </summary>
+        /// <param name="req"><see cref="ResetHighPriorityRoutesRequest"/></param>
+        /// <returns><see cref="ResetHighPriorityRoutesResponse"/></returns>
+        public ResetHighPriorityRoutesResponse ResetHighPriorityRoutesSync(ResetHighPriorityRoutesRequest req)
+        {
+            return InternalRequestAsync<ResetHighPriorityRoutesResponse>(req, "ResetHighPriorityRoutes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

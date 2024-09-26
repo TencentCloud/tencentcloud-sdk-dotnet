@@ -104,6 +104,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string ServiceName{ get; set; }
 
         /// <summary>
+        /// CDC 集群唯一 ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CdcId")]
+        public string CdcId{ get; set; }
+
+        /// <summary>
         /// 标签键值对。	
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -129,6 +136,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamArraySimple(map, prefix + "GroupSet.", this.GroupSet);
             this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
+            this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         }
     }

@@ -107,6 +107,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public bool? CheckAssociate{ get; set; }
 
         /// <summary>
+        /// CDC实例ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CdcId")]
+        public string CdcId{ get; set; }
+
+        /// <summary>
         /// HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -139,6 +146,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Business", this.Business);
             this.SetParamArrayObj(map, prefix + "HaVipAssociationSet.", this.HaVipAssociationSet);
             this.SetParamSimple(map, prefix + "CheckAssociate", this.CheckAssociate);
+            this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
             this.SetParamSimple(map, prefix + "FlushedTime", this.FlushedTime);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         }
