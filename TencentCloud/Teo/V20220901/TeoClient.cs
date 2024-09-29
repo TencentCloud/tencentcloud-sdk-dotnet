@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1097";
+       private const string sdkVersion = "SDK_NET_3.0.1098";
 
         /// <summary>
         /// Client constructor.
@@ -287,6 +287,48 @@ namespace TencentCloud.Teo.V20220901
         public CreateCustomizeErrorPageResponse CreateCustomizeErrorPageSync(CreateCustomizeErrorPageRequest req)
         {
             return InternalRequestAsync<CreateCustomizeErrorPageResponse>(req, "CreateCustomizeErrorPage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建并部署边缘函数至 EdgeOne 的边缘节点。
+        /// </summary>
+        /// <param name="req"><see cref="CreateFunctionRequest"/></param>
+        /// <returns><see cref="CreateFunctionResponse"/></returns>
+        public Task<CreateFunctionResponse> CreateFunction(CreateFunctionRequest req)
+        {
+            return InternalRequestAsync<CreateFunctionResponse>(req, "CreateFunction");
+        }
+
+        /// <summary>
+        /// 创建并部署边缘函数至 EdgeOne 的边缘节点。
+        /// </summary>
+        /// <param name="req"><see cref="CreateFunctionRequest"/></param>
+        /// <returns><see cref="CreateFunctionResponse"/></returns>
+        public CreateFunctionResponse CreateFunctionSync(CreateFunctionRequest req)
+        {
+            return InternalRequestAsync<CreateFunctionResponse>(req, "CreateFunction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建边缘函数的触发规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreateFunctionRuleRequest"/></param>
+        /// <returns><see cref="CreateFunctionRuleResponse"/></returns>
+        public Task<CreateFunctionRuleResponse> CreateFunctionRule(CreateFunctionRuleRequest req)
+        {
+            return InternalRequestAsync<CreateFunctionRuleResponse>(req, "CreateFunctionRule");
+        }
+
+        /// <summary>
+        /// 创建边缘函数的触发规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreateFunctionRuleRequest"/></param>
+        /// <returns><see cref="CreateFunctionRuleResponse"/></returns>
+        public CreateFunctionRuleResponse CreateFunctionRuleSync(CreateFunctionRuleRequest req)
+        {
+            return InternalRequestAsync<CreateFunctionRuleResponse>(req, "CreateFunctionRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -658,6 +700,48 @@ namespace TencentCloud.Teo.V20220901
         public DeleteCustomErrorPageResponse DeleteCustomErrorPageSync(DeleteCustomErrorPageRequest req)
         {
             return InternalRequestAsync<DeleteCustomErrorPageResponse>(req, "DeleteCustomErrorPage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除边缘函数，删除后函数无法恢复，关联的触发规则会一并删除。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFunctionRequest"/></param>
+        /// <returns><see cref="DeleteFunctionResponse"/></returns>
+        public Task<DeleteFunctionResponse> DeleteFunction(DeleteFunctionRequest req)
+        {
+            return InternalRequestAsync<DeleteFunctionResponse>(req, "DeleteFunction");
+        }
+
+        /// <summary>
+        /// 删除边缘函数，删除后函数无法恢复，关联的触发规则会一并删除。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFunctionRequest"/></param>
+        /// <returns><see cref="DeleteFunctionResponse"/></returns>
+        public DeleteFunctionResponse DeleteFunctionSync(DeleteFunctionRequest req)
+        {
+            return InternalRequestAsync<DeleteFunctionResponse>(req, "DeleteFunction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除边缘函数触发规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFunctionRulesRequest"/></param>
+        /// <returns><see cref="DeleteFunctionRulesResponse"/></returns>
+        public Task<DeleteFunctionRulesResponse> DeleteFunctionRules(DeleteFunctionRulesRequest req)
+        {
+            return InternalRequestAsync<DeleteFunctionRulesResponse>(req, "DeleteFunctionRules");
+        }
+
+        /// <summary>
+        /// 删除边缘函数触发规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFunctionRulesRequest"/></param>
+        /// <returns><see cref="DeleteFunctionRulesResponse"/></returns>
+        public DeleteFunctionRulesResponse DeleteFunctionRulesSync(DeleteFunctionRulesRequest req)
+        {
+            return InternalRequestAsync<DeleteFunctionRulesResponse>(req, "DeleteFunctionRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1162,6 +1246,69 @@ namespace TencentCloud.Teo.V20220901
         public DescribeEnvironmentsResponse DescribeEnvironmentsSync(DescribeEnvironmentsRequest req)
         {
             return InternalRequestAsync<DescribeEnvironmentsResponse>(req, "DescribeEnvironments")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询边缘函数触发规则列表，支持按照规则 ID、函数 ID、规则描述等条件进行过滤。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFunctionRulesRequest"/></param>
+        /// <returns><see cref="DescribeFunctionRulesResponse"/></returns>
+        public Task<DescribeFunctionRulesResponse> DescribeFunctionRules(DescribeFunctionRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeFunctionRulesResponse>(req, "DescribeFunctionRules");
+        }
+
+        /// <summary>
+        /// 查询边缘函数触发规则列表，支持按照规则 ID、函数 ID、规则描述等条件进行过滤。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFunctionRulesRequest"/></param>
+        /// <returns><see cref="DescribeFunctionRulesResponse"/></returns>
+        public DescribeFunctionRulesResponse DescribeFunctionRulesSync(DescribeFunctionRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeFunctionRulesResponse>(req, "DescribeFunctionRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询边缘函数运行环境，包括环境变量。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFunctionRuntimeEnvironmentRequest"/></param>
+        /// <returns><see cref="DescribeFunctionRuntimeEnvironmentResponse"/></returns>
+        public Task<DescribeFunctionRuntimeEnvironmentResponse> DescribeFunctionRuntimeEnvironment(DescribeFunctionRuntimeEnvironmentRequest req)
+        {
+            return InternalRequestAsync<DescribeFunctionRuntimeEnvironmentResponse>(req, "DescribeFunctionRuntimeEnvironment");
+        }
+
+        /// <summary>
+        /// 查询边缘函数运行环境，包括环境变量。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFunctionRuntimeEnvironmentRequest"/></param>
+        /// <returns><see cref="DescribeFunctionRuntimeEnvironmentResponse"/></returns>
+        public DescribeFunctionRuntimeEnvironmentResponse DescribeFunctionRuntimeEnvironmentSync(DescribeFunctionRuntimeEnvironmentRequest req)
+        {
+            return InternalRequestAsync<DescribeFunctionRuntimeEnvironmentResponse>(req, "DescribeFunctionRuntimeEnvironment")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询边缘函数列表，支持函数 ID、函数名称、描述等条件的过滤。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFunctionsRequest"/></param>
+        /// <returns><see cref="DescribeFunctionsResponse"/></returns>
+        public Task<DescribeFunctionsResponse> DescribeFunctions(DescribeFunctionsRequest req)
+        {
+            return InternalRequestAsync<DescribeFunctionsResponse>(req, "DescribeFunctions");
+        }
+
+        /// <summary>
+        /// 查询边缘函数列表，支持函数 ID、函数名称、描述等条件的过滤。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFunctionsRequest"/></param>
+        /// <returns><see cref="DescribeFunctionsResponse"/></returns>
+        public DescribeFunctionsResponse DescribeFunctionsSync(DescribeFunctionsRequest req)
+        {
+            return InternalRequestAsync<DescribeFunctionsResponse>(req, "DescribeFunctions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1732,6 +1879,29 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 操作边缘函数运行环境，支持环境变量的相关设置。
+        /// 设置环境变量后，可在函数代码中使用，具体参考 [边缘函数引入环境变量](https://cloud.tencent.com/document/product/1552/109151#0151fd9a-8b0e-407b-ae37-54553a60ded6)。
+        /// </summary>
+        /// <param name="req"><see cref="HandleFunctionRuntimeEnvironmentRequest"/></param>
+        /// <returns><see cref="HandleFunctionRuntimeEnvironmentResponse"/></returns>
+        public Task<HandleFunctionRuntimeEnvironmentResponse> HandleFunctionRuntimeEnvironment(HandleFunctionRuntimeEnvironmentRequest req)
+        {
+            return InternalRequestAsync<HandleFunctionRuntimeEnvironmentResponse>(req, "HandleFunctionRuntimeEnvironment");
+        }
+
+        /// <summary>
+        /// 操作边缘函数运行环境，支持环境变量的相关设置。
+        /// 设置环境变量后，可在函数代码中使用，具体参考 [边缘函数引入环境变量](https://cloud.tencent.com/document/product/1552/109151#0151fd9a-8b0e-407b-ae37-54553a60ded6)。
+        /// </summary>
+        /// <param name="req"><see cref="HandleFunctionRuntimeEnvironmentRequest"/></param>
+        /// <returns><see cref="HandleFunctionRuntimeEnvironmentResponse"/></returns>
+        public HandleFunctionRuntimeEnvironmentResponse HandleFunctionRuntimeEnvironmentSync(HandleFunctionRuntimeEnvironmentRequest req)
+        {
+            return InternalRequestAsync<HandleFunctionRuntimeEnvironmentResponse>(req, "HandleFunctionRuntimeEnvironment")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于验证站点所有权。
         /// </summary>
         /// <param name="req"><see cref="IdentifyZoneRequest"/></param>
@@ -1967,6 +2137,69 @@ namespace TencentCloud.Teo.V20220901
         public ModifyCustomErrorPageResponse ModifyCustomErrorPageSync(ModifyCustomErrorPageRequest req)
         {
             return InternalRequestAsync<ModifyCustomErrorPageResponse>(req, "ModifyCustomErrorPage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改边缘函数，支持修改函数的内容及描述信息，修改且重新部署后，函数立刻生效。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFunctionRequest"/></param>
+        /// <returns><see cref="ModifyFunctionResponse"/></returns>
+        public Task<ModifyFunctionResponse> ModifyFunction(ModifyFunctionRequest req)
+        {
+            return InternalRequestAsync<ModifyFunctionResponse>(req, "ModifyFunction");
+        }
+
+        /// <summary>
+        /// 修改边缘函数，支持修改函数的内容及描述信息，修改且重新部署后，函数立刻生效。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFunctionRequest"/></param>
+        /// <returns><see cref="ModifyFunctionResponse"/></returns>
+        public ModifyFunctionResponse ModifyFunctionSync(ModifyFunctionRequest req)
+        {
+            return InternalRequestAsync<ModifyFunctionResponse>(req, "ModifyFunction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改边缘函数触发规则，支持修改规则条件、执行函数以及描述信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFunctionRuleRequest"/></param>
+        /// <returns><see cref="ModifyFunctionRuleResponse"/></returns>
+        public Task<ModifyFunctionRuleResponse> ModifyFunctionRule(ModifyFunctionRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyFunctionRuleResponse>(req, "ModifyFunctionRule");
+        }
+
+        /// <summary>
+        /// 修改边缘函数触发规则，支持修改规则条件、执行函数以及描述信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFunctionRuleRequest"/></param>
+        /// <returns><see cref="ModifyFunctionRuleResponse"/></returns>
+        public ModifyFunctionRuleResponse ModifyFunctionRuleSync(ModifyFunctionRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyFunctionRuleResponse>(req, "ModifyFunctionRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改边缘函数触发规则的优先级。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFunctionRulePriorityRequest"/></param>
+        /// <returns><see cref="ModifyFunctionRulePriorityResponse"/></returns>
+        public Task<ModifyFunctionRulePriorityResponse> ModifyFunctionRulePriority(ModifyFunctionRulePriorityRequest req)
+        {
+            return InternalRequestAsync<ModifyFunctionRulePriorityResponse>(req, "ModifyFunctionRulePriority");
+        }
+
+        /// <summary>
+        /// 修改边缘函数触发规则的优先级。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFunctionRulePriorityRequest"/></param>
+        /// <returns><see cref="ModifyFunctionRulePriorityResponse"/></returns>
+        public ModifyFunctionRulePriorityResponse ModifyFunctionRulePrioritySync(ModifyFunctionRulePriorityRequest req)
+        {
+            return InternalRequestAsync<ModifyFunctionRulePriorityResponse>(req, "ModifyFunctionRulePriority")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
