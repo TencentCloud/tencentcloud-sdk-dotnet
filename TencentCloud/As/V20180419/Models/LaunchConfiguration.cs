@@ -214,6 +214,13 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("DisasterRecoverGroupIds")]
         public string[] DisasterRecoverGroupIds{ get; set; }
 
+        /// <summary>
+        /// 镜像族名称。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImageFamily")]
+        public string ImageFamily{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -251,6 +258,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
             this.SetParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
             this.SetParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
+            this.SetParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
         }
     }
 }

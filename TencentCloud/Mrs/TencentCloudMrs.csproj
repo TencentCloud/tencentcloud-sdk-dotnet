@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{32B04F9C-1523-3169-96D4-5FA22888E8B1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1098</VersionPrefix>
+    <VersionPrefix>3.0.1099</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -237,6 +237,8 @@
     <Compile Include="V20200910\Models\NumValue.cs" />
     <Compile Include="V20200910\Models\ObstericalMedicalHistory.cs" />
     <Compile Include="V20200910\Models\ObstetricalHistoryBlock.cs" />
+    <Compile Include="V20200910\Models\OcrInfo.cs" />
+    <Compile Include="V20200910\Models\OcrItem.cs" />
     <Compile Include="V20200910\Models\OphthalmologyBareEyeSight.cs" />
     <Compile Include="V20200910\Models\OphthalmologyBaseItem.cs" />
     <Compile Include="V20200910\Models\OphthalmologyBriefSummary.cs" />

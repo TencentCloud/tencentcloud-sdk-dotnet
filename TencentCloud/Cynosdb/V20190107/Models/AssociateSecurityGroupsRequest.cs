@@ -25,7 +25,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 实例组ID数组
+        /// 实例组 ID 数组，cynosdbmysql-grp-前缀开头或集群 ID。
+        /// 说明：要获取集群的实例组 ID，可通过 [查询集群实例组](https://cloud.tencent.com/document/product/1003/103934) 进行。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312
 
        private const string endpoint = "cvm.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1098";
+       private const string sdkVersion = "SDK_NET_3.0.1099";
 
         /// <summary>
         /// Client constructor.
@@ -654,6 +654,27 @@ namespace TencentCloud.Cvm.V20170312
         public DescribeHpcClustersResponse DescribeHpcClustersSync(DescribeHpcClustersRequest req)
         {
             return InternalRequestAsync<DescribeHpcClustersResponse>(req, "DescribeHpcClusters")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeImageFromFamily) 用于查看镜像族内可用镜像信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageFromFamilyRequest"/></param>
+        /// <returns><see cref="DescribeImageFromFamilyResponse"/></returns>
+        public Task<DescribeImageFromFamilyResponse> DescribeImageFromFamily(DescribeImageFromFamilyRequest req)
+        {
+            return InternalRequestAsync<DescribeImageFromFamilyResponse>(req, "DescribeImageFromFamily");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeImageFromFamily) 用于查看镜像族内可用镜像信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageFromFamilyRequest"/></param>
+        /// <returns><see cref="DescribeImageFromFamilyResponse"/></returns>
+        public DescribeImageFromFamilyResponse DescribeImageFromFamilySync(DescribeImageFromFamilyRequest req)
+        {
+            return InternalRequestAsync<DescribeImageFromFamilyResponse>(req, "DescribeImageFromFamily")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -46,7 +46,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string User{ get; set; }
 
         /// <summary>
-        /// doris集群的密码
+        /// base64编码的doris集群对应用户的密码
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Password")]

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5C13E957-36F0-3A36-917C-9FBB15CAE883}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1098</VersionPrefix>
+    <VersionPrefix>3.0.1099</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -83,6 +83,8 @@
     <Compile Include="V20200210\Models\CreateExtensionResponse.cs" />
     <Compile Include="V20200210\Models\CreateIVRSessionRequest.cs" />
     <Compile Include="V20200210\Models\CreateIVRSessionResponse.cs" />
+    <Compile Include="V20200210\Models\CreateOwnNumberApplyRequest.cs" />
+    <Compile Include="V20200210\Models\CreateOwnNumberApplyResponse.cs" />
     <Compile Include="V20200210\Models\CreatePredictiveDialingCampaignRequest.cs" />
     <Compile Include="V20200210\Models\CreatePredictiveDialingCampaignResponse.cs" />
     <Compile Include="V20200210\Models\CreateSDKLoginTokenRequest.cs" />
@@ -164,11 +166,14 @@
     <Compile Include="V20200210\Models\ModifyCompanyApplyResponse.cs" />
     <Compile Include="V20200210\Models\ModifyExtensionRequest.cs" />
     <Compile Include="V20200210\Models\ModifyExtensionResponse.cs" />
+    <Compile Include="V20200210\Models\ModifyOwnNumberApplyRequest.cs" />
+    <Compile Include="V20200210\Models\ModifyOwnNumberApplyResponse.cs" />
     <Compile Include="V20200210\Models\ModifyStaffPasswordRequest.cs" />
     <Compile Include="V20200210\Models\ModifyStaffPasswordResponse.cs" />
     <Compile Include="V20200210\Models\ModifyStaffRequest.cs" />
     <Compile Include="V20200210\Models\ModifyStaffResponse.cs" />
     <Compile Include="V20200210\Models\NumberInfo.cs" />
+    <Compile Include="V20200210\Models\OwnNumberApplyDetailItem.cs" />
     <Compile Include="V20200210\Models\PSTNSession.cs" />
     <Compile Include="V20200210\Models\PSTNSessionInfo.cs" />
     <Compile Include="V20200210\Models\PackageBuyInfo.cs" />

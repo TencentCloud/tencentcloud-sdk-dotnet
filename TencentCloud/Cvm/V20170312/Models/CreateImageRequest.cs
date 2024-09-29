@@ -44,7 +44,7 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 是否执行强制关机以制作镜像。
-        /// 取值范围：<br><li>true：表示关机之后制作镜像<br><li>false：表示开机状态制作镜像<br><br>默认取值：false。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
+        /// 取值范围：<br><li>true：表示关机之后制作镜像</li><br><li>false：表示开机状态制作镜像</li><br><br>默认取值：false。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
         /// </summary>
         [JsonProperty("ForcePoweroff")]
         public string ForcePoweroff{ get; set; }
@@ -82,6 +82,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("TagSpecification")]
         public TagSpecification[] TagSpecification{ get; set; }
 
+        /// <summary>
+        /// 镜像族
+        /// </summary>
+        [JsonProperty("ImageFamily")]
+        public string ImageFamily{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -97,6 +103,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
+            this.SetParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
         }
     }
 }

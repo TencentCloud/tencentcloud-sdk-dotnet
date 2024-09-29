@@ -25,7 +25,7 @@ namespace TencentCloud.Ca.V20230228.Models
     {
         
         /// <summary>
-        /// 客户类型 1:个人，2:企业
+        /// 申请者类型 1:个人，2:企业
         /// </summary>
         [JsonProperty("ApplyCustomerType")]
         public string ApplyCustomerType{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Ca.V20230228.Models
         public string ApplyCustomerName{ get; set; }
 
         /// <summary>
-        /// 验签申请人姓名
+        /// 验签申请经办人姓名
         /// </summary>
         [JsonProperty("ApplyName")]
         public string ApplyName{ get; set; }
 
         /// <summary>
-        /// 验签申请人电弧
+        /// 验签申请经办人电话
         /// </summary>
         [JsonProperty("ApplyMobile")]
         public string ApplyMobile{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Ca.V20230228.Models
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 验签申请人邮箱
+        /// 验签申请经办人邮箱
         /// </summary>
         [JsonProperty("ApplyEmail")]
         public string ApplyEmail{ get; set; }

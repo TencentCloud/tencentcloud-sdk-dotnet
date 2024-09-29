@@ -31,7 +31,7 @@ namespace TencentCloud.Ca.V20230228.Models
         public string FileBody{ get; set; }
 
         /// <summary>
-        /// 文件名，最大长度不超过200字符
+        /// 文件名及类型，最大长度不超过200字符
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }

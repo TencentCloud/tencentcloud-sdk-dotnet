@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B5D57B68-CB59-323E-9A06-B048D5C6D369}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1098</VersionPrefix>
+    <VersionPrefix>3.0.1099</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -109,6 +109,8 @@
     <Compile Include="V20170312\Models\DescribeHostsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeHpcClustersRequest.cs" />
     <Compile Include="V20170312\Models\DescribeHpcClustersResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeImageFromFamilyRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeImageFromFamilyResponse.cs" />
     <Compile Include="V20170312\Models\DescribeImageQuotaRequest.cs" />
     <Compile Include="V20170312\Models\DescribeImageQuotaResponse.cs" />
     <Compile Include="V20170312\Models\DescribeImageSharePermissionRequest.cs" />

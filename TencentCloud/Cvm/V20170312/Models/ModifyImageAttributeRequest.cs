@@ -42,6 +42,18 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("ImageDescription")]
         public string ImageDescription{ get; set; }
 
+        /// <summary>
+        /// 设置镜像族；
+        /// </summary>
+        [JsonProperty("ImageFamily")]
+        public string ImageFamily{ get; set; }
+
+        /// <summary>
+        /// 设置镜像是否废弃；
+        /// </summary>
+        [JsonProperty("ImageDeprecated")]
+        public bool? ImageDeprecated{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
             this.SetParamSimple(map, prefix + "ImageName", this.ImageName);
             this.SetParamSimple(map, prefix + "ImageDescription", this.ImageDescription);
+            this.SetParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
+            this.SetParamSimple(map, prefix + "ImageDeprecated", this.ImageDeprecated);
         }
     }
 }

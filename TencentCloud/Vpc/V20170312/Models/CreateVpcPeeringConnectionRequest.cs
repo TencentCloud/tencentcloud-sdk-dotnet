@@ -78,6 +78,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("QosLevel")]
         public string QosLevel{ get; set; }
 
+        /// <summary>
+        /// 标签键值对
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tags[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
             this.SetParamSimple(map, prefix + "QosLevel", this.QosLevel);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

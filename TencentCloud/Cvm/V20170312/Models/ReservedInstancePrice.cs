@@ -48,6 +48,20 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("DiscountUsagePrice")]
         public float? DiscountUsagePrice{ get; set; }
 
+        /// <summary>
+        /// 预支费用的折扣，如20.0代表2折。 注意：此字段可能返回 null，表示取不到有效值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FixedPriceDiscount")]
+        public float? FixedPriceDiscount{ get; set; }
+
+        /// <summary>
+        /// 后续费用的折扣，如20.0代表2折。 注意：此字段可能返回 null，表示取不到有效值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UsagePriceDiscount")]
+        public float? UsagePriceDiscount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +72,8 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "DiscountFixedPrice", this.DiscountFixedPrice);
             this.SetParamSimple(map, prefix + "OriginalUsagePrice", this.OriginalUsagePrice);
             this.SetParamSimple(map, prefix + "DiscountUsagePrice", this.DiscountUsagePrice);
+            this.SetParamSimple(map, prefix + "FixedPriceDiscount", this.FixedPriceDiscount);
+            this.SetParamSimple(map, prefix + "UsagePriceDiscount", this.UsagePriceDiscount);
         }
     }
 }

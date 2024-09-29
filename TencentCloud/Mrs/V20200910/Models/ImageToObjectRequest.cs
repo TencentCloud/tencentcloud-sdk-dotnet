@@ -64,6 +64,12 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("ReportTypeVersion")]
         public ReportTypeVersion[] ReportTypeVersion{ get; set; }
 
+        /// <summary>
+        /// 可选。 图片OCR信息列表，每一个元素是一张图片的OCR结果。适用于不想将医疗报告图片传入腾讯云的客户，客户可对图片OCR信息中的敏感信息去除之后再传入。与 ImageInfoList 二选一，同时存在则使用OcrInfoList
+        /// </summary>
+        [JsonProperty("OcrInfoList")]
+        public OcrInfo[] OcrInfoList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,6 +82,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamSimple(map, prefix + "IsUsedClassify", this.IsUsedClassify);
             this.SetParamSimple(map, prefix + "UserType", this.UserType);
             this.SetParamArrayObj(map, prefix + "ReportTypeVersion.", this.ReportTypeVersion);
+            this.SetParamArrayObj(map, prefix + "OcrInfoList.", this.OcrInfoList);
         }
     }
 }

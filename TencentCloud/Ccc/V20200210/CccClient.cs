@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1098";
+       private const string sdkVersion = "SDK_NET_3.0.1099";
 
         /// <summary>
         /// Client constructor.
@@ -302,6 +302,27 @@ namespace TencentCloud.Ccc.V20200210
         public CreateIVRSessionResponse CreateIVRSessionSync(CreateIVRSessionRequest req)
         {
             return InternalRequestAsync<CreateIVRSessionResponse>(req, "CreateIVRSession")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建客户自携号码接入审核
+        /// </summary>
+        /// <param name="req"><see cref="CreateOwnNumberApplyRequest"/></param>
+        /// <returns><see cref="CreateOwnNumberApplyResponse"/></returns>
+        public Task<CreateOwnNumberApplyResponse> CreateOwnNumberApply(CreateOwnNumberApplyRequest req)
+        {
+            return InternalRequestAsync<CreateOwnNumberApplyResponse>(req, "CreateOwnNumberApply");
+        }
+
+        /// <summary>
+        /// 创建客户自携号码接入审核
+        /// </summary>
+        /// <param name="req"><see cref="CreateOwnNumberApplyRequest"/></param>
+        /// <returns><see cref="CreateOwnNumberApplyResponse"/></returns>
+        public CreateOwnNumberApplyResponse CreateOwnNumberApplySync(CreateOwnNumberApplyRequest req)
+        {
+            return InternalRequestAsync<CreateOwnNumberApplyResponse>(req, "CreateOwnNumberApply")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1062,6 +1083,27 @@ namespace TencentCloud.Ccc.V20200210
         public ModifyExtensionResponse ModifyExtensionSync(ModifyExtensionRequest req)
         {
             return InternalRequestAsync<ModifyExtensionResponse>(req, "ModifyExtension")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改客户自携号码审批单
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOwnNumberApplyRequest"/></param>
+        /// <returns><see cref="ModifyOwnNumberApplyResponse"/></returns>
+        public Task<ModifyOwnNumberApplyResponse> ModifyOwnNumberApply(ModifyOwnNumberApplyRequest req)
+        {
+            return InternalRequestAsync<ModifyOwnNumberApplyResponse>(req, "ModifyOwnNumberApply");
+        }
+
+        /// <summary>
+        /// 修改客户自携号码审批单
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOwnNumberApplyRequest"/></param>
+        /// <returns><see cref="ModifyOwnNumberApplyResponse"/></returns>
+        public ModifyOwnNumberApplyResponse ModifyOwnNumberApplySync(ModifyOwnNumberApplyRequest req)
+        {
+            return InternalRequestAsync<ModifyOwnNumberApplyResponse>(req, "ModifyOwnNumberApply")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

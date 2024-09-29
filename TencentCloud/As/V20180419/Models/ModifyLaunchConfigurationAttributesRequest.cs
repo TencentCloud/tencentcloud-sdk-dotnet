@@ -188,6 +188,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("InstanceTags")]
         public InstanceTag[] InstanceTags{ get; set; }
 
+        /// <summary>
+        /// 镜像族名称。
+        /// </summary>
+        [JsonProperty("ImageFamily")]
+        public string ImageFamily{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -217,6 +223,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
             this.SetParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
             this.SetParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
+            this.SetParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
         }
     }
 }
