@@ -24,12 +24,26 @@ namespace TencentCloud.Ssl.V20191205.Models
     public class DeleteCertificatesRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 要删除的证书ID。单次最多100个
+        /// </summary>
+        [JsonProperty("CertificateIds")]
+        public string[] CertificateIds{ get; set; }
+
+        /// <summary>
+        /// 删除时是否检查证书关联了云资源。默认不检查。如需要检查关联云资源 (需授权服务角色SSL_QCSLinkedRoleInReplaceLoadCertificate)，完成授权后，删除将变成异步任务，接口会返回异步任务ID。需搭配 DescribeDeleteCertificatesTaskResult接口使用，查询删除任务是否成功。
+        /// </summary>
+        [JsonProperty("IsSync")]
+        public bool? IsSync{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "CertificateIds.", this.CertificateIds);
+            this.SetParamSimple(map, prefix + "IsSync", this.IsSync);
         }
     }
 }

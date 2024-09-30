@@ -28,7 +28,7 @@ namespace TencentCloud.Mqtt.V20240516
 
        private const string endpoint = "mqtt.tencentcloudapi.com";
        private const string version = "2024-05-16";
-       private const string sdkVersion = "SDK_NET_3.0.1099";
+       private const string sdkVersion = "SDK_NET_3.0.1100";
 
         /// <summary>
         /// Client constructor.

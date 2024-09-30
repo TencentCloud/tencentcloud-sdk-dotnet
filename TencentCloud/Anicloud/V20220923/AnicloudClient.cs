@@ -28,7 +28,7 @@ namespace TencentCloud.Anicloud.V20220923
 
        private const string endpoint = "anicloud.tencentcloudapi.com";
        private const string version = "2022-09-23";
-       private const string sdkVersion = "SDK_NET_3.0.1099";
+       private const string sdkVersion = "SDK_NET_3.0.1100";
 
         /// <summary>
         /// Client constructor.

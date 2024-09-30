@@ -28,7 +28,7 @@ namespace TencentCloud.Bmvpc.V20180625
 
        private const string endpoint = "bmvpc.tencentcloudapi.com";
        private const string version = "2018-06-25";
-       private const string sdkVersion = "SDK_NET_3.0.1099";
+       private const string sdkVersion = "SDK_NET_3.0.1100";
 
         /// <summary>
         /// Client constructor.
