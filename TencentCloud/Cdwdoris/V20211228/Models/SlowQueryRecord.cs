@@ -119,6 +119,20 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("DurationSec")]
         public float? DurationSec{ get; set; }
 
+        /// <summary>
+        /// 状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("State")]
+        public string State{ get; set; }
+
+        /// <summary>
+        /// Catalog  Name
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CatalogName")]
+        public string CatalogName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -140,6 +154,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "ResultBytesMB", this.ResultBytesMB);
             this.SetParamSimple(map, prefix + "MemoryUsageMB", this.MemoryUsageMB);
             this.SetParamSimple(map, prefix + "DurationSec", this.DurationSec);
+            this.SetParamSimple(map, prefix + "State", this.State);
+            this.SetParamSimple(map, prefix + "CatalogName", this.CatalogName);
         }
     }
 }

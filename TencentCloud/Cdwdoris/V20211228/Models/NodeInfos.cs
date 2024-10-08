@@ -60,6 +60,20 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("LastRestartTime")]
         public string LastRestartTime{ get; set; }
 
+        /// <summary>
+        /// id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
+        /// 可用区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +86,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "NodeRole", this.NodeRole);
             this.SetParamSimple(map, prefix + "ComponentName", this.ComponentName);
             this.SetParamSimple(map, prefix + "LastRestartTime", this.LastRestartTime);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
         }
     }
 }

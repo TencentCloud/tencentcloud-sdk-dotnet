@@ -157,13 +157,15 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 认证完成跳转链接。
-        /// 注意：`目前仅支持 H5 和 PC`。
+        /// 注意：`此功能仅在Endpoint参数设置成 H5 或 PC时才有效`。
         /// </summary>
         [JsonProperty("AutoJumpUrl")]
         public string AutoJumpUrl{ get; set; }
 
         /// <summary>
         /// 是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。
+        /// 
+        /// <a href="https://qcloudimg.tencent-cloud.cn/raw/dd54f333140c711cf6a88e3801bcd178.png" target="_blank">点击查看头顶导航栏位置</a>
         /// </summary>
         [JsonProperty("TopNavigationStatus")]
         public string TopNavigationStatus{ get; set; }
