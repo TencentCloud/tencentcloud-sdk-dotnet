@@ -25,13 +25,13 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 实例ID	
+        /// 业务系统ID	
         /// </summary>
         [JsonProperty("InstanceKey")]
         public string InstanceKey{ get; set; }
 
         /// <summary>
-        /// 服务名	
+        /// 应用名	
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
@@ -43,19 +43,19 @@ namespace TencentCloud.Apm.V20210622.Models
         public string OperationNameFilter{ get; set; }
 
         /// <summary>
-        /// 异常过滤
+        /// 错误类型过滤
         /// </summary>
         [JsonProperty("ExceptionFilter")]
         public string ExceptionFilter{ get; set; }
 
         /// <summary>
-        /// 错误码过滤	
+        /// HTTP状态码过滤
         /// </summary>
         [JsonProperty("ErrorCodeFilter")]
         public string ErrorCodeFilter{ get; set; }
 
         /// <summary>
-        /// 应用诊断开关
+        /// 应用诊断开关（已废弃）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventEnable")]
@@ -92,51 +92,51 @@ namespace TencentCloud.Apm.V20210622.Models
         public long? IsRelatedLog{ get; set; }
 
         /// <summary>
-        /// 日志来源	
+        /// 日志源	
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogSource")]
         public string LogSource{ get; set; }
 
         /// <summary>
-        /// CLS日志集 
+        /// 日志集 
         /// </summary>
         [JsonProperty("LogSet")]
         public string LogSet{ get; set; }
 
         /// <summary>
-        /// 日志主题ID
+        /// 日志主题
         /// </summary>
         [JsonProperty("LogTopicID")]
         public string LogTopicID{ get; set; }
 
         /// <summary>
-        /// 线程剖析开关
+        /// 方法栈快照开关 true 开启 false 关闭
         /// </summary>
         [JsonProperty("SnapshotEnable")]
         public bool? SnapshotEnable{ get; set; }
 
         /// <summary>
-        /// 线程剖析超时阈值	
+        /// 慢调用监听触发阈值
         /// </summary>
         [JsonProperty("SnapshotTimeout")]
         public long? SnapshotTimeout{ get; set; }
 
         /// <summary>
-        /// 探针开启开关
+        /// 探针总开关
         /// </summary>
         [JsonProperty("AgentEnable")]
         public bool? AgentEnable{ get; set; }
 
         /// <summary>
-        /// 组件列表开关
+        /// 组件列表开关（已废弃）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstrumentList")]
         public Instrument[] InstrumentList{ get; set; }
 
         /// <summary>
-        /// 链路压缩开关
+        /// 链路压缩开关（已废弃）
         /// </summary>
         [JsonProperty("TraceSquash")]
         public bool? TraceSquash{ get; set; }

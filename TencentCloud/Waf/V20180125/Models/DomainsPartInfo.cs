@@ -336,6 +336,62 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("ProxyBuffer")]
         public long? ProxyBuffer{ get; set; }
 
+        /// <summary>
+        /// 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GmType")]
+        public long? GmType{ get; set; }
+
+        /// <summary>
+        /// 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GmCertType")]
+        public long? GmCertType{ get; set; }
+
+        /// <summary>
+        /// GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GmCert")]
+        public string GmCert{ get; set; }
+
+        /// <summary>
+        /// GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GmPrivateKey")]
+        public string GmPrivateKey{ get; set; }
+
+        /// <summary>
+        /// GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GmEncCert")]
+        public string GmEncCert{ get; set; }
+
+        /// <summary>
+        /// GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GmEncPrivateKey")]
+        public string GmEncPrivateKey{ get; set; }
+
+        /// <summary>
+        /// GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GmSSLId")]
+        public string GmSSLId{ get; set; }
+
+        /// <summary>
+        /// 域名标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Labels")]
+        public string[] Labels{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -384,6 +440,14 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "UpstreamHost", this.UpstreamHost);
             this.SetParamSimple(map, prefix + "Level", this.Level);
             this.SetParamSimple(map, prefix + "ProxyBuffer", this.ProxyBuffer);
+            this.SetParamSimple(map, prefix + "GmType", this.GmType);
+            this.SetParamSimple(map, prefix + "GmCertType", this.GmCertType);
+            this.SetParamSimple(map, prefix + "GmCert", this.GmCert);
+            this.SetParamSimple(map, prefix + "GmPrivateKey", this.GmPrivateKey);
+            this.SetParamSimple(map, prefix + "GmEncCert", this.GmEncCert);
+            this.SetParamSimple(map, prefix + "GmEncPrivateKey", this.GmEncPrivateKey);
+            this.SetParamSimple(map, prefix + "GmSSLId", this.GmSSLId);
+            this.SetParamArraySimple(map, prefix + "Labels.", this.Labels);
         }
     }
 }

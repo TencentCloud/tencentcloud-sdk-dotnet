@@ -31,7 +31,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 证书类型。 0：仅配置HTTP监听端口，没有证书 1：证书来源为自有证书 2：证书来源为托管证书
+        /// 证书类型。 0：不检测国际标准证书 1：证书来源为自有证书 2：证书来源为托管证书
         /// </summary>
         [JsonProperty("CertType")]
         public long? CertType{ get; set; }
@@ -54,6 +54,42 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("PrivateKey")]
         public string PrivateKey{ get; set; }
 
+        /// <summary>
+        /// 国密证书类型。0：不检测国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+        /// </summary>
+        [JsonProperty("GmCertType")]
+        public long? GmCertType{ get; set; }
+
+        /// <summary>
+        /// GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+        /// </summary>
+        [JsonProperty("GmCert")]
+        public string GmCert{ get; set; }
+
+        /// <summary>
+        /// GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+        /// </summary>
+        [JsonProperty("GmPrivateKey")]
+        public string GmPrivateKey{ get; set; }
+
+        /// <summary>
+        /// GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+        /// </summary>
+        [JsonProperty("GmEncCert")]
+        public string GmEncCert{ get; set; }
+
+        /// <summary>
+        /// GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+        /// </summary>
+        [JsonProperty("GmEncPrivateKey")]
+        public string GmEncPrivateKey{ get; set; }
+
+        /// <summary>
+        /// GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+        /// </summary>
+        [JsonProperty("GmSSLId")]
+        public string GmSSLId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +101,12 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Certificate", this.Certificate);
             this.SetParamSimple(map, prefix + "CertID", this.CertID);
             this.SetParamSimple(map, prefix + "PrivateKey", this.PrivateKey);
+            this.SetParamSimple(map, prefix + "GmCertType", this.GmCertType);
+            this.SetParamSimple(map, prefix + "GmCert", this.GmCert);
+            this.SetParamSimple(map, prefix + "GmPrivateKey", this.GmPrivateKey);
+            this.SetParamSimple(map, prefix + "GmEncCert", this.GmEncCert);
+            this.SetParamSimple(map, prefix + "GmEncPrivateKey", this.GmEncPrivateKey);
+            this.SetParamSimple(map, prefix + "GmSSLId", this.GmSSLId);
         }
     }
 }

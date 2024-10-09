@@ -105,6 +105,22 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("AuthorizationType")]
         public string AuthorizationType{ get; set; }
 
+        /// <summary>
+        /// 子企业激活状态。值如下：
+        /// <ul>
+        ///   <li>**0**： 未激活</li>
+        ///   <li>**1**： 已激活</li>
+        /// </ul>
+        /// </summary>
+        [JsonProperty("ActiveStatus")]
+        public long? ActiveStatus{ get; set; }
+
+        /// <summary>
+        /// 账号过期时间，时间戳
+        /// </summary>
+        [JsonProperty("LicenseExpireTime")]
+        public long? LicenseExpireTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,6 +138,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "AdminMobile", this.AdminMobile);
             this.SetParamSimple(map, prefix + "AuthorizationStatus", this.AuthorizationStatus);
             this.SetParamSimple(map, prefix + "AuthorizationType", this.AuthorizationType);
+            this.SetParamSimple(map, prefix + "ActiveStatus", this.ActiveStatus);
+            this.SetParamSimple(map, prefix + "LicenseExpireTime", this.LicenseExpireTime);
         }
     }
 }

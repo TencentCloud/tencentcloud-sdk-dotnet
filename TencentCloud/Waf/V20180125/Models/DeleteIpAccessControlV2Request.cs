@@ -31,13 +31,13 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 规则ID列表，支持批量删除
+        /// 规则ID列表，支持批量删除，在DeleteAll参数为true的时候可以不传
         /// </summary>
         [JsonProperty("RuleIds")]
         public ulong?[] RuleIds{ get; set; }
 
         /// <summary>
-        /// 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单
+        /// 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定IP名单，批量防护不支持
         /// </summary>
         [JsonProperty("DeleteAll")]
         public bool? DeleteAll{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string SourceType{ get; set; }
 
         /// <summary>
-        /// IP黑白名单类型，40为IP白名单，42为IP黑名单
+        /// IP黑白名单类型，40为IP白名单，42为IP黑名单，在DeleteAll为true的时候必传此参数
         /// </summary>
         [JsonProperty("ActionType")]
         public ulong? ActionType{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Mariadb.V20170312
 
        private const string endpoint = "mariadb.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1101";
+       private const string sdkVersion = "SDK_NET_3.0.1102";
 
         /// <summary>
         /// Client constructor.
@@ -602,6 +602,27 @@ namespace TencentCloud.Mariadb.V20170312
         public DescribeDBSlowLogsResponse DescribeDBSlowLogsSync(DescribeDBSlowLogsRequest req)
         {
             return InternalRequestAsync<DescribeDBSlowLogsResponse>(req, "DescribeDBSlowLogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDBSyncMode）用于查询云数据库实例的同步模式。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSyncModeRequest"/></param>
+        /// <returns><see cref="DescribeDBSyncModeResponse"/></returns>
+        public Task<DescribeDBSyncModeResponse> DescribeDBSyncMode(DescribeDBSyncModeRequest req)
+        {
+            return InternalRequestAsync<DescribeDBSyncModeResponse>(req, "DescribeDBSyncMode");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDBSyncMode）用于查询云数据库实例的同步模式。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSyncModeRequest"/></param>
+        /// <returns><see cref="DescribeDBSyncModeResponse"/></returns>
+        public DescribeDBSyncModeResponse DescribeDBSyncModeSync(DescribeDBSyncModeRequest req)
+        {
+            return InternalRequestAsync<DescribeDBSyncModeResponse>(req, "DescribeDBSyncMode")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

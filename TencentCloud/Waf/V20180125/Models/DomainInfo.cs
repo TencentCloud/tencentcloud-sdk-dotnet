@@ -322,6 +322,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("AccessStatus")]
         public long? AccessStatus{ get; set; }
 
+        /// <summary>
+        /// 域名标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Labels")]
+        public string[] Labels{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -363,6 +370,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamArraySimple(map, prefix + "UpstreamDomainList.", this.UpstreamDomainList);
             this.SetParamSimple(map, prefix + "SgID", this.SgID);
             this.SetParamSimple(map, prefix + "AccessStatus", this.AccessStatus);
+            this.SetParamArraySimple(map, prefix + "Labels.", this.Labels);
         }
     }
 }

@@ -25,19 +25,20 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 实例Id
+        /// 业务系统Id
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// 需要修改的字段key value分别指定字段名、字段值
+        /// [具体字段请见](https://cloud.tencent.com/document/product/248/111241)
         /// </summary>
         [JsonProperty("Tags")]
         public ApmTag[] Tags{ get; set; }
 
         /// <summary>
-        /// 需要修改配置的服务列表名称	
+        /// 需要修改配置的应用列表名称	
         /// </summary>
         [JsonProperty("ServiceNames")]
         public string[] ServiceNames{ get; set; }

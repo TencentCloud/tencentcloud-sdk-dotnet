@@ -57,6 +57,12 @@ namespace TencentCloud.Vclm.V20240523.Models
         [JsonProperty("EnableBodyJoins")]
         public bool? EnableBodyJoins{ get; set; }
 
+        /// <summary>
+        /// 最终视频是否保留原图的背景（该模式对于tuziwu、huajiangwu不生效）
+        /// </summary>
+        [JsonProperty("EnableSegment")]
+        public bool? EnableSegment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +74,7 @@ namespace TencentCloud.Vclm.V20240523.Models
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamSimple(map, prefix + "EnableAudio", this.EnableAudio);
             this.SetParamSimple(map, prefix + "EnableBodyJoins", this.EnableBodyJoins);
+            this.SetParamSimple(map, prefix + "EnableSegment", this.EnableSegment);
         }
     }
 }

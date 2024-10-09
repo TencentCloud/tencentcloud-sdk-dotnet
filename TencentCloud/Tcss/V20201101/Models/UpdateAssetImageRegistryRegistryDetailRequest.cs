@@ -90,6 +90,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ConnDetectConfig")]
         public ConnDetectConfig[] ConnDetectConfig{ get; set; }
 
+        /// <summary>
+        /// 仓库唯一id
+        /// </summary>
+        [JsonProperty("RegistryId")]
+        public long? RegistryId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "SpeedLimit", this.SpeedLimit);
             this.SetParamSimple(map, prefix + "Insecure", this.Insecure);
             this.SetParamArrayObj(map, prefix + "ConnDetectConfig.", this.ConnDetectConfig);
+            this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
         }
     }
 }

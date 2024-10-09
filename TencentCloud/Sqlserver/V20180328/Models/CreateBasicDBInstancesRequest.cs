@@ -61,7 +61,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 购买实例的宿主机类型，CLOUD_PREMIUM-虚拟机高性能云盘，CLOUD_SSD-虚拟机SSD云盘,CLOUD_HSSD-虚拟机加强型SSD云盘，CLOUD_TSSD-虚拟机极速型SSD云盘，CLOUD_BSSD-虚拟机通用型SSD云盘
+        /// 购买实例的宿主机类型，CLOUD_PREMIUM-虚拟机高性能云硬盘，CLOUD_SSD-虚拟机SSD云硬盘,CLOUD_HSSD-虚拟机增强型SSD云硬盘，CLOUD_BSSD-虚拟机通用型SSD云盘
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }

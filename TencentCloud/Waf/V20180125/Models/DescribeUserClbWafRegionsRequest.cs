@@ -24,12 +24,19 @@ namespace TencentCloud.Waf.V20180125.Models
     public class DescribeUserClbWafRegionsRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 流量来源，不填默认clb。clb：负载均衡器，tsegw：云原生API网关，scf：云函数，apisix：腾讯云上其他网关
+        /// </summary>
+        [JsonProperty("AlbType")]
+        public string AlbType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "AlbType", this.AlbType);
         }
     }
 }
