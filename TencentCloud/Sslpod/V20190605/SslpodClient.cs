@@ -28,7 +28,7 @@ namespace TencentCloud.Sslpod.V20190605
 
        private const string endpoint = "sslpod.tencentcloudapi.com";
        private const string version = "2019-06-05";
-       private const string sdkVersion = "SDK_NET_3.0.1102";
+       private const string sdkVersion = "SDK_NET_3.0.1103";
 
         /// <summary>
         /// Client constructor.

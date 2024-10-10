@@ -217,6 +217,14 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("FlowDisplayType")]
         public long? FlowDisplayType{ get; set; }
 
+        /// <summary>
+        /// 是否开启动态签署合同：
+        /// <ul><li> **true**：开启动态签署合同，可在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li>
+        /// <li> **false**：不开启动态签署合同。</li></ul>
+        /// </summary>
+        [JsonProperty("OpenDynamicSignFlow")]
+        public bool? OpenDynamicSignFlow{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -245,6 +253,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "AutoSignScene", this.AutoSignScene);
             this.SetParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
             this.SetParamSimple(map, prefix + "FlowDisplayType", this.FlowDisplayType);
+            this.SetParamSimple(map, prefix + "OpenDynamicSignFlow", this.OpenDynamicSignFlow);
         }
     }
 }

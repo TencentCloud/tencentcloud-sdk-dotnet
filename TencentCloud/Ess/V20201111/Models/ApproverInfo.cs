@@ -78,7 +78,9 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 
         /// 
         /// 
-        /// 注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
+        /// 注: 
+        /// 1. <b>其他证件类型为白名单功能</b>，使用前请联系对接的客户经理沟通。
+        /// 2. 港澳居民来往内地通行证 和  港澳台居民居住证 类型的签署人<b>至少要过一次大陆的海关</b>才能使用。
         /// </summary>
         [JsonProperty("ApproverIdCardType")]
         public string ApproverIdCardType{ get; set; }

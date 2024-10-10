@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312
 
        private const string endpoint = "cvm.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1102";
+       private const string sdkVersion = "SDK_NET_3.0.1103";
 
         /// <summary>
         /// Client constructor.
@@ -1374,7 +1374,7 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// 本接口(ImportImage)用于导入镜像，导入后的镜像可用于创建实例。目前支持 RAW、VHD、QCOW2、VMDK 镜像格式。
+        /// 本接口(ImportImage)用于导入镜像，导入后的镜像可用于创建实例。目前支持RAW、VHD、QCOW2、VMDK镜像格式。
         /// </summary>
         /// <param name="req"><see cref="ImportImageRequest"/></param>
         /// <returns><see cref="ImportImageResponse"/></returns>
@@ -1384,7 +1384,7 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// 本接口(ImportImage)用于导入镜像，导入后的镜像可用于创建实例。目前支持 RAW、VHD、QCOW2、VMDK 镜像格式。
+        /// 本接口(ImportImage)用于导入镜像，导入后的镜像可用于创建实例。目前支持RAW、VHD、QCOW2、VMDK镜像格式。
         /// </summary>
         /// <param name="req"><see cref="ImportImageRequest"/></param>
         /// <returns><see cref="ImportImageResponse"/></returns>

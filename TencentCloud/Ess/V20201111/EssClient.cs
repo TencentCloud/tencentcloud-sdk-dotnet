@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1102";
+       private const string sdkVersion = "SDK_NET_3.0.1103";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Ess.V20201111
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 该接口用于结束动态签署流程，若当前合同还存在签署方未签署，无法结束。
+        /// </summary>
+        /// <param name="req"><see cref="ArchiveDynamicFlowRequest"/></param>
+        /// <returns><see cref="ArchiveDynamicFlowResponse"/></returns>
+        public Task<ArchiveDynamicFlowResponse> ArchiveDynamicFlow(ArchiveDynamicFlowRequest req)
+        {
+            return InternalRequestAsync<ArchiveDynamicFlowResponse>(req, "ArchiveDynamicFlow");
+        }
+
+        /// <summary>
+        /// 该接口用于结束动态签署流程，若当前合同还存在签署方未签署，无法结束。
+        /// </summary>
+        /// <param name="req"><see cref="ArchiveDynamicFlowRequest"/></param>
+        /// <returns><see cref="ArchiveDynamicFlowResponse"/></returns>
+        public ArchiveDynamicFlowResponse ArchiveDynamicFlowSync(ArchiveDynamicFlowRequest req)
+        {
+            return InternalRequestAsync<ArchiveDynamicFlowResponse>(req, "ArchiveDynamicFlow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -566,6 +587,29 @@ namespace TencentCloud.Ess.V20201111
         public CreateDocumentResponse CreateDocumentSync(CreateDocumentRequest req)
         {
             return InternalRequestAsync<CreateDocumentResponse>(req, "CreateDocument")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口（CreateDynamicFlowApprover）用来补充动态合同的签署人信息。<br/>
+        /// 适用场景：使用CreateFlowByFiles指定：OpenDynamicSignFlow=true发起的合同，可以使用该接口补充后续签署人。<br/>
+        /// </summary>
+        /// <param name="req"><see cref="CreateDynamicFlowApproverRequest"/></param>
+        /// <returns><see cref="CreateDynamicFlowApproverResponse"/></returns>
+        public Task<CreateDynamicFlowApproverResponse> CreateDynamicFlowApprover(CreateDynamicFlowApproverRequest req)
+        {
+            return InternalRequestAsync<CreateDynamicFlowApproverResponse>(req, "CreateDynamicFlowApprover");
+        }
+
+        /// <summary>
+        /// 此接口（CreateDynamicFlowApprover）用来补充动态合同的签署人信息。<br/>
+        /// 适用场景：使用CreateFlowByFiles指定：OpenDynamicSignFlow=true发起的合同，可以使用该接口补充后续签署人。<br/>
+        /// </summary>
+        /// <param name="req"><see cref="CreateDynamicFlowApproverRequest"/></param>
+        /// <returns><see cref="CreateDynamicFlowApproverResponse"/></returns>
+        public CreateDynamicFlowApproverResponse CreateDynamicFlowApproverSync(CreateDynamicFlowApproverRequest req)
+        {
+            return InternalRequestAsync<CreateDynamicFlowApproverResponse>(req, "CreateDynamicFlowApprover")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

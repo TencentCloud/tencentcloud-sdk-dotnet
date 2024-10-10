@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1102";
+       private const string sdkVersion = "SDK_NET_3.0.1103";
 
         /// <summary>
         /// Client constructor.
@@ -1835,6 +1835,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public InquirePriceCreateResponse InquirePriceCreateSync(InquirePriceCreateRequest req)
         {
             return InternalRequestAsync<InquirePriceCreateResponse>(req, "InquirePriceCreate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 变配预付费集群询价
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceModifyRequest"/></param>
+        /// <returns><see cref="InquirePriceModifyResponse"/></returns>
+        public Task<InquirePriceModifyResponse> InquirePriceModify(InquirePriceModifyRequest req)
+        {
+            return InternalRequestAsync<InquirePriceModifyResponse>(req, "InquirePriceModify");
+        }
+
+        /// <summary>
+        /// 变配预付费集群询价
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceModifyRequest"/></param>
+        /// <returns><see cref="InquirePriceModifyResponse"/></returns>
+        public InquirePriceModifyResponse InquirePriceModifySync(InquirePriceModifyRequest req)
+        {
+            return InternalRequestAsync<InquirePriceModifyResponse>(req, "InquirePriceModify")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -93,6 +93,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("BootMode")]
         public string BootMode{ get; set; }
 
+        /// <summary>
+        ///  镜像族
+        /// </summary>
+        [JsonProperty("ImageFamily")]
+        public string ImageFamily{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +116,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
             this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
             this.SetParamSimple(map, prefix + "BootMode", this.BootMode);
+            this.SetParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
         }
     }
 }
