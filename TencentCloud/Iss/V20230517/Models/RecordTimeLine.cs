@@ -36,6 +36,13 @@ namespace TencentCloud.Iss.V20230517.Models
         [JsonProperty("End")]
         public ulong? End{ get; set; }
 
+        /// <summary>
+        /// 对应时间片段的播放url
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HlsUrl")]
+        public string HlsUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Iss.V20230517.Models
         {
             this.SetParamSimple(map, prefix + "Begin", this.Begin);
             this.SetParamSimple(map, prefix + "End", this.End);
+            this.SetParamSimple(map, prefix + "HlsUrl", this.HlsUrl);
         }
     }
 }

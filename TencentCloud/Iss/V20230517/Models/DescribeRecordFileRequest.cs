@@ -48,6 +48,12 @@ namespace TencentCloud.Iss.V20230517.Models
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
+        /// <summary>
+        /// 是否携带每个时间段的播放url
+        /// </summary>
+        [JsonProperty("WithUrl")]
+        public bool? WithUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "WithUrl", this.WithUrl);
         }
     }
 }
