@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FEBD4BA8-D71D-307D-97C6-CC6B06586449}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1104</VersionPrefix>
+    <VersionPrefix>3.0.1105</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -114,6 +114,7 @@
     <Compile Include="V20190107\Models\CreateProxyResponse.cs" />
     <Compile Include="V20190107\Models\CreateResourcePackageRequest.cs" />
     <Compile Include="V20190107\Models\CreateResourcePackageResponse.cs" />
+    <Compile Include="V20190107\Models\CrossRegionBackupItem.cs" />
     <Compile Include="V20190107\Models\CynosdbCluster.cs" />
     <Compile Include="V20190107\Models\CynosdbClusterDetail.cs" />
     <Compile Include="V20190107\Models\CynosdbErrorLogItem.cs" />
@@ -378,6 +379,7 @@
     <Compile Include="V20190107\Models\ProxyInstanceWeight.cs" />
     <Compile Include="V20190107\Models\ProxyNodeInfo.cs" />
     <Compile Include="V20190107\Models\ProxySpec.cs" />
+    <Compile Include="V20190107\Models\ProxyVersionInfo.cs" />
     <Compile Include="V20190107\Models\ProxyZone.cs" />
     <Compile Include="V20190107\Models\QueryFilter.cs" />
     <Compile Include="V20190107\Models\QueryParamFilter.cs" />

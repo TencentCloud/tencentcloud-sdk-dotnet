@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1104";
+       private const string sdkVersion = "SDK_NET_3.0.1105";
 
         /// <summary>
         /// Client constructor.
@@ -323,6 +323,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public CreateDeviceResponse CreateDeviceSync(CreateDeviceRequest req)
         {
             return InternalRequestAsync<CreateDeviceResponse>(req, "CreateDevice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建外部视频 AI 分析任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateExternalSourceAIServiceTaskRequest"/></param>
+        /// <returns><see cref="CreateExternalSourceAIServiceTaskResponse"/></returns>
+        public Task<CreateExternalSourceAIServiceTaskResponse> CreateExternalSourceAIServiceTask(CreateExternalSourceAIServiceTaskRequest req)
+        {
+            return InternalRequestAsync<CreateExternalSourceAIServiceTaskResponse>(req, "CreateExternalSourceAIServiceTask");
+        }
+
+        /// <summary>
+        /// 创建外部视频 AI 分析任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateExternalSourceAIServiceTaskRequest"/></param>
+        /// <returns><see cref="CreateExternalSourceAIServiceTaskResponse"/></returns>
+        public CreateExternalSourceAIServiceTaskResponse CreateExternalSourceAIServiceTaskSync(CreateExternalSourceAIServiceTaskRequest req)
+        {
+            return InternalRequestAsync<CreateExternalSourceAIServiceTaskResponse>(req, "CreateExternalSourceAIServiceTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2297,6 +2318,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public InheritCloudStorageUserResponse InheritCloudStorageUserSync(InheritCloudStorageUserRequest req)
         {
             return InternalRequestAsync<InheritCloudStorageUserResponse>(req, "InheritCloudStorageUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建外部视频 AI 分析任务
+        /// </summary>
+        /// <param name="req"><see cref="InvokeExternalSourceAIServiceTaskRequest"/></param>
+        /// <returns><see cref="InvokeExternalSourceAIServiceTaskResponse"/></returns>
+        public Task<InvokeExternalSourceAIServiceTaskResponse> InvokeExternalSourceAIServiceTask(InvokeExternalSourceAIServiceTaskRequest req)
+        {
+            return InternalRequestAsync<InvokeExternalSourceAIServiceTaskResponse>(req, "InvokeExternalSourceAIServiceTask");
+        }
+
+        /// <summary>
+        /// 创建外部视频 AI 分析任务
+        /// </summary>
+        /// <param name="req"><see cref="InvokeExternalSourceAIServiceTaskRequest"/></param>
+        /// <returns><see cref="InvokeExternalSourceAIServiceTaskResponse"/></returns>
+        public InvokeExternalSourceAIServiceTaskResponse InvokeExternalSourceAIServiceTaskSync(InvokeExternalSourceAIServiceTaskRequest req)
+        {
+            return InternalRequestAsync<InvokeExternalSourceAIServiceTaskResponse>(req, "InvokeExternalSourceAIServiceTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

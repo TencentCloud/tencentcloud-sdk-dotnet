@@ -54,6 +54,18 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("ResourcesAccount")]
         public DspaResourceAccount[] ResourcesAccount{ get; set; }
 
+        /// <summary>
+        /// 创建默认主模板扫描任务
+        /// </summary>
+        [JsonProperty("CreateDefaultTask")]
+        public bool? CreateDefaultTask{ get; set; }
+
+        /// <summary>
+        /// 授权范围（all:授权整个数据源 manual:手动指定数据库）
+        /// </summary>
+        [JsonProperty("AuthRange")]
+        public string AuthRange{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "MetaType", this.MetaType);
             this.SetParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
             this.SetParamArrayObj(map, prefix + "ResourcesAccount.", this.ResourcesAccount);
+            this.SetParamSimple(map, prefix + "CreateDefaultTask", this.CreateDefaultTask);
+            this.SetParamSimple(map, prefix + "AuthRange", this.AuthRange);
         }
     }
 }

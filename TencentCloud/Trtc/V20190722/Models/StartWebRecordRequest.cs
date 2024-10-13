@@ -67,6 +67,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("PublishCdnParams")]
         public McuPublishCdnParam[] PublishCdnParams{ get; set; }
 
+        /// <summary>
+        /// 录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。
+        /// </summary>
+        [JsonProperty("ReadyTimeout")]
+        public ulong? ReadyTimeout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +86,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
             this.SetParamArrayObj(map, prefix + "PublishCdnParams.", this.PublishCdnParams);
+            this.SetParamSimple(map, prefix + "ReadyTimeout", this.ReadyTimeout);
         }
     }
 }

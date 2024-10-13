@@ -123,6 +123,20 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("Channel")]
         public string Channel{ get; set; }
 
+        /// <summary>
+        /// 已授权的实例数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InsAuthCount")]
+        public long? InsAuthCount{ get; set; }
+
+        /// <summary>
+        /// 已购买的实例数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InsTotalQuota")]
+        public long? InsTotalQuota{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,6 +159,8 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "CosQuotaUnit", this.CosQuotaUnit);
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "Channel", this.Channel);
+            this.SetParamSimple(map, prefix + "InsAuthCount", this.InsAuthCount);
+            this.SetParamSimple(map, prefix + "InsTotalQuota", this.InsTotalQuota);
         }
     }
 }

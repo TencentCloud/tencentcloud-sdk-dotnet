@@ -103,6 +103,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [System.Obsolete]
         public UserInfo Operator{ get; set; }
 
+        /// <summary>
+        /// 禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
+        /// </summary>
+        [JsonProperty("ForbidPersonalMultipleSign")]
+        public bool? ForbidPersonalMultipleSign{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +126,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamObj(map, prefix + "ApproverRestrictions.", this.ApproverRestrictions);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamSimple(map, prefix + "ForbidPersonalMultipleSign", this.ForbidPersonalMultipleSign);
         }
     }
 }

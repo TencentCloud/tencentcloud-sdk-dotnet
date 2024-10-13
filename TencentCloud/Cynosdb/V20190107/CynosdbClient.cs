@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1104";
+       private const string sdkVersion = "SDK_NET_3.0.1105";
 
         /// <summary>
         /// Client constructor.
@@ -1671,7 +1671,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 查询任务列表
+        /// 本接口（DescribeTasks）用于查询任务列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeTasksRequest"/></param>
         /// <returns><see cref="DescribeTasksResponse"/></returns>
@@ -1681,7 +1681,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 查询任务列表
+        /// 本接口（DescribeTasks）用于查询任务列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeTasksRequest"/></param>
         /// <returns><see cref="DescribeTasksResponse"/></returns>

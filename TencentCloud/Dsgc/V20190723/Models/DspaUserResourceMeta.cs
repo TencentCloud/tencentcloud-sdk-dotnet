@@ -152,6 +152,19 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("InstanceValue")]
         public string InstanceValue{ get; set; }
 
+        /// <summary>
+        /// //治理授权状态（0：关闭 1：开启）
+        /// </summary>
+        [JsonProperty("GovernAuthStatus")]
+        public long? GovernAuthStatus{ get; set; }
+
+        /// <summary>
+        /// 授权范围：all - 授权整个数据源 manual:手动指定数据源
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AuthRange")]
+        public string AuthRange{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -179,6 +192,8 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "ResourceAuthAccount", this.ResourceAuthAccount);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "InstanceValue", this.InstanceValue);
+            this.SetParamSimple(map, prefix + "GovernAuthStatus", this.GovernAuthStatus);
+            this.SetParamSimple(map, prefix + "AuthRange", this.AuthRange);
         }
     }
 }

@@ -377,6 +377,20 @@ namespace TencentCloud.Cdwch.V20200915.Models
         [JsonProperty("Details")]
         public InstanceDetail Details{ get; set; }
 
+        /// <summary>
+        /// 安全组白名单
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsWhiteSGs")]
+        public bool? IsWhiteSGs{ get; set; }
+
+        /// <summary>
+        /// 绑定的安全组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BindSGs")]
+        public string[] BindSGs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -433,6 +447,8 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamSimple(map, prefix + "SecondaryZoneInfo", this.SecondaryZoneInfo);
             this.SetParamSimple(map, prefix + "ClickHouseKeeper", this.ClickHouseKeeper);
             this.SetParamObj(map, prefix + "Details.", this.Details);
+            this.SetParamSimple(map, prefix + "IsWhiteSGs", this.IsWhiteSGs);
+            this.SetParamArraySimple(map, prefix + "BindSGs.", this.BindSGs);
         }
     }
 }

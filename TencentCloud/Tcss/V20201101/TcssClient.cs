@@ -28,7 +28,7 @@ namespace TencentCloud.Tcss.V20201101
 
        private const string endpoint = "tcss.tencentcloudapi.com";
        private const string version = "2020-11-01";
-       private const string sdkVersion = "SDK_NET_3.0.1104";
+       private const string sdkVersion = "SDK_NET_3.0.1105";
 
         /// <summary>
         /// Client constructor.
@@ -1702,6 +1702,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 接口已废弃
+        /// 
         /// 查询运行时异常进程事件列表信息导出
         /// </summary>
         /// <param name="req"><see cref="DescribeAbnormalProcessEventsExportRequest"/></param>
@@ -1712,6 +1714,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 接口已废弃
+        /// 
         /// 查询运行时异常进程事件列表信息导出
         /// </summary>
         /// <param name="req"><see cref="DescribeAbnormalProcessEventsExportRequest"/></param>
@@ -1786,6 +1790,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 接口已废弃
+        /// 
         /// 查询运行时异常进程策略列表信息导出
         /// </summary>
         /// <param name="req"><see cref="DescribeAbnormalProcessRulesExportRequest"/></param>
@@ -1796,6 +1802,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 接口已废弃
+        /// 
         /// 查询运行时异常进程策略列表信息导出
         /// </summary>
         /// <param name="req"><see cref="DescribeAbnormalProcessRulesExportRequest"/></param>
@@ -1912,6 +1920,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 接口已废弃
+        /// 
         /// 查询运行时访问控制策略列表导出
         /// </summary>
         /// <param name="req"><see cref="DescribeAccessControlRulesExportRequest"/></param>
@@ -1922,6 +1932,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 接口已废弃
+        /// 
         /// 查询运行时访问控制策略列表导出
         /// </summary>
         /// <param name="req"><see cref="DescribeAccessControlRulesExportRequest"/></param>
@@ -2290,6 +2302,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 接口已废弃
+        /// 
         /// 容器安全搜索查询镜像列表导出
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetImageListExportRequest"/></param>
@@ -2300,6 +2314,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 接口已废弃
+        /// 
         /// 容器安全搜索查询镜像列表导出
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetImageListExportRequest"/></param>
@@ -3445,6 +3461,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 接口已废弃
+        /// 
         /// DescribeEscapeEventsExport  查询容器逃逸事件列表导出
         /// </summary>
         /// <param name="req"><see cref="DescribeEscapeEventsExportRequest"/></param>
@@ -3455,6 +3473,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 接口已废弃
+        /// 
         /// DescribeEscapeEventsExport  查询容器逃逸事件列表导出
         /// </summary>
         /// <param name="req"><see cref="DescribeEscapeEventsExportRequest"/></param>

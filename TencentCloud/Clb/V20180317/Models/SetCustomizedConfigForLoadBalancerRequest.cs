@@ -25,31 +25,36 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 操作类型：'ADD', 'DELETE', 'UPDATE', 'BIND', 'UNBIND'
+        /// 操作类型。
+        /// - ADD：添加
+        /// - DELETE：删除
+        /// - UPDATE：修改
+        /// - BIND：绑定
+        /// - UNBIND：解绑
         /// </summary>
         [JsonProperty("OperationType")]
         public string OperationType{ get; set; }
 
         /// <summary>
-        /// 除了创建个性化配置外，必传此字段，如：pz-1234abcd
+        /// 个性化配置ID。除了创建个性化配置外，必传此字段，如：pz-1234abcd
         /// </summary>
         [JsonProperty("UconfigId")]
         public string UconfigId{ get; set; }
 
         /// <summary>
-        /// 创建个性化配置或修改个性化配置的内容时，必传此字段
+        /// 个性化配置内容。创建个性化配置或修改个性化配置的内容时，必传此字段
         /// </summary>
         [JsonProperty("ConfigContent")]
         public string ConfigContent{ get; set; }
 
         /// <summary>
-        /// 创建个性化配置或修改个性化配置的名字时，必传此字段
+        /// 个性化配置名称。创建个性化配置或修改个性化配置的名字时，必传此字段
         /// </summary>
         [JsonProperty("ConfigName")]
         public string ConfigName{ get; set; }
 
         /// <summary>
-        /// 绑定解绑时，必传此字段
+        /// 负载均衡实例ID。绑定解绑时，必传此字段
         /// </summary>
         [JsonProperty("LoadBalancerIds")]
         public string[] LoadBalancerIds{ get; set; }

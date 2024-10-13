@@ -56,6 +56,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
+        /// <summary>
+        /// 授权范围：all 授权全部  manual：手动指定
+        /// </summary>
+        [JsonProperty("AuthRange")]
+        public string AuthRange{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +73,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "ResourceVPort", this.ResourceVPort);
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "Password", this.Password);
+            this.SetParamSimple(map, prefix + "AuthRange", this.AuthRange);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1104</VersionPrefix>
+    <VersionPrefix>3.0.1105</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -264,6 +264,10 @@
     <Compile Include="V20190612\Models\CreateStreamLinkOutputInfoResponse.cs" />
     <Compile Include="V20190612\Models\CreateTranscodeTemplateRequest.cs" />
     <Compile Include="V20190612\Models\CreateTranscodeTemplateResponse.cs" />
+    <Compile Include="V20190612\Models\CreateVideoDatabaseEntryTaskRequest.cs" />
+    <Compile Include="V20190612\Models\CreateVideoDatabaseEntryTaskResponse.cs" />
+    <Compile Include="V20190612\Models\CreateVideoSearchTaskRequest.cs" />
+    <Compile Include="V20190612\Models\CreateVideoSearchTaskResponse.cs" />
     <Compile Include="V20190612\Models\CreateWatermarkTemplateRequest.cs" />
     <Compile Include="V20190612\Models\CreateWatermarkTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateWordSamplesRequest.cs" />
@@ -383,6 +387,10 @@
     <Compile Include="V20190612\Models\DescribeTasksResponse.cs" />
     <Compile Include="V20190612\Models\DescribeTranscodeTemplatesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeTranscodeTemplatesResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeVideoDatabaseEntryTaskDetailRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeVideoDatabaseEntryTaskDetailResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeVideoSearchTaskDetailRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeVideoSearchTaskDetailResponse.cs" />
     <Compile Include="V20190612\Models\DescribeWatermarkTemplatesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeWatermarkTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeWordSamplesRequest.cs" />
@@ -612,7 +620,10 @@
     <Compile Include="V20190612\Models\ScheduleTask.cs" />
     <Compile Include="V20190612\Models\SchedulesInfo.cs" />
     <Compile Include="V20190612\Models\ScratchRepairConfig.cs" />
+    <Compile Include="V20190612\Models\SearchTaskResult.cs" />
+    <Compile Include="V20190612\Models\SearchValueInput.cs" />
     <Compile Include="V20190612\Models\SegmentRecognitionItem.cs" />
+    <Compile Include="V20190612\Models\SegmentSpecificInfo.cs" />
     <Compile Include="V20190612\Models\SharpEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\SimpleAesDrm.cs" />
     <Compile Include="V20190612\Models\SnapshotByTimeOffsetTaskInput.cs" />
@@ -654,6 +665,7 @@
     <Compile Include="V20190612\Models\UserDefineFaceReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\UserDefineOcrTextReviewTemplateInfo.cs" />
     <Compile Include="V20190612\Models\UserDefineOcrTextReviewTemplateInfoForUpdate.cs" />
+    <Compile Include="V20190612\Models\VideoDBEntryTaskResult.cs" />
     <Compile Include="V20190612\Models\VideoDenoiseConfig.cs" />
     <Compile Include="V20190612\Models\VideoEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\VideoTemplateInfo.cs" />

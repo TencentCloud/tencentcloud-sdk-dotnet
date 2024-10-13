@@ -73,6 +73,24 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public long? COSUnbindNum{ get; set; }
 
         /// <summary>
+        /// 用户购买的实例配额。
+        /// </summary>
+        [JsonProperty("InsTotalQuota")]
+        public long? InsTotalQuota{ get; set; }
+
+        /// <summary>
+        /// 用户可用的实例配额。
+        /// </summary>
+        [JsonProperty("InsRemainQuota")]
+        public long? InsRemainQuota{ get; set; }
+
+        /// <summary>
+        /// 用户购买的版本
+        /// </summary>
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -92,6 +110,9 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "CosQuotaUnit", this.CosQuotaUnit);
             this.SetParamSimple(map, prefix + "DBUnbindNum", this.DBUnbindNum);
             this.SetParamSimple(map, prefix + "COSUnbindNum", this.COSUnbindNum);
+            this.SetParamSimple(map, prefix + "InsTotalQuota", this.InsTotalQuota);
+            this.SetParamSimple(map, prefix + "InsRemainQuota", this.InsRemainQuota);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -42,6 +42,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("SnapshotTime")]
         public string SnapshotTime{ get; set; }
 
+        /// <summary>
+        /// 跨地域备份项详细信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CrossRegionBackupInfos")]
+        public CrossRegionBackupItem[] CrossRegionBackupInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +58,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "BackupType", this.BackupType);
             this.SetParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
             this.SetParamSimple(map, prefix + "SnapshotTime", this.SnapshotTime);
+            this.SetParamArrayObj(map, prefix + "CrossRegionBackupInfos.", this.CrossRegionBackupInfos);
         }
     }
 }

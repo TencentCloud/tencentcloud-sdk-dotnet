@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1104";
+       private const string sdkVersion = "SDK_NET_3.0.1105";
 
         /// <summary>
         /// Client constructor.
@@ -797,6 +797,48 @@ namespace TencentCloud.Waf.V20180125
         public DescribeAntiInfoLeakageRulesResponse DescribeAntiInfoLeakageRulesSync(DescribeAntiInfoLeakageRulesRequest req)
         {
             return InternalRequestAsync<DescribeAntiInfoLeakageRulesResponse>(req, "DescribeAntiInfoLeakageRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取Api请求详情信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiDetailRequest"/></param>
+        /// <returns><see cref="DescribeApiDetailResponse"/></returns>
+        public Task<DescribeApiDetailResponse> DescribeApiDetail(DescribeApiDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeApiDetailResponse>(req, "DescribeApiDetail");
+        }
+
+        /// <summary>
+        /// 获取Api请求详情信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiDetailRequest"/></param>
+        /// <returns><see cref="DescribeApiDetailResponse"/></returns>
+        public DescribeApiDetailResponse DescribeApiDetailSync(DescribeApiDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeApiDetailResponse>(req, "DescribeApiDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// api资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiListVersionTwoRequest"/></param>
+        /// <returns><see cref="DescribeApiListVersionTwoResponse"/></returns>
+        public Task<DescribeApiListVersionTwoResponse> DescribeApiListVersionTwo(DescribeApiListVersionTwoRequest req)
+        {
+            return InternalRequestAsync<DescribeApiListVersionTwoResponse>(req, "DescribeApiListVersionTwo");
+        }
+
+        /// <summary>
+        /// api资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiListVersionTwoRequest"/></param>
+        /// <returns><see cref="DescribeApiListVersionTwoResponse"/></returns>
+        public DescribeApiListVersionTwoResponse DescribeApiListVersionTwoSync(DescribeApiListVersionTwoRequest req)
+        {
+            return InternalRequestAsync<DescribeApiListVersionTwoResponse>(req, "DescribeApiListVersionTwo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

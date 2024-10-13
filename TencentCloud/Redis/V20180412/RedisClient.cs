@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1104";
+       private const string sdkVersion = "SDK_NET_3.0.1105";
 
         /// <summary>
         /// Client constructor.
@@ -1713,7 +1713,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
+        /// 本接口（ModifyDBInstanceSecurityGroups）用于对实例原有的安全组列表进行修改。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSecurityGroupsResponse"/></returns>
@@ -1723,7 +1723,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
+        /// 本接口（ModifyDBInstanceSecurityGroups）用于对实例原有的安全组列表进行修改。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSecurityGroupsResponse"/></returns>
@@ -1856,6 +1856,27 @@ namespace TencentCloud.Redis.V20180412
         public ModifyInstanceParamsResponse ModifyInstanceParamsSync(ModifyInstanceParamsRequest req)
         {
             return InternalRequestAsync<ModifyInstanceParamsResponse>(req, "ModifyInstanceParams")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyInstancePassword）用于修改实例访问密码。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancePasswordRequest"/></param>
+        /// <returns><see cref="ModifyInstancePasswordResponse"/></returns>
+        public Task<ModifyInstancePasswordResponse> ModifyInstancePassword(ModifyInstancePasswordRequest req)
+        {
+            return InternalRequestAsync<ModifyInstancePasswordResponse>(req, "ModifyInstancePassword");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyInstancePassword）用于修改实例访问密码。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancePasswordRequest"/></param>
+        /// <returns><see cref="ModifyInstancePasswordResponse"/></returns>
+        public ModifyInstancePasswordResponse ModifyInstancePasswordSync(ModifyInstancePasswordRequest req)
+        {
+            return InternalRequestAsync<ModifyInstancePasswordResponse>(req, "ModifyInstancePassword")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

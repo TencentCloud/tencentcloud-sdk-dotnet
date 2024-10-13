@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1104";
+       private const string sdkVersion = "SDK_NET_3.0.1105";
 
         /// <summary>
         /// Client constructor.
@@ -471,6 +471,50 @@ namespace TencentCloud.Mps.V20190612
         public CreateTranscodeTemplateResponse CreateTranscodeTemplateSync(CreateTranscodeTemplateRequest req)
         {
             return InternalRequestAsync<CreateTranscodeTemplateResponse>(req, "CreateTranscodeTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 对URL链接或COS中的视频发起入库任务。
+        /// 可选在任务完成后向回调方发送任务完成状态信息。
+        /// </summary>
+        /// <param name="req"><see cref="CreateVideoDatabaseEntryTaskRequest"/></param>
+        /// <returns><see cref="CreateVideoDatabaseEntryTaskResponse"/></returns>
+        public Task<CreateVideoDatabaseEntryTaskResponse> CreateVideoDatabaseEntryTask(CreateVideoDatabaseEntryTaskRequest req)
+        {
+            return InternalRequestAsync<CreateVideoDatabaseEntryTaskResponse>(req, "CreateVideoDatabaseEntryTask");
+        }
+
+        /// <summary>
+        /// 对URL链接或COS中的视频发起入库任务。
+        /// 可选在任务完成后向回调方发送任务完成状态信息。
+        /// </summary>
+        /// <param name="req"><see cref="CreateVideoDatabaseEntryTaskRequest"/></param>
+        /// <returns><see cref="CreateVideoDatabaseEntryTaskResponse"/></returns>
+        public CreateVideoDatabaseEntryTaskResponse CreateVideoDatabaseEntryTaskSync(CreateVideoDatabaseEntryTaskRequest req)
+        {
+            return InternalRequestAsync<CreateVideoDatabaseEntryTaskResponse>(req, "CreateVideoDatabaseEntryTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 使用检索值检索库中最接近检索值的若干视频。
+        /// </summary>
+        /// <param name="req"><see cref="CreateVideoSearchTaskRequest"/></param>
+        /// <returns><see cref="CreateVideoSearchTaskResponse"/></returns>
+        public Task<CreateVideoSearchTaskResponse> CreateVideoSearchTask(CreateVideoSearchTaskRequest req)
+        {
+            return InternalRequestAsync<CreateVideoSearchTaskResponse>(req, "CreateVideoSearchTask");
+        }
+
+        /// <summary>
+        /// 使用检索值检索库中最接近检索值的若干视频。
+        /// </summary>
+        /// <param name="req"><see cref="CreateVideoSearchTaskRequest"/></param>
+        /// <returns><see cref="CreateVideoSearchTaskResponse"/></returns>
+        public CreateVideoSearchTaskResponse CreateVideoSearchTaskSync(CreateVideoSearchTaskRequest req)
+        {
+            return InternalRequestAsync<CreateVideoSearchTaskResponse>(req, "CreateVideoSearchTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1509,6 +1553,48 @@ namespace TencentCloud.Mps.V20190612
         public DescribeTranscodeTemplatesResponse DescribeTranscodeTemplatesSync(DescribeTranscodeTemplatesRequest req)
         {
             return InternalRequestAsync<DescribeTranscodeTemplatesResponse>(req, "DescribeTranscodeTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据任务ID查询视频入库任务的状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoDatabaseEntryTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeVideoDatabaseEntryTaskDetailResponse"/></returns>
+        public Task<DescribeVideoDatabaseEntryTaskDetailResponse> DescribeVideoDatabaseEntryTaskDetail(DescribeVideoDatabaseEntryTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeVideoDatabaseEntryTaskDetailResponse>(req, "DescribeVideoDatabaseEntryTaskDetail");
+        }
+
+        /// <summary>
+        /// 根据任务ID查询视频入库任务的状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoDatabaseEntryTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeVideoDatabaseEntryTaskDetailResponse"/></returns>
+        public DescribeVideoDatabaseEntryTaskDetailResponse DescribeVideoDatabaseEntryTaskDetailSync(DescribeVideoDatabaseEntryTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeVideoDatabaseEntryTaskDetailResponse>(req, "DescribeVideoDatabaseEntryTaskDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据任务ID查询视频检索任务的状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoSearchTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeVideoSearchTaskDetailResponse"/></returns>
+        public Task<DescribeVideoSearchTaskDetailResponse> DescribeVideoSearchTaskDetail(DescribeVideoSearchTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeVideoSearchTaskDetailResponse>(req, "DescribeVideoSearchTaskDetail");
+        }
+
+        /// <summary>
+        /// 根据任务ID查询视频检索任务的状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoSearchTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeVideoSearchTaskDetailResponse"/></returns>
+        public DescribeVideoSearchTaskDetailResponse DescribeVideoSearchTaskDetailSync(DescribeVideoSearchTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeVideoSearchTaskDetailResponse>(req, "DescribeVideoSearchTaskDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

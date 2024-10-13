@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1104</VersionPrefix>
+    <VersionPrefix>3.0.1105</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -75,6 +75,10 @@
     <Compile Include="V20180125\Models\AddDomainWhiteRuleResponse.cs" />
     <Compile Include="V20180125\Models\AddSpartaProtectionRequest.cs" />
     <Compile Include="V20180125\Models\AddSpartaProtectionResponse.cs" />
+    <Compile Include="V20180125\Models\ApiAsset.cs" />
+    <Compile Include="V20180125\Models\ApiDataFilter.cs" />
+    <Compile Include="V20180125\Models\ApiDetailSampleHistory.cs" />
+    <Compile Include="V20180125\Models\ApiParameterType.cs" />
     <Compile Include="V20180125\Models\ApiPkg.cs" />
     <Compile Include="V20180125\Models\ApiSecKey.cs" />
     <Compile Include="V20180125\Models\AttackLogInfo.cs" />
@@ -156,6 +160,10 @@
     <Compile Include="V20180125\Models\DescribeAntiInfoLeakageRulesRequest.cs" />
     <Compile Include="V20180125\Models\DescribeAntiInfoLeakageRulesResponse.cs" />
     <Compile Include="V20180125\Models\DescribeAntiLeakageItem.cs" />
+    <Compile Include="V20180125\Models\DescribeApiDetailRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeApiDetailResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeApiListVersionTwoRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeApiListVersionTwoResponse.cs" />
     <Compile Include="V20180125\Models\DescribeAreaBanAreasRequest.cs" />
     <Compile Include="V20180125\Models\DescribeAreaBanAreasResponse.cs" />
     <Compile Include="V20180125\Models\DescribeAreaBanAreasRsp.cs" />

@@ -28,7 +28,7 @@ namespace TencentCloud.Oceanus.V20190422
 
        private const string endpoint = "oceanus.tencentcloudapi.com";
        private const string version = "2019-04-22";
-       private const string sdkVersion = "SDK_NET_3.0.1104";
+       private const string sdkVersion = "SDK_NET_3.0.1105";
 
         /// <summary>
         /// Client constructor.
@@ -449,6 +449,27 @@ namespace TencentCloud.Oceanus.V20190422
         public DescribeJobEventsResponse DescribeJobEventsSync(DescribeJobEventsRequest req)
         {
             return InternalRequestAsync<DescribeJobEventsResponse>(req, "DescribeJobEvents")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取作业运行时的信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobRuntimeInfoRequest"/></param>
+        /// <returns><see cref="DescribeJobRuntimeInfoResponse"/></returns>
+        public Task<DescribeJobRuntimeInfoResponse> DescribeJobRuntimeInfo(DescribeJobRuntimeInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeJobRuntimeInfoResponse>(req, "DescribeJobRuntimeInfo");
+        }
+
+        /// <summary>
+        /// 获取作业运行时的信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobRuntimeInfoRequest"/></param>
+        /// <returns><see cref="DescribeJobRuntimeInfoResponse"/></returns>
+        public DescribeJobRuntimeInfoResponse DescribeJobRuntimeInfoSync(DescribeJobRuntimeInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeJobRuntimeInfoResponse>(req, "DescribeJobRuntimeInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

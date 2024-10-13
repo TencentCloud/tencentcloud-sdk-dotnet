@@ -66,6 +66,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("Storage")]
         public float? Storage{ get; set; }
 
+        /// <summary>
+        /// 治理授权状态，0:关闭 1：开启
+        /// </summary>
+        [JsonProperty("GovernAuthStatus")]
+        public long? GovernAuthStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
             this.SetParamSimple(map, prefix + "BindStatus", this.BindStatus);
             this.SetParamSimple(map, prefix + "Storage", this.Storage);
+            this.SetParamSimple(map, prefix + "GovernAuthStatus", this.GovernAuthStatus);
         }
     }
 }

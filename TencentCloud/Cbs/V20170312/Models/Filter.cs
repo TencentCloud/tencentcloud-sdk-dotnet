@@ -25,13 +25,13 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// 过滤键的名称。
+        /// 过滤键的名称
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 一个或者多个过滤值。
+        /// 一个或者多个过滤值
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

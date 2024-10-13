@@ -42,6 +42,8 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// MetaType - cdb（云数据Mysql）、dcdb（TDSQL MySQL版）、mariadb（云数据库 MariaDB）、postgres（云数据库 PostgreSQL）、cynosdbmysql（TDSQL-C MySQL版）、cos（对象存储）、mysql_like_proto（自建型Mysql协议类关系型数据库）、postgre_like_proto（自建型Postgre协议类关系型数据库）。
         /// 
         /// ResourceId - 资源ID，支持模糊搜索。
+        /// 
+        /// CvmID - 自建资源对应CvmId，如：ins-xxxxxxxx。该字段用于casb调用dsgc接口时，根据cvmId和vport确定具体的自建实例
         /// </summary>
         [JsonProperty("Filters")]
         public DspaDataSourceMngFilter[] Filters{ get; set; }

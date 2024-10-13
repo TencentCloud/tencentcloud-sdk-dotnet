@@ -120,6 +120,13 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("ProgressPercent")]
         public ulong? ProgressPercent{ get; set; }
 
+        /// <summary>
+        /// 报告模版名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReportTemplateName")]
+        public string ReportTemplateName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -140,6 +147,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamSimple(map, prefix + "ComplianceName", this.ComplianceName);
             this.SetParamSimple(map, prefix + "ProgressPercent", this.ProgressPercent);
+            this.SetParamSimple(map, prefix + "ReportTemplateName", this.ReportTemplateName);
         }
     }
 }

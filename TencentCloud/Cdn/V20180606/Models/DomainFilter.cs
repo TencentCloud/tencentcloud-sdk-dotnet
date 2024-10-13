@@ -42,7 +42,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 过滤字段值。
+        /// 过滤字段值，默认最多传 5 个。当 Name 是 origin/domain 且 Fuzzy 传 true，最多传 1 个。
         /// </summary>
         [JsonProperty("Value")]
         public string[] Value{ get; set; }

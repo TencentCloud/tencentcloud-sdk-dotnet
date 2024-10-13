@@ -69,6 +69,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("TargetUserId")]
         public string TargetUserId{ get; set; }
 
+        /// <summary>
+        /// 机器人订阅的用户列表
+        /// </summary>
+        [JsonProperty("TargetUserIdList")]
+        public string[] TargetUserIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +88,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "MaxIdleTime", this.MaxIdleTime);
             this.SetParamSimple(map, prefix + "TranscriptionMode", this.TranscriptionMode);
             this.SetParamSimple(map, prefix + "TargetUserId", this.TargetUserId);
+            this.SetParamArraySimple(map, prefix + "TargetUserIdList.", this.TargetUserIdList);
         }
     }
 }

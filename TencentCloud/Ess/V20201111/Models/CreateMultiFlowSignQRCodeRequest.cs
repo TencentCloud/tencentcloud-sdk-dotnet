@@ -111,6 +111,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ApproverComponentLimitTypes")]
         public ApproverComponentLimitType[] ApproverComponentLimitTypes{ get; set; }
 
+        /// <summary>
+        /// 禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
+        /// </summary>
+        [JsonProperty("ForbidPersonalMultipleSign")]
+        public bool? ForbidPersonalMultipleSign{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +135,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamObj(map, prefix + "ApproverRestrictions.", this.ApproverRestrictions);
             this.SetParamArrayObj(map, prefix + "ApproverComponentLimitTypes.", this.ApproverComponentLimitTypes);
+            this.SetParamSimple(map, prefix + "ForbidPersonalMultipleSign", this.ForbidPersonalMultipleSign);
         }
     }
 }

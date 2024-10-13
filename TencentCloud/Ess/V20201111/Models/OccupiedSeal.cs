@@ -92,6 +92,13 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("AuthorizedUsers")]
         public AuthorizedUser[] AuthorizedUsers{ get; set; }
 
+        /// <summary>
+        /// 印章扩展数据信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExtendScene")]
+        public ExtendScene ExtendScene{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +116,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "SealType", this.SealType);
             this.SetParamSimple(map, prefix + "IsAllTime", this.IsAllTime);
             this.SetParamArrayObj(map, prefix + "AuthorizedUsers.", this.AuthorizedUsers);
+            this.SetParamObj(map, prefix + "ExtendScene.", this.ExtendScene);
         }
     }
 }

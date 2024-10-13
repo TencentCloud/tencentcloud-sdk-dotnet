@@ -52,18 +52,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 可用于访问自建云资源的IP。
-        /// </summary>
-        [JsonProperty("ResourceVip")]
-        public string ResourceVip{ get; set; }
-
-        /// <summary>
-        /// 可用于访问自建云资源的端口。
-        /// </summary>
-        [JsonProperty("ResourceVPort")]
-        public ulong? ResourceVPort{ get; set; }
-
-        /// <summary>
         /// 自建云资源的VPC ID。
         /// </summary>
         [JsonProperty("ResourceUniqueVpcId")]
@@ -84,13 +72,27 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string ResourceAccessType{ get; set; }
 
         /// <summary>
-        /// 账户名。
+        /// 可用于访问自建云资源的IP。
+        /// emr的连接不需要使用该字段
+        /// </summary>
+        [JsonProperty("ResourceVip")]
+        public string ResourceVip{ get; set; }
+
+        /// <summary>
+        /// 可用于访问自建云资源的端口。
+        /// emr的连接不需要使用该字段
+        /// </summary>
+        [JsonProperty("ResourceVPort")]
+        public ulong? ResourceVPort{ get; set; }
+
+        /// <summary>
+        /// 账户名。如果emr_hive的连接方式为“LDAP”，则复用该字段
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 账户密码。
+        /// 账户密码。如果emr_hive的连接方式为“LDAP”，则复用该字段
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
@@ -116,6 +118,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("InstanceValue")]
         public string InstanceValue{ get; set; }
 
+        /// <summary>
+        /// 授权范围（all:授权整个数据源 manual:手动指定数据库）
+        /// </summary>
+        [JsonProperty("AuthRange")]
+        public string AuthRange{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,16 +134,17 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "MetaType", this.MetaType);
             this.SetParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
-            this.SetParamSimple(map, prefix + "ResourceVip", this.ResourceVip);
-            this.SetParamSimple(map, prefix + "ResourceVPort", this.ResourceVPort);
             this.SetParamSimple(map, prefix + "ResourceUniqueVpcId", this.ResourceUniqueVpcId);
             this.SetParamSimple(map, prefix + "ResourceUniqueSubnetId", this.ResourceUniqueSubnetId);
             this.SetParamSimple(map, prefix + "ResourceAccessType", this.ResourceAccessType);
+            this.SetParamSimple(map, prefix + "ResourceVip", this.ResourceVip);
+            this.SetParamSimple(map, prefix + "ResourceVPort", this.ResourceVPort);
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "ResourceName", this.ResourceName);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "InstanceValue", this.InstanceValue);
+            this.SetParamSimple(map, prefix + "AuthRange", this.AuthRange);
         }
     }
 }
