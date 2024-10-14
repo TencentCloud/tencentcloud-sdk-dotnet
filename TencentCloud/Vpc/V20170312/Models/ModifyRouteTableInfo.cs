@@ -31,13 +31,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string RouteTableId{ get; set; }
 
         /// <summary>
-        /// 云联网路由表名称。
+        /// 云联网路由表名称。Name和Description 两者必传一个。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 云联网路由表描述。
+        /// 云联网路由表描述。Name和Description 两者必传一个。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

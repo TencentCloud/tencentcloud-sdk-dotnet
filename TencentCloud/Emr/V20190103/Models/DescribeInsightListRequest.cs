@@ -55,7 +55,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? Page{ get; set; }
 
         /// <summary>
-        /// 查询类型,支持HIVE,SPARK,MAPREDUCE,TRINO等类型,默认查询全部
+        /// 查询类型,支持HIVE,SPARK,DLC_SPARK,SPARK_SQL,SCHEDULE,MAPREDUCE,TRINO等类型,默认查询全部
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

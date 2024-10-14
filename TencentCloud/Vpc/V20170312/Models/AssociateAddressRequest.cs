@@ -54,6 +54,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("EipDirectConnection")]
         public bool? EipDirectConnection{ get; set; }
 
+        /// <summary>
+        /// 要绑定的实例所在的地域
+        /// </summary>
+        [JsonProperty("InstanceRegion")]
+        public string InstanceRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
             this.SetParamSimple(map, prefix + "PrivateIpAddress", this.PrivateIpAddress);
             this.SetParamSimple(map, prefix + "EipDirectConnection", this.EipDirectConnection);
+            this.SetParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
         }
     }
 }

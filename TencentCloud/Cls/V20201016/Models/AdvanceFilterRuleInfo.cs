@@ -15,32 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Tke.V20180525.Models
+namespace TencentCloud.Cls.V20201016.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeExternalClusterSpecRequest : AbstractModel
+    public class AdvanceFilterRuleInfo : AbstractModel
     {
         
         /// <summary>
-        /// 注册集群ID
+        /// 过滤字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("Key")]
+        public string Key{ get; set; }
 
         /// <summary>
-        /// 默认false 获取内网，是否获取外网版注册命令
+        /// 过滤规则，0:等于，1:字段存在，2:字段不存在
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("IsExtranet")]
-        public bool? IsExtranet{ get; set; }
+        [JsonProperty("Rule")]
+        public ulong? Rule{ get; set; }
 
         /// <summary>
-        /// 默认false 不刷新有效时间 ，true刷新有效时间
+        /// 过滤值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("IsRefreshExpirationTime")]
-        public bool? IsRefreshExpirationTime{ get; set; }
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
 
 
         /// <summary>
@@ -48,9 +51,9 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "IsExtranet", this.IsExtranet);
-            this.SetParamSimple(map, prefix + "IsRefreshExpirationTime", this.IsRefreshExpirationTime);
+            this.SetParamSimple(map, prefix + "Key", this.Key);
+            this.SetParamSimple(map, prefix + "Rule", this.Rule);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

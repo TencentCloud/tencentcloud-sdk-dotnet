@@ -182,6 +182,16 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("EventLogRules")]
         public EventLog[] EventLogRules{ get; set; }
 
+        /// <summary>
+        /// 日志过滤规则列表（新版）。
+        /// 注意：
+        /// - 2.9.3以下版本LogListener不支持， 请使用FilterKeyRegex配置日志过滤规则。
+        /// - 自建k8s采集配置（CreateConfigExtra、ModifyConfigExtra）不支持此字段。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AdvanceFilterRules")]
+        public AdvanceFilterRuleInfo[] AdvanceFilterRules{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -207,6 +217,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "PathRegex", this.PathRegex);
             this.SetParamArrayObj(map, prefix + "MetaTags.", this.MetaTags);
             this.SetParamArrayObj(map, prefix + "EventLogRules.", this.EventLogRules);
+            this.SetParamArrayObj(map, prefix + "AdvanceFilterRules.", this.AdvanceFilterRules);
         }
     }
 }

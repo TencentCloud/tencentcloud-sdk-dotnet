@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1105";
+       private const string sdkVersion = "SDK_NET_3.0.1106";
 
         /// <summary>
         /// Client constructor.
@@ -2486,31 +2486,6 @@ namespace TencentCloud.Tke.V20180525
         public DescribeExistedInstancesResponse DescribeExistedInstancesSync(DescribeExistedInstancesRequest req)
         {
             return InternalRequestAsync<DescribeExistedInstancesResponse>(req, "DescribeExistedInstances")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// tdcc接口已迁移至tdcc产品下，tke下的接口下线
-        /// 
-        /// 获取导入第三方集群YAML定义
-        /// </summary>
-        /// <param name="req"><see cref="DescribeExternalClusterSpecRequest"/></param>
-        /// <returns><see cref="DescribeExternalClusterSpecResponse"/></returns>
-        public Task<DescribeExternalClusterSpecResponse> DescribeExternalClusterSpec(DescribeExternalClusterSpecRequest req)
-        {
-            return InternalRequestAsync<DescribeExternalClusterSpecResponse>(req, "DescribeExternalClusterSpec");
-        }
-
-        /// <summary>
-        /// tdcc接口已迁移至tdcc产品下，tke下的接口下线
-        /// 
-        /// 获取导入第三方集群YAML定义
-        /// </summary>
-        /// <param name="req"><see cref="DescribeExternalClusterSpecRequest"/></param>
-        /// <returns><see cref="DescribeExternalClusterSpecResponse"/></returns>
-        public DescribeExternalClusterSpecResponse DescribeExternalClusterSpecSync(DescribeExternalClusterSpecRequest req)
-        {
-            return InternalRequestAsync<DescribeExternalClusterSpecResponse>(req, "DescribeExternalClusterSpec")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
