@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1106</VersionPrefix>
+    <VersionPrefix>3.0.1107</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -293,6 +293,8 @@
     <Compile Include="V20180525\Models\DescribeAvailableTKEEdgeVersionResponse.cs" />
     <Compile Include="V20180525\Models\DescribeBackupStorageLocationsRequest.cs" />
     <Compile Include="V20180525\Models\DescribeBackupStorageLocationsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeBatchModifyTagsStatusRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeBatchModifyTagsStatusResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterAsGroupOptionRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterAsGroupOptionResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterAsGroupsRequest.cs" />
@@ -515,6 +517,7 @@
     <Compile Include="V20180525\Models\ExistedInstancesForNode.cs" />
     <Compile Include="V20180525\Models\ExistedInstancesPara.cs" />
     <Compile Include="V20180525\Models\ExtensionAddon.cs" />
+    <Compile Include="V20180525\Models\FailedResource.cs" />
     <Compile Include="V20180525\Models\Filter.cs" />
     <Compile Include="V20180525\Models\ForwardApplicationRequestV3Request.cs" />
     <Compile Include="V20180525\Models\ForwardApplicationRequestV3Response.cs" />
@@ -582,6 +585,8 @@
     <Compile Include="V20180525\Models\ModifyClusterNodePoolResponse.cs" />
     <Compile Include="V20180525\Models\ModifyClusterRuntimeConfigRequest.cs" />
     <Compile Include="V20180525\Models\ModifyClusterRuntimeConfigResponse.cs" />
+    <Compile Include="V20180525\Models\ModifyClusterTagsRequest.cs" />
+    <Compile Include="V20180525\Models\ModifyClusterTagsResponse.cs" />
     <Compile Include="V20180525\Models\ModifyClusterVirtualNodePoolRequest.cs" />
     <Compile Include="V20180525\Models\ModifyClusterVirtualNodePoolResponse.cs" />
     <Compile Include="V20180525\Models\ModifyNodePoolDesiredCapacityAboutAsgRequest.cs" />

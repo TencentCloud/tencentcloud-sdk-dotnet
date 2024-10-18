@@ -37,7 +37,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 策略模版类型
+        /// 策略模板类型
         /// </summary>
         [JsonProperty("Kind")]
         public string Kind{ get; set; }

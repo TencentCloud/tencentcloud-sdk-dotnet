@@ -25,16 +25,22 @@ namespace TencentCloud.Dasb.V20191018.Models
     {
         
         /// <summary>
-        /// 资产组ID
+        /// true - 查询已在该资产组的资产，false - 查询未在该资产组的资产
+        /// </summary>
+        [JsonProperty("Bound")]
+        public bool? Bound{ get; set; }
+
+        /// <summary>
+        /// 资产组ID，Id和IdSet二选一
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// true - 查询已在该资产组的资产，false - 查询未在该资产组的资产
+        /// 资产组ID集合，传Id，IdSet不生效。
         /// </summary>
-        [JsonProperty("Bound")]
-        public bool? Bound{ get; set; }
+        [JsonProperty("IdSet")]
+        public ulong?[] IdSet{ get; set; }
 
         /// <summary>
         /// 资产名或资产IP，模糊查询
@@ -78,8 +84,9 @@ namespace TencentCloud.Dasb.V20191018.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Bound", this.Bound);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamArraySimple(map, prefix + "IdSet.", this.IdSet);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);

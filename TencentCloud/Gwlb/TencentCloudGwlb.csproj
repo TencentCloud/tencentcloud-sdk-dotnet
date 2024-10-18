@@ -1,0 +1,100 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{95F21925-9632-34EF-BCD4-42157B964E01}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1107</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Gwlb</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20240906\GwlbClient.cs" />
+    <Compile Include="V20240906\Models\AssociateTargetGroupsRequest.cs" />
+    <Compile Include="V20240906\Models\AssociateTargetGroupsResponse.cs" />
+    <Compile Include="V20240906\Models\AssociationItem.cs" />
+    <Compile Include="V20240906\Models\CreateGatewayLoadBalancerRequest.cs" />
+    <Compile Include="V20240906\Models\CreateGatewayLoadBalancerResponse.cs" />
+    <Compile Include="V20240906\Models\CreateTargetGroupRequest.cs" />
+    <Compile Include="V20240906\Models\CreateTargetGroupResponse.cs" />
+    <Compile Include="V20240906\Models\DeleteGatewayLoadBalancerRequest.cs" />
+    <Compile Include="V20240906\Models\DeleteGatewayLoadBalancerResponse.cs" />
+    <Compile Include="V20240906\Models\DeleteTargetGroupsRequest.cs" />
+    <Compile Include="V20240906\Models\DeleteTargetGroupsResponse.cs" />
+    <Compile Include="V20240906\Models\DeregisterTargetGroupInstancesRequest.cs" />
+    <Compile Include="V20240906\Models\DeregisterTargetGroupInstancesResponse.cs" />
+    <Compile Include="V20240906\Models\DescribeGatewayLoadBalancersRequest.cs" />
+    <Compile Include="V20240906\Models\DescribeGatewayLoadBalancersResponse.cs" />
+    <Compile Include="V20240906\Models\DescribeTargetGroupInstanceStatusRequest.cs" />
+    <Compile Include="V20240906\Models\DescribeTargetGroupInstanceStatusResponse.cs" />
+    <Compile Include="V20240906\Models\DescribeTargetGroupInstancesRequest.cs" />
+    <Compile Include="V20240906\Models\DescribeTargetGroupInstancesResponse.cs" />
+    <Compile Include="V20240906\Models\DescribeTargetGroupListRequest.cs" />
+    <Compile Include="V20240906\Models\DescribeTargetGroupListResponse.cs" />
+    <Compile Include="V20240906\Models\DescribeTargetGroupsRequest.cs" />
+    <Compile Include="V20240906\Models\DescribeTargetGroupsResponse.cs" />
+    <Compile Include="V20240906\Models\DescribeTaskStatusRequest.cs" />
+    <Compile Include="V20240906\Models\DescribeTaskStatusResponse.cs" />
+    <Compile Include="V20240906\Models\DisassociateTargetGroupsRequest.cs" />
+    <Compile Include="V20240906\Models\DisassociateTargetGroupsResponse.cs" />
+    <Compile Include="V20240906\Models\Filter.cs" />
+    <Compile Include="V20240906\Models\GatewayLoadBalancer.cs" />
+    <Compile Include="V20240906\Models\InquirePriceCreateGatewayLoadBalancerRequest.cs" />
+    <Compile Include="V20240906\Models\InquirePriceCreateGatewayLoadBalancerResponse.cs" />
+    <Compile Include="V20240906\Models\ItemPrice.cs" />
+    <Compile Include="V20240906\Models\ModifyGatewayLoadBalancerAttributeRequest.cs" />
+    <Compile Include="V20240906\Models\ModifyGatewayLoadBalancerAttributeResponse.cs" />
+    <Compile Include="V20240906\Models\ModifyTargetGroupAttributeRequest.cs" />
+    <Compile Include="V20240906\Models\ModifyTargetGroupAttributeResponse.cs" />
+    <Compile Include="V20240906\Models\ModifyTargetGroupInstancesWeightRequest.cs" />
+    <Compile Include="V20240906\Models\ModifyTargetGroupInstancesWeightResponse.cs" />
+    <Compile Include="V20240906\Models\Price.cs" />
+    <Compile Include="V20240906\Models\RegisterTargetGroupInstancesRequest.cs" />
+    <Compile Include="V20240906\Models\RegisterTargetGroupInstancesResponse.cs" />
+    <Compile Include="V20240906\Models\TagInfo.cs" />
+    <Compile Include="V20240906\Models\TargetGroupAssociation.cs" />
+    <Compile Include="V20240906\Models\TargetGroupBackend.cs" />
+    <Compile Include="V20240906\Models\TargetGroupHealthCheck.cs" />
+    <Compile Include="V20240906\Models\TargetGroupInfo.cs" />
+    <Compile Include="V20240906\Models\TargetGroupInstance.cs" />
+    <Compile Include="V20240906\Models\TargetGroupInstanceStatus.cs" />
+  </ItemGroup>
+</Project>

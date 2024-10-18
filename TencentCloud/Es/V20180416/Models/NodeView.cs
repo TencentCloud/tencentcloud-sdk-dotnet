@@ -138,6 +138,20 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("CVMStatus")]
         public string CVMStatus{ get; set; }
 
+        /// <summary>
+        /// cvm绑定的置放群组的id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CVMDisasterRecoverGroupId")]
+        public string CVMDisasterRecoverGroupId{ get; set; }
+
+        /// <summary>
+        /// cvm绑定置放群组的状态。2: 已绑定；1: 绑定中；0: 未开启
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CVMDisasterRecoverGroupStatus")]
+        public long? CVMDisasterRecoverGroupStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +177,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "Hidden", this.Hidden);
             this.SetParamSimple(map, prefix + "IsCoordinationNode", this.IsCoordinationNode);
             this.SetParamSimple(map, prefix + "CVMStatus", this.CVMStatus);
+            this.SetParamSimple(map, prefix + "CVMDisasterRecoverGroupId", this.CVMDisasterRecoverGroupId);
+            this.SetParamSimple(map, prefix + "CVMDisasterRecoverGroupStatus", this.CVMDisasterRecoverGroupStatus);
         }
     }
 }

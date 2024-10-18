@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1106</VersionPrefix>
+    <VersionPrefix>3.0.1107</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -119,6 +119,8 @@
     <Compile Include="V20201016\Models\CreateLogsetResponse.cs" />
     <Compile Include="V20201016\Models\CreateMachineGroupRequest.cs" />
     <Compile Include="V20201016\Models\CreateMachineGroupResponse.cs" />
+    <Compile Include="V20201016\Models\CreateNoticeContentRequest.cs" />
+    <Compile Include="V20201016\Models\CreateNoticeContentResponse.cs" />
     <Compile Include="V20201016\Models\CreateScheduledSqlRequest.cs" />
     <Compile Include="V20201016\Models\CreateScheduledSqlResponse.cs" />
     <Compile Include="V20201016\Models\CreateShipperRequest.cs" />
@@ -165,6 +167,8 @@
     <Compile Include="V20201016\Models\DeleteMachineGroupInfoResponse.cs" />
     <Compile Include="V20201016\Models\DeleteMachineGroupRequest.cs" />
     <Compile Include="V20201016\Models\DeleteMachineGroupResponse.cs" />
+    <Compile Include="V20201016\Models\DeleteNoticeContentRequest.cs" />
+    <Compile Include="V20201016\Models\DeleteNoticeContentResponse.cs" />
     <Compile Include="V20201016\Models\DeleteScheduledSqlRequest.cs" />
     <Compile Include="V20201016\Models\DeleteScheduledSqlResponse.cs" />
     <Compile Include="V20201016\Models\DeleteShipperRequest.cs" />
@@ -217,6 +221,8 @@
     <Compile Include="V20201016\Models\DescribeMachineGroupsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeMachinesRequest.cs" />
     <Compile Include="V20201016\Models\DescribeMachinesResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeNoticeContentsRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeNoticeContentsResponse.cs" />
     <Compile Include="V20201016\Models\DescribePartitionsRequest.cs" />
     <Compile Include="V20201016\Models\DescribePartitionsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeScheduledSqlInfoRequest.cs" />
@@ -291,6 +297,8 @@
     <Compile Include="V20201016\Models\ModifyLogsetResponse.cs" />
     <Compile Include="V20201016\Models\ModifyMachineGroupRequest.cs" />
     <Compile Include="V20201016\Models\ModifyMachineGroupResponse.cs" />
+    <Compile Include="V20201016\Models\ModifyNoticeContentRequest.cs" />
+    <Compile Include="V20201016\Models\ModifyNoticeContentResponse.cs" />
     <Compile Include="V20201016\Models\ModifyScheduledSqlRequest.cs" />
     <Compile Include="V20201016\Models\ModifyScheduledSqlResponse.cs" />
     <Compile Include="V20201016\Models\ModifyShipperRequest.cs" />
@@ -300,6 +308,9 @@
     <Compile Include="V20201016\Models\MonitorTime.cs" />
     <Compile Include="V20201016\Models\MultiCondition.cs" />
     <Compile Include="V20201016\Models\MultiTopicSearchInformation.cs" />
+    <Compile Include="V20201016\Models\NoticeContent.cs" />
+    <Compile Include="V20201016\Models\NoticeContentInfo.cs" />
+    <Compile Include="V20201016\Models\NoticeContentTemplate.cs" />
     <Compile Include="V20201016\Models\NoticeReceiver.cs" />
     <Compile Include="V20201016\Models\NoticeRule.cs" />
     <Compile Include="V20201016\Models\OpenKafkaConsumerRequest.cs" />

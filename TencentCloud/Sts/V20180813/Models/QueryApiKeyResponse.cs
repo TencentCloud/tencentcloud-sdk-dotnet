@@ -25,7 +25,7 @@ namespace TencentCloud.Sts.V20180813.Models
     {
         
         /// <summary>
-        /// 密钥ID列表
+        /// 密钥ID列表。
         /// </summary>
         [JsonProperty("IdKeys")]
         public ApiKey[] IdKeys{ get; set; }

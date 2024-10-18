@@ -34,13 +34,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string LogType{ get; set; }
 
         /// <summary>
-        /// 绑定主机quuid列表
+        /// 绑定列表
         /// </summary>
         [JsonProperty("BindList")]
         public string[] BindList{ get; set; }
 
         /// <summary>
-        /// 待解绑主机quuid列表
+        /// 待解绑列表，节点范围为全部时，含义为需剔除资产列表
         /// </summary>
         [JsonProperty("UnBindList")]
         public string[] UnBindList{ get; set; }
@@ -53,6 +53,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
 
+        /// <summary>
+        /// 日志节点范围类型,0自选 1全部
+        /// </summary>
+        [JsonProperty("RangeType")]
+        public long? RangeType{ get; set; }
+
+        /// <summary>
+        /// 新增资产是否自动加入，节点范围为全部时生效
+        /// </summary>
+        [JsonProperty("AutoJoin")]
+        public bool? AutoJoin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -63,6 +75,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamArraySimple(map, prefix + "BindList.", this.BindList);
             this.SetParamArraySimple(map, prefix + "UnBindList.", this.UnBindList);
             this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
+            this.SetParamSimple(map, prefix + "RangeType", this.RangeType);
+            this.SetParamSimple(map, prefix + "AutoJoin", this.AutoJoin);
         }
     }
 }

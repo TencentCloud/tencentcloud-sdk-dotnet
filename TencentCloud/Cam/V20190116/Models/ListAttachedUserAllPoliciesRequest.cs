@@ -25,31 +25,31 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 目标用户ID
+        /// 目标用户Uin
         /// </summary>
         [JsonProperty("TargetUin")]
         public ulong? TargetUin{ get; set; }
 
         /// <summary>
-        /// 每页数量，必须大于 0 且小于或等于 200
+        /// 每页数量，必须大于 0 且小于等于 200。
         /// </summary>
         [JsonProperty("Rp")]
         public ulong? Rp{ get; set; }
 
         /// <summary>
-        /// 页码，从 1开始，不能大于 200
+        /// 页码，从 1开始，不能大于 200。
         /// </summary>
         [JsonProperty("Page")]
         public ulong? Page{ get; set; }
 
         /// <summary>
-        /// 0:返回直接关联和随组关联策略，1:只返回直接关联策略，2:只返回随组关联策略
+        /// 关联类型。0:返回直接关联和随组关联策略，1:只返回直接关联策略，2:只返回随组关联策略。
         /// </summary>
         [JsonProperty("AttachType")]
         public ulong? AttachType{ get; set; }
 
         /// <summary>
-        /// 策略类型
+        /// 策略类型。1表示自定义策略，2表示预设策略。
         /// </summary>
         [JsonProperty("StrategyType")]
         public ulong? StrategyType{ get; set; }

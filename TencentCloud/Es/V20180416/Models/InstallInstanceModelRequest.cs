@@ -31,7 +31,7 @@ namespace TencentCloud.Es.V20180416.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 客户上传到自己cos的地址列表
+        /// 客户上传到cos的模型地址，单次请求限制一个。cos文件为压缩文件，格式包括：zip、tgz和tar.gz
         /// </summary>
         [JsonProperty("UsrCosModelUrlList")]
         public string[] UsrCosModelUrlList{ get; set; }

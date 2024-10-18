@@ -62,6 +62,12 @@ namespace TencentCloud.Iss.V20230517.Models
         [JsonProperty("StreamType")]
         public string StreamType{ get; set; }
 
+        /// <summary>
+        /// 录像补录模式（0:不启用，1:启用）
+        /// </summary>
+        [JsonProperty("RepairMode")]
+        public long? RepairMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +80,7 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "Describe", this.Describe);
             this.SetParamObj(map, prefix + "LifeCycle.", this.LifeCycle);
             this.SetParamSimple(map, prefix + "StreamType", this.StreamType);
+            this.SetParamSimple(map, prefix + "RepairMode", this.RepairMode);
         }
     }
 }

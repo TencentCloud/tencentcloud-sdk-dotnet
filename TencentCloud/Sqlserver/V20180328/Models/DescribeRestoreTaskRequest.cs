@@ -90,6 +90,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }
 
+        /// <summary>
+        /// 回档异步任务ID
+        /// </summary>
+        [JsonProperty("FlowId")]
+        public long? FlowId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
             this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
         }
     }
 }

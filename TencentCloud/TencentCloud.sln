@@ -235,6 +235,8 @@ Project("{8835FF7C-F4DE-351B-9959-9F9646B62441}") = "TencentCloudGs", "TencentCl
 EndProject
 Project("{D9E9460D-61B2-3328-83C0-53F617E11D0C}") = "TencentCloudGse", "TencentCloud\Gse\TencentCloudGse.csproj", "{D9E9460D-61B2-3328-83C0-53F617E11D0C}"
 EndProject
+Project("{95F21925-9632-34EF-BCD4-42157B964E01}") = "TencentCloudGwlb", "TencentCloud\Gwlb\TencentCloudGwlb.csproj", "{95F21925-9632-34EF-BCD4-42157B964E01}"
+EndProject
 Project("{0A87E777-5ACB-3D42-91C0-53FA1A108D2B}") = "TencentCloudHabo", "TencentCloud\Habo\TencentCloudHabo.csproj", "{0A87E777-5ACB-3D42-91C0-53FA1A108D2B}"
 EndProject
 Project("{A7008F4E-5673-33C5-B938-C6F9D4CCFECA}") = "TencentCloudHai", "TencentCloud\Hai\TencentCloudHai.csproj", "{A7008F4E-5673-33C5-B938-C6F9D4CCFECA}"
@@ -991,6 +993,10 @@ Global
 		{D9E9460D-61B2-3328-83C0-53F617E11D0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9E9460D-61B2-3328-83C0-53F617E11D0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9E9460D-61B2-3328-83C0-53F617E11D0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95F21925-9632-34EF-BCD4-42157B964E01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95F21925-9632-34EF-BCD4-42157B964E01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95F21925-9632-34EF-BCD4-42157B964E01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95F21925-9632-34EF-BCD4-42157B964E01}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0A87E777-5ACB-3D42-91C0-53FA1A108D2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0A87E777-5ACB-3D42-91C0-53FA1A108D2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A87E777-5ACB-3D42-91C0-53FA1A108D2B}.Release|Any CPU.ActiveCfg = Release|Any CPU

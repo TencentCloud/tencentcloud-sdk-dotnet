@@ -31,7 +31,7 @@ namespace TencentCloud.Sms.V20210111.Models
         public string SmsSdkAppId{ get; set; }
 
         /// <summary>
-        /// 发送短信返回的流水号。
+        /// 发送短信返回的流水号。对应SendSms接口返回的SendStatusSet参数中的SerialNo字段。 
         /// </summary>
         [JsonProperty("SerialNo")]
         public string SerialNo{ get; set; }

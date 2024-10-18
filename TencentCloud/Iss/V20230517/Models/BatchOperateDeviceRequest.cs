@@ -31,7 +31,7 @@ namespace TencentCloud.Iss.V20230517.Models
         public string[] DeviceIds{ get; set; }
 
         /// <summary>
-        /// 操作命令（enable：启用；disable：禁用；delete：删除；upgrade：固件升级；reset：恢复出厂设置；reboot：重启）
+        /// 操作命令（enable：启用；disable：禁用；delete：删除；sync：同步设备通道；upgrade：固件升级；reset：恢复出厂设置；reboot：重启）
         /// </summary>
         [JsonProperty("Cmd")]
         public string Cmd{ get; set; }

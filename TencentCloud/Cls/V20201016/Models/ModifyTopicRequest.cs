@@ -99,6 +99,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("PartitionCount")]
         public ulong? PartitionCount{ get; set; }
 
+        /// <summary>
+        /// 取消切换存储任务的id
+        /// </summary>
+        [JsonProperty("CancelTopicAsyncTaskID")]
+        public string CancelTopicAsyncTaskID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -117,6 +123,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
             this.SetParamObj(map, prefix + "Extends.", this.Extends);
             this.SetParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
+            this.SetParamSimple(map, prefix + "CancelTopicAsyncTaskID", this.CancelTopicAsyncTaskID);
         }
     }
 }

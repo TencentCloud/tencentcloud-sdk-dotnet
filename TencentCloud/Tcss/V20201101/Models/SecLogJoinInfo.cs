@@ -52,6 +52,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
 
+        /// <summary>
+        /// 已接入集群数量
+        /// </summary>
+        [JsonProperty("ClusterCount")]
+        public ulong? ClusterCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +68,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "SuperNodeCount", this.SuperNodeCount);
             this.SetParamSimple(map, prefix + "IsJoined", this.IsJoined);
             this.SetParamSimple(map, prefix + "LogType", this.LogType);
+            this.SetParamSimple(map, prefix + "ClusterCount", this.ClusterCount);
         }
     }
 }

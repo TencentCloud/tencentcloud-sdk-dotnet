@@ -151,6 +151,13 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("IsNewAction")]
         public bool? IsNewAction{ get; set; }
 
+        /// <summary>
+        /// 对象类型ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ObjectTypeId")]
+        public long? ObjectTypeId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +184,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "ObjectType", this.ObjectType);
             this.SetParamArraySimple(map, prefix + "MetricIdList.", this.MetricIdList);
             this.SetParamSimple(map, prefix + "IsNewAction", this.IsNewAction);
+            this.SetParamSimple(map, prefix + "ObjectTypeId", this.ObjectTypeId);
         }
     }
 }

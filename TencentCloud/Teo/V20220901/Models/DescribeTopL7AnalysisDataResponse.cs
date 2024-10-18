@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 七层流量前topN数据列表。
+        /// 七层访问数据按照 MetricName 指定统计维度的前 topN 数据列表。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]

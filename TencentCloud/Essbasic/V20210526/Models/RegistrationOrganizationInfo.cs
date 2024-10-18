@@ -128,6 +128,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("PowerOfAttorneys")]
         public string[] PowerOfAttorneys{ get; set; }
 
+        /// <summary>
+        /// 认证完之后的H5页面的跳转链接，最大长度1000个字符。链接类型请参考 [跳转电子签H5](https://qian.tencent.com/developers/company/openqianh5/)
+        /// </summary>
+        [JsonProperty("AutoJumpUrl")]
+        public string AutoJumpUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -147,6 +153,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "AdminIdCardNumber", this.AdminIdCardNumber);
             this.SetParamSimple(map, prefix + "BusinessLicense", this.BusinessLicense);
             this.SetParamArraySimple(map, prefix + "PowerOfAttorneys.", this.PowerOfAttorneys);
+            this.SetParamSimple(map, prefix + "AutoJumpUrl", this.AutoJumpUrl);
         }
     }
 }

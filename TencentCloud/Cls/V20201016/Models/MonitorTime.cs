@@ -41,6 +41,14 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Time")]
         public long? Time{ get; set; }
 
+        /// <summary>
+        /// 执行的周期cron表达式。示例：`"*/1 * * * *"` 从左到右每个field的含义 Minutes field, Hours field,Day of month field,Month field,Day of week field， 不支持秒级别。
+        /// 当type为`Cron`时，CronExpression字段生效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CronExpression")]
+        public string CronExpression{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -49,6 +57,7 @@ namespace TencentCloud.Cls.V20201016.Models
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Time", this.Time);
+            this.SetParamSimple(map, prefix + "CronExpression", this.CronExpression);
         }
     }
 }

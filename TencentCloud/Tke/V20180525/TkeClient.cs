@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1106";
+       private const string sdkVersion = "SDK_NET_3.0.1107";
 
         /// <summary>
         /// Client constructor.
@@ -1583,6 +1583,27 @@ namespace TencentCloud.Tke.V20180525
         public DescribeBackupStorageLocationsResponse DescribeBackupStorageLocationsSync(DescribeBackupStorageLocationsRequest req)
         {
             return InternalRequestAsync<DescribeBackupStorageLocationsResponse>(req, "DescribeBackupStorageLocations")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询批量修改标签状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchModifyTagsStatusRequest"/></param>
+        /// <returns><see cref="DescribeBatchModifyTagsStatusResponse"/></returns>
+        public Task<DescribeBatchModifyTagsStatusResponse> DescribeBatchModifyTagsStatus(DescribeBatchModifyTagsStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeBatchModifyTagsStatusResponse>(req, "DescribeBatchModifyTagsStatus");
+        }
+
+        /// <summary>
+        /// 查询批量修改标签状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchModifyTagsStatusRequest"/></param>
+        /// <returns><see cref="DescribeBatchModifyTagsStatusResponse"/></returns>
+        public DescribeBatchModifyTagsStatusResponse DescribeBatchModifyTagsStatusSync(DescribeBatchModifyTagsStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeBatchModifyTagsStatusResponse>(req, "DescribeBatchModifyTagsStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4019,6 +4040,27 @@ namespace TencentCloud.Tke.V20180525
         public ModifyClusterRuntimeConfigResponse ModifyClusterRuntimeConfigSync(ModifyClusterRuntimeConfigRequest req)
         {
             return InternalRequestAsync<ModifyClusterRuntimeConfigResponse>(req, "ModifyClusterRuntimeConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改集群标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterTagsRequest"/></param>
+        /// <returns><see cref="ModifyClusterTagsResponse"/></returns>
+        public Task<ModifyClusterTagsResponse> ModifyClusterTags(ModifyClusterTagsRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterTagsResponse>(req, "ModifyClusterTags");
+        }
+
+        /// <summary>
+        /// 修改集群标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterTagsRequest"/></param>
+        /// <returns><see cref="ModifyClusterTagsResponse"/></returns>
+        public ModifyClusterTagsResponse ModifyClusterTagsSync(ModifyClusterTagsRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterTagsResponse>(req, "ModifyClusterTags")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

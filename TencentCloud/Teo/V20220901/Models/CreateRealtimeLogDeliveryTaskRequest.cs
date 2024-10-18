@@ -80,7 +80,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string[] Fields{ get; set; }
 
         /// <summary>
-        /// 投递的自定义字段列表，支持在 HTTP 请求头、响应头、Cookie 中提取指定字段值。自定义字段名称不能重复，且最多不能超过 200 个字段。
+        /// 投递的自定义字段列表，支持在 HTTP 请求头、响应头、Cookie、请求正文中提取指定内容。自定义字段名称不能重复，且最多不能超过 200 个字段。单个实时日志推送任务最多添加 5 个请求正文类型的自定义字段。目前仅站点加速日志（LogType=domain）支持添加自定义字段。
         /// </summary>
         [JsonProperty("CustomFields")]
         public CustomField[] CustomFields{ get; set; }

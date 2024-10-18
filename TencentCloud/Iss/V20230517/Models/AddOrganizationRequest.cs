@@ -25,7 +25,7 @@ namespace TencentCloud.Iss.V20230517.Models
     {
         
         /// <summary>
-        /// 组织名称（仅支持中文、英文、数字、_、-的组合，长度不超过16个字符，且组织名称不能重复）
+        /// 组织名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过64位，且组织名称不能重复）
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

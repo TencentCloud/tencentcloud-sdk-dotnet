@@ -24,12 +24,22 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     public class DescribeBackUpSchedulesRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 任务类型
+        /// 0-不限制，或使用TypeFilters过滤；
+        /// 1-备份恢复（包括周期备份和一次性备份）；
+        /// 2-数据迁移（包括跨集群迁移和cos迁移）
+        /// </summary>
+        [JsonProperty("ApplicationType")]
+        public long? ApplicationType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
         }
     }
 }

@@ -31,6 +31,15 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
+        /// 任务类型：
+        /// 0-不限制，或使用TypeFilters过滤；
+        /// 1-备份恢复（包括周期备份和一次性备份）；
+        /// 2-数据迁移（包括跨集群迁移和cos迁移）	
+        /// </summary>
+        [JsonProperty("ApplicationType")]
+        public long? ApplicationType{ get; set; }
+
+        /// <summary>
         /// 分页大小
         /// </summary>
         [JsonProperty("PageSize")]
@@ -67,6 +76,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
             this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);

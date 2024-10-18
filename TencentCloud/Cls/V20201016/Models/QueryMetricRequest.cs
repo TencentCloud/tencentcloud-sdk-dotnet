@@ -37,7 +37,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 查询时间，秒级Unix时间戳	
+        /// 查询时间，秒级Unix时间戳。为空时代表当前时间戳。
         /// </summary>
         [JsonProperty("Time")]
         public ulong? Time{ get; set; }

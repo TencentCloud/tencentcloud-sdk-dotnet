@@ -57,6 +57,12 @@ namespace TencentCloud.Iss.V20230517.Models
         [JsonProperty("OrganizationName")]
         public string OrganizationName{ get; set; }
 
+        /// <summary>
+        /// 通道所属设备的接入协议类型
+        /// </summary>
+        [JsonProperty("AccessProtocol")]
+        public long? AccessProtocol{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +74,7 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
             this.SetParamSimple(map, prefix + "ChannelName", this.ChannelName);
             this.SetParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
+            this.SetParamSimple(map, prefix + "AccessProtocol", this.AccessProtocol);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Iss.V20230517.Models
     {
         
         /// <summary>
-        /// 任务名称，仅支持中文、英文、数字、_、-，长度不超过32个字符，模板名称全局唯一，不能为空，不能重复
+        /// 任务名称，仅支持中文、英文、数字、_、-，长度不超过32个字符，名称全局唯一，不能为空，不能重复
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }

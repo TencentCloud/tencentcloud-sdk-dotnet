@@ -76,8 +76,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 设置用户开通自动签时是否绑定个人自动签账号许可。
         /// 
-        /// <ul><li>**0**: (默认) 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
-        /// <li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
+        /// <ul><li><b>1</b>: (默认)不绑定自动签账号许可开通，开通后一直有效,   后续使用合同份额进行合同发起</li></ul>
         /// </summary>
         [JsonProperty("LicenseType")]
         public long? LicenseType{ get; set; }

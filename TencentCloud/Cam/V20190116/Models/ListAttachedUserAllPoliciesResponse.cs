@@ -25,13 +25,13 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 策略列表数据
+        /// 策略列表数据。
         /// </summary>
         [JsonProperty("PolicyList")]
         public AttachedUserPolicy[] PolicyList{ get; set; }
 
         /// <summary>
-        /// 策略总数
+        /// 策略总数。
         /// </summary>
         [JsonProperty("TotalNum")]
         public ulong? TotalNum{ get; set; }

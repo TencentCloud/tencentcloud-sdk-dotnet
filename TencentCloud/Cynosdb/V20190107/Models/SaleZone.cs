@@ -77,6 +77,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("IsWholeRdmaZone")]
         public string IsWholeRdmaZone{ get; set; }
 
+        /// <summary>
+        /// 当前可用区是否允许新购集群，1:允许，0:不允许
+        /// </summary>
+        [JsonProperty("IsSupportCreateCluster")]
+        public long? IsSupportCreateCluster{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -91,6 +97,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "PhysicalZone", this.PhysicalZone);
             this.SetParamSimple(map, prefix + "HasPermission", this.HasPermission);
             this.SetParamSimple(map, prefix + "IsWholeRdmaZone", this.IsWholeRdmaZone);
+            this.SetParamSimple(map, prefix + "IsSupportCreateCluster", this.IsSupportCreateCluster);
         }
     }
 }

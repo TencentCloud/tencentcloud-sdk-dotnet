@@ -31,7 +31,7 @@ namespace TencentCloud.Iss.V20230517.Models
         public string OrganizationId{ get; set; }
 
         /// <summary>
-        /// 组织名称
+        /// 组织名称，支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过64位，且组织名称不能重复
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

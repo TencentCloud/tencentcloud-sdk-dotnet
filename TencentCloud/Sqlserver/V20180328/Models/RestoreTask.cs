@@ -102,6 +102,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
+        /// <summary>
+        /// 回档异步任务ID
+        /// </summary>
+        [JsonProperty("FlowId")]
+        public long? FlowId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -119,6 +125,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
         }
     }
 }

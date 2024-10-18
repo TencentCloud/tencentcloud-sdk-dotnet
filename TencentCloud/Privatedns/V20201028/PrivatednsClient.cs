@@ -28,7 +28,7 @@ namespace TencentCloud.Privatedns.V20201028
 
        private const string endpoint = "privatedns.tencentcloudapi.com";
        private const string version = "2020-10-28";
-       private const string sdkVersion = "SDK_NET_3.0.1106";
+       private const string sdkVersion = "SDK_NET_3.0.1107";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Privatedns.V20201028
         public AddSpecifyPrivateZoneVpcResponse AddSpecifyPrivateZoneVpcSync(AddSpecifyPrivateZoneVpcRequest req)
         {
             return InternalRequestAsync<AddSpecifyPrivateZoneVpcResponse>(req, "AddSpecifyPrivateZoneVpc")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建终端节点
+        /// </summary>
+        /// <param name="req"><see cref="CreateEndPointRequest"/></param>
+        /// <returns><see cref="CreateEndPointResponse"/></returns>
+        public Task<CreateEndPointResponse> CreateEndPoint(CreateEndPointRequest req)
+        {
+            return InternalRequestAsync<CreateEndPointResponse>(req, "CreateEndPoint");
+        }
+
+        /// <summary>
+        /// 创建终端节点
+        /// </summary>
+        /// <param name="req"><see cref="CreateEndPointRequest"/></param>
+        /// <returns><see cref="CreateEndPointResponse"/></returns>
+        public CreateEndPointResponse CreateEndPointSync(CreateEndPointRequest req)
+        {
+            return InternalRequestAsync<CreateEndPointResponse>(req, "CreateEndPoint")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

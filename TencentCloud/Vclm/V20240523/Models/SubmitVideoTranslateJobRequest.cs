@@ -57,6 +57,12 @@ namespace TencentCloud.Vclm.V20240523.Models
         public string AudioUrl{ get; set; }
 
         /// <summary>
+        /// 是否需要去除VideoUrl或AudioUrl中背景音，取值范围：0-不需要，1-需要，默认0 。
+        /// </summary>
+        [JsonProperty("RemoveVocal")]
+        public long? RemoveVocal{ get; set; }
+
+        /// <summary>
         /// 是否需要确认翻译结果0：不需要，1：需要
         /// </summary>
         [JsonProperty("Confirm")]
@@ -88,6 +94,7 @@ namespace TencentCloud.Vclm.V20240523.Models
             this.SetParamSimple(map, prefix + "SrcLang", this.SrcLang);
             this.SetParamSimple(map, prefix + "DstLang", this.DstLang);
             this.SetParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
+            this.SetParamSimple(map, prefix + "RemoveVocal", this.RemoveVocal);
             this.SetParamSimple(map, prefix + "Confirm", this.Confirm);
             this.SetParamSimple(map, prefix + "LipSync", this.LipSync);
             this.SetParamSimple(map, prefix + "VoiceType", this.VoiceType);

@@ -28,7 +28,7 @@ namespace TencentCloud.Dc.V20180410
 
        private const string endpoint = "dc.tencentcloudapi.com";
        private const string version = "2018-04-10";
-       private const string sdkVersion = "SDK_NET_3.0.1106";
+       private const string sdkVersion = "SDK_NET_3.0.1107";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Dc.V20180410
         public ApplyInternetAddressResponse ApplyInternetAddressSync(ApplyInternetAddressRequest req)
         {
             return InternalRequestAsync<ApplyInternetAddressResponse>(req, "ApplyInternetAddress")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建敏捷上云服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudAttachServiceRequest"/></param>
+        /// <returns><see cref="CreateCloudAttachServiceResponse"/></returns>
+        public Task<CreateCloudAttachServiceResponse> CreateCloudAttachService(CreateCloudAttachServiceRequest req)
+        {
+            return InternalRequestAsync<CreateCloudAttachServiceResponse>(req, "CreateCloudAttachService");
+        }
+
+        /// <summary>
+        /// 创建敏捷上云服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudAttachServiceRequest"/></param>
+        /// <returns><see cref="CreateCloudAttachServiceResponse"/></returns>
+        public CreateCloudAttachServiceResponse CreateCloudAttachServiceSync(CreateCloudAttachServiceRequest req)
+        {
+            return InternalRequestAsync<CreateCloudAttachServiceResponse>(req, "CreateCloudAttachService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

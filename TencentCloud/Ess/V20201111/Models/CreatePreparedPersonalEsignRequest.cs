@@ -83,7 +83,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string Mobile{ get; set; }
 
         /// <summary>
-        /// 是否开通自动签，该功能需联系运营工作人员开通后使用
+        /// 此字段已废弃，请勿继续使用。
         /// </summary>
         [JsonProperty("EnableAutoSign")]
         public bool? EnableAutoSign{ get; set; }

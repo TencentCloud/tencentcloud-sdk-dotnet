@@ -37,25 +37,25 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// NAT网关最大外网出带宽(单位:Mbps)，支持的参数值：`20, 50, 100, 200, 500, 1000, 2000, 5000`，默认: `100Mbps`。
+        /// NAT网关最大外网出带宽(单位：Mbps)，支持的参数值：20, 50, 100, 200, 500, 1000, 2000, 5000，默认: 100Mbps。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为5000Mbps。
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public ulong? InternetMaxBandwidthOut{ get; set; }
 
         /// <summary>
-        /// NAT网关并发连接上限，支持参数值：`1000000、3000000、10000000`，默认值为`100000`。
+        /// NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为100000。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。
         /// </summary>
         [JsonProperty("MaxConcurrentConnection")]
         public ulong? MaxConcurrentConnection{ get; set; }
 
         /// <summary>
-        /// 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP，其中AddressCount和PublicAddresses至少传递一个。
+        /// 新建弹性公网IP个数，系统会按您的要求创建对应数量的弹性公网IP，其中AddressCount和PublicAddresses两个参数至少填写一个。
         /// </summary>
         [JsonProperty("AddressCount")]
         public ulong? AddressCount{ get; set; }
 
         /// <summary>
-        /// 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。
+        /// 绑定NAT网关的已有弹性公网IP数组，其中AddressCount和PublicAddresses两个参数至少填写一个。 示例值：["139.199.232.119"]
         /// </summary>
         [JsonProperty("PublicIpAddresses")]
         public string[] PublicIpAddresses{ get; set; }
@@ -73,13 +73,14 @@ namespace TencentCloud.Vpc.V20170312.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// NAT网关所属子网
+        /// NAT网关所属子网，已废弃
         /// </summary>
         [JsonProperty("SubnetId")]
+        [System.Obsolete]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+        /// 绑定NAT网关的弹性公网IP带宽值（单位：Mbps）。不填写此参数时：则该参数默认为弹性公网IP的带宽值，部分用户默认为该用户类型的弹性公网IP的带宽上限。
         /// </summary>
         [JsonProperty("StockPublicIpAddressesBandwidthOut")]
         public ulong? StockPublicIpAddressesBandwidthOut{ get; set; }
@@ -97,7 +98,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public bool? PublicIpFromSameZone{ get; set; }
 
         /// <summary>
-        /// NAT网关大版本号，1是传统型，2是标准型，默认是1
+        /// NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关，默认值是1。
         /// </summary>
         [JsonProperty("NatProductVersion")]
         public ulong? NatProductVersion{ get; set; }

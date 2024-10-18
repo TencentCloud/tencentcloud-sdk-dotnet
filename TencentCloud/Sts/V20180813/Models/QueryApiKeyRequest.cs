@@ -25,7 +25,7 @@ namespace TencentCloud.Sts.V20180813.Models
     {
         
         /// <summary>
-        /// 待查询的账号(不填默认查当前账号)
+        /// 待查询的账号uin(不填默认查当前账号uin)
         /// </summary>
         [JsonProperty("TargetUin")]
         public ulong? TargetUin{ get; set; }

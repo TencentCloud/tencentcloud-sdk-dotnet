@@ -31,7 +31,7 @@ namespace TencentCloud.Iss.V20230517.Models
         public string DeviceId{ get; set; }
 
         /// <summary>
-        /// 设备名称（仅支持中文、英文、数字、_、-，长度不超过32个字符）
+        /// 设备名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位）
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Iss.V20230517.Models
         public long? TransportProtocol{ get; set; }
 
         /// <summary>
-        /// 设备密码（仅国标，网关设备支持）
+        /// 设备密码（仅国标，网关设备支持，长度不超过 64 位）
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// 设备描述（仅支持中文、英文、数字、_、-，长度不超过128位）
+        /// 设备描述（长度不超过128位）
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

@@ -183,6 +183,27 @@ namespace TencentCloud.Faceid.V20180301.Models
         public DetectDetail[] LivenessDetail{ get; set; }
 
         /// <summary>
+        /// 描述当前请求活体阶段被拒绝的详细原因，详情如下：
+        /// 01-用户全程闭眼
+        /// 02-用户未完成指定动作
+        /// 03-疑似翻拍攻击
+        /// 04-疑似合成攻击
+        /// 05-疑似黑产模版
+        /// 06-疑似存在水印
+        /// 07-反光校验未通过
+        /// 08-疑似中途换人
+        /// 09-人脸质量过差
+        /// 10-距离校验不通过
+        /// 11-疑似对抗样本攻击
+        /// 12-嘴巴区域疑似存在攻击痕迹
+        /// 13-眼睛区域疑似存在攻击痕迹
+        /// 14-眼睛或嘴巴被遮挡
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LivenessInfoTag")]
+        public string[] LivenessInfoTag{ get; set; }
+
+        /// <summary>
         /// 手机号码。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -268,6 +289,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "Location", this.Location);
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamArrayObj(map, prefix + "LivenessDetail.", this.LivenessDetail);
+            this.SetParamArraySimple(map, prefix + "LivenessInfoTag.", this.LivenessInfoTag);
             this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
             this.SetParamSimple(map, prefix + "CompareLibType", this.CompareLibType);
             this.SetParamSimple(map, prefix + "LivenessMode", this.LivenessMode);

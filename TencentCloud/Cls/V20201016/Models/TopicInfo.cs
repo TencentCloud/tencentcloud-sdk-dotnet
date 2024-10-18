@@ -157,6 +157,27 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Extends")]
         public TopicExtendInfo Extends{ get; set; }
 
+        /// <summary>
+        /// 异步迁移任务ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TopicAsyncTaskID")]
+        public string TopicAsyncTaskID{ get; set; }
+
+        /// <summary>
+        /// 异步迁移状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MigrationStatus")]
+        public ulong? MigrationStatus{ get; set; }
+
+        /// <summary>
+        /// 异步迁移完成后，预计生效日期
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EffectiveDate")]
+        public string EffectiveDate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -182,6 +203,9 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "BizType", this.BizType);
             this.SetParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
             this.SetParamObj(map, prefix + "Extends.", this.Extends);
+            this.SetParamSimple(map, prefix + "TopicAsyncTaskID", this.TopicAsyncTaskID);
+            this.SetParamSimple(map, prefix + "MigrationStatus", this.MigrationStatus);
+            this.SetParamSimple(map, prefix + "EffectiveDate", this.EffectiveDate);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1106";
+       private const string sdkVersion = "SDK_NET_3.0.1107";
 
         /// <summary>
         /// Client constructor.
@@ -495,6 +495,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 该接口用于创建通知内容。
+        /// </summary>
+        /// <param name="req"><see cref="CreateNoticeContentRequest"/></param>
+        /// <returns><see cref="CreateNoticeContentResponse"/></returns>
+        public Task<CreateNoticeContentResponse> CreateNoticeContent(CreateNoticeContentRequest req)
+        {
+            return InternalRequestAsync<CreateNoticeContentResponse>(req, "CreateNoticeContent");
+        }
+
+        /// <summary>
+        /// 该接口用于创建通知内容。
+        /// </summary>
+        /// <param name="req"><see cref="CreateNoticeContentRequest"/></param>
+        /// <returns><see cref="CreateNoticeContentResponse"/></returns>
+        public CreateNoticeContentResponse CreateNoticeContentSync(CreateNoticeContentRequest req)
+        {
+            return InternalRequestAsync<CreateNoticeContentResponse>(req, "CreateNoticeContent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于创建定时SQL分析任务
         /// </summary>
         /// <param name="req"><see cref="CreateScheduledSqlRequest"/></param>
@@ -890,6 +911,27 @@ namespace TencentCloud.Cls.V20201016
         public DeleteMachineGroupInfoResponse DeleteMachineGroupInfoSync(DeleteMachineGroupInfoRequest req)
         {
             return InternalRequestAsync<DeleteMachineGroupInfoResponse>(req, "DeleteMachineGroupInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于删除通知内容配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNoticeContentRequest"/></param>
+        /// <returns><see cref="DeleteNoticeContentResponse"/></returns>
+        public Task<DeleteNoticeContentResponse> DeleteNoticeContent(DeleteNoticeContentRequest req)
+        {
+            return InternalRequestAsync<DeleteNoticeContentResponse>(req, "DeleteNoticeContent");
+        }
+
+        /// <summary>
+        /// 该接口用于删除通知内容配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNoticeContentRequest"/></param>
+        /// <returns><see cref="DeleteNoticeContentResponse"/></returns>
+        public DeleteNoticeContentResponse DeleteNoticeContentSync(DeleteNoticeContentRequest req)
+        {
+            return InternalRequestAsync<DeleteNoticeContentResponse>(req, "DeleteNoticeContent")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1442,6 +1484,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 获取通知内容列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNoticeContentsRequest"/></param>
+        /// <returns><see cref="DescribeNoticeContentsResponse"/></returns>
+        public Task<DescribeNoticeContentsResponse> DescribeNoticeContents(DescribeNoticeContentsRequest req)
+        {
+            return InternalRequestAsync<DescribeNoticeContentsResponse>(req, "DescribeNoticeContents");
+        }
+
+        /// <summary>
+        /// 获取通知内容列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNoticeContentsRequest"/></param>
+        /// <returns><see cref="DescribeNoticeContentsResponse"/></returns>
+        public DescribeNoticeContentsResponse DescribeNoticeContentsSync(DescribeNoticeContentsRequest req)
+        {
+            return InternalRequestAsync<DescribeNoticeContentsResponse>(req, "DescribeNoticeContents")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口已废弃，如需获取分区数量，请使用DescribeTopics接口。
         /// </summary>
         /// <param name="req"><see cref="DescribePartitionsRequest"/></param>
@@ -1904,6 +1967,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 该接口用于修改通知内容配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNoticeContentRequest"/></param>
+        /// <returns><see cref="ModifyNoticeContentResponse"/></returns>
+        public Task<ModifyNoticeContentResponse> ModifyNoticeContent(ModifyNoticeContentRequest req)
+        {
+            return InternalRequestAsync<ModifyNoticeContentResponse>(req, "ModifyNoticeContent");
+        }
+
+        /// <summary>
+        /// 该接口用于修改通知内容配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNoticeContentRequest"/></param>
+        /// <returns><see cref="ModifyNoticeContentResponse"/></returns>
+        public ModifyNoticeContentResponse ModifyNoticeContentSync(ModifyNoticeContentRequest req)
+        {
+            return InternalRequestAsync<ModifyNoticeContentResponse>(req, "ModifyNoticeContent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于修改定时SQL分析任务
         /// </summary>
         /// <param name="req"><see cref="ModifyScheduledSqlRequest"/></param>
@@ -2009,7 +2093,8 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 查询指定时刻指标的最新值
+        /// 查询指定时刻指标的最新值。
+        /// 如果该时刻向前推5分钟内均无指标数据，则无相应的查询结果。
         /// </summary>
         /// <param name="req"><see cref="QueryMetricRequest"/></param>
         /// <returns><see cref="QueryMetricResponse"/></returns>
@@ -2019,7 +2104,8 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 查询指定时刻指标的最新值
+        /// 查询指定时刻指标的最新值。
+        /// 如果该时刻向前推5分钟内均无指标数据，则无相应的查询结果。
         /// </summary>
         /// <param name="req"><see cref="QueryMetricRequest"/></param>
         /// <returns><see cref="QueryMetricResponse"/></returns>

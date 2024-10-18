@@ -72,6 +72,12 @@ namespace TencentCloud.Iss.V20230517.Models
         [JsonProperty("OrganizationId")]
         public string[] OrganizationId{ get; set; }
 
+        /// <summary>
+        /// 录像补录模式（0:不启用，1:启用）
+        /// </summary>
+        [JsonProperty("RepairMode")]
+        public long? RepairMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamArrayObj(map, prefix + "Add.", this.Add);
             this.SetParamArraySimple(map, prefix + "Del.", this.Del);
             this.SetParamArraySimple(map, prefix + "OrganizationId.", this.OrganizationId);
+            this.SetParamSimple(map, prefix + "RepairMode", this.RepairMode);
         }
     }
 }

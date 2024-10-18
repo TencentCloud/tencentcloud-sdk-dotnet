@@ -90,6 +90,25 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ClusterMainAddress")]
         public string ClusterMainAddress{ get; set; }
 
+        /// <summary>
+        /// 容器数
+        /// </summary>
+        [JsonProperty("ContainerCnt")]
+        public ulong? ContainerCnt{ get; set; }
+
+        /// <summary>
+        /// 集群类型
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public string ClusterType{ get; set; }
+
+        /// <summary>
+        /// 集群状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterStatus")]
+        public string ClusterStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -106,6 +125,9 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "JoinState", this.JoinState);
             this.SetParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
             this.SetParamSimple(map, prefix + "ClusterMainAddress", this.ClusterMainAddress);
+            this.SetParamSimple(map, prefix + "ContainerCnt", this.ContainerCnt);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
+            this.SetParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
         }
     }
 }

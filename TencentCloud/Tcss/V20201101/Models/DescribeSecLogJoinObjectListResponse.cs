@@ -37,6 +37,24 @@ namespace TencentCloud.Tcss.V20201101.Models
         public SecLogJoinObjectInfo[] List{ get; set; }
 
         /// <summary>
+        /// 日志节点范围类型,0自选 1全部
+        /// </summary>
+        [JsonProperty("RangeType")]
+        public long? RangeType{ get; set; }
+
+        /// <summary>
+        /// 新增资产是否自动加入，节点范围为全部时生效
+        /// </summary>
+        [JsonProperty("AutoJoin")]
+        public bool? AutoJoin{ get; set; }
+
+        /// <summary>
+        /// 剔除节点数
+        /// </summary>
+        [JsonProperty("ExcludedCount")]
+        public ulong? ExcludedCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +68,9 @@ namespace TencentCloud.Tcss.V20201101.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "List.", this.List);
+            this.SetParamSimple(map, prefix + "RangeType", this.RangeType);
+            this.SetParamSimple(map, prefix + "AutoJoin", this.AutoJoin);
+            this.SetParamSimple(map, prefix + "ExcludedCount", this.ExcludedCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

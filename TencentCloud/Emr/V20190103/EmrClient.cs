@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1106";
+       private const string sdkVersion = "SDK_NET_3.0.1107";
 
         /// <summary>
         /// Client constructor.
@@ -438,6 +438,27 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 查询HDFS存储文件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHDFSStorageInfoRequest"/></param>
+        /// <returns><see cref="DescribeHDFSStorageInfoResponse"/></returns>
+        public Task<DescribeHDFSStorageInfoResponse> DescribeHDFSStorageInfo(DescribeHDFSStorageInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeHDFSStorageInfoResponse>(req, "DescribeHDFSStorageInfo");
+        }
+
+        /// <summary>
+        /// 查询HDFS存储文件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHDFSStorageInfoRequest"/></param>
+        /// <returns><see cref="DescribeHDFSStorageInfoResponse"/></returns>
+        public DescribeHDFSStorageInfoResponse DescribeHDFSStorageInfoSync(DescribeHDFSStorageInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeHDFSStorageInfoResponse>(req, "DescribeHDFSStorageInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取hive查询信息
         /// </summary>
         /// <param name="req"><see cref="DescribeHiveQueriesRequest"/></param>
@@ -585,6 +606,27 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 查询Kyuubi查询信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKyuubiQueryInfoRequest"/></param>
+        /// <returns><see cref="DescribeKyuubiQueryInfoResponse"/></returns>
+        public Task<DescribeKyuubiQueryInfoResponse> DescribeKyuubiQueryInfo(DescribeKyuubiQueryInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeKyuubiQueryInfoResponse>(req, "DescribeKyuubiQueryInfo");
+        }
+
+        /// <summary>
+        /// 查询Kyuubi查询信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKyuubiQueryInfoRequest"/></param>
+        /// <returns><see cref="DescribeKyuubiQueryInfoResponse"/></returns>
+        public DescribeKyuubiQueryInfoResponse DescribeKyuubiQueryInfoSync(DescribeKyuubiQueryInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeKyuubiQueryInfoResponse>(req, "DescribeKyuubiQueryInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询YARN资源调度数据信息。已废弃，请使用`DescribeYarnQueue`去查询队列信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceScheduleRequest"/></param>
@@ -686,6 +728,48 @@ namespace TencentCloud.Emr.V20190103
         public DescribeServiceNodeInfosResponse DescribeServiceNodeInfosSync(DescribeServiceNodeInfosRequest req)
         {
             return InternalRequestAsync<DescribeServiceNodeInfosResponse>(req, "DescribeServiceNodeInfos")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Spark查询信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSparkQueriesRequest"/></param>
+        /// <returns><see cref="DescribeSparkQueriesResponse"/></returns>
+        public Task<DescribeSparkQueriesResponse> DescribeSparkQueries(DescribeSparkQueriesRequest req)
+        {
+            return InternalRequestAsync<DescribeSparkQueriesResponse>(req, "DescribeSparkQueries");
+        }
+
+        /// <summary>
+        /// 查询Spark查询信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSparkQueriesRequest"/></param>
+        /// <returns><see cref="DescribeSparkQueriesResponse"/></returns>
+        public DescribeSparkQueriesResponse DescribeSparkQueriesSync(DescribeSparkQueriesRequest req)
+        {
+            return InternalRequestAsync<DescribeSparkQueriesResponse>(req, "DescribeSparkQueries")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询StarRocks查询信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStarRocksQueryInfoRequest"/></param>
+        /// <returns><see cref="DescribeStarRocksQueryInfoResponse"/></returns>
+        public Task<DescribeStarRocksQueryInfoResponse> DescribeStarRocksQueryInfo(DescribeStarRocksQueryInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeStarRocksQueryInfoResponse>(req, "DescribeStarRocksQueryInfo");
+        }
+
+        /// <summary>
+        /// 查询StarRocks查询信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStarRocksQueryInfoRequest"/></param>
+        /// <returns><see cref="DescribeStarRocksQueryInfoResponse"/></returns>
+        public DescribeStarRocksQueryInfoResponse DescribeStarRocksQueryInfoSync(DescribeStarRocksQueryInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeStarRocksQueryInfoResponse>(req, "DescribeStarRocksQueryInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

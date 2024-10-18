@@ -72,6 +72,13 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Index")]
         public long? Index{ get; set; }
 
+        /// <summary>
+        /// 通知内容模板ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NoticeContentId")]
+        public string NoticeContentId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -84,6 +91,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Index", this.Index);
+            this.SetParamSimple(map, prefix + "NoticeContentId", this.NoticeContentId);
         }
     }
 }

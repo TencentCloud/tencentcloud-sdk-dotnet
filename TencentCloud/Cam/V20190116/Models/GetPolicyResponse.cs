@@ -25,56 +25,56 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 策略名
+        /// 策略名。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }
 
         /// <summary>
-        /// 策略描述
+        /// 策略描述。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 1 表示自定义策略，2 表示预设策略
+        /// 1 表示自定义策略，2 表示预设策略。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 策略创建时间。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddTime")]
         public string AddTime{ get; set; }
 
         /// <summary>
-        /// 最近更新时间
+        /// 策略最近更新时间。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 策略文档
+        /// 策略文档。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyDocument")]
         public string PolicyDocument{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// 备注。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PresetAlias")]
         public string PresetAlias{ get; set; }
 
         /// <summary>
-        /// 是否服务相关策略
+        /// 是否是服务相关策略，0代表不是服务相关策略，1代表是服务相关策略。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsServiceLinkedRolePolicy")]

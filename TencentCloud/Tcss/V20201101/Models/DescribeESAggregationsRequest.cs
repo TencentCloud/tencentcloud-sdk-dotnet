@@ -30,6 +30,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
+        /// <summary>
+        /// 日志类型列表
+        /// </summary>
+        [JsonProperty("LogTypes")]
+        public string[] LogTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Query", this.Query);
+            this.SetParamArraySimple(map, prefix + "LogTypes.", this.LogTypes);
         }
     }
 }

@@ -25,22 +25,64 @@ namespace TencentCloud.Hunyuan.V20230901.Models
     {
         
         /// <summary>
-        /// 多媒体类型，image：图片。
+        /// 多媒体类型，可选值包括 image、music、album、playlist。
+        /// 说明：
+        /// 1. image：图片；music：单曲，类型为单曲时，会返回详细歌手和歌曲信息；album：专辑；playlist：歌单。
+        /// 2. 当 type 为 music、album、playlist 时，需要配合 [QQ音乐SDK](https://developer.y.qq.com/) 使用。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 多媒体预览地址。
+        /// 多媒体地址。
+        /// 说明：
+        /// 1. type 为 image 时，地址为图片的预览地址；其他类型时，地址为封面图地址。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
         /// 多媒体详情地址。
+        /// 说明：
+        /// 1. 仅 type 为 image 时，该字段有值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JumpUrl")]
         public string JumpUrl{ get; set; }
+
+        /// <summary>
+        /// 名称。
+        /// 说明：
+        /// 1. type 为 image 时，该字段为空。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Title")]
+        public string Title{ get; set; }
+
+        /// <summary>
+        /// 描述。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Desc")]
+        public string Desc{ get; set; }
+
+        /// <summary>
+        /// 歌手名称。
+        /// 说明：
+        /// 1. 仅 type 为 music 时，该字段有值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Singer")]
+        public string Singer{ get; set; }
+
+        /// <summary>
+        /// 歌曲详情。
+        /// 说明：
+        /// 1. 仅 type 为 music 时，该字段有值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Ext")]
+        public SongExt Ext{ get; set; }
 
 
         /// <summary>
@@ -51,6 +93,10 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
+            this.SetParamSimple(map, prefix + "Title", this.Title);
+            this.SetParamSimple(map, prefix + "Desc", this.Desc);
+            this.SetParamSimple(map, prefix + "Singer", this.Singer);
+            this.SetParamObj(map, prefix + "Ext.", this.Ext);
         }
     }
 }

@@ -74,6 +74,13 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("ArchiveTime")]
         public string ArchiveTime{ get; set; }
 
+        /// <summary>
+        /// 归档ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ArchiveUuid")]
+        public string ArchiveUuid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +95,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "Log", this.Log);
             this.SetParamSimple(map, prefix + "ArchiveStage", this.ArchiveStage);
             this.SetParamSimple(map, prefix + "ArchiveTime", this.ArchiveTime);
+            this.SetParamSimple(map, prefix + "ArchiveUuid", this.ArchiveUuid);
         }
     }
 }

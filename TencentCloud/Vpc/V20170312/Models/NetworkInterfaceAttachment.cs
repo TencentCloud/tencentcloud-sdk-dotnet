@@ -25,12 +25,6 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 云主机实例ID。
-        /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
-
-        /// <summary>
         /// 网卡在云主机实例内的序号。
         /// </summary>
         [JsonProperty("DeviceIndex")]
@@ -48,16 +42,22 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("AttachTime")]
         public string AttachTime{ get; set; }
 
+        /// <summary>
+        /// 云主机实例ID。
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "DeviceIndex", this.DeviceIndex);
             this.SetParamSimple(map, prefix + "InstanceAccountId", this.InstanceAccountId);
             this.SetParamSimple(map, prefix + "AttachTime", this.AttachTime);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

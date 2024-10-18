@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1106";
+       private const string sdkVersion = "SDK_NET_3.0.1107";
 
         /// <summary>
         /// Client constructor.
@@ -2259,7 +2259,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
+        /// 本接口（ModifyDBInstanceSecurityGroups）用于修改实例绑定的安全组。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSecurityGroupsResponse"/></returns>
@@ -2269,7 +2269,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
+        /// 本接口（ModifyDBInstanceSecurityGroups）用于修改实例绑定的安全组。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSecurityGroupsResponse"/></returns>

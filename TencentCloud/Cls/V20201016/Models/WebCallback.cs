@@ -54,7 +54,7 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 请求头。
-        /// 注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求头。
+        /// 注意：该参数已废弃，请使用NoticeContentId。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Headers")]
@@ -62,7 +62,7 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 请求内容。
-        /// 注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求内容。
+        /// 注意：该参数已废弃，请使用NoticeContentId。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Body")]
@@ -76,6 +76,20 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Index")]
         public long? Index{ get; set; }
 
+        /// <summary>
+        /// 通知内容模板ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NoticeContentId")]
+        public string NoticeContentId{ get; set; }
+
+        /// <summary>
+        /// 集成配置ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WebCallbackId")]
+        public string WebCallbackId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +102,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArraySimple(map, prefix + "Headers.", this.Headers);
             this.SetParamSimple(map, prefix + "Body", this.Body);
             this.SetParamSimple(map, prefix + "Index", this.Index);
+            this.SetParamSimple(map, prefix + "NoticeContentId", this.NoticeContentId);
+            this.SetParamSimple(map, prefix + "WebCallbackId", this.WebCallbackId);
         }
     }
 }

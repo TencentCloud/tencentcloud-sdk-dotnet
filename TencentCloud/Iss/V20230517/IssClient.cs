@@ -28,7 +28,7 @@ namespace TencentCloud.Iss.V20230517
 
        private const string endpoint = "iss.tencentcloudapi.com";
        private const string version = "2023-05-17";
-       private const string sdkVersion = "SDK_NET_3.0.1106";
+       private const string sdkVersion = "SDK_NET_3.0.1107";
 
         /// <summary>
         /// Client constructor.
@@ -1553,7 +1553,7 @@ namespace TencentCloud.Iss.V20230517
         }
 
         /// <summary>
-        /// 用于刷新国标设备的通道（接口调用后，触发向设备请求通道列表，新增的通道入库，设备上已删除的通道需自行删除、后台不自动删除）。
+        /// 用于同步国标设备的通道（接口调用后，触发向设备请求通道列表，新增的通道入库，设备上已删除的通道需自行删除、后台不自动删除）。
         /// </summary>
         /// <param name="req"><see cref="RefreshDeviceChannelRequest"/></param>
         /// <returns><see cref="RefreshDeviceChannelResponse"/></returns>
@@ -1563,7 +1563,7 @@ namespace TencentCloud.Iss.V20230517
         }
 
         /// <summary>
-        /// 用于刷新国标设备的通道（接口调用后，触发向设备请求通道列表，新增的通道入库，设备上已删除的通道需自行删除、后台不自动删除）。
+        /// 用于同步国标设备的通道（接口调用后，触发向设备请求通道列表，新增的通道入库，设备上已删除的通道需自行删除、后台不自动删除）。
         /// </summary>
         /// <param name="req"><see cref="RefreshDeviceChannelRequest"/></param>
         /// <returns><see cref="RefreshDeviceChannelResponse"/></returns>

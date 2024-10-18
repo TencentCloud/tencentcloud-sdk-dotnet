@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1106";
+       private const string sdkVersion = "SDK_NET_3.0.1107";
 
         /// <summary>
         /// Client constructor.
@@ -1676,7 +1676,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 本接口（DescribeTimingL7AnalysisData）查询七层数据分析类时序数据。
+        /// 本接口查询七层域名业务的时序数据。请注意本接口查询数据有 10 分钟左右延迟，建议拉取当前时间 10 分钟以前的数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL7AnalysisDataRequest"/></param>
         /// <returns><see cref="DescribeTimingL7AnalysisDataResponse"/></returns>
@@ -1686,7 +1686,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 本接口（DescribeTimingL7AnalysisData）查询七层数据分析类时序数据。
+        /// 本接口查询七层域名业务的时序数据。请注意本接口查询数据有 10 分钟左右延迟，建议拉取当前时间 10 分钟以前的数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL7AnalysisDataRequest"/></param>
         /// <returns><see cref="DescribeTimingL7AnalysisDataResponse"/></returns>
@@ -1697,7 +1697,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 本接口（DescribeTimingL7CacheData）用于查询七层缓存分析时序类流量数据。
+        /// 本接口用于查询七层缓存分析时序类流量数据。此接口待废弃，请使用 <a href="https://cloud.tencent.com/document/product/1552/80648">DescribeTimingL7AnalysisData</a> 接口。
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL7CacheDataRequest"/></param>
         /// <returns><see cref="DescribeTimingL7CacheDataResponse"/></returns>
@@ -1707,7 +1707,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 本接口（DescribeTimingL7CacheData）用于查询七层缓存分析时序类流量数据。
+        /// 本接口用于查询七层缓存分析时序类流量数据。此接口待废弃，请使用 <a href="https://cloud.tencent.com/document/product/1552/80648">DescribeTimingL7AnalysisData</a> 接口。
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL7CacheDataRequest"/></param>
         /// <returns><see cref="DescribeTimingL7CacheDataResponse"/></returns>
@@ -1718,7 +1718,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 本接口（DescribeTopL7AnalysisData）用于查询七层流量前topN的数据。
+        /// 本接口用于查询七层域名业务按照指定维度的 topN 数据。请注意本接口查询数据有 10 分钟左右延迟，建议拉取当前时间 10 分钟以前的数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeTopL7AnalysisDataRequest"/></param>
         /// <returns><see cref="DescribeTopL7AnalysisDataResponse"/></returns>
@@ -1728,7 +1728,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 本接口（DescribeTopL7AnalysisData）用于查询七层流量前topN的数据。
+        /// 本接口用于查询七层域名业务按照指定维度的 topN 数据。请注意本接口查询数据有 10 分钟左右延迟，建议拉取当前时间 10 分钟以前的数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeTopL7AnalysisDataRequest"/></param>
         /// <returns><see cref="DescribeTopL7AnalysisDataResponse"/></returns>
@@ -1739,7 +1739,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 本接口（DescribeTopL7CacheData）用于查询七层缓存分析topN流量数据。
+        /// 本接口用于查询七层缓存分析 topN 数据。此接口待废弃，请使用 <a href="https://cloud.tencent.com/document/product/1552/80646"> DescribeTopL7AnalysisData</a> 接口。
         /// </summary>
         /// <param name="req"><see cref="DescribeTopL7CacheDataRequest"/></param>
         /// <returns><see cref="DescribeTopL7CacheDataResponse"/></returns>
@@ -1749,7 +1749,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 本接口（DescribeTopL7CacheData）用于查询七层缓存分析topN流量数据。
+        /// 本接口用于查询七层缓存分析 topN 数据。此接口待废弃，请使用 <a href="https://cloud.tencent.com/document/product/1552/80646"> DescribeTopL7AnalysisData</a> 接口。
         /// </summary>
         /// <param name="req"><see cref="DescribeTopL7CacheDataRequest"/></param>
         /// <returns><see cref="DescribeTopL7CacheDataResponse"/></returns>

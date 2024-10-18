@@ -42,6 +42,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 日志类型列表
+        /// </summary>
+        [JsonProperty("LogTypes")]
+        public string[] LogTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "Query", this.Query);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArraySimple(map, prefix + "LogTypes.", this.LogTypes);
         }
     }
 }

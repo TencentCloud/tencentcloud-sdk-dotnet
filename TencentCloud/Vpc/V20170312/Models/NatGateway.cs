@@ -148,7 +148,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string RestrictState{ get; set; }
 
         /// <summary>
-        /// NAT网关大版本号，传统型=1，标准型=2
+        /// NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NatProductVersion")]
