@@ -47,6 +47,18 @@ namespace TencentCloud.Vclm.V20240523.Models
         public string StatusMsg{ get; set; }
 
         /// <summary>
+        /// 错误码
+        /// </summary>
+        [JsonProperty("ErrorCode")]
+        public string ErrorCode{ get; set; }
+
+        /// <summary>
+        /// 错误信息
+        /// </summary>
+        [JsonProperty("ErrorMessage")]
+        public string ErrorMessage{ get; set; }
+
+        /// <summary>
         /// 生成视频的URL地址
         /// 有效期24小时
         /// </summary>
@@ -68,6 +80,8 @@ namespace TencentCloud.Vclm.V20240523.Models
             this.SetParamSimple(map, prefix + "JobId", this.JobId);
             this.SetParamSimple(map, prefix + "StatusCode", this.StatusCode);
             this.SetParamSimple(map, prefix + "StatusMsg", this.StatusMsg);
+            this.SetParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
+            this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
             this.SetParamSimple(map, prefix + "ResultVideoUrl", this.ResultVideoUrl);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
