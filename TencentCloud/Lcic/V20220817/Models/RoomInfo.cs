@@ -100,6 +100,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         /// rtc人数。
         /// </summary>
         [JsonProperty("RTCAudienceNumber")]
+        [System.Obsolete]
         public ulong? RTCAudienceNumber{ get; set; }
 
         /// <summary>

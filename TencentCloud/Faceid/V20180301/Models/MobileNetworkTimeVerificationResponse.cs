@@ -33,6 +33,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// 不收费结果码：
         /// -1: 手机号格式不正确
         /// -4: 验证中心服务繁忙
+        /// -5：认证次数超过当日限制，请次日重试
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

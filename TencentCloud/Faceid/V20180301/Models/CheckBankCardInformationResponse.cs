@@ -32,6 +32,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// 不收费结果码：
         /// -2：验证中心服务繁忙
         /// -3：银行卡不存在
+        /// -4：认证次数超过当日限制，请次日重试
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

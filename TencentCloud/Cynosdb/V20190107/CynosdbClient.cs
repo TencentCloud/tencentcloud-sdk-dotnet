@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1108";
+       private const string sdkVersion = "SDK_NET_3.0.1109";
 
         /// <summary>
         /// Client constructor.
@@ -3141,7 +3141,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 升级数据库代理配置
+        /// 本接口（UpgradeProxy）用于升级数据库代理配置。
         /// </summary>
         /// <param name="req"><see cref="UpgradeProxyRequest"/></param>
         /// <returns><see cref="UpgradeProxyResponse"/></returns>
@@ -3151,7 +3151,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 升级数据库代理配置
+        /// 本接口（UpgradeProxy）用于升级数据库代理配置。
         /// </summary>
         /// <param name="req"><see cref="UpgradeProxyRequest"/></param>
         /// <returns><see cref="UpgradeProxyResponse"/></returns>

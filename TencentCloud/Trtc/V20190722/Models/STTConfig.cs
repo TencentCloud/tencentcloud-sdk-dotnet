@@ -47,10 +47,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// 18.     German = "de" # 德语
         /// 19.     Italian = "it" # 意大利语
         /// 20.     Russian = "ru" # 俄语
+        /// 21.     Swedish = "sv" # 瑞典语
+        /// 22.     Danish = "da" # 丹麦语
+        /// 23.     Norwegian = "no" # 挪威语
         /// 
         /// 注意：
         /// 如果缺少满足您需求的语言，请联系我们技术人员。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Language")]
         public string Language{ get; set; }
@@ -58,15 +60,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// <summary>
         /// 发起模糊识别额外可能替代语言类型,最多填写3种语言类型, 
         /// 注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlternativeLanguage")]
         public string[] AlternativeLanguage{ get; set; }
 
         /// <summary>
         /// 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VadSilenceTime")]
         public ulong? VadSilenceTime{ get; set; }

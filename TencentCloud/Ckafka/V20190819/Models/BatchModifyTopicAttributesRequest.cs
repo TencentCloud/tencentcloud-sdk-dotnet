@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 主题属性列表
+        /// 主题属性列表 (同一个批次最多支持10个)
         /// </summary>
         [JsonProperty("Topic")]
         public BatchModifyTopicInfo[] Topic{ get; set; }

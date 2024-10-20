@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 签署参与者签署H5链接信息数组
+        /// 生成的签署参与者的签署链接信息数组。
         /// </summary>
         [JsonProperty("SignUrlInfos")]
         public SignUrlInfo[] SignUrlInfos{ get; set; }

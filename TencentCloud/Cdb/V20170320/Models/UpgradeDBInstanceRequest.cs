@@ -129,6 +129,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("RoTransType")]
         public string RoTransType{ get; set; }
 
+        /// <summary>
+        /// 检查原地升级是否需要重启，1 检查， 0 不检查。如果值为1，检查为原地升级需要重启，则会停止升级并进行返回提示，如果为原地升级不重启，则正常执行升级流程。
+        /// </summary>
+        [JsonProperty("CheckFastUpgradeReboot")]
+        public long? CheckFastUpgradeReboot{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -152,6 +158,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "CrossCluster", this.CrossCluster);
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "RoTransType", this.RoTransType);
+            this.SetParamSimple(map, prefix + "CheckFastUpgradeReboot", this.CheckFastUpgradeReboot);
         }
     }
 }

@@ -49,7 +49,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? Page{ get; set; }
 
         /// <summary>
-        /// 默认是10条
+        /// 默认10条，最大上限为100条
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
