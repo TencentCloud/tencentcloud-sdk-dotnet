@@ -90,6 +90,27 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("ImportStatus")]
         public string ImportStatus{ get; set; }
 
+        /// <summary>
+        /// 4.x的命名空间，出参使用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NamespaceV4")]
+        public string NamespaceV4{ get; set; }
+
+        /// <summary>
+        /// 4.x的主题名，出参使用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TopicNameV4")]
+        public string TopicNameV4{ get; set; }
+
+        /// <summary>
+        /// 4.x的完整命名空间，出参使用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FullNamespaceV4")]
+        public string FullNamespaceV4{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +124,9 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "Imported", this.Imported);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "ImportStatus", this.ImportStatus);
+            this.SetParamSimple(map, prefix + "NamespaceV4", this.NamespaceV4);
+            this.SetParamSimple(map, prefix + "TopicNameV4", this.TopicNameV4);
+            this.SetParamSimple(map, prefix + "FullNamespaceV4", this.FullNamespaceV4);
         }
     }
 }

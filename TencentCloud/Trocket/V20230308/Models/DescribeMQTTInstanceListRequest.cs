@@ -43,7 +43,7 @@ namespace TencentCloud.Trocket.V20230308.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 是否包含新控制台集群
+        /// 是否包含新控制台集群：默认为包含
         /// </summary>
         [JsonProperty("IncludeNew")]
         public bool? IncludeNew{ get; set; }

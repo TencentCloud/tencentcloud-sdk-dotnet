@@ -44,10 +44,8 @@ namespace TencentCloud.Trocket.V20230308.Models
 
         /// <summary>
         /// 实例类型，
-        /// EXPERIMENT，体验版
         /// BASIC，基础版
         /// PRO，专业版
-        /// PLATINUM，铂金版
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }

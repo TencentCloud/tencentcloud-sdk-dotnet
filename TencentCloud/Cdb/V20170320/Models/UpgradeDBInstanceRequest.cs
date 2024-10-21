@@ -130,6 +130,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string RoTransType{ get; set; }
 
         /// <summary>
+        /// 集群版节点拓扑配置。
+        /// </summary>
+        [JsonProperty("ClusterTopology")]
+        public ClusterTopology ClusterTopology{ get; set; }
+
+        /// <summary>
         /// 检查原地升级是否需要重启，1 检查， 0 不检查。如果值为1，检查为原地升级需要重启，则会停止升级并进行返回提示，如果为原地升级不重启，则正常执行升级流程。
         /// </summary>
         [JsonProperty("CheckFastUpgradeReboot")]
@@ -158,6 +164,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "CrossCluster", this.CrossCluster);
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "RoTransType", this.RoTransType);
+            this.SetParamObj(map, prefix + "ClusterTopology.", this.ClusterTopology);
             this.SetParamSimple(map, prefix + "CheckFastUpgradeReboot", this.CheckFastUpgradeReboot);
         }
     }

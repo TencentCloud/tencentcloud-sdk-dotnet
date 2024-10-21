@@ -26,14 +26,12 @@ namespace TencentCloud.Sms.V20190711.Models
         
         /// <summary>
         /// 删除状态信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeleteStatus")]
         public string DeleteStatus{ get; set; }
 
         /// <summary>
         /// 删除时间，UNIX 时间戳（单位：秒）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeleteTime")]
         public ulong? DeleteTime{ get; set; }

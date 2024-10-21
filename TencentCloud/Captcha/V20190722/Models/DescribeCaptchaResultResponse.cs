@@ -74,6 +74,13 @@ namespace TencentCloud.Captcha.V20190722.Models
         public long? SubmitCaptchaTime{ get; set; }
 
         /// <summary>
+        /// 设备风险大类
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeviceRiskCategory")]
+        public string DeviceRiskCategory{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -91,6 +98,7 @@ namespace TencentCloud.Captcha.V20190722.Models
             this.SetParamSimple(map, prefix + "GetCaptchaTime", this.GetCaptchaTime);
             this.SetParamSimple(map, prefix + "EvilBitmap", this.EvilBitmap);
             this.SetParamSimple(map, prefix + "SubmitCaptchaTime", this.SubmitCaptchaTime);
+            this.SetParamSimple(map, prefix + "DeviceRiskCategory", this.DeviceRiskCategory);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -53,7 +53,19 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string SourceId{ get; set; }
 
         /// <summary>
-        /// 源规则类型
+        /// 源规则类型 
+        /// 取值范围 0/1/2/3/4/5/6/7/8/9/100
+        /// 0表示ip(net),
+        /// 1表示VPC实例(intance)
+        /// 2表示子网实例(intance)
+        /// 3表示CVM实例(intance)
+        /// 4表示CLB实例(intance)
+        /// 5表示ENI实例(intance)
+        /// 6表示数据库实例(intance)
+        /// 7表示模版(template)
+        /// 8表示标签(tag)
+        /// 9表示地域(region)
+        /// 100表示资产分组(resourcegroup)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceType")]
@@ -67,7 +79,19 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string TargetId{ get; set; }
 
         /// <summary>
-        /// 目的规则类型
+        /// 目的规则类型 
+        /// 取值范围 0/1/2/3/4/5/6/7/8/9/100
+        /// 0表示ip(net),
+        /// 1表示VPC实例(intance)
+        /// 2表示子网实例(intance)
+        /// 3表示CVM实例(intance)
+        /// 4表示CLB实例(intance)
+        /// 5表示ENI实例(intance)
+        /// 6表示数据库实例(intance)
+        /// 7表示模版(template)
+        /// 8表示标签(tag)
+        /// 9表示地域(region)
+        /// 100表示资产分组(resourcegroup)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetType")]
@@ -75,6 +99,9 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// 协议名称
+        /// 取值范围:TCP/ANY/ICMP/UDP
+        /// ANY:表示所有
+        /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
@@ -88,14 +115,20 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Port{ get; set; }
 
         /// <summary>
-        /// 策略，1阻断，2放行
+        /// 规则策略
+        /// 取值范围:1/2
+        /// 1:阻断
+        /// 2:放行
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Strategy")]
         public long? Strategy{ get; set; }
 
         /// <summary>
-        /// 启用状态 ，0未开启，1开启
+        /// 规则启用状态 
+        /// 取值范围： 0/1
+        /// 0:未开启
+        /// 1:开启
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
@@ -116,7 +149,10 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string AclTags{ get; set; }
 
         /// <summary>
-        /// 是否最新一次改动的规则,0否，1是
+        /// 规则最新一次是否有改动
+        /// 取值范围：0/1
+        /// 0:否
+        /// 1:是
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsNew")]
@@ -130,7 +166,9 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// 是否延迟下发
+        /// 是否延迟下发规则 
+        /// 取值范围：0/1
+        /// 0:立即下发 1:延迟下发
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsDelay")]
@@ -221,14 +259,14 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string ProtocolPortName{ get; set; }
 
         /// <summary>
-        /// 自动化任务任务信息
+        /// 自动化任务信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BetaList")]
         public EnterpriseSecurityGroupRuleBetaInfo[] BetaList{ get; set; }
 
         /// <summary>
-        /// 规则id
+        /// 规则id  等同RuleUuid
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]

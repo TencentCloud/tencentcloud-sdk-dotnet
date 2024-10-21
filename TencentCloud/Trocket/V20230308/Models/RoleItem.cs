@@ -31,18 +31,6 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string RoleName{ get; set; }
 
         /// <summary>
-        /// Access Key
-        /// </summary>
-        [JsonProperty("AccessKey")]
-        public string AccessKey{ get; set; }
-
-        /// <summary>
-        /// Secret Key
-        /// </summary>
-        [JsonProperty("SecretKey")]
-        public string SecretKey{ get; set; }
-
-        /// <summary>
         /// 是否开启消费
         /// </summary>
         [JsonProperty("PermRead")]
@@ -53,6 +41,18 @@ namespace TencentCloud.Trocket.V20230308.Models
         /// </summary>
         [JsonProperty("PermWrite")]
         public bool? PermWrite{ get; set; }
+
+        /// <summary>
+        /// Access Key
+        /// </summary>
+        [JsonProperty("AccessKey")]
+        public string AccessKey{ get; set; }
+
+        /// <summary>
+        /// Secret Key
+        /// </summary>
+        [JsonProperty("SecretKey")]
+        public string SecretKey{ get; set; }
 
         /// <summary>
         /// 备注信息
@@ -79,10 +79,10 @@ namespace TencentCloud.Trocket.V20230308.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
-            this.SetParamSimple(map, prefix + "AccessKey", this.AccessKey);
-            this.SetParamSimple(map, prefix + "SecretKey", this.SecretKey);
             this.SetParamSimple(map, prefix + "PermRead", this.PermRead);
             this.SetParamSimple(map, prefix + "PermWrite", this.PermWrite);
+            this.SetParamSimple(map, prefix + "AccessKey", this.AccessKey);
+            this.SetParamSimple(map, prefix + "SecretKey", this.SecretKey);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);

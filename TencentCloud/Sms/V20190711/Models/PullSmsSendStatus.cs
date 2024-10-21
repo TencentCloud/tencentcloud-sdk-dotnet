@@ -43,13 +43,13 @@ namespace TencentCloud.Sms.V20190711.Models
         public string NationCode{ get; set; }
 
         /// <summary>
-        /// 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
+        /// 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8618501234444， 其中前面有一个+号 ，86为国家码，18501234444为手机号。
         /// </summary>
         [JsonProperty("PurePhoneNumber")]
         public string PurePhoneNumber{ get; set; }
 
         /// <summary>
-        /// 手机号码，普通格式，示例如：13711112222。
+        /// 手机号码，普通格式，示例如：18501234444。
         /// </summary>
         [JsonProperty("PhoneNumber")]
         public string PhoneNumber{ get; set; }

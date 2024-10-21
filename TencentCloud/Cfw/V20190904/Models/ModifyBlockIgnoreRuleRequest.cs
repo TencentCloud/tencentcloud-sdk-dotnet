@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 规则
+        /// 规则列表
         /// </summary>
         [JsonProperty("Rule")]
         public IntrusionDefenseRule Rule{ get; set; }

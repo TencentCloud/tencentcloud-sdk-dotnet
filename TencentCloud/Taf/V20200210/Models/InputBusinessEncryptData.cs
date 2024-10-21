@@ -24,12 +24,40 @@ namespace TencentCloud.Taf.V20200210.Models
     public class InputBusinessEncryptData : AbstractModel
     {
         
+        /// <summary>
+        /// 加密方式；0：AES;1:DES
+        /// </summary>
+        [JsonProperty("EncryptMethod")]
+        public ulong? EncryptMethod{ get; set; }
+
+        /// <summary>
+        /// 业务数据加密字符串
+        /// </summary>
+        [JsonProperty("EncryptData")]
+        public string EncryptData{ get; set; }
+
+        /// <summary>
+        /// 加密模式；0：ECB,1:CBC;2:CTR;3:CFB;4:OFB
+        /// </summary>
+        [JsonProperty("EncryptMode")]
+        public ulong? EncryptMode{ get; set; }
+
+        /// <summary>
+        /// 填充模式;0:ZERO ;1:PKCS5;3:PKCS7
+        /// </summary>
+        [JsonProperty("PaddingType")]
+        public ulong? PaddingType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "EncryptMethod", this.EncryptMethod);
+            this.SetParamSimple(map, prefix + "EncryptData", this.EncryptData);
+            this.SetParamSimple(map, prefix + "EncryptMode", this.EncryptMode);
+            this.SetParamSimple(map, prefix + "PaddingType", this.PaddingType);
         }
     }
 }

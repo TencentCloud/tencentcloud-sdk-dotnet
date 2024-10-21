@@ -86,6 +86,13 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("IpRules")]
         public IpRule[] IpRules{ get; set; }
 
+        /// <summary>
+        /// 公网是否按流量计费
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BillingFlow")]
+        public bool? BillingFlow{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +107,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
             this.SetParamArrayObj(map, prefix + "IpRules.", this.IpRules);
+            this.SetParamSimple(map, prefix + "BillingFlow", this.BillingFlow);
         }
     }
 }

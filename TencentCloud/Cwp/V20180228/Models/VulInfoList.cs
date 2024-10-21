@@ -198,6 +198,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Method")]
         public ulong? Method{ get; set; }
 
+        /// <summary>
+        /// 漏洞是否支持修复 0不支持，1支持
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VulFixSwitch")]
+        public ulong? VulFixSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -230,6 +237,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "AttackLevel", this.AttackLevel);
             this.SetParamSimple(map, prefix + "FixNoNeedRestart", this.FixNoNeedRestart);
             this.SetParamSimple(map, prefix + "Method", this.Method);
+            this.SetParamSimple(map, prefix + "VulFixSwitch", this.VulFixSwitch);
         }
     }
 }

@@ -26,35 +26,30 @@ namespace TencentCloud.Ses.V20201002.Models
         
         /// <summary>
         /// 收件人总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
         /// 实际上传数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValidCount")]
         public ulong? ValidCount{ get; set; }
 
         /// <summary>
         /// 数据过长数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TooLongCount")]
         public ulong? TooLongCount{ get; set; }
 
         /// <summary>
         /// 重复数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RepeatCount")]
         public ulong? RepeatCount{ get; set; }
 
         /// <summary>
         /// 格式不正确数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InvalidCount")]
         public ulong? InvalidCount{ get; set; }

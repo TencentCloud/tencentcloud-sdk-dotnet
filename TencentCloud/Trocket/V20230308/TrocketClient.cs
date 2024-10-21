@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1109";
+       private const string sdkVersion = "SDK_NET_3.0.1110";
 
         /// <summary>
         /// Client constructor.
@@ -243,7 +243,7 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 删除实例
+        /// 删除 RocketMQ 5.x 集群。
         /// </summary>
         /// <param name="req"><see cref="DeleteInstanceRequest"/></param>
         /// <returns><see cref="DeleteInstanceResponse"/></returns>
@@ -253,7 +253,7 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 删除实例
+        /// 删除 RocketMQ 5.x 集群。
         /// </summary>
         /// <param name="req"><see cref="DeleteInstanceRequest"/></param>
         /// <returns><see cref="DeleteInstanceResponse"/></returns>
@@ -459,11 +459,11 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 获取实例列表，Filters参数使用说明如下：
+        /// 查询集群列表，支持 4.x 和 5.x 集群，其中 Filters 参数使用说明如下：
         /// 1. InstanceName, 名称模糊查询
-        /// 2. InstanceId，实例ID查询
-        /// 3. InstanceType, 实例类型查询，支持多选
-        /// 4. Version，实例版本查询
+        /// 2. InstanceId，集群ID查询
+        /// 3. InstanceType, 集群类型查询，支持多选
+        /// 4. Version，集群版本查询
         /// 当使用TagFilters查询时，Filters参数失效。
         /// </summary>
         /// <param name="req"><see cref="DescribeFusionInstanceListRequest"/></param>
@@ -474,11 +474,11 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 获取实例列表，Filters参数使用说明如下：
+        /// 查询集群列表，支持 4.x 和 5.x 集群，其中 Filters 参数使用说明如下：
         /// 1. InstanceName, 名称模糊查询
-        /// 2. InstanceId，实例ID查询
-        /// 3. InstanceType, 实例类型查询，支持多选
-        /// 4. Version，实例版本查询
+        /// 2. InstanceId，集群ID查询
+        /// 3. InstanceType, 集群类型查询，支持多选
+        /// 4. Version，集群版本查询
         /// 当使用TagFilters查询时，Filters参数失效。
         /// </summary>
         /// <param name="req"><see cref="DescribeFusionInstanceListRequest"/></param>
@@ -490,7 +490,7 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 查询实例信息
+        /// 查询 RocketMQ 5.x 集群信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceRequest"/></param>
         /// <returns><see cref="DescribeInstanceResponse"/></returns>
@@ -500,7 +500,7 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
-        /// 查询实例信息
+        /// 查询 RocketMQ 5.x 集群信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceRequest"/></param>
         /// <returns><see cref="DescribeInstanceResponse"/></returns>

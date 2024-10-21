@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1109";
+       private const string sdkVersion = "SDK_NET_3.0.1110";
 
         /// <summary>
         /// Client constructor.
@@ -774,7 +774,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 获取trino查询结果
+        /// 查询Trino(PrestoSQL)查询信息
         /// </summary>
         /// <param name="req"><see cref="DescribeTrinoQueryInfoRequest"/></param>
         /// <returns><see cref="DescribeTrinoQueryInfoResponse"/></returns>
@@ -784,7 +784,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 获取trino查询结果
+        /// 查询Trino(PrestoSQL)查询信息
         /// </summary>
         /// <param name="req"><see cref="DescribeTrinoQueryInfoRequest"/></param>
         /// <returns><see cref="DescribeTrinoQueryInfoResponse"/></returns>

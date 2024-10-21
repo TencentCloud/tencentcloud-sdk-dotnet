@@ -74,7 +74,7 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 漏洞是否支持自动修复
-        /// 0-windows/linux均关闭; 1-windows/linux均打开; 2-仅linux; 3-仅windows
+        /// 0-Windows/Linux均关闭; 1-Windows/Linux均打开; 2-仅Linux; 3-仅Windows
         /// </summary>
         [JsonProperty("FixSwitch")]
         public ulong? FixSwitch{ get; set; }

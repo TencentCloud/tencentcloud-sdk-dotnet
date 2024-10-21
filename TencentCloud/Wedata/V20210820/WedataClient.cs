@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1109";
+       private const string sdkVersion = "SDK_NET_3.0.1110";
 
         /// <summary>
         /// Client constructor.
@@ -2465,6 +2465,27 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeProjectResponse DescribeProjectSync(DescribeProjectRequest req)
         {
             return InternalRequestAsync<DescribeProjectResponse>(req, "DescribeProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取项目下的用户，分页返回
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProjectUsersRequest"/></param>
+        /// <returns><see cref="DescribeProjectUsersResponse"/></returns>
+        public Task<DescribeProjectUsersResponse> DescribeProjectUsers(DescribeProjectUsersRequest req)
+        {
+            return InternalRequestAsync<DescribeProjectUsersResponse>(req, "DescribeProjectUsers");
+        }
+
+        /// <summary>
+        /// 获取项目下的用户，分页返回
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProjectUsersRequest"/></param>
+        /// <returns><see cref="DescribeProjectUsersResponse"/></returns>
+        public DescribeProjectUsersResponse DescribeProjectUsersSync(DescribeProjectUsersRequest req)
+        {
+            return InternalRequestAsync<DescribeProjectUsersResponse>(req, "DescribeProjectUsers")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1109";
+       private const string sdkVersion = "SDK_NET_3.0.1110";
 
         /// <summary>
         /// Client constructor.
@@ -1595,6 +1595,27 @@ namespace TencentCloud.Waf.V20180125
         public DescribePortsResponse DescribePortsSync(DescribePortsRequest req)
         {
             return InternalRequestAsync<DescribePortsResponse>(req, "DescribePorts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Tiga引擎大类规则及其防护模式
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProtectionModesRequest"/></param>
+        /// <returns><see cref="DescribeProtectionModesResponse"/></returns>
+        public Task<DescribeProtectionModesResponse> DescribeProtectionModes(DescribeProtectionModesRequest req)
+        {
+            return InternalRequestAsync<DescribeProtectionModesResponse>(req, "DescribeProtectionModes");
+        }
+
+        /// <summary>
+        /// 查询Tiga引擎大类规则及其防护模式
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProtectionModesRequest"/></param>
+        /// <returns><see cref="DescribeProtectionModesResponse"/></returns>
+        public DescribeProtectionModesResponse DescribeProtectionModesSync(DescribeProtectionModesRequest req)
+        {
+            return InternalRequestAsync<DescribeProtectionModesResponse>(req, "DescribeProtectionModes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

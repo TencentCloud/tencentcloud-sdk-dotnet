@@ -43,7 +43,7 @@ namespace TencentCloud.Sms.V20210111.Models
         public string NationCode{ get; set; }
 
         /// <summary>
-        /// 用户号码，去除国家或地区码前缀的普通格式，示例如：13711112222。
+        /// 用户号码，去除国家或地区码前缀的普通格式，示例如：18501234444。
         /// </summary>
         [JsonProperty("SubscriberNumber")]
         public string SubscriberNumber{ get; set; }

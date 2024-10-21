@@ -37,16 +37,16 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string SslVpnServerName{ get; set; }
 
         /// <summary>
-        /// 云端地址（CIDR）列表。
-        /// </summary>
-        [JsonProperty("LocalAddress")]
-        public string[] LocalAddress{ get; set; }
-
-        /// <summary>
         /// 客户端地址网段。
         /// </summary>
         [JsonProperty("RemoteAddress")]
         public string RemoteAddress{ get; set; }
+
+        /// <summary>
+        /// 云端地址（CIDR）列表。
+        /// </summary>
+        [JsonProperty("LocalAddress")]
+        public string[] LocalAddress{ get; set; }
 
         /// <summary>
         /// SSL VPN服务端监听协议。当前仅支持 UDP，默认UDP。
@@ -110,8 +110,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "VpnGatewayId", this.VpnGatewayId);
             this.SetParamSimple(map, prefix + "SslVpnServerName", this.SslVpnServerName);
-            this.SetParamArraySimple(map, prefix + "LocalAddress.", this.LocalAddress);
             this.SetParamSimple(map, prefix + "RemoteAddress", this.RemoteAddress);
+            this.SetParamArraySimple(map, prefix + "LocalAddress.", this.LocalAddress);
             this.SetParamSimple(map, prefix + "SslVpnProtocol", this.SslVpnProtocol);
             this.SetParamSimple(map, prefix + "SslVpnPort", this.SslVpnPort);
             this.SetParamSimple(map, prefix + "IntegrityAlgorithm", this.IntegrityAlgorithm);

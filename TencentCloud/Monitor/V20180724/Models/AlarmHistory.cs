@@ -233,6 +233,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }
 
+        /// <summary>
+        /// 策略是否有权限
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PolicyPermissions")]
+        public ulong? PolicyPermissions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -272,6 +279,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "AlarmShieldReason", this.AlarmShieldReason);
             this.SetParamSimple(map, prefix + "InternalDimensions", this.InternalDimensions);
             this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
+            this.SetParamSimple(map, prefix + "PolicyPermissions", this.PolicyPermissions);
         }
     }
 }

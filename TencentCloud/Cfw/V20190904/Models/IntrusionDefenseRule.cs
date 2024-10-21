@@ -49,16 +49,16 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 备注信息，长度不能超过50
-        /// </summary>
-        [JsonProperty("Comment")]
-        public string Comment{ get; set; }
-
-        /// <summary>
         /// 规则开始时间
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
+
+        /// <summary>
+        /// 备注信息，长度不能超过50
+        /// </summary>
+        [JsonProperty("Comment")]
+        public string Comment{ get; set; }
 
 
         /// <summary>
@@ -70,8 +70,8 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "IP", this.IP);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
-            this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "Comment", this.Comment);
         }
     }
 }

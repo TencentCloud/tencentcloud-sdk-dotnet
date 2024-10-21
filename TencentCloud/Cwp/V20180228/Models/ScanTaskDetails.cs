@@ -91,7 +91,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 失败详情
+        /// 失败类型  3离线、4超时、5失败、8agent版本过低
         /// </summary>
         [JsonProperty("FailType")]
         public ulong? FailType{ get; set; }

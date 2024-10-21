@@ -37,13 +37,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 排序字段，取值 'UpdateTime' | 'RulesNum'
+        /// 排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }
 
         /// <summary>
-        /// 排序，取值 'asc'|'desc'
+        /// 排序，取值 ：asc正序，desc逆序
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Uuid{ get; set; }
 
         /// <summary>
-        /// 1：ip模板，5：域名模板，6：协议端口模板
+        /// 模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板
         /// </summary>
         [JsonProperty("TemplateType")]
         public string TemplateType{ get; set; }

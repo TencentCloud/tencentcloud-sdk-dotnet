@@ -107,7 +107,9 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string Qos{ get; set; }
 
         /// <summary>
-        /// 1、2、3
+        /// 1：表示匹配retain消息
+        /// 2：表示匹配非retain消息
+        /// 3：表示匹配retain和非retain消息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Retain")]

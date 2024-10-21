@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1109";
+       private const string sdkVersion = "SDK_NET_3.0.1110";
 
         /// <summary>
         /// Client constructor.
@@ -260,6 +260,27 @@ namespace TencentCloud.Tdmq.V20200217
         public CreateProClusterResponse CreateProClusterSync(CreateProClusterRequest req)
         {
             return InternalRequestAsync<CreateProClusterResponse>(req, "CreateProCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建RabbitMQ路由关系
+        /// </summary>
+        /// <param name="req"><see cref="CreateRabbitMQBindingRequest"/></param>
+        /// <returns><see cref="CreateRabbitMQBindingResponse"/></returns>
+        public Task<CreateRabbitMQBindingResponse> CreateRabbitMQBinding(CreateRabbitMQBindingRequest req)
+        {
+            return InternalRequestAsync<CreateRabbitMQBindingResponse>(req, "CreateRabbitMQBinding");
+        }
+
+        /// <summary>
+        /// 创建RabbitMQ路由关系
+        /// </summary>
+        /// <param name="req"><see cref="CreateRabbitMQBindingRequest"/></param>
+        /// <returns><see cref="CreateRabbitMQBindingResponse"/></returns>
+        public CreateRabbitMQBindingResponse CreateRabbitMQBindingSync(CreateRabbitMQBindingRequest req)
+        {
+            return InternalRequestAsync<CreateRabbitMQBindingResponse>(req, "CreateRabbitMQBinding")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

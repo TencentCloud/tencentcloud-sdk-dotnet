@@ -38,6 +38,10 @@ namespace TencentCloud.Trocket.V20230308.Models
 
         /// <summary>
         /// 主题类型
+        /// NORMAL:普通消息,
+        /// FIFO:顺序消息,
+        /// DELAY:延时消息,
+        /// TRANSACTION:事务消息
         /// </summary>
         [JsonProperty("TopicType")]
         public string TopicType{ get; set; }
@@ -50,7 +54,6 @@ namespace TencentCloud.Trocket.V20230308.Models
 
         /// <summary>
         /// 描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

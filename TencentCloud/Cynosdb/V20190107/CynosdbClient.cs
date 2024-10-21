@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1109";
+       private const string sdkVersion = "SDK_NET_3.0.1110";
 
         /// <summary>
         /// Client constructor.
@@ -264,7 +264,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 创建用户账号
+        /// 本接口（CreateAccounts）用于创建用户账号。
         /// </summary>
         /// <param name="req"><see cref="CreateAccountsRequest"/></param>
         /// <returns><see cref="CreateAccountsResponse"/></returns>
@@ -274,7 +274,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 创建用户账号
+        /// 本接口（CreateAccounts）用于创建用户账号。
         /// </summary>
         /// <param name="req"><see cref="CreateAccountsRequest"/></param>
         /// <returns><see cref="CreateAccountsResponse"/></returns>
@@ -327,7 +327,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 为集群创建手动备份
+        /// 本接口（CreateBackup）用于为集群创建手动备份。
         /// </summary>
         /// <param name="req"><see cref="CreateBackupRequest"/></param>
         /// <returns><see cref="CreateBackupResponse"/></returns>
@@ -337,7 +337,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 为集群创建手动备份
+        /// 本接口（CreateBackup）用于为集群创建手动备份。
         /// </summary>
         /// <param name="req"><see cref="CreateBackupRequest"/></param>
         /// <returns><see cref="CreateBackupResponse"/></returns>
@@ -369,7 +369,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 创建数据库
+        /// 本接口（CreateClusterDatabase）用于创建数据库。
         /// </summary>
         /// <param name="req"><see cref="CreateClusterDatabaseRequest"/></param>
         /// <returns><see cref="CreateClusterDatabaseResponse"/></returns>
@@ -379,7 +379,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 创建数据库
+        /// 本接口（CreateClusterDatabase）用于创建数据库。
         /// </summary>
         /// <param name="req"><see cref="CreateClusterDatabaseRequest"/></param>
         /// <returns><see cref="CreateClusterDatabaseResponse"/></returns>
@@ -411,7 +411,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口（CreateParamTemplate）用于创建参数模板
+        /// 本接口（CreateParamTemplate）用于创建参数模板。
         /// </summary>
         /// <param name="req"><see cref="CreateParamTemplateRequest"/></param>
         /// <returns><see cref="CreateParamTemplateResponse"/></returns>
@@ -421,7 +421,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口（CreateParamTemplate）用于创建参数模板
+        /// 本接口（CreateParamTemplate）用于创建参数模板。
         /// </summary>
         /// <param name="req"><see cref="CreateParamTemplateRequest"/></param>
         /// <returns><see cref="CreateParamTemplateResponse"/></returns>
@@ -453,7 +453,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 创建数据库代理连接点
+        /// 本接口（CreateProxyEndPoint）用于创建数据库代理连接点。
         /// </summary>
         /// <param name="req"><see cref="CreateProxyEndPointRequest"/></param>
         /// <returns><see cref="CreateProxyEndPointResponse"/></returns>
@@ -463,7 +463,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 创建数据库代理连接点
+        /// 本接口（CreateProxyEndPoint）用于创建数据库代理连接点。
         /// </summary>
         /// <param name="req"><see cref="CreateProxyEndPointRequest"/></param>
         /// <returns><see cref="CreateProxyEndPointResponse"/></returns>
@@ -495,7 +495,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 删除用户账号
+        /// 本接口（DeleteAccounts）用于删除用户账号。
         /// </summary>
         /// <param name="req"><see cref="DeleteAccountsRequest"/></param>
         /// <returns><see cref="DeleteAccountsResponse"/></returns>
@@ -505,7 +505,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 删除用户账号
+        /// 本接口（DeleteAccounts）用于删除用户账号。
         /// </summary>
         /// <param name="req"><see cref="DeleteAccountsRequest"/></param>
         /// <returns><see cref="DeleteAccountsResponse"/></returns>
@@ -537,7 +537,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 删除审计规则模板
+        /// 本接口（DeleteAuditRuleTemplates）用于删除审计规则模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteAuditRuleTemplatesRequest"/></param>
         /// <returns><see cref="DeleteAuditRuleTemplatesResponse"/></returns>
@@ -547,7 +547,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 删除审计规则模板
+        /// 本接口（DeleteAuditRuleTemplates）用于删除审计规则模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteAuditRuleTemplatesRequest"/></param>
         /// <returns><see cref="DeleteAuditRuleTemplatesResponse"/></returns>
@@ -663,7 +663,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 查询账号已有权限
+        /// 本接口（DescribeAccountPrivileges）用于查询账号已有权限。
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountPrivilegesRequest"/></param>
         /// <returns><see cref="DescribeAccountPrivilegesResponse"/></returns>
@@ -673,7 +673,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 查询账号已有权限
+        /// 本接口（DescribeAccountPrivileges）用于查询账号已有权限。
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountPrivilegesRequest"/></param>
         /// <returns><see cref="DescribeAccountPrivilegesResponse"/></returns>
@@ -768,7 +768,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 查询审计规则模板信息
+        /// 本接口（DescribeAuditRuleTemplates）用于查询审计规则模板信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeAuditRuleTemplatesRequest"/></param>
         /// <returns><see cref="DescribeAuditRuleTemplatesResponse"/></returns>
@@ -778,7 +778,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 查询审计规则模板信息
+        /// 本接口（DescribeAuditRuleTemplates）用于查询审计规则模板信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeAuditRuleTemplatesRequest"/></param>
         /// <returns><see cref="DescribeAuditRuleTemplatesResponse"/></returns>
@@ -1104,7 +1104,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口（DescribeClusterParams）用于查询集群参数
+        /// 本接口（DescribeClusterParams）用于查询集群参数。
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterParamsRequest"/></param>
         /// <returns><see cref="DescribeClusterParamsResponse"/></returns>
@@ -1114,7 +1114,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口（DescribeClusterParams）用于查询集群参数
+        /// 本接口（DescribeClusterParams）用于查询集群参数。
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterParamsRequest"/></param>
         /// <returns><see cref="DescribeClusterParamsResponse"/></returns>
@@ -1125,7 +1125,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口（DescribeClusterPasswordComplexity）用于查看集群密码复杂度详情
+        /// 本接口（DescribeClusterPasswordComplexity）用于查看集群密码复杂度详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterPasswordComplexityRequest"/></param>
         /// <returns><see cref="DescribeClusterPasswordComplexityResponse"/></returns>
@@ -1135,7 +1135,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口（DescribeClusterPasswordComplexity）用于查看集群密码复杂度详情
+        /// 本接口（DescribeClusterPasswordComplexity）用于查看集群密码复杂度详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterPasswordComplexityRequest"/></param>
         /// <returns><see cref="DescribeClusterPasswordComplexityResponse"/></returns>
@@ -1167,7 +1167,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 查询实例安全组信息
+        /// 本接口（DescribeDBSecurityGroups）用于查询实例安全组信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSecurityGroupsRequest"/></param>
         /// <returns><see cref="DescribeDBSecurityGroupsResponse"/></returns>
@@ -1177,7 +1177,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 查询实例安全组信息
+        /// 本接口（DescribeDBSecurityGroups）用于查询实例安全组信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSecurityGroupsRequest"/></param>
         /// <returns><see cref="DescribeDBSecurityGroupsResponse"/></returns>
@@ -1251,7 +1251,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 查询实例错误日志列表
+        /// 本接口（DescribeInstanceErrorLogs）用于查询实例错误日志列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceErrorLogsRequest"/></param>
         /// <returns><see cref="DescribeInstanceErrorLogsResponse"/></returns>
@@ -1261,7 +1261,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 查询实例错误日志列表
+        /// 本接口（DescribeInstanceErrorLogs）用于查询实例错误日志列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceErrorLogsRequest"/></param>
         /// <returns><see cref="DescribeInstanceErrorLogsResponse"/></returns>
@@ -1272,7 +1272,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 该接口(DescribeInstanceParams)查询实例参数列表
+        /// 本接口（DescribeInstanceParams）用于查询实例参数列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceParamsRequest"/></param>
         /// <returns><see cref="DescribeInstanceParamsResponse"/></returns>
@@ -1282,7 +1282,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 该接口(DescribeInstanceParams)查询实例参数列表
+        /// 本接口（DescribeInstanceParams）用于查询实例参数列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceParamsRequest"/></param>
         /// <returns><see cref="DescribeInstanceParamsResponse"/></returns>
@@ -1398,7 +1398,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口（DescribeParamTemplateDetail）用于查询用户参数模板详情
+        /// 本接口（DescribeParamTemplateDetail）用于查询用户参数模板详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplateDetailRequest"/></param>
         /// <returns><see cref="DescribeParamTemplateDetailResponse"/></returns>
@@ -1408,7 +1408,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口（DescribeParamTemplateDetail）用于查询用户参数模板详情
+        /// 本接口（DescribeParamTemplateDetail）用于查询用户参数模板详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplateDetailRequest"/></param>
         /// <returns><see cref="DescribeParamTemplateDetailResponse"/></returns>
@@ -1419,7 +1419,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 查询用户指定产品下的所有参数模板信息
+        /// 本接口（DescribeParamTemplates）用于查询用户指定产品下的所有参数模板信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplatesRequest"/></param>
         /// <returns><see cref="DescribeParamTemplatesResponse"/></returns>
@@ -1429,7 +1429,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 查询用户指定产品下的所有参数模板信息
+        /// 本接口（DescribeParamTemplates）用于查询用户指定产品下的所有参数模板信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplatesRequest"/></param>
         /// <returns><see cref="DescribeParamTemplatesResponse"/></returns>
@@ -1461,7 +1461,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 查询数据库代理列表
+        /// 本接口（DescribeProxies）用于查询数据库代理列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeProxiesRequest"/></param>
         /// <returns><see cref="DescribeProxiesResponse"/></returns>
@@ -1471,7 +1471,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 查询数据库代理列表
+        /// 本接口（DescribeProxies）用于查询数据库代理列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeProxiesRequest"/></param>
         /// <returns><see cref="DescribeProxiesResponse"/></returns>
@@ -1587,7 +1587,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 查询订单关联实例
+        /// 本接口（DescribeResourcesByDealName）用于查询订单关联实例。
         /// </summary>
         /// <param name="req"><see cref="DescribeResourcesByDealNameRequest"/></param>
         /// <returns><see cref="DescribeResourcesByDealNameResponse"/></returns>
@@ -1597,7 +1597,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 查询订单关联实例
+        /// 本接口（DescribeResourcesByDealName）用于查询订单关联实例。
         /// </summary>
         /// <param name="req"><see cref="DescribeResourcesByDealNameRequest"/></param>
         /// <returns><see cref="DescribeResourcesByDealNameResponse"/></returns>
@@ -1650,7 +1650,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 查询支持的数据库代理版本
+        /// 本接口（DescribeSupportProxyVersion）用于查询支持的数据库代理版本。
         /// </summary>
         /// <param name="req"><see cref="DescribeSupportProxyVersionRequest"/></param>
         /// <returns><see cref="DescribeSupportProxyVersionResponse"/></returns>
@@ -1660,7 +1660,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 查询支持的数据库代理版本
+        /// 本接口（DescribeSupportProxyVersion）用于查询支持的数据库代理版本。
         /// </summary>
         /// <param name="req"><see cref="DescribeSupportProxyVersionRequest"/></param>
         /// <returns><see cref="DescribeSupportProxyVersionResponse"/></returns>
@@ -1797,7 +1797,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 批量授权账号权限
+        /// 本接口（GrantAccountPrivileges）用于批量授权账号权限。
         /// </summary>
         /// <param name="req"><see cref="GrantAccountPrivilegesRequest"/></param>
         /// <returns><see cref="GrantAccountPrivilegesResponse"/></returns>
@@ -1807,7 +1807,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 批量授权账号权限
+        /// 本接口（GrantAccountPrivileges）用于批量授权账号权限。
         /// </summary>
         /// <param name="req"><see cref="GrantAccountPrivilegesRequest"/></param>
         /// <returns><see cref="GrantAccountPrivilegesResponse"/></returns>
@@ -1860,7 +1860,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 查询续费集群价格
+        /// 本接口（InquirePriceRenew）用于查询续费集群价格。
         /// </summary>
         /// <param name="req"><see cref="InquirePriceRenewRequest"/></param>
         /// <returns><see cref="InquirePriceRenewResponse"/></returns>
@@ -1870,7 +1870,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 查询续费集群价格
+        /// 本接口（InquirePriceRenew）用于查询续费集群价格。
         /// </summary>
         /// <param name="req"><see cref="InquirePriceRenewRequest"/></param>
         /// <returns><see cref="InquirePriceRenewResponse"/></returns>
@@ -1944,7 +1944,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 修改账号主机
+        /// 本接口（ModifyAccountHost）用于修改账号主机。
         /// </summary>
         /// <param name="req"><see cref="ModifyAccountHostRequest"/></param>
         /// <returns><see cref="ModifyAccountHostResponse"/></returns>
@@ -1954,7 +1954,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 修改账号主机
+        /// 本接口（ModifyAccountHost）用于修改账号主机。
         /// </summary>
         /// <param name="req"><see cref="ModifyAccountHostRequest"/></param>
         /// <returns><see cref="ModifyAccountHostResponse"/></returns>
@@ -1965,7 +1965,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 修改账号配置
+        /// 本接口（ModifyAccountParams）用于修改账号配置。
         /// </summary>
         /// <param name="req"><see cref="ModifyAccountParamsRequest"/></param>
         /// <returns><see cref="ModifyAccountParamsResponse"/></returns>
@@ -1975,7 +1975,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 修改账号配置
+        /// 本接口（ModifyAccountParams）用于修改账号配置。
         /// </summary>
         /// <param name="req"><see cref="ModifyAccountParamsRequest"/></param>
         /// <returns><see cref="ModifyAccountParamsResponse"/></returns>
@@ -1986,7 +1986,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 修改账号库表权限
+        /// 本接口（ModifyAccountPrivileges）用于修改账号库表权限。
         /// </summary>
         /// <param name="req"><see cref="ModifyAccountPrivilegesRequest"/></param>
         /// <returns><see cref="ModifyAccountPrivilegesResponse"/></returns>
@@ -1996,7 +1996,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 修改账号库表权限
+        /// 本接口（ModifyAccountPrivileges）用于修改账号库表权限。
         /// </summary>
         /// <param name="req"><see cref="ModifyAccountPrivilegesRequest"/></param>
         /// <returns><see cref="ModifyAccountPrivilegesResponse"/></returns>
@@ -2175,7 +2175,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 修改集群参数
+        /// 本接口（ModifyClusterParam）用于修改集群参数。
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterParamRequest"/></param>
         /// <returns><see cref="ModifyClusterParamResponse"/></returns>
@@ -2185,7 +2185,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 修改集群参数
+        /// 本接口（ModifyClusterParam）用于修改集群参数。
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterParamRequest"/></param>
         /// <returns><see cref="ModifyClusterParamResponse"/></returns>
@@ -2238,7 +2238,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 调整包年包月存储容量
+        /// 本接口（ModifyClusterStorage）用于调整包年包月存储容量。
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterStorageRequest"/></param>
         /// <returns><see cref="ModifyClusterStorageResponse"/></returns>
@@ -2248,7 +2248,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 调整包年包月存储容量
+        /// 本接口（ModifyClusterStorage）用于调整包年包月存储容量。
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterStorageRequest"/></param>
         /// <returns><see cref="ModifyClusterStorageResponse"/></returns>
@@ -2385,7 +2385,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 修改数据库代理描述
+        /// 本接口（ModifyProxyDesc）用于修改数据库代理描述。
         /// </summary>
         /// <param name="req"><see cref="ModifyProxyDescRequest"/></param>
         /// <returns><see cref="ModifyProxyDescResponse"/></returns>
@@ -2395,7 +2395,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 修改数据库代理描述
+        /// 本接口（ModifyProxyDesc）用于修改数据库代理描述。
         /// </summary>
         /// <param name="req"><see cref="ModifyProxyDescRequest"/></param>
         /// <returns><see cref="ModifyProxyDescResponse"/></returns>
@@ -2406,7 +2406,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 配置数据库代理读写分离
+        /// 本接口（ModifyProxyRwSplit）用于配置数据库代理读写分离。
         /// </summary>
         /// <param name="req"><see cref="ModifyProxyRwSplitRequest"/></param>
         /// <returns><see cref="ModifyProxyRwSplitResponse"/></returns>
@@ -2416,7 +2416,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 配置数据库代理读写分离
+        /// 本接口（ModifyProxyRwSplit）用于配置数据库代理读写分离。
         /// </summary>
         /// <param name="req"><see cref="ModifyProxyRwSplitRequest"/></param>
         /// <returns><see cref="ModifyProxyRwSplitResponse"/></returns>
@@ -2511,7 +2511,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 修改实例组ip，端口
+        /// 本接口（ModifyVipVport）用于修改实例组ip，端口。
         /// </summary>
         /// <param name="req"><see cref="ModifyVipVportRequest"/></param>
         /// <returns><see cref="ModifyVipVportResponse"/></returns>
@@ -2521,7 +2521,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 修改实例组ip，端口
+        /// 本接口（ModifyVipVport）用于修改实例组ip，端口。
         /// </summary>
         /// <param name="req"><see cref="ModifyVipVportRequest"/></param>
         /// <returns><see cref="ModifyVipVportResponse"/></returns>
@@ -2553,7 +2553,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 销毁实例
+        /// 本接口（OfflineInstance）用于销毁实例。
         /// </summary>
         /// <param name="req"><see cref="OfflineInstanceRequest"/></param>
         /// <returns><see cref="OfflineInstanceResponse"/></returns>
@@ -2563,7 +2563,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 销毁实例
+        /// 本接口（OfflineInstance）用于销毁实例。
         /// </summary>
         /// <param name="req"><see cref="OfflineInstanceRequest"/></param>
         /// <returns><see cref="OfflineInstanceResponse"/></returns>
@@ -2721,7 +2721,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 负载均衡数据库代理
+        /// 本接口（ReloadBalanceProxyNode）用于负载均衡数据库代理。
         /// </summary>
         /// <param name="req"><see cref="ReloadBalanceProxyNodeRequest"/></param>
         /// <returns><see cref="ReloadBalanceProxyNodeResponse"/></returns>
@@ -2731,7 +2731,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 负载均衡数据库代理
+        /// 本接口（ReloadBalanceProxyNode）用于负载均衡数据库代理。
         /// </summary>
         /// <param name="req"><see cref="ReloadBalanceProxyNodeRequest"/></param>
         /// <returns><see cref="ReloadBalanceProxyNodeResponse"/></returns>
@@ -2784,7 +2784,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口(ResetAccountPassword)用于修改数据库账号密码
+        /// 本接口（ResetAccountPassword）用于修改数据库账号密码。
         /// </summary>
         /// <param name="req"><see cref="ResetAccountPasswordRequest"/></param>
         /// <returns><see cref="ResetAccountPasswordResponse"/></returns>
@@ -2794,7 +2794,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口(ResetAccountPassword)用于修改数据库账号密码
+        /// 本接口（ResetAccountPassword）用于修改数据库账号密码。
         /// </summary>
         /// <param name="req"><see cref="ResetAccountPasswordRequest"/></param>
         /// <returns><see cref="ResetAccountPasswordResponse"/></returns>
@@ -2805,7 +2805,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 重启实例
+        /// 本接口（RestartInstance）用于重启实例。
         /// </summary>
         /// <param name="req"><see cref="RestartInstanceRequest"/></param>
         /// <returns><see cref="RestartInstanceResponse"/></returns>
@@ -2815,7 +2815,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 重启实例
+        /// 本接口（RestartInstance）用于重启实例。
         /// </summary>
         /// <param name="req"><see cref="RestartInstanceRequest"/></param>
         /// <returns><see cref="RestartInstanceResponse"/></returns>
@@ -2868,7 +2868,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口（RollBackCluster）用于集群回档
+        /// 本接口（RollBackCluster）用于集群回档。
         /// </summary>
         /// <param name="req"><see cref="RollBackClusterRequest"/></param>
         /// <returns><see cref="RollBackClusterResponse"/></returns>
@@ -2878,7 +2878,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口（RollBackCluster）用于集群回档
+        /// 本接口（RollBackCluster）用于集群回档。
         /// </summary>
         /// <param name="req"><see cref="RollBackClusterRequest"/></param>
         /// <returns><see cref="RollBackClusterResponse"/></returns>
@@ -2931,7 +2931,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口(SearchClusterTables)搜索集群数据表列表
+        /// 本接口（SearchClusterTables）用于搜索集群数据表列表。
         /// </summary>
         /// <param name="req"><see cref="SearchClusterTablesRequest"/></param>
         /// <returns><see cref="SearchClusterTablesResponse"/></returns>
@@ -2941,7 +2941,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口(SearchClusterTables)搜索集群数据表列表
+        /// 本接口（SearchClusterTables）用于搜索集群数据表列表。
         /// </summary>
         /// <param name="req"><see cref="SearchClusterTablesRequest"/></param>
         /// <returns><see cref="SearchClusterTablesResponse"/></returns>
@@ -2952,7 +2952,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// SetRenewFlag设置实例的自动续费功能
+        /// 本接口（SetRenewFlag）用于设置实例的自动续费功能。
         /// </summary>
         /// <param name="req"><see cref="SetRenewFlagRequest"/></param>
         /// <returns><see cref="SetRenewFlagResponse"/></returns>
@@ -2962,7 +2962,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// SetRenewFlag设置实例的自动续费功能
+        /// 本接口（SetRenewFlag）用于设置实例的自动续费功能。
         /// </summary>
         /// <param name="req"><see cref="SetRenewFlagRequest"/></param>
         /// <returns><see cref="SetRenewFlagResponse"/></returns>
@@ -3015,7 +3015,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 更换集群vpc
+        /// 本接口（SwitchClusterVpc）用于更换集群vpc。
         /// </summary>
         /// <param name="req"><see cref="SwitchClusterVpcRequest"/></param>
         /// <returns><see cref="SwitchClusterVpcResponse"/></returns>
@@ -3025,7 +3025,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 更换集群vpc
+        /// 本接口（SwitchClusterVpc）用于更换集群vpc。
         /// </summary>
         /// <param name="req"><see cref="SwitchClusterVpcRequest"/></param>
         /// <returns><see cref="SwitchClusterVpcResponse"/></returns>
@@ -3057,7 +3057,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口(SwitchProxyVpc)更换数据库代理vpc
+        /// 本接口（SwitchProxyVpc）用于更换数据库代理vpc。
         /// </summary>
         /// <param name="req"><see cref="SwitchProxyVpcRequest"/></param>
         /// <returns><see cref="SwitchProxyVpcResponse"/></returns>
@@ -3067,7 +3067,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口(SwitchProxyVpc)更换数据库代理vpc
+        /// 本接口（SwitchProxyVpc）用于更换数据库代理vpc。
         /// </summary>
         /// <param name="req"><see cref="SwitchProxyVpcRequest"/></param>
         /// <returns><see cref="SwitchProxyVpcResponse"/></returns>
@@ -3162,7 +3162,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 升级数据库代理版本
+        /// 本接口（UpgradeProxyVersion）用于升级数据库代理版本。
         /// </summary>
         /// <param name="req"><see cref="UpgradeProxyVersionRequest"/></param>
         /// <returns><see cref="UpgradeProxyVersionResponse"/></returns>
@@ -3172,7 +3172,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 升级数据库代理版本
+        /// 本接口（UpgradeProxyVersion）用于升级数据库代理版本。
         /// </summary>
         /// <param name="req"><see cref="UpgradeProxyVersionRequest"/></param>
         /// <returns><see cref="UpgradeProxyVersionResponse"/></returns>

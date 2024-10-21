@@ -147,6 +147,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("ConvergenceHistoryIDs")]
         public string[] ConvergenceHistoryIDs{ get; set; }
 
+        /// <summary>
+        /// 告警类型
+        /// </summary>
+        [JsonProperty("AlarmTypes")]
+        public string[] AlarmTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -173,6 +179,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
             this.SetParamArraySimple(map, prefix + "AlarmLevels.", this.AlarmLevels);
             this.SetParamArraySimple(map, prefix + "ConvergenceHistoryIDs.", this.ConvergenceHistoryIDs);
+            this.SetParamArraySimple(map, prefix + "AlarmTypes.", this.AlarmTypes);
         }
     }
 }
