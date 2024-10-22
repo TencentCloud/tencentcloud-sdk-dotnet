@@ -38,9 +38,19 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 字幕语言。常见的取值如下：
-        /// <li>cn：中文</li>
-        /// <li>ja：日文</li>
-        /// <li>en-US：英文</li>
+        /// <li>zh：中文；</li>
+        /// <li>en：英文；</li>
+        /// <li>ja：日文；</li>
+        /// <li>ko：韩文；</li>
+        /// <li>vi：越南语；</li>
+        /// <li>ms：马来语；</li>
+        /// <li>th：泰语；</li>
+        /// <li>pt：葡萄牙语；</li>
+        /// <li>tr：土耳其语；</li>
+        /// <li>ar：阿拉伯语；</li>
+        /// <li>es：西班牙语；</li>
+        /// <li>hi：印地语；</li>
+        /// <li>fr：法语。</li>
         /// 其他取值参考 [RFC5646](https://tools.ietf.org/html/rfc5646)
         /// </summary>
         [JsonProperty("Language")]
@@ -59,6 +69,14 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
+        /// <summary>
+        /// 字幕来源，取值范围：
+        /// <li>UserUploaded：用户上传；</li>
+        /// <li>AIRecognition：AI 识别，通过语音识别或语音翻译生成。</li>
+        /// </summary>
+        [JsonProperty("Source")]
+        public string Source{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +88,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Language", this.Language);
             this.SetParamSimple(map, prefix + "Format", this.Format);
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "Source", this.Source);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Trocket.V20230308.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 集群ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -67,10 +67,22 @@ namespace TencentCloud.Trocket.V20230308.Models
         public bool? ScaledTpsEnabled{ get; set; }
 
         /// <summary>
+        /// 是否开启ACL
+        /// </summary>
+        [JsonProperty("AclEnabled")]
+        public bool? AclEnabled{ get; set; }
+
+        /// <summary>
         /// 最大可创建主题数
         /// </summary>
         [JsonProperty("MaxTopicNum")]
         public long? MaxTopicNum{ get; set; }
+
+        /// <summary>
+        /// 免费额度之外的主题个数
+        /// </summary>
+        [JsonProperty("ExtraTopicNum")]
+        public string ExtraTopicNum{ get; set; }
 
 
         /// <summary>
@@ -85,7 +97,9 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "SkuCode", this.SkuCode);
             this.SetParamSimple(map, prefix + "MessageRetention", this.MessageRetention);
             this.SetParamSimple(map, prefix + "ScaledTpsEnabled", this.ScaledTpsEnabled);
+            this.SetParamSimple(map, prefix + "AclEnabled", this.AclEnabled);
             this.SetParamSimple(map, prefix + "MaxTopicNum", this.MaxTopicNum);
+            this.SetParamSimple(map, prefix + "ExtraTopicNum", this.ExtraTopicNum);
         }
     }
 }

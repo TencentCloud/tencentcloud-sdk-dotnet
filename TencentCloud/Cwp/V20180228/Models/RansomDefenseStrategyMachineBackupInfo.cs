@@ -160,6 +160,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("BackupSuccessCount")]
         public ulong? BackupSuccessCount{ get; set; }
 
+        /// <summary>
+        /// 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HostVersion")]
+        public ulong? HostVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -186,6 +193,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "RollBackPercent", this.RollBackPercent);
             this.SetParamSimple(map, prefix + "RollBackStatus", this.RollBackStatus);
             this.SetParamSimple(map, prefix + "BackupSuccessCount", this.BackupSuccessCount);
+            this.SetParamSimple(map, prefix + "HostVersion", this.HostVersion);
         }
     }
 }

@@ -25,13 +25,19 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// 过滤条件，通道ID
+        /// 通道ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// 过滤条件，根据监听器ID进行精确查询。
+        /// 通道组ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
+        /// <summary>
+        /// 过滤条件，根据监听器ID进行精确查询。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
@@ -67,12 +73,6 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string SearchValue{ get; set; }
 
         /// <summary>
-        /// 过滤条件，通道组ID
-        /// </summary>
-        [JsonProperty("GroupId")]
-        public string GroupId{ get; set; }
-
-        /// <summary>
         /// 支持Http3的开关，其中：
         /// 0，表示不需要支持Http3接入；
         /// 1，表示需要支持Http3接入。
@@ -89,13 +89,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ProxyId", this.ProxyId);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
             this.SetParamSimple(map, prefix + "ListenerName", this.ListenerName);
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "SearchValue", this.SearchValue);
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
         }
     }

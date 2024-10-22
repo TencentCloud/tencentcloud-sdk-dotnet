@@ -37,6 +37,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public long?[] Definitions{ get; set; }
 
         /// <summary>
+        /// 模板类型过滤条件，可选值：<li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>不填默认为空，即不对模板类型过滤。
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
         /// 分页偏移量，默认值：0。
         /// </summary>
         [JsonProperty("Offset")]
@@ -56,6 +62,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamArraySimple(map, prefix + "Definitions.", this.Definitions);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }

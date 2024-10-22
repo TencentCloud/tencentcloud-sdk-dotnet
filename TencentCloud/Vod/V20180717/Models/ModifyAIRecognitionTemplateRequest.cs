@@ -91,6 +91,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public AsrWordsConfigureInfoForUpdate AsrWordsConfigure{ get; set; }
 
         /// <summary>
+        /// 语音翻译控制参数。
+        /// </summary>
+        [JsonProperty("AsrTranslateConfigure")]
+        public AsrTranslateConfigureInfoForUpdate AsrTranslateConfigure{ get; set; }
+
+        /// <summary>
         /// 物体识别控制参数。
         /// </summary>
         [JsonProperty("ObjectConfigure")]
@@ -119,6 +125,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "OcrWordsConfigure.", this.OcrWordsConfigure);
             this.SetParamObj(map, prefix + "AsrFullTextConfigure.", this.AsrFullTextConfigure);
             this.SetParamObj(map, prefix + "AsrWordsConfigure.", this.AsrWordsConfigure);
+            this.SetParamObj(map, prefix + "AsrTranslateConfigure.", this.AsrTranslateConfigure);
             this.SetParamObj(map, prefix + "ObjectConfigure.", this.ObjectConfigure);
             this.SetParamSimple(map, prefix + "ScreenshotInterval", this.ScreenshotInterval);
         }

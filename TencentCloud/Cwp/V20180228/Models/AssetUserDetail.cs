@@ -85,13 +85,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows
+        /// 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows
         /// </summary>
         [JsonProperty("UserType")]
         public ulong? UserType{ get; set; }
 
         /// <summary>
-        /// 是否域账号：0否， 1是, 999为空  仅windows
+        /// 是否域账号：0否， 1是, 999为空  仅Windows
         /// </summary>
         [JsonProperty("IsDomain")]
         public ulong? IsDomain{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 环境（命名空间）名称。
+        /// 命名空间
         /// </summary>
         [JsonProperty("EnvironmentId")]
         public string EnvironmentId{ get; set; }
@@ -55,10 +55,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string RoleName{ get; set; }
 
         /// <summary>
-        /// * RoleName
-        /// 按照角色名进行过滤，精确查询。
-        /// 类型：String
-        /// 必选：否
+        /// RoleName按照角色名进行过滤，精确查询。类型：String必选：否
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

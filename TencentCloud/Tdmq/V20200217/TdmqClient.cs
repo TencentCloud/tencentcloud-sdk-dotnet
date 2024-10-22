@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1110";
+       private const string sdkVersion = "SDK_NET_3.0.1111";
 
         /// <summary>
         /// Client constructor.
@@ -701,6 +701,27 @@ namespace TencentCloud.Tdmq.V20200217
         public DeleteProClusterResponse DeleteProClusterSync(DeleteProClusterRequest req)
         {
             return InternalRequestAsync<DeleteProClusterResponse>(req, "DeleteProCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 解绑RabbitMQ路由关系
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRabbitMQBindingRequest"/></param>
+        /// <returns><see cref="DeleteRabbitMQBindingResponse"/></returns>
+        public Task<DeleteRabbitMQBindingResponse> DeleteRabbitMQBinding(DeleteRabbitMQBindingRequest req)
+        {
+            return InternalRequestAsync<DeleteRabbitMQBindingResponse>(req, "DeleteRabbitMQBinding");
+        }
+
+        /// <summary>
+        /// 解绑RabbitMQ路由关系
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRabbitMQBindingRequest"/></param>
+        /// <returns><see cref="DeleteRabbitMQBindingResponse"/></returns>
+        public DeleteRabbitMQBindingResponse DeleteRabbitMQBindingSync(DeleteRabbitMQBindingRequest req)
+        {
+            return InternalRequestAsync<DeleteRabbitMQBindingResponse>(req, "DeleteRabbitMQBinding")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1482,6 +1503,27 @@ namespace TencentCloud.Tdmq.V20200217
         public DescribePulsarProInstancesResponse DescribePulsarProInstancesSync(DescribePulsarProInstancesRequest req)
         {
             return InternalRequestAsync<DescribePulsarProInstancesResponse>(req, "DescribePulsarProInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询RabbitMQ路由关系列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQBindingsRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQBindingsResponse"/></returns>
+        public Task<DescribeRabbitMQBindingsResponse> DescribeRabbitMQBindings(DescribeRabbitMQBindingsRequest req)
+        {
+            return InternalRequestAsync<DescribeRabbitMQBindingsResponse>(req, "DescribeRabbitMQBindings");
+        }
+
+        /// <summary>
+        /// 查询RabbitMQ路由关系列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQBindingsRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQBindingsResponse"/></returns>
+        public DescribeRabbitMQBindingsResponse DescribeRabbitMQBindingsSync(DescribeRabbitMQBindingsRequest req)
+        {
+            return InternalRequestAsync<DescribeRabbitMQBindingsResponse>(req, "DescribeRabbitMQBindings")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

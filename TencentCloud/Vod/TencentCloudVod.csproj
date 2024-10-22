@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1110</VersionPrefix>
+    <VersionPrefix>3.0.1111</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -82,6 +82,10 @@
     <Compile Include="V20180717\Models\AiRecognitionTaskAsrFullTextResultOutput.cs" />
     <Compile Include="V20180717\Models\AiRecognitionTaskAsrFullTextResultOutputSubtitleItem.cs" />
     <Compile Include="V20180717\Models\AiRecognitionTaskAsrFullTextSegmentItem.cs" />
+    <Compile Include="V20180717\Models\AiRecognitionTaskAsrTranslateResult.cs" />
+    <Compile Include="V20180717\Models\AiRecognitionTaskAsrTranslateResultInput.cs" />
+    <Compile Include="V20180717\Models\AiRecognitionTaskAsrTranslateResultOutput.cs" />
+    <Compile Include="V20180717\Models\AiRecognitionTaskAsrTranslateSegmentItem.cs" />
     <Compile Include="V20180717\Models\AiRecognitionTaskAsrWordsResult.cs" />
     <Compile Include="V20180717\Models\AiRecognitionTaskAsrWordsResultInput.cs" />
     <Compile Include="V20180717\Models\AiRecognitionTaskAsrWordsResultItem.cs" />
@@ -161,6 +165,8 @@
     <Compile Include="V20180717\Models\ArtifactRepairInfo.cs" />
     <Compile Include="V20180717\Models\AsrFullTextConfigureInfo.cs" />
     <Compile Include="V20180717\Models\AsrFullTextConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\AsrTranslateConfigureInfo.cs" />
+    <Compile Include="V20180717\Models\AsrTranslateConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\AsrWordsConfigureInfo.cs" />
     <Compile Include="V20180717\Models\AsrWordsConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\AttachMediaSubtitlesRequest.cs" />

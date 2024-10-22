@@ -28,7 +28,7 @@ namespace TencentCloud.Gaap.V20180529
 
        private const string endpoint = "gaap.tencentcloudapi.com";
        private const string version = "2018-05-29";
-       private const string sdkVersion = "SDK_NET_3.0.1110";
+       private const string sdkVersion = "SDK_NET_3.0.1111";
 
         /// <summary>
         /// Client constructor.
@@ -2013,7 +2013,7 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
-        /// 本接口（ModifyProxyGroupAttribute）用于修改通道组属性，目前仅支持修改通道组名称。
+        /// 本接口（ModifyProxyGroupAttribute）用于修改通道组属性，目前仅支持修改通道组名称与项目ID。
         /// </summary>
         /// <param name="req"><see cref="ModifyProxyGroupAttributeRequest"/></param>
         /// <returns><see cref="ModifyProxyGroupAttributeResponse"/></returns>
@@ -2023,7 +2023,7 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
-        /// 本接口（ModifyProxyGroupAttribute）用于修改通道组属性，目前仅支持修改通道组名称。
+        /// 本接口（ModifyProxyGroupAttribute）用于修改通道组属性，目前仅支持修改通道组名称与项目ID。
         /// </summary>
         /// <param name="req"><see cref="ModifyProxyGroupAttributeRequest"/></param>
         /// <returns><see cref="ModifyProxyGroupAttributeResponse"/></returns>

@@ -31,7 +31,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 修改后的通道组名称：不超过30个字符，超过部分会被截断。
+        /// 修改后的通道组名称：不超过30个字符，否则修改失败。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }

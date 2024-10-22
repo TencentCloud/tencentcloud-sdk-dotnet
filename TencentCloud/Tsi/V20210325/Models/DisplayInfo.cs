@@ -66,6 +66,12 @@ namespace TencentCloud.Tsi.V20210325.Models
         [JsonProperty("IsEnd")]
         public bool? IsEnd{ get; set; }
 
+        /// <summary>
+        /// base64编码的wav/mp3音频数据
+        /// </summary>
+        [JsonProperty("Audio")]
+        public string Audio{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Tsi.V20210325.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "IsEnd", this.IsEnd);
+            this.SetParamSimple(map, prefix + "Audio", this.Audio);
         }
     }
 }

@@ -25,6 +25,26 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
+        /// 媒资字幕 ID，用于媒资字幕管理，仅当 Format 为 vtt 时有效。
+        /// <font color=red>注意：</font>2024-11-01T10:00:00Z 之前的任务返回此字段无效。
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
+        /// 媒资字幕名字，用于播放器展示，仅当 Format 为 vtt 时有效。
+        /// <font color=red>注意：</font>2024-11-01T10:00:00Z 之前的任务返回此字段无效。
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// 字幕语言。
+        /// </summary>
+        [JsonProperty("Language")]
+        public string Language{ get; set; }
+
+        /// <summary>
         /// 字幕文件格式，取值范围：
         /// <li>vtt：WebVTT 字幕文件；</li>
         /// <li>srt：SRT 字幕文件。</li>
@@ -44,6 +64,9 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Language", this.Language);
             this.SetParamSimple(map, prefix + "Format", this.Format);
             this.SetParamSimple(map, prefix + "Url", this.Url);
         }

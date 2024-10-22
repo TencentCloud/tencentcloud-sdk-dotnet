@@ -31,7 +31,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string PublicIp{ get; set; }
 
         /// <summary>
-        /// 公网 IP 类型
+        /// 公网 IP 类型 1 公网,2 弹性,3 弹性ipv6,4 anycastIP, 6 HighQualityEIP
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicIpType")]

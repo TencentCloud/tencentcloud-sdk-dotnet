@@ -31,7 +31,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 通道名称。可任意命名，但不得超过30个字符。
+        /// 通道名称。可任意命名，但不得超过32个字符。
         /// </summary>
         [JsonProperty("ProxyName")]
         public string ProxyName{ get; set; }

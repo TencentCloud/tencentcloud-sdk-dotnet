@@ -43,6 +43,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Comment{ get; set; }
 
         /// <summary>
+        /// 模板类型，取值：
+        /// <li>Preset：系统预置模板；</li>
+        /// <li>Custom：用户自定义模板。</li>
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
         /// 头尾识别控制参数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -92,6 +100,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public AsrWordsConfigureInfo AsrWordsConfigure{ get; set; }
 
         /// <summary>
+        /// 语音翻译控制参数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AsrTranslateConfigure")]
+        public AsrTranslateConfigureInfo AsrTranslateConfigure{ get; set; }
+
+        /// <summary>
         /// 物体识别控制参数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -125,6 +140,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "HeadTailConfigure.", this.HeadTailConfigure);
             this.SetParamObj(map, prefix + "SegmentConfigure.", this.SegmentConfigure);
             this.SetParamObj(map, prefix + "FaceConfigure.", this.FaceConfigure);
@@ -132,6 +148,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "OcrWordsConfigure.", this.OcrWordsConfigure);
             this.SetParamObj(map, prefix + "AsrFullTextConfigure.", this.AsrFullTextConfigure);
             this.SetParamObj(map, prefix + "AsrWordsConfigure.", this.AsrWordsConfigure);
+            this.SetParamObj(map, prefix + "AsrTranslateConfigure.", this.AsrTranslateConfigure);
             this.SetParamObj(map, prefix + "ObjectConfigure.", this.ObjectConfigure);
             this.SetParamSimple(map, prefix + "ScreenshotInterval", this.ScreenshotInterval);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);

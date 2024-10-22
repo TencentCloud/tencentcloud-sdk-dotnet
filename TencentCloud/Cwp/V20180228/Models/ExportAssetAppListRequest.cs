@@ -31,22 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Quuid{ get; set; }
 
         /// <summary>
-        /// 过滤条件。
-        /// <li>AppName- string - 是否必填：否 - 应用名搜索</li>
-        /// <li>IP - String - 是否必填：否 - 主机ip</li>
-        /// <li>MachineName - String - 是否必填：否 - 主机名称</li>
-        /// <li>InstanceID - string - 是否必填：否 - 实例ID</li>
-        /// <li>Type - int - 是否必填：否 - 类型	: 仅linux
-        /// 0: 全部
-        /// 1: 运维
-        /// 2 : 数据库
-        /// 3 : 安全
-        /// 4 : 可疑应用
-        /// 5 : 系统架构
-        /// 6 : 系统应用
-        /// 7 : WEB服务
-        /// 99:其他</li>
-        /// <li>OsType - uint64 - 是否必填：否 - windows/linux</li>
+        /// 过滤条件。<li>AppName- string - 是否必填：否 - 应用名搜索</li><li>IP - String - 是否必填：否 - 主机ip</li><li>MachineName - String - 是否必填：否 - 主机名称</li><li>InstanceID - string - 是否必填：否 - 实例ID</li><li>Type - int - 是否必填：否 - 类型	: 仅linux0: 全部1: 运维2 : 数据库3 : 安全4 : 可疑应用5 : 系统架构6 : 系统应用7 : WEB服务99:其他</li><li>OsType - uint64 - 是否必填：否 - Windows/Linux</li>
         /// </summary>
         [JsonProperty("Filters")]
         public AssetFilters[] Filters{ get; set; }

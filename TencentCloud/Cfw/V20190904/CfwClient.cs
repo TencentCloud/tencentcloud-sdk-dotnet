@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1110";
+       private const string sdkVersion = "SDK_NET_3.0.1111";
 
         /// <summary>
         /// Client constructor.
@@ -1251,6 +1251,8 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 旧接口，不再维护
+        /// 
         /// 查询NAT边界防火墙开关列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNatSwitchListRequest"/></param>
@@ -1261,6 +1263,8 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 旧接口，不再维护
+        /// 
         /// 查询NAT边界防火墙开关列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNatSwitchListRequest"/></param>

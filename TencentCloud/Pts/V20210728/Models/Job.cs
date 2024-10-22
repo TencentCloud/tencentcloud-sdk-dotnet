@@ -327,6 +327,13 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("ScenarioName")]
         public string ScenarioName{ get; set; }
 
+        /// <summary>
+        /// 付费类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public long? PayMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -376,6 +383,7 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);
             this.SetParamSimple(map, prefix + "ScenarioName", this.ScenarioName);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
         }
     }
 }

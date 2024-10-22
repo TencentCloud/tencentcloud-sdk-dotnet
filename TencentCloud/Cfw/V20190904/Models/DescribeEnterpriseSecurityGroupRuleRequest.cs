@@ -102,7 +102,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
+        /// 端口协议类型参数模板id；协议端口模板id
         /// </summary>
         [JsonProperty("ServiceTemplateId")]
         public string ServiceTemplateId{ get; set; }

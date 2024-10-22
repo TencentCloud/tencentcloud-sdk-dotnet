@@ -24,12 +24,19 @@ namespace TencentCloud.Gaap.V20180529.Models
     public class DescribeDestRegionsRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 通道质量:0表示金牌，1表示银牌。默认不传该参数，表示金牌。本参数确定查询指定通道质量的源站区域
+        /// </summary>
+        [JsonProperty("QualityType")]
+        public ulong? QualityType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "QualityType", this.QualityType);
         }
     }
 }

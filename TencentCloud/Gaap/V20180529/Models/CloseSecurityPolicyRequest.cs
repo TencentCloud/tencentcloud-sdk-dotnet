@@ -25,13 +25,13 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// 通道ID
+        /// 通道ID。操作通道组时无需填此参数。
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// 安全组策略ID
+        /// 安全组策略ID。操作通道组时须填此参数。
         /// </summary>
         [JsonProperty("PolicyId")]
         public string PolicyId{ get; set; }

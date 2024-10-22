@@ -84,6 +84,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("RegionInfo")]
         public RegionInfo RegionInfo{ get; set; }
 
+        /// <summary>
+        /// 主机示例ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +107,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "BackupTime", this.BackupTime);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamObj(map, prefix + "RegionInfo.", this.RegionInfo);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

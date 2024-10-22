@@ -49,7 +49,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string EndDate{ get; set; }
 
         /// <summary>
-        /// 过滤安全播报类型：0-紧急通知，1-功能更新，2-行业荣誉，3-版本发布
+        /// 过滤安全播报类型：0-紧急通知，1-功能更新，2-行业荣誉，3-版本发布，4-最佳实践
         /// </summary>
         [JsonProperty("BroadcastType")]
         public string BroadcastType{ get; set; }

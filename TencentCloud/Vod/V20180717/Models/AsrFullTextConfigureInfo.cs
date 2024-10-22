@@ -35,7 +35,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// 生成的字幕文件格式列表，不填或者填空数组表示不生成字幕文件，可选值：
         /// <li>vtt：生成 WebVTT 字幕文件；</li>
-        /// <li>srt：生成 SRT 字幕文件。</li>
+        /// <li>srt：生成 SRT 字幕文件。</li><font color=red>注意：</font>云点播媒资信息仅支持添加 vtt 字幕，因此当且仅当 SubtitleFormats 包含 vtt 时，云点播将生成的字幕添加到媒资。
         /// </summary>
         [JsonProperty("SubtitleFormats")]
         public string[] SubtitleFormats{ get; set; }
@@ -60,6 +60,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("SrcLanguage")]
         public string SrcLanguage{ get; set; }
 
+        /// <summary>
+        /// 指定字幕名称，长度限制：64 个字符。该值将用于播放器展示，若不填则云点播自动生成。
+        /// <font color=red>注意：</font>仅当 SubtitleFormats 包含 vtt 时，该字段有效。
+        /// </summary>
+        [JsonProperty("SubtitleName")]
+        public string SubtitleName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArraySimple(map, prefix + "SubtitleFormats.", this.SubtitleFormats);
             this.SetParamSimple(map, prefix + "SubtitleFormat", this.SubtitleFormat);
             this.SetParamSimple(map, prefix + "SrcLanguage", this.SrcLanguage);
+            this.SetParamSimple(map, prefix + "SubtitleName", this.SubtitleName);
         }
     }
 }

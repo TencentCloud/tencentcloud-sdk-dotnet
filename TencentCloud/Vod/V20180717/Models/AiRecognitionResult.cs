@@ -30,6 +30,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>AsrWordsRecognition：语音关键词识别，</li>
         /// <li>OcrWordsRecognition：文本关键词识别，</li>
         /// <li>AsrFullTextRecognition：语音全文识别，</li>
+        /// <li>AsrTranslateRecognition：语音翻译识别，</li>
         /// <li>OcrFullTextRecognition：文本全文识别，</li>
         /// <li>HeadTailRecognition：视频片头片尾识别，</li>
         /// <li>ObjectRecognition：物体识别。</li>
@@ -78,6 +79,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiRecognitionTaskAsrFullTextResult AsrFullTextTask{ get; set; }
 
         /// <summary>
+        /// 语音翻译结果，当 Type 为 AsrTranslateRecognition 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AsrTranslateTask")]
+        public AiRecognitionTaskAsrTranslateResult AsrTranslateTask{ get; set; }
+
+        /// <summary>
         /// 文本关键词识别结果，当 Type 为
         ///  OcrWordsRecognition 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
@@ -113,6 +121,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "FaceTask.", this.FaceTask);
             this.SetParamObj(map, prefix + "AsrWordsTask.", this.AsrWordsTask);
             this.SetParamObj(map, prefix + "AsrFullTextTask.", this.AsrFullTextTask);
+            this.SetParamObj(map, prefix + "AsrTranslateTask.", this.AsrTranslateTask);
             this.SetParamObj(map, prefix + "OcrWordsTask.", this.OcrWordsTask);
             this.SetParamObj(map, prefix + "OcrFullTextTask.", this.OcrFullTextTask);
             this.SetParamObj(map, prefix + "ObjectTask.", this.ObjectTask);

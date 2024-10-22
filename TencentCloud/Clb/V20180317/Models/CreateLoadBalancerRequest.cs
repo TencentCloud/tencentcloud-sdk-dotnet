@@ -51,7 +51,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填。
+        /// 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填，创建公网IPv4负载均衡实例时，不支持指定该参数。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -198,6 +198,18 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("LBChargePrepaid")]
         public LBChargePrepaid LBChargePrepaid{ get; set; }
 
+        /// <summary>
+        /// 负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。
+        /// </summary>
+        [JsonProperty("LBChargeType")]
+        public string LBChargeType{ get; set; }
+
+        /// <summary>
+        /// 七层访问日志主题ID
+        /// </summary>
+        [JsonProperty("AccessLogTopicId")]
+        public string AccessLogTopicId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -232,6 +244,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "DynamicVip", this.DynamicVip);
             this.SetParamSimple(map, prefix + "Egress", this.Egress);
             this.SetParamObj(map, prefix + "LBChargePrepaid.", this.LBChargePrepaid);
+            this.SetParamSimple(map, prefix + "LBChargeType", this.LBChargeType);
+            this.SetParamSimple(map, prefix + "AccessLogTopicId", this.AccessLogTopicId);
         }
     }
 }

@@ -31,13 +31,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// TLS版本
+        /// TLS版本,可选TLSv1.0、TLSv1.1、TLSv1.2、TLSv1.3
         /// </summary>
         [JsonProperty("TLSSupportVersion")]
         public string[] TLSSupportVersion{ get; set; }
 
         /// <summary>
-        /// 密码套件包
+        /// 密码套件包,可选 GAAP_TLS_CIPHERS_STRICT，GAAP_TLS_CIPHERS_GENERAL，GAAP_TLS_CIPHERS_WIDE(默认)
         /// </summary>
         [JsonProperty("TLSCiphers")]
         public string TLSCiphers{ get; set; }

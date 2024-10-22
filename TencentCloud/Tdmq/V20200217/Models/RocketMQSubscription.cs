@@ -105,6 +105,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// 消费类型
+        /// 0: 广播消费
+        /// 1: 集群消费
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConsumeType")]

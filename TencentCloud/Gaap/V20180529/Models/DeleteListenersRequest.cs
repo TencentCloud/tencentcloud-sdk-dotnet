@@ -37,7 +37,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? Force{ get; set; }
 
         /// <summary>
-        /// 通道组ID，该参数和GroupId必须设置一个，但不能同时设置。
+        /// 通道组ID，该参数和ProxyId必须设置一个，但不能同时设置。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }

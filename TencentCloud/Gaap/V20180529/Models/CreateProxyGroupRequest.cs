@@ -37,7 +37,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 源站地域，参考接口DescribeDestRegions 返回参数RegionDetail中的RegionId
+        /// 源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId
         /// </summary>
         [JsonProperty("RealServerRegion")]
         public string RealServerRegion{ get; set; }

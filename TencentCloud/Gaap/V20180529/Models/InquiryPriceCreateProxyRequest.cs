@@ -43,7 +43,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string DestRegion{ get; set; }
 
         /// <summary>
-        /// （旧参数，请切换到Concurrent）通道并发量上限，表示同时在线的连接数，单位：万。
+        /// （此参数为旧参数，请填写新参数Concurrent，二者必须填写一个）通道并发量上限，表示同时在线的连接数，单位：万。
         /// </summary>
         [JsonProperty("Concurrency")]
         public long? Concurrency{ get; set; }

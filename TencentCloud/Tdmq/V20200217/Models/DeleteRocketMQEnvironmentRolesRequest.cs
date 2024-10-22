@@ -37,7 +37,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string[] RoleNames{ get; set; }
 
         /// <summary>
-        /// 必填字段，集群的ID
+        /// 集群的ID
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }

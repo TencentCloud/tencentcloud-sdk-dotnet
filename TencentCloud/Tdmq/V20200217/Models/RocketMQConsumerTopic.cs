@@ -31,7 +31,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Topic{ get; set; }
 
         /// <summary>
-        /// 主题类型，Default表示普通，GlobalOrder表示全局顺序，PartitionedOrder表示局部顺序，Transaction表示事务，Retry表示重试，DeadLetter表示死信
+        /// 主题类型，Normal表示普通，GlobalOrder表示全局顺序，PartitionedOrder表示局部顺序，Transaction表示事务，Retry表示重试，DeadLetter表示死信
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

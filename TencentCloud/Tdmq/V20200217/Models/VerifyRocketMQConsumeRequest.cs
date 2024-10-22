@@ -55,7 +55,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string ClientId{ get; set; }
 
         /// <summary>
-        /// topic名称
+        /// 主题名称
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }

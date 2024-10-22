@@ -49,7 +49,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string ListenerName{ get; set; }
 
         /// <summary>
-        /// 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
+        /// 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。注意：lrtt需要开通白名单；RealServerType 为 DOMAIN 不支持wrr 和 lrtt。
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }

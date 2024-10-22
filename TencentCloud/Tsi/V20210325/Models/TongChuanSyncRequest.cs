@@ -88,6 +88,12 @@ namespace TencentCloud.Tsi.V20210325.Models
         [JsonProperty("Data")]
         public string Data{ get; set; }
 
+        /// <summary>
+        /// TTS播报控制参数
+        /// </summary>
+        [JsonProperty("TTS")]
+        public TTS TTS{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +109,7 @@ namespace TencentCloud.Tsi.V20210325.Models
             this.SetParamSimple(map, prefix + "IsEnd", this.IsEnd);
             this.SetParamSimple(map, prefix + "TranslateTime", this.TranslateTime);
             this.SetParamSimple(map, prefix + "Data", this.Data);
+            this.SetParamObj(map, prefix + "TTS.", this.TTS);
         }
     }
 }

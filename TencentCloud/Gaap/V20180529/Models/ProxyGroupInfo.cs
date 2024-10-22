@@ -63,6 +63,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// CREATING表示创建中；
         /// DESTROYING表示销毁中；
         /// MOVING表示通道迁移中；
+        /// CLOSED表示已关闭；
         /// CHANGING表示部分部署中。
         /// </summary>
         [JsonProperty("Status")]
