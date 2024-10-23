@@ -42,6 +42,17 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("ShowTemplateComponent")]
         public bool? ShowTemplateComponent{ get; set; }
 
+        /// <summary>
+        /// 跳过上传文件，默认为false(展示上传文件页）![image](https://qcloudimg.tencent-cloud.cn/raw/8ca33745cf772e79831dbe5a70e82400.png)
+        /// - false: 展示上传文件页
+        /// - true: 不展示上传文件页
+        ///  
+        /// 
+        /// 注意: 此参数仅针对**EmbedType=CREATE_TEMPLATE(创建模板)有效**，
+        /// </summary>
+        [JsonProperty("SkipUploadFile")]
+        public string SkipUploadFile{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -50,6 +61,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         {
             this.SetParamSimple(map, prefix + "ShowFlowDetailComponent", this.ShowFlowDetailComponent);
             this.SetParamSimple(map, prefix + "ShowTemplateComponent", this.ShowTemplateComponent);
+            this.SetParamSimple(map, prefix + "SkipUploadFile", this.SkipUploadFile);
         }
     }
 }

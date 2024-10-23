@@ -28,7 +28,7 @@ namespace TencentCloud.Weilingwith.V20230427
 
        private const string endpoint = "weilingwith.tencentcloudapi.com";
        private const string version = "2023-04-27";
-       private const string sdkVersion = "SDK_NET_3.0.1111";
+       private const string sdkVersion = "SDK_NET_3.0.1112";
 
         /// <summary>
         /// Client constructor.

@@ -90,6 +90,12 @@ namespace TencentCloud.Iss.V20230517.Models
         [JsonProperty("SubscribeSwitch")]
         public long? SubscribeSwitch{ get; set; }
 
+        /// <summary>
+        /// 是否开启静音帧（0：关闭；1 开启）
+        /// </summary>
+        [JsonProperty("SilentFrameSwitch")]
+        public long? SilentFrameSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
             this.SetParamSimple(map, prefix + "AudioSwitch", this.AudioSwitch);
             this.SetParamSimple(map, prefix + "SubscribeSwitch", this.SubscribeSwitch);
+            this.SetParamSimple(map, prefix + "SilentFrameSwitch", this.SilentFrameSwitch);
         }
     }
 }

@@ -50,6 +50,11 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// 协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS
+        /// 1. 入方向  旁路防火墙/全局规则 仅支持TCP
+        /// 
+        /// 2.出方向  旁路防火墙/全局规则 仅支持TCP HTTP/HTTPS TLS/SSL
+        /// 
+        /// 3.domain  请选择七层协议 如HTTP/HTTPS
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

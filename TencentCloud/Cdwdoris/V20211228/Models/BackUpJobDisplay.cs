@@ -102,6 +102,13 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("BackupCosInfo")]
         public BackupCosInfo BackupCosInfo{ get; set; }
 
+        /// <summary>
+        /// 是否使用的自定义桶
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsUserDefineBucket")]
+        public bool? IsUserDefineBucket{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +127,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamObj(map, prefix + "DorisSourceInfo.", this.DorisSourceInfo);
             this.SetParamSimple(map, prefix + "JobStatusNum", this.JobStatusNum);
             this.SetParamObj(map, prefix + "BackupCosInfo.", this.BackupCosInfo);
+            this.SetParamSimple(map, prefix + "IsUserDefineBucket", this.IsUserDefineBucket);
         }
     }
 }

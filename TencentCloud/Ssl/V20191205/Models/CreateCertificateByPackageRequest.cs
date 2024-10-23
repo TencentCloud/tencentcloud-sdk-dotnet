@@ -126,6 +126,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("VerifyType")]
         public string VerifyType{ get; set; }
 
+        /// <summary>
+        /// 询价参数
+        /// </summary>
+        [JsonProperty("PriceKey")]
+        public string PriceKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +155,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "ManagerId", this.ManagerId);
             this.SetParamSimple(map, prefix + "CompanyId", this.CompanyId);
             this.SetParamSimple(map, prefix + "VerifyType", this.VerifyType);
+            this.SetParamSimple(map, prefix + "PriceKey", this.PriceKey);
         }
     }
 }

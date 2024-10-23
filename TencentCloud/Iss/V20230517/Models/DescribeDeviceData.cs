@@ -235,6 +235,13 @@ namespace TencentCloud.Iss.V20230517.Models
         [JsonProperty("StreamName")]
         public string StreamName{ get; set; }
 
+        /// <summary>
+        /// 是否开启静音帧（0：关闭；1 开启）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SilentFrameSwitch")]
+        public long? SilentFrameSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -271,6 +278,7 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "SubscribeSwitch", this.SubscribeSwitch);
             this.SetParamSimple(map, prefix + "AppName", this.AppName);
             this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
+            this.SetParamSimple(map, prefix + "SilentFrameSwitch", this.SilentFrameSwitch);
         }
     }
 }

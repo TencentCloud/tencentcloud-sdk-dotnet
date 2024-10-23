@@ -89,7 +89,8 @@ namespace TencentCloud.Cwp.V20180228.Models
         public RegionInfo RegionInfo{ get; set; }
 
         /// <summary>
-        /// 实例状态 TERMINATED_PRO_VERSION 已销毁
+        /// 实例状态请参考CVM实例列表InstanceState值
+        /// https://cloud.tencent.com/document/api/213/15753#Instance
         /// </summary>
         [JsonProperty("InstanceState")]
         public string InstanceState{ get; set; }

@@ -68,7 +68,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public MachineTag[] Tag{ get; set; }
 
         /// <summary>
-        /// 数据库名
+        /// Web应用名
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

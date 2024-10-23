@@ -48,6 +48,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("MaxCallPSec")]
         public long? MaxCallPSec{ get; set; }
 
+        /// <summary>
+        /// 呼出被叫格式，使用 {+E.164} 或 {E.164}, 
+        /// </summary>
+        [JsonProperty("OutboundCalleeFormat")]
+        public string OutboundCalleeFormat{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
             this.SetParamSimple(map, prefix + "MaxCallCount", this.MaxCallCount);
             this.SetParamSimple(map, prefix + "MaxCallPSec", this.MaxCallPSec);
+            this.SetParamSimple(map, prefix + "OutboundCalleeFormat", this.OutboundCalleeFormat);
         }
     }
 }

@@ -382,6 +382,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("EngineNetworkName")]
         public string EngineNetworkName{ get; set; }
 
+        /// <summary>
+        /// 是否使用预留池
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsPoolMode")]
+        public string IsPoolMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -441,6 +448,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "EngineResourceUsedCU", this.EngineResourceUsedCU);
             this.SetParamArrayObj(map, prefix + "AccessInfos.", this.AccessInfos);
             this.SetParamSimple(map, prefix + "EngineNetworkName", this.EngineNetworkName);
+            this.SetParamSimple(map, prefix + "IsPoolMode", this.IsPoolMode);
         }
     }
 }

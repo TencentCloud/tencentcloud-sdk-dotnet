@@ -54,6 +54,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("UserGroupList")]
         public UserAndGroup[] UserGroupList{ get; set; }
 
+        /// <summary>
+        /// 是否删除家目录，只针对cvm集群
+        /// </summary>
+        [JsonProperty("DeleteHomeDir")]
+        public bool? DeleteHomeDir{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "TkeClusterId", this.TkeClusterId);
             this.SetParamSimple(map, prefix + "DisplayStrategy", this.DisplayStrategy);
             this.SetParamArrayObj(map, prefix + "UserGroupList.", this.UserGroupList);
+            this.SetParamSimple(map, prefix + "DeleteHomeDir", this.DeleteHomeDir);
         }
     }
 }

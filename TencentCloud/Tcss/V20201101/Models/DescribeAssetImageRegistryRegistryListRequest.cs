@@ -24,12 +24,48 @@ namespace TencentCloud.Tcss.V20201101.Models
     public class DescribeAssetImageRegistryRegistryListRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 需要返回的数量，默认为10，最大值为100
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// 偏移量，默认为0
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// 过滤字段
+        /// IsAuthorized是否授权，取值全部all，未授权0，已授权1
+        /// </summary>
+        [JsonProperty("Filters")]
+        public AssetFilters[] Filters{ get; set; }
+
+        /// <summary>
+        /// 排序字段
+        /// </summary>
+        [JsonProperty("By")]
+        public string By{ get; set; }
+
+        /// <summary>
+        /// 排序方式，asc，desc
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "By", this.By);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
         }
     }
 }

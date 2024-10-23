@@ -25,7 +25,8 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 服务器证书 ID。
+        /// 服务器证书 ID。来源于 SSL 侧，您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
+        /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertId")]

@@ -97,7 +97,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? SegmentMs{ get; set; }
 
         /// <summary>
-        /// 主题消息最大值，单位为 Byte，最小值1024Byte(即1KB)，最大值为8388608Byte（即8MB）。
+        /// 主题消息最大值，单位为 Byte，最小值1024Byte(即1KB)，最大值为12582912Byte（即12MB）
         /// </summary>
         [JsonProperty("MaxMessageBytes")]
         public long? MaxMessageBytes{ get; set; }

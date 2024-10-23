@@ -152,7 +152,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 数字签名:0无，1有， 999 空，仅windows
+        /// 数字签名:0无，1有， 999 空，仅Windows
         /// </summary>
         [JsonProperty("HasSign")]
         public ulong? HasSign{ get; set; }

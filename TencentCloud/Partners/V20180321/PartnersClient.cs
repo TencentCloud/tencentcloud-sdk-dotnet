@@ -28,7 +28,7 @@ namespace TencentCloud.Partners.V20180321
 
        private const string endpoint = "partners.tencentcloudapi.com";
        private const string version = "2018-03-21";
-       private const string sdkVersion = "SDK_NET_3.0.1111";
+       private const string sdkVersion = "SDK_NET_3.0.1112";
 
         /// <summary>
         /// Client constructor.
@@ -287,6 +287,27 @@ namespace TencentCloud.Partners.V20180321
         public DescribeAgentPayDealsV2Response DescribeAgentPayDealsV2Sync(DescribeAgentPayDealsV2Request req)
         {
             return InternalRequestAsync<DescribeAgentPayDealsV2Response>(req, "DescribeAgentPayDealsV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据大订单号查询关联申请合并支付的其他订单号
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentRelateBigDealIdsRequest"/></param>
+        /// <returns><see cref="DescribeAgentRelateBigDealIdsResponse"/></returns>
+        public Task<DescribeAgentRelateBigDealIdsResponse> DescribeAgentRelateBigDealIds(DescribeAgentRelateBigDealIdsRequest req)
+        {
+            return InternalRequestAsync<DescribeAgentRelateBigDealIdsResponse>(req, "DescribeAgentRelateBigDealIds");
+        }
+
+        /// <summary>
+        /// 根据大订单号查询关联申请合并支付的其他订单号
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentRelateBigDealIdsRequest"/></param>
+        /// <returns><see cref="DescribeAgentRelateBigDealIdsResponse"/></returns>
+        public DescribeAgentRelateBigDealIdsResponse DescribeAgentRelateBigDealIdsSync(DescribeAgentRelateBigDealIdsRequest req)
+        {
+            return InternalRequestAsync<DescribeAgentRelateBigDealIdsResponse>(req, "DescribeAgentRelateBigDealIds")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

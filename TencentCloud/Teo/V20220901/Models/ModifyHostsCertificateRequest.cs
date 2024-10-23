@@ -47,7 +47,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Mode{ get; set; }
 
         /// <summary>
-        /// SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
+        /// SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
         /// </summary>
         [JsonProperty("ServerCertInfo")]
         public ServerCertInfo[] ServerCertInfo{ get; set; }
@@ -63,8 +63,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ApplyType{ get; set; }
 
         /// <summary>
-        /// 边缘双向认证配置。
-        /// 不填写表示边缘双向认证保持原有配置。
+        /// 在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 的入口侧，用于客户端对 EO 节点进行认证。不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("ClientCertInfo")]
         public MutualTLS ClientCertInfo{ get; set; }

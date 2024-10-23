@@ -91,7 +91,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string ClientId{ get; set; }
 
         /// <summary>
-        /// ip
+        /// IP地址
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
