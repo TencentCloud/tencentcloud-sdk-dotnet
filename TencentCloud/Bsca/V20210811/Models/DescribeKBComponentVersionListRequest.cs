@@ -30,6 +30,36 @@ namespace TencentCloud.Bsca.V20210811.Models
         [JsonProperty("PURL")]
         public PURL PURL{ get; set; }
 
+        /// <summary>
+        /// 页号
+        /// </summary>
+        [JsonProperty("PageNumber")]
+        public ulong? PageNumber{ get; set; }
+
+        /// <summary>
+        /// 页大小
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public ulong? PageSize{ get; set; }
+
+        /// <summary>
+        /// 排序方式，可以是"ASC"或"DESC"，默认"DESC"
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
+        /// <summary>
+        /// 排序字段，可能的字段包括“Version”、"PublishTime"
+        /// </summary>
+        [JsonProperty("OrderBy")]
+        public string[] OrderBy{ get; set; }
+
+        /// <summary>
+        /// Tag筛选
+        /// </summary>
+        [JsonProperty("Filter")]
+        public ComponentTagFilter Filter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +67,11 @@ namespace TencentCloud.Bsca.V20210811.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "PURL.", this.PURL);
+            this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamArraySimple(map, prefix + "OrderBy.", this.OrderBy);
+            this.SetParamObj(map, prefix + "Filter.", this.Filter);
         }
     }
 }

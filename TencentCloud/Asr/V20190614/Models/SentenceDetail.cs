@@ -82,6 +82,7 @@ namespace TencentCloud.Asr.V20190614.Models
 
         /// <summary>
         /// 声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）
+        /// 单声道话者分离时不同的值代表不同的说话人； 8k双声道话者分离时speakerId的值为0代表左声道，值为1代表右声道。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpeakerId")]
@@ -102,7 +103,7 @@ namespace TencentCloud.Asr.V20190614.Models
         public long? SilenceTime{ get; set; }
 
         /// <summary>
-        /// 情绪类型（可能为空）
+        /// 情绪类型（可能为空，有2种情况 1、没有对应资源包；2、情绪跟语音效果相关，如果情绪不够强烈时可能无法识别）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EmotionType")]

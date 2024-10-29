@@ -32,8 +32,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 合同流程签署方的组织机构名称。
-        /// 如果名称中包含英文括号()，请使用中文括号（）代替。
+        /// 合同流程签署方的组织机构名称。如果名称中包含英文括号()，请使用中文括号（）代替。注: `获取B端动态签署人领取链接时,可指定此字段来预先设定签署人的企业,预设后只能以该企业身份去领取合同并完成签署`
         /// </summary>
         [JsonProperty("OrganizationName")]
         public string OrganizationName{ get; set; }

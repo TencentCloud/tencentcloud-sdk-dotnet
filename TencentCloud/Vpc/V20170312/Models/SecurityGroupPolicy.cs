@@ -89,7 +89,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Action{ get; set; }
 
         /// <summary>
-        /// 安全组规则描述。
+        /// 安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyDescription")]

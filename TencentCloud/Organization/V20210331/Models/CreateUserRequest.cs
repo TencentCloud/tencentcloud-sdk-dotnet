@@ -72,6 +72,12 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("UserStatus")]
         public string UserStatus{ get; set; }
 
+        /// <summary>
+        /// 用户类型  Manual：手动创建，Synchronized：外部导入
+        /// </summary>
+        [JsonProperty("UserType")]
+        public string UserType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Email", this.Email);
             this.SetParamSimple(map, prefix + "UserStatus", this.UserStatus);
+            this.SetParamSimple(map, prefix + "UserType", this.UserType);
         }
     }
 }

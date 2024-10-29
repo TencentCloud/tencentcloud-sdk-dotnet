@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1112";
+       private const string sdkVersion = "SDK_NET_3.0.1113";
 
         /// <summary>
         /// Client constructor.
@@ -2815,6 +2815,27 @@ namespace TencentCloud.Waf.V20180125
         public ModifyUserSignatureRuleResponse ModifyUserSignatureRuleSync(ModifyUserSignatureRuleRequest req)
         {
             return InternalRequestAsync<ModifyUserSignatureRuleResponse>(req, "ModifyUserSignatureRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改用户防护规则，开启关闭具体的某条规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserSignatureRuleV2Request"/></param>
+        /// <returns><see cref="ModifyUserSignatureRuleV2Response"/></returns>
+        public Task<ModifyUserSignatureRuleV2Response> ModifyUserSignatureRuleV2(ModifyUserSignatureRuleV2Request req)
+        {
+            return InternalRequestAsync<ModifyUserSignatureRuleV2Response>(req, "ModifyUserSignatureRuleV2");
+        }
+
+        /// <summary>
+        /// 修改用户防护规则，开启关闭具体的某条规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserSignatureRuleV2Request"/></param>
+        /// <returns><see cref="ModifyUserSignatureRuleV2Response"/></returns>
+        public ModifyUserSignatureRuleV2Response ModifyUserSignatureRuleV2Sync(ModifyUserSignatureRuleV2Request req)
+        {
+            return InternalRequestAsync<ModifyUserSignatureRuleV2Response>(req, "ModifyUserSignatureRuleV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

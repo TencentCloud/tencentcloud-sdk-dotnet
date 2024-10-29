@@ -93,6 +93,20 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("PolyRealServerCertificateIds")]
         public string[] PolyRealServerCertificateIds{ get; set; }
 
+        /// <summary>
+        /// TLS支持的版本
+        /// 支持TLSv1，TLSv1.1,TLSv1.2,TLSv1.3
+        /// </summary>
+        [JsonProperty("TLSSupportVersion")]
+        public string[] TLSSupportVersion{ get; set; }
+
+        /// <summary>
+        /// 支持的TLS密码套件，可选值为：
+        /// [GAAP_TLS_CIPHERS_WIDE,GAAPTLS_CIPHERS_GENERAL,GAAPTLS_CIPHERS_STRICT]
+        /// </summary>
+        [JsonProperty("TLSCiphers")]
+        public string TLSCiphers{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +123,8 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "RealServerCertificateId", this.RealServerCertificateId);
             this.SetParamSimple(map, prefix + "RealServerCertificateDomain", this.RealServerCertificateDomain);
             this.SetParamArraySimple(map, prefix + "PolyRealServerCertificateIds.", this.PolyRealServerCertificateIds);
+            this.SetParamArraySimple(map, prefix + "TLSSupportVersion.", this.TLSSupportVersion);
+            this.SetParamSimple(map, prefix + "TLSCiphers", this.TLSCiphers);
         }
     }
 }

@@ -145,6 +145,13 @@ namespace TencentCloud.Ciam.V20220331.Models
         [JsonProperty("Detail")]
         public string Detail{ get; set; }
 
+        /// <summary>
+        /// 日志结果
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ActionResult")]
+        public string ActionResult{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -168,6 +175,7 @@ namespace TencentCloud.Ciam.V20220331.Models
             this.SetParamSimple(map, prefix + "UserAgent", this.UserAgent);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "Detail", this.Detail);
+            this.SetParamSimple(map, prefix + "ActionResult", this.ActionResult);
         }
     }
 }

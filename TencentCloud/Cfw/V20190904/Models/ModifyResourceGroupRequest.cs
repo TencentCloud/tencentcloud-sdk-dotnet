@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 组id
+        /// 资产组id
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 上级组id
+        /// 上级组资产组id
         /// </summary>
         [JsonProperty("ParentId")]
         public string ParentId{ get; set; }

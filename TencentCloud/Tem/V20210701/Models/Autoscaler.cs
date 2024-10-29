@@ -37,14 +37,14 @@ namespace TencentCloud.Tem.V20210701.Models
         public long? MaxReplicas{ get; set; }
 
         /// <summary>
-        /// 指标弹性伸缩策略
+        /// 指标弹性伸缩策略(指标策略和定时策略必须填写一个)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HorizontalAutoscaler")]
         public HorizontalAutoscaler[] HorizontalAutoscaler{ get; set; }
 
         /// <summary>
-        /// 定时弹性伸缩策略
+        /// 定时弹性伸缩策略(指标策略和定时策略必须填写一个)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CronHorizontalAutoscaler")]

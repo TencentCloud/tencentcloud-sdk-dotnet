@@ -25,18 +25,19 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     {
         
         /// <summary>
-        /// 生效时间
+        /// 生效周期
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EffectivePeriod")]
         public string EffectivePeriod{ get; set; }
 
         /// <summary>
-        /// 调度类型：
+        /// 调度类型，不传该参数时为立即执行：
         /// Day-天
         /// Week-周
         /// Month-月
         /// Once-单次
+        /// 
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScheduleType")]

@@ -31,7 +31,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// TLS版本,可选TLSv1.0、TLSv1.1、TLSv1.2、TLSv1.3
+        /// TLS版本,可选TLSv1、TLSv1.1、TLSv1.2、TLSv1.3
         /// </summary>
         [JsonProperty("TLSSupportVersion")]
         public string[] TLSSupportVersion{ get; set; }

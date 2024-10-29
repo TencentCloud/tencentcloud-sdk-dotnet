@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1112";
+       private const string sdkVersion = "SDK_NET_3.0.1113";
 
         /// <summary>
         /// Client constructor.
@@ -96,7 +96,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 调整数据库代理地址配置
+        /// 本接口（AdjustCdbProxyAddress）用于调整数据库代理地址配置。
         /// </summary>
         /// <param name="req"><see cref="AdjustCdbProxyAddressRequest"/></param>
         /// <returns><see cref="AdjustCdbProxyAddressResponse"/></returns>
@@ -106,7 +106,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 调整数据库代理地址配置
+        /// 本接口（AdjustCdbProxyAddress）用于调整数据库代理地址配置。
         /// </summary>
         /// <param name="req"><see cref="AdjustCdbProxyAddressRequest"/></param>
         /// <returns><see cref="AdjustCdbProxyAddressResponse"/></returns>

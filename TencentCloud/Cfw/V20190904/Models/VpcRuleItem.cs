@@ -102,12 +102,6 @@ namespace TencentCloud.Cfw.V20190904.Models
         public long? OrderIndex{ get; set; }
 
         /// <summary>
-        /// 规则对应的唯一id
-        /// </summary>
-        [JsonProperty("Uuid")]
-        public long? Uuid{ get; set; }
-
-        /// <summary>
         /// 规则状态，true表示启用，false表示禁用
         /// </summary>
         [JsonProperty("Enable")]
@@ -118,6 +112,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         [JsonProperty("EdgeId")]
         public string EdgeId{ get; set; }
+
+        /// <summary>
+        /// 规则对应的唯一id，添加规则时忽略该字段，修改该规则时需要填写Uuid;查询返回时会返回该参数
+        /// </summary>
+        [JsonProperty("Uuid")]
+        public long? Uuid{ get; set; }
 
         /// <summary>
         /// 规则的命中次数，增删改查规则时无需传入此参数，主要用于返回查询结果数据
@@ -192,6 +192,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("SourceName")]
         public string SourceName{ get; set; }
 
+        /// <summary>
+        /// Ip版本，0：IPv4，1：IPv6，默认为IPv4
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IpVersion")]
+        public long? IpVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -207,9 +214,9 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "OrderIndex", this.OrderIndex);
-            this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamSimple(map, prefix + "EdgeId", this.EdgeId);
+            this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
             this.SetParamSimple(map, prefix + "DetectedTimes", this.DetectedTimes);
             this.SetParamSimple(map, prefix + "EdgeName", this.EdgeName);
             this.SetParamSimple(map, prefix + "InternalUuid", this.InternalUuid);
@@ -221,6 +228,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "ParamTemplateName", this.ParamTemplateName);
             this.SetParamSimple(map, prefix + "TargetName", this.TargetName);
             this.SetParamSimple(map, prefix + "SourceName", this.SourceName);
+            this.SetParamSimple(map, prefix + "IpVersion", this.IpVersion);
         }
     }
 }

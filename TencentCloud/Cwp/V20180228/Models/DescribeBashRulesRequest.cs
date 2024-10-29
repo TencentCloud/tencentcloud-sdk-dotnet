@@ -44,7 +44,13 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 过滤条件。
-        /// <li>Keywords - String - 是否必填：否 - 关键字(规则名称)</li>
+        /// <li>Name - String - 是否必填：否 - 规则名称</li>
+        /// <li>Rule - String - 是否必填：否 - 规则内容</li>
+        /// <li>Level - Int - 是否必填：否 - 威胁等级</li>
+        /// <li>White - Int - 是否必填：否 - 白名单类型</li>
+        /// <li>RuleCategory - Int - 是否必填：否 - 策略类型</li>
+        /// <li>BashAction - Int - 是否必填：否 - 操作动作</li>
+        /// <li>Status - Int - 是否必填：否 - 生效状态</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

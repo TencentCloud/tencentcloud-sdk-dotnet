@@ -52,13 +52,20 @@ namespace TencentCloud.Cls.V20201016.Models
         public string[] ReceiverChannels{ get; set; }
 
         /// <summary>
-        /// 允许接收信息的开始时间。格式：`15:04:05`，必填。
+        /// 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NoticeContentId")]
+        public string NoticeContentId{ get; set; }
+
+        /// <summary>
+        /// 允许接收信息的开始时间。格式：`15:04:05`。必填
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 允许接收信息的结束时间。格式：`15:04:05`，必填。
+        /// 允许接收信息的结束时间。格式：`15:04:05`。必填
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -72,13 +79,6 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Index")]
         public long? Index{ get; set; }
 
-        /// <summary>
-        /// 通知内容模板ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("NoticeContentId")]
-        public string NoticeContentId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,10 +88,10 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "ReceiverType", this.ReceiverType);
             this.SetParamArraySimple(map, prefix + "ReceiverIds.", this.ReceiverIds);
             this.SetParamArraySimple(map, prefix + "ReceiverChannels.", this.ReceiverChannels);
+            this.SetParamSimple(map, prefix + "NoticeContentId", this.NoticeContentId);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Index", this.Index);
-            this.SetParamSimple(map, prefix + "NoticeContentId", this.NoticeContentId);
         }
     }
 }

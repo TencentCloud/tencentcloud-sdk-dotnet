@@ -37,7 +37,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string[] ResourceTypes{ get; set; }
 
         /// <summary>
-        /// 一键更新新证书ID，不传该则证书公钥和私钥必传
+        /// 一键更新新证书ID，不传则证书公钥和私钥必传
         /// </summary>
         [JsonProperty("CertificateId")]
         public string CertificateId{ get; set; }

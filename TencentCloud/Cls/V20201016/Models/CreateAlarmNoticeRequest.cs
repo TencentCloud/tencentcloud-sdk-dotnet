@@ -31,50 +31,70 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 通知类型。可选值：
+        /// 标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
+        /// 需要发送通知的告警类型。可选值：
         /// - Trigger - 告警触发
         /// - Recovery - 告警恢复
         /// - All - 告警触发和告警恢复
-        /// 
-        /// 
-        ///  注意:  
-        /// - Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
-        /// - 2组rule配置互斥
-        /// - rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
+        /// 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
         /// 通知接收对象。
-        ///  注意:  
-        /// - Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
-        /// - 2组rule配置互斥
-        /// - rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
         /// </summary>
         [JsonProperty("NoticeReceivers")]
         public NoticeReceiver[] NoticeReceivers{ get; set; }
 
         /// <summary>
-        /// 接口回调信息（包括企业微信）。
-        ///  注意:  
-        /// - Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
-        /// - 2组rule配置互斥
-        /// - rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
+        /// 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
+        /// 接口回调信息（包括企业微信、钉钉、飞书）。
         /// </summary>
         [JsonProperty("WebCallbacks")]
         public WebCallback[] WebCallbacks{ get; set; }
 
         /// <summary>
+        /// 【高级模式】（简易模式/告警模式二选一，分别配置相应参数）
         /// 通知规则。
-        ///  注意:  
-        /// - Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
-        /// - 2组rule配置互斥
-        /// - rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
-        /// 
         /// </summary>
         [JsonProperty("NoticeRules")]
         public NoticeRule[] NoticeRules{ get; set; }
+
+        /// <summary>
+        /// 查询数据链接。http:// 或者 https:// 开头，不能/结尾
+        /// </summary>
+        [JsonProperty("JumpDomain")]
+        public string JumpDomain{ get; set; }
+
+        /// <summary>
+        /// 投递日志开关。可取值如下：
+        /// 1：关闭（默认值）；
+        /// 2：开启 
+        /// 投递日志开关开启时， DeliverConfig参数必填。
+        /// </summary>
+        [JsonProperty("DeliverStatus")]
+        public ulong? DeliverStatus{ get; set; }
+
+        /// <summary>
+        /// 投递日志配置参数。当DeliverStatus开启时，必填。
+        /// </summary>
+        [JsonProperty("DeliverConfig")]
+        public DeliverConfig DeliverConfig{ get; set; }
+
+        /// <summary>
+        /// 免登录操作告警开关。可取值如下：
+        /// -      1：关闭
+        /// -      2：开启（默认值）
+        /// </summary>
+        [JsonProperty("AlarmShieldStatus")]
+        public ulong? AlarmShieldStatus{ get; set; }
 
 
         /// <summary>
@@ -83,10 +103,15 @@ namespace TencentCloud.Cls.V20201016.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamArrayObj(map, prefix + "NoticeReceivers.", this.NoticeReceivers);
             this.SetParamArrayObj(map, prefix + "WebCallbacks.", this.WebCallbacks);
             this.SetParamArrayObj(map, prefix + "NoticeRules.", this.NoticeRules);
+            this.SetParamSimple(map, prefix + "JumpDomain", this.JumpDomain);
+            this.SetParamSimple(map, prefix + "DeliverStatus", this.DeliverStatus);
+            this.SetParamObj(map, prefix + "DeliverConfig.", this.DeliverConfig);
+            this.SetParamSimple(map, prefix + "AlarmShieldStatus", this.AlarmShieldStatus);
         }
     }
 }

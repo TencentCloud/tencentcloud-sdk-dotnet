@@ -61,6 +61,20 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public ulong? ChannelId{ get; set; }
 
         /// <summary>
+        /// 订单金额，单位为分
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Price")]
+        public ulong? Price{ get; set; }
+
+        /// <summary>
+        /// 支付金额，单位为分
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Amount")]
+        public ulong? Amount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -77,6 +91,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "PackageId", this.PackageId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
+            this.SetParamSimple(map, prefix + "Price", this.Price);
+            this.SetParamSimple(map, prefix + "Amount", this.Amount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

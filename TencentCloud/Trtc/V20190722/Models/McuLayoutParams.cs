@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。
+        /// 布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。最多支持混入16路音视频流，如果用户只上行音频，也会被算作一路；自定义布局中，如果子画面只设置占位图，也被算作一路。
         /// </summary>
         [JsonProperty("MixLayoutMode")]
         public ulong? MixLayoutMode{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? PureAudioHoldPlaceMode{ get; set; }
 
         /// <summary>
-        /// 自定义模板中有效，指定用户视频在混合画面中的位置。
+        /// 自定义模板中有效，指定用户视频在混合画面中的位置，最多支持设置16个输入流。
         /// </summary>
         [JsonProperty("MixLayoutList")]
         public McuLayout[] MixLayoutList{ get; set; }

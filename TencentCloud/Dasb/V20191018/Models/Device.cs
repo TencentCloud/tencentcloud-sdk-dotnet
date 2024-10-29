@@ -137,6 +137,20 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
+        /// <summary>
+        /// 是否启用SSL，仅支持Redis资产。0：禁用 1：启用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableSSL")]
+        public long? EnableSSL{ get; set; }
+
+        /// <summary>
+        /// 已上传的SSL证书名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SSLCertName")]
+        public string SSLCertName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -161,6 +175,8 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamArraySimple(map, prefix + "IpPortSet.", this.IpPortSet);
             this.SetParamSimple(map, prefix + "DomainId", this.DomainId);
             this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
+            this.SetParamSimple(map, prefix + "EnableSSL", this.EnableSSL);
+            this.SetParamSimple(map, prefix + "SSLCertName", this.SSLCertName);
         }
     }
 }

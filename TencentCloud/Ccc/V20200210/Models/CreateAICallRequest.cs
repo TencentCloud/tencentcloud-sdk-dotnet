@@ -65,7 +65,7 @@ namespace TencentCloud.Ccc.V20200210.Models
 
         /// <summary>
         /// API URL，仅支持兼容openai协议的模型，填写url时后缀不要带/chat/completions；
-        /// llmType为azure时,URL填写格式需为：https://{your-resource-name}.openai.azure.com?api-version={api-version},填写url时后缀不要带/openai/deployments/{deployment-id}/chat/completions，系统会自动帮你填充后缀
+        /// llmType为azure时,URL填写格式需为：https://{your-resource-name}.openai.azure.com?api-version={api-version},填写url时后缀不要带/openai/deployments/{deployment-id}/chat/completions，系统会自动帮您填充后缀
         /// </summary>
         [JsonProperty("APIUrl")]
         public string APIUrl{ get; set; }

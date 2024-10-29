@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{307C2F67-1633-3F01-BEA7-F343C91B0D61}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1112</VersionPrefix>
+    <VersionPrefix>3.0.1113</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -132,6 +132,7 @@
     <Compile Include="V20190722\Models\MaxVideoUser.cs" />
     <Compile Include="V20190722\Models\McuAudioParams.cs" />
     <Compile Include="V20190722\Models\McuBackgroundCustomRender.cs" />
+    <Compile Include="V20190722\Models\McuCloudVod.cs" />
     <Compile Include="V20190722\Models\McuCustomCrop.cs" />
     <Compile Include="V20190722\Models\McuFeedBackRoomParams.cs" />
     <Compile Include="V20190722\Models\McuLayout.cs" />
@@ -139,7 +140,10 @@
     <Compile Include="V20190722\Models\McuLayoutVolume.cs" />
     <Compile Include="V20190722\Models\McuPassThrough.cs" />
     <Compile Include="V20190722\Models\McuPublishCdnParam.cs" />
+    <Compile Include="V20190722\Models\McuRecordParams.cs" />
     <Compile Include="V20190722\Models\McuSeiParams.cs" />
+    <Compile Include="V20190722\Models\McuStorageParams.cs" />
+    <Compile Include="V20190722\Models\McuTencentVod.cs" />
     <Compile Include="V20190722\Models\McuUserInfoParams.cs" />
     <Compile Include="V20190722\Models\McuVideoParams.cs" />
     <Compile Include="V20190722\Models\McuWaterMarkImage.cs" />

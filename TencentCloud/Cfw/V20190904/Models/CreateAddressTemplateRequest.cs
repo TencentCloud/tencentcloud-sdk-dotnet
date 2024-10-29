@@ -57,6 +57,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("ProtocolType")]
         public string ProtocolType{ get; set; }
 
+        /// <summary>
+        /// IP版本,0 IPV4;1 IPV6
+        /// </summary>
+        [JsonProperty("IpVersion")]
+        public long? IpVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +74,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "IpString", this.IpString);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
+            this.SetParamSimple(map, prefix + "IpVersion", this.IpVersion);
         }
     }
 }

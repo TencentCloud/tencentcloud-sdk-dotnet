@@ -169,6 +169,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("StandardDebug")]
         public StandardDebug StandardDebug{ get; set; }
 
+        /// <summary>
+        /// 视频即时处理配置。不填写表示保持原有配置。
+        /// </summary>
+        [JsonProperty("JITVideoProcess")]
+        public JITVideoProcess JITVideoProcess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -196,6 +202,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "Grpc.", this.Grpc);
             this.SetParamObj(map, prefix + "ImageOptimize.", this.ImageOptimize);
             this.SetParamObj(map, prefix + "StandardDebug.", this.StandardDebug);
+            this.SetParamObj(map, prefix + "JITVideoProcess.", this.JITVideoProcess);
         }
     }
 }

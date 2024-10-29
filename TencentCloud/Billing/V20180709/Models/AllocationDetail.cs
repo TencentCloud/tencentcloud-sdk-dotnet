@@ -493,6 +493,48 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("AllocationType")]
         public ulong? AllocationType{ get; set; }
 
+        /// <summary>
+        /// 当前消费项的优惠对象，例如：官网折扣、用户折扣、活动折扣。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DiscountObject")]
+        public string DiscountObject{ get; set; }
+
+        /// <summary>
+        /// 当前消费项的优惠类型，例如：折扣、合同价。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DiscountType")]
+        public string DiscountType{ get; set; }
+
+        /// <summary>
+        /// 对优惠类型的补充描述，例如：商务折扣8折，则优惠类型为“折扣”，优惠内容为“0.8”。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DiscountContent")]
+        public string DiscountContent{ get; set; }
+
+        /// <summary>
+        /// SPDeduction
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SPDeduction")]
+        public string SPDeduction{ get; set; }
+
+        /// <summary>
+        /// SPDeduction
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SPDeductionRate")]
+        public string SPDeductionRate{ get; set; }
+
+        /// <summary>
+        /// 账单月
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BillMonth")]
+        public string BillMonth{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -565,6 +607,12 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "DeductedMeasure", this.DeductedMeasure);
             this.SetParamSimple(map, prefix + "ComponentConfig", this.ComponentConfig);
             this.SetParamSimple(map, prefix + "AllocationType", this.AllocationType);
+            this.SetParamSimple(map, prefix + "DiscountObject", this.DiscountObject);
+            this.SetParamSimple(map, prefix + "DiscountType", this.DiscountType);
+            this.SetParamSimple(map, prefix + "DiscountContent", this.DiscountContent);
+            this.SetParamSimple(map, prefix + "SPDeduction", this.SPDeduction);
+            this.SetParamSimple(map, prefix + "SPDeductionRate", this.SPDeductionRate);
+            this.SetParamSimple(map, prefix + "BillMonth", this.BillMonth);
         }
     }
 }

@@ -81,6 +81,13 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("Duration")]
         public ulong? Duration{ get; set; }
 
+        /// <summary>
+        /// 时移自适应码率子流列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TimeShiftSubStreams")]
+        public TimeShiftSubStream[] TimeShiftSubStreams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +103,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "TransCodeId", this.TransCodeId);
             this.SetParamSimple(map, prefix + "StreamType", this.StreamType);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
+            this.SetParamArrayObj(map, prefix + "TimeShiftSubStreams.", this.TimeShiftSubStreams);
         }
     }
 }

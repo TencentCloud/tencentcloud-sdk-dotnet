@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1112";
+       private const string sdkVersion = "SDK_NET_3.0.1113";
 
         /// <summary>
         /// Client constructor.
@@ -180,7 +180,14 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 该接口用于创建通知渠道组。
+        /// 该接口用于创建通知渠道组，提供两种配置模式，二选一：
+        /// 1，简易模式，提供最基本的通知渠道功能。需填写如下参数：
+        /// - Type
+        /// - NoticeReceivers
+        /// - WebCallbacks
+        /// 
+        /// 2，高级模式，在简易模式基础上，支持设定规则，为不同类型的告警分别设定通知渠道，并支持告警升级功能。需填写如下参数：
+        /// - NoticeRules
         /// </summary>
         /// <param name="req"><see cref="CreateAlarmNoticeRequest"/></param>
         /// <returns><see cref="CreateAlarmNoticeResponse"/></returns>
@@ -190,7 +197,14 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 该接口用于创建通知渠道组。
+        /// 该接口用于创建通知渠道组，提供两种配置模式，二选一：
+        /// 1，简易模式，提供最基本的通知渠道功能。需填写如下参数：
+        /// - Type
+        /// - NoticeReceivers
+        /// - WebCallbacks
+        /// 
+        /// 2，高级模式，在简易模式基础上，支持设定规则，为不同类型的告警分别设定通知渠道，并支持告警升级功能。需填写如下参数：
+        /// - NoticeRules
         /// </summary>
         /// <param name="req"><see cref="CreateAlarmNoticeRequest"/></param>
         /// <returns><see cref="CreateAlarmNoticeResponse"/></returns>

@@ -25,20 +25,6 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 告警通知模板接收者信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("NoticeReceivers")]
-        public NoticeReceiver[] NoticeReceivers{ get; set; }
-
-        /// <summary>
-        /// 告警通知模板回调信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("WebCallbacks")]
-        public WebCallback[] WebCallbacks{ get; set; }
-
-        /// <summary>
         /// 匹配规则 JSON串。
         /// **rule规则树格式为嵌套结构体JSON字符串**
         /// `{"Value":"AND","Type":"Operation","Children":[{"Value":"OR","Type":"Operation","Children":[{"Type":"Condition","Value":"Level","Children":[{"Value":"In","Type":"Compare"},{"Value":"[1,0]","Type":"Value"}]},{"Type":"Condition","Value":"Level","Children":[{"Value":"NotIn","Type":"Compare"},{"Value":"[2]","Type":"Value"}]}]}]}`
@@ -102,15 +88,64 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Rule")]
         public string Rule{ get; set; }
 
+        /// <summary>
+        /// 告警通知接收者信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NoticeReceivers")]
+        public NoticeReceiver[] NoticeReceivers{ get; set; }
+
+        /// <summary>
+        /// 告警通知模板回调信息，包括企业微信、钉钉、飞书。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WebCallbacks")]
+        public WebCallback[] WebCallbacks{ get; set; }
+
+        /// <summary>
+        /// 告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Escalate")]
+        public bool? Escalate{ get; set; }
+
+        /// <summary>
+        /// 告警升级条件。`1`：无人认领且未恢复、`2`：未恢复，默认为1
+        /// - 无人认领且未恢复：告警没有恢复并且没有人认领则升级
+        /// - 未恢复：当前告警持续未恢复则升级
+        /// 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Type")]
+        public ulong? Type{ get; set; }
+
+        /// <summary>
+        /// 告警升级间隔。单位：分钟，范围`[1，14400]`
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Interval")]
+        public ulong? Interval{ get; set; }
+
+        /// <summary>
+        /// 告警升级后下一个环节的通知渠道配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EscalateNotice")]
+        public EscalateNoticeInfo EscalateNotice{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Rule", this.Rule);
             this.SetParamArrayObj(map, prefix + "NoticeReceivers.", this.NoticeReceivers);
             this.SetParamArrayObj(map, prefix + "WebCallbacks.", this.WebCallbacks);
-            this.SetParamSimple(map, prefix + "Rule", this.Rule);
+            this.SetParamSimple(map, prefix + "Escalate", this.Escalate);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Interval", this.Interval);
+            this.SetParamObj(map, prefix + "EscalateNotice.", this.EscalateNotice);
         }
     }
 }

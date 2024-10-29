@@ -56,6 +56,22 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("ImageSetRequired")]
         public bool? ImageSetRequired{ get; set; }
 
+        /// <summary>
+        /// 是否复制为加密自定义镜像。
+        /// 默认值为 false。
+        /// 复制加密自定义镜像仅支持同地域。
+        /// </summary>
+        [JsonProperty("Encrypt")]
+        public bool? Encrypt{ get; set; }
+
+        /// <summary>
+        /// 加密自定义镜像使用的 KMS 密钥 ID。
+        /// 仅当复制加密镜像时，即 Encrypt 为 true 时，此参数有效；
+        /// 不指定 KmsKeyId，默认使用 CBS 云产品 KMS 密钥。
+        /// </summary>
+        [JsonProperty("KmsKeyId")]
+        public string KmsKeyId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +83,8 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
             this.SetParamSimple(map, prefix + "ImageName", this.ImageName);
             this.SetParamSimple(map, prefix + "ImageSetRequired", this.ImageSetRequired);
+            this.SetParamSimple(map, prefix + "Encrypt", this.Encrypt);
+            this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
         }
     }
 }

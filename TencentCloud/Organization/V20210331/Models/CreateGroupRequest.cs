@@ -42,6 +42,12 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// 用户组类型  Manual：手动创建，Synchronized：外部导入
+        /// </summary>
+        [JsonProperty("GroupType")]
+        public string GroupType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "GroupType", this.GroupType);
         }
     }
 }

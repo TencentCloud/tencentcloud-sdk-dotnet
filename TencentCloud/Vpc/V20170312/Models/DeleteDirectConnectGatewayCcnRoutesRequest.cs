@@ -36,6 +36,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("RouteIds")]
         public string[] RouteIds{ get; set; }
 
+        /// <summary>
+        /// 地址类型，支持：IPv4、IPv6。默认IPv4。
+        /// </summary>
+        [JsonProperty("AddressType")]
+        public string AddressType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "DirectConnectGatewayId", this.DirectConnectGatewayId);
             this.SetParamArraySimple(map, prefix + "RouteIds.", this.RouteIds);
+            this.SetParamSimple(map, prefix + "AddressType", this.AddressType);
         }
     }
 }

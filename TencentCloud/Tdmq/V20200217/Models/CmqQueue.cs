@@ -51,7 +51,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? Bps{ get; set; }
 
         /// <summary>
-        /// 飞行消息最大保留时间。
+        /// 飞行消息最大保留时间，需要小于消息保留周期。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxDelaySeconds")]

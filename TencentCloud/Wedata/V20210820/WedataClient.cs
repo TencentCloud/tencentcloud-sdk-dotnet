@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1112";
+       private const string sdkVersion = "SDK_NET_3.0.1113";
 
         /// <summary>
         /// Client constructor.
@@ -1478,6 +1478,48 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeDataCheckStatResponse DescribeDataCheckStatSync(DescribeDataCheckStatRequest req)
         {
             return InternalRequestAsync<DescribeDataCheckStatResponse>(req, "DescribeDataCheckStat")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询数据服务API的发布态信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataServicePublishedApiDetailRequest"/></param>
+        /// <returns><see cref="DescribeDataServicePublishedApiDetailResponse"/></returns>
+        public Task<DescribeDataServicePublishedApiDetailResponse> DescribeDataServicePublishedApiDetail(DescribeDataServicePublishedApiDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDataServicePublishedApiDetailResponse>(req, "DescribeDataServicePublishedApiDetail");
+        }
+
+        /// <summary>
+        /// 查询数据服务API的发布态信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataServicePublishedApiDetailRequest"/></param>
+        /// <returns><see cref="DescribeDataServicePublishedApiDetailResponse"/></returns>
+        public DescribeDataServicePublishedApiDetailResponse DescribeDataServicePublishedApiDetailSync(DescribeDataServicePublishedApiDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDataServicePublishedApiDetailResponse>(req, "DescribeDataServicePublishedApiDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取数据服务API的发布态信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataServicePublishedApiListRequest"/></param>
+        /// <returns><see cref="DescribeDataServicePublishedApiListResponse"/></returns>
+        public Task<DescribeDataServicePublishedApiListResponse> DescribeDataServicePublishedApiList(DescribeDataServicePublishedApiListRequest req)
+        {
+            return InternalRequestAsync<DescribeDataServicePublishedApiListResponse>(req, "DescribeDataServicePublishedApiList");
+        }
+
+        /// <summary>
+        /// 获取数据服务API的发布态信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataServicePublishedApiListRequest"/></param>
+        /// <returns><see cref="DescribeDataServicePublishedApiListResponse"/></returns>
+        public DescribeDataServicePublishedApiListResponse DescribeDataServicePublishedApiListSync(DescribeDataServicePublishedApiListRequest req)
+        {
+            return InternalRequestAsync<DescribeDataServicePublishedApiListResponse>(req, "DescribeDataServicePublishedApiList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

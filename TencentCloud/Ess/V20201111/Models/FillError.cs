@@ -38,6 +38,13 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ErrMessage")]
         public string ErrMessage{ get; set; }
 
+        /// <summary>
+        /// 合同流程ID，为32位字符串。	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FlowId")]
+        public string FlowId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Ess.V20201111.Models
         {
             this.SetParamSimple(map, prefix + "RecipientId", this.RecipientId);
             this.SetParamSimple(map, prefix + "ErrMessage", this.ErrMessage);
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
         }
     }
 }

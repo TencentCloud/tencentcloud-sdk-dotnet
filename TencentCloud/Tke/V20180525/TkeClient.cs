@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1112";
+       private const string sdkVersion = "SDK_NET_3.0.1113";
 
         /// <summary>
         /// Client constructor.
@@ -3998,6 +3998,27 @@ namespace TencentCloud.Tke.V20180525
         public ModifyClusterEndpointSPResponse ModifyClusterEndpointSPSync(ModifyClusterEndpointSPRequest req)
         {
             return InternalRequestAsync<ModifyClusterEndpointSPResponse>(req, "ModifyClusterEndpointSP")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改集群镜像
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterImageRequest"/></param>
+        /// <returns><see cref="ModifyClusterImageResponse"/></returns>
+        public Task<ModifyClusterImageResponse> ModifyClusterImage(ModifyClusterImageRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterImageResponse>(req, "ModifyClusterImage");
+        }
+
+        /// <summary>
+        /// 修改集群镜像
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterImageRequest"/></param>
+        /// <returns><see cref="ModifyClusterImageResponse"/></returns>
+        public ModifyClusterImageResponse ModifyClusterImageSync(ModifyClusterImageRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterImageResponse>(req, "ModifyClusterImage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

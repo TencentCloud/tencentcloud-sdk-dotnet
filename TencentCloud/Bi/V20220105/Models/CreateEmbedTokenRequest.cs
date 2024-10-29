@@ -31,13 +31,19 @@ namespace TencentCloud.Bi.V20220105.Models
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// 分享页面id，嵌出看板时此为空值0
+        /// 分享页面id，嵌出看板时此为空值0，ChatBI嵌出时不传
         /// </summary>
         [JsonProperty("PageId")]
         public ulong? PageId{ get; set; }
 
         /// <summary>
-        /// page表示嵌出页面，panel表示嵌出整个看板
+        /// embed表示页面看板嵌出，chatBIEmbed表示ChatBI嵌出
+        /// </summary>
+        [JsonProperty("Intention")]
+        public string Intention{ get; set; }
+
+        /// <summary>
+        /// page表示嵌出页面，panel表示嵌出整个看板，ChatBI嵌出时使用project
         /// </summary>
         [JsonProperty("Scope")]
         public string Scope{ get; set; }
@@ -124,6 +130,7 @@ namespace TencentCloud.Bi.V20220105.Models
         {
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "PageId", this.PageId);
+            this.SetParamSimple(map, prefix + "Intention", this.Intention);
             this.SetParamSimple(map, prefix + "Scope", this.Scope);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "ExtraParam", this.ExtraParam);

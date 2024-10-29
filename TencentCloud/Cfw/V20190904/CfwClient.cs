@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1112";
+       private const string sdkVersion = "SDK_NET_3.0.1113";
 
         /// <summary>
         /// Client constructor.
@@ -117,7 +117,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 添加nat访问控制规则(地域必填)
+        /// 添加nat访问控制规则
         /// </summary>
         /// <param name="req"><see cref="AddNatAcRuleRequest"/></param>
         /// <returns><see cref="AddNatAcRuleResponse"/></returns>
@@ -127,7 +127,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 添加nat访问控制规则(地域必填)
+        /// 添加nat访问控制规则
         /// </summary>
         /// <param name="req"><see cref="AddNatAcRuleRequest"/></param>
         /// <returns><see cref="AddNatAcRuleResponse"/></returns>
@@ -1297,7 +1297,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// DescribeResourceGroupNew资产中心资产树信息
+        /// 资产中心资产组数数据信息查询
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceGroupNewRequest"/></param>
         /// <returns><see cref="DescribeResourceGroupNewResponse"/></returns>
@@ -1307,7 +1307,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// DescribeResourceGroupNew资产中心资产树信息
+        /// 资产中心资产组数数据信息查询
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceGroupNewRequest"/></param>
         /// <returns><see cref="DescribeResourceGroupNewResponse"/></returns>
@@ -1406,7 +1406,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// DescribeTLogInfo告警中心概况
+        /// DescribeTLogInfo告警中心概况查询
         /// </summary>
         /// <param name="req"><see cref="DescribeTLogInfoRequest"/></param>
         /// <returns><see cref="DescribeTLogInfoResponse"/></returns>
@@ -1416,7 +1416,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// DescribeTLogInfo告警中心概况
+        /// DescribeTLogInfo告警中心概况查询
         /// </summary>
         /// <param name="req"><see cref="DescribeTLogInfoRequest"/></param>
         /// <returns><see cref="DescribeTLogInfoResponse"/></returns>
@@ -1658,6 +1658,8 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 该接口已不再使用
+        /// 
         /// VPC防火墙一键开关
         /// </summary>
         /// <param name="req"><see cref="ModifyAllVPCSwitchStatusRequest"/></param>
@@ -1668,6 +1670,8 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 该接口已不再使用
+        /// 
         /// VPC防火墙一键开关
         /// </summary>
         /// <param name="req"><see cref="ModifyAllVPCSwitchStatusRequest"/></param>
@@ -2045,7 +2049,6 @@ namespace TencentCloud.Cfw.V20190904
 
         /// <summary>
         /// ModifyResourceGroup-资产中心资产组信息修改
-        /// 
         /// </summary>
         /// <param name="req"><see cref="ModifyResourceGroupRequest"/></param>
         /// <returns><see cref="ModifyResourceGroupResponse"/></returns>
@@ -2056,7 +2059,6 @@ namespace TencentCloud.Cfw.V20190904
 
         /// <summary>
         /// ModifyResourceGroup-资产中心资产组信息修改
-        /// 
         /// </summary>
         /// <param name="req"><see cref="ModifyResourceGroupRequest"/></param>
         /// <returns><see cref="ModifyResourceGroupResponse"/></returns>

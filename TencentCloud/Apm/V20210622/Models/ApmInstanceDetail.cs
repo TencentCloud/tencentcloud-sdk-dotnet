@@ -234,6 +234,20 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("ResponseDurationWarningThreshold")]
         public long? ResponseDurationWarningThreshold{ get; set; }
 
+        /// <summary>
+        /// 是否免费（0=否，1=限额免费，2=完全免费），默认0
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Free")]
+        public long? Free{ get; set; }
+
+        /// <summary>
+        /// 是否tsf默认业务系统（0=否，1-是）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DefaultTSF")]
+        public long? DefaultTSF{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -270,6 +284,8 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "PayModeEffective", this.PayModeEffective);
             this.SetParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
+            this.SetParamSimple(map, prefix + "Free", this.Free);
+            this.SetParamSimple(map, prefix + "DefaultTSF", this.DefaultTSF);
         }
     }
 }

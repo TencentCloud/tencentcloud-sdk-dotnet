@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{59F84071-5597-3F91-BE72-09F462EAE82A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1112</VersionPrefix>
+    <VersionPrefix>3.0.1113</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,7 +52,9 @@
     <Compile Include="V20210811\Models\CVSSV2Info.cs" />
     <Compile Include="V20210811\Models\CVSSV3Info.cs" />
     <Compile Include="V20210811\Models\Component.cs" />
+    <Compile Include="V20210811\Models\ComponentTagFilter.cs" />
     <Compile Include="V20210811\Models\ComponentVersion.cs" />
+    <Compile Include="V20210811\Models\ComponentVersionInfo.cs" />
     <Compile Include="V20210811\Models\ComponentVulnerabilitySummary.cs" />
     <Compile Include="V20210811\Models\ComponentVulnerabilityUnion.cs" />
     <Compile Include="V20210811\Models\DescribeKBComponentRequest.cs" />

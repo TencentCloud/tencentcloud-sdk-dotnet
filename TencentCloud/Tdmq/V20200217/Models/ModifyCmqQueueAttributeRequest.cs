@@ -85,7 +85,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string DeadLetterQueueName{ get; set; }
 
         /// <summary>
-        /// MaxTimeToLivepolicy为1时必选。最大未消费过期时间。范围300-43200，单位秒，需要小于消息最大保留时间MsgRetentionSeconds
+        /// policy为1时必选。最大未消费过期时间。范围300-43200，单位秒，需要小于消息最大保留时间MsgRetentionSeconds
         /// </summary>
         [JsonProperty("MaxTimeToLive")]
         public ulong? MaxTimeToLive{ get; set; }

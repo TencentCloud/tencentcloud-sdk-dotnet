@@ -91,7 +91,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ApproverIdCardNumber{ get; set; }
 
         /// <summary>
-        /// 合同流程ID，补充合同组子合同动态签署人时必传。
+        /// 合同流程ID
+        /// - 补充合同组子合同动态签署人时必传。
+        /// - 补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }

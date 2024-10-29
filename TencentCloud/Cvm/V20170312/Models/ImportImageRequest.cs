@@ -99,6 +99,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("ImageFamily")]
         public string ImageFamily{ get; set; }
 
+        /// <summary>
+        /// 导入的数据盘列表
+        /// </summary>
+        [JsonProperty("ImportImageDataDiskList")]
+        public ImportImageDataDisk[] ImportImageDataDiskList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -117,6 +123,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
             this.SetParamSimple(map, prefix + "BootMode", this.BootMode);
             this.SetParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
+            this.SetParamArrayObj(map, prefix + "ImportImageDataDiskList.", this.ImportImageDataDiskList);
         }
     }
 }

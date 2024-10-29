@@ -25,15 +25,9 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 回调地址。最大支持1024个字节数。
-        /// </summary>
-        [JsonProperty("Url")]
-        public string Url{ get; set; }
-
-        /// <summary>
         /// 回调的类型。可选值：
-        /// - WeCom
         /// - Http
+        /// - WeCom
         /// - DingTalk
         /// - Lark
         /// </summary>
@@ -41,28 +35,70 @@ namespace TencentCloud.Cls.V20201016.Models
         public string CallbackType{ get; set; }
 
         /// <summary>
+        /// 回调地址，最大支持1024个字节。
+        /// 也可使用WebCallbackId引用集成配置中的URL，此时该字段请填写为空字符串。
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
+
+        /// <summary>
+        /// 集成配置ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WebCallbackId")]
+        public string WebCallbackId{ get; set; }
+
+        /// <summary>
         /// 回调方法。可选值：
         /// - POST（默认值）
         /// - PUT
         /// 
         /// 注意：
-        /// - 参数CallbackType为Http时为必选。
+        /// - 参数CallbackType为Http时为必选，其它回调方式无需填写。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Method")]
         public string Method{ get; set; }
 
         /// <summary>
-        /// 请求头。
-        /// 注意：该参数已废弃，请使用NoticeContentId。
+        /// 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NoticeContentId")]
+        public string NoticeContentId{ get; set; }
+
+        /// <summary>
+        /// 提醒类型。
+        /// 
+        /// 0：不提醒；1：指定人；2：所有人
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RemindType")]
+        public ulong? RemindType{ get; set; }
+
+        /// <summary>
+        /// 电话列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Mobiles")]
+        public string[] Mobiles{ get; set; }
+
+        /// <summary>
+        /// 用户ID列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserIds")]
+        public string[] UserIds{ get; set; }
+
+        /// <summary>
+        /// 该参数已废弃，请使用NoticeContentId。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Headers")]
         public string[] Headers{ get; set; }
 
         /// <summary>
-        /// 请求内容。
-        /// 注意：该参数已废弃，请使用NoticeContentId。
+        /// 该参数已废弃，请使用NoticeContentId。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Body")]
@@ -76,34 +112,23 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Index")]
         public long? Index{ get; set; }
 
-        /// <summary>
-        /// 通知内容模板ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("NoticeContentId")]
-        public string NoticeContentId{ get; set; }
-
-        /// <summary>
-        /// 集成配置ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("WebCallbackId")]
-        public string WebCallbackId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "CallbackType", this.CallbackType);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "WebCallbackId", this.WebCallbackId);
             this.SetParamSimple(map, prefix + "Method", this.Method);
+            this.SetParamSimple(map, prefix + "NoticeContentId", this.NoticeContentId);
+            this.SetParamSimple(map, prefix + "RemindType", this.RemindType);
+            this.SetParamArraySimple(map, prefix + "Mobiles.", this.Mobiles);
+            this.SetParamArraySimple(map, prefix + "UserIds.", this.UserIds);
             this.SetParamArraySimple(map, prefix + "Headers.", this.Headers);
             this.SetParamSimple(map, prefix + "Body", this.Body);
             this.SetParamSimple(map, prefix + "Index", this.Index);
-            this.SetParamSimple(map, prefix + "NoticeContentId", this.NoticeContentId);
-            this.SetParamSimple(map, prefix + "WebCallbackId", this.WebCallbackId);
         }
     }
 }

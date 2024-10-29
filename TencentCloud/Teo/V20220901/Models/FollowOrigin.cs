@@ -33,25 +33,29 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 源站未返回 Cache-Control 头时, 设置默认的缓存时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("DefaultCacheTime")]
-        public long? DefaultCacheTime{ get; set; }
-
-        /// <summary>
-        /// 源站未返回 Cache-Control 头时, 设置缓存/不缓存
+        /// 源站未返回 Cache-Control 头时，缓存/不缓存开关。当 Switch 为 on 时，此字段必填，否则此字段不生效。取值有：
+        /// <li>on：缓存；</li>
+        /// <li>off：不缓存。</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultCache")]
         public string DefaultCache{ get; set; }
 
         /// <summary>
-        /// 源站未返回 Cache-Control 头时, 使用/不使用默认缓存策略
+        /// 源站未返回 Cache-Control 头时，使用/不使用默认缓存策略开关。当 DefaultCache 为 on 时，此字段必填，否则此字段不生效；当 DefaultCacheTime 不为 0 时，此字段必须为 off。取值有：
+        /// <li>on：使用默认缓存策略；</li>
+        /// <li>off：不使用默认缓存策略。</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultCacheStrategy")]
         public string DefaultCacheStrategy{ get; set; }
+
+        /// <summary>
+        /// 源站未返回 Cache-Control 头时，表示默认的缓存时间，单位为秒，取值：0～315360000。当 DefaultCache 为 on 时，此字段必填，否则此字段不生效；当 DefaultCacheStrategy 为 on 时， 此字段必须为 0。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DefaultCacheTime")]
+        public long? DefaultCacheTime{ get; set; }
 
 
         /// <summary>
@@ -60,9 +64,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamSimple(map, prefix + "DefaultCacheTime", this.DefaultCacheTime);
             this.SetParamSimple(map, prefix + "DefaultCache", this.DefaultCache);
             this.SetParamSimple(map, prefix + "DefaultCacheStrategy", this.DefaultCacheStrategy);
+            this.SetParamSimple(map, prefix + "DefaultCacheTime", this.DefaultCacheTime);
         }
     }
 }

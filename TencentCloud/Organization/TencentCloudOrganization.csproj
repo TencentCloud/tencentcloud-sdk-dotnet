@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FF7DA1A4-A5D5-3EF1-A5B1-B43A74B2F34E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1112</VersionPrefix>
+    <VersionPrefix>3.0.1113</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -144,6 +144,8 @@
     <Compile Include="V20210331\Models\CreateRoleAssignmentResponse.cs" />
     <Compile Include="V20210331\Models\CreateRoleConfigurationRequest.cs" />
     <Compile Include="V20210331\Models\CreateRoleConfigurationResponse.cs" />
+    <Compile Include="V20210331\Models\CreateSCIMCredentialRequest.cs" />
+    <Compile Include="V20210331\Models\CreateSCIMCredentialResponse.cs" />
     <Compile Include="V20210331\Models\CreateUserRequest.cs" />
     <Compile Include="V20210331\Models\CreateUserResponse.cs" />
     <Compile Include="V20210331\Models\CreateUserSyncProvisioningRequest.cs" />
@@ -172,6 +174,8 @@
     <Compile Include="V20210331\Models\DeleteRoleAssignmentResponse.cs" />
     <Compile Include="V20210331\Models\DeleteRoleConfigurationRequest.cs" />
     <Compile Include="V20210331\Models\DeleteRoleConfigurationResponse.cs" />
+    <Compile Include="V20210331\Models\DeleteSCIMCredentialRequest.cs" />
+    <Compile Include="V20210331\Models\DeleteSCIMCredentialResponse.cs" />
     <Compile Include="V20210331\Models\DeleteShareUnitMembersRequest.cs" />
     <Compile Include="V20210331\Models\DeleteShareUnitMembersResponse.cs" />
     <Compile Include="V20210331\Models\DeleteShareUnitRequest.cs" />
@@ -237,6 +241,8 @@
     <Compile Include="V20210331\Models\GetProvisioningTaskStatusResponse.cs" />
     <Compile Include="V20210331\Models\GetRoleConfigurationRequest.cs" />
     <Compile Include="V20210331\Models\GetRoleConfigurationResponse.cs" />
+    <Compile Include="V20210331\Models\GetSCIMSynchronizationStatusRequest.cs" />
+    <Compile Include="V20210331\Models\GetSCIMSynchronizationStatusResponse.cs" />
     <Compile Include="V20210331\Models\GetTaskStatusRequest.cs" />
     <Compile Include="V20210331\Models\GetTaskStatusResponse.cs" />
     <Compile Include="V20210331\Models\GetUserRequest.cs" />
@@ -283,6 +289,8 @@
     <Compile Include="V20210331\Models\ListRoleConfigurationProvisioningsResponse.cs" />
     <Compile Include="V20210331\Models\ListRoleConfigurationsRequest.cs" />
     <Compile Include="V20210331\Models\ListRoleConfigurationsResponse.cs" />
+    <Compile Include="V20210331\Models\ListSCIMCredentialsRequest.cs" />
+    <Compile Include="V20210331\Models\ListSCIMCredentialsResponse.cs" />
     <Compile Include="V20210331\Models\ListTargetsForPolicyNode.cs" />
     <Compile Include="V20210331\Models\ListTargetsForPolicyRequest.cs" />
     <Compile Include="V20210331\Models\ListTargetsForPolicyResponse.cs" />
@@ -337,6 +345,7 @@
     <Compile Include="V20210331\Models\SAMLIdPCertificate.cs" />
     <Compile Include="V20210331\Models\SAMLIdentityProviderConfiguration.cs" />
     <Compile Include="V20210331\Models\SAMLServiceProvider.cs" />
+    <Compile Include="V20210331\Models\SCIMCredential.cs" />
     <Compile Include="V20210331\Models\SendOrgMemberAccountBindEmailRequest.cs" />
     <Compile Include="V20210331\Models\SendOrgMemberAccountBindEmailResponse.cs" />
     <Compile Include="V20210331\Models\SetExternalSAMLIdentityProviderRequest.cs" />
@@ -367,6 +376,10 @@
     <Compile Include="V20210331\Models\UpdatePolicyResponse.cs" />
     <Compile Include="V20210331\Models\UpdateRoleConfigurationRequest.cs" />
     <Compile Include="V20210331\Models\UpdateRoleConfigurationResponse.cs" />
+    <Compile Include="V20210331\Models\UpdateSCIMCredentialStatusRequest.cs" />
+    <Compile Include="V20210331\Models\UpdateSCIMCredentialStatusResponse.cs" />
+    <Compile Include="V20210331\Models\UpdateSCIMSynchronizationStatusRequest.cs" />
+    <Compile Include="V20210331\Models\UpdateSCIMSynchronizationStatusResponse.cs" />
     <Compile Include="V20210331\Models\UpdateShareUnitRequest.cs" />
     <Compile Include="V20210331\Models\UpdateShareUnitResponse.cs" />
     <Compile Include="V20210331\Models\UpdateUserRequest.cs" />

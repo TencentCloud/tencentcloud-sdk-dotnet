@@ -28,7 +28,7 @@ namespace TencentCloud.Scf.V20180416
 
        private const string endpoint = "scf.tencentcloudapi.com";
        private const string version = "2018-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.1112";
+       private const string sdkVersion = "SDK_NET_3.0.1113";
 
         /// <summary>
         /// Client constructor.
@@ -106,6 +106,27 @@ namespace TencentCloud.Scf.V20180416
         public CreateAliasResponse CreateAliasSync(CreateAliasRequest req)
         {
             return InternalRequestAsync<CreateAliasResponse>(req, "CreateAlias")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建自定义域名
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomDomainRequest"/></param>
+        /// <returns><see cref="CreateCustomDomainResponse"/></returns>
+        public Task<CreateCustomDomainResponse> CreateCustomDomain(CreateCustomDomainRequest req)
+        {
+            return InternalRequestAsync<CreateCustomDomainResponse>(req, "CreateCustomDomain");
+        }
+
+        /// <summary>
+        /// 创建自定义域名
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomDomainRequest"/></param>
+        /// <returns><see cref="CreateCustomDomainResponse"/></returns>
+        public CreateCustomDomainResponse CreateCustomDomainSync(CreateCustomDomainRequest req)
+        {
+            return InternalRequestAsync<CreateCustomDomainResponse>(req, "CreateCustomDomain")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -190,6 +211,27 @@ namespace TencentCloud.Scf.V20180416
         public DeleteAliasResponse DeleteAliasSync(DeleteAliasRequest req)
         {
             return InternalRequestAsync<DeleteAliasResponse>(req, "DeleteAlias")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除自定义域名
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomDomainRequest"/></param>
+        /// <returns><see cref="DeleteCustomDomainResponse"/></returns>
+        public Task<DeleteCustomDomainResponse> DeleteCustomDomain(DeleteCustomDomainRequest req)
+        {
+            return InternalRequestAsync<DeleteCustomDomainResponse>(req, "DeleteCustomDomain");
+        }
+
+        /// <summary>
+        /// 删除自定义域名
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomDomainRequest"/></param>
+        /// <returns><see cref="DeleteCustomDomainResponse"/></returns>
+        public DeleteCustomDomainResponse DeleteCustomDomainSync(DeleteCustomDomainRequest req)
+        {
+            return InternalRequestAsync<DeleteCustomDomainResponse>(req, "DeleteCustomDomain")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -379,6 +421,27 @@ namespace TencentCloud.Scf.V20180416
         public GetAsyncEventStatusResponse GetAsyncEventStatusSync(GetAsyncEventStatusRequest req)
         {
             return InternalRequestAsync<GetAsyncEventStatusResponse>(req, "GetAsyncEventStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看云函数自定义域名详情
+        /// </summary>
+        /// <param name="req"><see cref="GetCustomDomainRequest"/></param>
+        /// <returns><see cref="GetCustomDomainResponse"/></returns>
+        public Task<GetCustomDomainResponse> GetCustomDomain(GetCustomDomainRequest req)
+        {
+            return InternalRequestAsync<GetCustomDomainResponse>(req, "GetCustomDomain");
+        }
+
+        /// <summary>
+        /// 查看云函数自定义域名详情
+        /// </summary>
+        /// <param name="req"><see cref="GetCustomDomainRequest"/></param>
+        /// <returns><see cref="GetCustomDomainResponse"/></returns>
+        public GetCustomDomainResponse GetCustomDomainSync(GetCustomDomainRequest req)
+        {
+            return InternalRequestAsync<GetCustomDomainResponse>(req, "GetCustomDomain")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -631,6 +694,27 @@ namespace TencentCloud.Scf.V20180416
         public ListAsyncEventsResponse ListAsyncEventsSync(ListAsyncEventsRequest req)
         {
             return InternalRequestAsync<ListAsyncEventsResponse>(req, "ListAsyncEvents")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 遍历域名列表信息
+        /// </summary>
+        /// <param name="req"><see cref="ListCustomDomainsRequest"/></param>
+        /// <returns><see cref="ListCustomDomainsResponse"/></returns>
+        public Task<ListCustomDomainsResponse> ListCustomDomains(ListCustomDomainsRequest req)
+        {
+            return InternalRequestAsync<ListCustomDomainsResponse>(req, "ListCustomDomains");
+        }
+
+        /// <summary>
+        /// 遍历域名列表信息
+        /// </summary>
+        /// <param name="req"><see cref="ListCustomDomainsRequest"/></param>
+        /// <returns><see cref="ListCustomDomainsResponse"/></returns>
+        public ListCustomDomainsResponse ListCustomDomainsSync(ListCustomDomainsRequest req)
+        {
+            return InternalRequestAsync<ListCustomDomainsResponse>(req, "ListCustomDomains")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -904,6 +988,27 @@ namespace TencentCloud.Scf.V20180416
         public UpdateAliasResponse UpdateAliasSync(UpdateAliasRequest req)
         {
             return InternalRequestAsync<UpdateAliasResponse>(req, "UpdateAlias")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新自定义域名相关配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCustomDomainRequest"/></param>
+        /// <returns><see cref="UpdateCustomDomainResponse"/></returns>
+        public Task<UpdateCustomDomainResponse> UpdateCustomDomain(UpdateCustomDomainRequest req)
+        {
+            return InternalRequestAsync<UpdateCustomDomainResponse>(req, "UpdateCustomDomain");
+        }
+
+        /// <summary>
+        /// 更新自定义域名相关配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCustomDomainRequest"/></param>
+        /// <returns><see cref="UpdateCustomDomainResponse"/></returns>
+        public UpdateCustomDomainResponse UpdateCustomDomainSync(UpdateCustomDomainRequest req)
+        {
+            return InternalRequestAsync<UpdateCustomDomainResponse>(req, "UpdateCustomDomain")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

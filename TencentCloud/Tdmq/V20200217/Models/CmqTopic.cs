@@ -46,7 +46,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? MsgRetentionSeconds{ get; set; }
 
         /// <summary>
-        /// 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为65536。
+        /// 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为1048576。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxMsgSize")]

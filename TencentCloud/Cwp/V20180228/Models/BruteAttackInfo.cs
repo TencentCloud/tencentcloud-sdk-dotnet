@@ -112,6 +112,8 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// 83-不阻断(已加白名单)
         /// 86-不阻断(系统白名单)
         /// 87-不阻断(客户端离线)
+        /// 88-不阻断(来源Ip归属相同客户)
+        /// 89-不阻断(ipv6不支持阻断)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BanStatus")]

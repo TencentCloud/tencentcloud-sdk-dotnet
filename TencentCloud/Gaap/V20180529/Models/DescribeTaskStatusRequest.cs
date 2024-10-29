@@ -25,7 +25,7 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// 任务ID，值为异步接口返回的RequestId
+        /// 任务ID，值为异步接口返回的RequestId，此参数不能传空值。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1112";
+       private const string sdkVersion = "SDK_NET_3.0.1113";
 
         /// <summary>
         /// Client constructor.
@@ -371,6 +371,27 @@ namespace TencentCloud.Teo.V20220901
         public CreateL4ProxyRulesResponse CreateL4ProxyRulesSync(CreateL4ProxyRulesRequest req)
         {
             return InternalRequestAsync<CreateL4ProxyRulesResponse>(req, "CreateL4ProxyRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建负载均衡实例。详情请参考 [快速创建负载均衡实例](https://cloud.tencent.com/document/product/1552/104223)。负载均衡功能内测中，如您需要使用请 [联系我们](https://cloud.tencent.com/online-service)。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLoadBalancerRequest"/></param>
+        /// <returns><see cref="CreateLoadBalancerResponse"/></returns>
+        public Task<CreateLoadBalancerResponse> CreateLoadBalancer(CreateLoadBalancerRequest req)
+        {
+            return InternalRequestAsync<CreateLoadBalancerResponse>(req, "CreateLoadBalancer");
+        }
+
+        /// <summary>
+        /// 创建负载均衡实例。详情请参考 [快速创建负载均衡实例](https://cloud.tencent.com/document/product/1552/104223)。负载均衡功能内测中，如您需要使用请 [联系我们](https://cloud.tencent.com/online-service)。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLoadBalancerRequest"/></param>
+        /// <returns><see cref="CreateLoadBalancerResponse"/></returns>
+        public CreateLoadBalancerResponse CreateLoadBalancerSync(CreateLoadBalancerRequest req)
+        {
+            return InternalRequestAsync<CreateLoadBalancerResponse>(req, "CreateLoadBalancer")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -784,6 +805,27 @@ namespace TencentCloud.Teo.V20220901
         public DeleteL4ProxyRulesResponse DeleteL4ProxyRulesSync(DeleteL4ProxyRulesRequest req)
         {
             return InternalRequestAsync<DeleteL4ProxyRulesResponse>(req, "DeleteL4ProxyRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除负载均衡实例，若负载均衡示例被其他服务（例如：四层代理等）引用的时候，示例无法被删除，需要先解除引用关系。负载均衡功能内测中，如您需要使用请 [联系我们](https://cloud.tencent.com/online-service)。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoadBalancerRequest"/></param>
+        /// <returns><see cref="DeleteLoadBalancerResponse"/></returns>
+        public Task<DeleteLoadBalancerResponse> DeleteLoadBalancer(DeleteLoadBalancerRequest req)
+        {
+            return InternalRequestAsync<DeleteLoadBalancerResponse>(req, "DeleteLoadBalancer");
+        }
+
+        /// <summary>
+        /// 删除负载均衡实例，若负载均衡示例被其他服务（例如：四层代理等）引用的时候，示例无法被删除，需要先解除引用关系。负载均衡功能内测中，如您需要使用请 [联系我们](https://cloud.tencent.com/online-service)。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoadBalancerRequest"/></param>
+        /// <returns><see cref="DeleteLoadBalancerResponse"/></returns>
+        public DeleteLoadBalancerResponse DeleteLoadBalancerSync(DeleteLoadBalancerRequest req)
+        {
+            return InternalRequestAsync<DeleteLoadBalancerResponse>(req, "DeleteLoadBalancer")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1418,6 +1460,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 查询负载均衡实例列表。负载均衡功能内测中，如您需要使用请 [联系我们](https://cloud.tencent.com/online-service)。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoadBalancerListRequest"/></param>
+        /// <returns><see cref="DescribeLoadBalancerListResponse"/></returns>
+        public Task<DescribeLoadBalancerListResponse> DescribeLoadBalancerList(DescribeLoadBalancerListRequest req)
+        {
+            return InternalRequestAsync<DescribeLoadBalancerListResponse>(req, "DescribeLoadBalancerList");
+        }
+
+        /// <summary>
+        /// 查询负载均衡实例列表。负载均衡功能内测中，如您需要使用请 [联系我们](https://cloud.tencent.com/online-service)。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoadBalancerListRequest"/></param>
+        /// <returns><see cref="DescribeLoadBalancerListResponse"/></returns>
+        public DescribeLoadBalancerListResponse DescribeLoadBalancerListSync(DescribeLoadBalancerListRequest req)
+        {
+            return InternalRequestAsync<DescribeLoadBalancerListResponse>(req, "DescribeLoadBalancerList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取源站组列表
         /// </summary>
         /// <param name="req"><see cref="DescribeOriginGroupRequest"/></param>
@@ -1435,6 +1498,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeOriginGroupResponse DescribeOriginGroupSync(DescribeOriginGroupRequest req)
         {
             return InternalRequestAsync<DescribeOriginGroupResponse>(req, "DescribeOriginGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询负载均衡实例下源站组健康状态。负载均衡功能内测中，如您需要使用请 [联系我们](https://cloud.tencent.com/online-service)。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOriginGroupHealthStatusRequest"/></param>
+        /// <returns><see cref="DescribeOriginGroupHealthStatusResponse"/></returns>
+        public Task<DescribeOriginGroupHealthStatusResponse> DescribeOriginGroupHealthStatus(DescribeOriginGroupHealthStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeOriginGroupHealthStatusResponse>(req, "DescribeOriginGroupHealthStatus");
+        }
+
+        /// <summary>
+        /// 查询负载均衡实例下源站组健康状态。负载均衡功能内测中，如您需要使用请 [联系我们](https://cloud.tencent.com/online-service)。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOriginGroupHealthStatusRequest"/></param>
+        /// <returns><see cref="DescribeOriginGroupHealthStatusResponse"/></returns>
+        public DescribeOriginGroupHealthStatusResponse DescribeOriginGroupHealthStatusSync(DescribeOriginGroupHealthStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeOriginGroupHealthStatusResponse>(req, "DescribeOriginGroupHealthStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2309,6 +2393,27 @@ namespace TencentCloud.Teo.V20220901
         public ModifyL4ProxyStatusResponse ModifyL4ProxyStatusSync(ModifyL4ProxyStatusRequest req)
         {
             return InternalRequestAsync<ModifyL4ProxyStatusResponse>(req, "ModifyL4ProxyStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改负载均衡实例配置。负载均衡功能内测中，如您需要使用请 [联系我们](https://cloud.tencent.com/online-service)。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoadBalancerRequest"/></param>
+        /// <returns><see cref="ModifyLoadBalancerResponse"/></returns>
+        public Task<ModifyLoadBalancerResponse> ModifyLoadBalancer(ModifyLoadBalancerRequest req)
+        {
+            return InternalRequestAsync<ModifyLoadBalancerResponse>(req, "ModifyLoadBalancer");
+        }
+
+        /// <summary>
+        /// 修改负载均衡实例配置。负载均衡功能内测中，如您需要使用请 [联系我们](https://cloud.tencent.com/online-service)。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoadBalancerRequest"/></param>
+        /// <returns><see cref="ModifyLoadBalancerResponse"/></returns>
+        public ModifyLoadBalancerResponse ModifyLoadBalancerSync(ModifyLoadBalancerRequest req)
+        {
+            return InternalRequestAsync<ModifyLoadBalancerResponse>(req, "ModifyLoadBalancer")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1112</VersionPrefix>
+    <VersionPrefix>3.0.1113</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -178,6 +178,10 @@
     <Compile Include="V20210820\Models\DagInstancesResponse.cs" />
     <Compile Include="V20210820\Models\DailyScoreInfo.cs" />
     <Compile Include="V20210820\Models\DataCheckStat.cs" />
+    <Compile Include="V20210820\Models\DataServicePublishedApiListFilter.cs" />
+    <Compile Include="V20210820\Models\DataServiceRequestListOrder.cs" />
+    <Compile Include="V20210820\Models\DataServiceRequestParam.cs" />
+    <Compile Include="V20210820\Models\DataServiceResponseParam.cs" />
     <Compile Include="V20210820\Models\DataSourceInfo.cs" />
     <Compile Include="V20210820\Models\DataSourceInfoPage.cs" />
     <Compile Include="V20210820\Models\DatabaseInfo.cs" />
@@ -241,6 +245,12 @@
     <Compile Include="V20210820\Models\DescribeColumnsMetaResponse.cs" />
     <Compile Include="V20210820\Models\DescribeDataCheckStatRequest.cs" />
     <Compile Include="V20210820\Models\DescribeDataCheckStatResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeDataServicePublishedApiDetailRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeDataServicePublishedApiDetailResp.cs" />
+    <Compile Include="V20210820\Models\DescribeDataServicePublishedApiDetailResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeDataServicePublishedApiListRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeDataServicePublishedApiListResp.cs" />
+    <Compile Include="V20210820\Models\DescribeDataServicePublishedApiListResponse.cs" />
     <Compile Include="V20210820\Models\DescribeDataSourceInfoListRequest.cs" />
     <Compile Include="V20210820\Models\DescribeDataSourceInfoListResponse.cs" />
     <Compile Include="V20210820\Models\DescribeDataSourceListRequest.cs" />

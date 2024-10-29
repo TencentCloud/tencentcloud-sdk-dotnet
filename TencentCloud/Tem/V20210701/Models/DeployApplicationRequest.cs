@@ -37,13 +37,13 @@ namespace TencentCloud.Tem.V20210701.Models
         public ulong? InitPodNum{ get; set; }
 
         /// <summary>
-        /// cpu规格
+        /// cpu规格 单位：核
         /// </summary>
         [JsonProperty("CpuSpec")]
         public float? CpuSpec{ get; set; }
 
         /// <summary>
-        /// 内存规格
+        /// 内存规格 单位：G
         /// </summary>
         [JsonProperty("MemorySpec")]
         public float? MemorySpec{ get; set; }

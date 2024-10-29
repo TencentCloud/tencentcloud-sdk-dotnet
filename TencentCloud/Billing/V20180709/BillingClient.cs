@@ -28,7 +28,7 @@ namespace TencentCloud.Billing.V20180709
 
        private const string endpoint = "billing.tencentcloudapi.com";
        private const string version = "2018-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1112";
+       private const string sdkVersion = "SDK_NET_3.0.1113";
 
         /// <summary>
         /// Client constructor.
@@ -323,6 +323,27 @@ namespace TencentCloud.Billing.V20180709
         public DescribeAllocationTrendByMonthResponse DescribeAllocationTrendByMonthSync(DescribeAllocationTrendByMonthRequest req)
         {
             return InternalRequestAsync<DescribeAllocationTrendByMonthResponse>(req, "DescribeAllocationTrendByMonth")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 可以通过API获取当前UIN是否有调账，客户可以更快地主动地获取调账情况。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillAdjustInfoRequest"/></param>
+        /// <returns><see cref="DescribeBillAdjustInfoResponse"/></returns>
+        public Task<DescribeBillAdjustInfoResponse> DescribeBillAdjustInfo(DescribeBillAdjustInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeBillAdjustInfoResponse>(req, "DescribeBillAdjustInfo");
+        }
+
+        /// <summary>
+        /// 可以通过API获取当前UIN是否有调账，客户可以更快地主动地获取调账情况。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillAdjustInfoRequest"/></param>
+        /// <returns><see cref="DescribeBillAdjustInfoResponse"/></returns>
+        public DescribeBillAdjustInfoResponse DescribeBillAdjustInfoSync(DescribeBillAdjustInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeBillAdjustInfoResponse>(req, "DescribeBillAdjustInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

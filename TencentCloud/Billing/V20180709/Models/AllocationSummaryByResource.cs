@@ -323,6 +323,20 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("ComponentConfig")]
         public string ComponentConfig{ get; set; }
 
+        /// <summary>
+        /// SPDeduction
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SPDeduction")]
+        public string SPDeduction{ get; set; }
+
+        /// <summary>
+        /// 账单月
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BillMonth")]
+        public string BillMonth{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -371,6 +385,8 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "RegionType", this.RegionType);
             this.SetParamSimple(map, prefix + "RegionTypeName", this.RegionTypeName);
             this.SetParamSimple(map, prefix + "ComponentConfig", this.ComponentConfig);
+            this.SetParamSimple(map, prefix + "SPDeduction", this.SPDeduction);
+            this.SetParamSimple(map, prefix + "BillMonth", this.BillMonth);
         }
     }
 }

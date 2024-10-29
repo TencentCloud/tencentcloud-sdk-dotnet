@@ -60,6 +60,24 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("IpPortSet")]
         public string[] IpPortSet{ get; set; }
 
+        /// <summary>
+        /// 是否启用SSL,1:启用 0：禁用，仅支持Redis资产
+        /// </summary>
+        [JsonProperty("EnableSSL")]
+        public long? EnableSSL{ get; set; }
+
+        /// <summary>
+        /// SSL证书，EnableSSL时必填
+        /// </summary>
+        [JsonProperty("SSLCert")]
+        public string SSLCert{ get; set; }
+
+        /// <summary>
+        /// SSL证书名称，EnableSSL时必填
+        /// </summary>
+        [JsonProperty("SSLCertName")]
+        public string SSLCertName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +90,9 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
             this.SetParamArraySimple(map, prefix + "IpPortSet.", this.IpPortSet);
+            this.SetParamSimple(map, prefix + "EnableSSL", this.EnableSSL);
+            this.SetParamSimple(map, prefix + "SSLCert", this.SSLCert);
+            this.SetParamSimple(map, prefix + "SSLCertName", this.SSLCertName);
         }
     }
 }

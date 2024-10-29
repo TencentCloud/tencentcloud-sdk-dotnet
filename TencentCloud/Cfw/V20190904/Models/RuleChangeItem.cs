@@ -36,6 +36,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("NewOrderIndex")]
         public long? NewOrderIndex{ get; set; }
 
+        /// <summary>
+        /// Ip版本，0：IPv4，1：IPv6，默认为IPv4
+        /// </summary>
+        [JsonProperty("IpVersion")]
+        public long? IpVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         {
             this.SetParamSimple(map, prefix + "OrderIndex", this.OrderIndex);
             this.SetParamSimple(map, prefix + "NewOrderIndex", this.NewOrderIndex);
+            this.SetParamSimple(map, prefix + "IpVersion", this.IpVersion);
         }
     }
 }

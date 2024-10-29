@@ -52,7 +52,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? FixFailCnt{ get; set; }
 
         /// <summary>
-        /// 主机总是
+        /// 主机总数
         /// </summary>
         [JsonProperty("HostCnt")]
         public ulong? HostCnt{ get; set; }
@@ -84,7 +84,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? SnapshotProgress{ get; set; }
 
         /// <summary>
-        /// 修复精度 0-100
+        /// 修复进度 0-100
         /// </summary>
         [JsonProperty("FixProgress")]
         public ulong? FixProgress{ get; set; }

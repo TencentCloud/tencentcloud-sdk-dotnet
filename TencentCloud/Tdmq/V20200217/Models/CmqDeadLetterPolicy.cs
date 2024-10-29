@@ -32,7 +32,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string DeadLetterQueue{ get; set; }
 
         /// <summary>
-        /// 死信队列策略。
+        /// 死信队列策略。0:最大接收次数;1:最大未消费时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Policy")]
@@ -46,7 +46,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? MaxTimeToLive{ get; set; }
 
         /// <summary>
-        /// 最大接收次数。
+        /// 最大接收次数。Policy为0时必选，范围在1到1000。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxReceiveCount")]

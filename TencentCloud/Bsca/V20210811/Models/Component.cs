@@ -62,6 +62,27 @@ namespace TencentCloud.Bsca.V20210811.Models
         [JsonProperty("LicenseExpression")]
         public string LicenseExpression{ get; set; }
 
+        /// <summary>
+        /// 第三方组件的版本信息(如果匹配到版本)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VersionInfo")]
+        public ComponentVersionInfo VersionInfo{ get; set; }
+
+        /// <summary>
+        /// 第三方组件的最后更新时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LastUpdateTime")]
+        public string LastUpdateTime{ get; set; }
+
+        /// <summary>
+        /// 第三方组件的类型标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagList")]
+        public string[] TagList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +95,9 @@ namespace TencentCloud.Bsca.V20210811.Models
             this.SetParamArraySimple(map, prefix + "NicknameList.", this.NicknameList);
             this.SetParamArraySimple(map, prefix + "CodeLocationList.", this.CodeLocationList);
             this.SetParamSimple(map, prefix + "LicenseExpression", this.LicenseExpression);
+            this.SetParamObj(map, prefix + "VersionInfo.", this.VersionInfo);
+            this.SetParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
+            this.SetParamArraySimple(map, prefix + "TagList.", this.TagList);
         }
     }
 }

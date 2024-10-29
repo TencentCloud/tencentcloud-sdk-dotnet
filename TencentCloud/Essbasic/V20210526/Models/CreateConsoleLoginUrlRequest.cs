@@ -172,7 +172,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string TopNavigationStatus{ get; set; }
 
         /// <summary>
-        /// 是否自动激活子客
+        /// 是否自动激活子客企业，有下面两种选项：
+        /// 
+        /// **false（默认设置）**：不自动激活子客户。您需要通过控制台或调用[激活或者续期子企业](https://qian.tencent.com/developers/partnerApis/accounts/CreateChannelSubOrganizationActive)接口手动完成激活过程。
+        /// 
+        /// **true**：若持有的许可证充足，子客户企业注册完成后将自动激活，无需手动操作或访问控制台。
+        /// 
+        /// <b>注</b>：如果<b>应用扩展服务</b>中的<b>自动激活子客企业</b>为打开态， 则忽略本接口的AutoActive这个参数（若持有的许可证充足，子客户企业注册完成后将自动激活），具体位置参考下图：
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/c3639b05503d3735bac483d17aa6b0a3.png)
         /// </summary>
         [JsonProperty("AutoActive")]
         public bool? AutoActive{ get; set; }

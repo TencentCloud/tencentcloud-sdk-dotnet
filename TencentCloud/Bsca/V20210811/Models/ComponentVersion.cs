@@ -38,6 +38,13 @@ namespace TencentCloud.Bsca.V20210811.Models
         [JsonProperty("LicenseExpression")]
         public string LicenseExpression{ get; set; }
 
+        /// <summary>
+        /// 组件的版本信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VersionInfo")]
+        public ComponentVersionInfo VersionInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Bsca.V20210811.Models
         {
             this.SetParamObj(map, prefix + "PURL.", this.PURL);
             this.SetParamSimple(map, prefix + "LicenseExpression", this.LicenseExpression);
+            this.SetParamObj(map, prefix + "VersionInfo.", this.VersionInfo);
         }
     }
 }

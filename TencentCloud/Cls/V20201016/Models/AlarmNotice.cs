@@ -25,10 +25,17 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 告警通知模板名称。
+        /// 告警通知渠道组名称。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
+
+        /// <summary>
+        /// 告警通知渠道组绑定的标签信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
 
         /// <summary>
         /// 告警模板的类型。可选值：
@@ -61,6 +68,35 @@ namespace TencentCloud.Cls.V20201016.Models
         public string AlarmNoticeId{ get; set; }
 
         /// <summary>
+        /// 通知规则。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NoticeRules")]
+        public NoticeRule[] NoticeRules{ get; set; }
+
+        /// <summary>
+        /// 免登录操作告警开关。
+        /// 参数值： 1：关闭 2：开启（默认开启）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlarmShieldStatus")]
+        public ulong? AlarmShieldStatus{ get; set; }
+
+        /// <summary>
+        /// 调用链接域名。http:// 或者 https:// 开头，不能/结尾
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("JumpDomain")]
+        public string JumpDomain{ get; set; }
+
+        /// <summary>
+        /// 投递相关信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlarmNoticeDeliverConfig")]
+        public AlarmNoticeDeliverConfig AlarmNoticeDeliverConfig{ get; set; }
+
+        /// <summary>
         /// 创建时间。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -74,13 +110,6 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
-        /// <summary>
-        /// 通知规则。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("NoticeRules")]
-        public NoticeRule[] NoticeRules{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,13 +117,17 @@ namespace TencentCloud.Cls.V20201016.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamArrayObj(map, prefix + "NoticeReceivers.", this.NoticeReceivers);
             this.SetParamArrayObj(map, prefix + "WebCallbacks.", this.WebCallbacks);
             this.SetParamSimple(map, prefix + "AlarmNoticeId", this.AlarmNoticeId);
+            this.SetParamArrayObj(map, prefix + "NoticeRules.", this.NoticeRules);
+            this.SetParamSimple(map, prefix + "AlarmShieldStatus", this.AlarmShieldStatus);
+            this.SetParamSimple(map, prefix + "JumpDomain", this.JumpDomain);
+            this.SetParamObj(map, prefix + "AlarmNoticeDeliverConfig.", this.AlarmNoticeDeliverConfig);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
-            this.SetParamArrayObj(map, prefix + "NoticeRules.", this.NoticeRules);
         }
     }
 }

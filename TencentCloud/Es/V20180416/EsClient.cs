@@ -28,7 +28,7 @@ namespace TencentCloud.Es.V20180416
 
        private const string endpoint = "es.tencentcloudapi.com";
        private const string version = "2018-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.1112";
+       private const string sdkVersion = "SDK_NET_3.0.1113";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Es.V20180416
         public CheckMigrateIndexMetaDataResponse CheckMigrateIndexMetaDataSync(CheckMigrateIndexMetaDataRequest req)
         {
             return InternalRequestAsync<CheckMigrateIndexMetaDataResponse>(req, "CheckMigrateIndexMetaData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 集群快照手动创建
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterSnapshotRequest"/></param>
+        /// <returns><see cref="CreateClusterSnapshotResponse"/></returns>
+        public Task<CreateClusterSnapshotResponse> CreateClusterSnapshot(CreateClusterSnapshotRequest req)
+        {
+            return InternalRequestAsync<CreateClusterSnapshotResponse>(req, "CreateClusterSnapshot");
+        }
+
+        /// <summary>
+        /// 集群快照手动创建
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterSnapshotRequest"/></param>
+        /// <returns><see cref="CreateClusterSnapshotResponse"/></returns>
+        public CreateClusterSnapshotResponse CreateClusterSnapshotSync(CreateClusterSnapshotRequest req)
+        {
+            return InternalRequestAsync<CreateClusterSnapshotResponse>(req, "CreateClusterSnapshot")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -201,6 +222,27 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
+        /// 删除快照仓库里备份的快照
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClusterSnapshotRequest"/></param>
+        /// <returns><see cref="DeleteClusterSnapshotResponse"/></returns>
+        public Task<DeleteClusterSnapshotResponse> DeleteClusterSnapshot(DeleteClusterSnapshotRequest req)
+        {
+            return InternalRequestAsync<DeleteClusterSnapshotResponse>(req, "DeleteClusterSnapshot");
+        }
+
+        /// <summary>
+        /// 删除快照仓库里备份的快照
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClusterSnapshotRequest"/></param>
+        /// <returns><see cref="DeleteClusterSnapshotResponse"/></returns>
+        public DeleteClusterSnapshotResponse DeleteClusterSnapshotSync(DeleteClusterSnapshotRequest req)
+        {
+            return InternalRequestAsync<DeleteClusterSnapshotResponse>(req, "DeleteClusterSnapshot")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除索引
         /// </summary>
         /// <param name="req"><see cref="DeleteIndexRequest"/></param>
@@ -323,6 +365,27 @@ namespace TencentCloud.Es.V20180416
         public DeleteServerlessSpaceUserResponse DeleteServerlessSpaceUserSync(DeleteServerlessSpaceUserRequest req)
         {
             return InternalRequestAsync<DeleteServerlessSpaceUserResponse>(req, "DeleteServerlessSpaceUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取快照备份列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterSnapshotRequest"/></param>
+        /// <returns><see cref="DescribeClusterSnapshotResponse"/></returns>
+        public Task<DescribeClusterSnapshotResponse> DescribeClusterSnapshot(DescribeClusterSnapshotRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterSnapshotResponse>(req, "DescribeClusterSnapshot");
+        }
+
+        /// <summary>
+        /// 获取快照备份列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterSnapshotRequest"/></param>
+        /// <returns><see cref="DescribeClusterSnapshotResponse"/></returns>
+        public DescribeClusterSnapshotResponse DescribeClusterSnapshotSync(DescribeClusterSnapshotRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterSnapshotResponse>(req, "DescribeClusterSnapshot")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -913,6 +976,27 @@ namespace TencentCloud.Es.V20180416
         public RestartNodesResponse RestartNodesSync(RestartNodesRequest req)
         {
             return InternalRequestAsync<RestartNodesResponse>(req, "RestartNodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 快照备份恢复，从仓库中恢复快照到集群中
+        /// </summary>
+        /// <param name="req"><see cref="RestoreClusterSnapshotRequest"/></param>
+        /// <returns><see cref="RestoreClusterSnapshotResponse"/></returns>
+        public Task<RestoreClusterSnapshotResponse> RestoreClusterSnapshot(RestoreClusterSnapshotRequest req)
+        {
+            return InternalRequestAsync<RestoreClusterSnapshotResponse>(req, "RestoreClusterSnapshot");
+        }
+
+        /// <summary>
+        /// 快照备份恢复，从仓库中恢复快照到集群中
+        /// </summary>
+        /// <param name="req"><see cref="RestoreClusterSnapshotRequest"/></param>
+        /// <returns><see cref="RestoreClusterSnapshotResponse"/></returns>
+        public RestoreClusterSnapshotResponse RestoreClusterSnapshotSync(RestoreClusterSnapshotRequest req)
+        {
+            return InternalRequestAsync<RestoreClusterSnapshotResponse>(req, "RestoreClusterSnapshot")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

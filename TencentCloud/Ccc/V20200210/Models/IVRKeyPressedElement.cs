@@ -25,7 +25,7 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 按键
+        /// 命中的关键字或者按键
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Key")]
@@ -38,6 +38,34 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
+        /// <summary>
+        /// Unix 毫秒时间戳
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Timestamp")]
+        public long? Timestamp{ get; set; }
+
+        /// <summary>
+        /// 节点标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NodeLabel")]
+        public string NodeLabel{ get; set; }
+
+        /// <summary>
+        /// 用户原始输入
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OriginalContent")]
+        public string OriginalContent{ get; set; }
+
+        /// <summary>
+        /// TTS 提示音内容
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TTSPrompt")]
+        public string TTSPrompt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +74,10 @@ namespace TencentCloud.Ccc.V20200210.Models
         {
             this.SetParamSimple(map, prefix + "Key", this.Key);
             this.SetParamSimple(map, prefix + "Label", this.Label);
+            this.SetParamSimple(map, prefix + "Timestamp", this.Timestamp);
+            this.SetParamSimple(map, prefix + "NodeLabel", this.NodeLabel);
+            this.SetParamSimple(map, prefix + "OriginalContent", this.OriginalContent);
+            this.SetParamSimple(map, prefix + "TTSPrompt", this.TTSPrompt);
         }
     }
 }

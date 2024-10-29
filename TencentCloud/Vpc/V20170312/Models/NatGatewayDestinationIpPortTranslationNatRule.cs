@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string IpProtocol{ get; set; }
 
         /// <summary>
-        /// 弹性IP。
+        /// 弹性公网IP。
         /// </summary>
         [JsonProperty("PublicIpAddress")]
         public string PublicIpAddress{ get; set; }

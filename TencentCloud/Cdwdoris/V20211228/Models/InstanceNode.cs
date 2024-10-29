@@ -94,6 +94,13 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("UUID")]
         public string UUID{ get; set; }
 
+        /// <summary>
+        /// 可用区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -111,6 +118,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "Rip", this.Rip);
             this.SetParamSimple(map, prefix + "FeRole", this.FeRole);
             this.SetParamSimple(map, prefix + "UUID", this.UUID);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
         }
     }
 }

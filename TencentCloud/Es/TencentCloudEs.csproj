@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BAB1D217-C279-3DCE-8001-02A83445B39E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1112</VersionPrefix>
+    <VersionPrefix>3.0.1113</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -55,6 +55,8 @@
     <Compile Include="V20180416\Models\CommonIndexInfo.cs" />
     <Compile Include="V20180416\Models\CosBackup.cs" />
     <Compile Include="V20180416\Models\CosSnapShotInfo.cs" />
+    <Compile Include="V20180416\Models\CreateClusterSnapshotRequest.cs" />
+    <Compile Include="V20180416\Models\CreateClusterSnapshotResponse.cs" />
     <Compile Include="V20180416\Models\CreateCosMigrateToServerlessInstanceRequest.cs" />
     <Compile Include="V20180416\Models\CreateCosMigrateToServerlessInstanceResponse.cs" />
     <Compile Include="V20180416\Models\CreateIndexRequest.cs" />
@@ -68,6 +70,8 @@
     <Compile Include="V20180416\Models\CreateServerlessSpaceV2Request.cs" />
     <Compile Include="V20180416\Models\CreateServerlessSpaceV2Response.cs" />
     <Compile Include="V20180416\Models\DataStreamInfo.cs" />
+    <Compile Include="V20180416\Models\DeleteClusterSnapshotRequest.cs" />
+    <Compile Include="V20180416\Models\DeleteClusterSnapshotResponse.cs" />
     <Compile Include="V20180416\Models\DeleteIndexRequest.cs" />
     <Compile Include="V20180416\Models\DeleteIndexResponse.cs" />
     <Compile Include="V20180416\Models\DeleteInstanceRequest.cs" />
@@ -80,6 +84,8 @@
     <Compile Include="V20180416\Models\DeleteServerlessInstanceResponse.cs" />
     <Compile Include="V20180416\Models\DeleteServerlessSpaceUserRequest.cs" />
     <Compile Include="V20180416\Models\DeleteServerlessSpaceUserResponse.cs" />
+    <Compile Include="V20180416\Models\DescribeClusterSnapshotRequest.cs" />
+    <Compile Include="V20180416\Models\DescribeClusterSnapshotResponse.cs" />
     <Compile Include="V20180416\Models\DescribeDiagnoseRequest.cs" />
     <Compile Include="V20180416\Models\DescribeDiagnoseResponse.cs" />
     <Compile Include="V20180416\Models\DescribeIndexListRequest.cs" />
@@ -137,6 +143,7 @@
     <Compile Include="V20180416\Models\EsConfigSetInfo.cs" />
     <Compile Include="V20180416\Models\EsDictionaryInfo.cs" />
     <Compile Include="V20180416\Models\EsPublicAcl.cs" />
+    <Compile Include="V20180416\Models\Failures.cs" />
     <Compile Include="V20180416\Models\GetDiagnoseSettingsRequest.cs" />
     <Compile Include="V20180416\Models\GetDiagnoseSettingsResponse.cs" />
     <Compile Include="V20180416\Models\GetRequestTargetNodeTypesRequest.cs" />
@@ -188,6 +195,8 @@
     <Compile Include="V20180416\Models\RestartLogstashInstanceResponse.cs" />
     <Compile Include="V20180416\Models\RestartNodesRequest.cs" />
     <Compile Include="V20180416\Models\RestartNodesResponse.cs" />
+    <Compile Include="V20180416\Models\RestoreClusterSnapshotRequest.cs" />
+    <Compile Include="V20180416\Models\RestoreClusterSnapshotResponse.cs" />
     <Compile Include="V20180416\Models\SaveAndDeployLogstashPipelineRequest.cs" />
     <Compile Include="V20180416\Models\SaveAndDeployLogstashPipelineResponse.cs" />
     <Compile Include="V20180416\Models\ServerlessDi.cs" />
@@ -198,6 +207,7 @@
     <Compile Include="V20180416\Models\ServerlessSpace.cs" />
     <Compile Include="V20180416\Models\ServerlessSpaceUser.cs" />
     <Compile Include="V20180416\Models\SettingDetail.cs" />
+    <Compile Include="V20180416\Models\Snapshots.cs" />
     <Compile Include="V20180416\Models\StartLogstashPipelinesRequest.cs" />
     <Compile Include="V20180416\Models\StartLogstashPipelinesResponse.cs" />
     <Compile Include="V20180416\Models\StopLogstashPipelinesRequest.cs" />

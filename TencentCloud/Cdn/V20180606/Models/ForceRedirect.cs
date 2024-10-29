@@ -44,7 +44,7 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// 强制跳转时返回状态码 
-        /// 支持 301、302
+        /// 支持 301、302、307、308
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RedirectStatusCode")]

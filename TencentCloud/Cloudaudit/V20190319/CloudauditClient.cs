@@ -28,7 +28,7 @@ namespace TencentCloud.Cloudaudit.V20190319
 
        private const string endpoint = "cloudaudit.tencentcloudapi.com";
        private const string version = "2019-03-19";
-       private const string sdkVersion = "SDK_NET_3.0.1112";
+       private const string sdkVersion = "SDK_NET_3.0.1113";
 
         /// <summary>
         /// Client constructor.
@@ -54,35 +54,6 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// 参数要求：
-        /// 1、如果IsCreateNewBucket的值存在的话，cosRegion和cosBucketName都是必填参数。
-        /// 2、如果IsEnableCmqNotify的值是1的话，IsCreateNewQueue、CmqRegion和CmqQueueName都是必填参数。
-        /// 3、如果IsEnableCmqNotify的值是0的话，IsCreateNewQueue、CmqRegion和CmqQueueName都不能传。
-        /// 4、如果IsEnableKmsEncry的值是1的话，KmsRegion和KeyId属于必填项
-        /// </summary>
-        /// <param name="req"><see cref="CreateAuditRequest"/></param>
-        /// <returns><see cref="CreateAuditResponse"/></returns>
-        public Task<CreateAuditResponse> CreateAudit(CreateAuditRequest req)
-        {
-            return InternalRequestAsync<CreateAuditResponse>(req, "CreateAudit");
-        }
-
-        /// <summary>
-        /// 参数要求：
-        /// 1、如果IsCreateNewBucket的值存在的话，cosRegion和cosBucketName都是必填参数。
-        /// 2、如果IsEnableCmqNotify的值是1的话，IsCreateNewQueue、CmqRegion和CmqQueueName都是必填参数。
-        /// 3、如果IsEnableCmqNotify的值是0的话，IsCreateNewQueue、CmqRegion和CmqQueueName都不能传。
-        /// 4、如果IsEnableKmsEncry的值是1的话，KmsRegion和KeyId属于必填项
-        /// </summary>
-        /// <param name="req"><see cref="CreateAuditRequest"/></param>
-        /// <returns><see cref="CreateAuditResponse"/></returns>
-        public CreateAuditResponse CreateAuditSync(CreateAuditRequest req)
-        {
-            return InternalRequestAsync<CreateAuditResponse>(req, "CreateAudit")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 创建操作审计跟踪集
         /// </summary>
         /// <param name="req"><see cref="CreateAuditTrackRequest"/></param>
@@ -104,23 +75,23 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// 删除跟踪集
+        /// 创建操作审计跟踪集
         /// </summary>
-        /// <param name="req"><see cref="DeleteAuditRequest"/></param>
-        /// <returns><see cref="DeleteAuditResponse"/></returns>
-        public Task<DeleteAuditResponse> DeleteAudit(DeleteAuditRequest req)
+        /// <param name="req"><see cref="CreateEventsAuditTrackRequest"/></param>
+        /// <returns><see cref="CreateEventsAuditTrackResponse"/></returns>
+        public Task<CreateEventsAuditTrackResponse> CreateEventsAuditTrack(CreateEventsAuditTrackRequest req)
         {
-            return InternalRequestAsync<DeleteAuditResponse>(req, "DeleteAudit");
+            return InternalRequestAsync<CreateEventsAuditTrackResponse>(req, "CreateEventsAuditTrack");
         }
 
         /// <summary>
-        /// 删除跟踪集
+        /// 创建操作审计跟踪集
         /// </summary>
-        /// <param name="req"><see cref="DeleteAuditRequest"/></param>
-        /// <returns><see cref="DeleteAuditResponse"/></returns>
-        public DeleteAuditResponse DeleteAuditSync(DeleteAuditRequest req)
+        /// <param name="req"><see cref="CreateEventsAuditTrackRequest"/></param>
+        /// <returns><see cref="CreateEventsAuditTrackResponse"/></returns>
+        public CreateEventsAuditTrackResponse CreateEventsAuditTrackSync(CreateEventsAuditTrackRequest req)
         {
-            return InternalRequestAsync<DeleteAuditResponse>(req, "DeleteAudit")
+            return InternalRequestAsync<CreateEventsAuditTrackResponse>(req, "CreateEventsAuditTrack")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -394,6 +365,27 @@ namespace TencentCloud.Cloudaudit.V20190319
         public ModifyAuditTrackResponse ModifyAuditTrackSync(ModifyAuditTrackRequest req)
         {
             return InternalRequestAsync<ModifyAuditTrackResponse>(req, "ModifyAuditTrack")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改操作审计跟踪集
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEventsAuditTrackRequest"/></param>
+        /// <returns><see cref="ModifyEventsAuditTrackResponse"/></returns>
+        public Task<ModifyEventsAuditTrackResponse> ModifyEventsAuditTrack(ModifyEventsAuditTrackRequest req)
+        {
+            return InternalRequestAsync<ModifyEventsAuditTrackResponse>(req, "ModifyEventsAuditTrack");
+        }
+
+        /// <summary>
+        /// 修改操作审计跟踪集
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEventsAuditTrackRequest"/></param>
+        /// <returns><see cref="ModifyEventsAuditTrackResponse"/></returns>
+        public ModifyEventsAuditTrackResponse ModifyEventsAuditTrackSync(ModifyEventsAuditTrackRequest req)
+        {
+            return InternalRequestAsync<ModifyEventsAuditTrackResponse>(req, "ModifyEventsAuditTrack")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

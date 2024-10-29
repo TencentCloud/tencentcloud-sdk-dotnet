@@ -49,7 +49,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public FillApproverInfo[] Approvers{ get; set; }
 
         /// <summary>
-        /// 合同流程ID，为32位字符串。 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+        /// 合同流程ID，为32位字符串。 
+        /// - 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
+        /// - 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+        /// - <font color="red">不建议继续使用</font>，请使用<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#fillapproverinfo/" target="_blank">补充签署人结构体</a>中的FlowId指定合同
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }

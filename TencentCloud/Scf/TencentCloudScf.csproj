@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6F5BC504-40E8-3B8D-99B3-88CDC3921202}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1112</VersionPrefix>
+    <VersionPrefix>3.0.1113</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,6 +53,7 @@
     <Compile Include="V20180416\Models\AsyncEvent.cs" />
     <Compile Include="V20180416\Models\AsyncEventStatus.cs" />
     <Compile Include="V20180416\Models\AsyncTriggerConfig.cs" />
+    <Compile Include="V20180416\Models\CertConf.cs" />
     <Compile Include="V20180416\Models\CfsConfig.cs" />
     <Compile Include="V20180416\Models\CfsInsInfo.cs" />
     <Compile Include="V20180416\Models\Code.cs" />
@@ -60,6 +61,8 @@
     <Compile Include="V20180416\Models\CopyFunctionResponse.cs" />
     <Compile Include="V20180416\Models\CreateAliasRequest.cs" />
     <Compile Include="V20180416\Models\CreateAliasResponse.cs" />
+    <Compile Include="V20180416\Models\CreateCustomDomainRequest.cs" />
+    <Compile Include="V20180416\Models\CreateCustomDomainResponse.cs" />
     <Compile Include="V20180416\Models\CreateFunctionRequest.cs" />
     <Compile Include="V20180416\Models\CreateFunctionResponse.cs" />
     <Compile Include="V20180416\Models\CreateNamespaceRequest.cs" />
@@ -69,6 +72,8 @@
     <Compile Include="V20180416\Models\DeadLetterConfig.cs" />
     <Compile Include="V20180416\Models\DeleteAliasRequest.cs" />
     <Compile Include="V20180416\Models\DeleteAliasResponse.cs" />
+    <Compile Include="V20180416\Models\DeleteCustomDomainRequest.cs" />
+    <Compile Include="V20180416\Models\DeleteCustomDomainResponse.cs" />
     <Compile Include="V20180416\Models\DeleteFunctionRequest.cs" />
     <Compile Include="V20180416\Models\DeleteFunctionResponse.cs" />
     <Compile Include="V20180416\Models\DeleteLayerVersionRequest.cs" />
@@ -81,9 +86,11 @@
     <Compile Include="V20180416\Models\DeleteReservedConcurrencyConfigResponse.cs" />
     <Compile Include="V20180416\Models\DeleteTriggerRequest.cs" />
     <Compile Include="V20180416\Models\DeleteTriggerResponse.cs" />
+    <Compile Include="V20180416\Models\DomainInfo.cs" />
     <Compile Include="V20180416\Models\EipConfigIn.cs" />
     <Compile Include="V20180416\Models\EipConfigOut.cs" />
     <Compile Include="V20180416\Models\EipOutConfig.cs" />
+    <Compile Include="V20180416\Models\EndpointsConf.cs" />
     <Compile Include="V20180416\Models\Environment.cs" />
     <Compile Include="V20180416\Models\Filter.cs" />
     <Compile Include="V20180416\Models\Function.cs" />
@@ -95,6 +102,8 @@
     <Compile Include="V20180416\Models\GetAliasResponse.cs" />
     <Compile Include="V20180416\Models\GetAsyncEventStatusRequest.cs" />
     <Compile Include="V20180416\Models\GetAsyncEventStatusResponse.cs" />
+    <Compile Include="V20180416\Models\GetCustomDomainRequest.cs" />
+    <Compile Include="V20180416\Models\GetCustomDomainResponse.cs" />
     <Compile Include="V20180416\Models\GetFunctionAddressRequest.cs" />
     <Compile Include="V20180416\Models\GetFunctionAddressResponse.cs" />
     <Compile Include="V20180416\Models\GetFunctionEventInvokeConfigRequest.cs" />
@@ -128,6 +137,8 @@
     <Compile Include="V20180416\Models\ListAliasesResponse.cs" />
     <Compile Include="V20180416\Models\ListAsyncEventsRequest.cs" />
     <Compile Include="V20180416\Models\ListAsyncEventsResponse.cs" />
+    <Compile Include="V20180416\Models\ListCustomDomainsRequest.cs" />
+    <Compile Include="V20180416\Models\ListCustomDomainsResponse.cs" />
     <Compile Include="V20180416\Models\ListFunctionsRequest.cs" />
     <Compile Include="V20180416\Models\ListFunctionsResponse.cs" />
     <Compile Include="V20180416\Models\ListLayerVersionsRequest.cs" />
@@ -147,6 +158,7 @@
     <Compile Include="V20180416\Models\NamespaceResourceEnv.cs" />
     <Compile Include="V20180416\Models\NamespaceResourceEnvTKE.cs" />
     <Compile Include="V20180416\Models\NamespaceUsage.cs" />
+    <Compile Include="V20180416\Models\PathRewriteRule.cs" />
     <Compile Include="V20180416\Models\ProtocolParams.cs" />
     <Compile Include="V20180416\Models\PublicNetConfigIn.cs" />
     <Compile Include="V20180416\Models\PublicNetConfigOut.cs" />
@@ -176,6 +188,8 @@
     <Compile Include="V20180416\Models\TriggerInfo.cs" />
     <Compile Include="V20180416\Models\UpdateAliasRequest.cs" />
     <Compile Include="V20180416\Models\UpdateAliasResponse.cs" />
+    <Compile Include="V20180416\Models\UpdateCustomDomainRequest.cs" />
+    <Compile Include="V20180416\Models\UpdateCustomDomainResponse.cs" />
     <Compile Include="V20180416\Models\UpdateFunctionCodeRequest.cs" />
     <Compile Include="V20180416\Models\UpdateFunctionCodeResponse.cs" />
     <Compile Include="V20180416\Models\UpdateFunctionConfigurationRequest.cs" />
@@ -195,5 +209,6 @@
     <Compile Include="V20180416\Models\VersionWeight.cs" />
     <Compile Include="V20180416\Models\VpcConfig.cs" />
     <Compile Include="V20180416\Models\WSParams.cs" />
+    <Compile Include="V20180416\Models\WafConf.cs" />
   </ItemGroup>
 </Project>

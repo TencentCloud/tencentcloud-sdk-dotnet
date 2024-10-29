@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1112</VersionPrefix>
+    <VersionPrefix>3.0.1113</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -90,6 +90,7 @@
     <Compile Include="V20220901\Models\CertificateInfo.cs" />
     <Compile Include="V20220901\Models\CheckCnameStatusRequest.cs" />
     <Compile Include="V20220901\Models\CheckCnameStatusResponse.cs" />
+    <Compile Include="V20220901\Models\CheckRegionHealthStatus.cs" />
     <Compile Include="V20220901\Models\ClientIpCountry.cs" />
     <Compile Include="V20220901\Models\ClientIpHeader.cs" />
     <Compile Include="V20220901\Models\CnameStatus.cs" />
@@ -118,6 +119,8 @@
     <Compile Include="V20220901\Models\CreateL4ProxyResponse.cs" />
     <Compile Include="V20220901\Models\CreateL4ProxyRulesRequest.cs" />
     <Compile Include="V20220901\Models\CreateL4ProxyRulesResponse.cs" />
+    <Compile Include="V20220901\Models\CreateLoadBalancerRequest.cs" />
+    <Compile Include="V20220901\Models\CreateLoadBalancerResponse.cs" />
     <Compile Include="V20220901\Models\CreateOriginGroupRequest.cs" />
     <Compile Include="V20220901\Models\CreateOriginGroupResponse.cs" />
     <Compile Include="V20220901\Models\CreatePlanForZoneRequest.cs" />
@@ -141,6 +144,7 @@
     <Compile Include="V20220901\Models\CustomEndpoint.cs" />
     <Compile Include="V20220901\Models\CustomErrorPage.cs" />
     <Compile Include="V20220901\Models\CustomField.cs" />
+    <Compile Include="V20220901\Models\CustomizedHeader.cs" />
     <Compile Include="V20220901\Models\DDoS.cs" />
     <Compile Include="V20220901\Models\DDoSAttackEvent.cs" />
     <Compile Include="V20220901\Models\DDoSBlockData.cs" />
@@ -164,6 +168,8 @@
     <Compile Include="V20220901\Models\DeleteL4ProxyResponse.cs" />
     <Compile Include="V20220901\Models\DeleteL4ProxyRulesRequest.cs" />
     <Compile Include="V20220901\Models\DeleteL4ProxyRulesResponse.cs" />
+    <Compile Include="V20220901\Models\DeleteLoadBalancerRequest.cs" />
+    <Compile Include="V20220901\Models\DeleteLoadBalancerResponse.cs" />
     <Compile Include="V20220901\Models\DeleteOriginGroupRequest.cs" />
     <Compile Include="V20220901\Models\DeleteOriginGroupResponse.cs" />
     <Compile Include="V20220901\Models\DeleteRealtimeLogDeliveryTaskRequest.cs" />
@@ -226,6 +232,10 @@
     <Compile Include="V20220901\Models\DescribeL4ProxyResponse.cs" />
     <Compile Include="V20220901\Models\DescribeL4ProxyRulesRequest.cs" />
     <Compile Include="V20220901\Models\DescribeL4ProxyRulesResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeLoadBalancerListRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeLoadBalancerListResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeOriginGroupHealthStatusRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeOriginGroupHealthStatusResponse.cs" />
     <Compile Include="V20220901\Models\DescribeOriginGroupRequest.cs" />
     <Compile Include="V20220901\Models\DescribeOriginGroupResponse.cs" />
     <Compile Include="V20220901\Models\DescribeOriginProtectionRequest.cs" />
@@ -295,6 +305,7 @@
     <Compile Include="V20220901\Models\HandleFunctionRuntimeEnvironmentRequest.cs" />
     <Compile Include="V20220901\Models\HandleFunctionRuntimeEnvironmentResponse.cs" />
     <Compile Include="V20220901\Models\Header.cs" />
+    <Compile Include="V20220901\Models\HealthChecker.cs" />
     <Compile Include="V20220901\Models\Hsts.cs" />
     <Compile Include="V20220901\Models\Https.cs" />
     <Compile Include="V20220901\Models\IPGroup.cs" />
@@ -311,11 +322,13 @@
     <Compile Include="V20220901\Models\IpTableConfig.cs" />
     <Compile Include="V20220901\Models\IpTableRule.cs" />
     <Compile Include="V20220901\Models\Ipv6.cs" />
+    <Compile Include="V20220901\Models\JITVideoProcess.cs" />
     <Compile Include="V20220901\Models\L4OfflineLog.cs" />
     <Compile Include="V20220901\Models\L4Proxy.cs" />
     <Compile Include="V20220901\Models\L4ProxyRemoteAuth.cs" />
     <Compile Include="V20220901\Models\L4ProxyRule.cs" />
     <Compile Include="V20220901\Models\L7OfflineLog.cs" />
+    <Compile Include="V20220901\Models\LoadBalancer.cs" />
     <Compile Include="V20220901\Models\LogFormat.cs" />
     <Compile Include="V20220901\Models\MaxAge.cs" />
     <Compile Include="V20220901\Models\ModifyAccelerationDomainRequest.cs" />
@@ -352,6 +365,8 @@
     <Compile Include="V20220901\Models\ModifyL4ProxyRulesStatusResponse.cs" />
     <Compile Include="V20220901\Models\ModifyL4ProxyStatusRequest.cs" />
     <Compile Include="V20220901\Models\ModifyL4ProxyStatusResponse.cs" />
+    <Compile Include="V20220901\Models\ModifyLoadBalancerRequest.cs" />
+    <Compile Include="V20220901\Models\ModifyLoadBalancerResponse.cs" />
     <Compile Include="V20220901\Models\ModifyOriginGroupRequest.cs" />
     <Compile Include="V20220901\Models\ModifyOriginGroupResponse.cs" />
     <Compile Include="V20220901\Models\ModifyPlanRequest.cs" />
@@ -378,7 +393,11 @@
     <Compile Include="V20220901\Models\Origin.cs" />
     <Compile Include="V20220901\Models\OriginDetail.cs" />
     <Compile Include="V20220901\Models\OriginGroup.cs" />
+    <Compile Include="V20220901\Models\OriginGroupHealthStatus.cs" />
+    <Compile Include="V20220901\Models\OriginGroupHealthStatusDetail.cs" />
+    <Compile Include="V20220901\Models\OriginGroupInLoadBalancer.cs" />
     <Compile Include="V20220901\Models\OriginGroupReference.cs" />
+    <Compile Include="V20220901\Models\OriginHealthStatus.cs" />
     <Compile Include="V20220901\Models\OriginInfo.cs" />
     <Compile Include="V20220901\Models\OriginProtectionInfo.cs" />
     <Compile Include="V20220901\Models\OriginRecord.cs" />

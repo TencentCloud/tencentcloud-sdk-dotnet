@@ -113,6 +113,20 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("RuleTemplateIds")]
         public string[] RuleTemplateIds{ get; set; }
 
+        /// <summary>
+        /// 是否开启日志投递：ON，OFF
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Deliver")]
+        public string Deliver{ get; set; }
+
+        /// <summary>
+        /// 日志投递类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeliverSummary")]
+        public DeliverSummary[] DeliverSummary{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -132,6 +146,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamObj(map, prefix + "InstanceInfo.", this.InstanceInfo);
             this.SetParamSimple(map, prefix + "RealStorage", this.RealStorage);
             this.SetParamArraySimple(map, prefix + "RuleTemplateIds.", this.RuleTemplateIds);
+            this.SetParamSimple(map, prefix + "Deliver", this.Deliver);
+            this.SetParamArrayObj(map, prefix + "DeliverSummary.", this.DeliverSummary);
         }
     }
 }

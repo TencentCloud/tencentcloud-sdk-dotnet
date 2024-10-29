@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1112";
+       private const string sdkVersion = "SDK_NET_3.0.1113";
 
         /// <summary>
         /// Client constructor.
@@ -978,6 +978,27 @@ namespace TencentCloud.Ccc.V20200210
         public DescribeTelCdrResponse DescribeTelCdrSync(DescribeTelCdrRequest req)
         {
             return InternalRequestAsync<DescribeTelCdrResponse>(req, "DescribeTelCdr")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 拉取会话录音转文本信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTelRecordAsrRequest"/></param>
+        /// <returns><see cref="DescribeTelRecordAsrResponse"/></returns>
+        public Task<DescribeTelRecordAsrResponse> DescribeTelRecordAsr(DescribeTelRecordAsrRequest req)
+        {
+            return InternalRequestAsync<DescribeTelRecordAsrResponse>(req, "DescribeTelRecordAsr");
+        }
+
+        /// <summary>
+        /// 拉取会话录音转文本信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTelRecordAsrRequest"/></param>
+        /// <returns><see cref="DescribeTelRecordAsrResponse"/></returns>
+        public DescribeTelRecordAsrResponse DescribeTelRecordAsrSync(DescribeTelRecordAsrRequest req)
+        {
+            return InternalRequestAsync<DescribeTelRecordAsrResponse>(req, "DescribeTelRecordAsr")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

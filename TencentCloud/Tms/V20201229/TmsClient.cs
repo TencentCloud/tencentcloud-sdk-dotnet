@@ -28,7 +28,7 @@ namespace TencentCloud.Tms.V20201229
 
        private const string endpoint = "tms.tencentcloudapi.com";
        private const string version = "2020-12-29";
-       private const string sdkVersion = "SDK_NET_3.0.1112";
+       private const string sdkVersion = "SDK_NET_3.0.1113";
 
         /// <summary>
         /// Client constructor.
@@ -51,27 +51,6 @@ namespace TencentCloud.Tms.V20201229
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
-        }
-
-        /// <summary>
-        /// 天御文本内容安全定制标签文本审核接口为定制接口，会按照客户定制标签输出审核结果，如需使用请联系商务经理或[在线客服](https://cloud.tencent.com/online-service?from=doc_1125)咨询。
-        /// </summary>
-        /// <param name="req"><see cref="ModerateTextRequest"/></param>
-        /// <returns><see cref="ModerateTextResponse"/></returns>
-        public Task<ModerateTextResponse> ModerateText(ModerateTextRequest req)
-        {
-            return InternalRequestAsync<ModerateTextResponse>(req, "ModerateText");
-        }
-
-        /// <summary>
-        /// 天御文本内容安全定制标签文本审核接口为定制接口，会按照客户定制标签输出审核结果，如需使用请联系商务经理或[在线客服](https://cloud.tencent.com/online-service?from=doc_1125)咨询。
-        /// </summary>
-        /// <param name="req"><see cref="ModerateTextRequest"/></param>
-        /// <returns><see cref="ModerateTextResponse"/></returns>
-        public ModerateTextResponse ModerateTextSync(ModerateTextRequest req)
-        {
-            return InternalRequestAsync<ModerateTextResponse>(req, "ModerateText")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

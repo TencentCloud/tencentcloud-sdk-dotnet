@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.1112";
+       private const string sdkVersion = "SDK_NET_3.0.1113";
 
         /// <summary>
         /// Client constructor.
@@ -579,6 +579,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 创建SCIM密钥
+        /// </summary>
+        /// <param name="req"><see cref="CreateSCIMCredentialRequest"/></param>
+        /// <returns><see cref="CreateSCIMCredentialResponse"/></returns>
+        public Task<CreateSCIMCredentialResponse> CreateSCIMCredential(CreateSCIMCredentialRequest req)
+        {
+            return InternalRequestAsync<CreateSCIMCredentialResponse>(req, "CreateSCIMCredential");
+        }
+
+        /// <summary>
+        /// 创建SCIM密钥
+        /// </summary>
+        /// <param name="req"><see cref="CreateSCIMCredentialRequest"/></param>
+        /// <returns><see cref="CreateSCIMCredentialResponse"/></returns>
+        public CreateSCIMCredentialResponse CreateSCIMCredentialSync(CreateSCIMCredentialRequest req)
+        {
+            return InternalRequestAsync<CreateSCIMCredentialResponse>(req, "CreateSCIMCredential")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建用户
         /// </summary>
         /// <param name="req"><see cref="CreateUserRequest"/></param>
@@ -869,6 +890,27 @@ namespace TencentCloud.Organization.V20210331
         public DeleteRoleConfigurationResponse DeleteRoleConfigurationSync(DeleteRoleConfigurationRequest req)
         {
             return InternalRequestAsync<DeleteRoleConfigurationResponse>(req, "DeleteRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除SCIM密钥
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSCIMCredentialRequest"/></param>
+        /// <returns><see cref="DeleteSCIMCredentialResponse"/></returns>
+        public Task<DeleteSCIMCredentialResponse> DeleteSCIMCredential(DeleteSCIMCredentialRequest req)
+        {
+            return InternalRequestAsync<DeleteSCIMCredentialResponse>(req, "DeleteSCIMCredential");
+        }
+
+        /// <summary>
+        /// 删除SCIM密钥
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSCIMCredentialRequest"/></param>
+        /// <returns><see cref="DeleteSCIMCredentialResponse"/></returns>
+        public DeleteSCIMCredentialResponse DeleteSCIMCredentialSync(DeleteSCIMCredentialRequest req)
+        {
+            return InternalRequestAsync<DeleteSCIMCredentialResponse>(req, "DeleteSCIMCredential")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1545,6 +1587,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 获取SCIM同步状态
+        /// </summary>
+        /// <param name="req"><see cref="GetSCIMSynchronizationStatusRequest"/></param>
+        /// <returns><see cref="GetSCIMSynchronizationStatusResponse"/></returns>
+        public Task<GetSCIMSynchronizationStatusResponse> GetSCIMSynchronizationStatus(GetSCIMSynchronizationStatusRequest req)
+        {
+            return InternalRequestAsync<GetSCIMSynchronizationStatusResponse>(req, "GetSCIMSynchronizationStatus");
+        }
+
+        /// <summary>
+        /// 获取SCIM同步状态
+        /// </summary>
+        /// <param name="req"><see cref="GetSCIMSynchronizationStatusRequest"/></param>
+        /// <returns><see cref="GetSCIMSynchronizationStatusResponse"/></returns>
+        public GetSCIMSynchronizationStatusResponse GetSCIMSynchronizationStatusSync(GetSCIMSynchronizationStatusRequest req)
+        {
+            return InternalRequestAsync<GetSCIMSynchronizationStatusResponse>(req, "GetSCIMSynchronizationStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询异步任务的状态
         /// </summary>
         /// <param name="req"><see cref="GetTaskStatusRequest"/></param>
@@ -1961,6 +2024,27 @@ namespace TencentCloud.Organization.V20210331
         public ListRoleConfigurationsResponse ListRoleConfigurationsSync(ListRoleConfigurationsRequest req)
         {
             return InternalRequestAsync<ListRoleConfigurationsResponse>(req, "ListRoleConfigurations")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询用户SCIM密钥列表
+        /// </summary>
+        /// <param name="req"><see cref="ListSCIMCredentialsRequest"/></param>
+        /// <returns><see cref="ListSCIMCredentialsResponse"/></returns>
+        public Task<ListSCIMCredentialsResponse> ListSCIMCredentials(ListSCIMCredentialsRequest req)
+        {
+            return InternalRequestAsync<ListSCIMCredentialsResponse>(req, "ListSCIMCredentials");
+        }
+
+        /// <summary>
+        /// 查询用户SCIM密钥列表
+        /// </summary>
+        /// <param name="req"><see cref="ListSCIMCredentialsRequest"/></param>
+        /// <returns><see cref="ListSCIMCredentialsResponse"/></returns>
+        public ListSCIMCredentialsResponse ListSCIMCredentialsSync(ListSCIMCredentialsRequest req)
+        {
+            return InternalRequestAsync<ListSCIMCredentialsResponse>(req, "ListSCIMCredentials")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2423,6 +2507,48 @@ namespace TencentCloud.Organization.V20210331
         public UpdateRoleConfigurationResponse UpdateRoleConfigurationSync(UpdateRoleConfigurationRequest req)
         {
             return InternalRequestAsync<UpdateRoleConfigurationResponse>(req, "UpdateRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 启用/禁用SCIM密钥
+        /// </summary>
+        /// <param name="req"><see cref="UpdateSCIMCredentialStatusRequest"/></param>
+        /// <returns><see cref="UpdateSCIMCredentialStatusResponse"/></returns>
+        public Task<UpdateSCIMCredentialStatusResponse> UpdateSCIMCredentialStatus(UpdateSCIMCredentialStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateSCIMCredentialStatusResponse>(req, "UpdateSCIMCredentialStatus");
+        }
+
+        /// <summary>
+        /// 启用/禁用SCIM密钥
+        /// </summary>
+        /// <param name="req"><see cref="UpdateSCIMCredentialStatusRequest"/></param>
+        /// <returns><see cref="UpdateSCIMCredentialStatusResponse"/></returns>
+        public UpdateSCIMCredentialStatusResponse UpdateSCIMCredentialStatusSync(UpdateSCIMCredentialStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateSCIMCredentialStatusResponse>(req, "UpdateSCIMCredentialStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 启用/禁用用户SCIM同步
+        /// </summary>
+        /// <param name="req"><see cref="UpdateSCIMSynchronizationStatusRequest"/></param>
+        /// <returns><see cref="UpdateSCIMSynchronizationStatusResponse"/></returns>
+        public Task<UpdateSCIMSynchronizationStatusResponse> UpdateSCIMSynchronizationStatus(UpdateSCIMSynchronizationStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateSCIMSynchronizationStatusResponse>(req, "UpdateSCIMSynchronizationStatus");
+        }
+
+        /// <summary>
+        /// 启用/禁用用户SCIM同步
+        /// </summary>
+        /// <param name="req"><see cref="UpdateSCIMSynchronizationStatusRequest"/></param>
+        /// <returns><see cref="UpdateSCIMSynchronizationStatusResponse"/></returns>
+        public UpdateSCIMSynchronizationStatusResponse UpdateSCIMSynchronizationStatusSync(UpdateSCIMSynchronizationStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateSCIMSynchronizationStatusResponse>(req, "UpdateSCIMSynchronizationStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

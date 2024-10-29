@@ -73,7 +73,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public SingleSubscribeParams SingleSubscribeParams{ get; set; }
 
         /// <summary>
-        /// 转推的CDN参数。和回推房间参数必须要有一个。
+        /// 转推的CDN参数，一个任务最多支持10个推流URL。和回推房间参数必须要有一个。
         /// </summary>
         [JsonProperty("PublishCdnParams")]
         public McuPublishCdnParam[] PublishCdnParams{ get; set; }
@@ -85,10 +85,16 @@ namespace TencentCloud.Trtc.V20190722.Models
         public McuSeiParams SeiParams{ get; set; }
 
         /// <summary>
-        /// 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。
+        /// 回推房间信息，一个任务最多支持回推10个房间，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。
         /// </summary>
         [JsonProperty("FeedBackRoomParams")]
         public McuFeedBackRoomParams[] FeedBackRoomParams{ get; set; }
+
+        /// <summary>
+        /// 转推录制参数，[参考文档](https://cloud.tencent.com/document/product/647/111748)。
+        /// </summary>
+        [JsonProperty("RecordParams")]
+        public McuRecordParams RecordParams{ get; set; }
 
 
         /// <summary>
@@ -107,6 +113,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamArrayObj(map, prefix + "PublishCdnParams.", this.PublishCdnParams);
             this.SetParamObj(map, prefix + "SeiParams.", this.SeiParams);
             this.SetParamArrayObj(map, prefix + "FeedBackRoomParams.", this.FeedBackRoomParams);
+            this.SetParamObj(map, prefix + "RecordParams.", this.RecordParams);
         }
     }
 }

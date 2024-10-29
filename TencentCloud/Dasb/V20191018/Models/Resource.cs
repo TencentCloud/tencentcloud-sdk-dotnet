@@ -227,6 +227,27 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("Trial")]
         public ulong? Trial{ get; set; }
 
+        /// <summary>
+        /// cdc集群id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CdcClusterId")]
+        public string CdcClusterId{ get; set; }
+
+        /// <summary>
+        /// 日志投递规格信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogDelivery")]
+        public string LogDelivery{ get; set; }
+
+        /// <summary>
+        /// 部署模式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeployModel")]
+        public long? DeployModel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -266,6 +287,9 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "DomainCount", this.DomainCount);
             this.SetParamSimple(map, prefix + "UsedDomainCount", this.UsedDomainCount);
             this.SetParamSimple(map, prefix + "Trial", this.Trial);
+            this.SetParamSimple(map, prefix + "CdcClusterId", this.CdcClusterId);
+            this.SetParamSimple(map, prefix + "LogDelivery", this.LogDelivery);
+            this.SetParamSimple(map, prefix + "DeployModel", this.DeployModel);
         }
     }
 }

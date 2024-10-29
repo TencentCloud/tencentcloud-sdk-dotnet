@@ -39,6 +39,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string CcnRouteType{ get; set; }
 
         /// <summary>
+        /// 地址类型，支持：IPv4、IPv6。默认IPv4。
+        /// </summary>
+        [JsonProperty("AddressType")]
+        public string AddressType{ get; set; }
+
+        /// <summary>
         /// 偏移量。
         /// </summary>
         [JsonProperty("Offset")]
@@ -58,6 +64,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "DirectConnectGatewayId", this.DirectConnectGatewayId);
             this.SetParamSimple(map, prefix + "CcnRouteType", this.CcnRouteType);
+            this.SetParamSimple(map, prefix + "AddressType", this.AddressType);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
