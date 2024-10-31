@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] Fields{ get; set; }
 
         /// <summary>
-        /// 当Fields包含TargetId、TargetAddress、TargetPort、TargetWeight、ListenerId、Protocol、Port、LocationId、Domain、Url等Fields时，必选选择导出目标组的Target或者非目标组Target，值范围NODE、GROUP。
+        /// 当Fields包含TargetId、TargetAddress、TargetPort、TargetWeight、ListenerId、Protocol、Port、LocationId、Domain、Url等Fields时，必选选择导出目标组的Target或者非目标组Target，取值范围NODE、GROUP。
         /// </summary>
         [JsonProperty("TargetType")]
         public string TargetType{ get; set; }

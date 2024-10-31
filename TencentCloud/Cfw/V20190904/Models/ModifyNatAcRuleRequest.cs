@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 需要编辑的规则数组
+        /// 需要编辑的规则数组,基于Uuid唯一id来修改该规则
         /// </summary>
         [JsonProperty("Rules")]
         public CreateNatRuleItem[] Rules{ get; set; }

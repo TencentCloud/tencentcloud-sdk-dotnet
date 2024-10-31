@@ -77,21 +77,18 @@ namespace TencentCloud.Ccc.V20200210.Models
 
         /// <summary>
         /// 会话ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
         /// 技能组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SkillGroupId")]
         public string SkillGroupId{ get; set; }
 
         /// <summary>
         /// 技能组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SkillGroupName")]
         public string SkillGroupName{ get; set; }

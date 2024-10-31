@@ -26,14 +26,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         
         /// <summary>
         /// 数据总量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
         /// 数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CampaignList")]
         public DescribePredictiveDialingCampaignsElement[] CampaignList{ get; set; }

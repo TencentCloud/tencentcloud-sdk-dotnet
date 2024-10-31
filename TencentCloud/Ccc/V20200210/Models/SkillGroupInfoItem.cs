@@ -44,42 +44,36 @@ namespace TencentCloud.Ccc.V20200210.Models
 
         /// <summary>
         /// 会话分配策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoutePolicy")]
         public string RoutePolicy{ get; set; }
 
         /// <summary>
         /// 会话分配是否优先上次服务座席
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UsingLastSeat")]
         public long? UsingLastSeat{ get; set; }
 
         /// <summary>
         /// 单客服最大并发数（电话类型默认1）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxConcurrency")]
         public long? MaxConcurrency{ get; set; }
 
         /// <summary>
         /// 最后修改时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastModifyTimestamp")]
         public long? LastModifyTimestamp{ get; set; }
 
         /// <summary>
         /// 技能组类型0-电话，1-在线，3-音频，4-视频	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SkillGroupType")]
         public long? SkillGroupType{ get; set; }
 
         /// <summary>
         /// 技能组内线号码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }

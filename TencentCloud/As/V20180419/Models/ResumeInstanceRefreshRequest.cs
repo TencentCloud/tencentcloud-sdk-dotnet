@@ -37,7 +37,7 @@ namespace TencentCloud.As.V20180419.Models
         public string RefreshActivityId{ get; set; }
 
         /// <summary>
-        /// 当前批次刷新失败实例的恢复方式，如不存在失败实例，该参数无效。默认值为RETRY，取值范围如下：<br><li>RETRY: 重试当前批次刷新失败实例</li><li>CONTINUE: 跳过当前批次刷新失败实例
+        /// 当前批次刷新失败实例的恢复方式，如不存在失败实例，该参数无效。默认值为RETRY，取值范围如下：<li>RETRY: 重试当前批次刷新失败实例</li><li>CONTINUE: 跳过当前批次刷新失败实例</li>
         /// </summary>
         [JsonProperty("ResumeMode")]
         public string ResumeMode{ get; set; }

@@ -61,7 +61,7 @@ namespace TencentCloud.Tem.V20210701.Models
         public long? SourceChannel{ get; set; }
 
         /// <summary>
-        /// 是否开启tsw服务
+        /// 是否开启tsw服务。默认值：false
         /// </summary>
         [JsonProperty("EnableTswTraceService")]
         public bool? EnableTswTraceService{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Tem.V20210701.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 环境类型：test、pre、prod
+        /// 环境类型：test、pre、prod。默认值：prod
         /// </summary>
         [JsonProperty("EnvType")]
         public string EnvType{ get; set; }
@@ -85,13 +85,13 @@ namespace TencentCloud.Tem.V20210701.Models
         public string CreateRegion{ get; set; }
 
         /// <summary>
-        /// 是否创建私有网络
+        /// 是否创建私有网络.默认值:true
         /// </summary>
         [JsonProperty("SetupVpc")]
         public bool? SetupVpc{ get; set; }
 
         /// <summary>
-        /// 是否创建 Prometheus 实例
+        /// 是否创建 Prometheus 实例。默认值：false
         /// </summary>
         [JsonProperty("SetupPrometheus")]
         public bool? SetupPrometheus{ get; set; }

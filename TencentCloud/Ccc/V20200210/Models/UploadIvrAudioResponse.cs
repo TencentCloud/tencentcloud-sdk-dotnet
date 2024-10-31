@@ -26,14 +26,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         
         /// <summary>
         /// 上传失败的文件列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedFileList")]
         public UploadIvrAudioFailedInfo[] FailedFileList{ get; set; }
 
         /// <summary>
         /// 上传成功文件列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SuccessFileList")]
         public AudioFileInfo[] SuccessFileList{ get; set; }

@@ -44,7 +44,6 @@ namespace TencentCloud.Ccc.V20200210.Models
 
         /// <summary>
         /// 购买办公电话数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SipNum")]
         public long? SipNum{ get; set; }

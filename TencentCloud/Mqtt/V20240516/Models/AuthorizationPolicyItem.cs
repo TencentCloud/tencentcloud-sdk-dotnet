@@ -25,13 +25,13 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 规则id
+        /// 规则ID
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 集群id
+        /// 集群ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

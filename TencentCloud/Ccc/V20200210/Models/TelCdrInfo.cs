@@ -62,7 +62,6 @@ namespace TencentCloud.Ccc.V20200210.Models
 
         /// <summary>
         /// 录音 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordId")]
         public string RecordId{ get; set; }
@@ -145,56 +144,48 @@ namespace TencentCloud.Ccc.V20200210.Models
 
         /// <summary>
         /// IVR 阶段耗时
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IVRDuration")]
         public long? IVRDuration{ get; set; }
 
         /// <summary>
         /// 振铃时间戳，UNIX 秒级时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RingTimestamp")]
         public long? RingTimestamp{ get; set; }
 
         /// <summary>
         /// 接听时间戳，UNIX 秒级时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AcceptTimestamp")]
         public long? AcceptTimestamp{ get; set; }
 
         /// <summary>
         /// 结束时间戳，UNIX 秒级时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndedTimestamp")]
         public long? EndedTimestamp{ get; set; }
 
         /// <summary>
         /// IVR 按键信息 ，e.g. ["1","2","3"]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IVRKeyPressed")]
         public string[] IVRKeyPressed{ get; set; }
 
         /// <summary>
         /// 挂机方 seat 座席 user 用户 system 系统
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HungUpSide")]
         public string HungUpSide{ get; set; }
 
         /// <summary>
         /// 服务参与者列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServeParticipants")]
         public ServeParticipant[] ServeParticipants{ get; set; }
 
         /// <summary>
         /// 技能组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SkillGroupId")]
         public long? SkillGroupId{ get; set; }
@@ -253,57 +244,48 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// 电话呼出	        210	           notInService	不在服务区
         /// 
         /// 电话呼入&呼出	211    clientError    客户端错误
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndStatusString")]
         public string EndStatusString{ get; set; }
 
         /// <summary>
         /// 会话开始时间戳，UNIX 秒级时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTimestamp")]
         public long? StartTimestamp{ get; set; }
 
         /// <summary>
         /// 进入排队时间，Unix 秒级时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueuedTimestamp")]
         public long? QueuedTimestamp{ get; set; }
 
         /// <summary>
         /// 后置IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PostIVRKeyPressed")]
         public IVRKeyPressedElement[] PostIVRKeyPressed{ get; set; }
 
         /// <summary>
         /// 排队技能组Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueuedSkillGroupId")]
         public long? QueuedSkillGroupId{ get; set; }
 
         /// <summary>
         /// 会话 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
         /// 主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProtectedCaller")]
         public string ProtectedCaller{ get; set; }
 
         /// <summary>
         /// 被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProtectedCallee")]
         public string ProtectedCallee{ get; set; }
@@ -318,21 +300,18 @@ namespace TencentCloud.Ccc.V20200210.Models
 
         /// <summary>
         /// 客户自定义数据（User-to-User Interface）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UUI")]
         public string UUI{ get; set; }
 
         /// <summary>
         /// IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IVRKeyPressedEx")]
         public IVRKeyPressedElement[] IVRKeyPressedEx{ get; set; }
 
         /// <summary>
         /// 获取录音ASR文本信息地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsrUrl")]
         public string AsrUrl{ get; set; }
@@ -344,42 +323,36 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// 正在生成中;
         /// NotExists
         /// 无记录(未开启生成离线asr或者无套餐包)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsrStatus")]
         public string AsrStatus{ get; set; }
 
         /// <summary>
         /// 录音转存第三方COS地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomRecordURL")]
         public string CustomRecordURL{ get; set; }
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
         /// 排队技能组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueuedSkillGroupName")]
         public string QueuedSkillGroupName{ get; set; }
 
         /// <summary>
         /// 通话中语音留言录音URL
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VoicemailRecordURL")]
         public string[] VoicemailRecordURL{ get; set; }
 
         /// <summary>
         /// 通话中语音留言ASR文本信息地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VoicemailAsrURL")]
         public string[] VoicemailAsrURL{ get; set; }

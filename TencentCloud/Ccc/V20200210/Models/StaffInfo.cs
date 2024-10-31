@@ -26,7 +26,6 @@ namespace TencentCloud.Ccc.V20200210.Models
         
         /// <summary>
         /// 座席名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -39,21 +38,18 @@ namespace TencentCloud.Ccc.V20200210.Models
 
         /// <summary>
         /// 座席电话号码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }
 
         /// <summary>
         /// 座席昵称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Nick")]
         public string Nick{ get; set; }
 
         /// <summary>
         /// 座席工号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StaffNumber")]
         public string StaffNumber{ get; set; }
@@ -66,14 +62,12 @@ namespace TencentCloud.Ccc.V20200210.Models
 
         /// <summary>
         /// 所属技能组列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SkillGroupList")]
         public SkillGroupItem[] SkillGroupList{ get; set; }
 
         /// <summary>
         /// 最后修改时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastModifyTimestamp")]
         public long? LastModifyTimestamp{ get; set; }

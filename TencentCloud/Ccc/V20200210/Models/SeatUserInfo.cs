@@ -38,7 +38,6 @@ namespace TencentCloud.Ccc.V20200210.Models
 
         /// <summary>
         /// 工号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StaffNumber")]
         public string StaffNumber{ get; set; }
@@ -63,7 +62,6 @@ namespace TencentCloud.Ccc.V20200210.Models
 
         /// <summary>
         /// 座席关联的技能组列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SkillGroupNameList")]
         public string[] SkillGroupNameList{ get; set; }
@@ -73,7 +71,6 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// 2:质检员
         /// 3:普通座席
         /// else:自定义角色ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Role")]
         public long? Role{ get; set; }

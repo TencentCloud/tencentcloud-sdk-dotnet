@@ -63,6 +63,23 @@ namespace TencentCloud.Vclm.V20240523.Models
         [JsonProperty("EnableSegment")]
         public bool? EnableSegment{ get; set; }
 
+        /// <summary>
+        /// 为生成视频添加标识的开关，默认为0。
+        /// 1：添加标识。
+        /// 0：不添加标识。
+        /// 其他数值：默认按1处理。
+        /// 建议您使用显著标识来提示，该视频是 AI 生成的视频。
+        /// </summary>
+        [JsonProperty("LogoAdd")]
+        public long? LogoAdd{ get; set; }
+
+        /// <summary>
+        /// 标识内容设置。
+        /// 默认在生成视频的右下角添加“视频由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+        /// </summary>
+        [JsonProperty("LogoParam")]
+        public LogoParam LogoParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +92,8 @@ namespace TencentCloud.Vclm.V20240523.Models
             this.SetParamSimple(map, prefix + "EnableAudio", this.EnableAudio);
             this.SetParamSimple(map, prefix + "EnableBodyJoins", this.EnableBodyJoins);
             this.SetParamSimple(map, prefix + "EnableSegment", this.EnableSegment);
+            this.SetParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
+            this.SetParamObj(map, prefix + "LogoParam.", this.LogoParam);
         }
     }
 }

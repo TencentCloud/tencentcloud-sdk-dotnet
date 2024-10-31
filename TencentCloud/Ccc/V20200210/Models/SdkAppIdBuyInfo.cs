@@ -56,7 +56,6 @@ namespace TencentCloud.Ccc.V20200210.Models
 
         /// <summary>
         /// 办公电话购买数（还在有效期内）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SipBuyNum")]
         public long? SipBuyNum{ get; set; }

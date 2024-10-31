@@ -28,7 +28,7 @@ namespace TencentCloud.Iotvideo.V20191126
 
        private const string endpoint = "iotvideo.tencentcloudapi.com";
        private const string version = "2019-11-26";
-       private const string sdkVersion = "SDK_NET_3.0.1114";
+       private const string sdkVersion = "SDK_NET_3.0.1115";
 
         /// <summary>
         /// Client constructor.
@@ -356,6 +356,27 @@ namespace TencentCloud.Iotvideo.V20191126
         public CreateUploadPathResponse CreateUploadPathSync(CreateUploadPathRequest req)
         {
             return InternalRequestAsync<CreateUploadPathResponse>(req, "CreateUploadPath")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设备申请cos上传证书
+        /// </summary>
+        /// <param name="req"><see cref="CreateUploadTestRequest"/></param>
+        /// <returns><see cref="CreateUploadTestResponse"/></returns>
+        public Task<CreateUploadTestResponse> CreateUploadTest(CreateUploadTestRequest req)
+        {
+            return InternalRequestAsync<CreateUploadTestResponse>(req, "CreateUploadTest");
+        }
+
+        /// <summary>
+        /// 设备申请cos上传证书
+        /// </summary>
+        /// <param name="req"><see cref="CreateUploadTestRequest"/></param>
+        /// <returns><see cref="CreateUploadTestResponse"/></returns>
+        public CreateUploadTestResponse CreateUploadTestSync(CreateUploadTestRequest req)
+        {
+            return InternalRequestAsync<CreateUploadTestResponse>(req, "CreateUploadTest")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1293,6 +1314,27 @@ namespace TencentCloud.Iotvideo.V20191126
         public RefundStorageServiceResponse RefundStorageServiceSync(RefundStorageServiceRequest req)
         {
             return InternalRequestAsync<RefundStorageServiceResponse>(req, "RefundStorageService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设备刷新cos上传证书
+        /// </summary>
+        /// <param name="req"><see cref="RenewUploadTestRequest"/></param>
+        /// <returns><see cref="RenewUploadTestResponse"/></returns>
+        public Task<RenewUploadTestResponse> RenewUploadTest(RenewUploadTestRequest req)
+        {
+            return InternalRequestAsync<RenewUploadTestResponse>(req, "RenewUploadTest");
+        }
+
+        /// <summary>
+        /// 设备刷新cos上传证书
+        /// </summary>
+        /// <param name="req"><see cref="RenewUploadTestRequest"/></param>
+        /// <returns><see cref="RenewUploadTestResponse"/></returns>
+        public RenewUploadTestResponse RenewUploadTestSync(RenewUploadTestRequest req)
+        {
+            return InternalRequestAsync<RenewUploadTestResponse>(req, "RenewUploadTest")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

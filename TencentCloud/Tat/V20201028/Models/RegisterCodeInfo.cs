@@ -26,28 +26,24 @@ namespace TencentCloud.Tat.V20201028.Models
         
         /// <summary>
         /// 注册码ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegisterCodeId")]
         public string RegisterCodeId{ get; set; }
 
         /// <summary>
         /// 注册码描述。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 注册实例名称前缀。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceNamePrefix")]
         public string InstanceNamePrefix{ get; set; }
 
         /// <summary>
         /// 该注册码允许注册的实例数目。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegisterLimit")]
         public long? RegisterLimit{ get; set; }
@@ -56,28 +52,24 @@ namespace TencentCloud.Tat.V20201028.Models
         /// 该注册码的过期时间，按照 ISO8601 标准表示，并且使用 UTC 时间。 
         /// 格式为： YYYY-MM-DDThh:mm:ssZ。
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public string ExpiredTime{ get; set; }
 
         /// <summary>
         /// 该注册码限制tat_agent只能从IpAddressRange所描述公网出口进行注册。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpAddressRange")]
         public string IpAddressRange{ get; set; }
 
         /// <summary>
         /// 该注册码是否可用。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }
 
         /// <summary>
         /// 该注册码已注册数目。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegisteredCount")]
         public long? RegisteredCount{ get; set; }
@@ -86,7 +78,6 @@ namespace TencentCloud.Tat.V20201028.Models
         /// 注册码创建时间，按照 ISO8601 标准表示，并且使用 UTC 时间。 
         /// 格式为： YYYY-MM-DDThh:mm:ssZ。
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
@@ -94,7 +85,6 @@ namespace TencentCloud.Tat.V20201028.Models
         /// <summary>
         /// 注册码最近一次更新时间，按照 ISO8601 标准表示，并且使用 UTC 时间。 
         /// 格式为： YYYY-MM-DDThh:mm:ssZ。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdatedTime")]

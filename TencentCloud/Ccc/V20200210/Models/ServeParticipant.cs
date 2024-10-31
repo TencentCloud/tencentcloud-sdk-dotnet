@@ -26,126 +26,108 @@ namespace TencentCloud.Ccc.V20200210.Models
         
         /// <summary>
         /// 座席邮箱
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mail")]
         public string Mail{ get; set; }
 
         /// <summary>
         /// 座席电话
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }
 
         /// <summary>
         /// 振铃时间戳，Unix 秒级时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RingTimestamp")]
         public long? RingTimestamp{ get; set; }
 
         /// <summary>
         /// 接听时间戳，Unix 秒级时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AcceptTimestamp")]
         public long? AcceptTimestamp{ get; set; }
 
         /// <summary>
         /// 结束时间戳，Unix 秒级时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndedTimestamp")]
         public long? EndedTimestamp{ get; set; }
 
         /// <summary>
         /// 录音 ID，能够索引到座席侧的录音
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordId")]
         public string RecordId{ get; set; }
 
         /// <summary>
         /// 参与者类型，"staffSeat", "outboundSeat", "staffPhoneSeat"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 转接来源座席信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TransferFrom")]
         public string TransferFrom{ get; set; }
 
         /// <summary>
         /// 转接来源参与者类型，取值与 Type 一致
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TransferFromType")]
         public string TransferFromType{ get; set; }
 
         /// <summary>
         /// 转接去向座席信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TransferTo")]
         public string TransferTo{ get; set; }
 
         /// <summary>
         /// 转接去向参与者类型，取值与 Type 一致
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TransferToType")]
         public string TransferToType{ get; set; }
 
         /// <summary>
         /// 技能组 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SkillGroupId")]
         public long? SkillGroupId{ get; set; }
 
         /// <summary>
         /// 结束状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndStatusString")]
         public string EndStatusString{ get; set; }
 
         /// <summary>
         /// 录音 URL
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordURL")]
         public string RecordURL{ get; set; }
 
         /// <summary>
         /// 参与者序号，从 0 开始
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Sequence")]
         public long? Sequence{ get; set; }
 
         /// <summary>
         /// 开始时间戳，Unix 秒级时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTimestamp")]
         public long? StartTimestamp{ get; set; }
 
         /// <summary>
         /// 技能组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SkillGroupName")]
         public string SkillGroupName{ get; set; }
 
         /// <summary>
         /// 录音转存第三方COS地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomRecordURL")]
         public string CustomRecordURL{ get; set; }

@@ -26,28 +26,24 @@ namespace TencentCloud.Ccc.V20200210.Models
         
         /// <summary>
         /// 文件ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileId")]
         public ulong? FileId{ get; set; }
 
         /// <summary>
         /// 文件别名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomFileName")]
         public string CustomFileName{ get; set; }
 
         /// <summary>
         /// 文件名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AudioFileName")]
         public string AudioFileName{ get; set; }
 
         /// <summary>
         /// 审核状态，0-未审核，1-审核通过，2-审核拒绝
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

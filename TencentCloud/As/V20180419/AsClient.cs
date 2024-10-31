@@ -28,7 +28,7 @@ namespace TencentCloud.As.V20180419
 
        private const string endpoint = "as.tencentcloudapi.com";
        private const string version = "2018-04-19";
-       private const string sdkVersion = "SDK_NET_3.0.1114";
+       private const string sdkVersion = "SDK_NET_3.0.1115";
 
         /// <summary>
         /// Client constructor.
@@ -104,6 +104,8 @@ namespace TencentCloud.As.V20180419
         /// * 已刷新/正在刷新的批次不受影响，待刷新批次被取消
         /// * 刷新失败的实例保持备用中状态，需用户手动处理后尝试退出备用中状态或销毁
         /// * 取消后不允许回滚操作，也不支持恢复操作
+        /// * 因 maxSurge 参数而临时扩容的实例在取消后会自动销毁
+        /// * 进行缩容时，所有实例都已经更新完成，此时无法取消
         /// </summary>
         /// <param name="req"><see cref="CancelInstanceRefreshRequest"/></param>
         /// <returns><see cref="CancelInstanceRefreshResponse"/></returns>
@@ -117,6 +119,8 @@ namespace TencentCloud.As.V20180419
         /// * 已刷新/正在刷新的批次不受影响，待刷新批次被取消
         /// * 刷新失败的实例保持备用中状态，需用户手动处理后尝试退出备用中状态或销毁
         /// * 取消后不允许回滚操作，也不支持恢复操作
+        /// * 因 maxSurge 参数而临时扩容的实例在取消后会自动销毁
+        /// * 进行缩容时，所有实例都已经更新完成，此时无法取消
         /// </summary>
         /// <param name="req"><see cref="CancelInstanceRefreshRequest"/></param>
         /// <returns><see cref="CancelInstanceRefreshResponse"/></returns>
@@ -1247,6 +1251,8 @@ namespace TencentCloud.As.V20180419
 
         /// <summary>
         /// 恢复暂停状态的实例刷新活动，使其重试当前批次刷新失败实例或继续刷新后续批次，非暂停状态下调用该接口无效。
+        /// 
+        /// - 使用 MaxSurge 参数时活动可能会处于扩容或缩容失败导致的暂停状态，也可以使用该接口重试扩缩容。
         /// </summary>
         /// <param name="req"><see cref="ResumeInstanceRefreshRequest"/></param>
         /// <returns><see cref="ResumeInstanceRefreshResponse"/></returns>
@@ -1257,6 +1263,8 @@ namespace TencentCloud.As.V20180419
 
         /// <summary>
         /// 恢复暂停状态的实例刷新活动，使其重试当前批次刷新失败实例或继续刷新后续批次，非暂停状态下调用该接口无效。
+        /// 
+        /// - 使用 MaxSurge 参数时活动可能会处于扩容或缩容失败导致的暂停状态，也可以使用该接口重试扩缩容。
         /// </summary>
         /// <param name="req"><see cref="ResumeInstanceRefreshRequest"/></param>
         /// <returns><see cref="ResumeInstanceRefreshResponse"/></returns>
@@ -1272,6 +1280,7 @@ namespace TencentCloud.As.V20180419
         /// * 原活动中正在刷新的实例不会立刻终止，刷新结束后再执行回滚活动
         /// * 暂停状态或最近一次成功的刷新活动支持回滚，其他状态不支持回滚
         /// * 原活动刷新方式为重装实例时，对于 ImageId参数，会自动恢复到回滚前镜像 ID；对于 UserData、EnhancedService、LoginSettings、 HostName 参数，依然会从启动配置中读取，需用户在回滚前自行修改启动配置
+        /// * 回滚活动暂不支持 MaxSurge 参数
         /// </summary>
         /// <param name="req"><see cref="RollbackInstanceRefreshRequest"/></param>
         /// <returns><see cref="RollbackInstanceRefreshResponse"/></returns>
@@ -1286,6 +1295,7 @@ namespace TencentCloud.As.V20180419
         /// * 原活动中正在刷新的实例不会立刻终止，刷新结束后再执行回滚活动
         /// * 暂停状态或最近一次成功的刷新活动支持回滚，其他状态不支持回滚
         /// * 原活动刷新方式为重装实例时，对于 ImageId参数，会自动恢复到回滚前镜像 ID；对于 UserData、EnhancedService、LoginSettings、 HostName 参数，依然会从启动配置中读取，需用户在回滚前自行修改启动配置
+        /// * 回滚活动暂不支持 MaxSurge 参数
         /// </summary>
         /// <param name="req"><see cref="RollbackInstanceRefreshRequest"/></param>
         /// <returns><see cref="RollbackInstanceRefreshResponse"/></returns>
@@ -1470,7 +1480,8 @@ namespace TencentCloud.As.V20180419
         /// <summary>
         /// 暂停正在执行的实例刷新活动。
         /// * 暂停状态下，伸缩组也会处于停用中状态
-        /// * 当前正在更新的实例不会暂停，待更新的实例会暂停更新
+        /// * 当前正在更新或扩容的实例不会暂停，待更新的实例会暂停更新
+        /// * 进行缩容时，所有实例都已经更新完成，此时无法暂停
         /// </summary>
         /// <param name="req"><see cref="StopInstanceRefreshRequest"/></param>
         /// <returns><see cref="StopInstanceRefreshResponse"/></returns>
@@ -1482,7 +1493,8 @@ namespace TencentCloud.As.V20180419
         /// <summary>
         /// 暂停正在执行的实例刷新活动。
         /// * 暂停状态下，伸缩组也会处于停用中状态
-        /// * 当前正在更新的实例不会暂停，待更新的实例会暂停更新
+        /// * 当前正在更新或扩容的实例不会暂停，待更新的实例会暂停更新
+        /// * 进行缩容时，所有实例都已经更新完成，此时无法暂停
         /// </summary>
         /// <param name="req"><see cref="StopInstanceRefreshRequest"/></param>
         /// <returns><see cref="StopInstanceRefreshResponse"/></returns>

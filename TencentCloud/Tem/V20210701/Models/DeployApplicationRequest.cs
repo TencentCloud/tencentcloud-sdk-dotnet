@@ -55,6 +55,13 @@ namespace TencentCloud.Tem.V20210701.Models
         public string EnvironmentId{ get; set; }
 
         /// <summary>
+        /// 部署类型为 IMAGE 时，该参数表示镜像 tag。
+        /// 部署类型为 JAR/WAR 时，该参数表示包版本号。
+        /// </summary>
+        [JsonProperty("DeployVersion")]
+        public string DeployVersion{ get; set; }
+
+        /// <summary>
         /// 镜像仓库
         /// </summary>
         [JsonProperty("ImgRepo")]
@@ -110,13 +117,6 @@ namespace TencentCloud.Tem.V20210701.Models
         /// </summary>
         [JsonProperty("DeployMode")]
         public string DeployMode{ get; set; }
-
-        /// <summary>
-        /// 部署类型为 IMAGE 时，该参数表示镜像 tag。
-        /// 部署类型为 JAR/WAR 时，该参数表示包版本号。
-        /// </summary>
-        [JsonProperty("DeployVersion")]
-        public string DeployVersion{ get; set; }
 
         /// <summary>
         /// 传入内容为 /jar包名字 的形式。也就是在 jar包名字前增加一个/。
@@ -337,6 +337,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "CpuSpec", this.CpuSpec);
             this.SetParamSimple(map, prefix + "MemorySpec", this.MemorySpec);
             this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
+            this.SetParamSimple(map, prefix + "DeployVersion", this.DeployVersion);
             this.SetParamSimple(map, prefix + "ImgRepo", this.ImgRepo);
             this.SetParamSimple(map, prefix + "VersionDesc", this.VersionDesc);
             this.SetParamSimple(map, prefix + "JvmOpts", this.JvmOpts);
@@ -346,7 +347,6 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamArrayObj(map, prefix + "StorageConfs.", this.StorageConfs);
             this.SetParamArrayObj(map, prefix + "StorageMountConfs.", this.StorageMountConfs);
             this.SetParamSimple(map, prefix + "DeployMode", this.DeployMode);
-            this.SetParamSimple(map, prefix + "DeployVersion", this.DeployVersion);
             this.SetParamSimple(map, prefix + "PkgName", this.PkgName);
             this.SetParamSimple(map, prefix + "JdkVersion", this.JdkVersion);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);

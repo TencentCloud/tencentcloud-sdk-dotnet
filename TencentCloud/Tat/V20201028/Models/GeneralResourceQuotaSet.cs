@@ -26,21 +26,18 @@ namespace TencentCloud.Tat.V20201028.Models
         
         /// <summary>
         /// 资源名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceName")]
         public string ResourceName{ get; set; }
 
         /// <summary>
         /// 已使用额度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceQuotaUsed")]
         public long? ResourceQuotaUsed{ get; set; }
 
         /// <summary>
         /// 总额度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceQuotaTotal")]
         public long? ResourceQuotaTotal{ get; set; }

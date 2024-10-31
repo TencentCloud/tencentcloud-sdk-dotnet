@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F711E1FC-542C-3536-9601-50E098B1102E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1114</VersionPrefix>
+    <VersionPrefix>3.0.1115</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -55,8 +55,12 @@
     <Compile Include="V20201028\Models\AddSpecifyPrivateZoneVpcResponse.cs" />
     <Compile Include="V20201028\Models\AuditLog.cs" />
     <Compile Include="V20201028\Models\AuditLogInfo.cs" />
+    <Compile Include="V20201028\Models\CreateEndPointAndEndPointServiceRequest.cs" />
+    <Compile Include="V20201028\Models\CreateEndPointAndEndPointServiceResponse.cs" />
     <Compile Include="V20201028\Models\CreateEndPointRequest.cs" />
     <Compile Include="V20201028\Models\CreateEndPointResponse.cs" />
+    <Compile Include="V20201028\Models\CreateForwardRuleRequest.cs" />
+    <Compile Include="V20201028\Models\CreateForwardRuleResponse.cs" />
     <Compile Include="V20201028\Models\CreatePrivateDNSAccountRequest.cs" />
     <Compile Include="V20201028\Models\CreatePrivateDNSAccountResponse.cs" />
     <Compile Include="V20201028\Models\CreatePrivateZoneRecordRequest.cs" />
@@ -80,6 +84,10 @@
     <Compile Include="V20201028\Models\DescribeAuditLogResponse.cs" />
     <Compile Include="V20201028\Models\DescribeDashboardRequest.cs" />
     <Compile Include="V20201028\Models\DescribeDashboardResponse.cs" />
+    <Compile Include="V20201028\Models\DescribeEndPointListRequest.cs" />
+    <Compile Include="V20201028\Models\DescribeEndPointListResponse.cs" />
+    <Compile Include="V20201028\Models\DescribeForwardRuleListRequest.cs" />
+    <Compile Include="V20201028\Models\DescribeForwardRuleListResponse.cs" />
     <Compile Include="V20201028\Models\DescribePrivateDNSAccountListRequest.cs" />
     <Compile Include="V20201028\Models\DescribePrivateDNSAccountListResponse.cs" />
     <Compile Include="V20201028\Models\DescribePrivateZoneListRequest.cs" />
@@ -94,8 +102,10 @@
     <Compile Include="V20201028\Models\DescribeQuotaUsageResponse.cs" />
     <Compile Include="V20201028\Models\DescribeRequestDataRequest.cs" />
     <Compile Include="V20201028\Models\DescribeRequestDataResponse.cs" />
+    <Compile Include="V20201028\Models\EndPointInfo.cs" />
     <Compile Include="V20201028\Models\Filter.cs" />
     <Compile Include="V20201028\Models\FlowUsage.cs" />
+    <Compile Include="V20201028\Models\ForwardRule.cs" />
     <Compile Include="V20201028\Models\MetricData.cs" />
     <Compile Include="V20201028\Models\ModifyPrivateZoneRecordRequest.cs" />
     <Compile Include="V20201028\Models\ModifyPrivateZoneRecordResponse.cs" />

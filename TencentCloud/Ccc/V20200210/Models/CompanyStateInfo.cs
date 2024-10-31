@@ -32,49 +32,42 @@ namespace TencentCloud.Ccc.V20200210.Models
 
         /// <summary>
         /// 公司名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CompanyName")]
         public string CompanyName{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
         /// 审核时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckTime")]
         public long? CheckTime{ get; set; }
 
         /// <summary>
         /// 审核备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckMsg")]
         public string CheckMsg{ get; set; }
 
         /// <summary>
         /// 审核状态，1-待审核，2-审核通过，3-驳回
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("State")]
         public long? State{ get; set; }
 
         /// <summary>
         /// 公司统一社会信用代码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BusinessId")]
         public string BusinessId{ get; set; }
 
         /// <summary>
         /// 修改时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public long? ModifyTime{ get; set; }

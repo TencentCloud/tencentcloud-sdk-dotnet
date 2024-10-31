@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{59D16650-F6B2-3107-8C2B-90A5E4FD868E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1114</VersionPrefix>
+    <VersionPrefix>3.0.1115</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,9 +50,11 @@
     <Compile Include="V20191126\IotvideoClient.cs" />
     <Compile Include="V20191126\Models\BindDevInfo.cs" />
     <Compile Include="V20191126\Models\BindUsrInfo.cs" />
+    <Compile Include="V20191126\Models\CertificateInfo.cs" />
     <Compile Include="V20191126\Models\ClearDeviceActiveCodeRequest.cs" />
     <Compile Include="V20191126\Models\ClearDeviceActiveCodeResponse.cs" />
     <Compile Include="V20191126\Models\Contents.cs" />
+    <Compile Include="V20191126\Models\CosCertificate.cs" />
     <Compile Include="V20191126\Models\CreateAnonymousAccessTokenRequest.cs" />
     <Compile Include="V20191126\Models\CreateAnonymousAccessTokenResponse.cs" />
     <Compile Include="V20191126\Models\CreateAppUsrRequest.cs" />
@@ -79,6 +81,8 @@
     <Compile Include="V20191126\Models\CreateTraceIdsResponse.cs" />
     <Compile Include="V20191126\Models\CreateUploadPathRequest.cs" />
     <Compile Include="V20191126\Models\CreateUploadPathResponse.cs" />
+    <Compile Include="V20191126\Models\CreateUploadTestRequest.cs" />
+    <Compile Include="V20191126\Models\CreateUploadTestResponse.cs" />
     <Compile Include="V20191126\Models\CreateUsrTokenRequest.cs" />
     <Compile Include="V20191126\Models\CreateUsrTokenResponse.cs" />
     <Compile Include="V20191126\Models\Data.cs" />
@@ -180,6 +184,9 @@
     <Compile Include="V20191126\Models\RefundStorageServiceRequest.cs" />
     <Compile Include="V20191126\Models\RefundStorageServiceResponse.cs" />
     <Compile Include="V20191126\Models\RegisteredStatus.cs" />
+    <Compile Include="V20191126\Models\RenewCertificate.cs" />
+    <Compile Include="V20191126\Models\RenewUploadTestRequest.cs" />
+    <Compile Include="V20191126\Models\RenewUploadTestResponse.cs" />
     <Compile Include="V20191126\Models\RunDeviceRequest.cs" />
     <Compile Include="V20191126\Models\RunDeviceResponse.cs" />
     <Compile Include="V20191126\Models\RunDeviceStreamRequest.cs" />

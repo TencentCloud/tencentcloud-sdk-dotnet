@@ -40,14 +40,12 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// 加入方式枚举
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JoinTypeLst")]
         public FilterDataObject[] JoinTypeLst{ get; set; }
 
         /// <summary>
         /// 云厂商枚举
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CloudTypeLst")]
         public FilterDataObject[] CloudTypeLst{ get; set; }
