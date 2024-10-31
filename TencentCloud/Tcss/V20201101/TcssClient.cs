@@ -28,7 +28,7 @@ namespace TencentCloud.Tcss.V20201101
 
        private const string endpoint = "tcss.tencentcloudapi.com";
        private const string version = "2020-11-01";
-       private const string sdkVersion = "SDK_NET_3.0.1113";
+       private const string sdkVersion = "SDK_NET_3.0.1114";
 
         /// <summary>
         /// Client constructor.
@@ -3612,7 +3612,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// 查询导出任务的结果
+        /// 查询导出接口进度
         /// </summary>
         /// <param name="req"><see cref="DescribeExportJobResultRequest"/></param>
         /// <returns><see cref="DescribeExportJobResultResponse"/></returns>
@@ -3622,7 +3622,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// 查询导出任务的结果
+        /// 查询导出接口进度
         /// </summary>
         /// <param name="req"><see cref="DescribeExportJobResultRequest"/></param>
         /// <returns><see cref="DescribeExportJobResultResponse"/></returns>

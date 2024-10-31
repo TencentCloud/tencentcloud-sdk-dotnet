@@ -28,7 +28,7 @@ namespace TencentCloud.Tse.V20201207
 
        private const string endpoint = "tse.tencentcloudapi.com";
        private const string version = "2020-12-07";
-       private const string sdkVersion = "SDK_NET_3.0.1113";
+       private const string sdkVersion = "SDK_NET_3.0.1114";
 
         /// <summary>
         /// Client constructor.
@@ -2255,6 +2255,27 @@ namespace TencentCloud.Tse.V20201207
         public PublishConfigFilesResponse PublishConfigFilesSync(PublishConfigFilesRequest req)
         {
             return InternalRequestAsync<PublishConfigFilesResponse>(req, "PublishConfigFiles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 重启微服务引擎实例
+        /// </summary>
+        /// <param name="req"><see cref="RestartSREInstanceRequest"/></param>
+        /// <returns><see cref="RestartSREInstanceResponse"/></returns>
+        public Task<RestartSREInstanceResponse> RestartSREInstance(RestartSREInstanceRequest req)
+        {
+            return InternalRequestAsync<RestartSREInstanceResponse>(req, "RestartSREInstance");
+        }
+
+        /// <summary>
+        /// 重启微服务引擎实例
+        /// </summary>
+        /// <param name="req"><see cref="RestartSREInstanceRequest"/></param>
+        /// <returns><see cref="RestartSREInstanceResponse"/></returns>
+        public RestartSREInstanceResponse RestartSREInstanceSync(RestartSREInstanceRequest req)
+        {
+            return InternalRequestAsync<RestartSREInstanceResponse>(req, "RestartSREInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -49,6 +49,12 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("Encoding")]
         public ulong? Encoding{ get; set; }
 
+        /// <summary>
+        /// 命令模板类型 1-内置模板 2-自定义模板
+        /// </summary>
+        [JsonProperty("Type")]
+        public ulong? Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +65,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "CmdList", this.CmdList);
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Encoding", this.Encoding);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

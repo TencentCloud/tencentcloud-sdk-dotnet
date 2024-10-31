@@ -31,12 +31,6 @@ namespace TencentCloud.Tem.V20210701.Models
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// 来源渠道
-        /// </summary>
-        [JsonProperty("SourceChannel")]
-        public long? SourceChannel{ get; set; }
-
-        /// <summary>
         /// 环境ID
         /// </summary>
         [JsonProperty("EnvironmentId")]
@@ -48,6 +42,12 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
+        /// <summary>
+        /// 来源渠道
+        /// </summary>
+        [JsonProperty("SourceChannel")]
+        public long? SourceChannel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -55,9 +55,9 @@ namespace TencentCloud.Tem.V20210701.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
-            this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
             this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
             this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
+            this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
         }
     }
 }

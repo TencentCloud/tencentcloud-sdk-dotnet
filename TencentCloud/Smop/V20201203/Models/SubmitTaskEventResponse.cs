@@ -25,21 +25,21 @@ namespace TencentCloud.Smop.V20201203.Models
     {
         
         /// <summary>
-        /// 订单ID
+        /// 任务的唯一订单号
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrderId")]
         public string OrderId{ get; set; }
 
         /// <summary>
-        /// 信息码
+        /// 信息码。0表示成功，-1标识失败
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Code")]
         public long? Code{ get; set; }
 
         /// <summary>
-        /// success
+        /// 提示信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]

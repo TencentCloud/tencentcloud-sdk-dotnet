@@ -66,6 +66,20 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("SubmitTime")]
         public string SubmitTime{ get; set; }
 
+        /// <summary>
+        /// 漏洞id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VulId")]
+        public long? VulId{ get; set; }
+
+        /// <summary>
+        /// 状态，0:防御中，1：已加白，指的是在白名单列表中有这个漏洞的，不一定是全局型白名单
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +93,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "Level", this.Level);
             this.SetParamSimple(map, prefix + "CVEID", this.CVEID);
             this.SetParamSimple(map, prefix + "SubmitTime", this.SubmitTime);
+            this.SetParamSimple(map, prefix + "VulId", this.VulId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

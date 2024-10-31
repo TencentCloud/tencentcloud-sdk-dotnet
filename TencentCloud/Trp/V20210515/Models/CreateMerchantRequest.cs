@@ -43,7 +43,7 @@ namespace TencentCloud.Trp.V20210515.Models
         public ulong? CorpId{ get; set; }
 
         /// <summary>
-        /// 码包来源 0:自建, 1:第三发
+        /// 码包来源 0:自建, 1:第三方
         /// </summary>
         [JsonProperty("CodeType")]
         public long? CodeType{ get; set; }

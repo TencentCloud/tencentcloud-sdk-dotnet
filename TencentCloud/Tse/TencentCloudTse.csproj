@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C9840D4F-C22D-3561-A83C-36F13531DB7A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1113</VersionPrefix>
+    <VersionPrefix>3.0.1114</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -361,6 +361,8 @@
     <Compile Include="V20201207\Models\QpsThreshold.cs" />
     <Compile Include="V20201207\Models\RateLimitResponse.cs" />
     <Compile Include="V20201207\Models\ReleaseVersion.cs" />
+    <Compile Include="V20201207\Models\RestartSREInstanceRequest.cs" />
+    <Compile Include="V20201207\Models\RestartSREInstanceResponse.cs" />
     <Compile Include="V20201207\Models\RollbackConfigFileReleasesRequest.cs" />
     <Compile Include="V20201207\Models\RollbackConfigFileReleasesResponse.cs" />
     <Compile Include="V20201207\Models\RouteWafStatus.cs" />

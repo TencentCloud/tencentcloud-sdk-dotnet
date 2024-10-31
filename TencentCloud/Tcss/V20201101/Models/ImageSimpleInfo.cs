@@ -54,6 +54,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ContainerCnt")]
         public long? ContainerCnt{ get; set; }
 
+        /// <summary>
+        /// 关联主机数
+        /// </summary>
+        [JsonProperty("HostCnt")]
+        public ulong? HostCnt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "Size", this.Size);
             this.SetParamSimple(map, prefix + "ImageType", this.ImageType);
             this.SetParamSimple(map, prefix + "ContainerCnt", this.ContainerCnt);
+            this.SetParamSimple(map, prefix + "HostCnt", this.HostCnt);
         }
     }
 }

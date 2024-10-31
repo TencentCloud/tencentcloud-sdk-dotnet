@@ -145,7 +145,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string CoreVersion{ get; set; }
 
         /// <summary>
-        /// linux/windows
+        /// Linux/Windows
         /// </summary>
         [JsonProperty("OsType")]
         public string OsType{ get; set; }

@@ -25,19 +25,59 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
-        /// 过滤条件<br>
-        /// <li>Ip - String - 是否必填：否 - 操作符: eq  - 排序支持：否- 按照Ip进行过滤。</li>
-        /// <li>MacAddr - String - 是否必填：否 - 操作符: eq  - 排序支持：否- 按照mac地址进行过滤。</li>
-        /// <li>IoaUserName - String - 是否必填：否 - 操作符: eq  - 排序支持：否- 按照ioa用户名进行过滤。</li>
-        /// 分页参数<br>
-        /// <li>PageNum 从1开始，小于等于0时使用默认参数。</li>
-        /// <li>PageSize 最大值5000，最好不超过100。</li>
+        /// 过滤条件参数（字段含义请参考接口返回值）
+        /// 
+        /// - Mid, 类型String，支持操作：【eq，like，ilike】，支持排序
+        /// - Name, 类型String，支持操作：【eq，like，ilike】，支持排序
+        /// - Itime, 类型String，支持操作：【eq，like，ilike】，支持排序
+        /// - UserName, 类型String，支持操作：【eq，like，ilike】，支持排序
+        /// - MacAddr, 类型String，支持操作：【eq，like，ilike】，支持排序
+        /// - UserId, 类型String，支持操作：【eq，like，ilike】，支持排序
+        /// - Ip, 类型String，支持操作：【eq，like，ilike】，支持排序
+        /// - Tags，类型String，支持操作：【eq，like，ilike】，支持排序
+        /// - LocalIpList，类型String，支持操作：【eq，like，ilike】，支持排序
+        /// - SerialNum，类型String，支持操作：【eq，like，ilike】，支持排序
+        /// - Version，类型String，支持操作：【eq，like，ilike】，支持排序
+        /// - StrVersion，类型String，支持操作：【eq，like，ilike】，支持排序
+        /// - RtpStatus，类型String，支持操作：【eq，like，ilike】，**不支持排序**
+        /// - HostName，类型String，支持操作：【eq，like，ilike】，支持排序
+        /// - IoaUserName，类型String，支持操作：【eq，like，ilike】，支持排序
+        /// - GroupName，类型String，支持操作：【eq，like，ilike】，支持排序
+        /// - CriticalVulListCount，**类型Int**，支持操作：【eq】，**不支持排序**
+        /// - RiskCount，**类型Int**，支持操作：【eq】，**不支持排序**
+        /// - VulVersion，类型String，支持操作：【eq，like，ilike】，**不支持排序**
+        /// - Virusver，类型String，支持操作：【eq，like，ilike】，**不支持排序**
+        /// - SysRepver，类型String，支持操作：【eq，like，ilike】，**不支持排序**
+        /// - BaseBoardSn，类型String，支持操作：【eq，like，ilike】，支持排序
+        /// - Os，类型String，支持操作：【eq，like，ilike】，支持排序
+        /// - ConnActiveTime，类型String，支持操作：【eq，like，ilike】，**不支持排序**
+        /// - FirewallStatus，**类型Int**，支持操作：【eq】，**不支持排序**
+        /// - ProfileName，类型String，支持操作：【eq，like，ilike】，支持排序
+        /// - DomainName，类型String，支持操作：【eq，like，ilike】，支持排序
+        /// - SysRepVersion，类型String，支持操作：【eq，like，ilike】，支持排序
+        /// - VirusVer，类型String，支持操作：【eq，like，ilike】，支持排序
+        /// - Cpu，类型String，支持操作：【eq，like，ilike】，支持排序
+        /// - Memory，类型String，支持操作：【eq，like，ilike】，支持排序
+        /// - HardDiskSize，类型String，支持操作：【eq，like，ilike】，支持排序
+        /// - HardwareChangeCount，**类型Int**，支持操作：【eq】，支持排序
+        /// - AccountName，类型String，支持操作：【like.ilike】，支持排序
+        /// - AccountGroupName，类型String，支持操作：【like.ilike】，支持排序
+        /// - ScreenRecordingPermission，**类型Int**，支持操作：【eq】，支持排序
+        /// - DiskAccessPermission，**类型Int**，支持操作：【eq】，支持排序
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 分页参数
+        /// - PageNum 从1开始，小于等于0时使用默认参数
+        /// - PageSize 最大值5000，最好不超过100
         /// </summary>
         [JsonProperty("Condition")]
         public Condition Condition{ get; set; }
 
         /// <summary>
-        /// 【和GroupIds必须有一个填写】设备分组id（需要和OsType匹配）
+        /// 【和GroupIds必须有一个填写】设备分组id（需要和OsType匹配），下面是私有化场景下默认id：
         /// id-名称-操作系统
         /// 1	全网终端	Win
         /// 2	未分组终端	Win
@@ -52,12 +92,15 @@ namespace TencentCloud.Ioa.V20220601.Models
         /// 40000402	未分组终端	Android
         /// 40000501	全网终端	iOS
         /// 40000502	未分组终端	iOS
+        /// 
+        /// 
+        /// SaaS需要调用分组接口DescribeDeviceChildGroups获取对应分组id
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// 【必填】操作系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配
+        /// 【必填】操作系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配
         /// </summary>
         [JsonProperty("OsType")]
         public long? OsType{ get; set; }
@@ -93,10 +136,16 @@ namespace TencentCloud.Ioa.V20220601.Models
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// 授权状态 4未授权 5已授权
+        /// 授权状态： 4基础授权 5高级授权
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
+
+        /// <summary>
+        /// 【和GroupId必须有一个填写】设备分组id列表（需要和OsType匹配）
+        /// </summary>
+        [JsonProperty("GroupIds")]
+        public long?[] GroupIds{ get; set; }
 
 
         /// <summary>
@@ -113,6 +162,7 @@ namespace TencentCloud.Ioa.V20220601.Models
             this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
         }
     }
 }

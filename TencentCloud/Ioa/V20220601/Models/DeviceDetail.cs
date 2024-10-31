@@ -116,7 +116,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         public string LocalIpList{ get; set; }
 
         /// <summary>
-        /// 主机ID(只支持32位)
+        /// 宿主机id（需要宿主机也安装iOA才能显示）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostId")]
@@ -270,7 +270,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         public string NGNNewStrategyVer{ get; set; }
 
         /// <summary>
-        /// 主机名称
+        /// 宿主机名称（需要宿主机也安装iOA才能显示）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostName")]
@@ -284,7 +284,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         public string BaseBoardSn{ get; set; }
 
         /// <summary>
-        /// 绑定账户只有名字
+        /// 绑定账户名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccountUsers")]

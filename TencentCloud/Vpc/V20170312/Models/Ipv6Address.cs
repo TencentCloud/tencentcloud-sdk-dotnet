@@ -64,6 +64,20 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("State")]
         public string State{ get; set; }
 
+        /// <summary>
+        /// 如果 IPv6地址是 ULA 类型，绑定的公网IP地址。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PublicIpAddress")]
+        public string PublicIpAddress{ get; set; }
+
+        /// <summary>
+        /// `IPv6`地址的类型: `GUA`, `OTHER`, `ULA`
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AddressType")]
+        public string AddressType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,6 +90,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "IsWanIpBlocked", this.IsWanIpBlocked);
             this.SetParamSimple(map, prefix + "State", this.State);
+            this.SetParamSimple(map, prefix + "PublicIpAddress", this.PublicIpAddress);
+            this.SetParamSimple(map, prefix + "AddressType", this.AddressType);
         }
     }
 }

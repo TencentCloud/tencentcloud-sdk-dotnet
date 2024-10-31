@@ -25,43 +25,43 @@ namespace TencentCloud.Smop.V20201203.Models
     {
         
         /// <summary>
-        /// 用户ID
+        /// 用户唯一标识，最大长度为64
         /// </summary>
         [JsonProperty("AccountId")]
         public string AccountId{ get; set; }
 
         /// <summary>
-        /// 设备ID
+        /// 用户设备ID，最大长度为64
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
 
         /// <summary>
-        /// 订单ID
+        /// 任务的唯一订单号，只能是数字、大小写字母，且在同一个产品ID下唯一，最大长度为64
         /// </summary>
         [JsonProperty("OrderId")]
         public string OrderId{ get; set; }
 
         /// <summary>
-        /// 任务事件Code
+        /// 任务事件Code，在腾讯安心用户运营平台下的任务事件列表中设置并获取
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }
 
         /// <summary>
-        /// 同步异步方式：0为同步、1位异步
+        /// 任务结果是否异步通知。0表示任务结果在返回信息中同步返回；1表示任务结果通过回调结果异步通知。
         /// </summary>
         [JsonProperty("Async")]
         public long? Async{ get; set; }
 
         /// <summary>
-        /// 产品ID
+        /// 产品ID，可在腾讯安心用户运营平台的企业管理中获取
         /// </summary>
         [JsonProperty("ProductId")]
         public long? ProductId{ get; set; }
 
         /// <summary>
-        /// 回调地址
+        /// 异步接收任务结果通知的回调地址。在Async为1的时候，会将任务结果通过该回调地址进行通知。
         /// </summary>
         [JsonProperty("NotifyURL")]
         public string NotifyURL{ get; set; }

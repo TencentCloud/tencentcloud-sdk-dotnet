@@ -164,7 +164,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public MachineExtraInfo MachineExtraInfo{ get; set; }
 
         /// <summary>
-        /// 实例状态：RUNNING,STOPPED,SHUTDOWN...
+        /// agent状态：OFFLINE,ONLINE
         /// </summary>
         [JsonProperty("MachineState")]
         public string MachineState{ get; set; }

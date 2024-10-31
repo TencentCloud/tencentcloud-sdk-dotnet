@@ -42,6 +42,12 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? OperateType{ get; set; }
 
         /// <summary>
+        /// 集团账号的成员id
+        /// </summary>
+        [JsonProperty("MemberId")]
+        public string[] MemberId{ get; set; }
+
+        /// <summary>
         /// 被调用的集团账号的成员id
         /// </summary>
         [JsonProperty("OperatedMemberId")]
@@ -55,6 +61,7 @@ namespace TencentCloud.Csip.V20221121.Models
         {
             this.SetParamArrayObj(map, prefix + "ID.", this.ID);
             this.SetParamSimple(map, prefix + "OperateType", this.OperateType);
+            this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
             this.SetParamArraySimple(map, prefix + "OperatedMemberId.", this.OperatedMemberId);
         }
     }

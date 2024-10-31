@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1113";
+       private const string sdkVersion = "SDK_NET_3.0.1114";
 
         /// <summary>
         /// Client constructor.
@@ -831,7 +831,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 此接口（DescribeBackupDownloadUrl）用于查询集群备份文件下载地址。
+        /// 本接口（DescribeBackupDownloadUrl）用于查询集群备份文件下载地址。
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupDownloadUrlRequest"/></param>
         /// <returns><see cref="DescribeBackupDownloadUrlResponse"/></returns>
@@ -841,7 +841,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 此接口（DescribeBackupDownloadUrl）用于查询集群备份文件下载地址。
+        /// 本接口（DescribeBackupDownloadUrl）用于查询集群备份文件下载地址。
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupDownloadUrlRequest"/></param>
         /// <returns><see cref="DescribeBackupDownloadUrlResponse"/></returns>
@@ -894,7 +894,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 此接口（DescribeBinlogDownloadUrl）用于查询Binlog的下载地址。
+        /// 本接口（DescribeBinlogDownloadUrl）用于查询 Binlog 的下载地址。
         /// </summary>
         /// <param name="req"><see cref="DescribeBinlogDownloadUrlRequest"/></param>
         /// <returns><see cref="DescribeBinlogDownloadUrlResponse"/></returns>
@@ -904,7 +904,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 此接口（DescribeBinlogDownloadUrl）用于查询Binlog的下载地址。
+        /// 本接口（DescribeBinlogDownloadUrl）用于查询 Binlog 的下载地址。
         /// </summary>
         /// <param name="req"><see cref="DescribeBinlogDownloadUrlRequest"/></param>
         /// <returns><see cref="DescribeBinlogDownloadUrlResponse"/></returns>
@@ -936,7 +936,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 此接口（DescribeBinlogs）用来查询集群Binlog日志列表。
+        /// 本接口（DescribeBinlogs）用来查询集群 Binlog 日志列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeBinlogsRequest"/></param>
         /// <returns><see cref="DescribeBinlogsResponse"/></returns>
@@ -946,7 +946,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 此接口（DescribeBinlogs）用来查询集群Binlog日志列表。
+        /// 本接口（DescribeBinlogs）用来查询集群 Binlog 日志列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeBinlogsRequest"/></param>
         /// <returns><see cref="DescribeBinlogsResponse"/></returns>
@@ -1146,7 +1146,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 查询集群列表
+        /// 本接口（DescribeClusters）用于查询集群列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeClustersRequest"/></param>
         /// <returns><see cref="DescribeClustersResponse"/></returns>
@@ -1156,7 +1156,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 查询集群列表
+        /// 本接口（DescribeClusters）用于查询集群列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeClustersRequest"/></param>
         /// <returns><see cref="DescribeClustersResponse"/></returns>
@@ -1692,7 +1692,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口(DescribeZones)用于查询可售卖地域可用区信息。
+        /// 本接口（DescribeZones）用于查询可售卖地域可用区信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeZonesRequest"/></param>
         /// <returns><see cref="DescribeZonesResponse"/></returns>
@@ -1702,7 +1702,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口(DescribeZones)用于查询可售卖地域可用区信息。
+        /// 本接口（DescribeZones）用于查询可售卖地域可用区信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeZonesRequest"/></param>
         /// <returns><see cref="DescribeZonesResponse"/></returns>
@@ -1755,7 +1755,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 此接口（ExportInstanceSlowQueries）用于导出实例慢日志。
+        /// 本接口（ExportInstanceSlowQueries）用于导出实例慢日志。
         /// </summary>
         /// <param name="req"><see cref="ExportInstanceSlowQueriesRequest"/></param>
         /// <returns><see cref="ExportInstanceSlowQueriesResponse"/></returns>
@@ -1765,7 +1765,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 此接口（ExportInstanceSlowQueries）用于导出实例慢日志。
+        /// 本接口（ExportInstanceSlowQueries）用于导出实例慢日志。
         /// </summary>
         /// <param name="req"><see cref="ExportInstanceSlowQueriesRequest"/></param>
         /// <returns><see cref="ExportInstanceSlowQueriesResponse"/></returns>

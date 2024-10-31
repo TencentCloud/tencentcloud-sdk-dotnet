@@ -73,7 +73,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Quuid{ get; set; }
 
         /// <summary>
-        /// 状态码
+        /// 状态码Scanning、Ok、Fail
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

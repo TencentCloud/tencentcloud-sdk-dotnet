@@ -103,7 +103,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Username{ get; set; }
 
         /// <summary>
-        /// xx
+        /// 投递类型细节
         /// </summary>
         [JsonProperty("DeliverTypeDetails")]
         public DeliverTypeDetails[] DeliverTypeDetails{ get; set; }

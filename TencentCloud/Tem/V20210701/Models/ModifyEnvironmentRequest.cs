@@ -31,7 +31,7 @@ namespace TencentCloud.Tem.V20210701.Models
         public string EnvironmentId{ get; set; }
 
         /// <summary>
-        /// 环境名称
+        /// 环境名称。环境名称不可修改
         /// </summary>
         [JsonProperty("EnvironmentName")]
         public string EnvironmentName{ get; set; }

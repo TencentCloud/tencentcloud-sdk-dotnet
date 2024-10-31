@@ -55,7 +55,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 集群运行状态
+        /// 集群运行状态，CSR_RUNNING-运行中，CSR_EXCEPTION-异常，CSR_CREATING-创建中
         /// </summary>
         [JsonProperty("ClusterRunningStatus")]
         public string ClusterRunningStatus{ get; set; }

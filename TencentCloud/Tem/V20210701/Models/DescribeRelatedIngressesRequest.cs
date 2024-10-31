@@ -37,16 +37,16 @@ namespace TencentCloud.Tem.V20210701.Models
         public string ClusterNamespace{ get; set; }
 
         /// <summary>
-        /// 来源渠道
-        /// </summary>
-        [JsonProperty("SourceChannel")]
-        public long? SourceChannel{ get; set; }
-
-        /// <summary>
         /// 应用 ID
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
+
+        /// <summary>
+        /// 来源渠道
+        /// </summary>
+        [JsonProperty("SourceChannel")]
+        public long? SourceChannel{ get; set; }
 
 
         /// <summary>
@@ -56,8 +56,8 @@ namespace TencentCloud.Tem.V20210701.Models
         {
             this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
             this.SetParamSimple(map, prefix + "ClusterNamespace", this.ClusterNamespace);
-            this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
             this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+            this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
         }
     }
 }

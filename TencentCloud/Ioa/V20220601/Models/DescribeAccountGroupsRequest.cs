@@ -25,23 +25,30 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
-        /// 搜索范围,0-仅搜直接子组,1-深层搜索(只支持32位)
+        /// 搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。
         /// </summary>
         [JsonProperty("Deepin")]
         public long? Deepin{ get; set; }
 
         /// <summary>
-        /// 滤条件、分页参数
-        /// <li>Name - String - 是否必填：否 - 操作符: like  - 排序支持：否- 按账号分组过滤。</li>
+        /// 查询条件
+        /// 
+        /// 过滤参数
+        /// 1、Name，string类型，按分组名过滤
+        /// 是否必填：否
+        /// 操作符: like
+        /// 
         /// 排序条件
-        /// <li>Itime - string - 是否必填：否 - 排序支持：是 - 按账号分组创建时间排序。</li>
-        /// <li>Utime - string - 是否必填：否 - 排序支持：是 - 按账号分组更新时间排序。</li>
+        /// 1、Itime，string类型，按分组创建时间排序
+        /// 是否必填：否
+        /// 2、Utime，string类型，按分组更新时间排序
+        /// 是否必填：否
         /// </summary>
         [JsonProperty("Condition")]
         public Condition Condition{ get; set; }
 
         /// <summary>
-        /// 父分组id
+        /// 父分组ID，获取该分组下的子组信息。默认查询全网根分组下子组信息。
         /// </summary>
         [JsonProperty("ParentId")]
         public long? ParentId{ get; set; }

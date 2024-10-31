@@ -108,6 +108,24 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// 镜像仓库信息
+        /// </summary>
+        [JsonProperty("ImageRegistryInfo")]
+        public ImageRegistryInfo ImageRegistryInfo{ get; set; }
+
+        /// <summary>
+        /// 集群id
+        /// </summary>
+        [JsonProperty("ClusterID")]
+        public string ClusterID{ get; set; }
+
+        /// <summary>
+        /// 集群名称
+        /// </summary>
+        [JsonProperty("ClusterName")]
+        public string ClusterName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -125,6 +143,9 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ImageTag", this.ImageTag);
             this.SetParamSimple(map, prefix + "VerifyInfo", this.VerifyInfo);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamObj(map, prefix + "ImageRegistryInfo.", this.ImageRegistryInfo);
+            this.SetParamSimple(map, prefix + "ClusterID", this.ClusterID);
+            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
         }
     }
 }

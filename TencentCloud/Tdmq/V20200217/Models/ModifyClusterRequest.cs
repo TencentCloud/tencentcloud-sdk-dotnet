@@ -37,7 +37,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 说明信息。
+        /// 说明信息。长度限制为 128 字节
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

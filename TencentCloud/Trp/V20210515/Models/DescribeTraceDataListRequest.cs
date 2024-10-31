@@ -49,7 +49,7 @@ namespace TencentCloud.Trp.V20210515.Models
         public ulong? PageNumber{ get; set; }
 
         /// <summary>
-        /// 二维码
+        /// 溯源码
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }

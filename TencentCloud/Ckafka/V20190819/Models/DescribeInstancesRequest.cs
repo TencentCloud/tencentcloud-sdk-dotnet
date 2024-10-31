@@ -25,19 +25,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// （过滤条件）按照实例ID过滤
+        /// （查询条件）按照ckafka集群实例Id过滤
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// （过滤条件）按照实例名称过滤，支持模糊查询
+        /// 搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// （过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
+        /// （查询条件）实例的状态  0：创建中，1：运行中，2：删除中，5: 隔离中,  7:升级中 不填默认返回全部
         /// </summary>
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// 私有网络Id
+        /// （查询条件）私有网络Id
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }

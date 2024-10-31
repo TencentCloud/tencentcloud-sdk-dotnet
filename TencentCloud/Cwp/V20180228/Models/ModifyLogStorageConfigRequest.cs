@@ -37,10 +37,16 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string[] Type{ get; set; }
 
         /// <summary>
-        /// 日志存储天数，3640表示不限
+        /// 日志存储时长，3640表示不限
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
+
+        /// <summary>
+        /// 日志存储时长单位，年year/月month/天day
+        /// </summary>
+        [JsonProperty("Granularity")]
+        public string Granularity{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "IsModifyPeriod", this.IsModifyPeriod);
             this.SetParamArraySimple(map, prefix + "Type.", this.Type);
             this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "Granularity", this.Granularity);
         }
     }
 }

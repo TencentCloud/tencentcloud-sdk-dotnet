@@ -79,6 +79,20 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("CWPFix")]
         public long? CWPFix{ get; set; }
 
+        /// <summary>
+        /// 产品支持状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DataSupport")]
+        public ProductSupport[] DataSupport{ get; set; }
+
+        /// <summary>
+        /// cveId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CveId")]
+        public string CveId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +107,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "CFWPatch", this.CFWPatch);
             this.SetParamSimple(map, prefix + "WafPatch", this.WafPatch);
             this.SetParamSimple(map, prefix + "CWPFix", this.CWPFix);
+            this.SetParamArrayObj(map, prefix + "DataSupport.", this.DataSupport);
+            this.SetParamSimple(map, prefix + "CveId", this.CveId);
         }
     }
 }

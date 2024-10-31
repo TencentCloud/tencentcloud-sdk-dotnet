@@ -146,6 +146,13 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
+        /// <summary>
+        /// 当资产类型为LBL的时候，展示该字段，方便定位具体的LB
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClbId")]
+        public string ClbId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -172,6 +179,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "Nick", this.Nick);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
+            this.SetParamSimple(map, prefix + "ClbId", this.ClbId);
         }
     }
 }

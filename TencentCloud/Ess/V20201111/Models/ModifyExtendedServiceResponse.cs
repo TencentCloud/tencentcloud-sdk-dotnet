@@ -33,7 +33,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 
         /// <ul>
         /// <li><strong>OPEN_SERVER_SIGN</strong>（企业自动签署）</li>
-        /// <li><strong>OVERSEA_SIGN</strong>（企业与港澳台居民签署合同）</li>
         /// </ul></li></li>
         /// </ul>
         /// </summary>

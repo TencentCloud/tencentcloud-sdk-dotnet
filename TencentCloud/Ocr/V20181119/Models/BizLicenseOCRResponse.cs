@@ -120,19 +120,19 @@ namespace TencentCloud.Ocr.V20181119.Models
         public float? Angle{ get; set; }
 
         /// <summary>
-        /// 是否有国徽。0为没有，1为有。
+        /// 是否有国徽。false为没有，true为有。
         /// </summary>
         [JsonProperty("NationalEmblem")]
         public bool? NationalEmblem{ get; set; }
 
         /// <summary>
-        /// 是否有二维码。0为没有，1为有。
+        /// 是否有二维码。false为没有，true为有。
         /// </summary>
         [JsonProperty("QRCode")]
         public bool? QRCode{ get; set; }
 
         /// <summary>
-        /// 是否有印章。0为没有，1为有。
+        /// 是否有印章。false为没有，true为有。
         /// </summary>
         [JsonProperty("Seal")]
         public bool? Seal{ get; set; }
@@ -156,7 +156,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string RegistrationAuthority{ get; set; }
 
         /// <summary>
-        /// 是否是电子营业执照。0为不是，1为是。
+        /// 是否是电子营业执照。false为没有，true为有。
         /// </summary>
         [JsonProperty("Electronic")]
         public bool? Electronic{ get; set; }

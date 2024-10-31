@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 操作-0:标记已处理,1:忽略,2:删除记录,3:木马隔离,4:木马恢复隔离,5:木马信任,6:木马取消信任,7:查杀异常进程
+        /// 操作-0:标记已处理,1:忽略,2:删除记录,3:木马隔离,4:木马恢复隔离,5:木马信任,6:木马取消信任,7:查杀异常进程,8:加入白名单
         /// </summary>
         [JsonProperty("Operate")]
         public ulong? Operate{ get; set; }
@@ -86,6 +86,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }
 
+        /// <summary>
+        /// 当Operate 是木马隔离时
+        /// <li> 本操作会修复被篡改的系统命令，计划任务等系统文件，操作中请确保yum/apt 可用。</li>
+        /// </summary>
+        [JsonProperty("DoClean")]
+        public bool? DoClean{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +107,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "KillProcess", this.KillProcess);
             this.SetParamArraySimple(map, prefix + "Ip.", this.Ip);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "DoClean", this.DoClean);
         }
     }
 }

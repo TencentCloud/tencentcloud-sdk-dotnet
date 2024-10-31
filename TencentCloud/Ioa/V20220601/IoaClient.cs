@@ -28,7 +28,7 @@ namespace TencentCloud.Ioa.V20220601
 
        private const string endpoint = "ioa.tencentcloudapi.com";
        private const string version = "2022-06-01";
-       private const string sdkVersion = "SDK_NET_3.0.1113";
+       private const string sdkVersion = "SDK_NET_3.0.1114";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,28 @@ namespace TencentCloud.Ioa.V20220601
         }
 
         /// <summary>
-        /// 以分页的方式查询账户目录列表,私有化调用path为：/capi/Assets/DescribeAccountGroups
+        /// 创建终端自定义分组，私有化调用path为：/capi/Assets/Device/CreateDeviceVirtualGroup
+        /// </summary>
+        /// <param name="req"><see cref="CreateDeviceVirtualGroupRequest"/></param>
+        /// <returns><see cref="CreateDeviceVirtualGroupResponse"/></returns>
+        public Task<CreateDeviceVirtualGroupResponse> CreateDeviceVirtualGroup(CreateDeviceVirtualGroupRequest req)
+        {
+            return InternalRequestAsync<CreateDeviceVirtualGroupResponse>(req, "CreateDeviceVirtualGroup");
+        }
+
+        /// <summary>
+        /// 创建终端自定义分组，私有化调用path为：/capi/Assets/Device/CreateDeviceVirtualGroup
+        /// </summary>
+        /// <param name="req"><see cref="CreateDeviceVirtualGroupRequest"/></param>
+        /// <returns><see cref="CreateDeviceVirtualGroupResponse"/></returns>
+        public CreateDeviceVirtualGroupResponse CreateDeviceVirtualGroupSync(CreateDeviceVirtualGroupRequest req)
+        {
+            return InternalRequestAsync<CreateDeviceVirtualGroupResponse>(req, "CreateDeviceVirtualGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 以分页的方式查询账号分组列表，私有化调用path为：/capi/Assets/DescribeAccountGroups
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountGroupsRequest"/></param>
         /// <returns><see cref="DescribeAccountGroupsResponse"/></returns>
@@ -64,7 +85,7 @@ namespace TencentCloud.Ioa.V20220601
         }
 
         /// <summary>
-        /// 以分页的方式查询账户目录列表,私有化调用path为：/capi/Assets/DescribeAccountGroups
+        /// 以分页的方式查询账号分组列表，私有化调用path为：/capi/Assets/DescribeAccountGroups
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountGroupsRequest"/></param>
         /// <returns><see cref="DescribeAccountGroupsResponse"/></returns>
@@ -117,7 +138,8 @@ namespace TencentCloud.Ioa.V20220601
         }
 
         /// <summary>
-        /// 查询账户根分组详情，私有化调用path为：capi/Assets/DescribeRootAccountGroup
+        /// 查询账号根分组详情。对应“用户与授权管理”里内置不可见的全网根账号组，所有新建的目录，都挂在该全网根账号组下。
+        /// 私有化调用path为：capi/Assets/DescribeRootAccountGroup
         /// </summary>
         /// <param name="req"><see cref="DescribeRootAccountGroupRequest"/></param>
         /// <returns><see cref="DescribeRootAccountGroupResponse"/></returns>
@@ -127,7 +149,8 @@ namespace TencentCloud.Ioa.V20220601
         }
 
         /// <summary>
-        /// 查询账户根分组详情，私有化调用path为：capi/Assets/DescribeRootAccountGroup
+        /// 查询账号根分组详情。对应“用户与授权管理”里内置不可见的全网根账号组，所有新建的目录，都挂在该全网根账号组下。
+        /// 私有化调用path为：capi/Assets/DescribeRootAccountGroup
         /// </summary>
         /// <param name="req"><see cref="DescribeRootAccountGroupRequest"/></param>
         /// <returns><see cref="DescribeRootAccountGroupResponse"/></returns>

@@ -25,16 +25,16 @@ namespace TencentCloud.Tem.V20210701.Models
     {
         
         /// <summary>
-        /// 来源渠道
-        /// </summary>
-        [JsonProperty("SourceChannel")]
-        public long? SourceChannel{ get; set; }
-
-        /// <summary>
         /// 环境ID
         /// </summary>
         [JsonProperty("EnvironmentId")]
         public string EnvironmentId{ get; set; }
+
+        /// <summary>
+        /// 来源渠道
+        /// </summary>
+        [JsonProperty("SourceChannel")]
+        public long? SourceChannel{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Tem.V20210701.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
             this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
+            this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
         }
     }
 }

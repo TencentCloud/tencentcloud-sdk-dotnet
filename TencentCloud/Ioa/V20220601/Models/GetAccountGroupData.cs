@@ -25,14 +25,14 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
-        /// 分组Namepath
+        /// 分组名称全路径，点分格式
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NamePath")]
         public string NamePath{ get; set; }
 
         /// <summary>
-        /// 分组Id path arr(只支持32位)
+        /// 分组ID全路径，数组格式
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdPathArr")]
@@ -53,14 +53,14 @@ namespace TencentCloud.Ioa.V20220601.Models
         public string Utime{ get; set; }
 
         /// <summary>
-        /// 父分组id(只支持32位)
+        /// 当前分组的父分组ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParentId")]
         public ulong? ParentId{ get; set; }
 
         /// <summary>
-        /// 组织id
+        /// 源账号组ID，该字段仅适用于第三方同步的组织架构，通过OrgId-Id构成源组织架构分组ID-现组织架构分组ID映射关系
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrgId")]
@@ -74,14 +74,14 @@ namespace TencentCloud.Ioa.V20220601.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 分组id(只支持32位)
+        /// 分组ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// 分组描述
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
@@ -95,7 +95,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         public ulong? Source{ get; set; }
 
         /// <summary>
-        /// Id Path
+        /// 分组ID全路径，点分格式
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdPath")]
@@ -109,7 +109,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         public string Itime{ get; set; }
 
         /// <summary>
-        /// 父组织id
+        /// 父源账号组ID，该字段仅适用于第三方同步的组织架构
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParentOrgId")]

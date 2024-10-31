@@ -25,7 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 文件Md5值
+        /// 文件MD5值
         /// </summary>
         [JsonProperty("MD5")]
         public string MD5{ get; set; }

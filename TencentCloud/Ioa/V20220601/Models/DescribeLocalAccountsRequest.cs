@@ -25,16 +25,25 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
-        /// 滤条件、分页参数
-        /// <li>UserName - String - 是否必填：否 - 操作符: eq,like  - 排序支持：否- 按账号UserName过滤。</li>
-        /// <li>UserId - string - 是否必填：否 - 操作符: eq,like  - 排序支持：否 - 按账号UserNd过滤。</li>
-        /// <li>Phone - string - 是否必填：否 - 操作符: eq,like - 排序支持：否 - 按手机号过滤。</li>
+        /// 查询条件：过滤或排序
+        /// 1、UserName，string类型，姓名
+        /// 是否必填：否
+        /// 过滤支持：是，支持eq、like、ilike
+        /// 排序支持：否
+        /// 2、UserId，string类型，账户
+        /// 是否必填：否
+        /// 过滤支持：是，支持eq、like、ilike
+        /// 排序支持：否
+        /// 3、Phone，string类型，手机号
+        /// 是否必填：否
+        /// 过滤支持：是，支持eq、like、ilike
+        /// 排序支持：否
         /// </summary>
         [JsonProperty("Condition")]
         public Condition Condition{ get; set; }
 
         /// <summary>
-        /// 获取账号的分组Id，不传默认获取全部(只支持32位)
+        /// 获取账号的分组ID，不传默认获取全网根账号组
         /// </summary>
         [JsonProperty("AccountGroupId")]
         public long? AccountGroupId{ get; set; }

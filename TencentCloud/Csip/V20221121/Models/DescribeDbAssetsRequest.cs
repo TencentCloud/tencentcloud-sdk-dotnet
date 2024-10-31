@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// -
+        /// 过滤器参数
         /// </summary>
         [JsonProperty("Filter")]
         public Filter Filter{ get; set; }

@@ -42,6 +42,13 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("CmdList")]
         public string CmdList{ get; set; }
 
+        /// <summary>
+        /// 命令模板类型 1-内置 2-自定义	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Type")]
+        public ulong? Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +58,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "CmdList", this.CmdList);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

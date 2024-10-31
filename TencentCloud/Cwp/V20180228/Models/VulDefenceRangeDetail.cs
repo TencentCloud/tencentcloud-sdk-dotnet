@@ -66,6 +66,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("VulId")]
         public long? VulId{ get; set; }
 
+        /// <summary>
+        /// 状态，0:防御中，1：已加白，指的是在白名单列表中有这个漏洞的，不一定是全局型白名单
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +86,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "CveId", this.CveId);
             this.SetParamSimple(map, prefix + "PublishTime", this.PublishTime);
             this.SetParamSimple(map, prefix + "VulId", this.VulId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

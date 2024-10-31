@@ -15,26 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Cfw.V20190904.Models
+namespace TencentCloud.Ioa.V20220601.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeNatSwitchListResponse : AbstractModel
+    public class CreateDeviceVirtualGroupResponse : AbstractModel
     {
         
         /// <summary>
-        /// 总数
-        /// </summary>
-        [JsonProperty("Total")]
-        public long? Total{ get; set; }
-
-        /// <summary>
-        /// NAT边界防火墙开关列表数据
+        /// 响应返回的data
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
-        public NatSwitchListData[] Data{ get; set; }
+        public CreateDeviceVirtualGroupRspData Data{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +43,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Total", this.Total);
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

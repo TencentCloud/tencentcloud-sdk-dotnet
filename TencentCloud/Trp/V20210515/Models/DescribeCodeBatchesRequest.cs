@@ -67,7 +67,7 @@ namespace TencentCloud.Trp.V20210515.Models
         public ulong? CorpId{ get; set; }
 
         /// <summary>
-        /// 批次状态
+        /// 批次状态 0: 未激活 1: 已激活 -1: 已冻结
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

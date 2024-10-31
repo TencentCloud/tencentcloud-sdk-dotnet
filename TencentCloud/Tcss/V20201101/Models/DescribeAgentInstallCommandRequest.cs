@@ -60,6 +60,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("TagIds")]
         public ulong?[] TagIds{ get; set; }
 
+        /// <summary>
+        /// 虚拟ip
+        /// </summary>
+        [JsonProperty("Vip")]
+        public string Vip{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "ExpireDate", this.ExpireDate);
             this.SetParamArraySimple(map, prefix + "TagIds.", this.TagIds);
+            this.SetParamSimple(map, prefix + "Vip", this.Vip);
         }
     }
 }

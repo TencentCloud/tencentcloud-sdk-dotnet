@@ -55,6 +55,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string WindowsDownloadUrl{ get; set; }
 
         /// <summary>
+        /// arm架构系统安装命令
+        /// </summary>
+        [JsonProperty("ARMCommand")]
+        public string ARMCommand{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -71,6 +77,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "WindowsStepOne", this.WindowsStepOne);
             this.SetParamSimple(map, prefix + "WindowsStepTwo", this.WindowsStepTwo);
             this.SetParamSimple(map, prefix + "WindowsDownloadUrl", this.WindowsDownloadUrl);
+            this.SetParamSimple(map, prefix + "ARMCommand", this.ARMCommand);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

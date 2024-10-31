@@ -67,6 +67,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ClusterStatus{ get; set; }
 
         /// <summary>
+        /// 集群运行子状态
+        /// </summary>
+        [JsonProperty("ClusterSubStatus")]
+        public string ClusterSubStatus{ get; set; }
+
+        /// <summary>
         /// 集群类型：为托管集群MANAGED_CLUSTER、独立集群INDEPENDENT_CLUSTER
         /// </summary>
         [JsonProperty("ClusterType")]
@@ -193,6 +199,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
             this.SetParamSimple(map, prefix + "ClusterNodeNum", this.ClusterNodeNum);
             this.SetParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
+            this.SetParamSimple(map, prefix + "ClusterSubStatus", this.ClusterSubStatus);
             this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "SeriousRiskCount", this.SeriousRiskCount);

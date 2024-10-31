@@ -25,14 +25,14 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
-        /// 名称path
+        /// 账号分组名全路径，点分格式
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NamePath")]
         public string NamePath{ get; set; }
 
         /// <summary>
-        /// id patch数组(只支持32位)
+        /// 账号分组ID全路径，数组格式
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdPathArr")]
@@ -53,35 +53,35 @@ namespace TencentCloud.Ioa.V20220601.Models
         public string Utime{ get; set; }
 
         /// <summary>
-        /// 父id
+        /// 父分组ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParentId")]
         public long? ParentId{ get; set; }
 
         /// <summary>
-        /// 组织id
+        /// 源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrgId")]
         public string OrgId{ get; set; }
 
         /// <summary>
-        /// 账户组名称
+        /// 分组名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// id
+        /// 分组ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// 分组描述
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
@@ -95,7 +95,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         public long? Source{ get; set; }
 
         /// <summary>
-        /// id path
+        /// 账号分组ID全路径，点分格式
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdPath")]
@@ -109,7 +109,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         public string Itime{ get; set; }
 
         /// <summary>
-        /// 父组织id
+        /// 父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParentOrgId")]
@@ -130,7 +130,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         public string MiniIamId{ get; set; }
 
         /// <summary>
-        /// 该分组下用户总数
+        /// 该分组下含子组的所有用户总数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserTotal")]

@@ -32,12 +32,6 @@ namespace TencentCloud.Tem.V20210701.Models
         public string EnvironmentId{ get; set; }
 
         /// <summary>
-        /// 环境namespace
-        /// </summary>
-        [JsonProperty("ClusterNamespace")]
-        public string ClusterNamespace{ get; set; }
-
-        /// <summary>
         /// ip version
         /// </summary>
         [JsonProperty("AddressIPVersion")]
@@ -61,6 +55,12 @@ namespace TencentCloud.Tem.V20210701.Models
         /// </summary>
         [JsonProperty("ClbId")]
         public string ClbId{ get; set; }
+
+        /// <summary>
+        /// 环境namespace
+        /// </summary>
+        [JsonProperty("ClusterNamespace")]
+        public string ClusterNamespace{ get; set; }
 
         /// <summary>
         /// tls 配置
@@ -119,11 +119,11 @@ namespace TencentCloud.Tem.V20210701.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
-            this.SetParamSimple(map, prefix + "ClusterNamespace", this.ClusterNamespace);
             this.SetParamSimple(map, prefix + "AddressIPVersion", this.AddressIPVersion);
             this.SetParamSimple(map, prefix + "IngressName", this.IngressName);
             this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
             this.SetParamSimple(map, prefix + "ClbId", this.ClbId);
+            this.SetParamSimple(map, prefix + "ClusterNamespace", this.ClusterNamespace);
             this.SetParamArrayObj(map, prefix + "Tls.", this.Tls);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);

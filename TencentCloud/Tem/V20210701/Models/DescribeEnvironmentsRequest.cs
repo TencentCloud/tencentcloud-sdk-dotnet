@@ -25,13 +25,13 @@ namespace TencentCloud.Tem.V20210701.Models
     {
         
         /// <summary>
-        /// 分页limit
+        /// 分页limit，默认：20
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 分页下标
+        /// 分页下标，默认：0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

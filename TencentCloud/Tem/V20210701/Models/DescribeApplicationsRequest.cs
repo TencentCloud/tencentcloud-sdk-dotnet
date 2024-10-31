@@ -31,13 +31,13 @@ namespace TencentCloud.Tem.V20210701.Models
         public string EnvironmentId{ get; set; }
 
         /// <summary>
-        /// 分页Limit
+        /// 分页Limit，默认值：20
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 分页offset
+        /// 分页offset,默认值：0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

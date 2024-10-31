@@ -79,6 +79,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ClusterStatus{ get; set; }
 
         /// <summary>
+        /// 集群运行子状态
+        /// </summary>
+        [JsonProperty("ClusterSubStatus")]
+        public string ClusterSubStatus{ get; set; }
+
+        /// <summary>
         /// 集群的检测模式，为Cluster_Normal或者Cluster_Actived.
         /// </summary>
         [JsonProperty("ClusterCheckMode")]
@@ -206,6 +212,19 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("CoresCnt")]
         public ulong? CoresCnt{ get; set; }
 
+        /// <summary>
+        /// 集群审计开关状态：
+        /// 已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
+        /// </summary>
+        [JsonProperty("ClusterAuditStatus")]
+        public string ClusterAuditStatus{ get; set; }
+
+        /// <summary>
+        /// 集群审计开关失败信息
+        /// </summary>
+        [JsonProperty("ClusterAuditFailedInfo")]
+        public string ClusterAuditFailedInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -221,6 +240,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "DefenderStatus", this.DefenderStatus);
             this.SetParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
+            this.SetParamSimple(map, prefix + "ClusterSubStatus", this.ClusterSubStatus);
             this.SetParamSimple(map, prefix + "ClusterCheckMode", this.ClusterCheckMode);
             this.SetParamSimple(map, prefix + "ClusterAutoCheck", this.ClusterAutoCheck);
             this.SetParamSimple(map, prefix + "DefenderErrorReason", this.DefenderErrorReason);
@@ -240,6 +260,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ChargeCoresCnt", this.ChargeCoresCnt);
             this.SetParamArraySimple(map, prefix + "MasterAddresses.", this.MasterAddresses);
             this.SetParamSimple(map, prefix + "CoresCnt", this.CoresCnt);
+            this.SetParamSimple(map, prefix + "ClusterAuditStatus", this.ClusterAuditStatus);
+            this.SetParamSimple(map, prefix + "ClusterAuditFailedInfo", this.ClusterAuditFailedInfo);
         }
     }
 }

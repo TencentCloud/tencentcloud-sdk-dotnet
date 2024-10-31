@@ -181,7 +181,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// abc
+        /// 节点名称
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }

@@ -91,6 +91,106 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("LogId")]
         public string LogId{ get; set; }
 
+        /// <summary>
+        /// 规则开关状态 1打开 0关闭
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
+        /// <summary>
+        /// 规则源类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SrcType")]
+        public long? SrcType{ get; set; }
+
+        /// <summary>
+        /// 规则目的类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DstType")]
+        public long? DstType{ get; set; }
+
+        /// <summary>
+        /// 规则唯一ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Uuid")]
+        public string Uuid{ get; set; }
+
+        /// <summary>
+        /// 规则有效性
+        /// 1 有效
+        /// 0 无效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Invalid")]
+        public long? Invalid{ get; set; }
+
+        /// <summary>
+        /// 是否地域规则
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsRegion")]
+        public long? IsRegion{ get; set; }
+
+        /// <summary>
+        /// 云厂商代码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CloudCode")]
+        public string CloudCode{ get; set; }
+
+        /// <summary>
+        /// 自动化助手信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoTask")]
+        public string AutoTask{ get; set; }
+
+        /// <summary>
+        /// 实例名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceName")]
+        public string InstanceName{ get; set; }
+
+        /// <summary>
+        /// 地域码信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RegionCode")]
+        public string RegionCode{ get; set; }
+
+        /// <summary>
+        /// 国家代码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Country")]
+        public long? Country{ get; set; }
+
+        /// <summary>
+        /// 城市代码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("City")]
+        public long? City{ get; set; }
+
+        /// <summary>
+        /// 国家名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RegName1")]
+        public string RegName1{ get; set; }
+
+        /// <summary>
+        /// 城市名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RegName2")]
+        public string RegName2{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +207,20 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamSimple(map, prefix + "OrderIndex", this.OrderIndex);
             this.SetParamSimple(map, prefix + "LogId", this.LogId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "SrcType", this.SrcType);
+            this.SetParamSimple(map, prefix + "DstType", this.DstType);
+            this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
+            this.SetParamSimple(map, prefix + "Invalid", this.Invalid);
+            this.SetParamSimple(map, prefix + "IsRegion", this.IsRegion);
+            this.SetParamSimple(map, prefix + "CloudCode", this.CloudCode);
+            this.SetParamSimple(map, prefix + "AutoTask", this.AutoTask);
+            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamSimple(map, prefix + "RegionCode", this.RegionCode);
+            this.SetParamSimple(map, prefix + "Country", this.Country);
+            this.SetParamSimple(map, prefix + "City", this.City);
+            this.SetParamSimple(map, prefix + "RegName1", this.RegName1);
+            this.SetParamSimple(map, prefix + "RegName2", this.RegName2);
         }
     }
 }

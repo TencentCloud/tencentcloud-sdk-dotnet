@@ -25,13 +25,13 @@ namespace TencentCloud.Trp.V20210515.Models
     {
         
         /// <summary>
-        /// 数量
+        /// 溯源阶段数量
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 溯源明细
         /// </summary>
         [JsonProperty("TraceDataList")]
         public TraceData[] TraceDataList{ get; set; }

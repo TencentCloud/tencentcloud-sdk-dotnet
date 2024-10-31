@@ -25,7 +25,7 @@ namespace TencentCloud.Smop.V20201203.Models
     {
         
         /// <summary>
-        /// 状态码
+        /// 状态码，0为成功，-1为失败
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Code")]
@@ -46,21 +46,21 @@ namespace TencentCloud.Smop.V20201203.Models
         public long? TaskId{ get; set; }
 
         /// <summary>
-        /// 当前完成或正在完成的任务订单ID
+        /// 当前完成或正在完成的安心用户运营平台的任务订单ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskOrderId")]
         public string TaskOrderId{ get; set; }
 
         /// <summary>
-        /// 当前任务订单状态码
+        /// 当前任务订单状态码。1代表未完成；2代表已完成但未提交任务；3表示已完成，且已提交获得积分任务；4表示过期任务，提交后不获得积分。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskCode")]
         public long? TaskCode{ get; set; }
 
         /// <summary>
-        /// 获得积分数/成长值
+        /// 获得积分数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskCoinNumber")]
@@ -74,14 +74,14 @@ namespace TencentCloud.Smop.V20201203.Models
         public long? TaskType{ get; set; }
 
         /// <summary>
-        /// 当前积分
+        /// 用户的当前积分
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCoin")]
         public long? TotalCoin{ get; set; }
 
         /// <summary>
-        /// 用户透传的代码块
+        /// 用户透传的附加数据
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Attach")]
@@ -109,7 +109,7 @@ namespace TencentCloud.Smop.V20201203.Models
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// 当前成长值
+        /// 用户当前成长值
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GrowScore")]
