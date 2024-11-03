@@ -26,7 +26,6 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// mongo表自增Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
@@ -75,49 +74,42 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 55101145
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleId")]
         public ulong? RuleId{ get; set; }
 
         /// <summary>
         /// IP列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpList")]
         public string[] IpList{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
         /// 定时任务类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobType")]
         public string JobType{ get; set; }
 
         /// <summary>
         /// 周期任务类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CronType")]
         public string CronType{ get; set; }
 
         /// <summary>
         /// 定时任务配置详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobDateTime")]
         public JobDateTime JobDateTime{ get; set; }
 
         /// <summary>
         /// 生效状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValidStatus")]
         public long? ValidStatus{ get; set; }

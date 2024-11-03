@@ -73,7 +73,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public long? MatchFunc{ get; set; }
 
         /// <summary>
-        /// 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截
+        /// 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，26表示精准人机识别，27表示JS校验
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }

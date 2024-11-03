@@ -25,12 +25,6 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 开始时间
-        /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
-
-        /// <summary>
         /// 结束时间
         /// </summary>
         [JsonProperty("EndTime")]
@@ -41,6 +35,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         [JsonProperty("QueryType")]
         public string QueryType{ get; set; }
+
+        /// <summary>
+        /// 开始时间
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
 
         /// <summary>
         /// top数
@@ -60,9 +60,9 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "QueryType", this.QueryType);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "Top", this.Top);
             this.SetParamSimple(map, prefix + "SearchValue", this.SearchValue);
         }

@@ -26,42 +26,36 @@ namespace TencentCloud.Cfw.V20190904.Models
         
         /// <summary>
         /// 访问源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceContent")]
         public string SourceContent{ get; set; }
 
         /// <summary>
         /// 访问目的
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetContent")]
         public string TargetContent{ get; set; }
 
         /// <summary>
         /// 协议
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
         /// 端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Port")]
         public string Port{ get; set; }
 
         /// <summary>
         /// 访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleAction")]
         public string RuleAction{ get; set; }
 
         /// <summary>
         /// 描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -80,119 +74,102 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// 访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
 
         /// <summary>
         /// 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为 ip,net,domain,template,location,dnsparse
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetType")]
         public string TargetType{ get; set; }
 
         /// <summary>
         /// 规则对应的唯一id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uuid")]
         public ulong? Uuid{ get; set; }
 
         /// <summary>
         /// 规则有效性
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Invalid")]
         public ulong? Invalid{ get; set; }
 
         /// <summary>
         /// 0为正常规则,1为地域规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsRegion")]
         public ulong? IsRegion{ get; set; }
 
         /// <summary>
         /// 国家id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CountryCode")]
         public ulong? CountryCode{ get; set; }
 
         /// <summary>
         /// 城市id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CityCode")]
         public ulong? CityCode{ get; set; }
 
         /// <summary>
         /// 国家名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CountryName")]
         public string CountryName{ get; set; }
 
         /// <summary>
         /// 省名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CityName")]
         public string CityName{ get; set; }
 
         /// <summary>
         /// 云厂商code
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CloudCode")]
         public string CloudCode{ get; set; }
 
         /// <summary>
         /// 0为正常规则,1为云厂商规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsCloud")]
         public ulong? IsCloud{ get; set; }
 
         /// <summary>
         /// 规则状态，true表示启用，false表示禁用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Enable")]
         public string Enable{ get; set; }
 
         /// <summary>
         /// 规则方向：1，入向；0，出向
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Direction")]
         public ulong? Direction{ get; set; }
 
         /// <summary>
         /// 实例名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
         /// 内部使用的uuid，一般情况下不会使用到该字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InternalUuid")]
         public long? InternalUuid{ get; set; }
 
         /// <summary>
         /// 规则状态，查询规则命中详情时该字段有效，0：新增，1: 已删除, 2: 编辑删除
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// 关联任务详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BetaList")]
         public BetaInfoByACL[] BetaList{ get; set; }
@@ -200,56 +177,48 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// <summary>
         /// （1）互联网边界防火墙，生效范围：serial，串行；side，旁路；all，全局；
         /// （2）NAT边界防火墙：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Scope")]
         public string Scope{ get; set; }
 
         /// <summary>
         /// 生效范围描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScopeDesc")]
         public string ScopeDesc{ get; set; }
 
         /// <summary>
         /// 互联网边界防火墙使用的内部规则id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InternetBorderUuid")]
         public string InternetBorderUuid{ get; set; }
 
         /// <summary>
         /// 协议端口组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParamTemplateName")]
         public string ParamTemplateName{ get; set; }
 
         /// <summary>
         /// 协议端口组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParamTemplateId")]
         public string ParamTemplateId{ get; set; }
 
         /// <summary>
         /// 访问源名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceName")]
         public string SourceName{ get; set; }
 
         /// <summary>
         /// 访问目的名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetName")]
         public string TargetName{ get; set; }
 
         /// <summary>
         /// 规则最近命中时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastHitTime")]
         public string LastHitTime{ get; set; }

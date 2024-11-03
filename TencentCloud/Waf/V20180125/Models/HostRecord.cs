@@ -125,14 +125,12 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 防护等级，可选值100,200,300
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Level")]
         public ulong? Level{ get; set; }
 
         /// <summary>
         /// 域名需要下发到的cdc集群列表。仅CDC场景下填充
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CdcClusters")]
         public string[] CdcClusters{ get; set; }
@@ -141,14 +139,14 @@ namespace TencentCloud.Waf.V20180125.Models
         /// 应用型负载均衡类型，默认clb。 
         /// clb：七层负载均衡器类型 
         /// apisix：apisix网关型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// tsegw：云原生API网关
+        /// scf：云函数
         /// </summary>
         [JsonProperty("AlbType")]
         public string AlbType{ get; set; }
 
         /// <summary>
         /// IsCdn=3时，需要填此参数，表示自定义header
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpHeaders")]
         public string[] IpHeaders{ get; set; }
@@ -157,7 +155,6 @@ namespace TencentCloud.Waf.V20180125.Models
         /// 规则引擎类型。
         /// 1: menshen
         /// 2: tiga
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineType")]
         public long? EngineType{ get; set; }
@@ -167,14 +164,12 @@ namespace TencentCloud.Waf.V20180125.Models
         /// public:公有云
         /// private:私有云
         /// hybrid:混合云
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CloudType")]
         public string CloudType{ get; set; }
 
         /// <summary>
         /// 域名备注信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }

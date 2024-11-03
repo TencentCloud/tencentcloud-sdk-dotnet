@@ -32,14 +32,12 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// 网关所属vpc id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// 网关ip地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpAddress")]
         public string IpAddress{ get; set; }

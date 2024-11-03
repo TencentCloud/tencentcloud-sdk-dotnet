@@ -26,14 +26,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         
         /// <summary>
         /// 接口返回信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReturnMsg")]
         public string ReturnMsg{ get; set; }
 
         /// <summary>
         /// 接口返回错误码，0请求成功  非0失败
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReturnCode")]
         public long? ReturnCode{ get; set; }

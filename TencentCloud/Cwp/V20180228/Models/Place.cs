@@ -26,28 +26,24 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 城市 ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CityId")]
         public ulong? CityId{ get; set; }
 
         /// <summary>
         /// 省份 ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProvinceId")]
         public ulong? ProvinceId{ get; set; }
 
         /// <summary>
         /// 国家ID，暂只支持国内：1。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CountryId")]
         public ulong? CountryId{ get; set; }
 
         /// <summary>
         /// 位置名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Location")]
         public string Location{ get; set; }

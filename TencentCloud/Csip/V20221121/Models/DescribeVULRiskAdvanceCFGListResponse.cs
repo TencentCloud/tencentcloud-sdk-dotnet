@@ -26,7 +26,6 @@ namespace TencentCloud.Csip.V20221121.Models
         
         /// <summary>
         /// 配置项列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public VULRiskAdvanceCFGList[] Data{ get; set; }
@@ -39,28 +38,24 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// 风险等级过滤列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskLevelLists")]
         public FilterDataObject[] RiskLevelLists{ get; set; }
 
         /// <summary>
         /// 漏洞类型过滤列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VULTypeLists")]
         public FilterDataObject[] VULTypeLists{ get; set; }
 
         /// <summary>
         /// 识别来源过滤列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckFromLists")]
         public FilterDataObject[] CheckFromLists{ get; set; }
 
         /// <summary>
         /// 漏洞标签列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulTagList")]
         public FilterDataObject[] VulTagList{ get; set; }

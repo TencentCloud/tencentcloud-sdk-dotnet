@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 配置查询事件执行计划的起始日期。
+        /// 配置查询事件执行计划的起始日期，查询日期最大跨度30天。
         /// </summary>
         [JsonProperty("ExecutionStartDate")]
         public string ExecutionStartDate{ get; set; }
 
         /// <summary>
-        /// 配置查询事件执行计划的结束日期。
+        /// 配置查询事件执行计划的结束日期，查询日期最大跨度30天。
         /// </summary>
         [JsonProperty("ExecutionEndDate")]
         public string ExecutionEndDate{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 输出每页显示事件的数量，默认：10。
+        /// 输出每页显示事件的数量，默认：10，最大100。
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }

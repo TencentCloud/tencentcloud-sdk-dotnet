@@ -104,56 +104,48 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// 私有网络ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// 子网ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
         /// 实例名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
         /// 公网IP，多个以英文逗号分隔
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
         /// <summary>
         /// 内网IP，多个以英文逗号分隔
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrivateIp")]
         public string PrivateIp{ get; set; }
 
         /// <summary>
         /// 掩码地址，多个以英文逗号分隔
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cidr")]
         public string Cidr{ get; set; }
 
         /// <summary>
         /// 端口协议类型参数模板id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceTemplateId")]
         public string ServiceTemplateId{ get; set; }
 
         /// <summary>
         /// 生成双向下发规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BothWayInfo")]
         public SecurityGroupBothWayInfo[] BothWayInfo{ get; set; }
@@ -172,35 +164,30 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// Uuid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
         /// 地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// 资产分组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssetGroupNameIn")]
         public string AssetGroupNameIn{ get; set; }
 
         /// <summary>
         /// 资产分组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssetGroupNameOut")]
         public string AssetGroupNameOut{ get; set; }
 
         /// <summary>
         /// 模板名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParameterName")]
         public string ParameterName{ get; set; }

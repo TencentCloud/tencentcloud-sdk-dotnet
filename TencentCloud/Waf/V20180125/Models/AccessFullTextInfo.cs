@@ -26,21 +26,18 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// 是否大小写敏感
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CaseSensitive")]
         public bool? CaseSensitive{ get; set; }
 
         /// <summary>
         /// 全文索引的分词符，字符串中每个字符代表一个分词符
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tokenizer")]
         public string Tokenizer{ get; set; }
 
         /// <summary>
         /// 是否包含中文
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainZH")]

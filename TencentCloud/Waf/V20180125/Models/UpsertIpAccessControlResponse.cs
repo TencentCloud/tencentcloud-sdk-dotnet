@@ -26,21 +26,18 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// 添加或修改失败的条目
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedItems")]
         public string FailedItems{ get; set; }
 
         /// <summary>
         /// 添加或修改失败的数目
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedCount")]
         public long? FailedCount{ get; set; }
 
         /// <summary>
         /// 添加或修改的IP数据Id列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ids")]
         public string[] Ids{ get; set; }

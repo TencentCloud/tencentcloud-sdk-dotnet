@@ -49,7 +49,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
+        /// 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Edition{ get; set; }
 
         /// <summary>
-        /// 放行的详情
+        /// 放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果多个勾选那么以,串接。默认是"geoip,cc,owasp,ai,antileakage"
         /// </summary>
         [JsonProperty("Bypass")]
         public string Bypass{ get; set; }

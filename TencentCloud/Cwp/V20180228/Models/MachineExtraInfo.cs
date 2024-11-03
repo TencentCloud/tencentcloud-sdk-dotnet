@@ -26,42 +26,36 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 公网IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WanIP")]
         public string WanIP{ get; set; }
 
         /// <summary>
         /// 内网IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrivateIP")]
         public string PrivateIP{ get; set; }
 
         /// <summary>
         /// 网络类型，1:vpc网络 2:基础网络 3:非腾讯云网络
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetworkType")]
         public long? NetworkType{ get; set; }
 
         /// <summary>
         /// 网络名，vpc网络情况下会返回vpc_id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetworkName")]
         public string NetworkName{ get; set; }
 
         /// <summary>
         /// 实例ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
         /// 主机名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }

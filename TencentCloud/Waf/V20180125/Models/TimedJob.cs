@@ -26,14 +26,12 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// 开始时间戳，单位为秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartDateTime")]
         public ulong? StartDateTime{ get; set; }
 
         /// <summary>
         /// 结束时间戳，单位为秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndDateTime")]
         public ulong? EndDateTime{ get; set; }

@@ -26,168 +26,144 @@ namespace TencentCloud.Cfw.V20190904.Models
         
         /// <summary>
         /// 规则类型，取值：1 封禁，2外部IP，3域名，4情报，5assets，6自定义策略，7入侵防御规则id （2-7属于白名单类型）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleType")]
         public long? RuleType{ get; set; }
 
         /// <summary>
         /// 规则ip或白名单内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ioc")]
         public string Ioc{ get; set; }
 
         /// <summary>
         /// 资产实例名称、自定义策略名称等
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IocName")]
         public string IocName{ get; set; }
 
         /// <summary>
         /// 白名单信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IocInfo")]
         public string IocInfo{ get; set; }
 
         /// <summary>
         /// 域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
         /// IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IP")]
         public string IP{ get; set; }
 
         /// <summary>
         /// 危险等级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
         /// 来源事件名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventName")]
         public string EventName{ get; set; }
 
         /// <summary>
         /// 方向：1入站，0出站
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Direction")]
         public long? Direction{ get; set; }
 
         /// <summary>
         /// 所有方向聚合成字符串
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DirectionList")]
         public string DirectionList{ get; set; }
 
         /// <summary>
         /// 协议
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
         /// 地理位置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
         /// 规则类型：1封禁，2放通
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Action")]
         public long? Action{ get; set; }
 
         /// <summary>
         /// 规则生效开始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// 规则生效结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
         /// 忽略原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IgnoreReason")]
         public string IgnoreReason{ get; set; }
 
         /// <summary>
         /// 安全事件来源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
         /// 规则id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UniqueId")]
         public string UniqueId{ get; set; }
 
         /// <summary>
         /// 规则命中次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MatchTimes")]
         public long? MatchTimes{ get; set; }
 
         /// <summary>
         /// 国家
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Country")]
         public string Country{ get; set; }
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
         /// 上次命中时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastHitTime")]
         public string LastHitTime{ get; set; }
 
         /// <summary>
         /// 自定义规则细节
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomRule")]
         public CustomWhiteRule CustomRule{ get; set; }
 
         /// <summary>
         /// 1 border 2 nat 4 vpc 8 border-serial
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FwType")]
         public long? FwType{ get; set; }

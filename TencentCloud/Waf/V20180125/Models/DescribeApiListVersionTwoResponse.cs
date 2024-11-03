@@ -26,14 +26,12 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// api资产列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public ApiAsset[] Data{ get; set; }
 
         /// <summary>
         /// 总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }

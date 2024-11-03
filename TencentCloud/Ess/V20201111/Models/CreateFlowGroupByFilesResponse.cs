@@ -26,14 +26,12 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 合同(流程)组的合同组Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowGroupId")]
         public string FlowGroupId{ get; set; }
 
         /// <summary>
         /// 合同(流程)组中子合同列表.
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowIds")]
         public string[] FlowIds{ get; set; }

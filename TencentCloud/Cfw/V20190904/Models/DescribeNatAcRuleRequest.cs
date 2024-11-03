@@ -43,7 +43,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Index{ get; set; }
 
         /// <summary>
-        /// 过滤条件组合
+        /// 过滤条件组合，Direction 为0时表述查询出向规则，为1时表示查询入向规则
         /// </summary>
         [JsonProperty("Filters")]
         public CommonFilter[] Filters{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
+        /// desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值，默认为asc
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// 排序所用到的字段
+        /// 排序所用到的字段，默认为sequence
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }

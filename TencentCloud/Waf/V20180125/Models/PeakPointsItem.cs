@@ -68,105 +68,90 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// WAF返回给客户端状态码5xx次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusServerError")]
         public ulong? StatusServerError{ get; set; }
 
         /// <summary>
         /// WAF返回给客户端状态码4xx次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusClientError")]
         public ulong? StatusClientError{ get; set; }
 
         /// <summary>
         /// WAF返回给客户端状态码302次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusRedirect")]
         public ulong? StatusRedirect{ get; set; }
 
         /// <summary>
         /// WAF返回给客户端状态码202次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusOk")]
         public ulong? StatusOk{ get; set; }
 
         /// <summary>
         /// 源站返回给WAF状态码5xx次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpstreamServerError")]
         public ulong? UpstreamServerError{ get; set; }
 
         /// <summary>
         /// 源站返回给WAF状态码4xx次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpstreamClientError")]
         public ulong? UpstreamClientError{ get; set; }
 
         /// <summary>
         /// 源站返回给WAF状态码302次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpstreamRedirect")]
         public ulong? UpstreamRedirect{ get; set; }
 
         /// <summary>
         /// 黑名单次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BlackIP")]
         public ulong? BlackIP{ get; set; }
 
         /// <summary>
         /// 防篡改次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tamper")]
         public ulong? Tamper{ get; set; }
 
         /// <summary>
         /// 信息防泄露次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Leak")]
         public ulong? Leak{ get; set; }
 
         /// <summary>
         /// 访问控制 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ACL")]
         public ulong? ACL{ get; set; }
 
         /// <summary>
         /// 小程序 qps
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WxAccess")]
         public ulong? WxAccess{ get; set; }
 
         /// <summary>
         /// 小程序请求数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WxCount")]
         public ulong? WxCount{ get; set; }
 
         /// <summary>
         /// 小程序上行带宽峰值，单位B
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WxUp")]
         public ulong? WxUp{ get; set; }
 
         /// <summary>
         /// 小程序下行带宽峰值，单位B
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WxDown")]
         public ulong? WxDown{ get; set; }

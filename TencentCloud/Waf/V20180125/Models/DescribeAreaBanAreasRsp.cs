@@ -32,7 +32,6 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 数据来源 custom-自定义(默认)、batch-批量防护
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
@@ -45,7 +44,6 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 定时任务类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobType")]
         public string JobType{ get; set; }
@@ -59,7 +57,6 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 周期任务配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CronType")]
         public string CronType{ get; set; }

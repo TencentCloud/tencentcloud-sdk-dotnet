@@ -26,21 +26,18 @@ namespace TencentCloud.Csip.V20221121.Models
         
         /// <summary>
         /// 资产名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssetName")]
         public string AssetName{ get; set; }
 
         /// <summary>
         /// 资产类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
         /// 资产分类
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssetType")]
         public string AssetType{ get; set; }
@@ -53,14 +50,12 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// 地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// 多云资产唯一id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Arn")]
         public string Arn{ get; set; }

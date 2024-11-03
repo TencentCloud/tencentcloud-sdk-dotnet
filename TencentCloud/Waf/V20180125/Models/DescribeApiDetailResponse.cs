@@ -26,84 +26,72 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// 请求样例，json字符串格式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Log")]
         public string Log{ get; set; }
 
         /// <summary>
         /// 请求参数样例列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParameterList")]
         public ApiParameterType[] ParameterList{ get; set; }
 
         /// <summary>
         /// 当前场景标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Scene")]
         public string Scene{ get; set; }
 
         /// <summary>
         /// 敏感字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveFields")]
         public string[] SensitiveFields{ get; set; }
 
         /// <summary>
         /// 7天内是否活跃
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsActive")]
         public bool? IsActive{ get; set; }
 
         /// <summary>
         /// 访问ip数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpCount")]
         public long? IpCount{ get; set; }
 
         /// <summary>
         /// 访问地域数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionCount")]
         public long? RegionCount{ get; set; }
 
         /// <summary>
         /// 关联事件数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventCount")]
         public long? EventCount{ get; set; }
 
         /// <summary>
         /// 涉敏数据条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveCount")]
         public ulong? SensitiveCount{ get; set; }
 
         /// <summary>
         /// 风险等级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Level")]
         public ulong? Level{ get; set; }
 
         /// <summary>
         /// 响应体
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RspLog")]
         public string RspLog{ get; set; }
 
         /// <summary>
         /// 昨日访问峰值QPS
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxQPS")]
         public ulong? MaxQPS{ get; set; }

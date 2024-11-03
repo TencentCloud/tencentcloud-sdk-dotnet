@@ -55,7 +55,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string From{ get; set; }
 
         /// <summary>
-        /// 是否使用id 默认不需要
+        /// 是否复用rule id，1为是，默认不需要
         /// </summary>
         [JsonProperty("IsUseId")]
         public long? IsUseId{ get; set; }

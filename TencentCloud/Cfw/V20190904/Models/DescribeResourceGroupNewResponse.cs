@@ -31,10 +31,10 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Data{ get; set; }
 
         /// <summary>
-        /// 未分类实例数量
+        /// 返回码；0为请求成功
         /// </summary>
-        [JsonProperty("UnResourceNum")]
-        public long? UnResourceNum{ get; set; }
+        [JsonProperty("ReturnCode")]
+        public long? ReturnCode{ get; set; }
 
         /// <summary>
         /// 接口返回消息
@@ -43,10 +43,10 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string ReturnMsg{ get; set; }
 
         /// <summary>
-        /// 返回码；0为请求成功
+        /// 未分类实例数量
         /// </summary>
-        [JsonProperty("ReturnCode")]
-        public long? ReturnCode{ get; set; }
+        [JsonProperty("UnResourceNum")]
+        public long? UnResourceNum{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -61,9 +61,9 @@ namespace TencentCloud.Cfw.V20190904.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Data", this.Data);
-            this.SetParamSimple(map, prefix + "UnResourceNum", this.UnResourceNum);
-            this.SetParamSimple(map, prefix + "ReturnMsg", this.ReturnMsg);
             this.SetParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
+            this.SetParamSimple(map, prefix + "ReturnMsg", this.ReturnMsg);
+            this.SetParamSimple(map, prefix + "UnResourceNum", this.UnResourceNum);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

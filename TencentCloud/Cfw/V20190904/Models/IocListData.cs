@@ -26,21 +26,18 @@ namespace TencentCloud.Cfw.V20190904.Models
         
         /// <summary>
         /// 待处置IP地址，IP/Domain字段二选一
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IP")]
         public string IP{ get; set; }
 
         /// <summary>
         /// 只能为0或者1   0代表出站 1代表入站
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Direction")]
         public long? Direction{ get; set; }
 
         /// <summary>
         /// 待处置域名，IP/Domain字段二选一
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }

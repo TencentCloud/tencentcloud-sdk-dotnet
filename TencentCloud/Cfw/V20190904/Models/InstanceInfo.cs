@@ -31,28 +31,18 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string AppId{ get; set; }
 
         /// <summary>
-        /// 地域
+        /// 资产来源
+        /// 1公网 2内网
         /// </summary>
-        [JsonProperty("Region")]
-        public string Region{ get; set; }
+        [JsonProperty("InsSource")]
+        public string InsSource{ get; set; }
 
         /// <summary>
-        /// vpcid信息
+        /// 资产类型
+        ///  3是cvm实例,4是clb实例,5是eni实例,6是mysql,7是redis,8是NAT,9是VPN,10是ES,11是MARIADB,12是KAFKA 13 NATFW
         /// </summary>
-        [JsonProperty("VpcId")]
-        public string VpcId{ get; set; }
-
-        /// <summary>
-        /// vpc名称
-        /// </summary>
-        [JsonProperty("VPCName")]
-        public string VPCName{ get; set; }
-
-        /// <summary>
-        /// 子网id
-        /// </summary>
-        [JsonProperty("SubnetId")]
-        public string SubnetId{ get; set; }
+        [JsonProperty("InsType")]
+        public long? InsType{ get; set; }
 
         /// <summary>
         /// 资产id
@@ -67,23 +57,10 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 资产类型
-        ///  3是cvm实例,4是clb实例,5是eni实例,6是mysql,7是redis,8是NAT,9是VPN,10是ES,11是MARIADB,12是KAFKA 13 NATFW
+        /// 漏洞数
         /// </summary>
-        [JsonProperty("InsType")]
-        public long? InsType{ get; set; }
-
-        /// <summary>
-        /// 公网ip
-        /// </summary>
-        [JsonProperty("PublicIp")]
-        public string PublicIp{ get; set; }
-
-        /// <summary>
-        /// 内网ip
-        /// </summary>
-        [JsonProperty("PrivateIp")]
-        public string PrivateIp{ get; set; }
+        [JsonProperty("LeakNum")]
+        public string LeakNum{ get; set; }
 
         /// <summary>
         /// 端口数
@@ -92,37 +69,58 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string PortNum{ get; set; }
 
         /// <summary>
-        /// 漏洞数
+        /// 内网ip
         /// </summary>
-        [JsonProperty("LeakNum")]
-        public string LeakNum{ get; set; }
+        [JsonProperty("PrivateIp")]
+        public string PrivateIp{ get; set; }
 
         /// <summary>
-        /// 1，公网 2内网
+        /// 公网ip
         /// </summary>
-        [JsonProperty("InsSource")]
-        public string InsSource{ get; set; }
+        [JsonProperty("PublicIp")]
+        public string PublicIp{ get; set; }
 
         /// <summary>
-        /// [a,b]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 地域
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
+        /// 地域
+        /// </summary>
+        [JsonProperty("RegionKey")]
+        public string RegionKey{ get; set; }
+
+        /// <summary>
+        /// 资产路径
         /// </summary>
         [JsonProperty("ResourcePath")]
         public string[] ResourcePath{ get; set; }
 
         /// <summary>
         /// 扫描结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Server")]
         public string[] Server{ get; set; }
 
         /// <summary>
-        /// 地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 子网id
         /// </summary>
-        [JsonProperty("RegionKey")]
-        public string RegionKey{ get; set; }
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
+        /// <summary>
+        /// vpc名称
+        /// </summary>
+        [JsonProperty("VPCName")]
+        public string VPCName{ get; set; }
+
+        /// <summary>
+        /// vpcid信息
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
 
 
         /// <summary>
@@ -131,21 +129,21 @@ namespace TencentCloud.Cfw.V20190904.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
-            this.SetParamSimple(map, prefix + "Region", this.Region);
-            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
-            this.SetParamSimple(map, prefix + "VPCName", this.VPCName);
-            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "InsSource", this.InsSource);
+            this.SetParamSimple(map, prefix + "InsType", this.InsType);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
-            this.SetParamSimple(map, prefix + "InsType", this.InsType);
-            this.SetParamSimple(map, prefix + "PublicIp", this.PublicIp);
-            this.SetParamSimple(map, prefix + "PrivateIp", this.PrivateIp);
-            this.SetParamSimple(map, prefix + "PortNum", this.PortNum);
             this.SetParamSimple(map, prefix + "LeakNum", this.LeakNum);
-            this.SetParamSimple(map, prefix + "InsSource", this.InsSource);
+            this.SetParamSimple(map, prefix + "PortNum", this.PortNum);
+            this.SetParamSimple(map, prefix + "PrivateIp", this.PrivateIp);
+            this.SetParamSimple(map, prefix + "PublicIp", this.PublicIp);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "RegionKey", this.RegionKey);
             this.SetParamArraySimple(map, prefix + "ResourcePath.", this.ResourcePath);
             this.SetParamArraySimple(map, prefix + "Server.", this.Server);
-            this.SetParamSimple(map, prefix + "RegionKey", this.RegionKey);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "VPCName", this.VPCName);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
         }
     }
 }

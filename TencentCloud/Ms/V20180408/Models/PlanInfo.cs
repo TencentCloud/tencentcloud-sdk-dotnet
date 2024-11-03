@@ -25,6 +25,13 @@ namespace TencentCloud.Ms.V20180408.Models
     {
         
         /// <summary>
+        /// Dex分离，0关闭，1开启
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SetFile")]
+        public string SetFile{ get; set; }
+
+        /// <summary>
         /// apk大小优化，0关闭，1开启
         /// </summary>
         [JsonProperty("ApkSizeOpt")]
@@ -55,24 +62,10 @@ namespace TencentCloud.Ms.V20180408.Models
         public ulong? AntiRepack{ get; set; }
 
         /// <summary>
-        /// Dex分离，0关闭，1开启
-        /// </summary>
-        [JsonProperty("SeperateDex")]
-        [System.Obsolete]
-        public ulong? SeperateDex{ get; set; }
-
-        /// <summary>
         /// 内存保护，0关闭，1开启
         /// </summary>
         [JsonProperty("Db")]
         public ulong? Db{ get; set; }
-
-        /// <summary>
-        /// Dex签名校验，0关闭，1开启
-        /// </summary>
-        [JsonProperty("DexSig")]
-        [System.Obsolete]
-        public ulong? DexSig{ get; set; }
 
         /// <summary>
         /// So文件信息
@@ -99,13 +92,6 @@ namespace TencentCloud.Ms.V20180408.Models
         public ulong? AntiLogLeak{ get; set; }
 
         /// <summary>
-        /// root检测，0关闭，1开启
-        /// </summary>
-        [JsonProperty("AntiQemuRoot")]
-        [System.Obsolete]
-        public ulong? AntiQemuRoot{ get; set; }
-
-        /// <summary>
         /// 资源防篡改，0关闭，1开启
         /// </summary>
         [JsonProperty("AntiAssets")]
@@ -124,13 +110,6 @@ namespace TencentCloud.Ms.V20180408.Models
         public ulong? AntiSSL{ get; set; }
 
         /// <summary>
-        /// Dex分离，0关闭，1开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("SetFile")]
-        public string SetFile{ get; set; }
-
-        /// <summary>
         /// Dex签名校验，0关闭，1开启
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -144,31 +123,52 @@ namespace TencentCloud.Ms.V20180408.Models
         [JsonProperty("AntiRoot")]
         public string AntiRoot{ get; set; }
 
+        /// <summary>
+        /// Dex分离，0关闭，1开启
+        /// </summary>
+        [JsonProperty("SeperateDex")]
+        [System.Obsolete]
+        public ulong? SeperateDex{ get; set; }
+
+        /// <summary>
+        /// Dex签名校验，0关闭，1开启
+        /// </summary>
+        [JsonProperty("DexSig")]
+        [System.Obsolete]
+        public ulong? DexSig{ get; set; }
+
+        /// <summary>
+        /// root检测，0关闭，1开启
+        /// </summary>
+        [JsonProperty("AntiQemuRoot")]
+        [System.Obsolete]
+        public ulong? AntiQemuRoot{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "SetFile", this.SetFile);
             this.SetParamSimple(map, prefix + "ApkSizeOpt", this.ApkSizeOpt);
             this.SetParamSimple(map, prefix + "Dex", this.Dex);
             this.SetParamSimple(map, prefix + "So", this.So);
             this.SetParamSimple(map, prefix + "Bugly", this.Bugly);
             this.SetParamSimple(map, prefix + "AntiRepack", this.AntiRepack);
-            this.SetParamSimple(map, prefix + "SeperateDex", this.SeperateDex);
             this.SetParamSimple(map, prefix + "Db", this.Db);
-            this.SetParamSimple(map, prefix + "DexSig", this.DexSig);
             this.SetParamObj(map, prefix + "SoInfo.", this.SoInfo);
             this.SetParamSimple(map, prefix + "AntiVMP", this.AntiVMP);
             this.SetParamArraySimple(map, prefix + "SoType.", this.SoType);
             this.SetParamSimple(map, prefix + "AntiLogLeak", this.AntiLogLeak);
-            this.SetParamSimple(map, prefix + "AntiQemuRoot", this.AntiQemuRoot);
             this.SetParamSimple(map, prefix + "AntiAssets", this.AntiAssets);
             this.SetParamSimple(map, prefix + "AntiScreenshot", this.AntiScreenshot);
             this.SetParamSimple(map, prefix + "AntiSSL", this.AntiSSL);
-            this.SetParamSimple(map, prefix + "SetFile", this.SetFile);
             this.SetParamSimple(map, prefix + "FileSign", this.FileSign);
             this.SetParamSimple(map, prefix + "AntiRoot", this.AntiRoot);
+            this.SetParamSimple(map, prefix + "SeperateDex", this.SeperateDex);
+            this.SetParamSimple(map, prefix + "DexSig", this.DexSig);
+            this.SetParamSimple(map, prefix + "AntiQemuRoot", this.AntiQemuRoot);
         }
     }
 }

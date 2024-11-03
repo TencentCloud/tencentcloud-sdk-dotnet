@@ -26,21 +26,18 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// 已经开启的数量,如果返回值为3（大于支持的域名开启数量），则表示开启失败
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }
 
         /// <summary>
         /// 不支持开启的域名列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnSupportedList")]
         public string[] UnSupportedList{ get; set; }
 
         /// <summary>
         /// 开启/关闭失败的域名列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailDomainList")]
         public string[] FailDomainList{ get; set; }

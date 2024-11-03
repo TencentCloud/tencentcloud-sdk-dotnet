@@ -56,77 +56,66 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// waf产品码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductInfo")]
         public ProductInfo[] ProductInfo{ get; set; }
 
         /// <summary>
         /// waf实例名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
         /// QPS数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ElasticQps")]
         public long? ElasticQps{ get; set; }
 
         /// <summary>
         /// 弹性账单
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlexBill")]
         public long? FlexBill{ get; set; }
 
         /// <summary>
         /// 1:自动续费，0:不自动续费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
         /// waf购买的实际地域信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealRegion")]
         public long? RealRegion{ get; set; }
 
         /// <summary>
         /// Waf实例对应的二级产品码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 计费细项标签数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LabelTypes")]
         public string[] LabelTypes{ get; set; }
 
         /// <summary>
         /// 计费细项标签数量，一般和SvLabelType一一对应
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LabelCounts")]
         public long?[] LabelCounts{ get; set; }
 
         /// <summary>
         /// 变配使用，实例到期时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurDeadline")]
         public string CurDeadline{ get; set; }
 
         /// <summary>
         /// 对存在的实例购买bot 或api 安全
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

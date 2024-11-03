@@ -31,13 +31,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 慢查询的开始时间。
+        /// 慢查询的开始时间，查询时间最大跨度30天。
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// 慢查询的结束时间。
+        /// 慢查询的结束时间，查询时间最大跨度30天。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? MinQueryTime{ get; set; }
 
         /// <summary>
-        /// 分页大小。默认为 20，取值范围[20,1000]。
+        /// 每页输出的任务列表大小，默认为 20，最多输出100条。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，取Limit整数倍。
+        /// 分页偏移量，取Limit整数倍，计算公式：offset=limit*(页码-1)。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

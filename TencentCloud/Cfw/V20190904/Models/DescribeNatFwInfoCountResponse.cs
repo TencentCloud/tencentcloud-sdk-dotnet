@@ -25,29 +25,25 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 返回参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 返回参数 success 成功 failed 失败
         /// </summary>
         [JsonProperty("ReturnMsg")]
         public string ReturnMsg{ get; set; }
 
         /// <summary>
-        /// 当前租户的nat实例个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 当前租户的nat防火墙实例个数
         /// </summary>
         [JsonProperty("NatFwInsCount")]
         public long? NatFwInsCount{ get; set; }
 
         /// <summary>
-        /// 当前租户接入子网个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 当前租户接入防火墙的子网个数
         /// </summary>
         [JsonProperty("SubnetCount")]
         public long? SubnetCount{ get; set; }
 
         /// <summary>
-        /// 打开开关个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 打开NAT防火墙开关个数
         /// </summary>
         [JsonProperty("OpenSwitchCount")]
         public long? OpenSwitchCount{ get; set; }

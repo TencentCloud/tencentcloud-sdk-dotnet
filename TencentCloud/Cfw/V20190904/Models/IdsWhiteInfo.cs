@@ -26,42 +26,36 @@ namespace TencentCloud.Cfw.V20190904.Models
         
         /// <summary>
         /// 白名单唯一ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
         /// 源IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SrcIp")]
         public string SrcIp{ get; set; }
 
         /// <summary>
         /// 目的IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DstIp")]
         public string DstIp{ get; set; }
 
         /// <summary>
         /// 规则类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WhiteRuleType")]
         public string WhiteRuleType{ get; set; }
 
         /// <summary>
         /// 白名单生效防火墙范围： 1 边界防火墙 2 nat防火墙 4 vpc防火墙 7 = 1+2+4 所有防火墙
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FwType")]
         public long? FwType{ get; set; }
 
         /// <summary>
         /// 入侵防御规则ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }

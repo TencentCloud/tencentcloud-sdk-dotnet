@@ -48,12 +48,12 @@ namespace TencentCloud.Waf.V20180125.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ColNames")]
+        [System.Obsolete]
         public string[] ColNames{ get; set; }
 
         /// <summary>
         /// 日志查询结果；当Analysis为True时，可能返回为null
         /// 注意：此字段可能返回 null，表示取不到有效值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Results")]
         public AccessLogInfo[] Results{ get; set; }
@@ -64,6 +64,7 @@ namespace TencentCloud.Waf.V20180125.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AnalysisResults")]
+        [System.Obsolete]
         public AccessLogItems[] AnalysisResults{ get; set; }
 
         /// <summary>

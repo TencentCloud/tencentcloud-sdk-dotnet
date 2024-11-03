@@ -26,28 +26,24 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// 每个月的几号执行
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Days")]
         public ulong?[] Days{ get; set; }
 
         /// <summary>
         /// 每个星期的星期几执行
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WDays")]
         public ulong?[] WDays{ get; set; }
 
         /// <summary>
         /// 开始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// 结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

@@ -26,7 +26,6 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// 分析结果返回的KV数据对
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public AccessLogItem[] Data{ get; set; }

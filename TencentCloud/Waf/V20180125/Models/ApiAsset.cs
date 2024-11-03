@@ -44,21 +44,18 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 场景
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Scene")]
         public string Scene{ get; set; }
 
         /// <summary>
         /// 数据标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
         public string[] Label{ get; set; }
 
         /// <summary>
         /// 过去7天是否活跃
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Active")]
         public bool? Active{ get; set; }
@@ -77,56 +74,48 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 资产状态，1:新发现，2，确认中，3，已确认，4，已下线，5，已忽略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
         /// 风险等级，100,200,300对应低中高
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
         /// 近30天调用量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
         /// 是否鉴权，1标识是，0表示否
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsAuth")]
         public long? IsAuth{ get; set; }
 
         /// <summary>
         /// 如果添加了api入参检测规则，则此id返回值不为0
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApiRequestRuleId")]
         public long? ApiRequestRuleId{ get; set; }
 
         /// <summary>
         /// 如果添加了api限流规则，则此id返回值不为0
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApiLimitRuleId")]
         public long? ApiLimitRuleId{ get; set; }
 
         /// <summary>
         /// 对象接入和泛域名接入时，展示host列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostList")]
         public string[] HostList{ get; set; }

@@ -50,7 +50,6 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 匹配参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MatchParams")]
         public string MatchParams{ get; set; }
@@ -81,49 +80,42 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 规则ID列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SignatureIds")]
         public string[] SignatureIds{ get; set; }
 
         /// <summary>
         /// 大类规则ID列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TypeIds")]
         public string[] TypeIds{ get; set; }
 
         /// <summary>
         /// 大类规则ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TypeId")]
         public string TypeId{ get; set; }
 
         /// <summary>
         /// 0:按照特定规则ID加白, 1:按照规则类型加白
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mode")]
         public long? Mode{ get; set; }
 
         /// <summary>
         /// 规则名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 匹配规则列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MatchInfo")]
         public UserWhiteRuleItem[] MatchInfo{ get; set; }
 
         /// <summary>
         /// MatchInfo字符串
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MatchInfoStr")]
         public string MatchInfoStr{ get; set; }

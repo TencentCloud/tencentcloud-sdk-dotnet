@@ -26,7 +26,6 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// 计费下单响应结构体
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public DealData Data{ get; set; }
@@ -39,7 +38,6 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 返回message
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReturnMessage")]
         public string ReturnMessage{ get; set; }

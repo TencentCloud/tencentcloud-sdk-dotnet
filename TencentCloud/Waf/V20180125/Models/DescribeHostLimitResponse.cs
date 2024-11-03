@@ -26,7 +26,6 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// 成功返回的状态码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Success")]
         public ResponseCode Success{ get; set; }

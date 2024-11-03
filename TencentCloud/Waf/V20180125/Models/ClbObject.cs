@@ -116,56 +116,48 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 对象类型：CLB:负载均衡器，TSE:云原生网关
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 对象地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// 代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Proxy")]
         public ulong? Proxy{ get; set; }
 
         /// <summary>
         /// 指定获取客户端IP的头部字段列表。IsCdn为3时有效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpHeaders")]
         public string[] IpHeaders{ get; set; }
 
         /// <summary>
         /// bot防护开关
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BotStatus")]
         public long? BotStatus{ get; set; }
 
         /// <summary>
         /// api防护开关
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApiStatus")]
         public long? ApiStatus{ get; set; }
 
         /// <summary>
         /// 对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ObjectFlowMode")]
         public long? ObjectFlowMode{ get; set; }
 
         /// <summary>
         /// 数值形式的私有网络 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NumericalVpcId")]
         public long? NumericalVpcId{ get; set; }

@@ -49,7 +49,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string UpstreamProtocol{ get; set; }
 
         /// <summary>
-        /// Nginx的服务器ID
+        /// Nginx的服务器ID,新增域名时填"0"
         /// </summary>
         [JsonProperty("NginxServerId")]
         public string NginxServerId{ get; set; }

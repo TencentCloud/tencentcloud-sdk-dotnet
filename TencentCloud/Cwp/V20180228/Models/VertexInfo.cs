@@ -50,42 +50,36 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 进程名，当Type=1时使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcNamePrefix")]
         public string ProcNamePrefix{ get; set; }
 
         /// <summary>
         /// 进程名md5，当Type=1时使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcNameMd5")]
         public string ProcNameMd5{ get; set; }
 
         /// <summary>
         /// 命令行，当Type=1时使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CmdLinePrefix")]
         public string CmdLinePrefix{ get; set; }
 
         /// <summary>
         /// 命令行md5，当Type=1时使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CmdLineMd5")]
         public string CmdLineMd5{ get; set; }
 
         /// <summary>
         /// 文件路径，当Type=3时使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FilePathPrefix")]
         public string FilePathPrefix{ get; set; }
 
         /// <summary>
         /// 请求目的地址，当Type=2时使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddressPrefix")]
         public string AddressPrefix{ get; set; }
@@ -104,14 +98,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 文件路径md5，当Type=3时使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FilePathMd5")]
         public string FilePathMd5{ get; set; }
 
         /// <summary>
         /// 请求目的地址md5，当Type=2时使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddressMd5")]
         public string AddressMd5{ get; set; }

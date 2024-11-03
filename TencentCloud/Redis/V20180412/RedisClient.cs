@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1115";
+       private const string sdkVersion = "SDK_NET_3.0.1116";
 
         /// <summary>
         /// Client constructor.
@@ -1378,6 +1378,8 @@ namespace TencentCloud.Redis.V20180412
 
         /// <summary>
         /// 本接口（DescribeTaskList）用于查询指定实例的任务列表信息。
+        /// 
+        /// - 可查询近30天内任务列表数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskListRequest"/></param>
         /// <returns><see cref="DescribeTaskListResponse"/></returns>
@@ -1388,6 +1390,8 @@ namespace TencentCloud.Redis.V20180412
 
         /// <summary>
         /// 本接口（DescribeTaskList）用于查询指定实例的任务列表信息。
+        /// 
+        /// - 可查询近30天内任务列表数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskListRequest"/></param>
         /// <returns><see cref="DescribeTaskListResponse"/></returns>

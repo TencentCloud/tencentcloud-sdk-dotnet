@@ -80,14 +80,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 主机额外信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
 
         /// <summary>
         /// 机器实例uuid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }

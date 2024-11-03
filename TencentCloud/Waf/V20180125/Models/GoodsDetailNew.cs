@@ -26,14 +26,12 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// 时间间隔
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
 
         /// <summary>
         /// 单位，支持购买d、m、y 即（日、月、年）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
@@ -52,8 +50,6 @@ namespace TencentCloud.Waf.V20180125.Models
         /// 旗舰版-CLB:sp_wsm_waf_ultimate_clb
         ///  业务扩展包-CLB：sp_wsm_waf_qpsep_clb
         /// 域名扩展包-CLB：sp_wsm_waf_domain_clb
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubProductCode")]
         public string SubProductCode{ get; set; }
@@ -70,29 +66,24 @@ namespace TencentCloud.Waf.V20180125.Models
         /// 旗舰版-CLB:1001154
         /// 域名包-CLB: 1001156
         /// 业务扩展包-CLB : 1001160
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Pid")]
         public long? Pid{ get; set; }
 
         /// <summary>
         /// waf实例名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
         /// 1:自动续费，0:不自动续费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
         /// waf购买的实际地域信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealRegion")]
         public long? RealRegion{ get; set; }
@@ -116,43 +107,36 @@ namespace TencentCloud.Waf.V20180125.Models
         /// 非中国大陆旗舰版CLB  sv_wsm_waf_package_ultimate_clb _intl
         /// 业务扩展包CLB sv_wsm_waf_qps_ep_clb
         /// 域名扩展包CLB  sv_wsm_waf_domain_clb
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LabelTypes")]
         public string[] LabelTypes{ get; set; }
 
         /// <summary>
         /// 计费细项标签数量，一般和SvLabelType一一对应
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LabelCounts")]
         public long?[] LabelCounts{ get; set; }
 
         /// <summary>
         /// 变配使用，实例到期时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurDeadline")]
         public string CurDeadline{ get; set; }
 
         /// <summary>
         /// 对存在的实例购买bot 或api 安全
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// 资源id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
         /// 模式clb-waf或者saas-waf
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MicroVersion")]
         public string MicroVersion{ get; set; }

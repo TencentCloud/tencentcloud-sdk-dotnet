@@ -43,7 +43,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// 执行动作，0：放行、1：阻断、2：人机识别、3：观察、4：重定向
+        /// 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
         /// </summary>
         [JsonProperty("RuleAction")]
         public string RuleAction{ get; set; }
@@ -88,7 +88,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? ExpireTime{ get; set; }
 
         /// <summary>
-        /// 定时任务类型
+        /// 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
         /// </summary>
         [JsonProperty("JobType")]
         public string JobType{ get; set; }

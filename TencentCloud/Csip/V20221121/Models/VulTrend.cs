@@ -26,28 +26,24 @@ namespace TencentCloud.Csip.V20221121.Models
         
         /// <summary>
         /// 影响的资产数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AffectAssetCount")]
         public long? AffectAssetCount{ get; set; }
 
         /// <summary>
         /// 影响的用户数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AffectUserCount")]
         public long? AffectUserCount{ get; set; }
 
         /// <summary>
         /// 攻击数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttackCount")]
         public long? AttackCount{ get; set; }
 
         /// <summary>
         /// 时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }

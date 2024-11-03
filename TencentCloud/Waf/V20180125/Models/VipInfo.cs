@@ -25,18 +25,52 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// Virtual IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// VIP地址
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
         /// waf实例id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        [JsonProperty("InstanceCreateTime")]
+        public string InstanceCreateTime{ get; set; }
+
+        /// <summary>
+        /// 地域
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
+        /// 地域ID
+        /// </summary>
+        [JsonProperty("RegionId")]
+        public long? RegionId{ get; set; }
+
+        /// <summary>
+        /// ip运营商类型
+        /// </summary>
+        [JsonProperty("ISP")]
+        public string ISP{ get; set; }
+
+        /// <summary>
+        /// ip类型
+        /// </summary>
+        [JsonProperty("VipType")]
+        public string VipType{ get; set; }
+
+        /// <summary>
+        /// 域名信息
+        /// </summary>
+        [JsonProperty("AddressName")]
+        public string AddressName{ get; set; }
 
 
         /// <summary>
@@ -46,6 +80,12 @@ namespace TencentCloud.Waf.V20180125.Models
         {
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "InstanceCreateTime", this.InstanceCreateTime);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
+            this.SetParamSimple(map, prefix + "ISP", this.ISP);
+            this.SetParamSimple(map, prefix + "VipType", this.VipType);
+            this.SetParamSimple(map, prefix + "AddressName", this.AddressName);
         }
     }
 }

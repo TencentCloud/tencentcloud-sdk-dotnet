@@ -62,35 +62,30 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// api风险事件数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApiRiskEventCount")]
         public ulong? ApiRiskEventCount{ get; set; }
 
         /// <summary>
         /// 黑名单总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IPBlackCount")]
         public ulong? IPBlackCount{ get; set; }
 
         /// <summary>
         /// 防篡改总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TamperCount")]
         public ulong? TamperCount{ get; set; }
 
         /// <summary>
         /// 信息泄露总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LeakCount")]
         public ulong? LeakCount{ get; set; }
 
         /// <summary>
         /// API风险事件周环比
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApiRiskEventCircleCount")]
         public long? ApiRiskEventCircleCount{ get; set; }

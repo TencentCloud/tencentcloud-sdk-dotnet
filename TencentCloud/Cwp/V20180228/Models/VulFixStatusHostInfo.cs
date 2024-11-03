@@ -56,7 +56,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 修复失败原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailReason")]
         public string FailReason{ get; set; }

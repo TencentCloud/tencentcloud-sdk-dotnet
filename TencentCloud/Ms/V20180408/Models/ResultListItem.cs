@@ -146,6 +146,7 @@ namespace TencentCloud.Ms.V20180408.Models
         /// 1002表示App md5 uncollect, please offer downloadlink.
         /// </summary>
         [JsonProperty("Errno")]
+        [System.Obsolete]
         public string Errno{ get; set; }
 
         /// <summary>
@@ -153,6 +154,35 @@ namespace TencentCloud.Ms.V20180408.Models
         /// </summary>
         [JsonProperty("ErrMsg")]
         public string ErrMsg{ get; set; }
+
+        /// <summary>
+        /// 应用错误码：0、1-表示正常；                  
+        /// 
+        /// 2表示System Error(engine analysis error).
+        /// 
+        /// 3表示App analysis error, please confirm it.
+        /// 
+        /// 4表示App have not cert, please confirm it.
+        /// 
+        /// 5表示App size is zero, please confirm it.
+        /// 
+        /// 6表示App have not package name, please confirm it.
+        /// 
+        /// 7表示App build time is empty, please confirm it.
+        /// 
+        /// 8表示App have not valid cert, please confirm it.
+        /// 
+        /// 99表示Other error.
+        /// 
+        /// 1000表示App downloadlink download fail, please confirm it.
+        /// 
+        /// 1001表示APP md5 different between real md5, please confirm it.
+        /// 
+        /// 1002表示App md5 uncollect, please offer downloadlink.
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ErrNo")]
+        public string ErrNo{ get; set; }
 
 
         /// <summary>
@@ -178,6 +208,7 @@ namespace TencentCloud.Ms.V20180408.Models
             this.SetParamSimple(map, prefix + "RepackageStatus", this.RepackageStatus);
             this.SetParamSimple(map, prefix + "Errno", this.Errno);
             this.SetParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
+            this.SetParamSimple(map, prefix + "ErrNo", this.ErrNo);
         }
     }
 }

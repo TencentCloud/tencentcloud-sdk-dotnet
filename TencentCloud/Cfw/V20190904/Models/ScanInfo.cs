@@ -25,6 +25,12 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
+        /// 进度
+        /// </summary>
+        [JsonProperty("ScanPercent")]
+        public float? ScanPercent{ get; set; }
+
+        /// <summary>
         /// 扫描结果信息
         /// </summary>
         [JsonProperty("ScanResultInfo")]
@@ -35,12 +41,6 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         [JsonProperty("ScanStatus")]
         public long? ScanStatus{ get; set; }
-
-        /// <summary>
-        /// 进度
-        /// </summary>
-        [JsonProperty("ScanPercent")]
-        public float? ScanPercent{ get; set; }
 
         /// <summary>
         /// 预计完成时间
@@ -54,9 +54,9 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ScanPercent", this.ScanPercent);
             this.SetParamObj(map, prefix + "ScanResultInfo.", this.ScanResultInfo);
             this.SetParamSimple(map, prefix + "ScanStatus", this.ScanStatus);
-            this.SetParamSimple(map, prefix + "ScanPercent", this.ScanPercent);
             this.SetParamSimple(map, prefix + "ScanTime", this.ScanTime);
         }
     }

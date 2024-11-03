@@ -32,42 +32,36 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// 访问源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceIp")]
         public string SourceIp{ get; set; }
 
         /// <summary>
         /// 访问目的
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetIp")]
         public string TargetIp{ get; set; }
 
         /// <summary>
         /// 协议
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
         /// 端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Port")]
         public string Port{ get; set; }
 
         /// <summary>
         /// 策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Strategy")]
         public ulong? Strategy{ get; set; }
 
         /// <summary>
         /// 描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Detail")]
         public string Detail{ get; set; }
@@ -86,35 +80,30 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// 告警规则id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogId")]
         public string LogId{ get; set; }
 
         /// <summary>
         /// 规则开关状态 1打开 0关闭
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 规则源类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SrcType")]
         public long? SrcType{ get; set; }
 
         /// <summary>
         /// 规则目的类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DstType")]
         public long? DstType{ get; set; }
 
         /// <summary>
         /// 规则唯一ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
@@ -123,70 +112,60 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// 规则有效性
         /// 1 有效
         /// 0 无效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Invalid")]
         public long? Invalid{ get; set; }
 
         /// <summary>
         /// 是否地域规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsRegion")]
         public long? IsRegion{ get; set; }
 
         /// <summary>
         /// 云厂商代码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CloudCode")]
         public string CloudCode{ get; set; }
 
         /// <summary>
         /// 自动化助手信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoTask")]
         public string AutoTask{ get; set; }
 
         /// <summary>
         /// 实例名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
         /// 地域码信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionCode")]
         public string RegionCode{ get; set; }
 
         /// <summary>
         /// 国家代码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Country")]
         public long? Country{ get; set; }
 
         /// <summary>
         /// 城市代码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("City")]
         public long? City{ get; set; }
 
         /// <summary>
         /// 国家名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegName1")]
         public string RegName1{ get; set; }
 
         /// <summary>
         /// 城市名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegName2")]
         public string RegName2{ get; set; }

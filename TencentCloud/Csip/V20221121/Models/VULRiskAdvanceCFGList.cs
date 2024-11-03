@@ -50,7 +50,6 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// 是否启用，1-启用，0-禁用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Enable")]
         public long? Enable{ get; set; }
@@ -69,7 +68,6 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// CVE
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CVE")]
         public string CVE{ get; set; }
@@ -82,77 +80,66 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// 修复方式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FixMethod")]
         public string[] FixMethod{ get; set; }
 
         /// <summary>
         /// 披露时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReleaseTime")]
         public string ReleaseTime{ get; set; }
 
         /// <summary>
         /// 应急漏洞类型，1-应急漏洞，0-非应急漏洞
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EMGCVulType")]
         public long? EMGCVulType{ get; set; }
 
         /// <summary>
         /// 漏洞描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VULDescribe")]
         public string VULDescribe{ get; set; }
 
         /// <summary>
         /// 影响组件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImpactComponent")]
         public string ImpactComponent{ get; set; }
 
         /// <summary>
         /// 漏洞Payload
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Payload")]
         public string Payload{ get; set; }
 
         /// <summary>
         /// 技术参考
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("References")]
         public string References{ get; set; }
 
         /// <summary>
         /// cvss评分
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CVSS")]
         public string CVSS{ get; set; }
 
         /// <summary>
         /// 攻击热度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttackHeat")]
         public string AttackHeat{ get; set; }
 
         /// <summary>
         /// 安全产品支持情况
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceSupport")]
         public ServiceSupport[] ServiceSupport{ get; set; }
 
         /// <summary>
         /// 最新检测时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecentScanTime")]
         public string RecentScanTime{ get; set; }

@@ -49,13 +49,17 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 虚拟ip类型
+        /// 虚拟ip类型1:外网TGW 2:基础网络 3:VPC网络 4:支撑网络(标准版) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(专业版)
         /// </summary>
         [JsonProperty("VipType")]
         public long? VipType{ get; set; }
 
         /// <summary>
         /// 接入类型
+        /// 0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)
+        /// 1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
+        /// 2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）
+        /// 3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
         /// </summary>
         [JsonProperty("AccessType")]
         public long? AccessType{ get; set; }

@@ -26,84 +26,72 @@ namespace TencentCloud.Cfw.V20190904.Models
         
         /// <summary>
         /// 模板ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
         /// 模板名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Detail")]
         public string Detail{ get; set; }
 
         /// <summary>
         /// IP模板
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpString")]
         public string IpString{ get; set; }
 
         /// <summary>
         /// 插入时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InsertTime")]
         public string InsertTime{ get; set; }
 
         /// <summary>
         /// 修改时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 模板类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
         /// 关联规则条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RulesNum")]
         public long? RulesNum{ get; set; }
 
         /// <summary>
         /// 模板Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
         /// 协议端口模板，协议类型，4:4层协议，7:7层协议
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProtocolType")]
         public string ProtocolType{ get; set; }
 
         /// <summary>
         /// 模板包含地址数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IPNum")]
         public long? IPNum{ get; set; }
 
         /// <summary>
         /// IP版本,0,IPv4;1,IPv6
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpVersion")]
         public long? IpVersion{ get; set; }

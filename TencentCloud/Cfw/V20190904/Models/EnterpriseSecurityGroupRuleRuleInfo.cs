@@ -26,28 +26,24 @@ namespace TencentCloud.Cfw.V20190904.Models
         
         /// <summary>
         /// 排序
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrderIndex")]
         public long? OrderIndex{ get; set; }
 
         /// <summary>
         /// 主键id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleUuid")]
         public ulong? RuleUuid{ get; set; }
 
         /// <summary>
         /// 规则uuid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
         /// 源规则内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceId")]
         public string SourceId{ get; set; }
@@ -66,14 +62,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// 8表示标签(tag)
         /// 9表示地域(region)
         /// 100表示资产分组(resourcegroup)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceType")]
         public long? SourceType{ get; set; }
 
         /// <summary>
         /// 目的规则内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetId")]
         public string TargetId{ get; set; }
@@ -92,7 +86,6 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// 8表示标签(tag)
         /// 9表示地域(region)
         /// 100表示资产分组(resourcegroup)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetType")]
         public long? TargetType{ get; set; }
@@ -101,15 +94,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// 协议名称
         /// 取值范围:TCP/ANY/ICMP/UDP
         /// ANY:表示所有
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
         /// 端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Port")]
         public string Port{ get; set; }
@@ -119,7 +109,6 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// 取值范围:1/2
         /// 1:阻断
         /// 2:放行
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Strategy")]
         public long? Strategy{ get; set; }
@@ -129,21 +118,18 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// 取值范围： 0/1
         /// 0:未开启
         /// 1:开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Detail")]
         public string Detail{ get; set; }
 
         /// <summary>
         /// 标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AclTags")]
         public string AclTags{ get; set; }
@@ -153,14 +139,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// 取值范围：0/1
         /// 0:否
         /// 1:是
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsNew")]
         public long? IsNew{ get; set; }
 
         /// <summary>
         /// 地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
@@ -169,105 +153,90 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// 是否延迟下发规则 
         /// 取值范围：0/1
         /// 0:立即下发 1:延迟下发
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsDelay")]
         public long? IsDelay{ get; set; }
 
         /// <summary>
         /// 服务模板id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceTemplateId")]
         public string ServiceTemplateId{ get; set; }
 
         /// <summary>
         /// 源资产名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SouInstanceName")]
         public string SouInstanceName{ get; set; }
 
         /// <summary>
         /// 源资产公网ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SouPublicIp")]
         public string SouPublicIp{ get; set; }
 
         /// <summary>
         /// 源资产内网ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SouPrivateIp")]
         public string SouPrivateIp{ get; set; }
 
         /// <summary>
         /// 源资产网段信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SouCidr")]
         public string SouCidr{ get; set; }
 
         /// <summary>
         /// 源模板名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SouParameterName")]
         public string SouParameterName{ get; set; }
 
         /// <summary>
         /// 目的资产名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
         /// 目的资产公网ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
         /// <summary>
         /// 目的资产内网ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrivateIp")]
         public string PrivateIp{ get; set; }
 
         /// <summary>
         /// 目的资产网段信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cidr")]
         public string Cidr{ get; set; }
 
         /// <summary>
         /// 目的模板名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParameterName")]
         public string ParameterName{ get; set; }
 
         /// <summary>
         /// 端口模板名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProtocolPortName")]
         public string ProtocolPortName{ get; set; }
 
         /// <summary>
         /// 自动化任务信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BetaList")]
         public EnterpriseSecurityGroupRuleBetaInfo[] BetaList{ get; set; }
 
         /// <summary>
         /// 规则id  等同RuleUuid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }

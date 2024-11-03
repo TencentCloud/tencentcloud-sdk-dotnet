@@ -26,14 +26,12 @@ namespace TencentCloud.Csip.V20221121.Models
         
         /// <summary>
         /// 标签的key值,可以是字母、数字、下划线
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagKey")]
         public string TagKey{ get; set; }
 
         /// <summary>
         /// 标签的vale值,可以是字母、数字、下划线
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagValue")]
         public string TagValue{ get; set; }

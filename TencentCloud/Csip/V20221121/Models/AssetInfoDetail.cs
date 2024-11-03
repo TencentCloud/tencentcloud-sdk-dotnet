@@ -26,70 +26,60 @@ namespace TencentCloud.Csip.V20221121.Models
         
         /// <summary>
         /// 用户appid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppID")]
         public string AppID{ get; set; }
 
         /// <summary>
         /// CVE编号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CVEId")]
         public string CVEId{ get; set; }
 
         /// <summary>
         /// 是扫描，0默认未扫描，1正在扫描，2扫描完成，3扫描出错
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsScan")]
         public long? IsScan{ get; set; }
 
         /// <summary>
         /// 影响资产数目
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InfluenceAsset")]
         public long? InfluenceAsset{ get; set; }
 
         /// <summary>
         /// 未修复资产数目
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NotRepairAsset")]
         public long? NotRepairAsset{ get; set; }
 
         /// <summary>
         /// 未防护资产数目
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NotProtectAsset")]
         public long? NotProtectAsset{ get; set; }
 
         /// <summary>
         /// 任务ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
         /// 任务百分比
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskPercent")]
         public long? TaskPercent{ get; set; }
 
         /// <summary>
         /// 任务时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskTime")]
         public long? TaskTime{ get; set; }
 
         /// <summary>
         /// 扫描时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanTime")]
         public string ScanTime{ get; set; }

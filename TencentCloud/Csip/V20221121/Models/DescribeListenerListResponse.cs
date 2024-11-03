@@ -26,14 +26,12 @@ namespace TencentCloud.Csip.V20221121.Models
         
         /// <summary>
         /// 总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
 
         /// <summary>
         /// 监听器列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public ClbListenerListInfo[] Data{ get; set; }

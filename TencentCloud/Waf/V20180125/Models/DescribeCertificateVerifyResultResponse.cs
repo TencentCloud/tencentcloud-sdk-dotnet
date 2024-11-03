@@ -50,7 +50,6 @@ namespace TencentCloud.Waf.V20180125.Models
         /// 证书是否改变。
         /// 0：未变化
         /// 1：有变化
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Changed")]
         public long? Changed{ get; set; }

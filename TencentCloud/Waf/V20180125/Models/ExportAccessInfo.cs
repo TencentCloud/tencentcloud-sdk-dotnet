@@ -26,21 +26,18 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// 日志导出任务ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExportId")]
         public string ExportId{ get; set; }
 
         /// <summary>
         /// 日志导出查询语句
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
         /// <summary>
         /// 日志导出文件名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
@@ -53,21 +50,18 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 日志导出时间排序
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
         /// 日志导出格式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
         /// 日志导出数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }

@@ -31,12 +31,6 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 检索的值，各检索值间为OR关系
-        /// </summary>
-        [JsonProperty("Values")]
-        public string[] Values{ get; set; }
-
-        /// <summary>
         /// 枚举类型，代表Name与Values之间的匹配关系
         /// enum FilterOperatorType {
         ///     //等于
@@ -60,6 +54,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("OperatorType")]
         public long? OperatorType{ get; set; }
 
+        /// <summary>
+        /// 检索的值，各检索值间为OR关系
+        /// </summary>
+        [JsonProperty("Values")]
+        public string[] Values{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,8 +67,8 @@ namespace TencentCloud.Cfw.V20190904.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
             this.SetParamSimple(map, prefix + "OperatorType", this.OperatorType);
+            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
         }
     }
 }

@@ -25,24 +25,6 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 数
-        /// </summary>
-        [JsonProperty("Num")]
-        public long? Num{ get; set; }
-
-        /// <summary>
-        /// 端口
-        /// </summary>
-        [JsonProperty("Port")]
-        public string Port{ get; set; }
-
-        /// <summary>
-        /// ip信息
-        /// </summary>
-        [JsonProperty("Ip")]
-        public string Ip{ get; set; }
-
-        /// <summary>
         /// 地址
         /// </summary>
         [JsonProperty("Address")]
@@ -60,18 +42,36 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("InsName")]
         public string InsName{ get; set; }
 
+        /// <summary>
+        /// ip信息
+        /// </summary>
+        [JsonProperty("Ip")]
+        public string Ip{ get; set; }
+
+        /// <summary>
+        /// 数
+        /// </summary>
+        [JsonProperty("Num")]
+        public long? Num{ get; set; }
+
+        /// <summary>
+        /// 端口
+        /// </summary>
+        [JsonProperty("Port")]
+        public string Port{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Num", this.Num);
-            this.SetParamSimple(map, prefix + "Port", this.Port);
-            this.SetParamSimple(map, prefix + "Ip", this.Ip);
             this.SetParamSimple(map, prefix + "Address", this.Address);
             this.SetParamSimple(map, prefix + "InsID", this.InsID);
             this.SetParamSimple(map, prefix + "InsName", this.InsName);
+            this.SetParamSimple(map, prefix + "Ip", this.Ip);
+            this.SetParamSimple(map, prefix + "Num", this.Num);
+            this.SetParamSimple(map, prefix + "Port", this.Port);
         }
     }
 }

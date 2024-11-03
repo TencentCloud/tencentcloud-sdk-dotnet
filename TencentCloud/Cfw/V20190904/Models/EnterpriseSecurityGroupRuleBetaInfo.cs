@@ -26,21 +26,18 @@ namespace TencentCloud.Cfw.V20190904.Models
         
         /// <summary>
         /// 任务id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }
 
         /// <summary>
         /// 任务名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
         /// 时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastTime")]
         public string LastTime{ get; set; }

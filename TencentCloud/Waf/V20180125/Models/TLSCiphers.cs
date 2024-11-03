@@ -26,21 +26,18 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// TLS版本ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VersionId")]
         public long? VersionId{ get; set; }
 
         /// <summary>
         /// 加密套件ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CipherId")]
         public long? CipherId{ get; set; }
 
         /// <summary>
         /// 加密套件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CipherName")]
         public string CipherName{ get; set; }

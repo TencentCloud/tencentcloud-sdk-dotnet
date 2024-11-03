@@ -49,8 +49,6 @@ namespace TencentCloud.Waf.V20180125.Models
         /// 旗舰版-CLB : 101201(新购),101202(续费),101203(变配)
         /// 域名包-CLB: 101207(新购),101208(续费),101209(变配)
         /// 业务扩展包-CLB: 101210(新购),101211(续费),101212(变配)
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GoodsCategoryId")]
         public long? GoodsCategoryId{ get; set; }
@@ -59,7 +57,6 @@ namespace TencentCloud.Waf.V20180125.Models
         /// 购买waf实例区域ID
         /// 1 表示购买大陆资源;
         /// 9表示购买非中国大陆资源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }

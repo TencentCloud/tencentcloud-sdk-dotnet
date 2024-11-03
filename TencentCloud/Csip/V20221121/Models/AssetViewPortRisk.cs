@@ -122,14 +122,12 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// 用户昵称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Nick")]
         public string Nick{ get; set; }
 
         /// <summary>
         /// 用户uin
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }

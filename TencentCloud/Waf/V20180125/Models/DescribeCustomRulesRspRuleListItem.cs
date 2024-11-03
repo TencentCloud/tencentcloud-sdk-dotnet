@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 动作类型
+        /// 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
@@ -86,70 +86,60 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 事件id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventId")]
         public string EventId{ get; set; }
 
         /// <summary>
         /// 修改时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
         /// 生效状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValidStatus")]
         public long? ValidStatus{ get; set; }
 
         /// <summary>
         /// 来源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
         /// 定时任务类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobType")]
         public string JobType{ get; set; }
 
         /// <summary>
         /// 定时任务配置信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobDateTime")]
         public JobDateTime JobDateTime{ get; set; }
 
         /// <summary>
         /// 周期任务粒度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CronType")]
         public string CronType{ get; set; }
 
         /// <summary>
         /// 自定义标签，风控规则用，用来表示是内置规则还是用户自定义的
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
         /// 拦截页面id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PageId")]
         public string PageId{ get; set; }
 
         /// <summary>
         /// 域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }

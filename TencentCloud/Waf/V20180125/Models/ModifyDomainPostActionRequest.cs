@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// www.tx.com
+        /// 域名
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }

@@ -26,70 +26,60 @@ namespace TencentCloud.Cfw.V20190904.Models
         
         /// <summary>
         /// id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
         /// 网络协议，可选值：TCP、UDP。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpProtocol")]
         public string IpProtocol{ get; set; }
 
         /// <summary>
         /// 弹性IP。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicIpAddress")]
         public string PublicIpAddress{ get; set; }
 
         /// <summary>
         /// 公网端口。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicPort")]
         public long? PublicPort{ get; set; }
 
         /// <summary>
         /// 内网地址。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrivateIpAddress")]
         public string PrivateIpAddress{ get; set; }
 
         /// <summary>
         /// 内网端口。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrivatePort")]
         public long? PrivatePort{ get; set; }
 
         /// <summary>
         /// NAT防火墙转发规则描述。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 是否被关联引用，如被远程运维使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsReferenced")]
         public long? IsReferenced{ get; set; }
 
         /// <summary>
         /// 所属防火墙实例id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FwInsId")]
         public string FwInsId{ get; set; }
 
         /// <summary>
         /// 关联的nat网关Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NatGwId")]
         public string NatGwId{ get; set; }

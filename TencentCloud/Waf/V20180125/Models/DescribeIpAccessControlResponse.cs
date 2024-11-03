@@ -26,14 +26,12 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// 输出
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public IpAccessControlData Data{ get; set; }
 
         /// <summary>
         /// 已经使用的IP黑白名单的IP总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UsedTotal")]
         public ulong? UsedTotal{ get; set; }

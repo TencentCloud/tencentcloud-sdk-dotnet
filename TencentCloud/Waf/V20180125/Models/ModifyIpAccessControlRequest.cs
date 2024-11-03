@@ -44,16 +44,17 @@ namespace TencentCloud.Waf.V20180125.Models
         public long? ActionType{ get; set; }
 
         /// <summary>
-        /// valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
-        /// </summary>
-        [JsonProperty("ValidTS")]
-        public long? ValidTS{ get; set; }
-
-        /// <summary>
         /// 规则ID
         /// </summary>
         [JsonProperty("RuleId")]
         public ulong? RuleId{ get; set; }
+
+        /// <summary>
+        /// valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
+        /// </summary>
+        [JsonProperty("ValidTS")]
+        [System.Obsolete]
+        public long? ValidTS{ get; set; }
 
         /// <summary>
         /// 实例Id
@@ -80,7 +81,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Note{ get; set; }
 
         /// <summary>
-        /// 定时配置类型
+        /// 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
         /// </summary>
         [JsonProperty("JobType")]
         public string JobType{ get; set; }
@@ -100,8 +101,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamArraySimple(map, prefix + "IpList.", this.IpList);
             this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
-            this.SetParamSimple(map, prefix + "ValidTS", this.ValidTS);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
+            this.SetParamSimple(map, prefix + "ValidTS", this.ValidTS);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Edition", this.Edition);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);

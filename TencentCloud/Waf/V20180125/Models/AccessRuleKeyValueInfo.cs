@@ -26,14 +26,12 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// 是否大小写敏感
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CaseSensitive")]
         public bool? CaseSensitive{ get; set; }
 
         /// <summary>
         /// 需要建立索引的键值对信息；最大只能配置100个键值对
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeyValues")]
         public AccessKeyValueInfo[] KeyValues{ get; set; }

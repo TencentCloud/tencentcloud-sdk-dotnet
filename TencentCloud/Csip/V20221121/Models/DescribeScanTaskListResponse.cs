@@ -26,28 +26,24 @@ namespace TencentCloud.Csip.V20221121.Models
         
         /// <summary>
         /// 总条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
         /// 任务日志列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public ScanTaskInfoList[] Data{ get; set; }
 
         /// <summary>
         /// 主账户ID列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UINList")]
         public string[] UINList{ get; set; }
 
         /// <summary>
         /// 体检模式过滤列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskModeList")]
         public FilterDataObject[] TaskModeList{ get; set; }

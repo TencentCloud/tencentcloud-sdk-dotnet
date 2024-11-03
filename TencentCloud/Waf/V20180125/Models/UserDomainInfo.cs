@@ -62,49 +62,42 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
         /// 指定域名访问日志字段的开关
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WriteConfig")]
         public string WriteConfig{ get; set; }
 
         /// <summary>
         /// 指定域名是否写cls的开关 1:写 0:不写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cls")]
         public ulong? Cls{ get; set; }
 
         /// <summary>
         /// 标记是否是混合云接入。hybrid表示混合云接入域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CloudType")]
         public string CloudType{ get; set; }
 
         /// <summary>
         /// 标记clbwaf类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlbType")]
         public string AlbType{ get; set; }
 
         /// <summary>
         /// BOT开关状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BotStatus")]
         public long? BotStatus{ get; set; }
 
         /// <summary>
         /// API开关状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApiStatus")]
         public long? ApiStatus{ get; set; }

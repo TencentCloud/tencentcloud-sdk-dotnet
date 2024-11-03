@@ -47,7 +47,6 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// <li>read 读取文件</li>
         /// <li>write 修改文件</li>
         /// <li>read-write 读取修改文件</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileAction")]
         public string FileAction{ get; set; }

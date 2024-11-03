@@ -32,56 +32,48 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// 公网 IP 类型 1 公网,2 弹性,3 弹性ipv6,4 anycastIP, 6 HighQualityEIP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicIpType")]
         public long? PublicIpType{ get; set; }
 
         /// <summary>
         /// 实例ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// 实例名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
         /// 内网IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IntranetIp")]
         public string IntranetIp{ get; set; }
 
         /// <summary>
         /// 资产类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssetType")]
         public string AssetType{ get; set; }
 
         /// <summary>
         /// 地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// 风险端口数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PortRiskCount")]
         public long? PortRiskCount{ get; set; }
 
         /// <summary>
         /// 最近扫描时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastScanTime")]
         public string LastScanTime{ get; set; }
@@ -90,14 +82,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// 是否为region eip
         /// 0 不为region eip，不能选择串行
         /// 1 为region eip 可以选择串行
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsRegionEip")]
         public long? IsRegionEip{ get; set; }
 
         /// <summary>
         /// EIP 所关联的VPC
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -106,7 +96,6 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// 0: 该地域暂未支持串行
         /// 1: 该用户未在该地域配置串行带宽
         /// 2: 该用户已在该地域配置串行带宽，可以开启串行开关
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSerialRegion")]
         public long? IsSerialRegion{ get; set; }
@@ -114,8 +103,6 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// <summary>
         /// 0: 不是公网CLB 可以开启串行开关
         /// 1: 是公网CLB 不可以开启串行开关
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsPublicClb")]
         public long? IsPublicClb{ get; set; }
@@ -124,21 +111,18 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// 0: 开启开关时提示要创建私有连接。
         /// 1: 关闭该开关是提示删除私有连接。
         /// 如果大于 1: 关闭开关 、开启开关不需提示创建删除私有连接。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndpointBindEipNum")]
         public long? EndpointBindEipNum{ get; set; }
 
         /// <summary>
         /// 扫描深度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanMode")]
         public string ScanMode{ get; set; }
 
         /// <summary>
         /// 扫描状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanStatus")]
         public long? ScanStatus{ get; set; }
@@ -150,21 +134,18 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// 2 : 开启中
         /// 3 : 关闭中
         /// 4 : 异常
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 私有连接ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndpointId")]
         public string EndpointId{ get; set; }
 
         /// <summary>
         /// 私有连接IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndpointIp")]
         public string EndpointIp{ get; set; }
@@ -179,21 +160,18 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// 开关权重
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SwitchWeight")]
         public long? SwitchWeight{ get; set; }
 
         /// <summary>
         /// 域名化CLB的域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
         /// IP超量状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OverUsedStatus")]
         public long? OverUsedStatus{ get; set; }

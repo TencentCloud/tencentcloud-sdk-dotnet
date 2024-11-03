@@ -25,13 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 支持的过滤器:
-        /// 	ObjectId: clb实例ID
-        /// 	VIP: clb实例的公网IP
-        /// 	InstanceId: waf实例ID
-        /// 	Domain: 精准域名
-        /// 	Status: waf防护开关状态: 0关闭，1开启
-        /// 	ClsStatus: waf日志开关: 0关闭，1开启
+        /// 支持的过滤器:	ObjectId: clb实例ID	VIP: clb实例的公网IP	InstanceId: waf实例ID	Domain: 精准域名	Status: waf防护开关状态: 0关闭，1开启	ClsStatus: waf日志开关: 0关闭，1开启   
         /// </summary>
         [JsonProperty("Filters")]
         public FiltersItemNew[] Filters{ get; set; }

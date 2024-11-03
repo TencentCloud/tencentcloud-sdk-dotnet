@@ -26,14 +26,12 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// 删除失败的条目
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedItems")]
         public string FailedItems{ get; set; }
 
         /// <summary>
         /// 删除失败的条目数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedCount")]
         public long? FailedCount{ get; set; }

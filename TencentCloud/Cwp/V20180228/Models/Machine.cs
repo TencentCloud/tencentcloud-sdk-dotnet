@@ -181,35 +181,30 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 云标签信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CloudTags")]
         public Tags[] CloudTags{ get; set; }
 
         /// <summary>
         /// 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsAddedOnTheFifteen")]
         public ulong? IsAddedOnTheFifteen{ get; set; }
 
         /// <summary>
         /// 主机ip列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpList")]
         public string IpList{ get; set; }
 
         /// <summary>
         /// 所属网络
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// 附加信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
@@ -222,7 +217,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 备注信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

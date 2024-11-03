@@ -32,14 +32,12 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// 所属的Nat网关Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NatGatewayId")]
         public string NatGatewayId{ get; set; }
 
         /// <summary>
         /// Nat网关名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NatGatewayName")]
         public string NatGatewayName{ get; set; }

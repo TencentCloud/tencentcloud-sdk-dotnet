@@ -74,126 +74,108 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// 公网ip数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EipAddress")]
         public string[] EipAddress{ get; set; }
 
         /// <summary>
         /// 内外使用ip数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcIp")]
         public string[] VpcIp{ get; set; }
 
         /// <summary>
         /// 实例关联子网数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Subnets")]
         public string[] Subnets{ get; set; }
 
         /// <summary>
         /// 0 :正常 1：正在初始化
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 地域区域信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionDetail")]
         public string RegionDetail{ get; set; }
 
         /// <summary>
         /// 实例所在可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneZh")]
         public string ZoneZh{ get; set; }
 
         /// <summary>
         /// 实例所在可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneZhBak")]
         public string ZoneZhBak{ get; set; }
 
         /// <summary>
         /// 已使用规则数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleUsed")]
         public ulong? RuleUsed{ get; set; }
 
         /// <summary>
         /// 实例的规则限制最大规格数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleMax")]
         public ulong? RuleMax{ get; set; }
 
         /// <summary>
         /// 实例引擎版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
 
         /// <summary>
         /// 引擎是否可升级：0，不可升级；1，可升级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateEnable")]
         public long? UpdateEnable{ get; set; }
 
         /// <summary>
         /// 是的需要升级引擎 支持 nat拨测 1需要 0不需要
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NeedProbeEngineUpdate")]
         public long? NeedProbeEngineUpdate{ get; set; }
 
         /// <summary>
         /// 引擎运行模式，Normal:正常, OnlyRoute:透明模式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrafficMode")]
         public string TrafficMode{ get; set; }
 
         /// <summary>
         /// 实例主所在可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
         /// 实例备所在可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneBak")]
         public string ZoneBak{ get; set; }
 
         /// <summary>
         /// 引擎预约升级时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReserveTime")]
         public string ReserveTime{ get; set; }
 
         /// <summary>
         /// 引擎预约升级版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReserveVersion")]
         public string ReserveVersion{ get; set; }
 
         /// <summary>
-        /// 引擎预约升级版本状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 引擎预约升级版本状态 stable:稳定版；previewed:预览版
         /// </summary>
         [JsonProperty("ReserveVersionState")]
         public string ReserveVersionState{ get; set; }
@@ -202,14 +184,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// 弹性开关
         /// 1 打开
         /// 0 关闭
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ElasticSwitch")]
         public long? ElasticSwitch{ get; set; }
 
         /// <summary>
         /// 弹性带宽，单位Mbps
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ElasticBandwidth")]
         public long? ElasticBandwidth{ get; set; }
@@ -218,7 +198,6 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// 是否首次开通按量付费
         /// 1 是
         /// 0 不是
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsFirstAfterPay")]
         public long? IsFirstAfterPay{ get; set; }

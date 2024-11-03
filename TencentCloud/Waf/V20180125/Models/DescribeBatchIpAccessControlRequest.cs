@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// 筛选条件，支持 ActionType 40/42，Ip：ip地址，Domain：域名三类
+        /// 筛选条件，支持 ActionType，可选的值为40（白名单）42（黑名单），ValidStatus，可选的值为1（生效）0（过期）
         /// </summary>
         [JsonProperty("Filters")]
         public FiltersItemNew[] Filters{ get; set; }

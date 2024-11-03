@@ -26,14 +26,12 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// TLSVERSION的ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VersionId")]
         public long? VersionId{ get; set; }
 
         /// <summary>
         /// TLSVERSION的NAME
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VersionName")]
         public string VersionName{ get; set; }

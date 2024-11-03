@@ -67,7 +67,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? MatchFunc{ get; set; }
 
         /// <summary>
-        /// 动作
+        /// 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，24表示JS校验
         /// </summary>
         [JsonProperty("ActionType")]
         public ulong? ActionType{ get; set; }
@@ -111,7 +111,6 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 关联的Session规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SessionApplied")]
         public long?[] SessionApplied{ get; set; }

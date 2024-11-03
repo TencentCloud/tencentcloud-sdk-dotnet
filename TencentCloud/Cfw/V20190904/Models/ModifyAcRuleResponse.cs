@@ -32,7 +32,6 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// 返回多余的信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Info")]
         public string Info{ get; set; }

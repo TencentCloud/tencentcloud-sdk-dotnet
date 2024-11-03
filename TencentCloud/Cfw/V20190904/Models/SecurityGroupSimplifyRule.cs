@@ -32,7 +32,6 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// resourcegroup：资产分组(/全部分组/分组1/子分组1)
         /// tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
         /// region：地域(ap-gaungzhou)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceContent")]
         public string SourceContent{ get; set; }
@@ -45,35 +44,30 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// resourcegroup：资产分组(/全部分组/分组1/子分组1)
         /// tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
         /// region：地域(ap-gaungzhou)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DestContent")]
         public string DestContent{ get; set; }
 
         /// <summary>
         /// 协议；TCP/UDP/ICMP/ANY
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
         /// 描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 规则对应的唯一id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleUuid")]
         public long? RuleUuid{ get; set; }
 
         /// <summary>
         /// 规则序号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Sequence")]
         public long? Sequence{ get; set; }

@@ -26,14 +26,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 自定义规则ID　
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleId")]
         public long? RuleId{ get; set; }
 
         /// <summary>
         /// 自定义规则名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }

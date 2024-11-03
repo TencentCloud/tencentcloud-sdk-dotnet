@@ -25,32 +25,28 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 访问源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("SrcIP")]
-        public string SrcIP{ get; set; }
-
-        /// <summary>
         /// 访问目的
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DstIP")]
         public string DstIP{ get; set; }
 
         /// <summary>
+        /// 规则ID
+        /// </summary>
+        [JsonProperty("IdsRuleId")]
+        public string IdsRuleId{ get; set; }
+
+        /// <summary>
         /// 规则名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdsRuleName")]
         public string IdsRuleName{ get; set; }
 
         /// <summary>
-        /// 规则ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 访问源
         /// </summary>
-        [JsonProperty("IdsRuleId")]
-        public string IdsRuleId{ get; set; }
+        [JsonProperty("SrcIP")]
+        public string SrcIP{ get; set; }
 
 
         /// <summary>
@@ -58,10 +54,10 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SrcIP", this.SrcIP);
             this.SetParamSimple(map, prefix + "DstIP", this.DstIP);
-            this.SetParamSimple(map, prefix + "IdsRuleName", this.IdsRuleName);
             this.SetParamSimple(map, prefix + "IdsRuleId", this.IdsRuleId);
+            this.SetParamSimple(map, prefix + "IdsRuleName", this.IdsRuleName);
+            this.SetParamSimple(map, prefix + "SrcIP", this.SrcIP);
         }
     }
 }

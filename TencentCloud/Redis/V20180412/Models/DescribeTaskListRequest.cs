@@ -117,13 +117,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] TaskTypes{ get; set; }
 
         /// <summary>
-        /// 任务执行的起始时间。格式如：2021-12-30 00:00:00。
+        /// 任务执行的起始时间，格式如：2021-12-30 00:00:00，支持查询近30天内数据。
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// 任务运行的终止时间。格式如：2021-12-30 20:59:35
+        /// 任务运行的终止时间。格式如：2021-12-30 20:59:35，支持查询近30天内数据。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

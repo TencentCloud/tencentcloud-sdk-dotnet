@@ -50,6 +50,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
+        /// <summary>
+        /// 实例id
+        /// </summary>
+        [JsonProperty("InstanceID")]
+        public string InstanceID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +66,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Mode", this.Mode);
             this.SetParamSimple(map, prefix + "Edition", this.Edition);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
         }
     }
 }

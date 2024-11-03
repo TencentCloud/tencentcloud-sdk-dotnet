@@ -26,28 +26,24 @@ namespace TencentCloud.Csip.V20221121.Models
         
         /// <summary>
         /// 报告下载临时链接
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("URL")]
         public string URL{ get; set; }
 
         /// <summary>
         /// 任务报告id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogId")]
         public string LogId{ get; set; }
 
         /// <summary>
         /// 任务报告名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskLogName")]
         public string TaskLogName{ get; set; }
 
         /// <summary>
         /// APP ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }

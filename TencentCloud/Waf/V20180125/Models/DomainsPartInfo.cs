@@ -223,21 +223,18 @@ namespace TencentCloud.Waf.V20180125.Models
         /// 是否开启主动健康检测。
         /// 0：不开启
         /// 1：开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActiveCheck")]
         public ulong? ActiveCheck{ get; set; }
 
         /// <summary>
         /// TLS版本信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TLSVersion")]
         public long? TLSVersion{ get; set; }
 
         /// <summary>
         /// 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ciphers")]
         public long?[] Ciphers{ get; set; }
@@ -248,21 +245,18 @@ namespace TencentCloud.Waf.V20180125.Models
         /// 1：通用型模板 
         /// 2：安全型模板
         /// 3：自定义模板
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CipherTemplate")]
         public long? CipherTemplate{ get; set; }
 
         /// <summary>
         /// WAF与源站的读超时时间，默认300s。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyReadTimeout")]
         public long? ProxyReadTimeout{ get; set; }
 
         /// <summary>
         /// WAF与源站的写超时时间，默认300s。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxySendTimeout")]
         public long? ProxySendTimeout{ get; set; }
@@ -273,28 +267,24 @@ namespace TencentCloud.Waf.V20180125.Models
         /// 1：开启SNI，client_hello中的server_name为防护域名
         /// 2：开启SNI，SNI为域名回源时的源站域名
         /// 3：开启SNI，SNI为自定义域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SniType")]
         public long? SniType{ get; set; }
 
         /// <summary>
         /// SniType为3时，需要填此参数，表示自定义的SNI；
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SniHost")]
         public string SniHost{ get; set; }
 
         /// <summary>
         /// 回源IP权重
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Weights")]
         public string[] Weights{ get; set; }
 
         /// <summary>
         /// IsCdn=3时，表示自定义header
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpHeaders")]
         public string[] IpHeaders{ get; set; }
@@ -303,91 +293,78 @@ namespace TencentCloud.Waf.V20180125.Models
         /// 是否开启XFF重置。
         /// 0：关闭
         /// 1：开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("XFFReset")]
         public long? XFFReset{ get; set; }
 
         /// <summary>
         /// 域名备注信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }
 
         /// <summary>
         /// 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpstreamHost")]
         public string UpstreamHost{ get; set; }
 
         /// <summary>
         /// 防护规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
         /// 是否开启缓存 0-关闭 1-开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyBuffer")]
         public long? ProxyBuffer{ get; set; }
 
         /// <summary>
         /// 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GmType")]
         public long? GmType{ get; set; }
 
         /// <summary>
         /// 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GmCertType")]
         public long? GmCertType{ get; set; }
 
         /// <summary>
         /// GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GmCert")]
         public string GmCert{ get; set; }
 
         /// <summary>
         /// GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GmPrivateKey")]
         public string GmPrivateKey{ get; set; }
 
         /// <summary>
         /// GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GmEncCert")]
         public string GmEncCert{ get; set; }
 
         /// <summary>
         /// GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GmEncPrivateKey")]
         public string GmEncPrivateKey{ get; set; }
 
         /// <summary>
         /// GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GmSSLId")]
         public string GmSSLId{ get; set; }
 
         /// <summary>
         /// 域名标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Labels")]
         public string[] Labels{ get; set; }

@@ -26,21 +26,18 @@ namespace TencentCloud.Cfw.V20190904.Models
         
         /// <summary>
         /// nat防火墙vpc dns 信息数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcDnsSwitchLst")]
         public VpcDnsInfo[] VpcDnsSwitchLst{ get; set; }
 
         /// <summary>
-        /// 返回参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 返回参数 success成功 failed 失败
         /// </summary>
         [JsonProperty("ReturnMsg")]
         public string ReturnMsg{ get; set; }
 
         /// <summary>
         /// 开关总条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }

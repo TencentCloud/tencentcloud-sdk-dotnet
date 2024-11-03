@@ -26,28 +26,24 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// 地域ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
         /// 地域中文说明
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
         /// 地域英文全拼
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
         /// <summary>
         /// 地域编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }

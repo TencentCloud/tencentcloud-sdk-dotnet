@@ -26,84 +26,72 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 主机Quuid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }
 
         /// <summary>
         /// 主机标签名数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagList")]
         public string[] TagList{ get; set; }
 
         /// <summary>
         /// 主机内网Ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostIp")]
         public string HostIp{ get; set; }
 
         /// <summary>
         /// 主机名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AliasName")]
         public string AliasName{ get; set; }
 
         /// <summary>
         /// 主机公网ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineWanIp")]
         public string MachineWanIp{ get; set; }
 
         /// <summary>
         /// 主机uuid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
         /// 内核版本号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KernelVersion")]
         public string KernelVersion{ get; set; }
 
         /// <summary>
         /// 主机在线状态 ONLINE，OFFLINE
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineStatus")]
         public string MachineStatus{ get; set; }
 
         /// <summary>
         /// 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProtectType")]
         public string ProtectType{ get; set; }
 
         /// <summary>
         /// 漏洞数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulNum")]
         public long? VulNum{ get; set; }
 
         /// <summary>
         /// 云标签信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CloudTags")]
         public Tags[] CloudTags{ get; set; }
 
         /// <summary>
         /// 主机instance ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }

@@ -38,14 +38,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 自定义阈值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomItemValues")]
         public ulong?[] CustomItemValues{ get; set; }
 
         /// <summary>
         /// 检测项所属分类
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryId")]
         public long? CategoryId{ get; set; }

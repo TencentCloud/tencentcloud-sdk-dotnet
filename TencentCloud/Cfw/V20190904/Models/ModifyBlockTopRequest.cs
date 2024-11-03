@@ -25,16 +25,16 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 记录id
-        /// </summary>
-        [JsonProperty("UniqueId")]
-        public string UniqueId{ get; set; }
-
-        /// <summary>
         /// 操作类型 1 置顶 0取消
         /// </summary>
         [JsonProperty("OpeType")]
         public string OpeType{ get; set; }
+
+        /// <summary>
+        /// 记录id
+        /// </summary>
+        [JsonProperty("UniqueId")]
+        public string UniqueId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "UniqueId", this.UniqueId);
             this.SetParamSimple(map, prefix + "OpeType", this.OpeType);
+            this.SetParamSimple(map, prefix + "UniqueId", this.UniqueId);
         }
     }
 }

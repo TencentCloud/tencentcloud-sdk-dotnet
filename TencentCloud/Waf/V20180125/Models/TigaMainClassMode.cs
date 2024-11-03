@@ -26,14 +26,12 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// MainclassID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TypeID")]
         public string TypeID{ get; set; }
 
         /// <summary>
         /// 防护模式，0表示观察，1表示拦截
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mode")]
         public long? Mode{ get; set; }

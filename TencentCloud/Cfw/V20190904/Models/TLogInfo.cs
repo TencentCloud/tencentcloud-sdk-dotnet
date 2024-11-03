@@ -25,30 +25,6 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 失陷主机
-        /// </summary>
-        [JsonProperty("OutNum")]
-        public long? OutNum{ get; set; }
-
-        /// <summary>
-        /// 待处置告警
-        /// </summary>
-        [JsonProperty("HandleNum")]
-        public long? HandleNum{ get; set; }
-
-        /// <summary>
-        /// 漏洞攻击
-        /// </summary>
-        [JsonProperty("VulNum")]
-        public long? VulNum{ get; set; }
-
-        /// <summary>
-        /// 网络探测
-        /// </summary>
-        [JsonProperty("NetworkNum")]
-        public long? NetworkNum{ get; set; }
-
-        /// <summary>
         /// 封禁列表
         /// </summary>
         [JsonProperty("BanNum")]
@@ -60,18 +36,42 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("BruteForceNum")]
         public long? BruteForceNum{ get; set; }
 
+        /// <summary>
+        /// 待处置告警
+        /// </summary>
+        [JsonProperty("HandleNum")]
+        public long? HandleNum{ get; set; }
+
+        /// <summary>
+        /// 网络探测
+        /// </summary>
+        [JsonProperty("NetworkNum")]
+        public long? NetworkNum{ get; set; }
+
+        /// <summary>
+        /// 失陷主机
+        /// </summary>
+        [JsonProperty("OutNum")]
+        public long? OutNum{ get; set; }
+
+        /// <summary>
+        /// 漏洞攻击
+        /// </summary>
+        [JsonProperty("VulNum")]
+        public long? VulNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "OutNum", this.OutNum);
-            this.SetParamSimple(map, prefix + "HandleNum", this.HandleNum);
-            this.SetParamSimple(map, prefix + "VulNum", this.VulNum);
-            this.SetParamSimple(map, prefix + "NetworkNum", this.NetworkNum);
             this.SetParamSimple(map, prefix + "BanNum", this.BanNum);
             this.SetParamSimple(map, prefix + "BruteForceNum", this.BruteForceNum);
+            this.SetParamSimple(map, prefix + "HandleNum", this.HandleNum);
+            this.SetParamSimple(map, prefix + "NetworkNum", this.NetworkNum);
+            this.SetParamSimple(map, prefix + "OutNum", this.OutNum);
+            this.SetParamSimple(map, prefix + "VulNum", this.VulNum);
         }
     }
 }

@@ -30,6 +30,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("RuleUuids")]
         public long?[] RuleUuids{ get; set; }
 
+        /// <summary>
+        /// 仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则
+        /// </summary>
+        [JsonProperty("IpVersion")]
+        public ulong? IpVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "RuleUuids.", this.RuleUuids);
+            this.SetParamSimple(map, prefix + "IpVersion", this.IpVersion);
         }
     }
 }

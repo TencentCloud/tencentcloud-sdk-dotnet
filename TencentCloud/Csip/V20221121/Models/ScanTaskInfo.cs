@@ -26,84 +26,72 @@ namespace TencentCloud.Csip.V20221121.Models
         
         /// <summary>
         /// 任务Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
         /// 任务名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
         /// 任务状态码：1等待开始  2正在扫描  3扫描出错 4扫描完成
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 任务进度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
         /// 任务完成时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskTime")]
         public string TaskTime{ get; set; }
 
         /// <summary>
         /// 报告ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReportId")]
         public string ReportId{ get; set; }
 
         /// <summary>
         /// 报告名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReportName")]
         public string ReportName{ get; set; }
 
         /// <summary>
         /// 扫描计划，0-周期任务,1-立即扫描,2-定时扫描,3-自定义
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanPlan")]
         public long? ScanPlan{ get; set; }
 
         /// <summary>
         /// 关联的资产数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssetCount")]
         public long? AssetCount{ get; set; }
 
         /// <summary>
         /// APP ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
         /// <summary>
         /// 用户主账户ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UIN")]
         public string UIN{ get; set; }
 
         /// <summary>
         /// 用户名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }

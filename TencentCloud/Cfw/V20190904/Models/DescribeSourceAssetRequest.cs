@@ -25,6 +25,12 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
+        /// ChooseType为1，查询已经分组的资产；ChooseType不为1查询没有分组的资产
+        /// </summary>
+        [JsonProperty("ChooseType")]
+        public string ChooseType{ get; set; }
+
+        /// <summary>
         /// 模糊查询
         /// </summary>
         [JsonProperty("FuzzySearch")]
@@ -35,18 +41,6 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         [JsonProperty("InsType")]
         public string InsType{ get; set; }
-
-        /// <summary>
-        /// ChooseType为1，查询已经分组的资产；ChooseType不为1查询没有分组的资产
-        /// </summary>
-        [JsonProperty("ChooseType")]
-        public string ChooseType{ get; set; }
-
-        /// <summary>
-        /// 地域
-        /// </summary>
-        [JsonProperty("Zone")]
-        public string Zone{ get; set; }
 
         /// <summary>
         /// 查询单页的最大值；eg：10；则最多返回10条结果
@@ -60,18 +54,24 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
+        /// <summary>
+        /// 地域
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ChooseType", this.ChooseType);
             this.SetParamSimple(map, prefix + "FuzzySearch", this.FuzzySearch);
             this.SetParamSimple(map, prefix + "InsType", this.InsType);
-            this.SetParamSimple(map, prefix + "ChooseType", this.ChooseType);
-            this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
         }
     }
 }

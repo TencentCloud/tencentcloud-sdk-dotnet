@@ -25,12 +25,6 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 地域集合
-        /// </summary>
-        [JsonProperty("ZoneList")]
-        public AssetZone[] ZoneList{ get; set; }
-
-        /// <summary>
         /// 数据
         /// </summary>
         [JsonProperty("Data")]
@@ -41,6 +35,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
+
+        /// <summary>
+        /// 地域集合
+        /// </summary>
+        [JsonProperty("ZoneList")]
+        public AssetZone[] ZoneList{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -54,9 +54,9 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "ZoneList.", this.ZoneList);
             this.SetParamArrayObj(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamArrayObj(map, prefix + "ZoneList.", this.ZoneList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

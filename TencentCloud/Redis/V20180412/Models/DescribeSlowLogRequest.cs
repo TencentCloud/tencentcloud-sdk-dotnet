@@ -31,13 +31,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 预查询慢日志的起始时间。
+        /// 预查询慢日志的起始时间，查询时间最大跨度30天。
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// 预查询慢日志的结束时间。
+        /// 预查询慢日志的结束时间，查询时间最大跨度30天
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? MinQueryTime{ get; set; }
 
         /// <summary>
-        /// 每个页面展示的慢查询条数，默认值为20。取值范围：[20,1000]。
+        /// 每个页面展示的慢查询条数，默认值为20，最大100。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

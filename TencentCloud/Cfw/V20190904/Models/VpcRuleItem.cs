@@ -66,7 +66,6 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// FTP
         /// DNS
         /// TLS/SSL
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
@@ -84,7 +83,6 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// 访问控制策略的端口。取值：
         /// -1/-1：全部端口
         /// 80：80端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Port")]
         public string Port{ get; set; }
@@ -145,59 +143,57 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// 规则生效的防火墙实例ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FwGroupId")]
         public string FwGroupId{ get; set; }
 
         /// <summary>
         /// 防火墙名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FwGroupName")]
         public string FwGroupName{ get; set; }
 
         /// <summary>
         /// beta任务详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BetaList")]
         public BetaInfoByACL[] BetaList{ get; set; }
 
         /// <summary>
         /// 端口协议组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParamTemplateId")]
         public string ParamTemplateId{ get; set; }
 
         /// <summary>
         /// 端口协议组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParamTemplateName")]
         public string ParamTemplateName{ get; set; }
 
         /// <summary>
         /// 访问目的名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetName")]
         public string TargetName{ get; set; }
 
         /// <summary>
         /// 访问源名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceName")]
         public string SourceName{ get; set; }
 
         /// <summary>
         /// Ip版本，0：IPv4，1：IPv6，默认为IPv4
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpVersion")]
         public long? IpVersion{ get; set; }
+
+        /// <summary>
+        /// 是否是无效规则，0 表示有效规则，1 表示无效规则，出参场景返回使用
+        /// </summary>
+        [JsonProperty("Invalid")]
+        public long? Invalid{ get; set; }
 
 
         /// <summary>
@@ -229,6 +225,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "TargetName", this.TargetName);
             this.SetParamSimple(map, prefix + "SourceName", this.SourceName);
             this.SetParamSimple(map, prefix + "IpVersion", this.IpVersion);
+            this.SetParamSimple(map, prefix + "Invalid", this.Invalid);
         }
     }
 }

@@ -32,14 +32,12 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// 0代表成功，-1代表失败
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReturnCode")]
         public long? ReturnCode{ get; set; }
 
         /// <summary>
         /// success代表成功，failed代表失败
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReturnMsg")]
         public string ReturnMsg{ get; set; }

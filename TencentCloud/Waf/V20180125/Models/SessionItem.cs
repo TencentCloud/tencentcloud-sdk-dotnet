@@ -68,28 +68,24 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// SessionID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SessionId")]
         public long? SessionId{ get; set; }
 
         /// <summary>
         /// Session名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SessionName")]
         public string SessionName{ get; set; }
 
         /// <summary>
         /// Session是否正在被启用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SessionInUsed")]
         public bool? SessionInUsed{ get; set; }
 
         /// <summary>
         /// Session关联的CC规则ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RelatedRuleID")]
         public long?[] RelatedRuleID{ get; set; }

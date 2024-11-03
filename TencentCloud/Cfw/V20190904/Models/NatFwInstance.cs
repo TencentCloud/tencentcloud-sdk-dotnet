@@ -38,28 +38,24 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// 实例所在地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// 0:新增模式，1:接入模式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FwMode")]
         public long? FwMode{ get; set; }
 
         /// <summary>
         /// 0:正常状态， 1: 正在创建
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// nat公网ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NatIp")]
         public string NatIp{ get; set; }

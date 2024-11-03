@@ -26,28 +26,24 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// 字段类型，目前支持的类型有：long、text、double
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 字段的分词符，只有当字段类型为text时才有意义；输入字符串中的每个字符代表一个分词符
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tokenizer")]
         public string Tokenizer{ get; set; }
 
         /// <summary>
         /// 字段是否开启分析功能
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SqlFlag")]
         public bool? SqlFlag{ get; set; }
 
         /// <summary>
         /// 是否包含中文
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainZH")]

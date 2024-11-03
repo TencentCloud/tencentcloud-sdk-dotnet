@@ -25,46 +25,40 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 封禁和放通对象
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Ioc")]
-        public string Ioc{ get; set; }
-
-        /// <summary>
-        /// 0互联网出站 1互联网入站 5内网访问源 6内网访问目的
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("DirectionList")]
-        public string DirectionList{ get; set; }
-
-        /// <summary>
-        /// 规则截止时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("EndTime")]
-        public string EndTime{ get; set; }
-
-        /// <summary>
         /// 规则评论
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
         /// 自定义白名单规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomRule")]
         public CustomWhiteRule CustomRule{ get; set; }
 
         /// <summary>
+        /// 0互联网出站 1互联网入站 5内网访问源 6内网访问目的
+        /// </summary>
+        [JsonProperty("DirectionList")]
+        public string DirectionList{ get; set; }
+
+        /// <summary>
+        /// 规则截止时间
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
+        /// <summary>
         /// 放通的引擎: 1针对互联网边界 2针对nat防火墙 4针对vpc防火墙
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FwType")]
         public long? FwType{ get; set; }
+
+        /// <summary>
+        /// 封禁和放通对象
+        /// </summary>
+        [JsonProperty("Ioc")]
+        public string Ioc{ get; set; }
 
 
         /// <summary>
@@ -72,12 +66,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Ioc", this.Ioc);
-            this.SetParamSimple(map, prefix + "DirectionList", this.DirectionList);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamObj(map, prefix + "CustomRule.", this.CustomRule);
+            this.SetParamSimple(map, prefix + "DirectionList", this.DirectionList);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "FwType", this.FwType);
+            this.SetParamSimple(map, prefix + "Ioc", this.Ioc);
         }
     }
 }

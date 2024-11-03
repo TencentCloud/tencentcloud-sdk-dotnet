@@ -26,14 +26,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         
         /// <summary>
         /// 实例数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
 
         /// <summary>
         /// 实例列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public AssociatedInstanceInfo[] Data{ get; set; }

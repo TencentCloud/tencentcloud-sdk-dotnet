@@ -44,7 +44,6 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// 地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
@@ -63,98 +62,84 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// pod创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceCreateTime")]
         public string InstanceCreateTime{ get; set; }
 
         /// <summary>
         /// 命名空间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
         /// 状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 集群id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
         /// 集群名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
         /// 主机id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineId")]
         public string MachineId{ get; set; }
 
         /// <summary>
         /// 主机名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineName")]
         public string MachineName{ get; set; }
 
         /// <summary>
         /// pod ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PodIp")]
         public string PodIp{ get; set; }
 
         /// <summary>
         /// 关联service数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceCount")]
         public long? ServiceCount{ get; set; }
 
         /// <summary>
         /// 关联容器数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContainerCount")]
         public long? ContainerCount{ get; set; }
 
         /// <summary>
         /// 公网ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
         /// <summary>
         /// 内网ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrivateIp")]
         public string PrivateIp{ get; set; }
 
         /// <summary>
         /// 是否核心：1:核心，2:非核心
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsCore")]
         public long? IsCore{ get; set; }
 
         /// <summary>
         /// 是否新资产 1新
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsNewAsset")]
         public ulong? IsNewAsset{ get; set; }

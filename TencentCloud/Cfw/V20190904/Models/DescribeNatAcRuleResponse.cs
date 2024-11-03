@@ -32,7 +32,6 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// nat访问控制列表数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public DescAcItem[] Data{ get; set; }

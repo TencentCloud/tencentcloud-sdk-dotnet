@@ -26,63 +26,54 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// 参数名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParameterName")]
         public string ParameterName{ get; set; }
 
         /// <summary>
         /// 参数类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 参数位置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Location")]
         public string Location{ get; set; }
 
         /// <summary>
         /// 数据标签(敏感字段)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
         public string[] Label{ get; set; }
 
         /// <summary>
         /// 时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Timestamp")]
         public ulong? Timestamp{ get; set; }
 
         /// <summary>
         /// 备注信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
         /// 来源是请求或者响应
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
         /// 是否需要泛化 ，0表示不需要，1表示需要
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsPan")]
         public long? IsPan{ get; set; }
 
         /// <summary>
         /// 是否鉴权，1表示是，0表示否
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsAuth")]
         public long? IsAuth{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// nginx Id
+        /// 分配的服务器id
         /// </summary>
         [JsonProperty("NginxServerId")]
         public ulong? NginxServerId{ get; set; }

@@ -26,28 +26,24 @@ namespace TencentCloud.Cfw.V20190904.Models
         
         /// <summary>
         /// ip 开关列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public EdgeIpInfo[] Data{ get; set; }
 
         /// <summary>
         /// ip 开关列表个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
         /// 地域列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionLst")]
         public string[] RegionLst{ get; set; }
 
         /// <summary>
         /// 实例类型列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceTypeLst")]
         public string[] InstanceTypeLst{ get; set; }

@@ -26,35 +26,30 @@ namespace TencentCloud.Cfw.V20190904.Models
         
         /// <summary>
         /// 规则总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AllTotal")]
         public ulong? AllTotal{ get; set; }
 
         /// <summary>
         /// 阻断策略规则数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrategyNum")]
         public ulong? StrategyNum{ get; set; }
 
         /// <summary>
         /// 启用规则数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartRuleNum")]
         public ulong? StartRuleNum{ get; set; }
 
         /// <summary>
         /// 停用规则数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StopRuleNum")]
         public ulong? StopRuleNum{ get; set; }
 
         /// <summary>
         /// 剩余配额
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RemainingNum")]
         public long? RemainingNum{ get; set; }

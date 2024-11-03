@@ -44,14 +44,12 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// 打开个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OnNum")]
         public ulong? OnNum{ get; set; }
 
         /// <summary>
         /// 关闭个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OffNum")]
         public ulong? OffNum{ get; set; }

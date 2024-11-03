@@ -26,28 +26,24 @@ namespace TencentCloud.Cfw.V20190904.Models
         
         /// <summary>
         /// 公网IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
         /// <summary>
         /// 内网IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IntranetIp")]
         public string IntranetIp{ get; set; }
 
         /// <summary>
         /// 实例名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
         /// 实例ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -60,7 +56,6 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// 地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
@@ -79,35 +74,30 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// 公网 IP 类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicIpType")]
         public ulong? PublicIpType{ get; set; }
 
         /// <summary>
         /// 风险端口数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PortTimes")]
         public ulong? PortTimes{ get; set; }
 
         /// <summary>
         /// 最近扫描时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastTime")]
         public string LastTime{ get; set; }
 
         /// <summary>
         /// 扫描深度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanMode")]
         public string ScanMode{ get; set; }
 
         /// <summary>
         /// 扫描状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanStatus")]
         public ulong? ScanStatus{ get; set; }

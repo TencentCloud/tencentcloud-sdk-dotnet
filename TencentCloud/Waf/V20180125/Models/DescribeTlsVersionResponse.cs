@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// TLS key value
+        /// TLS信息
         /// </summary>
         [JsonProperty("TLS")]
         public TLSVersion[] TLS{ get; set; }

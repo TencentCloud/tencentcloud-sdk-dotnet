@@ -26,63 +26,54 @@ namespace TencentCloud.Cfw.V20190904.Models
         
         /// <summary>
         /// VPC防火墙实例ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FwInsId")]
         public string FwInsId{ get; set; }
 
         /// <summary>
         /// CVM所在地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// CVM所在地域中文
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionZh")]
         public string RegionZh{ get; set; }
 
         /// <summary>
         /// CVM所在地域详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionDetail")]
         public string RegionDetail{ get; set; }
 
         /// <summary>
         /// 主机所在可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneZh")]
         public string ZoneZh{ get; set; }
 
         /// <summary>
         /// 备机所在可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneZhBack")]
         public string ZoneZhBack{ get; set; }
 
         /// <summary>
         /// 防火墙CVM带宽值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BandWidth")]
         public long? BandWidth{ get; set; }
 
         /// <summary>
         /// 实例主机所在可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
         /// 实例备机所在可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneBak")]
         public string ZoneBak{ get; set; }

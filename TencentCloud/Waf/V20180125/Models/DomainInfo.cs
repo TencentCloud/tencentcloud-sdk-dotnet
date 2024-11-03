@@ -238,7 +238,6 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// cdc实例域名接入的集群信息,非cdc实例忽略。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CdcClusters")]
         public string CdcClusters{ get; set; }
@@ -247,7 +246,6 @@ namespace TencentCloud.Waf.V20180125.Models
         /// api安全开关状态。
         /// 0：关闭 
         /// 1：开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApiStatus")]
         public long? ApiStatus{ get; set; }
@@ -256,7 +254,6 @@ namespace TencentCloud.Waf.V20180125.Models
         /// 应用型负载均衡类型，默认clb。
         /// clb：七层负载均衡器类型
         /// apisix：apisix网关型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlbType")]
         public string AlbType{ get; set; }
@@ -267,14 +264,12 @@ namespace TencentCloud.Waf.V20180125.Models
         /// 1：非腾讯云源站
         /// 2：安全组绑定失败
         /// 3：安全组发生变更
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SgState")]
         public long? SgState{ get; set; }
 
         /// <summary>
         /// 安全组状态的详细解释
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SgDetail")]
         public string SgDetail{ get; set; }
@@ -282,49 +277,42 @@ namespace TencentCloud.Waf.V20180125.Models
         /// <summary>
         /// 域名云环境。hybrid：混合云域名
         /// public：公有云域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CloudType")]
         public string CloudType{ get; set; }
 
         /// <summary>
         /// 域名备注信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }
 
         /// <summary>
         /// SAASWAF源站IP列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SrcList")]
         public string[] SrcList{ get; set; }
 
         /// <summary>
         /// SAASWAF源站域名列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpstreamDomainList")]
         public string[] UpstreamDomainList{ get; set; }
 
         /// <summary>
         /// 安全组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SgID")]
         public string SgID{ get; set; }
 
         /// <summary>
         /// clbwaf接入状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessStatus")]
         public long? AccessStatus{ get; set; }
 
         /// <summary>
         /// 域名标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Labels")]
         public string[] Labels{ get; set; }

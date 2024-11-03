@@ -32,14 +32,12 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// VPC防火墙实例名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FwInsName")]
         public string FwInsName{ get; set; }
 
         /// <summary>
         /// 网络经过VPC防火墙CVM所在地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FwInsRegion")]
         public string FwInsRegion{ get; set; }

@@ -26,56 +26,48 @@ namespace TencentCloud.Cfw.V20190904.Models
         
         /// <summary>
         /// 防火墙(组)ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FwGroupId")]
         public string FwGroupId{ get; set; }
 
         /// <summary>
         /// 防火墙(组)名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FwGroupName")]
         public string FwGroupName{ get; set; }
 
         /// <summary>
         /// 防火墙组涉及到的开关个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FwSwitchNum")]
         public long? FwSwitchNum{ get; set; }
 
         /// <summary>
         /// 防火墙(组)部署的地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionLst")]
         public string[] RegionLst{ get; set; }
 
         /// <summary>
         /// 模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mode")]
         public long? Mode{ get; set; }
 
         /// <summary>
         /// 防火墙实例的开关模式 1: 单点互通 2: 多点互通 3: 全互通 4: 自定义路由
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SwitchMode")]
         public long? SwitchMode{ get; set; }
 
         /// <summary>
         /// VPC防火墙实例卡片信息数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FwInstanceLst")]
         public VpcFwInstanceInfo[] FwInstanceLst{ get; set; }
 
         /// <summary>
         /// 防火墙(状态) 0：正常 1: 初始化或操作中
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -89,35 +81,30 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// cdc专用集群场景时表示部署所属的cdc
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
 
         /// <summary>
         /// cdc专用集群场景时表示cdc名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CdcName")]
         public string CdcName{ get; set; }
 
         /// <summary>
         /// 跨租户模式 1管理员 2单边 0 非跨租户
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CrossUserMode")]
         public string CrossUserMode{ get; set; }
 
         /// <summary>
         /// 云联网模式下，当前实例是否需要开启重叠路由开关，1：需要开启，0：不需要开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NeedSwitchCcnOverlap")]
         public long? NeedSwitchCcnOverlap{ get; set; }
 
         /// <summary>
         /// 云联网模式下，实例关联的云联网id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CcnId")]
         public string CcnId{ get; set; }

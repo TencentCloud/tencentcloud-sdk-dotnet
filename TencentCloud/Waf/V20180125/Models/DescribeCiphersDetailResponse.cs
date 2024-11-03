@@ -26,7 +26,6 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// 加密套件信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ciphers")]
         public TLSCiphers[] Ciphers{ get; set; }

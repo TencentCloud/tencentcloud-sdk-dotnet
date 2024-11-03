@@ -47,6 +47,7 @@ namespace TencentCloud.Waf.V20180125.Models
         /// valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
         /// </summary>
         [JsonProperty("ValidTS")]
+        [System.Obsolete]
         public long? ValidTS{ get; set; }
 
         /// <summary>
@@ -74,7 +75,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Note{ get; set; }
 
         /// <summary>
-        /// 定时配置类型
+        /// 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
         /// </summary>
         [JsonProperty("JobType")]
         public string JobType{ get; set; }

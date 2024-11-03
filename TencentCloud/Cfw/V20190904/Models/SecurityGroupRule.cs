@@ -82,7 +82,6 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// 协议；TCP/UDP/ICMP/ANY
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
@@ -91,14 +90,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// 访问控制策略的端口。取值：
         /// -1/-1：全部端口
         /// 80：80端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Port")]
         public string Port{ get; set; }
 
         /// <summary>
         /// 端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceTemplateId")]
         public string ServiceTemplateId{ get; set; }

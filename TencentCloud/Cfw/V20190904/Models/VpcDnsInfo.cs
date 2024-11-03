@@ -56,14 +56,12 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// nat网关id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NatInsId")]
         public string NatInsId{ get; set; }
 
         /// <summary>
         /// nat网关名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NatInsName")]
         public string NatInsName{ get; set; }
@@ -76,14 +74,12 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// 0：未防护， 1: 已防护，2：忽略此字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProtectedStatus")]
         public ulong? ProtectedStatus{ get; set; }
 
         /// <summary>
         /// 是否支持DNS FW，0-不支持、1-支持
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportDNSFW")]
         public ulong? SupportDNSFW{ get; set; }

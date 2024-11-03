@@ -26,14 +26,12 @@ namespace TencentCloud.Csip.V20221121.Models
         
         /// <summary>
         /// 总条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
         /// 任务日志列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public ScanTaskInfo[] Data{ get; set; }

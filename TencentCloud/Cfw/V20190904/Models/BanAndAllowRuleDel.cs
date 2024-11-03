@@ -26,21 +26,19 @@ namespace TencentCloud.Cfw.V20190904.Models
         
         /// <summary>
         /// 封禁和放通对象
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ioc")]
         public string Ioc{ get; set; }
 
         /// <summary>
         /// 0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DirectionList")]
         public string DirectionList{ get; set; }
 
         /// <summary>
         /// 规则类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
         /// </summary>
         [JsonProperty("RuleType")]
         public long? RuleType{ get; set; }

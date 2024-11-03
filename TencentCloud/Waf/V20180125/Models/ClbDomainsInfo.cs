@@ -74,49 +74,42 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 域名绑定负载均衡器状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("State")]
         public long? State{ get; set; }
 
         /// <summary>
         /// 负载均衡类型，clb或者apisix
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlbType")]
         public string AlbType{ get; set; }
 
         /// <summary>
         /// IsCdn=3时，表示自定义header
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpHeaders")]
         public string[] IpHeaders{ get; set; }
 
         /// <summary>
         /// cdc-clb-waf类型WAF的CDC集群信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CdcClusters")]
         public string CdcClusters{ get; set; }
 
         /// <summary>
         /// 云类型:public:公有云；private:私有云;hybrid:混合云
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CloudType")]
         public string CloudType{ get; set; }
 
         /// <summary>
         /// 域名备注信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }
 
         /// <summary>
         /// 域名标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Labels")]
         public string[] Labels{ get; set; }

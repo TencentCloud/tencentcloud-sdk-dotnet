@@ -27,28 +27,24 @@ namespace TencentCloud.Csip.V20221121.Models
         /// <summary>
         /// 产品名称:
         /// "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
         /// 已处理的资产总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportHandledCount")]
         public long? SupportHandledCount{ get; set; }
 
         /// <summary>
         /// 支持的资产总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportTotalCount")]
         public long? SupportTotalCount{ get; set; }
 
         /// <summary>
         /// 是否支持该产品1支持；0不支持
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSupport")]
         public bool? IsSupport{ get; set; }

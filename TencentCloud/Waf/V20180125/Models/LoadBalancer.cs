@@ -80,21 +80,18 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 负载均衡的VPCID，公网为-1，内网按实际填写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NumericalVpcId")]
         public long? NumericalVpcId{ get; set; }
 
         /// <summary>
-        /// 负载均衡的网络类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网
         /// </summary>
         [JsonProperty("LoadBalancerType")]
         public string LoadBalancerType{ get; set; }
 
         /// <summary>
         /// 负载均衡的域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoadBalancerDomain")]
         public string LoadBalancerDomain{ get; set; }

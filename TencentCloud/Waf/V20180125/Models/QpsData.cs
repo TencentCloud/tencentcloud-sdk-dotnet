@@ -26,35 +26,30 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// 弹性qps默认值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ElasticBillingDefault")]
         public ulong? ElasticBillingDefault{ get; set; }
 
         /// <summary>
         /// 弹性qps最小值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ElasticBillingMin")]
         public ulong? ElasticBillingMin{ get; set; }
 
         /// <summary>
         /// 弹性qps最大值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ElasticBillingMax")]
         public ulong? ElasticBillingMax{ get; set; }
 
         /// <summary>
         /// 业务扩展包最大qps
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QPSExtendMax")]
         public ulong? QPSExtendMax{ get; set; }
 
         /// <summary>
-        /// 海外业务扩展包最大qps
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 境外业务扩展包最大qps
         /// </summary>
         [JsonProperty("QPSExtendIntlMax")]
         public ulong? QPSExtendIntlMax{ get; set; }

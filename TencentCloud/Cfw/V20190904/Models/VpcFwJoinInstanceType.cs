@@ -26,14 +26,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         
         /// <summary>
         /// 接入实例类型，VPC、DIRECTCONNECT、 VPNGW 等
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JoinType")]
         public string JoinType{ get; set; }
 
         /// <summary>
         /// 接入的对应网络实例类型的数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Num")]
         public long? Num{ get; set; }

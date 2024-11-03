@@ -26,35 +26,30 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// 监听id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
         /// 监听名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ListenerName")]
         public string ListenerName{ get; set; }
 
         /// <summary>
         /// 负载均衡id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
         /// 负载均衡名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoadBalancerName")]
         public string LoadBalancerName{ get; set; }
 
         /// <summary>
         /// 协议
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
@@ -89,49 +84,42 @@ namespace TencentCloud.Waf.V20180125.Models
         ///     "上海": "sh",
         ///     "新加坡": "sg",
         ///     "清远": "qy"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// 接入IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
         /// 接入端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vport")]
         public ulong? Vport{ get; set; }
 
         /// <summary>
         /// 地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
         /// VPCID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NumericalVpcId")]
         public long? NumericalVpcId{ get; set; }
 
         /// <summary>
         /// CLB类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoadBalancerType")]
         public string LoadBalancerType{ get; set; }
 
         /// <summary>
         /// 负载均衡器的域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoadBalancerDomain")]
         public string LoadBalancerDomain{ get; set; }

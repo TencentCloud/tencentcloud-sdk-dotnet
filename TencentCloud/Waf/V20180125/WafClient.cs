@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1115";
+       private const string sdkVersion = "SDK_NET_3.0.1116";
 
         /// <summary>
         /// Client constructor.
@@ -491,31 +491,6 @@ namespace TencentCloud.Waf.V20180125
         public DeleteDomainWhiteRulesResponse DeleteDomainWhiteRulesSync(DeleteDomainWhiteRulesRequest req)
         {
             return InternalRequestAsync<DeleteDomainWhiteRulesResponse>(req, "DeleteDomainWhiteRules")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 废弃接口，无有效调用
-        /// 
-        /// 删除访问日志下载记录
-        /// </summary>
-        /// <param name="req"><see cref="DeleteDownloadRecordRequest"/></param>
-        /// <returns><see cref="DeleteDownloadRecordResponse"/></returns>
-        public Task<DeleteDownloadRecordResponse> DeleteDownloadRecord(DeleteDownloadRecordRequest req)
-        {
-            return InternalRequestAsync<DeleteDownloadRecordResponse>(req, "DeleteDownloadRecord");
-        }
-
-        /// <summary>
-        /// 废弃接口，无有效调用
-        /// 
-        /// 删除访问日志下载记录
-        /// </summary>
-        /// <param name="req"><see cref="DeleteDownloadRecordRequest"/></param>
-        /// <returns><see cref="DeleteDownloadRecordResponse"/></returns>
-        public DeleteDownloadRecordResponse DeleteDownloadRecordSync(DeleteDownloadRecordRequest req)
-        {
-            return InternalRequestAsync<DeleteDownloadRecordResponse>(req, "DeleteDownloadRecord")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

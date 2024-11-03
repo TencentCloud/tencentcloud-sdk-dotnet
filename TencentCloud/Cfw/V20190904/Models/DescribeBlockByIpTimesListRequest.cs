@@ -25,12 +25,6 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 开始时间
-        /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
-
-        /// <summary>
         /// 结束时间
         /// </summary>
         [JsonProperty("EndTime")]
@@ -43,22 +37,16 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 地域
+        /// 开始时间
         /// </summary>
-        [JsonProperty("Zone")]
-        public string Zone{ get; set; }
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
 
         /// <summary>
         /// 方向
         /// </summary>
         [JsonProperty("Direction")]
         public string Direction{ get; set; }
-
-        /// <summary>
-        /// 来源
-        /// </summary>
-        [JsonProperty("Source")]
-        public string Source{ get; set; }
 
         /// <summary>
         /// vpc间防火墙开关边id
@@ -72,20 +60,32 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("LogSource")]
         public string LogSource{ get; set; }
 
+        /// <summary>
+        /// 来源
+        /// </summary>
+        [JsonProperty("Source")]
+        public string Source{ get; set; }
+
+        /// <summary>
+        /// 地域
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
-            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "Direction", this.Direction);
-            this.SetParamSimple(map, prefix + "Source", this.Source);
             this.SetParamSimple(map, prefix + "EdgeId", this.EdgeId);
             this.SetParamSimple(map, prefix + "LogSource", this.LogSource);
+            this.SetParamSimple(map, prefix + "Source", this.Source);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
         }
     }
 }

@@ -32,7 +32,6 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 添加成功的规则ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleId")]
         public long? RuleId{ get; set; }

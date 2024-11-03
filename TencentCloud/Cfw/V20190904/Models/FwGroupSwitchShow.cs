@@ -32,7 +32,6 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// 防火墙开关NAME
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SwitchName")]
         public string SwitchName{ get; set; }
@@ -45,98 +44,84 @@ namespace TencentCloud.Cfw.V20190904.Models
 
         /// <summary>
         /// 开关边连接类型 0：对等连接， 1：云连网
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConnectType")]
         public long? ConnectType{ get; set; }
 
         /// <summary>
         /// 连接ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConnectId")]
         public string ConnectId{ get; set; }
 
         /// <summary>
         /// 连接名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConnectName")]
         public string ConnectName{ get; set; }
 
         /// <summary>
         /// 源实例信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SrcInstancesInfo")]
         public NetInstancesInfo[] SrcInstancesInfo{ get; set; }
 
         /// <summary>
         /// 目的实例信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DstInstancesInfo")]
         public NetInstancesInfo[] DstInstancesInfo{ get; set; }
 
         /// <summary>
         /// 防火墙(组)数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FwGroupId")]
         public string FwGroupId{ get; set; }
 
         /// <summary>
         /// 防火墙(组)名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FwGroupName")]
         public string FwGroupName{ get; set; }
 
         /// <summary>
         /// 开关状态 0：关 ， 1：开
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Enable")]
         public long? Enable{ get; set; }
 
         /// <summary>
         /// 开关的状态 0：正常， 1：转换中
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 0-非sase实例，忽略，1-未绑定状态，2-已绑定
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttachWithEdge")]
         public long? AttachWithEdge{ get; set; }
 
         /// <summary>
         /// 对等防火墙和开关状态 0：正常， 1：对等未创建防火墙，2：对等已创建防火墙，未打开开关
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CrossEdgeStatus")]
         public long? CrossEdgeStatus{ get; set; }
 
         /// <summary>
         /// 网络经过VPC防火墙CVM所在地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FwInsRegion")]
         public string[] FwInsRegion{ get; set; }
 
         /// <summary>
         /// 0 观察 1 拦截 2 严格 3 关闭 4 不支持ips 前端展示tag
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpsAction")]
         public long? IpsAction{ get; set; }
 
         /// <summary>
         /// 开关关联的防火墙实例列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FwInsLst")]
         public VpcFwInstanceShow[] FwInsLst{ get; set; }
@@ -145,10 +130,15 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// 开关是否处于bypass状态
         /// 0：正常状态
         /// 1：bypass状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BypassStatus")]
         public long? BypassStatus{ get; set; }
+
+        /// <summary>
+        /// 0: ipv4 , 1:ipv6
+        /// </summary>
+        [JsonProperty("IpVersion")]
+        public long? IpVersion{ get; set; }
 
 
         /// <summary>
@@ -174,6 +164,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "IpsAction", this.IpsAction);
             this.SetParamArrayObj(map, prefix + "FwInsLst.", this.FwInsLst);
             this.SetParamSimple(map, prefix + "BypassStatus", this.BypassStatus);
+            this.SetParamSimple(map, prefix + "IpVersion", this.IpVersion);
         }
     }
 }

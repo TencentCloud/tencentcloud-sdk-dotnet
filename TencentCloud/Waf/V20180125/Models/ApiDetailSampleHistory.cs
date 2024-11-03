@@ -26,21 +26,18 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// 样例名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SampleNme")]
         public string SampleNme{ get; set; }
 
         /// <summary>
         /// 请求样例
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RepLog")]
         public string RepLog{ get; set; }
 
         /// <summary>
         /// 响应样例
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RspLog")]
         public string RspLog{ get; set; }

@@ -64,7 +64,15 @@ namespace TencentCloud.Mrs.V20200910.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PartDetail")]
+        [System.Obsolete]
         public PartDesc PartDetail{ get; set; }
+
+        /// <summary>
+        /// 部位详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PartDetailList")]
+        public PartDesc[] PartDetailList{ get; set; }
 
 
         /// <summary>
@@ -78,6 +86,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamSimple(map, prefix + "TissueDirection", this.TissueDirection);
             this.SetParamSimple(map, prefix + "Upper", this.Upper);
             this.SetParamObj(map, prefix + "PartDetail.", this.PartDetail);
+            this.SetParamArrayObj(map, prefix + "PartDetailList.", this.PartDetailList);
         }
     }
 }

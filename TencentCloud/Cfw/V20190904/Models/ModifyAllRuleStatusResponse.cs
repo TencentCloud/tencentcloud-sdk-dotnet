@@ -26,7 +26,6 @@ namespace TencentCloud.Cfw.V20190904.Models
         
         /// <summary>
         /// 0: 修改成功, 其他: 修改失败
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

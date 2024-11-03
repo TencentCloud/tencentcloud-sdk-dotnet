@@ -25,15 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 无
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 主机标签key
         /// </summary>
         [JsonProperty("TagKey")]
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// 无
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 主机标签value
         /// </summary>
         [JsonProperty("TagValue")]
         public string TagValue{ get; set; }

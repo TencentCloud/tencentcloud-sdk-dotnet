@@ -44,28 +44,24 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 默认为0
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
         /// 计费类目ID，对应cid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GoodsCategoryId")]
         public long? GoodsCategoryId{ get; set; }
 
         /// <summary>
         /// 平台类型，默认1
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Platform")]
         public long? Platform{ get; set; }
 
         /// <summary>
         /// 购买waf实例区域ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }

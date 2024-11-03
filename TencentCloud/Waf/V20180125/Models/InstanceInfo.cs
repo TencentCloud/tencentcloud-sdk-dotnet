@@ -150,42 +150,36 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 业务安全包
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FraudPkg")]
         public FraudPkg FraudPkg{ get; set; }
 
         /// <summary>
         /// Bot资源包
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BotPkg")]
         public BotPkg BotPkg{ get; set; }
 
         /// <summary>
         /// bot的qps详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BotQPS")]
         public BotQPS BotQPS{ get; set; }
 
         /// <summary>
         /// qps弹性计费上限
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ElasticBilling")]
         public ulong? ElasticBilling{ get; set; }
 
         /// <summary>
         /// 攻击日志投递开关
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttackLogPost")]
         public long? AttackLogPost{ get; set; }
 
         /// <summary>
         /// 带宽峰值，单位为B/s(字节每秒)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxBandwidth")]
         public ulong? MaxBandwidth{ get; set; }
@@ -198,105 +192,90 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 购买的qps规格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QpsStandard")]
         public ulong? QpsStandard{ get; set; }
 
         /// <summary>
         /// 购买的带宽规格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BandwidthStandard")]
         public ulong? BandwidthStandard{ get; set; }
 
         /// <summary>
         /// 实例状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// 实例沙箱qps值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SandboxQps")]
         public ulong? SandboxQps{ get; set; }
 
         /// <summary>
         /// 是否api 安全试用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsAPISecurityTrial")]
         public ulong? IsAPISecurityTrial{ get; set; }
 
         /// <summary>
         /// 重保包
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MajorEventsPkg")]
         public MajorEventsPkg MajorEventsPkg{ get; set; }
 
         /// <summary>
         /// 混合云子节点包
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HybridPkg")]
         public HybridPkg HybridPkg{ get; set; }
 
         /// <summary>
         /// API安全资源包
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApiPkg")]
         public ApiPkg ApiPkg{ get; set; }
 
         /// <summary>
         /// 小程序安全加速包
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MiniPkg")]
         public MiniPkg MiniPkg{ get; set; }
 
         /// <summary>
         /// 小程序qps规格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MiniQpsStandard")]
         public ulong? MiniQpsStandard{ get; set; }
 
         /// <summary>
         /// 小程序qps峰值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MiniMaxQPS")]
         public ulong? MiniMaxQPS{ get; set; }
 
         /// <summary>
         /// 最近一次超量时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastQpsExceedTime")]
         public string LastQpsExceedTime{ get; set; }
 
         /// <summary>
         /// 小程序安全接入ID数量扩张包
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MiniExtendPkg")]
         public MiniExtendPkg MiniExtendPkg{ get; set; }
 
         /// <summary>
         /// 计费项
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillingItem")]
         public string BillingItem{ get; set; }
 
         /// <summary>
         /// 实例延期释放标识
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FreeDelayFlag")]
         public ulong? FreeDelayFlag{ get; set; }
