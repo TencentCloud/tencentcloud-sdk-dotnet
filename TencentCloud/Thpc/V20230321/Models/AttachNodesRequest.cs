@@ -31,7 +31,7 @@ namespace TencentCloud.Thpc.V20230321.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。
+        /// 节点的实例id列表
         /// </summary>
         [JsonProperty("ResourceSet")]
         public string[] ResourceSet{ get; set; }

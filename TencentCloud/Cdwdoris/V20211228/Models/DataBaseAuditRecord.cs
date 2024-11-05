@@ -115,6 +115,13 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("Catalog")]
         public string Catalog{ get; set; }
 
+        /// <summary>
+        /// 状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("State")]
+        public string State{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +141,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "DbName", this.DbName);
             this.SetParamSimple(map, prefix + "SqlType", this.SqlType);
             this.SetParamSimple(map, prefix + "Catalog", this.Catalog);
+            this.SetParamSimple(map, prefix + "State", this.State);
         }
     }
 }

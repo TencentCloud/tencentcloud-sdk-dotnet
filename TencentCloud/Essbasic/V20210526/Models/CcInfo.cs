@@ -25,28 +25,31 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 被抄送人手机号，大陆11位手机号
+        /// 被抄送方手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+        /// 请确认手机号所有方为此业务通知方。
         /// </summary>
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }
 
         /// <summary>
-        /// 被抄送人姓名
+        /// 被抄送方姓名。
+        /// 抄送方的姓名将用于身份认证，请确保填写的姓名为抄送方的真实姓名，而非昵称等代名。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 被抄送人类型
-        /// 0--个人. 1--员工
+        /// 被抄送方类型, 可设置以下类型:
+        /// <ul><li> **0** :个人抄送方</li>
+        /// <li> **1** :企业员工抄送方</li></ul>
         /// </summary>
         [JsonProperty("CcType")]
         public long? CcType{ get; set; }
 
         /// <summary>
-        /// 被抄送人权限
-        /// 0--可查看
-        /// 1--可查看也可下载
+        /// 被抄送方权限, 可设置如下权限:
+        /// <ul><li> **0** :可查看合同内容</li>
+        /// <li> **1** :可查看合同内容也可下载原文</li></ul>
         /// </summary>
         [JsonProperty("CcPermission")]
         public long? CcPermission{ get; set; }

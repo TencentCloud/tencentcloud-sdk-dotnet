@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1117";
+       private const string sdkVersion = "SDK_NET_3.0.1118";
 
         /// <summary>
         /// Client constructor.
@@ -54,6 +54,8 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 接口不再使用，已有新接口AddAclRule
+        /// 
         /// 添加互联网边界规则
         /// </summary>
         /// <param name="req"><see cref="AddAcRuleRequest"/></param>
@@ -64,6 +66,8 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 接口不再使用，已有新接口AddAclRule
+        /// 
         /// 添加互联网边界规则
         /// </summary>
         /// <param name="req"><see cref="AddAcRuleRequest"/></param>

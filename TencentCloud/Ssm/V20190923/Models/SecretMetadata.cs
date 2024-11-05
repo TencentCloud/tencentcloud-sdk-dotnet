@@ -74,14 +74,12 @@ namespace TencentCloud.Ssm.V20190923.Models
 
         /// <summary>
         /// 1:--开启轮转；0--禁止轮转
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RotationStatus")]
         public long? RotationStatus{ get; set; }
 
         /// <summary>
         /// 下一次轮转开始时间，uinx 时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NextRotationTime")]
         public ulong? NextRotationTime{ get; set; }
@@ -92,28 +90,24 @@ namespace TencentCloud.Ssm.V20190923.Models
         /// 2 -- SSH密钥对凭据；
         /// 3 -- 云API密钥对凭据；
         /// 4 -- Redis类型凭据；
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecretType")]
         public long? SecretType{ get; set; }
 
         /// <summary>
         /// 云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
         /// 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceName")]
         public string ResourceName{ get; set; }
 
         /// <summary>
         /// 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectID")]
         public long? ProjectID{ get; set; }
@@ -127,28 +121,24 @@ namespace TencentCloud.Ssm.V20190923.Models
 
         /// <summary>
         /// 当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetUin")]
         public ulong? TargetUin{ get; set; }
 
         /// <summary>
         /// 轮转的频率，以天作为单位，在轮转开启状态下生效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RotationFrequency")]
         public long? RotationFrequency{ get; set; }
 
         /// <summary>
         /// 云产品凭据对应的云产品实例 ID 号。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceID")]
         public string ResourceID{ get; set; }
 
         /// <summary>
         /// 用户指定的轮转开始时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RotationBeginTime")]
         public string RotationBeginTime{ get; set; }

@@ -49,7 +49,7 @@ namespace TencentCloud.Ssm.V20190923.Models
         public string KmsKeyId{ get; set; }
 
         /// <summary>
-        /// 凭据类型，默认为自定义凭据。
+        /// 凭据类型，默认为0自定义凭据。
         /// </summary>
         [JsonProperty("SecretType")]
         public ulong? SecretType{ get; set; }

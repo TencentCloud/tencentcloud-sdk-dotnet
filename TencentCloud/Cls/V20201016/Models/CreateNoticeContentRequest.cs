@@ -25,19 +25,19 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 模版名称。
+        /// 模板名称。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 模版内容语言。0：中文1：英文
+        /// 模板内容语言。0：中文1：英文
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
-        /// 模版详细配置。
+        /// 模板详细配置。
         /// </summary>
         [JsonProperty("NoticeContents")]
         public NoticeContent[] NoticeContents{ get; set; }

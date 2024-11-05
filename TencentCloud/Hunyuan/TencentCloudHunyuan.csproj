@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C64F3428-9CE7-3A08-8DE2-D7FBE42B7F75}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1117</VersionPrefix>
+    <VersionPrefix>3.0.1118</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -54,12 +54,27 @@
     <Compile Include="V20230901\Models\ChatCompletionsResponse.cs" />
     <Compile Include="V20230901\Models\Choice.cs" />
     <Compile Include="V20230901\Models\Content.cs" />
+    <Compile Include="V20230901\Models\CreateThreadRequest.cs" />
+    <Compile Include="V20230901\Models\CreateThreadResponse.cs" />
     <Compile Include="V20230901\Models\Delta.cs" />
     <Compile Include="V20230901\Models\EmbeddingData.cs" />
     <Compile Include="V20230901\Models\EmbeddingUsage.cs" />
     <Compile Include="V20230901\Models\ErrorMsg.cs" />
+    <Compile Include="V20230901\Models\FileObject.cs" />
+    <Compile Include="V20230901\Models\FilesDeletionsRequest.cs" />
+    <Compile Include="V20230901\Models\FilesDeletionsResponse.cs" />
+    <Compile Include="V20230901\Models\FilesListRequest.cs" />
+    <Compile Include="V20230901\Models\FilesListResponse.cs" />
+    <Compile Include="V20230901\Models\FilesUploadsRequest.cs" />
+    <Compile Include="V20230901\Models\FilesUploadsResponse.cs" />
     <Compile Include="V20230901\Models\GetEmbeddingRequest.cs" />
     <Compile Include="V20230901\Models\GetEmbeddingResponse.cs" />
+    <Compile Include="V20230901\Models\GetThreadMessageListRequest.cs" />
+    <Compile Include="V20230901\Models\GetThreadMessageListResponse.cs" />
+    <Compile Include="V20230901\Models\GetThreadMessageRequest.cs" />
+    <Compile Include="V20230901\Models\GetThreadMessageResponse.cs" />
+    <Compile Include="V20230901\Models\GetThreadRequest.cs" />
+    <Compile Include="V20230901\Models\GetThreadResponse.cs" />
     <Compile Include="V20230901\Models\GetTokenCountRequest.cs" />
     <Compile Include="V20230901\Models\GetTokenCountResponse.cs" />
     <Compile Include="V20230901\Models\History.cs" />
@@ -67,12 +82,17 @@
     <Compile Include="V20230901\Models\LogoParam.cs" />
     <Compile Include="V20230901\Models\LogoRect.cs" />
     <Compile Include="V20230901\Models\Message.cs" />
+    <Compile Include="V20230901\Models\Mindmap.cs" />
     <Compile Include="V20230901\Models\Multimedia.cs" />
     <Compile Include="V20230901\Models\QueryHunyuanImageChatJobRequest.cs" />
     <Compile Include="V20230901\Models\QueryHunyuanImageChatJobResponse.cs" />
     <Compile Include="V20230901\Models\QueryHunyuanImageJobRequest.cs" />
     <Compile Include="V20230901\Models\QueryHunyuanImageJobResponse.cs" />
+    <Compile Include="V20230901\Models\RelevantEntity.cs" />
+    <Compile Include="V20230901\Models\RelevantEvent.cs" />
     <Compile Include="V20230901\Models\Replace.cs" />
+    <Compile Include="V20230901\Models\RunThreadRequest.cs" />
+    <Compile Include="V20230901\Models\RunThreadResponse.cs" />
     <Compile Include="V20230901\Models\SearchInfo.cs" />
     <Compile Include="V20230901\Models\SearchResult.cs" />
     <Compile Include="V20230901\Models\SetPayModeRequest.cs" />
@@ -84,6 +104,12 @@
     <Compile Include="V20230901\Models\SubmitHunyuanImageJobResponse.cs" />
     <Compile Include="V20230901\Models\TextToImageLiteRequest.cs" />
     <Compile Include="V20230901\Models\TextToImageLiteResponse.cs" />
+    <Compile Include="V20230901\Models\ThreadAdditionalMessage.cs" />
+    <Compile Include="V20230901\Models\ThreadMessage.cs" />
+    <Compile Include="V20230901\Models\ThreadMessageAttachmentObject.cs" />
+    <Compile Include="V20230901\Models\ThreadMessageInCompleteDetailsObject.cs" />
+    <Compile Include="V20230901\Models\ThreadToolResources.cs" />
+    <Compile Include="V20230901\Models\Timeline.cs" />
     <Compile Include="V20230901\Models\Tool.cs" />
     <Compile Include="V20230901\Models\ToolCall.cs" />
     <Compile Include="V20230901\Models\ToolCallFunction.cs" />

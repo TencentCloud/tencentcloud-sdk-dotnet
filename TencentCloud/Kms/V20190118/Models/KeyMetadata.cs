@@ -120,6 +120,18 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("HsmClusterId")]
         public string HsmClusterId{ get; set; }
 
+        /// <summary>
+        /// 密钥轮转周期（天）
+        /// </summary>
+        [JsonProperty("RotateDays")]
+        public ulong? RotateDays{ get; set; }
+
+        /// <summary>
+        /// 上次乱转时间（Unix timestamp）
+        /// </summary>
+        [JsonProperty("LastRotateTime")]
+        public ulong? LastRotateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +154,8 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "ValidTo", this.ValidTo);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
+            this.SetParamSimple(map, prefix + "RotateDays", this.RotateDays);
+            this.SetParamSimple(map, prefix + "LastRotateTime", this.LastRotateTime);
         }
     }
 }

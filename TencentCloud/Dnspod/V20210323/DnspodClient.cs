@@ -28,7 +28,7 @@ namespace TencentCloud.Dnspod.V20210323
 
        private const string endpoint = "dnspod.tencentcloudapi.com";
        private const string version = "2021-03-23";
-       private const string sdkVersion = "SDK_NET_3.0.1117";
+       private const string sdkVersion = "SDK_NET_3.0.1118";
 
         /// <summary>
         /// Client constructor.
@@ -226,6 +226,48 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
+        /// 创建域名的线路分组
+        /// </summary>
+        /// <param name="req"><see cref="CreateLineGroupRequest"/></param>
+        /// <returns><see cref="CreateLineGroupResponse"/></returns>
+        public Task<CreateLineGroupResponse> CreateLineGroup(CreateLineGroupRequest req)
+        {
+            return InternalRequestAsync<CreateLineGroupResponse>(req, "CreateLineGroup");
+        }
+
+        /// <summary>
+        /// 创建域名的线路分组
+        /// </summary>
+        /// <param name="req"><see cref="CreateLineGroupRequest"/></param>
+        /// <returns><see cref="CreateLineGroupResponse"/></returns>
+        public CreateLineGroupResponse CreateLineGroupSync(CreateLineGroupRequest req)
+        {
+            return InternalRequestAsync<CreateLineGroupResponse>(req, "CreateLineGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 复制域名的线路分组
+        /// </summary>
+        /// <param name="req"><see cref="CreateLineGroupCopyRequest"/></param>
+        /// <returns><see cref="CreateLineGroupCopyResponse"/></returns>
+        public Task<CreateLineGroupCopyResponse> CreateLineGroupCopy(CreateLineGroupCopyRequest req)
+        {
+            return InternalRequestAsync<CreateLineGroupCopyResponse>(req, "CreateLineGroupCopy");
+        }
+
+        /// <summary>
+        /// 复制域名的线路分组
+        /// </summary>
+        /// <param name="req"><see cref="CreateLineGroupCopyRequest"/></param>
+        /// <returns><see cref="CreateLineGroupCopyResponse"/></returns>
+        public CreateLineGroupCopyResponse CreateLineGroupCopySync(CreateLineGroupCopyRequest req)
+        {
+            return InternalRequestAsync<CreateLineGroupCopyResponse>(req, "CreateLineGroupCopy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 添加记录
         /// 备注：新添加的解析记录存在短暂的索引延迟，如果查询不到新增记录，请在 30 秒后重试
         /// </summary>
@@ -415,6 +457,27 @@ namespace TencentCloud.Dnspod.V20210323
         public DeleteDomainCustomLineResponse DeleteDomainCustomLineSync(DeleteDomainCustomLineRequest req)
         {
             return InternalRequestAsync<DeleteDomainCustomLineResponse>(req, "DeleteDomainCustomLine")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除域名的线路分组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLineGroupRequest"/></param>
+        /// <returns><see cref="DeleteLineGroupResponse"/></returns>
+        public Task<DeleteLineGroupResponse> DeleteLineGroup(DeleteLineGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteLineGroupResponse>(req, "DeleteLineGroup");
+        }
+
+        /// <summary>
+        /// 删除域名的线路分组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLineGroupRequest"/></param>
+        /// <returns><see cref="DeleteLineGroupResponse"/></returns>
+        public DeleteLineGroupResponse DeleteLineGroupSync(DeleteLineGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteLineGroupResponse>(req, "DeleteLineGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -818,6 +881,27 @@ namespace TencentCloud.Dnspod.V20210323
         public DescribeDomainWhoisResponse DescribeDomainWhoisSync(DescribeDomainWhoisRequest req)
         {
             return InternalRequestAsync<DescribeDomainWhoisResponse>(req, "DescribeDomainWhois")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取域名的线路分组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLineGroupListRequest"/></param>
+        /// <returns><see cref="DescribeLineGroupListResponse"/></returns>
+        public Task<DescribeLineGroupListResponse> DescribeLineGroupList(DescribeLineGroupListRequest req)
+        {
+            return InternalRequestAsync<DescribeLineGroupListResponse>(req, "DescribeLineGroupList");
+        }
+
+        /// <summary>
+        /// 获取域名的线路分组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLineGroupListRequest"/></param>
+        /// <returns><see cref="DescribeLineGroupListResponse"/></returns>
+        public DescribeLineGroupListResponse DescribeLineGroupListSync(DescribeLineGroupListRequest req)
+        {
+            return InternalRequestAsync<DescribeLineGroupListResponse>(req, "DescribeLineGroupList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1376,6 +1460,27 @@ namespace TencentCloud.Dnspod.V20210323
         public ModifyDynamicDNSResponse ModifyDynamicDNSSync(ModifyDynamicDNSRequest req)
         {
             return InternalRequestAsync<ModifyDynamicDNSResponse>(req, "ModifyDynamicDNS")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改域名的线路分组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLineGroupRequest"/></param>
+        /// <returns><see cref="ModifyLineGroupResponse"/></returns>
+        public Task<ModifyLineGroupResponse> ModifyLineGroup(ModifyLineGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyLineGroupResponse>(req, "ModifyLineGroup");
+        }
+
+        /// <summary>
+        /// 修改域名的线路分组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLineGroupRequest"/></param>
+        /// <returns><see cref="ModifyLineGroupResponse"/></returns>
+        public ModifyLineGroupResponse ModifyLineGroupSync(ModifyLineGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyLineGroupResponse>(req, "ModifyLineGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

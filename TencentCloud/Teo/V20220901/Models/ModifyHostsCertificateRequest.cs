@@ -63,7 +63,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ApplyType{ get; set; }
 
         /// <summary>
-        /// 在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 的入口侧，用于客户端对 EO 节点进行认证。不填写表示保持原有配置。
+        /// 在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 节点内，用于客户端对 EO 节点进行认证。默认关闭，不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("ClientCertInfo")]
         public MutualTLS ClientCertInfo{ get; set; }

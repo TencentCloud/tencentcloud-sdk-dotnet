@@ -49,7 +49,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
         /// <li>QualityInspectComplete：音画质检测完成；</li>
         /// <li>QualityEnhanceComplete：音画质重生任务完成；</li>
-        /// <li>PersistenceComplete：剪辑固化完成。</li>
+        /// <li>PersistenceComplete：剪辑固化完成；</li>
+        /// <li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
         /// <b>兼容 2017 版的事件类型：</b>
         /// <li>TranscodeComplete：视频转码完成；</li>
         /// <li>ConcatComplete：视频拼接完成；</li>
@@ -242,6 +243,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("PersistenceCompleteEvent")]
         public PersistenceCompleteTask PersistenceCompleteEvent{ get; set; }
 
+        /// <summary>
+        /// 自适应码流任务信息，仅当 EventType 为ComplexAdaptiveDynamicStreamingComplete 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ComplexAdaptiveDynamicStreamingCompleteEvent")]
+        public ComplexAdaptiveDynamicStreamingTask ComplexAdaptiveDynamicStreamingCompleteEvent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -276,6 +284,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "QualityEnhanceCompleteEvent.", this.QualityEnhanceCompleteEvent);
             this.SetParamObj(map, prefix + "MediaCastStatusChangedEvent.", this.MediaCastStatusChangedEvent);
             this.SetParamObj(map, prefix + "PersistenceCompleteEvent.", this.PersistenceCompleteEvent);
+            this.SetParamObj(map, prefix + "ComplexAdaptiveDynamicStreamingCompleteEvent.", this.ComplexAdaptiveDynamicStreamingCompleteEvent);
         }
     }
 }

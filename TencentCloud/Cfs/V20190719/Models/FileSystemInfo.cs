@@ -139,6 +139,18 @@ namespace TencentCloud.Cfs.V20190719.Models
         public float? BandwidthLimit{ get; set; }
 
         /// <summary>
+        /// 文件系统关联的快照策略
+        /// </summary>
+        [JsonProperty("AutoSnapshotPolicyId")]
+        public string AutoSnapshotPolicyId{ get; set; }
+
+        /// <summary>
+        /// 文件系统处理快照状态
+        /// </summary>
+        [JsonProperty("SnapStatus")]
+        public string SnapStatus{ get; set; }
+
+        /// <summary>
         /// 文件系统容量规格上限
         /// 单位:GiB
         /// </summary>
@@ -166,6 +178,20 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("TieringDetail")]
         public TieringDetailInfo TieringDetail{ get; set; }
 
+        /// <summary>
+        /// 文件系统自动扩容策略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoScaleUpRule")]
+        public AutoScaleUpRule AutoScaleUpRule{ get; set; }
+
+        /// <summary>
+        /// 文件系统版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -190,10 +216,14 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "BandwidthLimit", this.BandwidthLimit);
+            this.SetParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
+            this.SetParamSimple(map, prefix + "SnapStatus", this.SnapStatus);
             this.SetParamSimple(map, prefix + "Capacity", this.Capacity);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "TieringState", this.TieringState);
             this.SetParamObj(map, prefix + "TieringDetail.", this.TieringDetail);
+            this.SetParamObj(map, prefix + "AutoScaleUpRule.", this.AutoScaleUpRule);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Essbasic.V20210526
 
        private const string endpoint = "essbasic.tencentcloudapi.com";
        private const string version = "2021-05-26";
-       private const string sdkVersion = "SDK_NET_3.0.1117";
+       private const string sdkVersion = "SDK_NET_3.0.1118";
 
         /// <summary>
         /// Client constructor.
@@ -2711,7 +2711,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// 
         /// 个人用户认证证书图片样式如下图
         /// 
-        /// ![image](https://dyn.ess.tencent.cn/guide/capi/CreatePersonAuthCertificateImage.png)
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/d568bc0f101bef582f7af2cb5ab7a715.png)
         /// 
         /// 注:  
         /// <ul>
@@ -2731,7 +2731,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// 
         /// 个人用户认证证书图片样式如下图
         /// 
-        /// ![image](https://dyn.ess.tencent.cn/guide/capi/CreatePersonAuthCertificateImage.png)
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/d568bc0f101bef582f7af2cb5ab7a715.png)
         /// 
         /// 注:  
         /// <ul>

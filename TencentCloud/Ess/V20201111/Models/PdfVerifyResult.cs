@@ -63,9 +63,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string SignAlgorithm{ get; set; }
 
         /// <summary>
-        /// CA供应商下发给用户的证书编号
-        /// 
-        /// 注意：`腾讯电子签接入多家CA供应商以提供容灾能力，不同CA下发的证书编号区别较大，但基本都是由数字和字母组成，长度在200以下`。
+        /// 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。
         /// </summary>
         [JsonProperty("CertSn")]
         public string CertSn{ get; set; }

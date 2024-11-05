@@ -32,15 +32,12 @@ namespace TencentCloud.Ssm.V20190923.Models
 
         /// <summary>
         /// 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagCode")]
         public ulong? TagCode{ get; set; }
 
         /// <summary>
         /// 标签操作的返回信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagMsg")]
         public string TagMsg{ get; set; }

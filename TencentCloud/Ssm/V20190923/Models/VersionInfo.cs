@@ -25,7 +25,7 @@ namespace TencentCloud.Ssm.V20190923.Models
     {
         
         /// <summary>
-        /// 版本号。
+        /// 版本号
         /// </summary>
         [JsonProperty("VersionId")]
         public string VersionId{ get; set; }

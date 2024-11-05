@@ -32,21 +32,18 @@ namespace TencentCloud.Ssm.V20190923.Models
 
         /// <summary>
         /// 轮转的频率，以天为单位，默认为1天。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Frequency")]
         public long? Frequency{ get; set; }
 
         /// <summary>
         /// 最近一次轮转的时间，显式可见的时间字符串，格式 2006-01-02 15:04:05。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LatestRotateTime")]
         public string LatestRotateTime{ get; set; }
 
         /// <summary>
         /// 下一次开始轮转的时间，显式可见的时间字符串，格式 2006-01-02 15:04:05。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NextRotateBeginTime")]
         public string NextRotateBeginTime{ get; set; }

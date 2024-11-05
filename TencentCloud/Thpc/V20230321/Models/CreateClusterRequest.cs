@@ -147,7 +147,7 @@ namespace TencentCloud.Thpc.V20230321.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 弹性伸缩类型。默认值：THPC_AS<li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li>
+        /// 弹性伸缩类型。默认值：THPC_AS
         /// </summary>
         [JsonProperty("AutoScalingType")]
         public string AutoScalingType{ get; set; }

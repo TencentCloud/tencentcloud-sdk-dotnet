@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// ip列表,当入参Ip为all时，返回该值
+        /// ip列表,当入参Ip为all时，返回所有已知ip列表
         /// </summary>
         [JsonProperty("IpList")]
         public ScanIpInfo[] IpList{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ssm.V20190923.Models
     {
         
         /// <summary>
-        /// 异步任务ID号。
+        /// 异步任务ID号
         /// </summary>
         [JsonProperty("FlowID")]
         public long? FlowID{ get; set; }

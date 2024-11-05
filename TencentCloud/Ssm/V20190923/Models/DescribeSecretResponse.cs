@@ -68,49 +68,42 @@ namespace TencentCloud.Ssm.V20190923.Models
 
         /// <summary>
         /// 0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型；3 -- 云API密钥（AKSK）凭据类型（使用此功能需要联系云助手单独开启白名单）；4 -- Redis类型凭据。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecretType")]
         public long? SecretType{ get; set; }
 
         /// <summary>
         /// 云产品名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
         /// 云产品实例ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceID")]
         public string ResourceID{ get; set; }
 
         /// <summary>
         /// 是否开启轮转：True -- 开启轮转；False -- 关闭轮转。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RotationStatus")]
         public bool? RotationStatus{ get; set; }
 
         /// <summary>
         /// 轮转周期，默认以天为单位。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RotationFrequency")]
         public long? RotationFrequency{ get; set; }
 
         /// <summary>
         /// 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceName")]
         public string ResourceName{ get; set; }
 
         /// <summary>
         /// 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectID")]
         public long? ProjectID{ get; set; }
@@ -124,14 +117,12 @@ namespace TencentCloud.Ssm.V20190923.Models
 
         /// <summary>
         /// 当凭据类型为云API密钥对凭据时，此字段有效，用于表示此云API密钥对所属的用户UIN。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetUin")]
         public ulong? TargetUin{ get; set; }
 
         /// <summary>
         /// 凭据额外配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdditionalConfig")]
         public string AdditionalConfig{ get; set; }

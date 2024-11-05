@@ -28,7 +28,7 @@ namespace TencentCloud.Hunyuan.V20230901
 
        private const string endpoint = "hunyuan.tencentcloudapi.com";
        private const string version = "2023-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1117";
+       private const string sdkVersion = "SDK_NET_3.0.1118";
 
         /// <summary>
         /// Client constructor.
@@ -106,6 +106,102 @@ namespace TencentCloud.Hunyuan.V20230901
         }
 
         /// <summary>
+        /// 腾讯混元大模型是由腾讯研发的大语言模型，具备强大的中文创作能力，复杂语境下的逻辑推理能力，以及可靠的任务执行能力。本接口支持流式或非流式调用，当使用流式调用时为 SSE 协议。
+        /// 
+        ///  1. 本接口暂不支持返回图片内容。
+        ///  2. 默认该接口下单账号限制并发数为  5 路，如您有提高并发限制的需求请 [购买](https://buy.cloud.tencent.com/hunyuan) 。
+        ///  3. 请使用 SDK 调用本接口，每种开发语言的 SDK Git 仓库 examples/hunyuan/v20230901/ 目录下有提供示例供参考。SDK 链接在文档下方 “**开发者资源 - SDK**” 部分提供。
+        ///  4. 我们推荐您使用 API Explorer，方便快速地在线调试接口和下载各语言的示例代码，[点击打开](https://console.cloud.tencent.com/api/explorer?Product=hunyuan&Version=2023-09-01&Action=ChatCompletions)。
+        /// </summary>
+        /// <param name="req"><see cref="CreateThreadRequest"/></param>
+        /// <returns><see cref="CreateThreadResponse"/></returns>
+        public Task<CreateThreadResponse> CreateThread(CreateThreadRequest req)
+        {
+            return InternalRequestAsync<CreateThreadResponse>(req, "CreateThread");
+        }
+
+        /// <summary>
+        /// 腾讯混元大模型是由腾讯研发的大语言模型，具备强大的中文创作能力，复杂语境下的逻辑推理能力，以及可靠的任务执行能力。本接口支持流式或非流式调用，当使用流式调用时为 SSE 协议。
+        /// 
+        ///  1. 本接口暂不支持返回图片内容。
+        ///  2. 默认该接口下单账号限制并发数为  5 路，如您有提高并发限制的需求请 [购买](https://buy.cloud.tencent.com/hunyuan) 。
+        ///  3. 请使用 SDK 调用本接口，每种开发语言的 SDK Git 仓库 examples/hunyuan/v20230901/ 目录下有提供示例供参考。SDK 链接在文档下方 “**开发者资源 - SDK**” 部分提供。
+        ///  4. 我们推荐您使用 API Explorer，方便快速地在线调试接口和下载各语言的示例代码，[点击打开](https://console.cloud.tencent.com/api/explorer?Product=hunyuan&Version=2023-09-01&Action=ChatCompletions)。
+        /// </summary>
+        /// <param name="req"><see cref="CreateThreadRequest"/></param>
+        /// <returns><see cref="CreateThreadResponse"/></returns>
+        public CreateThreadResponse CreateThreadSync(CreateThreadRequest req)
+        {
+            return InternalRequestAsync<CreateThreadResponse>(req, "CreateThread")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除文件。
+        /// </summary>
+        /// <param name="req"><see cref="FilesDeletionsRequest"/></param>
+        /// <returns><see cref="FilesDeletionsResponse"/></returns>
+        public Task<FilesDeletionsResponse> FilesDeletions(FilesDeletionsRequest req)
+        {
+            return InternalRequestAsync<FilesDeletionsResponse>(req, "FilesDeletions");
+        }
+
+        /// <summary>
+        /// 删除文件。
+        /// </summary>
+        /// <param name="req"><see cref="FilesDeletionsRequest"/></param>
+        /// <returns><see cref="FilesDeletionsResponse"/></returns>
+        public FilesDeletionsResponse FilesDeletionsSync(FilesDeletionsRequest req)
+        {
+            return InternalRequestAsync<FilesDeletionsResponse>(req, "FilesDeletions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 文件列表。
+        /// </summary>
+        /// <param name="req"><see cref="FilesListRequest"/></param>
+        /// <returns><see cref="FilesListResponse"/></returns>
+        public Task<FilesListResponse> FilesList(FilesListRequest req)
+        {
+            return InternalRequestAsync<FilesListResponse>(req, "FilesList");
+        }
+
+        /// <summary>
+        /// 文件列表。
+        /// </summary>
+        /// <param name="req"><see cref="FilesListRequest"/></param>
+        /// <returns><see cref="FilesListResponse"/></returns>
+        public FilesListResponse FilesListSync(FilesListRequest req)
+        {
+            return InternalRequestAsync<FilesListResponse>(req, "FilesList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 上传用于不同用途的的文件。
+        /// 当前用途仅支持 hunyuan 等模型的文档理解。
+        /// </summary>
+        /// <param name="req"><see cref="FilesUploadsRequest"/></param>
+        /// <returns><see cref="FilesUploadsResponse"/></returns>
+        public Task<FilesUploadsResponse> FilesUploads(FilesUploadsRequest req)
+        {
+            return InternalRequestAsync<FilesUploadsResponse>(req, "FilesUploads");
+        }
+
+        /// <summary>
+        /// 上传用于不同用途的的文件。
+        /// 当前用途仅支持 hunyuan 等模型的文档理解。
+        /// </summary>
+        /// <param name="req"><see cref="FilesUploadsRequest"/></param>
+        /// <returns><see cref="FilesUploadsResponse"/></returns>
+        public FilesUploadsResponse FilesUploadsSync(FilesUploadsRequest req)
+        {
+            return InternalRequestAsync<FilesUploadsResponse>(req, "FilesUploads")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 腾讯混元 Embedding 接口，可以将文本转化为高质量的向量数据。向量维度为1024维。
         /// </summary>
         /// <param name="req"><see cref="GetEmbeddingRequest"/></param>
@@ -123,6 +219,99 @@ namespace TencentCloud.Hunyuan.V20230901
         public GetEmbeddingResponse GetEmbeddingSync(GetEmbeddingRequest req)
         {
             return InternalRequestAsync<GetEmbeddingResponse>(req, "GetEmbedding")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 腾讯混元大模型是由腾讯研发的大语言模型，具备强大的中文创作能力，复杂语境下的逻辑推理能力，以及可靠的任务执行能力。本接口支持流式或非流式调用，当使用流式调用时为 SSE 协议。
+        /// 
+        ///  1. 本接口暂不支持返回图片内容。
+        ///  2. 默认该接口下单账号限制并发数为  5 路，如您有提高并发限制的需求请 [购买](https://buy.cloud.tencent.com/hunyuan) 。
+        ///  3. 请使用 SDK 调用本接口，每种开发语言的 SDK Git 仓库 examples/hunyuan/v20230901/ 目录下有提供示例供参考。SDK 链接在文档下方 “**开发者资源 - SDK**” 部分提供。
+        ///  4. 我们推荐您使用 API Explorer，方便快速地在线调试接口和下载各语言的示例代码，[点击打开](https://console.cloud.tencent.com/api/explorer?Product=hunyuan&Version=2023-09-01&Action=ChatCompletions)。
+        /// </summary>
+        /// <param name="req"><see cref="GetThreadRequest"/></param>
+        /// <returns><see cref="GetThreadResponse"/></returns>
+        public Task<GetThreadResponse> GetThread(GetThreadRequest req)
+        {
+            return InternalRequestAsync<GetThreadResponse>(req, "GetThread");
+        }
+
+        /// <summary>
+        /// 腾讯混元大模型是由腾讯研发的大语言模型，具备强大的中文创作能力，复杂语境下的逻辑推理能力，以及可靠的任务执行能力。本接口支持流式或非流式调用，当使用流式调用时为 SSE 协议。
+        /// 
+        ///  1. 本接口暂不支持返回图片内容。
+        ///  2. 默认该接口下单账号限制并发数为  5 路，如您有提高并发限制的需求请 [购买](https://buy.cloud.tencent.com/hunyuan) 。
+        ///  3. 请使用 SDK 调用本接口，每种开发语言的 SDK Git 仓库 examples/hunyuan/v20230901/ 目录下有提供示例供参考。SDK 链接在文档下方 “**开发者资源 - SDK**” 部分提供。
+        ///  4. 我们推荐您使用 API Explorer，方便快速地在线调试接口和下载各语言的示例代码，[点击打开](https://console.cloud.tencent.com/api/explorer?Product=hunyuan&Version=2023-09-01&Action=ChatCompletions)。
+        /// </summary>
+        /// <param name="req"><see cref="GetThreadRequest"/></param>
+        /// <returns><see cref="GetThreadResponse"/></returns>
+        public GetThreadResponse GetThreadSync(GetThreadRequest req)
+        {
+            return InternalRequestAsync<GetThreadResponse>(req, "GetThread")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 腾讯混元大模型是由腾讯研发的大语言模型，具备强大的中文创作能力，复杂语境下的逻辑推理能力，以及可靠的任务执行能力。本接口支持流式或非流式调用，当使用流式调用时为 SSE 协议。
+        /// 
+        ///  1. 本接口暂不支持返回图片内容。
+        ///  2. 默认该接口下单账号限制并发数为  5 路，如您有提高并发限制的需求请 [购买](https://buy.cloud.tencent.com/hunyuan) 。
+        ///  3. 请使用 SDK 调用本接口，每种开发语言的 SDK Git 仓库 examples/hunyuan/v20230901/ 目录下有提供示例供参考。SDK 链接在文档下方 “**开发者资源 - SDK**” 部分提供。
+        ///  4. 我们推荐您使用 API Explorer，方便快速地在线调试接口和下载各语言的示例代码，[点击打开](https://console.cloud.tencent.com/api/explorer?Product=hunyuan&Version=2023-09-01&Action=ChatCompletions)。
+        /// </summary>
+        /// <param name="req"><see cref="GetThreadMessageRequest"/></param>
+        /// <returns><see cref="GetThreadMessageResponse"/></returns>
+        public Task<GetThreadMessageResponse> GetThreadMessage(GetThreadMessageRequest req)
+        {
+            return InternalRequestAsync<GetThreadMessageResponse>(req, "GetThreadMessage");
+        }
+
+        /// <summary>
+        /// 腾讯混元大模型是由腾讯研发的大语言模型，具备强大的中文创作能力，复杂语境下的逻辑推理能力，以及可靠的任务执行能力。本接口支持流式或非流式调用，当使用流式调用时为 SSE 协议。
+        /// 
+        ///  1. 本接口暂不支持返回图片内容。
+        ///  2. 默认该接口下单账号限制并发数为  5 路，如您有提高并发限制的需求请 [购买](https://buy.cloud.tencent.com/hunyuan) 。
+        ///  3. 请使用 SDK 调用本接口，每种开发语言的 SDK Git 仓库 examples/hunyuan/v20230901/ 目录下有提供示例供参考。SDK 链接在文档下方 “**开发者资源 - SDK**” 部分提供。
+        ///  4. 我们推荐您使用 API Explorer，方便快速地在线调试接口和下载各语言的示例代码，[点击打开](https://console.cloud.tencent.com/api/explorer?Product=hunyuan&Version=2023-09-01&Action=ChatCompletions)。
+        /// </summary>
+        /// <param name="req"><see cref="GetThreadMessageRequest"/></param>
+        /// <returns><see cref="GetThreadMessageResponse"/></returns>
+        public GetThreadMessageResponse GetThreadMessageSync(GetThreadMessageRequest req)
+        {
+            return InternalRequestAsync<GetThreadMessageResponse>(req, "GetThreadMessage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 腾讯混元大模型是由腾讯研发的大语言模型，具备强大的中文创作能力，复杂语境下的逻辑推理能力，以及可靠的任务执行能力。本接口支持流式或非流式调用，当使用流式调用时为 SSE 协议。
+        /// 
+        ///  1. 本接口暂不支持返回图片内容。
+        ///  2. 默认该接口下单账号限制并发数为  5 路，如您有提高并发限制的需求请 [购买](https://buy.cloud.tencent.com/hunyuan) 。
+        ///  3. 请使用 SDK 调用本接口，每种开发语言的 SDK Git 仓库 examples/hunyuan/v20230901/ 目录下有提供示例供参考。SDK 链接在文档下方 “**开发者资源 - SDK**” 部分提供。
+        ///  4. 我们推荐您使用 API Explorer，方便快速地在线调试接口和下载各语言的示例代码，[点击打开](https://console.cloud.tencent.com/api/explorer?Product=hunyuan&Version=2023-09-01&Action=ChatCompletions)。
+        /// </summary>
+        /// <param name="req"><see cref="GetThreadMessageListRequest"/></param>
+        /// <returns><see cref="GetThreadMessageListResponse"/></returns>
+        public Task<GetThreadMessageListResponse> GetThreadMessageList(GetThreadMessageListRequest req)
+        {
+            return InternalRequestAsync<GetThreadMessageListResponse>(req, "GetThreadMessageList");
+        }
+
+        /// <summary>
+        /// 腾讯混元大模型是由腾讯研发的大语言模型，具备强大的中文创作能力，复杂语境下的逻辑推理能力，以及可靠的任务执行能力。本接口支持流式或非流式调用，当使用流式调用时为 SSE 协议。
+        /// 
+        ///  1. 本接口暂不支持返回图片内容。
+        ///  2. 默认该接口下单账号限制并发数为  5 路，如您有提高并发限制的需求请 [购买](https://buy.cloud.tencent.com/hunyuan) 。
+        ///  3. 请使用 SDK 调用本接口，每种开发语言的 SDK Git 仓库 examples/hunyuan/v20230901/ 目录下有提供示例供参考。SDK 链接在文档下方 “**开发者资源 - SDK**” 部分提供。
+        ///  4. 我们推荐您使用 API Explorer，方便快速地在线调试接口和下载各语言的示例代码，[点击打开](https://console.cloud.tencent.com/api/explorer?Product=hunyuan&Version=2023-09-01&Action=ChatCompletions)。
+        /// </summary>
+        /// <param name="req"><see cref="GetThreadMessageListRequest"/></param>
+        /// <returns><see cref="GetThreadMessageListResponse"/></returns>
+        public GetThreadMessageListResponse GetThreadMessageListSync(GetThreadMessageListRequest req)
+        {
+            return InternalRequestAsync<GetThreadMessageListResponse>(req, "GetThreadMessageList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -198,6 +387,37 @@ namespace TencentCloud.Hunyuan.V20230901
         public QueryHunyuanImageJobResponse QueryHunyuanImageJobSync(QueryHunyuanImageJobRequest req)
         {
             return InternalRequestAsync<QueryHunyuanImageJobResponse>(req, "QueryHunyuanImageJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 腾讯混元大模型是由腾讯研发的大语言模型，具备强大的中文创作能力，复杂语境下的逻辑推理能力，以及可靠的任务执行能力。本接口支持流式或非流式调用，当使用流式调用时为 SSE 协议。
+        /// 
+        ///  1. 本接口暂不支持返回图片内容。
+        ///  2. 默认该接口下单账号限制并发数为  5 路，如您有提高并发限制的需求请 [购买](https://buy.cloud.tencent.com/hunyuan) 。
+        ///  3. 请使用 SDK 调用本接口，每种开发语言的 SDK Git 仓库 examples/hunyuan/v20230901/ 目录下有提供示例供参考。SDK 链接在文档下方 “**开发者资源 - SDK**” 部分提供。
+        ///  4. 我们推荐您使用 API Explorer，方便快速地在线调试接口和下载各语言的示例代码，[点击打开](https://console.cloud.tencent.com/api/explorer?Product=hunyuan&Version=2023-09-01&Action=ChatCompletions)。
+        /// </summary>
+        /// <param name="req"><see cref="RunThreadRequest"/></param>
+        /// <returns><see cref="RunThreadResponse"/></returns>
+        public Task<RunThreadResponse> RunThread(RunThreadRequest req)
+        {
+            return InternalRequestAsync<RunThreadResponse>(req, "RunThread");
+        }
+
+        /// <summary>
+        /// 腾讯混元大模型是由腾讯研发的大语言模型，具备强大的中文创作能力，复杂语境下的逻辑推理能力，以及可靠的任务执行能力。本接口支持流式或非流式调用，当使用流式调用时为 SSE 协议。
+        /// 
+        ///  1. 本接口暂不支持返回图片内容。
+        ///  2. 默认该接口下单账号限制并发数为  5 路，如您有提高并发限制的需求请 [购买](https://buy.cloud.tencent.com/hunyuan) 。
+        ///  3. 请使用 SDK 调用本接口，每种开发语言的 SDK Git 仓库 examples/hunyuan/v20230901/ 目录下有提供示例供参考。SDK 链接在文档下方 “**开发者资源 - SDK**” 部分提供。
+        ///  4. 我们推荐您使用 API Explorer，方便快速地在线调试接口和下载各语言的示例代码，[点击打开](https://console.cloud.tencent.com/api/explorer?Product=hunyuan&Version=2023-09-01&Action=ChatCompletions)。
+        /// </summary>
+        /// <param name="req"><see cref="RunThreadRequest"/></param>
+        /// <returns><see cref="RunThreadResponse"/></returns>
+        public RunThreadResponse RunThreadSync(RunThreadRequest req)
+        {
+            return InternalRequestAsync<RunThreadResponse>(req, "RunThread")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -140,6 +140,18 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("ResponseDurationWarningThreshold")]
         public long? ResponseDurationWarningThreshold{ get; set; }
 
+        /// <summary>
+        /// 是否关联dashboard： 0 关 1 开
+        /// </summary>
+        [JsonProperty("IsRelatedDashboard")]
+        public long? IsRelatedDashboard{ get; set; }
+
+        /// <summary>
+        /// dashboard ID
+        /// </summary>
+        [JsonProperty("DashboardTopicID")]
+        public string DashboardTopicID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -165,6 +177,8 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamArraySimple(map, prefix + "CustomShowTags.", this.CustomShowTags);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
+            this.SetParamSimple(map, prefix + "IsRelatedDashboard", this.IsRelatedDashboard);
+            this.SetParamSimple(map, prefix + "DashboardTopicID", this.DashboardTopicID);
         }
     }
 }

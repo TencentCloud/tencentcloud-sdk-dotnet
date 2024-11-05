@@ -80,6 +80,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("RowFilterInfo")]
         public Policys RowFilterInfo{ get; set; }
 
+        /// <summary>
+        /// 数据目录权限集
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CatalogPolicyInfo")]
+        public Policy CatalogPolicyInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +101,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamObj(map, prefix + "EnginePolicyInfo.", this.EnginePolicyInfo);
             this.SetParamSimple(map, prefix + "WorkGroupDescription", this.WorkGroupDescription);
             this.SetParamObj(map, prefix + "RowFilterInfo.", this.RowFilterInfo);
+            this.SetParamObj(map, prefix + "CatalogPolicyInfo.", this.CatalogPolicyInfo);
         }
     }
 }

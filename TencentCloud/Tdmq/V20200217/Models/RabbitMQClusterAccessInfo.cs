@@ -103,7 +103,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public PrometheusEndpointInfo PrometheusEndpointInfo{ get; set; }
 
         /// <summary>
-        /// http://amqp-k3eb47gm.dashboard.rabbitmq.cq.public.tencenttdmq.com:15672/
         /// 公网域名接入点
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>

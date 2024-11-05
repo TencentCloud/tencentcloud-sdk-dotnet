@@ -25,7 +25,7 @@ namespace TencentCloud.Ssm.V20190923.Models
     {
         
         /// <summary>
-        /// 凭据名称。
+        /// 凭据名称
         /// </summary>
         [JsonProperty("SecretName")]
         public string SecretName{ get; set; }

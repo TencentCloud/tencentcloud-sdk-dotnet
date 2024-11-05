@@ -25,13 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 通知内容模版ID。
+        /// 通知内容模板ID。
         /// </summary>
         [JsonProperty("NoticeContentId")]
         public string NoticeContentId{ get; set; }
 
         /// <summary>
-        /// 通知内容模版名称。
+        /// 通知内容模板名称。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -45,7 +45,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? Type{ get; set; }
 
         /// <summary>
-        /// 通知内容模版详细信息。
+        /// 通知内容模板详细信息。
         /// </summary>
         [JsonProperty("NoticeContents")]
         public NoticeContent[] NoticeContents{ get; set; }
