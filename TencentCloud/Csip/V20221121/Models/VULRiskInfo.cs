@@ -26,28 +26,24 @@ namespace TencentCloud.Csip.V20221121.Models
         
         /// <summary>
         /// 修复建议
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Fix")]
         public string Fix{ get; set; }
 
         /// <summary>
         /// 技术参考/参考链接
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("References")]
         public string References{ get; set; }
 
         /// <summary>
         /// 漏洞描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Describe")]
         public string Describe{ get; set; }
 
         /// <summary>
         /// 受影响组件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImpactComponent")]
         public VulImpactComponentInfo[] ImpactComponent{ get; set; }

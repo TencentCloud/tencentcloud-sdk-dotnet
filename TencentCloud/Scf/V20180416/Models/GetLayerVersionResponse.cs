@@ -49,7 +49,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string AddTime{ get; set; }
 
         /// <summary>
-        /// 版本的描述
+        /// 版本的描述信息
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

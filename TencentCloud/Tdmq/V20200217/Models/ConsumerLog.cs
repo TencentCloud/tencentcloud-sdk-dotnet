@@ -37,7 +37,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string ConsumerGroup{ get; set; }
 
         /// <summary>
-        /// 消费组名称。
+        /// 消费者名称。
         /// </summary>
         [JsonProperty("ConsumerName")]
         public string ConsumerName{ get; set; }

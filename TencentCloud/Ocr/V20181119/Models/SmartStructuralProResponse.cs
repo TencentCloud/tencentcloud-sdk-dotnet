@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Waf.V20180125.Models
+namespace TencentCloud.Ocr.V20181119.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAntiFakeUrlResponse : AbstractModel
+    public class SmartStructuralProResponse : AbstractModel
     {
         
         /// <summary>
-        /// 总数
+        /// 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负
         /// </summary>
-        [JsonProperty("Total")]
-        public string Total{ get; set; }
+        [JsonProperty("Angle")]
+        public float? Angle{ get; set; }
 
         /// <summary>
-        /// 信息
+        /// 配置结构化文本信息
         /// </summary>
-        [JsonProperty("List")]
-        public CacheUrlItem[] List{ get; set; }
+        [JsonProperty("StructuralList")]
+        public GroupInfo[] StructuralList{ get; set; }
+
+        /// <summary>
+        /// 还原文本信息
+        /// </summary>
+        [JsonProperty("WordList")]
+        public WordItem[] WordList{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +54,9 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Total", this.Total);
-            this.SetParamArrayObj(map, prefix + "List.", this.List);
+            this.SetParamSimple(map, prefix + "Angle", this.Angle);
+            this.SetParamArrayObj(map, prefix + "StructuralList.", this.StructuralList);
+            this.SetParamArrayObj(map, prefix + "WordList.", this.WordList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

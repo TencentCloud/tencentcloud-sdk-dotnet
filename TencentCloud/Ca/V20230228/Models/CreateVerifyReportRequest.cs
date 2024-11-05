@@ -60,6 +60,12 @@ namespace TencentCloud.Ca.V20230228.Models
         [JsonProperty("ApplyEmail")]
         public string ApplyEmail{ get; set; }
 
+        /// <summary>
+        /// 证书用户身份及身份鉴别信息
+        /// </summary>
+        [JsonProperty("CertificateIdentityUsers")]
+        public CertificateIdentityUser[] CertificateIdentityUsers{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Ca.V20230228.Models
             this.SetParamSimple(map, prefix + "ApplyMobile", this.ApplyMobile);
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "ApplyEmail", this.ApplyEmail);
+            this.SetParamArrayObj(map, prefix + "CertificateIdentityUsers.", this.CertificateIdentityUsers);
         }
     }
 }

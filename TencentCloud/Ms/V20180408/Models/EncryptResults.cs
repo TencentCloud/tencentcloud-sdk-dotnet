@@ -74,28 +74,24 @@ namespace TencentCloud.Ms.V20180408.Models
 
         /// <summary>
         /// 对应PlatformType平台类型值   1-android加固结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AndroidResult")]
         public AndroidResult AndroidResult{ get; set; }
 
         /// <summary>
         /// 对应PlatformType平台类型值   2-ios源码混淆加固结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IOSResult")]
         public IOSResult IOSResult{ get; set; }
 
         /// <summary>
         /// 对应PlatformType平台类型值   3-sdk加固结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SDKResult")]
         public SDKResult SDKResult{ get; set; }
 
         /// <summary>
         /// 对应PlatformType平台类型值   4-applet小程序加固结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppletResult")]
         public AppletResult AppletResult{ get; set; }

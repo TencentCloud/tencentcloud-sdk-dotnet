@@ -26,7 +26,6 @@ namespace TencentCloud.Ioa.V20220601.Models
         
         /// <summary>
         /// 响应返回的data
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public CreateDeviceVirtualGroupRspData Data{ get; set; }

@@ -68,28 +68,24 @@ namespace TencentCloud.Ms.V20180408.Models
 
         /// <summary>
         /// 上次加固策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AndroidPlan")]
         public AndroidPlan AndroidPlan{ get; set; }
 
         /// <summary>
         /// 上次小程序加固策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppletPlan")]
         public AppletPlan AppletPlan{ get; set; }
 
         /// <summary>
         /// 上次ios源码混淆加固配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IOSPlan")]
         public IOSPlan IOSPlan{ get; set; }
 
         /// <summary>
         /// 上次sdk加固配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SDKPlan")]
         public SDKPlan SDKPlan{ get; set; }

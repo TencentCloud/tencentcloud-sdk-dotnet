@@ -43,7 +43,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Key{ get; set; }
 
         /// <summary>
-        /// 是否接入waf
+        /// 是否接入waf；传"1"返回接入域名的详情，传"0"返回未接入域名的详情，传""返回接入和未接入域名的详情
         /// </summary>
         [JsonProperty("IsWafDomain")]
         public string IsWafDomain{ get; set; }

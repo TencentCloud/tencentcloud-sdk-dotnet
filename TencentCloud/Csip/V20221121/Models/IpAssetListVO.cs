@@ -26,245 +26,210 @@ namespace TencentCloud.Csip.V20221121.Models
         
         /// <summary>
         /// 资产id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssetId")]
         public string AssetId{ get; set; }
 
         /// <summary>
         /// 资产name
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssetName")]
         public string AssetName{ get; set; }
 
         /// <summary>
         /// 资产类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssetType")]
         public string AssetType{ get; set; }
 
         /// <summary>
         /// 地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// 云防状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CFWStatus")]
         public ulong? CFWStatus{ get; set; }
 
         /// <summary>
         /// 资产创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssetCreateTime")]
         public string AssetCreateTime{ get; set; }
 
         /// <summary>
         /// 公网ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
         /// <summary>
         /// 公网ip类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicIpType")]
         public ulong? PublicIpType{ get; set; }
 
         /// <summary>
         /// vpc
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// vpc名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
         /// <summary>
         /// appid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
         /// 用户uin
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
         /// 名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NickName")]
         public string NickName{ get; set; }
 
         /// <summary>
         /// 核心
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsCore")]
         public ulong? IsCore{ get; set; }
 
         /// <summary>
         /// 云上
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsCloud")]
         public ulong? IsCloud{ get; set; }
 
         /// <summary>
         /// 网络攻击
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Attack")]
         public ulong? Attack{ get; set; }
 
         /// <summary>
         /// 网络访问
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Access")]
         public ulong? Access{ get; set; }
 
         /// <summary>
         /// 网络拦截
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Intercept")]
         public ulong? Intercept{ get; set; }
 
         /// <summary>
         /// 入向带宽
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InBandwidth")]
         public string InBandwidth{ get; set; }
 
         /// <summary>
         /// 出向带宽
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutBandwidth")]
         public string OutBandwidth{ get; set; }
 
         /// <summary>
         /// 入向流量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InFlow")]
         public string InFlow{ get; set; }
 
         /// <summary>
         /// 出向流量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutFlow")]
         public string OutFlow{ get; set; }
 
         /// <summary>
         /// 最近扫描时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastScanTime")]
         public string LastScanTime{ get; set; }
 
         /// <summary>
         /// 端口风险
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PortRisk")]
         public ulong? PortRisk{ get; set; }
 
         /// <summary>
         /// 漏洞风险
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulnerabilityRisk")]
         public ulong? VulnerabilityRisk{ get; set; }
 
         /// <summary>
         /// 配置风险
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigurationRisk")]
         public ulong? ConfigurationRisk{ get; set; }
 
         /// <summary>
         /// 扫描任务
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanTask")]
         public ulong? ScanTask{ get; set; }
 
         /// <summary>
         /// 弱口令
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WeakPassword")]
         public ulong? WeakPassword{ get; set; }
 
         /// <summary>
         /// 内容风险
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WebContentRisk")]
         public ulong? WebContentRisk{ get; set; }
 
         /// <summary>
         /// 标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tag")]
         public Tag[] Tag{ get; set; }
 
         /// <summary>
         /// eip主键
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddressId")]
         public string AddressId{ get; set; }
 
         /// <summary>
         /// memberid信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemberId")]
         public string MemberId{ get; set; }
 
         /// <summary>
         /// 风险服务暴露
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskExposure")]
         public long? RiskExposure{ get; set; }
 
         /// <summary>
         /// 是否新资产 1新
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsNewAsset")]
         public ulong? IsNewAsset{ get; set; }
 
         /// <summary>
         /// 资产认证状态，0-待认证，1-认证成功，2-认证中，3+-认证失败
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VerifyStatus")]
         public long? VerifyStatus{ get; set; }

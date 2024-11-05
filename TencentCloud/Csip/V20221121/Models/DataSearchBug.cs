@@ -31,64 +31,55 @@ namespace TencentCloud.Csip.V20221121.Models
         public string StateCode{ get; set; }
 
         /// <summary>
-        /// 无
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 漏洞详情
         /// </summary>
         [JsonProperty("DataBug")]
         public BugInfoDetail[] DataBug{ get; set; }
 
         /// <summary>
-        /// 无
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 漏洞影响资产详情
         /// </summary>
         [JsonProperty("DataAsset")]
         public AssetInfoDetail[] DataAsset{ get; set; }
 
         /// <summary>
         /// true支持扫描。false不支持扫描
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VSSScan")]
         public bool? VSSScan{ get; set; }
 
         /// <summary>
         /// 0不支持，1支持
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CWPScan")]
         public string CWPScan{ get; set; }
 
         /// <summary>
         /// 1支持虚拟补丁，0或空不支持
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CFWPatch")]
         public string CFWPatch{ get; set; }
 
         /// <summary>
         /// 0不支持，1支持
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WafPatch")]
         public long? WafPatch{ get; set; }
 
         /// <summary>
         /// 0不支持，1支持
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CWPFix")]
         public long? CWPFix{ get; set; }
 
         /// <summary>
         /// 产品支持状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataSupport")]
         public ProductSupport[] DataSupport{ get; set; }
 
         /// <summary>
         /// cveId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CveId")]
         public string CveId{ get; set; }

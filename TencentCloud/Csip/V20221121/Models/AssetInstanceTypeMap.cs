@@ -26,21 +26,18 @@ namespace TencentCloud.Csip.V20221121.Models
         
         /// <summary>
         /// 资产类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
         /// 资产类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
         /// <summary>
         /// 资产类型和实例类型映射关系
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceTypeList")]
         public FilterDataObject[] InstanceTypeList{ get; set; }

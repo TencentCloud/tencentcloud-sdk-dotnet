@@ -25,29 +25,25 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
-        /// 每页条数(只支持32位)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 每页条数
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// 页码(只支持32位)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 页码
         /// </summary>
         [JsonProperty("PageNum")]
         public ulong? PageNum{ get; set; }
 
         /// <summary>
-        /// 总页数(只支持32位)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 总页数
         /// </summary>
         [JsonProperty("PageCount")]
         public ulong? PageCount{ get; set; }
 
         /// <summary>
         /// 记录总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }

@@ -21,44 +21,44 @@ namespace TencentCloud.Waf.V20180125.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CacheUrlItem : AbstractModel
+    public class ScanIpInfo : AbstractModel
     {
         
         /// <summary>
-        /// Id
+        /// 所属业务
         /// </summary>
-        [JsonProperty("Id")]
-        public string Id{ get; set; }
+        [JsonProperty("Bussiness")]
+        public string Bussiness{ get; set; }
 
         /// <summary>
-        /// 名称
+        /// 扫描对象
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("Target")]
+        public string Target{ get; set; }
 
         /// <summary>
-        /// 域名
+        /// ip列表
         /// </summary>
-        [JsonProperty("Domain")]
-        public string Domain{ get; set; }
+        [JsonProperty("IpList")]
+        public string[] IpList{ get; set; }
 
         /// <summary>
-        /// uri
+        /// 扫描说明
         /// </summary>
-        [JsonProperty("Uri")]
-        public string Uri{ get; set; }
+        [JsonProperty("Descibe")]
+        public string Descibe{ get; set; }
 
         /// <summary>
-        /// 协议
+        /// 官方公告
         /// </summary>
-        [JsonProperty("Protocol")]
-        public string Protocol{ get; set; }
+        [JsonProperty("Referer")]
+        public string Referer{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// 更新时间
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
+        [JsonProperty("UpdateTime")]
+        public long? UpdateTime{ get; set; }
 
 
         /// <summary>
@@ -66,12 +66,12 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Domain", this.Domain);
-            this.SetParamSimple(map, prefix + "Uri", this.Uri);
-            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Bussiness", this.Bussiness);
+            this.SetParamSimple(map, prefix + "Target", this.Target);
+            this.SetParamArraySimple(map, prefix + "IpList.", this.IpList);
+            this.SetParamSimple(map, prefix + "Descibe", this.Descibe);
+            this.SetParamSimple(map, prefix + "Referer", this.Referer);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }

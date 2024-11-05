@@ -26,14 +26,12 @@ namespace TencentCloud.Ioa.V20220601.Models
         
         /// <summary>
         /// 数据分页信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Paging")]
         public Paging Paging{ get; set; }
 
         /// <summary>
         /// 业务响应数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Items")]
         public DeviceDetail[] Items{ get; set; }

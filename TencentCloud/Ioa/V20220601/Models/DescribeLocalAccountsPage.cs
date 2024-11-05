@@ -26,14 +26,12 @@ namespace TencentCloud.Ioa.V20220601.Models
         
         /// <summary>
         /// 公共分页对象
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Page")]
         public Paging Page{ get; set; }
 
         /// <summary>
         /// 获取账号列表响应的单个对象
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Items")]
         public DescribeLocalAccountsData[] Items{ get; set; }

@@ -26,119 +26,102 @@ namespace TencentCloud.Ioa.V20220601.Models
         
         /// <summary>
         /// 分组名称全路径，点分格式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NamePath")]
         public string NamePath{ get; set; }
 
         /// <summary>
         /// 分组ID全路径，数组格式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdPathArr")]
         public long?[] IdPathArr{ get; set; }
 
         /// <summary>
         /// 分组扩展信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtraInfo")]
         public string ExtraInfo{ get; set; }
 
         /// <summary>
         /// 最后更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Utime")]
         public string Utime{ get; set; }
 
         /// <summary>
         /// 当前分组的父分组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParentId")]
         public ulong? ParentId{ get; set; }
 
         /// <summary>
         /// 源账号组ID，该字段仅适用于第三方同步的组织架构，通过OrgId-Id构成源组织架构分组ID-现组织架构分组ID映射关系
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrgId")]
         public string OrgId{ get; set; }
 
         /// <summary>
         /// 分组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 分组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
         /// 分组描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 分组导入源(只支持32位)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Source")]
         public ulong? Source{ get; set; }
 
         /// <summary>
         /// 分组ID全路径，点分格式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdPath")]
         public string IdPath{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Itime")]
         public string Itime{ get; set; }
 
         /// <summary>
         /// 父源账号组ID，该字段仅适用于第三方同步的组织架构
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParentOrgId")]
         public string ParentOrgId{ get; set; }
 
         /// <summary>
         /// 导入信息,json格式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Import")]
         public string Import{ get; set; }
 
         /// <summary>
         /// 是否开启导入架构
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImportEnable")]
         public bool? ImportEnable{ get; set; }
 
         /// <summary>
         /// 导入类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImportType")]
         public string ImportType{ get; set; }
 
         /// <summary>
         /// miniIAMId，MiniIAM源才有
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MiniIamId")]
         public string MiniIamId{ get; set; }

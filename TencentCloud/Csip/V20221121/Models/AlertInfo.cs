@@ -26,14 +26,12 @@ namespace TencentCloud.Csip.V20221121.Models
         
         /// <summary>
         /// 告警ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
         /// <summary>
         /// 告警名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -44,7 +42,6 @@ namespace TencentCloud.Csip.V20221121.Models
         /// WAF:Web应用防火墙
         /// CWP:主机安全
         /// CSIP:云安全中心
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
@@ -56,77 +53,66 @@ namespace TencentCloud.Csip.V20221121.Models
         /// 3:中危
         /// 4:高危
         /// 5:严重
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Level")]
         public ulong? Level{ get; set; }
 
         /// <summary>
         /// 攻击者
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Attacker")]
         public RoleInfo Attacker{ get; set; }
 
         /// <summary>
         /// 受害者
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Victim")]
         public RoleInfo Victim{ get; set; }
 
         /// <summary>
         /// 证据数据(例如攻击内容等，base64编码)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EvidenceData")]
         public string EvidenceData{ get; set; }
 
         /// <summary>
         /// 证据位置(例如协议端口)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EvidenceLocation")]
         public string EvidenceLocation{ get; set; }
 
         /// <summary>
         /// 证据路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EvidencePath")]
         public string EvidencePath{ get; set; }
 
         /// <summary>
         /// 首次告警时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 最近告警时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 告警次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
 
         /// <summary>
         /// 紧急缓解建议
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UrgentSuggestion")]
         public string UrgentSuggestion{ get; set; }
 
         /// <summary>
         /// 根治建议
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RemediationSuggestion")]
         public string RemediationSuggestion{ get; set; }
@@ -134,105 +120,90 @@ namespace TencentCloud.Csip.V20221121.Models
         /// <summary>
         /// 处理状态
         /// 0：未处置，1：已忽略，2：已处置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// 告警处理类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcessType")]
         public string ProcessType{ get; set; }
 
         /// <summary>
         /// 告警大类
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 告警小类
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubType")]
         public string SubType{ get; set; }
 
         /// <summary>
         /// 下拉字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtraInfo")]
         public AlertExtraInfo ExtraInfo{ get; set; }
 
         /// <summary>
         /// 聚合字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
         /// 告警日期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }
 
         /// <summary>
         /// appid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppID")]
         public string AppID{ get; set; }
 
         /// <summary>
         /// 账户名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NickName")]
         public string NickName{ get; set; }
 
         /// <summary>
         /// 账户ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
         /// 行为
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Action")]
         public ulong? Action{ get; set; }
 
         /// <summary>
         /// 风险排查
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskInvestigation")]
         public string RiskInvestigation{ get; set; }
 
         /// <summary>
         /// 风险处置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskTreatment")]
         public string RiskTreatment{ get; set; }
 
         /// <summary>
         /// 日志类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
 
         /// <summary>
         /// 语句检索
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogSearch")]
         public string LogSearch{ get; set; }

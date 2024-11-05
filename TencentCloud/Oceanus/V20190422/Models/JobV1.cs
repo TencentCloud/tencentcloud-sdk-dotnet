@@ -262,6 +262,28 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// 0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
+        /// 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScalingType")]
+        public long? ScalingType{ get; set; }
+
+        /// <summary>
+        /// 使用CPU数目
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RunningCpu")]
+        public float? RunningCpu{ get; set; }
+
+        /// <summary>
+        /// 使用内存数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RunningMem")]
+        public float? RunningMem{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -302,6 +324,9 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamObj(map, prefix + "EventInfo.", this.EventInfo);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "ScalingType", this.ScalingType);
+            this.SetParamSimple(map, prefix + "RunningCpu", this.RunningCpu);
+            this.SetParamSimple(map, prefix + "RunningMem", this.RunningMem);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1116</VersionPrefix>
+    <VersionPrefix>3.0.1117</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -92,7 +92,6 @@
     <Compile Include="V20180125\Models\CCRuleItem.cs" />
     <Compile Include="V20180125\Models\CCRuleItems.cs" />
     <Compile Include="V20180125\Models\CCRuleLists.cs" />
-    <Compile Include="V20180125\Models\CacheUrlItem.cs" />
     <Compile Include="V20180125\Models\CacheUrlItems.cs" />
     <Compile Include="V20180125\Models\CdcCluster.cs" />
     <Compile Include="V20180125\Models\CdcRegion.cs" />
@@ -149,11 +148,6 @@
     <Compile Include="V20180125\Models\DescribeAccessIndexResponse.cs" />
     <Compile Include="V20180125\Models\DescribeAntiFakeRulesRequest.cs" />
     <Compile Include="V20180125\Models\DescribeAntiFakeRulesResponse.cs" />
-    <Compile Include="V20180125\Models\DescribeAntiFakeUrlRequest.cs" />
-    <Compile Include="V20180125\Models\DescribeAntiFakeUrlResponse.cs" />
-    <Compile Include="V20180125\Models\DescribeAntiInfoLeakRulesRequest.cs" />
-    <Compile Include="V20180125\Models\DescribeAntiInfoLeakRulesResponse.cs" />
-    <Compile Include="V20180125\Models\DescribeAntiInfoLeakRulesRuleItem.cs" />
     <Compile Include="V20180125\Models\DescribeAntiInfoLeakRulesStrategyItem.cs" />
     <Compile Include="V20180125\Models\DescribeAntiInfoLeakageRulesRequest.cs" />
     <Compile Include="V20180125\Models\DescribeAntiInfoLeakageRulesResponse.cs" />
@@ -240,6 +234,8 @@
     <Compile Include="V20180125\Models\DescribeProtectionModesResponse.cs" />
     <Compile Include="V20180125\Models\DescribeRuleLimitRequest.cs" />
     <Compile Include="V20180125\Models\DescribeRuleLimitResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeScanIpRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeScanIpResponse.cs" />
     <Compile Include="V20180125\Models\DescribeSessionRequest.cs" />
     <Compile Include="V20180125\Models\DescribeSessionResponse.cs" />
     <Compile Include="V20180125\Models\DescribeSpartaProtectionInfoRequest.cs" />
@@ -392,7 +388,6 @@
     <Compile Include="V20180125\Models\ModifyWafThreatenIntelligenceResponse.cs" />
     <Compile Include="V20180125\Models\ModifyWebshellStatusRequest.cs" />
     <Compile Include="V20180125\Models\ModifyWebshellStatusResponse.cs" />
-    <Compile Include="V20180125\Models\PageInfo.cs" />
     <Compile Include="V20180125\Models\PeakPointsItem.cs" />
     <Compile Include="V20180125\Models\PiechartItem.cs" />
     <Compile Include="V20180125\Models\PortInfo.cs" />
@@ -408,6 +403,7 @@
     <Compile Include="V20180125\Models\ResponseCode.cs" />
     <Compile Include="V20180125\Models\Rule.cs" />
     <Compile Include="V20180125\Models\RuleList.cs" />
+    <Compile Include="V20180125\Models\ScanIpInfo.cs" />
     <Compile Include="V20180125\Models\SearchAccessLogRequest.cs" />
     <Compile Include="V20180125\Models\SearchAccessLogResponse.cs" />
     <Compile Include="V20180125\Models\SearchAttackLogRequest.cs" />

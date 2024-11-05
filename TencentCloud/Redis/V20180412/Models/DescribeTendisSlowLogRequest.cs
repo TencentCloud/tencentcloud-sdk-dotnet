@@ -31,13 +31,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 开始时间：2019-09-08 12:12:41
+        /// 开始时间：2019-09-08 12:12:41，查询时间最大跨度30天。
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// 结束时间：2019-09-09 12:12:41
+        /// 结束时间：2019-09-09 12:12:41，查询时间最大跨度30天。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? MinQueryTime{ get; set; }
 
         /// <summary>
-        /// 页面大小：默认20
+        /// 页面大小：默认20，最大100。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，取Limit整数倍
+        /// 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

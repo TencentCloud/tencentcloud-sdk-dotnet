@@ -26,7 +26,6 @@ namespace TencentCloud.Ioa.V20220601.Models
         
         /// <summary>
         /// 获取账号列表响应的分页对象
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public DescribeLocalAccountsPage Data{ get; set; }

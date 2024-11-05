@@ -26,7 +26,6 @@ namespace TencentCloud.Ms.V20180408.Models
         
         /// <summary>
         /// Dex分离，0关闭，1开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SetFile")]
         public string SetFile{ get; set; }
@@ -111,14 +110,12 @@ namespace TencentCloud.Ms.V20180408.Models
 
         /// <summary>
         /// Dex签名校验，0关闭，1开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileSign")]
         public string FileSign{ get; set; }
 
         /// <summary>
         /// root检测，0关闭，1开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AntiRoot")]
         public string AntiRoot{ get; set; }

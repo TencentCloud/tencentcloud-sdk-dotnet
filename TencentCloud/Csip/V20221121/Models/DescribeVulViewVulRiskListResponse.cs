@@ -32,7 +32,6 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// 漏洞产视角的漏洞风险列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public VULViewVULRiskData[] Data{ get; set; }
@@ -57,7 +56,6 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// tag枚举
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public FilterDataObject[] Tags{ get; set; }

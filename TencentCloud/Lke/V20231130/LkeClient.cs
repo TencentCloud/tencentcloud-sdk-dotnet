@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1116";
+       private const string sdkVersion = "SDK_NET_3.0.1117";
 
         /// <summary>
         /// Client constructor.
@@ -96,6 +96,8 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// 产品规划
+        /// 
         /// 接口支持图片和PDF转可编辑word格式文件，将文件中的图片、文本、表格等元素识别，并根据位置进行还原。
         /// </summary>
         /// <param name="req"><see cref="ConvertDocumentRequest"/></param>
@@ -106,6 +108,8 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// 产品规划
+        /// 
         /// 接口支持图片和PDF转可编辑word格式文件，将文件中的图片、文本、表格等元素识别，并根据位置进行还原。
         /// </summary>
         /// <param name="req"><see cref="ConvertDocumentRequest"/></param>

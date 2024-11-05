@@ -32,7 +32,6 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// 端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
@@ -99,7 +98,6 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// 风险详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskDetails")]
         public string RiskDetails{ get; set; }
@@ -130,56 +128,48 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// 用户昵称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Nick")]
         public string Nick{ get; set; }
 
         /// <summary>
         /// 用户uin
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
         /// 服务快照
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceSnapshot")]
         public string ServiceSnapshot{ get; set; }
 
         /// <summary>
         /// 服务访问的url
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
         /// 列表索引值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Index")]
         public string Index{ get; set; }
 
         /// <summary>
         /// 风险列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskList")]
         public ServerRiskSuggestion[] RiskList{ get; set; }
 
         /// <summary>
         /// 建议列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SuggestionList")]
         public ServerRiskSuggestion[] SuggestionList{ get; set; }
 
         /// <summary>
         /// HTTP响应状态码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusCode")]
         public string StatusCode{ get; set; }

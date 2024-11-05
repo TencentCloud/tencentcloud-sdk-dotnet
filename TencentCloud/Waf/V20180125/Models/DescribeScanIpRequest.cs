@@ -21,26 +21,14 @@ namespace TencentCloud.Waf.V20180125.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAntiInfoLeakRulesRequest : AbstractModel
+    public class DescribeScanIpRequest : AbstractModel
     {
         
         /// <summary>
-        /// 域名
+        /// 要查询的ip地址
         /// </summary>
-        [JsonProperty("Domain")]
-        public string Domain{ get; set; }
-
-        /// <summary>
-        /// 动作类型
-        /// </summary>
-        [JsonProperty("ActionType")]
-        public long? ActionType{ get; set; }
-
-        /// <summary>
-        /// 翻页
-        /// </summary>
-        [JsonProperty("PageInfo")]
-        public PageInfo PageInfo{ get; set; }
+        [JsonProperty("Ip")]
+        public string Ip{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Domain", this.Domain);
-            this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
-            this.SetParamObj(map, prefix + "PageInfo.", this.PageInfo);
+            this.SetParamSimple(map, prefix + "Ip", this.Ip);
         }
     }
 }

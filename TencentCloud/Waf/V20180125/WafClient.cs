@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1116";
+       private const string sdkVersion = "SDK_NET_3.0.1117";
 
         /// <summary>
         /// Client constructor.
@@ -701,56 +701,6 @@ namespace TencentCloud.Waf.V20180125
         public DescribeAntiFakeRulesResponse DescribeAntiFakeRulesSync(DescribeAntiFakeRulesRequest req)
         {
             return InternalRequestAsync<DescribeAntiFakeRulesResponse>(req, "DescribeAntiFakeRules")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 废弃接口
-        /// 
-        /// 获取防篡改url
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAntiFakeUrlRequest"/></param>
-        /// <returns><see cref="DescribeAntiFakeUrlResponse"/></returns>
-        public Task<DescribeAntiFakeUrlResponse> DescribeAntiFakeUrl(DescribeAntiFakeUrlRequest req)
-        {
-            return InternalRequestAsync<DescribeAntiFakeUrlResponse>(req, "DescribeAntiFakeUrl");
-        }
-
-        /// <summary>
-        /// 废弃接口
-        /// 
-        /// 获取防篡改url
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAntiFakeUrlRequest"/></param>
-        /// <returns><see cref="DescribeAntiFakeUrlResponse"/></returns>
-        public DescribeAntiFakeUrlResponse DescribeAntiFakeUrlSync(DescribeAntiFakeUrlRequest req)
-        {
-            return InternalRequestAsync<DescribeAntiFakeUrlResponse>(req, "DescribeAntiFakeUrl")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 老接口已经不再使用。
-        /// 
-        /// 获取信息防泄漏规则列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAntiInfoLeakRulesRequest"/></param>
-        /// <returns><see cref="DescribeAntiInfoLeakRulesResponse"/></returns>
-        public Task<DescribeAntiInfoLeakRulesResponse> DescribeAntiInfoLeakRules(DescribeAntiInfoLeakRulesRequest req)
-        {
-            return InternalRequestAsync<DescribeAntiInfoLeakRulesResponse>(req, "DescribeAntiInfoLeakRules");
-        }
-
-        /// <summary>
-        /// 老接口已经不再使用。
-        /// 
-        /// 获取信息防泄漏规则列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAntiInfoLeakRulesRequest"/></param>
-        /// <returns><see cref="DescribeAntiInfoLeakRulesResponse"/></returns>
-        public DescribeAntiInfoLeakRulesResponse DescribeAntiInfoLeakRulesSync(DescribeAntiInfoLeakRulesRequest req)
-        {
-            return InternalRequestAsync<DescribeAntiInfoLeakRulesResponse>(req, "DescribeAntiInfoLeakRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1612,6 +1562,27 @@ namespace TencentCloud.Waf.V20180125
         public DescribeRuleLimitResponse DescribeRuleLimitSync(DescribeRuleLimitRequest req)
         {
             return InternalRequestAsync<DescribeRuleLimitResponse>(req, "DescribeRuleLimit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询扫描ip
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScanIpRequest"/></param>
+        /// <returns><see cref="DescribeScanIpResponse"/></returns>
+        public Task<DescribeScanIpResponse> DescribeScanIp(DescribeScanIpRequest req)
+        {
+            return InternalRequestAsync<DescribeScanIpResponse>(req, "DescribeScanIp");
+        }
+
+        /// <summary>
+        /// 查询扫描ip
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScanIpRequest"/></param>
+        /// <returns><see cref="DescribeScanIpResponse"/></returns>
+        public DescribeScanIpResponse DescribeScanIpSync(DescribeScanIpRequest req)
+        {
+            return InternalRequestAsync<DescribeScanIpResponse>(req, "DescribeScanIp")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -79,7 +79,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string ExpressionType{ get; set; }
 
         /// <summary>
-        /// 错题推荐答案，算式运算结果正确返回为""，算式运算结果错误返回推荐答案 (注：暂不支持多个关系运算符（如1<10<7）、无关系运算符（如frac(1,2)+frac(2,3)）、单位换算（如1元=100角）错题的推荐答案返回)
+        /// 错题推荐答案，算式运算结果正确返回为""，算式运算结果错误返回推荐答案 (注：暂不支持多个关系运算符（如`1<10<7`）、无关系运算符（如frac(1,2)+frac(2,3)）、单位换算（如1元=100角）错题的推荐答案返回)
         /// </summary>
         [JsonProperty("Answer")]
         public string Answer{ get; set; }

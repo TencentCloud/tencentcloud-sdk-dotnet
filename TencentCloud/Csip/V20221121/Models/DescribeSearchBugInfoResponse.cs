@@ -26,7 +26,6 @@ namespace TencentCloud.Csip.V20221121.Models
         
         /// <summary>
         /// 漏洞信息和资产信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public DataSearchBug Data{ get; set; }

@@ -128,7 +128,6 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// 用户昵称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Nick")]
         public string Nick{ get; set; }
@@ -141,91 +140,78 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// 用户uin
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
         /// 应急漏洞类型，1-应急漏洞，0-非应急漏洞
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EMGCVulType")]
         public long? EMGCVulType{ get; set; }
 
         /// <summary>
         /// CVSS评分
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CVSS")]
         public float? CVSS{ get; set; }
 
         /// <summary>
         /// PCMGRId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PCMGRId")]
         public string PCMGRId{ get; set; }
 
         /// <summary>
         /// 漏洞标签。搜索时应急 必修传参VulTag=SuggestRepair/EMGCVul
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulTag")]
         public string[] VulTag{ get; set; }
 
         /// <summary>
         /// 漏洞披露时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DisclosureTime")]
         public string DisclosureTime{ get; set; }
 
         /// <summary>
         /// 攻击热度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttackHeat")]
         public ulong? AttackHeat{ get; set; }
 
         /// <summary>
         /// 是否必修漏洞，1-是，0-不是
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSuggest")]
         public long? IsSuggest{ get; set; }
 
         /// <summary>
         /// 处置任务id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HandleTaskId")]
         public string HandleTaskId{ get; set; }
 
         /// <summary>
         /// 引擎来源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineSource")]
         public string EngineSource{ get; set; }
 
         /// <summary>
         /// 新的漏洞风险id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulRiskId")]
         public string VulRiskId{ get; set; }
 
         /// <summary>
         /// 新版漏洞id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TvdID")]
         public string TvdID{ get; set; }
 
         /// <summary>
         /// 是否可以一键体检，1-可以，0-不可以
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsOneClick")]
         public ulong? IsOneClick{ get; set; }

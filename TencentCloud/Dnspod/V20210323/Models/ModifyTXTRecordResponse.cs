@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Waf.V20180125.Models
+namespace TencentCloud.Dnspod.V20210323.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PageInfo : AbstractModel
+    public class ModifyTXTRecordResponse : AbstractModel
     {
         
         /// <summary>
-        /// 页码
+        /// 记录ID
         /// </summary>
-        [JsonProperty("PageNumber")]
-        public string PageNumber{ get; set; }
+        [JsonProperty("RecordId")]
+        public ulong? RecordId{ get; set; }
 
         /// <summary>
-        /// 页条目数量
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("PageSize")]
-        public string PageSize{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
-            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

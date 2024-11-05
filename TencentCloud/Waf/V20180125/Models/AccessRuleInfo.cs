@@ -27,7 +27,6 @@ namespace TencentCloud.Waf.V20180125.Models
         /// <summary>
         /// 全文索引配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FullText")]
         public AccessFullTextInfo FullText{ get; set; }
@@ -35,14 +34,12 @@ namespace TencentCloud.Waf.V20180125.Models
         /// <summary>
         /// 键值索引配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeyValue")]
         public AccessRuleKeyValueInfo KeyValue{ get; set; }
 
         /// <summary>
         /// 元字段索引配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tag")]

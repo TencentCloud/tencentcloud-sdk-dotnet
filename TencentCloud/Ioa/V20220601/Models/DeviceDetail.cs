@@ -26,301 +26,258 @@ namespace TencentCloud.Ioa.V20220601.Models
         
         /// <summary>
         /// 设备ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
         /// 设备唯一标识码，在ioa中每个设备有唯一标识码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mid")]
         public string Mid{ get; set; }
 
         /// <summary>
         /// 终端名（设备名）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 设备所在分组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
 
         /// <summary>
         /// OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OsType")]
         public long? OsType{ get; set; }
 
         /// <summary>
         /// 设备IP地址（出口IP）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
         /// 在线状态，2：在线、0或者1:离线
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OnlineStatus")]
         public long? OnlineStatus{ get; set; }
 
         /// <summary>
         /// 客户端版本号-大整数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
         /// 客户端版本号-点分字符串
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrVersion")]
         public string StrVersion{ get; set; }
 
         /// <summary>
         /// 首次在线时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Itime")]
         public string Itime{ get; set; }
 
         /// <summary>
         /// 最后一次在线时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConnActiveTime")]
         public string ConnActiveTime{ get; set; }
 
         /// <summary>
         /// 设备是否加锁 ，1：锁定 0或者2：未锁定。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Locked")]
         public long? Locked{ get; set; }
 
         /// <summary>
         /// 设备本地IP列表, 包括IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LocalIpList")]
         public string LocalIpList{ get; set; }
 
         /// <summary>
         /// 宿主机id（需要宿主机也安装iOA才能显示）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostId")]
         public long? HostId{ get; set; }
 
         /// <summary>
         /// 设备所属分组名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
         /// 设备所属分组路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupNamePath")]
         public string GroupNamePath{ get; set; }
 
         /// <summary>
         /// 未修复高危漏洞数(只支持32位)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CriticalVulListCount")]
         public long? CriticalVulListCount{ get; set; }
 
         /// <summary>
         /// 设备名，和Name相同
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComputerName")]
         public string ComputerName{ get; set; }
 
         /// <summary>
         /// 登录域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
         /// <summary>
         /// MAC地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MacAddr")]
         public string MacAddr{ get; set; }
 
         /// <summary>
         /// 漏洞数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulCount")]
         public long? VulCount{ get; set; }
 
         /// <summary>
         /// 病毒风险数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskCount")]
         public long? RiskCount{ get; set; }
 
         /// <summary>
         /// 病毒库版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VirusVer")]
         public string VirusVer{ get; set; }
 
         /// <summary>
         /// 漏洞库版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulVersion")]
         public string VulVersion{ get; set; }
 
         /// <summary>
         /// 系统修复引擎版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SysRepVersion")]
         public string SysRepVersion{ get; set; }
 
         /// <summary>
         /// 高危补丁列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulCriticalList")]
         public string[] VulCriticalList{ get; set; }
 
         /// <summary>
         /// 标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public string Tags{ get; set; }
 
         /// <summary>
         /// 终端用户名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
         /// 防火墙状态，不等于0表示开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FirewallStatus")]
         public long? FirewallStatus{ get; set; }
 
         /// <summary>
         /// SN序列号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SerialNum")]
         public string SerialNum{ get; set; }
 
         /// <summary>
         /// 设备管控策略版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceStrategyVer")]
         public string DeviceStrategyVer{ get; set; }
 
         /// <summary>
         /// NGN策略版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NGNStrategyVer")]
         public string NGNStrategyVer{ get; set; }
 
         /// <summary>
         /// 最近登录账户的账号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IOAUserName")]
         public string IOAUserName{ get; set; }
 
         /// <summary>
         /// 设备管控新策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceNewStrategyVer")]
         public string DeviceNewStrategyVer{ get; set; }
 
         /// <summary>
         /// NGN策略新版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NGNNewStrategyVer")]
         public string NGNNewStrategyVer{ get; set; }
 
         /// <summary>
         /// 宿主机名称（需要宿主机也安装iOA才能显示）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
         /// <summary>
         /// 主板序列号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BaseBoardSn")]
         public string BaseBoardSn{ get; set; }
 
         /// <summary>
         /// 绑定账户名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccountUsers")]
         public string AccountUsers{ get; set; }
 
         /// <summary>
         /// 身份策略版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentityStrategyVer")]
         public string IdentityStrategyVer{ get; set; }
 
         /// <summary>
         /// 身份策略新版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentityNewStrategyVer")]
         public string IdentityNewStrategyVer{ get; set; }
 
         /// <summary>
         /// 最近登录账号部门
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccountGroupName")]
         public string AccountGroupName{ get; set; }
 
         /// <summary>
         /// 最近登录账户的姓名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
 
         /// <summary>
         /// 账号组id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccountGroupId")]
         public long? AccountGroupId{ get; set; }

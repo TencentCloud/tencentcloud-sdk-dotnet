@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0463EFE-F8C7-35CA-9E14-A25297548798}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1116</VersionPrefix>
+    <VersionPrefix>3.0.1117</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,7 @@
 
   <ItemGroup>
     <Compile Include="V20230228\CaClient.cs" />
+    <Compile Include="V20230228\Models\CertificateIdentityUser.cs" />
     <Compile Include="V20230228\Models\CreateVerifyReportRequest.cs" />
     <Compile Include="V20230228\Models\CreateVerifyReportResponse.cs" />
     <Compile Include="V20230228\Models\DescribeVerifyReportRequest.cs" />

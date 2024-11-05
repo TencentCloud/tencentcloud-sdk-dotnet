@@ -15,50 +15,49 @@
  * under the License.
  */
 
-namespace TencentCloud.Waf.V20180125.Models
+namespace TencentCloud.Ca.V20230228.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAntiInfoLeakRulesRuleItem : AbstractModel
+    public class CertificateIdentityUser : AbstractModel
     {
         
         /// <summary>
-        /// 规则ID
-        /// </summary>
-        [JsonProperty("RuleId")]
-        public string RuleId{ get; set; }
-
-        /// <summary>
-        /// 规则名称
+        /// 姓名
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 规则状态
+        /// 唯一身份id
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
+        [JsonProperty("IdentityUniqueId")]
+        public string IdentityUniqueId{ get; set; }
 
         /// <summary>
-        /// 规则动作类型
+        /// 身份证号
         /// </summary>
-        [JsonProperty("ActionType")]
-        public string ActionType{ get; set; }
+        [JsonProperty("IdCardNumber")]
+        public string IdCardNumber{ get; set; }
 
         /// <summary>
-        /// 规则创建时间
+        /// 身份鉴别类型
+        /// 1：授权金融机构身份鉴别
         /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
+        [JsonProperty("IdentificationType")]
+        public string IdentificationType{ get; set; }
 
         /// <summary>
-        /// 详细的规则
+        /// 身份鉴别措施
+        /// 1、身份证鉴别
+        /// 2、银行卡鉴别
+        /// 3、支付账户密码验证
+        /// 4、人脸识别验证
         /// </summary>
-        [JsonProperty("Strategies")]
-        public DescribeAntiInfoLeakRulesStrategyItem[] Strategies{ get; set; }
+        [JsonProperty("IdentificationMeasures")]
+        public string[] IdentificationMeasures{ get; set; }
 
 
         /// <summary>
@@ -66,12 +65,11 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamArrayObj(map, prefix + "Strategies.", this.Strategies);
+            this.SetParamSimple(map, prefix + "IdentityUniqueId", this.IdentityUniqueId);
+            this.SetParamSimple(map, prefix + "IdCardNumber", this.IdCardNumber);
+            this.SetParamSimple(map, prefix + "IdentificationType", this.IdentificationType);
+            this.SetParamArraySimple(map, prefix + "IdentificationMeasures.", this.IdentificationMeasures);
         }
     }
 }

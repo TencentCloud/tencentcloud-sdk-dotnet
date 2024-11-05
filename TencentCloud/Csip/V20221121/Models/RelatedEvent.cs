@@ -26,21 +26,18 @@ namespace TencentCloud.Csip.V20221121.Models
         
         /// <summary>
         /// 事件ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventID")]
         public string EventID{ get; set; }
 
         /// <summary>
         /// 事件描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 与事件关联的告警数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RelatedCount")]
         public long? RelatedCount{ get; set; }

@@ -26,98 +26,84 @@ namespace TencentCloud.Csip.V20221121.Models
         
         /// <summary>
         /// 总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
 
         /// <summary>
         /// 机器列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public CVMAssetVO[] Data{ get; set; }
 
         /// <summary>
         /// 地域列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionList")]
         public FilterDataObject[] RegionList{ get; set; }
 
         /// <summary>
         /// 防护状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefenseStatusList")]
         public FilterDataObject[] DefenseStatusList{ get; set; }
 
         /// <summary>
         /// vpc枚举
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcList")]
         public FilterDataObject[] VpcList{ get; set; }
 
         /// <summary>
         /// 资产类型枚举
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssetTypeList")]
         public FilterDataObject[] AssetTypeList{ get; set; }
 
         /// <summary>
         /// 操作系统枚举
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SystemTypeList")]
         public FilterDataObject[] SystemTypeList{ get; set; }
 
         /// <summary>
         /// ip列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpTypeList")]
         public FilterDataObject[] IpTypeList{ get; set; }
 
         /// <summary>
         /// appid列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppIdList")]
         public FilterDataObject[] AppIdList{ get; set; }
 
         /// <summary>
         /// 可用区列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneList")]
         public FilterDataObject[] ZoneList{ get; set; }
 
         /// <summary>
         /// os列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OsList")]
         public FilterDataObject[] OsList{ get; set; }
 
         /// <summary>
         /// 资产类型和实例类型的对应关系
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssetMapInstanceTypeList")]
         public AssetInstanceTypeMap[] AssetMapInstanceTypeList{ get; set; }
 
         /// <summary>
         /// 公网内网枚举
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicPrivateAttr")]
         public FilterDataObject[] PublicPrivateAttr{ get; set; }
 
         /// <summary>
         /// 主机防护状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProtectStatusList")]
         public FilterDataObject[] ProtectStatusList{ get; set; }

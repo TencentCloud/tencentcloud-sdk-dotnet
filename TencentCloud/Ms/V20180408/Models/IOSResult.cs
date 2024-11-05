@@ -26,84 +26,72 @@ namespace TencentCloud.Ms.V20180408.Models
         
         /// <summary>
         /// 加固任务结果Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultId")]
         public string ResultId{ get; set; }
 
         /// <summary>
         /// 用户uid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OpUin")]
         public long? OpUin{ get; set; }
 
         /// <summary>
         /// 加固类型，这里为ios
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EncryptType")]
         public string EncryptType{ get; set; }
 
         /// <summary>
         /// 资源id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
         /// 加固状态：0等待，1成功，2任务中，3失败，4重试中
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EncryptState")]
         public long? EncryptState{ get; set; }
 
         /// <summary>
         /// 业务错误码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EncryptErrno")]
         public long? EncryptErrno{ get; set; }
 
         /// <summary>
         /// 业务错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EncryptErrDesc")]
         public string EncryptErrDesc{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatTime")]
         public string CreatTime{ get; set; }
 
         /// <summary>
         /// 开始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// 结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
         /// 消耗时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CostTime")]
         public long? CostTime{ get; set; }
 
         /// <summary>
         /// 加固（混淆）包结果url
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EncryptPkgUrl")]
         public string EncryptPkgUrl{ get; set; }

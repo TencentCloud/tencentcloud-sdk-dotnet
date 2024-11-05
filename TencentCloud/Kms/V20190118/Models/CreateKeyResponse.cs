@@ -44,7 +44,6 @@ namespace TencentCloud.Kms.V20190118.Models
 
         /// <summary>
         /// CMK的描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -63,21 +62,18 @@ namespace TencentCloud.Kms.V20190118.Models
 
         /// <summary>
         /// 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagCode")]
         public ulong? TagCode{ get; set; }
 
         /// <summary>
         /// 标签操作的返回信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagMsg")]
         public string TagMsg{ get; set; }
 
         /// <summary>
         /// HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HsmClusterId")]
         public string HsmClusterId{ get; set; }

@@ -86,7 +86,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         public string AddressIPVersion{ get; set; }
 
         /// <summary>
-        /// 在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填。
+        /// 在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填；IPv4实例不支持该参数。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }

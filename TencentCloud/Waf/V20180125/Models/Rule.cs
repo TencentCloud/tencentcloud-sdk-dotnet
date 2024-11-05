@@ -32,7 +32,6 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 规则类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -45,14 +44,12 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 规则描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 规则防护的CVE编号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CVE")]
         public string CVE{ get; set; }
@@ -71,7 +68,6 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 门神规则新增/更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddTime")]
         public string AddTime{ get; set; }

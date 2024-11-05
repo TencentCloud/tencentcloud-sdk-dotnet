@@ -50,8 +50,6 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 数据来源Source字段 custom-自定义(默认)、batch-domain-批量域名
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }

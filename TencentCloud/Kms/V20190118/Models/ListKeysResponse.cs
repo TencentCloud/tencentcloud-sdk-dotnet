@@ -26,7 +26,6 @@ namespace TencentCloud.Kms.V20190118.Models
         
         /// <summary>
         /// CMK列表数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Keys")]
         public Key[] Keys{ get; set; }

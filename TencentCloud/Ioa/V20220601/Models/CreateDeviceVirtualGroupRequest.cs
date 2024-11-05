@@ -25,7 +25,7 @@ namespace TencentCloud.Ioa.V20220601.Models
     {
         
         /// <summary>
-        /// 终端自定义分组名
+        /// 必填，终端自定义分组名
         /// </summary>
         [JsonProperty("DeviceVirtualGroupName")]
         public string DeviceVirtualGroupName{ get; set; }
@@ -37,25 +37,25 @@ namespace TencentCloud.Ioa.V20220601.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）(只支持32位)
+        /// 必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios ）(只支持32位)
         /// </summary>
         [JsonProperty("OsType")]
         public long? OsType{ get; set; }
 
         /// <summary>
-        /// 时间设置类型（1:自动小时、2:自动每天、3:自定义、0:手动分组）(只支持32位)
+        /// 必填，分组类型（0:手动分组；非0为自动划分分组；具体枚举值为：1:自动每小时划分分组、2:自动每天划分分组、3:自定义时间划分分组）(只支持32位)
         /// </summary>
         [JsonProperty("TimeType")]
         public long? TimeType{ get; set; }
 
         /// <summary>
-        /// 自动划分时间（单位min）(只支持32位)
+        /// 选填，TimeType=3时的自动划分时间，其他情况为0（单位min）(只支持32位)
         /// </summary>
         [JsonProperty("AutoMinute")]
         public long? AutoMinute{ get; set; }
 
         /// <summary>
-        /// 自动划分规则数据
+        /// 选填，手动分组不填，自动划分分组的划分规则数据
         /// </summary>
         [JsonProperty("AutoRules")]
         public ComplexRule AutoRules{ get; set; }

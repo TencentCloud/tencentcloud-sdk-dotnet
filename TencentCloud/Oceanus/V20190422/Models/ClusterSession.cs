@@ -92,6 +92,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public Property[] Properties{ get; set; }
 
         /// <summary>
+        /// 引用资源
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceRefs")]
+        public SessionClusterRefItem[] ResourceRefs{ get; set; }
+
+        /// <summary>
         /// JobManager的规格
         /// </summary>
         [JsonProperty("JobManagerCuSpec")]
@@ -121,6 +128,30 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// JobManagerCpu
+        /// </summary>
+        [JsonProperty("JobManagerCpu")]
+        public float? JobManagerCpu{ get; set; }
+
+        /// <summary>
+        /// JobManagerMem
+        /// </summary>
+        [JsonProperty("JobManagerMem")]
+        public float? JobManagerMem{ get; set; }
+
+        /// <summary>
+        /// TaskManagerCpu
+        /// </summary>
+        [JsonProperty("TaskManagerCpu")]
+        public float? TaskManagerCpu{ get; set; }
+
+        /// <summary>
+        /// TaskManagerMem
+        /// </summary>
+        [JsonProperty("TaskManagerMem")]
+        public float? TaskManagerMem{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,11 +169,16 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
             this.SetParamSimple(map, prefix + "WebUIUrl", this.WebUIUrl);
             this.SetParamArrayObj(map, prefix + "Properties.", this.Properties);
+            this.SetParamArrayObj(map, prefix + "ResourceRefs.", this.ResourceRefs);
             this.SetParamSimple(map, prefix + "JobManagerCuSpec", this.JobManagerCuSpec);
             this.SetParamSimple(map, prefix + "TaskManagerCuSpec", this.TaskManagerCuSpec);
             this.SetParamSimple(map, prefix + "TaskManagerNum", this.TaskManagerNum);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "JobManagerCpu", this.JobManagerCpu);
+            this.SetParamSimple(map, prefix + "JobManagerMem", this.JobManagerMem);
+            this.SetParamSimple(map, prefix + "TaskManagerCpu", this.TaskManagerCpu);
+            this.SetParamSimple(map, prefix + "TaskManagerMem", this.TaskManagerMem);
         }
     }
 }

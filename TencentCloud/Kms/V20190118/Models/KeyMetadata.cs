@@ -92,21 +92,18 @@ namespace TencentCloud.Kms.V20190118.Models
 
         /// <summary>
         /// 计划删除的时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeletionDate")]
         public ulong? DeletionDate{ get; set; }
 
         /// <summary>
         /// CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Origin")]
         public string Origin{ get; set; }
 
         /// <summary>
         /// 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValidTo")]
         public ulong? ValidTo{ get; set; }
@@ -119,7 +116,6 @@ namespace TencentCloud.Kms.V20190118.Models
 
         /// <summary>
         /// HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HsmClusterId")]
         public string HsmClusterId{ get; set; }

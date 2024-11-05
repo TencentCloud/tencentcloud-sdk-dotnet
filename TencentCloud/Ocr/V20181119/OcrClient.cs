@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1116";
+       private const string sdkVersion = "SDK_NET_3.0.1117";
 
         /// <summary>
         /// Client constructor.
@@ -2719,6 +2719,31 @@ namespace TencentCloud.Ocr.V20181119
         public SmartStructuralOCRV2Response SmartStructuralOCRV2Sync(SmartStructuralOCRV2Request req)
         {
             return InternalRequestAsync<SmartStructuralOCRV2Response>(req, "SmartStructuralOCRV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口支持智能提取各类证照、票据、表单、合同等结构化场景的key:value字段信息，并支持提取表格信息的key:value组的结构化，灵活高效，适用于各类非标准材料的信息录入场景，点击[立即体验](https://cloud.tencent.com/product/smart-ocr)。
+        /// 
+        /// 默认接口请求频率限制：1次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="SmartStructuralProRequest"/></param>
+        /// <returns><see cref="SmartStructuralProResponse"/></returns>
+        public Task<SmartStructuralProResponse> SmartStructuralPro(SmartStructuralProRequest req)
+        {
+            return InternalRequestAsync<SmartStructuralProResponse>(req, "SmartStructuralPro");
+        }
+
+        /// <summary>
+        /// 本接口支持智能提取各类证照、票据、表单、合同等结构化场景的key:value字段信息，并支持提取表格信息的key:value组的结构化，灵活高效，适用于各类非标准材料的信息录入场景，点击[立即体验](https://cloud.tencent.com/product/smart-ocr)。
+        /// 
+        /// 默认接口请求频率限制：1次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="SmartStructuralProRequest"/></param>
+        /// <returns><see cref="SmartStructuralProResponse"/></returns>
+        public SmartStructuralProResponse SmartStructuralProSync(SmartStructuralProRequest req)
+        {
+            return InternalRequestAsync<SmartStructuralProResponse>(req, "SmartStructuralPro")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

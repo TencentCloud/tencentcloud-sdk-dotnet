@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1116";
+       private const string sdkVersion = "SDK_NET_3.0.1117";
 
         /// <summary>
         /// Client constructor.
@@ -1484,31 +1484,6 @@ namespace TencentCloud.Trtc.V20190722
         public StopWebRecordResponse StopWebRecordSync(StopWebRecordRequest req)
         {
             return InternalRequestAsync<StopWebRecordResponse>(req, "StopWebRecord")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 接口不再支持
-        /// 
-        /// 对转录的文本进行总结。
-        /// </summary>
-        /// <param name="req"><see cref="SummarizeTranscriptionRequest"/></param>
-        /// <returns><see cref="SummarizeTranscriptionResponse"/></returns>
-        public Task<SummarizeTranscriptionResponse> SummarizeTranscription(SummarizeTranscriptionRequest req)
-        {
-            return InternalRequestAsync<SummarizeTranscriptionResponse>(req, "SummarizeTranscription");
-        }
-
-        /// <summary>
-        /// 接口不再支持
-        /// 
-        /// 对转录的文本进行总结。
-        /// </summary>
-        /// <param name="req"><see cref="SummarizeTranscriptionRequest"/></param>
-        /// <returns><see cref="SummarizeTranscriptionResponse"/></returns>
-        public SummarizeTranscriptionResponse SummarizeTranscriptionSync(SummarizeTranscriptionRequest req)
-        {
-            return InternalRequestAsync<SummarizeTranscriptionResponse>(req, "SummarizeTranscription")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

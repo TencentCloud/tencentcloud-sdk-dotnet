@@ -160,6 +160,12 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public bool? EnableMultimedia{ get; set; }
 
         /// <summary>
+        /// 是否开启搜索深度模式，默认是false，在值为true且命中搜索时，会请求深度搜索。
+        /// </summary>
+        [JsonProperty("EnableDeepSearch")]
+        public bool? EnableDeepSearch{ get; set; }
+
+        /// <summary>
         /// 说明： 1. 确保模型的输出是可复现的。 2. 取值区间为非0正整数，最大值10000。 3. 非必要不建议使用，不合理的取值会影响效果。
         /// </summary>
         [JsonProperty("Seed")]
@@ -185,6 +191,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamSimple(map, prefix + "Citation", this.Citation);
             this.SetParamSimple(map, prefix + "EnableSpeedSearch", this.EnableSpeedSearch);
             this.SetParamSimple(map, prefix + "EnableMultimedia", this.EnableMultimedia);
+            this.SetParamSimple(map, prefix + "EnableDeepSearch", this.EnableDeepSearch);
             this.SetParamSimple(map, prefix + "Seed", this.Seed);
         }
     }

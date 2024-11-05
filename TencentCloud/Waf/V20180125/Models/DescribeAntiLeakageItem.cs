@@ -56,14 +56,12 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 匹配条件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Strategies")]
         public DescribeAntiInfoLeakRulesStrategyItem[] Strategies{ get; set; }
 
         /// <summary>
         /// 匹配的URL
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uri")]
         public string Uri{ get; set; }

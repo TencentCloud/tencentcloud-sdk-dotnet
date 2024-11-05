@@ -28,7 +28,7 @@ namespace TencentCloud.Dnspod.V20210323
 
        private const string endpoint = "dnspod.tencentcloudapi.com";
        private const string version = "2021-03-23";
-       private const string sdkVersion = "SDK_NET_3.0.1116";
+       private const string sdkVersion = "SDK_NET_3.0.1117";
 
         /// <summary>
         /// Client constructor.
@@ -118,6 +118,8 @@ namespace TencentCloud.Dnspod.V20210323
 
         /// <summary>
         /// 添加域名
+        /// 
+        /// 备注：该接口不支持添加子域名。
         /// </summary>
         /// <param name="req"><see cref="CreateDomainRequest"/></param>
         /// <returns><see cref="CreateDomainResponse"/></returns>
@@ -128,6 +130,8 @@ namespace TencentCloud.Dnspod.V20210323
 
         /// <summary>
         /// 添加域名
+        /// 
+        /// 备注：该接口不支持添加子域名。
         /// </summary>
         /// <param name="req"><see cref="CreateDomainRequest"/></param>
         /// <returns><see cref="CreateDomainResponse"/></returns>
@@ -304,6 +308,29 @@ namespace TencentCloud.Dnspod.V20210323
         public CreateSnapshotResponse CreateSnapshotSync(CreateSnapshotRequest req)
         {
             return InternalRequestAsync<CreateSnapshotResponse>(req, "CreateSnapshot")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加TXT记录
+        /// 备注：新添加的解析记录存在短暂的索引延迟，如果查询不到新增记录，请在 30 秒后重试
+        /// </summary>
+        /// <param name="req"><see cref="CreateTXTRecordRequest"/></param>
+        /// <returns><see cref="CreateTXTRecordResponse"/></returns>
+        public Task<CreateTXTRecordResponse> CreateTXTRecord(CreateTXTRecordRequest req)
+        {
+            return InternalRequestAsync<CreateTXTRecordResponse>(req, "CreateTXTRecord");
+        }
+
+        /// <summary>
+        /// 添加TXT记录
+        /// 备注：新添加的解析记录存在短暂的索引延迟，如果查询不到新增记录，请在 30 秒后重试
+        /// </summary>
+        /// <param name="req"><see cref="CreateTXTRecordRequest"/></param>
+        /// <returns><see cref="CreateTXTRecordResponse"/></returns>
+        public CreateTXTRecordResponse CreateTXTRecordSync(CreateTXTRecordRequest req)
+        {
+            return InternalRequestAsync<CreateTXTRecordResponse>(req, "CreateTXTRecord")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1559,6 +1586,27 @@ namespace TencentCloud.Dnspod.V20210323
         public ModifySubdomainStatusResponse ModifySubdomainStatusSync(ModifySubdomainStatusRequest req)
         {
             return InternalRequestAsync<ModifySubdomainStatusResponse>(req, "ModifySubdomainStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改TXT记录
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTXTRecordRequest"/></param>
+        /// <returns><see cref="ModifyTXTRecordResponse"/></returns>
+        public Task<ModifyTXTRecordResponse> ModifyTXTRecord(ModifyTXTRecordRequest req)
+        {
+            return InternalRequestAsync<ModifyTXTRecordResponse>(req, "ModifyTXTRecord");
+        }
+
+        /// <summary>
+        /// 修改TXT记录
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTXTRecordRequest"/></param>
+        /// <returns><see cref="ModifyTXTRecordResponse"/></returns>
+        public ModifyTXTRecordResponse ModifyTXTRecordSync(ModifyTXTRecordRequest req)
+        {
+            return InternalRequestAsync<ModifyTXTRecordResponse>(req, "ModifyTXTRecord")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

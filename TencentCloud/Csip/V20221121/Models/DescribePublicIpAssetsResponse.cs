@@ -26,7 +26,6 @@ namespace TencentCloud.Csip.V20221121.Models
         
         /// <summary>
         /// 列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public IpAssetListVO[] Data{ get; set; }
@@ -39,42 +38,36 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// 资产归属地
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssetLocationList")]
         public FilterDataObject[] AssetLocationList{ get; set; }
 
         /// <summary>
         /// ip列表枚举
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpTypeList")]
         public FilterDataObject[] IpTypeList{ get; set; }
 
         /// <summary>
         /// 地域列表枚举
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionList")]
         public FilterDataObject[] RegionList{ get; set; }
 
         /// <summary>
         /// 防护枚举
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefenseStatusList")]
         public FilterDataObject[] DefenseStatusList{ get; set; }
 
         /// <summary>
         /// 资产类型枚举
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssetTypeList")]
         public FilterDataObject[] AssetTypeList{ get; set; }
 
         /// <summary>
         /// AppId枚举
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppIdList")]
         public FilterDataObject[] AppIdList{ get; set; }

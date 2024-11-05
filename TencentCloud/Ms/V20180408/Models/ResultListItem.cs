@@ -179,7 +179,6 @@ namespace TencentCloud.Ms.V20180408.Models
         /// 1001表示APP md5 different between real md5, please confirm it.
         /// 
         /// 1002表示App md5 uncollect, please offer downloadlink.
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrNo")]
         public string ErrNo{ get; set; }

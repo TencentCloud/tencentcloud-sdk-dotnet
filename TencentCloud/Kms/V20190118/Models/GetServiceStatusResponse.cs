@@ -32,7 +32,6 @@ namespace TencentCloud.Kms.V20190118.Models
 
         /// <summary>
         /// 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InvalidType")]
         public long? InvalidType{ get; set; }
@@ -45,42 +44,36 @@ namespace TencentCloud.Kms.V20190118.Models
 
         /// <summary>
         /// 旗舰版到期时间（Epoch Unix Timestamp）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProExpireTime")]
         public ulong? ProExpireTime{ get; set; }
 
         /// <summary>
         /// 旗舰版是否自动续费：0-不自动续费，1-自动续费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProRenewFlag")]
         public ulong? ProRenewFlag{ get; set; }
 
         /// <summary>
         /// 旗舰版购买记录的唯一性标识。如果为开通旗舰版，则返回值为空
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProResourceId")]
         public string ProResourceId{ get; set; }
 
         /// <summary>
         /// 是否开通 KMS 托管版
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExclusiveVSMEnabled")]
         public bool? ExclusiveVSMEnabled{ get; set; }
 
         /// <summary>
         /// 是否开通 KMS 独享版
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExclusiveHSMEnabled")]
         public bool? ExclusiveHSMEnabled{ get; set; }
 
         /// <summary>
         /// KMS 订阅信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubscriptionInfo")]
         public string SubscriptionInfo{ get; set; }

@@ -92,7 +92,6 @@ namespace TencentCloud.Kms.V20190118.Models
 
         /// <summary>
         /// 是否有设备指纹与当前密钥绑定
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceFingerprintBind")]
         public bool? DeviceFingerprintBind{ get; set; }

@@ -92,7 +92,6 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 高级参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OptionsArr")]
         public string OptionsArr{ get; set; }

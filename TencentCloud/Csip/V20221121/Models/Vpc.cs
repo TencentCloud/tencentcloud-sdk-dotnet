@@ -56,14 +56,12 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// 标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tag")]
         public Tag[] Tag{ get; set; }
 
         /// <summary>
         /// dns域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DNS")]
         public string[] DNS{ get; set; }
@@ -106,14 +104,12 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// 是否新资产 1新
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsNewAsset")]
         public ulong? IsNewAsset{ get; set; }
 
         /// <summary>
         /// 是否核心资产1是 2不是
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsCore")]
         public ulong? IsCore{ get; set; }

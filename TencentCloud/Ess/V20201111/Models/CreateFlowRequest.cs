@@ -146,6 +146,10 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+        /// 
+        /// <b>注</b>
+        /// 1. 抄送人名单中可以包括自然人以及本企业的员工。
+        /// 2. 请确保抄送人列表中的成员不与任何签署人重复。
         /// </summary>
         [JsonProperty("CcInfos")]
         public CcInfo[] CcInfos{ get; set; }

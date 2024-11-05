@@ -45,6 +45,13 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("SinkCycleAge")]
         public string SinkCycleAge{ get; set; }
 
+        /// <summary>
+        /// 标准存储时长
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StandardStorageAge")]
+        public string StandardStorageAge{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "ExpireMaxAge", this.ExpireMaxAge);
             this.SetParamSimple(map, prefix + "TimestampField", this.TimestampField);
             this.SetParamSimple(map, prefix + "SinkCycleAge", this.SinkCycleAge);
+            this.SetParamSimple(map, prefix + "StandardStorageAge", this.StandardStorageAge);
         }
     }
 }

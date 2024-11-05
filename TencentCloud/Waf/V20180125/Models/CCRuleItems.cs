@@ -104,7 +104,6 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 事件id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventId")]
         public string EventId{ get; set; }
@@ -117,7 +116,6 @@ namespace TencentCloud.Waf.V20180125.Models
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
