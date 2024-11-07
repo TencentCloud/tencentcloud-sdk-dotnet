@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C9840D4F-C22D-3561-A83C-36F13531DB7A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1118</VersionPrefix>
+    <VersionPrefix>3.0.1119</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -233,6 +233,8 @@
     <Compile Include="V20201207\Models\DescribeGovernanceServicesRequest.cs" />
     <Compile Include="V20201207\Models\DescribeGovernanceServicesResponse.cs" />
     <Compile Include="V20201207\Models\DescribeInstanceRegionInfo.cs" />
+    <Compile Include="V20201207\Models\DescribeInstanceTagInfosRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeInstanceTagInfosResponse.cs" />
     <Compile Include="V20201207\Models\DescribeNacosReplicasRequest.cs" />
     <Compile Include="V20201207\Models\DescribeNacosReplicasResponse.cs" />
     <Compile Include="V20201207\Models\DescribeNacosServerInterfacesRequest.cs" />

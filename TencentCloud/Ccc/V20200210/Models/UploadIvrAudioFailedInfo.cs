@@ -26,14 +26,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         
         /// <summary>
         /// 文件名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
         /// 失败原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedMsg")]
         public string FailedMsg{ get; set; }

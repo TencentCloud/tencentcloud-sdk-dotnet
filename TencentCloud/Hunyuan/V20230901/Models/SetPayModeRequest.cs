@@ -25,7 +25,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
     {
         
         /// <summary>
-        /// 设置后付费状态，0：后付费；1：预付费
+        /// 设置后付费状态，0：后付费打开；1：后付费关闭
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }

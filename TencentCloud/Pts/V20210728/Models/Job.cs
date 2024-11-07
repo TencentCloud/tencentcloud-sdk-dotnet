@@ -334,6 +334,13 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
+        /// <summary>
+        /// job VUM用量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Usage")]
+        public long? Usage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -384,6 +391,7 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);
             this.SetParamSimple(map, prefix + "ScenarioName", this.ScenarioName);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "Usage", this.Usage);
         }
     }
 }

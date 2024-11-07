@@ -217,6 +217,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("InitInvocationId")]
         public string InitInvocationId{ get; set; }
 
+        /// <summary>
+        /// 实例违规详情。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceViolationDetail")]
+        public InstanceViolationDetail InstanceViolationDetail{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -252,6 +259,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "InstanceRestrictState", this.InstanceRestrictState);
             this.SetParamSimple(map, prefix + "InitInvocationId", this.InitInvocationId);
+            this.SetParamObj(map, prefix + "InstanceViolationDetail.", this.InstanceViolationDetail);
         }
     }
 }

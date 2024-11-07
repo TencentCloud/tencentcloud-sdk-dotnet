@@ -47,6 +47,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// 废弃：使用ScheduleInfo
         /// </summary>
         [JsonProperty("WeekDays")]
+        [System.Obsolete]
         public string WeekDays{ get; set; }
 
         /// <summary>
@@ -54,6 +55,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// 废弃：使用ScheduleInfo
         /// </summary>
         [JsonProperty("ExecuteHour")]
+        [System.Obsolete]
         public long? ExecuteHour{ get; set; }
 
         /// <summary>

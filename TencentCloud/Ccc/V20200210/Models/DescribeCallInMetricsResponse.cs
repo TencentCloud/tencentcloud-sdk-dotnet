@@ -38,14 +38,12 @@ namespace TencentCloud.Ccc.V20200210.Models
 
         /// <summary>
         /// 线路维度指标
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NumberMetrics")]
         public CallInNumberMetrics[] NumberMetrics{ get; set; }
 
         /// <summary>
         /// 技能组维度指标
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SkillGroupMetrics")]
         public CallInSkillGroupMetrics[] SkillGroupMetrics{ get; set; }

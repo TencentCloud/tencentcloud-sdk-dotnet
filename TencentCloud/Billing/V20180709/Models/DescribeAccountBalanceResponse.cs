@@ -85,19 +85,19 @@ namespace TencentCloud.Billing.V20180709.Models
         public bool? IsCreditLimited{ get; set; }
 
         /// <summary>
-        /// 信用额度
+        /// 信用额度,单位 分
         /// </summary>
         [JsonProperty("CreditAmount")]
         public float? CreditAmount{ get; set; }
 
         /// <summary>
-        /// 可用信用额度
+        /// 可用信用额度,单位 分
         /// </summary>
         [JsonProperty("CreditBalance")]
         public float? CreditBalance{ get; set; }
 
         /// <summary>
-        /// 真实可用信用额度
+        /// 真实可用信用额度,单位 分
         /// </summary>
         [JsonProperty("RealCreditBalance")]
         public float? RealCreditBalance{ get; set; }

@@ -26,7 +26,6 @@ namespace TencentCloud.Ccc.V20200210.Models
         
         /// <summary>
         /// 录音转文本信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsrDataList")]
         public AsrData[] AsrDataList{ get; set; }

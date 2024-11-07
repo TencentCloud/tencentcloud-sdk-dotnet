@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1118</VersionPrefix>
+    <VersionPrefix>3.0.1119</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -193,10 +193,12 @@
     <Compile Include="V20180717\Models\CommitUploadRequest.cs" />
     <Compile Include="V20180717\Models\CommitUploadResponse.cs" />
     <Compile Include="V20180717\Models\ComplexAdaptiveDynamicStreamingTask.cs" />
+    <Compile Include="V20180717\Models\ComplexAdaptiveDynamicStreamingTaskAudioInput.cs" />
     <Compile Include="V20180717\Models\ComplexAdaptiveDynamicStreamingTaskInput.cs" />
     <Compile Include="V20180717\Models\ComplexAdaptiveDynamicStreamingTaskOutput.cs" />
     <Compile Include="V20180717\Models\ComplexAdaptiveDynamicStreamingTaskResult.cs" />
     <Compile Include="V20180717\Models\ComplexAdaptiveDynamicStreamingTaskStreamPara.cs" />
+    <Compile Include="V20180717\Models\ComplexAdaptiveDynamicStreamingTaskSubtitleInput.cs" />
     <Compile Include="V20180717\Models\ComposeMediaOutput.cs" />
     <Compile Include="V20180717\Models\ComposeMediaRequest.cs" />
     <Compile Include="V20180717\Models\ComposeMediaResponse.cs" />
@@ -231,6 +233,8 @@
     <Compile Include="V20180717\Models\CreateCLSTopicResponse.cs" />
     <Compile Include="V20180717\Models\CreateClassRequest.cs" />
     <Compile Include="V20180717\Models\CreateClassResponse.cs" />
+    <Compile Include="V20180717\Models\CreateComplexAdaptiveDynamicStreamingTaskRequest.cs" />
+    <Compile Include="V20180717\Models\CreateComplexAdaptiveDynamicStreamingTaskResponse.cs" />
     <Compile Include="V20180717\Models\CreateContentReviewTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateContentReviewTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateDomainVerifyRecordRequest.cs" />

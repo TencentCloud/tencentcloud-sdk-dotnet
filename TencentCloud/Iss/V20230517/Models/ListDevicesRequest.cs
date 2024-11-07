@@ -85,7 +85,7 @@ namespace TencentCloud.Iss.V20230517.Models
         public ulong? PageNumber{ get; set; }
 
         /// <summary>
-        /// 每页数量，默认为20。
+        /// 每页数量，默认为20，单页最大10000条
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }

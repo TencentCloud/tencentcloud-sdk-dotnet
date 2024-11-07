@@ -49,7 +49,7 @@ namespace TencentCloud.Ioa.V20220601.Models
         public long? AccountGroupId{ get; set; }
 
         /// <summary>
-        /// 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户(只支持32位)
+        /// 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户
         /// </summary>
         [JsonProperty("ShowFlag")]
         public long? ShowFlag{ get; set; }

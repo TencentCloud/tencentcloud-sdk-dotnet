@@ -42,6 +42,12 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("Function")]
         public ToolCallFunction Function{ get; set; }
 
+        /// <summary>
+        /// 索引值
+        /// </summary>
+        [JsonProperty("Index")]
+        public long? Index{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "Function.", this.Function);
+            this.SetParamSimple(map, prefix + "Index", this.Index);
         }
     }
 }

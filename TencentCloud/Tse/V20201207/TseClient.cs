@@ -28,7 +28,7 @@ namespace TencentCloud.Tse.V20201207
 
        private const string endpoint = "tse.tencentcloudapi.com";
        private const string version = "2020-12-07";
-       private const string sdkVersion = "SDK_NET_3.0.1118";
+       private const string sdkVersion = "SDK_NET_3.0.1119";
 
         /// <summary>
         /// Client constructor.
@@ -1541,6 +1541,27 @@ namespace TencentCloud.Tse.V20201207
         public DescribeGovernanceServicesResponse DescribeGovernanceServicesSync(DescribeGovernanceServicesRequest req)
         {
             return InternalRequestAsync<DescribeGovernanceServicesResponse>(req, "DescribeGovernanceServices")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看实例的标签信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceTagInfosRequest"/></param>
+        /// <returns><see cref="DescribeInstanceTagInfosResponse"/></returns>
+        public Task<DescribeInstanceTagInfosResponse> DescribeInstanceTagInfos(DescribeInstanceTagInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceTagInfosResponse>(req, "DescribeInstanceTagInfos");
+        }
+
+        /// <summary>
+        /// 查看实例的标签信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceTagInfosRequest"/></param>
+        /// <returns><see cref="DescribeInstanceTagInfosResponse"/></returns>
+        public DescribeInstanceTagInfosResponse DescribeInstanceTagInfosSync(DescribeInstanceTagInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceTagInfosResponse>(req, "DescribeInstanceTagInfos")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

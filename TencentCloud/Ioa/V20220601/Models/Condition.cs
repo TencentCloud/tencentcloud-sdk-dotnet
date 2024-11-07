@@ -26,35 +26,30 @@ namespace TencentCloud.Ioa.V20220601.Models
         
         /// <summary>
         /// Filters 条件过滤
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
         /// FilterGroups 条件过滤组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FilterGroups")]
         public FilterGroup[] FilterGroups{ get; set; }
 
         /// <summary>
         /// Sort 排序字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Sort")]
         public Sort Sort{ get; set; }
 
         /// <summary>
         /// PageSize 每页获取数(只支持32位)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
         /// PageNum 获取第几页(只支持32位)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PageNum")]
         public long? PageNum{ get; set; }

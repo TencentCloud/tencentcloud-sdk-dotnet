@@ -26,21 +26,18 @@ namespace TencentCloud.Ioa.V20220601.Models
         
         /// <summary>
         /// 过滤字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Field")]
         public string Field{ get; set; }
 
         /// <summary>
-        /// 过滤方式 eq:等于,net:不等于,like,nlike,gt:大于,lt:小于,egt:大于等于,elt:小于等于
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 过滤方式： eq:等于,net:不等于,like,nlike,gt:大于,lt:小于,egt:大于等于,elt:小于等于。具体支持哪些过滤方式，结合具体接口字段描述来定
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
         /// 过滤条件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

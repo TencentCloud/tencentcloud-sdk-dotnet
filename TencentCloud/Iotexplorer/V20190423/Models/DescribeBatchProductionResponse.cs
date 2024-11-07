@@ -61,6 +61,20 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string UploadUrl{ get; set; }
 
         /// <summary>
+        /// 成功数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SuccessCount")]
+        public long? SuccessCount{ get; set; }
+
+        /// <summary>
+        /// 量产最后失败原因
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LastFailedReason")]
+        public string LastFailedReason{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -78,6 +92,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
             this.SetParamSimple(map, prefix + "GenerationMethod", this.GenerationMethod);
             this.SetParamSimple(map, prefix + "UploadUrl", this.UploadUrl);
+            this.SetParamSimple(map, prefix + "SuccessCount", this.SuccessCount);
+            this.SetParamSimple(map, prefix + "LastFailedReason", this.LastFailedReason);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
