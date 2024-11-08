@@ -26,28 +26,24 @@ namespace TencentCloud.Ioa.V20220601.Models
         
         /// <summary>
         /// 字段名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
         /// 操作关系（等于、不等于、包含、不包含）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Operate")]
         public string Operate{ get; set; }
 
         /// <summary>
         /// 内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
         /// <summary>
         /// 内容，v2多值版本使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

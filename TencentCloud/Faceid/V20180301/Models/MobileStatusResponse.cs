@@ -26,13 +26,14 @@ namespace TencentCloud.Faceid.V20180301.Models
         
         /// <summary>
         /// 认证结果码，收费情况如下。
-        /// 收费结果码：
-        /// 0：成功
-        /// 不收费结果码：
-        /// -1：未查询到结果
-        /// -2：手机号格式不正确
-        /// -3：验证中心服务繁忙
-        /// -4：认证次数超过当日限制，请次日重试
+        /// - 收费结果码：
+        /// 0：成功。
+        /// 
+        /// - 不收费结果码：
+        /// -1：未查询到结果。
+        /// -2：手机号格式不正确。
+        /// -3：验证中心服务繁忙。
+        /// -4：认证次数超过当日限制，请次日重试。
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
@@ -44,13 +45,14 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 状态码：
-        /// 0：正常
-        /// 1：停机
-        /// 2：销号
-        /// 3：空号
-        /// 4：不在网
-        /// 99：未知状态
+        /// 状态码。
+        /// - 取值范围：
+        /// 0：正常。
+        /// 1：停机。
+        /// 2：销号。
+        /// 3：空号。
+        /// 4：不在网。
+        /// 99：未知状态。
         /// </summary>
         [JsonProperty("StatusCode")]
         public long? StatusCode{ get; set; }

@@ -25,17 +25,18 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 认证结果码:
-        /// 收费结果码
-        /// 0: 三要素信息一致
-        /// -4: 三要素信息不一致
-        /// 不收费结果码
-        /// -6: 手机号码不合法
-        /// -7: 身份证号码有误
-        /// -8: 姓名校验不通过
-        /// -9: 没有记录
-        /// -11: 验证中心服务繁忙
-        /// -12: 认证次数超过当日限制，请次日重试
+        /// 认证结果码。
+        /// - 收费结果码
+        /// 0: 三要素信息一致。
+        /// -4: 三要素信息不一致。
+        /// 
+        /// - 不收费结果码
+        /// -6: 手机号码不合法。
+        /// -7: 身份证号码有误。
+        /// -8: 姓名校验不通过。
+        /// -9: 没有记录。
+        /// -11: 验证中心服务繁忙。
+        /// -12: 认证次数超过当日限制，请次日重试。
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
@@ -48,19 +49,20 @@ namespace TencentCloud.Faceid.V20180301.Models
 
         /// <summary>
         /// 运营商名称。
-        /// 取值范围为["","移动","电信","联通"]
+        /// - 取值范围为["","移动","电信","联通"]
         /// </summary>
         [JsonProperty("Isp")]
         public string Isp{ get; set; }
 
         /// <summary>
-        /// 业务结果详细信息。（当VerifyMode配置"详版"，且Result为"-4: 三要素信息不一致"时返回）
-        /// 枚举值：
-        /// PhoneIdCardMismatch：手机号码与姓名一致，与身份证号不一致；
-        /// PhoneNameMismatch：手机号码身份证号一致，与姓名不一致；
-        /// PhoneNameIdCardMismatch：手机号码与姓名和身份证号均不一致；
-        /// NameIdCardMismatch：姓名和身份证号不一致；
-        /// OtherMismatch：其他不一致；
+        /// 业务结果详细信息。
+        /// - 当VerifyMode配置"详版"，且Result为"-4: 三要素信息不一致"时返回。
+        /// - 枚举值：
+        /// PhoneIdCardMismatch：手机号码与姓名一致，与身份证号不一致。
+        /// PhoneNameMismatch：手机号码身份证号一致，与姓名不一致。
+        /// PhoneNameIdCardMismatch：手机号码与姓名和身份证号均不一致。
+        /// NameIdCardMismatch：姓名和身份证号不一致。
+        /// OtherMismatch：其他不一致。
         /// </summary>
         [JsonProperty("ResultDetail")]
         public string ResultDetail{ get; set; }

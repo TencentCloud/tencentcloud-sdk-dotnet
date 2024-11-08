@@ -51,6 +51,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("CardSide")]
         public string CardSide{ get; set; }
 
+        /// <summary>
+        /// 是否返回头像和位置坐标
+        /// </summary>
+        [JsonProperty("CropPortrait")]
+        public bool? CropPortrait{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +66,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "CardSide", this.CardSide);
+            this.SetParamSimple(map, prefix + "CropPortrait", this.CropPortrait);
         }
     }
 }

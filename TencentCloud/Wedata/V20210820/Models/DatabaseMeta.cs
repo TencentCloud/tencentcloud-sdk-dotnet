@@ -157,6 +157,48 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// 总表数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TableCount")]
+        public long? TableCount{ get; set; }
+
+        /// <summary>
+        /// 数据源信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatasourceList")]
+        public GovDatasourceInfo[] DatasourceList{ get; set; }
+
+        /// <summary>
+        /// 采集任务id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CollectJobId")]
+        public string CollectJobId{ get; set; }
+
+        /// <summary>
+        /// 采集任务名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CollectJobName")]
+        public string CollectJobName{ get; set; }
+
+        /// <summary>
+        /// 引擎id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// 引擎名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterName")]
+        public string ClusterName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -182,6 +224,12 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "StorageSize", this.StorageSize);
             this.SetParamSimple(map, prefix + "StorageSizeWithUnit", this.StorageSizeWithUnit);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "TableCount", this.TableCount);
+            this.SetParamArrayObj(map, prefix + "DatasourceList.", this.DatasourceList);
+            this.SetParamSimple(map, prefix + "CollectJobId", this.CollectJobId);
+            this.SetParamSimple(map, prefix + "CollectJobName", this.CollectJobName);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
         }
     }
 }

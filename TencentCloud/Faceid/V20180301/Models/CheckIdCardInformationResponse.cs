@@ -25,13 +25,17 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
+        /// 相似度。
+        /// - 取值范围 [0.00, 100.00]。
+        /// - 推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）。
         /// </summary>
         [JsonProperty("Sim")]
         public float? Sim{ get; set; }
 
         /// <summary>
-        /// 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+        /// 业务错误码。
+        /// - 成功情况返回Success,。
+        /// - 错误情况请参考下方错误码 列表中FailedOperation部分
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
@@ -43,37 +47,37 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 姓名
+        /// 姓名。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 性别
+        /// 性别。
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
-        /// 民族
+        /// 民族。
         /// </summary>
         [JsonProperty("Nation")]
         public string Nation{ get; set; }
 
         /// <summary>
-        /// 出生日期
+        /// 出生日期。
         /// </summary>
         [JsonProperty("Birth")]
         public string Birth{ get; set; }
 
         /// <summary>
-        /// 地址
+        /// 地址。
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
-        /// 身份证号
+        /// 身份证号。
         /// </summary>
         [JsonProperty("IdNum")]
         public string IdNum{ get; set; }
@@ -85,22 +89,26 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Portrait{ get; set; }
 
         /// <summary>
-        /// 告警信息，当在Config中配置了告警信息会停止人像比对，Result返回错误（FailedOperation.OcrWarningOccurred）并有此告警信息，Code 告警码列表和释义：
+        /// 告警信息。
+        /// - 当在Config中配置了告警信息会停止人像比对，Result返回错误（FailedOperation.OcrWarningOccurred）并有此告警信息。
+        /// - Code 告警码列表和释义：
+        /// '-9101'：身份证边框不完整告警。
+        /// '-9102'：身份证复印件告警。
+        /// '-9103'：身份证翻拍告警。
+        /// '-9105'：身份证框内遮挡告警。
+        /// '-9104'：临时身份证告警。
+        /// '-9106'：身份证 PS 告警（疑似存在PS痕迹）。
+        /// '-8001'：图片模糊告警。
         /// 
-        /// -9101 身份证边框不完整告警，
-        /// -9102 身份证复印件告警，
-        /// -9103 身份证翻拍告警，
-        /// -9105 身份证框内遮挡告警，
-        /// -9104 临时身份证告警，
-        /// -9106 身份证 PS 告警（疑似存在PS痕迹）。
-        /// -8001 图片模糊告警
-        /// 多个会 |  隔开如 "-9101|-9106|-9104"
+        /// - 多个会用“|” 隔开，如 "-9101|-9106|-9104"。
         /// </summary>
         [JsonProperty("Warnings")]
         public string Warnings{ get; set; }
 
         /// <summary>
-        /// 图片质量分数，当请求Config中配置图片模糊告警该参数才有意义，取值范围（0～100），目前默认阈值是50分，低于50分会触发模糊告警。
+        /// 图片质量分数。
+        /// - 当请求Config中配置图片模糊告警该参数才有意义。
+        /// - 取值范围（0～100），目前默认阈值是50分，低于50分会触发模糊告警。
         /// </summary>
         [JsonProperty("Quality")]
         public float? Quality{ get; set; }
@@ -113,7 +121,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public Encryption Encryption{ get; set; }
 
         /// <summary>
-        /// 加密后的数据
+        /// 加密后的数据。
         /// </summary>
         [JsonProperty("EncryptedBody")]
         public string EncryptedBody{ get; set; }

@@ -122,6 +122,18 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("GlobalParam")]
         public string GlobalParam{ get; set; }
 
+        /// <summary>
+        /// 100 不绑定用户  200 单用户单token  300 单用户多token
+        /// </summary>
+        [JsonProperty("TokenType")]
+        public long? TokenType{ get; set; }
+
+        /// <summary>
+        /// 一次创建的token数
+        /// </summary>
+        [JsonProperty("TokenNum")]
+        public long? TokenNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,6 +150,8 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "TicketNum", this.TicketNum);
             this.SetParamSimple(map, prefix + "GlobalParam", this.GlobalParam);
+            this.SetParamSimple(map, prefix + "TokenType", this.TokenType);
+            this.SetParamSimple(map, prefix + "TokenNum", this.TokenNum);
         }
     }
 }

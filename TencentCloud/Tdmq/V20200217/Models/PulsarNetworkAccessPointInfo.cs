@@ -77,6 +77,33 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("AccessPointsType")]
         public string AccessPointsType{ get; set; }
 
+        /// <summary>
+        /// 带宽，目前只有公网会有这个值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Bandwidth")]
+        public long? Bandwidth{ get; set; }
+
+        /// <summary>
+        /// 类
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SecurityPolicy")]
+        public SecurityPolicy[] SecurityPolicy{ get; set; }
+
+        /// <summary>
+        /// 是否是标准的接入点 true是标准的 false不是标准的
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StandardAccessPoint")]
+        public bool? StandardAccessPoint{ get; set; }
+
+        /// <summary>
+        /// 可用区信息
+        /// </summary>
+        [JsonProperty("ZoneName")]
+        public string ZoneName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -90,6 +117,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "RouteType", this.RouteType);
             this.SetParamSimple(map, prefix + "OperationType", this.OperationType);
             this.SetParamSimple(map, prefix + "AccessPointsType", this.AccessPointsType);
+            this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+            this.SetParamArrayObj(map, prefix + "SecurityPolicy.", this.SecurityPolicy);
+            this.SetParamSimple(map, prefix + "StandardAccessPoint", this.StandardAccessPoint);
+            this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
         }
     }
 }

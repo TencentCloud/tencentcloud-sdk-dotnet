@@ -25,32 +25,35 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
+        /// 开户证件号。
+        /// - 与CertType参数的证件类型一致，如：身份证，则传入身份证号。
         /// </summary>
         [JsonProperty("IdCard")]
         public string IdCard{ get; set; }
 
         /// <summary>
-        /// 姓名
+        /// 姓名。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 银行卡
+        /// 银行卡。
         /// </summary>
         [JsonProperty("BankCard")]
         public string BankCard{ get; set; }
 
         /// <summary>
-        /// 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
-        /// 目前默认：0 身份证，其他证件类型暂不支持。
+        /// 证件类型。
+        /// - 请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
+        /// - 目前默认：0 身份证，其他证件类型暂不支持。
         /// </summary>
         [JsonProperty("CertType")]
         public long? CertType{ get; set; }
 
         /// <summary>
-        /// 敏感数据加密信息。对传入信息（姓名、身份证号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+        /// 敏感数据加密信息。
+        /// - 对传入信息（姓名、身份证号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
         /// </summary>
         [JsonProperty("Encryption")]
         public Encryption Encryption{ get; set; }

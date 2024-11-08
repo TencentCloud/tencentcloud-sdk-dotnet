@@ -25,7 +25,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
     {
         
         /// <summary>
-        /// 云审计支持的cmq的可用区
+        /// 操作审计支持的cmq的可用区
         /// </summary>
         [JsonProperty("EnableRegions")]
         public CmqRegionInfo[] EnableRegions{ get; set; }

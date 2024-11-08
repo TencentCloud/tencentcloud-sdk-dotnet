@@ -94,6 +94,21 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }
 
+        /// <summary>
+        /// 是否开启自动创建主题
+        /// true就是开启了，false是关闭
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoCreateTopicStatus")]
+        public bool? AutoCreateTopicStatus{ get; set; }
+
+        /// <summary>
+        /// 自动创建主题的默认分区数，如果没开启就是0
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DefaultPartitionNumber")]
+        public long? DefaultPartitionNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -111,6 +126,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "CanEditRoute", this.CanEditRoute);
             this.SetParamSimple(map, prefix + "BillingLabelVersion", this.BillingLabelVersion);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "AutoCreateTopicStatus", this.AutoCreateTopicStatus);
+            this.SetParamSimple(map, prefix + "DefaultPartitionNumber", this.DefaultPartitionNumber);
         }
     }
 }

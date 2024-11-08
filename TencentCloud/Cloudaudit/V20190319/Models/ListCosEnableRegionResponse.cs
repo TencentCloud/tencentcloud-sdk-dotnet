@@ -25,7 +25,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
     {
         
         /// <summary>
-        /// 云审计支持的cos可用区
+        /// 操作审计支持的cos可用区
         /// </summary>
         [JsonProperty("EnableRegions")]
         public CosRegionInfo[] EnableRegions{ get; set; }

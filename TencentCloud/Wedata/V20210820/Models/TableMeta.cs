@@ -417,6 +417,41 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Schema")]
         public string Schema{ get; set; }
 
+        /// <summary>
+        /// 关联数据眼信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CollectDatasourceList")]
+        public GovDatasourceInfo[] CollectDatasourceList{ get; set; }
+
+        /// <summary>
+        /// 采集任务id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CollectJobId")]
+        public string CollectJobId{ get; set; }
+
+        /// <summary>
+        /// 采集任务名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CollectJobName")]
+        public string CollectJobName{ get; set; }
+
+        /// <summary>
+        /// 数据源urn
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Urn")]
+        public string Urn{ get; set; }
+
+        /// <summary>
+        /// 是否有修改业务权限
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HasBizPermission")]
+        public bool? HasBizPermission{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -479,6 +514,11 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArrayObj(map, prefix + "TableProperties.", this.TableProperties);
             this.SetParamSimple(map, prefix + "Environment", this.Environment);
             this.SetParamSimple(map, prefix + "Schema", this.Schema);
+            this.SetParamArrayObj(map, prefix + "CollectDatasourceList.", this.CollectDatasourceList);
+            this.SetParamSimple(map, prefix + "CollectJobId", this.CollectJobId);
+            this.SetParamSimple(map, prefix + "CollectJobName", this.CollectJobName);
+            this.SetParamSimple(map, prefix + "Urn", this.Urn);
+            this.SetParamSimple(map, prefix + "HasBizPermission", this.HasBizPermission);
         }
     }
 }

@@ -54,6 +54,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("RemotePath")]
         public string RemotePath{ get; set; }
 
+        /// <summary>
+        /// 地域
+        /// </summary>
+        [JsonProperty("RemoteRegion")]
+        public string RemoteRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "CrossFlag", this.CrossFlag);
             this.SetParamSimple(map, prefix + "BucketName", this.BucketName);
             this.SetParamSimple(map, prefix + "RemotePath", this.RemotePath);
+            this.SetParamSimple(map, prefix + "RemoteRegion", this.RemoteRegion);
         }
     }
 }

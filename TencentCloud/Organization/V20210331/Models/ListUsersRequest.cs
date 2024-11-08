@@ -73,7 +73,7 @@ namespace TencentCloud.Organization.V20210331.Models
         public string SortField{ get; set; }
 
         /// <summary>
-        /// 排序类型：Desc 倒序 Asc  正序，需要你和SortField一起设置
+        /// 排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置
         /// </summary>
         [JsonProperty("SortType")]
         public string SortType{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Privatedns.V20201028
 
        private const string endpoint = "privatedns.tencentcloudapi.com";
        private const string version = "2020-10-28";
-       private const string sdkVersion = "SDK_NET_3.0.1119";
+       private const string sdkVersion = "SDK_NET_3.0.1120";
 
         /// <summary>
         /// Client constructor.
@@ -222,6 +222,27 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
+        /// 删除转发规则并停止转发
+        /// </summary>
+        /// <param name="req"><see cref="DeleteForwardRuleRequest"/></param>
+        /// <returns><see cref="DeleteForwardRuleResponse"/></returns>
+        public Task<DeleteForwardRuleResponse> DeleteForwardRule(DeleteForwardRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteForwardRuleResponse>(req, "DeleteForwardRule");
+        }
+
+        /// <summary>
+        /// 删除转发规则并停止转发
+        /// </summary>
+        /// <param name="req"><see cref="DeleteForwardRuleRequest"/></param>
+        /// <returns><see cref="DeleteForwardRuleResponse"/></returns>
+        public DeleteForwardRuleResponse DeleteForwardRuleSync(DeleteForwardRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteForwardRuleResponse>(req, "DeleteForwardRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除私有域解析账号
         /// </summary>
         /// <param name="req"><see cref="DeletePrivateDNSAccountRequest"/></param>
@@ -390,6 +411,48 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
+        /// 查询终端节点已经启用了的地域
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEndPointRegionRequest"/></param>
+        /// <returns><see cref="DescribeEndPointRegionResponse"/></returns>
+        public Task<DescribeEndPointRegionResponse> DescribeEndPointRegion(DescribeEndPointRegionRequest req)
+        {
+            return InternalRequestAsync<DescribeEndPointRegionResponse>(req, "DescribeEndPointRegion");
+        }
+
+        /// <summary>
+        /// 查询终端节点已经启用了的地域
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEndPointRegionRequest"/></param>
+        /// <returns><see cref="DescribeEndPointRegionResponse"/></returns>
+        public DescribeEndPointRegionResponse DescribeEndPointRegionSync(DescribeEndPointRegionRequest req)
+        {
+            return InternalRequestAsync<DescribeEndPointRegionResponse>(req, "DescribeEndPointRegion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询转发规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeForwardRuleRequest"/></param>
+        /// <returns><see cref="DescribeForwardRuleResponse"/></returns>
+        public Task<DescribeForwardRuleResponse> DescribeForwardRule(DescribeForwardRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeForwardRuleResponse>(req, "DescribeForwardRule");
+        }
+
+        /// <summary>
+        /// 查询转发规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeForwardRuleRequest"/></param>
+        /// <returns><see cref="DescribeForwardRuleResponse"/></returns>
+        public DescribeForwardRuleResponse DescribeForwardRuleSync(DescribeForwardRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeForwardRuleResponse>(req, "DescribeForwardRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询转发规则列表
         /// </summary>
         /// <param name="req"><see cref="DescribeForwardRuleListRequest"/></param>
@@ -554,6 +617,27 @@ namespace TencentCloud.Privatedns.V20201028
         public DescribeRequestDataResponse DescribeRequestDataSync(DescribeRequestDataRequest req)
         {
             return InternalRequestAsync<DescribeRequestDataResponse>(req, "DescribeRequestData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改转发规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyForwardRuleRequest"/></param>
+        /// <returns><see cref="ModifyForwardRuleResponse"/></returns>
+        public Task<ModifyForwardRuleResponse> ModifyForwardRule(ModifyForwardRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyForwardRuleResponse>(req, "ModifyForwardRule");
+        }
+
+        /// <summary>
+        /// 修改转发规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyForwardRuleRequest"/></param>
+        /// <returns><see cref="ModifyForwardRuleResponse"/></returns>
+        public ModifyForwardRuleResponse ModifyForwardRuleSync(ModifyForwardRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyForwardRuleResponse>(req, "ModifyForwardRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

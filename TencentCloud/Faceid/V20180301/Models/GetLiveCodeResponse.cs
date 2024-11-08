@@ -25,7 +25,7 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 数字验证码，如：1234
+        /// 数字验证码。
         /// </summary>
         [JsonProperty("LiveCode")]
         public string LiveCode{ get; set; }

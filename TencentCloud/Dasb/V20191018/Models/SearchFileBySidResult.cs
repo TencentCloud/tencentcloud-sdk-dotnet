@@ -50,14 +50,12 @@ namespace TencentCloud.Dasb.V20191018.Models
 
         /// <summary>
         /// method为重命名、移动文件时代表移动后的新位置.其他情况为null
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileNew")]
         public string FileNew{ get; set; }
 
         /// <summary>
         /// method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }

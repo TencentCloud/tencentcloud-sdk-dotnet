@@ -60,13 +60,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// 过滤条件
         /// </summary>
         [JsonProperty("Filters")]
-        public Filter Filters{ get; set; }
+        public Filter[] Filters{ get; set; }
 
         /// <summary>
         /// 排序条件
         /// </summary>
         [JsonProperty("OrderFields")]
-        public OrderField OrderFields{ get; set; }
+        public OrderField[] OrderFields{ get; set; }
 
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "DisplayName", this.DisplayName);
             this.SetParamSimple(map, prefix + "EnvType", this.EnvType);
-            this.SetParamObj(map, prefix + "Filters.", this.Filters);
-            this.SetParamObj(map, prefix + "OrderFields.", this.OrderFields);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamArrayObj(map, prefix + "OrderFields.", this.OrderFields);
         }
     }
 }

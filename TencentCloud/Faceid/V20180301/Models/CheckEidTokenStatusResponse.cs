@@ -25,11 +25,11 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 枚举：
-        /// init：token未验证
-        /// doing: 验证中
-        /// finished: 验证完成
-        /// timeout: token已超时
+        /// 状态。
+        /// - init：EidToken未验证。
+        /// - doing: EidToken验证中。
+        /// - finished: EidToken验证完成。
+        /// - timeout: EidToken已超时。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

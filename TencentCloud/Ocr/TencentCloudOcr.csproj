@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1119</VersionPrefix>
+    <VersionPrefix>3.0.1120</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -73,12 +73,14 @@
     <Compile Include="V20181119\Models\CarInvoiceInfo.cs" />
     <Compile Include="V20181119\Models\CarInvoiceOCRRequest.cs" />
     <Compile Include="V20181119\Models\CarInvoiceOCRResponse.cs" />
+    <Compile Include="V20181119\Models\CardWarnInfo.cs" />
     <Compile Include="V20181119\Models\CellContent.cs" />
     <Compile Include="V20181119\Models\ClassifyDetectInfo.cs" />
     <Compile Include="V20181119\Models\ClassifyDetectOCRRequest.cs" />
     <Compile Include="V20181119\Models\ClassifyDetectOCRResponse.cs" />
     <Compile Include="V20181119\Models\ClassifyStoreNameRequest.cs" />
     <Compile Include="V20181119\Models\ClassifyStoreNameResponse.cs" />
+    <Compile Include="V20181119\Models\ContentInfo.cs" />
     <Compile Include="V20181119\Models\Coord.cs" />
     <Compile Include="V20181119\Models\CreateAIFormTaskRequest.cs" />
     <Compile Include="V20181119\Models\CreateAIFormTaskResponse.cs" />
@@ -142,8 +144,10 @@
     <Compile Include="V20181119\Models\HKIDCardOCRResponse.cs" />
     <Compile Include="V20181119\Models\HmtResidentPermitOCRRequest.cs" />
     <Compile Include="V20181119\Models\HmtResidentPermitOCRResponse.cs" />
+    <Compile Include="V20181119\Models\IDCardInfo.cs" />
     <Compile Include="V20181119\Models\IDCardOCRRequest.cs" />
     <Compile Include="V20181119\Models\IDCardOCRResponse.cs" />
+    <Compile Include="V20181119\Models\ImageCoordinates.cs" />
     <Compile Include="V20181119\Models\ImageEnhancementRequest.cs" />
     <Compile Include="V20181119\Models\ImageEnhancementResponse.cs" />
     <Compile Include="V20181119\Models\ImageSize.cs" />
@@ -194,9 +198,11 @@
     <Compile Include="V20181119\Models\PassportOCRRequest.cs" />
     <Compile Include="V20181119\Models\PassportOCRResponse.cs" />
     <Compile Include="V20181119\Models\PassportRecognizeInfos.cs" />
+    <Compile Include="V20181119\Models\PermanentResidencePermitInfo.cs" />
     <Compile Include="V20181119\Models\PermitOCRRequest.cs" />
     <Compile Include="V20181119\Models\PermitOCRResponse.cs" />
     <Compile Include="V20181119\Models\Polygon.cs" />
+    <Compile Include="V20181119\Models\PortraitImageInfo.cs" />
     <Compile Include="V20181119\Models\PropOwnerCertOCRRequest.cs" />
     <Compile Include="V20181119\Models\PropOwnerCertOCRResponse.cs" />
     <Compile Include="V20181119\Models\QrcodeImgSize.cs" />
@@ -248,6 +254,8 @@
     <Compile Include="V20181119\Models\RecognizeThaiIDCardOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeTravelCardOCRRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeTravelCardOCRResponse.cs" />
+    <Compile Include="V20181119\Models\RecognizeValidIDCardOCRRequest.cs" />
+    <Compile Include="V20181119\Models\RecognizeValidIDCardOCRResponse.cs" />
     <Compile Include="V20181119\Models\ReconstructDocumentConfig.cs" />
     <Compile Include="V20181119\Models\ReconstructDocumentRequest.cs" />
     <Compile Include="V20181119\Models\ReconstructDocumentResponse.cs" />
@@ -255,6 +263,7 @@
     <Compile Include="V20181119\Models\ReflectDetailInfo.cs" />
     <Compile Include="V20181119\Models\ResidenceBookletOCRRequest.cs" />
     <Compile Include="V20181119\Models\ResidenceBookletOCRResponse.cs" />
+    <Compile Include="V20181119\Models\ResidencePermitInfo.cs" />
     <Compile Include="V20181119\Models\RideHailingDriverLicenseOCRRequest.cs" />
     <Compile Include="V20181119\Models\RideHailingDriverLicenseOCRResponse.cs" />
     <Compile Include="V20181119\Models\RideHailingTransportLicenseOCRRequest.cs" />
@@ -287,6 +296,7 @@
     <Compile Include="V20181119\Models\TaxiInvoiceOCRRequest.cs" />
     <Compile Include="V20181119\Models\TaxiInvoiceOCRResponse.cs" />
     <Compile Include="V20181119\Models\TaxiTicket.cs" />
+    <Compile Include="V20181119\Models\TemporaryIDCardInfo.cs" />
     <Compile Include="V20181119\Models\TextArithmetic.cs" />
     <Compile Include="V20181119\Models\TextDetectRequest.cs" />
     <Compile Include="V20181119\Models\TextDetectResponse.cs" />

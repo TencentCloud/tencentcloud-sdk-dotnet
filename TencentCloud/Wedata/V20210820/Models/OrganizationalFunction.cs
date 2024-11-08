@@ -223,6 +223,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("EnvType")]
         public string EnvType{ get; set; }
 
+        /// <summary>
+        /// 函数资源文件类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FunctionResourceFileType")]
+        public string FunctionResourceFileType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -258,6 +265,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArraySimple(map, prefix + "OperatorUserIdsStr.", this.OperatorUserIdsStr);
             this.SetParamArraySimple(map, prefix + "OwnerUserIdsStr.", this.OwnerUserIdsStr);
             this.SetParamSimple(map, prefix + "EnvType", this.EnvType);
+            this.SetParamSimple(map, prefix + "FunctionResourceFileType", this.FunctionResourceFileType);
         }
     }
 }

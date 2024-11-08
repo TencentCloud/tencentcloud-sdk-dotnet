@@ -26,16 +26,16 @@ namespace TencentCloud.Faceid.V20180301.Models
         
         /// <summary>
         /// 认证结果码，收费情况如下。
-        /// 收费结果码：
-        /// 0: 姓名和身份证号一致
-        /// -1: 姓名和身份证号不一致
-        /// 不收费结果码：
-        /// -2: 非法身份证号（长度、校验位等不正确）
-        /// -3: 非法姓名（长度、格式等不正确）
-        /// -4: 证件库服务异常
-        /// -5: 证件库中无此身份证记录
-        /// -6: 权威比对系统升级中，请稍后再试
-        /// -7: 认证次数超过当日限制
+        /// - 收费结果码：
+        /// 0: 姓名和身份证号一致。
+        /// -1: 姓名和身份证号不一致。
+        /// - 不收费结果码：
+        /// -2: 非法身份证号（长度、校验位等不正确）。
+        /// -3: 非法姓名（长度、格式等不正确）。
+        /// -4: 证件库服务异常。
+        /// -5: 证件库中无此身份证记录。
+        /// -6: 权威比对系统升级中，请稍后再试。
+        /// -7: 认证次数超过当日限制。
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
@@ -47,40 +47,40 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 用于验证的姓名
+        /// 用于验证的姓名。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 用于验证的身份证号
+        /// 用于验证的身份证号。
         /// </summary>
         [JsonProperty("IdCard")]
         public string IdCard{ get; set; }
 
         /// <summary>
-        /// OCR得到的性别
+        /// OCR得到的性别。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
-        /// OCR得到的民族
+        /// OCR得到的民族。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Nation")]
         public string Nation{ get; set; }
 
         /// <summary>
-        /// OCR得到的生日
+        /// OCR得到的生日。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Birth")]
         public string Birth{ get; set; }
 
         /// <summary>
-        /// OCR得到的地址
+        /// OCR得到的地址。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Address")]

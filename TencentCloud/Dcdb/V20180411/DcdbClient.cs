@@ -28,7 +28,7 @@ namespace TencentCloud.Dcdb.V20180411
 
        private const string endpoint = "dcdb.tencentcloudapi.com";
        private const string version = "2018-04-11";
-       private const string sdkVersion = "SDK_NET_3.0.1119";
+       private const string sdkVersion = "SDK_NET_3.0.1120";
 
         /// <summary>
         /// Client constructor.
@@ -262,6 +262,27 @@ namespace TencentCloud.Dcdb.V20180411
         public CreateHourDCDBInstanceResponse CreateHourDCDBInstanceSync(CreateHourDCDBInstanceRequest req)
         {
             return InternalRequestAsync<CreateHourDCDBInstanceResponse>(req, "CreateHourDCDBInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建在线DDL任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateOnlineDDLJobRequest"/></param>
+        /// <returns><see cref="CreateOnlineDDLJobResponse"/></returns>
+        public Task<CreateOnlineDDLJobResponse> CreateOnlineDDLJob(CreateOnlineDDLJobRequest req)
+        {
+            return InternalRequestAsync<CreateOnlineDDLJobResponse>(req, "CreateOnlineDDLJob");
+        }
+
+        /// <summary>
+        /// 创建在线DDL任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateOnlineDDLJobRequest"/></param>
+        /// <returns><see cref="CreateOnlineDDLJobResponse"/></returns>
+        public CreateOnlineDDLJobResponse CreateOnlineDDLJobSync(CreateOnlineDDLJobRequest req)
+        {
+            return InternalRequestAsync<CreateOnlineDDLJobResponse>(req, "CreateOnlineDDLJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

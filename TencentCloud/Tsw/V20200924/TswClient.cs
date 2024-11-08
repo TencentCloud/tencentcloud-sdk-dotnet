@@ -28,7 +28,7 @@ namespace TencentCloud.Tsw.V20200924
 
        private const string endpoint = "tsw.tencentcloudapi.com";
        private const string version = "2020-09-24";
-       private const string sdkVersion = "SDK_NET_3.0.1119";
+       private const string sdkVersion = "SDK_NET_3.0.1120";
 
         /// <summary>
         /// Client constructor.

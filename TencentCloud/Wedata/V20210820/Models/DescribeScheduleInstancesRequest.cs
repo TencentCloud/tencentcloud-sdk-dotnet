@@ -25,6 +25,12 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
+        /// 请求来源，WEB 前端；CLIENT 客户端
+        /// </summary>
+        [JsonProperty("RequestFromSource")]
+        public string RequestFromSource{ get; set; }
+
+        /// <summary>
         /// 实例列表
         /// </summary>
         [JsonProperty("Instances")]
@@ -132,12 +138,19 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("IsCount")]
         public bool? IsCount{ get; set; }
 
+        /// <summary>
+        /// 项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错
+        /// </summary>
+        [JsonProperty("ProjectIds")]
+        public string[] ProjectIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "RequestFromSource", this.RequestFromSource);
             this.SetParamArrayObj(map, prefix + "Instances.", this.Instances);
             this.SetParamSimple(map, prefix + "CheckFather", this.CheckFather);
             this.SetParamSimple(map, prefix + "RerunType", this.RerunType);
@@ -156,6 +169,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamObj(map, prefix + "RequestBaseInfo.", this.RequestBaseInfo);
             this.SetParamSimple(map, prefix + "IsCount", this.IsCount);
+            this.SetParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
         }
     }
 }

@@ -42,6 +42,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("NodeCount")]
         public ulong? NodeCount{ get; set; }
 
+        /// <summary>
+        /// 有调度任务且没有切回的可用区，此标识为true
+        /// </summary>
+        [JsonProperty("NodePermWipeFlag")]
+        public bool? NodePermWipeFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
+            this.SetParamSimple(map, prefix + "NodePermWipeFlag", this.NodePermWipeFlag);
         }
     }
 }

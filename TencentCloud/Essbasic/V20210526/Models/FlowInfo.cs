@@ -50,7 +50,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 合同流程的参与方列表，最多可支持50个参与方
+        /// 合同流程的参与方列表，最多可支持50个参与方。对应不同签署人的传参方式可以参考文档 [签署方入参指引](https://qian.tencent.com/developers/partner/flow_approver)
         /// 
         /// 注:  
         /// <font color="red" > <b> 在发起流程时，需要保证 FlowApprovers中的顺序与模板定义顺序一致，否则会发起失败。

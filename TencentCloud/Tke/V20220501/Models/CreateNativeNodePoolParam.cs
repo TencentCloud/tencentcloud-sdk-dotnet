@@ -144,6 +144,12 @@ namespace TencentCloud.Tke.V20220501.Models
         [JsonProperty("KeyIds")]
         public string[] KeyIds{ get; set; }
 
+        /// <summary>
+        /// 节点池类型
+        /// </summary>
+        [JsonProperty("MachineType")]
+        public string MachineType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +176,7 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
             this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
             this.SetParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
+            this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
         }
     }
 }

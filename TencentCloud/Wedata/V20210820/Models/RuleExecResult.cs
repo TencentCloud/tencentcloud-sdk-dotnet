@@ -171,6 +171,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("AlarmLevel")]
         public ulong? AlarmLevel{ get; set; }
 
+        /// <summary>
+        /// 触发条件
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TriggerCondition")]
+        public string TriggerCondition{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +205,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "RelConditionExpr", this.RelConditionExpr);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
+            this.SetParamSimple(map, prefix + "TriggerCondition", this.TriggerCondition);
         }
     }
 }

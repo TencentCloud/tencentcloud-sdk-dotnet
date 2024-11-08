@@ -25,38 +25,40 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 身份证号
-        /// 姓名和身份证号、ImageBase64、ImageUrl三者必须提供其中之一。若都提供了，则按照姓名和身份证号>ImageBase64>ImageUrl的优先级使用参数。
+        /// 身份证号。
+        /// - 姓名和身份证号、ImageBase64、ImageUrl三者必须提供其中之一。
+        /// - 若都提供了，则按照姓名和身份证号>ImageBase64>ImageUrl的优先级使用参数。
         /// </summary>
         [JsonProperty("IdCard")]
         public string IdCard{ get; set; }
 
         /// <summary>
-        /// 姓名
+        /// 姓名。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 身份证人像面的 Base64 值
-        /// 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-        /// 支持的图片大小：所下载图片经Base64编码后不超过 3M。请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+        /// 身份证人像面的 Base64 值。
+        /// - 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
+        /// - 支持的图片大小：所下载图片经Base64编码后不超过 3M。请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
 
         /// <summary>
-        /// 身份证人像面的 Url 地址
-        /// 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-        /// 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
-        /// 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-        /// 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+        /// 身份证人像面的 Url 地址。
+        /// - 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
+        /// - 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
+        /// - 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
+        /// - 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+        /// 敏感数据加密信息。
+        /// - 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
         /// </summary>
         [JsonProperty("Encryption")]
         public Encryption Encryption{ get; set; }

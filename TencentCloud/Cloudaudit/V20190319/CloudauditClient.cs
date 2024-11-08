@@ -28,7 +28,7 @@ namespace TencentCloud.Cloudaudit.V20190319
 
        private const string endpoint = "cloudaudit.tencentcloudapi.com";
        private const string version = "2019-03-19";
-       private const string sdkVersion = "SDK_NET_3.0.1119";
+       private const string sdkVersion = "SDK_NET_3.0.1120";
 
         /// <summary>
         /// Client constructor.
@@ -264,7 +264,7 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// 查询云审计支持的cmq的可用区
+        /// 查询操作审计支持的cmq的可用区
         /// </summary>
         /// <param name="req"><see cref="ListCmqEnableRegionRequest"/></param>
         /// <returns><see cref="ListCmqEnableRegionResponse"/></returns>
@@ -274,7 +274,7 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// 查询云审计支持的cmq的可用区
+        /// 查询操作审计支持的cmq的可用区
         /// </summary>
         /// <param name="req"><see cref="ListCmqEnableRegionRequest"/></param>
         /// <returns><see cref="ListCmqEnableRegionResponse"/></returns>
@@ -285,7 +285,7 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// 查询云审计支持的cos可用区
+        /// 查询操作审计支持的cos可用区
         /// </summary>
         /// <param name="req"><see cref="ListCosEnableRegionRequest"/></param>
         /// <returns><see cref="ListCosEnableRegionResponse"/></returns>
@@ -295,7 +295,7 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// 查询云审计支持的cos可用区
+        /// 查询操作审计支持的cos可用区
         /// </summary>
         /// <param name="req"><see cref="ListCosEnableRegionRequest"/></param>
         /// <returns><see cref="ListCosEnableRegionResponse"/></returns>

@@ -43,6 +43,24 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string CurRunDate{ get; set; }
 
         /// <summary>
+        /// 日志级别，Info/Debug/Warn/Error/All
+        /// </summary>
+        [JsonProperty("LogLevelType")]
+        public string LogLevelType{ get; set; }
+
+        /// <summary>
+        /// 文件类型,Log/Code
+        /// </summary>
+        [JsonProperty("ExecutionFileType")]
+        public string ExecutionFileType{ get; set; }
+
+        /// <summary>
+        /// 统一执行平台执行id
+        /// </summary>
+        [JsonProperty("ExecutionJobId")]
+        public string ExecutionJobId{ get; set; }
+
+        /// <summary>
         /// 服务器Ip
         /// </summary>
         [JsonProperty("BrokerIp")]
@@ -66,6 +84,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("LineCount")]
         public long? LineCount{ get; set; }
 
+        /// <summary>
+        /// 查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null
+        /// </summary>
+        [JsonProperty("ExtInfo")]
+        public string ExtInfo{ get; set; }
+
+        /// <summary>
+        /// 请求来源，WEB 前端；CLIENT 客户端
+        /// </summary>
+        [JsonProperty("RequestFromSource")]
+        public string RequestFromSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,10 +105,15 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "CurRunDate", this.CurRunDate);
+            this.SetParamSimple(map, prefix + "LogLevelType", this.LogLevelType);
+            this.SetParamSimple(map, prefix + "ExecutionFileType", this.ExecutionFileType);
+            this.SetParamSimple(map, prefix + "ExecutionJobId", this.ExecutionJobId);
             this.SetParamSimple(map, prefix + "BrokerIp", this.BrokerIp);
             this.SetParamSimple(map, prefix + "OriginFileName", this.OriginFileName);
             this.SetParamSimple(map, prefix + "StartCount", this.StartCount);
             this.SetParamSimple(map, prefix + "LineCount", this.LineCount);
+            this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
+            this.SetParamSimple(map, prefix + "RequestFromSource", this.RequestFromSource);
         }
     }
 }

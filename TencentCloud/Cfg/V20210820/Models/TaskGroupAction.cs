@@ -155,6 +155,12 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("TaskGroupActionExecuteTime")]
         public long? TaskGroupActionExecuteTime{ get; set; }
 
+        /// <summary>
+        /// 动作开始执行时间
+        /// </summary>
+        [JsonProperty("TaskGroupActionStartTime")]
+        public string TaskGroupActionStartTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -181,6 +187,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "IsExecuteRedo", this.IsExecuteRedo);
             this.SetParamSimple(map, prefix + "ActionRisk", this.ActionRisk);
             this.SetParamSimple(map, prefix + "TaskGroupActionExecuteTime", this.TaskGroupActionExecuteTime);
+            this.SetParamSimple(map, prefix + "TaskGroupActionStartTime", this.TaskGroupActionStartTime);
         }
     }
 }

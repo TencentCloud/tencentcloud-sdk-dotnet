@@ -26,14 +26,12 @@ namespace TencentCloud.Dasb.V20191018.Models
         
         /// <summary>
         /// 管理员Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ManagerId")]
         public string ManagerId{ get; set; }
 
         /// <summary>
         /// 管理员姓名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ManagerName")]
         public string ManagerName{ get; set; }

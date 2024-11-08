@@ -68,7 +68,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 
         /// * 个人方
         /// <ul><li> <b>SIGN_DATE</b> : 签署日期控件；</li>
-        /// <li> <b>SIGN_SIGNATURE</b> : 用户签名控件；</li></ul>
+        /// <li> <b>SIGN_SIGNATURE</b> : 用户签名控件；</li>
+        /// <li> <b>SIGN_OPINION</b> : 签署意见控件，用户需要根据配置的签署意见内容，完成对意见内容的确认；</li></ul>
         ///  
         /// 注：` 表单域的控件不能作为印章和签名控件`
         /// </summary>

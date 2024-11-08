@@ -25,24 +25,24 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 检测到的图片是否存在攻击：
-        /// Low：无攻击风险
-        /// Mid：中度疑似攻击
-        /// High：高度疑似攻击
+        /// 检测到的图片是否存在攻击。
+        /// - Low：无攻击风险。
+        /// - Mid：中度疑似攻击。
+        /// - High：高度疑似攻击。
         /// </summary>
         [JsonProperty("AttackRiskLevel")]
         public string AttackRiskLevel{ get; set; }
 
         /// <summary>
-        /// 检测到疑似的攻击痕迹列表
-        /// 说明：未检测到攻击痕迹时，返回空数组
-        /// 此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
+        /// 检测到疑似的攻击痕迹列表。
+        /// - 说明：未检测到攻击痕迹时，返回空数组。
+        /// - 此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
         /// </summary>
         [JsonProperty("AttackRiskDetailList")]
         public AttackRiskDetail[] AttackRiskDetailList{ get; set; }
 
         /// <summary>
-        /// 额外信息
+        /// 额外信息。
         /// </summary>
         [JsonProperty("ExtraInfo")]
         public ExtraInfo ExtraInfo{ get; set; }

@@ -104,49 +104,42 @@ namespace TencentCloud.Dasb.V20191018.Models
 
         /// <summary>
         /// 堡垒机服务信息，注意没有绑定服务时为null
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resource")]
         public Resource Resource{ get; set; }
 
         /// <summary>
         /// 资产所属部门
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Department")]
         public Department Department{ get; set; }
 
         /// <summary>
         /// 数据库资产的多节点
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpPortSet")]
         public string[] IpPortSet{ get; set; }
 
         /// <summary>
         /// 网络域Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DomainId")]
         public string DomainId{ get; set; }
 
         /// <summary>
         /// 网络域名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
         /// <summary>
         /// 是否启用SSL，仅支持Redis资产。0：禁用 1：启用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableSSL")]
         public long? EnableSSL{ get; set; }
 
         /// <summary>
         /// 已上传的SSL证书名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SSLCertName")]
         public string SSLCertName{ get; set; }

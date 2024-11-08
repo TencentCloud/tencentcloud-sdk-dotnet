@@ -73,6 +73,34 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("IsProjectAdmin")]
         public bool? IsProjectAdmin{ get; set; }
 
+        /// <summary>
+        /// 手机号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PhoneNum")]
+        public string PhoneNum{ get; set; }
+
+        /// <summary>
+        /// 邮箱
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Email")]
+        public string Email{ get; set; }
+
+        /// <summary>
+        /// 主账号id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OwnerUin")]
+        public string OwnerUin{ get; set; }
+
+        /// <summary>
+        /// 租户iD
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AppId")]
+        public string AppId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +114,10 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Creator", this.Creator);
             this.SetParamSimple(map, prefix + "DisplayName", this.DisplayName);
             this.SetParamSimple(map, prefix + "IsProjectAdmin", this.IsProjectAdmin);
+            this.SetParamSimple(map, prefix + "PhoneNum", this.PhoneNum);
+            this.SetParamSimple(map, prefix + "Email", this.Email);
+            this.SetParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
+            this.SetParamSimple(map, prefix + "AppId", this.AppId);
         }
     }
 }

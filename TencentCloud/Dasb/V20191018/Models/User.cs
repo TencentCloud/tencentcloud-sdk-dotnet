@@ -88,42 +88,36 @@ namespace TencentCloud.Dasb.V20191018.Models
 
         /// <summary>
         /// 用户所属部门（用于出参）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Department")]
         public Department Department{ get; set; }
 
         /// <summary>
         /// 用户所属部门（用于入参）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DepartmentId")]
         public string DepartmentId{ get; set; }
 
         /// <summary>
         /// 激活状态 0 - 未激活 1 - 激活
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActiveStatus")]
         public ulong? ActiveStatus{ get; set; }
 
         /// <summary>
         /// 锁定状态 0 - 未锁定 1 - 锁定
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LockStatus")]
         public ulong? LockStatus{ get; set; }
 
         /// <summary>
         /// 状态 与Filter中一致
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 权限版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AclVersion")]
         public ulong? AclVersion{ get; set; }

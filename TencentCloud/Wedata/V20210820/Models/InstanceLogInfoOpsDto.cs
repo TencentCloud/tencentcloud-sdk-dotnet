@@ -66,6 +66,27 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("LineCount")]
         public long? LineCount{ get; set; }
 
+        /// <summary>
+        /// 统一执行平台日志分页查询参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExtInfo")]
+        public string ExtInfo{ get; set; }
+
+        /// <summary>
+        /// 日志分页查询，是否最后一页
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsEnd")]
+        public bool? IsEnd{ get; set; }
+
+        /// <summary>
+        /// 文件大小
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FileSize")]
+        public string FileSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +99,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ThirdTaskRunLogInfo", this.ThirdTaskRunLogInfo);
             this.SetParamSimple(map, prefix + "ThirdTaskLogUrlDesc", this.ThirdTaskLogUrlDesc);
             this.SetParamSimple(map, prefix + "LineCount", this.LineCount);
+            this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
+            this.SetParamSimple(map, prefix + "IsEnd", this.IsEnd);
+            this.SetParamSimple(map, prefix + "FileSize", this.FileSize);
         }
     }
 }

@@ -32,7 +32,6 @@ namespace TencentCloud.Dasb.V20191018.Models
 
         /// <summary>
         /// 堡垒机资源数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

@@ -101,6 +101,27 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("InstanceState")]
         public string InstanceState{ get; set; }
 
+        /// <summary>
+        /// 调度运行方式, 0: 周期调度, 1: 空跑调度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScheduleRunType")]
+        public ulong? ScheduleRunType{ get; set; }
+
+        /// <summary>
+        /// 统一执行平台，下发执行Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExecutionJobId")]
+        public string ExecutionJobId{ get; set; }
+
+        /// <summary>
+        /// 实例运行类型: 0: 普通运行, 1: 空跑运行
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceRunType")]
+        public ulong? InstanceRunType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +139,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ErrorCodeLevel", this.ErrorCodeLevel);
             this.SetParamObj(map, prefix + "InstanceLogListOpsDto.", this.InstanceLogListOpsDto);
             this.SetParamSimple(map, prefix + "InstanceState", this.InstanceState);
+            this.SetParamSimple(map, prefix + "ScheduleRunType", this.ScheduleRunType);
+            this.SetParamSimple(map, prefix + "ExecutionJobId", this.ExecutionJobId);
+            this.SetParamSimple(map, prefix + "InstanceRunType", this.InstanceRunType);
         }
     }
 }

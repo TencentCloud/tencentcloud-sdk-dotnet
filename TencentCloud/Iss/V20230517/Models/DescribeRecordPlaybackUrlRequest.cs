@@ -48,6 +48,12 @@ namespace TencentCloud.Iss.V20230517.Models
         [JsonProperty("IsInternal")]
         public bool? IsInternal{ get; set; }
 
+        /// <summary>
+        /// 云录像回放时，是否需要开启时间戳矫正，主要解决时间戳反转，会退等问题导致无法播放
+        /// </summary>
+        [JsonProperty("CorrectTimestamp")]
+        public bool? CorrectTimestamp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Iss.V20230517.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "IsInternal", this.IsInternal);
+            this.SetParamSimple(map, prefix + "CorrectTimestamp", this.CorrectTimestamp);
         }
     }
 }

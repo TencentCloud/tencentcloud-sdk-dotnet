@@ -25,48 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// [
-        ///     {
-        ///         "Stage": "produce",
-        ///         "Data": {
-        ///             "ProducerName": "生产者名",
-        ///             "ProduceTime": "消息生产时间",
-        ///             "ProducerAddr": "客户端地址",
-        ///             "Duration": "耗时ms",
-        ///             "Status": "状态（0：成功，1：失败）"
-        ///         }
-        ///     },
-        ///     {
-        ///         "Stage": "persist",
-        ///         "Data": {
-        ///             "PersistTime": "存储时间",
-        ///             "Duration": "耗时ms",
-        ///             "Status": "状态（0：成功，1：失败）"
-        ///         }
-        ///     },
-        ///     {
-        ///         "Stage": "consume",
-        ///         "Data": {
-        ///             "TotalCount": 2,
-        ///             "RocketMqConsumeLogs": [
-        ///                 {
-        ///                     "ConsumerGroup": "消费组",
-        ///                     "ConsumeModel": "消费模式",
-        ///                     "ConsumerAddr": "消费者地址",
-        ///                     "ConsumeTime": "推送时间",
-        ///                     "Status": "状态（0:已推送未确认, 2:已确认, 3:转入重试, 4:已重试未确认, 5:已转入死信队列）"
-        ///                 },
-        ///                 {
-        ///                     "ConsumerGroup": "消费组",
-        ///                     "ConsumeModel": "消费模式",
-        ///                     "ConsumerAddr": "消费者地址",
-        ///                     "ConsumeTime": "推送时间",
-        ///                     "Status": "状态（0:已推送未确认, 2:已确认, 3:转入重试, 4:已重试未确认, 5:已转入死信队列）"
-        ///                 }
-        ///             ]    
-        ///         }
-        ///     }
-        /// ]
+        /// 消息内容
         /// </summary>
         [JsonProperty("Result")]
         public TraceResult[] Result{ get; set; }

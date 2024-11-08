@@ -38,14 +38,12 @@ namespace TencentCloud.Dasb.V20191018.Models
 
         /// <summary>
         /// 部门管理员账号ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Managers")]
         public string[] Managers{ get; set; }
 
         /// <summary>
         /// 管理员用户
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ManagerUsers")]
         public DepartmentManagerUser[] ManagerUsers{ get; set; }

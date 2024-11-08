@@ -122,6 +122,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ExtensionInfo")]
         public AttributeItemDTO[] ExtensionInfo{ get; set; }
 
+        /// <summary>
+        /// 统一执行平台，下发执行Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExecutionJobId")]
+        public string ExecutionJobId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +149,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
             this.SetParamSimple(map, prefix + "CodeFileName", this.CodeFileName);
             this.SetParamArrayObj(map, prefix + "ExtensionInfo.", this.ExtensionInfo);
+            this.SetParamSimple(map, prefix + "ExecutionJobId", this.ExecutionJobId);
         }
     }
 }

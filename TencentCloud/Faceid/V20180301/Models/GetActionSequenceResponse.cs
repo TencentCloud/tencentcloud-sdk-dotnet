@@ -25,7 +25,8 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 动作顺序(2,1 or 1,2) 。1代表张嘴，2代表闭眼。
+        /// 动作顺序，例如：2,1 or 1,2。
+        /// - 1代表张嘴，2代表闭眼。
         /// </summary>
         [JsonProperty("ActionSequence")]
         public string ActionSequence{ get; set; }

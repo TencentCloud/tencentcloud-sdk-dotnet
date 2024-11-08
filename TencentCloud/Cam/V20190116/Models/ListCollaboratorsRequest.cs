@@ -25,13 +25,13 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 分页条数，缺省为20
+        /// 分页的条数，默认是20条。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 分页起始值，缺省为0
+        /// 分页的起始值，默认从0开始。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

@@ -171,6 +171,27 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("LatestSubmitTime")]
         public string LatestSubmitTime{ get; set; }
 
+        /// <summary>
+        /// 日历调度是否开启
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CalendarOpen")]
+        public string CalendarOpen{ get; set; }
+
+        /// <summary>
+        /// 日历调度名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CalendarName")]
+        public string CalendarName{ get; set; }
+
+        /// <summary>
+        /// 日历调度id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CalendarId")]
+        public string CalendarId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +219,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "SchedulerDesc", this.SchedulerDesc);
             this.SetParamSimple(map, prefix + "FirstSubmitTime", this.FirstSubmitTime);
             this.SetParamSimple(map, prefix + "LatestSubmitTime", this.LatestSubmitTime);
+            this.SetParamSimple(map, prefix + "CalendarOpen", this.CalendarOpen);
+            this.SetParamSimple(map, prefix + "CalendarName", this.CalendarName);
+            this.SetParamSimple(map, prefix + "CalendarId", this.CalendarId);
         }
     }
 }

@@ -26,14 +26,12 @@ namespace TencentCloud.Ioa.V20220601.Models
         
         /// <summary>
         /// 规则元数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Items")]
         public RuleItem[] Items{ get; set; }
 
         /// <summary>
         /// 关系
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Relation")]
         public string Relation{ get; set; }

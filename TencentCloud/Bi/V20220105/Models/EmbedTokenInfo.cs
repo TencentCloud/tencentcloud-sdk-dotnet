@@ -136,6 +136,29 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("Intention")]
         public string Intention{ get; set; }
 
+        /// <summary>
+        /// 100 无绑定用户
+        /// 200 单用户单token
+        /// 300 单用户 多token
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TokenType")]
+        public long? TokenType{ get; set; }
+
+        /// <summary>
+        /// token 数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TokenNum")]
+        public long? TokenNum{ get; set; }
+
+        /// <summary>
+        /// 是否单用户多token
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SingleUserMultiToken")]
+        public bool? SingleUserMultiToken{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +181,9 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "TicketNum", this.TicketNum);
             this.SetParamSimple(map, prefix + "GlobalParam", this.GlobalParam);
             this.SetParamSimple(map, prefix + "Intention", this.Intention);
+            this.SetParamSimple(map, prefix + "TokenType", this.TokenType);
+            this.SetParamSimple(map, prefix + "TokenNum", this.TokenNum);
+            this.SetParamSimple(map, prefix + "SingleUserMultiToken", this.SingleUserMultiToken);
         }
     }
 }

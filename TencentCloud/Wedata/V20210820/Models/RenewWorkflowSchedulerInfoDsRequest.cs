@@ -114,6 +114,31 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("CrontabExpression")]
         public string CrontabExpression{ get; set; }
 
+        /// <summary>
+        /// 0：不修改
+        /// 1：将任务的上游依赖配置改为默认值 
+        /// </summary>
+        [JsonProperty("ModifyCycleValue")]
+        public string ModifyCycleValue{ get; set; }
+
+        /// <summary>
+        /// 是否开启日历调度 1 开启 0关闭
+        /// </summary>
+        [JsonProperty("CalendarOpen")]
+        public string CalendarOpen{ get; set; }
+
+        /// <summary>
+        /// 日历名称
+        /// </summary>
+        [JsonProperty("CalendarName")]
+        public string CalendarName{ get; set; }
+
+        /// <summary>
+        /// 日历id
+        /// </summary>
+        [JsonProperty("CalendarId")]
+        public string CalendarId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +160,10 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "InstanceInitStrategy", this.InstanceInitStrategy);
             this.SetParamSimple(map, prefix + "DependencyWorkflow", this.DependencyWorkflow);
             this.SetParamSimple(map, prefix + "CrontabExpression", this.CrontabExpression);
+            this.SetParamSimple(map, prefix + "ModifyCycleValue", this.ModifyCycleValue);
+            this.SetParamSimple(map, prefix + "CalendarOpen", this.CalendarOpen);
+            this.SetParamSimple(map, prefix + "CalendarName", this.CalendarName);
+            this.SetParamSimple(map, prefix + "CalendarId", this.CalendarId);
         }
     }
 }

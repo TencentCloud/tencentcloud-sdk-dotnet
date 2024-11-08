@@ -92,21 +92,18 @@ namespace TencentCloud.Cds.V20180420.Models
 
         /// <summary>
         /// 实例名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
         /// 实例公网IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
         /// <summary>
         /// 实例私网IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrivateIp")]
         public string PrivateIp{ get; set; }
@@ -119,7 +116,6 @@ namespace TencentCloud.Cds.V20180420.Models
 
         /// <summary>
         /// 实例域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Pdomain")]
         public string Pdomain{ get; set; }

@@ -26,12 +26,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         
         /// <summary>
         /// 传入需要进行检测的带有人脸的图片或视频，使用base64编码的形式。
+        /// - 图片的Base64值：
+        /// 建议整体图像480x640的分辨率，脸部 大小 100X100 以上。
+        /// Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
+        /// 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
         /// 
-        /// 图片的Base64值：
-        /// 建议整体图像480x640的分辨率，脸部 大小 100X100 以上；
-        /// Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
-        /// 
-        /// 视频的Base64值：
+        /// - 视频的Base64值：
         /// Base64编码后的大小不超过8M，支持mp4、avi、flv格式。
         /// 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
         /// 视频时长最大支持20s，建议时长2～5s。
@@ -41,22 +41,26 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string FaceInput{ get; set; }
 
         /// <summary>
-        /// 传入的类型
-        /// 1- 传入的是图片类型
-        /// 2- 传入的是视频类型
-        /// 其他 - 返回错误码InvalidParameter
+        /// 传入的类型。
+        /// - 取值范围：
+        /// 1：传入的是图片类型。
+        /// 2：传入的是视频类型。
+        /// 其他：返回错误码InvalidParameter。
         /// </summary>
         [JsonProperty("FaceInputType")]
         public long? FaceInputType{ get; set; }
 
         /// <summary>
-        /// 是否需要对请求信息进行全包体加密； 支持的加密算法:AES-256-CBC、SM4-GCM； 有加密需求的用户可使用此参数，详情请点击左侧链接。
+        /// 是否需要对请求信息进行全包体加密。
+        /// - 支持的加密算法:AES-256-CBC、SM4-GCM。
+        /// - 有加密需求的用户可使用此参数，详情请点击左侧链接。
         /// </summary>
         [JsonProperty("Encryption")]
         public Encryption Encryption{ get; set; }
 
         /// <summary>
-        /// 加密后的密文； 加密前的数据格式如下:{"FaceInput":"AAAAA","FaceInputType":1}
+        /// 加密后的密文。
+        /// - 加密前的数据格式如下:{"FaceInput":"AAAAA","FaceInputType":1}。
         /// </summary>
         [JsonProperty("EncryptedBody")]
         public string EncryptedBody{ get; set; }

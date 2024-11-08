@@ -45,42 +45,36 @@ namespace TencentCloud.Dasb.V20191018.Models
 
         /// <summary>
         /// 堡垒机id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
         /// ip，网段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WhiteIpSet")]
         public string[] WhiteIpSet{ get; set; }
 
         /// <summary>
         /// 是否启用  默认 1启用 0禁用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Enabled")]
         public ulong? Enabled{ get; set; }
 
         /// <summary>
         /// 状态 0-已断开  1-已连接
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// 网络域创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 是否资源默认网络域 1-资源默认网络域 0-用户添加网络域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Default")]
         public ulong? Default{ get; set; }

@@ -26,7 +26,6 @@ namespace TencentCloud.Dasb.V20191018.Models
         
         /// <summary>
         /// 实例Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

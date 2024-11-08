@@ -44,7 +44,6 @@ namespace TencentCloud.Dasb.V20191018.Models
 
         /// <summary>
         /// 命令模板类型 1-内置 2-自定义	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }

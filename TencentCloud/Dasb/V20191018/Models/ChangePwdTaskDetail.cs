@@ -26,21 +26,18 @@ namespace TencentCloud.Dasb.V20191018.Models
         
         /// <summary>
         /// 资产信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Device")]
         public Device Device{ get; set; }
 
         /// <summary>
         /// 资产账号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Account")]
         public string Account{ get; set; }
 
         /// <summary>
         /// 上次改密结果。0-未改密  1-改密成功 2-改密失败
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastChangeStatus")]
         public ulong? LastChangeStatus{ get; set; }

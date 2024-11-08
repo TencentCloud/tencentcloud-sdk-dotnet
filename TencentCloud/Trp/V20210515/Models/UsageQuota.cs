@@ -67,10 +67,11 @@ namespace TencentCloud.Trp.V20210515.Models
         public long? ChainCnt{ get; set; }
 
         /// <summary>
-        /// 营销风控次数
+        /// 风险检测次数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskCnt")]
+        [System.Obsolete]
         public long? RiskCnt{ get; set; }
 
         /// <summary>

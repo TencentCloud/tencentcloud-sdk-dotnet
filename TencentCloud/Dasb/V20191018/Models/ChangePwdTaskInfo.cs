@@ -26,7 +26,6 @@ namespace TencentCloud.Dasb.V20191018.Models
         
         /// <summary>
         /// id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
@@ -39,133 +38,114 @@ namespace TencentCloud.Dasb.V20191018.Models
 
         /// <summary>
         /// 任务名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
         /// 所属部门信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Department")]
         public Department Department{ get; set; }
 
         /// <summary>
         /// 改密方式。1：使用执行账号。2：修改自身密码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChangeMethod")]
         public ulong? ChangeMethod{ get; set; }
 
         /// <summary>
         /// 执行账号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunAccount")]
         public string RunAccount{ get; set; }
 
         /// <summary>
         /// 密码生成策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthGenerationStrategy")]
         public ulong? AuthGenerationStrategy{ get; set; }
 
         /// <summary>
         /// 密码长度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PasswordLength")]
         public ulong? PasswordLength{ get; set; }
 
         /// <summary>
         /// 包含小写字母
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SmallLetter")]
         public ulong? SmallLetter{ get; set; }
 
         /// <summary>
         /// 包含大写字母
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BigLetter")]
         public ulong? BigLetter{ get; set; }
 
         /// <summary>
         /// 包含数字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Digit")]
         public ulong? Digit{ get; set; }
 
         /// <summary>
         /// 包含的特殊字符，base64
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Symbol")]
         public string Symbol{ get; set; }
 
         /// <summary>
         /// 改密完成通知。0-通知，1-不通知
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CompleteNotify")]
         public ulong? CompleteNotify{ get; set; }
 
         /// <summary>
         /// 通知人邮箱
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NotifyEmails")]
         public string[] NotifyEmails{ get; set; }
 
         /// <summary>
         /// 加密附件密码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FilePassword")]
         public string FilePassword{ get; set; }
 
         /// <summary>
         /// 需要改密的账户
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccountSet")]
         public string[] AccountSet{ get; set; }
 
         /// <summary>
         /// 需要改密的主机
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceSet")]
         public Device[] DeviceSet{ get; set; }
 
         /// <summary>
         /// 任务类型：4手动，5自动
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
         /// 周期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }
 
         /// <summary>
         /// 首次执行时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FirstTime")]
         public string FirstTime{ get; set; }
 
         /// <summary>
         /// 下次执行时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NextTime")]
         public string NextTime{ get; set; }

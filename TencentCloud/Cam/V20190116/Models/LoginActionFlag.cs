@@ -25,43 +25,43 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 手机
+        /// 0: 非安全手机校验 1: 安全手机校验。
         /// </summary>
         [JsonProperty("Phone")]
         public ulong? Phone{ get; set; }
 
         /// <summary>
-        /// 硬token
+        /// 0: 非硬token校验 1: 硬token校验。
         /// </summary>
         [JsonProperty("Token")]
         public ulong? Token{ get; set; }
 
         /// <summary>
-        /// 软token
+        /// 0: 非软token校验 1: 软token校验
         /// </summary>
         [JsonProperty("Stoken")]
         public ulong? Stoken{ get; set; }
 
         /// <summary>
-        /// 微信
+        /// 0: 非微信校验 1: 微信校验
         /// </summary>
         [JsonProperty("Wechat")]
         public ulong? Wechat{ get; set; }
 
         /// <summary>
-        /// 自定义
+        /// 0: 非自定义校验 1: 自定义校验
         /// </summary>
         [JsonProperty("Custom")]
         public ulong? Custom{ get; set; }
 
         /// <summary>
-        /// 邮箱
+        /// 0: 非邮箱校验 1: 邮箱校验
         /// </summary>
         [JsonProperty("Mail")]
         public ulong? Mail{ get; set; }
 
         /// <summary>
-        /// u2f硬件token
+        /// 0: 非u2f硬件token 1: u2f硬件token
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("U2FToken")]

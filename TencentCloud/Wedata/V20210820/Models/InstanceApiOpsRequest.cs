@@ -210,6 +210,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ExecutorGroupIdList")]
         public string[] ExecutorGroupIdList{ get; set; }
 
+        /// <summary>
+        /// true 只过滤重跑过的实例，false 忽略此过滤条件，结果集过滤条件中不包括是否重跑
+        /// </summary>
+        [JsonProperty("OnlyRerun")]
+        public bool? OnlyRerun{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -247,6 +253,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TenantId", this.TenantId);
             this.SetParamSimple(map, prefix + "DataTimeCycle", this.DataTimeCycle);
             this.SetParamArraySimple(map, prefix + "ExecutorGroupIdList.", this.ExecutorGroupIdList);
+            this.SetParamSimple(map, prefix + "OnlyRerun", this.OnlyRerun);
         }
     }
 }

@@ -49,7 +49,7 @@ namespace TencentCloud.Dasb.V20191018.Models
         public string[] ApCodeSet{ get; set; }
 
         /// <summary>
-        /// 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+        /// 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer, 5 - TDSQL MySQL, 6 - TDSQL-C MySQL, 7 - MariaDB, 8 - PostgreSQL, 9 - MongoDB副本集群, 10 - MongoDB分片集群, 11 - Redis
         /// </summary>
         [JsonProperty("Kind")]
         public ulong? Kind{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Dasb.V20191018.Models
         public string[] ResourceIdSet{ get; set; }
 
         /// <summary>
-        /// 可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+        /// 可提供按照多种类型过滤, 取值范围与Kind一致
         /// </summary>
         [JsonProperty("KindSet")]
         public ulong?[] KindSet{ get; set; }

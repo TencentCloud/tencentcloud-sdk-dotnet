@@ -25,13 +25,14 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 手机号码
+        /// 手机号码。
         /// </summary>
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }
 
         /// <summary>
-        /// 敏感数据加密信息。对传入信息（手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+        /// 敏感数据加密信息。
+        /// - 对传入信息（手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
         /// </summary>
         [JsonProperty("Encryption")]
         public Encryption Encryption{ get; set; }

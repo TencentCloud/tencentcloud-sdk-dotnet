@@ -194,49 +194,42 @@ namespace TencentCloud.Dasb.V20191018.Models
 
         /// <summary>
         /// 日志投递规格信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogDeliveryArgs")]
         public string LogDeliveryArgs{ get; set; }
 
         /// <summary>
         /// 堡垒机资源LB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClbSet")]
         public Clb[] ClbSet{ get; set; }
 
         /// <summary>
         /// 网络域个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DomainCount")]
         public long? DomainCount{ get; set; }
 
         /// <summary>
         /// 已使用网络域个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UsedDomainCount")]
         public ulong? UsedDomainCount{ get; set; }
 
         /// <summary>
         /// 0 非试用版，1 试用版
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Trial")]
         public ulong? Trial{ get; set; }
 
         /// <summary>
         /// cdc集群id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CdcClusterId")]
         public string CdcClusterId{ get; set; }
 
         /// <summary>
         /// 日志投递规格信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogDelivery")]
         public string LogDelivery{ get; set; }

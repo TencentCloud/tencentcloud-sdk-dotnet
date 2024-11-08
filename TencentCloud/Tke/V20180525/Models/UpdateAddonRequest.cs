@@ -37,16 +37,22 @@ namespace TencentCloud.Tke.V20180525.Models
         public string AddonName{ get; set; }
 
         /// <summary>
-        /// addon版本（不传默认不更新）
+        /// addon版本（不传默认不更新，不传AddonVersion时RawValues必传）
         /// </summary>
         [JsonProperty("AddonVersion")]
         public string AddonVersion{ get; set; }
 
         /// <summary>
-        /// addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取）
+        /// addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取，不传RawValues时AddonVersion必传））
         /// </summary>
         [JsonProperty("RawValues")]
         public string RawValues{ get; set; }
+
+        /// <summary>
+        /// addon参数的更新策略，支持replace和merge两种策略，默认值为merge，兼容旧版本API。replace：使用新RawValues全量替换addon原RawValues，merge：根据新RawValues新增或更新addon原RawValues中对应参数。
+        /// </summary>
+        [JsonProperty("UpdateStrategy")]
+        public string UpdateStrategy{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "AddonName", this.AddonName);
             this.SetParamSimple(map, prefix + "AddonVersion", this.AddonVersion);
             this.SetParamSimple(map, prefix + "RawValues", this.RawValues);
+            this.SetParamSimple(map, prefix + "UpdateStrategy", this.UpdateStrategy);
         }
     }
 }

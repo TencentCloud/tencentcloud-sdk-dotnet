@@ -55,7 +55,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public long? MaxResults{ get; set; }
 
         /// <summary>
-        /// 云审计模式，有效值：standard | quick，其中standard是标准模式，quick是极速模式。默认为标准模式
+        /// 操作审计模式，有效值：standard | quick，其中standard是标准模式，quick是极速模式。默认为标准模式
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }

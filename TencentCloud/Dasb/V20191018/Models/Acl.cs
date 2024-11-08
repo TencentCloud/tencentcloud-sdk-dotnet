@@ -184,35 +184,30 @@ namespace TencentCloud.Dasb.V20191018.Models
 
         /// <summary>
         /// 所属部门的信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Department")]
         public Department Department{ get; set; }
 
         /// <summary>
         /// 是否允许使用访问串，默认允许
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AllowAccessCredential")]
         public bool? AllowAccessCredential{ get; set; }
 
         /// <summary>
         /// 关联的数据库高危命令列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ACTemplateSet")]
         public ACTemplate[] ACTemplateSet{ get; set; }
 
         /// <summary>
         /// 关联的白命令命令
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WhiteCmds")]
         public string[] WhiteCmds{ get; set; }
 
         /// <summary>
         /// 是否允许记录键盘
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AllowKeyboardLogger")]
         public bool? AllowKeyboardLogger{ get; set; }

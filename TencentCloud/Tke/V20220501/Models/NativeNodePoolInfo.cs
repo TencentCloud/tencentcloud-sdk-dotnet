@@ -166,6 +166,13 @@ namespace TencentCloud.Tke.V20220501.Models
         [JsonProperty("DataDisks")]
         public DataDisk[] DataDisks{ get; set; }
 
+        /// <summary>
+        /// 原生节点机型 Native, NativeCVM
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MachineType")]
+        public string MachineType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -193,6 +200,7 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamSimple(map, prefix + "ReadyReplicas", this.ReadyReplicas);
             this.SetParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
             this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
+            this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
         }
     }
 }

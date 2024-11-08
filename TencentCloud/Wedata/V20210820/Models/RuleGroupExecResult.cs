@@ -171,6 +171,39 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("DsEnvType")]
         public string DsEnvType{ get; set; }
 
+        /// <summary>
+        /// 项目id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
+
+        /// <summary>
+        /// 项目名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProjectName")]
+        public string ProjectName{ get; set; }
+
+        /// <summary>
+        /// 实例状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceStatus")]
+        public string InstanceStatus{ get; set; }
+
+        /// <summary>
+        /// 实例运行的开始时间
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// 实例运行的结束时间
+        /// </summary>
+        [JsonProperty("FinishTime")]
+        public string FinishTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +231,11 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ClusterDeployType", this.ClusterDeployType);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "DsEnvType", this.DsEnvType);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);
+            this.SetParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
         }
     }
 }

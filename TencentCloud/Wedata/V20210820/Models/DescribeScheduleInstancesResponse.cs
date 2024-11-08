@@ -25,6 +25,13 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
+        /// 请求来源，WEB 前端；CLIENT 客户端
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RequestFromSource")]
+        public string RequestFromSource{ get; set; }
+
+        /// <summary>
         /// 实例结果集
         /// </summary>
         [JsonProperty("Data")]
@@ -42,6 +49,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "RequestFromSource", this.RequestFromSource);
             this.SetParamObj(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

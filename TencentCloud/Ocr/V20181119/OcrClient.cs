@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1119";
+       private const string sdkVersion = "SDK_NET_3.0.1120";
 
         /// <summary>
         /// Client constructor.
@@ -2523,6 +2523,31 @@ namespace TencentCloud.Ocr.V20181119
         public RecognizeTravelCardOCRResponse RecognizeTravelCardOCRSync(RecognizeTravelCardOCRRequest req)
         {
             return InternalRequestAsync<RecognizeTravelCardOCRResponse>(req, "RecognizeTravelCardOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口支持二代身份证、临时身份证、港澳台居住证、外国人永久居留证，字段内容识别功能，包括姓名、性别、民族、出生、出生日期、住址、公民身份号码、签发机关、有效期限、国籍、通行证号码、持证人持有号码；支持返回证件类型；支持翻拍、复印、边框不完整、遮挡、字段级反光和字段级完整性告警；支持卡片主体框裁剪和头像裁剪。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeValidIDCardOCRRequest"/></param>
+        /// <returns><see cref="RecognizeValidIDCardOCRResponse"/></returns>
+        public Task<RecognizeValidIDCardOCRResponse> RecognizeValidIDCardOCR(RecognizeValidIDCardOCRRequest req)
+        {
+            return InternalRequestAsync<RecognizeValidIDCardOCRResponse>(req, "RecognizeValidIDCardOCR");
+        }
+
+        /// <summary>
+        /// 本接口支持二代身份证、临时身份证、港澳台居住证、外国人永久居留证，字段内容识别功能，包括姓名、性别、民族、出生、出生日期、住址、公民身份号码、签发机关、有效期限、国籍、通行证号码、持证人持有号码；支持返回证件类型；支持翻拍、复印、边框不完整、遮挡、字段级反光和字段级完整性告警；支持卡片主体框裁剪和头像裁剪。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeValidIDCardOCRRequest"/></param>
+        /// <returns><see cref="RecognizeValidIDCardOCRResponse"/></returns>
+        public RecognizeValidIDCardOCRResponse RecognizeValidIDCardOCRSync(RecognizeValidIDCardOCRRequest req)
+        {
+            return InternalRequestAsync<RecognizeValidIDCardOCRResponse>(req, "RecognizeValidIDCardOCR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

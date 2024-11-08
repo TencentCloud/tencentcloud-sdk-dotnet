@@ -458,6 +458,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("CirculateInstanceList")]
         public InstanceOpsDto[] CirculateInstanceList{ get; set; }
 
+        /// <summary>
+        /// 并发策略, 0: 等待并发, 1: kill自身
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConcurrentStrategy")]
+        public ulong? ConcurrentStrategy{ get; set; }
+
+        /// <summary>
+        /// 调度运行方式, 0: 周期调度, 1: 空跑调度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScheduleRunType")]
+        public ulong? ScheduleRunType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -526,6 +540,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "RetryAttempts", this.RetryAttempts);
             this.SetParamArraySimple(map, prefix + "DeletedFatherList.", this.DeletedFatherList);
             this.SetParamArrayObj(map, prefix + "CirculateInstanceList.", this.CirculateInstanceList);
+            this.SetParamSimple(map, prefix + "ConcurrentStrategy", this.ConcurrentStrategy);
+            this.SetParamSimple(map, prefix + "ScheduleRunType", this.ScheduleRunType);
         }
     }
 }
