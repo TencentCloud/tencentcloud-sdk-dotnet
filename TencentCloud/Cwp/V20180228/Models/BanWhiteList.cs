@@ -56,21 +56,18 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 白名单所属机器。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
         /// 白名单是否全局
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsGlobal")]
         public bool? IsGlobal{ get; set; }
 
         /// <summary>
         /// 白名单所属机器列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Quuids")]
         public string[] Quuids{ get; set; }

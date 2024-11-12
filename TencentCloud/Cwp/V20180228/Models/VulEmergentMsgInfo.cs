@@ -42,6 +42,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
+        /// <summary>
+        /// 漏洞名,英文描述
+        /// </summary>
+        [JsonProperty("NameEn")]
+        public string NameEn{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "VulId", this.VulId);
             this.SetParamSimple(map, prefix + "PublishTime", this.PublishTime);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "NameEn", this.NameEn);
         }
     }
 }

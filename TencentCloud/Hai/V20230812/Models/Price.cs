@@ -38,6 +38,13 @@ namespace TencentCloud.Hai.V20230812.Models
         [JsonProperty("CloudDiskPrice")]
         public ItemPrice CloudDiskPrice{ get; set; }
 
+        /// <summary>
+        /// 分实例价格
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PriceDetailSet")]
+        public ItemPriceDetail[] PriceDetailSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Hai.V20230812.Models
         {
             this.SetParamObj(map, prefix + "InstancePrice.", this.InstancePrice);
             this.SetParamObj(map, prefix + "CloudDiskPrice.", this.CloudDiskPrice);
+            this.SetParamArrayObj(map, prefix + "PriceDetailSet.", this.PriceDetailSet);
         }
     }
 }

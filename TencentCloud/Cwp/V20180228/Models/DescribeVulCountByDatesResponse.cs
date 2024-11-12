@@ -26,7 +26,6 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 批量获得对应天数的漏洞数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulCount")]
         public ulong?[] VulCount{ get; set; }

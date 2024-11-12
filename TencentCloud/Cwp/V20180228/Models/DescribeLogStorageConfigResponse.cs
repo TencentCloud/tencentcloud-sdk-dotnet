@@ -26,24 +26,27 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 存储类型，string数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string[] Type{ get; set; }
 
         /// <summary>
-        /// 日志存储天数，3640表示不限
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 日志存储时长，3640表示不限
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
         /// 本月Period的修改次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PeriodModifyCount")]
         public long? PeriodModifyCount{ get; set; }
+
+        /// <summary>
+        /// 日志存储时长单位，年year/月month/天day
+        /// </summary>
+        [JsonProperty("Granularity")]
+        public string Granularity{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -60,6 +63,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamArraySimple(map, prefix + "Type.", this.Type);
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "PeriodModifyCount", this.PeriodModifyCount);
+            this.SetParamSimple(map, prefix + "Granularity", this.Granularity);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

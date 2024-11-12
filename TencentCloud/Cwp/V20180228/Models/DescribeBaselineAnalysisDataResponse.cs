@@ -26,35 +26,30 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 最后检测时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LatestScanTime")]
         public string LatestScanTime{ get; set; }
 
         /// <summary>
         /// 是否全部服务器：1-是 0-否
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsGlobal")]
         public ulong? IsGlobal{ get; set; }
 
         /// <summary>
         /// 服务器总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanHostCount")]
         public ulong? ScanHostCount{ get; set; }
 
         /// <summary>
         /// 检测项总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanRuleCount")]
         public ulong? ScanRuleCount{ get; set; }
 
         /// <summary>
         /// 是否是第一次检测  1是 0不是
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IfFirstScan")]
         public ulong? IfFirstScan{ get; set; }

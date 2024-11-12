@@ -26,21 +26,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 系统负载
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CpuLoad")]
         public AssetLoadSummary CpuLoad{ get; set; }
 
         /// <summary>
         /// 内存使用率
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemLoad")]
         public AssetLoadSummary MemLoad{ get; set; }
 
         /// <summary>
         /// 硬盘使用率
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskLoad")]
         public AssetLoadSummary DiskLoad{ get; set; }

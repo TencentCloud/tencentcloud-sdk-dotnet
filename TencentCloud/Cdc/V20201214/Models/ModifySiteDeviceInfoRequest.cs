@@ -67,7 +67,7 @@ namespace TencentCloud.Cdc.V20201214.Models
         public long? PowerDrawKva{ get; set; }
 
         /// <summary>
-        /// 网络到腾讯云Region区域的上行链路速度
+        /// 网络到腾讯云Region区域的上行链路速度(Gbps)
         /// </summary>
         [JsonProperty("UplinkSpeedGbps")]
         public long? UplinkSpeedGbps{ get; set; }

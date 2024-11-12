@@ -38,14 +38,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 描述信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
         /// 今日新增数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NewCount")]
         public long? NewCount{ get; set; }

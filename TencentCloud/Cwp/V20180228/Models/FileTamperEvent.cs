@@ -200,14 +200,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 目标文件更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetModifyTime")]
         public string TargetModifyTime{ get; set; }
 
         /// <summary>
         /// 目标文件创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetCreatTime")]
         public string TargetCreatTime{ get; set; }
@@ -238,14 +236,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 进程名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExeName")]
         public string ExeName{ get; set; }
 
         /// <summary>
         ///  主机额外信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
@@ -254,7 +250,6 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// 文件威胁行为
         /// <li>read 读取文件</li>
         /// <li>write 修改文件</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileAction")]
         public string FileAction{ get; set; }

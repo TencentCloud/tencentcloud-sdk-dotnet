@@ -43,13 +43,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? GoodsNum{ get; set; }
 
         /// <summary>
-        /// 实例内存大小，单位：MB。InstanceId为空时该参数为必填项。
+        /// 实例内存大小，单位：MB。InstanceId 为空时该参数为必填项。为保证传入值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的实例内存大小范围。
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// 实例硬盘大小，单位：GB。InstanceId为空时该参数为必填项。
+        /// 实例硬盘大小，单位：GB。InstanceId 为空时该参数为必填项。为保证传入值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的硬盘大小范围。
         /// </summary>
         [JsonProperty("Volume")]
         public long? Volume{ get; set; }

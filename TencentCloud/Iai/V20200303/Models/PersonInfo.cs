@@ -25,38 +25,40 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 人员名称
+        /// 人员名称。
         /// </summary>
         [JsonProperty("PersonName")]
         public string PersonName{ get; set; }
 
         /// <summary>
-        /// 人员Id
+        /// 人员Id。
         /// </summary>
         [JsonProperty("PersonId")]
         public string PersonId{ get; set; }
 
         /// <summary>
-        /// 人员性别
+        /// 人员性别。
         /// </summary>
         [JsonProperty("Gender")]
         public long? Gender{ get; set; }
 
         /// <summary>
-        /// 人员描述字段内容
+        /// 人员描述字段内容。
         /// </summary>
         [JsonProperty("PersonExDescriptions")]
         public string[] PersonExDescriptions{ get; set; }
 
         /// <summary>
-        /// 包含的人脸照片列表
+        /// 包含的人脸照片列表。
         /// </summary>
         [JsonProperty("FaceIds")]
         public string[] FaceIds{ get; set; }
 
         /// <summary>
-        /// 人员的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Person创建时间的毫秒数。 
-        /// Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
+        /// 人员的创建时间和日期 CreationTimestamp。
+        /// - CreationTimestamp 的值是自 Unix 纪元时间到Person创建时间的毫秒数。 
+        /// - Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。
+        /// - 有关更多信息，请参阅 Unix 时间。
         /// </summary>
         [JsonProperty("CreationTimestamp")]
         public ulong? CreationTimestamp{ get; set; }

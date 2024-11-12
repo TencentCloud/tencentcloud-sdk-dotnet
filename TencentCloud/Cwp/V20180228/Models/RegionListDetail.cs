@@ -31,7 +31,6 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// ECM 腾讯云边缘计算服务器
         /// BM 腾讯云黑石1.0 服务器
         /// Other  其他服务器(非腾讯云)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
@@ -46,14 +45,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// 6 Google
         /// 7 Oracle
         /// 8 Digital Ocean
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CloudFrom")]
         public ulong? CloudFrom{ get; set; }
 
         /// <summary>
         /// 地域列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionList")]
         public RegionInfo[] RegionList{ get; set; }

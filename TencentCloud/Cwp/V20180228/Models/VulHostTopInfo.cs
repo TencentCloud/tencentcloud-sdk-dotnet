@@ -26,28 +26,24 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 主机名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
         /// <summary>
         /// 漏洞等级与数量统计列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulLevelList")]
         public VulLevelCountInfo[] VulLevelList{ get; set; }
 
         /// <summary>
         /// 主机Quuid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }
 
         /// <summary>
         /// top评分
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Score")]
         public ulong? Score{ get; set; }

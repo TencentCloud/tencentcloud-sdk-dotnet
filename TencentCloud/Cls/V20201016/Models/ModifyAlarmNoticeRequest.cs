@@ -31,6 +31,12 @@ namespace TencentCloud.Cls.V20201016.Models
         public string AlarmNoticeId{ get; set; }
 
         /// <summary>
+        /// 标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持10个标签键值对，并且不能有重复的键值对。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
         /// 通知渠道组名称。
         /// </summary>
         [JsonProperty("Name")]
@@ -52,7 +58,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public NoticeReceiver[] NoticeReceivers{ get; set; }
 
         /// <summary>
-        /// 接口回调信息（包括企业微信）。
+        /// 接口回调信息（包括企业微信等）。
         /// </summary>
         [JsonProperty("WebCallbacks")]
         public WebCallback[] WebCallbacks{ get; set; }
@@ -68,6 +74,39 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("NoticeRules")]
         public NoticeRule[] NoticeRules{ get; set; }
 
+        /// <summary>
+        /// 调用链接域名。http:// 或者 https:// 开头，不能/结尾
+        /// </summary>
+        [JsonProperty("JumpDomain")]
+        public string JumpDomain{ get; set; }
+
+        /// <summary>
+        /// 投递日志开关。
+        /// 
+        /// 参数值：
+        /// 1：关闭；
+        /// 
+        /// 2：开启 
+        /// </summary>
+        [JsonProperty("DeliverStatus")]
+        public ulong? DeliverStatus{ get; set; }
+
+        /// <summary>
+        /// 投递日志配置。
+        /// </summary>
+        [JsonProperty("DeliverConfig")]
+        public DeliverConfig DeliverConfig{ get; set; }
+
+        /// <summary>
+        /// 免登录操作告警开关。
+        /// 
+        /// 参数值： 
+        ///         1：关闭
+        ///         2：开启（默认开启）
+        /// </summary>
+        [JsonProperty("AlarmShieldStatus")]
+        public ulong? AlarmShieldStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,11 +114,16 @@ namespace TencentCloud.Cls.V20201016.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AlarmNoticeId", this.AlarmNoticeId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamArrayObj(map, prefix + "NoticeReceivers.", this.NoticeReceivers);
             this.SetParamArrayObj(map, prefix + "WebCallbacks.", this.WebCallbacks);
             this.SetParamArrayObj(map, prefix + "NoticeRules.", this.NoticeRules);
+            this.SetParamSimple(map, prefix + "JumpDomain", this.JumpDomain);
+            this.SetParamSimple(map, prefix + "DeliverStatus", this.DeliverStatus);
+            this.SetParamObj(map, prefix + "DeliverConfig.", this.DeliverConfig);
+            this.SetParamSimple(map, prefix + "AlarmShieldStatus", this.AlarmShieldStatus);
         }
     }
 }

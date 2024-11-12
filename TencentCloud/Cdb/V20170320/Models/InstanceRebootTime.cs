@@ -26,12 +26,14 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// 预期重启时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeInSeconds")]
         public long? TimeInSeconds{ get; set; }

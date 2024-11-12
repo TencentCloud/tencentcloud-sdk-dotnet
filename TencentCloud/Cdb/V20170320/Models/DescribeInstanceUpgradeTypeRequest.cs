@@ -25,73 +25,73 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例id
+        /// 实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 目标实例cpu
+        /// 目标实例 CPU 的核数。
         /// </summary>
         [JsonProperty("DstCpu")]
         public float? DstCpu{ get; set; }
 
         /// <summary>
-        /// 目标实例内存
+        /// 目标实例内存大小，单位：MB。
         /// </summary>
         [JsonProperty("DstMemory")]
         public ulong? DstMemory{ get; set; }
 
         /// <summary>
-        /// 目标实例磁盘
+        /// 目标实例磁盘大小，单位：GB。
         /// </summary>
         [JsonProperty("DstDisk")]
         public ulong? DstDisk{ get; set; }
 
         /// <summary>
-        /// 目标实例版本
+        /// 目标实例数据库版本。
         /// </summary>
         [JsonProperty("DstVersion")]
         public string DstVersion{ get; set; }
 
         /// <summary>
-        /// 目标实例部署模型
+        /// 目标实例部署模型。
         /// </summary>
         [JsonProperty("DstDeployMode")]
         public long? DstDeployMode{ get; set; }
 
         /// <summary>
-        /// 目标实例复制类型
+        /// 目标实例复制类型。
         /// </summary>
         [JsonProperty("DstProtectMode")]
         public long? DstProtectMode{ get; set; }
 
         /// <summary>
-        /// 目标实例备机1可用区
+        /// 目标实例备机1可用区。
         /// </summary>
         [JsonProperty("DstSlaveZone")]
         public long? DstSlaveZone{ get; set; }
 
         /// <summary>
-        /// 目标实例备机2可用区
+        /// 目标实例备机2可用区。
         /// </summary>
         [JsonProperty("DstBackupZone")]
         public long? DstBackupZone{ get; set; }
 
         /// <summary>
-        /// 目标实例类型
+        /// 目标实例类型。
         /// </summary>
         [JsonProperty("DstCdbType")]
         public string DstCdbType{ get; set; }
 
         /// <summary>
-        /// 目标实例主可用区
+        /// 目标实例主可用区。
         /// </summary>
         [JsonProperty("DstZoneId")]
         public long? DstZoneId{ get; set; }
 
         /// <summary>
-        /// 独享集群CDB实例的节点分布情况
+        /// 独享集群 CDB 实例的节点分布情况。
         /// </summary>
         [JsonProperty("NodeDistribution")]
         public NodeDistribution NodeDistribution{ get; set; }

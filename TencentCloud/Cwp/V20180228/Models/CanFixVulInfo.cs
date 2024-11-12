@@ -26,35 +26,30 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 漏洞id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulId")]
         public ulong? VulId{ get; set; }
 
         /// <summary>
         /// 漏洞名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulName")]
         public string VulName{ get; set; }
 
         /// <summary>
         /// 该漏洞可修复的主机信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostList")]
         public VulInfoHostInfo[] HostList{ get; set; }
 
         /// <summary>
         /// 修复提示tag
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FixTag")]
         public string[] FixTag{ get; set; }
 
         /// <summary>
         /// 漏洞分类1 web cms漏洞,2应用漏洞,4linux软件漏洞,5windows系统漏洞
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulCategory")]
         public ulong? VulCategory{ get; set; }

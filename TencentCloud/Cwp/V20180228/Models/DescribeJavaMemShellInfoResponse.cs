@@ -26,7 +26,6 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// java内存马事件详细信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Info")]
         public JavaMemShellDetail Info{ get; set; }

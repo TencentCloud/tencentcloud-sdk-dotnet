@@ -68,14 +68,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 告警主机范围类型，0:全部主机，1:按所属项目选，2:按腾讯云标签选，3:按主机安全标签选，4:自选主机
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostRange")]
         public long? HostRange{ get; set; }
 
         /// <summary>
         /// 配置的告警范围主机个数，前端用此判断展示提示信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }

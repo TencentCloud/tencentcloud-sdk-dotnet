@@ -25,26 +25,26 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 人员库名称
+        /// 人员库名称。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 人员库ID
+        /// 人员库ID。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 人员库自定义描述字段
+        /// 人员库自定义描述字段。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupExDescriptions")]
         public string[] GroupExDescriptions{ get; set; }
 
         /// <summary>
-        /// 人员库信息备注
+        /// 人员库信息备注。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tag")]
@@ -58,8 +58,10 @@ namespace TencentCloud.Iai.V20200303.Models
         public string FaceModelVersion{ get; set; }
 
         /// <summary>
-        /// Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
-        /// Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
+        /// Group的创建时间和日期 CreationTimestamp。
+        /// - CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
+        /// - Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。
+        /// - 有关更多信息，请参阅 Unix 时间。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreationTimestamp")]

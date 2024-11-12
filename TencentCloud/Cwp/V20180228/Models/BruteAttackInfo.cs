@@ -32,70 +32,60 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 主机安全客户端唯一标识UUID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
         /// 主机ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineIp")]
         public string MachineIp{ get; set; }
 
         /// <summary>
         /// 主机名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineName")]
         public string MachineName{ get; set; }
 
         /// <summary>
         /// 用户名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
         /// 来源ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SrcIp")]
         public string SrcIp{ get; set; }
 
         /// <summary>
         /// SUCCESS：破解成功；FAILED：破解失败
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 国家id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Country")]
         public ulong? Country{ get; set; }
 
         /// <summary>
         /// 城市id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("City")]
         public ulong? City{ get; set; }
 
         /// <summary>
         /// 省份id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Province")]
         public ulong? Province{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -114,112 +104,96 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// 87-不阻断(客户端离线)
         /// 88-不阻断(来源Ip归属相同客户)
         /// 89-不阻断(ipv6不支持阻断)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BanStatus")]
         public ulong? BanStatus{ get; set; }
 
         /// <summary>
-        /// 事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的帐号事件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的账号事件
         /// </summary>
         [JsonProperty("EventType")]
         public ulong? EventType{ get; set; }
 
         /// <summary>
         /// 发生次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
 
         /// <summary>
         /// 机器UUID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }
 
         /// <summary>
         /// 是否为专业版（true/false）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsProVersion")]
         public bool? IsProVersion{ get; set; }
 
         /// <summary>
         /// 被攻击的服务的用户名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
         /// 端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
 
         /// <summary>
         /// 最近攻击时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
         /// 实例ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// 0：待处理，1：忽略，5：已处理，6：加入白名单
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataStatus")]
         public ulong? DataStatus{ get; set; }
 
         /// <summary>
         /// 附加信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
 
         /// <summary>
         /// 地理位置中文名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Location")]
         public string Location{ get; set; }
 
         /// <summary>
         /// 威胁等级：0低危，1中危，2高危
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskLevel")]
         public ulong? RiskLevel{ get; set; }
 
         /// <summary>
         /// 事件来源：0--阻断规则，1--威胁情报
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataFrom")]
         public long? DataFrom{ get; set; }
 
         /// <summary>
         /// 破解状态说明
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttackStatusDesc")]
         public string AttackStatusDesc{ get; set; }
 
         /// <summary>
         /// 阻断过期时间（仅阻断中事件有效）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BanExpiredTime")]
         public string BanExpiredTime{ get; set; }

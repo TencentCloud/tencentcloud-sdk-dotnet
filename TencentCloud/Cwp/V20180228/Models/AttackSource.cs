@@ -26,21 +26,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 攻击溯源节点描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Nodes")]
         public AttackSourceNode[] Nodes{ get; set; }
 
         /// <summary>
         /// 攻击溯源节点路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Edges")]
         public AttackSourceEdge[] Edges{ get; set; }
 
         /// <summary>
         /// 请求节点相关事件详情的参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventInfoParam")]
         public string EventInfoParam{ get; set; }

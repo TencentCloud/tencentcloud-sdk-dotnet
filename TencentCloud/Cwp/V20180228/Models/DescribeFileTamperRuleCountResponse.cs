@@ -26,7 +26,6 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 主机关联核心文件规则数量信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("List")]
         public FileTamperRuleCount[] List{ get; set; }

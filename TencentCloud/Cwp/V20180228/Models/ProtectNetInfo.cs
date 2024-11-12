@@ -31,25 +31,25 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 护网天数
+        /// 重保天数
         /// </summary>
         [JsonProperty("ProtectDays")]
         public ulong? ProtectDays{ get; set; }
 
         /// <summary>
-        /// 护网状态 0未启动，1护网中，2已完成
+        /// 重保状态 0未启动，1重保中，2已完成
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 护网启动时间
+        /// 重保启动时间
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 护网完成时间
+        /// 重保完成时间
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

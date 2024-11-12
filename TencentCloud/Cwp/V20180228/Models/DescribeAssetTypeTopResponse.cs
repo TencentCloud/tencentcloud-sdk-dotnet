@@ -26,63 +26,54 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 账号Top5
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("User")]
         public AssetKeyVal[] User{ get; set; }
 
         /// <summary>
         /// 端口Top5
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Port")]
         public AssetKeyVal[] Port{ get; set; }
 
         /// <summary>
         /// 进程Top5
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Process")]
         public AssetKeyVal[] Process{ get; set; }
 
         /// <summary>
         /// 软件Top5
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Software")]
         public AssetKeyVal[] Software{ get; set; }
 
         /// <summary>
         /// 数据库Top5
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Database")]
         public AssetKeyVal[] Database{ get; set; }
 
         /// <summary>
         /// Web应用Top5
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WebApp")]
         public AssetKeyVal[] WebApp{ get; set; }
 
         /// <summary>
         /// Web站点Top5
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WebLocation")]
         public AssetKeyVal[] WebLocation{ get; set; }
 
         /// <summary>
         /// Web框架Top5
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WebFrame")]
         public AssetKeyVal[] WebFrame{ get; set; }
 
         /// <summary>
         /// Web服务Top5
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WebService")]
         public AssetKeyVal[] WebService{ get; set; }

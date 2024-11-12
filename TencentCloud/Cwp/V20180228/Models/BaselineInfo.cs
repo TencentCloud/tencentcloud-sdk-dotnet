@@ -26,63 +26,54 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 基线名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 危害等级：1-低危；2-中危；3-高危；4-严重
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Level")]
         public ulong? Level{ get; set; }
 
         /// <summary>
         /// 检测项数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleCount")]
         public ulong? RuleCount{ get; set; }
 
         /// <summary>
         /// 影响服务器数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostCount")]
         public ulong? HostCount{ get; set; }
 
         /// <summary>
         /// 通过状态:0:未通过,1:已通过
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// 基线id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryId")]
         public ulong? CategoryId{ get; set; }
 
         /// <summary>
         /// 最后检测时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastScanTime")]
         public string LastScanTime{ get; set; }
 
         /// <summary>
         /// 检测中状态: 5
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxStatus")]
         public ulong? MaxStatus{ get; set; }
 
         /// <summary>
         /// 基线风险项
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BaselineFailCount")]
         public ulong? BaselineFailCount{ get; set; }

@@ -44,7 +44,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 扫描失败（提示具体原因：扫描超时、客户端版本低、客户端离线）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Stop")]
         public string Stop{ get; set; }

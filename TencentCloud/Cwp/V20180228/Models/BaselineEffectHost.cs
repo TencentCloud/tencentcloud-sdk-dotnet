@@ -26,70 +26,60 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 通过项
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PassCount")]
         public ulong? PassCount{ get; set; }
 
         /// <summary>
         /// 风险项
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailCount")]
         public ulong? FailCount{ get; set; }
 
         /// <summary>
         /// 首次检测事件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FirstScanTime")]
         public string FirstScanTime{ get; set; }
 
         /// <summary>
         /// 最后检测时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastScanTime")]
         public string LastScanTime{ get; set; }
 
         /// <summary>
         /// 风险项处理状态状态：0-未通过，1-通过
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// 主机Quuid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }
 
         /// <summary>
         /// 主机IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostIp")]
         public string HostIp{ get; set; }
 
         /// <summary>
         /// 主机别名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AliasName")]
         public string AliasName{ get; set; }
 
         /// <summary>
         /// 主机Uuid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
         /// 检测中状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxStatus")]
         public ulong? MaxStatus{ get; set; }

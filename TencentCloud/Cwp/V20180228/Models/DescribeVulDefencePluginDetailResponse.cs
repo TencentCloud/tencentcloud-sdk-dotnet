@@ -32,7 +32,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 漏洞防御插件信息详情列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("List")]
         public VulDefencePluginDetail[] List{ get; set; }

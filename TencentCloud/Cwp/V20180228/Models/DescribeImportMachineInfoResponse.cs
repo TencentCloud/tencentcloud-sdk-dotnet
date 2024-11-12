@@ -26,14 +26,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 有效的机器信息列表：机器名称、机器公网/内网ip、机器标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EffectiveMachineInfoList")]
         public EffectiveMachineInfo[] EffectiveMachineInfoList{ get; set; }
 
         /// <summary>
         /// 用户批量导入失败的机器列表（例如机器不存在等...）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InvalidMachineList")]
         public string[] InvalidMachineList{ get; set; }

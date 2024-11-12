@@ -79,6 +79,27 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("StorageType")]
         public long? StorageType{ get; set; }
 
+        /// <summary>
+        /// 系统盘大小
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RootSize")]
+        public long? RootSize{ get; set; }
+
+        /// <summary>
+        /// 系统盘类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RootStorageType")]
+        public long? RootStorageType{ get; set; }
+
+        /// <summary>
+        /// 数据盘信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MCMultiDisk")]
+        public MultiDiskMC[] MCMultiDisk{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +115,9 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "Spec", this.Spec);
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
+            this.SetParamSimple(map, prefix + "RootSize", this.RootSize);
+            this.SetParamSimple(map, prefix + "RootStorageType", this.RootStorageType);
+            this.SetParamArrayObj(map, prefix + "MCMultiDisk.", this.MCMultiDisk);
         }
     }
 }

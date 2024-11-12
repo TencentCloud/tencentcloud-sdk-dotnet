@@ -26,12 +26,14 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// 切换时间，格式为：2017-09-03 01:34:31
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SwitchTime")]
         public string SwitchTime{ get; set; }
 
         /// <summary>
         /// 切换类型，可能的返回值为：TRANSFER - 数据迁移；MASTER2SLAVE - 主备切换；RECOVERY - 主从恢复
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SwitchType")]
         public string SwitchType{ get; set; }

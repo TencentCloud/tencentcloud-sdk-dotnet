@@ -26,28 +26,24 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 总数量列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalList")]
         public AssetKeyVal[] TotalList{ get; set; }
 
         /// <summary>
         /// 在线数量列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LiveList")]
         public AssetKeyVal[] LiveList{ get; set; }
 
         /// <summary>
         /// 离线数量列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OfflineList")]
         public AssetKeyVal[] OfflineList{ get; set; }
 
         /// <summary>
         /// 风险数量列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskList")]
         public AssetKeyVal[] RiskList{ get; set; }

@@ -26,70 +26,60 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 总攻击次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PendingAttackCount")]
         public ulong? PendingAttackCount{ get; set; }
 
         /// <summary>
         /// 总尝试攻击次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PendingTryAttackCount")]
         public ulong? PendingTryAttackCount{ get; set; }
 
         /// <summary>
         /// 总攻击成功次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PendingSuccAttackCount")]
         public ulong? PendingSuccAttackCount{ get; set; }
 
         /// <summary>
         /// 今日新增攻击次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PendingNewAttackCount")]
         public ulong? PendingNewAttackCount{ get; set; }
 
         /// <summary>
         /// 总受攻击资产数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttackedAssetCount")]
         public ulong? AttackedAssetCount{ get; set; }
 
         /// <summary>
         /// 今日新增受攻击资产数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NewAttackedAssetCount")]
         public ulong? NewAttackedAssetCount{ get; set; }
 
         /// <summary>
         /// 总受攻击端口数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttackedPortCount")]
         public ulong? AttackedPortCount{ get; set; }
 
         /// <summary>
         /// 今日新增受攻击端口数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NewAttackedPortCount")]
         public ulong? NewAttackedPortCount{ get; set; }
 
         /// <summary>
         /// 总攻击来源ip数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttackSrcIpCount")]
         public ulong? AttackSrcIpCount{ get; set; }
 
         /// <summary>
         /// 今日新增攻击来源ip数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NewAttackSrcIpCount")]
         public ulong? NewAttackSrcIpCount{ get; set; }

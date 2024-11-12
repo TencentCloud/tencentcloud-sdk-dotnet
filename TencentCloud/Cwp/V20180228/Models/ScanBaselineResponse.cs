@@ -26,14 +26,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 正在扫描中的主机Quuid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanningQuuids")]
         public string[] ScanningQuuids{ get; set; }
 
         /// <summary>
         /// 任务下发成功返回的TaskId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }

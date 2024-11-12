@@ -62,84 +62,72 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 检测结果描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DetectResultDesc")]
         public string DetectResultDesc{ get; set; }
 
         /// <summary>
         /// 危险等级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Level")]
         public long? Level{ get; set; }
 
         /// <summary>
         /// 检测状态：0 未通过，1：忽略，3：通过，5：检测中
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DetectStatus")]
         public long? DetectStatus{ get; set; }
 
         /// <summary>
         /// 主机ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostId")]
         public string HostId{ get; set; }
 
         /// <summary>
         /// 主机名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
         /// <summary>
         /// 主机IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostIp")]
         public string HostIp{ get; set; }
 
         /// <summary>
         /// 外网IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WanIp")]
         public string WanIp{ get; set; }
 
         /// <summary>
         /// 第一次出现时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FirstTime")]
         public string FirstTime{ get; set; }
 
         /// <summary>
         /// 最近出现时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastTime")]
         public string LastTime{ get; set; }
 
         /// <summary>
         /// 是否可以修复
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CanBeFixed")]
         public long? CanBeFixed{ get; set; }
 
         /// <summary>
         /// 主机安全uuid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
         /// 主机额外信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }

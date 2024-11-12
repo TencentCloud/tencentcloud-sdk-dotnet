@@ -26,14 +26,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 路径,需要base64加密
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Exe")]
         public string Exe{ get; set; }
 
         /// <summary>
         /// 命令行,需要base64加密
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cmdline")]
         public string Cmdline{ get; set; }

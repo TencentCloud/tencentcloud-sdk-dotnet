@@ -74,133 +74,114 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 废弃字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("From")]
         public ulong? From{ get; set; }
 
         /// <summary>
         /// 描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Descript")]
         public string Descript{ get; set; }
 
         /// <summary>
         /// 废弃字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublishTimeWisteria")]
         public string PublishTimeWisteria{ get; set; }
 
         /// <summary>
         /// 废弃字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NameWisteria")]
         public string NameWisteria{ get; set; }
 
         /// <summary>
         /// 废弃字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DescriptWisteria")]
         public string DescriptWisteria{ get; set; }
 
         /// <summary>
         /// 聚合后事件状态串
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusStr")]
         public string StatusStr{ get; set; }
 
         /// <summary>
         /// cve编号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CveId")]
         public string CveId{ get; set; }
 
         /// <summary>
         /// CVSS评分
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CvssScore")]
         public float? CvssScore{ get; set; }
 
         /// <summary>
         /// 漏洞标签 多个逗号分割
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Labels")]
         public string Labels{ get; set; }
 
         /// <summary>
         /// 是否能自动修复且包含能自动修复的主机， 0=否  1=是
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FixSwitch")]
         public ulong? FixSwitch{ get; set; }
 
         /// <summary>
         /// 最后扫描任务的id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }
 
         /// <summary>
         /// 是否支持防御， 0:不支持 1:支持
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSupportDefense")]
         public ulong? IsSupportDefense{ get; set; }
 
         /// <summary>
         /// 已防御的攻击次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefenseAttackCount")]
         public ulong? DefenseAttackCount{ get; set; }
 
         /// <summary>
         /// 首次出现时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FirstAppearTime")]
         public string FirstAppearTime{ get; set; }
 
         /// <summary>
         /// 漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulCategory")]
         public ulong? VulCategory{ get; set; }
 
         /// <summary>
         /// 攻击热度级别
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttackLevel")]
         public ulong? AttackLevel{ get; set; }
 
         /// <summary>
         /// 漏洞修复后是否需要重启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FixNoNeedRestart")]
         public bool? FixNoNeedRestart{ get; set; }
 
         /// <summary>
         /// 检测方式0 - 版本比对, 1 - POC验证
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Method")]
         public ulong? Method{ get; set; }
 
         /// <summary>
         /// 漏洞是否支持修复 0不支持，1支持
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulFixSwitch")]
         public ulong? VulFixSwitch{ get; set; }

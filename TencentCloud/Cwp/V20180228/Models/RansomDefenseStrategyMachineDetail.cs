@@ -56,42 +56,36 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 外网ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineWanIp")]
         public string MachineWanIp{ get; set; }
 
         /// <summary>
         /// 云标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CloudTags")]
         public Tag[] CloudTags{ get; set; }
 
         /// <summary>
         /// 可用区信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionInfo")]
         public RegionInfo RegionInfo{ get; set; }
 
         /// <summary>
         /// 主机安全标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tag")]
         public MachineTag[] Tag{ get; set; }
 
         /// <summary>
         /// 防护状态：0关闭，1开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// 策略id，为0时未绑定策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrategyId")]
         public ulong? StrategyId{ get; set; }
@@ -99,21 +93,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// <summary>
         /// 硬盘信息，为空时所有硬盘生效：
         /// ;分割 diskId1|diskName1;diskId2|diskName2
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskInfo")]
         public string DiskInfo{ get; set; }
 
         /// <summary>
         /// 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostVersion")]
         public ulong? HostVersion{ get; set; }
 
         /// <summary>
         /// 策略名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrategyName")]
         public string StrategyName{ get; set; }

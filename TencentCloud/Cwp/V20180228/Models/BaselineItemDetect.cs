@@ -26,98 +26,84 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 项Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ItemId")]
         public long? ItemId{ get; set; }
 
         /// <summary>
         /// 项名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ItemName")]
         public string ItemName{ get; set; }
 
         /// <summary>
         /// 项描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ItemDesc")]
         public string ItemDesc{ get; set; }
 
         /// <summary>
         /// 修复方法
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FixMethod")]
         public string FixMethod{ get; set; }
 
         /// <summary>
         /// 所属规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
         /// 0:未通过 1:忽略 3:通过 5:检测中
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DetectStatus")]
         public long? DetectStatus{ get; set; }
 
         /// <summary>
         /// 风险等级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Level")]
         public long? Level{ get; set; }
 
         /// <summary>
         /// 影响服务器数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostCount")]
         public long? HostCount{ get; set; }
 
         /// <summary>
         /// 首次检测时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FirstTime")]
         public string FirstTime{ get; set; }
 
         /// <summary>
         /// 最后检测时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastTime")]
         public string LastTime{ get; set; }
 
         /// <summary>
         /// 检测结果,Json字符串
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DetectResult")]
         public string DetectResult{ get; set; }
 
         /// <summary>
         /// 所属规则ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleId")]
         public long? RuleId{ get; set; }
 
         /// <summary>
         /// 通过的服务器数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PassedHostCount")]
         public long? PassedHostCount{ get; set; }
 
         /// <summary>
         /// 未通过的服务器数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NotPassedHostCount")]
         public long? NotPassedHostCount{ get; set; }

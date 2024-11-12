@@ -38,6 +38,18 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("MessageTypes")]
         public long?[] MessageTypes{ get; set; }
 
+        /// <summary>
+        /// 资源替换开始时间
+        /// </summary>
+        [JsonProperty("ReplaceStartTime")]
+        public string ReplaceStartTime{ get; set; }
+
+        /// <summary>
+        /// 资源替换结束时间
+        /// </summary>
+        [JsonProperty("ReplaceEndTime")]
+        public string ReplaceEndTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +58,8 @@ namespace TencentCloud.Ssl.V20191205.Models
         {
             this.SetParamSimple(map, prefix + "ReplaceTime", this.ReplaceTime);
             this.SetParamArraySimple(map, prefix + "MessageTypes.", this.MessageTypes);
+            this.SetParamSimple(map, prefix + "ReplaceStartTime", this.ReplaceStartTime);
+            this.SetParamSimple(map, prefix + "ReplaceEndTime", this.ReplaceEndTime);
         }
     }
 }

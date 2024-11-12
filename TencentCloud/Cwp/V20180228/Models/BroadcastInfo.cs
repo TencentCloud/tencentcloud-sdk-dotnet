@@ -26,14 +26,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 文章名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Title")]
         public string Title{ get; set; }
 
         /// <summary>
         /// 跳转位置：0=不跳转，1=文件查杀，2=漏洞扫描，3=安全基线
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GotoType")]
         public ulong? GotoType{ get; set; }

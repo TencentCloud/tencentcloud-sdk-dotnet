@@ -26,28 +26,24 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 时间点，如 2023-05-06
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DateTime")]
         public string DateTime{ get; set; }
 
         /// <summary>
         /// 攻击次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttackCount")]
         public ulong? AttackCount{ get; set; }
 
         /// <summary>
         /// 尝试攻击次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TryAttackCount")]
         public ulong? TryAttackCount{ get; set; }
 
         /// <summary>
         /// 攻击成功次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SuccAttackCount")]
         public ulong? SuccAttackCount{ get; set; }

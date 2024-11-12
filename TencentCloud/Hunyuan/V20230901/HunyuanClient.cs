@@ -28,7 +28,7 @@ namespace TencentCloud.Hunyuan.V20230901
 
        private const string endpoint = "hunyuan.tencentcloudapi.com";
        private const string version = "2023-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1120";
+       private const string sdkVersion = "SDK_NET_3.0.1121";
 
         /// <summary>
         /// Client constructor.
@@ -179,7 +179,7 @@ namespace TencentCloud.Hunyuan.V20230901
         }
 
         /// <summary>
-        /// 上传用于不同用途的的文件。
+        /// 上传用于不同用途的文件。
         /// 当前用途仅支持 hunyuan 等模型的文档理解。
         /// </summary>
         /// <param name="req"><see cref="FilesUploadsRequest"/></param>
@@ -190,7 +190,7 @@ namespace TencentCloud.Hunyuan.V20230901
         }
 
         /// <summary>
-        /// 上传用于不同用途的的文件。
+        /// 上传用于不同用途的文件。
         /// 当前用途仅支持 hunyuan 等模型的文档理解。
         /// </summary>
         /// <param name="req"><see cref="FilesUploadsRequest"/></param>

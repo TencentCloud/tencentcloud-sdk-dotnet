@@ -25,7 +25,15 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// <li>IpOrName - String - 是否必填：否 - 主机Ip或别名筛选</li>
+        /// <li>MachineName  主机名称
+        /// 
+        /// 
+        /// 
+        /// InstanceID  实例ID  
+        /// 
+        ///  
+        /// 
+        /// IP   内网IP或公网IP - 是否必填：否 - 主机Ip或别名筛选</li>
         /// <li>HostId - String - 是否必填：否 - 主机Id</li>
         /// <li>AgentId - String - 是否必填：否 - 客户端Id</li>
         /// <li>PolicyType - String - 是否必填：否 - 策略类型,0:系统策略1:用户自定义策略</li>

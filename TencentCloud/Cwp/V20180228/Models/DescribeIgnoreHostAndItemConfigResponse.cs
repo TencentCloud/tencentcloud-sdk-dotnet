@@ -26,14 +26,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 受影响检测项
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ItemSet")]
         public BaselineItemInfo[] ItemSet{ get; set; }
 
         /// <summary>
         /// 受影响主机
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostSet")]
         public BaselineHost[] HostSet{ get; set; }

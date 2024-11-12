@@ -133,7 +133,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? DestroyOrderNum{ get; set; }
 
         /// <summary>
-        /// 是否自动续费开关,true 开启,false 关闭
+        /// 自动加购是否自动续费开关,true 开启,false 关闭
         /// </summary>
         [JsonProperty("RepurchaseRenewSwitch")]
         public bool? RepurchaseRenewSwitch{ get; set; }

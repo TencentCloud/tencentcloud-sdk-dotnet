@@ -92,21 +92,18 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 旗舰版主机数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlagshipMachineCnt")]
         public ulong? FlagshipMachineCnt{ get; set; }
 
         /// <summary>
         /// 保护天数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProtectDays")]
         public ulong? ProtectDays{ get; set; }
 
         /// <summary>
         /// 15天内新增的主机数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddedOnTheFifteen")]
         public ulong? AddedOnTheFifteen{ get; set; }

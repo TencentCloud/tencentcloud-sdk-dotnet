@@ -32,7 +32,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 指定硬盘列表，为空时表示所有硬盘：disk_id1|disk_name1;disk_id2|disk_name2
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskInfo")]
         public string DiskInfo{ get; set; }

@@ -49,7 +49,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public bool? WaitSwitch{ get; set; }
 
         /// <summary>
-        /// 集群版实例指定节点id发起主从切换。
+        /// 集群版实例指定节点 ID 发起主从切换。
         /// </summary>
         [JsonProperty("DstNodeId")]
         public string DstNodeId{ get; set; }

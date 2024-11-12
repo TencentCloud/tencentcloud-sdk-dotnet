@@ -25,13 +25,13 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 人员描述字段Index，从0开始
+        /// 人员描述字段Index，从0开始。
         /// </summary>
         [JsonProperty("PersonExDescriptionIndex")]
         public ulong? PersonExDescriptionIndex{ get; set; }
 
         /// <summary>
-        /// 需要更新的人员描述字段内容
+        /// 需要更新的人员描述字段内容。
         /// </summary>
         [JsonProperty("PersonExDescription")]
         public string PersonExDescription{ get; set; }

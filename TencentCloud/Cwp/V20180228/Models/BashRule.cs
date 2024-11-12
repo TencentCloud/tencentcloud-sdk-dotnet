@@ -99,28 +99,24 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 生效服务器的uuid数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uuids")]
         public string[] Uuids{ get; set; }
 
         /// <summary>
         /// 0=黑名单 1=白名单
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("White")]
         public ulong? White{ get; set; }
 
         /// <summary>
         /// 是否处理之前的事件 0: 不处理 1:处理
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DealOldEvents")]
         public ulong? DealOldEvents{ get; set; }
 
         /// <summary>
         /// 规则描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

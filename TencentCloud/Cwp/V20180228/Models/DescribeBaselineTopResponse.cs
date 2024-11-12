@@ -26,7 +26,6 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 检测项Top列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleTopList")]
         public BaselineRuleTopInfo[] RuleTopList{ get; set; }

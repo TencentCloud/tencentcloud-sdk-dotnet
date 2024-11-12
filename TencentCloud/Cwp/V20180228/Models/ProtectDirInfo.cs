@@ -80,28 +80,24 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 首次开启防护时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FirstProtectTime")]
         public string FirstProtectTime{ get; set; }
 
         /// <summary>
         /// 最近开启防护时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LatestProtectTime")]
         public string LatestProtectTime{ get; set; }
 
         /// <summary>
         /// 防护文件类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProtectFileType")]
         public string ProtectFileType{ get; set; }
 
         /// <summary>
         /// 防护文件总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProtectFilesCount")]
         public long? ProtectFilesCount{ get; set; }

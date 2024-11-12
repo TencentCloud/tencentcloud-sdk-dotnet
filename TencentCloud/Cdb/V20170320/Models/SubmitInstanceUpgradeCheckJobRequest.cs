@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例D
+        /// 实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 目标数据库版本
+        /// 目标数据库版本。
         /// </summary>
         [JsonProperty("DstMysqlVersion")]
         public string DstMysqlVersion{ get; set; }

@@ -38,7 +38,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 关联规则的名称（仅展示其中一条）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

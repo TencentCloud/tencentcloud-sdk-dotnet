@@ -104,49 +104,42 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 0: bash日志 1: 实时监控(雷霆版)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DetectBy")]
         public ulong? DetectBy{ get; set; }
 
         /// <summary>
         /// 进程id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Pid")]
         public string Pid{ get; set; }
 
         /// <summary>
         /// 进程名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Exe")]
         public string Exe{ get; set; }
 
         /// <summary>
         /// 处理时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
         /// 规则类别  0=系统规则，1=用户规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleCategory")]
         public ulong? RuleCategory{ get; set; }
 
         /// <summary>
         /// 自动生成的正则表达式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegexBashCmd")]
         public string RegexBashCmd{ get; set; }
 
         /// <summary>
         /// 主机HostName
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }

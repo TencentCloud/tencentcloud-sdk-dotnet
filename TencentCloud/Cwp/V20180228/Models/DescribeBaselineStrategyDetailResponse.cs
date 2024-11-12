@@ -26,35 +26,30 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 策略扫描通过率
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PassRate")]
         public ulong? PassRate{ get; set; }
 
         /// <summary>
         /// 策略名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrategyName")]
         public string StrategyName{ get; set; }
 
         /// <summary>
         /// 策略扫描周期(天)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanCycle")]
         public string ScanCycle{ get; set; }
 
         /// <summary>
         /// 定期检测时间, 该时间下发扫描
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanAt")]
         public string ScanAt{ get; set; }
 
         /// <summary>
         /// 扫描范围是否全部服务器, 1:是  0:否, 为1则为全部专业版主机
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsGlobal")]
         public ulong? IsGlobal{ get; set; }
@@ -66,35 +61,30 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// ecm：边缘计算主机
         /// lh: 轻量应用服务器
         /// ohter: 混合云机器
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
 
         /// <summary>
         /// 主机地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// 用户该策略下的所有主机id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Quuids")]
         public string[] Quuids{ get; set; }
 
         /// <summary>
         /// 用户该策略下所有的基线id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryIds")]
         public string[] CategoryIds{ get; set; }
 
         /// <summary>
         /// 1 表示扫描过, 0没扫描过
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IfScanned")]
         public ulong? IfScanned{ get; set; }

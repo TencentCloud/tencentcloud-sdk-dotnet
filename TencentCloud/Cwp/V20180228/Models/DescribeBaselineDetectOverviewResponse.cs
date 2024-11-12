@@ -50,14 +50,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 最近一次检测通过个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LatestPassCount")]
         public long? LatestPassCount{ get; set; }
 
         /// <summary>
         /// 最近一次检测未通过个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LatestNotPassCount")]
         public long? LatestNotPassCount{ get; set; }

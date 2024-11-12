@@ -38,7 +38,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 影响主机quuid列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Quuids")]
         public string[] Quuids{ get; set; }
@@ -51,7 +50,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 影响主机id列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
@@ -64,7 +62,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 排除的主机id列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExcludeInstanceIds")]
         public string[] ExcludeInstanceIds{ get; set; }

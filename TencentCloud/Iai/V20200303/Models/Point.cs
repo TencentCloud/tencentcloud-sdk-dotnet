@@ -25,13 +25,13 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// x坐标
+        /// x坐标。
         /// </summary>
         [JsonProperty("X")]
         public long? X{ get; set; }
 
         /// <summary>
-        /// Y坐标
+        /// Y坐标。
         /// </summary>
         [JsonProperty("Y")]
         public long? Y{ get; set; }

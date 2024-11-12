@@ -32,28 +32,24 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 项目或标签的名称列表，自选主机时为空
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ItemLabels")]
         public string[] ItemLabels{ get; set; }
 
         /// <summary>
         /// 机器列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Quuids")]
         public string[] Quuids{ get; set; }
 
         /// <summary>
         /// 机器列表总数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
         /// 项目或标签的id列表，自选主机时为空
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ItemLabelIds")]
         public string[] ItemLabelIds{ get; set; }

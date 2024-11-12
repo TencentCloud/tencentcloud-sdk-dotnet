@@ -110,14 +110,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// window 系统漏洞事件总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WindowVul")]
         public SecurityEventInfo WindowVul{ get; set; }
 
         /// <summary>
         /// linux系统漏洞事件总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LinuxVul")]
         public SecurityEventInfo LinuxVul{ get; set; }

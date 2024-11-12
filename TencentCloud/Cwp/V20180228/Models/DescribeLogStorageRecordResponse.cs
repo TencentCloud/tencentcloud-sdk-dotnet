@@ -26,7 +26,6 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 存储量记录
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Records")]
         public LogStorageRecord[] Records{ get; set; }

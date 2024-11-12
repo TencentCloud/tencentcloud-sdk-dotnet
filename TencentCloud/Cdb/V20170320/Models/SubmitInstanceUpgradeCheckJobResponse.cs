@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 任务ID
+        /// 任务 ID
         /// </summary>
         [JsonProperty("JobId")]
         public long? JobId{ get; set; }

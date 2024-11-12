@@ -30,6 +30,12 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("Input")]
         public string Input{ get; set; }
 
+        /// <summary>
+        /// 输入文本数组。输入数组总长度不超过 200 。
+        /// </summary>
+        [JsonProperty("InputList")]
+        public string[] InputList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Input", this.Input);
+            this.SetParamArraySimple(map, prefix + "InputList.", this.InputList);
         }
     }
 }

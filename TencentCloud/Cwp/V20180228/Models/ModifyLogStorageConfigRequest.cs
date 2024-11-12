@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 是否修改有效期
+        /// 是否修改有效期（已废弃）
         /// </summary>
         [JsonProperty("IsModifyPeriod")]
         public bool? IsModifyPeriod{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 包含此人员的人员库ID
+        /// 包含此人员的人员库ID。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 人员描述字段内容
+        /// 人员描述字段内容。
         /// </summary>
         [JsonProperty("PersonExDescriptions")]
         public string[] PersonExDescriptions{ get; set; }

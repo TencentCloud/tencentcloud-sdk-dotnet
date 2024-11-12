@@ -31,7 +31,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? End{ get; set; }
 
         /// <summary>
-        /// 指标名
+        /// 指标名，NODE.CPU：节点平均CPU利用率和总核数；NODE.CPU.SLHBASE：Serverless实例平均CPU利用率和总核数；HDFS.NN.CAPACITY：存储使用率和总量
         /// </summary>
         [JsonProperty("Metric")]
         public string Metric{ get; set; }

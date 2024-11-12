@@ -25,13 +25,13 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 云镜客户端ID
+        /// 机器uuid
         /// </summary>
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }
 
         /// <summary>
-        /// 主机ID
+        /// 主机安全uuid
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }

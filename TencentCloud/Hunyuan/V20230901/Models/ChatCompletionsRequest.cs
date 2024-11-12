@@ -160,7 +160,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public bool? EnableMultimedia{ get; set; }
 
         /// <summary>
-        /// 是否开启搜索深度模式，默认是false，在值为true且命中搜索时，会请求深度搜索。
+        /// 是否开启深度研究该问题，默认是false，在值为true且命中深度研究该问题时，会返回深度研究该问题信息。
         /// </summary>
         [JsonProperty("EnableDeepSearch")]
         public bool? EnableDeepSearch{ get; set; }

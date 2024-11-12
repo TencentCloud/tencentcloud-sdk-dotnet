@@ -31,13 +31,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 云镜UUID
+        /// 主机安全uuid
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
-        /// 主机ID
+        /// 主机uuid
         /// </summary>
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }
@@ -140,7 +140,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PsTree")]
         public string PsTree{ get; set; }

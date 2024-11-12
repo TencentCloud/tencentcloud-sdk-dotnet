@@ -38,7 +38,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 授权状态 0 未使用,1 部分使用, 2 已用完, 3 不可用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LicenseStatus")]
         public ulong? LicenseStatus{ get; set; }
@@ -111,14 +110,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 平台标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tags[] Tags{ get; set; }
 
         /// <summary>
         /// 冻结数,当为0时 为未冻结,非0 则表示冻结授权数额
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FreezeNum")]
         public long? FreezeNum{ get; set; }

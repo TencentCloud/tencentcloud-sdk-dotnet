@@ -49,16 +49,16 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string MachineName{ get; set; }
 
         /// <summary>
-        /// 帐号名。
+        /// 账号名。
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
-        /// 帐号变更类型。
-        /// <li>CREATE：表示新增帐号</li>
-        /// <li>MODIFY：表示修改帐号</li>
-        /// <li>DELETE：表示删除帐号</li>
+        /// 账号变更类型。
+        /// <li>CREATE：表示新增账号</li>
+        /// <li>MODIFY：表示修改账号</li>
+        /// <li>DELETE：表示删除账号</li>
         /// </summary>
         [JsonProperty("ModifyType")]
         public string ModifyType{ get; set; }

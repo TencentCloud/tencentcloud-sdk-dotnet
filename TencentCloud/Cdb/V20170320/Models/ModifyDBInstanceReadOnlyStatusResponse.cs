@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Iss.V20230517.Models
+namespace TencentCloud.Cdb.V20170320.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CheckDomainRequest : AbstractModel
+    public class ModifyDBInstanceReadOnlyStatusResponse : AbstractModel
     {
         
         /// <summary>
-        /// 播放域名
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("PlayDomain")]
-        public string PlayDomain{ get; set; }
-
-        /// <summary>
-        /// CNAME 记录值
-        /// </summary>
-        [JsonProperty("InternalDomain")]
-        public string InternalDomain{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Iss.V20230517.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PlayDomain", this.PlayDomain);
-            this.SetParamSimple(map, prefix + "InternalDomain", this.InternalDomain);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

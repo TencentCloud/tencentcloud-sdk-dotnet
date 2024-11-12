@@ -25,13 +25,14 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 属性值
+        /// 属性值。
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// Type识别概率值,[0,1],代表判断正确的概率。
+        /// Type识别概率值。
+        /// - 取值范围：[0,1]，代表判断正确的概率。
         /// </summary>
         [JsonProperty("Probability")]
         public float? Probability{ get; set; }

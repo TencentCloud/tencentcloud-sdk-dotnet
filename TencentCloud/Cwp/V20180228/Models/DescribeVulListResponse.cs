@@ -26,21 +26,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 漏洞列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulInfoList")]
         public VulInfoList[] VulInfoList{ get; set; }
 
         /// <summary>
         /// 漏洞总条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
         /// 重点关注漏洞总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FollowVulCount")]
         public ulong? FollowVulCount{ get; set; }

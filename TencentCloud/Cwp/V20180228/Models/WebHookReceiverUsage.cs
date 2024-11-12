@@ -26,21 +26,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 接收人id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReceiverId")]
         public long? ReceiverId{ get; set; }
 
         /// <summary>
         /// 接收人名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReceiverName")]
         public string ReceiverName{ get; set; }
 
         /// <summary>
         /// 策略名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }

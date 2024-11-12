@@ -26,21 +26,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 未处理的漏洞数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UndoVulCount")]
         public ulong? UndoVulCount{ get; set; }
 
         /// <summary>
         /// 未处理的主机数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UndoHostCount")]
         public long? UndoHostCount{ get; set; }
 
         /// <summary>
         /// 普通版主机数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NotProfessionCount")]
         public ulong? NotProfessionCount{ get; set; }

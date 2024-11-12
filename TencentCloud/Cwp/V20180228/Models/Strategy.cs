@@ -26,70 +26,60 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 策略名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrategyName")]
         public string StrategyName{ get; set; }
 
         /// <summary>
         /// 策略id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrategyId")]
         public ulong? StrategyId{ get; set; }
 
         /// <summary>
         /// 基线检测项总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleCount")]
         public ulong? RuleCount{ get; set; }
 
         /// <summary>
         /// 主机数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostCount")]
         public ulong? HostCount{ get; set; }
 
         /// <summary>
         /// 扫描周期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanCycle")]
         public ulong? ScanCycle{ get; set; }
 
         /// <summary>
         /// 扫描时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanAt")]
         public string ScanAt{ get; set; }
 
         /// <summary>
         /// 是否可用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Enabled")]
         public ulong? Enabled{ get; set; }
 
         /// <summary>
         /// 通过率
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PassRate")]
         public ulong? PassRate{ get; set; }
 
         /// <summary>
         /// 基线id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryIds")]
         public string CategoryIds{ get; set; }
 
         /// <summary>
         /// 是否默认策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsDefault")]
         public ulong? IsDefault{ get; set; }

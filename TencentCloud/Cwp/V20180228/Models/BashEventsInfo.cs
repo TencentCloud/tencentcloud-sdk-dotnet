@@ -31,7 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 云镜ID
+        /// 主机uuid
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
@@ -98,98 +98,84 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 进程名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Exe")]
         public string Exe{ get; set; }
 
         /// <summary>
         /// 处理时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
         /// 规则类别  0=系统规则，1=用户规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleCategory")]
         public ulong? RuleCategory{ get; set; }
 
         /// <summary>
         /// 自动生成的正则表达式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegexBashCmd")]
         public string RegexBashCmd{ get; set; }
 
         /// <summary>
         /// 进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PsTree")]
         public string PsTree{ get; set; }
 
         /// <summary>
         /// 建议方案
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SuggestScheme")]
         public string SuggestScheme{ get; set; }
 
         /// <summary>
         /// 描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HarmDescribe")]
         public string HarmDescribe{ get; set; }
 
         /// <summary>
         /// 标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
         /// 参考链接
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("References")]
         public string[] References{ get; set; }
 
         /// <summary>
         /// 主机外网ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineWanIp")]
         public string MachineWanIp{ get; set; }
 
         /// <summary>
         /// 主机在线状态 OFFLINE  ONLINE
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineStatus")]
         public string MachineStatus{ get; set; }
 
         /// <summary>
         /// 登录用户
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
         /// 进程号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Pid")]
         public string Pid{ get; set; }
 
         /// <summary>
         /// 数据来源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DetectBy")]
         public string DetectBy{ get; set; }

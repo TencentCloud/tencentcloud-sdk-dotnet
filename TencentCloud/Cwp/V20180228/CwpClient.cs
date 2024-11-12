@@ -28,7 +28,7 @@ namespace TencentCloud.Cwp.V20180228
 
        private const string endpoint = "cwp.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.1120";
+       private const string sdkVersion = "SDK_NET_3.0.1121";
 
         /// <summary>
         /// Client constructor.
@@ -323,31 +323,6 @@ namespace TencentCloud.Cwp.V20180228
         public CreateBuyBindTaskResponse CreateBuyBindTaskSync(CreateBuyBindTaskRequest req)
         {
             return InternalRequestAsync<CreateBuyBindTaskResponse>(req, "CreateBuyBindTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 云护航计费产品已下线
-        /// 
-        /// 云护航服务使用完成后，该接口可以确认收货
-        /// </summary>
-        /// <param name="req"><see cref="CreateCloudProtectServiceOrderRecordRequest"/></param>
-        /// <returns><see cref="CreateCloudProtectServiceOrderRecordResponse"/></returns>
-        public Task<CreateCloudProtectServiceOrderRecordResponse> CreateCloudProtectServiceOrderRecord(CreateCloudProtectServiceOrderRecordRequest req)
-        {
-            return InternalRequestAsync<CreateCloudProtectServiceOrderRecordResponse>(req, "CreateCloudProtectServiceOrderRecord");
-        }
-
-        /// <summary>
-        /// 云护航计费产品已下线
-        /// 
-        /// 云护航服务使用完成后，该接口可以确认收货
-        /// </summary>
-        /// <param name="req"><see cref="CreateCloudProtectServiceOrderRecordRequest"/></param>
-        /// <returns><see cref="CreateCloudProtectServiceOrderRecordResponse"/></returns>
-        public CreateCloudProtectServiceOrderRecordResponse CreateCloudProtectServiceOrderRecordSync(CreateCloudProtectServiceOrderRecordRequest req)
-        {
-            return InternalRequestAsync<CreateCloudProtectServiceOrderRecordResponse>(req, "CreateCloudProtectServiceOrderRecord")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -26,7 +26,6 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 告警点所在事件的所有节点信息,可能包含多事件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IncidentNodes")]
         public IncidentVertexInfo[] IncidentNodes{ get; set; }

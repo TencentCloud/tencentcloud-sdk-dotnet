@@ -32,7 +32,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 操作uin
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
@@ -45,7 +44,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 策略备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -64,28 +62,24 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 包含目录，用;分隔
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IncludeDir")]
         public string IncludeDir{ get; set; }
 
         /// <summary>
         /// 包含目录，用;分隔
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExcludeDir")]
         public string ExcludeDir{ get; set; }
 
         /// <summary>
         /// 备份模式： 0按周，1按天
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupType")]
         public ulong? BackupType{ get; set; }
 
         /// <summary>
         /// 备份星期天数（1-7）：1;2;3;4
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Weekday")]
         public string Weekday{ get; set; }
@@ -104,28 +98,24 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 最近修改时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
         /// 绑定机器数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineCount")]
         public ulong? MachineCount{ get; set; }
 
         /// <summary>
         /// 策略关联事件数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventCount")]
         public ulong? EventCount{ get; set; }

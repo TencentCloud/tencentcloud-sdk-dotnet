@@ -31,7 +31,7 @@ namespace TencentCloud.Hai.V20230812.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有：instance-id，实例id；instance-state，实例状态
+        /// 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有：instance-id，实例id；instance-state，实例状态；charge-type，付费方式；public-ip-address，公网IP过滤
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

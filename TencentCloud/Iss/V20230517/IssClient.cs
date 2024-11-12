@@ -28,7 +28,7 @@ namespace TencentCloud.Iss.V20230517
 
        private const string endpoint = "iss.tencentcloudapi.com";
        private const string version = "2023-05-17";
-       private const string sdkVersion = "SDK_NET_3.0.1120";
+       private const string sdkVersion = "SDK_NET_3.0.1121";
 
         /// <summary>
         /// Client constructor.
@@ -287,27 +287,6 @@ namespace TencentCloud.Iss.V20230517
         public CallISAPIResponse CallISAPISync(CallISAPIRequest req)
         {
             return InternalRequestAsync<CallISAPIResponse>(req, "CallISAPI")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 用于检测域名是否备案。
-        /// </summary>
-        /// <param name="req"><see cref="CheckDomainRequest"/></param>
-        /// <returns><see cref="CheckDomainResponse"/></returns>
-        public Task<CheckDomainResponse> CheckDomain(CheckDomainRequest req)
-        {
-            return InternalRequestAsync<CheckDomainResponse>(req, "CheckDomain");
-        }
-
-        /// <summary>
-        /// 用于检测域名是否备案。
-        /// </summary>
-        /// <param name="req"><see cref="CheckDomainRequest"/></param>
-        /// <returns><see cref="CheckDomainResponse"/></returns>
-        public CheckDomainResponse CheckDomainSync(CheckDomainRequest req)
-        {
-            return InternalRequestAsync<CheckDomainResponse>(req, "CheckDomain")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

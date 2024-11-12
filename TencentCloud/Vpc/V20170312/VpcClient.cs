@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1120";
+       private const string sdkVersion = "SDK_NET_3.0.1121";
 
         /// <summary>
         /// Client constructor.
@@ -6400,6 +6400,27 @@ namespace TencentCloud.Vpc.V20170312
         public ModifyBandwidthPackageAttributeResponse ModifyBandwidthPackageAttributeSync(ModifyBandwidthPackageAttributeRequest req)
         {
             return InternalRequestAsync<ModifyBandwidthPackageAttributeResponse>(req, "ModifyBandwidthPackageAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 接口用于调整[共享带宽包](https://cloud.tencent.com/document/product/684/15245)(BWP)带宽
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBandwidthPackageBandwidthRequest"/></param>
+        /// <returns><see cref="ModifyBandwidthPackageBandwidthResponse"/></returns>
+        public Task<ModifyBandwidthPackageBandwidthResponse> ModifyBandwidthPackageBandwidth(ModifyBandwidthPackageBandwidthRequest req)
+        {
+            return InternalRequestAsync<ModifyBandwidthPackageBandwidthResponse>(req, "ModifyBandwidthPackageBandwidth");
+        }
+
+        /// <summary>
+        /// 接口用于调整[共享带宽包](https://cloud.tencent.com/document/product/684/15245)(BWP)带宽
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBandwidthPackageBandwidthRequest"/></param>
+        /// <returns><see cref="ModifyBandwidthPackageBandwidthResponse"/></returns>
+        public ModifyBandwidthPackageBandwidthResponse ModifyBandwidthPackageBandwidthSync(ModifyBandwidthPackageBandwidthRequest req)
+        {
+            return InternalRequestAsync<ModifyBandwidthPackageBandwidthResponse>(req, "ModifyBandwidthPackageBandwidth")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -38,7 +38,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 检测项所属规则的ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleId")]
         public ulong? RuleId{ get; set; }
@@ -69,14 +68,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 系统规则ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SysRuleId")]
         public long? SysRuleId{ get; set; }
 
         /// <summary>
         /// 被引自定义规则信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RelatedCustomRuleInfo")]
         public BaselineCustomRuleIdName[] RelatedCustomRuleInfo{ get; set; }

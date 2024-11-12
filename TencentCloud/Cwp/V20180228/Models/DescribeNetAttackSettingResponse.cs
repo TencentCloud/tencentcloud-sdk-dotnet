@@ -44,14 +44,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 自选主机
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
         /// 自选排除主机
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExcludeInstanceIds")]
         public string[] ExcludeInstanceIds{ get; set; }

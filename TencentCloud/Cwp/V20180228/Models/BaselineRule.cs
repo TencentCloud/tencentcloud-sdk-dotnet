@@ -68,21 +68,18 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// [0:所有专业版旗舰版|1:hostID|2:ip]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssetType")]
         public long? AssetType{ get; set; }
 
         /// <summary>
         /// 主机Id集合
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostIds")]
         public string[] HostIds{ get; set; }
 
         /// <summary>
         /// 主机IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostIps")]
         public string[] HostIps{ get; set; }

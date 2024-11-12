@@ -62,7 +62,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 主机标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tag")]
         public MachineTag[] Tag{ get; set; }
@@ -131,21 +130,18 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 数据更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 是否新增[0:否|1:是]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsNew")]
         public long? IsNew{ get; set; }
 
         /// <summary>
         /// 附加信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }

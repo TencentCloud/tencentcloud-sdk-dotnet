@@ -26,6 +26,11 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+        /// 说明：可输入多个实例 ID 进行查询，json 格式如下。
+        /// [
+        ///     "cdb-30z11v8s",
+        ///     "cdb-93h11efg"
+        ///   ]
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

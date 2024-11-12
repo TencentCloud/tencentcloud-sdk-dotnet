@@ -74,28 +74,24 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 策略描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Descript")]
         public string Descript{ get; set; }
 
         /// <summary>
         /// 事件列表点击“加入白名单”时,需要传EventId 事件的id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventId")]
         public long? EventId{ get; set; }
 
         /// <summary>
         /// 是否处理旧事件为白名单 0=不处理 1=处理
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DealOldEvents")]
         public long? DealOldEvents{ get; set; }
 
         /// <summary>
         /// 生效主机的QUUID集合
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Quuids")]
         public string[] Quuids{ get; set; }
@@ -126,7 +122,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 规则表达式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Rules")]
         public PolicyRules Rules{ get; set; }

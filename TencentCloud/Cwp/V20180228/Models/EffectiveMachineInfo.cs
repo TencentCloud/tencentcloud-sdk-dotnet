@@ -26,84 +26,72 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 机器名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineName")]
         public string MachineName{ get; set; }
 
         /// <summary>
         /// 机器公网ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachinePublicIp")]
         public string MachinePublicIp{ get; set; }
 
         /// <summary>
         /// 机器内网ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachinePrivateIp")]
         public string MachinePrivateIp{ get; set; }
 
         /// <summary>
         /// 机器标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineTag")]
         public MachineTag[] MachineTag{ get; set; }
 
         /// <summary>
         /// 机器Quuid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }
 
         /// <summary>
-        /// 云镜Uuid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 主机Uuid
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
         /// 内核版本号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KernelVersion")]
         public string KernelVersion{ get; set; }
 
         /// <summary>
         /// 在线状态 OFFLINE，ONLINE
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineStatus")]
         public string MachineStatus{ get; set; }
 
         /// <summary>
         /// 授权订单对象
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LicenseOrder")]
         public LicenseOrder LicenseOrder{ get; set; }
 
         /// <summary>
         /// 漏洞数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulNum")]
         public ulong? VulNum{ get; set; }
 
         /// <summary>
         /// 云标签信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CloudTags")]
         public Tags[] CloudTags{ get; set; }
 
         /// <summary>
         /// 机器instance ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }

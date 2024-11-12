@@ -25,79 +25,103 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 性别[0~49]为女性，[50，100]为男性，越接近0和100表示置信度越高。NeedFaceAttributes 不为 1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+        /// 性别。
+        /// - 取值说明：[0~49]为女性，[50，100]为男性，越接近0和100表示置信度越高。
+        /// - NeedFaceAttributes 不为 1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
         /// </summary>
         [JsonProperty("Gender")]
         public long? Gender{ get; set; }
 
         /// <summary>
-        /// 年龄 [0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+        /// 年龄 。
+        /// - 取值范围：[0~100]。
+        /// - NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
         /// </summary>
         [JsonProperty("Age")]
         public long? Age{ get; set; }
 
         /// <summary>
-        /// 微笑[0(normal，正常)~100(laugh，大笑)]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+        /// 微笑。
+        /// - 取值说明：[0(normal，正常)~100(laugh，大笑)]。
+        /// - NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
         /// </summary>
         [JsonProperty("Expression")]
         public long? Expression{ get; set; }
 
         /// <summary>
-        /// 是否有眼镜 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+        /// 是否有眼镜。
+        /// - 取值范围： [true,false]。
+        /// - NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
         /// </summary>
         [JsonProperty("Glass")]
         public bool? Glass{ get; set; }
 
         /// <summary>
-        /// 上下偏移[-30,30]，单位角度。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
-        /// 建议：人脸入库选择[-10,10]的图片。
+        /// 上下偏移。
+        /// - 取值范围：[-30,30]，单位角度。
+        /// - NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
+        /// - 建议：人脸入库选择[-10,10]的图片。
         /// </summary>
         [JsonProperty("Pitch")]
         public long? Pitch{ get; set; }
 
         /// <summary>
-        /// 左右偏移[-30,30]，单位角度。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
-        /// 建议：人脸入库选择[-10,10]的图片。
+        /// 左右偏移。
+        /// - 取值范围：[-30,30]，单位角度。 
+        /// - NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
+        /// - 建议：人脸入库选择[-10,10]的图片。
         /// </summary>
         [JsonProperty("Yaw")]
         public long? Yaw{ get; set; }
 
         /// <summary>
-        /// 平面旋转[-180,180]，单位角度。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。  
-        /// 建议：人脸入库选择[-20,20]的图片。
+        /// 平面旋转。
+        /// - 取值范围：[-180,180]，单位角度。 
+        /// - NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。  
+        /// - 建议：人脸入库选择[-20,20]的图片。
         /// </summary>
         [JsonProperty("Roll")]
         public long? Roll{ get; set; }
 
         /// <summary>
-        /// 魅力[0~100]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+        /// 魅力。
+        /// - 取值范围：[0~100]。
+        /// - NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
         /// </summary>
         [JsonProperty("Beauty")]
         public long? Beauty{ get; set; }
 
         /// <summary>
-        /// 是否有帽子 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+        /// 是否有帽子。
+        /// - 取值范围： [true,false]。
+        /// - NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Hat")]
         public bool? Hat{ get; set; }
 
         /// <summary>
-        /// 是否有口罩 [true,false]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+        /// 是否有口罩。
+        /// - 取值范围： [true,false]。
+        /// - NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mask")]
         public bool? Mask{ get; set; }
 
         /// <summary>
-        /// 头发信息，包含头发长度（length）、有无刘海（bang）、头发颜色（color）。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+        /// 头发信息，包含头发长度（length）、有无刘海（bang）、头发颜色（color）。
+        /// - NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Hair")]
         public FaceHairAttributesInfo Hair{ get; set; }
 
         /// <summary>
-        /// 双眼是否睁开 [true,false]。只要有超过一只眼睛闭眼，就返回false。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+        /// 双眼是否睁开。
+        /// - 取值范围： [true,false]。
+        /// - 只要有超过一只眼睛闭眼，就返回false。
+        /// -  NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EyeOpen")]

@@ -25,45 +25,45 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 人员ID
+        /// 人员ID。
         /// </summary>
         [JsonProperty("PersonId")]
         public string PersonId{ get; set; }
 
         /// <summary>
-        /// 人脸ID，仅在SearchFaces/SearchFacesReturnsByGroup接口返回时有效。人员搜索类接口采用融合特征方式检索，该字段无意义
+        /// 人脸ID。
+        /// - 仅在SearchFaces/SearchFacesReturnsByGroup接口返回时有效。
+        /// - 人员搜索类接口采用融合特征方式检索，该字段无意义。
         /// </summary>
         [JsonProperty("FaceId")]
         public string FaceId{ get; set; }
 
         /// <summary>
         /// 候选者的匹配得分。 
-        /// 
-        /// 1万大小人脸底库下，误识率百分之一对应分数为70分，误识率千分之一对应分数为80分，误识率万分之一对应分数为90分；
-        /// 10万大小人脸底库下，误识率百分之一对应分数为80分，误识率千分之一对应分数为90分，误识率万分之一对应分数为100分；
-        /// 30万大小人脸底库下，误识率百分之一对应分数为85分，误识率千分之一对应分数为95分。
-        /// 
-        /// 一般80分左右可适用大部分场景，建议分数不要超过90分。您可以根据实际情况选择合适的分数。
+        /// - 1万大小人脸底库下，误识率百分之一对应分数为70分，误识率千分之一对应分数为80分，误识率万分之一对应分数为90分。
+        /// - 10万大小人脸底库下，误识率百分之一对应分数为80分，误识率千分之一对应分数为90分，误识率万分之一对应分数为100分。
+        /// - 30万大小人脸底库下，误识率百分之一对应分数为85分，误识率千分之一对应分数为95分。
+        /// - 一般80分左右可适用大部分场景，建议分数不要超过90分。您可以根据实际情况选择合适的分数。
         /// </summary>
         [JsonProperty("Score")]
         public float? Score{ get; set; }
 
         /// <summary>
-        /// 人员名称
+        /// 人员名称。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PersonName")]
         public string PersonName{ get; set; }
 
         /// <summary>
-        /// 人员性别
+        /// 人员性别。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Gender")]
         public long? Gender{ get; set; }
 
         /// <summary>
-        /// 包含此人员的人员库及描述字段内容列表
+        /// 包含此人员的人员库及描述字段内容列表。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PersonGroupInfos")]

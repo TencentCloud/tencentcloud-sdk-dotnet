@@ -26,28 +26,24 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 网络攻击主机维度top统计数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Agent")]
         public TopInfo[] Agent{ get; set; }
 
         /// <summary>
         /// 网络攻击ip来源维度top统计数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SrcIp")]
         public TopInfo[] SrcIp{ get; set; }
 
         /// <summary>
         /// 网络攻击目标端口维度top统计数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DstPort")]
         public TopInfo[] DstPort{ get; set; }
 
         /// <summary>
         /// 网络攻击漏洞维度top统计数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vul")]
         public TopInfo[] Vul{ get; set; }

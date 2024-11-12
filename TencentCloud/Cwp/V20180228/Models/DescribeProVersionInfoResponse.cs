@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 后付费昨日扣费
+        /// 昨日【专业版-按量付费】扣费明细,(实际已账单为准)
         /// </summary>
         [JsonProperty("PostPayCost")]
         public ulong? PostPayCost{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public bool? IsAutoOpenProVersion{ get; set; }
 
         /// <summary>
-        /// 开通专业版主机数
+        /// 专业版主机数
         /// </summary>
         [JsonProperty("ProVersionNum")]
         public ulong? ProVersionNum{ get; set; }

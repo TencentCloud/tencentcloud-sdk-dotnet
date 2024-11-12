@@ -56,21 +56,18 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 开始扫描时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanBeginTime")]
         public string ScanBeginTime{ get; set; }
 
         /// <summary>
         /// 扫描漏洞数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskEventCount")]
         public ulong? RiskEventCount{ get; set; }
 
         /// <summary>
         /// 扫描结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanEndTime")]
         public string ScanEndTime{ get; set; }

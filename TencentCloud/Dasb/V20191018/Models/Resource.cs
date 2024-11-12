@@ -236,7 +236,6 @@ namespace TencentCloud.Dasb.V20191018.Models
 
         /// <summary>
         /// 部署模式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeployModel")]
         public long? DeployModel{ get; set; }

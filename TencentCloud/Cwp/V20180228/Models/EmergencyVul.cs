@@ -74,63 +74,54 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// cve编号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CveId")]
         public string CveId{ get; set; }
 
         /// <summary>
         /// CVSS评分
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CvssScore")]
         public float? CvssScore{ get; set; }
 
         /// <summary>
         /// 漏洞标签 多个逗号分割
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Labels")]
         public string Labels{ get; set; }
 
         /// <summary>
         /// 影响机器数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostCount")]
         public ulong? HostCount{ get; set; }
 
         /// <summary>
         /// 是否支持防御， 0:不支持 1:支持
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSupportDefense")]
         public ulong? IsSupportDefense{ get; set; }
 
         /// <summary>
         /// 已防御的攻击次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefenseAttackCount")]
         public ulong? DefenseAttackCount{ get; set; }
 
         /// <summary>
         /// 检测规则 0 - 版本比对, 1 - POC验证
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Method")]
         public ulong? Method{ get; set; }
 
         /// <summary>
         /// 攻击热度级别
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttackLevel")]
         public ulong? AttackLevel{ get; set; }
 
         /// <summary>
         /// 是否有漏洞主机开启漏洞防御
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefenseState")]
         public bool? DefenseState{ get; set; }

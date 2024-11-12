@@ -37,7 +37,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string MachineOs{ get; set; }
 
         /// <summary>
-        /// 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+        /// 主机安全uuid，若客户端长时间不在线将返回空字符。
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
@@ -121,21 +121,18 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 授权订单对象
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LicenseOrder")]
         public LicenseOrder LicenseOrder{ get; set; }
 
         /// <summary>
         /// 云标签信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CloudTags")]
         public Tags[] CloudTags{ get; set; }
 
         /// <summary>
         /// 实例ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

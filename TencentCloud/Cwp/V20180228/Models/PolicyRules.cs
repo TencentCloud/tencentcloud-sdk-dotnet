@@ -26,21 +26,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 进程
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Process")]
         public CommandLine Process{ get; set; }
 
         /// <summary>
         /// 父进程
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PProcess")]
         public CommandLine PProcess{ get; set; }
 
         /// <summary>
         /// 祖先进程
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AProcess")]
         public CommandLine AProcess{ get; set; }

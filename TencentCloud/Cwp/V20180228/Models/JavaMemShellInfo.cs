@@ -32,14 +32,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 服务器名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
         /// <summary>
         /// 服务器IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostIp")]
         public string HostIp{ get; set; }
@@ -82,49 +80,42 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 主机额外信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
 
         /// <summary>
         /// 服务器uuid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
         /// 类名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClassName")]
         public string ClassName{ get; set; }
 
         /// <summary>
         /// 父类名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SuperClassName")]
         public string SuperClassName{ get; set; }
 
         /// <summary>
         /// 继承的接口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Interfaces")]
         public string Interfaces{ get; set; }
 
         /// <summary>
         /// 注释
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Annotations")]
         public string Annotations{ get; set; }
 
         /// <summary>
         /// 所属的类加载器
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoaderClassName")]
         public string LoaderClassName{ get; set; }

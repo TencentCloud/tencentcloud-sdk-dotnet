@@ -26,7 +26,6 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 本地提权详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrivilegeEventInfo")]
         public PrivilegeEventInfo PrivilegeEventInfo{ get; set; }

@@ -31,36 +31,31 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// Uuid串
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 主机Uuid
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
         /// 主机ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineIp")]
         public string MachineIp{ get; set; }
 
         /// <summary>
         /// 主机名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineName")]
         public string MachineName{ get; set; }
 
         /// <summary>
         /// 用户名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
         /// 来源ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SrcIp")]
         public string SrcIp{ get; set; }
@@ -73,63 +68,54 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 国家id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Country")]
         public ulong? Country{ get; set; }
 
         /// <summary>
         /// 城市id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("City")]
         public ulong? City{ get; set; }
 
         /// <summary>
         /// 省份id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Province")]
         public ulong? Province{ get; set; }
 
         /// <summary>
         /// 登录时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoginTime")]
         public string LoginTime{ get; set; }
 
         /// <summary>
         /// 修改时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
         /// 是否命中异地登录异常  1表示命中此类异常, 0表示未命中
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsRiskArea")]
         public ulong? IsRiskArea{ get; set; }
 
         /// <summary>
         /// 是否命中异常用户异常 1表示命中此类异常, 0表示未命中
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsRiskUser")]
         public ulong? IsRiskUser{ get; set; }
 
         /// <summary>
         /// 是否命中异常时间异常 1表示命中此类异常, 0表示未命中
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsRiskTime")]
         public ulong? IsRiskTime{ get; set; }
 
         /// <summary>
         /// 是否命中异常IP异常 1表示命中此类异常, 0表示未命中
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsRiskSrcIp")]
         public ulong? IsRiskSrcIp{ get; set; }
@@ -138,21 +124,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// 危险等级：
         /// 0 高危
         /// 1 可疑
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskLevel")]
         public ulong? RiskLevel{ get; set; }
 
         /// <summary>
         /// 位置名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Location")]
         public string Location{ get; set; }
 
         /// <summary>
         /// 主机quuid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }
@@ -161,21 +144,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// 高危信息说明：
         /// ABROAD - 海外IP；
         /// XTI - 威胁情报
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
         /// 附加信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
 
         /// <summary>
         /// 请求目的端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }

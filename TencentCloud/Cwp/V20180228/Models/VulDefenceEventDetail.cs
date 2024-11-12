@@ -86,7 +86,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 攻击源端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourcePort")]
         public ulong?[] SourcePort{ get; set; }
@@ -171,7 +170,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 主机额外信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }

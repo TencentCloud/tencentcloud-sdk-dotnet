@@ -26,7 +26,6 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 规则名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -57,7 +56,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 生效主机uuid,空表示全部主机，通过参数可控制返回的条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uuids")]
         public string[] Uuids{ get; set; }
@@ -90,7 +88,6 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// 加白处理类型
         /// <li>cur 仅对当前加白</li>
         /// <li>all 所有符合条件加白</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddWhiteType")]
         public string AddWhiteType{ get; set; }

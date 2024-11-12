@@ -32,35 +32,30 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 主机名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
         /// <summary>
         /// 主机ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostIp")]
         public string HostIp{ get; set; }
 
         /// <summary>
         /// 快照名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapshotName")]
         public string SnapshotName{ get; set; }
 
         /// <summary>
         /// 快照创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
         /// 快照id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapshotId")]
         public string SnapshotId{ get; set; }
@@ -79,7 +74,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 快照创建失败原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailReason")]
         public string FailReason{ get; set; }

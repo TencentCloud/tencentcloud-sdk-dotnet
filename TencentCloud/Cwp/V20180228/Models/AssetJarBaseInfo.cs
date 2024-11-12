@@ -98,7 +98,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 数据更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
@@ -123,8 +122,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         ///  附加信息
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }

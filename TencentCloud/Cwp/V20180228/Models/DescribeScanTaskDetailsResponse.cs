@@ -86,35 +86,30 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 漏洞信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulInfo")]
         public VulDetailInfo[] VulInfo{ get; set; }
 
         /// <summary>
         /// 风险事件个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskEventCount")]
         public ulong? RiskEventCount{ get; set; }
 
         /// <summary>
         /// 0一键检测 1定时检测
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
         /// 任务是否全部正在被停止 ture是
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StoppingAll")]
         public bool? StoppingAll{ get; set; }
 
         /// <summary>
         /// 扫描出漏洞个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulCount")]
         public ulong? VulCount{ get; set; }

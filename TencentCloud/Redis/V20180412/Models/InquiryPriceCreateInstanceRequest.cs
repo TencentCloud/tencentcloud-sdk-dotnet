@@ -73,15 +73,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// 实例分片数量。
-        /// Redis2.8标准架构、CKV标准架构、Redis4.0标准架构无需填写。
+        /// 实例分片数量。2.8 标准架构无需配置分片，其余版本标准架构需要配置分片数量为1。集群架构需指定需购买的分片数量。
         /// </summary>
         [JsonProperty("RedisShardNum")]
         public long? RedisShardNum{ get; set; }
 
         /// <summary>
-        /// 实例副本数量。
-        /// Redis2.8标准架构、CKV标准架构无需填写。
+        /// 实例副本数量。2.8 标准架构无需配置副本数量。
         /// </summary>
         [JsonProperty("RedisReplicasNum")]
         public long? RedisReplicasNum{ get; set; }

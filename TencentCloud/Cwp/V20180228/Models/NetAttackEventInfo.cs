@@ -110,7 +110,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 主机额外信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
@@ -135,35 +134,30 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// cvm uuid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }
 
         /// <summary>
         /// 攻击发生时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MergeTime")]
         public string MergeTime{ get; set; }
 
         /// <summary>
         /// 0: 尝试攻击 1:攻击成功
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
         /// 0:无失陷行为 1: rce(命令执行) 2: dnslog 3: writefile
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostOpType")]
         public ulong? HostOpType{ get; set; }
 
         /// <summary>
         /// 进程树,需要用base64 解码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostOpProcessTree")]
         public string HostOpProcessTree{ get; set; }

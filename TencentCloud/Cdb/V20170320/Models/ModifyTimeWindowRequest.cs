@@ -32,12 +32,22 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 修改后的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起止时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；起止时间范围为：[00:00, 24:00]。
+        /// 说明：设置两个时间段的 json 示例如下。
+        /// [
+        ///     "01:00-01:30",
+        ///     "02:00-02:30"
+        ///   ]
         /// </summary>
         [JsonProperty("TimeRanges")]
         public string[] TimeRanges{ get; set; }
 
         /// <summary>
-        /// 指定修改哪一天的客户时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
+        /// 指定修改哪一天的可维护时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
+        /// 说明：指定修改多天的 json 示例如下。
+        /// [
+        ///     "monday",
+        ///     "tuesday"
+        ///   ]
         /// </summary>
         [JsonProperty("Weekdays")]
         public string[] Weekdays{ get; set; }

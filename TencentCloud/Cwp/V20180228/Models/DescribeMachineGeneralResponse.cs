@@ -34,30 +34,35 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// 腾讯云服务商机器数
         /// </summary>
         [JsonProperty("TencentCloudMachineCnt")]
+        [System.Obsolete]
         public ulong? TencentCloudMachineCnt{ get; set; }
 
         /// <summary>
         /// 阿里云服务商机器数
         /// </summary>
         [JsonProperty("AliCloudMachineCnt")]
+        [System.Obsolete]
         public ulong? AliCloudMachineCnt{ get; set; }
 
         /// <summary>
         /// 百度云服务商机器数
         /// </summary>
         [JsonProperty("BaiduCloudMachineCnt")]
+        [System.Obsolete]
         public ulong? BaiduCloudMachineCnt{ get; set; }
 
         /// <summary>
         /// IDC机器数
         /// </summary>
         [JsonProperty("IDCMachineCnt")]
+        [System.Obsolete]
         public ulong? IDCMachineCnt{ get; set; }
 
         /// <summary>
         /// 其他云服务商机器数
         /// </summary>
         [JsonProperty("OtherCloudMachineCnt")]
+        [System.Obsolete]
         public ulong? OtherCloudMachineCnt{ get; set; }
 
         /// <summary>
@@ -139,6 +144,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? MachineDestroyAfterOfflineHours{ get; set; }
 
         /// <summary>
+        /// 云服务器类型数组
+        /// </summary>
+        [JsonProperty("CloudFrom")]
+        public CloudFromCnt[] CloudFrom{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -169,6 +180,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "LHGeneralDiscountCnt", this.LHGeneralDiscountCnt);
             this.SetParamSimple(map, prefix + "CompareYesterdayMachineCnt", this.CompareYesterdayMachineCnt);
             this.SetParamSimple(map, prefix + "MachineDestroyAfterOfflineHours", this.MachineDestroyAfterOfflineHours);
+            this.SetParamArrayObj(map, prefix + "CloudFrom.", this.CloudFrom);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -26,73 +26,69 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
         /// 策略名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 事件类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Events")]
         public WebHookEventKv[] Events{ get; set; }
 
         /// <summary>
         /// 主机范围
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostLabels")]
         public WebHookHostLabel[] HostLabels{ get; set; }
 
         /// <summary>
         /// 接收人
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Receivers")]
         public WebHookReceiver[] Receivers{ get; set; }
 
         /// <summary>
         /// 格式 0text 1json
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Format")]
         public long? Format{ get; set; }
 
         /// <summary>
         /// 自定义透传字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomFields")]
         public WebHookCustomField[] CustomFields{ get; set; }
 
         /// <summary>
         /// 是否启用[1:禁用|0:启用]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsDisabled")]
         public long? IsDisabled{ get; set; }
 
         /// <summary>
         /// 主机列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Quuids")]
         public string[] Quuids{ get; set; }
 
         /// <summary>
         /// 主机数目
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostCount")]
         public long? HostCount{ get; set; }
+
+        /// <summary>
+        /// 需排除的机器列表
+        /// </summary>
+        [JsonProperty("ExcludedQuuids")]
+        public string[] ExcludedQuuids{ get; set; }
 
 
         /// <summary>
@@ -110,6 +106,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
             this.SetParamArraySimple(map, prefix + "Quuids.", this.Quuids);
             this.SetParamSimple(map, prefix + "HostCount", this.HostCount);
+            this.SetParamArraySimple(map, prefix + "ExcludedQuuids.", this.ExcludedQuuids);
         }
     }
 }

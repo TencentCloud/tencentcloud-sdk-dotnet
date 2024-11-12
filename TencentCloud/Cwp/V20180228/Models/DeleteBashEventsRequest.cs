@@ -25,10 +25,16 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// ID数组，最大100条。
+        /// ID数组，最大1000条。
         /// </summary>
         [JsonProperty("Ids")]
         public ulong?[] Ids{ get; set; }
+
+        /// <summary>
+        /// 是否删除全部
+        /// </summary>
+        [JsonProperty("All")]
+        public bool? All{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "Ids.", this.Ids);
+            this.SetParamSimple(map, prefix + "All", this.All);
         }
     }
 }

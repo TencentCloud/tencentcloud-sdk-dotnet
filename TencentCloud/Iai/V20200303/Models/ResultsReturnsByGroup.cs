@@ -37,8 +37,9 @@ namespace TencentCloud.Iai.V20200303.Models
         public GroupCandidate[] GroupCandidates{ get; set; }
 
         /// <summary>
-        /// 检测出的人脸图片状态返回码。0 表示正常。 
-        /// -1601代表不符合图片质量控制要求，此时Candidate内容为空。
+        /// 检测出的人脸图片状态返回码。
+        /// - 0 表示正常。 
+        /// - -1601代表不符合图片质量控制要求，此时Candidate内容为空。
         /// </summary>
         [JsonProperty("RetCode")]
         public long? RetCode{ get; set; }

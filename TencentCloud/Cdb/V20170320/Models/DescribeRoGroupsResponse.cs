@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// RO组信息数组，一个实例可关联多个RO组。
+        /// RO 组信息数组，一个实例可关联多个 RO 组。
         /// </summary>
         [JsonProperty("RoGroups")]
         public RoGroup[] RoGroups{ get; set; }

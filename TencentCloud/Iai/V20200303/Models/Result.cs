@@ -25,20 +25,21 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 识别出的最相似候选人
+        /// 识别出的最相似候选人。
         /// </summary>
         [JsonProperty("Candidates")]
         public Candidate[] Candidates{ get; set; }
 
         /// <summary>
-        /// 检测出的人脸框位置
+        /// 检测出的人脸框位置。
         /// </summary>
         [JsonProperty("FaceRect")]
         public FaceRect FaceRect{ get; set; }
 
         /// <summary>
-        /// 检测出的人脸图片状态返回码。0 表示正常。 
-        /// -1601代表不符合图片质量控制要求，此时Candidate内容为空。
+        /// 检测出的人脸图片状态返回码。
+        /// - 0 表示正常。 
+        /// - -1601代表不符合图片质量控制要求，此时Candidate内容为空。
         /// </summary>
         [JsonProperty("RetCode")]
         public long? RetCode{ get; set; }

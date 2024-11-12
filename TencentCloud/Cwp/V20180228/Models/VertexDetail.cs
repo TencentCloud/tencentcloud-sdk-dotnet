@@ -26,133 +26,114 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 该节点类型，进程:1；网络:2；文件:3；ssh:4
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
         /// 各节点类型用到的时间，2022-11-29 00:00:00 格式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }
 
         /// <summary>
         /// 告警信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlarmInfo")]
         public AlarmInfo[] AlarmInfo{ get; set; }
 
         /// <summary>
         /// 进程名，当该节点为进程时生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcName")]
         public string ProcName{ get; set; }
 
         /// <summary>
         /// 命令行，当该节点为进程时生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CmdLine")]
         public string CmdLine{ get; set; }
 
         /// <summary>
         /// 进程id，当该节点为进程时生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Pid")]
         public string Pid{ get; set; }
 
         /// <summary>
         /// 文件md5，当该节点为文件时生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileMd5")]
         public string FileMd5{ get; set; }
 
         /// <summary>
         /// 文件写入内容，当该节点为文件时生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileContent")]
         public string FileContent{ get; set; }
 
         /// <summary>
         /// 文件路径，当该节点为文件时生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FilePath")]
         public string FilePath{ get; set; }
 
         /// <summary>
         /// 文件创建时间，当该节点为文件时生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileCreateTime")]
         public string FileCreateTime{ get; set; }
 
         /// <summary>
         /// 请求目的地址，当该节点为网络时生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
         /// 目标端口，当该节点为网络时生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DstPort")]
         public ulong? DstPort{ get; set; }
 
         /// <summary>
         /// 登录源ip，当该节点为ssh时生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SrcIP")]
         public string SrcIP{ get; set; }
 
         /// <summary>
         /// 登录用户名用户组，当该节点为ssh时生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
         /// 漏洞名称，当该节点为漏洞时生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulName")]
         public string VulName{ get; set; }
 
         /// <summary>
         /// 漏洞利用时间，当该节点为漏洞时生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulTime")]
         public string VulTime{ get; set; }
 
         /// <summary>
         /// http请求内容，当该节点为漏洞时生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HttpContent")]
         public string HttpContent{ get; set; }
 
         /// <summary>
         /// 漏洞利用者来源ip，当该节点为漏洞时生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulSrcIP")]
         public string VulSrcIP{ get; set; }
 
         /// <summary>
         /// 点id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VertexId")]
         public string VertexId{ get; set; }

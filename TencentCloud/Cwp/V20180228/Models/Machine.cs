@@ -47,7 +47,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string MachineStatus{ get; set; }
 
         /// <summary>
-        /// 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+        /// 主机安全Uuid，若客户端长时间不在线将返回空字符。
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }

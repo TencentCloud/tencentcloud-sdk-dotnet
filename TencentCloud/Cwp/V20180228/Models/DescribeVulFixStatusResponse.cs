@@ -26,21 +26,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 开始修复时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FixStartTime")]
         public string FixStartTime{ get; set; }
 
         /// <summary>
         /// 修复结束时间，为空表示还没结束
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FixEndTime")]
         public string FixEndTime{ get; set; }
 
         /// <summary>
         /// 修复成功的主机数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FixSuccessCnt")]
         public ulong? FixSuccessCnt{ get; set; }
@@ -65,14 +62,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 修复快照状态列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapshotList")]
         public VulFixStatusSnapshotInfo[] SnapshotList{ get; set; }
 
         /// <summary>
         /// 修复漏洞详情列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulFixList")]
         public VulFixStatusInfo[] VulFixList{ get; set; }
@@ -103,14 +98,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 快照创建失败数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapshotFailCnt")]
         public ulong? SnapshotFailCnt{ get; set; }
 
         /// <summary>
         /// 是否允许重试 0:不允许 1：允许
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsAllowRetry")]
         public ulong? IsAllowRetry{ get; set; }

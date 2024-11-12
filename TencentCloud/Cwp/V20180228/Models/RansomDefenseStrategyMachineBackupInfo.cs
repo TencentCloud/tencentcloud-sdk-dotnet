@@ -56,42 +56,36 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 外网ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineWanIp")]
         public string MachineWanIp{ get; set; }
 
         /// <summary>
         /// 云标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CloudTags")]
         public Tag[] CloudTags{ get; set; }
 
         /// <summary>
         /// 可用区信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionInfo")]
         public RegionInfo RegionInfo{ get; set; }
 
         /// <summary>
         /// 主机安全标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tag")]
         public MachineTag[] Tag{ get; set; }
 
         /// <summary>
         /// 防护状态：0关闭，1开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// 策略id，为0时未绑定策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrategyId")]
         public ulong? StrategyId{ get; set; }
@@ -99,70 +93,60 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// <summary>
         /// 硬盘信息，为空时所有硬盘生效：
         /// ;分割 diskId1|diskName1;diskId2|diskName2
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskInfo")]
         public string DiskInfo{ get; set; }
 
         /// <summary>
         /// 策略名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrategyName")]
         public string StrategyName{ get; set; }
 
         /// <summary>
         /// 备份数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupCount")]
         public ulong? BackupCount{ get; set; }
 
         /// <summary>
         /// 最近一次备份状态：0备份中，1正常，2失败，9暂无备份
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastBackupStatus")]
         public ulong? LastBackupStatus{ get; set; }
 
         /// <summary>
         /// 最近一次备份失败原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastBackupMessage")]
         public string LastBackupMessage{ get; set; }
 
         /// <summary>
         /// 最近一次备份时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastBackupTime")]
         public string LastBackupTime{ get; set; }
 
         /// <summary>
         /// 最近一次回滚进度百分比
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RollBackPercent")]
         public ulong? RollBackPercent{ get; set; }
 
         /// <summary>
         /// 最近一次回滚状态：0进行中，1成功，2失败
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RollBackStatus")]
         public ulong? RollBackStatus{ get; set; }
 
         /// <summary>
         /// 备份成功次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupSuccessCount")]
         public ulong? BackupSuccessCount{ get; set; }
 
         /// <summary>
         /// 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostVersion")]
         public ulong? HostVersion{ get; set; }

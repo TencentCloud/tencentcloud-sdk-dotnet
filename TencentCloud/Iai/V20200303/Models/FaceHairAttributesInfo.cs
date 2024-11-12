@@ -25,21 +25,21 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 0：光头，1：短发，2：中发，3：长发，4：绑发
+        /// 取值范围：0：光头，1：短发，2：中发，3：长发，4：绑发。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Length")]
         public long? Length{ get; set; }
 
         /// <summary>
-        /// 0：有刘海，1：无刘海
+        /// 取值范围：0：有刘海，1：无刘海。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bang")]
         public long? Bang{ get; set; }
 
         /// <summary>
-        /// 0：黑色，1：金色，2：棕色，3：灰白色
+        /// 取值范围：0：黑色，1：金色，2：棕色，3：灰白色。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Color")]

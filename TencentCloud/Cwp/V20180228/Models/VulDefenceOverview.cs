@@ -44,21 +44,18 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 每日攻击趋势
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttackCounts")]
         public long?[] AttackCounts{ get; set; }
 
         /// <summary>
         /// 每日防御趋势
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefendCounts")]
         public long?[] DefendCounts{ get; set; }
 
         /// <summary>
         /// 日期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Date")]
         public string[] Date{ get; set; }

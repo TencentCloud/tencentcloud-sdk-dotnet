@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1120";
+       private const string sdkVersion = "SDK_NET_3.0.1121";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(AddTimeWindow)用于添加云数据库实例的维护时间窗口，以指定实例在哪些时间段可以自动执行切换访问操作。
+        /// 本接口（AddTimeWindow）用于添加云数据库实例的维护时间窗口，以指定实例在哪些时间段可以自动执行切换访问操作。
         /// </summary>
         /// <param name="req"><see cref="AddTimeWindowRequest"/></param>
         /// <returns><see cref="AddTimeWindowResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(AddTimeWindow)用于添加云数据库实例的维护时间窗口，以指定实例在哪些时间段可以自动执行切换访问操作。
+        /// 本接口（AddTimeWindow）用于添加云数据库实例的维护时间窗口，以指定实例在哪些时间段可以自动执行切换访问操作。
         /// </summary>
         /// <param name="req"><see cref="AddTimeWindowRequest"/></param>
         /// <returns><see cref="AddTimeWindowResponse"/></returns>
@@ -180,7 +180,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 高可用实例一键迁移到集群版校验
+        /// 本接口（CheckMigrateCluster）用于高可用实例一键迁移到集群版校验。
         /// </summary>
         /// <param name="req"><see cref="CheckMigrateClusterRequest"/></param>
         /// <returns><see cref="CheckMigrateClusterResponse"/></returns>
@@ -190,7 +190,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 高可用实例一键迁移到集群版校验
+        /// 本接口（CheckMigrateCluster）用于高可用实例一键迁移到集群版校验。
         /// </summary>
         /// <param name="req"><see cref="CheckMigrateClusterRequest"/></param>
         /// <returns><see cref="CheckMigrateClusterResponse"/></returns>
@@ -1415,7 +1415,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeClusterInfo)用于查询集群版实例信息。
+        /// 本接口（DescribeClusterInfo）用于查询集群版实例信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterInfoRequest"/></param>
         /// <returns><see cref="DescribeClusterInfoResponse"/></returns>
@@ -1425,7 +1425,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeClusterInfo)用于查询集群版实例信息。
+        /// 本接口（DescribeClusterInfo）用于查询集群版实例信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterInfoRequest"/></param>
         /// <returns><see cref="DescribeClusterInfoResponse"/></returns>
@@ -1457,7 +1457,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeDBFeatures)用于查询云数据库版本属性，包括是否支持数据库加密、数据库审计等功能。
+        /// 本接口（DescribeDBFeatures）用于查询云数据库版本属性，包括是否支持数据库加密、数据库审计等功能。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBFeaturesRequest"/></param>
         /// <returns><see cref="DescribeDBFeaturesResponse"/></returns>
@@ -1467,7 +1467,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeDBFeatures)用于查询云数据库版本属性，包括是否支持数据库加密、数据库审计等功能。
+        /// 本接口（DescribeDBFeatures）用于查询云数据库版本属性，包括是否支持数据库加密、数据库审计等功能。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBFeaturesRequest"/></param>
         /// <returns><see cref="DescribeDBFeaturesResponse"/></returns>
@@ -1562,7 +1562,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 查询实例基本信息（实例 ID ，实例名称，是否开通加密 ）
+        /// 本接口（DescribeDBInstanceInfo）用于查询实例基本信息（实例 ID，实例名称，是否开通加密）。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceInfoRequest"/></param>
         /// <returns><see cref="DescribeDBInstanceInfoResponse"/></returns>
@@ -1572,7 +1572,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 查询实例基本信息（实例 ID ，实例名称，是否开通加密 ）
+        /// 本接口（DescribeDBInstanceInfo）用于查询实例基本信息（实例 ID，实例名称，是否开通加密）。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceInfoRequest"/></param>
         /// <returns><see cref="DescribeDBInstanceInfoResponse"/></returns>
@@ -1604,7 +1604,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeDBInstanceRebootTime)用于查询云数据库实例重启预计所需的时间。
+        /// 本接口（DescribeDBInstanceRebootTime）用于查询云数据库实例重启预计所需的时间。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceRebootTimeRequest"/></param>
         /// <returns><see cref="DescribeDBInstanceRebootTimeResponse"/></returns>
@@ -1614,7 +1614,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeDBInstanceRebootTime)用于查询云数据库实例重启预计所需的时间。
+        /// 本接口（DescribeDBInstanceRebootTime）用于查询云数据库实例重启预计所需的时间。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceRebootTimeRequest"/></param>
         /// <returns><see cref="DescribeDBInstanceRebootTimeResponse"/></returns>
@@ -1646,7 +1646,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeDBPrice)用于查询购买或续费云数据库实例的价格，支持查询按量计费或者包年包月的价格。可传入实例类型、购买时长、购买数量、内存大小、硬盘大小和可用区信息等来查询实例价格。可传入实例名称来查询实例续费价格。
+        /// 本接口（DescribeDBPrice）用于查询购买或续费云数据库实例的价格，支持查询按量计费或者包年包月的价格。可传入实例类型、购买时长、购买数量、内存大小、硬盘大小和可用区信息等来查询实例价格。可传入实例名称来查询实例续费价格。
         /// 
         /// 注意：对某个地域进行询价，请使用对应地域的接入点，接入点信息请参照 <a href="https://cloud.tencent.com/document/api/236/15832">服务地址</a> 文档。例如：对广州地域进行询价，请把请求发到：cdb.ap-guangzhou.tencentcloudapi.com。同理对上海地域询价，把请求发到：cdb.ap-shanghai.tencentcloudapi.com。
         /// </summary>
@@ -1658,7 +1658,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeDBPrice)用于查询购买或续费云数据库实例的价格，支持查询按量计费或者包年包月的价格。可传入实例类型、购买时长、购买数量、内存大小、硬盘大小和可用区信息等来查询实例价格。可传入实例名称来查询实例续费价格。
+        /// 本接口（DescribeDBPrice）用于查询购买或续费云数据库实例的价格，支持查询按量计费或者包年包月的价格。可传入实例类型、购买时长、购买数量、内存大小、硬盘大小和可用区信息等来查询实例价格。可传入实例名称来查询实例续费价格。
         /// 
         /// 注意：对某个地域进行询价，请使用对应地域的接入点，接入点信息请参照 <a href="https://cloud.tencent.com/document/api/236/15832">服务地址</a> 文档。例如：对广州地域进行询价，请把请求发到：cdb.ap-guangzhou.tencentcloudapi.com。同理对上海地域询价，把请求发到：cdb.ap-shanghai.tencentcloudapi.com。
         /// </summary>
@@ -1841,7 +1841,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 查询实例发生的事件信息
+        /// 本接口（DescribeInstanceAlarmEvents）用于查询实例发生的事件信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAlarmEventsRequest"/></param>
         /// <returns><see cref="DescribeInstanceAlarmEventsResponse"/></returns>
@@ -1851,7 +1851,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 查询实例发生的事件信息
+        /// 本接口（DescribeInstanceAlarmEvents）用于查询实例发生的事件信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAlarmEventsRequest"/></param>
         /// <returns><see cref="DescribeInstanceAlarmEventsResponse"/></returns>
@@ -1925,7 +1925,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeInstanceUpgradeType)用于查询数据库实例升级类型。
+        /// 本接口（DescribeInstanceUpgradeType）用于查询数据库实例升级类型。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceUpgradeTypeRequest"/></param>
         /// <returns><see cref="DescribeInstanceUpgradeTypeResponse"/></returns>
@@ -1935,7 +1935,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeInstanceUpgradeType)用于查询数据库实例升级类型。
+        /// 本接口（DescribeInstanceUpgradeType）用于查询数据库实例升级类型。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceUpgradeTypeRequest"/></param>
         /// <returns><see cref="DescribeInstanceUpgradeTypeResponse"/></returns>
@@ -2093,7 +2093,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeRoGroups)用于查询云数据库实例的所有的RO组的信息。
+        /// 本接口（DescribeRoGroups）用于查询云数据库实例的所有的 RO 组的信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeRoGroupsRequest"/></param>
         /// <returns><see cref="DescribeRoGroupsResponse"/></returns>
@@ -2103,7 +2103,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeRoGroups)用于查询云数据库实例的所有的RO组的信息。
+        /// 本接口（DescribeRoGroups）用于查询云数据库实例的所有的 RO 组的信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeRoGroupsRequest"/></param>
         /// <returns><see cref="DescribeRoGroupsResponse"/></returns>
@@ -2626,7 +2626,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(ModifyAutoRenewFlag)用于修改云数据库实例的自动续费标记。仅支持包年包月的实例设置自动续费标记。
+        /// 本接口（ModifyAutoRenewFlag）用于修改云数据库实例的自动续费标记。仅支持包年包月的实例设置自动续费标记。
         /// </summary>
         /// <param name="req"><see cref="ModifyAutoRenewFlagRequest"/></param>
         /// <returns><see cref="ModifyAutoRenewFlagResponse"/></returns>
@@ -2636,7 +2636,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(ModifyAutoRenewFlag)用于修改云数据库实例的自动续费标记。仅支持包年包月的实例设置自动续费标记。
+        /// 本接口（ModifyAutoRenewFlag）用于修改云数据库实例的自动续费标记。仅支持包年包月的实例设置自动续费标记。
         /// </summary>
         /// <param name="req"><see cref="ModifyAutoRenewFlagRequest"/></param>
         /// <returns><see cref="ModifyAutoRenewFlagResponse"/></returns>
@@ -2832,6 +2832,27 @@ namespace TencentCloud.Cdb.V20170320
         public ModifyDBInstanceProjectResponse ModifyDBInstanceProjectSync(ModifyDBInstanceProjectRequest req)
         {
             return InternalRequestAsync<ModifyDBInstanceProjectResponse>(req, "ModifyDBInstanceProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDBInstanceReadOnlyStatus）用户设置MySQL云数据库实例为只读
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceReadOnlyStatusRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceReadOnlyStatusResponse"/></returns>
+        public Task<ModifyDBInstanceReadOnlyStatusResponse> ModifyDBInstanceReadOnlyStatus(ModifyDBInstanceReadOnlyStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceReadOnlyStatusResponse>(req, "ModifyDBInstanceReadOnlyStatus");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDBInstanceReadOnlyStatus）用户设置MySQL云数据库实例为只读
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceReadOnlyStatusRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceReadOnlyStatusResponse"/></returns>
+        public ModifyDBInstanceReadOnlyStatusResponse ModifyDBInstanceReadOnlyStatusSync(ModifyDBInstanceReadOnlyStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceReadOnlyStatusResponse>(req, "ModifyDBInstanceReadOnlyStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3117,7 +3138,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(OpenDBInstanceEncryption)用于启用实例数据存储加密功能，支持用户指定自定义密钥。
+        /// 本接口（OpenDBInstanceEncryption）用于启用实例数据存储加密功能，支持用户指定自定义密钥。
         /// 
         /// 注意，启用实例数据存储加密之前，需要进行以下操作：
         /// 
@@ -3137,7 +3158,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(OpenDBInstanceEncryption)用于启用实例数据存储加密功能，支持用户指定自定义密钥。
+        /// 本接口（OpenDBInstanceEncryption）用于启用实例数据存储加密功能，支持用户指定自定义密钥。
         /// 
         /// 注意，启用实例数据存储加密之前，需要进行以下操作：
         /// 
@@ -3330,10 +3351,10 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(RestartDBInstances)用于重启云数据库实例。
+        /// 本接口（RestartDBInstances）用于重启云数据库实例。
         /// 
         /// 注意：
-        /// 1、本接口只支持主实例进行重启操作；
+        /// 1、本接口支持主实例、只读实例、灾备实例进行重启操作。
         /// 2、实例状态必须为正常，并且没有其他异步任务在执行中。
         /// </summary>
         /// <param name="req"><see cref="RestartDBInstancesRequest"/></param>
@@ -3344,10 +3365,10 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(RestartDBInstances)用于重启云数据库实例。
+        /// 本接口（RestartDBInstances）用于重启云数据库实例。
         /// 
         /// 注意：
-        /// 1、本接口只支持主实例进行重启操作；
+        /// 1、本接口支持主实例、只读实例、灾备实例进行重启操作。
         /// 2、实例状态必须为正常，并且没有其他异步任务在执行中。
         /// </summary>
         /// <param name="req"><see cref="RestartDBInstancesRequest"/></param>
@@ -3401,7 +3422,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 开启 RO 复制，从主实例同步数据。
+        /// 本接口（StartReplication）用于开启 RO 复制，从主实例同步数据。
         /// </summary>
         /// <param name="req"><see cref="StartReplicationRequest"/></param>
         /// <returns><see cref="StartReplicationResponse"/></returns>
@@ -3411,7 +3432,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 开启 RO 复制，从主实例同步数据。
+        /// 本接口（StartReplication）用于开启 RO 复制，从主实例同步数据。
         /// </summary>
         /// <param name="req"><see cref="StartReplicationRequest"/></param>
         /// <returns><see cref="StartReplicationResponse"/></returns>
@@ -3464,7 +3485,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 停止 RO 复制，中断从主实例同步数据。
+        /// 本接口（StopReplication）用于停止 RO 复制，中断从主实例同步数据。
         /// </summary>
         /// <param name="req"><see cref="StopReplicationRequest"/></param>
         /// <returns><see cref="StopReplicationResponse"/></returns>
@@ -3474,7 +3495,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 停止 RO 复制，中断从主实例同步数据。
+        /// 本接口（StopReplication）用于停止 RO 复制，中断从主实例同步数据。
         /// </summary>
         /// <param name="req"><see cref="StopReplicationRequest"/></param>
         /// <returns><see cref="StopReplicationResponse"/></returns>
@@ -3569,7 +3590,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(SwitchDrInstanceToMaster)用于将云数据库灾备实例切换为主实例，注意请求必须发到灾备实例所在的地域。
+        /// 本接口（SwitchDrInstanceToMaster）用于将云数据库灾备实例切换为主实例，注意请求必须发到灾备实例所在的地域。
         /// </summary>
         /// <param name="req"><see cref="SwitchDrInstanceToMasterRequest"/></param>
         /// <returns><see cref="SwitchDrInstanceToMasterResponse"/></returns>
@@ -3579,7 +3600,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(SwitchDrInstanceToMaster)用于将云数据库灾备实例切换为主实例，注意请求必须发到灾备实例所在的地域。
+        /// 本接口（SwitchDrInstanceToMaster）用于将云数据库灾备实例切换为主实例，注意请求必须发到灾备实例所在的地域。
         /// </summary>
         /// <param name="req"><see cref="SwitchDrInstanceToMasterRequest"/></param>
         /// <returns><see cref="SwitchDrInstanceToMasterResponse"/></returns>

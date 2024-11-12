@@ -32,14 +32,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 基线检测项列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BaselineRuleList")]
         public BaselineRuleInfo[] BaselineRuleList{ get; set; }
 
         /// <summary>
         /// 是否显示说明列：true-是，false-否
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShowRuleRemark")]
         public bool? ShowRuleRemark{ get; set; }

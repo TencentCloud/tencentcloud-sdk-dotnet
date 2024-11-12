@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1120";
+       private const string sdkVersion = "SDK_NET_3.0.1121";
 
         /// <summary>
         /// Client constructor.
@@ -579,6 +579,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 创建数据建模，提供给云应用使用，实现“Wedata数据建模”的下单发货
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataModelRequest"/></param>
+        /// <returns><see cref="CreateDataModelResponse"/></returns>
+        public Task<CreateDataModelResponse> CreateDataModel(CreateDataModelRequest req)
+        {
+            return InternalRequestAsync<CreateDataModelResponse>(req, "CreateDataModel");
+        }
+
+        /// <summary>
+        /// 创建数据建模，提供给云应用使用，实现“Wedata数据建模”的下单发货
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataModelRequest"/></param>
+        /// <returns><see cref="CreateDataModelResponse"/></returns>
+        public CreateDataModelResponse CreateDataModelSync(CreateDataModelRequest req)
+        {
+            return InternalRequestAsync<CreateDataModelResponse>(req, "CreateDataModel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建数据源
         /// </summary>
         /// <param name="req"><see cref="CreateDataSourceRequest"/></param>
@@ -932,6 +953,27 @@ namespace TencentCloud.Wedata.V20210820
         public DeleteCustomFunctionResponse DeleteCustomFunctionSync(DeleteCustomFunctionRequest req)
         {
             return InternalRequestAsync<DeleteCustomFunctionResponse>(req, "DeleteCustomFunction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 销毁数据建模，提供给云应用使用，实现“Wedata数据建模”的销毁
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataModelRequest"/></param>
+        /// <returns><see cref="DeleteDataModelResponse"/></returns>
+        public Task<DeleteDataModelResponse> DeleteDataModel(DeleteDataModelRequest req)
+        {
+            return InternalRequestAsync<DeleteDataModelResponse>(req, "DeleteDataModel");
+        }
+
+        /// <summary>
+        /// 销毁数据建模，提供给云应用使用，实现“Wedata数据建模”的销毁
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataModelRequest"/></param>
+        /// <returns><see cref="DeleteDataModelResponse"/></returns>
+        public DeleteDataModelResponse DeleteDataModelSync(DeleteDataModelRequest req)
+        {
+            return InternalRequestAsync<DeleteDataModelResponse>(req, "DeleteDataModel")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4965,6 +5007,27 @@ namespace TencentCloud.Wedata.V20210820
         public UnlockIntegrationTaskResponse UnlockIntegrationTaskSync(UnlockIntegrationTaskRequest req)
         {
             return InternalRequestAsync<UnlockIntegrationTaskResponse>(req, "UnlockIntegrationTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 数语向wedata注册，提供自身cam角色信息，跳转域名、ip、端口信息等
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDataModelRegistryInfoRequest"/></param>
+        /// <returns><see cref="UpdateDataModelRegistryInfoResponse"/></returns>
+        public Task<UpdateDataModelRegistryInfoResponse> UpdateDataModelRegistryInfo(UpdateDataModelRegistryInfoRequest req)
+        {
+            return InternalRequestAsync<UpdateDataModelRegistryInfoResponse>(req, "UpdateDataModelRegistryInfo");
+        }
+
+        /// <summary>
+        /// 数语向wedata注册，提供自身cam角色信息，跳转域名、ip、端口信息等
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDataModelRegistryInfoRequest"/></param>
+        /// <returns><see cref="UpdateDataModelRegistryInfoResponse"/></returns>
+        public UpdateDataModelRegistryInfoResponse UpdateDataModelRegistryInfoSync(UpdateDataModelRegistryInfoRequest req)
+        {
+            return InternalRequestAsync<UpdateDataModelRegistryInfoResponse>(req, "UpdateDataModelRegistryInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

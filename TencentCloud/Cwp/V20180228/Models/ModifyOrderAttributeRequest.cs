@@ -37,13 +37,17 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 可编辑的属性名称 ,当前支持的有: alias 资源别名
+        /// 可编辑的属性名称 ,当前支持的有: 
+        /// alias 资源别名
+        /// projectId 项目ID
         /// </summary>
         [JsonProperty("AttrName")]
         public string AttrName{ get; set; }
 
         /// <summary>
         /// 属性值
+        /// AttrName=alias时,任意字符串,最大字符15长度
+        /// AttrName=projectId时,项目ID必须是真实存在的
         /// </summary>
         [JsonProperty("AttrValue")]
         public string AttrValue{ get; set; }

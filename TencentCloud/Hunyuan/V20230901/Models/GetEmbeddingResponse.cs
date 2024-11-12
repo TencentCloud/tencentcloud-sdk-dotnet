@@ -25,7 +25,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
     {
         
         /// <summary>
-        /// 返回的 Embedding 信息。当前不支持批量，所以数组元素数目为 1。
+        /// 返回的 Embedding 信息。
         /// </summary>
         [JsonProperty("Data")]
         public EmbeddingData[] Data{ get; set; }

@@ -312,6 +312,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public DvAuths[] DvRevokeAuthDetail{ get; set; }
 
         /// <summary>
+        /// 证书链信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CertChainInfo")]
+        public CertBasicInfo[] CertChainInfo{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -364,6 +371,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "EncryptCertFingerprint", this.EncryptCertFingerprint);
             this.SetParamSimple(map, prefix + "EncryptAlgorithm", this.EncryptAlgorithm);
             this.SetParamArrayObj(map, prefix + "DvRevokeAuthDetail.", this.DvRevokeAuthDetail);
+            this.SetParamArrayObj(map, prefix + "CertChainInfo.", this.CertChainInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

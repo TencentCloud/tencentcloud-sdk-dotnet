@@ -26,14 +26,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 漏洞id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulId")]
         public ulong? VulId{ get; set; }
 
         /// <summary>
         /// 漏洞名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulName")]
         public string VulName{ get; set; }
@@ -46,28 +44,24 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 漏洞对应主机修复状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostList")]
         public VulFixStatusHostInfo[] HostList{ get; set; }
 
         /// <summary>
         /// 漏洞修复失败主机数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailCnt")]
         public ulong? FailCnt{ get; set; }
 
         /// <summary>
         /// 修复成功的数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FixSuccessCnt")]
         public ulong? FixSuccessCnt{ get; set; }
 
         /// <summary>
         /// 修复方式 0组件更新或者安装补丁,1禁用服务
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FixMethod")]
         public ulong? FixMethod{ get; set; }

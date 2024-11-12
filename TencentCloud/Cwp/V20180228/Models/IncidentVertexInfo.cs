@@ -26,28 +26,24 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 事件id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IncidentId")]
         public string IncidentId{ get; set; }
 
         /// <summary>
         /// 事件所在表名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableName")]
         public string TableName{ get; set; }
 
         /// <summary>
         /// 节点信息列表，数组项中包含节点详细信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vertex")]
         public VertexInfo[] Vertex{ get; set; }
 
         /// <summary>
         /// 节点总个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VertexCount")]
         public long? VertexCount{ get; set; }

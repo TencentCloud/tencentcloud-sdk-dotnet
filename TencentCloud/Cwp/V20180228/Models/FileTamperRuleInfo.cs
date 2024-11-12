@@ -26,7 +26,6 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// 规则名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -39,7 +38,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 影响主机数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostCount")]
         public ulong? HostCount{ get; set; }
@@ -82,21 +80,18 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 子规则写条目数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WriteRuleCount")]
         public ulong? WriteRuleCount{ get; set; }
 
         /// <summary>
         /// 子规则读条目数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReadRuleCount")]
         public ulong? ReadRuleCount{ get; set; }
 
         /// <summary>
         /// 子规则读写条目数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReadWriteRuleCount")]
         public ulong? ReadWriteRuleCount{ get; set; }
@@ -106,7 +101,6 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// <li>read 读取文件</li>
         /// <li>write 修改文件</li>
         /// <li>read-write 读取修改文件</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileAction")]
         public string FileAction{ get; set; }
@@ -115,7 +109,6 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// 加白处理类型
         /// <li>cur 仅对当前加白</li>
         /// <li>all 所有符合条件加白</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddWhiteType")]
         public string AddWhiteType{ get; set; }
