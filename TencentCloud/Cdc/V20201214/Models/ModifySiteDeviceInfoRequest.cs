@@ -49,7 +49,7 @@ namespace TencentCloud.Cdc.V20201214.Models
         public string PowerConnectors{ get; set; }
 
         /// <summary>
-        /// 从机架上方还是下方供电。
+        /// 从机架上方还是下方供电。取值范围：["UP","DOWN"]
         /// </summary>
         [JsonProperty("PowerFeedDrop")]
         public string PowerFeedDrop{ get; set; }

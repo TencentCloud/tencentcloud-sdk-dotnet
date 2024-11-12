@@ -37,7 +37,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string FileType{ get; set; }
 
         /// <summary>
-        /// IsPublic为空用于上传文件时选择场景，当上传为图片文件是IsPublic为true，上传文档文件时场景IsPublic为false
+        /// IsPublic用于上传文件时选择场景，当上传为对话端文件时IsPublic为true，上传文档库文件时场景IsPublic为false
         /// </summary>
         [JsonProperty("IsPublic")]
         public bool? IsPublic{ get; set; }

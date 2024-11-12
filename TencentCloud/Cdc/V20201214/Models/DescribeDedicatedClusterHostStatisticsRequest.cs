@@ -49,7 +49,7 @@ namespace TencentCloud.Cdc.V20201214.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 时间范围精度，1分钟/5分钟
+        /// 时间范围精度，1分钟(ONE_MINUTE)/5分钟(FIVE_MINUTE)
         /// </summary>
         [JsonProperty("Period")]
         public string Period{ get; set; }

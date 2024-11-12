@@ -49,7 +49,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string Query{ get; set; }
 
         /// <summary>
-        /// 发布业务ID
+        /// 发布单ID
         /// </summary>
         [JsonProperty("ReleaseBizId")]
         public string ReleaseBizId{ get; set; }

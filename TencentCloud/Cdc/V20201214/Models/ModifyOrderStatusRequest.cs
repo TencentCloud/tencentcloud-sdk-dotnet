@@ -31,13 +31,13 @@ namespace TencentCloud.Cdc.V20201214.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 大订单ID
+        /// 大订单ID，可以在本地专用集群的基础信息页获取大订单ID
         /// </summary>
         [JsonProperty("DedicatedClusterOrderId")]
         public string DedicatedClusterOrderId{ get; set; }
 
         /// <summary>
-        /// 小订单ID
+        /// 小订单ID，进入大订单的详情页，可以看到小订单ID
         /// </summary>
         [JsonProperty("SubOrderIds")]
         public string[] SubOrderIds{ get; set; }

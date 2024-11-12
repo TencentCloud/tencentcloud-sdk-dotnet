@@ -85,7 +85,9 @@ namespace TencentCloud.As.V20180419.Models
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 定时任务的执行类型。取值范围：<br><li>CRONTAB：代表定时任务为重复执行。<br><li>ONCE：代表定时任务为单次执行。
+        /// 定时任务的执行类型。取值范围：
+        /// <li>CRONTAB：代表定时任务为重复执行。</li>
+        /// <li>ONCE：代表定时任务为单次执行。</li>
         /// </summary>
         [JsonProperty("ScheduledType")]
         public string ScheduledType{ get; set; }

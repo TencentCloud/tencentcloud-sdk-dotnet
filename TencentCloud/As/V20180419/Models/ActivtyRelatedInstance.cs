@@ -31,11 +31,7 @@ namespace TencentCloud.As.V20180419.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例在伸缩活动中的状态。取值如下：
-        /// <li>INIT：初始化中
-        /// <li>RUNNING：实例操作中
-        /// <li>SUCCESSFUL：活动成功
-        /// <li>FAILED：活动失败
+        /// 实例在伸缩活动中的状态。取值如下：<br><li>INIT：初始化中</li><li>RUNNING：实例操作中</li><li>SUCCESSFUL：活动成功</li><li>FAILED：活动失败
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public string InstanceStatus{ get; set; }

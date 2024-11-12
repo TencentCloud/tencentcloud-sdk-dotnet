@@ -25,19 +25,19 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 任务状态: Success->执行完成；Processing->执行中；Failed->执行失败；WaitExecute->等待执行；
+        /// 任务状态: Success->执行完成；Processing->执行中；Failed->执行失败；WaitExecute->等待执行。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 输入文件中嵌入的图片中文字内容的识别结果，存储在腾讯云cos的下载地址
+        /// 本次文档解析的结果文件，存储在腾讯云COS的下载URL，下载URL的有效期为10分钟。
         /// </summary>
         [JsonProperty("DocumentRecognizeResultUrl")]
         public string DocumentRecognizeResultUrl{ get; set; }
 
         /// <summary>
-        /// 文档解析失败的页码
+        /// 本次文档解析失败的页码信息。
         /// </summary>
         [JsonProperty("FailedPages")]
         public ReconstructDocumentFailedPage[] FailedPages{ get; set; }

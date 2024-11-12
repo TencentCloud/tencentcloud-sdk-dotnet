@@ -43,9 +43,9 @@ namespace TencentCloud.As.V20180419.Models
         public string Solution{ get; set; }
 
         /// <summary>
-        /// 伸缩建议警告级别。取值范围：<br>
-        /// <li>WARNING：警告级别<br>
-        /// <li>CRITICAL：严重级别<br>
+        /// 伸缩建议警告级别。取值范围：
+        /// <li>WARNING：警告级别</li>
+        /// <li>CRITICAL：严重级别</li>
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }

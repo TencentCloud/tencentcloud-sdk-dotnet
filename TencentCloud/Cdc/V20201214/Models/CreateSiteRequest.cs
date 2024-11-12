@@ -67,7 +67,7 @@ namespace TencentCloud.Cdc.V20201214.Models
         public string Note{ get; set; }
 
         /// <summary>
-        /// 您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。
+        /// 您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。取值范围："MM","SM"
         /// </summary>
         [JsonProperty("FiberType")]
         public string FiberType{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Cdc.V20201214.Models
         public string PowerConnectors{ get; set; }
 
         /// <summary>
-        /// 从机架上方还是下方供电。
+        /// 从机架上方还是下方供电。取值范围：["UP","DOWN"]
         /// </summary>
         [JsonProperty("PowerFeedDrop")]
         public string PowerFeedDrop{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Cdc.V20201214.Models
         public long? PowerDrawKva{ get; set; }
 
         /// <summary>
-        /// 网络到腾讯云Region区域的上行链路速度
+        /// 网络到腾讯云Region区域的上行链路速度(Gbps)
         /// </summary>
         [JsonProperty("UplinkSpeedGbps")]
         public long? UplinkSpeedGbps{ get; set; }

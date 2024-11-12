@@ -38,16 +38,16 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// 进入生命周期挂钩场景，取值包括：
-        /// <li> INSTANCE_LAUNCHING：实例启动后
-        /// <li> INSTANCE_TERMINATING：实例销毁前
+        /// <li> INSTANCE_LAUNCHING：实例启动后</li>
+        /// <li> INSTANCE_TERMINATING：实例销毁前</li>
         /// </summary>
         [JsonProperty("LifecycleTransition")]
         public string LifecycleTransition{ get; set; }
 
         /// <summary>
         /// 定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值包括：
-        /// <li> CONTINUE： 超时后继续伸缩活动
-        /// <li> ABANDON：超时后终止伸缩活动
+        /// <li> CONTINUE： 超时后继续伸缩活动</li> 
+        /// <li> ABANDON：超时后终止伸缩活动</li> 
         /// </summary>
         [JsonProperty("DefaultResult")]
         public string DefaultResult{ get; set; }

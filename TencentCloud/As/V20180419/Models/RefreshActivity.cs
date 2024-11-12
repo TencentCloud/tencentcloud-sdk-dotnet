@@ -62,13 +62,23 @@ namespace TencentCloud.As.V20180419.Models
         public RefreshSettings RefreshSettings{ get; set; }
 
         /// <summary>
-        /// 刷新活动类型。取值如下：<br><li>NORMAL：正常刷新活动</li><li>ROLLBACK：回滚刷新活动
+        /// 刷新活动类型。取值如下：
+        /// <li>NORMAL：正常刷新活动</li>
+        /// <li>ROLLBACK：回滚刷新活动</li>
         /// </summary>
         [JsonProperty("ActivityType")]
         public string ActivityType{ get; set; }
 
         /// <summary>
-        /// 刷新活动状态。取值如下：<br><li>INIT：初始化中</li><li>RUNNING：运行中</li><li>SUCCESSFUL：活动成功</li><li>FAILED_PAUSE：因刷新批次失败暂停</li><li>AUTO_PAUSE：因暂停策略自动暂停</li><li>MANUAL_PAUSE：手动暂停</li><li>CANCELLED：活动取消</li><li>FAILED：活动失败
+        /// 刷新活动状态。取值如下：
+        /// <li>INIT：初始化中</li>
+        /// <li>RUNNING：运行中</li>
+        /// <li>SUCCESSFUL：活动成功</li>
+        /// <li>FAILED_PAUSE：因刷新批次失败暂停</li>
+        /// <li>AUTO_PAUSE：因暂停策略自动暂停</li>
+        /// <li>MANUAL_PAUSE：手动暂停</li>
+        /// <li>CANCELLED：活动取消</li>
+        /// <li>FAILED：活动失败</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

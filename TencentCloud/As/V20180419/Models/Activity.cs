@@ -37,23 +37,29 @@ namespace TencentCloud.As.V20180419.Models
         public string ActivityId{ get; set; }
 
         /// <summary>
-        /// 伸缩活动类型。取值如下：<br>
-        /// <li>SCALE_OUT：扩容活动<li>SCALE_IN：缩容活动<li>ATTACH_INSTANCES：添加实例<li>REMOVE_INSTANCES：销毁实例<li>DETACH_INSTANCES：移出实例<li>TERMINATE_INSTANCES_UNEXPECTEDLY：实例在CVM控制台被销毁<li>REPLACE_UNHEALTHY_INSTANCE：替换不健康实例
-        /// <li>START_INSTANCES：开启实例
-        /// <li>STOP_INSTANCES：关闭实例
-        /// <li>INVOKE_COMMAND：执行命令
+        /// 伸缩活动类型。取值如下：
+        /// <li>SCALE_OUT：扩容活动</li>
+        /// <li>SCALE_IN：缩容活动</li>
+        /// <li>ATTACH_INSTANCES：添加实例</li>
+        /// <li>REMOVE_INSTANCES：销毁实例</li>
+        /// <li>DETACH_INSTANCES：移出实例</li>
+        /// <li>TERMINATE_INSTANCES_UNEXPECTEDLY：实例在CVM控制台被销毁</li>
+        /// <li>REPLACE_UNHEALTHY_INSTANCE：替换不健康实例</li>
+        /// <li>START_INSTANCES：开启实例</li>
+        /// <li>STOP_INSTANCES：关闭实例</li>
+        /// <li>INVOKE_COMMAND：执行命令</li>
         /// </summary>
         [JsonProperty("ActivityType")]
         public string ActivityType{ get; set; }
 
         /// <summary>
-        /// 伸缩活动状态。取值如下：<br>
-        /// <li>INIT：初始化中
-        /// <li>RUNNING：运行中
-        /// <li>SUCCESSFUL：活动成功
-        /// <li>PARTIALLY_SUCCESSFUL：活动部分成功
-        /// <li>FAILED：活动失败
-        /// <li>CANCELLED：活动取消
+        /// 伸缩活动状态。取值如下
+        /// <li>INIT：初始化中</li>
+        /// <li>RUNNING：运行中</li>
+        /// <li>SUCCESSFUL：活动成功</li>
+        /// <li>PARTIALLY_SUCCESSFUL：活动部分成功</li>
+        /// <li>FAILED：活动失败</li>
+        /// <li>CANCELLED：活动取消</li>
         /// </summary>
         [JsonProperty("StatusCode")]
         public string StatusCode{ get; set; }

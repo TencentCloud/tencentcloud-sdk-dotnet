@@ -31,7 +31,7 @@ namespace TencentCloud.As.V20180419.Models
         public ulong? RefreshBatchNum{ get; set; }
 
         /// <summary>
-        /// 刷新批次状态。取值如下：<br><li>WAITING：待刷新</li><li>INIT：初始化中</li><li>RUNNING：刷新中</li><li>FAILED:  刷新失败</li><li>PARTIALLY_SUCCESSFUL：批次部分成功</li><li>CANCELLED：已取消</li><li>SUCCESSFUL：刷新成功
+        /// 刷新批次状态。取值如下：<li>WAITING：待刷新</li><li>INIT：初始化中</li><li>RUNNING：刷新中</li><li>FAILED:  刷新失败</li><li>PARTIALLY_SUCCESSFUL：批次部分成功</li><li>CANCELLED：已取消</li><li>SUCCESSFUL：刷新成功</li>
         /// </summary>
         [JsonProperty("RefreshBatchStatus")]
         public string RefreshBatchStatus{ get; set; }

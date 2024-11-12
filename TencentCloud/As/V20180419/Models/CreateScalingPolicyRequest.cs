@@ -49,7 +49,10 @@ namespace TencentCloud.As.V20180419.Models
         public string AdjustmentType{ get; set; }
 
         /// <summary>
-        /// 告警触发后，期望实例数的调整值，仅适用于简单策略。<br><li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。
+        /// 告警触发后，期望实例数的调整值，仅适用于简单策略。
+        /// <li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> 
+        /// <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> 
+        /// <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。</li>
         /// </summary>
         [JsonProperty("AdjustmentValue")]
         public long? AdjustmentValue{ get; set; }
@@ -67,13 +70,23 @@ namespace TencentCloud.As.V20180419.Models
         public MetricAlarm MetricAlarm{ get; set; }
 
         /// <summary>
-        /// 预定义监控项，仅适用于目标追踪策略。取值范围：<br><li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li><li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li><li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li><li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li><li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li>
+        /// 预定义监控项，仅适用于目标追踪策略。取值范围：
+        /// <li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li>
+        /// <li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li>
+        /// <li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li>
+        /// <li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li>
+        /// <li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li>
         /// </summary>
         [JsonProperty("PredefinedMetricType")]
         public string PredefinedMetricType{ get; set; }
 
         /// <summary>
-        /// 目标值，仅适用于目标追踪策略。<br><li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li><li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_IN：>0，单位：Mbps</li>
+        /// 目标值，仅适用于目标追踪策略。
+        /// <li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li>
+        /// <li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li>
+        /// <li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li>
+        /// <li>ASG_AVG_WAN_TRAFFIC_OUT：>0，单位：Mbps</li>
+        /// <li>ASG_AVG_WAN_TRAFFIC_IN：>0，单位：Mbps</li>
         /// </summary>
         [JsonProperty("TargetValue")]
         public ulong? TargetValue{ get; set; }
@@ -85,7 +98,9 @@ namespace TencentCloud.As.V20180419.Models
         public ulong? EstimatedInstanceWarmup{ get; set; }
 
         /// <summary>
-        /// 是否禁用缩容，仅适用于目标追踪策略，默认值为 false。取值范围：<br><li>true：目标追踪策略仅触发扩容</li><li>false：目标追踪策略触发扩容和缩容</li>
+        /// 是否禁用缩容，仅适用于目标追踪策略，默认值为 false。取值范围：
+        /// <li>true：目标追踪策略仅触发扩容</li>
+        /// <li>false：目标追踪策略触发扩容和缩容</li>
         /// </summary>
         [JsonProperty("DisableScaleIn")]
         public bool? DisableScaleIn{ get; set; }

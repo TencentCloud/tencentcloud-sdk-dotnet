@@ -36,6 +36,12 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("MaskFlag")]
         public ImageMaskFlags MaskFlag{ get; set; }
 
+        /// <summary>
+        /// 是否自动矫正图片方向
+        /// </summary>
+        [JsonProperty("AutoFixImageDirection")]
+        public bool? AutoFixImageDirection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Mrs.V20200910.Models
         {
             this.SetParamObj(map, prefix + "Image.", this.Image);
             this.SetParamObj(map, prefix + "MaskFlag.", this.MaskFlag);
+            this.SetParamSimple(map, prefix + "AutoFixImageDirection", this.AutoFixImageDirection);
         }
     }
 }

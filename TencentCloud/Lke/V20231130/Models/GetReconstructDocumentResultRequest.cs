@@ -25,7 +25,7 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 任务唯一id
+        /// 任务唯一Id。[CreateReconstructDocumentFlow](https://cloud.tencent.com/document/product/1759/107506) 返回的TaskId。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

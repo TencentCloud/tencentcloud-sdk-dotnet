@@ -31,7 +31,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string BotBizId{ get; set; }
 
         /// <summary>
-        /// QA业务ID列表
+        /// QaBizID列表
         /// </summary>
         [JsonProperty("QaBizIds")]
         public string[] QaBizIds{ get; set; }
