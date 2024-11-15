@@ -28,7 +28,7 @@ namespace TencentCloud.Cwp.V20180228
 
        private const string endpoint = "cwp.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.1122";
+       private const string sdkVersion = "SDK_NET_3.0.1123";
 
         /// <summary>
         /// Client constructor.
@@ -3701,31 +3701,6 @@ namespace TencentCloud.Cwp.V20180228
         public DescribeClientExceptionResponse DescribeClientExceptionSync(DescribeClientExceptionRequest req)
         {
             return InternalRequestAsync<DescribeClientExceptionResponse>(req, "DescribeClientException")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 云护航计费产品已下线
-        /// 
-        /// 查询云护航服务订单列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCloudProtectServiceOrderListRequest"/></param>
-        /// <returns><see cref="DescribeCloudProtectServiceOrderListResponse"/></returns>
-        public Task<DescribeCloudProtectServiceOrderListResponse> DescribeCloudProtectServiceOrderList(DescribeCloudProtectServiceOrderListRequest req)
-        {
-            return InternalRequestAsync<DescribeCloudProtectServiceOrderListResponse>(req, "DescribeCloudProtectServiceOrderList");
-        }
-
-        /// <summary>
-        /// 云护航计费产品已下线
-        /// 
-        /// 查询云护航服务订单列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCloudProtectServiceOrderListRequest"/></param>
-        /// <returns><see cref="DescribeCloudProtectServiceOrderListResponse"/></returns>
-        public DescribeCloudProtectServiceOrderListResponse DescribeCloudProtectServiceOrderListSync(DescribeCloudProtectServiceOrderListRequest req)
-        {
-            return InternalRequestAsync<DescribeCloudProtectServiceOrderListResponse>(req, "DescribeCloudProtectServiceOrderList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

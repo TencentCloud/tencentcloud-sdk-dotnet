@@ -38,7 +38,7 @@ namespace TencentCloud.Vclm.V20240523.Models
         /// - 图片分辨率：192～4096
         /// - 图片大小：不超过10M
         /// - 图片宽高比：图片【宽：高】在1:2到2:1范围内
-        /// - 图片内容：避免上传无人脸/宠物脸或脸部过小、不完整、不清晰、偏转角度过大的图片。
+        /// - 图片内容：避免上传无人脸、无宠物脸或脸部过小、不完整、不清晰、偏转角度过大、嘴部被遮挡的图片。
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
@@ -58,6 +58,32 @@ namespace TencentCloud.Vclm.V20240523.Models
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
+        /// <summary>
+        /// 生成视频尺寸。可选取值："512:512"。
+        /// 
+        /// 人像模式下，如果不传该参数，默认生成视频的短边分辨率为512，长边分辨率不固定、由模型根据生成效果自动适配得到。如需固定生成分辨率可传入512:512。
+        /// 
+        /// 宠物模式下，如果不传该参数，默认将脸部唱演视频回贴原图，生成视频分辨率与原图一致。如不需要脸部回贴，仅保留脸部唱演视频，可传入512:512。
+        /// </summary>
+        [JsonProperty("Resolution")]
+        public string Resolution{ get; set; }
+
+        /// <summary>
+        /// 为生成视频添加标识的开关，默认为0。 
+        /// 1：添加标识；
+        ///  0：不添加标识；
+        /// 其他数值：默认按1处理。 
+        /// 建议您使用显著标识来提示，该视频是 AI 生成的视频。
+        /// </summary>
+        [JsonProperty("LogoAdd")]
+        public long? LogoAdd{ get; set; }
+
+        /// <summary>
+        /// 标识内容设置。 默认在生成视频的右下角添加“视频由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+        /// </summary>
+        [JsonProperty("LogoParam")]
+        public LogoParam LogoParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +94,9 @@ namespace TencentCloud.Vclm.V20240523.Models
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "Mode", this.Mode);
+            this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
+            this.SetParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
+            this.SetParamObj(map, prefix + "LogoParam.", this.LogoParam);
         }
     }
 }

@@ -86,7 +86,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceRole{ get; set; }
 
         /// <summary>
-        /// 实例 ID，购买只读实例时必填，该字段表示只读实例的主实例ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
+        /// 实例 ID，购买只读实例时必填，该字段表示只读实例的主实例 ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
         /// </summary>
         [JsonProperty("MasterInstanceId")]
         public string MasterInstanceId{ get; set; }

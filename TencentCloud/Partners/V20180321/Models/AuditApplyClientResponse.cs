@@ -44,7 +44,6 @@ namespace TencentCloud.Partners.V20180321.Models
 
         /// <summary>
         /// 关联时间对应的时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AgentTime")]
         public ulong? AgentTime{ get; set; }

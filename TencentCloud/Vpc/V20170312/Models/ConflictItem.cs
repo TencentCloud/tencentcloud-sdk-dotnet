@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 冲突资源的ID
+        /// 冲突资源的ID。已废弃
         /// </summary>
         [JsonProperty("ConfilctId")]
         public string ConfilctId{ get; set; }
@@ -36,6 +36,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("DestinationItem")]
         public string DestinationItem{ get; set; }
 
+        /// <summary>
+        /// 冲突资源的ID
+        /// </summary>
+        [JsonProperty("ConflictId")]
+        public string ConflictId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "ConfilctId", this.ConfilctId);
             this.SetParamSimple(map, prefix + "DestinationItem", this.DestinationItem);
+            this.SetParamSimple(map, prefix + "ConflictId", this.ConflictId);
         }
     }
 }

@@ -37,7 +37,11 @@ namespace TencentCloud.Cbs.V20170312.Models
         public bool? IsActivated{ get; set; }
 
         /// <summary>
-        /// 定期快照策略的状态。取值范围：<br><li>NORMAL：正常<br><li>ISOLATED：已隔离。
+        /// 定期快照策略的状态。取值范围：
+        /// <ul>
+        ///   <li>NORMAL：正常</li>
+        ///   <li>ISOLATED：已隔离</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("AutoSnapshotPolicyState")]
         public string AutoSnapshotPolicyState{ get; set; }

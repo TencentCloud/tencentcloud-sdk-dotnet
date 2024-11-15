@@ -26,14 +26,12 @@ namespace TencentCloud.Cdc.V20201214.Models
         
         /// <summary>
         /// 时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Timestamps")]
         public float?[] Timestamps{ get; set; }
 
         /// <summary>
         /// 对应的具体值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Values")]
         public float?[] Values{ get; set; }

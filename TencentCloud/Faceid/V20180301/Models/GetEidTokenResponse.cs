@@ -25,14 +25,16 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 一次核身流程的标识，有效时间为600秒；
-        /// 完成核身后，可用该标识获取验证结果信息。
+        /// 一次核身流程的标识。
+        /// - 有效时间为600秒。
+        /// - 完成核身后，可用该标识获取验证结果信息。
         /// </summary>
         [JsonProperty("EidToken")]
         public string EidToken{ get; set; }
 
         /// <summary>
-        /// 发起核身流程的URL，用于H5场景核身。
+        /// 发起核身流程的URL。
+        /// - 用于H5场景核身。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

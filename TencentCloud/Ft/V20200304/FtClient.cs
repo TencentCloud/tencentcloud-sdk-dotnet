@@ -28,7 +28,7 @@ namespace TencentCloud.Ft.V20200304
 
        private const string endpoint = "ft.tencentcloudapi.com";
        private const string version = "2020-03-04";
-       private const string sdkVersion = "SDK_NET_3.0.1122";
+       private const string sdkVersion = "SDK_NET_3.0.1123";
 
         /// <summary>
         /// Client constructor.
@@ -159,7 +159,7 @@ namespace TencentCloud.Ft.V20200304
         }
 
         /// <summary>
-        /// 用户上传一张人脸图片，基于人脸编辑与生成算法，输出一张人脸性别转换的图片。男变女可实现美颜、淡妆、加刘海和长发的效果；女变男可实现加胡须、变短发的效果。 
+        /// 用户上传一张人脸图片，基于人脸编辑与生成算法，输出一张人脸性别转换的图片。男变女可实现美颜、淡妆、加刘海和长发的效果；女变男可实现加胡须、变短发的效果。
         /// </summary>
         /// <param name="req"><see cref="SwapGenderPicRequest"/></param>
         /// <returns><see cref="SwapGenderPicResponse"/></returns>
@@ -169,7 +169,7 @@ namespace TencentCloud.Ft.V20200304
         }
 
         /// <summary>
-        /// 用户上传一张人脸图片，基于人脸编辑与生成算法，输出一张人脸性别转换的图片。男变女可实现美颜、淡妆、加刘海和长发的效果；女变男可实现加胡须、变短发的效果。 
+        /// 用户上传一张人脸图片，基于人脸编辑与生成算法，输出一张人脸性别转换的图片。男变女可实现美颜、淡妆、加刘海和长发的效果；女变男可实现加胡须、变短发的效果。
         /// </summary>
         /// <param name="req"><see cref="SwapGenderPicRequest"/></param>
         /// <returns><see cref="SwapGenderPicResponse"/></returns>

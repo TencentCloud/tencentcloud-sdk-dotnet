@@ -240,6 +240,30 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("DeployModel")]
         public long? DeployModel{ get; set; }
 
+        /// <summary>
+        /// 0 默认值，非内网访问，1 内网访问
+        /// </summary>
+        [JsonProperty("IntranetAccess")]
+        public ulong? IntranetAccess{ get; set; }
+
+        /// <summary>
+        /// 内网访问的ip
+        /// </summary>
+        [JsonProperty("IntranetPrivateIpSet")]
+        public string[] IntranetPrivateIpSet{ get; set; }
+
+        /// <summary>
+        /// 开通内网访问的vpc
+        /// </summary>
+        [JsonProperty("IntranetVpcId")]
+        public string IntranetVpcId{ get; set; }
+
+        /// <summary>
+        /// 开通内网访问vpc的网段
+        /// </summary>
+        [JsonProperty("IntranetVpcCidr")]
+        public string IntranetVpcCidr{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -282,6 +306,10 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "CdcClusterId", this.CdcClusterId);
             this.SetParamSimple(map, prefix + "LogDelivery", this.LogDelivery);
             this.SetParamSimple(map, prefix + "DeployModel", this.DeployModel);
+            this.SetParamSimple(map, prefix + "IntranetAccess", this.IntranetAccess);
+            this.SetParamArraySimple(map, prefix + "IntranetPrivateIpSet.", this.IntranetPrivateIpSet);
+            this.SetParamSimple(map, prefix + "IntranetVpcId", this.IntranetVpcId);
+            this.SetParamSimple(map, prefix + "IntranetVpcCidr", this.IntranetVpcCidr);
         }
     }
 }

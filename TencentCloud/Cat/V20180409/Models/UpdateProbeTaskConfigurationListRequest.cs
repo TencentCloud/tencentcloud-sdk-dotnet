@@ -67,6 +67,12 @@ namespace TencentCloud.Cat.V20180409.Models
         [JsonProperty("NodeIpType")]
         public long? NodeIpType{ get; set; }
 
+        /// <summary>
+        /// 批量任务名-地址
+        /// </summary>
+        [JsonProperty("BatchTasks")]
+        public ProbeTaskBasicConfiguration[] BatchTasks{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +86,7 @@ namespace TencentCloud.Cat.V20180409.Models
             this.SetParamSimple(map, prefix + "Cron", this.Cron);
             this.SetParamArraySimple(map, prefix + "ResourceIDs.", this.ResourceIDs);
             this.SetParamSimple(map, prefix + "NodeIpType", this.NodeIpType);
+            this.SetParamArrayObj(map, prefix + "BatchTasks.", this.BatchTasks);
         }
     }
 }

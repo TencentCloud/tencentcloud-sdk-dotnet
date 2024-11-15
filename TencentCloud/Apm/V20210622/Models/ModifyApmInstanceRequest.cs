@@ -141,6 +141,12 @@ namespace TencentCloud.Apm.V20210622.Models
         public long? ResponseDurationWarningThreshold{ get; set; }
 
         /// <summary>
+        /// （0=付费版；1=tsf受限免费版；2=免费版）
+        /// </summary>
+        [JsonProperty("Free")]
+        public long? Free{ get; set; }
+
+        /// <summary>
         /// 是否关联dashboard： 0 关 1 开
         /// </summary>
         [JsonProperty("IsRelatedDashboard")]
@@ -151,6 +157,18 @@ namespace TencentCloud.Apm.V20210622.Models
         /// </summary>
         [JsonProperty("DashboardTopicID")]
         public string DashboardTopicID{ get; set; }
+
+        /// <summary>
+        /// 是否开启SQL注入检测
+        /// </summary>
+        [JsonProperty("IsSqlInjectionAnalysis")]
+        public long? IsSqlInjectionAnalysis{ get; set; }
+
+        /// <summary>
+        /// 是否开启组件漏洞检测
+        /// </summary>
+        [JsonProperty("IsInstrumentationVulnerabilityScan")]
+        public long? IsInstrumentationVulnerabilityScan{ get; set; }
 
 
         /// <summary>
@@ -177,8 +195,11 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamArraySimple(map, prefix + "CustomShowTags.", this.CustomShowTags);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
+            this.SetParamSimple(map, prefix + "Free", this.Free);
             this.SetParamSimple(map, prefix + "IsRelatedDashboard", this.IsRelatedDashboard);
             this.SetParamSimple(map, prefix + "DashboardTopicID", this.DashboardTopicID);
+            this.SetParamSimple(map, prefix + "IsSqlInjectionAnalysis", this.IsSqlInjectionAnalysis);
+            this.SetParamSimple(map, prefix + "IsInstrumentationVulnerabilityScan", this.IsInstrumentationVulnerabilityScan);
         }
     }
 }

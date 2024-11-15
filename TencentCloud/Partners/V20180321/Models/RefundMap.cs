@@ -26,14 +26,12 @@ namespace TencentCloud.Partners.V20180321.Models
         
         /// <summary>
         /// 退款单关联的原始子订单号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }
 
         /// <summary>
         /// 退款金额，单位分
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RefundAmount")]
         public long? RefundAmount{ get; set; }

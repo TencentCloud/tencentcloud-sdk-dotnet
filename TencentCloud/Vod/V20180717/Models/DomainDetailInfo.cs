@@ -81,6 +81,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("QUICConfig")]
         public DomainQUICConfig QUICConfig{ get; set; }
 
+        /// <summary>
+        /// IP 访问限制配置信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IPFilterPolicy")]
+        public IPFilterPolicy IPFilterPolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -95,6 +102,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "RefererAuthPolicy.", this.RefererAuthPolicy);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamObj(map, prefix + "QUICConfig.", this.QUICConfig);
+            this.SetParamObj(map, prefix + "IPFilterPolicy.", this.IPFilterPolicy);
         }
     }
 }

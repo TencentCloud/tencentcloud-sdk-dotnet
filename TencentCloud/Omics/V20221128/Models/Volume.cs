@@ -26,28 +26,24 @@ namespace TencentCloud.Omics.V20221128.Models
         
         /// <summary>
         /// 缓存卷ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VolumeId")]
         public string VolumeId{ get; set; }
 
         /// <summary>
         /// 名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 描述。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 环境ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvironmentId")]
         public string EnvironmentId{ get; set; }
@@ -55,7 +51,6 @@ namespace TencentCloud.Omics.V20221128.Models
         /// <summary>
         /// 缓存卷类型，取值范围：
         /// * SHARED：多点挂载共享存储
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -67,49 +62,42 @@ namespace TencentCloud.Omics.V20221128.Models
         /// - HP：通用性能型
         /// - TB：turbo标准型
         /// - TP：turbo性能型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Spec")]
         public string Spec{ get; set; }
 
         /// <summary>
         /// 缓存卷大小（GB）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Capacity")]
         public ulong? Capacity{ get; set; }
 
         /// <summary>
         /// 缓存卷使用量（Byte）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Usage")]
         public ulong? Usage{ get; set; }
 
         /// <summary>
         /// 缓存卷吞吐上限（MiB/s）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BandwidthLimit")]
         public float? BandwidthLimit{ get; set; }
 
         /// <summary>
         /// 默认挂载路径。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultMountPath")]
         public string DefaultMountPath{ get; set; }
 
         /// <summary>
         /// 是否为默认缓存卷。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsDefault")]
         public bool? IsDefault{ get; set; }
 
         /// <summary>
         /// 状态。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

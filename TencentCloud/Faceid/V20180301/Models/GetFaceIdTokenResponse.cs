@@ -25,7 +25,7 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 有效期 10分钟。只能完成1次核身。
+        /// token值。- 有效期 10分钟。- 只能完成1次核身。
         /// </summary>
         [JsonProperty("FaceIdToken")]
         public string FaceIdToken{ get; set; }

@@ -44,14 +44,12 @@ namespace TencentCloud.Partners.V20180321.Models
 
         /// <summary>
         /// 申请时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplyTime")]
         public string ApplyTime{ get; set; }
 
         /// <summary>
         /// 解绑/撤销时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActionTime")]
         public string ActionTime{ get; set; }

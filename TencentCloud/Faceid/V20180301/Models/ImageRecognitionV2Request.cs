@@ -25,13 +25,14 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 身份证号
+        /// 身份证号。
         /// </summary>
         [JsonProperty("IdCard")]
         public string IdCard{ get; set; }
 
         /// <summary>
-        /// 姓名。中文请使用UTF-8编码。
+        /// 姓名。
+        /// - 中文请使用UTF-8编码。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -51,7 +52,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Optional{ get; set; }
 
         /// <summary>
-        /// 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+        /// 敏感数据加密信息。
+        /// - 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
         /// </summary>
         [JsonProperty("Encryption")]
         public Encryption Encryption{ get; set; }

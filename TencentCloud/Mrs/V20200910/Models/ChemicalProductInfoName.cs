@@ -43,6 +43,7 @@ namespace TencentCloud.Mrs.V20200910.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BarndName")]
+        [System.Obsolete]
         public string BarndName{ get; set; }
 
         /// <summary>
@@ -59,6 +60,12 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("Pinyin")]
         public string Pinyin{ get; set; }
 
+        /// <summary>
+        /// 品牌名
+        /// </summary>
+        [JsonProperty("BrandName")]
+        public string BrandName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamSimple(map, prefix + "BarndName", this.BarndName);
             this.SetParamSimple(map, prefix + "EnName", this.EnName);
             this.SetParamSimple(map, prefix + "Pinyin", this.Pinyin);
+            this.SetParamSimple(map, prefix + "BrandName", this.BrandName);
         }
     }
 }

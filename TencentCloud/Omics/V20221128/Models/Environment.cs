@@ -100,14 +100,12 @@ namespace TencentCloud.Omics.V20221128.Models
 
         /// <summary>
         /// 上个工作流UUID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastWorkflowUuid")]
         public string LastWorkflowUuid{ get; set; }
 
         /// <summary>
         /// 创建时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreationTime")]
         public string CreationTime{ get; set; }

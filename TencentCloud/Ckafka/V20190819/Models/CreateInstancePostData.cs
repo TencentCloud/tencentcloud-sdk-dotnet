@@ -39,7 +39,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string[] DealNames{ get; set; }
 
         /// <summary>
-        /// 实例Id，当购买多个实例时，默认返回购买的第一个实例 id
+        /// ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]

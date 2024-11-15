@@ -45,6 +45,28 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("Externals")]
         public Externals Externals{ get; set; }
 
+        /// <summary>
+        /// 定时器ID。
+        /// </summary>
+        [JsonProperty("ActionTimerId")]
+        public string ActionTimerId{ get; set; }
+
+        /// <summary>
+        /// 定时器状态，取值范围：
+        /// 
+        /// UNDO：未触发
+        /// DOING：触发中
+        /// DONE：已经触发
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// 定时器对应的实例ID。
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +76,9 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "TimerAction", this.TimerAction);
             this.SetParamSimple(map, prefix + "ActionTime", this.ActionTime);
             this.SetParamObj(map, prefix + "Externals.", this.Externals);
+            this.SetParamSimple(map, prefix + "ActionTimerId", this.ActionTimerId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

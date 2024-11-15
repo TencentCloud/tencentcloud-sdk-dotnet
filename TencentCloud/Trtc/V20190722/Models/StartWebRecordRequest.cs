@@ -73,6 +73,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("ReadyTimeout")]
         public ulong? ReadyTimeout{ get; set; }
 
+        /// <summary>
+        /// 渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。
+        /// </summary>
+        [JsonProperty("EmulateMobileParams")]
+        public EmulateMobileParams EmulateMobileParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +93,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
             this.SetParamArrayObj(map, prefix + "PublishCdnParams.", this.PublishCdnParams);
             this.SetParamSimple(map, prefix + "ReadyTimeout", this.ReadyTimeout);
+            this.SetParamObj(map, prefix + "EmulateMobileParams.", this.EmulateMobileParams);
         }
     }
 }

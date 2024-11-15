@@ -25,7 +25,7 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 前端SDK返回
+        /// 前端SDK返回。
         /// </summary>
         [JsonProperty("ReqId")]
         public string ReqId{ get; set; }

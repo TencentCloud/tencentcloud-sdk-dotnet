@@ -31,19 +31,35 @@ namespace TencentCloud.Cbs.V20170312.Models
         public Placement Placement{ get; set; }
 
         /// <summary>
-        /// 是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
+        /// 是否为跨地域复制的快照。取值范围：
+        /// <ul>
+        ///     <li>true：表示为跨地域复制的快照。</li>
+        ///     <li>false：本地域的快照。</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("CopyFromRemote")]
         public bool? CopyFromRemote{ get; set; }
 
         /// <summary>
-        /// 快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制中<br><li>CHECKING_COPIED：复制校验中<br><li>TORECYCLE：待回收。
+        /// 快照的状态。取值范围：
+        /// <ul>
+        ///     <li>NORMAL：正常</li>
+        ///     <li>CREATING：创建中</li>
+        ///     <li>ROLLBACKING：回滚中</li>
+        ///     <li>COPYING_FROM_REMOTE：跨地域复制中</li>
+        ///     <li>CHECKING_COPIED：复制校验中</li>
+        ///     <li>TORECYCLE：待回收</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("SnapshotState")]
         public string SnapshotState{ get; set; }
 
         /// <summary>
-        /// 是否为永久快照。取值范围：<br><li>true：永久快照<br><li>false：非永久快照。
+        /// 是否为永久快照。取值范围：
+        /// <ul>
+        ///     <li>true：永久快照</li>
+        ///     <li>false：非永久快照</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("IsPermanent")]
         public bool? IsPermanent{ get; set; }
@@ -103,7 +119,11 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string[] CopyingToRegions{ get; set; }
 
         /// <summary>
-        /// 是否为加密盘创建的快照。取值范围：<br><li>true：该快照为加密盘创建的<br><li>false:非加密盘创建的快照。
+        /// 是否为加密盘创建的快照。取值范围：
+        /// <ul>
+        ///     <li>true：该快照为加密盘创建的</li>
+        ///     <li>false：非加密盘创建的快照</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("Encrypt")]
         public bool? Encrypt{ get; set; }
@@ -121,7 +141,11 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? ImageCount{ get; set; }
 
         /// <summary>
-        /// 创建此快照的云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
+        /// 创建此快照的云硬盘类型。取值范围：
+        /// <ul>
+        ///     <li>SYSTEM_DISK：系统盘</li>
+        ///     <li>DATA_DISK：数据盘</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("DiskUsage")]
         public string DiskUsage{ get; set; }

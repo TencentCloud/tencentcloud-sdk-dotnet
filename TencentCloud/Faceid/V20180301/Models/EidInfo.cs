@@ -25,25 +25,25 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 商户方 appeIDcode 的数字证书
+        /// 商户方 appeIDcode 的数字证书。
         /// </summary>
         [JsonProperty("EidCode")]
         public string EidCode{ get; set; }
 
         /// <summary>
-        /// Eid中心针对商户方EidCode的电子签名
+        /// Eid中心针对商户方EidCode的电子签名。
         /// </summary>
         [JsonProperty("EidSign")]
         public string EidSign{ get; set; }
 
         /// <summary>
-        /// 商户方公钥加密的会话密钥的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
+        /// 商户方公钥加密的会话密钥的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)。
         /// </summary>
         [JsonProperty("DesKey")]
         public string DesKey{ get; set; }
 
         /// <summary>
-        /// 会话密钥sm2加密后的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
+        /// 会话密钥sm2加密后的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)。
         /// </summary>
         [JsonProperty("UserInfo")]
         public string UserInfo{ get; set; }

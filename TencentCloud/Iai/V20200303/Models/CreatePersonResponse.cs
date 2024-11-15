@@ -39,7 +39,7 @@ namespace TencentCloud.Iai.V20200303.Models
 
         /// <summary>
         /// 疑似同一人的PersonId。 
-        /// 当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
+        /// - 当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
         /// </summary>
         [JsonProperty("SimilarPersonId")]
         public string SimilarPersonId{ get; set; }

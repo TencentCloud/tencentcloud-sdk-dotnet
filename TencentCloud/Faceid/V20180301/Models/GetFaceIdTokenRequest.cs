@@ -25,45 +25,56 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 本地上传照片(LOCAL)、商业库(BUSINESS)
+        /// 比对库。
+        /// - 取值范围：
+        /// LOCAL：本地上传照片。
+        /// BUSINESS：商业库。
         /// </summary>
         [JsonProperty("CompareLib")]
         public string CompareLib{ get; set; }
 
         /// <summary>
-        /// CompareLib为商业库时必传。
+        /// 身份证。
+        /// - CompareLib为商业库时必传。
         /// </summary>
         [JsonProperty("IdCard")]
         public string IdCard{ get; set; }
 
         /// <summary>
-        /// CompareLib为商业库时必传。
+        /// 姓名。
+        /// - CompareLib为商业库时必传。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// CompareLib为上传照片比对时必传，Base64后图片最大8MB。
-        /// 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+        /// 图片的Base64。
+        /// - CompareLib为上传照片比对时必传。
+        /// - Base64后图片最大8MB。
+        /// - 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
 
         /// <summary>
-        /// SDK中生成的Meta字符串
+        /// SDK中生成的Meta字符串。
         /// </summary>
         [JsonProperty("Meta")]
         public string Meta{ get; set; }
 
         /// <summary>
-        /// 透传参数 1000长度字符串
+        /// 透传参数。
+        /// - 1000长度字符串
         /// </summary>
         [JsonProperty("Extra")]
         public string Extra{ get; set; }
 
         /// <summary>
-        /// 默认为false，设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。开通地址见https://console.cloud.tencent.com/faceid/cos
-        /// 【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
+        /// 是否使用cos桶。
+        /// - 默认为false。
+        /// - 设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。
+        /// - 开通地址见https://console.cloud.tencent.com/faceid/cos
+        /// - 【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
         /// </summary>
         [JsonProperty("UseCos")]
         public bool? UseCos{ get; set; }
@@ -75,8 +86,9 @@ namespace TencentCloud.Faceid.V20180301.Models
         public Encryption Encryption{ get; set; }
 
         /// <summary>
-        /// 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加腾讯云人脸核身小助手进行咨询。
-        /// 示例值：1
+        /// 用于细分客户使用场景。
+        /// - 申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。
+        /// - 如有疑问，请添加腾讯云人脸核身小助手进行咨询。
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }

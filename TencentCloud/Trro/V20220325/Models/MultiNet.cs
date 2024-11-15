@@ -26,42 +26,36 @@ namespace TencentCloud.Trro.V20220325.Models
         
         /// <summary>
         /// 网卡序号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetId")]
         public long? NetId{ get; set; }
 
         /// <summary>
         /// 网卡IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetIp")]
         public string NetIp{ get; set; }
 
         /// <summary>
         /// 时延，单位ms
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Rtt")]
         public long?[] Rtt{ get; set; }
 
         /// <summary>
         /// 丢包率，单位%
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Lost")]
         public long?[] Lost{ get; set; }
 
         /// <summary>
         /// 发送bps，单位kbps
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SendBps")]
         public long?[] SendBps{ get; set; }
 
         /// <summary>
         /// 接收bps，单位kbps
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecvBps")]
         public long?[] RecvBps{ get; set; }

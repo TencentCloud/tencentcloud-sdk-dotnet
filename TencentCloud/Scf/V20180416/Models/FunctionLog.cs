@@ -49,7 +49,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 函数执行结果，如果是 0 表示执行成功，其他值表示失败
+        /// 函数执行结果，如果是 0 表示执行成功，2表示函数运行中，3表示函数执行中断，其他值表示失败
         /// </summary>
         [JsonProperty("RetCode")]
         public long? RetCode{ get; set; }

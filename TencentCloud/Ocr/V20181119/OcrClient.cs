@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1122";
+       private const string sdkVersion = "SDK_NET_3.0.1123";
 
         /// <summary>
         /// Client constructor.
@@ -2243,6 +2243,48 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 韩国驾驶证识别
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeKoreanDrivingLicenseOCRRequest"/></param>
+        /// <returns><see cref="RecognizeKoreanDrivingLicenseOCRResponse"/></returns>
+        public Task<RecognizeKoreanDrivingLicenseOCRResponse> RecognizeKoreanDrivingLicenseOCR(RecognizeKoreanDrivingLicenseOCRRequest req)
+        {
+            return InternalRequestAsync<RecognizeKoreanDrivingLicenseOCRResponse>(req, "RecognizeKoreanDrivingLicenseOCR");
+        }
+
+        /// <summary>
+        /// 韩国驾驶证识别
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeKoreanDrivingLicenseOCRRequest"/></param>
+        /// <returns><see cref="RecognizeKoreanDrivingLicenseOCRResponse"/></returns>
+        public RecognizeKoreanDrivingLicenseOCRResponse RecognizeKoreanDrivingLicenseOCRSync(RecognizeKoreanDrivingLicenseOCRRequest req)
+        {
+            return InternalRequestAsync<RecognizeKoreanDrivingLicenseOCRResponse>(req, "RecognizeKoreanDrivingLicenseOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 韩国身份证识别
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeKoreanIDCardOCRRequest"/></param>
+        /// <returns><see cref="RecognizeKoreanIDCardOCRResponse"/></returns>
+        public Task<RecognizeKoreanIDCardOCRResponse> RecognizeKoreanIDCardOCR(RecognizeKoreanIDCardOCRRequest req)
+        {
+            return InternalRequestAsync<RecognizeKoreanIDCardOCRResponse>(req, "RecognizeKoreanIDCardOCR");
+        }
+
+        /// <summary>
+        /// 韩国身份证识别
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeKoreanIDCardOCRRequest"/></param>
+        /// <returns><see cref="RecognizeKoreanIDCardOCRResponse"/></returns>
+        public RecognizeKoreanIDCardOCRResponse RecognizeKoreanIDCardOCRSync(RecognizeKoreanIDCardOCRRequest req)
+        {
+            return InternalRequestAsync<RecognizeKoreanIDCardOCRResponse>(req, "RecognizeKoreanIDCardOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 医疗发票识别目前支持全国统一门诊发票、全国统一住院发票、以及部分地方的门诊和住院发票的识别。
         /// 
         /// 默认接口请求频率限制：5次/秒。
@@ -2294,6 +2336,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 菲律宾驾驶证识别
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="RecognizePhilippinesDrivingLicenseOCRRequest"/></param>
         /// <returns><see cref="RecognizePhilippinesDrivingLicenseOCRResponse"/></returns>
@@ -2304,6 +2348,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 菲律宾驾驶证识别
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="RecognizePhilippinesDrivingLicenseOCRRequest"/></param>
         /// <returns><see cref="RecognizePhilippinesDrivingLicenseOCRResponse"/></returns>

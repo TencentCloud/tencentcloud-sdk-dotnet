@@ -26,14 +26,12 @@ namespace TencentCloud.Trro.V20220325.Models
         
         /// <summary>
         /// 添加关联失败的现场设备ID列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedInsertIds")]
         public string[] FailedInsertIds{ get; set; }
 
         /// <summary>
         /// 解除关联失败的现场设备ID列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedDeleteIds")]
         public string[] FailedDeleteIds{ get; set; }

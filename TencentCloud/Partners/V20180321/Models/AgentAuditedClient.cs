@@ -104,28 +104,24 @@ namespace TencentCloud.Partners.V20180321.Models
 
         /// <summary>
         /// 业务员ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SalesUin")]
         public string SalesUin{ get; set; }
 
         /// <summary>
         /// 业务员姓名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SalesName")]
         public string SalesName{ get; set; }
 
         /// <summary>
         /// 代客邮箱
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mail")]
         public string Mail{ get; set; }
 
         /// <summary>
         /// 交易类型:交易类型 1-原类型 2-代理型  3-代采型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TransactionType")]
         public string TransactionType{ get; set; }

@@ -26,7 +26,6 @@ namespace TencentCloud.Omics.V20221128.Models
         
         /// <summary>
         /// 缓存卷ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VolumeId")]
         public string VolumeId{ get; set; }

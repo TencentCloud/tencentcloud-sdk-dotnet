@@ -26,14 +26,12 @@ namespace TencentCloud.Omics.V20221128.Models
         
         /// <summary>
         /// 最大CPU设置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxCPU")]
         public string MaxCPU{ get; set; }
 
         /// <summary>
         /// 最大内存设置（单位：Mi，Gi，Ti，M，G，T）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxMemory")]
         public string MaxMemory{ get; set; }

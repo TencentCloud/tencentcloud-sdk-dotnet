@@ -25,19 +25,20 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 人员名称
+        /// 人员名称。
         /// </summary>
         [JsonProperty("PersonName")]
         public string PersonName{ get; set; }
 
         /// <summary>
-        /// 人员性别，0代表未填写，1代表男性，2代表女性
+        /// 人员性别。
+        /// - 取值范围：0代表未填写，1代表男性，2代表女性。
         /// </summary>
         [JsonProperty("Gender")]
         public long? Gender{ get; set; }
 
         /// <summary>
-        /// 包含的人脸 ID 列表
+        /// 包含的人脸 ID 列表。
         /// </summary>
         [JsonProperty("FaceIds")]
         public string[] FaceIds{ get; set; }

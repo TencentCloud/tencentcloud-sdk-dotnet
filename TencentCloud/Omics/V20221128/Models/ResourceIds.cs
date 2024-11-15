@@ -26,35 +26,30 @@ namespace TencentCloud.Omics.V20221128.Models
         
         /// <summary>
         /// 私有网络ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VPCId")]
         public string VPCId{ get; set; }
 
         /// <summary>
         /// 子网ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
         /// 安全组ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecurityGroupId")]
         public string SecurityGroupId{ get; set; }
 
         /// <summary>
         /// TDSQL-C Mysql版数据库ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TDSQLCId")]
         public string TDSQLCId{ get; set; }
 
         /// <summary>
         /// 文件存储ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CFSId")]
         public string CFSId{ get; set; }
@@ -65,21 +60,18 @@ namespace TencentCloud.Omics.V20221128.Models
         /// - HP：通用性能型
         /// - TB：turbo标准型
         /// - TP：turbo性能型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CFSStorageType")]
         public string CFSStorageType{ get; set; }
 
         /// <summary>
         /// 云服务器ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CVMId")]
         public string CVMId{ get; set; }
 
         /// <summary>
         /// 弹性容器集群ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EKSId")]
         public string EKSId{ get; set; }

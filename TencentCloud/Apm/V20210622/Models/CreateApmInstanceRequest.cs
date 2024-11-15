@@ -60,6 +60,12 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
+        /// <summary>
+        /// （0=付费版；1=tsf受限免费版；2=免费版）
+        /// </summary>
+        [JsonProperty("Free")]
+        public long? Free{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "SpanDailyCounters", this.SpanDailyCounters);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "Free", this.Free);
         }
     }
 }

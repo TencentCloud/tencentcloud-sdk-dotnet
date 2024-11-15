@@ -65,6 +65,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string[] AlternativeLanguage{ get; set; }
 
         /// <summary>
+        /// 自定义参数，联系后台使用
+        /// </summary>
+        [JsonProperty("CustomParam")]
+        public string CustomParam{ get; set; }
+
+        /// <summary>
         /// 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
         /// </summary>
         [JsonProperty("VadSilenceTime")]
@@ -78,6 +84,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         {
             this.SetParamSimple(map, prefix + "Language", this.Language);
             this.SetParamArraySimple(map, prefix + "AlternativeLanguage.", this.AlternativeLanguage);
+            this.SetParamSimple(map, prefix + "CustomParam", this.CustomParam);
             this.SetParamSimple(map, prefix + "VadSilenceTime", this.VadSilenceTime);
         }
     }

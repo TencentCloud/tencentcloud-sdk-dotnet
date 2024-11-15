@@ -25,19 +25,19 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 人员ID，取值为创建人员接口中的PersonId
+        /// 人员ID，取值为创建人员接口中的PersonId。
         /// </summary>
         [JsonProperty("PersonId")]
         public string PersonId{ get; set; }
 
         /// <summary>
-        /// 起始序号，默认值为0
+        /// 起始序号，默认值为0。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认值为10，最大值为100
+        /// 返回数量，默认值为10，最大值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

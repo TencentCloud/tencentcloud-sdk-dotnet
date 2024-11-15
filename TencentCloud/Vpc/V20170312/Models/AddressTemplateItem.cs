@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// ipm-xxxxxxxx
+        /// IP地址模板ID
         /// </summary>
         [JsonProperty("AddressTemplateId")]
         public string AddressTemplateId{ get; set; }

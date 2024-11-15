@@ -66,6 +66,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 预付费参数
+        /// </summary>
+        [JsonProperty("PrePaySetting")]
+        public PrePaySetting PrePaySetting{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
             this.SetParamArrayObj(map, prefix + "ZoneSettings.", this.ZoneSettings);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamObj(map, prefix + "PrePaySetting.", this.PrePaySetting);
         }
     }
 }

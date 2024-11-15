@@ -62,56 +62,48 @@ namespace TencentCloud.Cloudstudio.V20230508.Models
 
         /// <summary>
         /// 工作空间图标
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Icon")]
         public string Icon{ get; set; }
 
         /// <summary>
         /// 工作空间状态, 异常原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusReason")]
         public string StatusReason{ get; set; }
 
         /// <summary>
         /// 工作空间描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 工作空间类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkspaceType")]
         public string WorkspaceType{ get; set; }
 
         /// <summary>
         /// Git 仓库 HTTPS 地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VersionControlUrl")]
         public string VersionControlUrl{ get; set; }
 
         /// <summary>
         /// Git 仓库引用。指定分支使用 /refs/heads/{分支名}, 指定 Tag 用 /refs/tags/{Tag名}
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VersionControlRef")]
         public string VersionControlRef{ get; set; }
 
         /// <summary>
         /// 最后操作时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastOpsDate")]
         public string LastOpsDate{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateDate")]
         public string CreateDate{ get; set; }

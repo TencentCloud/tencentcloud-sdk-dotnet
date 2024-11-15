@@ -26,21 +26,18 @@ namespace TencentCloud.Omics.V20221128.Models
         
         /// <summary>
         /// CPU Limit设置。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CPULimit")]
         public string CPULimit{ get; set; }
 
         /// <summary>
         /// 内存Limit设置（单位：Mi，Gi，Ti，M，G，T）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemoryLimit")]
         public string MemoryLimit{ get; set; }
 
         /// <summary>
         /// Pods数量设置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Pods")]
         public string Pods{ get; set; }

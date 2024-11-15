@@ -25,13 +25,13 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 删除成功的人脸数量
+        /// 删除成功的人脸数量.
         /// </summary>
         [JsonProperty("SucDeletedNum")]
         public ulong? SucDeletedNum{ get; set; }
 
         /// <summary>
-        /// 删除成功的人脸ID列表
+        /// 删除成功的人脸ID列表。
         /// </summary>
         [JsonProperty("SucFaceIds")]
         public string[] SucFaceIds{ get; set; }

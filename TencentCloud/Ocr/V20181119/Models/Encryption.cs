@@ -25,14 +25,14 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅[敏感数据加密指引](https://cloud.tencent.com/document/product/866/106048)文档。
+        /// 有加密需求的用户，接入传入kms的CiphertextBlob（Base64编码），关于数据加密可查阅[敏感数据加密指引](https://cloud.tencent.com/document/product/866/106048)文档。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CiphertextBlob")]
         public string CiphertextBlob{ get; set; }
 
         /// <summary>
-        /// 有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。
+        /// 有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符，Base64编码）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Iv")]

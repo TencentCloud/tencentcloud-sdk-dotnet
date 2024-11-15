@@ -43,10 +43,16 @@ namespace TencentCloud.Gme.V20180711.Models
         public ulong? BizId{ get; set; }
 
         /// <summary>
-        /// 要剔除的用户列表
+        /// 要剔除的用户列表（整型）
         /// </summary>
         [JsonProperty("Uids")]
         public string[] Uids{ get; set; }
+
+        /// <summary>
+        /// 要剔除的用户列表（字符串类型）
+        /// </summary>
+        [JsonProperty("StrUids")]
+        public string[] StrUids{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Gme.V20180711.Models
             this.SetParamSimple(map, prefix + "DeleteType", this.DeleteType);
             this.SetParamSimple(map, prefix + "BizId", this.BizId);
             this.SetParamArraySimple(map, prefix + "Uids.", this.Uids);
+            this.SetParamArraySimple(map, prefix + "StrUids.", this.StrUids);
         }
     }
 }

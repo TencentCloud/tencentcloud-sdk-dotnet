@@ -116,6 +116,24 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 自动续费标记， 0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费，若业务无续费概念，设置为0
+        /// </summary>
+        [JsonProperty("AutoRenewFlag")]
+        public ulong? AutoRenewFlag{ get; set; }
+
+        /// <summary>
+        /// 隔离时间，未隔离返回0000-00-00 00:00:00。
+        /// </summary>
+        [JsonProperty("IsolateTime")]
+        public string IsolateTime{ get; set; }
+
+        /// <summary>
+        /// 过期时间，后付费返回0000-00-00 00:00:00
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public string ExpireTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +155,9 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamArrayObj(map, prefix + "ZoneSettings.", this.ZoneSettings);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+            this.SetParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         }
     }
 }

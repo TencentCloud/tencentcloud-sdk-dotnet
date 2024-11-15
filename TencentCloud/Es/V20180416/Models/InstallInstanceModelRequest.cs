@@ -36,6 +36,18 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("UsrCosModelUrlList")]
         public string[] UsrCosModelUrlList{ get; set; }
 
+        /// <summary>
+        /// 客户指定安装的模型名称，可为空，默认为模型文件名
+        /// </summary>
+        [JsonProperty("ModelNames")]
+        public string[] ModelNames{ get; set; }
+
+        /// <summary>
+        /// 模型使用的任务类型，包括：fill_mask, ner, question_answering, text_classification, text_embedding, text_expansion, text_similarity和zero_shot_classification，默认为text_embedding
+        /// </summary>
+        [JsonProperty("TaskTypes")]
+        public string[] TaskTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Es.V20180416.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamArraySimple(map, prefix + "UsrCosModelUrlList.", this.UsrCosModelUrlList);
+            this.SetParamArraySimple(map, prefix + "ModelNames.", this.ModelNames);
+            this.SetParamArraySimple(map, prefix + "TaskTypes.", this.TaskTypes);
         }
     }
 }

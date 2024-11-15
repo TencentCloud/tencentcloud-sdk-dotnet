@@ -25,13 +25,13 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 人员数量
+        /// 人员数量。
         /// </summary>
         [JsonProperty("PersonNum")]
         public ulong? PersonNum{ get; set; }
 
         /// <summary>
-        /// 人脸数量
+        /// 人脸数量。
         /// </summary>
         [JsonProperty("FaceNum")]
         public ulong? FaceNum{ get; set; }

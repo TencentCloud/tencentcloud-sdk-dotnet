@@ -56,49 +56,42 @@ namespace TencentCloud.Cdc.V20201214.Models
 
         /// <summary>
         /// 平均cpu负载百分比
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CpuAverage")]
         public float? CpuAverage{ get; set; }
 
         /// <summary>
         /// 平均内存使用率百分比
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemAverage")]
         public float? MemAverage{ get; set; }
 
         /// <summary>
         /// 平均网络流量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetAverage")]
         public float? NetAverage{ get; set; }
 
         /// <summary>
         /// cpu详细监控数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CpuDetailData")]
         public DetailData CpuDetailData{ get; set; }
 
         /// <summary>
         /// 内存详细数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemDetailData")]
         public DetailData MemDetailData{ get; set; }
 
         /// <summary>
         /// 网络速率详细数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetRateDetailData")]
         public DetailData NetRateDetailData{ get; set; }
 
         /// <summary>
         /// 网速包详细数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetPacketDetailData")]
         public DetailData NetPacketDetailData{ get; set; }

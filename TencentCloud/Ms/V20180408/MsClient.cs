@@ -28,7 +28,7 @@ namespace TencentCloud.Ms.V20180408
 
        private const string endpoint = "ms.tencentcloudapi.com";
        private const string version = "2018-04-08";
-       private const string sdkVersion = "SDK_NET_3.0.1122";
+       private const string sdkVersion = "SDK_NET_3.0.1123";
 
         /// <summary>
         /// Client constructor.
@@ -163,6 +163,8 @@ namespace TencentCloud.Ms.V20180408
         }
 
         /// <summary>
+        /// 不再使用
+        /// 
         /// 用户可以使用该接口自建资源，只支持白名单用户
         /// </summary>
         /// <param name="req"><see cref="CreateResourceInstancesRequest"/></param>
@@ -173,6 +175,8 @@ namespace TencentCloud.Ms.V20180408
         }
 
         /// <summary>
+        /// 不再使用
+        /// 
         /// 用户可以使用该接口自建资源，只支持白名单用户
         /// </summary>
         /// <param name="req"><see cref="CreateResourceInstancesRequest"/></param>

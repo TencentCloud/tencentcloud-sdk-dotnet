@@ -41,7 +41,6 @@ namespace TencentCloud.Trtc.V20190722.Models
 
         /// <summary>
         /// 录制文件信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageFileList")]
         public StorageFile[] StorageFileList{ get; set; }

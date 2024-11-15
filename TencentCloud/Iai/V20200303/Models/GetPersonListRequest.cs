@@ -25,19 +25,19 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 人员库ID，取值为创建人员库接口中的GroupId
+        /// 人员库ID，取值为创建人员库接口中的GroupId。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 起始序号，默认值为0
+        /// 起始序号，默认值为0。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认值为10，最大值为1000
+        /// 返回数量，默认值为10，最大值为1000。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

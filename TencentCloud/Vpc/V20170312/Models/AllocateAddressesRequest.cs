@@ -84,6 +84,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string AnycastZone{ get; set; }
 
         /// <summary>
+        /// 指定IP地址申请EIP，每个账户每个月只有三次配额
+        /// </summary>
+        [JsonProperty("VipCluster")]
+        public string[] VipCluster{ get; set; }
+
+        /// <summary>
         /// <b>[已废弃]</b> AnycastEIP不再区分是否负载均衡。原参数说明如下：
         /// AnycastEIP是否用于绑定负载均衡。
         /// <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>TRUE：AnycastEIP可绑定对象为负载均衡</li>
@@ -147,6 +153,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamObj(map, prefix + "AddressChargePrepaid.", this.AddressChargePrepaid);
             this.SetParamSimple(map, prefix + "AddressType", this.AddressType);
             this.SetParamSimple(map, prefix + "AnycastZone", this.AnycastZone);
+            this.SetParamArraySimple(map, prefix + "VipCluster.", this.VipCluster);
             this.SetParamSimple(map, prefix + "ApplicableForCLB", this.ApplicableForCLB);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);

@@ -47,20 +47,19 @@ namespace TencentCloud.Vclm.V20240523.Models
         public string StatusMsg{ get; set; }
 
         /// <summary>
-        /// 错误码
+        /// 任务执行错误码。当任务状态不为FAIL时，该值为""。
         /// </summary>
         [JsonProperty("ErrorCode")]
         public string ErrorCode{ get; set; }
 
         /// <summary>
-        /// 错误信息
+        /// 任务执行错误信息。当任务状态不为FAIL时，该值为""。
         /// </summary>
         [JsonProperty("ErrorMessage")]
         public string ErrorMessage{ get; set; }
 
         /// <summary>
-        /// 生成视频的URL地址
-        /// 有效期24小时
+        /// 生成视频的URL地址。有效期24小时。
         /// </summary>
         [JsonProperty("ResultVideoUrl")]
         public string ResultVideoUrl{ get; set; }

@@ -26,35 +26,30 @@ namespace TencentCloud.Cdc.V20201214.Models
         
         /// <summary>
         /// 类型族
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostTypeFamily")]
         public string HostTypeFamily{ get; set; }
 
         /// <summary>
         /// 总CPU
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CpuTotal")]
         public float? CpuTotal{ get; set; }
 
         /// <summary>
         /// 可用CPU
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CpuAvailable")]
         public float? CpuAvailable{ get; set; }
 
         /// <summary>
         /// 总内存
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemTotal")]
         public float? MemTotal{ get; set; }
 
         /// <summary>
         /// 可用内存
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemAvailable")]
         public float? MemAvailable{ get; set; }

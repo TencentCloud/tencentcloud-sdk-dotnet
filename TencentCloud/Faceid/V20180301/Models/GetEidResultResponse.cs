@@ -25,7 +25,9 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 文本类信息。（基于对敏感信息的保护，验证使用的姓名和身份证号统一通过加密后从Eidinfo参数中返回，如需获取请在控制台申请返回身份信息，详见[E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)）
+        /// 文本类信息。
+        /// - 基于对敏感信息的保护，验证使用的姓名和身份证号统一通过加密后从EidInfo参数中返回。
+        /// - 如需获取请在控制台申请返回身份信息，详见[E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Text")]
@@ -46,28 +48,33 @@ namespace TencentCloud.Faceid.V20180301.Models
         public DetectInfoBestFrame BestFrame{ get; set; }
 
         /// <summary>
-        /// Eid信息。（包括商户下用户唯一标识以及加密后的姓名、身份证号信息。解密方式详见[E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)）
+        /// Eid信息。
+        /// - 包括商户下用户唯一标识以及加密后的姓名、身份证号信息。
+        /// - 解密方式详见[E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EidInfo")]
         public EidInfo EidInfo{ get; set; }
 
         /// <summary>
-        /// 意愿核身朗读模式相关信息。若未使用意愿核身朗读功能，该字段返回值可以不处理。
+        /// 意愿核身朗读模式相关信息。
+        /// - 若未使用意愿核身朗读功能，该字段返回值可以不处理。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IntentionVerifyData")]
         public IntentionVerifyData IntentionVerifyData{ get; set; }
 
         /// <summary>
-        /// 意愿核身问答模式相关信息。若未使用意愿核身问答模式功能，该字段返回值可以不处理。
+        /// 意愿核身问答模式相关信息。
+        /// - 若未使用意愿核身问答模式功能，该字段返回值可以不处理。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IntentionQuestionResult")]
         public IntentionQuestionResult IntentionQuestionResult{ get; set; }
 
         /// <summary>
-        /// 意愿核身点头确认模式的结果信息，若未使用该意愿核身功能，该字段返回值可以不处理。
+        /// 意愿核身点头确认模式的结果信息。
+        /// - 若未使用该意愿核身功能，该字段返回值可以不处理。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IntentionActionResult")]

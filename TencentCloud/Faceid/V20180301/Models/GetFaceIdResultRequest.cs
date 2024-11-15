@@ -25,19 +25,22 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// SDK人脸核身流程的标识，调用GetFaceIdToken接口时生成。
+        /// SDK人脸核身流程的标识。
+        /// - 调用GetFaceIdToken接口时生成。
         /// </summary>
         [JsonProperty("FaceIdToken")]
         public string FaceIdToken{ get; set; }
 
         /// <summary>
-        /// 是否需要拉取视频，默认false不需要
+        /// 是否需要拉取视频。
+        /// - 默认false：不需要。
         /// </summary>
         [JsonProperty("IsNeedVideo")]
         public bool? IsNeedVideo{ get; set; }
 
         /// <summary>
-        /// 是否需要拉取截帧，默认false不需要
+        /// 是否需要拉取截帧。
+        /// - 默认false：不需要。
         /// </summary>
         [JsonProperty("IsNeedBestFrame")]
         public bool? IsNeedBestFrame{ get; set; }

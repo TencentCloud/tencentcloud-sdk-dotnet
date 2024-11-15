@@ -39,6 +39,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li> RebuildMedia: 音画质重生</li>
         /// <li> QualityInspect: 音画质检测</li>
         /// <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
+        /// <li>VoiceTranslation: 语音翻译</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }

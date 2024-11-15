@@ -72,6 +72,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("ModifyTime")]
         public long? ModifyTime{ get; set; }
 
+        /// <summary>
+        /// 合同编号
+        /// </summary>
+        [JsonProperty("ContractNo")]
+        public string ContractNo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamSimple(map, prefix + "BusinessId", this.BusinessId);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamSimple(map, prefix + "ContractNo", this.ContractNo);
         }
     }
 }

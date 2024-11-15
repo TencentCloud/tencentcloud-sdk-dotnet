@@ -64,6 +64,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li> VideoProduce: 视频制作</li>
         /// <li> MediaCast: 媒体转推</li>
         /// <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
+        /// <li>VoiceTranslation: 语音翻译</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

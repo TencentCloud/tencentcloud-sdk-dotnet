@@ -25,7 +25,7 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 请求体被加密后的密文，本接口只支持加密传输
+        /// 请求体被加密后的密文（Base64编码），本接口只支持加密传输
         /// </summary>
         [JsonProperty("EncryptedBody")]
         public string EncryptedBody{ get; set; }

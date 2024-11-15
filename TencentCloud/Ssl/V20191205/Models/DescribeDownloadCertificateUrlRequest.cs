@@ -31,7 +31,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string CertificateId{ get; set; }
 
         /// <summary>
-        /// 下载的服务类型: nginx tomcat apache iis jks other root
+        /// 必填选项，下载的服务类型: nginx tomcat apache iis jks other root
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }

@@ -15,27 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeCloudProtectServiceOrderListRequest : AbstractModel
+    public class PrePaySetting : AbstractModel
     {
         
         /// <summary>
-        /// 排序字段,当前支持: BeginTime
+        /// 时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Order")]
-        public string Order{ get; set; }
+        [JsonProperty("Period")]
+        public Period Period{ get; set; }
 
         /// <summary>
-        /// 排序方式,当前支持:
-        /// ASC 正序,DESC 倒序
+        /// 自动续费标记，0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("By")]
-        public string By{ get; set; }
+        [JsonProperty("AutoRenewFlag")]
+        public long? AutoRenewFlag{ get; set; }
 
 
         /// <summary>
@@ -43,8 +44,8 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Order", this.Order);
-            this.SetParamSimple(map, prefix + "By", this.By);
+            this.SetParamObj(map, prefix + "Period.", this.Period);
+            this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         }
     }
 }

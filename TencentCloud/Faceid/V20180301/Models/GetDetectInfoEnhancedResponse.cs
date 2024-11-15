@@ -60,28 +60,32 @@ namespace TencentCloud.Faceid.V20180301.Models
         public Encryption Encryption{ get; set; }
 
         /// <summary>
-        /// 意愿核身朗读模式结果信息。若未使用意愿核身功能，该字段返回值可以不处理。
+        /// 意愿核身朗读模式结果信息。
+        /// - 若未使用意愿核身功能，该字段返回值可以不处理。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IntentionVerifyData")]
         public IntentionVerifyData IntentionVerifyData{ get; set; }
 
         /// <summary>
-        /// 意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。
+        /// 意愿核身问答模式结果。
+        /// 
+        /// - 若未使用该意愿核身功能，该字段返回值可以不处理。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IntentionQuestionResult")]
         public IntentionQuestionResult IntentionQuestionResult{ get; set; }
 
         /// <summary>
-        /// 意愿核身点头确认模式的结果信息，若未使用该意愿核身功能，该字段返回值可以不处理。
+        /// 意愿核身点头确认模式的结果信息。
+        /// - 若未使用该意愿核身功能，该字段返回值可以不处理。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IntentionActionResult")]
         public IntentionActionResult IntentionActionResult{ get; set; }
 
         /// <summary>
-        /// 加密后的数据
+        /// 加密后的数据。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EncryptedBody")]

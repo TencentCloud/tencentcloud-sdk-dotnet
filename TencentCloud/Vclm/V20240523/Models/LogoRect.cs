@@ -25,29 +25,25 @@ namespace TencentCloud.Vclm.V20240523.Models
     {
         
         /// <summary>
-        /// 左上角X坐标
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 水印图框X坐标值。当值大于0时，坐标轴原点位于原图左侧，方向指右；当值小于0时，坐标轴原点位于原图右侧，方向指左。
         /// </summary>
         [JsonProperty("X")]
         public long? X{ get; set; }
 
         /// <summary>
-        /// 左上角Y坐标
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 水印图框Y坐标值。当值大于0时，坐标轴原点位于原图上侧，方向指下；当值小于0时，坐标轴原点位于原图下侧，方向指上。
         /// </summary>
         [JsonProperty("Y")]
         public long? Y{ get; set; }
 
         /// <summary>
-        /// 方框宽度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 水印图框宽度。
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// 方框高度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 水印图框高度。
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }

@@ -248,6 +248,34 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("DefaultTSF")]
         public long? DefaultTSF{ get; set; }
 
+        /// <summary>
+        /// 是否关联dashboard： 0 关 1 开
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsRelatedDashboard")]
+        public long? IsRelatedDashboard{ get; set; }
+
+        /// <summary>
+        /// dashboard ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DashboardTopicID")]
+        public string DashboardTopicID{ get; set; }
+
+        /// <summary>
+        /// 是否开启组件漏洞检测
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsInstrumentationVulnerabilityScan")]
+        public long? IsInstrumentationVulnerabilityScan{ get; set; }
+
+        /// <summary>
+        /// 是否开启SQL注入分析
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsSqlInjectionAnalysis")]
+        public long? IsSqlInjectionAnalysis{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -286,6 +314,10 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
             this.SetParamSimple(map, prefix + "Free", this.Free);
             this.SetParamSimple(map, prefix + "DefaultTSF", this.DefaultTSF);
+            this.SetParamSimple(map, prefix + "IsRelatedDashboard", this.IsRelatedDashboard);
+            this.SetParamSimple(map, prefix + "DashboardTopicID", this.DashboardTopicID);
+            this.SetParamSimple(map, prefix + "IsInstrumentationVulnerabilityScan", this.IsInstrumentationVulnerabilityScan);
+            this.SetParamSimple(map, prefix + "IsSqlInjectionAnalysis", this.IsSqlInjectionAnalysis);
         }
     }
 }

@@ -369,6 +369,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Labels")]
         public string[] Labels{ get; set; }
 
+        /// <summary>
+        /// 拨测状态。 0: 禁用拨测, 1: 启用拨测
+        /// </summary>
+        [JsonProperty("ProbeStatus")]
+        public long? ProbeStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -425,6 +431,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "GmEncPrivateKey", this.GmEncPrivateKey);
             this.SetParamSimple(map, prefix + "GmSSLId", this.GmSSLId);
             this.SetParamArraySimple(map, prefix + "Labels.", this.Labels);
+            this.SetParamSimple(map, prefix + "ProbeStatus", this.ProbeStatus);
         }
     }
 }

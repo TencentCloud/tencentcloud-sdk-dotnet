@@ -43,7 +43,7 @@ namespace TencentCloud.Partners.V20180321.Models
         public ulong? ApplyTime{ get; set; }
 
         /// <summary>
-        /// 代客类型，可能值为a/b/c
+        /// 代客类型，可能值为a/b/c/other
         /// </summary>
         [JsonProperty("ClientFlag")]
         public string ClientFlag{ get; set; }
@@ -74,21 +74,18 @@ namespace TencentCloud.Partners.V20180321.Models
 
         /// <summary>
         /// 业务员ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SalesUin")]
         public string SalesUin{ get; set; }
 
         /// <summary>
         /// 业务员姓名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SalesName")]
         public string SalesName{ get; set; }
 
         /// <summary>
         /// 客户名称，此字段和控制台返回一致。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientName")]
         public string ClientName{ get; set; }

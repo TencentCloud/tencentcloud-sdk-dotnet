@@ -66,21 +66,18 @@ namespace TencentCloud.Cdc.V20201214.Models
 
         /// <summary>
         /// 宿主机资源概览信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostDetailInfo")]
         public HostDetailInfo[] HostDetailInfo{ get; set; }
 
         /// <summary>
         /// 热备宿主机数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostStandbyCount")]
         public ulong? HostStandbyCount{ get; set; }
 
         /// <summary>
         /// 普通宿主机数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostNormalCount")]
         public ulong? HostNormalCount{ get; set; }

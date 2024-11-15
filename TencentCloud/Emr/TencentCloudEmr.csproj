@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1122</VersionPrefix>
+    <VersionPrefix>3.0.1123</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -235,6 +235,7 @@
     <Compile Include="V20190103\Models\OverviewMetricData.cs" />
     <Compile Include="V20190103\Models\OverviewRow.cs" />
     <Compile Include="V20190103\Models\PartDetailPriceItem.cs" />
+    <Compile Include="V20190103\Models\Period.cs" />
     <Compile Include="V20190103\Models\PersistentVolumeContext.cs" />
     <Compile Include="V20190103\Models\Placement.cs" />
     <Compile Include="V20190103\Models\PodNewParameter.cs" />
@@ -246,6 +247,7 @@
     <Compile Include="V20190103\Models\PodState.cs" />
     <Compile Include="V20190103\Models\PodVolume.cs" />
     <Compile Include="V20190103\Models\PreExecuteFileSettings.cs" />
+    <Compile Include="V20190103\Models\PrePaySetting.cs" />
     <Compile Include="V20190103\Models\PriceDetail.cs" />
     <Compile Include="V20190103\Models\PriceResource.cs" />
     <Compile Include="V20190103\Models\PriceResult.cs" />

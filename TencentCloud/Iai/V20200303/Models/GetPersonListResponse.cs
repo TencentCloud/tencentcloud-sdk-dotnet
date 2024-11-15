@@ -25,20 +25,20 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 返回的人员信息
+        /// 返回的人员信息。
         /// </summary>
         [JsonProperty("PersonInfos")]
         public PersonInfo[] PersonInfos{ get; set; }
 
         /// <summary>
-        /// 该人员库的人员数量
+        /// 该人员库的人员数量。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PersonNum")]
         public ulong? PersonNum{ get; set; }
 
         /// <summary>
-        /// 该人员库的人脸数量
+        /// 该人员库的人脸数量。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FaceNum")]

@@ -25,13 +25,13 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 成功加入的人员库数量
+        /// 成功加入的人员库数量。
         /// </summary>
         [JsonProperty("SucGroupNum")]
         public ulong? SucGroupNum{ get; set; }
 
         /// <summary>
-        /// 成功加入的人员库列表
+        /// 成功加入的人员库列表。
         /// </summary>
         [JsonProperty("SucGroupIds")]
         public string[] SucGroupIds{ get; set; }

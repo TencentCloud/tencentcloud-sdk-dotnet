@@ -25,13 +25,16 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 当选择语音问答模式时，系统自动播报的问题文本，最大长度为150个字符。
+        /// 当选择语音问答模式时，系统自动播报的问题文本。
+        /// - 最大长度为150个字符。
         /// </summary>
         [JsonProperty("Question")]
         public string Question{ get; set; }
 
         /// <summary>
-        /// 当选择语音问答模式时，用于判断用户回答是否通过的标准答案列表，传入后可自动判断用户回答文本是否在标准文本列表中。列表长度最大为50，单个答案长度限制10个字符。
+        /// 当选择语音问答模式时，用于判断用户回答是否通过的标准答案列表。
+        /// - 传入后可自动判断用户回答文本是否在标准文本列表中。
+        /// - 列表长度最大为50，单个答案长度限制10个字符。
         /// </summary>
         [JsonProperty("Answers")]
         public string[] Answers{ get; set; }

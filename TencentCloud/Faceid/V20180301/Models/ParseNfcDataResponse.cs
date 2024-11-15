@@ -25,84 +25,102 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 0为首次查询成功，-1为查询失败。
+        /// 结果码。
+        /// - 取值范围：0为首次查询成功，-1为查询失败。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultCode")]
         public string ResultCode{ get; set; }
 
         /// <summary>
-        /// 身份证号
+        /// 身份证号。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdNum")]
         public string IdNum{ get; set; }
 
         /// <summary>
-        /// 姓名
+        /// 姓名。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 照片
+        /// 照片。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Picture")]
         public string Picture{ get; set; }
 
         /// <summary>
-        /// 出生日期
+        /// 出生日期。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BirthDate")]
         public string BirthDate{ get; set; }
 
         /// <summary>
-        /// 有效期起始时间
+        /// 有效期起始时间。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// 有效期结束时间
+        /// 有效期结束时间。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 住址
+        /// 住址。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
-        /// 民族
+        /// 民族。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Nation")]
         public string Nation{ get; set; }
 
         /// <summary>
-        /// 性别
+        /// 性别。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
-        /// 身份证 01 中国护照 03 军官证 04 武警证 05 港澳通行证 06 台胞证 07 外国护照 08 士兵证 09 临时身份证 10 户口本 11 警官证 12 外国人永久居留证 13 港澳台居民居住证 14 回乡证 15 大陆居民来往台湾通行证 16 其他证件 99
+        /// 类型。
+        /// - 取值范围：
+        /// 01：身份证。 
+        /// 03 ：中国护照。
+        /// 04 ：军官证。
+        /// 05 ：武警证。
+        /// 06：港澳通行证 。
+        /// 07 ：台胞证 。
+        /// 08：外国护照 。
+        /// 09 ：士兵证。
+        /// 09 ：临时身份证。
+        /// 11：户口本  。
+        /// 12 ：警官证 。
+        /// 13：外国人永久居留证。
+        /// 14：港澳台居民居住证。
+        /// 15：回乡证。
+        /// 16：大陆居民来往台湾通行证。
+        /// 99：其他证件。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdType")]
         public string IdType{ get; set; }
 
         /// <summary>
-        /// 英文姓名
+        /// 英文姓名。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnName")]
@@ -116,51 +134,52 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string SigningOrganization{ get; set; }
 
         /// <summary>
-        /// 港澳台居民居住证，通行证号码
+        /// 港澳台居民居住证，通行证号码。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OtherIdNum")]
         public string OtherIdNum{ get; set; }
 
         /// <summary>
-        /// 旅行证件国籍
+        /// 旅行证件国籍。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Nationality")]
         public string Nationality{ get; set; }
 
         /// <summary>
-        /// 旅行证件机读区第二行 29~42 位
+        /// 旅行证件机读区第二行 29~42 位。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PersonalNumber")]
         public string PersonalNumber{ get; set; }
 
         /// <summary>
-        /// 旅行证件类的核验结果。JSON格式如下：
-        /// {"result_issuer ":"签发者证书合法性验证结果 ","result_pape r":"证件安全对象合法性验证 结果 ","result_data" :"防数据篡改验证结果 ","result_chip" :"防证书件芯片被复制验证结果"} 
-        ///  0:验证通过，1: 验证不通过，2: 未验证，3:部分通过，当4项核验结果都为0时，表示证件为真
+        /// 旅行证件类的核验结果。
+        /// - JSON格式如下：
+        /// {"result_issuer ":"签发者证书合法性验证结果 ","result_pape r":"证件安全对象合法性验证 结果 ","result_data" :"防数据篡改验证结果 ","result_chip" :"防证书件芯片被复制验证结果"} 。
+        /// - 取值范围： 0:验证通过，1: 验证不通过，2: 未验证，3:部分通过，当4项核验结果都为0时，表示证件为真。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckMRTD")]
         public string CheckMRTD{ get; set; }
 
         /// <summary>
-        /// 身份证照片面合成图片
+        /// 身份证照片面合成图片。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageA")]
         public string ImageA{ get; set; }
 
         /// <summary>
-        /// 身份证国徽面合成图片
+        /// 身份证国徽面合成图片。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageB")]
         public string ImageB{ get; set; }
 
         /// <summary>
-        /// 对result code的结果描述
+        /// 对result code的结果描述。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultDescription")]

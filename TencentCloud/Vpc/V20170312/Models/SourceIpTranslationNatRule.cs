@@ -50,7 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string[] PublicIpAddresses{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// 规则描述
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

@@ -26,42 +26,36 @@ namespace TencentCloud.Trro.V20220325.Models
         
         /// <summary>
         /// 该类型的license个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }
 
         /// <summary>
         /// license状态：0:未绑定；1:已绑定；2:已停服；3:已退费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 到期时间戳：s
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
         /// 服务时长：s
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Duration")]
         public string Duration{ get; set; }
 
         /// <summary>
         /// 剩余天数：天
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RemainDay")]
         public long? RemainDay{ get; set; }
 
         /// <summary>
         /// 该类型的licenseId列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LicenseIds")]
         public string[] LicenseIds{ get; set; }

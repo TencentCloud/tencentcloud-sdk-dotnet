@@ -25,19 +25,19 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 人员ID，取值为创建人员接口中的PersonId
+        /// 人员ID，取值为创建人员接口中的PersonId。
         /// </summary>
         [JsonProperty("PersonId")]
         public string PersonId{ get; set; }
 
         /// <summary>
-        /// 需要修改的人员名称
+        /// 需要修改的人员名称。
         /// </summary>
         [JsonProperty("PersonName")]
         public string PersonName{ get; set; }
 
         /// <summary>
-        /// 需要修改的人员性别，1代表男性，2代表女性
+        /// 需要修改的人员性别，1代表男性，2代表女性。
         /// </summary>
         [JsonProperty("Gender")]
         public long? Gender{ get; set; }

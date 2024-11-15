@@ -26,7 +26,6 @@ namespace TencentCloud.Partners.V20180321.Models
         
         /// <summary>
         /// 申请合并支付的关联大订单号列表（不包含请求的订单号）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BigDealIdList")]
         public string[] BigDealIdList{ get; set; }

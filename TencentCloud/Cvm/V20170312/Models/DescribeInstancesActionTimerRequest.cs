@@ -37,7 +37,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 定时任务执行时间，格式如：2018-05-01 19:00:00，必须大于当前时间5分钟。
+        /// 定时器动作，目前仅支持销毁一个值：TerminateInstances。
         /// </summary>
         [JsonProperty("TimerAction")]
         public string TimerAction{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string StartActionTime{ get; set; }
 
         /// <summary>
-        /// 定时任务状态列表。<br><li>UNDO：未执行<br><li>DOING：正在执行<br><li>DONE：执行完成。
+        /// 定时任务状态列表。<br><li>UNDO：未执行</li> <br><li>DOING：正在执行</li><br><li>DONE：执行完成。</li>
         /// </summary>
         [JsonProperty("StatusList")]
         public string[] StatusList{ get; set; }

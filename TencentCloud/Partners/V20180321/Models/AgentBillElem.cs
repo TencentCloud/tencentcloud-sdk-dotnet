@@ -86,21 +86,18 @@ namespace TencentCloud.Partners.V20180321.Models
 
         /// <summary>
         /// 客户类型：可以为new(自拓)/assign(指定)/old(官网)/direct(直销)/direct_newopp(直销(新商机))/空
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientType")]
         public string ClientType{ get; set; }
 
         /// <summary>
         /// 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectType")]
         public string ProjectType{ get; set; }
 
         /// <summary>
         /// 活动ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActivityId")]
         public string ActivityId{ get; set; }

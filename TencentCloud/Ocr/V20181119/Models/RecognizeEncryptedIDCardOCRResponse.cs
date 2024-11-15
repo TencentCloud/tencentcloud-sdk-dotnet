@@ -103,7 +103,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public ReflectDetailInfo[] ReflectDetailInfos{ get; set; }
 
         /// <summary>
-        /// 加密后的数据
+        /// 加密后的数据（Base64编码）
         /// </summary>
         [JsonProperty("EncryptedBody")]
         public string EncryptedBody{ get; set; }

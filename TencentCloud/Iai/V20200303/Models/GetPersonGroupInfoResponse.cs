@@ -25,13 +25,13 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 包含此人员的人员库及描述字段内容列表
+        /// 包含此人员的人员库及描述字段内容列表。
         /// </summary>
         [JsonProperty("PersonGroupInfos")]
         public PersonGroupInfo[] PersonGroupInfos{ get; set; }
 
         /// <summary>
-        /// 人员库总数量
+        /// 人员库总数量。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupNum")]

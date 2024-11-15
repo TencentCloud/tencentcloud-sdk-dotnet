@@ -25,21 +25,24 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 意愿确认环节中录制的视频（base64）。若不存在则为空字符串。
+        /// 意愿确认环节中录制的视频（base64）。
+        /// - 若不存在则为空字符串。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IntentionVerifyVideo")]
         public string IntentionVerifyVideo{ get; set; }
 
         /// <summary>
-        /// 意愿确认环节中用户语音转文字的识别结果。若不存在则为空字符串。
+        /// 意愿确认环节中用户语音转文字的识别结果。
+        /// - 若不存在则为空字符串。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsrResult")]
         public string AsrResult{ get; set; }
 
         /// <summary>
-        /// 意愿确认环节的结果码。当该结果码为0时，语音朗读的视频与语音识别结果才会返回。
+        /// 意愿确认环节的结果码。
+        /// - 当该结果码为0时，语音朗读的视频与语音识别结果才会返回。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorCode")]
@@ -53,7 +56,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string ErrorMessage{ get; set; }
 
         /// <summary>
-        /// 意愿确认环节中录制视频的最佳帧（base64）。若不存在则为空字符串。
+        /// 意愿确认环节中录制视频的最佳帧（base64）。
+        /// - 若不存在则为空字符串。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IntentionVerifyBestFrame")]

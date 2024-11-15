@@ -26,36 +26,42 @@ namespace TencentCloud.Partners.V20180321.Models
         
         /// <summary>
         /// 代理商账号ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
         /// 返佣月份，如2018-02
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RebateMonth")]
         public string RebateMonth{ get; set; }
 
         /// <summary>
         /// 返佣金额，单位分
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Amt")]
         public ulong? Amt{ get; set; }
 
         /// <summary>
         /// 月度业绩，单位分
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MonthSales")]
         public ulong? MonthSales{ get; set; }
 
         /// <summary>
         /// 季度业绩，单位分
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QuarterSales")]
         public ulong? QuarterSales{ get; set; }
 
         /// <summary>
         /// NORMAL(正常)/HAS_OVERDUE_BILL(欠费)/NO_CONTRACT(缺合同)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExceptionFlag")]
         public string ExceptionFlag{ get; set; }

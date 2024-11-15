@@ -25,13 +25,13 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// SDK中生成的Meta字符串
+        /// SDK中生成的Meta字符串。
         /// </summary>
         [JsonProperty("Meta")]
         public string Meta{ get; set; }
 
         /// <summary>
-        /// 透传参数 1000长度字符串
+        /// 透传参数 1000长度字符串。
         /// </summary>
         [JsonProperty("Extra")]
         public string Extra{ get; set; }
