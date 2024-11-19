@@ -46,21 +46,18 @@ namespace TencentCloud.Omics.V20221128.Models
 
         /// <summary>
         /// 输出归档COS路径。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FinalWorkflowOutputsDir")]
         public string FinalWorkflowOutputsDir{ get; set; }
 
         /// <summary>
         /// 是否使用相对目录归档输出。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UseRelativeOutputPaths")]
         public bool? UseRelativeOutputPaths{ get; set; }
 
         /// <summary>
         /// 是否添加运行信息到输出目录中
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddRunInfoToOutputDir")]
         public bool? AddRunInfoToOutputDir{ get; set; }

@@ -26,28 +26,24 @@ namespace TencentCloud.Omics.V20221128.Models
         
         /// <summary>
         /// Config。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Config")]
         public string Config{ get; set; }
 
         /// <summary>
         /// Profile。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Profile")]
         public string Profile{ get; set; }
 
         /// <summary>
         /// Report。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Report")]
         public bool? Report{ get; set; }
 
         /// <summary>
         /// Resume。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resume")]
         public bool? Resume{ get; set; }
@@ -56,14 +52,12 @@ namespace TencentCloud.Omics.V20221128.Models
         /// Nextflow引擎版本，取值范围：
         /// - 22.10.7
         /// - 23.10.1
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NFVersion")]
         public string NFVersion{ get; set; }
 
         /// <summary>
         /// 启动路径。可填写指定缓存卷内的绝对路径，nextflow run 命令将在此路径执行。当WorkDir为COS路径时必填；当WorkDir为缓存卷路径时选填，不填默认使用WorkDir作为LaunchDir。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LaunchDir")]
         public string LaunchDir{ get; set; }

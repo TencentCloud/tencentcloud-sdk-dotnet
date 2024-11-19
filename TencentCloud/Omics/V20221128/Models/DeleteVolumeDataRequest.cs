@@ -31,7 +31,7 @@ namespace TencentCloud.Omics.V20221128.Models
         public string VolumeId{ get; set; }
 
         /// <summary>
-        /// 需要删除的路径
+        /// 需要删除的路径。
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }

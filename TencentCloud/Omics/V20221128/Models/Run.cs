@@ -56,21 +56,18 @@ namespace TencentCloud.Omics.V20221128.Models
 
         /// <summary>
         /// 用户定义ID，单例运行为空。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserDefinedId")]
         public string UserDefinedId{ get; set; }
 
         /// <summary>
         /// 表格ID，单例运行为空。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableId")]
         public string TableId{ get; set; }
 
         /// <summary>
         /// 表格行UUID，单例运行为空。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableRowUuid")]
         public string TableRowUuid{ get; set; }
@@ -102,7 +99,6 @@ namespace TencentCloud.Omics.V20221128.Models
 
         /// <summary>
         /// 缓存信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cache")]
         public CacheInfo Cache{ get; set; }

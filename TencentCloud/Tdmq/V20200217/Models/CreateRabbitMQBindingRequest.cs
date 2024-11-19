@@ -31,7 +31,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Vhost参数
+        /// Vhost名称
         /// </summary>
         [JsonProperty("VirtualHost")]
         public string VirtualHost{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Destination{ get; set; }
 
         /// <summary>
-        /// 绑定key
+        /// 路由键
         /// </summary>
         [JsonProperty("RoutingKey")]
         public string RoutingKey{ get; set; }

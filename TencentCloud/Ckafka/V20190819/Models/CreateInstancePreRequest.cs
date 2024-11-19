@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+        /// ckafka集群实例Name，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? InstanceType{ get; set; }
 
         /// <summary>
-        /// vpcId，必填
+        /// 私有网络Id，必填
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// 带宽，如果跟控制台规格配比不相符，则无法创建成功
+        /// 实例带宽,单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s
         /// </summary>
         [JsonProperty("BandWidth")]
         public long? BandWidth{ get; set; }
@@ -150,6 +150,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("AutoVoucher")]
         public long? AutoVoucher{ get; set; }
 
+        /// <summary>
+        /// 弹性带宽开关 0不开启  1开启（0默认）
+        /// </summary>
+        [JsonProperty("ElasticBandwidthSwitch")]
+        public long? ElasticBandwidthSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +183,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "PublicNetworkMonthly", this.PublicNetworkMonthly);
             this.SetParamSimple(map, prefix + "InstanceNum", this.InstanceNum);
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
+            this.SetParamSimple(map, prefix + "ElasticBandwidthSwitch", this.ElasticBandwidthSwitch);
         }
     }
 }

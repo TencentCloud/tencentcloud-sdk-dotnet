@@ -28,7 +28,7 @@ namespace TencentCloud.Rce.V20201103
 
        private const string endpoint = "rce.tencentcloudapi.com";
        private const string version = "2020-11-03";
-       private const string sdkVersion = "SDK_NET_3.0.1123";
+       private const string sdkVersion = "SDK_NET_3.0.1124";
 
         /// <summary>
         /// Client constructor.
@@ -176,6 +176,27 @@ namespace TencentCloud.Rce.V20201103
         public DescribeNameListDetailResponse DescribeNameListDetailSync(DescribeNameListDetailRequest req)
         {
             return InternalRequestAsync<DescribeNameListDetailResponse>(req, "DescribeNameListDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// RCE控制台预付费和后付费次数展示
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserUsageCntRequest"/></param>
+        /// <returns><see cref="DescribeUserUsageCntResponse"/></returns>
+        public Task<DescribeUserUsageCntResponse> DescribeUserUsageCnt(DescribeUserUsageCntRequest req)
+        {
+            return InternalRequestAsync<DescribeUserUsageCntResponse>(req, "DescribeUserUsageCnt");
+        }
+
+        /// <summary>
+        /// RCE控制台预付费和后付费次数展示
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserUsageCntRequest"/></param>
+        /// <returns><see cref="DescribeUserUsageCntResponse"/></returns>
+        public DescribeUserUsageCntResponse DescribeUserUsageCntSync(DescribeUserUsageCntRequest req)
+        {
+            return InternalRequestAsync<DescribeUserUsageCntResponse>(req, "DescribeUserUsageCnt")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

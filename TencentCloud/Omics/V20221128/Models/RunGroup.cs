@@ -62,7 +62,6 @@ namespace TencentCloud.Omics.V20221128.Models
 
         /// <summary>
         /// 应用版本。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationVersion")]
         public ApplicationVersion ApplicationVersion{ get; set; }
@@ -71,7 +70,6 @@ namespace TencentCloud.Omics.V20221128.Models
         /// 应用访问类型：
         /// - PRIVATE 私有应用
         /// - PUBLIC 公共应用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessMode")]
         public string AccessMode{ get; set; }
@@ -90,7 +88,6 @@ namespace TencentCloud.Omics.V20221128.Models
 
         /// <summary>
         /// 表格ID，单例运行为空。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableId")]
         public string TableId{ get; set; }
@@ -117,14 +114,12 @@ namespace TencentCloud.Omics.V20221128.Models
         /// 任务批次类型 ：
         /// - WDL
         /// - NEXTFLOW
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 工作目录。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkDir")]
         public string WorkDir{ get; set; }
@@ -140,21 +135,18 @@ namespace TencentCloud.Omics.V20221128.Models
         /// - JSON: 导入JSON
         /// - MANUAL: 手动输入
         /// - COS: COS文件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputType")]
         public string InputType{ get; set; }
 
         /// <summary>
         /// 输入COS地址。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputCosUri")]
         public string InputCosUri{ get; set; }
 
         /// <summary>
         /// 输入模版ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputTemplateId")]
         public string InputTemplateId{ get; set; }
@@ -167,14 +159,12 @@ namespace TencentCloud.Omics.V20221128.Models
 
         /// <summary>
         /// Nextflow运行选项。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NFOption")]
         public NFOption NFOption{ get; set; }
 
         /// <summary>
         /// 使用的缓存卷。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Volumes")]
         public VolumeInfo[] Volumes{ get; set; }
@@ -205,7 +195,6 @@ namespace TencentCloud.Omics.V20221128.Models
 
         /// <summary>
         /// 运行结果通知方式。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultNotify")]
         public string ResultNotify{ get; set; }
@@ -224,14 +213,12 @@ namespace TencentCloud.Omics.V20221128.Models
 
         /// <summary>
         /// 创建者。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
 
         /// <summary>
         /// 创建者ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatorId")]
         public string CreatorId{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E523CF0C-FC92-3F06-9926-ECC75CD44DD0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1123</VersionPrefix>
+    <VersionPrefix>3.0.1124</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -63,6 +63,8 @@
     <Compile Include="V20201103\Models\DescribeNameListDetailResponse.cs" />
     <Compile Include="V20201103\Models\DescribeNameListRequest.cs" />
     <Compile Include="V20201103\Models\DescribeNameListResponse.cs" />
+    <Compile Include="V20201103\Models\DescribeUserUsageCntRequest.cs" />
+    <Compile Include="V20201103\Models\DescribeUserUsageCntResponse.cs" />
     <Compile Include="V20201103\Models\ImportNameListDataRequest.cs" />
     <Compile Include="V20201103\Models\ImportNameListDataResponse.cs" />
     <Compile Include="V20201103\Models\InputCreateNameListFront.cs" />
@@ -97,6 +99,8 @@
     <Compile Include="V20201103\Models\OutputDescribeNameListFrontFix.cs" />
     <Compile Include="V20201103\Models\OutputDescribeNameListFrontFixListData.cs" />
     <Compile Include="V20201103\Models\OutputDescribeNameListInfo.cs" />
+    <Compile Include="V20201103\Models\OutputDescribeUserUsageCnt.cs" />
+    <Compile Include="V20201103\Models\OutputDescribeUserUsageCntData.cs" />
     <Compile Include="V20201103\Models\OutputImportNameListDataFront.cs" />
     <Compile Include="V20201103\Models\OutputManageMarketingRisk.cs" />
     <Compile Include="V20201103\Models\OutputManageMarketingRiskValue.cs" />

@@ -26,21 +26,18 @@ namespace TencentCloud.Omics.V20221128.Models
         
         /// <summary>
         /// 缓存清理时间(小时)。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CacheClearDelay")]
         public ulong? CacheClearDelay{ get; set; }
 
         /// <summary>
         /// 缓存清理计划时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CacheClearTime")]
         public string CacheClearTime{ get; set; }
 
         /// <summary>
         /// 缓存是否已被清理。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CacheCleared")]
         public bool? CacheCleared{ get; set; }

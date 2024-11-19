@@ -66,6 +66,12 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("Action")]
         public long? Action{ get; set; }
 
+        /// <summary>
+        /// 签名值
+        /// </summary>
+        [JsonProperty("SignValue")]
+        public string SignValue{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "FileNew", this.FileNew);
             this.SetParamSimple(map, prefix + "Size", this.Size);
             this.SetParamSimple(map, prefix + "Action", this.Action);
+            this.SetParamSimple(map, prefix + "SignValue", this.SignValue);
         }
     }
 }

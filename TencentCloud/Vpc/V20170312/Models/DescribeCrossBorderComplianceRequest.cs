@@ -55,6 +55,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string LegalPerson{ get; set; }
 
         /// <summary>
+        /// （精确查询）法人身份证号。
+        /// </summary>
+        [JsonProperty("LegalPersonId")]
+        public string LegalPersonId{ get; set; }
+
+        /// <summary>
         /// （模糊查询）发证机关。
         /// </summary>
         [JsonProperty("IssuingAuthority")]
@@ -143,6 +149,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Company", this.Company);
             this.SetParamSimple(map, prefix + "UniformSocialCreditCode", this.UniformSocialCreditCode);
             this.SetParamSimple(map, prefix + "LegalPerson", this.LegalPerson);
+            this.SetParamSimple(map, prefix + "LegalPersonId", this.LegalPersonId);
             this.SetParamSimple(map, prefix + "IssuingAuthority", this.IssuingAuthority);
             this.SetParamSimple(map, prefix + "BusinessAddress", this.BusinessAddress);
             this.SetParamSimple(map, prefix + "PostCode", this.PostCode);

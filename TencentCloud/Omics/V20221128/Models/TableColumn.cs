@@ -26,14 +26,12 @@ namespace TencentCloud.Omics.V20221128.Models
         
         /// <summary>
         /// 列名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Header")]
         public string Header{ get; set; }
 
         /// <summary>
         /// 列数据类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataType")]
         public string DataType{ get; set; }

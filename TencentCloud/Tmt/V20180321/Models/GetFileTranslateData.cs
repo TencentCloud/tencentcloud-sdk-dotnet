@@ -31,7 +31,12 @@ namespace TencentCloud.Tmt.V20180321.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// 任务状态
+        /// 
+        /// - init：任务已初始化
+        /// - wait：任务等待执行
+        /// - success：任务执行成功
+        /// - fail：任务执行失败
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -51,10 +56,16 @@ namespace TencentCloud.Tmt.V20180321.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// 翻译进度
+        /// 任务进度
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
+
+        /// <summary>
+        /// 本次翻译消耗的字符数	
+        /// </summary>
+        [JsonProperty("UsedAmount")]
+        public long? UsedAmount{ get; set; }
 
 
         /// <summary>
@@ -67,6 +78,7 @@ namespace TencentCloud.Tmt.V20180321.Models
             this.SetParamSimple(map, prefix + "FileData", this.FileData);
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamSimple(map, prefix + "Progress", this.Progress);
+            this.SetParamSimple(map, prefix + "UsedAmount", this.UsedAmount);
         }
     }
 }

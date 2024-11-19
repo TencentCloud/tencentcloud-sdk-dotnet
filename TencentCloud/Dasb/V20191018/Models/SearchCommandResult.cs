@@ -151,6 +151,12 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("Size")]
         public ulong? Size{ get; set; }
 
+        /// <summary>
+        /// 签名值
+        /// </summary>
+        [JsonProperty("SignValue")]
+        public string SignValue{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -178,6 +184,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "DeviceDepartmentId", this.DeviceDepartmentId);
             this.SetParamSimple(map, prefix + "DeviceDepartmentName", this.DeviceDepartmentName);
             this.SetParamSimple(map, prefix + "Size", this.Size);
+            this.SetParamSimple(map, prefix + "SignValue", this.SignValue);
         }
     }
 }

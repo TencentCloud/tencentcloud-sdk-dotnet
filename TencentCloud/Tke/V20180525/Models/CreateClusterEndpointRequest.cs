@@ -49,7 +49,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 使用的安全组，只有外网访问需要传递（开启外网访问时必传）
+        /// 使用的安全组，只有外网访问需要传递（开启外网访问且不使用已有clb时必传）
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string SecurityGroup{ get; set; }

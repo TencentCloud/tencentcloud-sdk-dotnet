@@ -111,6 +111,12 @@ namespace TencentCloud.Dasb.V20191018.Models
         public ulong? LockStatus{ get; set; }
 
         /// <summary>
+        /// ukey绑定状态 0 - 未绑定 1 - 已绑定
+        /// </summary>
+        [JsonProperty("UKeyStatus")]
+        public long? UKeyStatus{ get; set; }
+
+        /// <summary>
         /// 状态 与Filter中一致
         /// </summary>
         [JsonProperty("Status")]
@@ -142,6 +148,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
             this.SetParamSimple(map, prefix + "ActiveStatus", this.ActiveStatus);
             this.SetParamSimple(map, prefix + "LockStatus", this.LockStatus);
+            this.SetParamSimple(map, prefix + "UKeyStatus", this.UKeyStatus);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "AclVersion", this.AclVersion);
         }

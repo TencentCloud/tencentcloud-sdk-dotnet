@@ -26,7 +26,6 @@ namespace TencentCloud.Omics.V20221128.Models
         
         /// <summary>
         /// 新的任务批次ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunGroupId")]
         public string RunGroupId{ get; set; }

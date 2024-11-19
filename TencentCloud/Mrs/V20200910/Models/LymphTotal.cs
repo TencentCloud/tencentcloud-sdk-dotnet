@@ -36,14 +36,14 @@ namespace TencentCloud.Mrs.V20200910.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TransferNum")]
-        public string TransferNum{ get; set; }
+        public long? TransferNum{ get; set; }
 
         /// <summary>
         /// 总数量
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
-        public string Total{ get; set; }
+        public long? Total{ get; set; }
 
         /// <summary>
         /// 原文

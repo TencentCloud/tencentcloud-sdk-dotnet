@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1123</VersionPrefix>
+    <VersionPrefix>3.0.1124</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -85,6 +85,8 @@
     <Compile Include="V20180125\Models\AutoDenyDetail.cs" />
     <Compile Include="V20180125\Models\BatchIpAccessControlData.cs" />
     <Compile Include="V20180125\Models\BatchIpAccessControlItem.cs" />
+    <Compile Include="V20180125\Models\BatchOperateUserSignatureRulesRequest.cs" />
+    <Compile Include="V20180125\Models\BatchOperateUserSignatureRulesResponse.cs" />
     <Compile Include="V20180125\Models\BotPkg.cs" />
     <Compile Include="V20180125\Models\BotQPS.cs" />
     <Compile Include="V20180125\Models\BotStatPointItem.cs" />
@@ -98,6 +100,7 @@
     <Compile Include="V20180125\Models\ClbDomainsInfo.cs" />
     <Compile Include="V20180125\Models\ClbObject.cs" />
     <Compile Include="V20180125\Models\ClbWafRegionItem.cs" />
+    <Compile Include="V20180125\Models\CommonRspData.cs" />
     <Compile Include="V20180125\Models\CreateAccessExportRequest.cs" />
     <Compile Include="V20180125\Models\CreateAccessExportResponse.cs" />
     <Compile Include="V20180125\Models\CreateDealsGoods.cs" />
@@ -252,8 +255,12 @@
     <Compile Include="V20180125\Models\DescribeUserDomainInfoResponse.cs" />
     <Compile Include="V20180125\Models\DescribeUserLevelRequest.cs" />
     <Compile Include="V20180125\Models\DescribeUserLevelResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeUserSignatureClassRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeUserSignatureClassResponse.cs" />
     <Compile Include="V20180125\Models\DescribeUserSignatureRuleRequest.cs" />
     <Compile Include="V20180125\Models\DescribeUserSignatureRuleResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeUserSignatureRuleV2Request.cs" />
+    <Compile Include="V20180125\Models\DescribeUserSignatureRuleV2Response.cs" />
     <Compile Include="V20180125\Models\DescribeVipInfoRequest.cs" />
     <Compile Include="V20180125\Models\DescribeVipInfoResponse.cs" />
     <Compile Include="V20180125\Models\DescribeWafAutoDenyRulesRequest.cs" />
@@ -403,6 +410,7 @@
     <Compile Include="V20180125\Models\ResponseCode.cs" />
     <Compile Include="V20180125\Models\Rule.cs" />
     <Compile Include="V20180125\Models\RuleList.cs" />
+    <Compile Include="V20180125\Models\RuleType.cs" />
     <Compile Include="V20180125\Models\ScanIpInfo.cs" />
     <Compile Include="V20180125\Models\SearchAccessLogRequest.cs" />
     <Compile Include="V20180125\Models\SearchAccessLogResponse.cs" />

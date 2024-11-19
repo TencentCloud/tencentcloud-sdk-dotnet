@@ -47,6 +47,12 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("Message")]
         public Message Message{ get; set; }
 
+        /// <summary>
+        /// 索引值，流式调用时使用该字段。
+        /// </summary>
+        [JsonProperty("Index")]
+        public long? Index{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -56,6 +62,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamSimple(map, prefix + "FinishReason", this.FinishReason);
             this.SetParamObj(map, prefix + "Delta.", this.Delta);
             this.SetParamObj(map, prefix + "Message.", this.Message);
+            this.SetParamSimple(map, prefix + "Index", this.Index);
         }
     }
 }

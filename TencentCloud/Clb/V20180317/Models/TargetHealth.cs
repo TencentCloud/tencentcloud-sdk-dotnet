@@ -49,7 +49,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string TargetId{ get; set; }
 
         /// <summary>
-        /// 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
+        /// 当前健康状态的详细信息。如：Alive、Dead、Unknown、Close。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知，Close表示健康检查关闭或监听器状态停止。
         /// </summary>
         [JsonProperty("HealthStatusDetail")]
         public string HealthStatusDetail{ get; set; }
@@ -60,6 +60,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("HealthStatusDetial")]
         [System.Obsolete]
         public string HealthStatusDetial{ get; set; }
+
+        /// <summary>
+        /// 目标组唯一ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TargetGroupId")]
+        public string TargetGroupId{ get; set; }
 
 
         /// <summary>
@@ -73,6 +80,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "TargetId", this.TargetId);
             this.SetParamSimple(map, prefix + "HealthStatusDetail", this.HealthStatusDetail);
             this.SetParamSimple(map, prefix + "HealthStatusDetial", this.HealthStatusDetial);
+            this.SetParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
         }
     }
 }

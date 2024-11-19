@@ -286,7 +286,7 @@ namespace TencentCloud.Asr.V20190614.Models
         /// 
         /// 注意：
         /// 
-        /// - 如果同时传入了 hotword_id 和 hotword_list，会优先使用 hotword_list；
+        /// - 如果同时传入了 hotword_id 和 hotword_list，只有hotword_list 生效；
         /// 
         /// - 热词权重设置为11时，当前热词将升级为超级热词，建议仅将重要且必须生效的热词设置到11，设置过多权重为11的热词将影响整体字准率。
         /// 

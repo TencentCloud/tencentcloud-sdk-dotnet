@@ -32,7 +32,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// vhost参数
+        /// vhost名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VirtualHost")]

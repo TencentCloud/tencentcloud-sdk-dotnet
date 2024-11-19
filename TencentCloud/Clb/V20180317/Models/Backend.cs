@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 后端服务的类型，可取：CVM、ENI、CCN
+        /// 后端服务的类型，可取：CVM、ENI、CCN、EVM、GLOBALROUTE、NAT、SRV等
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

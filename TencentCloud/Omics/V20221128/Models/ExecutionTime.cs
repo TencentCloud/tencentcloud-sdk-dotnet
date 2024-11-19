@@ -26,21 +26,18 @@ namespace TencentCloud.Omics.V20221128.Models
         
         /// <summary>
         /// 提交时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubmitTime")]
         public string SubmitTime{ get; set; }
 
         /// <summary>
         /// 开始时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// 结束时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

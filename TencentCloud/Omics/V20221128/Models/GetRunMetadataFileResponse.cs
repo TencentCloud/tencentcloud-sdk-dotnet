@@ -32,7 +32,6 @@ namespace TencentCloud.Omics.V20221128.Models
 
         /// <summary>
         /// 批量文件预签名链接，一分钟内有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CosSignedUrls")]
         public string[] CosSignedUrls{ get; set; }

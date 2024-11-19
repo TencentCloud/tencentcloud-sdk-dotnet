@@ -39,14 +39,14 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// <summary>
         /// 数语的ip
         /// </summary>
-        [JsonProperty("Vip")]
-        public string Vip{ get; set; }
+        [JsonProperty("Ip")]
+        public string Ip{ get; set; }
 
         /// <summary>
         /// 数语的端口
         /// </summary>
-        [JsonProperty("Vport")]
-        public ulong? Vport{ get; set; }
+        [JsonProperty("Port")]
+        public ulong? Port{ get; set; }
 
         /// <summary>
         /// 数语的CAM角色id
@@ -80,8 +80,8 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamSimple(map, prefix + "CloudappId", this.CloudappId);
             this.SetParamSimple(map, prefix + "AppCamRole", this.AppCamRole);
-            this.SetParamSimple(map, prefix + "Vip", this.Vip);
-            this.SetParamSimple(map, prefix + "Vport", this.Vport);
+            this.SetParamSimple(map, prefix + "Ip", this.Ip);
+            this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "AppCamRoleId", this.AppCamRoleId);
             this.SetParamSimple(map, prefix + "Provider", this.Provider);
             this.SetParamSimple(map, prefix + "TenantId", this.TenantId);

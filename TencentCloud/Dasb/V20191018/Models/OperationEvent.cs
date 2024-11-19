@@ -66,6 +66,12 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("Result")]
         public ulong? Result{ get; set; }
 
+        /// <summary>
+        /// 签名值
+        /// </summary>
+        [JsonProperty("SignValue")]
+        public string SignValue{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "Kind", this.Kind);
             this.SetParamSimple(map, prefix + "Operation", this.Operation);
             this.SetParamSimple(map, prefix + "Result", this.Result);
+            this.SetParamSimple(map, prefix + "SignValue", this.SignValue);
         }
     }
 }

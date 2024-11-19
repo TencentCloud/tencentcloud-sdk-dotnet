@@ -33,6 +33,12 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public string Prompt{ get; set; }
 
         /// <summary>
+        /// 反向提示词。 推荐使用中文。最多可传1024个 utf-8 字符。
+        /// </summary>
+        [JsonProperty("NegativePrompt")]
+        public string NegativePrompt{ get; set; }
+
+        /// <summary>
         /// 绘画风格。
         /// 请在 [混元生图风格列表](https://cloud.tencent.com/document/product/1729/105846) 中选择期望的风格，传入风格编号。
         /// 不传默认不指定风格。
@@ -95,6 +101,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
+            this.SetParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
             this.SetParamSimple(map, prefix + "Style", this.Style);
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
             this.SetParamSimple(map, prefix + "Num", this.Num);

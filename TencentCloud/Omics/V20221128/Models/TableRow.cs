@@ -26,14 +26,12 @@ namespace TencentCloud.Omics.V20221128.Models
         
         /// <summary>
         /// 表格行UUID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableRowUuid")]
         public string TableRowUuid{ get; set; }
 
         /// <summary>
         /// 表格行内容。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Content")]
         public string[] Content{ get; set; }

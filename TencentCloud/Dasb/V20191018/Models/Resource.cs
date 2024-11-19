@@ -241,7 +241,7 @@ namespace TencentCloud.Dasb.V20191018.Models
         public long? DeployModel{ get; set; }
 
         /// <summary>
-        /// 0 默认值，非内网访问，1 内网访问
+        /// 0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中
         /// </summary>
         [JsonProperty("IntranetAccess")]
         public ulong? IntranetAccess{ get; set; }

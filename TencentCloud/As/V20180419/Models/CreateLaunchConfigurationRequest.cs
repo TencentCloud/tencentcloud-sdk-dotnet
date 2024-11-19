@@ -97,6 +97,7 @@ namespace TencentCloud.As.V20180419.Models
         /// <li>POSTPAID_BY_HOUR：按小时后付费</li>
         /// <li>SPOTPAID：竞价付费</li>
         /// <li>PREPAID：预付费，即包年包月</li>
+        /// <li>CDCPAID：专用集群付费</li>
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
@@ -195,6 +196,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("ImageFamily")]
         public string ImageFamily{ get; set; }
 
+        /// <summary>
+        /// 本地专用集群ID。
+        /// </summary>
+        [JsonProperty("DedicatedClusterId")]
+        public string DedicatedClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -227,6 +234,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
             this.SetParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
             this.SetParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
+            this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
         }
     }
 }

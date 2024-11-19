@@ -77,7 +77,7 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 云存定单列表
+        /// 云存订单列表
         /// </summary>
         [JsonProperty("Data")]
         public StorageOrder[] Data{ get; set; }

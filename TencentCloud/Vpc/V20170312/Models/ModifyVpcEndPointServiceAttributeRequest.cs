@@ -43,7 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string EndPointServiceName{ get; set; }
 
         /// <summary>
-        /// 是否自动接受终端节点的连接请求。<ui><li>true：自动接受<li>false：不自动接受</ul>
+        /// 是否自动接受终端节点的连接请求。<ul><li>true：自动接受</li><li>false：不自动接受</li></ul>
         /// </summary>
         [JsonProperty("AutoAcceptFlag")]
         public bool? AutoAcceptFlag{ get; set; }

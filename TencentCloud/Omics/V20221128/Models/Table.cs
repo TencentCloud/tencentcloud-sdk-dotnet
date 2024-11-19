@@ -26,52 +26,51 @@ namespace TencentCloud.Omics.V20221128.Models
         
         /// <summary>
         /// 表格ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableId")]
         public string TableId{ get; set; }
 
         /// <summary>
         /// 关联项目ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
         /// 表格名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 表格描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 表格列
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Columns")]
         public TableColumn[] Columns{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 创建人
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
+
+        /// <summary>
+        /// 创建人ID
+        /// </summary>
+        [JsonProperty("CreatorId")]
+        public string CreatorId{ get; set; }
 
 
         /// <summary>
@@ -86,6 +85,7 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamArrayObj(map, prefix + "Columns.", this.Columns);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Creator", this.Creator);
+            this.SetParamSimple(map, prefix + "CreatorId", this.CreatorId);
         }
     }
 }

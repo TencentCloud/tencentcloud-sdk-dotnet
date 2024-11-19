@@ -170,6 +170,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
 
+        /// <summary>
+        /// 实例类型，0 专享版、1 Serverless 版
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public ulong? InstanceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -199,6 +205,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MessageConsumeRate", this.MessageConsumeRate);
             this.SetParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
         }
     }
 }

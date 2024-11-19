@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例 ID。
+        /// 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -38,7 +38,6 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// 下载备份文件的网络限制类型，如果不配置该参数，则使用用户自定义的配置。
-        /// 
         /// - NoLimit：不限制，腾讯云内外网均可以下载备份文件。
         /// -  LimitOnlyIntranet：仅腾讯云自动分配的内网地址可下载备份文件。
         /// - Customize：指用户自定义的私有网络可下载备份文件。
@@ -54,7 +53,6 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// 标识自定义的 LimitIp 地址是否可下载备份文件。
-        /// 
         /// - In: 自定义的 IP 地址可以下载。默认为 In。
         /// - NotIn: 自定义的 IP 不可以下载。
         /// </summary>

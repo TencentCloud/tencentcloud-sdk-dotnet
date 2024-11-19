@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1123";
+       private const string sdkVersion = "SDK_NET_3.0.1124";
 
         /// <summary>
         /// Client constructor.
@@ -218,6 +218,27 @@ namespace TencentCloud.Waf.V20180125
         public AddSpartaProtectionResponse AddSpartaProtectionSync(AddSpartaProtectionRequest req)
         {
             return InternalRequestAsync<AddSpartaProtectionResponse>(req, "AddSpartaProtection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量操作tiga子规则
+        /// </summary>
+        /// <param name="req"><see cref="BatchOperateUserSignatureRulesRequest"/></param>
+        /// <returns><see cref="BatchOperateUserSignatureRulesResponse"/></returns>
+        public Task<BatchOperateUserSignatureRulesResponse> BatchOperateUserSignatureRules(BatchOperateUserSignatureRulesRequest req)
+        {
+            return InternalRequestAsync<BatchOperateUserSignatureRulesResponse>(req, "BatchOperateUserSignatureRules");
+        }
+
+        /// <summary>
+        /// 批量操作tiga子规则
+        /// </summary>
+        /// <param name="req"><see cref="BatchOperateUserSignatureRulesRequest"/></param>
+        /// <returns><see cref="BatchOperateUserSignatureRulesResponse"/></returns>
+        public BatchOperateUserSignatureRulesResponse BatchOperateUserSignatureRulesSync(BatchOperateUserSignatureRulesRequest req)
+        {
+            return InternalRequestAsync<BatchOperateUserSignatureRulesResponse>(req, "BatchOperateUserSignatureRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1755,6 +1776,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 查询Tiga引擎规则类型及状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserSignatureClassRequest"/></param>
+        /// <returns><see cref="DescribeUserSignatureClassResponse"/></returns>
+        public Task<DescribeUserSignatureClassResponse> DescribeUserSignatureClass(DescribeUserSignatureClassRequest req)
+        {
+            return InternalRequestAsync<DescribeUserSignatureClassResponse>(req, "DescribeUserSignatureClass");
+        }
+
+        /// <summary>
+        /// 查询Tiga引擎规则类型及状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserSignatureClassRequest"/></param>
+        /// <returns><see cref="DescribeUserSignatureClassResponse"/></returns>
+        public DescribeUserSignatureClassResponse DescribeUserSignatureClassSync(DescribeUserSignatureClassRequest req)
+        {
+            return InternalRequestAsync<DescribeUserSignatureClassResponse>(req, "DescribeUserSignatureClass")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取用户特征规则列表
         /// </summary>
         /// <param name="req"><see cref="DescribeUserSignatureRuleRequest"/></param>
@@ -1772,6 +1814,27 @@ namespace TencentCloud.Waf.V20180125
         public DescribeUserSignatureRuleResponse DescribeUserSignatureRuleSync(DescribeUserSignatureRuleRequest req)
         {
             return InternalRequestAsync<DescribeUserSignatureRuleResponse>(req, "DescribeUserSignatureRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取用户特征规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserSignatureRuleV2Request"/></param>
+        /// <returns><see cref="DescribeUserSignatureRuleV2Response"/></returns>
+        public Task<DescribeUserSignatureRuleV2Response> DescribeUserSignatureRuleV2(DescribeUserSignatureRuleV2Request req)
+        {
+            return InternalRequestAsync<DescribeUserSignatureRuleV2Response>(req, "DescribeUserSignatureRuleV2");
+        }
+
+        /// <summary>
+        /// 获取用户特征规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserSignatureRuleV2Request"/></param>
+        /// <returns><see cref="DescribeUserSignatureRuleV2Response"/></returns>
+        public DescribeUserSignatureRuleV2Response DescribeUserSignatureRuleV2Sync(DescribeUserSignatureRuleV2Request req)
+        {
+            return InternalRequestAsync<DescribeUserSignatureRuleV2Response>(req, "DescribeUserSignatureRuleV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

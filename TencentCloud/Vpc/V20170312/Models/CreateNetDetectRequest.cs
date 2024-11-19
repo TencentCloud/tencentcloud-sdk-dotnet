@@ -80,6 +80,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("NetDetectDescription")]
         public string NetDetectDescription{ get; set; }
 
+        /// <summary>
+        /// 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "NextHopType", this.NextHopType);
             this.SetParamSimple(map, prefix + "NextHopDestination", this.NextHopDestination);
             this.SetParamSimple(map, prefix + "NetDetectDescription", this.NetDetectDescription);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

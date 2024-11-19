@@ -42,6 +42,12 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("Site")]
         public long? Site{ get; set; }
 
+        /// <summary>
+        /// ProjectID
+        /// </summary>
+        [JsonProperty("ID")]
+        public long? ID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
             this.SetParamSimple(map, prefix + "FileType", this.FileType);
             this.SetParamSimple(map, prefix + "Site", this.Site);
+            this.SetParamSimple(map, prefix + "ID", this.ID);
         }
     }
 }

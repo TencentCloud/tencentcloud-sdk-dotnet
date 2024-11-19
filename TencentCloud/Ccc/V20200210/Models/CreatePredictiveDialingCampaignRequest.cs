@@ -102,6 +102,24 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("RetryTimes")]
         public long? RetryTimes{ get; set; }
 
+        /// <summary>
+        /// 自定义变量
+        /// </summary>
+        [JsonProperty("Variables")]
+        public Variable[] Variables{ get; set; }
+
+        /// <summary>
+        /// UUI
+        /// </summary>
+        [JsonProperty("UUI")]
+        public string UUI{ get; set; }
+
+        /// <summary>
+        /// 被叫属性
+        /// </summary>
+        [JsonProperty("CalleeAttributes")]
+        public CalleeAttribute[] CalleeAttributes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +139,9 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "IVRId", this.IVRId);
             this.SetParamSimple(map, prefix + "RetryTimes", this.RetryTimes);
+            this.SetParamArrayObj(map, prefix + "Variables.", this.Variables);
+            this.SetParamSimple(map, prefix + "UUI", this.UUI);
+            this.SetParamArrayObj(map, prefix + "CalleeAttributes.", this.CalleeAttributes);
         }
     }
 }
