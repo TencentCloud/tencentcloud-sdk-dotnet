@@ -31,7 +31,7 @@ namespace TencentCloud.Thpc.V20230321.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 集群存储选项。
+        /// 集群存储选项；集群已存在的节点和新增节点都会挂载此存储。
         /// </summary>
         [JsonProperty("StorageOption")]
         public StorageOption StorageOption{ get; set; }

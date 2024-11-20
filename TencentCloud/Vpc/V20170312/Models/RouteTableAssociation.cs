@@ -26,12 +26,14 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// 子网实例ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
         /// 路由表实例ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RouteTableId")]
         public string RouteTableId{ get; set; }

@@ -29,7 +29,6 @@ namespace TencentCloud.Facefusion.V20220927.Models
         /// 取值范围：0-1之间。默认取值0.7。
         /// 
         /// 该参数仅对SwapModelType（模型类型）取值1-5生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WarpRadio")]
         public float? WarpRadio{ get; set; }
@@ -39,7 +38,6 @@ namespace TencentCloud.Facefusion.V20220927.Models
         /// 取值范围：0-1之间。默认取值1。
         /// 
         /// 该参数仅对SwapModelType（模型类型）取值1-5生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnhanceRadio")]
         public float? EnhanceRadio{ get; set; }
@@ -49,7 +47,6 @@ namespace TencentCloud.Facefusion.V20220927.Models
         /// 取值范围：0-1之间。默认取值1。
         /// 
         /// 该参数仅对SwapModelType（模型类型）取值1-5生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MpRadio")]
         public float? MpRadio{ get; set; }
@@ -59,7 +56,6 @@ namespace TencentCloud.Facefusion.V20220927.Models
         /// 当生成人脸比较清晰时，将人脸模糊到接近模板的清晰度的程度
         /// 
         /// 该参数仅对SwapModelType（模型类型）取值1-5生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BlurRadio")]
         public float? BlurRadio{ get; set; }
@@ -70,7 +66,6 @@ namespace TencentCloud.Facefusion.V20220927.Models
         /// 0：牙齿增强关闭
         /// 1：牙齿增强打开
         /// 该参数仅对SwapModelType（模型类型）取值1-5生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TeethEnhanceRadio")]
         public float? TeethEnhanceRadio{ get; set; }

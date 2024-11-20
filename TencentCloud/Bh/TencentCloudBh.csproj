@@ -1,0 +1,200 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{C0A34C44-D2C8-3C11-BD49-24147708D3D4}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1125</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Bh</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20230418\BhClient.cs" />
+    <Compile Include="V20230418\Models\ACTemplate.cs" />
+    <Compile Include="V20230418\Models\Acl.cs" />
+    <Compile Include="V20230418\Models\AddDeviceGroupMembersRequest.cs" />
+    <Compile Include="V20230418\Models\AddDeviceGroupMembersResponse.cs" />
+    <Compile Include="V20230418\Models\AddUserGroupMembersRequest.cs" />
+    <Compile Include="V20230418\Models\AddUserGroupMembersResponse.cs" />
+    <Compile Include="V20230418\Models\AssetSyncStatus.cs" />
+    <Compile Include="V20230418\Models\BindDeviceAccountPasswordRequest.cs" />
+    <Compile Include="V20230418\Models\BindDeviceAccountPasswordResponse.cs" />
+    <Compile Include="V20230418\Models\BindDeviceAccountPrivateKeyRequest.cs" />
+    <Compile Include="V20230418\Models\BindDeviceAccountPrivateKeyResponse.cs" />
+    <Compile Include="V20230418\Models\BindDeviceResourceRequest.cs" />
+    <Compile Include="V20230418\Models\BindDeviceResourceResponse.cs" />
+    <Compile Include="V20230418\Models\ChangePwdTaskDetail.cs" />
+    <Compile Include="V20230418\Models\ChangePwdTaskInfo.cs" />
+    <Compile Include="V20230418\Models\Clb.cs" />
+    <Compile Include="V20230418\Models\CmdTemplate.cs" />
+    <Compile Include="V20230418\Models\CreateAclRequest.cs" />
+    <Compile Include="V20230418\Models\CreateAclResponse.cs" />
+    <Compile Include="V20230418\Models\CreateAssetSyncJobRequest.cs" />
+    <Compile Include="V20230418\Models\CreateAssetSyncJobResponse.cs" />
+    <Compile Include="V20230418\Models\CreateChangePwdTaskRequest.cs" />
+    <Compile Include="V20230418\Models\CreateChangePwdTaskResponse.cs" />
+    <Compile Include="V20230418\Models\CreateCmdTemplateRequest.cs" />
+    <Compile Include="V20230418\Models\CreateCmdTemplateResponse.cs" />
+    <Compile Include="V20230418\Models\CreateDeviceAccountRequest.cs" />
+    <Compile Include="V20230418\Models\CreateDeviceAccountResponse.cs" />
+    <Compile Include="V20230418\Models\CreateDeviceGroupRequest.cs" />
+    <Compile Include="V20230418\Models\CreateDeviceGroupResponse.cs" />
+    <Compile Include="V20230418\Models\CreateResourceRequest.cs" />
+    <Compile Include="V20230418\Models\CreateResourceResponse.cs" />
+    <Compile Include="V20230418\Models\CreateUserGroupRequest.cs" />
+    <Compile Include="V20230418\Models\CreateUserGroupResponse.cs" />
+    <Compile Include="V20230418\Models\CreateUserRequest.cs" />
+    <Compile Include="V20230418\Models\CreateUserResponse.cs" />
+    <Compile Include="V20230418\Models\DeleteAclsRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteAclsResponse.cs" />
+    <Compile Include="V20230418\Models\DeleteChangePwdTaskRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteChangePwdTaskResponse.cs" />
+    <Compile Include="V20230418\Models\DeleteCmdTemplatesRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteCmdTemplatesResponse.cs" />
+    <Compile Include="V20230418\Models\DeleteDeviceAccountsRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteDeviceAccountsResponse.cs" />
+    <Compile Include="V20230418\Models\DeleteDeviceGroupMembersRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteDeviceGroupMembersResponse.cs" />
+    <Compile Include="V20230418\Models\DeleteDeviceGroupsRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteDeviceGroupsResponse.cs" />
+    <Compile Include="V20230418\Models\DeleteDevicesRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteDevicesResponse.cs" />
+    <Compile Include="V20230418\Models\DeleteUserGroupMembersRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteUserGroupMembersResponse.cs" />
+    <Compile Include="V20230418\Models\DeleteUserGroupsRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteUserGroupsResponse.cs" />
+    <Compile Include="V20230418\Models\DeleteUsersRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteUsersResponse.cs" />
+    <Compile Include="V20230418\Models\Department.cs" />
+    <Compile Include="V20230418\Models\DepartmentManagerUser.cs" />
+    <Compile Include="V20230418\Models\DeployResourceRequest.cs" />
+    <Compile Include="V20230418\Models\DeployResourceResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeAclsRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeAclsResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeAssetSyncStatusRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeAssetSyncStatusResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeChangePwdTaskDetailRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeChangePwdTaskDetailResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeChangePwdTaskRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeChangePwdTaskResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeCmdTemplatesRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeCmdTemplatesResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeDeviceAccountsRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeDeviceAccountsResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeDeviceGroupMembersRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeDeviceGroupMembersResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeDeviceGroupsRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeDeviceGroupsResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeDevicesRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeDevicesResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeDomainsRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeDomainsResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeLoginEventRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeLoginEventResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeOperationEventRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeOperationEventResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeResourcesRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeResourcesResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeUserGroupMembersRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeUserGroupMembersResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeUserGroupsRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeUserGroupsResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeUsersRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeUsersResponse.cs" />
+    <Compile Include="V20230418\Models\Device.cs" />
+    <Compile Include="V20230418\Models\Domain.cs" />
+    <Compile Include="V20230418\Models\ExternalDevice.cs" />
+    <Compile Include="V20230418\Models\Filter.cs" />
+    <Compile Include="V20230418\Models\Group.cs" />
+    <Compile Include="V20230418\Models\ImportExternalDeviceRequest.cs" />
+    <Compile Include="V20230418\Models\ImportExternalDeviceResponse.cs" />
+    <Compile Include="V20230418\Models\LoginEvent.cs" />
+    <Compile Include="V20230418\Models\ModifyAclRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyAclResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyChangePwdTaskRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyChangePwdTaskResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyCmdTemplateRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyCmdTemplateResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyDeviceGroupRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyDeviceGroupResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyDeviceRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyDeviceResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyOAuthSettingRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyOAuthSettingResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyResourceRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyResourceResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyUserGroupRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyUserGroupResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyUserRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyUserResponse.cs" />
+    <Compile Include="V20230418\Models\OperationEvent.cs" />
+    <Compile Include="V20230418\Models\ResetDeviceAccountPasswordRequest.cs" />
+    <Compile Include="V20230418\Models\ResetDeviceAccountPasswordResponse.cs" />
+    <Compile Include="V20230418\Models\ResetDeviceAccountPrivateKeyRequest.cs" />
+    <Compile Include="V20230418\Models\ResetDeviceAccountPrivateKeyResponse.cs" />
+    <Compile Include="V20230418\Models\ResetUserRequest.cs" />
+    <Compile Include="V20230418\Models\ResetUserResponse.cs" />
+    <Compile Include="V20230418\Models\Resource.cs" />
+    <Compile Include="V20230418\Models\RunChangePwdTaskDetail.cs" />
+    <Compile Include="V20230418\Models\RunChangePwdTaskRequest.cs" />
+    <Compile Include="V20230418\Models\RunChangePwdTaskResponse.cs" />
+    <Compile Include="V20230418\Models\SearchAuditLogRequest.cs" />
+    <Compile Include="V20230418\Models\SearchAuditLogResponse.cs" />
+    <Compile Include="V20230418\Models\SearchCommandBySidRequest.cs" />
+    <Compile Include="V20230418\Models\SearchCommandBySidResponse.cs" />
+    <Compile Include="V20230418\Models\SearchCommandRequest.cs" />
+    <Compile Include="V20230418\Models\SearchCommandResponse.cs" />
+    <Compile Include="V20230418\Models\SearchCommandResult.cs" />
+    <Compile Include="V20230418\Models\SearchFileBySidRequest.cs" />
+    <Compile Include="V20230418\Models\SearchFileBySidResponse.cs" />
+    <Compile Include="V20230418\Models\SearchFileBySidResult.cs" />
+    <Compile Include="V20230418\Models\SearchFileRequest.cs" />
+    <Compile Include="V20230418\Models\SearchFileResponse.cs" />
+    <Compile Include="V20230418\Models\SearchFileResult.cs" />
+    <Compile Include="V20230418\Models\SearchFileTypeFilter.cs" />
+    <Compile Include="V20230418\Models\SearchSessionCommandRequest.cs" />
+    <Compile Include="V20230418\Models\SearchSessionCommandResponse.cs" />
+    <Compile Include="V20230418\Models\SearchSessionRequest.cs" />
+    <Compile Include="V20230418\Models\SearchSessionResponse.cs" />
+    <Compile Include="V20230418\Models\TagFilter.cs" />
+    <Compile Include="V20230418\Models\User.cs" />
+  </ItemGroup>
+</Project>

@@ -73,7 +73,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ProtectMode{ get; set; }
 
         /// <summary>
-        /// 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC_V2" - 单节点云盘版实例。 不指定则默认为通用型实例。
+        /// 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC_V2" - 单节点云盘版实例。 "CLOUD_NATIVE_CLUSTER" - 集群版标准型， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 集群版加强型。   不指定则默认为通用型实例。
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
@@ -102,6 +102,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("Ladder")]
         public ulong? Ladder{ get; set; }
 
+        /// <summary>
+        /// 磁盘类型，查询集群版、单节点云盘版实例价格可以指定该参数。支持值包括： "CLOUD_SSD" - SSD云硬盘， "CLOUD_HSSD" - 增强型SSD云硬盘。  默认为 SSD云硬盘。
+        /// </summary>
+        [JsonProperty("DiskType")]
+        public string DiskType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Ladder", this.Ladder);
+            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
         }
     }
 }

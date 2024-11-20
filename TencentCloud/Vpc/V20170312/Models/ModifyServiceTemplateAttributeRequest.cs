@@ -37,7 +37,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string ServiceTemplateName{ get; set; }
 
         /// <summary>
-        /// 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
+        /// 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。协议后面的端口部分长度不能超过128个字符。
         /// </summary>
         [JsonProperty("Services")]
         public string[] Services{ get; set; }

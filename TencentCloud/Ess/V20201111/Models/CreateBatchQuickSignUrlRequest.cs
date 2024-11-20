@@ -26,10 +26,13 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 批量签署的流程签署人，其中姓名(ApproverName)、参与人类型(ApproverType)必传，手机号(ApproverMobile)和证件信息(ApproverIdCardType、ApproverIdCardNumber)可任选一种或全部传入。
+        /// <ul>
+        /// <li>若为个人参与方：ApproverType=1</li>
+        /// <li>若为企业参与方：ApproverType=0。同时 OrganizationName 参数需传入参与方企业名称。 </li>
+        /// </ul>
         /// 注:
-        /// `1. ApproverType目前只支持个人类型的签署人。`
-        /// `2. 签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
-        /// `3. 当需要通过短信验证码签署时，手机号ApproverMobile需要与发起合同时填写的用户手机号一致。`
+        /// `1. 暂不支持签署人拖动签署控件功能，以及签批控件。`
+        /// `2. 当需要通过短信验证码签署时，手机号ApproverMobile需要与发起合同时填写的用户手机号一致。`
         /// </summary>
         [JsonProperty("FlowApproverInfo")]
         public FlowCreateApprover FlowApproverInfo{ get; set; }
@@ -79,6 +82,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <ul><li>默认情况下，签名类型为手写签名</li>
         /// <li>您可以传递多种值，表示可用多种签名类型。</li>
         /// <li>该参数会覆盖您合同中的签名类型，若您在发起合同时限定了签名类型(赋值签名类型给ComponentTypeLimit)，请将这些签名类型赋予此参数</li>
+        /// <li>若签署方为企业员工，此参数无效，签名方式将以合同中为准。</li>
         /// </ul>
         /// </summary>
         [JsonProperty("SignatureTypes")]
@@ -108,6 +112,8 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
+        /// 
+        /// 注: `若签署方为企业员工，暂不支持通过H5端进行动态签署人的补充`
         /// </summary>
         [JsonProperty("FlowBatchUrlInfo")]
         public FlowBatchUrlInfo FlowBatchUrlInfo{ get; set; }
@@ -125,6 +131,8 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 缓存签署人信息。在H5签署链接动态领取场景，首次填写后，选择缓存签署人信息，在下次签署人点击领取链接时，会自动将个人信息（姓名、身份证号、手机号）填入，否则需要每次手动填写。
+        /// 
+        /// 注: `若参与方为企业员工时，暂不支持对参与方信息进行缓存`
         /// </summary>
         [JsonProperty("CacheApproverInfo")]
         public bool? CacheApproverInfo{ get; set; }

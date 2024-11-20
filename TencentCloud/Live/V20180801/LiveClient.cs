@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1124";
+       private const string sdkVersion = "SDK_NET_3.0.1125";
 
         /// <summary>
         /// Client constructor.
@@ -1255,6 +1255,69 @@ namespace TencentCloud.Live.V20180801
         public DescribeCallbackRecordsListResponse DescribeCallbackRecordsListSync(DescribeCallbackRecordsListRequest req)
         {
             return InternalRequestAsync<DescribeCallbackRecordsListResponse>(req, "DescribeCallbackRecordsList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来查询账号下所有的导播台列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCasterListRequest"/></param>
+        /// <returns><see cref="DescribeCasterListResponse"/></returns>
+        public Task<DescribeCasterListResponse> DescribeCasterList(DescribeCasterListRequest req)
+        {
+            return InternalRequestAsync<DescribeCasterListResponse>(req, "DescribeCasterList");
+        }
+
+        /// <summary>
+        /// 该接口用来查询账号下所有的导播台列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCasterListRequest"/></param>
+        /// <returns><see cref="DescribeCasterListResponse"/></returns>
+        public DescribeCasterListResponse DescribeCasterListSync(DescribeCasterListRequest req)
+        {
+            return InternalRequestAsync<DescribeCasterListResponse>(req, "DescribeCasterList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来获取所有的转场名称及其对应的素材url。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCasterTransitionTypesRequest"/></param>
+        /// <returns><see cref="DescribeCasterTransitionTypesResponse"/></returns>
+        public Task<DescribeCasterTransitionTypesResponse> DescribeCasterTransitionTypes(DescribeCasterTransitionTypesRequest req)
+        {
+            return InternalRequestAsync<DescribeCasterTransitionTypesResponse>(req, "DescribeCasterTransitionTypes");
+        }
+
+        /// <summary>
+        /// 该接口用来获取所有的转场名称及其对应的素材url。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCasterTransitionTypesRequest"/></param>
+        /// <returns><see cref="DescribeCasterTransitionTypesResponse"/></returns>
+        public DescribeCasterTransitionTypesResponse DescribeCasterTransitionTypesSync(DescribeCasterTransitionTypesRequest req)
+        {
+            return InternalRequestAsync<DescribeCasterTransitionTypesResponse>(req, "DescribeCasterTransitionTypes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用来查询当前APPID导播台业务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCasterUserStatusRequest"/></param>
+        /// <returns><see cref="DescribeCasterUserStatusResponse"/></returns>
+        public Task<DescribeCasterUserStatusResponse> DescribeCasterUserStatus(DescribeCasterUserStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeCasterUserStatusResponse>(req, "DescribeCasterUserStatus");
+        }
+
+        /// <summary>
+        /// 本接口用来查询当前APPID导播台业务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCasterUserStatusRequest"/></param>
+        /// <returns><see cref="DescribeCasterUserStatusResponse"/></returns>
+        public DescribeCasterUserStatusResponse DescribeCasterUserStatusSync(DescribeCasterUserStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeCasterUserStatusResponse>(req, "DescribeCasterUserStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

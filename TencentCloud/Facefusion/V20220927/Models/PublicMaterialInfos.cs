@@ -75,7 +75,6 @@ namespace TencentCloud.Facefusion.V20220927.Models
 
         /// <summary>
         /// 审核原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuditResult")]
         public string AuditResult{ get; set; }

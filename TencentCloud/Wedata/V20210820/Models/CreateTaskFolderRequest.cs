@@ -37,7 +37,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string FolderName{ get; set; }
 
         /// <summary>
-        /// 工作量ID
+        /// 工作流ID
         /// </summary>
         [JsonProperty("WorkflowId")]
         public string WorkflowId{ get; set; }
@@ -47,6 +47,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         [JsonProperty("ParentFolderId")]
         public string ParentFolderId{ get; set; }
+
+        /// <summary>
+        /// 目录分类
+        /// </summary>
+        [JsonProperty("TaskNodeType")]
+        public string TaskNodeType{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "FolderName", this.FolderName);
             this.SetParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
             this.SetParamSimple(map, prefix + "ParentFolderId", this.ParentFolderId);
+            this.SetParamSimple(map, prefix + "TaskNodeType", this.TaskNodeType);
         }
     }
 }

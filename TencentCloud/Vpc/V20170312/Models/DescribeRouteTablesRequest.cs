@@ -68,6 +68,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Limit")]
         public string Limit{ get; set; }
 
+        /// <summary>
+        /// 是否需要获取路由策略信息，默认获取，当控制台不需要拉取路由策略信息时，改为False。
+        /// </summary>
+        [JsonProperty("NeedRouterInfo")]
+        public bool? NeedRouterInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +84,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArraySimple(map, prefix + "RouteTableIds.", this.RouteTableIds);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "NeedRouterInfo", this.NeedRouterInfo);
         }
     }
 }

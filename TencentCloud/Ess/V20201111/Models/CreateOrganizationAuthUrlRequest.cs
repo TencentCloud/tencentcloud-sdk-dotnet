@@ -164,6 +164,15 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Endpoint")]
         public string Endpoint{ get; set; }
 
+        /// <summary>
+        /// 指定企业初始化引导，现在可以配置如下的选项：
+        /// 
+        /// <b>1</b>: 启用此选项后，在企业认证的最终步骤将添加创建印章的引导。如下图的位置
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/88e0b45095a5c589de8995462ad755dc.jpg)
+        /// </summary>
+        [JsonProperty("Initialization")]
+        public ulong?[] Initialization{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -189,6 +198,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "OrganizationNameSame", this.OrganizationNameSame);
             this.SetParamSimple(map, prefix + "BusinessLicense", this.BusinessLicense);
             this.SetParamSimple(map, prefix + "Endpoint", this.Endpoint);
+            this.SetParamArraySimple(map, prefix + "Initialization.", this.Initialization);
         }
     }
 }

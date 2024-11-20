@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例 ID。
+        /// 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -47,13 +47,17 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 指修改后的私有网络 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+        /// 指修改后的私有网络 ID。
+        /// - 当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+        /// - 请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)，切换至**实例详情**页面，在**网络信息**区域，单击所属网络后面的私有网络名称，获取私有网络 ID。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 指修改后的私有网络所属子网 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+        /// 指修改后的私有网络所属子网 ID。
+        /// - 当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+        /// - 请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)，切换至**实例详情**页面，在**网络信息**区域，单击所属网络后面的子网名称，获取子网ID。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -62,7 +66,6 @@ namespace TencentCloud.Redis.V20180412.Models
         /// 原内网 IPv4 地址保留时长。
         /// - 单位：天。
         /// - 取值范围：0、1、2、3、7、15。
-        /// 
         /// **说明**：设置原地址保留时长需最新版SDK，否则原地址将立即释放，查看SDK版本，请参见 [SDK中心](https://cloud.tencent.com/document/sdk)。
         /// </summary>
         [JsonProperty("Recycle")]
