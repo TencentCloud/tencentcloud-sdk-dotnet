@@ -115,11 +115,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? ProductId{ get; set; }
 
         /// <summary>
-        /// 场景化取值：
-        /// Hadoop-Kudu
-        /// Hadoop-Zookeeper
-        /// Hadoop-Presto
-        /// Hadoop-Hbase
+        /// 场景化取值：Hadoop-Kudu，Hadoop-Zookeeper，Hadoop-Presto，Hadoop-Hbase
         /// </summary>
         [JsonProperty("SceneName")]
         public string SceneName{ get; set; }

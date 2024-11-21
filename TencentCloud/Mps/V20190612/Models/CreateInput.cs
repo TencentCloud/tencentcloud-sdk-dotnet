@@ -31,7 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string InputName{ get; set; }
 
         /// <summary>
-        /// 输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL]。
+        /// 输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
@@ -102,6 +102,18 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }
 
+        /// <summary>
+        /// 输入的RIST配置信息。
+        /// </summary>
+        [JsonProperty("RISTSettings")]
+        public CreateInputRISTSettings RISTSettings{ get; set; }
+
+        /// <summary>
+        /// 输入节点的地区
+        /// </summary>
+        [JsonProperty("InputRegion")]
+        public string InputRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +133,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "ResilientStream.", this.ResilientStream);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
+            this.SetParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
+            this.SetParamSimple(map, prefix + "InputRegion", this.InputRegion);
         }
     }
 }

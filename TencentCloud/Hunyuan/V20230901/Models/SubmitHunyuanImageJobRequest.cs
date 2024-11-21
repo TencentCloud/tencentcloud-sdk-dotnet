@@ -33,7 +33,8 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// 反向提示词。 推荐使用中文。最多可传1024个 utf-8 字符。
+        /// 反向提示词。 
+        /// 推荐使用中文。最多可传1024个 utf-8 字符。
         /// </summary>
         [JsonProperty("NegativePrompt")]
         public string NegativePrompt{ get; set; }

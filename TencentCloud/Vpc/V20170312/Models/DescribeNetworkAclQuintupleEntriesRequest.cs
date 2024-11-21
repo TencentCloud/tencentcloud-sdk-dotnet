@@ -43,7 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。
+        /// 过滤条件，参数不支持同时指定`NetworkAclId`和`Filters`。
         /// <li>protocol - String - 协议，形如：`TCP`。</li>
         /// <li>description - String - 描述。</li>
         /// <li>destination-cidr - String - 目的CIDR， 形如：'192.168.0.0/24'。</li>

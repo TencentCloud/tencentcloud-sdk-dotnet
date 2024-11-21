@@ -25,7 +25,6 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 过滤条件，参数不支持同时指定RouteTableIds和Filters。
         /// <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
         /// <li>instance-id - String - （过滤条件）云主机实例ID。</li>
         /// <li>instance-name - String - （过滤条件）云主机名称。</li>

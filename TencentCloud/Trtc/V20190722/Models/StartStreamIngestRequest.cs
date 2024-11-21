@@ -116,6 +116,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("MaxDuration")]
         public long? MaxDuration{ get; set; }
 
+        /// <summary>
+        /// 音量，取值范围[0, 100]，默认100，表示原音量。
+        /// </summary>
+        [JsonProperty("Volume")]
+        public ulong? Volume{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -136,6 +142,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "AutoPush", this.AutoPush);
             this.SetParamSimple(map, prefix + "RepeatNum", this.RepeatNum);
             this.SetParamSimple(map, prefix + "MaxDuration", this.MaxDuration);
+            this.SetParamSimple(map, prefix + "Volume", this.Volume);
         }
     }
 }

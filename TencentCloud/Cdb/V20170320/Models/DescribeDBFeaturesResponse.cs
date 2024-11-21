@@ -56,6 +56,7 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 主实例所在地域。
+        /// 说明：此参数可能返回空值，您可忽略此出参返回值。如需获取实例所在地域详情，您可调用 [查询实例列表](https://cloud.tencent.com/document/product/236/15872) 接口查询。
         /// </summary>
         [JsonProperty("MasterRegion")]
         public string MasterRegion{ get; set; }

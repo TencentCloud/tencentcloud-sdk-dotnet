@@ -43,7 +43,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 输出的转推协议，支持SRT|RTP|RTMP。
+        /// 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
@@ -91,6 +91,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }
 
+        /// <summary>
+        /// 转推RIST的配置。
+        /// </summary>
+        [JsonProperty("RISTSettings")]
+        public CreateOutputRistSettings RISTSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +114,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "MaxConcurrent", this.MaxConcurrent);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
+            this.SetParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
         }
     }
 }

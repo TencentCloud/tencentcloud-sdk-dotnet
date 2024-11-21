@@ -25,7 +25,7 @@ namespace TencentCloud.Vclm.V20240523.Models
     {
         
         /// <summary>
-        /// 视频翻译任务 ID
+        /// 视频转译任务 ID
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }

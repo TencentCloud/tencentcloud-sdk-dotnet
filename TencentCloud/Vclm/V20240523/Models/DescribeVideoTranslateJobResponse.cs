@@ -25,79 +25,80 @@ namespace TencentCloud.Vclm.V20240523.Models
     {
         
         /// <summary>
-        /// 任务状态。 1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。	
+        /// 任务状态。0: 任务初始化。 1：音频转译中。 2：音频转译失败。 3：音频转译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频转译中。 7：视频转译失败。 8：视频转译成功。	
         /// </summary>
         [JsonProperty("JobStatus")]
         public long? JobStatus{ get; set; }
 
         /// <summary>
-        /// 任务错误码。	
+        /// 本次任务出错的错误码，用来定位问题原因。
         /// </summary>
         [JsonProperty("JobErrorCode")]
         public string JobErrorCode{ get; set; }
 
         /// <summary>
-        /// 任务错误信息。	
+        /// 任务错误信息，错误码出现的原因。
         /// </summary>
         [JsonProperty("JobErrorMsg")]
         public string JobErrorMsg{ get; set; }
 
         /// <summary>
-        /// 视频翻译结果。	
+        /// 视频转译生成结果视频url，有效期1天。当JobStatus为8时，该字段返回视频Url。
         /// </summary>
         [JsonProperty("ResultVideoUrl")]
         public string ResultVideoUrl{ get; set; }
 
         /// <summary>
-        /// 音频翻译结果。	
+        /// 音频转译后分句翻译内容，包含分句起始时间、源识别文本以及翻译后文本。
+        /// 当JobStatus为3、4时，该字段返回分句翻译数据。
         /// </summary>
         [JsonProperty("TranslateResults")]
         public TranslateResult[] TranslateResults{ get; set; }
 
         /// <summary>
-        /// 是否需要确认翻译结果。0：不需要，1：需要	
+        /// 是否需要确认翻译结果。0：不需要，1：需要。	
         /// </summary>
         [JsonProperty("JobConfirm")]
         public long? JobConfirm{ get; set; }
 
         /// <summary>
-        /// 音频任务 ID	
+        /// 音频任务 ID。	
         /// </summary>
         [JsonProperty("JobAudioTaskId")]
         public string JobAudioTaskId{ get; set; }
 
         /// <summary>
-        /// 视频审核任务ID	
+        /// 视频审核任务ID。
         /// </summary>
         [JsonProperty("JobVideoModerationId")]
         public string JobVideoModerationId{ get; set; }
 
         /// <summary>
-        /// 音频审核任务 ID	
+        /// 音频审核任务 ID。
         /// </summary>
         [JsonProperty("JobAudioModerationId")]
         public string JobAudioModerationId{ get; set; }
 
         /// <summary>
-        /// 口型驱动任务 ID	
+        /// 口型驱动任务 ID。
         /// </summary>
         [JsonProperty("JobVideoId")]
         public string JobVideoId{ get; set; }
 
         /// <summary>
-        /// 视频素材原始 URL	
+        /// 视频素材原始 URL。
         /// </summary>
         [JsonProperty("OriginalVideoUrl")]
         public string OriginalVideoUrl{ get; set; }
 
         /// <summary>
-        /// 文本片段及其时间戳	
+        /// 文本片段及其时间戳。
         /// </summary>
         [JsonProperty("AsrTimestamps")]
         public AsrTimestamps[] AsrTimestamps{ get; set; }
 
         /// <summary>
-        /// 提交视频翻译任务时的 requestId	
+        /// 提交视频转译任务时的 requestId。
         /// </summary>
         [JsonProperty("JobSubmitReqId")]
         public string JobSubmitReqId{ get; set; }

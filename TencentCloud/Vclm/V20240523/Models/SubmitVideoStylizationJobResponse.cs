@@ -25,7 +25,7 @@ namespace TencentCloud.Vclm.V20240523.Models
     {
         
         /// <summary>
-        /// 任务ID
+        /// 任务ID。任务有效期为48小时。
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }

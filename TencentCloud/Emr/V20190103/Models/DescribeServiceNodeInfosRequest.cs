@@ -91,12 +91,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string ServiceName{ get; set; }
 
         /// <summary>
-        /// 节点名称
-        /// master
-        /// core
-        /// task
-        /// common
-        /// router
+        /// 节点名称master,core,task,common,router
         /// </summary>
         [JsonProperty("NodeTypeName")]
         public string NodeTypeName{ get; set; }

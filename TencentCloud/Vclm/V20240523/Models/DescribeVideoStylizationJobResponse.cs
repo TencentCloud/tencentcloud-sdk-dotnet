@@ -31,18 +31,23 @@ namespace TencentCloud.Vclm.V20240523.Models
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 任务状态码：
-        /// JobInit:  "初始化中"
-        /// JobModerationFailed: "审核失败",
-        /// JobRunning: "处理中",
-        /// JobFailed: "处理失败",
+        /// 任务状态码。取值说明：
+        /// JobInit:  "初始化中"；
+        /// JobModerationFailed: "审核失败"；
+        /// JobRunning: "处理中"；
+        /// JobFailed: "处理失败"；
         /// JobSuccess: "处理完成"。
         /// </summary>
         [JsonProperty("StatusCode")]
         public string StatusCode{ get; set; }
 
         /// <summary>
-        /// 任务状态描述。
+        /// 任务状态描述。取值说明：
+        /// JobInit:  "初始化中"；
+        /// JobModerationFailed: "审核失败"；
+        /// JobRunning: "处理中"；
+        /// JobFailed: "处理失败"；
+        /// JobSuccess: "处理完成"。
         /// </summary>
         [JsonProperty("StatusMsg")]
         public string StatusMsg{ get; set; }

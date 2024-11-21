@@ -31,6 +31,12 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("TieringSizeInBytes")]
         public long? TieringSizeInBytes{ get; set; }
 
+        /// <summary>
+        /// 冷存储容量
+        /// </summary>
+        [JsonProperty("SecondaryTieringSizeInBytes")]
+        public long? SecondaryTieringSizeInBytes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +44,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TieringSizeInBytes", this.TieringSizeInBytes);
+            this.SetParamSimple(map, prefix + "SecondaryTieringSizeInBytes", this.SecondaryTieringSizeInBytes);
         }
     }
 }

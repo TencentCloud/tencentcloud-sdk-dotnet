@@ -28,7 +28,7 @@ namespace TencentCloud.Tchd.V20230306
 
        private const string endpoint = "tchd.tencentcloudapi.com";
        private const string version = "2023-03-06";
-       private const string sdkVersion = "SDK_NET_3.0.1125";
+       private const string sdkVersion = "SDK_NET_3.0.1126";
 
         /// <summary>
         /// Client constructor.
@@ -55,6 +55,8 @@ namespace TencentCloud.Tchd.V20230306
 
         /// <summary>
         /// 本接口用于查询腾讯云健康看板的可用性事件信息，可以通过产品列表、地域列表和事件发生日期进行过滤查询。
+        /// 当查询的产品对应时间内无事件时将返回空结果。
+        /// 可以参考健康看板历史事件页面来获取查询案例（链接：https://status.cloud.tencent.com/history）。
         /// </summary>
         /// <param name="req"><see cref="DescribeEventsRequest"/></param>
         /// <returns><see cref="DescribeEventsResponse"/></returns>
@@ -65,6 +67,8 @@ namespace TencentCloud.Tchd.V20230306
 
         /// <summary>
         /// 本接口用于查询腾讯云健康看板的可用性事件信息，可以通过产品列表、地域列表和事件发生日期进行过滤查询。
+        /// 当查询的产品对应时间内无事件时将返回空结果。
+        /// 可以参考健康看板历史事件页面来获取查询案例（链接：https://status.cloud.tencent.com/history）。
         /// </summary>
         /// <param name="req"><see cref="DescribeEventsRequest"/></param>
         /// <returns><see cref="DescribeEventsResponse"/></returns>

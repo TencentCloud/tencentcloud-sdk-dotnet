@@ -37,19 +37,19 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// 集群ID
+        /// 集群 ID
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 是否开启公网CLB
+        /// 是否开启公网 CLB
         /// </summary>
         [JsonProperty("EnableExternal")]
         public bool? EnableExternal{ get; set; }
 
         /// <summary>
-        /// 集群内部署组件的pod配置
+        /// 集群内部署组件的pod 配置
         /// </summary>
         [JsonProperty("InClusterPodConfig")]
         public PrometheusClusterAgentPodConfig InClusterPodConfig{ get; set; }
@@ -61,16 +61,22 @@ namespace TencentCloud.Monitor.V20180724.Models
         public Label[] ExternalLabels{ get; set; }
 
         /// <summary>
-        /// 是否安装默认采集配置
+        /// 是否安装默认采集 exporter 和采集配置
         /// </summary>
         [JsonProperty("NotInstallBasicScrape")]
         public bool? NotInstallBasicScrape{ get; set; }
 
         /// <summary>
-        /// 是否采集指标，true代表drop所有指标，false代表采集默认指标
+        /// 是否安装采集配置，true 只安装采集 exporter 不会安装采集配置，false 会同时安装采集配置
         /// </summary>
         [JsonProperty("NotScrape")]
         public bool? NotScrape{ get; set; }
+
+        /// <summary>
+        /// 是否丢弃所有指标，true 代表丢弃所有指标，false 代表采集默认指标
+        /// </summary>
+        [JsonProperty("DropAll")]
+        public bool? DropAll{ get; set; }
 
         /// <summary>
         /// 是否开启默认预聚合规则
@@ -92,6 +98,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArrayObj(map, prefix + "ExternalLabels.", this.ExternalLabels);
             this.SetParamSimple(map, prefix + "NotInstallBasicScrape", this.NotInstallBasicScrape);
             this.SetParamSimple(map, prefix + "NotScrape", this.NotScrape);
+            this.SetParamSimple(map, prefix + "DropAll", this.DropAll);
             this.SetParamSimple(map, prefix + "OpenDefaultRecord", this.OpenDefaultRecord);
         }
     }

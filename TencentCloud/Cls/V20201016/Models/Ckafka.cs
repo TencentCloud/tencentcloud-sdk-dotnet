@@ -25,6 +25,18 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
+        /// Ckafka 的 InstanceId
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// Ckafka 的 TopicName
+        /// </summary>
+        [JsonProperty("TopicName")]
+        public string TopicName{ get; set; }
+
+        /// <summary>
         /// Ckafka 的 Vip
         /// </summary>
         [JsonProperty("Vip")]
@@ -35,12 +47,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         [JsonProperty("Vport")]
         public string Vport{ get; set; }
-
-        /// <summary>
-        /// Ckafka 的 InstanceId
-        /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
 
         /// <summary>
         /// Ckafka 的 InstanceName
@@ -54,24 +60,18 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
-        /// <summary>
-        /// Ckafka 的 TopicName
-        /// </summary>
-        [JsonProperty("TopicName")]
-        public string TopicName{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "Vport", this.Vport);
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
-            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
         }
     }
 }

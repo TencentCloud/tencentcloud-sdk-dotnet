@@ -78,13 +78,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public SearchItem[] SearchFields{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 排序字段
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 是否升序，1:升序，0:降序
         /// </summary>
         [JsonProperty("Asc")]
         public long? Asc{ get; set; }

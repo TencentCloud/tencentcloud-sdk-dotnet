@@ -37,10 +37,16 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 源流URL【必填】。
+        /// 源流URL。
         /// </summary>
         [JsonProperty("StreamUrl")]
         public string StreamUrl{ get; set; }
+
+        /// <summary>
+        /// 音量，取值范围[0, 100]，默认100，表示原音量。
+        /// </summary>
+        [JsonProperty("Volume")]
+        public ulong? Volume{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "StreamUrl", this.StreamUrl);
+            this.SetParamSimple(map, prefix + "Volume", this.Volume);
         }
     }
 }

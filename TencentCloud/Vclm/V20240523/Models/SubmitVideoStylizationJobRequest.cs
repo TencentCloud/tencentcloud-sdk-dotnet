@@ -25,7 +25,11 @@ namespace TencentCloud.Vclm.V20240523.Models
     {
         
         /// <summary>
-        /// 风格ID，取值说明：2d_anime 2D动漫；3d_cartoon 3D卡通；3d_china 3D国潮；pixel_art	像素风。
+        /// 风格ID。取值说明：
+        /// 2d_anime：2D动漫；
+        /// 3d_cartoon：3D卡通；
+        /// 3d_china：3D国潮；
+        /// pixel_art：像素风。
         /// </summary>
         [JsonProperty("StyleId")]
         public string StyleId{ get; set; }
@@ -42,9 +46,11 @@ namespace TencentCloud.Vclm.V20240523.Models
         public string VideoUrl{ get; set; }
 
         /// <summary>
-        /// 风格化强度 可选参数["low","medium","high"] 
-        /// "low":风格化强度弱,"medium":"风格化强度中等","high":"风格化强度强" 
-        /// 默认为medium
+        /// 风格化强度。取值说明：
+        /// low：风格化强度弱；
+        /// medium：风格化强度中等；
+        /// high：风格化强度强。
+        /// 默认值为medium。
         /// </summary>
         [JsonProperty("StyleStrength")]
         public string StyleStrength{ get; set; }

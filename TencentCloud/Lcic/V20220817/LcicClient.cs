@@ -28,7 +28,7 @@ namespace TencentCloud.Lcic.V20220817
 
        private const string endpoint = "lcic.tencentcloudapi.com";
        private const string version = "2022-08-17";
-       private const string sdkVersion = "SDK_NET_3.0.1125";
+       private const string sdkVersion = "SDK_NET_3.0.1126";
 
         /// <summary>
         /// Client constructor.
@@ -751,6 +751,27 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 查询录制信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordRequest"/></param>
+        /// <returns><see cref="DescribeRecordResponse"/></returns>
+        public Task<DescribeRecordResponse> DescribeRecord(DescribeRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeRecordResponse>(req, "DescribeRecord");
+        }
+
+        /// <summary>
+        /// 查询录制信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordRequest"/></param>
+        /// <returns><see cref="DescribeRecordResponse"/></returns>
+        public DescribeRecordResponse DescribeRecordSync(DescribeRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeRecordResponse>(req, "DescribeRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 录制流查询
         /// </summary>
         /// <param name="req"><see cref="DescribeRecordStreamRequest"/></param>
@@ -1301,6 +1322,27 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 开始录制
+        /// </summary>
+        /// <param name="req"><see cref="StartRecordRequest"/></param>
+        /// <returns><see cref="StartRecordResponse"/></returns>
+        public Task<StartRecordResponse> StartRecord(StartRecordRequest req)
+        {
+            return InternalRequestAsync<StartRecordResponse>(req, "StartRecord");
+        }
+
+        /// <summary>
+        /// 开始录制
+        /// </summary>
+        /// <param name="req"><see cref="StartRecordRequest"/></param>
+        /// <returns><see cref="StartRecordResponse"/></returns>
+        public StartRecordResponse StartRecordSync(StartRecordRequest req)
+        {
+            return InternalRequestAsync<StartRecordResponse>(req, "StartRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 开始房间的直播。 说明：开始房间接口调用之前需要有用户进入课堂初始化课堂信息。
         /// </summary>
         /// <param name="req"><see cref="StartRoomRequest"/></param>
@@ -1318,6 +1360,27 @@ namespace TencentCloud.Lcic.V20220817
         public StartRoomResponse StartRoomSync(StartRoomRequest req)
         {
             return InternalRequestAsync<StartRoomResponse>(req, "StartRoom")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 停止录制
+        /// </summary>
+        /// <param name="req"><see cref="StopRecordRequest"/></param>
+        /// <returns><see cref="StopRecordResponse"/></returns>
+        public Task<StopRecordResponse> StopRecord(StopRecordRequest req)
+        {
+            return InternalRequestAsync<StopRecordResponse>(req, "StopRecord");
+        }
+
+        /// <summary>
+        /// 停止录制
+        /// </summary>
+        /// <param name="req"><see cref="StopRecordRequest"/></param>
+        /// <returns><see cref="StopRecordResponse"/></returns>
+        public StopRecordResponse StopRecordSync(StopRecordRequest req)
+        {
+            return InternalRequestAsync<StopRecordResponse>(req, "StopRecord")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
