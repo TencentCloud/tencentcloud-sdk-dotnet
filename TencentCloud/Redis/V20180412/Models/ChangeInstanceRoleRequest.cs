@@ -25,19 +25,21 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 复制组ID
+        /// 复制组ID。请登录[Redis控制台的全球复制](https://console.cloud.tencent.com/redis/replication)页面获取复制组 ID。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// 实例ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例角色，rw可读写，r只读
+        /// 实例角色。
+        /// - rw：可读写。
+        /// - r：只读。
         /// </summary>
         [JsonProperty("InstanceRole")]
         public string InstanceRole{ get; set; }

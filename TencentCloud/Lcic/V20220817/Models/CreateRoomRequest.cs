@@ -49,7 +49,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 分辨率。可以有如下取值：
+        /// 头像区域，摄像头视频画面的分辨率。可以有如下取值：
         /// 1 标清
         /// 2 高清
         /// 3 全高清

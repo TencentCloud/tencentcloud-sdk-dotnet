@@ -25,25 +25,27 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 当前redis版本
+        /// 当前 Redis 小版本。小版本信息，请参见[升级实例版本](https://cloud.tencent.com/document/product/239/46457)。
         /// </summary>
         [JsonProperty("CurrentRedisVersion")]
         public string CurrentRedisVersion{ get; set; }
 
         /// <summary>
-        /// 可升级的redis版本
+        /// 升级后的 Redis 小版本。小版本信息，请参见[升级实例版本](https://cloud.tencent.com/document/product/239/46457)。
         /// </summary>
         [JsonProperty("UpgradeRedisVersion")]
         public string UpgradeRedisVersion{ get; set; }
 
         /// <summary>
-        /// 1-立即升级   0-维护时间窗口升级
+        /// 指定是否立即升级。
+        /// - 1：立即升级。
+        /// - 0：维护时间窗口升级。
         /// </summary>
         [JsonProperty("InstanceTypeUpgradeNow")]
         public long? InstanceTypeUpgradeNow{ get; set; }

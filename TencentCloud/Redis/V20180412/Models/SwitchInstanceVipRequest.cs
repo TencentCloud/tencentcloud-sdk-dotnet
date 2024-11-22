@@ -25,25 +25,27 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 源实例ID
+        /// 源实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("SrcInstanceId")]
         public string SrcInstanceId{ get; set; }
 
         /// <summary>
-        /// 目标实例ID
+        /// 目标实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("DstInstanceId")]
         public string DstInstanceId{ get; set; }
 
         /// <summary>
-        /// 单位为秒。源实例与目标实例间DTS已断开时间，如果DTS断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。
+        /// 单位为秒。源实例与目标实例间DTS已断开时间。如果 DTS 断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。
         /// </summary>
         [JsonProperty("TimeDelay")]
         public long? TimeDelay{ get; set; }
 
         /// <summary>
-        /// 在DTS断开的情况下是否强制切换。1：强制切换，0：不强制切换
+        /// 在 DTS 断开的情况下是否强制切换。
+        /// - 1：强制切换。
+        /// - 0：不强制切换。
         /// </summary>
         [JsonProperty("ForceSwitch")]
         public long? ForceSwitch{ get; set; }

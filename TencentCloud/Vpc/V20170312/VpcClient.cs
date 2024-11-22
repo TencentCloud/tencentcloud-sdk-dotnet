@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1126";
+       private const string sdkVersion = "SDK_NET_3.0.1127";
 
         /// <summary>
         /// Client constructor.
@@ -732,7 +732,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（CloneSecurityGroup）用于根据存量的安全组，克隆创建出同样规则配置的安全组。仅克隆安全组及其规则信息，不会克隆安全组标签信息。
+        /// 本接口（CloneSecurityGroup）用于根据存量的安全组，克隆创建出同样规则配置的安全组。默认仅克隆安全组及其规则信息，可通过入参开启克隆安全组标签信息。
         /// </summary>
         /// <param name="req"><see cref="CloneSecurityGroupRequest"/></param>
         /// <returns><see cref="CloneSecurityGroupResponse"/></returns>
@@ -742,7 +742,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（CloneSecurityGroup）用于根据存量的安全组，克隆创建出同样规则配置的安全组。仅克隆安全组及其规则信息，不会克隆安全组标签信息。
+        /// 本接口（CloneSecurityGroup）用于根据存量的安全组，克隆创建出同样规则配置的安全组。默认仅克隆安全组及其规则信息，可通过入参开启克隆安全组标签信息。
         /// </summary>
         /// <param name="req"><see cref="CloneSecurityGroupRequest"/></param>
         /// <returns><see cref="CloneSecurityGroupResponse"/></returns>
@@ -1502,6 +1502,27 @@ namespace TencentCloud.Vpc.V20170312
         public CreatePrivateNatGatewayTranslationNatRuleResponse CreatePrivateNatGatewayTranslationNatRuleSync(CreatePrivateNatGatewayTranslationNatRuleRequest req)
         {
             return InternalRequestAsync<CreatePrivateNatGatewayTranslationNatRuleResponse>(req, "CreatePrivateNatGatewayTranslationNatRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建内网保留IP
+        /// </summary>
+        /// <param name="req"><see cref="CreateReserveIpAddressesRequest"/></param>
+        /// <returns><see cref="CreateReserveIpAddressesResponse"/></returns>
+        public Task<CreateReserveIpAddressesResponse> CreateReserveIpAddresses(CreateReserveIpAddressesRequest req)
+        {
+            return InternalRequestAsync<CreateReserveIpAddressesResponse>(req, "CreateReserveIpAddresses");
+        }
+
+        /// <summary>
+        /// 创建内网保留IP
+        /// </summary>
+        /// <param name="req"><see cref="CreateReserveIpAddressesRequest"/></param>
+        /// <returns><see cref="CreateReserveIpAddressesResponse"/></returns>
+        public CreateReserveIpAddressesResponse CreateReserveIpAddressesSync(CreateReserveIpAddressesRequest req)
+        {
+            return InternalRequestAsync<CreateReserveIpAddressesResponse>(req, "CreateReserveIpAddresses")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2715,6 +2736,27 @@ namespace TencentCloud.Vpc.V20170312
         public DeletePrivateNatGatewayTranslationNatRuleResponse DeletePrivateNatGatewayTranslationNatRuleSync(DeletePrivateNatGatewayTranslationNatRuleRequest req)
         {
             return InternalRequestAsync<DeletePrivateNatGatewayTranslationNatRuleResponse>(req, "DeletePrivateNatGatewayTranslationNatRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除内网保留IP
+        /// </summary>
+        /// <param name="req"><see cref="DeleteReserveIpAddressesRequest"/></param>
+        /// <returns><see cref="DeleteReserveIpAddressesResponse"/></returns>
+        public Task<DeleteReserveIpAddressesResponse> DeleteReserveIpAddresses(DeleteReserveIpAddressesRequest req)
+        {
+            return InternalRequestAsync<DeleteReserveIpAddressesResponse>(req, "DeleteReserveIpAddresses");
+        }
+
+        /// <summary>
+        /// 删除内网保留IP
+        /// </summary>
+        /// <param name="req"><see cref="DeleteReserveIpAddressesRequest"/></param>
+        /// <returns><see cref="DeleteReserveIpAddressesResponse"/></returns>
+        public DeleteReserveIpAddressesResponse DeleteReserveIpAddressesSync(DeleteReserveIpAddressesRequest req)
+        {
+            return InternalRequestAsync<DeleteReserveIpAddressesResponse>(req, "DeleteReserveIpAddresses")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4439,6 +4481,27 @@ namespace TencentCloud.Vpc.V20170312
         public DescribeProductQuotaResponse DescribeProductQuotaSync(DescribeProductQuotaRequest req)
         {
             return InternalRequestAsync<DescribeProductQuotaResponse>(req, "DescribeProductQuota")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询内网保留 IP
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReserveIpAddressesRequest"/></param>
+        /// <returns><see cref="DescribeReserveIpAddressesResponse"/></returns>
+        public Task<DescribeReserveIpAddressesResponse> DescribeReserveIpAddresses(DescribeReserveIpAddressesRequest req)
+        {
+            return InternalRequestAsync<DescribeReserveIpAddressesResponse>(req, "DescribeReserveIpAddresses");
+        }
+
+        /// <summary>
+        /// 查询内网保留 IP
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReserveIpAddressesRequest"/></param>
+        /// <returns><see cref="DescribeReserveIpAddressesResponse"/></returns>
+        public DescribeReserveIpAddressesResponse DescribeReserveIpAddressesSync(DescribeReserveIpAddressesRequest req)
+        {
+            return InternalRequestAsync<DescribeReserveIpAddressesResponse>(req, "DescribeReserveIpAddresses")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -7151,6 +7214,27 @@ namespace TencentCloud.Vpc.V20170312
         public ModifyPrivateNatGatewayTranslationNatRuleResponse ModifyPrivateNatGatewayTranslationNatRuleSync(ModifyPrivateNatGatewayTranslationNatRuleRequest req)
         {
             return InternalRequestAsync<ModifyPrivateNatGatewayTranslationNatRuleResponse>(req, "ModifyPrivateNatGatewayTranslationNatRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改内网保留 IP
+        /// </summary>
+        /// <param name="req"><see cref="ModifyReserveIpAddressRequest"/></param>
+        /// <returns><see cref="ModifyReserveIpAddressResponse"/></returns>
+        public Task<ModifyReserveIpAddressResponse> ModifyReserveIpAddress(ModifyReserveIpAddressRequest req)
+        {
+            return InternalRequestAsync<ModifyReserveIpAddressResponse>(req, "ModifyReserveIpAddress");
+        }
+
+        /// <summary>
+        /// 修改内网保留 IP
+        /// </summary>
+        /// <param name="req"><see cref="ModifyReserveIpAddressRequest"/></param>
+        /// <returns><see cref="ModifyReserveIpAddressResponse"/></returns>
+        public ModifyReserveIpAddressResponse ModifyReserveIpAddressSync(ModifyReserveIpAddressRequest req)
+        {
+            return InternalRequestAsync<ModifyReserveIpAddressResponse>(req, "ModifyReserveIpAddress")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

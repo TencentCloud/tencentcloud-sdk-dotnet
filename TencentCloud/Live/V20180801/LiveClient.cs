@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1126";
+       private const string sdkVersion = "SDK_NET_3.0.1127";
 
         /// <summary>
         /// Client constructor.
@@ -159,6 +159,48 @@ namespace TencentCloud.Live.V20180801
         public CancelCommonMixStreamResponse CancelCommonMixStreamSync(CancelCommonMixStreamRequest req)
         {
             return InternalRequestAsync<CancelCommonMixStreamResponse>(req, "CancelCommonMixStream")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来复制导播台配置
+        /// </summary>
+        /// <param name="req"><see cref="CopyCasterRequest"/></param>
+        /// <returns><see cref="CopyCasterResponse"/></returns>
+        public Task<CopyCasterResponse> CopyCaster(CopyCasterRequest req)
+        {
+            return InternalRequestAsync<CopyCasterResponse>(req, "CopyCaster");
+        }
+
+        /// <summary>
+        /// 该接口用来复制导播台配置
+        /// </summary>
+        /// <param name="req"><see cref="CopyCasterRequest"/></param>
+        /// <returns><see cref="CopyCasterResponse"/></returns>
+        public CopyCasterResponse CopyCasterSync(CopyCasterRequest req)
+        {
+            return InternalRequestAsync<CopyCasterResponse>(req, "CopyCaster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来创建新的导播台
+        /// </summary>
+        /// <param name="req"><see cref="CreateCasterRequest"/></param>
+        /// <returns><see cref="CreateCasterResponse"/></returns>
+        public Task<CreateCasterResponse> CreateCaster(CreateCasterRequest req)
+        {
+            return InternalRequestAsync<CreateCasterResponse>(req, "CreateCaster");
+        }
+
+        /// <summary>
+        /// 该接口用来创建新的导播台
+        /// </summary>
+        /// <param name="req"><see cref="CreateCasterRequest"/></param>
+        /// <returns><see cref="CreateCasterResponse"/></returns>
+        public CreateCasterResponse CreateCasterSync(CreateCasterRequest req)
+        {
+            return InternalRequestAsync<CreateCasterResponse>(req, "CreateCaster")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -689,6 +731,29 @@ namespace TencentCloud.Live.V20180801
         public CreateScreenshotTaskResponse CreateScreenshotTaskSync(CreateScreenshotTaskRequest req)
         {
             return InternalRequestAsync<CreateScreenshotTaskResponse>(req, "CreateScreenshotTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来删除一个导播台的所有信息。
+        /// 注意，调用该接口后，所有的导播台信息将被清除，包括正在直播的内容也将直接中断。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCasterRequest"/></param>
+        /// <returns><see cref="DeleteCasterResponse"/></returns>
+        public Task<DeleteCasterResponse> DeleteCaster(DeleteCasterRequest req)
+        {
+            return InternalRequestAsync<DeleteCasterResponse>(req, "DeleteCaster");
+        }
+
+        /// <summary>
+        /// 该接口用来删除一个导播台的所有信息。
+        /// 注意，调用该接口后，所有的导播台信息将被清除，包括正在直播的内容也将直接中断。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCasterRequest"/></param>
+        /// <returns><see cref="DeleteCasterResponse"/></returns>
+        public DeleteCasterResponse DeleteCasterSync(DeleteCasterRequest req)
+        {
+            return InternalRequestAsync<DeleteCasterResponse>(req, "DeleteCaster")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1259,6 +1324,48 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 查询导播台信息接口，用来查询导播台状态、描述、输出长、宽等信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCasterRequest"/></param>
+        /// <returns><see cref="DescribeCasterResponse"/></returns>
+        public Task<DescribeCasterResponse> DescribeCaster(DescribeCasterRequest req)
+        {
+            return InternalRequestAsync<DescribeCasterResponse>(req, "DescribeCaster");
+        }
+
+        /// <summary>
+        /// 查询导播台信息接口，用来查询导播台状态、描述、输出长、宽等信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCasterRequest"/></param>
+        /// <returns><see cref="DescribeCasterResponse"/></returns>
+        public DescribeCasterResponse DescribeCasterSync(DescribeCasterRequest req)
+        {
+            return InternalRequestAsync<DescribeCasterResponse>(req, "DescribeCaster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询导播台PVW任务和PGM任务的展示信息，包括使用的布局、水印、字幕等信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCasterDisplayInfoRequest"/></param>
+        /// <returns><see cref="DescribeCasterDisplayInfoResponse"/></returns>
+        public Task<DescribeCasterDisplayInfoResponse> DescribeCasterDisplayInfo(DescribeCasterDisplayInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCasterDisplayInfoResponse>(req, "DescribeCasterDisplayInfo");
+        }
+
+        /// <summary>
+        /// 查询导播台PVW任务和PGM任务的展示信息，包括使用的布局、水印、字幕等信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCasterDisplayInfoRequest"/></param>
+        /// <returns><see cref="DescribeCasterDisplayInfoResponse"/></returns>
+        public DescribeCasterDisplayInfoResponse DescribeCasterDisplayInfoSync(DescribeCasterDisplayInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCasterDisplayInfoResponse>(req, "DescribeCasterDisplayInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口用来查询账号下所有的导播台列表
         /// </summary>
         /// <param name="req"><see cref="DescribeCasterListRequest"/></param>
@@ -1276,6 +1383,27 @@ namespace TencentCloud.Live.V20180801
         public DescribeCasterListResponse DescribeCasterListSync(DescribeCasterListRequest req)
         {
             return InternalRequestAsync<DescribeCasterListResponse>(req, "DescribeCasterList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来获取导播台视频流的播放url，用来在页面上拉流展示。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCasterPlayUrlRequest"/></param>
+        /// <returns><see cref="DescribeCasterPlayUrlResponse"/></returns>
+        public Task<DescribeCasterPlayUrlResponse> DescribeCasterPlayUrl(DescribeCasterPlayUrlRequest req)
+        {
+            return InternalRequestAsync<DescribeCasterPlayUrlResponse>(req, "DescribeCasterPlayUrl");
+        }
+
+        /// <summary>
+        /// 该接口用来获取导播台视频流的播放url，用来在页面上拉流展示。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCasterPlayUrlRequest"/></param>
+        /// <returns><see cref="DescribeCasterPlayUrlResponse"/></returns>
+        public DescribeCasterPlayUrlResponse DescribeCasterPlayUrlSync(DescribeCasterPlayUrlRequest req)
+        {
+            return InternalRequestAsync<DescribeCasterPlayUrlResponse>(req, "DescribeCasterPlayUrl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2279,6 +2407,27 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 支持直播时移写入量数据查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveTimeShiftWriteSizeInfoListRequest"/></param>
+        /// <returns><see cref="DescribeLiveTimeShiftWriteSizeInfoListResponse"/></returns>
+        public Task<DescribeLiveTimeShiftWriteSizeInfoListResponse> DescribeLiveTimeShiftWriteSizeInfoList(DescribeLiveTimeShiftWriteSizeInfoListRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveTimeShiftWriteSizeInfoListResponse>(req, "DescribeLiveTimeShiftWriteSizeInfoList");
+        }
+
+        /// <summary>
+        /// 支持直播时移写入量数据查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveTimeShiftWriteSizeInfoListRequest"/></param>
+        /// <returns><see cref="DescribeLiveTimeShiftWriteSizeInfoListResponse"/></returns>
+        public DescribeLiveTimeShiftWriteSizeInfoListResponse DescribeLiveTimeShiftWriteSizeInfoListSync(DescribeLiveTimeShiftWriteSizeInfoListRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveTimeShiftWriteSizeInfoListResponse>(req, "DescribeLiveTimeShiftWriteSizeInfoList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口为监控数据接口，数据采集及统计方式与计费数据不同，仅供运营分析使用，不能用于计费对账参考。
         /// 支持查询某天或某段时间的转码详细信息。由于转码数据量较大，如果查询时间跨度太长可能会拉不到数据，可以尝试将查询时间范围缩小些再重试。
         /// </summary>
@@ -3060,6 +3209,27 @@ namespace TencentCloud.Live.V20180801
         public ForbidLiveStreamResponse ForbidLiveStreamSync(ForbidLiveStreamRequest req)
         {
             return InternalRequestAsync<ForbidLiveStreamResponse>(req, "ForbidLiveStream")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来设置导播台的描述、名称、录制模板id等参数。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCasterRequest"/></param>
+        /// <returns><see cref="ModifyCasterResponse"/></returns>
+        public Task<ModifyCasterResponse> ModifyCaster(ModifyCasterRequest req)
+        {
+            return InternalRequestAsync<ModifyCasterResponse>(req, "ModifyCaster");
+        }
+
+        /// <summary>
+        /// 该接口用来设置导播台的描述、名称、录制模板id等参数。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCasterRequest"/></param>
+        /// <returns><see cref="ModifyCasterResponse"/></returns>
+        public ModifyCasterResponse ModifyCasterSync(ModifyCasterRequest req)
+        {
+            return InternalRequestAsync<ModifyCasterResponse>(req, "ModifyCaster")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

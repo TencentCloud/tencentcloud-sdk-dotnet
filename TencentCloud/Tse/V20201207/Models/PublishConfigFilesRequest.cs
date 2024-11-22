@@ -36,6 +36,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("ConfigFileReleases")]
         public ConfigFileRelease ConfigFileReleases{ get; set; }
 
+        /// <summary>
+        /// 控制开启校验配置版本是否已经存在
+        /// </summary>
+        [JsonProperty("StrictEnable")]
+        public bool? StrictEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tse.V20201207.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamObj(map, prefix + "ConfigFileReleases.", this.ConfigFileReleases);
+            this.SetParamSimple(map, prefix + "StrictEnable", this.StrictEnable);
         }
     }
 }

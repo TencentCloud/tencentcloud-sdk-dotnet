@@ -25,19 +25,19 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 子账号名称，如果要修改主账号，填root
+        /// 子账号名称，如果要修改主账号，填 root。
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// 子账号密码
+        /// 子账号密码。
         /// </summary>
         [JsonProperty("AccountPassword")]
         public string AccountPassword{ get; set; }
@@ -49,19 +49,26 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 路由策略：填写master或者replication，表示主节点或者从节点
+        /// 账号读写路由策略。
+        /// - master：表示主节点。
+        /// - replication：表示从节点。
         /// </summary>
         [JsonProperty("ReadonlyPolicy")]
         public string[] ReadonlyPolicy{ get; set; }
 
         /// <summary>
-        /// 子账号读写策略：填写r、w、rw，表示只读，只写，读写策略
+        /// 子账号读写策略。
+        /// - r：只读。
+        /// - w：只写。
+        /// - rw：读写。
         /// </summary>
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }
 
         /// <summary>
-        /// true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密。
+        /// 指定是否将主账号切换为免密账号。这里只适用于主账号，子账号不可免密。
+        /// - true：将主账号切换为免密账号。
+        /// - false：不切换。
         /// </summary>
         [JsonProperty("NoAuth")]
         public bool? NoAuth{ get; set; }

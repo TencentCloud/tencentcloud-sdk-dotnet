@@ -45,6 +45,13 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
+        /// <summary>
+        /// 使用指定任务 ID 查询任务信息。
+        /// 注意：仅供使用指定 ID 创建的任务查询。
+        /// </summary>
+        [JsonProperty("SpecifyTaskId")]
+        public string SpecifyTaskId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "SpecifyTaskId", this.SpecifyTaskId);
         }
     }
 }

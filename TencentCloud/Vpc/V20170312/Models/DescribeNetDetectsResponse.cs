@@ -26,14 +26,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// 符合条件的网络探测对象数组。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetDetectSet")]
         public NetDetect[] NetDetectSet{ get; set; }
 
         /// <summary>
         /// 符合条件的网络探测对象数量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

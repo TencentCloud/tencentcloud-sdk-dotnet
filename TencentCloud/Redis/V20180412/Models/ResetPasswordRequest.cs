@@ -25,19 +25,21 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Redis实例ID
+        /// 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 重置的密码（切换为免密实例时，可不传；其他情况必传）
+        /// 重置的密码。若切换为免密实例时，可不配置该参数。其他情况必须配置。
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// 是否切换免密实例，false-切换为非免密码实例，true-切换为免密码实例；默认false
+        /// 是否切换免密实例。
+        /// - false：切换为非免密码实例。
+        /// - true：切换为免密码实例。默认 false。
         /// </summary>
         [JsonProperty("NoAuth")]
         public bool? NoAuth{ get; set; }

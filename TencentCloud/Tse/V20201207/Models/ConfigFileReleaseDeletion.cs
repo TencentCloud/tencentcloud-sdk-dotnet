@@ -52,6 +52,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("ReleaseVersion")]
         public string ReleaseVersion{ get; set; }
 
+        /// <summary>
+        /// 配置发布ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Id")]
+        public ulong? Id{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "Group", this.Group);
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
             this.SetParamSimple(map, prefix + "ReleaseVersion", this.ReleaseVersion);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
         }
     }
 }

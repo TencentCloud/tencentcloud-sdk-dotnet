@@ -31,13 +31,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Product{ get; set; }
 
         /// <summary>
-        /// 安全组 ID。
+        /// 安全组 ID，请通过接口[DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447)的返回参数InstanceSecurityGroupsDetail 的子参数**SecurityGroupId**获取。
         /// </summary>
         [JsonProperty("SecurityGroupId")]
         public string SecurityGroupId{ get; set; }
 
         /// <summary>
-        /// 实例ID列表，一个或者多个实例 ID 组成的数组。
+        /// 实例ID列表，一个或者多个实例 ID 组成的数组。请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

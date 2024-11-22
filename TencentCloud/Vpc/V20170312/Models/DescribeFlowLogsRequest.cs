@@ -73,13 +73,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string CloudLogState{ get; set; }
 
         /// <summary>
-        /// 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime。
+        /// 按某个字段排序,支持字段：flowLogName,createTime，默认按CreatedTime。
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// 升序（asc）还是降序（desc）,默认：desc。
+        /// 升序（ASC）还是降序（DESC）,默认：DESC。
         /// </summary>
         [JsonProperty("OrderDirection")]
         public string OrderDirection{ get; set; }

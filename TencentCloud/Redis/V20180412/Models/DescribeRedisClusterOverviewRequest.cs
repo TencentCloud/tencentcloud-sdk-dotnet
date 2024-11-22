@@ -25,7 +25,8 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 本地专用集群id
+        /// 本地专用集群 ID，请登录[专用集群控制台](https://console.cloud.tencent.com/cdc/dedicatedcluster/index?rid=1
+        /// )实例列表获取集群 ID。
         /// </summary>
         [JsonProperty("DedicatedClusterId")]
         public string DedicatedClusterId{ get; set; }

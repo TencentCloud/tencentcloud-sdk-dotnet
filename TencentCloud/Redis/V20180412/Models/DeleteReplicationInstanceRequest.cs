@@ -25,19 +25,21 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 复制组ID
+        /// 复制组ID。请登录[Redis控制台的全球复制](https://console.cloud.tencent.com/redis/replication)页面获取复制组 ID。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 数据同步类型，true:需要数据强同步,false:不需要强同步，仅限删除主实例
+        /// 数据同步类型。
+        /// - true：需要数据强同步。
+        /// - false：不需要强同步，仅限删除主实例。
         /// </summary>
         [JsonProperty("SyncType")]
         public bool? SyncType{ get; set; }

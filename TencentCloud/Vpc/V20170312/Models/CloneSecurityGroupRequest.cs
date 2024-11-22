@@ -54,6 +54,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("RemoteRegion")]
         public string RemoteRegion{ get; set; }
 
+        /// <summary>
+        /// 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+        /// 若指定Tags入参且指定IsCloneTags为true，会合并源安全组的标签和新增的标签。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +72,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "GroupDescription", this.GroupDescription);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "RemoteRegion", this.RemoteRegion);
+            this.SetParamObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

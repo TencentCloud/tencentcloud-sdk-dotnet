@@ -48,6 +48,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
+        /// <summary>
+        /// 配置文件ID
+        /// </summary>
+        [JsonProperty("ConfigFileId")]
+        public string ConfigFileId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "Group", this.Group);
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
+            this.SetParamSimple(map, prefix + "ConfigFileId", this.ConfigFileId);
         }
     }
 }

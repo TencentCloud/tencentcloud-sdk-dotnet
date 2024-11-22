@@ -25,13 +25,15 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例输入模式，0：读写 1：只读
+        /// 实例输入模式。
+        /// - 0：读写。
+        /// - 1：只读。
         /// </summary>
         [JsonProperty("InputMode")]
         public string InputMode{ get; set; }

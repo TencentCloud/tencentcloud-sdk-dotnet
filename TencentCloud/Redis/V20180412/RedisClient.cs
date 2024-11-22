@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1126";
+       private const string sdkVersion = "SDK_NET_3.0.1127";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 添加复制组成员
+        /// 本接口（AddReplicationInstance）用于为全球复制组添加实例成员。
         /// </summary>
         /// <param name="req"><see cref="AddReplicationInstanceRequest"/></param>
         /// <returns><see cref="AddReplicationInstanceResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 添加复制组成员
+        /// 本接口（AddReplicationInstance）用于为全球复制组添加实例成员。
         /// </summary>
         /// <param name="req"><see cref="AddReplicationInstanceRequest"/></param>
         /// <returns><see cref="AddReplicationInstanceResponse"/></returns>
@@ -75,7 +75,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 开通外网
+        /// 本接口（AllocateWanAddress）用于开通实例外网访问。
         /// </summary>
         /// <param name="req"><see cref="AllocateWanAddressRequest"/></param>
         /// <returns><see cref="AllocateWanAddressResponse"/></returns>
@@ -85,7 +85,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 开通外网
+        /// 本接口（AllocateWanAddress）用于开通实例外网访问。
         /// </summary>
         /// <param name="req"><see cref="AllocateWanAddressRequest"/></param>
         /// <returns><see cref="AllocateWanAddressResponse"/></returns>
@@ -96,7 +96,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 应用参数模板到实例
+        /// 本接口（ApplyParamsTemplate）用于应用参数模板到实例。
         /// </summary>
         /// <param name="req"><see cref="ApplyParamsTemplateRequest"/></param>
         /// <returns><see cref="ApplyParamsTemplateResponse"/></returns>
@@ -106,7 +106,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 应用参数模板到实例
+        /// 本接口（ApplyParamsTemplate）用于应用参数模板到实例。
         /// </summary>
         /// <param name="req"><see cref="ApplyParamsTemplateRequest"/></param>
         /// <returns><see cref="ApplyParamsTemplateResponse"/></returns>
@@ -138,7 +138,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 复制组实例更换角色
+        /// 本接口（ChangeInstanceRole）用于更换复制组内实例的角色。
         /// </summary>
         /// <param name="req"><see cref="ChangeInstanceRoleRequest"/></param>
         /// <returns><see cref="ChangeInstanceRoleResponse"/></returns>
@@ -148,7 +148,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 复制组实例更换角色
+        /// 本接口（ChangeInstanceRole）用于更换复制组内实例的角色。
         /// </summary>
         /// <param name="req"><see cref="ChangeInstanceRoleRequest"/></param>
         /// <returns><see cref="ChangeInstanceRoleResponse"/></returns>
@@ -201,7 +201,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 回收站实例立即下线
+        /// 本接口（CleanUpInstance）用于立即下线回收站的实例。
         /// </summary>
         /// <param name="req"><see cref="CleanUpInstanceRequest"/></param>
         /// <returns><see cref="CleanUpInstanceResponse"/></returns>
@@ -211,7 +211,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 回收站实例立即下线
+        /// 本接口（CleanUpInstance）用于立即下线回收站的实例。
         /// </summary>
         /// <param name="req"><see cref="CleanUpInstanceRequest"/></param>
         /// <returns><see cref="CleanUpInstanceResponse"/></returns>
@@ -222,7 +222,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 清空Redis实例的实例数据。
+        /// 本接口（ClearInstance）用于清空实例数据。
         /// </summary>
         /// <param name="req"><see cref="ClearInstanceRequest"/></param>
         /// <returns><see cref="ClearInstanceResponse"/></returns>
@@ -232,7 +232,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 清空Redis实例的实例数据。
+        /// 本接口（ClearInstance）用于清空实例数据。
         /// </summary>
         /// <param name="req"><see cref="ClearInstanceRequest"/></param>
         /// <returns><see cref="ClearInstanceResponse"/></returns>
@@ -264,7 +264,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 关闭SSL
+        /// 本接口（CloseSSL）用于关闭SSL加密认证。
         /// </summary>
         /// <param name="req"><see cref="CloseSSLRequest"/></param>
         /// <returns><see cref="CloseSSLResponse"/></returns>
@@ -274,7 +274,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 关闭SSL
+        /// 本接口（CloseSSL）用于关闭SSL加密认证。
         /// </summary>
         /// <param name="req"><see cref="CloseSSLRequest"/></param>
         /// <returns><see cref="CloseSSLResponse"/></returns>
@@ -285,7 +285,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 该接口（CreateInstanceAccount）用于自定义访问实例的账号。
+        /// 本接口（CreateInstanceAccount）用于自定义访问实例的账号。
         /// </summary>
         /// <param name="req"><see cref="CreateInstanceAccountRequest"/></param>
         /// <returns><see cref="CreateInstanceAccountResponse"/></returns>
@@ -295,7 +295,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 该接口（CreateInstanceAccount）用于自定义访问实例的账号。
+        /// 本接口（CreateInstanceAccount）用于自定义访问实例的账号。
         /// </summary>
         /// <param name="req"><see cref="CreateInstanceAccountRequest"/></param>
         /// <returns><see cref="CreateInstanceAccountResponse"/></returns>
@@ -348,7 +348,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 该接口（CreateReplicationGroup）用于创建复制组。
+        /// 本接口（CreateReplicationGroup）用于创建复制组。
         /// </summary>
         /// <param name="req"><see cref="CreateReplicationGroupRequest"/></param>
         /// <returns><see cref="CreateReplicationGroupResponse"/></returns>
@@ -358,7 +358,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 该接口（CreateReplicationGroup）用于创建复制组。
+        /// 本接口（CreateReplicationGroup）用于创建复制组。
         /// </summary>
         /// <param name="req"><see cref="CreateReplicationGroupRequest"/></param>
         /// <returns><see cref="CreateReplicationGroupResponse"/></returns>
@@ -369,7 +369,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 删除实例子账号
+        /// 本接口（DeleteInstanceAccount）用于删除实例子账号。
         /// </summary>
         /// <param name="req"><see cref="DeleteInstanceAccountRequest"/></param>
         /// <returns><see cref="DeleteInstanceAccountResponse"/></returns>
@@ -379,7 +379,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 删除实例子账号
+        /// 本接口（DeleteInstanceAccount）用于删除实例子账号。
         /// </summary>
         /// <param name="req"><see cref="DeleteInstanceAccountRequest"/></param>
         /// <returns><see cref="DeleteInstanceAccountResponse"/></returns>
@@ -411,7 +411,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 移除复制组成员。注：该接口下线中，请使用 [RemoveReplicationInstance](https://cloud.tencent.com/document/product/239/90099)。
+        /// 本接口（DeleteReplicationInstance）移除复制组成员。注：该接口下线中，请使用 [RemoveReplicationInstance](https://cloud.tencent.com/document/product/239/90099)。
         /// </summary>
         /// <param name="req"><see cref="DeleteReplicationInstanceRequest"/></param>
         /// <returns><see cref="DeleteReplicationInstanceResponse"/></returns>
@@ -421,7 +421,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 移除复制组成员。注：该接口下线中，请使用 [RemoveReplicationInstance](https://cloud.tencent.com/document/product/239/90099)。
+        /// 本接口（DeleteReplicationInstance）移除复制组成员。注：该接口下线中，请使用 [RemoveReplicationInstance](https://cloud.tencent.com/document/product/239/90099)。
         /// </summary>
         /// <param name="req"><see cref="DeleteReplicationInstanceRequest"/></param>
         /// <returns><see cref="DeleteReplicationInstanceResponse"/></returns>
@@ -537,7 +537,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询Redis实例列表信息。该接口已废弃。
+        /// 本接口（DescribeCommonDBInstances）用于查询Redis实例列表信息。当前该接口已废弃。
         /// </summary>
         /// <param name="req"><see cref="DescribeCommonDBInstancesRequest"/></param>
         /// <returns><see cref="DescribeCommonDBInstancesResponse"/></returns>
@@ -547,7 +547,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询Redis实例列表信息。该接口已废弃。
+        /// 本接口（DescribeCommonDBInstances）用于查询Redis实例列表信息。当前该接口已废弃。
         /// </summary>
         /// <param name="req"><see cref="DescribeCommonDBInstancesRequest"/></param>
         /// <returns><see cref="DescribeCommonDBInstancesResponse"/></returns>
@@ -642,7 +642,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例DTS信息
+        /// 本接口（DescribeInstanceDTSInfo）用于查询实例 DTS 信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceDTSInfoRequest"/></param>
         /// <returns><see cref="DescribeInstanceDTSInfoResponse"/></returns>
@@ -652,7 +652,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例DTS信息
+        /// 本接口（DescribeInstanceDTSInfo）用于查询实例 DTS 信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceDTSInfoRequest"/></param>
         /// <returns><see cref="DescribeInstanceDTSInfoResponse"/></returns>
@@ -831,7 +831,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例访问的耗时分布
+        /// 本接口（DescribeInstanceMonitorTookDist）用于查询实例访问的耗时分布。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorTookDistRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorTookDistResponse"/></returns>
@@ -841,7 +841,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例访问的耗时分布
+        /// 本接口（DescribeInstanceMonitorTookDist）用于查询实例访问的耗时分布。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorTookDistRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorTookDistResponse"/></returns>
@@ -873,7 +873,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例CPU耗时
+        /// 本接口（DescribeInstanceMonitorTopNCmdTook）用于查询实例 CPU 耗时。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorTopNCmdTookRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorTopNCmdTookResponse"/></returns>
@@ -883,7 +883,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例CPU耗时
+        /// 本接口（DescribeInstanceMonitorTopNCmdTook）用于查询实例 CPU 耗时。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorTopNCmdTookRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorTopNCmdTookResponse"/></returns>
@@ -1167,7 +1167,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询项目安全组信息
+        /// 本接口（DescribeProjectSecurityGroup）用于查询项目安全组信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeProjectSecurityGroupRequest"/></param>
         /// <returns><see cref="DescribeProjectSecurityGroupResponse"/></returns>
@@ -1177,7 +1177,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询项目安全组信息
+        /// 本接口（DescribeProjectSecurityGroup）用于查询项目安全组信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeProjectSecurityGroupRequest"/></param>
         /// <returns><see cref="DescribeProjectSecurityGroupResponse"/></returns>
@@ -1188,7 +1188,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口(DescribeProjectSecurityGroups)用于查询项目的安全组详情。
+        /// 本接口（DescribeProjectSecurityGroups）用于查询项目的安全组详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeProjectSecurityGroupsRequest"/></param>
         /// <returns><see cref="DescribeProjectSecurityGroupsResponse"/></returns>
@@ -1198,7 +1198,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口(DescribeProjectSecurityGroups)用于查询项目的安全组详情。
+        /// 本接口（DescribeProjectSecurityGroups）用于查询项目的安全组详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeProjectSecurityGroupsRequest"/></param>
         /// <returns><see cref="DescribeProjectSecurityGroupsResponse"/></returns>
@@ -1230,7 +1230,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询Redis独享集群概览信息
+        /// 本接口（DescribeRedisClusterOverview）用于查询 Redis 独享集群概览信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeRedisClusterOverviewRequest"/></param>
         /// <returns><see cref="DescribeRedisClusterOverviewResponse"/></returns>
@@ -1240,7 +1240,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询Redis独享集群概览信息
+        /// 本接口（DescribeRedisClusterOverview）用于查询 Redis 独享集群概览信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeRedisClusterOverviewRequest"/></param>
         /// <returns><see cref="DescribeRedisClusterOverviewResponse"/></returns>
@@ -1251,7 +1251,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询Redis独享集群列表
+        /// 本接口（DescribeRedisClusters）用于查询Redis独享集群列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeRedisClustersRequest"/></param>
         /// <returns><see cref="DescribeRedisClustersResponse"/></returns>
@@ -1261,7 +1261,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询Redis独享集群列表
+        /// 本接口（DescribeRedisClusters）用于查询Redis独享集群列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeRedisClustersRequest"/></param>
         /// <returns><see cref="DescribeRedisClustersResponse"/></returns>
@@ -1293,7 +1293,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询复制组信息
+        /// 本接口（DescribeReplicationGroupInstance）用于查询复制组信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeReplicationGroupInstanceRequest"/></param>
         /// <returns><see cref="DescribeReplicationGroupInstanceResponse"/></returns>
@@ -1303,7 +1303,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询复制组信息
+        /// 本接口（DescribeReplicationGroupInstance）用于查询复制组信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeReplicationGroupInstanceRequest"/></param>
         /// <returns><see cref="DescribeReplicationGroupInstanceResponse"/></returns>
@@ -1402,7 +1402,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询Tendis慢查询
+        /// 本接口（DescribeTendisSlowLog）用于查询 Tendis 实例慢查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeTendisSlowLogRequest"/></param>
         /// <returns><see cref="DescribeTendisSlowLogResponse"/></returns>
@@ -1412,7 +1412,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询Tendis慢查询
+        /// 本接口（DescribeTendisSlowLog）用于查询 Tendis 实例慢查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeTendisSlowLogRequest"/></param>
         /// <returns><see cref="DescribeTendisSlowLogResponse"/></returns>
@@ -1423,7 +1423,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 按量计费实例销毁
+        /// 本接口（DestroyPostpaidInstance）用于销毁按量计费实例。
         /// </summary>
         /// <param name="req"><see cref="DestroyPostpaidInstanceRequest"/></param>
         /// <returns><see cref="DestroyPostpaidInstanceResponse"/></returns>
@@ -1433,7 +1433,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 按量计费实例销毁
+        /// 本接口（DestroyPostpaidInstance）用于销毁按量计费实例。
         /// </summary>
         /// <param name="req"><see cref="DestroyPostpaidInstanceRequest"/></param>
         /// <returns><see cref="DestroyPostpaidInstanceResponse"/></returns>
@@ -1444,7 +1444,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 包年包月实例退还
+        /// 本接口（DestroyPrepaidInstance）用于退还包年包月计费的 Redis 实例。
         /// </summary>
         /// <param name="req"><see cref="DestroyPrepaidInstanceRequest"/></param>
         /// <returns><see cref="DestroyPrepaidInstanceResponse"/></returns>
@@ -1454,7 +1454,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 包年包月实例退还
+        /// 本接口（DestroyPrepaidInstance）用于退还包年包月计费的 Redis 实例。
         /// </summary>
         /// <param name="req"><see cref="DestroyPrepaidInstanceRequest"/></param>
         /// <returns><see cref="DestroyPrepaidInstanceResponse"/></returns>
@@ -1465,7 +1465,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 禁用读写分离
+        /// 本接口（DisableReplicaReadonly）用于禁用读写分离功能。
         /// </summary>
         /// <param name="req"><see cref="DisableReplicaReadonlyRequest"/></param>
         /// <returns><see cref="DisableReplicaReadonlyResponse"/></returns>
@@ -1475,7 +1475,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 禁用读写分离
+        /// 本接口（DisableReplicaReadonly）用于禁用读写分离功能。
         /// </summary>
         /// <param name="req"><see cref="DisableReplicaReadonlyRequest"/></param>
         /// <returns><see cref="DisableReplicaReadonlyResponse"/></returns>
@@ -1486,7 +1486,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口(DisassociateSecurityGroups)用于安全组批量解绑实例。
+        /// 本接口（DisassociateSecurityGroups）用于安全组批量解绑实例。
         /// </summary>
         /// <param name="req"><see cref="DisassociateSecurityGroupsRequest"/></param>
         /// <returns><see cref="DisassociateSecurityGroupsResponse"/></returns>
@@ -1496,7 +1496,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口(DisassociateSecurityGroups)用于安全组批量解绑实例。
+        /// 本接口（DisassociateSecurityGroups）用于安全组批量解绑实例。
         /// </summary>
         /// <param name="req"><see cref="DisassociateSecurityGroupsRequest"/></param>
         /// <returns><see cref="DisassociateSecurityGroupsResponse"/></returns>
@@ -1507,7 +1507,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 启用读写分离
+        /// 本接口（EnableReplicaReadonly）用于启用读写分离功能。
         /// </summary>
         /// <param name="req"><see cref="EnableReplicaReadonlyRequest"/></param>
         /// <returns><see cref="EnableReplicaReadonlyResponse"/></returns>
@@ -1517,7 +1517,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 启用读写分离
+        /// 本接口（EnableReplicaReadonly）用于启用读写分离功能。
         /// </summary>
         /// <param name="req"><see cref="EnableReplicaReadonlyRequest"/></param>
         /// <returns><see cref="EnableReplicaReadonlyResponse"/></returns>
@@ -1528,7 +1528,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询新购实例价格
+        /// 本接口（InquiryPriceCreateInstance）用于查询新购实例价格。
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceCreateInstanceRequest"/></param>
         /// <returns><see cref="InquiryPriceCreateInstanceResponse"/></returns>
@@ -1538,7 +1538,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询新购实例价格
+        /// 本接口（InquiryPriceCreateInstance）用于查询新购实例价格。
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceCreateInstanceRequest"/></param>
         /// <returns><see cref="InquiryPriceCreateInstanceResponse"/></returns>
@@ -1570,7 +1570,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例扩容价格
+        /// 本接口（InquiryPriceUpgradeInstance）用于查询实例扩容价格。
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceUpgradeInstanceRequest"/></param>
         /// <returns><see cref="InquiryPriceUpgradeInstanceResponse"/></returns>
@@ -1580,7 +1580,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例扩容价格
+        /// 本接口（InquiryPriceUpgradeInstance）用于查询实例扩容价格。
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceUpgradeInstanceRequest"/></param>
         /// <returns><see cref="InquiryPriceUpgradeInstanceResponse"/></returns>
@@ -1591,7 +1591,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口（KillMasterGroup）模拟故障。
+        /// 本接口（KillMasterGroup）用于模拟故障。
         /// </summary>
         /// <param name="req"><see cref="KillMasterGroupRequest"/></param>
         /// <returns><see cref="KillMasterGroupResponse"/></returns>
@@ -1601,7 +1601,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口（KillMasterGroup）模拟故障。
+        /// 本接口（KillMasterGroup）用于模拟故障。
         /// </summary>
         /// <param name="req"><see cref="KillMasterGroupRequest"/></param>
         /// <returns><see cref="KillMasterGroupResponse"/></returns>
@@ -1696,7 +1696,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 修改实例的连接配置，包括带宽和最大连接数。
+        /// 本接口（ModifyConnectionConfig）用于修改实例的连接配置，包括带宽和最大连接数。
         /// </summary>
         /// <param name="req"><see cref="ModifyConnectionConfigRequest"/></param>
         /// <returns><see cref="ModifyConnectionConfigResponse"/></returns>
@@ -1706,7 +1706,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 修改实例的连接配置，包括带宽和最大连接数。
+        /// 本接口（ModifyConnectionConfig）用于修改实例的连接配置，包括带宽和最大连接数。
         /// </summary>
         /// <param name="req"><see cref="ModifyConnectionConfigRequest"/></param>
         /// <returns><see cref="ModifyConnectionConfigResponse"/></returns>
@@ -1738,7 +1738,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 修改实例相关信息
+        /// 本接口（ModifyInstance）用于修改实例相关信息。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceRequest"/></param>
         /// <returns><see cref="ModifyInstanceResponse"/></returns>
@@ -1748,7 +1748,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 修改实例相关信息
+        /// 本接口（ModifyInstance）用于修改实例相关信息。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceRequest"/></param>
         /// <returns><see cref="ModifyInstanceResponse"/></returns>
@@ -1759,7 +1759,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 修改实例子账号
+        /// 本接口（ModifyInstanceAccount）用于修改实例子账号。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceAccountRequest"/></param>
         /// <returns><see cref="ModifyInstanceAccountResponse"/></returns>
@@ -1769,7 +1769,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 修改实例子账号
+        /// 本接口（ModifyInstanceAccount）用于修改实例子账号。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceAccountRequest"/></param>
         /// <returns><see cref="ModifyInstanceAccountResponse"/></returns>
@@ -1843,7 +1843,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口(ModifyInstanceParams)用于修改Redis实例的参数配置。
+        /// 本接口（ModifyInstanceParams）用于修改 Redis 实例的参数配置。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceParamsRequest"/></param>
         /// <returns><see cref="ModifyInstanceParamsResponse"/></returns>
@@ -1853,7 +1853,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口(ModifyInstanceParams)用于修改Redis实例的参数配置。
+        /// 本接口（ModifyInstanceParams）用于修改 Redis 实例的参数配置。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceParamsRequest"/></param>
         /// <returns><see cref="ModifyInstanceParamsResponse"/></returns>
@@ -1885,7 +1885,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 设置实例输入模式
+        /// 本接口（ModifyInstanceReadOnly）用于设置实例输入模式。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceReadOnlyRequest"/></param>
         /// <returns><see cref="ModifyInstanceReadOnlyResponse"/></returns>
@@ -1895,7 +1895,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 设置实例输入模式
+        /// 本接口（ModifyInstanceReadOnly）用于设置实例输入模式。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceReadOnlyRequest"/></param>
         /// <returns><see cref="ModifyInstanceReadOnlyResponse"/></returns>
@@ -1906,7 +1906,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 修改实例维护时间窗时间，需要进行版本升级或者架构升级的实例，会在维护时间窗内进行时间切换。注意：已经发起版本升级或者架构升级的实例，无法修改维护时间窗。
+        /// 本接口（ModifyMaintenanceWindow）用于修改实例维护时间窗时间，需要进行版本升级或者架构升级的实例，会在维护时间窗内进行时间切换。注意：已经发起版本升级或者架构升级的实例，无法修改维护时间窗。
         /// </summary>
         /// <param name="req"><see cref="ModifyMaintenanceWindowRequest"/></param>
         /// <returns><see cref="ModifyMaintenanceWindowResponse"/></returns>
@@ -1916,7 +1916,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 修改实例维护时间窗时间，需要进行版本升级或者架构升级的实例，会在维护时间窗内进行时间切换。注意：已经发起版本升级或者架构升级的实例，无法修改维护时间窗。
+        /// 本接口（ModifyMaintenanceWindow）用于修改实例维护时间窗时间，需要进行版本升级或者架构升级的实例，会在维护时间窗内进行时间切换。注意：已经发起版本升级或者架构升级的实例，无法修改维护时间窗。
         /// </summary>
         /// <param name="req"><see cref="ModifyMaintenanceWindowRequest"/></param>
         /// <returns><see cref="ModifyMaintenanceWindowResponse"/></returns>
@@ -1948,7 +1948,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 修改参数模板
+        /// 本接口（ModifyParamTemplate）用于修改参数模板。
         /// </summary>
         /// <param name="req"><see cref="ModifyParamTemplateRequest"/></param>
         /// <returns><see cref="ModifyParamTemplateResponse"/></returns>
@@ -1958,7 +1958,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 修改参数模板
+        /// 本接口（ModifyParamTemplate）用于修改参数模板。
         /// </summary>
         /// <param name="req"><see cref="ModifyParamTemplateRequest"/></param>
         /// <returns><see cref="ModifyParamTemplateResponse"/></returns>
@@ -1990,7 +1990,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 开启SSL
+        /// 本接口（OpenSSL）用于开启 SSL 加密认证功能。
         /// </summary>
         /// <param name="req"><see cref="OpenSSLRequest"/></param>
         /// <returns><see cref="OpenSSLResponse"/></returns>
@@ -2000,7 +2000,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 开启SSL
+        /// 本接口（OpenSSL）用于开启 SSL 加密认证功能。
         /// </summary>
         /// <param name="req"><see cref="OpenSSLRequest"/></param>
         /// <returns><see cref="OpenSSLResponse"/></returns>
@@ -2011,7 +2011,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 关闭外网
+        /// 本接口（ReleaseWanAddress）用于关闭外网访问。
         /// </summary>
         /// <param name="req"><see cref="ReleaseWanAddressRequest"/></param>
         /// <returns><see cref="ReleaseWanAddressResponse"/></returns>
@@ -2021,7 +2021,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 关闭外网
+        /// 本接口（ReleaseWanAddress）用于关闭外网访问。
         /// </summary>
         /// <param name="req"><see cref="ReleaseWanAddressRequest"/></param>
         /// <returns><see cref="ReleaseWanAddressResponse"/></returns>
@@ -2032,7 +2032,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 移除复制组成员
+        /// 本接口（RemoveReplicationInstance）用于移除复制组中的实例。
         /// </summary>
         /// <param name="req"><see cref="RemoveReplicationInstanceRequest"/></param>
         /// <returns><see cref="RemoveReplicationInstanceResponse"/></returns>
@@ -2042,7 +2042,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 移除复制组成员
+        /// 本接口（RemoveReplicationInstance）用于移除复制组中的实例。
         /// </summary>
         /// <param name="req"><see cref="RemoveReplicationInstanceRequest"/></param>
         /// <returns><see cref="RemoveReplicationInstanceResponse"/></returns>
@@ -2074,7 +2074,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 重置密码
+        /// 本接口（ResetPassword）用于重置实例访问密码。
         /// </summary>
         /// <param name="req"><see cref="ResetPasswordRequest"/></param>
         /// <returns><see cref="ResetPasswordResponse"/></returns>
@@ -2084,7 +2084,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 重置密码
+        /// 本接口（ResetPassword）用于重置实例访问密码。
         /// </summary>
         /// <param name="req"><see cref="ResetPasswordRequest"/></param>
         /// <returns><see cref="ResetPasswordResponse"/></returns>
@@ -2116,7 +2116,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 实例解隔离
+        /// 本接口（StartupInstance）用于实例解隔离。
         /// </summary>
         /// <param name="req"><see cref="StartupInstanceRequest"/></param>
         /// <returns><see cref="StartupInstanceResponse"/></returns>
@@ -2126,7 +2126,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 实例解隔离
+        /// 本接口（StartupInstance）用于实例解隔离。
         /// </summary>
         /// <param name="req"><see cref="StartupInstanceRequest"/></param>
         /// <returns><see cref="StartupInstanceResponse"/></returns>
@@ -2158,7 +2158,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 在通过DTS支持跨可用区灾备的场景中，通过该接口交换实例VIP完成实例灾备切换。交换VIP后目标实例可写，源和目标实例VIP互换，同时源与目标实例间DTS同步任务断开
+        /// 在通过 DTS 支持跨可用区灾备的场景中，通过该接口（SwitchInstanceVip）交换实例 VIP 完成实例灾备切换。交换 VIP 后目标实例可写，源和目标实例VIP互换，同时源与目标实例间 DTS 同步任务断开。
         /// </summary>
         /// <param name="req"><see cref="SwitchInstanceVipRequest"/></param>
         /// <returns><see cref="SwitchInstanceVipResponse"/></returns>
@@ -2168,7 +2168,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 在通过DTS支持跨可用区灾备的场景中，通过该接口交换实例VIP完成实例灾备切换。交换VIP后目标实例可写，源和目标实例VIP互换，同时源与目标实例间DTS同步任务断开
+        /// 在通过 DTS 支持跨可用区灾备的场景中，通过该接口（SwitchInstanceVip）交换实例 VIP 完成实例灾备切换。交换 VIP 后目标实例可写，源和目标实例VIP互换，同时源与目标实例间 DTS 同步任务断开。
         /// </summary>
         /// <param name="req"><see cref="SwitchInstanceVipRequest"/></param>
         /// <returns><see cref="SwitchInstanceVipResponse"/></returns>
@@ -2179,7 +2179,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// Proxy模拟故障接口
+        /// 本接口（SwitchProxy）为 Proxy 模拟故障接口。
         /// </summary>
         /// <param name="req"><see cref="SwitchProxyRequest"/></param>
         /// <returns><see cref="SwitchProxyResponse"/></returns>
@@ -2189,7 +2189,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// Proxy模拟故障接口
+        /// 本接口（SwitchProxy）为 Proxy 模拟故障接口。
         /// </summary>
         /// <param name="req"><see cref="SwitchProxyRequest"/></param>
         /// <returns><see cref="SwitchProxyResponse"/></returns>
@@ -2221,7 +2221,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 将当前实例升级到更高版本，或者将当前标准架构升级至集群架构。
+        /// 本接口（UpgradeInstanceVersion）用于将当前实例升级到更高版本，或者将当前标准架构升级至集群架构。
         /// </summary>
         /// <param name="req"><see cref="UpgradeInstanceVersionRequest"/></param>
         /// <returns><see cref="UpgradeInstanceVersionResponse"/></returns>
@@ -2231,7 +2231,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 将当前实例升级到更高版本，或者将当前标准架构升级至集群架构。
+        /// 本接口（UpgradeInstanceVersion）用于将当前实例升级到更高版本，或者将当前标准架构升级至集群架构。
         /// </summary>
         /// <param name="req"><see cref="UpgradeInstanceVersionRequest"/></param>
         /// <returns><see cref="UpgradeInstanceVersionResponse"/></returns>
@@ -2242,7 +2242,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 实例proxy版本升级
+        /// 本接口（UpgradeProxyVersion）用于升级实例 Proxy 版本。
         /// </summary>
         /// <param name="req"><see cref="UpgradeProxyVersionRequest"/></param>
         /// <returns><see cref="UpgradeProxyVersionResponse"/></returns>
@@ -2252,7 +2252,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 实例proxy版本升级
+        /// 本接口（UpgradeProxyVersion）用于升级实例 Proxy 版本。
         /// </summary>
         /// <param name="req"><see cref="UpgradeProxyVersionRequest"/></param>
         /// <returns><see cref="UpgradeProxyVersionResponse"/></returns>
@@ -2263,7 +2263,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 实例小版本升级
+        /// 本接口（UpgradeSmallVersion）用于实例小版本升级。
         /// </summary>
         /// <param name="req"><see cref="UpgradeSmallVersionRequest"/></param>
         /// <returns><see cref="UpgradeSmallVersionResponse"/></returns>
@@ -2273,7 +2273,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 实例小版本升级
+        /// 本接口（UpgradeSmallVersion）用于实例小版本升级。
         /// </summary>
         /// <param name="req"><see cref="UpgradeSmallVersionRequest"/></param>
         /// <returns><see cref="UpgradeSmallVersionResponse"/></returns>
@@ -2284,7 +2284,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 升级实例支持多AZ
+        /// 本接口（UpgradeVersionToMultiAvailabilityZones）用于升级实例支持多AZ。
         /// </summary>
         /// <param name="req"><see cref="UpgradeVersionToMultiAvailabilityZonesRequest"/></param>
         /// <returns><see cref="UpgradeVersionToMultiAvailabilityZonesResponse"/></returns>
@@ -2294,7 +2294,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 升级实例支持多AZ
+        /// 本接口（UpgradeVersionToMultiAvailabilityZones）用于升级实例支持多AZ。
         /// </summary>
         /// <param name="req"><see cref="UpgradeVersionToMultiAvailabilityZonesRequest"/></param>
         /// <returns><see cref="UpgradeVersionToMultiAvailabilityZonesResponse"/></returns>

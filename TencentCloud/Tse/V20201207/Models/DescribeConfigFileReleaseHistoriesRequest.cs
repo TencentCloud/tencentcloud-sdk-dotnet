@@ -55,6 +55,12 @@ namespace TencentCloud.Tse.V20201207.Models
         public ulong? EndId{ get; set; }
 
         /// <summary>
+        /// 配置文件ID
+        /// </summary>
+        [JsonProperty("ConfigFileId")]
+        public string ConfigFileId{ get; set; }
+
+        /// <summary>
         /// 返回数量，默认为20，最大值为100。	
         /// </summary>
         [JsonProperty("Limit")]
@@ -77,6 +83,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "Group", this.Group);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "EndId", this.EndId);
+            this.SetParamSimple(map, prefix + "ConfigFileId", this.ConfigFileId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }

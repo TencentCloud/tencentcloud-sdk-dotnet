@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 指定复制组中的主实例ID。
+        /// 指定复制组中的主实例ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 复制组名称。名称只支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
+        /// 配置复制组名称。仅支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }

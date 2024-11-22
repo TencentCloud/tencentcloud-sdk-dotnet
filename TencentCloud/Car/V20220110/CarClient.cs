@@ -28,7 +28,7 @@ namespace TencentCloud.Car.V20220110
 
        private const string endpoint = "car.tencentcloudapi.com";
        private const string version = "2022-01-10";
-       private const string sdkVersion = "SDK_NET_3.0.1126";
+       private const string sdkVersion = "SDK_NET_3.0.1127";
 
         /// <summary>
         /// Client constructor.

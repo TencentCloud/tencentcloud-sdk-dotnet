@@ -26,28 +26,28 @@ namespace TencentCloud.Iai.V20180301.Models
         
         /// <summary>
         /// 人脸框左上角横坐标。 
-        /// 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-        /// 若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
+        /// - 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
+        /// - 若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
         /// </summary>
         [JsonProperty("X")]
         public long? X{ get; set; }
 
         /// <summary>
         /// 人脸框左上角纵坐标。 
-        /// 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-        /// 若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
+        /// - 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
+        /// - 若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
         /// </summary>
         [JsonProperty("Y")]
         public long? Y{ get; set; }
 
         /// <summary>
-        /// 人脸宽度
+        /// 人脸宽度。
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// 人脸高度
+        /// 人脸高度。
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }

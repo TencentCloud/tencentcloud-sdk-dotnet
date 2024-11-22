@@ -136,6 +136,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
+        /// <summary>
+        /// 配置文件ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConfigFileId")]
+        public string ConfigFileId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +165,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "ReleaseDescription", this.ReleaseDescription);
             this.SetParamSimple(map, prefix + "Active", this.Active);
             this.SetParamSimple(map, prefix + "Format", this.Format);
+            this.SetParamSimple(map, prefix + "ConfigFileId", this.ConfigFileId);
         }
     }
 }

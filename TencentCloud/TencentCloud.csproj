@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1126</VersionPrefix>
+    <VersionPrefix>3.0.1127</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -162,6 +162,7 @@
     <Compile Include="Hcm\**\*.cs" />
     <Compile Include="Hunyuan\**\*.cs" />
     <Compile Include="Iai\**\*.cs" />
+    <Compile Include="Iap\**\*.cs" />
     <Compile Include="Ic\**\*.cs" />
     <Compile Include="Icr\**\*.cs" />
     <Compile Include="Ie\**\*.cs" />

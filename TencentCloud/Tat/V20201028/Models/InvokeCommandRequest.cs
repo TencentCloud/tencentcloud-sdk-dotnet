@@ -37,7 +37,7 @@ namespace TencentCloud.Tat.V20201028.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Command 的自定义参数。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+        /// Command 的自定义参数。字段类型为json encoded string。如：{"varA": "222"}。
         /// key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
         /// 如果未提供该参数取值，将使用 Command 的 DefaultParameters 进行替换。
         /// 自定义参数最多20个。

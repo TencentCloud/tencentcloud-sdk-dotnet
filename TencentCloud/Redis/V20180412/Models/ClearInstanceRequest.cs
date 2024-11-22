@@ -25,13 +25,15 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// redis的实例密码（免密实例不需要传密码，非免密实例必传）
+        /// 实例访问密码。
+        /// - 免密访问：无需配置。
+        /// - 密码认证：必须配置。字符个数为[8,64]，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种，不能以"/"开头。
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Product{ get; set; }
 
         /// <summary>
-        /// 项目 ID。
+        /// 项目 ID，请登录[Redis控制台的项目管理](https://console.cloud.tencent.com/project)页面，在**项目名称**中复制项目 ID。
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }

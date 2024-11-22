@@ -124,6 +124,18 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("FlowBatchUrlInfo")]
         public FlowBatchUrlInfo FlowBatchUrlInfo{ get; set; }
 
+        /// <summary>
+        /// 签署完成后是否自动回跳
+        /// <ul><li>false：否, 签署完成不会自动跳转回来(默认)</li><li>true：是, 签署完成会自动跳转回来</li></ul>
+        /// 
+        /// 注: 
+        /// 1. 该参数<font color="red">只针对APP类型（电子签小程序跳转贵方小程序）场景</font> 的签署链接有效
+        /// 2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
+        /// 3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必需用户手动点击完成按钮（微信的限制）</font> 
+        /// </summary>
+        [JsonProperty("AutoJumpBack")]
+        public bool? AutoJumpBack{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -141,6 +153,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
             this.SetParamSimple(map, prefix + "JumpToDetail", this.JumpToDetail);
             this.SetParamObj(map, prefix + "FlowBatchUrlInfo.", this.FlowBatchUrlInfo);
+            this.SetParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
         }
     }
 }

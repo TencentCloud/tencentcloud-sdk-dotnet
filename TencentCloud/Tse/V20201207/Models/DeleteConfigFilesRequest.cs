@@ -48,6 +48,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
+        /// <summary>
+        /// 配置文件Id
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "Group", this.Group);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
         }
     }
 }

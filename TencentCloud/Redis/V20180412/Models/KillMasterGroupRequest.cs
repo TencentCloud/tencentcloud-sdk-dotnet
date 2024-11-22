@@ -40,7 +40,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// 分片集群的分片 ID。
+        /// 分片集群的分片 ID。请通过接口[DescribeInstanceNodeInfo](https://cloud.tencent.com/document/product/239/48603) 的返回参数 **Redis** 中的 **ClusterId** 获取。
         /// </summary>
         [JsonProperty("ShardIds")]
         public long?[] ShardIds{ get; set; }

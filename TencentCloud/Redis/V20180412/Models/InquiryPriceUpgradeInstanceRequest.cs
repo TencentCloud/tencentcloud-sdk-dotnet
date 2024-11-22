@@ -25,25 +25,25 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例Id
+        /// 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 分片大小 单位 MB
+        /// 分片大小，单位：MB。
         /// </summary>
         [JsonProperty("MemSize")]
         public ulong? MemSize{ get; set; }
 
         /// <summary>
-        /// 分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+        /// 分片数量，Redis 2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
         /// </summary>
         [JsonProperty("RedisShardNum")]
         public ulong? RedisShardNum{ get; set; }
 
         /// <summary>
-        /// 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+        /// 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
         /// </summary>
         [JsonProperty("RedisReplicasNum")]
         public ulong? RedisReplicasNum{ get; set; }

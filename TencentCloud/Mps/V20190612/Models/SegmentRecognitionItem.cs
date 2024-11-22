@@ -50,6 +50,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string SegmentUrl{ get; set; }
 
         /// <summary>
+        /// 拆条片段封面。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CovImgUrl")]
+        public string CovImgUrl{ get; set; }
+
+        /// <summary>
         /// 分段标题。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -62,6 +69,12 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         [JsonProperty("Summary")]
         public string Summary{ get; set; }
+
+        /// <summary>
+        /// 分段关键词。
+        /// </summary>
+        [JsonProperty("Keywords")]
+        public string[] Keywords{ get; set; }
 
         /// <summary>
         /// 直播切片对应直播起始时间点，采用 ISO 日期格式。
@@ -87,8 +100,10 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
             this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
             this.SetParamSimple(map, prefix + "SegmentUrl", this.SegmentUrl);
+            this.SetParamSimple(map, prefix + "CovImgUrl", this.CovImgUrl);
             this.SetParamSimple(map, prefix + "Title", this.Title);
             this.SetParamSimple(map, prefix + "Summary", this.Summary);
+            this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
             this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }

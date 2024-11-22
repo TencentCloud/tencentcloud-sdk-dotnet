@@ -69,7 +69,7 @@ namespace TencentCloud.Tat.V20201028.Models
         public bool? EnableParameter{ get; set; }
 
         /// <summary>
-        /// 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+        /// 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
         /// key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
         /// 如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
         /// 自定义参数最多20个。

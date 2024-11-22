@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例 ID。
+        /// 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 自定义访问数据库的名称。
+        /// 自定义的访问数据库的账号名称。
         /// - 仅由字母、数字、下划线、中划线组成。
         /// - 长度不能大于32位。
         /// </summary>

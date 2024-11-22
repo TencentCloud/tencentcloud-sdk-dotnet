@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1126</VersionPrefix>
+    <VersionPrefix>3.0.1127</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -212,6 +212,8 @@
     <Compile Include="V20170312\Models\CreatePrivateNatGatewayTranslationAclRuleResponse.cs" />
     <Compile Include="V20170312\Models\CreatePrivateNatGatewayTranslationNatRuleRequest.cs" />
     <Compile Include="V20170312\Models\CreatePrivateNatGatewayTranslationNatRuleResponse.cs" />
+    <Compile Include="V20170312\Models\CreateReserveIpAddressesRequest.cs" />
+    <Compile Include="V20170312\Models\CreateReserveIpAddressesResponse.cs" />
     <Compile Include="V20170312\Models\CreateRouteTableRequest.cs" />
     <Compile Include="V20170312\Models\CreateRouteTableResponse.cs" />
     <Compile Include="V20170312\Models\CreateRoutesRequest.cs" />
@@ -321,6 +323,8 @@
     <Compile Include="V20170312\Models\DeletePrivateNatGatewayTranslationAclRuleResponse.cs" />
     <Compile Include="V20170312\Models\DeletePrivateNatGatewayTranslationNatRuleRequest.cs" />
     <Compile Include="V20170312\Models\DeletePrivateNatGatewayTranslationNatRuleResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteReserveIpAddressesRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteReserveIpAddressesResponse.cs" />
     <Compile Include="V20170312\Models\DeleteRouteTableRequest.cs" />
     <Compile Include="V20170312\Models\DeleteRouteTableResponse.cs" />
     <Compile Include="V20170312\Models\DeleteRoutesRequest.cs" />
@@ -481,6 +485,8 @@
     <Compile Include="V20170312\Models\DescribePrivateNatGatewaysResponse.cs" />
     <Compile Include="V20170312\Models\DescribeProductQuotaRequest.cs" />
     <Compile Include="V20170312\Models\DescribeProductQuotaResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeReserveIpAddressesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeReserveIpAddressesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeRouteConflictsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeRouteConflictsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeRouteTableAssociatedInstancesRequest.cs" />
@@ -762,6 +768,8 @@
     <Compile Include="V20170312\Models\ModifyPrivateNatGatewayTranslationAclRuleResponse.cs" />
     <Compile Include="V20170312\Models\ModifyPrivateNatGatewayTranslationNatRuleRequest.cs" />
     <Compile Include="V20170312\Models\ModifyPrivateNatGatewayTranslationNatRuleResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyReserveIpAddressRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyReserveIpAddressResponse.cs" />
     <Compile Include="V20170312\Models\ModifyRouteTableAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyRouteTableAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyRouteTableInfo.cs" />
@@ -867,6 +875,7 @@
     <Compile Include="V20170312\Models\ReplaceSecurityGroupPoliciesResponse.cs" />
     <Compile Include="V20170312\Models\ReplaceSecurityGroupPolicyRequest.cs" />
     <Compile Include="V20170312\Models\ReplaceSecurityGroupPolicyResponse.cs" />
+    <Compile Include="V20170312\Models\ReserveIpAddressInfo.cs" />
     <Compile Include="V20170312\Models\ResetAttachCcnInstancesRequest.cs" />
     <Compile Include="V20170312\Models\ResetAttachCcnInstancesResponse.cs" />
     <Compile Include="V20170312\Models\ResetHighPriorityRoutesRequest.cs" />

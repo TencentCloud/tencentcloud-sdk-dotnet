@@ -26,14 +26,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// 占用ip地址的资源信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpAddressStates")]
         public IpAddressStates[] IpAddressStates{ get; set; }
 
         /// <summary>
         /// 返回占用资源的个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

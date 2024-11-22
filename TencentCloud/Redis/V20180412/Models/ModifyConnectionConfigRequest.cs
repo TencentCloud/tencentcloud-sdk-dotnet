@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例的ID，长度在12-36之间。
+        /// 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -38,8 +38,8 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// 单分片的总连接数。
-        /// 未开启副本只读时，下限为10000，上限为40000；
-        /// 开启副本只读时，下限为10000，上限为10000×(只读副本数+3)。
+        /// - 未开启副本只读时，下限为10000，上限为40000。
+        /// - 开启副本只读时，下限为10000，上限为10000×(只读副本数+3)。
         /// </summary>
         [JsonProperty("ClientLimit")]
         public long? ClientLimit{ get; set; }

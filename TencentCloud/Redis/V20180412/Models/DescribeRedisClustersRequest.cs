@@ -25,43 +25,50 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Redis独享集群id
+        /// Redis独享集群 ID。请登录[专用集群控制台](https://console.cloud.tencent.com/cdc/dedicatedcluster/index?rid=1
+        /// )切换至**云服务管理**页面，在下拉框选择**云数据库 Redis**，可获取独享集群ID。
         /// </summary>
         [JsonProperty("RedisClusterIds")]
         public string[] RedisClusterIds{ get; set; }
 
         /// <summary>
-        /// 集群状态：1-流程中，2-运行中，3-已隔离
+        /// 集群状态。
+        /// - 1：流程。
+        /// - 2：运行中。
+        /// - 3：已隔离。
         /// </summary>
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }
 
         /// <summary>
-        /// 项目ID数组
+        /// 项目ID数组。请登录[项目管理](https://console.cloud.tencent.com/project)页面，在**项目名称**中复制项目 ID。
         /// </summary>
         [JsonProperty("ProjectIds")]
         public long?[] ProjectIds{ get; set; }
 
         /// <summary>
-        /// 续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+        /// 续费模式。
+        /// - 0：默认状态，手动续费。
+        /// - 1：自动续费。
+        /// - 2：明确不自动续费。
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long?[] AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// Redis独享集群名称
+        /// Redis 独享集群名称。
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 搜索关键词：支持集群Id、集群名称
+        /// 搜索关键词：支持集群 ID、集群名称。
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
 
         /// <summary>
-        /// 分页限制返回大小，不传则默认为20
+        /// 分页限制返回大小，不传则默认为20。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -73,7 +80,8 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 本地专用集群id
+        /// 本地专用集群 ID，请登录[专用集群控制台](https://console.cloud.tencent.com/cdc/dedicatedcluster/index?rid=1
+        /// )实例列表获取集群 ID。
         /// </summary>
         [JsonProperty("DedicatedClusterId")]
         public string DedicatedClusterId{ get; set; }

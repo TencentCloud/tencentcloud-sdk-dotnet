@@ -85,6 +85,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("OrderDesc")]
         public string OrderDesc{ get; set; }
 
+        /// <summary>
+        /// 配置发布ID
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +107,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "ReleaseName", this.ReleaseName);
             this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
             this.SetParamSimple(map, prefix + "OrderDesc", this.OrderDesc);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
         }
     }
 }

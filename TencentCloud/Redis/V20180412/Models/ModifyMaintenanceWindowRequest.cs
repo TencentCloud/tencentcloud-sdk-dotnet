@@ -25,19 +25,19 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 维护时间窗起始时间，如：17:00
+        /// 维护时间窗起始时间，如：17:00。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 维护时间窗结束时间，如：19:00
+        /// 维护时间窗结束时间，如：19:00。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

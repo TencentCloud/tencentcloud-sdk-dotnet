@@ -43,7 +43,7 @@ namespace TencentCloud.Tse.V20201207.Models
         public string Group{ get; set; }
 
         /// <summary>
-        /// 名称
+        /// 配置文件名称
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -66,6 +66,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
+        /// <summary>
+        /// 配置文件ID
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
         }
     }
 }

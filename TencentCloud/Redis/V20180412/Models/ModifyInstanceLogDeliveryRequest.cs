@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例ID。
+        /// 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -45,13 +45,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public bool? Enabled{ get; set; }
 
         /// <summary>
-        /// 投递的日志集ID。
+        /// 投递的日志集ID。通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **LogsetId** 获取。
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// 投递的日志主题ID。
+        /// 投递的日志主题ID。请通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **TopicId** 获取。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
