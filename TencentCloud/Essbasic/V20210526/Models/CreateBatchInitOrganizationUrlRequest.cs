@@ -32,8 +32,11 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 初始化操作类型
-        /// <ul><li>CREATE_SEAL : 创建印章</li>
-        /// <li>OPEN_AUTO_SIGN :开通企业自动签署</li></ul>
+        /// <ul>
+        /// <li>CREATE_SEAL : 创建印章</li>
+        /// <li>OPEN_AUTO_SIGN :开通企业自动签署</li>
+        /// <li>PARTNER_AUTO_SIGN_AUTH :合作方企业或应用平台方授权自动签</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("OperateTypes")]
         public string[] OperateTypes{ get; set; }
@@ -44,6 +47,21 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("ProxyOrganizationOpenIds")]
         public string[] ProxyOrganizationOpenIds{ get; set; }
 
+        /// <summary>
+        /// 当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且是给应用平台方授权自动签时传true。
+        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/f9aba7c999a6d79ada20b4384520e120.png)
+        /// </summary>
+        [JsonProperty("IsAuthorizePlatformApplication")]
+        public bool? IsAuthorizePlatformApplication{ get; set; }
+
+        /// <summary>
+        /// 被授权的合作方企业在第三方平台子客企业标识，即ProxyOrganizationOpenId，当操作类型包含 PARTNER_AUTO_SIGN_AUTH 且要进行合作方企业授权自动签时必传。
+        /// 
+        /// 
+        /// </summary>
+        [JsonProperty("AuthorizedProxyOrganizationOpenId")]
+        public string AuthorizedProxyOrganizationOpenId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +71,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamArraySimple(map, prefix + "OperateTypes.", this.OperateTypes);
             this.SetParamArraySimple(map, prefix + "ProxyOrganizationOpenIds.", this.ProxyOrganizationOpenIds);
+            this.SetParamSimple(map, prefix + "IsAuthorizePlatformApplication", this.IsAuthorizePlatformApplication);
+            this.SetParamSimple(map, prefix + "AuthorizedProxyOrganizationOpenId", this.AuthorizedProxyOrganizationOpenId);
         }
     }
 }

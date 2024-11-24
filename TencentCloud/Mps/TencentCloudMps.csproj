@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1127</VersionPrefix>
+    <VersionPrefix>3.0.1128</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -446,9 +446,12 @@
     <Compile Include="V20190612\Models\HdrConfig.cs" />
     <Compile Include="V20190612\Models\HeadTailParameter.cs" />
     <Compile Include="V20190612\Models\HighlightSegmentItem.cs" />
+    <Compile Include="V20190612\Models\ImageEncodeConfig.cs" />
+    <Compile Include="V20190612\Models\ImageEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\ImageQualityEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\ImageSpriteTaskInput.cs" />
     <Compile Include="V20190612\Models\ImageSpriteTemplate.cs" />
+    <Compile Include="V20190612\Models\ImageTaskInput.cs" />
     <Compile Include="V20190612\Models\ImageWatermarkInput.cs" />
     <Compile Include="V20190612\Models\ImageWatermarkInputForUpdate.cs" />
     <Compile Include="V20190612\Models\ImageWatermarkTemplate.cs" />
@@ -583,6 +586,8 @@
     <Compile Include="V20190612\Models\PornImgReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\PornOcrReviewTemplateInfo.cs" />
     <Compile Include="V20190612\Models\PornOcrReviewTemplateInfoForUpdate.cs" />
+    <Compile Include="V20190612\Models\ProcessImageRequest.cs" />
+    <Compile Include="V20190612\Models\ProcessImageResponse.cs" />
     <Compile Include="V20190612\Models\ProcessLiveStreamRequest.cs" />
     <Compile Include="V20190612\Models\ProcessLiveStreamResponse.cs" />
     <Compile Include="V20190612\Models\ProcessMediaRequest.cs" />

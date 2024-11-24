@@ -127,6 +127,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("InstanceStorageType")]
         public string InstanceStorageType{ get; set; }
 
+        /// <summary>
+        /// 数据库类型
+        /// </summary>
+        [JsonProperty("DbMode")]
+        public string DbMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +155,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArrayObj(map, prefix + "InstanceTasks.", this.InstanceTasks);
             this.SetParamSimple(map, prefix + "InstanceDeviceType", this.InstanceDeviceType);
             this.SetParamSimple(map, prefix + "InstanceStorageType", this.InstanceStorageType);
+            this.SetParamSimple(map, prefix + "DbMode", this.DbMode);
         }
     }
 }

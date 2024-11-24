@@ -33,9 +33,12 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 初始化操作类型
-        /// <ul><li>CREATE_SEAL : 创建印章</li>
+        /// <ul>
+        /// <li>CREATE_SEAL : 创建印章</li>
         /// <li>AUTH_JOIN_ORGANIZATION_GROUP : 加入集团企业</li>
-        /// <li>OPEN_AUTO_SIGN :开通企业自动签署</li></ul>
+        /// <li>OPEN_AUTO_SIGN :开通企业自动签署</li>
+        /// <li>PARTNER_AUTO_SIGN_AUTH :合作方企业授权自动签</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("OperateTypes")]
         public string[] OperateTypes{ get; set; }
@@ -52,6 +55,16 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
+        /// <summary>
+        /// 被授权的合作方企业在电子签的企业电子签账号，当操作类型包含 PARTNER_AUTO_SIGN_AUTH （合作方企业授权自动签）时必传。
+        /// 
+        /// 企业电子签账号可在[电子签的网页端](https://qian.tencent.com/console/company-settings/company-center) ，于企业设置-企业信息菜单栏下复制获取。
+        /// 
+        /// ![企业电子签账号](https://qcloudimg.tencent-cloud.cn/raw/4e6b30ee92f00671f7f1c5bd127c27db.png)
+        /// </summary>
+        [JsonProperty("AuthorizedOrganizationId")]
+        public string AuthorizedOrganizationId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +75,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamArraySimple(map, prefix + "OperateTypes.", this.OperateTypes);
             this.SetParamArraySimple(map, prefix + "OrganizationIds.", this.OrganizationIds);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamSimple(map, prefix + "AuthorizedOrganizationId", this.AuthorizedOrganizationId);
         }
     }
 }

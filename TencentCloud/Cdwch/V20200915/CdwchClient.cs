@@ -28,7 +28,7 @@ namespace TencentCloud.Cdwch.V20200915
 
        private const string endpoint = "cdwch.tencentcloudapi.com";
        private const string version = "2020-09-15";
-       private const string sdkVersion = "SDK_NET_3.0.1127";
+       private const string sdkVersion = "SDK_NET_3.0.1128";
 
         /// <summary>
         /// Client constructor.
@@ -575,6 +575,27 @@ namespace TencentCloud.Cdwch.V20200915
         public ResizeDiskResponse ResizeDiskSync(ResizeDiskRequest req)
         {
             return InternalRequestAsync<ResizeDiskResponse>(req, "ResizeDisk")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// open-api接口提供弹性伸缩云原生集群能力
+        /// </summary>
+        /// <param name="req"><see cref="ScaleCNOutUpInstanceRequest"/></param>
+        /// <returns><see cref="ScaleCNOutUpInstanceResponse"/></returns>
+        public Task<ScaleCNOutUpInstanceResponse> ScaleCNOutUpInstance(ScaleCNOutUpInstanceRequest req)
+        {
+            return InternalRequestAsync<ScaleCNOutUpInstanceResponse>(req, "ScaleCNOutUpInstance");
+        }
+
+        /// <summary>
+        /// open-api接口提供弹性伸缩云原生集群能力
+        /// </summary>
+        /// <param name="req"><see cref="ScaleCNOutUpInstanceRequest"/></param>
+        /// <returns><see cref="ScaleCNOutUpInstanceResponse"/></returns>
+        public ScaleCNOutUpInstanceResponse ScaleCNOutUpInstanceSync(ScaleCNOutUpInstanceRequest req)
+        {
+            return InternalRequestAsync<ScaleCNOutUpInstanceResponse>(req, "ScaleCNOutUpInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

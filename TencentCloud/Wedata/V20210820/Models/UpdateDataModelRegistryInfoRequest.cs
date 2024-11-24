@@ -37,13 +37,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string AppCamRole{ get; set; }
 
         /// <summary>
-        /// 数语的ip
+        /// 数语的公网访问ip
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 数语的端口
+        /// 数语的公网访问端口
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
@@ -72,6 +72,36 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("OwnId")]
         public string OwnId{ get; set; }
 
+        /// <summary>
+        /// VpcId
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
+
+        /// <summary>
+        /// Vpc地域
+        /// </summary>
+        [JsonProperty("VpcRegion")]
+        public string VpcRegion{ get; set; }
+
+        /// <summary>
+        /// 数语的内网访问ip
+        /// </summary>
+        [JsonProperty("Pip")]
+        public string Pip{ get; set; }
+
+        /// <summary>
+        /// 数语的内网访问端口
+        /// </summary>
+        [JsonProperty("Pport")]
+        public ulong? Pport{ get; set; }
+
+        /// <summary>
+        /// 是否开放公网访问数语, 1:是，0:否，默认1开放
+        /// </summary>
+        [JsonProperty("IsPublic")]
+        public ulong? IsPublic{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +116,11 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Provider", this.Provider);
             this.SetParamSimple(map, prefix + "TenantId", this.TenantId);
             this.SetParamSimple(map, prefix + "OwnId", this.OwnId);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "VpcRegion", this.VpcRegion);
+            this.SetParamSimple(map, prefix + "Pip", this.Pip);
+            this.SetParamSimple(map, prefix + "Pport", this.Pport);
+            this.SetParamSimple(map, prefix + "IsPublic", this.IsPublic);
         }
     }
 }

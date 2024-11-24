@@ -38,7 +38,6 @@ namespace TencentCloud.Market.V20191010.Models
 
         /// <summary>
         /// 消息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Info")]
         public string Info{ get; set; }
