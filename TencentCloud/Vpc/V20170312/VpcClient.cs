@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1128";
+       private const string sdkVersion = "SDK_NET_3.0.1129";
 
         /// <summary>
         /// Client constructor.
@@ -8541,7 +8541,6 @@ namespace TencentCloud.Vpc.V20170312
         /// 该接口一般用来解封禁出口限速的云联网实例, 目前联通内部运营系统通过云API调用, 因为出口限速无法按地域间解封禁, 只能按更粗的云联网实例粒度解封禁, 如果是地域间限速, 一般可以通过更细的限速实例粒度解封禁（UnlockCcnBandwidths）
         /// 
         /// 如有需要, 可以封禁任意限速实例, 可接入到内部运营系统
-        /// 
         /// </summary>
         /// <param name="req"><see cref="UnlockCcnsRequest"/></param>
         /// <returns><see cref="UnlockCcnsResponse"/></returns>
@@ -8556,7 +8555,6 @@ namespace TencentCloud.Vpc.V20170312
         /// 该接口一般用来解封禁出口限速的云联网实例, 目前联通内部运营系统通过云API调用, 因为出口限速无法按地域间解封禁, 只能按更粗的云联网实例粒度解封禁, 如果是地域间限速, 一般可以通过更细的限速实例粒度解封禁（UnlockCcnBandwidths）
         /// 
         /// 如有需要, 可以封禁任意限速实例, 可接入到内部运营系统
-        /// 
         /// </summary>
         /// <param name="req"><see cref="UnlockCcnsRequest"/></param>
         /// <returns><see cref="UnlockCcnsResponse"/></returns>

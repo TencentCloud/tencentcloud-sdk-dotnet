@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{350F9F65-0799-338B-90EA-9EBA008679C1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1128</VersionPrefix>
+    <VersionPrefix>3.0.1129</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -258,6 +258,7 @@
     <Compile Include="V20231130\Models\QuoteInfo.cs" />
     <Compile Include="V20231130\Models\RateMsgRecordRequest.cs" />
     <Compile Include="V20231130\Models\RateMsgRecordResponse.cs" />
+    <Compile Include="V20231130\Models\ReRankDataObject.cs" />
     <Compile Include="V20231130\Models\ReconstructDocumentConfig.cs" />
     <Compile Include="V20231130\Models\ReconstructDocumentFailedPage.cs" />
     <Compile Include="V20231130\Models\ReconstructDocumentRequest.cs" />
@@ -277,6 +278,8 @@
     <Compile Include="V20231130\Models\RetryReleaseRequest.cs" />
     <Compile Include="V20231130\Models\RetryReleaseResponse.cs" />
     <Compile Include="V20231130\Models\RunNodeInfo.cs" />
+    <Compile Include="V20231130\Models\RunReRankRequest.cs" />
+    <Compile Include="V20231130\Models\RunReRankResponse.cs" />
     <Compile Include="V20231130\Models\SaveDocRequest.cs" />
     <Compile Include="V20231130\Models\SaveDocResponse.cs" />
     <Compile Include="V20231130\Models\SimilarQuestion.cs" />

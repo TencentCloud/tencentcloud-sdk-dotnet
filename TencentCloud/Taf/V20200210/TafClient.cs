@@ -28,7 +28,7 @@ namespace TencentCloud.Taf.V20200210
 
        private const string endpoint = "taf.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1128";
+       private const string sdkVersion = "SDK_NET_3.0.1129";
 
         /// <summary>
         /// Client constructor.

@@ -28,7 +28,7 @@ namespace TencentCloud.Cfg.V20210820
 
        private const string endpoint = "cfg.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1128";
+       private const string sdkVersion = "SDK_NET_3.0.1129";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Cfg.V20210820
         public CreateTaskFromActionResponse CreateTaskFromActionSync(CreateTaskFromActionRequest req)
         {
             return InternalRequestAsync<CreateTaskFromActionResponse>(req, "CreateTaskFromAction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 以多个动作创建演练
+        /// </summary>
+        /// <param name="req"><see cref="CreateTaskFromMultiActionRequest"/></param>
+        /// <returns><see cref="CreateTaskFromMultiActionResponse"/></returns>
+        public Task<CreateTaskFromMultiActionResponse> CreateTaskFromMultiAction(CreateTaskFromMultiActionRequest req)
+        {
+            return InternalRequestAsync<CreateTaskFromMultiActionResponse>(req, "CreateTaskFromMultiAction");
+        }
+
+        /// <summary>
+        /// 以多个动作创建演练
+        /// </summary>
+        /// <param name="req"><see cref="CreateTaskFromMultiActionRequest"/></param>
+        /// <returns><see cref="CreateTaskFromMultiActionResponse"/></returns>
+        public CreateTaskFromMultiActionResponse CreateTaskFromMultiActionSync(CreateTaskFromMultiActionRequest req)
+        {
+            return InternalRequestAsync<CreateTaskFromMultiActionResponse>(req, "CreateTaskFromMultiAction")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

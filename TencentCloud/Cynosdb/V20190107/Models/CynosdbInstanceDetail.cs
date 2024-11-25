@@ -230,6 +230,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("MaxCpu")]
         public float? MaxCpu{ get; set; }
 
+        /// <summary>
+        /// Db类型:<li>NORMAL</li><li>SERVERLESS</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DbMode")]
+        public string DbMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -270,6 +277,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "MinCpu", this.MinCpu);
             this.SetParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
+            this.SetParamSimple(map, prefix + "DbMode", this.DbMode);
         }
     }
 }

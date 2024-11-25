@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1128";
+       private const string sdkVersion = "SDK_NET_3.0.1129";
 
         /// <summary>
         /// Client constructor.
@@ -1874,6 +1874,27 @@ namespace TencentCloud.Lke.V20231130
         public RetryReleaseResponse RetryReleaseSync(RetryReleaseRequest req)
         {
             return InternalRequestAsync<RetryReleaseResponse>(req, "RetryRelease")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 重排序
+        /// </summary>
+        /// <param name="req"><see cref="RunReRankRequest"/></param>
+        /// <returns><see cref="RunReRankResponse"/></returns>
+        public Task<RunReRankResponse> RunReRank(RunReRankRequest req)
+        {
+            return InternalRequestAsync<RunReRankResponse>(req, "RunReRank");
+        }
+
+        /// <summary>
+        /// 重排序
+        /// </summary>
+        /// <param name="req"><see cref="RunReRankRequest"/></param>
+        /// <returns><see cref="RunReRankResponse"/></returns>
+        public RunReRankResponse RunReRankSync(RunReRankRequest req)
+        {
+            return InternalRequestAsync<RunReRankResponse>(req, "RunReRank")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

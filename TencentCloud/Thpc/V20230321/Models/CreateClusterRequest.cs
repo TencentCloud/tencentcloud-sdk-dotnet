@@ -70,7 +70,7 @@ namespace TencentCloud.Thpc.V20230321.Models
         public string SchedulerVersion{ get; set; }
 
         /// <summary>
-        /// 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。公共镜像请参考[镜像限制](https://cloud.tencent.com/document/product/1527/64818)
+        /// 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。公共镜像请参考[镜像限制](https://cloud.tencent.com/document/product/1527/64818#.E9.95.9C.E5.83.8F)
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }

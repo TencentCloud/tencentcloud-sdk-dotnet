@@ -28,7 +28,7 @@ namespace TencentCloud.Smop.V20201203
 
        private const string endpoint = "smop.tencentcloudapi.com";
        private const string version = "2020-12-03";
-       private const string sdkVersion = "SDK_NET_3.0.1128";
+       private const string sdkVersion = "SDK_NET_3.0.1129";
 
         /// <summary>
         /// Client constructor.

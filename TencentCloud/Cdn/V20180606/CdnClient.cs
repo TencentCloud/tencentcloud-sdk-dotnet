@@ -28,7 +28,7 @@ namespace TencentCloud.Cdn.V20180606
 
        private const string endpoint = "cdn.tencentcloudapi.com";
        private const string version = "2018-06-06";
-       private const string sdkVersion = "SDK_NET_3.0.1128";
+       private const string sdkVersion = "SDK_NET_3.0.1129";
 
         /// <summary>
         /// Client constructor.
@@ -1037,7 +1037,6 @@ namespace TencentCloud.Cdn.V20180606
         /// 
         /// 注意：
         /// + 仅支持 90 天内数据查询，且从2021年09月20日开始有数据
-        /// + 本接口为beta版，尚未正式全量发布
         /// </summary>
         /// <param name="req"><see cref="DescribeTopDataRequest"/></param>
         /// <returns><see cref="DescribeTopDataResponse"/></returns>
@@ -1057,7 +1056,6 @@ namespace TencentCloud.Cdn.V20180606
         /// 
         /// 注意：
         /// + 仅支持 90 天内数据查询，且从2021年09月20日开始有数据
-        /// + 本接口为beta版，尚未正式全量发布
         /// </summary>
         /// <param name="req"><see cref="DescribeTopDataRequest"/></param>
         /// <returns><see cref="DescribeTopDataResponse"/></returns>

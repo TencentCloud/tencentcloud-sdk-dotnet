@@ -28,7 +28,7 @@ namespace TencentCloud.Essbasic.V20210526
 
        private const string endpoint = "essbasic.tencentcloudapi.com";
        private const string version = "2021-05-26";
-       private const string sdkVersion = "SDK_NET_3.0.1128";
+       private const string sdkVersion = "SDK_NET_3.0.1129";
 
         /// <summary>
         /// Client constructor.
@@ -1600,7 +1600,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// 无论是<font color="red"><b>发起方还是签署方</b></font>填写的控件，均包含在查询结果中。
         /// 
         /// ![image](https://qcloudimg.tencent-cloud.cn/raw/08f6ea50d3ae88b51c280c2b17c2a126.png)
-        /// ### 2.  那些控件会出现在结果里边？ 
+        /// ### 2.  哪些控件会出现在结果里边？ 
         /// **A.不返回的控件类型：**
         /// - 动态表格
         /// - 附件控件
@@ -1644,7 +1644,7 @@ namespace TencentCloud.Essbasic.V20210526
         /// 无论是<font color="red"><b>发起方还是签署方</b></font>填写的控件，均包含在查询结果中。
         /// 
         /// ![image](https://qcloudimg.tencent-cloud.cn/raw/08f6ea50d3ae88b51c280c2b17c2a126.png)
-        /// ### 2.  那些控件会出现在结果里边？ 
+        /// ### 2.  哪些控件会出现在结果里边？ 
         /// **A.不返回的控件类型：**
         /// - 动态表格
         /// - 附件控件

@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1128";
+       private const string sdkVersion = "SDK_NET_3.0.1129";
 
         /// <summary>
         /// Client constructor.
@@ -432,7 +432,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 主实例创建数据库代理
+        /// 本接口（CreateCdbProxy）用于主实例创建数据库代理。
         /// </summary>
         /// <param name="req"><see cref="CreateCdbProxyRequest"/></param>
         /// <returns><see cref="CreateCdbProxyResponse"/></returns>
@@ -442,7 +442,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 主实例创建数据库代理
+        /// 本接口（CreateCdbProxy）用于主实例创建数据库代理。
         /// </summary>
         /// <param name="req"><see cref="CreateCdbProxyRequest"/></param>
         /// <returns><see cref="CreateCdbProxyResponse"/></returns>

@@ -37,6 +37,13 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public DataBaseAuditRecord SlowQueryRecords{ get; set; }
 
         /// <summary>
+        /// 记录列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Records")]
+        public DataBaseAuditRecord[] Records{ get; set; }
+
+        /// <summary>
         /// 错误信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -57,6 +64,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamObj(map, prefix + "SlowQueryRecords.", this.SlowQueryRecords);
+            this.SetParamArrayObj(map, prefix + "Records.", this.Records);
             this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
