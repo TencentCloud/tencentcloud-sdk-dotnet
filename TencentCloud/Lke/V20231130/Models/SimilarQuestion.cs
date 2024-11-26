@@ -38,6 +38,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Question")]
         public string Question{ get; set; }
 
+        /// <summary>
+        /// 相似问审核状态，1审核失败
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AuditStatus")]
+        public ulong? AuditStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Lke.V20231130.Models
         {
             this.SetParamSimple(map, prefix + "SimBizId", this.SimBizId);
             this.SetParamSimple(map, prefix + "Question", this.Question);
+            this.SetParamSimple(map, prefix + "AuditStatus", this.AuditStatus);
         }
     }
 }

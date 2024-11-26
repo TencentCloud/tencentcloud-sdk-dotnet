@@ -55,13 +55,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// 开始时间戳, 单位为秒
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 结束时间戳, 单位为秒
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -71,6 +71,12 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         [JsonProperty("AppBizIds")]
         public string[] AppBizIds{ get; set; }
+
+        /// <summary>
+        /// 筛选子场景(文档解析场景使用)
+        /// </summary>
+        [JsonProperty("SubScenes")]
+        public string[] SubScenes{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArraySimple(map, prefix + "AppBizIds.", this.AppBizIds);
+            this.SetParamArraySimple(map, prefix + "SubScenes.", this.SubScenes);
         }
     }
 }

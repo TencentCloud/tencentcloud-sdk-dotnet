@@ -87,7 +87,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string SortType{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认值为0。
+        /// 偏移量，默认值为0。如果入参携带"Domain","ffset","Limit" 这3个以外的参数，记录结果限制最大3000条
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

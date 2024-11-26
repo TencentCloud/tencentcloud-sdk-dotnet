@@ -25,18 +25,18 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 小程序ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("ModelId")]
-        public string ModelId{ get; set; }
-
-        /// <summary>
         /// Sn信息，SN格式：产品ID_设备名
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Sn")]
         public string Sn{ get; set; }
+
+        /// <summary>
+        /// 小程序ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ModelId")]
+        public string ModelId{ get; set; }
 
         /// <summary>
         /// 激活数
@@ -51,8 +51,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
             this.SetParamSimple(map, prefix + "Sn", this.Sn);
+            this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
             this.SetParamSimple(map, prefix + "ActiveNum", this.ActiveNum);
         }
     }

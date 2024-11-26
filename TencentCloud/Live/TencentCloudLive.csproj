@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9606A5AB-94D6-3512-9394-9CFA341DBB7D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1129</VersionPrefix>
+    <VersionPrefix>3.0.1130</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,12 @@
 
   <ItemGroup>
     <Compile Include="V20180801\LiveClient.cs" />
+    <Compile Include="V20180801\Models\AddCasterInputInfoRequest.cs" />
+    <Compile Include="V20180801\Models\AddCasterInputInfoResponse.cs" />
+    <Compile Include="V20180801\Models\AddCasterLayoutInfoRequest.cs" />
+    <Compile Include="V20180801\Models\AddCasterLayoutInfoResponse.cs" />
+    <Compile Include="V20180801\Models\AddCasterOutputInfoRequest.cs" />
+    <Compile Include="V20180801\Models\AddCasterOutputInfoResponse.cs" />
     <Compile Include="V20180801\Models\AddDelayLiveStreamRequest.cs" />
     <Compile Include="V20180801\Models\AddDelayLiveStreamResponse.cs" />
     <Compile Include="V20180801\Models\AddLiveDomainRequest.cs" />
@@ -71,6 +77,10 @@
     <Compile Include="V20180801\Models\CasterBriefInfo.cs" />
     <Compile Include="V20180801\Models\CasterDisplayInfo.cs" />
     <Compile Include="V20180801\Models\CasterInfo.cs" />
+    <Compile Include="V20180801\Models\CasterInputInfo.cs" />
+    <Compile Include="V20180801\Models\CasterLayoutInfo.cs" />
+    <Compile Include="V20180801\Models\CasterLayoutParam.cs" />
+    <Compile Include="V20180801\Models\CasterOutputInfo.cs" />
     <Compile Include="V20180801\Models\CdnPlayStatData.cs" />
     <Compile Include="V20180801\Models\CertInfo.cs" />
     <Compile Include="V20180801\Models\ClientIpPlaySumInfo.cs" />
@@ -82,6 +92,8 @@
     <Compile Include="V20180801\Models\ConcurrentRecordStreamNum.cs" />
     <Compile Include="V20180801\Models\CopyCasterRequest.cs" />
     <Compile Include="V20180801\Models\CopyCasterResponse.cs" />
+    <Compile Include="V20180801\Models\CreateCasterInputPushUrlRequest.cs" />
+    <Compile Include="V20180801\Models\CreateCasterInputPushUrlResponse.cs" />
     <Compile Include="V20180801\Models\CreateCasterRequest.cs" />
     <Compile Include="V20180801\Models\CreateCasterResponse.cs" />
     <Compile Include="V20180801\Models\CreateCommonMixStreamRequest.cs" />
@@ -126,6 +138,12 @@
     <Compile Include="V20180801\Models\CreateScreenshotTaskResponse.cs" />
     <Compile Include="V20180801\Models\DayStreamPlayInfo.cs" />
     <Compile Include="V20180801\Models\DelayInfo.cs" />
+    <Compile Include="V20180801\Models\DeleteCasterInputInfoRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteCasterInputInfoResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteCasterLayoutInfoRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteCasterLayoutInfoResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteCasterOutputInfoRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteCasterOutputInfoResponse.cs" />
     <Compile Include="V20180801\Models\DeleteCasterRequest.cs" />
     <Compile Include="V20180801\Models\DeleteCasterResponse.cs" />
     <Compile Include="V20180801\Models\DeleteLiveCallbackRuleRequest.cs" />
@@ -182,8 +200,14 @@
     <Compile Include="V20180801\Models\DescribeCallbackRecordsListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeCasterDisplayInfoRequest.cs" />
     <Compile Include="V20180801\Models\DescribeCasterDisplayInfoResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeCasterInputInfosRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeCasterInputInfosResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeCasterLayoutInfosRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeCasterLayoutInfosResponse.cs" />
     <Compile Include="V20180801\Models\DescribeCasterListRequest.cs" />
     <Compile Include="V20180801\Models\DescribeCasterListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeCasterOutputInfosRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeCasterOutputInfosResponse.cs" />
     <Compile Include="V20180801\Models\DescribeCasterPlayUrlRequest.cs" />
     <Compile Include="V20180801\Models\DescribeCasterPlayUrlResponse.cs" />
     <Compile Include="V20180801\Models\DescribeCasterRequest.cs" />
@@ -373,6 +397,12 @@
     <Compile Include="V20180801\Models\LogInfo.cs" />
     <Compile Include="V20180801\Models\MPSResult.cs" />
     <Compile Include="V20180801\Models\MixPortraitSegmentParams.cs" />
+    <Compile Include="V20180801\Models\ModifyCasterInputInfoRequest.cs" />
+    <Compile Include="V20180801\Models\ModifyCasterInputInfoResponse.cs" />
+    <Compile Include="V20180801\Models\ModifyCasterLayoutInfoRequest.cs" />
+    <Compile Include="V20180801\Models\ModifyCasterLayoutInfoResponse.cs" />
+    <Compile Include="V20180801\Models\ModifyCasterOutputInfoRequest.cs" />
+    <Compile Include="V20180801\Models\ModifyCasterOutputInfoResponse.cs" />
     <Compile Include="V20180801\Models\ModifyCasterRequest.cs" />
     <Compile Include="V20180801\Models\ModifyCasterResponse.cs" />
     <Compile Include="V20180801\Models\ModifyLiveCallbackTemplateRequest.cs" />

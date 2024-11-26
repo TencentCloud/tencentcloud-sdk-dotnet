@@ -31,19 +31,19 @@ namespace TencentCloud.Tse.V20201207.Models
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// 翻页从第几个开始获取
+        /// 偏移量，默认为 0。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 翻页获取多少个
+        /// 返回数量，默认为 20。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 过滤参数
+        /// 过滤参数，支持按照分组名称、分组ID（Name、GroupId）筛选
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

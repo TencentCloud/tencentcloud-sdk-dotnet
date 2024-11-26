@@ -59,6 +59,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("TaskFlow")]
         public TaskFlowSummary TaskFlow{ get; set; }
 
+        /// <summary>
+        /// 工作流调试信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WorkFlow")]
+        public WorkFlowSummary WorkFlow{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArrayObj(map, prefix + "Histories.", this.Histories);
             this.SetParamArrayObj(map, prefix + "Knowledge.", this.Knowledge);
             this.SetParamObj(map, prefix + "TaskFlow.", this.TaskFlow);
+            this.SetParamObj(map, prefix + "WorkFlow.", this.WorkFlow);
         }
     }
 }

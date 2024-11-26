@@ -25,21 +25,21 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 应用名称
+        /// 当前应用名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
-        /// 应用使用的字符数
+        /// 当前应用使用的字符数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UsedCharSize")]
         public string UsedCharSize{ get; set; }
 
         /// <summary>
-        /// 应用占比
+        /// 当前应用对于总用量的占比
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Proportion")]

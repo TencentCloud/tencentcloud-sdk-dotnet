@@ -80,14 +80,12 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// 适用商品信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicableProducts")]
         public ApplicableProducts ApplicableProducts{ get; set; }
 
         /// <summary>
         /// 不适用商品信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExcludedProducts")]
         public ExcludedProducts[] ExcludedProducts{ get; set; }

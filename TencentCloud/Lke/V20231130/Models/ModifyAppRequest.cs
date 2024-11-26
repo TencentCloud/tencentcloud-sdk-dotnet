@@ -43,16 +43,16 @@ namespace TencentCloud.Lke.V20231130.Models
         public BaseConfig BaseConfig{ get; set; }
 
         /// <summary>
-        /// 登录用户子账号(集成商模式必填)	
-        /// </summary>
-        [JsonProperty("LoginSubAccountUin")]
-        public string LoginSubAccountUin{ get; set; }
-
-        /// <summary>
         /// 应用配置
         /// </summary>
         [JsonProperty("AppConfig")]
         public AppConfig AppConfig{ get; set; }
+
+        /// <summary>
+        /// 登录用户子账号(集成商模式必填)	
+        /// </summary>
+        [JsonProperty("LoginSubAccountUin")]
+        public string LoginSubAccountUin{ get; set; }
 
 
         /// <summary>
@@ -63,8 +63,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "AppBizId", this.AppBizId);
             this.SetParamSimple(map, prefix + "AppType", this.AppType);
             this.SetParamObj(map, prefix + "BaseConfig.", this.BaseConfig);
-            this.SetParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
             this.SetParamObj(map, prefix + "AppConfig.", this.AppConfig);
+            this.SetParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
         }
     }
 }

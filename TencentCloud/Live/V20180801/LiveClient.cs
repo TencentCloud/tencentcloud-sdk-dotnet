@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1129";
+       private const string sdkVersion = "SDK_NET_3.0.1130";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,69 @@ namespace TencentCloud.Live.V20180801
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 该接口用来向导播台中添加一个输入源，该输入源可以是拉流地址、或是一个文件链接
+        /// </summary>
+        /// <param name="req"><see cref="AddCasterInputInfoRequest"/></param>
+        /// <returns><see cref="AddCasterInputInfoResponse"/></returns>
+        public Task<AddCasterInputInfoResponse> AddCasterInputInfo(AddCasterInputInfoRequest req)
+        {
+            return InternalRequestAsync<AddCasterInputInfoResponse>(req, "AddCasterInputInfo");
+        }
+
+        /// <summary>
+        /// 该接口用来向导播台中添加一个输入源，该输入源可以是拉流地址、或是一个文件链接
+        /// </summary>
+        /// <param name="req"><see cref="AddCasterInputInfoRequest"/></param>
+        /// <returns><see cref="AddCasterInputInfoResponse"/></returns>
+        public AddCasterInputInfoResponse AddCasterInputInfoSync(AddCasterInputInfoRequest req)
+        {
+            return InternalRequestAsync<AddCasterInputInfoResponse>(req, "AddCasterInputInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来增加导播台的布局参数。
+        /// </summary>
+        /// <param name="req"><see cref="AddCasterLayoutInfoRequest"/></param>
+        /// <returns><see cref="AddCasterLayoutInfoResponse"/></returns>
+        public Task<AddCasterLayoutInfoResponse> AddCasterLayoutInfo(AddCasterLayoutInfoRequest req)
+        {
+            return InternalRequestAsync<AddCasterLayoutInfoResponse>(req, "AddCasterLayoutInfo");
+        }
+
+        /// <summary>
+        /// 该接口用来增加导播台的布局参数。
+        /// </summary>
+        /// <param name="req"><see cref="AddCasterLayoutInfoRequest"/></param>
+        /// <returns><see cref="AddCasterLayoutInfoResponse"/></returns>
+        public AddCasterLayoutInfoResponse AddCasterLayoutInfoSync(AddCasterLayoutInfoRequest req)
+        {
+            return InternalRequestAsync<AddCasterLayoutInfoResponse>(req, "AddCasterLayoutInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来新增导播台推流信息。导播台主监启动后，将会将主监画面推向该接口设置的地址。
+        /// </summary>
+        /// <param name="req"><see cref="AddCasterOutputInfoRequest"/></param>
+        /// <returns><see cref="AddCasterOutputInfoResponse"/></returns>
+        public Task<AddCasterOutputInfoResponse> AddCasterOutputInfo(AddCasterOutputInfoRequest req)
+        {
+            return InternalRequestAsync<AddCasterOutputInfoResponse>(req, "AddCasterOutputInfo");
+        }
+
+        /// <summary>
+        /// 该接口用来新增导播台推流信息。导播台主监启动后，将会将主监画面推向该接口设置的地址。
+        /// </summary>
+        /// <param name="req"><see cref="AddCasterOutputInfoRequest"/></param>
+        /// <returns><see cref="AddCasterOutputInfoResponse"/></returns>
+        public AddCasterOutputInfoResponse AddCasterOutputInfoSync(AddCasterOutputInfoRequest req)
+        {
+            return InternalRequestAsync<AddCasterOutputInfoResponse>(req, "AddCasterOutputInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -201,6 +264,27 @@ namespace TencentCloud.Live.V20180801
         public CreateCasterResponse CreateCasterSync(CreateCasterRequest req)
         {
             return InternalRequestAsync<CreateCasterResponse>(req, "CreateCaster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来生成导播台推流地址
+        /// </summary>
+        /// <param name="req"><see cref="CreateCasterInputPushUrlRequest"/></param>
+        /// <returns><see cref="CreateCasterInputPushUrlResponse"/></returns>
+        public Task<CreateCasterInputPushUrlResponse> CreateCasterInputPushUrl(CreateCasterInputPushUrlRequest req)
+        {
+            return InternalRequestAsync<CreateCasterInputPushUrlResponse>(req, "CreateCasterInputPushUrl");
+        }
+
+        /// <summary>
+        /// 该接口用来生成导播台推流地址
+        /// </summary>
+        /// <param name="req"><see cref="CreateCasterInputPushUrlRequest"/></param>
+        /// <returns><see cref="CreateCasterInputPushUrlResponse"/></returns>
+        public CreateCasterInputPushUrlResponse CreateCasterInputPushUrlSync(CreateCasterInputPushUrlRequest req)
+        {
+            return InternalRequestAsync<CreateCasterInputPushUrlResponse>(req, "CreateCasterInputPushUrl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -754,6 +838,71 @@ namespace TencentCloud.Live.V20180801
         public DeleteCasterResponse DeleteCasterSync(DeleteCasterRequest req)
         {
             return InternalRequestAsync<DeleteCasterResponse>(req, "DeleteCaster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来删除导播台中的输入源信息。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCasterInputInfoRequest"/></param>
+        /// <returns><see cref="DeleteCasterInputInfoResponse"/></returns>
+        public Task<DeleteCasterInputInfoResponse> DeleteCasterInputInfo(DeleteCasterInputInfoRequest req)
+        {
+            return InternalRequestAsync<DeleteCasterInputInfoResponse>(req, "DeleteCasterInputInfo");
+        }
+
+        /// <summary>
+        /// 该接口用来删除导播台中的输入源信息。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCasterInputInfoRequest"/></param>
+        /// <returns><see cref="DeleteCasterInputInfoResponse"/></returns>
+        public DeleteCasterInputInfoResponse DeleteCasterInputInfoSync(DeleteCasterInputInfoRequest req)
+        {
+            return InternalRequestAsync<DeleteCasterInputInfoResponse>(req, "DeleteCasterInputInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来将布局信息从导播台中删除
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCasterLayoutInfoRequest"/></param>
+        /// <returns><see cref="DeleteCasterLayoutInfoResponse"/></returns>
+        public Task<DeleteCasterLayoutInfoResponse> DeleteCasterLayoutInfo(DeleteCasterLayoutInfoRequest req)
+        {
+            return InternalRequestAsync<DeleteCasterLayoutInfoResponse>(req, "DeleteCasterLayoutInfo");
+        }
+
+        /// <summary>
+        /// 该接口用来将布局信息从导播台中删除
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCasterLayoutInfoRequest"/></param>
+        /// <returns><see cref="DeleteCasterLayoutInfoResponse"/></returns>
+        public DeleteCasterLayoutInfoResponse DeleteCasterLayoutInfoSync(DeleteCasterLayoutInfoRequest req)
+        {
+            return InternalRequestAsync<DeleteCasterLayoutInfoResponse>(req, "DeleteCasterLayoutInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来删除导播台的推流信息。
+        /// 注：若删除推流到腾讯云直播源站配置，即OutputIndex为0，OutputType为1的推流配置，在重新启动主监后，系统会自动重新生成一个推流到腾讯云直播源站配置。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCasterOutputInfoRequest"/></param>
+        /// <returns><see cref="DeleteCasterOutputInfoResponse"/></returns>
+        public Task<DeleteCasterOutputInfoResponse> DeleteCasterOutputInfo(DeleteCasterOutputInfoRequest req)
+        {
+            return InternalRequestAsync<DeleteCasterOutputInfoResponse>(req, "DeleteCasterOutputInfo");
+        }
+
+        /// <summary>
+        /// 该接口用来删除导播台的推流信息。
+        /// 注：若删除推流到腾讯云直播源站配置，即OutputIndex为0，OutputType为1的推流配置，在重新启动主监后，系统会自动重新生成一个推流到腾讯云直播源站配置。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCasterOutputInfoRequest"/></param>
+        /// <returns><see cref="DeleteCasterOutputInfoResponse"/></returns>
+        public DeleteCasterOutputInfoResponse DeleteCasterOutputInfoSync(DeleteCasterOutputInfoRequest req)
+        {
+            return InternalRequestAsync<DeleteCasterOutputInfoResponse>(req, "DeleteCasterOutputInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1366,6 +1515,48 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 该接口用来查询导播台的输入源信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCasterInputInfosRequest"/></param>
+        /// <returns><see cref="DescribeCasterInputInfosResponse"/></returns>
+        public Task<DescribeCasterInputInfosResponse> DescribeCasterInputInfos(DescribeCasterInputInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeCasterInputInfosResponse>(req, "DescribeCasterInputInfos");
+        }
+
+        /// <summary>
+        /// 该接口用来查询导播台的输入源信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCasterInputInfosRequest"/></param>
+        /// <returns><see cref="DescribeCasterInputInfosResponse"/></returns>
+        public DescribeCasterInputInfosResponse DescribeCasterInputInfosSync(DescribeCasterInputInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeCasterInputInfosResponse>(req, "DescribeCasterInputInfos")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来查询某个导播台的布局列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCasterLayoutInfosRequest"/></param>
+        /// <returns><see cref="DescribeCasterLayoutInfosResponse"/></returns>
+        public Task<DescribeCasterLayoutInfosResponse> DescribeCasterLayoutInfos(DescribeCasterLayoutInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeCasterLayoutInfosResponse>(req, "DescribeCasterLayoutInfos");
+        }
+
+        /// <summary>
+        /// 该接口用来查询某个导播台的布局列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCasterLayoutInfosRequest"/></param>
+        /// <returns><see cref="DescribeCasterLayoutInfosResponse"/></returns>
+        public DescribeCasterLayoutInfosResponse DescribeCasterLayoutInfosSync(DescribeCasterLayoutInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeCasterLayoutInfosResponse>(req, "DescribeCasterLayoutInfos")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口用来查询账号下所有的导播台列表
         /// </summary>
         /// <param name="req"><see cref="DescribeCasterListRequest"/></param>
@@ -1383,6 +1574,27 @@ namespace TencentCloud.Live.V20180801
         public DescribeCasterListResponse DescribeCasterListSync(DescribeCasterListRequest req)
         {
             return InternalRequestAsync<DescribeCasterListResponse>(req, "DescribeCasterList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来查询某个导播台的推流信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCasterOutputInfosRequest"/></param>
+        /// <returns><see cref="DescribeCasterOutputInfosResponse"/></returns>
+        public Task<DescribeCasterOutputInfosResponse> DescribeCasterOutputInfos(DescribeCasterOutputInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeCasterOutputInfosResponse>(req, "DescribeCasterOutputInfos");
+        }
+
+        /// <summary>
+        /// 该接口用来查询某个导播台的推流信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCasterOutputInfosRequest"/></param>
+        /// <returns><see cref="DescribeCasterOutputInfosResponse"/></returns>
+        public DescribeCasterOutputInfosResponse DescribeCasterOutputInfosSync(DescribeCasterOutputInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeCasterOutputInfosResponse>(req, "DescribeCasterOutputInfos")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3230,6 +3442,73 @@ namespace TencentCloud.Live.V20180801
         public ModifyCasterResponse ModifyCasterSync(ModifyCasterRequest req)
         {
             return InternalRequestAsync<ModifyCasterResponse>(req, "ModifyCaster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来修改已经设置过的输入源信息，如源地址，源类型等。
+        /// 设置前，需保证待修改的输入源已经存在。若不存在，需使用AddCasterInputInfo接口。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCasterInputInfoRequest"/></param>
+        /// <returns><see cref="ModifyCasterInputInfoResponse"/></returns>
+        public Task<ModifyCasterInputInfoResponse> ModifyCasterInputInfo(ModifyCasterInputInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyCasterInputInfoResponse>(req, "ModifyCasterInputInfo");
+        }
+
+        /// <summary>
+        /// 该接口用来修改已经设置过的输入源信息，如源地址，源类型等。
+        /// 设置前，需保证待修改的输入源已经存在。若不存在，需使用AddCasterInputInfo接口。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCasterInputInfoRequest"/></param>
+        /// <returns><see cref="ModifyCasterInputInfoResponse"/></returns>
+        public ModifyCasterInputInfoResponse ModifyCasterInputInfoSync(ModifyCasterInputInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyCasterInputInfoResponse>(req, "ModifyCasterInputInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来修改布局参数
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCasterLayoutInfoRequest"/></param>
+        /// <returns><see cref="ModifyCasterLayoutInfoResponse"/></returns>
+        public Task<ModifyCasterLayoutInfoResponse> ModifyCasterLayoutInfo(ModifyCasterLayoutInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyCasterLayoutInfoResponse>(req, "ModifyCasterLayoutInfo");
+        }
+
+        /// <summary>
+        /// 该接口用来修改布局参数
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCasterLayoutInfoRequest"/></param>
+        /// <returns><see cref="ModifyCasterLayoutInfoResponse"/></returns>
+        public ModifyCasterLayoutInfoResponse ModifyCasterLayoutInfoSync(ModifyCasterLayoutInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyCasterLayoutInfoResponse>(req, "ModifyCasterLayoutInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来修改导播台的推流信息。
+        /// 注：只有在主监启动前设置才生效，主监启动后设置，下次推流生效。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCasterOutputInfoRequest"/></param>
+        /// <returns><see cref="ModifyCasterOutputInfoResponse"/></returns>
+        public Task<ModifyCasterOutputInfoResponse> ModifyCasterOutputInfo(ModifyCasterOutputInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyCasterOutputInfoResponse>(req, "ModifyCasterOutputInfo");
+        }
+
+        /// <summary>
+        /// 该接口用来修改导播台的推流信息。
+        /// 注：只有在主监启动前设置才生效，主监启动后设置，下次推流生效。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCasterOutputInfoRequest"/></param>
+        /// <returns><see cref="ModifyCasterOutputInfoResponse"/></returns>
+        public ModifyCasterOutputInfoResponse ModifyCasterOutputInfoSync(ModifyCasterOutputInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyCasterOutputInfoResponse>(req, "ModifyCasterOutputInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

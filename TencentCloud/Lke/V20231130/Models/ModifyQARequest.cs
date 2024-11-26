@@ -55,13 +55,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public string CustomParam{ get; set; }
 
         /// <summary>
-        /// 属性标签适用范围 1：全部，2：按条件
+        /// 标签适用范围 1：全部，2：按条件
         /// </summary>
         [JsonProperty("AttrRange")]
         public ulong? AttrRange{ get; set; }
 
         /// <summary>
-        /// 属性标签引用
+        /// 标签引用
         /// </summary>
         [JsonProperty("AttrLabels")]
         public AttrLabelRefer[] AttrLabels{ get; set; }
@@ -96,6 +96,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("SimilarQuestionModify")]
         public SimilarQuestionModify SimilarQuestionModify{ get; set; }
 
+        /// <summary>
+        /// 问题描述
+        /// </summary>
+        [JsonProperty("QuestionDesc")]
+        public string QuestionDesc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "ExpireStart", this.ExpireStart);
             this.SetParamSimple(map, prefix + "ExpireEnd", this.ExpireEnd);
             this.SetParamObj(map, prefix + "SimilarQuestionModify.", this.SimilarQuestionModify);
+            this.SetParamSimple(map, prefix + "QuestionDesc", this.QuestionDesc);
         }
     }
 }

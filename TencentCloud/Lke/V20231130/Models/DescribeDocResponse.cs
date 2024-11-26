@@ -151,16 +151,22 @@ namespace TencentCloud.Lke.V20231130.Models
         public bool? IsAllowEdit{ get; set; }
 
         /// <summary>
-        /// 属性标签适用范围 1：全部，2：按条件范围
+        /// 标签适用范围 1：全部，2：按条件范围
         /// </summary>
         [JsonProperty("AttrRange")]
         public long? AttrRange{ get; set; }
 
         /// <summary>
-        /// 属性标签
+        /// 标签
         /// </summary>
         [JsonProperty("AttrLabels")]
         public AttrLabel[] AttrLabels{ get; set; }
+
+        /// <summary>
+        /// 分类ID
+        /// </summary>
+        [JsonProperty("CateBizId")]
+        public string CateBizId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -197,6 +203,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "IsAllowEdit", this.IsAllowEdit);
             this.SetParamSimple(map, prefix + "AttrRange", this.AttrRange);
             this.SetParamArrayObj(map, prefix + "AttrLabels.", this.AttrLabels);
+            this.SetParamSimple(map, prefix + "CateBizId", this.CateBizId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

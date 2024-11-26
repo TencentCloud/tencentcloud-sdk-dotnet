@@ -59,6 +59,20 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Output")]
         public KnowledgeQaOutput Output{ get; set; }
 
+        /// <summary>
+        /// 工作流程配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Workflow")]
+        public KnowledgeWorkflow Workflow{ get; set; }
+
+        /// <summary>
+        /// 检索范围
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SearchRange")]
+        public SearchRange SearchRange{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +84,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamObj(map, prefix + "Model.", this.Model);
             this.SetParamArrayObj(map, prefix + "Search.", this.Search);
             this.SetParamObj(map, prefix + "Output.", this.Output);
+            this.SetParamObj(map, prefix + "Workflow.", this.Workflow);
+            this.SetParamObj(map, prefix + "SearchRange.", this.SearchRange);
         }
     }
 }

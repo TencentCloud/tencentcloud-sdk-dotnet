@@ -25,7 +25,7 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 统计信息
+        /// X轴: 时间区域；根据查询条件的粒度返回“分/小时/日”两种区间范围
         /// </summary>
         [JsonProperty("X")]
         public string[] X{ get; set; }

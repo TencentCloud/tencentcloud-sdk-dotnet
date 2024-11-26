@@ -59,6 +59,27 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("PromptWordsLimit")]
         public string PromptWordsLimit{ get; set; }
 
+        /// <summary>
+        /// 通过核心采样控制内容生成的多样性，较高的Top P值会导致生成更多样的内容
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TopP")]
+        public ModelParameter TopP{ get; set; }
+
+        /// <summary>
+        /// 温度控制随机性
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Temperature")]
+        public ModelParameter Temperature{ get; set; }
+
+        /// <summary>
+        /// 最多能生成的token数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxTokens")]
+        public ModelParameter MaxTokens{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +91,9 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "AliasName", this.AliasName);
             this.SetParamSimple(map, prefix + "ResourceStatus", this.ResourceStatus);
             this.SetParamSimple(map, prefix + "PromptWordsLimit", this.PromptWordsLimit);
+            this.SetParamObj(map, prefix + "TopP.", this.TopP);
+            this.SetParamObj(map, prefix + "Temperature.", this.Temperature);
+            this.SetParamObj(map, prefix + "MaxTokens.", this.MaxTokens);
         }
     }
 }

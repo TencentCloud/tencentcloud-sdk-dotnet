@@ -31,22 +31,22 @@ namespace TencentCloud.Lke.V20231130.Models
         public string BotBizId{ get; set; }
 
         /// <summary>
-        /// 属性ID
+        /// 标签ID
         /// </summary>
         [JsonProperty("AttributeBizId")]
         public string AttributeBizId{ get; set; }
 
         /// <summary>
-        /// 属性标识
-        /// </summary>
-        [JsonProperty("AttrKey")]
-        public string AttrKey{ get; set; }
-
-        /// <summary>
-        /// 属性名称
+        /// 标签名称
         /// </summary>
         [JsonProperty("AttrName")]
         public string AttrName{ get; set; }
+
+        /// <summary>
+        /// 标签标识 （已作废）
+        /// </summary>
+        [JsonProperty("AttrKey")]
+        public string AttrKey{ get; set; }
 
         /// <summary>
         /// 登录用户主账号(集成商模式必填)
@@ -61,13 +61,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public string LoginSubAccountUin{ get; set; }
 
         /// <summary>
-        /// 删除的属性标签
+        /// 删除的标签值
         /// </summary>
         [JsonProperty("DeleteLabelBizIds")]
         public string[] DeleteLabelBizIds{ get; set; }
 
         /// <summary>
-        /// 新增或编辑的属性标签
+        /// 新增或编辑的标签
         /// </summary>
         [JsonProperty("Labels")]
         public AttributeLabel[] Labels{ get; set; }
@@ -80,8 +80,8 @@ namespace TencentCloud.Lke.V20231130.Models
         {
             this.SetParamSimple(map, prefix + "BotBizId", this.BotBizId);
             this.SetParamSimple(map, prefix + "AttributeBizId", this.AttributeBizId);
-            this.SetParamSimple(map, prefix + "AttrKey", this.AttrKey);
             this.SetParamSimple(map, prefix + "AttrName", this.AttrName);
+            this.SetParamSimple(map, prefix + "AttrKey", this.AttrKey);
             this.SetParamSimple(map, prefix + "LoginUin", this.LoginUin);
             this.SetParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
             this.SetParamArraySimple(map, prefix + "DeleteLabelBizIds.", this.DeleteLabelBizIds);

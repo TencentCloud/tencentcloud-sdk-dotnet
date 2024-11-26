@@ -25,7 +25,7 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 可用并发数
+        /// 可用并发数上限
         /// </summary>
         [JsonProperty("AvailableConcurrency")]
         public ulong? AvailableConcurrency{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public ulong? ConcurrencyPeak{ get; set; }
 
         /// <summary>
-        /// 调用超可用次数
+        /// 超出可用并发数上限的次数
         /// </summary>
         [JsonProperty("ExceedUsageTime")]
         public ulong? ExceedUsageTime{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// 数据库类型，如mysql
+        /// 数据库类型，如mysql,redis等
         /// </summary>
         [JsonProperty("DatabaseType")]
         public string DatabaseType{ get; set; }

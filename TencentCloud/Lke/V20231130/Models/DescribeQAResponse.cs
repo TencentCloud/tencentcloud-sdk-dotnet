@@ -145,13 +145,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public string OrgData{ get; set; }
 
         /// <summary>
-        /// 属性标签适用范围
+        /// 标签适用范围
         /// </summary>
         [JsonProperty("AttrRange")]
         public long? AttrRange{ get; set; }
 
         /// <summary>
-        /// 属性标签
+        /// 标签
         /// </summary>
         [JsonProperty("AttrLabels")]
         public AttrLabel[] AttrLabels{ get; set; }
@@ -173,6 +173,30 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         [JsonProperty("SimilarQuestions")]
         public SimilarQuestion[] SimilarQuestions{ get; set; }
+
+        /// <summary>
+        /// 问题和答案文本审核状态 1审核失败
+        /// </summary>
+        [JsonProperty("QaAuditStatus")]
+        public ulong? QaAuditStatus{ get; set; }
+
+        /// <summary>
+        /// 答案中的图片审核状态 1审核失败
+        /// </summary>
+        [JsonProperty("PicAuditStatus")]
+        public ulong? PicAuditStatus{ get; set; }
+
+        /// <summary>
+        /// 答案中的视频审核状态 1审核失败
+        /// </summary>
+        [JsonProperty("VideoAuditStatus")]
+        public ulong? VideoAuditStatus{ get; set; }
+
+        /// <summary>
+        /// 问题描述
+        /// </summary>
+        [JsonProperty("QuestionDesc")]
+        public string QuestionDesc{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -211,6 +235,10 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "ExpireStart", this.ExpireStart);
             this.SetParamSimple(map, prefix + "ExpireEnd", this.ExpireEnd);
             this.SetParamArrayObj(map, prefix + "SimilarQuestions.", this.SimilarQuestions);
+            this.SetParamSimple(map, prefix + "QaAuditStatus", this.QaAuditStatus);
+            this.SetParamSimple(map, prefix + "PicAuditStatus", this.PicAuditStatus);
+            this.SetParamSimple(map, prefix + "VideoAuditStatus", this.VideoAuditStatus);
+            this.SetParamSimple(map, prefix + "QuestionDesc", this.QuestionDesc);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -43,7 +43,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public bool? IsRefer{ get; set; }
 
         /// <summary>
-        /// 属性标签适用范围 1：全部，2：按条件
+        /// 标签适用范围 1：全部，2：按条件
         /// </summary>
         [JsonProperty("AttrRange")]
         public ulong? AttrRange{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string LoginSubAccountUin{ get; set; }
 
         /// <summary>
-        /// 适用范围，关联的属性标签
+        /// 关联的标签
         /// </summary>
         [JsonProperty("AttrLabels")]
         public AttrLabelRefer[] AttrLabels{ get; set; }
@@ -91,6 +91,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("ExpireEnd")]
         public string ExpireEnd{ get; set; }
 
+        /// <summary>
+        /// 分类ID
+        /// </summary>
+        [JsonProperty("CateBizId")]
+        public string CateBizId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +114,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "ReferUrlType", this.ReferUrlType);
             this.SetParamSimple(map, prefix + "ExpireStart", this.ExpireStart);
             this.SetParamSimple(map, prefix + "ExpireEnd", this.ExpireEnd);
+            this.SetParamSimple(map, prefix + "CateBizId", this.CateBizId);
         }
     }
 }

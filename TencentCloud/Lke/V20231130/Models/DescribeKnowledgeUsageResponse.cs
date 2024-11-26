@@ -25,13 +25,13 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 可用字符数
+        /// 可用字符数上限
         /// </summary>
         [JsonProperty("AvailableCharSize")]
         public string AvailableCharSize{ get; set; }
 
         /// <summary>
-        /// 超量字符数
+        /// 超过可用字符数上限的字符数
         /// </summary>
         [JsonProperty("ExceedCharSize")]
         public string ExceedCharSize{ get; set; }

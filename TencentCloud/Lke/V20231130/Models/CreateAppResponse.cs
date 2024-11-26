@@ -32,6 +32,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public string AppBizId{ get; set; }
 
         /// <summary>
+        /// 判断账户应用列表权限是否是自定义的，用户交互提示
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsCustomList")]
+        public bool? IsCustomList{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -44,6 +51,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AppBizId", this.AppBizId);
+            this.SetParamSimple(map, prefix + "IsCustomList", this.IsCustomList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

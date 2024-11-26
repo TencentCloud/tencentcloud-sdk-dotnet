@@ -84,6 +84,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("QaBizIds")]
         public string[] QaBizIds{ get; set; }
 
+        /// <summary>
+        /// 查询类型 filename 名称、 attribute 标签
+        /// </summary>
+        [JsonProperty("QueryType")]
+        public string QueryType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Source", this.Source);
             this.SetParamSimple(map, prefix + "QueryAnswer", this.QueryAnswer);
             this.SetParamArraySimple(map, prefix + "QaBizIds.", this.QaBizIds);
+            this.SetParamSimple(map, prefix + "QueryType", this.QueryType);
         }
     }
 }

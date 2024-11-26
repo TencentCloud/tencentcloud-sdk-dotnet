@@ -31,22 +31,22 @@ namespace TencentCloud.Lke.V20231130.Models
         public string BotBizId{ get; set; }
 
         /// <summary>
-        /// 属性标识
-        /// </summary>
-        [JsonProperty("AttrKey")]
-        public string AttrKey{ get; set; }
-
-        /// <summary>
-        /// 属性名称
+        /// 标签名
         /// </summary>
         [JsonProperty("AttrName")]
         public string AttrName{ get; set; }
 
         /// <summary>
-        /// 属性标签
+        /// 标签值
         /// </summary>
         [JsonProperty("Labels")]
         public AttributeLabel[] Labels{ get; set; }
+
+        /// <summary>
+        /// 标签标识（不生效，无需填写） 已作废
+        /// </summary>
+        [JsonProperty("AttrKey")]
+        public string AttrKey{ get; set; }
 
         /// <summary>
         /// 登录用户主账号(集成商模式必填)
@@ -67,9 +67,9 @@ namespace TencentCloud.Lke.V20231130.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "BotBizId", this.BotBizId);
-            this.SetParamSimple(map, prefix + "AttrKey", this.AttrKey);
             this.SetParamSimple(map, prefix + "AttrName", this.AttrName);
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
+            this.SetParamSimple(map, prefix + "AttrKey", this.AttrKey);
             this.SetParamSimple(map, prefix + "LoginUin", this.LoginUin);
             this.SetParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
         }

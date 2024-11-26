@@ -54,6 +54,18 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }
 
+        /// <summary>
+        /// 查询类型 filename 文档、 attribute 标签
+        /// </summary>
+        [JsonProperty("QueryType")]
+        public string QueryType{ get; set; }
+
+        /// <summary>
+        /// 分类ID
+        /// </summary>
+        [JsonProperty("CateBizId")]
+        public string CateBizId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "Query", this.Query);
             this.SetParamArraySimple(map, prefix + "Status.", this.Status);
+            this.SetParamSimple(map, prefix + "QueryType", this.QueryType);
+            this.SetParamSimple(map, prefix + "CateBizId", this.CateBizId);
         }
     }
 }

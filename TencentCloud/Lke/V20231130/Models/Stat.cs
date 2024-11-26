@@ -25,14 +25,14 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// x轴时间戳
+        /// X轴: 时间区域；根据查询条件的粒度返回“分/小时/日”三种区间范围
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("X")]
         public string X{ get; set; }
 
         /// <summary>
-        /// y轴统计值
+        /// Y轴: 该时间区域内的统计值，如token消耗量，调用次数或使用量等信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Y")]

@@ -25,19 +25,19 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 总消耗
+        /// Token消耗总量
         /// </summary>
         [JsonProperty("Total")]
         public Stat[] Total{ get; set; }
 
         /// <summary>
-        /// 输入消耗
+        /// 输入Token消耗量
         /// </summary>
         [JsonProperty("Input")]
         public Stat[] Input{ get; set; }
 
         /// <summary>
-        /// 输出消耗
+        /// 输出Token消耗量
         /// </summary>
         [JsonProperty("Output")]
         public Stat[] Output{ get; set; }

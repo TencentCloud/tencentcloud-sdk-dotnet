@@ -55,19 +55,19 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ExecutionFileType{ get; set; }
 
         /// <summary>
-        /// 统一执行平台执行id
+        /// 统一执行平台执行id, 注意: ExecutionJobId 跟 "BrokerIp+OriginFileName" 必须有一个不为空
         /// </summary>
         [JsonProperty("ExecutionJobId")]
         public string ExecutionJobId{ get; set; }
 
         /// <summary>
-        /// 服务器Ip
+        /// 服务器Ip, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
         /// </summary>
         [JsonProperty("BrokerIp")]
         public string BrokerIp{ get; set; }
 
         /// <summary>
-        /// 文件Name
+        /// 文件Name, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
         /// </summary>
         [JsonProperty("OriginFileName")]
         public string OriginFileName{ get; set; }

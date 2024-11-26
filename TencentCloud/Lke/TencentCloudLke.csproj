@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{350F9F65-0799-338B-90EA-9EBA008679C1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1129</VersionPrefix>
+    <VersionPrefix>3.0.1130</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,7 @@
 
   <ItemGroup>
     <Compile Include="V20231130\LkeClient.cs" />
+    <Compile Include="V20231130\Models\ApiVarAttrInfo.cs" />
     <Compile Include="V20231130\Models\AppConfig.cs" />
     <Compile Include="V20231130\Models\AppInfo.cs" />
     <Compile Include="V20231130\Models\AppModel.cs" />
@@ -186,6 +187,7 @@
     <Compile Include="V20231130\Models\KnowledgeQaOutput.cs" />
     <Compile Include="V20231130\Models\KnowledgeQaSearch.cs" />
     <Compile Include="V20231130\Models\KnowledgeSummary.cs" />
+    <Compile Include="V20231130\Models\KnowledgeWorkflow.cs" />
     <Compile Include="V20231130\Models\Label.cs" />
     <Compile Include="V20231130\Models\ListAppCategoryRequest.cs" />
     <Compile Include="V20231130\Models\ListAppCategoryResponse.cs" />
@@ -223,6 +225,7 @@
     <Compile Include="V20231130\Models\ListUnsatisfiedReplyResponse.cs" />
     <Compile Include="V20231130\Models\Message.cs" />
     <Compile Include="V20231130\Models\ModelInfo.cs" />
+    <Compile Include="V20231130\Models\ModelParameter.cs" />
     <Compile Include="V20231130\Models\ModifyAppRequest.cs" />
     <Compile Include="V20231130\Models\ModifyAppResponse.cs" />
     <Compile Include="V20231130\Models\ModifyAttributeLabelRequest.cs" />
@@ -282,9 +285,11 @@
     <Compile Include="V20231130\Models\RunReRankResponse.cs" />
     <Compile Include="V20231130\Models\SaveDocRequest.cs" />
     <Compile Include="V20231130\Models\SaveDocResponse.cs" />
+    <Compile Include="V20231130\Models\SearchRange.cs" />
     <Compile Include="V20231130\Models\SimilarQuestion.cs" />
     <Compile Include="V20231130\Models\SimilarQuestionModify.cs" />
     <Compile Include="V20231130\Models\Stat.cs" />
+    <Compile Include="V20231130\Models\StatisticInfo.cs" />
     <Compile Include="V20231130\Models\StopDocParseRequest.cs" />
     <Compile Include="V20231130\Models\StopDocParseResponse.cs" />
     <Compile Include="V20231130\Models\StrValue.cs" />
@@ -302,5 +307,7 @@
     <Compile Include="V20231130\Models\VerifyQARequest.cs" />
     <Compile Include="V20231130\Models\VerifyQAResponse.cs" />
     <Compile Include="V20231130\Models\WordRecognizeInfo.cs" />
+    <Compile Include="V20231130\Models\WorkFlowSummary.cs" />
+    <Compile Include="V20231130\Models\WorkflowRunNodeInfo.cs" />
   </ItemGroup>
 </Project>
