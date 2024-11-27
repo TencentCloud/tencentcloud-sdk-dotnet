@@ -30,6 +30,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SegmentSet")]
         public SegmentRecognitionItem[] SegmentSet{ get; set; }
 
+        /// <summary>
+        /// 视频摘要，离线场景用。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Abstract")]
+        public string Abstract{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +44,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
+            this.SetParamSimple(map, prefix + "Abstract", this.Abstract);
         }
     }
 }

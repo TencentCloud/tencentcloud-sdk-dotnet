@@ -30,6 +30,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
+        /// <summary>
+        /// 客户端用户 id,如果未指定则为用户 id。
+        /// </summary>
+        [JsonProperty("OriginId")]
+        public string OriginId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "OriginId", this.OriginId);
         }
     }
 }

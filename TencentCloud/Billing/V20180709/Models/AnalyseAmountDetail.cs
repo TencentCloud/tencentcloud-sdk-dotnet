@@ -26,14 +26,12 @@ namespace TencentCloud.Billing.V20180709.Models
         
         /// <summary>
         /// 费用类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
         /// 是否展示
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Display")]
         public long? Display{ get; set; }

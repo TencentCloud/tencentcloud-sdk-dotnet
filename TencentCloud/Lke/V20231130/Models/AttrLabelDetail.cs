@@ -59,6 +59,20 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("IsUpdating")]
         public bool? IsUpdating{ get; set; }
 
+        /// <summary>
+        /// 状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
+        /// <summary>
+        /// 状态描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StatusDesc")]
+        public string StatusDesc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +84,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "AttrName", this.AttrName);
             this.SetParamArraySimple(map, prefix + "LabelNames.", this.LabelNames);
             this.SetParamSimple(map, prefix + "IsUpdating", this.IsUpdating);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
         }
     }
 }

@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Privatedns.V20201028.Models
+namespace TencentCloud.Dnspod.V20210323.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeForwardRuleListResponse : AbstractModel
+    public class DescribeSubdomainValidateStatusRequest : AbstractModel
     {
         
         /// <summary>
-        /// 私有域数量
+        /// 要查看 TXT 记录校验状态的子域名 Zone 域。
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
-
-        /// <summary>
-        /// 私有域列表
-        /// </summary>
-        [JsonProperty("ForwardRuleSet")]
-        public ForwardRule[] ForwardRuleSet{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("DomainZone")]
+        public string DomainZone{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "ForwardRuleSet.", this.ForwardRuleSet);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "DomainZone", this.DomainZone);
         }
     }
 }

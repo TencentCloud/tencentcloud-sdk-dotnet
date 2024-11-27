@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Privatedns.V20201028.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeEndPointListRequest : AbstractModel
+    public class StopCasterPgmRequest : AbstractModel
     {
         
         /// <summary>
-        /// 分页偏移量，从0开始
+        /// 导播台ID。
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
-
-        /// <summary>
-        /// 分页限制数目， 最大100，默认20
-        /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
-
-        /// <summary>
-        /// 过滤参数，支持EndPointName,EndPointId,EndPointServiceId,EndPointVip
-        /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
+        [JsonProperty("CasterId")]
+        public ulong? CasterId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "CasterId", this.CasterId);
         }
     }
 }

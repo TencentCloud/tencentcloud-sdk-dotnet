@@ -28,7 +28,7 @@ namespace TencentCloud.Dnspod.V20210323
 
        private const string endpoint = "dnspod.tencentcloudapi.com";
        private const string version = "2021-03-23";
-       private const string sdkVersion = "SDK_NET_3.0.1130";
+       private const string sdkVersion = "SDK_NET_3.0.1131";
 
         /// <summary>
         /// Client constructor.
@@ -350,6 +350,27 @@ namespace TencentCloud.Dnspod.V20210323
         public CreateSnapshotResponse CreateSnapshotSync(CreateSnapshotRequest req)
         {
             return InternalRequestAsync<CreateSnapshotResponse>(req, "CreateSnapshot")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建添加子域名 Zone 域解析时所需要的 TXT 记录值
+        /// </summary>
+        /// <param name="req"><see cref="CreateSubdomainValidateTXTValueRequest"/></param>
+        /// <returns><see cref="CreateSubdomainValidateTXTValueResponse"/></returns>
+        public Task<CreateSubdomainValidateTXTValueResponse> CreateSubdomainValidateTXTValue(CreateSubdomainValidateTXTValueRequest req)
+        {
+            return InternalRequestAsync<CreateSubdomainValidateTXTValueResponse>(req, "CreateSubdomainValidateTXTValue");
+        }
+
+        /// <summary>
+        /// 创建添加子域名 Zone 域解析时所需要的 TXT 记录值
+        /// </summary>
+        /// <param name="req"><see cref="CreateSubdomainValidateTXTValueRequest"/></param>
+        /// <returns><see cref="CreateSubdomainValidateTXTValueResponse"/></returns>
+        public CreateSubdomainValidateTXTValueResponse CreateSubdomainValidateTXTValueSync(CreateSubdomainValidateTXTValueRequest req)
+        {
+            return InternalRequestAsync<CreateSubdomainValidateTXTValueResponse>(req, "CreateSubdomainValidateTXTValue")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1229,6 +1250,27 @@ namespace TencentCloud.Dnspod.V20210323
         public DescribeSubdomainAnalyticsResponse DescribeSubdomainAnalyticsSync(DescribeSubdomainAnalyticsRequest req)
         {
             return InternalRequestAsync<DescribeSubdomainAnalyticsResponse>(req, "DescribeSubdomainAnalytics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查看添加子域名 Zone 域解析 TXT 记录值验证状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubdomainValidateStatusRequest"/></param>
+        /// <returns><see cref="DescribeSubdomainValidateStatusResponse"/></returns>
+        public Task<DescribeSubdomainValidateStatusResponse> DescribeSubdomainValidateStatus(DescribeSubdomainValidateStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeSubdomainValidateStatusResponse>(req, "DescribeSubdomainValidateStatus");
+        }
+
+        /// <summary>
+        /// 查看添加子域名 Zone 域解析 TXT 记录值验证状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubdomainValidateStatusRequest"/></param>
+        /// <returns><see cref="DescribeSubdomainValidateStatusResponse"/></returns>
+        public DescribeSubdomainValidateStatusResponse DescribeSubdomainValidateStatusSync(DescribeSubdomainValidateStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeSubdomainValidateStatusResponse>(req, "DescribeSubdomainValidateStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

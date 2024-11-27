@@ -26,21 +26,18 @@ namespace TencentCloud.Billing.V20180709.Models
         
         /// <summary>
         /// 表头日期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HeadDetail")]
         public AnalyseHeaderTimeDetail[] HeadDetail{ get; set; }
 
         /// <summary>
         /// 时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 总计
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public string Total{ get; set; }

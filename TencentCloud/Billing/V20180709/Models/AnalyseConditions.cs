@@ -26,63 +26,54 @@ namespace TencentCloud.Billing.V20180709.Models
         
         /// <summary>
         /// 产品名称代码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BusinessCodes")]
         public string BusinessCodes{ get; set; }
 
         /// <summary>
         /// 子产品名称代码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductCodes")]
         public string ProductCodes{ get; set; }
 
         /// <summary>
         /// 组件类型代码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComponentCode")]
         public string ComponentCode{ get; set; }
 
         /// <summary>
         /// 可用区ID：资源所属可用区ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string ZoneIds{ get; set; }
 
         /// <summary>
         /// 地域ID:资源所属地域ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionIds")]
         public string RegionIds{ get; set; }
 
         /// <summary>
         /// 项目ID:资源所属项目ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectIds")]
         public string ProjectIds{ get; set; }
 
         /// <summary>
         /// 计费模式 prePay(表示包年包月)/postPay(表示按量计费)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayModes")]
         public string PayModes{ get; set; }
 
         /// <summary>
         /// 交易类型，查询交易类型（请使用交易类型code入参）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActionTypes")]
         public string ActionTypes{ get; set; }
 
         /// <summary>
         /// 分账标签键
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public string Tags{ get; set; }
@@ -94,28 +85,24 @@ namespace TencentCloud.Billing.V20180709.Models
         /// voucherPayAmount:优惠券 
         /// tax:税金 
         /// costBeforeTax:税前价
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FeeType")]
         public string FeeType{ get; set; }
 
         /// <summary>
         /// 查询成本分析数据的用户UIN
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayerUins")]
         public string PayerUins{ get; set; }
 
         /// <summary>
         /// 使用资源的用户UIN
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OwnerUins")]
         public string OwnerUins{ get; set; }
 
         /// <summary>
         /// 消耗类型，查询消耗类型（请使用消耗类型code入参）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConsumptionTypes")]
         public string ConsumptionTypes{ get; set; }

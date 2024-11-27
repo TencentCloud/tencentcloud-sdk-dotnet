@@ -336,6 +336,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("MemRatio")]
         public long? MemRatio{ get; set; }
 
+        /// <summary>
+        /// 是否开启跨租户弹性网卡
+        /// </summary>
+        [JsonProperty("CrossTenantEniMode")]
+        public long? CrossTenantEniMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -389,6 +395,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamSimple(map, prefix + "BillingResourceMode", this.BillingResourceMode);
             this.SetParamSimple(map, prefix + "MemRatio", this.MemRatio);
+            this.SetParamSimple(map, prefix + "CrossTenantEniMode", this.CrossTenantEniMode);
         }
     }
 }

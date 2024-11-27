@@ -57,6 +57,13 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("ToolCalls")]
         public ToolCall[] ToolCalls{ get; set; }
 
+        /// <summary>
+        /// 文件标识符。单次最大 50 个文件。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FileIDs")]
+        public string[] FileIDs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +75,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamArrayObj(map, prefix + "Contents.", this.Contents);
             this.SetParamSimple(map, prefix + "ToolCallId", this.ToolCallId);
             this.SetParamArrayObj(map, prefix + "ToolCalls.", this.ToolCalls);
+            this.SetParamArraySimple(map, prefix + "FileIDs.", this.FileIDs);
         }
     }
 }

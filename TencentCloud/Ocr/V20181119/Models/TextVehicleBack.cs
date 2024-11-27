@@ -109,6 +109,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("FuelType")]
         public string FuelType{ get; set; }
 
+        /// <summary>
+        /// 住址
+        /// </summary>
+        [JsonProperty("AddressElectronic")]
+        public string AddressElectronic{ get; set; }
+
+        /// <summary>
+        /// 发证机关
+        /// </summary>
+        [JsonProperty("IssueAuthorityElectronic")]
+        public string IssueAuthorityElectronic{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -127,6 +139,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "TotalQuasiMass", this.TotalQuasiMass);
             this.SetParamSimple(map, prefix + "SubPageCode", this.SubPageCode);
             this.SetParamSimple(map, prefix + "FuelType", this.FuelType);
+            this.SetParamSimple(map, prefix + "AddressElectronic", this.AddressElectronic);
+            this.SetParamSimple(map, prefix + "IssueAuthorityElectronic", this.IssueAuthorityElectronic);
         }
     }
 }

@@ -66,6 +66,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Action")]
         public ulong? Action{ get; set; }
 
+        /// <summary>
+        /// ACL规则描述
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "DestinationCidr", this.DestinationCidr);
             this.SetParamSimple(map, prefix + "AclRuleId", this.AclRuleId);
             this.SetParamSimple(map, prefix + "Action", this.Action);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

@@ -15,15 +15,39 @@
  * under the License.
  */
 
-namespace TencentCloud.Privatedns.V20201028.Models
+namespace TencentCloud.Dnspod.V20210323.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyForwardRuleResponse : AbstractModel
+    public class CreateSubdomainValidateTXTValueResponse : AbstractModel
     {
         
+        /// <summary>
+        /// 需要添加 TXT 记录的域名。
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
+        /// <summary>
+        /// 需要添加 TXT 记录的主机记录。
+        /// </summary>
+        [JsonProperty("Subdomain")]
+        public string Subdomain{ get; set; }
+
+        /// <summary>
+        /// 需要添加记录类型。
+        /// </summary>
+        [JsonProperty("RecordType")]
+        public string RecordType{ get; set; }
+
+        /// <summary>
+        /// 需要添加 TXT 记录的记录值。
+        /// </summary>
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
+
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -36,6 +60,10 @@ namespace TencentCloud.Privatedns.V20201028.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "Subdomain", this.Subdomain);
+            this.SetParamSimple(map, prefix + "RecordType", this.RecordType);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

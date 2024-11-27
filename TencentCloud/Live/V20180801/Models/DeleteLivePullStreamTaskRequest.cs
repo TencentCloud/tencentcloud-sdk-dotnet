@@ -36,6 +36,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
+        /// <summary>
+        /// 指定任务 ID。注意：用于删除使用自定义任务 ID 创建的任务。
+        /// </summary>
+        [JsonProperty("SpecifyTaskId")]
+        public string SpecifyTaskId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Live.V20180801.Models
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamSimple(map, prefix + "SpecifyTaskId", this.SpecifyTaskId);
         }
     }
 }

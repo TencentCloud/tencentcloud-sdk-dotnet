@@ -15,15 +15,31 @@
  * under the License.
  */
 
-namespace TencentCloud.Privatedns.V20201028.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteForwardRuleResponse : AbstractModel
+    public class CreateCasterPvwResponse : AbstractModel
     {
         
+        /// <summary>
+        /// 预监任务的画面rtmp协议预览地址。
+        /// 注：该预览地址仅供画面预览，不可分发。
+        /// </summary>
+        [JsonProperty("PvwPlayUrl")]
+        public string PvwPlayUrl{ get; set; }
+
+        /// <summary>
+        /// 预监任务的webrtc协议预览画面。
+        /// 注：
+        /// 1. 该预览地址仅供预览，不可分发。
+        /// 2. webrtc播放地址，需配合腾讯云快直播播放sdk使用
+        /// </summary>
+        [JsonProperty("PvwWebRTCPlayUrl")]
+        public string PvwWebRTCPlayUrl{ get; set; }
+
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -36,6 +52,8 @@ namespace TencentCloud.Privatedns.V20201028.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "PvwPlayUrl", this.PvwPlayUrl);
+            this.SetParamSimple(map, prefix + "PvwWebRTCPlayUrl", this.PvwWebRTCPlayUrl);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

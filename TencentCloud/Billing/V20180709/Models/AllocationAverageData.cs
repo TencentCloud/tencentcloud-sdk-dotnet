@@ -26,21 +26,18 @@ namespace TencentCloud.Billing.V20180709.Models
         
         /// <summary>
         /// 起始月份
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BeginMonth")]
         public string BeginMonth{ get; set; }
 
         /// <summary>
         /// 结束月份
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndMonth")]
         public string EndMonth{ get; set; }
 
         /// <summary>
         /// 合计费用(折后总额)平均值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealTotalCost")]
         public string RealTotalCost{ get; set; }

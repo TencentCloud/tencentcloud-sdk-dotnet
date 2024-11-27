@@ -15,21 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Privatedns.V20201028.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeEndPointRegionRequest : AbstractModel
+    public class StopCasterPvwRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 导播台ID。
+        /// </summary>
+        [JsonProperty("CasterId")]
+        public ulong? CasterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "CasterId", this.CasterId);
         }
     }
 }

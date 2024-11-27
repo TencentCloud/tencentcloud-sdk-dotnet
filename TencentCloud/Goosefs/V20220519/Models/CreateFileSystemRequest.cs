@@ -78,6 +78,12 @@ namespace TencentCloud.Goosefs.V20220519.Models
         [JsonProperty("SecurityGroupId")]
         public string SecurityGroupId{ get; set; }
 
+        /// <summary>
+        /// 集群ssh通信端口，默认是22
+        /// </summary>
+        [JsonProperty("ClusterPort")]
+        public ulong? ClusterPort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Goosefs.V20220519.Models
             this.SetParamArrayObj(map, prefix + "Tag.", this.Tag);
             this.SetParamObj(map, prefix + "GooseFSxBuildElements.", this.GooseFSxBuildElements);
             this.SetParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
+            this.SetParamSimple(map, prefix + "ClusterPort", this.ClusterPort);
         }
     }
 }

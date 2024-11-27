@@ -15,38 +15,46 @@
  * under the License.
  */
 
-namespace TencentCloud.Privatedns.V20201028.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateEndPointAndEndPointServiceResponse : AbstractModel
+    public class CreateCasterPgmResponse : AbstractModel
     {
         
         /// <summary>
-        /// 终端节点id
+        /// 主监任务的rtmp协议预览地址。
+        /// 注：该地址仅供预览，不可分发。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("EndPointId")]
-        public string EndPointId{ get; set; }
+        [JsonProperty("PgmPlayUrl")]
+        public string PgmPlayUrl{ get; set; }
 
         /// <summary>
-        /// 终端节点名
+        /// 注：该字段已废弃，请结合腾讯云直播播放地址生成策略生成cdn播放地址。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("EndPointName")]
-        public string EndPointName{ get; set; }
+        [JsonProperty("CdnPlayUrl")]
+        public string CdnPlayUrl{ get; set; }
 
         /// <summary>
-        /// 终端节点服务ID
+        /// 主监任务在腾讯云直播侧的流ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("EndPointServiceId")]
-        public string EndPointServiceId{ get; set; }
+        [JsonProperty("CdnStreamId")]
+        public string CdnStreamId{ get; set; }
 
         /// <summary>
-        /// 终端节点的IP列表
+        /// 主监任务的webrtc协议播放地址。
+        /// 注：
+        /// 1. 该预览地址仅作为预览，不可分发。
+        /// 2. webrtc播放地址需配合腾讯云快直播播放sdk使用。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("EndPointVipSet")]
-        public string[] EndPointVipSet{ get; set; }
+        [JsonProperty("PgmWebRTCPlayUrl")]
+        public string PgmWebRTCPlayUrl{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -60,10 +68,10 @@ namespace TencentCloud.Privatedns.V20201028.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EndPointId", this.EndPointId);
-            this.SetParamSimple(map, prefix + "EndPointName", this.EndPointName);
-            this.SetParamSimple(map, prefix + "EndPointServiceId", this.EndPointServiceId);
-            this.SetParamArraySimple(map, prefix + "EndPointVipSet.", this.EndPointVipSet);
+            this.SetParamSimple(map, prefix + "PgmPlayUrl", this.PgmPlayUrl);
+            this.SetParamSimple(map, prefix + "CdnPlayUrl", this.CdnPlayUrl);
+            this.SetParamSimple(map, prefix + "CdnStreamId", this.CdnStreamId);
+            this.SetParamSimple(map, prefix + "PgmWebRTCPlayUrl", this.PgmWebRTCPlayUrl);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

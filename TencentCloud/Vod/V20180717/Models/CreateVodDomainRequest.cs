@@ -46,6 +46,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("AccelerateArea")]
         public string AccelerateArea{ get; set; }
 
+        /// <summary>
+        /// 域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>不填默认取值为 VOD 。
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -55,6 +61,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "AccelerateArea", this.AccelerateArea);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

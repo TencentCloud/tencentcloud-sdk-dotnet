@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Privatedns.V20201028.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteEndPointRequest : AbstractModel
+    public class ReleaseCasterRequest : AbstractModel
     {
         
         /// <summary>
-        /// 终端节点ID
+        /// 导播台ID。
         /// </summary>
-        [JsonProperty("EndPointId")]
-        public string EndPointId{ get; set; }
+        [JsonProperty("CasterId")]
+        public ulong? CasterId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EndPointId", this.EndPointId);
+            this.SetParamSimple(map, prefix + "CasterId", this.CasterId);
         }
     }
 }

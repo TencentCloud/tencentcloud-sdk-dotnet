@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1130";
+       private const string sdkVersion = "SDK_NET_3.0.1131";
 
         /// <summary>
         /// Client constructor.
@@ -285,6 +285,71 @@ namespace TencentCloud.Live.V20180801
         public CreateCasterInputPushUrlResponse CreateCasterInputPushUrlSync(CreateCasterInputPushUrlRequest req)
         {
             return InternalRequestAsync<CreateCasterInputPushUrlResponse>(req, "CreateCasterInputPushUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来启动主监任务，并将获取主监画面的播放地址。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCasterPgmRequest"/></param>
+        /// <returns><see cref="CreateCasterPgmResponse"/></returns>
+        public Task<CreateCasterPgmResponse> CreateCasterPgm(CreateCasterPgmRequest req)
+        {
+            return InternalRequestAsync<CreateCasterPgmResponse>(req, "CreateCasterPgm");
+        }
+
+        /// <summary>
+        /// 该接口用来启动主监任务，并将获取主监画面的播放地址。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCasterPgmRequest"/></param>
+        /// <returns><see cref="CreateCasterPgmResponse"/></returns>
+        public CreateCasterPgmResponse CreateCasterPgmSync(CreateCasterPgmRequest req)
+        {
+            return InternalRequestAsync<CreateCasterPgmResponse>(req, "CreateCasterPgm")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来将预监画面的布局、水印、字幕等配置，复制到主监画面中。
+        /// 该接口使用时，预监任务需处于运行状态。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCasterPgmFromPvwRequest"/></param>
+        /// <returns><see cref="CreateCasterPgmFromPvwResponse"/></returns>
+        public Task<CreateCasterPgmFromPvwResponse> CreateCasterPgmFromPvw(CreateCasterPgmFromPvwRequest req)
+        {
+            return InternalRequestAsync<CreateCasterPgmFromPvwResponse>(req, "CreateCasterPgmFromPvw");
+        }
+
+        /// <summary>
+        /// 该接口用来将预监画面的布局、水印、字幕等配置，复制到主监画面中。
+        /// 该接口使用时，预监任务需处于运行状态。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCasterPgmFromPvwRequest"/></param>
+        /// <returns><see cref="CreateCasterPgmFromPvwResponse"/></returns>
+        public CreateCasterPgmFromPvwResponse CreateCasterPgmFromPvwSync(CreateCasterPgmFromPvwRequest req)
+        {
+            return InternalRequestAsync<CreateCasterPgmFromPvwResponse>(req, "CreateCasterPgmFromPvw")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来启动预监任务，并将获取预监画面的播放地址。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCasterPvwRequest"/></param>
+        /// <returns><see cref="CreateCasterPvwResponse"/></returns>
+        public Task<CreateCasterPvwResponse> CreateCasterPvw(CreateCasterPvwRequest req)
+        {
+            return InternalRequestAsync<CreateCasterPvwResponse>(req, "CreateCasterPvw");
+        }
+
+        /// <summary>
+        /// 该接口用来启动预监任务，并将获取预监画面的播放地址。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCasterPvwRequest"/></param>
+        /// <returns><see cref="CreateCasterPvwResponse"/></returns>
+        public CreateCasterPvwResponse CreateCasterPvwSync(CreateCasterPvwRequest req)
+        {
+            return InternalRequestAsync<CreateCasterPvwResponse>(req, "CreateCasterPvw")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3834,6 +3899,31 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 调用该接口，释放导播台实例，但保留所有的配置。
+        /// 执行该接口，预监与主监画面停止，第三方推流停止。
+        /// 点播文件与直播地址将停止展示，客户自行推到导播台的流需要手动停止。
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseCasterRequest"/></param>
+        /// <returns><see cref="ReleaseCasterResponse"/></returns>
+        public Task<ReleaseCasterResponse> ReleaseCaster(ReleaseCasterRequest req)
+        {
+            return InternalRequestAsync<ReleaseCasterResponse>(req, "ReleaseCaster");
+        }
+
+        /// <summary>
+        /// 调用该接口，释放导播台实例，但保留所有的配置。
+        /// 执行该接口，预监与主监画面停止，第三方推流停止。
+        /// 点播文件与直播地址将停止展示，客户自行推到导播台的流需要手动停止。
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseCasterRequest"/></param>
+        /// <returns><see cref="ReleaseCasterResponse"/></returns>
+        public ReleaseCasterResponse ReleaseCasterSync(ReleaseCasterRequest req)
+        {
+            return InternalRequestAsync<ReleaseCasterResponse>(req, "ReleaseCaster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 将正在运行的拉流转推任务进行重启。
         /// 注意：
         /// 1. 重启任务会造成推流中断。
@@ -3920,6 +4010,50 @@ namespace TencentCloud.Live.V20180801
         public StartLiveStreamMonitorResponse StartLiveStreamMonitorSync(StartLiveStreamMonitorRequest req)
         {
             return InternalRequestAsync<StartLiveStreamMonitorResponse>(req, "StartLiveStreamMonitor")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来停止导播台的主监输出。
+        /// 停止主监后，对应的推流到腾讯云直播源站和推流到其他第三方平台均将会停止。
+        /// </summary>
+        /// <param name="req"><see cref="StopCasterPgmRequest"/></param>
+        /// <returns><see cref="StopCasterPgmResponse"/></returns>
+        public Task<StopCasterPgmResponse> StopCasterPgm(StopCasterPgmRequest req)
+        {
+            return InternalRequestAsync<StopCasterPgmResponse>(req, "StopCasterPgm");
+        }
+
+        /// <summary>
+        /// 该接口用来停止导播台的主监输出。
+        /// 停止主监后，对应的推流到腾讯云直播源站和推流到其他第三方平台均将会停止。
+        /// </summary>
+        /// <param name="req"><see cref="StopCasterPgmRequest"/></param>
+        /// <returns><see cref="StopCasterPgmResponse"/></returns>
+        public StopCasterPgmResponse StopCasterPgmSync(StopCasterPgmRequest req)
+        {
+            return InternalRequestAsync<StopCasterPgmResponse>(req, "StopCasterPgm")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来停止导播台的预监任务。
+        /// </summary>
+        /// <param name="req"><see cref="StopCasterPvwRequest"/></param>
+        /// <returns><see cref="StopCasterPvwResponse"/></returns>
+        public Task<StopCasterPvwResponse> StopCasterPvw(StopCasterPvwRequest req)
+        {
+            return InternalRequestAsync<StopCasterPvwResponse>(req, "StopCasterPvw");
+        }
+
+        /// <summary>
+        /// 该接口用来停止导播台的预监任务。
+        /// </summary>
+        /// <param name="req"><see cref="StopCasterPvwRequest"/></param>
+        /// <returns><see cref="StopCasterPvwResponse"/></returns>
+        public StopCasterPvwResponse StopCasterPvwSync(StopCasterPvwRequest req)
+        {
+            return InternalRequestAsync<StopCasterPvwResponse>(req, "StopCasterPvw")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

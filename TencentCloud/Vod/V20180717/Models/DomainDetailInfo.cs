@@ -88,6 +88,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("IPFilterPolicy")]
         public IPFilterPolicy IPFilterPolicy{ get; set; }
 
+        /// <summary>
+        /// 域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +109,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamObj(map, prefix + "QUICConfig.", this.QUICConfig);
             this.SetParamObj(map, prefix + "IPFilterPolicy.", this.IPFilterPolicy);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Privatedns.V20201028.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyForwardRuleRequest : AbstractModel
+    public class CreateCasterPvwRequest : AbstractModel
     {
         
         /// <summary>
-        /// 转发规则ID
+        /// 导播台预监展示信息参数
         /// </summary>
-        [JsonProperty("RuleId")]
-        public string RuleId{ get; set; }
+        [JsonProperty("PvwDisplayInfo")]
+        public CasterDisplayInfo PvwDisplayInfo{ get; set; }
 
         /// <summary>
-        /// 转发规则名称
+        /// 导播台ID。
         /// </summary>
-        [JsonProperty("RuleName")]
-        public string RuleName{ get; set; }
-
-        /// <summary>
-        /// 终端节点ID
-        /// </summary>
-        [JsonProperty("EndPointId")]
-        public string EndPointId{ get; set; }
+        [JsonProperty("CasterId")]
+        public ulong? CasterId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Privatedns.V20201028.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
-            this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
-            this.SetParamSimple(map, prefix + "EndPointId", this.EndPointId);
+            this.SetParamObj(map, prefix + "PvwDisplayInfo.", this.PvwDisplayInfo);
+            this.SetParamSimple(map, prefix + "CasterId", this.CasterId);
         }
     }
 }
