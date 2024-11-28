@@ -26,49 +26,42 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         
         /// <summary>
         /// 入站规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InBound")]
         public UsgPolicy[] InBound{ get; set; }
 
         /// <summary>
         /// 出站规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutBound")]
         public UsgPolicy[] OutBound{ get; set; }
 
         /// <summary>
         /// 安全组Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SgId")]
         public string SgId{ get; set; }
 
         /// <summary>
         /// 安全组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SgName")]
         public string SgName{ get; set; }
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SgRemark")]
         public string SgRemark{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public long? Version{ get; set; }

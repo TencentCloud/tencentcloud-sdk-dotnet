@@ -15,56 +15,42 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Bi.V20220105.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RecognizeKoreanIDCardOCRResponse : AbstractModel
+    public class ExportScreenPageResponse : AbstractModel
     {
         
         /// <summary>
-        /// 身份证号码
+        /// 自定义错误信息对象
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ID")]
-        public string ID{ get; set; }
+        [JsonProperty("ErrorInfo")]
+        public ErrorInfo ErrorInfo{ get; set; }
 
         /// <summary>
-        /// 地址
+        /// 扩展参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Address")]
-        public string Address{ get; set; }
+        [JsonProperty("Extra")]
+        public string Extra{ get; set; }
 
         /// <summary>
-        /// 姓名
+        /// 返回数据结果
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("Data")]
+        public PageScreenListVO Data{ get; set; }
 
         /// <summary>
-        /// 发证日期
+        /// 返回消息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("DateOfIssue")]
-        public string DateOfIssue{ get; set; }
-
-        /// <summary>
-        /// 人像截图Base64后的结果
-        /// </summary>
-        [JsonProperty("Photo")]
-        public string Photo{ get; set; }
-
-        /// <summary>
-        /// 性别
-        /// </summary>
-        [JsonProperty("Sex")]
-        public string Sex{ get; set; }
-
-        /// <summary>
-        /// 生日，格式为dd/mm/yyyy
-        /// </summary>
-        [JsonProperty("Birthday")]
-        public string Birthday{ get; set; }
+        [JsonProperty("Msg")]
+        public string Msg{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -78,13 +64,10 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ID", this.ID);
-            this.SetParamSimple(map, prefix + "Address", this.Address);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "DateOfIssue", this.DateOfIssue);
-            this.SetParamSimple(map, prefix + "Photo", this.Photo);
-            this.SetParamSimple(map, prefix + "Sex", this.Sex);
-            this.SetParamSimple(map, prefix + "Birthday", this.Birthday);
+            this.SetParamObj(map, prefix + "ErrorInfo.", this.ErrorInfo);
+            this.SetParamSimple(map, prefix + "Extra", this.Extra);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "Msg", this.Msg);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

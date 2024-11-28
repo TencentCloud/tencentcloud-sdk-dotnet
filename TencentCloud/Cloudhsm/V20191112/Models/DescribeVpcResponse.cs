@@ -32,7 +32,6 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
 
         /// <summary>
         /// Vpc对象列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcList")]
         public Vpc[] VpcList{ get; set; }

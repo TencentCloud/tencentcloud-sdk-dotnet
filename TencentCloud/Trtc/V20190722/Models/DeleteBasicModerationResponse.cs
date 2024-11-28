@@ -15,38 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Trtc.V20190722.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RecognizePhilippinesSssIDOCRResponse : AbstractModel
+    public class DeleteBasicModerationResponse : AbstractModel
     {
         
         /// <summary>
-        /// 人像照片Base64后的结果
+        /// 审核任务的唯一Id，在启动审核任务成功后会返回。
         /// </summary>
-        [JsonProperty("HeadPortrait")]
-        public TextDetectionResult HeadPortrait{ get; set; }
-
-        /// <summary>
-        /// 编号
-        /// </summary>
-        [JsonProperty("LicenseNumber")]
-        public TextDetectionResult LicenseNumber{ get; set; }
-
-        /// <summary>
-        /// 姓名
-        /// </summary>
-        [JsonProperty("FullName")]
-        public TextDetectionResult FullName{ get; set; }
-
-        /// <summary>
-        /// 生日
-        /// </summary>
-        [JsonProperty("Birthday")]
-        public TextDetectionResult Birthday{ get; set; }
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -60,10 +42,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "HeadPortrait.", this.HeadPortrait);
-            this.SetParamObj(map, prefix + "LicenseNumber.", this.LicenseNumber);
-            this.SetParamObj(map, prefix + "FullName.", this.FullName);
-            this.SetParamObj(map, prefix + "Birthday.", this.Birthday);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

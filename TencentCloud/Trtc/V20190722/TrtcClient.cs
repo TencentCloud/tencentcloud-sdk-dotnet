@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1131";
+       private const string sdkVersion = "SDK_NET_3.0.1132";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,29 @@ namespace TencentCloud.Trtc.V20190722
         public ControlAIConversationResponse ControlAIConversationSync(ControlAIConversationRequest req)
         {
             return InternalRequestAsync<ControlAIConversationResponse>(req, "ControlAIConversation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 接口说明：
+        /// 启动终端审核功能，完成房间内的音频审核。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBasicModerationRequest"/></param>
+        /// <returns><see cref="CreateBasicModerationResponse"/></returns>
+        public Task<CreateBasicModerationResponse> CreateBasicModeration(CreateBasicModerationRequest req)
+        {
+            return InternalRequestAsync<CreateBasicModerationResponse>(req, "CreateBasicModeration");
+        }
+
+        /// <summary>
+        /// 接口说明：
+        /// 启动终端审核功能，完成房间内的音频审核。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBasicModerationRequest"/></param>
+        /// <returns><see cref="CreateBasicModerationResponse"/></returns>
+        public CreateBasicModerationResponse CreateBasicModerationSync(CreateBasicModerationRequest req)
+        {
+            return InternalRequestAsync<CreateBasicModerationResponse>(req, "CreateBasicModeration")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -135,6 +158,27 @@ namespace TencentCloud.Trtc.V20190722
         public CreatePictureResponse CreatePictureSync(CreatePictureRequest req)
         {
             return InternalRequestAsync<CreatePictureResponse>(req, "CreatePicture")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 成功开启审核任务后，可以使用此接口来停止任务。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBasicModerationRequest"/></param>
+        /// <returns><see cref="DeleteBasicModerationResponse"/></returns>
+        public Task<DeleteBasicModerationResponse> DeleteBasicModeration(DeleteBasicModerationRequest req)
+        {
+            return InternalRequestAsync<DeleteBasicModerationResponse>(req, "DeleteBasicModeration");
+        }
+
+        /// <summary>
+        /// 成功开启审核任务后，可以使用此接口来停止任务。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBasicModerationRequest"/></param>
+        /// <returns><see cref="DeleteBasicModerationResponse"/></returns>
+        public DeleteBasicModerationResponse DeleteBasicModerationSync(DeleteBasicModerationRequest req)
+        {
+            return InternalRequestAsync<DeleteBasicModerationResponse>(req, "DeleteBasicModeration")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

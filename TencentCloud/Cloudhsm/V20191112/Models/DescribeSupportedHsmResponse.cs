@@ -26,7 +26,6 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         
         /// <summary>
         /// 当前地域所支持的设备列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceTypes")]
         public DeviceInfo[] DeviceTypes{ get; set; }

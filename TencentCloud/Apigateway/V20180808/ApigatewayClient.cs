@@ -28,7 +28,7 @@ namespace TencentCloud.Apigateway.V20180808
 
        private const string endpoint = "apigateway.tencentcloudapi.com";
        private const string version = "2018-08-08";
-       private const string sdkVersion = "SDK_NET_3.0.1131";
+       private const string sdkVersion = "SDK_NET_3.0.1132";
 
         /// <summary>
         /// Client constructor.
@@ -289,6 +289,27 @@ namespace TencentCloud.Apigateway.V20180808
         public CreateApiKeyResponse CreateApiKeySync(CreateApiKeyRequest req)
         {
             return InternalRequestAsync<CreateApiKeyResponse>(req, "CreateApiKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建专享实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateExclusiveInstancesRequest"/></param>
+        /// <returns><see cref="CreateExclusiveInstancesResponse"/></returns>
+        public Task<CreateExclusiveInstancesResponse> CreateExclusiveInstances(CreateExclusiveInstancesRequest req)
+        {
+            return InternalRequestAsync<CreateExclusiveInstancesResponse>(req, "CreateExclusiveInstances");
+        }
+
+        /// <summary>
+        /// 创建专享实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateExclusiveInstancesRequest"/></param>
+        /// <returns><see cref="CreateExclusiveInstancesResponse"/></returns>
+        public CreateExclusiveInstancesResponse CreateExclusiveInstancesSync(CreateExclusiveInstancesRequest req)
+        {
+            return InternalRequestAsync<CreateExclusiveInstancesResponse>(req, "CreateExclusiveInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1082,6 +1103,27 @@ namespace TencentCloud.Apigateway.V20180808
         public DescribeIPStrategysStatusResponse DescribeIPStrategysStatusSync(DescribeIPStrategysStatusRequest req)
         {
             return InternalRequestAsync<DescribeIPStrategysStatusResponse>(req, "DescribeIPStrategysStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取专享实例网络配置列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesNetworkConfigRequest"/></param>
+        /// <returns><see cref="DescribeInstancesNetworkConfigResponse"/></returns>
+        public Task<DescribeInstancesNetworkConfigResponse> DescribeInstancesNetworkConfig(DescribeInstancesNetworkConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancesNetworkConfigResponse>(req, "DescribeInstancesNetworkConfig");
+        }
+
+        /// <summary>
+        /// 获取专享实例网络配置列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesNetworkConfigRequest"/></param>
+        /// <returns><see cref="DescribeInstancesNetworkConfigResponse"/></returns>
+        public DescribeInstancesNetworkConfigResponse DescribeInstancesNetworkConfigSync(DescribeInstancesNetworkConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancesNetworkConfigResponse>(req, "DescribeInstancesNetworkConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

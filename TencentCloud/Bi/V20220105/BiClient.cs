@@ -28,7 +28,7 @@ namespace TencentCloud.Bi.V20220105
 
        private const string endpoint = "bi.tencentcloudapi.com";
        private const string version = "2022-01-05";
-       private const string sdkVersion = "SDK_NET_3.0.1131";
+       private const string sdkVersion = "SDK_NET_3.0.1132";
 
         /// <summary>
         /// Client constructor.
@@ -306,6 +306,27 @@ namespace TencentCloud.Bi.V20220105
         }
 
         /// <summary>
+        /// 查询页面组件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePageWidgetListRequest"/></param>
+        /// <returns><see cref="DescribePageWidgetListResponse"/></returns>
+        public Task<DescribePageWidgetListResponse> DescribePageWidgetList(DescribePageWidgetListRequest req)
+        {
+            return InternalRequestAsync<DescribePageWidgetListResponse>(req, "DescribePageWidgetList");
+        }
+
+        /// <summary>
+        /// 查询页面组件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePageWidgetListRequest"/></param>
+        /// <returns><see cref="DescribePageWidgetListResponse"/></returns>
+        public DescribePageWidgetListResponse DescribePageWidgetListSync(DescribePageWidgetListRequest req)
+        {
+            return InternalRequestAsync<DescribePageWidgetListResponse>(req, "DescribePageWidgetList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 项目详情接口
         /// </summary>
         /// <param name="req"><see cref="DescribeProjectInfoRequest"/></param>
@@ -407,6 +428,27 @@ namespace TencentCloud.Bi.V20220105
         public DescribeUserRoleProjectListResponse DescribeUserRoleProjectListSync(DescribeUserRoleProjectListRequest req)
         {
             return InternalRequestAsync<DescribeUserRoleProjectListResponse>(req, "DescribeUserRoleProjectList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 页面截图导出
+        /// </summary>
+        /// <param name="req"><see cref="ExportScreenPageRequest"/></param>
+        /// <returns><see cref="ExportScreenPageResponse"/></returns>
+        public Task<ExportScreenPageResponse> ExportScreenPage(ExportScreenPageRequest req)
+        {
+            return InternalRequestAsync<ExportScreenPageResponse>(req, "ExportScreenPage");
+        }
+
+        /// <summary>
+        /// 页面截图导出
+        /// </summary>
+        /// <param name="req"><see cref="ExportScreenPageRequest"/></param>
+        /// <returns><see cref="ExportScreenPageResponse"/></returns>
+        public ExportScreenPageResponse ExportScreenPageSync(ExportScreenPageRequest req)
+        {
+            return InternalRequestAsync<ExportScreenPageResponse>(req, "ExportScreenPage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

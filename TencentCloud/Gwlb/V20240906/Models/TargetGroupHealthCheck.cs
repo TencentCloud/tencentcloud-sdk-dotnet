@@ -40,7 +40,7 @@ namespace TencentCloud.Gwlb.V20240906.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 健康检查端口，探测协议未tcp时，该参数必填。
+        /// 健康检查端口，探测协议为tcp时，该参数必填。
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }

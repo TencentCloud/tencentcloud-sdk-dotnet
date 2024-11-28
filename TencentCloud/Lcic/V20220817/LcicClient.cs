@@ -28,7 +28,7 @@ namespace TencentCloud.Lcic.V20220817
 
        private const string endpoint = "lcic.tencentcloudapi.com";
        private const string version = "2022-08-17";
-       private const string sdkVersion = "SDK_NET_3.0.1131";
+       private const string sdkVersion = "SDK_NET_3.0.1132";
 
         /// <summary>
         /// Client constructor.
@@ -730,6 +730,27 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 查询跑马灯配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMarqueeRequest"/></param>
+        /// <returns><see cref="DescribeMarqueeResponse"/></returns>
+        public Task<DescribeMarqueeResponse> DescribeMarquee(DescribeMarqueeRequest req)
+        {
+            return InternalRequestAsync<DescribeMarqueeResponse>(req, "DescribeMarquee");
+        }
+
+        /// <summary>
+        /// 查询跑马灯配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMarqueeRequest"/></param>
+        /// <returns><see cref="DescribeMarqueeResponse"/></returns>
+        public DescribeMarqueeResponse DescribeMarqueeSync(DescribeMarqueeRequest req)
+        {
+            return InternalRequestAsync<DescribeMarqueeResponse>(req, "DescribeMarquee")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取房间提问列表
         /// </summary>
         /// <param name="req"><see cref="DescribeQuestionListRequest"/></param>
@@ -1297,6 +1318,27 @@ namespace TencentCloud.Lcic.V20220817
         public SetAppCustomContentResponse SetAppCustomContentSync(SetAppCustomContentRequest req)
         {
             return InternalRequestAsync<SetAppCustomContentResponse>(req, "SetAppCustomContent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设置跑马灯参数设置
+        /// </summary>
+        /// <param name="req"><see cref="SetMarqueeRequest"/></param>
+        /// <returns><see cref="SetMarqueeResponse"/></returns>
+        public Task<SetMarqueeResponse> SetMarquee(SetMarqueeRequest req)
+        {
+            return InternalRequestAsync<SetMarqueeResponse>(req, "SetMarquee");
+        }
+
+        /// <summary>
+        /// 设置跑马灯参数设置
+        /// </summary>
+        /// <param name="req"><see cref="SetMarqueeRequest"/></param>
+        /// <returns><see cref="SetMarqueeResponse"/></returns>
+        public SetMarqueeResponse SetMarqueeSync(SetMarqueeRequest req)
+        {
+            return InternalRequestAsync<SetMarqueeResponse>(req, "SetMarquee")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -38,7 +38,6 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// 使用记录细节
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UsageDetails")]
         public UsageDetails[] UsageDetails{ get; set; }
@@ -51,21 +50,18 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// 查询的券id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VoucherId")]
         public string VoucherId{ get; set; }
 
         /// <summary>
         /// 交易场景：（adjust：调账、common：正常交易场景）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayScene")]
         public string PayScene{ get; set; }
 
         /// <summary>
         /// 唯一id,对应交易:预付费的dealName,调账/后付费的outTradeNo
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SeqId")]
         public string SeqId{ get; set; }

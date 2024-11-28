@@ -26,63 +26,54 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// 集团服务ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceId")]
         public ulong? ServiceId{ get; set; }
 
         /// <summary>
         /// 集团服务产品名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
         /// 委派管理员Uin。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemberUin")]
         public long? MemberUin{ get; set; }
 
         /// <summary>
         /// 委派管理员名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemberName")]
         public string MemberName{ get; set; }
 
         /// <summary>
         /// 启用状态 。取值：0-服务无启用状态  1-已启用  2-未启用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UsageStatus")]
         public ulong? UsageStatus{ get; set; }
 
         /// <summary>
         /// 委派时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 委派管理员管理范围。取值: 1-全部成员  2-部分成员
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ManagementScope")]
         public ulong? ManagementScope{ get; set; }
 
         /// <summary>
         /// 管理的成员Uin列表。ManagementScope值为2时该参数有效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ManagementScopeMembers")]
         public MemberMainInfo[] ManagementScopeMembers{ get; set; }
 
         /// <summary>
         /// 管理的部门ID列表。ManagementScope值为2时该参数有效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ManagementScopeNodes")]
         public NodeMainInfo[] ManagementScopeNodes{ get; set; }

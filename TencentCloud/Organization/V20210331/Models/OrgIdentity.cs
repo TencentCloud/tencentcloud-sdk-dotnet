@@ -26,42 +26,36 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// 身份ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentityId")]
         public long? IdentityId{ get; set; }
 
         /// <summary>
         /// 身份名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentityAliasName")]
         public string IdentityAliasName{ get; set; }
 
         /// <summary>
         /// 描述。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 身份策略。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentityPolicy")]
         public IdentityPolicy[] IdentityPolicy{ get; set; }
 
         /// <summary>
         /// 身份类型。 1-预设、 2-自定义
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentityType")]
         public ulong? IdentityType{ get; set; }
 
         /// <summary>
         /// 更新时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

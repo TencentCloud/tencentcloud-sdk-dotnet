@@ -26,112 +26,96 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// 企业组织ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrgId")]
         public long? OrgId{ get; set; }
 
         /// <summary>
         /// 创建者UIN。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostUin")]
         public long? HostUin{ get; set; }
 
         /// <summary>
         /// 创建者昵称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NickName")]
         public string NickName{ get; set; }
 
         /// <summary>
         /// 企业组织类型。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrgType")]
         public long? OrgType{ get; set; }
 
         /// <summary>
         /// 是否组织管理员。是：true ，否：false
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsManager")]
         public bool? IsManager{ get; set; }
 
         /// <summary>
         /// 策略类型。财务管理：Financial
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrgPolicyType")]
         public string OrgPolicyType{ get; set; }
 
         /// <summary>
         /// 策略名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrgPolicyName")]
         public string OrgPolicyName{ get; set; }
 
         /// <summary>
         /// 成员财务权限列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrgPermission")]
         public OrgPermission[] OrgPermission{ get; set; }
 
         /// <summary>
         /// 组织根节点ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RootNodeId")]
         public long? RootNodeId{ get; set; }
 
         /// <summary>
         /// 组织创建时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 成员加入时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JoinTime")]
         public string JoinTime{ get; set; }
 
         /// <summary>
         /// 成员是否允许退出。允许：Allow，不允许：Denied
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsAllowQuit")]
         public string IsAllowQuit{ get; set; }
 
         /// <summary>
         /// 代付者Uin。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayUin")]
         public string PayUin{ get; set; }
 
         /// <summary>
         /// 代付者名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayName")]
         public string PayName{ get; set; }
 
         /// <summary>
         /// 是否可信服务管理员。是：true，否：false
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsAssignManager")]
         public bool? IsAssignManager{ get; set; }
 
         /// <summary>
         /// 是否实名主体管理员。是：true，否：false
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsAuthManager")]
         public bool? IsAuthManager{ get; set; }

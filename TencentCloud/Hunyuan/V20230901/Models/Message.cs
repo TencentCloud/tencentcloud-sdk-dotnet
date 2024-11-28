@@ -37,7 +37,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public string Content{ get; set; }
 
         /// <summary>
-        /// 多种类型内容（目前支持图片和文本），仅 hunyuan-vision 模型支持
+        /// 多种类型内容（目前支持图片和文本），仅 hunyuan-vision 和 hunyuan-turbo-vision 模型支持
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Contents")]

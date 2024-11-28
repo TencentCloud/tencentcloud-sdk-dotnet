@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1131</VersionPrefix>
+    <VersionPrefix>3.0.1132</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -228,26 +228,12 @@
     <Compile Include="V20181119\Models\RecognizeGeneralTextImageWarnResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeHealthCodeOCRRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeHealthCodeOCRResponse.cs" />
-    <Compile Include="V20181119\Models\RecognizeIndonesiaIDCardOCRRequest.cs" />
-    <Compile Include="V20181119\Models\RecognizeIndonesiaIDCardOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeKoreanDrivingLicenseOCRRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeKoreanDrivingLicenseOCRResponse.cs" />
-    <Compile Include="V20181119\Models\RecognizeKoreanIDCardOCRRequest.cs" />
-    <Compile Include="V20181119\Models\RecognizeKoreanIDCardOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeMedicalInvoiceOCRRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeMedicalInvoiceOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeOnlineTaxiItineraryOCRRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeOnlineTaxiItineraryOCRResponse.cs" />
-    <Compile Include="V20181119\Models\RecognizePhilippinesDrivingLicenseOCRRequest.cs" />
-    <Compile Include="V20181119\Models\RecognizePhilippinesDrivingLicenseOCRResponse.cs" />
-    <Compile Include="V20181119\Models\RecognizePhilippinesSssIDOCRRequest.cs" />
-    <Compile Include="V20181119\Models\RecognizePhilippinesSssIDOCRResponse.cs" />
-    <Compile Include="V20181119\Models\RecognizePhilippinesTinIDOCRRequest.cs" />
-    <Compile Include="V20181119\Models\RecognizePhilippinesTinIDOCRResponse.cs" />
-    <Compile Include="V20181119\Models\RecognizePhilippinesUMIDOCRRequest.cs" />
-    <Compile Include="V20181119\Models\RecognizePhilippinesUMIDOCRResponse.cs" />
-    <Compile Include="V20181119\Models\RecognizePhilippinesVoteIDOCRRequest.cs" />
-    <Compile Include="V20181119\Models\RecognizePhilippinesVoteIDOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeStoreNameRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeStoreNameResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeTableAccurateOCRRequest.cs" />
@@ -306,7 +292,6 @@
     <Compile Include="V20181119\Models\TextDetectResponse.cs" />
     <Compile Include="V20181119\Models\TextDetection.cs" />
     <Compile Include="V20181119\Models\TextDetectionEn.cs" />
-    <Compile Include="V20181119\Models\TextDetectionResult.cs" />
     <Compile Include="V20181119\Models\TextEduPaper.cs" />
     <Compile Include="V20181119\Models\TextFormula.cs" />
     <Compile Include="V20181119\Models\TextGeneralHandwriting.cs" />

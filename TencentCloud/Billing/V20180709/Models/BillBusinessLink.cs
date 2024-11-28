@@ -25,6 +25,18 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
+        /// 产品编码
+        /// </summary>
+        [JsonProperty("BusinessCode")]
+        public string BusinessCode{ get; set; }
+
+        /// <summary>
+        /// 产品名称
+        /// </summary>
+        [JsonProperty("BusinessCodeName")]
+        public string BusinessCodeName{ get; set; }
+
+        /// <summary>
         /// 子产品
         /// </summary>
         [JsonProperty("Children")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Billing.V20180709.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
+            this.SetParamSimple(map, prefix + "BusinessCodeName", this.BusinessCodeName);
             this.SetParamArrayObj(map, prefix + "Children.", this.Children);
         }
     }

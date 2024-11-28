@@ -15,26 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Bi.V20220105.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TextDetectionResult : AbstractModel
+    public class WidgetVO : AbstractModel
     {
         
         /// <summary>
-        /// 识别出的文本行内容
+        /// 组件Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("WidgetId")]
+        public string WidgetId{ get; set; }
 
         /// <summary>
-        /// 坐标，以四个顶点坐标表示
+        /// 组件name
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Polygon")]
-        public Coord[] Polygon{ get; set; }
+        [JsonProperty("WidgetName")]
+        public string WidgetName{ get; set; }
 
 
         /// <summary>
@@ -42,8 +44,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Value", this.Value);
-            this.SetParamArrayObj(map, prefix + "Polygon.", this.Polygon);
+            this.SetParamSimple(map, prefix + "WidgetId", this.WidgetId);
+            this.SetParamSimple(map, prefix + "WidgetName", this.WidgetName);
         }
     }
 }

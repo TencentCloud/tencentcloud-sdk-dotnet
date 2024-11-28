@@ -25,13 +25,13 @@ namespace TencentCloud.Lcic.V20220817.Models
     {
         
         /// <summary>
-        /// 用户Id。
+        /// 用户id。支持通过 user_id 或 OriginId 查询用户信息，优先使用 user_id 进行查询。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 客户端用户 id,如果未指定则为用户 id。
+        /// 用户在客户系统的Id。支持通过 user_id 或 OriginId 查询用户信息，优先使用 user_id 进行查询（UserId不为空时，OriginId不生效）。
         /// </summary>
         [JsonProperty("OriginId")]
         public string OriginId{ get; set; }

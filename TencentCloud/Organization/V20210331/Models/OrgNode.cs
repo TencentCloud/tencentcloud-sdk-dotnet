@@ -26,49 +26,42 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// 组织节点ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeId")]
         public long? NodeId{ get; set; }
 
         /// <summary>
         /// 名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 父节点ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParentNodeId")]
         public long? ParentNodeId{ get; set; }
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 成员标签列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

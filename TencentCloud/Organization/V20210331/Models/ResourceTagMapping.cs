@@ -27,21 +27,18 @@ namespace TencentCloud.Organization.V20210331.Models
         /// <summary>
         /// 资源六段式。腾讯云使用资源六段式描述一个资源。
         /// 例如：qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resource")]
         public string Resource{ get; set; }
 
         /// <summary>
         /// 合规详情。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComplianceDetails")]
         public TagComplianceDetails ComplianceDetails{ get; set; }
 
         /// <summary>
         /// 资源标签。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tags[] Tags{ get; set; }

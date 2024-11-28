@@ -25,7 +25,7 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 是否开启[云监控](https://cloud.tencent.com/document/product/248)服务。取值范围：
+        /// 是否开启[可观测平台（原名云监控）](https://cloud.tencent.com/document/product/248)服务。取值范围：
         /// <li>TRUE：表示开启云监控服务</li>
         /// <li>FALSE：表示不开启云监控服务</li>
         /// 默认取值：TRUE。

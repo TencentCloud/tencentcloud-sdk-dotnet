@@ -43,7 +43,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public OffsiteFlag OffsiteFlag{ get; set; }
 
         /// <summary>
-        /// 1: 提示7天信任设备 0: 不提示
+        /// 是否提示信任设备：1: 提示  0: 不提示
         /// </summary>
         [JsonProperty("PromptTrust")]
         public ulong? PromptTrust{ get; set; }

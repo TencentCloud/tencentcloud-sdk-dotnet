@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1131";
+       private const string sdkVersion = "SDK_NET_3.0.1132";
 
         /// <summary>
         /// Client constructor.
@@ -1878,7 +1878,7 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// 重排序
+        /// 基于知识引擎精调模型技术的rerank模型，支持对多路召回的结果进行重排序，根据query与切片内容的相关性，按分数由高到低对切片进行排序，并输出对应的打分结果。
         /// </summary>
         /// <param name="req"><see cref="RunReRankRequest"/></param>
         /// <returns><see cref="RunReRankResponse"/></returns>
@@ -1888,7 +1888,7 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// 重排序
+        /// 基于知识引擎精调模型技术的rerank模型，支持对多路召回的结果进行重排序，根据query与切片内容的相关性，按分数由高到低对切片进行排序，并输出对应的打分结果。
         /// </summary>
         /// <param name="req"><see cref="RunReRankRequest"/></param>
         /// <returns><see cref="RunReRankResponse"/></returns>

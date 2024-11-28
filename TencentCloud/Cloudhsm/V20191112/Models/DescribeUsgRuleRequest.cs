@@ -25,7 +25,7 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
     {
         
         /// <summary>
-        /// 根据安全组Id获取安全组详情
+        /// 安全组Id列表
         /// </summary>
         [JsonProperty("SgIds")]
         public string[] SgIds{ get; set; }

@@ -43,7 +43,7 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 查找关键字
+        /// 过滤条件
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }

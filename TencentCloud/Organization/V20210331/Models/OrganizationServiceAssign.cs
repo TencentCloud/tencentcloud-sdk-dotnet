@@ -26,49 +26,42 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// 集团服务ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceId")]
         public ulong? ServiceId{ get; set; }
 
         /// <summary>
         /// 集团服务产品名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
         /// 是否支持委派。取值: 1-是  2-否
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsAssign")]
         public ulong? IsAssign{ get; set; }
 
         /// <summary>
         /// 集团服务描述。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 当前委派管理员数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemberNum")]
         public string MemberNum{ get; set; }
 
         /// <summary>
         /// 帮助文档。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Document")]
         public string Document{ get; set; }
 
         /// <summary>
         /// 集团服务产品控制台路径。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConsoleUrl")]
         public string ConsoleUrl{ get; set; }
@@ -76,42 +69,36 @@ namespace TencentCloud.Organization.V20210331.Models
         /// <summary>
         /// 是否接入使用状态。取值: 1-是 
         ///  2-否
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsUsageStatus")]
         public ulong? IsUsageStatus{ get; set; }
 
         /// <summary>
         /// 委派管理员数量限制。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CanAssignCount")]
         public ulong? CanAssignCount{ get; set; }
 
         /// <summary>
         /// 集团服务产品标识。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
         /// <summary>
         /// 是否支持集团服务授权。取值 1-是、2-否
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceGrant")]
         public ulong? ServiceGrant{ get; set; }
 
         /// <summary>
         /// 集团服务授权启用状态。ServiceGrant值为1时该字段有效 ，取值：Enabled-开启  Disabled-关闭 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GrantStatus")]
         public string GrantStatus{ get; set; }
 
         /// <summary>
         /// 是否支持设置委派管理范围。取值: 1-是  2-否
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSetManagementScope")]
         public ulong? IsSetManagementScope{ get; set; }

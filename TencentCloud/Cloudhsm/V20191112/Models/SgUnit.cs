@@ -26,28 +26,24 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         
         /// <summary>
         /// 安全组Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SgId")]
         public string SgId{ get; set; }
 
         /// <summary>
         /// 安全组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SgName")]
         public string SgName{ get; set; }
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SgRemark")]
         public string SgRemark{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

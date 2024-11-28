@@ -37,7 +37,7 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 搜索关键字
+        /// 过滤条件，支持安全组id
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }

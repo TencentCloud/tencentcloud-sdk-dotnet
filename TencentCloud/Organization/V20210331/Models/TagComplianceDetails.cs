@@ -26,21 +26,18 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// 合规状态。true-合规，false-不合规
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComplianceStatus")]
         public bool? ComplianceStatus{ get; set; }
 
         /// <summary>
         /// 值不合规的标签键列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeysWithNonCompliantValues")]
         public string[] KeysWithNonCompliantValues{ get; set; }
 
         /// <summary>
         /// 键不合规的标签键列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NonCompliantKeys")]
         public string[] NonCompliantKeys{ get; set; }

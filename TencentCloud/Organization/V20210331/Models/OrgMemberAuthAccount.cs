@@ -26,63 +26,54 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// 组织子账号Uin。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrgSubAccountUin")]
         public long? OrgSubAccountUin{ get; set; }
 
         /// <summary>
         /// 策略ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyId")]
         public long? PolicyId{ get; set; }
 
         /// <summary>
         /// 策略名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }
 
         /// <summary>
         /// 身份ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentityId")]
         public long? IdentityId{ get; set; }
 
         /// <summary>
         /// 身份角色名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentityRoleName")]
         public string IdentityRoleName{ get; set; }
 
         /// <summary>
         /// 身份角色别名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentityRoleAliasName")]
         public string IdentityRoleAliasName{ get; set; }
 
         /// <summary>
         /// 创建时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 更新时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 子账号名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrgSubAccountName")]
         public string OrgSubAccountName{ get; set; }

@@ -91,85 +91,73 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         public long? ExpireTime{ get; set; }
 
         /// <summary>
-        /// 安全组详情信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 安全组详情信息,如果未配置字段返回null
         /// </summary>
         [JsonProperty("SgList")]
         public UsgRuleDetail[] SgList{ get; set; }
 
         /// <summary>
         /// 子网名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetName")]
         public string SubnetName{ get; set; }
 
         /// <summary>
         /// 地域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionName")]
         public string RegionName{ get; set; }
 
         /// <summary>
         /// 区域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
         /// 实例是否已经过期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Expired")]
         public bool? Expired{ get; set; }
 
         /// <summary>
         /// 为正数表示实例距离过期时间剩余秒数，为负数表示实例已经过期多少秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RemainSeconds")]
         public long? RemainSeconds{ get; set; }
 
         /// <summary>
         /// 私有虚拟网络名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
         /// <summary>
         /// VPC的IPv4 CIDR
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcCidrBlock")]
         public string VpcCidrBlock{ get; set; }
 
         /// <summary>
         /// 子网的CIDR
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetCidrBlock")]
         public string SubnetCidrBlock{ get; set; }
 
         /// <summary>
-        /// 资源所关联的Tag
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 资源所关联的标签Tag
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
         /// 资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
         /// 厂商
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Manufacturer")]
         public string Manufacturer{ get; set; }

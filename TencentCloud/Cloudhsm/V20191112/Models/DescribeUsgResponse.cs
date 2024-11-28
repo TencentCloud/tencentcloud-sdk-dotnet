@@ -26,7 +26,6 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         
         /// <summary>
         /// 用户的安全组列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SgList")]
         public SgUnit[] SgList{ get; set; }

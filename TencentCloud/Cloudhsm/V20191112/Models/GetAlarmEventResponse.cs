@@ -26,7 +26,6 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         
         /// <summary>
         /// 用户所有的告警策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlarmConfig")]
         public AlarmPolicy[] AlarmConfig{ get; set; }

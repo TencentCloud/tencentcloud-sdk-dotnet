@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0E2E4A0A-F402-371E-ABDD-F5704C69EAD3}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1131</VersionPrefix>
+    <VersionPrefix>3.0.1132</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -79,6 +79,8 @@
     <Compile Include="V20220105\Models\DeleteUserRoleResponse.cs" />
     <Compile Include="V20220105\Models\DescribeDatasourceListRequest.cs" />
     <Compile Include="V20220105\Models\DescribeDatasourceListResponse.cs" />
+    <Compile Include="V20220105\Models\DescribePageWidgetListRequest.cs" />
+    <Compile Include="V20220105\Models\DescribePageWidgetListResponse.cs" />
     <Compile Include="V20220105\Models\DescribeProjectInfoRequest.cs" />
     <Compile Include="V20220105\Models\DescribeProjectInfoResponse.cs" />
     <Compile Include="V20220105\Models\DescribeProjectListRequest.cs" />
@@ -91,6 +93,8 @@
     <Compile Include="V20220105\Models\DescribeUserRoleProjectListResponse.cs" />
     <Compile Include="V20220105\Models\EmbedTokenInfo.cs" />
     <Compile Include="V20220105\Models\ErrorInfo.cs" />
+    <Compile Include="V20220105\Models\ExportScreenPageRequest.cs" />
+    <Compile Include="V20220105\Models\ExportScreenPageResponse.cs" />
     <Compile Include="V20220105\Models\IdDTO.cs" />
     <Compile Include="V20220105\Models\ModifyDatasourceCloudRequest.cs" />
     <Compile Include="V20220105\Models\ModifyDatasourceCloudResponse.cs" />
@@ -102,6 +106,8 @@
     <Compile Include="V20220105\Models\ModifyUserRoleProjectResponse.cs" />
     <Compile Include="V20220105\Models\ModifyUserRoleRequest.cs" />
     <Compile Include="V20220105\Models\ModifyUserRoleResponse.cs" />
+    <Compile Include="V20220105\Models\PageScreenListVO.cs" />
+    <Compile Include="V20220105\Models\PageScreenVO.cs" />
     <Compile Include="V20220105\Models\PermissionComponent.cs" />
     <Compile Include="V20220105\Models\PermissionGroup.cs" />
     <Compile Include="V20220105\Models\Project.cs" />
@@ -113,5 +119,7 @@
     <Compile Include="V20220105\Models\UserRoleListData.cs" />
     <Compile Include="V20220105\Models\UserRoleListDataRoleInfo.cs" />
     <Compile Include="V20220105\Models\UserRoleListDataUserRoleInfo.cs" />
+    <Compile Include="V20220105\Models\WidgetListVO.cs" />
+    <Compile Include="V20220105\Models\WidgetVO.cs" />
   </ItemGroup>
 </Project>

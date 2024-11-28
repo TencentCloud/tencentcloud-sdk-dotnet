@@ -26,28 +26,24 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         
         /// <summary>
         /// Vpc名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
         /// <summary>
         /// VpcId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
         /// 是否为默认VPC
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsDefault")]
         public bool? IsDefault{ get; set; }

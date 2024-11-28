@@ -43,7 +43,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public ConsumptionRegionSummaryDataItem[] Data{ get; set; }
 
         /// <summary>
-        /// 记录数量，NeedRecordNum为0是返回null
+        /// 记录数量，NeedRecordNum为0时返回null
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordNum")]

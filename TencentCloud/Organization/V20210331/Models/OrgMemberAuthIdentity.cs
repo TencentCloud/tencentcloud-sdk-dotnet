@@ -26,70 +26,60 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// 身份ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentityId")]
         public long? IdentityId{ get; set; }
 
         /// <summary>
         /// 身份的角色名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentityRoleName")]
         public string IdentityRoleName{ get; set; }
 
         /// <summary>
         /// 身份的角色别名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentityRoleAliasName")]
         public string IdentityRoleAliasName{ get; set; }
 
         /// <summary>
         /// 身份描述。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 首次配置成功的时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 最后一次配置成功的时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 身份类型。取值： 1-预设身份  2-自定义身份
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentityType")]
         public ulong? IdentityType{ get; set; }
 
         /// <summary>
         /// 配置状态。取值：1-配置完成 2-需重新配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// 成员Uin。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemberUin")]
         public long? MemberUin{ get; set; }
 
         /// <summary>
         /// 成员名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemberName")]
         public string MemberName{ get; set; }

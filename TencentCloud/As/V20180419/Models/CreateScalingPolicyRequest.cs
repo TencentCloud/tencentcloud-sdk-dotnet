@@ -75,7 +75,7 @@ namespace TencentCloud.As.V20180419.Models
         /// <li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li>
         /// <li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li>
         /// <li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li>
-        /// <li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li>
+        /// <li>ASG_AVG_WAN_TRAFFIC_IN：平均外网入带宽</li>
         /// </summary>
         [JsonProperty("PredefinedMetricType")]
         public string PredefinedMetricType{ get; set; }

@@ -26,21 +26,18 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// 当月总消耗。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCost")]
         public float? TotalCost{ get; set; }
 
         /// <summary>
         /// 产品消耗详情。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Items")]
         public OrgProductFinancial[] Items{ get; set; }
 
         /// <summary>
         /// 总数目。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }

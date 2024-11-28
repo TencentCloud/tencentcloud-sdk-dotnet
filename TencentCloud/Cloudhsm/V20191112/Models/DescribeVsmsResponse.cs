@@ -32,7 +32,6 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
 
         /// <summary>
         /// 资源信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VsmList")]
         public ResourceInfo[] VsmList{ get; set; }

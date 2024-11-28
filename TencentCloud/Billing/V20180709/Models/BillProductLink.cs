@@ -24,12 +24,36 @@ namespace TencentCloud.Billing.V20180709.Models
     public class BillProductLink : AbstractModel
     {
         
+        /// <summary>
+        /// 子产品编码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductCode")]
+        public string ProductCode{ get; set; }
+
+        /// <summary>
+        /// 子产品名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductCodeName")]
+        public string ProductCodeName{ get; set; }
+
+        /// <summary>
+        /// 组件名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Children")]
+        public BillItem[] Children{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ProductCode", this.ProductCode);
+            this.SetParamSimple(map, prefix + "ProductCodeName", this.ProductCodeName);
+            this.SetParamArrayObj(map, prefix + "Children.", this.Children);
         }
     }
 }

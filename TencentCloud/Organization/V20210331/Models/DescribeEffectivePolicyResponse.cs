@@ -26,7 +26,6 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// 有效策略。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EffectivePolicy")]
         public EffectivePolicy EffectivePolicy{ get; set; }

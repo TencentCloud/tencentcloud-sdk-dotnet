@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1131";
+       private const string sdkVersion = "SDK_NET_3.0.1132";
 
         /// <summary>
         /// Client constructor.
@@ -2216,31 +2216,6 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 印尼身份证识别
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="RecognizeIndonesiaIDCardOCRRequest"/></param>
-        /// <returns><see cref="RecognizeIndonesiaIDCardOCRResponse"/></returns>
-        public Task<RecognizeIndonesiaIDCardOCRResponse> RecognizeIndonesiaIDCardOCR(RecognizeIndonesiaIDCardOCRRequest req)
-        {
-            return InternalRequestAsync<RecognizeIndonesiaIDCardOCRResponse>(req, "RecognizeIndonesiaIDCardOCR");
-        }
-
-        /// <summary>
-        /// 印尼身份证识别
-        /// 
-        /// 默认接口请求频率限制：5次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="RecognizeIndonesiaIDCardOCRRequest"/></param>
-        /// <returns><see cref="RecognizeIndonesiaIDCardOCRResponse"/></returns>
-        public RecognizeIndonesiaIDCardOCRResponse RecognizeIndonesiaIDCardOCRSync(RecognizeIndonesiaIDCardOCRRequest req)
-        {
-            return InternalRequestAsync<RecognizeIndonesiaIDCardOCRResponse>(req, "RecognizeIndonesiaIDCardOCR")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 韩国驾驶证识别
         /// </summary>
         /// <param name="req"><see cref="RecognizeKoreanDrivingLicenseOCRRequest"/></param>
@@ -2258,27 +2233,6 @@ namespace TencentCloud.Ocr.V20181119
         public RecognizeKoreanDrivingLicenseOCRResponse RecognizeKoreanDrivingLicenseOCRSync(RecognizeKoreanDrivingLicenseOCRRequest req)
         {
             return InternalRequestAsync<RecognizeKoreanDrivingLicenseOCRResponse>(req, "RecognizeKoreanDrivingLicenseOCR")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 韩国身份证识别
-        /// </summary>
-        /// <param name="req"><see cref="RecognizeKoreanIDCardOCRRequest"/></param>
-        /// <returns><see cref="RecognizeKoreanIDCardOCRResponse"/></returns>
-        public Task<RecognizeKoreanIDCardOCRResponse> RecognizeKoreanIDCardOCR(RecognizeKoreanIDCardOCRRequest req)
-        {
-            return InternalRequestAsync<RecognizeKoreanIDCardOCRResponse>(req, "RecognizeKoreanIDCardOCR");
-        }
-
-        /// <summary>
-        /// 韩国身份证识别
-        /// </summary>
-        /// <param name="req"><see cref="RecognizeKoreanIDCardOCRRequest"/></param>
-        /// <returns><see cref="RecognizeKoreanIDCardOCRResponse"/></returns>
-        public RecognizeKoreanIDCardOCRResponse RecognizeKoreanIDCardOCRSync(RecognizeKoreanIDCardOCRRequest req)
-        {
-            return InternalRequestAsync<RecognizeKoreanIDCardOCRResponse>(req, "RecognizeKoreanIDCardOCR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2329,119 +2283,6 @@ namespace TencentCloud.Ocr.V20181119
         public RecognizeOnlineTaxiItineraryOCRResponse RecognizeOnlineTaxiItineraryOCRSync(RecognizeOnlineTaxiItineraryOCRRequest req)
         {
             return InternalRequestAsync<RecognizeOnlineTaxiItineraryOCRResponse>(req, "RecognizeOnlineTaxiItineraryOCR")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 菲律宾驾驶证识别
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="RecognizePhilippinesDrivingLicenseOCRRequest"/></param>
-        /// <returns><see cref="RecognizePhilippinesDrivingLicenseOCRResponse"/></returns>
-        public Task<RecognizePhilippinesDrivingLicenseOCRResponse> RecognizePhilippinesDrivingLicenseOCR(RecognizePhilippinesDrivingLicenseOCRRequest req)
-        {
-            return InternalRequestAsync<RecognizePhilippinesDrivingLicenseOCRResponse>(req, "RecognizePhilippinesDrivingLicenseOCR");
-        }
-
-        /// <summary>
-        /// 菲律宾驾驶证识别
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="RecognizePhilippinesDrivingLicenseOCRRequest"/></param>
-        /// <returns><see cref="RecognizePhilippinesDrivingLicenseOCRResponse"/></returns>
-        public RecognizePhilippinesDrivingLicenseOCRResponse RecognizePhilippinesDrivingLicenseOCRSync(RecognizePhilippinesDrivingLicenseOCRRequest req)
-        {
-            return InternalRequestAsync<RecognizePhilippinesDrivingLicenseOCRResponse>(req, "RecognizePhilippinesDrivingLicenseOCR")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 菲律宾SSSID/UMID识别
-        /// </summary>
-        /// <param name="req"><see cref="RecognizePhilippinesSssIDOCRRequest"/></param>
-        /// <returns><see cref="RecognizePhilippinesSssIDOCRResponse"/></returns>
-        public Task<RecognizePhilippinesSssIDOCRResponse> RecognizePhilippinesSssIDOCR(RecognizePhilippinesSssIDOCRRequest req)
-        {
-            return InternalRequestAsync<RecognizePhilippinesSssIDOCRResponse>(req, "RecognizePhilippinesSssIDOCR");
-        }
-
-        /// <summary>
-        /// 菲律宾SSSID/UMID识别
-        /// </summary>
-        /// <param name="req"><see cref="RecognizePhilippinesSssIDOCRRequest"/></param>
-        /// <returns><see cref="RecognizePhilippinesSssIDOCRResponse"/></returns>
-        public RecognizePhilippinesSssIDOCRResponse RecognizePhilippinesSssIDOCRSync(RecognizePhilippinesSssIDOCRRequest req)
-        {
-            return InternalRequestAsync<RecognizePhilippinesSssIDOCRResponse>(req, "RecognizePhilippinesSssIDOCR")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 菲律宾TinID识别
-        /// </summary>
-        /// <param name="req"><see cref="RecognizePhilippinesTinIDOCRRequest"/></param>
-        /// <returns><see cref="RecognizePhilippinesTinIDOCRResponse"/></returns>
-        public Task<RecognizePhilippinesTinIDOCRResponse> RecognizePhilippinesTinIDOCR(RecognizePhilippinesTinIDOCRRequest req)
-        {
-            return InternalRequestAsync<RecognizePhilippinesTinIDOCRResponse>(req, "RecognizePhilippinesTinIDOCR");
-        }
-
-        /// <summary>
-        /// 菲律宾TinID识别
-        /// </summary>
-        /// <param name="req"><see cref="RecognizePhilippinesTinIDOCRRequest"/></param>
-        /// <returns><see cref="RecognizePhilippinesTinIDOCRResponse"/></returns>
-        public RecognizePhilippinesTinIDOCRResponse RecognizePhilippinesTinIDOCRSync(RecognizePhilippinesTinIDOCRRequest req)
-        {
-            return InternalRequestAsync<RecognizePhilippinesTinIDOCRResponse>(req, "RecognizePhilippinesTinIDOCR")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 菲律宾UMID识别
-        /// </summary>
-        /// <param name="req"><see cref="RecognizePhilippinesUMIDOCRRequest"/></param>
-        /// <returns><see cref="RecognizePhilippinesUMIDOCRResponse"/></returns>
-        public Task<RecognizePhilippinesUMIDOCRResponse> RecognizePhilippinesUMIDOCR(RecognizePhilippinesUMIDOCRRequest req)
-        {
-            return InternalRequestAsync<RecognizePhilippinesUMIDOCRResponse>(req, "RecognizePhilippinesUMIDOCR");
-        }
-
-        /// <summary>
-        /// 菲律宾UMID识别
-        /// </summary>
-        /// <param name="req"><see cref="RecognizePhilippinesUMIDOCRRequest"/></param>
-        /// <returns><see cref="RecognizePhilippinesUMIDOCRResponse"/></returns>
-        public RecognizePhilippinesUMIDOCRResponse RecognizePhilippinesUMIDOCRSync(RecognizePhilippinesUMIDOCRRequest req)
-        {
-            return InternalRequestAsync<RecognizePhilippinesUMIDOCRResponse>(req, "RecognizePhilippinesUMIDOCR")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 本接口支持菲律宾VoteID识别，识别字段包括姓名、姓氏、出生日期、婚姻状况、国籍、地址、地区、菲律宾VoteID的VIN等。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="RecognizePhilippinesVoteIDOCRRequest"/></param>
-        /// <returns><see cref="RecognizePhilippinesVoteIDOCRResponse"/></returns>
-        public Task<RecognizePhilippinesVoteIDOCRResponse> RecognizePhilippinesVoteIDOCR(RecognizePhilippinesVoteIDOCRRequest req)
-        {
-            return InternalRequestAsync<RecognizePhilippinesVoteIDOCRResponse>(req, "RecognizePhilippinesVoteIDOCR");
-        }
-
-        /// <summary>
-        /// 本接口支持菲律宾VoteID识别，识别字段包括姓名、姓氏、出生日期、婚姻状况、国籍、地址、地区、菲律宾VoteID的VIN等。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="RecognizePhilippinesVoteIDOCRRequest"/></param>
-        /// <returns><see cref="RecognizePhilippinesVoteIDOCRResponse"/></returns>
-        public RecognizePhilippinesVoteIDOCRResponse RecognizePhilippinesVoteIDOCRSync(RecognizePhilippinesVoteIDOCRRequest req)
-        {
-            return InternalRequestAsync<RecognizePhilippinesVoteIDOCRResponse>(req, "RecognizePhilippinesVoteIDOCR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

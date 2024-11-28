@@ -43,7 +43,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public ConsumptionProjectSummaryDataItem[] Data{ get; set; }
 
         /// <summary>
-        /// 记录数量，NeedRecordNum为0是返回null
+        /// 记录数量，NeedRecordNum为0时返回null
         /// </summary>
         [JsonProperty("RecordNum")]
         public ulong? RecordNum{ get; set; }

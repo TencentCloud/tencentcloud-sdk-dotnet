@@ -28,7 +28,7 @@ namespace TencentCloud.Config.V20220802
 
        private const string endpoint = "config.tencentcloudapi.com";
        private const string version = "2022-08-02";
-       private const string sdkVersion = "SDK_NET_3.0.1131";
+       private const string sdkVersion = "SDK_NET_3.0.1132";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Config.V20220802
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 资源详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiscoveredResourceRequest"/></param>
+        /// <returns><see cref="DescribeDiscoveredResourceResponse"/></returns>
+        public Task<DescribeDiscoveredResourceResponse> DescribeDiscoveredResource(DescribeDiscoveredResourceRequest req)
+        {
+            return InternalRequestAsync<DescribeDiscoveredResourceResponse>(req, "DescribeDiscoveredResource");
+        }
+
+        /// <summary>
+        /// 资源详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiscoveredResourceRequest"/></param>
+        /// <returns><see cref="DescribeDiscoveredResourceResponse"/></returns>
+        public DescribeDiscoveredResourceResponse DescribeDiscoveredResourceSync(DescribeDiscoveredResourceRequest req)
+        {
+            return InternalRequestAsync<DescribeDiscoveredResourceResponse>(req, "DescribeDiscoveredResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -92,6 +113,27 @@ namespace TencentCloud.Config.V20220802
         public ListConfigRulesResponse ListConfigRulesSync(ListConfigRulesRequest req)
         {
             return InternalRequestAsync<ListConfigRulesResponse>(req, "ListConfigRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取资源列表
+        /// </summary>
+        /// <param name="req"><see cref="ListDiscoveredResourcesRequest"/></param>
+        /// <returns><see cref="ListDiscoveredResourcesResponse"/></returns>
+        public Task<ListDiscoveredResourcesResponse> ListDiscoveredResources(ListDiscoveredResourcesRequest req)
+        {
+            return InternalRequestAsync<ListDiscoveredResourcesResponse>(req, "ListDiscoveredResources");
+        }
+
+        /// <summary>
+        /// 获取资源列表
+        /// </summary>
+        /// <param name="req"><see cref="ListDiscoveredResourcesRequest"/></param>
+        /// <returns><see cref="ListDiscoveredResourcesResponse"/></returns>
+        public ListDiscoveredResourcesResponse ListDiscoveredResourcesSync(ListDiscoveredResourcesRequest req)
+        {
+            return InternalRequestAsync<ListDiscoveredResourcesResponse>(req, "ListDiscoveredResources")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

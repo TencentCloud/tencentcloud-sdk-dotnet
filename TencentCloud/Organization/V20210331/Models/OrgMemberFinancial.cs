@@ -26,28 +26,24 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// 成员Uin。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemberUin")]
         public long? MemberUin{ get; set; }
 
         /// <summary>
         /// 成员名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemberName")]
         public string MemberName{ get; set; }
 
         /// <summary>
         /// 消耗金额，单位：元。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCost")]
         public float? TotalCost{ get; set; }
 
         /// <summary>
         /// 占比%。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ratio")]
         public string Ratio{ get; set; }
