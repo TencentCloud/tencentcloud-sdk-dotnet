@@ -26,21 +26,18 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 编号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertNumber")]
         public string CertNumber{ get; set; }
 
         /// <summary>
         /// 签发机构
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IssuedAuthority")]
         public string IssuedAuthority{ get; set; }
 
         /// <summary>
         /// 签发日期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IssuedDate")]
         public string IssuedDate{ get; set; }

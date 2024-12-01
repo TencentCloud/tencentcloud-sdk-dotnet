@@ -26,21 +26,18 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 肛门直肠总体描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Text")]
         public KeyValueItem Text{ get; set; }
 
         /// <summary>
         /// 直肠指检
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DigitalRectalExamination")]
         public KeyValueItem DigitalRectalExamination{ get; set; }
 
         /// <summary>
         /// 痔疮
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Hemorrhoid")]
         public KeyValueItem Hemorrhoid{ get; set; }

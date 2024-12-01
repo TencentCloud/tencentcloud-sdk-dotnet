@@ -26,14 +26,12 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 文本内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
         /// 通用名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GenericName")]
         public string GenericName{ get; set; }
@@ -48,14 +46,12 @@ namespace TencentCloud.Mrs.V20200910.Models
 
         /// <summary>
         /// 英文名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnName")]
         public string EnName{ get; set; }
 
         /// <summary>
         /// 拼音
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Pinyin")]
         public string Pinyin{ get; set; }

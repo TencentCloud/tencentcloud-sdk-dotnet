@@ -26,56 +26,48 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 新生儿名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NeonatalName")]
         public string NeonatalName{ get; set; }
 
         /// <summary>
         /// 新生儿性别
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NeonatalGender")]
         public string NeonatalGender{ get; set; }
 
         /// <summary>
         /// 出生身长
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BirthLength")]
         public string BirthLength{ get; set; }
 
         /// <summary>
         /// 出生体重
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BirthWeight")]
         public string BirthWeight{ get; set; }
 
         /// <summary>
         /// 出生孕周
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GestationalAge")]
         public string GestationalAge{ get; set; }
 
         /// <summary>
         /// 出生时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BirthTime")]
         public string BirthTime{ get; set; }
 
         /// <summary>
         /// 出生地点
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BirthPlace")]
         public string BirthPlace{ get; set; }
 
         /// <summary>
         /// 医疗机构
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MedicalInstitutions")]
         public string MedicalInstitutions{ get; set; }

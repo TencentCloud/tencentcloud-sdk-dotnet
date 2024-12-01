@@ -26,21 +26,18 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// name
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// src
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Src")]
         public string Src{ get; set; }
 
         /// <summary>
         /// value
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

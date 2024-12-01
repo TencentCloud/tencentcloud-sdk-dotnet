@@ -26,28 +26,24 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 描述部分
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Desc")]
         public MaternityDesc Desc{ get; set; }
 
         /// <summary>
         /// 结论部分
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Summary")]
         public MaternitySummary Summary{ get; set; }
 
         /// <summary>
         /// 报告原文
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OcrText")]
         public string OcrText{ get; set; }
 
         /// <summary>
         /// 数据在原PDF文件中的第几页
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Page")]
         public long? Page{ get; set; }

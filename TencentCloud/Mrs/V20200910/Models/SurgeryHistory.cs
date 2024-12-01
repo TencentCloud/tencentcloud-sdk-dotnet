@@ -26,42 +26,36 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 手术名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SurgeryName")]
         public SurgeryAttr SurgeryName{ get; set; }
 
         /// <summary>
         /// 手术日期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SurgeryDate")]
         public SurgeryAttr SurgeryDate{ get; set; }
 
         /// <summary>
         /// 术前诊断
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PreoperativePathology")]
         public SurgeryAttr PreoperativePathology{ get; set; }
 
         /// <summary>
         /// 术中诊断
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IntraoperativePathology")]
         public SurgeryAttr IntraoperativePathology{ get; set; }
 
         /// <summary>
         /// 术后诊断
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PostoperativePathology")]
         public SurgeryAttr PostoperativePathology{ get; set; }
 
         /// <summary>
         /// 出院诊断
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DischargeDiagnosis")]
         public SurgeryAttr DischargeDiagnosis{ get; set; }

@@ -26,21 +26,18 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 症状
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Symptom")]
         public SymptomInfo[] Symptom{ get; set; }
 
         /// <summary>
         /// 文本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
         /// 坐标
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Coords")]
         public Coord[] Coords{ get; set; }

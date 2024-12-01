@@ -34,21 +34,18 @@ namespace TencentCloud.Mrs.V20200910.Models
 
         /// <summary>
         /// 版本号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
         /// 检验报告V3结论
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableIndicators")]
         public TableIndicators[] TableIndicators{ get; set; }
 
         /// <summary>
         /// 数据在原PDF文件中的第几页
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Page")]
         public long? Page{ get; set; }

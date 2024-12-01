@@ -26,7 +26,6 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 坐标
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Points")]
         public Point[] Points{ get; set; }

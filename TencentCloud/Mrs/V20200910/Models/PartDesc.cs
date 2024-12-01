@@ -26,28 +26,24 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 主要部位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MainDir")]
         public string MainDir{ get; set; }
 
         /// <summary>
         /// 部位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Part")]
         public string Part{ get; set; }
 
         /// <summary>
         /// 次要部位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecondaryDir")]
         public string SecondaryDir{ get; set; }
 
         /// <summary>
         /// 类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

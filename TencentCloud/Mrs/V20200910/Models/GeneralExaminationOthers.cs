@@ -26,70 +26,60 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 面容与表情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Countenance")]
         public KeyValueItem Countenance{ get; set; }
 
         /// <summary>
         /// 精神状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MentalStatus")]
         public KeyValueItem MentalStatus{ get; set; }
 
         /// <summary>
         /// 发育及营养状况
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DevelopmentCondition")]
         public KeyValueItem DevelopmentCondition{ get; set; }
 
         /// <summary>
         /// 记忆力
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Memory")]
         public KeyValueItem Memory{ get; set; }
 
         /// <summary>
         /// 臀围
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Hipline")]
         public ValueUnitItem Hipline{ get; set; }
 
         /// <summary>
         /// 腰臀比
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WaistHipRatio")]
         public ValueUnitItem WaistHipRatio{ get; set; }
 
         /// <summary>
         /// 生活嗜好
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Addiction")]
         public KeyValueItem Addiction{ get; set; }
 
         /// <summary>
         /// 生活能力评定
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AbilityOfLifeADL")]
         public KeyValueItem AbilityOfLifeADL{ get; set; }
 
         /// <summary>
         /// 一般检查其他
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Others")]
         public KeyValueItem[] Others{ get; set; }
 
         /// <summary>
         /// 胸围
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChestCircumference")]
         public ChestCircumferenceItem ChestCircumference{ get; set; }

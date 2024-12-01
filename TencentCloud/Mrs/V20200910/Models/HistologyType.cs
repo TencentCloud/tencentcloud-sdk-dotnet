@@ -26,28 +26,24 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 浸润
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Infiltration")]
         public string Infiltration{ get; set; }
 
         /// <summary>
         /// 原文位置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Index")]
         public long?[] Index{ get; set; }
 
         /// <summary>
         /// 原文
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Src")]
         public string Src{ get; set; }
 
         /// <summary>
         /// 类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

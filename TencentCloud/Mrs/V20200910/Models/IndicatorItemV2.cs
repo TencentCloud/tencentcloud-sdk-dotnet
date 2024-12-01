@@ -26,77 +26,66 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 项目名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Item")]
         public BaseItem Item{ get; set; }
 
         /// <summary>
         /// 英文编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Code")]
         public BaseItem Code{ get; set; }
 
         /// <summary>
         /// 结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Result")]
         public BaseItem Result{ get; set; }
 
         /// <summary>
         /// 单位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Unit")]
         public BaseItem Unit{ get; set; }
 
         /// <summary>
         /// 参考范围
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Range")]
         public BaseItem Range{ get; set; }
 
         /// <summary>
         /// 上下箭头
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Arrow")]
         public BaseItem Arrow{ get; set; }
 
         /// <summary>
         /// 检测方法
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Method")]
         public BaseItem Method{ get; set; }
 
         /// <summary>
         /// 结果是否异常
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Normal")]
         public bool? Normal{ get; set; }
 
         /// <summary>
         /// ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
         /// 序号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Order")]
         public long? Order{ get; set; }
 
         /// <summary>
         /// 推测结果是否异常
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InferNormal")]
         public string InferNormal{ get; set; }

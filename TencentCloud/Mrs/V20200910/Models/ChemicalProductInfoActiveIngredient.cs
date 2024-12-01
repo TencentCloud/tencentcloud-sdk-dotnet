@@ -26,35 +26,30 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 文本内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
         /// 活性成份的化学名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChemicalName")]
         public string ChemicalName{ get; set; }
 
         /// <summary>
         /// 活性成份的化学结构式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChemicalFormula")]
         public string ChemicalFormula{ get; set; }
 
         /// <summary>
         /// 活性成份的分子式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MolecularFormula")]
         public string MolecularFormula{ get; set; }
 
         /// <summary>
         /// 活性成份的分子量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MolecularWeight")]
         public string MolecularWeight{ get; set; }

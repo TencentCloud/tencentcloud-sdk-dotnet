@@ -26,42 +26,36 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 体检报告-内科-腹部
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Abdomen")]
         public InternalMedicineAbdomen Abdomen{ get; set; }
 
         /// <summary>
         /// 体检报告-内科-心脏
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Heart")]
         public InternalMedicineHeart Heart{ get; set; }
 
         /// <summary>
         /// 体检报告-内科-血管
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vessel")]
         public InternalMedicineVessel Vessel{ get; set; }
 
         /// <summary>
         /// 体检报告-内科-呼吸系统
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RespiratorySystem")]
         public InternalMedicineRespiratorySystem RespiratorySystem{ get; set; }
 
         /// <summary>
         /// 体检报告-内科-内科其他
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Others")]
         public KeyValueItem[] Others{ get; set; }
 
         /// <summary>
         /// 体检报告-内科-小结
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BriefSummary")]
         public InternalMedicineBriefSummary BriefSummary{ get; set; }

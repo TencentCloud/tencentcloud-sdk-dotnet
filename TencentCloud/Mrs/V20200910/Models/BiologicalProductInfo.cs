@@ -26,105 +26,90 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 药品名称，包括通用名和商品名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public BiologicalProductInfoName Name{ get; set; }
 
         /// <summary>
         /// 成份和性状
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IngredientAndAppearance")]
         public BiologicalProductInfoIngredientAndAppearance IngredientAndAppearance{ get; set; }
 
         /// <summary>
         /// 接种对象
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VaccinationTarget")]
         public BiologicalProductInfoVaccinationTarget VaccinationTarget{ get; set; }
 
         /// <summary>
         /// 作用与用途
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Indications")]
         public BiologicalProductInfoIndications Indications{ get; set; }
 
         /// <summary>
         /// 规格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Brochure")]
         public BiologicalProductInfoBrochure Brochure{ get; set; }
 
         /// <summary>
         /// 免疫程序和剂量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Dosage")]
         public BiologicalProductInfoDosage Dosage{ get; set; }
 
         /// <summary>
         /// 不良反应
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdverseReaction")]
         public BiologicalProductInfoAdverseReaction AdverseReaction{ get; set; }
 
         /// <summary>
         /// 禁忌情况
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Contraindications")]
         public BiologicalProductInfoContraindications Contraindications{ get; set; }
 
         /// <summary>
         /// 注意事项
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Precautions")]
         public BiologicalProductInfoPrecautions Precautions{ get; set; }
 
         /// <summary>
         /// 储存条件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Storage")]
         public BiologicalProductInfoStorage Storage{ get; set; }
 
         /// <summary>
         /// 包装信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Packaging")]
         public BiologicalProductInfoPackaging Packaging{ get; set; }
 
         /// <summary>
         /// 有效期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValidityPeriod")]
         public BiologicalProductInfoValidityPeriod ValidityPeriod{ get; set; }
 
         /// <summary>
         /// 执行标准
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutiveStandards")]
         public BiologicalProductInfoExecutiveStandards ExecutiveStandards{ get; set; }
 
         /// <summary>
         /// 批准文号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Approval")]
         public BiologicalProductInfoApproval Approval{ get; set; }
 
         /// <summary>
         /// 生产企业名称和地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Manufacturer")]
         public BiologicalProductInfoManufacturer Manufacturer{ get; set; }

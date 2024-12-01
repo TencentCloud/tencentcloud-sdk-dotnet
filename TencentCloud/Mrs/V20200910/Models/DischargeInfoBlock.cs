@@ -26,42 +26,36 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 疾病史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiseaseHistory")]
         public DiseaseHistoryBlock DiseaseHistory{ get; set; }
 
         /// <summary>
         /// 个人史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PersonalHistory")]
         public PersonalHistoryBlock PersonalHistory{ get; set; }
 
         /// <summary>
         /// 药物史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DrugHistory")]
         public DrugHistoryBlock DrugHistory{ get; set; }
 
         /// <summary>
         /// 治疗相关
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TreatmentRecord")]
         public TreatmentRecordBlock TreatmentRecord{ get; set; }
 
         /// <summary>
         /// 文本段落
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParagraphBlock")]
         public ParagraphBlock ParagraphBlock{ get; set; }
 
         /// <summary>
         /// 数据在原PDF文件中的第几页
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Page")]
         public long? Page{ get; set; }

@@ -26,42 +26,36 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 胰腺总体描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Src")]
         public KeyValueItem Src{ get; set; }
 
         /// <summary>
         /// 胰腺大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Size")]
         public KeyValueItem Size{ get; set; }
 
         /// <summary>
         /// 胰腺触诊
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Palpation")]
         public KeyValueItem Palpation{ get; set; }
 
         /// <summary>
         /// 胰腺叩诊
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Percussion")]
         public KeyValueItem Percussion{ get; set; }
 
         /// <summary>
         /// 肝脏压痛
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tenderness")]
         public KeyValueItem Tenderness{ get; set; }
 
         /// <summary>
         /// 胰腺质地
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Consistency")]
         public KeyValueItem Consistency{ get; set; }

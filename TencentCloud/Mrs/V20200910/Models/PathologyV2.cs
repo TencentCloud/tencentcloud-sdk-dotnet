@@ -26,105 +26,90 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 报告类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PathologicalReportType")]
         public Report PathologicalReportType{ get; set; }
 
         /// <summary>
         /// 描述段落
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Desc")]
         public DescInfo Desc{ get; set; }
 
         /// <summary>
         /// 诊断结论
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Summary")]
         public SummaryInfo Summary{ get; set; }
 
         /// <summary>
         /// 报告全文
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReportText")]
         public string ReportText{ get; set; }
 
         /// <summary>
         /// 淋巴结总计转移信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LymphTotal")]
         public LymphTotal[] LymphTotal{ get; set; }
 
         /// <summary>
         /// 单淋巴结转移信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LymphNodes")]
         public LymphNode[] LymphNodes{ get; set; }
 
         /// <summary>
         /// ihc信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ihc")]
         public IHCV2[] Ihc{ get; set; }
 
         /// <summary>
         /// 临床诊断
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Clinical")]
         public BaseInfo Clinical{ get; set; }
 
         /// <summary>
         /// 是否癌前病变
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Precancer")]
         public HistologyClass Precancer{ get; set; }
 
         /// <summary>
         /// 是否恶性肿瘤
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Malignant")]
         public HistologyClass Malignant{ get; set; }
 
         /// <summary>
         /// 是否良性肿瘤
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Benigntumor")]
         public HistologyClass Benigntumor{ get; set; }
 
         /// <summary>
         /// 送检材料
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SampleType")]
         public BaseInfo SampleType{ get; set; }
 
         /// <summary>
         /// 淋巴结大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LymphSize")]
         public Size[] LymphSize{ get; set; }
 
         /// <summary>
         /// 分子病理
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Molecular")]
         public Molecular[] Molecular{ get; set; }
 
         /// <summary>
         /// 数据在原PDF文件中的第几页
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Page")]
         public long? Page{ get; set; }

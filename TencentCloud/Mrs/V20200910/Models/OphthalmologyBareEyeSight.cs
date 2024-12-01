@@ -26,21 +26,18 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 左眼视力
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LeftEyeVisual")]
         public KeyValueItem LeftEyeVisual{ get; set; }
 
         /// <summary>
         /// 裸眼视力
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Text")]
         public KeyValueItem Text{ get; set; }
 
         /// <summary>
         /// 右眼视力
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RightEyeVisual")]
         public KeyValueItem RightEyeVisual{ get; set; }

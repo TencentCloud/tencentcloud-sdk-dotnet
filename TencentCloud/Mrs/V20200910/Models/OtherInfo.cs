@@ -26,42 +26,36 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 麻醉方法
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Anesthesia")]
         public SurgeryAttr Anesthesia{ get; set; }
 
         /// <summary>
         /// 术中出血
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BloodLoss")]
         public SurgeryAttr BloodLoss{ get; set; }
 
         /// <summary>
         /// 输血
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BloodTransfusion")]
         public SurgeryAttr BloodTransfusion{ get; set; }
 
         /// <summary>
         /// 手术用时
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Duration")]
         public SurgeryAttr Duration{ get; set; }
 
         /// <summary>
         /// 手术开始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public SurgeryAttr EndTime{ get; set; }
 
         /// <summary>
         /// 手术结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public SurgeryAttr StartTime{ get; set; }

@@ -26,35 +26,30 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 新生儿信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NeonatalInfo")]
         public NeonatalInfo NeonatalInfo{ get; set; }
 
         /// <summary>
         /// 母亲信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MotherInfo")]
         public ParentInfo MotherInfo{ get; set; }
 
         /// <summary>
         /// 父亲信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FatherInfo")]
         public ParentInfo FatherInfo{ get; set; }
 
         /// <summary>
         /// 签发信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IssueInfo")]
         public IssueInfo IssueInfo{ get; set; }
 
         /// <summary>
         /// 数据在原PDF文件中的第几页
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Page")]
         public long? Page{ get; set; }

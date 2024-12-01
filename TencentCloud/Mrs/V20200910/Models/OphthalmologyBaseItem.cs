@@ -26,42 +26,36 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 裸眼视力
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BareEyeSight")]
         public OphthalmologyBareEyeSight BareEyeSight{ get; set; }
 
         /// <summary>
         /// 矫正视力
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CorrectedVisualAcuity")]
         public OphthalmologyCorrectedVisualAcuity CorrectedVisualAcuity{ get; set; }
 
         /// <summary>
         /// 色觉
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ColourVision")]
         public OphthalmologyColourVision ColourVision{ get; set; }
 
         /// <summary>
         /// 眼底
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Fundoscopy")]
         public OphthalmologyFundoscopy Fundoscopy{ get; set; }
 
         /// <summary>
         /// 眼科其他
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Others")]
         public KeyValueItem[] Others{ get; set; }
 
         /// <summary>
         /// 眼科小结
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BriefSummary")]
         public OphthalmologyBriefSummary BriefSummary{ get; set; }

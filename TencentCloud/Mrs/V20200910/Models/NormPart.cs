@@ -26,35 +26,30 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 部位值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Part")]
         public string Part{ get; set; }
 
         /// <summary>
         /// 部位方向
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PartDirection")]
         public string PartDirection{ get; set; }
 
         /// <summary>
         /// 组织值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tissue")]
         public string Tissue{ get; set; }
 
         /// <summary>
         /// 组织方向
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TissueDirection")]
         public string TissueDirection{ get; set; }
 
         /// <summary>
         /// 上级部位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Upper")]
         public string Upper{ get; set; }
@@ -69,7 +64,6 @@ namespace TencentCloud.Mrs.V20200910.Models
 
         /// <summary>
         /// 部位详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PartDetailList")]
         public PartDesc[] PartDetailList{ get; set; }

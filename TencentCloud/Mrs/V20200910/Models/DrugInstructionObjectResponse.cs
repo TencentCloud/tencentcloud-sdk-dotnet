@@ -26,14 +26,12 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 药品说明书消息定义
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChemicalProductInfo")]
         public ChemicalProductInfo ChemicalProductInfo{ get; set; }
 
         /// <summary>
         /// 预防用生物制品说明书
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BiologicalProductInfo")]
         public BiologicalProductInfo BiologicalProductInfo{ get; set; }

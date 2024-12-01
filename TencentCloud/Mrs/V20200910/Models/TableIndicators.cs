@@ -26,14 +26,12 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 项目列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Indicators")]
         public IndicatorItemV2[] Indicators{ get; set; }
 
         /// <summary>
         /// 采样标本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Sample")]
         public BaseItem Sample{ get; set; }

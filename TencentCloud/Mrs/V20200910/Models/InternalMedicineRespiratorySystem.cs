@@ -26,35 +26,30 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 呼吸系统总体描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Text")]
         public KeyValueItem Text{ get; set; }
 
         /// <summary>
         /// 胸廓
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Thoracic")]
         public KeyValueItem Thoracic{ get; set; }
 
         /// <summary>
         /// 痰量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Sputum")]
         public KeyValueItem Sputum{ get; set; }
 
         /// <summary>
         /// 肺部叩诊
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LungPercussion")]
         public KeyValueItem LungPercussion{ get; set; }
 
         /// <summary>
         /// 肺部听诊其他
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LungAuscultation")]
         public KeyValueItem[] LungAuscultation{ get; set; }

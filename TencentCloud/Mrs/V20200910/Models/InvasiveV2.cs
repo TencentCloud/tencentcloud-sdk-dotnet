@@ -26,35 +26,30 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 索引
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Index")]
         public long?[] Index{ get; set; }
 
         /// <summary>
         /// 部位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Part")]
         public Part Part{ get; set; }
 
         /// <summary>
         /// 阴性或阳性
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Positive")]
         public string Positive{ get; set; }
 
         /// <summary>
         /// 原文
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Src")]
         public string Src{ get; set; }
 
         /// <summary>
         /// 原文对应坐标
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Coords")]
         public Coord[] Coords{ get; set; }

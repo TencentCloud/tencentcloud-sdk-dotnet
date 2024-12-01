@@ -26,119 +26,102 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 患者姓名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 患者性别
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
         /// 患者年龄
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Age")]
         public string Age{ get; set; }
 
         /// <summary>
         /// 患者手机号码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }
 
         /// <summary>
         /// 患者地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
         /// 患者身份证
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdCard")]
         public string IdCard{ get; set; }
 
         /// <summary>
         /// 健康卡号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthCardNo")]
         public string HealthCardNo{ get; set; }
 
         /// <summary>
         /// 社保卡号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SocialSecurityCardNo")]
         public string SocialSecurityCardNo{ get; set; }
 
         /// <summary>
         /// 出生日期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }
 
         /// <summary>
         /// 民族
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ethnicity")]
         public string Ethnicity{ get; set; }
 
         /// <summary>
         /// 婚姻状况
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Married")]
         public string Married{ get; set; }
 
         /// <summary>
         /// 职业
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Profession")]
         public string Profession{ get; set; }
 
         /// <summary>
         /// 教育程度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EducationBackground")]
         public string EducationBackground{ get; set; }
 
         /// <summary>
         /// 国籍
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Nationality")]
         public string Nationality{ get; set; }
 
         /// <summary>
         /// 籍贯
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BirthPlace")]
         public string BirthPlace{ get; set; }
 
         /// <summary>
         /// 医保类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MedicalInsuranceType")]
         public string MedicalInsuranceType{ get; set; }
 
         /// <summary>
         /// 标准化年龄
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AgeNorm")]
         public string AgeNorm{ get; set; }
@@ -153,28 +136,24 @@ namespace TencentCloud.Mrs.V20200910.Models
 
         /// <summary>
         /// 婚姻代码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MarriedCode")]
         public string MarriedCode{ get; set; }
 
         /// <summary>
         /// 职业代码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProfessionCode")]
         public string ProfessionCode{ get; set; }
 
         /// <summary>
         /// 居民医保代码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MedicalInsuranceTypeCode")]
         public string MedicalInsuranceTypeCode{ get; set; }
 
         /// <summary>
         /// 床号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BedNo")]
         public string BedNo{ get; set; }

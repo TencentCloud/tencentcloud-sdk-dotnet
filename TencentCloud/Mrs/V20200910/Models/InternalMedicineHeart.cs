@@ -26,28 +26,24 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 心脏总体描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Text")]
         public KeyValueItem Text{ get; set; }
 
         /// <summary>
         /// 心律
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HeartRhythm")]
         public KeyValueItem HeartRhythm{ get; set; }
 
         /// <summary>
         /// 心率
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HeartRate")]
         public ValueUnitItem HeartRate{ get; set; }
 
         /// <summary>
         /// 心脏听诊
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HeartAuscultation")]
         public KeyValueItem HeartAuscultation{ get; set; }

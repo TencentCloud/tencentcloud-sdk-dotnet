@@ -26,28 +26,24 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 血压
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Text")]
         public BloodPressureItem Text{ get; set; }
 
         /// <summary>
         /// 收缩压/舒张压
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SystolicDiastolicPressure")]
         public BloodPressureItem[] SystolicDiastolicPressure{ get; set; }
 
         /// <summary>
         /// 收缩压
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SystolicPressure")]
         public BloodPressureItem[] SystolicPressure{ get; set; }
 
         /// <summary>
         /// 舒张压
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiastolicPressure")]
         public BloodPressureItem[] DiastolicPressure{ get; set; }

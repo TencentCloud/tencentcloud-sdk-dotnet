@@ -26,49 +26,42 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 等级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Grade")]
         public BlockInfo Grade{ get; set; }
 
         /// <summary>
         /// 部位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Part")]
         public Part Part{ get; set; }
 
         /// <summary>
         /// 原文位置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Index")]
         public long?[] Index{ get; set; }
 
         /// <summary>
         /// 病变
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Symptom")]
         public BlockInfo Symptom{ get; set; }
 
         /// <summary>
         /// 属性
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Attrs")]
         public BlockInfo[] Attrs{ get; set; }
 
         /// <summary>
         /// 原文
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Src")]
         public string Src{ get; set; }
 
         /// <summary>
         /// 坐标
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Coords")]
         public Coord[] Coords{ get; set; }

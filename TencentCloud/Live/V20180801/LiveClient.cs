@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1132";
+       private const string sdkVersion = "SDK_NET_3.0.1133";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,48 @@ namespace TencentCloud.Live.V20180801
         public AddCasterLayoutInfoResponse AddCasterLayoutInfoSync(AddCasterLayoutInfoRequest req)
         {
             return InternalRequestAsync<AddCasterLayoutInfoResponse>(req, "AddCasterLayoutInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来新增图片水印。
+        /// </summary>
+        /// <param name="req"><see cref="AddCasterMarkPicInfoRequest"/></param>
+        /// <returns><see cref="AddCasterMarkPicInfoResponse"/></returns>
+        public Task<AddCasterMarkPicInfoResponse> AddCasterMarkPicInfo(AddCasterMarkPicInfoRequest req)
+        {
+            return InternalRequestAsync<AddCasterMarkPicInfoResponse>(req, "AddCasterMarkPicInfo");
+        }
+
+        /// <summary>
+        /// 该接口用来新增图片水印。
+        /// </summary>
+        /// <param name="req"><see cref="AddCasterMarkPicInfoRequest"/></param>
+        /// <returns><see cref="AddCasterMarkPicInfoResponse"/></returns>
+        public AddCasterMarkPicInfoResponse AddCasterMarkPicInfoSync(AddCasterMarkPicInfoRequest req)
+        {
+            return InternalRequestAsync<AddCasterMarkPicInfoResponse>(req, "AddCasterMarkPicInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 为导播台添加文本配置。
+        /// </summary>
+        /// <param name="req"><see cref="AddCasterMarkWordInfoRequest"/></param>
+        /// <returns><see cref="AddCasterMarkWordInfoResponse"/></returns>
+        public Task<AddCasterMarkWordInfoResponse> AddCasterMarkWordInfo(AddCasterMarkWordInfoRequest req)
+        {
+            return InternalRequestAsync<AddCasterMarkWordInfoResponse>(req, "AddCasterMarkWordInfo");
+        }
+
+        /// <summary>
+        /// 为导播台添加文本配置。
+        /// </summary>
+        /// <param name="req"><see cref="AddCasterMarkWordInfoRequest"/></param>
+        /// <returns><see cref="AddCasterMarkWordInfoResponse"/></returns>
+        public AddCasterMarkWordInfoResponse AddCasterMarkWordInfoSync(AddCasterMarkWordInfoRequest req)
+        {
+            return InternalRequestAsync<AddCasterMarkWordInfoResponse>(req, "AddCasterMarkWordInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -949,6 +991,48 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 该接口用来删除导播台某个Index对应的水印。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCasterMarkPicInfoRequest"/></param>
+        /// <returns><see cref="DeleteCasterMarkPicInfoResponse"/></returns>
+        public Task<DeleteCasterMarkPicInfoResponse> DeleteCasterMarkPicInfo(DeleteCasterMarkPicInfoRequest req)
+        {
+            return InternalRequestAsync<DeleteCasterMarkPicInfoResponse>(req, "DeleteCasterMarkPicInfo");
+        }
+
+        /// <summary>
+        /// 该接口用来删除导播台某个Index对应的水印。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCasterMarkPicInfoRequest"/></param>
+        /// <returns><see cref="DeleteCasterMarkPicInfoResponse"/></returns>
+        public DeleteCasterMarkPicInfoResponse DeleteCasterMarkPicInfoSync(DeleteCasterMarkPicInfoRequest req)
+        {
+            return InternalRequestAsync<DeleteCasterMarkPicInfoResponse>(req, "DeleteCasterMarkPicInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来删除导播台的文本配置。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCasterMarkWordInfoRequest"/></param>
+        /// <returns><see cref="DeleteCasterMarkWordInfoResponse"/></returns>
+        public Task<DeleteCasterMarkWordInfoResponse> DeleteCasterMarkWordInfo(DeleteCasterMarkWordInfoRequest req)
+        {
+            return InternalRequestAsync<DeleteCasterMarkWordInfoResponse>(req, "DeleteCasterMarkWordInfo");
+        }
+
+        /// <summary>
+        /// 该接口用来删除导播台的文本配置。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCasterMarkWordInfoRequest"/></param>
+        /// <returns><see cref="DeleteCasterMarkWordInfoResponse"/></returns>
+        public DeleteCasterMarkWordInfoResponse DeleteCasterMarkWordInfoSync(DeleteCasterMarkWordInfoRequest req)
+        {
+            return InternalRequestAsync<DeleteCasterMarkWordInfoResponse>(req, "DeleteCasterMarkWordInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口用来删除导播台的推流信息。
         /// 注：若删除推流到腾讯云直播源站配置，即OutputIndex为0，OutputType为1的推流配置，在重新启动主监后，系统会自动重新生成一个推流到腾讯云直播源站配置。
         /// </summary>
@@ -1639,6 +1723,48 @@ namespace TencentCloud.Live.V20180801
         public DescribeCasterListResponse DescribeCasterListSync(DescribeCasterListRequest req)
         {
             return InternalRequestAsync<DescribeCasterListResponse>(req, "DescribeCasterList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来查询某个导播台的水印列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCasterMarkPicInfosRequest"/></param>
+        /// <returns><see cref="DescribeCasterMarkPicInfosResponse"/></returns>
+        public Task<DescribeCasterMarkPicInfosResponse> DescribeCasterMarkPicInfos(DescribeCasterMarkPicInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeCasterMarkPicInfosResponse>(req, "DescribeCasterMarkPicInfos");
+        }
+
+        /// <summary>
+        /// 该接口用来查询某个导播台的水印列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCasterMarkPicInfosRequest"/></param>
+        /// <returns><see cref="DescribeCasterMarkPicInfosResponse"/></returns>
+        public DescribeCasterMarkPicInfosResponse DescribeCasterMarkPicInfosSync(DescribeCasterMarkPicInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeCasterMarkPicInfosResponse>(req, "DescribeCasterMarkPicInfos")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来查询某个导播台的文本列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCasterMarkWordInfosRequest"/></param>
+        /// <returns><see cref="DescribeCasterMarkWordInfosResponse"/></returns>
+        public Task<DescribeCasterMarkWordInfosResponse> DescribeCasterMarkWordInfos(DescribeCasterMarkWordInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeCasterMarkWordInfosResponse>(req, "DescribeCasterMarkWordInfos");
+        }
+
+        /// <summary>
+        /// 该接口用来查询某个导播台的文本列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCasterMarkWordInfosRequest"/></param>
+        /// <returns><see cref="DescribeCasterMarkWordInfosResponse"/></returns>
+        public DescribeCasterMarkWordInfosResponse DescribeCasterMarkWordInfosSync(DescribeCasterMarkWordInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeCasterMarkWordInfosResponse>(req, "DescribeCasterMarkWordInfos")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3551,6 +3677,50 @@ namespace TencentCloud.Live.V20180801
         public ModifyCasterLayoutInfoResponse ModifyCasterLayoutInfoSync(ModifyCasterLayoutInfoRequest req)
         {
             return InternalRequestAsync<ModifyCasterLayoutInfoResponse>(req, "ModifyCasterLayoutInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来修改导播台水印信息。
+        /// 注意，修改的Index对应的水印需已存在
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCasterMarkPicInfoRequest"/></param>
+        /// <returns><see cref="ModifyCasterMarkPicInfoResponse"/></returns>
+        public Task<ModifyCasterMarkPicInfoResponse> ModifyCasterMarkPicInfo(ModifyCasterMarkPicInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyCasterMarkPicInfoResponse>(req, "ModifyCasterMarkPicInfo");
+        }
+
+        /// <summary>
+        /// 该接口用来修改导播台水印信息。
+        /// 注意，修改的Index对应的水印需已存在
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCasterMarkPicInfoRequest"/></param>
+        /// <returns><see cref="ModifyCasterMarkPicInfoResponse"/></returns>
+        public ModifyCasterMarkPicInfoResponse ModifyCasterMarkPicInfoSync(ModifyCasterMarkPicInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyCasterMarkPicInfoResponse>(req, "ModifyCasterMarkPicInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用来修改导播台文本配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCasterMarkWordInfoRequest"/></param>
+        /// <returns><see cref="ModifyCasterMarkWordInfoResponse"/></returns>
+        public Task<ModifyCasterMarkWordInfoResponse> ModifyCasterMarkWordInfo(ModifyCasterMarkWordInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyCasterMarkWordInfoResponse>(req, "ModifyCasterMarkWordInfo");
+        }
+
+        /// <summary>
+        /// 该接口用来修改导播台文本配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCasterMarkWordInfoRequest"/></param>
+        /// <returns><see cref="ModifyCasterMarkWordInfoResponse"/></returns>
+        public ModifyCasterMarkWordInfoResponse ModifyCasterMarkWordInfoSync(ModifyCasterMarkWordInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyCasterMarkWordInfoResponse>(req, "ModifyCasterMarkWordInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

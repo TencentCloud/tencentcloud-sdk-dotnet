@@ -26,35 +26,30 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 采样时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SampleTime")]
         public BaseItem SampleTime{ get; set; }
 
         /// <summary>
         /// 检测时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TestTime")]
         public BaseItem TestTime{ get; set; }
 
         /// <summary>
         /// 检测机构
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TestOrganization")]
         public BaseItem TestOrganization{ get; set; }
 
         /// <summary>
         /// 检测结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TestResult")]
         public BaseItem TestResult{ get; set; }
 
         /// <summary>
         /// 健康码颜色
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CodeColor")]
         public BaseItem CodeColor{ get; set; }

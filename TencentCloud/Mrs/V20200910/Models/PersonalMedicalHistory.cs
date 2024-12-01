@@ -26,35 +26,30 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 出生史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BirthPlace")]
         public string BirthPlace{ get; set; }
 
         /// <summary>
         /// 居住史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LivePlace")]
         public string LivePlace{ get; set; }
 
         /// <summary>
         /// 工作史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Job")]
         public string Job{ get; set; }
 
         /// <summary>
         /// 吸烟史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SmokeHistory")]
         public string SmokeHistory{ get; set; }
 
         /// <summary>
         /// 饮酒史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlcoholicHistory")]
         public string AlcoholicHistory{ get; set; }

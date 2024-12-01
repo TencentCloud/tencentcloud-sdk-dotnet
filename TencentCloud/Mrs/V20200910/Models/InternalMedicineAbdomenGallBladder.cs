@@ -26,42 +26,36 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 胆囊总体描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Src")]
         public KeyValueItem Src{ get; set; }
 
         /// <summary>
         /// 胆囊大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Size")]
         public KeyValueItem Size{ get; set; }
 
         /// <summary>
         /// 胆囊触诊
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Palpation")]
         public KeyValueItem Palpation{ get; set; }
 
         /// <summary>
         /// 胆囊叩诊
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Percussion")]
         public KeyValueItem Percussion{ get; set; }
 
         /// <summary>
         /// 胆囊压痛
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tenderness")]
         public KeyValueItem Tenderness{ get; set; }
 
         /// <summary>
         /// 胆囊质地
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Consistency")]
         public KeyValueItem Consistency{ get; set; }

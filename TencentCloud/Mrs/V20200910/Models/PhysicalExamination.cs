@@ -26,56 +26,48 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 一般检查
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GeneralExamination")]
         public GeneralExaminationBaseItem GeneralExamination{ get; set; }
 
         /// <summary>
         /// 内科
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InternalMedicine")]
         public InternalMedicineBaseItem InternalMedicine{ get; set; }
 
         /// <summary>
         /// 外科
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Surgery")]
         public SurgeryBaseItem Surgery{ get; set; }
 
         /// <summary>
         /// 口腔科
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Stomatology")]
         public StomatologyBaseItem Stomatology{ get; set; }
 
         /// <summary>
         /// 眼科
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ophthalmology")]
         public OphthalmologyBaseItem Ophthalmology{ get; set; }
 
         /// <summary>
         /// 耳鼻喉科
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Otolaryngology")]
         public OtolaryngologyBaseItem Otolaryngology{ get; set; }
 
         /// <summary>
         /// 妇科
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Gynaecology")]
         public GynaecologyBaseItem Gynaecology{ get; set; }
 
         /// <summary>
         /// 未标准化
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Unclassified")]
         public KeyValueItem[] Unclassified{ get; set; }

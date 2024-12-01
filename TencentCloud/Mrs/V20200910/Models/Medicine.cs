@@ -26,56 +26,48 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 药品名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 商品名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TradeName")]
         public string TradeName{ get; set; }
 
         /// <summary>
         /// 厂商
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Firm")]
         public string Firm{ get; set; }
 
         /// <summary>
         /// 医保类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }
 
         /// <summary>
         /// 规格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Specification")]
         public string Specification{ get; set; }
 
         /// <summary>
         /// 最小包装数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinQuantity")]
         public string MinQuantity{ get; set; }
 
         /// <summary>
         /// 最小制剂单位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DosageUnit")]
         public string DosageUnit{ get; set; }
 
         /// <summary>
         /// 最小包装单位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackingUnit")]
         public string PackingUnit{ get; set; }

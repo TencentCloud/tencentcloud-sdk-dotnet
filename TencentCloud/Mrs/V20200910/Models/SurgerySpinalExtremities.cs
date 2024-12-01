@@ -26,49 +26,42 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 脊柱四肢总体描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Text")]
         public KeyValueItem Text{ get; set; }
 
         /// <summary>
         /// 脊柱
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpinalColumn")]
         public KeyValueItem SpinalColumn{ get; set; }
 
         /// <summary>
         /// 四肢和关节
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LimbJoint")]
         public KeyValueItem LimbJoint{ get; set; }
 
         /// <summary>
         /// 平跛足
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Foot")]
         public KeyValueItem Foot{ get; set; }
 
         /// <summary>
         /// 骨骼
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bone")]
         public KeyValueItem Bone{ get; set; }
 
         /// <summary>
         /// 步态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Gait")]
         public KeyValueItem Gait{ get; set; }
 
         /// <summary>
         /// 残疾或畸形
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Deformity")]
         public KeyValueItem Deformity{ get; set; }

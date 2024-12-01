@@ -26,63 +26,54 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 就诊日期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiagnosisTime")]
         public string DiagnosisTime{ get; set; }
 
         /// <summary>
         /// 就诊科室
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiagnosisDepartmentName")]
         public string DiagnosisDepartmentName{ get; set; }
 
         /// <summary>
         /// 就诊医生
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiagnosisDoctorName")]
         public string DiagnosisDoctorName{ get; set; }
 
         /// <summary>
         /// 临床诊断
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClinicalDiagnosis")]
         public string ClinicalDiagnosis{ get; set; }
 
         /// <summary>
         /// 主述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MainNarration")]
         public string MainNarration{ get; set; }
 
         /// <summary>
         /// 体格检查
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PhysicalExamination")]
         public string PhysicalExamination{ get; set; }
 
         /// <summary>
         /// 检查结论
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InspectionFindings")]
         public string InspectionFindings{ get; set; }
 
         /// <summary>
         /// 治疗意见
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TreatmentOpinion")]
         public string TreatmentOpinion{ get; set; }
 
         /// <summary>
         /// 数据在原PDF文件中的第几页
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Page")]
         public long? Page{ get; set; }

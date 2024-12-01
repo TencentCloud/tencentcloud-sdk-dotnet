@@ -26,21 +26,18 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 生命体征
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VitalSign")]
         public GeneralExaminationVitalSign VitalSign{ get; set; }
 
         /// <summary>
         /// 其他
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Others")]
         public GeneralExaminationOthers Others{ get; set; }
 
         /// <summary>
         /// 小结
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BriefSummary")]
         public GeneralExaminationBriefSummary BriefSummary{ get; set; }

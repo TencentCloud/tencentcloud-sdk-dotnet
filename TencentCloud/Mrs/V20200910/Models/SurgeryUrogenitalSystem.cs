@@ -26,21 +26,18 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 泌尿生殖系统总体描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Text")]
         public KeyValueItem Text{ get; set; }
 
         /// <summary>
         /// 前列腺
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Prostate")]
         public KeyValueItem Prostate{ get; set; }
 
         /// <summary>
         /// 外生殖器（男性）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExternalReproductiveOrgans")]
         public KeyValueItem ExternalReproductiveOrgans{ get; set; }

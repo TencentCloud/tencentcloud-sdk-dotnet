@@ -26,98 +26,84 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 部位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Part")]
         public Part Part{ get; set; }
 
         /// <summary>
         /// 组织大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TissueSizes")]
         public Size[] TissueSizes{ get; set; }
 
         /// <summary>
         /// 结节大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TuberSizes")]
         public Size[] TuberSizes{ get; set; }
 
         /// <summary>
         /// 肿瘤大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CancerSizes")]
         public Size[] CancerSizes{ get; set; }
 
         /// <summary>
         /// 组织学等级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HistologyLevel")]
         public BaseInfo HistologyLevel{ get; set; }
 
         /// <summary>
         /// 组织学类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HistologyType")]
         public HistologyTypeV2 HistologyType{ get; set; }
 
         /// <summary>
         /// 侵犯
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Invasive")]
         public InvasiveV2[] Invasive{ get; set; }
 
         /// <summary>
         /// pTNM
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PTNM")]
         public PTNM PTNM{ get; set; }
 
         /// <summary>
         /// 浸润深度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InfiltrationDepth")]
         public BaseInfo InfiltrationDepth{ get; set; }
 
         /// <summary>
         /// 结节数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TuberNum")]
         public BaseInfo TuberNum{ get; set; }
 
         /// <summary>
         /// 钙化
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Calcification")]
         public BaseInfo Calcification{ get; set; }
 
         /// <summary>
         /// 坏死
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Necrosis")]
         public BaseInfo Necrosis{ get; set; }
 
         /// <summary>
         /// 异形
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Abnormity")]
         public BaseInfo Abnormity{ get; set; }
 
         /// <summary>
         /// 断链
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Breaked")]
         public BaseInfo Breaked{ get; set; }

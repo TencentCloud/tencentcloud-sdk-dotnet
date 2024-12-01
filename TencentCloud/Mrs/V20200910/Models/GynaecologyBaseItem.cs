@@ -26,63 +26,54 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 外阴
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vulva")]
         public GynaecologyVulva Vulva{ get; set; }
 
         /// <summary>
         /// 阴道
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vagina")]
         public GynaecologyVagina Vagina{ get; set; }
 
         /// <summary>
         /// 子宫颈
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cervix")]
         public GynaecologyCervix Cervix{ get; set; }
 
         /// <summary>
         /// 子宫
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uterus")]
         public GynaecologyUterus Uterus{ get; set; }
 
         /// <summary>
         /// 子宫附件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Adnexal")]
         public GynaecologyAdnexal Adnexal{ get; set; }
 
         /// <summary>
         /// 盆腔
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PelvicCavity")]
         public GynaecologyPelvicCavity PelvicCavity{ get; set; }
 
         /// <summary>
         /// 妇科其他
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Others")]
         public KeyValueItem[] Others{ get; set; }
 
         /// <summary>
         /// 月经史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MenstrualHistory")]
         public GynaecologyMenstrualHistory MenstrualHistory{ get; set; }
 
         /// <summary>
         /// 小结
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BriefSummary")]
         public GynaecologyBriefSummary BriefSummary{ get; set; }

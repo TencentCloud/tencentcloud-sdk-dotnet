@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1132";
+       private const string sdkVersion = "SDK_NET_3.0.1133";
 
         /// <summary>
         /// Client constructor.
@@ -1844,6 +1844,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 查询站点配置项导入结果接口，本接口用于站点配置导入接口（ImportZoneConfig）的结果查询。该功能仅支持标准版或企业版套餐的站点使用。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeZoneConfigImportResultRequest"/></param>
+        /// <returns><see cref="DescribeZoneConfigImportResultResponse"/></returns>
+        public Task<DescribeZoneConfigImportResultResponse> DescribeZoneConfigImportResult(DescribeZoneConfigImportResultRequest req)
+        {
+            return InternalRequestAsync<DescribeZoneConfigImportResultResponse>(req, "DescribeZoneConfigImportResult");
+        }
+
+        /// <summary>
+        /// 查询站点配置项导入结果接口，本接口用于站点配置导入接口（ImportZoneConfig）的结果查询。该功能仅支持标准版或企业版套餐的站点使用。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeZoneConfigImportResultRequest"/></param>
+        /// <returns><see cref="DescribeZoneConfigImportResultResponse"/></returns>
+        public DescribeZoneConfigImportResultResponse DescribeZoneConfigImportResultSync(DescribeZoneConfigImportResultRequest req)
+        {
+            return InternalRequestAsync<DescribeZoneConfigImportResultResponse>(req, "DescribeZoneConfigImportResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 用于查询站点的所有配置信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeZoneSettingRequest"/></param>
@@ -1963,6 +1984,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 导出站点配置接口，本接口支持用户根据需要的配置项进行配置导出，导出的配置用于导入站点配置接口（ImportZoneConfig）进行配置导入。该功能仅支持标准版和企业版套餐站点使用。
+        /// </summary>
+        /// <param name="req"><see cref="ExportZoneConfigRequest"/></param>
+        /// <returns><see cref="ExportZoneConfigResponse"/></returns>
+        public Task<ExportZoneConfigResponse> ExportZoneConfig(ExportZoneConfigRequest req)
+        {
+            return InternalRequestAsync<ExportZoneConfigResponse>(req, "ExportZoneConfig");
+        }
+
+        /// <summary>
+        /// 导出站点配置接口，本接口支持用户根据需要的配置项进行配置导出，导出的配置用于导入站点配置接口（ImportZoneConfig）进行配置导入。该功能仅支持标准版和企业版套餐站点使用。
+        /// </summary>
+        /// <param name="req"><see cref="ExportZoneConfigRequest"/></param>
+        /// <returns><see cref="ExportZoneConfigResponse"/></returns>
+        public ExportZoneConfigResponse ExportZoneConfigSync(ExportZoneConfigRequest req)
+        {
+            return InternalRequestAsync<ExportZoneConfigResponse>(req, "ExportZoneConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 操作边缘函数运行环境，支持环境变量的相关设置。
         /// 设置环境变量后，可在函数代码中使用，具体参考 [边缘函数引入环境变量](https://cloud.tencent.com/document/product/1552/109151#0151fd9a-8b0e-407b-ae37-54553a60ded6)。
         /// </summary>
@@ -2003,6 +2045,27 @@ namespace TencentCloud.Teo.V20220901
         public IdentifyZoneResponse IdentifyZoneSync(IdentifyZoneRequest req)
         {
             return InternalRequestAsync<IdentifyZoneResponse>(req, "IdentifyZone")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 导入站点配置接口，本接口支持站点配置文件的快速导入，发起导入后接口会返回对应的任务 ID（TaskId），用户需通过查询站点配置导入结果接口（DescribeZoneConfigImportResult）获取本次导入任务执行的结果。该功能仅支持标准版和企业版套餐站点使用。
+        /// </summary>
+        /// <param name="req"><see cref="ImportZoneConfigRequest"/></param>
+        /// <returns><see cref="ImportZoneConfigResponse"/></returns>
+        public Task<ImportZoneConfigResponse> ImportZoneConfig(ImportZoneConfigRequest req)
+        {
+            return InternalRequestAsync<ImportZoneConfigResponse>(req, "ImportZoneConfig");
+        }
+
+        /// <summary>
+        /// 导入站点配置接口，本接口支持站点配置文件的快速导入，发起导入后接口会返回对应的任务 ID（TaskId），用户需通过查询站点配置导入结果接口（DescribeZoneConfigImportResult）获取本次导入任务执行的结果。该功能仅支持标准版和企业版套餐站点使用。
+        /// </summary>
+        /// <param name="req"><see cref="ImportZoneConfigRequest"/></param>
+        /// <returns><see cref="ImportZoneConfigResponse"/></returns>
+        public ImportZoneConfigResponse ImportZoneConfigSync(ImportZoneConfigRequest req)
+        {
+            return InternalRequestAsync<ImportZoneConfigResponse>(req, "ImportZoneConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

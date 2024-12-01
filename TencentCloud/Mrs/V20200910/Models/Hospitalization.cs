@@ -26,21 +26,18 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 入院时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdmissionTime")]
         public string AdmissionTime{ get; set; }
 
         /// <summary>
         /// 出院时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DischargeTime")]
         public string DischargeTime{ get; set; }
 
         /// <summary>
         /// 住院天数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdmissionDays")]
         public string AdmissionDays{ get; set; }
@@ -55,42 +52,36 @@ namespace TencentCloud.Mrs.V20200910.Models
 
         /// <summary>
         /// 入院情况
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdmissionCondition")]
         public string AdmissionCondition{ get; set; }
 
         /// <summary>
         /// 诊疗经过
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiagnosisTreatment")]
         public string DiagnosisTreatment{ get; set; }
 
         /// <summary>
         /// 出院诊断
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DischargeDiagnosis")]
         public string DischargeDiagnosis{ get; set; }
 
         /// <summary>
         /// 出院医嘱
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DischargeInstruction")]
         public string DischargeInstruction{ get; set; }
 
         /// <summary>
         /// 入院诊断
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdmissionDiagnosis")]
         public string AdmissionDiagnosis{ get; set; }
 
         /// <summary>
         /// 数据在原PDF文件中的第几页
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Page")]
         public long? Page{ get; set; }

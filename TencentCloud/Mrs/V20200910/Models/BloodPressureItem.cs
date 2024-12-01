@@ -26,49 +26,42 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 项目原文
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Item")]
         public PhysicalBaseItem Item{ get; set; }
 
         /// <summary>
         /// 数值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Result")]
         public PhysicalBaseItem Result{ get; set; }
 
         /// <summary>
         /// 单位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Unit")]
         public PhysicalBaseItem Unit{ get; set; }
 
         /// <summary>
         /// 第几次
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Times")]
         public PhysicalBaseItem Times{ get; set; }
 
         /// <summary>
         /// 左右手臂
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Location")]
         public PhysicalBaseItem Location{ get; set; }
 
         /// <summary>
         /// 数据在原PDF文件中的第几页
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Page")]
         public long? Page{ get; set; }

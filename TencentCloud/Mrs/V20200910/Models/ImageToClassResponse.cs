@@ -26,7 +26,6 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 分类结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TextTypeList")]
         public TextType[] TextTypeList{ get; set; }

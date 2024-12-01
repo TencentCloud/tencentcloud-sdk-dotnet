@@ -26,70 +26,60 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 序号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
         /// 疫苗名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vaccine")]
         public string Vaccine{ get; set; }
 
         /// <summary>
         /// 剂次
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Dose")]
         public string Dose{ get; set; }
 
         /// <summary>
         /// 接种日期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }
 
         /// <summary>
         /// 疫苗批号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LotNumber")]
         public string LotNumber{ get; set; }
 
         /// <summary>
         /// 生产企业
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Manufacturer")]
         public string Manufacturer{ get; set; }
 
         /// <summary>
         /// 接种单位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Clinic")]
         public string Clinic{ get; set; }
 
         /// <summary>
         /// 接种部位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Site")]
         public string Site{ get; set; }
 
         /// <summary>
         /// 接种者
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Provider")]
         public string Provider{ get; set; }
 
         /// <summary>
         /// 疫苗批号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Lot")]
         public string Lot{ get; set; }

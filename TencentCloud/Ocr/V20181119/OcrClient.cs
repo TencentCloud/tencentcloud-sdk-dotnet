@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1132";
+       private const string sdkVersion = "SDK_NET_3.0.1133";
 
         /// <summary>
         /// Client constructor.
@@ -2212,27 +2212,6 @@ namespace TencentCloud.Ocr.V20181119
         public RecognizeHealthCodeOCRResponse RecognizeHealthCodeOCRSync(RecognizeHealthCodeOCRRequest req)
         {
             return InternalRequestAsync<RecognizeHealthCodeOCRResponse>(req, "RecognizeHealthCodeOCR")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 韩国驾驶证识别
-        /// </summary>
-        /// <param name="req"><see cref="RecognizeKoreanDrivingLicenseOCRRequest"/></param>
-        /// <returns><see cref="RecognizeKoreanDrivingLicenseOCRResponse"/></returns>
-        public Task<RecognizeKoreanDrivingLicenseOCRResponse> RecognizeKoreanDrivingLicenseOCR(RecognizeKoreanDrivingLicenseOCRRequest req)
-        {
-            return InternalRequestAsync<RecognizeKoreanDrivingLicenseOCRResponse>(req, "RecognizeKoreanDrivingLicenseOCR");
-        }
-
-        /// <summary>
-        /// 韩国驾驶证识别
-        /// </summary>
-        /// <param name="req"><see cref="RecognizeKoreanDrivingLicenseOCRRequest"/></param>
-        /// <returns><see cref="RecognizeKoreanDrivingLicenseOCRResponse"/></returns>
-        public RecognizeKoreanDrivingLicenseOCRResponse RecognizeKoreanDrivingLicenseOCRSync(RecognizeKoreanDrivingLicenseOCRRequest req)
-        {
-            return InternalRequestAsync<RecognizeKoreanDrivingLicenseOCRResponse>(req, "RecognizeKoreanDrivingLicenseOCR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

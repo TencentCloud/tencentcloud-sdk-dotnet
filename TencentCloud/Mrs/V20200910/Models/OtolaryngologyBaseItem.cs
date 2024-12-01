@@ -26,35 +26,30 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 耳朵
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ear")]
         public OtolaryngologyEar Ear{ get; set; }
 
         /// <summary>
         /// 鼻
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Nose")]
         public OtolaryngologyNose Nose{ get; set; }
 
         /// <summary>
         /// 喉
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Larynx")]
         public OtolaryngologyLarynx Larynx{ get; set; }
 
         /// <summary>
         /// 耳鼻喉其他
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Others")]
         public KeyValueItem[] Others{ get; set; }
 
         /// <summary>
         /// 小结
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BriefSummary")]
         public OtolaryngologyBriefSummary BriefSummary{ get; set; }

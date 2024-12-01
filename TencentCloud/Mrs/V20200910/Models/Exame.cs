@@ -26,14 +26,12 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 结论段落
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OverView")]
         public ResultInfo[] OverView{ get; set; }
 
         /// <summary>
         /// 异常与建议段落
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Abnormality")]
         public ResultInfo[] Abnormality{ get; set; }

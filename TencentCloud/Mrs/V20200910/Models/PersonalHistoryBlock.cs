@@ -26,56 +26,48 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 出生地
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BirthPlace")]
         public BirthPlaceBlock BirthPlace{ get; set; }
 
         /// <summary>
         /// 居住地
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LivePlace")]
         public BirthPlaceBlock LivePlace{ get; set; }
 
         /// <summary>
         /// 职业
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Job")]
         public BirthPlaceBlock Job{ get; set; }
 
         /// <summary>
         /// 吸烟
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SmokeHistory")]
         public SmokeHistoryBlock SmokeHistory{ get; set; }
 
         /// <summary>
         /// 喝酒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlcoholicHistory")]
         public SmokeHistoryBlock AlcoholicHistory{ get; set; }
 
         /// <summary>
         /// 月经史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MenstrualHistory")]
         public MenstrualHistoryBlock MenstrualHistory{ get; set; }
 
         /// <summary>
         /// 婚姻-生育史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ObstericalHistory")]
         public ObstetricalHistoryBlock ObstericalHistory{ get; set; }
 
         /// <summary>
         /// 家族史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FamilyHistory")]
         public FamilyHistoryBlock FamilyHistory{ get; set; }

@@ -26,42 +26,36 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 肝脏总体描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Src")]
         public KeyValueItem Src{ get; set; }
 
         /// <summary>
         /// 肝脏大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Size")]
         public KeyValueItem Size{ get; set; }
 
         /// <summary>
         /// 肝脏触诊
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Palpation")]
         public KeyValueItem Palpation{ get; set; }
 
         /// <summary>
         /// 肝脏叩诊
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Percussion")]
         public KeyValueItem Percussion{ get; set; }
 
         /// <summary>
         /// 肝脏压痛
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tenderness")]
         public KeyValueItem Tenderness{ get; set; }
 
         /// <summary>
         /// 肝脏质地
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Consistency")]
         public KeyValueItem Consistency{ get; set; }

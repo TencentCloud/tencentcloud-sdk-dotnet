@@ -26,14 +26,12 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 婚姻史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MarriageHistory")]
         public MenstrualHistoryDetailBlock MarriageHistory{ get; set; }
 
         /// <summary>
         /// 婚育史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FertilityHistory")]
         public FertilityHistoryBlock FertilityHistory{ get; set; }

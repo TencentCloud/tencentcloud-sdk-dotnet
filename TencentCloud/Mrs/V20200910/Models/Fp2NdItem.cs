@@ -26,56 +26,48 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 手术编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Code")]
         public BaseItem Code{ get; set; }
 
         /// <summary>
         /// 手术名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public BaseItem Name{ get; set; }
 
         /// <summary>
         /// 手术开始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public BaseItem StartTime{ get; set; }
 
         /// <summary>
         /// 手术结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public BaseItem EndTime{ get; set; }
 
         /// <summary>
         /// 手术等级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Level")]
         public BaseItem Level{ get; set; }
 
         /// <summary>
         /// 手术类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public BaseItem Type{ get; set; }
 
         /// <summary>
         /// 醉愈合方式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IncisionHealingGrade")]
         public BaseItem IncisionHealingGrade{ get; set; }
 
         /// <summary>
         /// 麻醉方法
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AnesthesiaMethod")]
         public BaseItem AnesthesiaMethod{ get; set; }

@@ -28,6 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// appId
         /// </summary>
         [JsonProperty("MiniProgramAppId")]
+        [System.Obsolete]
         public string MiniProgramAppId{ get; set; }
 
         /// <summary>

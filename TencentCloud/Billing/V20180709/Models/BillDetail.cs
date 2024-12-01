@@ -243,6 +243,24 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("ReserveDetail")]
         public string ReserveDetail{ get; set; }
 
+        /// <summary>
+        /// 优惠对象
+        /// </summary>
+        [JsonProperty("DiscountObject")]
+        public string DiscountObject{ get; set; }
+
+        /// <summary>
+        /// 优惠类型
+        /// </summary>
+        [JsonProperty("DiscountType")]
+        public string DiscountType{ get; set; }
+
+        /// <summary>
+        /// 优惠内容
+        /// </summary>
+        [JsonProperty("DiscountContent")]
+        public string DiscountContent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -283,6 +301,9 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "RegionType", this.RegionType);
             this.SetParamSimple(map, prefix + "RegionTypeName", this.RegionTypeName);
             this.SetParamSimple(map, prefix + "ReserveDetail", this.ReserveDetail);
+            this.SetParamSimple(map, prefix + "DiscountObject", this.DiscountObject);
+            this.SetParamSimple(map, prefix + "DiscountType", this.DiscountType);
+            this.SetParamSimple(map, prefix + "DiscountContent", this.DiscountContent);
         }
     }
 }

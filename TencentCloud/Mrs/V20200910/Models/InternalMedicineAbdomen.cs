@@ -26,49 +26,42 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 内科腹部小结
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Text")]
         public KeyValueItem Text{ get; set; }
 
         /// <summary>
         /// 肝脏
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Liver")]
         public InternalMedicineAbdomenLiver Liver{ get; set; }
 
         /// <summary>
         /// 胆囊
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GallBladder")]
         public InternalMedicineAbdomenGallBladder GallBladder{ get; set; }
 
         /// <summary>
         /// 胰腺
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Pancreas")]
         public InternalMedicineAbdomenPancreas Pancreas{ get; set; }
 
         /// <summary>
         /// 脾脏
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Spleen")]
         public InternalMedicineAbdomenSpleen Spleen{ get; set; }
 
         /// <summary>
         /// 肾脏
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Kidney")]
         public InternalMedicineAbdomenKidney Kidney{ get; set; }
 
         /// <summary>
         /// 腹部其他
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Others")]
         public KeyValueItem[] Others{ get; set; }

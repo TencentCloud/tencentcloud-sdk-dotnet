@@ -26,28 +26,24 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 球镜
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Sph")]
         public BaseItem3[] Sph{ get; set; }
 
         /// <summary>
         /// 柱镜
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cyl")]
         public BaseItem3[] Cyl{ get; set; }
 
         /// <summary>
         /// 轴位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ax")]
         public BaseItem3[] Ax{ get; set; }
 
         /// <summary>
         /// 等效球镜
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Se")]
         public BaseItem2 Se{ get; set; }

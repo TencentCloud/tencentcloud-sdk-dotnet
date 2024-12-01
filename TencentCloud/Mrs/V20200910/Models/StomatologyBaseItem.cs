@@ -26,35 +26,30 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 龋齿
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ToothDecay")]
         public StomatologyToothDecay ToothDecay{ get; set; }
 
         /// <summary>
         /// 牙龈
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Gingiva")]
         public StomatologyGingiva Gingiva{ get; set; }
 
         /// <summary>
         /// 牙周
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Periodontics")]
         public StomatologyPeriodontics Periodontics{ get; set; }
 
         /// <summary>
         /// 口腔其他
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Others")]
         public KeyValueItem[] Others{ get; set; }
 
         /// <summary>
         /// 小结
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BriefSummary")]
         public StomatologyBriefSummary BriefSummary{ get; set; }

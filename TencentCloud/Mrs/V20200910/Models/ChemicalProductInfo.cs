@@ -26,161 +26,138 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 药品名称，包括通用名和商品名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public ChemicalProductInfoName Name{ get; set; }
 
         /// <summary>
         /// 活性成份消息定义，如果是复方制剂，可以不列出每个活性成份的详细信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActiveIngredient")]
         public ChemicalProductInfoActiveIngredient ActiveIngredient{ get; set; }
 
         /// <summary>
         /// 性状
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Appearance")]
         public ChemicalProductInfoAppearance Appearance{ get; set; }
 
         /// <summary>
         /// 适应症描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Indications")]
         public ChemicalProductInfoIndications Indications{ get; set; }
 
         /// <summary>
         /// 规格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Brochure")]
         public ChemicalProductInfoBrochure Brochure{ get; set; }
 
         /// <summary>
         /// 用法用量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Dosage")]
         public ChemicalProductInfoDosage Dosage{ get; set; }
 
         /// <summary>
         /// 不良反应
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdverseReaction")]
         public ChemicalProductInfoAdverseReaction AdverseReaction{ get; set; }
 
         /// <summary>
         /// 禁忌情况
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Contraindications")]
         public ChemicalProductInfoContraindications Contraindications{ get; set; }
 
         /// <summary>
         /// 注意事项
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Precautions")]
         public ChemicalProductInfoPrecautions Precautions{ get; set; }
 
         /// <summary>
         /// 孕妇及哺乳期妇女用药
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PregnancyLactationUse")]
         public ChemicalProductInfoPregnancyLactationUse PregnancyLactationUse{ get; set; }
 
         /// <summary>
         /// 儿童用药
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PediatricUse")]
         public ChemicalProductInfoPediatricUse PediatricUse{ get; set; }
 
         /// <summary>
         /// 老年用药
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GeriatricUse")]
         public ChemicalProductInfoGeriatricUse GeriatricUse{ get; set; }
 
         /// <summary>
         /// 药品的药物相互作用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Interactions")]
         public ChemicalProductInfoInteractions Interactions{ get; set; }
 
         /// <summary>
         /// 药物过量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Overdose")]
         public ChemicalProductInfoOverdose Overdose{ get; set; }
 
         /// <summary>
         /// 临床试验
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClinicalTrial")]
         public ChemicalProductInfoClinicalTrial ClinicalTrial{ get; set; }
 
         /// <summary>
         /// 药理毒理
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PharmacologyToxicology")]
         public ChemicalProductInfoPharmacologyToxicology PharmacologyToxicology{ get; set; }
 
         /// <summary>
         /// 药代动力学
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Pharmacokinetics")]
         public ChemicalProductInfoPharmacokinetics Pharmacokinetics{ get; set; }
 
         /// <summary>
         /// 储存条件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Storage")]
         public ChemicalProductInfoStorage Storage{ get; set; }
 
         /// <summary>
         /// 包装信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Packaging")]
         public ChemicalProductInfoPackaging Packaging{ get; set; }
 
         /// <summary>
         /// 有效期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValidityPeriod")]
         public ChemicalProductInfoValidityPeriod ValidityPeriod{ get; set; }
 
         /// <summary>
         /// 执行标准
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutiveStandards")]
         public ChemicalProductInfoExecutiveStandards ExecutiveStandards{ get; set; }
 
         /// <summary>
         /// 批准文号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Approval")]
         public ChemicalProductInfoApproval Approval{ get; set; }
 
         /// <summary>
         /// 生产企业名称和地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Manufacturer")]
         public ChemicalProductInfoManufacturer Manufacturer{ get; set; }

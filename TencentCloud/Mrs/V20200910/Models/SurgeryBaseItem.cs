@@ -26,70 +26,60 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 体检报告-外科-头颈部
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HeadNeck")]
         public SurgeryHeadNeck HeadNeck{ get; set; }
 
         /// <summary>
         /// 体检报告-外科-甲状腺
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Thyroid")]
         public SurgeryThyroid Thyroid{ get; set; }
 
         /// <summary>
         /// 体检报告-外科-乳房
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Breast")]
         public SurgeryBreast Breast{ get; set; }
 
         /// <summary>
         /// 体检报告-外科-浅表淋巴结
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LymphNode")]
         public SurgeryLymphNode LymphNode{ get; set; }
 
         /// <summary>
         /// 体检报告-外科-脊柱
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpinalExtremities")]
         public SurgerySpinalExtremities SpinalExtremities{ get; set; }
 
         /// <summary>
         /// 体检报告-外科-皮肤
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Skin")]
         public SurgerySkin Skin{ get; set; }
 
         /// <summary>
         /// 体检报告-外科-肛门直肠
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Anorectal")]
         public SurgeryAnorectal Anorectal{ get; set; }
 
         /// <summary>
         /// 体检报告-外科-泌尿生殖系统
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UrogenitalSystem")]
         public SurgeryUrogenitalSystem UrogenitalSystem{ get; set; }
 
         /// <summary>
         /// 体检报告-外科-外科其他
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Others")]
         public KeyValueItem[] Others{ get; set; }
 
         /// <summary>
         /// 体检报告-外科-小结
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BriefSummary")]
         public SurgeryBriefSummary BriefSummary{ get; set; }

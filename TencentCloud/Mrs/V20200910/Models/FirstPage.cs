@@ -26,42 +26,36 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 出入院诊断
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DischargeDiagnosis")]
         public DischargeDiagnosis[] DischargeDiagnosis{ get; set; }
 
         /// <summary>
         /// 病理诊断
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PathologicalDiagnosis")]
         public BlockInfo PathologicalDiagnosis{ get; set; }
 
         /// <summary>
         /// 临床诊断
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClinicalDiagnosis")]
         public BlockInfo ClinicalDiagnosis{ get; set; }
 
         /// <summary>
         /// 受伤中毒的外部原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DamagePoi")]
         public BlockInfoV2 DamagePoi{ get; set; }
 
         /// <summary>
         /// 病案首页第二页
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Fp2NdItems")]
         public Fp2NdItem[] Fp2NdItems{ get; set; }
 
         /// <summary>
         /// 数据在原PDF文件中的第几页
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Page")]
         public long? Page{ get; set; }

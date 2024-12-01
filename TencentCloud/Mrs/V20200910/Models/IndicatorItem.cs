@@ -26,91 +26,78 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 英文缩写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }
 
         /// <summary>
         /// 标准缩写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Scode")]
         public string Scode{ get; set; }
 
         /// <summary>
         /// 项目名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 标准名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Sname")]
         public string Sname{ get; set; }
 
         /// <summary>
         /// 结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
         /// <summary>
         /// 单位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }
 
         /// <summary>
         /// 参考范围
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Range")]
         public string Range{ get; set; }
 
         /// <summary>
         /// 上下箭头
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Arrow")]
         public string Arrow{ get; set; }
 
         /// <summary>
         /// 是否正常
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Normal")]
         public bool? Normal{ get; set; }
 
         /// <summary>
         /// 项目原文
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ItemString")]
         public string ItemString{ get; set; }
 
         /// <summary>
         /// 指标项ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
         /// 指标项坐标位置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Coords")]
         public Coordinate Coords{ get; set; }
 
         /// <summary>
         /// 推测结果是否异常
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InferNormal")]
         public string InferNormal{ get; set; }

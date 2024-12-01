@@ -26,98 +26,84 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 癌症部位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CancerPart")]
         public Part CancerPart{ get; set; }
 
         /// <summary>
         /// 癌症部位大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CancerSize")]
         public Size[] CancerSize{ get; set; }
 
         /// <summary>
         /// 描述文本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DescText")]
         public string DescText{ get; set; }
 
         /// <summary>
         /// 组织学等级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HistologyLevel")]
         public HistologyLevel HistologyLevel{ get; set; }
 
         /// <summary>
         /// 组织学类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HistologyType")]
         public HistologyType HistologyType{ get; set; }
 
         /// <summary>
         /// IHC信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IHC")]
         public IHCInfo[] IHC{ get; set; }
 
         /// <summary>
         /// 浸润深度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InfiltrationDepth")]
         public BlockInfo InfiltrationDepth{ get; set; }
 
         /// <summary>
         /// 肿瘤扩散
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Invasive")]
         public Invas[] Invasive{ get; set; }
 
         /// <summary>
         /// 淋巴结
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LymphNodes")]
         public Lymph[] LymphNodes{ get; set; }
 
         /// <summary>
         /// PTNM信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PTNM")]
         public BlockInfo PTNM{ get; set; }
 
         /// <summary>
         /// 病理报告类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PathologicalReportType")]
         public BlockInfo PathologicalReportType{ get; set; }
 
         /// <summary>
         /// 报告原文
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReportText")]
         public string ReportText{ get; set; }
 
         /// <summary>
         /// 标本类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SampleType")]
         public BlockInfo SampleType{ get; set; }
 
         /// <summary>
         /// 结论文本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SummaryText")]
         public string SummaryText{ get; set; }

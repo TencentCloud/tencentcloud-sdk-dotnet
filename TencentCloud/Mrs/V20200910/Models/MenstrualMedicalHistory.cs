@@ -26,42 +26,36 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 末次月经时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastMenstrualPeriod")]
         public string LastMenstrualPeriod{ get; set; }
 
         /// <summary>
         /// 经量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MenstrualFlow")]
         public string MenstrualFlow{ get; set; }
 
         /// <summary>
         /// 月经初潮年龄
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MenarcheAge")]
         public string MenarcheAge{ get; set; }
 
         /// <summary>
         /// 是否来月经
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MenstruationOrNot")]
         public string MenstruationOrNot{ get; set; }
 
         /// <summary>
         /// 月经周期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MenstrualCycles")]
         public string MenstrualCycles{ get; set; }
 
         /// <summary>
         /// 月经持续天数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MenstrualPeriod")]
         public string MenstrualPeriod{ get; set; }

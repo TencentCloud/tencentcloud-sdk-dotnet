@@ -26,175 +26,150 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 诊断信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Check")]
         public Check[] Check{ get; set; }
 
         /// <summary>
         /// 病理报告
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Pathology")]
         public PathologyReport[] Pathology{ get; set; }
 
         /// <summary>
         /// 医学资料
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MedDoc")]
         public MedDoc[] MedDoc{ get; set; }
 
         /// <summary>
         /// 诊断证明
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiagCert")]
         public DiagCert[] DiagCert{ get; set; }
 
         /// <summary>
         /// 病案首页
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FirstPage")]
         public FirstPage[] FirstPage{ get; set; }
 
         /// <summary>
         /// 检验报告
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Indicator")]
         public Indicator[] Indicator{ get; set; }
 
         /// <summary>
         /// 门诊病历信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MedicalRecordInfo")]
         public MedicalRecordInfo[] MedicalRecordInfo{ get; set; }
 
         /// <summary>
         /// 出入院信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Hospitalization")]
         public Hospitalization[] Hospitalization{ get; set; }
 
         /// <summary>
         /// 手术记录
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Surgery")]
         public Surgery[] Surgery{ get; set; }
 
         /// <summary>
         /// 处方单
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Prescription")]
         public Prescription[] Prescription{ get; set; }
 
         /// <summary>
         /// 免疫接种证明
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VaccineCertificate")]
         public VaccineCertificate[] VaccineCertificate{ get; set; }
 
         /// <summary>
         /// 心电图
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Electrocardiogram")]
         public Electrocardiogram[] Electrocardiogram{ get; set; }
 
         /// <summary>
         /// 病理报告v2
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PathologyV2")]
         public PathologyV2[] PathologyV2{ get; set; }
 
         /// <summary>
         /// 内窥镜报告
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Endoscopy")]
         public Endoscopy[] Endoscopy{ get; set; }
 
         /// <summary>
         /// C14检验报告
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("C14")]
         public Indicator[] C14{ get; set; }
 
         /// <summary>
         /// 体检结论
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Exame")]
         public Exame[] Exame{ get; set; }
 
         /// <summary>
         /// 出入院结构体
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MedDocV2")]
         public DischargeInfoBlock[] MedDocV2{ get; set; }
 
         /// <summary>
         /// 检验报告v3
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndicatorV3")]
         public IndicatorV3[] IndicatorV3{ get; set; }
 
         /// <summary>
         /// 孕产报告
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Maternity")]
         public Maternity[] Maternity{ get; set; }
 
         /// <summary>
         /// 时间轴
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Timeline")]
         public TimelineInformation[] Timeline{ get; set; }
 
         /// <summary>
         /// 核酸报告结论
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Covid")]
         public CovidItemsInfo[] Covid{ get; set; }
 
         /// <summary>
         /// 眼科报告结构体
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Eye")]
         public EyeItemsInfo[] Eye{ get; set; }
 
         /// <summary>
         /// 出生证明结构化信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BirthCert")]
         public BirthCert[] BirthCert{ get; set; }
 
         /// <summary>
         /// 文本类型列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TextTypeListBlocks")]
         public TextTypeListBlock[] TextTypeListBlocks{ get; set; }
 
         /// <summary>
         /// 体检报告信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PhysicalExamination")]
         public PhysicalExaminationV1 PhysicalExamination{ get; set; }

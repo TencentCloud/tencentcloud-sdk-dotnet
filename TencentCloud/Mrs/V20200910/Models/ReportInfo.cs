@@ -26,182 +26,156 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 医院名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Hospital")]
         public string Hospital{ get; set; }
 
         /// <summary>
         /// 科室名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DepartmentName")]
         public string DepartmentName{ get; set; }
 
         /// <summary>
         /// 申请时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillingTime")]
         public string BillingTime{ get; set; }
 
         /// <summary>
         /// 报告时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReportTime")]
         public string ReportTime{ get; set; }
 
         /// <summary>
         /// 检查时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InspectTime")]
         public string InspectTime{ get; set; }
 
         /// <summary>
         /// 检查号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckNum")]
         public string CheckNum{ get; set; }
 
         /// <summary>
         /// 影像号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageNum")]
         public string ImageNum{ get; set; }
 
         /// <summary>
         /// 放射号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RadiationNum")]
         public string RadiationNum{ get; set; }
 
         /// <summary>
         /// 检验号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TestNum")]
         public string TestNum{ get; set; }
 
         /// <summary>
         /// 门诊号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutpatientNum")]
         public string OutpatientNum{ get; set; }
 
         /// <summary>
         /// 病理号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PathologyNum")]
         public string PathologyNum{ get; set; }
 
         /// <summary>
         /// 住院号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InHospitalNum")]
         public string InHospitalNum{ get; set; }
 
         /// <summary>
         /// 样本号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SampleNum")]
         public string SampleNum{ get; set; }
 
         /// <summary>
         /// 标本种类
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SampleType")]
         public string SampleType{ get; set; }
 
         /// <summary>
         /// 病历号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MedicalRecordNum")]
         public string MedicalRecordNum{ get; set; }
 
         /// <summary>
         /// 报告名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReportName")]
         public string ReportName{ get; set; }
 
         /// <summary>
         /// 超声号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UltraNum")]
         public string UltraNum{ get; set; }
 
         /// <summary>
         /// 临床诊断
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Diagnose")]
         public string Diagnose{ get; set; }
 
         /// <summary>
         /// 检查项目
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckItem")]
         public string CheckItem{ get; set; }
 
         /// <summary>
         /// 检查方法
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckMethod")]
         public string CheckMethod{ get; set; }
 
         /// <summary>
         /// 诊断时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiagnoseTime")]
         public string DiagnoseTime{ get; set; }
 
         /// <summary>
         /// 体检号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthCheckupNum")]
         public string HealthCheckupNum{ get; set; }
 
         /// <summary>
         /// 其它时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OtherTime")]
         public string OtherTime{ get; set; }
 
         /// <summary>
         /// 打印时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrintTime")]
         public string PrintTime{ get; set; }
 
         /// <summary>
         /// 未归类时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Times")]
         public Time[] Times{ get; set; }
 
         /// <summary>
         /// 床号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BedNo")]
         public string BedNo{ get; set; }

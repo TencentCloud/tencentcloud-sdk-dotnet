@@ -26,140 +26,120 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 心率
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HeartRate")]
         public EcgItem HeartRate{ get; set; }
 
         /// <summary>
         /// 心房率
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuricularRate")]
         public EcgItem AuricularRate{ get; set; }
 
         /// <summary>
         /// 心室率
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VentricularRate")]
         public EcgItem VentricularRate{ get; set; }
 
         /// <summary>
         /// 节律
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Rhythm")]
         public EcgItem Rhythm{ get; set; }
 
         /// <summary>
         /// P波时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PDuration")]
         public EcgItem PDuration{ get; set; }
 
         /// <summary>
         /// QRS时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QrsDuration")]
         public EcgItem QrsDuration{ get; set; }
 
         /// <summary>
         /// QRS电轴
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QrsAxis")]
         public EcgItem QrsAxis{ get; set; }
 
         /// <summary>
         /// P-R间期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PRInterval")]
         public EcgItem PRInterval{ get; set; }
 
         /// <summary>
         /// P-P间期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PPInterval")]
         public EcgItem PPInterval{ get; set; }
 
         /// <summary>
         /// R-R间期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RRInterval")]
         public EcgItem RRInterval{ get; set; }
 
         /// <summary>
         /// P-J间期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PJInterval")]
         public EcgItem PJInterval{ get; set; }
 
         /// <summary>
         /// Q-T间期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QTInterval")]
         public EcgItem QTInterval{ get; set; }
 
         /// <summary>
         /// qt/qtc间期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QTCInterval")]
         public EcgItem QTCInterval{ get; set; }
 
         /// <summary>
         /// RV5/SV1振幅
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Rv5SV1Amplitude")]
         public EcgItem Rv5SV1Amplitude{ get; set; }
 
         /// <summary>
         /// RV5+SV1振幅
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Rv5AddSV1Amplitude")]
         public EcgItem Rv5AddSV1Amplitude{ get; set; }
 
         /// <summary>
         /// PRT电轴
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PRTAxis")]
         public EcgItem PRTAxis{ get; set; }
 
         /// <summary>
         /// RV5振幅
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Rv5Amplitude")]
         public EcgItem Rv5Amplitude{ get; set; }
 
         /// <summary>
         /// SV1振幅
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SV1Amplitude")]
         public EcgItem SV1Amplitude{ get; set; }
 
         /// <summary>
         /// RV6/SV2
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RV6SV2")]
         public EcgItem RV6SV2{ get; set; }
 
         /// <summary>
         /// P/QRS/T电轴
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PQRSTAxis")]
         public EcgItem PQRSTAxis{ get; set; }

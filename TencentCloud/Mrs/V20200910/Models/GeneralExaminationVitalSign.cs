@@ -26,70 +26,60 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 生命体征总体描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Text")]
         public ValueUnitItem Text{ get; set; }
 
         /// <summary>
         /// 体温
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BodyTemperature")]
         public ValueUnitItem BodyTemperature{ get; set; }
 
         /// <summary>
         /// 脉率
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Pulse")]
         public ValueUnitItem Pulse{ get; set; }
 
         /// <summary>
         /// 心率
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HeartRate")]
         public ValueUnitItem HeartRate{ get; set; }
 
         /// <summary>
         /// 呼吸频率
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BreathingRate")]
         public ValueUnitItem BreathingRate{ get; set; }
 
         /// <summary>
         /// 身高
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BodyHeight")]
         public ValueUnitItem BodyHeight{ get; set; }
 
         /// <summary>
         /// 体重
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BodyWeight")]
         public ValueUnitItem BodyWeight{ get; set; }
 
         /// <summary>
         /// 体质指数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BodyMassIndex")]
         public ValueUnitItem BodyMassIndex{ get; set; }
 
         /// <summary>
         /// 腰围
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Waistline")]
         public ValueUnitItem Waistline{ get; set; }
 
         /// <summary>
         /// 血压
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BloodPressure")]
         public GeneralExaminationVitalSignBloodPressure BloodPressure{ get; set; }

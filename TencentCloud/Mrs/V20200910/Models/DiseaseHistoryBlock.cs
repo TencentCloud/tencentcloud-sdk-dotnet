@@ -26,35 +26,30 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 主要病史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MainDiseaseHistory")]
         public MainDiseaseHistoryBlock MainDiseaseHistory{ get; set; }
 
         /// <summary>
         /// 过敏史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AllergyHistory")]
         public MainDiseaseHistoryBlock AllergyHistory{ get; set; }
 
         /// <summary>
         /// 注射史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InfectHistory")]
         public MainDiseaseHistoryBlock InfectHistory{ get; set; }
 
         /// <summary>
         /// 手术史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SurgeryHistory")]
         public SurgeryHistoryBlock SurgeryHistory{ get; set; }
 
         /// <summary>
         /// 输血史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TransfusionHistory")]
         public TransfusionHistoryBlock TransfusionHistory{ get; set; }

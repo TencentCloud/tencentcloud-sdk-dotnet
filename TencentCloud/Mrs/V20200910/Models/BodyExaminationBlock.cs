@@ -26,28 +26,24 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 体温
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BodyTemperature")]
         public BodyTemperatureBlock BodyTemperature{ get; set; }
 
         /// <summary>
         /// 脉搏
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Pulse")]
         public BodyTemperatureBlock Pulse{ get; set; }
 
         /// <summary>
         /// 呼吸
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Breathe")]
         public BodyTemperatureBlock Breathe{ get; set; }
 
         /// <summary>
         /// 血压
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BloodPressure")]
         public BloodPressureBlock BloodPressure{ get; set; }

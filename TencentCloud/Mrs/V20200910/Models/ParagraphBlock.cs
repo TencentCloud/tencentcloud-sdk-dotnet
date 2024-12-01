@@ -26,127 +26,108 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 切口愈合情况
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IncisionHealingText")]
         public string IncisionHealingText{ get; set; }
 
         /// <summary>
         /// 辅助检查
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuxiliaryExaminationText")]
         public string AuxiliaryExaminationText{ get; set; }
 
         /// <summary>
         /// 特殊检查
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpecialExamText")]
         public string SpecialExamText{ get; set; }
 
         /// <summary>
         /// 门诊诊断
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutpatientDiagnosisText")]
         public string OutpatientDiagnosisText{ get; set; }
 
         /// <summary>
         /// 入院情况
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdmissionConditionText")]
         public string AdmissionConditionText{ get; set; }
 
         /// <summary>
         /// 诊疗经过
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckAndTreatmentProcessText")]
         public string CheckAndTreatmentProcessText{ get; set; }
 
         /// <summary>
         /// 体征
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SymptomsAndSignsText")]
         public string SymptomsAndSignsText{ get; set; }
 
         /// <summary>
         /// 出院医嘱
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DischargeInstructionsText")]
         public string DischargeInstructionsText{ get; set; }
 
         /// <summary>
         /// 入院诊断
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdmissionDiagnosisText")]
         public string AdmissionDiagnosisText{ get; set; }
 
         /// <summary>
         /// 手术情况
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SurgeryConditionText")]
         public string SurgeryConditionText{ get; set; }
 
         /// <summary>
         /// 病理诊断
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PathologicalDiagnosisText")]
         public string PathologicalDiagnosisText{ get; set; }
 
         /// <summary>
         /// 出院情况
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DischargeConditionText")]
         public string DischargeConditionText{ get; set; }
 
         /// <summary>
         /// 检查记录
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckRecordText")]
         public string CheckRecordText{ get; set; }
 
         /// <summary>
         /// 主诉
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChiefComplaintText")]
         public string ChiefComplaintText{ get; set; }
 
         /// <summary>
         /// 出院诊断
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DischargeDiagnosisText")]
         public string DischargeDiagnosisText{ get; set; }
 
         /// <summary>
         /// 既往史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MainDiseaseHistoryText")]
         public string MainDiseaseHistoryText{ get; set; }
 
         /// <summary>
         /// 现病史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiseasePresentText")]
         public string DiseasePresentText{ get; set; }
 
         /// <summary>
         /// 个人史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PersonalHistoryText")]
         public string PersonalHistoryText{ get; set; }
@@ -161,63 +142,54 @@ namespace TencentCloud.Mrs.V20200910.Models
 
         /// <summary>
         /// 婚育史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ObstericalHistoryText")]
         public string ObstericalHistoryText{ get; set; }
 
         /// <summary>
         /// 家族史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FamilyHistoryText")]
         public string FamilyHistoryText{ get; set; }
 
         /// <summary>
         /// 过敏史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AllergyHistoryText")]
         public string AllergyHistoryText{ get; set; }
 
         /// <summary>
         /// 病史信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiseaseHistoryText")]
         public string DiseaseHistoryText{ get; set; }
 
         /// <summary>
         /// 其它诊断
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OtherDiagnosisText")]
         public string OtherDiagnosisText{ get; set; }
 
         /// <summary>
         /// 体格检查
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BodyExaminationText")]
         public string BodyExaminationText{ get; set; }
 
         /// <summary>
         /// 专科检查
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpecialistExaminationText")]
         public string SpecialistExaminationText{ get; set; }
 
         /// <summary>
         /// 治疗结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TreatmentResultText")]
         public string TreatmentResultText{ get; set; }
 
         /// <summary>
         /// 月经史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MenstrualHistoryText")]
         public string MenstrualHistoryText{ get; set; }

@@ -26,35 +26,30 @@ namespace TencentCloud.Mrs.V20200910.Models
         
         /// <summary>
         /// 表格位置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableIndex")]
         public long? TableIndex{ get; set; }
 
         /// <summary>
         /// 出院诊断
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutDiagnosis")]
         public BlockInfo OutDiagnosis{ get; set; }
 
         /// <summary>
         /// 疾病编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiseaseCode")]
         public BlockInfo DiseaseCode{ get; set; }
 
         /// <summary>
         /// 入院情况
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InStatus")]
         public BlockInfo InStatus{ get; set; }
 
         /// <summary>
         /// 出院情况
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutStatus")]
         public BlockInfo OutStatus{ get; set; }
