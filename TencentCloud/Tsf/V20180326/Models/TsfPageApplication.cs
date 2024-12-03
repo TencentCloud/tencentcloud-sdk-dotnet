@@ -38,6 +38,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("Content")]
         public ApplicationForPage[] Content{ get; set; }
 
+        /// <summary>
+        /// 获取部署组实例列表返回的原始批次个数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SpecTotalCount")]
+        public long? SpecTotalCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "Content.", this.Content);
+            this.SetParamSimple(map, prefix + "SpecTotalCount", this.SpecTotalCount);
         }
     }
 }

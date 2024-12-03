@@ -143,6 +143,20 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("Public")]
         public long? Public{ get; set; }
 
+        /// <summary>
+        /// 创建方式：manual | automatic
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateMode")]
+        public string CreateMode{ get; set; }
+
+        /// <summary>
+        /// 仓库名，等同reponame字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RepoName")]
+        public string RepoName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -166,6 +180,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamObj(map, prefix + "ApplicationName.", this.ApplicationName);
             this.SetParamSimple(map, prefix + "ApplicationNameReal", this.ApplicationNameReal);
             this.SetParamSimple(map, prefix + "Public", this.Public);
+            this.SetParamSimple(map, prefix + "CreateMode", this.CreateMode);
+            this.SetParamSimple(map, prefix + "RepoName", this.RepoName);
         }
     }
 }

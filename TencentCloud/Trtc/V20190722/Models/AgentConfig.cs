@@ -66,6 +66,14 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("InterruptSpeechDuration")]
         public ulong? InterruptSpeechDuration{ get; set; }
 
+        /// <summary>
+        /// 控制新一轮对话的触发方式，默认为0。
+        /// - 0表示当服务端语音识别检测出的完整一句话后，自动触发一轮新的对话。
+        /// - 1表示客户端在收到字幕消息后，自行决定是否手动发送聊天信令触发一轮新的对话。
+        /// </summary>
+        [JsonProperty("TurnDetectionMode")]
+        public ulong? TurnDetectionMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +87,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "WelcomeMessage", this.WelcomeMessage);
             this.SetParamSimple(map, prefix + "InterruptMode", this.InterruptMode);
             this.SetParamSimple(map, prefix + "InterruptSpeechDuration", this.InterruptSpeechDuration);
+            this.SetParamSimple(map, prefix + "TurnDetectionMode", this.TurnDetectionMode);
         }
     }
 }

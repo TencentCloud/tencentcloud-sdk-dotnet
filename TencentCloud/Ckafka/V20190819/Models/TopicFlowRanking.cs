@@ -49,7 +49,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public ulong? ReplicaNum{ get; set; }
 
         /// <summary>
-        /// Topic 流量
+        /// Topic 流量,单位MB(设置date时以sum方式聚合)
         /// </summary>
         [JsonProperty("TopicTraffic")]
         public string TopicTraffic{ get; set; }

@@ -67,7 +67,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string BackupErrorMsg{ get; set; }
 
         /// <summary>
-        /// 改库表是否绑定降冷策略
+        /// 该库表是否绑定降冷策略
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsOpenCoolDown")]

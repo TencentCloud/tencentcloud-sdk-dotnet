@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DA95AE5B-1DB3-3342-A5B5-EA1C4CB7B305}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1133</VersionPrefix>
+    <VersionPrefix>3.0.1134</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -54,6 +54,7 @@
     <Compile Include="V20180326\Models\AddInstancesRequest.cs" />
     <Compile Include="V20180326\Models\AddInstancesResponse.cs" />
     <Compile Include="V20180326\Models\AdvanceSettings.cs" />
+    <Compile Include="V20180326\Models\Affinity.cs" />
     <Compile Include="V20180326\Models\AgentProfile.cs" />
     <Compile Include="V20180326\Models\ApiDefinitionDescr.cs" />
     <Compile Include="V20180326\Models\ApiDetailInfo.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="V20180326\Models\AssociateBusinessLogConfigResponse.cs" />
     <Compile Include="V20180326\Models\AssociateConfigWithGroupRequest.cs" />
     <Compile Include="V20180326\Models\AssociateConfigWithGroupResponse.cs" />
+    <Compile Include="V20180326\Models\AvailableZoneScatterScheduleRule.cs" />
     <Compile Include="V20180326\Models\BindApiGroupRequest.cs" />
     <Compile Include="V20180326\Models\BindApiGroupResponse.cs" />
     <Compile Include="V20180326\Models\BindPluginRequest.cs" />
@@ -84,7 +86,10 @@
     <Compile Include="V20180326\Models\ChangeApiUsableStatusResponse.cs" />
     <Compile Include="V20180326\Models\Cluster.cs" />
     <Compile Include="V20180326\Models\ClusterV2.cs" />
+    <Compile Include="V20180326\Models\CommonOption.cs" />
+    <Compile Include="V20180326\Models\CommonRef.cs" />
     <Compile Include="V20180326\Models\Config.cs" />
+    <Compile Include="V20180326\Models\ConfigMapOption.cs" />
     <Compile Include="V20180326\Models\ConfigRelease.cs" />
     <Compile Include="V20180326\Models\ConfigReleaseLog.cs" />
     <Compile Include="V20180326\Models\ConfigTemplate.cs" />
@@ -162,6 +167,8 @@
     <Compile Include="V20180326\Models\CreateUnitRuleWithDetailRespRequest.cs" />
     <Compile Include="V20180326\Models\CreateUnitRuleWithDetailRespResponse.cs" />
     <Compile Include="V20180326\Models\CurvePoint.cs" />
+    <Compile Include="V20180326\Models\CustomPodSchedule.cs" />
+    <Compile Include="V20180326\Models\CustomTolerateSchedule.cs" />
     <Compile Include="V20180326\Models\DeleteApiGroupRequest.cs" />
     <Compile Include="V20180326\Models\DeleteApiGroupResponse.cs" />
     <Compile Include="V20180326\Models\DeleteApiRateLimitRuleRequest.cs" />
@@ -416,6 +423,7 @@
     <Compile Include="V20180326\Models\DisassociateKafkaConfigResponse.cs" />
     <Compile Include="V20180326\Models\DraftApiGroupRequest.cs" />
     <Compile Include="V20180326\Models\DraftApiGroupResponse.cs" />
+    <Compile Include="V20180326\Models\EmptyDirOption.cs" />
     <Compile Include="V20180326\Models\EnableLaneRuleRequest.cs" />
     <Compile Include="V20180326\Models\EnableLaneRuleResponse.cs" />
     <Compile Include="V20180326\Models\EnableTaskFlowRequest.cs" />
@@ -427,6 +435,7 @@
     <Compile Include="V20180326\Models\EnableUnitRuleRequest.cs" />
     <Compile Include="V20180326\Models\EnableUnitRuleResponse.cs" />
     <Compile Include="V20180326\Models\Env.cs" />
+    <Compile Include="V20180326\Models\ExclusiveInstance.cs" />
     <Compile Include="V20180326\Models\ExecuteTaskFlowRequest.cs" />
     <Compile Include="V20180326\Models\ExecuteTaskFlowResponse.cs" />
     <Compile Include="V20180326\Models\ExecuteTaskRequest.cs" />
@@ -437,6 +446,7 @@
     <Compile Include="V20180326\Models\FileConfig.cs" />
     <Compile Include="V20180326\Models\FileConfigRelease.cs" />
     <Compile Include="V20180326\Models\Filter.cs" />
+    <Compile Include="V20180326\Models\ForceSchedule.cs" />
     <Compile Include="V20180326\Models\GatewayApiGroupVo.cs" />
     <Compile Include="V20180326\Models\GatewayConfig.cs" />
     <Compile Include="V20180326\Models\GatewayDeployGroup.cs" />
@@ -578,6 +588,7 @@
     <Compile Include="V20180326\Models\SearchStdoutLogRequest.cs" />
     <Compile Include="V20180326\Models\SearchStdoutLogResponse.cs" />
     <Compile Include="V20180326\Models\ServiceConfig.cs" />
+    <Compile Include="V20180326\Models\ServiceGovernanceConfig.cs" />
     <Compile Include="V20180326\Models\ServiceSetting.cs" />
     <Compile Include="V20180326\Models\ServiceStatisticsResult.cs" />
     <Compile Include="V20180326\Models\ServiceStatisticsResults.cs" />
@@ -602,6 +613,7 @@
     <Compile Include="V20180326\Models\StopTaskBatchResponse.cs" />
     <Compile Include="V20180326\Models\StopTaskExecuteRequest.cs" />
     <Compile Include="V20180326\Models\StopTaskExecuteResponse.cs" />
+    <Compile Include="V20180326\Models\Tag.cs" />
     <Compile Include="V20180326\Models\TaskFlowEdge.cs" />
     <Compile Include="V20180326\Models\TaskFlowLastBatchState.cs" />
     <Compile Include="V20180326\Models\TaskIdInfo.cs" />
@@ -613,6 +625,7 @@
     <Compile Include="V20180326\Models\TerminateTaskFlowBatchRequest.cs" />
     <Compile Include="V20180326\Models\TerminateTaskFlowBatchResponse.cs" />
     <Compile Include="V20180326\Models\ThreadPicture.cs" />
+    <Compile Include="V20180326\Models\TrySchedule.cs" />
     <Compile Include="V20180326\Models\TsfApiListResponse.cs" />
     <Compile Include="V20180326\Models\TsfConfigCenter.cs" />
     <Compile Include="V20180326\Models\TsfPageApiDetailInfo.cs" />

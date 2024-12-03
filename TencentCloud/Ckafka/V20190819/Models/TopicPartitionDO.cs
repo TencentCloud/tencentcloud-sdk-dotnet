@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Partition ID
+        /// Partition 分区ID
         /// </summary>
         [JsonProperty("Partition")]
         public long? Partition{ get; set; }

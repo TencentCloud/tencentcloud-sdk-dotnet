@@ -54,6 +54,24 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ServiceConfigList")]
         public ServiceConfig[] ServiceConfigList{ get; set; }
 
+        /// <summary>
+        /// 应用的微服务类型
+        /// </summary>
+        [JsonProperty("MicroserviceType")]
+        public string MicroserviceType{ get; set; }
+
+        /// <summary>
+        /// 注册配置治理信息
+        /// </summary>
+        [JsonProperty("ServiceGovernanceConfig")]
+        public ServiceGovernanceConfig ServiceGovernanceConfig{ get; set; }
+
+        /// <summary>
+        /// 应用开发框架
+        /// </summary>
+        [JsonProperty("FrameworkType")]
+        public string FrameworkType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +83,9 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ApplicationDesc", this.ApplicationDesc);
             this.SetParamSimple(map, prefix + "ApplicationRemarkName", this.ApplicationRemarkName);
             this.SetParamArrayObj(map, prefix + "ServiceConfigList.", this.ServiceConfigList);
+            this.SetParamSimple(map, prefix + "MicroserviceType", this.MicroserviceType);
+            this.SetParamObj(map, prefix + "ServiceGovernanceConfig.", this.ServiceGovernanceConfig);
+            this.SetParamSimple(map, prefix + "FrameworkType", this.FrameworkType);
         }
     }
 }

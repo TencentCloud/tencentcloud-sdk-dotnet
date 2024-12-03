@@ -31,13 +31,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public bool? SelfBuilt{ get; set; }
 
         /// <summary>
-        /// 实例资源
+        /// ckafka集群实例Id
         /// </summary>
         [JsonProperty("Resource")]
         public string Resource{ get; set; }
 
         /// <summary>
-        /// Topic名称，多个以“,”分隔
+        /// 主题名，多个以“,”分隔
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
@@ -64,14 +64,14 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string ResourceName{ get; set; }
 
         /// <summary>
-        /// Zone ID
+        /// 可用区
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// Topic的Id
+        /// 主题Id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicId")]

@@ -61,7 +61,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public TcrRepoInfo TcrRepoInfo{ get; set; }
 
         /// <summary>
-        /// 镜像仓库
+        /// 镜像仓库名称
         /// </summary>
         [JsonProperty("RepoName")]
         public string RepoName{ get; set; }

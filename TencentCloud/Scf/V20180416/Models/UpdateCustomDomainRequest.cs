@@ -49,7 +49,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public WafConf WafConfig{ get; set; }
 
         /// <summary>
-        /// 	路由配置
+        /// 路由配置
         /// </summary>
         [JsonProperty("EndpointsConfig")]
         public EndpointsConf[] EndpointsConfig{ get; set; }

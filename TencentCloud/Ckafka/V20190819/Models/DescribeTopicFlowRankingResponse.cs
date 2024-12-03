@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 流量排行
+        /// 流量排行返回结果
         /// </summary>
         [JsonProperty("Result")]
         public TopicFlowRankingResult Result{ get; set; }

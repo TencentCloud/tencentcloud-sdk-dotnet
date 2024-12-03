@@ -25,13 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// ckafka集群实例Id
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// ckafka集群实例Name
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string Vport{ get; set; }
 
         /// <summary>
-        /// 实例的状态。0：创建中，1：运行中，2：删除中
+        /// 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -159,14 +159,14 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public ulong? ExpireTime{ get; set; }
 
         /// <summary>
-        /// 跨可用区
+        /// 可用区列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// kafka版本信息
+        /// ckafka集群实例版本
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
@@ -256,6 +256,26 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
+        /// <summary>
+        /// 集群类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public string ClusterType{ get; set; }
+
+        /// <summary>
+        /// 免费分区数量
+        /// </summary>
+        [JsonProperty("FreePartitionNumber")]
+        public long? FreePartitionNumber{ get; set; }
+
+        /// <summary>
+        /// 弹性带宽上浮值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ElasticFloatBandwidth")]
+        public long? ElasticFloatBandwidth{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -298,6 +318,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "RemainingTopics", this.RemainingTopics);
             this.SetParamObj(map, prefix + "DynamicDiskConfig.", this.DynamicDiskConfig);
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
+            this.SetParamSimple(map, prefix + "FreePartitionNumber", this.FreePartitionNumber);
+            this.SetParamSimple(map, prefix + "ElasticFloatBandwidth", this.ElasticFloatBandwidth);
         }
     }
 }

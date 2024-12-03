@@ -25,6 +25,18 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
+        /// 校验是否通过，通过为pass，失败为fail
+        /// </summary>
+        [JsonProperty("CheckResult")]
+        public string CheckResult{ get; set; }
+
+        /// <summary>
+        /// 校验项
+        /// </summary>
+        [JsonProperty("Items")]
+        public CheckMigrateResult[] Items{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "CheckResult", this.CheckResult);
+            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

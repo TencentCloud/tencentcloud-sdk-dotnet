@@ -46,7 +46,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string Resource{ get; set; }
 
         /// <summary>
-        /// 复制存量信息(schema_only不复制, initial全量)，默认位initial
+        /// 复制存量信息(schema_only不复制, initial全量)，默认值initial
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapshotMode")]

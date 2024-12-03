@@ -30,6 +30,18 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
+        /// <summary>
+        /// 报错原因
+        /// </summary>
+        [JsonProperty("Reason")]
+        public string Reason{ get; set; }
+
+        /// <summary>
+        /// 建议的修复方案
+        /// </summary>
+        [JsonProperty("Solution")]
+        public string Solution{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Dts.V20211206.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamSimple(map, prefix + "Reason", this.Reason);
+            this.SetParamSimple(map, prefix + "Solution", this.Solution);
         }
     }
 }

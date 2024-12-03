@@ -28,7 +28,7 @@ namespace TencentCloud.Vclm.V20240523
 
        private const string endpoint = "vclm.tencentcloudapi.com";
        private const string version = "2024-05-23";
-       private const string sdkVersion = "SDK_NET_3.0.1133";
+       private const string sdkVersion = "SDK_NET_3.0.1134";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Vclm.V20240523
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 检查图片跳舞输入图
+        /// </summary>
+        /// <param name="req"><see cref="CheckAnimateImageJobRequest"/></param>
+        /// <returns><see cref="CheckAnimateImageJobResponse"/></returns>
+        public Task<CheckAnimateImageJobResponse> CheckAnimateImageJob(CheckAnimateImageJobRequest req)
+        {
+            return InternalRequestAsync<CheckAnimateImageJobResponse>(req, "CheckAnimateImageJob");
+        }
+
+        /// <summary>
+        /// 检查图片跳舞输入图
+        /// </summary>
+        /// <param name="req"><see cref="CheckAnimateImageJobRequest"/></param>
+        /// <returns><see cref="CheckAnimateImageJobResponse"/></returns>
+        public CheckAnimateImageJobResponse CheckAnimateImageJobSync(CheckAnimateImageJobRequest req)
+        {
+            return InternalRequestAsync<CheckAnimateImageJobResponse>(req, "CheckAnimateImageJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

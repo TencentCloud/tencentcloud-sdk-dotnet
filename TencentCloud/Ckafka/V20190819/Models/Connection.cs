@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Topic名称
+        /// 主题名
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// Topic的Id
+        /// 主题Id
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }

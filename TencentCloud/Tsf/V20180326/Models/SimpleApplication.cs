@@ -101,6 +101,20 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ApplicationRuntimeType")]
         public string ApplicationRuntimeType{ get; set; }
 
+        /// <summary>
+        /// Apm业务系统id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AmpInstanceId")]
+        public string AmpInstanceId{ get; set; }
+
+        /// <summary>
+        /// Apm业务系统Name
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApmInstanceName")]
+        public string ApmInstanceName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +132,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "ApigatewayServiceId", this.ApigatewayServiceId);
             this.SetParamSimple(map, prefix + "ApplicationRuntimeType", this.ApplicationRuntimeType);
+            this.SetParamSimple(map, prefix + "AmpInstanceId", this.AmpInstanceId);
+            this.SetParamSimple(map, prefix + "ApmInstanceName", this.ApmInstanceName);
         }
     }
 }

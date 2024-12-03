@@ -35,7 +35,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? AccessType{ get; set; }
 
         /// <summary>
-        /// 路由ID
+        /// 路由Id
         /// </summary>
         [JsonProperty("RouteId")]
         public long? RouteId{ get; set; }
@@ -74,7 +74,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string DeleteTimestamp{ get; set; }
 
         /// <summary>
-        /// 子网信息
+        /// 子网Id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Subnet")]
@@ -88,7 +88,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public VipEntity[] BrokerVipList{ get; set; }
 
         /// <summary>
-        /// vpc信息
+        /// 私有网络Id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]

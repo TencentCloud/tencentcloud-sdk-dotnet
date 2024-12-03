@@ -28,7 +28,7 @@ namespace TencentCloud.Tsf.V20180326
 
        private const string endpoint = "tsf.tencentcloudapi.com";
        private const string version = "2018-03-26";
-       private const string sdkVersion = "SDK_NET_3.0.1133";
+       private const string sdkVersion = "SDK_NET_3.0.1134";
 
         /// <summary>
         /// Client constructor.
@@ -1821,6 +1821,9 @@ namespace TencentCloud.Tsf.V20180326
 
         /// <summary>
         /// 获取容器事件列表
+        /// 参数限制
+        /// 
+        /// - 当类型是 instance 时，GroupId是必填项
         /// </summary>
         /// <param name="req"><see cref="DescribeContainerEventsRequest"/></param>
         /// <returns><see cref="DescribeContainerEventsResponse"/></returns>
@@ -1831,6 +1834,9 @@ namespace TencentCloud.Tsf.V20180326
 
         /// <summary>
         /// 获取容器事件列表
+        /// 参数限制
+        /// 
+        /// - 当类型是 instance 时，GroupId是必填项
         /// </summary>
         /// <param name="req"><see cref="DescribeContainerEventsRequest"/></param>
         /// <returns><see cref="DescribeContainerEventsResponse"/></returns>

@@ -38,6 +38,20 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ResourceFieldRef")]
         public ResourceFieldRef ResourceFieldRef{ get; set; }
 
+        /// <summary>
+        /// k8s env的configMapKeyRef
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConfigMapKeyRef")]
+        public CommonRef ConfigMapKeyRef{ get; set; }
+
+        /// <summary>
+        /// k8s env 的 secretKeyRef
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SecretKeyRef")]
+        public CommonRef SecretKeyRef{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +60,8 @@ namespace TencentCloud.Tsf.V20180326.Models
         {
             this.SetParamObj(map, prefix + "FieldRef.", this.FieldRef);
             this.SetParamObj(map, prefix + "ResourceFieldRef.", this.ResourceFieldRef);
+            this.SetParamObj(map, prefix + "ConfigMapKeyRef.", this.ConfigMapKeyRef);
+            this.SetParamObj(map, prefix + "SecretKeyRef.", this.SecretKeyRef);
         }
     }
 }

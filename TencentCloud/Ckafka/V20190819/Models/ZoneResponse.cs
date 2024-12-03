@@ -90,7 +90,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string Physical{ get; set; }
 
         /// <summary>
-        /// 公网带宽
+        /// 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicNetwork")]
@@ -104,7 +104,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string PublicNetworkLimit{ get; set; }
 
         /// <summary>
-        /// 请求ID
+        /// 请求Id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RequestId")]

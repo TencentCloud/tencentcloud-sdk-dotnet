@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1133</VersionPrefix>
+    <VersionPrefix>3.0.1134</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -685,6 +685,7 @@
     <Compile Include="V20190612\Models\WatermarkTemplate.cs" />
     <Compile Include="V20190612\Models\WithdrawsWatermarkRequest.cs" />
     <Compile Include="V20190612\Models\WithdrawsWatermarkResponse.cs" />
+    <Compile Include="V20190612\Models\WordResult.cs" />
     <Compile Include="V20190612\Models\WorkflowInfo.cs" />
     <Compile Include="V20190612\Models\WorkflowTask.cs" />
     <Compile Include="V20190612\Models\WorkflowTrigger.cs" />

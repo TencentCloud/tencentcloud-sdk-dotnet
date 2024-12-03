@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 任务ID
+        /// 任务Id
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

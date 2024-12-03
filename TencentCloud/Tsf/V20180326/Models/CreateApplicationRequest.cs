@@ -90,6 +90,36 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ProgramIdList")]
         public string[] ProgramIdList{ get; set; }
 
+        /// <summary>
+        /// apm业务系统id
+        /// </summary>
+        [JsonProperty("ApmInstanceId")]
+        public string ApmInstanceId{ get; set; }
+
+        /// <summary>
+        /// 编程语言
+        /// </summary>
+        [JsonProperty("ProgramLanguage")]
+        public string ProgramLanguage{ get; set; }
+
+        /// <summary>
+        /// 开发框架
+        /// </summary>
+        [JsonProperty("FrameworkType")]
+        public string FrameworkType{ get; set; }
+
+        /// <summary>
+        /// 注册配置治理
+        /// </summary>
+        [JsonProperty("ServiceGovernanceConfig")]
+        public ServiceGovernanceConfig ServiceGovernanceConfig{ get; set; }
+
+        /// <summary>
+        /// 是否创建并关联同名镜像仓库
+        /// </summary>
+        [JsonProperty("CreateSameNameImageRepository")]
+        public bool? CreateSameNameImageRepository{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +137,11 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamArrayObj(map, prefix + "ServiceConfigList.", this.ServiceConfigList);
             this.SetParamSimple(map, prefix + "IgnoreCreateImageRepository", this.IgnoreCreateImageRepository);
             this.SetParamArraySimple(map, prefix + "ProgramIdList.", this.ProgramIdList);
+            this.SetParamSimple(map, prefix + "ApmInstanceId", this.ApmInstanceId);
+            this.SetParamSimple(map, prefix + "ProgramLanguage", this.ProgramLanguage);
+            this.SetParamSimple(map, prefix + "FrameworkType", this.FrameworkType);
+            this.SetParamObj(map, prefix + "ServiceGovernanceConfig.", this.ServiceGovernanceConfig);
+            this.SetParamSimple(map, prefix + "CreateSameNameImageRepository", this.CreateSameNameImageRepository);
         }
     }
 }

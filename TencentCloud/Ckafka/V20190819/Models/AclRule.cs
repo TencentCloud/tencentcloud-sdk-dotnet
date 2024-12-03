@@ -25,21 +25,21 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Acl规则名称
+        /// ACL规则名
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// ckafka集群实例Id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 匹配类型，目前只支持前缀匹配，枚举值列表：PREFIXED
+        /// ACL规则匹配类型，目前只支持前缀匹配，枚举值列表：PREFIXED
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PatternType")]

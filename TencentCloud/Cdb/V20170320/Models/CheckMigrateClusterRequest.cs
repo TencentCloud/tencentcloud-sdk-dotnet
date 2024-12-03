@@ -24,12 +24,68 @@ namespace TencentCloud.Cdb.V20170320.Models
     public class CheckMigrateClusterRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 实例Id。
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 实例CPU核数
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public long? Cpu{ get; set; }
+
+        /// <summary>
+        /// 实例内存大小，单位：MB
+        /// </summary>
+        [JsonProperty("Memory")]
+        public long? Memory{ get; set; }
+
+        /// <summary>
+        /// 实例硬盘大小，单位：GB
+        /// </summary>
+        [JsonProperty("Volume")]
+        public long? Volume{ get; set; }
+
+        /// <summary>
+        /// 磁盘类型。 CLOUD_SSD: SSD云硬盘; CLOUD_HSSD: 增强型SSD云硬盘
+        /// </summary>
+        [JsonProperty("DiskType")]
+        public string DiskType{ get; set; }
+
+        /// <summary>
+        /// 集群版节点拓扑配置。
+        /// </summary>
+        [JsonProperty("ClusterTopology")]
+        public ClusterTopology ClusterTopology{ get; set; }
+
+        /// <summary>
+        /// 迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 标准型集群版实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 加强型集群版实例。
+        /// </summary>
+        [JsonProperty("DeviceType")]
+        public string DeviceType{ get; set; }
+
+        /// <summary>
+        /// 只读实例信息
+        /// </summary>
+        [JsonProperty("RoInfo")]
+        public MigrateClusterRoInfo[] RoInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "Memory", this.Memory);
+            this.SetParamSimple(map, prefix + "Volume", this.Volume);
+            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
+            this.SetParamObj(map, prefix + "ClusterTopology.", this.ClusterTopology);
+            this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
+            this.SetParamArrayObj(map, prefix + "RoInfo.", this.RoInfo);
         }
     }
 }

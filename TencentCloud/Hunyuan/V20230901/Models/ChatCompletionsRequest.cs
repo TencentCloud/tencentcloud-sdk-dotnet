@@ -171,6 +171,15 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("Seed")]
         public long? Seed{ get; set; }
 
+        /// <summary>
+        /// 强制搜索增强开关。
+        /// 说明：
+        /// 1. 未传值时默认关闭。
+        /// 2. 开启后，将强制走AI搜索，当AI搜索结果为空时，由大模型回复兜底话术。
+        /// </summary>
+        [JsonProperty("ForceSearchEnhancement")]
+        public bool? ForceSearchEnhancement{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -193,6 +202,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamSimple(map, prefix + "EnableMultimedia", this.EnableMultimedia);
             this.SetParamSimple(map, prefix + "EnableDeepSearch", this.EnableDeepSearch);
             this.SetParamSimple(map, prefix + "Seed", this.Seed);
+            this.SetParamSimple(map, prefix + "ForceSearchEnhancement", this.ForceSearchEnhancement);
         }
     }
 }

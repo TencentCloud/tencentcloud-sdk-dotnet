@@ -24,12 +24,20 @@ namespace TencentCloud.Tsf.V20180326.Models
     public class GatewayConfig : AbstractModel
     {
         
+        /// <summary>
+        /// 服务名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

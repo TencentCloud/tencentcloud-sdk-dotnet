@@ -48,6 +48,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("PodNameList")]
         public string[] PodNameList{ get; set; }
 
+        /// <summary>
+        /// 新老版本pod批次标识
+        /// </summary>
+        [JsonProperty("DeployVersion")]
+        public string DeployVersion{ get; set; }
+
+        /// <summary>
+        /// 任务ID
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "PodNameList.", this.PodNameList);
+            this.SetParamSimple(map, prefix + "DeployVersion", this.DeployVersion);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
         }
     }
 }

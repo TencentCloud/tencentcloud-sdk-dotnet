@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1133";
+       private const string sdkVersion = "SDK_NET_3.0.1134";
 
         /// <summary>
         /// Client constructor.
@@ -2216,6 +2216,27 @@ namespace TencentCloud.Live.V20180801
         public DescribeLiveDomainsResponse DescribeLiveDomainsSync(DescribeLiveDomainsRequest req)
         {
             return InternalRequestAsync<DescribeLiveDomainsResponse>(req, "DescribeLiveDomains")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询直播增强用量明细信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveEnhanceInfoListRequest"/></param>
+        /// <returns><see cref="DescribeLiveEnhanceInfoListResponse"/></returns>
+        public Task<DescribeLiveEnhanceInfoListResponse> DescribeLiveEnhanceInfoList(DescribeLiveEnhanceInfoListRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveEnhanceInfoListResponse>(req, "DescribeLiveEnhanceInfoList");
+        }
+
+        /// <summary>
+        /// 查询直播增强用量明细信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveEnhanceInfoListRequest"/></param>
+        /// <returns><see cref="DescribeLiveEnhanceInfoListResponse"/></returns>
+        public DescribeLiveEnhanceInfoListResponse DescribeLiveEnhanceInfoListSync(DescribeLiveEnhanceInfoListRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveEnhanceInfoListResponse>(req, "DescribeLiveEnhanceInfoList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

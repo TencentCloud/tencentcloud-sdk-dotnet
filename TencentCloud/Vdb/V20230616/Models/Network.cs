@@ -52,6 +52,18 @@ namespace TencentCloud.Vdb.V20230616.Models
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
+        /// <summary>
+        /// 旧 ip 保留时长，单位天
+        /// </summary>
+        [JsonProperty("PreserveDuration")]
+        public long? PreserveDuration{ get; set; }
+
+        /// <summary>
+        /// 旧 ip 到期时间
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public string ExpireTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +74,8 @@ namespace TencentCloud.Vdb.V20230616.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "Port", this.Port);
+            this.SetParamSimple(map, prefix + "PreserveDuration", this.PreserveDuration);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         }
     }
 }

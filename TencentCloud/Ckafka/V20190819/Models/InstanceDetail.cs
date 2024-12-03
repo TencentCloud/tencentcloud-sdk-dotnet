@@ -25,13 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 实例id
+        /// ckafka集群实例Id
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// ckafka集群实例名称
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public VipEntity[] VipList{ get; set; }
 
         /// <summary>
-        /// 实例的状态。0：创建中，1：运行中，2：删除中：5隔离中， -1 创建失败
+        /// 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? Bandwidth{ get; set; }
 
         /// <summary>
-        /// 实例的存储大小，单位GB
+        /// ckafka集群实例磁盘大小，单位G
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
@@ -160,14 +160,14 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? Cvm{ get; set; }
 
         /// <summary>
-        /// ckafka实例类型
+        /// ckafka集群实例类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 磁盘类型
+        /// ckafka集群实例磁盘类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskType")]
@@ -202,21 +202,21 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public ulong? PartitionNumber{ get; set; }
 
         /// <summary>
-        /// 公网带宽类型
+        /// ckafka集群实例公网带宽类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicNetworkChargeType")]
         public string PublicNetworkChargeType{ get; set; }
 
         /// <summary>
-        /// 公网带宽值
+        /// 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicNetwork")]
         public long? PublicNetwork{ get; set; }
 
         /// <summary>
-        /// 实例类型
+        /// ckafka集群实例底层集群类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterType")]

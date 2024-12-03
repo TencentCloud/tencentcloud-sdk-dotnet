@@ -70,6 +70,14 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public long? Seed{ get; set; }
 
         /// <summary>
+        /// 超分选项，默认不做超分，可选开启。
+        ///  x2：2倍超分
+        ///  x4：4倍超分
+        /// </summary>
+        [JsonProperty("Clarity")]
+        public string Clarity{ get; set; }
+
+        /// <summary>
         /// prompt 扩写开关。1为开启，0为关闭，不传默认开启。
         /// 开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
         /// 如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
@@ -107,6 +115,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
             this.SetParamSimple(map, prefix + "Num", this.Num);
             this.SetParamSimple(map, prefix + "Seed", this.Seed);
+            this.SetParamSimple(map, prefix + "Clarity", this.Clarity);
             this.SetParamSimple(map, prefix + "Revise", this.Revise);
             this.SetParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
             this.SetParamObj(map, prefix + "LogoParam.", this.LogoParam);

@@ -28,7 +28,7 @@ namespace TencentCloud.Cdz.V20221123
 
        private const string endpoint = "cdz.tencentcloudapi.com";
        private const string version = "2022-11-23";
-       private const string sdkVersion = "SDK_NET_3.0.1133";
+       private const string sdkVersion = "SDK_NET_3.0.1134";
 
         /// <summary>
         /// Client constructor.

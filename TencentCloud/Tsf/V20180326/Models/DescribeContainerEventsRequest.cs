@@ -54,6 +54,30 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
+        /// <summary>
+        /// event的资源kind
+        /// </summary>
+        [JsonProperty("Kind")]
+        public string Kind{ get; set; }
+
+        /// <summary>
+        /// event 的type
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// 资源名称
+        /// </summary>
+        [JsonProperty("ResourceName")]
+        public string ResourceName{ get; set; }
+
+        /// <summary>
+        /// 关键词查询
+        /// </summary>
+        [JsonProperty("SearchWord")]
+        public string SearchWord{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +89,10 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "Kind", this.Kind);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "ResourceName", this.ResourceName);
+            this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
         }
     }
 }

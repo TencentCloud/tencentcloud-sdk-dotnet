@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// zone的id
+        /// 可用区
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? IsInternalApp{ get; set; }
 
         /// <summary>
-        /// app id
+        /// 应用标识
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public bool? Flag{ get; set; }
 
         /// <summary>
-        /// zone名称
+        /// 可用区名称
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// zone状态
+        /// 可用区状态
         /// </summary>
         [JsonProperty("ZoneStatus")]
         public long? ZoneStatus{ get; set; }
@@ -68,7 +68,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string Exflag{ get; set; }
 
         /// <summary>
-        /// json对象，key为机型，value true为售罄，false为未售罄
+        /// true为售罄，false为未售罄
         /// </summary>
         [JsonProperty("SoldOut")]
         public string SoldOut{ get; set; }

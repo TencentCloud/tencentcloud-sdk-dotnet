@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 资源类型。EB_COS/EB_ES/EB_CLS
+        /// 资源类型。COS/ES/CLS
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

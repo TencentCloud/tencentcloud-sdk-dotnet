@@ -28,7 +28,7 @@ namespace TencentCloud.Ig.V20210518
 
        private const string endpoint = "ig.tencentcloudapi.com";
        private const string version = "2021-05-18";
-       private const string sdkVersion = "SDK_NET_3.0.1133";
+       private const string sdkVersion = "SDK_NET_3.0.1134";
 
         /// <summary>
         /// Client constructor.

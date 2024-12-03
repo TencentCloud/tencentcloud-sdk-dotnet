@@ -42,6 +42,20 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("VolumeConfig")]
         public string VolumeConfig{ get; set; }
 
+        /// <summary>
+        /// -
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConfigMapOptions")]
+        public ConfigMapOption[] ConfigMapOptions{ get; set; }
+
+        /// <summary>
+        /// -
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EmptyDirOption")]
+        public EmptyDirOption EmptyDirOption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +65,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "VolumeType", this.VolumeType);
             this.SetParamSimple(map, prefix + "VolumeName", this.VolumeName);
             this.SetParamSimple(map, prefix + "VolumeConfig", this.VolumeConfig);
+            this.SetParamArrayObj(map, prefix + "ConfigMapOptions.", this.ConfigMapOptions);
+            this.SetParamObj(map, prefix + "EmptyDirOption.", this.EmptyDirOption);
         }
     }
 }

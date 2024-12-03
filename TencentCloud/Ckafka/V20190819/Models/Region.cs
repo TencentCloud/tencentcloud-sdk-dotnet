@@ -57,7 +57,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string RegionCodeV3{ get; set; }
 
         /// <summary>
-        /// NONE:默认值不支持任何特殊机型\nCVM:支持CVM类型
+        /// NONE:默认值不支持任何特殊类型 实例类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Support")]

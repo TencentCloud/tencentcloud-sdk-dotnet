@@ -48,6 +48,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
+        /// <summary>
+        /// 字词时间戳信息。
+        /// </summary>
+        [JsonProperty("Wordlist")]
+        public WordResult[] Wordlist{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
             this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
             this.SetParamSimple(map, prefix + "Text", this.Text);
+            this.SetParamArrayObj(map, prefix + "Wordlist.", this.Wordlist);
         }
     }
 }

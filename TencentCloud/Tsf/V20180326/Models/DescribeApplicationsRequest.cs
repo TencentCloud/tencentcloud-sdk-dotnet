@@ -78,6 +78,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ApplicationIdList")]
         public string[] ApplicationIdList{ get; set; }
 
+        /// <summary>
+        /// 查询多种微服务类型的应用
+        /// </summary>
+        [JsonProperty("MicroserviceTypeList")]
+        public string[] MicroserviceTypeList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "MicroserviceType", this.MicroserviceType);
             this.SetParamArraySimple(map, prefix + "ApplicationResourceTypeList.", this.ApplicationResourceTypeList);
             this.SetParamArraySimple(map, prefix + "ApplicationIdList.", this.ApplicationIdList);
+            this.SetParamArraySimple(map, prefix + "MicroserviceTypeList.", this.MicroserviceTypeList);
         }
     }
 }

@@ -42,6 +42,14 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("StopAfterPlay")]
         public bool? StopAfterPlay{ get; set; }
 
+        /// <summary>
+        /// 服务端推送播报音频
+        ///     格式说明：音频以16KHz采样率的单声道格式提供，编码为Base64字符串。
+        ///     输入规则：当提供Audio字段时，将不接受Text字段的输入。系统将直接播放Audio字段中的音频内容。
+        /// </summary>
+        [JsonProperty("Audio")]
+        public string Audio{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +59,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamSimple(map, prefix + "Interrupt", this.Interrupt);
             this.SetParamSimple(map, prefix + "StopAfterPlay", this.StopAfterPlay);
+            this.SetParamSimple(map, prefix + "Audio", this.Audio);
         }
     }
 }

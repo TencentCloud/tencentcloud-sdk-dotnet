@@ -122,6 +122,69 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("IgnoreCreateImageRepository")]
         public bool? IgnoreCreateImageRepository{ get; set; }
 
+        /// <summary>
+        /// Apm业务系统id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApmInstanceId")]
+        public string ApmInstanceId{ get; set; }
+
+        /// <summary>
+        /// Apm业务系统Name
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApmInstanceName")]
+        public string ApmInstanceName{ get; set; }
+
+        /// <summary>
+        /// 同步删除镜像仓库
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SyncDeleteImageRepository")]
+        public bool? SyncDeleteImageRepository{ get; set; }
+
+        /// <summary>
+        /// 应用微服务子类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MicroserviceSubType")]
+        public string MicroserviceSubType{ get; set; }
+
+        /// <summary>
+        /// 应用编程语言类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProgramLanguage")]
+        public string ProgramLanguage{ get; set; }
+
+        /// <summary>
+        /// 开发框架类型[SpringCloud，Dubbo，Go-GRPC，Other]
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FrameworkType")]
+        public string FrameworkType{ get; set; }
+
+        /// <summary>
+        /// 注册配置治理信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServiceGovernanceConfig")]
+        public ServiceGovernanceConfig ServiceGovernanceConfig{ get; set; }
+
+        /// <summary>
+        /// 微服务类型列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MicroserviceTypeList")]
+        public string[] MicroserviceTypeList{ get; set; }
+
+        /// <summary>
+        /// 是否同时创建镜像仓库
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateSameNameImageRepository")]
+        public bool? CreateSameNameImageRepository{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +205,15 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ApplicationRemarkName", this.ApplicationRemarkName);
             this.SetParamArrayObj(map, prefix + "ServiceConfigList.", this.ServiceConfigList);
             this.SetParamSimple(map, prefix + "IgnoreCreateImageRepository", this.IgnoreCreateImageRepository);
+            this.SetParamSimple(map, prefix + "ApmInstanceId", this.ApmInstanceId);
+            this.SetParamSimple(map, prefix + "ApmInstanceName", this.ApmInstanceName);
+            this.SetParamSimple(map, prefix + "SyncDeleteImageRepository", this.SyncDeleteImageRepository);
+            this.SetParamSimple(map, prefix + "MicroserviceSubType", this.MicroserviceSubType);
+            this.SetParamSimple(map, prefix + "ProgramLanguage", this.ProgramLanguage);
+            this.SetParamSimple(map, prefix + "FrameworkType", this.FrameworkType);
+            this.SetParamObj(map, prefix + "ServiceGovernanceConfig.", this.ServiceGovernanceConfig);
+            this.SetParamArraySimple(map, prefix + "MicroserviceTypeList.", this.MicroserviceTypeList);
+            this.SetParamSimple(map, prefix + "CreateSameNameImageRepository", this.CreateSameNameImageRepository);
         }
     }
 }

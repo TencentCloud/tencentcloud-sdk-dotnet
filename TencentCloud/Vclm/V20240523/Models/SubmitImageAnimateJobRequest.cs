@@ -25,8 +25,8 @@ namespace TencentCloud.Vclm.V20240523.Models
     {
         
         /// <summary>
-        /// 图片格式：支持PNG、JPG、JPEG格式；
-        /// 图片分辨率：长边分辨率不超过2056；
+        /// 图片格式：支持PNG、JPG、JPEG、BMP、WEBP格式；
+        /// 图片分辨率：长边分辨率范围【192，4096】；
         /// 图片大小：不超过10M；
         /// 图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
         /// </summary>
@@ -34,7 +34,11 @@ namespace TencentCloud.Vclm.V20240523.Models
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// 图片base64数据。图片格式：支持PNG、JPG、JPEG格式；图片分辨率：长边分辨率不超过2056；图片大小：不超过10M；图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
+        /// 图片base64数据。
+        /// 图片格式：支持PNG、JPG、JPEG、BMP、WEBP格式；
+        /// 图片分辨率：长边分辨率范围【192，4096】；
+        /// 图片大小：不超过10M；
+        /// 图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
@@ -58,7 +62,7 @@ namespace TencentCloud.Vclm.V20240523.Models
         public bool? EnableBodyJoins{ get; set; }
 
         /// <summary>
-        /// 最终视频是否保留原图的背景（该模式对于tuziwu、huajiangwu不生效）
+        /// 最终视频是否保留原图的背景，默认不保留。
         /// </summary>
         [JsonProperty("EnableSegment")]
         public bool? EnableSegment{ get; set; }

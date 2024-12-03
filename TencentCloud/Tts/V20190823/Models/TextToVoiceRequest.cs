@@ -115,7 +115,7 @@ namespace TencentCloud.Tts.V20190823.Models
         public long? EmotionIntensity{ get; set; }
 
         /// <summary>
-        /// 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。
+        /// 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。【已废弃】
         /// </summary>
         [JsonProperty("FastVoiceType")]
         public string FastVoiceType{ get; set; }

@@ -31,6 +31,83 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
+        /// <summary>
+        /// -
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NodeScheduleStrategyType")]
+        public string NodeScheduleStrategyType{ get; set; }
+
+        /// <summary>
+        /// -
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NodeScheduleOptions")]
+        public CommonOption[] NodeScheduleOptions{ get; set; }
+
+        /// <summary>
+        /// -
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StrongAffinityList")]
+        public CommonOption[] StrongAffinityList{ get; set; }
+
+        /// <summary>
+        /// -
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WeakAffinityList")]
+        public CommonOption[] WeakAffinityList{ get; set; }
+
+        /// <summary>
+        /// -
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WeakAffinityWeight")]
+        public long? WeakAffinityWeight{ get; set; }
+
+        /// <summary>
+        /// -
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AvailableZoneScatterScheduleType")]
+        public string AvailableZoneScatterScheduleType{ get; set; }
+
+        /// <summary>
+        /// -
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AvailableZoneScatterScheduleRules")]
+        public AvailableZoneScatterScheduleRule[] AvailableZoneScatterScheduleRules{ get; set; }
+
+        /// <summary>
+        /// -
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PodScheduleStrategyType")]
+        public string PodScheduleStrategyType{ get; set; }
+
+        /// <summary>
+        /// -
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CustomPodSchedule")]
+        public CustomPodSchedule CustomPodSchedule{ get; set; }
+
+        /// <summary>
+        /// -
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TolerateScheduleType")]
+        public string TolerateScheduleType{ get; set; }
+
+        /// <summary>
+        /// -
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CustomTolerateSchedules")]
+        public CustomTolerateSchedule[] CustomTolerateSchedules{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +115,17 @@ namespace TencentCloud.Tsf.V20180326.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "NodeScheduleStrategyType", this.NodeScheduleStrategyType);
+            this.SetParamArrayObj(map, prefix + "NodeScheduleOptions.", this.NodeScheduleOptions);
+            this.SetParamArrayObj(map, prefix + "StrongAffinityList.", this.StrongAffinityList);
+            this.SetParamArrayObj(map, prefix + "WeakAffinityList.", this.WeakAffinityList);
+            this.SetParamSimple(map, prefix + "WeakAffinityWeight", this.WeakAffinityWeight);
+            this.SetParamSimple(map, prefix + "AvailableZoneScatterScheduleType", this.AvailableZoneScatterScheduleType);
+            this.SetParamArrayObj(map, prefix + "AvailableZoneScatterScheduleRules.", this.AvailableZoneScatterScheduleRules);
+            this.SetParamSimple(map, prefix + "PodScheduleStrategyType", this.PodScheduleStrategyType);
+            this.SetParamObj(map, prefix + "CustomPodSchedule.", this.CustomPodSchedule);
+            this.SetParamSimple(map, prefix + "TolerateScheduleType", this.TolerateScheduleType);
+            this.SetParamArrayObj(map, prefix + "CustomTolerateSchedules.", this.CustomTolerateSchedules);
         }
     }
 }
