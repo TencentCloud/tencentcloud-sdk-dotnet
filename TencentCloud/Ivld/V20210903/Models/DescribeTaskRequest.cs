@@ -25,7 +25,7 @@ namespace TencentCloud.Ivld.V20210903.Models
     {
         
         /// <summary>
-        /// CreateTask返回的任务ID，最长32B
+        /// CreateTask返回的任务ID
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

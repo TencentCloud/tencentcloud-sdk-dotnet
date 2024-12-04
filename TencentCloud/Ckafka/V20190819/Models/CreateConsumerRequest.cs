@@ -25,25 +25,25 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 实例id
+        /// ckafka集群实例Id
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// group名称
+        /// 消费分组名称
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// topic名称，TopicName、TopicNameList 需要显示指定一个存在的topic名称
+        /// 主题名，TopicName、TopicNameList 需要显示指定一个存在的主题名
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// topic名称数组
+        /// 主题名列表
         /// </summary>
         [JsonProperty("TopicNameList")]
         public string[] TopicNameList{ get; set; }

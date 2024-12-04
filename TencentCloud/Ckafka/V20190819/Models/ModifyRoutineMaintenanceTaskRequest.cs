@@ -43,7 +43,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string MaintenanceSubtype{ get; set; }
 
         /// <summary>
-        /// 主题名称
+        /// 主题名
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }

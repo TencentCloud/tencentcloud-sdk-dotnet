@@ -73,7 +73,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public TransformsParam TransformsParam{ get; set; }
 
         /// <summary>
-        /// 任务ID
+        /// 任务Id
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1134";
+       private const string sdkVersion = "SDK_NET_3.0.1135";
 
         /// <summary>
         /// Client constructor.
@@ -4989,6 +4989,27 @@ namespace TencentCloud.Vpc.V20170312
         public DescribeTrafficPackagesResponse DescribeTrafficPackagesSync(DescribeTrafficPackagesRequest req)
         {
             return InternalRequestAsync<DescribeTrafficPackagesResponse>(req, "DescribeTrafficPackages")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询流量调度规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrafficQosPolicyRequest"/></param>
+        /// <returns><see cref="DescribeTrafficQosPolicyResponse"/></returns>
+        public Task<DescribeTrafficQosPolicyResponse> DescribeTrafficQosPolicy(DescribeTrafficQosPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeTrafficQosPolicyResponse>(req, "DescribeTrafficQosPolicy");
+        }
+
+        /// <summary>
+        /// 查询流量调度规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrafficQosPolicyRequest"/></param>
+        /// <returns><see cref="DescribeTrafficQosPolicyResponse"/></returns>
+        public DescribeTrafficQosPolicyResponse DescribeTrafficQosPolicySync(DescribeTrafficQosPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeTrafficQosPolicyResponse>(req, "DescribeTrafficQosPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

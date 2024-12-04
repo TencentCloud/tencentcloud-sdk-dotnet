@@ -48,6 +48,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("RoomIdType")]
         public ulong? RoomIdType{ get; set; }
 
+        /// <summary>
+        /// 音频文件上传到云存储的参数
+        /// </summary>
+        [JsonProperty("AuditStorageParams")]
+        public AuditStorageParams AuditStorageParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "RoomIdType", this.RoomIdType);
+            this.SetParamObj(map, prefix + "AuditStorageParams.", this.AuditStorageParams);
         }
     }
 }

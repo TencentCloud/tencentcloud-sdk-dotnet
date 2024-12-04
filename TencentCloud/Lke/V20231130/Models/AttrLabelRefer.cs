@@ -25,19 +25,19 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 属性标签来源，1：属性标签
+        /// 标签来源，1：标签
         /// </summary>
         [JsonProperty("Source")]
         public ulong? Source{ get; set; }
 
         /// <summary>
-        /// 属性ID
+        /// 标签ID
         /// </summary>
         [JsonProperty("AttributeBizId")]
         public string AttributeBizId{ get; set; }
 
         /// <summary>
-        /// 标签ID
+        /// 标签值ID
         /// </summary>
         [JsonProperty("LabelBizIds")]
         public string[] LabelBizIds{ get; set; }

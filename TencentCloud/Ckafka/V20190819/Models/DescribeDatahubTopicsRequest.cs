@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 查询值
+        /// 搜索词
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }

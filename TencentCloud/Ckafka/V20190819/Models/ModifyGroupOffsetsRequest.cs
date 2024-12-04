@@ -25,13 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// kafka实例id
+        /// ckafka集群实例Id
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// kafka 消费分组
+        /// 消费分组名称
         /// </summary>
         [JsonProperty("Group")]
         public string Group{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? Strategy{ get; set; }
 
         /// <summary>
-        /// 表示需要重置的topics， 不填表示全部
+        /// 需要重置的主题名列表， 不填表示全部
         /// </summary>
         [JsonProperty("Topics")]
         public string[] Topics{ get; set; }

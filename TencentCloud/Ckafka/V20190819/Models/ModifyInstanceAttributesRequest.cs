@@ -25,19 +25,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 实例id
+        /// ckafka集群实例Id
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例日志的最长保留时间，单位分钟，最大30天，0代表不开启日志保留时间回收策略
+        /// 实例日志的最长保留时间，单位分钟，最大90天，0代表不开启日志保留时间回收策略
         /// </summary>
         [JsonProperty("MsgRetentionTime")]
         public long? MsgRetentionTime{ get; set; }
 
         /// <summary>
-        /// 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+        /// ckafka集群实例Name
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public DynamicRetentionTime DynamicRetentionConfig{ get; set; }
 
         /// <summary>
-        /// 升配Rebalance时间
+        /// 升配Rebalance时间 参数已废弃,忽略不填!!!
         /// </summary>
         [JsonProperty("RebalanceTime")]
         public long? RebalanceTime{ get; set; }
 
         /// <summary>
-        /// 公网带宽
+        /// 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
         /// </summary>
         [JsonProperty("PublicNetwork")]
         public long? PublicNetwork{ get; set; }
@@ -74,7 +74,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public DynamicDiskConfig DynamicDiskConfig{ get; set; }
 
         /// <summary>
-        /// 实例级别单条消息大小（单位byte)
+        /// 实例级别单条消息大小（单位byte)  最大 12582912(不包含)  最小1024(不包含)
         /// </summary>
         [JsonProperty("MaxMessageByte")]
         public ulong? MaxMessageByte{ get; set; }

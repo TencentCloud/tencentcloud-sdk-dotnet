@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// cdc专业集群业务参数
+        /// cdc集群Id
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }

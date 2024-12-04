@@ -25,21 +25,21 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 标签ID
+        /// 标准词ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LabelBizId")]
         public string LabelBizId{ get; set; }
 
         /// <summary>
-        /// 标签名称
+        /// 标准词名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LabelName")]
         public string LabelName{ get; set; }
 
         /// <summary>
-        /// 相似标签名称
+        /// 同义词名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SimilarLabels")]

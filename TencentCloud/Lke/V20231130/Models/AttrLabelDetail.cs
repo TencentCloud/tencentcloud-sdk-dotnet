@@ -25,35 +25,35 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 属性ID
+        /// 标签ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttrBizId")]
         public string AttrBizId{ get; set; }
 
         /// <summary>
-        /// 属性标识
+        /// 标签标识
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttrKey")]
         public string AttrKey{ get; set; }
 
         /// <summary>
-        /// 属性名称
+        /// 标签名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttrName")]
         public string AttrName{ get; set; }
 
         /// <summary>
-        /// 标签名称
+        /// 标签值名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LabelNames")]
         public string[] LabelNames{ get; set; }
 
         /// <summary>
-        /// 属性标签是否在更新中
+        /// 标签是否在更新中
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsUpdating")]

@@ -26,14 +26,12 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// 资源及标签合规信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Items")]
         public ResourceTagMapping[] Items{ get; set; }
 
         /// <summary>
         /// 获取的下一页的Token值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PaginationToken")]
         public string PaginationToken{ get; set; }

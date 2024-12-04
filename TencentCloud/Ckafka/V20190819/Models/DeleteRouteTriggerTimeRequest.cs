@@ -25,13 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 实例id
+        /// ckafka集群实例Id
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 修改时间
+        /// 修改删除路由的定时时间
         /// </summary>
         [JsonProperty("DelayTime")]
         public string DelayTime{ get; set; }

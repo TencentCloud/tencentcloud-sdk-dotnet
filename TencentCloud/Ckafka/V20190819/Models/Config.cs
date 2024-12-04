@@ -81,6 +81,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("RetentionBytes")]
         public long? RetentionBytes{ get; set; }
 
+        /// <summary>
+        /// 消息保存的时间类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogMsgTimestampType")]
+        public string LogMsgTimestampType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -95,6 +102,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "SegmentBytes", this.SegmentBytes);
             this.SetParamSimple(map, prefix + "MaxMessageBytes", this.MaxMessageBytes);
             this.SetParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
+            this.SetParamSimple(map, prefix + "LogMsgTimestampType", this.LogMsgTimestampType);
         }
     }
 }

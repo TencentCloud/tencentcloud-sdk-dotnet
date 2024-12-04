@@ -45,6 +45,13 @@ namespace TencentCloud.Ivld.V20210903.Models
         [JsonProperty("TextTagSet")]
         public MultiLevelTag TextTagSet{ get; set; }
 
+        /// <summary>
+        /// 文档下载地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WebMediaURL")]
+        public string WebMediaURL{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Ivld.V20210903.Models
             this.SetParamSimple(map, prefix + "Content", this.Content);
             this.SetParamSimple(map, prefix + "Summary", this.Summary);
             this.SetParamObj(map, prefix + "TextTagSet.", this.TextTagSet);
+            this.SetParamSimple(map, prefix + "WebMediaURL", this.WebMediaURL);
         }
     }
 }

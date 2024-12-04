@@ -276,6 +276,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("ElasticFloatBandwidth")]
         public long? ElasticFloatBandwidth{ get; set; }
 
+        /// <summary>
+        /// ssl自定义证书id
+        /// </summary>
+        [JsonProperty("CustomCertId")]
+        public string CustomCertId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -321,6 +327,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
             this.SetParamSimple(map, prefix + "FreePartitionNumber", this.FreePartitionNumber);
             this.SetParamSimple(map, prefix + "ElasticFloatBandwidth", this.ElasticFloatBandwidth);
+            this.SetParamSimple(map, prefix + "CustomCertId", this.CustomCertId);
         }
     }
 }

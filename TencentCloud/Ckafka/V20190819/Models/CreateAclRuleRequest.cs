@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 实例id信息
+        /// ckafka集群实例Id
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// 匹配类型，目前支持前缀匹配与预设策略，枚举值列表：PREFIXED/PRESET
+        /// ACL规则匹配类型，目前支持前缀匹配与预设策略，枚举值列表：PREFIXED/PRESET
         /// </summary>
         [JsonProperty("PatternType")]
         public string PatternType{ get; set; }

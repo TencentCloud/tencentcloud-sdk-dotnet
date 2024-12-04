@@ -25,7 +25,7 @@ namespace TencentCloud.Ivld.V20210903.Models
     {
         
         /// <summary>
-        /// 123
+        /// 自定义分类ID
         /// </summary>
         [JsonProperty("CategoryId")]
         public string CategoryId{ get; set; }

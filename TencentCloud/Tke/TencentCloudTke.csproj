@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1134</VersionPrefix>
+    <VersionPrefix>3.0.1135</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -75,6 +75,8 @@
     <Compile Include="V20220501\Models\ExternalNodeInfo.cs" />
     <Compile Include="V20220501\Models\ExternalNodePoolInfo.cs" />
     <Compile Include="V20220501\Models\Filter.cs" />
+    <Compile Include="V20220501\Models\GPUConfig.cs" />
+    <Compile Include="V20220501\Models\GPUParams.cs" />
     <Compile Include="V20220501\Models\HealthCheckPolicy.cs" />
     <Compile Include="V20220501\Models\HealthCheckPolicyBinding.cs" />
     <Compile Include="V20220501\Models\HealthCheckPolicyRule.cs" />

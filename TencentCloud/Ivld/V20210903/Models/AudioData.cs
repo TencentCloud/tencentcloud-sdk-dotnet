@@ -37,6 +37,13 @@ namespace TencentCloud.Ivld.V20210903.Models
         [JsonProperty("TextTagSet")]
         public MultiLevelTag TextTagSet{ get; set; }
 
+        /// <summary>
+        /// 音频下载地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WebMediaURL")]
+        public string WebMediaURL{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +52,7 @@ namespace TencentCloud.Ivld.V20210903.Models
         {
             this.SetParamArrayObj(map, prefix + "AudioInfoSet.", this.AudioInfoSet);
             this.SetParamObj(map, prefix + "TextTagSet.", this.TextTagSet);
+            this.SetParamSimple(map, prefix + "WebMediaURL", this.WebMediaURL);
         }
     }
 }

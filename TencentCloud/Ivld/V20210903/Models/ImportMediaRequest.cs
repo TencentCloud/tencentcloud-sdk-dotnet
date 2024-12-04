@@ -25,19 +25,19 @@ namespace TencentCloud.Ivld.V20210903.Models
     {
         
         /// <summary>
-        /// 待分析视频的URL，目前只支持*不带签名的*COS地址，长度最长1KB
+        /// 待分析视频的URL，目前只支持*不带签名的*COS地址，字段输入内容最大为1KB
         /// </summary>
         [JsonProperty("URL")]
         public string URL{ get; set; }
 
         /// <summary>
-        /// 待分析视频的MD5，为空时不做校验，否则会做MD5校验，长度必须为32B
+        /// 待分析视频的MD5，为空时不做校验，否则会做MD5校验，长度必须为32
         /// </summary>
         [JsonProperty("MD5")]
         public string MD5{ get; set; }
 
         /// <summary>
-        /// 待分析视频的名称，指定后可支持筛选，最多64B
+        /// 待分析视频的名称，指定后可支持筛选，视频名称的大小长度不能超过64
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

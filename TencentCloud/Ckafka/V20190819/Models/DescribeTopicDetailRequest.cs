@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 实例id
+        /// ckafka集群实例Id
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -54,6 +54,24 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("AclRuleName")]
         public string AclRuleName{ get; set; }
 
+        /// <summary>
+        /// 根据特定的属性排序(目前支持PartitionNum/CreateTime)
+        /// </summary>
+        [JsonProperty("OrderBy")]
+        public string OrderBy{ get; set; }
+
+        /// <summary>
+        /// 0-顺序、1-倒序
+        /// </summary>
+        [JsonProperty("OrderType")]
+        public long? OrderType{ get; set; }
+
+        /// <summary>
+        /// 目前支持 ReplicaNum （副本数）筛选
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +83,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
+            this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
+            this.SetParamSimple(map, prefix + "OrderType", this.OrderType);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 实例Id
+        /// ckafka集群实例Id
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// 偏移
+        /// 偏移量
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 本次返回个数
+        /// 返回数量
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

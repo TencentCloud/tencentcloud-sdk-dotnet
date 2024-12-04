@@ -139,7 +139,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 弹性带宽开关 0不开启  1开启（0默认
+        /// 弹性带宽开关 0不开启  1开启（0默认)
         /// </summary>
         [JsonProperty("ElasticBandwidthSwitch")]
         public long? ElasticBandwidthSwitch{ get; set; }

@@ -55,6 +55,13 @@ namespace TencentCloud.Ivld.V20210903.Models
         [JsonProperty("AppearRect")]
         public Rectf AppearRect{ get; set; }
 
+        /// <summary>
+        /// 人物的personId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PersonId")]
+        public string PersonId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +73,7 @@ namespace TencentCloud.Ivld.V20210903.Models
             this.SetParamSimple(map, prefix + "FirstAppear", this.FirstAppear);
             this.SetParamObj(map, prefix + "AppearInfo.", this.AppearInfo);
             this.SetParamObj(map, prefix + "AppearRect.", this.AppearRect);
+            this.SetParamSimple(map, prefix + "PersonId", this.PersonId);
         }
     }
 }

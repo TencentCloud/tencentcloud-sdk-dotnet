@@ -25,13 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 实例 ID。
+        /// ckafka集群实例Id
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 主题名称。
+        /// 主题名
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? EnableAclRule{ get; set; }
 
         /// <summary>
-        /// 预设ACL规则的名称
+        /// ACL规则名
         /// </summary>
         [JsonProperty("AclRuleName")]
         public string AclRuleName{ get; set; }
@@ -127,7 +127,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? QuotaConsumerByteRate{ get; set; }
 
         /// <summary>
-        /// 调整topic副本数
+        /// topic副本数  最小值 1,最大值 3
         /// </summary>
         [JsonProperty("ReplicaNum")]
         public long? ReplicaNum{ get; set; }

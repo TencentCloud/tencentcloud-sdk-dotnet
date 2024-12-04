@@ -49,7 +49,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// cdc集群的总带宽
+        /// 实例带宽,单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s
         /// </summary>
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// 数据盘类型
+        /// ckafka集群实例磁盘类型
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }

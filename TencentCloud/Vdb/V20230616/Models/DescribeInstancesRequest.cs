@@ -61,6 +61,12 @@ namespace TencentCloud.Vdb.V20230616.Models
         public string[] EngineVersions{ get; set; }
 
         /// <summary>
+        /// 按照api版本筛选实例
+        /// </summary>
+        [JsonProperty("ApiVersions")]
+        public string[] ApiVersions{ get; set; }
+
+        /// <summary>
         /// 按照创建时间筛选实例。
         /// </summary>
         [JsonProperty("CreateAt")]
@@ -114,6 +120,7 @@ namespace TencentCloud.Vdb.V20230616.Models
             this.SetParamArraySimple(map, prefix + "Status.", this.Status);
             this.SetParamArraySimple(map, prefix + "EngineNames.", this.EngineNames);
             this.SetParamArraySimple(map, prefix + "EngineVersions.", this.EngineVersions);
+            this.SetParamArraySimple(map, prefix + "ApiVersions.", this.ApiVersions);
             this.SetParamSimple(map, prefix + "CreateAt", this.CreateAt);
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
             this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);

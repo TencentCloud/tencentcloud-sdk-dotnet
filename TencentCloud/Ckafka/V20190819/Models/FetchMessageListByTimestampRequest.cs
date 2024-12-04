@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 实例Id
+        /// ckafka集群实例Id
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 最大查询条数，默认20，最大20
+        /// 最大查询条数，默认20，最大20, 最小1
         /// </summary>
         [JsonProperty("SinglePartitionRecordNumber")]
         public long? SinglePartitionRecordNumber{ get; set; }

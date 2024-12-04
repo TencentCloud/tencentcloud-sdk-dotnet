@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 返回的结果对象
+        /// 返回结果
         /// </summary>
         [JsonProperty("Result")]
         public GroupOffsetResponse Result{ get; set; }

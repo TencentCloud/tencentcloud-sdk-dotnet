@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1134";
+       private const string sdkVersion = "SDK_NET_3.0.1135";
 
         /// <summary>
         /// Client constructor.
@@ -2318,6 +2318,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public InheritCloudStorageUserResponse InheritCloudStorageUserSync(InheritCloudStorageUserRequest req)
         {
             return InternalRequestAsync<InheritCloudStorageUserResponse>(req, "InheritCloudStorageUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 同步执行设备云存 AI 分析任务
+        /// </summary>
+        /// <param name="req"><see cref="InvokeCloudStorageAIServiceTaskRequest"/></param>
+        /// <returns><see cref="InvokeCloudStorageAIServiceTaskResponse"/></returns>
+        public Task<InvokeCloudStorageAIServiceTaskResponse> InvokeCloudStorageAIServiceTask(InvokeCloudStorageAIServiceTaskRequest req)
+        {
+            return InternalRequestAsync<InvokeCloudStorageAIServiceTaskResponse>(req, "InvokeCloudStorageAIServiceTask");
+        }
+
+        /// <summary>
+        /// 同步执行设备云存 AI 分析任务
+        /// </summary>
+        /// <param name="req"><see cref="InvokeCloudStorageAIServiceTaskRequest"/></param>
+        /// <returns><see cref="InvokeCloudStorageAIServiceTaskResponse"/></returns>
+        public InvokeCloudStorageAIServiceTaskResponse InvokeCloudStorageAIServiceTaskSync(InvokeCloudStorageAIServiceTaskRequest req)
+        {
+            return InternalRequestAsync<InvokeCloudStorageAIServiceTaskResponse>(req, "InvokeCloudStorageAIServiceTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

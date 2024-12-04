@@ -52,6 +52,13 @@ namespace TencentCloud.Ivld.V20210903.Models
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
+        /// <summary>
+        /// 封装格式短后缀
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ShortFormat")]
+        public string ShortFormat{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Ivld.V20210903.Models
             this.SetParamSimple(map, prefix + "MD5", this.MD5);
             this.SetParamSimple(map, prefix + "Length", this.Length);
             this.SetParamSimple(map, prefix + "Format", this.Format);
+            this.SetParamSimple(map, prefix + "ShortFormat", this.ShortFormat);
         }
     }
 }

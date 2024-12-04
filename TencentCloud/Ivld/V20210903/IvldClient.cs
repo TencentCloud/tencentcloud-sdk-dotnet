@@ -28,7 +28,7 @@ namespace TencentCloud.Ivld.V20210903
 
        private const string endpoint = "ivld.tencentcloudapi.com";
        private const string version = "2021-09-03";
-       private const string sdkVersion = "SDK_NET_3.0.1134";
+       private const string sdkVersion = "SDK_NET_3.0.1135";
 
         /// <summary>
         /// Client constructor.
@@ -551,7 +551,6 @@ namespace TencentCloud.Ivld.V20210903
         /// 描述智能标签任务进度。
         /// 
         /// 请注意，**此接口仅返回任务执行状态信息，不返回任务执行结果**
-        /// 
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskRequest"/></param>
         /// <returns><see cref="DescribeTaskResponse"/></returns>
@@ -564,7 +563,6 @@ namespace TencentCloud.Ivld.V20210903
         /// 描述智能标签任务进度。
         /// 
         /// 请注意，**此接口仅返回任务执行状态信息，不返回任务执行结果**
-        /// 
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskRequest"/></param>
         /// <returns><see cref="DescribeTaskResponse"/></returns>

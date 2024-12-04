@@ -25,13 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 主题名称
+        /// 主题名
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 主题ID
+        /// 主题Id
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? PartitionNum{ get; set; }
 
         /// <summary>
-        /// 副本数
+        /// topic副本数  最小值 1,最大值 3
         /// </summary>
         [JsonProperty("ReplicaNum")]
         public long? ReplicaNum{ get; set; }

@@ -60,7 +60,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public GroupInfoMember[] Members{ get; set; }
 
         /// <summary>
-        /// Kafka 消费分组
+        /// 消费分组名称
         /// </summary>
         [JsonProperty("Group")]
         public string Group{ get; set; }

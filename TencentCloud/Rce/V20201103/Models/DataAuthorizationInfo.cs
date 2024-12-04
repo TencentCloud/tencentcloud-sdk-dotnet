@@ -96,7 +96,7 @@ namespace TencentCloud.Rce.V20201103.Models
         public string PrivacyPolicyLink{ get; set; }
 
         /// <summary>
-        /// 是否是用户个人敏感数据。
+        /// 是否是用户个人敏感数据（不推荐使用）。
         /// 
         /// 固定填：1。
         /// 

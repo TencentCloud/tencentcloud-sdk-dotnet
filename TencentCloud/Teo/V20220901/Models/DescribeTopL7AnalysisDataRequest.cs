@@ -48,7 +48,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li> l7Flow_outFlux_referers：按 Referer 维度统计 L7 EdgeOne 响应流量指标；</li>
         /// <li> l7Flow_outFlux_ua_device：按设备类型维度统计 L7 EdgeOne 响应流量指标; </li>
         /// <li> l7Flow_outFlux_ua_browser：按浏览器类型维度统计 L7 EdgeOne 响应流量指标；</li>
-        /// <li> l7Flow_outFlux_us_os：按操作系统类型维度统计 L7 EdgeOne 响应流量指标；</li>
+        /// <li> l7Flow_outFlux_ua_os：按操作系统类型维度统计 L7 EdgeOne 响应流量指标；</li>
         /// <li> l7Flow_request_country：按国家/地区维度统计 L7 访问请求数指标；</li>
         /// <li> l7Flow_request_province：按中国大陆境内省份维度统计 L7 访问请求数指标；</li>
         /// <li> l7Flow_request_statusCode：按状态码维度统计 L7 访问请求数指标；</li>
@@ -59,7 +59,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li> l7Flow_request_referer：按 Referer 维度统计 L7 访问请求数指标；</li>
         /// <li> l7Flow_request_ua_device：按设备类型维度统计 L7 访问请求数指标; </li>
         /// <li> l7Flow_request_ua_browser：按浏览器类型维度统计 L7 访问请求数指标；</li>
-        /// <li> l7Flow_request_us_os：按操作系统类型维度统计 L7 访问请求数指标。</li>
+        /// <li> l7Flow_request_ua_os：按操作系统类型维度统计 L7 访问请求数指标。</li>
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }

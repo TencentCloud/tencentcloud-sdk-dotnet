@@ -38,6 +38,13 @@ namespace TencentCloud.Ivld.V20210903.Models
         [JsonProperty("PutLibraryAllowed")]
         public bool? PutLibraryAllowed{ get; set; }
 
+        /// <summary>
+        /// 内容审核结果: 0-正常;1-涉政;其他待确定
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AuditClass")]
+        public long? AuditClass{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Ivld.V20210903.Models
         {
             this.SetParamArrayObj(map, prefix + "VideoAppearSet.", this.VideoAppearSet);
             this.SetParamSimple(map, prefix + "PutLibraryAllowed", this.PutLibraryAllowed);
+            this.SetParamSimple(map, prefix + "AuditClass", this.AuditClass);
         }
     }
 }

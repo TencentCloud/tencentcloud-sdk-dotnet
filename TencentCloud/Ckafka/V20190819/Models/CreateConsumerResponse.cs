@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 创建group描述
+        /// 创建消费者组返回结果
         /// </summary>
         [JsonProperty("Result")]
         public JgwOperateResponse Result{ get; set; }

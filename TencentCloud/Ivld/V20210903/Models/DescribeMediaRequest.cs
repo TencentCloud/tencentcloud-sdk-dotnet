@@ -25,7 +25,7 @@ namespace TencentCloud.Ivld.V20210903.Models
     {
         
         /// <summary>
-        /// 导入媒资返回的媒资ID，最长32B
+        /// 导入媒资返回的媒资ID
         /// </summary>
         [JsonProperty("MediaId")]
         public string MediaId{ get; set; }

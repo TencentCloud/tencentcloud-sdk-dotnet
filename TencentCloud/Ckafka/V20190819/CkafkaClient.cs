@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1134";
+       private const string sdkVersion = "SDK_NET_3.0.1135";
 
         /// <summary>
         /// Client constructor.
@@ -621,7 +621,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 删除Datahub主题
+        /// 删除DIP主题
         /// </summary>
         /// <param name="req"><see cref="DeleteDatahubTopicRequest"/></param>
         /// <returns><see cref="DeleteDatahubTopicResponse"/></returns>
@@ -631,7 +631,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 删除Datahub主题
+        /// 删除DIP主题
         /// </summary>
         /// <param name="req"><see cref="DeleteDatahubTopicRequest"/></param>
         /// <returns><see cref="DeleteDatahubTopicResponse"/></returns>
@@ -999,7 +999,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 查询Datahub任务列表 
+        /// 查询Datahub任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDatahubTasksRequest"/></param>
         /// <returns><see cref="DescribeDatahubTasksResponse"/></returns>
@@ -1009,7 +1009,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 查询Datahub任务列表 
+        /// 查询Datahub任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDatahubTasksRequest"/></param>
         /// <returns><see cref="DescribeDatahubTasksResponse"/></returns>

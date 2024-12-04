@@ -140,6 +140,12 @@ namespace TencentCloud.Tke.V20220501.Models
         [JsonProperty("KeyIds")]
         public string[] KeyIds{ get; set; }
 
+        /// <summary>
+        /// 节点池 GPU 配置
+        /// </summary>
+        [JsonProperty("GPUConfigs")]
+        public GPUConfig[] GPUConfigs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -165,6 +171,7 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamSimple(map, prefix + "Replicas", this.Replicas);
             this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
             this.SetParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
+            this.SetParamArrayObj(map, prefix + "GPUConfigs.", this.GPUConfigs);
         }
     }
 }

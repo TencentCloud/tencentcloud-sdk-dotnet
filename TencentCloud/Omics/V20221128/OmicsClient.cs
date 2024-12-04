@@ -28,7 +28,7 @@ namespace TencentCloud.Omics.V20221128
 
        private const string endpoint = "omics.tencentcloudapi.com";
        private const string version = "2022-11-28";
-       private const string sdkVersion = "SDK_NET_3.0.1134";
+       private const string sdkVersion = "SDK_NET_3.0.1135";
 
         /// <summary>
         /// Client constructor.

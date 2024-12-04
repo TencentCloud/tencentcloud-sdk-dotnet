@@ -25,13 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// （过滤条件）按照实例 ID 过滤。
+        /// ckafka集群实例Id
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Kafka 消费分组，Consumer-group，这里是数组形式，示例：["xxx","yyy"]
+        /// Kafka 消费分组列表
         /// </summary>
         [JsonProperty("GroupList")]
         public string[] GroupList{ get; set; }
