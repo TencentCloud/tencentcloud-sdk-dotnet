@@ -66,6 +66,12 @@ namespace TencentCloud.Privatedns.V20201028.Models
         [JsonProperty("TTL")]
         public long? TTL{ get; set; }
 
+        /// <summary>
+        /// 备注
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
             this.SetParamSimple(map, prefix + "MX", this.MX);
             this.SetParamSimple(map, prefix + "TTL", this.TTL);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tmt.V20180321
 
        private const string endpoint = "tmt.tencentcloudapi.com";
        private const string version = "2018-03-21";
-       private const string sdkVersion = "SDK_NET_3.0.1135";
+       private const string sdkVersion = "SDK_NET_3.0.1136";
 
         /// <summary>
         /// Client constructor.
@@ -196,7 +196,7 @@ namespace TencentCloud.Tmt.V20180321
         }
 
         /// <summary>
-        /// 文本翻译的批量接口
+        /// 批量翻译文本的接口
         /// </summary>
         /// <param name="req"><see cref="TextTranslateBatchRequest"/></param>
         /// <returns><see cref="TextTranslateBatchResponse"/></returns>
@@ -206,7 +206,7 @@ namespace TencentCloud.Tmt.V20180321
         }
 
         /// <summary>
-        /// 文本翻译的批量接口
+        /// 批量翻译文本的接口
         /// </summary>
         /// <param name="req"><see cref="TextTranslateBatchRequest"/></param>
         /// <returns><see cref="TextTranslateBatchResponse"/></returns>

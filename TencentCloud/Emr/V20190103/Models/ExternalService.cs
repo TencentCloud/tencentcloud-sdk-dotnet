@@ -31,12 +31,6 @@ namespace TencentCloud.Emr.V20190103.Models
         public string ShareType{ get; set; }
 
         /// <summary>
-        /// 自定义参数集合
-        /// </summary>
-        [JsonProperty("CustomServiceDefineList")]
-        public CustomServiceDefine[] CustomServiceDefineList{ get; set; }
-
-        /// <summary>
         /// 共用组件名
         /// </summary>
         [JsonProperty("Service")]
@@ -48,6 +42,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// 自定义参数集合
+        /// </summary>
+        [JsonProperty("CustomServiceDefineList")]
+        public CustomServiceDefine[] CustomServiceDefineList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -55,9 +55,9 @@ namespace TencentCloud.Emr.V20190103.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ShareType", this.ShareType);
-            this.SetParamArrayObj(map, prefix + "CustomServiceDefineList.", this.CustomServiceDefineList);
             this.SetParamSimple(map, prefix + "Service", this.Service);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArrayObj(map, prefix + "CustomServiceDefineList.", this.CustomServiceDefineList);
         }
     }
 }

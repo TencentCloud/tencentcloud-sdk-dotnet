@@ -106,6 +106,13 @@ namespace TencentCloud.Privatedns.V20201028.Models
         [JsonProperty("Enabled")]
         public ulong? Enabled{ get; set; }
 
+        /// <summary>
+        /// 备注
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -125,6 +132,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
             this.SetParamSimple(map, prefix + "UpdatedOn", this.UpdatedOn);
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
         }
     }
 }

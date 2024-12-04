@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1135";
+       private const string sdkVersion = "SDK_NET_3.0.1136";
 
         /// <summary>
         /// Client constructor.
@@ -180,6 +180,27 @@ namespace TencentCloud.Lke.V20231130
         public CreateCorpResponse CreateCorpSync(CreateCorpRequest req)
         {
             return InternalRequestAsync<CreateCorpResponse>(req, "CreateCorp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建Doc分类
+        /// </summary>
+        /// <param name="req"><see cref="CreateDocCateRequest"/></param>
+        /// <returns><see cref="CreateDocCateResponse"/></returns>
+        public Task<CreateDocCateResponse> CreateDocCate(CreateDocCateRequest req)
+        {
+            return InternalRequestAsync<CreateDocCateResponse>(req, "CreateDocCate");
+        }
+
+        /// <summary>
+        /// 创建Doc分类
+        /// </summary>
+        /// <param name="req"><see cref="CreateDocCateRequest"/></param>
+        /// <returns><see cref="CreateDocCateResponse"/></returns>
+        public CreateDocCateResponse CreateDocCateSync(CreateDocCateRequest req)
+        {
+            return InternalRequestAsync<CreateDocCateResponse>(req, "CreateDocCate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -354,6 +375,27 @@ namespace TencentCloud.Lke.V20231130
         public DeleteDocResponse DeleteDocSync(DeleteDocRequest req)
         {
             return InternalRequestAsync<DeleteDocResponse>(req, "DeleteDoc")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Doc分类删除
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDocCateRequest"/></param>
+        /// <returns><see cref="DeleteDocCateResponse"/></returns>
+        public Task<DeleteDocCateResponse> DeleteDocCate(DeleteDocCateRequest req)
+        {
+            return InternalRequestAsync<DeleteDocCateResponse>(req, "DeleteDocCate");
+        }
+
+        /// <summary>
+        /// Doc分类删除
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDocCateRequest"/></param>
+        /// <returns><see cref="DeleteDocCateResponse"/></returns>
+        public DeleteDocCateResponse DeleteDocCateSync(DeleteDocCateRequest req)
+        {
+            return InternalRequestAsync<DeleteDocCateResponse>(req, "DeleteDocCate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1137,6 +1179,27 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// Doc分组
+        /// </summary>
+        /// <param name="req"><see cref="GroupDocRequest"/></param>
+        /// <returns><see cref="GroupDocResponse"/></returns>
+        public Task<GroupDocResponse> GroupDoc(GroupDocRequest req)
+        {
+            return InternalRequestAsync<GroupDocResponse>(req, "GroupDoc");
+        }
+
+        /// <summary>
+        /// Doc分组
+        /// </summary>
+        /// <param name="req"><see cref="GroupDocRequest"/></param>
+        /// <returns><see cref="GroupDocResponse"/></returns>
+        public GroupDocResponse GroupDocSync(GroupDocRequest req)
+        {
+            return InternalRequestAsync<GroupDocResponse>(req, "GroupDoc")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// QA分组
         /// </summary>
         /// <param name="req"><see cref="GroupQARequest"/></param>
@@ -1242,6 +1305,27 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// 列表查询知识库容量详情
+        /// </summary>
+        /// <param name="req"><see cref="ListAppKnowledgeDetailRequest"/></param>
+        /// <returns><see cref="ListAppKnowledgeDetailResponse"/></returns>
+        public Task<ListAppKnowledgeDetailResponse> ListAppKnowledgeDetail(ListAppKnowledgeDetailRequest req)
+        {
+            return InternalRequestAsync<ListAppKnowledgeDetailResponse>(req, "ListAppKnowledgeDetail");
+        }
+
+        /// <summary>
+        /// 列表查询知识库容量详情
+        /// </summary>
+        /// <param name="req"><see cref="ListAppKnowledgeDetailRequest"/></param>
+        /// <returns><see cref="ListAppKnowledgeDetailResponse"/></returns>
+        public ListAppKnowledgeDetailResponse ListAppKnowledgeDetailSync(ListAppKnowledgeDetailRequest req)
+        {
+            return InternalRequestAsync<ListAppKnowledgeDetailResponse>(req, "ListAppKnowledgeDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询属性标签列表
         /// </summary>
         /// <param name="req"><see cref="ListAttributeLabelRequest"/></param>
@@ -1280,6 +1364,27 @@ namespace TencentCloud.Lke.V20231130
         public ListDocResponse ListDocSync(ListDocRequest req)
         {
             return InternalRequestAsync<ListDocResponse>(req, "ListDoc")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取Doc分类
+        /// </summary>
+        /// <param name="req"><see cref="ListDocCateRequest"/></param>
+        /// <returns><see cref="ListDocCateResponse"/></returns>
+        public Task<ListDocCateResponse> ListDocCate(ListDocCateRequest req)
+        {
+            return InternalRequestAsync<ListDocCateResponse>(req, "ListDocCate");
+        }
+
+        /// <summary>
+        /// 获取Doc分类
+        /// </summary>
+        /// <param name="req"><see cref="ListDocCateRequest"/></param>
+        /// <returns><see cref="ListDocCateResponse"/></returns>
+        public ListDocCateResponse ListDocCateSync(ListDocCateRequest req)
+        {
+            return InternalRequestAsync<ListDocCateResponse>(req, "ListDocCate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1515,6 +1620,27 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// 列表查询单次调用明细
+        /// </summary>
+        /// <param name="req"><see cref="ListUsageCallDetailRequest"/></param>
+        /// <returns><see cref="ListUsageCallDetailResponse"/></returns>
+        public Task<ListUsageCallDetailResponse> ListUsageCallDetail(ListUsageCallDetailRequest req)
+        {
+            return InternalRequestAsync<ListUsageCallDetailResponse>(req, "ListUsageCallDetail");
+        }
+
+        /// <summary>
+        /// 列表查询单次调用明细
+        /// </summary>
+        /// <param name="req"><see cref="ListUsageCallDetailRequest"/></param>
+        /// <returns><see cref="ListUsageCallDetailResponse"/></returns>
+        public ListUsageCallDetailResponse ListUsageCallDetailSync(ListUsageCallDetailRequest req)
+        {
+            return InternalRequestAsync<ListUsageCallDetailResponse>(req, "ListUsageCallDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改应用请求结构体
         /// </summary>
         /// <param name="req"><see cref="ModifyAppRequest"/></param>
@@ -1595,6 +1721,27 @@ namespace TencentCloud.Lke.V20231130
         public ModifyDocAttrRangeResponse ModifyDocAttrRangeSync(ModifyDocAttrRangeRequest req)
         {
             return InternalRequestAsync<ModifyDocAttrRangeResponse>(req, "ModifyDocAttrRange")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改Doc分类
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDocCateRequest"/></param>
+        /// <returns><see cref="ModifyDocCateResponse"/></returns>
+        public Task<ModifyDocCateResponse> ModifyDocCate(ModifyDocCateRequest req)
+        {
+            return InternalRequestAsync<ModifyDocCateResponse>(req, "ModifyDocCate");
+        }
+
+        /// <summary>
+        /// 修改Doc分类
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDocCateRequest"/></param>
+        /// <returns><see cref="ModifyDocCateResponse"/></returns>
+        public ModifyDocCateResponse ModifyDocCateSync(ModifyDocCateRequest req)
+        {
+            return InternalRequestAsync<ModifyDocCateResponse>(req, "ModifyDocCate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

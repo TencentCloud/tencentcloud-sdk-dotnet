@@ -46,7 +46,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ItemId{ get; set; }
 
         /// <summary>
-        /// 指定播放的转码模版，当 AudioVideoType 为 Transcode 时必须指定。
+        /// 指定播放的转码模板，当 AudioVideoType 为 Transcode 时必须指定。
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

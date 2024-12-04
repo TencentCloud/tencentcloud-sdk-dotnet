@@ -361,6 +361,13 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ConfigDetail")]
         public EmrProductConfigDetail ConfigDetail{ get; set; }
 
+        /// <summary>
+        /// 集群绑定的文件系统数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BindFileSystemNum")]
+        public long? BindFileSystemNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -411,6 +418,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "IsCvmReplace", this.IsCvmReplace);
             this.SetParamSimple(map, prefix + "ClusterTitle", this.ClusterTitle);
             this.SetParamObj(map, prefix + "ConfigDetail.", this.ConfigDetail);
+            this.SetParamSimple(map, prefix + "BindFileSystemNum", this.BindFileSystemNum);
         }
     }
 }

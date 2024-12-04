@@ -300,6 +300,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("Intention")]
         public Intention Intention{ get; set; }
 
+        /// <summary>
+        /// 进入签署流程的限制，目前支持以下选项：
+        /// <ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
+        /// </summary>
+        [JsonProperty("SignEndpoints")]
+        public string[] SignEndpoints{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -333,6 +340,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "SignTypeSelector", this.SignTypeSelector);
             this.SetParamArrayObj(map, prefix + "Components.", this.Components);
             this.SetParamObj(map, prefix + "Intention.", this.Intention);
+            this.SetParamArraySimple(map, prefix + "SignEndpoints.", this.SignEndpoints);
         }
     }
 }

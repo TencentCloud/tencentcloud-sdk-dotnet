@@ -1,0 +1,136 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{EA702CC7-5CD5-3C37-AA9A-B23C6FF316F4}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1136</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Vcube</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20220410\VcubeClient.cs" />
+    <Compile Include="V20220410\Models\AppInfo.cs" />
+    <Compile Include="V20220410\Models\ApplicationInfo.cs" />
+    <Compile Include="V20220410\Models\CreateActivityLicenseRequest.cs" />
+    <Compile Include="V20220410\Models\CreateActivityLicenseResponse.cs" />
+    <Compile Include="V20220410\Models\CreateApplicationAndBindLicenseRequest.cs" />
+    <Compile Include="V20220410\Models\CreateApplicationAndBindLicenseResponse.cs" />
+    <Compile Include="V20220410\Models\CreateApplicationAndVideoRequest.cs" />
+    <Compile Include="V20220410\Models\CreateApplicationAndVideoResponse.cs" />
+    <Compile Include="V20220410\Models\CreateApplicationAndWebPlayerLicenseRequest.cs" />
+    <Compile Include="V20220410\Models\CreateApplicationAndWebPlayerLicenseResponse.cs" />
+    <Compile Include="V20220410\Models\CreateLicenseRequest.cs" />
+    <Compile Include="V20220410\Models\CreateLicenseResponse.cs" />
+    <Compile Include="V20220410\Models\CreateTestXMagicRequest.cs" />
+    <Compile Include="V20220410\Models\CreateTestXMagicResponse.cs" />
+    <Compile Include="V20220410\Models\CreateTrialApplicationAndLicenseRequest.cs" />
+    <Compile Include="V20220410\Models\CreateTrialApplicationAndLicenseResponse.cs" />
+    <Compile Include="V20220410\Models\CreateTrialLicenseRequest.cs" />
+    <Compile Include="V20220410\Models\CreateTrialLicenseResponse.cs" />
+    <Compile Include="V20220410\Models\CreateXMagicRequest.cs" />
+    <Compile Include="V20220410\Models\CreateXMagicResponse.cs" />
+    <Compile Include="V20220410\Models\DescribeFeatureListRequest.cs" />
+    <Compile Include="V20220410\Models\DescribeFeatureListResponse.cs" />
+    <Compile Include="V20220410\Models\DescribeLicenseListRequest.cs" />
+    <Compile Include="V20220410\Models\DescribeLicenseListResponse.cs" />
+    <Compile Include="V20220410\Models\DescribeNewsRequest.cs" />
+    <Compile Include="V20220410\Models\DescribeNewsResponse.cs" />
+    <Compile Include="V20220410\Models\DescribeSTSRequest.cs" />
+    <Compile Include="V20220410\Models\DescribeSTSResponse.cs" />
+    <Compile Include="V20220410\Models\DescribeTrialFeatureRequest.cs" />
+    <Compile Include="V20220410\Models\DescribeTrialFeatureResponse.cs" />
+    <Compile Include="V20220410\Models\DescribeUserConfigRequest.cs" />
+    <Compile Include="V20220410\Models\DescribeUserConfigResponse.cs" />
+    <Compile Include="V20220410\Models\DescribeVcubeApplicationAndLicenseRequest.cs" />
+    <Compile Include="V20220410\Models\DescribeVcubeApplicationAndLicenseResponse.cs" />
+    <Compile Include="V20220410\Models\DescribeVcubeApplicationAndPlayListRequest.cs" />
+    <Compile Include="V20220410\Models\DescribeVcubeApplicationAndPlayListResponse.cs" />
+    <Compile Include="V20220410\Models\DescribeVcubeApplicationAndXMagicListRequest.cs" />
+    <Compile Include="V20220410\Models\DescribeVcubeApplicationAndXMagicListResponse.cs" />
+    <Compile Include="V20220410\Models\DescribeVcubeResourcesListRequest.cs" />
+    <Compile Include="V20220410\Models\DescribeVcubeResourcesListResponse.cs" />
+    <Compile Include="V20220410\Models\DescribeVcubeResourcesRequest.cs" />
+    <Compile Include="V20220410\Models\DescribeVcubeResourcesResponse.cs" />
+    <Compile Include="V20220410\Models\DescribeXMagicResourceListRequest.cs" />
+    <Compile Include="V20220410\Models\DescribeXMagicResourceListResponse.cs" />
+    <Compile Include="V20220410\Models\DescribeXMagicResourceRequest.cs" />
+    <Compile Include="V20220410\Models\DescribeXMagicResourceResponse.cs" />
+    <Compile Include="V20220410\Models\Feature.cs" />
+    <Compile Include="V20220410\Models\License.cs" />
+    <Compile Include="V20220410\Models\LicenseResourceInfo.cs" />
+    <Compile Include="V20220410\Models\LicenseResourceSimpleInfo.cs" />
+    <Compile Include="V20220410\Models\ModifyApplicationRequest.cs" />
+    <Compile Include="V20220410\Models\ModifyApplicationResponse.cs" />
+    <Compile Include="V20220410\Models\ModifyFormalApplicationRequest.cs" />
+    <Compile Include="V20220410\Models\ModifyFormalApplicationResponse.cs" />
+    <Compile Include="V20220410\Models\ModifyLicenseRequest.cs" />
+    <Compile Include="V20220410\Models\ModifyLicenseResponse.cs" />
+    <Compile Include="V20220410\Models\ModifyPresetApplicationRequest.cs" />
+    <Compile Include="V20220410\Models\ModifyPresetApplicationResponse.cs" />
+    <Compile Include="V20220410\Models\ModifyTrialLicenseRequest.cs" />
+    <Compile Include="V20220410\Models\ModifyTrialLicenseResponse.cs" />
+    <Compile Include="V20220410\Models\ModifyXMagicRequest.cs" />
+    <Compile Include="V20220410\Models\ModifyXMagicResponse.cs" />
+    <Compile Include="V20220410\Models\NewsInfo.cs" />
+    <Compile Include="V20220410\Models\Package.cs" />
+    <Compile Include="V20220410\Models\RenewLicenseRequest.cs" />
+    <Compile Include="V20220410\Models\RenewLicenseResponse.cs" />
+    <Compile Include="V20220410\Models\RenewResource.cs" />
+    <Compile Include="V20220410\Models\RenewTestXMagicRequest.cs" />
+    <Compile Include="V20220410\Models\RenewTestXMagicResponse.cs" />
+    <Compile Include="V20220410\Models\RenewVideoRequest.cs" />
+    <Compile Include="V20220410\Models\RenewVideoResponse.cs" />
+    <Compile Include="V20220410\Models\UpdateTestXMagicRequest.cs" />
+    <Compile Include="V20220410\Models\UpdateTestXMagicResponse.cs" />
+    <Compile Include="V20220410\Models\UpdateTrialLicenseRequest.cs" />
+    <Compile Include="V20220410\Models\UpdateTrialLicenseResponse.cs" />
+    <Compile Include="V20220410\Models\UpdateXMagicRequest.cs" />
+    <Compile Include="V20220410\Models\UpdateXMagicResponse.cs" />
+    <Compile Include="V20220410\Models\VideoFeature.cs" />
+    <Compile Include="V20220410\Models\XMagicFeature.cs" />
+    <Compile Include="V20220410\Models\XMagicInfo.cs" />
+    <Compile Include="V20220410\Models\XMagicResource.cs" />
+    <Compile Include="V20220410\Models\XMagicResourceSimpleInfo.cs" />
+    <Compile Include="V20220410\Models\XMagicSimpleInfo.cs" />
+    <Compile Include="V20220410\Models\XMagicTrial.cs" />
+  </ItemGroup>
+</Project>

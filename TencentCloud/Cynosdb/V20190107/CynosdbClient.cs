@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1135";
+       private const string sdkVersion = "SDK_NET_3.0.1136";
 
         /// <summary>
         /// Client constructor.
@@ -1142,6 +1142,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeClusterPasswordComplexityResponse DescribeClusterPasswordComplexitySync(DescribeClusterPasswordComplexityRequest req)
         {
             return InternalRequestAsync<DescribeClusterPasswordComplexityResponse>(req, "DescribeClusterPasswordComplexity")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询集群透明加密信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterTransparentEncryptInfoRequest"/></param>
+        /// <returns><see cref="DescribeClusterTransparentEncryptInfoResponse"/></returns>
+        public Task<DescribeClusterTransparentEncryptInfoResponse> DescribeClusterTransparentEncryptInfo(DescribeClusterTransparentEncryptInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterTransparentEncryptInfoResponse>(req, "DescribeClusterTransparentEncryptInfo");
+        }
+
+        /// <summary>
+        /// 查询集群透明加密信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterTransparentEncryptInfoRequest"/></param>
+        /// <returns><see cref="DescribeClusterTransparentEncryptInfoResponse"/></returns>
+        public DescribeClusterTransparentEncryptInfoResponse DescribeClusterTransparentEncryptInfoSync(DescribeClusterTransparentEncryptInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterTransparentEncryptInfoResponse>(req, "DescribeClusterTransparentEncryptInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2633,6 +2654,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public OpenClusterReadOnlyInstanceGroupAccessResponse OpenClusterReadOnlyInstanceGroupAccessSync(OpenClusterReadOnlyInstanceGroupAccessRequest req)
         {
             return InternalRequestAsync<OpenClusterReadOnlyInstanceGroupAccessResponse>(req, "OpenClusterReadOnlyInstanceGroupAccess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开通集群透明加密
+        /// </summary>
+        /// <param name="req"><see cref="OpenClusterTransparentEncryptRequest"/></param>
+        /// <returns><see cref="OpenClusterTransparentEncryptResponse"/></returns>
+        public Task<OpenClusterTransparentEncryptResponse> OpenClusterTransparentEncrypt(OpenClusterTransparentEncryptRequest req)
+        {
+            return InternalRequestAsync<OpenClusterTransparentEncryptResponse>(req, "OpenClusterTransparentEncrypt");
+        }
+
+        /// <summary>
+        /// 开通集群透明加密
+        /// </summary>
+        /// <param name="req"><see cref="OpenClusterTransparentEncryptRequest"/></param>
+        /// <returns><see cref="OpenClusterTransparentEncryptResponse"/></returns>
+        public OpenClusterTransparentEncryptResponse OpenClusterTransparentEncryptSync(OpenClusterTransparentEncryptRequest req)
+        {
+            return InternalRequestAsync<OpenClusterTransparentEncryptResponse>(req, "OpenClusterTransparentEncrypt")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

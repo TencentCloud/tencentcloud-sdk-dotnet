@@ -67,21 +67,21 @@ namespace TencentCloud.Trocket.V20230308.Models
         public long? MaxStorage{ get; set; }
 
         /// <summary>
-        /// 专享集群最大保留时间
+        /// 专享集群最大保留时间，单位：小时
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxRetention")]
         public long? MaxRetention{ get; set; }
 
         /// <summary>
-        /// 专项集群最大保留时间
+        /// 专项集群最大保留时间，单位：小时
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinRetention")]
         public long? MinRetention{ get; set; }
 
         /// <summary>
-        /// 4.0共享集群
+        /// 4.0共享集群状态
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceStatus")]

@@ -25,7 +25,7 @@ namespace TencentCloud.Trocket.V20230308.Models
     {
         
         /// <summary>
-        /// 过滤条件名
+        /// 过滤条件参数名
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

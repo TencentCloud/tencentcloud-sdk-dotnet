@@ -58,7 +58,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 签署链接类型,可以设置的参数如下
         /// <ul><li> **WEIXINAPP** :(默认)跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型 ，此时返回短链</li>
-        /// <li> **CHANNEL** :带有H5引导页的跳转电子签小程序的链接</li>
+        /// <li> **CHANNEL** :带有H5引导页的跳转电子签小程序的链接(<b>GenerateType非ALL时候不能设置成CHANNEL</b>)</li>
         /// <li> **APP** :第三方App或小程序跳转电子签小程序的path, App或者小程序跳转适合此类型</li>
         /// <li> **LONGURL2WEIXINAPP** :跳转电子签小程序的链接, H5跳转适合此类型，此时返回长链</li></ul>
         /// 

@@ -190,6 +190,12 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("BucketPath")]
         public string BucketPath{ get; set; }
 
+        /// <summary>
+        /// 迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
+        /// </summary>
+        [JsonProperty("Direction")]
+        public ulong? Direction{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -221,6 +227,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "FileCompletedList", this.FileCompletedList);
             this.SetParamSimple(map, prefix + "FileFailedList", this.FileFailedList);
             this.SetParamSimple(map, prefix + "BucketPath", this.BucketPath);
+            this.SetParamSimple(map, prefix + "Direction", this.Direction);
         }
     }
 }

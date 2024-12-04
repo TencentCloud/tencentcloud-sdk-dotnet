@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{350F9F65-0799-338B-90EA-9EBA008679C1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1135</VersionPrefix>
+    <VersionPrefix>3.0.1136</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -58,6 +58,8 @@
     <Compile Include="V20231130\Models\AttributeFilters.cs" />
     <Compile Include="V20231130\Models\AttributeLabel.cs" />
     <Compile Include="V20231130\Models\BaseConfig.cs" />
+    <Compile Include="V20231130\Models\CallDetail.cs" />
+    <Compile Include="V20231130\Models\CateInfo.cs" />
     <Compile Include="V20231130\Models\CheckAttributeLabelExistRequest.cs" />
     <Compile Include="V20231130\Models\CheckAttributeLabelExistResponse.cs" />
     <Compile Include="V20231130\Models\CheckAttributeLabelReferRequest.cs" />
@@ -74,6 +76,8 @@
     <Compile Include="V20231130\Models\CreateAttributeLabelResponse.cs" />
     <Compile Include="V20231130\Models\CreateCorpRequest.cs" />
     <Compile Include="V20231130\Models\CreateCorpResponse.cs" />
+    <Compile Include="V20231130\Models\CreateDocCateRequest.cs" />
+    <Compile Include="V20231130\Models\CreateDocCateResponse.cs" />
     <Compile Include="V20231130\Models\CreateQACateRequest.cs" />
     <Compile Include="V20231130\Models\CreateQACateResponse.cs" />
     <Compile Include="V20231130\Models\CreateQARequest.cs" />
@@ -90,6 +94,8 @@
     <Compile Include="V20231130\Models\DeleteAppResponse.cs" />
     <Compile Include="V20231130\Models\DeleteAttributeLabelRequest.cs" />
     <Compile Include="V20231130\Models\DeleteAttributeLabelResponse.cs" />
+    <Compile Include="V20231130\Models\DeleteDocCateRequest.cs" />
+    <Compile Include="V20231130\Models\DeleteDocCateResponse.cs" />
     <Compile Include="V20231130\Models\DeleteDocRequest.cs" />
     <Compile Include="V20231130\Models\DeleteDocResponse.cs" />
     <Compile Include="V20231130\Models\DeleteQACateRequest.cs" />
@@ -173,6 +179,8 @@
     <Compile Include="V20231130\Models\GetWsTokenReq_Label.cs" />
     <Compile Include="V20231130\Models\GetWsTokenRequest.cs" />
     <Compile Include="V20231130\Models\GetWsTokenResponse.cs" />
+    <Compile Include="V20231130\Models\GroupDocRequest.cs" />
+    <Compile Include="V20231130\Models\GroupDocResponse.cs" />
     <Compile Include="V20231130\Models\GroupQARequest.cs" />
     <Compile Include="V20231130\Models\GroupQAResponse.cs" />
     <Compile Include="V20231130\Models\Highlight.cs" />
@@ -183,6 +191,7 @@
     <Compile Include="V20231130\Models\IsTransferIntentRequest.cs" />
     <Compile Include="V20231130\Models\IsTransferIntentResponse.cs" />
     <Compile Include="V20231130\Models\KnowledgeCapacityPieGraphDetail.cs" />
+    <Compile Include="V20231130\Models\KnowledgeDetail.cs" />
     <Compile Include="V20231130\Models\KnowledgeQaConfig.cs" />
     <Compile Include="V20231130\Models\KnowledgeQaOutput.cs" />
     <Compile Include="V20231130\Models\KnowledgeQaSearch.cs" />
@@ -192,10 +201,14 @@
     <Compile Include="V20231130\Models\ListAppCategoryRequest.cs" />
     <Compile Include="V20231130\Models\ListAppCategoryResponse.cs" />
     <Compile Include="V20231130\Models\ListAppCategoryRspOption.cs" />
+    <Compile Include="V20231130\Models\ListAppKnowledgeDetailRequest.cs" />
+    <Compile Include="V20231130\Models\ListAppKnowledgeDetailResponse.cs" />
     <Compile Include="V20231130\Models\ListAppRequest.cs" />
     <Compile Include="V20231130\Models\ListAppResponse.cs" />
     <Compile Include="V20231130\Models\ListAttributeLabelRequest.cs" />
     <Compile Include="V20231130\Models\ListAttributeLabelResponse.cs" />
+    <Compile Include="V20231130\Models\ListDocCateRequest.cs" />
+    <Compile Include="V20231130\Models\ListDocCateResponse.cs" />
     <Compile Include="V20231130\Models\ListDocItem.cs" />
     <Compile Include="V20231130\Models\ListDocRequest.cs" />
     <Compile Include="V20231130\Models\ListDocResponse.cs" />
@@ -223,6 +236,8 @@
     <Compile Include="V20231130\Models\ListSelectDocResponse.cs" />
     <Compile Include="V20231130\Models\ListUnsatisfiedReplyRequest.cs" />
     <Compile Include="V20231130\Models\ListUnsatisfiedReplyResponse.cs" />
+    <Compile Include="V20231130\Models\ListUsageCallDetailRequest.cs" />
+    <Compile Include="V20231130\Models\ListUsageCallDetailResponse.cs" />
     <Compile Include="V20231130\Models\Message.cs" />
     <Compile Include="V20231130\Models\ModelInfo.cs" />
     <Compile Include="V20231130\Models\ModelParameter.cs" />
@@ -232,6 +247,8 @@
     <Compile Include="V20231130\Models\ModifyAttributeLabelResponse.cs" />
     <Compile Include="V20231130\Models\ModifyDocAttrRangeRequest.cs" />
     <Compile Include="V20231130\Models\ModifyDocAttrRangeResponse.cs" />
+    <Compile Include="V20231130\Models\ModifyDocCateRequest.cs" />
+    <Compile Include="V20231130\Models\ModifyDocCateResponse.cs" />
     <Compile Include="V20231130\Models\ModifyDocRequest.cs" />
     <Compile Include="V20231130\Models\ModifyDocResponse.cs" />
     <Compile Include="V20231130\Models\ModifyQAAttrRangeRequest.cs" />
