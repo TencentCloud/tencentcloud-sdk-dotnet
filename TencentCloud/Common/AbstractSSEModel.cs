@@ -90,7 +90,12 @@ namespace TencentCloud.Common
                                 sb.Append('\n');
                             }
 
-                            sb.Append(line.Substring(colonIdx + 1));
+                            line = line.Substring(colonIdx + 1);
+                            if (line[0] == ' ')
+                            {
+                                line = line.Substring(1);
+                            }
+                            sb.Append(line);
                             break;
                         case "retry":
                             int.TryParse(line.Substring(colonIdx + 1), out e.Retry);
