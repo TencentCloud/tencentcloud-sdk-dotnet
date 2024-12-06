@@ -25,28 +25,28 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 总数
+        /// 总数，取不到值返回0
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// CLB实例监听器列表
+        /// tke实例列表，取不到值返回空数组
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceList")]
         public TkeInstanceDetail[] InstanceList{ get; set; }
 
         /// <summary>
-        /// 异步刷新总数
+        /// 异步刷新总数，取不到值返回0
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsyncTotalNum")]
         public long? AsyncTotalNum{ get; set; }
 
         /// <summary>
-        /// 异步刷新当前执行数
+        /// 异步刷新当前执行数，取不到值返回0
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsyncOffset")]

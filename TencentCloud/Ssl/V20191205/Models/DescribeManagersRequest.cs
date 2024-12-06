@@ -25,7 +25,7 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 公司ID
+        /// 公司ID,可以从DescribeCompanies接口获取
         /// </summary>
         [JsonProperty("CompanyId")]
         public long? CompanyId{ get; set; }

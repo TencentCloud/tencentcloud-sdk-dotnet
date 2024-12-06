@@ -25,11 +25,18 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// DDOS实例列表
+        /// DDOS实例列表,取不到值返回空数组
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceList")]
         public DdosInstanceDetail[] InstanceList{ get; set; }
+
+        /// <summary>
+        /// 总数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -44,6 +51,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "InstanceList.", this.InstanceList);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

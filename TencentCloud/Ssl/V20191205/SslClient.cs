@@ -28,7 +28,7 @@ namespace TencentCloud.Ssl.V20191205
 
        private const string endpoint = "ssl.tencentcloudapi.com";
        private const string version = "2019-12-05";
-       private const string sdkVersion = "SDK_NET_3.0.1136";
+       private const string sdkVersion = "SDK_NET_3.0.1137";
 
         /// <summary>
         /// Client constructor.
@@ -159,7 +159,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 提交证书订单。
+        /// 提交证书订单到CA机构。
         /// </summary>
         /// <param name="req"><see cref="CommitCertificateInformationRequest"/></param>
         /// <returns><see cref="CommitCertificateInformationResponse"/></returns>
@@ -169,7 +169,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 提交证书订单。
+        /// 提交证书订单到CA机构。
         /// </summary>
         /// <param name="req"><see cref="CommitCertificateInformationRequest"/></param>
         /// <returns><see cref="CommitCertificateInformationResponse"/></returns>
@@ -180,7 +180,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 本接口（CompleteCertificate）用于主动触发证书验证。仅非DNSPod和Wotrus品牌证书支持使用此接口。
+        /// 本接口（CompleteCertificate）用于主动触发证书验证。DNSPod和Wotrus品牌的证书不支持使用此接口。
         /// </summary>
         /// <param name="req"><see cref="CompleteCertificateRequest"/></param>
         /// <returns><see cref="CompleteCertificateResponse"/></returns>
@@ -190,7 +190,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 本接口（CompleteCertificate）用于主动触发证书验证。仅非DNSPod和Wotrus品牌证书支持使用此接口。
+        /// 本接口（CompleteCertificate）用于主动触发证书验证。DNSPod和Wotrus品牌的证书不支持使用此接口。
         /// </summary>
         /// <param name="req"><see cref="CompleteCertificateRequest"/></param>
         /// <returns><see cref="CompleteCertificateResponse"/></returns>

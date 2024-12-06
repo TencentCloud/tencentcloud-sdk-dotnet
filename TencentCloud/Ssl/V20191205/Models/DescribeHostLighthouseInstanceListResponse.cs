@@ -25,14 +25,14 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// Lighthouse实例列表
+        /// Lighthouse实例列表,如取不到返回空数组
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceList")]
         public LighthouseInstanceDetail[] InstanceList{ get; set; }
 
         /// <summary>
-        /// 总数
+        /// 总数，如取不到返回0
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]

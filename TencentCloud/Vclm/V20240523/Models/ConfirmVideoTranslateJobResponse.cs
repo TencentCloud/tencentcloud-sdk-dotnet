@@ -34,25 +34,35 @@ namespace TencentCloud.Vclm.V20240523.Models
         /// 音频转译任务 ID。
         /// </summary>
         [JsonProperty("TaskId")]
+        [System.Obsolete]
         public string TaskId{ get; set; }
 
         /// <summary>
         /// 音频转译结果确认 session。	
         /// </summary>
         [JsonProperty("SessionId")]
+        [System.Obsolete]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// 该字段与 DescribeVideoTranslateJob 接口的 Status 功能相同，均表示任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
+        /// 任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
         /// </summary>
         [JsonProperty("Status")]
+        [System.Obsolete]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 视频转译任务信息。	
         /// </summary>
         [JsonProperty("Message")]
+        [System.Obsolete]
         public string Message{ get; set; }
+
+        /// <summary>
+        /// 任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
+        /// </summary>
+        [JsonProperty("JobStatus")]
+        public long? JobStatus{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -71,6 +81,7 @@ namespace TencentCloud.Vclm.V20240523.Models
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamSimple(map, prefix + "JobStatus", this.JobStatus);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

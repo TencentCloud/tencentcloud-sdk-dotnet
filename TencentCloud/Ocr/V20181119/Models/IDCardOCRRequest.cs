@@ -82,6 +82,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("EnableReflectDetail")]
         public bool? EnableReflectDetail{ get; set; }
 
+        /// <summary>
+        /// 用于控制是否开启日期校验，默认值为true，打开会进行日期校验。
+        /// </summary>
+        [JsonProperty("EnableDateVerify")]
+        public bool? EnableDateVerify{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +100,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Config", this.Config);
             this.SetParamSimple(map, prefix + "EnableRecognitionRectify", this.EnableRecognitionRectify);
             this.SetParamSimple(map, prefix + "EnableReflectDetail", this.EnableReflectDetail);
+            this.SetParamSimple(map, prefix + "EnableDateVerify", this.EnableDateVerify);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 待重试部署记录ID
+        /// 待重试部署记录ID，通过DeployCertificateInstance获得
         /// </summary>
         [JsonProperty("DeployRecordId")]
         public long? DeployRecordId{ get; set; }
 
         /// <summary>
-        /// 待重试部署记录详情ID
+        /// 待重试部署记录详情ID，通过DescribeHostDeployRecordDetail获得
         /// </summary>
         [JsonProperty("DeployRecordDetailId")]
         public long? DeployRecordDetailId{ get; set; }

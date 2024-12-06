@@ -96,6 +96,12 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
+        /// <summary>
+        /// 平均rps, 单位req/s
+        /// </summary>
+        [JsonProperty("RPS")]
+        public float? RPS{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamSimple(map, prefix + "P99", this.P99);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Result", this.Result);
+            this.SetParamSimple(map, prefix + "RPS", this.RPS);
         }
     }
 }

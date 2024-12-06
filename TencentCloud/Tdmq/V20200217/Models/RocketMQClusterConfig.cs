@@ -25,9 +25,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 单命名空间TPS上线
+        /// 单命名空间TPS上限
         /// </summary>
         [JsonProperty("MaxTpsPerNamespace")]
+        [System.Obsolete]
         public ulong? MaxTpsPerNamespace{ get; set; }
 
         /// <summary>

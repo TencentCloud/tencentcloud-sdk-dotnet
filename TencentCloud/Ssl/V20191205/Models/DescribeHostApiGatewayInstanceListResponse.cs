@@ -25,14 +25,14 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// apiGateway实例列表
+        /// apiGateway实例列表,如取不到值返回空数组
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceList")]
         public ApiGatewayInstanceDetail[] InstanceList{ get; set; }
 
         /// <summary>
-        /// 总数
+        /// 总数，如取不到值返回0
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

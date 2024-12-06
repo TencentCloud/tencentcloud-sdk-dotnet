@@ -25,14 +25,14 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// Vod实例列表
+        /// Vod实例列表，如果取不到值返回空数组
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceList")]
         public VodInstanceDetail[] InstanceList{ get; set; }
 
         /// <summary>
-        /// 总数
+        /// 总数,如果取不到值返回0
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]

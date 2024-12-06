@@ -39,7 +39,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 导入状态
+        /// 是否已导入
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Imported")]

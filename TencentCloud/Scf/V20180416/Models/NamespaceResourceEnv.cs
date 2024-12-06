@@ -31,6 +31,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("TKE")]
         public NamespaceResourceEnvTKE TKE{ get; set; }
 
+        /// <summary>
+        /// 近离线计算类型的命名空间
+        /// </summary>
+        [JsonProperty("OFFLINE")]
+        public bool? OFFLINE{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +44,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "TKE.", this.TKE);
+            this.SetParamSimple(map, prefix + "OFFLINE", this.OFFLINE);
         }
     }
 }

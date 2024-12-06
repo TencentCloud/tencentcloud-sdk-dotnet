@@ -31,7 +31,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 每页数量，默认10。最大1000
+        /// 每页数量，默认10。最大值1000，如超过1000按1000处理
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public Tags[] Tags{ get; set; }
 
         /// <summary>
-        /// //是否筛选等待签发的证书，传1是筛选，0和null不筛选
+        /// 是否筛选等待签发的证书，传1是筛选，0和null不筛选
         /// </summary>
         [JsonProperty("IsPendingIssue")]
         public long? IsPendingIssue{ get; set; }

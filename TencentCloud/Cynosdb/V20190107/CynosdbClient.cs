@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1136";
+       private const string sdkVersion = "SDK_NET_3.0.1137";
 
         /// <summary>
         /// Client constructor.
@@ -218,6 +218,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public CloseProxyResponse CloseProxySync(CloseProxyRequest req)
         {
             return InternalRequestAsync<CloseProxyResponse>(req, "CloseProxy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 关闭数据库代理连接地址
+        /// </summary>
+        /// <param name="req"><see cref="CloseProxyEndPointRequest"/></param>
+        /// <returns><see cref="CloseProxyEndPointResponse"/></returns>
+        public Task<CloseProxyEndPointResponse> CloseProxyEndPoint(CloseProxyEndPointRequest req)
+        {
+            return InternalRequestAsync<CloseProxyEndPointResponse>(req, "CloseProxyEndPoint");
+        }
+
+        /// <summary>
+        /// 关闭数据库代理连接地址
+        /// </summary>
+        /// <param name="req"><see cref="CloseProxyEndPointRequest"/></param>
+        /// <returns><see cref="CloseProxyEndPointResponse"/></returns>
+        public CloseProxyEndPointResponse CloseProxyEndPointSync(CloseProxyEndPointRequest req)
+        {
+            return InternalRequestAsync<CloseProxyEndPointResponse>(req, "CloseProxyEndPoint")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1373,6 +1394,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeInstancesResponse DescribeInstancesSync(DescribeInstancesRequest req)
         {
             return InternalRequestAsync<DescribeInstancesResponse>(req, "DescribeInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeInstancesWithinSameCluster)用于查询同一集群下实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesWithinSameClusterRequest"/></param>
+        /// <returns><see cref="DescribeInstancesWithinSameClusterResponse"/></returns>
+        public Task<DescribeInstancesWithinSameClusterResponse> DescribeInstancesWithinSameCluster(DescribeInstancesWithinSameClusterRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancesWithinSameClusterResponse>(req, "DescribeInstancesWithinSameCluster");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeInstancesWithinSameCluster)用于查询同一集群下实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesWithinSameClusterRequest"/></param>
+        /// <returns><see cref="DescribeInstancesWithinSameClusterResponse"/></returns>
+        public DescribeInstancesWithinSameClusterResponse DescribeInstancesWithinSameClusterSync(DescribeInstancesWithinSameClusterRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancesWithinSameClusterResponse>(req, "DescribeInstancesWithinSameCluster")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

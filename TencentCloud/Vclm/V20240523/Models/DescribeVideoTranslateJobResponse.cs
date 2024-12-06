@@ -59,36 +59,42 @@ namespace TencentCloud.Vclm.V20240523.Models
         /// 是否需要确认翻译结果。0：不需要，1：需要。	
         /// </summary>
         [JsonProperty("JobConfirm")]
+        [System.Obsolete]
         public long? JobConfirm{ get; set; }
 
         /// <summary>
         /// 音频任务 ID。	
         /// </summary>
         [JsonProperty("JobAudioTaskId")]
+        [System.Obsolete]
         public string JobAudioTaskId{ get; set; }
 
         /// <summary>
         /// 视频审核任务ID。
         /// </summary>
         [JsonProperty("JobVideoModerationId")]
+        [System.Obsolete]
         public string JobVideoModerationId{ get; set; }
 
         /// <summary>
         /// 音频审核任务 ID。
         /// </summary>
         [JsonProperty("JobAudioModerationId")]
+        [System.Obsolete]
         public string JobAudioModerationId{ get; set; }
 
         /// <summary>
         /// 口型驱动任务 ID。
         /// </summary>
         [JsonProperty("JobVideoId")]
+        [System.Obsolete]
         public string JobVideoId{ get; set; }
 
         /// <summary>
         /// 视频素材原始 URL。
         /// </summary>
         [JsonProperty("OriginalVideoUrl")]
+        [System.Obsolete]
         public string OriginalVideoUrl{ get; set; }
 
         /// <summary>
@@ -101,6 +107,7 @@ namespace TencentCloud.Vclm.V20240523.Models
         /// 提交视频转译任务时的 requestId。
         /// </summary>
         [JsonProperty("JobSubmitReqId")]
+        [System.Obsolete]
         public string JobSubmitReqId{ get; set; }
 
         /// <summary>

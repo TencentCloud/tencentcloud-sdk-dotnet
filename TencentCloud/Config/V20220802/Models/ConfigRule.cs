@@ -170,7 +170,7 @@ namespace TencentCloud.Config.V20220802.Models
         public InputParameterForManage[] ManageInputParameter{ get; set; }
 
         /// <summary>
-        /// 规则名称
+        /// 合规包名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CompliancePackName")]

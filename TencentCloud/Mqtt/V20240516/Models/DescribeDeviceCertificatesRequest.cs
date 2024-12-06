@@ -15,38 +15,47 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmq.V20200217.Models
+namespace TencentCloud.Mqtt.V20240516.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeCmqDeadLetterSourceQueuesRequest : AbstractModel
+    public class DescribeDeviceCertificatesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 死信队列名称
+        /// 集群ID
         /// </summary>
-        [JsonProperty("DeadLetterQueueName")]
-        public string DeadLetterQueueName{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 分页时本页获取主题列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。
+        /// 过滤器支持ClientId、CaSn、DeviceCertificateSn、Status搜索
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
+        /// <summary>
+        /// 分页limit
         /// </summary>
         [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        public long? Limit{ get; set; }
 
         /// <summary>
-        /// 分页时本页获取主题的个数，如果不传递该参数，则该参数默认为20，最大值为50。
+        /// 分页偏移量
         /// </summary>
         [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
+        public long? Offset{ get; set; }
 
         /// <summary>
-        /// 根据SourceQueueName过滤
+        /// CREATE_TIME_DESC, 创建时间降序
+        ///     CREATE_TIME_ASC,创建时间升序
+        ///     UPDATE_TIME_DESC,更新时间降序
+        ///     UPDATE_TIME_ASC,更新时间升序
         /// </summary>
-        [JsonProperty("SourceQueueName")]
-        public string SourceQueueName{ get; set; }
+        [JsonProperty("OrderBy")]
+        public string OrderBy{ get; set; }
 
 
         /// <summary>
@@ -54,10 +63,11 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DeadLetterQueueName", this.DeadLetterQueueName);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "SourceQueueName", this.SourceQueueName);
+            this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
         }
     }
 }

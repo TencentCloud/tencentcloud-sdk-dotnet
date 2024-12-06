@@ -25,7 +25,10 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 查询条件列表
+        /// 查询条件列表,支持以下子弹
+        /// InstanceName：集群名模糊搜索
+        /// InstanceId：集群id精确搜索
+        /// InstanceStatus：集群状态搜索
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

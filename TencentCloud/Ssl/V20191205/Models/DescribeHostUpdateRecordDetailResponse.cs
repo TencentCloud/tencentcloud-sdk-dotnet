@@ -25,35 +25,35 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 总数
+        /// 总数,如果取不到返回0
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 证书部署记录列表
+        /// 证书部署记录列表，如果取不到值返回空数组
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordDetailList")]
         public UpdateRecordDetails[] RecordDetailList{ get; set; }
 
         /// <summary>
-        /// 成功总数
+        /// 成功总数,如果取不到返回0
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SuccessTotalCount")]
         public long? SuccessTotalCount{ get; set; }
 
         /// <summary>
-        /// 失败总数
+        /// 失败总数,如果取不到返回0
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedTotalCount")]
         public long? FailedTotalCount{ get; set; }
 
         /// <summary>
-        /// 部署中总数
+        /// 部署中总数,如果取不到返回0
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunningTotalCount")]

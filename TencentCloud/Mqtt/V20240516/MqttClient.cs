@@ -28,7 +28,7 @@ namespace TencentCloud.Mqtt.V20240516
 
        private const string endpoint = "mqtt.tencentcloudapi.com";
        private const string version = "2024-05-16";
-       private const string sdkVersion = "SDK_NET_3.0.1136";
+       private const string sdkVersion = "SDK_NET_3.0.1137";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Mqtt.V20240516
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 生效设备证书
+        /// </summary>
+        /// <param name="req"><see cref="ActivateDeviceCertificateRequest"/></param>
+        /// <returns><see cref="ActivateDeviceCertificateResponse"/></returns>
+        public Task<ActivateDeviceCertificateResponse> ActivateDeviceCertificate(ActivateDeviceCertificateRequest req)
+        {
+            return InternalRequestAsync<ActivateDeviceCertificateResponse>(req, "ActivateDeviceCertificate");
+        }
+
+        /// <summary>
+        /// 生效设备证书
+        /// </summary>
+        /// <param name="req"><see cref="ActivateDeviceCertificateRequest"/></param>
+        /// <returns><see cref="ActivateDeviceCertificateResponse"/></returns>
+        public ActivateDeviceCertificateResponse ActivateDeviceCertificateSync(ActivateDeviceCertificateRequest req)
+        {
+            return InternalRequestAsync<ActivateDeviceCertificateResponse>(req, "ActivateDeviceCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -243,6 +264,27 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
+        /// 分页查询设备证书
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceCertificatesRequest"/></param>
+        /// <returns><see cref="DescribeDeviceCertificatesResponse"/></returns>
+        public Task<DescribeDeviceCertificatesResponse> DescribeDeviceCertificates(DescribeDeviceCertificatesRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceCertificatesResponse>(req, "DescribeDeviceCertificates");
+        }
+
+        /// <summary>
+        /// 分页查询设备证书
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceCertificatesRequest"/></param>
+        /// <returns><see cref="DescribeDeviceCertificatesResponse"/></returns>
+        public DescribeDeviceCertificatesResponse DescribeDeviceCertificatesSync(DescribeDeviceCertificatesRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceCertificatesResponse>(req, "DescribeDeviceCertificates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询实例信息
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceRequest"/></param>
@@ -267,7 +309,6 @@ namespace TencentCloud.Mqtt.V20240516
         /// 获取实例列表，Filters参数使用说明如下：
         /// 1. InstanceName, 名称模糊查询
         /// 2. InstanceId，实例ID查询
-        /// 3. InstanceType, 实例类型查询，支持多选
         /// 3. InstanceStatus，实例状态查询，支持多选
         /// 
         /// 当使用TagFilters查询时，Filters参数失效。
@@ -283,7 +324,6 @@ namespace TencentCloud.Mqtt.V20240516
         /// 获取实例列表，Filters参数使用说明如下：
         /// 1. InstanceName, 名称模糊查询
         /// 2. InstanceId，实例ID查询
-        /// 3. InstanceType, 实例类型查询，支持多选
         /// 3. InstanceStatus，实例状态查询，支持多选
         /// 
         /// 当使用TagFilters查询时，Filters参数失效。

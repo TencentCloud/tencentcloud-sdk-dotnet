@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmq.V20200217.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeCmqDeadLetterSourceQueuesResponse : AbstractModel
+    public class DescribeInstancesWithinSameClusterResponse : AbstractModel
     {
         
         /// <summary>
-        /// 满足本次条件的队列个数
+        /// 实例个数
         /// </summary>
         [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 死信队列源队列
+        /// 实例ID列表
         /// </summary>
-        [JsonProperty("QueueSet")]
-        public CmqDeadLetterSource[] QueueSet{ get; set; }
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -49,7 +49,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "QueueSet.", this.QueueSet);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

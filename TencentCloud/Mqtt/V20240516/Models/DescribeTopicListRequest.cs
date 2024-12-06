@@ -31,7 +31,8 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 查询条件列表
+        /// 查询条件列表:
+        /// 支持TopicName模糊查询
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

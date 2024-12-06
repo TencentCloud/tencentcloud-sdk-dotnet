@@ -31,12 +31,6 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string CertificateId{ get; set; }
 
         /// <summary>
-        /// 部署资源类型
-        /// </summary>
-        [JsonProperty("ResourceType")]
-        public string ResourceType{ get; set; }
-
-        /// <summary>
         /// 是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
         /// </summary>
         [JsonProperty("IsCache")]
@@ -47,6 +41,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
+
+        /// <summary>
+        /// 部署资源类型cdn
+        /// </summary>
+        [JsonProperty("ResourceType")]
+        public string ResourceType{ get; set; }
 
         /// <summary>
         /// 原证书ID
@@ -67,7 +67,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 是否异步
+        /// 是否异步,0表示否，1表示是，默认为0
         /// </summary>
         [JsonProperty("AsyncCache")]
         public long? AsyncCache{ get; set; }
@@ -79,9 +79,9 @@ namespace TencentCloud.Ssl.V20191205.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
-            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamSimple(map, prefix + "IsCache", this.IsCache);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamSimple(map, prefix + "OldCertificateId", this.OldCertificateId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);

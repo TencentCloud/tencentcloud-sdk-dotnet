@@ -31,12 +31,6 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string CertificateId{ get; set; }
 
         /// <summary>
-        /// 部署资源类型 lighthouse
-        /// </summary>
-        [JsonProperty("ResourceType")]
-        public string ResourceType{ get; set; }
-
-        /// <summary>
         /// 是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
         /// </summary>
         [JsonProperty("IsCache")]
@@ -48,6 +42,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
+        /// <summary>
+        /// 部署资源类型 lighthouse
+        /// </summary>
+        [JsonProperty("ResourceType")]
+        public string ResourceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -55,9 +55,9 @@ namespace TencentCloud.Ssl.V20191205.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
-            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamSimple(map, prefix + "IsCache", this.IsCache);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
         }
     }
 }

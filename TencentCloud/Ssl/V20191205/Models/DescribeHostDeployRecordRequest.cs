@@ -43,7 +43,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 资源类型
+        /// 支持的资源类型如下,clb,cdn,ddos,waf,apigateway,teo,tke,cos,lighthouse,vod,tcb,tse
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }

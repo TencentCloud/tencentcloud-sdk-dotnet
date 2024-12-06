@@ -37,7 +37,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string[] InstanceIdList{ get; set; }
 
         /// <summary>
-        /// 部署的云资源类型
+        /// 部署的云资源类型,如clb，cos
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 管理人ID
+        /// 管理人ID,可以从describeManagers接口获得
         /// </summary>
         [JsonProperty("ManagerId")]
         public long? ManagerId{ get; set; }

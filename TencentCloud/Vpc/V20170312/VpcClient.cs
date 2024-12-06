@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1136";
+       private const string sdkVersion = "SDK_NET_3.0.1137";
 
         /// <summary>
         /// Client constructor.
@@ -211,7 +211,10 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 该接口用于给IPv6地址初次分配公网带宽
+        /// 本接口（AllocateIp6AddressesBandwidth）用于为传统弹性公网 IPv6 实例开通 IPv6 公网带宽。
+        /// 
+        /// - 传统弹性公网 IPv6 实例默认仅具备 IPv6 内网通信能力，需为 IPv6 地址分配公网带宽后，才具备 IPv6 公网通信能力。
+        /// - 支持为一个或多个传统弹性公网 IPv6 实例开通公网带宽。
         /// </summary>
         /// <param name="req"><see cref="AllocateIp6AddressesBandwidthRequest"/></param>
         /// <returns><see cref="AllocateIp6AddressesBandwidthResponse"/></returns>
@@ -221,7 +224,10 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 该接口用于给IPv6地址初次分配公网带宽
+        /// 本接口（AllocateIp6AddressesBandwidth）用于为传统弹性公网 IPv6 实例开通 IPv6 公网带宽。
+        /// 
+        /// - 传统弹性公网 IPv6 实例默认仅具备 IPv6 内网通信能力，需为 IPv6 地址分配公网带宽后，才具备 IPv6 公网通信能力。
+        /// - 支持为一个或多个传统弹性公网 IPv6 实例开通公网带宽。
         /// </summary>
         /// <param name="req"><see cref="AllocateIp6AddressesBandwidthRequest"/></param>
         /// <returns><see cref="AllocateIp6AddressesBandwidthResponse"/></returns>
@@ -3975,7 +3981,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 该接口用于查询IPV6地址信息
+        /// 本接口（DescribeIp6Addresses）用于查询一个或多个传统弹性公网 IPv6 实例的详细信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeIp6AddressesRequest"/></param>
         /// <returns><see cref="DescribeIp6AddressesResponse"/></returns>
@@ -3985,7 +3991,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 该接口用于查询IPV6地址信息
+        /// 本接口（DescribeIp6Addresses）用于查询一个或多个传统弹性公网 IPv6 实例的详细信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeIp6AddressesRequest"/></param>
         /// <returns><see cref="DescribeIp6AddressesResponse"/></returns>
@@ -6242,7 +6248,6 @@ namespace TencentCloud.Vpc.V20170312
         /// 该接口一般用来封禁出口限速的云联网实例, 目前联通内部运营系统通过云API调用, 因为出口限速无法按地域间封禁, 只能按更粗的云联网实例粒度封禁, 如果是地域间限速, 一般可以通过更细的限速实例粒度封禁（LockCcnBandwidths）
         /// 
         /// 如有需要, 可以封禁任意限速实例, 可接入到内部运营系统
-        /// 
         /// </summary>
         /// <param name="req"><see cref="LockCcnsRequest"/></param>
         /// <returns><see cref="LockCcnsResponse"/></returns>
@@ -6257,7 +6262,6 @@ namespace TencentCloud.Vpc.V20170312
         /// 该接口一般用来封禁出口限速的云联网实例, 目前联通内部运营系统通过云API调用, 因为出口限速无法按地域间封禁, 只能按更粗的云联网实例粒度封禁, 如果是地域间限速, 一般可以通过更细的限速实例粒度封禁（LockCcnBandwidths）
         /// 
         /// 如有需要, 可以封禁任意限速实例, 可接入到内部运营系统
-        /// 
         /// </summary>
         /// <param name="req"><see cref="LockCcnsRequest"/></param>
         /// <returns><see cref="LockCcnsResponse"/></returns>
@@ -6836,7 +6840,10 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 该接口用于修改IPV6地址访问internet的带宽
+        /// 本接口（ModifyIp6AddressesBandwidt）用于调整传统弹性公网 IPv6 实例的带宽上限。
+        /// 
+        /// - 仅支持对传统弹性公网 IPv6 实例的带宽上限进行调整。
+        /// - 如需调整弹性公网 IPv6 实例的带宽上限，请使用 ModifyIPv6AddressesBandwidth 接口。
         /// </summary>
         /// <param name="req"><see cref="ModifyIp6AddressesBandwidthRequest"/></param>
         /// <returns><see cref="ModifyIp6AddressesBandwidthResponse"/></returns>
@@ -6846,7 +6853,10 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 该接口用于修改IPV6地址访问internet的带宽
+        /// 本接口（ModifyIp6AddressesBandwidt）用于调整传统弹性公网 IPv6 实例的带宽上限。
+        /// 
+        /// - 仅支持对传统弹性公网 IPv6 实例的带宽上限进行调整。
+        /// - 如需调整弹性公网 IPv6 实例的带宽上限，请使用 ModifyIPv6AddressesBandwidth 接口。
         /// </summary>
         /// <param name="req"><see cref="ModifyIp6AddressesBandwidthRequest"/></param>
         /// <returns><see cref="ModifyIp6AddressesBandwidthResponse"/></returns>
@@ -7827,7 +7837,10 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 该接口用于给弹性公网IPv6地址释放带宽。
+        /// 本接口（ReleaseIp6AddressesBandwidth）用于为传统弹性公网 IPv6 实例关闭 IPv6 公网带宽。
+        /// 
+        /// - 传统弹性公网 IPv6 实例关闭公网带宽后，仍具备 IPv6 内网通信能力。
+        /// - 如需再次开通 IPv6 公网带宽，请使用 AllocateIp6AddressesBandwidth 接口进行开通。
         /// </summary>
         /// <param name="req"><see cref="ReleaseIp6AddressesBandwidthRequest"/></param>
         /// <returns><see cref="ReleaseIp6AddressesBandwidthResponse"/></returns>
@@ -7837,7 +7850,10 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 该接口用于给弹性公网IPv6地址释放带宽。
+        /// 本接口（ReleaseIp6AddressesBandwidth）用于为传统弹性公网 IPv6 实例关闭 IPv6 公网带宽。
+        /// 
+        /// - 传统弹性公网 IPv6 实例关闭公网带宽后，仍具备 IPv6 内网通信能力。
+        /// - 如需再次开通 IPv6 公网带宽，请使用 AllocateIp6AddressesBandwidth 接口进行开通。
         /// </summary>
         /// <param name="req"><see cref="ReleaseIp6AddressesBandwidthRequest"/></param>
         /// <returns><see cref="ReleaseIp6AddressesBandwidthResponse"/></returns>

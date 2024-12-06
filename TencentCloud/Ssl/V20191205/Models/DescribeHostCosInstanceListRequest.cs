@@ -67,7 +67,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 是否异步	
+        /// 是否异步，0表示否，1表示是
         /// </summary>
         [JsonProperty("AsyncCache")]
         public long? AsyncCache{ get; set; }

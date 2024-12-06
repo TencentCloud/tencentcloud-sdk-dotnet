@@ -25,40 +25,48 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// 每页限制
+        /// 每页数量。
+        /// 取值范围：1~200
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 偏移量。
+        /// 取值范围：最小值为0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 排序类型, 倒序：desc，顺序：asc
+        /// 排序类型(规则名称)。
+        /// 倒序：desc，
+        /// 顺序：asc
         /// </summary>
         [JsonProperty("OrderType")]
         public string OrderType{ get; set; }
 
         /// <summary>
-        /// 风险等级
-        /// 1：高风险。
-        /// 2：中风险。
+        /// 风险等级。
+        /// 1：高风险，
+        /// 2：中风险，
         /// 3：低风险。
         /// </summary>
         [JsonProperty("RiskLevel")]
         public ulong?[] RiskLevel{ get; set; }
 
         /// <summary>
-        /// 规则状态
+        /// 规则状态。
+        /// ACTIVE：启用
+        /// UN_ACTIVE：停用
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// 评估结果
+        /// 评估结果。
+        /// COMPLIANT：合规
+        /// NON_COMPLIANT：不合规
         /// </summary>
         [JsonProperty("ComplianceResult")]
         public string[] ComplianceResult{ get; set; }

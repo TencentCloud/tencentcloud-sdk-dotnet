@@ -25,28 +25,28 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// CDN实例列表
+        /// CDN实例列表，如取不到值返回空数组
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceList")]
         public CdnInstanceDetail[] InstanceList{ get; set; }
 
         /// <summary>
-        /// CDN域名总数
+        /// CDN域名总数，如取不到值返回0
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 异步刷新总数	
+        /// 异步刷新总数，如取不到值返回0
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsyncTotalNum")]
         public long? AsyncTotalNum{ get; set; }
 
         /// <summary>
-        /// 异步刷新当前执行数	
+        /// 异步刷新当前执行数，如取不到值返回0
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsyncOffset")]

@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1136";
+       private const string sdkVersion = "SDK_NET_3.0.1137";
 
         /// <summary>
         /// Client constructor.
@@ -369,6 +369,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 不再支持审计规则创建
+        /// 
         /// 本接口(CreateAuditRule)用于创建用户在当前地域的审计规则。
         /// </summary>
         /// <param name="req"><see cref="CreateAuditRuleRequest"/></param>
@@ -379,6 +381,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 不再支持审计规则创建
+        /// 
         /// 本接口(CreateAuditRule)用于创建用户在当前地域的审计规则。
         /// </summary>
         /// <param name="req"><see cref="CreateAuditRuleRequest"/></param>
@@ -760,6 +764,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 不再支持审计规则创建
+        /// 
         /// 本接口(DeleteAuditRule)用于删除用户的审计规则。
         /// </summary>
         /// <param name="req"><see cref="DeleteAuditRuleRequest"/></param>
@@ -770,6 +776,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 不再支持审计规则创建
+        /// 
         /// 本接口(DeleteAuditRule)用于删除用户的审计规则。
         /// </summary>
         /// <param name="req"><see cref="DeleteAuditRuleRequest"/></param>
@@ -1138,6 +1146,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 不再支持审计规则创建
+        /// 
         /// 本接口(DescribeAuditRules)用于查询用户在当前地域的审计规则。
         /// </summary>
         /// <param name="req"><see cref="DescribeAuditRulesRequest"/></param>
@@ -1148,6 +1158,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 不再支持审计规则创建
+        /// 
         /// 本接口(DescribeAuditRules)用于查询用户在当前地域的审计规则。
         /// </summary>
         /// <param name="req"><see cref="DescribeAuditRulesRequest"/></param>
@@ -2559,6 +2571,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 不再支持审计规则创建
+        /// 
         /// 本接口(ModifyAuditRule)用于修改用户的审计规则。
         /// </summary>
         /// <param name="req"><see cref="ModifyAuditRuleRequest"/></param>
@@ -2569,6 +2583,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 不再支持审计规则创建
+        /// 
         /// 本接口(ModifyAuditRule)用于修改用户的审计规则。
         /// </summary>
         /// <param name="req"><see cref="ModifyAuditRuleRequest"/></param>

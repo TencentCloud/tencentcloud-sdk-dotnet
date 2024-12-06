@@ -25,12 +25,6 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 待部署的证书ID
-        /// </summary>
-        [JsonProperty("CertificateId")]
-        public string CertificateId{ get; set; }
-
-        /// <summary>
         /// 分页偏移量，从0开始。
         /// </summary>
         [JsonProperty("Offset")]
@@ -41,6 +35,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// 待部署的证书ID
+        /// </summary>
+        [JsonProperty("CertificateId")]
+        public string CertificateId{ get; set; }
 
         /// <summary>
         /// 是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
@@ -55,7 +55,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 是否异步缓存
+        /// 是否异步缓存,0表示否,1表示是
         /// </summary>
         [JsonProperty("AsyncCache")]
         public long? AsyncCache{ get; set; }
@@ -72,9 +72,9 @@ namespace TencentCloud.Ssl.V20191205.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
             this.SetParamSimple(map, prefix + "IsCache", this.IsCache);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "AsyncCache", this.AsyncCache);

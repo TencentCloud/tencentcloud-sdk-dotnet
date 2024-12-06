@@ -117,6 +117,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("ApproverRoleName")]
         public string ApproverRoleName{ get; set; }
 
+        /// <summary>
+        /// 签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SignId")]
+        public string SignId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +142,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ApproveTime", this.ApproveTime);
             this.SetParamSimple(map, prefix + "ApproveType", this.ApproveType);
             this.SetParamSimple(map, prefix + "ApproverRoleName", this.ApproverRoleName);
+            this.SetParamSimple(map, prefix + "SignId", this.SignId);
         }
     }
 }

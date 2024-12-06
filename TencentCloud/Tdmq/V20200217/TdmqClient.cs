@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1136";
+       private const string sdkVersion = "SDK_NET_3.0.1137";
 
         /// <summary>
         /// Client constructor.
@@ -999,6 +999,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 历史原因，该接口位于tdmq-manager，目前rabbitmq产品没有使用该接口，当前使用的是DescribeRabbitMQVipInstances。不过从调用链上看，线网还有请求流程，所以走预下线流程。
+        /// 
         /// 获取amqp集群列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAMQPClustersRequest"/></param>
@@ -1009,6 +1011,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 历史原因，该接口位于tdmq-manager，目前rabbitmq产品没有使用该接口，当前使用的是DescribeRabbitMQVipInstances。不过从调用链上看，线网还有请求流程，所以走预下线流程。
+        /// 
         /// 获取amqp集群列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAMQPClustersRequest"/></param>
@@ -1121,31 +1125,6 @@ namespace TencentCloud.Tdmq.V20200217
         public DescribeClustersResponse DescribeClustersSync(DescribeClustersRequest req)
         {
             return InternalRequestAsync<DescribeClustersResponse>(req, "DescribeClusters")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 接口很久之前已删除，需下线
-        /// 
-        /// 枚举cmq死信队列源队列
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCmqDeadLetterSourceQueuesRequest"/></param>
-        /// <returns><see cref="DescribeCmqDeadLetterSourceQueuesResponse"/></returns>
-        public Task<DescribeCmqDeadLetterSourceQueuesResponse> DescribeCmqDeadLetterSourceQueues(DescribeCmqDeadLetterSourceQueuesRequest req)
-        {
-            return InternalRequestAsync<DescribeCmqDeadLetterSourceQueuesResponse>(req, "DescribeCmqDeadLetterSourceQueues");
-        }
-
-        /// <summary>
-        /// 接口很久之前已删除，需下线
-        /// 
-        /// 枚举cmq死信队列源队列
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCmqDeadLetterSourceQueuesRequest"/></param>
-        /// <returns><see cref="DescribeCmqDeadLetterSourceQueuesResponse"/></returns>
-        public DescribeCmqDeadLetterSourceQueuesResponse DescribeCmqDeadLetterSourceQueuesSync(DescribeCmqDeadLetterSourceQueuesRequest req)
-        {
-            return InternalRequestAsync<DescribeCmqDeadLetterSourceQueuesResponse>(req, "DescribeCmqDeadLetterSourceQueues")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2389,6 +2368,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 历史原因，该接口位于tdmq-manager，目前rabbitmq产品没有使用该接口，当前使用的是ModifyRabbitMQVipInstance。不过从调用链上看，线网还有请求流程，所以走预下线流程。
+        /// 
         /// 更新Amqp集群信息
         /// </summary>
         /// <param name="req"><see cref="ModifyAMQPClusterRequest"/></param>
@@ -2399,6 +2380,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 历史原因，该接口位于tdmq-manager，目前rabbitmq产品没有使用该接口，当前使用的是ModifyRabbitMQVipInstance。不过从调用链上看，线网还有请求流程，所以走预下线流程。
+        /// 
         /// 更新Amqp集群信息
         /// </summary>
         /// <param name="req"><see cref="ModifyAMQPClusterRequest"/></param>

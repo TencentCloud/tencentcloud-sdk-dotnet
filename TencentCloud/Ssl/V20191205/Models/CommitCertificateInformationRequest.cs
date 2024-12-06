@@ -31,7 +31,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string CertificateId{ get; set; }
 
         /// <summary>
-        /// 域名验证方式
+        /// 域名验证方式，如 DNS,DNS_AUTO,FILE
         /// </summary>
         [JsonProperty("VerifyType")]
         public string VerifyType{ get; set; }

@@ -25,7 +25,8 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// 回调令牌。从自定义规则所选的scf云函数Context中取参数ResultToken值
+        /// 回调令牌。从自定义规则所选的scf云函数入参中取参数ResultToken值
+        /// <a href="https://cloud.tencent.com/document/product/583/9210#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E" target="_blank">云函数入参说明</a>
         /// </summary>
         [JsonProperty("ResultToken")]
         public string ResultToken{ get; set; }
