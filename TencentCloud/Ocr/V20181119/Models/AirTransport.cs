@@ -168,6 +168,48 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("FlightItems")]
         public FlightItem[] FlightItems{ get; set; }
 
+        /// <summary>
+        /// 提示信息
+        /// </summary>
+        [JsonProperty("PromptInformation")]
+        public string PromptInformation{ get; set; }
+
+        /// <summary>
+        /// 统一社会信用代码/纳税人识别号
+        /// </summary>
+        [JsonProperty("BuyerTaxID")]
+        public string BuyerTaxID{ get; set; }
+
+        /// <summary>
+        /// 购买方名称
+        /// </summary>
+        [JsonProperty("Buyer")]
+        public string Buyer{ get; set; }
+
+        /// <summary>
+        /// 发票号码
+        /// </summary>
+        [JsonProperty("ReceiptNumber")]
+        public string ReceiptNumber{ get; set; }
+
+        /// <summary>
+        /// 开票状态
+        /// </summary>
+        [JsonProperty("InvoiceStatus")]
+        public string InvoiceStatus{ get; set; }
+
+        /// <summary>
+        /// 增值税税率
+        /// </summary>
+        [JsonProperty("TaxRate")]
+        public string TaxRate{ get; set; }
+
+        /// <summary>
+        /// 增值税税额
+        /// </summary>
+        [JsonProperty("TaxAmount")]
+        public string TaxAmount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +240,13 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Endorsement", this.Endorsement);
             this.SetParamSimple(map, prefix + "QRCodeMark", this.QRCodeMark);
             this.SetParamArrayObj(map, prefix + "FlightItems.", this.FlightItems);
+            this.SetParamSimple(map, prefix + "PromptInformation", this.PromptInformation);
+            this.SetParamSimple(map, prefix + "BuyerTaxID", this.BuyerTaxID);
+            this.SetParamSimple(map, prefix + "Buyer", this.Buyer);
+            this.SetParamSimple(map, prefix + "ReceiptNumber", this.ReceiptNumber);
+            this.SetParamSimple(map, prefix + "InvoiceStatus", this.InvoiceStatus);
+            this.SetParamSimple(map, prefix + "TaxRate", this.TaxRate);
+            this.SetParamSimple(map, prefix + "TaxAmount", this.TaxAmount);
         }
     }
 }

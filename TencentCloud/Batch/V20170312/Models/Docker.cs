@@ -25,22 +25,22 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// Docker Hub 用户名或 Tencent Registry 用户名
+        /// Docker Hub填写“[user/repo]:[tag]”，Tencent Registry填写“ccr.ccs.tencentyun.com/[namespace/repo]:[tag]”
+        /// </summary>
+        [JsonProperty("Image")]
+        public string Image{ get; set; }
+
+        /// <summary>
+        /// Docker Hub 用户名或 Tencent Registry 用户名；公共镜像可不填写此参数。
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
-        /// Docker Hub 密码或 Tencent Registry 密码
+        /// Docker Hub 密码或 Tencent Registry 密码；公共镜像可不填写此参数。
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
-
-        /// <summary>
-        /// Docker Hub填写“[user/repo]:[tag]”，Tencent Registry填写“ccr.ccs.tencentyun.com/[namespace/repo]:[tag]”
-        /// </summary>
-        [JsonProperty("Image")]
-        public string Image{ get; set; }
 
         /// <summary>
         /// Docker Hub 可以不填，但确保具有公网访问能力。或者是 Tencent Registry 服务地址“ccr.ccs.tencentyun.com”
@@ -73,9 +73,9 @@ namespace TencentCloud.Batch.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "User", this.User);
             this.SetParamSimple(map, prefix + "Password", this.Password);
-            this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "Server", this.Server);
             this.SetParamSimple(map, prefix + "MaxRetryCount", this.MaxRetryCount);
             this.SetParamSimple(map, prefix + "DelayOnRetry", this.DelayOnRetry);

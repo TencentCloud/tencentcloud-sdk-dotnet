@@ -28,7 +28,7 @@ namespace TencentCloud.Aiart.V20221229
 
        private const string endpoint = "aiart.tencentcloudapi.com";
        private const string version = "2022-12-29";
-       private const string sdkVersion = "SDK_NET_3.0.1137";
+       private const string sdkVersion = "SDK_NET_3.0.1138";
 
         /// <summary>
         /// Client constructor.
@@ -98,6 +98,29 @@ namespace TencentCloud.Aiart.V20221229
         public GenerateAvatarResponse GenerateAvatarSync(GenerateAvatarRequest req)
         {
             return InternalRequestAsync<GenerateAvatarResponse>(req, "GenerateAvatar")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 扩图接口支持对输入图像按指定宽高比实现智能扩图。
+        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务。
+        /// </summary>
+        /// <param name="req"><see cref="ImageOutpaintingRequest"/></param>
+        /// <returns><see cref="ImageOutpaintingResponse"/></returns>
+        public Task<ImageOutpaintingResponse> ImageOutpainting(ImageOutpaintingRequest req)
+        {
+            return InternalRequestAsync<ImageOutpaintingResponse>(req, "ImageOutpainting");
+        }
+
+        /// <summary>
+        /// 扩图接口支持对输入图像按指定宽高比实现智能扩图。
+        /// 默认提供1个并发，代表最多能同时处理1个已提交的任务。
+        /// </summary>
+        /// <param name="req"><see cref="ImageOutpaintingRequest"/></param>
+        /// <returns><see cref="ImageOutpaintingResponse"/></returns>
+        public ImageOutpaintingResponse ImageOutpaintingSync(ImageOutpaintingRequest req)
+        {
+            return InternalRequestAsync<ImageOutpaintingResponse>(req, "ImageOutpainting")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

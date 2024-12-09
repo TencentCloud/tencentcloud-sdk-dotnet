@@ -144,6 +144,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("OriginalNumber")]
         public string OriginalNumber{ get; set; }
 
+        /// <summary>
+        /// 标识信息
+        /// </summary>
+        [JsonProperty("IDInfo")]
+        public string IDInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +176,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Buyer", this.Buyer);
             this.SetParamSimple(map, prefix + "BuyerTaxID", this.BuyerTaxID);
             this.SetParamSimple(map, prefix + "OriginalNumber", this.OriginalNumber);
+            this.SetParamSimple(map, prefix + "IDInfo", this.IDInfo);
         }
     }
 }

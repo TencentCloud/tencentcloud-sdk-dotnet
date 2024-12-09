@@ -92,18 +92,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("MaxRoCount")]
         public long? MaxRoCount{ get; set; }
 
-        /// <summary>
-        /// 集群是否允许扩容，可选范围<li>yes</li><li>no</li>
-        /// </summary>
-        [JsonProperty("AutoScaleUp")]
-        public string AutoScaleUp{ get; set; }
-
-        /// <summary>
-        /// 集群是否允许缩容，可选范围<li>yes</li><li>no</li>
-        /// </summary>
-        [JsonProperty("AutoScaleDown")]
-        public string AutoScaleDown{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,8 +109,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "MaxRoCpu", this.MaxRoCpu);
             this.SetParamSimple(map, prefix + "MinRoCount", this.MinRoCount);
             this.SetParamSimple(map, prefix + "MaxRoCount", this.MaxRoCount);
-            this.SetParamSimple(map, prefix + "AutoScaleUp", this.AutoScaleUp);
-            this.SetParamSimple(map, prefix + "AutoScaleDown", this.AutoScaleDown);
         }
     }
 }

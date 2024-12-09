@@ -25,9 +25,9 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 语音翻译任务开关，可选值：
+        /// 语音翻译识别任务开关，可选值：
         /// <li>ON：开启；</li>
-        /// <li>OFF：关闭。</li><font color=red>注意：</font>语音翻译任务本身会返回 ASR 全文识别结果，为避免重复收费，因此禁止同时开启语音翻译和 ASR 全文识别功能项。
+        /// <li>OFF：关闭。</li><font color=red>注意：</font>语音翻译识别任务本身会返回 ASR 全文识别结果，为避免重复收费，因此禁止同时开启语音翻译识别和 ASR 全文识别功能项。
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
@@ -52,7 +52,9 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SrcLanguage{ get; set; }
 
         /// <summary>
-        /// 翻译目标语言，当 Switch 为 ON 时，此参数必填。
+        /// 翻译目标语言，当 Switch 为 ON 时，此参数有效。
+        /// 若此参数不填或者填写空字符串，则表示只进行语音全文识别，不进行翻译（计费项与 AsrFullTextConfigure 语音全文识别一致）；
+        /// 否则，此参数的取值范围分为如下几种情况：
         /// 当 SrcLanguage 为 zh（中文）时，取值范围：
         /// <li>en：英文；</li>
         /// <li>ja：日文；</li>

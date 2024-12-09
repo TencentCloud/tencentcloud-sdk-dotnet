@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 无
+        /// 查询结果
         /// </summary>
         [JsonProperty("Data")]
         public StaticInfo[] Data{ get; set; }

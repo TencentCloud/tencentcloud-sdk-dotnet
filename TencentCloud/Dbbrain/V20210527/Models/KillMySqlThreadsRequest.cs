@@ -55,7 +55,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string Product{ get; set; }
 
         /// <summary>
-        /// 默认是ture, 记录下kill的记录，为了加快kill，可设置为false。
+        /// 默认是true，会记录下kill的记录；该参数为true, 则在kill操作前校验目标会话是否存在，存在则继续kill，否则取消kill。为了加快kill速度，可设置为false。
         /// </summary>
         [JsonProperty("RecordHistory")]
         public bool? RecordHistory{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FEBD4BA8-D71D-307D-97C6-CC6B06586449}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1137</VersionPrefix>
+    <VersionPrefix>3.0.1138</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -241,6 +241,8 @@
     <Compile Include="V20190107\Models\DescribeResourcesByDealNameResponse.cs" />
     <Compile Include="V20190107\Models\DescribeRollbackTimeRangeRequest.cs" />
     <Compile Include="V20190107\Models\DescribeRollbackTimeRangeResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeServerlessInstanceSpecsRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeServerlessInstanceSpecsResponse.cs" />
     <Compile Include="V20190107\Models\DescribeServerlessStrategyRequest.cs" />
     <Compile Include="V20190107\Models\DescribeServerlessStrategyResponse.cs" />
     <Compile Include="V20190107\Models\DescribeSupportProxyVersionRequest.cs" />
@@ -431,6 +433,8 @@
     <Compile Include="V20190107\Models\SearchClusterTablesRequest.cs" />
     <Compile Include="V20190107\Models\SearchClusterTablesResponse.cs" />
     <Compile Include="V20190107\Models\SecurityGroup.cs" />
+    <Compile Include="V20190107\Models\ServerlessSpec.cs" />
+    <Compile Include="V20190107\Models\ServerlessZoneStockInfo.cs" />
     <Compile Include="V20190107\Models\SetRenewFlagRequest.cs" />
     <Compile Include="V20190107\Models\SetRenewFlagResponse.cs" />
     <Compile Include="V20190107\Models\SlaveZoneAttrItem.cs" />

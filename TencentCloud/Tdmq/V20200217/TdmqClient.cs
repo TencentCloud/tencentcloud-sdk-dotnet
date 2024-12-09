@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1137";
+       private const string sdkVersion = "SDK_NET_3.0.1138";
 
         /// <summary>
         /// Client constructor.
@@ -1675,6 +1675,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 消息队列TDMQ RabbitMQ 有一个存量旧接口没下线，目前实际上已经不在产品中使用：DescribeRabbitMQVirtualHostList，这个接口很久前已经被 DescribeRabbitMQVirtualHost 替换掉。已无用户在调用。
+        /// 
         /// RabbitMQ专享版查询虚拟主机列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRabbitMQVirtualHostListRequest"/></param>
@@ -1685,6 +1687,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 消息队列TDMQ RabbitMQ 有一个存量旧接口没下线，目前实际上已经不在产品中使用：DescribeRabbitMQVirtualHostList，这个接口很久前已经被 DescribeRabbitMQVirtualHost 替换掉。已无用户在调用。
+        /// 
         /// RabbitMQ专享版查询虚拟主机列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRabbitMQVirtualHostListRequest"/></param>

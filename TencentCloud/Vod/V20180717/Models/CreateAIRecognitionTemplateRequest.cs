@@ -74,6 +74,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 语音全文识别控制参数。
+        /// <font color=red>注意：本参数已不再维护，推荐使用 AsrTranslateConfigure 参数发起语音翻译识别（当 DstLanguage 不填或填空字符串时，则不进行翻译，计费项和语音全文识别一致）。</font> 
         /// </summary>
         [JsonProperty("AsrFullTextConfigure")]
         public AsrFullTextConfigureInfo AsrFullTextConfigure{ get; set; }
@@ -85,7 +86,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AsrWordsConfigureInfo AsrWordsConfigure{ get; set; }
 
         /// <summary>
-        /// 语音翻译控制参数。
+        /// 语音翻译识别控制参数。
         /// </summary>
         [JsonProperty("AsrTranslateConfigure")]
         public AsrTranslateConfigureInfo AsrTranslateConfigure{ get; set; }

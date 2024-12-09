@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1137";
+       private const string sdkVersion = "SDK_NET_3.0.1138";
 
         /// <summary>
         /// Client constructor.
@@ -1830,6 +1830,8 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// 接口已迁移到新接口了，无调用量
+        /// 
         /// 接口即将下线，请切换使用新接口：[文档解析](https://cloud.tencent.com/document/product/1759/107504)
         /// </summary>
         /// <param name="req"><see cref="ParseDocRequest"/></param>
@@ -1840,6 +1842,8 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// 接口已迁移到新接口了，无调用量
+        /// 
         /// 接口即将下线，请切换使用新接口：[文档解析](https://cloud.tencent.com/document/product/1759/107504)
         /// </summary>
         /// <param name="req"><see cref="ParseDocRequest"/></param>
@@ -1851,6 +1855,8 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// 接口已迁移到新接口了，无调用量
+        /// 
         /// 查询文档解析结果。该接口需开通文档解析原子能力后调用。文档解析原子能力内测中，如有需要请联系架构师或[联系客服](https://cloud.tencent.com/act/event/Online_service) 。
         /// </summary>
         /// <param name="req"><see cref="QueryParseDocResultRequest"/></param>
@@ -1861,6 +1867,8 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// 接口已迁移到新接口了，无调用量
+        /// 
         /// 查询文档解析结果。该接口需开通文档解析原子能力后调用。文档解析原子能力内测中，如有需要请联系架构师或[联系客服](https://cloud.tencent.com/act/event/Online_service) 。
         /// </summary>
         /// <param name="req"><see cref="QueryParseDocResultRequest"/></param>

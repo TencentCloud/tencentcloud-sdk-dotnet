@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1137";
+       private const string sdkVersion = "SDK_NET_3.0.1138";
 
         /// <summary>
         /// Client constructor.
@@ -207,6 +207,35 @@ namespace TencentCloud.Vpc.V20170312
         public AllocateAddressesResponse AllocateAddressesSync(AllocateAddressesRequest req)
         {
             return InternalRequestAsync<AllocateAddressesResponse>(req, "AllocateAddresses")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（AllocateIPv6Addresses）用于申请一个或多个弹性公网IPv6（简称EIPv6）实例。
+        /// 
+        /// - EIPv6 是您在腾讯云某个地域可以独立申请和持有的，固定不变的公网 IPv6 地址，提供与弹性公网 IPv4 一致的产品体验。
+        /// - 通过弹性公网 IPv6，您可以快速将 EIPv6 实例绑定到云资源的内网 IPv6 地址上，实现为云资源快速开通 IPv6 公网带宽。
+        /// - 您还可以按需将 EIPv6 实例绑定到其他云资源上，从而屏蔽实例故障。
+        /// </summary>
+        /// <param name="req"><see cref="AllocateIPv6AddressesRequest"/></param>
+        /// <returns><see cref="AllocateIPv6AddressesResponse"/></returns>
+        public Task<AllocateIPv6AddressesResponse> AllocateIPv6Addresses(AllocateIPv6AddressesRequest req)
+        {
+            return InternalRequestAsync<AllocateIPv6AddressesResponse>(req, "AllocateIPv6Addresses");
+        }
+
+        /// <summary>
+        /// 本接口（AllocateIPv6Addresses）用于申请一个或多个弹性公网IPv6（简称EIPv6）实例。
+        /// 
+        /// - EIPv6 是您在腾讯云某个地域可以独立申请和持有的，固定不变的公网 IPv6 地址，提供与弹性公网 IPv4 一致的产品体验。
+        /// - 通过弹性公网 IPv6，您可以快速将 EIPv6 实例绑定到云资源的内网 IPv6 地址上，实现为云资源快速开通 IPv6 公网带宽。
+        /// - 您还可以按需将 EIPv6 实例绑定到其他云资源上，从而屏蔽实例故障。
+        /// </summary>
+        /// <param name="req"><see cref="AllocateIPv6AddressesRequest"/></param>
+        /// <returns><see cref="AllocateIPv6AddressesResponse"/></returns>
+        public AllocateIPv6AddressesResponse AllocateIPv6AddressesSync(AllocateIPv6AddressesRequest req)
+        {
+            return InternalRequestAsync<AllocateIPv6AddressesResponse>(req, "AllocateIPv6Addresses")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -427,6 +456,33 @@ namespace TencentCloud.Vpc.V20170312
         public AssociateDirectConnectGatewayNatGatewayResponse AssociateDirectConnectGatewayNatGatewaySync(AssociateDirectConnectGatewayNatGatewayRequest req)
         {
             return InternalRequestAsync<AssociateDirectConnectGatewayNatGatewayResponse>(req, "AssociateDirectConnectGatewayNatGateway")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（AssociateIPv6Address）用于将弹性公网IPv6（简称EIPv6）实例绑定到 CVM 或弹性网卡配置的内网 IPv6 地址上。
+        /// 
+        /// - 将 EIPv6 绑定到 CVM 上，其本质是将 EIPv6 绑定到 CVM 弹性网卡所配置的内网 IPv6 地址上。
+        /// - 将 EIPv6 绑定到指定网卡的内网 IPv6 时，需确保该内网 IPv6 地址为未绑定状态，才能执行绑定操作。
+        /// </summary>
+        /// <param name="req"><see cref="AssociateIPv6AddressRequest"/></param>
+        /// <returns><see cref="AssociateIPv6AddressResponse"/></returns>
+        public Task<AssociateIPv6AddressResponse> AssociateIPv6Address(AssociateIPv6AddressRequest req)
+        {
+            return InternalRequestAsync<AssociateIPv6AddressResponse>(req, "AssociateIPv6Address");
+        }
+
+        /// <summary>
+        /// 本接口（AssociateIPv6Address）用于将弹性公网IPv6（简称EIPv6）实例绑定到 CVM 或弹性网卡配置的内网 IPv6 地址上。
+        /// 
+        /// - 将 EIPv6 绑定到 CVM 上，其本质是将 EIPv6 绑定到 CVM 弹性网卡所配置的内网 IPv6 地址上。
+        /// - 将 EIPv6 绑定到指定网卡的内网 IPv6 时，需确保该内网 IPv6 地址为未绑定状态，才能执行绑定操作。
+        /// </summary>
+        /// <param name="req"><see cref="AssociateIPv6AddressRequest"/></param>
+        /// <returns><see cref="AssociateIPv6AddressResponse"/></returns>
+        public AssociateIPv6AddressResponse AssociateIPv6AddressSync(AssociateIPv6AddressRequest req)
+        {
+            return InternalRequestAsync<AssociateIPv6AddressResponse>(req, "AssociateIPv6Address")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3981,6 +4037,33 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeIPv6Addresses）用于查询一个或多个弹性公网 IPv6（简称 EIPv6）实例的详细信息。
+        /// 
+        /// - 支持查询您在指定地域的弹性公网 IPv6 和传统弹性公网 IPv6 实例信息
+        /// - 如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的 EIPv6。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIPv6AddressesRequest"/></param>
+        /// <returns><see cref="DescribeIPv6AddressesResponse"/></returns>
+        public Task<DescribeIPv6AddressesResponse> DescribeIPv6Addresses(DescribeIPv6AddressesRequest req)
+        {
+            return InternalRequestAsync<DescribeIPv6AddressesResponse>(req, "DescribeIPv6Addresses");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeIPv6Addresses）用于查询一个或多个弹性公网 IPv6（简称 EIPv6）实例的详细信息。
+        /// 
+        /// - 支持查询您在指定地域的弹性公网 IPv6 和传统弹性公网 IPv6 实例信息
+        /// - 如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的 EIPv6。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIPv6AddressesRequest"/></param>
+        /// <returns><see cref="DescribeIPv6AddressesResponse"/></returns>
+        public DescribeIPv6AddressesResponse DescribeIPv6AddressesSync(DescribeIPv6AddressesRequest req)
+        {
+            return InternalRequestAsync<DescribeIPv6AddressesResponse>(req, "DescribeIPv6Addresses")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeIp6Addresses）用于查询一个或多个传统弹性公网 IPv6 实例的详细信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeIp6AddressesRequest"/></param>
@@ -5769,6 +5852,33 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（DisassociateIPv6Address）用于解绑弹性公网 IPv6（简称EIPv6）实例。
+        /// 
+        /// - 支持对 CVM、弹性网卡绑定的 EIPv6 实例进行解绑操作。
+        /// - 只有状态为 BIND 和 BIND_ENI 的 EIPv6 实例才能进行解绑操作。
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateIPv6AddressRequest"/></param>
+        /// <returns><see cref="DisassociateIPv6AddressResponse"/></returns>
+        public Task<DisassociateIPv6AddressResponse> DisassociateIPv6Address(DisassociateIPv6AddressRequest req)
+        {
+            return InternalRequestAsync<DisassociateIPv6AddressResponse>(req, "DisassociateIPv6Address");
+        }
+
+        /// <summary>
+        /// 本接口（DisassociateIPv6Address）用于解绑弹性公网 IPv6（简称EIPv6）实例。
+        /// 
+        /// - 支持对 CVM、弹性网卡绑定的 EIPv6 实例进行解绑操作。
+        /// - 只有状态为 BIND 和 BIND_ENI 的 EIPv6 实例才能进行解绑操作。
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateIPv6AddressRequest"/></param>
+        /// <returns><see cref="DisassociateIPv6AddressResponse"/></returns>
+        public DisassociateIPv6AddressResponse DisassociateIPv6AddressSync(DisassociateIPv6AddressRequest req)
+        {
+            return InternalRequestAsync<DisassociateIPv6AddressResponse>(req, "DisassociateIPv6Address")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DisassociateNatGatewayAddress）用于NAT网关解绑弹性IP。
         /// </summary>
         /// <param name="req"><see cref="DisassociateNatGatewayAddressRequest"/></param>
@@ -6840,7 +6950,53 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（ModifyIp6AddressesBandwidt）用于调整传统弹性公网 IPv6 实例的带宽上限。
+        /// 本接口（ModifyIPv6AddressesAttributes）用于修改弹性公网 IPv6（简称EIPv6）实例名称。
+        /// 
+        /// - 支持对弹性公网 IPv6 和传统弹性公网 IPv6 实例名称进行修改。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIPv6AddressesAttributesRequest"/></param>
+        /// <returns><see cref="ModifyIPv6AddressesAttributesResponse"/></returns>
+        public Task<ModifyIPv6AddressesAttributesResponse> ModifyIPv6AddressesAttributes(ModifyIPv6AddressesAttributesRequest req)
+        {
+            return InternalRequestAsync<ModifyIPv6AddressesAttributesResponse>(req, "ModifyIPv6AddressesAttributes");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyIPv6AddressesAttributes）用于修改弹性公网 IPv6（简称EIPv6）实例名称。
+        /// 
+        /// - 支持对弹性公网 IPv6 和传统弹性公网 IPv6 实例名称进行修改。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIPv6AddressesAttributesRequest"/></param>
+        /// <returns><see cref="ModifyIPv6AddressesAttributesResponse"/></returns>
+        public ModifyIPv6AddressesAttributesResponse ModifyIPv6AddressesAttributesSync(ModifyIPv6AddressesAttributesRequest req)
+        {
+            return InternalRequestAsync<ModifyIPv6AddressesAttributesResponse>(req, "ModifyIPv6AddressesAttributes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyIPv6AddressesBandwidth）用于调整弹性公网 IPv6（简称EIPv6）实例的带宽上限。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIPv6AddressesBandwidthRequest"/></param>
+        /// <returns><see cref="ModifyIPv6AddressesBandwidthResponse"/></returns>
+        public Task<ModifyIPv6AddressesBandwidthResponse> ModifyIPv6AddressesBandwidth(ModifyIPv6AddressesBandwidthRequest req)
+        {
+            return InternalRequestAsync<ModifyIPv6AddressesBandwidthResponse>(req, "ModifyIPv6AddressesBandwidth");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyIPv6AddressesBandwidth）用于调整弹性公网 IPv6（简称EIPv6）实例的带宽上限。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIPv6AddressesBandwidthRequest"/></param>
+        /// <returns><see cref="ModifyIPv6AddressesBandwidthResponse"/></returns>
+        public ModifyIPv6AddressesBandwidthResponse ModifyIPv6AddressesBandwidthSync(ModifyIPv6AddressesBandwidthRequest req)
+        {
+            return InternalRequestAsync<ModifyIPv6AddressesBandwidthResponse>(req, "ModifyIPv6AddressesBandwidth")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyIp6AddressesBandwidth）用于调整传统弹性公网 IPv6 实例的带宽上限。
         /// 
         /// - 仅支持对传统弹性公网 IPv6 实例的带宽上限进行调整。
         /// - 如需调整弹性公网 IPv6 实例的带宽上限，请使用 ModifyIPv6AddressesBandwidth 接口。
@@ -6853,7 +7009,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（ModifyIp6AddressesBandwidt）用于调整传统弹性公网 IPv6 实例的带宽上限。
+        /// 本接口（ModifyIp6AddressesBandwidth）用于调整传统弹性公网 IPv6 实例的带宽上限。
         /// 
         /// - 仅支持对传统弹性公网 IPv6 实例的带宽上限进行调整。
         /// - 如需调整弹性公网 IPv6 实例的带宽上限，请使用 ModifyIPv6AddressesBandwidth 接口。
@@ -7837,6 +7993,33 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（ReleaseIPv6Addresses）用于释放一个或多个弹性公网IPv6（简称EIPv6）实例。
+        /// 
+        /// - 支持对已申请到的弹性公网 IPv6 实例进行释放操作，如需再次使用，请重新申请。
+        /// - 只有状态为 UNBIND 的 EIPv6 实例才能进行释放操作。
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseIPv6AddressesRequest"/></param>
+        /// <returns><see cref="ReleaseIPv6AddressesResponse"/></returns>
+        public Task<ReleaseIPv6AddressesResponse> ReleaseIPv6Addresses(ReleaseIPv6AddressesRequest req)
+        {
+            return InternalRequestAsync<ReleaseIPv6AddressesResponse>(req, "ReleaseIPv6Addresses");
+        }
+
+        /// <summary>
+        /// 本接口（ReleaseIPv6Addresses）用于释放一个或多个弹性公网IPv6（简称EIPv6）实例。
+        /// 
+        /// - 支持对已申请到的弹性公网 IPv6 实例进行释放操作，如需再次使用，请重新申请。
+        /// - 只有状态为 UNBIND 的 EIPv6 实例才能进行释放操作。
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseIPv6AddressesRequest"/></param>
+        /// <returns><see cref="ReleaseIPv6AddressesResponse"/></returns>
+        public ReleaseIPv6AddressesResponse ReleaseIPv6AddressesSync(ReleaseIPv6AddressesRequest req)
+        {
+            return InternalRequestAsync<ReleaseIPv6AddressesResponse>(req, "ReleaseIPv6Addresses")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ReleaseIp6AddressesBandwidth）用于为传统弹性公网 IPv6 实例关闭 IPv6 公网带宽。
         /// 
         /// - 传统弹性公网 IPv6 实例关闭公网带宽后，仍具备 IPv6 内网通信能力。
@@ -8278,8 +8461,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（ResetRoutes）用于对某个路由表名称和所有路由策略（Route）进行重新设置。<br />
-        /// 注意: 调用本接口是先删除当前路由表中所有路由策略, 再保存新提交的路由策略内容, 会引起网络中断。
+        /// 本接口（ResetRoutes）用于对某个路由表名称和所有路由策略（Route）进行重新设置。<br /> 注意: 调用本接口时先删除当前路由表中所有路由策略, 再保存新提交的路由策略内容, 会引起网络中断。
         /// </summary>
         /// <param name="req"><see cref="ResetRoutesRequest"/></param>
         /// <returns><see cref="ResetRoutesResponse"/></returns>
@@ -8289,8 +8471,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（ResetRoutes）用于对某个路由表名称和所有路由策略（Route）进行重新设置。<br />
-        /// 注意: 调用本接口是先删除当前路由表中所有路由策略, 再保存新提交的路由策略内容, 会引起网络中断。
+        /// 本接口（ResetRoutes）用于对某个路由表名称和所有路由策略（Route）进行重新设置。<br /> 注意: 调用本接口时先删除当前路由表中所有路由策略, 再保存新提交的路由策略内容, 会引起网络中断。
         /// </summary>
         /// <param name="req"><see cref="ResetRoutesRequest"/></param>
         /// <returns><see cref="ResetRoutesResponse"/></returns>

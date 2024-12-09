@@ -31,6 +31,27 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SuperResolution")]
         public SuperResolutionConfig SuperResolution{ get; set; }
 
+        /// <summary>
+        /// 色彩增强配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ColorEnhance")]
+        public ColorEnhanceConfig ColorEnhance{ get; set; }
+
+        /// <summary>
+        /// 细节增强配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SharpEnhance")]
+        public SharpEnhanceConfig SharpEnhance{ get; set; }
+
+        /// <summary>
+        /// 人脸增强配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FaceEnhance")]
+        public FaceEnhanceConfig FaceEnhance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +59,9 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "SuperResolution.", this.SuperResolution);
+            this.SetParamObj(map, prefix + "ColorEnhance.", this.ColorEnhance);
+            this.SetParamObj(map, prefix + "SharpEnhance.", this.SharpEnhance);
+            this.SetParamObj(map, prefix + "FaceEnhance.", this.FaceEnhance);
         }
     }
 }

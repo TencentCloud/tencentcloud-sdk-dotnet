@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 语音翻译片段置信度。取值：0~100。
+        /// 语音翻译识别片段置信度。取值：0~100。
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// 语音翻译片段起始的偏移时间，单位：秒。
+        /// 语音翻译识别片段起始的偏移时间，单位：秒。
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// 语音翻译片段终止的偏移时间，单位：秒。
+        /// 语音翻译识别片段终止的偏移时间，单位：秒。
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }

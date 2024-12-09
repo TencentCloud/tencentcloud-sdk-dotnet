@@ -28,7 +28,7 @@ namespace TencentCloud.Ivld.V20210903
 
        private const string endpoint = "ivld.tencentcloudapi.com";
        private const string version = "2021-09-03";
-       private const string sdkVersion = "SDK_NET_3.0.1137";
+       private const string sdkVersion = "SDK_NET_3.0.1138";
 
         /// <summary>
         /// Client constructor.
@@ -472,7 +472,6 @@ namespace TencentCloud.Ivld.V20210903
 
         /// <summary>
         /// 批量描述自定义人物
-        /// 
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomPersonsRequest"/></param>
         /// <returns><see cref="DescribeCustomPersonsResponse"/></returns>
@@ -483,7 +482,6 @@ namespace TencentCloud.Ivld.V20210903
 
         /// <summary>
         /// 批量描述自定义人物
-        /// 
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomPersonsRequest"/></param>
         /// <returns><see cref="DescribeCustomPersonsResponse"/></returns>

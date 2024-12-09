@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1137";
+       private const string sdkVersion = "SDK_NET_3.0.1138";
 
         /// <summary>
         /// Client constructor.
@@ -94,6 +94,27 @@ namespace TencentCloud.Emr.V20190103
         public AddUsersForUserManagerResponse AddUsersForUserManagerSync(AddUsersForUserManagerRequest req)
         {
             return InternalRequestAsync<AddUsersForUserManagerResponse>(req, "AddUsersForUserManager")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建EMR容器集群实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudInstanceRequest"/></param>
+        /// <returns><see cref="CreateCloudInstanceResponse"/></returns>
+        public Task<CreateCloudInstanceResponse> CreateCloudInstance(CreateCloudInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateCloudInstanceResponse>(req, "CreateCloudInstance");
+        }
+
+        /// <summary>
+        /// 创建EMR容器集群实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudInstanceRequest"/></param>
+        /// <returns><see cref="CreateCloudInstanceResponse"/></returns>
+        public CreateCloudInstanceResponse CreateCloudInstanceSync(CreateCloudInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateCloudInstanceResponse>(req, "CreateCloudInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1047,6 +1068,27 @@ namespace TencentCloud.Emr.V20190103
         public ModifyGlobalConfigResponse ModifyGlobalConfigSync(ModifyGlobalConfigRequest req)
         {
             return InternalRequestAsync<ModifyGlobalConfigResponse>(req, "ModifyGlobalConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 调整Pod数量
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPodNumRequest"/></param>
+        /// <returns><see cref="ModifyPodNumResponse"/></returns>
+        public Task<ModifyPodNumResponse> ModifyPodNum(ModifyPodNumRequest req)
+        {
+            return InternalRequestAsync<ModifyPodNumResponse>(req, "ModifyPodNum");
+        }
+
+        /// <summary>
+        /// 调整Pod数量
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPodNumRequest"/></param>
+        /// <returns><see cref="ModifyPodNumResponse"/></returns>
+        public ModifyPodNumResponse ModifyPodNumSync(ModifyPodNumRequest req)
+        {
+            return InternalRequestAsync<ModifyPodNumResponse>(req, "ModifyPodNum")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
