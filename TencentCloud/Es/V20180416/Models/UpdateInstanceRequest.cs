@@ -302,6 +302,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("EnableScheduleOperationDuration")]
         public EnableScheduleOperationDuration EnableScheduleOperationDuration{ get; set; }
 
+        /// <summary>
+        /// 开启集群保护：OPEN-开启，CLOSE-关闭
+        /// </summary>
+        [JsonProperty("EnableDestroyProtection")]
+        public string EnableDestroyProtection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -351,6 +357,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "ReadWriteMode", this.ReadWriteMode);
             this.SetParamSimple(map, prefix + "EnableScheduleRecoverGroup", this.EnableScheduleRecoverGroup);
             this.SetParamObj(map, prefix + "EnableScheduleOperationDuration.", this.EnableScheduleOperationDuration);
+            this.SetParamSimple(map, prefix + "EnableDestroyProtection", this.EnableDestroyProtection);
         }
     }
 }

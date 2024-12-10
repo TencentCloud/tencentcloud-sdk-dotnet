@@ -28,7 +28,7 @@ namespace TencentCloud.Cam.V20190116
 
        private const string endpoint = "cam.tencentcloudapi.com";
        private const string version = "2019-01-16";
-       private const string sdkVersion = "SDK_NET_3.0.1138";
+       private const string sdkVersion = "SDK_NET_3.0.1139";
 
         /// <summary>
         /// Client constructor.
@@ -1860,6 +1860,27 @@ namespace TencentCloud.Cam.V20190116
         public UpdateRoleDescriptionResponse UpdateRoleDescriptionSync(UpdateRoleDescriptionRequest req)
         {
             return InternalRequestAsync<UpdateRoleDescriptionResponse>(req, "UpdateRoleDescription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改角色会话时长 
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRoleSessionDurationRequest"/></param>
+        /// <returns><see cref="UpdateRoleSessionDurationResponse"/></returns>
+        public Task<UpdateRoleSessionDurationResponse> UpdateRoleSessionDuration(UpdateRoleSessionDurationRequest req)
+        {
+            return InternalRequestAsync<UpdateRoleSessionDurationResponse>(req, "UpdateRoleSessionDuration");
+        }
+
+        /// <summary>
+        /// 修改角色会话时长 
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRoleSessionDurationRequest"/></param>
+        /// <returns><see cref="UpdateRoleSessionDurationResponse"/></returns>
+        public UpdateRoleSessionDurationResponse UpdateRoleSessionDurationSync(UpdateRoleSessionDurationRequest req)
+        {
+            return InternalRequestAsync<UpdateRoleSessionDurationResponse>(req, "UpdateRoleSessionDuration")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

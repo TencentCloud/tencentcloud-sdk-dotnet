@@ -28,7 +28,7 @@ namespace TencentCloud.Mqtt.V20240516
 
        private const string endpoint = "mqtt.tencentcloudapi.com";
        private const string version = "2024-05-16";
-       private const string sdkVersion = "SDK_NET_3.0.1138";
+       private const string sdkVersion = "SDK_NET_3.0.1139";
 
         /// <summary>
         /// Client constructor.
@@ -159,6 +159,27 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
+        /// 失效Ca证书
+        /// </summary>
+        /// <param name="req"><see cref="DeactivateDeviceCertificateRequest"/></param>
+        /// <returns><see cref="DeactivateDeviceCertificateResponse"/></returns>
+        public Task<DeactivateDeviceCertificateResponse> DeactivateDeviceCertificate(DeactivateDeviceCertificateRequest req)
+        {
+            return InternalRequestAsync<DeactivateDeviceCertificateResponse>(req, "DeactivateDeviceCertificate");
+        }
+
+        /// <summary>
+        /// 失效Ca证书
+        /// </summary>
+        /// <param name="req"><see cref="DeactivateDeviceCertificateRequest"/></param>
+        /// <returns><see cref="DeactivateDeviceCertificateResponse"/></returns>
+        public DeactivateDeviceCertificateResponse DeactivateDeviceCertificateSync(DeactivateDeviceCertificateRequest req)
+        {
+            return InternalRequestAsync<DeactivateDeviceCertificateResponse>(req, "DeactivateDeviceCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 根据认证器类型删除一个MQTT认证器
         /// </summary>
         /// <param name="req"><see cref="DeleteAuthenticatorRequest"/></param>
@@ -197,6 +218,27 @@ namespace TencentCloud.Mqtt.V20240516
         public DeleteAuthorizationPolicyResponse DeleteAuthorizationPolicySync(DeleteAuthorizationPolicyRequest req)
         {
             return InternalRequestAsync<DeleteAuthorizationPolicyResponse>(req, "DeleteAuthorizationPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除设备证书
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeviceCertificateRequest"/></param>
+        /// <returns><see cref="DeleteDeviceCertificateResponse"/></returns>
+        public Task<DeleteDeviceCertificateResponse> DeleteDeviceCertificate(DeleteDeviceCertificateRequest req)
+        {
+            return InternalRequestAsync<DeleteDeviceCertificateResponse>(req, "DeleteDeviceCertificate");
+        }
+
+        /// <summary>
+        /// 删除设备证书
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeviceCertificateRequest"/></param>
+        /// <returns><see cref="DeleteDeviceCertificateResponse"/></returns>
+        public DeleteDeviceCertificateResponse DeleteDeviceCertificateSync(DeleteDeviceCertificateRequest req)
+        {
+            return InternalRequestAsync<DeleteDeviceCertificateResponse>(req, "DeleteDeviceCertificate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -260,6 +302,27 @@ namespace TencentCloud.Mqtt.V20240516
         public DescribeAuthorizationPoliciesResponse DescribeAuthorizationPoliciesSync(DescribeAuthorizationPoliciesRequest req)
         {
             return InternalRequestAsync<DescribeAuthorizationPoliciesResponse>(req, "DescribeAuthorizationPolicies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询设备证书详情接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceCertificateRequest"/></param>
+        /// <returns><see cref="DescribeDeviceCertificateResponse"/></returns>
+        public Task<DescribeDeviceCertificateResponse> DescribeDeviceCertificate(DescribeDeviceCertificateRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceCertificateResponse>(req, "DescribeDeviceCertificate");
+        }
+
+        /// <summary>
+        /// 查询设备证书详情接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceCertificateRequest"/></param>
+        /// <returns><see cref="DescribeDeviceCertificateResponse"/></returns>
+        public DescribeDeviceCertificateResponse DescribeDeviceCertificateSync(DescribeDeviceCertificateRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceCertificateResponse>(req, "DescribeDeviceCertificate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -486,6 +549,27 @@ namespace TencentCloud.Mqtt.V20240516
         public RegisterDeviceCertificateResponse RegisterDeviceCertificateSync(RegisterDeviceCertificateRequest req)
         {
             return InternalRequestAsync<RegisterDeviceCertificateResponse>(req, "RegisterDeviceCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 吊销设备证书
+        /// </summary>
+        /// <param name="req"><see cref="RevokedDeviceCertificateRequest"/></param>
+        /// <returns><see cref="RevokedDeviceCertificateResponse"/></returns>
+        public Task<RevokedDeviceCertificateResponse> RevokedDeviceCertificate(RevokedDeviceCertificateRequest req)
+        {
+            return InternalRequestAsync<RevokedDeviceCertificateResponse>(req, "RevokedDeviceCertificate");
+        }
+
+        /// <summary>
+        /// 吊销设备证书
+        /// </summary>
+        /// <param name="req"><see cref="RevokedDeviceCertificateRequest"/></param>
+        /// <returns><see cref="RevokedDeviceCertificateResponse"/></returns>
+        public RevokedDeviceCertificateResponse RevokedDeviceCertificateSync(RevokedDeviceCertificateRequest req)
+        {
+            return InternalRequestAsync<RevokedDeviceCertificateResponse>(req, "RevokedDeviceCertificate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

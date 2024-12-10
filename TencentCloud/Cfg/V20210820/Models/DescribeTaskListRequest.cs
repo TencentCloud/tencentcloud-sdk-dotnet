@@ -108,6 +108,12 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("TaskStatusList")]
         public ulong?[] TaskStatusList{ get; set; }
 
+        /// <summary>
+        /// 架构ID
+        /// </summary>
+        [JsonProperty("ArchId")]
+        public string ArchId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamArraySimple(map, prefix + "ApplicationId.", this.ApplicationId);
             this.SetParamArraySimple(map, prefix + "ApplicationName.", this.ApplicationName);
             this.SetParamArraySimple(map, prefix + "TaskStatusList.", this.TaskStatusList);
+            this.SetParamSimple(map, prefix + "ArchId", this.ArchId);
         }
     }
 }

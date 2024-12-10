@@ -67,6 +67,12 @@ namespace TencentCloud.Es.V20180416.Models
         public float? Progress{ get; set; }
 
         /// <summary>
+        /// 回滚标记， 0未回滚 ，1回滚中，2已回滚
+        /// </summary>
+        [JsonProperty("RollbackTag")]
+        public long? RollbackTag{ get; set; }
+
+        /// <summary>
         /// 操作者Uin
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamArrayObj(map, prefix + "Tasks.", this.Tasks);
             this.SetParamSimple(map, prefix + "Progress", this.Progress);
+            this.SetParamSimple(map, prefix + "RollbackTag", this.RollbackTag);
             this.SetParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
         }
     }

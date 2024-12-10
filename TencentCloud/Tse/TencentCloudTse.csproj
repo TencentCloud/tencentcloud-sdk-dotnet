@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C9840D4F-C22D-3561-A83C-36F13531DB7A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1138</VersionPrefix>
+    <VersionPrefix>3.0.1139</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -121,6 +121,8 @@
     <Compile Include="V20201207\Models\CreateGovernanceServicesResponse.cs" />
     <Compile Include="V20201207\Models\CreateNativeGatewayServerGroupRequest.cs" />
     <Compile Include="V20201207\Models\CreateNativeGatewayServerGroupResponse.cs" />
+    <Compile Include="V20201207\Models\CreateNativeGatewayServiceSourceRequest.cs" />
+    <Compile Include="V20201207\Models\CreateNativeGatewayServiceSourceResponse.cs" />
     <Compile Include="V20201207\Models\CreateOrUpdateConfigFileAndReleaseRequest.cs" />
     <Compile Include="V20201207\Models\CreateOrUpdateConfigFileAndReleaseResponse.cs" />
     <Compile Include="V20201207\Models\CreatePublicNetworkResult.cs" />
@@ -166,6 +168,8 @@
     <Compile Include="V20201207\Models\DeleteNativeGatewayServerGroupRequest.cs" />
     <Compile Include="V20201207\Models\DeleteNativeGatewayServerGroupResponse.cs" />
     <Compile Include="V20201207\Models\DeleteNativeGatewayServerGroupResult.cs" />
+    <Compile Include="V20201207\Models\DeleteNativeGatewayServiceSourceRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteNativeGatewayServiceSourceResponse.cs" />
     <Compile Include="V20201207\Models\DeleteWafDomainsRequest.cs" />
     <Compile Include="V20201207\Models\DeleteWafDomainsResponse.cs" />
     <Compile Include="V20201207\Models\DescribeAllConfigFileTemplatesRequest.cs" />
@@ -241,6 +245,8 @@
     <Compile Include="V20201207\Models\DescribeNacosServerInterfacesResponse.cs" />
     <Compile Include="V20201207\Models\DescribeNativeGatewayServerGroupsRequest.cs" />
     <Compile Include="V20201207\Models\DescribeNativeGatewayServerGroupsResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeNativeGatewayServiceSourcesRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeNativeGatewayServiceSourcesResponse.cs" />
     <Compile Include="V20201207\Models\DescribeOneCloudNativeAPIGatewayServiceRequest.cs" />
     <Compile Include="V20201207\Models\DescribeOneCloudNativeAPIGatewayServiceResponse.cs" />
     <Compile Include="V20201207\Models\DescribePublicAddressConfigRequest.cs" />
@@ -342,6 +348,8 @@
     <Compile Include="V20201207\Models\ModifyGovernanceServicesResponse.cs" />
     <Compile Include="V20201207\Models\ModifyNativeGatewayServerGroupRequest.cs" />
     <Compile Include="V20201207\Models\ModifyNativeGatewayServerGroupResponse.cs" />
+    <Compile Include="V20201207\Models\ModifyNativeGatewayServiceSourceRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyNativeGatewayServiceSourceResponse.cs" />
     <Compile Include="V20201207\Models\ModifyNetworkAccessStrategyRequest.cs" />
     <Compile Include="V20201207\Models\ModifyNetworkAccessStrategyResponse.cs" />
     <Compile Include="V20201207\Models\ModifyNetworkBasicInfoRequest.cs" />
@@ -352,6 +360,7 @@
     <Compile Include="V20201207\Models\NacosServerInterface.cs" />
     <Compile Include="V20201207\Models\NativeGatewayServerGroup.cs" />
     <Compile Include="V20201207\Models\NativeGatewayServerGroups.cs" />
+    <Compile Include="V20201207\Models\NativeGatewayServiceSourceItem.cs" />
     <Compile Include="V20201207\Models\NetworkAccessControl.cs" />
     <Compile Include="V20201207\Models\OpenWafProtectionRequest.cs" />
     <Compile Include="V20201207\Models\OpenWafProtectionResponse.cs" />
@@ -372,6 +381,9 @@
     <Compile Include="V20201207\Models\SREInstance.cs" />
     <Compile Include="V20201207\Models\ServiceGovernanceInfo.cs" />
     <Compile Include="V20201207\Models\ServiceWafStatus.cs" />
+    <Compile Include="V20201207\Models\SourceInfo.cs" />
+    <Compile Include="V20201207\Models\SourceInstanceAuth.cs" />
+    <Compile Include="V20201207\Models\SourceInstanceVpcInfo.cs" />
     <Compile Include="V20201207\Models\StorageOption.cs" />
     <Compile Include="V20201207\Models\UnbindAutoScalerResourceStrategyFromGroupsRequest.cs" />
     <Compile Include="V20201207\Models\UnbindAutoScalerResourceStrategyFromGroupsResponse.cs" />

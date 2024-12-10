@@ -54,6 +54,34 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("UpdateType")]
         public string UpdateType{ get; set; }
 
+        /// <summary>
+        /// ansj启用词词典列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AnsjMain")]
+        public DictInfo[] AnsjMain{ get; set; }
+
+        /// <summary>
+        /// ansj停用词词典列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AnsjStop")]
+        public DictInfo[] AnsjStop{ get; set; }
+
+        /// <summary>
+        /// ansj歧义词库列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AnsjAmbiguity")]
+        public DictInfo[] AnsjAmbiguity{ get; set; }
+
+        /// <summary>
+        /// ansj同义词词典列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AnsjSynonyms")]
+        public DictInfo[] AnsjSynonyms{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +93,10 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamArrayObj(map, prefix + "QQDict.", this.QQDict);
             this.SetParamArrayObj(map, prefix + "Synonym.", this.Synonym);
             this.SetParamSimple(map, prefix + "UpdateType", this.UpdateType);
+            this.SetParamArrayObj(map, prefix + "AnsjMain.", this.AnsjMain);
+            this.SetParamArrayObj(map, prefix + "AnsjStop.", this.AnsjStop);
+            this.SetParamArrayObj(map, prefix + "AnsjAmbiguity.", this.AnsjAmbiguity);
+            this.SetParamArrayObj(map, prefix + "AnsjSynonyms.", this.AnsjSynonyms);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tse.V20201207
 
        private const string endpoint = "tse.tencentcloudapi.com";
        private const string version = "2020-12-07";
-       private const string sdkVersion = "SDK_NET_3.0.1138";
+       private const string sdkVersion = "SDK_NET_3.0.1139";
 
         /// <summary>
         /// Client constructor.
@@ -449,6 +449,27 @@ namespace TencentCloud.Tse.V20201207
         public CreateNativeGatewayServerGroupResponse CreateNativeGatewayServerGroupSync(CreateNativeGatewayServerGroupRequest req)
         {
             return InternalRequestAsync<CreateNativeGatewayServerGroupResponse>(req, "CreateNativeGatewayServerGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建网关服务来源
+        /// </summary>
+        /// <param name="req"><see cref="CreateNativeGatewayServiceSourceRequest"/></param>
+        /// <returns><see cref="CreateNativeGatewayServiceSourceResponse"/></returns>
+        public Task<CreateNativeGatewayServiceSourceResponse> CreateNativeGatewayServiceSource(CreateNativeGatewayServiceSourceRequest req)
+        {
+            return InternalRequestAsync<CreateNativeGatewayServiceSourceResponse>(req, "CreateNativeGatewayServiceSource");
+        }
+
+        /// <summary>
+        /// 创建网关服务来源
+        /// </summary>
+        /// <param name="req"><see cref="CreateNativeGatewayServiceSourceRequest"/></param>
+        /// <returns><see cref="CreateNativeGatewayServiceSourceResponse"/></returns>
+        public CreateNativeGatewayServiceSourceResponse CreateNativeGatewayServiceSourceSync(CreateNativeGatewayServiceSourceRequest req)
+        {
+            return InternalRequestAsync<CreateNativeGatewayServiceSourceResponse>(req, "CreateNativeGatewayServiceSource")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -890,6 +911,27 @@ namespace TencentCloud.Tse.V20201207
         public DeleteNativeGatewayServerGroupResponse DeleteNativeGatewayServerGroupSync(DeleteNativeGatewayServerGroupRequest req)
         {
             return InternalRequestAsync<DeleteNativeGatewayServerGroupResponse>(req, "DeleteNativeGatewayServerGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除网关服务来源实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNativeGatewayServiceSourceRequest"/></param>
+        /// <returns><see cref="DeleteNativeGatewayServiceSourceResponse"/></returns>
+        public Task<DeleteNativeGatewayServiceSourceResponse> DeleteNativeGatewayServiceSource(DeleteNativeGatewayServiceSourceRequest req)
+        {
+            return InternalRequestAsync<DeleteNativeGatewayServiceSourceResponse>(req, "DeleteNativeGatewayServiceSource");
+        }
+
+        /// <summary>
+        /// 删除网关服务来源实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNativeGatewayServiceSourceRequest"/></param>
+        /// <returns><see cref="DeleteNativeGatewayServiceSourceResponse"/></returns>
+        public DeleteNativeGatewayServiceSourceResponse DeleteNativeGatewayServiceSourceSync(DeleteNativeGatewayServiceSourceRequest req)
+        {
+            return InternalRequestAsync<DeleteNativeGatewayServiceSourceResponse>(req, "DeleteNativeGatewayServiceSource")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1629,6 +1671,27 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 查询网关服务来源实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNativeGatewayServiceSourcesRequest"/></param>
+        /// <returns><see cref="DescribeNativeGatewayServiceSourcesResponse"/></returns>
+        public Task<DescribeNativeGatewayServiceSourcesResponse> DescribeNativeGatewayServiceSources(DescribeNativeGatewayServiceSourcesRequest req)
+        {
+            return InternalRequestAsync<DescribeNativeGatewayServiceSourcesResponse>(req, "DescribeNativeGatewayServiceSources");
+        }
+
+        /// <summary>
+        /// 查询网关服务来源实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNativeGatewayServiceSourcesRequest"/></param>
+        /// <returns><see cref="DescribeNativeGatewayServiceSourcesResponse"/></returns>
+        public DescribeNativeGatewayServiceSourcesResponse DescribeNativeGatewayServiceSourcesSync(DescribeNativeGatewayServiceSourcesRequest req)
+        {
+            return InternalRequestAsync<DescribeNativeGatewayServiceSourcesResponse>(req, "DescribeNativeGatewayServiceSources")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取云原生网关服务详情
         /// </summary>
         /// <param name="req"><see cref="DescribeOneCloudNativeAPIGatewayServiceRequest"/></param>
@@ -2171,6 +2234,27 @@ namespace TencentCloud.Tse.V20201207
         public ModifyNativeGatewayServerGroupResponse ModifyNativeGatewayServerGroupSync(ModifyNativeGatewayServerGroupRequest req)
         {
             return InternalRequestAsync<ModifyNativeGatewayServerGroupResponse>(req, "ModifyNativeGatewayServerGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改网关服务来源
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNativeGatewayServiceSourceRequest"/></param>
+        /// <returns><see cref="ModifyNativeGatewayServiceSourceResponse"/></returns>
+        public Task<ModifyNativeGatewayServiceSourceResponse> ModifyNativeGatewayServiceSource(ModifyNativeGatewayServiceSourceRequest req)
+        {
+            return InternalRequestAsync<ModifyNativeGatewayServiceSourceResponse>(req, "ModifyNativeGatewayServiceSource");
+        }
+
+        /// <summary>
+        /// 修改网关服务来源
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNativeGatewayServiceSourceRequest"/></param>
+        /// <returns><see cref="ModifyNativeGatewayServiceSourceResponse"/></returns>
+        public ModifyNativeGatewayServiceSourceResponse ModifyNativeGatewayServiceSourceSync(ModifyNativeGatewayServiceSourceRequest req)
+        {
+            return InternalRequestAsync<ModifyNativeGatewayServiceSourceResponse>(req, "ModifyNativeGatewayServiceSource")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

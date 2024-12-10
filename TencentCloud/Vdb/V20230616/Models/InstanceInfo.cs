@@ -113,6 +113,7 @@ namespace TencentCloud.Vdb.V20230616.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthScore")]
+        [System.Obsolete]
         public float? HealthScore{ get; set; }
 
         /// <summary>
@@ -120,6 +121,7 @@ namespace TencentCloud.Vdb.V20230616.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Warning")]
+        [System.Obsolete]
         public long? Warning{ get; set; }
 
         /// <summary>
@@ -127,6 +129,7 @@ namespace TencentCloud.Vdb.V20230616.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Project")]
+        [System.Obsolete]
         public string Project{ get; set; }
 
         /// <summary>

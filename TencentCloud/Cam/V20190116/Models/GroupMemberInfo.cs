@@ -90,6 +90,13 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("IsReceiverOwner")]
         public ulong? IsReceiverOwner{ get; set; }
 
+        /// <summary>
+        /// 昵称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +114,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "UserType", this.UserType);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "IsReceiverOwner", this.IsReceiverOwner);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
         }
     }
 }

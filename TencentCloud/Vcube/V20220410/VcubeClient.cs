@@ -28,7 +28,7 @@ namespace TencentCloud.Vcube.V20220410
 
        private const string endpoint = "vcube.tencentcloudapi.com";
        private const string version = "2022-04-10";
-       private const string sdkVersion = "SDK_NET_3.0.1138";
+       private const string sdkVersion = "SDK_NET_3.0.1139";
 
         /// <summary>
         /// Client constructor.

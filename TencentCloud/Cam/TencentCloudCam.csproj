@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{35B03DD2-7919-36B9-9AF9-8C160C55C632}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1138</VersionPrefix>
+    <VersionPrefix>3.0.1139</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -249,6 +249,8 @@
     <Compile Include="V20190116\Models\UpdateRoleConsoleLoginResponse.cs" />
     <Compile Include="V20190116\Models\UpdateRoleDescriptionRequest.cs" />
     <Compile Include="V20190116\Models\UpdateRoleDescriptionResponse.cs" />
+    <Compile Include="V20190116\Models\UpdateRoleSessionDurationRequest.cs" />
+    <Compile Include="V20190116\Models\UpdateRoleSessionDurationResponse.cs" />
     <Compile Include="V20190116\Models\UpdateSAMLProviderRequest.cs" />
     <Compile Include="V20190116\Models\UpdateSAMLProviderResponse.cs" />
     <Compile Include="V20190116\Models\UpdateUserOIDCConfigRequest.cs" />

@@ -97,6 +97,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Birthday{ get; set; }
 
         /// <summary>
+        /// 马来身份证背面号码
+        /// </summary>
+        [JsonProperty("MyKadNumber")]
+        public string MyKadNumber{ get; set; }
+
+        /// <summary>
         /// 告警码
         /// -9101 证件边框不完整告警
         /// -9102 证件复印件告警
@@ -130,6 +136,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Birthday", this.Birthday);
+            this.SetParamSimple(map, prefix + "MyKadNumber", this.MyKadNumber);
             this.SetParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

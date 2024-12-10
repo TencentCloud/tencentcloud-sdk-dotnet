@@ -41,6 +41,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Subtitle")]
         public MediaInputInfo Subtitle{ get; set; }
 
+        /// <summary>
+        /// 字幕名称	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubtitleName")]
+        public string SubtitleName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -49,6 +56,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "Subtitle.", this.Subtitle);
+            this.SetParamSimple(map, prefix + "SubtitleName", this.SubtitleName);
         }
     }
 }
