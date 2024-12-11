@@ -26,7 +26,7 @@ namespace TencentCloud.Tione.V20211111.Models
         
         /// <summary>
         /// 对话的目标模型ID。
-        /// 自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-xxyyzz。
+        /// 自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-q7pfr29p。
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }
@@ -38,7 +38,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public Message[] Messages{ get; set; }
 
         /// <summary>
-        /// 仅当模型为自行部署的开源大模型时生效。采样随机值，默认值为1.0，取值范围[0,2]。较高的值(如0.8)将使输出更加随机，而较低的值(如0.2)将使输出更加确定。建议仅修改此参数或TopP，但不建议两者都修改。
+        /// 仅当模型为自行部署的开源大模型时生效。采样随机值，默认值为0.7，取值范围[0,2]。较高的值(如0.8)将使输出更加随机，而较低的值(如0.2)将使输出更加确定。建议仅修改此参数或TopP，但不建议两者都修改。
         /// </summary>
         [JsonProperty("Temperature")]
         public float? Temperature{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public float? TopP{ get; set; }
 
         /// <summary>
-        /// 仅当模型为自行部署的开源大模型时生效。最大生成的token数目。默认为无限大。
+        /// 仅当模型为自行部署的开源大模型时生效。默认 512，模型可生成内容的最长 token 数量，最大不能超过模型支持的上下文长度。
         /// </summary>
         [JsonProperty("MaxTokens")]
         public long? MaxTokens{ get; set; }

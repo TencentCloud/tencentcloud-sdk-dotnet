@@ -89,6 +89,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("IsPrivateModel")]
         public bool? IsPrivateModel{ get; set; }
 
+        /// <summary>
+        /// 模型的类别 多模态MultiModal, 文本大模型 LLM
+        /// </summary>
+        [JsonProperty("ModelCategory")]
+        public string ModelCategory{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -105,6 +111,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "ModelType", this.ModelType);
             this.SetParamSimple(map, prefix + "ModelFormat", this.ModelFormat);
             this.SetParamSimple(map, prefix + "IsPrivateModel", this.IsPrivateModel);
+            this.SetParamSimple(map, prefix + "ModelCategory", this.ModelCategory);
         }
     }
 }

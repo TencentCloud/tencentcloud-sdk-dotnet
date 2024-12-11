@@ -28,7 +28,7 @@ namespace TencentCloud.Aiart.V20221229
 
        private const string endpoint = "aiart.tencentcloudapi.com";
        private const string version = "2022-12-29";
-       private const string sdkVersion = "SDK_NET_3.0.1139";
+       private const string sdkVersion = "SDK_NET_3.0.1140";
 
         /// <summary>
         /// Client constructor.
@@ -102,7 +102,7 @@ namespace TencentCloud.Aiart.V20221229
         }
 
         /// <summary>
-        /// 消除补全接口通过图像 mask 指定需要消除的人、物、文字等区域，在选定区域对图像内容进行消除与重绘补全。
+        /// 局部消除接口通过图像 mask 指定需要消除的人、物、文字等区域，在选定区域对图像内容进行消除与重绘补全。
         /// 默认提供1个并发，代表最多能同时处理1个已提交的任务。
         /// </summary>
         /// <param name="req"><see cref="ImageInpaintingRemovalRequest"/></param>
@@ -113,7 +113,7 @@ namespace TencentCloud.Aiart.V20221229
         }
 
         /// <summary>
-        /// 消除补全接口通过图像 mask 指定需要消除的人、物、文字等区域，在选定区域对图像内容进行消除与重绘补全。
+        /// 局部消除接口通过图像 mask 指定需要消除的人、物、文字等区域，在选定区域对图像内容进行消除与重绘补全。
         /// 默认提供1个并发，代表最多能同时处理1个已提交的任务。
         /// </summary>
         /// <param name="req"><see cref="ImageInpaintingRemovalRequest"/></param>

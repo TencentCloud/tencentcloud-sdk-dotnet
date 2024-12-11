@@ -21,29 +21,20 @@ namespace TencentCloud.Tione.V20211111.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ImageSecret : AbstractModel
+    public class SpecUnit : AbstractModel
     {
         
         /// <summary>
-        /// 用于加密密码的KMS公钥ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 计费项名称
         /// </summary>
-        [JsonProperty("KeyId")]
-        public string KeyId{ get; set; }
+        [JsonProperty("SpecName")]
+        public string SpecName{ get; set; }
 
         /// <summary>
-        /// 用户名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 计费项数量,建议不超过100万
         /// </summary>
-        [JsonProperty("Username")]
-        public string Username{ get; set; }
-
-        /// <summary>
-        /// 密码,base64编码； 当keyId不为空时，密码是加密后的
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Password")]
-        public string Password{ get; set; }
+        [JsonProperty("SpecCount")]
+        public ulong? SpecCount{ get; set; }
 
 
         /// <summary>
@@ -51,9 +42,8 @@ namespace TencentCloud.Tione.V20211111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
-            this.SetParamSimple(map, prefix + "Username", this.Username);
-            this.SetParamSimple(map, prefix + "Password", this.Password);
+            this.SetParamSimple(map, prefix + "SpecName", this.SpecName);
+            this.SetParamSimple(map, prefix + "SpecCount", this.SpecCount);
         }
     }
 }

@@ -31,6 +31,14 @@ namespace TencentCloud.Tione.V20211111.Models
         public string MappingPath{ get; set; }
 
         /// <summary>
+        /// 存储用途
+        /// 可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DataSourceUsage")]
+        public string DataSourceUsage{ get; set; }
+
+        /// <summary>
         /// DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -100,6 +108,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "MappingPath", this.MappingPath);
+            this.SetParamSimple(map, prefix + "DataSourceUsage", this.DataSourceUsage);
             this.SetParamSimple(map, prefix + "DataSourceType", this.DataSourceType);
             this.SetParamObj(map, prefix + "DataSetSource.", this.DataSetSource);
             this.SetParamObj(map, prefix + "COSSource.", this.COSSource);

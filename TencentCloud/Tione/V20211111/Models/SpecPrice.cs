@@ -21,26 +21,32 @@ namespace TencentCloud.Tione.V20211111.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SendChatMessageResponse : AbstractModel
+    public class SpecPrice : AbstractModel
     {
         
         /// <summary>
-        /// 答案
+        /// 计费项名称
         /// </summary>
-        [JsonProperty("Answer")]
-        public string Answer{ get; set; }
+        [JsonProperty("SpecName")]
+        public string SpecName{ get; set; }
 
         /// <summary>
-        /// 会话id,返回请求的会话id
+        /// 原价，单位：分。最大值42亿，超过则返回0
         /// </summary>
-        [JsonProperty("SessionId")]
-        public string SessionId{ get; set; }
+        [JsonProperty("TotalCost")]
+        public ulong? TotalCost{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 优惠后的价格，单位：分
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("RealTotalCost")]
+        public ulong? RealTotalCost{ get; set; }
+
+        /// <summary>
+        /// 计费项数量
+        /// </summary>
+        [JsonProperty("SpecCount")]
+        public ulong? SpecCount{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Tione.V20211111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Answer", this.Answer);
-            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "SpecName", this.SpecName);
+            this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
+            this.SetParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
+            this.SetParamSimple(map, prefix + "SpecCount", this.SpecCount);
         }
     }
 }

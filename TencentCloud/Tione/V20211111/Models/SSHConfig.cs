@@ -52,6 +52,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("LoginCommand")]
         public string LoginCommand{ get; set; }
 
+        /// <summary>
+        /// 登录地址是否改变
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsAddressChanged")]
+        public bool? IsAddressChanged{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "PublicKey", this.PublicKey);
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "LoginCommand", this.LoginCommand);
+            this.SetParamSimple(map, prefix + "IsAddressChanged", this.IsAddressChanged);
         }
     }
 }

@@ -31,7 +31,8 @@ namespace TencentCloud.Vclm.V20240523.Models
         public string JobId{ get; set; }
 
         /// <summary>
-        /// 待确认文本
+        /// 待确认文本。
+        /// 如果文本中含有数字，支持将数字配置为SSML语言
         /// </summary>
         [JsonProperty("TranslateResults")]
         public TranslateResult[] TranslateResults{ get; set; }

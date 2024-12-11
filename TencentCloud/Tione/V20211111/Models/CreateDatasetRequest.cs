@@ -72,6 +72,8 @@ namespace TencentCloud.Tione.V20211111.Models
         /// ANNOTATION_TYPE_DETECTION，目标检测
         /// ANNOTATION_TYPE_SEGMENTATION，图片分割
         /// ANNOTATION_TYPE_TRACKING，目标跟踪
+        /// ANNOTATION_TYPE_OCR，OCR
+        /// ANNOTATION_TYPE_TEXT_CLASSIFICATION，文本分类
         /// </summary>
         [JsonProperty("AnnotationType")]
         public string AnnotationType{ get; set; }
@@ -82,6 +84,10 @@ namespace TencentCloud.Tione.V20211111.Models
         /// ANNOTATION_FORMAT_PASCAL，Pascal Voc
         /// ANNOTATION_FORMAT_COCO，COCO
         /// ANNOTATION_FORMAT_FILE，文件目录结构
+        /// ANNOTATION_FORMAT_TEXT_TI，文本类型TI平台格式
+        /// ANNOTATION_FORMAT_TXT，文本类型TXT格式
+        /// ANNOTATION_FORMAT_CSV，文本类型CSV格式
+        /// ANNOTATION_FORMAT_JSON，文本类型JSON格式
         /// </summary>
         [JsonProperty("AnnotationFormat")]
         public string AnnotationFormat{ get; set; }
@@ -99,10 +105,30 @@ namespace TencentCloud.Tione.V20211111.Models
         public bool? IsSchemaExisted{ get; set; }
 
         /// <summary>
-        /// 导入文件粒度，按行或者按文件
+        /// 导入文件粒度
+        /// TYPE_TEXT_LINE，按行
+        /// TYPE_TEXT_FILE，按文件
         /// </summary>
         [JsonProperty("ContentType")]
         public string ContentType{ get; set; }
+
+        /// <summary>
+        /// 数据集建模一级类别。LLM,CV,STRUCTURE,OTHER
+        /// </summary>
+        [JsonProperty("DatasetScene")]
+        public string DatasetScene{ get; set; }
+
+        /// <summary>
+        /// 数据集标签。
+        /// </summary>
+        [JsonProperty("SceneTags")]
+        public string[] SceneTags{ get; set; }
+
+        /// <summary>
+        /// 数据集CFS配置。仅支持LLM场景
+        /// </summary>
+        [JsonProperty("CFSConfig")]
+        public CFSConfig CFSConfig{ get; set; }
 
 
         /// <summary>
@@ -121,6 +147,9 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamArrayObj(map, prefix + "SchemaInfos.", this.SchemaInfos);
             this.SetParamSimple(map, prefix + "IsSchemaExisted", this.IsSchemaExisted);
             this.SetParamSimple(map, prefix + "ContentType", this.ContentType);
+            this.SetParamSimple(map, prefix + "DatasetScene", this.DatasetScene);
+            this.SetParamArraySimple(map, prefix + "SceneTags.", this.SceneTags);
+            this.SetParamObj(map, prefix + "CFSConfig.", this.CFSConfig);
         }
     }
 }

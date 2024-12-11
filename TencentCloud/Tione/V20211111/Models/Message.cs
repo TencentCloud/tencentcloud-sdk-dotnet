@@ -26,17 +26,21 @@ namespace TencentCloud.Tione.V20211111.Models
         
         /// <summary>
         /// 角色名。支持三个角色：system、user、assistant，其中system仅开头可出现一次，也可忽略。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Role")]
         public string Role{ get; set; }
 
         /// <summary>
         /// 对话输入内容。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
+
+        /// <summary>
+        /// 多模态对话输入内容，Content与MultiModalContents两者只需要填写其中一个即可，当对话中包含多模态对话信息时，则填写本参数
+        /// </summary>
+        [JsonProperty("MultiModalContents")]
+        public MultiModalContent[] MultiModalContents{ get; set; }
 
 
         /// <summary>
@@ -46,6 +50,7 @@ namespace TencentCloud.Tione.V20211111.Models
         {
             this.SetParamSimple(map, prefix + "Role", this.Role);
             this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamArrayObj(map, prefix + "MultiModalContents.", this.MultiModalContents);
         }
     }
 }

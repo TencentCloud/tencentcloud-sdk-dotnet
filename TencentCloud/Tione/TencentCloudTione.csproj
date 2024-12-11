@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1139</VersionPrefix>
+    <VersionPrefix>3.0.1140</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -160,6 +160,10 @@
     <Compile Include="V20211111\Models\DescribeBillingResourceGroupsResponse.cs" />
     <Compile Include="V20211111\Models\DescribeBillingResourceInstanceRunningJobsRequest.cs" />
     <Compile Include="V20211111\Models\DescribeBillingResourceInstanceRunningJobsResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeBillingSpecsPriceRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeBillingSpecsPriceResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeBillingSpecsRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeBillingSpecsResponse.cs" />
     <Compile Include="V20211111\Models\DescribeBuildInImagesRequest.cs" />
     <Compile Include="V20211111\Models\DescribeBuildInImagesResponse.cs" />
     <Compile Include="V20211111\Models\DescribeDatasetsRequest.cs" />
@@ -204,7 +208,7 @@
     <Compile Include="V20211111\Models\HyperParameter.cs" />
     <Compile Include="V20211111\Models\ImageFIlter.cs" />
     <Compile Include="V20211111\Models\ImageInfo.cs" />
-    <Compile Include="V20211111\Models\ImageSecret.cs" />
+    <Compile Include="V20211111\Models\ImageUrl.cs" />
     <Compile Include="V20211111\Models\InferCodeInfo.cs" />
     <Compile Include="V20211111\Models\InferGatewayCallInfo.cs" />
     <Compile Include="V20211111\Models\InferTemplate.cs" />
@@ -223,6 +227,7 @@
     <Compile Include="V20211111\Models\ModelSource.cs" />
     <Compile Include="V20211111\Models\ModifyModelServiceRequest.cs" />
     <Compile Include="V20211111\Models\ModifyModelServiceResponse.cs" />
+    <Compile Include="V20211111\Models\MultiModalContent.cs" />
     <Compile Include="V20211111\Models\NotebookDetail.cs" />
     <Compile Include="V20211111\Models\NotebookSetItem.cs" />
     <Compile Include="V20211111\Models\Option.cs" />
@@ -240,8 +245,6 @@
     <Compile Include="V20211111\Models\SSHConfig.cs" />
     <Compile Include="V20211111\Models\ScheduledAction.cs" />
     <Compile Include="V20211111\Models\SchemaInfo.cs" />
-    <Compile Include="V20211111\Models\SendChatMessageRequest.cs" />
-    <Compile Include="V20211111\Models\SendChatMessageResponse.cs" />
     <Compile Include="V20211111\Models\Service.cs" />
     <Compile Include="V20211111\Models\ServiceCallInfo.cs" />
     <Compile Include="V20211111\Models\ServiceCallInfoV2.cs" />
@@ -250,6 +253,9 @@
     <Compile Include="V20211111\Models\ServiceGroup.cs" />
     <Compile Include="V20211111\Models\ServiceInfo.cs" />
     <Compile Include="V20211111\Models\ServiceLimit.cs" />
+    <Compile Include="V20211111\Models\Spec.cs" />
+    <Compile Include="V20211111\Models\SpecPrice.cs" />
+    <Compile Include="V20211111\Models\SpecUnit.cs" />
     <Compile Include="V20211111\Models\StartCmdInfo.cs" />
     <Compile Include="V20211111\Models\StartNotebookRequest.cs" />
     <Compile Include="V20211111\Models\StartNotebookResponse.cs" />

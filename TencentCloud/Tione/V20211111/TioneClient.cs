@@ -28,7 +28,7 @@ namespace TencentCloud.Tione.V20211111
 
        private const string endpoint = "tione.tencentcloudapi.com";
        private const string version = "2021-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1139";
+       private const string sdkVersion = "SDK_NET_3.0.1140";
 
         /// <summary>
         /// Client constructor.
@@ -365,6 +365,48 @@ namespace TencentCloud.Tione.V20211111
         public DescribeBillingResourceInstanceRunningJobsResponse DescribeBillingResourceInstanceRunningJobsSync(DescribeBillingResourceInstanceRunningJobsRequest req)
         {
             return InternalRequestAsync<DescribeBillingResourceInstanceRunningJobsResponse>(req, "DescribeBillingResourceInstanceRunningJobs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeBillingSpecs) 提供查询计费项列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillingSpecsRequest"/></param>
+        /// <returns><see cref="DescribeBillingSpecsResponse"/></returns>
+        public Task<DescribeBillingSpecsResponse> DescribeBillingSpecs(DescribeBillingSpecsRequest req)
+        {
+            return InternalRequestAsync<DescribeBillingSpecsResponse>(req, "DescribeBillingSpecs");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeBillingSpecs) 提供查询计费项列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillingSpecsRequest"/></param>
+        /// <returns><see cref="DescribeBillingSpecsResponse"/></returns>
+        public DescribeBillingSpecsResponse DescribeBillingSpecsSync(DescribeBillingSpecsRequest req)
+        {
+            return InternalRequestAsync<DescribeBillingSpecsResponse>(req, "DescribeBillingSpecs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeBillingSpecsPrice)用于查询按量计费计费项价格。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillingSpecsPriceRequest"/></param>
+        /// <returns><see cref="DescribeBillingSpecsPriceResponse"/></returns>
+        public Task<DescribeBillingSpecsPriceResponse> DescribeBillingSpecsPrice(DescribeBillingSpecsPriceRequest req)
+        {
+            return InternalRequestAsync<DescribeBillingSpecsPriceResponse>(req, "DescribeBillingSpecsPrice");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeBillingSpecsPrice)用于查询按量计费计费项价格。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillingSpecsPriceRequest"/></param>
+        /// <returns><see cref="DescribeBillingSpecsPriceResponse"/></returns>
+        public DescribeBillingSpecsPriceResponse DescribeBillingSpecsPriceSync(DescribeBillingSpecsPriceRequest req)
+        {
+            return InternalRequestAsync<DescribeBillingSpecsPriceResponse>(req, "DescribeBillingSpecsPrice")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -764,27 +806,6 @@ namespace TencentCloud.Tione.V20211111
         public PushTrainingMetricsResponse PushTrainingMetricsSync(PushTrainingMetricsRequest req)
         {
             return InternalRequestAsync<PushTrainingMetricsResponse>(req, "PushTrainingMetrics")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 这是一个供您体验大模型聊天的接口。
-        /// </summary>
-        /// <param name="req"><see cref="SendChatMessageRequest"/></param>
-        /// <returns><see cref="SendChatMessageResponse"/></returns>
-        public Task<SendChatMessageResponse> SendChatMessage(SendChatMessageRequest req)
-        {
-            return InternalRequestAsync<SendChatMessageResponse>(req, "SendChatMessage");
-        }
-
-        /// <summary>
-        /// 这是一个供您体验大模型聊天的接口。
-        /// </summary>
-        /// <param name="req"><see cref="SendChatMessageRequest"/></param>
-        /// <returns><see cref="SendChatMessageResponse"/></returns>
-        public SendChatMessageResponse SendChatMessageSync(SendChatMessageRequest req)
-        {
-            return InternalRequestAsync<SendChatMessageResponse>(req, "SendChatMessage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

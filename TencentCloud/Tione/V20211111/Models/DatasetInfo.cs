@@ -192,6 +192,55 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("AnnotationKeyStatus")]
         public string AnnotationKeyStatus{ get; set; }
 
+        /// <summary>
+        /// 内容类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ContentType")]
+        public string ContentType{ get; set; }
+
+        /// <summary>
+        /// 数据集建模类别。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatasetScene")]
+        public string DatasetScene{ get; set; }
+
+        /// <summary>
+        /// CFS配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CFSConfig")]
+        public CFSConfig CFSConfig{ get; set; }
+
+        /// <summary>
+        /// 数据集标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SceneTags")]
+        public string[] SceneTags{ get; set; }
+
+        /// <summary>
+        /// 已标注数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NumAnnotated")]
+        public ulong? NumAnnotated{ get; set; }
+
+        /// <summary>
+        /// 标注规范
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AnnotationSpecification")]
+        public string AnnotationSpecification{ get; set; }
+
+        /// <summary>
+        /// 标注Schema是否配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AnnotationSchemaConfigured")]
+        public bool? AnnotationSchemaConfigured{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -222,6 +271,13 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "DatasetScope", this.DatasetScope);
             this.SetParamSimple(map, prefix + "OcrScene", this.OcrScene);
             this.SetParamSimple(map, prefix + "AnnotationKeyStatus", this.AnnotationKeyStatus);
+            this.SetParamSimple(map, prefix + "ContentType", this.ContentType);
+            this.SetParamSimple(map, prefix + "DatasetScene", this.DatasetScene);
+            this.SetParamObj(map, prefix + "CFSConfig.", this.CFSConfig);
+            this.SetParamArraySimple(map, prefix + "SceneTags.", this.SceneTags);
+            this.SetParamSimple(map, prefix + "NumAnnotated", this.NumAnnotated);
+            this.SetParamSimple(map, prefix + "AnnotationSpecification", this.AnnotationSpecification);
+            this.SetParamSimple(map, prefix + "AnnotationSchemaConfigured", this.AnnotationSchemaConfigured);
         }
     }
 }

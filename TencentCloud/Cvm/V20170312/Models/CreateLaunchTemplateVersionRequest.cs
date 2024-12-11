@@ -98,7 +98,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 实例登录设置。通过该参数可以设置实例的登录方式密码、密钥或保持镜像的原始登录设置。默认情况下会随机生成密码，并以站内信方式知会到用户。
+        /// 实例登录设置。通过该参数可以设置实例的登录方式为密钥或保持镜像的原始登录设置。
         /// </summary>
         [JsonProperty("LoginSettings")]
         public LoginSettings LoginSettings{ get; set; }

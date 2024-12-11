@@ -151,6 +151,12 @@ namespace TencentCloud.Tione.V20211111.Models
         public bool? ModelHotUpdateEnable{ get; set; }
 
         /// <summary>
+        /// 服务的规格别名
+        /// </summary>
+        [JsonProperty("InstanceAlias")]
+        public string InstanceAlias{ get; set; }
+
+        /// <summary>
         /// 实例数量调节方式,默认为手动
         /// 支持：自动 - "AUTO", 手动 - "MANUAL"
         /// 注意：此字段可能返回 null，表示取不到有效值。
@@ -274,6 +280,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "HybridBillingPrepaidReplicas", this.HybridBillingPrepaidReplicas);
             this.SetParamSimple(map, prefix + "OldHybridBillingPrepaidReplicas", this.OldHybridBillingPrepaidReplicas);
             this.SetParamSimple(map, prefix + "ModelHotUpdateEnable", this.ModelHotUpdateEnable);
+            this.SetParamSimple(map, prefix + "InstanceAlias", this.InstanceAlias);
             this.SetParamSimple(map, prefix + "ScaleMode", this.ScaleMode);
             this.SetParamArrayObj(map, prefix + "CronScaleJobs.", this.CronScaleJobs);
             this.SetParamSimple(map, prefix + "ScaleStrategy", this.ScaleStrategy);

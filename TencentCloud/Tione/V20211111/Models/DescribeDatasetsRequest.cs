@@ -68,6 +68,18 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。
+        /// </summary>
+        [JsonProperty("CFSChecking")]
+        public bool? CFSChecking{ get; set; }
+
+        /// <summary>
+        /// 是否返回CFS详情。
+        /// </summary>
+        [JsonProperty("CFSDetail")]
+        public bool? CFSDetail{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +93,8 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "CFSChecking", this.CFSChecking);
+            this.SetParamSimple(map, prefix + "CFSDetail", this.CFSDetail);
         }
     }
 }

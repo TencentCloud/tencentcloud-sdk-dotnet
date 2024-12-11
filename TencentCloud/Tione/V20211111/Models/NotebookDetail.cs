@@ -289,6 +289,30 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("VolumeSourceGooseFS")]
         public GooseFS VolumeSourceGooseFS{ get; set; }
 
+        /// <summary>
+        /// 子用户ID
+        /// </summary>
+        [JsonProperty("SubUin")]
+        public string SubUin{ get; set; }
+
+        /// <summary>
+        /// 调度节点ID
+        /// </summary>
+        [JsonProperty("ResourceGroupInstanceId")]
+        public string ResourceGroupInstanceId{ get; set; }
+
+        /// <summary>
+        /// 子用户名称
+        /// </summary>
+        [JsonProperty("SubUinName")]
+        public string SubUinName{ get; set; }
+
+        /// <summary>
+        /// 任务实例创建时间
+        /// </summary>
+        [JsonProperty("JobCreateTime")]
+        public string JobCreateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -334,6 +358,10 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "ImageType", this.ImageType);
             this.SetParamObj(map, prefix + "SSHConfig.", this.SSHConfig);
             this.SetParamObj(map, prefix + "VolumeSourceGooseFS.", this.VolumeSourceGooseFS);
+            this.SetParamSimple(map, prefix + "SubUin", this.SubUin);
+            this.SetParamSimple(map, prefix + "ResourceGroupInstanceId", this.ResourceGroupInstanceId);
+            this.SetParamSimple(map, prefix + "SubUinName", this.SubUinName);
+            this.SetParamSimple(map, prefix + "JobCreateTime", this.JobCreateTime);
         }
     }
 }

@@ -197,6 +197,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ServicePort")]
         public long? ServicePort{ get; set; }
 
+        /// <summary>
+        /// 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+        /// </summary>
+        [JsonProperty("InstancePerReplicas")]
+        public long? InstancePerReplicas{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -228,6 +234,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "ServiceEIP.", this.ServiceEIP);
             this.SetParamSimple(map, prefix + "CommandBase64", this.CommandBase64);
             this.SetParamSimple(map, prefix + "ServicePort", this.ServicePort);
+            this.SetParamSimple(map, prefix + "InstancePerReplicas", this.InstancePerReplicas);
         }
     }
 }

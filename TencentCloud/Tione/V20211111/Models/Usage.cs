@@ -26,21 +26,18 @@ namespace TencentCloud.Tione.V20211111.Models
         
         /// <summary>
         /// 生成的token数目
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CompletionTokens")]
         public long? CompletionTokens{ get; set; }
 
         /// <summary>
         /// 输入的token数目
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PromptTokens")]
         public long? PromptTokens{ get; set; }
 
         /// <summary>
         /// 总共token数目
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalTokens")]
         public long? TotalTokens{ get; set; }

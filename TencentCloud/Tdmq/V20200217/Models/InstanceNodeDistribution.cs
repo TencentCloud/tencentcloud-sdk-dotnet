@@ -48,6 +48,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("NodePermWipeFlag")]
         public bool? NodePermWipeFlag{ get; set; }
 
+        /// <summary>
+        /// 可用区状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZoneStatus")]
+        public string ZoneStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +65,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
             this.SetParamSimple(map, prefix + "NodePermWipeFlag", this.NodePermWipeFlag);
+            this.SetParamSimple(map, prefix + "ZoneStatus", this.ZoneStatus);
         }
     }
 }

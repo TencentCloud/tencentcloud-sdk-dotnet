@@ -49,6 +49,13 @@ namespace TencentCloud.Tione.V20211111.Models
         public string SubUin{ get; set; }
 
         /// <summary>
+        /// 创建者名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubUinName")]
+        public string SubUinName{ get; set; }
+
+        /// <summary>
         /// 地域
         /// </summary>
         [JsonProperty("Region")]
@@ -292,6 +299,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
             this.SetParamSimple(map, prefix + "SubUin", this.SubUin);
+            this.SetParamSimple(map, prefix + "SubUinName", this.SubUinName);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "FrameworkName", this.FrameworkName);
             this.SetParamSimple(map, prefix + "FrameworkVersion", this.FrameworkVersion);

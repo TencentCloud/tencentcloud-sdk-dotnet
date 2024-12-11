@@ -26,14 +26,12 @@ namespace TencentCloud.Tione.V20211111.Models
         
         /// <summary>
         /// 详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NotebookSet")]
         public NotebookSetItem[] NotebookSet{ get; set; }
 
         /// <summary>
         /// 总条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 部署好的服务Id
+        /// 对话的模型服务组ID
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }
@@ -38,14 +38,12 @@ namespace TencentCloud.Tione.V20211111.Models
 
         /// <summary>
         /// 会话Id。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
         /// token统计
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Usage")]
         public Usage Usage{ get; set; }

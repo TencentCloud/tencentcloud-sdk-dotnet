@@ -243,6 +243,27 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ResourceGroupSWType")]
         public string ResourceGroupSWType{ get; set; }
 
+        /// <summary>
+        /// 服务的归档状态  Waiting 等待归档中，Archived 已归档
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ArchiveStatus")]
+        public string ArchiveStatus{ get; set; }
+
+        /// <summary>
+        /// 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeployType")]
+        public string DeployType{ get; set; }
+
+        /// <summary>
+        /// 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstancePerReplicas")]
+        public string InstancePerReplicas{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -279,6 +300,9 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "LatestVersion", this.LatestVersion);
             this.SetParamSimple(map, prefix + "ResourceGroupSWType", this.ResourceGroupSWType);
+            this.SetParamSimple(map, prefix + "ArchiveStatus", this.ArchiveStatus);
+            this.SetParamSimple(map, prefix + "DeployType", this.DeployType);
+            this.SetParamSimple(map, prefix + "InstancePerReplicas", this.InstancePerReplicas);
         }
     }
 }

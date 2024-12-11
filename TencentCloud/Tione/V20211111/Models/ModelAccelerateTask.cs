@@ -227,6 +227,27 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("FrameworkVersion")]
         public string FrameworkVersion{ get; set; }
 
+        /// <summary>
+        /// 模型版本ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ModelVersionId")]
+        public string ModelVersionId{ get; set; }
+
+        /// <summary>
+        /// 资源组id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceGroupId")]
+        public string ResourceGroupId{ get; set; }
+
+        /// <summary>
+        /// 资源组名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceGroupName")]
+        public string ResourceGroupName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -262,6 +283,9 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "ModelSignature", this.ModelSignature);
             this.SetParamSimple(map, prefix + "QATModel", this.QATModel);
             this.SetParamSimple(map, prefix + "FrameworkVersion", this.FrameworkVersion);
+            this.SetParamSimple(map, prefix + "ModelVersionId", this.ModelVersionId);
+            this.SetParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
+            this.SetParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
         }
     }
 }

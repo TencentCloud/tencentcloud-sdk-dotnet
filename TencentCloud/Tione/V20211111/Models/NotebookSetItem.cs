@@ -209,6 +209,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("VolumeSourceGooseFS")]
         public GooseFS VolumeSourceGooseFS{ get; set; }
 
+        /// <summary>
+        /// 子用户名称
+        /// </summary>
+        [JsonProperty("SubUinName")]
+        public string SubUinName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -242,6 +248,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamArraySimple(map, prefix + "UserTypes.", this.UserTypes);
             this.SetParamObj(map, prefix + "SSHConfig.", this.SSHConfig);
             this.SetParamObj(map, prefix + "VolumeSourceGooseFS.", this.VolumeSourceGooseFS);
+            this.SetParamSimple(map, prefix + "SubUinName", this.SubUinName);
         }
     }
 }
