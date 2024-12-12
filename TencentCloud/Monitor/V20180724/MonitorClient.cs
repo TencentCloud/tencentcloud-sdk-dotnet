@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1140";
+       private const string sdkVersion = "SDK_NET_3.0.1141";
 
         /// <summary>
         /// Client constructor.
@@ -176,6 +176,27 @@ namespace TencentCloud.Monitor.V20180724
         public CreateAlarmPolicyResponse CreateAlarmPolicySync(CreateAlarmPolicyRequest req)
         {
             return InternalRequestAsync<CreateAlarmPolicyResponse>(req, "CreateAlarmPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建告警屏蔽规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateAlarmShieldRequest"/></param>
+        /// <returns><see cref="CreateAlarmShieldResponse"/></returns>
+        public Task<CreateAlarmShieldResponse> CreateAlarmShield(CreateAlarmShieldRequest req)
+        {
+            return InternalRequestAsync<CreateAlarmShieldResponse>(req, "CreateAlarmShield");
+        }
+
+        /// <summary>
+        /// 创建告警屏蔽规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateAlarmShieldRequest"/></param>
+        /// <returns><see cref="CreateAlarmShieldResponse"/></returns>
+        public CreateAlarmShieldResponse CreateAlarmShieldSync(CreateAlarmShieldRequest req)
+        {
+            return InternalRequestAsync<CreateAlarmShieldResponse>(req, "CreateAlarmShield")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -61,25 +61,25 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 证书序列号
+        /// Ca证书序列号
         /// </summary>
         [JsonProperty("CaSn")]
         public string CaSn{ get; set; }
 
         /// <summary>
-        /// 设备证书sn
+        /// 设备证书序列号
         /// </summary>
         [JsonProperty("DeviceCertificateSn")]
         public string DeviceCertificateSn{ get; set; }
 
         /// <summary>
-        /// 证书内容
+        /// 设备证书内容
         /// </summary>
         [JsonProperty("DeviceCertificate")]
         public string DeviceCertificate{ get; set; }
 
         /// <summary>
-        /// 设备证书cn
+        /// 设备证书common name
         /// </summary>
         [JsonProperty("DeviceCertificateCn")]
         public string DeviceCertificateCn{ get; set; }

@@ -25,11 +25,9 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 实例类型，
-        /// EXPERIMENT 体验版
+        /// 实例类型
         /// BASIC 基础版
         /// PRO  专业版
-        /// PLATINUM 铂金版
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -107,7 +105,9 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public long? ClientNumLimit{ get; set; }
 
         /// <summary>
-        /// 客户端证书注册方式：JITP，API
+        /// 客户端证书注册方式：
+        /// JITP：自动注册
+        /// API：通过API手动注册
         /// </summary>
         [JsonProperty("DeviceCertificateProvisionType")]
         public string DeviceCertificateProvisionType{ get; set; }
@@ -143,9 +143,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public long? DestroyTime{ get; set; }
 
         /// <summary>
-        ///     TLS,单向认证
-        ///     mTLS,双向认证
-        ///     BYOC;一机一证
+        /// TLS,单向认证    mTLS,双向认证    BYOC;一机一证
         /// </summary>
         [JsonProperty("X509Mode")]
         public string X509Mode{ get; set; }

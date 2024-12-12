@@ -202,6 +202,21 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("FlowDisplayType")]
         public long? FlowDisplayType{ get; set; }
 
+        /// <summary>
+        /// 是否为预览模式，取值如下： <ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li> <li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
+        /// </summary>
+        [JsonProperty("NeedPreview")]
+        public bool? NeedPreview{ get; set; }
+
+        /// <summary>
+        /// 预览模式下产生的预览链接类型 
+        /// <ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
+        /// <li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
+        /// 注: `此参数在NeedPreview 为true时有效`
+        /// </summary>
+        [JsonProperty("PreviewType")]
+        public long? PreviewType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -228,6 +243,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "AutoSignScene", this.AutoSignScene);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "FlowDisplayType", this.FlowDisplayType);
+            this.SetParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
+            this.SetParamSimple(map, prefix + "PreviewType", this.PreviewType);
         }
     }
 }

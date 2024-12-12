@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1140</VersionPrefix>
+    <VersionPrefix>3.0.1141</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -80,6 +80,8 @@
     <Compile Include="V20180724\Models\CreateAlarmNoticeResponse.cs" />
     <Compile Include="V20180724\Models\CreateAlarmPolicyRequest.cs" />
     <Compile Include="V20180724\Models\CreateAlarmPolicyResponse.cs" />
+    <Compile Include="V20180724\Models\CreateAlarmShieldRequest.cs" />
+    <Compile Include="V20180724\Models\CreateAlarmShieldResponse.cs" />
     <Compile Include="V20180724\Models\CreateAlertRuleRequest.cs" />
     <Compile Include="V20180724\Models\CreateAlertRuleResponse.cs" />
     <Compile Include="V20180724\Models\CreateExporterIntegrationRequest.cs" />

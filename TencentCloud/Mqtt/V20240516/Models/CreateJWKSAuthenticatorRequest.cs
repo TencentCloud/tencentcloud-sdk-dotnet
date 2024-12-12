@@ -61,7 +61,9 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 设备连接时传递jwt的key；username-使用用户名字段传递；password-使用密码字段传递
+        /// 设备连接时传递jwt的key；
+        /// username-使用用户名字段传递；
+        /// password-使用密码字段传递
         /// </summary>
         [JsonProperty("From")]
         public string From{ get; set; }

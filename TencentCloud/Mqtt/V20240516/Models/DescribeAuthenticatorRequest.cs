@@ -31,7 +31,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 认证器类型
+        /// 认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 HTTP:HTTP认证器
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
