@@ -32,6 +32,9 @@ namespace TencentCloud.Lighthouse.V20200324.Models
 
         /// <summary>
         /// 防火墙模板应用状态。
+        /// 
+        /// - SUCCESS：成功
+        /// - FAILED：失败
         /// </summary>
         [JsonProperty("ApplyState")]
         public string ApplyState{ get; set; }

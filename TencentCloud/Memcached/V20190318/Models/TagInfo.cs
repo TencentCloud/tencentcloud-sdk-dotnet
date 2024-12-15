@@ -26,14 +26,12 @@ namespace TencentCloud.Memcached.V20190318.Models
         
         /// <summary>
         /// 标签键
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagKey")]
         public string TagKey{ get; set; }
 
         /// <summary>
         /// 标签值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagValue")]
         public string TagValue{ get; set; }

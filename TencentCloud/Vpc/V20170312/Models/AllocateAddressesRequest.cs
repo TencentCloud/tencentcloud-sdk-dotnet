@@ -123,6 +123,16 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string DedicatedClusterId{ get; set; }
 
         /// <summary>
+        /// 是否使用独占资源池，默认值：True
+        /// - True：表示使用独占资源池
+        /// - False：表示使用共享资源池
+        /// 
+        /// 说明：如需使用独占资源池，请 提交工单(https://console.cloud.tencent.com/workorder/category) 咨询，具体费用请咨询商务经理。
+        /// </summary>
+        [JsonProperty("IsDedicatedAddressPool")]
+        public bool? IsDedicatedAddressPool{ get; set; }
+
+        /// <summary>
         /// 网络出口，当前仅支持精品BGP、静态单线，这2种IP 地址类型的指定出口传入，默认值：center_egress1，其它可选值：center_egress2、center_egress3
         /// </summary>
         [JsonProperty("Egress")]
@@ -159,6 +169,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
             this.SetParamSimple(map, prefix + "AddressName", this.AddressName);
             this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
+            this.SetParamSimple(map, prefix + "IsDedicatedAddressPool", this.IsDedicatedAddressPool);
             this.SetParamSimple(map, prefix + "Egress", this.Egress);
             this.SetParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);

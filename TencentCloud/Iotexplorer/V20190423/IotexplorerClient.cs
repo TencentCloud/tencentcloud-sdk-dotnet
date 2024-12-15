@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1141";
+       private const string sdkVersion = "SDK_NET_3.0.1142";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 微信VOIP功能调整下线
+        /// 
         /// 分配License
         /// </summary>
         /// <param name="req"><see cref="AssignTWeCallLicenseRequest"/></param>
@@ -85,6 +87,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 微信VOIP功能调整下线
+        /// 
         /// 分配License
         /// </summary>
         /// <param name="req"><see cref="AssignTWeCallLicenseRequest"/></param>
@@ -2238,6 +2242,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 微信VOIP功能调整下线
+        /// 
         /// 查询TWeCall包列表
         /// </summary>
         /// <param name="req"><see cref="GetTWeCallPkgListRequest"/></param>
@@ -2248,6 +2254,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 微信VOIP功能调整下线
+        /// 
         /// 查询TWeCall包列表
         /// </summary>
         /// <param name="req"><see cref="GetTWeCallPkgListRequest"/></param>

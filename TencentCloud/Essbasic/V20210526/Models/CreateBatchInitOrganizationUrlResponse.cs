@@ -25,25 +25,25 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 小程序路径
+        /// 小程序路径，有效时间为7天
         /// </summary>
         [JsonProperty("MiniAppPath")]
         public string MiniAppPath{ get; set; }
 
         /// <summary>
-        /// 操作长链
+        /// 操作长链，有效时间为7天
         /// </summary>
         [JsonProperty("OperateLongUrl")]
         public string OperateLongUrl{ get; set; }
 
         /// <summary>
-        /// 操作短链
+        /// 操作短链，有效时间为7天
         /// </summary>
         [JsonProperty("OperateShortUrl")]
         public string OperateShortUrl{ get; set; }
 
         /// <summary>
-        /// 操作二维码
+        /// 操作二维码，有效时间为7天
         /// </summary>
         [JsonProperty("QRCodeUrl")]
         public string QRCodeUrl{ get; set; }

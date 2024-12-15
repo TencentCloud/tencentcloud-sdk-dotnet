@@ -36,6 +36,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
+        /// <summary>
+        ///  唯一标识
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamSimple(map, prefix + "Key", this.Key);
             this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
         }
     }
 }

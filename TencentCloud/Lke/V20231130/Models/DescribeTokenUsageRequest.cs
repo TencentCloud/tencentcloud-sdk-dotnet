@@ -55,13 +55,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// 开始时间戳, 单位为秒
+        /// 开始时间戳, 单位为秒(默认值0)
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间戳, 单位为秒
+        /// 结束时间戳, 单位为秒(默认值0， 必须大于开始时间戳)
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
