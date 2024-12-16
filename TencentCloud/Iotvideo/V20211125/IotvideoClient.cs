@@ -28,7 +28,7 @@ namespace TencentCloud.Iotvideo.V20211125
 
        private const string endpoint = "iotvideo.tencentcloudapi.com";
        private const string version = "2021-11-25";
-       private const string sdkVersion = "SDK_NET_3.0.1142";
+       private const string sdkVersion = "SDK_NET_3.0.1143";
 
         /// <summary>
         /// Client constructor.
@@ -369,6 +369,27 @@ namespace TencentCloud.Iotvideo.V20211125
         }
 
         /// <summary>
+        /// 创建设备通道
+        /// </summary>
+        /// <param name="req"><see cref="CreateDeviceChannelRequest"/></param>
+        /// <returns><see cref="CreateDeviceChannelResponse"/></returns>
+        public Task<CreateDeviceChannelResponse> CreateDeviceChannel(CreateDeviceChannelRequest req)
+        {
+            return InternalRequestAsync<CreateDeviceChannelResponse>(req, "CreateDeviceChannel");
+        }
+
+        /// <summary>
+        /// 创建设备通道
+        /// </summary>
+        /// <param name="req"><see cref="CreateDeviceChannelRequest"/></param>
+        /// <returns><see cref="CreateDeviceChannelResponse"/></returns>
+        public CreateDeviceChannelResponse CreateDeviceChannelSync(CreateDeviceChannelRequest req)
+        {
+            return InternalRequestAsync<CreateDeviceChannelResponse>(req, "CreateDeviceChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建转发规则
         /// </summary>
         /// <param name="req"><see cref="CreateForwardRuleRequest"/></param>
@@ -386,6 +407,27 @@ namespace TencentCloud.Iotvideo.V20211125
         public CreateForwardRuleResponse CreateForwardRuleSync(CreateForwardRuleRequest req)
         {
             return InternalRequestAsync<CreateForwardRuleResponse>(req, "CreateForwardRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 开通免费云存服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateFreeCloudStorageRequest"/></param>
+        /// <returns><see cref="CreateFreeCloudStorageResponse"/></returns>
+        public Task<CreateFreeCloudStorageResponse> CreateFreeCloudStorage(CreateFreeCloudStorageRequest req)
+        {
+            return InternalRequestAsync<CreateFreeCloudStorageResponse>(req, "CreateFreeCloudStorage");
+        }
+
+        /// <summary>
+        /// 开通免费云存服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateFreeCloudStorageRequest"/></param>
+        /// <returns><see cref="CreateFreeCloudStorageResponse"/></returns>
+        public CreateFreeCloudStorageResponse CreateFreeCloudStorageSync(CreateFreeCloudStorageRequest req)
+        {
+            return InternalRequestAsync<CreateFreeCloudStorageResponse>(req, "CreateFreeCloudStorage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

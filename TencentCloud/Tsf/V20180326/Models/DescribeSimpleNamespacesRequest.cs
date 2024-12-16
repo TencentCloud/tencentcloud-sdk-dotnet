@@ -85,7 +85,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string IsDefault{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 是否关闭鉴权查询
         /// </summary>
         [JsonProperty("DisableProgramAuthCheck")]
         public bool? DisableProgramAuthCheck{ get; set; }

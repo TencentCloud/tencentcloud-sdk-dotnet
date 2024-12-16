@@ -146,7 +146,6 @@ namespace TencentCloud.Tcbr.V20220217.Models
 
         /// <summary>
         /// 服务标签, function: 函数托管
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tag")]
         public string Tag{ get; set; }

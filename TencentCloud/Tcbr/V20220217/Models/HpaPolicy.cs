@@ -26,14 +26,12 @@ namespace TencentCloud.Tcbr.V20220217.Models
         
         /// <summary>
         /// 扩缩容类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyType")]
         public string PolicyType{ get; set; }
 
         /// <summary>
         /// 扩缩容阈值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyThreshold")]
         public ulong? PolicyThreshold{ get; set; }

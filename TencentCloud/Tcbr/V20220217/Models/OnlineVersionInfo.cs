@@ -26,21 +26,18 @@ namespace TencentCloud.Tcbr.V20220217.Models
         
         /// <summary>
         /// 版本名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VersionName")]
         public string VersionName{ get; set; }
 
         /// <summary>
         /// 镜像url
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
         /// <summary>
         /// 流量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowRatio")]
         public string FlowRatio{ get; set; }

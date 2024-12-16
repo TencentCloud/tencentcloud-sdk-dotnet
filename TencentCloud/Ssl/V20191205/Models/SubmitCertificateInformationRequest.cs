@@ -180,6 +180,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("ContactPosition")]
         public string ContactPosition{ get; set; }
 
+        /// <summary>
+        /// 是否DV证书。默认false
+        /// </summary>
+        [JsonProperty("IsDV")]
+        public bool? IsDV{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +218,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "ContactEmail", this.ContactEmail);
             this.SetParamSimple(map, prefix + "ContactNumber", this.ContactNumber);
             this.SetParamSimple(map, prefix + "ContactPosition", this.ContactPosition);
+            this.SetParamSimple(map, prefix + "IsDV", this.IsDV);
         }
     }
 }

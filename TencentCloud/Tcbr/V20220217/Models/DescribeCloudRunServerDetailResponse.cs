@@ -26,21 +26,18 @@ namespace TencentCloud.Tcbr.V20220217.Models
         
         /// <summary>
         /// 服务基本信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BaseInfo")]
         public ServerBaseInfo BaseInfo{ get; set; }
 
         /// <summary>
         /// 服务配置信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServerConfig")]
         public ServerBaseConfig ServerConfig{ get; set; }
 
         /// <summary>
         /// 在线版本信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OnlineVersionInfos")]
         public OnlineVersionInfo[] OnlineVersionInfos{ get; set; }

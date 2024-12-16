@@ -61,7 +61,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string NamespaceId{ get; set; }
 
         /// <summary>
-        /// 是否开启高可用
+        /// 是否开启高可用，1 表示开启，0 表示不开启
         /// </summary>
         [JsonProperty("IsHaEnable")]
         public string IsHaEnable{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ProgramId{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 需要绑定的数据集ID
         /// </summary>
         [JsonProperty("ProgramIdList")]
         public string[] ProgramIdList{ get; set; }

@@ -109,7 +109,9 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string MemRequest{ get; set; }
 
         /// <summary>
-        /// 部署组资源类型
+        /// 部署组资源类型；
+        /// DEF — 默认资源类型；
+        /// GW — 网关资源类型；
         /// </summary>
         [JsonProperty("GroupResourceType")]
         public string GroupResourceType{ get; set; }

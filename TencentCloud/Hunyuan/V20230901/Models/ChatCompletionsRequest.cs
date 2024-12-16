@@ -180,6 +180,12 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("ForceSearchEnhancement")]
         public bool? ForceSearchEnhancement{ get; set; }
 
+        /// <summary>
+        /// 自定义结束生成字符串
+        /// </summary>
+        [JsonProperty("Stop")]
+        public string[] Stop{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -203,6 +209,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamSimple(map, prefix + "EnableDeepSearch", this.EnableDeepSearch);
             this.SetParamSimple(map, prefix + "Seed", this.Seed);
             this.SetParamSimple(map, prefix + "ForceSearchEnhancement", this.ForceSearchEnhancement);
+            this.SetParamArraySimple(map, prefix + "Stop.", this.Stop);
         }
     }
 }

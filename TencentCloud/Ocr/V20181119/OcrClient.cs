@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1142";
+       private const string sdkVersion = "SDK_NET_3.0.1143";
 
         /// <summary>
         /// Client constructor.
@@ -2692,6 +2692,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口通过检测图片中的文字信息特征，快速判断图片中有无文字并返回判断结果，帮助用户过滤无文字的图片。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="TextDetectRequest"/></param>
         /// <returns><see cref="TextDetectResponse"/></returns>
@@ -2702,6 +2704,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口通过检测图片中的文字信息特征，快速判断图片中有无文字并返回判断结果，帮助用户过滤无文字的图片。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="TextDetectRequest"/></param>
         /// <returns><see cref="TextDetectResponse"/></returns>

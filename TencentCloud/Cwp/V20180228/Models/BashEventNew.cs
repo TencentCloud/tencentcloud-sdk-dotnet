@@ -133,10 +133,16 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? RuleCategory{ get; set; }
 
         /// <summary>
-        /// 自动生成的正则表达式
+        /// 转义后的正则表达式
         /// </summary>
         [JsonProperty("RegexBashCmd")]
         public string RegexBashCmd{ get; set; }
+
+        /// <summary>
+        /// 转义后的正则表达式
+        /// </summary>
+        [JsonProperty("RegexExe")]
+        public string RegexExe{ get; set; }
 
         /// <summary>
         /// 0:普通 1:专业版 2:旗舰版
@@ -175,6 +181,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "RuleCategory", this.RuleCategory);
             this.SetParamSimple(map, prefix + "RegexBashCmd", this.RegexBashCmd);
+            this.SetParamSimple(map, prefix + "RegexExe", this.RegexExe);
             this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
             this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
         }

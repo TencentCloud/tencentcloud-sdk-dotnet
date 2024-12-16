@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{59D16650-F6B2-3107-8C2B-90A5E4FD868E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1142</VersionPrefix>
+    <VersionPrefix>3.0.1143</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -434,8 +434,12 @@
     <Compile Include="V20211125\Models\CreateCloudStorageResponse.cs" />
     <Compile Include="V20211125\Models\CreateDataForwardRequest.cs" />
     <Compile Include="V20211125\Models\CreateDataForwardResponse.cs" />
+    <Compile Include="V20211125\Models\CreateDeviceChannelRequest.cs" />
+    <Compile Include="V20211125\Models\CreateDeviceChannelResponse.cs" />
     <Compile Include="V20211125\Models\CreateForwardRuleRequest.cs" />
     <Compile Include="V20211125\Models\CreateForwardRuleResponse.cs" />
+    <Compile Include="V20211125\Models\CreateFreeCloudStorageRequest.cs" />
+    <Compile Include="V20211125\Models\CreateFreeCloudStorageResponse.cs" />
     <Compile Include="V20211125\Models\CreateProductRequest.cs" />
     <Compile Include="V20211125\Models\CreateProductResponse.cs" />
     <Compile Include="V20211125\Models\CreateTaskFileUrlRequest.cs" />

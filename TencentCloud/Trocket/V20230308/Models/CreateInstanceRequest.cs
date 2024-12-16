@@ -118,6 +118,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("MaxTopicNum")]
         public long? MaxTopicNum{ get; set; }
 
+        /// <summary>
+        /// 部署可用区列表
+        /// </summary>
+        [JsonProperty("ZoneIds")]
+        public long?[] ZoneIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -139,6 +145,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamSimple(map, prefix + "MaxTopicNum", this.MaxTopicNum);
+            this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
         }
     }
 }

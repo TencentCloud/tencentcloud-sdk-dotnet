@@ -52,6 +52,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// 旧版镜像名，如/tsf/nginx
         /// </summary>
         [JsonProperty("Reponame")]
+        [System.Obsolete]
         public string Reponame{ get; set; }
 
         /// <summary>

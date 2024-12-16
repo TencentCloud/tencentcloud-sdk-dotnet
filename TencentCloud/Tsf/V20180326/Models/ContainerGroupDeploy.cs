@@ -311,6 +311,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("InternalContainerList")]
         public GroupContainerInfo[] InternalContainerList{ get; set; }
 
+        /// <summary>
+        /// service列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServiceSettingList")]
+        public ServiceSetting[] ServiceSettingList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -358,6 +365,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ContainerName", this.ContainerName);
             this.SetParamArrayObj(map, prefix + "AdditionalContainerList.", this.AdditionalContainerList);
             this.SetParamArrayObj(map, prefix + "InternalContainerList.", this.InternalContainerList);
+            this.SetParamArrayObj(map, prefix + "ServiceSettingList.", this.ServiceSettingList);
         }
     }
 }

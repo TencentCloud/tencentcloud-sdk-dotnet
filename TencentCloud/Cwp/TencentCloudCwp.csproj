@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1142</VersionPrefix>
+    <VersionPrefix>3.0.1143</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -248,6 +248,8 @@
     <Compile Include="V20180228\Models\DeletePrivilegeRulesResponse.cs" />
     <Compile Include="V20180228\Models\DeleteProtectDirRequest.cs" />
     <Compile Include="V20180228\Models\DeleteProtectDirResponse.cs" />
+    <Compile Include="V20180228\Models\DeleteRaspRulesRequest.cs" />
+    <Compile Include="V20180228\Models\DeleteRaspRulesResponse.cs" />
     <Compile Include="V20180228\Models\DeleteReverseShellEventsRequest.cs" />
     <Compile Include="V20180228\Models\DeleteReverseShellEventsResponse.cs" />
     <Compile Include="V20180228\Models\DeleteReverseShellRulesRequest.cs" />
@@ -681,6 +683,12 @@
     <Compile Include="V20180228\Models\DescribeRansomDefenseStrategyMachinesResponse.cs" />
     <Compile Include="V20180228\Models\DescribeRansomDefenseTrendRequest.cs" />
     <Compile Include="V20180228\Models\DescribeRansomDefenseTrendResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeRaspMaxCpuRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeRaspMaxCpuResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeRaspRuleVulsRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeRaspRuleVulsResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeRaspRulesRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeRaspRulesResponse.cs" />
     <Compile Include="V20180228\Models\DescribeRecommendedProtectCpuRequest.cs" />
     <Compile Include="V20180228\Models\DescribeRecommendedProtectCpuResponse.cs" />
     <Compile Include="V20180228\Models\DescribeReverseShellEventInfoRequest.cs" />
@@ -1131,6 +1139,10 @@
     <Compile Include="V20180228\Models\ModifyRansomDefenseEventsStatusResponse.cs" />
     <Compile Include="V20180228\Models\ModifyRansomDefenseStrategyStatusRequest.cs" />
     <Compile Include="V20180228\Models\ModifyRansomDefenseStrategyStatusResponse.cs" />
+    <Compile Include="V20180228\Models\ModifyRaspMaxCpuRequest.cs" />
+    <Compile Include="V20180228\Models\ModifyRaspMaxCpuResponse.cs" />
+    <Compile Include="V20180228\Models\ModifyRaspRulesRequest.cs" />
+    <Compile Include="V20180228\Models\ModifyRaspRulesResponse.cs" />
     <Compile Include="V20180228\Models\ModifyReverseShellRulesAggregationRequest.cs" />
     <Compile Include="V20180228\Models\ModifyReverseShellRulesAggregationResponse.cs" />
     <Compile Include="V20180228\Models\ModifyRiskDnsPolicyRequest.cs" />
@@ -1200,6 +1212,8 @@
     <Compile Include="V20180228\Models\RansomDefenseStrategyMachineBackupInfo.cs" />
     <Compile Include="V20180228\Models\RansomDefenseStrategyMachineDetail.cs" />
     <Compile Include="V20180228\Models\RansomDefenseStrategyMachineInfo.cs" />
+    <Compile Include="V20180228\Models\RaspRule.cs" />
+    <Compile Include="V20180228\Models\RaspRuleVul.cs" />
     <Compile Include="V20180228\Models\RecordInfo.cs" />
     <Compile Include="V20180228\Models\RecoverMalwaresRequest.cs" />
     <Compile Include="V20180228\Models\RecoverMalwaresResponse.cs" />

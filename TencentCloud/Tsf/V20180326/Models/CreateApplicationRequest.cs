@@ -85,7 +85,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public bool? IgnoreCreateImageRepository{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 数据集id列表
         /// </summary>
         [JsonProperty("ProgramIdList")]
         public string[] ProgramIdList{ get; set; }
@@ -97,13 +97,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ApmInstanceId{ get; set; }
 
         /// <summary>
-        /// 编程语言
+        /// 编程语言;
+        /// J - JAVA；
+        /// C - C/C++；
+        /// P - Python；
+        /// G - Go；
+        /// O - Other；
         /// </summary>
         [JsonProperty("ProgramLanguage")]
         public string ProgramLanguage{ get; set; }
 
         /// <summary>
-        /// 开发框架
+        /// 开发框架-SpringCloud/Dubbo/Go-GRPC/Other
         /// </summary>
         [JsonProperty("FrameworkType")]
         public string FrameworkType{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Cwp.V20180228
 
        private const string endpoint = "cwp.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.1142";
+       private const string sdkVersion = "SDK_NET_3.0.1143";
 
         /// <summary>
         /// Client constructor.
@@ -1211,6 +1211,27 @@ namespace TencentCloud.Cwp.V20180228
         public DeleteProtectDirResponse DeleteProtectDirSync(DeleteProtectDirRequest req)
         {
             return InternalRequestAsync<DeleteProtectDirResponse>(req, "DeleteProtectDir")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除漏洞防御白名单
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRaspRulesRequest"/></param>
+        /// <returns><see cref="DeleteRaspRulesResponse"/></returns>
+        public Task<DeleteRaspRulesResponse> DeleteRaspRules(DeleteRaspRulesRequest req)
+        {
+            return InternalRequestAsync<DeleteRaspRulesResponse>(req, "DeleteRaspRules");
+        }
+
+        /// <summary>
+        /// 删除漏洞防御白名单
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRaspRulesRequest"/></param>
+        /// <returns><see cref="DeleteRaspRulesResponse"/></returns>
+        public DeleteRaspRulesResponse DeleteRaspRulesSync(DeleteRaspRulesRequest req)
+        {
+            return InternalRequestAsync<DeleteRaspRulesResponse>(req, "DeleteRaspRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5771,6 +5792,69 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 查看漏洞防御最大cpu限制
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspMaxCpuRequest"/></param>
+        /// <returns><see cref="DescribeRaspMaxCpuResponse"/></returns>
+        public Task<DescribeRaspMaxCpuResponse> DescribeRaspMaxCpu(DescribeRaspMaxCpuRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspMaxCpuResponse>(req, "DescribeRaspMaxCpu");
+        }
+
+        /// <summary>
+        /// 查看漏洞防御最大cpu限制
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspMaxCpuRequest"/></param>
+        /// <returns><see cref="DescribeRaspMaxCpuResponse"/></returns>
+        public DescribeRaspMaxCpuResponse DescribeRaspMaxCpuSync(DescribeRaspMaxCpuRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspMaxCpuResponse>(req, "DescribeRaspMaxCpu")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取漏洞防御白名单漏洞列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspRuleVulsRequest"/></param>
+        /// <returns><see cref="DescribeRaspRuleVulsResponse"/></returns>
+        public Task<DescribeRaspRuleVulsResponse> DescribeRaspRuleVuls(DescribeRaspRuleVulsRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspRuleVulsResponse>(req, "DescribeRaspRuleVuls");
+        }
+
+        /// <summary>
+        /// 获取漏洞防御白名单漏洞列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspRuleVulsRequest"/></param>
+        /// <returns><see cref="DescribeRaspRuleVulsResponse"/></returns>
+        public DescribeRaspRuleVulsResponse DescribeRaspRuleVulsSync(DescribeRaspRuleVulsRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspRuleVulsResponse>(req, "DescribeRaspRuleVuls")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询漏洞防御白名单
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspRulesRequest"/></param>
+        /// <returns><see cref="DescribeRaspRulesResponse"/></returns>
+        public Task<DescribeRaspRulesResponse> DescribeRaspRules(DescribeRaspRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspRulesResponse>(req, "DescribeRaspRules");
+        }
+
+        /// <summary>
+        /// 查询漏洞防御白名单
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspRulesRequest"/></param>
+        /// <returns><see cref="DescribeRaspRulesResponse"/></returns>
+        public DescribeRaspRulesResponse DescribeRaspRulesSync(DescribeRaspRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspRulesResponse>(req, "DescribeRaspRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询推荐购买防护核数
         /// </summary>
         /// <param name="req"><see cref="DescribeRecommendedProtectCpuRequest"/></param>
@@ -9887,6 +9971,48 @@ namespace TencentCloud.Cwp.V20180228
         public ModifyRansomDefenseStrategyStatusResponse ModifyRansomDefenseStrategyStatusSync(ModifyRansomDefenseStrategyStatusRequest req)
         {
             return InternalRequestAsync<ModifyRansomDefenseStrategyStatusResponse>(req, "ModifyRansomDefenseStrategyStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 编辑漏洞防御最大cpu配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRaspMaxCpuRequest"/></param>
+        /// <returns><see cref="ModifyRaspMaxCpuResponse"/></returns>
+        public Task<ModifyRaspMaxCpuResponse> ModifyRaspMaxCpu(ModifyRaspMaxCpuRequest req)
+        {
+            return InternalRequestAsync<ModifyRaspMaxCpuResponse>(req, "ModifyRaspMaxCpu");
+        }
+
+        /// <summary>
+        /// 编辑漏洞防御最大cpu配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRaspMaxCpuRequest"/></param>
+        /// <returns><see cref="ModifyRaspMaxCpuResponse"/></returns>
+        public ModifyRaspMaxCpuResponse ModifyRaspMaxCpuSync(ModifyRaspMaxCpuRequest req)
+        {
+            return InternalRequestAsync<ModifyRaspMaxCpuResponse>(req, "ModifyRaspMaxCpu")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加漏洞防御白名单
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRaspRulesRequest"/></param>
+        /// <returns><see cref="ModifyRaspRulesResponse"/></returns>
+        public Task<ModifyRaspRulesResponse> ModifyRaspRules(ModifyRaspRulesRequest req)
+        {
+            return InternalRequestAsync<ModifyRaspRulesResponse>(req, "ModifyRaspRules");
+        }
+
+        /// <summary>
+        /// 添加漏洞防御白名单
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRaspRulesRequest"/></param>
+        /// <returns><see cref="ModifyRaspRulesResponse"/></returns>
+        public ModifyRaspRulesResponse ModifyRaspRulesSync(ModifyRaspRulesRequest req)
+        {
+            return InternalRequestAsync<ModifyRaspRulesResponse>(req, "ModifyRaspRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

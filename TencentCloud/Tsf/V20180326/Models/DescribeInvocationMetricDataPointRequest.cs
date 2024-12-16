@@ -37,13 +37,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 维度
+        /// 维度，并且 维度 key value 不能为空
         /// </summary>
         [JsonProperty("MetricDimensionValues")]
         public MetricDimensionValue[] MetricDimensionValues{ get; set; }
 
         /// <summary>
-        /// 指标
+        /// 指标，并且 key, value 不能为空
         /// </summary>
         [JsonProperty("Metrics")]
         public Metric[] Metrics{ get; set; }

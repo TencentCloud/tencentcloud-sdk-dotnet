@@ -58,6 +58,14 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("Encryption")]
         public Encryption Encryption{ get; set; }
 
+        /// <summary>
+        /// 自定义描述字段。
+        /// - 用于描述调用业务信息，出参中将返回此描述字段。 
+        /// - 每个自定义描述字段支持[1,10]个字符。
+        /// </summary>
+        [JsonProperty("Extra")]
+        public string Extra{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +77,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "Optional", this.Optional);
             this.SetParamObj(map, prefix + "Encryption.", this.Encryption);
+            this.SetParamSimple(map, prefix + "Extra", this.Extra);
         }
     }
 }

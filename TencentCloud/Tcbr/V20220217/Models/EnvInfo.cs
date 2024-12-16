@@ -66,14 +66,12 @@ namespace TencentCloud.Tcbr.V20220217.Models
 
         /// <summary>
         /// 是否到期自动降为免费版
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsAutoDegrade")]
         public bool? IsAutoDegrade{ get; set; }
 
         /// <summary>
         /// 环境渠道
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvChannel")]
         public string EnvChannel{ get; set; }
@@ -82,28 +80,24 @@ namespace TencentCloud.Tcbr.V20220217.Models
         /// 支付方式。包含以下取值：
         /// <li> prepayment：预付费</li>
         /// <li> postpaid：后付费</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
         /// <summary>
         /// 是否为默认环境
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsDefault")]
         public bool? IsDefault{ get; set; }
 
         /// <summary>
         /// 环境所属地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// 环境类型：baas, run, hosting, weda,tcbr
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvType")]
         public string EnvType{ get; set; }
@@ -128,42 +122,36 @@ namespace TencentCloud.Tcbr.V20220217.Models
 
         /// <summary>
         /// 云日志服务列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogServices")]
         public LogServiceInfo[] LogServices{ get; set; }
 
         /// <summary>
         /// 静态资源信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StaticStorages")]
         public StaticStorageInfo[] StaticStorages{ get; set; }
 
         /// <summary>
         /// 环境标签列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
         /// 自定义日志服务
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomLogServices")]
         public ClsInfo[] CustomLogServices{ get; set; }
 
         /// <summary>
         /// tcb产品套餐ID，参考DescribePackages接口的返回值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageId")]
         public string PackageId{ get; set; }
 
         /// <summary>
         /// 套餐中文名称，参考DescribePackages接口的返回值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageName")]
         public string PackageName{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tsf.V20180326
 
        private const string endpoint = "tsf.tencentcloudapi.com";
        private const string version = "2018-03-26";
-       private const string sdkVersion = "SDK_NET_3.0.1142";
+       private const string sdkVersion = "SDK_NET_3.0.1143";
 
         /// <summary>
         /// Client constructor.
@@ -1868,7 +1868,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        ///  获取部署组详情
+        /// 获取部署组详情
         /// </summary>
         /// <param name="req"><see cref="DescribeContainerGroupDeployInfoRequest"/></param>
         /// <returns><see cref="DescribeContainerGroupDeployInfoResponse"/></returns>
@@ -1878,7 +1878,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        ///  获取部署组详情
+        /// 获取部署组详情
         /// </summary>
         /// <param name="req"><see cref="DescribeContainerGroupDeployInfoRequest"/></param>
         /// <returns><see cref="DescribeContainerGroupDeployInfoResponse"/></returns>
@@ -1889,7 +1889,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        ///  容器部署组详情（已废弃，请使用  DescribeContainerGroupDeployInfo）
+        /// 容器部署组详情（已废弃，请使用  DescribeContainerGroupDeployInfo）
         /// </summary>
         /// <param name="req"><see cref="DescribeContainerGroupDetailRequest"/></param>
         /// <returns><see cref="DescribeContainerGroupDetailResponse"/></returns>
@@ -1899,7 +1899,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        ///  容器部署组详情（已废弃，请使用  DescribeContainerGroupDeployInfo）
+        /// 容器部署组详情（已废弃，请使用  DescribeContainerGroupDeployInfo）
         /// </summary>
         /// <param name="req"><see cref="DescribeContainerGroupDetailRequest"/></param>
         /// <returns><see cref="DescribeContainerGroupDetailResponse"/></returns>

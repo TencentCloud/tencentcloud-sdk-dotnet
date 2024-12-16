@@ -214,6 +214,12 @@ namespace TencentCloud.Trocket.V20230308.Models
         public long? TopicNumUpperLimit{ get; set; }
 
         /// <summary>
+        /// 可用区列表
+        /// </summary>
+        [JsonProperty("ZoneIds")]
+        public long?[] ZoneIds{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -255,6 +261,7 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "AclEnabled", this.AclEnabled);
             this.SetParamSimple(map, prefix + "TopicNumLowerLimit", this.TopicNumLowerLimit);
             this.SetParamSimple(map, prefix + "TopicNumUpperLimit", this.TopicNumUpperLimit);
+            this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -262,6 +262,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("DevelopmentParams")]
         public string DevelopmentParams{ get; set; }
 
+        /// <summary>
+        /// 数据源连接状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConnectStatus")]
+        public DataSourceConnectStatus ConnectStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -302,6 +309,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "DevelopmentId", this.DevelopmentId);
             this.SetParamSimple(map, prefix + "DevelopmentParams", this.DevelopmentParams);
+            this.SetParamObj(map, prefix + "ConnectStatus.", this.ConnectStatus);
         }
     }
 }
