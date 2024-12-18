@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1144";
+       private const string sdkVersion = "SDK_NET_3.0.1145";
 
         /// <summary>
         /// Client constructor.
@@ -3033,6 +3033,27 @@ namespace TencentCloud.Cdb.V20170320
         public ModifyParamTemplateResponse ModifyParamTemplateSync(ModifyParamTemplateRequest req)
         {
             return InternalRequestAsync<ModifyParamTemplateResponse>(req, "ModifyParamTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（ModifyProtectMode）用于修改实例的同步方式。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProtectModeRequest"/></param>
+        /// <returns><see cref="ModifyProtectModeResponse"/></returns>
+        public Task<ModifyProtectModeResponse> ModifyProtectMode(ModifyProtectModeRequest req)
+        {
+            return InternalRequestAsync<ModifyProtectModeResponse>(req, "ModifyProtectMode");
+        }
+
+        /// <summary>
+        /// 该接口（ModifyProtectMode）用于修改实例的同步方式。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProtectModeRequest"/></param>
+        /// <returns><see cref="ModifyProtectModeResponse"/></returns>
+        public ModifyProtectModeResponse ModifyProtectModeSync(ModifyProtectModeRequest req)
+        {
+            return InternalRequestAsync<ModifyProtectModeResponse>(req, "ModifyProtectMode")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

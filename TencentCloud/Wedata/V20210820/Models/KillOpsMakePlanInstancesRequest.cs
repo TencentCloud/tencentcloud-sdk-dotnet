@@ -36,6 +36,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("PlanId")]
         public string PlanId{ get; set; }
 
+        /// <summary>
+        /// 是否异步模式
+        /// </summary>
+        [JsonProperty("AsyncMode")]
+        public bool? AsyncMode{ get; set; }
+
+        /// <summary>
+        /// 补录计划名
+        /// </summary>
+        [JsonProperty("PlanName")]
+        public string PlanName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "PlanId", this.PlanId);
+            this.SetParamSimple(map, prefix + "AsyncMode", this.AsyncMode);
+            this.SetParamSimple(map, prefix + "PlanName", this.PlanName);
         }
     }
 }

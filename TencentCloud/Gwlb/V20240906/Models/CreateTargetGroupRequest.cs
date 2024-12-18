@@ -37,7 +37,7 @@ namespace TencentCloud.Gwlb.V20240906.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
+        /// 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
@@ -51,7 +51,7 @@ namespace TencentCloud.Gwlb.V20240906.Models
         /// <summary>
         /// 网关负载均衡目标组协议。
         /// - TENCENT_GENEVE ：GENEVE 标准协议
-        /// - AWS_GENEVE：GENEVE 兼容协议（需要提交工单申请开白）
+        /// - AWS_GENEVE：GENEVE 兼容协议
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

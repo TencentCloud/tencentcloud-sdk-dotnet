@@ -364,6 +364,27 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("OfflineTaskStatus")]
         public long? OfflineTaskStatus{ get; set; }
 
+        /// <summary>
+        /// 导入到编排空间配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskImportInfo")]
+        public TaskImportInfo TaskImportInfo{ get; set; }
+
+        /// <summary>
+        /// 业务延迟
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BusinessLatency")]
+        public long? BusinessLatency{ get; set; }
+
+        /// <summary>
+        /// 当前同步位点
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CurrentSyncPosition")]
+        public long? CurrentSyncPosition{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -419,6 +440,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
             this.SetParamSimple(map, prefix + "ArrangeSpaceTaskId", this.ArrangeSpaceTaskId);
             this.SetParamSimple(map, prefix + "OfflineTaskStatus", this.OfflineTaskStatus);
+            this.SetParamObj(map, prefix + "TaskImportInfo.", this.TaskImportInfo);
+            this.SetParamSimple(map, prefix + "BusinessLatency", this.BusinessLatency);
+            this.SetParamSimple(map, prefix + "CurrentSyncPosition", this.CurrentSyncPosition);
         }
     }
 }

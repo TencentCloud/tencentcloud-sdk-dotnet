@@ -94,6 +94,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("IncludeTaskFolder")]
         public bool? IncludeTaskFolder{ get; set; }
 
+        /// <summary>
+        /// 是否使用最新模式展示目录树
+        /// </summary>
+        [JsonProperty("NewFolderTreeMode")]
+        public bool? NewFolderTreeMode{ get; set; }
+
+        /// <summary>
+        /// 节点分类ID
+        /// </summary>
+        [JsonProperty("TaskNodeId")]
+        public string TaskNodeId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -111,6 +123,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskFolderId", this.TaskFolderId);
             this.SetParamSimple(map, prefix + "DisplayType", this.DisplayType);
             this.SetParamSimple(map, prefix + "IncludeTaskFolder", this.IncludeTaskFolder);
+            this.SetParamSimple(map, prefix + "NewFolderTreeMode", this.NewFolderTreeMode);
+            this.SetParamSimple(map, prefix + "TaskNodeId", this.TaskNodeId);
         }
     }
 }

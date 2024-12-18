@@ -45,6 +45,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
+        /// <summary>
+        /// 异步操作记录的唯一id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AsyncActionId")]
+        public string AsyncActionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "SuccessCount", this.SuccessCount);
             this.SetParamSimple(map, prefix + "FailedCount", this.FailedCount);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "AsyncActionId", this.AsyncActionId);
         }
     }
 }

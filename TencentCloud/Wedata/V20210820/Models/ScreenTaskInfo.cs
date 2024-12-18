@@ -66,6 +66,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public ulong? FrozenNum{ get; set; }
 
         /// <summary>
+        /// 无效任务数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InvalidNum")]
+        public ulong? InvalidNum{ get; set; }
+
+        /// <summary>
         /// 年任务
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -119,6 +126,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "StoppingNum", this.StoppingNum);
             this.SetParamSimple(map, prefix + "StoppedNum", this.StoppedNum);
             this.SetParamSimple(map, prefix + "FrozenNum", this.FrozenNum);
+            this.SetParamSimple(map, prefix + "InvalidNum", this.InvalidNum);
             this.SetParamSimple(map, prefix + "YearNum", this.YearNum);
             this.SetParamSimple(map, prefix + "MonthNum", this.MonthNum);
             this.SetParamSimple(map, prefix + "WeekNum", this.WeekNum);

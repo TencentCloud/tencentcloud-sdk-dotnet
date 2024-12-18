@@ -45,6 +45,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ErrorDesc")]
         public string ErrorDesc{ get; set; }
 
+        /// <summary>
+        /// 异步操作id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AsyncActionId")]
+        public string AsyncActionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamSimple(map, prefix + "ErrorId", this.ErrorId);
             this.SetParamSimple(map, prefix + "ErrorDesc", this.ErrorDesc);
+            this.SetParamSimple(map, prefix + "AsyncActionId", this.AsyncActionId);
         }
     }
 }

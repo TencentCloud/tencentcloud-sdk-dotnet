@@ -102,6 +102,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("SortType")]
         public string SortType{ get; set; }
 
+        /// <summary>
+        /// 项目ID列表，用于多项目工作流筛选
+        /// </summary>
+        [JsonProperty("ProjectIds")]
+        public string[] ProjectIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "SortItem", this.SortItem);
             this.SetParamSimple(map, prefix + "SortType", this.SortType);
+            this.SetParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
         }
     }
 }

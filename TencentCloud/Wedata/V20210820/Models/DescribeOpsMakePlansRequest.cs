@@ -84,6 +84,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("MaxCreateTime")]
         public string MaxCreateTime{ get; set; }
 
+        /// <summary>
+        /// 实例状态过滤条件
+        /// </summary>
+        [JsonProperty("StateList")]
+        public long?[] StateList{ get; set; }
+
+        /// <summary>
+        /// 模糊查询关键字
+        /// </summary>
+        [JsonProperty("Keyword")]
+        public string Keyword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Creator", this.Creator);
             this.SetParamSimple(map, prefix + "MinCreateTime", this.MinCreateTime);
             this.SetParamSimple(map, prefix + "MaxCreateTime", this.MaxCreateTime);
+            this.SetParamArraySimple(map, prefix + "StateList.", this.StateList);
+            this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
         }
     }
 }

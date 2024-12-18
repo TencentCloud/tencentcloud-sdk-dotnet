@@ -174,6 +174,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("RequestResourceTypes")]
         public string[] RequestResourceTypes{ get; set; }
 
+        /// <summary>
+        /// 项目ID列表
+        /// </summary>
+        [JsonProperty("ProjectIds")]
+        public string[] ProjectIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +211,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "KeyWord", this.KeyWord);
             this.SetParamSimple(map, prefix + "InitStrategy", this.InitStrategy);
             this.SetParamArraySimple(map, prefix + "RequestResourceTypes.", this.RequestResourceTypes);
+            this.SetParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
         }
     }
 }

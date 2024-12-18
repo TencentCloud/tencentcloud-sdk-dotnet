@@ -72,6 +72,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("SchemaName")]
         public string SchemaName{ get; set; }
 
+        /// <summary>
+        /// 是否异步建表
+        /// </summary>
+        [JsonProperty("Async")]
+        public bool? Async{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Incharge", this.Incharge);
             this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
+            this.SetParamSimple(map, prefix + "Async", this.Async);
         }
     }
 }

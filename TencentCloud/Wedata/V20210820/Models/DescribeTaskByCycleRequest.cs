@@ -42,6 +42,24 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("WorkflowId")]
         public string WorkflowId{ get; set; }
 
+        /// <summary>
+        /// 项目ID列表筛选
+        /// </summary>
+        [JsonProperty("ProjectIds")]
+        public string[] ProjectIds{ get; set; }
+
+        /// <summary>
+        /// 资源组ID列表筛选
+        /// </summary>
+        [JsonProperty("ResourceGroupIds")]
+        public string[] ResourceGroupIds{ get; set; }
+
+        /// <summary>
+        /// 任务类型ID筛选
+        /// </summary>
+        [JsonProperty("TaskTypeIdList")]
+        public string[] TaskTypeIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +69,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "InCharge", this.InCharge);
             this.SetParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
+            this.SetParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
+            this.SetParamArraySimple(map, prefix + "ResourceGroupIds.", this.ResourceGroupIds);
+            this.SetParamArraySimple(map, prefix + "TaskTypeIdList.", this.TaskTypeIdList);
         }
     }
 }

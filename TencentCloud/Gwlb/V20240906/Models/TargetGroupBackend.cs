@@ -49,7 +49,7 @@ namespace TencentCloud.Gwlb.V20240906.Models
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
+        /// 后端服务的转发权重，取值为0或16
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }

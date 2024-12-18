@@ -32,7 +32,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 请求生成推流地址的输入Index。
-        /// 允许范围[1,20]。
+        /// 允许范围[1,24]。
         /// </summary>
         [JsonProperty("InputIndex")]
         public ulong? InputIndex{ get; set; }

@@ -76,12 +76,14 @@ namespace TencentCloud.Billing.V20180709.Models
         /// 是否允许欠费消费
         /// </summary>
         [JsonProperty("IsAllowArrears")]
+        [System.Obsolete]
         public bool? IsAllowArrears{ get; set; }
 
         /// <summary>
         /// 是否限制信用额度
         /// </summary>
         [JsonProperty("IsCreditLimited")]
+        [System.Obsolete]
         public bool? IsCreditLimited{ get; set; }
 
         /// <summary>

@@ -42,6 +42,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("KillInstance")]
         public bool? KillInstance{ get; set; }
 
+        /// <summary>
+        /// 是否异步模式
+        /// </summary>
+        [JsonProperty("AsyncMode")]
+        public bool? AsyncMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArraySimple(map, prefix + "TaskIdList.", this.TaskIdList);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "KillInstance", this.KillInstance);
+            this.SetParamSimple(map, prefix + "AsyncMode", this.AsyncMode);
         }
     }
 }

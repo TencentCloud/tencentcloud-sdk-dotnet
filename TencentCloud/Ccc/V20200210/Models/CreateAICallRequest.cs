@@ -226,6 +226,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string NotifyMessage{ get; set; }
 
         /// <summary>
+        /// 最大触发AI提示音次数，默认为不限制
+        /// </summary>
+        [JsonProperty("NotifyMaxCount")]
+        public ulong? NotifyMaxCount{ get; set; }
+
+        /// <summary>
         /// <p>和VoiceType字段需要选填一个，这里是使用自己自定义的TTS，VoiceType是系统内置的一些音色</p>
         /// <ul>
         /// <li>Tencent TTS<br>
@@ -334,6 +340,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "EndFunctionDesc", this.EndFunctionDesc);
             this.SetParamSimple(map, prefix + "NotifyDuration", this.NotifyDuration);
             this.SetParamSimple(map, prefix + "NotifyMessage", this.NotifyMessage);
+            this.SetParamSimple(map, prefix + "NotifyMaxCount", this.NotifyMaxCount);
             this.SetParamSimple(map, prefix + "CustomTTSConfig", this.CustomTTSConfig);
         }
     }

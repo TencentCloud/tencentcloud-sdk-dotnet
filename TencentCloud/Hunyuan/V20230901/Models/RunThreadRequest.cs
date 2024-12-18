@@ -31,7 +31,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public string ThreadID{ get; set; }
 
         /// <summary>
-        /// 助手 ID
+        /// 助手 ID（目前未使用，留空）
         /// </summary>
         [JsonProperty("AssistantID")]
         public string AssistantID{ get; set; }

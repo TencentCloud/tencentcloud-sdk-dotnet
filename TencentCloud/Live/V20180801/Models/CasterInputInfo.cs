@@ -26,7 +26,7 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// 输入源Index。
-        /// 范围[1, 20]
+        /// 范围[1, 24]
         /// </summary>
         [JsonProperty("InputIndex")]
         public long? InputIndex{ get; set; }

@@ -72,6 +72,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("WorkflowId")]
         public string WorkflowId{ get; set; }
 
+        /// <summary>
+        /// 任务ID列表
+        /// </summary>
+        [JsonProperty("ProjectIds")]
+        public string[] ProjectIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "InCharge", this.InCharge);
             this.SetParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
+            this.SetParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20180408.Models
     {
         
         /// <summary>
-        /// 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+        /// 实例ID，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Mongodb.V20180408.Models
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 实例新密码，至少包含字母、数字和字符（!@#%^*()）中的两种，长度为8-16个字符
+        /// 指定账户的新密码， 密码格式为8-32个字符长度，至少包含字母、数字和字符（!@#%^*()_）中的两种
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

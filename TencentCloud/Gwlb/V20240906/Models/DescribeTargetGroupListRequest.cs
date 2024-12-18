@@ -31,7 +31,10 @@ namespace TencentCloud.Gwlb.V20240906.Models
         public string[] TargetGroupIds{ get; set; }
 
         /// <summary>
-        /// 过滤条件数组，支持TargetGroupVpcId和TargetGroupName。
+        /// 过滤条件数组。
+        /// 
+        /// - TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，如“vpc-bhqk****”。
+        /// - TargetGroupName - String - 是否必填：否 - （过滤条件）按照目标组的名称过滤，如“tg_name”
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

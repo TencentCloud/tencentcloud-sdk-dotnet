@@ -132,6 +132,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("IsCount")]
         public bool? IsCount{ get; set; }
 
+        /// <summary>
+        /// 是否异步模式
+        /// </summary>
+        [JsonProperty("AsyncMode")]
+        public bool? AsyncMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamObj(map, prefix + "RequestBaseInfo.", this.RequestBaseInfo);
             this.SetParamSimple(map, prefix + "IsCount", this.IsCount);
+            this.SetParamSimple(map, prefix + "AsyncMode", this.AsyncMode);
         }
     }
 }

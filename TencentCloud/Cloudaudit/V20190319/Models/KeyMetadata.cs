@@ -26,12 +26,14 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         
         /// <summary>
         /// 作为密钥更容易辨识，更容易被人看懂的别名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
         /// <summary>
         /// CMK的全局唯一标识
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }

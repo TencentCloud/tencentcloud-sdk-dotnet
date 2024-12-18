@@ -87,6 +87,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("FailedNum")]
         public ulong? FailedNum{ get; set; }
 
+        /// <summary>
+        /// 跳过运行总数
+        /// </summary>
+        [JsonProperty("SkipRunningNum")]
+        public long? SkipRunningNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +108,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "StoppingNum", this.StoppingNum);
             this.SetParamSimple(map, prefix + "SucceedNum", this.SucceedNum);
             this.SetParamSimple(map, prefix + "FailedNum", this.FailedNum);
+            this.SetParamSimple(map, prefix + "SkipRunningNum", this.SkipRunningNum);
         }
     }
 }

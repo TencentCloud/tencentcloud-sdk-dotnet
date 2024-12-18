@@ -202,6 +202,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("CheckParentType")]
         public string CheckParentType{ get; set; }
 
+        /// <summary>
+        /// 是否和原任务保持相同工作流自依赖属性
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SameSelfWorkflowDependType")]
+        public bool? SameSelfWorkflowDependType{ get; set; }
+
+        /// <summary>
+        /// 工作流自依赖类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SelfWorkflowDependency")]
+        public string SelfWorkflowDependency{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -233,6 +247,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "CompletePercent", this.CompletePercent);
             this.SetParamSimple(map, prefix + "SuccessPercent", this.SuccessPercent);
             this.SetParamSimple(map, prefix + "CheckParentType", this.CheckParentType);
+            this.SetParamSimple(map, prefix + "SameSelfWorkflowDependType", this.SameSelfWorkflowDependType);
+            this.SetParamSimple(map, prefix + "SelfWorkflowDependency", this.SelfWorkflowDependency);
         }
     }
 }

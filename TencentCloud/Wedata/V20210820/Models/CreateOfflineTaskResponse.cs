@@ -32,6 +32,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string TaskId{ get; set; }
 
         /// <summary>
+        /// 导入到编排空间的任务id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ArrangeSpaceTaskId")]
+        public string ArrangeSpaceTaskId{ get; set; }
+
+        /// <summary>
         /// 结果
         /// </summary>
         [JsonProperty("Data")]
@@ -50,6 +57,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "ArrangeSpaceTaskId", this.ArrangeSpaceTaskId);
             this.SetParamSimple(map, prefix + "Data", this.Data);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

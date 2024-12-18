@@ -123,6 +123,12 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("ActionRisk")]
         public string ActionRisk{ get; set; }
 
+        /// <summary>
+        /// 故障表现
+        /// </summary>
+        [JsonProperty("FailurePerformance")]
+        public string FailurePerformance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -144,6 +150,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "ActionAttribute", this.ActionAttribute);
             this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
             this.SetParamSimple(map, prefix + "ActionRisk", this.ActionRisk);
+            this.SetParamSimple(map, prefix + "FailurePerformance", this.FailurePerformance);
         }
     }
 }

@@ -37,6 +37,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string PlanId{ get; set; }
 
         /// <summary>
+        /// 实例状态过滤条件
+        /// </summary>
+        [JsonProperty("StateList")]
+        public long?[] StateList{ get; set; }
+
+        /// <summary>
         /// 分页页码，默认值1
         /// </summary>
         [JsonProperty("PageNumber")]
@@ -56,6 +62,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "PlanId", this.PlanId);
+            this.SetParamArraySimple(map, prefix + "StateList.", this.StateList);
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
         }

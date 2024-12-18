@@ -56,6 +56,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("DisplayType")]
         public string DisplayType{ get; set; }
 
+        /// <summary>
+        /// 是否新模式展示目录树
+        /// </summary>
+        [JsonProperty("NewFolderTreeMode")]
+        public bool? NewFolderTreeMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +73,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "DisplayType", this.DisplayType);
+            this.SetParamSimple(map, prefix + "NewFolderTreeMode", this.NewFolderTreeMode);
         }
     }
 }

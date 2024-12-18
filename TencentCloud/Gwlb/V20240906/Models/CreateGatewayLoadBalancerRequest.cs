@@ -25,7 +25,7 @@ namespace TencentCloud.Gwlb.V20240906.Models
     {
         
         /// <summary>
-        /// 网关负载均衡后端目标设备所属的私有网络 ID，如vpc-12345678，可以通过 DescribeVpcEx 接口获取。 不填此参数则默认为DefaultVPC。创建内网负载均衡实例时，此参数必填。
+        /// 网关负载均衡后端目标设备所属的私有网络 ID，如vpc-azd4dt1c，可以通过 [DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)  接口获取。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }

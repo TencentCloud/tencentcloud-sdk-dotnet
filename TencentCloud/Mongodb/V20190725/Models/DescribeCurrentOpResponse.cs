@@ -25,13 +25,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 符合查询条件的操作总数
+        /// 符合查询条件的操作总数。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 当前操作列表
+        /// 当前操作列表。
         /// </summary>
         [JsonProperty("CurrentOps")]
         public CurrentOp[] CurrentOps{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1144";
+       private const string sdkVersion = "SDK_NET_3.0.1145";
 
         /// <summary>
         /// Client constructor.
@@ -245,7 +245,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 查询异步任务状态接口
+        /// 本接口（DescribeAsyncRequestInfo）用于查询异步任务状态接口。
         /// </summary>
         /// <param name="req"><see cref="DescribeAsyncRequestInfoRequest"/></param>
         /// <returns><see cref="DescribeAsyncRequestInfoResponse"/></returns>
@@ -255,7 +255,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 查询异步任务状态接口
+        /// 本接口（DescribeAsyncRequestInfo）用于查询异步任务状态接口。
         /// </summary>
         /// <param name="req"><see cref="DescribeAsyncRequestInfoRequest"/></param>
         /// <returns><see cref="DescribeAsyncRequestInfoResponse"/></returns>
@@ -329,7 +329,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(DescribeCurrentOp)用于查询MongoDB云数据库实例的当前正在执行的操作。
+        /// 本接口（DescribeCurrentOp）用于查询云数据库实例的当前正在执行的操作。
         /// </summary>
         /// <param name="req"><see cref="DescribeCurrentOpRequest"/></param>
         /// <returns><see cref="DescribeCurrentOpResponse"/></returns>
@@ -339,7 +339,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(DescribeCurrentOp)用于查询MongoDB云数据库实例的当前正在执行的操作。
+        /// 本接口（DescribeCurrentOp）用于查询云数据库实例的当前正在执行的操作。
         /// </summary>
         /// <param name="req"><see cref="DescribeCurrentOpRequest"/></param>
         /// <returns><see cref="DescribeCurrentOpResponse"/></returns>

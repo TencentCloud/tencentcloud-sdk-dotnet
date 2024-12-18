@@ -84,6 +84,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TaskMode")]
         public string TaskMode{ get; set; }
 
+        /// <summary>
+        /// 导入编排空间配置
+        /// </summary>
+        [JsonProperty("TaskImportInfo")]
+        public TaskImportInfo TaskImportInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "TypeId", this.TypeId);
             this.SetParamSimple(map, prefix + "TaskAction", this.TaskAction);
             this.SetParamSimple(map, prefix + "TaskMode", this.TaskMode);
+            this.SetParamObj(map, prefix + "TaskImportInfo.", this.TaskImportInfo);
         }
     }
 }

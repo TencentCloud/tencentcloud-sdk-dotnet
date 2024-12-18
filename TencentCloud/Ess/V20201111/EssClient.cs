@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1144";
+       private const string sdkVersion = "SDK_NET_3.0.1145";
 
         /// <summary>
         /// Client constructor.
@@ -3110,6 +3110,27 @@ namespace TencentCloud.Ess.V20201111
         public DescribeOrganizationSealsResponse DescribeOrganizationSealsSync(DescribeOrganizationSealsRequest req)
         {
             return InternalRequestAsync<DescribeOrganizationSealsResponse>(req, "DescribeOrganizationSeals")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 仅且仅能查询企业本身在电子签的认证状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationVerifyStatusRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationVerifyStatusResponse"/></returns>
+        public Task<DescribeOrganizationVerifyStatusResponse> DescribeOrganizationVerifyStatus(DescribeOrganizationVerifyStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeOrganizationVerifyStatusResponse>(req, "DescribeOrganizationVerifyStatus");
+        }
+
+        /// <summary>
+        /// 仅且仅能查询企业本身在电子签的认证状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationVerifyStatusRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationVerifyStatusResponse"/></returns>
+        public DescribeOrganizationVerifyStatusResponse DescribeOrganizationVerifyStatusSync(DescribeOrganizationVerifyStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeOrganizationVerifyStatusResponse>(req, "DescribeOrganizationVerifyStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

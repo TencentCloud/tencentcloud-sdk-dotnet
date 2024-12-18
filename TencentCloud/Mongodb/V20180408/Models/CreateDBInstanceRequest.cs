@@ -43,13 +43,13 @@ namespace TencentCloud.Mongodb.V20180408.Models
         public ulong? Volume{ get; set; }
 
         /// <summary>
-        /// 版本号，当前支持 MONGO_3_WT、MONGO_3_ROCKS、MONGO_36_WT
+        /// 指版本信息。具体支持的版本信息 ，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。 - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
         /// </summary>
         [JsonProperty("MongoVersion")]
         public string MongoVersion{ get; set; }
 
         /// <summary>
-        /// 机器类型，GIO：高IO版；TGIO：高IO万兆
+        /// 机器类型，HIO10G：高IO万兆。
         /// </summary>
         [JsonProperty("MachineCode")]
         public string MachineCode{ get; set; }
@@ -102,6 +102,12 @@ namespace TencentCloud.Mongodb.V20180408.Models
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
+        /// <summary>
+        /// 实例类型，REPLSET-副本集，SHARD-分片集群，默认为REPLSET
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Mongodb.V20180408.Models
             this.SetParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
             this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
             this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
         }
     }
 }

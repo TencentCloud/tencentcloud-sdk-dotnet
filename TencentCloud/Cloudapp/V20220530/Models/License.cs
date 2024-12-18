@@ -122,6 +122,12 @@ namespace TencentCloud.Cloudapp.V20220530.Models
         [JsonProperty("LifeSpanUnit")]
         public string LifeSpanUnit{ get; set; }
 
+        /// <summary>
+        /// 授权的类型：Standard正式版/Development开发版/Trial体验版
+        /// </summary>
+        [JsonProperty("LicenseType")]
+        public string LicenseType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -144,6 +150,7 @@ namespace TencentCloud.Cloudapp.V20220530.Models
             this.SetParamSimple(map, prefix + "ActivationDate", this.ActivationDate);
             this.SetParamSimple(map, prefix + "ExpirationDate", this.ExpirationDate);
             this.SetParamSimple(map, prefix + "LifeSpanUnit", this.LifeSpanUnit);
+            this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
         }
     }
 }

@@ -90,6 +90,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("WorkflowId")]
         public string WorkflowId{ get; set; }
 
+        /// <summary>
+        /// 项目ID列表，用于多项目实例趋势筛选，当指定了 ProjectIds 的时候，ProjectId 将只用来鉴权，不做筛选
+        /// </summary>
+        [JsonProperty("ProjectIds")]
+        public string[] ProjectIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "InCharge", this.InCharge);
             this.SetParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
+            this.SetParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
         }
     }
 }

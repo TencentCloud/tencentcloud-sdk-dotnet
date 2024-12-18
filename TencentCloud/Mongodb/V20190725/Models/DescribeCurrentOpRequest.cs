@@ -25,38 +25,41 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+        /// 指定要查询的实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 筛选条件，操作所属的命名空间namespace，格式为db.collection
+        /// 操作所属的命名空间 namespace，格式为 db.collection。
         /// </summary>
         [JsonProperty("Ns")]
         public string Ns{ get; set; }
 
         /// <summary>
-        /// 筛选条件，操作已经执行的时间（单位：毫秒），结果将返回超过设置时间的操作，默认值为0，取值范围为[0, 3600000]
+        /// 设置查询筛选条件为操作任务已经执行的时间。
+        /// - 默认值为0，取值范围为[0, 3600000]，单位：毫秒。
+        /// - 结果将返回超过设置时间的操作。
         /// </summary>
         [JsonProperty("MillisecondRunning")]
         public ulong? MillisecondRunning{ get; set; }
 
         /// <summary>
-        /// 筛选条件，操作类型，可能的取值：none，update，insert，query，command，getmore，remove和killcursors
+        /// 设置查询筛选条件为操作任务类型。取值包括：none、update、insert，query、command、getmore、remove 和 killcursors。
         /// </summary>
         [JsonProperty("Op")]
         public string Op{ get; set; }
 
         /// <summary>
-        /// 筛选条件，分片名称
+        /// 筛选条件，分片名称。
         /// </summary>
         [JsonProperty("ReplicaSetName")]
         public string ReplicaSetName{ get; set; }
 
         /// <summary>
-        /// 筛选条件，节点状态，可能的取值为：primary
-        /// secondary
+        /// 设置查询筛选条件为节点角色。
+        /// - primary：主节点。
+        /// - secondary：从节点。
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }

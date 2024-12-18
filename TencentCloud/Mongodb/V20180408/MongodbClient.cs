@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20180408
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2018-04-08";
-       private const string sdkVersion = "SDK_NET_3.0.1144";
+       private const string sdkVersion = "SDK_NET_3.0.1145";
 
         /// <summary>
         /// Client constructor.
@@ -244,7 +244,6 @@ namespace TencentCloud.Mongodb.V20180408
 
         /// <summary>
         /// 本接口(SetPassword)用于设置（初始化）MongoDB云数据库实例账户密码。
-        /// 
         /// </summary>
         /// <param name="req"><see cref="SetPasswordRequest"/></param>
         /// <returns><see cref="SetPasswordResponse"/></returns>
@@ -255,7 +254,6 @@ namespace TencentCloud.Mongodb.V20180408
 
         /// <summary>
         /// 本接口(SetPassword)用于设置（初始化）MongoDB云数据库实例账户密码。
-        /// 
         /// </summary>
         /// <param name="req"><see cref="SetPasswordRequest"/></param>
         /// <returns><see cref="SetPasswordResponse"/></returns>

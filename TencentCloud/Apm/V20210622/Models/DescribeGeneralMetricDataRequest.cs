@@ -25,23 +25,7 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 要过滤的维度信息：
-        /// service_metric视图支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤，service.name（服务名）必填。
-        /// span.kind:
-        /// 	server:服务端视角
-        /// 	client:客户端视角
-        /// 默认为服务端视角进行查询。
-        /// runtime_metric视图支持：service.name（服务名）维度进行过滤，service.name（服务名）必填。
-        /// sql_metric视图支持：service.name（服务名）、db.instance（数据库名称）、db.ip（数据库实例ip）维度进行过滤，查询service_slow_sql_count（慢sql）指标时service.name必填，查询sql_duration_avg（耗时）指标时db.instance（数据库名称）必填。
-        /// </summary>
-        [JsonProperty("Filters")]
-        public GeneralFilter[] Filters{ get; set; }
-
-        /// <summary>
-        /// 需要查询的指标，不可自定义输入。
-        /// service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
-        /// runtime_metric视图支持：service_gc_full_count（Full GC）。
-        /// sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
+        /// 需要查询的指标名称，不可自定义输入，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
         /// </summary>
         [JsonProperty("Metrics")]
         public string[] Metrics{ get; set; }
@@ -53,16 +37,19 @@ namespace TencentCloud.Apm.V20210622.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 视图名称，不可自定义输入。支持：service_metric、runtime_metric、sql_metric。
+        /// 视图名称，不可自定义输入。[详情请见。](https://cloud.tencent.com/document/product/248/101681)
         /// </summary>
         [JsonProperty("ViewName")]
         public string ViewName{ get; set; }
 
         /// <summary>
-        /// 聚合维度：
-        /// service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合，service.name（服务名）必填。
-        /// runtime_metric视图支持：service.name（服务名）维度进行聚合，service.name（服务名）必填。
-        /// sql_metric视图支持：service.name（服务名）、db.statement（sql语句）维度进行聚合，查询service_slow_sql_count（慢sql）时service.name（服务名）必填，查询sql_duration_avg（耗时）指标时service.name（服务名）、db.statement（sql语句）必填。
+        /// 要过滤的维度信息，不同视图有对应的指标维度，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+        /// </summary>
+        [JsonProperty("Filters")]
+        public GeneralFilter[] Filters{ get; set; }
+
+        /// <summary>
+        /// 聚合维度，不同视图有对应的指标维度，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
         /// </summary>
         [JsonProperty("GroupBy")]
         public string[] GroupBy{ get; set; }
@@ -87,11 +74,10 @@ namespace TencentCloud.Apm.V20210622.Models
 
         /// <summary>
         /// 对查询指标进行排序：
-        /// service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
-        /// runtime_metric视图支持：service_gc_full_count（Full GC）。
-        /// sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
-        /// asc:对查询指标进行升序排序
-        /// desc：对查询指标进行降序排序
+        /// Key 填写云 API 指标名称，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+        /// Value 填写排序方式：     
+        /// - asc:对查询指标进行升序排序
+        /// - desc：对查询指标进行降序排序
         /// </summary>
         [JsonProperty("OrderBy")]
         public OrderBy OrderBy{ get; set; }
@@ -108,10 +94,10 @@ namespace TencentCloud.Apm.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArraySimple(map, prefix + "Metrics.", this.Metrics);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "ViewName", this.ViewName);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);

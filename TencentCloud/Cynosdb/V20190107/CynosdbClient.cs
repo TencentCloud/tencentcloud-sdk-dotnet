@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1144";
+       private const string sdkVersion = "SDK_NET_3.0.1145";
 
         /// <summary>
         /// Client constructor.
@@ -995,6 +995,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeChangedParamsAfterUpgradeResponse DescribeChangedParamsAfterUpgradeSync(DescribeChangedParamsAfterUpgradeRequest req)
         {
             return InternalRequestAsync<DescribeChangedParamsAfterUpgradeResponse>(req, "DescribeChangedParamsAfterUpgrade")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取table列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterDatabaseTablesRequest"/></param>
+        /// <returns><see cref="DescribeClusterDatabaseTablesResponse"/></returns>
+        public Task<DescribeClusterDatabaseTablesResponse> DescribeClusterDatabaseTables(DescribeClusterDatabaseTablesRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterDatabaseTablesResponse>(req, "DescribeClusterDatabaseTables");
+        }
+
+        /// <summary>
+        /// 获取table列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterDatabaseTablesRequest"/></param>
+        /// <returns><see cref="DescribeClusterDatabaseTablesResponse"/></returns>
+        public DescribeClusterDatabaseTablesResponse DescribeClusterDatabaseTablesSync(DescribeClusterDatabaseTablesRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterDatabaseTablesResponse>(req, "DescribeClusterDatabaseTables")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

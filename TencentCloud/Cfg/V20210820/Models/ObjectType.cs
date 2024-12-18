@@ -76,6 +76,12 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("ObjectSupportType")]
         public long? ObjectSupportType{ get; set; }
 
+        /// <summary>
+        /// 1.接入层 2.逻辑层 3. 数据层
+        /// </summary>
+        [JsonProperty("ArchLayer")]
+        public long? ArchLayer{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -90,6 +96,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "ObjectHasNewAction", this.ObjectHasNewAction);
             this.SetParamSimple(map, prefix + "ObjectPlatformName", this.ObjectPlatformName);
             this.SetParamSimple(map, prefix + "ObjectSupportType", this.ObjectSupportType);
+            this.SetParamSimple(map, prefix + "ArchLayer", this.ArchLayer);
         }
     }
 }

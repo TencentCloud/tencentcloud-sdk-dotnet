@@ -69,15 +69,17 @@ namespace TencentCloud.Gwlb.V20240906.Models
         public AssociationItem[] AssociatedRule{ get; set; }
 
         /// <summary>
-        /// 后端协议类型。
+        /// 网关负载均衡目标组协议。
+        /// - tencent_geneve ：GENEVE 标准协议
+        /// - aws_geneve：GENEVE 兼容协议
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 调度算法。
-        /// ip_hash_3：弹性哈希
+        /// 均衡算法。
+        /// - ip_hash_3_elastic：弹性哈希
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScheduleAlgorithm")]
