@@ -28,7 +28,7 @@ namespace TencentCloud.Vrs.V20200824
 
        private const string endpoint = "vrs.tencentcloudapi.com";
        private const string version = "2020-08-24";
-       private const string sdkVersion = "SDK_NET_3.0.1143";
+       private const string sdkVersion = "SDK_NET_3.0.1144";
 
         /// <summary>
         /// Client constructor.
@@ -200,6 +200,27 @@ namespace TencentCloud.Vrs.V20200824
         public GetTrainingTextResponse GetTrainingTextSync(GetTrainingTextRequest req)
         {
             return InternalRequestAsync<GetTrainingTextResponse>(req, "GetTrainingText")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于查询复刻音色详细信息。
+        /// </summary>
+        /// <param name="req"><see cref="GetVRSVoiceTypeInfoRequest"/></param>
+        /// <returns><see cref="GetVRSVoiceTypeInfoResponse"/></returns>
+        public Task<GetVRSVoiceTypeInfoResponse> GetVRSVoiceTypeInfo(GetVRSVoiceTypeInfoRequest req)
+        {
+            return InternalRequestAsync<GetVRSVoiceTypeInfoResponse>(req, "GetVRSVoiceTypeInfo");
+        }
+
+        /// <summary>
+        /// 该接口用于查询复刻音色详细信息。
+        /// </summary>
+        /// <param name="req"><see cref="GetVRSVoiceTypeInfoRequest"/></param>
+        /// <returns><see cref="GetVRSVoiceTypeInfoResponse"/></returns>
+        public GetVRSVoiceTypeInfoResponse GetVRSVoiceTypeInfoSync(GetVRSVoiceTypeInfoRequest req)
+        {
+            return InternalRequestAsync<GetVRSVoiceTypeInfoResponse>(req, "GetVRSVoiceTypeInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1143</VersionPrefix>
+    <VersionPrefix>3.0.1144</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -83,6 +83,8 @@
     <Compile Include="V20190423\Models\CreateBatchProductionResponse.cs" />
     <Compile Include="V20190423\Models\CreateCloudStorageAIServiceRequest.cs" />
     <Compile Include="V20190423\Models\CreateCloudStorageAIServiceResponse.cs" />
+    <Compile Include="V20190423\Models\CreateCloudStorageAIServiceTaskRequest.cs" />
+    <Compile Include="V20190423\Models\CreateCloudStorageAIServiceTaskResponse.cs" />
     <Compile Include="V20190423\Models\CreateDeviceChannelRequest.cs" />
     <Compile Include="V20190423\Models\CreateDeviceChannelResponse.cs" />
     <Compile Include="V20190423\Models\CreateDeviceRequest.cs" />

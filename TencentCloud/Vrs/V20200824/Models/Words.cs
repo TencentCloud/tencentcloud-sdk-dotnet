@@ -25,14 +25,14 @@ namespace TencentCloud.Vrs.V20200824.Models
     {
         
         /// <summary>
-        /// 准确度 (<75则认为不合格)
+        /// 准确度 (小于75则认为不合格)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PronAccuracy")]
         public float? PronAccuracy{ get; set; }
 
         /// <summary>
-        /// 流畅度 (<0.95则认为不合格)
+        /// 流畅度 (小于0.95则认为不合格)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PronFluency")]

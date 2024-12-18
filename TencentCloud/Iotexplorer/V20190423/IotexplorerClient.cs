@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1143";
+       private const string sdkVersion = "SDK_NET_3.0.1144";
 
         /// <summary>
         /// Client constructor.
@@ -306,6 +306,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public CreateCloudStorageAIServiceResponse CreateCloudStorageAIServiceSync(CreateCloudStorageAIServiceRequest req)
         {
             return InternalRequestAsync<CreateCloudStorageAIServiceResponse>(req, "CreateCloudStorageAIService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建设备云存 AI 分析任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudStorageAIServiceTaskRequest"/></param>
+        /// <returns><see cref="CreateCloudStorageAIServiceTaskResponse"/></returns>
+        public Task<CreateCloudStorageAIServiceTaskResponse> CreateCloudStorageAIServiceTask(CreateCloudStorageAIServiceTaskRequest req)
+        {
+            return InternalRequestAsync<CreateCloudStorageAIServiceTaskResponse>(req, "CreateCloudStorageAIServiceTask");
+        }
+
+        /// <summary>
+        /// 创建设备云存 AI 分析任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudStorageAIServiceTaskRequest"/></param>
+        /// <returns><see cref="CreateCloudStorageAIServiceTaskResponse"/></returns>
+        public CreateCloudStorageAIServiceTaskResponse CreateCloudStorageAIServiceTaskSync(CreateCloudStorageAIServiceTaskRequest req)
+        {
+            return InternalRequestAsync<CreateCloudStorageAIServiceTaskResponse>(req, "CreateCloudStorageAIServiceTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2771,6 +2792,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 发布广播消息、发布RRPC消息属于早期服务，目前已停止维护，需要从官网下线。
+        /// 
         /// 发布广播消息
         /// </summary>
         /// <param name="req"><see cref="PublishBroadcastMessageRequest"/></param>
@@ -2781,6 +2804,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 发布广播消息、发布RRPC消息属于早期服务，目前已停止维护，需要从官网下线。
+        /// 
         /// 发布广播消息
         /// </summary>
         /// <param name="req"><see cref="PublishBroadcastMessageRequest"/></param>
@@ -2834,6 +2859,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 发布广播消息、发布RRPC消息属于早期服务，目前已停止维护，需要从官网下线。
+        /// 
         /// 下发RRPC消息
         /// </summary>
         /// <param name="req"><see cref="PublishRRPCMessageRequest"/></param>
@@ -2844,6 +2871,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 发布广播消息、发布RRPC消息属于早期服务，目前已停止维护，需要从官网下线。
+        /// 
         /// 下发RRPC消息
         /// </summary>
         /// <param name="req"><see cref="PublishRRPCMessageRequest"/></param>

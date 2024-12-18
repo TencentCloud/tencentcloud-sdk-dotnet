@@ -42,6 +42,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public ApproverItem[] Approvers{ get; set; }
 
         /// <summary>
+        /// 预览链接，有效期5分钟
+        /// 注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
+        /// </summary>
+        [JsonProperty("PreviewUrl")]
+        public string PreviewUrl{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -55,6 +62,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         {
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamArrayObj(map, prefix + "Approvers.", this.Approvers);
+            this.SetParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
