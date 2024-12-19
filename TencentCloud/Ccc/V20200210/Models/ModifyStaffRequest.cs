@@ -78,6 +78,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("UseMobileAccept")]
         public long? UseMobileAccept{ get; set; }
 
+        /// <summary>
+        /// 座席分机号（1 到 8 打头，4 - 6 位）
+        /// </summary>
+        [JsonProperty("ExtensionNumber")]
+        public string ExtensionNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamArraySimple(map, prefix + "SkillGroupIds.", this.SkillGroupIds);
             this.SetParamSimple(map, prefix + "UseMobileCallOut", this.UseMobileCallOut);
             this.SetParamSimple(map, prefix + "UseMobileAccept", this.UseMobileAccept);
+            this.SetParamSimple(map, prefix + "ExtensionNumber", this.ExtensionNumber);
         }
     }
 }

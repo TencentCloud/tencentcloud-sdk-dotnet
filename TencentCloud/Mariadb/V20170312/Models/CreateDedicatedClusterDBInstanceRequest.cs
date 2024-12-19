@@ -85,7 +85,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// db类型，不传默认0
+        /// db类型，不传默认8.0
         /// </summary>
         [JsonProperty("DbVersionId")]
         public string DbVersionId{ get; set; }

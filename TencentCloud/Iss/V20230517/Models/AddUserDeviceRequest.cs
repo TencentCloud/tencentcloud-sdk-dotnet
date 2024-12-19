@@ -31,7 +31,7 @@ namespace TencentCloud.Iss.V20230517.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 设备接入协议（1:RTMP,2:GB,3:GW,4:IVCP）
+        /// 设备接入协议（1:RTMP,2:GB,3:GW,6:ISUP）
         /// </summary>
         [JsonProperty("AccessProtocol")]
         public long? AccessProtocol{ get; set; }

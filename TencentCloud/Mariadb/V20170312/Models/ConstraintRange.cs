@@ -26,12 +26,14 @@ namespace TencentCloud.Mariadb.V20170312.Models
         
         /// <summary>
         /// 约束类型为section时的最小值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Min")]
         public string Min{ get; set; }
 
         /// <summary>
         /// 约束类型为section时的最大值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Max")]
         public string Max{ get; set; }

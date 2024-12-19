@@ -25,16 +25,22 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 集团服务ID。可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+        /// 委派管理员Uin。
+        /// </summary>
+        [JsonProperty("MemberUin")]
+        public long? MemberUin{ get; set; }
+
+        /// <summary>
+        /// 集团服务ID。和集团服务产品标识二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
         /// </summary>
         [JsonProperty("ServiceId")]
         public ulong? ServiceId{ get; set; }
 
         /// <summary>
-        /// 委派管理员Uin。
+        /// 集团服务产品标识。和集团服务ID二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
         /// </summary>
-        [JsonProperty("MemberUin")]
-        public long? MemberUin{ get; set; }
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Organization.V20210331.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
             this.SetParamSimple(map, prefix + "MemberUin", this.MemberUin);
+            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }
 }

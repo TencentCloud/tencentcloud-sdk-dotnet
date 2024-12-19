@@ -54,6 +54,12 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("ModuleCollection")]
         public string ModuleCollection{ get; set; }
 
+        /// <summary>
+        /// moduleId集合
+        /// </summary>
+        [JsonProperty("ModuleIdList")]
+        public string[] ModuleIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
             this.SetParamSimple(map, prefix + "AllPage", this.AllPage);
             this.SetParamSimple(map, prefix + "ModuleCollection", this.ModuleCollection);
+            this.SetParamArraySimple(map, prefix + "ModuleIdList.", this.ModuleIdList);
         }
     }
 }

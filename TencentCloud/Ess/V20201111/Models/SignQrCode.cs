@@ -43,6 +43,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ExpiredTime")]
         public long? ExpiredTime{ get; set; }
 
+        /// <summary>
+        /// 微信小程序二维码
+        /// </summary>
+        [JsonProperty("WeixinQrCodeUrl")]
+        public string WeixinQrCodeUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +58,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "QrCodeId", this.QrCodeId);
             this.SetParamSimple(map, prefix + "QrCodeUrl", this.QrCodeUrl);
             this.SetParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
+            this.SetParamSimple(map, prefix + "WeixinQrCodeUrl", this.WeixinQrCodeUrl);
         }
     }
 }

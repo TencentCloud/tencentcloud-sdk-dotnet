@@ -26,24 +26,28 @@ namespace TencentCloud.Batch.V20170312.Models
         
         /// <summary>
         /// 标准输出重定向本地路径
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StdoutLocalPath")]
         public string StdoutLocalPath{ get; set; }
 
         /// <summary>
         /// 标准错误重定向本地路径
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StderrLocalPath")]
         public string StderrLocalPath{ get; set; }
 
         /// <summary>
         /// 标准输出重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StdoutLocalFileName")]
         public string StdoutLocalFileName{ get; set; }
 
         /// <summary>
         /// 标准错误重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StderrLocalFileName")]
         public string StderrLocalFileName{ get; set; }

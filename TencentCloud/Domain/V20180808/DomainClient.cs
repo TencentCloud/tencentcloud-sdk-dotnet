@@ -28,7 +28,7 @@ namespace TencentCloud.Domain.V20180808
 
        private const string endpoint = "domain.tencentcloudapi.com";
        private const string version = "2018-08-08";
-       private const string sdkVersion = "SDK_NET_3.0.1145";
+       private const string sdkVersion = "SDK_NET_3.0.1146";
 
         /// <summary>
         /// Client constructor.
@@ -936,7 +936,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 本接口 ( ModifyDomainDNSBatch) 用于批量域名 DNS 修改 。
+        /// 本接口 ( ModifyDomainDNSBatch) 用于批量域名 DNS 修改 。
         /// </summary>
         /// <param name="req"><see cref="ModifyDomainDNSBatchRequest"/></param>
         /// <returns><see cref="ModifyDomainDNSBatchResponse"/></returns>
@@ -946,7 +946,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 本接口 ( ModifyDomainDNSBatch) 用于批量域名 DNS 修改 。
+        /// 本接口 ( ModifyDomainDNSBatch) 用于批量域名 DNS 修改 。
         /// </summary>
         /// <param name="req"><see cref="ModifyDomainDNSBatchRequest"/></param>
         /// <returns><see cref="ModifyDomainDNSBatchResponse"/></returns>

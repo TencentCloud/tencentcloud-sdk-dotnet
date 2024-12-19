@@ -25,16 +25,22 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// 集团服务ID。可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+        /// 委派管理员Uin列表。 最大长度20个
+        /// </summary>
+        [JsonProperty("MemberUins")]
+        public long?[] MemberUins{ get; set; }
+
+        /// <summary>
+        /// 集团服务ID。和集团服务产品标识二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
         /// </summary>
         [JsonProperty("ServiceId")]
         public ulong? ServiceId{ get; set; }
 
         /// <summary>
-        /// 委派管理员Uin列表。 最大长度20个
+        /// 集团服务产品标识。和集团服务ID二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
         /// </summary>
-        [JsonProperty("MemberUins")]
-        public long?[] MemberUins{ get; set; }
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
 
         /// <summary>
         /// 委派管理员管理范围。 取值：1-全部成员 2-部分成员，默认值1
@@ -60,8 +66,9 @@ namespace TencentCloud.Organization.V20210331.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
             this.SetParamArraySimple(map, prefix + "MemberUins.", this.MemberUins);
+            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
             this.SetParamSimple(map, prefix + "ManagementScope", this.ManagementScope);
             this.SetParamArraySimple(map, prefix + "ManagementScopeUins.", this.ManagementScopeUins);
             this.SetParamArraySimple(map, prefix + "ManagementScopeNodeIds.", this.ManagementScopeNodeIds);

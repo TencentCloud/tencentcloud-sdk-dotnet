@@ -72,6 +72,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("LastModifyTimestamp")]
         public long? LastModifyTimestamp{ get; set; }
 
+        /// <summary>
+        /// 座席分机号（1 到 8 打头，4 - 6 位）
+        /// </summary>
+        [JsonProperty("ExtensionNumber")]
+        public string ExtensionNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "RoleId", this.RoleId);
             this.SetParamArrayObj(map, prefix + "SkillGroupList.", this.SkillGroupList);
             this.SetParamSimple(map, prefix + "LastModifyTimestamp", this.LastModifyTimestamp);
+            this.SetParamSimple(map, prefix + "ExtensionNumber", this.ExtensionNumber);
         }
     }
 }

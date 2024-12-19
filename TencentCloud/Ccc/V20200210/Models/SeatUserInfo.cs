@@ -75,6 +75,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("Role")]
         public long? Role{ get; set; }
 
+        /// <summary>
+        /// 座席分机号（1 到 8 打头，4 - 6 位）
+        /// </summary>
+        [JsonProperty("ExtensionNumber")]
+        public string ExtensionNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +95,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamArraySimple(map, prefix + "SkillGroupNameList.", this.SkillGroupNameList);
             this.SetParamSimple(map, prefix + "Role", this.Role);
+            this.SetParamSimple(map, prefix + "ExtensionNumber", this.ExtensionNumber);
         }
     }
 }

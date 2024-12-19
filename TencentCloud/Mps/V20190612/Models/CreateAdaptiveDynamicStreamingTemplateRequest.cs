@@ -70,16 +70,16 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 是否为纯音频，0表示视频模版，1表示纯音频模版
+        /// 是否为纯音频，0表示视频模板，1表示纯音频模板
         /// 当值为1：
         /// 1. StreamInfos.N.RemoveVideo=1
         /// 2. StreamInfos.N.RemoveAudio=0
         /// 3. StreamInfos.N.Video.Codec=copy
-        /// 
         /// 当值为0：
-        /// 
         /// 1. StreamInfos.N.Video.Codec不能为copy
         /// 2. StreamInfos.N.Video.Fps不能为null
+        /// 注意：
+        /// 此值只是区分模板类型，任务使用RemoveAudio和RemoveVideo的值
         /// </summary>
         [JsonProperty("PureAudio")]
         public ulong? PureAudio{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Essbasic.V20210526
 
        private const string endpoint = "essbasic.tencentcloudapi.com";
        private const string version = "2021-05-26";
-       private const string sdkVersion = "SDK_NET_3.0.1145";
+       private const string sdkVersion = "SDK_NET_3.0.1146";
 
         /// <summary>
         /// Client constructor.
@@ -2706,6 +2706,37 @@ namespace TencentCloud.Essbasic.V20210526
         public CreateLegalSealQrCodeResponse CreateLegalSealQrCodeSync(CreateLegalSealQrCodeRequest req)
         {
             return InternalRequestAsync<CreateLegalSealQrCodeResponse>(req, "CreateLegalSealQrCode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 生成合成后的各类企业授权书，包括：
+        /// - 企业认证超管授权书
+        /// - 超管变更授权书
+        /// - 企业注销授权书
+        /// 
+        /// 注: 需自行保证传入真实的企业/法人/超管信息，否则后续的审核将会拒绝。
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrganizationAuthFileRequest"/></param>
+        /// <returns><see cref="CreateOrganizationAuthFileResponse"/></returns>
+        public Task<CreateOrganizationAuthFileResponse> CreateOrganizationAuthFile(CreateOrganizationAuthFileRequest req)
+        {
+            return InternalRequestAsync<CreateOrganizationAuthFileResponse>(req, "CreateOrganizationAuthFile");
+        }
+
+        /// <summary>
+        /// 生成合成后的各类企业授权书，包括：
+        /// - 企业认证超管授权书
+        /// - 超管变更授权书
+        /// - 企业注销授权书
+        /// 
+        /// 注: 需自行保证传入真实的企业/法人/超管信息，否则后续的审核将会拒绝。
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrganizationAuthFileRequest"/></param>
+        /// <returns><see cref="CreateOrganizationAuthFileResponse"/></returns>
+        public CreateOrganizationAuthFileResponse CreateOrganizationAuthFileSync(CreateOrganizationAuthFileRequest req)
+        {
+            return InternalRequestAsync<CreateOrganizationAuthFileResponse>(req, "CreateOrganizationAuthFile")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

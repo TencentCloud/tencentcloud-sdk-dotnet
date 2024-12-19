@@ -49,7 +49,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string OriginalOtherSettlement{ get; set; }
 
         /// <summary>
-        /// 其他约定，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
+        /// 其他约定（如约定的与解除协议存在冲突的，以【其他约定】为准），最大支持200个字，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
         /// </summary>
         [JsonProperty("OtherDeals")]
         public string OtherDeals{ get; set; }

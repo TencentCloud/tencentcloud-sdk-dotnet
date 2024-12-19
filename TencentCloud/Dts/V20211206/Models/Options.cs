@@ -95,6 +95,13 @@ namespace TencentCloud.Dts.V20211206.Models
         public long? AutoRetryTimeRangeMinutes{ get; set; }
 
         /// <summary>
+        /// 同步到kafka链路指定位点。目前只支持时间格式：yyyy-mm-dd hh:mm:ss。如果没有指定位点，为空。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StartPosition")]
+        public string StartPosition{ get; set; }
+
+        /// <summary>
         /// 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -124,6 +131,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamObj(map, prefix + "KafkaOption.", this.KafkaOption);
             this.SetParamObj(map, prefix + "RateLimitOption.", this.RateLimitOption);
             this.SetParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
+            this.SetParamSimple(map, prefix + "StartPosition", this.StartPosition);
             this.SetParamSimple(map, prefix + "FilterBeginCommit", this.FilterBeginCommit);
             this.SetParamSimple(map, prefix + "FilterCheckpoint", this.FilterCheckpoint);
         }

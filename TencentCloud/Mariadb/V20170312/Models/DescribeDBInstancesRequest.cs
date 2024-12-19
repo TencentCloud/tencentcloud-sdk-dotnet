@@ -133,13 +133,13 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string FilterInstanceType{ get; set; }
 
         /// <summary>
-        /// 按照实例状态进行筛选
+        /// 按照实例状态进行筛选。状态值 -2：已删除； -1：已隔离；0：创建中；1：流程处理中；2：运行中
         /// </summary>
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }
 
         /// <summary>
-        /// 排除实例状态
+        /// 排除实例状态。状态值 -2：已删除； -1：已隔离；0：创建中；1：流程处理中；2：运行中
         /// </summary>
         [JsonProperty("ExcludeStatus")]
         public long?[] ExcludeStatus{ get; set; }

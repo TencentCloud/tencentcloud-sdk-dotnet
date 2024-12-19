@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1145";
+       private const string sdkVersion = "SDK_NET_3.0.1146";
 
         /// <summary>
         /// Client constructor.
@@ -2540,6 +2540,27 @@ namespace TencentCloud.Tdmq.V20200217
         public ModifyPublicNetworkAccessPointResponse ModifyPublicNetworkAccessPointSync(ModifyPublicNetworkAccessPointRequest req)
         {
             return InternalRequestAsync<ModifyPublicNetworkAccessPointResponse>(req, "ModifyPublicNetworkAccessPoint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改pulsar专业版公网安全策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPublicNetworkSecurityPolicyRequest"/></param>
+        /// <returns><see cref="ModifyPublicNetworkSecurityPolicyResponse"/></returns>
+        public Task<ModifyPublicNetworkSecurityPolicyResponse> ModifyPublicNetworkSecurityPolicy(ModifyPublicNetworkSecurityPolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyPublicNetworkSecurityPolicyResponse>(req, "ModifyPublicNetworkSecurityPolicy");
+        }
+
+        /// <summary>
+        /// 修改pulsar专业版公网安全策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPublicNetworkSecurityPolicyRequest"/></param>
+        /// <returns><see cref="ModifyPublicNetworkSecurityPolicyResponse"/></returns>
+        public ModifyPublicNetworkSecurityPolicyResponse ModifyPublicNetworkSecurityPolicySync(ModifyPublicNetworkSecurityPolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyPublicNetworkSecurityPolicyResponse>(req, "ModifyPublicNetworkSecurityPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

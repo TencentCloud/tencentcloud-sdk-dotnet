@@ -25,31 +25,31 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 解除理由，最大支持200个字
+        /// 解除理由，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
         /// </summary>
         [JsonProperty("Reason")]
         public string Reason{ get; set; }
 
         /// <summary>
-        /// 解除后仍然有效的条款，保留条款，最大支持200个字
+        /// 解除后仍然有效的条款，保留条款，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
         /// </summary>
         [JsonProperty("RemainInForceItem")]
         public string RemainInForceItem{ get; set; }
 
         /// <summary>
-        /// 原合同事项处理-费用结算，最大支持200个字
+        /// 原合同事项处理-费用结算，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
         /// </summary>
         [JsonProperty("OriginalExpenseSettlement")]
         public string OriginalExpenseSettlement{ get; set; }
 
         /// <summary>
-        /// 原合同事项处理-其他事项，最大支持200个字
+        /// 原合同事项处理-其他事项，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
         /// </summary>
         [JsonProperty("OriginalOtherSettlement")]
         public string OriginalOtherSettlement{ get; set; }
 
         /// <summary>
-        /// 其他约定，最大支持200个字
+        /// 其他约定（如约定的与解除协议存在冲突的，以【其他约定】为准），最大支持200个字，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
         /// </summary>
         [JsonProperty("OtherDeals")]
         public string OtherDeals{ get; set; }

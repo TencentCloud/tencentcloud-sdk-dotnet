@@ -42,7 +42,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public MediaInputInfo Subtitle{ get; set; }
 
         /// <summary>
-        /// 字幕名称	
+        /// 字幕名称	。
+        /// 注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubtitleName")]
