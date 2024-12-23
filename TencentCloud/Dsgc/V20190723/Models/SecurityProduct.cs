@@ -26,14 +26,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 产品名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
         /// 产品链接
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReferUrl")]
         public string ReferUrl{ get; set; }

@@ -92,17 +92,21 @@ namespace TencentCloud.Dsgc.V20190723.Models
 
         /// <summary>
         /// 保护措施
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SafeGuard")]
         public DspaSafeGuard SafeGuard{ get; set; }
 
         /// <summary>
         /// 分类路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryFullPath")]
         public string CategoryFullPath{ get; set; }
+
+        /// <summary>
+        /// 模式名
+        /// </summary>
+        [JsonProperty("SchemaName")]
+        public string SchemaName{ get; set; }
 
 
         /// <summary>
@@ -123,6 +127,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "LevelRiskScore", this.LevelRiskScore);
             this.SetParamObj(map, prefix + "SafeGuard.", this.SafeGuard);
             this.SetParamSimple(map, prefix + "CategoryFullPath", this.CategoryFullPath);
+            this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
         }
     }
 }

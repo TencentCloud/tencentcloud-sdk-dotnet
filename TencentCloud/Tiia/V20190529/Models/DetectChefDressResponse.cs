@@ -26,7 +26,6 @@ namespace TencentCloud.Tiia.V20190529.Models
         
         /// <summary>
         /// 识别到的人体属性信息。单个人体属性信息包括人体检测置信度，属性信息，人体检测框。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bodies")]
         public AttributesForBody[] Bodies{ get; set; }

@@ -26,112 +26,96 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 数据库实例id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DBInstanceNums")]
         public long? DBInstanceNums{ get; set; }
 
         /// <summary>
         /// 数据库个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DBNums")]
         public long? DBNums{ get; set; }
 
         /// <summary>
         /// 表的个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableNums")]
         public long? TableNums{ get; set; }
 
         /// <summary>
         /// 字段个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FieldNums")]
         public long? FieldNums{ get; set; }
 
         /// <summary>
         /// 数据库实例的分布情况
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DBInstanceDistribution")]
         public Note[] DBInstanceDistribution{ get; set; }
 
         /// <summary>
         /// db分布情况
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DBDistribution")]
         public Note[] DBDistribution{ get; set; }
 
         /// <summary>
         /// cos桶的数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BucketNums")]
         public long? BucketNums{ get; set; }
 
         /// <summary>
         /// 文件个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileNums")]
         public long? FileNums{ get; set; }
 
         /// <summary>
         /// 用于对用户进行提示信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
         /// es实例数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EsInstanceNums")]
         public ulong? EsInstanceNums{ get; set; }
 
         /// <summary>
         /// es索引数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EsIndexNums")]
         public ulong? EsIndexNums{ get; set; }
 
         /// <summary>
         /// es字段数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EsFieldNums")]
         public ulong? EsFieldNums{ get; set; }
 
         /// <summary>
         /// mongo实例数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MongoInstanceNums")]
         public ulong? MongoInstanceNums{ get; set; }
 
         /// <summary>
         /// mongo数据库数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MongoDbNums")]
         public ulong? MongoDbNums{ get; set; }
 
         /// <summary>
         /// mongo集合数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MongoColNums")]
         public ulong? MongoColNums{ get; set; }
 
         /// <summary>
         /// mongo字段数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MongoFieldNums")]
         public ulong? MongoFieldNums{ get; set; }

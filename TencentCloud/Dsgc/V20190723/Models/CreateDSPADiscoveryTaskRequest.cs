@@ -49,12 +49,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public long? Enable{ get; set; }
 
         /// <summary>
-        /// 通用规则集开关，0 关闭，1 启用
-        /// </summary>
-        [JsonProperty("GeneralRuleSetEnable")]
-        public long? GeneralRuleSetEnable{ get; set; }
-
-        /// <summary>
         /// 执行计划， 0立即 1定时，选择“立即”时，扫描周期只能选择单次
         /// </summary>
         [JsonProperty("Plan")]
@@ -84,6 +78,13 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// </summary>
         [JsonProperty("DataSourceType")]
         public string DataSourceType{ get; set; }
+
+        /// <summary>
+        /// 通用规则集开关，0 关闭，1 启用
+        /// </summary>
+        [JsonProperty("GeneralRuleSetEnable")]
+        [System.Obsolete]
+        public long? GeneralRuleSetEnable{ get; set; }
 
         /// <summary>
         /// 任务描述，最大长度为1024个字符
@@ -138,11 +139,11 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "DataSourceId", this.DataSourceId);
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
-            this.SetParamSimple(map, prefix + "GeneralRuleSetEnable", this.GeneralRuleSetEnable);
             this.SetParamSimple(map, prefix + "Plan", this.Plan);
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
             this.SetParamSimple(map, prefix + "DataSourceType", this.DataSourceType);
+            this.SetParamSimple(map, prefix + "GeneralRuleSetEnable", this.GeneralRuleSetEnable);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Condition", this.Condition);
             this.SetParamArraySimple(map, prefix + "ComplianceGroupIds.", this.ComplianceGroupIds);

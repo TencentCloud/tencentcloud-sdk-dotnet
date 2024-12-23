@@ -347,6 +347,13 @@ namespace TencentCloud.Keewidb.V20220308.Models
         [JsonProperty("DiskReplicasNum")]
         public long? DiskReplicasNum{ get; set; }
 
+        /// <summary>
+        /// 数据压缩开关。<ul><li>ON：开启。</li><li>OFF：关闭。</li></ul>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Compression")]
+        public string Compression{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -404,6 +411,7 @@ namespace TencentCloud.Keewidb.V20220308.Models
             this.SetParamSimple(map, prefix + "DiskShardSize", this.DiskShardSize);
             this.SetParamSimple(map, prefix + "DiskShardNum", this.DiskShardNum);
             this.SetParamSimple(map, prefix + "DiskReplicasNum", this.DiskReplicasNum);
+            this.SetParamSimple(map, prefix + "Compression", this.Compression);
         }
     }
 }

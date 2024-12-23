@@ -26,7 +26,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 含高风险资产TOP10的列表数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssetsList")]
         public HighRiskAssetsDetail[] AssetsList{ get; set; }

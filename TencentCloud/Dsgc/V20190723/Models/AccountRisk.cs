@@ -26,14 +26,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// id（可不参考）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
         /// 风险账户
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskAccount")]
         public string RiskAccount{ get; set; }

@@ -27,7 +27,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// <summary>
         /// 规则内容，可以是正则规则，关键词，
         /// 忽略词扥
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleContent")]
         public string RuleContent{ get; set; }
@@ -36,7 +35,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// 是否区分大小写
         /// false: 不区分大小写
         /// true:区分大小写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsIgnoreCase")]
         public bool? IsIgnoreCase{ get; set; }

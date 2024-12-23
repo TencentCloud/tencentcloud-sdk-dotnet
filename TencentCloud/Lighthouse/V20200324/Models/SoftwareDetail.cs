@@ -25,19 +25,19 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 详情唯一键。
+        /// 软件的属性标识
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// 详情标题。
+        /// 软件的属性标识描述
         /// </summary>
         [JsonProperty("Title")]
         public string Title{ get; set; }
 
         /// <summary>
-        /// 详情值。
+        /// 软件的属性值
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

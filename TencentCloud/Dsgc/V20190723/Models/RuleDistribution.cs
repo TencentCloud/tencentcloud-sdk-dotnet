@@ -26,35 +26,30 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 规则id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleId")]
         public long? RuleId{ get; set; }
 
         /// <summary>
         /// 规则名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
         /// 分级id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LevelId")]
         public long? LevelId{ get; set; }
 
         /// <summary>
         /// 分级名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LevelName")]
         public string LevelName{ get; set; }
 
         /// <summary>
         /// 规则数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleCnt")]
         public long? RuleCnt{ get; set; }

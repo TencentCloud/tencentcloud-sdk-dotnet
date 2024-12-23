@@ -67,7 +67,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public long? LevelId{ get; set; }
 
         /// <summary>
-        /// 索引名称
+        /// 数据库名称
         /// </summary>
         [JsonProperty("DbName")]
         public string DbName{ get; set; }

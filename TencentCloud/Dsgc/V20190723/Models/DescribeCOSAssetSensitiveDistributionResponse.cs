@@ -26,21 +26,18 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// cos的涉敏资产
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CosAsset")]
         public CosAsset CosAsset{ get; set; }
 
         /// <summary>
         /// 涉敏top
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopAsset")]
         public TopAsset[] TopAsset{ get; set; }
 
         /// <summary>
         /// cos资产详情列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CosDetail")]
         public AssetCosDetail[] CosDetail{ get; set; }

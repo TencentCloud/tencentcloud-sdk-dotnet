@@ -48,7 +48,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string BusinessType{ get; set; }
 
         /// <summary>
-        /// 上传文件内容数组，最多支持上传20个文件。
+        /// 上传文件内容数组，一次最多可上传20个文件。
+        /// 
+        /// <b>若上传多个文件，所有文件必须为相同类型</b>，例如全部为PDF或全部为Word文件。不支持混合文件类型的上传。
         /// </summary>
         [JsonProperty("FileInfos")]
         public UploadFile[] FileInfos{ get; set; }

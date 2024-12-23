@@ -31,7 +31,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string FileBody{ get; set; }
 
         /// <summary>
-        /// 文件名，最大长度不超过200字符
+        /// 文件的名字。
+        /// 文件名的最大长度应不超过200个字符，并且文件名的后缀必须反映其文件类型。
+        /// 例如，PDF文件应以“.pdf”结尾，如“XXX.pdf”，而Word文件应以“.doc”或“.docx”结尾，如“XXX.doc”或“XXX.docx”。
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }

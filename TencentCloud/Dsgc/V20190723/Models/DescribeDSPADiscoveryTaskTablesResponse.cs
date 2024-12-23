@@ -26,7 +26,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 分类分级扫描表集合
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Items")]
         public DSPATableInfo[] Items{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Dsgc.V20190723
 
        private const string endpoint = "dsgc.tencentcloudapi.com";
        private const string version = "2019-07-23";
-       private const string sdkVersion = "SDK_NET_3.0.1146";
+       private const string sdkVersion = "SDK_NET_3.0.1147";
 
         /// <summary>
         /// Client constructor.
@@ -1225,7 +1225,7 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
-        /// 修改最新评估风险项状态
+        /// 查询风险的处理历史
         /// </summary>
         /// <param name="req"><see cref="DescribeDSPAAssessmentRiskProcessHistoryRequest"/></param>
         /// <returns><see cref="DescribeDSPAAssessmentRiskProcessHistoryResponse"/></returns>
@@ -1235,7 +1235,7 @@ namespace TencentCloud.Dsgc.V20190723
         }
 
         /// <summary>
-        /// 修改最新评估风险项状态
+        /// 查询风险的处理历史
         /// </summary>
         /// <param name="req"><see cref="DescribeDSPAAssessmentRiskProcessHistoryRequest"/></param>
         /// <returns><see cref="DescribeDSPAAssessmentRiskProcessHistoryResponse"/></returns>
@@ -2375,7 +2375,6 @@ namespace TencentCloud.Dsgc.V20190723
         /// <summary>
         /// 打开或者关闭分类分级规则
         /// 注：此API同时对该规则下的RDB跟COS规则操作。
-        /// 
         /// </summary>
         /// <param name="req"><see cref="EnableDSPADiscoveryRuleRequest"/></param>
         /// <returns><see cref="EnableDSPADiscoveryRuleResponse"/></returns>
@@ -2387,7 +2386,6 @@ namespace TencentCloud.Dsgc.V20190723
         /// <summary>
         /// 打开或者关闭分类分级规则
         /// 注：此API同时对该规则下的RDB跟COS规则操作。
-        /// 
         /// </summary>
         /// <param name="req"><see cref="EnableDSPADiscoveryRuleRequest"/></param>
         /// <returns><see cref="EnableDSPADiscoveryRuleResponse"/></returns>

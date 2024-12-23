@@ -38,7 +38,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
 
         /// <summary>
         /// 模板的描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateDescription")]
         public string TemplateDescription{ get; set; }
@@ -57,21 +56,18 @@ namespace TencentCloud.Dsgc.V20190723.Models
 
         /// <summary>
         /// 脆弱项配置列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskItemList")]
         public AssessmentRiskItem[] RiskItemList{ get; set; }
 
         /// <summary>
         /// 脆弱项配置条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
         /// 被任务引用次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskCitations")]
         public long? TaskCitations{ get; set; }

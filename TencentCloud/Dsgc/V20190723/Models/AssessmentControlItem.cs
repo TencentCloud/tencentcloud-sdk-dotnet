@@ -38,7 +38,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
 
         /// <summary>
         /// 评估项描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -75,7 +74,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
 
         /// <summary>
         /// 评估项关联的模板数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateCount")]
         public long? TemplateCount{ get; set; }

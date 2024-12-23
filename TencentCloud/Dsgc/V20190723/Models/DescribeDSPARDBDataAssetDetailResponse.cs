@@ -26,7 +26,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// RDB关系数据库敏感数据资产详情列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Details")]
         public DspaRDBDataAssetDetail[] Details{ get; set; }

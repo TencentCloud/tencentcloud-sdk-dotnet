@@ -54,6 +54,18 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("LevelGroupId")]
         public ulong? LevelGroupId{ get; set; }
 
+        /// <summary>
+        /// 1代表模版开启，0代表模版关闭
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
+        /// <summary>
+        /// 该complianceId的开启状态将被关闭
+        /// </summary>
+        [JsonProperty("CloseComplianceId")]
+        public long? CloseComplianceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamArrayObj(map, prefix + "ComplianceGroupRules.", this.ComplianceGroupRules);
             this.SetParamSimple(map, prefix + "LevelGroupId", this.LevelGroupId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "CloseComplianceId", this.CloseComplianceId);
         }
     }
 }

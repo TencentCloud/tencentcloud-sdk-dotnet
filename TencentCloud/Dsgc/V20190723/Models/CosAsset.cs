@@ -26,28 +26,24 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 桶的个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BucketNums")]
         public long? BucketNums{ get; set; }
 
         /// <summary>
         /// 敏感桶的个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveBucketNums")]
         public long? SensitiveBucketNums{ get; set; }
 
         /// <summary>
         /// 文件个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileNums")]
         public long? FileNums{ get; set; }
 
         /// <summary>
         /// 敏感文件的个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveFileNums")]
         public long? SensitiveFileNums{ get; set; }

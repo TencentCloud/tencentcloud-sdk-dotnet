@@ -31,7 +31,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string DspaId{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 风险id
         /// </summary>
         [JsonProperty("RiskId")]
         public long? RiskId{ get; set; }

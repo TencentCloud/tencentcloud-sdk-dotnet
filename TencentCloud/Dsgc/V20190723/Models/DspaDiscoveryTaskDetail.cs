@@ -32,7 +32,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
 
         /// <summary>
         /// 任务描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -57,35 +56,30 @@ namespace TencentCloud.Dsgc.V20190723.Models
 
         /// <summary>
         /// 元数据对象信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataSourceInfo")]
         public DspaDiscoveryTaskDataSource DataSourceInfo{ get; set; }
 
         /// <summary>
         /// 通用规则集开关，0 关闭，1 启用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GeneralRuleSetEnable")]
         public long? GeneralRuleSetEnable{ get; set; }
 
         /// <summary>
         /// 当创建任务时，用户打开了通用规则集开关，则该字段就会保存默认合规组信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultComplianceInfo")]
         public ScanTaskComplianceInfo[] DefaultComplianceInfo{ get; set; }
 
         /// <summary>
         /// 该任务中用户选择的合规组信息列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomComplianceInfo")]
         public ScanTaskComplianceInfo[] CustomComplianceInfo{ get; set; }
 
         /// <summary>
         /// 定时开始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimingStartTime")]
         public string TimingStartTime{ get; set; }

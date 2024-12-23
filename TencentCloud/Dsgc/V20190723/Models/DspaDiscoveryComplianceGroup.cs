@@ -26,42 +26,36 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 合规组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComplianceGroupId")]
         public long? ComplianceGroupId{ get; set; }
 
         /// <summary>
         /// 合规组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 合规组描述信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 合规组类型；0 默认合规组，1 系统合规组（除默认合规组外）, 2 自定义合规组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComplianceGroupType")]
         public long? ComplianceGroupType{ get; set; }
 
         /// <summary>
         /// 合规组对应的规则项
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComplianceGroupRules")]
         public DspaDiscoveryComplianceGroupRuleInfo[] ComplianceGroupRules{ get; set; }
 
         /// <summary>
         /// 合规组对应的分级组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LevelGroupId")]
         public ulong? LevelGroupId{ get; set; }

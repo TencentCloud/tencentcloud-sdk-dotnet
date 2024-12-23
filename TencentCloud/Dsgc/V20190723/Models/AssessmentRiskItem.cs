@@ -26,63 +26,54 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 脆弱项id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
         /// 名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskName")]
         public string RiskName{ get; set; }
 
         /// <summary>
         /// 脆弱性级别
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
         /// 说明
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 风险类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskType")]
         public string RiskType{ get; set; }
 
         /// <summary>
         /// 关联模板个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReferTemplateCount")]
         public long? ReferTemplateCount{ get; set; }
 
         /// <summary>
         /// 支持的数据源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportDataSource")]
         public string[] SupportDataSource{ get; set; }
 
         /// <summary>
         /// 风险面
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskSide")]
         public string RiskSide{ get; set; }
 
         /// <summary>
         /// 关联模板列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReferTemplateList")]
         public TemplateInfo[] ReferTemplateList{ get; set; }

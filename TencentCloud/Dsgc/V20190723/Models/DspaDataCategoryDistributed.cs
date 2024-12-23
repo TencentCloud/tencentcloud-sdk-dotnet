@@ -26,28 +26,24 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 数据分类ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryId")]
         public long? CategoryId{ get; set; }
 
         /// <summary>
         /// 数据分类名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryName")]
         public string CategoryName{ get; set; }
 
         /// <summary>
         /// 数据分类统计个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
 
         /// <summary>
         /// 分类路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryFullPath")]
         public string CategoryFullPath{ get; set; }

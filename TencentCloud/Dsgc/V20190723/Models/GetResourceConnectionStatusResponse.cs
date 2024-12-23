@@ -32,7 +32,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
 
         /// <summary>
         /// 连接状态的描述信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConnectionDesc")]
         public string ConnectionDesc{ get; set; }

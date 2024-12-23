@@ -32,8 +32,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
 
         /// <summary>
         /// 评估任务的自增ID
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskUid")]
         public long? TaskUid{ get; set; }
@@ -100,7 +98,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
 
         /// <summary>
         /// 评估任务完成时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FinishedTime")]
         public string FinishedTime{ get; set; }
@@ -125,7 +122,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
 
         /// <summary>
         /// 数据源信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiscoveryCondition")]
         public DiscoveryCondition DiscoveryCondition{ get; set; }
@@ -138,14 +134,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
 
         /// <summary>
         /// 模板主键id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateUid")]
         public long? TemplateUid{ get; set; }
 
         /// <summary>
         /// 进度百分比
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProgressPercent")]
         public long? ProgressPercent{ get; set; }

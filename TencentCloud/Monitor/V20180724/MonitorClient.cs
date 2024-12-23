@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1146";
+       private const string sdkVersion = "SDK_NET_3.0.1147";
 
         /// <summary>
         /// Client constructor.
@@ -2226,6 +2226,27 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 获取多写配置详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRemoteURLsRequest"/></param>
+        /// <returns><see cref="DescribeRemoteURLsResponse"/></returns>
+        public Task<DescribeRemoteURLsResponse> DescribeRemoteURLs(DescribeRemoteURLsRequest req)
+        {
+            return InternalRequestAsync<DescribeRemoteURLsResponse>(req, "DescribeRemoteURLs");
+        }
+
+        /// <summary>
+        /// 获取多写配置详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRemoteURLsRequest"/></param>
+        /// <returns><see cref="DescribeRemoteURLsResponse"/></returns>
+        public DescribeRemoteURLsResponse DescribeRemoteURLsSync(DescribeRemoteURLsRequest req)
+        {
+            return InternalRequestAsync<DescribeRemoteURLsResponse>(req, "DescribeRemoteURLs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 列出当前grafana实例的所有授权账号
         /// </summary>
         /// <param name="req"><see cref="DescribeSSOAccountRequest"/></param>
@@ -2790,6 +2811,27 @@ namespace TencentCloud.Monitor.V20180724
         public ModifyPrometheusTempResponse ModifyPrometheusTempSync(ModifyPrometheusTempRequest req)
         {
             return InternalRequestAsync<ModifyPrometheusTempResponse>(req, "ModifyPrometheusTemp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改多写配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRemoteURLsRequest"/></param>
+        /// <returns><see cref="ModifyRemoteURLsResponse"/></returns>
+        public Task<ModifyRemoteURLsResponse> ModifyRemoteURLs(ModifyRemoteURLsRequest req)
+        {
+            return InternalRequestAsync<ModifyRemoteURLsResponse>(req, "ModifyRemoteURLs");
+        }
+
+        /// <summary>
+        /// 修改多写配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRemoteURLsRequest"/></param>
+        /// <returns><see cref="ModifyRemoteURLsResponse"/></returns>
+        public ModifyRemoteURLsResponse ModifyRemoteURLsSync(ModifyRemoteURLsRequest req)
+        {
+            return InternalRequestAsync<ModifyRemoteURLsResponse>(req, "ModifyRemoteURLs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -74,94 +74,87 @@ namespace TencentCloud.Dsgc.V20190723.Models
 
         /// <summary>
         /// 分级风险分数，1-10，最小值为1，最大值为10
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LevelRiskScore")]
         public long? LevelRiskScore{ get; set; }
 
         /// <summary>
         /// 可信分
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrustedScore")]
         public string TrustedScore{ get; set; }
 
         /// <summary>
         /// 资源所在地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceRegion")]
         public string ResourceRegion{ get; set; }
 
         /// <summary>
         /// 字段扫描结果ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FieldResultId")]
         public string FieldResultId{ get; set; }
 
         /// <summary>
         /// 规则ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleId")]
         public long? RuleId{ get; set; }
 
         /// <summary>
         /// 分级ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LevelId")]
         public long? LevelId{ get; set; }
 
         /// <summary>
         /// 分类ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryId")]
         public long? CategoryId{ get; set; }
 
         /// <summary>
         /// 数据源名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataSourceName")]
         public string DataSourceName{ get; set; }
 
         /// <summary>
         /// 保护措施
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SafeGuard")]
         public DspaSafeGuard SafeGuard{ get; set; }
 
         /// <summary>
         /// 分类路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryFullPath")]
         public string CategoryFullPath{ get; set; }
 
         /// <summary>
         /// 0.系统识别，1人工打标
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentifyType")]
         public long? IdentifyType{ get; set; }
 
         /// <summary>
         /// 0未核查 1已核查
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckStatus")]
         public long? CheckStatus{ get; set; }
 
         /// <summary>
         /// 0非敏感，1敏感
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSensitiveData")]
         public long? IsSensitiveData{ get; set; }
+
+        /// <summary>
+        /// 模式名
+        /// </summary>
+        [JsonProperty("SchemaName")]
+        public string SchemaName{ get; set; }
 
 
         /// <summary>
@@ -190,6 +183,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "IdentifyType", this.IdentifyType);
             this.SetParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
             this.SetParamSimple(map, prefix + "IsSensitiveData", this.IsSensitiveData);
+            this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
         }
     }
 }

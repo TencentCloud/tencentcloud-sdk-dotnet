@@ -55,7 +55,7 @@ namespace TencentCloud.Thpc.V20220401.Models
         public long? ComputeNodeCount{ get; set; }
 
         /// <summary>
-        /// 调度器类型。默认取值：SLURM。<br><li>SGE：SGE调度器。<br><li>SLURM：SLURM调度器。
+        /// 调度器类型。默认取值：SLURM。<br><li>SGE：SGE调度器。</li><br><li>SLURM：SLURM调度器。</li>
         /// </summary>
         [JsonProperty("SchedulerType")]
         public string SchedulerType{ get; set; }
@@ -101,8 +101,7 @@ namespace TencentCloud.Thpc.V20220401.Models
         public bool? DryRun{ get; set; }
 
         /// <summary>
-        /// 域名字服务类型。默认取值：NIS。
-        /// <li>NIS：NIS域名字服务。
+        /// 域名字服务类型。默认取值：NIS。<li>NIS：NIS域名字服务。</li>
         /// </summary>
         [JsonProperty("AccountType")]
         public string AccountType{ get; set; }
@@ -138,7 +137,7 @@ namespace TencentCloud.Thpc.V20220401.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 弹性伸缩类型。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。<br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。
+        /// 弹性伸缩类型。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li><br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li>
         /// </summary>
         [JsonProperty("AutoScalingType")]
         public string AutoScalingType{ get; set; }

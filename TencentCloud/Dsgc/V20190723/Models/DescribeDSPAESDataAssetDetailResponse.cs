@@ -26,14 +26,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 总的个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
         /// 概览详情列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Details")]
         public ESDataAssetDetail[] Details{ get; set; }

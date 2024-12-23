@@ -104,7 +104,7 @@ namespace TencentCloud.Keewidb.V20220308.Models
         public long?[] Status{ get; set; }
 
         /// <summary>
-        /// 包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</ul>
+        /// 续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。
         /// </summary>
         [JsonProperty("AutoRenew")]
         public long?[] AutoRenew{ get; set; }

@@ -60,6 +60,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("ComplianceGroupTypeList")]
         public long?[] ComplianceGroupTypeList{ get; set; }
 
+        /// <summary>
+        /// 是否仅显示已开启模版
+        /// </summary>
+        [JsonProperty("IsFilterCloseComplianceGroup")]
+        public bool? IsFilterCloseComplianceGroup{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "ComplianceGroupTypeList.", this.ComplianceGroupTypeList);
+            this.SetParamSimple(map, prefix + "IsFilterCloseComplianceGroup", this.IsFilterCloseComplianceGroup);
         }
     }
 }

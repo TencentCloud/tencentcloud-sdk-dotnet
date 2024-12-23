@@ -26,56 +26,48 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// es
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataAssetType")]
         public long? DataAssetType{ get; set; }
 
         /// <summary>
         /// 敏感索引个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveIndexCnt")]
         public long? SensitiveIndexCnt{ get; set; }
 
         /// <summary>
         /// 总的索引个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalIndexCnt")]
         public long? TotalIndexCnt{ get; set; }
 
         /// <summary>
         /// 敏感字段个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveFieldCnt")]
         public long? SensitiveFieldCnt{ get; set; }
 
         /// <summary>
         /// 总的字段个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalFieldCnt")]
         public long? TotalFieldCnt{ get; set; }
 
         /// <summary>
         /// 敏感分类的个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveCategoryCnt")]
         public long? SensitiveCategoryCnt{ get; set; }
 
         /// <summary>
         /// 敏感分级的分布
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveLevel")]
         public SensitiveLevel[] SensitiveLevel{ get; set; }
 
         /// <summary>
         /// 敏感分类的分布
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryDistributed")]
         public DspaDataCategoryDistributed[] CategoryDistributed{ get; set; }

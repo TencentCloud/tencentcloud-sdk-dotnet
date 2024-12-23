@@ -27,14 +27,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// <summary>
         /// 只能取and 、or两个值其中之一，and：字段和内容同时满足，or：字段和内容满足其一.
         /// 默认值为or
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
         /// 规则内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Contents")]
         public DspaDiscoveryDataContent[] Contents{ get; set; }

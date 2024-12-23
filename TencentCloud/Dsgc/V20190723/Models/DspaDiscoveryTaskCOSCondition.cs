@@ -26,21 +26,18 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 数据桶名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
 
         /// <summary>
         /// 文件类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileTypes")]
         public string[] FileTypes{ get; set; }
 
         /// <summary>
         /// 文件大小上限，单位为KB，如1000, 目前单个文件最大只支持1GB（1048576KB）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileSizeLimit")]
         public long? FileSizeLimit{ get; set; }

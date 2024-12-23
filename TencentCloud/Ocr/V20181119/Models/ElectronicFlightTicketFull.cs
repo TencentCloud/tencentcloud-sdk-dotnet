@@ -162,6 +162,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("FlightItems")]
         public FlightItemInfo[] FlightItems{ get; set; }
 
+        /// <summary>
+        /// 机票开具状态
+        /// </summary>
+        [JsonProperty("InvoiceStatus")]
+        public string InvoiceStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +197,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Seller", this.Seller);
             this.SetParamSimple(map, prefix + "BuyerTaxID", this.BuyerTaxID);
             this.SetParamArrayObj(map, prefix + "FlightItems.", this.FlightItems);
+            this.SetParamSimple(map, prefix + "InvoiceStatus", this.InvoiceStatus);
         }
     }
 }

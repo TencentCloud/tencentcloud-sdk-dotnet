@@ -41,7 +41,9 @@ namespace TencentCloud.Ess.V20201111.Models
         public Caller Caller{ get; set; }
 
         /// <summary>
-        /// 上传文件内容数组，最多支持上传20个文件。
+        /// 请上传文件内容数组，最多可上传20个文件。
+        /// 
+        /// <b>所有文件必须符合<font color="red">FileType</font>指定的文件类型。</b>
         /// </summary>
         [JsonProperty("FileInfos")]
         public UploadFile[] FileInfos{ get; set; }

@@ -26,14 +26,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 操作符；只能取and, or的其中一种
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
         /// 规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Contents")]
         public DspaDiscoveryDataRule[] Contents{ get; set; }

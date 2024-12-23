@@ -26,28 +26,24 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// RDB实例列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RDBInstances")]
         public RDBInstance[] RDBInstances{ get; set; }
 
         /// <summary>
         /// COS实例列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("COSInstances")]
         public COSInstance[] COSInstances{ get; set; }
 
         /// <summary>
         /// Mongo实例列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NOSQLInstances")]
         public NOSQLInstance[] NOSQLInstances{ get; set; }
 
         /// <summary>
         /// ES实例列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ESInstances")]
         public ESInstance[] ESInstances{ get; set; }

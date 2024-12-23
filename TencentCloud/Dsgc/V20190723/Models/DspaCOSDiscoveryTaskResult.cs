@@ -80,7 +80,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
 
         /// <summary>
         /// 数据源名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataSourceName")]
         public string DataSourceName{ get; set; }
@@ -93,21 +92,18 @@ namespace TencentCloud.Dsgc.V20190723.Models
 
         /// <summary>
         /// Bucket扫描结果错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorInfo")]
         public string ErrorInfo{ get; set; }
 
         /// <summary>
         /// 资源所在地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceRegion")]
         public string ResourceRegion{ get; set; }
 
         /// <summary>
         /// 是否超额
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OverSize")]
         public string OverSize{ get; set; }

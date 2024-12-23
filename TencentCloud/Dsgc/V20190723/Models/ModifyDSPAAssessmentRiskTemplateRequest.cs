@@ -37,12 +37,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// 模板的描述
-        /// </summary>
-        [JsonProperty("TemplateDescription")]
-        public string TemplateDescription{ get; set; }
-
-        /// <summary>
         /// 模板id
         /// </summary>
         [JsonProperty("TemplateId")]
@@ -53,6 +47,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// </summary>
         [JsonProperty("RiskLevelId")]
         public long? RiskLevelId{ get; set; }
+
+        /// <summary>
+        /// 模板的描述
+        /// </summary>
+        [JsonProperty("TemplateDescription")]
+        public string TemplateDescription{ get; set; }
 
         /// <summary>
         /// 脆弱项列表
@@ -68,9 +68,9 @@ namespace TencentCloud.Dsgc.V20190723.Models
         {
             this.SetParamSimple(map, prefix + "DspaId", this.DspaId);
             this.SetParamSimple(map, prefix + "TemplateName", this.TemplateName);
-            this.SetParamSimple(map, prefix + "TemplateDescription", this.TemplateDescription);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamSimple(map, prefix + "RiskLevelId", this.RiskLevelId);
+            this.SetParamSimple(map, prefix + "TemplateDescription", this.TemplateDescription);
             this.SetParamArraySimple(map, prefix + "RiskIdList.", this.RiskIdList);
         }
     }

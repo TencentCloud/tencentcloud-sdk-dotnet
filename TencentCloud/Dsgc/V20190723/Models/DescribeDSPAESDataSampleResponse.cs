@@ -26,7 +26,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 数据样本列表，最多10条数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Items")]
         public string[] Items{ get; set; }

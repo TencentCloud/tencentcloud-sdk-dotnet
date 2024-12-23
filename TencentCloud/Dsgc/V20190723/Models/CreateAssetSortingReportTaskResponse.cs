@@ -26,14 +26,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 报表任务id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReportTaskId")]
         public ulong? ReportTaskId{ get; set; }
 
         /// <summary>
         /// 提示信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

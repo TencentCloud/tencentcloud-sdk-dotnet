@@ -26,112 +26,96 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FieldResultId")]
         public long? FieldResultId{ get; set; }
 
         /// <summary>
         /// 数据源id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataSourceId")]
         public string DataSourceId{ get; set; }
 
         /// <summary>
         /// 数据源名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataSourceName")]
         public string DataSourceName{ get; set; }
 
         /// <summary>
         /// 类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataSourceType")]
         public string DataSourceType{ get; set; }
 
         /// <summary>
         /// 地域信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceRegion")]
         public string ResourceRegion{ get; set; }
 
         /// <summary>
         /// 索引名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexName")]
         public string IndexName{ get; set; }
 
         /// <summary>
         /// 字段名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FieldName")]
         public string FieldName{ get; set; }
 
         /// <summary>
         /// 分类id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryId")]
         public long? CategoryId{ get; set; }
 
         /// <summary>
         /// 分类名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryName")]
         public string CategoryName{ get; set; }
 
         /// <summary>
         /// 分类路径数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryArr")]
         public string[] CategoryArr{ get; set; }
 
         /// <summary>
         /// 等级id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LevelId")]
         public long? LevelId{ get; set; }
 
         /// <summary>
         /// 分级名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LevelRiskName")]
         public string LevelRiskName{ get; set; }
 
         /// <summary>
         /// 分级分数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LevelRiskScore")]
         public long? LevelRiskScore{ get; set; }
 
         /// <summary>
         /// 可信分
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrustedScore")]
         public float? TrustedScore{ get; set; }
 
         /// <summary>
         /// 规则id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleId")]
         public long? RuleId{ get; set; }
 
         /// <summary>
         /// 规则名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }

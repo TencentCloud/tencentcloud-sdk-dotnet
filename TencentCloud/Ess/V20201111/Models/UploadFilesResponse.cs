@@ -27,6 +27,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 文件资源ID数组，每个文件资源ID为32位字符串。
         /// 建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
+        /// 注:`有效期一个小时（超过一小时后系统不定期清理，会有部分时间差）, 有效期内此文件id可以反复使用, 超过有效期无法使用`
         /// </summary>
         [JsonProperty("FileIds")]
         public string[] FileIds{ get; set; }

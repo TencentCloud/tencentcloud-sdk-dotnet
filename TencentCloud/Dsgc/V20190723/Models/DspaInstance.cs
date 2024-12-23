@@ -118,21 +118,18 @@ namespace TencentCloud.Dsgc.V20190723.Models
 
         /// <summary>
         /// 实例渠道
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Channel")]
         public string Channel{ get; set; }
 
         /// <summary>
         /// 已授权的实例数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InsAuthCount")]
         public long? InsAuthCount{ get; set; }
 
         /// <summary>
         /// 已购买的实例数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InsTotalQuota")]
         public long? InsTotalQuota{ get; set; }

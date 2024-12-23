@@ -26,7 +26,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 处理的历史
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcessHistory")]
         public ProcessHistory[] ProcessHistory{ get; set; }

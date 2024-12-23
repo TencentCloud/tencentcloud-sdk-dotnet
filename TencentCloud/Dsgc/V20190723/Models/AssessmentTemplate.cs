@@ -26,7 +26,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
@@ -45,7 +44,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
 
         /// <summary>
         /// 描述信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -88,21 +86,18 @@ namespace TencentCloud.Dsgc.V20190723.Models
 
         /// <summary>
         /// 支持的数据源类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportDataSource")]
         public string[] SupportDataSource{ get; set; }
 
         /// <summary>
         /// 是否包含攻击面风险
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsASMTemplate")]
         public bool? IsASMTemplate{ get; set; }
 
         /// <summary>
         /// 合规组id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentifyComplianceId")]
         public long? IdentifyComplianceId{ get; set; }

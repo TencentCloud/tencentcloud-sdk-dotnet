@@ -26,7 +26,6 @@ namespace TencentCloud.Tiia.V20190529.Models
         
         /// <summary>
         /// 图库信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Groups")]
         public GroupInfo[] Groups{ get; set; }

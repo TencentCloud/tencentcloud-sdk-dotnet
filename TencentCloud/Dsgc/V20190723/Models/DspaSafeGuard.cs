@@ -29,7 +29,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// UNSET 未设置
         /// DISABLE 规则设置未启用
         /// ENABLE 规则设置并启用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Encrypt")]
         public string Encrypt{ get; set; }
@@ -39,7 +38,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// UNSET 未设置
         /// DISABLE 规则设置未启用
         /// ENABLE 规则设置并启用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Desensitization")]
         public string Desensitization{ get; set; }

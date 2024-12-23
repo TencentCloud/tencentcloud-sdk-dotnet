@@ -26,49 +26,42 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 规则ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleId")]
         public long? RuleId{ get; set; }
 
         /// <summary>
         /// 规则名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 规则描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 规则来源，取值：0 内置, 1 自定义
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Source")]
         public long? Source{ get; set; }
 
         /// <summary>
         /// RDB规则详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RDBRules")]
         public DspaDiscoveryRDBRules RDBRules{ get; set; }
 
         /// <summary>
         /// COS规则详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("COSRules")]
         public DspaDiscoveryCOSRules COSRules{ get; set; }
 
         /// <summary>
         /// 0关闭，1开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

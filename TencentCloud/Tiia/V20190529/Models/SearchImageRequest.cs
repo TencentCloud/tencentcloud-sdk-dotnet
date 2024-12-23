@@ -85,6 +85,7 @@ namespace TencentCloud.Tiia.V20190529.Models
         /// <summary>
         /// 标签过滤条件。
         /// 针对创建图片时提交的Tags信息进行条件过滤。支持>、>=、 <、 <=、=，!=，多个条件之间支持AND和OR进行连接。
+        /// 最大支持64字符。
         /// </summary>
         [JsonProperty("Filter")]
         public string Filter{ get; set; }

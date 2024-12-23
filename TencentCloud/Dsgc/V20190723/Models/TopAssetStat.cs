@@ -26,21 +26,18 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 数据源id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataSourceId")]
         public string DataSourceId{ get; set; }
 
         /// <summary>
         /// db_name
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubData")]
         public string SubData{ get; set; }
 
         /// <summary>
         /// 敏感个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveCnt")]
         public long? SensitiveCnt{ get; set; }

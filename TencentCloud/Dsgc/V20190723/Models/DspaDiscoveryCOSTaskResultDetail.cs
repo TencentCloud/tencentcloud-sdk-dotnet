@@ -32,119 +32,108 @@ namespace TencentCloud.Dsgc.V20190723.Models
 
         /// <summary>
         /// 扫描File结果详情ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileResultId")]
         public long? FileResultId{ get; set; }
 
         /// <summary>
         /// 所属桶名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BucketName")]
         public string BucketName{ get; set; }
 
         /// <summary>
         /// 所属文件名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
         /// 敏感数据分类ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryId")]
         public long? CategoryId{ get; set; }
 
         /// <summary>
         /// 敏感数据分类名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryName")]
         public string CategoryName{ get; set; }
 
         /// <summary>
         /// 敏感数据分级ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LevelId")]
         public long? LevelId{ get; set; }
 
         /// <summary>
         /// 敏感数据分级名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LevelName")]
         public string LevelName{ get; set; }
 
         /// <summary>
         /// KMS加密，true or false
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KMSEncrypted")]
         public bool? KMSEncrypted{ get; set; }
 
         /// <summary>
         /// 规则名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
         /// 规则ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleId")]
         public long? RuleId{ get; set; }
 
         /// <summary>
         /// 敏感数据分级分数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LevelRiskScore")]
         public long? LevelRiskScore{ get; set; }
 
         /// <summary>
         /// 文件大小，单位为KB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileSize")]
         public long? FileSize{ get; set; }
 
         /// <summary>
         /// 文件类型，如csv，txt
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }
 
         /// <summary>
         /// 敏感数据出现次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveDataCount")]
         public long? SensitiveDataCount{ get; set; }
 
         /// <summary>
         /// 分类树路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryFullPath")]
         public string[] CategoryFullPath{ get; set; }
 
         /// <summary>
+        /// 分类树路径
+        /// </summary>
+        [JsonProperty("CategoryArr")]
+        public string[] CategoryArr{ get; set; }
+
+        /// <summary>
         /// 合规组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComplianceId")]
         public long? ComplianceId{ get; set; }
 
         /// <summary>
         /// 结果id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultId")]
         public long? ResultId{ get; set; }
@@ -171,6 +160,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "FileType", this.FileType);
             this.SetParamSimple(map, prefix + "SensitiveDataCount", this.SensitiveDataCount);
             this.SetParamArraySimple(map, prefix + "CategoryFullPath.", this.CategoryFullPath);
+            this.SetParamArraySimple(map, prefix + "CategoryArr.", this.CategoryArr);
             this.SetParamSimple(map, prefix + "ComplianceId", this.ComplianceId);
             this.SetParamSimple(map, prefix + "ResultId", this.ResultId);
         }

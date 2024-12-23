@@ -26,14 +26,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 创建的别名规则id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AliasRuleId")]
         public long? AliasRuleId{ get; set; }
 
         /// <summary>
         /// 别名规则名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AliasRuleName")]
         public string AliasRuleName{ get; set; }

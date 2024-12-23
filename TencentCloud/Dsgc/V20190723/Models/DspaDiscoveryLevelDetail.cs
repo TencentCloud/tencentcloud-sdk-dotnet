@@ -26,49 +26,42 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 分级组名称，唯一性约束，最多60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字，Name不可重复
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LevelGroupName")]
         public string LevelGroupName{ get; set; }
 
         /// <summary>
         /// 分级组来源，0为内置，1为自定义
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Source")]
         public long? Source{ get; set; }
 
         /// <summary>
         /// 分级组描述，最多1024字符
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LevelGroupDesc")]
         public string LevelGroupDesc{ get; set; }
 
         /// <summary>
         /// 具体分级标识详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LevelDetail")]
         public LevelItem[] LevelDetail{ get; set; }
 
         /// <summary>
         /// 引用合规组次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RefComplianceCnt")]
         public ulong? RefComplianceCnt{ get; set; }
 
         /// <summary>
         /// 引用合规组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RefCompliance")]
         public DspaDiscoveryComplianceGroup[] RefCompliance{ get; set; }
 
         /// <summary>
         /// 分级组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LevelGroupId")]
         public ulong? LevelGroupId{ get; set; }

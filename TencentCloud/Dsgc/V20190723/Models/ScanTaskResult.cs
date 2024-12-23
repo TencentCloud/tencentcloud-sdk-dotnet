@@ -48,6 +48,18 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
+        /// <summary>
+        /// 结果描述
+        /// </summary>
+        [JsonProperty("ResultDescription")]
+        public string ResultDescription{ get; set; }
+
+        /// <summary>
+        /// 结果建议
+        /// </summary>
+        [JsonProperty("Suggestion")]
+        public string Suggestion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Result", this.Result);
+            this.SetParamSimple(map, prefix + "ResultDescription", this.ResultDescription);
+            this.SetParamSimple(map, prefix + "Suggestion", this.Suggestion);
         }
     }
 }

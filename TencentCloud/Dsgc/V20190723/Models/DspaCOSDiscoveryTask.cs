@@ -68,21 +68,18 @@ namespace TencentCloud.Dsgc.V20190723.Models
 
         /// <summary>
         /// 任务最新的一次执行结果信息，该字段用于查询任务列表接口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Result")]
         public ScanTaskResult Result{ get; set; }
 
         /// <summary>
         /// 定时开始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimingStartTime")]
         public string TimingStartTime{ get; set; }
 
         /// <summary>
         /// 关联分类模板是否更新
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComplianceUpdate")]
         public bool? ComplianceUpdate{ get; set; }

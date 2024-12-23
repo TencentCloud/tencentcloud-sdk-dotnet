@@ -26,21 +26,18 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// AK编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AK")]
         public string AK{ get; set; }
 
         /// <summary>
         /// SK编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SK")]
         public string SK{ get; set; }
 
         /// <summary>
         /// URL编码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("URL")]
         public string URL{ get; set; }

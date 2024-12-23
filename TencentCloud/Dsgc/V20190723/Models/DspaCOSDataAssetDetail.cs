@@ -98,42 +98,36 @@ namespace TencentCloud.Dsgc.V20190723.Models
 
         /// <summary>
         /// 资源所在地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceRegion")]
         public string ResourceRegion{ get; set; }
 
         /// <summary>
         /// 分类ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryId")]
         public long? CategoryId{ get; set; }
 
         /// <summary>
         /// 分级ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LevelId")]
         public long? LevelId{ get; set; }
 
         /// <summary>
         /// 文件扫描结果ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileResultId")]
         public long? FileResultId{ get; set; }
 
         /// <summary>
         /// 数据源名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataSourceName")]
         public string DataSourceName{ get; set; }
 
         /// <summary>
         /// 分类路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryFullPath")]
         public string CategoryFullPath{ get; set; }
@@ -141,7 +135,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// <summary>
         /// 0-系统识别
         /// 1-人工识别
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentifyType")]
         public long? IdentifyType{ get; set; }
@@ -149,7 +142,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// <summary>
         /// 0-系统识别
         /// 1-人工识别
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckStatus")]
         public long? CheckStatus{ get; set; }

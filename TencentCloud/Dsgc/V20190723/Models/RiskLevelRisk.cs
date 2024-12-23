@@ -26,35 +26,30 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 风险id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
         /// 风险等级列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskLevelName")]
         public string RiskLevelName{ get; set; }
 
         /// <summary>
         /// 风险级别描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskLevelDescription")]
         public string RiskLevelDescription{ get; set; }
 
         /// <summary>
         /// 引用的分类分级模板
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentifyComplianceName")]
         public string IdentifyComplianceName{ get; set; }
 
         /// <summary>
         /// 类型，区分自定义还是系统内置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

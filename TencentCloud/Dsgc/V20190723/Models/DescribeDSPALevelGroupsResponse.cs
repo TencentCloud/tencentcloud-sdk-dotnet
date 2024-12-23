@@ -27,14 +27,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// <summary>
         /// 符合条件的敏感数据分级标识记录
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Items")]
         public DspaDiscoveryLevelDetail[] Items{ get; set; }
 
         /// <summary>
         /// 符合条件的敏感数据分级标识记录数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]

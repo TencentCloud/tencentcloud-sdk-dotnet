@@ -38,16 +38,23 @@ namespace TencentCloud.Dsgc.V20190723.Models
 
         /// <summary>
         /// 过滤项。
-        /// 支持的过滤项包括：DspaId、Status、Version、DspaName。
+        /// 支持的过滤项包括：DspaId、Status、Version、DspaName、Channel。
         /// DspaId和DspaName支持模糊搜索。
         /// Status支持的可选值：enabled、disabled。
         /// Version支持的可选值：trial、official。
+        /// Channel支持的可选值：sp_cds_dsgc_pre（代表dsgc实例）、sp_cds_dsgc_wedata_dc（代表wedata实例）
         /// </summary>
         [JsonProperty("Filters")]
         public DspaDataSourceMngFilter[] Filters{ get; set; }
 
         /// <summary>
         /// 展示模式。
+        /// 
+        /// 目前只有两个值的处理逻辑：
+        /// 
+        /// 空值：需要查询每个实例的配额信息，因为是串行查询，所以速度很慢，limit最大为100
+        /// 
+        /// "simple"：不需要查询每个实例的配额信息，速度快，limit最大为1000
         /// </summary>
         [JsonProperty("ListMode")]
         public string ListMode{ get; set; }

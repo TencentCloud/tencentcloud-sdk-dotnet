@@ -26,56 +26,48 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 数据源id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataSourceId")]
         public string DataSourceId{ get; set; }
 
         /// <summary>
         /// 数据库名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DdName")]
         public string DdName{ get; set; }
 
         /// <summary>
         /// 数据库类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataType")]
         public string DataType{ get; set; }
 
         /// <summary>
         /// 集合的数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ColNums")]
         public long? ColNums{ get; set; }
 
         /// <summary>
         /// 敏感集合数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveColNums")]
         public long? SensitiveColNums{ get; set; }
 
         /// <summary>
         /// 字段的数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FieldNums")]
         public long? FieldNums{ get; set; }
 
         /// <summary>
         /// 敏感字段的数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveFieldNums")]
         public long? SensitiveFieldNums{ get; set; }
 
         /// <summary>
         /// 敏感数据分布
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DistributionData")]
         public Note[] DistributionData{ get; set; }

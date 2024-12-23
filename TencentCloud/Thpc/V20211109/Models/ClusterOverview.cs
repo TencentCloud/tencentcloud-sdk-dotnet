@@ -31,7 +31,7 @@ namespace TencentCloud.Thpc.V20211109.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 集群状态。取值范围：<br><li>PENDING：创建中<br><li>INITING：初始化中<br><li>INIT_FAILED：初始化失败<br><li>RUNNING：运行中<br><li>TERMINATING：销毁中
+        /// 集群状态。取值范围：<br><li>PENDING：创建中</li><br><li>INITING：初始化中</li><br><li>INIT_FAILED：初始化失败</li><br><li>RUNNING：运行中</li><br><li>TERMINATING：销毁中</li>
         /// </summary>
         [JsonProperty("ClusterStatus")]
         public string ClusterStatus{ get; set; }

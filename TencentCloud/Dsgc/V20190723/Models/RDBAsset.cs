@@ -26,42 +26,36 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// DB总数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DbNums")]
         public long? DbNums{ get; set; }
 
         /// <summary>
         /// 敏感DB数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveDbNums")]
         public long? SensitiveDbNums{ get; set; }
 
         /// <summary>
         /// 表数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableNums")]
         public long? TableNums{ get; set; }
 
         /// <summary>
         /// 敏感表的数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveTableNums")]
         public long? SensitiveTableNums{ get; set; }
 
         /// <summary>
         /// 字段数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FieldNums")]
         public long? FieldNums{ get; set; }
 
         /// <summary>
         /// 敏感的字段数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveFieldNums")]
         public long? SensitiveFieldNums{ get; set; }

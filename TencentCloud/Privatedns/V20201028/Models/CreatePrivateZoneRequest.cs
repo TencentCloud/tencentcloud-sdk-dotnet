@@ -58,6 +58,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
         /// 创建私有域的同时，将其关联至VPC
         /// </summary>
         [JsonProperty("Vpcs")]
+        [System.Obsolete]
         public VpcInfo[] Vpcs{ get; set; }
 
         /// <summary>

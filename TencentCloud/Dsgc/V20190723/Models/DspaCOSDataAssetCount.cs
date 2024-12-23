@@ -26,63 +26,54 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 数组资产类型，0代表关系型数据库资产，1代表对象存储COS资产
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataAssetType")]
         public long? DataAssetType{ get; set; }
 
         /// <summary>
         /// 已扫描的存储桶的个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalBucketCnt")]
         public long? TotalBucketCnt{ get; set; }
 
         /// <summary>
         /// 对象总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalObjectCnt")]
         public long? TotalObjectCnt{ get; set; }
 
         /// <summary>
         /// 敏感数据类型个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveCategoryCnt")]
         public long? SensitiveCategoryCnt{ get; set; }
 
         /// <summary>
         /// 敏感数据条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveDataCnt")]
         public long? SensitiveDataCnt{ get; set; }
 
         /// <summary>
         /// 敏感等级分布
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveLevel")]
         public SensitiveLevel[] SensitiveLevel{ get; set; }
 
         /// <summary>
         /// 敏感存储桶个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveBucketCnt")]
         public long? SensitiveBucketCnt{ get; set; }
 
         /// <summary>
         /// 敏感对象个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveObjectCnt")]
         public long? SensitiveObjectCnt{ get; set; }
 
         /// <summary>
         /// 数据分类分布
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryDistributed")]
         public DspaDataCategoryDistributed[] CategoryDistributed{ get; set; }

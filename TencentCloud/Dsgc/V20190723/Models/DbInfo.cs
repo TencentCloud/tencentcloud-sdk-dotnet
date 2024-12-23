@@ -26,21 +26,18 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 数据库名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DbName")]
         public string DbName{ get; set; }
 
         /// <summary>
         /// 绑定的状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValidStatus")]
         public string ValidStatus{ get; set; }
 
         /// <summary>
         /// 绑定的类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BindType")]
         public string BindType{ get; set; }

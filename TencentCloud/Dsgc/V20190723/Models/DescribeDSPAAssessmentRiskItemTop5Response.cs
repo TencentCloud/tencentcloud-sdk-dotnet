@@ -25,8 +25,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
     {
         
         /// <summary>
-        /// 无
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 风险结果
         /// </summary>
         [JsonProperty("Items")]
         public RiskItem[] Items{ get; set; }

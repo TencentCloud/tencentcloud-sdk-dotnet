@@ -28,21 +28,18 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// 规则类型；取值：
         /// keyword 关键字, 
         /// regex 正则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
 
         /// <summary>
         /// 内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleContent")]
         public string RuleContent{ get; set; }
 
         /// <summary>
         /// 该字段是针对规则类型RuleType为keyword类型时的一个扩展属性
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtendParameters")]
         public DatagovRuleExtendParameter[] ExtendParameters{ get; set; }

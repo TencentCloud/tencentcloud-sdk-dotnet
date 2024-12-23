@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1146</VersionPrefix>
+    <VersionPrefix>3.0.1147</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -97,6 +97,7 @@
     <Compile Include="V20220901\Models\CodeAction.cs" />
     <Compile Include="V20220901\Models\Compression.cs" />
     <Compile Include="V20220901\Models\ConfigGroupVersionInfo.cs" />
+    <Compile Include="V20220901\Models\ContentIdentifier.cs" />
     <Compile Include="V20220901\Models\CreateAccelerationDomainRequest.cs" />
     <Compile Include="V20220901\Models\CreateAccelerationDomainResponse.cs" />
     <Compile Include="V20220901\Models\CreateAliasDomainRequest.cs" />
@@ -109,8 +110,12 @@
     <Compile Include="V20220901\Models\CreateCLSIndexResponse.cs" />
     <Compile Include="V20220901\Models\CreateConfigGroupVersionRequest.cs" />
     <Compile Include="V20220901\Models\CreateConfigGroupVersionResponse.cs" />
+    <Compile Include="V20220901\Models\CreateContentIdentifierRequest.cs" />
+    <Compile Include="V20220901\Models\CreateContentIdentifierResponse.cs" />
     <Compile Include="V20220901\Models\CreateCustomizeErrorPageRequest.cs" />
     <Compile Include="V20220901\Models\CreateCustomizeErrorPageResponse.cs" />
+    <Compile Include="V20220901\Models\CreateDnsRecordRequest.cs" />
+    <Compile Include="V20220901\Models\CreateDnsRecordResponse.cs" />
     <Compile Include="V20220901\Models\CreateFunctionRequest.cs" />
     <Compile Include="V20220901\Models\CreateFunctionResponse.cs" />
     <Compile Include="V20220901\Models\CreateFunctionRuleRequest.cs" />
@@ -158,8 +163,12 @@
     <Compile Include="V20220901\Models\DeleteApplicationProxyResponse.cs" />
     <Compile Include="V20220901\Models\DeleteApplicationProxyRuleRequest.cs" />
     <Compile Include="V20220901\Models\DeleteApplicationProxyRuleResponse.cs" />
+    <Compile Include="V20220901\Models\DeleteContentIdentifierRequest.cs" />
+    <Compile Include="V20220901\Models\DeleteContentIdentifierResponse.cs" />
     <Compile Include="V20220901\Models\DeleteCustomErrorPageRequest.cs" />
     <Compile Include="V20220901\Models\DeleteCustomErrorPageResponse.cs" />
+    <Compile Include="V20220901\Models\DeleteDnsRecordsRequest.cs" />
+    <Compile Include="V20220901\Models\DeleteDnsRecordsResponse.cs" />
     <Compile Include="V20220901\Models\DeleteFunctionRequest.cs" />
     <Compile Include="V20220901\Models\DeleteFunctionResponse.cs" />
     <Compile Include="V20220901\Models\DeleteFunctionRulesRequest.cs" />
@@ -200,6 +209,8 @@
     <Compile Include="V20220901\Models\DescribeConfigGroupVersionDetailResponse.cs" />
     <Compile Include="V20220901\Models\DescribeConfigGroupVersionsRequest.cs" />
     <Compile Include="V20220901\Models\DescribeConfigGroupVersionsResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeContentIdentifiersRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeContentIdentifiersResponse.cs" />
     <Compile Include="V20220901\Models\DescribeContentQuotaRequest.cs" />
     <Compile Include="V20220901\Models\DescribeContentQuotaResponse.cs" />
     <Compile Include="V20220901\Models\DescribeCustomErrorPagesRequest.cs" />
@@ -214,6 +225,8 @@
     <Compile Include="V20220901\Models\DescribeDefaultCertificatesResponse.cs" />
     <Compile Include="V20220901\Models\DescribeDeployHistoryRequest.cs" />
     <Compile Include="V20220901\Models\DescribeDeployHistoryResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeDnsRecordsRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeDnsRecordsResponse.cs" />
     <Compile Include="V20220901\Models\DescribeEnvironmentsRequest.cs" />
     <Compile Include="V20220901\Models\DescribeEnvironmentsResponse.cs" />
     <Compile Include="V20220901\Models\DescribeFunctionRulesRequest.cs" />
@@ -278,6 +291,7 @@
     <Compile Include="V20220901\Models\DestroyPlanResponse.cs" />
     <Compile Include="V20220901\Models\DetailHost.cs" />
     <Compile Include="V20220901\Models\DiffIPWhitelist.cs" />
+    <Compile Include="V20220901\Models\DnsRecord.cs" />
     <Compile Include="V20220901\Models\DnsVerification.cs" />
     <Compile Include="V20220901\Models\DownloadL4LogsRequest.cs" />
     <Compile Include="V20220901\Models\DownloadL4LogsResponse.cs" />
@@ -353,8 +367,14 @@
     <Compile Include="V20220901\Models\ModifyApplicationProxyRuleStatusResponse.cs" />
     <Compile Include="V20220901\Models\ModifyApplicationProxyStatusRequest.cs" />
     <Compile Include="V20220901\Models\ModifyApplicationProxyStatusResponse.cs" />
+    <Compile Include="V20220901\Models\ModifyContentIdentifierRequest.cs" />
+    <Compile Include="V20220901\Models\ModifyContentIdentifierResponse.cs" />
     <Compile Include="V20220901\Models\ModifyCustomErrorPageRequest.cs" />
     <Compile Include="V20220901\Models\ModifyCustomErrorPageResponse.cs" />
+    <Compile Include="V20220901\Models\ModifyDnsRecordsRequest.cs" />
+    <Compile Include="V20220901\Models\ModifyDnsRecordsResponse.cs" />
+    <Compile Include="V20220901\Models\ModifyDnsRecordsStatusRequest.cs" />
+    <Compile Include="V20220901\Models\ModifyDnsRecordsStatusResponse.cs" />
     <Compile Include="V20220901\Models\ModifyFunctionRequest.cs" />
     <Compile Include="V20220901\Models\ModifyFunctionResponse.cs" />
     <Compile Include="V20220901\Models\ModifyFunctionRulePriorityRequest.cs" />

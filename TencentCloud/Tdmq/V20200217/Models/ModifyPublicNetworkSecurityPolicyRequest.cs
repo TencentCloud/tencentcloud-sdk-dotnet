@@ -24,12 +24,26 @@ namespace TencentCloud.Tdmq.V20200217.Models
     public class ModifyPublicNetworkSecurityPolicyRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 集群id
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 策略列表
+        /// </summary>
+        [JsonProperty("PolicyList")]
+        public SecurityPolicy[] PolicyList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArrayObj(map, prefix + "PolicyList.", this.PolicyList);
         }
     }
 }

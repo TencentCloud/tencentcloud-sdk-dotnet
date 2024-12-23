@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1146</VersionPrefix>
+    <VersionPrefix>3.0.1147</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -62,6 +62,7 @@
     <Compile Include="V20180724\Models\AlarmPolicyFilter.cs" />
     <Compile Include="V20180724\Models\AlarmPolicyRule.cs" />
     <Compile Include="V20180724\Models\AlarmPolicyTriggerTask.cs" />
+    <Compile Include="V20180724\Models\BasicAuth.cs" />
     <Compile Include="V20180724\Models\BindPrometheusManagedGrafanaRequest.cs" />
     <Compile Include="V20180724\Models\BindPrometheusManagedGrafanaResponse.cs" />
     <Compile Include="V20180724\Models\BindingPolicyObjectDimension.cs" />
@@ -304,6 +305,8 @@
     <Compile Include="V20180724\Models\DescribePrometheusZonesResponse.cs" />
     <Compile Include="V20180724\Models\DescribeRecordingRulesRequest.cs" />
     <Compile Include="V20180724\Models\DescribeRecordingRulesResponse.cs" />
+    <Compile Include="V20180724\Models\DescribeRemoteURLsRequest.cs" />
+    <Compile Include="V20180724\Models\DescribeRemoteURLsResponse.cs" />
     <Compile Include="V20180724\Models\DescribeSSOAccountRequest.cs" />
     <Compile Include="V20180724\Models\DescribeSSOAccountResponse.cs" />
     <Compile Include="V20180724\Models\DescribeServiceDiscoveryRequest.cs" />
@@ -385,6 +388,8 @@
     <Compile Include="V20180724\Models\ModifyPrometheusRecordRuleYamlResponse.cs" />
     <Compile Include="V20180724\Models\ModifyPrometheusTempRequest.cs" />
     <Compile Include="V20180724\Models\ModifyPrometheusTempResponse.cs" />
+    <Compile Include="V20180724\Models\ModifyRemoteURLsRequest.cs" />
+    <Compile Include="V20180724\Models\ModifyRemoteURLsResponse.cs" />
     <Compile Include="V20180724\Models\MonitorTypeInfo.cs" />
     <Compile Include="V20180724\Models\MonitorTypeNamespace.cs" />
     <Compile Include="V20180724\Models\NoticeBindPolicys.cs" />
@@ -427,6 +432,8 @@
     <Compile Include="V20180724\Models\PrometheusZoneItem.cs" />
     <Compile Include="V20180724\Models\ReceiverInfo.cs" />
     <Compile Include="V20180724\Models\RecordingRuleSet.cs" />
+    <Compile Include="V20180724\Models\RemoteWrite.cs" />
+    <Compile Include="V20180724\Models\RemoteWriteHeader.cs" />
     <Compile Include="V20180724\Models\ResumeGrafanaInstanceRequest.cs" />
     <Compile Include="V20180724\Models\ResumeGrafanaInstanceResponse.cs" />
     <Compile Include="V20180724\Models\RunPrometheusInstanceRequest.cs" />

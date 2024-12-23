@@ -26,14 +26,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 绑定的DB列表（已废弃）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BindDBList")]
         public string[] BindDBList{ get; set; }
 
         /// <summary>
         /// 绑定信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BindList")]
         public DBInstanceInfo[] BindList{ get; set; }

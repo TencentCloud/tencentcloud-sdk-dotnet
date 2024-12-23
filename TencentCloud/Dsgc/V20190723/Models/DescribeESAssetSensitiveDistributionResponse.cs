@@ -26,21 +26,18 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// ES的资产统计数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ESAsset")]
         public ESAsset ESAsset{ get; set; }
 
         /// <summary>
         /// 涉敏top数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopAsset")]
         public TopAsset[] TopAsset{ get; set; }
 
         /// <summary>
         /// ES的详情列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ESDetail")]
         public ESAssetDBDetail[] ESDetail{ get; set; }

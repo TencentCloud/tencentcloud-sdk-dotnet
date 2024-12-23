@@ -26,28 +26,24 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 分级分布
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LevelDistribution")]
         public Note[] LevelDistribution{ get; set; }
 
         /// <summary>
         /// 分类分布
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryDistribution")]
         public Note[] CategoryDistribution{ get; set; }
 
         /// <summary>
         /// 敏感规则分布详情列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleDistribution")]
         public RuleDistribution[] RuleDistribution{ get; set; }
 
         /// <summary>
         /// 计算占比字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveDataNum")]
         public long? SensitiveDataNum{ get; set; }

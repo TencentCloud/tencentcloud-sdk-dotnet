@@ -27,7 +27,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// <summary>
         /// 符合条件的COS存储对象的敏感数据资产统计记录
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Stats")]
         public DspaCOSDataAssetCount Stats{ get; set; }

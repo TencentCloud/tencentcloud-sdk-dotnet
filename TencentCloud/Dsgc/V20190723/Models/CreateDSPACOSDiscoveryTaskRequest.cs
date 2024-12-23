@@ -55,12 +55,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// 通用规则集开关，0 关闭，1 启用
-        /// </summary>
-        [JsonProperty("GeneralRuleSetEnable")]
-        public long? GeneralRuleSetEnable{ get; set; }
-
-        /// <summary>
         /// 执行计划， 0立即 1定时，选择“立即”时，扫描周期只能选择单次。
         /// </summary>
         [JsonProperty("Plan")]
@@ -97,6 +91,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         public string Description{ get; set; }
 
         /// <summary>
+        /// 通用规则集开关，0 关闭，1 启用
+        /// </summary>
+        [JsonProperty("GeneralRuleSetEnable")]
+        public long? GeneralRuleSetEnable{ get; set; }
+
+        /// <summary>
         /// 合规组ID列表，最多支持添加5个
         /// </summary>
         [JsonProperty("ComplianceGroupIds")]
@@ -120,13 +120,13 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "DataSourceId", this.DataSourceId);
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamSimple(map, prefix + "Bucket", this.Bucket);
-            this.SetParamSimple(map, prefix + "GeneralRuleSetEnable", this.GeneralRuleSetEnable);
             this.SetParamSimple(map, prefix + "Plan", this.Plan);
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamArraySimple(map, prefix + "FileTypes.", this.FileTypes);
             this.SetParamSimple(map, prefix + "FileSizeLimit", this.FileSizeLimit);
             this.SetParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "GeneralRuleSetEnable", this.GeneralRuleSetEnable);
             this.SetParamArraySimple(map, prefix + "ComplianceGroupIds.", this.ComplianceGroupIds);
             this.SetParamSimple(map, prefix + "TimingStartTime", this.TimingStartTime);
         }

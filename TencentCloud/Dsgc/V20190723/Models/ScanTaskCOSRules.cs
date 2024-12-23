@@ -26,7 +26,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// regex规则内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegexRule")]
         public COSDataRule RegexRule{ get; set; }
@@ -39,14 +38,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
 
         /// <summary>
         /// 关键词规则内容组，最大支持5个关键词。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeywordRule")]
         public COSDataRule KeywordRule{ get; set; }
 
         /// <summary>
         /// 忽略词规则内容组，最大支持5个忽略词。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IgnoreStringRule")]
         public COSDataRule IgnoreStringRule{ get; set; }

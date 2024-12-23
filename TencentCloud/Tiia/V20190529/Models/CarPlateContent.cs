@@ -26,14 +26,12 @@ namespace TencentCloud.Tiia.V20190529.Models
         
         /// <summary>
         /// 车牌信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Plate")]
         public string Plate{ get; set; }
 
         /// <summary>
         /// 车牌颜色。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Color")]
         public string Color{ get; set; }
@@ -43,7 +41,6 @@ namespace TencentCloud.Tiia.V20190529.Models
         /// 注意：
         /// 此字段可能返回 null，表示取不到有效值。
         /// 此字段结果遮挡污损模糊车牌/异常：包含PlateStatus参数的“遮挡污损模糊车牌”，针对车牌异常，建议参考此字段，更全面
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -57,21 +54,18 @@ namespace TencentCloud.Tiia.V20190529.Models
 
         /// <summary>
         /// 判断车牌是否遮挡：“遮挡污损模糊车牌”和"正常车牌"。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PlateStatus")]
         public string PlateStatus{ get; set; }
 
         /// <summary>
         /// 车牌遮挡的置信度，0-100。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PlateStatusConfidence")]
         public long? PlateStatusConfidence{ get; set; }
 
         /// <summary>
         /// 车牌角度。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PlateAngle")]
         public float? PlateAngle{ get; set; }

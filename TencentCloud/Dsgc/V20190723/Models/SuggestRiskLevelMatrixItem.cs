@@ -26,28 +26,24 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 分类分级等级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveLevel")]
         public RiskMatrixLevel SensitiveLevel{ get; set; }
 
         /// <summary>
         /// 脆弱项等级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulnerabilityLevel")]
         public RiskMatrixLevel VulnerabilityLevel{ get; set; }
 
         /// <summary>
         /// 风险名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskName")]
         public string RiskName{ get; set; }
 
         /// <summary>
         /// 分数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskScore")]
         public float? RiskScore{ get; set; }

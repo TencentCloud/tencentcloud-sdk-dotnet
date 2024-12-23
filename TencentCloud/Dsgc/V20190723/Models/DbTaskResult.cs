@@ -38,7 +38,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
 
         /// <summary>
         /// 错误信息描述。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrDescription")]
         public ErrDescription ErrDescription{ get; set; }

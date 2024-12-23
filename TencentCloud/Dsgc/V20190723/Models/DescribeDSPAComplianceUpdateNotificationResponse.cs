@@ -26,14 +26,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 模板是否更新
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsUpdated")]
         public bool? IsUpdated{ get; set; }
 
         /// <summary>
         /// 任务名称集合
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskNameSet")]
         public string[] TaskNameSet{ get; set; }

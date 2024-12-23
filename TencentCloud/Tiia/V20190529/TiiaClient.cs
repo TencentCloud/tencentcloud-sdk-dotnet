@@ -28,7 +28,7 @@ namespace TencentCloud.Tiia.V20190529
 
        private const string endpoint = "tiia.tencentcloudapi.com";
        private const string version = "2019-05-29";
-       private const string sdkVersion = "SDK_NET_3.0.1146";
+       private const string sdkVersion = "SDK_NET_3.0.1147";
 
         /// <summary>
         /// Client constructor.
@@ -170,7 +170,6 @@ namespace TencentCloud.Tiia.V20190529
         /// 
         /// >   
         /// - 可前往 [图像搜索](https://cloud.tencent.com/document/product/1589) 产品文档中查看更多产品信息。
-        /// 
         /// </summary>
         /// <param name="req"><see cref="CreateImageRequest"/></param>
         /// <returns><see cref="CreateImageResponse"/></returns>
@@ -184,7 +183,6 @@ namespace TencentCloud.Tiia.V20190529
         /// 
         /// >   
         /// - 可前往 [图像搜索](https://cloud.tencent.com/document/product/1589) 产品文档中查看更多产品信息。
-        /// 
         /// </summary>
         /// <param name="req"><see cref="CreateImageRequest"/></param>
         /// <returns><see cref="CreateImageResponse"/></returns>
@@ -312,11 +310,11 @@ namespace TencentCloud.Tiia.V20190529
         /// 
         /// |序号 | 标签名称 | 标签值 |
         /// | :-----|  :----------   |:-----------------  |
-        /// | 1 | 厨师服识别<div style="width: 70pt"> |无厨师服、有厨师服、被优选过滤|
-        /// | 2 | 厨师服识别（酒店版）<div style="width: 70pt"> |无厨师服、有厨师服、被优选过滤|
-        /// | 3 | 厨师帽识别<div style="width: 70pt"> |无厨师帽、有厨师帽、被优选过滤	|
-        /// | 4 | 赤膊识别<div style="width: 70pt"> |非赤膊、赤膊、被优选过滤|
-        /// | 5 | 口罩识别<div style="width: 70pt"> |无口罩、有口罩、口罩不确定、被优选过滤	|
+        /// | 1 | 厨师服识别<div style="width: 70pt"/> |无厨师服、有厨师服、被优选过滤|
+        /// | 2 | 厨师服识别（酒店版）<div style="width: 70pt"/> |无厨师服、有厨师服、被优选过滤|
+        /// | 3 | 厨师帽识别<div style="width: 70pt"/> |无厨师帽、有厨师帽、被优选过滤	|
+        /// | 4 | 赤膊识别<div style="width: 70pt"/> |非赤膊、赤膊、被优选过滤|
+        /// | 5 | 口罩识别<div style="width: 70pt"/> |无口罩、有口罩、口罩不确定、被优选过滤	|
         /// </summary>
         /// <param name="req"><see cref="DetectChefDressRequest"/></param>
         /// <returns><see cref="DetectChefDressResponse"/></returns>
@@ -333,11 +331,11 @@ namespace TencentCloud.Tiia.V20190529
         /// 
         /// |序号 | 标签名称 | 标签值 |
         /// | :-----|  :----------   |:-----------------  |
-        /// | 1 | 厨师服识别<div style="width: 70pt"> |无厨师服、有厨师服、被优选过滤|
-        /// | 2 | 厨师服识别（酒店版）<div style="width: 70pt"> |无厨师服、有厨师服、被优选过滤|
-        /// | 3 | 厨师帽识别<div style="width: 70pt"> |无厨师帽、有厨师帽、被优选过滤	|
-        /// | 4 | 赤膊识别<div style="width: 70pt"> |非赤膊、赤膊、被优选过滤|
-        /// | 5 | 口罩识别<div style="width: 70pt"> |无口罩、有口罩、口罩不确定、被优选过滤	|
+        /// | 1 | 厨师服识别<div style="width: 70pt"/> |无厨师服、有厨师服、被优选过滤|
+        /// | 2 | 厨师服识别（酒店版）<div style="width: 70pt"/> |无厨师服、有厨师服、被优选过滤|
+        /// | 3 | 厨师帽识别<div style="width: 70pt"/> |无厨师帽、有厨师帽、被优选过滤	|
+        /// | 4 | 赤膊识别<div style="width: 70pt"/> |非赤膊、赤膊、被优选过滤|
+        /// | 5 | 口罩识别<div style="width: 70pt"/> |无口罩、有口罩、口罩不确定、被优选过滤	|
         /// </summary>
         /// <param name="req"><see cref="DetectChefDressRequest"/></param>
         /// <returns><see cref="DetectChefDressResponse"/></returns>
@@ -605,15 +603,15 @@ namespace TencentCloud.Tiia.V20190529
         /// 
         /// |序号 | 标签名称 | 标签值 |
         /// | :-----|  :----------   |:-----------------  |
-        /// | 1 | 安全帽识别<div style="width: 70pt"> |无安全帽、有安全帽、被优选过滤|
-        /// | 2 | 玩手机识别<div style="width: 70pt"> |没有电话、打电话、玩手机、被优选过滤|
-        /// | 3 | 抽烟识别<div style="width: 70pt"> |没有抽烟、抽烟、被优选过滤	|
-        /// | 4 | 口罩识别<div style="width: 70pt"> |无口罩、有口罩、口罩不确定、被优选过滤|
-        /// | 5 | 工地安全带识别<div style="width: 70pt"> |无工地安全带、工地安全带、被优选过滤	|
-        /// | 6 | 手套识别<div style="width: 70pt"> |无手套、有手套、手套不确定、被优选过滤	|
-        /// | 7 | 工服识别<div style="width: 70pt"> |无工服、有工服、被优选过滤|
-        /// | 8 | 护目镜识别<div style="width: 70pt"> |无护目镜、有护目镜、被优选过滤|
-        /// | 9 | 反光衣识别<div style="width: 70pt"> |无反光衣、有反光衣、被优选过滤|
+        /// | 1 | 安全帽识别<div style="width: 70pt"/> |无安全帽、有安全帽、被优选过滤|
+        /// | 2 | 玩手机识别<div style="width: 70pt"/> |没有电话、打电话、玩手机、被优选过滤|
+        /// | 3 | 抽烟识别<div style="width: 70pt"/> |没有抽烟、抽烟、被优选过滤	|
+        /// | 4 | 口罩识别<div style="width: 70pt"/> |无口罩、有口罩、口罩不确定、被优选过滤|
+        /// | 5 | 工地安全带识别<div style="width: 70pt"/> |无工地安全带、工地安全带、被优选过滤	|
+        /// | 6 | 手套识别<div style="width: 70pt"/> |无手套、有手套、手套不确定、被优选过滤	|
+        /// | 7 | 工服识别<div style="width: 70pt"/> |无工服、有工服、被优选过滤|
+        /// | 8 | 护目镜识别<div style="width: 70pt"/> |无护目镜、有护目镜、被优选过滤|
+        /// | 9 | 反光衣识别<div style="width: 70pt"/> |无反光衣、有反光衣、被优选过滤|
         /// </summary>
         /// <param name="req"><see cref="DetectSecurityRequest"/></param>
         /// <returns><see cref="DetectSecurityResponse"/></returns>
@@ -628,15 +626,15 @@ namespace TencentCloud.Tiia.V20190529
         /// 
         /// |序号 | 标签名称 | 标签值 |
         /// | :-----|  :----------   |:-----------------  |
-        /// | 1 | 安全帽识别<div style="width: 70pt"> |无安全帽、有安全帽、被优选过滤|
-        /// | 2 | 玩手机识别<div style="width: 70pt"> |没有电话、打电话、玩手机、被优选过滤|
-        /// | 3 | 抽烟识别<div style="width: 70pt"> |没有抽烟、抽烟、被优选过滤	|
-        /// | 4 | 口罩识别<div style="width: 70pt"> |无口罩、有口罩、口罩不确定、被优选过滤|
-        /// | 5 | 工地安全带识别<div style="width: 70pt"> |无工地安全带、工地安全带、被优选过滤	|
-        /// | 6 | 手套识别<div style="width: 70pt"> |无手套、有手套、手套不确定、被优选过滤	|
-        /// | 7 | 工服识别<div style="width: 70pt"> |无工服、有工服、被优选过滤|
-        /// | 8 | 护目镜识别<div style="width: 70pt"> |无护目镜、有护目镜、被优选过滤|
-        /// | 9 | 反光衣识别<div style="width: 70pt"> |无反光衣、有反光衣、被优选过滤|
+        /// | 1 | 安全帽识别<div style="width: 70pt"/> |无安全帽、有安全帽、被优选过滤|
+        /// | 2 | 玩手机识别<div style="width: 70pt"/> |没有电话、打电话、玩手机、被优选过滤|
+        /// | 3 | 抽烟识别<div style="width: 70pt"/> |没有抽烟、抽烟、被优选过滤	|
+        /// | 4 | 口罩识别<div style="width: 70pt"/> |无口罩、有口罩、口罩不确定、被优选过滤|
+        /// | 5 | 工地安全带识别<div style="width: 70pt"/> |无工地安全带、工地安全带、被优选过滤	|
+        /// | 6 | 手套识别<div style="width: 70pt"/> |无手套、有手套、手套不确定、被优选过滤	|
+        /// | 7 | 工服识别<div style="width: 70pt"/> |无工服、有工服、被优选过滤|
+        /// | 8 | 护目镜识别<div style="width: 70pt"/> |无护目镜、有护目镜、被优选过滤|
+        /// | 9 | 反光衣识别<div style="width: 70pt"/> |无反光衣、有反光衣、被优选过滤|
         /// </summary>
         /// <param name="req"><see cref="DetectSecurityRequest"/></param>
         /// <returns><see cref="DetectSecurityResponse"/></returns>
@@ -738,7 +736,6 @@ namespace TencentCloud.Tiia.V20190529
         /// 
         /// >   
         /// - 可前往 [图像搜索](https://cloud.tencent.com/document/product/1589) 产品文档中查看更多产品信息。
-        /// 
         /// </summary>
         /// <param name="req"><see cref="SearchImageRequest"/></param>
         /// <returns><see cref="SearchImageResponse"/></returns>
@@ -752,7 +749,6 @@ namespace TencentCloud.Tiia.V20190529
         /// 
         /// >   
         /// - 可前往 [图像搜索](https://cloud.tencent.com/document/product/1589) 产品文档中查看更多产品信息。
-        /// 
         /// </summary>
         /// <param name="req"><see cref="SearchImageRequest"/></param>
         /// <returns><see cref="SearchImageResponse"/></returns>
@@ -767,7 +763,6 @@ namespace TencentCloud.Tiia.V20190529
         /// 
         /// >   
         /// - 可前往 [图像搜索](https://cloud.tencent.com/document/product/1589) 产品文档中查看更多产品信息。
-        /// 
         /// </summary>
         /// <param name="req"><see cref="UpdateImageRequest"/></param>
         /// <returns><see cref="UpdateImageResponse"/></returns>
@@ -781,7 +776,6 @@ namespace TencentCloud.Tiia.V20190529
         /// 
         /// >   
         /// - 可前往 [图像搜索](https://cloud.tencent.com/document/product/1589) 产品文档中查看更多产品信息。
-        /// 
         /// </summary>
         /// <param name="req"><see cref="UpdateImageRequest"/></param>
         /// <returns><see cref="UpdateImageResponse"/></returns>

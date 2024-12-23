@@ -28,7 +28,7 @@ namespace TencentCloud.Privatedns.V20201028
 
        private const string endpoint = "privatedns.tencentcloudapi.com";
        private const string version = "2020-10-28";
-       private const string sdkVersion = "SDK_NET_3.0.1146";
+       private const string sdkVersion = "SDK_NET_3.0.1147";
 
         /// <summary>
         /// Client constructor.
@@ -75,7 +75,7 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
-        /// 创建私有域解析账号
+        /// 跨账号关联VPC时绑定其他账号
         /// </summary>
         /// <param name="req"><see cref="CreatePrivateDNSAccountRequest"/></param>
         /// <returns><see cref="CreatePrivateDNSAccountResponse"/></returns>
@@ -85,7 +85,7 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
-        /// 创建私有域解析账号
+        /// 跨账号关联VPC时绑定其他账号
         /// </summary>
         /// <param name="req"><see cref="CreatePrivateDNSAccountRequest"/></param>
         /// <returns><see cref="CreatePrivateDNSAccountResponse"/></returns>

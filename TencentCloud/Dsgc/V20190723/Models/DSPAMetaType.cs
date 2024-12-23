@@ -26,14 +26,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 元数据类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetaType")]
         public string MetaType{ get; set; }
 
         /// <summary>
         /// 支持的此元数据类型的地域列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Regions")]
         public string[] Regions{ get; set; }
@@ -43,7 +41,6 @@ namespace TencentCloud.Dsgc.V20190723.Models
         /// account    -- 账户名密码授权，账户的最高只读权限需要由用户自行赋予；
         /// automatic -- 一键授权，由DSPA自动生成账户名密码并自动在实例中给账户名赋予最高只读权限；
         /// 如果此列表为空，表明此类资源不支持以上的授权机制，无法通过后台进行授权。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportedAuthTypes")]
         public string[] SupportedAuthTypes{ get; set; }

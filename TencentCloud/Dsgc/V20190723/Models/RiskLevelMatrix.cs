@@ -26,35 +26,30 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 存储id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
         /// 分类分级levelID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveLevelId")]
         public long? SensitiveLevelId{ get; set; }
 
         /// <summary>
         /// 分类分级名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveLevelName")]
         public string SensitiveLevelName{ get; set; }
 
         /// <summary>
         /// 漏洞级别
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulnerabilityLevel")]
         public string VulnerabilityLevel{ get; set; }
 
         /// <summary>
         /// 风险级别
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskLevel")]
         public string RiskLevel{ get; set; }

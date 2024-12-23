@@ -53,9 +53,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string UrlType{ get; set; }
 
         /// <summary>
-        /// 是否通知开通方，通知类型:
-        /// <ul><li>默认不设置为不通知开通方</li>
-        /// <li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li></ul>
+        /// 是否通知开通方，通知类型:<ul><li>默认为不通知开通方</li><li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li></ul>
         /// </summary>
         [JsonProperty("NotifyType")]
         public string NotifyType{ get; set; }

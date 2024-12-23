@@ -26,70 +26,60 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 数组资产类型，0代表关系型数据库资产，1代表对象存储COS资产
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataAssetType")]
         public long? DataAssetType{ get; set; }
 
         /// <summary>
         /// 已扫描的数据库的个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalDbCnt")]
         public long? TotalDbCnt{ get; set; }
 
         /// <summary>
         /// 数据库表的个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalTableCnt")]
         public long? TotalTableCnt{ get; set; }
 
         /// <summary>
         /// 敏感数据类型个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveCategoryCnt")]
         public long? SensitiveCategoryCnt{ get; set; }
 
         /// <summary>
         /// 敏感字段的个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveFieldCnt")]
         public long? SensitiveFieldCnt{ get; set; }
 
         /// <summary>
         /// 敏感等级分布
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveLevel")]
         public SensitiveLevel[] SensitiveLevel{ get; set; }
 
         /// <summary>
         /// 敏感数据库的个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveDbCnt")]
         public long? SensitiveDbCnt{ get; set; }
 
         /// <summary>
         /// 敏感数据库表的个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveTableCnt")]
         public long? SensitiveTableCnt{ get; set; }
 
         /// <summary>
         /// 扫描字段的个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalFieldCnt")]
         public long? TotalFieldCnt{ get; set; }
 
         /// <summary>
         /// 数据分类分布
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CategoryDistributed")]
         public DspaDataCategoryDistributed[] CategoryDistributed{ get; set; }

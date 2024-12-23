@@ -32,133 +32,114 @@ namespace TencentCloud.Dsgc.V20190723.Models
 
         /// <summary>
         /// 数据源id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataSourceId")]
         public string DataSourceId{ get; set; }
 
         /// <summary>
         /// 数据源名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataSourceName")]
         public string DataSourceName{ get; set; }
 
         /// <summary>
         /// 数据源类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataSourceType")]
         public string DataSourceType{ get; set; }
 
         /// <summary>
         /// 资源地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceRegion")]
         public string ResourceRegion{ get; set; }
 
         /// <summary>
         /// 资产名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssetName")]
         public string AssetName{ get; set; }
 
         /// <summary>
         /// 风险类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskType")]
         public string RiskType{ get; set; }
 
         /// <summary>
         /// 风险项
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskName")]
         public string RiskName{ get; set; }
 
         /// <summary>
         /// 风险级别
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskLevel")]
         public string RiskLevel{ get; set; }
 
         /// <summary>
         /// 风险描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskDescription")]
         public string RiskDescription{ get; set; }
 
         /// <summary>
         /// 建议措施
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SuggestAction")]
         public string SuggestAction{ get; set; }
 
         /// <summary>
         /// 安全产品（可能有多个）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecurityProduct")]
         public SecurityProduct[] SecurityProduct{ get; set; }
 
         /// <summary>
         /// 状态(waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 扫描时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanTime")]
         public string ScanTime{ get; set; }
 
         /// <summary>
         /// 最后处置时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastProcessTime")]
         public string LastProcessTime{ get; set; }
 
         /// <summary>
         /// 分类分级合规组Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdentifyComplianceId")]
         public long? IdentifyComplianceId{ get; set; }
 
         /// <summary>
         /// 类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ItemSubType")]
         public string ItemSubType{ get; set; }
 
         /// <summary>
         /// 风险面
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskSide")]
         public string RiskSide{ get; set; }
 
         /// <summary>
         /// API安全风险链接
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("APIRiskLinkURL")]
         public string APIRiskLinkURL{ get; set; }
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

@@ -26,14 +26,12 @@ namespace TencentCloud.Tiia.V20190529.Models
         
         /// <summary>
         /// 一级标签结果数组。识别是否文件封。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FirstTags")]
         public ImageTag[] FirstTags{ get; set; }
 
         /// <summary>
         /// 二级标签结果数组。识别文件封正反面。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecondTags")]
         public ImageTag[] SecondTags{ get; set; }

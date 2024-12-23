@@ -26,35 +26,30 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 规则状态；0 不启用, 1 启用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// regex规则内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegexRule")]
         public DspaDiscoveryCOSDataRule RegexRule{ get; set; }
 
         /// <summary>
         /// 关键词规则内容组，最大支持5个关键词。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeywordRule")]
         public DspaDiscoveryCOSDataRule KeywordRule{ get; set; }
 
         /// <summary>
         /// 忽略词规则内容组，最大支持5个忽略词。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IgnoreStringRule")]
         public DspaDiscoveryCOSDataRule IgnoreStringRule{ get; set; }
 
         /// <summary>
         /// 最大匹配距离，默认值为100。上限为500.
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxMatch")]
         public long? MaxMatch{ get; set; }

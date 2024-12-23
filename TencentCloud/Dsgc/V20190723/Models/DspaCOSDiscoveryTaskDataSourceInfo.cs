@@ -32,28 +32,24 @@ namespace TencentCloud.Dsgc.V20190723.Models
 
         /// <summary>
         /// 代理地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyAddress")]
         public string[] ProxyAddress{ get; set; }
 
         /// <summary>
         /// 数据源名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataSourceName")]
         public string DataSourceName{ get; set; }
 
         /// <summary>
         /// 扫描任务条件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Condition")]
         public DspaDiscoveryTaskCOSCondition Condition{ get; set; }
 
         /// <summary>
         /// 资源所在地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceRegion")]
         public string ResourceRegion{ get; set; }

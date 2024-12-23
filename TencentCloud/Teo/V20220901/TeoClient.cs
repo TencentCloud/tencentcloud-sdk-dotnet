@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1146";
+       private const string sdkVersion = "SDK_NET_3.0.1147";
 
         /// <summary>
         /// Client constructor.
@@ -270,6 +270,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 创建内容标识符，可以设置描述、标签等信息，同时需要绑定企业版套餐用于统计计费数据；一个内容标识符只能绑定一个计费套餐，一个计费套餐可以绑定多个内容标识符。该功能仅限白名单开放。
+        /// </summary>
+        /// <param name="req"><see cref="CreateContentIdentifierRequest"/></param>
+        /// <returns><see cref="CreateContentIdentifierResponse"/></returns>
+        public Task<CreateContentIdentifierResponse> CreateContentIdentifier(CreateContentIdentifierRequest req)
+        {
+            return InternalRequestAsync<CreateContentIdentifierResponse>(req, "CreateContentIdentifier");
+        }
+
+        /// <summary>
+        /// 创建内容标识符，可以设置描述、标签等信息，同时需要绑定企业版套餐用于统计计费数据；一个内容标识符只能绑定一个计费套餐，一个计费套餐可以绑定多个内容标识符。该功能仅限白名单开放。
+        /// </summary>
+        /// <param name="req"><see cref="CreateContentIdentifierRequest"/></param>
+        /// <returns><see cref="CreateContentIdentifierResponse"/></returns>
+        public CreateContentIdentifierResponse CreateContentIdentifierSync(CreateContentIdentifierRequest req)
+        {
+            return InternalRequestAsync<CreateContentIdentifierResponse>(req, "CreateContentIdentifier")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建自定义错误页面。
         /// </summary>
         /// <param name="req"><see cref="CreateCustomizeErrorPageRequest"/></param>
@@ -287,6 +308,27 @@ namespace TencentCloud.Teo.V20220901
         public CreateCustomizeErrorPageResponse CreateCustomizeErrorPageSync(CreateCustomizeErrorPageRequest req)
         {
             return InternalRequestAsync<CreateCustomizeErrorPageResponse>(req, "CreateCustomizeErrorPage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 在创建完站点后，并且站点为 NS 模式接入时，您可以通过本接口创建 DNS 记录。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDnsRecordRequest"/></param>
+        /// <returns><see cref="CreateDnsRecordResponse"/></returns>
+        public Task<CreateDnsRecordResponse> CreateDnsRecord(CreateDnsRecordRequest req)
+        {
+            return InternalRequestAsync<CreateDnsRecordResponse>(req, "CreateDnsRecord");
+        }
+
+        /// <summary>
+        /// 在创建完站点后，并且站点为 NS 模式接入时，您可以通过本接口创建 DNS 记录。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDnsRecordRequest"/></param>
+        /// <returns><see cref="CreateDnsRecordResponse"/></returns>
+        public CreateDnsRecordResponse CreateDnsRecordSync(CreateDnsRecordRequest req)
+        {
+            return InternalRequestAsync<CreateDnsRecordResponse>(req, "CreateDnsRecord")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -704,6 +746,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 删除指定的内容标识符。该功能仅白名单开放。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteContentIdentifierRequest"/></param>
+        /// <returns><see cref="DeleteContentIdentifierResponse"/></returns>
+        public Task<DeleteContentIdentifierResponse> DeleteContentIdentifier(DeleteContentIdentifierRequest req)
+        {
+            return InternalRequestAsync<DeleteContentIdentifierResponse>(req, "DeleteContentIdentifier");
+        }
+
+        /// <summary>
+        /// 删除指定的内容标识符。该功能仅白名单开放。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteContentIdentifierRequest"/></param>
+        /// <returns><see cref="DeleteContentIdentifierResponse"/></returns>
+        public DeleteContentIdentifierResponse DeleteContentIdentifierSync(DeleteContentIdentifierRequest req)
+        {
+            return InternalRequestAsync<DeleteContentIdentifierResponse>(req, "DeleteContentIdentifier")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除自定义错误页面。
         /// </summary>
         /// <param name="req"><see cref="DeleteCustomErrorPageRequest"/></param>
@@ -721,6 +784,27 @@ namespace TencentCloud.Teo.V20220901
         public DeleteCustomErrorPageResponse DeleteCustomErrorPageSync(DeleteCustomErrorPageRequest req)
         {
             return InternalRequestAsync<DeleteCustomErrorPageResponse>(req, "DeleteCustomErrorPage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 您可以用本接口批量删除 DNS 记录。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDnsRecordsRequest"/></param>
+        /// <returns><see cref="DeleteDnsRecordsResponse"/></returns>
+        public Task<DeleteDnsRecordsResponse> DeleteDnsRecords(DeleteDnsRecordsRequest req)
+        {
+            return InternalRequestAsync<DeleteDnsRecordsResponse>(req, "DeleteDnsRecords");
+        }
+
+        /// <summary>
+        /// 您可以用本接口批量删除 DNS 记录。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDnsRecordsRequest"/></param>
+        /// <returns><see cref="DeleteDnsRecordsResponse"/></returns>
+        public DeleteDnsRecordsResponse DeleteDnsRecordsSync(DeleteDnsRecordsRequest req)
+        {
+            return InternalRequestAsync<DeleteDnsRecordsResponse>(req, "DeleteDnsRecords")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1124,6 +1208,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 批量查询内容标识符，可以根据 ID、描述、状态或者标签过滤。按照状态查询被删除的内容标识符仅保留三个月。该功能仅白名单开放。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeContentIdentifiersRequest"/></param>
+        /// <returns><see cref="DescribeContentIdentifiersResponse"/></returns>
+        public Task<DescribeContentIdentifiersResponse> DescribeContentIdentifiers(DescribeContentIdentifiersRequest req)
+        {
+            return InternalRequestAsync<DescribeContentIdentifiersResponse>(req, "DescribeContentIdentifiers");
+        }
+
+        /// <summary>
+        /// 批量查询内容标识符，可以根据 ID、描述、状态或者标签过滤。按照状态查询被删除的内容标识符仅保留三个月。该功能仅白名单开放。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeContentIdentifiersRequest"/></param>
+        /// <returns><see cref="DescribeContentIdentifiersResponse"/></returns>
+        public DescribeContentIdentifiersResponse DescribeContentIdentifiersSync(DescribeContentIdentifiersRequest req)
+        {
+            return InternalRequestAsync<DescribeContentIdentifiersResponse>(req, "DescribeContentIdentifiers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询内容管理接口配额
         /// </summary>
         /// <param name="req"><see cref="DescribeContentQuotaRequest"/></param>
@@ -1267,6 +1372,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeDeployHistoryResponse DescribeDeployHistorySync(DescribeDeployHistoryRequest req)
         {
             return InternalRequestAsync<DescribeDeployHistoryResponse>(req, "DescribeDeployHistory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 您可以用过本接口查看站点下的 DNS 记录信息，包括 DNS 记录名、记录类型以及记录内容等信息。您可以查看站点下全部 DNS 记录的信息，也可以指定过滤条件查询对应的 DNS 记录信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDnsRecordsRequest"/></param>
+        /// <returns><see cref="DescribeDnsRecordsResponse"/></returns>
+        public Task<DescribeDnsRecordsResponse> DescribeDnsRecords(DescribeDnsRecordsRequest req)
+        {
+            return InternalRequestAsync<DescribeDnsRecordsResponse>(req, "DescribeDnsRecords");
+        }
+
+        /// <summary>
+        /// 您可以用过本接口查看站点下的 DNS 记录信息，包括 DNS 记录名、记录类型以及记录内容等信息。您可以查看站点下全部 DNS 记录的信息，也可以指定过滤条件查询对应的 DNS 记录信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDnsRecordsRequest"/></param>
+        /// <returns><see cref="DescribeDnsRecordsResponse"/></returns>
+        public DescribeDnsRecordsResponse DescribeDnsRecordsSync(DescribeDnsRecordsRequest req)
+        {
+            return InternalRequestAsync<DescribeDnsRecordsResponse>(req, "DescribeDnsRecords")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2267,6 +2393,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 修改内容标识符，仅支持修改描述。该功能仅白名单开放。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyContentIdentifierRequest"/></param>
+        /// <returns><see cref="ModifyContentIdentifierResponse"/></returns>
+        public Task<ModifyContentIdentifierResponse> ModifyContentIdentifier(ModifyContentIdentifierRequest req)
+        {
+            return InternalRequestAsync<ModifyContentIdentifierResponse>(req, "ModifyContentIdentifier");
+        }
+
+        /// <summary>
+        /// 修改内容标识符，仅支持修改描述。该功能仅白名单开放。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyContentIdentifierRequest"/></param>
+        /// <returns><see cref="ModifyContentIdentifierResponse"/></returns>
+        public ModifyContentIdentifierResponse ModifyContentIdentifierSync(ModifyContentIdentifierRequest req)
+        {
+            return InternalRequestAsync<ModifyContentIdentifierResponse>(req, "ModifyContentIdentifier")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改自定义错误页面。
         /// </summary>
         /// <param name="req"><see cref="ModifyCustomErrorPageRequest"/></param>
@@ -2284,6 +2431,48 @@ namespace TencentCloud.Teo.V20220901
         public ModifyCustomErrorPageResponse ModifyCustomErrorPageSync(ModifyCustomErrorPageRequest req)
         {
             return InternalRequestAsync<ModifyCustomErrorPageResponse>(req, "ModifyCustomErrorPage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 您可以通过本接口批量修改 DNS 记录。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDnsRecordsRequest"/></param>
+        /// <returns><see cref="ModifyDnsRecordsResponse"/></returns>
+        public Task<ModifyDnsRecordsResponse> ModifyDnsRecords(ModifyDnsRecordsRequest req)
+        {
+            return InternalRequestAsync<ModifyDnsRecordsResponse>(req, "ModifyDnsRecords");
+        }
+
+        /// <summary>
+        /// 您可以通过本接口批量修改 DNS 记录。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDnsRecordsRequest"/></param>
+        /// <returns><see cref="ModifyDnsRecordsResponse"/></returns>
+        public ModifyDnsRecordsResponse ModifyDnsRecordsSync(ModifyDnsRecordsRequest req)
+        {
+            return InternalRequestAsync<ModifyDnsRecordsResponse>(req, "ModifyDnsRecords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 您可以通过本接口批量修改 DNS 记录的状态，批量对记录进行开启和停用。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDnsRecordsStatusRequest"/></param>
+        /// <returns><see cref="ModifyDnsRecordsStatusResponse"/></returns>
+        public Task<ModifyDnsRecordsStatusResponse> ModifyDnsRecordsStatus(ModifyDnsRecordsStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDnsRecordsStatusResponse>(req, "ModifyDnsRecordsStatus");
+        }
+
+        /// <summary>
+        /// 您可以通过本接口批量修改 DNS 记录的状态，批量对记录进行开启和停用。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDnsRecordsStatusRequest"/></param>
+        /// <returns><see cref="ModifyDnsRecordsStatusResponse"/></returns>
+        public ModifyDnsRecordsStatusResponse ModifyDnsRecordsStatusSync(ModifyDnsRecordsStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDnsRecordsStatusResponse>(req, "ModifyDnsRecordsStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

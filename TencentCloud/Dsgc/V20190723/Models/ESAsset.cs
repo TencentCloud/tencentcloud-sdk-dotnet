@@ -26,28 +26,24 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 索引总数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IndexNums")]
         public long? IndexNums{ get; set; }
 
         /// <summary>
         /// 敏感索引的数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveIndexNums")]
         public long? SensitiveIndexNums{ get; set; }
 
         /// <summary>
         /// 字段数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FieldNums")]
         public long? FieldNums{ get; set; }
 
         /// <summary>
         /// 敏感的字段数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SensitiveFieldNums")]
         public long? SensitiveFieldNums{ get; set; }

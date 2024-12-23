@@ -26,28 +26,24 @@ namespace TencentCloud.Dsgc.V20190723.Models
         
         /// <summary>
         /// 规则状态；0 不启用, 1 启用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 只能取and 、or两个值其中之一，and：字段和内容同时满足，or：字段和内容满足其一
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MatchOperator")]
         public string MatchOperator{ get; set; }
 
         /// <summary>
         /// 字段名包含规则，最大支持选择9项
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetaRule")]
         public DspaDiscoveryDataRules MetaRule{ get; set; }
 
         /// <summary>
         /// 内容包含规则，最大支持选择9项
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContentRule")]
         public DspaDiscoveryDataRules ContentRule{ get; set; }
