@@ -39,6 +39,13 @@ namespace TencentCloud.Aiart.V20221229.Models
         public string Prompt{ get; set; }
 
         /// <summary>
+        /// 反向提示词。
+        /// 最多支持256个 utf-8 字符，支持中、英文。
+        /// </summary>
+        [JsonProperty("NegativePrompt")]
+        public string NegativePrompt{ get; set; }
+
+        /// <summary>
         /// 商品图中的商品主体名称。
         /// 建议说明商品主体，否则影响生成效果。
         /// </summary>
@@ -94,6 +101,7 @@ namespace TencentCloud.Aiart.V20221229.Models
         {
             this.SetParamSimple(map, prefix + "ProductUrl", this.ProductUrl);
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
+            this.SetParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
             this.SetParamSimple(map, prefix + "Product", this.Product);
             this.SetParamSimple(map, prefix + "MaskUrl", this.MaskUrl);
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);

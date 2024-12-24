@@ -37,13 +37,13 @@ namespace TencentCloud.Dts.V20180330.Models
         public string SubscribeName{ get; set; }
 
         /// <summary>
-        /// 数据订阅实例绑定的通道ID
+        /// 数据订阅实例绑定的通道ID。kafka版订阅就是kafka topic
         /// </summary>
         [JsonProperty("ChannelId")]
         public string ChannelId{ get; set; }
 
         /// <summary>
-        /// 数据订阅绑定实例对应的产品名称
+        /// 订阅实例的类型，目前支持 cynosdbmysql,mariadb,mongodb,mysql,percona,tdpg,tdsqlpercona(tdsqlmysql)
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
@@ -55,19 +55,19 @@ namespace TencentCloud.Dts.V20180330.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 数据订阅实例绑定的数据库实例状态
+        /// 云数据库状态：running 运行中，isolated 已隔离，offline 已下线。如果不是云上，此值为空
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public string InstanceStatus{ get; set; }
 
         /// <summary>
-        /// 数据订阅实例的配置状态，unconfigure - 未配置， configuring - 配置中，configured - 已配置
+        /// 数据订阅状态，可能的值为：未启动 notStarted, 校验中 checking, 校验不通过 checkNotPass, 校验通过 checkPass, 启动中 starting, 运行中 running, 异常出错 error
         /// </summary>
         [JsonProperty("SubsStatus")]
         public string SubsStatus{ get; set; }
 
         /// <summary>
-        /// 上次修改时间
+        /// 上次修改时间，时间格式如：Y-m-d h:m:s
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Dts.V20180330.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 隔离时间
+        /// 隔离时间，时间格式如：Y-m-d h:m:s
         /// </summary>
         [JsonProperty("IsolateTime")]
         public string IsolateTime{ get; set; }
 
         /// <summary>
-        /// 到期时间
+        /// 包年包月任务的到期时间，时间格式如：Y-m-d h:m:s。默认：0000-00-00 00:00:00
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Dts.V20180330.Models
         public string ConsumeStartTime{ get; set; }
 
         /// <summary>
-        /// 自动续费标识。0-不自动续费，1-自动续费
+        /// 自动续费标识。只有当 PayType=0，该值才有意义。枚举值：0-不自动续费，1-自动续费
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
@@ -122,7 +122,7 @@ namespace TencentCloud.Dts.V20180330.Models
         public long? PayType{ get; set; }
 
         /// <summary>
-        /// 数据订阅实例的Vip
+        /// 旧版订阅通道的vip
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
@@ -146,7 +146,7 @@ namespace TencentCloud.Dts.V20180330.Models
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// 数据订阅实例的状态，creating - 创建中，normal - 正常运行，isolating - 隔离中，isolated - 已隔离，offlining - 下线中，offline - 已下线
+        /// 数据订阅生命周期状态，可能的值为：正常 normal, 隔离中 isolating, 已隔离 isolated, 下线中 offlining, 按量转包年包月中 post2PrePayIng
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

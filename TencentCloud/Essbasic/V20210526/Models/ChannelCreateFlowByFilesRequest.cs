@@ -217,6 +217,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("PreviewType")]
         public long? PreviewType{ get; set; }
 
+        /// <summary>
+        /// 是否开启动态合同（动态签署人2.0）
+        /// <ul><li> **false** :(默认) 不开启动态合同（动态签署人2.0）</li>
+        /// <li> **true** :开启动态合同（动态签署人2.0）,发起后可继续追加合同签署人</li></ul>
+        /// </summary>
+        [JsonProperty("OpenDynamicFlow")]
+        public bool? OpenDynamicFlow{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -245,6 +253,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "FlowDisplayType", this.FlowDisplayType);
             this.SetParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
             this.SetParamSimple(map, prefix + "PreviewType", this.PreviewType);
+            this.SetParamSimple(map, prefix + "OpenDynamicFlow", this.OpenDynamicFlow);
         }
     }
 }

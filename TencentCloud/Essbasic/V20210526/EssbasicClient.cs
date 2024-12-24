@@ -28,7 +28,7 @@ namespace TencentCloud.Essbasic.V20210526
 
        private const string endpoint = "essbasic.tencentcloudapi.com";
        private const string version = "2021-05-26";
-       private const string sdkVersion = "SDK_NET_3.0.1148";
+       private const string sdkVersion = "SDK_NET_3.0.1149";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,41 @@ namespace TencentCloud.Essbasic.V20210526
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 该接口用于结束动态签署方2.0的合同流程。
+        /// 
+        /// 
+        /// **功能开通**
+        /// - 动态签署方2.0功能的使用需要先<font color="red">联系产品经理开通模块化计费功能</font>，然后到控制台中打开此功能。详细的使用说明请参考<a href="https://qian.tencent.com/developers/company/dynamic_signer_v2" target="_blank">动态签署方2.0</a>文档。
+        /// 
+        /// **使用条件**
+        /// - 此接口只能在<font color="red">合同处于非终态且<b>所有的签署方都已经完成签署</b></font>。一旦合同进入终态（例如：过期、拒签、撤销或者调用过此接口成功过），将无法通过此接口结束合同流程。
+        /// </summary>
+        /// <param name="req"><see cref="ArchiveDynamicFlowRequest"/></param>
+        /// <returns><see cref="ArchiveDynamicFlowResponse"/></returns>
+        public Task<ArchiveDynamicFlowResponse> ArchiveDynamicFlow(ArchiveDynamicFlowRequest req)
+        {
+            return InternalRequestAsync<ArchiveDynamicFlowResponse>(req, "ArchiveDynamicFlow");
+        }
+
+        /// <summary>
+        /// 该接口用于结束动态签署方2.0的合同流程。
+        /// 
+        /// 
+        /// **功能开通**
+        /// - 动态签署方2.0功能的使用需要先<font color="red">联系产品经理开通模块化计费功能</font>，然后到控制台中打开此功能。详细的使用说明请参考<a href="https://qian.tencent.com/developers/company/dynamic_signer_v2" target="_blank">动态签署方2.0</a>文档。
+        /// 
+        /// **使用条件**
+        /// - 此接口只能在<font color="red">合同处于非终态且<b>所有的签署方都已经完成签署</b></font>。一旦合同进入终态（例如：过期、拒签、撤销或者调用过此接口成功过），将无法通过此接口结束合同流程。
+        /// </summary>
+        /// <param name="req"><see cref="ArchiveDynamicFlowRequest"/></param>
+        /// <returns><see cref="ArchiveDynamicFlowResponse"/></returns>
+        public ArchiveDynamicFlowResponse ArchiveDynamicFlowSync(ArchiveDynamicFlowRequest req)
+        {
+            return InternalRequestAsync<ArchiveDynamicFlowResponse>(req, "ArchiveDynamicFlow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -405,6 +440,41 @@ namespace TencentCloud.Essbasic.V20210526
         public ChannelCreateConvertTaskApiResponse ChannelCreateConvertTaskApiSync(ChannelCreateConvertTaskApiRequest req)
         {
             return InternalRequestAsync<ChannelCreateConvertTaskApiResponse>(req, "ChannelCreateConvertTaskApi")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 接口（ChannelCreateDynamicFlowApprover）用来补充<a href="https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles" target="_blank">用PDF文件创建签署流程</a>发起的动态合同的签署人信息
+        /// **注**: 
+        /// <ul>
+        /// <li>此接口需要保证：渠道企业已开启：模块化计费能力，</li>
+        /// <li>此接口需要保证：渠道应用已开启：动态签署人2.0能力</li>
+        /// <li>此接口需要保证：合同发起时指定开启了动态合同</li>
+        /// <li>此接口补充的动态签署人传参规则，请参考接口：<a href="https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles" target="_blank">用PDF文件创建签署流程</a>的签署人传参规则</li>
+        /// </ul>
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateDynamicFlowApproverRequest"/></param>
+        /// <returns><see cref="ChannelCreateDynamicFlowApproverResponse"/></returns>
+        public Task<ChannelCreateDynamicFlowApproverResponse> ChannelCreateDynamicFlowApprover(ChannelCreateDynamicFlowApproverRequest req)
+        {
+            return InternalRequestAsync<ChannelCreateDynamicFlowApproverResponse>(req, "ChannelCreateDynamicFlowApprover");
+        }
+
+        /// <summary>
+        /// 接口（ChannelCreateDynamicFlowApprover）用来补充<a href="https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles" target="_blank">用PDF文件创建签署流程</a>发起的动态合同的签署人信息
+        /// **注**: 
+        /// <ul>
+        /// <li>此接口需要保证：渠道企业已开启：模块化计费能力，</li>
+        /// <li>此接口需要保证：渠道应用已开启：动态签署人2.0能力</li>
+        /// <li>此接口需要保证：合同发起时指定开启了动态合同</li>
+        /// <li>此接口补充的动态签署人传参规则，请参考接口：<a href="https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles" target="_blank">用PDF文件创建签署流程</a>的签署人传参规则</li>
+        /// </ul>
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateDynamicFlowApproverRequest"/></param>
+        /// <returns><see cref="ChannelCreateDynamicFlowApproverResponse"/></returns>
+        public ChannelCreateDynamicFlowApproverResponse ChannelCreateDynamicFlowApproverSync(ChannelCreateDynamicFlowApproverRequest req)
+        {
+            return InternalRequestAsync<ChannelCreateDynamicFlowApproverResponse>(req, "ChannelCreateDynamicFlowApprover")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

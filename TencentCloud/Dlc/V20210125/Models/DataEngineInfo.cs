@@ -389,6 +389,41 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("IsPoolMode")]
         public string IsPoolMode{ get; set; }
 
+        /// <summary>
+        /// 是否支持AI，false: 不支持；true：支持
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsSupportAI")]
+        public bool? IsSupportAI{ get; set; }
+
+        /// <summary>
+        /// 网关id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GatewayId")]
+        public string GatewayId{ get; set; }
+
+        /// <summary>
+        /// 网关状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GatewayState")]
+        public long? GatewayState{ get; set; }
+
+        /// <summary>
+        /// 是否能执行AI任务
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsAIGateway")]
+        public bool? IsAIGateway{ get; set; }
+
+        /// <summary>
+        /// 1:AI引擎，0:非AI引擎
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsAIEngine")]
+        public long? IsAIEngine{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -449,6 +484,11 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamArrayObj(map, prefix + "AccessInfos.", this.AccessInfos);
             this.SetParamSimple(map, prefix + "EngineNetworkName", this.EngineNetworkName);
             this.SetParamSimple(map, prefix + "IsPoolMode", this.IsPoolMode);
+            this.SetParamSimple(map, prefix + "IsSupportAI", this.IsSupportAI);
+            this.SetParamSimple(map, prefix + "GatewayId", this.GatewayId);
+            this.SetParamSimple(map, prefix + "GatewayState", this.GatewayState);
+            this.SetParamSimple(map, prefix + "IsAIGateway", this.IsAIGateway);
+            this.SetParamSimple(map, prefix + "IsAIEngine", this.IsAIEngine);
         }
     }
 }

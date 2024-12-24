@@ -28,7 +28,7 @@ namespace TencentCloud.Cloudapp.V20220530
 
        private const string endpoint = "cloudapp.tencentcloudapi.com";
        private const string version = "2022-05-30";
-       private const string sdkVersion = "SDK_NET_3.0.1148";
+       private const string sdkVersion = "SDK_NET_3.0.1149";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Cloudapp.V20220530
         }
 
         /// <summary>
-        /// 通过运行时roleId查询对应的软件 LICENSE
+        /// 从软件进程读取 LICENSE。
         /// </summary>
         /// <param name="req"><see cref="VerifyLicenseRequest"/></param>
         /// <returns><see cref="VerifyLicenseResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Cloudapp.V20220530
         }
 
         /// <summary>
-        /// 通过运行时roleId查询对应的软件 LICENSE
+        /// 从软件进程读取 LICENSE。
         /// </summary>
         /// <param name="req"><see cref="VerifyLicenseRequest"/></param>
         /// <returns><see cref="VerifyLicenseResponse"/></returns>

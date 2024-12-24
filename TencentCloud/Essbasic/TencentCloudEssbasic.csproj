@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B9887456-D090-35D3-9EFC-3D27B86D0C97}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1148</VersionPrefix>
+    <VersionPrefix>3.0.1149</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,6 +53,8 @@
     <Compile Include="V20210526\Models\ApproverItem.cs" />
     <Compile Include="V20210526\Models\ApproverOption.cs" />
     <Compile Include="V20210526\Models\ApproverRestriction.cs" />
+    <Compile Include="V20210526\Models\ArchiveDynamicFlowRequest.cs" />
+    <Compile Include="V20210526\Models\ArchiveDynamicFlowResponse.cs" />
     <Compile Include="V20210526\Models\AuthFailMessage.cs" />
     <Compile Include="V20210526\Models\AuthInfoDetail.cs" />
     <Compile Include="V20210526\Models\AuthorizedUser.cs" />
@@ -60,6 +62,7 @@
     <Compile Include="V20210526\Models\BaseFlowInfo.cs" />
     <Compile Include="V20210526\Models\CancelFailureFlow.cs" />
     <Compile Include="V20210526\Models\CcInfo.cs" />
+    <Compile Include="V20210526\Models\ChannelArchiveDynamicApproverData.cs" />
     <Compile Include="V20210526\Models\ChannelBatchCancelFlowsRequest.cs" />
     <Compile Include="V20210526\Models\ChannelBatchCancelFlowsResponse.cs" />
     <Compile Include="V20210526\Models\ChannelBillUsageDetail.cs" />
@@ -79,6 +82,8 @@
     <Compile Include="V20210526\Models\ChannelCreateBoundFlowsResponse.cs" />
     <Compile Include="V20210526\Models\ChannelCreateConvertTaskApiRequest.cs" />
     <Compile Include="V20210526\Models\ChannelCreateConvertTaskApiResponse.cs" />
+    <Compile Include="V20210526\Models\ChannelCreateDynamicFlowApproverRequest.cs" />
+    <Compile Include="V20210526\Models\ChannelCreateDynamicFlowApproverResponse.cs" />
     <Compile Include="V20210526\Models\ChannelCreateEmbedWebUrlRequest.cs" />
     <Compile Include="V20210526\Models\ChannelCreateEmbedWebUrlResponse.cs" />
     <Compile Include="V20210526\Models\ChannelCreateFlowApproversRequest.cs" />
@@ -222,6 +227,9 @@
     <Compile Include="V20210526\Models\DescribeUsageResponse.cs" />
     <Compile Include="V20210526\Models\DetectInfoVideoData.cs" />
     <Compile Include="V20210526\Models\DownloadFlowInfo.cs" />
+    <Compile Include="V20210526\Models\DynamicFlowApproverResult.cs" />
+    <Compile Include="V20210526\Models\DynamicFlowInfo.cs" />
+    <Compile Include="V20210526\Models\DynamicFlowResult.cs" />
     <Compile Include="V20210526\Models\EmbedUrlOption.cs" />
     <Compile Include="V20210526\Models\ExtentServiceAuthInfo.cs" />
     <Compile Include="V20210526\Models\FailedCreateRoleData.cs" />

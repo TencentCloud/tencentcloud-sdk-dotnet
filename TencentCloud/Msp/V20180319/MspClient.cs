@@ -28,7 +28,7 @@ namespace TencentCloud.Msp.V20180319
 
        private const string endpoint = "msp.tencentcloudapi.com";
        private const string version = "2018-03-19";
-       private const string sdkVersion = "SDK_NET_3.0.1148";
+       private const string sdkVersion = "SDK_NET_3.0.1149";
 
         /// <summary>
         /// Client constructor.
@@ -54,6 +54,8 @@ namespace TencentCloud.Msp.V20180319
         }
 
         /// <summary>
+        /// 接口已经废弃不再使用
+        /// 
         /// 取消注册迁移任务
         /// </summary>
         /// <param name="req"><see cref="DeregisterMigrationTaskRequest"/></param>
@@ -64,6 +66,8 @@ namespace TencentCloud.Msp.V20180319
         }
 
         /// <summary>
+        /// 接口已经废弃不再使用
+        /// 
         /// 取消注册迁移任务
         /// </summary>
         /// <param name="req"><see cref="DeregisterMigrationTaskRequest"/></param>

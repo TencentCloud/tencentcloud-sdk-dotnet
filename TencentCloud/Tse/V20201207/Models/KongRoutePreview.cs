@@ -130,6 +130,18 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("Headers")]
         public KVMapping[] Headers{ get; set; }
 
+        /// <summary>
+        /// 是否缓存请求body，默认true
+        /// </summary>
+        [JsonProperty("RequestBuffering")]
+        public bool? RequestBuffering{ get; set; }
+
+        /// <summary>
+        /// 是否缓存响应body，默认true
+        /// </summary>
+        [JsonProperty("ResponseBuffering")]
+        public bool? ResponseBuffering{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -151,6 +163,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "ServiceID", this.ServiceID);
             this.SetParamArraySimple(map, prefix + "DestinationPorts.", this.DestinationPorts);
             this.SetParamArrayObj(map, prefix + "Headers.", this.Headers);
+            this.SetParamSimple(map, prefix + "RequestBuffering", this.RequestBuffering);
+            this.SetParamSimple(map, prefix + "ResponseBuffering", this.ResponseBuffering);
         }
     }
 }

@@ -26,24 +26,28 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         
         /// <summary>
         /// 跟踪集状态，1：开启，0：关闭
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuditStatus")]
         public long? AuditStatus{ get; set; }
 
         /// <summary>
         /// COS存储桶名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CosBucketName")]
         public string CosBucketName{ get; set; }
 
         /// <summary>
         /// 跟踪集名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuditName")]
         public string AuditName{ get; set; }
 
         /// <summary>
         /// 日志前缀
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogFilePrefix")]
         public string LogFilePrefix{ get; set; }

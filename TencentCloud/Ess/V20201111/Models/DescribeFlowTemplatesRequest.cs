@@ -49,7 +49,8 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 搜索条件，本字段用于指定模板Id进行查询。
-        /// Key：template-id Values：需要查询的模板Id列表
+        /// - Key：template-id Values：需要查询的模板Id列表
+        /// - Key：template-name Values：需要查询的模板名称列表
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

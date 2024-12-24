@@ -34,6 +34,7 @@ namespace TencentCloud.Fmu.V20191213.Models
         /// <summary>
         /// 图片 base64 数据，base64 编码后大小不可超过5M。 
         /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        /// 暂不支持带有alpha透明通道的图片。
         /// </summary>
         [JsonProperty("Image")]
         public string Image{ get; set; }
@@ -44,6 +45,7 @@ namespace TencentCloud.Fmu.V20191213.Models
         /// 图片存储于腾讯云的 Url 可保障更高下载速度和稳定性，建议图片存储于腾讯云。  
         /// 非腾讯云存储的Url速度和稳定性可能受一定影响。  
         /// 支持PNG、JPG、JPEG、BMP 等图片格式，不支持 GIF 图片。
+        /// 暂不支持带有alpha透明通道的图片。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

@@ -102,6 +102,12 @@ namespace TencentCloud.Omics.V20221128.Models
         [JsonProperty("VolumeIds")]
         public string[] VolumeIds{ get; set; }
 
+        /// <summary>
+        /// 工作流入口文件，不填使用默认入口文件。
+        /// </summary>
+        [JsonProperty("Entrypoint")]
+        public string Entrypoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +126,7 @@ namespace TencentCloud.Omics.V20221128.Models
             this.SetParamSimple(map, prefix + "CacheClearDelay", this.CacheClearDelay);
             this.SetParamSimple(map, prefix + "WorkDir", this.WorkDir);
             this.SetParamArraySimple(map, prefix + "VolumeIds.", this.VolumeIds);
+            this.SetParamSimple(map, prefix + "Entrypoint", this.Entrypoint);
         }
     }
 }

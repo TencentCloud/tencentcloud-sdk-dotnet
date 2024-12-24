@@ -31,7 +31,7 @@ namespace TencentCloud.Chdfs.V20201112.Models
         public string AccessGroupName{ get; set; }
 
         /// <summary>
-        /// VPC网络类型（1：CVM；2：黑石1.0）
+        /// VPC网络类型（1：CVM）
         /// </summary>
         [JsonProperty("VpcType")]
         public ulong? VpcType{ get; set; }
