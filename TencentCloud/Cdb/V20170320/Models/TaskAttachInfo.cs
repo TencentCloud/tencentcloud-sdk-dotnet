@@ -27,7 +27,6 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// <summary>
         /// 升级任务：
         /// ”FastUpgradeStatus“：表示升级类型。1-原地升级；0-普通升级。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttachKey")]
         public string AttachKey{ get; set; }
@@ -35,7 +34,6 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// <summary>
         /// 升级任务：
         /// ”FastUpgradeStatus“：表示升级类型。1-原地升级；0-普通升级。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttachValue")]
         public string AttachValue{ get; set; }

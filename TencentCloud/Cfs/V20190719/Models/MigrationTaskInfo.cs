@@ -50,35 +50,30 @@ namespace TencentCloud.Cfs.V20190719.Models
 
         /// <summary>
         /// 数据源桶名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BucketName")]
         public string BucketName{ get; set; }
 
         /// <summary>
         /// 数据源桶地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BucketRegion")]
         public string BucketRegion{ get; set; }
 
         /// <summary>
         /// 数据源桶地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BucketAddress")]
         public string BucketAddress{ get; set; }
 
         /// <summary>
         /// 清单地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ListAddress")]
         public string ListAddress{ get; set; }
 
         /// <summary>
         /// 文件系统实例名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FsName")]
         public string FsName{ get; set; }
@@ -109,7 +104,6 @@ namespace TencentCloud.Cfs.V20190719.Models
 
         /// <summary>
         /// 完成/终止时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
@@ -122,70 +116,60 @@ namespace TencentCloud.Cfs.V20190719.Models
 
         /// <summary>
         /// 文件数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileTotalCount")]
         public ulong? FileTotalCount{ get; set; }
 
         /// <summary>
         /// 已迁移文件数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileMigratedCount")]
         public ulong? FileMigratedCount{ get; set; }
 
         /// <summary>
         /// 迁移失败文件数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileFailedCount")]
         public ulong? FileFailedCount{ get; set; }
 
         /// <summary>
         /// 文件容量，单位Byte
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileTotalSize")]
         public long? FileTotalSize{ get; set; }
 
         /// <summary>
         /// 已迁移文件容量，单位Byte
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileMigratedSize")]
         public long? FileMigratedSize{ get; set; }
 
         /// <summary>
         /// 迁移失败文件容量，单位Byte
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileFailedSize")]
         public long? FileFailedSize{ get; set; }
 
         /// <summary>
         /// 全部清单
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileTotalList")]
         public string FileTotalList{ get; set; }
 
         /// <summary>
         /// 已完成文件清单
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileCompletedList")]
         public string FileCompletedList{ get; set; }
 
         /// <summary>
         /// 失败文件清单
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileFailedList")]
         public string FileFailedList{ get; set; }
 
         /// <summary>
         /// 源桶路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BucketPath")]
         public string BucketPath{ get; set; }

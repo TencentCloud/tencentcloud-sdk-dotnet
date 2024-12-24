@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1147";
+       private const string sdkVersion = "SDK_NET_3.0.1148";
 
         /// <summary>
         /// Client constructor.
@@ -1335,6 +1335,27 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 查询实例秒级备份信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecondLevelBackupInfoRequest"/></param>
+        /// <returns><see cref="DescribeSecondLevelBackupInfoResponse"/></returns>
+        public Task<DescribeSecondLevelBackupInfoResponse> DescribeSecondLevelBackupInfo(DescribeSecondLevelBackupInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSecondLevelBackupInfoResponse>(req, "DescribeSecondLevelBackupInfo");
+        }
+
+        /// <summary>
+        /// 查询实例秒级备份信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecondLevelBackupInfoRequest"/></param>
+        /// <returns><see cref="DescribeSecondLevelBackupInfoResponse"/></returns>
+        public DescribeSecondLevelBackupInfoResponse DescribeSecondLevelBackupInfoSync(DescribeSecondLevelBackupInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSecondLevelBackupInfoResponse>(req, "DescribeSecondLevelBackupInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeSlowLog）查询实例慢查询记录。
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowLogRequest"/></param>
@@ -1797,6 +1818,27 @@ namespace TencentCloud.Redis.V20180412
         public ModifyInstanceAvailabilityZonesResponse ModifyInstanceAvailabilityZonesSync(ModifyInstanceAvailabilityZonesRequest req)
         {
             return InternalRequestAsync<ModifyInstanceAvailabilityZonesResponse>(req, "ModifyInstanceAvailabilityZones")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改实例的备份模式
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceBackupModeRequest"/></param>
+        /// <returns><see cref="ModifyInstanceBackupModeResponse"/></returns>
+        public Task<ModifyInstanceBackupModeResponse> ModifyInstanceBackupMode(ModifyInstanceBackupModeRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceBackupModeResponse>(req, "ModifyInstanceBackupMode");
+        }
+
+        /// <summary>
+        /// 修改实例的备份模式
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceBackupModeRequest"/></param>
+        /// <returns><see cref="ModifyInstanceBackupModeResponse"/></returns>
+        public ModifyInstanceBackupModeResponse ModifyInstanceBackupModeSync(ModifyInstanceBackupModeRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceBackupModeResponse>(req, "ModifyInstanceBackupMode")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

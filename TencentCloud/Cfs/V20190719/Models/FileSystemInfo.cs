@@ -173,21 +173,18 @@ namespace TencentCloud.Cfs.V20190719.Models
 
         /// <summary>
         /// 分层存储详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TieringDetail")]
         public TieringDetailInfo TieringDetail{ get; set; }
 
         /// <summary>
         /// 文件系统自动扩容策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoScaleUpRule")]
         public AutoScaleUpRule AutoScaleUpRule{ get; set; }
 
         /// <summary>
         /// 文件系统版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }

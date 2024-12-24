@@ -70,6 +70,16 @@ namespace TencentCloud.Facefusion.V20220927.Models
         [JsonProperty("TeethEnhanceRadio")]
         public float? TeethEnhanceRadio{ get; set; }
 
+        /// <summary>
+        /// 妆容迁移开关，默认取值为0。
+        /// 将素材模板的妆容迁移到融合结果上。即：如果希望妆容效果与模板图保持一致，可以打开此开关。
+        /// 0：妆容迁移关闭
+        /// 1：妆容迁移打开
+        /// 该参数仅对SwapModelType（模型类型）取值1-5生效
+        /// </summary>
+        [JsonProperty("MakeupTransferRadio")]
+        public float? MakeupTransferRadio{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +91,7 @@ namespace TencentCloud.Facefusion.V20220927.Models
             this.SetParamSimple(map, prefix + "MpRadio", this.MpRadio);
             this.SetParamSimple(map, prefix + "BlurRadio", this.BlurRadio);
             this.SetParamSimple(map, prefix + "TeethEnhanceRadio", this.TeethEnhanceRadio);
+            this.SetParamSimple(map, prefix + "MakeupTransferRadio", this.MakeupTransferRadio);
         }
     }
 }

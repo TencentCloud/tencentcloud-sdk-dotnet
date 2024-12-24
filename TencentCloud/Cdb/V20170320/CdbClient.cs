@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1147";
+       private const string sdkVersion = "SDK_NET_3.0.1148";
 
         /// <summary>
         /// Client constructor.
@@ -222,7 +222,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 关闭数据库代理
+        /// 本接口（CloseCDBProxy）用于关闭数据库代理。
         /// </summary>
         /// <param name="req"><see cref="CloseCDBProxyRequest"/></param>
         /// <returns><see cref="CloseCDBProxyResponse"/></returns>
@@ -232,7 +232,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 关闭数据库代理
+        /// 本接口（CloseCDBProxy）用于关闭数据库代理。
         /// </summary>
         /// <param name="req"><see cref="CloseCDBProxyRequest"/></param>
         /// <returns><see cref="CloseCDBProxyResponse"/></returns>
@@ -617,7 +617,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(CreateDeployGroup)用于创建放置实例的置放群组
+        /// 本接口（CreateDeployGroup）用于创建放置实例的置放群组。
         /// </summary>
         /// <param name="req"><see cref="CreateDeployGroupRequest"/></param>
         /// <returns><see cref="CreateDeployGroupResponse"/></returns>
@@ -627,7 +627,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(CreateDeployGroup)用于创建放置实例的置放群组
+        /// 本接口（CreateDeployGroup）用于创建放置实例的置放群组。
         /// </summary>
         /// <param name="req"><see cref="CreateDeployGroupRequest"/></param>
         /// <returns><see cref="CreateDeployGroupResponse"/></returns>
@@ -1062,7 +1062,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeAuditLogs)用于查询数据库审计日志。
+        /// 本接口（DescribeAuditLogs）用于查询数据库审计日志。
         /// </summary>
         /// <param name="req"><see cref="DescribeAuditLogsRequest"/></param>
         /// <returns><see cref="DescribeAuditLogsResponse"/></returns>
@@ -1072,7 +1072,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeAuditLogs)用于查询数据库审计日志。
+        /// 本接口（DescribeAuditLogs）用于查询数据库审计日志。
         /// </summary>
         /// <param name="req"><see cref="DescribeAuditLogsRequest"/></param>
         /// <returns><see cref="DescribeAuditLogsResponse"/></returns>

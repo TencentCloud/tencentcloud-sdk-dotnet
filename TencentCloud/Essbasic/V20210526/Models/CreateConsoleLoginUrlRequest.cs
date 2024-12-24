@@ -151,7 +151,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 子客经办人身份证
-        /// 注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持居民身份证类型`。
+        /// 注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持中国大陆居民身份证类型`。
         /// </summary>
         [JsonProperty("ProxyOperatorIdCardNumber")]
         public string ProxyOperatorIdCardNumber{ get; set; }

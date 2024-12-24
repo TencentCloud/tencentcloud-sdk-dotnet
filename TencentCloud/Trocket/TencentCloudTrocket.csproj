@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{621A4001-F8F8-394B-BCE2-5A65FE5DDEA5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1147</VersionPrefix>
+    <VersionPrefix>3.0.1148</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -118,6 +118,8 @@
     <Compile Include="V20230308\Models\DescribeMQTTTopicResponse.cs" />
     <Compile Include="V20230308\Models\DescribeMQTTUserListRequest.cs" />
     <Compile Include="V20230308\Models\DescribeMQTTUserListResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeMessageTraceRequest.cs" />
+    <Compile Include="V20230308\Models\DescribeMessageTraceResponse.cs" />
     <Compile Include="V20230308\Models\DescribeProductSKUsRequest.cs" />
     <Compile Include="V20230308\Models\DescribeProductSKUsResponse.cs" />
     <Compile Include="V20230308\Models\DescribeRoleListRequest.cs" />
@@ -143,6 +145,7 @@
     <Compile Include="V20230308\Models\MQTTProductSkuItem.cs" />
     <Compile Include="V20230308\Models\MQTTTopicItem.cs" />
     <Compile Include="V20230308\Models\MQTTUserItem.cs" />
+    <Compile Include="V20230308\Models\MessageTraceItem.cs" />
     <Compile Include="V20230308\Models\ModifyConsumerGroupRequest.cs" />
     <Compile Include="V20230308\Models\ModifyConsumerGroupResponse.cs" />
     <Compile Include="V20230308\Models\ModifyInstanceRequest.cs" />

@@ -49,7 +49,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 分页偏移量。
+        /// 日志偏移量，最多支持偏移查询65535条日志。可填写范围：0 - 65535。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

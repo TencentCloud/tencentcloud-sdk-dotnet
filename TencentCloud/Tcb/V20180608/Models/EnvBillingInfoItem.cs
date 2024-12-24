@@ -126,6 +126,18 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("ExtPackageType")]
         public string ExtPackageType{ get; set; }
 
+        /// <summary>
+        /// 是否付费期环境，可取值：yes/no。
+        /// </summary>
+        [JsonProperty("EnvCharged")]
+        public string EnvCharged{ get; set; }
+
+        /// <summary>
+        /// 是否已激活，可取值：yes/no。
+        /// </summary>
+        [JsonProperty("EnvActivated")]
+        public string EnvActivated{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -147,6 +159,8 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "FreeQuota", this.FreeQuota);
             this.SetParamSimple(map, prefix + "EnableOverrun", this.EnableOverrun);
             this.SetParamSimple(map, prefix + "ExtPackageType", this.ExtPackageType);
+            this.SetParamSimple(map, prefix + "EnvCharged", this.EnvCharged);
+            this.SetParamSimple(map, prefix + "EnvActivated", this.EnvActivated);
         }
     }
 }

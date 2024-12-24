@@ -192,6 +192,23 @@ namespace TencentCloud.Live.V20180801.Models
         public string ToUrl{ get; set; }
 
         /// <summary>
+        /// 指定播放文件索引。
+        /// 注意： 1. 从1开始，不大于SourceUrls中文件个数。
+        /// 2. 该偏移仅在首次轮播时有效。
+        /// 3. 提前创建的任务指定的偏移最长有效期为24小时，24小时后未开始的任务偏移失效。
+        /// </summary>
+        [JsonProperty("FileIndex")]
+        public long? FileIndex{ get; set; }
+
+        /// <summary>
+        /// 指定播放文件偏移。
+        /// 注意：
+        /// 1. 单位：秒，配合FileIndex使用。
+        /// </summary>
+        [JsonProperty("OffsetTime")]
+        public long? OffsetTime{ get; set; }
+
+        /// <summary>
         /// 备源的类型：
         /// PullLivePushLive -直播，
         /// PullVodPushLive -点播。
@@ -270,6 +287,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "SpecifyTaskId", this.SpecifyTaskId);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamSimple(map, prefix + "ToUrl", this.ToUrl);
+            this.SetParamSimple(map, prefix + "FileIndex", this.FileIndex);
+            this.SetParamSimple(map, prefix + "OffsetTime", this.OffsetTime);
             this.SetParamSimple(map, prefix + "BackupSourceType", this.BackupSourceType);
             this.SetParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
             this.SetParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);

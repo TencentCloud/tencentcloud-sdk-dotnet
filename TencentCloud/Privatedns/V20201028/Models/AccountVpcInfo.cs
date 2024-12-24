@@ -32,21 +32,18 @@ namespace TencentCloud.Privatedns.V20201028.Models
 
         /// <summary>
         /// Vpc所属地区: ap-guangzhou, ap-shanghai
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// Vpc所属账号: 123456789
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
         /// vpc资源名称：testname
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }

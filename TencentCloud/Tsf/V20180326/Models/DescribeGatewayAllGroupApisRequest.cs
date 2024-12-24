@@ -31,7 +31,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string GatewayDeployGroupId{ get; set; }
 
         /// <summary>
-        /// 搜索关键字，支持分组名称或API Path
+        /// 搜索关键字，支持命名空间名称或服务名称
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }

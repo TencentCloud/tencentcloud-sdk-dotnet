@@ -56,14 +56,12 @@ namespace TencentCloud.Cfs.V20190719.Models
 
         /// <summary>
         /// 容量使用，单位GiB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CapacityUsed")]
         public ulong? CapacityUsed{ get; set; }
 
         /// <summary>
         /// 文件使用个数，单位个
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileUsed")]
         public ulong? FileUsed{ get; set; }
@@ -77,7 +75,6 @@ namespace TencentCloud.Cfs.V20190719.Models
 
         /// <summary>
         /// 配置规则状态，inavailable---配置中，available --已生效，deleting--删除中，deleted 已删除，failed--配置失败
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

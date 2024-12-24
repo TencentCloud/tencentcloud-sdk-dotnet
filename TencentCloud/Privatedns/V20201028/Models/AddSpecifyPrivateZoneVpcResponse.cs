@@ -44,7 +44,6 @@ namespace TencentCloud.Privatedns.V20201028.Models
 
         /// <summary>
         /// 唯一id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UniqId")]
         public string UniqId{ get; set; }

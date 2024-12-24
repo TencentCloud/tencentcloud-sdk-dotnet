@@ -49,7 +49,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
         public string UserSubnetId{ get; set; }
 
         /// <summary>
-        /// 版本
+        /// 系统版本
         /// </summary>
         [JsonProperty("ProductVersion")]
         public string ProductVersion{ get; set; }
@@ -93,7 +93,7 @@ namespace TencentCloud.Cdwch.V20200915.Models
         public string CosBucketName{ get; set; }
 
         /// <summary>
-        /// 是否是裸盘挂载
+        /// 是否是裸盘挂载，默认值 0 为 未挂载，1 为挂载。
         /// </summary>
         [JsonProperty("MountDiskType")]
         public long? MountDiskType{ get; set; }

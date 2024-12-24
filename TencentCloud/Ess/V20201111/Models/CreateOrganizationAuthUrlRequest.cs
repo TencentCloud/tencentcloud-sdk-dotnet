@@ -99,8 +99,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 认证人证件类型， 支持以下类型
         /// <ul><li><b>ID_CARD</b> : 中国大陆居民身份证  (默认值)</li>
-        /// <li><b>HONGKONG_AND_MACAO</b>  : 港澳居民来往内地通行证</li>
-        /// <li><b>HONGKONG_MACAO_AND_TAIWAN</b>  : 港澳台居民居住证(格式同居民身份证)</li></ul>
+        /// <li><b>HONGKONG_AND_MACAO</b>  : 中国港澳居民来往内地通行证</li>
+        /// <li><b>HONGKONG_MACAO_AND_TAIWAN</b>  : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
         /// </summary>
         [JsonProperty("AdminIdCardType")]
         public string AdminIdCardType{ get; set; }

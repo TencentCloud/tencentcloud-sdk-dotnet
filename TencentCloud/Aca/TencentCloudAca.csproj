@@ -1,0 +1,116 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{A8243DD9-A4ED-3441-B3B6-E46090DCB32F}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1148</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Aca</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20210323\AcaClient.cs" />
+    <Compile Include="V20210323\Models\Abnormals.cs" />
+    <Compile Include="V20210323\Models\CommonHeader.cs" />
+    <Compile Include="V20210323\Models\CriticalInfo.cs" />
+    <Compile Include="V20210323\Models\CurrentDiagnosis.cs" />
+    <Compile Include="V20210323\Models\Department.cs" />
+    <Compile Include="V20210323\Models\DiagnosisInfo.cs" />
+    <Compile Include="V20210323\Models\Dict.cs" />
+    <Compile Include="V20210323\Models\DifferDiagnosis.cs" />
+    <Compile Include="V20210323\Models\DocInfo.cs" />
+    <Compile Include="V20210323\Models\DoctorInfo.cs" />
+    <Compile Include="V20210323\Models\Drug.cs" />
+    <Compile Include="V20210323\Models\DrugList.cs" />
+    <Compile Include="V20210323\Models\DrugUsage.cs" />
+    <Compile Include="V20210323\Models\DurgPropertyInfo.cs" />
+    <Compile Include="V20210323\Models\EmrDiagnosises.cs" />
+    <Compile Include="V20210323\Models\EmrQuality.cs" />
+    <Compile Include="V20210323\Models\GetDrugIndicationsReqData.cs" />
+    <Compile Include="V20210323\Models\GetDrugIndicationsRequest.cs" />
+    <Compile Include="V20210323\Models\GetDrugIndicationsResp.cs" />
+    <Compile Include="V20210323\Models\GetDrugIndicationsResponse.cs" />
+    <Compile Include="V20210323\Models\HealthPrescriptions.cs" />
+    <Compile Include="V20210323\Models\IndicationsDrug.cs" />
+    <Compile Include="V20210323\Models\LoginData.cs" />
+    <Compile Include="V20210323\Models\LoginDataResp.cs" />
+    <Compile Include="V20210323\Models\LoginHeader.cs" />
+    <Compile Include="V20210323\Models\LoginHisToolRequest.cs" />
+    <Compile Include="V20210323\Models\LoginHisToolResponse.cs" />
+    <Compile Include="V20210323\Models\LoginOutData.cs" />
+    <Compile Include="V20210323\Models\LoginOutHeader.cs" />
+    <Compile Include="V20210323\Models\LoginOutHisToolRequest.cs" />
+    <Compile Include="V20210323\Models\LoginOutHisToolResponse.cs" />
+    <Compile Include="V20210323\Models\LoginOutResponseData.cs" />
+    <Compile Include="V20210323\Models\OperateResp.cs" />
+    <Compile Include="V20210323\Models\PatientBaseInfo.cs" />
+    <Compile Include="V20210323\Models\PatientFamilyHistory.cs" />
+    <Compile Include="V20210323\Models\PatientHistory.cs" />
+    <Compile Include="V20210323\Models\PhysicalExam.cs" />
+    <Compile Include="V20210323\Models\RationalDrugInfo.cs" />
+    <Compile Include="V20210323\Models\RecommendedUsage.cs" />
+    <Compile Include="V20210323\Models\RecordQuality.cs" />
+    <Compile Include="V20210323\Models\ReferralInfo.cs" />
+    <Compile Include="V20210323\Models\RequestCase.cs" />
+    <Compile Include="V20210323\Models\RiskInfo.cs" />
+    <Compile Include="V20210323\Models\SmartDrugInfoData.cs" />
+    <Compile Include="V20210323\Models\SmartDrugInfoRequest.cs" />
+    <Compile Include="V20210323\Models\SmartDrugInfoResp.cs" />
+    <Compile Include="V20210323\Models\SmartDrugInfoResponse.cs" />
+    <Compile Include="V20210323\Models\SmartPredictReqData.cs" />
+    <Compile Include="V20210323\Models\SmartPredictRequest.cs" />
+    <Compile Include="V20210323\Models\SmartPredictRespData.cs" />
+    <Compile Include="V20210323\Models\SmartPredictResponse.cs" />
+    <Compile Include="V20210323\Models\SuspectedDiagnosis.cs" />
+    <Compile Include="V20210323\Models\SyncDepartmentData.cs" />
+    <Compile Include="V20210323\Models\SyncDepartmentRequest.cs" />
+    <Compile Include="V20210323\Models\SyncDepartmentRespData.cs" />
+    <Compile Include="V20210323\Models\SyncDepartmentResponse.cs" />
+    <Compile Include="V20210323\Models\SyncDictData.cs" />
+    <Compile Include="V20210323\Models\SyncStandardDictRequest.cs" />
+    <Compile Include="V20210323\Models\SyncStandardDictResponse.cs" />
+    <Compile Include="V20210323\Models\TreatmentGuide.cs" />
+    <Compile Include="V20210323\Models\UploadDrugData.cs" />
+    <Compile Include="V20210323\Models\UploadDrugsRequest.cs" />
+    <Compile Include="V20210323\Models\UploadDrugsResponse.cs" />
+    <Compile Include="V20210323\Models\VitalSignsInfo.cs" />
+  </ItemGroup>
+</Project>

@@ -31,16 +31,16 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 待续费节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr)查询。
-        /// </summary>
-        [JsonProperty("ResourceIds")]
-        public string[] ResourceIds{ get; set; }
-
-        /// <summary>
         /// 实例计费模式。此处只支持取值为1，表示包年包月。
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
+
+        /// <summary>
+        /// 待续费节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr)查询。
+        /// </summary>
+        [JsonProperty("ResourceIds")]
+        public string[] ResourceIds{ get; set; }
 
         /// <summary>
         /// 实例续费的时间单位。取值范围：
@@ -68,6 +68,18 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ModifyPayMode")]
         public long? ModifyPayMode{ get; set; }
 
+        /// <summary>
+        /// 是否需要每个节点续费价格
+        /// </summary>
+        [JsonProperty("NeedDetail")]
+        public bool? NeedDetail{ get; set; }
+
+        /// <summary>
+        /// 集群id，如果需要集群所有包年包月节点续费信息，可以填写该参数
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,12 +87,14 @@ namespace TencentCloud.Emr.V20190103.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
-            this.SetParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
             this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
             this.SetParamSimple(map, prefix + "Currency", this.Currency);
             this.SetParamObj(map, prefix + "Placement.", this.Placement);
             this.SetParamSimple(map, prefix + "ModifyPayMode", this.ModifyPayMode);
+            this.SetParamSimple(map, prefix + "NeedDetail", this.NeedDetail);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

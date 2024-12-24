@@ -71,14 +71,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 第三方平台子客企业法定代表人的证件类型，支持以下类型
         /// <ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li></ul>
-        /// 注: `现在仅支持ID_CARD居民身份证类型`
+        /// 注: `现在仅支持ID_CARD中国大陆居民身份证类型`
         /// </summary>
         [JsonProperty("ProxyLegalIdCardType")]
         public string ProxyLegalIdCardType{ get; set; }
 
         /// <summary>
         /// 第三方平台子客企业法定代表人的证件号码, 应符合以下规则
-        /// <ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li></ul>
+        /// <ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li></ul>
         /// </summary>
         [JsonProperty("ProxyLegalIdCardNumber")]
         public string ProxyLegalIdCardNumber{ get; set; }

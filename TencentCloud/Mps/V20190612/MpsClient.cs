@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1147";
+       private const string sdkVersion = "SDK_NET_3.0.1148";
 
         /// <summary>
         /// Client constructor.
@@ -239,6 +239,27 @@ namespace TencentCloud.Mps.V20190612
         public CreateImageSpriteTemplateResponse CreateImageSpriteTemplateSync(CreateImageSpriteTemplateRequest req)
         {
             return InternalRequestAsync<CreateImageSpriteTemplateResponse>(req, "CreateImageSpriteTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建直播录制模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveRecordTemplateRequest"/></param>
+        /// <returns><see cref="CreateLiveRecordTemplateResponse"/></returns>
+        public Task<CreateLiveRecordTemplateResponse> CreateLiveRecordTemplate(CreateLiveRecordTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateLiveRecordTemplateResponse>(req, "CreateLiveRecordTemplate");
+        }
+
+        /// <summary>
+        /// 创建直播录制模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveRecordTemplateRequest"/></param>
+        /// <returns><see cref="CreateLiveRecordTemplateResponse"/></returns>
+        public CreateLiveRecordTemplateResponse CreateLiveRecordTemplateSync(CreateLiveRecordTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateLiveRecordTemplateResponse>(req, "CreateLiveRecordTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -734,6 +755,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 删除直播录制模板
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveRecordTemplateRequest"/></param>
+        /// <returns><see cref="DeleteLiveRecordTemplateResponse"/></returns>
+        public Task<DeleteLiveRecordTemplateResponse> DeleteLiveRecordTemplate(DeleteLiveRecordTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteLiveRecordTemplateResponse>(req, "DeleteLiveRecordTemplate");
+        }
+
+        /// <summary>
+        /// 删除直播录制模板
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveRecordTemplateRequest"/></param>
+        /// <returns><see cref="DeleteLiveRecordTemplateResponse"/></returns>
+        public DeleteLiveRecordTemplateResponse DeleteLiveRecordTemplateSync(DeleteLiveRecordTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteLiveRecordTemplateResponse>(req, "DeleteLiveRecordTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口用于根据素材 ID，删除素材样本。
         /// </summary>
         /// <param name="req"><see cref="DeletePersonSampleRequest"/></param>
@@ -1108,6 +1150,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplatesSync(DescribeImageSpriteTemplatesRequest req)
         {
             return InternalRequestAsync<DescribeImageSpriteTemplatesResponse>(req, "DescribeImageSpriteTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取直播录制模板
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveRecordTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeLiveRecordTemplatesResponse"/></returns>
+        public Task<DescribeLiveRecordTemplatesResponse> DescribeLiveRecordTemplates(DescribeLiveRecordTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveRecordTemplatesResponse>(req, "DescribeLiveRecordTemplates");
+        }
+
+        /// <summary>
+        /// 获取直播录制模板
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveRecordTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeLiveRecordTemplatesResponse"/></returns>
+        public DescribeLiveRecordTemplatesResponse DescribeLiveRecordTemplatesSync(DescribeLiveRecordTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeLiveRecordTemplatesResponse>(req, "DescribeLiveRecordTemplates")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1959,6 +2022,27 @@ namespace TencentCloud.Mps.V20190612
         public ModifyImageSpriteTemplateResponse ModifyImageSpriteTemplateSync(ModifyImageSpriteTemplateRequest req)
         {
             return InternalRequestAsync<ModifyImageSpriteTemplateResponse>(req, "ModifyImageSpriteTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改直播录制模板
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveRecordTemplateRequest"/></param>
+        /// <returns><see cref="ModifyLiveRecordTemplateResponse"/></returns>
+        public Task<ModifyLiveRecordTemplateResponse> ModifyLiveRecordTemplate(ModifyLiveRecordTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyLiveRecordTemplateResponse>(req, "ModifyLiveRecordTemplate");
+        }
+
+        /// <summary>
+        /// 修改直播录制模板
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveRecordTemplateRequest"/></param>
+        /// <returns><see cref="ModifyLiveRecordTemplateResponse"/></returns>
+        public ModifyLiveRecordTemplateResponse ModifyLiveRecordTemplateSync(ModifyLiveRecordTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyLiveRecordTemplateResponse>(req, "ModifyLiveRecordTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

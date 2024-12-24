@@ -150,6 +150,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ServiceNameKeyPosition")]
         public string ServiceNameKeyPosition{ get; set; }
 
+        /// <summary>
+        /// 网关实例ID列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GatewayInstanceIdList")]
+        public string[] GatewayInstanceIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -174,6 +181,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ServiceNameKey", this.ServiceNameKey);
             this.SetParamSimple(map, prefix + "NamespaceNameKeyPosition", this.NamespaceNameKeyPosition);
             this.SetParamSimple(map, prefix + "ServiceNameKeyPosition", this.ServiceNameKeyPosition);
+            this.SetParamArraySimple(map, prefix + "GatewayInstanceIdList.", this.GatewayInstanceIdList);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1147</VersionPrefix>
+    <VersionPrefix>3.0.1148</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -238,6 +238,8 @@
     <Compile Include="V20190612\Models\CreateInputRTPSettings.cs" />
     <Compile Include="V20190612\Models\CreateInputRTSPPullSettings.cs" />
     <Compile Include="V20190612\Models\CreateInputSRTSettings.cs" />
+    <Compile Include="V20190612\Models\CreateLiveRecordTemplateRequest.cs" />
+    <Compile Include="V20190612\Models\CreateLiveRecordTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateOutputInfo.cs" />
     <Compile Include="V20190612\Models\CreateOutputInfoRTPSettings.cs" />
     <Compile Include="V20190612\Models\CreateOutputRTMPSettings.cs" />
@@ -288,6 +290,8 @@
     <Compile Include="V20190612\Models\DeleteContentReviewTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeleteImageSpriteTemplateRequest.cs" />
     <Compile Include="V20190612\Models\DeleteImageSpriteTemplateResponse.cs" />
+    <Compile Include="V20190612\Models\DeleteLiveRecordTemplateRequest.cs" />
+    <Compile Include="V20190612\Models\DeleteLiveRecordTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeletePersonSampleRequest.cs" />
     <Compile Include="V20190612\Models\DeletePersonSampleResponse.cs" />
     <Compile Include="V20190612\Models\DeleteQualityControlTemplateRequest.cs" />
@@ -336,6 +340,8 @@
     <Compile Include="V20190612\Models\DescribeInputRTPSettings.cs" />
     <Compile Include="V20190612\Models\DescribeInputRTSPPullSettings.cs" />
     <Compile Include="V20190612\Models\DescribeInputSRTSettings.cs" />
+    <Compile Include="V20190612\Models\DescribeLiveRecordTemplatesRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeLiveRecordTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeMediaMetaDataRequest.cs" />
     <Compile Include="V20190612\Models\DescribeMediaMetaDataResponse.cs" />
     <Compile Include="V20190612\Models\DescribeOutput.cs" />
@@ -442,6 +448,7 @@
     <Compile Include="V20190612\Models\FrameRateConfig.cs" />
     <Compile Include="V20190612\Models\FrameTagConfigureInfo.cs" />
     <Compile Include="V20190612\Models\FrameTagConfigureInfoForUpdate.cs" />
+    <Compile Include="V20190612\Models\HLSConfigureInfo.cs" />
     <Compile Include="V20190612\Models\HLSPullSourceAddress.cs" />
     <Compile Include="V20190612\Models\HdrConfig.cs" />
     <Compile Include="V20190612\Models\HeadTailParameter.cs" />
@@ -461,6 +468,7 @@
     <Compile Include="V20190612\Models\LiveRecordFile.cs" />
     <Compile Include="V20190612\Models\LiveRecordResult.cs" />
     <Compile Include="V20190612\Models\LiveRecordTaskInput.cs" />
+    <Compile Include="V20190612\Models\LiveRecordTemplate.cs" />
     <Compile Include="V20190612\Models\LiveScheduleLiveRecordTaskResult.cs" />
     <Compile Include="V20190612\Models\LiveScheduleTask.cs" />
     <Compile Include="V20190612\Models\LiveStreamAiAnalysisResultInfo.cs" />
@@ -531,6 +539,8 @@
     <Compile Include="V20190612\Models\ModifyImageSpriteTemplateRequest.cs" />
     <Compile Include="V20190612\Models\ModifyImageSpriteTemplateResponse.cs" />
     <Compile Include="V20190612\Models\ModifyInput.cs" />
+    <Compile Include="V20190612\Models\ModifyLiveRecordTemplateRequest.cs" />
+    <Compile Include="V20190612\Models\ModifyLiveRecordTemplateResponse.cs" />
     <Compile Include="V20190612\Models\ModifyOutputInfo.cs" />
     <Compile Include="V20190612\Models\ModifyPersonSampleRequest.cs" />
     <Compile Include="V20190612\Models\ModifyPersonSampleResponse.cs" />

@@ -28,7 +28,7 @@ namespace TencentCloud.Tsf.V20180326
 
        private const string endpoint = "tsf.tencentcloudapi.com";
        private const string version = "2018-03-26";
-       private const string sdkVersion = "SDK_NET_3.0.1147";
+       private const string sdkVersion = "SDK_NET_3.0.1148";
 
         /// <summary>
         /// Client constructor.
@@ -1274,6 +1274,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// serverless 能力已下线。下线对应接口。
+        /// 
         /// 删除Serverless部署组
         /// </summary>
         /// <param name="req"><see cref="DeleteServerlessGroupRequest"/></param>
@@ -1284,6 +1286,8 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// serverless 能力已下线。下线对应接口。
+        /// 
         /// 删除Serverless部署组
         /// </summary>
         /// <param name="req"><see cref="DeleteServerlessGroupRequest"/></param>

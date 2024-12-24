@@ -140,10 +140,15 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 日志命中规则模板的基本信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateInfo")]
         public LogRuleTemplateInfo[] TemplateInfo{ get; set; }
+
+        /// <summary>
+        ///  事务ID
+        /// </summary>
+        [JsonProperty("TrxId")]
+        public long? TrxId{ get; set; }
 
 
         /// <summary>
@@ -170,6 +175,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "NsTime", this.NsTime);
             this.SetParamSimple(map, prefix + "TrxLivingTime", this.TrxLivingTime);
             this.SetParamArrayObj(map, prefix + "TemplateInfo.", this.TemplateInfo);
+            this.SetParamSimple(map, prefix + "TrxId", this.TrxId);
         }
     }
 }

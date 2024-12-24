@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1147";
+       private const string sdkVersion = "SDK_NET_3.0.1148";
 
         /// <summary>
         /// Client constructor.
@@ -814,6 +814,27 @@ namespace TencentCloud.Trocket.V20230308
         public DescribeMQTTUserListResponse DescribeMQTTUserListSync(DescribeMQTTUserListRequest req)
         {
             return InternalRequestAsync<DescribeMQTTUserListResponse>(req, "DescribeMQTTUserList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据消息 ID 查询消息轨迹。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMessageTraceRequest"/></param>
+        /// <returns><see cref="DescribeMessageTraceResponse"/></returns>
+        public Task<DescribeMessageTraceResponse> DescribeMessageTrace(DescribeMessageTraceRequest req)
+        {
+            return InternalRequestAsync<DescribeMessageTraceResponse>(req, "DescribeMessageTrace");
+        }
+
+        /// <summary>
+        /// 根据消息 ID 查询消息轨迹。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMessageTraceRequest"/></param>
+        /// <returns><see cref="DescribeMessageTraceResponse"/></returns>
+        public DescribeMessageTraceResponse DescribeMessageTraceSync(DescribeMessageTraceRequest req)
+        {
+            return InternalRequestAsync<DescribeMessageTraceResponse>(req, "DescribeMessageTrace")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
