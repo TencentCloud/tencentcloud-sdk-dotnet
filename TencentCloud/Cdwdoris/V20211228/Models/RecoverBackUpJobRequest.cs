@@ -52,36 +52,42 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// 0默认 1cos恢复
         /// </summary>
         [JsonProperty("RecoverType")]
+        [System.Obsolete]
         public long? RecoverType{ get; set; }
 
         /// <summary>
         /// CosSourceInfo对象
         /// </summary>
         [JsonProperty("CosSourceInfo")]
+        [System.Obsolete]
         public CosSourceInfo CosSourceInfo{ get; set; }
 
         /// <summary>
         /// 0默认 1定期执行
         /// </summary>
         [JsonProperty("ScheduleType")]
+        [System.Obsolete]
         public long? ScheduleType{ get; set; }
 
         /// <summary>
         /// 年-月-日 时:分:秒
         /// </summary>
         [JsonProperty("NextTime")]
+        [System.Obsolete]
         public string NextTime{ get; set; }
 
         /// <summary>
         /// 调度名称
         /// </summary>
         [JsonProperty("ScheduleName")]
+        [System.Obsolete]
         public string ScheduleName{ get; set; }
 
         /// <summary>
         /// create update
         /// </summary>
         [JsonProperty("OperationType")]
+        [System.Obsolete]
         public string OperationType{ get; set; }
 
         /// <summary>
@@ -95,6 +101,14 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// </summary>
         [JsonProperty("RecoverDatabase")]
         public string RecoverDatabase{ get; set; }
+
+        /// <summary>
+        /// 1:恢复后，不保留降冷策略，数据变为热数据；
+        /// 2:恢复后，沿用备份表的降冷策略；
+        /// 0:默认值，该版本没有这个配置（2.1版本2.1.8之前；2.0版本2.0.16之前）
+        /// </summary>
+        [JsonProperty("ReserveStoragePolicy")]
+        public long? ReserveStoragePolicy{ get; set; }
 
 
         /// <summary>
@@ -114,6 +128,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "OperationType", this.OperationType);
             this.SetParamSimple(map, prefix + "RecoverScope", this.RecoverScope);
             this.SetParamSimple(map, prefix + "RecoverDatabase", this.RecoverDatabase);
+            this.SetParamSimple(map, prefix + "ReserveStoragePolicy", this.ReserveStoragePolicy);
         }
     }
 }

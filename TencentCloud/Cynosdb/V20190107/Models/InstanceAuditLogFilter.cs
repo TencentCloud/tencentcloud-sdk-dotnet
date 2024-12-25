@@ -33,7 +33,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// 
         /// 等于、不等于： sqlType - SQL类型； errCode - 错误码； threadId - 线程ID；
         /// 
-        /// 范围搜索（时间类型统一为微秒）： execTime - 执行时间； lockWaitTime - 执行时间； ioWaitTime - IO等待时间； trxLivingTime - 事物持续时间； cpuTime - cpu时间； checkRows - 扫描行数； affectRows - 影响行数； sentRows - 返回行数。
+        /// 范围搜索（时间类型统一为微秒）： execTime - 执行时间； lockWaitTime - 执行时间； ioWaitTime - IO等待时间； trxLivingTime - 事务持续时间； cpuTime - cpu时间； checkRows - 扫描行数； affectRows - 影响行数； sentRows - 返回行数。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

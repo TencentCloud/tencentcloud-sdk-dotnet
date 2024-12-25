@@ -26,7 +26,6 @@ namespace TencentCloud.Mongodb.V20190725.Models
         
         /// <summary>
         /// 回档数据异步任务 ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }

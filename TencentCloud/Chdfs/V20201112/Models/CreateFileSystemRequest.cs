@@ -31,12 +31,6 @@ namespace TencentCloud.Chdfs.V20201112.Models
         public string FileSystemName{ get; set; }
 
         /// <summary>
-        /// 文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
-        /// </summary>
-        [JsonProperty("CapacityQuota")]
-        public ulong? CapacityQuota{ get; set; }
-
-        /// <summary>
         /// 是否校验POSIX ACL
         /// </summary>
         [JsonProperty("PosixAcl")]
@@ -47,6 +41,12 @@ namespace TencentCloud.Chdfs.V20201112.Models
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
+
+        /// <summary>
+        /// 文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
+        /// </summary>
+        [JsonProperty("CapacityQuota")]
+        public ulong? CapacityQuota{ get; set; }
 
         /// <summary>
         /// 超级用户名列表，默认为空数组
@@ -91,9 +91,9 @@ namespace TencentCloud.Chdfs.V20201112.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FileSystemName", this.FileSystemName);
-            this.SetParamSimple(map, prefix + "CapacityQuota", this.CapacityQuota);
             this.SetParamSimple(map, prefix + "PosixAcl", this.PosixAcl);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "CapacityQuota", this.CapacityQuota);
             this.SetParamArraySimple(map, prefix + "SuperUsers.", this.SuperUsers);
             this.SetParamSimple(map, prefix + "RootInodeUser", this.RootInodeUser);
             this.SetParamSimple(map, prefix + "RootInodeGroup", this.RootInodeGroup);

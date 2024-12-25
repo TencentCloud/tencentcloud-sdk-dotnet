@@ -26,7 +26,6 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// 当前正在拉取垫片的流名称列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StreamNameList")]
         public string[] StreamNameList{ get; set; }

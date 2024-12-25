@@ -55,7 +55,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public HealthCheck HealthCheck{ get; set; }
 
         /// <summary>
-        /// 证书相关信息，此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。此参数和MultiCertInfo不能同时传入。
+        /// 证书相关信息。参数限制如下：
+        /// <li>
+        /// 此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
+        /// </li>
+        /// <li>
+        /// 创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数MultiCertInfo至少需要传一个， 但不能同时传入。
+        /// </li>
         /// </summary>
         [JsonProperty("Certificate")]
         public CertificateInput Certificate{ get; set; }
@@ -110,7 +116,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public bool? DeregisterTargetRst{ get; set; }
 
         /// <summary>
-        /// 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数仅适用于未开启SNI特性的HTTPS监听器。此参数和Certificate不能同时传入。
+        /// 证书信息，支持同时传入不同算法类型的多本服务端证书，参数限制如下：
+        /// <li>
+        /// 此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
+        /// </li>
+        /// <li>
+        /// 创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数Certificate至少需要传一个， 但不能同时传入。
+        /// </li>
         /// </summary>
         [JsonProperty("MultiCertInfo")]
         public MultiCertInfo MultiCertInfo{ get; set; }

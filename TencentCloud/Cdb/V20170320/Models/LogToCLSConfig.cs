@@ -26,28 +26,24 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// 投递状态打开或者关闭
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// CLS日志集ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogSetId")]
         public string LogSetId{ get; set; }
 
         /// <summary>
         /// 日志主题ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogTopicId")]
         public string LogTopicId{ get; set; }
 
         /// <summary>
         /// CLS服务所在地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClsRegion")]
         public string ClsRegion{ get; set; }

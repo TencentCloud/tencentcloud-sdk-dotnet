@@ -33,7 +33,6 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 注：该字段已废弃，请结合腾讯云直播播放地址生成策略生成cdn播放地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CdnPlayUrl")]
         public string CdnPlayUrl{ get; set; }

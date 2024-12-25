@@ -156,6 +156,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("TimeZone")]
         public string TimeZone{ get; set; }
 
+        /// <summary>
+        /// 是否多节点架构实例，默认值为false。当MultiNodes = true时，参数MultiZones必须取值为true。
+        /// </summary>
+        [JsonProperty("MultiNodes")]
+        public bool? MultiNodes{ get; set; }
+
+        /// <summary>
+        /// 备节点可用区，默认为空。当MultiNodes = true时，主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+        /// </summary>
+        [JsonProperty("DrZones")]
+        public string[] DrZones{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +196,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "Collation", this.Collation);
             this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
+            this.SetParamSimple(map, prefix + "MultiNodes", this.MultiNodes);
+            this.SetParamArraySimple(map, prefix + "DrZones.", this.DrZones);
         }
     }
 }

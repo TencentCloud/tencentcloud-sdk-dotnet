@@ -147,7 +147,6 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 备份GTID点位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutedGTIDSet")]
         public string ExecutedGTIDSet{ get; set; }

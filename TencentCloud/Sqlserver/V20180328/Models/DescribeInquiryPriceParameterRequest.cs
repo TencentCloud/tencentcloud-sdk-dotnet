@@ -43,7 +43,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,cvmHA-新版高可用,cvmRO-新版只读
+        /// 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,cvmHA-新版高可用,cvmRO-新版只读，MultiHA-多节点，cvmMultiHA-云盘多节点
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -85,6 +85,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
 
+        /// <summary>
+        /// 备节点可用区，默认为空。如果是多节点架构时必传，并且备机可用区集合最小为2个，最大不超过5个。
+        /// </summary>
+        [JsonProperty("DrZones")]
+        public string[] DrZones{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +107,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "GoodsNum", this.GoodsNum);
             this.SetParamSimple(map, prefix + "DBVersion", this.DBVersion);
             this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
+            this.SetParamArraySimple(map, prefix + "DrZones.", this.DrZones);
         }
     }
 }

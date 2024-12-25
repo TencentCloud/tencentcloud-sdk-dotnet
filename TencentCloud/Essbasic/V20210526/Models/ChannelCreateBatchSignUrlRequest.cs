@@ -162,6 +162,16 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("AutoJumpBack")]
         public bool? AutoJumpBack{ get; set; }
 
+        /// <summary>
+        /// 签署完成后，如需“返回应用”功能，在获取签署链接接口的 UrlUseEnv 参数需设置为 **WeChatOfficialAccounts**，小程序签署成功的结果页面中才会出现“返回应用”按钮。
+        /// 
+        /// 在用户点击“返回应用”按钮之后，会返回到公众号 H5。 此时，公众号 H5 可以处理页面的 [visibilitychange](https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilitychange_event) 事件 与 [visibilityState](https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilityState) 属性 来判断已经返回到当前页面。再通过电子签后台接口查询合同的签署状态，继续自己的业务流程。
+        /// 
+        /// 参考 [微信网页开发-开放标签跳转小程序](https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_Open_Tag.html#%E5%BC%80%E6%94%BE%E6%A0%87%E7%AD%BE) 或 [自有 H5 跳转电子签小程序](https://test.qian.tencent.cn/developers/company/openwxminiprogram/#4%E8%87%AA%E6%9C%89-h5-%E8%B7%B3%E8%BD%AC%E7%94%B5%E5%AD%90%E7%AD%BE%E5%B0%8F%E7%A8%8B%E5%BA%8F)。
+        /// </summary>
+        [JsonProperty("UrlUseEnv")]
+        public string UrlUseEnv{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -182,6 +192,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
             this.SetParamSimple(map, prefix + "OrganizationOpenId", this.OrganizationOpenId);
             this.SetParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
+            this.SetParamSimple(map, prefix + "UrlUseEnv", this.UrlUseEnv);
         }
     }
 }

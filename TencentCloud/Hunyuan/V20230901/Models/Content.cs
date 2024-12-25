@@ -28,6 +28,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         /// 内容类型
         /// 注意：
         /// 当前只支持传入单张图片，传入多张图片时，以第一个图片为准。
+        /// 参数值可选范围：[text", "image_url"]
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]

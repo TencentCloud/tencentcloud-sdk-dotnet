@@ -26,42 +26,49 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// 项目ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
         /// 创建时间，时间格式：yyyy-mm-dd hh:mm:ss
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 入站规则
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Inbound")]
         public Inbound[] Inbound{ get; set; }
 
         /// <summary>
         /// 出站规则
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Outbound")]
         public Outbound[] Outbound{ get; set; }
 
         /// <summary>
         /// 安全组ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecurityGroupId")]
         public string SecurityGroupId{ get; set; }
 
         /// <summary>
         /// 安全组名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecurityGroupName")]
         public string SecurityGroupName{ get; set; }
 
         /// <summary>
         /// 安全组备注
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecurityGroupRemark")]
         public string SecurityGroupRemark{ get; set; }

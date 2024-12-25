@@ -186,6 +186,15 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("Stop")]
         public string[] Stop{ get; set; }
 
+        /// <summary>
+        /// 推荐问答开关。
+        /// 说明：
+        /// 1. 未传值时默认关闭。
+        /// 2. 开启后，返回值里将增加 RecommendedQuestions 字段返回推荐问答， 最多只返回3条。
+        /// </summary>
+        [JsonProperty("EnableRecommendedQuestions")]
+        public bool? EnableRecommendedQuestions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -210,6 +219,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamSimple(map, prefix + "Seed", this.Seed);
             this.SetParamSimple(map, prefix + "ForceSearchEnhancement", this.ForceSearchEnhancement);
             this.SetParamArraySimple(map, prefix + "Stop.", this.Stop);
+            this.SetParamSimple(map, prefix + "EnableRecommendedQuestions", this.EnableRecommendedQuestions);
         }
     }
 }

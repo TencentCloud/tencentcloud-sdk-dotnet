@@ -56,8 +56,7 @@ namespace TencentCloud.Facefusion.V20220927.Models
         public string ModelImage{ get; set; }
 
         /// <summary>
-        /// 图片人脸融合（专业版）效果参数。
-        /// 可用于设置拉脸、人脸增强、磨皮、牙齿增强等融合效果参数，生成理想的融合效果。不传默认使用接口推荐值。具体见FusionUltraParam说明
+        /// 图片人脸融合（专业版）效果参数。可用于设置拉脸、人脸增强、磨皮、牙齿增强、妆容迁移等融合效果参数，生成理想的融合效果。不传默认使用接口推荐值。具体见FusionUltraParam说明
         /// </summary>
         [JsonProperty("FusionUltraParam")]
         public FusionUltraParam FusionUltraParam{ get; set; }

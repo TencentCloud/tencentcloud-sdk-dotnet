@@ -28,7 +28,7 @@ namespace TencentCloud.Sqlserver.V20180328
 
        private const string endpoint = "sqlserver.tencentcloudapi.com";
        private const string version = "2018-03-28";
-       private const string sdkVersion = "SDK_NET_3.0.1149";
+       private const string sdkVersion = "SDK_NET_3.0.1150";
 
         /// <summary>
         /// Client constructor.
@@ -474,7 +474,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口(CutXEvents)用于手动切割阻塞日志和死锁日志。
+        /// 本接口（CutXEvents）用于手动切割阻塞日志和死锁日志。
         /// </summary>
         /// <param name="req"><see cref="CutXEventsRequest"/></param>
         /// <returns><see cref="CutXEventsResponse"/></returns>
@@ -484,7 +484,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口(CutXEvents)用于手动切割阻塞日志和死锁日志。
+        /// 本接口（CutXEvents）用于手动切割阻塞日志和死锁日志。
         /// </summary>
         /// <param name="req"><see cref="CutXEventsRequest"/></param>
         /// <returns><see cref="CutXEventsResponse"/></returns>
@@ -768,7 +768,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口(DescribeBackupFiles)用于查询单库备份明细
+        /// 本接口（DescribeBackupFiles）用于查询单库备份明细。
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupFilesRequest"/></param>
         /// <returns><see cref="DescribeBackupFilesResponse"/></returns>
@@ -778,7 +778,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口(DescribeBackupFiles)用于查询单库备份明细
+        /// 本接口（DescribeBackupFiles）用于查询单库备份明细。
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupFilesRequest"/></param>
         /// <returns><see cref="DescribeBackupFilesResponse"/></returns>

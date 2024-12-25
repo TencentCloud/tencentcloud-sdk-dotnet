@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 地域售卖信息。
+        /// 地域售卖信息。即使指定具体地域，也返回所有地域的售卖信息。
         /// </summary>
         [JsonProperty("RegionSet")]
         public RegionConf[] RegionSet{ get; set; }

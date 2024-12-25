@@ -28,7 +28,7 @@ namespace TencentCloud.Bizlive.V20190313
 
        private const string endpoint = "bizlive.tencentcloudapi.com";
        private const string version = "2019-03-13";
-       private const string sdkVersion = "SDK_NET_3.0.1149";
+       private const string sdkVersion = "SDK_NET_3.0.1150";
 
         /// <summary>
         /// Client constructor.

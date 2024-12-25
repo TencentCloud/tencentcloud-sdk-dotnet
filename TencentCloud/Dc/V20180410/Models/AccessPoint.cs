@@ -61,39 +61,40 @@ namespace TencentCloud.Dc.V20180410.Models
         public string RegionId{ get; set; }
 
         /// <summary>
-        /// 接入点可用的端口类型列表。1000BASE-T代表千兆电口，1000BASE-LX代表千兆单模光口10km，1000BASE-ZX代表千兆单模光口80km,10GBASE-LR代表万兆单模光口10km,10GBASE-ZR代表万兆单模光口80km,10GBASE-LH代表万兆单模光口40km,100GBASE-LR4代表100G单模光口10km
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 接入点可用的端口类型列表。1000BASE-T代表千兆电口，1000BASE-LX代表千兆单模光口10km，1000BASE-ZX代表千兆单模光口80km,10GBASE-LR代表万兆单模光口10km,10GBASE-ZR代表万兆单模光口80km,10GBASE-LH代表万兆单模光口40km,100GBASE-LR4代表100G单模光口10km。
         /// </summary>
         [JsonProperty("AvailablePortType")]
         public string[] AvailablePortType{ get; set; }
 
         /// <summary>
-        /// 接入点经纬度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 接入点经纬度。
         /// </summary>
         [JsonProperty("Coordinate")]
         public Coordinate Coordinate{ get; set; }
 
         /// <summary>
-        /// 接入点所在城市
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 接入点所在城市。
         /// </summary>
         [JsonProperty("City")]
         public string City{ get; set; }
 
         /// <summary>
-        /// 接入点地域名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 接入点地域名称。
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
         /// 接入点类型。VXLAN/QCPL/QCAR
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessPointType")]
         public string AccessPointType{ get; set; }
+
+        /// <summary>
+        /// 端口规格信息。
+        /// </summary>
+        [JsonProperty("AvailablePortInfo")]
+        public PortSpecification[] AvailablePortInfo{ get; set; }
 
 
         /// <summary>
@@ -112,6 +113,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "City", this.City);
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "AccessPointType", this.AccessPointType);
+            this.SetParamArrayObj(map, prefix + "AvailablePortInfo.", this.AvailablePortInfo);
         }
     }
 }

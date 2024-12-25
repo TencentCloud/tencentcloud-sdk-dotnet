@@ -38,7 +38,7 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 需要备份的库表信息，如果不设置该参数，则默认整实例备份。在 BackupMethod=logical 逻辑备份中才可设置该参数。指定的库表必须存在，否则可能导致备份失败。
-        /// 例：如果需要备份 db1 库的 tb1、tb2 表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ]。
+        /// 例：如果需要备份 db1 库的 tb1、tb2 表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"}]。
         /// </summary>
         [JsonProperty("BackupDBTableList")]
         public BackupItem[] BackupDBTableList{ get; set; }
@@ -48,6 +48,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         [JsonProperty("ManualBackupName")]
         public string ManualBackupName{ get; set; }
+
+        /// <summary>
+        /// 是否需要加密物理备份， 当BackupMethod为physical 时，该值才有意义。 不指定则使用实例备份默认加密策略。
+        /// </summary>
+        [JsonProperty("EncryptionFlag")]
+        public string EncryptionFlag{ get; set; }
 
 
         /// <summary>
@@ -59,6 +65,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
             this.SetParamArrayObj(map, prefix + "BackupDBTableList.", this.BackupDBTableList);
             this.SetParamSimple(map, prefix + "ManualBackupName", this.ManualBackupName);
+            this.SetParamSimple(map, prefix + "EncryptionFlag", this.EncryptionFlag);
         }
     }
 }

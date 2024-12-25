@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1149";
+       private const string sdkVersion = "SDK_NET_3.0.1150";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口(ActivateInstance)用于恢复已隔离的实例访问。
+        /// 本接口（ActivateInstance）用于恢复已隔离的实例访问。
         /// </summary>
         /// <param name="req"><see cref="ActivateInstanceRequest"/></param>
         /// <returns><see cref="ActivateInstanceResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口(ActivateInstance)用于恢复已隔离的实例访问。
+        /// 本接口（ActivateInstance）用于恢复已隔离的实例访问。
         /// </summary>
         /// <param name="req"><see cref="ActivateInstanceRequest"/></param>
         /// <returns><see cref="ActivateInstanceResponse"/></returns>
@@ -222,7 +222,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 关闭数据库代理连接地址
+        /// 本接口（CloseProxyEndPoint）用于关闭数据库代理连接地址。
         /// </summary>
         /// <param name="req"><see cref="CloseProxyEndPointRequest"/></param>
         /// <returns><see cref="CloseProxyEndPointResponse"/></returns>
@@ -232,7 +232,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 关闭数据库代理连接地址
+        /// 本接口（CloseProxyEndPoint）用于关闭数据库代理连接地址。
         /// </summary>
         /// <param name="req"><see cref="CloseProxyEndPointRequest"/></param>
         /// <returns><see cref="CloseProxyEndPointResponse"/></returns>
@@ -810,7 +810,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 获取实例的审计规则
+        /// 本接口（DescribeAuditRuleWithInstanceIds）用于获取实例的审计规则。
         /// </summary>
         /// <param name="req"><see cref="DescribeAuditRuleWithInstanceIdsRequest"/></param>
         /// <returns><see cref="DescribeAuditRuleWithInstanceIdsResponse"/></returns>
@@ -820,7 +820,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 获取实例的审计规则
+        /// 本接口（DescribeAuditRuleWithInstanceIds）用于获取实例的审计规则。
         /// </summary>
         /// <param name="req"><see cref="DescribeAuditRuleWithInstanceIdsRequest"/></param>
         /// <returns><see cref="DescribeAuditRuleWithInstanceIdsResponse"/></returns>
@@ -1419,7 +1419,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口(DescribeInstancesWithinSameCluster)用于查询同一集群下实例列表
+        /// 本接口（DescribeInstancesWithinSameCluster）用于查询同一集群下实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesWithinSameClusterRequest"/></param>
         /// <returns><see cref="DescribeInstancesWithinSameClusterResponse"/></returns>
@@ -1429,7 +1429,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口(DescribeInstancesWithinSameCluster)用于查询同一集群下实例列表
+        /// 本接口（DescribeInstancesWithinSameCluster）用于查询同一集群下实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesWithinSameClusterRequest"/></param>
         /// <returns><see cref="DescribeInstancesWithinSameClusterResponse"/></returns>

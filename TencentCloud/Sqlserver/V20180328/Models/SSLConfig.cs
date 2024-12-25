@@ -51,6 +51,24 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("SSLValidity")]
         public ulong? SSLValidity{ get; set; }
 
+        /// <summary>
+        /// 是否是KMS的CMK证书
+        /// </summary>
+        [JsonProperty("IsKMS")]
+        public long? IsKMS{ get; set; }
+
+        /// <summary>
+        /// KMS中购买的用户主密钥ID（CMK）
+        /// </summary>
+        [JsonProperty("CMKId")]
+        public string CMKId{ get; set; }
+
+        /// <summary>
+        /// CMK所属的地域，不同地域的CMK数据不互通
+        /// </summary>
+        [JsonProperty("CMKRegion")]
+        public string CMKRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +78,9 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Encryption", this.Encryption);
             this.SetParamSimple(map, prefix + "SSLValidityPeriod", this.SSLValidityPeriod);
             this.SetParamSimple(map, prefix + "SSLValidity", this.SSLValidity);
+            this.SetParamSimple(map, prefix + "IsKMS", this.IsKMS);
+            this.SetParamSimple(map, prefix + "CMKId", this.CMKId);
+            this.SetParamSimple(map, prefix + "CMKRegion", this.CMKRegion);
         }
     }
 }

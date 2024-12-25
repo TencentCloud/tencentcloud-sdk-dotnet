@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 机器实例ID
+        /// 机器实例ID， 和  实例 ID 二者必选其一，不能同时为空
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 部署组ID
+        /// 部署组ID，和 InstanceId 二者必选其一，不能同时为空
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }

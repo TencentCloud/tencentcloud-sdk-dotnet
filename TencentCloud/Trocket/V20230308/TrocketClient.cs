@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1149";
+       private const string sdkVersion = "SDK_NET_3.0.1150";
 
         /// <summary>
         /// Client constructor.
@@ -818,6 +818,48 @@ namespace TencentCloud.Trocket.V20230308
         }
 
         /// <summary>
+        /// 查询消息详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMessageRequest"/></param>
+        /// <returns><see cref="DescribeMessageResponse"/></returns>
+        public Task<DescribeMessageResponse> DescribeMessage(DescribeMessageRequest req)
+        {
+            return InternalRequestAsync<DescribeMessageResponse>(req, "DescribeMessage");
+        }
+
+        /// <summary>
+        /// 查询消息详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMessageRequest"/></param>
+        /// <returns><see cref="DescribeMessageResponse"/></returns>
+        public DescribeMessageResponse DescribeMessageSync(DescribeMessageRequest req)
+        {
+            return InternalRequestAsync<DescribeMessageResponse>(req, "DescribeMessage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询消息列表。如果查询死信消息，请设置ConsumerGroup参数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMessageListRequest"/></param>
+        /// <returns><see cref="DescribeMessageListResponse"/></returns>
+        public Task<DescribeMessageListResponse> DescribeMessageList(DescribeMessageListRequest req)
+        {
+            return InternalRequestAsync<DescribeMessageListResponse>(req, "DescribeMessageList");
+        }
+
+        /// <summary>
+        /// 查询消息列表。如果查询死信消息，请设置ConsumerGroup参数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMessageListRequest"/></param>
+        /// <returns><see cref="DescribeMessageListResponse"/></returns>
+        public DescribeMessageListResponse DescribeMessageListSync(DescribeMessageListRequest req)
+        {
+            return InternalRequestAsync<DescribeMessageListResponse>(req, "DescribeMessageList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 根据消息 ID 查询消息轨迹。
         /// </summary>
         /// <param name="req"><see cref="DescribeMessageTraceRequest"/></param>
@@ -1166,6 +1208,27 @@ namespace TencentCloud.Trocket.V20230308
         public ModifyTopicResponse ModifyTopicSync(ModifyTopicRequest req)
         {
             return InternalRequestAsync<ModifyTopicResponse>(req, "ModifyTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 重新发送死信消息
+        /// </summary>
+        /// <param name="req"><see cref="ResendDeadLetterMessageRequest"/></param>
+        /// <returns><see cref="ResendDeadLetterMessageResponse"/></returns>
+        public Task<ResendDeadLetterMessageResponse> ResendDeadLetterMessage(ResendDeadLetterMessageRequest req)
+        {
+            return InternalRequestAsync<ResendDeadLetterMessageResponse>(req, "ResendDeadLetterMessage");
+        }
+
+        /// <summary>
+        /// 重新发送死信消息
+        /// </summary>
+        /// <param name="req"><see cref="ResendDeadLetterMessageRequest"/></param>
+        /// <returns><see cref="ResendDeadLetterMessageResponse"/></returns>
+        public ResendDeadLetterMessageResponse ResendDeadLetterMessageSync(ResendDeadLetterMessageRequest req)
+        {
+            return InternalRequestAsync<ResendDeadLetterMessageResponse>(req, "ResendDeadLetterMessage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

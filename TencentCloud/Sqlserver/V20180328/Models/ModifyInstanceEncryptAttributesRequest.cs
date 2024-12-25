@@ -31,7 +31,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，默认取值self。
+        /// 证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，kms-表示使用kms的CMK证书，默认取值self。
         /// </summary>
         [JsonProperty("CertificateAttribution")]
         public string CertificateAttribution{ get; set; }
@@ -42,6 +42,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("QuoteUin")]
         public string QuoteUin{ get; set; }
 
+        /// <summary>
+        /// CertificateAttribution为kms时必填
+        /// </summary>
+        [JsonProperty("KeyId")]
+        public string KeyId{ get; set; }
+
+        /// <summary>
+        /// CertificateAttribution为kms时必填
+        /// </summary>
+        [JsonProperty("KeyRegion")]
+        public string KeyRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "CertificateAttribution", this.CertificateAttribution);
             this.SetParamSimple(map, prefix + "QuoteUin", this.QuoteUin);
+            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
+            this.SetParamSimple(map, prefix + "KeyRegion", this.KeyRegion);
         }
     }
 }

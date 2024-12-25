@@ -66,6 +66,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("MaxUserConnections")]
         public long? MaxUserConnections{ get; set; }
 
+        /// <summary>
+        /// 用户账号是否开启了密码轮转
+        /// </summary>
+        [JsonProperty("OpenCam")]
+        public bool? OpenCam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "ModifyPasswordTime", this.ModifyPasswordTime);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
+            this.SetParamSimple(map, prefix + "OpenCam", this.OpenCam);
         }
     }
 }

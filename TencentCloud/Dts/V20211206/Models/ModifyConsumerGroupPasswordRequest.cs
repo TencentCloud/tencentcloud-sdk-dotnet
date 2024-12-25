@@ -43,16 +43,16 @@ namespace TencentCloud.Dts.V20211206.Models
         public string ConsumerGroupName{ get; set; }
 
         /// <summary>
-        /// 旧密码
-        /// </summary>
-        [JsonProperty("OldPassword")]
-        public string OldPassword{ get; set; }
-
-        /// <summary>
         /// 新密码。字符长度不小于3，不大于32
         /// </summary>
         [JsonProperty("NewPassword")]
         public string NewPassword{ get; set; }
+
+        /// <summary>
+        /// 旧密码，非必选
+        /// </summary>
+        [JsonProperty("OldPassword")]
+        public string OldPassword{ get; set; }
 
 
         /// <summary>
@@ -63,8 +63,8 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "SubscribeId", this.SubscribeId);
             this.SetParamSimple(map, prefix + "AccountName", this.AccountName);
             this.SetParamSimple(map, prefix + "ConsumerGroupName", this.ConsumerGroupName);
-            this.SetParamSimple(map, prefix + "OldPassword", this.OldPassword);
             this.SetParamSimple(map, prefix + "NewPassword", this.NewPassword);
+            this.SetParamSimple(map, prefix + "OldPassword", this.OldPassword);
         }
     }
 }

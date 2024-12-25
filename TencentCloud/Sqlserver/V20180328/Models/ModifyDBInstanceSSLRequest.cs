@@ -42,6 +42,24 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("WaitSwitch")]
         public ulong? WaitSwitch{ get; set; }
 
+        /// <summary>
+        /// 是否被KMS加密保护，0-表示否，1表示被KMS保护，默认取值0
+        /// </summary>
+        [JsonProperty("IsKMS")]
+        public long? IsKMS{ get; set; }
+
+        /// <summary>
+        /// IsKMS为1时必填
+        /// </summary>
+        [JsonProperty("KeyId")]
+        public string KeyId{ get; set; }
+
+        /// <summary>
+        /// IsKMS为1时必填
+        /// </summary>
+        [JsonProperty("KeyRegion")]
+        public string KeyRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +69,9 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
+            this.SetParamSimple(map, prefix + "IsKMS", this.IsKMS);
+            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
+            this.SetParamSimple(map, prefix + "KeyRegion", this.KeyRegion);
         }
     }
 }

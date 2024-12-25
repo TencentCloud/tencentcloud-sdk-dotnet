@@ -26,7 +26,6 @@ namespace TencentCloud.Ecm.V20190719.Models
         
         /// <summary>
         /// 路由策略冲突列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RouteConflictSet")]
         public RouteConflict[] RouteConflictSet{ get; set; }

@@ -66,6 +66,12 @@ namespace TencentCloud.Mongodb.V20190725.Models
         [JsonProperty("KeyOrigin")]
         public string KeyOrigin{ get; set; }
 
+        /// <summary>
+        /// kms所在地域。
+        /// </summary>
+        [JsonProperty("KmsRegion")]
+        public string KmsRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +84,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "KeyUsage", this.KeyUsage);
             this.SetParamSimple(map, prefix + "KeyOrigin", this.KeyOrigin);
+            this.SetParamSimple(map, prefix + "KmsRegion", this.KmsRegion);
         }
     }
 }

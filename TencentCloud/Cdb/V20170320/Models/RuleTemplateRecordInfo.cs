@@ -26,42 +26,36 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// 任务ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }
 
         /// <summary>
         /// 修改前规则模板的详情。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyBeforeInfo")]
         public RuleTemplateInfo ModifyBeforeInfo{ get; set; }
 
         /// <summary>
         /// 修改后规则模板的详情。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyAfterInfo")]
         public RuleTemplateInfo ModifyAfterInfo{ get; set; }
 
         /// <summary>
         /// 影响的实例。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AffectedInstances")]
         public string[] AffectedInstances{ get; set; }
 
         /// <summary>
         /// 操作人，账号uin。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
         /// 变更的时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

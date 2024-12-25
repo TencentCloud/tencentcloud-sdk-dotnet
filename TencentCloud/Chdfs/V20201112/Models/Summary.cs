@@ -26,42 +26,36 @@ namespace TencentCloud.Chdfs.V20201112.Models
         
         /// <summary>
         /// 已使用容量（byte）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CapacityUsed")]
         public ulong? CapacityUsed{ get; set; }
 
         /// <summary>
         /// 已使用COS标准存储容量（byte）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StandardCapacityUsed")]
         public ulong? StandardCapacityUsed{ get; set; }
 
         /// <summary>
         /// 已使用COS低频存储容量（byte）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DegradeCapacityUsed")]
         public ulong? DegradeCapacityUsed{ get; set; }
 
         /// <summary>
         /// 已使用COS归档存储容量（byte）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ArchiveCapacityUsed")]
         public ulong? ArchiveCapacityUsed{ get; set; }
 
         /// <summary>
         /// 已使用COS深度归档存储容量（byte）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeepArchiveCapacityUsed")]
         public ulong? DeepArchiveCapacityUsed{ get; set; }
 
         /// <summary>
         /// 已使用COS智能分层存储容量（byte）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IntelligentCapacityUsed")]
         public ulong? IntelligentCapacityUsed{ get; set; }

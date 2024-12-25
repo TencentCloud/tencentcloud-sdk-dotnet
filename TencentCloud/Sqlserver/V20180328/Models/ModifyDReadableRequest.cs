@@ -49,10 +49,16 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 指定的备机只读vip，不填自动分配
+        /// 指定的备机只读vip，不填自动分配。多节点SingleReadOnly模式不支持指定vip。
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
+
+        /// <summary>
+        /// 备机只读模式，多节点架构默认取值BalancedReadOnly。SingleReadOnly-每个备机各对应一个只读地址（多节点架构），BalancedReadOnly-所有备机共用一个只读地址。当实例是双节点架构时，固定取值SingleReadOnly。
+        /// </summary>
+        [JsonProperty("ReadMode")]
+        public string ReadMode{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
+            this.SetParamSimple(map, prefix + "ReadMode", this.ReadMode);
         }
     }
 }
