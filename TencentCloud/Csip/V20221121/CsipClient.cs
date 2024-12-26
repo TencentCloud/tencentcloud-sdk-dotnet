@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1150";
+       private const string sdkVersion = "SDK_NET_3.0.1151";
 
         /// <summary>
         /// Client constructor.
@@ -264,6 +264,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 集群列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterAssetsRequest"/></param>
+        /// <returns><see cref="DescribeClusterAssetsResponse"/></returns>
+        public Task<DescribeClusterAssetsResponse> DescribeClusterAssets(DescribeClusterAssetsRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterAssetsResponse>(req, "DescribeClusterAssets");
+        }
+
+        /// <summary>
+        /// 集群列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterAssetsRequest"/></param>
+        /// <returns><see cref="DescribeClusterAssetsResponse"/></returns>
+        public DescribeClusterAssetsResponse DescribeClusterAssetsSync(DescribeClusterAssetsRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterAssetsResponse>(req, "DescribeClusterAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 集群pod列表
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterPodAssetsRequest"/></param>
@@ -407,6 +428,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeNICAssetsResponse DescribeNICAssetsSync(DescribeNICAssetsRequest req)
         {
             return InternalRequestAsync<DescribeNICAssetsResponse>(req, "DescribeNICAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询集团账号详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationInfoRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationInfoResponse"/></returns>
+        public Task<DescribeOrganizationInfoResponse> DescribeOrganizationInfo(DescribeOrganizationInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeOrganizationInfoResponse>(req, "DescribeOrganizationInfo");
+        }
+
+        /// <summary>
+        /// 查询集团账号详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationInfoRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationInfoResponse"/></returns>
+        public DescribeOrganizationInfoResponse DescribeOrganizationInfoSync(DescribeOrganizationInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeOrganizationInfoResponse>(req, "DescribeOrganizationInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -684,6 +726,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// 查询集团的子账号列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubUserInfoRequest"/></param>
+        /// <returns><see cref="DescribeSubUserInfoResponse"/></returns>
+        public Task<DescribeSubUserInfoResponse> DescribeSubUserInfo(DescribeSubUserInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSubUserInfoResponse>(req, "DescribeSubUserInfo");
+        }
+
+        /// <summary>
+        /// 查询集团的子账号列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubUserInfoRequest"/></param>
+        /// <returns><see cref="DescribeSubUserInfoResponse"/></returns>
+        public DescribeSubUserInfoResponse DescribeSubUserInfoSync(DescribeSubUserInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSubUserInfoResponse>(req, "DescribeSubUserInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取子网列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSubnetAssetsRequest"/></param>
@@ -764,6 +827,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeTopAttackInfoResponse DescribeTopAttackInfoSync(DescribeTopAttackInfoRequest req)
         {
             return InternalRequestAsync<DescribeTopAttackInfoResponse>(req, "DescribeTopAttackInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询用户行为分析策略列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUebaRuleRequest"/></param>
+        /// <returns><see cref="DescribeUebaRuleResponse"/></returns>
+        public Task<DescribeUebaRuleResponse> DescribeUebaRule(DescribeUebaRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeUebaRuleResponse>(req, "DescribeUebaRule");
+        }
+
+        /// <summary>
+        /// 查询用户行为分析策略列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUebaRuleRequest"/></param>
+        /// <returns><see cref="DescribeUebaRuleResponse"/></returns>
+        public DescribeUebaRuleResponse DescribeUebaRuleSync(DescribeUebaRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeUebaRuleResponse>(req, "DescribeUebaRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -911,6 +995,27 @@ namespace TencentCloud.Csip.V20221121
         public ModifyRiskCenterScanTaskResponse ModifyRiskCenterScanTaskSync(ModifyRiskCenterScanTaskRequest req)
         {
             return InternalRequestAsync<ModifyRiskCenterScanTaskResponse>(req, "ModifyRiskCenterScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新自定义策略的开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUebaRuleSwitchRequest"/></param>
+        /// <returns><see cref="ModifyUebaRuleSwitchResponse"/></returns>
+        public Task<ModifyUebaRuleSwitchResponse> ModifyUebaRuleSwitch(ModifyUebaRuleSwitchRequest req)
+        {
+            return InternalRequestAsync<ModifyUebaRuleSwitchResponse>(req, "ModifyUebaRuleSwitch");
+        }
+
+        /// <summary>
+        /// 更新自定义策略的开关
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUebaRuleSwitchRequest"/></param>
+        /// <returns><see cref="ModifyUebaRuleSwitchResponse"/></returns>
+        public ModifyUebaRuleSwitchResponse ModifyUebaRuleSwitchSync(ModifyUebaRuleSwitchRequest req)
+        {
+            return InternalRequestAsync<ModifyUebaRuleSwitchResponse>(req, "ModifyUebaRuleSwitch")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

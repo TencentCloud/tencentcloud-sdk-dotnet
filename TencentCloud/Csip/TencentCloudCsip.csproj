@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1150</VersionPrefix>
+    <VersionPrefix>3.0.1151</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,6 +53,7 @@
     <Compile Include="V20221121\Models\AlertExtraInfo.cs" />
     <Compile Include="V20221121\Models\AlertInfo.cs" />
     <Compile Include="V20221121\Models\AssetBaseInfoResponse.cs" />
+    <Compile Include="V20221121\Models\AssetCluster.cs" />
     <Compile Include="V20221121\Models\AssetClusterPod.cs" />
     <Compile Include="V20221121\Models\AssetInfoDetail.cs" />
     <Compile Include="V20221121\Models\AssetInstanceTypeMap.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="V20221121\Models\BugInfoDetail.cs" />
     <Compile Include="V20221121\Models\CVMAssetVO.cs" />
     <Compile Include="V20221121\Models\ClbListenerListInfo.cs" />
+    <Compile Include="V20221121\Models\CloudCountDesc.cs" />
     <Compile Include="V20221121\Models\CreateDomainAndIpRequest.cs" />
     <Compile Include="V20221121\Models\CreateDomainAndIpResponse.cs" />
     <Compile Include="V20221121\Models\CreateRiskCenterScanTaskRequest.cs" />
@@ -86,6 +88,8 @@
     <Compile Include="V20221121\Models\DescribeCVMAssetInfoResponse.cs" />
     <Compile Include="V20221121\Models\DescribeCVMAssetsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeCVMAssetsResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeClusterAssetsRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeClusterAssetsResponse.cs" />
     <Compile Include="V20221121\Models\DescribeClusterPodAssetsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeClusterPodAssetsResponse.cs" />
     <Compile Include="V20221121\Models\DescribeDbAssetInfoRequest.cs" />
@@ -100,6 +104,8 @@
     <Compile Include="V20221121\Models\DescribeListenerListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeNICAssetsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeNICAssetsResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeOrganizationInfoRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeOrganizationInfoResponse.cs" />
     <Compile Include="V20221121\Models\DescribeOrganizationUserInfoRequest.cs" />
     <Compile Include="V20221121\Models\DescribeOrganizationUserInfoResponse.cs" />
     <Compile Include="V20221121\Models\DescribePublicIpAssetsRequest.cs" />
@@ -126,6 +132,8 @@
     <Compile Include="V20221121\Models\DescribeScanTaskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeSearchBugInfoRequest.cs" />
     <Compile Include="V20221121\Models\DescribeSearchBugInfoResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeSubUserInfoRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeSubUserInfoResponse.cs" />
     <Compile Include="V20221121\Models\DescribeSubnetAssetsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeSubnetAssetsResponse.cs" />
     <Compile Include="V20221121\Models\DescribeTaskLogListRequest.cs" />
@@ -134,6 +142,8 @@
     <Compile Include="V20221121\Models\DescribeTaskLogURLResponse.cs" />
     <Compile Include="V20221121\Models\DescribeTopAttackInfoRequest.cs" />
     <Compile Include="V20221121\Models\DescribeTopAttackInfoResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeUebaRuleRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeUebaRuleResponse.cs" />
     <Compile Include="V20221121\Models\DescribeVULRiskAdvanceCFGListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeVULRiskAdvanceCFGListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeVULRiskDetailRequest.cs" />
@@ -155,8 +165,11 @@
     <Compile Include="V20221121\Models\ModifyRiskCenterRiskStatusResponse.cs" />
     <Compile Include="V20221121\Models\ModifyRiskCenterScanTaskRequest.cs" />
     <Compile Include="V20221121\Models\ModifyRiskCenterScanTaskResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyUebaRuleSwitchRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyUebaRuleSwitchResponse.cs" />
     <Compile Include="V20221121\Models\NICAsset.cs" />
     <Compile Include="V20221121\Models\NewAlertKey.cs" />
+    <Compile Include="V20221121\Models\OrganizationInfo.cs" />
     <Compile Include="V20221121\Models\OrganizationUserInfo.cs" />
     <Compile Include="V20221121\Models\PortRiskAdvanceCFGParamItem.cs" />
     <Compile Include="V20221121\Models\PortViewPortRisk.cs" />
@@ -172,8 +185,10 @@
     <Compile Include="V20221121\Models\ServerRisk.cs" />
     <Compile Include="V20221121\Models\ServerRiskSuggestion.cs" />
     <Compile Include="V20221121\Models\ServiceSupport.cs" />
+    <Compile Include="V20221121\Models\StatisticalFilter.cs" />
     <Compile Include="V20221121\Models\StopRiskCenterTaskRequest.cs" />
     <Compile Include="V20221121\Models\StopRiskCenterTaskResponse.cs" />
+    <Compile Include="V20221121\Models\SubUserInfo.cs" />
     <Compile Include="V20221121\Models\SubnetAsset.cs" />
     <Compile Include="V20221121\Models\Tag.cs" />
     <Compile Include="V20221121\Models\TagCount.cs" />
@@ -186,6 +201,9 @@
     <Compile Include="V20221121\Models\TaskIdListKey.cs" />
     <Compile Include="V20221121\Models\TaskLogInfo.cs" />
     <Compile Include="V20221121\Models\TaskLogURL.cs" />
+    <Compile Include="V20221121\Models\UebaCustomRule.cs" />
+    <Compile Include="V20221121\Models\UebaEventContent.cs" />
+    <Compile Include="V20221121\Models\UebaRule.cs" />
     <Compile Include="V20221121\Models\UpdateAlertStatusListRequest.cs" />
     <Compile Include="V20221121\Models\UpdateAlertStatusListResponse.cs" />
     <Compile Include="V20221121\Models\VULRiskAdvanceCFGList.cs" />
