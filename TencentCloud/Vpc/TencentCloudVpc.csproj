@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1152</VersionPrefix>
+    <VersionPrefix>3.0.1153</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -663,8 +663,14 @@
     <Compile Include="V20170312\Models\IPSECOptionsSpecification.cs" />
     <Compile Include="V20170312\Models\InquirePriceCreateDirectConnectGatewayRequest.cs" />
     <Compile Include="V20170312\Models\InquirePriceCreateDirectConnectGatewayResponse.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceAllocateAddressesRequest.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceAllocateAddressesResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceCreateVpnGatewayRequest.cs" />
     <Compile Include="V20170312\Models\InquiryPriceCreateVpnGatewayResponse.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceModifyAddressesBandwidthRequest.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceModifyAddressesBandwidthResponse.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceRenewAddressesRequest.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceRenewAddressesResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceRenewVpnGatewayRequest.cs" />
     <Compile Include="V20170312\Models\InquiryPriceRenewVpnGatewayResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest.cs" />
@@ -672,6 +678,8 @@
     <Compile Include="V20170312\Models\InstanceBind.cs" />
     <Compile Include="V20170312\Models\InstanceChargePrepaid.cs" />
     <Compile Include="V20170312\Models\InstanceStatistic.cs" />
+    <Compile Include="V20170312\Models\InternetPrice.cs" />
+    <Compile Include="V20170312\Models\InternetPriceDetail.cs" />
     <Compile Include="V20170312\Models\Ip6Rule.cs" />
     <Compile Include="V20170312\Models\Ip6RuleInfo.cs" />
     <Compile Include="V20170312\Models\Ip6Translator.cs" />

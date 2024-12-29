@@ -30,28 +30,24 @@ namespace TencentCloud.Live.V20180801.Models
         /// 1：无预监，有主监 
         /// 2：有预监，无主监 
         /// 3：有预监，有主监
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// 预监使用的展示参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PvwDisplayInfo")]
         public CasterDisplayInfo PvwDisplayInfo{ get; set; }
 
         /// <summary>
         /// 主监使用的展示参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PgmDisplayInfo")]
         public CasterDisplayInfo PgmDisplayInfo{ get; set; }
 
         /// <summary>
         /// 启动直播的时间，值为unix时间戳。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartLiveTime")]
         public ulong? StartLiveTime{ get; set; }

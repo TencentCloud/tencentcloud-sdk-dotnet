@@ -37,6 +37,12 @@ namespace TencentCloud.Tse.V20201207.Models
         public string Name{ get; set; }
 
         /// <summary>
+        /// 是否开启同步到全局注册中心	
+        /// </summary>
+        [JsonProperty("SyncToGlobalRegistry")]
+        public string SyncToGlobalRegistry{ get; set; }
+
+        /// <summary>
         /// 偏移量，默认为0。
         /// </summary>
         [JsonProperty("Offset")]
@@ -56,6 +62,7 @@ namespace TencentCloud.Tse.V20201207.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "SyncToGlobalRegistry", this.SyncToGlobalRegistry);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }

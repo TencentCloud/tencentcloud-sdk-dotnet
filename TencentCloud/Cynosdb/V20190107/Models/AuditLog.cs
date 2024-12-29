@@ -137,7 +137,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? LockWaitTime{ get; set; }
 
         /// <summary>
-        /// 事物持续等待时间，微秒。
+        /// 事务持续等待时间，微秒。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrxLivingTime")]

@@ -28,7 +28,7 @@ namespace TencentCloud.Cwp.V20180228
 
        private const string endpoint = "cwp.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.1152";
+       private const string sdkVersion = "SDK_NET_3.0.1153";
 
         /// <summary>
         /// Client constructor.
@@ -4272,31 +4272,6 @@ namespace TencentCloud.Cwp.V20180228
         public DescribeImportMachineInfoResponse DescribeImportMachineInfoSync(DescribeImportMachineInfoRequest req)
         {
             return InternalRequestAsync<DescribeImportMachineInfoResponse>(req, "DescribeImportMachineInfo")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 接口已废弃
-        /// 
-        /// 获取索引列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeIndexListRequest"/></param>
-        /// <returns><see cref="DescribeIndexListResponse"/></returns>
-        public Task<DescribeIndexListResponse> DescribeIndexList(DescribeIndexListRequest req)
-        {
-            return InternalRequestAsync<DescribeIndexListResponse>(req, "DescribeIndexList");
-        }
-
-        /// <summary>
-        /// 接口已废弃
-        /// 
-        /// 获取索引列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeIndexListRequest"/></param>
-        /// <returns><see cref="DescribeIndexListResponse"/></returns>
-        public DescribeIndexListResponse DescribeIndexListSync(DescribeIndexListRequest req)
-        {
-            return InternalRequestAsync<DescribeIndexListResponse>(req, "DescribeIndexList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

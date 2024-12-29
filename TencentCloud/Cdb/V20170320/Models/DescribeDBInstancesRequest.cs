@@ -79,7 +79,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] InstanceNames{ get; set; }
 
         /// <summary>
-        /// 实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行
+        /// 实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成<br>19 - 参数设置待执行<br>34 - 原地升级待执行
         /// </summary>
         [JsonProperty("TaskStatus")]
         public ulong?[] TaskStatus{ get; set; }
@@ -212,6 +212,7 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 标签键值
+        /// 请注意，创建中的实例无法查询到标签。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

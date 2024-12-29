@@ -32,21 +32,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// disable_doing-关闭中
         /// renew_doing-更新中
         /// wait_doing-等待维护时间内执行
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Encryption")]
         public string Encryption{ get; set; }
 
         /// <summary>
         /// SSL证书有效期，时间格式 YYYY-MM-DD HH:MM:SS
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SSLValidityPeriod")]
         public string SSLValidityPeriod{ get; set; }
 
         /// <summary>
         /// SSL证书有效性，0-无效，1-有效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SSLValidity")]
         public ulong? SSLValidity{ get; set; }

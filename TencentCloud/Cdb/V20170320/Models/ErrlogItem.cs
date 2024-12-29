@@ -26,14 +26,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// 错误发生时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Timestamp")]
         public ulong? Timestamp{ get; set; }
 
         /// <summary>
         /// 错误详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

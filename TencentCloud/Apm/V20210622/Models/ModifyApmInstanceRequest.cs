@@ -25,13 +25,13 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 业务系统ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例名
+        /// 业务系统名
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Apm.V20210622.Models
         public ApmTag[] Tags{ get; set; }
 
         /// <summary>
-        /// 实例详情
+        /// 业务系统详情
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Apm.V20210622.Models
         public bool? OpenBilling{ get; set; }
 
         /// <summary>
-        /// 实例上报额度
+        /// 业务系统上报额度
         /// </summary>
         [JsonProperty("SpanDailyCounters")]
         public ulong? SpanDailyCounters{ get; set; }

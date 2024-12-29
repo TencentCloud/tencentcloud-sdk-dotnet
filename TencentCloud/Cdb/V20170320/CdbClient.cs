@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1152";
+       private const string sdkVersion = "SDK_NET_3.0.1153";
 
         /// <summary>
         /// Client constructor.
@@ -1631,7 +1631,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeDBInstances)用于查询云数据库实例列表，支持通过项目 ID、实例 ID、访问地址、实例状态等过滤条件来筛选实例。支持查询主实例、灾备实例和只读实例信息列表。
+        /// 本接口（DescribeDBInstances）用于查询云数据库实例列表，支持通过项目 ID、实例 ID、访问地址、实例状态等过滤条件来筛选实例。支持查询主实例、灾备实例和只读实例信息列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
         /// <returns><see cref="DescribeDBInstancesResponse"/></returns>
@@ -1641,7 +1641,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeDBInstances)用于查询云数据库实例列表，支持通过项目 ID、实例 ID、访问地址、实例状态等过滤条件来筛选实例。支持查询主实例、灾备实例和只读实例信息列表。
+        /// 本接口（DescribeDBInstances）用于查询云数据库实例列表，支持通过项目 ID、实例 ID、访问地址、实例状态等过滤条件来筛选实例。支持查询主实例、灾备实例和只读实例信息列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
         /// <returns><see cref="DescribeDBInstancesResponse"/></returns>

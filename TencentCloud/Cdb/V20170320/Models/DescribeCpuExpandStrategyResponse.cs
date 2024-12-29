@@ -26,23 +26,21 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// 策略类型。可选值 auto、manual。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 手动扩容的 CPU 。Type为 manual 时有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpandCpu")]
         public string ExpandCpu{ get; set; }
 
         /// <summary>
         /// 自动扩容策略。Type 为 auto 时有效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoStrategy")]
+        [System.Obsolete]
         public string AutoStrategy{ get; set; }
 
         /// <summary>

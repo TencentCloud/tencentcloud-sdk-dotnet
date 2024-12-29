@@ -25,13 +25,13 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 参数列表，如果addon已安装，会使用已设置的参数做渲染，是一个json格式的字符串
+        /// 参数列表，如果addon已安装，会使用已设置的参数和chart里的默认参数做渲染，是一个json格式的字符串，未安装addon时返回为空值。
         /// </summary>
         [JsonProperty("Values")]
         public string Values{ get; set; }
 
         /// <summary>
-        /// addon支持的参数列表，使用默认值，是一个json格式的字符串
+        /// addon支持的参数列表，值为chart的默认值，是一个json格式的字符串。
         /// </summary>
         [JsonProperty("DefaultValues")]
         public string DefaultValues{ get; set; }

@@ -54,6 +54,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("SystemProvide")]
         public long? SystemProvide{ get; set; }
 
+        /// <summary>
+        /// Connector
+        /// </summary>
+        [JsonProperty("Connector")]
+        public string Connector{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "SystemProvide", this.SystemProvide);
+            this.SetParamSimple(map, prefix + "Connector", this.Connector);
         }
     }
 }

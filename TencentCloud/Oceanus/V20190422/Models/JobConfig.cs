@@ -252,6 +252,41 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("FlinkVersion")]
         public string FlinkVersion{ get; set; }
 
+        /// <summary>
+        /// jm使用cpu数目
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("JobManagerCpu")]
+        public float? JobManagerCpu{ get; set; }
+
+        /// <summary>
+        /// jm使用内存数目
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("JobManagerMem")]
+        public float? JobManagerMem{ get; set; }
+
+        /// <summary>
+        /// tm使用cpu数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskManagerCpu")]
+        public float? TaskManagerCpu{ get; set; }
+
+        /// <summary>
+        /// tm使用mem数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskManagerMem")]
+        public float? TaskManagerMem{ get; set; }
+
+        /// <summary>
+        /// 运行中配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("JobConfigItem")]
+        public JobConfig JobConfigItem{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -291,6 +326,11 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "IndexName", this.IndexName);
             this.SetParamSimple(map, prefix + "WorkspaceName", this.WorkspaceName);
             this.SetParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
+            this.SetParamSimple(map, prefix + "JobManagerCpu", this.JobManagerCpu);
+            this.SetParamSimple(map, prefix + "JobManagerMem", this.JobManagerMem);
+            this.SetParamSimple(map, prefix + "TaskManagerCpu", this.TaskManagerCpu);
+            this.SetParamSimple(map, prefix + "TaskManagerMem", this.TaskManagerMem);
+            this.SetParamObj(map, prefix + "JobConfigItem.", this.JobConfigItem);
         }
     }
 }

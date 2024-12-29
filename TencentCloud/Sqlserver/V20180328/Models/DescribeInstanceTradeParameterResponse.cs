@@ -26,7 +26,6 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         
         /// <summary>
         /// 计费参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Parameter")]
         public string Parameter{ get; set; }

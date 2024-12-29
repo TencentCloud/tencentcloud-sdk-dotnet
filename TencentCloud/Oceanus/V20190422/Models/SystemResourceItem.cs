@@ -60,6 +60,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("LatestResourceConfigVersion")]
         public long? LatestResourceConfigVersion{ get; set; }
 
+        /// <summary>
+        /// 1 是系统提供资源 2 用户提供CONNECTOR
+        /// </summary>
+        [JsonProperty("SystemProvide")]
+        public long? SystemProvide{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "LatestResourceConfigVersion", this.LatestResourceConfigVersion);
+            this.SetParamSimple(map, prefix + "SystemProvide", this.SystemProvide);
         }
     }
 }

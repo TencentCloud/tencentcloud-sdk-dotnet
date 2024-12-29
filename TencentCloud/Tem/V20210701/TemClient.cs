@@ -28,7 +28,7 @@ namespace TencentCloud.Tem.V20210701
 
        private const string endpoint = "tem.tencentcloudapi.com";
        private const string version = "2021-07-01";
-       private const string sdkVersion = "SDK_NET_3.0.1152";
+       private const string sdkVersion = "SDK_NET_3.0.1153";
 
         /// <summary>
         /// Client constructor.
@@ -942,6 +942,8 @@ namespace TencentCloud.Tem.V20210701
         }
 
         /// <summary>
+        /// 此接口没有被使用了
+        /// 
         /// 创建或者更新 Ingress 规则
         /// </summary>
         /// <param name="req"><see cref="ModifyIngressRequest"/></param>
@@ -952,6 +954,8 @@ namespace TencentCloud.Tem.V20210701
         }
 
         /// <summary>
+        /// 此接口没有被使用了
+        /// 
         /// 创建或者更新 Ingress 规则
         /// </summary>
         /// <param name="req"><see cref="ModifyIngressRequest"/></param>

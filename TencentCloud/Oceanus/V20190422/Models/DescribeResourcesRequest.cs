@@ -55,6 +55,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("WorkSpaceId")]
         public string WorkSpaceId{ get; set; }
 
+        /// <summary>
+        /// 资源类型，0=用户，1系统connector，2=用户自定义connector
+        /// </summary>
+        [JsonProperty("SystemResource")]
+        public ulong? SystemResource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +72,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
+            this.SetParamSimple(map, prefix + "SystemResource", this.SystemResource);
         }
     }
 }

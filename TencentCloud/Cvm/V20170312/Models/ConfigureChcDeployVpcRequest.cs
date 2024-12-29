@@ -42,6 +42,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("DeploySecurityGroupIds")]
         public string[] DeploySecurityGroupIds{ get; set; }
 
+        /// <summary>
+        /// 部署所需要的dhcp选项参数
+        /// </summary>
+        [JsonProperty("ChcDeployExtraConfig")]
+        public ChcDeployExtraConfig ChcDeployExtraConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArraySimple(map, prefix + "ChcIds.", this.ChcIds);
             this.SetParamObj(map, prefix + "DeployVirtualPrivateCloud.", this.DeployVirtualPrivateCloud);
             this.SetParamArraySimple(map, prefix + "DeploySecurityGroupIds.", this.DeploySecurityGroupIds);
+            this.SetParamObj(map, prefix + "ChcDeployExtraConfig.", this.ChcDeployExtraConfig);
         }
     }
 }

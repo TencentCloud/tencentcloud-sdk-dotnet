@@ -57,6 +57,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("Reason")]
         public string Reason{ get; set; }
 
+        /// <summary>
+        /// addon的创建时间
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +74,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "RawValues", this.RawValues);
             this.SetParamSimple(map, prefix + "Phase", this.Phase);
             this.SetParamSimple(map, prefix + "Reason", this.Reason);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

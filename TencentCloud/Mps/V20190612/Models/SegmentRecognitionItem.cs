@@ -90,6 +90,30 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
+        /// <summary>
+        /// 直播拆条用，音频url。
+        /// </summary>
+        [JsonProperty("AudioUrl")]
+        public string AudioUrl{ get; set; }
+
+        /// <summary>
+        /// 直播拆条用，音频对应起始时间戳；
+        /// </summary>
+        [JsonProperty("AudioBeginTime")]
+        public float? AudioBeginTime{ get; set; }
+
+        /// <summary>
+        /// 直播拆条用，音频对应结束时间戳。
+        /// </summary>
+        [JsonProperty("AudioEndTime")]
+        public float? AudioEndTime{ get; set; }
+
+        /// <summary>
+        /// 直播拆条用，人物位置参考信息用于横转竖。
+        /// </summary>
+        [JsonProperty("PersonPositionUrl")]
+        public string PersonPositionUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -106,6 +130,10 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
             this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
+            this.SetParamSimple(map, prefix + "AudioBeginTime", this.AudioBeginTime);
+            this.SetParamSimple(map, prefix + "AudioEndTime", this.AudioEndTime);
+            this.SetParamSimple(map, prefix + "PersonPositionUrl", this.PersonPositionUrl);
         }
     }
 }

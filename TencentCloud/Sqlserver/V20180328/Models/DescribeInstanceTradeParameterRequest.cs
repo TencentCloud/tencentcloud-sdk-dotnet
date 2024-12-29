@@ -49,7 +49,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,BI-商业智能服务,cvmHA-新版高可用,cvmRO-新版只读
+        /// 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,BI-商业智能服务,cvmHA-新版高可用,cvmRO-新版只读，MultiHA-多节点，cvmMultiHA-云盘多节点
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -156,6 +156,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("Collation")]
         public string Collation{ get; set; }
 
+        /// <summary>
+        /// 是否多节点架构，默认值为false
+        /// </summary>
+        [JsonProperty("MultiNodes")]
+        public bool? MultiNodes{ get; set; }
+
+        /// <summary>
+        /// 备节点可用区，默认为空。如果是多节点架构时必传，并且当MultiZones=true时备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+        /// </summary>
+        [JsonProperty("DrZones")]
+        public string[] DrZones{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +196,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
             this.SetParamSimple(map, prefix + "Collation", this.Collation);
+            this.SetParamSimple(map, prefix + "MultiNodes", this.MultiNodes);
+            this.SetParamArraySimple(map, prefix + "DrZones.", this.DrZones);
         }
     }
 }

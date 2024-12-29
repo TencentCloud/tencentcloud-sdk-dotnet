@@ -50,21 +50,18 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 用户在当前地域的异地备份总容量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RemoteBackupVolume")]
         public long? RemoteBackupVolume{ get; set; }
 
         /// <summary>
         /// 归档备份容量，包含数据备份以及日志备份。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupArchiveVolume")]
         public long? BackupArchiveVolume{ get; set; }
 
         /// <summary>
         /// 标准存储备份容量，包含数据备份以及日志备份。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupStandbyVolume")]
         public long? BackupStandbyVolume{ get; set; }

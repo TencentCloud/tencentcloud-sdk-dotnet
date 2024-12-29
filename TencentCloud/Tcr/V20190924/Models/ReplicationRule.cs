@@ -48,6 +48,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("Filters")]
         public ReplicationFilter[] Filters{ get; set; }
 
+        /// <summary>
+        /// 是否同步删除事件
+        /// </summary>
+        [JsonProperty("Deletion")]
+        public bool? Deletion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "DestNamespace", this.DestNamespace);
             this.SetParamSimple(map, prefix + "Override", this.Override);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Deletion", this.Deletion);
         }
     }
 }

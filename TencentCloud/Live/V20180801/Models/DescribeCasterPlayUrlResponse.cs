@@ -27,7 +27,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 播放url。
         /// 当导播台不存在预监或主监时，若请求预监或主监的播放地址，该字段为空。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PlayUrl")]
         public string PlayUrl{ get; set; }
@@ -36,7 +35,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// webrtc协议播放地址。
         /// 当导播台不存在预监或主监时，若请求预监或主监的webrtc播放地址，该字段为空。
         /// 注：webrtc协议播放地址需配合腾讯云快直播播放sdk方可使用。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WebRTCPlayUrl")]
         public string WebRTCPlayUrl{ get; set; }

@@ -126,6 +126,36 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ServiceTypeLabel")]
         public string ServiceTypeLabel{ get; set; }
 
+        /// <summary>
+        /// 价税合计(大写)前符号
+        /// </summary>
+        [JsonProperty("TotalCnMark")]
+        public string TotalCnMark{ get; set; }
+
+        /// <summary>
+        /// 价税合计(小写)前字样
+        /// </summary>
+        [JsonProperty("TotalMark")]
+        public string TotalMark{ get; set; }
+
+        /// <summary>
+        /// 合计金额前字样
+        /// </summary>
+        [JsonProperty("PretaxAmountMark")]
+        public string PretaxAmountMark{ get; set; }
+
+        /// <summary>
+        /// 合计税额前字样
+        /// </summary>
+        [JsonProperty("TaxMark")]
+        public string TaxMark{ get; set; }
+
+        /// <summary>
+        /// 是否有公司印章（0：没有，1：有）
+        /// </summary>
+        [JsonProperty("CompanySealMark")]
+        public long? CompanySealMark{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +179,11 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "SubTax", this.SubTax);
             this.SetParamArrayObj(map, prefix + "VatElectronicItems.", this.VatElectronicItems);
             this.SetParamSimple(map, prefix + "ServiceTypeLabel", this.ServiceTypeLabel);
+            this.SetParamSimple(map, prefix + "TotalCnMark", this.TotalCnMark);
+            this.SetParamSimple(map, prefix + "TotalMark", this.TotalMark);
+            this.SetParamSimple(map, prefix + "PretaxAmountMark", this.PretaxAmountMark);
+            this.SetParamSimple(map, prefix + "TaxMark", this.TaxMark);
+            this.SetParamSimple(map, prefix + "CompanySealMark", this.CompanySealMark);
         }
     }
 }

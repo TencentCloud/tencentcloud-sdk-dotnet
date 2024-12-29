@@ -24,12 +24,44 @@ namespace TencentCloud.Cvm.V20170312.Models
     public class ChcDeployExtraConfig : AbstractModel
     {
         
+        /// <summary>
+        /// minos类型。是使用腾讯云的minios，还是客户自己的minios。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MiniOsType")]
+        public string MiniOsType{ get; set; }
+
+        /// <summary>
+        /// 服务器的架构和启动方式。取值为x86_legacy, arm_uefi。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BootType")]
+        public string BootType{ get; set; }
+
+        /// <summary>
+        /// PXE使用的引导文件。默认为pxelinux.0。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BootFile")]
+        public string BootFile{ get; set; }
+
+        /// <summary>
+        /// tftp服务器的ip地址。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NextServerAddress")]
+        public string NextServerAddress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "MiniOsType", this.MiniOsType);
+            this.SetParamSimple(map, prefix + "BootType", this.BootType);
+            this.SetParamSimple(map, prefix + "BootFile", this.BootFile);
+            this.SetParamSimple(map, prefix + "NextServerAddress", this.NextServerAddress);
         }
     }
 }

@@ -26,14 +26,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// 代理组数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
 
         /// <summary>
         /// 代理组信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyInfos")]
         public ProxyGroupInfo[] ProxyInfos{ get; set; }

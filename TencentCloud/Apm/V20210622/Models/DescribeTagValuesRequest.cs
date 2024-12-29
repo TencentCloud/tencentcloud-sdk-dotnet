@@ -31,7 +31,7 @@ namespace TencentCloud.Apm.V20210622.Models
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// 业务系统ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

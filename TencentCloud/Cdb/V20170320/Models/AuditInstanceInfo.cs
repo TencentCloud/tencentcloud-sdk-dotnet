@@ -26,28 +26,24 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// 项目ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
         /// 标签信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagList")]
         public TagInfoUnit[] TagList{ get; set; }
 
         /// <summary>
         /// 数据库内核类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
 
         /// <summary>
         /// 数据库内核版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DbVersion")]
         public string DbVersion{ get; set; }

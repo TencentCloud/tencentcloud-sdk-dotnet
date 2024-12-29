@@ -28,7 +28,7 @@ namespace TencentCloud.Iai.V20200303
 
        private const string endpoint = "iai.tencentcloudapi.com";
        private const string version = "2020-03-03";
-       private const string sdkVersion = "SDK_NET_3.0.1152";
+       private const string sdkVersion = "SDK_NET_3.0.1153";
 
         /// <summary>
         /// Client constructor.
@@ -462,6 +462,37 @@ namespace TencentCloud.Iai.V20200303
         public DetectFaceAttributesResponse DetectFaceAttributesSync(DetectFaceAttributesRequest req)
         {
             return InternalRequestAsync<DetectFaceAttributesResponse>(req, "DetectFaceAttributes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 对两张图片中的人脸进行相似度比对，返回人脸相似度分数。
+        /// 
+        /// 若您需要判断 “此人是否是某人”，即验证某张图片中的人是否是已知身份的某人，如常见的人脸登录场景，建议使用[人脸验证](https://www.tencentcloud.com/document/product/1059/36972)或[人员验证](https://www.tencentcloud.com/document/product/1059/36971)接口。
+        /// 
+        /// >     
+        /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+        /// </summary>
+        /// <param name="req"><see cref="DetectFaceSimilarityRequest"/></param>
+        /// <returns><see cref="DetectFaceSimilarityResponse"/></returns>
+        public Task<DetectFaceSimilarityResponse> DetectFaceSimilarity(DetectFaceSimilarityRequest req)
+        {
+            return InternalRequestAsync<DetectFaceSimilarityResponse>(req, "DetectFaceSimilarity");
+        }
+
+        /// <summary>
+        /// 对两张图片中的人脸进行相似度比对，返回人脸相似度分数。
+        /// 
+        /// 若您需要判断 “此人是否是某人”，即验证某张图片中的人是否是已知身份的某人，如常见的人脸登录场景，建议使用[人脸验证](https://www.tencentcloud.com/document/product/1059/36972)或[人员验证](https://www.tencentcloud.com/document/product/1059/36971)接口。
+        /// 
+        /// >     
+        /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+        /// </summary>
+        /// <param name="req"><see cref="DetectFaceSimilarityRequest"/></param>
+        /// <returns><see cref="DetectFaceSimilarityResponse"/></returns>
+        public DetectFaceSimilarityResponse DetectFaceSimilaritySync(DetectFaceSimilarityRequest req)
+        {
+            return InternalRequestAsync<DetectFaceSimilarityResponse>(req, "DetectFaceSimilarity")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -26,14 +26,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// 划分上限
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LessThan")]
         public ulong? LessThan{ get; set; }
 
         /// <summary>
         /// 权重
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }

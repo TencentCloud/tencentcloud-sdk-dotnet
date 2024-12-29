@@ -60,6 +60,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("FlinkVersion")]
         public string FlinkVersion{ get; set; }
 
+        /// <summary>
+        /// 空间
+        /// </summary>
+        [JsonProperty("WorkSpaceId")]
+        public string WorkSpaceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
+            this.SetParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
         }
     }
 }

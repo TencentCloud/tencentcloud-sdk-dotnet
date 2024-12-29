@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1152";
+       private const string sdkVersion = "SDK_NET_3.0.1153";
 
         /// <summary>
         /// Client constructor.
@@ -537,7 +537,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口(DeleteAuditLogFile)用于删除云数据库实例的审计日志文件。
+        /// 本接口（DeleteAuditLogFile）用于删除云数据库实例的审计日志文件。
         /// </summary>
         /// <param name="req"><see cref="DeleteAuditLogFileRequest"/></param>
         /// <returns><see cref="DeleteAuditLogFileResponse"/></returns>
@@ -547,7 +547,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口(DeleteAuditLogFile)用于删除云数据库实例的审计日志文件。
+        /// 本接口（DeleteAuditLogFile）用于删除云数据库实例的审计日志文件。
         /// </summary>
         /// <param name="req"><see cref="DeleteAuditLogFileRequest"/></param>
         /// <returns><see cref="DeleteAuditLogFileResponse"/></returns>
@@ -768,7 +768,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口(DescribeAuditLogs)用于查询数据库审计日志。
+        /// 本接口（DescribeAuditLogs）用于查询数据库审计日志。
         /// </summary>
         /// <param name="req"><see cref="DescribeAuditLogsRequest"/></param>
         /// <returns><see cref="DescribeAuditLogsResponse"/></returns>
@@ -778,7 +778,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口(DescribeAuditLogs)用于查询数据库审计日志。
+        /// 本接口（DescribeAuditLogs）用于查询数据库审计日志。
         /// </summary>
         /// <param name="req"><see cref="DescribeAuditLogsRequest"/></param>
         /// <returns><see cref="DescribeAuditLogsResponse"/></returns>
@@ -1440,7 +1440,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口(DescribeIsolatedInstances)用于查询回收站实例列表。
+        /// 本接口（DescribeIsolatedInstances）用于查询回收站实例列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeIsolatedInstancesRequest"/></param>
         /// <returns><see cref="DescribeIsolatedInstancesResponse"/></returns>
@@ -1450,7 +1450,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口(DescribeIsolatedInstances)用于查询回收站实例列表。
+        /// 本接口（DescribeIsolatedInstances）用于查询回收站实例列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeIsolatedInstancesRequest"/></param>
         /// <returns><see cref="DescribeIsolatedInstancesResponse"/></returns>

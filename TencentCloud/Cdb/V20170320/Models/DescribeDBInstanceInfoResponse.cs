@@ -44,21 +44,18 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 加密使用的密钥 ID 。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
 
         /// <summary>
         /// 密钥所在地域。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeyRegion")]
         public string KeyRegion{ get; set; }
 
         /// <summary>
         /// 当前 CDB 后端服务使用的 KMS 服务的默认地域。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultKmsRegion")]
         public string DefaultKmsRegion{ get; set; }

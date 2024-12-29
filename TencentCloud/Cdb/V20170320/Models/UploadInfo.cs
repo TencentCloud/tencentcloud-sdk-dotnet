@@ -26,14 +26,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// 文件所有分片数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AllSliceNum")]
         public long? AllSliceNum{ get; set; }
 
         /// <summary>
         /// 已完成分片数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CompleteNum")]
         public long? CompleteNum{ get; set; }

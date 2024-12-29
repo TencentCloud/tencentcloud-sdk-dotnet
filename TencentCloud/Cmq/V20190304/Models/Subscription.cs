@@ -25,46 +25,11 @@ namespace TencentCloud.Cmq.V20190304.Models
     {
         
         /// <summary>
-        /// 订阅名字，在单个地域同一帐号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("SubscriptionName")]
-        public string SubscriptionName{ get; set; }
-
-        /// <summary>
-        /// 订阅 ID。订阅 ID 在拉取监控数据时会用到。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("SubscriptionId")]
-        public string SubscriptionId{ get; set; }
-
-        /// <summary>
-        /// 订阅拥有者的 APPID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("TopicOwner")]
-        public ulong? TopicOwner{ get; set; }
-
-        /// <summary>
         /// 该订阅待投递的消息数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MsgCount")]
         public ulong? MsgCount{ get; set; }
-
-        /// <summary>
-        /// 最后一次修改订阅属性的时间。返回 Unix 时间戳，精确到秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("LastModifyTime")]
-        public ulong? LastModifyTime{ get; set; }
-
-        /// <summary>
-        /// 订阅的创建时间。返回 Unix 时间戳，精确到秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("CreateTime")]
-        public ulong? CreateTime{ get; set; }
 
         /// <summary>
         /// 表示订阅接收消息的过滤策略。
@@ -81,20 +46,11 @@ namespace TencentCloud.Cmq.V20190304.Models
         public string Endpoint{ get; set; }
 
         /// <summary>
-        /// 描述用户创建订阅时选择的过滤策略：
-        /// filterType = 1表示用户使用 filterTag 标签过滤
-        /// filterType = 2表示用户使用 bindingKey 过滤。
+        /// 订阅拥有者的 APPID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("FilterTags")]
-        public string[] FilterTags{ get; set; }
-
-        /// <summary>
-        /// 订阅的协议，目前支持两种协议：HTTP、queue。使用 HTTP 协议，用户需自己搭建接受消息的 Web Server。使用 queue，消息会自动推送到 CMQ queue，用户可以并发地拉取消息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Protocol")]
-        public string Protocol{ get; set; }
+        [JsonProperty("TopicOwner")]
+        public ulong? TopicOwner{ get; set; }
 
         /// <summary>
         /// 向 endpoint 推送消息出现错误时，CMQ 推送服务器的重试策略。取值有：
@@ -112,24 +68,68 @@ namespace TencentCloud.Cmq.V20190304.Models
         [JsonProperty("NotifyContentFormat")]
         public string NotifyContentFormat{ get; set; }
 
+        /// <summary>
+        /// 最后一次修改订阅属性的时间。返回 Unix 时间戳，精确到秒。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LastModifyTime")]
+        public ulong? LastModifyTime{ get; set; }
+
+        /// <summary>
+        /// 描述用户创建订阅时选择的过滤策略：
+        /// filterType = 1表示用户使用 filterTag 标签过滤
+        /// filterType = 2表示用户使用 bindingKey 过滤。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FilterTags")]
+        public string[] FilterTags{ get; set; }
+
+        /// <summary>
+        /// 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubscriptionName")]
+        public string SubscriptionName{ get; set; }
+
+        /// <summary>
+        /// 订阅的协议，目前支持两种协议：HTTP、queue。使用 HTTP 协议，用户需自己搭建接受消息的 Web Server。使用 queue，消息会自动推送到 CMQ queue，用户可以并发地拉取消息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
+
+        /// <summary>
+        /// 订阅 ID。订阅 ID 在拉取监控数据时会用到。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubscriptionId")]
+        public string SubscriptionId{ get; set; }
+
+        /// <summary>
+        /// 订阅的创建时间。返回 Unix 时间戳，精确到秒。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public ulong? CreateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SubscriptionName", this.SubscriptionName);
-            this.SetParamSimple(map, prefix + "SubscriptionId", this.SubscriptionId);
-            this.SetParamSimple(map, prefix + "TopicOwner", this.TopicOwner);
             this.SetParamSimple(map, prefix + "MsgCount", this.MsgCount);
-            this.SetParamSimple(map, prefix + "LastModifyTime", this.LastModifyTime);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamArraySimple(map, prefix + "BindingKey.", this.BindingKey);
             this.SetParamSimple(map, prefix + "Endpoint", this.Endpoint);
-            this.SetParamArraySimple(map, prefix + "FilterTags.", this.FilterTags);
-            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "TopicOwner", this.TopicOwner);
             this.SetParamSimple(map, prefix + "NotifyStrategy", this.NotifyStrategy);
             this.SetParamSimple(map, prefix + "NotifyContentFormat", this.NotifyContentFormat);
+            this.SetParamSimple(map, prefix + "LastModifyTime", this.LastModifyTime);
+            this.SetParamArraySimple(map, prefix + "FilterTags.", this.FilterTags);
+            this.SetParamSimple(map, prefix + "SubscriptionName", this.SubscriptionName);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "SubscriptionId", this.SubscriptionId);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

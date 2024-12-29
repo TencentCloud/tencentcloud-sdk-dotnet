@@ -60,6 +60,15 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("RemoveGroupIds")]
         public string[] RemoveGroupIds{ get; set; }
 
+        /// <summary>
+        /// 该命名空间下的服务对哪些命名空间下可见，
+        /// 1、为空或者不填写，表示仅当前命名空间可见
+        /// 2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）
+        /// 3、列表内容为部份命名空间名称，则只对这些命名空间下可见
+        /// </summary>
+        [JsonProperty("ServiceExportTo")]
+        public string[] ServiceExportTo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +81,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
             this.SetParamArraySimple(map, prefix + "RemoveUserIds.", this.RemoveUserIds);
             this.SetParamArraySimple(map, prefix + "RemoveGroupIds.", this.RemoveGroupIds);
+            this.SetParamArraySimple(map, prefix + "ServiceExportTo.", this.ServiceExportTo);
         }
     }
 }

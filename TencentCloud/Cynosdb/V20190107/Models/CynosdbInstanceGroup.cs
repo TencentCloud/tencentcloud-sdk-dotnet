@@ -61,7 +61,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 实例组类型。ha-ha组；ro-只读组
+        /// 实例组（网络）类型。ha-ha组；ro-只读组；proxy-代理；singleRo-只读实例独占
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

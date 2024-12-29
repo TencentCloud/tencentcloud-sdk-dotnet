@@ -26,12 +26,14 @@ namespace TencentCloud.Cvm.V20170312.Models
         
         /// <summary>
         /// 网络计费模式。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InternetChargeType")]
         public string InternetChargeType{ get; set; }
 
         /// <summary>
         /// 网络计费模式描述信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

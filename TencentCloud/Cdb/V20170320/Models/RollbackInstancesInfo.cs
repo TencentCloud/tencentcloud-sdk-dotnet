@@ -26,7 +26,6 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// 云数据库实例ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -45,14 +44,12 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 待回档的数据库信息，表示整库回档
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Databases")]
         public RollbackDBName[] Databases{ get; set; }
 
         /// <summary>
         /// 待回档的数据库表信息，表示按表回档
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tables")]
         public RollbackTables[] Tables{ get; set; }

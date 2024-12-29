@@ -28,7 +28,7 @@ namespace TencentCloud.Apm.V20210622
 
        private const string endpoint = "apm.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1152";
+       private const string sdkVersion = "SDK_NET_3.0.1153";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
-        /// 业务购买APM实例，调用该接口创建
+        /// 业务购买 APM 业务系统，调用该接口创建
         /// </summary>
         /// <param name="req"><see cref="CreateApmInstanceRequest"/></param>
         /// <returns><see cref="CreateApmInstanceResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
-        /// 业务购买APM实例，调用该接口创建
+        /// 业务购买 APM 业务系统，调用该接口创建
         /// </summary>
         /// <param name="req"><see cref="CreateApmInstanceRequest"/></param>
         /// <returns><see cref="CreateApmInstanceResponse"/></returns>
@@ -75,7 +75,7 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
-        /// 获取APM Agent信息
+        /// 获取 APM Agent信息
         /// </summary>
         /// <param name="req"><see cref="DescribeApmAgentRequest"/></param>
         /// <returns><see cref="DescribeApmAgentResponse"/></returns>
@@ -85,7 +85,7 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
-        /// 获取APM Agent信息
+        /// 获取 APM Agent信息
         /// </summary>
         /// <param name="req"><see cref="DescribeApmAgentRequest"/></param>
         /// <returns><see cref="DescribeApmAgentResponse"/></returns>
@@ -203,7 +203,7 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
-        /// 服务概览数据拉取
+        /// 应用概览数据拉取
         /// </summary>
         /// <param name="req"><see cref="DescribeServiceOverviewRequest"/></param>
         /// <returns><see cref="DescribeServiceOverviewResponse"/></returns>
@@ -213,7 +213,7 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
-        /// 服务概览数据拉取
+        /// 应用概览数据拉取
         /// </summary>
         /// <param name="req"><see cref="DescribeServiceOverviewRequest"/></param>
         /// <returns><see cref="DescribeServiceOverviewResponse"/></returns>
@@ -245,7 +245,7 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
-        /// 修改APM实例接口
+        /// 修改APM业务系统接口
         /// </summary>
         /// <param name="req"><see cref="ModifyApmInstanceRequest"/></param>
         /// <returns><see cref="ModifyApmInstanceResponse"/></returns>
@@ -255,7 +255,7 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
-        /// 修改APM实例接口
+        /// 修改APM业务系统接口
         /// </summary>
         /// <param name="req"><see cref="ModifyApmInstanceRequest"/></param>
         /// <returns><see cref="ModifyApmInstanceResponse"/></returns>
@@ -287,7 +287,7 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
-        /// apm销毁实例
+        /// 销毁 APM 业务系统
         /// </summary>
         /// <param name="req"><see cref="TerminateApmInstanceRequest"/></param>
         /// <returns><see cref="TerminateApmInstanceResponse"/></returns>
@@ -297,7 +297,7 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
-        /// apm销毁实例
+        /// 销毁 APM 业务系统
         /// </summary>
         /// <param name="req"><see cref="TerminateApmInstanceRequest"/></param>
         /// <returns><see cref="TerminateApmInstanceResponse"/></returns>

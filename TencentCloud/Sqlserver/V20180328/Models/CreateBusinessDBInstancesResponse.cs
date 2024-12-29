@@ -32,14 +32,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
 
         /// <summary>
         /// 流程ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }
 
         /// <summary>
         /// 实例ID集合
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceIdSet")]
         public string[] InstanceIdSet{ get; set; }

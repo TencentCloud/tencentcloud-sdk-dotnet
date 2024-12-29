@@ -26,28 +26,24 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         
         /// <summary>
         /// 包年包月参考价格，单位-分
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrepaidPrice")]
         public ulong? PrepaidPrice{ get; set; }
 
         /// <summary>
         /// 包年包月价格单位，M-月
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrepaidPriceUnit")]
         public string PrepaidPriceUnit{ get; set; }
 
         /// <summary>
         /// 按量付费价格，单位-分
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PostpaidPrice")]
         public ulong? PostpaidPrice{ get; set; }
 
         /// <summary>
         /// 按量付费价格单位，H-小时
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PostpaidPriceUnit")]
         public string PostpaidPriceUnit{ get; set; }

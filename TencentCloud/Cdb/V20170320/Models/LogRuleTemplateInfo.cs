@@ -26,28 +26,24 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// 模板ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleTemplateId")]
         public string RuleTemplateId{ get; set; }
 
         /// <summary>
         /// 规则模板名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleTemplateName")]
         public string RuleTemplateName{ get; set; }
 
         /// <summary>
         /// 告警等级。1-低风险，2-中风险，3-高风险。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlarmLevel")]
         public string AlarmLevel{ get; set; }
 
         /// <summary>
         /// 规则模板变更状态：0-未变更；1-已变更；2-已删除
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleTemplateStatus")]
         public long? RuleTemplateStatus{ get; set; }

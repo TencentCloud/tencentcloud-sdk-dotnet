@@ -54,6 +54,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("DeploySecurityGroupIds")]
         public string[] DeploySecurityGroupIds{ get; set; }
 
+        /// <summary>
+        /// 部署网络的附加参数，用于指定minios类型、bios引导模式等
+        /// </summary>
+        [JsonProperty("ChcDeployExtraConfig")]
+        public ChcDeployExtraConfig ChcDeployExtraConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArraySimple(map, prefix + "BmcSecurityGroupIds.", this.BmcSecurityGroupIds);
             this.SetParamObj(map, prefix + "DeployVirtualPrivateCloud.", this.DeployVirtualPrivateCloud);
             this.SetParamArraySimple(map, prefix + "DeploySecurityGroupIds.", this.DeploySecurityGroupIds);
+            this.SetParamObj(map, prefix + "ChcDeployExtraConfig.", this.ChcDeployExtraConfig);
         }
     }
 }

@@ -382,6 +382,19 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("AccountType")]
         public long? AccountType{ get; set; }
 
+        /// <summary>
+        /// 监控模式 0: 老监控 1：新监控
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MonitorMode")]
+        public long? MonitorMode{ get; set; }
+
+        /// <summary>
+        /// cn节点信息
+        /// </summary>
+        [JsonProperty("CNSummary")]
+        public NodesSummary CNSummary{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -438,6 +451,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamObj(map, prefix + "Details.", this.Details);
             this.SetParamSimple(map, prefix + "EnableDlc", this.EnableDlc);
             this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
+            this.SetParamSimple(map, prefix + "MonitorMode", this.MonitorMode);
+            this.SetParamObj(map, prefix + "CNSummary.", this.CNSummary);
         }
     }
 }

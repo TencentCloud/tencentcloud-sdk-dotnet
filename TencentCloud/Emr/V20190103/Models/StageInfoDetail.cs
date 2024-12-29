@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 步骤id
+        /// 步骤
         /// </summary>
         [JsonProperty("Stage")]
         public string Stage{ get; set; }

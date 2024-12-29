@@ -57,77 +57,66 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// <summary>
         /// 权重分配模式；
         /// 系统自动分配："system"， 自定义："custom"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WeightMode")]
         public string WeightMode{ get; set; }
 
         /// <summary>
         /// 是否开启延迟剔除，取值："true" | "false"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsKickOut")]
         public bool? IsKickOut{ get; set; }
 
         /// <summary>
         /// 最小保留数量，最小取值：0
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinCount")]
         public ulong? MinCount{ get; set; }
 
         /// <summary>
         /// 延迟剔除阈值，最小取值：0
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxDelay")]
         public ulong? MaxDelay{ get; set; }
 
         /// <summary>
         /// 是否自动添加RO，取值："true" | "false"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoAddRo")]
         public bool? AutoAddRo{ get; set; }
 
         /// <summary>
         /// 是否是只读，取值："true" | "false"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReadOnly")]
         public bool? ReadOnly{ get; set; }
 
         /// <summary>
         /// 是否开启事务分离
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TransSplit")]
         public bool? TransSplit{ get; set; }
 
         /// <summary>
         /// 是否开启故障转移
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailOver")]
         public bool? FailOver{ get; set; }
 
         /// <summary>
         /// 是否开启连接池
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConnectionPool")]
         public bool? ConnectionPool{ get; set; }
 
         /// <summary>
         /// 描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
         /// 实例读权重分配
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyAllocation")]
         public ProxyAllocation[] ProxyAllocation{ get; set; }

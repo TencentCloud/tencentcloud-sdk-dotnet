@@ -92,35 +92,30 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 私有网络 ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
         /// 子网 ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
         /// 只读组所在的地域。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoGroupRegion")]
         public string RoGroupRegion{ get; set; }
 
         /// <summary>
         /// 只读组所在的可用区。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoGroupZone")]
         public string RoGroupZone{ get; set; }
 
         /// <summary>
         /// 延迟复制时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DelayReplicationTime")]
         public long? DelayReplicationTime{ get; set; }

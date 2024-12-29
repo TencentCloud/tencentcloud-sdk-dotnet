@@ -168,6 +168,18 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("AiQualityControl")]
         public ulong? AiQualityControl{ get; set; }
 
+        /// <summary>
+        /// 导播台监播对应的导播台场次id
+        /// </summary>
+        [JsonProperty("CasterId")]
+        public string CasterId{ get; set; }
+
+        /// <summary>
+        /// 拉流转推监播对应的拉流转推任务id
+        /// </summary>
+        [JsonProperty("PullPushTaskId")]
+        public string PullPushTaskId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -194,6 +206,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "AllowMonitorReport", this.AllowMonitorReport);
             this.SetParamSimple(map, prefix + "AiFormatDiagnose", this.AiFormatDiagnose);
             this.SetParamSimple(map, prefix + "AiQualityControl", this.AiQualityControl);
+            this.SetParamSimple(map, prefix + "CasterId", this.CasterId);
+            this.SetParamSimple(map, prefix + "PullPushTaskId", this.PullPushTaskId);
         }
     }
 }

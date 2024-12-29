@@ -26,14 +26,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// 从库复制方式，可能的返回值：aysnc-异步，semisync-半同步
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReplicationMode")]
         public string ReplicationMode{ get; set; }
 
         /// <summary>
         /// 从库可用区的正式名称，如ap-shanghai-1
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

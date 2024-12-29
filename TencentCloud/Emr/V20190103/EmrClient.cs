@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1152";
+       private const string sdkVersion = "SDK_NET_3.0.1153";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,27 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 增加当前集群的节点规格配置
+        /// </summary>
+        /// <param name="req"><see cref="AddNodeResourceConfigRequest"/></param>
+        /// <returns><see cref="AddNodeResourceConfigResponse"/></returns>
+        public Task<AddNodeResourceConfigResponse> AddNodeResourceConfig(AddNodeResourceConfigRequest req)
+        {
+            return InternalRequestAsync<AddNodeResourceConfigResponse>(req, "AddNodeResourceConfig");
+        }
+
+        /// <summary>
+        /// 增加当前集群的节点规格配置
+        /// </summary>
+        /// <param name="req"><see cref="AddNodeResourceConfigRequest"/></param>
+        /// <returns><see cref="AddNodeResourceConfigResponse"/></returns>
+        public AddNodeResourceConfigResponse AddNodeResourceConfigSync(AddNodeResourceConfigRequest req)
+        {
+            return InternalRequestAsync<AddNodeResourceConfigResponse>(req, "AddNodeResourceConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口支持安装了OpenLdap组件的集群。
         /// 新增用户列表（用户管理）。
         /// </summary>
@@ -94,6 +115,27 @@ namespace TencentCloud.Emr.V20190103
         public AddUsersForUserManagerResponse AddUsersForUserManagerSync(AddUsersForUserManagerRequest req)
         {
             return InternalRequestAsync<AddUsersForUserManagerResponse>(req, "AddUsersForUserManager")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 云盘挂载
+        /// </summary>
+        /// <param name="req"><see cref="AttachDisksRequest"/></param>
+        /// <returns><see cref="AttachDisksResponse"/></returns>
+        public Task<AttachDisksResponse> AttachDisks(AttachDisksRequest req)
+        {
+            return InternalRequestAsync<AttachDisksResponse>(req, "AttachDisks");
+        }
+
+        /// <summary>
+        /// 云盘挂载
+        /// </summary>
+        /// <param name="req"><see cref="AttachDisksRequest"/></param>
+        /// <returns><see cref="AttachDisksResponse"/></returns>
+        public AttachDisksResponse AttachDisksSync(AttachDisksRequest req)
+        {
+            return InternalRequestAsync<AttachDisksResponse>(req, "AttachDisks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -203,6 +245,27 @@ namespace TencentCloud.Emr.V20190103
         public DeleteAutoScaleStrategyResponse DeleteAutoScaleStrategySync(DeleteAutoScaleStrategyRequest req)
         {
             return InternalRequestAsync<DeleteAutoScaleStrategyResponse>(req, "DeleteAutoScaleStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除当前集群的节点规格配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNodeResourceConfigRequest"/></param>
+        /// <returns><see cref="DeleteNodeResourceConfigResponse"/></returns>
+        public Task<DeleteNodeResourceConfigResponse> DeleteNodeResourceConfig(DeleteNodeResourceConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteNodeResourceConfigResponse>(req, "DeleteNodeResourceConfig");
+        }
+
+        /// <summary>
+        /// 删除当前集群的节点规格配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNodeResourceConfigRequest"/></param>
+        /// <returns><see cref="DeleteNodeResourceConfigResponse"/></returns>
+        public DeleteNodeResourceConfigResponse DeleteNodeResourceConfigSync(DeleteNodeResourceConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteNodeResourceConfigResponse>(req, "DeleteNodeResourceConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -648,6 +711,48 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 查询节点数据盘信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNodeDataDisksRequest"/></param>
+        /// <returns><see cref="DescribeNodeDataDisksResponse"/></returns>
+        public Task<DescribeNodeDataDisksResponse> DescribeNodeDataDisks(DescribeNodeDataDisksRequest req)
+        {
+            return InternalRequestAsync<DescribeNodeDataDisksResponse>(req, "DescribeNodeDataDisks");
+        }
+
+        /// <summary>
+        /// 查询节点数据盘信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNodeDataDisksRequest"/></param>
+        /// <returns><see cref="DescribeNodeDataDisksResponse"/></returns>
+        public DescribeNodeDataDisksResponse DescribeNodeDataDisksSync(DescribeNodeDataDisksRequest req)
+        {
+            return InternalRequestAsync<DescribeNodeDataDisksResponse>(req, "DescribeNodeDataDisks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 快速获取当前集群的节点规格配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNodeResourceConfigFastRequest"/></param>
+        /// <returns><see cref="DescribeNodeResourceConfigFastResponse"/></returns>
+        public Task<DescribeNodeResourceConfigFastResponse> DescribeNodeResourceConfigFast(DescribeNodeResourceConfigFastRequest req)
+        {
+            return InternalRequestAsync<DescribeNodeResourceConfigFastResponse>(req, "DescribeNodeResourceConfigFast");
+        }
+
+        /// <summary>
+        /// 快速获取当前集群的节点规格配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNodeResourceConfigFastRequest"/></param>
+        /// <returns><see cref="DescribeNodeResourceConfigFastResponse"/></returns>
+        public DescribeNodeResourceConfigFastResponse DescribeNodeResourceConfigFastSync(DescribeNodeResourceConfigFastRequest req)
+        {
+            return InternalRequestAsync<DescribeNodeResourceConfigFastResponse>(req, "DescribeNodeResourceConfigFast")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询YARN资源调度数据信息。已废弃，请使用`DescribeYarnQueue`去查询队列信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceScheduleRequest"/></param>
@@ -1072,6 +1177,27 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 修改集群名称
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceBasicRequest"/></param>
+        /// <returns><see cref="ModifyInstanceBasicResponse"/></returns>
+        public Task<ModifyInstanceBasicResponse> ModifyInstanceBasic(ModifyInstanceBasicRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceBasicResponse>(req, "ModifyInstanceBasic");
+        }
+
+        /// <summary>
+        /// 修改集群名称
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceBasicRequest"/></param>
+        /// <returns><see cref="ModifyInstanceBasicResponse"/></returns>
+        public ModifyInstanceBasicResponse ModifyInstanceBasicSync(ModifyInstanceBasicRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceBasicResponse>(req, "ModifyInstanceBasic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 调整Pod数量
         /// </summary>
         /// <param name="req"><see cref="ModifyPodNumRequest"/></param>
@@ -1089,6 +1215,27 @@ namespace TencentCloud.Emr.V20190103
         public ModifyPodNumResponse ModifyPodNumSync(ModifyPodNumRequest req)
         {
             return InternalRequestAsync<ModifyPodNumResponse>(req, "ModifyPodNum")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 变配实例
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourceRequest"/></param>
+        /// <returns><see cref="ModifyResourceResponse"/></returns>
+        public Task<ModifyResourceResponse> ModifyResource(ModifyResourceRequest req)
+        {
+            return InternalRequestAsync<ModifyResourceResponse>(req, "ModifyResource");
+        }
+
+        /// <summary>
+        /// 变配实例
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourceRequest"/></param>
+        /// <returns><see cref="ModifyResourceResponse"/></returns>
+        public ModifyResourceResponse ModifyResourceSync(ModifyResourceRequest req)
+        {
+            return InternalRequestAsync<ModifyResourceResponse>(req, "ModifyResource")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1286,6 +1433,27 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 云盘扩容
+        /// </summary>
+        /// <param name="req"><see cref="ResizeDataDisksRequest"/></param>
+        /// <returns><see cref="ResizeDataDisksResponse"/></returns>
+        public Task<ResizeDataDisksResponse> ResizeDataDisks(ResizeDataDisksRequest req)
+        {
+            return InternalRequestAsync<ResizeDataDisksResponse>(req, "ResizeDataDisks");
+        }
+
+        /// <summary>
+        /// 云盘扩容
+        /// </summary>
+        /// <param name="req"><see cref="ResizeDataDisksRequest"/></param>
+        /// <returns><see cref="ResizeDataDisksResponse"/></returns>
+        public ResizeDataDisksResponse ResizeDataDisksSync(ResizeDataDisksRequest req)
+        {
+            return InternalRequestAsync<ResizeDataDisksResponse>(req, "ResizeDataDisks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建流程作业
         /// </summary>
         /// <param name="req"><see cref="RunJobFlowRequest"/></param>
@@ -1345,6 +1513,27 @@ namespace TencentCloud.Emr.V20190103
         public ScaleOutInstanceResponse ScaleOutInstanceSync(ScaleOutInstanceRequest req)
         {
             return InternalRequestAsync<ScaleOutInstanceResponse>(req, "ScaleOutInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 设置当前集群的某个节点规格配置为默认或取消默认
+        /// </summary>
+        /// <param name="req"><see cref="SetNodeResourceConfigDefaultRequest"/></param>
+        /// <returns><see cref="SetNodeResourceConfigDefaultResponse"/></returns>
+        public Task<SetNodeResourceConfigDefaultResponse> SetNodeResourceConfigDefault(SetNodeResourceConfigDefaultRequest req)
+        {
+            return InternalRequestAsync<SetNodeResourceConfigDefaultResponse>(req, "SetNodeResourceConfigDefault");
+        }
+
+        /// <summary>
+        /// 设置当前集群的某个节点规格配置为默认或取消默认
+        /// </summary>
+        /// <param name="req"><see cref="SetNodeResourceConfigDefaultRequest"/></param>
+        /// <returns><see cref="SetNodeResourceConfigDefaultResponse"/></returns>
+        public SetNodeResourceConfigDefaultResponse SetNodeResourceConfigDefaultSync(SetNodeResourceConfigDefaultRequest req)
+        {
+            return InternalRequestAsync<SetNodeResourceConfigDefaultResponse>(req, "SetNodeResourceConfigDefault")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

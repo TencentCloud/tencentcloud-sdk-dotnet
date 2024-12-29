@@ -113,7 +113,6 @@ namespace TencentCloud.Oceanus.V20190422.Models
 
         /// <summary>
         /// 作业运行状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsJobRun")]
         public long? IsJobRun{ get; set; }
@@ -139,6 +138,48 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("RefJobStatusCountSet")]
         public RefJobStatusCountItem[] RefJobStatusCountSet{ get; set; }
 
+        /// <summary>
+        /// 连接器名称
+        /// </summary>
+        [JsonProperty("Connector")]
+        public string Connector{ get; set; }
+
+        /// <summary>
+        /// 连接器版本
+        /// </summary>
+        [JsonProperty("ConnectorVersion")]
+        public string ConnectorVersion{ get; set; }
+
+        /// <summary>
+        /// 连接方式
+        /// </summary>
+        [JsonProperty("ConnectionMethod")]
+        public string ConnectionMethod{ get; set; }
+
+        /// <summary>
+        /// connector关联的资源id
+        /// </summary>
+        [JsonProperty("RelatedResourceId")]
+        public string RelatedResourceId{ get; set; }
+
+        /// <summary>
+        /// 图标
+        /// </summary>
+        [JsonProperty("Icon")]
+        public string Icon{ get; set; }
+
+        /// <summary>
+        /// 连接器中文名
+        /// </summary>
+        [JsonProperty("ConnectorName")]
+        public string ConnectorName{ get; set; }
+
+        /// <summary>
+        /// 连接器官网链接
+        /// </summary>
+        [JsonProperty("ConnectorUrl")]
+        public string ConnectorUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +204,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
             this.SetParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
             this.SetParamArrayObj(map, prefix + "RefJobStatusCountSet.", this.RefJobStatusCountSet);
+            this.SetParamSimple(map, prefix + "Connector", this.Connector);
+            this.SetParamSimple(map, prefix + "ConnectorVersion", this.ConnectorVersion);
+            this.SetParamSimple(map, prefix + "ConnectionMethod", this.ConnectionMethod);
+            this.SetParamSimple(map, prefix + "RelatedResourceId", this.RelatedResourceId);
+            this.SetParamSimple(map, prefix + "Icon", this.Icon);
+            this.SetParamSimple(map, prefix + "ConnectorName", this.ConnectorName);
+            this.SetParamSimple(map, prefix + "ConnectorUrl", this.ConnectorUrl);
         }
     }
 }

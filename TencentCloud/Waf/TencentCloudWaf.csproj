@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1152</VersionPrefix>
+    <VersionPrefix>3.0.1153</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -81,6 +81,8 @@
     <Compile Include="V20180125\Models\ApiParameterType.cs" />
     <Compile Include="V20180125\Models\ApiPkg.cs" />
     <Compile Include="V20180125\Models\ApiSecKey.cs" />
+    <Compile Include="V20180125\Models\Area.cs" />
+    <Compile Include="V20180125\Models\AreaBanRule.cs" />
     <Compile Include="V20180125\Models\AttackLogInfo.cs" />
     <Compile Include="V20180125\Models\AutoDenyDetail.cs" />
     <Compile Include="V20180125\Models\BatchIpAccessControlData.cs" />
@@ -103,6 +105,8 @@
     <Compile Include="V20180125\Models\CommonRspData.cs" />
     <Compile Include="V20180125\Models\CreateAccessExportRequest.cs" />
     <Compile Include="V20180125\Models\CreateAccessExportResponse.cs" />
+    <Compile Include="V20180125\Models\CreateAreaBanRuleRequest.cs" />
+    <Compile Include="V20180125\Models\CreateAreaBanRuleResponse.cs" />
     <Compile Include="V20180125\Models\CreateDealsGoods.cs" />
     <Compile Include="V20180125\Models\CreateDealsGoodsDetail.cs" />
     <Compile Include="V20180125\Models\CreateDealsRequest.cs" />
@@ -162,6 +166,8 @@
     <Compile Include="V20180125\Models\DescribeAreaBanAreasRequest.cs" />
     <Compile Include="V20180125\Models\DescribeAreaBanAreasResponse.cs" />
     <Compile Include="V20180125\Models\DescribeAreaBanAreasRsp.cs" />
+    <Compile Include="V20180125\Models\DescribeAreaBanRuleRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeAreaBanRuleResponse.cs" />
     <Compile Include="V20180125\Models\DescribeAreaBanSupportAreasRequest.cs" />
     <Compile Include="V20180125\Models\DescribeAreaBanSupportAreasResponse.cs" />
     <Compile Include="V20180125\Models\DescribeAttackOverviewRequest.cs" />
@@ -331,6 +337,8 @@
     <Compile Include="V20180125\Models\ModifyApiSecEventChangeResponse.cs" />
     <Compile Include="V20180125\Models\ModifyAreaBanAreasRequest.cs" />
     <Compile Include="V20180125\Models\ModifyAreaBanAreasResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyAreaBanRuleRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyAreaBanRuleResponse.cs" />
     <Compile Include="V20180125\Models\ModifyAreaBanStatusRequest.cs" />
     <Compile Include="V20180125\Models\ModifyAreaBanStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifyAttackWhiteRuleRequest.cs" />

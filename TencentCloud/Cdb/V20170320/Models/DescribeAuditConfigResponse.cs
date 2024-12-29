@@ -26,7 +26,6 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// 审计日志保存时长。目前支持的值包括：[0，7，30，180，365，1095，1825]。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogExpireDay")]
         public long? LogExpireDay{ get; set; }
@@ -45,7 +44,6 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 审计服务开通时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

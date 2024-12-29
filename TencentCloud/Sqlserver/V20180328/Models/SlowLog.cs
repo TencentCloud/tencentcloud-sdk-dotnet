@@ -68,7 +68,6 @@ namespace TencentCloud.Sqlserver.V20180328.Models
 
         /// <summary>
         /// 状态（1成功 2失败）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

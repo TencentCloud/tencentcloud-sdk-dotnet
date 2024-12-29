@@ -44,7 +44,6 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 只读vip信息。单独开通只读实例访问的只读实例才有该字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoVipInfo")]
         public RoVipInfo RoVipInfo{ get; set; }
@@ -69,7 +68,6 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 备机信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SlaveInfo")]
         public SlaveInfo SlaveInfo{ get; set; }
@@ -100,7 +98,6 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 只读组详细信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoGroups")]
         public RoGroup[] RoGroups{ get; set; }
@@ -149,7 +146,6 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 主实例详细信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MasterInfo")]
         public MasterInfo MasterInfo{ get; set; }
@@ -174,7 +170,6 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 灾备实例详细信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DrInfo")]
         public DrInfo[] DrInfo{ get; set; }
@@ -259,21 +254,18 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 物理机型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceClass")]
         public string DeviceClass{ get; set; }
 
         /// <summary>
         /// 置放群组 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeployGroupId")]
         public string DeployGroupId{ get; set; }
 
         /// <summary>
         /// 可用区 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
@@ -286,21 +278,18 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 标签列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagList")]
         public TagInfoItem[] TagList{ get; set; }
 
         /// <summary>
         /// 引擎类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineType")]
         public string EngineType{ get; set; }
 
         /// <summary>
         /// 最大延迟阈值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxDelayTime")]
         public long? MaxDelayTime{ get; set; }
@@ -313,14 +302,12 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 当前扩容的CPU核心数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpandCpu")]
         public long? ExpandCpu{ get; set; }
 
         /// <summary>
         /// 实例集群版节点信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterInfo")]
         public ClusterInfo[] ClusterInfo{ get; set; }

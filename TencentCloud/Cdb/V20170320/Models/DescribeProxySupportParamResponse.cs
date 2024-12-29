@@ -26,70 +26,60 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// 支持最大代理版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyVersion")]
         public string ProxyVersion{ get; set; }
 
         /// <summary>
         /// 是否支持连接池
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportPool")]
         public bool? SupportPool{ get; set; }
 
         /// <summary>
         /// 连接池最小值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PoolMin")]
         public ulong? PoolMin{ get; set; }
 
         /// <summary>
         /// 连接池最大值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PoolMax")]
         public ulong? PoolMax{ get; set; }
 
         /// <summary>
         /// 是否支持事务拆分
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportTransSplit")]
         public bool? SupportTransSplit{ get; set; }
 
         /// <summary>
         /// 支持连接池的最小代理版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportPoolMinVersion")]
         public string SupportPoolMinVersion{ get; set; }
 
         /// <summary>
         /// 支持事务拆分的最小代理版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportTransSplitMinVersion")]
         public string SupportTransSplitMinVersion{ get; set; }
 
         /// <summary>
         /// 是否支持设置只读
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportReadOnly")]
         public bool? SupportReadOnly{ get; set; }
 
         /// <summary>
         /// 是否自动均衡负载
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportAutoLoadBalance")]
         public bool? SupportAutoLoadBalance{ get; set; }
 
         /// <summary>
         /// 是否支持接入模式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportAccessMode")]
         public bool? SupportAccessMode{ get; set; }

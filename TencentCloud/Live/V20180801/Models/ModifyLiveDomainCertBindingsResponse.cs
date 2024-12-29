@@ -32,7 +32,6 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Errors")]
         public BatchDomainOperateErrors[] Errors{ get; set; }

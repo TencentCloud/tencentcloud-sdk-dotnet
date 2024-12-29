@@ -38,14 +38,12 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 可继续添加域名数量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateLimitCount")]
         public long? CreateLimitCount{ get; set; }
 
         /// <summary>
         /// 启用的播放域名加速区域统计，数组元素分别为：中国大陆（境内），全球地区，国际/港澳台（境外）域名数量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PlayTypeCount")]
         public long?[] PlayTypeCount{ get; set; }

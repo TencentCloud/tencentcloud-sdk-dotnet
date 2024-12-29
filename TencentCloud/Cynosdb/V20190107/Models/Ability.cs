@@ -32,7 +32,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 不支持从可用区的原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NonsupportSlaveZoneReason")]
         public string NonsupportSlaveZoneReason{ get; set; }
@@ -45,35 +44,30 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 不支持RO实例的原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NonsupportRoReason")]
         public string NonsupportRoReason{ get; set; }
 
         /// <summary>
         /// 是否支持手动发起快照备份
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSupportManualSnapshot")]
         public string IsSupportManualSnapshot{ get; set; }
 
         /// <summary>
         /// 是否支持透明数据加密
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSupportTransparentDataEncryption")]
         public string IsSupportTransparentDataEncryption{ get; set; }
 
         /// <summary>
         /// 不支持透明数据加密原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NoSupportTransparentDataEncryptionReason")]
         public string NoSupportTransparentDataEncryptionReason{ get; set; }
 
         /// <summary>
         /// 是否支持手动发起逻辑备份
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSupportManualLogic")]
         public string IsSupportManualLogic{ get; set; }

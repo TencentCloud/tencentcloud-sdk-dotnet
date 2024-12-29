@@ -98,42 +98,36 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 扫描行数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckRows")]
         public long? CheckRows{ get; set; }
 
         /// <summary>
         /// cpu执行时间，微秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CpuTime")]
         public float? CpuTime{ get; set; }
 
         /// <summary>
         /// IO等待时间，微秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IoWaitTime")]
         public ulong? IoWaitTime{ get; set; }
 
         /// <summary>
         /// 锁等待时间，微秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LockWaitTime")]
         public ulong? LockWaitTime{ get; set; }
 
         /// <summary>
         /// 开始时间，与timestamp构成一个精确到纳秒的时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NsTime")]
         public ulong? NsTime{ get; set; }
 
         /// <summary>
         /// 事物持续时间，微秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrxLivingTime")]
         public ulong? TrxLivingTime{ get; set; }

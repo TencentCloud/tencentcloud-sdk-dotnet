@@ -26,14 +26,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// 实例可回档开始时间，时间格式：2016-10-29 01:06:04
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Begin")]
         public string Begin{ get; set; }
 
         /// <summary>
         /// 实例可回档结束时间，时间格式：2016-11-02 11:44:47
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("End")]
         public string End{ get; set; }

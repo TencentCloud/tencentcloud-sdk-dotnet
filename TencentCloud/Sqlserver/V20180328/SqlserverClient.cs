@@ -28,7 +28,7 @@ namespace TencentCloud.Sqlserver.V20180328
 
        private const string endpoint = "sqlserver.tencentcloudapi.com";
        private const string version = "2018-03-28";
-       private const string sdkVersion = "SDK_NET_3.0.1152";
+       private const string sdkVersion = "SDK_NET_3.0.1153";
 
         /// <summary>
         /// Client constructor.
@@ -1440,7 +1440,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口（DescribeInstanceTradeParameter）用于查询实例的计费参数，当前接口默认返回创建实例时需要的计费参数。内部接口用于活动页售卖场景。
+        /// 本接口（DescribeInstanceTradeParameter）用于查询实例的计费参数
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceTradeParameterRequest"/></param>
         /// <returns><see cref="DescribeInstanceTradeParameterResponse"/></returns>
@@ -1450,7 +1450,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口（DescribeInstanceTradeParameter）用于查询实例的计费参数，当前接口默认返回创建实例时需要的计费参数。内部接口用于活动页售卖场景。
+        /// 本接口（DescribeInstanceTradeParameter）用于查询实例的计费参数
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceTradeParameterRequest"/></param>
         /// <returns><see cref="DescribeInstanceTradeParameterResponse"/></returns>

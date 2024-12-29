@@ -50,14 +50,12 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 置放群组亲和性策略，目前仅支持策略1，即在物理机纬度打散实例的分布。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Affinity")]
         public string Affinity{ get; set; }
 
         /// <summary>
         /// 置放群组亲和性策略1中，同台物理机上同个置放群组实例的限制个数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LimitNum")]
         public long? LimitNum{ get; set; }
@@ -70,7 +68,6 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 置放群组物理机型属性。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DevClass")]
         public string DevClass{ get; set; }

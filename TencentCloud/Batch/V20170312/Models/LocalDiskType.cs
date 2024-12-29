@@ -49,7 +49,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public long? MaxSize{ get; set; }
 
         /// <summary>
-        /// 购买时本地盘是否为必选。取值范围：<br><li>REQUIRED：表示必选<br><li>OPTIONAL：表示可选。
+        /// 购买时本地盘是否为必选。取值范围：<br><li>REQUIRED：表示必选</li><li>OPTIONAL：表示可选。</li>
         /// </summary>
         [JsonProperty("Required")]
         public string Required{ get; set; }

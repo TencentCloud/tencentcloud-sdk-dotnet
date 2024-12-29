@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1152";
+       private const string sdkVersion = "SDK_NET_3.0.1153";
 
         /// <summary>
         /// Client constructor.
@@ -6265,6 +6265,27 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（InquiryPriceAllocateAddresses）用于新购弹性公网IP询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceAllocateAddressesRequest"/></param>
+        /// <returns><see cref="InquiryPriceAllocateAddressesResponse"/></returns>
+        public Task<InquiryPriceAllocateAddressesResponse> InquiryPriceAllocateAddresses(InquiryPriceAllocateAddressesRequest req)
+        {
+            return InternalRequestAsync<InquiryPriceAllocateAddressesResponse>(req, "InquiryPriceAllocateAddresses");
+        }
+
+        /// <summary>
+        /// 本接口（InquiryPriceAllocateAddresses）用于新购弹性公网IP询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceAllocateAddressesRequest"/></param>
+        /// <returns><see cref="InquiryPriceAllocateAddressesResponse"/></returns>
+        public InquiryPriceAllocateAddressesResponse InquiryPriceAllocateAddressesSync(InquiryPriceAllocateAddressesRequest req)
+        {
+            return InternalRequestAsync<InquiryPriceAllocateAddressesResponse>(req, "InquiryPriceAllocateAddresses")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（InquiryPriceCreateVpnGateway）用于创建VPN网关询价。
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceCreateVpnGatewayRequest"/></param>
@@ -6282,6 +6303,48 @@ namespace TencentCloud.Vpc.V20170312
         public InquiryPriceCreateVpnGatewayResponse InquiryPriceCreateVpnGatewaySync(InquiryPriceCreateVpnGatewayRequest req)
         {
             return InternalRequestAsync<InquiryPriceCreateVpnGatewayResponse>(req, "InquiryPriceCreateVpnGateway")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// EIP修改带宽询价
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceModifyAddressesBandwidthRequest"/></param>
+        /// <returns><see cref="InquiryPriceModifyAddressesBandwidthResponse"/></returns>
+        public Task<InquiryPriceModifyAddressesBandwidthResponse> InquiryPriceModifyAddressesBandwidth(InquiryPriceModifyAddressesBandwidthRequest req)
+        {
+            return InternalRequestAsync<InquiryPriceModifyAddressesBandwidthResponse>(req, "InquiryPriceModifyAddressesBandwidth");
+        }
+
+        /// <summary>
+        /// EIP修改带宽询价
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceModifyAddressesBandwidthRequest"/></param>
+        /// <returns><see cref="InquiryPriceModifyAddressesBandwidthResponse"/></returns>
+        public InquiryPriceModifyAddressesBandwidthResponse InquiryPriceModifyAddressesBandwidthSync(InquiryPriceModifyAddressesBandwidthRequest req)
+        {
+            return InternalRequestAsync<InquiryPriceModifyAddressesBandwidthResponse>(req, "InquiryPriceModifyAddressesBandwidth")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（InquiryPriceRenewAddresses）用于续费预付费弹性公网IP询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceRenewAddressesRequest"/></param>
+        /// <returns><see cref="InquiryPriceRenewAddressesResponse"/></returns>
+        public Task<InquiryPriceRenewAddressesResponse> InquiryPriceRenewAddresses(InquiryPriceRenewAddressesRequest req)
+        {
+            return InternalRequestAsync<InquiryPriceRenewAddressesResponse>(req, "InquiryPriceRenewAddresses");
+        }
+
+        /// <summary>
+        /// 本接口（InquiryPriceRenewAddresses）用于续费预付费弹性公网IP询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceRenewAddressesRequest"/></param>
+        /// <returns><see cref="InquiryPriceRenewAddressesResponse"/></returns>
+        public InquiryPriceRenewAddressesResponse InquiryPriceRenewAddressesSync(InquiryPriceRenewAddressesRequest req)
+        {
+            return InternalRequestAsync<InquiryPriceRenewAddressesResponse>(req, "InquiryPriceRenewAddresses")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

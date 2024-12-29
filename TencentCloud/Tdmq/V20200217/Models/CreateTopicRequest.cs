@@ -81,6 +81,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("MsgTTL")]
         public ulong? MsgTTL{ get; set; }
 
+        /// <summary>
+        /// 不传默认是原生策略，DefaultPolicy表示当订阅下达到最大未确认消息数 5000 时，服务端将不再向当前订阅下的所有消费者推送消息，DynamicPolicy表示动态调整订阅下的最大未确认消息数，具体配额是在 5000 和消费者数量*20之间取最大值。每个消费者默认最大 unack 消息数为 20，超过该限制时仅影响该消费者，不影响其他消费者。
+        /// </summary>
+        [JsonProperty("UnackPolicy")]
+        public string UnackPolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -95,6 +101,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "TopicType", this.TopicType);
             this.SetParamSimple(map, prefix + "PulsarTopicType", this.PulsarTopicType);
             this.SetParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
+            this.SetParamSimple(map, prefix + "UnackPolicy", this.UnackPolicy);
         }
     }
 }

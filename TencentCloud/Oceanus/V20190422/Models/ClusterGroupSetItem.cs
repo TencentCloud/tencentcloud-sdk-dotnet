@@ -152,6 +152,30 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("BillingResourceMode")]
         public string BillingResourceMode{ get; set; }
 
+        /// <summary>
+        /// TotalCpu
+        /// </summary>
+        [JsonProperty("TotalCpu")]
+        public float? TotalCpu{ get; set; }
+
+        /// <summary>
+        /// TotalMem
+        /// </summary>
+        [JsonProperty("TotalMem")]
+        public float? TotalMem{ get; set; }
+
+        /// <summary>
+        /// RunningCpu
+        /// </summary>
+        [JsonProperty("RunningCpu")]
+        public float? RunningCpu{ get; set; }
+
+        /// <summary>
+        /// RunningMem
+        /// </summary>
+        [JsonProperty("RunningMem")]
+        public float? RunningMem{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -179,6 +203,10 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamObj(map, prefix + "SubEks.", this.SubEks);
             this.SetParamSimple(map, prefix + "BillingResourceMode", this.BillingResourceMode);
+            this.SetParamSimple(map, prefix + "TotalCpu", this.TotalCpu);
+            this.SetParamSimple(map, prefix + "TotalMem", this.TotalMem);
+            this.SetParamSimple(map, prefix + "RunningCpu", this.RunningCpu);
+            this.SetParamSimple(map, prefix + "RunningMem", this.RunningMem);
         }
     }
 }

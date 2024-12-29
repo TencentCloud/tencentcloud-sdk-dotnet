@@ -28,7 +28,7 @@ namespace TencentCloud.Mna.V20210119
 
        private const string endpoint = "mna.tencentcloudapi.com";
        private const string version = "2021-01-19";
-       private const string sdkVersion = "SDK_NET_3.0.1152";
+       private const string sdkVersion = "SDK_NET_3.0.1153";
 
         /// <summary>
         /// Client constructor.
@@ -180,6 +180,8 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 产品下线
+        /// 
         /// 移动网络发起Qos加速过程
         /// </summary>
         /// <param name="req"><see cref="CreateQosRequest"/></param>
@@ -190,6 +192,8 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 产品下线
+        /// 
         /// 移动网络发起Qos加速过程
         /// </summary>
         /// <param name="req"><see cref="CreateQosRequest"/></param>
@@ -264,6 +268,8 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 产品下线
+        /// 
         /// 移动网络停止Qos加速过程
         /// </summary>
         /// <param name="req"><see cref="DeleteQosRequest"/></param>
@@ -274,6 +280,8 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 产品下线
+        /// 
         /// 移动网络停止Qos加速过程
         /// </summary>
         /// <param name="req"><see cref="DeleteQosRequest"/></param>
@@ -285,6 +293,8 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 产品下线
+        /// 
         /// 获取Qos加速状态
         /// </summary>
         /// <param name="req"><see cref="DescribeQosRequest"/></param>
@@ -295,6 +305,8 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 产品下线
+        /// 
         /// 获取Qos加速状态
         /// </summary>
         /// <param name="req"><see cref="DescribeQosRequest"/></param>

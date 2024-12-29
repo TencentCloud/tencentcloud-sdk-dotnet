@@ -342,6 +342,30 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("CrossTenantEniMode")]
         public long? CrossTenantEniMode{ get; set; }
 
+        /// <summary>
+        /// 总的CPU
+        /// </summary>
+        [JsonProperty("TotalCpu")]
+        public float? TotalCpu{ get; set; }
+
+        /// <summary>
+        /// 总的内存
+        /// </summary>
+        [JsonProperty("TotalMem")]
+        public float? TotalMem{ get; set; }
+
+        /// <summary>
+        /// 运行的CPU
+        /// </summary>
+        [JsonProperty("RunningCpu")]
+        public float? RunningCpu{ get; set; }
+
+        /// <summary>
+        /// 运行的内存
+        /// </summary>
+        [JsonProperty("RunningMem")]
+        public float? RunningMem{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -396,6 +420,10 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "BillingResourceMode", this.BillingResourceMode);
             this.SetParamSimple(map, prefix + "MemRatio", this.MemRatio);
             this.SetParamSimple(map, prefix + "CrossTenantEniMode", this.CrossTenantEniMode);
+            this.SetParamSimple(map, prefix + "TotalCpu", this.TotalCpu);
+            this.SetParamSimple(map, prefix + "TotalMem", this.TotalMem);
+            this.SetParamSimple(map, prefix + "RunningCpu", this.RunningCpu);
+            this.SetParamSimple(map, prefix + "RunningMem", this.RunningMem);
         }
     }
 }

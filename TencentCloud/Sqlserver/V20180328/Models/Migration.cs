@@ -32,7 +32,6 @@ namespace TencentCloud.Sqlserver.V20180328.Models
 
         /// <summary>
         /// 备份导入名称，增量导入任务该字段为空
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MigrationName")]
         public string MigrationName{ get; set; }
@@ -117,7 +116,6 @@ namespace TencentCloud.Sqlserver.V20180328.Models
 
         /// <summary>
         /// 是否是最终恢复，全量导入任务该字段为空
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsRecovery")]
         public string IsRecovery{ get; set; }

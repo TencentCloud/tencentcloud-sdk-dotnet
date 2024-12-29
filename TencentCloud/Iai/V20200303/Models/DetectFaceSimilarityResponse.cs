@@ -15,20 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Iai.V20200303.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeIndexListResponse : AbstractModel
+    public class DetectFaceSimilarityResponse : AbstractModel
     {
         
         /// <summary>
-        /// ES 索引信息
+        /// 取值范围 [0.00, 100.00]。
+        /// 推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）。
         /// </summary>
-        [JsonProperty("Data")]
-        public string Data{ get; set; }
+        [JsonProperty("Score")]
+        public float? Score{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +43,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Data", this.Data);
+            this.SetParamSimple(map, prefix + "Score", this.Score);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

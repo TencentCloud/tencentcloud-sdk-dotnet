@@ -26,7 +26,6 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// 生成的规则模板ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleTemplateId")]
         public string RuleTemplateId{ get; set; }

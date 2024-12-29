@@ -50,6 +50,12 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("JsonParse")]
         public string JsonParse{ get; set; }
 
+        /// <summary>
+        /// 字段类型 0:str 1:list
+        /// </summary>
+        [JsonProperty("Type")]
+        public long? Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +66,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "Header", this.Header);
             this.SetParamSimple(map, prefix + "Transfer", this.Transfer);
             this.SetParamSimple(map, prefix + "JsonParse", this.JsonParse);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

@@ -55,7 +55,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Order{ get; set; }
 
         /// <summary>
-        /// 目前支持根据ts排序
+        /// 目前支持根据create_time、modify_time、id排序
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }

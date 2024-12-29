@@ -145,7 +145,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，9-自研机房
+        /// 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房
         /// </summary>
         [JsonProperty("Model")]
         public long? Model{ get; set; }
@@ -218,28 +218,24 @@ namespace TencentCloud.Sqlserver.V20180328.Models
 
         /// <summary>
         /// 实例隔离操作
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsolateOperator")]
         public string IsolateOperator{ get; set; }
 
         /// <summary>
         /// 发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubFlag")]
         public string SubFlag{ get; set; }
 
         /// <summary>
         /// 只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ROFlag")]
         public string ROFlag{ get; set; }
 
         /// <summary>
         /// 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HAFlag")]
         public string HAFlag{ get; set; }
@@ -253,14 +249,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
 
         /// <summary>
         /// 备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupModel")]
         public string BackupModel{ get; set; }
 
         /// <summary>
         /// 实例备份信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceNote")]
         public string InstanceNote{ get; set; }
@@ -284,7 +278,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? BackupSaveDays{ get; set; }
 
         /// <summary>
-        /// 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
+        /// 实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -338,25 +332,28 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public bool? IsDrZone{ get; set; }
 
         /// <summary>
-        /// 备可用区信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 双节点实例备可用区信息
         /// </summary>
         [JsonProperty("SlaveZones")]
         public SlaveZones SlaveZones{ get; set; }
 
         /// <summary>
         /// 架构标识，SINGLE-单节点 DOUBLE-双节点
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Architecture")]
         public string Architecture{ get; set; }
 
         /// <summary>
         /// 类型标识，EXCLUSIVE-独享型，SHARED-共享型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Style")]
         public string Style{ get; set; }
+
+        /// <summary>
+        /// 多节点实例备可用区信息
+        /// </summary>
+        [JsonProperty("MultiSlaveZones")]
+        public SlaveZones[] MultiSlaveZones{ get; set; }
 
 
         /// <summary>
@@ -418,6 +415,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamObj(map, prefix + "SlaveZones.", this.SlaveZones);
             this.SetParamSimple(map, prefix + "Architecture", this.Architecture);
             this.SetParamSimple(map, prefix + "Style", this.Style);
+            this.SetParamArrayObj(map, prefix + "MultiSlaveZones.", this.MultiSlaveZones);
         }
     }
 }

@@ -90,6 +90,18 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("ExcludedProducts")]
         public ExcludedProducts[] ExcludedProducts{ get; set; }
 
+        /// <summary>
+        /// 使用说明/批次备注
+        /// </summary>
+        [JsonProperty("PolicyRemark")]
+        public string PolicyRemark{ get; set; }
+
+        /// <summary>
+        /// 发券时间
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +119,8 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamObj(map, prefix + "ApplicableProducts.", this.ApplicableProducts);
             this.SetParamArrayObj(map, prefix + "ExcludedProducts.", this.ExcludedProducts);
+            this.SetParamSimple(map, prefix + "PolicyRemark", this.PolicyRemark);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

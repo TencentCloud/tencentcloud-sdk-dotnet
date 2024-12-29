@@ -28,7 +28,7 @@ namespace TencentCloud.Cmq.V20190304
 
        private const string endpoint = "cmq.tencentcloudapi.com";
        private const string version = "2019-03-04";
-       private const string sdkVersion = "SDK_NET_3.0.1152";
+       private const string sdkVersion = "SDK_NET_3.0.1153";
 
         /// <summary>
         /// Client constructor.
@@ -54,6 +54,8 @@ namespace TencentCloud.Cmq.V20190304
         }
 
         /// <summary>
+        /// 下线老cmq云API 3.0 无调用量接口
+        /// 
         /// 清除queue中的所有消息
         /// </summary>
         /// <param name="req"><see cref="ClearQueueRequest"/></param>
@@ -64,6 +66,8 @@ namespace TencentCloud.Cmq.V20190304
         }
 
         /// <summary>
+        /// 下线老cmq云API 3.0 无调用量接口
+        /// 
         /// 清除queue中的所有消息
         /// </summary>
         /// <param name="req"><see cref="ClearQueueRequest"/></param>
@@ -75,6 +79,8 @@ namespace TencentCloud.Cmq.V20190304
         }
 
         /// <summary>
+        /// 下线老cmq云API 3.0 无调用量接口
+        /// 
         /// 清空订阅者消息标签
         /// </summary>
         /// <param name="req"><see cref="ClearSubscriptionFilterTagsRequest"/></param>
@@ -85,6 +91,8 @@ namespace TencentCloud.Cmq.V20190304
         }
 
         /// <summary>
+        /// 下线老cmq云API 3.0 无调用量接口
+        /// 
         /// 清空订阅者消息标签
         /// </summary>
         /// <param name="req"><see cref="ClearSubscriptionFilterTagsRequest"/></param>
@@ -117,6 +125,8 @@ namespace TencentCloud.Cmq.V20190304
         }
 
         /// <summary>
+        /// 下线老cmq云API 3.0 无调用量接口
+        /// 
         /// 创建订阅接口
         /// </summary>
         /// <param name="req"><see cref="CreateSubscribeRequest"/></param>
@@ -127,6 +137,8 @@ namespace TencentCloud.Cmq.V20190304
         }
 
         /// <summary>
+        /// 下线老cmq云API 3.0 无调用量接口
+        /// 
         /// 创建订阅接口
         /// </summary>
         /// <param name="req"><see cref="CreateSubscribeRequest"/></param>
@@ -180,6 +192,8 @@ namespace TencentCloud.Cmq.V20190304
         }
 
         /// <summary>
+        /// 下线老cmq云API 3.0 无调用量接口
+        /// 
         /// 删除订阅
         /// </summary>
         /// <param name="req"><see cref="DeleteSubscribeRequest"/></param>
@@ -190,6 +204,8 @@ namespace TencentCloud.Cmq.V20190304
         }
 
         /// <summary>
+        /// 下线老cmq云API 3.0 无调用量接口
+        /// 
         /// 删除订阅
         /// </summary>
         /// <param name="req"><see cref="DeleteSubscribeRequest"/></param>
@@ -201,6 +217,8 @@ namespace TencentCloud.Cmq.V20190304
         }
 
         /// <summary>
+        /// 下线老cmq云API 3.0 无调用量接口
+        /// 
         /// 删除主题
         /// </summary>
         /// <param name="req"><see cref="DeleteTopicRequest"/></param>
@@ -211,6 +229,8 @@ namespace TencentCloud.Cmq.V20190304
         }
 
         /// <summary>
+        /// 下线老cmq云API 3.0 无调用量接口
+        /// 
         /// 删除主题
         /// </summary>
         /// <param name="req"><see cref="DeleteTopicRequest"/></param>
@@ -222,6 +242,8 @@ namespace TencentCloud.Cmq.V20190304
         }
 
         /// <summary>
+        /// 下线老cmq云API 3.0 无调用量接口
+        /// 
         /// 枚举死信队列源队列
         /// </summary>
         /// <param name="req"><see cref="DescribeDeadLetterSourceQueuesRequest"/></param>
@@ -232,6 +254,8 @@ namespace TencentCloud.Cmq.V20190304
         }
 
         /// <summary>
+        /// 下线老cmq云API 3.0 无调用量接口
+        /// 
         /// 枚举死信队列源队列
         /// </summary>
         /// <param name="req"><see cref="DescribeDeadLetterSourceQueuesRequest"/></param>
@@ -327,6 +351,8 @@ namespace TencentCloud.Cmq.V20190304
         }
 
         /// <summary>
+        /// 下线老cmq云API 3.0 无调用量接口
+        /// 
         /// 修改订阅属性
         /// </summary>
         /// <param name="req"><see cref="ModifySubscriptionAttributeRequest"/></param>
@@ -337,6 +363,8 @@ namespace TencentCloud.Cmq.V20190304
         }
 
         /// <summary>
+        /// 下线老cmq云API 3.0 无调用量接口
+        /// 
         /// 修改订阅属性
         /// </summary>
         /// <param name="req"><see cref="ModifySubscriptionAttributeRequest"/></param>
@@ -348,6 +376,8 @@ namespace TencentCloud.Cmq.V20190304
         }
 
         /// <summary>
+        /// 下线老cmq云API 3.0 无调用量接口
+        /// 
         /// 修改主题属性
         /// </summary>
         /// <param name="req"><see cref="ModifyTopicAttributeRequest"/></param>
@@ -358,6 +388,8 @@ namespace TencentCloud.Cmq.V20190304
         }
 
         /// <summary>
+        /// 下线老cmq云API 3.0 无调用量接口
+        /// 
         /// 修改主题属性
         /// </summary>
         /// <param name="req"><see cref="ModifyTopicAttributeRequest"/></param>
@@ -369,6 +401,8 @@ namespace TencentCloud.Cmq.V20190304
         }
 
         /// <summary>
+        /// 下线老cmq云API 3.0 无调用量接口
+        /// 
         /// 回溯队列
         /// </summary>
         /// <param name="req"><see cref="RewindQueueRequest"/></param>
@@ -379,6 +413,8 @@ namespace TencentCloud.Cmq.V20190304
         }
 
         /// <summary>
+        /// 下线老cmq云API 3.0 无调用量接口
+        /// 
         /// 回溯队列
         /// </summary>
         /// <param name="req"><see cref="RewindQueueRequest"/></param>
@@ -390,6 +426,8 @@ namespace TencentCloud.Cmq.V20190304
         }
 
         /// <summary>
+        /// 下线老cmq云API 3.0 无调用量接口
+        /// 
         /// 解绑死信队列
         /// </summary>
         /// <param name="req"><see cref="UnbindDeadLetterRequest"/></param>
@@ -400,6 +438,8 @@ namespace TencentCloud.Cmq.V20190304
         }
 
         /// <summary>
+        /// 下线老cmq云API 3.0 无调用量接口
+        /// 
         /// 解绑死信队列
         /// </summary>
         /// <param name="req"><see cref="UnbindDeadLetterRequest"/></param>

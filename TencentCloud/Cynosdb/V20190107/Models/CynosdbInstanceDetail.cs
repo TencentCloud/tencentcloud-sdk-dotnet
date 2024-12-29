@@ -232,7 +232,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// Db类型:<li>NORMAL</li><li>SERVERLESS</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DbMode")]
         public string DbMode{ get; set; }

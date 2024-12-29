@@ -36,6 +36,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
+        /// <summary>
+        /// 加密密钥版本号，0表示不使用加密
+        /// </summary>
+        [JsonProperty("EncryptedVersion")]
+        public long? EncryptedVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         {
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "Password", this.Password);
+            this.SetParamSimple(map, prefix + "EncryptedVersion", this.EncryptedVersion);
         }
     }
 }

@@ -47,21 +47,18 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 文件大小，单位为 KB。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileSize")]
         public long? FileSize{ get; set; }
 
         /// <summary>
         /// 审计日志下载地址。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DownloadUrl")]
         public string DownloadUrl{ get; set; }
 
         /// <summary>
         /// 错误信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrMsg")]
         public string ErrMsg{ get; set; }

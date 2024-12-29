@@ -38,7 +38,6 @@ namespace TencentCloud.Sqlserver.V20180328.Models
 
         /// <summary>
         /// 旧IP保留时间小时数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OldIpRetainTime")]
         public long? OldIpRetainTime{ get; set; }

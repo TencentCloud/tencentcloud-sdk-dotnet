@@ -141,7 +141,6 @@ namespace TencentCloud.Sqlserver.V20180328.Models
 
         /// <summary>
         /// 是否全文启用 0：否 1：是
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsFullTextEnabled")]
         public string IsFullTextEnabled{ get; set; }

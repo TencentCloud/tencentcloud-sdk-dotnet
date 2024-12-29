@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 实例 ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -71,6 +71,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 分页偏移量。
+        /// 说明：Limit 和 Offset 的取值之和需小于等于65536。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

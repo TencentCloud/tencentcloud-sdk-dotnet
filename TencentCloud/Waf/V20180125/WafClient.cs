@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1152";
+       private const string sdkVersion = "SDK_NET_3.0.1153";
 
         /// <summary>
         /// Client constructor.
@@ -260,6 +260,27 @@ namespace TencentCloud.Waf.V20180125
         public CreateAccessExportResponse CreateAccessExportSync(CreateAccessExportRequest req)
         {
             return InternalRequestAsync<CreateAccessExportResponse>(req, "CreateAccessExport")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加（编辑）地域封禁中的地域信息
+        /// </summary>
+        /// <param name="req"><see cref="CreateAreaBanRuleRequest"/></param>
+        /// <returns><see cref="CreateAreaBanRuleResponse"/></returns>
+        public Task<CreateAreaBanRuleResponse> CreateAreaBanRule(CreateAreaBanRuleRequest req)
+        {
+            return InternalRequestAsync<CreateAreaBanRuleResponse>(req, "CreateAreaBanRule");
+        }
+
+        /// <summary>
+        /// 添加（编辑）地域封禁中的地域信息
+        /// </summary>
+        /// <param name="req"><see cref="CreateAreaBanRuleRequest"/></param>
+        /// <returns><see cref="CreateAreaBanRuleResponse"/></returns>
+        public CreateAreaBanRuleResponse CreateAreaBanRuleSync(CreateAreaBanRuleRequest req)
+        {
+            return InternalRequestAsync<CreateAreaBanRuleResponse>(req, "CreateAreaBanRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -806,6 +827,27 @@ namespace TencentCloud.Waf.V20180125
         public DescribeAreaBanAreasResponse DescribeAreaBanAreasSync(DescribeAreaBanAreasRequest req)
         {
             return InternalRequestAsync<DescribeAreaBanAreasResponse>(req, "DescribeAreaBanAreas")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取地域封禁规则配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAreaBanRuleRequest"/></param>
+        /// <returns><see cref="DescribeAreaBanRuleResponse"/></returns>
+        public Task<DescribeAreaBanRuleResponse> DescribeAreaBanRule(DescribeAreaBanRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeAreaBanRuleResponse>(req, "DescribeAreaBanRule");
+        }
+
+        /// <summary>
+        /// 获取地域封禁规则配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAreaBanRuleRequest"/></param>
+        /// <returns><see cref="DescribeAreaBanRuleResponse"/></returns>
+        public DescribeAreaBanRuleResponse DescribeAreaBanRuleSync(DescribeAreaBanRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeAreaBanRuleResponse>(req, "DescribeAreaBanRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2238,6 +2280,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 添加（编辑）地域封禁中的地域信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAreaBanRuleRequest"/></param>
+        /// <returns><see cref="ModifyAreaBanRuleResponse"/></returns>
+        public Task<ModifyAreaBanRuleResponse> ModifyAreaBanRule(ModifyAreaBanRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyAreaBanRuleResponse>(req, "ModifyAreaBanRule");
+        }
+
+        /// <summary>
+        /// 添加（编辑）地域封禁中的地域信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAreaBanRuleRequest"/></param>
+        /// <returns><see cref="ModifyAreaBanRuleResponse"/></returns>
+        public ModifyAreaBanRuleResponse ModifyAreaBanRuleSync(ModifyAreaBanRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyAreaBanRuleResponse>(req, "ModifyAreaBanRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改防护域名的地域封禁状态
         /// </summary>
         /// <param name="req"><see cref="ModifyAreaBanStatusRequest"/></param>
@@ -2723,7 +2786,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 获取基础安全防护（WAF开关）状态
+        /// 开启、关闭WAF开关
         /// </summary>
         /// <param name="req"><see cref="ModifyProtectionStatusRequest"/></param>
         /// <returns><see cref="ModifyProtectionStatusResponse"/></returns>
@@ -2733,7 +2796,7 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 获取基础安全防护（WAF开关）状态
+        /// 开启、关闭WAF开关
         /// </summary>
         /// <param name="req"><see cref="ModifyProtectionStatusRequest"/></param>
         /// <returns><see cref="ModifyProtectionStatusResponse"/></returns>

@@ -38,84 +38,72 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 任务状态。0-无任务；1-审计开启中，2-审计关闭中。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuditTask")]
         public ulong? AuditTask{ get; set; }
 
         /// <summary>
         /// 日志保留时长。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogExpireDay")]
         public ulong? LogExpireDay{ get; set; }
 
         /// <summary>
         /// 高频存储时长。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HighLogExpireDay")]
         public ulong? HighLogExpireDay{ get; set; }
 
         /// <summary>
         /// 低频存储时长。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LowLogExpireDay")]
         public ulong? LowLogExpireDay{ get; set; }
 
         /// <summary>
         /// 日志存储量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillingAmount")]
         public float? BillingAmount{ get; set; }
 
         /// <summary>
         /// 高频存储量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HighRealStorage")]
         public float? HighRealStorage{ get; set; }
 
         /// <summary>
         /// 低频存储量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LowRealStorage")]
         public float? LowRealStorage{ get; set; }
 
         /// <summary>
         /// 是否为全审计。true-表示全审计。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuditAll")]
         public bool? AuditAll{ get; set; }
 
         /// <summary>
         /// 审计开通时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateAt")]
         public string CreateAt{ get; set; }
 
         /// <summary>
         /// 实例相关信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceInfo")]
         public AuditInstanceInfo InstanceInfo{ get; set; }
 
         /// <summary>
         /// 总存储量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealStorage")]
         public float? RealStorage{ get; set; }
 
         /// <summary>
         /// 是否包含审计策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OldRule")]
         public bool? OldRule{ get; set; }

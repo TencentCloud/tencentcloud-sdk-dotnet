@@ -98,7 +98,6 @@ namespace TencentCloud.Sqlserver.V20180328.Models
 
         /// <summary>
         /// 此规格对应的按量计费Pid列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PostPid")]
         public long?[] PostPid{ get; set; }

@@ -26,14 +26,12 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// 账号下的直播流监播任务个数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalNum")]
         public ulong? TotalNum{ get; set; }
 
         /// <summary>
         /// 直播流监播任务列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LiveStreamMonitors")]
         public LiveStreamMonitorInfo[] LiveStreamMonitors{ get; set; }

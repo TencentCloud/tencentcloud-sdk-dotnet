@@ -87,6 +87,18 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("Properties")]
         public Property[] Properties{ get; set; }
 
+        /// <summary>
+        /// Cpu
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public float? Cpu{ get; set; }
+
+        /// <summary>
+        /// Mem
+        /// </summary>
+        [JsonProperty("Mem")]
+        public float? Mem{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +114,8 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamArrayObj(map, prefix + "Properties.", this.Properties);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "Mem", this.Mem);
         }
     }
 }

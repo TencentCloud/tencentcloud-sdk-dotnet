@@ -15,21 +15,15 @@
  * under the License.
  */
 
-namespace TencentCloud.Cvm.V20170312.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeReservedInstancesConfigInfosResponse : AbstractModel
+    public class AddNodeResourceConfigResponse : AbstractModel
     {
         
-        /// <summary>
-        /// 预留实例静态配置信息列表。
-        /// </summary>
-        [JsonProperty("ReservedInstanceConfigInfos")]
-        public ReservedInstanceConfigInfoItem[] ReservedInstanceConfigInfos{ get; set; }
-
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -42,7 +36,6 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "ReservedInstanceConfigInfos.", this.ReservedInstanceConfigInfos);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

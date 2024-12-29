@@ -198,6 +198,30 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("FlinkVersion")]
         public string FlinkVersion{ get; set; }
 
+        /// <summary>
+        /// JobManager cpu
+        /// </summary>
+        [JsonProperty("JobManagerCpu")]
+        public float? JobManagerCpu{ get; set; }
+
+        /// <summary>
+        /// JobManager 内存
+        /// </summary>
+        [JsonProperty("JobManagerMem")]
+        public float? JobManagerMem{ get; set; }
+
+        /// <summary>
+        /// TaskManager cpu
+        /// </summary>
+        [JsonProperty("TaskManagerCpu")]
+        public float? TaskManagerCpu{ get; set; }
+
+        /// <summary>
+        /// TaskManager 内存
+        /// </summary>
+        [JsonProperty("TaskManagerMem")]
+        public float? TaskManagerMem{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -233,6 +257,10 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "EsServerlessIndex", this.EsServerlessIndex);
             this.SetParamSimple(map, prefix + "EsServerlessSpace", this.EsServerlessSpace);
             this.SetParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
+            this.SetParamSimple(map, prefix + "JobManagerCpu", this.JobManagerCpu);
+            this.SetParamSimple(map, prefix + "JobManagerMem", this.JobManagerMem);
+            this.SetParamSimple(map, prefix + "TaskManagerCpu", this.TaskManagerCpu);
+            this.SetParamSimple(map, prefix + "TaskManagerMem", this.TaskManagerMem);
         }
     }
 }

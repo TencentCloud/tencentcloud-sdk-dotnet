@@ -32,7 +32,6 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 事件信息。查询不到信息时，Items为null。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Items")]
         public InstEventInfo[] Items{ get; set; }

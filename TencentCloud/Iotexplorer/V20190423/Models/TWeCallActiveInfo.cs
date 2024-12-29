@@ -46,6 +46,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }
 
+        /// <summary>
+        /// 类型
+        /// </summary>
+        [JsonProperty("PkgType")]
+        public long? PkgType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -55,6 +61,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
             this.SetParamSimple(map, prefix + "Sn", this.Sn);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "PkgType", this.PkgType);
         }
     }
 }

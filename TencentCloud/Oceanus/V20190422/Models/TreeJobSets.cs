@@ -59,6 +59,26 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
+        /// <summary>
+        /// 0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
+        /// 
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScalingType")]
+        public long? ScalingType{ get; set; }
+
+        /// <summary>
+        /// RunningCpu
+        /// </summary>
+        [JsonProperty("RunningCpu")]
+        public float? RunningCpu{ get; set; }
+
+        /// <summary>
+        /// RunningMem
+        /// </summary>
+        [JsonProperty("RunningMem")]
+        public float? RunningMem{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +90,9 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "JobType", this.JobType);
             this.SetParamSimple(map, prefix + "RunningCu", this.RunningCu);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ScalingType", this.ScalingType);
+            this.SetParamSimple(map, prefix + "RunningCpu", this.RunningCpu);
+            this.SetParamSimple(map, prefix + "RunningMem", this.RunningMem);
         }
     }
 }

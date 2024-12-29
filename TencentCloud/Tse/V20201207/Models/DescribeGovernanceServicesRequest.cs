@@ -84,6 +84,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("OnlyExistHealthyInstance")]
         public bool? OnlyExistHealthyInstance{ get; set; }
 
+        /// <summary>
+        /// 是否开启同步到全局注册中心	
+        /// </summary>
+        [JsonProperty("SyncToGlobalRegistry")]
+        public string SyncToGlobalRegistry{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "Business", this.Business);
             this.SetParamSimple(map, prefix + "Host", this.Host);
             this.SetParamSimple(map, prefix + "OnlyExistHealthyInstance", this.OnlyExistHealthyInstance);
+            this.SetParamSimple(map, prefix + "SyncToGlobalRegistry", this.SyncToGlobalRegistry);
         }
     }
 }

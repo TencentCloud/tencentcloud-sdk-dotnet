@@ -59,6 +59,18 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// 导播台输入源索引（10000 pvw， 10001 pgm， 其余代表输入下标）
+        /// </summary>
+        [JsonProperty("CasterInputIndex")]
+        public ulong? CasterInputIndex{ get; set; }
+
+        /// <summary>
+        /// 该输入源是否正在监播
+        /// </summary>
+        [JsonProperty("NeedMonitor")]
+        public bool? NeedMonitor{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +82,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "InputApp", this.InputApp);
             this.SetParamSimple(map, prefix + "InputUrl", this.InputUrl);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "CasterInputIndex", this.CasterInputIndex);
+            this.SetParamSimple(map, prefix + "NeedMonitor", this.NeedMonitor);
         }
     }
 }

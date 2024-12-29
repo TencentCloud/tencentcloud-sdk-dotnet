@@ -32,63 +32,54 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 代理版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyVersion")]
         public string ProxyVersion{ get; set; }
 
         /// <summary>
         /// 代理支持升级版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportUpgradeProxyVersion")]
         public string SupportUpgradeProxyVersion{ get; set; }
 
         /// <summary>
         /// 代理状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 代理任务状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskStatus")]
         public string TaskStatus{ get; set; }
 
         /// <summary>
         /// 代理组节点信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyNode")]
         public ProxyNode[] ProxyNode{ get; set; }
 
         /// <summary>
         /// 代理组地址信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyAddress")]
         public ProxyAddress[] ProxyAddress{ get; set; }
 
         /// <summary>
         /// 连接池阈值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConnectionPoolLimit")]
         public ulong? ConnectionPoolLimit{ get; set; }
 
         /// <summary>
         /// 支持创建地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportCreateProxyAddress")]
         public bool? SupportCreateProxyAddress{ get; set; }
 
         /// <summary>
         /// 支持升级代理版本所需的cdb版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportUpgradeProxyMysqlVersion")]
         public string SupportUpgradeProxyMysqlVersion{ get; set; }

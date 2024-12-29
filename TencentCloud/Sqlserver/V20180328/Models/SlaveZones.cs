@@ -36,6 +36,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("SlaveZoneName")]
         public string SlaveZoneName{ get; set; }
 
+        /// <summary>
+        /// 备机资源ID
+        /// </summary>
+        [JsonProperty("DrInstanceId")]
+        public string DrInstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         {
             this.SetParamSimple(map, prefix + "SlaveZone", this.SlaveZone);
             this.SetParamSimple(map, prefix + "SlaveZoneName", this.SlaveZoneName);
+            this.SetParamSimple(map, prefix + "DrInstanceId", this.DrInstanceId);
         }
     }
 }

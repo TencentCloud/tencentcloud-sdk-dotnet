@@ -15,38 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Cvm.V20170312.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ReservedInstanceConfigInfoItem : AbstractModel
+    public class ModifyAreaBanRuleRequest : AbstractModel
     {
         
         /// <summary>
-        /// 实例规格。
+        /// 需要修改的域名
         /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
 
         /// <summary>
-        /// 实例规格名称。
+        /// 需要新增的封禁地域
         /// </summary>
-        [JsonProperty("TypeName")]
-        public string TypeName{ get; set; }
+        [JsonProperty("Areas")]
+        public Area[] Areas{ get; set; }
 
         /// <summary>
-        /// 优先级。
+        /// 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
         /// </summary>
-        [JsonProperty("Order")]
-        public long? Order{ get; set; }
+        [JsonProperty("JobType")]
+        public string JobType{ get; set; }
 
         /// <summary>
-        /// 实例族信息列表。
+        /// 定时任务配置
         /// </summary>
-        [JsonProperty("InstanceFamilies")]
-        public ReservedInstanceFamilyItem[] InstanceFamilies{ get; set; }
+        [JsonProperty("JobDateTime")]
+        public JobDateTime JobDateTime{ get; set; }
+
+        /// <summary>
+        /// 地域信息的语言，支持cn、en，默认为中文cn
+        /// </summary>
+        [JsonProperty("Lang")]
+        public string Lang{ get; set; }
 
 
         /// <summary>
@@ -54,10 +60,11 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamSimple(map, prefix + "TypeName", this.TypeName);
-            this.SetParamSimple(map, prefix + "Order", this.Order);
-            this.SetParamArrayObj(map, prefix + "InstanceFamilies.", this.InstanceFamilies);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamArrayObj(map, prefix + "Areas.", this.Areas);
+            this.SetParamSimple(map, prefix + "JobType", this.JobType);
+            this.SetParamObj(map, prefix + "JobDateTime.", this.JobDateTime);
+            this.SetParamSimple(map, prefix + "Lang", this.Lang);
         }
     }
 }

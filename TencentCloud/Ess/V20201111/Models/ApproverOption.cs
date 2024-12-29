@@ -72,6 +72,17 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("FlowReadLimit")]
         public string FlowReadLimit{ get; set; }
 
+        /// <summary>
+        /// 禁止在签署过程中添加签署日期控件
+        ///  <br/>前置条件：文件发起合同时，指定SignBeanTag=1（可以在签署过程中添加签署控件）：
+        /// <ul>
+        /// <li> 默认值：false，在开启：签署过程中添加签署控件时，添加签署控件会默认自带签署日期控件</li>
+        /// <li> 可选值：true，在开启：签署过程中添加签署控件时，添加签署控件不会自带签署日期控件</li>
+        /// </ul>
+        /// </summary>
+        [JsonProperty("ForbidAddSignDate")]
+        public bool? ForbidAddSignDate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -83,6 +94,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "CanEditApprover", this.CanEditApprover);
             this.SetParamSimple(map, prefix + "FillType", this.FillType);
             this.SetParamSimple(map, prefix + "FlowReadLimit", this.FlowReadLimit);
+            this.SetParamSimple(map, prefix + "ForbidAddSignDate", this.ForbidAddSignDate);
         }
     }
 }

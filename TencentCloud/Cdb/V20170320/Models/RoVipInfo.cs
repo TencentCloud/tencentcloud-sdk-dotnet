@@ -26,35 +26,30 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// 只读vip状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoVipStatus")]
         public long? RoVipStatus{ get; set; }
 
         /// <summary>
         /// 只读vip的子网
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoSubnetId")]
         public long? RoSubnetId{ get; set; }
 
         /// <summary>
         /// 只读vip的私有网络
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoVpcId")]
         public long? RoVpcId{ get; set; }
 
         /// <summary>
         /// 只读vip的端口号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoVport")]
         public long? RoVport{ get; set; }
 
         /// <summary>
         /// 只读vip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoVip")]
         public string RoVip{ get; set; }

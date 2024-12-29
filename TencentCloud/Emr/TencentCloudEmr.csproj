@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1152</VersionPrefix>
+    <VersionPrefix>3.0.1153</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,14 +50,19 @@
     <Compile Include="V20190103\EmrClient.cs" />
     <Compile Include="V20190103\Models\AddMetricScaleStrategyRequest.cs" />
     <Compile Include="V20190103\Models\AddMetricScaleStrategyResponse.cs" />
+    <Compile Include="V20190103\Models\AddNodeResourceConfigRequest.cs" />
+    <Compile Include="V20190103\Models\AddNodeResourceConfigResponse.cs" />
     <Compile Include="V20190103\Models\AddUsersForUserManagerRequest.cs" />
     <Compile Include="V20190103\Models\AddUsersForUserManagerResponse.cs" />
     <Compile Include="V20190103\Models\AllNodeResourceSpec.cs" />
     <Compile Include="V20190103\Models\ApplicationStatics.cs" />
     <Compile Include="V20190103\Models\Arg.cs" />
+    <Compile Include="V20190103\Models\AttachDisksRequest.cs" />
+    <Compile Include="V20190103\Models\AttachDisksResponse.cs" />
     <Compile Include="V20190103\Models\AutoScaleRecord.cs" />
     <Compile Include="V20190103\Models\AutoScaleResourceConf.cs" />
     <Compile Include="V20190103\Models\BootstrapAction.cs" />
+    <Compile Include="V20190103\Models\CBSInstance.cs" />
     <Compile Include="V20190103\Models\CLBSetting.cs" />
     <Compile Include="V20190103\Models\COSSettings.cs" />
     <Compile Include="V20190103\Models\CapacityGlobalConfig.cs" />
@@ -86,6 +91,8 @@
     <Compile Include="V20190103\Models\DefaultSetting.cs" />
     <Compile Include="V20190103\Models\DeleteAutoScaleStrategyRequest.cs" />
     <Compile Include="V20190103\Models\DeleteAutoScaleStrategyResponse.cs" />
+    <Compile Include="V20190103\Models\DeleteNodeResourceConfigRequest.cs" />
+    <Compile Include="V20190103\Models\DeleteNodeResourceConfigResponse.cs" />
     <Compile Include="V20190103\Models\DeleteUserManagerUserListRequest.cs" />
     <Compile Include="V20190103\Models\DeleteUserManagerUserListResponse.cs" />
     <Compile Include="V20190103\Models\DependService.cs" />
@@ -129,6 +136,11 @@
     <Compile Include="V20190103\Models\DescribeJobFlowResponse.cs" />
     <Compile Include="V20190103\Models\DescribeKyuubiQueryInfoRequest.cs" />
     <Compile Include="V20190103\Models\DescribeKyuubiQueryInfoResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeNodeDataDisksRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeNodeDataDisksResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeNodeResourceConfigFastRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeNodeResourceConfigFastResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeResourceConfig.cs" />
     <Compile Include="V20190103\Models\DescribeResourceScheduleDiffDetailRequest.cs" />
     <Compile Include="V20190103\Models\DescribeResourceScheduleDiffDetailResponse.cs" />
     <Compile Include="V20190103\Models\DescribeResourceScheduleRequest.cs" />
@@ -211,10 +223,14 @@
     <Compile Include="V20190103\Models\ModifyAutoScaleStrategyResponse.cs" />
     <Compile Include="V20190103\Models\ModifyGlobalConfigRequest.cs" />
     <Compile Include="V20190103\Models\ModifyGlobalConfigResponse.cs" />
+    <Compile Include="V20190103\Models\ModifyInstanceBasicRequest.cs" />
+    <Compile Include="V20190103\Models\ModifyInstanceBasicResponse.cs" />
     <Compile Include="V20190103\Models\ModifyPodNumRequest.cs" />
     <Compile Include="V20190103\Models\ModifyPodNumResponse.cs" />
     <Compile Include="V20190103\Models\ModifyResourcePoolsRequest.cs" />
     <Compile Include="V20190103\Models\ModifyResourcePoolsResponse.cs" />
+    <Compile Include="V20190103\Models\ModifyResourceRequest.cs" />
+    <Compile Include="V20190103\Models\ModifyResourceResponse.cs" />
     <Compile Include="V20190103\Models\ModifyResourceScheduleConfigRequest.cs" />
     <Compile Include="V20190103\Models\ModifyResourceScheduleConfigResponse.cs" />
     <Compile Include="V20190103\Models\ModifyResourceSchedulerRequest.cs" />
@@ -238,10 +254,12 @@
     <Compile Include="V20190103\Models\NodeAffinity.cs" />
     <Compile Include="V20190103\Models\NodeDetailPriceResult.cs" />
     <Compile Include="V20190103\Models\NodeHardwareInfo.cs" />
+    <Compile Include="V20190103\Models\NodeResource.cs" />
     <Compile Include="V20190103\Models\NodeResourceSpec.cs" />
     <Compile Include="V20190103\Models\NodeSelector.cs" />
     <Compile Include="V20190103\Models\NodeSelectorRequirement.cs" />
     <Compile Include="V20190103\Models\NodeSelectorTerm.cs" />
+    <Compile Include="V20190103\Models\NodeSpecDiskV2.cs" />
     <Compile Include="V20190103\Models\NotRepeatStrategy.cs" />
     <Compile Include="V20190103\Models\OpScope.cs" />
     <Compile Include="V20190103\Models\OutterResource.cs" />
@@ -270,6 +288,8 @@
     <Compile Include="V20190103\Models\RepeatStrategy.cs" />
     <Compile Include="V20190103\Models\ResetYarnConfigRequest.cs" />
     <Compile Include="V20190103\Models\ResetYarnConfigResponse.cs" />
+    <Compile Include="V20190103\Models\ResizeDataDisksRequest.cs" />
+    <Compile Include="V20190103\Models\ResizeDataDisksResponse.cs" />
     <Compile Include="V20190103\Models\Resource.cs" />
     <Compile Include="V20190103\Models\ResourceDetail.cs" />
     <Compile Include="V20190103\Models\RestartPolicy.cs" />
@@ -290,6 +310,8 @@
     <Compile Include="V20190103\Models\ServiceBasicRestartInfo.cs" />
     <Compile Include="V20190103\Models\ServiceNodeDetailInfo.cs" />
     <Compile Include="V20190103\Models\ServiceProcessFunctionInfo.cs" />
+    <Compile Include="V20190103\Models\SetNodeResourceConfigDefaultRequest.cs" />
+    <Compile Include="V20190103\Models\SetNodeResourceConfigDefaultResponse.cs" />
     <Compile Include="V20190103\Models\ShortNodeInfo.cs" />
     <Compile Include="V20190103\Models\SoftDependInfo.cs" />
     <Compile Include="V20190103\Models\SparkQuery.cs" />

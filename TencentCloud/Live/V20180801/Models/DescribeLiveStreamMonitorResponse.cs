@@ -26,7 +26,6 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// 直播监播任务相关信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LiveStreamMonitor")]
         public LiveStreamMonitorInfo LiveStreamMonitor{ get; set; }

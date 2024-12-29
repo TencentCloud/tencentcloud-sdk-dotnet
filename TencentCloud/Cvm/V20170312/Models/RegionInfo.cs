@@ -26,18 +26,21 @@ namespace TencentCloud.Cvm.V20170312.Models
         
         /// <summary>
         /// 地域名称，例如，ap-guangzhou
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// 地域描述，例如，华南地区(广州)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionName")]
         public string RegionName{ get; set; }
 
         /// <summary>
         /// 地域是否可用状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionState")]
         public string RegionState{ get; set; }

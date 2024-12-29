@@ -26,77 +26,66 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// Sql的执行时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Timestamp")]
         public ulong? Timestamp{ get; set; }
 
         /// <summary>
         /// Sql的执行时长（秒）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueryTime")]
         public float? QueryTime{ get; set; }
 
         /// <summary>
         /// Sql语句。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SqlText")]
         public string SqlText{ get; set; }
 
         /// <summary>
         /// 客户端地址。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserHost")]
         public string UserHost{ get; set; }
 
         /// <summary>
         /// 用户名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
         /// 数据库名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Database")]
         public string Database{ get; set; }
 
         /// <summary>
         /// 锁时长（秒）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LockTime")]
         public float? LockTime{ get; set; }
 
         /// <summary>
         /// 扫描行数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RowsExamined")]
         public long? RowsExamined{ get; set; }
 
         /// <summary>
         /// 结果集行数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RowsSent")]
         public long? RowsSent{ get; set; }
 
         /// <summary>
         /// Sql模板。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SqlTemplate")]
         public string SqlTemplate{ get; set; }
 
         /// <summary>
         /// Sql语句的md5。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Md5")]
         public string Md5{ get; set; }

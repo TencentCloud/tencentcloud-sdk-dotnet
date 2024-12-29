@@ -38,7 +38,6 @@ namespace TencentCloud.Sqlserver.V20180328.Models
 
         /// <summary>
         /// 开通TDE加密时引用的其他主账号ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QuoteUin")]
         public string QuoteUin{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 任务ID，根据任务ID查询绑定云资源结果
+        /// 任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

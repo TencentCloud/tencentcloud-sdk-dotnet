@@ -26,14 +26,12 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// 媒体处理结果信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MPSResult")]
         public MPSResult MPSResult{ get; set; }
 
         /// <summary>
         /// 媒体诊断结果信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiagnoseResult")]
         public DiagnoseResult DiagnoseResult{ get; set; }

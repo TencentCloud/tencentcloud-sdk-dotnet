@@ -26,7 +26,6 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// 套餐包信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LivePackageInfoList")]
         public LivePackageInfo[] LivePackageInfoList{ get; set; }
@@ -42,7 +41,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// 205: 日结时长
         /// 206: 月结时长
         /// 304: 日结流量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageBillMode")]
         public long? PackageBillMode{ get; set; }
@@ -81,7 +79,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// 标准直播，国际/港澳台（境外多地区）计费方式。
         /// 快直播，中国大陆（境内全地区）计费方式。
         /// 快直播，国际/港澳台（境外多地区）计费方式。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FluxPackageBillMode")]
         public string FluxPackageBillMode{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tbaas.V20180416
 
        private const string endpoint = "tbaas.tencentcloudapi.com";
        private const string version = "2018-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.1152";
+       private const string sdkVersion = "SDK_NET_3.0.1153";
 
         /// <summary>
         /// Client constructor.
@@ -180,7 +180,7 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
-        /// 获取区块内的交易列表
+        /// 获取区块内交易列表
         /// </summary>
         /// <param name="req"><see cref="GetBlockTransactionListForUserRequest"/></param>
         /// <returns><see cref="GetBlockTransactionListForUserResponse"/></returns>
@@ -190,7 +190,7 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
-        /// 获取区块内的交易列表
+        /// 获取区块内交易列表
         /// </summary>
         /// <param name="req"><see cref="GetBlockTransactionListForUserRequest"/></param>
         /// <returns><see cref="GetBlockTransactionListForUserResponse"/></returns>
@@ -285,7 +285,7 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
-        /// 获取交易详情
+        /// 获取交易的详情
         /// </summary>
         /// <param name="req"><see cref="GetTransactionDetailForUserRequest"/></param>
         /// <returns><see cref="GetTransactionDetailForUserResponse"/></returns>
@@ -295,7 +295,7 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
-        /// 获取交易详情
+        /// 获取交易的详情
         /// </summary>
         /// <param name="req"><see cref="GetTransactionDetailForUserRequest"/></param>
         /// <returns><see cref="GetTransactionDetailForUserResponse"/></returns>

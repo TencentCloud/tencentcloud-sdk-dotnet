@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cvm.V20170312.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeReservedInstancesOfferingsResponse : AbstractModel
+    public class ModifyInstanceBasicRequest : AbstractModel
     {
         
         /// <summary>
-        /// 符合条件的预留实例计费数量。
+        /// 集群实例ID
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 符合条件的预留实例计费列表。
+        /// 集群名称
         /// </summary>
-        [JsonProperty("ReservedInstancesOfferingsSet")]
-        public ReservedInstancesOffering[] ReservedInstancesOfferingsSet{ get; set; }
+        [JsonProperty("ClusterName")]
+        public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 用来标注修改计算资源
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("ResourceBaseType")]
+        public string ResourceBaseType{ get; set; }
+
+        /// <summary>
+        /// 需要修改的计算资源id，与ResourceBaseType 配合使用
+        /// </summary>
+        [JsonProperty("ComputeResourceId")]
+        public string ComputeResourceId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "ReservedInstancesOfferingsSet.", this.ReservedInstancesOfferingsSet);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "ResourceBaseType", this.ResourceBaseType);
+            this.SetParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
         }
     }
 }
