@@ -25,15 +25,13 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// Key值定义
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// Key 值定义
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// Value值定义
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// Value 值定义
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

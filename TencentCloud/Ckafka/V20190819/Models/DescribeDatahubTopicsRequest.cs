@@ -42,6 +42,24 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 是否从连接查询topic列表
+        /// </summary>
+        [JsonProperty("QueryFromConnectResource")]
+        public bool? QueryFromConnectResource{ get; set; }
+
+        /// <summary>
+        /// 连接的ID
+        /// </summary>
+        [JsonProperty("ConnectResourceId")]
+        public string ConnectResourceId{ get; set; }
+
+        /// <summary>
+        /// topic资源表达式
+        /// </summary>
+        [JsonProperty("TopicRegularExpression")]
+        public string TopicRegularExpression{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +69,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "QueryFromConnectResource", this.QueryFromConnectResource);
+            this.SetParamSimple(map, prefix + "ConnectResourceId", this.ConnectResourceId);
+            this.SetParamSimple(map, prefix + "TopicRegularExpression", this.TopicRegularExpression);
         }
     }
 }

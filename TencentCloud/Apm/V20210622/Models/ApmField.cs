@@ -26,7 +26,6 @@ namespace TencentCloud.Apm.V20210622.Models
         
         /// <summary>
         /// 昨日同比指标值，已弃用，不建议使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CompareVal")]
         public string CompareVal{ get; set; }
@@ -40,14 +39,12 @@ namespace TencentCloud.Apm.V20210622.Models
 
         /// <summary>
         /// 指标值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public float? Value{ get; set; }
 
         /// <summary>
         /// 指标所对应的单位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }

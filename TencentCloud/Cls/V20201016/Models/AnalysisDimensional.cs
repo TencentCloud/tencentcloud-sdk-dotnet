@@ -87,7 +87,6 @@ namespace TencentCloud.Cls.V20201016.Models
         ///     "Key": "SyntaxRule", // 查不到这个字段也是老语法
         ///     "Value": "0"//0:Lucene, 1:CQL
         /// }
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigInfo")]
         public AlarmAnalysisConfig[] ConfigInfo{ get; set; }

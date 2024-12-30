@@ -140,21 +140,18 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DpdEnable")]
         public long? DpdEnable{ get; set; }
 
         /// <summary>
         /// DPD超时时间。即探测确认对端不存在需要的时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DpdTimeout")]
         public string DpdTimeout{ get; set; }
 
         /// <summary>
         /// DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DpdAction")]
         public string DpdAction{ get; set; }
@@ -167,21 +164,18 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 协商类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NegotiationType")]
         public string NegotiationType{ get; set; }
 
         /// <summary>
         /// Bgp配置信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BgpConfig")]
         public BgpConfigAndAsn BgpConfig{ get; set; }
 
         /// <summary>
         /// Nqa配置信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthCheckConfig")]
         public HealthCheckConfig HealthCheckConfig{ get; set; }

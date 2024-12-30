@@ -26,7 +26,6 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// 云联网（CCN）对象。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CcnSet")]
         public CcnInstanceInfo[] CcnSet{ get; set; }

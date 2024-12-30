@@ -79,6 +79,12 @@ namespace TencentCloud.Bh.V20230418.Models
         public string DepartmentId{ get; set; }
 
         /// <summary>
+        /// 是否根据AuthorizedDeviceIdSet,对资产账号进行精确匹配，默认false, 设置true时，确保AuthorizedDeviceIdSet只有一个元素
+        /// </summary>
+        [JsonProperty("ExactAccount")]
+        public bool? ExactAccount{ get; set; }
+
+        /// <summary>
         /// 过滤数组
         /// </summary>
         [JsonProperty("Filters")]
@@ -99,6 +105,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamArraySimple(map, prefix + "AuthorizedDeviceIdSet.", this.AuthorizedDeviceIdSet);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
+            this.SetParamSimple(map, prefix + "ExactAccount", this.ExactAccount);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }

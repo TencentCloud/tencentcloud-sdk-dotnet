@@ -37,7 +37,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string InvoiceDate{ get; set; }
 
         /// <summary>
-        /// 发票代码（10或12 位），全电发票为空。查验未成功超过5次后当日无法再查。
+        /// 发票代码（10或12 位），全电发票为空。查验超过5次后当日无法再查。
         /// </summary>
         [JsonProperty("InvoiceCode")]
         public string InvoiceCode{ get; set; }
@@ -81,9 +81,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public bool? EnableCommonElectronic{ get; set; }
 
         /// <summary>
-        /// 是否允许查验当日发票，默认值为false。
-        /// 
-        /// 请注意，发票从开具到录入税局需要一定的时间来更新和验证发票信息，打开后仅支持查验已成功录入到税局中的发票。
+        /// 是否允许查验当日发票，默认值为false。请注意，发票从开具到录入税局需要一定的时间来更新和验证发票信息，打开后仅支持查验已成功录入到税局中的当日发票。
         /// </summary>
         [JsonProperty("EnableTodayInvoice")]
         public bool? EnableTodayInvoice{ get; set; }

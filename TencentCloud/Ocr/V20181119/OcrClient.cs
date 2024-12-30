@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1153";
+       private const string sdkVersion = "SDK_NET_3.0.1154";
 
         /// <summary>
         /// Client constructor.
@@ -1086,6 +1086,48 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 获取ocr结果
+        /// </summary>
+        /// <param name="req"><see cref="GetOCRResultRequest"/></param>
+        /// <returns><see cref="GetOCRResultResponse"/></returns>
+        public Task<GetOCRResultResponse> GetOCRResult(GetOCRResultRequest req)
+        {
+            return InternalRequestAsync<GetOCRResultResponse>(req, "GetOCRResult");
+        }
+
+        /// <summary>
+        /// 获取ocr结果
+        /// </summary>
+        /// <param name="req"><see cref="GetOCRResultRequest"/></param>
+        /// <returns><see cref="GetOCRResultResponse"/></returns>
+        public GetOCRResultResponse GetOCRResultSync(GetOCRResultRequest req)
+        {
+            return InternalRequestAsync<GetOCRResultResponse>(req, "GetOCRResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取ocr的token值
+        /// </summary>
+        /// <param name="req"><see cref="GetOCRTokenRequest"/></param>
+        /// <returns><see cref="GetOCRTokenResponse"/></returns>
+        public Task<GetOCRTokenResponse> GetOCRToken(GetOCRTokenRequest req)
+        {
+            return InternalRequestAsync<GetOCRTokenResponse>(req, "GetOCRToken");
+        }
+
+        /// <summary>
+        /// 获取ocr的token值
+        /// </summary>
+        /// <param name="req"><see cref="GetOCRTokenRequest"/></param>
+        /// <returns><see cref="GetOCRTokenResponse"/></returns>
+        public GetOCRTokenResponse GetOCRTokenSync(GetOCRTokenRequest req)
+        {
+            return InternalRequestAsync<GetOCRTokenResponse>(req, "GetOCRToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 智慧表单产品已下线，需要下线相关API
         /// 
         /// 支持查询智能表单录入任务的状态。本产品免费公测中，您可以点击demo（超链接：https://ocr.smartform.cloud.tencent.com/）试用，如需购买请与商务团队联系。
@@ -1163,7 +1205,7 @@ namespace TencentCloud.Ocr.V20181119
         /// <summary>
         /// 本接口支持中国大陆居民二代身份证正反面所有字段的识别，包括姓名、性别、民族、出生日期、住址、公民身份证号、签发机关、有效期限，识别准确度达到99%以上。
         /// 
-        /// 另外，本接口还支持多种增值能力，满足不同场景的需求。如身份证照片、人像照片的裁剪功能，同时具备8种告警功能，如下表所示。
+        /// 另外，本接口还支持多种扩展能力，满足不同场景的需求。如身份证照片、人像照片的裁剪功能，同时具备8种告警功能，如下表所示。
         /// 
         /// <table style="width:650px">
         ///       <thead>
@@ -1222,7 +1264,7 @@ namespace TencentCloud.Ocr.V20181119
         /// <summary>
         /// 本接口支持中国大陆居民二代身份证正反面所有字段的识别，包括姓名、性别、民族、出生日期、住址、公民身份证号、签发机关、有效期限，识别准确度达到99%以上。
         /// 
-        /// 另外，本接口还支持多种增值能力，满足不同场景的需求。如身份证照片、人像照片的裁剪功能，同时具备8种告警功能，如下表所示。
+        /// 另外，本接口还支持多种扩展能力，满足不同场景的需求。如身份证照片、人像照片的裁剪功能，同时具备8种告警功能，如下表所示。
         /// 
         /// <table style="width:650px">
         ///       <thead>
@@ -1707,7 +1749,7 @@ namespace TencentCloud.Ocr.V20181119
         /// 
         /// 本接口支持中国大陆居民二代身份证正反面所有字段的识别，包括姓名、性别、民族、出生日期、住址、公民身份证号、签发机关、有效期限，识别准确度达到99%以上。
         /// 
-        /// 另外，本接口还支持多种增值能力，满足不同场景的需求。如身份证照片、人像照片的裁剪功能，同时具备9种告警功能，如下表所示。
+        /// 另外，本接口还支持多种扩展能力，满足不同场景的需求。如身份证照片、人像照片的裁剪功能，同时具备9种告警功能，如下表所示。
         /// 
         /// <table style="width:650px">
         ///       <thead>
@@ -1768,7 +1810,7 @@ namespace TencentCloud.Ocr.V20181119
         /// 
         /// 本接口支持中国大陆居民二代身份证正反面所有字段的识别，包括姓名、性别、民族、出生日期、住址、公民身份证号、签发机关、有效期限，识别准确度达到99%以上。
         /// 
-        /// 另外，本接口还支持多种增值能力，满足不同场景的需求。如身份证照片、人像照片的裁剪功能，同时具备9种告警功能，如下表所示。
+        /// 另外，本接口还支持多种扩展能力，满足不同场景的需求。如身份证照片、人像照片的裁剪功能，同时具备9种告警功能，如下表所示。
         /// 
         /// <table style="width:650px">
         ///       <thead>
@@ -2289,7 +2331,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 本接口支持中英文图片/PDF内常规表格、无线表格、多表格的检测和识别，返回每个单元格的文字内容，支持旋转的表格图片识别，且支持将识别结果保存为 Excel 格式。识别效果比表格识别V2更好，覆盖场景更加广泛，对表格难例场景，如无线表格、嵌套表格（有线表格中包含无线表格）的识别效果均优于表格识别V2。点击[立即体验](https://ocrdemo.cloud.tencent.com?action=RecognizeTableAccurateOCR)。
+        /// 本接口支持中英文图片/PDF内常规表格、无线表格、多表格的检测和识别，返回每个单元格的文字内容，支持旋转的表格图片识别，且支持将识别结果保存为 Excel 格式。识别效果比表格识别V2更好，覆盖场景更加广泛，对表格难例场景，如无线表格、嵌套表格（有线表格中包含无线表格）的识别效果均优于表格识别V2。
         /// 
         /// 默认接口请求频率限制：2次/秒。
         /// </summary>
@@ -2301,7 +2343,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 本接口支持中英文图片/PDF内常规表格、无线表格、多表格的检测和识别，返回每个单元格的文字内容，支持旋转的表格图片识别，且支持将识别结果保存为 Excel 格式。识别效果比表格识别V2更好，覆盖场景更加广泛，对表格难例场景，如无线表格、嵌套表格（有线表格中包含无线表格）的识别效果均优于表格识别V2。点击[立即体验](https://ocrdemo.cloud.tencent.com?action=RecognizeTableAccurateOCR)。
+        /// 本接口支持中英文图片/PDF内常规表格、无线表格、多表格的检测和识别，返回每个单元格的文字内容，支持旋转的表格图片识别，且支持将识别结果保存为 Excel 格式。识别效果比表格识别V2更好，覆盖场景更加广泛，对表格难例场景，如无线表格、嵌套表格（有线表格中包含无线表格）的识别效果均优于表格识别V2。
         /// 
         /// 默认接口请求频率限制：2次/秒。
         /// </summary>

@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1153";
+       private const string sdkVersion = "SDK_NET_3.0.1154";
 
         /// <summary>
         /// Client constructor.
@@ -722,6 +722,27 @@ namespace TencentCloud.Tdmq.V20200217
         public DeleteRabbitMQBindingResponse DeleteRabbitMQBindingSync(DeleteRabbitMQBindingRequest req)
         {
             return InternalRequestAsync<DeleteRabbitMQBindingResponse>(req, "DeleteRabbitMQBinding")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除RabbitMQ的权限
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRabbitMQPermissionRequest"/></param>
+        /// <returns><see cref="DeleteRabbitMQPermissionResponse"/></returns>
+        public Task<DeleteRabbitMQPermissionResponse> DeleteRabbitMQPermission(DeleteRabbitMQPermissionRequest req)
+        {
+            return InternalRequestAsync<DeleteRabbitMQPermissionResponse>(req, "DeleteRabbitMQPermission");
+        }
+
+        /// <summary>
+        /// 删除RabbitMQ的权限
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRabbitMQPermissionRequest"/></param>
+        /// <returns><see cref="DeleteRabbitMQPermissionResponse"/></returns>
+        public DeleteRabbitMQPermissionResponse DeleteRabbitMQPermissionSync(DeleteRabbitMQPermissionRequest req)
+        {
+            return InternalRequestAsync<DeleteRabbitMQPermissionResponse>(req, "DeleteRabbitMQPermission")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1545,6 +1566,27 @@ namespace TencentCloud.Tdmq.V20200217
         public DescribeRabbitMQNodeListResponse DescribeRabbitMQNodeListSync(DescribeRabbitMQNodeListRequest req)
         {
             return InternalRequestAsync<DescribeRabbitMQNodeListResponse>(req, "DescribeRabbitMQNodeList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询RabbitMQ权限列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQPermissionRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQPermissionResponse"/></returns>
+        public Task<DescribeRabbitMQPermissionResponse> DescribeRabbitMQPermission(DescribeRabbitMQPermissionRequest req)
+        {
+            return InternalRequestAsync<DescribeRabbitMQPermissionResponse>(req, "DescribeRabbitMQPermission");
+        }
+
+        /// <summary>
+        /// 查询RabbitMQ权限列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQPermissionRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQPermissionResponse"/></returns>
+        public DescribeRabbitMQPermissionResponse DescribeRabbitMQPermissionSync(DescribeRabbitMQPermissionRequest req)
+        {
+            return InternalRequestAsync<DescribeRabbitMQPermissionResponse>(req, "DescribeRabbitMQPermission")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2561,6 +2603,27 @@ namespace TencentCloud.Tdmq.V20200217
         public ModifyPublicNetworkSecurityPolicyResponse ModifyPublicNetworkSecurityPolicySync(ModifyPublicNetworkSecurityPolicyRequest req)
         {
             return InternalRequestAsync<ModifyPublicNetworkSecurityPolicyResponse>(req, "ModifyPublicNetworkSecurityPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改RabbitMQ的权限
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRabbitMQPermissionRequest"/></param>
+        /// <returns><see cref="ModifyRabbitMQPermissionResponse"/></returns>
+        public Task<ModifyRabbitMQPermissionResponse> ModifyRabbitMQPermission(ModifyRabbitMQPermissionRequest req)
+        {
+            return InternalRequestAsync<ModifyRabbitMQPermissionResponse>(req, "ModifyRabbitMQPermission");
+        }
+
+        /// <summary>
+        /// 修改RabbitMQ的权限
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRabbitMQPermissionRequest"/></param>
+        /// <returns><see cref="ModifyRabbitMQPermissionResponse"/></returns>
+        public ModifyRabbitMQPermissionResponse ModifyRabbitMQPermissionSync(ModifyRabbitMQPermissionRequest req)
+        {
+            return InternalRequestAsync<ModifyRabbitMQPermissionResponse>(req, "ModifyRabbitMQPermission")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

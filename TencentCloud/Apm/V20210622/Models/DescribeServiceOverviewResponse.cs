@@ -26,7 +26,6 @@ namespace TencentCloud.Apm.V20210622.Models
         
         /// <summary>
         /// 指标结果集
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Records")]
         public ApmMetricRecord[] Records{ get; set; }

@@ -25,31 +25,31 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// Tag列表
+        /// Tag 列表
         /// </summary>
         [JsonProperty("Tags")]
         public ApmTag[] Tags{ get; set; }
 
         /// <summary>
-        /// 搜索实例名
+        /// 搜索业务系统名
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 过滤实例ID
+        /// 过滤业务系统 ID
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 是否查询官方demo实例
+        /// 是否查询官方 Demo 业务系统
         /// </summary>
         [JsonProperty("DemoInstanceFlag")]
         public long? DemoInstanceFlag{ get; set; }
 
         /// <summary>
-        /// 是否查询全地域实例
+        /// 是否查询全地域业务系统
         /// </summary>
         [JsonProperty("AllRegionsFlag")]
         public long? AllRegionsFlag{ get; set; }

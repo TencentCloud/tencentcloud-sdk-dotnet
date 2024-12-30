@@ -25,43 +25,37 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// Agent下载地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// Agent 下载地址
         /// </summary>
         [JsonProperty("AgentDownloadURL")]
         public string AgentDownloadURL{ get; set; }
 
         /// <summary>
-        /// Collector上报地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// Collector 上报地址
         /// </summary>
         [JsonProperty("CollectorURL")]
         public string CollectorURL{ get; set; }
 
         /// <summary>
-        /// Token信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// Token 信息
         /// </summary>
         [JsonProperty("Token")]
         public string Token{ get; set; }
 
         /// <summary>
         /// 外网上报地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicCollectorURL")]
         public string PublicCollectorURL{ get; set; }
 
         /// <summary>
-        /// 自研VPC上报地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 自研 VPC 上报地址
         /// </summary>
         [JsonProperty("InnerCollectorURL")]
         public string InnerCollectorURL{ get; set; }
 
         /// <summary>
-        /// 内网上报地址(Private Link上报地址)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 内网上报地址( Private Link 上报地址)
         /// </summary>
         [JsonProperty("PrivateLinkCollectorURL")]
         public string PrivateLinkCollectorURL{ get; set; }

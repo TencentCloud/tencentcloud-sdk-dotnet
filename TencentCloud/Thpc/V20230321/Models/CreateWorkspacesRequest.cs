@@ -43,7 +43,7 @@ namespace TencentCloud.Thpc.V20230321.Models
         public SpaceChargePrepaid SpaceChargePrepaid{ get; set; }
 
         /// <summary>
-        /// 工作空间计费类型
+        /// 工作空间计费类型，包括：PREPAID，UNDERWRITE。工作空间计费类型，包括：PREPAID，UNDERWRITE。
         /// </summary>
         [JsonProperty("SpaceChargeType")]
         public string SpaceChargeType{ get; set; }

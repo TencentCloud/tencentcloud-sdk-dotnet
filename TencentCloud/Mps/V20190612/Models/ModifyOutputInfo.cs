@@ -97,6 +97,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("RISTSettings")]
         public CreateOutputRistSettings RISTSettings{ get; set; }
 
+        /// <summary>
+        /// 输出类型：Internet/TencentCSS/StreamLive
+        /// </summary>
+        [JsonProperty("OutputType")]
+        public string OutputType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +121,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
             this.SetParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
+            this.SetParamSimple(map, prefix + "OutputType", this.OutputType);
         }
     }
 }

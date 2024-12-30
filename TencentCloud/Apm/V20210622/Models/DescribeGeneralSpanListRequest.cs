@@ -43,13 +43,13 @@ namespace TencentCloud.Apm.V20210622.Models
         public OrderBy OrderBy{ get; set; }
 
         /// <summary>
-        /// span查询开始时间戳（单位:秒）
+        /// Span查询开始时间戳（单位:秒）
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 业务系统ID
+        /// 业务系统 ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Apm.V20210622.Models
         public string BusinessName{ get; set; }
 
         /// <summary>
-        /// span查询结束时间戳（单位:秒）
+        /// Span查询结束时间戳（单位:秒）
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }

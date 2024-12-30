@@ -26,59 +26,63 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// 带宽所属的云联网ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CcnId")]
         public string CcnId{ get; set; }
 
         /// <summary>
         /// 实例的创建时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
         /// 实例的过期时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public string ExpiredTime{ get; set; }
 
         /// <summary>
         /// 带宽实例的唯一ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionFlowControlId")]
         public string RegionFlowControlId{ get; set; }
 
         /// <summary>
         /// 带宽是否自动续费的标记。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }
 
         /// <summary>
         /// 描述带宽的地域和限速上限信息。在地域间限速的情况下才会返回参数，出口限速模式不返回。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CcnRegionBandwidthLimit")]
         public CcnRegionBandwidthLimit CcnRegionBandwidthLimit{ get; set; }
 
         /// <summary>
         /// 云市场实例ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MarketId")]
         public string MarketId{ get; set; }
 
         /// <summary>
         /// 资源绑定的标签列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }
+
+        /// <summary>
+        /// `true表示`Qos默认带宽；`false`表示非Qos默认带宽；
+        /// </summary>
+        [JsonProperty("DefaultQosBandwidthFlag")]
+        public bool? DefaultQosBandwidthFlag{ get; set; }
+
+        /// <summary>
+        /// 服务等级信息。
+        /// </summary>
+        [JsonProperty("QosLevel")]
+        public string QosLevel{ get; set; }
 
 
         /// <summary>
@@ -94,6 +98,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamObj(map, prefix + "CcnRegionBandwidthLimit.", this.CcnRegionBandwidthLimit);
             this.SetParamSimple(map, prefix + "MarketId", this.MarketId);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+            this.SetParamSimple(map, prefix + "DefaultQosBandwidthFlag", this.DefaultQosBandwidthFlag);
+            this.SetParamSimple(map, prefix + "QosLevel", this.QosLevel);
         }
     }
 }

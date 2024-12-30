@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1153";
+       private const string sdkVersion = "SDK_NET_3.0.1154";
 
         /// <summary>
         /// Client constructor.
@@ -614,6 +614,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 该接口用于创建告警渠道回调配置。
+        /// </summary>
+        /// <param name="req"><see cref="CreateWebCallbackRequest"/></param>
+        /// <returns><see cref="CreateWebCallbackResponse"/></returns>
+        public Task<CreateWebCallbackResponse> CreateWebCallback(CreateWebCallbackRequest req)
+        {
+            return InternalRequestAsync<CreateWebCallbackResponse>(req, "CreateWebCallback");
+        }
+
+        /// <summary>
+        /// 该接口用于创建告警渠道回调配置。
+        /// </summary>
+        /// <param name="req"><see cref="CreateWebCallbackRequest"/></param>
+        /// <returns><see cref="CreateWebCallbackResponse"/></returns>
+        public CreateWebCallbackResponse CreateWebCallbackSync(CreateWebCallbackRequest req)
+        {
+            return InternalRequestAsync<CreateWebCallbackResponse>(req, "CreateWebCallback")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于删除告警策略。
         /// </summary>
         /// <param name="req"><see cref="DeleteAlarmRequest"/></param>
@@ -1051,6 +1072,27 @@ namespace TencentCloud.Cls.V20201016
         public DeleteTopicResponse DeleteTopicSync(DeleteTopicRequest req)
         {
             return InternalRequestAsync<DeleteTopicResponse>(req, "DeleteTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于删除告警渠道回调配置。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWebCallbackRequest"/></param>
+        /// <returns><see cref="DeleteWebCallbackResponse"/></returns>
+        public Task<DeleteWebCallbackResponse> DeleteWebCallback(DeleteWebCallbackRequest req)
+        {
+            return InternalRequestAsync<DeleteWebCallbackResponse>(req, "DeleteWebCallback");
+        }
+
+        /// <summary>
+        /// 该接口用于删除告警渠道回调配置。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWebCallbackRequest"/></param>
+        /// <returns><see cref="DeleteWebCallbackResponse"/></returns>
+        public DeleteWebCallbackResponse DeleteWebCallbackSync(DeleteWebCallbackRequest req)
+        {
+            return InternalRequestAsync<DeleteWebCallbackResponse>(req, "DeleteWebCallback")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1687,6 +1729,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 获取告警渠道回调配置列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebCallbacksRequest"/></param>
+        /// <returns><see cref="DescribeWebCallbacksResponse"/></returns>
+        public Task<DescribeWebCallbacksResponse> DescribeWebCallbacks(DescribeWebCallbacksRequest req)
+        {
+            return InternalRequestAsync<DescribeWebCallbacksResponse>(req, "DescribeWebCallbacks");
+        }
+
+        /// <summary>
+        /// 获取告警渠道回调配置列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebCallbacksRequest"/></param>
+        /// <returns><see cref="DescribeWebCallbacksResponse"/></returns>
+        public DescribeWebCallbacksResponse DescribeWebCallbacksSync(DescribeWebCallbacksRequest req)
+        {
+            return InternalRequestAsync<DescribeWebCallbacksResponse>(req, "DescribeWebCallbacks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于获取告警策略执行详情
         /// </summary>
         /// <param name="req"><see cref="GetAlarmLogRequest"/></param>
@@ -2145,6 +2208,27 @@ namespace TencentCloud.Cls.V20201016
         public ModifyTopicResponse ModifyTopicSync(ModifyTopicRequest req)
         {
             return InternalRequestAsync<ModifyTopicResponse>(req, "ModifyTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口用于修改告警渠道回调配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWebCallbackRequest"/></param>
+        /// <returns><see cref="ModifyWebCallbackResponse"/></returns>
+        public Task<ModifyWebCallbackResponse> ModifyWebCallback(ModifyWebCallbackRequest req)
+        {
+            return InternalRequestAsync<ModifyWebCallbackResponse>(req, "ModifyWebCallback");
+        }
+
+        /// <summary>
+        /// 该接口用于修改告警渠道回调配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWebCallbackRequest"/></param>
+        /// <returns><see cref="ModifyWebCallbackResponse"/></returns>
+        public ModifyWebCallbackResponse ModifyWebCallbackSync(ModifyWebCallbackRequest req)
+        {
+            return InternalRequestAsync<ModifyWebCallbackResponse>(req, "ModifyWebCallback")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

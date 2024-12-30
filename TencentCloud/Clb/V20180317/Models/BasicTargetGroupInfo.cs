@@ -36,6 +36,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("TargetGroupName")]
         public string TargetGroupName{ get; set; }
 
+        /// <summary>
+        /// 权重
+        /// </summary>
+        [JsonProperty("Weight")]
+        public ulong? Weight{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Clb.V20180317.Models
         {
             this.SetParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
             this.SetParamSimple(map, prefix + "TargetGroupName", this.TargetGroupName);
+            this.SetParamSimple(map, prefix + "Weight", this.Weight);
         }
     }
 }

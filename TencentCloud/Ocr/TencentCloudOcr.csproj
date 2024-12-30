@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1153</VersionPrefix>
+    <VersionPrefix>3.0.1154</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -137,6 +137,10 @@
     <Compile Include="V20181119\Models\GeneralHandwritingOCRResponse.cs" />
     <Compile Include="V20181119\Models\GeneralMachineItem.cs" />
     <Compile Include="V20181119\Models\GeneralWarnInfo.cs" />
+    <Compile Include="V20181119\Models\GetOCRResultRequest.cs" />
+    <Compile Include="V20181119\Models\GetOCRResultResponse.cs" />
+    <Compile Include="V20181119\Models\GetOCRTokenRequest.cs" />
+    <Compile Include="V20181119\Models\GetOCRTokenResponse.cs" />
     <Compile Include="V20181119\Models\GetTaskStateRequest.cs" />
     <Compile Include="V20181119\Models\GetTaskStateResponse.cs" />
     <Compile Include="V20181119\Models\GroupInfo.cs" />
@@ -144,9 +148,12 @@
     <Compile Include="V20181119\Models\HKIDCardOCRResponse.cs" />
     <Compile Include="V20181119\Models\HmtResidentPermitOCRRequest.cs" />
     <Compile Include="V20181119\Models\HmtResidentPermitOCRResponse.cs" />
+    <Compile Include="V20181119\Models\IDCardConfig.cs" />
     <Compile Include="V20181119\Models\IDCardInfo.cs" />
+    <Compile Include="V20181119\Models\IDCardInfoResult.cs" />
     <Compile Include="V20181119\Models\IDCardOCRRequest.cs" />
     <Compile Include="V20181119\Models\IDCardOCRResponse.cs" />
+    <Compile Include="V20181119\Models\IDCardResult.cs" />
     <Compile Include="V20181119\Models\ImageCoordinates.cs" />
     <Compile Include="V20181119\Models\ImageEnhancementRequest.cs" />
     <Compile Include="V20181119\Models\ImageEnhancementResponse.cs" />
@@ -188,6 +195,7 @@
     <Compile Include="V20181119\Models\MotorVehicleSaleInvoice.cs" />
     <Compile Include="V20181119\Models\NonTaxIncomeBill.cs" />
     <Compile Include="V20181119\Models\NonTaxItem.cs" />
+    <Compile Include="V20181119\Models\OCRResult.cs" />
     <Compile Include="V20181119\Models\OnlineTaxiItineraryInfo.cs" />
     <Compile Include="V20181119\Models\OrgCodeCertOCRRequest.cs" />
     <Compile Include="V20181119\Models\OrgCodeCertOCRResponse.cs" />

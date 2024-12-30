@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1153";
+       private const string sdkVersion = "SDK_NET_3.0.1154";
 
         /// <summary>
         /// Client constructor.
@@ -1923,6 +1923,8 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 废弃接口
+        /// 
         /// 描述WAF自动封禁模块详情
         /// </summary>
         /// <param name="req"><see cref="DescribeWafAutoDenyStatusRequest"/></param>
@@ -1933,6 +1935,8 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 废弃接口
+        /// 
         /// 描述WAF自动封禁模块详情
         /// </summary>
         /// <param name="req"><see cref="DescribeWafAutoDenyStatusRequest"/></param>

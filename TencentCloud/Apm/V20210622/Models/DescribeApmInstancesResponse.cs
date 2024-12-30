@@ -25,8 +25,7 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// apm实例列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// APM 业务系统列表
         /// </summary>
         [JsonProperty("Instances")]
         public ApmInstanceDetail[] Instances{ get; set; }

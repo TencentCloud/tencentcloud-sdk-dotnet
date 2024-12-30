@@ -26,35 +26,30 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// BGP通道CIDR
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TunnelCidr")]
         public string TunnelCidr{ get; set; }
 
         /// <summary>
         /// 本端BGP IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LocalBgpIp")]
         public string LocalBgpIp{ get; set; }
 
         /// <summary>
         /// 对端BGP IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RemoteBgpIp")]
         public string RemoteBgpIp{ get; set; }
 
         /// <summary>
         /// 本端BGP ASN号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LocalBgpAsn")]
         public string LocalBgpAsn{ get; set; }
 
         /// <summary>
         /// 对端BGP ASN号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RemoteBgpAsn")]
         public string RemoteBgpAsn{ get; set; }

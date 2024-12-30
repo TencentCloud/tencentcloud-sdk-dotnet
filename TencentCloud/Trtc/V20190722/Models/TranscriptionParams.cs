@@ -71,6 +71,7 @@ namespace TencentCloud.Trtc.V20190722.Models
 
         /// <summary>
         /// 机器人订阅的用户列表
+        /// 仅 TranscriptionMode 为 1或者 TranscriptionMode 为无限上麦模式支持传入多个用户列表
         /// </summary>
         [JsonProperty("TargetUserIdList")]
         public string[] TargetUserIdList{ get; set; }

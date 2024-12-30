@@ -104,14 +104,12 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 实例类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AliasType")]
         public string AliasType{ get; set; }
 
         /// <summary>
         /// 实例id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AliasInstanceId")]
         public string AliasInstanceId{ get; set; }

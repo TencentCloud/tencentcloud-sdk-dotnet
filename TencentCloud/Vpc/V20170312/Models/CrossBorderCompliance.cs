@@ -158,14 +158,12 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 法定代表人身份证号。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LegalPersonId")]
         public string LegalPersonId{ get; set; }
 
         /// <summary>
         /// 法定代表人身份证。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LegalPersonIdCard")]
         public string LegalPersonIdCard{ get; set; }

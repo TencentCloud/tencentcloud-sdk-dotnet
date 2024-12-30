@@ -61,8 +61,8 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 主题类型
-        /// <ul><li>0:日志主题，默认值</li>
-        /// <li>1:指标主题</li></ul>
+        /// - 0:日志主题，默认值
+        /// - 1:指标主题
         /// </summary>
         [JsonProperty("BizType")]
         public ulong? BizType{ get; set; }

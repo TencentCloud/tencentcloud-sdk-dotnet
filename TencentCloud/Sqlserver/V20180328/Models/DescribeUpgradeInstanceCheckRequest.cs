@@ -66,6 +66,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("MultiZones")]
         public string MultiZones{ get; set; }
 
+        /// <summary>
+        /// 多节点架构实例的备节点可用区，默认为空。如果需要在变配的同时修改指定备节点的可用区时必传，当MultiZones = MultiZones时主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+        /// </summary>
+        [JsonProperty("DrZones")]
+        public DrZoneInfo[] DrZones{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "DBVersion", this.DBVersion);
             this.SetParamSimple(map, prefix + "HAType", this.HAType);
             this.SetParamSimple(map, prefix + "MultiZones", this.MultiZones);
+            this.SetParamArrayObj(map, prefix + "DrZones.", this.DrZones);
         }
     }
 }

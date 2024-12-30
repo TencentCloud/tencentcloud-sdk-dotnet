@@ -184,6 +184,39 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("AutoActive")]
         public bool? AutoActive{ get; set; }
 
+        /// <summary>
+        /// 营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。
+        /// </summary>
+        [JsonProperty("BusinessLicense")]
+        public string BusinessLicense{ get; set; }
+
+        /// <summary>
+        /// 组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。	
+        /// </summary>
+        [JsonProperty("ProxyAddress")]
+        public string ProxyAddress{ get; set; }
+
+        /// <summary>
+        /// 组织机构法人的姓名。 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。	
+        /// </summary>
+        [JsonProperty("ProxyLegalName")]
+        public string ProxyLegalName{ get; set; }
+
+        /// <summary>
+        /// 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
+        ///  p.s. 如果上传授权书 ，需遵循以下条件 
+        /// 1. 超管的信息（超管姓名，超管手机号）必须为必填参数。 
+        /// 2. 认证方式AuthorizationTypes必须只能是上传授权书方式	
+        /// </summary>
+        [JsonProperty("PowerOfAttorneys")]
+        public string[] PowerOfAttorneys{ get; set; }
+
+        /// <summary>
+        /// 企业认证时个性化能力信息
+        /// </summary>
+        [JsonProperty("OrganizationAuthorizationOptions")]
+        public OrganizationAuthorizationOptions OrganizationAuthorizationOptions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -206,6 +239,11 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "AutoJumpUrl", this.AutoJumpUrl);
             this.SetParamSimple(map, prefix + "TopNavigationStatus", this.TopNavigationStatus);
             this.SetParamSimple(map, prefix + "AutoActive", this.AutoActive);
+            this.SetParamSimple(map, prefix + "BusinessLicense", this.BusinessLicense);
+            this.SetParamSimple(map, prefix + "ProxyAddress", this.ProxyAddress);
+            this.SetParamSimple(map, prefix + "ProxyLegalName", this.ProxyLegalName);
+            this.SetParamArraySimple(map, prefix + "PowerOfAttorneys.", this.PowerOfAttorneys);
+            this.SetParamObj(map, prefix + "OrganizationAuthorizationOptions.", this.OrganizationAuthorizationOptions);
         }
     }
 }

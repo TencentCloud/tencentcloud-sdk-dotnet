@@ -62,7 +62,7 @@ namespace TencentCloud.Mna.V20210119.Models
         /// license付费方式： 
         /// 0，月度授权 
         /// 1，永久授权 
-        /// 若不传则默认为月度授权
+        /// 若不传则默认为月度授权，永久授权设备需要调用OrderPerLicense接口支付授权费，否则设备无法使用
         /// </summary>
         [JsonProperty("LicensePayMode")]
         public long? LicensePayMode{ get; set; }

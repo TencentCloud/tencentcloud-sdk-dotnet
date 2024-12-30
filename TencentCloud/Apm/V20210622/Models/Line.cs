@@ -44,14 +44,12 @@ namespace TencentCloud.Apm.V20210622.Models
 
         /// <summary>
         /// 数据序列
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataSerial")]
         public float?[] DataSerial{ get; set; }
 
         /// <summary>
         /// 维度列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public ApmTag[] Tags{ get; set; }

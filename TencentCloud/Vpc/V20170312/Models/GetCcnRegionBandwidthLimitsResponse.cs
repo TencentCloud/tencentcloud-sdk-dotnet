@@ -26,14 +26,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// 云联网（CCN）各地域出带宽详情。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CcnBandwidthSet")]
         public CcnBandwidthInfo[] CcnBandwidthSet{ get; set; }
 
         /// <summary>
         /// 符合条件的对象数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

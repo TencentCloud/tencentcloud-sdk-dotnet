@@ -31,7 +31,7 @@ namespace TencentCloud.Apm.V20210622.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Span分页列表
+        /// Span 分页列表
         /// </summary>
         [JsonProperty("Spans")]
         public Span[] Spans{ get; set; }

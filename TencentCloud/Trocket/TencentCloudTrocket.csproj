@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{621A4001-F8F8-394B-BCE2-5A65FE5DDEA5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1153</VersionPrefix>
+    <VersionPrefix>3.0.1154</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="V20230308\TrocketClient.cs" />
     <Compile Include="V20230308\Models\ConsumeGroupItem.cs" />
+    <Compile Include="V20230308\Models\ConsumerClient.cs" />
     <Compile Include="V20230308\Models\CreateConsumerGroupRequest.cs" />
     <Compile Include="V20230308\Models\CreateConsumerGroupResponse.cs" />
     <Compile Include="V20230308\Models\CreateInstanceRequest.cs" />
@@ -82,6 +83,8 @@
     <Compile Include="V20230308\Models\DeleteRoleResponse.cs" />
     <Compile Include="V20230308\Models\DeleteTopicRequest.cs" />
     <Compile Include="V20230308\Models\DeleteTopicResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeConsumerClientRequest.cs" />
+    <Compile Include="V20230308\Models\DescribeConsumerClientResponse.cs" />
     <Compile Include="V20230308\Models\DescribeConsumerGroupListRequest.cs" />
     <Compile Include="V20230308\Models\DescribeConsumerGroupListResponse.cs" />
     <Compile Include="V20230308\Models\DescribeConsumerGroupRequest.cs" />
@@ -183,6 +186,7 @@
     <Compile Include="V20230308\Models\SubscriptionData.cs" />
     <Compile Include="V20230308\Models\Tag.cs" />
     <Compile Include="V20230308\Models\TagFilter.cs" />
+    <Compile Include="V20230308\Models\TopicConsumeStats.cs" />
     <Compile Include="V20230308\Models\TopicItem.cs" />
     <Compile Include="V20230308\Models\VpcInfo.cs" />
   </ItemGroup>

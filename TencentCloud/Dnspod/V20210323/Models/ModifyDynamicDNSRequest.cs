@@ -43,12 +43,6 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string RecordLine{ get; set; }
 
         /// <summary>
-        /// 记录值，如 IP : 200.200.200.200， CNAME : cname.dnspod.com.， MX : mail.dnspod.com.。
-        /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
-
-        /// <summary>
         /// 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
         /// </summary>
         [JsonProperty("DomainId")]
@@ -67,6 +61,12 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string RecordLineId{ get; set; }
 
         /// <summary>
+        /// IP 地址，支持 IPv4、IPv6，例如 119.29.29.29 或者 2402:4e00::
+        /// </summary>
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
+
+        /// <summary>
         /// TTL值，如果不传，默认为域名的TTL值。
         /// </summary>
         [JsonProperty("Ttl")]
@@ -81,10 +81,10 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
             this.SetParamSimple(map, prefix + "RecordLine", this.RecordLine);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
             this.SetParamSimple(map, prefix + "DomainId", this.DomainId);
             this.SetParamSimple(map, prefix + "SubDomain", this.SubDomain);
             this.SetParamSimple(map, prefix + "RecordLineId", this.RecordLineId);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
             this.SetParamSimple(map, prefix + "Ttl", this.Ttl);
         }
     }

@@ -25,7 +25,7 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 业务系统ID	
+        /// 业务系统 ID
         /// </summary>
         [JsonProperty("InstanceKey")]
         public string InstanceKey{ get; set; }
@@ -49,38 +49,37 @@ namespace TencentCloud.Apm.V20210622.Models
         public string ExceptionFilter{ get; set; }
 
         /// <summary>
-        /// HTTP状态码过滤
+        /// HTTP 状态码过滤
         /// </summary>
         [JsonProperty("ErrorCodeFilter")]
         public string ErrorCodeFilter{ get; set; }
 
         /// <summary>
         /// 应用诊断开关（已废弃）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventEnable")]
         public bool? EventEnable{ get; set; }
 
         /// <summary>
-        /// URL收敛开关 0 关 1 开
+        /// URL 收敛开关 0 关 1 开
         /// </summary>
         [JsonProperty("UrlConvergenceSwitch")]
         public long? UrlConvergenceSwitch{ get; set; }
 
         /// <summary>
-        /// URL收敛阈值	
+        /// URL 收敛阈值	
         /// </summary>
         [JsonProperty("UrlConvergenceThreshold")]
         public long? UrlConvergenceThreshold{ get; set; }
 
         /// <summary>
-        /// URL收敛规则正则	
+        /// URL 收敛规则正则	
         /// </summary>
         [JsonProperty("UrlConvergence")]
         public string UrlConvergence{ get; set; }
 
         /// <summary>
-        /// URL排除规则正则
+        /// URL 排除规则正则
         /// </summary>
         [JsonProperty("UrlExclude")]
         public string UrlExclude{ get; set; }
@@ -93,7 +92,6 @@ namespace TencentCloud.Apm.V20210622.Models
 
         /// <summary>
         /// 日志源	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogSource")]
         public string LogSource{ get; set; }
@@ -130,7 +128,6 @@ namespace TencentCloud.Apm.V20210622.Models
 
         /// <summary>
         /// 组件列表开关（已废弃）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstrumentList")]
         public Instrument[] InstrumentList{ get; set; }

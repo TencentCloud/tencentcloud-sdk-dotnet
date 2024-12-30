@@ -26,7 +26,6 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// 云联网跨境带宽监控数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CrossBorderFlowMonitorData")]
         public CrossBorderFlowMonitorData[] CrossBorderFlowMonitorData{ get; set; }

@@ -44,7 +44,6 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 目的地域，例如：ap-shanghai
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DstRegion")]
         public string DstRegion{ get; set; }

@@ -99,7 +99,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public ContainerStdoutInfo ContainerStdout{ get; set; }
 
         /// <summary>
-        /// 日志格式化方式，用于容器采集场景。
+        /// 日志格式化方式，用于容器采集场景。 - 已废弃
         /// - stdout-docker-json：用于docker容器采集场景
         /// - stdout-containerd：用于containerd容器采集场景
         /// </summary>

@@ -25,85 +25,73 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// Trace Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// Trace ID
         /// </summary>
         [JsonProperty("TraceID")]
         public string TraceID{ get; set; }
 
         /// <summary>
         /// 日志
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Logs")]
         public SpanLog[] Logs{ get; set; }
 
         /// <summary>
         /// 标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public SpanTag[] Tags{ get; set; }
 
         /// <summary>
         /// 上报应用服务信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Process")]
         public SpanProcess Process{ get; set; }
 
         /// <summary>
         /// 产生时间戳(毫秒)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Timestamp")]
         public long? Timestamp{ get; set; }
 
         /// <summary>
-        /// Span名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// Span 名称
         /// </summary>
         [JsonProperty("OperationName")]
         public string OperationName{ get; set; }
 
         /// <summary>
         /// 关联关系
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("References")]
         public SpanReference[] References{ get; set; }
 
         /// <summary>
         /// 产生时间戳(微秒)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
         /// 持续耗时(微妙)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Duration")]
         public long? Duration{ get; set; }
 
         /// <summary>
-        /// Span Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// Span ID
         /// </summary>
         [JsonProperty("SpanID")]
         public string SpanID{ get; set; }
 
         /// <summary>
         /// 产生时间戳(毫秒)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTimeMillis")]
         public long? StartTimeMillis{ get; set; }
 
         /// <summary>
-        /// Parent Span Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// Parent Span ID
         /// </summary>
         [JsonProperty("ParentSpanID")]
         public string ParentSpanID{ get; set; }

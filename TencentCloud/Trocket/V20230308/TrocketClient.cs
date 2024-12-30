@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1153";
+       private const string sdkVersion = "SDK_NET_3.0.1154";
 
         /// <summary>
         /// Client constructor.
@@ -386,6 +386,27 @@ namespace TencentCloud.Trocket.V20230308
         public DeleteTopicResponse DeleteTopicSync(DeleteTopicRequest req)
         {
             return InternalRequestAsync<DeleteTopicResponse>(req, "DeleteTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询消费者客户端详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerClientRequest"/></param>
+        /// <returns><see cref="DescribeConsumerClientResponse"/></returns>
+        public Task<DescribeConsumerClientResponse> DescribeConsumerClient(DescribeConsumerClientRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerClientResponse>(req, "DescribeConsumerClient");
+        }
+
+        /// <summary>
+        /// 查询消费者客户端详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerClientRequest"/></param>
+        /// <returns><see cref="DescribeConsumerClientResponse"/></returns>
+        public DescribeConsumerClientResponse DescribeConsumerClientSync(DescribeConsumerClientRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerClientResponse>(req, "DescribeConsumerClient")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

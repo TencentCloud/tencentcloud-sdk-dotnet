@@ -32,7 +32,7 @@ namespace TencentCloud.Thpc.V20220401.Models
         public string NodeInstanceId{ get; set; }
 
         /// <summary>
-        /// 节点活动状态。取值范围：<br><li>RUNNING：运行中<br><li>SUCCESSFUL：活动成功<br><li>FAILED：活动失败
+        /// 节点活动状态。取值范围：<br><li>RUNNING：运行中</li><br><li>SUCCESSFUL：活动成功</li><br><li>FAILED：活动失败</li>	
         /// </summary>
         [JsonProperty("NodeActivityStatus")]
         public string NodeActivityStatus{ get; set; }

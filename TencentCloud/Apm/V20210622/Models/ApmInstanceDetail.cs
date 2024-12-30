@@ -25,253 +25,219 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 存储使用量(MB)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 存储使用量( MB )
         /// </summary>
         [JsonProperty("AmountOfUsedStorage")]
         public float? AmountOfUsedStorage{ get; set; }
 
         /// <summary>
-        /// 实例名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 业务系统名
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 实例所属tag列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 业务系统所属 Tag 列表
         /// </summary>
         [JsonProperty("Tags")]
         public ApmTag[] Tags{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// 业务系统 ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 创建人Uin
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 创建人 Uin
         /// </summary>
         [JsonProperty("CreateUin")]
         public string CreateUin{ get; set; }
 
         /// <summary>
-        /// 该实例已上报的服务端应用数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 该业务系统已上报的服务端应用数量
         /// </summary>
         [JsonProperty("ServiceCount")]
         public long? ServiceCount{ get; set; }
 
         /// <summary>
-        /// 日均上报Span数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 日均上报 Span 数
         /// </summary>
         [JsonProperty("CountOfReportSpanPerDay")]
         public long? CountOfReportSpanPerDay{ get; set; }
 
         /// <summary>
-        /// AppId信息
+        /// AppID 信息
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// Trace数据保存时长
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// Trace 数据保存时长
         /// </summary>
         [JsonProperty("TraceDuration")]
         public long? TraceDuration{ get; set; }
 
         /// <summary>
-        /// 实例描述信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 业务系统描述信息
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 实例状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 业务系统状态
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 实例所属地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 业务系统所属地域
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 实例上报额度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 业务系统上报额度
         /// </summary>
         [JsonProperty("SpanDailyCounters")]
         public long? SpanDailyCounters{ get; set; }
 
         /// <summary>
-        /// 实例是否开通计费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 业务系统是否开通计费
         /// </summary>
         [JsonProperty("BillingInstance")]
         public long? BillingInstance{ get; set; }
 
         /// <summary>
         /// 错误率阈值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrRateThreshold")]
         public long? ErrRateThreshold{ get; set; }
 
         /// <summary>
         /// 采样率阈值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SampleRate")]
         public long? SampleRate{ get; set; }
 
         /// <summary>
         /// 是否开启错误采样 0  关 1 开
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorSample")]
         public long? ErrorSample{ get; set; }
 
         /// <summary>
         /// 慢调用保存阈值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SlowRequestSavedThreshold")]
         public long? SlowRequestSavedThreshold{ get; set; }
 
         /// <summary>
-        /// cls日志所在地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// CLS 日志所在地域
         /// </summary>
         [JsonProperty("LogRegion")]
         public string LogRegion{ get; set; }
 
         /// <summary>
         /// 日志来源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogSource")]
         public string LogSource{ get; set; }
 
         /// <summary>
         /// 日志功能开关 0 关 | 1 开
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsRelatedLog")]
         public long? IsRelatedLog{ get; set; }
 
         /// <summary>
         /// 日志主题ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogTopicID")]
         public string LogTopicID{ get; set; }
 
         /// <summary>
         /// 该实例已上报的客户端应用数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientCount")]
         public long? ClientCount{ get; set; }
 
         /// <summary>
         /// 该实例已上报的总应用数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// CLS日志集 | ES集群ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// CLS 日志集 | ES 集群ID
         /// </summary>
         [JsonProperty("LogSet")]
         public string LogSet{ get; set; }
 
         /// <summary>
-        /// Metric数据保存时长
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// Metric 数据保存时长
         /// </summary>
         [JsonProperty("MetricDuration")]
         public long? MetricDuration{ get; set; }
 
         /// <summary>
         /// 用户自定义展示标签列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomShowTags")]
         public string[] CustomShowTags{ get; set; }
 
         /// <summary>
-        /// 实例计费模式
+        /// 业务系统计费模式
         /// 1为预付费
         /// 0为按量付费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 实例计费模式是否生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 业务系统计费模式是否生效
         /// </summary>
         [JsonProperty("PayModeEffective")]
         public bool? PayModeEffective{ get; set; }
 
         /// <summary>
         /// 响应时间满意阈值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResponseDurationWarningThreshold")]
         public long? ResponseDurationWarningThreshold{ get; set; }
 
         /// <summary>
         /// 是否免费（0=否，1=限额免费，2=完全免费），默认0
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Free")]
         public long? Free{ get; set; }
 
         /// <summary>
-        /// 是否tsf默认业务系统（0=否，1-是）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 是否 tsf 默认业务系统（0=否，1-是）
         /// </summary>
         [JsonProperty("DefaultTSF")]
         public long? DefaultTSF{ get; set; }
 
         /// <summary>
-        /// 是否关联dashboard： 0 关 1 开
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 是否关联 Dashboard： 0 关 1 开
         /// </summary>
         [JsonProperty("IsRelatedDashboard")]
         public long? IsRelatedDashboard{ get; set; }
 
         /// <summary>
-        /// dashboard ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// Dashboard ID
         /// </summary>
         [JsonProperty("DashboardTopicID")]
         public string DashboardTopicID{ get; set; }
 
         /// <summary>
         /// 是否开启组件漏洞检测
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsInstrumentationVulnerabilityScan")]
         public long? IsInstrumentationVulnerabilityScan{ get; set; }
 
         /// <summary>
-        /// 是否开启SQL注入分析
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 是否开启 SQL 注入分析
         /// </summary>
         [JsonProperty("IsSqlInjectionAnalysis")]
         public long? IsSqlInjectionAnalysis{ get; set; }

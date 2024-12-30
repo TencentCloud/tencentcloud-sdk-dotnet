@@ -26,21 +26,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// 策略列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Policys")]
         public CcnRouteTableInputPolicy[] Policys{ get; set; }
 
         /// <summary>
         /// 版本号。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyVersion")]
         public ulong? PolicyVersion{ get; set; }
 
         /// <summary>
         /// 创建时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

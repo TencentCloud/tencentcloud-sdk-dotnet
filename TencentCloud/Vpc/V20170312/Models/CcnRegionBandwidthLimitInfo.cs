@@ -26,21 +26,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// 源地域，例如：ap-shanghai
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceRegion")]
         public string SourceRegion{ get; set; }
 
         /// <summary>
         /// 目的地域， 例如：ap-shanghai
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DestinationRegion")]
         public string DestinationRegion{ get; set; }
 
         /// <summary>
         /// 出带宽上限，单位：Mbps。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BandwidthLimit")]
         public ulong? BandwidthLimit{ get; set; }

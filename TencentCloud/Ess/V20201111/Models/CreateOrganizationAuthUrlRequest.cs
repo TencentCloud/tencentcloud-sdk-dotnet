@@ -113,18 +113,24 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 对方打开链接认证时，法人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+        /// 
+        /// p.s. 仅在法人姓名不为空时有效
         /// </summary>
         [JsonProperty("LegalNameSame")]
         public bool? LegalNameSame{ get; set; }
 
         /// <summary>
         /// 对方打开链接认证时，认证人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+        /// 
+        /// p.s. 仅在认证人姓名不为空时有效
         /// </summary>
         [JsonProperty("AdminNameSame")]
         public bool? AdminNameSame{ get; set; }
 
         /// <summary>
         /// 对方打开链接认证时，认证人居民身份证件号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+        /// 
+        /// p.s. 仅在认证人身份证号不为空时有效
         /// </summary>
         [JsonProperty("AdminIdCardNumberSame")]
         public bool? AdminIdCardNumberSame{ get; set; }
@@ -134,12 +140,17 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li>
         /// <li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li>
         /// </ul>
+        /// 
+        /// p.s. 仅在认证人手机号不为空时有效
         /// </summary>
         [JsonProperty("AdminMobileSame")]
         public bool? AdminMobileSame{ get; set; }
 
         /// <summary>
         /// 对方打开链接认证时，企业名称是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+        /// 
+        /// 
+        /// p.s. 仅在企业名称不为空时有效
         /// </summary>
         [JsonProperty("OrganizationNameSame")]
         public bool? OrganizationNameSame{ get; set; }
@@ -173,6 +184,16 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("Initialization")]
         public ulong?[] Initialization{ get; set; }
 
+        /// <summary>
+        /// 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。 
+        /// 授权书可以通过接口[生成企业授权书](https://qian.tencent.com/developers/companyApis/organizations/CreateOrganizationAuthFile) 来获得。
+        /// p.s. 如果上传授权书 ，需遵循以下条件 
+        /// 1.  超管的信息（超管姓名，超管手机号）必须为必填参数。
+        /// 2.  认证方式AuthorizationTypes必须只能是上传授权书方式 
+        /// </summary>
+        [JsonProperty("PowerOfAttorneys")]
+        public string[] PowerOfAttorneys{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -199,6 +220,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "BusinessLicense", this.BusinessLicense);
             this.SetParamSimple(map, prefix + "Endpoint", this.Endpoint);
             this.SetParamArraySimple(map, prefix + "Initialization.", this.Initialization);
+            this.SetParamArraySimple(map, prefix + "PowerOfAttorneys.", this.PowerOfAttorneys);
         }
     }
 }

@@ -24,12 +24,19 @@ namespace TencentCloud.Vpc.V20170312.Models
     public class CcnInstanceInfo : AbstractModel
     {
         
+        /// <summary>
+        /// 云联网唯一ID。
+        /// </summary>
+        [JsonProperty("CcnId")]
+        public string CcnId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "CcnId", this.CcnId);
         }
     }
 }

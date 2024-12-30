@@ -26,18 +26,21 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// 平台。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
 
         /// <summary>
         /// 软件版本。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SoftwareVersion")]
         public string SoftwareVersion{ get; set; }
 
         /// <summary>
         /// 供应商名称。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VendorName")]
         public string VendorName{ get; set; }

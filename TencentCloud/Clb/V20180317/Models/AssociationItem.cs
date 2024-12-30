@@ -81,6 +81,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("ListenerName")]
         public string ListenerName{ get; set; }
 
+        /// <summary>
+        /// 关联目标组的权重， 该参数只有v2新版目标组生效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Weight")]
+        public ulong? Weight{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +103,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
             this.SetParamSimple(map, prefix + "ListenerName", this.ListenerName);
+            this.SetParamSimple(map, prefix + "Weight", this.Weight);
         }
     }
 }

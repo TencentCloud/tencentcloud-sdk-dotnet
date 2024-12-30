@@ -50,28 +50,24 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// as-path操作
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperateAsPath")]
         public string OperateAsPath{ get; set; }
 
         /// <summary>
         /// as-path操作模式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsPathOperateMode")]
         public string AsPathOperateMode{ get; set; }
 
         /// <summary>
         /// community操作
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperateCommunitySet")]
         public string[] OperateCommunitySet{ get; set; }
 
         /// <summary>
         /// community操作模式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CommunityOperateMode")]
         public string CommunityOperateMode{ get; set; }

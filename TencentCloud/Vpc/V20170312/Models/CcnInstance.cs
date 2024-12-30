@@ -54,14 +54,12 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 实例关联的路由表ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RouteTableId")]
         public string RouteTableId{ get; set; }
 
         /// <summary>
         /// 实例付费方式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrderType")]
         public string OrderType{ get; set; }

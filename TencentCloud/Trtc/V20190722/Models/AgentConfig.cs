@@ -74,6 +74,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("TurnDetectionMode")]
         public ulong? TurnDetectionMode{ get; set; }
 
+        /// <summary>
+        /// 是否过滤掉用户只说了一个字的句子，true表示过滤，false表示不过滤，默认值为true
+        /// </summary>
+        [JsonProperty("FilterOneWord")]
+        public bool? FilterOneWord{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +94,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "InterruptMode", this.InterruptMode);
             this.SetParamSimple(map, prefix + "InterruptSpeechDuration", this.InterruptSpeechDuration);
             this.SetParamSimple(map, prefix + "TurnDetectionMode", this.TurnDetectionMode);
+            this.SetParamSimple(map, prefix + "FilterOneWord", this.FilterOneWord);
         }
     }
 }

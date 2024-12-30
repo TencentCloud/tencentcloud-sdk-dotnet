@@ -122,6 +122,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("ServiceExportTo")]
         public string[] ServiceExportTo{ get; set; }
 
+        /// <summary>
+        /// 是否开启同步到全局注册中心	
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SyncToGlobalRegistry")]
+        public bool? SyncToGlobalRegistry{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +149,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamArraySimple(map, prefix + "RemoveUserIds.", this.RemoveUserIds);
             this.SetParamArraySimple(map, prefix + "RemoveGroupIds.", this.RemoveGroupIds);
             this.SetParamArraySimple(map, prefix + "ServiceExportTo.", this.ServiceExportTo);
+            this.SetParamSimple(map, prefix + "SyncToGlobalRegistry", this.SyncToGlobalRegistry);
         }
     }
 }
