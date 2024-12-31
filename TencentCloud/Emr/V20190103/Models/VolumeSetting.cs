@@ -29,7 +29,6 @@ namespace TencentCloud.Emr.V20190103.Models
         /// <li>HOST_PATH表示支持本机路径</li>
         /// <li>NEW_PVC表示新建PVC</li>
         /// 组件角色支持的数据卷类型可参考 EMR on TKE 集群部署说明：[部署说明](https://cloud.tencent.com/document/product/589/94254)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VolumeType")]
         public string VolumeType{ get; set; }

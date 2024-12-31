@@ -26,133 +26,114 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 提交IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientIP")]
         public string ClientIP{ get; set; }
 
         /// <summary>
         /// CPU总时间(ns)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CPUCost")]
         public long? CPUCost{ get; set; }
 
         /// <summary>
         /// 默认DB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultDB")]
         public string DefaultDB{ get; set; }
 
         /// <summary>
         /// 结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
         /// 执行IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutionIP")]
         public string ExecutionIP{ get; set; }
 
         /// <summary>
         /// 查询ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueryID")]
         public string QueryID{ get; set; }
 
         /// <summary>
         /// 查询类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueryType")]
         public string QueryType{ get; set; }
 
         /// <summary>
         /// 消耗总内存(bytes)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemCost")]
         public long? MemCost{ get; set; }
 
         /// <summary>
         /// plan阶段CPU占用(ns)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PlanCpuCosts")]
         public long? PlanCpuCosts{ get; set; }
 
         /// <summary>
         /// plan阶段内存占用(bytes)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PlanMemCosts")]
         public long? PlanMemCosts{ get; set; }
 
         /// <summary>
         /// 执行时长
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueryTime")]
         public long? QueryTime{ get; set; }
 
         /// <summary>
         /// 资源组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceGroup")]
         public string ResourceGroup{ get; set; }
 
         /// <summary>
         /// 获取行数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReturnRows")]
         public long? ReturnRows{ get; set; }
 
         /// <summary>
         /// 扫描数据量(bytes)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanBytes")]
         public long? ScanBytes{ get; set; }
 
         /// <summary>
         /// 扫描行数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanRows")]
         public long? ScanRows{ get; set; }
 
         /// <summary>
         /// 开始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BeginTime")]
         public long? BeginTime{ get; set; }
 
         /// <summary>
         /// 执行状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutionState")]
         public string ExecutionState{ get; set; }
 
         /// <summary>
         /// 执行语句
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutionStatement")]
         public string ExecutionStatement{ get; set; }
 
         /// <summary>
         /// 用户
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }

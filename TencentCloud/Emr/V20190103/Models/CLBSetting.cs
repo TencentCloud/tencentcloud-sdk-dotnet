@@ -26,7 +26,6 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// CLB类型，PUBLIC_IP表示支持公网CLB和INTERNAL_IP表示支持内网CLB字段 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CLBType")]
         public string CLBType{ get; set; }

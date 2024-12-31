@@ -26,91 +26,78 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 属性
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Attribute")]
         public string Attribute{ get; set; }
 
         /// <summary>
         /// 当前生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InEffect")]
         public string InEffect{ get; set; }
 
         /// <summary>
         /// 待生效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PendingEffectiveness")]
         public string PendingEffectiveness{ get; set; }
 
         /// <summary>
         /// 操作
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
 
         /// <summary>
         /// 队列
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Queue")]
         public string Queue{ get; set; }
 
         /// <summary>
         /// 配置集
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigSet")]
         public string ConfigSet{ get; set; }
 
         /// <summary>
         /// 标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LabelName")]
         public string LabelName{ get; set; }
 
         /// <summary>
         /// 当前所在位置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InEffectIndex")]
         public string InEffectIndex{ get; set; }
 
         /// <summary>
         /// 待生效的位置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PendingEffectIndex")]
         public string PendingEffectIndex{ get; set; }
 
         /// <summary>
         /// 计划模式名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PlanName")]
         public string PlanName{ get; set; }
 
         /// <summary>
         /// 标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
         /// 放置规则
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
         /// 用户名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }

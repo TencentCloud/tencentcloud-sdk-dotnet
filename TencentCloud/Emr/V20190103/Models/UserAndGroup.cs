@@ -26,14 +26,12 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 用户名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
         /// 用户组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserGroup")]
         public string UserGroup{ get; set; }

@@ -80,42 +80,36 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 补偿扩容，0表示不开启，1表示开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CompensateFlag")]
         public long? CompensateFlag{ get; set; }
 
         /// <summary>
         /// 补偿次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CompensateCount")]
         public long? CompensateCount{ get; set; }
 
         /// <summary>
         /// 重试次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RetryCount")]
         public ulong? RetryCount{ get; set; }
 
         /// <summary>
         /// 重试信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RetryInfo")]
         public string RetryInfo{ get; set; }
 
         /// <summary>
         /// 重试英文描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RetryEnReason")]
         public string RetryEnReason{ get; set; }
 
         /// <summary>
         /// 重试描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RetryReason")]
         public string RetryReason{ get; set; }

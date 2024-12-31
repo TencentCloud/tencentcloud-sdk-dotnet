@@ -26,7 +26,6 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 权重，范围1-100
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }

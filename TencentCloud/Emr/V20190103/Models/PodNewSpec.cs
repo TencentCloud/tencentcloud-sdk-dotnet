@@ -83,21 +83,18 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 代表vpc网络唯一id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// 代表vpc子网唯一id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
         /// pod name
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PodName")]
         public string PodName{ get; set; }

@@ -50,28 +50,24 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 扫描分区数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanPartitionNum")]
         public long? ScanPartitionNum{ get; set; }
 
         /// <summary>
         /// 扫描总行数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanRowNum")]
         public long? ScanRowNum{ get; set; }
 
         /// <summary>
         /// 扫描总文件数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanFileNum")]
         public long? ScanFileNum{ get; set; }
 
         /// <summary>
         /// 查询扫描总数据量(单位B)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanTotalData")]
         public long? ScanTotalData{ get; set; }
@@ -85,42 +81,36 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 输出总行数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputRowNum")]
         public long? OutputRowNum{ get; set; }
 
         /// <summary>
         /// 输出总文件数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputFileNum")]
         public long? OutputFileNum{ get; set; }
 
         /// <summary>
         /// 输出分区数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputPartitionNum")]
         public long? OutputPartitionNum{ get; set; }
 
         /// <summary>
         /// 输出总数据量（单位B）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputTotalData")]
         public long? OutputTotalData{ get; set; }
 
         /// <summary>
         /// 开始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BeginTime")]
         public long? BeginTime{ get; set; }
 
         /// <summary>
         /// 结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }

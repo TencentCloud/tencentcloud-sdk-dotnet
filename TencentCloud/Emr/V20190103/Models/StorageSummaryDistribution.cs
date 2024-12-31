@@ -26,14 +26,12 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 数据项
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetricItem")]
         public string MetricItem{ get; set; }
 
         /// <summary>
         /// 数据项描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }

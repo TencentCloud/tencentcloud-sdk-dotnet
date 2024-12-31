@@ -51,14 +51,12 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 是否可点击
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Clickable")]
         public bool? Clickable{ get; set; }
 
         /// <summary>
         /// 展示的名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Title")]
         public string Title{ get; set; }

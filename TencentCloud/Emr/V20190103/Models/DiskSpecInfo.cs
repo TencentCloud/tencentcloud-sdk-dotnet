@@ -26,7 +26,6 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 磁盘数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }
@@ -48,21 +47,18 @@ namespace TencentCloud.Emr.V20190103.Models
         /// <li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
         /// <li>CLOUD_THROUGHPUT：表示吞吐型云硬盘。</li>
         /// <li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
         /// 数据容量，单位为GB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
         /// 额外性能
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtraPerformance")]
         public long? ExtraPerformance{ get; set; }

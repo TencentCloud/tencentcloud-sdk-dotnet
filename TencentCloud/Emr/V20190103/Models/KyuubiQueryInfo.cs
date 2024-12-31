@@ -26,84 +26,72 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 提交IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientIP")]
         public string ClientIP{ get; set; }
 
         /// <summary>
         /// 执行时长
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Duration")]
         public long? Duration{ get; set; }
 
         /// <summary>
         /// 结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
         /// Engine Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineID")]
         public string EngineID{ get; set; }
 
         /// <summary>
         /// 计算引擎
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineType")]
         public string EngineType{ get; set; }
 
         /// <summary>
         /// ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
         /// Session Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SessionID")]
         public string SessionID{ get; set; }
 
         /// <summary>
         /// 开始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BeginTime")]
         public long? BeginTime{ get; set; }
 
         /// <summary>
         /// 执行状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutionState")]
         public string ExecutionState{ get; set; }
 
         /// <summary>
         /// 执行语句
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutionStatement")]
         public string ExecutionStatement{ get; set; }
 
         /// <summary>
         /// Statement Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatementID")]
         public string StatementID{ get; set; }
 
         /// <summary>
         /// 提交用户
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }

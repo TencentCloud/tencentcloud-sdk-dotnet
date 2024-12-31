@@ -32,7 +32,6 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 参数value
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PValue")]
         public string PValue{ get; set; }

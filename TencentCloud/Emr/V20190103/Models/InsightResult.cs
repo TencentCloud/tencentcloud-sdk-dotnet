@@ -26,14 +26,12 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 当Type为HIVE时，是Hive查询ID，当Type为MAPREDUCE，SPARK，TEZ时则是YarnAppID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
         /// <summary>
         /// 洞察应用的类型，HIVE,SPARK,MAPREDUCE,TEZ
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -68,70 +66,60 @@ namespace TencentCloud.Emr.V20190103.Models
         /// TEZ-TezMemWaste:Memory资源浪费
         /// TEZ-TezSlowTask:慢Task
         /// TEZ-TezTaskGC:TasksGC
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleID")]
         public string RuleID{ get; set; }
 
         /// <summary>
         /// 洞察规则名字，可参考RuleID的说明
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
         /// 洞察规则解释
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleExplain")]
         public string RuleExplain{ get; set; }
 
         /// <summary>
         /// 详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Detail")]
         public string Detail{ get; set; }
 
         /// <summary>
         /// 建议信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
         /// 洞察异常衡量值，同类型的洞察项越大越严重，不同类型的洞察项无对比意义
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public long? Value{ get; set; }
 
         /// <summary>
         /// 调度任务执行ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScheduleTaskExecID")]
         public string ScheduleTaskExecID{ get; set; }
 
         /// <summary>
         /// 调度流，DAG
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScheduleFlowName")]
         public string ScheduleFlowName{ get; set; }
 
         /// <summary>
         /// 调度flow中的某个task节点
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScheduleTaskName")]
         public string ScheduleTaskName{ get; set; }
 
         /// <summary>
         /// Yarn任务的部分核心配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobConf")]
         public string JobConf{ get; set; }

@@ -26,28 +26,24 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 指标名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Metric")]
         public string Metric{ get; set; }
 
         /// <summary>
         /// 第一个数据时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("First")]
         public long? First{ get; set; }
 
         /// <summary>
         /// 最后一个数据时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Last")]
         public long? Last{ get; set; }
 
         /// <summary>
         /// 采样点时间间隔
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Interval")]
         public long? Interval{ get; set; }

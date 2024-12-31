@@ -26,28 +26,24 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 已使用配额
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UsedQuota")]
         public long? UsedQuota{ get; set; }
 
         /// <summary>
         /// 剩余配额
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RemainingQuota")]
         public long? RemainingQuota{ get; set; }
 
         /// <summary>
         /// 总配额
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalQuota")]
         public long? TotalQuota{ get; set; }
 
         /// <summary>
         /// 可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

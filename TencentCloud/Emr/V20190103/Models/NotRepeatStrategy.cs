@@ -26,7 +26,6 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 该次任务执行的具体完整时间，格式为"2020-07-13 00:00:00"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecuteAt")]
         public string ExecuteAt{ get; set; }

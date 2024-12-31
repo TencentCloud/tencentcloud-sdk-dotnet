@@ -105,7 +105,6 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 节点类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeFlagFilter")]
         public string NodeFlagFilter{ get; set; }
@@ -119,7 +118,6 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 角色是否支持监控
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSupportRoleMonitor")]
         public bool? IsSupportRoleMonitor{ get; set; }
@@ -133,28 +131,24 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 测试环境api强校验，现网没有，emrcc接口返回有。不加会报错
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HAState")]
         public string HAState{ get; set; }
 
         /// <summary>
         /// NameService名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NameService")]
         public string NameService{ get; set; }
 
         /// <summary>
         /// 是否支持联邦
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsFederation")]
         public bool? IsFederation{ get; set; }
 
         /// <summary>
         /// datanode是否是维护状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataNodeMaintenanceState")]
         public long? DataNodeMaintenanceState{ get; set; }

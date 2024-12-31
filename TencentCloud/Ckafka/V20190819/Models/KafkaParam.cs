@@ -147,6 +147,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("KeepPartition")]
         public bool? KeepPartition{ get; set; }
 
+        /// <summary>
+        /// 正则匹配Topic列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TopicRegularExpression")]
+        public string TopicRegularExpression{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -171,6 +178,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "MsgMultiple", this.MsgMultiple);
             this.SetParamSimple(map, prefix + "ConnectorSyncType", this.ConnectorSyncType);
             this.SetParamSimple(map, prefix + "KeepPartition", this.KeepPartition);
+            this.SetParamSimple(map, prefix + "TopicRegularExpression", this.TopicRegularExpression);
         }
     }
 }

@@ -26,28 +26,24 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 依赖关系，0:被其他集群依赖，1:依赖其他集群
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DependType")]
         public long? DependType{ get; set; }
 
         /// <summary>
         /// 共用组件
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Service")]
         public string Service{ get; set; }
 
         /// <summary>
         /// 共用集群
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
         /// 共用集群状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterStatus")]
         public long? ClusterStatus{ get; set; }

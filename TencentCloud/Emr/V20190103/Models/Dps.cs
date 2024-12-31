@@ -26,14 +26,12 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Timestamp")]
         public string Timestamp{ get; set; }
 
         /// <summary>
         /// 采样值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

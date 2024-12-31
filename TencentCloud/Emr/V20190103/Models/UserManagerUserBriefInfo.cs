@@ -44,7 +44,6 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 用户创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -57,7 +56,6 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// keytab文件的下载地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DownLoadKeyTabUrl")]
         public string DownLoadKeyTabUrl{ get; set; }

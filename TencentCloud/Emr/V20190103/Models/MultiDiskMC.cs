@@ -26,7 +26,6 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 该类型云盘个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }
@@ -45,21 +44,18 @@ namespace TencentCloud.Emr.V20190103.Models
         /// 14 : 大数据型云硬盘
         /// 15 : 高IO型云硬盘
         /// 16 : 远端SSD盘
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
         /// 磁盘大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Size")]
         public string Size{ get; set; }
 
         /// <summary>
         /// 云盘大小,单位b
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Volume")]
         public long? Volume{ get; set; }

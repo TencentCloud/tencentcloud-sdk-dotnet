@@ -33,7 +33,6 @@ namespace TencentCloud.Emr.V20190103.Models
         /// - 3：删除
         /// - 4：克隆，与新建子队列的行为一样，特别的对于`fair`，可以复制子队列到新建队列
         /// - 6：编辑-增量更新
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OpType")]
         public ulong? OpType{ get; set; }
@@ -46,14 +45,12 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 新建队列 传root的MyId；新建子队列 传 选中队列的 myId；克隆 要传 选中队列 parentId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParentId")]
         public string ParentId{ get; set; }
 
         /// <summary>
         /// 编辑、删除 传选中队列的 myId。克隆只有在调度器是`fair`时才需要传，用来复制子队列到新队列。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MyId")]
         public string MyId{ get; set; }

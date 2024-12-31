@@ -26,14 +26,12 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 主机路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
         /// 主机路径类型，当前默认DirectoryOrCreate
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

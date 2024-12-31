@@ -33,7 +33,6 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 自动续费标记，0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }

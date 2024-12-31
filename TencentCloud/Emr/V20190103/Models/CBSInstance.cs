@@ -26,84 +26,72 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 云硬盘ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskId")]
         public string DiskId{ get; set; }
 
         /// <summary>
         /// 云硬盘类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskUsage")]
         public string DiskUsage{ get; set; }
 
         /// <summary>
         /// 云硬盘名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskName")]
         public string DiskName{ get; set; }
 
         /// <summary>
         /// 云硬盘大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
         /// 云盘介质类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
         /// 是否跟随实例删除
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeleteWithInstance")]
         public bool? DeleteWithInstance{ get; set; }
 
         /// <summary>
         /// 云硬盘收费类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskChargeType")]
         public string DiskChargeType{ get; set; }
 
         /// <summary>
         /// 云硬盘运行状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskState")]
         public string DiskState{ get; set; }
 
         /// <summary>
         /// 是否自动续费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }
 
         /// <summary>
         /// 到期时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeadlineTime")]
         public string DeadlineTime{ get; set; }
 
         /// <summary>
         /// 云盘是否挂载到云主机上
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Attached")]
         public bool? Attached{ get; set; }
 
         /// <summary>
         /// 当前时间距离盘到期的天数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DifferDaysOfDeadline")]
         public long? DifferDaysOfDeadline{ get; set; }
@@ -117,14 +105,12 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 云硬盘挂载的云主机ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// 云盘是否为共享型云盘。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Shareable")]
         public bool? Shareable{ get; set; }

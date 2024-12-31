@@ -81,14 +81,12 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 系统盘大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RootSize")]
         public long? RootSize{ get; set; }
 
         /// <summary>
         /// 系统盘类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RootStorageType")]
         public long? RootStorageType{ get; set; }

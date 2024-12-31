@@ -33,28 +33,24 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// Master节点个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MasterNodeSize")]
         public long? MasterNodeSize{ get; set; }
 
         /// <summary>
         /// Core节点个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CoreNodeSize")]
         public long? CoreNodeSize{ get; set; }
 
         /// <summary>
         /// Task节点个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskNodeSize")]
         public long? TaskNodeSize{ get; set; }
 
         /// <summary>
         /// Common节点个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComNodeSize")]
         public long? ComNodeSize{ get; set; }
@@ -89,56 +85,48 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 是否使用COS
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OnCos")]
         public bool? OnCos{ get; set; }
 
         /// <summary>
         /// 收费类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChargeType")]
         public long? ChargeType{ get; set; }
 
         /// <summary>
         /// Router节点个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RouterNodeSize")]
         public long? RouterNodeSize{ get; set; }
 
         /// <summary>
         /// 是否支持HA
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportHA")]
         public bool? SupportHA{ get; set; }
 
         /// <summary>
         /// 是否支持安全模式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecurityOn")]
         public bool? SecurityOn{ get; set; }
 
         /// <summary>
         /// 安全组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string SecurityGroup{ get; set; }
 
         /// <summary>
         /// 是否开启Cbs加密
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CbsEncrypt")]
         public long? CbsEncrypt{ get; set; }
 
         /// <summary>
         /// 自定义应用角色。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationRole")]
         public string ApplicationRole{ get; set; }
@@ -152,7 +140,6 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// SSH密钥Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicKeyId")]
         public string PublicKeyId{ get; set; }

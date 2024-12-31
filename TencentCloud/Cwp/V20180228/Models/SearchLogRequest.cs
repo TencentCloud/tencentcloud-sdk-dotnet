@@ -37,7 +37,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 检索分析语句，最大长度为12KB，查询语法可参考文档https://cloud.tencent.com/document/product/296/50508
+        /// 检索分析语句，最大长度为12KB，查询语法可参考文档 https://cloud.tencent.com/document/product/296/50508
         /// </summary>
         [JsonProperty("QueryString")]
         public string QueryString{ get; set; }

@@ -61,7 +61,7 @@ namespace TencentCloud.Pts.V20210728.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 分组
+        /// 分组；取值范围参见 DescribeMetricLabelWithValues 接口返回的指标及其支持的标签名
         /// </summary>
         [JsonProperty("GroupBy")]
         public string[] GroupBy{ get; set; }

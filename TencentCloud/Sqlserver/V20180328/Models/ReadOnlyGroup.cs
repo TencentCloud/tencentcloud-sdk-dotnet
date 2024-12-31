@@ -120,6 +120,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("TgwWanVPort")]
         public ulong? TgwWanVPort{ get; set; }
 
+        /// <summary>
+        /// RO只读组类型，1-按照一个实例一个只读组的方式发货，2-新建只读组后发货的所有实例都在这个只读组下面， 3-发货的所有实例都在已有的只读组下面
+        /// </summary>
+        [JsonProperty("ReadOnlyGroupType")]
+        public long? ReadOnlyGroupType{ get; set; }
+
+        /// <summary>
+        /// 部署RO副本模式，0-默认不升级主实例，1-强制升级主实例完成RO部署
+        /// </summary>
+        [JsonProperty("ReadOnlyGroupForcedUpgrade")]
+        public long? ReadOnlyGroupForcedUpgrade{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +154,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamArrayObj(map, prefix + "ReadOnlyInstanceSet.", this.ReadOnlyInstanceSet);
             this.SetParamSimple(map, prefix + "DnsPodDomain", this.DnsPodDomain);
             this.SetParamSimple(map, prefix + "TgwWanVPort", this.TgwWanVPort);
+            this.SetParamSimple(map, prefix + "ReadOnlyGroupType", this.ReadOnlyGroupType);
+            this.SetParamSimple(map, prefix + "ReadOnlyGroupForcedUpgrade", this.ReadOnlyGroupForcedUpgrade);
         }
     }
 }

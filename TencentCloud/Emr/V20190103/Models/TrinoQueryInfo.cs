@@ -26,133 +26,114 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// catalog
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Catalog")]
         public string Catalog{ get; set; }
 
         /// <summary>
         /// 提交IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientIpAddr")]
         public string ClientIpAddr{ get; set; }
 
         /// <summary>
         /// 切片数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CompletedSplits")]
         public string CompletedSplits{ get; set; }
 
         /// <summary>
         /// CPU时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CpuTime")]
         public long? CpuTime{ get; set; }
 
         /// <summary>
         /// 累计内存
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CumulativeMemory")]
         public long? CumulativeMemory{ get; set; }
 
         /// <summary>
         /// 执行时长
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DurationMillis")]
         public long? DurationMillis{ get; set; }
 
         /// <summary>
         /// 结束时间 (s)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
         /// 查询ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
         /// 内部传输量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InternalNetworkBytes")]
         public long? InternalNetworkBytes{ get; set; }
 
         /// <summary>
         /// 输出字节数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputBytes")]
         public long? OutputBytes{ get; set; }
 
         /// <summary>
         /// 峰值内存量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PeakUserMemoryBytes")]
         public long? PeakUserMemoryBytes{ get; set; }
 
         /// <summary>
         /// 物理输入量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PhysicalInputBytes")]
         public long? PhysicalInputBytes{ get; set; }
 
         /// <summary>
         /// 处理输入量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcessedInputBytes")]
         public long? ProcessedInputBytes{ get; set; }
 
         /// <summary>
         /// 编译时长
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SqlCompileTime")]
         public long? SqlCompileTime{ get; set; }
 
         /// <summary>
         /// 开始时间 (s)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
         /// 执行状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
         /// 执行语句
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Statement")]
         public string Statement{ get; set; }
 
         /// <summary>
         /// 提交用户
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
         /// 写入字节数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WrittenBytes")]
         public long? WrittenBytes{ get; set; }

@@ -32,7 +32,6 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 步骤名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -51,7 +50,6 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 子流程标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubFlowFlag")]
         public string SubFlowFlag{ get; set; }
@@ -64,14 +62,12 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 步骤运行状态描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
         /// 运行进度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Progress")]
         public float? Progress{ get; set; }
@@ -92,35 +88,30 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 是否有详情信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HadWoodDetail")]
         public bool? HadWoodDetail{ get; set; }
 
         /// <summary>
         /// Wood子流程Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WoodJobId")]
         public ulong? WoodJobId{ get; set; }
 
         /// <summary>
         /// 多语言版本Key
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LanguageKey")]
         public string LanguageKey{ get; set; }
 
         /// <summary>
         /// 如果stage失败，失败原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedReason")]
         public string FailedReason{ get; set; }
 
         /// <summary>
         /// 步骤耗时
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeConsuming")]
         public string TimeConsuming{ get; set; }

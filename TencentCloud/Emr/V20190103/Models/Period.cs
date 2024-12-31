@@ -26,14 +26,12 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 时间跨度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
 
         /// <summary>
         /// 时间单位，"m"代表月。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }

@@ -26,28 +26,24 @@ namespace TencentCloud.Tcb.V20180608.Models
         
         /// <summary>
         /// 统计类型 新增NEWUSER 和登录 LOGIN
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatisticalType")]
         public string StatisticalType{ get; set; }
 
         /// <summary>
         /// 统计周期：日DAY，周WEEK，月MONTH
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatisticalCycle")]
         public string StatisticalCycle{ get; set; }
 
         /// <summary>
         /// 统计总量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
 
         /// <summary>
         /// 更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

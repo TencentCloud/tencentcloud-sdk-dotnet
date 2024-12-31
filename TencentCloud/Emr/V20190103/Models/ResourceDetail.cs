@@ -26,63 +26,54 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 规格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Spec")]
         public string Spec{ get; set; }
 
         /// <summary>
         /// 规格名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpecName")]
         public string SpecName{ get; set; }
 
         /// <summary>
         /// 硬盘类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageType")]
         public long? StorageType{ get; set; }
 
         /// <summary>
         /// 硬盘类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
         /// 系统盘大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RootSize")]
         public long? RootSize{ get; set; }
 
         /// <summary>
         /// 内存大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemSize")]
         public long? MemSize{ get; set; }
 
         /// <summary>
         /// CPU个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
         /// 硬盘大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
         /// 规格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }

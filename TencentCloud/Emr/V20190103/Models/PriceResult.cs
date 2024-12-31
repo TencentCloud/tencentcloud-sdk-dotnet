@@ -26,14 +26,12 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 原价
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginalCost")]
         public float? OriginalCost{ get; set; }
 
         /// <summary>
         /// 折扣价
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiscountCost")]
         public float? DiscountCost{ get; set; }

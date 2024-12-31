@@ -26,189 +26,162 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 执行语句
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Statement")]
         public string Statement{ get; set; }
 
         /// <summary>
         /// 查询ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
         /// 开始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
         /// 运行时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Duration")]
         public string Duration{ get; set; }
 
         /// <summary>
         /// 结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
         /// 执行状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
         /// 获取行数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RowsFetched")]
         public long? RowsFetched{ get; set; }
 
         /// <summary>
         /// 用户
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
         /// 默认DB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultDB")]
         public string DefaultDB{ get; set; }
 
         /// <summary>
         /// 执行的Coordinator节点
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Coordinator")]
         public string Coordinator{ get; set; }
 
         /// <summary>
         /// 单节点内存峰值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxNodePeakMemoryUsage")]
         public string MaxNodePeakMemoryUsage{ get; set; }
 
         /// <summary>
         /// 查询类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueryType")]
         public string QueryType{ get; set; }
 
         /// <summary>
         /// 扫描的HDFS行数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanHDFSRows")]
         public long? ScanHDFSRows{ get; set; }
 
         /// <summary>
         /// 扫描的Kudu行数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanKUDURows")]
         public long? ScanKUDURows{ get; set; }
 
         /// <summary>
         /// 扫描的总行数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanRowsTotal")]
         public long? ScanRowsTotal{ get; set; }
 
         /// <summary>
         /// 读取的总字节数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalBytesRead")]
         public long? TotalBytesRead{ get; set; }
 
         /// <summary>
         /// 发送的总字节数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalBytesSent")]
         public long? TotalBytesSent{ get; set; }
 
         /// <summary>
         /// CPU总时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCpuTime")]
         public long? TotalCpuTime{ get; set; }
 
         /// <summary>
         /// 内部数据发送总量(Bytes)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalInnerBytesSent")]
         public long? TotalInnerBytesSent{ get; set; }
 
         /// <summary>
         /// 内部扫描数据发送总量(Bytes)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalScanBytesSent")]
         public long? TotalScanBytesSent{ get; set; }
 
         /// <summary>
         /// 预估单节点内存
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EstimatedPerHostMemBytes")]
         public long? EstimatedPerHostMemBytes{ get; set; }
 
         /// <summary>
         /// 从缓存中获取的数据行数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NumRowsFetchedFromCache")]
         public long? NumRowsFetchedFromCache{ get; set; }
 
         /// <summary>
         /// 会话ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
         /// 单节点内存峰值和(Bytes)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PerNodePeakMemoryBytesSum")]
         public long? PerNodePeakMemoryBytesSum{ get; set; }
 
         /// <summary>
         /// 后端个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackendsCount")]
         public long? BackendsCount{ get; set; }
 
         /// <summary>
         /// fragment数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FragmentInstancesCount")]
         public long? FragmentInstancesCount{ get; set; }
 
         /// <summary>
         /// 剩余未完成Fragment数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RemainingFragmentCount")]
         public long? RemainingFragmentCount{ get; set; }

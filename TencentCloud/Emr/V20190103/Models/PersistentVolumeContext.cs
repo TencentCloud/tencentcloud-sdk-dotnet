@@ -26,21 +26,18 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 磁盘大小，单位为GB。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
 
         /// <summary>
         /// 磁盘类型。CLOUD_PREMIUM;CLOUD_SSD
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
         /// 磁盘数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskNum")]
         public long? DiskNum{ get; set; }

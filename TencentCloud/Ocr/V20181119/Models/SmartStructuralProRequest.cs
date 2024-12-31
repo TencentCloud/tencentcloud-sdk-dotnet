@@ -60,6 +60,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }
 
+        /// <summary>
+        /// 是否开启全文字段坐标值的识别
+        /// </summary>
+        [JsonProperty("EnableCoord")]
+        public bool? EnableCoord{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArraySimple(map, prefix + "ItemNames.", this.ItemNames);
             this.SetParamSimple(map, prefix + "ReturnFullText", this.ReturnFullText);
             this.SetParamSimple(map, prefix + "ConfigId", this.ConfigId);
+            this.SetParamSimple(map, prefix + "EnableCoord", this.EnableCoord);
         }
     }
 }

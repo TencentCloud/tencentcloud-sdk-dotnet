@@ -26,14 +26,12 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 节点类型，Master/Core/Task/Router/Common
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
 
         /// <summary>
         /// 节点数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeSize")]
         public ulong? NodeSize{ get; set; }

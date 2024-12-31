@@ -38,7 +38,6 @@ namespace TencentCloud.Gwlb.V20240906.Models
 
         /// <summary>
         /// 网关负载均衡所属私有网络。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -64,21 +63,18 @@ namespace TencentCloud.Gwlb.V20240906.Models
 
         /// <summary>
         /// 关联的目标组唯一ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetGroupId")]
         public string TargetGroupId{ get; set; }
 
         /// <summary>
         /// 是否开启删除保护功能。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeleteProtect")]
         public bool? DeleteProtect{ get; set; }
 
         /// <summary>
         /// 负载均衡实例的标签信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }
@@ -91,21 +87,18 @@ namespace TencentCloud.Gwlb.V20240906.Models
 
         /// <summary>
         /// 网关负载均衡实例的计费类型，POSTPAID_BY_HOUR：按量计费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
 
         /// <summary>
         /// 0：表示未被隔离，1：表示被隔离。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Isolation")]
         public ulong? Isolation{ get; set; }
 
         /// <summary>
         /// 负载均衡实例被隔离的时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsolatedTime")]
         public string IsolatedTime{ get; set; }

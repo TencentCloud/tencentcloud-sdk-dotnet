@@ -26,343 +26,294 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 应用ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
         /// 用户
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
         /// 应用名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 队列
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Queue")]
         public string Queue{ get; set; }
 
         /// <summary>
         /// 应用类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationType")]
         public string ApplicationType{ get; set; }
 
         /// <summary>
         /// 运行时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ElapsedTime")]
         public string ElapsedTime{ get; set; }
 
         /// <summary>
         /// 状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
         /// 最终状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FinalStatus")]
         public string FinalStatus{ get; set; }
 
         /// <summary>
         /// 进度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
         /// 开始时间毫秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartedTime")]
         public long? StartedTime{ get; set; }
 
         /// <summary>
         /// 结束时间毫秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FinishedTime")]
         public long? FinishedTime{ get; set; }
 
         /// <summary>
         /// 申请内存MB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AllocatedMB")]
         public long? AllocatedMB{ get; set; }
 
         /// <summary>
         /// 申请VCores
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AllocatedVCores")]
         public long? AllocatedVCores{ get; set; }
 
         /// <summary>
         /// 运行的Containers数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunningContainers")]
         public long? RunningContainers{ get; set; }
 
         /// <summary>
         /// 内存MB*时间秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemorySeconds")]
         public long? MemorySeconds{ get; set; }
 
         /// <summary>
         /// VCores*时间秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VCoreSeconds")]
         public long? VCoreSeconds{ get; set; }
 
         /// <summary>
         /// 队列资源占比
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueueUsagePercentage")]
         public float? QueueUsagePercentage{ get; set; }
 
         /// <summary>
         /// 集群资源占比
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterUsagePercentage")]
         public float? ClusterUsagePercentage{ get; set; }
 
         /// <summary>
         /// 预占用的内存
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PreemptedResourceMB")]
         public long? PreemptedResourceMB{ get; set; }
 
         /// <summary>
         /// 预占用的VCore
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PreemptedResourceVCores")]
         public long? PreemptedResourceVCores{ get; set; }
 
         /// <summary>
         /// 预占的非应用程序主节点容器数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NumNonAMContainerPreempted")]
         public long? NumNonAMContainerPreempted{ get; set; }
 
         /// <summary>
         /// AM预占用的容器数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NumAMContainerPreempted")]
         public long? NumAMContainerPreempted{ get; set; }
 
         /// <summary>
         /// Map总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MapsTotal")]
         public long? MapsTotal{ get; set; }
 
         /// <summary>
         /// 完成的Map数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MapsCompleted")]
         public long? MapsCompleted{ get; set; }
 
         /// <summary>
         /// Reduce总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReducesTotal")]
         public long? ReducesTotal{ get; set; }
 
         /// <summary>
         /// 完成的Reduce数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReducesCompleted")]
         public long? ReducesCompleted{ get; set; }
 
         /// <summary>
         /// 平均Map时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AvgMapTime")]
         public long? AvgMapTime{ get; set; }
 
         /// <summary>
         /// 平均Reduce时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AvgReduceTime")]
         public long? AvgReduceTime{ get; set; }
 
         /// <summary>
         /// 平均Shuffle时间毫秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AvgShuffleTime")]
         public long? AvgShuffleTime{ get; set; }
 
         /// <summary>
         /// 平均Merge时间毫秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AvgMergeTime")]
         public long? AvgMergeTime{ get; set; }
 
         /// <summary>
         /// 失败的Reduce执行次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedReduceAttempts")]
         public long? FailedReduceAttempts{ get; set; }
 
         /// <summary>
         /// Kill的Reduce执行次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KilledReduceAttempts")]
         public long? KilledReduceAttempts{ get; set; }
 
         /// <summary>
         /// 成功的Reduce执行次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SuccessfulReduceAttempts")]
         public long? SuccessfulReduceAttempts{ get; set; }
 
         /// <summary>
         /// 失败的Map执行次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedMapAttempts")]
         public long? FailedMapAttempts{ get; set; }
 
         /// <summary>
         /// Kill的Map执行次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KilledMapAttempts")]
         public long? KilledMapAttempts{ get; set; }
 
         /// <summary>
         /// 成功的Map执行次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SuccessfulMapAttempts")]
         public long? SuccessfulMapAttempts{ get; set; }
 
         /// <summary>
         /// GC毫秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GcTimeMillis")]
         public long? GcTimeMillis{ get; set; }
 
         /// <summary>
         /// Map使用的VCore毫秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VCoreMillisMaps")]
         public long? VCoreMillisMaps{ get; set; }
 
         /// <summary>
         /// Map使用的内存毫秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MbMillisMaps")]
         public long? MbMillisMaps{ get; set; }
 
         /// <summary>
         /// Reduce使用的VCore毫秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VCoreMillisReduces")]
         public long? VCoreMillisReduces{ get; set; }
 
         /// <summary>
         /// Reduce使用的内存毫秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MbMillisReduces")]
         public long? MbMillisReduces{ get; set; }
 
         /// <summary>
         /// 启动Map的总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalLaunchedMaps")]
         public long? TotalLaunchedMaps{ get; set; }
 
         /// <summary>
         /// 启动Reduce的总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalLaunchedReduces")]
         public long? TotalLaunchedReduces{ get; set; }
 
         /// <summary>
         /// Map输入记录数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MapInputRecords")]
         public long? MapInputRecords{ get; set; }
 
         /// <summary>
         /// Map输出记录数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MapOutputRecords")]
         public long? MapOutputRecords{ get; set; }
 
         /// <summary>
         /// Reduce输入记录数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReduceInputRecords")]
         public long? ReduceInputRecords{ get; set; }
 
         /// <summary>
         /// Reduce输出记录数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReduceOutputRecords")]
         public long? ReduceOutputRecords{ get; set; }
 
         /// <summary>
         /// HDFS写入字节数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HDFSBytesWritten")]
         public long? HDFSBytesWritten{ get; set; }
 
         /// <summary>
         /// HDFS读取字节数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HDFSBytesRead")]
         public long? HDFSBytesRead{ get; set; }

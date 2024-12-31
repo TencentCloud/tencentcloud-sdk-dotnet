@@ -26,28 +26,24 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 步骤
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Step")]
         public string Step{ get; set; }
 
         /// <summary>
         /// 进度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Progress")]
         public string Progress{ get; set; }
 
         /// <summary>
         /// 失败信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailReason")]
         public string FailReason{ get; set; }
 
         /// <summary>
         /// 用来获取详情的id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobId")]
         public ulong? JobId{ get; set; }

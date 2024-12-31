@@ -26,14 +26,12 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 子网信息（名字）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetName")]
         public string SubnetName{ get; set; }
 
         /// <summary>
         /// 子网信息（ID）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }

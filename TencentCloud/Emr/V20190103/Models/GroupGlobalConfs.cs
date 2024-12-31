@@ -33,21 +33,18 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 当前伸缩组扩容出来的节点数量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentNodes")]
         public long? CurrentNodes{ get; set; }
 
         /// <summary>
         /// 当前伸缩组扩容出来的后付费节点数量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentPostPaidNodes")]
         public long? CurrentPostPaidNodes{ get; set; }
 
         /// <summary>
         /// 当前伸缩组扩容出来的竞价实例节点数量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentSpotPaidNodes")]
         public long? CurrentSpotPaidNodes{ get; set; }

@@ -26,10 +26,15 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 用户名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
+
+        /// <summary>
+        /// 用户来源
+        /// </summary>
+        [JsonProperty("UserType")]
+        public string UserType{ get; set; }
 
 
         /// <summary>
@@ -38,6 +43,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
+            this.SetParamSimple(map, prefix + "UserType", this.UserType);
         }
     }
 }

@@ -26,28 +26,24 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }
 
         /// <summary>
         /// 名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 磁盘类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
         /// 指定磁盘大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultDiskSize")]
         public long? DefaultDiskSize{ get; set; }

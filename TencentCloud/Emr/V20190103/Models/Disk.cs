@@ -28,21 +28,18 @@ namespace TencentCloud.Emr.V20190103.Models
         /// 数据盘类型，创建EMR容器集群实例可选
         /// <li> SSD云盘: CLOUD_SSD</li>
         /// <li>高效云盘: CLOUD_PREMIUM</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
         /// 单块大小GB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskCapacity")]
         public long? DiskCapacity{ get; set; }
 
         /// <summary>
         /// 数据盘数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskNumber")]
         public long? DiskNumber{ get; set; }

@@ -26,42 +26,36 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 查询语句
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Statement")]
         public string Statement{ get; set; }
 
         /// <summary>
         /// 执行时长
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Duration")]
         public string Duration{ get; set; }
 
         /// <summary>
         /// 开始时间毫秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
         /// 结束时间毫秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
         /// 状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
         /// 用户
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
@@ -75,14 +69,12 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 执行引擎
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecutionEngine")]
         public string ExecutionEngine{ get; set; }
 
         /// <summary>
         /// 查询ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

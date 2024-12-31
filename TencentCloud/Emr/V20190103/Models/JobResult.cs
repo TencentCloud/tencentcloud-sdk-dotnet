@@ -26,7 +26,6 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 任务步骤名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -36,7 +35,6 @@ namespace TencentCloud.Emr.V20190103.Models
         /// "CONTINUE"，跳过当前失败步骤，继续后续步骤。
         /// “TERMINATE_CLUSTER”，终止当前及后续步骤，并销毁集群。
         /// “CANCEL_AND_WAIT”，取消当前步骤并阻塞等待处理。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActionOnFailure")]
         public string ActionOnFailure{ get; set; }
@@ -47,14 +45,12 @@ namespace TencentCloud.Emr.V20190103.Models
         /// “JobFlowStepStatusRunning”，任务步骤正在执行。
         /// “JobFlowStepStatusFailed”，任务步骤执行失败。
         /// “JobFlowStepStatusSucceed”，任务步骤执行成功。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobState")]
         public string JobState{ get; set; }
 
         /// <summary>
         /// YARN任务ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }

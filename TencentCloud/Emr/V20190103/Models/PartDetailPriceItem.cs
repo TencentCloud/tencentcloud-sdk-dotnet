@@ -26,42 +26,36 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 类型包括：节点->node、系统盘->rootDisk、云数据盘->dataDisk、metaDB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
         /// 单价（原价）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Price")]
         public float? Price{ get; set; }
 
         /// <summary>
         /// 单价（折扣价）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealCost")]
         public float? RealCost{ get; set; }
 
         /// <summary>
         /// 总价（折扣价）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealTotalCost")]
         public float? RealTotalCost{ get; set; }
 
         /// <summary>
         /// 折扣
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Policy")]
         public float? Policy{ get; set; }
 
         /// <summary>
         /// 数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GoodsNum")]
         public long? GoodsNum{ get; set; }
