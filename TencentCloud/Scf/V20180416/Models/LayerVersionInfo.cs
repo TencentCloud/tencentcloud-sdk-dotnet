@@ -26,7 +26,6 @@ namespace TencentCloud.Scf.V20180416.Models
         
         /// <summary>
         /// 版本适用的运行时
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CompatibleRuntimes")]
         public string[] CompatibleRuntimes{ get; set; }
@@ -39,7 +38,6 @@ namespace TencentCloud.Scf.V20180416.Models
 
         /// <summary>
         /// 版本描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -71,7 +69,6 @@ namespace TencentCloud.Scf.V20180416.Models
 
         /// <summary>
         /// Stamp
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Stamp")]
         public string Stamp{ get; set; }

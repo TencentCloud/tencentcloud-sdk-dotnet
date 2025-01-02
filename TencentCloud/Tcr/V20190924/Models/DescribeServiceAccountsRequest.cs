@@ -43,7 +43,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         public bool? EmbedPermission{ get; set; }
 
         /// <summary>
-        /// 过滤条件
+        /// 过滤条件，key 目前只支持ServiceAccountName
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

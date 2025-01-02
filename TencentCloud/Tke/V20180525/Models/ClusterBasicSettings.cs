@@ -49,7 +49,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterDescription{ get; set; }
 
         /// <summary>
-        /// 私有网络ID，形如vpc-xxx。创建托管空集群时必传。
+        /// 私有网络ID，形如vpc-e55paxnt。创建托管空集群时必传。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }

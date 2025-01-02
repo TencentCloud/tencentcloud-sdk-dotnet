@@ -26,42 +26,36 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// CCN实例ID。形如：ccn-f49l6u0z。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CcnId")]
         public string CcnId{ get; set; }
 
         /// <summary>
         /// qos id。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QosId")]
         public ulong? QosId{ get; set; }
 
         /// <summary>
         /// 描述。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QosPolicyDescription")]
         public string QosPolicyDescription{ get; set; }
 
         /// <summary>
         /// 名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QosPolicyName")]
         public string QosPolicyName{ get; set; }
 
         /// <summary>
         /// 带宽。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bandwidth")]
         public ulong? Bandwidth{ get; set; }
 
         /// <summary>
         /// 流量调度策略ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QosPolicyId")]
         public string QosPolicyId{ get; set; }

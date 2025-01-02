@@ -126,6 +126,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("BurstPerformance")]
         public bool? BurstPerformance{ get; set; }
 
+        /// <summary>
+        /// 指定云硬盘加密类型，取值为ENCRYPT_V1和ENCRYPT_V2，分别表示第一代和第二代加密技术，两种加密技术互不兼容。推荐优先使用第二代加密技术ENCRYPT_V2，第一代加密技术仅支持在部分老旧机型使用。该参数仅当创建加密云硬盘时有效。
+        /// </summary>
+        [JsonProperty("EncryptType")]
+        public string EncryptType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +155,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamObj(map, prefix + "AutoMountConfiguration.", this.AutoMountConfiguration);
             this.SetParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
             this.SetParamSimple(map, prefix + "BurstPerformance", this.BurstPerformance);
+            this.SetParamSimple(map, prefix + "EncryptType", this.EncryptType);
         }
     }
 }

@@ -41,7 +41,7 @@ namespace TencentCloud.Tke.V20180525.Models
         ///     类型：String
         ///     必选：否
         /// 
-        /// ·  "Name":"Tags","Values": ["abc:1"]
+        /// ·  "Name":"Tags","Values": ["product:tke"]
         ///     按照【标签键值对】进行过滤。
         ///     类型：String
         ///     必选：否

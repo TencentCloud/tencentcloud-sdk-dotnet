@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1155";
+       private const string sdkVersion = "SDK_NET_3.0.1156";
 
         /// <summary>
         /// Client constructor.
@@ -104,31 +104,6 @@ namespace TencentCloud.Ocr.V20181119
         public ArithmeticOCRResponse ArithmeticOCRSync(ArithmeticOCRRequest req)
         {
             return InternalRequestAsync<ArithmeticOCRResponse>(req, "ArithmeticOCR")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 本接口支持对中国大陆主流银行卡正反面关键字段的检测与识别，包括卡号、卡类型、卡名字、银行信息、有效期。支持竖排异形卡识别、多角度旋转图片识别。支持对复印件、翻拍件、边框遮挡的银行卡进行告警，可应用于各种银行卡信息有效性校验场景，如金融行业身份认证、第三方支付绑卡等场景。
-        /// 
-        /// 默认接口请求频率限制：10次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="BankCardOCRRequest"/></param>
-        /// <returns><see cref="BankCardOCRResponse"/></returns>
-        public Task<BankCardOCRResponse> BankCardOCR(BankCardOCRRequest req)
-        {
-            return InternalRequestAsync<BankCardOCRResponse>(req, "BankCardOCR");
-        }
-
-        /// <summary>
-        /// 本接口支持对中国大陆主流银行卡正反面关键字段的检测与识别，包括卡号、卡类型、卡名字、银行信息、有效期。支持竖排异形卡识别、多角度旋转图片识别。支持对复印件、翻拍件、边框遮挡的银行卡进行告警，可应用于各种银行卡信息有效性校验场景，如金融行业身份认证、第三方支付绑卡等场景。
-        /// 
-        /// 默认接口请求频率限制：10次/秒。
-        /// </summary>
-        /// <param name="req"><see cref="BankCardOCRRequest"/></param>
-        /// <returns><see cref="BankCardOCRResponse"/></returns>
-        public BankCardOCRResponse BankCardOCRSync(BankCardOCRRequest req)
-        {
-            return InternalRequestAsync<BankCardOCRResponse>(req, "BankCardOCR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

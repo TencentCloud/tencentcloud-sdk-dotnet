@@ -44,21 +44,18 @@ namespace TencentCloud.Scf.V20180416.Models
 
         /// <summary>
         /// 命名空间配额总量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalConcurrencyMem")]
         public long? TotalConcurrencyMem{ get; set; }
 
         /// <summary>
         /// 命名空间并发使用量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalAllocatedConcurrencyMem")]
         public long? TotalAllocatedConcurrencyMem{ get; set; }
 
         /// <summary>
         /// 命名空间预置使用量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalAllocatedProvisionedMem")]
         public long? TotalAllocatedProvisionedMem{ get; set; }

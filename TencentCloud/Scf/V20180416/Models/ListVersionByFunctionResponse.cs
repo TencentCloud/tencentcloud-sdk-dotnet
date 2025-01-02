@@ -32,14 +32,12 @@ namespace TencentCloud.Scf.V20180416.Models
 
         /// <summary>
         /// 函数版本列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Versions")]
         public FunctionVersion[] Versions{ get; set; }
 
         /// <summary>
         /// 函数版本总数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

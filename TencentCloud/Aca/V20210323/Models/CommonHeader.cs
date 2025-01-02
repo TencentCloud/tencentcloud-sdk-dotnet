@@ -31,7 +31,7 @@ namespace TencentCloud.Aca.V20210323.Models
         public string HospitalId{ get; set; }
 
         /// <summary>
-        /// 合作方ID
+        /// token
         /// </summary>
         [JsonProperty("Token")]
         public string Token{ get; set; }

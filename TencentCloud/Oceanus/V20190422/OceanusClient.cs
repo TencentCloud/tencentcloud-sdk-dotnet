@@ -28,7 +28,7 @@ namespace TencentCloud.Oceanus.V20190422
 
        private const string endpoint = "oceanus.tencentcloudapi.com";
        private const string version = "2019-04-22";
-       private const string sdkVersion = "SDK_NET_3.0.1155";
+       private const string sdkVersion = "SDK_NET_3.0.1156";
 
         /// <summary>
         /// Client constructor.

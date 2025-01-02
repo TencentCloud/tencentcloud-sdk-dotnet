@@ -28,7 +28,7 @@ namespace TencentCloud.Scf.V20180416
 
        private const string endpoint = "scf.tencentcloudapi.com";
        private const string version = "2018-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.1155";
+       private const string sdkVersion = "SDK_NET_3.0.1156";
 
         /// <summary>
         /// Client constructor.
@@ -253,6 +253,27 @@ namespace TencentCloud.Scf.V20180416
         public DeleteFunctionResponse DeleteFunctionSync(DeleteFunctionRequest req)
         {
             return InternalRequestAsync<DeleteFunctionResponse>(req, "DeleteFunction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口根据传入参数删除函数的指定版本。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFunctionVersionRequest"/></param>
+        /// <returns><see cref="DeleteFunctionVersionResponse"/></returns>
+        public Task<DeleteFunctionVersionResponse> DeleteFunctionVersion(DeleteFunctionVersionRequest req)
+        {
+            return InternalRequestAsync<DeleteFunctionVersionResponse>(req, "DeleteFunctionVersion");
+        }
+
+        /// <summary>
+        /// 该接口根据传入参数删除函数的指定版本。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFunctionVersionRequest"/></param>
+        /// <returns><see cref="DeleteFunctionVersionResponse"/></returns>
+        public DeleteFunctionVersionResponse DeleteFunctionVersionSync(DeleteFunctionVersionRequest req)
+        {
+            return InternalRequestAsync<DeleteFunctionVersionResponse>(req, "DeleteFunctionVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

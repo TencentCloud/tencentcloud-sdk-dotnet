@@ -26,28 +26,24 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// 探测模式，默认值NQA，不可修改。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProbeType")]
         public string ProbeType{ get; set; }
 
         /// <summary>
         /// 探测间隔，腾讯云两次健康检查间隔时间，范围【1000-5000】，单位ms。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProbeInterval")]
         public long? ProbeInterval{ get; set; }
 
         /// <summary>
         /// 探测次数，连续N次健康检查失败后执行路由切换，范围【3-8】，单位次。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProbeThreshold")]
         public long? ProbeThreshold{ get; set; }
 
         /// <summary>
         /// 探测超时时间，范围【10-5000】，单位ms。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProbeTimeout")]
         public long? ProbeTimeout{ get; set; }

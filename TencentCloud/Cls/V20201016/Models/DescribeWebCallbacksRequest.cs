@@ -25,15 +25,17 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// <li> name
+        /// - name
         /// 按照【告警渠道回调配置名称】进行过滤。
         /// 类型：String
         /// 必选：否
-        /// <li> webCallbackId
+        /// 
+        /// - webCallbackId
         /// 按照【告警渠道回调配置ID】进行过滤。
         /// 类型：String
         /// 必选：否
-        /// <li> type
+        /// 
+        /// - type
         /// 按照【告警渠道回调配置渠道类型】进行过滤。
         /// 类型：String
         /// 必选：否

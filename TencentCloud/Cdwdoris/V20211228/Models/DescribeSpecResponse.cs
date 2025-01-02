@@ -25,13 +25,13 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     {
         
         /// <summary>
-        /// zookeeper节点规格描述
+        /// fe节点规格描述
         /// </summary>
         [JsonProperty("MasterSpec")]
         public ResourceSpec[] MasterSpec{ get; set; }
 
         /// <summary>
-        /// 数据节点规格描述
+        /// be节点规格描述
         /// </summary>
         [JsonProperty("CoreSpec")]
         public ResourceSpec[] CoreSpec{ get; set; }
@@ -42,6 +42,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// </summary>
         [JsonProperty("AttachCBSSpec")]
         public DiskSpec[] AttachCBSSpec{ get; set; }
+
+        /// <summary>
+        /// cn节点列表
+        /// </summary>
+        [JsonProperty("CNSpec")]
+        public ResourceSpec[] CNSpec{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -58,6 +64,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamArrayObj(map, prefix + "MasterSpec.", this.MasterSpec);
             this.SetParamArrayObj(map, prefix + "CoreSpec.", this.CoreSpec);
             this.SetParamArrayObj(map, prefix + "AttachCBSSpec.", this.AttachCBSSpec);
+            this.SetParamArrayObj(map, prefix + "CNSpec.", this.CNSpec);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

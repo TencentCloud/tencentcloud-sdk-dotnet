@@ -92,7 +92,6 @@ namespace TencentCloud.Scf.V20180416.Models
 
         /// <summary>
         /// Eb触发器数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Eb")]
         public long? Eb{ get; set; }

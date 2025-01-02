@@ -32,77 +32,66 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 实例的创建时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
         /// 实例的过期时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public string ExpiredTime{ get; set; }
 
         /// <summary>
         /// 带宽实例的唯一ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionFlowControlId")]
         public string RegionFlowControlId{ get; set; }
 
         /// <summary>
         /// 带宽是否自动续费的标记。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }
 
         /// <summary>
         /// 描述带宽的地域和限速上限信息。在地域间限速的情况下才会返回参数，出口限速模式不返回。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CcnRegionBandwidthLimit")]
         public CcnRegionBandwidthLimitInfo CcnRegionBandwidthLimit{ get; set; }
 
         /// <summary>
         /// 云市场实例ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MarketId")]
         public string MarketId{ get; set; }
 
         /// <summary>
         /// 实例所属用户主账号ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserAccountID")]
         public string UserAccountID{ get; set; }
 
         /// <summary>
         /// 是否跨境，`true`表示跨境，反之不跨境。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsCrossBorder")]
         public bool? IsCrossBorder{ get; set; }
 
         /// <summary>
         /// `true`表示封禁，地域间流量不通，`false`解禁，地域间流量正常
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSecurityLock")]
         public bool? IsSecurityLock{ get; set; }
 
         /// <summary>
         /// `POSTPAID`表示后付费，`PREPAID`表示预付费。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
         /// 实例更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

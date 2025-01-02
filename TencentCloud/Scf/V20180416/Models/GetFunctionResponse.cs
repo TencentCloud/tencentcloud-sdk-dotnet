@@ -239,21 +239,18 @@ namespace TencentCloud.Scf.V20180416.Models
 
         /// <summary>
         /// 文件系统配置参数，用于云函数挂载文件系统
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CfsConfig")]
         public CfsConfig CfsConfig{ get; set; }
 
         /// <summary>
         /// 函数的计费状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AvailableStatus")]
         public string AvailableStatus{ get; set; }
 
         /// <summary>
         /// 函数版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Qualifier")]
         public string Qualifier{ get; set; }
@@ -266,21 +263,18 @@ namespace TencentCloud.Scf.V20180416.Models
 
         /// <summary>
         /// 函数状态失败原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusReasons")]
         public StatusReason[] StatusReasons{ get; set; }
 
         /// <summary>
         /// 是否开启异步属性
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsyncRunEnable")]
         public string AsyncRunEnable{ get; set; }
 
         /// <summary>
         /// 是否开启事件追踪
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TraceEnable")]
         public string TraceEnable{ get; set; }
@@ -308,7 +302,6 @@ namespace TencentCloud.Scf.V20180416.Models
 
         /// <summary>
         /// 是否开启DNS缓存
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DnsCache")]
         public string DnsCache{ get; set; }

@@ -38,21 +38,18 @@ namespace TencentCloud.Scf.V20180416.Models
 
         /// <summary>
         /// 路由配置信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndpointsConfig")]
         public EndpointsConf[] EndpointsConfig{ get; set; }
 
         /// <summary>
         /// 证书配置信息，HTTPS协议必传路由配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertConfig")]
         public CertConf CertConfig{ get; set; }
 
         /// <summary>
         /// web 应用防火墙配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WafConfig")]
         public WafConf WafConfig{ get; set; }

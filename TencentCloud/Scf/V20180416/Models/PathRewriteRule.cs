@@ -26,21 +26,18 @@ namespace TencentCloud.Scf.V20180416.Models
         
         /// <summary>
         /// 需要重路由的路径，取值规范：/，/*，/xxx，/xxx/a，/xxx/*
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
         /// 匹配规，取值范围： WildcardRules 通配符匹配， ExactRules 精确匹配
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 替换值：比如/, /$
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Rewrite")]
         public string Rewrite{ get; set; }

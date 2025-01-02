@@ -88,12 +88,14 @@ namespace TencentCloud.Scf.V20180416.Models
         /// 日志等级
         /// </summary>
         [JsonProperty("Level")]
+        [System.Obsolete]
         public string Level{ get; set; }
 
         /// <summary>
         /// 日志来源
         /// </summary>
         [JsonProperty("Source")]
+        [System.Obsolete]
         public string Source{ get; set; }
 
         /// <summary>

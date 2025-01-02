@@ -60,6 +60,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string ModeType{ get; set; }
 
         /// <summary>
+        /// 专线网关自定义ASN，范围：45090，64512-65534 和4200000000-4294967294
+        /// </summary>
+        [JsonProperty("GatewayAsn")]
+        public ulong? GatewayAsn{ get; set; }
+
+        /// <summary>
         /// 专线网关可用区
         /// </summary>
         [JsonProperty("Zone")]
@@ -70,6 +76,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         [JsonProperty("HaZoneGroupId")]
         public string HaZoneGroupId{ get; set; }
+
+        /// <summary>
+        /// 标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
 
 
         /// <summary>
@@ -82,8 +94,10 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "NetworkInstanceId", this.NetworkInstanceId);
             this.SetParamSimple(map, prefix + "GatewayType", this.GatewayType);
             this.SetParamSimple(map, prefix + "ModeType", this.ModeType);
+            this.SetParamSimple(map, prefix + "GatewayAsn", this.GatewayAsn);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "HaZoneGroupId", this.HaZoneGroupId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

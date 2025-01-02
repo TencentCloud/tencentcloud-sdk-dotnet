@@ -26,21 +26,18 @@ namespace TencentCloud.Scf.V20180416.Models
         
         /// <summary>
         /// 定时预置名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerName")]
         public string TriggerName{ get; set; }
 
         /// <summary>
         /// 定时预置并发数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerProvisionedConcurrencyNum")]
         public ulong? TriggerProvisionedConcurrencyNum{ get; set; }
 
         /// <summary>
         /// 设置定时触发器的时间配置，cron表达式。Cron 表达式有七个必需字段，按空格分隔。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerCronConfig")]
         public string TriggerCronConfig{ get; set; }

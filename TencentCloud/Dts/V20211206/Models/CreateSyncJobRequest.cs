@@ -61,6 +61,12 @@ namespace TencentCloud.Dts.V20211206.Models
         public string Specification{ get; set; }
 
         /// <summary>
+        /// 购买时长（单位：月），当PayMode值为PrePay则此项配置有意义，默认为1月，取值范围为[1,100]
+        /// </summary>
+        [JsonProperty("TimeSpan")]
+        public ulong? TimeSpan{ get; set; }
+
+        /// <summary>
         /// 标签信息
         /// </summary>
         [JsonProperty("Tags")]
@@ -108,6 +114,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "DstDatabaseType", this.DstDatabaseType);
             this.SetParamSimple(map, prefix + "DstRegion", this.DstRegion);
             this.SetParamSimple(map, prefix + "Specification", this.Specification);
+            this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);

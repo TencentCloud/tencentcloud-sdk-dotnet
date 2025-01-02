@@ -26,14 +26,12 @@ namespace TencentCloud.Scf.V20180416.Models
         
         /// <summary>
         /// web应用防火墙是否打开， 取值范围:OPEN, CLOSE
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WafOpen")]
         public string WafOpen{ get; set; }
 
         /// <summary>
         /// web应用防火墙实例ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WafInstanceId")]
         public string WafInstanceId{ get; set; }

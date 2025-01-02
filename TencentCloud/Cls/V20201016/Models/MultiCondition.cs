@@ -33,7 +33,8 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 告警级别。0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
-        /// <li> 不填则默认为0。
+        /// 
+        /// - 不填则默认为0。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlarmLevel")]

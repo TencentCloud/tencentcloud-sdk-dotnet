@@ -46,7 +46,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string AlreadyInCluster{ get; set; }
 
         /// <summary>
-        /// 实例ID形如：ins-xxxxxxxx。
+        /// 实例ID形如：ins-e55paxnt。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tic.V20201117
 
        private const string endpoint = "tic.tencentcloudapi.com";
        private const string version = "2020-11-17";
-       private const string sdkVersion = "SDK_NET_3.0.1155";
+       private const string sdkVersion = "SDK_NET_3.0.1156";
 
         /// <summary>
         /// Client constructor.

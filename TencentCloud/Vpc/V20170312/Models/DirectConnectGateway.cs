@@ -107,35 +107,30 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 绑定的NAT网关ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NatGatewayId")]
         public string NatGatewayId{ get; set; }
 
         /// <summary>
         /// 专线网关是否支持VXLAN架构
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VXLANSupport")]
         public bool?[] VXLANSupport{ get; set; }
 
         /// <summary>
         /// 云联网路由发布模式：`standard`（标准模式）、`exquisite`（精细模式）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModeType")]
         public string ModeType{ get; set; }
 
         /// <summary>
         /// 是否为localZone专线网关。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LocalZone")]
         public bool? LocalZone{ get; set; }
 
         /// <summary>
         /// 专线网关所在可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
@@ -144,14 +139,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// 网关流控明细启用状态：
         /// 0：关闭
         /// 1：开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableFlowDetails")]
         public ulong? EnableFlowDetails{ get; set; }
 
         /// <summary>
         /// 开启、关闭网关流控明细时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowDetailsUpdateTime")]
         public string FlowDetailsUpdateTime{ get; set; }
@@ -160,7 +153,6 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// 是否支持开启网关流控明细
         /// 0：不支持
         /// 1：支持
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NewAfc")]
         public ulong? NewAfc{ get; set; }
@@ -170,17 +162,21 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// <li>`VXLAN` - VXLAN类型。</li>
         /// <li>`MPLS` - MPLS类型。</li>
         /// <li>`Hybrid` - Hybrid类型。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessNetworkType")]
         public string AccessNetworkType{ get; set; }
 
         /// <summary>
         /// 跨可用区容灾专线网关的可用区列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HaZoneList")]
         public string[] HaZoneList{ get; set; }
+
+        /// <summary>
+        /// 专线网关自定义ASN
+        /// </summary>
+        [JsonProperty("GatewayAsn")]
+        public ulong? GatewayAsn{ get; set; }
 
 
         /// <summary>
@@ -210,6 +206,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "NewAfc", this.NewAfc);
             this.SetParamSimple(map, prefix + "AccessNetworkType", this.AccessNetworkType);
             this.SetParamArraySimple(map, prefix + "HaZoneList.", this.HaZoneList);
+            this.SetParamSimple(map, prefix + "GatewayAsn", this.GatewayAsn);
         }
     }
 }

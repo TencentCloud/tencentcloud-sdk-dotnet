@@ -43,7 +43,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public EndpointsConf[] EndpointsConfig{ get; set; }
 
         /// <summary>
-        /// 证书配置信息，HTTPS协议必穿
+        /// 证书配置信息，有使用HTTPS协议时候必须传
         /// </summary>
         [JsonProperty("CertConfig")]
         public CertConf CertConfig{ get; set; }
