@@ -300,6 +300,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("TagOperation")]
         public string TagOperation{ get; set; }
 
+        /// <summary>
+        /// 通知模板绑定内容模板信息
+        /// </summary>
+        [JsonProperty("NoticeTmplBindInfos")]
+        public NoticeContentTmplBindInfo[] NoticeTmplBindInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -345,6 +351,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "IsSupportAlarmTag", this.IsSupportAlarmTag);
             this.SetParamSimple(map, prefix + "TagOperation", this.TagOperation);
+            this.SetParamArrayObj(map, prefix + "NoticeTmplBindInfos.", this.NoticeTmplBindInfos);
         }
     }
 }

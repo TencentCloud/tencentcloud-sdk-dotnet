@@ -127,7 +127,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string[] UidSet{ get; set; }
 
         /// <summary>
-        /// 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
+        /// 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务,cvmHA-云盘双机高可用，cvmRO-云盘只读副本,MultiHA-多节点,cvmMultiHA-云盘多节点
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }

@@ -49,7 +49,16 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ParentFolderId{ get; set; }
 
         /// <summary>
-        /// 目录分类
+        /// 目录分类，该值必传，枚举值如下：
+        /// ETL：数据集成
+        /// EMR：EMR
+        /// TBDS：TBDS
+        /// DLC：DLC
+        /// TDSQL：TDSQL
+        /// TCHOUSE：TCHOUSE
+        /// GENERAL：通用
+        /// TI_ONE：TI-ONE机器学习
+        /// ACROSS_WORKFLOWS：跨工作流
         /// </summary>
         [JsonProperty("TaskNodeType")]
         public string TaskNodeType{ get; set; }

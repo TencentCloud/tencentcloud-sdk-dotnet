@@ -85,7 +85,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public SSLConfig SSLConfig{ get; set; }
 
         /// <summary>
-        /// 备机只读信息
+        /// 双节点备机只读信息
         /// </summary>
         [JsonProperty("DrReadableInfo")]
         public DrReadableInfo DrReadableInfo{ get; set; }
@@ -95,6 +95,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         [JsonProperty("OldVipList")]
         public OldVip[] OldVipList{ get; set; }
+
+        /// <summary>
+        /// 操作日志采集状态，enable-采集中，disable-不可用，renew_doing-配置开启或关闭中
+        /// </summary>
+        [JsonProperty("XEventStatus")]
+        public string XEventStatus{ get; set; }
+
+        /// <summary>
+        /// 多节点备机只读信息
+        /// </summary>
+        [JsonProperty("MultiDrReadableInfo")]
+        public DrReadableInfo[] MultiDrReadableInfo{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -120,6 +132,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamObj(map, prefix + "SSLConfig.", this.SSLConfig);
             this.SetParamObj(map, prefix + "DrReadableInfo.", this.DrReadableInfo);
             this.SetParamArrayObj(map, prefix + "OldVipList.", this.OldVipList);
+            this.SetParamSimple(map, prefix + "XEventStatus", this.XEventStatus);
+            this.SetParamArrayObj(map, prefix + "MultiDrReadableInfo.", this.MultiDrReadableInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

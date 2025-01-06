@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1157";
+       private const string sdkVersion = "SDK_NET_3.0.1158";
 
         /// <summary>
         /// Client constructor.
@@ -2265,6 +2265,27 @@ namespace TencentCloud.Cdb.V20170320
         public DescribeSupportedPrivilegesResponse DescribeSupportedPrivilegesSync(DescribeSupportedPrivilegesRequest req)
         {
             return InternalRequestAsync<DescribeSupportedPrivilegesResponse>(req, "DescribeSupportedPrivileges")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口(DescribeTableColumns)用于查询云数据库实例的指定数据库表的列信息，仅支持主实例和灾备实例。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTableColumnsRequest"/></param>
+        /// <returns><see cref="DescribeTableColumnsResponse"/></returns>
+        public Task<DescribeTableColumnsResponse> DescribeTableColumns(DescribeTableColumnsRequest req)
+        {
+            return InternalRequestAsync<DescribeTableColumnsResponse>(req, "DescribeTableColumns");
+        }
+
+        /// <summary>
+        /// 本接口(DescribeTableColumns)用于查询云数据库实例的指定数据库表的列信息，仅支持主实例和灾备实例。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTableColumnsRequest"/></param>
+        /// <returns><see cref="DescribeTableColumnsResponse"/></returns>
+        public DescribeTableColumnsResponse DescribeTableColumnsSync(DescribeTableColumnsRequest req)
+        {
+            return InternalRequestAsync<DescribeTableColumnsResponse>(req, "DescribeTableColumns")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

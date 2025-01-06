@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1157</VersionPrefix>
+    <VersionPrefix>3.0.1158</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -343,6 +343,8 @@
     <Compile Include="V20190423\Models\PackageConsumeStat.cs" />
     <Compile Include="V20190423\Models\PackageConsumeTask.cs" />
     <Compile Include="V20190423\Models\PackageInfo.cs" />
+    <Compile Include="V20190423\Models\PauseTWeCallDeviceRequest.cs" />
+    <Compile Include="V20190423\Models\PauseTWeCallDeviceResponse.cs" />
     <Compile Include="V20190423\Models\PositionFenceInfo.cs" />
     <Compile Include="V20190423\Models\PositionFenceItem.cs" />
     <Compile Include="V20190423\Models\PositionItem.cs" />
@@ -370,6 +372,10 @@
     <Compile Include="V20190423\Models\ResetCloudStorageEventResponse.cs" />
     <Compile Include="V20190423\Models\ResetCloudStorageRequest.cs" />
     <Compile Include="V20190423\Models\ResetCloudStorageResponse.cs" />
+    <Compile Include="V20190423\Models\ResetTWeCallDeviceRequest.cs" />
+    <Compile Include="V20190423\Models\ResetTWeCallDeviceResponse.cs" />
+    <Compile Include="V20190423\Models\ResumeWeCallDeviceRequest.cs" />
+    <Compile Include="V20190423\Models\ResumeWeCallDeviceResponse.cs" />
     <Compile Include="V20190423\Models\SearchKeyword.cs" />
     <Compile Include="V20190423\Models\SearchPositionSpaceRequest.cs" />
     <Compile Include="V20190423\Models\SearchPositionSpaceResponse.cs" />
@@ -389,6 +395,8 @@
     <Compile Include="V20190423\Models\TopicRulePayload.cs" />
     <Compile Include="V20190423\Models\TransferCloudStorageRequest.cs" />
     <Compile Include="V20190423\Models\TransferCloudStorageResponse.cs" />
+    <Compile Include="V20190423\Models\TransferTWeCallDeviceRequest.cs" />
+    <Compile Include="V20190423\Models\TransferTWeCallDeviceResponse.cs" />
     <Compile Include="V20190423\Models\UnbindDevicesRequest.cs" />
     <Compile Include="V20190423\Models\UnbindDevicesResponse.cs" />
     <Compile Include="V20190423\Models\UnbindProductsRequest.cs" />

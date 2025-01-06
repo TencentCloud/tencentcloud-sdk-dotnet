@@ -204,6 +204,27 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("AlarmReason")]
         public string AlarmReason{ get; set; }
 
+        /// <summary>
+        /// 近范围值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IndicatorTimeRangeValue")]
+        public long? IndicatorTimeRangeValue{ get; set; }
+
+        /// <summary>
+        /// 近范围单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IndicatorTimeRangeUnit")]
+        public string IndicatorTimeRangeUnit{ get; set; }
+
+        /// <summary>
+        /// 同步类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SyncType")]
+        public long? SyncType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -237,6 +258,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "MonitorObjectName", this.MonitorObjectName);
             this.SetParamSimple(map, prefix + "Threshold", this.Threshold);
             this.SetParamSimple(map, prefix + "AlarmReason", this.AlarmReason);
+            this.SetParamSimple(map, prefix + "IndicatorTimeRangeValue", this.IndicatorTimeRangeValue);
+            this.SetParamSimple(map, prefix + "IndicatorTimeRangeUnit", this.IndicatorTimeRangeUnit);
+            this.SetParamSimple(map, prefix + "SyncType", this.SyncType);
         }
     }
 }

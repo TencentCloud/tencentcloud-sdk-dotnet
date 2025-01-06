@@ -189,6 +189,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("ReceiverOnCallFormIDs")]
         public string[] ReceiverOnCallFormIDs{ get; set; }
 
+        /// <summary>
+        /// 通知内容模板ID筛选
+        /// </summary>
+        [JsonProperty("NoticeContentTmplIDs")]
+        public string[] NoticeContentTmplIDs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -221,6 +227,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "PromInsId", this.PromInsId);
             this.SetParamArraySimple(map, prefix + "ReceiverOnCallFormIDs.", this.ReceiverOnCallFormIDs);
+            this.SetParamArraySimple(map, prefix + "NoticeContentTmplIDs.", this.NoticeContentTmplIDs);
         }
     }
 }

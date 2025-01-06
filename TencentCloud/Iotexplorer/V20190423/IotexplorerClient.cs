@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1157";
+       private const string sdkVersion = "SDK_NET_3.0.1158";
 
         /// <summary>
         /// Client constructor.
@@ -2792,6 +2792,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 暂停设备
+        /// </summary>
+        /// <param name="req"><see cref="PauseTWeCallDeviceRequest"/></param>
+        /// <returns><see cref="PauseTWeCallDeviceResponse"/></returns>
+        public Task<PauseTWeCallDeviceResponse> PauseTWeCallDevice(PauseTWeCallDeviceRequest req)
+        {
+            return InternalRequestAsync<PauseTWeCallDeviceResponse>(req, "PauseTWeCallDevice");
+        }
+
+        /// <summary>
+        /// 暂停设备
+        /// </summary>
+        /// <param name="req"><see cref="PauseTWeCallDeviceRequest"/></param>
+        /// <returns><see cref="PauseTWeCallDeviceResponse"/></returns>
+        public PauseTWeCallDeviceResponse PauseTWeCallDeviceSync(PauseTWeCallDeviceRequest req)
+        {
+            return InternalRequestAsync<PauseTWeCallDeviceResponse>(req, "PauseTWeCallDevice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 发布广播消息、发布RRPC消息属于早期服务，目前已停止维护，需要从官网下线。
         /// 
         /// 发布广播消息
@@ -2989,6 +3010,48 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 重置设备
+        /// </summary>
+        /// <param name="req"><see cref="ResetTWeCallDeviceRequest"/></param>
+        /// <returns><see cref="ResetTWeCallDeviceResponse"/></returns>
+        public Task<ResetTWeCallDeviceResponse> ResetTWeCallDevice(ResetTWeCallDeviceRequest req)
+        {
+            return InternalRequestAsync<ResetTWeCallDeviceResponse>(req, "ResetTWeCallDevice");
+        }
+
+        /// <summary>
+        /// 重置设备
+        /// </summary>
+        /// <param name="req"><see cref="ResetTWeCallDeviceRequest"/></param>
+        /// <returns><see cref="ResetTWeCallDeviceResponse"/></returns>
+        public ResetTWeCallDeviceResponse ResetTWeCallDeviceSync(ResetTWeCallDeviceRequest req)
+        {
+            return InternalRequestAsync<ResetTWeCallDeviceResponse>(req, "ResetTWeCallDevice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 恢复设备
+        /// </summary>
+        /// <param name="req"><see cref="ResumeWeCallDeviceRequest"/></param>
+        /// <returns><see cref="ResumeWeCallDeviceResponse"/></returns>
+        public Task<ResumeWeCallDeviceResponse> ResumeWeCallDevice(ResumeWeCallDeviceRequest req)
+        {
+            return InternalRequestAsync<ResumeWeCallDeviceResponse>(req, "ResumeWeCallDevice");
+        }
+
+        /// <summary>
+        /// 恢复设备
+        /// </summary>
+        /// <param name="req"><see cref="ResumeWeCallDeviceRequest"/></param>
+        /// <returns><see cref="ResumeWeCallDeviceResponse"/></returns>
+        public ResumeWeCallDeviceResponse ResumeWeCallDeviceSync(ResumeWeCallDeviceRequest req)
+        {
+            return InternalRequestAsync<ResumeWeCallDeviceResponse>(req, "ResumeWeCallDevice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 搜索位置空间
         /// </summary>
         /// <param name="req"><see cref="SearchPositionSpaceRequest"/></param>
@@ -3069,6 +3132,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public TransferCloudStorageResponse TransferCloudStorageSync(TransferCloudStorageRequest req)
         {
             return InternalRequestAsync<TransferCloudStorageResponse>(req, "TransferCloudStorage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 转移设备
+        /// </summary>
+        /// <param name="req"><see cref="TransferTWeCallDeviceRequest"/></param>
+        /// <returns><see cref="TransferTWeCallDeviceResponse"/></returns>
+        public Task<TransferTWeCallDeviceResponse> TransferTWeCallDevice(TransferTWeCallDeviceRequest req)
+        {
+            return InternalRequestAsync<TransferTWeCallDeviceResponse>(req, "TransferTWeCallDevice");
+        }
+
+        /// <summary>
+        /// 转移设备
+        /// </summary>
+        /// <param name="req"><see cref="TransferTWeCallDeviceRequest"/></param>
+        /// <returns><see cref="TransferTWeCallDeviceResponse"/></returns>
+        public TransferTWeCallDeviceResponse TransferTWeCallDeviceSync(TransferTWeCallDeviceRequest req)
+        {
+            return InternalRequestAsync<TransferTWeCallDeviceResponse>(req, "TransferTWeCallDevice")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -60,6 +60,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("DRNetwork")]
         public ulong? DRNetwork{ get; set; }
 
+        /// <summary>
+        /// 备机资源ID。当DRNetwork = 1时必填
+        /// </summary>
+        [JsonProperty("DrInstanceId")]
+        public string DrInstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "OldIpRetainTime", this.OldIpRetainTime);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "DRNetwork", this.DRNetwork);
+            this.SetParamSimple(map, prefix + "DrInstanceId", this.DrInstanceId);
         }
     }
 }
