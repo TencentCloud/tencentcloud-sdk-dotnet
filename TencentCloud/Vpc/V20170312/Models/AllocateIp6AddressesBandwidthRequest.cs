@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 需要开通公网访问能力的IPV6地址
+        /// 需要开通公网访问能力的IPv6地址
         /// </summary>
         [JsonProperty("Ip6Addresses")]
         public string[] Ip6Addresses{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public long? InternetMaxBandwidthOut{ get; set; }
 
         /// <summary>
-        /// 网络计费模式。IPV6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
+        /// 网络计费模式。IPv6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
         /// </summary>
         [JsonProperty("InternetChargeType")]
         public string InternetChargeType{ get; set; }
 
         /// <summary>
-        /// 带宽包id，上移账号，申请带宽包计费模式的ipv6地址需要传入.
+        /// 带宽包id，上移账号，申请带宽包计费模式的IPv6地址需要传入.
         /// </summary>
         [JsonProperty("BandwidthPackageId")]
         public string BandwidthPackageId{ get; set; }

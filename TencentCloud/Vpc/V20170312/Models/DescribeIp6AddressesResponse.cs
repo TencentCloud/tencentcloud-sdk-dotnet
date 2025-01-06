@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 符合条件的 IPV6 数量。
+        /// 符合条件的 IPv6 数量。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// IPV6 详细信息列表。
+        /// IPv6 详细信息列表。
         /// </summary>
         [JsonProperty("AddressSet")]
         public Address[] AddressSet{ get; set; }

@@ -138,6 +138,18 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("EbSubject")]
         public string EbSubject{ get; set; }
 
+        /// <summary>
+        /// 附加告警内容
+        /// </summary>
+        [JsonProperty("AdditionalAlarmContent")]
+        public string AdditionalAlarmContent{ get; set; }
+
+        /// <summary>
+        /// 通知模板绑定信息
+        /// </summary>
+        [JsonProperty("NoticeContentTmplBindInfos")]
+        public NoticeContentTmplBindInfo[] NoticeContentTmplBindInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +175,8 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArrayObj(map, prefix + "HierarchicalNotices.", this.HierarchicalNotices);
             this.SetParamSimple(map, prefix + "MigrateFlag", this.MigrateFlag);
             this.SetParamSimple(map, prefix + "EbSubject", this.EbSubject);
+            this.SetParamSimple(map, prefix + "AdditionalAlarmContent", this.AdditionalAlarmContent);
+            this.SetParamArrayObj(map, prefix + "NoticeContentTmplBindInfos.", this.NoticeContentTmplBindInfos);
         }
     }
 }

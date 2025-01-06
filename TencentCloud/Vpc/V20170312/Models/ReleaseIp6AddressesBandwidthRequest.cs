@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// IPV6地址。Ip6Addresses和Ip6AddressIds必须且只能传一个
+        /// IPv6地址。Ip6Addresses和Ip6AddressIds必须且只能传一个
         /// </summary>
         [JsonProperty("Ip6Addresses")]
         public string[] Ip6Addresses{ get; set; }
 
         /// <summary>
-        /// IPV6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressIds必须且只能传一个。
+        /// IPv6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressIds必须且只能传一个。
         /// </summary>
         [JsonProperty("Ip6AddressIds")]
         public string[] Ip6AddressIds{ get; set; }

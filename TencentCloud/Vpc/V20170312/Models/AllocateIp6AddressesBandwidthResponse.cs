@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 弹性公网 IPV6 的唯一 ID 列表。
+        /// 传统弹性公网 IPv6 的唯一 ID 列表。
         /// </summary>
         [JsonProperty("AddressSet")]
         public string[] AddressSet{ get; set; }

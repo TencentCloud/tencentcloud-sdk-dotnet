@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0689E213-B38A-304E-8D1F-81510F158DA2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1156</VersionPrefix>
+    <VersionPrefix>3.0.1157</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -137,6 +137,8 @@
     <Compile Include="V20210527\Models\DescribeRedisProcessListResponse.cs" />
     <Compile Include="V20210527\Models\DescribeRedisTopBigKeysRequest.cs" />
     <Compile Include="V20210527\Models\DescribeRedisTopBigKeysResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeRedisTopHotKeysRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeRedisTopHotKeysResponse.cs" />
     <Compile Include="V20210527\Models\DescribeRedisTopKeyPrefixListRequest.cs" />
     <Compile Include="V20210527\Models\DescribeRedisTopKeyPrefixListResponse.cs" />
     <Compile Include="V20210527\Models\DescribeSecurityAuditLogDownloadUrlsRequest.cs" />
@@ -226,6 +228,7 @@
     <Compile Include="V20210527\Models\TaskInfo.cs" />
     <Compile Include="V20210527\Models\TemplateInfo.cs" />
     <Compile Include="V20210527\Models\TimeSlice.cs" />
+    <Compile Include="V20210527\Models\TopHotKeys.cs" />
     <Compile Include="V20210527\Models\UpdateAgentSwitchRequest.cs" />
     <Compile Include="V20210527\Models\UpdateAgentSwitchResponse.cs" />
     <Compile Include="V20210527\Models\UpdateMonitorSwitchRequest.cs" />

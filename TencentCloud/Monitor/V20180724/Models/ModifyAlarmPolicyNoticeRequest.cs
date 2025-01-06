@@ -54,6 +54,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("HierarchicalNotices")]
         public AlarmHierarchicalNotice[] HierarchicalNotices{ get; set; }
 
+        /// <summary>
+        /// 通知内容模板绑定信息
+        /// </summary>
+        [JsonProperty("NoticeContentTmplBindInfos")]
+        public NoticeContentTmplBindInfo[] NoticeContentTmplBindInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
             this.SetParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
             this.SetParamArrayObj(map, prefix + "HierarchicalNotices.", this.HierarchicalNotices);
+            this.SetParamArrayObj(map, prefix + "NoticeContentTmplBindInfos.", this.NoticeContentTmplBindInfos);
         }
     }
 }

@@ -55,7 +55,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public bool? EipDirectConnection{ get; set; }
 
         /// <summary>
-        /// 要绑定的实例所在的地域
+        /// 要绑定的实例所在地域。默认无需填写，仅限GAAP特殊场景需指定实例所在地域。
         /// </summary>
         [JsonProperty("InstanceRegion")]
         public string InstanceRegion{ get; set; }

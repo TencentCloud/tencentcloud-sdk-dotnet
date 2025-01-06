@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1156";
+       private const string sdkVersion = "SDK_NET_3.0.1157";
 
         /// <summary>
         /// Client constructor.
@@ -996,6 +996,31 @@ namespace TencentCloud.Trocket.V20230308
         public DescribeTopicListResponse DescribeTopicListSync(DescribeTopicListRequest req)
         {
             return InternalRequestAsync<DescribeTopicListResponse>(req, "DescribeTopicList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据消费组获取主题列表，Filter参数使用说明如下：
+        /// 
+        /// TopicName，主题名称过滤
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicListByGroupRequest"/></param>
+        /// <returns><see cref="DescribeTopicListByGroupResponse"/></returns>
+        public Task<DescribeTopicListByGroupResponse> DescribeTopicListByGroup(DescribeTopicListByGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeTopicListByGroupResponse>(req, "DescribeTopicListByGroup");
+        }
+
+        /// <summary>
+        /// 根据消费组获取主题列表，Filter参数使用说明如下：
+        /// 
+        /// TopicName，主题名称过滤
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicListByGroupRequest"/></param>
+        /// <returns><see cref="DescribeTopicListByGroupResponse"/></returns>
+        public DescribeTopicListByGroupResponse DescribeTopicListByGroupSync(DescribeTopicListByGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeTopicListByGroupResponse>(req, "DescribeTopicListByGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

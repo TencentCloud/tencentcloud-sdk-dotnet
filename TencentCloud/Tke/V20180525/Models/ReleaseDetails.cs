@@ -127,6 +127,27 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ComputedValues")]
         public string ComputedValues{ get; set; }
 
+        /// <summary>
+        /// chart 的来源， tke-market, others
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ChartFrom")]
+        public string ChartFrom{ get; set; }
+
+        /// <summary>
+        /// 第三方chart 的安装地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ChartURL")]
+        public string ChartURL{ get; set; }
+
+        /// <summary>
+        /// 通过chart 创建的资源
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Resources")]
+        public string Resources{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -148,6 +169,9 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "FirstDeployedTime", this.FirstDeployedTime);
             this.SetParamSimple(map, prefix + "LastDeployedTime", this.LastDeployedTime);
             this.SetParamSimple(map, prefix + "ComputedValues", this.ComputedValues);
+            this.SetParamSimple(map, prefix + "ChartFrom", this.ChartFrom);
+            this.SetParamSimple(map, prefix + "ChartURL", this.ChartURL);
+            this.SetParamSimple(map, prefix + "Resources", this.Resources);
         }
     }
 }

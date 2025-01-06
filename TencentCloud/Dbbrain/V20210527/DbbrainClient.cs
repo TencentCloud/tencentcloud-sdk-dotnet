@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20210527
 
        private const string endpoint = "dbbrain.tencentcloudapi.com";
        private const string version = "2021-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1156";
+       private const string sdkVersion = "SDK_NET_3.0.1157";
 
         /// <summary>
         /// Client constructor.
@@ -890,6 +890,27 @@ namespace TencentCloud.Dbbrain.V20210527
         public DescribeRedisTopBigKeysResponse DescribeRedisTopBigKeysSync(DescribeRedisTopBigKeysRequest req)
         {
             return InternalRequestAsync<DescribeRedisTopBigKeysResponse>(req, "DescribeRedisTopBigKeys")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 热Key分析
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedisTopHotKeysRequest"/></param>
+        /// <returns><see cref="DescribeRedisTopHotKeysResponse"/></returns>
+        public Task<DescribeRedisTopHotKeysResponse> DescribeRedisTopHotKeys(DescribeRedisTopHotKeysRequest req)
+        {
+            return InternalRequestAsync<DescribeRedisTopHotKeysResponse>(req, "DescribeRedisTopHotKeys");
+        }
+
+        /// <summary>
+        /// 热Key分析
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedisTopHotKeysRequest"/></param>
+        /// <returns><see cref="DescribeRedisTopHotKeysResponse"/></returns>
+        public DescribeRedisTopHotKeysResponse DescribeRedisTopHotKeysSync(DescribeRedisTopHotKeysRequest req)
+        {
+            return InternalRequestAsync<DescribeRedisTopHotKeysResponse>(req, "DescribeRedisTopHotKeys")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

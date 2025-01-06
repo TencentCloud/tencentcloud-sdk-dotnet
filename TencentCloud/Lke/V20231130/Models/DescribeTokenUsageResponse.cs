@@ -61,6 +61,18 @@ namespace TencentCloud.Lke.V20231130.Models
         public ulong? PageUsage{ get; set; }
 
         /// <summary>
+        /// 拆分token消耗量
+        /// </summary>
+        [JsonProperty("SplitTokenUsage")]
+        public float? SplitTokenUsage{ get; set; }
+
+        /// <summary>
+        /// Rag检索次数
+        /// </summary>
+        [JsonProperty("RagSearchUsage")]
+        public float? RagSearchUsage{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -78,6 +90,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "ApiCallStats", this.ApiCallStats);
             this.SetParamSimple(map, prefix + "SearchUsage", this.SearchUsage);
             this.SetParamSimple(map, prefix + "PageUsage", this.PageUsage);
+            this.SetParamSimple(map, prefix + "SplitTokenUsage", this.SplitTokenUsage);
+            this.SetParamSimple(map, prefix + "RagSearchUsage", this.RagSearchUsage);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
