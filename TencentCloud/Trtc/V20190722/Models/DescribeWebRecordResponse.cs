@@ -32,14 +32,12 @@ namespace TencentCloud.Trtc.V20190722.Models
 
         /// <summary>
         /// 在使用RecordId查询时返回
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
         /// 在使用TaskId查询时返回
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordId")]
         public string RecordId{ get; set; }

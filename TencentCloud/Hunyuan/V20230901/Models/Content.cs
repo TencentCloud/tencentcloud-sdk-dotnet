@@ -27,7 +27,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         /// <summary>
         /// 内容类型
         /// 注意：
-        /// 当前只支持传入单张图片，传入多张图片时，以第一个图片为准。
+        /// 需包含至少一个 Type 为"text"的参数及至少一个 Type 为"image_url"的参数。
         /// 参数值可选范围：[text", "image_url"]
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -35,7 +35,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 当 Type 为 text 时使用，表示具体的文本内容
+        /// 当 Type 为 text 时使用，表示具体的文本内容。当 Type 为 image_url 时，当前字段内容需保持为空，传递内容不生效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Text")]
@@ -43,7 +43,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
 
         /// <summary>
         /// 图片的url，当 Type 为 image_url 时使用，表示具体的图片内容
-        /// 如"https://example.com/1.png" 或 图片的base64（注意 "data:image/jpeg;base64," 为必要部分）："data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAA......"
+        /// 如"https://example.com/1.png" 或 图片的base64（注意 "data:image/jpeg;base64," 为必要部分）："data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAA......"。当 Type 为 text 时，当前字段内容需保持为空，传递内容不生效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageUrl")]

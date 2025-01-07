@@ -26,7 +26,6 @@ namespace TencentCloud.Tcb.V20180608.Models
         
         /// <summary>
         /// 1分钱抵扣详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpecialCostItems")]
         public SpecialCostItem[] SpecialCostItems{ get; set; }

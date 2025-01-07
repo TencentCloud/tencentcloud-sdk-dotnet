@@ -188,35 +188,30 @@ namespace TencentCloud.Mongodb.V20180408.Models
 
         /// <summary>
         /// 只读实例信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReadonlyInstances")]
         public MongoDBInstance[] ReadonlyInstances{ get; set; }
 
         /// <summary>
         /// 灾备实例信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StandbyInstances")]
         public MongoDBInstance[] StandbyInstances{ get; set; }
 
         /// <summary>
         /// 临时实例信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CloneInstances")]
         public MongoDBInstance[] CloneInstances{ get; set; }
 
         /// <summary>
         /// 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RelatedInstance")]
         public MongoDBInstance RelatedInstance{ get; set; }
 
         /// <summary>
         /// 实例标签信息集合
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }

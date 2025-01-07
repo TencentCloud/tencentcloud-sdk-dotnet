@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1158";
+       private const string sdkVersion = "SDK_NET_3.0.1159";
 
         /// <summary>
         /// Client constructor.
@@ -2368,6 +2368,27 @@ namespace TencentCloud.Tdmq.V20200217
         public ExportRocketMQMessageDetailResponse ExportRocketMQMessageDetailSync(ExportRocketMQMessageDetailRequest req)
         {
             return InternalRequestAsync<ExportRocketMQMessageDetailResponse>(req, "ExportRocketMQMessageDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取环境下主题列表
+        /// </summary>
+        /// <param name="req"><see cref="GetTopicListRequest"/></param>
+        /// <returns><see cref="GetTopicListResponse"/></returns>
+        public Task<GetTopicListResponse> GetTopicList(GetTopicListRequest req)
+        {
+            return InternalRequestAsync<GetTopicListResponse>(req, "GetTopicList");
+        }
+
+        /// <summary>
+        /// 获取环境下主题列表
+        /// </summary>
+        /// <param name="req"><see cref="GetTopicListRequest"/></param>
+        /// <returns><see cref="GetTopicListResponse"/></returns>
+        public GetTopicListResponse GetTopicListSync(GetTopicListRequest req)
+        {
+            return InternalRequestAsync<GetTopicListResponse>(req, "GetTopicList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

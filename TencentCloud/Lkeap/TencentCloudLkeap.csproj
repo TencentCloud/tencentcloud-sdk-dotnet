@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{4AF9E84C-1B74-32AF-86E7-D499C5854FD8}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1158</VersionPrefix>
+    <VersionPrefix>3.0.1159</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -91,11 +91,14 @@
     <Compile Include="V20240522\Models\ListDocsResponse.cs" />
     <Compile Include="V20240522\Models\ListQAsRequest.cs" />
     <Compile Include="V20240522\Models\ListQAsResponse.cs" />
+    <Compile Include="V20240522\Models\Message.cs" />
     <Compile Include="V20240522\Models\ModifyAttributeLabelRequest.cs" />
     <Compile Include="V20240522\Models\ModifyAttributeLabelResponse.cs" />
     <Compile Include="V20240522\Models\ModifyQARequest.cs" />
     <Compile Include="V20240522\Models\ModifyQAResponse.cs" />
     <Compile Include="V20240522\Models\QaItem.cs" />
+    <Compile Include="V20240522\Models\QueryRewriteRequest.cs" />
+    <Compile Include="V20240522\Models\QueryRewriteResponse.cs" />
     <Compile Include="V20240522\Models\ReconstructDocumentFailedPage.cs" />
     <Compile Include="V20240522\Models\ReconstructDocumentSSEConfig.cs" />
     <Compile Include="V20240522\Models\ReconstructDocumentSSERequest.cs" />

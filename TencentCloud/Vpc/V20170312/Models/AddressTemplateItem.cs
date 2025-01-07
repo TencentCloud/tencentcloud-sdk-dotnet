@@ -31,13 +31,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string AddressTemplateId{ get; set; }
 
         /// <summary>
-        /// IP模板名称
+        /// IP模板名称。
         /// </summary>
         [JsonProperty("AddressTemplateName")]
         public string AddressTemplateName{ get; set; }
 
         /// <summary>
-        /// 废弃字段
+        /// 废弃字段。
         /// </summary>
         [JsonProperty("From")]
         public string From{ get; set; }

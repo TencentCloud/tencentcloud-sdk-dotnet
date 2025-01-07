@@ -25,18 +25,18 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// HaVip实例唯一ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("HaVipId")]
-        public string HaVipId{ get; set; }
-
-        /// <summary>
         /// HaVip绑定的子机或网卡唯一ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// HaVip实例唯一ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HaVipId")]
+        public string HaVipId{ get; set; }
 
         /// <summary>
         /// HaVip绑定的类型。取值:CVM, ENI。
@@ -51,8 +51,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "HaVipId", this.HaVipId);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "HaVipId", this.HaVipId);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
         }
     }

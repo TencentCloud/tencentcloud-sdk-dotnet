@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 审核任务的唯一Id，在启动审核任务成功后会返回。
+        /// 审核任务的唯一Id。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

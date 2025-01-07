@@ -26,42 +26,36 @@ namespace TencentCloud.Mongodb.V20190725.Models
         
         /// <summary>
         /// 主密钥 ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
 
         /// <summary>
         /// 主密钥名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeyName")]
         public string KeyName{ get; set; }
 
         /// <summary>
         /// 实例与密钥绑定时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 密钥状态。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 密钥用途。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeyUsage")]
         public string KeyUsage{ get; set; }
 
         /// <summary>
         /// 密钥来源。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeyOrigin")]
         public string KeyOrigin{ get; set; }

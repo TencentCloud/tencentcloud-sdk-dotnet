@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20180408
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2018-04-08";
-       private const string sdkVersion = "SDK_NET_3.0.1158";
+       private const string sdkVersion = "SDK_NET_3.0.1159";
 
         /// <summary>
         /// Client constructor.
@@ -96,7 +96,7 @@ namespace TencentCloud.Mongodb.V20180408
         }
 
         /// <summary>
-        /// 本接口(CreateDBInstanceHour)用于创建按量计费的MongoDB云数据库实例（包括主实例、灾备实例和只读实例），可通过传入实例规格、实例类型、MongoDB版本、购买时长和数量等信息创建云数据库实例。
+        /// 本接口(CreateDBInstanceHour)用于创建按量计费的MongoDB云数据库实例，可通过传入实例规格、实例类型、MongoDB版本、购买时长和数量等信息创建云数据库实例。
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceHourRequest"/></param>
         /// <returns><see cref="CreateDBInstanceHourResponse"/></returns>
@@ -106,7 +106,7 @@ namespace TencentCloud.Mongodb.V20180408
         }
 
         /// <summary>
-        /// 本接口(CreateDBInstanceHour)用于创建按量计费的MongoDB云数据库实例（包括主实例、灾备实例和只读实例），可通过传入实例规格、实例类型、MongoDB版本、购买时长和数量等信息创建云数据库实例。
+        /// 本接口(CreateDBInstanceHour)用于创建按量计费的MongoDB云数据库实例，可通过传入实例规格、实例类型、MongoDB版本、购买时长和数量等信息创建云数据库实例。
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceHourRequest"/></param>
         /// <returns><see cref="CreateDBInstanceHourResponse"/></returns>

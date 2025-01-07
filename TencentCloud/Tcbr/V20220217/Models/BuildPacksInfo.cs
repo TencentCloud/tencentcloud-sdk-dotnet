@@ -48,6 +48,12 @@ namespace TencentCloud.Tcbr.V20220217.Models
         [JsonProperty("UploadFilename")]
         public string UploadFilename{ get; set; }
 
+        /// <summary>
+        /// 语言版本
+        /// </summary>
+        [JsonProperty("LanguageVersion")]
+        public string LanguageVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tcbr.V20220217.Models
             this.SetParamSimple(map, prefix + "EntryPoint", this.EntryPoint);
             this.SetParamSimple(map, prefix + "RepoLanguage", this.RepoLanguage);
             this.SetParamSimple(map, prefix + "UploadFilename", this.UploadFilename);
+            this.SetParamSimple(map, prefix + "LanguageVersion", this.LanguageVersion);
         }
     }
 }

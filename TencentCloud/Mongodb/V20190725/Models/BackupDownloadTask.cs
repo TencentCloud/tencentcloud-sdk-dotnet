@@ -80,10 +80,23 @@ namespace TencentCloud.Mongodb.V20190725.Models
 
         /// <summary>
         /// 发起备份时指定的备注信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupDesc")]
         public string BackupDesc{ get; set; }
+
+        /// <summary>
+        /// 地区信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
+        /// Bucket信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Bucket")]
+        public string Bucket{ get; set; }
 
 
         /// <summary>
@@ -101,6 +114,8 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
             this.SetParamSimple(map, prefix + "BackupDesc", this.BackupDesc);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "Bucket", this.Bucket);
         }
     }
 }

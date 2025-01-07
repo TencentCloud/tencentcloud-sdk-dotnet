@@ -37,7 +37,9 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string DocumentId{ get; set; }
 
         /// <summary>
-        /// 绑定类型。后台可透传到客户端，默认为0。客户端可以根据这个字段实现业务逻辑。
+        /// 绑定类型。后台可透传到客户端，默认为0。除以下例值外支持自定义该字段，并在前端实现相应业务逻辑，示例参考：
+        /// 示例值：0，仅绑定课件到房间
+        /// 示例值：1，绑定课件到房间后，默认展示课件
         /// </summary>
         [JsonProperty("BindType")]
         public ulong? BindType{ get; set; }

@@ -26,7 +26,6 @@ namespace TencentCloud.Tcb.V20180608.Models
         
         /// <summary>
         /// 创建静态资源结果(succ/fail)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

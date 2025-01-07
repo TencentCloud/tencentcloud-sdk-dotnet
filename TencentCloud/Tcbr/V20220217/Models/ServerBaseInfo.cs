@@ -66,6 +66,12 @@ namespace TencentCloud.Tcbr.V20220217.Models
         [JsonProperty("CustomDomainNames")]
         public string[] CustomDomainNames{ get; set; }
 
+        /// <summary>
+        /// 服务类型: function 云函数2.0；container 容器服务
+        /// </summary>
+        [JsonProperty("ServerType")]
+        public string ServerType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Tcbr.V20220217.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamArraySimple(map, prefix + "AccessTypes.", this.AccessTypes);
             this.SetParamArraySimple(map, prefix + "CustomDomainNames.", this.CustomDomainNames);
+            this.SetParamSimple(map, prefix + "ServerType", this.ServerType);
         }
     }
 }

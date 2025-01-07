@@ -126,6 +126,42 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("VoucherSubType")]
         public string VoucherSubType{ get; set; }
 
+        /// <summary>
+        /// 券有效时间开始时间
+        /// </summary>
+        [JsonProperty("StartTimeFrom")]
+        public string StartTimeFrom{ get; set; }
+
+        /// <summary>
+        /// 券有效时间结束时间
+        /// </summary>
+        [JsonProperty("StartTimeTo")]
+        public string StartTimeTo{ get; set; }
+
+        /// <summary>
+        /// 券失效时间开始时间
+        /// </summary>
+        [JsonProperty("EndTimeFrom")]
+        public string EndTimeFrom{ get; set; }
+
+        /// <summary>
+        /// 券失效时间结束时间
+        /// </summary>
+        [JsonProperty("EndTimeTo")]
+        public string EndTimeTo{ get; set; }
+
+        /// <summary>
+        /// 发券时间开始时间
+        /// </summary>
+        [JsonProperty("CreateTimeFrom")]
+        public string CreateTimeFrom{ get; set; }
+
+        /// <summary>
+        /// 发券时间结束时间
+        /// </summary>
+        [JsonProperty("CreateTimeTo")]
+        public string CreateTimeTo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +185,12 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
             this.SetParamSimple(map, prefix + "VoucherMainType", this.VoucherMainType);
             this.SetParamSimple(map, prefix + "VoucherSubType", this.VoucherSubType);
+            this.SetParamSimple(map, prefix + "StartTimeFrom", this.StartTimeFrom);
+            this.SetParamSimple(map, prefix + "StartTimeTo", this.StartTimeTo);
+            this.SetParamSimple(map, prefix + "EndTimeFrom", this.EndTimeFrom);
+            this.SetParamSimple(map, prefix + "EndTimeTo", this.EndTimeTo);
+            this.SetParamSimple(map, prefix + "CreateTimeFrom", this.CreateTimeFrom);
+            this.SetParamSimple(map, prefix + "CreateTimeTo", this.CreateTimeTo);
         }
     }
 }

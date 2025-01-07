@@ -32,7 +32,6 @@ namespace TencentCloud.Mongodb.V20190725.Models
 
         /// <summary>
         /// 慢日志详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SlowLogs")]
         public string[] SlowLogs{ get; set; }

@@ -37,7 +37,8 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 用户在客户系统的Id，需要在同一应用下唯一。
+        /// 用户在客户系统的Id，需要在同一应用下唯一。入参为空时默认赋值为UserId
+        /// 。
         /// </summary>
         [JsonProperty("OriginId")]
         public string OriginId{ get; set; }

@@ -43,10 +43,16 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string Product{ get; set; }
 
         /// <summary>
-        /// 查询数目，默认为20，最大值为100。
+        /// 查询数目，默认为20，最大值为500。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
+
+        /// <summary>
+        /// 分片ID数组。
+        /// </summary>
+        [JsonProperty("ShardIds")]
+        public long?[] ShardIds{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "Date", this.Date);
             this.SetParamSimple(map, prefix + "Product", this.Product);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArraySimple(map, prefix + "ShardIds.", this.ShardIds);
         }
     }
 }

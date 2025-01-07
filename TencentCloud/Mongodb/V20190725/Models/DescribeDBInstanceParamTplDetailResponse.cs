@@ -26,56 +26,48 @@ namespace TencentCloud.Mongodb.V20190725.Models
         
         /// <summary>
         /// 枚举类参数详情列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceEnumParams")]
         public InstanceEnumParam[] InstanceEnumParams{ get; set; }
 
         /// <summary>
         /// 整形参数详情列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceIntegerParams")]
         public InstanceIntegerParam[] InstanceIntegerParams{ get; set; }
 
         /// <summary>
         /// 文本参数详情列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceTextParams")]
         public InstanceTextParam[] InstanceTextParams{ get; set; }
 
         /// <summary>
         /// 多值参数详情列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceMultiParams")]
         public InstanceMultiParam[] InstanceMultiParams{ get; set; }
 
         /// <summary>
         /// 参数总个数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
         /// 模板适配实例版本。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MongoVersion")]
         public string MongoVersion{ get; set; }
 
         /// <summary>
         /// 模板适配集群类型，副本集或分片。。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
 
         /// <summary>
         /// 参数模板名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TplName")]
         public string TplName{ get; set; }

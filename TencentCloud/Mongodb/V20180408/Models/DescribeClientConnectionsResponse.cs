@@ -26,14 +26,12 @@ namespace TencentCloud.Mongodb.V20180408.Models
         
         /// <summary>
         /// 客户端连接信息，包括客户端IP和对应IP的连接数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Clients")]
         public ClientConnection[] Clients{ get; set; }
 
         /// <summary>
         /// 连接数总结
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

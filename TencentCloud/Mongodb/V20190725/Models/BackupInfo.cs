@@ -44,28 +44,24 @@ namespace TencentCloud.Mongodb.V20190725.Models
 
         /// <summary>
         /// 备份备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupDesc")]
         public string BackupDesc{ get; set; }
 
         /// <summary>
         /// 备份文件大小，单位KB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupSize")]
         public ulong? BackupSize{ get; set; }
 
         /// <summary>
         /// 备份开始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// 备份结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -96,7 +92,6 @@ namespace TencentCloud.Mongodb.V20190725.Models
 
         /// <summary>
         /// 异地备份地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupRegion")]
         public string BackupRegion{ get; set; }

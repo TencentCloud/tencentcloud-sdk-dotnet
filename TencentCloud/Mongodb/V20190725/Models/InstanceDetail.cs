@@ -254,63 +254,54 @@ namespace TencentCloud.Mongodb.V20190725.Models
 
         /// <summary>
         /// 实例当前可用区信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneList")]
         public string[] ZoneList{ get; set; }
 
         /// <summary>
         /// mongos节点个数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MongosNodeNum")]
         public ulong? MongosNodeNum{ get; set; }
 
         /// <summary>
         /// mongos节点内存。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MongosMemory")]
         public ulong? MongosMemory{ get; set; }
 
         /// <summary>
         /// mongos节点CPU核数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MongosCpuNum")]
         public ulong? MongosCpuNum{ get; set; }
 
         /// <summary>
         /// Config Server节点个数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigServerNodeNum")]
         public ulong? ConfigServerNodeNum{ get; set; }
 
         /// <summary>
         /// Config Server节点内存。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigServerMemory")]
         public ulong? ConfigServerMemory{ get; set; }
 
         /// <summary>
         /// Config Server节点磁盘大小。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigServerVolume")]
         public ulong? ConfigServerVolume{ get; set; }
 
         /// <summary>
         /// Config Server节点CPU核数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigServerCpuNum")]
         public ulong? ConfigServerCpuNum{ get; set; }
 
         /// <summary>
         /// readonly节点个数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReadonlyNodeNum")]
         public ulong? ReadonlyNodeNum{ get; set; }

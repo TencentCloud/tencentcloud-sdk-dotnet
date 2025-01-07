@@ -26,77 +26,72 @@ namespace TencentCloud.Mongodb.V20190725.Models
         
         /// <summary>
         /// 节点所在的可用区。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
         /// 节点名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }
 
         /// <summary>
         /// 节点访问地址。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
+        /// 节点公网访问地址(IP或域名)。
+        /// </summary>
+        [JsonProperty("WanServiceAddress")]
+        public string WanServiceAddress{ get; set; }
+
+        /// <summary>
         /// 角色。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Role")]
         public string Role{ get; set; }
 
         /// <summary>
         /// 是否为Hidden节点
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Hidden")]
         public bool? Hidden{ get; set; }
 
         /// <summary>
         /// 节点状态，包括：ORMAL/STARTUP/RECOVERING/STARTUP2/UNKNOWN/DOWN/ROLLBACK/REMOVED等。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 主从延迟，单位秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SlaveDelay")]
         public long? SlaveDelay{ get; set; }
 
         /// <summary>
         /// 节点优先级。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
 
         /// <summary>
         /// 节点投票权。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Votes")]
         public long? Votes{ get; set; }
 
         /// <summary>
         /// 节点标签。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public NodeTag[] Tags{ get; set; }
 
         /// <summary>
         /// 副本集Id。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReplicateSetId")]
         public string ReplicateSetId{ get; set; }
@@ -110,6 +105,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "NodeName", this.NodeName);
             this.SetParamSimple(map, prefix + "Address", this.Address);
+            this.SetParamSimple(map, prefix + "WanServiceAddress", this.WanServiceAddress);
             this.SetParamSimple(map, prefix + "Role", this.Role);
             this.SetParamSimple(map, prefix + "Hidden", this.Hidden);
             this.SetParamSimple(map, prefix + "Status", this.Status);

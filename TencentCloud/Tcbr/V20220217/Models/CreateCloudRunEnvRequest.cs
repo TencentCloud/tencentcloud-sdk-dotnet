@@ -69,19 +69,19 @@ namespace TencentCloud.Tcbr.V20220217.Models
         public string ReqKey{ get; set; }
 
         /// <summary>
-        /// 来源：wechat | cloud
+        /// 来源：wechat | cloud | weda
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
-        /// 渠道：wechat | cloud
+        /// 渠道：wechat | cloud | weda
         /// </summary>
         [JsonProperty("Channel")]
         public string Channel{ get; set; }
 
         /// <summary>
-        /// 环境ID
+        /// 环境ID 云开发平台必填
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }

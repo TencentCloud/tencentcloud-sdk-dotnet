@@ -28,7 +28,7 @@ namespace TencentCloud.Lkeap.V20240522
 
        private const string endpoint = "lkeap.tencentcloudapi.com";
        private const string version = "2024-05-22";
-       private const string sdkVersion = "SDK_NET_3.0.1158";
+       private const string sdkVersion = "SDK_NET_3.0.1159";
 
         /// <summary>
         /// Client constructor.
@@ -457,6 +457,29 @@ namespace TencentCloud.Lkeap.V20240522
         public ModifyQAResponse ModifyQASync(ModifyQARequest req)
         {
             return InternalRequestAsync<ModifyQAResponse>(req, "ModifyQA")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 多轮改写（QueryRewrite）主要用于多轮对话中，进行指代消解和省略补全。使用本接口，无需输入prompt描述，根据对话历史即可生成更精确的用户查询。在应用场景上，本接口可应用于智能问答、对话式搜索等多种场景。
+        /// 开通[产品体验](https://lke.cloud.tencent.com/lke/#/trialProduct)后可获得50wtoken体验额度。本接口（QueryRewrite）有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
+        /// </summary>
+        /// <param name="req"><see cref="QueryRewriteRequest"/></param>
+        /// <returns><see cref="QueryRewriteResponse"/></returns>
+        public Task<QueryRewriteResponse> QueryRewrite(QueryRewriteRequest req)
+        {
+            return InternalRequestAsync<QueryRewriteResponse>(req, "QueryRewrite");
+        }
+
+        /// <summary>
+        /// 多轮改写（QueryRewrite）主要用于多轮对话中，进行指代消解和省略补全。使用本接口，无需输入prompt描述，根据对话历史即可生成更精确的用户查询。在应用场景上，本接口可应用于智能问答、对话式搜索等多种场景。
+        /// 开通[产品体验](https://lke.cloud.tencent.com/lke/#/trialProduct)后可获得50wtoken体验额度。本接口（QueryRewrite）有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
+        /// </summary>
+        /// <param name="req"><see cref="QueryRewriteRequest"/></param>
+        /// <returns><see cref="QueryRewriteResponse"/></returns>
+        public QueryRewriteResponse QueryRewriteSync(QueryRewriteRequest req)
+        {
+            return InternalRequestAsync<QueryRewriteResponse>(req, "QueryRewrite")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

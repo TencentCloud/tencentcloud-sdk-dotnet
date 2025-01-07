@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// TRTC的SDKAppId，和TRTC的房间所对应的SDKAppId相同。
+        /// TRTC的SDKAppId，和TRTC的房间所使用的SDKAppId相同。
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }

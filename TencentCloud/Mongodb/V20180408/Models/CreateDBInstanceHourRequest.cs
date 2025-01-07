@@ -55,7 +55,7 @@ namespace TencentCloud.Mongodb.V20180408.Models
         public string EngineVersion{ get; set; }
 
         /// <summary>
-        /// 实例类型，GIO：高IO版；TGIO：高IO万兆
+        /// 实例类型，HIO10G：高IO万兆。
         /// </summary>
         [JsonProperty("Machine")]
         public string Machine{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Mongodb.V20180408.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 实例角色，支持值包括：MASTER-表示主实例，DR-表示灾备实例，RO-表示只读实例
+        /// 实例角色，默认传MASTER即可
         /// </summary>
         [JsonProperty("InstanceRole")]
         public string InstanceRole{ get; set; }
@@ -114,6 +114,18 @@ namespace TencentCloud.Mongodb.V20180408.Models
         [JsonProperty("SecurityGroup")]
         public string[] SecurityGroup{ get; set; }
 
+        /// <summary>
+        /// 私有网络ID，如果不传则默认选择基础网络
+        /// </summary>
+        [JsonProperty("UniqVpcId")]
+        public string UniqVpcId{ get; set; }
+
+        /// <summary>
+        /// 私有网络下的子网ID，如果设置了 VpcId，则 SubnetId必填
+        /// </summary>
+        [JsonProperty("UniqSubnetId")]
+        public string UniqSubnetId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +147,8 @@ namespace TencentCloud.Mongodb.V20180408.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
+            this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+            this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
         }
     }
 }

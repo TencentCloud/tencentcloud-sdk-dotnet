@@ -37,7 +37,9 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string UploadUrl{ get; set; }
 
         /// <summary>
-        /// 自定义密钥。如果为空，则表示不需要加密
+        /// 自定义密钥。如果为空，则表示不需要加密。
+        /// 参考cos预签名url上传https://cloud.tencent.com/document/product/436/36121
+        /// 上传的时候要按照 SSE-C 的方式设置header：https://cloud.tencent.com/document/product/436/7728
         /// </summary>
         [JsonProperty("CustomKey")]
         public string CustomKey{ get; set; }

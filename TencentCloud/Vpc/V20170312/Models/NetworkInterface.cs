@@ -84,6 +84,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string State{ get; set; }
 
         /// <summary>
+        /// 弹性网卡状态：
+        /// <li>`PENDING`：创建中</li>
+        /// <li>`AVAILABLE`：可用的</li>
+        /// <li>`ATTACHING`：绑定中</li>
+        /// <li>`DETACHING`：解绑中</li>
+        /// <li>`DELETING`：删除中</li>
+        /// <li>`INUSE`：已绑定</li>
+        /// </summary>
+        [JsonProperty("NetworkInterfaceState")]
+        public string NetworkInterfaceState{ get; set; }
+
+        /// <summary>
         /// 内网IP信息。
         /// </summary>
         [JsonProperty("PrivateIpAddressSet")]
@@ -180,6 +192,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Primary", this.Primary);
             this.SetParamSimple(map, prefix + "MacAddress", this.MacAddress);
             this.SetParamSimple(map, prefix + "State", this.State);
+            this.SetParamSimple(map, prefix + "NetworkInterfaceState", this.NetworkInterfaceState);
             this.SetParamArrayObj(map, prefix + "PrivateIpAddressSet.", this.PrivateIpAddressSet);
             this.SetParamObj(map, prefix + "Attachment.", this.Attachment);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
