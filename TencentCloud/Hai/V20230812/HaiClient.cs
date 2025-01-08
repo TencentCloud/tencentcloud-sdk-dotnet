@@ -28,7 +28,7 @@ namespace TencentCloud.Hai.V20230812
 
        private const string endpoint = "hai.tencentcloudapi.com";
        private const string version = "2023-08-12";
-       private const string sdkVersion = "SDK_NET_3.0.1159";
+       private const string sdkVersion = "SDK_NET_3.0.1160";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Hai.V20230812
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 创建musk prompt 任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateMuskPromptRequest"/></param>
+        /// <returns><see cref="CreateMuskPromptResponse"/></returns>
+        public Task<CreateMuskPromptResponse> CreateMuskPrompt(CreateMuskPromptRequest req)
+        {
+            return InternalRequestAsync<CreateMuskPromptResponse>(req, "CreateMuskPrompt");
+        }
+
+        /// <summary>
+        /// 创建musk prompt 任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateMuskPromptRequest"/></param>
+        /// <returns><see cref="CreateMuskPromptResponse"/></returns>
+        public CreateMuskPromptResponse CreateMuskPromptSync(CreateMuskPromptRequest req)
+        {
+            return InternalRequestAsync<CreateMuskPromptResponse>(req, "CreateMuskPrompt")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

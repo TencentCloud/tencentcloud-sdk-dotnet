@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A06AC0CF-076C-38E8-83FE-C7FFA375814C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1159</VersionPrefix>
+    <VersionPrefix>3.0.1160</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -163,6 +163,8 @@
     <Compile Include="V20170312\Models\DescribeEncryptionKeysResponse.cs" />
     <Compile Include="V20170312\Models\DescribeLogBackupsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeLogBackupsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeMaintainTimeWindowRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeMaintainTimeWindowResponse.cs" />
     <Compile Include="V20170312\Models\DescribeOrdersRequest.cs" />
     <Compile Include="V20170312\Models\DescribeOrdersResponse.cs" />
     <Compile Include="V20170312\Models\DescribeParameterTemplateAttributesRequest.cs" />
@@ -239,6 +241,8 @@
     <Compile Include="V20170312\Models\ModifyDBInstancesProjectResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDatabaseOwnerRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDatabaseOwnerResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyMaintainTimeWindowRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyMaintainTimeWindowResponse.cs" />
     <Compile Include="V20170312\Models\ModifyParameterTemplateRequest.cs" />
     <Compile Include="V20170312\Models\ModifyParameterTemplateResponse.cs" />
     <Compile Include="V20170312\Models\ModifyPrivilege.cs" />

@@ -29,21 +29,18 @@ namespace TencentCloud.Emr.V20190103.Models
         /// <li>CLOUD_SSD：表示云SSD。</li>
         /// <li>CLOUD_PREMIUM：表示高效云盘。</li>
         /// <li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
         /// 云盘大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Volume")]
         public long? Volume{ get; set; }
 
         /// <summary>
         /// 该类型云盘个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }

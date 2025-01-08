@@ -40,6 +40,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 要更换的原合同参与人RecipientId编号。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
         /// </summary>
         [JsonProperty("RelievedApproverReceiptId")]
+        [System.Obsolete]
         public string RelievedApproverReceiptId{ get; set; }
 
         /// <summary>
@@ -74,6 +75,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ApproverSignSealId")]
         public string ApproverSignSealId{ get; set; }
 
+        /// <summary>
+        /// 要更换的原合同参与人RecipientId编号。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+        /// </summary>
+        [JsonProperty("RelievedApproverRecipientId")]
+        public string RelievedApproverRecipientId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +94,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "ApproverSignComponentType", this.ApproverSignComponentType);
             this.SetParamSimple(map, prefix + "ApproverSignRole", this.ApproverSignRole);
             this.SetParamSimple(map, prefix + "ApproverSignSealId", this.ApproverSignSealId);
+            this.SetParamSimple(map, prefix + "RelievedApproverRecipientId", this.RelievedApproverRecipientId);
         }
     }
 }

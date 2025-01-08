@@ -84,6 +84,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }
 
+        /// <summary>
+        /// sql语句
+        /// </summary>
+        [JsonProperty("SqlText")]
+        public string SqlText{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "Database", this.Database);
             this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
             this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
+            this.SetParamSimple(map, prefix + "SqlText", this.SqlText);
         }
     }
 }

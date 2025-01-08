@@ -26,18 +26,21 @@ namespace TencentCloud.Tcb.V20180608.Models
         
         /// <summary>
         /// 启用emptydir数据卷
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableEmptyDirVolume")]
         public bool? EnableEmptyDirVolume{ get; set; }
 
         /// <summary>
         /// "","Memory","HugePages"
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Medium")]
         public string Medium{ get; set; }
 
         /// <summary>
         /// emptydir数据卷大小
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SizeLimit")]
         public string SizeLimit{ get; set; }

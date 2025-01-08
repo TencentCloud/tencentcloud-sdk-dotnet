@@ -32,14 +32,12 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 校验错误信息，如果不为空，则说明校验失败，配置没有成功
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }
 
         /// <summary>
         /// 返回数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public string Data{ get; set; }

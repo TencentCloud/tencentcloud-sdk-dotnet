@@ -26,14 +26,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         
         /// <summary>
         /// 版本列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectVersions")]
         public CloudBaseProjectVersion[] ProjectVersions{ get; set; }
 
         /// <summary>
         /// 总个数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

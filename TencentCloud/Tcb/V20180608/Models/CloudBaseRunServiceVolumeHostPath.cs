@@ -24,12 +24,20 @@ namespace TencentCloud.Tcb.V20180608.Models
     public class CloudBaseRunServiceVolumeHostPath : AbstractModel
     {
         
+        /// <summary>
+        /// 主机路径
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Path")]
+        public string Path{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Path", this.Path);
         }
     }
 }

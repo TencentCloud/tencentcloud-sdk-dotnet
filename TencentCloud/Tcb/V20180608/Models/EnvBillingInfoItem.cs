@@ -93,35 +93,30 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// 付费渠道。
         /// <li> miniapp：小程序</li>
         /// <li> qcloud：腾讯云</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PaymentChannel")]
         public string PaymentChannel{ get; set; }
 
         /// <summary>
         /// 最新的订单信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrderInfo")]
         public OrderInfo OrderInfo{ get; set; }
 
         /// <summary>
         /// 免费配额信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FreeQuota")]
         public string FreeQuota{ get; set; }
 
         /// <summary>
         /// 是否开启 `超过套餐额度部分转按量付费`
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableOverrun")]
         public bool? EnableOverrun{ get; set; }
 
         /// <summary>
         /// 环境套餐类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtPackageType")]
         public string ExtPackageType{ get; set; }

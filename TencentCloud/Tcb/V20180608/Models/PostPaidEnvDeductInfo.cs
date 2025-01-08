@@ -26,42 +26,36 @@ namespace TencentCloud.Tcb.V20180608.Models
         
         /// <summary>
         /// 资源方
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
         /// 指标名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }
 
         /// <summary>
         /// 按量计费详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResQuota")]
         public float? ResQuota{ get; set; }
 
         /// <summary>
         /// 资源包抵扣详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PkgQuota")]
         public float? PkgQuota{ get; set; }
 
         /// <summary>
         /// 免费额度抵扣详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FreeQuota")]
         public float? FreeQuota{ get; set; }
 
         /// <summary>
         /// 环境id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }

@@ -31,17 +31,18 @@ namespace TencentCloud.Cloudapp.V20220530.Models
         public string ParamKey{ get; set; }
 
         /// <summary>
-        /// 售卖参数值
-        /// </summary>
-        [JsonProperty("ParamValue")]
-        public string ParamValue{ get; set; }
-
-        /// <summary>
         /// 售卖参数的展示名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ParamKeyName")]
         public string ParamKeyName{ get; set; }
+
+        /// <summary>
+        /// 售卖参数值，当ParamType=Quant时，该值有可能为Null
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ParamValue")]
+        public string ParamValue{ get; set; }
 
         /// <summary>
         /// 售卖参数值的展示名称
@@ -50,6 +51,13 @@ namespace TencentCloud.Cloudapp.V20220530.Models
         [JsonProperty("ParamValueName")]
         public string ParamValueName{ get; set; }
 
+        /// <summary>
+        /// 售卖参数的类型，目前支持枚举类Enum/数量类Quant
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ParamType")]
+        public string ParamType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -57,9 +65,10 @@ namespace TencentCloud.Cloudapp.V20220530.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ParamKey", this.ParamKey);
-            this.SetParamSimple(map, prefix + "ParamValue", this.ParamValue);
             this.SetParamSimple(map, prefix + "ParamKeyName", this.ParamKeyName);
+            this.SetParamSimple(map, prefix + "ParamValue", this.ParamValue);
             this.SetParamSimple(map, prefix + "ParamValueName", this.ParamValueName);
+            this.SetParamSimple(map, prefix + "ParamType", this.ParamType);
         }
     }
 }

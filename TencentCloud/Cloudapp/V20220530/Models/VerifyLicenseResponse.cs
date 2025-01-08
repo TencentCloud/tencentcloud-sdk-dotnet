@@ -31,6 +31,18 @@ namespace TencentCloud.Cloudapp.V20220530.Models
         public License License{ get; set; }
 
         /// <summary>
+        /// 当前请求服务端的时间戳，格式为RFC3339
+        /// </summary>
+        [JsonProperty("Timestamp")]
+        public string Timestamp{ get; set; }
+
+        /// <summary>
+        /// 对License字段对应的json数据的签名
+        /// </summary>
+        [JsonProperty("Signature")]
+        public string Signature{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +55,8 @@ namespace TencentCloud.Cloudapp.V20220530.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "License.", this.License);
+            this.SetParamSimple(map, prefix + "Timestamp", this.Timestamp);
+            this.SetParamSimple(map, prefix + "Signature", this.Signature);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

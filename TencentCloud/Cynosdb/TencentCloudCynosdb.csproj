@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FEBD4BA8-D71D-307D-97C6-CC6B06586449}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1159</VersionPrefix>
+    <VersionPrefix>3.0.1160</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -456,6 +456,7 @@
     <Compile Include="V20190107\Models\TablePrivileges.cs" />
     <Compile Include="V20190107\Models\Tag.cs" />
     <Compile Include="V20190107\Models\TaskMaintainInfo.cs" />
+    <Compile Include="V20190107\Models\TaskProgressInfo.cs" />
     <Compile Include="V20190107\Models\TemplateParamInfo.cs" />
     <Compile Include="V20190107\Models\TradePrice.cs" />
     <Compile Include="V20190107\Models\UnbindClusterResourcePackagesRequest.cs" />

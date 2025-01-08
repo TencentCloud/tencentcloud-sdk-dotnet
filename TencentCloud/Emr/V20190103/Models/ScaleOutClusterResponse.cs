@@ -32,21 +32,18 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 客户端Token。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
         /// <summary>
         /// 扩容流程ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }
 
         /// <summary>
         /// 查询流程状态，流程额外信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TraceId")]
         public string TraceId{ get; set; }
@@ -60,7 +57,6 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 大订单号。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillId")]
         public string BillId{ get; set; }

@@ -25,43 +25,43 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 默认为false
+        /// 复印件告警，默认为false
         /// </summary>
         [JsonProperty("CopyWarn")]
         public bool? CopyWarn{ get; set; }
 
         /// <summary>
-        /// 默认为false
+        /// 边框和框内遮挡告警，默认为false
         /// </summary>
         [JsonProperty("BorderCheckWarn")]
         public bool? BorderCheckWarn{ get; set; }
 
         /// <summary>
-        /// 默认为false
+        /// 翻拍告警，默认为false
         /// </summary>
         [JsonProperty("ReshootWarn")]
         public bool? ReshootWarn{ get; set; }
 
         /// <summary>
-        /// 默认为false
+        /// 疑似存在PS痕迹告警，默认为false
         /// </summary>
         [JsonProperty("DetectPsWarn")]
         public bool? DetectPsWarn{ get; set; }
 
         /// <summary>
-        /// 默认为false
+        /// 临时身份证告警，默认为false
         /// </summary>
         [JsonProperty("TempIdWarn")]
         public bool? TempIdWarn{ get; set; }
 
         /// <summary>
-        /// 默认为false
+        /// 身份证有效日期不合法告警，默认为false
         /// </summary>
         [JsonProperty("InvalidDateWarn")]
         public bool? InvalidDateWarn{ get; set; }
 
         /// <summary>
-        /// 默认为false
+        /// 是否开启反光检测，默认为false
         /// </summary>
         [JsonProperty("ReflectWarn")]
         public bool? ReflectWarn{ get; set; }

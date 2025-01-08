@@ -26,70 +26,60 @@ namespace TencentCloud.Tcb.V20180608.Models
         
         /// <summary>
         /// 类型, 可能的枚举: "coding","package","package_url","github","gitlab","gitee","rawcode"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 下载链接
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
         /// 名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 工作目录
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkDir")]
         public string WorkDir{ get; set; }
 
         /// <summary>
         /// code包名, type为coding的时候需要填写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CodingPackageName")]
         public string CodingPackageName{ get; set; }
 
         /// <summary>
         /// coding版本名, type为coding的时候需要填写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CodingPackageVersion")]
         public string CodingPackageVersion{ get; set; }
 
         /// <summary>
         /// 源码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RawCode")]
         public string RawCode{ get; set; }
 
         /// <summary>
         /// 代码分支
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Branch")]
         public string Branch{ get; set; }
 
         /// <summary>
         /// coding项目ID，type为coding时需要填写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
         /// coding项目
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }

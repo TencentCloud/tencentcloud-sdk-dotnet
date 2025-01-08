@@ -105,7 +105,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? DataNodeMaintenanceId{ get; set; }
 
         /// <summary>
-        /// 支持搜索的字段
+        /// 支持搜索的字段，目前支持 SearchType	：ipv4
         /// </summary>
         [JsonProperty("SearchFields")]
         public SearchItem[] SearchFields{ get; set; }

@@ -26,14 +26,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         
         /// <summary>
         /// 启用安全能力项列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Add")]
         public string[] Add{ get; set; }
 
         /// <summary>
         /// 禁用安全能力向列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Drop")]
         public string[] Drop{ get; set; }

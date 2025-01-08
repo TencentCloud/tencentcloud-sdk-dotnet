@@ -60,6 +60,19 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("NextHop")]
         public string NextHop{ get; set; }
 
+        /// <summary>
+        /// 路由更新时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
+
+        /// <summary>
+        /// 是否配置在通道上
+        /// </summary>
+        [JsonProperty("ApplyOnTunnelEnable")]
+        public bool? ApplyOnTunnelEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +85,8 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArraySimple(map, prefix + "ASPath.", this.ASPath);
             this.SetParamSimple(map, prefix + "NextHop", this.NextHop);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "ApplyOnTunnelEnable", this.ApplyOnTunnelEnable);
         }
     }
 }

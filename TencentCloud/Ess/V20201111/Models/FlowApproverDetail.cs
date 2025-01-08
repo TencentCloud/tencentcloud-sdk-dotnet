@@ -60,6 +60,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 模板配置中的参与方ID,与控件绑定
         /// </summary>
         [JsonProperty("ReceiptId")]
+        [System.Obsolete]
         public string ReceiptId{ get; set; }
 
         /// <summary>
@@ -136,6 +137,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ApproverRoleName")]
         public string ApproverRoleName{ get; set; }
 
+        /// <summary>
+        /// 模板配置中的参与方ID,与控件绑定
+        /// </summary>
+        [JsonProperty("RecipientId")]
+        public string RecipientId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -157,6 +164,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
             this.SetParamSimple(map, prefix + "SignId", this.SignId);
             this.SetParamSimple(map, prefix + "ApproverRoleName", this.ApproverRoleName);
+            this.SetParamSimple(map, prefix + "RecipientId", this.RecipientId);
         }
     }
 }

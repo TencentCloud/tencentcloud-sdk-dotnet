@@ -189,6 +189,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("OriginalROInstanceList")]
         public string[] OriginalROInstanceList{ get; set; }
 
+        /// <summary>
+        /// 项目id
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public long? ProjectId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -221,6 +227,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArrayObj(map, prefix + "RollbackDatabases.", this.RollbackDatabases);
             this.SetParamArrayObj(map, prefix + "RollbackTables.", this.RollbackTables);
             this.SetParamArraySimple(map, prefix + "OriginalROInstanceList.", this.OriginalROInstanceList);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
         }
     }
 }

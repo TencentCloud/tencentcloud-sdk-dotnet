@@ -295,7 +295,7 @@ namespace TencentCloud.Aca.V20210323.Models
         public string DrugBasicCode{ get; set; }
 
         /// <summary>
-        /// OCT标签
+        /// OTC标签
         /// </summary>
         [JsonProperty("OctTag")]
         public string OctTag{ get; set; }

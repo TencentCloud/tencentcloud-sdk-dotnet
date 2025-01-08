@@ -40,7 +40,6 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 任务名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowName")]
         public string FlowName{ get; set; }
@@ -48,7 +47,6 @@ namespace TencentCloud.Emr.V20190103.Models
         /// <summary>
         /// 总任务流程进度：
         /// 例如：0.8
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowTotalProgress")]
         public float? FlowTotalProgress{ get; set; }
@@ -61,7 +59,6 @@ namespace TencentCloud.Emr.V20190103.Models
         /// 3:完成（存在跳过步骤），
         /// -1:失败，
         /// -3:阻塞，
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowTotalStatus")]
         public long? FlowTotalStatus{ get; set; }

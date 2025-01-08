@@ -215,6 +215,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("SubUinName")]
         public string SubUinName{ get; set; }
 
+        /// <summary>
+        /// AppId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AppId")]
+        public string AppId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -249,6 +256,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "SSHConfig.", this.SSHConfig);
             this.SetParamObj(map, prefix + "VolumeSourceGooseFS.", this.VolumeSourceGooseFS);
             this.SetParamSimple(map, prefix + "SubUinName", this.SubUinName);
+            this.SetParamSimple(map, prefix + "AppId", this.AppId);
         }
     }
 }

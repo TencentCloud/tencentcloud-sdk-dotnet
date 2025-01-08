@@ -94,7 +94,6 @@ namespace TencentCloud.Dc.V20180410.Models
 
         /// <summary>
         /// 运营商或者服务商为物理专线提供的电路编码。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CircuitCode")]
         public string CircuitCode{ get; set; }
@@ -107,77 +106,66 @@ namespace TencentCloud.Dc.V20180410.Models
 
         /// <summary>
         /// 物理专线调试VLAN。默认开启VLAN，自动分配VLAN。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vlan")]
         public long? Vlan{ get; set; }
 
         /// <summary>
         /// 物理专线调试腾讯侧互联IP。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TencentAddress")]
         public string TencentAddress{ get; set; }
 
         /// <summary>
         /// 物理专线调试用户侧互联IP。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomerAddress")]
         public string CustomerAddress{ get; set; }
 
         /// <summary>
         /// 物理专线申请者姓名。默认从账户体系获取。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomerName")]
         public string CustomerName{ get; set; }
 
         /// <summary>
         /// 物理专线申请者联系邮箱。默认从账户体系获取。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomerContactMail")]
         public string CustomerContactMail{ get; set; }
 
         /// <summary>
         /// 物理专线申请者联系号码。默认从账户体系获取。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomerContactNumber")]
         public string CustomerContactNumber{ get; set; }
 
         /// <summary>
         /// 物理专线的过期时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public string ExpiredTime{ get; set; }
 
         /// <summary>
         /// 物理专线计费类型。 NON_RECURRING_CHARGE：一次性接入费用；PREPAID_BY_YEAR：按年预付费。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
 
         /// <summary>
         /// 报障联系人。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FaultReportContactPerson")]
         public string FaultReportContactPerson{ get; set; }
 
         /// <summary>
         /// 报障联系电话。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FaultReportContactNumber")]
         public string FaultReportContactNumber{ get; set; }
 
         /// <summary>
         /// 标签键值对
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }
@@ -190,70 +178,60 @@ namespace TencentCloud.Dc.V20180410.Models
 
         /// <summary>
         /// IDC所在城市
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdcCity")]
         public string IdcCity{ get; set; }
 
         /// <summary>
         /// 计费状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChargeState")]
         public string ChargeState{ get; set; }
 
         /// <summary>
         /// 物理专线开通时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// 物理专线是否已签署用户协议
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SignLaw")]
         public bool? SignLaw{ get; set; }
 
         /// <summary>
         /// 物理专线是否为LocalZone
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LocalZone")]
         public bool? LocalZone{ get; set; }
 
         /// <summary>
         /// 该物理专线下vlan 0的专用通道数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VlanZeroDirectConnectTunnelCount")]
         public ulong? VlanZeroDirectConnectTunnelCount{ get; set; }
 
         /// <summary>
         /// 该物理专线下非vlan 0的专用通道数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OtherVlanDirectConnectTunnelCount")]
         public ulong? OtherVlanDirectConnectTunnelCount{ get; set; }
 
         /// <summary>
         /// 物理专线最小带宽
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinBandwidth")]
         public ulong? MinBandwidth{ get; set; }
 
         /// <summary>
         /// 建设模式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Construct")]
         public ulong? Construct{ get; set; }
 
         /// <summary>
         /// 物理专线的接入点名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessPointName")]
         public string AccessPointName{ get; set; }

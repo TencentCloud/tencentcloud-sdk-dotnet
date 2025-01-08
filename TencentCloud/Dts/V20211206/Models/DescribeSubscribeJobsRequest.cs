@@ -31,6 +31,12 @@ namespace TencentCloud.Dts.V20211206.Models
         public string SubscribeId{ get; set; }
 
         /// <summary>
+        /// 订阅 ID 筛选，精确匹配
+        /// </summary>
+        [JsonProperty("SubscribeIds")]
+        public string[] SubscribeIds{ get; set; }
+
+        /// <summary>
         /// 订阅名称，前缀模糊匹配
         /// </summary>
         [JsonProperty("SubscribeName")]
@@ -103,6 +109,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SubscribeId", this.SubscribeId);
+            this.SetParamArraySimple(map, prefix + "SubscribeIds.", this.SubscribeIds);
             this.SetParamSimple(map, prefix + "SubscribeName", this.SubscribeName);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Topic", this.Topic);

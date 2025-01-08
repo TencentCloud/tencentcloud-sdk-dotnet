@@ -49,7 +49,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public long? Timeout{ get; set; }
 
         /// <summary>
-        /// 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15，Nodejs12.16， PHP5， PHP7，Go1 ， Java8和CustomRuntime
+        /// 函数运行环境，创建时指定，目前不支持修改。
         /// </summary>
         [JsonProperty("Runtime")]
         public string Runtime{ get; set; }

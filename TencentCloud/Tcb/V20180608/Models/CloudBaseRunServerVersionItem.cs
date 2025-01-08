@@ -32,7 +32,6 @@ namespace TencentCloud.Tcb.V20180608.Models
 
         /// <summary>
         /// 状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -45,56 +44,48 @@ namespace TencentCloud.Tcb.V20180608.Models
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
         /// 更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdatedTime")]
         public string UpdatedTime{ get; set; }
 
         /// <summary>
         /// 构建ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BuildId")]
         public long? BuildId{ get; set; }
 
         /// <summary>
         /// 构建方式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UploadType")]
         public string UploadType{ get; set; }
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
         /// url中的参数路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UrlParam")]
         public ObjectKV UrlParam{ get; set; }
 
         /// <summary>
         /// 优先级（数值越小，优先级越高）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
 
         /// <summary>
         /// 是否是默认兜底版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsDefaultPriority")]
         public bool? IsDefaultPriority{ get; set; }
@@ -108,42 +99,36 @@ namespace TencentCloud.Tcb.V20180608.Models
 
         /// <summary>
         /// 最小副本数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinReplicas")]
         public long? MinReplicas{ get; set; }
 
         /// <summary>
         /// 最大副本数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxReplicas")]
         public long? MaxReplicas{ get; set; }
 
         /// <summary>
         /// 操作记录id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunId")]
         public string RunId{ get; set; }
 
         /// <summary>
         /// 进度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Percent")]
         public long? Percent{ get; set; }
 
         /// <summary>
         /// 当前副本数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentReplicas")]
         public long? CurrentReplicas{ get; set; }
 
         /// <summary>
         /// Monolithic，Microservice
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Architecture")]
         public string Architecture{ get; set; }

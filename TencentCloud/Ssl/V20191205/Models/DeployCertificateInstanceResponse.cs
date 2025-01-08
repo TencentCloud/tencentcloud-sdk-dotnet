@@ -32,7 +32,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public ulong? DeployRecordId{ get; set; }
 
         /// <summary>
-        /// 部署状态，1表示部署成功，0表示部署失败
+        /// 部署任务创建状态；1表示创建成功； 0表示当前存在部署中的任务，未创建新的部署任务；返回值DeployRecordId为部署中的任务ID
         /// </summary>
         [JsonProperty("DeployStatus")]
         public long? DeployStatus{ get; set; }

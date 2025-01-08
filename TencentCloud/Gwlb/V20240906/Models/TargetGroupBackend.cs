@@ -31,7 +31,7 @@ namespace TencentCloud.Gwlb.V20240906.Models
         public string TargetGroupId{ get; set; }
 
         /// <summary>
-        /// 后端服务的类型，可取：CVM、ENI（即将支持）
+        /// 后端服务的类型，可取：CVM、ENI
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

@@ -43,7 +43,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string Address{ get; set; }
 
         /// <summary>
-        /// 节点公网访问地址(IP或域名)。
+        /// 节点公网访问外网地址(IP或域名，示例为IP方式)。
         /// </summary>
         [JsonProperty("WanServiceAddress")]
         public string WanServiceAddress{ get; set; }

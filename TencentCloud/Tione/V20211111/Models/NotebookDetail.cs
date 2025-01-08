@@ -313,6 +313,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("JobCreateTime")]
         public string JobCreateTime{ get; set; }
 
+        /// <summary>
+        /// Appid
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AppId")]
+        public string AppId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -362,6 +369,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "ResourceGroupInstanceId", this.ResourceGroupInstanceId);
             this.SetParamSimple(map, prefix + "SubUinName", this.SubUinName);
             this.SetParamSimple(map, prefix + "JobCreateTime", this.JobCreateTime);
+            this.SetParamSimple(map, prefix + "AppId", this.AppId);
         }
     }
 }

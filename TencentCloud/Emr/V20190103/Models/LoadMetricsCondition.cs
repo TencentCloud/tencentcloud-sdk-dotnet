@@ -26,28 +26,24 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 规则统计周期，提供1min,3min,5min。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatisticPeriod")]
         public long? StatisticPeriod{ get; set; }
 
         /// <summary>
         /// 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TriggerThreshold")]
         public long? TriggerThreshold{ get; set; }
 
         /// <summary>
         /// 扩缩容负载指标。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoadMetrics")]
         public string LoadMetrics{ get; set; }
 
         /// <summary>
         /// 规则元数据记录ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetricId")]
         public long? MetricId{ get; set; }

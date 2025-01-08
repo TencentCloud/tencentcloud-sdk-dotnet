@@ -31,7 +31,10 @@ namespace TencentCloud.Emr.V20190103.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 记录过滤参数，目前仅能为“StartTime”,“EndTime”和“StrategyName”。StartTime和EndTime支持2006-01-02 15:04:05 或者2006/01/02 15:04:05的时间格式
+        /// 记录过滤参数，目前仅能为“StartTime”,“EndTime”和“StrategyName”、ActionStatus、ScaleAction。
+        /// StartTime和EndTime支持2006-01-02 15:04:05 或者2006/01/02 15:04:05的时间格式
+        /// ActionStatus：0:INITED,1:SUCCESS, 2:FAILED,3:LIMITED_SUCCESSED,4:IN_PROCESS,5:IN_RETRY
+        /// ScaleAction：1:扩容  2:缩容
         /// </summary>
         [JsonProperty("Filters")]
         public KeyValue[] Filters{ get; set; }
@@ -54,6 +57,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("RecordSource")]
         public long? RecordSource{ get; set; }
 
+        /// <summary>
+        /// 是否升序，1:升序，0:降序
+        /// </summary>
+        [JsonProperty("Asc")]
+        public long? Asc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +74,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "RecordSource", this.RecordSource);
+            this.SetParamSimple(map, prefix + "Asc", this.Asc);
         }
     }
 }

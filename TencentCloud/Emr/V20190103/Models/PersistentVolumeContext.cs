@@ -42,6 +42,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("DiskNum")]
         public long? DiskNum{ get; set; }
 
+        /// <summary>
+        /// 云盘额外性能
+        /// </summary>
+        [JsonProperty("ExtraPerformance")]
+        public long? ExtraPerformance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "DiskNum", this.DiskNum);
+            this.SetParamSimple(map, prefix + "ExtraPerformance", this.ExtraPerformance);
         }
     }
 }

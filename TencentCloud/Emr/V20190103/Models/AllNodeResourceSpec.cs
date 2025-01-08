@@ -54,28 +54,24 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// Master节点数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MasterCount")]
         public long? MasterCount{ get; set; }
 
         /// <summary>
         /// Corer节点数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CoreCount")]
         public long? CoreCount{ get; set; }
 
         /// <summary>
         /// Task节点数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskCount")]
         public long? TaskCount{ get; set; }
 
         /// <summary>
         /// Common节点数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CommonCount")]
         public long? CommonCount{ get; set; }

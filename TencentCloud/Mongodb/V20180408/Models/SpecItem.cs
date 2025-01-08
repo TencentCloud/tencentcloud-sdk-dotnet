@@ -26,147 +26,126 @@ namespace TencentCloud.Mongodb.V20180408.Models
         
         /// <summary>
         /// 规格信息标识
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpecCode")]
         public string SpecCode{ get; set; }
 
         /// <summary>
         /// 规格有效标志，取值：0-停止售卖，1-开放售卖
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// 机器类型，取值：0-HIO，4-HIO10G
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
 
         /// <summary>
         /// cpu核心数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cpu")]
         public ulong? Cpu{ get; set; }
 
         /// <summary>
         /// 内存规格，单位为MB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Memory")]
         public ulong? Memory{ get; set; }
 
         /// <summary>
         /// 默认磁盘规格，单位MB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultStorage")]
         public ulong? DefaultStorage{ get; set; }
 
         /// <summary>
         /// 最大磁盘规格，单位MB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxStorage")]
         public ulong? MaxStorage{ get; set; }
 
         /// <summary>
         /// 最小磁盘规格，单位MB
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinStorage")]
         public ulong? MinStorage{ get; set; }
 
         /// <summary>
         /// 可承载qps信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Qps")]
         public ulong? Qps{ get; set; }
 
         /// <summary>
         /// 连接数限制
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Conns")]
         public ulong? Conns{ get; set; }
 
         /// <summary>
         /// 实例mongodb版本信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MongoVersionCode")]
         public string MongoVersionCode{ get; set; }
 
         /// <summary>
         /// 实例mongodb版本号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MongoVersionValue")]
         public ulong? MongoVersionValue{ get; set; }
 
         /// <summary>
         /// 实例mongodb版本号（短）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
         /// 存储引擎
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EngineName")]
         public string EngineName{ get; set; }
 
         /// <summary>
         /// 集群类型，取值：1-分片集群，0-副本集集群
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterType")]
         public ulong? ClusterType{ get; set; }
 
         /// <summary>
         /// 最小副本集从节点数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinNodeNum")]
         public ulong? MinNodeNum{ get; set; }
 
         /// <summary>
         /// 最大副本集从节点数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxNodeNum")]
         public ulong? MaxNodeNum{ get; set; }
 
         /// <summary>
         /// 最小分片数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinReplicateSetNum")]
         public ulong? MinReplicateSetNum{ get; set; }
 
         /// <summary>
         /// 最大分片数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxReplicateSetNum")]
         public ulong? MaxReplicateSetNum{ get; set; }
 
         /// <summary>
         /// 最小分片从节点数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinReplicateSetNodeNum")]
         public ulong? MinReplicateSetNodeNum{ get; set; }
 
         /// <summary>
         /// 最大分片从节点数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxReplicateSetNodeNum")]
         public ulong? MaxReplicateSetNodeNum{ get; set; }

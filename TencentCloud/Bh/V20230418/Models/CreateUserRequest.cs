@@ -37,13 +37,13 @@ namespace TencentCloud.Bh.V20230418.Models
         public string RealName{ get; set; }
 
         /// <summary>
-        /// 大陆手机号直接填写，如果是其他国家、地区号码， 按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
+        /// 按照"国家地区代码|手机号"的格式输入，如: "+86|xxxxxxxx"。手机号和邮箱参数至少传一项
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }
 
         /// <summary>
-        /// 电子邮件
+        /// 电子邮件。手机号和邮箱参数至少传一项
         /// </summary>
         [JsonProperty("Email")]
         public string Email{ get; set; }

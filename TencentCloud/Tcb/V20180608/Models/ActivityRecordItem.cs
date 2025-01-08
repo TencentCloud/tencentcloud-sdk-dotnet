@@ -26,42 +26,36 @@ namespace TencentCloud.Tcb.V20180608.Models
         
         /// <summary>
         /// 用户uin
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
         /// 活动id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActivityId")]
         public long? ActivityId{ get; set; }
 
         /// <summary>
         /// 自定义状态码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 自定义子状态码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubStatus")]
         public string SubStatus{ get; set; }
 
         /// <summary>
         /// 整型子状态码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubStatusInt")]
         public long? SubStatusInt{ get; set; }
 
         /// <summary>
         /// 是否软删除
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsDeleted")]
         public bool? IsDeleted{ get; set; }

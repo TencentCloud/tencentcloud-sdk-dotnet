@@ -26,35 +26,30 @@ namespace TencentCloud.Tcb.V20180608.Models
         
         /// <summary>
         /// 免费量总条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FreeQuota")]
         public ulong? FreeQuota{ get; set; }
 
         /// <summary>
         /// 共计已使用总条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalUsedQuota")]
         public ulong? TotalUsedQuota{ get; set; }
 
         /// <summary>
         /// 免费周期起点，0000-00-00 00:00:00 形式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CycleStart")]
         public string CycleStart{ get; set; }
 
         /// <summary>
         /// 免费周期终点，0000-00-00 00:00:00 形式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CycleEnd")]
         public string CycleEnd{ get; set; }
 
         /// <summary>
         /// 今天已使用总条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TodayUsedQuota")]
         public ulong? TodayUsedQuota{ get; set; }

@@ -26,21 +26,18 @@ namespace TencentCloud.Dc.V20180410.Models
         
         /// <summary>
         /// 互联网地址ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// 互联网网络地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Subnet")]
         public string Subnet{ get; set; }
 
         /// <summary>
         /// 网络地址掩码长度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaskLen")]
         public long? MaskLen{ get; set; }
@@ -50,7 +47,6 @@ namespace TencentCloud.Dc.V20180410.Models
         /// 1:电信
         /// 2:移动
         /// 3:联通
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddrType")]
         public long? AddrType{ get; set; }
@@ -65,49 +61,42 @@ namespace TencentCloud.Dc.V20180410.Models
 
         /// <summary>
         /// 申请时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplyTime")]
         public string ApplyTime{ get; set; }
 
         /// <summary>
         /// 停用时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StopTime")]
         public string StopTime{ get; set; }
 
         /// <summary>
         /// 退还时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReleaseTime")]
         public string ReleaseTime{ get; set; }
 
         /// <summary>
         /// 地域信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// 用户ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
         /// 0:IPv4 1:IPv6
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddrProto")]
         public long? AddrProto{ get; set; }
 
         /// <summary>
         /// 释放状态的IP地址保留的天数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReserveTime")]
         public long? ReserveTime{ get; set; }

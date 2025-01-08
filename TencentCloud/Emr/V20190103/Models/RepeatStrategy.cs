@@ -65,6 +65,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Expire")]
         public string Expire{ get; set; }
 
+        /// <summary>
+        /// 周期性规则开始时间
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,6 +83,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamObj(map, prefix + "MonthRepeat.", this.MonthRepeat);
             this.SetParamObj(map, prefix + "NotRepeat.", this.NotRepeat);
             this.SetParamSimple(map, prefix + "Expire", this.Expire);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
         }
     }
 }

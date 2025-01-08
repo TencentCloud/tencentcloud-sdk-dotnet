@@ -28,6 +28,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 模板配置时候的签署人角色ID(用PDF文件发起也可以指定,如果不指定则自动生成此角色ID), 所有的填写控件和签署控件都归属不同的角色
         /// </summary>
         [JsonProperty("ReceiptId")]
+        [System.Obsolete]
         public string ReceiptId{ get; set; }
 
         /// <summary>
@@ -124,6 +125,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("SignId")]
         public string SignId{ get; set; }
 
+        /// <summary>
+        /// 模板配置时候的签署人角色ID(用PDF文件发起也可以指定,如果不指定则自动生成此角色ID), 所有的填写控件和签署控件都归属不同的角色
+        /// </summary>
+        [JsonProperty("RecipientId")]
+        public string RecipientId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -143,6 +150,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ApproveType", this.ApproveType);
             this.SetParamSimple(map, prefix + "ApproverRoleName", this.ApproverRoleName);
             this.SetParamSimple(map, prefix + "SignId", this.SignId);
+            this.SetParamSimple(map, prefix + "RecipientId", this.RecipientId);
         }
     }
 }

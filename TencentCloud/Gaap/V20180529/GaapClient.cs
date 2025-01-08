@@ -28,7 +28,7 @@ namespace TencentCloud.Gaap.V20180529
 
        private const string endpoint = "gaap.tencentcloudapi.com";
        private const string version = "2018-05-29";
-       private const string sdkVersion = "SDK_NET_3.0.1159";
+       private const string sdkVersion = "SDK_NET_3.0.1160";
 
         /// <summary>
         /// Client constructor.
@@ -310,6 +310,8 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
+        /// 产品功能已下线，对应的api接口下线
+        /// 
         /// 本接口（CreateFirstLinkSession）用于创建接入段加速会话，创建有可能成功，也可能失败，需要通过返回码来进行判断。
         /// </summary>
         /// <param name="req"><see cref="CreateFirstLinkSessionRequest"/></param>
@@ -320,6 +322,8 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
+        /// 产品功能已下线，对应的api接口下线
+        /// 
         /// 本接口（CreateFirstLinkSession）用于创建接入段加速会话，创建有可能成功，也可能失败，需要通过返回码来进行判断。
         /// </summary>
         /// <param name="req"><see cref="CreateFirstLinkSessionRequest"/></param>
@@ -646,6 +650,8 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
+        /// 产品功能已下线，下线对应的api接口
+        /// 
         /// 本接口（DeleteFirstLinkSession）用于删除接入段加速会话，删除加速会话后会停止加速。
         /// </summary>
         /// <param name="req"><see cref="DeleteFirstLinkSessionRequest"/></param>
@@ -656,6 +662,8 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
+        /// 产品功能已下线，下线对应的api接口
+        /// 
         /// 本接口（DeleteFirstLinkSession）用于删除接入段加速会话，删除加速会话后会停止加速。
         /// </summary>
         /// <param name="req"><see cref="DeleteFirstLinkSessionRequest"/></param>
@@ -1066,6 +1074,8 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
+        /// 产品功能已下线，下线对应的api接口
+        /// 
         /// 本接口（DescribeFirstLinkSession）用于查询接入段加速会话状态，包括会话状态，生效时长，加速套餐等信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeFirstLinkSessionRequest"/></param>
@@ -1076,6 +1086,8 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
+        /// 产品功能已下线，下线对应的api接口
+        /// 
         /// 本接口（DescribeFirstLinkSession）用于查询接入段加速会话状态，包括会话状态，生效时长，加速套餐等信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeFirstLinkSessionRequest"/></param>

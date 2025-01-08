@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1159";
+       private const string sdkVersion = "SDK_NET_3.0.1160";
 
         /// <summary>
         /// Client constructor.
@@ -1112,6 +1112,27 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 本接口 (DescribeMaintainTimeWindow) 用于查询实例的维护时间窗口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMaintainTimeWindowRequest"/></param>
+        /// <returns><see cref="DescribeMaintainTimeWindowResponse"/></returns>
+        public Task<DescribeMaintainTimeWindowResponse> DescribeMaintainTimeWindow(DescribeMaintainTimeWindowRequest req)
+        {
+            return InternalRequestAsync<DescribeMaintainTimeWindowResponse>(req, "DescribeMaintainTimeWindow");
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeMaintainTimeWindow) 用于查询实例的维护时间窗口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMaintainTimeWindowRequest"/></param>
+        /// <returns><see cref="DescribeMaintainTimeWindowResponse"/></returns>
+        public DescribeMaintainTimeWindowResponse DescribeMaintainTimeWindowSync(DescribeMaintainTimeWindowRequest req)
+        {
+            return InternalRequestAsync<DescribeMaintainTimeWindowResponse>(req, "DescribeMaintainTimeWindow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeOrders）用于查询订单信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeOrdersRequest"/></param>
@@ -1826,6 +1847,27 @@ namespace TencentCloud.Postgres.V20170312
         public ModifyDatabaseOwnerResponse ModifyDatabaseOwnerSync(ModifyDatabaseOwnerRequest req)
         {
             return InternalRequestAsync<ModifyDatabaseOwnerResponse>(req, "ModifyDatabaseOwner")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 (ModifyMaintainTimeWindow) 用于实例维护时间窗口的修改。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMaintainTimeWindowRequest"/></param>
+        /// <returns><see cref="ModifyMaintainTimeWindowResponse"/></returns>
+        public Task<ModifyMaintainTimeWindowResponse> ModifyMaintainTimeWindow(ModifyMaintainTimeWindowRequest req)
+        {
+            return InternalRequestAsync<ModifyMaintainTimeWindowResponse>(req, "ModifyMaintainTimeWindow");
+        }
+
+        /// <summary>
+        /// 本接口 (ModifyMaintainTimeWindow) 用于实例维护时间窗口的修改。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMaintainTimeWindowRequest"/></param>
+        /// <returns><see cref="ModifyMaintainTimeWindowResponse"/></returns>
+        public ModifyMaintainTimeWindowResponse ModifyMaintainTimeWindowSync(ModifyMaintainTimeWindowRequest req)
+        {
+            return InternalRequestAsync<ModifyMaintainTimeWindowResponse>(req, "ModifyMaintainTimeWindow")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

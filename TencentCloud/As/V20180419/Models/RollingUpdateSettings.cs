@@ -46,6 +46,15 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("MaxSurge")]
         public long? MaxSurge{ get; set; }
 
+        /// <summary>
+        /// 失败处理策略。默认值为 AUTO_PAUSE，取值范围如下：
+        /// <li>AUTO_PAUSE：刷新失败后暂停</li>
+        /// <li>AUTO_ROLLBACK：刷新失败后回滚。回滚时每批次回滚一台实例，CheckInstanceTargetHealth 参数值与原刷新活动一致。MaxSurge参数引入的扩缩容流程失败无需回滚，会用取消动作代替回滚</li>
+        /// <li>AUTO_CANCEL：刷新失败后取消</li>
+        /// </summary>
+        [JsonProperty("FailProcess")]
+        public string FailProcess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -55,6 +64,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "BatchNumber", this.BatchNumber);
             this.SetParamSimple(map, prefix + "BatchPause", this.BatchPause);
             this.SetParamSimple(map, prefix + "MaxSurge", this.MaxSurge);
+            this.SetParamSimple(map, prefix + "FailProcess", this.FailProcess);
         }
     }
 }

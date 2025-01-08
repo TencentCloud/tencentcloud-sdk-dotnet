@@ -95,7 +95,7 @@ namespace TencentCloud.Dc.V20180410.Models
         public string RouteType{ get; set; }
 
         /// <summary>
-        /// 用户侧BGP，Asn，AuthKey
+        /// 用户侧BGP，包括： CloudAsn，Asn，AuthKey
         /// </summary>
         [JsonProperty("BgpPeer")]
         public BgpPeer BgpPeer{ get; set; }
@@ -150,84 +150,72 @@ namespace TencentCloud.Dc.V20180410.Models
 
         /// <summary>
         /// 关联的网络自定义探测ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetDetectId")]
         public string NetDetectId{ get; set; }
 
         /// <summary>
         /// BGP community开关
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableBGPCommunity")]
         public bool? EnableBGPCommunity{ get; set; }
 
         /// <summary>
         /// 是否为Nat通道
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NatType")]
         public long? NatType{ get; set; }
 
         /// <summary>
         /// VPC地域简码，如gz、cd
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcRegion")]
         public string VpcRegion{ get; set; }
 
         /// <summary>
         /// 是否开启BFD
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BfdEnable")]
         public long? BfdEnable{ get; set; }
 
         /// <summary>
         /// 专用通道接入点类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessPointType")]
         public string AccessPointType{ get; set; }
 
         /// <summary>
         /// 专线网关名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DirectConnectGatewayName")]
         public string DirectConnectGatewayName{ get; set; }
 
         /// <summary>
         /// VPC名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
         /// <summary>
         /// TencentBackupAddress，腾讯侧备用互联 IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TencentBackupAddress")]
         public string TencentBackupAddress{ get; set; }
 
         /// <summary>
         /// 专用通道关联的物理专线是否签署了用户协议
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SignLaw")]
         public bool? SignLaw{ get; set; }
 
         /// <summary>
         /// 高速上云服务ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CloudAttachId")]
         public string CloudAttachId{ get; set; }
 
         /// <summary>
         /// 是否共享通道
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShareOrNot")]
         public ulong? ShareOrNot{ get; set; }

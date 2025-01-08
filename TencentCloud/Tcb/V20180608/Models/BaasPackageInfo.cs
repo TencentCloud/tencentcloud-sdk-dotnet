@@ -26,28 +26,24 @@ namespace TencentCloud.Tcb.V20180608.Models
         
         /// <summary>
         /// DAU产品套餐ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageName")]
         public string PackageName{ get; set; }
 
         /// <summary>
         /// DAU套餐中文名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageTitle")]
         public string PackageTitle{ get; set; }
 
         /// <summary>
         /// 套餐分组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
         /// 套餐分组中文名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupTitle")]
         public string GroupTitle{ get; set; }
@@ -55,7 +51,6 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// <summary>
         /// json格式化计费标签，例如：
         /// {"pid":2, "cids":{"create": 2, "renew": 2, "modify": 2}, "productCode":"p_tcb_mp", "subProductCode":"sp_tcb_mp_cloudbase_dau"}
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillTags")]
         public string BillTags{ get; set; }
@@ -63,7 +58,6 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// <summary>
         /// json格式化用户资源限制，例如：
         /// {"Qps":1000,"InvokeNum":{"TimeUnit":"m", "Unit":"万次", "MaxSize": 100},"Capacity":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100}, "Cdn":{"Flux":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100}, "BackFlux":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100}},"Scf":{"Concurrency":1000,"OutFlux":{"TimeUnit":"m", "Unit":"GB", "MaxSize": 100},"MemoryUse":{"TimeUnit":"m", "Unit":"WGBS", "MaxSize": 100000}}}
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceLimit")]
         public string ResourceLimit{ get; set; }
@@ -71,21 +65,18 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// <summary>
         /// json格式化高级限制，例如：
         /// {"CMSEnable":false,"ProvisionedConcurrencyMem":512000, "PictureProcessing":false, "SecurityAudit":false, "RealTimePush":false, "TemplateMessageBatchPush":false, "Payment":false}
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdvanceLimit")]
         public string AdvanceLimit{ get; set; }
 
         /// <summary>
         /// 套餐描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageDescription")]
         public string PackageDescription{ get; set; }
 
         /// <summary>
         /// 是否对外展示
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsExternal")]
         public bool? IsExternal{ get; set; }

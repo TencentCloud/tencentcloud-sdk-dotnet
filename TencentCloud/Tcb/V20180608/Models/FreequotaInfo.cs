@@ -57,7 +57,6 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// <li>sum-month:以月为单位抵扣</li>
         /// <li>sum-day:以天为单位抵扣</li>
         /// <li>totalize:总容量抵扣</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeductType")]
         public string DeductType{ get; set; }
@@ -65,7 +64,6 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// <summary>
         /// 免费量类型
         /// <li>basic:通用量抵扣</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FreeQuotaType")]
         public string FreeQuotaType{ get; set; }

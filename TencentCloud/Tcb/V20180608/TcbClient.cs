@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1159";
+       private const string sdkVersion = "SDK_NET_3.0.1160";
 
         /// <summary>
         /// Client constructor.
@@ -705,7 +705,7 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
-        /// 查询云应用服务版本容器列表
+        /// 查询云托管服务版本容器列表
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudBaseRunPodListRequest"/></param>
         /// <returns><see cref="DescribeCloudBaseRunPodListResponse"/></returns>
@@ -715,7 +715,7 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
-        /// 查询云应用服务版本容器列表
+        /// 查询云托管服务版本容器列表
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudBaseRunPodListRequest"/></param>
         /// <returns><see cref="DescribeCloudBaseRunPodListResponse"/></returns>

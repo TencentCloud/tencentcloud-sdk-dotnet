@@ -31,6 +31,12 @@ namespace TencentCloud.Dts.V20211206.Models
         public string JobId{ get; set; }
 
         /// <summary>
+        /// 同步任务id列表，如sync-werwfs23
+        /// </summary>
+        [JsonProperty("JobIds")]
+        public string[] JobIds{ get; set; }
+
+        /// <summary>
         /// 同步任务名
         /// </summary>
         [JsonProperty("JobName")]
@@ -90,6 +96,18 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("TagFilters")]
         public TagFilter[] TagFilters{ get; set; }
 
+        /// <summary>
+        /// 源端数据库连接信息，可以输入实例ID或者IP等
+        /// </summary>
+        [JsonProperty("SrcInfoPattern")]
+        public string SrcInfoPattern{ get; set; }
+
+        /// <summary>
+        /// 目标端数据库连接信息，可以输入实例ID或者IP等
+        /// </summary>
+        [JsonProperty("DstInfoPattern")]
+        public string DstInfoPattern{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -97,6 +115,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "JobId", this.JobId);
+            this.SetParamArraySimple(map, prefix + "JobIds.", this.JobIds);
             this.SetParamSimple(map, prefix + "JobName", this.JobName);
             this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "OrderSeq", this.OrderSeq);
@@ -107,6 +126,8 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "JobType", this.JobType);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
+            this.SetParamSimple(map, prefix + "SrcInfoPattern", this.SrcInfoPattern);
+            this.SetParamSimple(map, prefix + "DstInfoPattern", this.DstInfoPattern);
         }
     }
 }

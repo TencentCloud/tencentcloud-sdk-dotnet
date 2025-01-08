@@ -32,28 +32,24 @@ namespace TencentCloud.Tcb.V20180608.Models
 
         /// <summary>
         /// SAM json
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Sam")]
         public string Sam{ get; set; }
 
         /// <summary>
         /// 来源类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Source")]
         public CodeSource Source{ get; set; }
 
         /// <summary>
         /// 创建时间, unix时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
         /// 更新时间 ,unix时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }
@@ -67,14 +63,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// 	"deploying"-部署中
         /// 	 "deployFail"-部署失败
         /// 	 "success"-部署成功
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 环境变量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Parameters")]
         public KVPair[] Parameters{ get; set; }
@@ -84,154 +78,132 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// "framework-oneclick" 控制台一键部署
         /// "framework-local-oneclick" cli本地一键部署
         /// "qci-extension-cicd" 内网coding ci cd
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// ci的id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CIId")]
         public string CIId{ get; set; }
 
         /// <summary>
         /// cd的id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CDId")]
         public string CDId{ get; set; }
 
         /// <summary>
         /// 环境id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }
 
         /// <summary>
         /// 版本号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VersionNum")]
         public long? VersionNum{ get; set; }
 
         /// <summary>
         /// 错误原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailReason")]
         public string FailReason{ get; set; }
 
         /// <summary>
         /// rc.json内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RcJson")]
         public string RcJson{ get; set; }
 
         /// <summary>
         /// 插件配置内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddonConfig")]
         public string AddonConfig{ get; set; }
 
         /// <summary>
         /// 标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
         /// 网络配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetworkConfig")]
         public string NetworkConfig{ get; set; }
 
         /// <summary>
         /// 扩展id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtensionId")]
         public string ExtensionId{ get; set; }
 
         /// <summary>
         /// 错误类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailType")]
         public string FailType{ get; set; }
 
         /// <summary>
         /// 私有仓库地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RepoUrl")]
         public string RepoUrl{ get; set; }
 
         /// <summary>
         /// 是否私有仓库代码变更触发自动部署
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoDeployOnCodeChange")]
         public bool? AutoDeployOnCodeChange{ get; set; }
 
         /// <summary>
         /// ci部署进度（%）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BuildPercent")]
         public long? BuildPercent{ get; set; }
 
         /// <summary>
         /// Uin
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
         /// BuildFinishTime
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BuildFinishTime")]
         public string BuildFinishTime{ get; set; }
 
         /// <summary>
         /// DeployFinishTime
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeployFinishTime")]
         public string DeployFinishTime{ get; set; }
 
         /// <summary>
         /// BuildId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BuildId")]
         public string BuildId{ get; set; }
 
         /// <summary>
         /// SourceUrl
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceUrl")]
         public string SourceUrl{ get; set; }
 
         /// <summary>
         /// FailReasonShort
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailReasonShort")]
         public string FailReasonShort{ get; set; }
 
         /// <summary>
         /// FirstInitRepo
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FirstInitRepo")]
         public string FirstInitRepo{ get; set; }

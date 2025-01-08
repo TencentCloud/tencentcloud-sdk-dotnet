@@ -122,17 +122,21 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 服务分级：PT、AU、AG。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QosLevel")]
         public string QosLevel{ get; set; }
 
         /// <summary>
         /// 互通类型，VPC_PEER：VPC间互通；VPC_BM_PEER：VPC与黑石网络互通。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
+
+        /// <summary>
+        /// 对端VPC唯一ID。
+        /// </summary>
+        [JsonProperty("DestinationVpcId")]
+        public string DestinationVpcId{ get; set; }
 
 
         /// <summary>
@@ -158,6 +162,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "QosLevel", this.QosLevel);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "DestinationVpcId", this.DestinationVpcId);
         }
     }
 }

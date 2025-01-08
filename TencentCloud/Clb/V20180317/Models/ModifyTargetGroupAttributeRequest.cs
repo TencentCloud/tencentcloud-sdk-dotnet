@@ -42,6 +42,16 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
 
+        /// <summary>
+        /// 后端服务默认权重。
+        /// <ul>
+        ///     <li>取值范围[0, 100]</li>
+        ///     <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li> 
+        /// </ul>
+        /// </summary>
+        [JsonProperty("Weight")]
+        public ulong? Weight{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +61,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
             this.SetParamSimple(map, prefix + "TargetGroupName", this.TargetGroupName);
             this.SetParamSimple(map, prefix + "Port", this.Port);
+            this.SetParamSimple(map, prefix + "Weight", this.Weight);
         }
     }
 }

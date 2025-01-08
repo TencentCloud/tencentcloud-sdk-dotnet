@@ -25,15 +25,19 @@ namespace TencentCloud.Dc.V20180410.Models
     {
         
         /// <summary>
+        /// 腾讯侧BGP ASN
+        /// </summary>
+        [JsonProperty("CloudAsn")]
+        public string CloudAsn{ get; set; }
+
+        /// <summary>
         /// 用户侧BGP ASN
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Asn")]
         public long? Asn{ get; set; }
 
         /// <summary>
         /// 用户侧BGP密钥
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthKey")]
         public string AuthKey{ get; set; }
@@ -44,6 +48,7 @@ namespace TencentCloud.Dc.V20180410.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "CloudAsn", this.CloudAsn);
             this.SetParamSimple(map, prefix + "Asn", this.Asn);
             this.SetParamSimple(map, prefix + "AuthKey", this.AuthKey);
         }

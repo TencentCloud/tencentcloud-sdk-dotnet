@@ -234,49 +234,42 @@ namespace TencentCloud.Dc.V20180410.Models
 
         /// <summary>
         /// 是否开启IPv6
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IPv6Enable")]
         public long? IPv6Enable{ get; set; }
 
         /// <summary>
         /// 腾讯侧互联IPv6地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TencentIPv6Address")]
         public string TencentIPv6Address{ get; set; }
 
         /// <summary>
         /// 腾讯侧备用互联IPv6地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TencentBackupIPv6Address")]
         public string TencentBackupIPv6Address{ get; set; }
 
         /// <summary>
         /// BGPv6状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BgpIPv6Status")]
         public BGPStatus BgpIPv6Status{ get; set; }
 
         /// <summary>
         /// 用户侧互联IPv6地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomerIPv6Address")]
         public string CustomerIPv6Address{ get; set; }
 
         /// <summary>
         /// 专用通道是否支持巨帧。1 支持，0 不支持
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JumboEnable")]
         public long? JumboEnable{ get; set; }
 
         /// <summary>
         /// 专用通道是否支持高精度BFD。1支持，0不支持
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HighPrecisionBFDEnable")]
         public long? HighPrecisionBFDEnable{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1159";
+       private const string sdkVersion = "SDK_NET_3.0.1160";
 
         /// <summary>
         /// Client constructor.
@@ -327,7 +327,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 创建参数模板。
+        /// 该接口（CreateParamTemplate）用于创建参数模板。
         /// </summary>
         /// <param name="req"><see cref="CreateParamTemplateRequest"/></param>
         /// <returns><see cref="CreateParamTemplateResponse"/></returns>
@@ -337,7 +337,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 创建参数模板。
+        /// 该接口（CreateParamTemplate）用于创建参数模板。
         /// </summary>
         /// <param name="req"><see cref="CreateParamTemplateRequest"/></param>
         /// <returns><see cref="CreateParamTemplateResponse"/></returns>
@@ -390,7 +390,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 删除参数模板
+        /// 本接口（DeleteParamTemplate）用于删除参数模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteParamTemplateRequest"/></param>
         /// <returns><see cref="DeleteParamTemplateResponse"/></returns>
@@ -400,7 +400,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 删除参数模板
+        /// 本接口（DeleteParamTemplate）用于删除参数模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteParamTemplateRequest"/></param>
         /// <returns><see cref="DeleteParamTemplateResponse"/></returns>
@@ -579,7 +579,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询全球复制支持地域信息
+        /// 本接口（DescribeGlobalReplicationArea）用于查询全球复制支持地域信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeGlobalReplicationAreaRequest"/></param>
         /// <returns><see cref="DescribeGlobalReplicationAreaResponse"/></returns>
@@ -589,7 +589,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询全球复制支持地域信息
+        /// 本接口（DescribeGlobalReplicationArea）用于查询全球复制支持地域信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeGlobalReplicationAreaRequest"/></param>
         /// <returns><see cref="DescribeGlobalReplicationAreaResponse"/></returns>
@@ -810,7 +810,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 该接口已下线，请使用数据库智能管家 DBbrain 接口 [DescribeProxyProcessStatistics] (https://cloud.tencent.com/document/product/1130/84544) 获取实例访问来源。
+        /// 该接口已下线，请使用数据库智能管家 DBbrain 接口 [DescribeProxyProcessStatistics](https://cloud.tencent.com/document/product/1130/84544) 获取实例访问来源。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorSIPRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorSIPResponse"/></returns>
@@ -820,7 +820,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 该接口已下线，请使用数据库智能管家 DBbrain 接口 [DescribeProxyProcessStatistics] (https://cloud.tencent.com/document/product/1130/84544) 获取实例访问来源。
+        /// 该接口已下线，请使用数据库智能管家 DBbrain 接口 [DescribeProxyProcessStatistics](https://cloud.tencent.com/document/product/1130/84544) 获取实例访问来源。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorSIPRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorSIPResponse"/></returns>
@@ -852,7 +852,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例访问命令
+        /// 本接口（DescribeInstanceMonitorTopNCmd）用于查询实例访问命令。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorTopNCmdRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorTopNCmdResponse"/></returns>
@@ -862,7 +862,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例访问命令
+        /// 本接口（DescribeInstanceMonitorTopNCmd）用于查询实例访问命令。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorTopNCmdRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorTopNCmdResponse"/></returns>
@@ -915,7 +915,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询参数修改历史列表
+        /// 本接口（DescribeInstanceParamRecords）用于查询参数修改历史列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceParamRecordsRequest"/></param>
         /// <returns><see cref="DescribeInstanceParamRecordsResponse"/></returns>
@@ -925,7 +925,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询参数修改历史列表
+        /// 本接口（DescribeInstanceParamRecords）用于查询参数修改历史列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceParamRecordsRequest"/></param>
         /// <returns><see cref="DescribeInstanceParamRecordsResponse"/></returns>
@@ -1125,7 +1125,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询参数模板列表
+        /// 本接口（DescribeParamTemplates）用于查询参数模板列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplatesRequest"/></param>
         /// <returns><see cref="DescribeParamTemplatesResponse"/></returns>
@@ -1135,7 +1135,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询参数模板列表
+        /// 本接口（DescribeParamTemplates）用于查询参数模板列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplatesRequest"/></param>
         /// <returns><see cref="DescribeParamTemplatesResponse"/></returns>
@@ -2137,7 +2137,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 恢复 CRS 实例
+        /// 本接口（RestoreInstance）用于恢复实例。
         /// </summary>
         /// <param name="req"><see cref="RestoreInstanceRequest"/></param>
         /// <returns><see cref="RestoreInstanceResponse"/></returns>
@@ -2147,7 +2147,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 恢复 CRS 实例
+        /// 本接口（RestoreInstance）用于恢复实例。
         /// </summary>
         /// <param name="req"><see cref="RestoreInstanceRequest"/></param>
         /// <returns><see cref="RestoreInstanceResponse"/></returns>

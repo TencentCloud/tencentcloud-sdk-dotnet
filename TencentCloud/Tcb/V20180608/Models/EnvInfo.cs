@@ -84,42 +84,36 @@ namespace TencentCloud.Tcb.V20180608.Models
 
         /// <summary>
         /// tcb产品套餐ID，参考DescribePackages接口的返回值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageId")]
         public string PackageId{ get; set; }
 
         /// <summary>
         /// 套餐中文名称，参考DescribePackages接口的返回值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageName")]
         public string PackageName{ get; set; }
 
         /// <summary>
         /// 云日志服务列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogServices")]
         public LogServiceInfo[] LogServices{ get; set; }
 
         /// <summary>
         /// 静态资源信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StaticStorages")]
         public StaticStorageInfo[] StaticStorages{ get; set; }
 
         /// <summary>
         /// 是否到期自动降为免费版
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsAutoDegrade")]
         public bool? IsAutoDegrade{ get; set; }
 
         /// <summary>
         /// 环境渠道
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvChannel")]
         public string EnvChannel{ get; set; }
@@ -128,70 +122,60 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// 支付方式。包含以下取值：
         /// <li> prepayment：预付费</li>
         /// <li> postpaid：后付费</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
         /// <summary>
         /// 是否为默认环境
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsDefault")]
         public bool? IsDefault{ get; set; }
 
         /// <summary>
         /// 环境所属地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// 环境标签列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
         /// 自定义日志服务
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomLogServices")]
         public ClsInfo[] CustomLogServices{ get; set; }
 
         /// <summary>
         /// 环境类型：baas, run, hoting, weda
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvType")]
         public string EnvType{ get; set; }
 
         /// <summary>
         /// 是否是dau新套餐
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsDauPackage")]
         public bool? IsDauPackage{ get; set; }
 
         /// <summary>
         /// 套餐类型:空\baas\tcbr
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
 
         /// <summary>
         /// 架构类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ArchitectureType")]
         public string ArchitectureType{ get; set; }
 
         /// <summary>
         /// 回收标志，默认为空
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Recycle")]
         public string Recycle{ get; set; }

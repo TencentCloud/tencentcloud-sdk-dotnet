@@ -26,7 +26,6 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 节点规格描述，如CVM.SA2。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Spec")]
         public string Spec{ get; set; }
@@ -39,7 +38,6 @@ namespace TencentCloud.Emr.V20190103.Models
         /// <li>6：表示增强型SSD云硬盘。</li>
         /// <li>11：表示吞吐型云硬盘。</li>
         /// <li>12：表示极速型SSD云硬盘。</li>：创建时该类型无效，会根据数据盘类型和节点类型自动判断
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageType")]
         public long? StorageType{ get; set; }
@@ -50,35 +48,30 @@ namespace TencentCloud.Emr.V20190103.Models
         /// <li>CLOUD_SSD：表示云SSD。</li>
         /// <li>CLOUD_PREMIUM：表示高效云盘。</li>
         /// <li>CLOUD_BASIC：表示云硬盘。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
         /// 内存容量,单位为M
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemSize")]
         public long? MemSize{ get; set; }
 
         /// <summary>
         /// CPU核数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
         /// 数据盘容量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
         /// 系统盘容量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RootSize")]
         public long? RootSize{ get; set; }
@@ -99,21 +92,18 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 规格类型，如S2.MEDIUM8
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
         /// 本地盘数量，该字段已废弃
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LocalDiskNum")]
         public ulong? LocalDiskNum{ get; set; }
 
         /// <summary>
         /// 本地盘数量，如2
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskNum")]
         public ulong? DiskNum{ get; set; }

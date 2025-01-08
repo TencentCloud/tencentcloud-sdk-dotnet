@@ -26,28 +26,24 @@ namespace TencentCloud.Mongodb.V20190725.Models
         
         /// <summary>
         /// 操作序号。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OpId")]
         public long? OpId{ get; set; }
 
         /// <summary>
         /// 操作所在的命名空间，形式如db.collection。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ns")]
         public string Ns{ get; set; }
 
         /// <summary>
         /// 操作执行语句。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
         /// <summary>
         /// 操作类型，可能的取值：aggregate、count、delete、distinct、find、findAndModify、getMore、insert、mapReduce、update和command。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Op")]
         public string Op{ get; set; }
@@ -66,28 +62,24 @@ namespace TencentCloud.Mongodb.V20190725.Models
 
         /// <summary>
         /// 操作详细信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
 
         /// <summary>
         /// 筛选条件，节点状态，可能的取值为：Primary、Secondary。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
         /// 操作已执行时间（ms）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MicrosecsRunning")]
         public ulong? MicrosecsRunning{ get; set; }
 
         /// <summary>
         /// 当前操作所在节点信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecNode")]
         public string ExecNode{ get; set; }

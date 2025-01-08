@@ -140,6 +140,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? AlarmLevel{ get; set; }
 
         /// <summary>
+        /// 告警附加分类字段。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Classifications")]
+        public AlarmClassification[] Classifications{ get; set; }
+
+        /// <summary>
         /// 多触发条件。与
         /// Condition互斥。
         /// 注意：此字段可能返回 null，表示取不到有效值。
@@ -171,6 +178,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArraySimple(map, prefix + "GroupTriggerCondition.", this.GroupTriggerCondition);
             this.SetParamSimple(map, prefix + "MonitorObjectType", this.MonitorObjectType);
             this.SetParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
+            this.SetParamArrayObj(map, prefix + "Classifications.", this.Classifications);
             this.SetParamArrayObj(map, prefix + "MultiConditions.", this.MultiConditions);
         }
     }

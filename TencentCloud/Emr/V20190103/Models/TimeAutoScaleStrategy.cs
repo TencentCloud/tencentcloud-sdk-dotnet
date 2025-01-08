@@ -26,49 +26,42 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 策略名字，集群内唯一。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrategyName")]
         public string StrategyName{ get; set; }
 
         /// <summary>
         /// 策略触发后的冷却时间，该段时间内，将不能触发弹性扩缩容。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IntervalTime")]
         public ulong? IntervalTime{ get; set; }
 
         /// <summary>
         /// 扩缩容动作，1表示扩容，2表示缩容。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScaleAction")]
         public ulong? ScaleAction{ get; set; }
 
         /// <summary>
         /// 扩缩容数量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScaleNum")]
         public ulong? ScaleNum{ get; set; }
 
         /// <summary>
         /// 规则状态，1表示有效，2表示无效，3表示暂停。必须填写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrategyStatus")]
         public ulong? StrategyStatus{ get; set; }
 
         /// <summary>
         /// 规则优先级，越小越高。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Priority")]
         public ulong? Priority{ get; set; }
 
         /// <summary>
         /// 当多条规则同时触发，其中某些未真正执行时，在该时间范围内，将会重试。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RetryValidTime")]
         public ulong? RetryValidTime{ get; set; }
@@ -82,21 +75,18 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 策略唯一ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrategyId")]
         public ulong? StrategyId{ get; set; }
 
         /// <summary>
         /// 优雅缩容开关
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GraceDownFlag")]
         public bool? GraceDownFlag{ get; set; }
 
         /// <summary>
         /// 优雅缩容等待时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GraceDownTime")]
         public long? GraceDownTime{ get; set; }
@@ -110,7 +100,6 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 预设配置组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigGroupAssigned")]
         public string ConfigGroupAssigned{ get; set; }
@@ -121,21 +110,18 @@ namespace TencentCloud.Emr.V20190103.Models
         /// "INSTANCE"表示按照节点计算，默认方式。
         /// "CPU"表示按照机器的核数计算。
         /// "MEMORYGB"表示按照机器内存数计算。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MeasureMethod")]
         public string MeasureMethod{ get; set; }
 
         /// <summary>
         /// 销毁策略, "DEFAULT",默认销毁策略，由缩容规则触发缩容，"TIMING"表示定时销毁
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TerminatePolicy")]
         public string TerminatePolicy{ get; set; }
 
         /// <summary>
         /// 最长使用时间， 秒数，最短1小时，最长24小时
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxUse")]
         public long? MaxUse{ get; set; }
@@ -156,14 +142,12 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 补偿扩容，0表示不开启，1表示开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CompensateFlag")]
         public long? CompensateFlag{ get; set; }
 
         /// <summary>
         /// 伸缩组id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }

@@ -26,35 +26,30 @@ namespace TencentCloud.Tcb.V20180608.Models
         
         /// <summary>
         /// 静态CDN域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StaticDomain")]
         public string StaticDomain{ get; set; }
 
         /// <summary>
         /// 静态CDN默认文件夹，当前为根目录
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DefaultDirName")]
         public string DefaultDirName{ get; set; }
 
         /// <summary>
         /// 资源状态(process/online/offline/init)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// cos所属区域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// bucket信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }

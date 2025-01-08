@@ -26,14 +26,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         
         /// <summary>
         /// repo的名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// repo的完整全名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FullName")]
         public string FullName{ get; set; }

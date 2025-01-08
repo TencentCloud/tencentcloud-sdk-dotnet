@@ -26,7 +26,6 @@ namespace TencentCloud.Dc.V20180410.Models
         
         /// <summary>
         /// 用户侧网段地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cidr")]
         public string Cidr{ get; set; }

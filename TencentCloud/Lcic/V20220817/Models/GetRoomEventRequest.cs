@@ -43,7 +43,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? Page{ get; set; }
 
         /// <summary>
-        /// 每页个数。keyword为空时有效。一次性最多200条。
+        /// 每页个数。keyword为空时有效。一次性最多100条。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

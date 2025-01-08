@@ -26,14 +26,12 @@ namespace TencentCloud.Dc.V20180410.Models
         
         /// <summary>
         /// 地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// 互联网公网地址数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetNum")]
         public long? SubnetNum{ get; set; }

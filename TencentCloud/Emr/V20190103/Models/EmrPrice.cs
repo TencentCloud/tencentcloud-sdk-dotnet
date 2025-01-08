@@ -26,21 +26,18 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 刊例价格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginalCost")]
         public string OriginalCost{ get; set; }
 
         /// <summary>
         /// 折扣价格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiscountCost")]
         public string DiscountCost{ get; set; }
 
         /// <summary>
         /// 单位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }
@@ -54,7 +51,6 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 是否支持竞价实例
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportSpotPaid")]
         public bool? SupportSpotPaid{ get; set; }

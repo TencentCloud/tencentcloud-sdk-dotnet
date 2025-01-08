@@ -26,14 +26,12 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// ID号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
         /// 集群ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
@@ -48,56 +46,48 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 集群名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
         /// 地域ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
         /// <summary>
         /// 地区ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
         /// 用户APPID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
         /// 用户UIN
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
         /// 项目Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
         /// 集群VPCID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public long? VpcId{ get; set; }
 
         /// <summary>
         /// 子网ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetId")]
         public long? SubnetId{ get; set; }
@@ -131,21 +121,18 @@ namespace TencentCloud.Emr.V20190103.Models
         /// <li>34：表示集群已退费。</li>
         /// <li>301：表示创建失败。</li>
         /// <li>302：表示扩容失败。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 添加时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddTime")]
         public string AddTime{ get; set; }
 
         /// <summary>
         /// 已经运行时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RunTime")]
         public string RunTime{ get; set; }
@@ -160,63 +147,54 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 主节点外网IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MasterIp")]
         public string MasterIp{ get; set; }
 
         /// <summary>
         /// EMR版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EmrVersion")]
         public string EmrVersion{ get; set; }
 
         /// <summary>
         /// 收费类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChargeType")]
         public long? ChargeType{ get; set; }
 
         /// <summary>
         /// 交易版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TradeVersion")]
         public long? TradeVersion{ get; set; }
 
         /// <summary>
         /// 资源订单ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceOrderId")]
         public long? ResourceOrderId{ get; set; }
 
         /// <summary>
         /// 是否计费集群
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsTradeCluster")]
         public long? IsTradeCluster{ get; set; }
 
         /// <summary>
         /// 集群错误状态告警信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlarmInfo")]
         public string AlarmInfo{ get; set; }
 
         /// <summary>
         /// 是否采用新架构
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsWoodpeckerCluster")]
         public long? IsWoodpeckerCluster{ get; set; }
 
         /// <summary>
         /// 元数据库信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetaDb")]
         public string MetaDb{ get; set; }
@@ -230,77 +208,66 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// Hive元数据信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HiveMetaDb")]
         public string HiveMetaDb{ get; set; }
 
         /// <summary>
         /// 集群类型:EMR,CLICKHOUSE,DRUID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceClass")]
         public string ServiceClass{ get; set; }
 
         /// <summary>
         /// 集群所有节点的别名序列化
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AliasInfo")]
         public string AliasInfo{ get; set; }
 
         /// <summary>
         /// 集群版本Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductId")]
         public long? ProductId{ get; set; }
 
         /// <summary>
         /// 地区ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
         /// 场景名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SceneName")]
         public string SceneName{ get; set; }
 
         /// <summary>
         /// 场景化集群类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SceneServiceClass")]
         public string SceneServiceClass{ get; set; }
 
         /// <summary>
         /// 场景化EMR版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SceneEmrVersion")]
         public string SceneEmrVersion{ get; set; }
 
         /// <summary>
         /// 场景化集群类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DisplayName")]
         public string DisplayName{ get; set; }
 
         /// <summary>
         /// vpc name
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
         /// <summary>
         /// subnet name
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetName")]
         public string SubnetName{ get; set; }
@@ -314,14 +281,12 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 集群vpcid 字符串类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
         /// 子网id 字符串类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
@@ -335,21 +300,18 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 是否是跨AZ集群
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsMultiZoneCluster")]
         public bool? IsMultiZoneCluster{ get; set; }
 
         /// <summary>
         /// 是否开通异常节点自动补偿
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsCvmReplace")]
         public bool? IsCvmReplace{ get; set; }
 
         /// <summary>
         /// 标题
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterTitle")]
         public string ClusterTitle{ get; set; }
@@ -363,10 +325,16 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 集群绑定的文件系统数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BindFileSystemNum")]
         public long? BindFileSystemNum{ get; set; }
+
+        /// <summary>
+        /// rss集群的绑定列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterRelationInfoList")]
+        public ClusterRelationMeta[] ClusterRelationInfoList{ get; set; }
 
 
         /// <summary>
@@ -419,6 +387,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "ClusterTitle", this.ClusterTitle);
             this.SetParamObj(map, prefix + "ConfigDetail.", this.ConfigDetail);
             this.SetParamSimple(map, prefix + "BindFileSystemNum", this.BindFileSystemNum);
+            this.SetParamArrayObj(map, prefix + "ClusterRelationInfoList.", this.ClusterRelationInfoList);
         }
     }
 }

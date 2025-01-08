@@ -26,63 +26,54 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 规则ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrategyId")]
         public long? StrategyId{ get; set; }
 
         /// <summary>
         /// 规则名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrategyName")]
         public string StrategyName{ get; set; }
 
         /// <summary>
         /// 规则生效冷却时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CalmDownTime")]
         public long? CalmDownTime{ get; set; }
 
         /// <summary>
         /// 扩缩容动作，1表示扩容，2表示缩容。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScaleAction")]
         public long? ScaleAction{ get; set; }
 
         /// <summary>
         /// 每次规则生效时的扩缩容数量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScaleNum")]
         public long? ScaleNum{ get; set; }
 
         /// <summary>
         /// 指标处理方法，1表示MAX，2表示MIN，3表示AVG。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcessMethod")]
         public long? ProcessMethod{ get; set; }
 
         /// <summary>
         /// 规则优先级，添加时无效，默认为自增。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
 
         /// <summary>
         /// 规则状态，1表示启动，3表示禁用。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrategyStatus")]
         public long? StrategyStatus{ get; set; }
 
         /// <summary>
         /// 规则扩容指定 yarn node label
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("YarnNodeLabel")]
         public string YarnNodeLabel{ get; set; }
@@ -114,7 +105,6 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 预设配置组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigGroupAssigned")]
         public string ConfigGroupAssigned{ get; set; }
@@ -125,7 +115,6 @@ namespace TencentCloud.Emr.V20190103.Models
         /// "INSTANCE"表示按照节点计算，默认方式。
         /// "CPU"表示按照机器的核数计算。
         /// "MEMORYGB"表示按照机器内存数计算。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MeasureMethod")]
         public string MeasureMethod{ get; set; }
