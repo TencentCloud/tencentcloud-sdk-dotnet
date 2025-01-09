@@ -98,6 +98,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Threshold")]
         public float? Threshold{ get; set; }
 
+        /// <summary>
+        /// 时间范围单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IndicatorTimeRangeUnit")]
+        public string IndicatorTimeRangeUnit{ get; set; }
+
+        /// <summary>
+        /// 时间范围值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IndicatorTimeRangeValue")]
+        public long? IndicatorTimeRangeValue{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +129,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DurationUnit", this.DurationUnit);
             this.SetParamSimple(map, prefix + "MaxTimes", this.MaxTimes);
             this.SetParamSimple(map, prefix + "Threshold", this.Threshold);
+            this.SetParamSimple(map, prefix + "IndicatorTimeRangeUnit", this.IndicatorTimeRangeUnit);
+            this.SetParamSimple(map, prefix + "IndicatorTimeRangeValue", this.IndicatorTimeRangeValue);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Config.V20220802
 
        private const string endpoint = "config.tencentcloudapi.com";
        private const string version = "2022-08-02";
-       private const string sdkVersion = "SDK_NET_3.0.1160";
+       private const string sdkVersion = "SDK_NET_3.0.1161";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Config.V20220802
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 账号组资源详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAggregateDiscoveredResourceRequest"/></param>
+        /// <returns><see cref="DescribeAggregateDiscoveredResourceResponse"/></returns>
+        public Task<DescribeAggregateDiscoveredResourceResponse> DescribeAggregateDiscoveredResource(DescribeAggregateDiscoveredResourceRequest req)
+        {
+            return InternalRequestAsync<DescribeAggregateDiscoveredResourceResponse>(req, "DescribeAggregateDiscoveredResource");
+        }
+
+        /// <summary>
+        /// 账号组资源详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAggregateDiscoveredResourceRequest"/></param>
+        /// <returns><see cref="DescribeAggregateDiscoveredResourceResponse"/></returns>
+        public DescribeAggregateDiscoveredResourceResponse DescribeAggregateDiscoveredResourceSync(DescribeAggregateDiscoveredResourceRequest req)
+        {
+            return InternalRequestAsync<DescribeAggregateDiscoveredResourceResponse>(req, "DescribeAggregateDiscoveredResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -92,6 +113,27 @@ namespace TencentCloud.Config.V20220802
         public ListAggregateConfigRulesResponse ListAggregateConfigRulesSync(ListAggregateConfigRulesRequest req)
         {
             return InternalRequestAsync<ListAggregateConfigRulesResponse>(req, "ListAggregateConfigRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 账号组获取资源列表
+        /// </summary>
+        /// <param name="req"><see cref="ListAggregateDiscoveredResourcesRequest"/></param>
+        /// <returns><see cref="ListAggregateDiscoveredResourcesResponse"/></returns>
+        public Task<ListAggregateDiscoveredResourcesResponse> ListAggregateDiscoveredResources(ListAggregateDiscoveredResourcesRequest req)
+        {
+            return InternalRequestAsync<ListAggregateDiscoveredResourcesResponse>(req, "ListAggregateDiscoveredResources");
+        }
+
+        /// <summary>
+        /// 账号组获取资源列表
+        /// </summary>
+        /// <param name="req"><see cref="ListAggregateDiscoveredResourcesRequest"/></param>
+        /// <returns><see cref="ListAggregateDiscoveredResourcesResponse"/></returns>
+        public ListAggregateDiscoveredResourcesResponse ListAggregateDiscoveredResourcesSync(ListAggregateDiscoveredResourcesRequest req)
+        {
+            return InternalRequestAsync<ListAggregateDiscoveredResourcesResponse>(req, "ListAggregateDiscoveredResources")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

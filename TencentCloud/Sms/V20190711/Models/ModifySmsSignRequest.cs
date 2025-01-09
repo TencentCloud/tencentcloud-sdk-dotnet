@@ -102,6 +102,12 @@ namespace TencentCloud.Sms.V20190711.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// 已审核通过的国内短信的资质 ID。资质 ID 信息可前往国内短信的 [实名资质管理](https://console.cloud.tencent.com/smsv2/enterprise) 页查看。<dx-alert infotype="notice" title="说明"><ul><li>国内短信需填写资质ID，国际短信无需填写。</li></ul></dx-alert>
+        /// </summary>
+        [JsonProperty("QualificationId")]
+        public ulong? QualificationId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -117,6 +123,7 @@ namespace TencentCloud.Sms.V20190711.Models
             this.SetParamSimple(map, prefix + "ProofImage", this.ProofImage);
             this.SetParamSimple(map, prefix + "CommissionImage", this.CommissionImage);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "QualificationId", this.QualificationId);
         }
     }
 }

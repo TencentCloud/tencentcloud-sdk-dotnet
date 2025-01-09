@@ -80,6 +80,12 @@ namespace TencentCloud.Trro.V20220325.Models
         [JsonProperty("MonthlyRemainTime")]
         public long? MonthlyRemainTime{ get; set; }
 
+        /// <summary>
+        /// 月封顶时长（分钟)
+        /// </summary>
+        [JsonProperty("LimitedTime")]
+        public long? LimitedTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +100,7 @@ namespace TencentCloud.Trro.V20220325.Models
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamArraySimple(map, prefix + "LicenseIds.", this.LicenseIds);
             this.SetParamSimple(map, prefix + "MonthlyRemainTime", this.MonthlyRemainTime);
+            this.SetParamSimple(map, prefix + "LimitedTime", this.LimitedTime);
         }
     }
 }

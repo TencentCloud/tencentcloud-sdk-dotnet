@@ -114,14 +114,12 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 创建时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 标签键值对。	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }

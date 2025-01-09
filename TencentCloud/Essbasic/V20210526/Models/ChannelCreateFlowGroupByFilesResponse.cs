@@ -27,7 +27,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 合同组ID，为32位字符串。
         /// 建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowGroupId")]
         public string FlowGroupId{ get; set; }
@@ -37,7 +36,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 
         /// 注:
         /// `此数组的顺序和入参中的FlowGroupInfos顺序一致`
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowIds")]
         public string[] FlowIds{ get; set; }

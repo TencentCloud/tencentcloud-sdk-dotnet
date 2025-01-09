@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// `IPv6`子网段。形如：`3402:4e00:20:1001::/64`
+        /// `IPv6`子网段。形如：`3402:4e00:20:1001::/64`。作为AssignIpv6SubnetCidrBlock接口入参时，该参数必填。
         /// </summary>
         [JsonProperty("Ipv6CidrBlock")]
         public string Ipv6CidrBlock{ get; set; }

@@ -62,14 +62,12 @@ namespace TencentCloud.Mna.V20210119.Models
 
         /// <summary>
         /// license授权有效期 0：月度授权 1：永久授权
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LicensePayMode")]
         public long? LicensePayMode{ get; set; }
 
         /// <summary>
         /// 付费方 0：厂商付费 1：客户付费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Payer")]
         public long? Payer{ get; set; }

@@ -32,7 +32,6 @@ namespace TencentCloud.Ecm.V20190719.Models
 
         /// <summary>
         /// 是否是主IP。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Primary")]
         public bool? Primary{ get; set; }
@@ -57,7 +56,6 @@ namespace TencentCloud.Ecm.V20190719.Models
 
         /// <summary>
         /// 公网IP是否被封堵。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsWanIpBlocked")]
         public bool? IsWanIpBlocked{ get; set; }

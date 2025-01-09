@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cmq.V20190304.Models
+namespace TencentCloud.Iotexplorer.V20190423.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RewindQueueRequest : AbstractModel
+    public class VideoLicenseEntity : AbstractModel
     {
         
         /// <summary>
-        /// 队列名字，在单个地域同一帐号下唯一。队列名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+        /// 激活码类型，取值范围如下：0_5_mbps、1_mbps、1_5_mbps、2_mbps
         /// </summary>
-        [JsonProperty("QueueName")]
-        public string QueueName{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
         /// <summary>
-        /// 设定该时间，则（Batch）receiveMessage接口，会按照生产消息的先后顺序消费该时间戳以后的消息。
+        /// 有效激活码总数
         /// </summary>
-        [JsonProperty("StartConsumeTime")]
-        public ulong? StartConsumeTime{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// 待使用的激活码数量
+        /// </summary>
+        [JsonProperty("UsedCount")]
+        public long? UsedCount{ get; set; }
+
+        /// <summary>
+        /// 即将过期的激活码数量
+        /// </summary>
+        [JsonProperty("ExpiresSoonCount")]
+        public long? ExpiresSoonCount{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Cmq.V20190304.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
-            this.SetParamSimple(map, prefix + "StartConsumeTime", this.StartConsumeTime);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "UsedCount", this.UsedCount);
+            this.SetParamSimple(map, prefix + "ExpiresSoonCount", this.ExpiresSoonCount);
         }
     }
 }

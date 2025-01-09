@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1160</VersionPrefix>
+    <VersionPrefix>3.0.1161</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,7 @@
 
   <ItemGroup>
     <Compile Include="V20190423\IotexplorerClient.cs" />
+    <Compile Include="V20190423\Models\ActivateDeviceInfo.cs" />
     <Compile Include="V20190423\Models\ActivateTWeCallLicenseRequest.cs" />
     <Compile Include="V20190423\Models\ActivateTWeCallLicenseResponse.cs" />
     <Compile Include="V20190423\Models\AppDeviceInfo.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="V20190423\Models\CheckFirmwareUpdateResponse.cs" />
     <Compile Include="V20190423\Models\CloudStorageAIServiceTask.cs" />
     <Compile Include="V20190423\Models\CloudStorageEvent.cs" />
+    <Compile Include="V20190423\Models\CloudStoragePackageInfo.cs" />
     <Compile Include="V20190423\Models\CloudStorageTimeData.cs" />
     <Compile Include="V20190423\Models\CloudStorageTimeInfo.cs" />
     <Compile Include="V20190423\Models\CloudStorageUserInfo.cs" />
@@ -139,6 +141,10 @@
     <Compile Include="V20190423\Models\DeleteTopicPolicyResponse.cs" />
     <Compile Include="V20190423\Models\DeleteTopicRuleRequest.cs" />
     <Compile Include="V20190423\Models\DeleteTopicRuleResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeActivateDeviceRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeActivateDeviceResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeActivateLicenseServiceRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeActivateLicenseServiceResponse.cs" />
     <Compile Include="V20190423\Models\DescribeBatchProductionRequest.cs" />
     <Compile Include="V20190423\Models\DescribeBatchProductionResponse.cs" />
     <Compile Include="V20190423\Models\DescribeBindedProductsRequest.cs" />
@@ -203,6 +209,8 @@
     <Compile Include="V20190423\Models\DescribeFirmwareTaskResponse.cs" />
     <Compile Include="V20190423\Models\DescribeFirmwareUpdateStatusRequest.cs" />
     <Compile Include="V20190423\Models\DescribeFirmwareUpdateStatusResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeFreeCloudStorageNumRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeFreeCloudStorageNumResponse.cs" />
     <Compile Include="V20190423\Models\DescribeGatewayBindDevicesRequest.cs" />
     <Compile Include="V20190423\Models\DescribeGatewayBindDevicesResponse.cs" />
     <Compile Include="V20190423\Models\DescribeGatewaySubDeviceListRequest.cs" />
@@ -233,6 +241,9 @@
     <Compile Include="V20190423\Models\DescribeTopicPolicyResponse.cs" />
     <Compile Include="V20190423\Models\DescribeTopicRuleRequest.cs" />
     <Compile Include="V20190423\Models\DescribeTopicRuleResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeVideoLicenseRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeVideoLicenseResponse.cs" />
+    <Compile Include="V20190423\Models\DeviceActivationDetail.cs" />
     <Compile Include="V20190423\Models\DeviceActiveResult.cs" />
     <Compile Include="V20190423\Models\DeviceData.cs" />
     <Compile Include="V20190423\Models\DeviceDataHistoryItem.cs" />
@@ -303,6 +314,7 @@
     <Compile Include="V20190423\Models\InvokeCloudStorageAIServiceTaskResponse.cs" />
     <Compile Include="V20190423\Models\InvokeExternalSourceAIServiceTaskRequest.cs" />
     <Compile Include="V20190423\Models\InvokeExternalSourceAIServiceTaskResponse.cs" />
+    <Compile Include="V20190423\Models\LicenseServiceNumInfo.cs" />
     <Compile Include="V20190423\Models\ListEventHistoryRequest.cs" />
     <Compile Include="V20190423\Models\ListEventHistoryResponse.cs" />
     <Compile Include="V20190423\Models\ListFirmwaresRequest.cs" />
@@ -362,6 +374,8 @@
     <Compile Include="V20190423\Models\PublishMessageResponse.cs" />
     <Compile Include="V20190423\Models\PublishRRPCMessageRequest.cs" />
     <Compile Include="V20190423\Models\PublishRRPCMessageResponse.cs" />
+    <Compile Include="V20190423\Models\RegisteredDeviceNetTypeInfo.cs" />
+    <Compile Include="V20190423\Models\RegisteredDeviceTypeInfo.cs" />
     <Compile Include="V20190423\Models\ReleaseStudioProductRequest.cs" />
     <Compile Include="V20190423\Models\ReleaseStudioProductResponse.cs" />
     <Compile Include="V20190423\Models\RemoveUserByRoomIdFromTRTCRequest.cs" />
@@ -387,6 +401,7 @@
     <Compile Include="V20190423\Models\TWeCallActiveInfo.cs" />
     <Compile Include="V20190423\Models\TWeCallCategoryPkgInfo.cs" />
     <Compile Include="V20190423\Models\TWeCallInfo.cs" />
+    <Compile Include="V20190423\Models\TWeCallLicenseInfo.cs" />
     <Compile Include="V20190423\Models\TWeCallPkgInfo.cs" />
     <Compile Include="V20190423\Models\ThumbnailURLInfoList.cs" />
     <Compile Include="V20190423\Models\TopicItem.cs" />
@@ -409,6 +424,7 @@
     <Compile Include="V20190423\Models\UpdateFirmwareResponse.cs" />
     <Compile Include="V20190423\Models\UploadFirmwareRequest.cs" />
     <Compile Include="V20190423\Models\UploadFirmwareResponse.cs" />
+    <Compile Include="V20190423\Models\VideoLicenseEntity.cs" />
     <Compile Include="V20190423\Models\WXDeviceInfo.cs" />
     <Compile Include="V20190423\Models\WXIoTDeviceInfo.cs" />
     <Compile Include="V20190423\Models\WifiInfo.cs" />

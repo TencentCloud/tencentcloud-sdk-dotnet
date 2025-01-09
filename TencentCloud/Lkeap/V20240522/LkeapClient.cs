@@ -28,7 +28,7 @@ namespace TencentCloud.Lkeap.V20240522
 
        private const string endpoint = "lkeap.tencentcloudapi.com";
        private const string version = "2024-05-22";
-       private const string sdkVersion = "SDK_NET_3.0.1160";
+       private const string sdkVersion = "SDK_NET_3.0.1161";
 
         /// <summary>
         /// Client constructor.
@@ -144,7 +144,7 @@ namespace TencentCloud.Lkeap.V20240522
         }
 
         /// <summary>
-        /// 创建文档拆分任务
+        /// 用于创建一个文档拆分任务，支持多种文件类型，具备mllm能力，能够解析并深入理解图表中的信息。
         /// </summary>
         /// <param name="req"><see cref="CreateSplitDocumentFlowRequest"/></param>
         /// <returns><see cref="CreateSplitDocumentFlowResponse"/></returns>
@@ -154,7 +154,7 @@ namespace TencentCloud.Lkeap.V20240522
         }
 
         /// <summary>
-        /// 创建文档拆分任务
+        /// 用于创建一个文档拆分任务，支持多种文件类型，具备mllm能力，能够解析并深入理解图表中的信息。
         /// </summary>
         /// <param name="req"><see cref="CreateSplitDocumentFlowRequest"/></param>
         /// <returns><see cref="CreateSplitDocumentFlowResponse"/></returns>

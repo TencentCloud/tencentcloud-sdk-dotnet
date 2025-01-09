@@ -32,175 +32,150 @@ namespace TencentCloud.Tcb.V20180608.Models
 
         /// <summary>
         /// 用户appid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
         /// WxAppId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WxAppId")]
         public string WxAppId{ get; set; }
 
         /// <summary>
         /// 环境id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }
 
         /// <summary>
         /// Gateway唯一id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
 
         /// <summary>
         /// Gateway名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayName")]
         public string GatewayName{ get; set; }
 
         /// <summary>
         /// Gateway类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayType")]
         public string GatewayType{ get; set; }
 
         /// <summary>
         /// Gateway描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayDesc")]
         public string GatewayDesc{ get; set; }
 
         /// <summary>
         /// 套餐版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageVersion")]
         public string PackageVersion{ get; set; }
 
         /// <summary>
         /// 套餐唯一id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageId")]
         public ulong? PackageId{ get; set; }
 
         /// <summary>
         /// vpc唯一id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// 子网id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetIds")]
         public string[] SubnetIds{ get; set; }
 
         /// <summary>
         /// 网关状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// l5地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("L5Addr")]
         public string L5Addr{ get; set; }
 
         /// <summary>
         /// 地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// 是否可以续费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CanRenew")]
         public bool? CanRenew{ get; set; }
 
         /// <summary>
         /// 自动续费标志
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public ulong? AutoRenewFlag{ get; set; }
 
         /// <summary>
         /// 隔离时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsolateTime")]
         public string IsolateTime{ get; set; }
 
         /// <summary>
         /// 到期时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 变更时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 是否可以降配
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CanDowngrade")]
         public bool? CanDowngrade{ get; set; }
 
         /// <summary>
         /// 允许未登录访问
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AllowUncertified")]
         public long? AllowUncertified{ get; set; }
 
         /// <summary>
         /// 网关版本限额
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VersionNumLimit")]
         public long? VersionNumLimit{ get; set; }
 
         /// <summary>
         /// Donut接入ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LongAccessId")]
         public string LongAccessId{ get; set; }
 
         /// <summary>
         /// Donut接入域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessDomain")]
         public string AccessDomain{ get; set; }

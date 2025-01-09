@@ -116,7 +116,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? ActiveStatus{ get; set; }
 
         /// <summary>
-        /// 账号过期时间，时间戳
+        /// 账号到期时间，时间戳
         /// </summary>
         [JsonProperty("LicenseExpireTime")]
         public long? LicenseExpireTime{ get; set; }

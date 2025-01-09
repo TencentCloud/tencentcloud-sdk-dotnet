@@ -168,6 +168,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("SinkSchemaName")]
         public string SinkSchemaName{ get; set; }
 
+        /// <summary>
+        /// 获取源信息的环境
+        /// </summary>
+        [JsonProperty("Env")]
+        public string Env{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +204,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamArraySimple(map, prefix + "UpsertKeys.", this.UpsertKeys);
             this.SetParamObj(map, prefix + "TableBaseInfo.", this.TableBaseInfo);
             this.SetParamSimple(map, prefix + "SinkSchemaName", this.SinkSchemaName);
+            this.SetParamSimple(map, prefix + "Env", this.Env);
         }
     }
 }

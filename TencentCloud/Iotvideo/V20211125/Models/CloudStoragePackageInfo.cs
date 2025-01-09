@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cmq.V20190304.Models
+namespace TencentCloud.Iotvideo.V20211125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteSubscribeRequest : AbstractModel
+    public class CloudStoragePackageInfo : AbstractModel
     {
         
         /// <summary>
-        /// 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+        /// 套餐包id
         /// </summary>
-        [JsonProperty("TopicName")]
-        public string TopicName{ get; set; }
+        [JsonProperty("PackageId")]
+        public string PackageId{ get; set; }
 
         /// <summary>
-        /// 订阅名字，在单个地域同一帐号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+        /// 套餐包名字
         /// </summary>
-        [JsonProperty("SubscriptionName")]
-        public string SubscriptionName{ get; set; }
+        [JsonProperty("PackageName")]
+        public string PackageName{ get; set; }
+
+        /// <summary>
+        /// 套餐包数量
+        /// </summary>
+        [JsonProperty("Num")]
+        public long? Num{ get; set; }
+
+        /// <summary>
+        /// 已使用数量
+        /// </summary>
+        [JsonProperty("UsedNum")]
+        public long? UsedNum{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Cmq.V20190304.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
-            this.SetParamSimple(map, prefix + "SubscriptionName", this.SubscriptionName);
+            this.SetParamSimple(map, prefix + "PackageId", this.PackageId);
+            this.SetParamSimple(map, prefix + "PackageName", this.PackageName);
+            this.SetParamSimple(map, prefix + "Num", this.Num);
+            this.SetParamSimple(map, prefix + "UsedNum", this.UsedNum);
         }
     }
 }

@@ -80,7 +80,6 @@ namespace TencentCloud.Ecm.V20190719.Models
 
         /// <summary>
         /// 修改时间，例如 2020-07-22 19：27：23
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }

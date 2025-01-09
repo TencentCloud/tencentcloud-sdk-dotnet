@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{607A948B-9C3B-32A9-841D-D5BA33C03322}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1160</VersionPrefix>
+    <VersionPrefix>3.0.1161</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,8 +48,11 @@
 
   <ItemGroup>
     <Compile Include="V20220802\ConfigClient.cs" />
+    <Compile Include="V20220802\Models\AggregateResourceInfo.cs" />
     <Compile Include="V20220802\Models\Annotation.cs" />
     <Compile Include="V20220802\Models\ConfigRule.cs" />
+    <Compile Include="V20220802\Models\DescribeAggregateDiscoveredResourceRequest.cs" />
+    <Compile Include="V20220802\Models\DescribeAggregateDiscoveredResourceResponse.cs" />
     <Compile Include="V20220802\Models\DescribeDiscoveredResourceRequest.cs" />
     <Compile Include="V20220802\Models\DescribeDiscoveredResourceResponse.cs" />
     <Compile Include="V20220802\Models\Evaluation.cs" />
@@ -58,6 +61,8 @@
     <Compile Include="V20220802\Models\InputParameterForManage.cs" />
     <Compile Include="V20220802\Models\ListAggregateConfigRulesRequest.cs" />
     <Compile Include="V20220802\Models\ListAggregateConfigRulesResponse.cs" />
+    <Compile Include="V20220802\Models\ListAggregateDiscoveredResourcesRequest.cs" />
+    <Compile Include="V20220802\Models\ListAggregateDiscoveredResourcesResponse.cs" />
     <Compile Include="V20220802\Models\ListConfigRulesRequest.cs" />
     <Compile Include="V20220802\Models\ListConfigRulesResponse.cs" />
     <Compile Include="V20220802\Models\ListDiscoveredResourcesRequest.cs" />

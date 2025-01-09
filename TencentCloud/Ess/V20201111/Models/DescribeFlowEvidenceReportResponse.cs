@@ -26,7 +26,6 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 出证报告PDF的下载 URL，`有效期为5分钟`，超过有效期后将无法再下载。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReportUrl")]
         public string ReportUrl{ get; set; }

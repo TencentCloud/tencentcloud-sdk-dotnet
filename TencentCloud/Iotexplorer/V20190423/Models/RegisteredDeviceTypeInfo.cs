@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cmq.V20190304.Models
+namespace TencentCloud.Iotexplorer.V20190423.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ClearSubscriptionFilterTagsResponse : AbstractModel
+    public class RegisteredDeviceTypeInfo : AbstractModel
     {
         
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 已注册设备数
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("NormalDeviceNum")]
+        public long? NormalDeviceNum{ get; set; }
+
+        /// <summary>
+        /// 已注册网关数
+        /// </summary>
+        [JsonProperty("GatewayDeviceNum")]
+        public long? GatewayDeviceNum{ get; set; }
+
+        /// <summary>
+        /// 已注册子设备数
+        /// </summary>
+        [JsonProperty("SubDeviceNum")]
+        public long? SubDeviceNum{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Cmq.V20190304.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "NormalDeviceNum", this.NormalDeviceNum);
+            this.SetParamSimple(map, prefix + "GatewayDeviceNum", this.GatewayDeviceNum);
+            this.SetParamSimple(map, prefix + "SubDeviceNum", this.SubDeviceNum);
         }
     }
 }

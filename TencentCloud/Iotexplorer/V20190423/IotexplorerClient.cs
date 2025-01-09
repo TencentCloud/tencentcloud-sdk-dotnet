@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1160";
+       private const string sdkVersion = "SDK_NET_3.0.1161";
 
         /// <summary>
         /// Client constructor.
@@ -898,6 +898,48 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 获取设备激活详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeActivateDeviceRequest"/></param>
+        /// <returns><see cref="DescribeActivateDeviceResponse"/></returns>
+        public Task<DescribeActivateDeviceResponse> DescribeActivateDevice(DescribeActivateDeviceRequest req)
+        {
+            return InternalRequestAsync<DescribeActivateDeviceResponse>(req, "DescribeActivateDevice");
+        }
+
+        /// <summary>
+        /// 获取设备激活详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeActivateDeviceRequest"/></param>
+        /// <returns><see cref="DescribeActivateDeviceResponse"/></returns>
+        public DescribeActivateDeviceResponse DescribeActivateDeviceSync(DescribeActivateDeviceRequest req)
+        {
+            return InternalRequestAsync<DescribeActivateDeviceResponse>(req, "DescribeActivateDevice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取增值服务激活码详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeActivateLicenseServiceRequest"/></param>
+        /// <returns><see cref="DescribeActivateLicenseServiceResponse"/></returns>
+        public Task<DescribeActivateLicenseServiceResponse> DescribeActivateLicenseService(DescribeActivateLicenseServiceRequest req)
+        {
+            return InternalRequestAsync<DescribeActivateLicenseServiceResponse>(req, "DescribeActivateLicenseService");
+        }
+
+        /// <summary>
+        /// 获取增值服务激活码详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeActivateLicenseServiceRequest"/></param>
+        /// <returns><see cref="DescribeActivateLicenseServiceResponse"/></returns>
+        public DescribeActivateLicenseServiceResponse DescribeActivateLicenseServiceSync(DescribeActivateLicenseServiceRequest req)
+        {
+            return InternalRequestAsync<DescribeActivateLicenseServiceResponse>(req, "DescribeActivateLicenseService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取量产详情信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeBatchProductionRequest"/></param>
@@ -1570,6 +1612,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 查询云存卡套餐信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFreeCloudStorageNumRequest"/></param>
+        /// <returns><see cref="DescribeFreeCloudStorageNumResponse"/></returns>
+        public Task<DescribeFreeCloudStorageNumResponse> DescribeFreeCloudStorageNum(DescribeFreeCloudStorageNumRequest req)
+        {
+            return InternalRequestAsync<DescribeFreeCloudStorageNumResponse>(req, "DescribeFreeCloudStorageNum");
+        }
+
+        /// <summary>
+        /// 查询云存卡套餐信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFreeCloudStorageNumRequest"/></param>
+        /// <returns><see cref="DescribeFreeCloudStorageNumResponse"/></returns>
+        public DescribeFreeCloudStorageNumResponse DescribeFreeCloudStorageNumSync(DescribeFreeCloudStorageNumRequest req)
+        {
+            return InternalRequestAsync<DescribeFreeCloudStorageNumResponse>(req, "DescribeFreeCloudStorageNum")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 获取网关绑定的子设备列表
         /// </summary>
         /// <param name="req"><see cref="DescribeGatewayBindDevicesRequest"/></param>
@@ -1881,6 +1944,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DescribeTopicRuleResponse DescribeTopicRuleSync(DescribeTopicRuleRequest req)
         {
             return InternalRequestAsync<DescribeTopicRuleResponse>(req, "DescribeTopicRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 用于查询视频激活码统计概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoLicenseRequest"/></param>
+        /// <returns><see cref="DescribeVideoLicenseResponse"/></returns>
+        public Task<DescribeVideoLicenseResponse> DescribeVideoLicense(DescribeVideoLicenseRequest req)
+        {
+            return InternalRequestAsync<DescribeVideoLicenseResponse>(req, "DescribeVideoLicense");
+        }
+
+        /// <summary>
+        /// 用于查询视频激活码统计概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoLicenseRequest"/></param>
+        /// <returns><see cref="DescribeVideoLicenseResponse"/></returns>
+        public DescribeVideoLicenseResponse DescribeVideoLicenseSync(DescribeVideoLicenseRequest req)
+        {
+            return InternalRequestAsync<DescribeVideoLicenseResponse>(req, "DescribeVideoLicense")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

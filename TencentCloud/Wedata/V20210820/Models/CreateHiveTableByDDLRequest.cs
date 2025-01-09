@@ -78,6 +78,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Async")]
         public bool? Async{ get; set; }
 
+        /// <summary>
+        /// 数据优化使用的资源
+        /// </summary>
+        [JsonProperty("DataOptimizationResource")]
+        public string DataOptimizationResource{ get; set; }
+
+        /// <summary>
+        /// 是否开启数据优化
+        /// </summary>
+        [JsonProperty("SmartOptimizerWritten")]
+        public string SmartOptimizerWritten{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Incharge", this.Incharge);
             this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
             this.SetParamSimple(map, prefix + "Async", this.Async);
+            this.SetParamSimple(map, prefix + "DataOptimizationResource", this.DataOptimizationResource);
+            this.SetParamSimple(map, prefix + "SmartOptimizerWritten", this.SmartOptimizerWritten);
         }
     }
 }

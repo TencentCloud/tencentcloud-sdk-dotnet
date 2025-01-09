@@ -181,7 +181,9 @@ namespace TencentCloud.Redis.V20180412.Models
         public string OfflineTime{ get; set; }
 
         /// <summary>
-        /// 流程中的实例，返回子状态。
+        /// 流程中的实例返回的子状态。
+        /// - 0：磁盘读写状态。
+        /// - 1：磁盘超限只读状态。
         /// </summary>
         [JsonProperty("SubStatus")]
         public long? SubStatus{ get; set; }

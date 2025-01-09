@@ -28,7 +28,7 @@ namespace TencentCloud.Hai.V20230812
 
        private const string endpoint = "hai.tencentcloudapi.com";
        private const string version = "2023-08-12";
-       private const string sdkVersion = "SDK_NET_3.0.1160";
+       private const string sdkVersion = "SDK_NET_3.0.1161";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,27 @@ namespace TencentCloud.Hai.V20230812
         public DescribeInstancesResponse DescribeInstancesSync(DescribeInstancesRequest req)
         {
             return InternalRequestAsync<DescribeInstancesResponse>(req, "DescribeInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取prompt任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMuskPromptsRequest"/></param>
+        /// <returns><see cref="DescribeMuskPromptsResponse"/></returns>
+        public Task<DescribeMuskPromptsResponse> DescribeMuskPrompts(DescribeMuskPromptsRequest req)
+        {
+            return InternalRequestAsync<DescribeMuskPromptsResponse>(req, "DescribeMuskPrompts");
+        }
+
+        /// <summary>
+        /// 获取prompt任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMuskPromptsRequest"/></param>
+        /// <returns><see cref="DescribeMuskPromptsResponse"/></returns>
+        public DescribeMuskPromptsResponse DescribeMuskPromptsSync(DescribeMuskPromptsRequest req)
+        {
+            return InternalRequestAsync<DescribeMuskPromptsResponse>(req, "DescribeMuskPrompts")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

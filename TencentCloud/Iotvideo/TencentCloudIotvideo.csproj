@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{59D16650-F6B2-3107-8C2B-90A5E4FD868E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1160</VersionPrefix>
+    <VersionPrefix>3.0.1161</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -419,6 +419,7 @@
     <Compile Include="V20211125\Models\CheckForwardAuthRequest.cs" />
     <Compile Include="V20211125\Models\CheckForwardAuthResponse.cs" />
     <Compile Include="V20211125\Models\CloudStorageEvent.cs" />
+    <Compile Include="V20211125\Models\CloudStoragePackageInfo.cs" />
     <Compile Include="V20211125\Models\CloudStorageTimeData.cs" />
     <Compile Include="V20211125\Models\CloudStorageTimeInfo.cs" />
     <Compile Include="V20211125\Models\CloudStorageUserInfo.cs" />
@@ -537,6 +538,8 @@
     <Compile Include="V20211125\Models\DescribeFirmwareTasksResponse.cs" />
     <Compile Include="V20211125\Models\DescribeForwardRuleRequest.cs" />
     <Compile Include="V20211125\Models\DescribeForwardRuleResponse.cs" />
+    <Compile Include="V20211125\Models\DescribeFreeCloudStorageNumRequest.cs" />
+    <Compile Include="V20211125\Models\DescribeFreeCloudStorageNumResponse.cs" />
     <Compile Include="V20211125\Models\DescribeMessageDataStatsRequest.cs" />
     <Compile Include="V20211125\Models\DescribeMessageDataStatsResponse.cs" />
     <Compile Include="V20211125\Models\DescribeModelDefinitionRequest.cs" />

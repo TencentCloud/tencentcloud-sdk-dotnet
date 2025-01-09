@@ -60,6 +60,27 @@ namespace TencentCloud.Sms.V20210111.Models
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
+        /// <summary>
+        /// 国内短信的资质 ID。资质 ID 信息可前往国内短信的 [实名资质管理](https://console.cloud.tencent.com/smsv2/enterprise) 页查看。
+        /// 注：国际短信不涉及，默认为0。
+        /// </summary>
+        [JsonProperty("QualificationId")]
+        public ulong? QualificationId{ get; set; }
+
+        /// <summary>
+        /// 国内短信的资质名称。
+        /// 注：国际短信不涉及，默认为空。
+        /// </summary>
+        [JsonProperty("QualificationName")]
+        public string QualificationName{ get; set; }
+
+        /// <summary>
+        /// 国内短信的资质状态。其中0表示待审核，1表示已通过，2表示已拒绝，3表示待补充后提交，4表示变更后待审核，5表示变更后被驳回。可参考 [实名资质审核状态说明](https://cloud.tencent.com/document/product/382/13444#.E5.AE.A1.E6.A0.B8.E7.8A.B6.E6.80.81.E8.AF.B4.E6.98.8E) 。
+        /// 注：国际短信不涉及，默认为0。
+        /// </summary>
+        [JsonProperty("QualificationStatusCode")]
+        public long? QualificationStatusCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +93,9 @@ namespace TencentCloud.Sms.V20210111.Models
             this.SetParamSimple(map, prefix + "ReviewReply", this.ReviewReply);
             this.SetParamSimple(map, prefix + "SignName", this.SignName);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "QualificationId", this.QualificationId);
+            this.SetParamSimple(map, prefix + "QualificationName", this.QualificationName);
+            this.SetParamSimple(map, prefix + "QualificationStatusCode", this.QualificationStatusCode);
         }
     }
 }

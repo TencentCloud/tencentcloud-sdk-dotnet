@@ -35,14 +35,12 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 该编号会合成到个人用户证书证明图片。
         /// 
         /// 注: `个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动`
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageCertId")]
         public string ImageCertId{ get; set; }
 
         /// <summary>
         /// 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。请注意，当证书到期并自动续期时，该序列号将会发生变化。值得注意的是，此序列号不会被合成至个人用户证书的证明图片中。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SerialNumber")]
         public string SerialNumber{ get; set; }
@@ -50,7 +48,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// CA证书颁发时间，格式为Unix标准时间戳（秒）   
         /// 该时间格式化后会合成到个人用户证书证明图片
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValidFrom")]
         public ulong? ValidFrom{ get; set; }
@@ -58,7 +55,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// CA证书有效截止时间，格式为Unix标准时间戳（秒）
         /// 该时间格式化后会合成到个人用户证书证明图片
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValidTo")]
         public ulong? ValidTo{ get; set; }

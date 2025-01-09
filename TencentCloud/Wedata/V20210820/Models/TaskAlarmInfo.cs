@@ -247,6 +247,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("DingDingWebHooks")]
         public string DingDingWebHooks{ get; set; }
 
+        /// <summary>
+        /// 业务类型, 0-非默认, 1-默认
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BusinessType")]
+        public long? BusinessType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -286,6 +293,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "LarkWebHooks", this.LarkWebHooks);
             this.SetParamSimple(map, prefix + "DingDingWebHooks", this.DingDingWebHooks);
+            this.SetParamSimple(map, prefix + "BusinessType", this.BusinessType);
         }
     }
 }

@@ -60,6 +60,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Incharge")]
         public string Incharge{ get; set; }
 
+        /// <summary>
+        /// 数据优化引擎
+        /// </summary>
+        [JsonProperty("DataOptimizationResource")]
+        public string DataOptimizationResource{ get; set; }
+
+        /// <summary>
+        /// 是否开启数据优化
+        /// </summary>
+        [JsonProperty("SmartOptimizerWritten")]
+        public string SmartOptimizerWritten{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Privilege", this.Privilege);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "Incharge", this.Incharge);
+            this.SetParamSimple(map, prefix + "DataOptimizationResource", this.DataOptimizationResource);
+            this.SetParamSimple(map, prefix + "SmartOptimizerWritten", this.SmartOptimizerWritten);
         }
     }
 }

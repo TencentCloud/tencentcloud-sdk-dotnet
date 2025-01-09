@@ -32,7 +32,6 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 集团子企业套餐使用情况
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubOrgSummary")]
         public SubOrgBillSummary[] SubOrgSummary{ get; set; }

@@ -32,7 +32,6 @@ namespace TencentCloud.Ecm.V20190719.Models
 
         /// <summary>
         /// 子网对象。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetSet")]
         public Subnet[] SubnetSet{ get; set; }

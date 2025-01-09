@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cmq.V20190304.Models
+namespace TencentCloud.Iotexplorer.V20190423.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UnbindDeadLetterRequest : AbstractModel
+    public class RegisteredDeviceNetTypeInfo : AbstractModel
     {
         
         /// <summary>
-        /// 死信策略源队列名称，调用本接口会清空该队列的死信队列策略。
+        /// 普通设备数
         /// </summary>
-        [JsonProperty("QueueName")]
-        public string QueueName{ get; set; }
+        [JsonProperty("NormalDeviceNum")]
+        public long? NormalDeviceNum{ get; set; }
+
+        /// <summary>
+        /// 蓝牙设备数
+        /// </summary>
+        [JsonProperty("BluetoothDeviceNum")]
+        public long? BluetoothDeviceNum{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Cmq.V20190304.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
+            this.SetParamSimple(map, prefix + "NormalDeviceNum", this.NormalDeviceNum);
+            this.SetParamSimple(map, prefix + "BluetoothDeviceNum", this.BluetoothDeviceNum);
         }
     }
 }

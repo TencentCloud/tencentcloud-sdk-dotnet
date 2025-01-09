@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0EBB8C1D-F7E7-3A94-A881-AD64654A07FA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1160</VersionPrefix>
+    <VersionPrefix>3.0.1161</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,47 +48,16 @@
 
   <ItemGroup>
     <Compile Include="V20190304\CmqClient.cs" />
-    <Compile Include="V20190304\Models\ClearQueueRequest.cs" />
-    <Compile Include="V20190304\Models\ClearQueueResponse.cs" />
-    <Compile Include="V20190304\Models\ClearSubscriptionFilterTagsRequest.cs" />
-    <Compile Include="V20190304\Models\ClearSubscriptionFilterTagsResponse.cs" />
-    <Compile Include="V20190304\Models\CreateQueueRequest.cs" />
-    <Compile Include="V20190304\Models\CreateQueueResponse.cs" />
-    <Compile Include="V20190304\Models\CreateSubscribeRequest.cs" />
-    <Compile Include="V20190304\Models\CreateSubscribeResponse.cs" />
-    <Compile Include="V20190304\Models\CreateTopicRequest.cs" />
-    <Compile Include="V20190304\Models\CreateTopicResponse.cs" />
     <Compile Include="V20190304\Models\DeadLetterPolicy.cs" />
     <Compile Include="V20190304\Models\DeadLetterSource.cs" />
-    <Compile Include="V20190304\Models\DeleteQueueRequest.cs" />
-    <Compile Include="V20190304\Models\DeleteQueueResponse.cs" />
-    <Compile Include="V20190304\Models\DeleteSubscribeRequest.cs" />
-    <Compile Include="V20190304\Models\DeleteSubscribeResponse.cs" />
-    <Compile Include="V20190304\Models\DeleteTopicRequest.cs" />
-    <Compile Include="V20190304\Models\DeleteTopicResponse.cs" />
-    <Compile Include="V20190304\Models\DescribeDeadLetterSourceQueuesRequest.cs" />
-    <Compile Include="V20190304\Models\DescribeDeadLetterSourceQueuesResponse.cs" />
     <Compile Include="V20190304\Models\DescribeQueueDetailRequest.cs" />
     <Compile Include="V20190304\Models\DescribeQueueDetailResponse.cs" />
-    <Compile Include="V20190304\Models\DescribeSubscriptionDetailRequest.cs" />
-    <Compile Include="V20190304\Models\DescribeSubscriptionDetailResponse.cs" />
     <Compile Include="V20190304\Models\DescribeTopicDetailRequest.cs" />
     <Compile Include="V20190304\Models\DescribeTopicDetailResponse.cs" />
     <Compile Include="V20190304\Models\Filter.cs" />
-    <Compile Include="V20190304\Models\ModifyQueueAttributeRequest.cs" />
-    <Compile Include="V20190304\Models\ModifyQueueAttributeResponse.cs" />
-    <Compile Include="V20190304\Models\ModifySubscriptionAttributeRequest.cs" />
-    <Compile Include="V20190304\Models\ModifySubscriptionAttributeResponse.cs" />
-    <Compile Include="V20190304\Models\ModifyTopicAttributeRequest.cs" />
-    <Compile Include="V20190304\Models\ModifyTopicAttributeResponse.cs" />
     <Compile Include="V20190304\Models\QueueSet.cs" />
-    <Compile Include="V20190304\Models\RewindQueueRequest.cs" />
-    <Compile Include="V20190304\Models\RewindQueueResponse.cs" />
-    <Compile Include="V20190304\Models\Subscription.cs" />
     <Compile Include="V20190304\Models\Tag.cs" />
     <Compile Include="V20190304\Models\TopicSet.cs" />
     <Compile Include="V20190304\Models\TransactionPolicy.cs" />
-    <Compile Include="V20190304\Models\UnbindDeadLetterRequest.cs" />
-    <Compile Include="V20190304\Models\UnbindDeadLetterResponse.cs" />
   </ItemGroup>
 </Project>

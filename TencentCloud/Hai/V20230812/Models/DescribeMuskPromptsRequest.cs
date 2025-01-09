@@ -15,35 +15,41 @@
  * under the License.
  */
 
-namespace TencentCloud.Cmq.V20190304.Models
+namespace TencentCloud.Hai.V20230812.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSubscriptionDetailRequest : AbstractModel
+    public class DescribeMuskPromptsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
+        /// workgroup id
         /// </summary>
-        [JsonProperty("TopicName")]
-        public string TopicName{ get; set; }
+        [JsonProperty("WorkgroupId")]
+        public string WorkgroupId{ get; set; }
 
         /// <summary>
-        /// 分页时本页获取主题列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
+        /// workflow id
+        /// </summary>
+        [JsonProperty("WorkflowId")]
+        public string WorkflowId{ get; set; }
+
+        /// <summary>
+        /// offset 
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 分页时本页获取主题的个数，如果不传递该参数，则该参数默认为20，最大值为50。
+        /// limit
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 筛选参数，目前只支持SubscriptionName，且仅支持一个关键字。
+        /// 过滤参数 支持过滤的键值： PromptId，Status
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -54,7 +60,8 @@ namespace TencentCloud.Cmq.V20190304.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
+            this.SetParamSimple(map, prefix + "WorkgroupId", this.WorkgroupId);
+            this.SetParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);

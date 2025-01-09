@@ -28,7 +28,7 @@ namespace TencentCloud.Aiart.V20221229
 
        private const string endpoint = "aiart.tencentcloudapi.com";
        private const string version = "2022-12-29";
-       private const string sdkVersion = "SDK_NET_3.0.1160";
+       private const string sdkVersion = "SDK_NET_3.0.1161";
 
         /// <summary>
         /// Client constructor.
@@ -204,6 +204,35 @@ namespace TencentCloud.Aiart.V20221229
         }
 
         /// <summary>
+        /// 表情动图生成接口将静态照片制作成动态的表情包。分为提交任务和查询任务2个接口。
+        /// - 提交任务：提交一个表情动图生成异步任务，获得任务 ID。
+        /// - 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
+        /// 
+        /// 表情动图生成默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="QueryMemeJobRequest"/></param>
+        /// <returns><see cref="QueryMemeJobResponse"/></returns>
+        public Task<QueryMemeJobResponse> QueryMemeJob(QueryMemeJobRequest req)
+        {
+            return InternalRequestAsync<QueryMemeJobResponse>(req, "QueryMemeJob");
+        }
+
+        /// <summary>
+        /// 表情动图生成接口将静态照片制作成动态的表情包。分为提交任务和查询任务2个接口。
+        /// - 提交任务：提交一个表情动图生成异步任务，获得任务 ID。
+        /// - 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
+        /// 
+        /// 表情动图生成默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="QueryMemeJobRequest"/></param>
+        /// <returns><see cref="QueryMemeJobResponse"/></returns>
+        public QueryMemeJobResponse QueryMemeJobSync(QueryMemeJobRequest req)
+        {
+            return InternalRequestAsync<QueryMemeJobResponse>(req, "QueryMemeJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口已迁移至腾讯混元大模型-混元生图，即将停止此处维护，可切换至 [混元生图 API](https://cloud.tencent.com/document/product/1729/105970) 继续使用。
         /// 文生图（高级版）接口基于高级版文生图大模型，将根据输入的文本描述，智能生成与之相关的结果图。分为提交任务和查询任务2个接口。
         /// 提交任务：输入文本等，提交一个文生图（高级版）异步任务，获得任务 ID。
@@ -347,6 +376,37 @@ namespace TencentCloud.Aiart.V20221229
         public SubmitDrawPortraitJobResponse SubmitDrawPortraitJobSync(SubmitDrawPortraitJobRequest req)
         {
             return InternalRequestAsync<SubmitDrawPortraitJobResponse>(req, "SubmitDrawPortraitJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 表情动图生成接口将静态照片制作成动态的表情包。分为提交任务和查询任务2个接口。
+        /// 
+        /// - 提交任务：提交一个表情动图生成异步任务，获得任务 ID。
+        /// - 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
+        /// 
+        /// 表情动图生成默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitMemeJobRequest"/></param>
+        /// <returns><see cref="SubmitMemeJobResponse"/></returns>
+        public Task<SubmitMemeJobResponse> SubmitMemeJob(SubmitMemeJobRequest req)
+        {
+            return InternalRequestAsync<SubmitMemeJobResponse>(req, "SubmitMemeJob");
+        }
+
+        /// <summary>
+        /// 表情动图生成接口将静态照片制作成动态的表情包。分为提交任务和查询任务2个接口。
+        /// 
+        /// - 提交任务：提交一个表情动图生成异步任务，获得任务 ID。
+        /// - 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
+        /// 
+        /// 表情动图生成默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitMemeJobRequest"/></param>
+        /// <returns><see cref="SubmitMemeJobResponse"/></returns>
+        public SubmitMemeJobResponse SubmitMemeJobSync(SubmitMemeJobRequest req)
+        {
+            return InternalRequestAsync<SubmitMemeJobResponse>(req, "SubmitMemeJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

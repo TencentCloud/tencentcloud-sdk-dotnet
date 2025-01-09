@@ -26,14 +26,12 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 员工信息列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Employees")]
         public Staff[] Employees{ get; set; }
 
         /// <summary>
-        /// 指定分页返回第几页的数据。页码从 0 开始，即首页为 0，最大20000。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 偏移量
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

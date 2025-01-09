@@ -26,7 +26,6 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 出证报告 ID，可用于<a href="https://qian.tencent.com/developers/companyApis/certificate/DescribeFlowEvidenceReport" target="_blank">获取出证报告任务执行结果</a>查询出证任务结果和出证PDF的下载URL
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReportId")]
         public string ReportId{ get; set; }

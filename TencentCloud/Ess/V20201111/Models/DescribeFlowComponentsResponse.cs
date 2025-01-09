@@ -26,7 +26,6 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 合同流程关联的填写控件信息，包括填写控件的归属方以及是否填写等内容。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecipientComponentInfos")]
         public RecipientComponentInfo[] RecipientComponentInfos{ get; set; }

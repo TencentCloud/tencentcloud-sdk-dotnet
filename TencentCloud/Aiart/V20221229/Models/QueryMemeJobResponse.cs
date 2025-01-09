@@ -15,27 +15,45 @@
  * under the License.
  */
 
-namespace TencentCloud.Cmq.V20190304.Models
+namespace TencentCloud.Aiart.V20221229.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSubscriptionDetailResponse : AbstractModel
+    public class QueryMemeJobResponse : AbstractModel
     {
         
         /// <summary>
-        /// 总数
+        /// 当前任务状态码：
+        /// 1：等待中、2：运行中、4：处理失败、5：处理完成。
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
+        [JsonProperty("JobStatusCode")]
+        public string JobStatusCode{ get; set; }
 
         /// <summary>
-        /// Subscription属性集合
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 当前任务状态：排队中、处理中、处理失败或者处理完成。
         /// </summary>
-        [JsonProperty("SubscriptionSet")]
-        public Subscription[] SubscriptionSet{ get; set; }
+        [JsonProperty("JobStatusMsg")]
+        public string JobStatusMsg{ get; set; }
+
+        /// <summary>
+        /// 任务处理失败错误码。
+        /// </summary>
+        [JsonProperty("JobErrorCode")]
+        public string JobErrorCode{ get; set; }
+
+        /// <summary>
+        /// 任务处理失败错误信息。
+        /// </summary>
+        [JsonProperty("JobErrorMsg")]
+        public string JobErrorMsg{ get; set; }
+
+        /// <summary>
+        /// 生成图 URL，有效期1小时，请及时保存。
+        /// </summary>
+        [JsonProperty("ResultImage")]
+        public string ResultImage{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -49,8 +67,11 @@ namespace TencentCloud.Cmq.V20190304.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "SubscriptionSet.", this.SubscriptionSet);
+            this.SetParamSimple(map, prefix + "JobStatusCode", this.JobStatusCode);
+            this.SetParamSimple(map, prefix + "JobStatusMsg", this.JobStatusMsg);
+            this.SetParamSimple(map, prefix + "JobErrorCode", this.JobErrorCode);
+            this.SetParamSimple(map, prefix + "JobErrorMsg", this.JobErrorMsg);
+            this.SetParamSimple(map, prefix + "ResultImage", this.ResultImage);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

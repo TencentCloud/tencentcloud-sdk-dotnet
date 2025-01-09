@@ -62,77 +62,66 @@ namespace TencentCloud.Tcb.V20180608.Models
 
         /// <summary>
         /// 安全网关路由限制
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FrequencyLimitConfig")]
         public FrequencyLimitConfig[] FrequencyLimitConfig{ get; set; }
 
         /// <summary>
         /// ip代表绑定后端ip。cbr代表云托管服务
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayRouteServerType")]
         public string GatewayRouteServerType{ get; set; }
 
         /// <summary>
         /// 服务名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayRouteServerName")]
         public string GatewayRouteServerName{ get; set; }
 
         /// <summary>
         /// ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayRewriteHost")]
         public string GatewayRewriteHost{ get; set; }
 
         /// <summary>
         /// 网关版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayVersion")]
         public string GatewayVersion{ get; set; }
 
         /// <summary>
         /// 请求路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayRoutePath")]
         public string GatewayRoutePath{ get; set; }
 
         /// <summary>
         /// 请求模式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayRouteMethod")]
         public string GatewayRouteMethod{ get; set; }
 
         /// <summary>
         /// 4层端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayRoutePort")]
         public long? GatewayRoutePort{ get; set; }
 
         /// <summary>
         /// 路由环境ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayRouteEnvId")]
         public string GatewayRouteEnvId{ get; set; }
 
         /// <summary>
         /// 路径匹配类型，支持prefix(前缀匹配)，regex(正则匹配)， 默认prefix
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewayRoutePathMatchType")]
         public string GatewayRoutePathMatchType{ get; set; }
 
         /// <summary>
         /// 安全网关自定义头部
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomHeader")]
         public CustomHeader CustomHeader{ get; set; }

@@ -25,7 +25,8 @@ namespace TencentCloud.Lkeap.V20240522.Models
     {
         
         /// <summary>
-        /// 任务唯一id。30天内可以通过GetSplitDocumentResult接口查询TaskId对应的处理结果。
+        /// 拆分任务唯一ID。
+        /// 30天内可以通过`GetSplitDocumentResult`接口查询TaskId对应的拆分结果。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

@@ -61,7 +61,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public bool? IsForce{ get; set; }
 
         /// <summary>
-        /// 操作记录
+        /// 操作者记录
         /// </summary>
         [JsonProperty("OperatorRemark")]
         public string OperatorRemark{ get; set; }

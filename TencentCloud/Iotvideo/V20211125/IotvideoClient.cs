@@ -28,7 +28,7 @@ namespace TencentCloud.Iotvideo.V20211125
 
        private const string endpoint = "iotvideo.tencentcloudapi.com";
        private const string version = "2021-11-25";
-       private const string sdkVersion = "SDK_NET_3.0.1160";
+       private const string sdkVersion = "SDK_NET_3.0.1161";
 
         /// <summary>
         /// Client constructor.
@@ -1436,6 +1436,27 @@ namespace TencentCloud.Iotvideo.V20211125
         public DescribeForwardRuleResponse DescribeForwardRuleSync(DescribeForwardRuleRequest req)
         {
             return InternalRequestAsync<DescribeForwardRuleResponse>(req, "DescribeForwardRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询云存卡套餐信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFreeCloudStorageNumRequest"/></param>
+        /// <returns><see cref="DescribeFreeCloudStorageNumResponse"/></returns>
+        public Task<DescribeFreeCloudStorageNumResponse> DescribeFreeCloudStorageNum(DescribeFreeCloudStorageNumRequest req)
+        {
+            return InternalRequestAsync<DescribeFreeCloudStorageNumResponse>(req, "DescribeFreeCloudStorageNum");
+        }
+
+        /// <summary>
+        /// 查询云存卡套餐信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFreeCloudStorageNumRequest"/></param>
+        /// <returns><see cref="DescribeFreeCloudStorageNumResponse"/></returns>
+        public DescribeFreeCloudStorageNumResponse DescribeFreeCloudStorageNumSync(DescribeFreeCloudStorageNumRequest req)
+        {
+            return InternalRequestAsync<DescribeFreeCloudStorageNumResponse>(req, "DescribeFreeCloudStorageNum")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

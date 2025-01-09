@@ -141,6 +141,17 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("CheckFastUpgradeReboot")]
         public long? CheckFastUpgradeReboot{ get; set; }
 
+        /// <summary>
+        /// 数据校验敏感度，非极速变配时使用此参数，敏感度根据当前实例规格计算迁移过程中的数据对比使用的cpu资源
+        /// 对应的选项为: "high"、"normal"、"low"，默认为空
+        /// 参数详解，：
+        /// "high": 对应控制台中的高，数据库负载过高不建议使用
+        /// "normal"：对应控制台中的标准
+        /// "low"：对应控制台中的低
+        /// </summary>
+        [JsonProperty("DataCheckSensitive")]
+        public string DataCheckSensitive{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -166,6 +177,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "RoTransType", this.RoTransType);
             this.SetParamObj(map, prefix + "ClusterTopology.", this.ClusterTopology);
             this.SetParamSimple(map, prefix + "CheckFastUpgradeReboot", this.CheckFastUpgradeReboot);
+            this.SetParamSimple(map, prefix + "DataCheckSensitive", this.DataCheckSensitive);
         }
     }
 }
