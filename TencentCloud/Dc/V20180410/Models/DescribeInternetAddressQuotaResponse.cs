@@ -26,35 +26,30 @@ namespace TencentCloud.Dc.V20180410.Models
         
         /// <summary>
         /// IPv6互联网公网允许的最小前缀长度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ipv6PrefixLen")]
         public long? Ipv6PrefixLen{ get; set; }
 
         /// <summary>
         /// BGP类型IPv4互联网地址配额
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ipv4BgpQuota")]
         public long? Ipv4BgpQuota{ get; set; }
 
         /// <summary>
         /// 非BGP类型IPv4互联网地址配额
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ipv4OtherQuota")]
         public long? Ipv4OtherQuota{ get; set; }
 
         /// <summary>
         /// BGP类型IPv4互联网地址已使用数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ipv4BgpNum")]
         public long? Ipv4BgpNum{ get; set; }
 
         /// <summary>
         /// 非BGP类型互联网地址已使用数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ipv4OtherNum")]
         public long? Ipv4OtherNum{ get; set; }

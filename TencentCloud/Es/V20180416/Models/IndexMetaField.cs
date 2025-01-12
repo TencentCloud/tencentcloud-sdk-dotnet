@@ -116,6 +116,13 @@ namespace TencentCloud.Es.V20180416.Models
         public IndexSettingsField IndexSettingsField{ get; set; }
 
         /// <summary>
+        /// 索引别名字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IndexAliasesField")]
+        public string[] IndexAliasesField{ get; set; }
+
+        /// <summary>
         /// 索引所属集群APP ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -148,6 +155,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamObj(map, prefix + "IndexPolicyField.", this.IndexPolicyField);
             this.SetParamObj(map, prefix + "IndexOptionsField.", this.IndexOptionsField);
             this.SetParamObj(map, prefix + "IndexSettingsField.", this.IndexSettingsField);
+            this.SetParamArraySimple(map, prefix + "IndexAliasesField.", this.IndexAliasesField);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "IndexDocs", this.IndexDocs);
         }

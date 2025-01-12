@@ -28,7 +28,7 @@ namespace TencentCloud.Dc.V20180410
 
        private const string endpoint = "dc.tencentcloudapi.com";
        private const string version = "2018-04-10";
-       private const string sdkVersion = "SDK_NET_3.0.1161";
+       private const string sdkVersion = "SDK_NET_3.0.1162";
 
         /// <summary>
         /// Client constructor.
@@ -354,7 +354,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// 本接口（DescribePublicDirectConnectTunnelRoutes）用于查询互联网通道路由列表
+        /// 查询互联网通道路由列表。
         /// </summary>
         /// <param name="req"><see cref="DescribePublicDirectConnectTunnelRoutesRequest"/></param>
         /// <returns><see cref="DescribePublicDirectConnectTunnelRoutesResponse"/></returns>
@@ -364,7 +364,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// 本接口（DescribePublicDirectConnectTunnelRoutes）用于查询互联网通道路由列表
+        /// 查询互联网通道路由列表。
         /// </summary>
         /// <param name="req"><see cref="DescribePublicDirectConnectTunnelRoutesRequest"/></param>
         /// <returns><see cref="DescribePublicDirectConnectTunnelRoutesResponse"/></returns>

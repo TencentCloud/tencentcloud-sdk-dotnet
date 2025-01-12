@@ -38,7 +38,6 @@ namespace TencentCloud.Dc.V20180410.Models
 
         /// <summary>
         /// 用户名下物理专线是否都签署了用户协议。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AllSignLaw")]
         public bool? AllSignLaw{ get; set; }

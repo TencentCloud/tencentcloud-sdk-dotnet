@@ -25,27 +25,27 @@ namespace TencentCloud.Dc.V20180410.Models
     {
         
         /// <summary>
-        /// 专用通道ID
+        /// 专用通道ID。
         /// </summary>
         [JsonProperty("DirectConnectTunnelId")]
         public string DirectConnectTunnelId{ get; set; }
 
         /// <summary>
         /// 过滤条件：
-        /// route-type：路由类型，取值：BGP/STATIC
-        /// route-subnet：路由cidr，取值如：192.68.1.0/24
+        /// route-type：路由类型，取值：BGP/STATIC；
+        /// route-subnet：路由cidr，取值如：192.68.1.0/24。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0
+        /// 偏移量，默认为0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为20，最大值为100
+        /// 返回数量，默认为20，最大值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

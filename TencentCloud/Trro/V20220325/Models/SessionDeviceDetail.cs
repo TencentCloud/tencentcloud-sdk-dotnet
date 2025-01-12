@@ -110,21 +110,18 @@ namespace TencentCloud.Trro.V20220325.Models
 
         /// <summary>
         /// sdk版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ver")]
         public string Ver{ get; set; }
 
         /// <summary>
         /// 模式(p2p/server)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SdkMode")]
         public string SdkMode{ get; set; }
 
         /// <summary>
         /// 解码耗时，单位：ms
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DecodeCost")]
         public long?[] DecodeCost{ get; set; }
@@ -139,126 +136,108 @@ namespace TencentCloud.Trro.V20220325.Models
 
         /// <summary>
         /// 卡顿k100
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("K100")]
         public float?[] K100{ get; set; }
 
         /// <summary>
         /// 卡顿k150
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("K150")]
         public float?[] K150{ get; set; }
 
         /// <summary>
         /// nack请求数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NACK")]
         public long?[] NACK{ get; set; }
 
         /// <summary>
         /// 服务端调控码率,单位：kbps
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BitRateEstimate")]
         public long?[] BitRateEstimate{ get; set; }
 
         /// <summary>
         /// 宽度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
         /// 高度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
         /// 编码耗时，单位：ms
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EncodeCost")]
         public long?[] EncodeCost{ get; set; }
 
         /// <summary>
         /// 采集耗时，单位：ms
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CaptureCost")]
         public long?[] CaptureCost{ get; set; }
 
         /// <summary>
         /// 渲染耗时，单位：ms
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RenderCost")]
         public long?[] RenderCost{ get; set; }
 
         /// <summary>
         /// 配置宽度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigWidth")]
         public long? ConfigWidth{ get; set; }
 
         /// <summary>
         /// 配置高度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigHeight")]
         public long? ConfigHeight{ get; set; }
 
         /// <summary>
         /// 平均帧间隔
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FrameDelta")]
         public long?[] FrameDelta{ get; set; }
 
         /// <summary>
         /// 最大帧间隔
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxFrameDelta")]
         public long?[] MaxFrameDelta{ get; set; }
 
         /// <summary>
         /// 总码率评估,单位：kbps
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalBitrateEstimate")]
         public long?[] TotalBitrateEstimate{ get; set; }
 
         /// <summary>
         /// 帧间隔大于100ms的卡顿时长
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Lag100Duration")]
         public long?[] Lag100Duration{ get; set; }
 
         /// <summary>
         /// 帧间隔大于150ms的卡顿时长
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Lag150Duration")]
         public long?[] Lag150Duration{ get; set; }
 
         /// <summary>
         /// 是否开启多网：0 单网，1 多网
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MultiMode")]
         public long? MultiMode{ get; set; }
 
         /// <summary>
         /// 多网卡信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MultiNet")]
         public MultiNet[] MultiNet{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Dc.V20180410.Models
     {
         
         /// <summary>
-        /// 互联网通道路由列表
+        /// 互联网通道路由列表。
         /// </summary>
         [JsonProperty("Routes")]
         public DirectConnectTunnelRoute[] Routes{ get; set; }
 
         /// <summary>
-        /// 记录总数
+        /// 路由总数量。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

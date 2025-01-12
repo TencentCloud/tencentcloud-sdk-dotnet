@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1161";
+       private const string sdkVersion = "SDK_NET_3.0.1162";
 
         /// <summary>
         /// Client constructor.
@@ -523,7 +523,7 @@ namespace TencentCloud.Ess.V20201111
         /// ### 填充模板中定义的填写控件
         /// 模板中配置的<font color="red">发起人填充控件</font>可以通过本接口的**FormFields数组**字段填充。
         /// 
-        /// **<font color="red">填充填写控件需要进行Pdf合成工作，文档合成完成后会收到[文档合成完成后回调通知](https://qian.tencent.com/developers/company/callback_types_file_resources),建议在收到此回调后再调用 [StartFlow](https://qian.tencent.com/developers/companyApis/startFlows/StartFlow) 接口。</font>**
+        /// **<font color="red">填充填写控件需要进行Pdf合成工作，文档合成完成后会收到[合同文档合成完成回调](https://qian.tencent.com/developers/company/callback_types_contracts_sign#%E4%B9%9D-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83),建议在收到此回调后再调用 [StartFlow](https://qian.tencent.com/developers/companyApis/startFlows/StartFlow) 接口。</font>**
         /// 
         /// ![image](https://qcloudimg.tencent-cloud.cn/raw/37457e0e450fc221effddfcb8b1bad55.png)
         /// 
@@ -574,7 +574,7 @@ namespace TencentCloud.Ess.V20201111
         /// ### 填充模板中定义的填写控件
         /// 模板中配置的<font color="red">发起人填充控件</font>可以通过本接口的**FormFields数组**字段填充。
         /// 
-        /// **<font color="red">填充填写控件需要进行Pdf合成工作，文档合成完成后会收到[文档合成完成后回调通知](https://qian.tencent.com/developers/company/callback_types_file_resources),建议在收到此回调后再调用 [StartFlow](https://qian.tencent.com/developers/companyApis/startFlows/StartFlow) 接口。</font>**
+        /// **<font color="red">填充填写控件需要进行Pdf合成工作，文档合成完成后会收到[合同文档合成完成回调](https://qian.tencent.com/developers/company/callback_types_contracts_sign#%E4%B9%9D-%E5%90%88%E5%90%8C%E6%96%87%E6%A1%A3%E5%90%88%E6%88%90%E5%AE%8C%E6%88%90%E5%9B%9E%E8%B0%83),建议在收到此回调后再调用 [StartFlow](https://qian.tencent.com/developers/companyApis/startFlows/StartFlow) 接口。</font>**
         /// 
         /// ![image](https://qcloudimg.tencent-cloud.cn/raw/37457e0e450fc221effddfcb8b1bad55.png)
         /// 
