@@ -26,14 +26,12 @@ namespace TencentCloud.Pts.V20210728.Models
         
         /// <summary>
         /// 停止压测任务成功与否
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AbortJob")]
         public ulong? AbortJob{ get; set; }
 
         /// <summary>
         /// 发送告警通知成功与否
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SendNotice")]
         public ulong? SendNotice{ get; set; }

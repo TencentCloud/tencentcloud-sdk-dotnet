@@ -73,7 +73,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string ApiDuration{ get; set; }
 
         /// <summary>
-        /// 分数
+        /// 项目总分
         /// </summary>
         [JsonProperty("Score")]
         public string Score{ get; set; }
@@ -109,6 +109,42 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// 页面性能评分
+        /// </summary>
+        [JsonProperty("PagePerformanceScore")]
+        public string PagePerformanceScore{ get; set; }
+
+        /// <summary>
+        /// js错误评分
+        /// </summary>
+        [JsonProperty("JsErrorScore")]
+        public string JsErrorScore{ get; set; }
+
+        /// <summary>
+        /// API性能评分
+        /// </summary>
+        [JsonProperty("ApiPerformanceScore")]
+        public string ApiPerformanceScore{ get; set; }
+
+        /// <summary>
+        /// API可用性评分
+        /// </summary>
+        [JsonProperty("ApiAvaliableScore")]
+        public string ApiAvaliableScore{ get; set; }
+
+        /// <summary>
+        /// 静态资源性能评分
+        /// </summary>
+        [JsonProperty("StaticPerformanceScore")]
+        public string StaticPerformanceScore{ get; set; }
+
+        /// <summary>
+        /// 静态资源可用性评分
+        /// </summary>
+        [JsonProperty("StaticAvaliableScore")]
+        public string StaticAvaliableScore{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +165,12 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "RecordNum", this.RecordNum);
             this.SetParamSimple(map, prefix + "PageDuration", this.PageDuration);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "PagePerformanceScore", this.PagePerformanceScore);
+            this.SetParamSimple(map, prefix + "JsErrorScore", this.JsErrorScore);
+            this.SetParamSimple(map, prefix + "ApiPerformanceScore", this.ApiPerformanceScore);
+            this.SetParamSimple(map, prefix + "ApiAvaliableScore", this.ApiAvaliableScore);
+            this.SetParamSimple(map, prefix + "StaticPerformanceScore", this.StaticPerformanceScore);
+            this.SetParamSimple(map, prefix + "StaticAvaliableScore", this.StaticAvaliableScore);
         }
     }
 }

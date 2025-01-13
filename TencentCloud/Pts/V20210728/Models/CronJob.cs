@@ -33,35 +33,30 @@ namespace TencentCloud.Pts.V20210728.Models
 
         /// <summary>
         /// 定时任务名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 项目ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
         /// 场景ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScenarioId")]
         public string ScenarioId{ get; set; }
 
         /// <summary>
         /// 场景名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScenarioName")]
         public string ScenarioName{ get; set; }
 
         /// <summary>
         /// cron 表达式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CronExpression")]
         public string CronExpression{ get; set; }
@@ -75,21 +70,18 @@ namespace TencentCloud.Pts.V20210728.Models
 
         /// <summary>
         /// 中止原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AbortReason")]
         public long? AbortReason{ get; set; }
 
         /// <summary>
         /// 定时任务状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// Notice ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NoticeId")]
         public string NoticeId{ get; set; }
@@ -110,42 +102,36 @@ namespace TencentCloud.Pts.V20210728.Models
 
         /// <summary>
         /// 执行频率类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FrequencyType")]
         public long? FrequencyType{ get; set; }
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }
 
         /// <summary>
         /// tom
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobOwner")]
         public string JobOwner{ get; set; }
 
         /// <summary>
         /// App ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
         /// 主账号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
         /// 子账号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubAccountUin")]
         public string SubAccountUin{ get; set; }

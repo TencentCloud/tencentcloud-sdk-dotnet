@@ -33,14 +33,12 @@ namespace TencentCloud.Pts.V20210728.Models
 
         /// <summary>
         /// 任务的场景ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScenarioId")]
         public string ScenarioId{ get; set; }
 
         /// <summary>
         /// 任务的施压配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Load")]
         public Load Load{ get; set; }
@@ -70,7 +68,6 @@ namespace TencentCloud.Pts.V20210728.Models
         /// 任务的运行状态, JobUnknown: 0,JobCreated:1,JobPending:2, JobPreparing:3,JobSelectClustering:4,JobCreateTasking:5,JobSyncTasking:6
         /// JobRunning:11,JobFinished:12,JobPrepareException:13,JobFinishException:14,JobAborting:15,JobAborted:16,JobAbortException:17,JobDeleted:18,
         /// JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -91,28 +88,24 @@ namespace TencentCloud.Pts.V20210728.Models
 
         /// <summary>
         /// 任务的最大VU数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxVirtualUserCount")]
         public long? MaxVirtualUserCount{ get; set; }
 
         /// <summary>
         /// 任务的备注信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }
 
         /// <summary>
         /// 错误率百分比
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorRate")]
         public float? ErrorRate{ get; set; }
 
         /// <summary>
         /// 任务发起人
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobOwner")]
         public string JobOwner{ get; set; }
@@ -126,56 +119,48 @@ namespace TencentCloud.Pts.V20210728.Models
 
         /// <summary>
         /// 任务时长
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Duration")]
         public long? Duration{ get; set; }
 
         /// <summary>
         /// 最大每秒请求数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxRequestsPerSecond")]
         public long? MaxRequestsPerSecond{ get; set; }
 
         /// <summary>
         /// 总请求数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RequestTotal")]
         public float? RequestTotal{ get; set; }
 
         /// <summary>
         /// 平均每秒请求数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RequestsPerSecond")]
         public float? RequestsPerSecond{ get; set; }
 
         /// <summary>
         /// 平均响应时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResponseTimeAverage")]
         public float? ResponseTimeAverage{ get; set; }
 
         /// <summary>
         /// 响应时间第99百分位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResponseTimeP99")]
         public float? ResponseTimeP99{ get; set; }
 
         /// <summary>
         /// 响应时间第95百分位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResponseTimeP95")]
         public float? ResponseTimeP95{ get; set; }
 
         /// <summary>
         /// 响应时间第90百分位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResponseTimeP90")]
         public float? ResponseTimeP90{ get; set; }
@@ -189,14 +174,12 @@ namespace TencentCloud.Pts.V20210728.Models
 
         /// <summary>
         /// 最大响应时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResponseTimeMax")]
         public float? ResponseTimeMax{ get; set; }
 
         /// <summary>
         /// 最小响应时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResponseTimeMin")]
         public float? ResponseTimeMin{ get; set; }
@@ -238,35 +221,30 @@ namespace TencentCloud.Pts.V20210728.Models
 
         /// <summary>
         /// 定时任务ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CronId")]
         public string CronId{ get; set; }
 
         /// <summary>
         /// 场景类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 域名绑定配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DomainNameConfig")]
         public DomainNameConfig DomainNameConfig{ get; set; }
 
         /// <summary>
         /// false
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Debug")]
         public bool? Debug{ get; set; }
 
         /// <summary>
         /// 中断原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AbortReason")]
         public long? AbortReason{ get; set; }
@@ -280,7 +258,6 @@ namespace TencentCloud.Pts.V20210728.Models
 
         /// <summary>
         /// 项目ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
@@ -294,49 +271,42 @@ namespace TencentCloud.Pts.V20210728.Models
 
         /// <summary>
         /// 每秒接收字节数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetworkReceiveRate")]
         public float? NetworkReceiveRate{ get; set; }
 
         /// <summary>
         /// 每秒发送字节数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetworkSendRate")]
         public float? NetworkSendRate{ get; set; }
 
         /// <summary>
         /// 任务状态描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
         /// test-project
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
         /// <summary>
         /// test-scenario
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScenarioName")]
         public string ScenarioName{ get; set; }
 
         /// <summary>
         /// 付费类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
         /// job VUM用量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Usage")]
         public long? Usage{ get; set; }

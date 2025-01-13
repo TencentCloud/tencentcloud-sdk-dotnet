@@ -26,14 +26,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         
         /// <summary>
         /// 第三方应用平台的应用ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
         /// <summary>
         /// 合同模板ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
@@ -45,7 +43,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <li>part-success: 部分成功,失败的会在FailMessageList中展示</li>
         /// <li>fail:全部失败, 失败的会在FailMessageList中展示</li>
         /// </ul>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperateResult")]
         public string OperateResult{ get; set; }
@@ -54,21 +51,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 模板可见范围:
         /// **all**: 所有本第三方应用合作企业可见
         /// **part**: 指定的本第三方应用合作企业
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthTag")]
         public string AuthTag{ get; set; }
 
         /// <summary>
         /// 第三方平台子客企业标识列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyOrganizationOpenIds")]
         public string[] ProxyOrganizationOpenIds{ get; set; }
 
         /// <summary>
         /// 操作失败信息数组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailMessageList")]
         public AuthFailMessage[] FailMessageList{ get; set; }

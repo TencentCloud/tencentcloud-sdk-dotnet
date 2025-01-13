@@ -63,7 +63,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <li>**7**: 还没有预发起</li>
         /// <li>**8**: 等待填写</li>
         /// <li>**9**: 部分填写 </li>
-        /// <li>**10**: 拒填</li>
+        /// <li>**10**: 拒签</li>
         /// <li>**11**: 已解除</li>
         /// </ul>
         /// </summary>

@@ -26,7 +26,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         
         /// <summary>
         /// 授权链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

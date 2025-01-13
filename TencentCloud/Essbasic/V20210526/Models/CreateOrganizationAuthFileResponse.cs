@@ -26,7 +26,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         
         /// <summary>
         /// 授权书链接，有效期5分钟。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileUrl")]
         public string FileUrl{ get; set; }

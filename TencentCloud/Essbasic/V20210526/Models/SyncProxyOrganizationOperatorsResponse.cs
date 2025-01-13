@@ -29,14 +29,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 
         /// <ul><li> **1** :全部成功</li>
         /// <li> **2** :部分成功</li></ul>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 同步失败员工ID及其失败原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailedList")]
         public SyncFailReason[] FailedList{ get; set; }

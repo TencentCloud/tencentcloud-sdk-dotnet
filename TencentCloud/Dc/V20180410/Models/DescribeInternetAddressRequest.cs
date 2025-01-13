@@ -37,12 +37,7 @@ namespace TencentCloud.Dc.V20180410.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 过滤条件：
-        /// <li>AddrType, 地址类型。0：BGP 1; 1: 电信， 2：移动， 3：联通</li>
-        /// <li>AddrProto地址类型。0：IPv4 1:IPv6</li>
-        /// <li>Status 地址状态。 0：使用中， 1：已停用， 2：已退还</li>
-        /// <li>Subnet 互联网公网地址，数组</li>
-        /// <InstanceIds>互联网公网地址ID，数组</li>
+        /// 过滤条件： <li>AddrType，地址类型。0：BGP 1；1: 电信；2：移动；3：联通</li> <li>AddrProto，地址类型。0：IPv4；1:IPv6</li> <li>Status，地址状态。 0：使用中；1：已停用； 2：已退还</li> <li>Subnet，互联网公网地址。数组</li> <li>InstanceIds，互联网公网地址ID。数组</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

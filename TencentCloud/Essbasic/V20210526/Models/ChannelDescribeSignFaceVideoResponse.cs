@@ -26,14 +26,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         
         /// <summary>
         /// 核身视频结果。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VideoData")]
         public DetectInfoVideoData VideoData{ get; set; }
 
         /// <summary>
         /// 意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IntentionQuestionResult")]
         public IntentionQuestionResult IntentionQuestionResult{ get; set; }

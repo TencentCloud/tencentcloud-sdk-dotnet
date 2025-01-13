@@ -26,49 +26,42 @@ namespace TencentCloud.Pts.V20210728.Models
         
         /// <summary>
         /// 最大RPS
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxRequestsPerSecond")]
         public long? MaxRequestsPerSecond{ get; set; }
 
         /// <summary>
         /// 施压时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DurationSeconds")]
         public long? DurationSeconds{ get; set; }
 
         /// <summary>
         /// deprecated
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetVirtualUsers")]
         public long? TargetVirtualUsers{ get; set; }
 
         /// <summary>
         /// 资源数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resources")]
         public long? Resources{ get; set; }
 
         /// <summary>
         /// 起始RPS
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartRequestsPerSecond")]
         public long? StartRequestsPerSecond{ get; set; }
 
         /// <summary>
         /// 目标RPS，入参无效
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetRequestsPerSecond")]
         public long? TargetRequestsPerSecond{ get; set; }
 
         /// <summary>
         /// 优雅关停的等待时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GracefulStopSeconds")]
         public long? GracefulStopSeconds{ get; set; }

@@ -55,7 +55,6 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-        /// 示例值：劳务合同
         /// </summary>
         [JsonProperty("FlowType")]
         public string FlowType{ get; set; }
@@ -124,7 +123,6 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
-        /// 示例值：E_PRESCRIPTION_AUTO_SIGN
         /// </summary>
         [JsonProperty("AutoSignScene")]
         public string AutoSignScene{ get; set; }

@@ -62,7 +62,6 @@ namespace TencentCloud.Pts.V20210728.Models
 
         /// <summary>
         /// 文件行数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LineCount")]
         public long? LineCount{ get; set; }
@@ -83,7 +82,6 @@ namespace TencentCloud.Pts.V20210728.Models
 
         /// <summary>
         /// 首行是否为参数名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HeaderInFile")]
         public bool? HeaderInFile{ get; set; }
@@ -111,7 +109,6 @@ namespace TencentCloud.Pts.V20210728.Models
 
         /// <summary>
         /// 文件状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -125,35 +122,30 @@ namespace TencentCloud.Pts.V20210728.Models
 
         /// <summary>
         /// 项目 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
         /// 此字段不再使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppID")]
         public long? AppID{ get; set; }
 
         /// <summary>
         /// 用户主账号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
         /// 用户子账号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubAccountUin")]
         public string SubAccountUin{ get; set; }
 
         /// <summary>
         /// 用户账号的 App ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }

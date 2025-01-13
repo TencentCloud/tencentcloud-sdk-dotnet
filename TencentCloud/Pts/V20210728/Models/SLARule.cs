@@ -26,28 +26,24 @@ namespace TencentCloud.Pts.V20210728.Models
         
         /// <summary>
         /// 压测指标
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Metric")]
         public string Metric{ get; set; }
 
         /// <summary>
         /// 压测指标聚合方法
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Aggregation")]
         public string Aggregation{ get; set; }
 
         /// <summary>
         /// 压测指标条件判断符号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Condition")]
         public string Condition{ get; set; }
 
         /// <summary>
         /// 阈值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public float? Value{ get; set; }
@@ -61,14 +57,12 @@ namespace TencentCloud.Pts.V20210728.Models
 
         /// <summary>
         /// 是否停止压测任务
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AbortFlag")]
         public bool? AbortFlag{ get; set; }
 
         /// <summary>
         /// 持续时长
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("For")]
         public string For{ get; set; }

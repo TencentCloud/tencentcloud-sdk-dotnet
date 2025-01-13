@@ -26,21 +26,18 @@ namespace TencentCloud.Pts.V20210728.Models
         
         /// <summary>
         /// 发压host的IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IP")]
         public string IP{ get; set; }
 
         /// <summary>
         /// 发压host所在的pod
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PodName")]
         public string PodName{ get; set; }
 
         /// <summary>
         /// 所属地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }

@@ -38,35 +38,30 @@ namespace TencentCloud.Pts.V20210728.Models
 
         /// <summary>
         /// 场景描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 场景类型，如pts-http, pts-js, pts-trpc, pts-jmeter
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 场景状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 施压配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Load")]
         public Load Load{ get; set; }
 
         /// <summary>
         /// deprecated
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EncodedScripts")]
         public string EncodedScripts{ get; set; }
@@ -94,14 +89,12 @@ namespace TencentCloud.Pts.V20210728.Models
 
         /// <summary>
         /// SLA规则的ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SLAId")]
         public string SLAId{ get; set; }
 
         /// <summary>
         /// Cron Job规则的ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CronId")]
         public string CronId{ get; set; }
@@ -120,28 +113,24 @@ namespace TencentCloud.Pts.V20210728.Models
 
         /// <summary>
         /// 项目ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
         /// App ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
         /// 用户ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
         /// 子用户ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubAccountUin")]
         public string SubAccountUin{ get; set; }
@@ -169,7 +158,6 @@ namespace TencentCloud.Pts.V20210728.Models
 
         /// <summary>
         /// SLA 策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SLAPolicy")]
         public SLAPolicy SLAPolicy{ get; set; }
@@ -183,7 +171,6 @@ namespace TencentCloud.Pts.V20210728.Models
 
         /// <summary>
         /// 域名解析配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DomainNameConfig")]
         public DomainNameConfig DomainNameConfig{ get; set; }
@@ -197,14 +184,12 @@ namespace TencentCloud.Pts.V20210728.Models
 
         /// <summary>
         /// 创建人员
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Owner")]
         public string Owner{ get; set; }
 
         /// <summary>
         /// 场景所在的项目的名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }

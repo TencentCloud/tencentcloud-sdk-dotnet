@@ -26,21 +26,18 @@ namespace TencentCloud.Pts.V20210728.Models
         
         /// <summary>
         /// 测试数据集所在的文件名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 测试数据集是否分片
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Split")]
         public bool? Split{ get; set; }
 
         /// <summary>
         /// 首行是否为参数名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HeaderInFile")]
         public bool? HeaderInFile{ get; set; }
@@ -54,7 +51,6 @@ namespace TencentCloud.Pts.V20210728.Models
 
         /// <summary>
         /// 文件行数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LineCount")]
         public long? LineCount{ get; set; }
@@ -68,7 +64,6 @@ namespace TencentCloud.Pts.V20210728.Models
 
         /// <summary>
         /// 文件字节数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }
@@ -89,14 +84,12 @@ namespace TencentCloud.Pts.V20210728.Models
 
         /// <summary>
         /// 文件类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// 文件 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }

@@ -33,28 +33,24 @@ namespace TencentCloud.Pts.V20210728.Models
 
         /// <summary>
         /// 运行次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IterationCount")]
         public long? IterationCount{ get; set; }
 
         /// <summary>
         /// 最大RPS
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxRequestsPerSecond")]
         public long? MaxRequestsPerSecond{ get; set; }
 
         /// <summary>
         /// 优雅终止任务的等待时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GracefulStopSeconds")]
         public long? GracefulStopSeconds{ get; set; }
 
         /// <summary>
         /// 资源数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Resources")]
         public long? Resources{ get; set; }

@@ -26,21 +26,18 @@ namespace TencentCloud.Pts.V20210728.Models
         
         /// <summary>
         /// 毫秒时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Timestamp")]
         public string Timestamp{ get; set; }
 
         /// <summary>
         /// 日志级别
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SeverityText")]
         public string SeverityText{ get; set; }
 
         /// <summary>
         /// 日志输出内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Body")]
         public string Body{ get; set; }

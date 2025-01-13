@@ -26,14 +26,12 @@ namespace TencentCloud.Pts.V20210728.Models
         
         /// <summary>
         /// 标签名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LabelName")]
         public string LabelName{ get; set; }
 
         /// <summary>
         /// 标签值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LabelValue")]
         public string LabelValue{ get; set; }

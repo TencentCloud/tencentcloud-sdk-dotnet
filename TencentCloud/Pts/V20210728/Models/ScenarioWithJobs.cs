@@ -26,7 +26,6 @@ namespace TencentCloud.Pts.V20210728.Models
         
         /// <summary>
         /// scecario结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Scenario")]
         public Scenario Scenario{ get; set; }

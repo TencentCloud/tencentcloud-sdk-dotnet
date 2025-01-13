@@ -46,9 +46,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
 
         /// <summary>
         /// 授权书类型：
-        /// - 0: 企业认证超管授权书
-        /// - 1: 超管变更授权书
-        /// - 2: 企业注销授权书
+        /// 
+        /// <ul><li>0: 企业认证超管授权书</li><li>1: 超管变更授权书</li><li>2: 企业注销授权书</li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }

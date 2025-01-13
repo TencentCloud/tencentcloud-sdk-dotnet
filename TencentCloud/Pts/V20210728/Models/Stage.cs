@@ -26,14 +26,12 @@ namespace TencentCloud.Pts.V20210728.Models
         
         /// <summary>
         /// 施压时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DurationSeconds")]
         public long? DurationSeconds{ get; set; }
 
         /// <summary>
         /// 虚拟用户数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetVirtualUsers")]
         public long? TargetVirtualUsers{ get; set; }

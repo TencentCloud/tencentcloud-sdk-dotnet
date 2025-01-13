@@ -45,6 +45,18 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
+        /// <summary>
+        /// 搜索引文站点名
+        /// </summary>
+        [JsonProperty("Text")]
+        public string Text{ get; set; }
+
+        /// <summary>
+        /// 搜索引文图标
+        /// </summary>
+        [JsonProperty("Icon")]
+        public string Icon{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +66,8 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamSimple(map, prefix + "Index", this.Index);
             this.SetParamSimple(map, prefix + "Title", this.Title);
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "Text", this.Text);
+            this.SetParamSimple(map, prefix + "Icon", this.Icon);
         }
     }
 }

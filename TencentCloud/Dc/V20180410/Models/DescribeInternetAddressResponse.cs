@@ -32,7 +32,6 @@ namespace TencentCloud.Dc.V20180410.Models
 
         /// <summary>
         /// 互联网公网地址列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Subnets")]
         public InternetAddressDetail[] Subnets{ get; set; }

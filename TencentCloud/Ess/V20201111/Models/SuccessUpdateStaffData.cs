@@ -45,7 +45,6 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// H5端员工实名链接
-        /// 
         /// 只有入参 InvitationNotifyType = H5的时候才会进行返回。
         /// </summary>
         [JsonProperty("Url")]

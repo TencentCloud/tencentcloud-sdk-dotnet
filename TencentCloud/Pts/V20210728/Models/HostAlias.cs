@@ -33,7 +33,6 @@ namespace TencentCloud.Pts.V20210728.Models
 
         /// <summary>
         /// 需绑定的 IP 地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IP")]
         public string IP{ get; set; }
