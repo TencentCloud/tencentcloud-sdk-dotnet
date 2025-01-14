@@ -96,6 +96,36 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("RequestFromSource")]
         public string RequestFromSource{ get; set; }
 
+        /// <summary>
+        /// 生命周期为基础数据进行日志匹配
+        /// </summary>
+        [JsonProperty("InstanceLifeDetailDtoList")]
+        public InstanceLifeDetailDto[] InstanceLifeDetailDtoList{ get; set; }
+
+        /// <summary>
+        /// 当前生命周期
+        /// </summary>
+        [JsonProperty("CurrentLifeRound")]
+        public long? CurrentLifeRound{ get; set; }
+
+        /// <summary>
+        /// 生命周期总数
+        /// </summary>
+        [JsonProperty("MaxLifeRound")]
+        public long? MaxLifeRound{ get; set; }
+
+        /// <summary>
+        /// 当前生命周期重试次数
+        /// </summary>
+        [JsonProperty("Tries")]
+        public long? Tries{ get; set; }
+
+        /// <summary>
+        /// 动态加载日志
+        /// </summary>
+        [JsonProperty("Dynamic")]
+        public bool? Dynamic{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +144,11 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "LineCount", this.LineCount);
             this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
             this.SetParamSimple(map, prefix + "RequestFromSource", this.RequestFromSource);
+            this.SetParamArrayObj(map, prefix + "InstanceLifeDetailDtoList.", this.InstanceLifeDetailDtoList);
+            this.SetParamSimple(map, prefix + "CurrentLifeRound", this.CurrentLifeRound);
+            this.SetParamSimple(map, prefix + "MaxLifeRound", this.MaxLifeRound);
+            this.SetParamSimple(map, prefix + "Tries", this.Tries);
+            this.SetParamSimple(map, prefix + "Dynamic", this.Dynamic);
         }
     }
 }

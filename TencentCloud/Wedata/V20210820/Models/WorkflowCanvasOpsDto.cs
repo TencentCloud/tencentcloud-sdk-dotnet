@@ -122,6 +122,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("OwnerId")]
         public string OwnerId{ get; set; }
 
+        /// <summary>
+        /// 工作流类型，周期cycle，手动manual
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WorkflowType")]
+        public string WorkflowType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +149,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);
             this.SetParamSimple(map, prefix + "Owner", this.Owner);
             this.SetParamSimple(map, prefix + "OwnerId", this.OwnerId);
+            this.SetParamSimple(map, prefix + "WorkflowType", this.WorkflowType);
         }
     }
 }

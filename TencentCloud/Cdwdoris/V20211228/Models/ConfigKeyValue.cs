@@ -26,35 +26,30 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         
         /// <summary>
         /// key
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeyName")]
         public string KeyName{ get; set; }
 
         /// <summary>
         /// 值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
         /// 1-只读，2-可修改但不可删除，3-可删除
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Display")]
         public long? Display{ get; set; }
 
         /// <summary>
         /// 0不支持 1支持热更新
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportHotUpdate")]
         public long? SupportHotUpdate{ get; set; }

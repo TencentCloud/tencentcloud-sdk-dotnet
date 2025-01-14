@@ -26,21 +26,18 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         
         /// <summary>
         /// 策略名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }
 
         /// <summary>
         /// cooldown_ttl
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CooldownDatetime")]
         public string CooldownDatetime{ get; set; }
 
         /// <summary>
         /// cooldown_datetime
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CooldownTtl")]
         public string CooldownTtl{ get; set; }

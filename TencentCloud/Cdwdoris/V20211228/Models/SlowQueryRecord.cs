@@ -86,52 +86,51 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
 
         /// <summary>
         /// 数据库名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DbName")]
         public string DbName{ get; set; }
 
         /// <summary>
         /// 是否是查询，0：否，1：查询语句
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsQuery")]
         public long? IsQuery{ get; set; }
 
         /// <summary>
         /// ResultBytes的MB格式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultBytesMB")]
         public float? ResultBytesMB{ get; set; }
 
         /// <summary>
         /// MemoryUsage的MB表示
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemoryUsageMB")]
         public float? MemoryUsageMB{ get; set; }
 
         /// <summary>
         /// DurationMs的秒表示
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DurationSec")]
         public float? DurationSec{ get; set; }
 
         /// <summary>
         /// 状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
         /// Catalog  Name
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CatalogName")]
         public string CatalogName{ get; set; }
+
+        /// <summary>
+        /// cpu执行时间 
+        /// </summary>
+        [JsonProperty("CpuTimeMs")]
+        public long? CpuTimeMs{ get; set; }
 
 
         /// <summary>
@@ -156,6 +155,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "DurationSec", this.DurationSec);
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamSimple(map, prefix + "CatalogName", this.CatalogName);
+            this.SetParamSimple(map, prefix + "CpuTimeMs", this.CpuTimeMs);
         }
     }
 }

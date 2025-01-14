@@ -37,7 +37,7 @@ namespace TencentCloud.Config.V20220802.Models
         public string AccountGroupId{ get; set; }
 
         /// <summary>
-        /// resourceName：资源名  resourceId ：资源ID
+        /// resourceName：资源名  resourceId ：资源ID resourceType：资源类型
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

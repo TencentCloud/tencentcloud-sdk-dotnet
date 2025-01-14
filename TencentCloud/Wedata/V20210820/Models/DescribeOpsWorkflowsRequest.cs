@@ -108,6 +108,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ProjectIds")]
         public string[] ProjectIds{ get; set; }
 
+        /// <summary>
+        /// 工作流类型列表 多个用英文逗号连接 cycle,manual. 默认只查询 cycle
+        /// </summary>
+        [JsonProperty("WorkflowTypeList")]
+        public string[] WorkflowTypeList{ get; set; }
+
+        /// <summary>
+        /// 工作流过滤keyword，支持工作流 id/name 模糊匹配， 多个用|分割
+        /// </summary>
+        [JsonProperty("KeyWord")]
+        public string KeyWord{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +140,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "SortItem", this.SortItem);
             this.SetParamSimple(map, prefix + "SortType", this.SortType);
             this.SetParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
+            this.SetParamArraySimple(map, prefix + "WorkflowTypeList.", this.WorkflowTypeList);
+            this.SetParamSimple(map, prefix + "KeyWord", this.KeyWord);
         }
     }
 }

@@ -26,21 +26,18 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         
         /// <summary>
         /// cos认证中的Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecretId")]
         public string SecretId{ get; set; }
 
         /// <summary>
         /// cos认证中的key
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }
 
         /// <summary>
         /// cos认证中的路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CosPath")]
         public string CosPath{ get; set; }

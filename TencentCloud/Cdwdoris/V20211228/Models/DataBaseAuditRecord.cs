@@ -26,101 +26,93 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         
         /// <summary>
         /// 查询用户
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OsUser")]
         public string OsUser{ get; set; }
 
         /// <summary>
         /// 查询ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InitialQueryId")]
         public string InitialQueryId{ get; set; }
 
         /// <summary>
         /// SQL语句
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Sql")]
         public string Sql{ get; set; }
 
         /// <summary>
         /// 开始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueryStartTime")]
         public string QueryStartTime{ get; set; }
 
         /// <summary>
         /// 执行耗时
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DurationMs")]
         public long? DurationMs{ get; set; }
 
         /// <summary>
         /// 读取行数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReadRows")]
         public long? ReadRows{ get; set; }
 
         /// <summary>
         /// 读取字节数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultRows")]
         public long? ResultRows{ get; set; }
 
         /// <summary>
         /// 结果字节数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultBytes")]
         public ulong? ResultBytes{ get; set; }
 
         /// <summary>
         /// 内存
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemoryUsage")]
         public long? MemoryUsage{ get; set; }
 
         /// <summary>
         /// 初始查询IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InitialAddress")]
         public string InitialAddress{ get; set; }
 
         /// <summary>
         /// 数据库
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DbName")]
         public string DbName{ get; set; }
 
         /// <summary>
         /// sql类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SqlType")]
         public string SqlType{ get; set; }
 
         /// <summary>
         /// catalog名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Catalog")]
         public string Catalog{ get; set; }
 
         /// <summary>
         /// 状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
+
+        /// <summary>
+        /// 是否是查询
+        /// </summary>
+        [JsonProperty("IsQuery")]
+        public bool? IsQuery{ get; set; }
 
 
         /// <summary>
@@ -142,6 +134,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "SqlType", this.SqlType);
             this.SetParamSimple(map, prefix + "Catalog", this.Catalog);
             this.SetParamSimple(map, prefix + "State", this.State);
+            this.SetParamSimple(map, prefix + "IsQuery", this.IsQuery);
         }
     }
 }

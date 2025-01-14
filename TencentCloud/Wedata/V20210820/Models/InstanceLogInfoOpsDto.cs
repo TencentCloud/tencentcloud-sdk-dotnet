@@ -87,6 +87,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("FileSize")]
         public string FileSize{ get; set; }
 
+        /// <summary>
+        /// 日志匹配节点信息
+        /// </summary>
+        [JsonProperty("MatchedBrokerIp")]
+        public string MatchedBrokerIp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +108,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
             this.SetParamSimple(map, prefix + "IsEnd", this.IsEnd);
             this.SetParamSimple(map, prefix + "FileSize", this.FileSize);
+            this.SetParamSimple(map, prefix + "MatchedBrokerIp", this.MatchedBrokerIp);
         }
     }
 }

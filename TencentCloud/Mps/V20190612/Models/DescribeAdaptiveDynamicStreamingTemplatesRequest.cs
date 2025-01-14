@@ -52,6 +52,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 是否为纯音频，0表示视频，1表示纯音频
+        /// 默认值：0
         /// </summary>
         [JsonProperty("PureAudio")]
         public ulong? PureAudio{ get; set; }

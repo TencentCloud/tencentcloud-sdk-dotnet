@@ -80,6 +80,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
         /// <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
         /// <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
+        /// 注意：Codec为MV-HEVC时可以支持到7680
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Width")]
@@ -87,6 +88,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+        /// 注意：Codec为MV-HEVC时可以支持到7680
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Height")]

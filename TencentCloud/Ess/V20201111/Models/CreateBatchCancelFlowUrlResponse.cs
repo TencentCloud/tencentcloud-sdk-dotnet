@@ -39,8 +39,6 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 签署连接过期时间字符串：年月日-时分秒
-        /// 
-        /// 例如:2023-07-28 17:25:59
         /// </summary>
         [JsonProperty("UrlExpireOn")]
         public string UrlExpireOn{ get; set; }

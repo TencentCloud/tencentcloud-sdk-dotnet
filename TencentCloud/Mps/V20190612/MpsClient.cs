@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1163";
+       private const string sdkVersion = "SDK_NET_3.0.1164";
 
         /// <summary>
         /// Client constructor.
@@ -471,6 +471,27 @@ namespace TencentCloud.Mps.V20190612
         public CreateStreamLinkOutputInfoResponse CreateStreamLinkOutputInfoSync(CreateStreamLinkOutputInfoRequest req)
         {
             return InternalRequestAsync<CreateStreamLinkOutputInfoResponse>(req, "CreateStreamLinkOutputInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建安全组，数量限制5个。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamLinkSecurityGroupRequest"/></param>
+        /// <returns><see cref="CreateStreamLinkSecurityGroupResponse"/></returns>
+        public Task<CreateStreamLinkSecurityGroupResponse> CreateStreamLinkSecurityGroup(CreateStreamLinkSecurityGroupRequest req)
+        {
+            return InternalRequestAsync<CreateStreamLinkSecurityGroupResponse>(req, "CreateStreamLinkSecurityGroup");
+        }
+
+        /// <summary>
+        /// 创建安全组，数量限制5个。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamLinkSecurityGroupRequest"/></param>
+        /// <returns><see cref="CreateStreamLinkSecurityGroupResponse"/></returns>
+        public CreateStreamLinkSecurityGroupResponse CreateStreamLinkSecurityGroupSync(CreateStreamLinkSecurityGroupRequest req)
+        {
+            return InternalRequestAsync<CreateStreamLinkSecurityGroupResponse>(req, "CreateStreamLinkSecurityGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -944,6 +965,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 删除安全组。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamLinkSecurityGroupRequest"/></param>
+        /// <returns><see cref="DeleteStreamLinkSecurityGroupResponse"/></returns>
+        public Task<DeleteStreamLinkSecurityGroupResponse> DeleteStreamLinkSecurityGroup(DeleteStreamLinkSecurityGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamLinkSecurityGroupResponse>(req, "DeleteStreamLinkSecurityGroup");
+        }
+
+        /// <summary>
+        /// 删除安全组。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamLinkSecurityGroupRequest"/></param>
+        /// <returns><see cref="DeleteStreamLinkSecurityGroupResponse"/></returns>
+        public DeleteStreamLinkSecurityGroupResponse DeleteStreamLinkSecurityGroupSync(DeleteStreamLinkSecurityGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamLinkSecurityGroupResponse>(req, "DeleteStreamLinkSecurityGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除用户自定义转码模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteTranscodeTemplateRequest"/></param>
@@ -1129,6 +1171,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribeContentReviewTemplatesResponse DescribeContentReviewTemplatesSync(DescribeContentReviewTemplatesRequest req)
         {
             return InternalRequestAsync<DescribeContentReviewTemplatesResponse>(req, "DescribeContentReviewTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据安全组反差关联的Flow信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupAttachFlowsByIdRequest"/></param>
+        /// <returns><see cref="DescribeGroupAttachFlowsByIdResponse"/></returns>
+        public Task<DescribeGroupAttachFlowsByIdResponse> DescribeGroupAttachFlowsById(DescribeGroupAttachFlowsByIdRequest req)
+        {
+            return InternalRequestAsync<DescribeGroupAttachFlowsByIdResponse>(req, "DescribeGroupAttachFlowsById");
+        }
+
+        /// <summary>
+        /// 根据安全组反差关联的Flow信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupAttachFlowsByIdRequest"/></param>
+        /// <returns><see cref="DescribeGroupAttachFlowsByIdResponse"/></returns>
+        public DescribeGroupAttachFlowsByIdResponse DescribeGroupAttachFlowsByIdSync(DescribeGroupAttachFlowsByIdRequest req)
+        {
+            return InternalRequestAsync<DescribeGroupAttachFlowsByIdResponse>(req, "DescribeGroupAttachFlowsById")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1553,6 +1616,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 批量查询安全组信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLinkSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLinkSecurityGroupsResponse"/></returns>
+        public Task<DescribeStreamLinkSecurityGroupsResponse> DescribeStreamLinkSecurityGroups(DescribeStreamLinkSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamLinkSecurityGroupsResponse>(req, "DescribeStreamLinkSecurityGroups");
+        }
+
+        /// <summary>
+        /// 批量查询安全组信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLinkSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLinkSecurityGroupsResponse"/></returns>
+        public DescribeStreamLinkSecurityGroupsResponse DescribeStreamLinkSecurityGroupsSync(DescribeStreamLinkSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamLinkSecurityGroupsResponse>(req, "DescribeStreamLinkSecurityGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询7天之内提交的任务）。
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskDetailRequest"/></param>
@@ -1763,6 +1847,27 @@ namespace TencentCloud.Mps.V20190612
         public DisableWorkflowResponse DisableWorkflowSync(DisableWorkflowRequest req)
         {
             return InternalRequestAsync<DisableWorkflowResponse>(req, "DisableWorkflow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 批量解绑安全组下面关联的输入输出。
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateSecurityGroupRequest"/></param>
+        /// <returns><see cref="DisassociateSecurityGroupResponse"/></returns>
+        public Task<DisassociateSecurityGroupResponse> DisassociateSecurityGroup(DisassociateSecurityGroupRequest req)
+        {
+            return InternalRequestAsync<DisassociateSecurityGroupResponse>(req, "DisassociateSecurityGroup");
+        }
+
+        /// <summary>
+        /// 批量解绑安全组下面关联的输入输出。
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateSecurityGroupRequest"/></param>
+        /// <returns><see cref="DisassociateSecurityGroupResponse"/></returns>
+        public DisassociateSecurityGroupResponse DisassociateSecurityGroupSync(DisassociateSecurityGroupRequest req)
+        {
+            return InternalRequestAsync<DisassociateSecurityGroupResponse>(req, "DisassociateSecurityGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2232,6 +2337,27 @@ namespace TencentCloud.Mps.V20190612
         public ModifyStreamLinkOutputInfoResponse ModifyStreamLinkOutputInfoSync(ModifyStreamLinkOutputInfoRequest req)
         {
             return InternalRequestAsync<ModifyStreamLinkOutputInfoResponse>(req, "ModifyStreamLinkOutputInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新安全组。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamLinkSecurityGroupRequest"/></param>
+        /// <returns><see cref="ModifyStreamLinkSecurityGroupResponse"/></returns>
+        public Task<ModifyStreamLinkSecurityGroupResponse> ModifyStreamLinkSecurityGroup(ModifyStreamLinkSecurityGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyStreamLinkSecurityGroupResponse>(req, "ModifyStreamLinkSecurityGroup");
+        }
+
+        /// <summary>
+        /// 更新安全组。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamLinkSecurityGroupRequest"/></param>
+        /// <returns><see cref="ModifyStreamLinkSecurityGroupResponse"/></returns>
+        public ModifyStreamLinkSecurityGroupResponse ModifyStreamLinkSecurityGroupSync(ModifyStreamLinkSecurityGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyStreamLinkSecurityGroupResponse>(req, "ModifyStreamLinkSecurityGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

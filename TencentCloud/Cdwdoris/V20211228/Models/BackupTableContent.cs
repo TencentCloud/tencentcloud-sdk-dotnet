@@ -26,49 +26,42 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         
         /// <summary>
         /// 数据库
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Database")]
         public string Database{ get; set; }
 
         /// <summary>
         /// 表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Table")]
         public string Table{ get; set; }
 
         /// <summary>
         /// 表总字节数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalBytes")]
         public long? TotalBytes{ get; set; }
 
         /// <summary>
         /// 表单个副本的大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SingleReplicaBytes")]
         public string SingleReplicaBytes{ get; set; }
 
         /// <summary>
         /// 备份状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupStatus")]
         public long? BackupStatus{ get; set; }
 
         /// <summary>
         /// 备份的错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupErrorMsg")]
         public string BackupErrorMsg{ get; set; }
 
         /// <summary>
         /// 该库表是否绑定降冷策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsOpenCoolDown")]
         public bool? IsOpenCoolDown{ get; set; }

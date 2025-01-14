@@ -78,6 +78,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
         /// <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
         /// 默认值：0。
+        /// 注意：Codec为MV-HEVC时可以支持到7680
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
@@ -89,6 +90,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
         /// <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
         /// 默认值：0。
+        /// 注意：Codec为MV-HEVC时可以支持到7680
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }

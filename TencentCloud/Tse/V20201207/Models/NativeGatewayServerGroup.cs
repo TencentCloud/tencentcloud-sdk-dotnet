@@ -110,6 +110,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("DefaultWeight")]
         public long? DefaultWeight{ get; set; }
 
+        /// <summary>
+        /// 弹性节点
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ElasticNumber")]
+        public ulong? ElasticNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +136,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "SubnetIds", this.SubnetIds);
             this.SetParamSimple(map, prefix + "DefaultWeight", this.DefaultWeight);
+            this.SetParamSimple(map, prefix + "ElasticNumber", this.ElasticNumber);
         }
     }
 }

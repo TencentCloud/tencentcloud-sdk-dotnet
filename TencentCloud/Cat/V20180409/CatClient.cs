@@ -28,7 +28,7 @@ namespace TencentCloud.Cat.V20180409
 
        private const string endpoint = "cat.tencentcloudapi.com";
        private const string version = "2018-04-09";
-       private const string sdkVersion = "SDK_NET_3.0.1163";
+       private const string sdkVersion = "SDK_NET_3.0.1164";
 
         /// <summary>
         /// Client constructor.
@@ -245,7 +245,7 @@ namespace TencentCloud.Cat.V20180409
         }
 
         /// <summary>
-        /// 暂停拨测任务
+        /// 暂停任务
         /// </summary>
         /// <param name="req"><see cref="SuspendProbeTaskRequest"/></param>
         /// <returns><see cref="SuspendProbeTaskResponse"/></returns>
@@ -255,7 +255,7 @@ namespace TencentCloud.Cat.V20180409
         }
 
         /// <summary>
-        /// 暂停拨测任务
+        /// 暂停任务
         /// </summary>
         /// <param name="req"><see cref="SuspendProbeTaskRequest"/></param>
         /// <returns><see cref="SuspendProbeTaskResponse"/></returns>

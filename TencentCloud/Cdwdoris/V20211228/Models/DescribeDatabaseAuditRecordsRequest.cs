@@ -108,6 +108,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("Catalogs")]
         public string[] Catalogs{ get; set; }
 
+        /// <summary>
+        /// 是否是查询 
+        /// </summary>
+        [JsonProperty("IsQuery")]
+        public bool?[] IsQuery{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamArraySimple(map, prefix + "DbNames.", this.DbNames);
             this.SetParamArraySimple(map, prefix + "SqlTypes.", this.SqlTypes);
             this.SetParamArraySimple(map, prefix + "Catalogs.", this.Catalogs);
+            this.SetParamArraySimple(map, prefix + "IsQuery.", this.IsQuery);
         }
     }
 }

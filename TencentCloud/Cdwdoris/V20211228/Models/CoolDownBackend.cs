@@ -26,28 +26,24 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         
         /// <summary>
         /// 字段：Host
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
         /// 字段：DataUsedCapacity
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataUsedCapacity")]
         public string DataUsedCapacity{ get; set; }
 
         /// <summary>
         /// 字段：TotalCapacity
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCapacity")]
         public string TotalCapacity{ get; set; }
 
         /// <summary>
         /// 字段：RemoteUsedCapacity
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RemoteUsedCapacity")]
         public string RemoteUsedCapacity{ get; set; }

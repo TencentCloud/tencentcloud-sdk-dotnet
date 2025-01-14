@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1163</VersionPrefix>
+    <VersionPrefix>3.0.1164</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -266,6 +266,8 @@
     <Compile Include="V20190612\Models\CreateStreamLinkInputResponse.cs" />
     <Compile Include="V20190612\Models\CreateStreamLinkOutputInfoRequest.cs" />
     <Compile Include="V20190612\Models\CreateStreamLinkOutputInfoResponse.cs" />
+    <Compile Include="V20190612\Models\CreateStreamLinkSecurityGroupRequest.cs" />
+    <Compile Include="V20190612\Models\CreateStreamLinkSecurityGroupResponse.cs" />
     <Compile Include="V20190612\Models\CreateTranscodeTemplateRequest.cs" />
     <Compile Include="V20190612\Models\CreateTranscodeTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateVideoDatabaseEntryTaskRequest.cs" />
@@ -308,6 +310,8 @@
     <Compile Include="V20190612\Models\DeleteStreamLinkFlowResponse.cs" />
     <Compile Include="V20190612\Models\DeleteStreamLinkOutputRequest.cs" />
     <Compile Include="V20190612\Models\DeleteStreamLinkOutputResponse.cs" />
+    <Compile Include="V20190612\Models\DeleteStreamLinkSecurityGroupRequest.cs" />
+    <Compile Include="V20190612\Models\DeleteStreamLinkSecurityGroupResponse.cs" />
     <Compile Include="V20190612\Models\DeleteTranscodeTemplateRequest.cs" />
     <Compile Include="V20190612\Models\DeleteTranscodeTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeleteWatermarkTemplateRequest.cs" />
@@ -329,6 +333,8 @@
     <Compile Include="V20190612\Models\DescribeEvent.cs" />
     <Compile Include="V20190612\Models\DescribeFlow.cs" />
     <Compile Include="V20190612\Models\DescribeFlowId.cs" />
+    <Compile Include="V20190612\Models\DescribeGroupAttachFlowsByIdRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeGroupAttachFlowsByIdResponse.cs" />
     <Compile Include="V20190612\Models\DescribeHLSPullSourceAddress.cs" />
     <Compile Include="V20190612\Models\DescribeImageSpriteTemplatesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeImageSpriteTemplatesResponse.cs" />
@@ -391,6 +397,8 @@
     <Compile Include="V20190612\Models\DescribeStreamLinkFlowsResponse.cs" />
     <Compile Include="V20190612\Models\DescribeStreamLinkRegionsRequest.cs" />
     <Compile Include="V20190612\Models\DescribeStreamLinkRegionsResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamLinkSecurityGroupsRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamLinkSecurityGroupsResponse.cs" />
     <Compile Include="V20190612\Models\DescribeTaskDetailRequest.cs" />
     <Compile Include="V20190612\Models\DescribeTaskDetailResponse.cs" />
     <Compile Include="V20190612\Models\DescribeTasksRequest.cs" />
@@ -412,6 +420,8 @@
     <Compile Include="V20190612\Models\DisableScheduleResponse.cs" />
     <Compile Include="V20190612\Models\DisableWorkflowRequest.cs" />
     <Compile Include="V20190612\Models\DisableWorkflowResponse.cs" />
+    <Compile Include="V20190612\Models\DisassociateSecurityGroupRequest.cs" />
+    <Compile Include="V20190612\Models\DisassociateSecurityGroupResponse.cs" />
     <Compile Include="V20190612\Models\DrmInfo.cs" />
     <Compile Include="V20190612\Models\EditMediaFileInfo.cs" />
     <Compile Include="V20190612\Models\EditMediaOutputConfig.cs" />
@@ -432,6 +442,7 @@
     <Compile Include="V20190612\Models\FaceConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\FaceEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\FlowAudio.cs" />
+    <Compile Include="V20190612\Models\FlowInOutResp.cs" />
     <Compile Include="V20190612\Models\FlowLogInfo.cs" />
     <Compile Include="V20190612\Models\FlowMediaAudio.cs" />
     <Compile Include="V20190612\Models\FlowMediaInfo.cs" />
@@ -560,6 +571,8 @@
     <Compile Include="V20190612\Models\ModifyStreamLinkInputResponse.cs" />
     <Compile Include="V20190612\Models\ModifyStreamLinkOutputInfoRequest.cs" />
     <Compile Include="V20190612\Models\ModifyStreamLinkOutputInfoResponse.cs" />
+    <Compile Include="V20190612\Models\ModifyStreamLinkSecurityGroupRequest.cs" />
+    <Compile Include="V20190612\Models\ModifyStreamLinkSecurityGroupResponse.cs" />
     <Compile Include="V20190612\Models\ModifyTranscodeTemplateRequest.cs" />
     <Compile Include="V20190612\Models\ModifyTranscodeTemplateResponse.cs" />
     <Compile Include="V20190612\Models\ModifyWatermarkTemplateRequest.cs" />
@@ -642,6 +655,7 @@
     <Compile Include="V20190612\Models\ScratchRepairConfig.cs" />
     <Compile Include="V20190612\Models\SearchTaskResult.cs" />
     <Compile Include="V20190612\Models\SearchValueInput.cs" />
+    <Compile Include="V20190612\Models\SecurityGroupInfo.cs" />
     <Compile Include="V20190612\Models\SegmentRecognitionItem.cs" />
     <Compile Include="V20190612\Models\SegmentSpecificInfo.cs" />
     <Compile Include="V20190612\Models\SharpEnhanceConfig.cs" />
@@ -676,6 +690,7 @@
     <Compile Include="V20190612\Models\TranscodeTemplate.cs" />
     <Compile Include="V20190612\Models\TranslateConfigureInfo.cs" />
     <Compile Include="V20190612\Models\TranslateConfigureInfoForUpdate.cs" />
+    <Compile Include="V20190612\Models\UnattachSecurityGroupInOutInfo.cs" />
     <Compile Include="V20190612\Models\UrlInputInfo.cs" />
     <Compile Include="V20190612\Models\UserDefineAsrTextReviewTemplateInfo.cs" />
     <Compile Include="V20190612\Models\UserDefineAsrTextReviewTemplateInfoForUpdate.cs" />

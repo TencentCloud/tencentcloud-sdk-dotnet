@@ -333,6 +333,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("PromptVariables")]
         public Variable[] PromptVariables{ get; set; }
 
+        /// <summary>
+        /// 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
+        /// </summary>
+        [JsonProperty("VadSilenceTime")]
+        public long? VadSilenceTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -363,6 +369,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "NotifyMaxCount", this.NotifyMaxCount);
             this.SetParamSimple(map, prefix + "CustomTTSConfig", this.CustomTTSConfig);
             this.SetParamArrayObj(map, prefix + "PromptVariables.", this.PromptVariables);
+            this.SetParamSimple(map, prefix + "VadSilenceTime", this.VadSilenceTime);
         }
     }
 }

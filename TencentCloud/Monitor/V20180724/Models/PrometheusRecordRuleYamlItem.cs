@@ -37,13 +37,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Yaml内容
+        /// 如果该聚合规则来至模板，则TemplateId为模板id
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 如果该聚合规则来至模板，则TemplateId为模板id
+        /// Yaml内容
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Content")]

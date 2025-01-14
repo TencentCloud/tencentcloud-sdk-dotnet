@@ -150,6 +150,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("ExecutedGTIDSet")]
         public string ExecutedGTIDSet{ get; set; }
 
+        /// <summary>
+        /// 备份文件MD5值
+        /// </summary>
+        [JsonProperty("MD5")]
+        public string MD5{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +183,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "EncryptionFlag", this.EncryptionFlag);
             this.SetParamSimple(map, prefix + "ExecutedGTIDSet", this.ExecutedGTIDSet);
+            this.SetParamSimple(map, prefix + "MD5", this.MD5);
         }
     }
 }

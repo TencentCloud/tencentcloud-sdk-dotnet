@@ -216,6 +216,15 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("SelfWorkflowDependency")]
         public string SelfWorkflowDependency{ get; set; }
 
+        /// <summary>
+        /// 补录时间顺序
+        /// NORMAL： 正常
+        /// ORDER ： 按照实例时间顺序执行
+        /// REVERSE： 实例数据时间逆序
+        /// </summary>
+        [JsonProperty("MakeDataTimeOrder")]
+        public string MakeDataTimeOrder{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -249,6 +258,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "CheckParentType", this.CheckParentType);
             this.SetParamSimple(map, prefix + "SameSelfWorkflowDependType", this.SameSelfWorkflowDependType);
             this.SetParamSimple(map, prefix + "SelfWorkflowDependency", this.SelfWorkflowDependency);
+            this.SetParamSimple(map, prefix + "MakeDataTimeOrder", this.MakeDataTimeOrder);
         }
     }
 }

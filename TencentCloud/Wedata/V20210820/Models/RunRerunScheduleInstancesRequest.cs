@@ -138,6 +138,48 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("AsyncMode")]
         public bool? AsyncMode{ get; set; }
 
+        /// <summary>
+        /// 是否检查上游任务： ALL（全部）、 MAKE_SCOPE（选中）、NONE （全部不检查）
+        /// </summary>
+        [JsonProperty("CheckParentType")]
+        public string CheckParentType{ get; set; }
+
+        /// <summary>
+        /// 任务原有自依赖配置 true（是）、false（否）
+        /// </summary>
+        [JsonProperty("SameSelfDependType")]
+        public bool? SameSelfDependType{ get; set; }
+
+        /// <summary>
+        /// 实例运行并发度
+        /// </summary>
+        [JsonProperty("ParallelNum")]
+        public long? ParallelNum{ get; set; }
+
+        /// <summary>
+        /// 任务原有自依赖配置 true（是）、false（否）
+        /// </summary>
+        [JsonProperty("SameSelfWorkflowDependType")]
+        public bool? SameSelfWorkflowDependType{ get; set; }
+
+        /// <summary>
+        /// 代表重新指定 的  是 或者 否  yes、 no
+        /// </summary>
+        [JsonProperty("SelfWorkflowDependency")]
+        public string SelfWorkflowDependency{ get; set; }
+
+        /// <summary>
+        /// 运行实例数据时间排序 0---正常  1--正序  2 – 逆序
+        /// </summary>
+        [JsonProperty("DataTimeOrder")]
+        public long? DataTimeOrder{ get; set; }
+
+        /// <summary>
+        /// 重跑参数
+        /// </summary>
+        [JsonProperty("ReDoParams")]
+        public string ReDoParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +205,13 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamObj(map, prefix + "RequestBaseInfo.", this.RequestBaseInfo);
             this.SetParamSimple(map, prefix + "IsCount", this.IsCount);
             this.SetParamSimple(map, prefix + "AsyncMode", this.AsyncMode);
+            this.SetParamSimple(map, prefix + "CheckParentType", this.CheckParentType);
+            this.SetParamSimple(map, prefix + "SameSelfDependType", this.SameSelfDependType);
+            this.SetParamSimple(map, prefix + "ParallelNum", this.ParallelNum);
+            this.SetParamSimple(map, prefix + "SameSelfWorkflowDependType", this.SameSelfWorkflowDependType);
+            this.SetParamSimple(map, prefix + "SelfWorkflowDependency", this.SelfWorkflowDependency);
+            this.SetParamSimple(map, prefix + "DataTimeOrder", this.DataTimeOrder);
+            this.SetParamSimple(map, prefix + "ReDoParams", this.ReDoParams);
         }
     }
 }

@@ -48,6 +48,15 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("WorkflowDesc")]
         public string WorkflowDesc{ get; set; }
 
+        /// <summary>
+        /// 工作流类型,取值示例
+        /// 
+        /// - cycle 周期工作流
+        /// - manual 手动工作流
+        /// </summary>
+        [JsonProperty("WorkflowType")]
+        public string WorkflowType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +67,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "WorkflowName", this.WorkflowName);
             this.SetParamSimple(map, prefix + "FolderId", this.FolderId);
             this.SetParamSimple(map, prefix + "WorkflowDesc", this.WorkflowDesc);
+            this.SetParamSimple(map, prefix + "WorkflowType", this.WorkflowType);
         }
     }
 }

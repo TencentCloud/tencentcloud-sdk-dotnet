@@ -72,6 +72,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("SmartOptimizerWritten")]
         public string SmartOptimizerWritten{ get; set; }
 
+        /// <summary>
+        /// 数据优化针对的表
+        /// </summary>
+        [JsonProperty("TableName")]
+        public string TableName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Incharge", this.Incharge);
             this.SetParamSimple(map, prefix + "DataOptimizationResource", this.DataOptimizationResource);
             this.SetParamSimple(map, prefix + "SmartOptimizerWritten", this.SmartOptimizerWritten);
+            this.SetParamSimple(map, prefix + "TableName", this.TableName);
         }
     }
 }

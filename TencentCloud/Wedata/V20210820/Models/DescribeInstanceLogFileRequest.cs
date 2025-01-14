@@ -78,6 +78,30 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ExecutionFileType")]
         public string ExecutionFileType{ get; set; }
 
+        /// <summary>
+        /// 生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用
+        /// </summary>
+        [JsonProperty("InstanceLifeDetailDtoList")]
+        public InstanceLifeDetailDto[] InstanceLifeDetailDtoList{ get; set; }
+
+        /// <summary>
+        /// 当前生命周期数
+        /// </summary>
+        [JsonProperty("CurrentLifeRound")]
+        public long? CurrentLifeRound{ get; set; }
+
+        /// <summary>
+        /// 当前生命周期重试次数
+        /// </summary>
+        [JsonProperty("Tries")]
+        public long? Tries{ get; set; }
+
+        /// <summary>
+        /// 动态获取日志信息标识
+        /// </summary>
+        [JsonProperty("Dynamic")]
+        public bool? Dynamic{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +117,10 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ExecutionJobId", this.ExecutionJobId);
             this.SetParamSimple(map, prefix + "LogLevelType", this.LogLevelType);
             this.SetParamSimple(map, prefix + "ExecutionFileType", this.ExecutionFileType);
+            this.SetParamArrayObj(map, prefix + "InstanceLifeDetailDtoList.", this.InstanceLifeDetailDtoList);
+            this.SetParamSimple(map, prefix + "CurrentLifeRound", this.CurrentLifeRound);
+            this.SetParamSimple(map, prefix + "Tries", this.Tries);
+            this.SetParamSimple(map, prefix + "Dynamic", this.Dynamic);
         }
     }
 }

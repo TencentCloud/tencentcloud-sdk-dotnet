@@ -32,6 +32,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string TaskId{ get; set; }
 
         /// <summary>
+        /// 任务名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskName")]
+        public string TaskName{ get; set; }
+
+        /// <summary>
         /// 数据时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -122,6 +129,19 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("InstanceRunType")]
         public ulong? InstanceRunType{ get; set; }
 
+        /// <summary>
+        /// 实例当前总生命周期数
+        /// </summary>
+        [JsonProperty("TotalLifeRound")]
+        public long? TotalLifeRound{ get; set; }
+
+        /// <summary>
+        /// 任务类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskType")]
+        public TaskTypeOpsDto TaskType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +149,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "TaskName", this.TaskName);
             this.SetParamSimple(map, prefix + "CurRunDate", this.CurRunDate);
             this.SetParamSimple(map, prefix + "LifeRound", this.LifeRound);
             this.SetParamSimple(map, prefix + "RunType", this.RunType);
@@ -142,6 +163,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "ScheduleRunType", this.ScheduleRunType);
             this.SetParamSimple(map, prefix + "ExecutionJobId", this.ExecutionJobId);
             this.SetParamSimple(map, prefix + "InstanceRunType", this.InstanceRunType);
+            this.SetParamSimple(map, prefix + "TotalLifeRound", this.TotalLifeRound);
+            this.SetParamObj(map, prefix + "TaskType.", this.TaskType);
         }
     }
 }

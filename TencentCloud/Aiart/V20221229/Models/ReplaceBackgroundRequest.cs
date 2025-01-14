@@ -34,6 +34,7 @@ namespace TencentCloud.Aiart.V20221229.Models
         /// <summary>
         /// 对新背景的文本描述。
         /// 最多支持256个 utf-8 字符，支持中、英文。
+        /// 如果 Prompt = "BackgroundTemplate" 代表启用背景模板，需要在参数 BackgroundTemplate 中指定一个背景名称。
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
@@ -51,6 +52,13 @@ namespace TencentCloud.Aiart.V20221229.Models
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
+
+        /// <summary>
+        /// 背景模板。
+        /// 仅当 Prompt = "BackgroundTemplate" 时生效，可支持的模板详见 [商品背景模板列表](https://cloud.tencent.com/document/product/1668/115391) ，请传入字段“背景名称”中的值。
+        /// </summary>
+        [JsonProperty("BackgroundTemplate")]
+        public string BackgroundTemplate{ get; set; }
 
         /// <summary>
         /// 商品 Mask 图 Url，要求背景透明，保留商品主体。
@@ -103,6 +111,7 @@ namespace TencentCloud.Aiart.V20221229.Models
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
             this.SetParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
             this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamSimple(map, prefix + "BackgroundTemplate", this.BackgroundTemplate);
             this.SetParamSimple(map, prefix + "MaskUrl", this.MaskUrl);
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
             this.SetParamSimple(map, prefix + "LogoAdd", this.LogoAdd);

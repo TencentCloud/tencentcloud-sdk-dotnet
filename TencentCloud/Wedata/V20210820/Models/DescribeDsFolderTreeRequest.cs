@@ -106,6 +106,15 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TaskNodeId")]
         public string TaskNodeId{ get; set; }
 
+        /// <summary>
+        /// 工作流类型, 使用场景: 任务复制,选择工作流. 取值范围
+        /// 
+        /// - cycle    周期工作流
+        /// - manual    手动工作流
+        /// </summary>
+        [JsonProperty("WorkflowType")]
+        public string WorkflowType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -125,6 +134,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "IncludeTaskFolder", this.IncludeTaskFolder);
             this.SetParamSimple(map, prefix + "NewFolderTreeMode", this.NewFolderTreeMode);
             this.SetParamSimple(map, prefix + "TaskNodeId", this.TaskNodeId);
+            this.SetParamSimple(map, prefix + "WorkflowType", this.WorkflowType);
         }
     }
 }

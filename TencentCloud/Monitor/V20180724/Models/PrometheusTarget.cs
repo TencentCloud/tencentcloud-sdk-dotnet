@@ -24,12 +24,29 @@ namespace TencentCloud.Monitor.V20180724.Models
     public class PrometheusTarget : AbstractModel
     {
         
+        /// <summary>
+        /// 抓取目标的URL
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
+
+        /// <summary>
+        /// target当前状态,当前支持
+        /// up = 健康
+        /// down = 不健康
+        /// unknown = 未知
+        /// </summary>
+        [JsonProperty("State")]
+        public string State{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "State", this.State);
         }
     }
 }

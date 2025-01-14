@@ -26,28 +26,24 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         
         /// <summary>
         /// 列：DatabaseName
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DatabaseName")]
         public string DatabaseName{ get; set; }
 
         /// <summary>
         /// 列：TableName
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableName")]
         public string TableName{ get; set; }
 
         /// <summary>
         /// 列：Size
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Size")]
         public string Size{ get; set; }
 
         /// <summary>
         /// 列：RemoteSize
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RemoteSize")]
         public string RemoteSize{ get; set; }
