@@ -1,8 +1,8 @@
 # 简介
 
-欢迎使用腾讯云开发者工具套件（ SDK ）3.0 ，SDK 3.0 是云 API 3.0 平台的配套工具。后续所有的云服务产品都会接入进来。新版 SDK 实现了统一化，具有各个语言版本的 SDK 使用方法相同，接口调用方式相同，统一的错误码和返回包格式这些优点。
+欢迎使用腾讯云开发者工具套件（SDK），此 SDK 是云 API 3.0 平台的配套开发工具。
 
-为方便 .NET 开发者调试和接入腾讯云产品 API ，这里向您介绍适用于 .NET 的腾讯云开发工具包，并提供首次使用开发工具包的简单示例。让您快速获取腾讯云 .NET SDK 并开始调用。 
+为方便 .NET 开发者调试和接入腾讯云产品 API ，这里向您介绍适用于 .NET 的腾讯云开发工具包，并提供首次使用开发工具包的简单示例。让您快速获取腾讯云 .NET SDK 并开始调用。
 
 # 依赖环境
 
@@ -19,7 +19,7 @@
 
 1. 通过命令行安装: `dotnet add package TencentCloudSDK` ，其他信息请到 [nuget](https://www.nuget.org/packages/TencentCloudSDK/) 获取。如果想单独安装某个产品，例如云服务器 CVM，则添加依赖 TencentCloudSDK.Cvm 即可。
 
-2. 通过 Visual Studio 的添加包 
+2. 通过 Visual Studio 的添加包
 
 ## 通过源码安装
 
@@ -54,7 +54,7 @@ namespace TencentCloudExamples
                 Credential cred = new Credential {
                     SecretId = Environment.GetEnvironmentVariable("TENCENTCLOUD_SECRET_ID"),
                     SecretKey = Environment.GetEnvironmentVariable("TENCENTCLOUD_SECRET_KEY")
-                };               
+                };
                 CvmClient client = new CvmClient(cred, "ap-guangzhou");
                 DescribeInstancesRequest req = new DescribeInstancesRequest();
                 DescribeInstancesResponse resp = client.DescribeInstancesSync(req);
@@ -95,7 +95,7 @@ namespace TencentCloudExamples
                 Credential cred = new Credential {
                     SecretId = Environment.GetEnvironmentVariable("TENCENTCLOUD_SECRET_ID"),
                     SecretKey = Environment.GetEnvironmentVariable("TENCENTCLOUD_SECRET_KEY")
-                };               
+                };
 
                 // 实例化一个client选项，可选的，没有特殊需求可以跳过
                 ClientProfile clientProfile = new ClientProfile();
@@ -127,7 +127,7 @@ namespace TencentCloudExamples
                 // 属性可能是基本类型，也可能引用了另一个数据结构。
                 // 推荐使用IDE进行开发，可以方便的跳转查阅各个接口和数据结构的文档说明。
                 DescribeInstancesRequest req = new DescribeInstancesRequest();
-              
+
                 // 基本类型的设置。
                 // 此接口允许设置返回的实例数量。此处指定为只返回一个。
                 // SDK采用的是指针风格指定参数，即使对于基本类型您也需要用指针来对参数赋值。
@@ -163,7 +163,6 @@ namespace TencentCloudExamples
                 // 也可以取出单个值。
                 // 您可以通过官网接口文档或跳转到response对象的定义处查看返回字段的定义
                 Console.WriteLine(resp.TotalCount);
-    
             }
             catch (Exception e)
             {
