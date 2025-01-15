@@ -87,7 +87,6 @@ namespace TencentCloud.Dc.V20180410.Models
 
         /// <summary>
         /// 敏捷上云建设完成的时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReadyTime")]
         public string ReadyTime{ get; set; }
@@ -148,6 +147,12 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("BUpdateBandwidth")]
         public bool? BUpdateBandwidth{ get; set; }
 
+        /// <summary>
+        /// 接入地域
+        /// </summary>
+        [JsonProperty("ArRegion")]
+        public string ArRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -173,6 +178,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "DirectConnectId", this.DirectConnectId);
             this.SetParamSimple(map, prefix + "CloudAttachServiceGatewaysSupport", this.CloudAttachServiceGatewaysSupport);
             this.SetParamSimple(map, prefix + "BUpdateBandwidth", this.BUpdateBandwidth);
+            this.SetParamSimple(map, prefix + "ArRegion", this.ArRegion);
         }
     }
 }

@@ -26,7 +26,6 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         
         /// <summary>
         /// 错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }

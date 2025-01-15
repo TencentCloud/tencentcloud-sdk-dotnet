@@ -51,6 +51,30 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("NeedMemberInfo")]
         public bool? NeedMemberInfo{ get; set; }
 
+        /// <summary>
+        /// 排序字段。支持：`ServiceTemplateId ` `CreatedTime` `UpdateTime`。注意：该字段没有默认值。
+        /// </summary>
+        [JsonProperty("OrderField")]
+        public string OrderField{ get; set; }
+
+        /// <summary>
+        /// 排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。
+        /// </summary>
+        [JsonProperty("OrderDirection")]
+        public string OrderDirection{ get; set; }
+
+        /// <summary>
+        /// 协议端口排序字段。支持：`Service ` `UpdateTime`。注意：该字段没有默认值。
+        /// </summary>
+        [JsonProperty("MemberOrderField")]
+        public string MemberOrderField{ get; set; }
+
+        /// <summary>
+        /// 协议端口排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。
+        /// </summary>
+        [JsonProperty("MemberOrderDirection")]
+        public string MemberOrderDirection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +85,10 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "NeedMemberInfo", this.NeedMemberInfo);
+            this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
+            this.SetParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
+            this.SetParamSimple(map, prefix + "MemberOrderField", this.MemberOrderField);
+            this.SetParamSimple(map, prefix + "MemberOrderDirection", this.MemberOrderDirection);
         }
     }
 }

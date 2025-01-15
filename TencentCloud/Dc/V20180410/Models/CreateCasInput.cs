@@ -60,6 +60,12 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("Remarks")]
         public string Remarks{ get; set; }
 
+        /// <summary>
+        /// 接入地域
+        /// </summary>
+        [JsonProperty("ArRegion")]
+        public string ArRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
             this.SetParamSimple(map, prefix + "Telephone", this.Telephone);
             this.SetParamSimple(map, prefix + "Remarks", this.Remarks);
+            this.SetParamSimple(map, prefix + "ArRegion", this.ArRegion);
         }
     }
 }

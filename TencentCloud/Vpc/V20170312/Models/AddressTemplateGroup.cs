@@ -49,6 +49,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string CreatedTime{ get; set; }
 
         /// <summary>
+        /// 最后更新时间。
+        /// </summary>
+        [JsonProperty("UpdatedTime")]
+        public string UpdatedTime{ get; set; }
+
+        /// <summary>
         /// IP地址模板实例。
         /// </summary>
         [JsonProperty("AddressTemplateSet")]
@@ -56,7 +62,6 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 标签键值对。	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }
@@ -71,6 +76,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "AddressTemplateGroupId", this.AddressTemplateGroupId);
             this.SetParamArraySimple(map, prefix + "AddressTemplateIdSet.", this.AddressTemplateIdSet);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
             this.SetParamArrayObj(map, prefix + "AddressTemplateSet.", this.AddressTemplateSet);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         }

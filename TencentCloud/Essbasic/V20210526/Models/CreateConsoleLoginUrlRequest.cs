@@ -28,7 +28,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容
         /// 此接口下面信息必填。
         /// <ul>
-        /// <li>渠道应用标识:  Agent.AppId</li>
+        /// <li>渠道应用标识:  <a href="https://qcloudimg.tencent-cloud.cn/raw/a71872de3d540d55451e3e73a2ad1a6e.png" target="_blank">Agent.AppId</a></li>
         /// <li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
         /// <li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId</li>
         /// </ul>注:

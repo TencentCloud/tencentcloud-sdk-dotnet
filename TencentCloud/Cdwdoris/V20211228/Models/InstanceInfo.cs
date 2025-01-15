@@ -26,14 +26,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         
         /// <summary>
         /// 集群实例ID, "cdw-xxxx" 字符串类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// 集群实例名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -43,84 +41,72 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// Init 创建中; Serving 运行中； 
         /// Deleted已销毁；Deleting 销毁中；
         /// Modify 集群变更中；
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// 版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
         /// 地域, ap-guangzhou
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// 可用区， ap-guangzhou-3
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
         /// 私有网络名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// 子网名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
         /// 付费类型，"hour", "prepay"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 过期时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
         /// 数据节点描述信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MasterSummary")]
         public NodesSummary MasterSummary{ get; set; }
 
         /// <summary>
         /// zookeeper节点描述信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CoreSummary")]
         public NodesSummary CoreSummary{ get; set; }
 
         /// <summary>
         /// 高可用，“true" "false"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HA")]
         public string HA{ get; set; }
@@ -130,147 +116,126 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// 0：非高可用
         /// 1：读高可用
         /// 2：读写高可用。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HaType")]
         public long? HaType{ get; set; }
 
         /// <summary>
         /// 访问地址，例如 "10.0.0.1:9000"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessInfo")]
         public string AccessInfo{ get; set; }
 
         /// <summary>
         /// 记录ID，数值型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
         /// regionId, 表示地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
         /// <summary>
         /// 可用区说明，例如 "广州二区"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneDesc")]
         public string ZoneDesc{ get; set; }
 
         /// <summary>
         /// 错误流程说明信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowMsg")]
         public string FlowMsg{ get; set; }
 
         /// <summary>
         /// 状态描述，例如“运行中”等
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
 
         /// <summary>
         /// 自动续费标记
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RenewFlag")]
         public bool? RenewFlag{ get; set; }
 
         /// <summary>
         /// 标签列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
         /// 监控信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Monitor")]
         public string Monitor{ get; set; }
 
         /// <summary>
         /// 是否开通日志
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HasClsTopic")]
         public bool? HasClsTopic{ get; set; }
 
         /// <summary>
         /// 日志主题ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClsTopicId")]
         public string ClsTopicId{ get; set; }
 
         /// <summary>
         /// 日志集ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClsLogSetId")]
         public string ClsLogSetId{ get; set; }
 
         /// <summary>
         /// 是否支持xml配置管理
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableXMLConfig")]
         public long? EnableXMLConfig{ get; set; }
 
         /// <summary>
         /// 区域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionDesc")]
         public string RegionDesc{ get; set; }
 
         /// <summary>
         /// 弹性网卡地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Eip")]
         public string Eip{ get; set; }
 
         /// <summary>
         /// 冷热分层系数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CosMoveFactor")]
         public long? CosMoveFactor{ get; set; }
 
         /// <summary>
         /// external/local/yunti
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Kind")]
         public string Kind{ get; set; }
 
         /// <summary>
         /// cos桶
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CosBucketName")]
         public string CosBucketName{ get; set; }
 
         /// <summary>
         /// cbs
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CanAttachCbs")]
         public bool? CanAttachCbs{ get; set; }
 
         /// <summary>
         /// 小版本
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BuildVersion")]
         public string BuildVersion{ get; set; }
@@ -278,7 +243,6 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// <summary>
         /// 组件信息
         /// 注：这里返回类型实际为map[string]struct类型，并非显示的string类型，可以参考“示例值”进行数据的解析。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Components")]
         public string Components{ get; set; }
@@ -293,98 +257,84 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
 
         /// <summary>
         /// 页面特性，用于前端屏蔽一些页面入口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Characteristic")]
         public string[] Characteristic{ get; set; }
 
         /// <summary>
         /// 超时时间 单位s
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RestartTimeout")]
         public string RestartTimeout{ get; set; }
 
         /// <summary>
         /// 内核优雅重启超时时间，如果为-1说明未设置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GraceShutdownWaitSeconds")]
         public string GraceShutdownWaitSeconds{ get; set; }
 
         /// <summary>
         /// 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CaseSensitive")]
         public long? CaseSensitive{ get; set; }
 
         /// <summary>
         /// 用户是否可以绑定安全组
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsWhiteSGs")]
         public bool? IsWhiteSGs{ get; set; }
 
         /// <summary>
         /// 已绑定的安全组信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BindSGs")]
         public string[] BindSGs{ get; set; }
 
         /// <summary>
         /// 是否为多可用区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableMultiZones")]
         public bool? EnableMultiZones{ get; set; }
 
         /// <summary>
         /// 用户可用区和子网信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserNetworkInfos")]
         public string UserNetworkInfos{ get; set; }
 
         /// <summary>
         /// 是否启用冷热分层。0：未开启 1：已开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableCoolDown")]
         public long? EnableCoolDown{ get; set; }
 
         /// <summary>
         /// 冷热分层使用COS桶
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CoolDownBucket")]
         public string CoolDownBucket{ get; set; }
 
         /// <summary>
         /// 实例扩展信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Details")]
         public InstanceDetail Details{ get; set; }
 
         /// <summary>
         /// 是否启用DLC 0:关闭 1:开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableDlc")]
         public long? EnableDlc{ get; set; }
 
         /// <summary>
         /// 账户类型 0:普通用户 1:CAM用户
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccountType")]
         public long? AccountType{ get; set; }
 
         /// <summary>
         /// 监控模式 0: 老监控 1：新监控
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MonitorMode")]
         public long? MonitorMode{ get; set; }

@@ -38,7 +38,6 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
 
         /// <summary>
         /// 云盘列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttachCBSSpec")]
         public DiskSpec[] AttachCBSSpec{ get; set; }

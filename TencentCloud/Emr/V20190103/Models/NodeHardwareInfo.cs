@@ -26,28 +26,24 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// 用户APPID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
         /// 序列号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SerialNo")]
         public string SerialNo{ get; set; }
 
         /// <summary>
         /// 机器实例ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrderNo")]
         public string OrderNo{ get; set; }
 
         /// <summary>
         /// master节点绑定外网IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WanIp")]
         public string WanIp{ get; set; }
@@ -55,182 +51,156 @@ namespace TencentCloud.Emr.V20190103.Models
         /// <summary>
         /// 节点类型。0:common节点；1:master节点
         /// ；2:core节点；3:task节点
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Flag")]
         public long? Flag{ get; set; }
 
         /// <summary>
         /// 节点规格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Spec")]
         public string Spec{ get; set; }
 
         /// <summary>
         /// 节点核数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CpuNum")]
         public long? CpuNum{ get; set; }
 
         /// <summary>
-        /// 节点内存
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 节点内存,单位b
         /// </summary>
         [JsonProperty("MemSize")]
         public long? MemSize{ get; set; }
 
         /// <summary>
-        /// 节点内存描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 节点内存描述，单位GB
         /// </summary>
         [JsonProperty("MemDesc")]
         public string MemDesc{ get; set; }
 
         /// <summary>
         /// 节点所在region
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
         /// <summary>
         /// 节点所在Zone
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
         /// 申请时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplyTime")]
         public string ApplyTime{ get; set; }
 
         /// <summary>
         /// 释放时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FreeTime")]
         public string FreeTime{ get; set; }
 
         /// <summary>
         /// 硬盘大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskSize")]
         public string DiskSize{ get; set; }
 
         /// <summary>
         /// 节点描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NameTag")]
         public string NameTag{ get; set; }
 
         /// <summary>
         /// 节点部署服务
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Services")]
         public string Services{ get; set; }
 
         /// <summary>
-        /// 磁盘类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 磁盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘
         /// </summary>
         [JsonProperty("StorageType")]
         public long? StorageType{ get; set; }
 
         /// <summary>
-        /// 系统盘大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 系统盘大小，单位GB
         /// </summary>
         [JsonProperty("RootSize")]
         public long? RootSize{ get; set; }
 
         /// <summary>
-        /// 付费类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 付费类型，0：按量计费；1：包年包月
         /// </summary>
         [JsonProperty("ChargeType")]
         public long? ChargeType{ get; set; }
 
         /// <summary>
         /// 数据库IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CdbIp")]
         public string CdbIp{ get; set; }
 
         /// <summary>
         /// 数据库端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CdbPort")]
         public long? CdbPort{ get; set; }
 
         /// <summary>
-        /// 硬盘容量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 硬盘容量,单位b
         /// </summary>
         [JsonProperty("HwDiskSize")]
         public long? HwDiskSize{ get; set; }
 
         /// <summary>
         /// 硬盘容量描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HwDiskSizeDesc")]
         public string HwDiskSizeDesc{ get; set; }
 
         /// <summary>
-        /// 内存容量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 内存容量，单位b
         /// </summary>
         [JsonProperty("HwMemSize")]
         public long? HwMemSize{ get; set; }
 
         /// <summary>
         /// 内存容量描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HwMemSizeDesc")]
         public string HwMemSizeDesc{ get; set; }
 
         /// <summary>
         /// 过期时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
         /// 节点资源ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EmrResourceId")]
         public string EmrResourceId{ get; set; }
 
         /// <summary>
         /// 续费标志
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsAutoRenew")]
         public long? IsAutoRenew{ get; set; }
 
         /// <summary>
         /// 设备标识
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceClass")]
         public string DeviceClass{ get; set; }
 
         /// <summary>
         /// 支持变配
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mutable")]
         public long? Mutable{ get; set; }
@@ -251,14 +221,12 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 内网IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
         /// 此节点是否可销毁，1可销毁，0不可销毁
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Destroyable")]
         public long? Destroyable{ get; set; }
@@ -272,49 +240,42 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoFlag")]
         public long? AutoFlag{ get; set; }
 
         /// <summary>
         /// 资源类型, host/pod
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HardwareResourceType")]
         public string HardwareResourceType{ get; set; }
 
         /// <summary>
         /// 是否浮动规格，1是，0否
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsDynamicSpec")]
         public long? IsDynamicSpec{ get; set; }
 
         /// <summary>
         /// 浮动规格值json字符串
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DynamicPodSpec")]
         public string DynamicPodSpec{ get; set; }
 
         /// <summary>
         /// 是否支持变更计费类型 1是，0否
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SupportModifyPayMode")]
         public long? SupportModifyPayMode{ get; set; }
 
         /// <summary>
-        /// 系统盘类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 系统盘类型，1 :本地盘 2 :云硬盘 3 : 本地SSD 4 : 云SSD 5 : 高效云盘 6 : 增强型SSD云硬盘 11 : 吞吐型云硬盘 12 : 极速型SSD云硬盘 13 : 通用型SSD云硬盘 14 : 大数据型云硬盘 15 : 高IO型云硬盘 16 : 远端SSD盘
         /// </summary>
         [JsonProperty("RootStorageType")]
         public long? RootStorageType{ get; set; }
 
         /// <summary>
         /// 可用区信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
@@ -328,80 +289,81 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 客户端
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Clients")]
         public string Clients{ get; set; }
 
         /// <summary>
         /// 系统当前时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentTime")]
         public string CurrentTime{ get; set; }
 
         /// <summary>
         /// 是否用于联邦 ,1是，0否
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsFederation")]
         public long? IsFederation{ get; set; }
 
         /// <summary>
         /// 设备名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
         /// <summary>
         /// 服务
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceClient")]
         public string ServiceClient{ get; set; }
 
         /// <summary>
         /// 该实例是否开启实例保护，true为开启 false为关闭
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DisableApiTermination")]
         public bool? DisableApiTermination{ get; set; }
 
         /// <summary>
         /// 0表示老计费，1表示新计费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TradeVersion")]
         public long? TradeVersion{ get; set; }
 
         /// <summary>
         /// 各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServicesStatus")]
         public string ServicesStatus{ get; set; }
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
         /// 共享集群id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SharedClusterId")]
         public string SharedClusterId{ get; set; }
 
         /// <summary>
         /// 共享集群id描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SharedClusterIdDesc")]
         public string SharedClusterIdDesc{ get; set; }
+
+        /// <summary>
+        /// 是否是定时销毁资源
+        /// </summary>
+        [JsonProperty("TimingResource")]
+        public bool? TimingResource{ get; set; }
+
+        /// <summary>
+        /// 资源类型（HardwareResourceType）为pod时，对应的TKE集群id
+        /// </summary>
+        [JsonProperty("TkeClusterId")]
+        public string TkeClusterId{ get; set; }
 
 
         /// <summary>
@@ -463,6 +425,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "SharedClusterId", this.SharedClusterId);
             this.SetParamSimple(map, prefix + "SharedClusterIdDesc", this.SharedClusterIdDesc);
+            this.SetParamSimple(map, prefix + "TimingResource", this.TimingResource);
+            this.SetParamSimple(map, prefix + "TkeClusterId", this.TkeClusterId);
         }
     }
 }

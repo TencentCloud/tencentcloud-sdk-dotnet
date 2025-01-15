@@ -149,6 +149,9 @@ namespace TencentCloud.Tiw.V20190919.Models
         /// 
         /// 12: 存在不兼容的多倍行距设置
         /// -- 自动处理方式： 不支持处理
+        /// 
+        /// 13: 存在带有特殊符号内容的datetime类型的a:fld标签元素
+        /// -- 自动处理方式： a:fld标签替换为普通文本
         /// </summary>
         [JsonProperty("AutoHandleUnsupportedElementTypes")]
         public long?[] AutoHandleUnsupportedElementTypes{ get; set; }

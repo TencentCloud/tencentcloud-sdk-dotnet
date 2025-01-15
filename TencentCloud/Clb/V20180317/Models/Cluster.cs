@@ -193,6 +193,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("IPVersion")]
         public string IPVersion{ get; set; }
 
+        /// <summary>
+        /// 标签信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tag")]
+        public TagInfo[] Tag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -224,6 +231,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "DisasterRecoveryType", this.DisasterRecoveryType);
             this.SetParamSimple(map, prefix + "Egress", this.Egress);
             this.SetParamSimple(map, prefix + "IPVersion", this.IPVersion);
+            this.SetParamArrayObj(map, prefix + "Tag.", this.Tag);
         }
     }
 }

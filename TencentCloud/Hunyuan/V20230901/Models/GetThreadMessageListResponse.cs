@@ -35,13 +35,15 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FirstID")]
+        [System.Obsolete]
         public string FirstID{ get; set; }
 
         /// <summary>
-        /// 最后一条消息 ID
+        /// 已废弃
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastID")]
+        [System.Obsolete]
         public long? LastID{ get; set; }
 
         /// <summary>
@@ -55,6 +57,18 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         /// </summary>
         [JsonProperty("Object")]
         public string Object{ get; set; }
+
+        /// <summary>
+        /// 第一条消息 ID
+        /// </summary>
+        [JsonProperty("FirstMsgID")]
+        public string FirstMsgID{ get; set; }
+
+        /// <summary>
+        /// 最后一条消息 ID
+        /// </summary>
+        [JsonProperty("LastMsgID")]
+        public string LastMsgID{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
@@ -73,6 +87,8 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamSimple(map, prefix + "LastID", this.LastID);
             this.SetParamSimple(map, prefix + "HasMore", this.HasMore);
             this.SetParamSimple(map, prefix + "Object", this.Object);
+            this.SetParamSimple(map, prefix + "FirstMsgID", this.FirstMsgID);
+            this.SetParamSimple(map, prefix + "LastMsgID", this.LastMsgID);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

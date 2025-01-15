@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string AddressTemplateId{ get; set; }
 
         /// <summary>
-        /// IP模板名称。
+        /// IP模板名称，废弃字段。
         /// </summary>
         [JsonProperty("AddressTemplateName")]
         public string AddressTemplateName{ get; set; }
@@ -48,6 +48,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("To")]
         public string To{ get; set; }
 
+        /// <summary>
+        /// 备注。
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// 最后更新时间。
+        /// </summary>
+        [JsonProperty("UpdatedTime")]
+        public string UpdatedTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "AddressTemplateName", this.AddressTemplateName);
             this.SetParamSimple(map, prefix + "From", this.From);
             this.SetParamSimple(map, prefix + "To", this.To);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
         }
     }
 }

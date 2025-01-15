@@ -59,6 +59,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("Index")]
         public SmartOptimizerIndexPolicy Index{ get; set; }
 
+        /// <summary>
+        /// SmartOptimizerChangeTablePolicy
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ChangeTable")]
+        public SmartOptimizerChangeTablePolicy ChangeTable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamObj(map, prefix + "Written.", this.Written);
             this.SetParamObj(map, prefix + "Lifecycle.", this.Lifecycle);
             this.SetParamObj(map, prefix + "Index.", this.Index);
+            this.SetParamObj(map, prefix + "ChangeTable.", this.ChangeTable);
         }
     }
 }

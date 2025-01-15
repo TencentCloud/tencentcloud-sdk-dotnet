@@ -68,49 +68,42 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
 
         /// <summary>
         /// 挂载云盘信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttachCBSSpec")]
         public AttachCBSSpec AttachCBSSpec{ get; set; }
 
         /// <summary>
         /// 子产品名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubProductType")]
         public string SubProductType{ get; set; }
 
         /// <summary>
         /// 规格核数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpecCore")]
         public long? SpecCore{ get; set; }
 
         /// <summary>
         /// 规格内存
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpecMemory")]
         public long? SpecMemory{ get; set; }
 
         /// <summary>
         /// 磁盘大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskCount")]
         public long? DiskCount{ get; set; }
 
         /// <summary>
         /// 是否加密
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Encrypt")]
         public long? Encrypt{ get; set; }
 
         /// <summary>
         /// 最大磁盘
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxDiskSize")]
         public long? MaxDiskSize{ get; set; }

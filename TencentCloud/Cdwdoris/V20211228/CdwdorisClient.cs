@@ -28,7 +28,7 @@ namespace TencentCloud.Cdwdoris.V20211228
 
        private const string endpoint = "cdwdoris.tencentcloudapi.com";
        private const string version = "2021-12-28";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1165";
 
         /// <summary>
         /// Client constructor.
@@ -768,7 +768,7 @@ namespace TencentCloud.Cdwdoris.V20211228
         }
 
         /// <summary>
-        /// 购买页拉取集群的数据节点和zookeeper节点的规格列表
+        /// 拉取集群节点规格列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSpecRequest"/></param>
         /// <returns><see cref="DescribeSpecResponse"/></returns>
@@ -778,7 +778,7 @@ namespace TencentCloud.Cdwdoris.V20211228
         }
 
         /// <summary>
-        /// 购买页拉取集群的数据节点和zookeeper节点的规格列表
+        /// 拉取集群节点规格列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSpecRequest"/></param>
         /// <returns><see cref="DescribeSpecResponse"/></returns>

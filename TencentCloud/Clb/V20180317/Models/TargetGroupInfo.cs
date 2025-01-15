@@ -68,6 +68,40 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("AssociatedRule")]
         public AssociationItem[] AssociatedRule{ get; set; }
 
+        /// <summary>
+        /// 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TargetGroupType")]
+        public string TargetGroupType{ get; set; }
+
+        /// <summary>
+        /// 目标组已关联的规则数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AssociatedRuleCount")]
+        public long? AssociatedRuleCount{ get; set; }
+
+        /// <summary>
+        /// 目标组内的实例数量。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RegisteredInstancesCount")]
+        public long? RegisteredInstancesCount{ get; set; }
+
+        /// <summary>
+        /// 标签。
+        /// </summary>
+        [JsonProperty("Tag")]
+        public TagInfo[] Tag{ get; set; }
+
+        /// <summary>
+        /// 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Weight")]
+        public ulong? Weight{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +115,11 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
             this.SetParamArrayObj(map, prefix + "AssociatedRule.", this.AssociatedRule);
+            this.SetParamSimple(map, prefix + "TargetGroupType", this.TargetGroupType);
+            this.SetParamSimple(map, prefix + "AssociatedRuleCount", this.AssociatedRuleCount);
+            this.SetParamSimple(map, prefix + "RegisteredInstancesCount", this.RegisteredInstancesCount);
+            this.SetParamArrayObj(map, prefix + "Tag.", this.Tag);
+            this.SetParamSimple(map, prefix + "Weight", this.Weight);
         }
     }
 }

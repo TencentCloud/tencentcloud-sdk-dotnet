@@ -101,6 +101,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("SmartPolicy")]
         public SmartPolicy SmartPolicy{ get; set; }
 
+        /// <summary>
+        /// T-ICEBERG表的主键
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PrimaryKeys")]
+        public string[] PrimaryKeys{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +125,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamObj(map, prefix + "GovernPolicy.", this.GovernPolicy);
             this.SetParamSimple(map, prefix + "DbGovernPolicyIsDisable", this.DbGovernPolicyIsDisable);
             this.SetParamObj(map, prefix + "SmartPolicy.", this.SmartPolicy);
+            this.SetParamArraySimple(map, prefix + "PrimaryKeys.", this.PrimaryKeys);
         }
     }
 }

@@ -25,7 +25,9 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
+        /// 本合同的发起人，<a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
+        /// 
+        /// 注：支持填入集团子公司经办人 userId代发合同。
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }

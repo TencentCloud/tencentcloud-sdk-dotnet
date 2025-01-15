@@ -103,6 +103,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Address{ get; set; }
 
         /// <summary>
+        /// 背面号码
+        /// </summary>
+        [JsonProperty("LaserID")]
+        public string LaserID{ get; set; }
+
+        /// <summary>
         /// 证件人像照片抠取
         /// </summary>
         [JsonProperty("PortraitImage")]
@@ -159,6 +165,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Religion", this.Religion);
             this.SetParamSimple(map, prefix + "SerialNumber", this.SerialNumber);
             this.SetParamSimple(map, prefix + "Address", this.Address);
+            this.SetParamSimple(map, prefix + "LaserID", this.LaserID);
             this.SetParamSimple(map, prefix + "PortraitImage", this.PortraitImage);
             this.SetParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
             this.SetParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);

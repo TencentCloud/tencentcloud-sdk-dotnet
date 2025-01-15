@@ -26,7 +26,6 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         
         /// <summary>
         /// 告警策略是否可用	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableAlarmStrategy")]
         public bool? EnableAlarmStrategy{ get; set; }

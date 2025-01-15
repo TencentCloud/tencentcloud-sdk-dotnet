@@ -414,6 +414,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Exclusive")]
         public ulong? Exclusive{ get; set; }
 
+        /// <summary>
+        /// 已绑定的后端服务数量。
+        /// </summary>
+        [JsonProperty("TargetCount")]
+        public ulong? TargetCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -476,6 +482,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
             this.SetParamSimple(map, prefix + "Egress", this.Egress);
             this.SetParamSimple(map, prefix + "Exclusive", this.Exclusive);
+            this.SetParamSimple(map, prefix + "TargetCount", this.TargetCount);
         }
     }
 }

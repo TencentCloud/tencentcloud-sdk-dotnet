@@ -107,6 +107,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("HeatValue")]
         public long? HeatValue{ get; set; }
 
+        /// <summary>
+        /// InputFormat的缩写
+        /// </summary>
+        [JsonProperty("InputFormatShort")]
+        public string InputFormatShort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -125,6 +131,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "RecordCount", this.RecordCount);
             this.SetParamSimple(map, prefix + "MapMaterializedViewName", this.MapMaterializedViewName);
             this.SetParamSimple(map, prefix + "HeatValue", this.HeatValue);
+            this.SetParamSimple(map, prefix + "InputFormatShort", this.InputFormatShort);
         }
     }
 }
