@@ -25,13 +25,13 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// field数组
+        /// field数组，用于指标的查询结果
         /// </summary>
         [JsonProperty("Fields")]
         public ApmField[] Fields{ get; set; }
 
         /// <summary>
-        /// tag数组
+        /// tag数组，用于区分 Groupby 的对象
         /// </summary>
         [JsonProperty("Tags")]
         public ApmTag[] Tags{ get; set; }

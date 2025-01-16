@@ -25,13 +25,13 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 需要排序的字段
+        /// 需要排序的字段，现支持 startTIme, endTime, duration
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// 顺序排序/倒序排序
+        /// asc 顺序排序 / desc 倒序排序
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

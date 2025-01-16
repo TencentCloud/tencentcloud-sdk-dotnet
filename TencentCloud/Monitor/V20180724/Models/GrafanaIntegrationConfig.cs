@@ -49,7 +49,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Grafana 跳转地址
+        /// Grafana 跳转地址(目前未使用，默认为空)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GrafanaURL")]

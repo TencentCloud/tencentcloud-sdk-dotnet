@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1165</VersionPrefix>
+    <VersionPrefix>3.0.1166</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -450,6 +450,8 @@
     <Compile Include="V20210820\Models\DescribeTaskRunHistoryResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTaskScriptRequest.cs" />
     <Compile Include="V20210820\Models\DescribeTaskScriptResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeTaskTableMetricOverviewRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeTaskTableMetricOverviewResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTemplateDimCountRequest.cs" />
     <Compile Include="V20210820\Models\DescribeTemplateDimCountResponse.cs" />
     <Compile Include="V20210820\Models\DescribeThirdTaskRunLogRequest.cs" />
@@ -616,6 +618,7 @@
     <Compile Include="V20210820\Models\OpsTaskLinkInfoDto.cs" />
     <Compile Include="V20210820\Models\OrderField.cs" />
     <Compile Include="V20210820\Models\OrderFieldOptional.cs" />
+    <Compile Include="V20210820\Models\OrderFields.cs" />
     <Compile Include="V20210820\Models\OrganizationalFunction.cs" />
     <Compile Include="V20210820\Models\Pair.cs" />
     <Compile Include="V20210820\Models\PairDto.cs" />
@@ -757,6 +760,7 @@
     <Compile Include="V20210820\Models\TaskOpsDto.cs" />
     <Compile Include="V20210820\Models\TaskScriptContent.cs" />
     <Compile Include="V20210820\Models\TaskSubmitPreCheckDetailInfo.cs" />
+    <Compile Include="V20210820\Models\TaskTableMetricInfo.cs" />
     <Compile Include="V20210820\Models\TaskTag.cs" />
     <Compile Include="V20210820\Models\TaskTypeCnt.cs" />
     <Compile Include="V20210820\Models\TaskTypeMap.cs" />

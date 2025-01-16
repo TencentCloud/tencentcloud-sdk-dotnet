@@ -26,35 +26,30 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         
         /// <summary>
         /// 资源组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WorkloadGroupName")]
         public string WorkloadGroupName{ get; set; }
 
         /// <summary>
         /// CPU权重
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CpuShare")]
         public long? CpuShare{ get; set; }
 
         /// <summary>
         /// 内存限制，所有资源组的内存限制值之和应该小于等于100
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemoryLimit")]
         public long? MemoryLimit{ get; set; }
 
         /// <summary>
         /// 是否允许超配分配
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableMemoryOverCommit")]
         public bool? EnableMemoryOverCommit{ get; set; }
 
         /// <summary>
         /// cpu硬限制
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CpuHardLimit")]
         public string CpuHardLimit{ get; set; }

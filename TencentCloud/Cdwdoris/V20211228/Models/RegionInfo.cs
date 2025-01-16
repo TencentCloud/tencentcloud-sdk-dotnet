@@ -44,7 +44,6 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
 
         /// <summary>
         /// 地域下所有可用区列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zones")]
         public ZoneInfo[] Zones{ get; set; }
@@ -57,14 +56,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
 
         /// <summary>
         /// 0代表是国际站 1代表不是
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsInternationalSite")]
         public ulong? IsInternationalSite{ get; set; }
 
         /// <summary>
         /// 桶
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }

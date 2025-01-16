@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1165";
+       private const string sdkVersion = "SDK_NET_3.0.1166";
 
         /// <summary>
         /// Client constructor.
@@ -3584,6 +3584,27 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeTaskScriptResponse DescribeTaskScriptSync(DescribeTaskScriptRequest req)
         {
             return InternalRequestAsync<DescribeTaskScriptResponse>(req, "DescribeTaskScript")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询实时任务表粒度指标概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskTableMetricOverviewRequest"/></param>
+        /// <returns><see cref="DescribeTaskTableMetricOverviewResponse"/></returns>
+        public Task<DescribeTaskTableMetricOverviewResponse> DescribeTaskTableMetricOverview(DescribeTaskTableMetricOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeTaskTableMetricOverviewResponse>(req, "DescribeTaskTableMetricOverview");
+        }
+
+        /// <summary>
+        /// 查询实时任务表粒度指标概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskTableMetricOverviewRequest"/></param>
+        /// <returns><see cref="DescribeTaskTableMetricOverviewResponse"/></returns>
+        public DescribeTaskTableMetricOverviewResponse DescribeTaskTableMetricOverviewSync(DescribeTaskTableMetricOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeTaskTableMetricOverviewResponse>(req, "DescribeTaskTableMetricOverview")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

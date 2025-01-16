@@ -31,9 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 指定安全 IP 组 ID。
-        /// <li>提供该参数时，仅查询指定 ID 的安全 IP 组配置；</li>
-        /// <li>不传递参数时，返回站点下所有安全 IP 组信息。</li>
+        /// 指定安全 IP 组 ID。 <li>提供该参数时，仅查询指定 ID 的安全 IP 组配置；</li> <li>不传递参数时，返回站点下所有安全 IP 组信息。</li>
         /// </summary>
         [JsonProperty("GroupIds")]
         public long?[] GroupIds{ get; set; }

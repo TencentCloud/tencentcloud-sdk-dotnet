@@ -35,7 +35,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Codec{ get; set; }
 
         /// <summary>
-        /// 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+        /// 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
         /// 当取值为 0 或不填时，表示自动选择最佳视频码率。
         /// </summary>
         [JsonProperty("Bitrate")]

@@ -28,7 +28,7 @@ namespace TencentCloud.Kms.V20190118
 
        private const string endpoint = "kms.tencentcloudapi.com";
        private const string version = "2019-01-18";
-       private const string sdkVersion = "SDK_NET_3.0.1165";
+       private const string sdkVersion = "SDK_NET_3.0.1166";
 
         /// <summary>
         /// Client constructor.

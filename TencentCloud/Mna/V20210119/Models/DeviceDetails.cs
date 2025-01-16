@@ -32,28 +32,24 @@ namespace TencentCloud.Mna.V20210119.Models
 
         /// <summary>
         /// 设备网络信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceNetInfo")]
         public DeviceNetInfo[] DeviceNetInfo{ get; set; }
 
         /// <summary>
         /// 聚合服务器地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GatewaySite")]
         public string GatewaySite{ get; set; }
 
         /// <summary>
         /// 业务下行速率
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BusinessDownRate")]
         public float? BusinessDownRate{ get; set; }
 
         /// <summary>
         /// 业务上行速率
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BusinessUpRate")]
         public float? BusinessUpRate{ get; set; }

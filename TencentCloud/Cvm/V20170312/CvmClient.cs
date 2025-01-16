@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312
 
        private const string endpoint = "cvm.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1165";
+       private const string sdkVersion = "SDK_NET_3.0.1166";
 
         /// <summary>
         /// Client constructor.
@@ -1856,6 +1856,29 @@ namespace TencentCloud.Cvm.V20170312
         public ModifyInstancesChargeTypeResponse ModifyInstancesChargeTypeSync(ModifyInstancesChargeTypeRequest req)
         {
             return InternalRequestAsync<ModifyInstancesChargeTypeResponse>(req, "ModifyInstancesChargeType")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 (ModifyInstancesDisasterRecoverGroup) 用于调整实例所在置放群组。
+        /// * 目前只支持基础网络或私有网络实例。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancesDisasterRecoverGroupRequest"/></param>
+        /// <returns><see cref="ModifyInstancesDisasterRecoverGroupResponse"/></returns>
+        public Task<ModifyInstancesDisasterRecoverGroupResponse> ModifyInstancesDisasterRecoverGroup(ModifyInstancesDisasterRecoverGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyInstancesDisasterRecoverGroupResponse>(req, "ModifyInstancesDisasterRecoverGroup");
+        }
+
+        /// <summary>
+        /// 本接口 (ModifyInstancesDisasterRecoverGroup) 用于调整实例所在置放群组。
+        /// * 目前只支持基础网络或私有网络实例。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancesDisasterRecoverGroupRequest"/></param>
+        /// <returns><see cref="ModifyInstancesDisasterRecoverGroupResponse"/></returns>
+        public ModifyInstancesDisasterRecoverGroupResponse ModifyInstancesDisasterRecoverGroupSync(ModifyInstancesDisasterRecoverGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyInstancesDisasterRecoverGroupResponse>(req, "ModifyInstancesDisasterRecoverGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

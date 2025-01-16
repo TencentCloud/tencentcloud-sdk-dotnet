@@ -25,16 +25,22 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 过滤条件
-        /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
-
-        /// <summary>
         /// 指标列表
         /// </summary>
         [JsonProperty("Metrics")]
         public QueryMetricItem[] Metrics{ get; set; }
+
+        /// <summary>
+        /// 业务系统 ID
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 过滤条件
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
 
         /// <summary>
         /// 聚合维度
@@ -43,16 +49,25 @@ namespace TencentCloud.Apm.V20210622.Models
         public string[] GroupBy{ get; set; }
 
         /// <summary>
-        /// 排序
+        /// 开始时间（单位：秒）
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public ulong? StartTime{ get; set; }
+
+        /// <summary>
+        /// 结束时间（单位：秒）
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public ulong? EndTime{ get; set; }
+
+        /// <summary>
+        /// 排序方式
+        /// Value 填写：
+        /// - asc：对查询指标进行升序排序
+        /// - desc：对查询指标进行降序排序
         /// </summary>
         [JsonProperty("OrderBy")]
         public OrderBy OrderBy{ get; set; }
-
-        /// <summary>
-        /// 业务系统ID
-        /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
 
         /// <summary>
         /// 每页大小
@@ -61,22 +76,10 @@ namespace TencentCloud.Apm.V20210622.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 开始时间
-        /// </summary>
-        [JsonProperty("StartTime")]
-        public ulong? StartTime{ get; set; }
-
-        /// <summary>
         /// 分页起始点
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
-
-        /// <summary>
-        /// 结束时间
-        /// </summary>
-        [JsonProperty("EndTime")]
-        public ulong? EndTime{ get; set; }
 
 
         /// <summary>
@@ -84,15 +87,15 @@ namespace TencentCloud.Apm.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArrayObj(map, prefix + "Metrics.", this.Metrics);
-            this.SetParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
-            this.SetParamObj(map, prefix + "OrderBy.", this.OrderBy);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamObj(map, prefix + "OrderBy.", this.OrderBy);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

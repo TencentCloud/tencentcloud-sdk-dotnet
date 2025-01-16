@@ -38,8 +38,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string Question{ get; set; }
 
         /// <summary>
-        /// 拒答问题来源的数据源唯一id，取值1，2
-        /// 
+        /// 拒答问题来源的数据源唯一id， - 拒答来源于不满意回复  2 - 拒答来源于手动添加
         /// </summary>
         [JsonProperty("BusinessSource")]
         public ulong? BusinessSource{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Keewidb.V20220308
 
        private const string endpoint = "keewidb.tencentcloudapi.com";
        private const string version = "2022-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1165";
+       private const string sdkVersion = "SDK_NET_3.0.1166";
 
         /// <summary>
         /// Client constructor.

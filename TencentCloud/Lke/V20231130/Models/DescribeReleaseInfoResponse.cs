@@ -31,13 +31,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public string LastTime{ get; set; }
 
         /// <summary>
-        /// 发布状态
+        /// 发布状态 ， 1-待发布 , 2-发布中 , 3-发布成功 , 4-发布失败 , 5-审核中 , 6-审核成功 , 7-审核失败 , 8-发布成功回调处理中 , 9-发布暂停 , 10-申诉审核中 , 11-申诉审核通过 , 12-申诉审核不通过
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 是否编辑过
+        /// 是否编辑过, 当为true的时候表示可以发布
         /// </summary>
         [JsonProperty("IsUpdated")]
         public bool? IsUpdated{ get; set; }

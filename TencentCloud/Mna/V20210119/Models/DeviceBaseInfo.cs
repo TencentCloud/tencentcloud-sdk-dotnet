@@ -74,35 +74,30 @@ namespace TencentCloud.Mna.V20210119.Models
 
         /// <summary>
         /// 设备分组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
         /// 设备分组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
         /// 设备无流量包处理方式，0: 按量付费，1: 截断加速
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowTrunc")]
         public long? FlowTrunc{ get; set; }
 
         /// <summary>
         /// 设备sn
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Sn")]
         public string Sn{ get; set; }
 
         /// <summary>
         /// 厂商
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vendor")]
         public string Vendor{ get; set; }

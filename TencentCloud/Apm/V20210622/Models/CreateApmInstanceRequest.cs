@@ -37,31 +37,31 @@ namespace TencentCloud.Apm.V20210622.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Trace 数据保存时长，单位为天默认存储为3天
+        /// Trace 数据保存时长（单位：天，默认存储时长为3天）
         /// </summary>
         [JsonProperty("TraceDuration")]
         public long? TraceDuration{ get; set; }
 
         /// <summary>
-        /// 标签列表
+        /// 业务系统 Tag 列表
         /// </summary>
         [JsonProperty("Tags")]
         public ApmTag[] Tags{ get; set; }
 
         /// <summary>
-        /// 业务系统上报额度值，默认赋值为0表示不限制上报额度
+        /// 业务系统上报额度值，默认赋值为0表示不限制上报额度，已废弃
         /// </summary>
         [JsonProperty("SpanDailyCounters")]
         public ulong? SpanDailyCounters{ get; set; }
 
         /// <summary>
-        /// 业务系统的计费模式
+        /// 业务系统的计费模式（0=按量付费，1=预付费）
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// （0=付费版；1=tsf 受限免费版；2=免费版）
+        /// 是否为免费版业务系统（0=付费版；1=TSF 受限免费版；2=免费版）
         /// </summary>
         [JsonProperty("Free")]
         public long? Free{ get; set; }

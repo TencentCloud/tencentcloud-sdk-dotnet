@@ -26,21 +26,18 @@ namespace TencentCloud.Mna.V20210119.Models
         
         /// <summary>
         /// 流量包的告警阈值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlarmValue")]
         public long? AlarmValue{ get; set; }
 
         /// <summary>
         /// 告警通知回调url
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NotifyUrl")]
         public string NotifyUrl{ get; set; }
 
         /// <summary>
         /// 告警通知回调key
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CallbackKey")]
         public string CallbackKey{ get; set; }

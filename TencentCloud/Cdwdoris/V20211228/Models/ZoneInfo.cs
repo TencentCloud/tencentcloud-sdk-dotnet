@@ -44,14 +44,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
 
         /// <summary>
         /// Encryptid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Encrypt")]
         public long? Encrypt{ get; set; }
 
         /// <summary>
         /// 是否为主力园区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Main")]
         public bool? Main{ get; set; }

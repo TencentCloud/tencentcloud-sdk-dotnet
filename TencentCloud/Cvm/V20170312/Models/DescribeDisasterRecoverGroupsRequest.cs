@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 分散置放群组ID列表。每次请求允许操作的分散置放群组数量上限是100。
+        /// 分散置放群组ID列表。每次请求允许操作的分散置放群组数量上限是10。
         /// </summary>
         [JsonProperty("DisasterRecoverGroupIds")]
         public string[] DisasterRecoverGroupIds{ get; set; }

@@ -25,58 +25,16 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 存储使用量( MB )
-        /// </summary>
-        [JsonProperty("AmountOfUsedStorage")]
-        public float? AmountOfUsedStorage{ get; set; }
-
-        /// <summary>
-        /// 业务系统名
-        /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// 业务系统所属 Tag 列表
-        /// </summary>
-        [JsonProperty("Tags")]
-        public ApmTag[] Tags{ get; set; }
-
-        /// <summary>
         /// 业务系统 ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 创建人 Uin
+        /// 业务系统名
         /// </summary>
-        [JsonProperty("CreateUin")]
-        public string CreateUin{ get; set; }
-
-        /// <summary>
-        /// 该业务系统已上报的服务端应用数量
-        /// </summary>
-        [JsonProperty("ServiceCount")]
-        public long? ServiceCount{ get; set; }
-
-        /// <summary>
-        /// 日均上报 Span 数
-        /// </summary>
-        [JsonProperty("CountOfReportSpanPerDay")]
-        public long? CountOfReportSpanPerDay{ get; set; }
-
-        /// <summary>
-        /// AppID 信息
-        /// </summary>
-        [JsonProperty("AppId")]
-        public long? AppId{ get; set; }
-
-        /// <summary>
-        /// Trace 数据保存时长
-        /// </summary>
-        [JsonProperty("TraceDuration")]
-        public long? TraceDuration{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
         /// 业务系统描述信息
@@ -97,37 +55,79 @@ namespace TencentCloud.Apm.V20210622.Models
         public string Region{ get; set; }
 
         /// <summary>
+        /// 业务系统 Tag 列表
+        /// </summary>
+        [JsonProperty("Tags")]
+        public ApmTag[] Tags{ get; set; }
+
+        /// <summary>
+        /// AppID 信息
+        /// </summary>
+        [JsonProperty("AppId")]
+        public long? AppId{ get; set; }
+
+        /// <summary>
+        /// 创建人 Uin
+        /// </summary>
+        [JsonProperty("CreateUin")]
+        public string CreateUin{ get; set; }
+
+        /// <summary>
+        /// 存储使用量(单位：MB)
+        /// </summary>
+        [JsonProperty("AmountOfUsedStorage")]
+        public float? AmountOfUsedStorage{ get; set; }
+
+        /// <summary>
+        /// 该业务系统服务端应用数量
+        /// </summary>
+        [JsonProperty("ServiceCount")]
+        public long? ServiceCount{ get; set; }
+
+        /// <summary>
+        /// 日均上报 Span 数
+        /// </summary>
+        [JsonProperty("CountOfReportSpanPerDay")]
+        public long? CountOfReportSpanPerDay{ get; set; }
+
+        /// <summary>
+        /// Trace 数据保存时长（单位：天）
+        /// </summary>
+        [JsonProperty("TraceDuration")]
+        public long? TraceDuration{ get; set; }
+
+        /// <summary>
         /// 业务系统上报额度
         /// </summary>
         [JsonProperty("SpanDailyCounters")]
         public long? SpanDailyCounters{ get; set; }
 
         /// <summary>
-        /// 业务系统是否开通计费
+        /// 业务系统是否已开通计费（0=未开通，1=已开通）
         /// </summary>
         [JsonProperty("BillingInstance")]
         public long? BillingInstance{ get; set; }
 
         /// <summary>
-        /// 错误率阈值
+        /// 错误警示线（单位：%）
         /// </summary>
         [JsonProperty("ErrRateThreshold")]
         public long? ErrRateThreshold{ get; set; }
 
         /// <summary>
-        /// 采样率阈值
+        /// 采样率（单位：%）
         /// </summary>
         [JsonProperty("SampleRate")]
         public long? SampleRate{ get; set; }
 
         /// <summary>
-        /// 是否开启错误采样 0  关 1 开
+        /// 是否开启错误采样（0=关, 1=开）
         /// </summary>
         [JsonProperty("ErrorSample")]
         public long? ErrorSample{ get; set; }
 
         /// <summary>
-        /// 慢调用保存阈值
+        /// 采样慢调用保存阈值（单位：ms）
         /// </summary>
         [JsonProperty("SlowRequestSavedThreshold")]
         public long? SlowRequestSavedThreshold{ get; set; }
@@ -139,43 +139,43 @@ namespace TencentCloud.Apm.V20210622.Models
         public string LogRegion{ get; set; }
 
         /// <summary>
-        /// 日志来源
+        /// 日志源
         /// </summary>
         [JsonProperty("LogSource")]
         public string LogSource{ get; set; }
 
         /// <summary>
-        /// 日志功能开关 0 关 | 1 开
+        /// 日志功能开关（0=关， 1=开）
         /// </summary>
         [JsonProperty("IsRelatedLog")]
         public long? IsRelatedLog{ get; set; }
 
         /// <summary>
-        /// 日志主题ID
+        /// 日志主题 ID
         /// </summary>
         [JsonProperty("LogTopicID")]
         public string LogTopicID{ get; set; }
 
         /// <summary>
-        /// 该实例已上报的客户端应用数量
+        /// 该业务系统客户端应用数量
         /// </summary>
         [JsonProperty("ClientCount")]
         public long? ClientCount{ get; set; }
 
         /// <summary>
-        /// 该实例已上报的总应用数量
+        /// 该业务系统最近2天活跃应用数量
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// CLS 日志集 | ES 集群ID
+        /// CLS 日志集
         /// </summary>
         [JsonProperty("LogSet")]
         public string LogSet{ get; set; }
 
         /// <summary>
-        /// Metric 数据保存时长
+        /// Metric 数据保存时长（单位：天）
         /// </summary>
         [JsonProperty("MetricDuration")]
         public long? MetricDuration{ get; set; }
@@ -187,9 +187,7 @@ namespace TencentCloud.Apm.V20210622.Models
         public string[] CustomShowTags{ get; set; }
 
         /// <summary>
-        /// 业务系统计费模式
-        /// 1为预付费
-        /// 0为按量付费
+        /// 业务系统计费模式（1为预付费，0为按量付费）
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
@@ -201,7 +199,7 @@ namespace TencentCloud.Apm.V20210622.Models
         public bool? PayModeEffective{ get; set; }
 
         /// <summary>
-        /// 响应时间满意阈值
+        /// 响应时间警示线（单位：ms）
         /// </summary>
         [JsonProperty("ResponseDurationWarningThreshold")]
         public long? ResponseDurationWarningThreshold{ get; set; }
@@ -213,31 +211,31 @@ namespace TencentCloud.Apm.V20210622.Models
         public long? Free{ get; set; }
 
         /// <summary>
-        /// 是否 tsf 默认业务系统（0=否，1-是）
+        /// 是否 TSF 默认业务系统（0=否，1=是）
         /// </summary>
         [JsonProperty("DefaultTSF")]
         public long? DefaultTSF{ get; set; }
 
         /// <summary>
-        /// 是否关联 Dashboard： 0 关 1 开
+        /// 是否关联 Dashboard（0=关, 1=开）
         /// </summary>
         [JsonProperty("IsRelatedDashboard")]
         public long? IsRelatedDashboard{ get; set; }
 
         /// <summary>
-        /// Dashboard ID
+        /// 关联的 Dashboard ID
         /// </summary>
         [JsonProperty("DashboardTopicID")]
         public string DashboardTopicID{ get; set; }
 
         /// <summary>
-        /// 是否开启组件漏洞检测
+        /// 是否开启组件漏洞检测（0=关， 1=开）
         /// </summary>
         [JsonProperty("IsInstrumentationVulnerabilityScan")]
         public long? IsInstrumentationVulnerabilityScan{ get; set; }
 
         /// <summary>
-        /// 是否开启 SQL 注入分析
+        /// 是否开启 SQL 注入分析（0=关， 1=开）
         /// </summary>
         [JsonProperty("IsSqlInjectionAnalysis")]
         public long? IsSqlInjectionAnalysis{ get; set; }
@@ -248,18 +246,18 @@ namespace TencentCloud.Apm.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AmountOfUsedStorage", this.AmountOfUsedStorage);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "CreateUin", this.CreateUin);
-            this.SetParamSimple(map, prefix + "ServiceCount", this.ServiceCount);
-            this.SetParamSimple(map, prefix + "CountOfReportSpanPerDay", this.CountOfReportSpanPerDay);
-            this.SetParamSimple(map, prefix + "AppId", this.AppId);
-            this.SetParamSimple(map, prefix + "TraceDuration", this.TraceDuration);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "CreateUin", this.CreateUin);
+            this.SetParamSimple(map, prefix + "AmountOfUsedStorage", this.AmountOfUsedStorage);
+            this.SetParamSimple(map, prefix + "ServiceCount", this.ServiceCount);
+            this.SetParamSimple(map, prefix + "CountOfReportSpanPerDay", this.CountOfReportSpanPerDay);
+            this.SetParamSimple(map, prefix + "TraceDuration", this.TraceDuration);
             this.SetParamSimple(map, prefix + "SpanDailyCounters", this.SpanDailyCounters);
             this.SetParamSimple(map, prefix + "BillingInstance", this.BillingInstance);
             this.SetParamSimple(map, prefix + "ErrRateThreshold", this.ErrRateThreshold);

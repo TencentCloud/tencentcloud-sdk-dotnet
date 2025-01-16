@@ -28,7 +28,7 @@ namespace TencentCloud.Apm.V20210622
 
        private const string endpoint = "apm.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1165";
+       private const string sdkVersion = "SDK_NET_3.0.1166";
 
         /// <summary>
         /// Client constructor.
@@ -75,7 +75,7 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
-        /// 获取 APM Agent信息
+        /// 获取 APM 接入点
         /// </summary>
         /// <param name="req"><see cref="DescribeApmAgentRequest"/></param>
         /// <returns><see cref="DescribeApmAgentResponse"/></returns>
@@ -85,7 +85,7 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
-        /// 获取 APM Agent信息
+        /// 获取 APM 接入点
         /// </summary>
         /// <param name="req"><see cref="DescribeApmAgentRequest"/></param>
         /// <returns><see cref="DescribeApmAgentResponse"/></returns>
@@ -96,7 +96,7 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
-        /// 拉取 APM 业务系统列表
+        /// 获取 APM 业务系统列表
         /// </summary>
         /// <param name="req"><see cref="DescribeApmInstancesRequest"/></param>
         /// <returns><see cref="DescribeApmInstancesResponse"/></returns>
@@ -106,7 +106,7 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
-        /// 拉取 APM 业务系统列表
+        /// 获取 APM 业务系统列表
         /// </summary>
         /// <param name="req"><see cref="DescribeApmInstancesRequest"/></param>
         /// <returns><see cref="DescribeApmInstancesResponse"/></returns>
@@ -182,7 +182,7 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
-        /// 拉取通用指标列表
+        /// 查询指标列表接口，查询指标更推荐使用DescribeGeneralMetricData接口
         /// </summary>
         /// <param name="req"><see cref="DescribeMetricRecordsRequest"/></param>
         /// <returns><see cref="DescribeMetricRecordsResponse"/></returns>
@@ -192,7 +192,7 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
-        /// 拉取通用指标列表
+        /// 查询指标列表接口，查询指标更推荐使用DescribeGeneralMetricData接口
         /// </summary>
         /// <param name="req"><see cref="DescribeMetricRecordsRequest"/></param>
         /// <returns><see cref="DescribeMetricRecordsResponse"/></returns>

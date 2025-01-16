@@ -38,7 +38,6 @@ namespace TencentCloud.Mna.V20210119.Models
 
         /// <summary>
         /// 签名字符串
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Signature")]
         public string Signature{ get; set; }

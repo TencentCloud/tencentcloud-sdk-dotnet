@@ -26,7 +26,6 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         
         /// <summary>
         /// 生效周期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EffectivePeriod")]
         public string EffectivePeriod{ get; set; }
@@ -37,8 +36,6 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// Week-周
         /// Month-月
         /// Once-单次
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScheduleType")]
         public string ScheduleType{ get; set; }
@@ -46,21 +43,18 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// <summary>
         /// 执行调度的日期。调度类型为周和月时以英文逗号分隔；
         /// 调度类型为单次时，该值是个日期
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScheduleData")]
         public string ScheduleData{ get; set; }
 
         /// <summary>
         /// 执行时间：时
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScheduleHour")]
         public long? ScheduleHour{ get; set; }
 
         /// <summary>
         /// 执行时间：分
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScheduleMin")]
         public long? ScheduleMin{ get; set; }
@@ -70,14 +64,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// All-全量
         /// Database-按库
         /// Table-按表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupScope")]
         public string BackupScope{ get; set; }
 
         /// <summary>
         /// 备份库：如果是按库备份，则需要该字段，库之间用英文逗号分割
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupDatabase")]
         public string BackupDatabase{ get; set; }

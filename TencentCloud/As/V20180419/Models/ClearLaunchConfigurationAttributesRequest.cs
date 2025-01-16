@@ -65,6 +65,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("ClearInstanceTags")]
         public bool? ClearInstanceTags{ get; set; }
 
+        /// <summary>
+        /// 是否清空 MetaData，非必填，默认为 false。填 true 代表清空 MetaData，清空后基于此新创建的云主机将不会关联自定义的 Metadata。
+        /// </summary>
+        [JsonProperty("ClearMetadata")]
+        public bool? ClearMetadata{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,6 +83,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "ClearInstanceNameSettings", this.ClearInstanceNameSettings);
             this.SetParamSimple(map, prefix + "ClearDisasterRecoverGroupIds", this.ClearDisasterRecoverGroupIds);
             this.SetParamSimple(map, prefix + "ClearInstanceTags", this.ClearInstanceTags);
+            this.SetParamSimple(map, prefix + "ClearMetadata", this.ClearMetadata);
         }
     }
 }

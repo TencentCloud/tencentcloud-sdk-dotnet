@@ -31,16 +31,10 @@ namespace TencentCloud.Apm.V20210622.Models
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// 业务系统ID
+        /// 业务系统 ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
-
-        /// <summary>
-        /// 结束时间
-        /// </summary>
-        [JsonProperty("EndTime")]
-        public long? EndTime{ get; set; }
 
         /// <summary>
         /// 过滤条件
@@ -49,13 +43,19 @@ namespace TencentCloud.Apm.V20210622.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// 开始时间（单位为秒）
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// Or过滤条件
+        /// 结束时间（单位为秒）
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public long? EndTime{ get; set; }
+
+        /// <summary>
+        /// Or 过滤条件
         /// </summary>
         [JsonProperty("OrFilters")]
         public Filter[] OrFilters{ get; set; }
@@ -74,9 +74,9 @@ namespace TencentCloud.Apm.V20210622.Models
         {
             this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArrayObj(map, prefix + "OrFilters.", this.OrFilters);
             this.SetParamSimple(map, prefix + "Type", this.Type);
         }

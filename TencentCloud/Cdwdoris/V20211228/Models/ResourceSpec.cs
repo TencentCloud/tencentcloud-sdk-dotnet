@@ -50,42 +50,36 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
 
         /// <summary>
         /// 系统盘描述信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SystemDisk")]
         public DiskSpec SystemDisk{ get; set; }
 
         /// <summary>
         /// 数据盘描述信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataDisk")]
         public DiskSpec DataDisk{ get; set; }
 
         /// <summary>
         /// 最大节点数目限制
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxNodeSize")]
         public long? MaxNodeSize{ get; set; }
 
         /// <summary>
         /// 是否可用，false代表售罄
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Available")]
         public bool? Available{ get; set; }
 
         /// <summary>
         /// 规格描述信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComputeSpecDesc")]
         public string ComputeSpecDesc{ get; set; }
 
         /// <summary>
         /// cvm库存
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceQuota")]
         public long? InstanceQuota{ get; set; }

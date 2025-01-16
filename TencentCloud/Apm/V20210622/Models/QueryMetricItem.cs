@@ -31,16 +31,16 @@ namespace TencentCloud.Apm.V20210622.Models
         public string MetricName{ get; set; }
 
         /// <summary>
+        /// 同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比) 
+        /// </summary>
+        [JsonProperty("Compares")]
+        public string[] Compares{ get; set; }
+
+        /// <summary>
         /// 同比，已弃用，不建议使用
         /// </summary>
         [JsonProperty("Compare")]
         public string Compare{ get; set; }
-
-        /// <summary>
-        /// 同比，支持多种同比方式
-        /// </summary>
-        [JsonProperty("Compares")]
-        public string[] Compares{ get; set; }
 
 
         /// <summary>
@@ -49,8 +49,8 @@ namespace TencentCloud.Apm.V20210622.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
-            this.SetParamSimple(map, prefix + "Compare", this.Compare);
             this.SetParamArraySimple(map, prefix + "Compares.", this.Compares);
+            this.SetParamSimple(map, prefix + "Compare", this.Compare);
         }
     }
 }

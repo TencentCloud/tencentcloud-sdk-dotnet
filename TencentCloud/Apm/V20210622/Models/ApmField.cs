@@ -25,20 +25,13 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 昨日同比指标值，已弃用，不建议使用
+        /// 指标名
         /// </summary>
-        [JsonProperty("CompareVal")]
-        public string CompareVal{ get; set; }
+        [JsonProperty("Key")]
+        public string Key{ get; set; }
 
         /// <summary>
-        /// Compare值结果数组，推荐使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("CompareVals")]
-        public APMKVItem[] CompareVals{ get; set; }
-
-        /// <summary>
-        /// 指标值
+        /// 指标数值
         /// </summary>
         [JsonProperty("Value")]
         public float? Value{ get; set; }
@@ -50,17 +43,24 @@ namespace TencentCloud.Apm.V20210622.Models
         public string Unit{ get; set; }
 
         /// <summary>
-        /// 请求数
+        /// 同比结果数组，推荐使用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Key")]
-        public string Key{ get; set; }
+        [JsonProperty("CompareVals")]
+        public APMKVItem[] CompareVals{ get; set; }
 
         /// <summary>
-        /// 同环比上周期具体数值
+        /// 同比上一个周期的具体指标数值
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastPeriodValue")]
         public APMKV[] LastPeriodValue{ get; set; }
+
+        /// <summary>
+        /// 同比指标值，已弃用，不建议使用
+        /// </summary>
+        [JsonProperty("CompareVal")]
+        public string CompareVal{ get; set; }
 
 
         /// <summary>
@@ -68,12 +68,12 @@ namespace TencentCloud.Apm.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CompareVal", this.CompareVal);
-            this.SetParamArrayObj(map, prefix + "CompareVals.", this.CompareVals);
+            this.SetParamSimple(map, prefix + "Key", this.Key);
             this.SetParamSimple(map, prefix + "Value", this.Value);
             this.SetParamSimple(map, prefix + "Unit", this.Unit);
-            this.SetParamSimple(map, prefix + "Key", this.Key);
+            this.SetParamArrayObj(map, prefix + "CompareVals.", this.CompareVals);
             this.SetParamArrayObj(map, prefix + "LastPeriodValue.", this.LastPeriodValue);
+            this.SetParamSimple(map, prefix + "CompareVal", this.CompareVal);
         }
     }
 }

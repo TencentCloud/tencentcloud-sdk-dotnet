@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B5D57B68-CB59-323E-9A06-B048D5C6D369}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1165</VersionPrefix>
+    <VersionPrefix>3.0.1166</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -239,6 +239,8 @@
     <Compile Include="V20170312\Models\ModifyInstancesAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyInstancesChargeTypeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyInstancesChargeTypeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyInstancesDisasterRecoverGroupRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyInstancesDisasterRecoverGroupResponse.cs" />
     <Compile Include="V20170312\Models\ModifyInstancesProjectRequest.cs" />
     <Compile Include="V20170312\Models\ModifyInstancesProjectResponse.cs" />
     <Compile Include="V20170312\Models\ModifyInstancesRenewFlagRequest.cs" />

@@ -29,7 +29,6 @@ namespace TencentCloud.Mna.V20210119.Models
         /// 0:数据
         /// 1:Wi-Fi
         /// 2:有线
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }

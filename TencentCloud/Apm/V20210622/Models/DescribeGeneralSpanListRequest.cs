@@ -25,34 +25,22 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 分页
+        /// 业务系统 ID
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 列表项个数
-        /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
-
-        /// <summary>
-        /// 排序
-        /// </summary>
-        [JsonProperty("OrderBy")]
-        public OrderBy OrderBy{ get; set; }
-
-        /// <summary>
-        /// Span查询开始时间戳（单位:秒）
+        /// Span 查询开始时间戳（单位：秒）
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 业务系统 ID
+        /// Span 查询结束时间戳（单位：秒）
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("EndTime")]
+        public long? EndTime{ get; set; }
 
         /// <summary>
         /// 通用过滤参数
@@ -61,16 +49,38 @@ namespace TencentCloud.Apm.V20210622.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 业务自身服务名
+        /// 排序
+        /// 现支持的 Key 有：
+        /// 
+        /// - startTime(开始时间)
+        /// - endTime(结束时间)
+        /// - duration(响应时间)
+        /// 
+        /// 现支持的 Value 有：
+        /// 
+        /// - desc(降序排序)
+        /// - asc(升序排序)
+        /// </summary>
+        [JsonProperty("OrderBy")]
+        public OrderBy OrderBy{ get; set; }
+
+        /// <summary>
+        /// 业务自身服务名，控制台用户请填写taw
         /// </summary>
         [JsonProperty("BusinessName")]
         public string BusinessName{ get; set; }
 
         /// <summary>
-        /// Span查询结束时间戳（单位:秒）
+        /// 单页项目个数，默认为10000，合法取值范围为0～10000
         /// </summary>
-        [JsonProperty("EndTime")]
-        public long? EndTime{ get; set; }
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// 分页
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
 
 
         /// <summary>
@@ -78,14 +88,14 @@ namespace TencentCloud.Apm.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamObj(map, prefix + "OrderBy.", this.OrderBy);
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
-            this.SetParamSimple(map, prefix + "BusinessName", this.BusinessName);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamObj(map, prefix + "OrderBy.", this.OrderBy);
+            this.SetParamSimple(map, prefix + "BusinessName", this.BusinessName);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

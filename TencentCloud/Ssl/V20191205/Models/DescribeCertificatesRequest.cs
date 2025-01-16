@@ -120,6 +120,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("IsPendingIssue")]
         public long? IsPendingIssue{ get; set; }
 
+        /// <summary>
+        /// 筛选指定证书ID的证书，只支持有权限的证书ID
+        /// </summary>
+        [JsonProperty("CertIds")]
+        public string[] CertIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "Hostable", this.Hostable);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "IsPendingIssue", this.IsPendingIssue);
+            this.SetParamArraySimple(map, prefix + "CertIds.", this.CertIds);
         }
     }
 }

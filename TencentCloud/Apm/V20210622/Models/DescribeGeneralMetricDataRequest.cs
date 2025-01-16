@@ -31,7 +31,7 @@ namespace TencentCloud.Apm.V20210622.Models
         public string[] Metrics{ get; set; }
 
         /// <summary>
-        /// 业务系统ID
+        /// 业务系统 ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -55,19 +55,24 @@ namespace TencentCloud.Apm.V20210622.Models
         public string[] GroupBy{ get; set; }
 
         /// <summary>
-        /// 起始时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。
+        /// 起始时间的时间戳，支持查询30天内的指标数据。（单位：秒）
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。
+        /// 结束时间的时间戳，支持查询30天内的指标数据。（单位：秒）
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 聚合粒度，单位为秒，最小为60s，即一分钟的聚合粒度；如果为空或0则计算开始时间到截止时间的指标数据，上报其他值会报错。
+        /// 是否按固定时间跨度聚合，填入1及大于1的值按1处理，不填按0处理。
+        /// - 填入0，则计算开始时间到截止时间的指标数据。
+        /// - 填入1，则会按照开始时间到截止时间的时间跨度选择聚合粒度：
+        ///  - 时间跨度 (0,12) 小时，则按一分钟粒度聚合。
+        ///  - 时间跨度 [12,48] 小时，则按五分钟粒度聚合。
+        ///  - 时间跨度 (48, +∞) 小时，则按一小时粒度聚合。
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
@@ -76,7 +81,7 @@ namespace TencentCloud.Apm.V20210622.Models
         /// 对查询指标进行排序：
         /// Key 填写云 API 指标名称，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
         /// Value 填写排序方式：     
-        /// - asc:对查询指标进行升序排序
+        /// - asc：对查询指标进行升序排序
         /// - desc：对查询指标进行降序排序
         /// </summary>
         [JsonProperty("OrderBy")]

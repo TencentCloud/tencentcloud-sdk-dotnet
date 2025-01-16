@@ -25,7 +25,7 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 业务系统ID
+        /// 业务系统 ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -37,19 +37,19 @@ namespace TencentCloud.Apm.V20210622.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 标签列表
+        /// Tag 列表
         /// </summary>
         [JsonProperty("Tags")]
         public ApmTag[] Tags{ get; set; }
 
         /// <summary>
-        /// 业务系统详情
+        /// 业务系统描述
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Trace数据保存时长
+        /// Trace 数据保存时长（单位：天）
         /// </summary>
         [JsonProperty("TraceDuration")]
         public long? TraceDuration{ get; set; }
@@ -67,55 +67,55 @@ namespace TencentCloud.Apm.V20210622.Models
         public ulong? SpanDailyCounters{ get; set; }
 
         /// <summary>
-        /// 错误率阈值
+        /// 错误率警示线，当应用的平均错误率超出该阈值时，系统会给出异常提示。
         /// </summary>
         [JsonProperty("ErrRateThreshold")]
         public long? ErrRateThreshold{ get; set; }
 
         /// <summary>
-        /// 采样率
+        /// 采样率（单位：%）
         /// </summary>
         [JsonProperty("SampleRate")]
         public long? SampleRate{ get; set; }
 
         /// <summary>
-        /// 是否开启错误采样 0 关 1 开
+        /// 是否开启错误采样（0=关, 1=开）
         /// </summary>
         [JsonProperty("ErrorSample")]
         public long? ErrorSample{ get; set; }
 
         /// <summary>
-        /// 慢请求阈值
+        /// 采样慢调用保存阈值（单位：ms）
         /// </summary>
         [JsonProperty("SlowRequestSavedThreshold")]
         public long? SlowRequestSavedThreshold{ get; set; }
 
         /// <summary>
-        /// 是否开启日志功能 0 关 1 开
+        /// 是否开启日志功能（0=关, 1=开）
         /// </summary>
         [JsonProperty("IsRelatedLog")]
         public long? IsRelatedLog{ get; set; }
 
         /// <summary>
-        /// 日志地域
+        /// 日志地域，开启日志功能后才会生效
         /// </summary>
         [JsonProperty("LogRegion")]
         public string LogRegion{ get; set; }
 
         /// <summary>
-        /// CLS日志主题ID | ES 索引名
+        /// CLS 日志主题 ID，开启日志功能后才会生效
         /// </summary>
         [JsonProperty("LogTopicID")]
         public string LogTopicID{ get; set; }
 
         /// <summary>
-        /// CLS日志集 | ES集群ID
+        /// 日志集，开启日志功能后才会生效
         /// </summary>
         [JsonProperty("LogSet")]
         public string LogSet{ get; set; }
 
         /// <summary>
-        /// CLS | ES
+        /// 日志源，开启日志功能后才会生效
         /// </summary>
         [JsonProperty("LogSource")]
         public string LogSource{ get; set; }
@@ -127,45 +127,43 @@ namespace TencentCloud.Apm.V20210622.Models
         public string[] CustomShowTags{ get; set; }
 
         /// <summary>
-        /// 修改计费模式
-        /// 1为预付费
-        /// 0为按量付费
+        /// 修改计费模式（1为预付费，0为按量付费）
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 响应时间满意阈值
+        /// 响应时间警示线
         /// </summary>
         [JsonProperty("ResponseDurationWarningThreshold")]
         public long? ResponseDurationWarningThreshold{ get; set; }
 
         /// <summary>
-        /// （0=付费版；1=tsf受限免费版；2=免费版）
+        /// 是否免费（0=付费版；1=TSF 受限免费版；2=免费版），默认0
         /// </summary>
         [JsonProperty("Free")]
         public long? Free{ get; set; }
 
         /// <summary>
-        /// 是否关联dashboard： 0 关 1 开
+        /// 是否关联 Dashboard（0=关,1=开）
         /// </summary>
         [JsonProperty("IsRelatedDashboard")]
         public long? IsRelatedDashboard{ get; set; }
 
         /// <summary>
-        /// dashboard ID
+        /// 关联的 Dashboard ID，开启关联 Dashboard 后才会生效
         /// </summary>
         [JsonProperty("DashboardTopicID")]
         public string DashboardTopicID{ get; set; }
 
         /// <summary>
-        /// 是否开启SQL注入检测
+        /// 是否开启 SQL 注入检测（0=关,1=开）
         /// </summary>
         [JsonProperty("IsSqlInjectionAnalysis")]
         public long? IsSqlInjectionAnalysis{ get; set; }
 
         /// <summary>
-        /// 是否开启组件漏洞检测
+        /// 是否开启组件漏洞检测（0=关,1=开）
         /// </summary>
         [JsonProperty("IsInstrumentationVulnerabilityScan")]
         public long? IsInstrumentationVulnerabilityScan{ get; set; }

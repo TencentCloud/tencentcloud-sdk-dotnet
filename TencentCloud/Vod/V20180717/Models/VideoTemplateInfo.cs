@@ -45,7 +45,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Fps{ get; set; }
 
         /// <summary>
-        /// 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+        /// 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
         /// 当取值为 0，表示视频码率和原始视频保持一致。
         /// </summary>
         [JsonProperty("Bitrate")]
