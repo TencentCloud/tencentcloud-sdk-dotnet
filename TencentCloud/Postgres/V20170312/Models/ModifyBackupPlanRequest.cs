@@ -49,7 +49,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? BaseBackupRetentionPeriod{ get; set; }
 
         /// <summary>
-        /// 实例备份周期，按照星期维度，格式为小写星期英文单词
+        /// 实例备份周期，若是星期维度，格式为小写星期英文单词；若是按月维度，格式为数字字符，如["1","2"]。
         /// </summary>
         [JsonProperty("BackupPeriod")]
         public string[] BackupPeriod{ get; set; }
@@ -59,6 +59,18 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         [JsonProperty("LogBackupRetentionPeriod")]
         public ulong? LogBackupRetentionPeriod{ get; set; }
+
+        /// <summary>
+        /// 备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。
+        /// </summary>
+        [JsonProperty("PlanId")]
+        public string PlanId{ get; set; }
+
+        /// <summary>
+        /// 要修改的备份计划名称。
+        /// </summary>
+        [JsonProperty("PlanName")]
+        public string PlanName{ get; set; }
 
 
         /// <summary>
@@ -72,6 +84,8 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "BaseBackupRetentionPeriod", this.BaseBackupRetentionPeriod);
             this.SetParamArraySimple(map, prefix + "BackupPeriod.", this.BackupPeriod);
             this.SetParamSimple(map, prefix + "LogBackupRetentionPeriod", this.LogBackupRetentionPeriod);
+            this.SetParamSimple(map, prefix + "PlanId", this.PlanId);
+            this.SetParamSimple(map, prefix + "PlanName", this.PlanName);
         }
     }
 }

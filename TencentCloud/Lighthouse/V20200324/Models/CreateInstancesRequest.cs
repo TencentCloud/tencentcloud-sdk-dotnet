@@ -117,6 +117,18 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("InitCommand")]
         public Command InitCommand{ get; set; }
 
+        /// <summary>
+        /// 主域名。
+        /// </summary>
+        [JsonProperty("DomainName")]
+        public string DomainName{ get; set; }
+
+        /// <summary>
+        /// 子域名。
+        /// </summary>
+        [JsonProperty("Subdomain")]
+        public string Subdomain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +149,8 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "FirewallTemplateId", this.FirewallTemplateId);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamObj(map, prefix + "InitCommand.", this.InitCommand);
+            this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
+            this.SetParamSimple(map, prefix + "Subdomain", this.Subdomain);
         }
     }
 }

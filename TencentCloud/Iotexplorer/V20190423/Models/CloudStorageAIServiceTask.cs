@@ -53,6 +53,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// 
         /// - `RealtimeObjectDetect`：目标检测
         /// - `Highlight`：视频浓缩
+        /// - `VideoToText`：视频语义理解
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }

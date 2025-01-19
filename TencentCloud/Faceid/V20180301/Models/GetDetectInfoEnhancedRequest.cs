@@ -25,7 +25,7 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 人脸核身流程的标识，调用DetectAuth接口时生成。
+        /// 人脸核身流程的标识，调用[DetectAuth](https://cloud.tencent.com/document/product/1007/31816)接口时生成。
         /// </summary>
         [JsonProperty("BizToken")]
         public string BizToken{ get; set; }

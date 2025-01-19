@@ -96,6 +96,18 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("CatalogName")]
         public string[] CatalogName{ get; set; }
 
+        /// <summary>
+        /// 排序字段
+        /// </summary>
+        [JsonProperty("SortField")]
+        public string SortField{ get; set; }
+
+        /// <summary>
+        /// 排序方式
+        /// </summary>
+        [JsonProperty("SortOrder")]
+        public string SortOrder{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +126,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "IsQuery", this.IsQuery);
             this.SetParamArraySimple(map, prefix + "DbName.", this.DbName);
             this.SetParamArraySimple(map, prefix + "CatalogName.", this.CatalogName);
+            this.SetParamSimple(map, prefix + "SortField", this.SortField);
+            this.SetParamSimple(map, prefix + "SortOrder", this.SortOrder);
         }
     }
 }

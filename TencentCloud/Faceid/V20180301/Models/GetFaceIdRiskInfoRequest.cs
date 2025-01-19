@@ -25,7 +25,7 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// SDK人脸核身流程的标识，调用GetFaceidRiskInfoToken接口时生成。
+        /// SDK人脸核身流程的标识，调用[GetFaceidRiskInfoToken](https://cloud.tencent.com/document/product/1007/104581)接口时生成。
         /// </summary>
         [JsonProperty("FaceIdToken")]
         public string FaceIdToken{ get; set; }

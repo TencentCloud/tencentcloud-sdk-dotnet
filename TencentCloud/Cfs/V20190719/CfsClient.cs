@@ -28,7 +28,7 @@ namespace TencentCloud.Cfs.V20190719
 
        private const string endpoint = "cfs.tencentcloudapi.com";
        private const string version = "2019-07-19";
-       private const string sdkVersion = "SDK_NET_3.0.1166";
+       private const string sdkVersion = "SDK_NET_3.0.1167";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Cfs.V20190719
         public BindAutoSnapshotPolicyResponse BindAutoSnapshotPolicySync(BindAutoSnapshotPolicyRequest req)
         {
             return InternalRequestAsync<BindAutoSnapshotPolicyResponse>(req, "BindAutoSnapshotPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建用于访问文件系统的凭证
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccessCertRequest"/></param>
+        /// <returns><see cref="CreateAccessCertResponse"/></returns>
+        public Task<CreateAccessCertResponse> CreateAccessCert(CreateAccessCertRequest req)
+        {
+            return InternalRequestAsync<CreateAccessCertResponse>(req, "CreateAccessCert");
+        }
+
+        /// <summary>
+        /// 创建用于访问文件系统的凭证
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccessCertRequest"/></param>
+        /// <returns><see cref="CreateAccessCertResponse"/></returns>
+        public CreateAccessCertResponse CreateAccessCertSync(CreateAccessCertRequest req)
+        {
+            return InternalRequestAsync<CreateAccessCertResponse>(req, "CreateAccessCert")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

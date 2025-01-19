@@ -60,6 +60,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// <summary>
         /// 数据库版本状态，包括：
         /// AVAILABLE：可用；
+        /// UPGRADE_ONLY：不可创建，此版本仅可升级至高版本；
         /// DEPRECATED：已弃用。
         /// </summary>
         [JsonProperty("Status")]

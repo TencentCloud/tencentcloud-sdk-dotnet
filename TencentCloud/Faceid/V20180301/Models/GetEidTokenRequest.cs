@@ -25,7 +25,7 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// EID商户id。
+        /// EID商户ID。通过人脸核身控制台[自助接入](https://console.cloud.tencent.com/faceid/access)申请。
         /// - 字段长度最长50位。
         /// </summary>
         [JsonProperty("MerchantId")]

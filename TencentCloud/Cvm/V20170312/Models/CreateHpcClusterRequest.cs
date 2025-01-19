@@ -54,6 +54,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("HpcClusterBusinessId")]
         public string HpcClusterBusinessId{ get; set; }
 
+        /// <summary>
+        /// 标签描述列表。通过指定该参数可以同时绑定标签到相应的HPC高性能集群。
+        /// </summary>
+        [JsonProperty("TagSpecification")]
+        public TagSpecification[] TagSpecification{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "HpcClusterType", this.HpcClusterType);
             this.SetParamSimple(map, prefix + "HpcClusterBusinessId", this.HpcClusterBusinessId);
+            this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         }
     }
 }

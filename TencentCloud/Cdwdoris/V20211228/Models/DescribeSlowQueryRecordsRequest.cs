@@ -108,6 +108,18 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("MemoryUsage")]
         public string MemoryUsage{ get; set; }
 
+        /// <summary>
+        /// 排序字段
+        /// </summary>
+        [JsonProperty("SortField")]
+        public string SortField{ get; set; }
+
+        /// <summary>
+        /// 排序方式
+        /// </summary>
+        [JsonProperty("SortOrder")]
+        public string SortOrder{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +140,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "ReadRows", this.ReadRows);
             this.SetParamSimple(map, prefix + "ResultBytes", this.ResultBytes);
             this.SetParamSimple(map, prefix + "MemoryUsage", this.MemoryUsage);
+            this.SetParamSimple(map, prefix + "SortField", this.SortField);
+            this.SetParamSimple(map, prefix + "SortOrder", this.SortOrder);
         }
     }
 }

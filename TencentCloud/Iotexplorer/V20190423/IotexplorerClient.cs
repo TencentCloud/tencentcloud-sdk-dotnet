@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423
 
        private const string endpoint = "iotexplorer.tencentcloudapi.com";
        private const string version = "2019-04-23";
-       private const string sdkVersion = "SDK_NET_3.0.1166";
+       private const string sdkVersion = "SDK_NET_3.0.1167";
 
         /// <summary>
         /// Client constructor.
@@ -1125,6 +1125,27 @@ namespace TencentCloud.Iotexplorer.V20190423
         public DescribeCloudStorageEventsResponse DescribeCloudStorageEventsSync(DescribeCloudStorageEventsRequest req)
         {
             return InternalRequestAsync<DescribeCloudStorageEventsResponse>(req, "DescribeCloudStorageEvents")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 拉取云存事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageEventsWithAITasksRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageEventsWithAITasksResponse"/></returns>
+        public Task<DescribeCloudStorageEventsWithAITasksResponse> DescribeCloudStorageEventsWithAITasks(DescribeCloudStorageEventsWithAITasksRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageEventsWithAITasksResponse>(req, "DescribeCloudStorageEventsWithAITasks");
+        }
+
+        /// <summary>
+        /// 拉取云存事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageEventsWithAITasksRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageEventsWithAITasksResponse"/></returns>
+        public DescribeCloudStorageEventsWithAITasksResponse DescribeCloudStorageEventsWithAITasksSync(DescribeCloudStorageEventsWithAITasksRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudStorageEventsWithAITasksResponse>(req, "DescribeCloudStorageEventsWithAITasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

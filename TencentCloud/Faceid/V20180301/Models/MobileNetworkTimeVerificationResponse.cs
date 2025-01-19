@@ -47,7 +47,7 @@ namespace TencentCloud.Faceid.V20180301.Models
 
         /// <summary>
         /// 在网时长区间。
-        /// - 格式为(a,b]，表示在网时长在a个月以上，b个月以下。
+        /// - 格式为[a,b)，表示在网时长在a个月以上，b个月以下。
         /// - 若b为+时表示没有上限。
         /// </summary>
         [JsonProperty("Range")]

@@ -31,13 +31,18 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// 续费多少个月
+        /// 购买时长，单位：月。
+        /// <li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
+        /// <li>后付费：只支持1</li>
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 是否自动使用代金券,1是,0否，默认不使用
+        /// 是否自动使用代金券：
+        /// <li>0：否</li>
+        /// <li>1：是</li>
+        /// 默认值：0
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public long? AutoVoucher{ get; set; }

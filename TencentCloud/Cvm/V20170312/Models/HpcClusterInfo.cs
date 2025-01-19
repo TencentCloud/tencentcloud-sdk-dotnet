@@ -90,6 +90,18 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("HpcClusterBusinessId")]
         public string HpcClusterBusinessId{ get; set; }
 
+        /// <summary>
+        /// 高性能计算集群网络模式
+        /// </summary>
+        [JsonProperty("HpcClusterNetMode")]
+        public ulong? HpcClusterNetMode{ get; set; }
+
+        /// <summary>
+        /// 高性能计算集群关联的标签列表
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -106,6 +118,8 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "HpcClusterType", this.HpcClusterType);
             this.SetParamSimple(map, prefix + "HpcClusterBusinessId", this.HpcClusterBusinessId);
+            this.SetParamSimple(map, prefix + "HpcClusterNetMode", this.HpcClusterNetMode);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

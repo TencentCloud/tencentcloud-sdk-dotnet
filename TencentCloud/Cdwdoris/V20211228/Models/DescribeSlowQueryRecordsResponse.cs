@@ -38,14 +38,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
 
         /// <summary>
         /// 所有数据库名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DBNameList")]
         public string[] DBNameList{ get; set; }
 
         /// <summary>
         /// 所有catalog名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CatalogNameList")]
         public string[] CatalogNameList{ get; set; }

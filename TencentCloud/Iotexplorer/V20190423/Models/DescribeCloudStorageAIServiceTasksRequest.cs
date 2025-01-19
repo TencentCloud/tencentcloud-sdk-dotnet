@@ -40,6 +40,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// 云存 AI 服务类型。可选值：
         /// - `RealtimeObjectDetect`：目标检测
         /// - `Highlight`：视频浓缩
+        /// - `VideoToText`：视频语义理解
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }

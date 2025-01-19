@@ -26,21 +26,18 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         
         /// <summary>
         /// 备份文件所在的cos桶
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CosBucket")]
         public string CosBucket{ get; set; }
 
         /// <summary>
         /// 备份文件所在的完整cos路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CosPath")]
         public string CosPath{ get; set; }
 
         /// <summary>
         /// 备份文件名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapShotPath")]
         public string SnapShotPath{ get; set; }
