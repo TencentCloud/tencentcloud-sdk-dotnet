@@ -62,7 +62,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string LayerName{ get; set; }
 
         /// <summary>
-        /// 层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
+        /// 层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/115197#.E5.B1.82.EF.BC.88Layer.EF.BC.89.E7.8A.B6.E6.80.81)
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

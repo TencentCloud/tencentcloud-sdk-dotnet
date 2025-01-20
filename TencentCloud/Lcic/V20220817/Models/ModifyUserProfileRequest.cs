@@ -31,7 +31,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 待修改的用户名
+        /// 待修改的用户名。对应注册用户下“Name“字段，本次修改是对此内容进行修改。
         /// </summary>
         [JsonProperty("Nickname")]
         public string Nickname{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C9840D4F-C22D-3561-A83C-36F13531DB7A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1167</VersionPrefix>
+    <VersionPrefix>3.0.1168</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -187,6 +187,8 @@
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayConfigRequest.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayConfigResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayConfigResult.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayInfoByIpRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayInfoByIpResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayNodesRequest.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayNodesResponse.cs" />
     <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayNodesResult.cs" />
@@ -236,6 +238,7 @@
     <Compile Include="V20201207\Models\DescribeGovernanceServiceContractsResponse.cs" />
     <Compile Include="V20201207\Models\DescribeGovernanceServicesRequest.cs" />
     <Compile Include="V20201207\Models\DescribeGovernanceServicesResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeInstanceInfoByIpResult.cs" />
     <Compile Include="V20201207\Models\DescribeInstanceRegionInfo.cs" />
     <Compile Include="V20201207\Models\DescribeInstanceTagInfosRequest.cs" />
     <Compile Include="V20201207\Models\DescribeInstanceTagInfosResponse.cs" />

@@ -80,6 +80,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("FilterOneWord")]
         public bool? FilterOneWord{ get; set; }
 
+        /// <summary>
+        /// 欢迎消息优先级，0默认，1高优，高优不能被打断。
+        /// </summary>
+        [JsonProperty("WelcomeMessagePriority")]
+        public ulong? WelcomeMessagePriority{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -95,6 +101,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "InterruptSpeechDuration", this.InterruptSpeechDuration);
             this.SetParamSimple(map, prefix + "TurnDetectionMode", this.TurnDetectionMode);
             this.SetParamSimple(map, prefix + "FilterOneWord", this.FilterOneWord);
+            this.SetParamSimple(map, prefix + "WelcomeMessagePriority", this.WelcomeMessagePriority);
         }
     }
 }

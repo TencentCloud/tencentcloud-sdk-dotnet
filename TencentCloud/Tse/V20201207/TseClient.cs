@@ -28,7 +28,7 @@ namespace TencentCloud.Tse.V20201207
 
        private const string endpoint = "tse.tencentcloudapi.com";
        private const string version = "2020-12-07";
-       private const string sdkVersion = "SDK_NET_3.0.1167";
+       private const string sdkVersion = "SDK_NET_3.0.1168";
 
         /// <summary>
         /// Client constructor.
@@ -1121,6 +1121,27 @@ namespace TencentCloud.Tse.V20201207
         public DescribeCloudNativeAPIGatewayConfigResponse DescribeCloudNativeAPIGatewayConfigSync(DescribeCloudNativeAPIGatewayConfigRequest req)
         {
             return InternalRequestAsync<DescribeCloudNativeAPIGatewayConfigResponse>(req, "DescribeCloudNativeAPIGatewayConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据公网IP查询云原生网关实例信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayInfoByIpRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayInfoByIpResponse"/></returns>
+        public Task<DescribeCloudNativeAPIGatewayInfoByIpResponse> DescribeCloudNativeAPIGatewayInfoByIp(DescribeCloudNativeAPIGatewayInfoByIpRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayInfoByIpResponse>(req, "DescribeCloudNativeAPIGatewayInfoByIp");
+        }
+
+        /// <summary>
+        /// 根据公网IP查询云原生网关实例信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayInfoByIpRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayInfoByIpResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayInfoByIpResponse DescribeCloudNativeAPIGatewayInfoByIpSync(DescribeCloudNativeAPIGatewayInfoByIpRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayInfoByIpResponse>(req, "DescribeCloudNativeAPIGatewayInfoByIp")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
