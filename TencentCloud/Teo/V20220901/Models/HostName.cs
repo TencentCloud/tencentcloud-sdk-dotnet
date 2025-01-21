@@ -15,32 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AttackSource : AbstractModel
+    public class HostName : AbstractModel
     {
         
         /// <summary>
-        /// 攻击溯源节点描述
+        /// 目标 HostName 配置，取值有：
+        /// <li>follow：跟随请求；</li>
+        /// <li>custom：自定义。</li>
         /// </summary>
-        [JsonProperty("Nodes")]
-        public AttackSourceNode[] Nodes{ get; set; }
+        [JsonProperty("Action")]
+        public string Action{ get; set; }
 
         /// <summary>
-        /// 攻击溯源节点路径
+        /// 目标 HostName 自定义取值，最大长度 1024。<br>注意：当 Action 为 custom 时，此字段必填；当 Action 为 follow 时，此字段不生效。
         /// </summary>
-        [JsonProperty("Edges")]
-        public AttackSourceEdge[] Edges{ get; set; }
-
-        /// <summary>
-        /// 请求节点相关事件详情的参数
-        /// </summary>
-        [JsonProperty("EventInfoParam")]
-        public string EventInfoParam{ get; set; }
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
 
 
         /// <summary>
@@ -48,9 +44,8 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Nodes.", this.Nodes);
-            this.SetParamArrayObj(map, prefix + "Edges.", this.Edges);
-            this.SetParamSimple(map, prefix + "EventInfoParam", this.EventInfoParam);
+            this.SetParamSimple(map, prefix + "Action", this.Action);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

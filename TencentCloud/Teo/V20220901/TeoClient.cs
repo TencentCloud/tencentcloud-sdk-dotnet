@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1168";
+       private const string sdkVersion = "SDK_NET_3.0.1169";
 
         /// <summary>
         /// Client constructor.
@@ -413,6 +413,27 @@ namespace TencentCloud.Teo.V20220901
         public CreateL4ProxyRulesResponse CreateL4ProxyRulesSync(CreateL4ProxyRulesRequest req)
         {
             return InternalRequestAsync<CreateL4ProxyRulesResponse>(req, "CreateL4ProxyRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于在[规则引擎](https://cloud.tencent.com/document/product/1552/70901)中创建规则，支持批量创建。
+        /// </summary>
+        /// <param name="req"><see cref="CreateL7AccRulesRequest"/></param>
+        /// <returns><see cref="CreateL7AccRulesResponse"/></returns>
+        public Task<CreateL7AccRulesResponse> CreateL7AccRules(CreateL7AccRulesRequest req)
+        {
+            return InternalRequestAsync<CreateL7AccRulesResponse>(req, "CreateL7AccRules");
+        }
+
+        /// <summary>
+        /// 本接口用于在[规则引擎](https://cloud.tencent.com/document/product/1552/70901)中创建规则，支持批量创建。
+        /// </summary>
+        /// <param name="req"><see cref="CreateL7AccRulesRequest"/></param>
+        /// <returns><see cref="CreateL7AccRulesResponse"/></returns>
+        public CreateL7AccRulesResponse CreateL7AccRulesSync(CreateL7AccRulesRequest req)
+        {
+            return InternalRequestAsync<CreateL7AccRulesResponse>(req, "CreateL7AccRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -893,6 +914,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 本接口用于删除[规则引擎](https://cloud.tencent.com/document/product/1552/70901)的规则，支持批量删除。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteL7AccRulesRequest"/></param>
+        /// <returns><see cref="DeleteL7AccRulesResponse"/></returns>
+        public Task<DeleteL7AccRulesResponse> DeleteL7AccRules(DeleteL7AccRulesRequest req)
+        {
+            return InternalRequestAsync<DeleteL7AccRulesResponse>(req, "DeleteL7AccRules");
+        }
+
+        /// <summary>
+        /// 本接口用于删除[规则引擎](https://cloud.tencent.com/document/product/1552/70901)的规则，支持批量删除。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteL7AccRulesRequest"/></param>
+        /// <returns><see cref="DeleteL7AccRulesResponse"/></returns>
+        public DeleteL7AccRulesResponse DeleteL7AccRulesSync(DeleteL7AccRulesRequest req)
+        {
+            return InternalRequestAsync<DeleteL7AccRulesResponse>(req, "DeleteL7AccRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除负载均衡实例，若负载均衡示例被其他服务（例如：四层代理等）引用的时候，示例无法被删除，需要先解除引用关系。负载均衡功能内测中，如您需要使用请 [联系我们](https://cloud.tencent.com/online-service)。
         /// </summary>
         /// <param name="req"><see cref="DeleteLoadBalancerRequest"/></param>
@@ -956,7 +998,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 批量删除规则引擎规则。
+        /// 本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，详情请参考 [DeleteL7AccRules](https://cloud.tencent.com/document/product/1552/115821)。
         /// </summary>
         /// <param name="req"><see cref="DeleteRulesRequest"/></param>
         /// <returns><see cref="DeleteRulesResponse"/></returns>
@@ -966,7 +1008,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 批量删除规则引擎规则。
+        /// 本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，详情请参考 [DeleteL7AccRules](https://cloud.tencent.com/document/product/1552/115821)。
         /// </summary>
         /// <param name="req"><see cref="DeleteRulesRequest"/></param>
         /// <returns><see cref="DeleteRulesResponse"/></returns>
@@ -1481,7 +1523,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 用于查询域名配置信息
+        /// 本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，可通过 [DescribeL7AccSetting](https://cloud.tencent.com/document/product/1552/115819) 和 [DescribeL7AccRules](https://cloud.tencent.com/document/product/1552/115820) 来获取域名的详细配置。
         /// </summary>
         /// <param name="req"><see cref="DescribeHostsSettingRequest"/></param>
         /// <returns><see cref="DescribeHostsSettingResponse"/></returns>
@@ -1491,7 +1533,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 用于查询域名配置信息
+        /// 本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，可通过 [DescribeL7AccSetting](https://cloud.tencent.com/document/product/1552/115819) 和 [DescribeL7AccRules](https://cloud.tencent.com/document/product/1552/115820) 来获取域名的详细配置。
         /// </summary>
         /// <param name="req"><see cref="DescribeHostsSettingRequest"/></param>
         /// <returns><see cref="DescribeHostsSettingResponse"/></returns>
@@ -1582,6 +1624,48 @@ namespace TencentCloud.Teo.V20220901
         public DescribeL4ProxyRulesResponse DescribeL4ProxyRulesSync(DescribeL4ProxyRulesRequest req)
         {
             return InternalRequestAsync<DescribeL4ProxyRulesResponse>(req, "DescribeL4ProxyRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于查询[规则引擎](https://cloud.tencent.com/document/product/1552/70901)的规则列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeL7AccRulesRequest"/></param>
+        /// <returns><see cref="DescribeL7AccRulesResponse"/></returns>
+        public Task<DescribeL7AccRulesResponse> DescribeL7AccRules(DescribeL7AccRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeL7AccRulesResponse>(req, "DescribeL7AccRules");
+        }
+
+        /// <summary>
+        /// 本接口用于查询[规则引擎](https://cloud.tencent.com/document/product/1552/70901)的规则列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeL7AccRulesRequest"/></param>
+        /// <returns><see cref="DescribeL7AccRulesResponse"/></returns>
+        public DescribeL7AccRulesResponse DescribeL7AccRulesSync(DescribeL7AccRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeL7AccRulesResponse>(req, "DescribeL7AccRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于查询[站点加速](https://cloud.tencent.com/document/product/1552/96193)全局配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeL7AccSettingRequest"/></param>
+        /// <returns><see cref="DescribeL7AccSettingResponse"/></returns>
+        public Task<DescribeL7AccSettingResponse> DescribeL7AccSetting(DescribeL7AccSettingRequest req)
+        {
+            return InternalRequestAsync<DescribeL7AccSettingResponse>(req, "DescribeL7AccSetting");
+        }
+
+        /// <summary>
+        /// 本接口用于查询[站点加速](https://cloud.tencent.com/document/product/1552/96193)全局配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeL7AccSettingRequest"/></param>
+        /// <returns><see cref="DescribeL7AccSettingResponse"/></returns>
+        public DescribeL7AccSettingResponse DescribeL7AccSettingSync(DescribeL7AccSettingRequest req)
+        {
+            return InternalRequestAsync<DescribeL7AccSettingResponse>(req, "DescribeL7AccSetting")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1754,7 +1838,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 查询规则引擎规则。
+        /// 本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，详情请参考 [DescribeL7AccRules](https://cloud.tencent.com/document/product/1552/115820)。
         /// </summary>
         /// <param name="req"><see cref="DescribeRulesRequest"/></param>
         /// <returns><see cref="DescribeRulesResponse"/></returns>
@@ -1764,7 +1848,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 查询规则引擎规则。
+        /// 本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，详情请参考 [DescribeL7AccRules](https://cloud.tencent.com/document/product/1552/115820)。
         /// </summary>
         /// <param name="req"><see cref="DescribeRulesRequest"/></param>
         /// <returns><see cref="DescribeRulesResponse"/></returns>
@@ -1775,7 +1859,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 返回规则引擎可应用匹配请求的设置列表及其详细建议配置信息
+        /// 本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，详情请参考 [RuleEngineAction](https://cloud.tencent.com/document/product/1552/80721#RuleEngineAction)。
         /// </summary>
         /// <param name="req"><see cref="DescribeRulesSettingRequest"/></param>
         /// <returns><see cref="DescribeRulesSettingResponse"/></returns>
@@ -1785,7 +1869,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 返回规则引擎可应用匹配请求的设置列表及其详细建议配置信息
+        /// 本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，详情请参考 [RuleEngineAction](https://cloud.tencent.com/document/product/1552/80721#RuleEngineAction)。
         /// </summary>
         /// <param name="req"><see cref="DescribeRulesSettingRequest"/></param>
         /// <returns><see cref="DescribeRulesSettingResponse"/></returns>
@@ -1991,7 +2075,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 用于查询站点的所有配置信息。
+        /// 本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，详情请参考 [DescribeL7AccSetting](https://cloud.tencent.com/document/product/1552/115819)。
         /// </summary>
         /// <param name="req"><see cref="DescribeZoneSettingRequest"/></param>
         /// <returns><see cref="DescribeZoneSettingResponse"/></returns>
@@ -2001,7 +2085,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 用于查询站点的所有配置信息。
+        /// 本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，详情请参考 [DescribeL7AccSetting](https://cloud.tencent.com/document/product/1552/115819)。
         /// </summary>
         /// <param name="req"><see cref="DescribeZoneSettingRequest"/></param>
         /// <returns><see cref="DescribeZoneSettingResponse"/></returns>
@@ -2649,6 +2733,48 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 本接口用于修改[规则引擎](https://cloud.tencent.com/document/product/1552/70901)中的规则，单次仅支持修改单条规则。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL7AccRuleRequest"/></param>
+        /// <returns><see cref="ModifyL7AccRuleResponse"/></returns>
+        public Task<ModifyL7AccRuleResponse> ModifyL7AccRule(ModifyL7AccRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyL7AccRuleResponse>(req, "ModifyL7AccRule");
+        }
+
+        /// <summary>
+        /// 本接口用于修改[规则引擎](https://cloud.tencent.com/document/product/1552/70901)中的规则，单次仅支持修改单条规则。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL7AccRuleRequest"/></param>
+        /// <returns><see cref="ModifyL7AccRuleResponse"/></returns>
+        public ModifyL7AccRuleResponse ModifyL7AccRuleSync(ModifyL7AccRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyL7AccRuleResponse>(req, "ModifyL7AccRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口用于修改[站点加速](https://cloud.tencent.com/document/product/1552/96193)全局配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL7AccSettingRequest"/></param>
+        /// <returns><see cref="ModifyL7AccSettingResponse"/></returns>
+        public Task<ModifyL7AccSettingResponse> ModifyL7AccSetting(ModifyL7AccSettingRequest req)
+        {
+            return InternalRequestAsync<ModifyL7AccSettingResponse>(req, "ModifyL7AccSetting");
+        }
+
+        /// <summary>
+        /// 本接口用于修改[站点加速](https://cloud.tencent.com/document/product/1552/96193)全局配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL7AccSettingRequest"/></param>
+        /// <returns><see cref="ModifyL7AccSettingResponse"/></returns>
+        public ModifyL7AccSettingResponse ModifyL7AccSettingSync(ModifyL7AccSettingRequest req)
+        {
+            return InternalRequestAsync<ModifyL7AccSettingResponse>(req, "ModifyL7AccSetting")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改负载均衡实例配置。负载均衡功能内测中，如您需要使用请 [联系我们](https://cloud.tencent.com/online-service)。
         /// </summary>
         /// <param name="req"><see cref="ModifyLoadBalancerRequest"/></param>
@@ -2817,7 +2943,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 用于修改站点配置
+        /// 本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，详情请参考 [ModifyL7AccSetting](https://cloud.tencent.com/document/product/1552/115817)。
         /// </summary>
         /// <param name="req"><see cref="ModifyZoneSettingRequest"/></param>
         /// <returns><see cref="ModifyZoneSettingResponse"/></returns>
@@ -2827,7 +2953,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 用于修改站点配置
+        /// 本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，详情请参考 [ModifyL7AccSetting](https://cloud.tencent.com/document/product/1552/115817)。
         /// </summary>
         /// <param name="req"><see cref="ModifyZoneSettingRequest"/></param>
         /// <returns><see cref="ModifyZoneSettingResponse"/></returns>

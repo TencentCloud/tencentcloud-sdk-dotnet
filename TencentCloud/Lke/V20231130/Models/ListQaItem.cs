@@ -150,6 +150,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("SimilarQuestionNum")]
         public ulong? SimilarQuestionNum{ get; set; }
 
+        /// <summary>
+        /// 返回问答关联的相似问,联动搜索,仅展示一条
+        /// </summary>
+        [JsonProperty("SimilarQuestionTips")]
+        public string SimilarQuestionTips{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +183,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "AttrRange", this.AttrRange);
             this.SetParamArrayObj(map, prefix + "AttrLabels.", this.AttrLabels);
             this.SetParamSimple(map, prefix + "SimilarQuestionNum", this.SimilarQuestionNum);
+            this.SetParamSimple(map, prefix + "SimilarQuestionTips", this.SimilarQuestionTips);
         }
     }
 }

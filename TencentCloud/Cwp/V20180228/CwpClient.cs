@@ -28,7 +28,7 @@ namespace TencentCloud.Cwp.V20180228
 
        private const string endpoint = "cwp.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.1168";
+       private const string sdkVersion = "SDK_NET_3.0.1169";
 
         /// <summary>
         /// Client constructor.
@@ -2622,56 +2622,6 @@ namespace TencentCloud.Cwp.V20180228
         public DescribeAttackLogsResponse DescribeAttackLogsSync(DescribeAttackLogsRequest req)
         {
             return InternalRequestAsync<DescribeAttackLogsResponse>(req, "DescribeAttackLogs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 已废弃
-        /// 
-        /// 查询攻击溯源
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAttackSourceRequest"/></param>
-        /// <returns><see cref="DescribeAttackSourceResponse"/></returns>
-        public Task<DescribeAttackSourceResponse> DescribeAttackSource(DescribeAttackSourceRequest req)
-        {
-            return InternalRequestAsync<DescribeAttackSourceResponse>(req, "DescribeAttackSource");
-        }
-
-        /// <summary>
-        /// 已废弃
-        /// 
-        /// 查询攻击溯源
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAttackSourceRequest"/></param>
-        /// <returns><see cref="DescribeAttackSourceResponse"/></returns>
-        public DescribeAttackSourceResponse DescribeAttackSourceSync(DescribeAttackSourceRequest req)
-        {
-            return InternalRequestAsync<DescribeAttackSourceResponse>(req, "DescribeAttackSource")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 已废弃
-        /// 
-        /// 查询攻击溯源事件
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAttackSourceEventsRequest"/></param>
-        /// <returns><see cref="DescribeAttackSourceEventsResponse"/></returns>
-        public Task<DescribeAttackSourceEventsResponse> DescribeAttackSourceEvents(DescribeAttackSourceEventsRequest req)
-        {
-            return InternalRequestAsync<DescribeAttackSourceEventsResponse>(req, "DescribeAttackSourceEvents");
-        }
-
-        /// <summary>
-        /// 已废弃
-        /// 
-        /// 查询攻击溯源事件
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAttackSourceEventsRequest"/></param>
-        /// <returns><see cref="DescribeAttackSourceEventsResponse"/></returns>
-        public DescribeAttackSourceEventsResponse DescribeAttackSourceEventsSync(DescribeAttackSourceEventsRequest req)
-        {
-            return InternalRequestAsync<DescribeAttackSourceEventsResponse>(req, "DescribeAttackSourceEvents")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

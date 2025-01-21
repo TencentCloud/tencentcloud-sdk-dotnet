@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{350F9F65-0799-338B-90EA-9EBA008679C1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1168</VersionPrefix>
+    <VersionPrefix>3.0.1169</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,10 @@
 
   <ItemGroup>
     <Compile Include="V20231130\LkeClient.cs" />
+    <Compile Include="V20231130\Models\AgentProcedure.cs" />
+    <Compile Include="V20231130\Models\AgentProcedureDebugging.cs" />
+    <Compile Include="V20231130\Models\AgentReference.cs" />
+    <Compile Include="V20231130\Models\AgentThought.cs" />
     <Compile Include="V20231130\Models\ApiVarAttrInfo.cs" />
     <Compile Include="V20231130\Models\AppConfig.cs" />
     <Compile Include="V20231130\Models\AppInfo.cs" />
@@ -194,7 +198,9 @@
     <Compile Include="V20231130\Models\KnowledgeDetail.cs" />
     <Compile Include="V20231130\Models\KnowledgeQaConfig.cs" />
     <Compile Include="V20231130\Models\KnowledgeQaOutput.cs" />
+    <Compile Include="V20231130\Models\KnowledgeQaPlugin.cs" />
     <Compile Include="V20231130\Models\KnowledgeQaSearch.cs" />
+    <Compile Include="V20231130\Models\KnowledgeQaSingleWorkflow.cs" />
     <Compile Include="V20231130\Models\KnowledgeSummary.cs" />
     <Compile Include="V20231130\Models\KnowledgeWorkflow.cs" />
     <Compile Include="V20231130\Models\Label.cs" />
@@ -265,6 +271,7 @@
     <Compile Include="V20231130\Models\Option.cs" />
     <Compile Include="V20231130\Models\ParseDocRequest.cs" />
     <Compile Include="V20231130\Models\ParseDocResponse.cs" />
+    <Compile Include="V20231130\Models\PluginToolReqParam.cs" />
     <Compile Include="V20231130\Models\Polygon.cs" />
     <Compile Include="V20231130\Models\Procedure.cs" />
     <Compile Include="V20231130\Models\ProcedureDebugging.cs" />
@@ -303,6 +310,7 @@
     <Compile Include="V20231130\Models\SaveDocRequest.cs" />
     <Compile Include="V20231130\Models\SaveDocResponse.cs" />
     <Compile Include="V20231130\Models\SearchRange.cs" />
+    <Compile Include="V20231130\Models\SearchStrategy.cs" />
     <Compile Include="V20231130\Models\SimilarQuestion.cs" />
     <Compile Include="V20231130\Models\SimilarQuestionModify.cs" />
     <Compile Include="V20231130\Models\Stat.cs" />

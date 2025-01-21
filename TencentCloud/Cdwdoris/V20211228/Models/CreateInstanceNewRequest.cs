@@ -115,7 +115,14 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// 开启多可用区后，用户的所有可用区和子网信息
         /// </summary>
         [JsonProperty("UserMultiZoneInfos")]
+        [System.Obsolete]
         public NetworkInfo UserMultiZoneInfos{ get; set; }
+
+        /// <summary>
+        /// 开启多可用区后，用户的所有可用区和子网信息
+        /// </summary>
+        [JsonProperty("UserMultiZoneInfoArr")]
+        public NetworkInfo[] UserMultiZoneInfoArr{ get; set; }
 
 
         /// <summary>
@@ -138,6 +145,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "CaseSensitive", this.CaseSensitive);
             this.SetParamSimple(map, prefix + "EnableMultiZones", this.EnableMultiZones);
             this.SetParamObj(map, prefix + "UserMultiZoneInfos.", this.UserMultiZoneInfos);
+            this.SetParamArrayObj(map, prefix + "UserMultiZoneInfoArr.", this.UserMultiZoneInfoArr);
         }
     }
 }

@@ -31,6 +31,18 @@ namespace TencentCloud.Lke.V20231130.Models
         public string AppType{ get; set; }
 
         /// <summary>
+        /// 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+        /// </summary>
+        [JsonProperty("Pattern")]
+        public string Pattern{ get; set; }
+
+        /// <summary>
+        /// 模型类别 generate：生成模型，thought：思考模型
+        /// </summary>
+        [JsonProperty("ModelCategory")]
+        public string ModelCategory{ get; set; }
+
+        /// <summary>
         /// 登录用户主账号(集成商模式必填)	
         /// </summary>
         [JsonProperty("LoginUin")]
@@ -49,6 +61,8 @@ namespace TencentCloud.Lke.V20231130.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AppType", this.AppType);
+            this.SetParamSimple(map, prefix + "Pattern", this.Pattern);
+            this.SetParamSimple(map, prefix + "ModelCategory", this.ModelCategory);
             this.SetParamSimple(map, prefix + "LoginUin", this.LoginUin);
             this.SetParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
         }

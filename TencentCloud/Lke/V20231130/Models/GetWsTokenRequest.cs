@@ -43,7 +43,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string VisitorBizId{ get; set; }
 
         /// <summary>
-        /// 知识标签（用于知识库中知识的检索过滤）
+        /// 知识标签，用于知识库中知识的检索过滤。该字段即将下线，请使用对话端接口中的 custom_variables 字段替代该字段。
         /// </summary>
         [JsonProperty("VisitorLabels")]
         public GetWsTokenReq_Label[] VisitorLabels{ get; set; }

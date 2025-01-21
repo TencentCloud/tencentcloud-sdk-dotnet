@@ -80,6 +80,20 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("UsageType")]
         public string UsageType{ get; set; }
 
+        /// <summary>
+        /// 模型温度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Temperature")]
+        public string Temperature{ get; set; }
+
+        /// <summary>
+        /// 模型TopP
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TopP")]
+        public string TopP{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +108,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "IsUseContext", this.IsUseContext);
             this.SetParamSimple(map, prefix + "HistoryLimit", this.HistoryLimit);
             this.SetParamSimple(map, prefix + "UsageType", this.UsageType);
+            this.SetParamSimple(map, prefix + "Temperature", this.Temperature);
+            this.SetParamSimple(map, prefix + "TopP", this.TopP);
         }
     }
 }

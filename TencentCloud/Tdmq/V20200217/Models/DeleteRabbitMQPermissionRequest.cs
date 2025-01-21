@@ -37,7 +37,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string User{ get; set; }
 
         /// <summary>
-        /// vhost名
+        /// vhost名称
         /// </summary>
         [JsonProperty("VirtualHost")]
         public string VirtualHost{ get; set; }

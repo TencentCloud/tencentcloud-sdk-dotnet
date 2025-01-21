@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AttackSourceEdge : AbstractModel
+    public class CreateL7AccRulesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 出发节点
+        /// 站点 ID。
         /// </summary>
-        [JsonProperty("From")]
-        public string From{ get; set; }
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 目标节点
+        /// 规则内容。
         /// </summary>
-        [JsonProperty("To")]
-        public string To{ get; set; }
+        [JsonProperty("Rules")]
+        public RuleEngineItem[] Rules{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "From", this.From);
-            this.SetParamSimple(map, prefix + "To", this.To);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
         }
     }
 }

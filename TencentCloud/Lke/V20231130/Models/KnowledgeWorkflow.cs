@@ -31,6 +31,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("IsEnabled")]
         public bool? IsEnabled{ get; set; }
 
+        /// <summary>
+        /// 是否启用PDL
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UsePdl")]
+        public bool? UsePdl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +45,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "IsEnabled", this.IsEnabled);
+            this.SetParamSimple(map, prefix + "UsePdl", this.UsePdl);
         }
     }
 }

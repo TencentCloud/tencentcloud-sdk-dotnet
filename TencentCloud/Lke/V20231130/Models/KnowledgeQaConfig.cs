@@ -39,7 +39,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string RoleDescription{ get; set; }
 
         /// <summary>
-        /// 模型配置
+        /// 生成模型配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Model")]
@@ -73,6 +73,41 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("SearchRange")]
         public SearchRange SearchRange{ get; set; }
 
+        /// <summary>
+        /// 应用模式，standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Pattern")]
+        public string Pattern{ get; set; }
+
+        /// <summary>
+        /// 检索策略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SearchStrategy")]
+        public SearchStrategy SearchStrategy{ get; set; }
+
+        /// <summary>
+        /// 单工作流ID，Pattern为single_workflow时传入
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SingleWorkflow")]
+        public KnowledgeQaSingleWorkflow SingleWorkflow{ get; set; }
+
+        /// <summary>
+        /// 应用关联插件
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Plugins")]
+        public KnowledgeQaPlugin[] Plugins{ get; set; }
+
+        /// <summary>
+        /// 思考模型配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ThoughtModel")]
+        public AppModel ThoughtModel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +121,11 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamObj(map, prefix + "Output.", this.Output);
             this.SetParamObj(map, prefix + "Workflow.", this.Workflow);
             this.SetParamObj(map, prefix + "SearchRange.", this.SearchRange);
+            this.SetParamSimple(map, prefix + "Pattern", this.Pattern);
+            this.SetParamObj(map, prefix + "SearchStrategy.", this.SearchStrategy);
+            this.SetParamObj(map, prefix + "SingleWorkflow.", this.SingleWorkflow);
+            this.SetParamArrayObj(map, prefix + "Plugins.", this.Plugins);
+            this.SetParamObj(map, prefix + "ThoughtModel.", this.ThoughtModel);
         }
     }
 }

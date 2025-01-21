@@ -72,6 +72,24 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("LoginSecurityStatus")]
         public long? LoginSecurityStatus{ get; set; }
 
+        /// <summary>
+        /// 是否开启密码过期提醒（0 关闭，1 开启
+        /// </summary>
+        [JsonProperty("ResetPassWordTip")]
+        public long? ResetPassWordTip{ get; set; }
+
+        /// <summary>
+        /// 强制修改密码（0 关闭，1 开启）
+        /// </summary>
+        [JsonProperty("ForceResetPassWord")]
+        public long? ForceResetPassWord{ get; set; }
+
+        /// <summary>
+        /// 密码过期提醒时间，30、60、90（默认）、180天
+        /// </summary>
+        [JsonProperty("PasswordExpired")]
+        public long? PasswordExpired{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +104,9 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "AreaCode", this.AreaCode);
             this.SetParamSimple(map, prefix + "AppUserId", this.AppUserId);
             this.SetParamSimple(map, prefix + "LoginSecurityStatus", this.LoginSecurityStatus);
+            this.SetParamSimple(map, prefix + "ResetPassWordTip", this.ResetPassWordTip);
+            this.SetParamSimple(map, prefix + "ForceResetPassWord", this.ForceResetPassWord);
+            this.SetParamSimple(map, prefix + "PasswordExpired", this.PasswordExpired);
         }
     }
 }

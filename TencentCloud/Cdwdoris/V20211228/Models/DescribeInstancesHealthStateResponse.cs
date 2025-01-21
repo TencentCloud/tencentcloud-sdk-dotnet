@@ -26,7 +26,6 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         
         /// <summary>
         /// base64编码后的数据，包含了集群的健康信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public string Data{ get; set; }

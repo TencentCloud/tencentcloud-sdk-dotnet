@@ -15,50 +15,39 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAttackSourceEventsRequest : AbstractModel
+    public class DescribeL7AccRulesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 主机uuid
+        /// 站点 ID。
         /// </summary>
-        [JsonProperty("Uuid")]
-        public string Uuid{ get; set; }
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 开始日期
+        /// 过滤条件，Filters.Values 的上限为 20，不填写此参数时默认按顺序返回站点下的规则。详细的过滤条件如下：
+        /// <li>rule-id：按照规则 ID 进行过滤。</li>
         /// </summary>
-        [JsonProperty("BeginDate")]
-        public string BeginDate{ get; set; }
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 结束日期
-        /// </summary>
-        [JsonProperty("EndDate")]
-        public string EndDate{ get; set; }
-
-        /// <summary>
-        /// 接口DescribeAttackSource 返回的EventInfoParam
-        /// </summary>
-        [JsonProperty("EventInfoParam")]
-        public string EventInfoParam{ get; set; }
-
-        /// <summary>
-        /// 限制分页条数默认10
+        /// 分页查询限制数目，默认值：20，上限：1000。
         /// </summary>
         [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        public long? Limit{ get; set; }
 
         /// <summary>
-        /// 起始步长默认0
+        /// 分页查询偏移量，默认为 0。
         /// </summary>
         [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
+        public long? Offset{ get; set; }
 
 
         /// <summary>
@@ -66,10 +55,8 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
-            this.SetParamSimple(map, prefix + "BeginDate", this.BeginDate);
-            this.SetParamSimple(map, prefix + "EndDate", this.EndDate);
-            this.SetParamSimple(map, prefix + "EventInfoParam", this.EventInfoParam);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }

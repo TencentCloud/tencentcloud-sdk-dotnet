@@ -44,7 +44,6 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
 
         /// <summary>
         /// 备份单副本数据量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackUpSingleSize")]
         public long? BackUpSingleSize{ get; set; }
@@ -69,45 +68,45 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
 
         /// <summary>
         /// 0为默认。1时是对远端的doris进行备份，不周期，一次性
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupType")]
         public long? BackupType{ get; set; }
 
         /// <summary>
         /// 0为默认。1时是立即备份。2时是迁移
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupTimeType")]
         public long? BackupTimeType{ get; set; }
 
         /// <summary>
         /// 远端doris的连接信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DorisSourceInfo")]
         public DorisSourceInfo DorisSourceInfo{ get; set; }
 
         /// <summary>
         /// 实例状态对应的数值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobStatusNum")]
         public long? JobStatusNum{ get; set; }
 
         /// <summary>
         /// 备份实例中关于cos的信息	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupCosInfo")]
         public BackupCosInfo BackupCosInfo{ get; set; }
 
         /// <summary>
         /// 是否使用的自定义桶
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsUserDefineBucket")]
         public bool? IsUserDefineBucket{ get; set; }
+
+        /// <summary>
+        /// 错误原因
+        /// </summary>
+        [JsonProperty("ErrorReason")]
+        public string ErrorReason{ get; set; }
 
 
         /// <summary>
@@ -128,6 +127,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "JobStatusNum", this.JobStatusNum);
             this.SetParamObj(map, prefix + "BackupCosInfo.", this.BackupCosInfo);
             this.SetParamSimple(map, prefix + "IsUserDefineBucket", this.IsUserDefineBucket);
+            this.SetParamSimple(map, prefix + "ErrorReason", this.ErrorReason);
         }
     }
 }

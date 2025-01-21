@@ -43,19 +43,19 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 分区类型
+        /// 分区类型（已废弃）
         /// </summary>
         [JsonProperty("PartitionType")]
         public string PartitionType{ get; set; }
 
         /// <summary>
-        /// 分区格式
+        /// 分区格式（已废弃）
         /// </summary>
         [JsonProperty("PartitionFormat")]
         public string PartitionFormat{ get; set; }
 
         /// <summary>
-        /// 分区分隔数
+        /// 分区分隔数（已废弃）
         /// </summary>
         [JsonProperty("PartitionDot")]
         public long? PartitionDot{ get; set; }

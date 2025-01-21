@@ -31,8 +31,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 预付费订单 id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 预付费订单 ，预付费不为null，后付费为null
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }

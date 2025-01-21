@@ -32,14 +32,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
 
         /// <summary>
         /// 前端规则描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FrontEndRules")]
         public FrontEndRule[] FrontEndRules{ get; set; }
 
         /// <summary>
         /// 返回可用的白名单名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AvailableWhiteListNames")]
         public string[] AvailableWhiteListNames{ get; set; }

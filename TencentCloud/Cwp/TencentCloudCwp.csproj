@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1168</VersionPrefix>
+    <VersionPrefix>3.0.1169</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -87,10 +87,6 @@
     <Compile Include="V20180228\Models\AssetWebLocationInfo.cs" />
     <Compile Include="V20180228\Models\AssetWebLocationPath.cs" />
     <Compile Include="V20180228\Models\AssetWebServiceBaseInfo.cs" />
-    <Compile Include="V20180228\Models\AttackSource.cs" />
-    <Compile Include="V20180228\Models\AttackSourceEdge.cs" />
-    <Compile Include="V20180228\Models\AttackSourceEvent.cs" />
-    <Compile Include="V20180228\Models\AttackSourceNode.cs" />
     <Compile Include="V20180228\Models\BanWhiteList.cs" />
     <Compile Include="V20180228\Models\BanWhiteListDetail.cs" />
     <Compile Include="V20180228\Models\BaselineBasicInfo.cs" />
@@ -383,10 +379,6 @@
     <Compile Include="V20180228\Models\DescribeAttackEventsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeAttackLogsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeAttackLogsResponse.cs" />
-    <Compile Include="V20180228\Models\DescribeAttackSourceEventsRequest.cs" />
-    <Compile Include="V20180228\Models\DescribeAttackSourceEventsResponse.cs" />
-    <Compile Include="V20180228\Models\DescribeAttackSourceRequest.cs" />
-    <Compile Include="V20180228\Models\DescribeAttackSourceResponse.cs" />
     <Compile Include="V20180228\Models\DescribeAttackStatisticsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeAttackStatisticsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeAttackTopRequest.cs" />

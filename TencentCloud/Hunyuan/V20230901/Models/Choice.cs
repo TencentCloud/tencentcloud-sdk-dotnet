@@ -53,6 +53,12 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("Index")]
         public long? Index{ get; set; }
 
+        /// <summary>
+        /// 多轮会话风险审核，值为1时，表明存在信息安全风险，建议终止客户多轮会话。
+        /// </summary>
+        [JsonProperty("ModerationLevel")]
+        public string ModerationLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -63,6 +69,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamObj(map, prefix + "Delta.", this.Delta);
             this.SetParamObj(map, prefix + "Message.", this.Message);
             this.SetParamSimple(map, prefix + "Index", this.Index);
+            this.SetParamSimple(map, prefix + "ModerationLevel", this.ModerationLevel);
         }
     }
 }

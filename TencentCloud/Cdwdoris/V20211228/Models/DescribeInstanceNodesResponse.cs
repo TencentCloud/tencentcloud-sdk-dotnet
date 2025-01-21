@@ -32,7 +32,6 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
 
         /// <summary>
         /// 实例节点总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceNodesList")]
         public InstanceNode[] InstanceNodesList{ get; set; }

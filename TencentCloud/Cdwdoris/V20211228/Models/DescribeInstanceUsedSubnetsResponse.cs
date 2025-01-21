@@ -26,14 +26,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         
         /// <summary>
         /// 集群使用的vpc信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// 集群使用的subnet信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UsedSubnets")]
         public string[] UsedSubnets{ get; set; }

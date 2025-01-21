@@ -25,8 +25,7 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 返回消息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 返回消息,请求成功才会返回，出现异常默认为null
         /// </summary>
         [JsonProperty("Msg")]
         public string Msg{ get; set; }

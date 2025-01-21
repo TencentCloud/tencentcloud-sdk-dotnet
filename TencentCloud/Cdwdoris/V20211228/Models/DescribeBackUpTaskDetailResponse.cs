@@ -26,14 +26,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         
         /// <summary>
         /// 备份任务进度详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupStatus")]
         public BackupStatus[] BackupStatus{ get; set; }
 
         /// <summary>
         /// 错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }

@@ -114,6 +114,12 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("ArchId")]
         public string ArchId{ get; set; }
 
+        /// <summary>
+        /// 架构名称
+        /// </summary>
+        [JsonProperty("ArchName")]
+        public string ArchName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamArraySimple(map, prefix + "ApplicationName.", this.ApplicationName);
             this.SetParamArraySimple(map, prefix + "TaskStatusList.", this.TaskStatusList);
             this.SetParamSimple(map, prefix + "ArchId", this.ArchId);
+            this.SetParamSimple(map, prefix + "ArchName", this.ArchName);
         }
     }
 }

@@ -15,26 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAttackSourceResponse : AbstractModel
+    public class ZoneConfigParameters : AbstractModel
     {
         
         /// <summary>
-        /// 攻击溯源数据
+        /// 站点名称。
         /// </summary>
-        [JsonProperty("AttackSource")]
-        public AttackSource AttackSource{ get; set; }
+        [JsonProperty("ZoneName")]
+        public string ZoneName{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+        /// 站点配置信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("ZoneConfig")]
+        public ZoneConfig ZoneConfig{ get; set; }
 
 
         /// <summary>
@@ -42,8 +43,8 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "AttackSource.", this.AttackSource);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
+            this.SetParamObj(map, prefix + "ZoneConfig.", this.ZoneConfig);
         }
     }
 }

@@ -32,7 +32,6 @@ namespace TencentCloud.Rum.V20210622.Models
 
         /// <summary>
         /// pv访问量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Pv")]
         public string Pv{ get; set; }

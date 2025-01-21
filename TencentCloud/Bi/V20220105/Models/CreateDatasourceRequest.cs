@@ -144,6 +144,18 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("OperationAuthLimit")]
         public string[] OperationAuthLimit{ get; set; }
 
+        /// <summary>
+        /// 开启vpc
+        /// </summary>
+        [JsonProperty("UseVPC")]
+        public bool? UseVPC{ get; set; }
+
+        /// <summary>
+        /// 地域
+        /// </summary>
+        [JsonProperty("RegionId")]
+        public string RegionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +182,8 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "Vport", this.Vport);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamArraySimple(map, prefix + "OperationAuthLimit.", this.OperationAuthLimit);
+            this.SetParamSimple(map, prefix + "UseVPC", this.UseVPC);
+            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
         }
     }
 }

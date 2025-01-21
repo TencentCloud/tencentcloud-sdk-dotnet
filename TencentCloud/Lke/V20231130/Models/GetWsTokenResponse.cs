@@ -25,7 +25,7 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// token值（有效期60s）
+        /// token值（有效期60s，仅一次有效，多次校验会报错）
         /// </summary>
         [JsonProperty("Token")]
         public string Token{ get; set; }
@@ -44,6 +44,18 @@ namespace TencentCloud.Lke.V20231130.Models
         public long? InputLenLimit{ get; set; }
 
         /// <summary>
+        /// 应用模式，standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+        /// </summary>
+        [JsonProperty("Pattern")]
+        public string Pattern{ get; set; }
+
+        /// <summary>
+        /// SingleWorkflow
+        /// </summary>
+        [JsonProperty("SingleWorkflow")]
+        public KnowledgeQaSingleWorkflow SingleWorkflow{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -58,6 +70,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Token", this.Token);
             this.SetParamSimple(map, prefix + "Balance", this.Balance);
             this.SetParamSimple(map, prefix + "InputLenLimit", this.InputLenLimit);
+            this.SetParamSimple(map, prefix + "Pattern", this.Pattern);
+            this.SetParamObj(map, prefix + "SingleWorkflow.", this.SingleWorkflow);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

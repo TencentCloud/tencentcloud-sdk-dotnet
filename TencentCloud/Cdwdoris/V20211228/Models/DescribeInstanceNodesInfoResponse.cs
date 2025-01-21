@@ -26,14 +26,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         
         /// <summary>
         /// Be节点
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BeNodes")]
         public string[] BeNodes{ get; set; }
 
         /// <summary>
         /// Fe节点
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FeNodes")]
         public string[] FeNodes{ get; set; }
@@ -46,14 +44,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
 
         /// <summary>
         /// Be节点信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BeNodeInfos")]
         public NodeInfo[] BeNodeInfos{ get; set; }
 
         /// <summary>
         /// Fe节点信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FeNodeInfos")]
         public NodeInfo[] FeNodeInfos{ get; set; }

@@ -146,7 +146,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string InstallDependency{ get; set; }
 
         /// <summary>
-        /// 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/47175)
+        /// 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/115197)
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

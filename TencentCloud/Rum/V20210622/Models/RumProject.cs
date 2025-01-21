@@ -56,14 +56,12 @@ namespace TencentCloud.Rum.V20210622.Models
 
         /// <summary>
         /// 项目仓库地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Repo")]
         public string Repo{ get; set; }
 
         /// <summary>
         /// 项目网址地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("URL")]
         public string URL{ get; set; }
@@ -106,31 +104,33 @@ namespace TencentCloud.Rum.V20210622.Models
 
         /// <summary>
         /// 项目描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
         /// 是否星标  1:是 0:否
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsStar")]
         public long? IsStar{ get; set; }
 
         /// <summary>
         /// 项目状态(1 创建中，2 运行中，3 异常，4 重启中，5 停止中，6 已停止， 7 销毁中，8 已销毁)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectStatus")]
         public long? ProjectStatus{ get; set; }
 
         /// <summary>
         /// 日志接入点，用户忽略。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessPoint")]
         public string AccessPoint{ get; set; }
+
+        /// <summary>
+        /// kafka旁路配置信息
+        /// </summary>
+        [JsonProperty("Kafka")]
+        public Kafka Kafka{ get; set; }
 
 
         /// <summary>
@@ -155,6 +155,7 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "IsStar", this.IsStar);
             this.SetParamSimple(map, prefix + "ProjectStatus", this.ProjectStatus);
             this.SetParamSimple(map, prefix + "AccessPoint", this.AccessPoint);
+            this.SetParamObj(map, prefix + "Kafka.", this.Kafka);
         }
     }
 }

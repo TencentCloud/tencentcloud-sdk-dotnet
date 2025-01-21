@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1168</VersionPrefix>
+    <VersionPrefix>3.0.1169</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -129,6 +129,7 @@
     <Compile Include="V20181119\Models\GeneralAccurateOCRResponse.cs" />
     <Compile Include="V20181119\Models\GeneralBasicOCRRequest.cs" />
     <Compile Include="V20181119\Models\GeneralBasicOCRResponse.cs" />
+    <Compile Include="V20181119\Models\GeneralCardWarnInfo.cs" />
     <Compile Include="V20181119\Models\GeneralEfficientOCRRequest.cs" />
     <Compile Include="V20181119\Models\GeneralEfficientOCRResponse.cs" />
     <Compile Include="V20181119\Models\GeneralFastOCRRequest.cs" />
@@ -230,6 +231,8 @@
     <Compile Include="V20181119\Models\RecognizeEncryptedIDCardOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeForeignPermanentResidentIdCardRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeForeignPermanentResidentIdCardResponse.cs" />
+    <Compile Include="V20181119\Models\RecognizeGeneralCardWarnRequest.cs" />
+    <Compile Include="V20181119\Models\RecognizeGeneralCardWarnResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeGeneralInvoiceRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeGeneralInvoiceResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeGeneralTextImageWarnRequest.cs" />

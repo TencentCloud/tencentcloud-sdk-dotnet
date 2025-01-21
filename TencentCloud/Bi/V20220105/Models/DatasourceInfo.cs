@@ -266,6 +266,13 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("DbTypeName")]
         public string DbTypeName{ get; set; }
 
+        /// <summary>
+        /// 开启vpc
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UseVPC")]
+        public bool? UseVPC{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -308,6 +315,7 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "DataOriginDatasourceId", this.DataOriginDatasourceId);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "DbTypeName", this.DbTypeName);
+            this.SetParamSimple(map, prefix + "UseVPC", this.UseVPC);
         }
     }
 }

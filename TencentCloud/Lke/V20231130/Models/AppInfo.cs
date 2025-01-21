@@ -102,11 +102,25 @@ namespace TencentCloud.Lke.V20231130.Models
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// 模型别名
+        /// 生成模型别名
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModelAliasName")]
         public string ModelAliasName{ get; set; }
+
+        /// <summary>
+        /// 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Pattern")]
+        public string Pattern{ get; set; }
+
+        /// <summary>
+        /// 思考模型别名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ThoughtModelAliasName")]
+        public string ThoughtModelAliasName{ get; set; }
 
 
         /// <summary>
@@ -126,6 +140,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
             this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
             this.SetParamSimple(map, prefix + "ModelAliasName", this.ModelAliasName);
+            this.SetParamSimple(map, prefix + "Pattern", this.Pattern);
+            this.SetParamSimple(map, prefix + "ThoughtModelAliasName", this.ThoughtModelAliasName);
         }
     }
 }

@@ -67,6 +67,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         /// 多轮会话风险审核，值为1时，表明存在信息安全风险，建议终止客户多轮会话。
         /// </summary>
         [JsonProperty("ModerationLevel")]
+        [System.Obsolete]
         public string ModerationLevel{ get; set; }
 
         /// <summary>

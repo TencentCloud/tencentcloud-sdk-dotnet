@@ -15,32 +15,29 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAttackSourceRequest : AbstractModel
+    public class UpstreamFollowRedirectParameters : AbstractModel
     {
         
         /// <summary>
-        /// 主机uuid
+        /// 回源跟随重定向配置开关，取值有：
+        /// <li>on：开启；</li>
+        /// <li>off：关闭。</li>
         /// </summary>
-        [JsonProperty("Uuid")]
-        public string Uuid{ get; set; }
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
 
         /// <summary>
-        /// 开始日期
+        /// 最大重定向次数。取值为 1-5。
+        /// 注意：当 Switch 为 on 时，此字段必填；当 Switch 为 off 时，无需填写此字段，若填写则不生效。
         /// </summary>
-        [JsonProperty("BeginDate")]
-        public string BeginDate{ get; set; }
-
-        /// <summary>
-        /// 结束日期
-        /// </summary>
-        [JsonProperty("EndDate")]
-        public string EndDate{ get; set; }
+        [JsonProperty("MaxTimes")]
+        public long? MaxTimes{ get; set; }
 
 
         /// <summary>
@@ -48,9 +45,8 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
-            this.SetParamSimple(map, prefix + "BeginDate", this.BeginDate);
-            this.SetParamSimple(map, prefix + "EndDate", this.EndDate);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamSimple(map, prefix + "MaxTimes", this.MaxTimes);
         }
     }
 }

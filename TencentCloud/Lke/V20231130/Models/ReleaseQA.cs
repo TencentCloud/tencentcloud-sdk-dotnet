@@ -49,7 +49,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string ActionDesc{ get; set; }
 
         /// <summary>
-        /// 来源
+        /// 来源1:文档生成，2：批量导入，3：手动添加
         /// </summary>
         [JsonProperty("Source")]
         public ulong? Source{ get; set; }

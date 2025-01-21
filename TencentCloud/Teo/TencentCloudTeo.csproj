@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1168</VersionPrefix>
+    <VersionPrefix>3.0.1169</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,9 +49,12 @@
   <ItemGroup>
     <Compile Include="V20220901\TeoClient.cs" />
     <Compile Include="V20220901\Models\AccelerateMainland.cs" />
+    <Compile Include="V20220901\Models\AccelerateMainlandParameters.cs" />
     <Compile Include="V20220901\Models\AccelerateType.cs" />
     <Compile Include="V20220901\Models\AccelerationDomain.cs" />
     <Compile Include="V20220901\Models\AccelerationDomainCertificate.cs" />
+    <Compile Include="V20220901\Models\AccessURLRedirectParameters.cs" />
+    <Compile Include="V20220901\Models\AccessURLRedirectQueryString.cs" />
     <Compile Include="V20220901\Models\AclCondition.cs" />
     <Compile Include="V20220901\Models\AclConfig.cs" />
     <Compile Include="V20220901\Models\AclUserRule.cs" />
@@ -66,6 +69,7 @@
     <Compile Include="V20220901\Models\ApplicationProxy.cs" />
     <Compile Include="V20220901\Models\ApplicationProxyRule.cs" />
     <Compile Include="V20220901\Models\AscriptionInfo.cs" />
+    <Compile Include="V20220901\Models\AuthenticationParameters.cs" />
     <Compile Include="V20220901\Models\BillingData.cs" />
     <Compile Include="V20220901\Models\BillingDataFilter.cs" />
     <Compile Include="V20220901\Models\BindSecurityTemplateToEntityRequest.cs" />
@@ -84,18 +88,30 @@
     <Compile Include="V20220901\Models\CLSTopic.cs" />
     <Compile Include="V20220901\Models\Cache.cs" />
     <Compile Include="V20220901\Models\CacheConfig.cs" />
+    <Compile Include="V20220901\Models\CacheConfigCustomTime.cs" />
+    <Compile Include="V20220901\Models\CacheConfigParameters.cs" />
     <Compile Include="V20220901\Models\CacheKey.cs" />
+    <Compile Include="V20220901\Models\CacheKeyConfigParameters.cs" />
+    <Compile Include="V20220901\Models\CacheKeyCookie.cs" />
+    <Compile Include="V20220901\Models\CacheKeyHeader.cs" />
+    <Compile Include="V20220901\Models\CacheKeyParameters.cs" />
+    <Compile Include="V20220901\Models\CacheKeyQueryString.cs" />
+    <Compile Include="V20220901\Models\CacheParameters.cs" />
     <Compile Include="V20220901\Models\CachePrefresh.cs" />
+    <Compile Include="V20220901\Models\CachePrefreshParameters.cs" />
     <Compile Include="V20220901\Models\CacheTag.cs" />
     <Compile Include="V20220901\Models\CertificateInfo.cs" />
     <Compile Include="V20220901\Models\CheckCnameStatusRequest.cs" />
     <Compile Include="V20220901\Models\CheckCnameStatusResponse.cs" />
     <Compile Include="V20220901\Models\CheckRegionHealthStatus.cs" />
+    <Compile Include="V20220901\Models\ClientIPCountryParameters.cs" />
+    <Compile Include="V20220901\Models\ClientIPHeaderParameters.cs" />
     <Compile Include="V20220901\Models\ClientIpCountry.cs" />
     <Compile Include="V20220901\Models\ClientIpHeader.cs" />
     <Compile Include="V20220901\Models\CnameStatus.cs" />
     <Compile Include="V20220901\Models\CodeAction.cs" />
     <Compile Include="V20220901\Models\Compression.cs" />
+    <Compile Include="V20220901\Models\CompressionParameters.cs" />
     <Compile Include="V20220901\Models\ConfigGroupVersionInfo.cs" />
     <Compile Include="V20220901\Models\ContentIdentifier.cs" />
     <Compile Include="V20220901\Models\CreateAccelerationDomainRequest.cs" />
@@ -124,6 +140,8 @@
     <Compile Include="V20220901\Models\CreateL4ProxyResponse.cs" />
     <Compile Include="V20220901\Models\CreateL4ProxyRulesRequest.cs" />
     <Compile Include="V20220901\Models\CreateL4ProxyRulesResponse.cs" />
+    <Compile Include="V20220901\Models\CreateL7AccRulesRequest.cs" />
+    <Compile Include="V20220901\Models\CreateL7AccRulesResponse.cs" />
     <Compile Include="V20220901\Models\CreateLoadBalancerRequest.cs" />
     <Compile Include="V20220901\Models\CreateLoadBalancerResponse.cs" />
     <Compile Include="V20220901\Models\CreateOriginGroupRequest.cs" />
@@ -149,6 +167,7 @@
     <Compile Include="V20220901\Models\CustomEndpoint.cs" />
     <Compile Include="V20220901\Models\CustomErrorPage.cs" />
     <Compile Include="V20220901\Models\CustomField.cs" />
+    <Compile Include="V20220901\Models\CustomTime.cs" />
     <Compile Include="V20220901\Models\CustomizedHeader.cs" />
     <Compile Include="V20220901\Models\DDoS.cs" />
     <Compile Include="V20220901\Models\DDoSAttackEvent.cs" />
@@ -177,6 +196,8 @@
     <Compile Include="V20220901\Models\DeleteL4ProxyResponse.cs" />
     <Compile Include="V20220901\Models\DeleteL4ProxyRulesRequest.cs" />
     <Compile Include="V20220901\Models\DeleteL4ProxyRulesResponse.cs" />
+    <Compile Include="V20220901\Models\DeleteL7AccRulesRequest.cs" />
+    <Compile Include="V20220901\Models\DeleteL7AccRulesResponse.cs" />
     <Compile Include="V20220901\Models\DeleteLoadBalancerRequest.cs" />
     <Compile Include="V20220901\Models\DeleteLoadBalancerResponse.cs" />
     <Compile Include="V20220901\Models\DeleteOriginGroupRequest.cs" />
@@ -245,6 +266,10 @@
     <Compile Include="V20220901\Models\DescribeL4ProxyResponse.cs" />
     <Compile Include="V20220901\Models\DescribeL4ProxyRulesRequest.cs" />
     <Compile Include="V20220901\Models\DescribeL4ProxyRulesResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeL7AccRulesRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeL7AccRulesResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeL7AccSettingRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeL7AccSettingResponse.cs" />
     <Compile Include="V20220901\Models\DescribeLoadBalancerListRequest.cs" />
     <Compile Include="V20220901\Models\DescribeLoadBalancerListResponse.cs" />
     <Compile Include="V20220901\Models\DescribeOriginGroupHealthStatusRequest.cs" />
@@ -301,6 +326,8 @@
     <Compile Include="V20220901\Models\DropPageDetail.cs" />
     <Compile Include="V20220901\Models\EntityStatus.cs" />
     <Compile Include="V20220901\Models\EnvInfo.cs" />
+    <Compile Include="V20220901\Models\ErrorPage.cs" />
+    <Compile Include="V20220901\Models\ErrorPageParameters.cs" />
     <Compile Include="V20220901\Models\ErrorPageReference.cs" />
     <Compile Include="V20220901\Models\ExceptConfig.cs" />
     <Compile Include="V20220901\Models\ExceptUserRule.cs" />
@@ -315,20 +342,30 @@
     <Compile Include="V20220901\Models\FirstPartConfig.cs" />
     <Compile Include="V20220901\Models\FollowOrigin.cs" />
     <Compile Include="V20220901\Models\ForceRedirect.cs" />
+    <Compile Include="V20220901\Models\ForceRedirectHTTPSParameters.cs" />
     <Compile Include="V20220901\Models\Function.cs" />
     <Compile Include="V20220901\Models\FunctionEnvironmentVariable.cs" />
     <Compile Include="V20220901\Models\FunctionRule.cs" />
     <Compile Include="V20220901\Models\FunctionRuleCondition.cs" />
     <Compile Include="V20220901\Models\Grpc.cs" />
+    <Compile Include="V20220901\Models\GrpcParameters.cs" />
+    <Compile Include="V20220901\Models\HSTSParameters.cs" />
+    <Compile Include="V20220901\Models\HTTP2Parameters.cs" />
+    <Compile Include="V20220901\Models\HTTPResponseParameters.cs" />
+    <Compile Include="V20220901\Models\HTTPUpstreamTimeoutParameters.cs" />
     <Compile Include="V20220901\Models\HandleFunctionRuntimeEnvironmentRequest.cs" />
     <Compile Include="V20220901\Models\HandleFunctionRuntimeEnvironmentResponse.cs" />
     <Compile Include="V20220901\Models\Header.cs" />
+    <Compile Include="V20220901\Models\HeaderAction.cs" />
     <Compile Include="V20220901\Models\HealthChecker.cs" />
+    <Compile Include="V20220901\Models\HostHeaderParameters.cs" />
+    <Compile Include="V20220901\Models\HostName.cs" />
     <Compile Include="V20220901\Models\Hsts.cs" />
     <Compile Include="V20220901\Models\Https.cs" />
     <Compile Include="V20220901\Models\IPGroup.cs" />
     <Compile Include="V20220901\Models\IPRegionInfo.cs" />
     <Compile Include="V20220901\Models\IPWhitelist.cs" />
+    <Compile Include="V20220901\Models\IPv6Parameters.cs" />
     <Compile Include="V20220901\Models\Identification.cs" />
     <Compile Include="V20220901\Models\IdentifyZoneRequest.cs" />
     <Compile Include="V20220901\Models\IdentifyZoneResponse.cs" />
@@ -351,6 +388,7 @@
     <Compile Include="V20220901\Models\LoadBalancer.cs" />
     <Compile Include="V20220901\Models\LogFormat.cs" />
     <Compile Include="V20220901\Models\MaxAge.cs" />
+    <Compile Include="V20220901\Models\MaxAgeParameters.cs" />
     <Compile Include="V20220901\Models\ModifyAccelerationDomainRequest.cs" />
     <Compile Include="V20220901\Models\ModifyAccelerationDomainResponse.cs" />
     <Compile Include="V20220901\Models\ModifyAccelerationDomainStatusesRequest.cs" />
@@ -391,14 +429,21 @@
     <Compile Include="V20220901\Models\ModifyL4ProxyRulesStatusResponse.cs" />
     <Compile Include="V20220901\Models\ModifyL4ProxyStatusRequest.cs" />
     <Compile Include="V20220901\Models\ModifyL4ProxyStatusResponse.cs" />
+    <Compile Include="V20220901\Models\ModifyL7AccRuleRequest.cs" />
+    <Compile Include="V20220901\Models\ModifyL7AccRuleResponse.cs" />
+    <Compile Include="V20220901\Models\ModifyL7AccSettingRequest.cs" />
+    <Compile Include="V20220901\Models\ModifyL7AccSettingResponse.cs" />
     <Compile Include="V20220901\Models\ModifyLoadBalancerRequest.cs" />
     <Compile Include="V20220901\Models\ModifyLoadBalancerResponse.cs" />
     <Compile Include="V20220901\Models\ModifyOriginGroupRequest.cs" />
     <Compile Include="V20220901\Models\ModifyOriginGroupResponse.cs" />
+    <Compile Include="V20220901\Models\ModifyOriginParameters.cs" />
     <Compile Include="V20220901\Models\ModifyPlanRequest.cs" />
     <Compile Include="V20220901\Models\ModifyPlanResponse.cs" />
     <Compile Include="V20220901\Models\ModifyRealtimeLogDeliveryTaskRequest.cs" />
     <Compile Include="V20220901\Models\ModifyRealtimeLogDeliveryTaskResponse.cs" />
+    <Compile Include="V20220901\Models\ModifyRequestHeaderParameters.cs" />
+    <Compile Include="V20220901\Models\ModifyResponseHeaderParameters.cs" />
     <Compile Include="V20220901\Models\ModifyRuleRequest.cs" />
     <Compile Include="V20220901\Models\ModifyRuleResponse.cs" />
     <Compile Include="V20220901\Models\ModifySecurityIPGroupRequest.cs" />
@@ -415,7 +460,9 @@
     <Compile Include="V20220901\Models\NoCache.cs" />
     <Compile Include="V20220901\Models\NormalAction.cs" />
     <Compile Include="V20220901\Models\NsVerification.cs" />
+    <Compile Include="V20220901\Models\OCSPStaplingParameters.cs" />
     <Compile Include="V20220901\Models\OfflineCache.cs" />
+    <Compile Include="V20220901\Models\OfflineCacheParameters.cs" />
     <Compile Include="V20220901\Models\Origin.cs" />
     <Compile Include="V20220901\Models\OriginDetail.cs" />
     <Compile Include="V20220901\Models\OriginGroup.cs" />
@@ -425,18 +472,22 @@
     <Compile Include="V20220901\Models\OriginGroupReference.cs" />
     <Compile Include="V20220901\Models\OriginHealthStatus.cs" />
     <Compile Include="V20220901\Models\OriginInfo.cs" />
+    <Compile Include="V20220901\Models\OriginPrivateParameters.cs" />
     <Compile Include="V20220901\Models\OriginProtectionInfo.cs" />
     <Compile Include="V20220901\Models\OriginRecord.cs" />
     <Compile Include="V20220901\Models\OwnershipVerification.cs" />
     <Compile Include="V20220901\Models\PartialModule.cs" />
     <Compile Include="V20220901\Models\PlanInfo.cs" />
     <Compile Include="V20220901\Models\PostMaxSize.cs" />
+    <Compile Include="V20220901\Models\PostMaxSizeParameters.cs" />
     <Compile Include="V20220901\Models\PrepaidPlanParam.cs" />
     <Compile Include="V20220901\Models\PrivateParameter.cs" />
+    <Compile Include="V20220901\Models\QUICParameters.cs" />
     <Compile Include="V20220901\Models\QueryCondition.cs" />
     <Compile Include="V20220901\Models\QueryString.cs" />
     <Compile Include="V20220901\Models\Quic.cs" />
     <Compile Include="V20220901\Models\Quota.cs" />
+    <Compile Include="V20220901\Models\RangeOriginPullParameters.cs" />
     <Compile Include="V20220901\Models\RateLimitConfig.cs" />
     <Compile Include="V20220901\Models\RateLimitIntelligence.cs" />
     <Compile Include="V20220901\Models\RateLimitTemplate.cs" />
@@ -447,12 +498,17 @@
     <Compile Include="V20220901\Models\RenewPlanRequest.cs" />
     <Compile Include="V20220901\Models\RenewPlanResponse.cs" />
     <Compile Include="V20220901\Models\Resource.cs" />
+    <Compile Include="V20220901\Models\ResponseSpeedLimitParameters.cs" />
     <Compile Include="V20220901\Models\RewriteAction.cs" />
     <Compile Include="V20220901\Models\Rule.cs" />
     <Compile Include="V20220901\Models\RuleAndConditions.cs" />
+    <Compile Include="V20220901\Models\RuleBranch.cs" />
     <Compile Include="V20220901\Models\RuleChoicePropertiesItem.cs" />
     <Compile Include="V20220901\Models\RuleCodeActionParams.cs" />
     <Compile Include="V20220901\Models\RuleCondition.cs" />
+    <Compile Include="V20220901\Models\RuleEngineAction.cs" />
+    <Compile Include="V20220901\Models\RuleEngineItem.cs" />
+    <Compile Include="V20220901\Models\RuleEngineSubRule.cs" />
     <Compile Include="V20220901\Models\RuleExtraParameter.cs" />
     <Compile Include="V20220901\Models\RuleItem.cs" />
     <Compile Include="V20220901\Models\RuleNormalActionParams.cs" />
@@ -466,15 +522,21 @@
     <Compile Include="V20220901\Models\SecurityTemplateBinding.cs" />
     <Compile Include="V20220901\Models\SecurityType.cs" />
     <Compile Include="V20220901\Models\ServerCertInfo.cs" />
+    <Compile Include="V20220901\Models\SetContentIdentifierParameters.cs" />
     <Compile Include="V20220901\Models\SkipCondition.cs" />
     <Compile Include="V20220901\Models\SlowPostConfig.cs" />
     <Compile Include="V20220901\Models\SlowRateConfig.cs" />
     <Compile Include="V20220901\Models\SmartRouting.cs" />
+    <Compile Include="V20220901\Models\SmartRoutingParameters.cs" />
     <Compile Include="V20220901\Models\StandardDebug.cs" />
+    <Compile Include="V20220901\Models\StandardDebugParameters.cs" />
+    <Compile Include="V20220901\Models\StatusCodeCacheParam.cs" />
+    <Compile Include="V20220901\Models\StatusCodeCacheParameters.cs" />
     <Compile Include="V20220901\Models\SubRule.cs" />
     <Compile Include="V20220901\Models\SubRuleItem.cs" />
     <Compile Include="V20220901\Models\Sv.cs" />
     <Compile Include="V20220901\Models\SwitchConfig.cs" />
+    <Compile Include="V20220901\Models\TLSConfigParameters.cs" />
     <Compile Include="V20220901\Models\Tag.cs" />
     <Compile Include="V20220901\Models\Task.cs" />
     <Compile Include="V20220901\Models\TemplateConfig.cs" />
@@ -486,10 +548,17 @@
     <Compile Include="V20220901\Models\TopDetailData.cs" />
     <Compile Include="V20220901\Models\TopEntry.cs" />
     <Compile Include="V20220901\Models\TopEntryValue.cs" />
+    <Compile Include="V20220901\Models\URLPath.cs" />
     <Compile Include="V20220901\Models\UpgradePlanRequest.cs" />
     <Compile Include="V20220901\Models\UpgradePlanResponse.cs" />
     <Compile Include="V20220901\Models\UpstreamCertInfo.cs" />
+    <Compile Include="V20220901\Models\UpstreamFollowRedirectParameters.cs" />
+    <Compile Include="V20220901\Models\UpstreamHTTP2Parameters.cs" />
     <Compile Include="V20220901\Models\UpstreamHttp2.cs" />
+    <Compile Include="V20220901\Models\UpstreamRequestCookie.cs" />
+    <Compile Include="V20220901\Models\UpstreamRequestParameters.cs" />
+    <Compile Include="V20220901\Models\UpstreamRequestQueryString.cs" />
+    <Compile Include="V20220901\Models\UpstreamURLRewriteParameters.cs" />
     <Compile Include="V20220901\Models\VanityNameServers.cs" />
     <Compile Include="V20220901\Models\VanityNameServersIps.cs" />
     <Compile Include="V20220901\Models\VerifyOwnershipRequest.cs" />
@@ -498,7 +567,10 @@
     <Compile Include="V20220901\Models\WafConfig.cs" />
     <Compile Include="V20220901\Models\WafRule.cs" />
     <Compile Include="V20220901\Models\WebSocket.cs" />
+    <Compile Include="V20220901\Models\WebSocketParameters.cs" />
     <Compile Include="V20220901\Models\Zone.cs" />
+    <Compile Include="V20220901\Models\ZoneConfig.cs" />
+    <Compile Include="V20220901\Models\ZoneConfigParameters.cs" />
     <Compile Include="V20220901\Models\ZoneSetting.cs" />
     <Compile Include="V20220106\TeoClient.cs" />
     <Compile Include="V20220106\Models\CreatePrefetchTaskRequest.cs" />

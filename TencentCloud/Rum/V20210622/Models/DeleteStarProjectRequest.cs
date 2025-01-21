@@ -25,7 +25,7 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 实例ID：taw-123
+        /// 实例ID：****-1792
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }

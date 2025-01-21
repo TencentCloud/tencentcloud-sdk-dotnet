@@ -185,6 +185,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("QuoteInfos")]
         public QuoteInfo[] QuoteInfos{ get; set; }
 
+        /// <summary>
+        /// Agent的思考过程信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AgentThought")]
+        public AgentThought AgentThought{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -214,6 +221,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamObj(map, prefix + "TaskFlow.", this.TaskFlow);
             this.SetParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
             this.SetParamArrayObj(map, prefix + "QuoteInfos.", this.QuoteInfos);
+            this.SetParamObj(map, prefix + "AgentThought.", this.AgentThought);
         }
     }
 }

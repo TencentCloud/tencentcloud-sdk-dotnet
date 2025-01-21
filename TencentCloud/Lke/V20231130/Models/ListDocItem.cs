@@ -39,6 +39,12 @@ namespace TencentCloud.Lke.V20231130.Models
         public string FileName{ get; set; }
 
         /// <summary>
+        /// 重命名的新文档名称，在重命名提交之后，文档发布之前都是这个名称
+        /// </summary>
+        [JsonProperty("NewName")]
+        public string NewName{ get; set; }
+
+        /// <summary>
         /// 文件类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -229,6 +235,7 @@ namespace TencentCloud.Lke.V20231130.Models
         {
             this.SetParamSimple(map, prefix + "DocBizId", this.DocBizId);
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
+            this.SetParamSimple(map, prefix + "NewName", this.NewName);
             this.SetParamSimple(map, prefix + "FileType", this.FileType);
             this.SetParamSimple(map, prefix + "CosUrl", this.CosUrl);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);

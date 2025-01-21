@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1168";
+       private const string sdkVersion = "SDK_NET_3.0.1169";
 
         /// <summary>
         /// Client constructor.
@@ -1885,6 +1885,27 @@ namespace TencentCloud.Ocr.V20181119
         public RecognizeForeignPermanentResidentIdCardResponse RecognizeForeignPermanentResidentIdCardSync(RecognizeForeignPermanentResidentIdCardRequest req)
         {
             return InternalRequestAsync<RecognizeForeignPermanentResidentIdCardResponse>(req, "RecognizeForeignPermanentResidentIdCard")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 支持通用证照的有效性检测告警，包括卡证复印件告警、卡证翻拍告警等功能，支持通用证照的ps伪造检测，可以应用于各种证件信息有效性校验场景。
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeGeneralCardWarnRequest"/></param>
+        /// <returns><see cref="RecognizeGeneralCardWarnResponse"/></returns>
+        public Task<RecognizeGeneralCardWarnResponse> RecognizeGeneralCardWarn(RecognizeGeneralCardWarnRequest req)
+        {
+            return InternalRequestAsync<RecognizeGeneralCardWarnResponse>(req, "RecognizeGeneralCardWarn");
+        }
+
+        /// <summary>
+        /// 支持通用证照的有效性检测告警，包括卡证复印件告警、卡证翻拍告警等功能，支持通用证照的ps伪造检测，可以应用于各种证件信息有效性校验场景。
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeGeneralCardWarnRequest"/></param>
+        /// <returns><see cref="RecognizeGeneralCardWarnResponse"/></returns>
+        public RecognizeGeneralCardWarnResponse RecognizeGeneralCardWarnSync(RecognizeGeneralCardWarnRequest req)
+        {
+            return InternalRequestAsync<RecognizeGeneralCardWarnResponse>(req, "RecognizeGeneralCardWarn")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
