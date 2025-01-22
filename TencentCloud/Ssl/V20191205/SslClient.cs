@@ -28,7 +28,7 @@ namespace TencentCloud.Ssl.V20191205
 
        private const string endpoint = "ssl.tencentcloudapi.com";
        private const string version = "2019-12-05";
-       private const string sdkVersion = "SDK_NET_3.0.1169";
+       private const string sdkVersion = "SDK_NET_3.0.1170";
 
         /// <summary>
         /// Client constructor.
@@ -155,6 +155,27 @@ namespace TencentCloud.Ssl.V20191205
         public CheckCertificateDomainVerificationResponse CheckCertificateDomainVerificationSync(CheckCertificateDomainVerificationRequest req)
         {
             return InternalRequestAsync<CheckCertificateDomainVerificationResponse>(req, "CheckCertificateDomainVerification")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 根据证书内容检测当前账号下是否存在一致的证书， 存在则返回证书ID， 不存在则返回空
+        /// </summary>
+        /// <param name="req"><see cref="CheckCertificateExistRequest"/></param>
+        /// <returns><see cref="CheckCertificateExistResponse"/></returns>
+        public Task<CheckCertificateExistResponse> CheckCertificateExist(CheckCertificateExistRequest req)
+        {
+            return InternalRequestAsync<CheckCertificateExistResponse>(req, "CheckCertificateExist");
+        }
+
+        /// <summary>
+        /// 根据证书内容检测当前账号下是否存在一致的证书， 存在则返回证书ID， 不存在则返回空
+        /// </summary>
+        /// <param name="req"><see cref="CheckCertificateExistRequest"/></param>
+        /// <returns><see cref="CheckCertificateExistResponse"/></returns>
+        public CheckCertificateExistResponse CheckCertificateExistSync(CheckCertificateExistRequest req)
+        {
+            return InternalRequestAsync<CheckCertificateExistResponse>(req, "CheckCertificateExist")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Essbasic.V20210526
 
        private const string endpoint = "essbasic.tencentcloudapi.com";
        private const string version = "2021-05-26";
-       private const string sdkVersion = "SDK_NET_3.0.1169";
+       private const string sdkVersion = "SDK_NET_3.0.1170";
 
         /// <summary>
         /// Client constructor.
@@ -2083,6 +2083,37 @@ namespace TencentCloud.Essbasic.V20210526
         public CreateBatchInitOrganizationUrlResponse CreateBatchInitOrganizationUrlSync(CreateBatchInitOrganizationUrlRequest req)
         {
             return InternalRequestAsync<CreateBatchInitOrganizationUrlResponse>(req, "CreateBatchInitOrganizationUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口用于获取企业批量认证链接-单链接包含多条认证流。
+        /// 
+        /// 前提条件：已调用 [CreateBatchOrganizationRegistrationTasks创建子企业批量认证链接任务接口](https://qian.tencent.com/developers/partnerApis/accounts/CreateBatchOrganizationRegistrationTasks) 和[查询子企业批量认证链接DescribeBatchOrganizationRegistrationUrls](https://qian.tencent.com/developers/partnerApis/accounts/DescribeBatchOrganizationRegistrationUrls) 确保认证任务已经完成。
+        /// 
+        /// 异步任务的处理完成时间视当前已提交的任务量、任务的复杂程度等因素决定，正常情况下 3~5 秒即可完成，但也可能需要更长的时间。
+        /// 此链接包含多条认证流程，使用该链接可以批量的对企业进行认证。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBatchOrganizationAuthorizationUrlRequest"/></param>
+        /// <returns><see cref="CreateBatchOrganizationAuthorizationUrlResponse"/></returns>
+        public Task<CreateBatchOrganizationAuthorizationUrlResponse> CreateBatchOrganizationAuthorizationUrl(CreateBatchOrganizationAuthorizationUrlRequest req)
+        {
+            return InternalRequestAsync<CreateBatchOrganizationAuthorizationUrlResponse>(req, "CreateBatchOrganizationAuthorizationUrl");
+        }
+
+        /// <summary>
+        /// 此接口用于获取企业批量认证链接-单链接包含多条认证流。
+        /// 
+        /// 前提条件：已调用 [CreateBatchOrganizationRegistrationTasks创建子企业批量认证链接任务接口](https://qian.tencent.com/developers/partnerApis/accounts/CreateBatchOrganizationRegistrationTasks) 和[查询子企业批量认证链接DescribeBatchOrganizationRegistrationUrls](https://qian.tencent.com/developers/partnerApis/accounts/DescribeBatchOrganizationRegistrationUrls) 确保认证任务已经完成。
+        /// 
+        /// 异步任务的处理完成时间视当前已提交的任务量、任务的复杂程度等因素决定，正常情况下 3~5 秒即可完成，但也可能需要更长的时间。
+        /// 此链接包含多条认证流程，使用该链接可以批量的对企业进行认证。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBatchOrganizationAuthorizationUrlRequest"/></param>
+        /// <returns><see cref="CreateBatchOrganizationAuthorizationUrlResponse"/></returns>
+        public CreateBatchOrganizationAuthorizationUrlResponse CreateBatchOrganizationAuthorizationUrlSync(CreateBatchOrganizationAuthorizationUrlRequest req)
+        {
+            return InternalRequestAsync<CreateBatchOrganizationAuthorizationUrlResponse>(req, "CreateBatchOrganizationAuthorizationUrl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

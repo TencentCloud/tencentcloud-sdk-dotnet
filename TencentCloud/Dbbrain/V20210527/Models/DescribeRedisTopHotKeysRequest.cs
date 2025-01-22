@@ -60,6 +60,12 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 偏移量，默认为0。
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "Product", this.Product);
             this.SetParamArraySimple(map, prefix + "InstanceNodeIds.", this.InstanceNodeIds);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

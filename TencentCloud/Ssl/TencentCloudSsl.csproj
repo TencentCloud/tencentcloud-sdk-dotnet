@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6E5F67EE-DB08-3C18-905D-3312ECC2D894}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1169</VersionPrefix>
+    <VersionPrefix>3.0.1170</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -71,6 +71,8 @@
     <Compile Include="V20191205\Models\CheckCertificateChainResponse.cs" />
     <Compile Include="V20191205\Models\CheckCertificateDomainVerificationRequest.cs" />
     <Compile Include="V20191205\Models\CheckCertificateDomainVerificationResponse.cs" />
+    <Compile Include="V20191205\Models\CheckCertificateExistRequest.cs" />
+    <Compile Include="V20191205\Models\CheckCertificateExistResponse.cs" />
     <Compile Include="V20191205\Models\ClbInstanceDetail.cs" />
     <Compile Include="V20191205\Models\ClbInstanceList.cs" />
     <Compile Include="V20191205\Models\ClbListener.cs" />

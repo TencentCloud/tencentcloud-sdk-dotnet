@@ -28,7 +28,7 @@ namespace TencentCloud.Goosefs.V20220519
 
        private const string endpoint = "goosefs.tencentcloudapi.com";
        private const string version = "2022-05-19";
-       private const string sdkVersion = "SDK_NET_3.0.1169";
+       private const string sdkVersion = "SDK_NET_3.0.1170";
 
         /// <summary>
         /// Client constructor.
