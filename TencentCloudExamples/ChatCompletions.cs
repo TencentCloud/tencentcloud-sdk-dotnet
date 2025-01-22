@@ -18,6 +18,7 @@ namespace TencentCloudExamples
             };
 
             var cpf = new ClientProfile();
+            cpf.HttpProfile.Timeout = 400; // 流式接口耗时可能较长
 
             var client = new HunyuanClient(cred, "ap-guangzhou", cpf);
             var req = new ChatCompletionsRequest
