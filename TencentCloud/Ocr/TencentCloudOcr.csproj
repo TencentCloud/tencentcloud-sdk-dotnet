@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1170</VersionPrefix>
+    <VersionPrefix>3.0.1171</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -101,6 +101,7 @@
     <Compile Include="V20181119\Models\ElectronicFlightTicketFull.cs" />
     <Compile Include="V20181119\Models\ElectronicTrainTicket.cs" />
     <Compile Include="V20181119\Models\ElectronicTrainTicketFull.cs" />
+    <Compile Include="V20181119\Models\Element.cs" />
     <Compile Include="V20181119\Models\Encryption.cs" />
     <Compile Include="V20181119\Models\EnglishOCRRequest.cs" />
     <Compile Include="V20181119\Models\EnglishOCRResponse.cs" />
@@ -129,7 +130,6 @@
     <Compile Include="V20181119\Models\GeneralAccurateOCRResponse.cs" />
     <Compile Include="V20181119\Models\GeneralBasicOCRRequest.cs" />
     <Compile Include="V20181119\Models\GeneralBasicOCRResponse.cs" />
-    <Compile Include="V20181119\Models\GeneralCardWarnInfo.cs" />
     <Compile Include="V20181119\Models\GeneralEfficientOCRRequest.cs" />
     <Compile Include="V20181119\Models\GeneralEfficientOCRResponse.cs" />
     <Compile Include="V20181119\Models\GeneralFastOCRRequest.cs" />
@@ -220,7 +220,12 @@
     <Compile Include="V20181119\Models\QrcodePositionObj.cs" />
     <Compile Include="V20181119\Models\QrcodeResultsInfo.cs" />
     <Compile Include="V20181119\Models\QuestionBlockObj.cs" />
+    <Compile Include="V20181119\Models\QuestionInfo.cs" />
+    <Compile Include="V20181119\Models\QuestionOCRRequest.cs" />
+    <Compile Include="V20181119\Models\QuestionOCRResponse.cs" />
     <Compile Include="V20181119\Models\QuestionObj.cs" />
+    <Compile Include="V20181119\Models\QuestionSplitOCRRequest.cs" />
+    <Compile Include="V20181119\Models\QuestionSplitOCRResponse.cs" />
     <Compile Include="V20181119\Models\QuotaInvoice.cs" />
     <Compile Include="V20181119\Models\QuotaInvoiceOCRRequest.cs" />
     <Compile Include="V20181119\Models\QuotaInvoiceOCRResponse.cs" />
@@ -231,8 +236,8 @@
     <Compile Include="V20181119\Models\RecognizeEncryptedIDCardOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeForeignPermanentResidentIdCardRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeForeignPermanentResidentIdCardResponse.cs" />
-    <Compile Include="V20181119\Models\RecognizeGeneralCardWarnRequest.cs" />
-    <Compile Include="V20181119\Models\RecognizeGeneralCardWarnResponse.cs" />
+    <Compile Include="V20181119\Models\RecognizeFormulaOCRRequest.cs" />
+    <Compile Include="V20181119\Models\RecognizeFormulaOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeGeneralInvoiceRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeGeneralInvoiceResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeGeneralTextImageWarnRequest.cs" />
@@ -263,6 +268,7 @@
     <Compile Include="V20181119\Models\ResidenceBookletOCRRequest.cs" />
     <Compile Include="V20181119\Models\ResidenceBookletOCRResponse.cs" />
     <Compile Include="V20181119\Models\ResidencePermitInfo.cs" />
+    <Compile Include="V20181119\Models\ResultList.cs" />
     <Compile Include="V20181119\Models\RideHailingDriverLicenseOCRRequest.cs" />
     <Compile Include="V20181119\Models\RideHailingDriverLicenseOCRResponse.cs" />
     <Compile Include="V20181119\Models\RideHailingTransportLicenseOCRRequest.cs" />
@@ -303,6 +309,7 @@
     <Compile Include="V20181119\Models\TextDetectionEn.cs" />
     <Compile Include="V20181119\Models\TextEduPaper.cs" />
     <Compile Include="V20181119\Models\TextFormula.cs" />
+    <Compile Include="V20181119\Models\TextFormulaInfo.cs" />
     <Compile Include="V20181119\Models\TextGeneralHandwriting.cs" />
     <Compile Include="V20181119\Models\TextTable.cs" />
     <Compile Include="V20181119\Models\TextTractorVehicleBack.cs" />

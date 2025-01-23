@@ -55,7 +55,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public string[] Cc{ get; set; }
 
         /// <summary>
-        /// 密送人邮箱地址，最多支持抄送20人。
+        /// 密送人邮箱地址，最多支持抄送20人,Bcc和Destination不能重复。
         /// </summary>
         [JsonProperty("Bcc")]
         public string[] Bcc{ get; set; }

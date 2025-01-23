@@ -25,6 +25,36 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
+        /// 收件人总数
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
+        /// 实际上传数量
+        /// </summary>
+        [JsonProperty("ValidCount")]
+        public ulong? ValidCount{ get; set; }
+
+        /// <summary>
+        /// 数据过长数量
+        /// </summary>
+        [JsonProperty("TooLongCount")]
+        public ulong? TooLongCount{ get; set; }
+
+        /// <summary>
+        /// 邮件地址为空数量
+        /// </summary>
+        [JsonProperty("EmptyEmailCount")]
+        public ulong? EmptyEmailCount{ get; set; }
+
+        /// <summary>
+        /// 重复数量
+        /// </summary>
+        [JsonProperty("RepeatCount")]
+        public ulong? RepeatCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +66,11 @@ namespace TencentCloud.Ses.V20201002.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "ValidCount", this.ValidCount);
+            this.SetParamSimple(map, prefix + "TooLongCount", this.TooLongCount);
+            this.SetParamSimple(map, prefix + "EmptyEmailCount", this.EmptyEmailCount);
+            this.SetParamSimple(map, prefix + "RepeatCount", this.RepeatCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

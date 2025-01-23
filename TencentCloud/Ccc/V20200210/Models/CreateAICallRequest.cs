@@ -155,6 +155,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? WelcomeType{ get; set; }
 
         /// <summary>
+        /// 0: 默认可打断， 1：高优先不可打断
+        /// </summary>
+        [JsonProperty("WelcomeMessagePriority")]
+        public long? WelcomeMessagePriority{ get; set; }
+
+        /// <summary>
         /// 最大等待时长(毫秒)，默认60秒，超过这个时间用户没说话，自动挂断
         /// </summary>
         [JsonProperty("MaxDuration")]
@@ -190,7 +196,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string[] Languages{ get; set; }
 
         /// <summary>
-        /// 打断AI说话模式，默认为0，0表示服务端自动打断，1表示服务端不打断，由端上发送打断信令进行打断
+        /// 打断AI说话模式，默认为0，0表示自动打断，1表示不打断。
         /// </summary>
         [JsonProperty("InterruptMode")]
         public long? InterruptMode{ get; set; }
@@ -339,6 +345,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("VadSilenceTime")]
         public long? VadSilenceTime{ get; set; }
 
+        /// <summary>
+        /// 通话内容提取配置
+        /// </summary>
+        [JsonProperty("ExtractConfig")]
+        public AICallExtractConfigElement[] ExtractConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -356,6 +368,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamArraySimple(map, prefix + "Callers.", this.Callers);
             this.SetParamSimple(map, prefix + "WelcomeMessage", this.WelcomeMessage);
             this.SetParamSimple(map, prefix + "WelcomeType", this.WelcomeType);
+            this.SetParamSimple(map, prefix + "WelcomeMessagePriority", this.WelcomeMessagePriority);
             this.SetParamSimple(map, prefix + "MaxDuration", this.MaxDuration);
             this.SetParamArraySimple(map, prefix + "Languages.", this.Languages);
             this.SetParamSimple(map, prefix + "InterruptMode", this.InterruptMode);
@@ -370,6 +383,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "CustomTTSConfig", this.CustomTTSConfig);
             this.SetParamArrayObj(map, prefix + "PromptVariables.", this.PromptVariables);
             this.SetParamSimple(map, prefix + "VadSilenceTime", this.VadSilenceTime);
+            this.SetParamArrayObj(map, prefix + "ExtractConfig.", this.ExtractConfig);
         }
     }
 }

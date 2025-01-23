@@ -21,26 +21,20 @@ namespace TencentCloud.Ocr.V20181119.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GeneralCardWarnInfo : AbstractModel
+    public class QuestionOCRResponse : AbstractModel
     {
         
         /// <summary>
-        /// 是否存在该告警
+        /// 检测到的文本信息
         /// </summary>
-        [JsonProperty("IsWarn")]
-        public bool? IsWarn{ get; set; }
+        [JsonProperty("QuestionInfo")]
+        public QuestionInfo[] QuestionInfo{ get; set; }
 
         /// <summary>
-        /// 风险程度
+        /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("RiskConfidence")]
-        public float? RiskConfidence{ get; set; }
-
-        /// <summary>
-        /// 告警位置四点坐标
-        /// </summary>
-        [JsonProperty("Polygon")]
-        public Polygon[] Polygon{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "IsWarn", this.IsWarn);
-            this.SetParamSimple(map, prefix + "RiskConfidence", this.RiskConfidence);
-            this.SetParamArrayObj(map, prefix + "Polygon.", this.Polygon);
+            this.SetParamArrayObj(map, prefix + "QuestionInfo.", this.QuestionInfo);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

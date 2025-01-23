@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1170";
+       private const string sdkVersion = "SDK_NET_3.0.1171";
 
         /// <summary>
         /// Client constructor.
@@ -1697,6 +1697,56 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 题目识别是教育的基础OCR识别能力。可支持扫描、拍照场景的单题题目识别。接口支持印刷体文本、手写体文本及公式的OCR识别和坐标返回，此外，接口还可对题目中的配图位置进行检测并返回坐标位置。适用于智能批改等场景的题目内容识别作为检索输入。
+        /// 
+        /// 默认接口请求频率限制：2次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="QuestionOCRRequest"/></param>
+        /// <returns><see cref="QuestionOCRResponse"/></returns>
+        public Task<QuestionOCRResponse> QuestionOCR(QuestionOCRRequest req)
+        {
+            return InternalRequestAsync<QuestionOCRResponse>(req, "QuestionOCR");
+        }
+
+        /// <summary>
+        /// 题目识别是教育的基础OCR识别能力。可支持扫描、拍照场景的单题题目识别。接口支持印刷体文本、手写体文本及公式的OCR识别和坐标返回，此外，接口还可对题目中的配图位置进行检测并返回坐标位置。适用于智能批改等场景的题目内容识别作为检索输入。
+        /// 
+        /// 默认接口请求频率限制：2次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="QuestionOCRRequest"/></param>
+        /// <returns><see cref="QuestionOCRResponse"/></returns>
+        public QuestionOCRResponse QuestionOCRSync(QuestionOCRRequest req)
+        {
+            return InternalRequestAsync<QuestionOCRResponse>(req, "QuestionOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 试卷切题识别可将整页练习册、试卷或教辅中的题目进行自动切题，并识别出其中的文字内容和坐标位置。
+        /// 
+        /// 默认接口请求频率限制：2次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="QuestionSplitOCRRequest"/></param>
+        /// <returns><see cref="QuestionSplitOCRResponse"/></returns>
+        public Task<QuestionSplitOCRResponse> QuestionSplitOCR(QuestionSplitOCRRequest req)
+        {
+            return InternalRequestAsync<QuestionSplitOCRResponse>(req, "QuestionSplitOCR");
+        }
+
+        /// <summary>
+        /// 试卷切题识别可将整页练习册、试卷或教辅中的题目进行自动切题，并识别出其中的文字内容和坐标位置。
+        /// 
+        /// 默认接口请求频率限制：2次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="QuestionSplitOCRRequest"/></param>
+        /// <returns><see cref="QuestionSplitOCRResponse"/></returns>
+        public QuestionSplitOCRResponse QuestionSplitOCRSync(QuestionSplitOCRRequest req)
+        {
+            return InternalRequestAsync<QuestionSplitOCRResponse>(req, "QuestionSplitOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口支持定额发票的发票号码、发票代码、金额(大小写)、发票消费类型、地区及是否有公司印章等关键字段的识别。
         /// 
         /// 默认接口请求频率限制：5次/秒。
@@ -1889,23 +1939,27 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 支持通用证照的有效性检测告警，包括卡证复印件告警、卡证翻拍告警等功能，支持通用证照的ps伪造检测，可以应用于各种证件信息有效性校验场景。
+        /// 公式识别是教育的基础OCR识别能力，可支持理科（数学、物理、化学、生物）的印刷体和手写体的公式识别。
+        /// 
+        /// 默认接口请求频率限制：2次/秒。
         /// </summary>
-        /// <param name="req"><see cref="RecognizeGeneralCardWarnRequest"/></param>
-        /// <returns><see cref="RecognizeGeneralCardWarnResponse"/></returns>
-        public Task<RecognizeGeneralCardWarnResponse> RecognizeGeneralCardWarn(RecognizeGeneralCardWarnRequest req)
+        /// <param name="req"><see cref="RecognizeFormulaOCRRequest"/></param>
+        /// <returns><see cref="RecognizeFormulaOCRResponse"/></returns>
+        public Task<RecognizeFormulaOCRResponse> RecognizeFormulaOCR(RecognizeFormulaOCRRequest req)
         {
-            return InternalRequestAsync<RecognizeGeneralCardWarnResponse>(req, "RecognizeGeneralCardWarn");
+            return InternalRequestAsync<RecognizeFormulaOCRResponse>(req, "RecognizeFormulaOCR");
         }
 
         /// <summary>
-        /// 支持通用证照的有效性检测告警，包括卡证复印件告警、卡证翻拍告警等功能，支持通用证照的ps伪造检测，可以应用于各种证件信息有效性校验场景。
+        /// 公式识别是教育的基础OCR识别能力，可支持理科（数学、物理、化学、生物）的印刷体和手写体的公式识别。
+        /// 
+        /// 默认接口请求频率限制：2次/秒。
         /// </summary>
-        /// <param name="req"><see cref="RecognizeGeneralCardWarnRequest"/></param>
-        /// <returns><see cref="RecognizeGeneralCardWarnResponse"/></returns>
-        public RecognizeGeneralCardWarnResponse RecognizeGeneralCardWarnSync(RecognizeGeneralCardWarnRequest req)
+        /// <param name="req"><see cref="RecognizeFormulaOCRRequest"/></param>
+        /// <returns><see cref="RecognizeFormulaOCRResponse"/></returns>
+        public RecognizeFormulaOCRResponse RecognizeFormulaOCRSync(RecognizeFormulaOCRRequest req)
         {
-            return InternalRequestAsync<RecognizeGeneralCardWarnResponse>(req, "RecognizeGeneralCardWarn")
+            return InternalRequestAsync<RecognizeFormulaOCRResponse>(req, "RecognizeFormulaOCR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

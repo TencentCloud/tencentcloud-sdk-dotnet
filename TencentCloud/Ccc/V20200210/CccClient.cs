@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1170";
+       private const string sdkVersion = "SDK_NET_3.0.1171";
 
         /// <summary>
         /// Client constructor.
@@ -499,6 +499,27 @@ namespace TencentCloud.Ccc.V20200210
         public DeleteStaffResponse DeleteStaffSync(DeleteStaffRequest req)
         {
             return InternalRequestAsync<DeleteStaffResponse>(req, "DeleteStaff")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取 AI 通话内容提取结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAICallExtractResultRequest"/></param>
+        /// <returns><see cref="DescribeAICallExtractResultResponse"/></returns>
+        public Task<DescribeAICallExtractResultResponse> DescribeAICallExtractResult(DescribeAICallExtractResultRequest req)
+        {
+            return InternalRequestAsync<DescribeAICallExtractResultResponse>(req, "DescribeAICallExtractResult");
+        }
+
+        /// <summary>
+        /// 获取 AI 通话内容提取结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAICallExtractResultRequest"/></param>
+        /// <returns><see cref="DescribeAICallExtractResultResponse"/></returns>
+        public DescribeAICallExtractResultResponse DescribeAICallExtractResultSync(DescribeAICallExtractResultRequest req)
+        {
+            return InternalRequestAsync<DescribeAICallExtractResultResponse>(req, "DescribeAICallExtractResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
