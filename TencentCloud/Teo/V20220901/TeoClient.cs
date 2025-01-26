@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1171";
+       private const string sdkVersion = "SDK_NET_3.0.1172";
 
         /// <summary>
         /// Client constructor.
@@ -593,7 +593,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 规则引擎创建规则。
+        /// 本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，详情请参考 [CreateL7AccRules](https://cloud.tencent.com/document/product/1552/115822)。
         /// </summary>
         /// <param name="req"><see cref="CreateRuleRequest"/></param>
         /// <returns><see cref="CreateRuleResponse"/></returns>
@@ -603,7 +603,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 规则引擎创建规则。
+        /// 本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，详情请参考 [CreateL7AccRules](https://cloud.tencent.com/document/product/1552/115822)。
         /// </summary>
         /// <param name="req"><see cref="CreateRuleRequest"/></param>
         /// <returns><see cref="CreateRuleResponse"/></returns>
@@ -2859,7 +2859,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 修改规则引擎规则。
+        /// 本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，详情请参考 [ModifyL7AccRule](https://cloud.tencent.com/document/product/1552/115818)。
         /// </summary>
         /// <param name="req"><see cref="ModifyRuleRequest"/></param>
         /// <returns><see cref="ModifyRuleResponse"/></returns>
@@ -2869,7 +2869,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 修改规则引擎规则。
+        /// 本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，详情请参考 [ModifyL7AccRule](https://cloud.tencent.com/document/product/1552/115818)。
         /// </summary>
         /// <param name="req"><see cref="ModifyRuleRequest"/></param>
         /// <returns><see cref="ModifyRuleResponse"/></returns>

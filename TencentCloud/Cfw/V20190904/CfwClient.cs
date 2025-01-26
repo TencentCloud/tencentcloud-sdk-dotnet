@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1171";
+       private const string sdkVersion = "SDK_NET_3.0.1172";
 
         /// <summary>
         /// Client constructor.
@@ -1629,31 +1629,6 @@ namespace TencentCloud.Cfw.V20190904
         public ModifyAllRuleStatusResponse ModifyAllRuleStatusSync(ModifyAllRuleStatusRequest req)
         {
             return InternalRequestAsync<ModifyAllRuleStatusResponse>(req, "ModifyAllRuleStatus")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 该接口已不再使用
-        /// 
-        /// VPC防火墙一键开关
-        /// </summary>
-        /// <param name="req"><see cref="ModifyAllVPCSwitchStatusRequest"/></param>
-        /// <returns><see cref="ModifyAllVPCSwitchStatusResponse"/></returns>
-        public Task<ModifyAllVPCSwitchStatusResponse> ModifyAllVPCSwitchStatus(ModifyAllVPCSwitchStatusRequest req)
-        {
-            return InternalRequestAsync<ModifyAllVPCSwitchStatusResponse>(req, "ModifyAllVPCSwitchStatus");
-        }
-
-        /// <summary>
-        /// 该接口已不再使用
-        /// 
-        /// VPC防火墙一键开关
-        /// </summary>
-        /// <param name="req"><see cref="ModifyAllVPCSwitchStatusRequest"/></param>
-        /// <returns><see cref="ModifyAllVPCSwitchStatusResponse"/></returns>
-        public ModifyAllVPCSwitchStatusResponse ModifyAllVPCSwitchStatusSync(ModifyAllVPCSwitchStatusRequest req)
-        {
-            return InternalRequestAsync<ModifyAllVPCSwitchStatusResponse>(req, "ModifyAllVPCSwitchStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
