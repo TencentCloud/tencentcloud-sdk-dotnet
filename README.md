@@ -17,9 +17,20 @@
 
 ## 通过nuget 安装(推荐)
 
-1. 通过命令行安装: `dotnet add package TencentCloudSDK` ，其他信息请到 [nuget](https://www.nuget.org/packages/TencentCloudSDK/) 获取。如果想单独安装某个产品，例如云服务器 CVM，则添加依赖 TencentCloudSDK.Cvm 即可。
+SDK 相关信息请到 [nuget](https://www.nuget.org/packages/TencentCloudSDK/) 获取。使用 SDK 时，需要通过 Visual Studio 的添加包。
 
-2. 通过 Visual Studio 的添加包
+### 安装指定产品 SDK（推荐）
+例如：安装指定产品包
+```bash
+dotnet add package TencentCloudSDK.指定产品包名缩写  # 如 CVM 产品包：TencentCloudSDK.Cvm
+```
+具体产品的包名缩写请参考 [products.md](./products.md) 中的包名字段。
+
+### 安装全产品 SDK
+```bash
+dotnet add package TencentCloudSDK
+```
+全产品 SDK 包含了所有云产品的调用代码，体积偏大，对体积敏感的场景，推荐安装指定产品 SDK。
 
 ## 通过源码安装
 
