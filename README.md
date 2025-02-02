@@ -32,6 +32,10 @@ dotnet add package TencentCloudSDK
 ```
 全产品 SDK 包含了所有云产品的调用代码，体积偏大，对体积敏感的场景，推荐安装指定产品 SDK。
 
+### 注意事项
+- 安装全产品 SDK 和安装指定产品的 SDK 两种方式只能选择其中一种。
+- 如果同时安装多个产品的包，建议多个产品的包和 common 包保持在同一个版本。
+
 ## 通过源码安装
 
 前往 [Github 仓库](https://github.com/tencentcloud/tencentcloud-sdk-dotnet) 或者 [Gitee 仓库](https://gitee.com/tencentcloud/tencentcloud-sdk-dotnet) 下载最新代码，解压后使用 Visual Studio 2017 打开编译。
