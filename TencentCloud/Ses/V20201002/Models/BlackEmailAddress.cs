@@ -38,7 +38,6 @@ namespace TencentCloud.Ses.V20201002.Models
 
         /// <summary>
         /// 被拉黑的理由
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IspDesc")]
         public string IspDesc{ get; set; }

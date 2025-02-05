@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{4AF9E84C-1B74-32AF-86E7-D499C5854FD8}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1173</VersionPrefix>
+    <VersionPrefix>3.0.1174</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,6 +53,8 @@
     <Compile Include="V20240522\Models\AttributeLabelReferItem.cs" />
     <Compile Include="V20240522\Models\ChatCompletionsRequest.cs" />
     <Compile Include="V20240522\Models\ChatCompletionsResponse.cs" />
+    <Compile Include="V20240522\Models\ChatUsage.cs" />
+    <Compile Include="V20240522\Models\Choice.cs" />
     <Compile Include="V20240522\Models\CreateAttributeLabelRequest.cs" />
     <Compile Include="V20240522\Models\CreateAttributeLabelResponse.cs" />
     <Compile Include="V20240522\Models\CreateKnowledgeBaseRequest.cs" />
@@ -73,6 +75,7 @@
     <Compile Include="V20240522\Models\DeleteKnowledgeBaseResponse.cs" />
     <Compile Include="V20240522\Models\DeleteQAsRequest.cs" />
     <Compile Include="V20240522\Models\DeleteQAsResponse.cs" />
+    <Compile Include="V20240522\Models\Delta.cs" />
     <Compile Include="V20240522\Models\DescribeDocRequest.cs" />
     <Compile Include="V20240522\Models\DescribeDocResponse.cs" />
     <Compile Include="V20240522\Models\DocItem.cs" />

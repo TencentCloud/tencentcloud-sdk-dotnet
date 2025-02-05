@@ -44,14 +44,12 @@ namespace TencentCloud.Ses.V20201002.Models
 
         /// <summary>
         /// 收件人列表描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
         /// 列表状态(1 待上传 2 上传中 3 上传完成)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReceiversStatus")]
         public ulong? ReceiversStatus{ get; set; }
@@ -64,7 +62,6 @@ namespace TencentCloud.Ses.V20201002.Models
 
         /// <summary>
         /// 无效收件人数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InvalidCount")]
         public ulong? InvalidCount{ get; set; }

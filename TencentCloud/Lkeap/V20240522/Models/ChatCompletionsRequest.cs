@@ -42,6 +42,18 @@ namespace TencentCloud.Lkeap.V20240522.Models
         [JsonProperty("Stream")]
         public bool? Stream{ get; set; }
 
+        /// <summary>
+        /// 控制生成的随机性，较高的值会产生更多样化的输出。
+        /// </summary>
+        [JsonProperty("Temperature")]
+        public float? Temperature{ get; set; }
+
+        /// <summary>
+        /// 最大生成的token数量
+        /// </summary>
+        [JsonProperty("MaxTokens")]
+        public long? MaxTokens{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Lkeap.V20240522.Models
             this.SetParamSimple(map, prefix + "Model", this.Model);
             this.SetParamArrayObj(map, prefix + "Messages.", this.Messages);
             this.SetParamSimple(map, prefix + "Stream", this.Stream);
+            this.SetParamSimple(map, prefix + "Temperature", this.Temperature);
+            this.SetParamSimple(map, prefix + "MaxTokens", this.MaxTokens);
         }
     }
 }
