@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1174";
+       private const string sdkVersion = "SDK_NET_3.0.1175";
 
         /// <summary>
         /// Client constructor.
@@ -1105,6 +1105,27 @@ namespace TencentCloud.Trocket.V20230308
         public ModifyInstanceResponse ModifyInstanceSync(ModifyInstanceRequest req)
         {
             return InternalRequestAsync<ModifyInstanceResponse>(req, "ModifyInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改 RocketMQ 5.x 集群接入点。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceEndpointRequest"/></param>
+        /// <returns><see cref="ModifyInstanceEndpointResponse"/></returns>
+        public Task<ModifyInstanceEndpointResponse> ModifyInstanceEndpoint(ModifyInstanceEndpointRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceEndpointResponse>(req, "ModifyInstanceEndpoint");
+        }
+
+        /// <summary>
+        /// 修改 RocketMQ 5.x 集群接入点。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceEndpointRequest"/></param>
+        /// <returns><see cref="ModifyInstanceEndpointResponse"/></returns>
+        public ModifyInstanceEndpointResponse ModifyInstanceEndpointSync(ModifyInstanceEndpointRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceEndpointResponse>(req, "ModifyInstanceEndpoint")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,25 +25,28 @@ namespace TencentCloud.Tat.V20201028.Models
     {
         
         /// <summary>
-        /// 注册码描述。
+        /// 注册码描述。最大长度为 128 字符。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 注册实例名称前缀。
+        /// 注册实例名称前缀。最大长度为 32 字符。
         /// </summary>
         [JsonProperty("InstanceNamePrefix")]
         public string InstanceNamePrefix{ get; set; }
 
         /// <summary>
-        /// 该注册码允许注册的实例数目。默认限制为10个。
+        /// 该注册码允许注册的实例数目。默认值为 10，最小值为 1，最大值为 10000。
         /// </summary>
         [JsonProperty("RegisterLimit")]
         public long? RegisterLimit{ get; set; }
 
         /// <summary>
-        /// 该注册码的有效时间，单位为小时。默认为4小时。
+        /// 该注册码的有效时间，单位为小时。默认值为 4。
+        /// 
+        /// - 若传入值小于等于 99999，则以小时为单位设置有效时间。
+        /// - 若传入值大于 99999，则设置为长期有效。
         /// </summary>
         [JsonProperty("EffectiveTime")]
         public long? EffectiveTime{ get; set; }

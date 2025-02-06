@@ -25,7 +25,7 @@ namespace TencentCloud.Tccatalog.V20241024.Models
     {
         
         /// <summary>
-        /// 终端节点服务Id
+        /// 引擎终端节点服务Id
         /// </summary>
         [JsonProperty("EndpointServiceId")]
         public string EndpointServiceId{ get; set; }
@@ -37,10 +37,28 @@ namespace TencentCloud.Tccatalog.V20241024.Models
         public string MetaStoreUrl{ get; set; }
 
         /// <summary>
-        /// 	网络信息
+        /// 网络信息
         /// </summary>
         [JsonProperty("NetWork")]
         public NetWork NetWork{ get; set; }
+
+        /// <summary>
+        /// hive版本
+        /// </summary>
+        [JsonProperty("HiveVersion")]
+        public string HiveVersion{ get; set; }
+
+        /// <summary>
+        /// hive location
+        /// </summary>
+        [JsonProperty("Location")]
+        public string Location{ get; set; }
+
+        /// <summary>
+        /// HMS终端节点服务
+        /// </summary>
+        [JsonProperty("HmsEndpointServiceId")]
+        public string HmsEndpointServiceId{ get; set; }
 
 
         /// <summary>
@@ -51,6 +69,9 @@ namespace TencentCloud.Tccatalog.V20241024.Models
             this.SetParamSimple(map, prefix + "EndpointServiceId", this.EndpointServiceId);
             this.SetParamSimple(map, prefix + "MetaStoreUrl", this.MetaStoreUrl);
             this.SetParamObj(map, prefix + "NetWork.", this.NetWork);
+            this.SetParamSimple(map, prefix + "HiveVersion", this.HiveVersion);
+            this.SetParamSimple(map, prefix + "Location", this.Location);
+            this.SetParamSimple(map, prefix + "HmsEndpointServiceId", this.HmsEndpointServiceId);
         }
     }
 }

@@ -80,6 +80,24 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("MaxTokens")]
         public ModelParameter MaxTokens{ get; set; }
 
+        /// <summary>
+        /// 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验
+        /// </summary>
+        [JsonProperty("Source")]
+        public string Source{ get; set; }
+
+        /// <summary>
+        /// 模型图标
+        /// </summary>
+        [JsonProperty("Icon")]
+        public string Icon{ get; set; }
+
+        /// <summary>
+        /// 是否免费
+        /// </summary>
+        [JsonProperty("IsFree")]
+        public bool? IsFree{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +112,9 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamObj(map, prefix + "TopP.", this.TopP);
             this.SetParamObj(map, prefix + "Temperature.", this.Temperature);
             this.SetParamObj(map, prefix + "MaxTokens.", this.MaxTokens);
+            this.SetParamSimple(map, prefix + "Source", this.Source);
+            this.SetParamSimple(map, prefix + "Icon", this.Icon);
+            this.SetParamSimple(map, prefix + "IsFree", this.IsFree);
         }
     }
 }

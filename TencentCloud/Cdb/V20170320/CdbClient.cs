@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1174";
+       private const string sdkVersion = "SDK_NET_3.0.1175";
 
         /// <summary>
         /// Client constructor.
@@ -1442,6 +1442,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// DescribeCpuExpandStrategy
+        /// 
         /// 通过该 API 可以查询实例的 CPU 弹性扩容策略
         /// </summary>
         /// <param name="req"><see cref="DescribeCpuExpandStrategyRequest"/></param>
@@ -1452,6 +1454,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// DescribeCpuExpandStrategy
+        /// 
         /// 通过该 API 可以查询实例的 CPU 弹性扩容策略
         /// </summary>
         /// <param name="req"><see cref="DescribeCpuExpandStrategyRequest"/></param>
