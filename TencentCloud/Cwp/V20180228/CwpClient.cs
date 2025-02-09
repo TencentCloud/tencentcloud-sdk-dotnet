@@ -28,7 +28,7 @@ namespace TencentCloud.Cwp.V20180228
 
        private const string endpoint = "cwp.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.1175";
+       private const string sdkVersion = "SDK_NET_3.0.1176";
 
         /// <summary>
         /// Client constructor.
@@ -2601,31 +2601,6 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// DescribeAttackEvents 代替
-        /// 
-        /// 按分页形式展示网络攻击日志列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAttackLogsRequest"/></param>
-        /// <returns><see cref="DescribeAttackLogsResponse"/></returns>
-        public Task<DescribeAttackLogsResponse> DescribeAttackLogs(DescribeAttackLogsRequest req)
-        {
-            return InternalRequestAsync<DescribeAttackLogsResponse>(req, "DescribeAttackLogs");
-        }
-
-        /// <summary>
-        /// DescribeAttackEvents 代替
-        /// 
-        /// 按分页形式展示网络攻击日志列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAttackLogsRequest"/></param>
-        /// <returns><see cref="DescribeAttackLogsResponse"/></returns>
-        public DescribeAttackLogsResponse DescribeAttackLogsSync(DescribeAttackLogsRequest req)
-        {
-            return InternalRequestAsync<DescribeAttackLogsResponse>(req, "DescribeAttackLogs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 网络攻击数据统计
         /// </summary>
         /// <param name="req"><see cref="DescribeAttackStatisticsRequest"/></param>
@@ -3672,31 +3647,6 @@ namespace TencentCloud.Cwp.V20180228
         public DescribeClientExceptionResponse DescribeClientExceptionSync(DescribeClientExceptionRequest req)
         {
             return InternalRequestAsync<DescribeClientExceptionResponse>(req, "DescribeClientException")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 接口已无效
-        /// 
-        /// 本接口 (DescribeComponentStatistics) 用于获取组件统计列表数据。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeComponentStatisticsRequest"/></param>
-        /// <returns><see cref="DescribeComponentStatisticsResponse"/></returns>
-        public Task<DescribeComponentStatisticsResponse> DescribeComponentStatistics(DescribeComponentStatisticsRequest req)
-        {
-            return InternalRequestAsync<DescribeComponentStatisticsResponse>(req, "DescribeComponentStatistics");
-        }
-
-        /// <summary>
-        /// 接口已无效
-        /// 
-        /// 本接口 (DescribeComponentStatistics) 用于获取组件统计列表数据。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeComponentStatisticsRequest"/></param>
-        /// <returns><see cref="DescribeComponentStatisticsResponse"/></returns>
-        public DescribeComponentStatisticsResponse DescribeComponentStatisticsSync(DescribeComponentStatisticsRequest req)
-        {
-            return InternalRequestAsync<DescribeComponentStatisticsResponse>(req, "DescribeComponentStatistics")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

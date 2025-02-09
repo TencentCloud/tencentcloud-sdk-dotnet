@@ -212,6 +212,18 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string InstanceRestrictState{ get; set; }
 
         /// <summary>
+        /// 描述实例是否支持IPv6。
+        /// </summary>
+        [JsonProperty("SupportIpv6Detail")]
+        public SupportIpv6Detail SupportIpv6Detail{ get; set; }
+
+        /// <summary>
+        /// 公网IPv6地址列表。
+        /// </summary>
+        [JsonProperty("PublicIpv6Addresses")]
+        public string[] PublicIpv6Addresses{ get; set; }
+
+        /// <summary>
         /// 创建实例后自动执行TAT命令的调用ID。
         /// </summary>
         [JsonProperty("InitInvocationId")]
@@ -258,6 +270,8 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "InstanceRestrictState", this.InstanceRestrictState);
+            this.SetParamObj(map, prefix + "SupportIpv6Detail.", this.SupportIpv6Detail);
+            this.SetParamArraySimple(map, prefix + "PublicIpv6Addresses.", this.PublicIpv6Addresses);
             this.SetParamSimple(map, prefix + "InitInvocationId", this.InitInvocationId);
             this.SetParamObj(map, prefix + "InstanceViolationDetail.", this.InstanceViolationDetail);
         }

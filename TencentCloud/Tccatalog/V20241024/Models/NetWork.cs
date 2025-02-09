@@ -48,6 +48,18 @@ namespace TencentCloud.Tccatalog.V20241024.Models
         [JsonProperty("SubnetCidrBlock")]
         public string SubnetCidrBlock{ get; set; }
 
+        /// <summary>
+        /// 服务clbip
+        /// </summary>
+        [JsonProperty("ClbIp")]
+        public string ClbIp{ get; set; }
+
+        /// <summary>
+        /// 服务clbPort
+        /// </summary>
+        [JsonProperty("ClbPort")]
+        public string ClbPort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Tccatalog.V20241024.Models
             this.SetParamSimple(map, prefix + "VpcCidrBlock", this.VpcCidrBlock);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "SubnetCidrBlock", this.SubnetCidrBlock);
+            this.SetParamSimple(map, prefix + "ClbIp", this.ClbIp);
+            this.SetParamSimple(map, prefix + "ClbPort", this.ClbPort);
         }
     }
 }

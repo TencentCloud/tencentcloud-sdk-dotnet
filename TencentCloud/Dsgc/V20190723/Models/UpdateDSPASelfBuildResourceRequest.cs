@@ -62,6 +62,12 @@ namespace TencentCloud.Dsgc.V20190723.Models
         [JsonProperty("AuthRange")]
         public string AuthRange{ get; set; }
 
+        /// <summary>
+        /// 自建数据资产的名称，支持修改
+        /// </summary>
+        [JsonProperty("ResourceName")]
+        public string ResourceName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +80,7 @@ namespace TencentCloud.Dsgc.V20190723.Models
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "AuthRange", this.AuthRange);
+            this.SetParamSimple(map, prefix + "ResourceName", this.ResourceName);
         }
     }
 }

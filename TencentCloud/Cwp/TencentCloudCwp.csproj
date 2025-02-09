@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1175</VersionPrefix>
+    <VersionPrefix>3.0.1176</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -150,7 +150,6 @@
     <Compile Include="V20180228\Models\ClearLocalStorageResponse.cs" />
     <Compile Include="V20180228\Models\CloudFromCnt.cs" />
     <Compile Include="V20180228\Models\CommandLine.cs" />
-    <Compile Include="V20180228\Models\ComponentStatistics.cs" />
     <Compile Include="V20180228\Models\CreateBanWhiteListRequest.cs" />
     <Compile Include="V20180228\Models\CreateBanWhiteListResponse.cs" />
     <Compile Include="V20180228\Models\CreateBaselineStrategyRequest.cs" />
@@ -187,7 +186,6 @@
     <Compile Include="V20180228\Models\CreateWhiteListOrderRequest.cs" />
     <Compile Include="V20180228\Models\CreateWhiteListOrderResponse.cs" />
     <Compile Include="V20180228\Models\DefaultStrategyInfo.cs" />
-    <Compile Include="V20180228\Models\DefendAttackLog.cs" />
     <Compile Include="V20180228\Models\DeleteAllJavaMemShellsRequest.cs" />
     <Compile Include="V20180228\Models\DeleteAllJavaMemShellsResponse.cs" />
     <Compile Include="V20180228\Models\DeleteBanWhiteListRequest.cs" />
@@ -377,8 +375,6 @@
     <Compile Include="V20180228\Models\DescribeAttackEventInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribeAttackEventsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeAttackEventsResponse.cs" />
-    <Compile Include="V20180228\Models\DescribeAttackLogsRequest.cs" />
-    <Compile Include="V20180228\Models\DescribeAttackLogsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeAttackStatisticsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeAttackStatisticsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeAttackTopRequest.cs" />
@@ -479,8 +475,6 @@
     <Compile Include="V20180228\Models\DescribeCanNotSeparateMachineResponse.cs" />
     <Compile Include="V20180228\Models\DescribeClientExceptionRequest.cs" />
     <Compile Include="V20180228\Models\DescribeClientExceptionResponse.cs" />
-    <Compile Include="V20180228\Models\DescribeComponentStatisticsRequest.cs" />
-    <Compile Include="V20180228\Models\DescribeComponentStatisticsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeDefenceEventDetailRequest.cs" />
     <Compile Include="V20180228\Models\DescribeDefenceEventDetailResponse.cs" />
     <Compile Include="V20180228\Models\DescribeDirectConnectInstallCommandRequest.cs" />

@@ -35,35 +35,30 @@ namespace TencentCloud.Mna.V20210119.Models
 
         /// <summary>
         /// 启用/禁用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataEnable")]
         public bool? DataEnable{ get; set; }
 
         /// <summary>
         /// 上行限速
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UploadLimit")]
         public string UploadLimit{ get; set; }
 
         /// <summary>
         /// 下行限速
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DownloadLimit")]
         public string DownloadLimit{ get; set; }
 
         /// <summary>
         /// 接收实时速率
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataRx")]
         public ulong? DataRx{ get; set; }
 
         /// <summary>
         /// 发送实时速率
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataTx")]
         public ulong? DataTx{ get; set; }
@@ -73,7 +68,6 @@ namespace TencentCloud.Mna.V20210119.Models
         /// 1: 中国移动；
         /// 2: 中国电信; 
         /// 3: 中国联通
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vendor")]
         public long? Vendor{ get; set; }
@@ -83,21 +77,18 @@ namespace TencentCloud.Mna.V20210119.Models
         /// 0:无连接
         /// 1:连接中
         /// 2:已连接
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("State")]
         public long? State{ get; set; }
 
         /// <summary>
         /// 公网IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
         /// <summary>
         /// 信号强度/单位：dbm
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SignalStrength")]
         public long? SignalStrength{ get; set; }
@@ -109,7 +100,6 @@ namespace TencentCloud.Mna.V20210119.Models
         /// 3：3G 
         /// 4：4G 
         /// 5：5G
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Rat")]
         public long? Rat{ get; set; }

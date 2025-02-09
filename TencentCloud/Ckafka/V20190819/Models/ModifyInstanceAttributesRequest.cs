@@ -55,7 +55,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public DynamicRetentionTime DynamicRetentionConfig{ get; set; }
 
         /// <summary>
-        /// 升配Rebalance时间 参数已废弃,忽略不填!!!
+        /// 用于修改升级版本或升配定时任务的执行时间，Unix时间戳，精确到秒
         /// </summary>
         [JsonProperty("RebalanceTime")]
         public long? RebalanceTime{ get; set; }
@@ -79,6 +79,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("MaxMessageByte")]
         public ulong? MaxMessageByte{ get; set; }
 
+        /// <summary>
+        /// 集群topic默认 unclean.leader.election.enable配置: 1 开启  0 关闭
+        /// </summary>
+        [JsonProperty("UncleanLeaderElectionEnable")]
+        public long? UncleanLeaderElectionEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +100,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
             this.SetParamObj(map, prefix + "DynamicDiskConfig.", this.DynamicDiskConfig);
             this.SetParamSimple(map, prefix + "MaxMessageByte", this.MaxMessageByte);
+            this.SetParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
         }
     }
 }

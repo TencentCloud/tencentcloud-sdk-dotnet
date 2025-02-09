@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F39A11E-57B5-3115-8397-BD397C84B698}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1175</VersionPrefix>
+    <VersionPrefix>3.0.1176</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,8 +49,6 @@
   <ItemGroup>
     <Compile Include="V20190904\CfwClient.cs" />
     <Compile Include="V20190904\Models\AcListsData.cs" />
-    <Compile Include="V20190904\Models\AddAcRuleRequest.cs" />
-    <Compile Include="V20190904\Models\AddAcRuleResponse.cs" />
     <Compile Include="V20190904\Models\AddAclRuleRequest.cs" />
     <Compile Include="V20190904\Models\AddAclRuleResponse.cs" />
     <Compile Include="V20190904\Models\AddEnterpriseSecurityGroupRulesRequest.cs" />

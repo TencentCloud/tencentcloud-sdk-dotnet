@@ -52,6 +52,15 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string CidrBlock{ get; set; }
 
         /// <summary>
+        /// IPv6网段或IPv6地址(互斥)。
+        /// 示例值：::/0。
+        /// 
+        /// 和CidrBlock互斥，两者都不指定时，如果Protocol是ICMPv6，则取默认值::/0。
+        /// </summary>
+        [JsonProperty("Ipv6CidrBlock")]
+        public string Ipv6CidrBlock{ get; set; }
+
+        /// <summary>
         /// 取值：ACCEPT，DROP。默认为 ACCEPT。
         /// </summary>
         [JsonProperty("Action")]
@@ -73,6 +82,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
+            this.SetParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
             this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "FirewallRuleDescription", this.FirewallRuleDescription);
         }

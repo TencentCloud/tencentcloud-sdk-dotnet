@@ -49,6 +49,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxBlockSize")]
+        [System.Obsolete]
         public string MaxBlockSize{ get; set; }
 
         /// <summary>
@@ -56,6 +57,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
+        [System.Obsolete]
         public string Label{ get; set; }
 
         /// <summary>

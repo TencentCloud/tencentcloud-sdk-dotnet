@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1175";
+       private const string sdkVersion = "SDK_NET_3.0.1176";
 
         /// <summary>
         /// Client constructor.
@@ -51,31 +51,6 @@ namespace TencentCloud.Cfw.V20190904
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
-        }
-
-        /// <summary>
-        /// 接口不再使用，已有新接口AddAclRule
-        /// 
-        /// 添加互联网边界规则
-        /// </summary>
-        /// <param name="req"><see cref="AddAcRuleRequest"/></param>
-        /// <returns><see cref="AddAcRuleResponse"/></returns>
-        public Task<AddAcRuleResponse> AddAcRule(AddAcRuleRequest req)
-        {
-            return InternalRequestAsync<AddAcRuleResponse>(req, "AddAcRule");
-        }
-
-        /// <summary>
-        /// 接口不再使用，已有新接口AddAclRule
-        /// 
-        /// 添加互联网边界规则
-        /// </summary>
-        /// <param name="req"><see cref="AddAcRuleRequest"/></param>
-        /// <returns><see cref="AddAcRuleResponse"/></returns>
-        public AddAcRuleResponse AddAcRuleSync(AddAcRuleRequest req)
-        {
-            return InternalRequestAsync<AddAcRuleResponse>(req, "AddAcRule")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
