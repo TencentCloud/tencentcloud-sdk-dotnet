@@ -26,35 +26,30 @@ namespace TencentCloud.Mna.V20210119.Models
         
         /// <summary>
         /// 流量数据点
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetDetails")]
         public NetDetails[] NetDetails{ get; set; }
 
         /// <summary>
         /// 设备ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
 
         /// <summary>
         /// 流量最大值（单位：bytes）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxValue")]
         public float? MaxValue{ get; set; }
 
         /// <summary>
         /// 流量平均值（单位：bytes）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AvgValue")]
         public float? AvgValue{ get; set; }
 
         /// <summary>
         /// 流量总值（单位：bytes）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalValue")]
         public float? TotalValue{ get; set; }

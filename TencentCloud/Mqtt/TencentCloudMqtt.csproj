@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{75DEC97F-E1D6-361A-8DD6-47A670CA2B92}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1176</VersionPrefix>
+    <VersionPrefix>3.0.1177</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -54,12 +54,18 @@
     <Compile Include="V20240516\Models\AuthorizationPolicyPriority.cs" />
     <Compile Include="V20240516\Models\CreateAuthorizationPolicyRequest.cs" />
     <Compile Include="V20240516\Models\CreateAuthorizationPolicyResponse.cs" />
+    <Compile Include="V20240516\Models\CreateInsPublicEndpointRequest.cs" />
+    <Compile Include="V20240516\Models\CreateInsPublicEndpointResponse.cs" />
+    <Compile Include="V20240516\Models\CreateInstanceRequest.cs" />
+    <Compile Include="V20240516\Models\CreateInstanceResponse.cs" />
     <Compile Include="V20240516\Models\CreateJWKSAuthenticatorRequest.cs" />
     <Compile Include="V20240516\Models\CreateJWKSAuthenticatorResponse.cs" />
     <Compile Include="V20240516\Models\CreateJWTAuthenticatorRequest.cs" />
     <Compile Include="V20240516\Models\CreateJWTAuthenticatorResponse.cs" />
     <Compile Include="V20240516\Models\CreateTopicRequest.cs" />
     <Compile Include="V20240516\Models\CreateTopicResponse.cs" />
+    <Compile Include="V20240516\Models\CreateUserRequest.cs" />
+    <Compile Include="V20240516\Models\CreateUserResponse.cs" />
     <Compile Include="V20240516\Models\DeactivateDeviceCertificateRequest.cs" />
     <Compile Include="V20240516\Models\DeactivateDeviceCertificateResponse.cs" />
     <Compile Include="V20240516\Models\DeleteAuthenticatorRequest.cs" />
@@ -68,8 +74,14 @@
     <Compile Include="V20240516\Models\DeleteAuthorizationPolicyResponse.cs" />
     <Compile Include="V20240516\Models\DeleteDeviceCertificateRequest.cs" />
     <Compile Include="V20240516\Models\DeleteDeviceCertificateResponse.cs" />
+    <Compile Include="V20240516\Models\DeleteInsPublicEndpointRequest.cs" />
+    <Compile Include="V20240516\Models\DeleteInsPublicEndpointResponse.cs" />
+    <Compile Include="V20240516\Models\DeleteInstanceRequest.cs" />
+    <Compile Include="V20240516\Models\DeleteInstanceResponse.cs" />
     <Compile Include="V20240516\Models\DeleteTopicRequest.cs" />
     <Compile Include="V20240516\Models\DeleteTopicResponse.cs" />
+    <Compile Include="V20240516\Models\DeleteUserRequest.cs" />
+    <Compile Include="V20240516\Models\DeleteUserResponse.cs" />
     <Compile Include="V20240516\Models\DescribeAuthenticatorRequest.cs" />
     <Compile Include="V20240516\Models\DescribeAuthenticatorResponse.cs" />
     <Compile Include="V20240516\Models\DescribeAuthorizationPoliciesRequest.cs" />
@@ -78,6 +90,8 @@
     <Compile Include="V20240516\Models\DescribeDeviceCertificateResponse.cs" />
     <Compile Include="V20240516\Models\DescribeDeviceCertificatesRequest.cs" />
     <Compile Include="V20240516\Models\DescribeDeviceCertificatesResponse.cs" />
+    <Compile Include="V20240516\Models\DescribeInsPublicEndpointsRequest.cs" />
+    <Compile Include="V20240516\Models\DescribeInsPublicEndpointsResponse.cs" />
     <Compile Include="V20240516\Models\DescribeInstanceListRequest.cs" />
     <Compile Include="V20240516\Models\DescribeInstanceListResponse.cs" />
     <Compile Include="V20240516\Models\DescribeInstanceRequest.cs" />
@@ -86,25 +100,39 @@
     <Compile Include="V20240516\Models\DescribeTopicListResponse.cs" />
     <Compile Include="V20240516\Models\DescribeTopicRequest.cs" />
     <Compile Include="V20240516\Models\DescribeTopicResponse.cs" />
+    <Compile Include="V20240516\Models\DescribeUserListRequest.cs" />
+    <Compile Include="V20240516\Models\DescribeUserListResponse.cs" />
     <Compile Include="V20240516\Models\DeviceCertificateItem.cs" />
     <Compile Include="V20240516\Models\Filter.cs" />
+    <Compile Include="V20240516\Models\IpRule.cs" />
     <Compile Include="V20240516\Models\MQTTAuthenticatorItem.cs" />
+    <Compile Include="V20240516\Models\MQTTEndpointItem.cs" />
     <Compile Include="V20240516\Models\MQTTInstanceItem.cs" />
     <Compile Include="V20240516\Models\MQTTTopicItem.cs" />
+    <Compile Include="V20240516\Models\MQTTUserItem.cs" />
     <Compile Include="V20240516\Models\ModifyAuthorizationPolicyRequest.cs" />
     <Compile Include="V20240516\Models\ModifyAuthorizationPolicyResponse.cs" />
+    <Compile Include="V20240516\Models\ModifyInsPublicEndpointRequest.cs" />
+    <Compile Include="V20240516\Models\ModifyInsPublicEndpointResponse.cs" />
+    <Compile Include="V20240516\Models\ModifyInstanceRequest.cs" />
+    <Compile Include="V20240516\Models\ModifyInstanceResponse.cs" />
     <Compile Include="V20240516\Models\ModifyJWKSAuthenticatorRequest.cs" />
     <Compile Include="V20240516\Models\ModifyJWKSAuthenticatorResponse.cs" />
     <Compile Include="V20240516\Models\ModifyJWTAuthenticatorRequest.cs" />
     <Compile Include="V20240516\Models\ModifyJWTAuthenticatorResponse.cs" />
     <Compile Include="V20240516\Models\ModifyTopicRequest.cs" />
     <Compile Include="V20240516\Models\ModifyTopicResponse.cs" />
+    <Compile Include="V20240516\Models\ModifyUserRequest.cs" />
+    <Compile Include="V20240516\Models\ModifyUserResponse.cs" />
+    <Compile Include="V20240516\Models\PublicAccessRule.cs" />
     <Compile Include="V20240516\Models\RegisterDeviceCertificateRequest.cs" />
     <Compile Include="V20240516\Models\RegisterDeviceCertificateResponse.cs" />
     <Compile Include="V20240516\Models\RevokedDeviceCertificateRequest.cs" />
     <Compile Include="V20240516\Models\RevokedDeviceCertificateResponse.cs" />
+    <Compile Include="V20240516\Models\Tag.cs" />
     <Compile Include="V20240516\Models\TagFilter.cs" />
     <Compile Include="V20240516\Models\UpdateAuthorizationPolicyPriorityRequest.cs" />
     <Compile Include="V20240516\Models\UpdateAuthorizationPolicyPriorityResponse.cs" />
+    <Compile Include="V20240516\Models\VpcInfo.cs" />
   </ItemGroup>
 </Project>

@@ -67,6 +67,12 @@ namespace TencentCloud.Bh.V20230418.Models
         public ulong?[] AuthorizedDeviceIdSet{ get; set; }
 
         /// <summary>
+        /// 有访问权限的应用资产ID集合
+        /// </summary>
+        [JsonProperty("AuthorizedAppAssetIdSet")]
+        public ulong?[] AuthorizedAppAssetIdSet{ get; set; }
+
+        /// <summary>
         /// 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
         /// </summary>
         [JsonProperty("Status")]
@@ -103,6 +109,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "Exact", this.Exact);
             this.SetParamArraySimple(map, prefix + "AuthorizedUserIdSet.", this.AuthorizedUserIdSet);
             this.SetParamArraySimple(map, prefix + "AuthorizedDeviceIdSet.", this.AuthorizedDeviceIdSet);
+            this.SetParamArraySimple(map, prefix + "AuthorizedAppAssetIdSet.", this.AuthorizedAppAssetIdSet);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
             this.SetParamSimple(map, prefix + "ExactAccount", this.ExactAccount);

@@ -28,7 +28,7 @@ namespace TencentCloud.Mqtt.V20240516
 
        private const string endpoint = "mqtt.tencentcloudapi.com";
        private const string version = "2024-05-16";
-       private const string sdkVersion = "SDK_NET_3.0.1176";
+       private const string sdkVersion = "SDK_NET_3.0.1177";
 
         /// <summary>
         /// Client constructor.
@@ -96,6 +96,48 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
+        /// 为MQTT实例创建公网接入点
+        /// </summary>
+        /// <param name="req"><see cref="CreateInsPublicEndpointRequest"/></param>
+        /// <returns><see cref="CreateInsPublicEndpointResponse"/></returns>
+        public Task<CreateInsPublicEndpointResponse> CreateInsPublicEndpoint(CreateInsPublicEndpointRequest req)
+        {
+            return InternalRequestAsync<CreateInsPublicEndpointResponse>(req, "CreateInsPublicEndpoint");
+        }
+
+        /// <summary>
+        /// 为MQTT实例创建公网接入点
+        /// </summary>
+        /// <param name="req"><see cref="CreateInsPublicEndpointRequest"/></param>
+        /// <returns><see cref="CreateInsPublicEndpointResponse"/></returns>
+        public CreateInsPublicEndpointResponse CreateInsPublicEndpointSync(CreateInsPublicEndpointRequest req)
+        {
+            return InternalRequestAsync<CreateInsPublicEndpointResponse>(req, "CreateInsPublicEndpoint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 购买新的MQTT实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstanceRequest"/></param>
+        /// <returns><see cref="CreateInstanceResponse"/></returns>
+        public Task<CreateInstanceResponse> CreateInstance(CreateInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateInstanceResponse>(req, "CreateInstance");
+        }
+
+        /// <summary>
+        /// 购买新的MQTT实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstanceRequest"/></param>
+        /// <returns><see cref="CreateInstanceResponse"/></returns>
+        public CreateInstanceResponse CreateInstanceSync(CreateInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateInstanceResponse>(req, "CreateInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建一个jwks的认证
         /// </summary>
         /// <param name="req"><see cref="CreateJWKSAuthenticatorRequest"/></param>
@@ -155,6 +197,27 @@ namespace TencentCloud.Mqtt.V20240516
         public CreateTopicResponse CreateTopicSync(CreateTopicRequest req)
         {
             return InternalRequestAsync<CreateTopicResponse>(req, "CreateTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 添加mqtt角色
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserRequest"/></param>
+        /// <returns><see cref="CreateUserResponse"/></returns>
+        public Task<CreateUserResponse> CreateUser(CreateUserRequest req)
+        {
+            return InternalRequestAsync<CreateUserResponse>(req, "CreateUser");
+        }
+
+        /// <summary>
+        /// 添加mqtt角色
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserRequest"/></param>
+        /// <returns><see cref="CreateUserResponse"/></returns>
+        public CreateUserResponse CreateUserSync(CreateUserRequest req)
+        {
+            return InternalRequestAsync<CreateUserResponse>(req, "CreateUser")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -243,6 +306,48 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
+        /// 删除MQTT实例的公网接入点
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInsPublicEndpointRequest"/></param>
+        /// <returns><see cref="DeleteInsPublicEndpointResponse"/></returns>
+        public Task<DeleteInsPublicEndpointResponse> DeleteInsPublicEndpoint(DeleteInsPublicEndpointRequest req)
+        {
+            return InternalRequestAsync<DeleteInsPublicEndpointResponse>(req, "DeleteInsPublicEndpoint");
+        }
+
+        /// <summary>
+        /// 删除MQTT实例的公网接入点
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInsPublicEndpointRequest"/></param>
+        /// <returns><see cref="DeleteInsPublicEndpointResponse"/></returns>
+        public DeleteInsPublicEndpointResponse DeleteInsPublicEndpointSync(DeleteInsPublicEndpointRequest req)
+        {
+            return InternalRequestAsync<DeleteInsPublicEndpointResponse>(req, "DeleteInsPublicEndpoint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除MQTT实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInstanceRequest"/></param>
+        /// <returns><see cref="DeleteInstanceResponse"/></returns>
+        public Task<DeleteInstanceResponse> DeleteInstance(DeleteInstanceRequest req)
+        {
+            return InternalRequestAsync<DeleteInstanceResponse>(req, "DeleteInstance");
+        }
+
+        /// <summary>
+        /// 删除MQTT实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInstanceRequest"/></param>
+        /// <returns><see cref="DeleteInstanceResponse"/></returns>
+        public DeleteInstanceResponse DeleteInstanceSync(DeleteInstanceRequest req)
+        {
+            return InternalRequestAsync<DeleteInstanceResponse>(req, "DeleteInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除MQTT主题
         /// </summary>
         /// <param name="req"><see cref="DeleteTopicRequest"/></param>
@@ -260,6 +365,27 @@ namespace TencentCloud.Mqtt.V20240516
         public DeleteTopicResponse DeleteTopicSync(DeleteTopicRequest req)
         {
             return InternalRequestAsync<DeleteTopicResponse>(req, "DeleteTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除MQTT访问用户
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserRequest"/></param>
+        /// <returns><see cref="DeleteUserResponse"/></returns>
+        public Task<DeleteUserResponse> DeleteUser(DeleteUserRequest req)
+        {
+            return InternalRequestAsync<DeleteUserResponse>(req, "DeleteUser");
+        }
+
+        /// <summary>
+        /// 删除MQTT访问用户
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserRequest"/></param>
+        /// <returns><see cref="DeleteUserResponse"/></returns>
+        public DeleteUserResponse DeleteUserSync(DeleteUserRequest req)
+        {
+            return InternalRequestAsync<DeleteUserResponse>(req, "DeleteUser")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -344,6 +470,27 @@ namespace TencentCloud.Mqtt.V20240516
         public DescribeDeviceCertificatesResponse DescribeDeviceCertificatesSync(DescribeDeviceCertificatesRequest req)
         {
             return InternalRequestAsync<DescribeDeviceCertificatesResponse>(req, "DescribeDeviceCertificates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询MQTT实例公网接入点
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInsPublicEndpointsRequest"/></param>
+        /// <returns><see cref="DescribeInsPublicEndpointsResponse"/></returns>
+        public Task<DescribeInsPublicEndpointsResponse> DescribeInsPublicEndpoints(DescribeInsPublicEndpointsRequest req)
+        {
+            return InternalRequestAsync<DescribeInsPublicEndpointsResponse>(req, "DescribeInsPublicEndpoints");
+        }
+
+        /// <summary>
+        /// 查询MQTT实例公网接入点
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInsPublicEndpointsRequest"/></param>
+        /// <returns><see cref="DescribeInsPublicEndpointsResponse"/></returns>
+        public DescribeInsPublicEndpointsResponse DescribeInsPublicEndpointsSync(DescribeInsPublicEndpointsRequest req)
+        {
+            return InternalRequestAsync<DescribeInsPublicEndpointsResponse>(req, "DescribeInsPublicEndpoints")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -448,6 +595,31 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
+        /// 查询用户列表，Filter参数使用说明如下：
+        /// 
+        /// 1. Username，用户名称模糊搜索
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserListRequest"/></param>
+        /// <returns><see cref="DescribeUserListResponse"/></returns>
+        public Task<DescribeUserListResponse> DescribeUserList(DescribeUserListRequest req)
+        {
+            return InternalRequestAsync<DescribeUserListResponse>(req, "DescribeUserList");
+        }
+
+        /// <summary>
+        /// 查询用户列表，Filter参数使用说明如下：
+        /// 
+        /// 1. Username，用户名称模糊搜索
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserListRequest"/></param>
+        /// <returns><see cref="DescribeUserListResponse"/></returns>
+        public DescribeUserListResponse DescribeUserListSync(DescribeUserListRequest req)
+        {
+            return InternalRequestAsync<DescribeUserListResponse>(req, "DescribeUserList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 修改策略规则
         /// </summary>
         /// <param name="req"><see cref="ModifyAuthorizationPolicyRequest"/></param>
@@ -465,6 +637,48 @@ namespace TencentCloud.Mqtt.V20240516
         public ModifyAuthorizationPolicyResponse ModifyAuthorizationPolicySync(ModifyAuthorizationPolicyRequest req)
         {
             return InternalRequestAsync<ModifyAuthorizationPolicyResponse>(req, "ModifyAuthorizationPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新MQTT实例公网接入点
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInsPublicEndpointRequest"/></param>
+        /// <returns><see cref="ModifyInsPublicEndpointResponse"/></returns>
+        public Task<ModifyInsPublicEndpointResponse> ModifyInsPublicEndpoint(ModifyInsPublicEndpointRequest req)
+        {
+            return InternalRequestAsync<ModifyInsPublicEndpointResponse>(req, "ModifyInsPublicEndpoint");
+        }
+
+        /// <summary>
+        /// 更新MQTT实例公网接入点
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInsPublicEndpointRequest"/></param>
+        /// <returns><see cref="ModifyInsPublicEndpointResponse"/></returns>
+        public ModifyInsPublicEndpointResponse ModifyInsPublicEndpointSync(ModifyInsPublicEndpointRequest req)
+        {
+            return InternalRequestAsync<ModifyInsPublicEndpointResponse>(req, "ModifyInsPublicEndpoint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改实例属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceRequest"/></param>
+        /// <returns><see cref="ModifyInstanceResponse"/></returns>
+        public Task<ModifyInstanceResponse> ModifyInstance(ModifyInstanceRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceResponse>(req, "ModifyInstance");
+        }
+
+        /// <summary>
+        /// 修改实例属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceRequest"/></param>
+        /// <returns><see cref="ModifyInstanceResponse"/></returns>
+        public ModifyInstanceResponse ModifyInstanceSync(ModifyInstanceRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceResponse>(req, "ModifyInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -528,6 +742,27 @@ namespace TencentCloud.Mqtt.V20240516
         public ModifyTopicResponse ModifyTopicSync(ModifyTopicRequest req)
         {
             return InternalRequestAsync<ModifyTopicResponse>(req, "ModifyTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改MQTT角色
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserRequest"/></param>
+        /// <returns><see cref="ModifyUserResponse"/></returns>
+        public Task<ModifyUserResponse> ModifyUser(ModifyUserRequest req)
+        {
+            return InternalRequestAsync<ModifyUserResponse>(req, "ModifyUser");
+        }
+
+        /// <summary>
+        /// 修改MQTT角色
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserRequest"/></param>
+        /// <returns><see cref="ModifyUserResponse"/></returns>
+        public ModifyUserResponse ModifyUserSync(ModifyUserRequest req)
+        {
+            return InternalRequestAsync<ModifyUserResponse>(req, "ModifyUser")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

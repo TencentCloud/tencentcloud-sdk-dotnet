@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1176</VersionPrefix>
+    <VersionPrefix>3.0.1177</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -593,6 +593,7 @@
     <Compile Include="V20190612\Models\ParseLiveStreamProcessNotificationResponse.cs" />
     <Compile Include="V20190612\Models\ParseNotificationRequest.cs" />
     <Compile Include="V20190612\Models\ParseNotificationResponse.cs" />
+    <Compile Include="V20190612\Models\PidSelector.cs" />
     <Compile Include="V20190612\Models\PoliticalAsrReviewTemplateInfo.cs" />
     <Compile Include="V20190612\Models\PoliticalAsrReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\PoliticalConfigureInfo.cs" />

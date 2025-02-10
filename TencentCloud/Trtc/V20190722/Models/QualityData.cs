@@ -38,7 +38,6 @@ namespace TencentCloud.Trtc.V20190722.Models
 
         /// <summary>
         /// 对端Id,为空时表示上行数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PeerId")]
         public string PeerId{ get; set; }

@@ -109,6 +109,12 @@ namespace TencentCloud.Bh.V20230418.Models
         public ulong?[] DeviceIdSet{ get; set; }
 
         /// <summary>
+        /// 关联的应用资产ID集合
+        /// </summary>
+        [JsonProperty("AppAssetIdSet")]
+        public ulong?[] AppAssetIdSet{ get; set; }
+
+        /// <summary>
         /// 关联的资产组ID
         /// </summary>
         [JsonProperty("DeviceGroupIdSet")]
@@ -214,6 +220,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamArraySimple(map, prefix + "UserIdSet.", this.UserIdSet);
             this.SetParamArraySimple(map, prefix + "UserGroupIdSet.", this.UserGroupIdSet);
             this.SetParamArraySimple(map, prefix + "DeviceIdSet.", this.DeviceIdSet);
+            this.SetParamArraySimple(map, prefix + "AppAssetIdSet.", this.AppAssetIdSet);
             this.SetParamArraySimple(map, prefix + "DeviceGroupIdSet.", this.DeviceGroupIdSet);
             this.SetParamArraySimple(map, prefix + "AccountSet.", this.AccountSet);
             this.SetParamArraySimple(map, prefix + "CmdTemplateIdSet.", this.CmdTemplateIdSet);

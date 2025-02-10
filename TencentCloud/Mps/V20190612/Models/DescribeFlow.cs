@@ -73,6 +73,18 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
+        /// <summary>
+        /// 该Flow允许创建的输入协议
+        /// </summary>
+        [JsonProperty("AllowedInputProtocols")]
+        public string[] AllowedInputProtocols{ get; set; }
+
+        /// <summary>
+        /// 该Flow允许创建的输出协议
+        /// </summary>
+        [JsonProperty("AllowedOutputProtocols")]
+        public string[] AllowedOutputProtocols{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +99,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArrayObj(map, prefix + "OutputGroup.", this.OutputGroup);
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
             this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamArraySimple(map, prefix + "AllowedInputProtocols.", this.AllowedInputProtocols);
+            this.SetParamArraySimple(map, prefix + "AllowedOutputProtocols.", this.AllowedOutputProtocols);
         }
     }
 }

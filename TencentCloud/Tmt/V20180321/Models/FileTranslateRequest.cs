@@ -40,6 +40,8 @@ namespace TencentCloud.Tmt.V20180321.Models
         /// pt：葡萄牙语
         /// ru：俄语
         /// ko：韩语
+        /// tr：土耳其语
+        /// vi：越南语
         /// th：泰语
         /// </summary>
         [JsonProperty("Source")]

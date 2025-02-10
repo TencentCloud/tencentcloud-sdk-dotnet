@@ -67,6 +67,12 @@ namespace TencentCloud.Bh.V20230418.Models
         public ulong? Kind{ get; set; }
 
         /// <summary>
+        /// 资产类型集合，1 - Linux，2 - Windows，3 - MySQL，4 - SQLServer
+        /// </summary>
+        [JsonProperty("KindSet")]
+        public ulong?[] KindSet{ get; set; }
+
+        /// <summary>
         /// 所属部门ID
         /// </summary>
         [JsonProperty("DepartmentId")]
@@ -91,6 +97,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Kind", this.Kind);
+            this.SetParamArraySimple(map, prefix + "KindSet.", this.KindSet);
             this.SetParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
             this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
         }

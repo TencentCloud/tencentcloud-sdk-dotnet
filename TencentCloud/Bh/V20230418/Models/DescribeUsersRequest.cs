@@ -74,6 +74,12 @@ namespace TencentCloud.Bh.V20230418.Models
         public ulong?[] AuthorizedDeviceIdSet{ get; set; }
 
         /// <summary>
+        /// 查询具有指定应用资产ID访问权限的用户
+        /// </summary>
+        [JsonProperty("AuthorizedAppAssetIdSet")]
+        public ulong?[] AuthorizedAppAssetIdSet{ get; set; }
+
+        /// <summary>
         /// 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
         /// </summary>
         [JsonProperty("AuthTypeSet")]
@@ -105,6 +111,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "Phone", this.Phone);
             this.SetParamSimple(map, prefix + "Email", this.Email);
             this.SetParamArraySimple(map, prefix + "AuthorizedDeviceIdSet.", this.AuthorizedDeviceIdSet);
+            this.SetParamArraySimple(map, prefix + "AuthorizedAppAssetIdSet.", this.AuthorizedAppAssetIdSet);
             this.SetParamArraySimple(map, prefix + "AuthTypeSet.", this.AuthTypeSet);
             this.SetParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);

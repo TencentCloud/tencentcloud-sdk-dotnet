@@ -103,6 +103,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("RISTSettings")]
         public CreateOutputRistSettings RISTSettings{ get; set; }
 
+        /// <summary>
+        /// 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+        /// </summary>
+        [JsonProperty("PidSelector")]
+        public PidSelector PidSelector{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,6 +128,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
             this.SetParamSimple(map, prefix + "OutputType", this.OutputType);
             this.SetParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
+            this.SetParamObj(map, prefix + "PidSelector.", this.PidSelector);
         }
     }
 }

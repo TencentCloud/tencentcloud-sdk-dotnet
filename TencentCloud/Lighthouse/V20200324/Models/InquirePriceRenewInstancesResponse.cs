@@ -32,14 +32,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
 
         /// <summary>
         /// 数据盘价格信息列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataDiskPriceSet")]
         public DataDiskPrice[] DataDiskPriceSet{ get; set; }
 
         /// <summary>
         /// 待续费实例价格列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstancePriceDetailSet")]
         public InstancePriceDetail[] InstancePriceDetailSet{ get; set; }

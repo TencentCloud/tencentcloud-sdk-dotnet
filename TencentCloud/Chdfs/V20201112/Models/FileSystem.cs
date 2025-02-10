@@ -92,14 +92,12 @@ namespace TencentCloud.Chdfs.V20201112.Models
 
         /// <summary>
         /// 是否打开Ranger地址校验
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableRanger")]
         public bool? EnableRanger{ get; set; }
 
         /// <summary>
         /// Ranger地址列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RangerServiceAddresses")]
         public string[] RangerServiceAddresses{ get; set; }

@@ -108,6 +108,18 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
+        /// <summary>
+        /// 应用资产类型, 1-web
+        /// </summary>
+        [JsonProperty("AppAssetKindSet")]
+        public ulong?[] AppAssetKindSet{ get; set; }
+
+        /// <summary>
+        /// 应用资产Url
+        /// </summary>
+        [JsonProperty("AppAssetUrl")]
+        public string AppAssetUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +140,8 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamArraySimple(map, prefix + "AppAssetKindSet.", this.AppAssetKindSet);
+            this.SetParamSimple(map, prefix + "AppAssetUrl", this.AppAssetUrl);
         }
     }
 }

@@ -26,7 +26,6 @@ namespace TencentCloud.Chdfs.V20201112.Models
         
         /// <summary>
         /// 权限规则列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessRules")]
         public AccessRule[] AccessRules{ get; set; }

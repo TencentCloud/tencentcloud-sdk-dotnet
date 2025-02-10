@@ -106,21 +106,18 @@ namespace TencentCloud.Mna.V20210119.Models
 
         /// <summary>
         /// 网卡名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetInfoName")]
         public string NetInfoName{ get; set; }
 
         /// <summary>
         /// 下行实时速率（浮点数类型代替上一版本DataRx的整型）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DownRate")]
         public float? DownRate{ get; set; }
 
         /// <summary>
         /// 上行实时速率（浮点数类型代替上一版本TxRate的整型）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpRate")]
         public float? UpRate{ get; set; }

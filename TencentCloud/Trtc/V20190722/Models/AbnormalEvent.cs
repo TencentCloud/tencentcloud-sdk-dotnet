@@ -32,7 +32,6 @@ namespace TencentCloud.Trtc.V20190722.Models
 
         /// <summary>
         /// 远端用户ID,""：表示异常事件不是由远端用户产生
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PeerId")]
         public string PeerId{ get; set; }

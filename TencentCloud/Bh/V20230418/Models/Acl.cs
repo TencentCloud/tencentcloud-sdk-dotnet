@@ -212,6 +212,12 @@ namespace TencentCloud.Bh.V20230418.Models
         [JsonProperty("AllowKeyboardLogger")]
         public bool? AllowKeyboardLogger{ get; set; }
 
+        /// <summary>
+        /// 关联的应用资产列表
+        /// </summary>
+        [JsonProperty("AppAssetSet")]
+        public AppAsset[] AppAssetSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -249,6 +255,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamArrayObj(map, prefix + "ACTemplateSet.", this.ACTemplateSet);
             this.SetParamArraySimple(map, prefix + "WhiteCmds.", this.WhiteCmds);
             this.SetParamSimple(map, prefix + "AllowKeyboardLogger", this.AllowKeyboardLogger);
+            this.SetParamArrayObj(map, prefix + "AppAssetSet.", this.AppAssetSet);
         }
     }
 }

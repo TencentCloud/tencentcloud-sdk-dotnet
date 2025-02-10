@@ -101,6 +101,24 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("Seal")]
         public string Seal{ get; set; }
 
+        /// <summary>
+        /// 状态
+        /// </summary>
+        [JsonProperty("StateElectronic")]
+        public string StateElectronic{ get; set; }
+
+        /// <summary>
+        /// 检验有效期
+        /// </summary>
+        [JsonProperty("InspectionValidityTimeElectronic")]
+        public string InspectionValidityTimeElectronic{ get; set; }
+
+        /// <summary>
+        /// 生成时间
+        /// </summary>
+        [JsonProperty("GenerationTimeElectronic")]
+        public string GenerationTimeElectronic{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +136,9 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "RegisterDate", this.RegisterDate);
             this.SetParamSimple(map, prefix + "IssueDate", this.IssueDate);
             this.SetParamSimple(map, prefix + "Seal", this.Seal);
+            this.SetParamSimple(map, prefix + "StateElectronic", this.StateElectronic);
+            this.SetParamSimple(map, prefix + "InspectionValidityTimeElectronic", this.InspectionValidityTimeElectronic);
+            this.SetParamSimple(map, prefix + "GenerationTimeElectronic", this.GenerationTimeElectronic);
         }
     }
 }

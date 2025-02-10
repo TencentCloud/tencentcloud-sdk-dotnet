@@ -172,7 +172,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public bool? Attached{ get; set; }
 
         /// <summary>
-        /// 云硬盘大小，单位GB。
+        /// 云硬盘大小，单位GiB。
         /// </summary>
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
@@ -292,6 +292,13 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("BurstPerformance")]
         public bool? BurstPerformance{ get; set; }
 
+        /// <summary>
+        /// 云硬盘加密类型，值为ENCRYPT_V1和ENCRYPT_V2，分别表示第一代和第二代加密技术，两种加密技术互不兼容
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EncryptType")]
+        public string EncryptType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -340,6 +347,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "LastAttachInsId", this.LastAttachInsId);
             this.SetParamSimple(map, prefix + "ErrorPrompt", this.ErrorPrompt);
             this.SetParamSimple(map, prefix + "BurstPerformance", this.BurstPerformance);
+            this.SetParamSimple(map, prefix + "EncryptType", this.EncryptType);
         }
     }
 }
