@@ -37,7 +37,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string CertId{ get; set; }
 
         /// <summary>
-        /// 域名状态
+        /// 域名状态 rejected：域名审核未通过，域名备案过期/被注销导致，processing：部署中，online：已启动，offline：已关闭
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

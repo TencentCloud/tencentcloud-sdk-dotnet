@@ -45,6 +45,11 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 域名状态
+        /// deployed：已部署；
+        /// processing：部署中；
+        /// applying：申请中；
+        /// failed：申请失败；
+        /// issued：绑定失败。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

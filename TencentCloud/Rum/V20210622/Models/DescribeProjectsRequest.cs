@@ -46,6 +46,7 @@ namespace TencentCloud.Rum.V20210622.Models
         /// 该参数已废弃，demo模式请在Filters内注明
         /// </summary>
         [JsonProperty("IsDemo")]
+        [System.Obsolete]
         public long? IsDemo{ get; set; }
 
 

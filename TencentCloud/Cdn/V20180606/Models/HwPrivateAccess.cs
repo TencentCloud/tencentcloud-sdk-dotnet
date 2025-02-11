@@ -40,7 +40,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string AccessKey{ get; set; }
 
         /// <summary>
-        /// 密钥
+        /// 密钥，字段为脱敏返回。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecretKey")]

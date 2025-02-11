@@ -25,6 +25,12 @@ namespace TencentCloud.Lkeap.V20240522.Models
     {
         
         /// <summary>
+        /// 文档总数
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
+
+        /// <summary>
         /// 文档信息
         /// </summary>
         [JsonProperty("List")]
@@ -42,6 +48,7 @@ namespace TencentCloud.Lkeap.V20240522.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "List.", this.List);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

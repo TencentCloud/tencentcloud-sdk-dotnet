@@ -32,7 +32,6 @@ namespace TencentCloud.Lcic.V20220817.Models
 
         /// <summary>
         /// 当前获取用户信息数组列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Users")]
         public UserInfo[] Users{ get; set; }

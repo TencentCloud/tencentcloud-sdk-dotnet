@@ -59,7 +59,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// 若指定Tags入参且指定IsCloneTags为true，会合并源安全组的标签和新增的标签。
         /// </summary>
         [JsonProperty("Tags")]
-        public Tag Tags{ get; set; }
+        public Tag[] Tags{ get; set; }
 
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "GroupDescription", this.GroupDescription);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "RemoteRegion", this.RemoteRegion);
-            this.SetParamObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

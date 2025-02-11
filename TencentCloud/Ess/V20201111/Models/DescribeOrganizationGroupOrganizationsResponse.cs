@@ -26,21 +26,18 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 符合查询条件的资源实例总数量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
 
         /// <summary>
         /// 已授权待激活的子企业总数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JoinedTotal")]
         public ulong? JoinedTotal{ get; set; }
 
         /// <summary>
         /// 已加入的企业数量(废弃,请使用ActivatedTotal)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActivedTotal")]
         [System.Obsolete]
@@ -48,21 +45,18 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 如果入参Export为 true 时使用，表示导出Excel的url
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExportUrl")]
         public string ExportUrl{ get; set; }
 
         /// <summary>
         /// 成员企业信息列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("List")]
         public GroupOrganization[] List{ get; set; }
 
         /// <summary>
         /// 已加入的子企业总数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActivatedTotal")]
         public ulong? ActivatedTotal{ get; set; }

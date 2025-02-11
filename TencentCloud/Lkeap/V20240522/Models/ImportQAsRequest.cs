@@ -24,12 +24,41 @@ namespace TencentCloud.Lkeap.V20240522.Models
     public class ImportQAsRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 知识库ID
+        /// </summary>
+        [JsonProperty("KnowledgeBaseId")]
+        public string KnowledgeBaseId{ get; set; }
+
+        /// <summary>
+        /// 文件名
+        /// </summary>
+        [JsonProperty("FileName")]
+        public string FileName{ get; set; }
+
+        /// <summary>
+        /// 文件的 Url 地址。文件存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+        /// 导入模板：https://cdn.xiaowei.qq.com/lke/assets//static/批量导入问答模板v6.xlsx
+        /// </summary>
+        [JsonProperty("FileUrl")]
+        public string FileUrl{ get; set; }
+
+        /// <summary>
+        /// 文件类型，仅支持XLSX格式，请使用模板
+        /// </summary>
+        [JsonProperty("FileType")]
+        public string FileType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
+            this.SetParamSimple(map, prefix + "FileName", this.FileName);
+            this.SetParamSimple(map, prefix + "FileUrl", this.FileUrl);
+            this.SetParamSimple(map, prefix + "FileType", this.FileType);
         }
     }
 }

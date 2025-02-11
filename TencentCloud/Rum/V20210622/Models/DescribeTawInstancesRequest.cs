@@ -64,6 +64,7 @@ namespace TencentCloud.Rum.V20210622.Models
         /// 实例Id, 该参数已废弃，请在Filters内注明
         /// </summary>
         [JsonProperty("InstanceIds")]
+        [System.Obsolete]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
@@ -76,6 +77,7 @@ namespace TencentCloud.Rum.V20210622.Models
         /// 该参数已废弃，demo模式请在Filters内注明
         /// </summary>
         [JsonProperty("IsDemo")]
+        [System.Obsolete]
         public long? IsDemo{ get; set; }
 
 

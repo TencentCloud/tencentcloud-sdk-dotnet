@@ -37,7 +37,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public ulong? IsCache{ get; set; }
 
         /// <summary>
-        /// 过滤参数列表
+        /// 过滤参数列表； FilterKey：domainMatch（查询域名是否匹配的实例列表） FilterValue：1，表示查询匹配； 0，表示查询不匹配； 默认查询匹配
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

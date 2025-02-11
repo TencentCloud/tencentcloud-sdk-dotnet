@@ -25,6 +25,39 @@ namespace TencentCloud.Lkeap.V20240522.Models
     {
         
         /// <summary>
+        /// 文档ID
+        /// </summary>
+        [JsonProperty("DocId")]
+        public string DocId{ get; set; }
+
+        /// <summary>
+        /// 状态，
+        /// 
+        /// - Uploading  上传中  
+        /// - Auditing 审核中
+        /// - Parsing 解析中  
+        /// - ParseFailed 解析失败
+        /// - Indexing 创建索引中  
+        /// - IndexFailed 创建索引失败
+        /// - Success  发布成功
+        /// - Failed  失败
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// 文件名
+        /// </summary>
+        [JsonProperty("FileName")]
+        public string FileName{ get; set; }
+
+        /// <summary>
+        /// 更新时间
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
+
+        /// <summary>
         /// 属性标签
         /// </summary>
         [JsonProperty("AttributeLabels")]
@@ -42,6 +75,10 @@ namespace TencentCloud.Lkeap.V20240522.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DocId", this.DocId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "FileName", this.FileName);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamArrayObj(map, prefix + "AttributeLabels.", this.AttributeLabels);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

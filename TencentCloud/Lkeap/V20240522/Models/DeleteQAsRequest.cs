@@ -24,12 +24,26 @@ namespace TencentCloud.Lkeap.V20240522.Models
     public class DeleteQAsRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 知识库ID
+        /// </summary>
+        [JsonProperty("KnowledgeBaseId")]
+        public string KnowledgeBaseId{ get; set; }
+
+        /// <summary>
+        /// 问答对ID列表。支持批量删除，数量不超过100
+        /// </summary>
+        [JsonProperty("QaIds")]
+        public string[] QaIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
+            this.SetParamArraySimple(map, prefix + "QaIds.", this.QaIds);
         }
     }
 }

@@ -25,32 +25,32 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 域名。
+        /// 证书绑定的域名。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 验证类型。
+        /// 域名验证类型。 取值为：DNS、FILE、DNS_AUTO、DNS_PROXY、FILE_PROXY
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VerifyType")]
         public string VerifyType{ get; set; }
 
         /// <summary>
-        /// 本地检查结果。
+        /// 腾讯云检测结果，取值：1（验证通过）； -1（被限频或者 txt record not found）；-2（txt record not match）；-3（ns record not found）；-4（file not found）；-5（file not match）；-6（cname record not found）；-7（cname record not match）；-8（ns record not found）-9（file not found）；-10（file not match）
         /// </summary>
         [JsonProperty("LocalCheck")]
         public long? LocalCheck{ get; set; }
 
         /// <summary>
-        /// CA检查结果。
+        /// CA检查结果。取值： -1（未检测通过）；2（检测通过）
         /// </summary>
         [JsonProperty("CaCheck")]
         public long? CaCheck{ get; set; }
 
         /// <summary>
-        /// 检查失败原因。
+        /// 检查失败原因。状态LocalCheck的具体描述
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LocalCheckFailReason")]
@@ -64,13 +64,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string[] CheckValue{ get; set; }
 
         /// <summary>
-        /// 是否频繁请求。
+        /// 是否被限频拦截， 取值：false（未被限频）；true（被限频）
         /// </summary>
         [JsonProperty("Frequently")]
         public bool? Frequently{ get; set; }
 
         /// <summary>
-        /// 是否已经签发。
+        /// 证书是否已经签发。取值： false（未签发）；true（已签发）
         /// </summary>
         [JsonProperty("Issued")]
         public bool? Issued{ get; set; }

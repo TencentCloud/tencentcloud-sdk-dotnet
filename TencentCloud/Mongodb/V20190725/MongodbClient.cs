@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1177";
+       private const string sdkVersion = "SDK_NET_3.0.1178";
 
         /// <summary>
         /// Client constructor.
@@ -455,6 +455,27 @@ namespace TencentCloud.Mongodb.V20190725
         public DescribeDBInstanceParamTplDetailResponse DescribeDBInstanceParamTplDetailSync(DescribeDBInstanceParamTplDetailRequest req)
         {
             return InternalRequestAsync<DescribeDBInstanceParamTplDetailResponse>(req, "DescribeDBInstanceParamTplDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDBInstanceURL）用于获取指定实例的 URI 形式的连接串访问地址示例。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceURLRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceURLResponse"/></returns>
+        public Task<DescribeDBInstanceURLResponse> DescribeDBInstanceURL(DescribeDBInstanceURLRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstanceURLResponse>(req, "DescribeDBInstanceURL");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDBInstanceURL）用于获取指定实例的 URI 形式的连接串访问地址示例。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceURLRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceURLResponse"/></returns>
+        public DescribeDBInstanceURLResponse DescribeDBInstanceURLSync(DescribeDBInstanceURLRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstanceURLResponse>(req, "DescribeDBInstanceURL")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

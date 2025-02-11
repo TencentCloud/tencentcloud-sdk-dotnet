@@ -34,6 +34,7 @@ namespace TencentCloud.Lkeap.V20240522.Models
         /// <summary>
         ///  状态，
         /// - Uploading  上传中  
+        /// - Auditing 审核中
         /// - Parsing 解析中  
         /// - ParseFailed 解析失败
         /// - Indexing 创建索引中  

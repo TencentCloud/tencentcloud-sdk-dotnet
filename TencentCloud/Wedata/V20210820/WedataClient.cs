@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1177";
+       private const string sdkVersion = "SDK_NET_3.0.1178";
 
         /// <summary>
         /// Client constructor.
@@ -2024,6 +2024,27 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeInstanceByCycleResponse DescribeInstanceByCycleSync(DescribeInstanceByCycleRequest req)
         {
             return InternalRequestAsync<DescribeInstanceByCycleResponse>(req, "DescribeInstanceByCycle")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 实例详情页，返回某个实例所有生命周期信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceDetailInfoRequest"/></param>
+        /// <returns><see cref="DescribeInstanceDetailInfoResponse"/></returns>
+        public Task<DescribeInstanceDetailInfoResponse> DescribeInstanceDetailInfo(DescribeInstanceDetailInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceDetailInfoResponse>(req, "DescribeInstanceDetailInfo");
+        }
+
+        /// <summary>
+        /// 实例详情页，返回某个实例所有生命周期信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceDetailInfoRequest"/></param>
+        /// <returns><see cref="DescribeInstanceDetailInfoResponse"/></returns>
+        public DescribeInstanceDetailInfoResponse DescribeInstanceDetailInfoSync(DescribeInstanceDetailInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceDetailInfoResponse>(req, "DescribeInstanceDetailInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

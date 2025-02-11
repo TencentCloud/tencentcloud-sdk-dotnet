@@ -32,7 +32,6 @@ namespace TencentCloud.Lcic.V20220817.Models
 
         /// <summary>
         /// 课堂评分列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Scores")]
         public ClassScoreItem[] Scores{ get; set; }

@@ -24,12 +24,26 @@ namespace TencentCloud.Lkeap.V20240522.Models
     public class DescribeDocRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 知识库ID
+        /// </summary>
+        [JsonProperty("KnowledgeBaseId")]
+        public string KnowledgeBaseId{ get; set; }
+
+        /// <summary>
+        /// 文档ID
+        /// </summary>
+        [JsonProperty("DocId")]
+        public string DocId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
+            this.SetParamSimple(map, prefix + "DocId", this.DocId);
         }
     }
 }

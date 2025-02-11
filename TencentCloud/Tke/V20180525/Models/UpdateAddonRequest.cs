@@ -54,6 +54,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("UpdateStrategy")]
         public string UpdateStrategy{ get; set; }
 
+        /// <summary>
+        /// 是否仅做更新检查，设置为true时仅做检查，不会更新组件
+        /// </summary>
+        [JsonProperty("DryRun")]
+        public bool? DryRun{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "AddonVersion", this.AddonVersion);
             this.SetParamSimple(map, prefix + "RawValues", this.RawValues);
             this.SetParamSimple(map, prefix + "UpdateStrategy", this.UpdateStrategy);
+            this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
         }
     }
 }

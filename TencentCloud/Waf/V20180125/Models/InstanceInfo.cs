@@ -280,6 +280,18 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("FreeDelayFlag")]
         public ulong? FreeDelayFlag{ get; set; }
 
+        /// <summary>
+        /// 最近3天最大qps
+        /// </summary>
+        [JsonProperty("Last3MaxQPS")]
+        public ulong? Last3MaxQPS{ get; set; }
+
+        /// <summary>
+        /// 最近3天最大带宽
+        /// </summary>
+        [JsonProperty("Last3MaxBandwidth")]
+        public ulong? Last3MaxBandwidth{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -327,6 +339,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamObj(map, prefix + "MiniExtendPkg.", this.MiniExtendPkg);
             this.SetParamSimple(map, prefix + "BillingItem", this.BillingItem);
             this.SetParamSimple(map, prefix + "FreeDelayFlag", this.FreeDelayFlag);
+            this.SetParamSimple(map, prefix + "Last3MaxQPS", this.Last3MaxQPS);
+            this.SetParamSimple(map, prefix + "Last3MaxBandwidth", this.Last3MaxBandwidth);
         }
     }
 }

@@ -24,12 +24,26 @@ namespace TencentCloud.Lkeap.V20240522.Models
     public class DeleteAttributeLabelsRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 知识库ID
+        /// </summary>
+        [JsonProperty("KnowledgeBaseId")]
+        public string KnowledgeBaseId{ get; set; }
+
+        /// <summary>
+        /// 属性ID
+        /// </summary>
+        [JsonProperty("AttributeIds")]
+        public string[] AttributeIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
+            this.SetParamArraySimple(map, prefix + "AttributeIds.", this.AttributeIds);
         }
     }
 }

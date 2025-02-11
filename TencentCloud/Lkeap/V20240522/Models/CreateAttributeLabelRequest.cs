@@ -25,6 +25,24 @@ namespace TencentCloud.Lkeap.V20240522.Models
     {
         
         /// <summary>
+        /// 知识库ID
+        /// </summary>
+        [JsonProperty("KnowledgeBaseId")]
+        public string KnowledgeBaseId{ get; set; }
+
+        /// <summary>
+        /// 属性标识，最大40个英文字符，如style
+        /// </summary>
+        [JsonProperty("AttributeKey")]
+        public string AttributeKey{ get; set; }
+
+        /// <summary>
+        /// 属性名称，最大80个英文字符，如风格
+        /// </summary>
+        [JsonProperty("AttributeName")]
+        public string AttributeName{ get; set; }
+
+        /// <summary>
         /// 属性标签信息
         /// </summary>
         [JsonProperty("Labels")]
@@ -36,6 +54,9 @@ namespace TencentCloud.Lkeap.V20240522.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
+            this.SetParamSimple(map, prefix + "AttributeKey", this.AttributeKey);
+            this.SetParamSimple(map, prefix + "AttributeName", this.AttributeName);
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
         }
     }
