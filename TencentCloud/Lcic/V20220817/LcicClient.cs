@@ -28,7 +28,7 @@ namespace TencentCloud.Lcic.V20220817
 
        private const string endpoint = "lcic.tencentcloudapi.com";
        private const string version = "2022-08-17";
-       private const string sdkVersion = "SDK_NET_3.0.1178";
+       private const string sdkVersion = "SDK_NET_3.0.1179";
 
         /// <summary>
         /// Client constructor.
@@ -222,7 +222,27 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
-        /// 绑定文档到房间
+        /// 功能概述
+        /// 本接口提供教学场景下的课程文档预绑定能力，支持将课件课堂ID进行关联映射，实现课件的自动化预加载。
+        /// 
+        /// 应用场景建议
+        /// 
+        /// 绑定时机
+        /// 推荐在创建课堂预约阶段同步完成文档绑定操作，确保课件资源在课堂开始前完成上传。
+        /// 
+        /// 接口限制与频控策略
+        /// 
+        /// 频控维度
+        /// 开发者账号维度限频
+        /// 默认频控阈值为20 QPS（每秒请求次数）
+        /// 
+        /// 最佳实践建议
+        /// 
+        /// 重试策略
+        /// 当触发限频错误时，建议采用以下策略：
+        /// 启用退避重试机制（建议使用指数退避算法）
+        /// 初始重试间隔不低于500ms
+        /// 最大重试次数不超过3次
         /// </summary>
         /// <param name="req"><see cref="BindDocumentToRoomRequest"/></param>
         /// <returns><see cref="BindDocumentToRoomResponse"/></returns>
@@ -232,7 +252,27 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
-        /// 绑定文档到房间
+        /// 功能概述
+        /// 本接口提供教学场景下的课程文档预绑定能力，支持将课件课堂ID进行关联映射，实现课件的自动化预加载。
+        /// 
+        /// 应用场景建议
+        /// 
+        /// 绑定时机
+        /// 推荐在创建课堂预约阶段同步完成文档绑定操作，确保课件资源在课堂开始前完成上传。
+        /// 
+        /// 接口限制与频控策略
+        /// 
+        /// 频控维度
+        /// 开发者账号维度限频
+        /// 默认频控阈值为20 QPS（每秒请求次数）
+        /// 
+        /// 最佳实践建议
+        /// 
+        /// 重试策略
+        /// 当触发限频错误时，建议采用以下策略：
+        /// 启用退避重试机制（建议使用指数退避算法）
+        /// 初始重试间隔不低于500ms
+        /// 最大重试次数不超过3次
         /// </summary>
         /// <param name="req"><see cref="BindDocumentToRoomRequest"/></param>
         /// <returns><see cref="BindDocumentToRoomResponse"/></returns>

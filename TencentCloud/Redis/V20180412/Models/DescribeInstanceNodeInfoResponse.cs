@@ -32,7 +32,6 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// Proxy节点信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Proxy")]
         public ProxyNodes[] Proxy{ get; set; }
@@ -45,7 +44,6 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// Redis节点信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Redis")]
         public RedisNodes[] Redis{ get; set; }
@@ -58,7 +56,6 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// 该参数不再使用，请忽略。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tendis")]
         public TendisNodes[] Tendis{ get; set; }

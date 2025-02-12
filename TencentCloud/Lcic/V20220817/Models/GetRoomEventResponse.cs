@@ -32,7 +32,6 @@ namespace TencentCloud.Lcic.V20220817.Models
 
         /// <summary>
         /// 详细事件内容。包含相应的类型、发生的时间戳。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Events")]
         public EventInfo[] Events{ get; set; }

@@ -199,6 +199,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
+        /// <summary>
+        /// 库下表的最新更新时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ModifiedTimeByTables")]
+        public ulong? ModifiedTimeByTables{ get; set; }
+
+        /// <summary>
+        /// 库下表的最新访问时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LastAccessTimeByTables")]
+        public ulong? LastAccessTimeByTables{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -230,6 +244,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "CollectJobName", this.CollectJobName);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "ModifiedTimeByTables", this.ModifiedTimeByTables);
+            this.SetParamSimple(map, prefix + "LastAccessTimeByTables", this.LastAccessTimeByTables);
         }
     }
 }

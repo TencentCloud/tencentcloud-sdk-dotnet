@@ -26,28 +26,24 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         
         /// <summary>
         ///  来源：RESTRICT：封禁、FREEZW：冻结
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
         /// 是否允许自助解封：1是，2否
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
         /// 违规类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Reason")]
         public string Reason{ get; set; }
 
         /// <summary>
         /// 违规内容（URL、关联域名）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

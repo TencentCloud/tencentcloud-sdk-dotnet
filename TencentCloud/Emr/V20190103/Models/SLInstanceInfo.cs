@@ -43,6 +43,12 @@ namespace TencentCloud.Emr.V20190103.Models
         public string StatusDesc{ get; set; }
 
         /// <summary>
+        /// 健康状态
+        /// </summary>
+        [JsonProperty("HealthStatus")]
+        public string HealthStatus{ get; set; }
+
+        /// <summary>
         /// 实例名称
         /// </summary>
         [JsonProperty("ClusterName")]
@@ -143,6 +149,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
+            this.SetParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);

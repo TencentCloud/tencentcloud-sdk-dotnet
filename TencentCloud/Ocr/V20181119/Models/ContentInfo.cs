@@ -37,7 +37,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long? Confidence{ get; set; }
 
         /// <summary>
-        /// 字段是否不完整
+        /// 字段是否不完整（value内容）
         /// 0 字段正常
         /// 1 字段不完整
         /// </summary>
@@ -45,12 +45,28 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long? IsInComplete{ get; set; }
 
         /// <summary>
-        /// 字段反光
+        /// 字段反光（value内容）
         /// 0 字段正常
         /// 1 字段有反光
         /// </summary>
         [JsonProperty("IsReflect")]
         public long? IsReflect{ get; set; }
+
+        /// <summary>
+        /// 字段是否不完整（key内容）
+        /// 0 字段正常
+        /// 1 字段不完整
+        /// </summary>
+        [JsonProperty("IsKeyInComplete")]
+        public long? IsKeyInComplete{ get; set; }
+
+        /// <summary>
+        /// 字段反光（key内容）
+        /// 0 字段正常
+        /// 1 字段有反光
+        /// </summary>
+        [JsonProperty("IsKeyReflect")]
+        public long? IsKeyReflect{ get; set; }
 
 
         /// <summary>
@@ -62,6 +78,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
             this.SetParamSimple(map, prefix + "IsInComplete", this.IsInComplete);
             this.SetParamSimple(map, prefix + "IsReflect", this.IsReflect);
+            this.SetParamSimple(map, prefix + "IsKeyInComplete", this.IsKeyInComplete);
+            this.SetParamSimple(map, prefix + "IsKeyReflect", this.IsKeyReflect);
         }
     }
 }

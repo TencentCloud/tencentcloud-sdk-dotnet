@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111
 
        private const string endpoint = "ess.tencentcloudapi.com";
        private const string version = "2020-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1178";
+       private const string sdkVersion = "SDK_NET_3.0.1179";
 
         /// <summary>
         /// Client constructor.
@@ -773,6 +773,31 @@ namespace TencentCloud.Ess.V20201111
         public CreateExtendedServiceAuthInfosResponse CreateExtendedServiceAuthInfosSync(CreateExtendedServiceAuthInfosRequest req)
         {
             return InternalRequestAsync<CreateExtendedServiceAuthInfosResponse>(req, "CreateExtendedServiceAuthInfos")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口用于发起数字文件CA加签操作。可以使用同步或者异步模式进行。
+        /// 
+        /// **注意： 1. 文件类型暂时仅支持PDF类型文件。2. 此接口为『数字文件CA加签服务』白名单功能，使用前请联系对接的客户经理沟通。**
+        /// </summary>
+        /// <param name="req"><see cref="CreateFileCounterSignRequest"/></param>
+        /// <returns><see cref="CreateFileCounterSignResponse"/></returns>
+        public Task<CreateFileCounterSignResponse> CreateFileCounterSign(CreateFileCounterSignRequest req)
+        {
+            return InternalRequestAsync<CreateFileCounterSignResponse>(req, "CreateFileCounterSign");
+        }
+
+        /// <summary>
+        /// 此接口用于发起数字文件CA加签操作。可以使用同步或者异步模式进行。
+        /// 
+        /// **注意： 1. 文件类型暂时仅支持PDF类型文件。2. 此接口为『数字文件CA加签服务』白名单功能，使用前请联系对接的客户经理沟通。**
+        /// </summary>
+        /// <param name="req"><see cref="CreateFileCounterSignRequest"/></param>
+        /// <returns><see cref="CreateFileCounterSignResponse"/></returns>
+        public CreateFileCounterSignResponse CreateFileCounterSignSync(CreateFileCounterSignRequest req)
+        {
+            return InternalRequestAsync<CreateFileCounterSignResponse>(req, "CreateFileCounterSign")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2797,6 +2822,31 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 文件CA加签任务结果查询接口，用于查询 CreateFileCounterSign接口 发起的异步加签任务。
+        /// 
+        /// 注意：`此接口为『数字文件CA加签服务』白名单功能，使用前请联系对接的客户经理沟通。`
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFileCounterSignResultRequest"/></param>
+        /// <returns><see cref="DescribeFileCounterSignResultResponse"/></returns>
+        public Task<DescribeFileCounterSignResultResponse> DescribeFileCounterSignResult(DescribeFileCounterSignResultRequest req)
+        {
+            return InternalRequestAsync<DescribeFileCounterSignResultResponse>(req, "DescribeFileCounterSignResult");
+        }
+
+        /// <summary>
+        /// 文件CA加签任务结果查询接口，用于查询 CreateFileCounterSign接口 发起的异步加签任务。
+        /// 
+        /// 注意：`此接口为『数字文件CA加签服务』白名单功能，使用前请联系对接的客户经理沟通。`
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFileCounterSignResultRequest"/></param>
+        /// <returns><see cref="DescribeFileCounterSignResultResponse"/></returns>
+        public DescribeFileCounterSignResultResponse DescribeFileCounterSignResultSync(DescribeFileCounterSignResultRequest req)
+        {
+            return InternalRequestAsync<DescribeFileCounterSignResultResponse>(req, "DescribeFileCounterSignResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeFileUrls）用于查询文件的下载URL。
         /// 适用场景：通过传参合同流程编号，下载对应的合同PDF文件流到本地。
         /// 
@@ -3827,6 +3877,27 @@ namespace TencentCloud.Ess.V20201111
         public UploadFilesResponse UploadFilesSync(UploadFilesRequest req)
         {
             return InternalRequestAsync<UploadFilesResponse>(req, "UploadFiles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 对加签后的文件进行数字签名验证，判断数字签名是否有效。
+        /// </summary>
+        /// <param name="req"><see cref="VerifyDigitFileRequest"/></param>
+        /// <returns><see cref="VerifyDigitFileResponse"/></returns>
+        public Task<VerifyDigitFileResponse> VerifyDigitFile(VerifyDigitFileRequest req)
+        {
+            return InternalRequestAsync<VerifyDigitFileResponse>(req, "VerifyDigitFile");
+        }
+
+        /// <summary>
+        /// 对加签后的文件进行数字签名验证，判断数字签名是否有效。
+        /// </summary>
+        /// <param name="req"><see cref="VerifyDigitFileRequest"/></param>
+        /// <returns><see cref="VerifyDigitFileResponse"/></returns>
+        public VerifyDigitFileResponse VerifyDigitFileSync(VerifyDigitFileRequest req)
+        {
+            return InternalRequestAsync<VerifyDigitFileResponse>(req, "VerifyDigitFile")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

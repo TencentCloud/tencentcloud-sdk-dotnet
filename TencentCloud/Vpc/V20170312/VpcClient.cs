@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1178";
+       private const string sdkVersion = "SDK_NET_3.0.1179";
 
         /// <summary>
         /// Client constructor.
@@ -769,6 +769,27 @@ namespace TencentCloud.Vpc.V20170312
         public CheckNetDetectStateResponse CheckNetDetectStateSync(CheckNetDetectStateRequest req)
         {
             return InternalRequestAsync<CheckNetDetectStateResponse>(req, "CheckNetDetectState")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 检查流量镜像的采集端接收端（公网IP类型）
+        /// </summary>
+        /// <param name="req"><see cref="CheckTrafficMirrorRequest"/></param>
+        /// <returns><see cref="CheckTrafficMirrorResponse"/></returns>
+        public Task<CheckTrafficMirrorResponse> CheckTrafficMirror(CheckTrafficMirrorRequest req)
+        {
+            return InternalRequestAsync<CheckTrafficMirrorResponse>(req, "CheckTrafficMirror");
+        }
+
+        /// <summary>
+        /// 检查流量镜像的采集端接收端（公网IP类型）
+        /// </summary>
+        /// <param name="req"><see cref="CheckTrafficMirrorRequest"/></param>
+        /// <returns><see cref="CheckTrafficMirrorResponse"/></returns>
+        public CheckTrafficMirrorResponse CheckTrafficMirrorSync(CheckTrafficMirrorRequest req)
+        {
+            return InternalRequestAsync<CheckTrafficMirrorResponse>(req, "CheckTrafficMirror")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1887,6 +1908,27 @@ namespace TencentCloud.Vpc.V20170312
         public CreateSubnetsResponse CreateSubnetsSync(CreateSubnetsRequest req)
         {
             return InternalRequestAsync<CreateSubnetsResponse>(req, "CreateSubnets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（CreateTrafficMirror）用于创建流量镜像实例。
+        /// </summary>
+        /// <param name="req"><see cref="CreateTrafficMirrorRequest"/></param>
+        /// <returns><see cref="CreateTrafficMirrorResponse"/></returns>
+        public Task<CreateTrafficMirrorResponse> CreateTrafficMirror(CreateTrafficMirrorRequest req)
+        {
+            return InternalRequestAsync<CreateTrafficMirrorResponse>(req, "CreateTrafficMirror");
+        }
+
+        /// <summary>
+        /// 本接口（CreateTrafficMirror）用于创建流量镜像实例。
+        /// </summary>
+        /// <param name="req"><see cref="CreateTrafficMirrorRequest"/></param>
+        /// <returns><see cref="CreateTrafficMirrorResponse"/></returns>
+        public CreateTrafficMirrorResponse CreateTrafficMirrorSync(CreateTrafficMirrorRequest req)
+        {
+            return InternalRequestAsync<CreateTrafficMirrorResponse>(req, "CreateTrafficMirror")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3026,6 +3068,27 @@ namespace TencentCloud.Vpc.V20170312
         public DeleteTemplateMemberResponse DeleteTemplateMemberSync(DeleteTemplateMemberRequest req)
         {
             return InternalRequestAsync<DeleteTemplateMemberResponse>(req, "DeleteTemplateMember")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DeleteTrafficMirror）用于删除流量镜像实例。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTrafficMirrorRequest"/></param>
+        /// <returns><see cref="DeleteTrafficMirrorResponse"/></returns>
+        public Task<DeleteTrafficMirrorResponse> DeleteTrafficMirror(DeleteTrafficMirrorRequest req)
+        {
+            return InternalRequestAsync<DeleteTrafficMirrorResponse>(req, "DeleteTrafficMirror");
+        }
+
+        /// <summary>
+        /// 本接口（DeleteTrafficMirror）用于删除流量镜像实例。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTrafficMirrorRequest"/></param>
+        /// <returns><see cref="DeleteTrafficMirrorResponse"/></returns>
+        public DeleteTrafficMirrorResponse DeleteTrafficMirrorSync(DeleteTrafficMirrorRequest req)
+        {
+            return InternalRequestAsync<DeleteTrafficMirrorResponse>(req, "DeleteTrafficMirror")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5078,6 +5141,27 @@ namespace TencentCloud.Vpc.V20170312
         public DescribeTenantCcnsResponse DescribeTenantCcnsSync(DescribeTenantCcnsRequest req)
         {
             return InternalRequestAsync<DescribeTenantCcnsResponse>(req, "DescribeTenantCcns")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeTrafficMirrors）用于查询流量镜像实例信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrafficMirrorsRequest"/></param>
+        /// <returns><see cref="DescribeTrafficMirrorsResponse"/></returns>
+        public Task<DescribeTrafficMirrorsResponse> DescribeTrafficMirrors(DescribeTrafficMirrorsRequest req)
+        {
+            return InternalRequestAsync<DescribeTrafficMirrorsResponse>(req, "DescribeTrafficMirrors");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeTrafficMirrors）用于查询流量镜像实例信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrafficMirrorsRequest"/></param>
+        /// <returns><see cref="DescribeTrafficMirrorsResponse"/></returns>
+        public DescribeTrafficMirrorsResponse DescribeTrafficMirrorsSync(DescribeTrafficMirrorsRequest req)
+        {
+            return InternalRequestAsync<DescribeTrafficMirrorsResponse>(req, "DescribeTrafficMirrors")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -7737,6 +7821,29 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（ModifyTrafficMirrorAttribute）用于修改流量镜像实例属性。
+        /// 注意：只支持修改名字和描述信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTrafficMirrorAttributeRequest"/></param>
+        /// <returns><see cref="ModifyTrafficMirrorAttributeResponse"/></returns>
+        public Task<ModifyTrafficMirrorAttributeResponse> ModifyTrafficMirrorAttribute(ModifyTrafficMirrorAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyTrafficMirrorAttributeResponse>(req, "ModifyTrafficMirrorAttribute");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyTrafficMirrorAttribute）用于修改流量镜像实例属性。
+        /// 注意：只支持修改名字和描述信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTrafficMirrorAttributeRequest"/></param>
+        /// <returns><see cref="ModifyTrafficMirrorAttributeResponse"/></returns>
+        public ModifyTrafficMirrorAttributeResponse ModifyTrafficMirrorAttributeSync(ModifyTrafficMirrorAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyTrafficMirrorAttributeResponse>(req, "ModifyTrafficMirrorAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ModifyVpcAttribute）用于修改私有网络（VPC）的相关属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyVpcAttributeRequest"/></param>
@@ -8566,6 +8673,71 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（ResetTrafficMirrorFilter）用于更新流量镜像实例过滤规则。
+        /// 注意：每一个流量镜像实例，不能同时支持按nat网关和五元组两种规则过滤
+        /// </summary>
+        /// <param name="req"><see cref="ResetTrafficMirrorFilterRequest"/></param>
+        /// <returns><see cref="ResetTrafficMirrorFilterResponse"/></returns>
+        public Task<ResetTrafficMirrorFilterResponse> ResetTrafficMirrorFilter(ResetTrafficMirrorFilterRequest req)
+        {
+            return InternalRequestAsync<ResetTrafficMirrorFilterResponse>(req, "ResetTrafficMirrorFilter");
+        }
+
+        /// <summary>
+        /// 本接口（ResetTrafficMirrorFilter）用于更新流量镜像实例过滤规则。
+        /// 注意：每一个流量镜像实例，不能同时支持按nat网关和五元组两种规则过滤
+        /// </summary>
+        /// <param name="req"><see cref="ResetTrafficMirrorFilterRequest"/></param>
+        /// <returns><see cref="ResetTrafficMirrorFilterResponse"/></returns>
+        public ResetTrafficMirrorFilterResponse ResetTrafficMirrorFilterSync(ResetTrafficMirrorFilterRequest req)
+        {
+            return InternalRequestAsync<ResetTrafficMirrorFilterResponse>(req, "ResetTrafficMirrorFilter")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ResetTrafficMirrorSrcs）用于重置流量镜像实例采集对象。
+        /// </summary>
+        /// <param name="req"><see cref="ResetTrafficMirrorSrcsRequest"/></param>
+        /// <returns><see cref="ResetTrafficMirrorSrcsResponse"/></returns>
+        public Task<ResetTrafficMirrorSrcsResponse> ResetTrafficMirrorSrcs(ResetTrafficMirrorSrcsRequest req)
+        {
+            return InternalRequestAsync<ResetTrafficMirrorSrcsResponse>(req, "ResetTrafficMirrorSrcs");
+        }
+
+        /// <summary>
+        /// 本接口（ResetTrafficMirrorSrcs）用于重置流量镜像实例采集对象。
+        /// </summary>
+        /// <param name="req"><see cref="ResetTrafficMirrorSrcsRequest"/></param>
+        /// <returns><see cref="ResetTrafficMirrorSrcsResponse"/></returns>
+        public ResetTrafficMirrorSrcsResponse ResetTrafficMirrorSrcsSync(ResetTrafficMirrorSrcsRequest req)
+        {
+            return InternalRequestAsync<ResetTrafficMirrorSrcsResponse>(req, "ResetTrafficMirrorSrcs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ResetTrafficMirrorTarget）用于更新流量镜像实例的接收目的信息。
+        /// </summary>
+        /// <param name="req"><see cref="ResetTrafficMirrorTargetRequest"/></param>
+        /// <returns><see cref="ResetTrafficMirrorTargetResponse"/></returns>
+        public Task<ResetTrafficMirrorTargetResponse> ResetTrafficMirrorTarget(ResetTrafficMirrorTargetRequest req)
+        {
+            return InternalRequestAsync<ResetTrafficMirrorTargetResponse>(req, "ResetTrafficMirrorTarget");
+        }
+
+        /// <summary>
+        /// 本接口（ResetTrafficMirrorTarget）用于更新流量镜像实例的接收目的信息。
+        /// </summary>
+        /// <param name="req"><see cref="ResetTrafficMirrorTargetRequest"/></param>
+        /// <returns><see cref="ResetTrafficMirrorTargetResponse"/></returns>
+        public ResetTrafficMirrorTargetResponse ResetTrafficMirrorTargetSync(ResetTrafficMirrorTargetRequest req)
+        {
+            return InternalRequestAsync<ResetTrafficMirrorTargetResponse>(req, "ResetTrafficMirrorTarget")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ResetVpnConnection）用于重置VPN通道。
         /// </summary>
         /// <param name="req"><see cref="ResetVpnConnectionRequest"/></param>
@@ -8690,6 +8862,48 @@ namespace TencentCloud.Vpc.V20170312
         public SetVpnGatewaysRenewFlagResponse SetVpnGatewaysRenewFlagSync(SetVpnGatewaysRenewFlagRequest req)
         {
             return InternalRequestAsync<SetVpnGatewaysRenewFlagResponse>(req, "SetVpnGatewaysRenewFlag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（StartTrafficMirror）用于开启流量镜像实例。
+        /// </summary>
+        /// <param name="req"><see cref="StartTrafficMirrorRequest"/></param>
+        /// <returns><see cref="StartTrafficMirrorResponse"/></returns>
+        public Task<StartTrafficMirrorResponse> StartTrafficMirror(StartTrafficMirrorRequest req)
+        {
+            return InternalRequestAsync<StartTrafficMirrorResponse>(req, "StartTrafficMirror");
+        }
+
+        /// <summary>
+        /// 本接口（StartTrafficMirror）用于开启流量镜像实例。
+        /// </summary>
+        /// <param name="req"><see cref="StartTrafficMirrorRequest"/></param>
+        /// <returns><see cref="StartTrafficMirrorResponse"/></returns>
+        public StartTrafficMirrorResponse StartTrafficMirrorSync(StartTrafficMirrorRequest req)
+        {
+            return InternalRequestAsync<StartTrafficMirrorResponse>(req, "StartTrafficMirror")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（StopTrafficMirror）用于关闭流量镜像实例。
+        /// </summary>
+        /// <param name="req"><see cref="StopTrafficMirrorRequest"/></param>
+        /// <returns><see cref="StopTrafficMirrorResponse"/></returns>
+        public Task<StopTrafficMirrorResponse> StopTrafficMirror(StopTrafficMirrorRequest req)
+        {
+            return InternalRequestAsync<StopTrafficMirrorResponse>(req, "StopTrafficMirror");
+        }
+
+        /// <summary>
+        /// 本接口（StopTrafficMirror）用于关闭流量镜像实例。
+        /// </summary>
+        /// <param name="req"><see cref="StopTrafficMirrorRequest"/></param>
+        /// <returns><see cref="StopTrafficMirrorResponse"/></returns>
+        public StopTrafficMirrorResponse StopTrafficMirrorSync(StopTrafficMirrorRequest req)
+        {
+            return InternalRequestAsync<StopTrafficMirrorResponse>(req, "StopTrafficMirror")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -8863,6 +9077,48 @@ namespace TencentCloud.Vpc.V20170312
         public UnlockCcnsResponse UnlockCcnsSync(UnlockCcnsRequest req)
         {
             return InternalRequestAsync<UnlockCcnsResponse>(req, "UnlockCcns")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（UpdateTrafficMirrorAllFilter）用于更新流量镜像实例的过滤规则或者采集对象。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTrafficMirrorAllFilterRequest"/></param>
+        /// <returns><see cref="UpdateTrafficMirrorAllFilterResponse"/></returns>
+        public Task<UpdateTrafficMirrorAllFilterResponse> UpdateTrafficMirrorAllFilter(UpdateTrafficMirrorAllFilterRequest req)
+        {
+            return InternalRequestAsync<UpdateTrafficMirrorAllFilterResponse>(req, "UpdateTrafficMirrorAllFilter");
+        }
+
+        /// <summary>
+        /// 本接口（UpdateTrafficMirrorAllFilter）用于更新流量镜像实例的过滤规则或者采集对象。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTrafficMirrorAllFilterRequest"/></param>
+        /// <returns><see cref="UpdateTrafficMirrorAllFilterResponse"/></returns>
+        public UpdateTrafficMirrorAllFilterResponse UpdateTrafficMirrorAllFilterSync(UpdateTrafficMirrorAllFilterRequest req)
+        {
+            return InternalRequestAsync<UpdateTrafficMirrorAllFilterResponse>(req, "UpdateTrafficMirrorAllFilter")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（UpdateTrafficMirrorDirection）用于更新流量镜像实例的采集方向。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTrafficMirrorDirectionRequest"/></param>
+        /// <returns><see cref="UpdateTrafficMirrorDirectionResponse"/></returns>
+        public Task<UpdateTrafficMirrorDirectionResponse> UpdateTrafficMirrorDirection(UpdateTrafficMirrorDirectionRequest req)
+        {
+            return InternalRequestAsync<UpdateTrafficMirrorDirectionResponse>(req, "UpdateTrafficMirrorDirection");
+        }
+
+        /// <summary>
+        /// 本接口（UpdateTrafficMirrorDirection）用于更新流量镜像实例的采集方向。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTrafficMirrorDirectionRequest"/></param>
+        /// <returns><see cref="UpdateTrafficMirrorDirectionResponse"/></returns>
+        public UpdateTrafficMirrorDirectionResponse UpdateTrafficMirrorDirectionSync(UpdateTrafficMirrorDirectionRequest req)
+        {
+            return InternalRequestAsync<UpdateTrafficMirrorDirectionResponse>(req, "UpdateTrafficMirrorDirection")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -126,6 +126,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// 电话呼出	        210	           notInService	不在服务区
         /// 
         /// 电话呼入&呼出	211    clientError    客户端错误
+        /// 电话呼出        212     carrierBlocked      运营商拦截
         /// </summary>
         [JsonProperty("EndStatus")]
         public long? EndStatus{ get; set; }
@@ -244,6 +245,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// 电话呼出	        210	           notInService	不在服务区
         /// 
         /// 电话呼入&呼出	211    clientError    客户端错误
+        /// 电话呼出        212     carrierBlocked      运营商拦截
         /// </summary>
         [JsonProperty("EndStatusString")]
         public string EndStatusString{ get; set; }

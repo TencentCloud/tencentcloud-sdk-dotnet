@@ -31,7 +31,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 文件链接。目前仅支持 pdf 格式，单文件大小限制为100M。
+        /// 文件链接。目前支持 csv, doc, docx, pdf, ppt, pptx, txt, xls, xlsx 格式，单文件大小限制为100M。
         /// </summary>
         [JsonProperty("URL")]
         public string URL{ get; set; }

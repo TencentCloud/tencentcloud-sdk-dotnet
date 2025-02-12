@@ -40,7 +40,6 @@ namespace TencentCloud.Lighthouse.V20200324.Models
 
         /// <summary>
         /// 折扣梯度详情，每个梯度包含的信息有：时长，折扣数，总价，折扣价，折扣详情（用户折扣、官网折扣、最终折扣）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiscountDetail")]
         public DiscountDetail[] DiscountDetail{ get; set; }

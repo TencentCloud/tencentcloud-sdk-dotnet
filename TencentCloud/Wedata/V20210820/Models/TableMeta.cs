@@ -452,6 +452,27 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("HasBizPermission")]
         public bool? HasBizPermission{ get; set; }
 
+        /// <summary>
+        /// 引擎侧创建人
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OwnerByEngine")]
+        public string OwnerByEngine{ get; set; }
+
+        /// <summary>
+        /// 用户无映射账户，请先完成账户映射后再来申请。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ErrorTips")]
+        public string ErrorTips{ get; set; }
+
+        /// <summary>
+        /// 是否支持select or ddl
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IfSupportCreateAndDDL")]
+        public CreateAndDDLSupport IfSupportCreateAndDDL{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -519,6 +540,9 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "CollectJobName", this.CollectJobName);
             this.SetParamSimple(map, prefix + "Urn", this.Urn);
             this.SetParamSimple(map, prefix + "HasBizPermission", this.HasBizPermission);
+            this.SetParamSimple(map, prefix + "OwnerByEngine", this.OwnerByEngine);
+            this.SetParamSimple(map, prefix + "ErrorTips", this.ErrorTips);
+            this.SetParamObj(map, prefix + "IfSupportCreateAndDDL.", this.IfSupportCreateAndDDL);
         }
     }
 }

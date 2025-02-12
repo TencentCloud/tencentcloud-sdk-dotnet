@@ -26,7 +26,6 @@ namespace TencentCloud.Redis.V20180412.Models
         
         /// <summary>
         /// 价格，单位：分
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Price")]
         public float? Price{ get; set; }

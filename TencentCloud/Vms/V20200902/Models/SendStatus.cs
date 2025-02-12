@@ -32,7 +32,6 @@ namespace TencentCloud.Vms.V20200902.Models
 
         /// <summary>
         /// 用户的 session 内容，腾讯 server 回包中会原样返回。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }

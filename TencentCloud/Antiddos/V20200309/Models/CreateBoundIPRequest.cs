@@ -55,7 +55,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string CopyPolicy{ get; set; }
 
         /// <summary>
-        /// 如果该资源实例为域名化资产则，该参数必填
+        /// 如果该资源实例为域名化资产以及跨地域绑定则，该参数必填
         /// </summary>
         [JsonProperty("FilterRegion")]
         public string FilterRegion{ get; set; }

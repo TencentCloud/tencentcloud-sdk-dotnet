@@ -50,14 +50,12 @@ namespace TencentCloud.Lcic.V20220817.Models
 
         /// <summary>
         /// 秒级unix时间戳，实际房间开始时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealStartTime")]
         public ulong? RealStartTime{ get; set; }
 
         /// <summary>
         /// 秒级unix时间戳，实际房间结束时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealEndTime")]
         public ulong? RealEndTime{ get; set; }

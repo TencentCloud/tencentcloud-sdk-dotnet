@@ -26,28 +26,24 @@ namespace TencentCloud.Lcic.V20220817.Models
         
         /// <summary>
         /// 老师视频区域的水印参数配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TeacherLogo")]
         public WatermarkConfig TeacherLogo{ get; set; }
 
         /// <summary>
         /// 白板区域的水印参数配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BoardLogo")]
         public WatermarkConfig BoardLogo{ get; set; }
 
         /// <summary>
         /// 背景图片配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackgroundPicture")]
         public BackgroundPictureConfig BackgroundPicture{ get; set; }
 
         /// <summary>
         /// 文字水印配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Text")]
         public TextMarkConfig Text{ get; set; }

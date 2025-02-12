@@ -32,6 +32,18 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Summary{ get; set; }
 
         /// <summary>
+        /// 分段标题
+        /// </summary>
+        [JsonProperty("Title")]
+        public string Title{ get; set; }
+
+        /// <summary>
+        /// 分段关键词
+        /// </summary>
+        [JsonProperty("Keywords")]
+        public string[] Keywords{ get; set; }
+
+        /// <summary>
         /// 分段起始时间点，秒
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -52,6 +64,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Summary", this.Summary);
+            this.SetParamSimple(map, prefix + "Title", this.Title);
+            this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
             this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
         }

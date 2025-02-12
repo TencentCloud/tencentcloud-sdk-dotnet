@@ -24,12 +24,35 @@ namespace TencentCloud.Gme.V20180711.Models
     public class SceneInfo : AbstractModel
     {
         
+        /// <summary>
+        /// 'RealTime','实时语音分析',
+        /// 'VoiceMessage','语音消息',
+        /// 'GMECloudApi':'GME云API接口'
+        /// </summary>
+        [JsonProperty("SceneId")]
+        public string SceneId{ get; set; }
+
+        /// <summary>
+        /// 开关状态，true开启/false关闭
+        /// </summary>
+        [JsonProperty("Status")]
+        public bool? Status{ get; set; }
+
+        /// <summary>
+        /// 用户回调地址
+        /// </summary>
+        [JsonProperty("CallbackUrl")]
+        public string CallbackUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "SceneId", this.SceneId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         }
     }
 }

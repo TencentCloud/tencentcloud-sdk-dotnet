@@ -26,21 +26,18 @@ namespace TencentCloud.Gme.V20180711.Models
         
         /// <summary>
         /// 实时语音统计数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealtimeSpeechStatisticsItem")]
         public RealTimeSpeechStatisticsItem RealtimeSpeechStatisticsItem{ get; set; }
 
         /// <summary>
         /// 语音消息统计数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VoiceMessageStatisticsItem")]
         public VoiceMessageStatisticsItem VoiceMessageStatisticsItem{ get; set; }
 
         /// <summary>
         /// 语音过滤统计数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VoiceFilterStatisticsItem")]
         public VoiceFilterStatisticsItem VoiceFilterStatisticsItem{ get; set; }
@@ -53,28 +50,24 @@ namespace TencentCloud.Gme.V20180711.Models
 
         /// <summary>
         /// 录音转文本用量统计数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AudioTextStatisticsItem")]
         public AudioTextStatisticsItem AudioTextStatisticsItem{ get; set; }
 
         /// <summary>
         /// 流式转文本用量数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StreamTextStatisticsItem")]
         public StreamTextStatisticsItem StreamTextStatisticsItem{ get; set; }
 
         /// <summary>
         /// 海外转文本用量数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OverseaTextStatisticsItem")]
         public OverseaTextStatisticsItem OverseaTextStatisticsItem{ get; set; }
 
         /// <summary>
         /// 实时语音转文本用量数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealtimeTextStatisticsItem")]
         public RealtimeTextStatisticsItem RealtimeTextStatisticsItem{ get; set; }

@@ -26,91 +26,78 @@ namespace TencentCloud.Smop.V20201203.Models
         
         /// <summary>
         /// 状态码，0为成功，-1为失败
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Code")]
         public long? Code{ get; set; }
 
         /// <summary>
         /// 提示信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
         /// 任务ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }
 
         /// <summary>
         /// 当前完成或正在完成的安心用户运营平台的任务订单ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskOrderId")]
         public string TaskOrderId{ get; set; }
 
         /// <summary>
         /// 当前任务订单状态码。1代表未完成；2代表已完成但未提交任务；3表示已完成，且已提交获得积分任务；4表示过期任务，提交后不获得积分。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskCode")]
         public long? TaskCode{ get; set; }
 
         /// <summary>
         /// 获得积分数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskCoinNumber")]
         public long? TaskCoinNumber{ get; set; }
 
         /// <summary>
         /// 任务类型后台代码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskType")]
         public long? TaskType{ get; set; }
 
         /// <summary>
         /// 用户的当前积分
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCoin")]
         public long? TotalCoin{ get; set; }
 
         /// <summary>
         /// 用户透传的附加数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Attach")]
         public string Attach{ get; set; }
 
         /// <summary>
         /// 计次任务当前完成次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DoneTimes")]
         public long? DoneTimes{ get; set; }
 
         /// <summary>
         /// 计次任务当前所需完成次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalTimes")]
         public long? TotalTimes{ get; set; }
 
         /// <summary>
         /// 任务名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
         /// 用户当前成长值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GrowScore")]
         public long? GrowScore{ get; set; }

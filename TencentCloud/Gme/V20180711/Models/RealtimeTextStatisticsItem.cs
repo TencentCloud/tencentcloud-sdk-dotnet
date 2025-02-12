@@ -26,7 +26,6 @@ namespace TencentCloud.Gme.V20180711.Models
         
         /// <summary>
         /// 统计值，单位：秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public float? Data{ get; set; }

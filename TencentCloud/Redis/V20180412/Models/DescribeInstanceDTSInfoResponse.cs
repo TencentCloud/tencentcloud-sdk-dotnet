@@ -26,56 +26,48 @@ namespace TencentCloud.Redis.V20180412.Models
         
         /// <summary>
         /// DTS任务ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
         /// DTS任务名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobName")]
         public string JobName{ get; set; }
 
         /// <summary>
         /// 任务状态,取值为：1-创建中(Creating),3-校验中(Checking)4-校验通过(CheckPass),5-校验不通过（CheckNotPass）,7-任务运行(Running),8-准备完成（ReadyComplete）,9-任务成功（Success）,10-任务失败（Failed）,11-撤销中（Stopping）,12-完成中（Completing）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 状态描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
 
         /// <summary>
         /// 同步时延，单位：字节
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
         /// 断开时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CutDownTime")]
         public string CutDownTime{ get; set; }
 
         /// <summary>
         /// 源实例信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SrcInfo")]
         public DescribeInstanceDTSInstanceInfo SrcInfo{ get; set; }
 
         /// <summary>
         /// 目标实例信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DstInfo")]
         public DescribeInstanceDTSInstanceInfo DstInfo{ get; set; }

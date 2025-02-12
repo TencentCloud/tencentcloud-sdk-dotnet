@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1178</VersionPrefix>
+    <VersionPrefix>3.0.1179</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -142,6 +142,8 @@
     <Compile Include="V20170312\Models\CheckDefaultSubnetResponse.cs" />
     <Compile Include="V20170312\Models\CheckNetDetectStateRequest.cs" />
     <Compile Include="V20170312\Models\CheckNetDetectStateResponse.cs" />
+    <Compile Include="V20170312\Models\CheckTrafficMirrorRequest.cs" />
+    <Compile Include="V20170312\Models\CheckTrafficMirrorResponse.cs" />
     <Compile Include="V20170312\Models\CidrForCcn.cs" />
     <Compile Include="V20170312\Models\ClassicLinkInstance.cs" />
     <Compile Include="V20170312\Models\ClearRouteTableSelectionPoliciesRequest.cs" />
@@ -238,6 +240,8 @@
     <Compile Include="V20170312\Models\CreateSubnetResponse.cs" />
     <Compile Include="V20170312\Models\CreateSubnetsRequest.cs" />
     <Compile Include="V20170312\Models\CreateSubnetsResponse.cs" />
+    <Compile Include="V20170312\Models\CreateTrafficMirrorRequest.cs" />
+    <Compile Include="V20170312\Models\CreateTrafficMirrorResponse.cs" />
     <Compile Include="V20170312\Models\CreateTrafficPackagesRequest.cs" />
     <Compile Include="V20170312\Models\CreateTrafficPackagesResponse.cs" />
     <Compile Include="V20170312\Models\CreateVpcEndPointRequest.cs" />
@@ -347,6 +351,8 @@
     <Compile Include="V20170312\Models\DeleteSubnetResponse.cs" />
     <Compile Include="V20170312\Models\DeleteTemplateMemberRequest.cs" />
     <Compile Include="V20170312\Models\DeleteTemplateMemberResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteTrafficMirrorRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteTrafficMirrorResponse.cs" />
     <Compile Include="V20170312\Models\DeleteTrafficPackagesRequest.cs" />
     <Compile Include="V20170312\Models\DeleteTrafficPackagesResponse.cs" />
     <Compile Include="V20170312\Models\DeleteVpcEndPointRequest.cs" />
@@ -539,6 +545,8 @@
     <Compile Include="V20170312\Models\DescribeTemplateLimitsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeTenantCcnsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeTenantCcnsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeTrafficMirrorsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeTrafficMirrorsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeTrafficPackagesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeTrafficPackagesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeTrafficQosPolicyRequest.cs" />
@@ -813,6 +821,8 @@
     <Compile Include="V20170312\Models\ModifySubnetAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyTemplateMemberRequest.cs" />
     <Compile Include="V20170312\Models\ModifyTemplateMemberResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyTrafficMirrorAttributeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyTrafficMirrorAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyVpcAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyVpcAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyVpcEndPointAttributeRequest.cs" />
@@ -910,6 +920,12 @@
     <Compile Include="V20170312\Models\ResetNatGatewayConnectionResponse.cs" />
     <Compile Include="V20170312\Models\ResetRoutesRequest.cs" />
     <Compile Include="V20170312\Models\ResetRoutesResponse.cs" />
+    <Compile Include="V20170312\Models\ResetTrafficMirrorFilterRequest.cs" />
+    <Compile Include="V20170312\Models\ResetTrafficMirrorFilterResponse.cs" />
+    <Compile Include="V20170312\Models\ResetTrafficMirrorSrcsRequest.cs" />
+    <Compile Include="V20170312\Models\ResetTrafficMirrorSrcsResponse.cs" />
+    <Compile Include="V20170312\Models\ResetTrafficMirrorTargetRequest.cs" />
+    <Compile Include="V20170312\Models\ResetTrafficMirrorTargetResponse.cs" />
     <Compile Include="V20170312\Models\ResetVpnConnectionRequest.cs" />
     <Compile Include="V20170312\Models\ResetVpnConnectionResponse.cs" />
     <Compile Include="V20170312\Models\ResetVpnGatewayInternetMaxBandwidthRequest.cs" />
@@ -949,12 +965,20 @@
     <Compile Include="V20170312\Models\SslClientConfig.cs" />
     <Compile Include="V20170312\Models\SslVpnClient.cs" />
     <Compile Include="V20170312\Models\SslVpnSever.cs" />
+    <Compile Include="V20170312\Models\StartTrafficMirrorRequest.cs" />
+    <Compile Include="V20170312\Models\StartTrafficMirrorResponse.cs" />
+    <Compile Include="V20170312\Models\StopTrafficMirrorRequest.cs" />
+    <Compile Include="V20170312\Models\StopTrafficMirrorResponse.cs" />
     <Compile Include="V20170312\Models\Subnet.cs" />
     <Compile Include="V20170312\Models\SubnetInput.cs" />
     <Compile Include="V20170312\Models\Tag.cs" />
     <Compile Include="V20170312\Models\Tags.cs" />
     <Compile Include="V20170312\Models\TemplateLimit.cs" />
     <Compile Include="V20170312\Models\TrafficFlow.cs" />
+    <Compile Include="V20170312\Models\TrafficMirror.cs" />
+    <Compile Include="V20170312\Models\TrafficMirrorFilter.cs" />
+    <Compile Include="V20170312\Models\TrafficMirrorTarget.cs" />
+    <Compile Include="V20170312\Models\TrafficMirrorTargetResourceInfo.cs" />
     <Compile Include="V20170312\Models\TrafficPackage.cs" />
     <Compile Include="V20170312\Models\TrafficQosPolicySet.cs" />
     <Compile Include="V20170312\Models\TransformAddressRequest.cs" />
@@ -975,6 +999,10 @@
     <Compile Include="V20170312\Models\UnlockCcnBandwidthsResponse.cs" />
     <Compile Include="V20170312\Models\UnlockCcnsRequest.cs" />
     <Compile Include="V20170312\Models\UnlockCcnsResponse.cs" />
+    <Compile Include="V20170312\Models\UpdateTrafficMirrorAllFilterRequest.cs" />
+    <Compile Include="V20170312\Models\UpdateTrafficMirrorAllFilterResponse.cs" />
+    <Compile Include="V20170312\Models\UpdateTrafficMirrorDirectionRequest.cs" />
+    <Compile Include="V20170312\Models\UpdateTrafficMirrorDirectionResponse.cs" />
     <Compile Include="V20170312\Models\UsedDetail.cs" />
     <Compile Include="V20170312\Models\Vpc.cs" />
     <Compile Include="V20170312\Models\VpcEndPointServiceUser.cs" />

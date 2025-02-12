@@ -37,6 +37,18 @@ namespace TencentCloud.Mps.V20190612.Models
         public float? Confidence{ get; set; }
 
         /// <summary>
+        /// 智能描述标题
+        /// </summary>
+        [JsonProperty("Title")]
+        public string Title{ get; set; }
+
+        /// <summary>
+        /// 智能描述关键词
+        /// </summary>
+        [JsonProperty("Keywords")]
+        public string[] Keywords{ get; set; }
+
+        /// <summary>
         /// 分段结果。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -51,6 +63,8 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
+            this.SetParamSimple(map, prefix + "Title", this.Title);
+            this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
             this.SetParamArrayObj(map, prefix + "Paragraphs.", this.Paragraphs);
         }
     }

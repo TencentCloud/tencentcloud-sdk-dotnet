@@ -32,26 +32,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 文件对应的业务类型，目前支持：
-        /// <ul>
-        /// <li>**FLOW ** : <font color="red">如需下载合同文件请选择此项</font></li>
-        /// <li>**TEMPLATE ** : 如需下载模板文件请选择此项</li>
-        /// <li>**DOCUMENT  **: 如需下载文档文件请选择此项</li>
-        /// <li>**SEAL  **: 如需下载印章图片请选择此项</li>
-        /// </ul>
+        /// 文件对应的业务类型，目前支持：<ul><li>**FLOW ** : <font color="red">如需下载合同文件请选择此项</font></li><li>**TEMPLATE ** : 如需下载模板文件请选择此项</li><li>**DOCUMENT  **: 如需下载文档文件请选择此项</li><li>**SEAL  **: 如需下载印章图片请选择此项</li><li>**DIGITFILE**: 如需下载加签文件请选择此项</li></ul>
         /// </summary>
         [JsonProperty("BusinessType")]
         public string BusinessType{ get; set; }
 
         /// <summary>
-        /// 业务编号的数组，取值如下：
-        /// <ul>
-        /// <li>流程编号</li>
-        /// <li>模板编号</li>
-        /// <li>文档编号</li>
-        /// <li>印章编号</li>
-        /// <li>如需下载合同文件请传入FlowId，最大支持20个资源</li>
-        /// </ul>
+        /// 业务编号的数组，取值如下：<ul><li>流程编号</li><li>模板编号</li><li>文档编号</li><li>印章编号</li><li>加签文件编号</li><li>如需下载合同文件请传入FlowId，最大支持20个资源</li></ul>
         /// </summary>
         [JsonProperty("BusinessIds")]
         public string[] BusinessIds{ get; set; }
