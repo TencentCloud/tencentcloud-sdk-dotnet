@@ -72,6 +72,19 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("ModifiedTime")]
         public long? ModifiedTime{ get; set; }
 
+        /// <summary>
+        /// 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
+        /// </summary>
+        [JsonProperty("PermType")]
+        public string PermType{ get; set; }
+
+        /// <summary>
+        /// Topic和Group维度权限配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DetailedRolePerms")]
+        public DetailedRolePerm[] DetailedRolePerms{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +99,8 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
+            this.SetParamSimple(map, prefix + "PermType", this.PermType);
+            this.SetParamArrayObj(map, prefix + "DetailedRolePerms.", this.DetailedRolePerms);
         }
     }
 }

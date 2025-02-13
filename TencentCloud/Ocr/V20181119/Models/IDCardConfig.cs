@@ -66,6 +66,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ReflectWarn")]
         public bool? ReflectWarn{ get; set; }
 
+        /// <summary>
+        /// 是否开启头像剪切
+        /// </summary>
+        [JsonProperty("CropPortrait")]
+        public bool? CropPortrait{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "TempIdWarn", this.TempIdWarn);
             this.SetParamSimple(map, prefix + "InvalidDateWarn", this.InvalidDateWarn);
             this.SetParamSimple(map, prefix + "ReflectWarn", this.ReflectWarn);
+            this.SetParamSimple(map, prefix + "CropPortrait", this.CropPortrait);
         }
     }
 }

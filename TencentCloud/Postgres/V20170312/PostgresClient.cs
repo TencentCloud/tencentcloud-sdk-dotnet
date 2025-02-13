@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1179";
+       private const string sdkVersion = "SDK_NET_3.0.1180";
 
         /// <summary>
         /// Client constructor.
@@ -2151,7 +2151,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 解除数据库账号的锁定，解锁后账号可以登陆数据库。
+        /// 解除数据库账号的锁定，解锁后账号可以登录数据库。
         /// </summary>
         /// <param name="req"><see cref="UnlockAccountRequest"/></param>
         /// <returns><see cref="UnlockAccountResponse"/></returns>
@@ -2161,7 +2161,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 解除数据库账号的锁定，解锁后账号可以登陆数据库。
+        /// 解除数据库账号的锁定，解锁后账号可以登录数据库。
         /// </summary>
         /// <param name="req"><see cref="UnlockAccountRequest"/></param>
         /// <returns><see cref="UnlockAccountResponse"/></returns>

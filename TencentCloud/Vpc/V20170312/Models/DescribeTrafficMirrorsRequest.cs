@@ -31,7 +31,11 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string[] TrafficMirrorIds{ get; set; }
 
         /// <summary>
-        /// 流量镜像查询过滤调节
+        /// 流量镜像查询过滤调节。
+        /// vpc-id ：VPC实例ID，例如：vpc-f49l6u0z。
+        /// traffic-mirror-id：流量镜像实例ID。
+        /// traffic-mirror-name：流量镜像名称。
+        /// tag-key ：按照标签键进行过滤。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter Filters{ get; set; }

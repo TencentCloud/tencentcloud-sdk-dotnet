@@ -91,6 +91,12 @@ namespace TencentCloud.Thpc.V20230321.Models
         public long? DesiredIdleNodeCapacity{ get; set; }
 
         /// <summary>
+        /// 队列中期望的总节点数。
+        /// </summary>
+        [JsonProperty("DesiredNodeCount")]
+        public long? DesiredNodeCount{ get; set; }
+
+        /// <summary>
         /// 扩容比例。默认值：100。取值范围：1～100。
         /// 如果扩容比例为50，那么每轮只会扩容当前作业负载所需的50%数量的节点。
         /// </summary>
@@ -144,6 +150,7 @@ namespace TencentCloud.Thpc.V20230321.Models
             this.SetParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
             this.SetParamArrayObj(map, prefix + "ExpansionNodeConfigs.", this.ExpansionNodeConfigs);
             this.SetParamSimple(map, prefix + "DesiredIdleNodeCapacity", this.DesiredIdleNodeCapacity);
+            this.SetParamSimple(map, prefix + "DesiredNodeCount", this.DesiredNodeCount);
             this.SetParamSimple(map, prefix + "ScaleOutRatio", this.ScaleOutRatio);
             this.SetParamSimple(map, prefix + "ScaleOutNodeThreshold", this.ScaleOutNodeThreshold);
             this.SetParamSimple(map, prefix + "MaxNodesPerCycle", this.MaxNodesPerCycle);

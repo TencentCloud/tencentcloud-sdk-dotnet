@@ -37,7 +37,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 协议，可取值HTTP，HTTPS
+        /// 协议，可取值http, https, http/https
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public CCReqLimitPolicyRecord Policy{ get; set; }
 
         /// <summary>
-        /// 是否为兜底频控
+        /// 是否为兜底频控 0表示不是 1表示是
         /// </summary>
         [JsonProperty("IsGlobal")]
         public long? IsGlobal{ get; set; }

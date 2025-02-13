@@ -58,6 +58,7 @@ namespace TencentCloud.Rum.V20210622.Models
         /// 实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=销毁中，8=已销毁), 该参数已废弃，请在Filters内注明
         /// </summary>
         [JsonProperty("InstanceStatuses")]
+        [System.Obsolete]
         public long?[] InstanceStatuses{ get; set; }
 
         /// <summary>

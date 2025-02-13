@@ -36,6 +36,18 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("DiskId")]
         public string DiskId{ get; set; }
 
+        /// <summary>
+        /// 回滚云硬盘备份点前是否自动关机，默认为FALSE，表示不自动关机
+        /// </summary>
+        [JsonProperty("AutoStopInstance")]
+        public bool? AutoStopInstance{ get; set; }
+
+        /// <summary>
+        /// 回滚云硬盘备份点完成后是否自动开机，默认为FALSE，表示不自动开机
+        /// </summary>
+        [JsonProperty("AutoStartInstance")]
+        public bool? AutoStartInstance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Cbs.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "DiskBackupId", this.DiskBackupId);
             this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
+            this.SetParamSimple(map, prefix + "AutoStopInstance", this.AutoStopInstance);
+            this.SetParamSimple(map, prefix + "AutoStartInstance", this.AutoStartInstance);
         }
     }
 }

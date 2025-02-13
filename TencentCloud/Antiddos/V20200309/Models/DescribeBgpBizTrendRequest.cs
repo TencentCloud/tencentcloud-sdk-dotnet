@@ -43,7 +43,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 统计纬度，可取值intraffic, outtraffic, inpkg, outpkg
+        /// 统计维度，可取值intraffic, outtraffic, inpkg, outpkg； intraffic：入流量 outtraffic：出流量 inpkg：入包速率 outpkg：出包速率
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }

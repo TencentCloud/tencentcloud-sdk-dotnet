@@ -93,6 +93,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("MatchedBrokerIp")]
         public string MatchedBrokerIp{ get; set; }
 
+        /// <summary>
+        /// 执行平台通用协议
+        /// </summary>
+        [JsonProperty("ExecutionExtendedProps")]
+        public PairDto[] ExecutionExtendedProps{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +115,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "IsEnd", this.IsEnd);
             this.SetParamSimple(map, prefix + "FileSize", this.FileSize);
             this.SetParamSimple(map, prefix + "MatchedBrokerIp", this.MatchedBrokerIp);
+            this.SetParamArrayObj(map, prefix + "ExecutionExtendedProps.", this.ExecutionExtendedProps);
         }
     }
 }

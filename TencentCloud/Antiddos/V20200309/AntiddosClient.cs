@@ -28,7 +28,7 @@ namespace TencentCloud.Antiddos.V20200309
 
        private const string endpoint = "antiddos.tencentcloudapi.com";
        private const string version = "2020-03-09";
-       private const string sdkVersion = "SDK_NET_3.0.1179";
+       private const string sdkVersion = "SDK_NET_3.0.1180";
 
         /// <summary>
         /// Client constructor.
@@ -2057,7 +2057,7 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// 开启或关闭DDoS防护的水印防护配置
+        /// 开启或关闭DDoS防护的水印防护配置，此功能为付费增值服务，有需求请联系售后
         /// </summary>
         /// <param name="req"><see cref="SwitchWaterPrintConfigRequest"/></param>
         /// <returns><see cref="SwitchWaterPrintConfigResponse"/></returns>
@@ -2067,7 +2067,7 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// 开启或关闭DDoS防护的水印防护配置
+        /// 开启或关闭DDoS防护的水印防护配置，此功能为付费增值服务，有需求请联系售后
         /// </summary>
         /// <param name="req"><see cref="SwitchWaterPrintConfigRequest"/></param>
         /// <returns><see cref="SwitchWaterPrintConfigResponse"/></returns>

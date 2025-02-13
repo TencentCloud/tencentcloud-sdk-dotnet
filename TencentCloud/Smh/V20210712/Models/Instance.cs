@@ -90,6 +90,19 @@ namespace TencentCloud.Smh.V20210712.Models
         [JsonProperty("SuperAdminAccount")]
         public string SuperAdminAccount{ get; set; }
 
+        /// <summary>
+        /// 自选桶模式下，展示存储桶使用
+        /// </summary>
+        [JsonProperty("Bucket")]
+        public string Bucket{ get; set; }
+
+        /// <summary>
+        /// 自选桶模式下，展示日志桶使用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogBucket")]
+        public string LogBucket{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -106,6 +119,8 @@ namespace TencentCloud.Smh.V20210712.Models
             this.SetParamSimple(map, prefix + "Isolated", this.Isolated);
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
             this.SetParamSimple(map, prefix + "SuperAdminAccount", this.SuperAdminAccount);
+            this.SetParamSimple(map, prefix + "Bucket", this.Bucket);
+            this.SetParamSimple(map, prefix + "LogBucket", this.LogBucket);
         }
     }
 }

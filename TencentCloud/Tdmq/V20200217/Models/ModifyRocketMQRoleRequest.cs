@@ -42,6 +42,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
+        /// </summary>
+        [JsonProperty("PermType")]
+        public string PermType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "PermType", this.PermType);
         }
     }
 }

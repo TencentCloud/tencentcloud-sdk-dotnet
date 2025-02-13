@@ -71,8 +71,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// drop(丢弃)
         /// transmit(放行)
         /// drop_black(丢弃并拉黑)
-        /// drop_rst(拦截)
-        /// drop_black_rst(拦截并拉黑)
+        /// drop_rst(拦截)（已废弃，不支持drop_rst）
+        /// drop_black_rst(拦截并拉黑)（已废弃，不支持drop_black_rst）
         /// forward(继续防护)
         /// ]
         /// </summary>
@@ -93,17 +93,14 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// <summary>
         /// 检测类型，取值[
         /// sunday(关键字)
-        /// pcre(正则表达式)
+        /// pcre(正则表达式) （已废弃，仅支持sunday）
         /// ]
         /// </summary>
         [JsonProperty("MatchType")]
         public string MatchType{ get; set; }
 
         /// <summary>
-        /// 检测值，关键字符串或正则表达式,取值[
-        /// 当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码;
-        /// 当检测类型为pcre时, 请填写正则表达式字符串;
-        /// ]
+        /// 检测值，关键字符串或正则表达式,取值[ 当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码; 最多支持63位; ]
         /// </summary>
         [JsonProperty("Str")]
         public string Str{ get; set; }
@@ -123,15 +120,16 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// <summary>
         /// 是否包含检测值，取值[
         /// 0(包含)
-        /// 1(不包含)
+        /// 1(不包含) （已废弃，仅支持0）
         /// ]
         /// </summary>
         [JsonProperty("IsNot")]
         public long? IsNot{ get; set; }
 
         /// <summary>
+        /// 
         /// 当有第二个检测条件时，与第一检测条件的且或关系，取值[
-        /// and(且的关系)
+        /// and(且的关系) （已废弃，仅支持none）
         /// none(当没有第二个检测条件时填写此值)
         /// ]
         /// </summary>
@@ -139,55 +137,43 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string MatchLogic{ get; set; }
 
         /// <summary>
-        /// 第二个检测位置，取值[
-        /// begin_l5(载荷)
-        /// no_match(不匹配)
-        /// ]
+        /// （已废弃）
         /// </summary>
         [JsonProperty("MatchBegin2")]
         public string MatchBegin2{ get; set; }
 
         /// <summary>
-        /// 第二个检测类型，取值[
-        /// sunday(关键字)
-        /// pcre(正则表达式)
-        /// ]
+        /// （已废弃）
         /// </summary>
         [JsonProperty("MatchType2")]
         public string MatchType2{ get; set; }
 
         /// <summary>
-        /// 第二个检测值，关键字符串或正则表达式,取值[
-        /// 当检测类型为sunday时，请填写字符串或者16进制字节码，例如\x313233对应的是字符串"123"的16进制字节码;
-        /// 当检测类型为pcre时, 请填写正则表达式字符串;
-        /// ]
+        /// （已废弃）
         /// </summary>
         [JsonProperty("Str2")]
         public string Str2{ get; set; }
 
         /// <summary>
-        /// 从第二个检测位置开始的第二个检测深度，取值[0,1500]
+        /// （已废弃）
         /// </summary>
         [JsonProperty("Depth2")]
         public long? Depth2{ get; set; }
 
         /// <summary>
-        /// 从第二个检测位置开始的偏移量，取值范围[0,Depth2]
+        /// （已废弃）
         /// </summary>
         [JsonProperty("Offset2")]
         public long? Offset2{ get; set; }
 
         /// <summary>
-        /// 第二个检测是否包含检测值，取值[
-        /// 0(包含)
-        /// 1(不包含)
-        /// ]
+        /// （已废弃）
         /// </summary>
         [JsonProperty("IsNot2")]
         public long? IsNot2{ get; set; }
 
         /// <summary>
-        /// 特征过滤配置添加成功后自动生成的规则ID，当添加新特征过滤配置时，此字段不用填写；
+        /// 特征过滤配置添加成功后自动生成的规则ID，当添加新特征过滤配置时，此字段不用填写；当修改/删除新特征过滤配置时，此字段必填；
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

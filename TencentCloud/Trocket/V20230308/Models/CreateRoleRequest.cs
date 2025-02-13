@@ -37,12 +37,6 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string Role{ get; set; }
 
         /// <summary>
-        /// 备注
-        /// </summary>
-        [JsonProperty("Remark")]
-        public string Remark{ get; set; }
-
-        /// <summary>
         /// 是否开启生产权限
         /// </summary>
         [JsonProperty("PermWrite")]
@@ -54,6 +48,24 @@ namespace TencentCloud.Trocket.V20230308.Models
         [JsonProperty("PermRead")]
         public bool? PermRead{ get; set; }
 
+        /// <summary>
+        /// 备注
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
+        /// <summary>
+        /// 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
+        /// </summary>
+        [JsonProperty("PermType")]
+        public string PermType{ get; set; }
+
+        /// <summary>
+        /// Topic&Group维度权限配置
+        /// </summary>
+        [JsonProperty("DetailedPerms")]
+        public DetailedRolePerm[] DetailedPerms{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,9 +74,11 @@ namespace TencentCloud.Trocket.V20230308.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Role", this.Role);
-            this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "PermWrite", this.PermWrite);
             this.SetParamSimple(map, prefix + "PermRead", this.PermRead);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "PermType", this.PermType);
+            this.SetParamArrayObj(map, prefix + "DetailedPerms.", this.DetailedPerms);
         }
     }
 }

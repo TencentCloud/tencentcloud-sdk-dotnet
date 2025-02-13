@@ -48,6 +48,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
+        /// <summary>
+        /// Topic&Group维度权限配置
+        /// </summary>
+        [JsonProperty("DetailedPerms")]
+        public DetailedRolePerm[] DetailedPerms{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
             this.SetParamArraySimple(map, prefix + "Permissions.", this.Permissions);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamArrayObj(map, prefix + "DetailedPerms.", this.DetailedPerms);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 使用状态
+        /// 使用状态， 为ture 判断资源的使用状态，如果使用中则不能删除
         /// </summary>
         [JsonProperty("UseStatus")]
         public bool? UseStatus{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// 资源路径列表
+        /// 需要删除的资源路径列表 即资源管理中的目录结构
         /// </summary>
         [JsonProperty("FilePaths")]
         public string[] FilePaths{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string PolicyId{ get; set; }
 
         /// <summary>
-        /// 策略方式。可取值：alg、drop。alg指返回验证码方式验证，drop表示该访问丢弃。
+        /// 策略方式。可取值：alg、drop、trans。alg指返回验证码方式验证，drop表示该访问丢弃，trans表示该访问放行。
         /// </summary>
         [JsonProperty("PolicyAction")]
         public string PolicyAction{ get; set; }

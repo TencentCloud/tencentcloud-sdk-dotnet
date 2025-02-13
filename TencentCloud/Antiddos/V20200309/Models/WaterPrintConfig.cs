@@ -62,7 +62,6 @@ namespace TencentCloud.Antiddos.V20200309.Models
 
         /// <summary>
         /// 是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CloudSdkProxy")]
         public long? CloudSdkProxy{ get; set; }

@@ -55,7 +55,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Direction{ get; set; }
 
         /// <summary>
-        /// 流量镜像的采集对象，支持eni_xxxx。
+        /// 流量镜像的采集对象。
         /// </summary>
         [JsonProperty("CollectorSrcs")]
         public string[] CollectorSrcs{ get; set; }

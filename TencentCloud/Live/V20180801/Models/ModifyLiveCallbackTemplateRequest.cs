@@ -97,6 +97,18 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("AudioAuditNotifyUrl")]
         public string AudioAuditNotifyUrl{ get; set; }
 
+        /// <summary>
+        /// 录制异常回调 URL。	
+        /// </summary>
+        [JsonProperty("RecordExceptionNotifyUrl")]
+        public string RecordExceptionNotifyUrl{ get; set; }
+
+        /// <summary>
+        /// 录制异常回调级别，可选择：error、warning、info。
+        /// </summary>
+        [JsonProperty("RecordExceptionLevels")]
+        public string[] RecordExceptionLevels{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +127,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
             this.SetParamSimple(map, prefix + "PushExceptionNotifyUrl", this.PushExceptionNotifyUrl);
             this.SetParamSimple(map, prefix + "AudioAuditNotifyUrl", this.AudioAuditNotifyUrl);
+            this.SetParamSimple(map, prefix + "RecordExceptionNotifyUrl", this.RecordExceptionNotifyUrl);
+            this.SetParamArraySimple(map, prefix + "RecordExceptionLevels.", this.RecordExceptionLevels);
         }
     }
 }

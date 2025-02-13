@@ -32,56 +32,56 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long?[] WarnCodes{ get; set; }
 
         /// <summary>
-        /// 地址
+        /// 地址（人像面）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
-        /// 签发机关
+        /// 发证机关（国徽面）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Authority")]
         public string Authority{ get; set; }
 
         /// <summary>
-        /// 出生日期
+        /// 出生日期（人像面）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Birth")]
         public string Birth{ get; set; }
 
         /// <summary>
-        /// 身份证号
+        /// 身份证号（人像面）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdNum")]
         public string IdNum{ get; set; }
 
         /// <summary>
-        /// 名字
+        /// 名字（人像面）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 地区
+        /// 民族（人像面）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Nation")]
         public string Nation{ get; set; }
 
         /// <summary>
-        /// 性别
+        /// 性别（人像面）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
-        /// 到期时间
+        /// 证件有效期（国徽面）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ValidDate")]
@@ -114,6 +114,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
+        /// <summary>
+        /// 身份证头像照片的地址（人像面）
+        /// </summary>
+        [JsonProperty("PortraitUrl")]
+        public string PortraitUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -133,6 +139,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
             this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+            this.SetParamSimple(map, prefix + "PortraitUrl", this.PortraitUrl);
         }
     }
 }

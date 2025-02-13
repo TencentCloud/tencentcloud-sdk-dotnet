@@ -61,13 +61,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public long? SslVpnPort{ get; set; }
 
         /// <summary>
-        /// 加密算法。可选 'AES-128-CBC', 'AES-192-CBC', 'AES-256-CBC', 'NONE'。默认NONE
+        /// 加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 默认AES-128-CBC。
         /// </summary>
         [JsonProperty("EncryptAlgorithm")]
         public string EncryptAlgorithm{ get; set; }
 
         /// <summary>
-        /// 认证算法。可选 'SHA1', 'MD5', 'NONE'。默认NONE
+        /// 认证算法。可选 'SHA1'，默认SHA1。
         /// </summary>
         [JsonProperty("IntegrityAlgorithm")]
         public string IntegrityAlgorithm{ get; set; }

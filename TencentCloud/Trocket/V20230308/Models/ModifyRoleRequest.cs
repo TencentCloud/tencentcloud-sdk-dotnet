@@ -49,10 +49,22 @@ namespace TencentCloud.Trocket.V20230308.Models
         public bool? PermWrite{ get; set; }
 
         /// <summary>
+        /// 权限类型，默认按集群授权（Cluster：集群维度；TopicAndGroup：主题和消费组维度）
+        /// </summary>
+        [JsonProperty("PermType")]
+        public string PermType{ get; set; }
+
+        /// <summary>
         /// 备注
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
+
+        /// <summary>
+        /// Topic&Group维度权限配置
+        /// </summary>
+        [JsonProperty("DetailedPerms")]
+        public DetailedRolePerm[] DetailedPerms{ get; set; }
 
 
         /// <summary>
@@ -64,7 +76,9 @@ namespace TencentCloud.Trocket.V20230308.Models
             this.SetParamSimple(map, prefix + "Role", this.Role);
             this.SetParamSimple(map, prefix + "PermRead", this.PermRead);
             this.SetParamSimple(map, prefix + "PermWrite", this.PermWrite);
+            this.SetParamSimple(map, prefix + "PermType", this.PermType);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamArrayObj(map, prefix + "DetailedPerms.", this.DetailedPerms);
         }
     }
 }

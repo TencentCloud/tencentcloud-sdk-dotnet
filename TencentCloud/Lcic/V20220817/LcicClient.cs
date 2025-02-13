@@ -28,7 +28,7 @@ namespace TencentCloud.Lcic.V20220817
 
        private const string endpoint = "lcic.tencentcloudapi.com";
        private const string version = "2022-08-17";
-       private const string sdkVersion = "SDK_NET_3.0.1179";
+       private const string sdkVersion = "SDK_NET_3.0.1180";
 
         /// <summary>
         /// Client constructor.
@@ -850,6 +850,27 @@ namespace TencentCloud.Lcic.V20220817
         public DescribeRecordStreamResponse DescribeRecordStreamSync(DescribeRecordStreamRequest req)
         {
             return InternalRequestAsync<DescribeRecordStreamResponse>(req, "DescribeRecordStream")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询录制任务ID
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordTaskRequest"/></param>
+        /// <returns><see cref="DescribeRecordTaskResponse"/></returns>
+        public Task<DescribeRecordTaskResponse> DescribeRecordTask(DescribeRecordTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeRecordTaskResponse>(req, "DescribeRecordTask");
+        }
+
+        /// <summary>
+        /// 查询录制任务ID
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordTaskRequest"/></param>
+        /// <returns><see cref="DescribeRecordTaskResponse"/></returns>
+        public DescribeRecordTaskResponse DescribeRecordTaskSync(DescribeRecordTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeRecordTaskResponse>(req, "DescribeRecordTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

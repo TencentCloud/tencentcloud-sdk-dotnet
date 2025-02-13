@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1179";
+       private const string sdkVersion = "SDK_NET_3.0.1180";
 
         /// <summary>
         /// Client constructor.
@@ -926,6 +926,7 @@ namespace TencentCloud.Trocket.V20230308
         /// 查询角色列表，Filter参数使用说明如下：
         /// 
         /// 1. RoleName，角色名称模糊搜索
+        /// 2. AccessKey，AccessKey模糊搜索
         /// </summary>
         /// <param name="req"><see cref="DescribeRoleListRequest"/></param>
         /// <returns><see cref="DescribeRoleListResponse"/></returns>
@@ -938,6 +939,7 @@ namespace TencentCloud.Trocket.V20230308
         /// 查询角色列表，Filter参数使用说明如下：
         /// 
         /// 1. RoleName，角色名称模糊搜索
+        /// 2. AccessKey，AccessKey模糊搜索
         /// </summary>
         /// <param name="req"><see cref="DescribeRoleListRequest"/></param>
         /// <returns><see cref="DescribeRoleListResponse"/></returns>
