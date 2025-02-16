@@ -25,49 +25,52 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 验证方式：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
+        /// 证书域名验证方式：
+        /// DNS_AUTO： 自动添加域名DNS验证， 需用户域名解析托管在『[云解析DNS](https://console.cloud.tencent.com/cns)』，且与申请证书归属同一个腾讯云账号
+        /// DNS：手动添加域名DNS验证，需用户手动去域名解析服务商添加验证值
+        /// FILE：手动添加域名文件验证。 需要用户手动在域名站点根目录添加指定路径文件进行文件验证， http&https任一通过即可；且域名站点需海外CA机构能访问， 具体访问白名单为：64.78.193.238，216.168.247.9，216.168.249.9，54.189.196.217
         /// </summary>
         [JsonProperty("DvAuthMethod")]
         public string DvAuthMethod{ get; set; }
 
         /// <summary>
-        /// 域名。
+        /// 证书绑定的域名。
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// 项目 ID。
+        /// 证书关联的项目 ID。 默认为0（默认项目）
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// 证书类型，目前仅支持类型83。83 = TrustAsia C1 DV Free。
+        /// 证书类型， 可不传，目前仅支持类型83。83 = TrustAsia C1 DV Free。
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
 
         /// <summary>
-        /// 邮箱。
+        /// 证书订单关联邮箱。默认为腾讯云账号邮箱， 不存在则关联固定邮箱
         /// </summary>
         [JsonProperty("ContactEmail")]
         public string ContactEmail{ get; set; }
 
         /// <summary>
-        /// 手机。
+        /// 证书关联手机号码，  不存在则关联固定手机号码
         /// </summary>
         [JsonProperty("ContactPhone")]
         public string ContactPhone{ get; set; }
 
         /// <summary>
-        /// 有效期，默认3个月，目前仅支持3个月。
+        /// 证书有效期，默认3（月），目前仅支持3个月。
         /// </summary>
         [JsonProperty("ValidityPeriod")]
         public string ValidityPeriod{ get; set; }
 
         /// <summary>
-        /// 加密算法，支持 RSA及ECC。
+        /// 加密算法，取值为ECC、RSA， 默认为RSA
         /// </summary>
         [JsonProperty("CsrEncryptAlgo")]
         public string CsrEncryptAlgo{ get; set; }
@@ -79,25 +82,25 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string CsrKeyParameter{ get; set; }
 
         /// <summary>
-        /// CSR 的加密密码。
+        /// 私钥密码， 目前仅使用在生成jks、pfx格式证书时密码； 其他格式私钥证书未加密
         /// </summary>
         [JsonProperty("CsrKeyPassword")]
         public string CsrKeyPassword{ get; set; }
 
         /// <summary>
-        /// 备注名称。
+        /// 证书别名
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
         /// <summary>
-        /// 原证书 ID，用于重新申请。
+        /// 旧证书 ID，用于证书续费（证书有效期在30天内，且未过期），会建立续费关系， 可用于托管； 不传则表示新申请证书
         /// </summary>
         [JsonProperty("OldCertificateId")]
         public string OldCertificateId{ get; set; }
 
         /// <summary>
-        /// 权益包ID，用于免费证书扩容包使用
+        /// 权益包ID，用于免费证书扩容包使用， 免费证书扩容包已下线
         /// </summary>
         [JsonProperty("PackageId")]
         public string PackageId{ get; set; }
@@ -109,7 +112,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public bool? DeleteDnsAutoRecord{ get; set; }
 
         /// <summary>
-        /// 域名数组（多域名证书可以上传）。	
+        /// 证书绑定的其他域名，待开放。目前不支持此参数
         /// </summary>
         [JsonProperty("DnsNames")]
         public string[] DnsNames{ get; set; }

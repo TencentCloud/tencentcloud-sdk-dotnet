@@ -25,14 +25,14 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 云资源部署任务ID
+        /// 云资源更新任务ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeployRecordId")]
         public ulong? DeployRecordId{ get; set; }
 
         /// <summary>
-        /// 部署状态，1表示部署成功，0表示部署失败
+        /// 更新任务创建状态；1表示创建成功； 0表示当前存在更新中的任务，未创建新的更新任务；返回值DeployRecordId为更新中的任务ID
         /// </summary>
         [JsonProperty("DeployStatus")]
         public long? DeployStatus{ get; set; }

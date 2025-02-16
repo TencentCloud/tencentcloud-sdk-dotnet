@@ -37,13 +37,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 按状态筛选。
+        /// 按状态筛选。状态值包括usable(可用)，used(已用)，expired(已过期)，refund(已退款)
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 按过期时间升序或降序排列。
+        /// 按过期时间升序或降序排列，可选值为asc(升序)和desc(降序)
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string PackageId{ get; set; }
 
         /// <summary>
-        /// 按权益包类型搜索。
+        /// 按权益包类型搜索。类型包括：ssl_100(证书批量权益100点)，ssl_500(证书批量权益500点），ssl_2000(证书批量权益2000点）
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

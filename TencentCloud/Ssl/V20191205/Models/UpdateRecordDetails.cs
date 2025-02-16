@@ -25,19 +25,31 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 部署资源类型
+        /// 新旧证书更新云资源的云资源类型：
+        /// - clb
+        /// - cdn
+        /// - ddos
+        /// - live
+        /// - vod
+        /// - waf
+        /// - apigateway
+        /// - teo
+        /// - tke
+        /// - cos
+        /// - tse
+        /// - tcb
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// 部署资源详情列表
+        /// 该云资源更新详情
         /// </summary>
         [JsonProperty("List")]
         public UpdateRecordDetail[] List{ get; set; }
 
         /// <summary>
-        /// 该部署资源总数
+        /// 该云资源更新资源总数
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

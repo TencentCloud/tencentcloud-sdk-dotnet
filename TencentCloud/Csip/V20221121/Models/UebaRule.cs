@@ -26,14 +26,12 @@ namespace TencentCloud.Csip.V20221121.Models
         
         /// <summary>
         /// 策略id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleID")]
         public string RuleID{ get; set; }
 
         /// <summary>
         /// 规则名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
@@ -42,7 +40,6 @@ namespace TencentCloud.Csip.V20221121.Models
         /// 策略类型
         /// 0:系统策略
         /// 1:自定义策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleType")]
         public long? RuleType{ get; set; }
@@ -54,63 +51,54 @@ namespace TencentCloud.Csip.V20221121.Models
         /// 2:中危
         /// 3:高危
         /// 4:严重
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleLevel")]
         public long? RuleLevel{ get; set; }
 
         /// <summary>
         /// 策略内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleContent")]
         public string RuleContent{ get; set; }
 
         /// <summary>
         /// 策略开关
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleStatus")]
         public bool? RuleStatus{ get; set; }
 
         /// <summary>
         /// 命中次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HitCount")]
         public ulong? HitCount{ get; set; }
 
         /// <summary>
         /// 所属账号Appid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppID")]
         public string AppID{ get; set; }
 
         /// <summary>
         /// 多账号，成员ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemberID")]
         public string MemberID{ get; set; }
 
         /// <summary>
         /// Uin
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
         /// 昵称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Nickname")]
         public string Nickname{ get; set; }
 
         /// <summary>
         /// 自定义规则具体内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomRuleDetail")]
         public UebaCustomRule CustomRuleDetail{ get; set; }
@@ -119,7 +107,6 @@ namespace TencentCloud.Csip.V20221121.Models
         /// 云类型
         /// 腾讯云：0
         /// aws：1
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CloudType")]
         public long? CloudType{ get; set; }

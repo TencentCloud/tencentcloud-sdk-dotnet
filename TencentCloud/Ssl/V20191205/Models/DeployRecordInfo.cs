@@ -49,7 +49,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// 部署状态
+        /// 部署状态:0 未开始， 1 成功， 2 失败
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

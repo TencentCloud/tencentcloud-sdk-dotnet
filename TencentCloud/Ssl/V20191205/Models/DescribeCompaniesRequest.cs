@@ -25,13 +25,13 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 分页偏移量
+        /// 分页偏移量，默认值为0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页每页限制数
+        /// 分页每页限制数，默认值为0，最大值1000.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

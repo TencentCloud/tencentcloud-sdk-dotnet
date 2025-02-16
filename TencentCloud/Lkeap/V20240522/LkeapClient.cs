@@ -28,7 +28,7 @@ namespace TencentCloud.Lkeap.V20240522
 
        private const string endpoint = "lkeap.tencentcloudapi.com";
        private const string version = "2024-05-22";
-       private const string sdkVersion = "SDK_NET_3.0.1180";
+       private const string sdkVersion = "SDK_NET_3.0.1181";
 
         /// <summary>
         /// Client constructor.
@@ -781,7 +781,8 @@ namespace TencentCloud.Lkeap.V20240522
         }
 
         /// <summary>
-        /// 用于上传实时文档内容。实时文档在上传后可以立即通过SearchRealtime进行实时检索，适用于在会话中对文档进行问答的场景。
+        /// 用于上传实时文档内容。
+        /// 实时文档在上传后可以立即通过SearchRealtime进行实时检索，适用于在会话中对文档进行问答的场景。
         /// </summary>
         /// <param name="req"><see cref="UploadDocRealtimeRequest"/></param>
         /// <returns><see cref="UploadDocRealtimeResponse"/></returns>
@@ -791,7 +792,8 @@ namespace TencentCloud.Lkeap.V20240522
         }
 
         /// <summary>
-        /// 用于上传实时文档内容。实时文档在上传后可以立即通过SearchRealtime进行实时检索，适用于在会话中对文档进行问答的场景。
+        /// 用于上传实时文档内容。
+        /// 实时文档在上传后可以立即通过SearchRealtime进行实时检索，适用于在会话中对文档进行问答的场景。
         /// </summary>
         /// <param name="req"><see cref="UploadDocRealtimeRequest"/></param>
         /// <returns><see cref="UploadDocRealtimeResponse"/></returns>

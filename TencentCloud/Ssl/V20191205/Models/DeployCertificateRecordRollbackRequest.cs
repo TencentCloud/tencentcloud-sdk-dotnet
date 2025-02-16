@@ -25,7 +25,7 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 待重试部署记录ID,就是通过DeployCertificateInstance返回的DeployRecordId
+        /// 待重试部署记录ID, 就是通过DeployCertificateInstance返回的DeployRecordId
         /// </summary>
         [JsonProperty("DeployRecordId")]
         public long? DeployRecordId{ get; set; }

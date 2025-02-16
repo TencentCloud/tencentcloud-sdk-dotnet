@@ -37,19 +37,31 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string Limit{ get; set; }
 
         /// <summary>
-        /// 当前偏移量
+        /// 当前偏移量，默认为0
         /// </summary>
         [JsonProperty("Offset")]
         public string Offset{ get; set; }
 
         /// <summary>
-        /// 查询资源类型的结果详情， 不传则查询所有
+        /// 查询资源类型的结果详情， 不传则查询所有，取值支持：
+        /// - clb
+        /// - cdn
+        /// - ddos
+        /// - live
+        /// - vod
+        /// - waf
+        /// - apigateway
+        /// - teo
+        /// - tke
+        /// - cos
+        /// - tse
+        /// - tcb
         /// </summary>
         [JsonProperty("ResourceTypes")]
         public string[] ResourceTypes{ get; set; }
 
         /// <summary>
-        /// 查询地域列表的数据，CLB、TKE、WAF、APIGATEWAY、TCB支持地域查询， 其他资源类型不支持
+        /// 查询地域列表的数据，clb、tke、waf、apigateway、tcb、cos、tse支持地域查询， 其他资源类型不支持
         /// </summary>
         [JsonProperty("Regions")]
         public string[] Regions{ get; set; }

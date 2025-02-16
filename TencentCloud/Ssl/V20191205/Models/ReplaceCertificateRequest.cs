@@ -43,7 +43,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string CsrType{ get; set; }
 
         /// <summary>
-        /// CSR 内容。
+        /// CSR 内容，手动上传的时候需要。
         /// </summary>
         [JsonProperty("CsrContent")]
         public string CsrContent{ get; set; }

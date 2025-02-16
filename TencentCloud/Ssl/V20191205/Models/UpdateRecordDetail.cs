@@ -25,19 +25,19 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 详情记录id
+        /// 更新详情记录id
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 新证书ID
+        /// 新旧证书更新 - 新证书ID
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }
 
         /// <summary>
-        /// 旧证书ID
+        /// 新旧证书更新 - 旧证书ID
         /// </summary>
         [JsonProperty("OldCertId")]
         public string OldCertId{ get; set; }
@@ -50,7 +50,19 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string[] Domains{ get; set; }
 
         /// <summary>
-        /// 部署资源类型
+        /// 新旧证书更新云资源的云资源类型：
+        /// - clb
+        /// - cdn
+        /// - ddos
+        /// - live
+        /// - vod
+        /// - waf
+        /// - apigateway
+        /// - teo
+        /// - tke
+        /// - cos
+        /// - tse
+        /// - tcb
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
@@ -63,7 +75,14 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// 部署状态
+        /// 部署状态， 取值范围：
+        /// 0：待部署
+        /// 1：部署成功
+        /// 2：部署失败
+        /// 3：部署中
+        /// 4：回滚成功
+        /// 5：回滚失败
+        /// 6：无资源，无需部署
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

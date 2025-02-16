@@ -25,7 +25,7 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 用户 UIN。
+        /// 证书所属用户主账号 UIN。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OwnerUin")]
@@ -39,7 +39,11 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 证书来源：trustasia = 亚洲诚信，upload = 用户上传。
+        /// 证书来源：
+        /// trustasia：亚洲诚信，
+        /// upload：用户上传。
+        /// wosign：沃通
+        /// sheca：上海CA
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("From")]
@@ -53,21 +57,105 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string CertificateType{ get; set; }
 
         /// <summary>
-        /// 证书套餐类型：null = 用户上传证书（没有套餐类型），1 = GeoTrust DV SSL CA - G3， 2 = TrustAsia TLS RSA CA， 3 = SecureSite 增强型企业版（EV Pro）， 4 = SecureSite 增强型（EV）， 5 = SecureSite 企业型专业版（OV Pro）， 6 = SecureSite 企业型（OV）， 7 = SecureSite 企业型（OV）通配符， 8 = Geotrust 增强型（EV）， 9 = Geotrust 企业型（OV）， 10 = Geotrust 企业型（OV）通配符， 11 = TrustAsia 域名型多域名 SSL 证书， 12 = TrustAsia 域名型（DV）通配符， 13 = TrustAsia 企业型通配符（OV）SSL 证书（D3）， 14 = TrustAsia 企业型（OV）SSL 证书（D3）， 15 = TrustAsia 企业型多域名 （OV）SSL 证书（D3）， 16 = TrustAsia 增强型 （EV）SSL 证书（D3）， 17 = TrustAsia 增强型多域名（EV）SSL 证书（D3）， 18 = GlobalSign 企业型（OV）SSL 证书， 19 = GlobalSign 企业型通配符 （OV）SSL 证书， 20 = GlobalSign 增强型 （EV）SSL 证书， 21 = TrustAsia 企业型通配符多域名（OV）SSL 证书（D3）， 22 = GlobalSign 企业型多域名（OV）SSL 证书， 23 = GlobalSign 企业型通配符多域名（OV）SSL 证书， 24 = GlobalSign 增强型多域名（EV）SSL 证书，25 = Wotrus 域名型证书，26 = Wotrus 域名型多域名证书，27 = Wotrus 域名型通配符证书，28 = Wotrus 企业型证书，29 = Wotrus 企业型多域名证书，30 = Wotrus 企业型通配符证书，31 = Wotrus 增强型证书，32 = Wotrus 增强型多域名证书，33 = DNSPod 国密域名型证书，34 = DNSPod 国密域名型多域名证书，35 = DNSPod 国密域名型通配符证书，37 = DNSPod 国密企业型证书，38 = DNSPod 国密企业型多域名证书，39 = DNSPod 国密企业型通配符证书，40 = DNSPod 国密增强型证书，41 = DNSPod 国密增强型多域名证书，42 = TrustAsia 域名型通配符多域名证书。
+        /// 证书套餐类型：
+        /// null：用户上传证书（没有套餐类型），
+        /// 2：TrustAsia TLS RSA CA， 
+        /// 3：SecureSite 增强型企业版（EV Pro）， 
+        /// 4：SecureSite 增强型（EV）， 
+        /// 5：SecureSite 企业型专业版（OV Pro），
+        /// 6：SecureSite 企业型（OV）， 
+        /// 7：SecureSite 企业型（OV）通配符， 
+        /// 8：Geotrust 增强型（EV）， 
+        /// 9：Geotrust 企业型（OV）， 
+        /// 10：Geotrust 企业型（OV）通配符， 
+        /// 11：TrustAsia 域名型多域名 SSL 证书， 
+        /// 12：TrustAsia 域名型（DV）通配符， 
+        /// 13：TrustAsia 企业型通配符（OV）SSL 证书（D3）， 
+        /// 14：TrustAsia 企业型（OV）SSL 证书（D3）， 
+        /// 15：TrustAsia 企业型多域名 （OV）SSL 证书（D3）， 
+        /// 16：TrustAsia 增强型 （EV）SSL 证书（D3）， 
+        /// 17：TrustAsia 增强型多域名（EV）SSL 证书（D3）， 
+        /// 18：GlobalSign 企业型（OV）SSL 证书， 
+        /// 19：GlobalSign 企业型通配符 （OV）SSL 证书， 
+        /// 20：GlobalSign 增强型 （EV）SSL 证书， 
+        /// 21：TrustAsia 企业型通配符多域名（OV）SSL 证书（D3）， 
+        /// 22：GlobalSign 企业型多域名（OV）SSL 证书， 
+        /// 23：GlobalSign 企业型通配符多域名（OV）SSL 证书，
+        /// 24：GlobalSign 增强型多域名（EV）SSL 证书，
+        /// 25：Wotrus 域名型证书，
+        /// 26：Wotrus 域名型多域名证书，
+        /// 27：Wotrus 域名型通配符证书，
+        /// 28：Wotrus 企业型证书，
+        /// 29：Wotrus 企业型多域名证书，
+        /// 30：Wotrus 企业型通配符证书，
+        /// 31：Wotrus 增强型证书，
+        /// 32：Wotrus 增强型多域名证书，
+        /// 33：WoTrus-国密域名型证书，
+        /// 34：WoTrus-国密域名型证书（多域名），
+        /// 35：WoTrus-国密域名型证书（通配符），
+        /// 37：WoTrus-国密企业型证书，
+        /// 38：WoTrus-国密企业型证书（多域名），
+        /// 39：WoTrus-国密企业型证书（通配符），
+        /// 40：WoTrus-国密增强型证书，
+        /// 41：WoTrus-国密增强型证书（多域名），
+        /// 42：TrustAsia-域名型证书（通配符多域名），
+        /// 43：DNSPod-企业型(OV)SSL证书
+        /// 44：DNSPod-企业型(OV)通配符SSL证书
+        /// 45：DNSPod-企业型(OV)多域名SSL证书
+        /// 46：DNSPod-增强型(EV)SSL证书
+        /// 47：DNSPod-增强型(EV)多域名SSL证书
+        /// 48：DNSPod-域名型(DV)SSL证书
+        /// 49：DNSPod-域名型(DV)通配符SSL证书
+        /// 50：DNSPod-域名型(DV)多域名SSL证书
+        /// 51：DNSPod（国密）-企业型(OV)SSL证书
+        /// 52：DNSPod（国密）-企业型(OV)通配符SSL证书
+        /// 53：DNSPod（国密）-企业型(OV)多域名SSL证书
+        /// 54：DNSPod（国密）-域名型(DV)SSL证书
+        /// 55：DNSPod（国密）-域名型(DV)通配符SSL证书
+        /// 56：DNSPod（国密）-域名型(DV)多域名SSL证书
+        /// 57：SecureSite 企业型专业版多域名(OV Pro)
+        /// 58：SecureSite 企业型多域名(OV)
+        /// 59：SecureSite 增强型专业版多域名(EV Pro)
+        /// 60：SecureSite 增强型多域名(EV)
+        /// 61：Geotrust 增强型多域名(EV)
+        /// 75：SecureSite 企业型(OV)
+        /// 76：SecureSite 企业型(OV)通配符
+        /// 77：SecureSite 增强型(EV)
+        /// 78：Geotrust 企业型(OV)
+        /// 79：Geotrust 企业型(OV)通配符
+        /// 80：Geotrust 增强型(EV)
+        /// 81：GlobalSign 企业型（OV）SSL证书
+        /// 82：GlobalSign 企业型通配符 （OV）SSL证书
+        /// 83：TrustAsia C1 DV Free
+        /// 85：GlobalSign 增强型 （EV）SSL证书
+        /// 88：GlobalSign 企业型通配符多域名 （OV）SSL证书
+        /// 89：GlobalSign 企业型多域名 （OV）SSL证书
+        /// 90：GlobalSign 增强型多域名（EV） SSL证书
+        /// 91：Geotrust 增强型多域名(EV)
+        /// 92：SecureSite 企业型专业版多域名(OV Pro)
+        /// 93：SecureSite 企业型多域名(OV)
+        /// 94：SecureSite 增强型专业版多域名(EV Pro)
+        /// 95：SecureSite 增强型多域名(EV)
+        /// 96：SecureSite 增强型专业版(EV Pro)
+        /// 97：SecureSite 企业型专业版(OV Pro)
+        /// 98：CFCA 企业型(OV)SSL证书
+        /// 99：CFCA 企业型多域名(OV)SSL证书
+        /// 100：CFCA 企业型通配符(OV)SSL证书
+        /// 101：CFCA 增强型(EV)SSL证书
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
 
         /// <summary>
-        /// 颁发者。
+        /// 证书产品名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductZhName")]
         public string ProductZhName{ get; set; }
 
         /// <summary>
-        /// 域名。
+        /// 证书绑定通用名称域名。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domain")]
@@ -81,14 +169,26 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string Alias{ get; set; }
 
         /// <summary>
-        /// 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。
+        /// 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 自动添加DNS记录，5 = 企业证书，待提交资料，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 证书已退款。 15 = 证书迁移中
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 状态信息。
+        /// 状态信息。 取值范围：
+        /// //通用状态信息
+        /// 1、PRE-REVIEWING：预审核中
+        /// 2、LEGAL-REVIEWING：法务审核中
+        /// 3、CA-REVIEWING：CA审核中
+        /// 4、PENDING-DCV：域名验证中
+        /// 5、WAIT-ISSUE：等待签发（域名验证已通过）
+        /// //证书审核失败状态信息
+        /// 1、订单审核失败
+        /// 2、CA审核失败，域名未通过安全审查
+        /// 3、域名验证超时，订单自动关闭，请您重新进行证书申请
+        /// 4、证书资料未通过证书CA机构审核，审核人员会致电您证书预留的联系方式，请您留意来电。后续可通过“修改资料”重新提交资料
+        /// 待持续完善
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusMsg")]
@@ -130,14 +230,14 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string ValidityPeriod{ get; set; }
 
         /// <summary>
-        /// 申请时间。
+        /// 证书申请时间。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InsertTime")]
         public string InsertTime{ get; set; }
 
         /// <summary>
-        /// 订单 ID。
+        /// CA订单 ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrderId")]
@@ -151,21 +251,21 @@ namespace TencentCloud.Ssl.V20191205.Models
         public CertificateExtra CertificateExtra{ get; set; }
 
         /// <summary>
-        /// 证书私钥
+        /// 私钥证书， 国密证书则为签名证书中的私钥证书
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertificatePrivateKey")]
         public string CertificatePrivateKey{ get; set; }
 
         /// <summary>
-        /// 证书公钥（即证书内容）
+        /// 公钥证书， 国密则为签名证书中的公钥证书
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertificatePublicKey")]
         public string CertificatePublicKey{ get; set; }
 
         /// <summary>
-        /// DV 认证信息。
+        /// 证书域名验证信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DvAuthDetail")]
@@ -235,7 +335,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public bool? IsVulnerability{ get; set; }
 
         /// <summary>
-        /// 提交的资料信息。
+        /// 付费证书提交的资料信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubmittedData")]
@@ -270,14 +370,14 @@ namespace TencentCloud.Ssl.V20191205.Models
         public RootCertificates RootCert{ get; set; }
 
         /// <summary>
-        /// 国密加密证书
+        /// 国密加密证书公钥， 仅国密证书有值
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EncryptCert")]
         public string EncryptCert{ get; set; }
 
         /// <summary>
-        /// 国密加密私钥
+        /// 国密加密私钥证书， 仅国密证书有值
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EncryptPrivateKey")]
@@ -298,7 +398,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string EncryptCertFingerprint{ get; set; }
 
         /// <summary>
-        /// 证书算法
+        /// 证书加密算法（国密证书特有）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EncryptAlgorithm")]

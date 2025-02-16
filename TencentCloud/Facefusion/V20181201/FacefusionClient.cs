@@ -28,7 +28,7 @@ namespace TencentCloud.Facefusion.V20181201
 
        private const string endpoint = "facefusion.tencentcloudapi.com";
        private const string version = "2018-12-01";
-       private const string sdkVersion = "SDK_NET_3.0.1180";
+       private const string sdkVersion = "SDK_NET_3.0.1181";
 
         /// <summary>
         /// Client constructor.

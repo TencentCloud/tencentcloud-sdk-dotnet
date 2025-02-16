@@ -25,19 +25,19 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 部署记录ID
+        /// 部署记录ID，通过调用DeployCertificateInstance接口返回的记录ID， 或者通过DeployCertificateRecordRollback回滚接口返回的记录ID
         /// </summary>
         [JsonProperty("DeployRecordId")]
         public string DeployRecordId{ get; set; }
 
         /// <summary>
-        /// 分页偏移量，从0开始。
+        /// 分页偏移量，从0开始。默认为0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 每页数量，默认10。
+        /// 每页数量，默认10。最大值为200
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

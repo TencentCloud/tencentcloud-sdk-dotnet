@@ -25,16 +25,10 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 自动扩容阈值，可选值70、80、90，代表CPU利用率达到70%、80%、90%时后台进行自动扩容
+        /// 自动扩容阈值，可选值40、50、60、70、80、90，代表 CPU 利用率达到40%、50%、60%、70%、80%、90%时后台进行自动扩容。
         /// </summary>
         [JsonProperty("ExpandThreshold")]
         public long? ExpandThreshold{ get; set; }
-
-        /// <summary>
-        /// 自动扩容观测周期，单位是分钟，可选值1、3、5、10、15、30。后台会按照配置的周期进行扩容判断。
-        /// </summary>
-        [JsonProperty("ExpandPeriod")]
-        public long? ExpandPeriod{ get; set; }
 
         /// <summary>
         /// 自动缩容阈值，可选值10、20、30，代表CPU利用率达到10%、20%、30%时后台进行自动缩容
@@ -43,10 +37,32 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ShrinkThreshold{ get; set; }
 
         /// <summary>
+        /// 自动扩容观测周期，单位是分钟，可选值1、3、5、10、15、30。后台会按照配置的周期进行扩容判断。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExpandPeriod")]
+        [System.Obsolete]
+        public long? ExpandPeriod{ get; set; }
+
+        /// <summary>
         /// 自动缩容观测周期，单位是分钟，可选值5、10、15、30。后台会按照配置的周期进行缩容判断。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShrinkPeriod")]
+        [System.Obsolete]
         public long? ShrinkPeriod{ get; set; }
+
+        /// <summary>
+        /// 弹性扩容观测周期（秒级）
+        /// </summary>
+        [JsonProperty("ExpandSecondPeriod")]
+        public long? ExpandSecondPeriod{ get; set; }
+
+        /// <summary>
+        /// 缩容观测周期（秒级）
+        /// </summary>
+        [JsonProperty("ShrinkSecondPeriod")]
+        public long? ShrinkSecondPeriod{ get; set; }
 
 
         /// <summary>
@@ -55,9 +71,11 @@ namespace TencentCloud.Cdb.V20170320.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ExpandThreshold", this.ExpandThreshold);
-            this.SetParamSimple(map, prefix + "ExpandPeriod", this.ExpandPeriod);
             this.SetParamSimple(map, prefix + "ShrinkThreshold", this.ShrinkThreshold);
+            this.SetParamSimple(map, prefix + "ExpandPeriod", this.ExpandPeriod);
             this.SetParamSimple(map, prefix + "ShrinkPeriod", this.ShrinkPeriod);
+            this.SetParamSimple(map, prefix + "ExpandSecondPeriod", this.ExpandSecondPeriod);
+            this.SetParamSimple(map, prefix + "ShrinkSecondPeriod", this.ShrinkSecondPeriod);
         }
     }
 }

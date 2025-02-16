@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1180";
+       private const string sdkVersion = "SDK_NET_3.0.1181";
 
         /// <summary>
         /// Client constructor.
@@ -3061,6 +3061,7 @@ namespace TencentCloud.Cdb.V20170320
 
         /// <summary>
         /// 该接口（ModifyProtectMode）用于修改实例的同步方式。
+        /// 说明：仅专属集群可调用，该接口即将下线。
         /// </summary>
         /// <param name="req"><see cref="ModifyProtectModeRequest"/></param>
         /// <returns><see cref="ModifyProtectModeResponse"/></returns>
@@ -3071,6 +3072,7 @@ namespace TencentCloud.Cdb.V20170320
 
         /// <summary>
         /// 该接口（ModifyProtectMode）用于修改实例的同步方式。
+        /// 说明：仅专属集群可调用，该接口即将下线。
         /// </summary>
         /// <param name="req"><see cref="ModifyProtectModeRequest"/></param>
         /// <returns><see cref="ModifyProtectModeResponse"/></returns>

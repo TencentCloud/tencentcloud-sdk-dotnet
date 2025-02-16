@@ -31,7 +31,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string[] CertificateIds{ get; set; }
 
         /// <summary>
-        /// 资源类型:clb,cdn,live,waf,antiddos
+        /// 资源类型:clb,cdn,live,waf,antiddos,teo
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }

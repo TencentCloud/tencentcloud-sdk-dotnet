@@ -32,7 +32,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string DomainNumber{ get; set; }
 
         /// <summary>
-        /// 原始证书 ID。
+        /// 续费原证书 ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginCertificateId")]
@@ -46,14 +46,14 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string ReplacedBy{ get; set; }
 
         /// <summary>
-        /// 重颁发证书新 ID。
+        /// 重颁发证书ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReplacedFor")]
         public string ReplacedFor{ get; set; }
 
         /// <summary>
-        /// 新订单证书 ID。
+        /// 续费证书 ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RenewOrder")]
@@ -67,7 +67,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public long? SMCert{ get; set; }
 
         /// <summary>
-        /// 公司类型
+        /// 公司类型，取值：1（个人）；2（公司）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CompanyType")]

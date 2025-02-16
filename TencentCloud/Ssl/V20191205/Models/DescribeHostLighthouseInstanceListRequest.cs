@@ -46,6 +46,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         /// 部署资源类型 lighthouse
         /// </summary>
         [JsonProperty("ResourceType")]
+        [System.Obsolete]
         public string ResourceType{ get; set; }
 
 

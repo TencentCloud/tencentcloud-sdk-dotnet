@@ -46,6 +46,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         /// 部署资源类型apigateway
         /// </summary>
         [JsonProperty("ResourceType")]
+        [System.Obsolete]
         public string ResourceType{ get; set; }
 
         /// <summary>
@@ -55,13 +56,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string OldCertificateId{ get; set; }
 
         /// <summary>
-        /// 每页数量，默认10。	
+        /// 每页数量，默认10，最大值为200。	
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 分页偏移量，从0开始。	
+        /// 分页偏移量，默认值为0。
         /// </summary>
         [JsonProperty("Offset")]
         public string Offset{ get; set; }

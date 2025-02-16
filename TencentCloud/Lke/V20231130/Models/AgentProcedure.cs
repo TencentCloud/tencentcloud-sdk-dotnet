@@ -87,6 +87,20 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Elapsed")]
         public ulong? Elapsed{ get; set; }
 
+        /// <summary>
+        /// 工作流节点名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NodeName")]
+        public string NodeName{ get; set; }
+
+        /// <summary>
+        /// 用于展示思考放在哪个回复气泡中
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReplyIndex")]
+        public ulong? ReplyIndex{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +116,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamSimple(map, prefix + "WorkflowName", this.WorkflowName);
             this.SetParamSimple(map, prefix + "Elapsed", this.Elapsed);
+            this.SetParamSimple(map, prefix + "NodeName", this.NodeName);
+            this.SetParamSimple(map, prefix + "ReplyIndex", this.ReplyIndex);
         }
     }
 }

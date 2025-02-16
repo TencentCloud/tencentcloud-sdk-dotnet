@@ -31,13 +31,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public long? CompanyId{ get; set; }
 
         /// <summary>
-        /// 分页偏移量
+        /// 分页偏移量，如果不传默认值为0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页每页数量
+        /// 分页每页数量，如果不传默认值为10，最大值为1000
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -68,7 +68,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 管理人姓/管理人名/邮箱/部门精准匹配
+        /// 根据这样的格式:管理人姓|管理人名|邮箱|部门 ,进行精准匹配
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }

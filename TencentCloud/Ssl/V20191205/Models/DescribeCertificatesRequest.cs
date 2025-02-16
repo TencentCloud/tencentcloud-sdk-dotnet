@@ -25,7 +25,7 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 分页偏移量，从0开始。
+        /// 分页偏移量，从0开始。 默认为0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。
+        /// 搜索关键词，模糊匹配证书 ID、备注名称、证书域名
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// 按到期时间排序：DESC = 降序， ASC = 升序。
+        /// 默认按照证书申请时间降序； 若传排序则按到期时间排序：DESC = 证书到期时间降序， ASC = 证书到期时间升序。
         /// </summary>
         [JsonProperty("ExpirationSort")]
         public string ExpirationSort{ get; set; }
 
         /// <summary>
-        /// 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。
+        /// 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 已退款。 15 = 证书迁移中
         /// </summary>
         [JsonProperty("CertificateStatus")]
         public ulong?[] CertificateStatus{ get; set; }

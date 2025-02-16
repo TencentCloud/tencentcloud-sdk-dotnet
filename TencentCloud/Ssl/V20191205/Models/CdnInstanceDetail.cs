@@ -43,7 +43,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 域名计费状态
+        /// 域名计费状态，on表示开启，off表示关闭。
         /// </summary>
         [JsonProperty("HttpsBillingSwitch")]
         public string HttpsBillingSwitch{ get; set; }

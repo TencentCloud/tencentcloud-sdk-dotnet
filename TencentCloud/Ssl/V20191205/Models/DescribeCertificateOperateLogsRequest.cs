@@ -31,7 +31,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 请求日志数量，默认为20。
+        /// 请求日志数量，默认为20, 最大值为1000，如超过1000按照1000处理。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

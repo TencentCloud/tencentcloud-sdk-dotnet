@@ -29,14 +29,12 @@ namespace TencentCloud.Csip.V20221121.Models
         /// 1:发生次数高于固定值
         /// 2:发生次数高于周期平均值的百分之
         /// 3:发生次数高于用户平均值的百分之
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperatorType")]
         public long? OperatorType{ get; set; }
 
         /// <summary>
         /// 统计值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public float? Value{ get; set; }

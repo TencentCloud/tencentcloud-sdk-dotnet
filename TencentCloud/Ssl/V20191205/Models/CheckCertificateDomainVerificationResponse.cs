@@ -25,7 +25,7 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 域名验证结果
+        /// 证书域名验证结果列表， 证书若绑定了多个域名， 则返回数组有多份
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VerificationResults")]
