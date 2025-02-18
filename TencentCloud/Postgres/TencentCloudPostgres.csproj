@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A06AC0CF-076C-38E8-83FE-C7FFA375814C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1181</VersionPrefix>
+    <VersionPrefix>3.0.1182</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -65,6 +65,8 @@
     <Compile Include="V20170312\Models\CloseServerlessDBExtranetAccessResponse.cs" />
     <Compile Include="V20170312\Models\CreateAccountRequest.cs" />
     <Compile Include="V20170312\Models\CreateAccountResponse.cs" />
+    <Compile Include="V20170312\Models\CreateBackupPlanRequest.cs" />
+    <Compile Include="V20170312\Models\CreateBackupPlanResponse.cs" />
     <Compile Include="V20170312\Models\CreateBaseBackupRequest.cs" />
     <Compile Include="V20170312\Models\CreateBaseBackupResponse.cs" />
     <Compile Include="V20170312\Models\CreateDBInstanceNetworkAccessRequest.cs" />
@@ -95,6 +97,8 @@
     <Compile Include="V20170312\Models\DedicatedCluster.cs" />
     <Compile Include="V20170312\Models\DeleteAccountRequest.cs" />
     <Compile Include="V20170312\Models\DeleteAccountResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteBackupPlanRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteBackupPlanResponse.cs" />
     <Compile Include="V20170312\Models\DeleteBaseBackupRequest.cs" />
     <Compile Include="V20170312\Models\DeleteBaseBackupResponse.cs" />
     <Compile Include="V20170312\Models\DeleteDBInstanceNetworkAccessRequest.cs" />
@@ -141,6 +145,8 @@
     <Compile Include="V20170312\Models\DescribeDBInstanceHAConfigResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDBInstanceParametersRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDBInstanceParametersResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDBInstanceSSLConfigRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDBInstanceSSLConfigResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDBInstanceSecurityGroupsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDBInstanceSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDBInstancesRequest.cs" />
@@ -185,6 +191,8 @@
     <Compile Include="V20170312\Models\DescribeSlowQueryAnalysisResponse.cs" />
     <Compile Include="V20170312\Models\DescribeSlowQueryListRequest.cs" />
     <Compile Include="V20170312\Models\DescribeSlowQueryListResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeTasksRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeTasksResponse.cs" />
     <Compile Include="V20170312\Models\DescribeZonesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeZonesResponse.cs" />
     <Compile Include="V20170312\Models\DestroyDBInstanceRequest.cs" />
@@ -233,6 +241,8 @@
     <Compile Include="V20170312\Models\ModifyDBInstanceParametersResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceReadOnlyGroupRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceReadOnlyGroupResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyDBInstanceSSLConfigRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyDBInstanceSSLConfigResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceSpecRequest.cs" />
@@ -246,6 +256,8 @@
     <Compile Include="V20170312\Models\ModifyParameterTemplateRequest.cs" />
     <Compile Include="V20170312\Models\ModifyParameterTemplateResponse.cs" />
     <Compile Include="V20170312\Models\ModifyPrivilege.cs" />
+    <Compile Include="V20170312\Models\ModifyReadOnlyDBInstanceWeightRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyReadOnlyDBInstanceWeightResponse.cs" />
     <Compile Include="V20170312\Models\ModifyReadOnlyGroupConfigRequest.cs" />
     <Compile Include="V20170312\Models\ModifyReadOnlyGroupConfigResponse.cs" />
     <Compile Include="V20170312\Models\ModifySwitchTimePeriodRequest.cs" />
@@ -290,6 +302,8 @@
     <Compile Include="V20170312\Models\SwitchDBInstancePrimaryRequest.cs" />
     <Compile Include="V20170312\Models\SwitchDBInstancePrimaryResponse.cs" />
     <Compile Include="V20170312\Models\Tag.cs" />
+    <Compile Include="V20170312\Models\TaskDetail.cs" />
+    <Compile Include="V20170312\Models\TaskSet.cs" />
     <Compile Include="V20170312\Models\UnlockAccountRequest.cs" />
     <Compile Include="V20170312\Models\UnlockAccountResponse.cs" />
     <Compile Include="V20170312\Models\UpgradeDBInstanceKernelVersionRequest.cs" />

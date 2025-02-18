@@ -38,7 +38,6 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 原绑定证书ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OldCertId")]
         public string OldCertId{ get; set; }
@@ -57,7 +56,6 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 部署监听器ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
@@ -70,7 +68,6 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 部署监听器协议
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
@@ -83,7 +80,6 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 部署错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }
@@ -114,56 +110,48 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// COS存储桶名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
 
         /// <summary>
         /// 命名空间名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
         /// secret名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecretName")]
         public string SecretName{ get; set; }
 
         /// <summary>
         /// 端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
         /// TCB环境ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }
 
         /// <summary>
         /// 部署的TCB类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TCBType")]
         public string TCBType{ get; set; }
 
         /// <summary>
         /// 部署的TCB地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// 部署CLB监听器的Url
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Url")]
         public string[] Url{ get; set; }

@@ -115,7 +115,6 @@ namespace TencentCloud.Lighthouse.V20200324.Models
 
         /// <summary>
         /// 套餐类型描述信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BundleTypeDescription")]
         public string BundleTypeDescription{ get; set; }

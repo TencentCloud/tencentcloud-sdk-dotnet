@@ -26,12 +26,14 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         
         /// <summary>
         /// 环境变量Key
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
         /// 环境变量值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

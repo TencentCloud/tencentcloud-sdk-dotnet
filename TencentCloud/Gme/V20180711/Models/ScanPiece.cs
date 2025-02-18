@@ -26,7 +26,6 @@ namespace TencentCloud.Gme.V20180711.Models
         
         /// <summary>
         /// 流检测时返回，音频转存地址，保留30min
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DumpUrl")]
         public string DumpUrl{ get; set; }
@@ -39,7 +38,6 @@ namespace TencentCloud.Gme.V20180711.Models
 
         /// <summary>
         /// 违规主要类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MainType")]
         public string MainType{ get; set; }
@@ -52,42 +50,36 @@ namespace TencentCloud.Gme.V20180711.Models
 
         /// <summary>
         /// gme实时语音房间ID，透传任务传入时的RoomId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoomId")]
         public string RoomId{ get; set; }
 
         /// <summary>
         /// gme实时语音用户ID，透传任务传入时的OpenId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Info")]
         public string Info{ get; set; }
 
         /// <summary>
         /// 流检测时分片在流中的偏移时间，单位毫秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
         /// 流检测时分片时长
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Duration")]
         public ulong? Duration{ get; set; }
 
         /// <summary>
         /// 分片开始检测时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PieceStartTime")]
         public ulong? PieceStartTime{ get; set; }

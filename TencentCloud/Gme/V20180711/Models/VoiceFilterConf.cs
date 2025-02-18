@@ -32,7 +32,6 @@ namespace TencentCloud.Gme.V20180711.Models
 
         /// <summary>
         /// 场景配置信息，如开关状态，回调地址。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SceneInfos")]
         public SceneInfo[] SceneInfos{ get; set; }

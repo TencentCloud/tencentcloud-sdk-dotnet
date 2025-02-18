@@ -25,7 +25,7 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 待部署的证书ID
+        /// 待部署的证书ID,必填选项
         /// </summary>
         [JsonProperty("CertificateId")]
         public string CertificateId{ get; set; }

@@ -56,14 +56,12 @@ namespace TencentCloud.Gme.V20180711.Models
 
         /// <summary>
         /// 业务返回描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Msg")]
         public string Msg{ get; set; }
 
         /// <summary>
         /// 检测结果，Code 为 0 时返回
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanPiece")]
         public ScanPiece[] ScanPiece{ get; set; }

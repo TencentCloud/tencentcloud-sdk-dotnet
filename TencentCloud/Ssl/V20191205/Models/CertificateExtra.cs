@@ -26,7 +26,6 @@ namespace TencentCloud.Ssl.V20191205.Models
         
         /// <summary>
         /// 证书可配置域名数量。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DomainNumber")]
         public string DomainNumber{ get; set; }
@@ -61,14 +60,12 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 是否是国密证书
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SMCert")]
         public long? SMCert{ get; set; }
 
         /// <summary>
         /// 公司类型，取值：1（个人）；2（公司）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CompanyType")]
         public long? CompanyType{ get; set; }

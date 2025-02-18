@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1181";
+       private const string sdkVersion = "SDK_NET_3.0.1182";
 
         /// <summary>
         /// Client constructor.
@@ -155,6 +155,27 @@ namespace TencentCloud.Postgres.V20170312
         public CreateAccountResponse CreateAccountSync(CreateAccountRequest req)
         {
             return InternalRequestAsync<CreateAccountResponse>(req, "CreateAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 此接口用于创建备份策略。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBackupPlanRequest"/></param>
+        /// <returns><see cref="CreateBackupPlanResponse"/></returns>
+        public Task<CreateBackupPlanResponse> CreateBackupPlan(CreateBackupPlanRequest req)
+        {
+            return InternalRequestAsync<CreateBackupPlanResponse>(req, "CreateBackupPlan");
+        }
+
+        /// <summary>
+        /// 此接口用于创建备份策略。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBackupPlanRequest"/></param>
+        /// <returns><see cref="CreateBackupPlanResponse"/></returns>
+        public CreateBackupPlanResponse CreateBackupPlanSync(CreateBackupPlanRequest req)
+        {
+            return InternalRequestAsync<CreateBackupPlanResponse>(req, "CreateBackupPlan")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -390,6 +411,27 @@ namespace TencentCloud.Postgres.V20170312
         public DeleteAccountResponse DeleteAccountSync(DeleteAccountRequest req)
         {
             return InternalRequestAsync<DeleteAccountResponse>(req, "DeleteAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除备份策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBackupPlanRequest"/></param>
+        /// <returns><see cref="DeleteBackupPlanResponse"/></returns>
+        public Task<DeleteBackupPlanResponse> DeleteBackupPlan(DeleteBackupPlanRequest req)
+        {
+            return InternalRequestAsync<DeleteBackupPlanResponse>(req, "DeleteBackupPlan");
+        }
+
+        /// <summary>
+        /// 删除备份策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBackupPlanRequest"/></param>
+        /// <returns><see cref="DeleteBackupPlanResponse"/></returns>
+        public DeleteBackupPlanResponse DeleteBackupPlanSync(DeleteBackupPlanRequest req)
+        {
+            return InternalRequestAsync<DeleteBackupPlanResponse>(req, "DeleteBackupPlan")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -881,6 +923,27 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 本接口用于查询实例SSL状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceSSLConfigRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceSSLConfigResponse"/></returns>
+        public Task<DescribeDBInstanceSSLConfigResponse> DescribeDBInstanceSSLConfig(DescribeDBInstanceSSLConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstanceSSLConfigResponse>(req, "DescribeDBInstanceSSLConfig");
+        }
+
+        /// <summary>
+        /// 本接口用于查询实例SSL状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceSSLConfigRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceSSLConfigResponse"/></returns>
+        public DescribeDBInstanceSSLConfigResponse DescribeDBInstanceSSLConfigSync(DescribeDBInstanceSSLConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstanceSSLConfigResponse>(req, "DescribeDBInstanceSSLConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeDBInstanceSecurityGroups）用于查询实例安全组。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceSecurityGroupsRequest"/></param>
@@ -1343,6 +1406,29 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeTasks）用于查询任务列表，展示异步任务的执行进度。
+        /// 注：本接口中展示的步骤为总结性步骤，可能伴随着版本迭代进行调整，不建议作为关键逻辑使用
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTasksRequest"/></param>
+        /// <returns><see cref="DescribeTasksResponse"/></returns>
+        public Task<DescribeTasksResponse> DescribeTasks(DescribeTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeTasksResponse>(req, "DescribeTasks");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeTasks）用于查询任务列表，展示异步任务的执行进度。
+        /// 注：本接口中展示的步骤为总结性步骤，可能伴随着版本迭代进行调整，不建议作为关键逻辑使用
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTasksRequest"/></param>
+        /// <returns><see cref="DescribeTasksResponse"/></returns>
+        public DescribeTasksResponse DescribeTasksSync(DescribeTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeTasksResponse>(req, "DescribeTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口 (DescribeZones) 用于查询支持的可用区信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeZonesRequest"/></param>
@@ -1767,6 +1853,27 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 本接口用于修改实例SSL配置，功能包含开启、关闭、修改SSL证书保护的连接地址。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceSSLConfigRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceSSLConfigResponse"/></returns>
+        public Task<ModifyDBInstanceSSLConfigResponse> ModifyDBInstanceSSLConfig(ModifyDBInstanceSSLConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceSSLConfigResponse>(req, "ModifyDBInstanceSSLConfig");
+        }
+
+        /// <summary>
+        /// 本接口用于修改实例SSL配置，功能包含开启、关闭、修改SSL证书保护的连接地址。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceSSLConfigRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceSSLConfigResponse"/></returns>
+        public ModifyDBInstanceSSLConfigResponse ModifyDBInstanceSSLConfigSync(ModifyDBInstanceSSLConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceSSLConfigResponse>(req, "ModifyDBInstanceSSLConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ModifyDBInstanceSecurityGroups）用于修改实例安全组。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>
@@ -1889,6 +1996,27 @@ namespace TencentCloud.Postgres.V20170312
         public ModifyParameterTemplateResponse ModifyParameterTemplateSync(ModifyParameterTemplateRequest req)
         {
             return InternalRequestAsync<ModifyParameterTemplateResponse>(req, "ModifyParameterTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ModifyReadOnlyDBInstanceWeight）用于修改只读实例权重
+        /// </summary>
+        /// <param name="req"><see cref="ModifyReadOnlyDBInstanceWeightRequest"/></param>
+        /// <returns><see cref="ModifyReadOnlyDBInstanceWeightResponse"/></returns>
+        public Task<ModifyReadOnlyDBInstanceWeightResponse> ModifyReadOnlyDBInstanceWeight(ModifyReadOnlyDBInstanceWeightRequest req)
+        {
+            return InternalRequestAsync<ModifyReadOnlyDBInstanceWeightResponse>(req, "ModifyReadOnlyDBInstanceWeight");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyReadOnlyDBInstanceWeight）用于修改只读实例权重
+        /// </summary>
+        /// <param name="req"><see cref="ModifyReadOnlyDBInstanceWeightRequest"/></param>
+        /// <returns><see cref="ModifyReadOnlyDBInstanceWeightResponse"/></returns>
+        public ModifyReadOnlyDBInstanceWeightResponse ModifyReadOnlyDBInstanceWeightSync(ModifyReadOnlyDBInstanceWeightRequest req)
+        {
+            return InternalRequestAsync<ModifyReadOnlyDBInstanceWeightResponse>(req, "ModifyReadOnlyDBInstanceWeight")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

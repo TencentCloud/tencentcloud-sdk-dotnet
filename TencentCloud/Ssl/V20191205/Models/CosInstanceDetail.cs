@@ -32,7 +32,6 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 已绑定的证书ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }
@@ -46,14 +45,12 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 存储桶名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
 
         /// <summary>
         /// 存储桶地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }

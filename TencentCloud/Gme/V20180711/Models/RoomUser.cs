@@ -32,21 +32,18 @@ namespace TencentCloud.Gme.V20180711.Models
 
         /// <summary>
         /// 房间里用户uin列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uins")]
         public ulong?[] Uins{ get; set; }
 
         /// <summary>
         /// 字符串房间id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrRoomId")]
         public string StrRoomId{ get; set; }
 
         /// <summary>
         /// 房间里用户字符串uin列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StrUins")]
         public string[] StrUins{ get; set; }

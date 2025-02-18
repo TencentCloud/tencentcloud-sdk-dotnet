@@ -1,0 +1,132 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{1FA224AC-A509-32AA-B0EF-B37554A358A8}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1182</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Trabbit</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20230418\TrabbitClient.cs" />
+    <Compile Include="V20230418\Models\CreateRabbitMQServerlessBindingRequest.cs" />
+    <Compile Include="V20230418\Models\CreateRabbitMQServerlessBindingResponse.cs" />
+    <Compile Include="V20230418\Models\CreateRabbitMQServerlessExchangeRequest.cs" />
+    <Compile Include="V20230418\Models\CreateRabbitMQServerlessExchangeResponse.cs" />
+    <Compile Include="V20230418\Models\CreateRabbitMQServerlessQueueRequest.cs" />
+    <Compile Include="V20230418\Models\CreateRabbitMQServerlessQueueResponse.cs" />
+    <Compile Include="V20230418\Models\CreateRabbitMQServerlessUserRequest.cs" />
+    <Compile Include="V20230418\Models\CreateRabbitMQServerlessUserResponse.cs" />
+    <Compile Include="V20230418\Models\CreateRabbitMQServerlessVirtualHostRequest.cs" />
+    <Compile Include="V20230418\Models\CreateRabbitMQServerlessVirtualHostResponse.cs" />
+    <Compile Include="V20230418\Models\DeleteRabbitMQServerlessBindingRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteRabbitMQServerlessBindingResponse.cs" />
+    <Compile Include="V20230418\Models\DeleteRabbitMQServerlessExchangeRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteRabbitMQServerlessExchangeResponse.cs" />
+    <Compile Include="V20230418\Models\DeleteRabbitMQServerlessPermissionRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteRabbitMQServerlessPermissionResponse.cs" />
+    <Compile Include="V20230418\Models\DeleteRabbitMQServerlessQueueRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteRabbitMQServerlessQueueResponse.cs" />
+    <Compile Include="V20230418\Models\DeleteRabbitMQServerlessUserRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteRabbitMQServerlessUserResponse.cs" />
+    <Compile Include="V20230418\Models\DeleteRabbitMQServerlessVirtualHostRequest.cs" />
+    <Compile Include="V20230418\Models\DeleteRabbitMQServerlessVirtualHostResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeRabbitMQServerlessBindingsRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeRabbitMQServerlessBindingsResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeRabbitMQServerlessConnectionRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeRabbitMQServerlessConnectionResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeRabbitMQServerlessConsumersRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeRabbitMQServerlessConsumersResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeRabbitMQServerlessExchangeDetailRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeRabbitMQServerlessExchangeDetailResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeRabbitMQServerlessExchangesRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeRabbitMQServerlessExchangesResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeRabbitMQServerlessInstanceRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeRabbitMQServerlessInstanceResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeRabbitMQServerlessPermissionRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeRabbitMQServerlessPermissionResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeRabbitMQServerlessQueueDetailRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeRabbitMQServerlessQueueDetailResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeRabbitMQServerlessQueuesRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeRabbitMQServerlessQueuesResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeRabbitMQServerlessUserRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeRabbitMQServerlessUserResponse.cs" />
+    <Compile Include="V20230418\Models\DescribeRabbitMQServerlessVirtualHostRequest.cs" />
+    <Compile Include="V20230418\Models\DescribeRabbitMQServerlessVirtualHostResponse.cs" />
+    <Compile Include="V20230418\Models\ExchangeQuota.cs" />
+    <Compile Include="V20230418\Models\Filter.cs" />
+    <Compile Include="V20230418\Models\ListRabbitMQServerlessInstancesRequest.cs" />
+    <Compile Include="V20230418\Models\ListRabbitMQServerlessInstancesResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyRabbitMQServerlessExchangeRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyRabbitMQServerlessExchangeResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyRabbitMQServerlessInstanceRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyRabbitMQServerlessInstanceResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyRabbitMQServerlessPermissionRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyRabbitMQServerlessPermissionResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyRabbitMQServerlessQueueRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyRabbitMQServerlessQueueResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyRabbitMQServerlessUserRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyRabbitMQServerlessUserResponse.cs" />
+    <Compile Include="V20230418\Models\ModifyRabbitMQServerlessVirtualHostRequest.cs" />
+    <Compile Include="V20230418\Models\ModifyRabbitMQServerlessVirtualHostResponse.cs" />
+    <Compile Include="V20230418\Models\QueueQuota.cs" />
+    <Compile Include="V20230418\Models\RabbitMQBindingListInfo.cs" />
+    <Compile Include="V20230418\Models\RabbitMQClusterInfo.cs" />
+    <Compile Include="V20230418\Models\RabbitMQClusterSpecInfo.cs" />
+    <Compile Include="V20230418\Models\RabbitMQConnection.cs" />
+    <Compile Include="V20230418\Models\RabbitMQConsumersListInfo.cs" />
+    <Compile Include="V20230418\Models\RabbitMQExchangeListInfo.cs" />
+    <Compile Include="V20230418\Models\RabbitMQPermission.cs" />
+    <Compile Include="V20230418\Models\RabbitMQQueueListConsumerDetailInfo.cs" />
+    <Compile Include="V20230418\Models\RabbitMQQueueListInfo.cs" />
+    <Compile Include="V20230418\Models\RabbitMQServerlessAccessInfo.cs" />
+    <Compile Include="V20230418\Models\RabbitMQServerlessEndpoint.cs" />
+    <Compile Include="V20230418\Models\RabbitMQServerlessInstance.cs" />
+    <Compile Include="V20230418\Models\RabbitMQServerlessWhiteListInfo.cs" />
+    <Compile Include="V20230418\Models\RabbitMQUser.cs" />
+    <Compile Include="V20230418\Models\RabbitMQVirtualHostInfo.cs" />
+    <Compile Include="V20230418\Models\RabbitMQVirtualHostStatistics.cs" />
+    <Compile Include="V20230418\Models\UserQuota.cs" />
+    <Compile Include="V20230418\Models\VirtualHostQuota.cs" />
+    <Compile Include="V20230418\Models\VpcEndpointInfo.cs" />
+  </ItemGroup>
+</Project>

@@ -32,14 +32,12 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// cdn域名详情	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceList")]
         public CdnInstanceDetail[] InstanceList{ get; set; }
 
         /// <summary>
         /// 是否查询异常
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Error")]
         public string Error{ get; set; }

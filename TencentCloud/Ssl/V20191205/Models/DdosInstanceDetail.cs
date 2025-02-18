@@ -44,7 +44,6 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 证书ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }

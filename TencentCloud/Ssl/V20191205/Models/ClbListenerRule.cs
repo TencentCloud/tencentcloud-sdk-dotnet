@@ -44,21 +44,18 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 规则已绑定的证书数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Certificate")]
         public Certificate Certificate{ get; set; }
 
         /// <summary>
         /// 不匹配域名列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NoMatchDomains")]
         public string[] NoMatchDomains{ get; set; }
 
         /// <summary>
         /// 规则绑定的路径
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

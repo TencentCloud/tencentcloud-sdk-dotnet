@@ -26,14 +26,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         
         /// <summary>
         /// 原始总计价格。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public float? OriginalPrice{ get; set; }
 
         /// <summary>
         /// 折扣总计价格。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiscountPrice")]
         public float? DiscountPrice{ get; set; }

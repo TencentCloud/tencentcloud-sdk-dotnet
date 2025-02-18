@@ -44,21 +44,18 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Error")]
         public string Error{ get; set; }
 
         /// <summary>
         /// 当前结果缓存时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CacheTime")]
         public string CacheTime{ get; set; }
 
         /// <summary>
         /// 包含的域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }

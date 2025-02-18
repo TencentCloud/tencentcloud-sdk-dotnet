@@ -119,7 +119,6 @@ namespace TencentCloud.Lighthouse.V20200324.Models
 
         /// <summary>
         /// CVM镜像共享到轻量应用服务器轻量应用服务器后的CVM镜像ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
@@ -138,7 +137,6 @@ namespace TencentCloud.Lighthouse.V20200324.Models
 
         /// <summary>
         /// 镜像关联使用场景Id列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SceneIdSet")]
         public string[] SceneIdSet{ get; set; }

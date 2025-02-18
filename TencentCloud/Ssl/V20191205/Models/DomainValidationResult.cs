@@ -32,7 +32,6 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 域名验证类型。 取值为：DNS、FILE、DNS_AUTO、DNS_PROXY、FILE_PROXY
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VerifyType")]
         public string VerifyType{ get; set; }
@@ -51,14 +50,12 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 检查失败原因。状态LocalCheck的具体描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LocalCheckFailReason")]
         public string LocalCheckFailReason{ get; set; }
 
         /// <summary>
         /// 检查到的值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckValue")]
         public string[] CheckValue{ get; set; }

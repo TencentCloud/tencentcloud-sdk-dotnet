@@ -48,6 +48,48 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("MaxBackupStartTime")]
         public string MaxBackupStartTime{ get; set; }
 
+        /// <summary>
+        /// 备份计划ID
+        /// </summary>
+        [JsonProperty("PlanId")]
+        public string PlanId{ get; set; }
+
+        /// <summary>
+        /// 备份计划自定义名称。
+        /// </summary>
+        [JsonProperty("PlanName")]
+        public string PlanName{ get; set; }
+
+        /// <summary>
+        /// 日志备份保留时长。
+        /// </summary>
+        [JsonProperty("LogBackupRetentionPeriod")]
+        public ulong? LogBackupRetentionPeriod{ get; set; }
+
+        /// <summary>
+        /// 创建时间。
+        /// </summary>
+        [JsonProperty("CreatedTime")]
+        public string CreatedTime{ get; set; }
+
+        /// <summary>
+        /// 最近一次的修改时间。
+        /// </summary>
+        [JsonProperty("UpdatedTime")]
+        public string UpdatedTime{ get; set; }
+
+        /// <summary>
+        /// 备份计划类型。系统默认创建的为default，自定义的为custom。
+        /// </summary>
+        [JsonProperty("PlanType")]
+        public string PlanType{ get; set; }
+
+        /// <summary>
+        /// 备份周期类型。当前支持week、month。
+        /// </summary>
+        [JsonProperty("BackupPeriodType")]
+        public string BackupPeriodType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +100,13 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "BaseBackupRetentionPeriod", this.BaseBackupRetentionPeriod);
             this.SetParamSimple(map, prefix + "MinBackupStartTime", this.MinBackupStartTime);
             this.SetParamSimple(map, prefix + "MaxBackupStartTime", this.MaxBackupStartTime);
+            this.SetParamSimple(map, prefix + "PlanId", this.PlanId);
+            this.SetParamSimple(map, prefix + "PlanName", this.PlanName);
+            this.SetParamSimple(map, prefix + "LogBackupRetentionPeriod", this.LogBackupRetentionPeriod);
+            this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
+            this.SetParamSimple(map, prefix + "PlanType", this.PlanType);
+            this.SetParamSimple(map, prefix + "BackupPeriodType", this.BackupPeriodType);
         }
     }
 }

@@ -72,21 +72,18 @@ namespace TencentCloud.Lighthouse.V20200324.Models
 
         /// <summary>
         /// 上一次操作
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LatestOperation")]
         public string LatestOperation{ get; set; }
 
         /// <summary>
         /// 上一次操作状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LatestOperationState")]
         public string LatestOperationState{ get; set; }
 
         /// <summary>
         /// 上一次请求ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LatestOperationRequestId")]
         public string LatestOperationRequestId{ get; set; }

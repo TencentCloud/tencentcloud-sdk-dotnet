@@ -38,14 +38,12 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 根证书ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertCaId")]
         public string CertCaId{ get; set; }
 
         /// <summary>
         /// 证书认证模式：UNIDIRECTIONAL单向认证，MUTUAL双向认证
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SSLMode")]
         public string SSLMode{ get; set; }

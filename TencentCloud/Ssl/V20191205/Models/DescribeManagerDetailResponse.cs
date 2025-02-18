@@ -28,6 +28,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         /// 状态: audit: 审核中 ok: 审核通过 invalid: 失效 expiring: 即将过期 expired: 已过期
         /// </summary>
         [JsonProperty("Status")]
+        [System.Obsolete]
         public string Status{ get; set; }
 
         /// <summary>

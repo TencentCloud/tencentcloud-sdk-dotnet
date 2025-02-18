@@ -70,7 +70,6 @@ namespace TencentCloud.Ssl.V20191205.Models
         /// 公司证件类型，取值范围：
         /// TYDMZ（统一社会信用代码 ）：仅CFCA类型证书需要使用本字段， 其他类型证书不需要使用本字段
         /// OTHERS（其他）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdType")]
         public string IdType{ get; set; }
@@ -78,14 +77,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         /// <summary>
         /// 公司证件号码，取值范围：
         /// TYDMZ（统一社会信用代码 ）：11532xxxxxxxx24820
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IdNumber")]
         public string IdNumber{ get; set; }
 
         /// <summary>
         /// 标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public Tags[] Tags{ get; set; }

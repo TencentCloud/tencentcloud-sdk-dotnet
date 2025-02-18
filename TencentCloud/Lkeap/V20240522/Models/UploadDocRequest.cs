@@ -31,8 +31,8 @@ namespace TencentCloud.Lkeap.V20240522.Models
         public string KnowledgeBaseId{ get; set; }
 
         /// <summary>
-        /// 文件名，可选。
-        /// **需带文件类型后缀**，当文件名无法从传入的`FileUrl`获取时需要通过该字段来明确。
+        /// 文件名。
+        /// **需带文件类型后缀**
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }

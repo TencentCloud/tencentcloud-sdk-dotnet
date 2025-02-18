@@ -44,7 +44,6 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 转入的PackageID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReceivePackageId")]
         public string ReceivePackageId{ get; set; }
@@ -75,14 +74,12 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// 接收者uin。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReceiverUin")]
         public ulong? ReceiverUin{ get; set; }
 
         /// <summary>
         /// 接收时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReceiveTime")]
         public string ReceiveTime{ get; set; }

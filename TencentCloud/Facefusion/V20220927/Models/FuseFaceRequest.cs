@@ -44,6 +44,9 @@ namespace TencentCloud.Facefusion.V20220927.Models
 
         /// <summary>
         /// 用户人脸图片、素材模板图的人脸位置信息。不能超过6个。
+        /// ●图片分辨率限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64，小于4096*4096（单边限制）。
+        /// ●图片大小限制：base64 编码后大小不可超过5M， url不超过10M。
+        /// ●支持图片格式：支持jpg或png
         /// </summary>
         [JsonProperty("MergeInfos")]
         public MergeInfo[] MergeInfos{ get; set; }

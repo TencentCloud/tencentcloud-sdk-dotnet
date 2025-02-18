@@ -50,7 +50,6 @@ namespace TencentCloud.Lighthouse.V20200324.Models
 
         /// <summary>
         /// 价格货币单位。取值范围CNY:人民币。USD:美元。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }

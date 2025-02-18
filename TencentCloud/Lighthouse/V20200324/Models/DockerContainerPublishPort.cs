@@ -38,14 +38,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
 
         /// <summary>
         /// 对外绑定IP，默认0.0.0.0
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
         /// 协议，默认tcp，支持tcp/udp/sctp
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
