@@ -145,7 +145,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string DateStart{ get; set; }
 
         /// <summary>
-        /// 有效截至日期
+        /// 有效截止日期
         /// </summary>
         [JsonProperty("DateEnd")]
         public string DateEnd{ get; set; }

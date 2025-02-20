@@ -32,7 +32,6 @@ namespace TencentCloud.Trabbit.V20230418.Models
 
         /// <summary>
         /// 已创建exchange数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UsedExchange")]
         public long? UsedExchange{ get; set; }

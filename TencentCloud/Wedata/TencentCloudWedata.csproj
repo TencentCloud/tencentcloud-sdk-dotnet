@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1182</VersionPrefix>
+    <VersionPrefix>3.0.1183</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,8 @@
 
   <ItemGroup>
     <Compile Include="V20210820\WedataClient.cs" />
+    <Compile Include="V20210820\Models\AddProjectUserRoleRequest.cs" />
+    <Compile Include="V20210820\Models\AddProjectUserRoleResponse.cs" />
     <Compile Include="V20210820\Models\AdhocDetail.cs" />
     <Compile Include="V20210820\Models\AdhocRecord.cs" />
     <Compile Include="V20210820\Models\AgentStatus.cs" />
@@ -186,6 +188,7 @@
     <Compile Include="V20210820\Models\DataServiceRequestParam.cs" />
     <Compile Include="V20210820\Models\DataServiceResponseParam.cs" />
     <Compile Include="V20210820\Models\DataSourceConnectStatus.cs" />
+    <Compile Include="V20210820\Models\DataSourceEnvInfo.cs" />
     <Compile Include="V20210820\Models\DataSourceInfo.cs" />
     <Compile Include="V20210820\Models\DataSourceInfoPage.cs" />
     <Compile Include="V20210820\Models\DatabaseInfo.cs" />

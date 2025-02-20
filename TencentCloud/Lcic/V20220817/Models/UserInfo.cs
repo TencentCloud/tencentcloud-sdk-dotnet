@@ -26,35 +26,30 @@ namespace TencentCloud.Lcic.V20220817.Models
         
         /// <summary>
         /// 应用Id。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
         /// 用户Id。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
         /// 用户昵称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 用户头像Url。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Avatar")]
         public string Avatar{ get; set; }
 
         /// <summary>
         /// 用户在客户系统的Id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginId")]
         public string OriginId{ get; set; }

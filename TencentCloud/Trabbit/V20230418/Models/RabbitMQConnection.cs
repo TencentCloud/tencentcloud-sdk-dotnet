@@ -26,49 +26,42 @@ namespace TencentCloud.Trabbit.V20230418.Models
         
         /// <summary>
         /// 连接名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConnectionName")]
         public string ConnectionName{ get; set; }
 
         /// <summary>
         /// 客户端ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PeerHost")]
         public string PeerHost{ get; set; }
 
         /// <summary>
         /// 连接状态，包括 starting、tuning、opening、running、flow、blocking、blocked、closing 和 closed
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
         /// 连接使用用户
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
         /// 是否开启ssl
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SSL")]
         public bool? SSL{ get; set; }
 
         /// <summary>
         /// 连接协议
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
         /// 连接下的channel数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Channels")]
         public long? Channels{ get; set; }

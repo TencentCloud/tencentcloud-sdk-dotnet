@@ -282,6 +282,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("CustomCertId")]
         public string CustomCertId{ get; set; }
 
+        /// <summary>
+        /// 集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
+        /// </summary>
+        [JsonProperty("UncleanLeaderElectionEnable")]
+        public long? UncleanLeaderElectionEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -328,6 +334,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "FreePartitionNumber", this.FreePartitionNumber);
             this.SetParamSimple(map, prefix + "ElasticFloatBandwidth", this.ElasticFloatBandwidth);
             this.SetParamSimple(map, prefix + "CustomCertId", this.CustomCertId);
+            this.SetParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
         }
     }
 }

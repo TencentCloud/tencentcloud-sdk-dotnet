@@ -56,14 +56,12 @@ namespace TencentCloud.Trabbit.V20230418.Models
 
         /// <summary>
         /// 网络信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterNetInfo")]
         public RabbitMQServerlessAccessInfo ClusterNetInfo{ get; set; }
 
         /// <summary>
         /// 公网白名单信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterWhiteListInfo")]
         public RabbitMQServerlessWhiteListInfo ClusterWhiteListInfo{ get; set; }

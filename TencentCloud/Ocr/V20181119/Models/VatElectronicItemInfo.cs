@@ -126,6 +126,30 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("AreaUnit")]
         public string AreaUnit{ get; set; }
 
+        /// <summary>
+        /// 出行人，仅旅客运输服务发票返回
+        /// </summary>
+        [JsonProperty("Traveler")]
+        public string Traveler{ get; set; }
+
+        /// <summary>
+        /// 有效身份证件号，仅旅客运输服务发票返回
+        /// </summary>
+        [JsonProperty("TravelerID")]
+        public string TravelerID{ get; set; }
+
+        /// <summary>
+        /// 出行日期，仅旅客运输服务发票返回
+        /// </summary>
+        [JsonProperty("TravelDate")]
+        public string TravelDate{ get; set; }
+
+        /// <summary>
+        /// 等级，仅旅客运输服务发票返回
+        /// </summary>
+        [JsonProperty("TravelLevel")]
+        public string TravelLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +173,10 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "BuildingName", this.BuildingName);
             this.SetParamSimple(map, prefix + "EstateNumber", this.EstateNumber);
             this.SetParamSimple(map, prefix + "AreaUnit", this.AreaUnit);
+            this.SetParamSimple(map, prefix + "Traveler", this.Traveler);
+            this.SetParamSimple(map, prefix + "TravelerID", this.TravelerID);
+            this.SetParamSimple(map, prefix + "TravelDate", this.TravelDate);
+            this.SetParamSimple(map, prefix + "TravelLevel", this.TravelLevel);
         }
     }
 }

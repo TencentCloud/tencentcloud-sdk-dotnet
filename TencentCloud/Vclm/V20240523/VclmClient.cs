@@ -28,7 +28,7 @@ namespace TencentCloud.Vclm.V20240523
 
        private const string endpoint = "vclm.tencentcloudapi.com";
        private const string version = "2024-05-23";
-       private const string sdkVersion = "SDK_NET_3.0.1182";
+       private const string sdkVersion = "SDK_NET_3.0.1183";
 
         /// <summary>
         /// Client constructor.
@@ -71,27 +71,6 @@ namespace TencentCloud.Vclm.V20240523
         public CheckAnimateImageJobResponse CheckAnimateImageJobSync(CheckAnimateImageJobRequest req)
         {
             return InternalRequestAsync<CheckAnimateImageJobResponse>(req, "CheckAnimateImageJob")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 确认视频转译结果
-        /// </summary>
-        /// <param name="req"><see cref="ConfirmVideoTranslateJobRequest"/></param>
-        /// <returns><see cref="ConfirmVideoTranslateJobResponse"/></returns>
-        public Task<ConfirmVideoTranslateJobResponse> ConfirmVideoTranslateJob(ConfirmVideoTranslateJobRequest req)
-        {
-            return InternalRequestAsync<ConfirmVideoTranslateJobResponse>(req, "ConfirmVideoTranslateJob");
-        }
-
-        /// <summary>
-        /// 确认视频转译结果
-        /// </summary>
-        /// <param name="req"><see cref="ConfirmVideoTranslateJobRequest"/></param>
-        /// <returns><see cref="ConfirmVideoTranslateJobResponse"/></returns>
-        public ConfirmVideoTranslateJobResponse ConfirmVideoTranslateJobSync(ConfirmVideoTranslateJobRequest req)
-        {
-            return InternalRequestAsync<ConfirmVideoTranslateJobResponse>(req, "ConfirmVideoTranslateJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -161,27 +140,6 @@ namespace TencentCloud.Vclm.V20240523
         }
 
         /// <summary>
-        /// 查询视频转译任务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeVideoTranslateJobRequest"/></param>
-        /// <returns><see cref="DescribeVideoTranslateJobResponse"/></returns>
-        public Task<DescribeVideoTranslateJobResponse> DescribeVideoTranslateJob(DescribeVideoTranslateJobRequest req)
-        {
-            return InternalRequestAsync<DescribeVideoTranslateJobResponse>(req, "DescribeVideoTranslateJob");
-        }
-
-        /// <summary>
-        /// 查询视频转译任务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeVideoTranslateJobRequest"/></param>
-        /// <returns><see cref="DescribeVideoTranslateJobResponse"/></returns>
-        public DescribeVideoTranslateJobResponse DescribeVideoTranslateJobSync(DescribeVideoTranslateJobRequest req)
-        {
-            return InternalRequestAsync<DescribeVideoTranslateJobResponse>(req, "DescribeVideoTranslateJob")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 用于提交图片跳舞任务。图片跳舞能力支持舞蹈动作结合图片生成跳舞视频，满足社交娱乐、互动营销等场景的需求。
         /// </summary>
         /// <param name="req"><see cref="SubmitImageAnimateJobRequest"/></param>
@@ -243,97 +201,6 @@ namespace TencentCloud.Vclm.V20240523
         public SubmitVideoStylizationJobResponse SubmitVideoStylizationJobSync(SubmitVideoStylizationJobRequest req)
         {
             return InternalRequestAsync<SubmitVideoStylizationJobResponse>(req, "SubmitVideoStylizationJob")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// ### 支持音色种别列表。
-        /// 每个音色都支持：英语（美国）、阿拉伯语、德语、西班牙语、法语、印尼语、意大利语、日语、韩语、马来语、葡萄牙语、俄语、泰语、土耳其语、越南语。
-        /// 
-        /// | 音色名称    | 性别 | 音色ID |
-        /// | ----------- | ---- | ------ |
-        /// | Seraphina   | 女   | 701002 |
-        /// | Ada         | 女   | 701003 |
-        /// | Emma        | 女   | 701007 |
-        /// | Brian       | 男   | 701008 |
-        /// | Amanda      | 女   | 701013 |
-        /// | Brandon     | 男   | 701014 |
-        /// | Christopher | 男   | 701015 |
-        /// | Davis       | 男   | 701017 |
-        /// | Derek       | 男   | 701018 |
-        /// | Dustin      | 男   | 701019 |
-        /// | Evelyn      | 女   | 701020 |
-        /// | Lewis       | 男   | 701021 |
-        /// | Lola        | 女   | 701022 |
-        /// | Samuel      | 男   | 701026 |
-        /// | Steffan     | 男   | 701028 |
-        /// | Arabella    | 女   | 701029 |
-        /// | Isidora     | 女   | 701030 |
-        /// | Tristan     | 男   | 701031 |
-        /// | Vivienne    | 女   | 701034 |
-        /// | Lucien      | 男   | 701035 |
-        /// | Alessio     | 男   | 701036 |
-        /// | Giuseppe    | 男   | 701037 |
-        /// | Isabella    | 女   | 701038 |
-        /// | Marcello    | 男   | 701039 |
-        /// | Masaru      | 男   | 701040 |
-        /// | Macerio     | 男   | 701042 |
-        /// | Thalita     | 女   | 701043 |
-        /// | 晓晓         | 女   | 701045 |
-        /// | 晓宇         | 女   | 701046 |
-        /// | 云逸         | 男   | 701047 |
-        /// | Yunfan       | 男   | 701048 |
-        /// </summary>
-        /// <param name="req"><see cref="SubmitVideoTranslateJobRequest"/></param>
-        /// <returns><see cref="SubmitVideoTranslateJobResponse"/></returns>
-        public Task<SubmitVideoTranslateJobResponse> SubmitVideoTranslateJob(SubmitVideoTranslateJobRequest req)
-        {
-            return InternalRequestAsync<SubmitVideoTranslateJobResponse>(req, "SubmitVideoTranslateJob");
-        }
-
-        /// <summary>
-        /// ### 支持音色种别列表。
-        /// 每个音色都支持：英语（美国）、阿拉伯语、德语、西班牙语、法语、印尼语、意大利语、日语、韩语、马来语、葡萄牙语、俄语、泰语、土耳其语、越南语。
-        /// 
-        /// | 音色名称    | 性别 | 音色ID |
-        /// | ----------- | ---- | ------ |
-        /// | Seraphina   | 女   | 701002 |
-        /// | Ada         | 女   | 701003 |
-        /// | Emma        | 女   | 701007 |
-        /// | Brian       | 男   | 701008 |
-        /// | Amanda      | 女   | 701013 |
-        /// | Brandon     | 男   | 701014 |
-        /// | Christopher | 男   | 701015 |
-        /// | Davis       | 男   | 701017 |
-        /// | Derek       | 男   | 701018 |
-        /// | Dustin      | 男   | 701019 |
-        /// | Evelyn      | 女   | 701020 |
-        /// | Lewis       | 男   | 701021 |
-        /// | Lola        | 女   | 701022 |
-        /// | Samuel      | 男   | 701026 |
-        /// | Steffan     | 男   | 701028 |
-        /// | Arabella    | 女   | 701029 |
-        /// | Isidora     | 女   | 701030 |
-        /// | Tristan     | 男   | 701031 |
-        /// | Vivienne    | 女   | 701034 |
-        /// | Lucien      | 男   | 701035 |
-        /// | Alessio     | 男   | 701036 |
-        /// | Giuseppe    | 男   | 701037 |
-        /// | Isabella    | 女   | 701038 |
-        /// | Marcello    | 男   | 701039 |
-        /// | Masaru      | 男   | 701040 |
-        /// | Macerio     | 男   | 701042 |
-        /// | Thalita     | 女   | 701043 |
-        /// | 晓晓         | 女   | 701045 |
-        /// | 晓宇         | 女   | 701046 |
-        /// | 云逸         | 男   | 701047 |
-        /// | Yunfan       | 男   | 701048 |
-        /// </summary>
-        /// <param name="req"><see cref="SubmitVideoTranslateJobRequest"/></param>
-        /// <returns><see cref="SubmitVideoTranslateJobResponse"/></returns>
-        public SubmitVideoTranslateJobResponse SubmitVideoTranslateJobSync(SubmitVideoTranslateJobRequest req)
-        {
-            return InternalRequestAsync<SubmitVideoTranslateJobResponse>(req, "SubmitVideoTranslateJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

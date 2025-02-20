@@ -60,6 +60,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("DeleteData")]
         public bool? DeleteData{ get; set; }
 
+        /// <summary>
+        /// 数据源连接名
+        /// </summary>
+        [JsonProperty("DatasourceConnectionName")]
+        public string DatasourceConnectionName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamArraySimple(map, prefix + "Values.", this.Values);
             this.SetParamSimple(map, prefix + "DeleteData", this.DeleteData);
+            this.SetParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
         }
     }
 }

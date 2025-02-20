@@ -44,14 +44,12 @@ namespace TencentCloud.Trabbit.V20230418.Models
 
         /// <summary>
         /// 用户描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 用户标签，用于决定改用户访问RabbitMQ Management的权限范围
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
@@ -76,14 +74,12 @@ namespace TencentCloud.Trabbit.V20230418.Models
 
         /// <summary>
         /// 该用户所能允许的最大连接数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxConnections")]
         public long? MaxConnections{ get; set; }
 
         /// <summary>
         /// 该用户所能允许的最大通道数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxChannels")]
         public long? MaxChannels{ get; set; }

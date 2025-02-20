@@ -26,14 +26,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         
         /// <summary>
         /// 用户 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MemberAccount")]
         public string MemberAccount{ get; set; }
 
         /// <summary>
         /// 禁言到的时间（使用 UTC 时间，即世界协调时间）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MutedUntil")]
         public ulong? MutedUntil{ get; set; }

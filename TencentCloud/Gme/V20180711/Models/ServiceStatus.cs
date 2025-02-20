@@ -26,42 +26,36 @@ namespace TencentCloud.Gme.V20180711.Models
         
         /// <summary>
         /// 实时语音服务开关状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealTimeSpeech")]
         public StatusInfo RealTimeSpeech{ get; set; }
 
         /// <summary>
         /// 语音消息服务开关状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VoiceMessage")]
         public StatusInfo VoiceMessage{ get; set; }
 
         /// <summary>
         /// 语音内容安全服务开关状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Porn")]
         public StatusInfo Porn{ get; set; }
 
         /// <summary>
         /// 语音录制服务开关状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Live")]
         public StatusInfo Live{ get; set; }
 
         /// <summary>
         /// 语音转文本服务开关状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealTimeAsr")]
         public StatusInfo RealTimeAsr{ get; set; }
 
         /// <summary>
         /// 文本翻译服务开关状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TextTranslate")]
         public StatusInfo TextTranslate{ get; set; }

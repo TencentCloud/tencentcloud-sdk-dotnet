@@ -32,14 +32,12 @@ namespace TencentCloud.Lcic.V20220817.Models
 
         /// <summary>
         /// 用户ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
         /// 用户在客户系统的Id。 若用户注册时该字段为空，则默认为 UserId 值一致。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginId")]
         public string OriginId{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{03830C96-3E28-3E4E-924E-998E4E6827D1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1182</VersionPrefix>
+    <VersionPrefix>3.0.1183</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,6 +51,7 @@
     <Compile Include="V20210119\Models\ActivateHardware.cs" />
     <Compile Include="V20210119\Models\ActivateHardwareRequest.cs" />
     <Compile Include="V20210119\Models\ActivateHardwareResponse.cs" />
+    <Compile Include="V20210119\Models\ActiveDeviceList.cs" />
     <Compile Include="V20210119\Models\AddDeviceRequest.cs" />
     <Compile Include="V20210119\Models\AddDeviceResponse.cs" />
     <Compile Include="V20210119\Models\AddGroupRequest.cs" />
@@ -81,9 +82,13 @@
     <Compile Include="V20210119\Models\DeviceInfo.cs" />
     <Compile Include="V20210119\Models\DeviceNetInfo.cs" />
     <Compile Include="V20210119\Models\DevicePayModeInfo.cs" />
+    <Compile Include="V20210119\Models\DownloadActiveDeviceCountRequest.cs" />
+    <Compile Include="V20210119\Models\DownloadActiveDeviceCountResponse.cs" />
     <Compile Include="V20210119\Models\ExpectedThreshold.cs" />
     <Compile Include="V20210119\Models\FlowDetails.cs" />
     <Compile Include="V20210119\Models\FlowPackageInfo.cs" />
+    <Compile Include="V20210119\Models\GetActiveDeviceCountRequest.cs" />
+    <Compile Include="V20210119\Models\GetActiveDeviceCountResponse.cs" />
     <Compile Include="V20210119\Models\GetDevicePayModeRequest.cs" />
     <Compile Include="V20210119\Models\GetDevicePayModeResponse.cs" />
     <Compile Include="V20210119\Models\GetDeviceRequest.cs" />

@@ -26,42 +26,36 @@ namespace TencentCloud.Lcic.V20220817.Models
         
         /// <summary>
         /// 事件发生的房间号。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoomId")]
         public ulong? RoomId{ get; set; }
 
         /// <summary>
         /// 事件发生的用户。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
         /// 用户设备类型。0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Device")]
         public ulong? Device{ get; set; }
 
         /// <summary>
         /// 录制时长。单位：秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Duration")]
         public ulong? Duration{ get; set; }
 
         /// <summary>
         /// 录制文件大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordSize")]
         public ulong? RecordSize{ get; set; }
 
         /// <summary>
         /// 录制url
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordUrl")]
         public string RecordUrl{ get; set; }

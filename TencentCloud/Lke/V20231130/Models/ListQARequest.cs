@@ -79,6 +79,12 @@ namespace TencentCloud.Lke.V20231130.Models
         public string QueryAnswer{ get; set; }
 
         /// <summary>
+        /// 分类ID
+        /// </summary>
+        [JsonProperty("CateBizId")]
+        public string CateBizId{ get; set; }
+
+        /// <summary>
         /// QA业务ID列表
         /// </summary>
         [JsonProperty("QaBizIds")]
@@ -105,6 +111,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "DocBizId", this.DocBizId);
             this.SetParamSimple(map, prefix + "Source", this.Source);
             this.SetParamSimple(map, prefix + "QueryAnswer", this.QueryAnswer);
+            this.SetParamSimple(map, prefix + "CateBizId", this.CateBizId);
             this.SetParamArraySimple(map, prefix + "QaBizIds.", this.QaBizIds);
             this.SetParamSimple(map, prefix + "QueryType", this.QueryType);
         }

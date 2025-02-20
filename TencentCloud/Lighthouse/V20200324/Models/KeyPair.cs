@@ -44,7 +44,6 @@ namespace TencentCloud.Lighthouse.V20200324.Models
 
         /// <summary>
         /// 密钥对关联的实例 ID 列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssociatedInstanceIds")]
         public string[] AssociatedInstanceIds{ get; set; }

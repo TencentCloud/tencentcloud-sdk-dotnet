@@ -93,7 +93,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// <summary>
         /// 意愿核身（语音播报+语音回答模式）使用的文案。
         /// - 包括：系统语音播报的文本、需要核验的标准文本。
-        /// - 当前仅支持1轮问答。
+        /// - 问答模式支持1-10轮（不超过10轮）的意愿确认。
         /// </summary>
         [JsonProperty("IntentionQuestions")]
         public IntentionQuestion[] IntentionQuestions{ get; set; }
@@ -101,7 +101,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// <summary>
         /// 意愿核身（点头确认模式）使用的文案。
         /// - 若未使用意愿核身（点头确认模式），则该字段无需传入。
-        /// - 当前仅支持一个提示文本。
+        /// - 点头确认模式支持1-10轮（不超过10轮）的意愿确认。
         /// </summary>
         [JsonProperty("IntentionActions")]
         public IntentionActionConfig[] IntentionActions{ get; set; }

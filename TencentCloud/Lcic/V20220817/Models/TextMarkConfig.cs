@@ -26,14 +26,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         
         /// <summary>
         /// 文字水印内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
         /// 文字水印颜色
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Color")]
         public string Color{ get; set; }

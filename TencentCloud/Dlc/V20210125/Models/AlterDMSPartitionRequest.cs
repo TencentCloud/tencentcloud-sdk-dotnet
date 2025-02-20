@@ -48,6 +48,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("Partition")]
         public DMSPartition Partition{ get; set; }
 
+        /// <summary>
+        /// 数据源连接名
+        /// </summary>
+        [JsonProperty("DatasourceConnectionName")]
+        public string DatasourceConnectionName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "CurrentTableName", this.CurrentTableName);
             this.SetParamSimple(map, prefix + "CurrentValues", this.CurrentValues);
             this.SetParamObj(map, prefix + "Partition.", this.Partition);
+            this.SetParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
         }
     }
 }

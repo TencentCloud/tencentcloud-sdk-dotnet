@@ -26,35 +26,30 @@ namespace TencentCloud.Lcic.V20220817.Models
         
         /// <summary>
         /// 课堂iD
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoomId")]
         public ulong? RoomId{ get; set; }
 
         /// <summary>
         /// 用户ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
         /// 评分时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
         /// 课堂评分
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Score")]
         public ulong? Score{ get; set; }
 
         /// <summary>
         /// 课堂评价
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScoreMsg")]
         public string ScoreMsg{ get; set; }

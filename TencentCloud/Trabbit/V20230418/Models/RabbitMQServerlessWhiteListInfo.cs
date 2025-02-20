@@ -26,14 +26,12 @@ namespace TencentCloud.Trabbit.V20230418.Models
         
         /// <summary>
         /// 公网数据流白名单
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicDataStreamWhiteList")]
         public string PublicDataStreamWhiteList{ get; set; }
 
         /// <summary>
         /// 公网数据流白名单状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicDataStreamWhiteListStatus")]
         public string PublicDataStreamWhiteListStatus{ get; set; }

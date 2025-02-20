@@ -26,49 +26,42 @@ namespace TencentCloud.Trabbit.V20230418.Models
         
         /// <summary>
         /// vpc id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// subnet id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
         /// 接入地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcEndpoint")]
         public string VpcEndpoint{ get; set; }
 
         /// <summary>
         /// 接入地址状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcDataStreamEndpointStatus")]
         public string VpcDataStreamEndpointStatus{ get; set; }
 
         /// <summary>
         /// 是否是公网
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicNetwork")]
         public bool? PublicNetwork{ get; set; }
 
         /// <summary>
         /// 访问策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccessStrategy")]
         public string AccessStrategy{ get; set; }
 
         /// <summary>
         /// 带宽
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }

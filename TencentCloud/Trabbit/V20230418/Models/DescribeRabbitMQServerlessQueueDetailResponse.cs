@@ -26,210 +26,180 @@ namespace TencentCloud.Trabbit.V20230418.Models
         
         /// <summary>
         /// 实例id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// Vhost参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VirtualHost")]
         public string VirtualHost{ get; set; }
 
         /// <summary>
         /// 队列名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }
 
         /// <summary>
         /// 队列类型,取值classic或quorum
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueueType")]
         public string QueueType{ get; set; }
 
         /// <summary>
         /// 在线消费者数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Consumers")]
         public long? Consumers{ get; set; }
 
         /// <summary>
         /// 持久标记
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Durable")]
         public bool? Durable{ get; set; }
 
         /// <summary>
         /// 自动清除
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoDelete")]
         public bool? AutoDelete{ get; set; }
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
         /// MessageTTL参数,classic类型专用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MessageTTL")]
         public long? MessageTTL{ get; set; }
 
         /// <summary>
         /// AutoExpire参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoExpire")]
         public long? AutoExpire{ get; set; }
 
         /// <summary>
         /// MaxLength参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxLength")]
         public long? MaxLength{ get; set; }
 
         /// <summary>
         /// MaxLengthBytes参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxLengthBytes")]
         public long? MaxLengthBytes{ get; set; }
 
         /// <summary>
         /// DeliveryLimit参数,quorum类型专用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeliveryLimit")]
         public long? DeliveryLimit{ get; set; }
 
         /// <summary>
         /// OverflowBehaviour参数,取值为drop-head, reject-publish或reject-publish-dlx
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OverflowBehaviour")]
         public string OverflowBehaviour{ get; set; }
 
         /// <summary>
         /// DeadLetterExchange参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeadLetterExchange")]
         public string DeadLetterExchange{ get; set; }
 
         /// <summary>
         /// DeadLetterRoutingKey参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeadLetterRoutingKey")]
         public string DeadLetterRoutingKey{ get; set; }
 
         /// <summary>
         /// SingleActiveConsumer参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SingleActiveConsumer")]
         public bool? SingleActiveConsumer{ get; set; }
 
         /// <summary>
         /// MaximumPriority参数,classic类型专用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaximumPriority")]
         public long? MaximumPriority{ get; set; }
 
         /// <summary>
         /// LazyMode参数,classic类型专用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LazyMode")]
         public bool? LazyMode{ get; set; }
 
         /// <summary>
         /// MasterLocator参数,classic类型专用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MasterLocator")]
         public string MasterLocator{ get; set; }
 
         /// <summary>
         /// MaxInMemoryLength参数,quorum类型专用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxInMemoryLength")]
         public long? MaxInMemoryLength{ get; set; }
 
         /// <summary>
         /// MaxInMemoryBytes参数,quorum类型专用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxInMemoryBytes")]
         public long? MaxInMemoryBytes{ get; set; }
 
         /// <summary>
         /// 创建时间戳,单位秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
         /// 节点
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Node")]
         public string Node{ get; set; }
 
         /// <summary>
         /// 仲裁队列死信一致性策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeadLetterStrategy")]
         public string DeadLetterStrategy{ get; set; }
 
         /// <summary>
         /// 仲裁队列的领导者选举策略
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueueLeaderLocator")]
         public string QueueLeaderLocator{ get; set; }
 
         /// <summary>
         /// 仲裁队列的初始副本组大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QuorumInitialGroupSize")]
         public long? QuorumInitialGroupSize{ get; set; }
 
         /// <summary>
         /// 是否为独占队列
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Exclusive")]
         public bool? Exclusive{ get; set; }
 
         /// <summary>
         /// 生效的策略名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Policy")]
         public string Policy{ get; set; }
 
         /// <summary>
         /// 扩展参数 key-value
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Arguments")]
         public string Arguments{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Taf.V20200210
 
        private const string endpoint = "taf.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1182";
+       private const string sdkVersion = "SDK_NET_3.0.1183";
 
         /// <summary>
         /// Client constructor.
@@ -71,69 +71,6 @@ namespace TencentCloud.Taf.V20200210
         public ManagePortraitRiskResponse ManagePortraitRiskSync(ManagePortraitRiskRequest req)
         {
             return InternalRequestAsync<ManagePortraitRiskResponse>(req, "ManagePortraitRisk")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 流量反欺诈-流量验准定制版
-        /// </summary>
-        /// <param name="req"><see cref="RecognizeCustomizedAudienceRequest"/></param>
-        /// <returns><see cref="RecognizeCustomizedAudienceResponse"/></returns>
-        public Task<RecognizeCustomizedAudienceResponse> RecognizeCustomizedAudience(RecognizeCustomizedAudienceRequest req)
-        {
-            return InternalRequestAsync<RecognizeCustomizedAudienceResponse>(req, "RecognizeCustomizedAudience");
-        }
-
-        /// <summary>
-        /// 流量反欺诈-流量验准定制版
-        /// </summary>
-        /// <param name="req"><see cref="RecognizeCustomizedAudienceRequest"/></param>
-        /// <returns><see cref="RecognizeCustomizedAudienceResponse"/></returns>
-        public RecognizeCustomizedAudienceResponse RecognizeCustomizedAudienceSync(RecognizeCustomizedAudienceRequest req)
-        {
-            return InternalRequestAsync<RecognizeCustomizedAudienceResponse>(req, "RecognizeCustomizedAudience")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 流量反欺诈-流量验准高级版
-        /// </summary>
-        /// <param name="req"><see cref="RecognizePreciseTargetAudienceRequest"/></param>
-        /// <returns><see cref="RecognizePreciseTargetAudienceResponse"/></returns>
-        public Task<RecognizePreciseTargetAudienceResponse> RecognizePreciseTargetAudience(RecognizePreciseTargetAudienceRequest req)
-        {
-            return InternalRequestAsync<RecognizePreciseTargetAudienceResponse>(req, "RecognizePreciseTargetAudience");
-        }
-
-        /// <summary>
-        /// 流量反欺诈-流量验准高级版
-        /// </summary>
-        /// <param name="req"><see cref="RecognizePreciseTargetAudienceRequest"/></param>
-        /// <returns><see cref="RecognizePreciseTargetAudienceResponse"/></returns>
-        public RecognizePreciseTargetAudienceResponse RecognizePreciseTargetAudienceSync(RecognizePreciseTargetAudienceRequest req)
-        {
-            return InternalRequestAsync<RecognizePreciseTargetAudienceResponse>(req, "RecognizePreciseTargetAudience")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 流量反欺诈-流量验准
-        /// </summary>
-        /// <param name="req"><see cref="RecognizeTargetAudienceRequest"/></param>
-        /// <returns><see cref="RecognizeTargetAudienceResponse"/></returns>
-        public Task<RecognizeTargetAudienceResponse> RecognizeTargetAudience(RecognizeTargetAudienceRequest req)
-        {
-            return InternalRequestAsync<RecognizeTargetAudienceResponse>(req, "RecognizeTargetAudience");
-        }
-
-        /// <summary>
-        /// 流量反欺诈-流量验准
-        /// </summary>
-        /// <param name="req"><see cref="RecognizeTargetAudienceRequest"/></param>
-        /// <returns><see cref="RecognizeTargetAudienceResponse"/></returns>
-        public RecognizeTargetAudienceResponse RecognizeTargetAudienceSync(RecognizeTargetAudienceRequest req)
-        {
-            return InternalRequestAsync<RecognizeTargetAudienceResponse>(req, "RecognizeTargetAudience")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -26,14 +26,12 @@ namespace TencentCloud.Trabbit.V20230418.Models
         
         /// <summary>
         /// 交换机列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExchangeInfoList")]
         public RabbitMQExchangeListInfo[] ExchangeInfoList{ get; set; }
 
         /// <summary>
         /// 交换机总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

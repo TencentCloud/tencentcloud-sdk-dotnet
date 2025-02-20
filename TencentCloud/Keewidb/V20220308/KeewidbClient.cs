@@ -28,7 +28,7 @@ namespace TencentCloud.Keewidb.V20220308
 
        private const string endpoint = "keewidb.tencentcloudapi.com";
        private const string version = "2022-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1182";
+       private const string sdkVersion = "SDK_NET_3.0.1183";
 
         /// <summary>
         /// Client constructor.
@@ -118,6 +118,7 @@ namespace TencentCloud.Keewidb.V20220308
 
         /// <summary>
         /// 本接口（ClearInstance）用于清空实例数据。
+        /// > **说明**：在清空数据流程中，系统将自动进行数据备份，耗时较长，请您耐心等待并提前做好时间规划。
         /// </summary>
         /// <param name="req"><see cref="ClearInstanceRequest"/></param>
         /// <returns><see cref="ClearInstanceResponse"/></returns>
@@ -128,6 +129,7 @@ namespace TencentCloud.Keewidb.V20220308
 
         /// <summary>
         /// 本接口（ClearInstance）用于清空实例数据。
+        /// > **说明**：在清空数据流程中，系统将自动进行数据备份，耗时较长，请您耐心等待并提前做好时间规划。
         /// </summary>
         /// <param name="req"><see cref="ClearInstanceRequest"/></param>
         /// <returns><see cref="ClearInstanceResponse"/></returns>

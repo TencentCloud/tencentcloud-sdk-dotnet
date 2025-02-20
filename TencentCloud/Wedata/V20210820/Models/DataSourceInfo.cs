@@ -269,6 +269,41 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("ConnectStatus")]
         public DataSourceConnectStatus ConnectStatus{ get; set; }
 
+        /// <summary>
+        /// 数据源展示类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DisplayType")]
+        public string DisplayType{ get; set; }
+
+        /// <summary>
+        /// 数据源环境
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Env")]
+        public string Env{ get; set; }
+
+        /// <summary>
+        /// 数据源唯一标识
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DatasourceUrn")]
+        public string DatasourceUrn{ get; set; }
+
+        /// <summary>
+        /// 是否标准模式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Model")]
+        public string Model{ get; set; }
+
+        /// <summary>
+        ///  数据源环境信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DataSourceEnvInfos")]
+        public DataSourceEnvInfo[] DataSourceEnvInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -310,6 +345,11 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DevelopmentId", this.DevelopmentId);
             this.SetParamSimple(map, prefix + "DevelopmentParams", this.DevelopmentParams);
             this.SetParamObj(map, prefix + "ConnectStatus.", this.ConnectStatus);
+            this.SetParamSimple(map, prefix + "DisplayType", this.DisplayType);
+            this.SetParamSimple(map, prefix + "Env", this.Env);
+            this.SetParamSimple(map, prefix + "DatasourceUrn", this.DatasourceUrn);
+            this.SetParamSimple(map, prefix + "Model", this.Model);
+            this.SetParamArrayObj(map, prefix + "DataSourceEnvInfos.", this.DataSourceEnvInfos);
         }
     }
 }

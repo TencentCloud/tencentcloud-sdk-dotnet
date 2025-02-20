@@ -32,21 +32,18 @@ namespace TencentCloud.Trtc.V20190722.Models
 
         /// <summary>
         /// 房间人数，用户重复进入同一个房间为1次
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserNumber")]
         public ulong? UserNumber{ get; set; }
 
         /// <summary>
         /// 房间人次，用户每次进入房间为一次
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserCount")]
         public ulong? UserCount{ get; set; }
 
         /// <summary>
         /// sdkappid下一天内的房间数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoomNumbers")]
         public ulong? RoomNumbers{ get; set; }

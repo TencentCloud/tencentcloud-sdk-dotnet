@@ -78,6 +78,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("Allow")]
         public string Allow{ get; set; }
 
+        /// <summary>
+        /// 客票生效日期
+        /// </summary>
+        [JsonProperty("DateStart")]
+        public string DateStart{ get; set; }
+
+        /// <summary>
+        /// 有效截止日期
+        /// </summary>
+        [JsonProperty("DateEnd")]
+        public string DateEnd{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "TimeGetOn", this.TimeGetOn);
             this.SetParamSimple(map, prefix + "FareBasis", this.FareBasis);
             this.SetParamSimple(map, prefix + "Allow", this.Allow);
+            this.SetParamSimple(map, prefix + "DateStart", this.DateStart);
+            this.SetParamSimple(map, prefix + "DateEnd", this.DateEnd);
         }
     }
 }

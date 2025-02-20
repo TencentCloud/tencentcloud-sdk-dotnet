@@ -26,21 +26,18 @@ namespace TencentCloud.Lcic.V20220817.Models
         
         /// <summary>
         /// 自定义消息数据。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public string Data{ get; set; }
 
         /// <summary>
         /// 自定义消息描述信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
         /// 扩展字段。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ext")]
         public string Ext{ get; set; }

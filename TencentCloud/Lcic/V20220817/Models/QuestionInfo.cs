@@ -50,7 +50,6 @@ namespace TencentCloud.Lcic.V20220817.Models
 
         /// <summary>
         /// 每个选项答题人数统计
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AnswerStats")]
         public AnswerStat[] AnswerStats{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Cwp.V20180228
 
        private const string endpoint = "cwp.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.1182";
+       private const string sdkVersion = "SDK_NET_3.0.1183";
 
         /// <summary>
         /// Client constructor.
@@ -6503,31 +6503,6 @@ namespace TencentCloud.Cwp.V20180228
         public DescribeSecurityEventsCntResponse DescribeSecurityEventsCntSync(DescribeSecurityEventsCntRequest req)
         {
             return InternalRequestAsync<DescribeSecurityEventsCntResponse>(req, "DescribeSecurityEventsCnt")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 接口已无效
-        /// 
-        /// 获取安全防护状态汇总
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSecurityProtectionStatRequest"/></param>
-        /// <returns><see cref="DescribeSecurityProtectionStatResponse"/></returns>
-        public Task<DescribeSecurityProtectionStatResponse> DescribeSecurityProtectionStat(DescribeSecurityProtectionStatRequest req)
-        {
-            return InternalRequestAsync<DescribeSecurityProtectionStatResponse>(req, "DescribeSecurityProtectionStat");
-        }
-
-        /// <summary>
-        /// 接口已无效
-        /// 
-        /// 获取安全防护状态汇总
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSecurityProtectionStatRequest"/></param>
-        /// <returns><see cref="DescribeSecurityProtectionStatResponse"/></returns>
-        public DescribeSecurityProtectionStatResponse DescribeSecurityProtectionStatSync(DescribeSecurityProtectionStatRequest req)
-        {
-            return InternalRequestAsync<DescribeSecurityProtectionStatResponse>(req, "DescribeSecurityProtectionStat")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

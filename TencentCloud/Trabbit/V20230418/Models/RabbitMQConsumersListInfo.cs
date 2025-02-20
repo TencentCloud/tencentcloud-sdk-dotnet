@@ -26,14 +26,12 @@ namespace TencentCloud.Trabbit.V20230418.Models
         
         /// <summary>
         /// 客户端Ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientIp")]
         public string ClientIp{ get; set; }
 
         /// <summary>
         /// 消费者Tag
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConsumerTag")]
         public string ConsumerTag{ get; set; }

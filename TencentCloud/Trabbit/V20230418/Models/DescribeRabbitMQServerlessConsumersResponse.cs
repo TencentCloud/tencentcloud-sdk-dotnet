@@ -26,14 +26,12 @@ namespace TencentCloud.Trabbit.V20230418.Models
         
         /// <summary>
         /// 消费者列表信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConsumerInfoList")]
         public RabbitMQConsumersListInfo[] ConsumerInfoList{ get; set; }
 
         /// <summary>
         /// 数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

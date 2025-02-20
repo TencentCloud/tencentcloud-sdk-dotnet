@@ -102,6 +102,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("Sds")]
         public DMSSds Sds{ get; set; }
 
+        /// <summary>
+        /// 数据源连接名
+        /// </summary>
+        [JsonProperty("DatasourceConnectionName")]
+        public string DatasourceConnectionName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "LastAccessTime", this.LastAccessTime);
             this.SetParamArrayObj(map, prefix + "Params.", this.Params);
             this.SetParamObj(map, prefix + "Sds.", this.Sds);
+            this.SetParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
         }
     }
 }

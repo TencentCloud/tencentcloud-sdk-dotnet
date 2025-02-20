@@ -47,7 +47,6 @@ namespace TencentCloud.Lighthouse.V20200324.Models
 
         /// <summary>
         /// 不支持套餐变更原因信息。变更套餐状态为"AVAILABLE"时, 该信息为空
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NotSupportModifyMessage")]
         public string NotSupportModifyMessage{ get; set; }

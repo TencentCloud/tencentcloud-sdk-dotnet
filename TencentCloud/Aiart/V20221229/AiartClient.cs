@@ -28,7 +28,7 @@ namespace TencentCloud.Aiart.V20221229
 
        private const string endpoint = "aiart.tencentcloudapi.com";
        private const string version = "2022-12-29";
-       private const string sdkVersion = "SDK_NET_3.0.1182";
+       private const string sdkVersion = "SDK_NET_3.0.1183";
 
         /// <summary>
         /// Client constructor.
@@ -200,6 +200,35 @@ namespace TencentCloud.Aiart.V20221229
         public QueryDrawPortraitJobResponse QueryDrawPortraitJobSync(QueryDrawPortraitJobRequest req)
         {
             return InternalRequestAsync<QueryDrawPortraitJobResponse>(req, "QueryDrawPortraitJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// AI 美照接口将根据模板为用户生成精美照片。分为提交任务和查询任务2个接口。
+        /// - 提交任务：提交一个美照生成异步任务，获得任务 ID。
+        /// - 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
+        /// 
+        /// AI 美照默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="QueryGlamPicJobRequest"/></param>
+        /// <returns><see cref="QueryGlamPicJobResponse"/></returns>
+        public Task<QueryGlamPicJobResponse> QueryGlamPicJob(QueryGlamPicJobRequest req)
+        {
+            return InternalRequestAsync<QueryGlamPicJobResponse>(req, "QueryGlamPicJob");
+        }
+
+        /// <summary>
+        /// AI 美照接口将根据模板为用户生成精美照片。分为提交任务和查询任务2个接口。
+        /// - 提交任务：提交一个美照生成异步任务，获得任务 ID。
+        /// - 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
+        /// 
+        /// AI 美照默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="QueryGlamPicJobRequest"/></param>
+        /// <returns><see cref="QueryGlamPicJobResponse"/></returns>
+        public QueryGlamPicJobResponse QueryGlamPicJobSync(QueryGlamPicJobRequest req)
+        {
+            return InternalRequestAsync<QueryGlamPicJobResponse>(req, "QueryGlamPicJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -376,6 +405,35 @@ namespace TencentCloud.Aiart.V20221229
         public SubmitDrawPortraitJobResponse SubmitDrawPortraitJobSync(SubmitDrawPortraitJobRequest req)
         {
             return InternalRequestAsync<SubmitDrawPortraitJobResponse>(req, "SubmitDrawPortraitJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// AI 美照接口将根据模板为用户生成精美照片。分为提交任务和查询任务2个接口。
+        /// - 提交任务：提交一个美照生成异步任务，获得任务 ID。
+        /// - 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
+        /// 
+        /// AI 美照默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitGlamPicJobRequest"/></param>
+        /// <returns><see cref="SubmitGlamPicJobResponse"/></returns>
+        public Task<SubmitGlamPicJobResponse> SubmitGlamPicJob(SubmitGlamPicJobRequest req)
+        {
+            return InternalRequestAsync<SubmitGlamPicJobResponse>(req, "SubmitGlamPicJob");
+        }
+
+        /// <summary>
+        /// AI 美照接口将根据模板为用户生成精美照片。分为提交任务和查询任务2个接口。
+        /// - 提交任务：提交一个美照生成异步任务，获得任务 ID。
+        /// - 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
+        /// 
+        /// AI 美照默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+        /// </summary>
+        /// <param name="req"><see cref="SubmitGlamPicJobRequest"/></param>
+        /// <returns><see cref="SubmitGlamPicJobResponse"/></returns>
+        public SubmitGlamPicJobResponse SubmitGlamPicJobSync(SubmitGlamPicJobRequest req)
+        {
+            return InternalRequestAsync<SubmitGlamPicJobResponse>(req, "SubmitGlamPicJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

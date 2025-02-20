@@ -26,35 +26,30 @@ namespace TencentCloud.Lcic.V20220817.Models
         
         /// <summary>
         /// 水印图片的url
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
         /// 水印宽。为比例值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Width")]
         public float? Width{ get; set; }
 
         /// <summary>
         /// 水印高。为比例值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Height")]
         public float? Height{ get; set; }
 
         /// <summary>
         /// 水印X偏移, 取值:0-100, 表示区域X方向的百分比。比如50，则表示位于X轴中间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LocationX")]
         public float? LocationX{ get; set; }
 
         /// <summary>
         /// 水印Y偏移, 取值:0-100, 表示区域Y方向的百分比。比如50，则表示位于Y轴中间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LocationY")]
         public float? LocationY{ get; set; }

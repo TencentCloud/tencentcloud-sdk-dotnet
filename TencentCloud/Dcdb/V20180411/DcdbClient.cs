@@ -28,7 +28,7 @@ namespace TencentCloud.Dcdb.V20180411
 
        private const string endpoint = "dcdb.tencentcloudapi.com";
        private const string version = "2018-04-11";
-       private const string sdkVersion = "SDK_NET_3.0.1182";
+       private const string sdkVersion = "SDK_NET_3.0.1183";
 
         /// <summary>
         /// Client constructor.
@@ -113,6 +113,27 @@ namespace TencentCloud.Dcdb.V20180411
         public CancelDcnJobResponse CancelDcnJobSync(CancelDcnJobRequest req)
         {
             return InternalRequestAsync<CancelDcnJobResponse>(req, "CancelDcnJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 取消 Online DDL 任务
+        /// </summary>
+        /// <param name="req"><see cref="CancelOnlineDDLJobRequest"/></param>
+        /// <returns><see cref="CancelOnlineDDLJobResponse"/></returns>
+        public Task<CancelOnlineDDLJobResponse> CancelOnlineDDLJob(CancelOnlineDDLJobRequest req)
+        {
+            return InternalRequestAsync<CancelOnlineDDLJobResponse>(req, "CancelOnlineDDLJob");
+        }
+
+        /// <summary>
+        /// 取消 Online DDL 任务
+        /// </summary>
+        /// <param name="req"><see cref="CancelOnlineDDLJobRequest"/></param>
+        /// <returns><see cref="CancelOnlineDDLJobResponse"/></returns>
+        public CancelOnlineDDLJobResponse CancelOnlineDDLJobSync(CancelOnlineDDLJobRequest req)
+        {
+            return InternalRequestAsync<CancelOnlineDDLJobResponse>(req, "CancelOnlineDDLJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -896,6 +917,27 @@ namespace TencentCloud.Dcdb.V20180411
         public DescribeLogFileRetentionPeriodResponse DescribeLogFileRetentionPeriodSync(DescribeLogFileRetentionPeriodRequest req)
         {
             return InternalRequestAsync<DescribeLogFileRetentionPeriodResponse>(req, "DescribeLogFileRetentionPeriod")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询Online DDL 任务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOnlineDDLJobRequest"/></param>
+        /// <returns><see cref="DescribeOnlineDDLJobResponse"/></returns>
+        public Task<DescribeOnlineDDLJobResponse> DescribeOnlineDDLJob(DescribeOnlineDDLJobRequest req)
+        {
+            return InternalRequestAsync<DescribeOnlineDDLJobResponse>(req, "DescribeOnlineDDLJob");
+        }
+
+        /// <summary>
+        /// 查询Online DDL 任务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOnlineDDLJobRequest"/></param>
+        /// <returns><see cref="DescribeOnlineDDLJobResponse"/></returns>
+        public DescribeOnlineDDLJobResponse DescribeOnlineDDLJobSync(DescribeOnlineDDLJobRequest req)
+        {
+            return InternalRequestAsync<DescribeOnlineDDLJobResponse>(req, "DescribeOnlineDDLJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

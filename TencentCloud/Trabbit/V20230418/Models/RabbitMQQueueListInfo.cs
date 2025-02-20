@@ -32,112 +32,96 @@ namespace TencentCloud.Trabbit.V20230418.Models
 
         /// <summary>
         /// 备注说明
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
         /// 消费者信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConsumerDetail")]
         public RabbitMQQueueListConsumerDetailInfo ConsumerDetail{ get; set; }
 
         /// <summary>
         /// 队列类型，取值 "classic"，"quorum"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueueType")]
         public string QueueType{ get; set; }
 
         /// <summary>
         /// 消息堆积数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MessageHeapCount")]
         public long? MessageHeapCount{ get; set; }
 
         /// <summary>
         /// 消息生产速率，每秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MessageRateIn")]
         public float? MessageRateIn{ get; set; }
 
         /// <summary>
         /// 消息消费速率，每秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MessageRateOut")]
         public float? MessageRateOut{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 修改时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
         /// 队列是否持久化，true 为持久化，false 为非持久化
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Durable")]
         public bool? Durable{ get; set; }
 
         /// <summary>
         /// 队列是否为自动删除队列，true 为自动删除，false 为非自动删除
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoDelete")]
         public bool? AutoDelete{ get; set; }
 
         /// <summary>
         /// 队列所属实例 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// 队列所属虚拟主机名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VirtualHost")]
         public string VirtualHost{ get; set; }
 
         /// <summary>
         /// 队列所在主节点名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Node")]
         public string Node{ get; set; }
 
         /// <summary>
         /// 生效的策略名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Policy")]
         public string Policy{ get; set; }
 
         /// <summary>
         /// 扩展参数 key-value 对象
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Arguments")]
         public string Arguments{ get; set; }
 
         /// <summary>
         /// 是否独占队列
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Exclusive")]
         public bool? Exclusive{ get; set; }

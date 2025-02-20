@@ -26,28 +26,24 @@ namespace TencentCloud.Lcic.V20220817.Models
         
         /// <summary>
         /// 消息类型。0表示文本消息，1表示图片消息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MessageType")]
         public long? MessageType{ get; set; }
 
         /// <summary>
         /// 文本消息内容。message type为0时有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TextMessage")]
         public string TextMessage{ get; set; }
 
         /// <summary>
         /// 图片消息URL。 message type为1时有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageMessage")]
         public string ImageMessage{ get; set; }
 
         /// <summary>
         /// 自定义消息内容。message type为2时有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomMessage")]
         public CustomMsgContent CustomMessage{ get; set; }

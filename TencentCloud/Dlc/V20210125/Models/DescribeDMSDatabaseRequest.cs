@@ -37,10 +37,16 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string SchemaName{ get; set; }
 
         /// <summary>
-        /// 匹配规则
+        /// 匹配规则，只支持填*
         /// </summary>
         [JsonProperty("Pattern")]
         public string Pattern{ get; set; }
+
+        /// <summary>
+        /// 数据源连接名
+        /// </summary>
+        [JsonProperty("DatasourceConnectionName")]
+        public string DatasourceConnectionName{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
             this.SetParamSimple(map, prefix + "Pattern", this.Pattern);
+            this.SetParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
         }
     }
 }

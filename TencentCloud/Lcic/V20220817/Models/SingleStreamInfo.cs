@@ -26,63 +26,54 @@ namespace TencentCloud.Lcic.V20220817.Models
         
         /// <summary>
         /// 用户ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
         /// 开始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
         /// 结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StopTime")]
         public ulong? StopTime{ get; set; }
 
         /// <summary>
         /// 总时长
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Duration")]
         public ulong? Duration{ get; set; }
 
         /// <summary>
         /// 文件格式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileFormat")]
         public string FileFormat{ get; set; }
 
         /// <summary>
         /// 流url
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordUrl")]
         public string RecordUrl{ get; set; }
 
         /// <summary>
         /// 流大小
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordSize")]
         public ulong? RecordSize{ get; set; }
 
         /// <summary>
         /// 流ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VideoId")]
         public string VideoId{ get; set; }
 
         /// <summary>
         /// 流类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Role")]
         public string Role{ get; set; }

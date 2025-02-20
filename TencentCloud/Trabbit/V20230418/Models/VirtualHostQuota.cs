@@ -26,14 +26,12 @@ namespace TencentCloud.Trabbit.V20230418.Models
         
         /// <summary>
         /// 最大虚拟主机数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxVirtualHost")]
         public ulong? MaxVirtualHost{ get; set; }
 
         /// <summary>
         /// 已经使用的虚拟主机数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UsedVirtualHost")]
         public ulong? UsedVirtualHost{ get; set; }

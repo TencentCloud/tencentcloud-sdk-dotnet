@@ -54,6 +54,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("EnableImageCrop")]
         public bool? EnableImageCrop{ get; set; }
 
+        /// <summary>
+        /// 是否只返回检测框，默认false
+        /// </summary>
+        [JsonProperty("EnableOnlyDetectBorder")]
+        public bool? EnableOnlyDetectBorder{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "IsPdf", this.IsPdf);
             this.SetParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
             this.SetParamSimple(map, prefix + "EnableImageCrop", this.EnableImageCrop);
+            this.SetParamSimple(map, prefix + "EnableOnlyDetectBorder", this.EnableOnlyDetectBorder);
         }
     }
 }

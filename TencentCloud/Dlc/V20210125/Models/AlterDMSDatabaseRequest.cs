@@ -48,6 +48,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("Asset")]
         public Asset Asset{ get; set; }
 
+        /// <summary>
+        /// 数据源连接名
+        /// </summary>
+        [JsonProperty("DatasourceConnectionName")]
+        public string DatasourceConnectionName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
             this.SetParamSimple(map, prefix + "Location", this.Location);
             this.SetParamObj(map, prefix + "Asset.", this.Asset);
+            this.SetParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
         }
     }
 }

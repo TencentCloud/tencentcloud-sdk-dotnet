@@ -121,6 +121,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("Model")]
         public string Model{ get; set; }
 
+        /// <summary>
+        /// 二级菜单
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SecondModuleList")]
+        public string[] SecondModuleList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -141,6 +148,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "Params", this.Params);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Model", this.Model);
+            this.SetParamArraySimple(map, prefix + "SecondModuleList.", this.SecondModuleList);
         }
     }
 }

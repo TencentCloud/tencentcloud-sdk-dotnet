@@ -67,7 +67,7 @@ namespace TencentCloud.Faceid.V20180301.Models
 
         /// <summary>
         /// 意愿核身问答模式的配置列表。
-        /// - 当前仅支持一个问答。
+        /// - 问答模式支持1-10轮（不超过10轮）的意愿确认。
         /// </summary>
         [JsonProperty("IntentionQuestions")]
         public IntentionQuestion[] IntentionQuestions{ get; set; }
@@ -76,6 +76,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// 意愿核身（点头确认模式）使用的文案。
         /// - 若未使用意愿核身（点头确认模式），则该字段无需传入。
         /// - 默认为空，最长可接受150的字符串长度。
+        /// - 点头确认模式支持1-10轮（不超过10轮）的意愿确认。
         /// </summary>
         [JsonProperty("IntentionActions")]
         public IntentionActionConfig[] IntentionActions{ get; set; }

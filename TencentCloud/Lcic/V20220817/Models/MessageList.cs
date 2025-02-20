@@ -26,28 +26,24 @@ namespace TencentCloud.Lcic.V20220817.Models
         
         /// <summary>
         /// 消息时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Timestamp")]
         public long? Timestamp{ get; set; }
 
         /// <summary>
         /// 消息发送者
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FromAccount")]
         public string FromAccount{ get; set; }
 
         /// <summary>
         /// 消息序列号，当前课堂内唯一且单调递增
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Seq")]
         public long? Seq{ get; set; }
 
         /// <summary>
         /// 历史消息列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MessageBody")]
         public MessageItem[] MessageBody{ get; set; }

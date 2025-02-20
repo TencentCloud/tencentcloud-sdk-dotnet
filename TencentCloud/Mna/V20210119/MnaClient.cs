@@ -28,7 +28,7 @@ namespace TencentCloud.Mna.V20210119
 
        private const string endpoint = "mna.tencentcloudapi.com";
        private const string version = "2021-01-19";
-       private const string sdkVersion = "SDK_NET_3.0.1182";
+       private const string sdkVersion = "SDK_NET_3.0.1183";
 
         /// <summary>
         /// Client constructor.
@@ -314,6 +314,48 @@ namespace TencentCloud.Mna.V20210119
         public DescribeQosResponse DescribeQosSync(DescribeQosRequest req)
         {
             return InternalRequestAsync<DescribeQosResponse>(req, "DescribeQos")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 下载活跃设备数量统计
+        /// </summary>
+        /// <param name="req"><see cref="DownloadActiveDeviceCountRequest"/></param>
+        /// <returns><see cref="DownloadActiveDeviceCountResponse"/></returns>
+        public Task<DownloadActiveDeviceCountResponse> DownloadActiveDeviceCount(DownloadActiveDeviceCountRequest req)
+        {
+            return InternalRequestAsync<DownloadActiveDeviceCountResponse>(req, "DownloadActiveDeviceCount");
+        }
+
+        /// <summary>
+        /// 下载活跃设备数量统计
+        /// </summary>
+        /// <param name="req"><see cref="DownloadActiveDeviceCountRequest"/></param>
+        /// <returns><see cref="DownloadActiveDeviceCountResponse"/></returns>
+        public DownloadActiveDeviceCountResponse DownloadActiveDeviceCountSync(DownloadActiveDeviceCountRequest req)
+        {
+            return InternalRequestAsync<DownloadActiveDeviceCountResponse>(req, "DownloadActiveDeviceCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 活跃设备数量统计
+        /// </summary>
+        /// <param name="req"><see cref="GetActiveDeviceCountRequest"/></param>
+        /// <returns><see cref="GetActiveDeviceCountResponse"/></returns>
+        public Task<GetActiveDeviceCountResponse> GetActiveDeviceCount(GetActiveDeviceCountRequest req)
+        {
+            return InternalRequestAsync<GetActiveDeviceCountResponse>(req, "GetActiveDeviceCount");
+        }
+
+        /// <summary>
+        /// 活跃设备数量统计
+        /// </summary>
+        /// <param name="req"><see cref="GetActiveDeviceCountRequest"/></param>
+        /// <returns><see cref="GetActiveDeviceCountResponse"/></returns>
+        public GetActiveDeviceCountResponse GetActiveDeviceCountSync(GetActiveDeviceCountRequest req)
+        {
+            return InternalRequestAsync<GetActiveDeviceCountResponse>(req, "GetActiveDeviceCount")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

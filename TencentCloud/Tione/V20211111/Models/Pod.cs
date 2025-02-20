@@ -71,6 +71,7 @@ namespace TencentCloud.Tione.V20211111.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Containers")]
+        [System.Obsolete]
         public Container Containers{ get; set; }
 
         /// <summary>
@@ -87,6 +88,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("CrossTenantENIInfo")]
         public CrossTenantENIInfo CrossTenantENIInfo{ get; set; }
 
+        /// <summary>
+        /// 实例的状态信息
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +109,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamObj(map, prefix + "Containers.", this.Containers);
             this.SetParamArrayObj(map, prefix + "ContainerInfos.", this.ContainerInfos);
             this.SetParamObj(map, prefix + "CrossTenantENIInfo.", this.CrossTenantENIInfo);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

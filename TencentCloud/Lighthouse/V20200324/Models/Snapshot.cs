@@ -72,7 +72,6 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// <summary>
         /// 快照的最新操作，只有创建、回滚快照时记录。
         /// 取值如 CreateInstanceSnapshot，RollbackInstanceSnapshot。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LatestOperation")]
         public string LatestOperation{ get; set; }
@@ -83,21 +82,18 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// <li>SUCCESS：表示操作成功</li>
         /// <li>OPERATING：表示操作执行中</li>
         /// <li>FAILED：表示操作失败</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LatestOperationState")]
         public string LatestOperationState{ get; set; }
 
         /// <summary>
         /// 快照最新操作的唯一请求 ID，只有创建、回滚快照时记录。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LatestOperationRequestId")]
         public string LatestOperationRequestId{ get; set; }
 
         /// <summary>
         /// 快照的创建时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }

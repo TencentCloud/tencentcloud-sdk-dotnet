@@ -26,7 +26,6 @@ namespace TencentCloud.Trabbit.V20230418.Models
         
         /// <summary>
         /// 队列名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }

@@ -32,28 +32,24 @@ namespace TencentCloud.Lcic.V20220817.Models
 
         /// <summary>
         /// logo地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogoUrl")]
         public string LogoUrl{ get; set; }
 
         /// <summary>
         /// 主页地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HomeUrl")]
         public string HomeUrl{ get; set; }
 
         /// <summary>
         /// 自定义的js
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JSUrl")]
         public string JSUrl{ get; set; }
 
         /// <summary>
         /// 自定义的css
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CSSUrl")]
         public string CSSUrl{ get; set; }

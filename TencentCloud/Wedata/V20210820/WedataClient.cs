@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1182";
+       private const string sdkVersion = "SDK_NET_3.0.1183";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Wedata.V20210820
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 添加项目用户角色
+        /// </summary>
+        /// <param name="req"><see cref="AddProjectUserRoleRequest"/></param>
+        /// <returns><see cref="AddProjectUserRoleResponse"/></returns>
+        public Task<AddProjectUserRoleResponse> AddProjectUserRole(AddProjectUserRoleRequest req)
+        {
+            return InternalRequestAsync<AddProjectUserRoleResponse>(req, "AddProjectUserRole");
+        }
+
+        /// <summary>
+        /// 添加项目用户角色
+        /// </summary>
+        /// <param name="req"><see cref="AddProjectUserRoleRequest"/></param>
+        /// <returns><see cref="AddProjectUserRoleResponse"/></returns>
+        public AddProjectUserRoleResponse AddProjectUserRoleSync(AddProjectUserRoleRequest req)
+        {
+            return InternalRequestAsync<AddProjectUserRoleResponse>(req, "AddProjectUserRole")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

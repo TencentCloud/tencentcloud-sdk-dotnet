@@ -43,7 +43,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 数据目录
+        /// catalog类型
         /// </summary>
         [JsonProperty("Catalog")]
         public string Catalog{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Keyword{ get; set; }
 
         /// <summary>
-        /// 查询模式
+        /// 查询模式，只支持填*
         /// </summary>
         [JsonProperty("Pattern")]
         public string Pattern{ get; set; }
@@ -102,6 +102,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("Asc")]
         public bool? Asc{ get; set; }
 
+        /// <summary>
+        /// 数据源连接名
+        /// </summary>
+        [JsonProperty("DatasourceConnectionName")]
+        public string DatasourceConnectionName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Sort", this.Sort);
             this.SetParamSimple(map, prefix + "Asc", this.Asc);
+            this.SetParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
         }
     }
 }

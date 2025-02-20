@@ -80,7 +80,6 @@ namespace TencentCloud.Trabbit.V20230418.Models
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
@@ -93,21 +92,18 @@ namespace TencentCloud.Trabbit.V20230418.Models
 
         /// <summary>
         /// 异常信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExceptionInformation")]
         public string ExceptionInformation{ get; set; }
 
         /// <summary>
         /// 公网接入点
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicAccessEndpoint")]
         public string PublicAccessEndpoint{ get; set; }
 
         /// <summary>
         /// 私有网络接入点
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vpcs")]
         public RabbitMQServerlessEndpoint[] Vpcs{ get; set; }
@@ -142,6 +138,12 @@ namespace TencentCloud.Trabbit.V20230418.Models
         [JsonProperty("MaxStorage")]
         public long? MaxStorage{ get; set; }
 
+        /// <summary>
+        /// 隔离时间
+        /// </summary>
+        [JsonProperty("IsolatedTime")]
+        public ulong? IsolatedTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -167,6 +169,7 @@ namespace TencentCloud.Trabbit.V20230418.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
             this.SetParamSimple(map, prefix + "MaxStorage", this.MaxStorage);
+            this.SetParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
         }
     }
 }

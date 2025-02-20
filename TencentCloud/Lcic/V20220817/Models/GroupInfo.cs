@@ -26,21 +26,18 @@ namespace TencentCloud.Lcic.V20220817.Models
         
         /// <summary>
         /// 群组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
         /// 群组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
         /// 群组主讲人ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TeacherId")]
         public string TeacherId{ get; set; }
@@ -49,7 +46,6 @@ namespace TencentCloud.Lcic.V20220817.Models
         /// 群组类型 
         /// 0-基础群组 
         /// 1-组合群组，若为1时会返回子群组ID列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupType")]
         public ulong? GroupType{ get; set; }

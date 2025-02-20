@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F6F05F51-C61F-3421-BC85-59D6329C476E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1182</VersionPrefix>
+    <VersionPrefix>3.0.1183</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,21 +48,10 @@
 
   <ItemGroup>
     <Compile Include="V20200210\TafClient.cs" />
-    <Compile Include="V20200210\Models\Device.cs" />
-    <Compile Include="V20200210\Models\InputBusinessEncryptData.cs" />
-    <Compile Include="V20200210\Models\InputRecognizeTargetAudience.cs" />
     <Compile Include="V20200210\Models\ManagePortraitRiskInput.cs" />
     <Compile Include="V20200210\Models\ManagePortraitRiskOutput.cs" />
     <Compile Include="V20200210\Models\ManagePortraitRiskRequest.cs" />
     <Compile Include="V20200210\Models\ManagePortraitRiskResponse.cs" />
     <Compile Include="V20200210\Models\ManagePortraitRiskValueOutput.cs" />
-    <Compile Include="V20200210\Models\OutputRecognizeTargetAudience.cs" />
-    <Compile Include="V20200210\Models\OutputRecognizeTargetAudienceValue.cs" />
-    <Compile Include="V20200210\Models\RecognizeCustomizedAudienceRequest.cs" />
-    <Compile Include="V20200210\Models\RecognizeCustomizedAudienceResponse.cs" />
-    <Compile Include="V20200210\Models\RecognizePreciseTargetAudienceRequest.cs" />
-    <Compile Include="V20200210\Models\RecognizePreciseTargetAudienceResponse.cs" />
-    <Compile Include="V20200210\Models\RecognizeTargetAudienceRequest.cs" />
-    <Compile Include="V20200210\Models\RecognizeTargetAudienceResponse.cs" />
   </ItemGroup>
 </Project>

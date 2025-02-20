@@ -28,7 +28,7 @@ namespace TencentCloud.Billing.V20180709
 
        private const string endpoint = "billing.tencentcloudapi.com";
        private const string version = "2018-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1182";
+       private const string sdkVersion = "SDK_NET_3.0.1183";
 
         /// <summary>
         /// Client constructor.
@@ -71,31 +71,6 @@ namespace TencentCloud.Billing.V20180709
         public CreateAllocationTagResponse CreateAllocationTagSync(CreateAllocationTagRequest req)
         {
             return InternalRequestAsync<CreateAllocationTagResponse>(req, "CreateAllocationTag")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 接口迁移到其他业务
-        /// 
-        /// 创建节省计划订单，创建订单完成需调用PayDeals接口完成订单支付
-        /// </summary>
-        /// <param name="req"><see cref="CreateSavingPlanOrderRequest"/></param>
-        /// <returns><see cref="CreateSavingPlanOrderResponse"/></returns>
-        public Task<CreateSavingPlanOrderResponse> CreateSavingPlanOrder(CreateSavingPlanOrderRequest req)
-        {
-            return InternalRequestAsync<CreateSavingPlanOrderResponse>(req, "CreateSavingPlanOrder");
-        }
-
-        /// <summary>
-        /// 接口迁移到其他业务
-        /// 
-        /// 创建节省计划订单，创建订单完成需调用PayDeals接口完成订单支付
-        /// </summary>
-        /// <param name="req"><see cref="CreateSavingPlanOrderRequest"/></param>
-        /// <returns><see cref="CreateSavingPlanOrderResponse"/></returns>
-        public CreateSavingPlanOrderResponse CreateSavingPlanOrderSync(CreateSavingPlanOrderRequest req)
-        {
-            return InternalRequestAsync<CreateSavingPlanOrderResponse>(req, "CreateSavingPlanOrder")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -891,31 +866,6 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// 接口迁移到其他业务
-        /// 
-        /// 查用当前用户明细节省计划总览查询时段内的使用情况
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSavingPlanOverviewRequest"/></param>
-        /// <returns><see cref="DescribeSavingPlanOverviewResponse"/></returns>
-        public Task<DescribeSavingPlanOverviewResponse> DescribeSavingPlanOverview(DescribeSavingPlanOverviewRequest req)
-        {
-            return InternalRequestAsync<DescribeSavingPlanOverviewResponse>(req, "DescribeSavingPlanOverview");
-        }
-
-        /// <summary>
-        /// 接口迁移到其他业务
-        /// 
-        /// 查用当前用户明细节省计划总览查询时段内的使用情况
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSavingPlanOverviewRequest"/></param>
-        /// <returns><see cref="DescribeSavingPlanOverviewResponse"/></returns>
-        public DescribeSavingPlanOverviewResponse DescribeSavingPlanOverviewSync(DescribeSavingPlanOverviewRequest req)
-        {
-            return InternalRequestAsync<DescribeSavingPlanOverviewResponse>(req, "DescribeSavingPlanOverview")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查询节省计划详情
         /// </summary>
         /// <param name="req"><see cref="DescribeSavingPlanResourceInfoRequest"/></param>
@@ -933,31 +883,6 @@ namespace TencentCloud.Billing.V20180709
         public DescribeSavingPlanResourceInfoResponse DescribeSavingPlanResourceInfoSync(DescribeSavingPlanResourceInfoRequest req)
         {
             return InternalRequestAsync<DescribeSavingPlanResourceInfoResponse>(req, "DescribeSavingPlanResourceInfo")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 接口迁移到其他业务
-        /// 
-        /// 查用当前用户明细节省计划查询时段内的使用情况
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSavingPlanUsageRequest"/></param>
-        /// <returns><see cref="DescribeSavingPlanUsageResponse"/></returns>
-        public Task<DescribeSavingPlanUsageResponse> DescribeSavingPlanUsage(DescribeSavingPlanUsageRequest req)
-        {
-            return InternalRequestAsync<DescribeSavingPlanUsageResponse>(req, "DescribeSavingPlanUsage");
-        }
-
-        /// <summary>
-        /// 接口迁移到其他业务
-        /// 
-        /// 查用当前用户明细节省计划查询时段内的使用情况
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSavingPlanUsageRequest"/></param>
-        /// <returns><see cref="DescribeSavingPlanUsageResponse"/></returns>
-        public DescribeSavingPlanUsageResponse DescribeSavingPlanUsageSync(DescribeSavingPlanUsageRequest req)
-        {
-            return InternalRequestAsync<DescribeSavingPlanUsageResponse>(req, "DescribeSavingPlanUsage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
