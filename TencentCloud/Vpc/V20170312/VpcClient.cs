@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1183";
+       private const string sdkVersion = "SDK_NET_3.0.1184";
 
         /// <summary>
         /// Client constructor.
@@ -3353,6 +3353,27 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 查询指定EIP的带宽上下限范围。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAddressBandwidthRangeRequest"/></param>
+        /// <returns><see cref="DescribeAddressBandwidthRangeResponse"/></returns>
+        public Task<DescribeAddressBandwidthRangeResponse> DescribeAddressBandwidthRange(DescribeAddressBandwidthRangeRequest req)
+        {
+            return InternalRequestAsync<DescribeAddressBandwidthRangeResponse>(req, "DescribeAddressBandwidthRange");
+        }
+
+        /// <summary>
+        /// 查询指定EIP的带宽上下限范围。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAddressBandwidthRangeRequest"/></param>
+        /// <returns><see cref="DescribeAddressBandwidthRangeResponse"/></returns>
+        public DescribeAddressBandwidthRangeResponse DescribeAddressBandwidthRangeSync(DescribeAddressBandwidthRangeRequest req)
+        {
+            return InternalRequestAsync<DescribeAddressBandwidthRangeResponse>(req, "DescribeAddressBandwidthRange")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口 (DescribeAddressQuota) 用于查询您账户的[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）在当前地域的配额信息。配额详情可参见 [EIP 产品简介](https://cloud.tencent.com/document/product/213/5733)。
         /// </summary>
         /// <param name="req"><see cref="DescribeAddressQuotaRequest"/></param>
@@ -3456,6 +3477,27 @@ namespace TencentCloud.Vpc.V20170312
         public DescribeAssistantCidrResponse DescribeAssistantCidrSync(DescribeAssistantCidrRequest req)
         {
             return InternalRequestAsync<DescribeAssistantCidrResponse>(req, "DescribeAssistantCidr")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询指定带宽包的带宽上下限范围
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBandwidthPackageBandwidthRangeRequest"/></param>
+        /// <returns><see cref="DescribeBandwidthPackageBandwidthRangeResponse"/></returns>
+        public Task<DescribeBandwidthPackageBandwidthRangeResponse> DescribeBandwidthPackageBandwidthRange(DescribeBandwidthPackageBandwidthRangeRequest req)
+        {
+            return InternalRequestAsync<DescribeBandwidthPackageBandwidthRangeResponse>(req, "DescribeBandwidthPackageBandwidthRange");
+        }
+
+        /// <summary>
+        /// 查询指定带宽包的带宽上下限范围
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBandwidthPackageBandwidthRangeRequest"/></param>
+        /// <returns><see cref="DescribeBandwidthPackageBandwidthRangeResponse"/></returns>
+        public DescribeBandwidthPackageBandwidthRangeResponse DescribeBandwidthPackageBandwidthRangeSync(DescribeBandwidthPackageBandwidthRangeRequest req)
+        {
+            return InternalRequestAsync<DescribeBandwidthPackageBandwidthRangeResponse>(req, "DescribeBandwidthPackageBandwidthRange")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

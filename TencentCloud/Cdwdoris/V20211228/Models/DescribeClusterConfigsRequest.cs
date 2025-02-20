@@ -43,7 +43,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string FileName{ get; set; }
 
         /// <summary>
-        /// 0集群维度 1节点维度
+        /// 0集群维度 1节点维度 2启动脚本 3计算组维度
         /// </summary>
         [JsonProperty("ClusterConfigType")]
         public long? ClusterConfigType{ get; set; }
@@ -53,6 +53,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// </summary>
         [JsonProperty("IPAddress")]
         public string IPAddress{ get; set; }
+
+        /// <summary>
+        /// 计算组id
+        /// </summary>
+        [JsonProperty("ComputeGroupId")]
+        public string ComputeGroupId{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
             this.SetParamSimple(map, prefix + "ClusterConfigType", this.ClusterConfigType);
             this.SetParamSimple(map, prefix + "IPAddress", this.IPAddress);
+            this.SetParamSimple(map, prefix + "ComputeGroupId", this.ComputeGroupId);
         }
     }
 }

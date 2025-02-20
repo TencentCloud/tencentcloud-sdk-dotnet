@@ -118,6 +118,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Keys")]
         public string[] Keys{ get; set; }
 
+        /// <summary>
+        /// json解析模式，开启首层数据解析
+        /// </summary>
+        [JsonProperty("ParseArray")]
+        public bool? ParseArray{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,6 +144,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
             this.SetParamArraySimple(map, prefix + "Metadata.", this.Metadata);
             this.SetParamArraySimple(map, prefix + "Keys.", this.Keys);
+            this.SetParamSimple(map, prefix + "ParseArray", this.ParseArray);
         }
     }
 }

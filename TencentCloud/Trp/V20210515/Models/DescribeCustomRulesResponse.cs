@@ -26,14 +26,12 @@ namespace TencentCloud.Trp.V20210515.Models
         
         /// <summary>
         /// 码规则列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomRules")]
         public CustomRule[] CustomRules{ get; set; }
 
         /// <summary>
         /// 总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

@@ -50,6 +50,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// 15：非税发票
         /// 16：全电发票
         /// 17：医疗发票
+        /// 18：完税凭证
+        /// 19：海关缴款书
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }

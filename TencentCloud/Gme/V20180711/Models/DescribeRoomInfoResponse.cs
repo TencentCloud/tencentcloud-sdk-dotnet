@@ -26,14 +26,12 @@ namespace TencentCloud.Gme.V20180711.Models
         
         /// <summary>
         /// 操作结果, 0成功, 非0失败
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Result")]
         public ulong? Result{ get; set; }
 
         /// <summary>
         /// 房间用户信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoomUsers")]
         public RoomUser[] RoomUsers{ get; set; }

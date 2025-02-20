@@ -26,14 +26,12 @@ namespace TencentCloud.Trp.V20210515.Models
         
         /// <summary>
         /// 子企业额度使用情况
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CorpQuotas")]
         public CorpQuota[] CorpQuotas{ get; set; }
 
         /// <summary>
         /// 记录总数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }

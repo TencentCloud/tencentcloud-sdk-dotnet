@@ -26,49 +26,42 @@ namespace TencentCloud.Trp.V20210515.Models
         
         /// <summary>
         /// 二维码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
         /// OpenID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }
 
         /// <summary>
         /// 扫码时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScanTime")]
         public string ScanTime{ get; set; }
 
         /// <summary>
         /// IP 地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
         /// 国家
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Country")]
         public string Country{ get; set; }
 
         /// <summary>
         /// 省份
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Province")]
         public string Province{ get; set; }
 
         /// <summary>
         /// 城市
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("City")]
         public string City{ get; set; }

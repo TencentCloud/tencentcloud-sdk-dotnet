@@ -32,105 +32,90 @@ namespace TencentCloud.Trp.V20210515.Models
 
         /// <summary>
         /// 微信openid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Openid")]
         public string Openid{ get; set; }
 
         /// <summary>
         /// 微信昵称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Nickname")]
         public string Nickname{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }
 
         /// <summary>
         /// 企业ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CorpId")]
         public long? CorpId{ get; set; }
 
         /// <summary>
         /// 商户ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MerchantId")]
         public string MerchantId{ get; set; }
 
         /// <summary>
         /// 商品ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
 
         /// <summary>
         /// ip地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
         /// 国家
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Country")]
         public string Country{ get; set; }
 
         /// <summary>
         /// 省份
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Province")]
         public string Province{ get; set; }
 
         /// <summary>
         /// 城市
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("City")]
         public string City{ get; set; }
 
         /// <summary>
         /// 县/区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("District")]
         public string District{ get; set; }
 
         /// <summary>
         /// 微信 unionid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Unionid")]
         public string Unionid{ get; set; }
 
         /// <summary>
         /// 首次扫码 0:否, 1:是
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("First")]
         public long? First{ get; set; }
 
         /// <summary>
         /// 批次ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BatchId")]
         public string BatchId{ get; set; }
@@ -143,21 +128,18 @@ namespace TencentCloud.Trp.V20210515.Models
 
         /// <summary>
         /// 商户名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MerchantName")]
         public string MerchantName{ get; set; }
 
         /// <summary>
         /// 产品名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
         /// 产品Logo
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductLogo")]
         public string ProductLogo{ get; set; }

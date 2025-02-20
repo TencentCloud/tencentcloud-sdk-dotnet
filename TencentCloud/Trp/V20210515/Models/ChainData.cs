@@ -26,21 +26,18 @@ namespace TencentCloud.Trp.V20210515.Models
         
         /// <summary>
         /// 区块hash
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BlockHash")]
         public string BlockHash{ get; set; }
 
         /// <summary>
         /// 区块高度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BlockHeight")]
         public string BlockHeight{ get; set; }
 
         /// <summary>
         /// 区块时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BlockTime")]
         public string BlockTime{ get; set; }

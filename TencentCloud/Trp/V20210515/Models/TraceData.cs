@@ -44,7 +44,6 @@ namespace TencentCloud.Trp.V20210515.Models
 
         /// <summary>
         /// 码值，跟码类型一一对应
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }
@@ -69,42 +68,36 @@ namespace TencentCloud.Trp.V20210515.Models
 
         /// <summary>
         /// 溯源时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TraceTime")]
         public string TraceTime{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 上链状态 0: 未上链 1: 上链中 2: 已上链 -1: 异常
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChainStatus")]
         public ulong? ChainStatus{ get; set; }
 
         /// <summary>
         /// 上链时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChainTime")]
         public string ChainTime{ get; set; }
 
         /// <summary>
         /// 上链数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChainData")]
         public ChainData ChainData{ get; set; }
 
         /// <summary>
         /// 溯源阶段配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PhaseData")]
         public PhaseData PhaseData{ get; set; }

@@ -26,42 +26,36 @@ namespace TencentCloud.Trp.V20210515.Models
         
         /// <summary>
         /// 启用头
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HeadEnabled")]
         public bool? HeadEnabled{ get; set; }
 
         /// <summary>
         /// 标题
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HeadTitle")]
         public string HeadTitle{ get; set; }
 
         /// <summary>
         /// 标识符
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
         /// 小程序AppId
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
         /// <summary>
         /// 小程序AppPath
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppPath")]
         public string AppPath{ get; set; }
 
         /// <summary>
         /// 小程序名称AppName
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }

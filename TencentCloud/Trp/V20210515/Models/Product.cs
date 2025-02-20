@@ -56,21 +56,18 @@ namespace TencentCloud.Trp.V20210515.Models
 
         /// <summary>
         /// 商品规格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Specification")]
         public string Specification{ get; set; }
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
         /// 商品图片
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Logo")]
         public string[] Logo{ get; set; }
@@ -89,7 +86,6 @@ namespace TencentCloud.Trp.V20210515.Models
 
         /// <summary>
         /// 预留字段
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ext")]
         public Ext Ext{ get; set; }
@@ -102,7 +98,6 @@ namespace TencentCloud.Trp.V20210515.Models
 
         /// <summary>
         /// 认证状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertState")]
         public long? CertState{ get; set; }

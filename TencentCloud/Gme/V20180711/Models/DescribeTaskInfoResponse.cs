@@ -26,21 +26,18 @@ namespace TencentCloud.Gme.V20180711.Models
         
         /// <summary>
         /// 进行中的任务taskid（StartRecord接口返回）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }
 
         /// <summary>
         /// 录制类型：1代表单流 2代表混流 3代表单流和混流。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordMode")]
         public ulong? RecordMode{ get; set; }
 
         /// <summary>
         /// 指定订阅流白名单或者黑名单。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubscribeRecordUserIds")]
         public SubscribeRecordUserIds SubscribeRecordUserIds{ get; set; }

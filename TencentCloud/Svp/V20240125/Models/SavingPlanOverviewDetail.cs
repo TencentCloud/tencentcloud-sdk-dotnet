@@ -68,14 +68,12 @@ namespace TencentCloud.Svp.V20240125.Models
 
         /// <summary>
         /// 支付类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayType")]
         public ulong? PayType{ get; set; }
 
         /// <summary>
         /// 购买时间 yyyy-mm-dd HH:mm:ss格式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BuyTime")]
         public string BuyTime{ get; set; }

@@ -26,42 +26,36 @@ namespace TencentCloud.Trp.V20210515.Models
         
         /// <summary>
         /// 企业ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CorpId")]
         public ulong? CorpId{ get; set; }
 
         /// <summary>
         /// 商户配额
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FactoryCnt")]
         public long? FactoryCnt{ get; set; }
 
         /// <summary>
         /// 商品数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ItemCnt")]
         public long? ItemCnt{ get; set; }
 
         /// <summary>
         /// 溯源码量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrackCnt")]
         public long? TrackCnt{ get; set; }
 
         /// <summary>
         /// 营销码额度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SaleCnt")]
         public long? SaleCnt{ get; set; }
 
         /// <summary>
         /// 区块链上链次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChainCnt")]
         public long? ChainCnt{ get; set; }
@@ -76,7 +70,6 @@ namespace TencentCloud.Trp.V20210515.Models
 
         /// <summary>
         /// 时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

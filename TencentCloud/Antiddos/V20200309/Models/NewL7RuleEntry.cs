@@ -139,10 +139,18 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public ulong? CCEnable{ get; set; }
 
         /// <summary>
-        /// HTTPS协议的CC防护阈值
+        /// HTTPS协议的CC防护阈值（已废弃）
         /// </summary>
         [JsonProperty("CCThreshold")]
         public ulong? CCThreshold{ get; set; }
+
+        /// <summary>
+        /// HTTPS协议的CC防护阈值 -1：默认防御阈值
+        /// 0: 关闭
+        /// 大于0：自定义防护阈值
+        /// </summary>
+        [JsonProperty("CCThresholdNew")]
+        public ulong? CCThresholdNew{ get; set; }
 
         /// <summary>
         /// HTTPS协议的CC防护等级
@@ -214,6 +222,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "CCStatus", this.CCStatus);
             this.SetParamSimple(map, prefix + "CCEnable", this.CCEnable);
             this.SetParamSimple(map, prefix + "CCThreshold", this.CCThreshold);
+            this.SetParamSimple(map, prefix + "CCThresholdNew", this.CCThresholdNew);
             this.SetParamSimple(map, prefix + "CCLevel", this.CCLevel);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "HttpsToHttpEnable", this.HttpsToHttpEnable);

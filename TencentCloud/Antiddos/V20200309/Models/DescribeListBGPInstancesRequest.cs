@@ -139,7 +139,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public ulong? FilterBasicPlusFlag{ get; set; }
 
         /// <summary>
-        /// 是否商业模式优化-普惠版 0: 包含商业模式优化-普惠版 1: 只查询商业模式优化-普惠版 
+        /// 是否标准版2.0 0: 包含标准版2.0 0 1: 只查询标准版2.0 0 2: 不查标准版2.0
         /// </summary>
         [JsonProperty("FilterPlanCntFlag")]
         public ulong? FilterPlanCntFlag{ get; set; }

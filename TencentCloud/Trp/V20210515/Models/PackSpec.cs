@@ -44,28 +44,24 @@ namespace TencentCloud.Trp.V20210515.Models
 
         /// <summary>
         /// 码规则ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomId")]
         public string CustomId{ get; set; }
 
         /// <summary>
         /// 码段配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CodeParts")]
         public CodePart[] CodeParts{ get; set; }
 
         /// <summary>
         /// 包装单位
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }
 
         /// <summary>
         /// 场景值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SceneCode")]
         public long? SceneCode{ get; set; }

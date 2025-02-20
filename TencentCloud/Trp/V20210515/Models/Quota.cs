@@ -26,112 +26,96 @@ namespace TencentCloud.Trp.V20210515.Models
         
         /// <summary>
         /// 服务开始时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// 服务结束时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
         /// 配额ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QuotaId")]
         public ulong? QuotaId{ get; set; }
 
         /// <summary>
         /// 企业ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CorpId")]
         public ulong? CorpId{ get; set; }
 
         /// <summary>
         /// 开通服务
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Services")]
         public string[] Services{ get; set; }
 
         /// <summary>
         /// 商户配额
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FactoryQuota")]
         public long? FactoryQuota{ get; set; }
 
         /// <summary>
         /// 商品配额
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ItemQuota")]
         public long? ItemQuota{ get; set; }
 
         /// <summary>
         /// 溯源码配额
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrackQuota")]
         public long? TrackQuota{ get; set; }
 
         /// <summary>
         /// 销售码配额
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SaleQuota")]
         public long? SaleQuota{ get; set; }
 
         /// <summary>
         /// 上链配额
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChainQuota")]
         public long? ChainQuota{ get; set; }
 
         /// <summary>
         /// 风控配额
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskQuota")]
         public long? RiskQuota{ get; set; }
 
         /// <summary>
         /// AI文字数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AigcTextQuota")]
         public long? AigcTextQuota{ get; set; }
 
         /// <summary>
         /// AI图片数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AigcImageQuota")]
         public long? AigcImageQuota{ get; set; }
 
         /// <summary>
         /// 溯源类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrackType")]
         public long? TrackType{ get; set; }
 
         /// <summary>
         /// 开通版本 lite:轻量版, basic:基础版, standard:标准版
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
         /// 是否开启企业认证
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductCertify")]
         public ulong? ProductCertify{ get; set; }

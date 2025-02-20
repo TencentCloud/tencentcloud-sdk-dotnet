@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsDemo", "Windows
 EndProject
 Project("{C0C5CE89-418D-399D-AED0-9B87D308C5C7}") = "TencentCloudCommon", "TencentCloud\Common\TencentCloudCommon.csproj", "{C0C5CE89-418D-399D-AED0-9B87D308C5C7}"
 EndProject
-Project("{0FA5DA3C-0849-3409-A6FE-3F1F2840284F}") = "TencentCloudAa", "TencentCloud\Aa\TencentCloudAa.csproj", "{0FA5DA3C-0849-3409-A6FE-3F1F2840284F}"
-EndProject
 Project("{DBE7C036-D086-3EE9-A0E3-11ECB0643E24}") = "TencentCloudAai", "TencentCloud\Aai\TencentCloudAai.csproj", "{DBE7C036-D086-3EE9-A0E3-11ECB0643E24}"
 EndProject
 Project("{A8243DD9-A4ED-3441-B3B6-E46090DCB32F}") = "TencentCloudAca", "TencentCloud\Aca\TencentCloudAca.csproj", "{A8243DD9-A4ED-3441-B3B6-E46090DCB32F}"
@@ -559,10 +557,6 @@ Global
 		{C0C5CE89-418D-399D-AED0-9B87D308C5C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0C5CE89-418D-399D-AED0-9B87D308C5C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0C5CE89-418D-399D-AED0-9B87D308C5C7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0FA5DA3C-0849-3409-A6FE-3F1F2840284F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0FA5DA3C-0849-3409-A6FE-3F1F2840284F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0FA5DA3C-0849-3409-A6FE-3F1F2840284F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0FA5DA3C-0849-3409-A6FE-3F1F2840284F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DBE7C036-D086-3EE9-A0E3-11ECB0643E24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DBE7C036-D086-3EE9-A0E3-11ECB0643E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBE7C036-D086-3EE9-A0E3-11ECB0643E24}.Release|Any CPU.ActiveCfg = Release|Any CPU

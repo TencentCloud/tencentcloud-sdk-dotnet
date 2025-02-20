@@ -31,7 +31,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? DiskSize{ get; set; }
 
         /// <summary>
-        /// 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
+        /// 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。该字段仅供单块云硬盘扩容时传入。
         /// </summary>
         [JsonProperty("DiskId")]
         public string DiskId{ get; set; }

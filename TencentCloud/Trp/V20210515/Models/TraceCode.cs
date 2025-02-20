@@ -104,21 +104,18 @@ namespace TencentCloud.Trp.V20210515.Models
 
         /// <summary>
         /// 码层级详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackSpec")]
         public PackSpec[] PackSpec{ get; set; }
 
         /// <summary>
         /// 场景码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SceneCode")]
         public ulong? SceneCode{ get; set; }
 
         /// <summary>
         /// 流水码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SerialCode")]
         public ulong? SerialCode{ get; set; }

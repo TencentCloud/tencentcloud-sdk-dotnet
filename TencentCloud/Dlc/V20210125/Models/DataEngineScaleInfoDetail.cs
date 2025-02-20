@@ -26,21 +26,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// 统计开始时间，格式为：yyyy-MM-dd HH:mm:ss
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// 统计结束时间，格式为：yyyy-MM-dd HH:mm:ss
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
         /// 当前统计时间段，引擎规格
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CU")]
         public long? CU{ get; set; }

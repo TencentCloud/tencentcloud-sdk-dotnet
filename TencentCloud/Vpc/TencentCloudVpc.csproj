@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1183</VersionPrefix>
+    <VersionPrefix>3.0.1184</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -114,6 +114,7 @@
     <Compile Include="V20170312\Models\BackupPolicy.cs" />
     <Compile Include="V20170312\Models\BandwidthPackage.cs" />
     <Compile Include="V20170312\Models\BandwidthPackageBillBandwidth.cs" />
+    <Compile Include="V20170312\Models\BandwidthRange.cs" />
     <Compile Include="V20170312\Models\BatchModifySnapshotPolicy.cs" />
     <Compile Include="V20170312\Models\BgpConfig.cs" />
     <Compile Include="V20170312\Models\BgpConfigAndAsn.cs" />
@@ -377,6 +378,8 @@
     <Compile Include="V20170312\Models\DeleteVpnGatewaySslServerResponse.cs" />
     <Compile Include="V20170312\Models\DescribeAccountAttributesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeAccountAttributesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeAddressBandwidthRangeRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeAddressBandwidthRangeResponse.cs" />
     <Compile Include="V20170312\Models\DescribeAddressQuotaRequest.cs" />
     <Compile Include="V20170312\Models\DescribeAddressQuotaResponse.cs" />
     <Compile Include="V20170312\Models\DescribeAddressTemplateGroupsRequest.cs" />
@@ -387,6 +390,8 @@
     <Compile Include="V20170312\Models\DescribeAddressesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeAssistantCidrRequest.cs" />
     <Compile Include="V20170312\Models\DescribeAssistantCidrResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeBandwidthPackageBandwidthRangeRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeBandwidthPackageBandwidthRangeResponse.cs" />
     <Compile Include="V20170312\Models\DescribeBandwidthPackageBillUsageRequest.cs" />
     <Compile Include="V20170312\Models\DescribeBandwidthPackageBillUsageResponse.cs" />
     <Compile Include="V20170312\Models\DescribeBandwidthPackageQuotaRequest.cs" />

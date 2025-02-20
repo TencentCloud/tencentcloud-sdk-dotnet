@@ -32,21 +32,18 @@ namespace TencentCloud.Trp.V20210515.Models
 
         /// <summary>
         /// 码规则名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 企业ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CorpId")]
         public ulong? CorpId{ get; set; }
 
         /// <summary>
         /// 商户ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MerchantId")]
         public string MerchantId{ get; set; }

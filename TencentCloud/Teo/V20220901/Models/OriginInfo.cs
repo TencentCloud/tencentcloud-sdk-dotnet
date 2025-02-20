@@ -94,6 +94,19 @@ namespace TencentCloud.Teo.V20220901.Models
         [System.Obsolete]
         public string VodeoBucketId{ get; set; }
 
+        /// <summary>
+        /// 云点播回源范围，该参数当 OriginType = VOD 时生效。取值有：<li>all：当前源站对应的云点播应用内所有文件，默认值为 all；</li><li>bucket：当前源站对应的云点播应用下指定某一个存储桶内的文件。通过参数 VodBucketId 来指定存储桶。
+        /// </li>
+        /// </summary>
+        [JsonProperty("VodOriginScope")]
+        public string VodOriginScope{ get; set; }
+
+        /// <summary>
+        /// VOD 存储桶 ID，该参数当 OriginType = VOD 且 VodOriginScope = bucket 时必填。数据来源：云点播专业版应用下存储桶的存储 ID 。
+        /// </summary>
+        [JsonProperty("VodBucketId")]
+        public string VodBucketId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +121,8 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "VodeoSubAppId", this.VodeoSubAppId);
             this.SetParamSimple(map, prefix + "VodeoDistributionRange", this.VodeoDistributionRange);
             this.SetParamSimple(map, prefix + "VodeoBucketId", this.VodeoBucketId);
+            this.SetParamSimple(map, prefix + "VodOriginScope", this.VodOriginScope);
+            this.SetParamSimple(map, prefix + "VodBucketId", this.VodBucketId);
         }
     }
 }

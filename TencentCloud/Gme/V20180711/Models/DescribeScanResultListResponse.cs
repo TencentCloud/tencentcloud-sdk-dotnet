@@ -26,7 +26,6 @@ namespace TencentCloud.Gme.V20180711.Models
         
         /// <summary>
         /// 要查询的语音检测任务的结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public DescribeScanResult[] Data{ get; set; }

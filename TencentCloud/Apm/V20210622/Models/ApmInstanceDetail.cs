@@ -43,7 +43,8 @@ namespace TencentCloud.Apm.V20210622.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 业务系统状态
+        /// 业务系统状态。{
+        /// 1: 初始化中; 2: 运行中; 4: 限流}
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -240,6 +241,17 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("IsSqlInjectionAnalysis")]
         public long? IsSqlInjectionAnalysis{ get; set; }
 
+        /// <summary>
+        /// 限流原因。{
+        /// 1: 正式版限额;
+        /// 2: 试用版限额;
+        /// 4: 试用版到期;
+        /// 8: 账号欠费
+        /// }
+        /// </summary>
+        [JsonProperty("StopReason")]
+        public long? StopReason{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -282,6 +294,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "DashboardTopicID", this.DashboardTopicID);
             this.SetParamSimple(map, prefix + "IsInstrumentationVulnerabilityScan", this.IsInstrumentationVulnerabilityScan);
             this.SetParamSimple(map, prefix + "IsSqlInjectionAnalysis", this.IsSqlInjectionAnalysis);
+            this.SetParamSimple(map, prefix + "StopReason", this.StopReason);
         }
     }
 }

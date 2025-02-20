@@ -26,21 +26,18 @@ namespace TencentCloud.Trp.V20210515.Models
         
         /// <summary>
         /// 文字码包地址
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
         /// 图片码包地址，可能为空
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImgUrl")]
         public string ImgUrl{ get; set; }
 
         /// <summary>
         /// 文字码包Key，用于上传导入
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileKey")]
         public string FileKey{ get; set; }

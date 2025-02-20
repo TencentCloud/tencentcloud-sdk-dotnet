@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A6E782C7-FC94-3EC6-A8AC-DB20F13405F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1183</VersionPrefix>
+    <VersionPrefix>3.0.1184</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,8 +49,11 @@
   <ItemGroup>
     <Compile Include="V20170312\CbsClient.cs" />
     <Compile Include="V20170312\Models\AdvancedRetentionPolicy.cs" />
+    <Compile Include="V20170312\Models\ApplyDisk.cs" />
     <Compile Include="V20170312\Models\ApplyDiskBackupRequest.cs" />
     <Compile Include="V20170312\Models\ApplyDiskBackupResponse.cs" />
+    <Compile Include="V20170312\Models\ApplySnapshotGroupRequest.cs" />
+    <Compile Include="V20170312\Models\ApplySnapshotGroupResponse.cs" />
     <Compile Include="V20170312\Models\ApplySnapshotRequest.cs" />
     <Compile Include="V20170312\Models\ApplySnapshotResponse.cs" />
     <Compile Include="V20170312\Models\AttachDetail.cs" />
@@ -70,12 +73,16 @@
     <Compile Include="V20170312\Models\CreateDiskBackupResponse.cs" />
     <Compile Include="V20170312\Models\CreateDisksRequest.cs" />
     <Compile Include="V20170312\Models\CreateDisksResponse.cs" />
+    <Compile Include="V20170312\Models\CreateSnapshotGroupRequest.cs" />
+    <Compile Include="V20170312\Models\CreateSnapshotGroupResponse.cs" />
     <Compile Include="V20170312\Models\CreateSnapshotRequest.cs" />
     <Compile Include="V20170312\Models\CreateSnapshotResponse.cs" />
     <Compile Include="V20170312\Models\DeleteAutoSnapshotPoliciesRequest.cs" />
     <Compile Include="V20170312\Models\DeleteAutoSnapshotPoliciesResponse.cs" />
     <Compile Include="V20170312\Models\DeleteDiskBackupsRequest.cs" />
     <Compile Include="V20170312\Models\DeleteDiskBackupsResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteSnapshotGroupRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteSnapshotGroupResponse.cs" />
     <Compile Include="V20170312\Models\DeleteSnapshotsRequest.cs" />
     <Compile Include="V20170312\Models\DeleteSnapshotsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeAutoSnapshotPoliciesRequest.cs" />
@@ -92,6 +99,8 @@
     <Compile Include="V20170312\Models\DescribeDisksResponse.cs" />
     <Compile Include="V20170312\Models\DescribeInstancesDiskNumRequest.cs" />
     <Compile Include="V20170312\Models\DescribeInstancesDiskNumResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeSnapshotGroupsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeSnapshotGroupsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeSnapshotOverviewRequest.cs" />
     <Compile Include="V20170312\Models\DescribeSnapshotOverviewResponse.cs" />
     <Compile Include="V20170312\Models\DescribeSnapshotSharePermissionRequest.cs" />
@@ -148,6 +157,7 @@
     <Compile Include="V20170312\Models\SharePermission.cs" />
     <Compile Include="V20170312\Models\Snapshot.cs" />
     <Compile Include="V20170312\Models\SnapshotCopyResult.cs" />
+    <Compile Include="V20170312\Models\SnapshotGroup.cs" />
     <Compile Include="V20170312\Models\Tag.cs" />
     <Compile Include="V20170312\Models\TerminateDisksRequest.cs" />
     <Compile Include="V20170312\Models\TerminateDisksResponse.cs" />

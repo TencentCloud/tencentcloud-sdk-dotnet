@@ -26,14 +26,12 @@ namespace TencentCloud.Trp.V20210515.Models
         
         /// <summary>
         /// 二维码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
         /// 状态，0:未激活 1:已激活 2:已冻结
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

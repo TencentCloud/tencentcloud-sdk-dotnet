@@ -26,14 +26,12 @@ namespace TencentCloud.Trp.V20210515.Models
         
         /// <summary>
         /// 商户列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Merchants")]
         public Merchant[] Merchants{ get; set; }
 
         /// <summary>
         /// 总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

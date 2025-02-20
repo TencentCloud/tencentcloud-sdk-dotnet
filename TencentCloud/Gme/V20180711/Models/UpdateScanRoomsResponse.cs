@@ -26,7 +26,6 @@ namespace TencentCloud.Gme.V20180711.Models
         
         /// <summary>
         /// 返回结果码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorCode")]
         public long? ErrorCode{ get; set; }

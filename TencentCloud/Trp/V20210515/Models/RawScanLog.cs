@@ -32,7 +32,6 @@ namespace TencentCloud.Trp.V20210515.Models
 
         /// <summary>
         /// 微信小程序openid
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Openid")]
         public string Openid{ get; set; }
@@ -57,42 +56,36 @@ namespace TencentCloud.Trp.V20210515.Models
 
         /// <summary>
         /// 商户ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MerchantId")]
         public string MerchantId{ get; set; }
 
         /// <summary>
         /// 商品ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
 
         /// <summary>
         /// 批次ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BatchId")]
         public string BatchId{ get; set; }
 
         /// <summary>
         /// 省份
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Province")]
         public string Province{ get; set; }
 
         /// <summary>
         /// 地市
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("City")]
         public string City{ get; set; }
 
         /// <summary>
         /// 区/县
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("District")]
         public string District{ get; set; }

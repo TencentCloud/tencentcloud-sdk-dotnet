@@ -26,7 +26,6 @@ namespace TencentCloud.Gme.V20180711.Models
         
         /// <summary>
         /// 语音消息转文本热句模型配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CustomizationConfigs")]
         public CustomizationConfigs[] CustomizationConfigs{ get; set; }

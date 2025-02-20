@@ -50,7 +50,6 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 返回信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
@@ -63,21 +62,18 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// 引擎类型，有效值：PrestoSQL/SparkSQL/SparkBatch
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataEngineType")]
         public string DataEngineType{ get; set; }
 
         /// <summary>
         /// 用户ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
         /// 账号ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserUin")]
         public string UserUin{ get; set; }

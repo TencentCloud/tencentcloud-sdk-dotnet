@@ -26,14 +26,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// 配置项
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigItem")]
         public string ConfigItem{ get; set; }
 
         /// <summary>
         /// 配置值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigValue")]
         public string ConfigValue{ get; set; }

@@ -26,21 +26,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// 引擎ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataEngineId")]
         public string DataEngineId{ get; set; }
 
         /// <summary>
         /// 引擎名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataEngineName")]
         public string DataEngineName{ get; set; }
 
         /// <summary>
         /// 引擎规格详情
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScaleDetail")]
         public DataEngineScaleInfoDetail[] ScaleDetail{ get; set; }
