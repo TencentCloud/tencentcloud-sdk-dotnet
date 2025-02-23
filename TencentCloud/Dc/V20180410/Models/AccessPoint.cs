@@ -96,6 +96,12 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("AvailablePortInfo")]
         public PortSpecification[] AvailablePortInfo{ get; set; }
 
+        /// <summary>
+        /// 接入点地址。
+        /// </summary>
+        [JsonProperty("Address")]
+        public string Address{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "AccessPointType", this.AccessPointType);
             this.SetParamArrayObj(map, prefix + "AvailablePortInfo.", this.AvailablePortInfo);
+            this.SetParamSimple(map, prefix + "Address", this.Address);
         }
     }
 }

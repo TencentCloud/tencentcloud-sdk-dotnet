@@ -26,42 +26,36 @@ namespace TencentCloud.Mna.V20210119.Models
         
         /// <summary>
         /// 设备ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
 
         /// <summary>
         /// 设备名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
         /// <summary>
         /// 激活时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActiveTime")]
         public string ActiveTime{ get; set; }
 
         /// <summary>
         /// 最后在线时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastOnlineTime")]
         public string LastOnlineTime{ get; set; }
 
         /// <summary>
         /// 备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 厂商备注
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VendorDescription")]
         public string VendorDescription{ get; set; }
@@ -69,21 +63,18 @@ namespace TencentCloud.Mna.V20210119.Models
         /// <summary>
         /// license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
         /// 注：后续将废弃此参数，新接入请使用LicensePayMode和Payer
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LicenseChargingMode")]
         public long? LicenseChargingMode{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 硬件序列号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SN")]
         public string SN{ get; set; }
@@ -92,7 +83,6 @@ namespace TencentCloud.Mna.V20210119.Models
         /// license授权有效期 
         /// 0：月度授权 
         /// 1：永久授权
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LicensePayMode")]
         public long? LicensePayMode{ get; set; }
@@ -101,28 +91,24 @@ namespace TencentCloud.Mna.V20210119.Models
         /// 付费方 
         /// 0：客户付费 
         /// 1：厂商付费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Payer")]
         public long? Payer{ get; set; }
 
         /// <summary>
         /// 设备分组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
         /// 设备分组名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
         /// 设备无流量包处理方式，0: 按量付费，1: 截断加速	
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowTrunc")]
         public long? FlowTrunc{ get; set; }

@@ -32,14 +32,12 @@ namespace TencentCloud.Mna.V20210119.Models
 
         /// <summary>
         /// 业务指标（bps/ms/%）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BusinessMetrics")]
         public float? BusinessMetrics{ get; set; }
 
         /// <summary>
         /// 网卡状态信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SlotNetInfo")]
         public SlotNetInfo[] SlotNetInfo{ get; set; }

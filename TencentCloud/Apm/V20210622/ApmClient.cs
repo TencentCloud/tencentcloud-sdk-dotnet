@@ -28,7 +28,7 @@ namespace TencentCloud.Apm.V20210622
 
        private const string endpoint = "apm.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1184";
+       private const string sdkVersion = "SDK_NET_3.0.1185";
 
         /// <summary>
         /// Client constructor.
@@ -157,6 +157,27 @@ namespace TencentCloud.Apm.V20210622
         public DescribeGeneralMetricDataResponse DescribeGeneralMetricDataSync(DescribeGeneralMetricDataRequest req)
         {
             return InternalRequestAsync<DescribeGeneralMetricDataResponse>(req, "DescribeGeneralMetricData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 通用查询 OpenTelemetry 调用链列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGeneralOTSpanListRequest"/></param>
+        /// <returns><see cref="DescribeGeneralOTSpanListResponse"/></returns>
+        public Task<DescribeGeneralOTSpanListResponse> DescribeGeneralOTSpanList(DescribeGeneralOTSpanListRequest req)
+        {
+            return InternalRequestAsync<DescribeGeneralOTSpanListResponse>(req, "DescribeGeneralOTSpanList");
+        }
+
+        /// <summary>
+        /// 通用查询 OpenTelemetry 调用链列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGeneralOTSpanListRequest"/></param>
+        /// <returns><see cref="DescribeGeneralOTSpanListResponse"/></returns>
+        public DescribeGeneralOTSpanListResponse DescribeGeneralOTSpanListSync(DescribeGeneralOTSpanListRequest req)
+        {
+            return InternalRequestAsync<DescribeGeneralOTSpanListResponse>(req, "DescribeGeneralOTSpanList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

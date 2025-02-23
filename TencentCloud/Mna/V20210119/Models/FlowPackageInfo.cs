@@ -58,7 +58,6 @@ namespace TencentCloud.Mna.V20210119.Models
 
         /// <summary>
         /// 购买时间，Unix时间戳格式，单位：秒
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }

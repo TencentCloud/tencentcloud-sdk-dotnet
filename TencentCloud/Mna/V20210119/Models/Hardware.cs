@@ -26,7 +26,6 @@ namespace TencentCloud.Mna.V20210119.Models
         
         /// <summary>
         /// 硬件序列号
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SN")]
         public string SN{ get; set; }
@@ -36,21 +35,18 @@ namespace TencentCloud.Mna.V20210119.Models
         /// 1，租户付费
         /// 2，厂商月付费
         /// 3，厂商永久授权
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LicenseChargingMode")]
         public long? LicenseChargingMode{ get; set; }
 
         /// <summary>
         /// 设备描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 硬件ID，入参无需传递
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HardwareId")]
         public string HardwareId{ get; set; }

@@ -46,7 +46,6 @@ namespace TencentCloud.Mna.V20210119.Models
 
         /// <summary>
         /// 流量包ID，仅当付费模式为流量包类型时才有。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

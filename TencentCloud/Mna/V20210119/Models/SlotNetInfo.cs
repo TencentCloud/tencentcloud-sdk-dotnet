@@ -26,21 +26,18 @@ namespace TencentCloud.Mna.V20210119.Models
         
         /// <summary>
         /// 网卡名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetInfoName")]
         public string NetInfoName{ get; set; }
 
         /// <summary>
         /// 公网IP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicIP")]
         public string PublicIP{ get; set; }
 
         /// <summary>
         /// 指标数据（bps/ms/%）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Current")]
         public float? Current{ get; set; }

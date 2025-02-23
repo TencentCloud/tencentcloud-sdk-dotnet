@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1184";
+       private const string sdkVersion = "SDK_NET_3.0.1185";
 
         /// <summary>
         /// Client constructor.
@@ -1965,6 +1965,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 支持通用证照的有效性检测告警，包括卡证复印件告警、卡证翻拍告警等功能，支持通用证照的ps伪造检测，可以应用于各种证件信息有效性校验场景。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="RecognizeGeneralCardWarnRequest"/></param>
         /// <returns><see cref="RecognizeGeneralCardWarnResponse"/></returns>
@@ -1975,6 +1977,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 支持通用证照的有效性检测告警，包括卡证复印件告警、卡证翻拍告警等功能，支持通用证照的ps伪造检测，可以应用于各种证件信息有效性校验场景。
+        /// 
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="RecognizeGeneralCardWarnRequest"/></param>
         /// <returns><see cref="RecognizeGeneralCardWarnResponse"/></returns>
@@ -2531,7 +2535,7 @@ namespace TencentCloud.Ocr.V20181119
         /// <summary>
         /// 本接口支持二代身份证、临时身份证、港澳台居住证、外国人永久居留证，字段内容识别功能，包括姓名、性别、民族、出生、出生日期、住址、公民身份号码、签发机关、有效期限、国籍、通行证号码、持证人持有号码；支持返回证件类型；支持翻拍、复印、边框不完整、遮挡、字段级反光和字段级完整性告警；支持卡片主体框裁剪和头像裁剪。
         /// 
-        /// 默认接口请求频率限制：20次/秒。
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="RecognizeValidIDCardOCRRequest"/></param>
         /// <returns><see cref="RecognizeValidIDCardOCRResponse"/></returns>
@@ -2543,7 +2547,7 @@ namespace TencentCloud.Ocr.V20181119
         /// <summary>
         /// 本接口支持二代身份证、临时身份证、港澳台居住证、外国人永久居留证，字段内容识别功能，包括姓名、性别、民族、出生、出生日期、住址、公民身份号码、签发机关、有效期限、国籍、通行证号码、持证人持有号码；支持返回证件类型；支持翻拍、复印、边框不完整、遮挡、字段级反光和字段级完整性告警；支持卡片主体框裁剪和头像裁剪。
         /// 
-        /// 默认接口请求频率限制：20次/秒。
+        /// 默认接口请求频率限制：5次/秒。
         /// </summary>
         /// <param name="req"><see cref="RecognizeValidIDCardOCRRequest"/></param>
         /// <returns><see cref="RecognizeValidIDCardOCRResponse"/></returns>

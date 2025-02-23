@@ -120,11 +120,50 @@ namespace TencentCloud.Emr.V20190103.Models
         public string MeasureMethod{ get; set; }
 
         /// <summary>
+        /// 节点部署服务列表，例如["HDFS-3.1.2","YARN-3.1.2"]。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SoftDeployDesc")]
+        public string[] SoftDeployDesc{ get; set; }
+
+        /// <summary>
+        /// 启动进程列表，例如["NodeManager"]。
+        /// </summary>
+        [JsonProperty("ServiceNodeDesc")]
+        public string ServiceNodeDesc{ get; set; }
+
+        /// <summary>
+        /// 启动进程列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServiceNodeInfo")]
+        public long?[] ServiceNodeInfo{ get; set; }
+
+        /// <summary>
+        /// 节点部署服务列表。部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SoftDeployInfo")]
+        public long?[] SoftDeployInfo{ get; set; }
+
+        /// <summary>
         /// 多指标触发条件
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoadMetricsConditions")]
         public LoadMetricsConditions LoadMetricsConditions{ get; set; }
+
+        /// <summary>
+        /// 伸缩组Id
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public long? GroupId{ get; set; }
+
+        /// <summary>
+        /// soft例如yarn
+        /// </summary>
+        [JsonProperty("Soft")]
+        public string Soft{ get; set; }
 
 
         /// <summary>
@@ -147,7 +186,13 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "ConfigGroupAssigned", this.ConfigGroupAssigned);
             this.SetParamSimple(map, prefix + "MeasureMethod", this.MeasureMethod);
+            this.SetParamArraySimple(map, prefix + "SoftDeployDesc.", this.SoftDeployDesc);
+            this.SetParamSimple(map, prefix + "ServiceNodeDesc", this.ServiceNodeDesc);
+            this.SetParamArraySimple(map, prefix + "ServiceNodeInfo.", this.ServiceNodeInfo);
+            this.SetParamArraySimple(map, prefix + "SoftDeployInfo.", this.SoftDeployInfo);
             this.SetParamObj(map, prefix + "LoadMetricsConditions.", this.LoadMetricsConditions);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "Soft", this.Soft);
         }
     }
 }
