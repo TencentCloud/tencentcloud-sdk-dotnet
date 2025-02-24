@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1185";
+       private const string sdkVersion = "SDK_NET_3.0.1186";
 
         /// <summary>
         /// Client constructor.
@@ -434,6 +434,27 @@ namespace TencentCloud.Emr.V20190103
         public DescribeCvmQuotaResponse DescribeCvmQuotaSync(DescribeCvmQuotaRequest req)
         {
             return InternalRequestAsync<DescribeCvmQuotaResponse>(req, "DescribeCvmQuota")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询DAG信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDAGInfoRequest"/></param>
+        /// <returns><see cref="DescribeDAGInfoResponse"/></returns>
+        public Task<DescribeDAGInfoResponse> DescribeDAGInfo(DescribeDAGInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeDAGInfoResponse>(req, "DescribeDAGInfo");
+        }
+
+        /// <summary>
+        /// 查询DAG信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDAGInfoRequest"/></param>
+        /// <returns><see cref="DescribeDAGInfoResponse"/></returns>
+        public DescribeDAGInfoResponse DescribeDAGInfoSync(DescribeDAGInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeDAGInfoResponse>(req, "DescribeDAGInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

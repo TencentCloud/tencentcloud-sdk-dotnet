@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1185</VersionPrefix>
+    <VersionPrefix>3.0.1186</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -88,6 +88,7 @@
     <Compile Include="V20190103\Models\CustomMetaDBInfo.cs" />
     <Compile Include="V20190103\Models\CustomMetaInfo.cs" />
     <Compile Include="V20190103\Models\CustomServiceDefine.cs" />
+    <Compile Include="V20190103\Models\DAGInfo.cs" />
     <Compile Include="V20190103\Models\DayRepeatStrategy.cs" />
     <Compile Include="V20190103\Models\DefaultSetting.cs" />
     <Compile Include="V20190103\Models\DeleteAutoScaleStrategyRequest.cs" />
@@ -111,6 +112,8 @@
     <Compile Include="V20190103\Models\DescribeClusterNodesResponse.cs" />
     <Compile Include="V20190103\Models\DescribeCvmQuotaRequest.cs" />
     <Compile Include="V20190103\Models\DescribeCvmQuotaResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeDAGInfoRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeDAGInfoResponse.cs" />
     <Compile Include="V20190103\Models\DescribeEmrApplicationStaticsRequest.cs" />
     <Compile Include="V20190103\Models\DescribeEmrApplicationStaticsResponse.cs" />
     <Compile Include="V20190103\Models\DescribeEmrOverviewMetricsRequest.cs" />

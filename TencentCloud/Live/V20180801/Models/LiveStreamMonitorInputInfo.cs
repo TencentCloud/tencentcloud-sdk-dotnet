@@ -71,6 +71,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("NeedMonitor")]
         public bool? NeedMonitor{ get; set; }
 
+        /// <summary>
+        /// 导播台pvw pgm的cdn流id
+        /// </summary>
+        [JsonProperty("CdnStreamId")]
+        public string CdnStreamId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -84,6 +90,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "CasterInputIndex", this.CasterInputIndex);
             this.SetParamSimple(map, prefix + "NeedMonitor", this.NeedMonitor);
+            this.SetParamSimple(map, prefix + "CdnStreamId", this.CdnStreamId);
         }
     }
 }

@@ -71,6 +71,7 @@ namespace TencentCloud.Waf.V20180125.Models
         /// 默认是"geoip,cc,owasp,ai,antileakage"
         /// </summary>
         [JsonProperty("Bypass")]
+        [System.Obsolete]
         public string Bypass{ get; set; }
 
         /// <summary>
@@ -117,6 +118,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("PageId")]
         public string PageId{ get; set; }
 
+        /// <summary>
+        /// 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+        /// </summary>
+        [JsonProperty("LogicalOp")]
+        public string LogicalOp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,6 +145,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Source", this.Source);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "PageId", this.PageId);
+            this.SetParamSimple(map, prefix + "LogicalOp", this.LogicalOp);
         }
     }
 }

@@ -37,13 +37,13 @@ namespace TencentCloud.Rce.V20201103.Models
         public string DataContent{ get; set; }
 
         /// <summary>
-        /// 名单数据开始时间，时间格式示例"2024-05-05 12:10:15"
+        /// 名单数据开始时间
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 名单数据结束时间，时间格式示例"2024-05-05 12:10:15"
+        /// 名单数据结束时间
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

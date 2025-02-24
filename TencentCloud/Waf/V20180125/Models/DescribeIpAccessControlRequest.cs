@@ -99,7 +99,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 生效状态
+        /// 生效状态，1表示生效中，2表示过期，0表示全部
         /// </summary>
         [JsonProperty("ValidStatus")]
         public long? ValidStatus{ get; set; }
@@ -123,7 +123,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? RuleId{ get; set; }
 
         /// <summary>
-        /// 定时任务类型筛选0 1 2 3 4
+        /// 0表示全部，1表示永久生效，2表示定时生效，3表示周粒度生效，4表示月粒度生效
         /// </summary>
         [JsonProperty("TimerType")]
         public long? TimerType{ get; set; }

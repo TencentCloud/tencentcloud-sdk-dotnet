@@ -55,7 +55,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? SortId{ get; set; }
 
         /// <summary>
-        /// 规则生效截止时间，0：永久生效，其它值为对应时间的时间戳。
+        /// 如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）
         /// </summary>
         [JsonProperty("ExpireTime")]
         public ulong? ExpireTime{ get; set; }

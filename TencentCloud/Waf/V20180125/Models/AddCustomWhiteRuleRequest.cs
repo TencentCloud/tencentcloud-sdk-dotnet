@@ -37,12 +37,6 @@ namespace TencentCloud.Waf.V20180125.Models
         public string SortId{ get; set; }
 
         /// <summary>
-        /// 过期时间
-        /// </summary>
-        [JsonProperty("ExpireTime")]
-        public string ExpireTime{ get; set; }
-
-        /// <summary>
         /// 策略详情
         /// </summary>
         [JsonProperty("Strategies")]
@@ -55,10 +49,16 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 放行的详情
+        /// 放行的模块，多个模块之间用逗号连接。支持的模块：acl（自定义规则）、owasp（规则引擎）、webshell（恶意文件检测）、geoip（地域封禁）、bwip（IP黑白名单）、cc、botrpc（BOT防护）、antileakage（信息防泄露）、api（API安全）、ai（AI引擎）、ip_auto_deny（IP封禁）、applet（小程序流量风控）
         /// </summary>
         [JsonProperty("Bypass")]
         public string Bypass{ get; set; }
+
+        /// <summary>
+        /// 如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public string ExpireTime{ get; set; }
 
         /// <summary>
         /// 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
@@ -80,10 +80,10 @@ namespace TencentCloud.Waf.V20180125.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "SortId", this.SortId);
-            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamArrayObj(map, prefix + "Strategies.", this.Strategies);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "Bypass", this.Bypass);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "JobType", this.JobType);
             this.SetParamObj(map, prefix + "JobDateTime.", this.JobDateTime);
         }

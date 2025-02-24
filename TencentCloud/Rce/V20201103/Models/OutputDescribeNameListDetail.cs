@@ -74,14 +74,14 @@ namespace TencentCloud.Rce.V20201103.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 创建时间，时间格式示例"2024-05-05 12:10:15"
+        /// 创建时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 更新时间，时间格式示例"2024-05-05 12:10:15"
+        /// 更新时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]

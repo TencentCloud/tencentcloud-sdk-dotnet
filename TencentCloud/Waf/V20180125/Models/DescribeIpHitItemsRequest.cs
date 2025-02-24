@@ -75,7 +75,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public ulong? Skip{ get; set; }
 
         /// <summary>
-        /// 限制数目
+        /// 限制数目，category不等于threat_intelligence时，该值需要必传
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -93,7 +93,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Sort{ get; set; }
 
         /// <summary>
-        /// IP
+        /// IP,category传threat_intelligence的时候，该值必传
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }

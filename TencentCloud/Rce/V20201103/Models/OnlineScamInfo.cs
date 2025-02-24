@@ -47,7 +47,9 @@ namespace TencentCloud.Rce.V20201103.Models
         public long? ContentType{ get; set; }
 
         /// <summary>
-        /// 类型
+        /// 账号类型
+        /// 1：手机号
+        /// 2：uin账号
         /// </summary>
         [JsonProperty("FraudType")]
         public long? FraudType{ get; set; }

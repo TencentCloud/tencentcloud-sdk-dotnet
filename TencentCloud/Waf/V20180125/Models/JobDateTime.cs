@@ -26,18 +26,21 @@ namespace TencentCloud.Waf.V20180125.Models
         
         /// <summary>
         /// 定时执行的时间参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Timed")]
         public TimedJob[] Timed{ get; set; }
 
         /// <summary>
         /// 周期执行的时间参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cron")]
         public CronJob[] Cron{ get; set; }
 
         /// <summary>
         /// 时区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeTZone")]
         public string TimeTZone{ get; set; }

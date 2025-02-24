@@ -49,15 +49,13 @@ namespace TencentCloud.Rce.V20201103.Models
         public long? DataSource{ get; set; }
 
         /// <summary>
-        /// 名单数据开始时间，时间格式示例"2024-05-05 12:10:15"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 名单数据开始时间
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 名单数据结束时间，时间格式示例"2024-05-05 12:10:15"
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 名单数据结束时间
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -70,26 +68,24 @@ namespace TencentCloud.Rce.V20201103.Models
 
         /// <summary>
         /// 名单数据描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 名单数据创建时间，时间格式示例"2024-05-05 12:10:15"
+        /// 名单数据创建时间
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 名单数据更新时间，时间格式示例"2024-05-05 12:10:15"
+        /// 名单数据更新时间
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 加密名单数据内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EncryptDataContent")]
         public string EncryptDataContent{ get; set; }

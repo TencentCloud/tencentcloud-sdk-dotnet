@@ -334,6 +334,18 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("GmSSLId")]
         public string GmSSLId{ get; set; }
 
+        /// <summary>
+        /// 回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
+        /// </summary>
+        [JsonProperty("UpstreamPolicy")]
+        public long? UpstreamPolicy{ get; set; }
+
+        /// <summary>
+        /// 分流回源时生效，分流回源的规则。
+        /// </summary>
+        [JsonProperty("UpstreamRules")]
+        public UpstreamRule[] UpstreamRules{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -385,6 +397,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "GmEncCert", this.GmEncCert);
             this.SetParamSimple(map, prefix + "GmEncPrivateKey", this.GmEncPrivateKey);
             this.SetParamSimple(map, prefix + "GmSSLId", this.GmSSLId);
+            this.SetParamSimple(map, prefix + "UpstreamPolicy", this.UpstreamPolicy);
+            this.SetParamArrayObj(map, prefix + "UpstreamRules.", this.UpstreamRules);
         }
     }
 }

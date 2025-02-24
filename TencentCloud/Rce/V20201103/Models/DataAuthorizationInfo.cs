@@ -26,8 +26,6 @@ namespace TencentCloud.Rce.V20201103.Models
         
         /// <summary>
         /// 数据委托方、需求方：客户主体名称。
-        /// 
-        /// 示例值：某某有限公司。
         /// </summary>
         [JsonProperty("DataProviderName")]
         public string DataProviderName{ get; set; }
@@ -36,8 +34,6 @@ namespace TencentCloud.Rce.V20201103.Models
         /// 数据受托方、提供方：腾讯云主体名称。
         /// 
         /// 固定填：腾讯云计算（北京）有限责任公司
-        /// 
-        /// 示例值：腾讯云计算（北京）有限责任公司
         /// </summary>
         [JsonProperty("DataRecipientName")]
         public string DataRecipientName{ get; set; }
@@ -54,8 +50,6 @@ namespace TencentCloud.Rce.V20201103.Models
         /// 4-IP地址；
         /// 
         /// 999-其它；
-        /// 
-        /// 示例值：[1, 4]
         /// </summary>
         [JsonProperty("UserDataType")]
         public ulong?[] UserDataType{ get; set; }
@@ -63,7 +57,6 @@ namespace TencentCloud.Rce.V20201103.Models
         /// <summary>
         /// 客户是否已按[合规指南](https://rule.tencent.com/rule/202409130001)要求获取用户授权，同意客户委托腾讯云处理入参信息
         /// 1-已授权；其它值为未授权。
-        /// 示例值：1
         /// </summary>
         [JsonProperty("IsAuthorize")]
         public ulong? IsAuthorize{ get; set; }
@@ -71,7 +64,6 @@ namespace TencentCloud.Rce.V20201103.Models
         /// <summary>
         /// 客户是否已按[合规指南](https://rule.tencent.com/rule/202409130001)要求获取用户授权，同意腾讯云结合客户提供的信息，对已合法收集的用户数据进行必要处理得出服务结果，并返回给客户。
         /// 1-已授权；其它值为未授权。
-        /// 示例值：1
         /// </summary>
         [JsonProperty("IsOrderHandling")]
         public ulong? IsOrderHandling{ get; set; }
@@ -80,8 +72,6 @@ namespace TencentCloud.Rce.V20201103.Models
         /// 客户获得的用户授权期限时间戳（单位秒）。
         /// 
         /// 不填默认无固定期限。
-        /// 
-        /// 示例值：1719805604
         /// </summary>
         [JsonProperty("AuthorizationTerm")]
         public ulong? AuthorizationTerm{ get; set; }
@@ -89,8 +79,6 @@ namespace TencentCloud.Rce.V20201103.Models
         /// <summary>
         /// 	
         /// 客户获得用户授权所依赖的协议地址。
-        /// 
-        /// 示例值：https://www.*****.com/*
         /// </summary>
         [JsonProperty("PrivacyPolicyLink")]
         public string PrivacyPolicyLink{ get; set; }
@@ -99,8 +87,6 @@ namespace TencentCloud.Rce.V20201103.Models
         /// 是否是用户个人敏感数据（不推荐使用）。
         /// 
         /// 固定填：1。
-        /// 
-        /// 示例值：1
         /// </summary>
         [JsonProperty("IsPersonalData")]
         public ulong? IsPersonalData{ get; set; }

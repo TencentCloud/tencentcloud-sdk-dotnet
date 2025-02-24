@@ -28,6 +28,7 @@ namespace TencentCloud.Waf.V20180125.Models
         /// mongo表自增Id
         /// </summary>
         [JsonProperty("Id")]
+        [System.Obsolete]
         public string Id{ get; set; }
 
         /// <summary>
@@ -40,6 +41,7 @@ namespace TencentCloud.Waf.V20180125.Models
         /// 黑白名单的IP
         /// </summary>
         [JsonProperty("Ip")]
+        [System.Obsolete]
         public string Ip{ get; set; }
 
         /// <summary>
@@ -49,7 +51,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Note{ get; set; }
 
         /// <summary>
-        /// 添加路径
+        /// batch为批量域名，batch-group为防护对象组
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
@@ -114,6 +116,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("ValidStatus")]
         public long? ValidStatus{ get; set; }
 
+        /// <summary>
+        /// 防护对象组ID列表，如果绑定的是防护对象组
+        /// </summary>
+        [JsonProperty("GroupIds")]
+        public ulong?[] GroupIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +143,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "CronType", this.CronType);
             this.SetParamObj(map, prefix + "JobDateTime.", this.JobDateTime);
             this.SetParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
+            this.SetParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
         }
     }
 }

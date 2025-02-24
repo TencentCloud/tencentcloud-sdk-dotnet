@@ -375,6 +375,20 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("ProbeStatus")]
         public long? ProbeStatus{ get; set; }
 
+        /// <summary>
+        /// 回源策略。
+        /// 0：负载均衡回源
+        /// 1：分流回源
+        /// </summary>
+        [JsonProperty("UpstreamPolicy")]
+        public long? UpstreamPolicy{ get; set; }
+
+        /// <summary>
+        /// 分流回源策略
+        /// </summary>
+        [JsonProperty("UpstreamRules")]
+        public UpstreamRule[] UpstreamRules{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -432,6 +446,8 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "GmSSLId", this.GmSSLId);
             this.SetParamArraySimple(map, prefix + "Labels.", this.Labels);
             this.SetParamSimple(map, prefix + "ProbeStatus", this.ProbeStatus);
+            this.SetParamSimple(map, prefix + "UpstreamPolicy", this.UpstreamPolicy);
+            this.SetParamArrayObj(map, prefix + "UpstreamRules.", this.UpstreamRules);
         }
     }
 }

@@ -74,6 +74,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("TTSConfig")]
         public string TTSConfig{ get; set; }
 
+        /// <summary>
+        /// 数字人配置，为JSON字符串。**数字人配置需要提工单加白后才能使用**
+        /// </summary>
+        [JsonProperty("AvatarConfig")]
+        public string AvatarConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +94,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamObj(map, prefix + "STTConfig.", this.STTConfig);
             this.SetParamSimple(map, prefix + "LLMConfig", this.LLMConfig);
             this.SetParamSimple(map, prefix + "TTSConfig", this.TTSConfig);
+            this.SetParamSimple(map, prefix + "AvatarConfig", this.AvatarConfig);
         }
     }
 }
