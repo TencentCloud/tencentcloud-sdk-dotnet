@@ -26,49 +26,42 @@ namespace TencentCloud.Rce.V20201103.Models
         
         /// <summary>
         /// 当前付费模式，0 后付费 1 预付费
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
         /// 后付费本月使用量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AfterPayModeThisMonthUsedCnt")]
         public long? AfterPayModeThisMonthUsedCnt{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 超出时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
         /// 后付费上月使用量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AfterPayModeLastMonthUsedCnt")]
         public long? AfterPayModeLastMonthUsedCnt{ get; set; }
 
         /// <summary>
         /// 预付费总量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BeforePayModeTotalUsedCnt")]
         public long? BeforePayModeTotalUsedCnt{ get; set; }
 
         /// <summary>
         /// 预付费剩余用量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BeforePayModeRemainUsedCnt")]
         public long? BeforePayModeRemainUsedCnt{ get; set; }

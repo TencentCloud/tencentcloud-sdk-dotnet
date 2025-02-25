@@ -26,21 +26,18 @@ namespace TencentCloud.Batch.V20170312.Models
         
         /// <summary>
         /// HDD本地存储类型，值为：LOCAL_PRO.
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// HDD本地存储的最小容量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinSize")]
         public long? MinSize{ get; set; }
 
         /// <summary>
         /// HDD本地存储的最大容量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxSize")]
         public long? MaxSize{ get; set; }

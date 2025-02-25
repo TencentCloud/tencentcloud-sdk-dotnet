@@ -32,14 +32,12 @@ namespace TencentCloud.Rce.V20201103.Models
 
         /// <summary>
         /// 名单名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ListName")]
         public string ListName{ get; set; }
 
         /// <summary>
         /// 名单类型 [1 黑名单 2 白名单]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ListType")]
         public long? ListType{ get; set; }
@@ -58,7 +56,6 @@ namespace TencentCloud.Rce.V20201103.Models
 
         /// <summary>
         /// 描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
@@ -83,14 +80,12 @@ namespace TencentCloud.Rce.V20201103.Models
 
         /// <summary>
         /// 加密类型[0 无需加密 1 MD5加密 2 SHA256加密]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EncryptionType")]
         public long? EncryptionType{ get; set; }
 
         /// <summary>
         /// 场景Code，all_scene代表全部场景
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SceneCode")]
         public string SceneCode{ get; set; }

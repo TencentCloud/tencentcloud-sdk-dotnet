@@ -50,7 +50,6 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 扩展属性。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Externals")]
         public Externals Externals{ get; set; }
@@ -99,7 +98,6 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 售罄原因。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SoldOutReason")]
         public string SoldOutReason{ get; set; }
@@ -164,7 +162,6 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <li>NormalStock：表示对应库存供应有保障</li>
         /// <li> UnderStock：表示对应库存即将售罄</li> 
         /// <li>WithoutStock：表示对应库存已经售罄</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusCategory")]
         public string StatusCategory{ get; set; }

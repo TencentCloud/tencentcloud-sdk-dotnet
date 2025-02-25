@@ -28,7 +28,7 @@ namespace TencentCloud.Clb.V20180317
 
        private const string endpoint = "clb.tencentcloudapi.com";
        private const string version = "2018-03-17";
-       private const string sdkVersion = "SDK_NET_3.0.1186";
+       private const string sdkVersion = "SDK_NET_3.0.1187";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,48 @@ namespace TencentCloud.Clb.V20180317
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// 新增个性化配置，准备下线，请使用SetCustomizedConfigForLoadBalancer。
+        /// </summary>
+        /// <param name="req"><see cref="AddCustomizedConfigRequest"/></param>
+        /// <returns><see cref="AddCustomizedConfigResponse"/></returns>
+        public Task<AddCustomizedConfigResponse> AddCustomizedConfig(AddCustomizedConfigRequest req)
+        {
+            return InternalRequestAsync<AddCustomizedConfigResponse>(req, "AddCustomizedConfig");
+        }
+
+        /// <summary>
+        /// 新增个性化配置，准备下线，请使用SetCustomizedConfigForLoadBalancer。
+        /// </summary>
+        /// <param name="req"><see cref="AddCustomizedConfigRequest"/></param>
+        /// <returns><see cref="AddCustomizedConfigResponse"/></returns>
+        public AddCustomizedConfigResponse AddCustomizedConfigSync(AddCustomizedConfigRequest req)
+        {
+            return InternalRequestAsync<AddCustomizedConfigResponse>(req, "AddCustomizedConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 关联配置到server或location，根据配置类型关联到server或location。准备下线，请使用SetCustomizedConfigForLoadBalancer。
+        /// </summary>
+        /// <param name="req"><see cref="AssociateCustomizedConfigRequest"/></param>
+        /// <returns><see cref="AssociateCustomizedConfigResponse"/></returns>
+        public Task<AssociateCustomizedConfigResponse> AssociateCustomizedConfig(AssociateCustomizedConfigRequest req)
+        {
+            return InternalRequestAsync<AssociateCustomizedConfigResponse>(req, "AssociateCustomizedConfig");
+        }
+
+        /// <summary>
+        /// 关联配置到server或location，根据配置类型关联到server或location。准备下线，请使用SetCustomizedConfigForLoadBalancer。
+        /// </summary>
+        /// <param name="req"><see cref="AssociateCustomizedConfigRequest"/></param>
+        /// <returns><see cref="AssociateCustomizedConfigResponse"/></returns>
+        public AssociateCustomizedConfigResponse AssociateCustomizedConfigSync(AssociateCustomizedConfigRequest req)
+        {
+            return InternalRequestAsync<AssociateCustomizedConfigResponse>(req, "AssociateCustomizedConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -398,6 +440,27 @@ namespace TencentCloud.Clb.V20180317
         public CreateTopicResponse CreateTopicSync(CreateTopicRequest req)
         {
             return InternalRequestAsync<CreateTopicResponse>(req, "CreateTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除个性化配置，准备下线，请使用SetCustomizedConfigForLoadBalancer。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomizedConfigRequest"/></param>
+        /// <returns><see cref="DeleteCustomizedConfigResponse"/></returns>
+        public Task<DeleteCustomizedConfigResponse> DeleteCustomizedConfig(DeleteCustomizedConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteCustomizedConfigResponse>(req, "DeleteCustomizedConfig");
+        }
+
+        /// <summary>
+        /// 删除个性化配置，准备下线，请使用SetCustomizedConfigForLoadBalancer。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomizedConfigRequest"/></param>
+        /// <returns><see cref="DeleteCustomizedConfigResponse"/></returns>
+        public DeleteCustomizedConfigResponse DeleteCustomizedConfigSync(DeleteCustomizedConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteCustomizedConfigResponse>(req, "DeleteCustomizedConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1280,6 +1343,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 去关联个性化配置，准备下线，请使用SetCustomizedConfigForLoadBalancer。
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateCustomizedConfigRequest"/></param>
+        /// <returns><see cref="DisassociateCustomizedConfigResponse"/></returns>
+        public Task<DisassociateCustomizedConfigResponse> DisassociateCustomizedConfig(DisassociateCustomizedConfigRequest req)
+        {
+            return InternalRequestAsync<DisassociateCustomizedConfigResponse>(req, "DisassociateCustomizedConfig");
+        }
+
+        /// <summary>
+        /// 去关联个性化配置，准备下线，请使用SetCustomizedConfigForLoadBalancer。
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateCustomizedConfigRequest"/></param>
+        /// <returns><see cref="DisassociateCustomizedConfigResponse"/></returns>
+        public DisassociateCustomizedConfigResponse DisassociateCustomizedConfigSync(DisassociateCustomizedConfigRequest req)
+        {
+            return InternalRequestAsync<DisassociateCustomizedConfigResponse>(req, "DisassociateCustomizedConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 解除规则的目标组关联关系。
         /// 本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
         /// </summary>
@@ -1452,6 +1536,27 @@ namespace TencentCloud.Clb.V20180317
         public ModifyBlockIPListResponse ModifyBlockIPListSync(ModifyBlockIPListRequest req)
         {
             return InternalRequestAsync<ModifyBlockIPListResponse>(req, "ModifyBlockIPList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改个性化配置。如果配置已经绑定clb、server或location，同时更新。准备下线，请使用SetCustomizedConfigForLoadBalancer。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomizedConfigRequest"/></param>
+        /// <returns><see cref="ModifyCustomizedConfigResponse"/></returns>
+        public Task<ModifyCustomizedConfigResponse> ModifyCustomizedConfig(ModifyCustomizedConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyCustomizedConfigResponse>(req, "ModifyCustomizedConfig");
+        }
+
+        /// <summary>
+        /// 修改个性化配置。如果配置已经绑定clb、server或location，同时更新。准备下线，请使用SetCustomizedConfigForLoadBalancer。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomizedConfigRequest"/></param>
+        /// <returns><see cref="ModifyCustomizedConfigResponse"/></returns>
+        public ModifyCustomizedConfigResponse ModifyCustomizedConfigSync(ModifyCustomizedConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyCustomizedConfigResponse>(req, "ModifyCustomizedConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -38,7 +38,6 @@ namespace TencentCloud.Tcr.V20190924.Models
 
         /// <summary>
         /// 转换到该过程的简明原因
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Reason")]
         public string Reason{ get; set; }

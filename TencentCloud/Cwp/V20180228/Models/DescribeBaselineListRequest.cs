@@ -37,13 +37,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 过滤条件。
-        /// <li>StrategyId- Uint64 - 基线策略id</li>
-        /// <li>Status - Uint64 - 处理状态1已通过 0未通过</li>
-        /// <li>Level - Uint64[] - 威胁等级</li>
-        /// <li>BaselineName  - String - 基线名称</li>
-        /// <li>Quuid- String - 主机quuid</li>
-        /// <li>Uuid- String - 主机uuid</li>
+        /// 过滤条件 <li>StrategyId- Uint64 - 基线策略id</li> <li>Status - Uint64 - 处理状态 1-已通过 0-未通过</li> <li>Level - Uint64 - 威胁等级 1-低危 2-中危 3-高危 4-严重</li> <li>BaselineName  - String - 基线名称</li> <li>Quuid- String - 主机quuid</li> <li>Uuid- String - 主机uuid</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }

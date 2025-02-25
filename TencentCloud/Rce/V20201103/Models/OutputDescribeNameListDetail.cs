@@ -26,70 +26,60 @@ namespace TencentCloud.Rce.V20201103.Models
         
         /// <summary>
         /// 名单ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NameListId")]
         public long? NameListId{ get; set; }
 
         /// <summary>
         /// 名单名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ListName")]
         public string ListName{ get; set; }
 
         /// <summary>
         /// 名单类型 [1 黑名单 2 白名单]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ListType")]
         public long? ListType{ get; set; }
 
         /// <summary>
         /// 数据类型[1 手机号 2 qqOpenId 3 2echatOpenId 4 ip 6 idfa 7 imei]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataType")]
         public long? DataType{ get; set; }
 
         /// <summary>
         /// 场景Code
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SceneCode")]
         public string SceneCode{ get; set; }
 
         /// <summary>
         /// 名单列表状态 [1 启用 2 停用]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// 描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
         /// 创建时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// 更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// 加密类型 [0 无需加密，1 MD5加密，2 SHA256加密]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EncryptionType")]
         public long? EncryptionType{ get; set; }

@@ -26,77 +26,66 @@ namespace TencentCloud.Cvm.V20170312.Models
         
         /// <summary>
         /// 后续合计费用的原价，后付费模式使用，单位：元。<br><li>如返回了其他时间区间项，如UnitPriceSecondStep，则本项代表时间区间在(0, 96)小时；若未返回其他时间区间项，则本项代表全时段，即(0, ∞)小时</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnitPrice")]
         public float? UnitPrice{ get; set; }
 
         /// <summary>
         /// 后续计价单元，后付费模式使用，可取值范围： <br><li>HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）：</li><li>GB：表示计价单元是按每GB来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChargeUnit")]
         public string ChargeUnit{ get; set; }
 
         /// <summary>
         /// 预支合计费用的原价，预付费模式使用，单位：元。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public float? OriginalPrice{ get; set; }
 
         /// <summary>
         /// 预支合计费用的折扣价，预付费模式使用，单位：元。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiscountPrice")]
         public float? DiscountPrice{ get; set; }
 
         /// <summary>
         /// 折扣，如20.0代表2折。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Discount")]
         public float? Discount{ get; set; }
 
         /// <summary>
         /// 后续合计费用的折扣价，后付费模式使用，单位：元<br><li>如返回了其他时间区间项，如UnitPriceDiscountSecondStep，则本项代表时间区间在(0, 96)小时；若未返回其他时间区间项，则本项代表全时段，即(0, ∞)小时</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnitPriceDiscount")]
         public float? UnitPriceDiscount{ get; set; }
 
         /// <summary>
         /// 使用时间区间在(96, 360)小时的后续合计费用的原价，后付费模式使用，单位：元。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnitPriceSecondStep")]
         public float? UnitPriceSecondStep{ get; set; }
 
         /// <summary>
         /// 使用时间区间在(96, 360)小时的后续合计费用的折扣价，后付费模式使用，单位：元
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnitPriceDiscountSecondStep")]
         public float? UnitPriceDiscountSecondStep{ get; set; }
 
         /// <summary>
         /// 使用时间区间在(360, ∞)小时的后续合计费用的原价，后付费模式使用，单位：元。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnitPriceThirdStep")]
         public float? UnitPriceThirdStep{ get; set; }
 
         /// <summary>
         /// 使用时间区间在(360, ∞)小时的后续合计费用的折扣价，后付费模式使用，单位：元
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnitPriceDiscountThirdStep")]
         public float? UnitPriceDiscountThirdStep{ get; set; }
 
         /// <summary>
         /// 预支三年合计费用的原价，预付费模式使用，单位：元。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginalPriceThreeYear")]
@@ -105,14 +94,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <summary>
         /// 预支三年合计费用的折扣价，预付费模式使用，单位：元。
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiscountPriceThreeYear")]
         public float? DiscountPriceThreeYear{ get; set; }
 
         /// <summary>
         /// 预支三年应用的折扣，如20.0代表2折。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiscountThreeYear")]
@@ -121,14 +108,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <summary>
         /// 预支五年合计费用的原价，预付费模式使用，单位：元。
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginalPriceFiveYear")]
         public float? OriginalPriceFiveYear{ get; set; }
 
         /// <summary>
         /// 预支五年合计费用的折扣价，预付费模式使用，单位：元。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiscountPriceFiveYear")]
@@ -137,14 +122,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <summary>
         /// 预支五年应用的折扣，如20.0代表2折。
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiscountFiveYear")]
         public float? DiscountFiveYear{ get; set; }
 
         /// <summary>
         /// 预支一年合计费用的原价，预付费模式使用，单位：元。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginalPriceOneYear")]
@@ -153,14 +136,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <summary>
         /// 预支一年合计费用的折扣价，预付费模式使用，单位：元。
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiscountPriceOneYear")]
         public float? DiscountPriceOneYear{ get; set; }
 
         /// <summary>
         /// 预支一年应用的折扣，如20.0代表2折。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiscountOneYear")]
