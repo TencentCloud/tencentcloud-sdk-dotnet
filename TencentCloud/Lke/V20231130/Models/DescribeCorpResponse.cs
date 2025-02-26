@@ -31,7 +31,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string CorpBizId{ get; set; }
 
         /// <summary>
-        /// 机器人配额
+        /// 应用配额
         /// </summary>
         [JsonProperty("RobotQuota")]
         public ulong? RobotQuota{ get; set; }
@@ -41,6 +41,30 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         [JsonProperty("FullName")]
         public string FullName{ get; set; }
+
+        /// <summary>
+        /// 是否试用
+        /// </summary>
+        [JsonProperty("IsTrial")]
+        public bool? IsTrial{ get; set; }
+
+        /// <summary>
+        /// 是否试用过期
+        /// </summary>
+        [JsonProperty("IsTrialExpired")]
+        public bool? IsTrialExpired{ get; set; }
+
+        /// <summary>
+        /// 可用应用数量
+        /// </summary>
+        [JsonProperty("AvailableAppQuota")]
+        public ulong? AvailableAppQuota{ get; set; }
+
+        /// <summary>
+        /// 是否支持自定义模型配置
+        /// </summary>
+        [JsonProperty("IsSupportCustomModel")]
+        public bool? IsSupportCustomModel{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -57,6 +81,10 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "CorpBizId", this.CorpBizId);
             this.SetParamSimple(map, prefix + "RobotQuota", this.RobotQuota);
             this.SetParamSimple(map, prefix + "FullName", this.FullName);
+            this.SetParamSimple(map, prefix + "IsTrial", this.IsTrial);
+            this.SetParamSimple(map, prefix + "IsTrialExpired", this.IsTrialExpired);
+            this.SetParamSimple(map, prefix + "AvailableAppQuota", this.AvailableAppQuota);
+            this.SetParamSimple(map, prefix + "IsSupportCustomModel", this.IsSupportCustomModel);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -26,7 +26,6 @@ namespace TencentCloud.Tdid.V20210519.Models
         
         /// <summary>
         /// 凭证状态信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CredentialState")]
         public CredentialState CredentialState{ get; set; }

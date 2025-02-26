@@ -48,6 +48,12 @@ namespace TencentCloud.Tdid.V20210519.Models
         [JsonProperty("DAPId")]
         public ulong? DAPId{ get; set; }
 
+        /// <summary>
+        /// 用户应用ID
+        /// </summary>
+        [JsonProperty("UAPId")]
+        public ulong? UAPId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tdid.V20210519.Models
             this.SetParamSimple(map, prefix + "CredentialData", this.CredentialData);
             this.SetParamSimple(map, prefix + "PolicyJson", this.PolicyJson);
             this.SetParamSimple(map, prefix + "DAPId", this.DAPId);
+            this.SetParamSimple(map, prefix + "UAPId", this.UAPId);
         }
     }
 }

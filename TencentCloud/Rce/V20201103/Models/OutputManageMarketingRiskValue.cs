@@ -30,28 +30,24 @@ namespace TencentCloud.Rce.V20201103.Models
         /// 当AccountType为2时，对应微信的OpenId/UnionId；
         /// 当AccountType为10004时，对应手机号的MD5值；
         /// 当AccountType为10005时，对应手机号的SHA256值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
         /// 操作时间戳，单位秒（对应输入参数）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PostTime")]
         public ulong? PostTime{ get; set; }
 
         /// <summary>
         /// 业务参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssociateAccount")]
         public string AssociateAccount{ get; set; }
 
         /// <summary>
         /// 操作来源的外网IP（对应输入参数）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserIp")]
         public string UserIp{ get; set; }
@@ -61,7 +57,6 @@ namespace TencentCloud.Rce.V20201103.Models
         /// pass：无恶意
         /// review：低风险，需要人工审核
         /// reject：高风险，建议拦截
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskLevel")]
         public string RiskLevel{ get; set; }
@@ -86,21 +81,18 @@ namespace TencentCloud.Rce.V20201103.Models
         /// 2011: 疑似非常用IP，请求当前请求 IP 非该账号常用 IP。
         /// 2012: 疑似 IP 异常，使用 IDC 机房 IP 或使用代理 IP 或使用恶意 IP 等。
         /// 205: 非公网有效 IP，传进来的 IP 地址为内网 IP 地址或者 IP 保留地址。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskType")]
         public long?[] RiskType{ get; set; }
 
         /// <summary>
         /// 设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConstId")]
         public string ConstId{ get; set; }
 
         /// <summary>
         /// 风险扩展数据。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskInformation")]
         public string RiskInformation{ get; set; }

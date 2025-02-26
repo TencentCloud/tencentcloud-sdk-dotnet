@@ -31,7 +31,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string BotBizId{ get; set; }
 
         /// <summary>
-        /// 父级业务ID
+        /// 父级业务ID，创建顶级分类时传字符串"0"
         /// </summary>
         [JsonProperty("ParentBizId")]
         public string ParentBizId{ get; set; }

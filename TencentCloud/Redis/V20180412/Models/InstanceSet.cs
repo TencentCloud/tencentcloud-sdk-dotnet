@@ -238,189 +238,162 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// 实例关联的标签信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceTags")]
         public InstanceTagInfo[] InstanceTags{ get; set; }
 
         /// <summary>
         /// 项目名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
         /// <summary>
         /// 是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NoAuth")]
         public bool? NoAuth{ get; set; }
 
         /// <summary>
         /// 客户端连接数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientLimit")]
         public long? ClientLimit{ get; set; }
 
         /// <summary>
         /// DTS状态（内部参数，用户可忽略）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DtsStatus")]
         public long? DtsStatus{ get; set; }
 
         /// <summary>
         /// 分片带宽上限，单位MB。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetLimit")]
         public long? NetLimit{ get; set; }
 
         /// <summary>
         /// 免密实例标识（内部参数，用户可忽略）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PasswordFree")]
         public long? PasswordFree{ get; set; }
 
         /// <summary>
         /// 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vip6")]
         public string Vip6{ get; set; }
 
         /// <summary>
         /// 内部参数，用户可忽略。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IPv6")]
         public string IPv6{ get; set; }
 
         /// <summary>
         /// 实例只读标识（内部参数，用户可忽略）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReadOnly")]
         public long? ReadOnly{ get; set; }
 
         /// <summary>
         /// 内部参数，用户可忽略。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RemainBandwidthDuration")]
         public string RemainBandwidthDuration{ get; set; }
 
         /// <summary>
         /// Redis实例请忽略该参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
         /// 监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见[云数据库 Redis 1分钟粒度下线公告](https://cloud.tencent.com/document/product/239/80653)。</li><li>5s：5秒粒度监控。</li></ul>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MonitorVersion")]
         public string MonitorVersion{ get; set; }
 
         /// <summary>
         /// 客户端最大连接数可设置的最小值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientLimitMin")]
         public long? ClientLimitMin{ get; set; }
 
         /// <summary>
         /// 客户端最大连接数可设置的最大值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientLimitMax")]
         public long? ClientLimitMax{ get; set; }
 
         /// <summary>
         /// 实例的节点详细信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NodeSet")]
         public RedisNodeInfo[] NodeSet{ get; set; }
 
         /// <summary>
         /// 实例所在的地域信息，比如ap-guangzhou。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// 外网地址。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WanAddress")]
         public string WanAddress{ get; set; }
 
         /// <summary>
         /// 北极星服务地址，内部使用。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolarisServer")]
         public string PolarisServer{ get; set; }
 
         /// <summary>
         /// CDC Redis集群ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RedisClusterId")]
         public string RedisClusterId{ get; set; }
 
         /// <summary>
         /// CDC 集群ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DedicatedClusterId")]
         public string DedicatedClusterId{ get; set; }
 
         /// <summary>
         /// 产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductVersion")]
         public string ProductVersion{ get; set; }
 
         /// <summary>
         /// 实例当前Proxy版本。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentProxyVersion")]
         public string CurrentProxyVersion{ get; set; }
 
         /// <summary>
         /// 实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CurrentRedisVersion")]
         public string CurrentRedisVersion{ get; set; }
 
         /// <summary>
         /// 实例可升级Proxy版本。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpgradeProxyVersion")]
         public string UpgradeProxyVersion{ get; set; }
 
         /// <summary>
         /// 实例可升级Cache小版本。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpgradeRedisVersion")]
         public string UpgradeRedisVersion{ get; set; }
 
         /// <summary>
         /// 备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupMode")]
         public string BackupMode{ get; set; }

@@ -74,7 +74,6 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// 实例的磁盘大小。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
@@ -99,14 +98,12 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vip6")]
         public string Vip6{ get; set; }
 
         /// <summary>
         /// 内部参数，用户可忽略。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IPv6")]
         public string IPv6{ get; set; }

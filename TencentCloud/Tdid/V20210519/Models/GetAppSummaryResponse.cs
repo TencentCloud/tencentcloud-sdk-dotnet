@@ -26,14 +26,12 @@ namespace TencentCloud.Tdid.V20210519.Models
         
         /// <summary>
         /// 用户参与应用的统计指标 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppCounter")]
         public ResourceCounterData AppCounter{ get; set; }
 
         /// <summary>
         /// 用户创建资源的统计指标
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserCounter")]
         public ResourceCounterData UserCounter{ get; set; }

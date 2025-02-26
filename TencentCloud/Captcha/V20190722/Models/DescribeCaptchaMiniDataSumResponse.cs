@@ -26,63 +26,54 @@ namespace TencentCloud.Captcha.V20190722.Models
         
         /// <summary>
         /// 请求总量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GetSum")]
         public long? GetSum{ get; set; }
 
         /// <summary>
         /// 请求验证成功量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VfySuccSum")]
         public long? VfySuccSum{ get; set; }
 
         /// <summary>
         /// 请求验证量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VfySum")]
         public long? VfySum{ get; set; }
 
         /// <summary>
         /// 拦截攻击量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttackSum")]
         public long? AttackSum{ get; set; }
 
         /// <summary>
         /// 返回信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CaptchaMsg")]
         public string CaptchaMsg{ get; set; }
 
         /// <summary>
         /// 成功返回0  其它失败
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CaptchaCode")]
         public long? CaptchaCode{ get; set; }
 
         /// <summary>
         /// 票据校验总量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckTicketSum")]
         public long? CheckTicketSum{ get; set; }
 
         /// <summary>
         /// 票据验证通过量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TicketThroughputSum")]
         public long? TicketThroughputSum{ get; set; }
 
         /// <summary>
         /// 票据验证拦截量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TicketInterceptSum")]
         public long? TicketInterceptSum{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tdid.V20210519
 
        private const string endpoint = "tdid.tencentcloudapi.com";
        private const string version = "2021-05-19";
-       private const string sdkVersion = "SDK_NET_3.0.1187";
+       private const string sdkVersion = "SDK_NET_3.0.1188";
 
         /// <summary>
         /// Client constructor.
@@ -369,7 +369,10 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
-        /// 更新凭证的链上状态
+        /// 1. 首次更新凭证状态基于不同场景参数有所差异，分以下两种场景：
+        /// (1)  颁发凭证的DID是本腾讯云账号创建
+        /// (2) 颁发凭证的DID是非本腾讯云账号创建(此调用方式也适用于场景1)
+        /// 2. 首次更新过凭证状态后，凭证状态已绑定该账号的链上用户，后续更新凭证状态只需参数CredentialStatus即可, OperateCredential和OriginCredential参数均不需要
         /// </summary>
         /// <param name="req"><see cref="UpdateCredentialStateRequest"/></param>
         /// <returns><see cref="UpdateCredentialStateResponse"/></returns>
@@ -379,7 +382,10 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
-        /// 更新凭证的链上状态
+        /// 1. 首次更新凭证状态基于不同场景参数有所差异，分以下两种场景：
+        /// (1)  颁发凭证的DID是本腾讯云账号创建
+        /// (2) 颁发凭证的DID是非本腾讯云账号创建(此调用方式也适用于场景1)
+        /// 2. 首次更新过凭证状态后，凭证状态已绑定该账号的链上用户，后续更新凭证状态只需参数CredentialStatus即可, OperateCredential和OriginCredential参数均不需要
         /// </summary>
         /// <param name="req"><see cref="UpdateCredentialStateRequest"/></param>
         /// <returns><see cref="UpdateCredentialStateResponse"/></returns>

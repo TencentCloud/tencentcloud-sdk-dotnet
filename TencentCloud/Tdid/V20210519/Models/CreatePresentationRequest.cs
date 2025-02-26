@@ -31,6 +31,12 @@ namespace TencentCloud.Tdid.V20210519.Models
         public ulong? DAPId{ get; set; }
 
         /// <summary>
+        /// 用户应用id
+        /// </summary>
+        [JsonProperty("UAPId")]
+        public ulong? UAPId{ get; set; }
+
+        /// <summary>
         /// 凭证列表
         /// </summary>
         [JsonProperty("Credentials")]
@@ -73,6 +79,7 @@ namespace TencentCloud.Tdid.V20210519.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DAPId", this.DAPId);
+            this.SetParamSimple(map, prefix + "UAPId", this.UAPId);
             this.SetParamArraySimple(map, prefix + "Credentials.", this.Credentials);
             this.SetParamSimple(map, prefix + "Did", this.Did);
             this.SetParamSimple(map, prefix + "VerifyCode", this.VerifyCode);

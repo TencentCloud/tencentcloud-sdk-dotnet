@@ -49,6 +49,12 @@ namespace TencentCloud.Clb.V20180317.Models
         public TargetGroupInstance[] TargetGroupInstances{ get; set; }
 
         /// <summary>
+        /// 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
         /// 标签。
         /// </summary>
         [JsonProperty("Tags")]
@@ -74,6 +80,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamArrayObj(map, prefix + "TargetGroupInstances.", this.TargetGroupInstances);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
         }
