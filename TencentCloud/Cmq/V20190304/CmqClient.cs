@@ -17,18 +17,16 @@
 
 namespace TencentCloud.Cmq.V20190304
 {
+    using System.Threading.Tasks;
+    using TencentCloud.Common;
+    using TencentCloud.Common.Profile;
+    using TencentCloud.Cmq.V20190304.Models;
 
-   using Newtonsoft.Json;
-   using System.Threading.Tasks;
-   using TencentCloud.Common;
-   using TencentCloud.Common.Profile;
-   using TencentCloud.Cmq.V20190304.Models;
-
-   public class CmqClient : AbstractClient{
-
-       private const string endpoint = "cmq.tencentcloudapi.com";
-       private const string version = "2019-03-04";
-       private const string sdkVersion = "SDK_NET_3.0.1187";
+    public class CmqClient : AbstractClient
+    {
+        private const string endpoint = "cmq.tencentcloudapi.com";
+        private const string version = "2019-03-04";
+        private const string sdkVersion = "SDK_NET_3.0.1187";
 
         /// <summary>
         /// Client constructor.
@@ -38,7 +36,6 @@ namespace TencentCloud.Cmq.V20190304
         public CmqClient(Credential credential, string region)
             : this(credential, region, new ClientProfile { Language = Language.ZH_CN })
         {
-
         }
 
         /// <summary>
@@ -95,5 +92,25 @@ namespace TencentCloud.Cmq.V20190304
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
+        /// <summary>
+        /// 创建cmq队列接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateQueueRequest"/></param>
+        /// <returns><see cref="CreateQueueResponse"/></returns>
+        public CreateQueueResponse CreateQueue(CreateQueueRequest req)
+        {
+            return InternalRequestAsync<CreateQueueResponse>(req, "CreateQueue")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建cmq队列接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateQueueRequest"/></param>
+        /// <returns><see cref="CreateQueueResponse"/></returns>
+        public Task<CreateQueueResponse> CreateQueueAsync(CreateQueueRequest req)
+        {
+            return InternalRequestAsync<CreateQueueResponse>(req, "CreateQueue");
+        }
     }
 }

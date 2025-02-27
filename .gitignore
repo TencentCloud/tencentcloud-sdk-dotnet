@@ -4,6 +4,7 @@
 
 bin
 obj
-/.vs
+.vs/
+.idea
 packages
 *.user
