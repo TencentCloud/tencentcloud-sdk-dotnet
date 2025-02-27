@@ -31,14 +31,12 @@ namespace TencentCloud.Rce.V20201103.Models
         /// 1002：参数错误
         /// 4300：未开通服务
         /// 4301：后端未创建对应产品
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Code")]
         public long? Code{ get; set; }
 
         /// <summary>
         /// UTF-8编码，出错消息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
@@ -52,7 +50,6 @@ namespace TencentCloud.Rce.V20201103.Models
 
         /// <summary>
         /// 控制台显示的req_id。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UUid")]
         public string UUid{ get; set; }

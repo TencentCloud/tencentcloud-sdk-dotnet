@@ -94,6 +94,13 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("TopP")]
         public string TopP{ get; set; }
 
+        /// <summary>
+        /// 模型资源状态 1：资源可用；2：资源已用尽
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceStatus")]
+        public ulong? ResourceStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +117,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "UsageType", this.UsageType);
             this.SetParamSimple(map, prefix + "Temperature", this.Temperature);
             this.SetParamSimple(map, prefix + "TopP", this.TopP);
+            this.SetParamSimple(map, prefix + "ResourceStatus", this.ResourceStatus);
         }
     }
 }

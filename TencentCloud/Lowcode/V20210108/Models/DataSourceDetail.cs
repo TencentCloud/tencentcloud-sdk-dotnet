@@ -50,6 +50,7 @@ namespace TencentCloud.Lowcode.V20210108.Models
 
         /// <summary>
         /// 数据源描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -68,7 +69,6 @@ namespace TencentCloud.Lowcode.V20210108.Models
 
         /// <summary>
         /// 当前为环境 id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PkgId")]
         public string PkgId{ get; set; }
@@ -82,7 +82,6 @@ namespace TencentCloud.Lowcode.V20210108.Models
 
         /// <summary>
         /// 创建者用户 ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatorId")]
         public string CreatorId{ get; set; }
@@ -103,7 +102,6 @@ namespace TencentCloud.Lowcode.V20210108.Models
 
         /// <summary>
         /// 环境 id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }
@@ -124,7 +122,6 @@ namespace TencentCloud.Lowcode.V20210108.Models
 
         /// <summary>
         /// 发布时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublishedAt")]
         public string PublishedAt{ get; set; }
@@ -145,14 +142,12 @@ namespace TencentCloud.Lowcode.V20210108.Models
 
         /// <summary>
         /// 云函数状态 1 Active 2 Creating 3 Updating 4 Deleting  9 Deleted 11 CreatFailed  12 UpdateFailed 13 DeleteFailed 21 UpdateTimeOut
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScfStatus")]
         public ulong? ScfStatus{ get; set; }
 
         /// <summary>
         /// 自定义方法
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Methods")]
         public string Methods{ get; set; }
@@ -166,7 +161,6 @@ namespace TencentCloud.Lowcode.V20210108.Models
 
         /// <summary>
         /// 是否旧数据源 1 新 0 旧
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsNewDataSource")]
         public long? IsNewDataSource{ get; set; }
@@ -204,6 +198,7 @@ namespace TencentCloud.Lowcode.V20210108.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublishVersion")]
+        [System.Obsolete]
         public string PublishVersion{ get; set; }
 
         /// <summary>
@@ -215,7 +210,6 @@ namespace TencentCloud.Lowcode.V20210108.Models
 
         /// <summary>
         /// 数据源子类型   "database" 标准模型 "custom-database" 自定义模型 "system" 系统模型 "connector" 连接器 "custom-connector" 自定义连接器 "hidden" 隐藏数据源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubType")]
         public string SubType{ get; set; }
@@ -233,6 +227,53 @@ namespace TencentCloud.Lowcode.V20210108.Models
         /// </summary>
         [JsonProperty("AuthInfo")]
         public TicketAuthInfo AuthInfo{ get; set; }
+
+        /// <summary>
+        /// 1发布0未发布
+        /// </summary>
+        [JsonProperty("PublishStatus")]
+        public long? PublishStatus{ get; set; }
+
+        /// <summary>
+        /// 更新版本
+        /// </summary>
+        [JsonProperty("UpdateVersion")]
+        public long? UpdateVersion{ get; set; }
+
+        /// <summary>
+        /// 模型关联关系字段列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RelationFieldList")]
+        public RelationField[] RelationFieldList{ get; set; }
+
+        /// <summary>
+        /// db实例类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DbInstanceType")]
+        public string DbInstanceType{ get; set; }
+
+        /// <summary>
+        /// 体验环境db表名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PreviewTableName")]
+        public string PreviewTableName{ get; set; }
+
+        /// <summary>
+        /// 正式环境db表名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PublishedTableName")]
+        public string PublishedTableName{ get; set; }
+
+        /// <summary>
+        /// DB来源类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DbSourceType")]
+        public string DbSourceType{ get; set; }
 
 
         /// <summary>
@@ -271,6 +312,13 @@ namespace TencentCloud.Lowcode.V20210108.Models
             this.SetParamSimple(map, prefix + "SubType", this.SubType);
             this.SetParamSimple(map, prefix + "AuthStatus", this.AuthStatus);
             this.SetParamObj(map, prefix + "AuthInfo.", this.AuthInfo);
+            this.SetParamSimple(map, prefix + "PublishStatus", this.PublishStatus);
+            this.SetParamSimple(map, prefix + "UpdateVersion", this.UpdateVersion);
+            this.SetParamArrayObj(map, prefix + "RelationFieldList.", this.RelationFieldList);
+            this.SetParamSimple(map, prefix + "DbInstanceType", this.DbInstanceType);
+            this.SetParamSimple(map, prefix + "PreviewTableName", this.PreviewTableName);
+            this.SetParamSimple(map, prefix + "PublishedTableName", this.PublishedTableName);
+            this.SetParamSimple(map, prefix + "DbSourceType", this.DbSourceType);
         }
     }
 }

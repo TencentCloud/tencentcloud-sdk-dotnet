@@ -227,6 +227,20 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("IsAllowRetry")]
         public bool? IsAllowRetry{ get; set; }
 
+        /// <summary>
+        /// 0:文档比对处理 1:文档生成问答
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Processing")]
+        public long?[] Processing{ get; set; }
+
+        /// <summary>
+        /// 文档创建落库时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -262,6 +276,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "ExpireStart", this.ExpireStart);
             this.SetParamSimple(map, prefix + "ExpireEnd", this.ExpireEnd);
             this.SetParamSimple(map, prefix + "IsAllowRetry", this.IsAllowRetry);
+            this.SetParamArraySimple(map, prefix + "Processing.", this.Processing);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

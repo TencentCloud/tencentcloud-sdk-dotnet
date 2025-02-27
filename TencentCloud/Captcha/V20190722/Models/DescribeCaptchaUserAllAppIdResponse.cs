@@ -26,7 +26,6 @@ namespace TencentCloud.Captcha.V20190722.Models
         
         /// <summary>
         /// 用户注册的所有Appid和应用名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public CaptchaUserAllAppId[] Data{ get; set; }
@@ -39,7 +38,6 @@ namespace TencentCloud.Captcha.V20190722.Models
 
         /// <summary>
         /// 返回操作信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CaptchaMsg")]
         public string CaptchaMsg{ get; set; }

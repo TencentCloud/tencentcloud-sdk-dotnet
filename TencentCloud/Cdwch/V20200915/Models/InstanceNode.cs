@@ -86,6 +86,40 @@ namespace TencentCloud.Cdwch.V20200915.Models
         [JsonProperty("IsCHProxy")]
         public bool? IsCHProxy{ get; set; }
 
+        /// <summary>
+        /// 节点状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// 节点uuid
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UUID")]
+        public string UUID{ get; set; }
+
+        /// <summary>
+        /// 区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
+        /// <summary>
+        /// 区描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZoneDesc")]
+        public string ZoneDesc{ get; set; }
+
+        /// <summary>
+        /// 真实资源id
+        /// </summary>
+        [JsonProperty("RealResourceId")]
+        public string RealResourceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +136,11 @@ namespace TencentCloud.Cdwch.V20200915.Models
             this.SetParamArrayObj(map, prefix + "NodeGroups.", this.NodeGroups);
             this.SetParamSimple(map, prefix + "Rip", this.Rip);
             this.SetParamSimple(map, prefix + "IsCHProxy", this.IsCHProxy);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "UUID", this.UUID);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "ZoneDesc", this.ZoneDesc);
+            this.SetParamSimple(map, prefix + "RealResourceId", this.RealResourceId);
         }
     }
 }

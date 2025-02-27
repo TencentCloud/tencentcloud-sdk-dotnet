@@ -60,7 +60,6 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// 复制组名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
@@ -84,14 +83,12 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// 复制组中的实例信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Instances")]
         public Instances[] Instances{ get; set; }
 
         /// <summary>
         /// 备注信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

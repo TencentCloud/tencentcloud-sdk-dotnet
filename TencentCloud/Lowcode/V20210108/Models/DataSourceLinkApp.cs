@@ -32,31 +32,33 @@ namespace TencentCloud.Lowcode.V20210108.Models
 
         /// <summary>
         /// 应用名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Title")]
         public string Title{ get; set; }
 
         /// <summary>
         /// 是否编辑状态使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EditStatusUse")]
         public long? EditStatusUse{ get; set; }
 
         /// <summary>
         /// 是否预览状态使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PreviewStatusUse")]
         public long? PreviewStatusUse{ get; set; }
 
         /// <summary>
         /// 是否正式状态使用
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OnlineStatusUse")]
         public long? OnlineStatusUse{ get; set; }
+
+        /// <summary>
+        /// 数据源ID
+        /// </summary>
+        [JsonProperty("DataSourceId")]
+        public string DataSourceId{ get; set; }
 
 
         /// <summary>
@@ -69,6 +71,7 @@ namespace TencentCloud.Lowcode.V20210108.Models
             this.SetParamSimple(map, prefix + "EditStatusUse", this.EditStatusUse);
             this.SetParamSimple(map, prefix + "PreviewStatusUse", this.PreviewStatusUse);
             this.SetParamSimple(map, prefix + "OnlineStatusUse", this.OnlineStatusUse);
+            this.SetParamSimple(map, prefix + "DataSourceId", this.DataSourceId);
         }
     }
 }

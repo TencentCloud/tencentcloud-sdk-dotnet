@@ -32,14 +32,12 @@ namespace TencentCloud.Captcha.V20190722.Models
 
         /// <summary>
         /// 返回信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CaptchaMsg")]
         public string CaptchaMsg{ get; set; }
 
         /// <summary>
         /// 用户操作数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public CaptchaOperDataRes Data{ get; set; }

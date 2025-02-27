@@ -31,10 +31,22 @@ namespace TencentCloud.Tdid.V20210519.Models
         public ulong? DAPId{ get; set; }
 
         /// <summary>
-        /// 更新VC状态的临时凭证内容，通过创建凭证接口(CreateCredential)生成并签名，凭证类型为：OperateCredential, 为安全起见凭证过期时间不适合太长，建议设置为1分钟内
+        /// 更新VC状态的临时凭证内容，通过创建凭证接口(CreateCredential)生成并签名，凭证类型为：OperateCredential, 为安全起见凭证过期时间不适合太长，如设置为1分钟内
         /// </summary>
         [JsonProperty("OperateCredential")]
         public string OperateCredential{ get; set; }
+
+        /// <summary>
+        /// 待更新凭证状态的原始凭证内容
+        /// </summary>
+        [JsonProperty("OriginCredential")]
+        public string OriginCredential{ get; set; }
+
+        /// <summary>
+        /// 凭证状态信息
+        /// </summary>
+        [JsonProperty("CredentialStatus")]
+        public CredentialStatusInfo CredentialStatus{ get; set; }
 
 
         /// <summary>
@@ -44,6 +56,8 @@ namespace TencentCloud.Tdid.V20210519.Models
         {
             this.SetParamSimple(map, prefix + "DAPId", this.DAPId);
             this.SetParamSimple(map, prefix + "OperateCredential", this.OperateCredential);
+            this.SetParamSimple(map, prefix + "OriginCredential", this.OriginCredential);
+            this.SetParamObj(map, prefix + "CredentialStatus.", this.CredentialStatus);
         }
     }
 }
