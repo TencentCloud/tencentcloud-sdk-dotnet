@@ -33,7 +33,6 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 集群信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Clusters")]
         public ClusterVersion[] Clusters{ get; set; }

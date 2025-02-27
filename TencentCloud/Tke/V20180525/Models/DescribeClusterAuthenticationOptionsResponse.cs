@@ -26,21 +26,18 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// ServiceAccount认证配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceAccounts")]
         public ServiceAccountAuthenticationOptions ServiceAccounts{ get; set; }
 
         /// <summary>
         /// 最近一次修改操作结果，返回值可能为：Updating，Success，Failed，TimeOut
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LatestOperationState")]
         public string LatestOperationState{ get; set; }
 
         /// <summary>
         /// OIDC认证配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OIDCConfig")]
         public OIDCConfigAuthenticationOptions OIDCConfig{ get; set; }

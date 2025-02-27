@@ -25,8 +25,10 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// EID商户ID。通过人脸核身控制台[自助接入](https://console.cloud.tencent.com/faceid/access)申请。
-        /// - 字段长度最长50位。
+        /// EID商户ID。
+        /// - 商户ID通过人脸核身控制台[自助接入](https://console.cloud.tencent.com/faceid/access)申请。
+        /// - 商户ID与您通过腾讯云人脸核身控制台完成自助接入时所使用的腾讯云账号绑定。
+        /// - 必须使用申请该商户ID时登录的腾讯云账号所对应的腾讯云API密钥调用该接口。
         /// </summary>
         [JsonProperty("MerchantId")]
         public string MerchantId{ get; set; }

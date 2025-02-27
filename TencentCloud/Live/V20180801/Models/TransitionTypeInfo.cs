@@ -26,21 +26,18 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// 转场名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TransitionType")]
         public string TransitionType{ get; set; }
 
         /// <summary>
         /// 素材url
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceUrl")]
         public string SourceUrl{ get; set; }
 
         /// <summary>
         /// 转场的下标，可用来排序，从1开始递增
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Index")]
         public ulong? Index{ get; set; }

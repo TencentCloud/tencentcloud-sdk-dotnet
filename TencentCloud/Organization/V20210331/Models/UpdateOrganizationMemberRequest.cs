@@ -67,6 +67,12 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("PayUin")]
         public string PayUin{ get; set; }
 
+        /// <summary>
+        /// 是否同步组织成员名称到成员账号昵称。取值： 1-同步 0-不同步
+        /// </summary>
+        [JsonProperty("IsModifyNickName")]
+        public ulong? IsModifyNickName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +86,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamArraySimple(map, prefix + "PermissionIds.", this.PermissionIds);
             this.SetParamSimple(map, prefix + "IsAllowQuit", this.IsAllowQuit);
             this.SetParamSimple(map, prefix + "PayUin", this.PayUin);
+            this.SetParamSimple(map, prefix + "IsModifyNickName", this.IsModifyNickName);
         }
     }
 }

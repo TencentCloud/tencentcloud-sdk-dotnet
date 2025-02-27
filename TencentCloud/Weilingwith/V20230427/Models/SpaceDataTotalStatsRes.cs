@@ -26,14 +26,12 @@ namespace TencentCloud.Weilingwith.V20230427.Models
         
         /// <summary>
         /// 总楼栋数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BuildingCount")]
         public ulong? BuildingCount{ get; set; }
 
         /// <summary>
         /// 总建筑面积
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BuildingArea")]
         public float? BuildingArea{ get; set; }

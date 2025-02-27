@@ -26,7 +26,6 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 集群弹性伸缩属性
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterAsGroupOption")]
         public ClusterAsGroupOption ClusterAsGroupOption{ get; set; }

@@ -26,7 +26,6 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 已经存在的实例信息数组。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExistedInstanceSet")]
         public ExistedInstance[] ExistedInstanceSet{ get; set; }

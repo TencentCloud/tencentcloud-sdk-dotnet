@@ -32,28 +32,24 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 是否开启自定义podcidr，默认为false，已安装eniipamd组件才意义
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableCustomizedPodCidr")]
         public bool? EnableCustomizedPodCidr{ get; set; }
 
         /// <summary>
         /// 是否不开启vpccni模式，默认为false，已安装eniipamd组件才意义
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DisableVpcCniMode")]
         public bool? DisableVpcCniMode{ get; set; }
 
         /// <summary>
         /// 组件状态，已安装eniipamd组件才会有值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Phase")]
         public string Phase{ get; set; }
 
         /// <summary>
         /// 错误信息，已安装eniipamd组件且状态为非running才会有错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Reason")]
         public string Reason{ get; set; }
@@ -67,14 +63,12 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 固定ip回收时间，已安装eniipamd组件才会有值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClaimExpiredDuration")]
         public string ClaimExpiredDuration{ get; set; }
 
         /// <summary>
         /// 是否开启了中继网卡模式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableTrunkingENI")]
         public bool? EnableTrunkingENI{ get; set; }

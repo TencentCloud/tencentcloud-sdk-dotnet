@@ -36,6 +36,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("CertList")]
         public CertInfo[] CertList{ get; set; }
 
+        /// <summary>
+        /// 双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON
+        /// </summary>
+        [JsonProperty("SSLVerifyClient")]
+        public string SSLVerifyClient{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Clb.V20180317.Models
         {
             this.SetParamSimple(map, prefix + "SSLMode", this.SSLMode);
             this.SetParamArrayObj(map, prefix + "CertList.", this.CertList);
+            this.SetParamSimple(map, prefix + "SSLVerifyClient", this.SSLVerifyClient);
         }
     }
 }
